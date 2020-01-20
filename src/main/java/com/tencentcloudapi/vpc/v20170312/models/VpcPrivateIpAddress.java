@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class VpcPrivateIpAddress extends AbstractModel{
 
     /**
-    * `VPC`内网`IP`。
+    * `VPC` private `IP`.
     */
     @SerializedName("PrivateIpAddress")
     @Expose
     private String PrivateIpAddress;
 
     /**
-    * 所属子网`CIDR`。
+    * The `CIDR` belonging to the subnet.
     */
     @SerializedName("CidrBlock")
     @Expose
     private String CidrBlock;
 
     /**
-    * 内网`IP`类型。
+    * Private `IP` type.
     */
     @SerializedName("PrivateIpAddressType")
     @Expose
     private String PrivateIpAddressType;
 
     /**
-    * `IP`申请时间。
+    * `IP` application time.
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-     * Get `VPC`内网`IP`。 
-     * @return PrivateIpAddress `VPC`内网`IP`。
+     * Get `VPC` private `IP`. 
+     * @return PrivateIpAddress `VPC` private `IP`.
      */
     public String getPrivateIpAddress() {
         return this.PrivateIpAddress;
     }
 
     /**
-     * Set `VPC`内网`IP`。
-     * @param PrivateIpAddress `VPC`内网`IP`。
+     * Set `VPC` private `IP`.
+     * @param PrivateIpAddress `VPC` private `IP`.
      */
     public void setPrivateIpAddress(String PrivateIpAddress) {
         this.PrivateIpAddress = PrivateIpAddress;
     }
 
     /**
-     * Get 所属子网`CIDR`。 
-     * @return CidrBlock 所属子网`CIDR`。
+     * Get The `CIDR` belonging to the subnet. 
+     * @return CidrBlock The `CIDR` belonging to the subnet.
      */
     public String getCidrBlock() {
         return this.CidrBlock;
     }
 
     /**
-     * Set 所属子网`CIDR`。
-     * @param CidrBlock 所属子网`CIDR`。
+     * Set The `CIDR` belonging to the subnet.
+     * @param CidrBlock The `CIDR` belonging to the subnet.
      */
     public void setCidrBlock(String CidrBlock) {
         this.CidrBlock = CidrBlock;
     }
 
     /**
-     * Get 内网`IP`类型。 
-     * @return PrivateIpAddressType 内网`IP`类型。
+     * Get Private `IP` type. 
+     * @return PrivateIpAddressType Private `IP` type.
      */
     public String getPrivateIpAddressType() {
         return this.PrivateIpAddressType;
     }
 
     /**
-     * Set 内网`IP`类型。
-     * @param PrivateIpAddressType 内网`IP`类型。
+     * Set Private `IP` type.
+     * @param PrivateIpAddressType Private `IP` type.
      */
     public void setPrivateIpAddressType(String PrivateIpAddressType) {
         this.PrivateIpAddressType = PrivateIpAddressType;
     }
 
     /**
-     * Get `IP`申请时间。 
-     * @return CreatedTime `IP`申请时间。
+     * Get `IP` application time. 
+     * @return CreatedTime `IP` application time.
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set `IP`申请时间。
-     * @param CreatedTime `IP`申请时间。
+     * Set `IP` application time.
+     * @param CreatedTime `IP` application time.
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;

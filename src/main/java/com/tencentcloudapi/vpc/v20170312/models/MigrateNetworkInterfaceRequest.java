@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class MigrateNetworkInterfaceRequest extends AbstractModel{
 
     /**
-    * 弹性网卡实例ID，例如：eni-m6dyj72l。
+    * The ID of the ENI instance, such as `eni-m6dyj72l`.
     */
     @SerializedName("NetworkInterfaceId")
     @Expose
     private String NetworkInterfaceId;
 
     /**
-    * 弹性网卡当前绑定的CVM实例ID。形如：ins-r8hr2upy。
+    * The ID of the CVM bound to the ENI, such as `ins-r8hr2upy`.
     */
     @SerializedName("SourceInstanceId")
     @Expose
     private String SourceInstanceId;
 
     /**
-    * 待迁移的目的CVM实例ID。
+    * ID of the destination CVM instance to be migrated.
     */
     @SerializedName("DestinationInstanceId")
     @Expose
     private String DestinationInstanceId;
 
     /**
-     * Get 弹性网卡实例ID，例如：eni-m6dyj72l。 
-     * @return NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
+     * Get The ID of the ENI instance, such as `eni-m6dyj72l`. 
+     * @return NetworkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
      */
     public String getNetworkInterfaceId() {
         return this.NetworkInterfaceId;
     }
 
     /**
-     * Set 弹性网卡实例ID，例如：eni-m6dyj72l。
-     * @param NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
+     * Set The ID of the ENI instance, such as `eni-m6dyj72l`.
+     * @param NetworkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
      */
     public void setNetworkInterfaceId(String NetworkInterfaceId) {
         this.NetworkInterfaceId = NetworkInterfaceId;
     }
 
     /**
-     * Get 弹性网卡当前绑定的CVM实例ID。形如：ins-r8hr2upy。 
-     * @return SourceInstanceId 弹性网卡当前绑定的CVM实例ID。形如：ins-r8hr2upy。
+     * Get The ID of the CVM bound to the ENI, such as `ins-r8hr2upy`. 
+     * @return SourceInstanceId The ID of the CVM bound to the ENI, such as `ins-r8hr2upy`.
      */
     public String getSourceInstanceId() {
         return this.SourceInstanceId;
     }
 
     /**
-     * Set 弹性网卡当前绑定的CVM实例ID。形如：ins-r8hr2upy。
-     * @param SourceInstanceId 弹性网卡当前绑定的CVM实例ID。形如：ins-r8hr2upy。
+     * Set The ID of the CVM bound to the ENI, such as `ins-r8hr2upy`.
+     * @param SourceInstanceId The ID of the CVM bound to the ENI, such as `ins-r8hr2upy`.
      */
     public void setSourceInstanceId(String SourceInstanceId) {
         this.SourceInstanceId = SourceInstanceId;
     }
 
     /**
-     * Get 待迁移的目的CVM实例ID。 
-     * @return DestinationInstanceId 待迁移的目的CVM实例ID。
+     * Get ID of the destination CVM instance to be migrated. 
+     * @return DestinationInstanceId ID of the destination CVM instance to be migrated.
      */
     public String getDestinationInstanceId() {
         return this.DestinationInstanceId;
     }
 
     /**
-     * Set 待迁移的目的CVM实例ID。
-     * @param DestinationInstanceId 待迁移的目的CVM实例ID。
+     * Set ID of the destination CVM instance to be migrated.
+     * @param DestinationInstanceId ID of the destination CVM instance to be migrated.
      */
     public void setDestinationInstanceId(String DestinationInstanceId) {
         this.DestinationInstanceId = DestinationInstanceId;

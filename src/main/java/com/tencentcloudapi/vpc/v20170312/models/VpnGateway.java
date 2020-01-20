@@ -23,105 +23,105 @@ import java.util.HashMap;
 public class VpnGateway extends AbstractModel{
 
     /**
-    * 网关实例ID。
+    * Gateway instance ID.
     */
     @SerializedName("VpnGatewayId")
     @Expose
     private String VpnGatewayId;
 
     /**
-    * VPC实例ID。
+    * VPC instance ID.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 网关实例名称。
+    * Gateway instance name.
     */
     @SerializedName("VpnGatewayName")
     @Expose
     private String VpnGatewayName;
 
     /**
-    * 网关实例类型：'IPSEC', 'SSL'。
+    * Gateway instance type: 'IPSEC' and 'SSL'.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 网关实例状态， 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中。
+    * Gateway instance status. 'PENDING': Creating; 'DELETING': Deleting; 'AVAILABLE': Running.
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * 网关公网IP。
+    * Gateway public IP.
     */
     @SerializedName("PublicIpAddress")
     @Expose
     private String PublicIpAddress;
 
     /**
-    * 网关续费类型：'NOTIFY_AND_MANUAL_RENEW'：手动续费，'NOTIFY_AND_AUTO_RENEW'：自动续费，'NOT_NOTIFY_AND_NOT_RENEW'：到期不续费。
+    * Gateway renewal type: 'NOTIFY_AND_MANUAL_RENEW': Manual renewal. 'NOTIFY_AND_AUTO_RENEW': Automatic renewal. 'NOT_NOTIFY_AND_NOT_RENEW': No renewal after expiration.
     */
     @SerializedName("RenewFlag")
     @Expose
     private String RenewFlag;
 
     /**
-    * 网关付费类型：POSTPAID_BY_HOUR：按小时后付费，PREPAID：包年包月预付费，
+    * Gateway billing type: POSTPAID_BY_HOUR: Postpaid by hour; PREPAID: Prepaid.
     */
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
 
     /**
-    * 网关出带宽。
+    * Outbound bandwidth of gateway.
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
     private Long InternetMaxBandwidthOut;
 
     /**
-    * 创建时间。
+    * Creation Time.
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * 预付费网关过期时间。
+    * Expiration time of the prepaid gateway.
     */
     @SerializedName("ExpiredTime")
     @Expose
     private String ExpiredTime;
 
     /**
-    * 公网IP是否被封堵。
+    * Whether the public IP is blocked.
     */
     @SerializedName("IsAddressBlocked")
     @Expose
     private Boolean IsAddressBlocked;
 
     /**
-    * 计费模式变更，PREPAID_TO_POSTPAID：包年包月预付费到期转按小时后付费。
+    * Change of billing method. PREPAID_TO_POSTPAID: Monthly subscription prepaid to postpaid by hour.
     */
     @SerializedName("NewPurchasePlan")
     @Expose
     private String NewPurchasePlan;
 
     /**
-    * 网关计费装，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
+    * Gateway billing status. PROTECTIVELY_ISOLATED: Instance is isolated; NORMAL: Normal.
     */
     @SerializedName("RestrictState")
     @Expose
     private String RestrictState;
 
     /**
-    * 可用区，如：ap-guangzhou-2
+    * The availability zone, such as `ap-guangzhou-2`
     */
     @SerializedName("Zone")
     @Expose
@@ -135,240 +135,240 @@ public class VpnGateway extends AbstractModel{
     private VpnGatewayQuota [] VpnGatewayQuotaSet;
 
     /**
-     * Get 网关实例ID。 
-     * @return VpnGatewayId 网关实例ID。
+     * Get Gateway instance ID. 
+     * @return VpnGatewayId Gateway instance ID.
      */
     public String getVpnGatewayId() {
         return this.VpnGatewayId;
     }
 
     /**
-     * Set 网关实例ID。
-     * @param VpnGatewayId 网关实例ID。
+     * Set Gateway instance ID.
+     * @param VpnGatewayId Gateway instance ID.
      */
     public void setVpnGatewayId(String VpnGatewayId) {
         this.VpnGatewayId = VpnGatewayId;
     }
 
     /**
-     * Get VPC实例ID。 
-     * @return VpcId VPC实例ID。
+     * Get VPC instance ID. 
+     * @return VpcId VPC instance ID.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC实例ID。
-     * @param VpcId VPC实例ID。
+     * Set VPC instance ID.
+     * @param VpcId VPC instance ID.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 网关实例名称。 
-     * @return VpnGatewayName 网关实例名称。
+     * Get Gateway instance name. 
+     * @return VpnGatewayName Gateway instance name.
      */
     public String getVpnGatewayName() {
         return this.VpnGatewayName;
     }
 
     /**
-     * Set 网关实例名称。
-     * @param VpnGatewayName 网关实例名称。
+     * Set Gateway instance name.
+     * @param VpnGatewayName Gateway instance name.
      */
     public void setVpnGatewayName(String VpnGatewayName) {
         this.VpnGatewayName = VpnGatewayName;
     }
 
     /**
-     * Get 网关实例类型：'IPSEC', 'SSL'。 
-     * @return Type 网关实例类型：'IPSEC', 'SSL'。
+     * Get Gateway instance type: 'IPSEC' and 'SSL'. 
+     * @return Type Gateway instance type: 'IPSEC' and 'SSL'.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 网关实例类型：'IPSEC', 'SSL'。
-     * @param Type 网关实例类型：'IPSEC', 'SSL'。
+     * Set Gateway instance type: 'IPSEC' and 'SSL'.
+     * @param Type Gateway instance type: 'IPSEC' and 'SSL'.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 网关实例状态， 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中。 
-     * @return State 网关实例状态， 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中。
+     * Get Gateway instance status. 'PENDING': Creating; 'DELETING': Deleting; 'AVAILABLE': Running. 
+     * @return State Gateway instance status. 'PENDING': Creating; 'DELETING': Deleting; 'AVAILABLE': Running.
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set 网关实例状态， 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中。
-     * @param State 网关实例状态， 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中。
+     * Set Gateway instance status. 'PENDING': Creating; 'DELETING': Deleting; 'AVAILABLE': Running.
+     * @param State Gateway instance status. 'PENDING': Creating; 'DELETING': Deleting; 'AVAILABLE': Running.
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get 网关公网IP。 
-     * @return PublicIpAddress 网关公网IP。
+     * Get Gateway public IP. 
+     * @return PublicIpAddress Gateway public IP.
      */
     public String getPublicIpAddress() {
         return this.PublicIpAddress;
     }
 
     /**
-     * Set 网关公网IP。
-     * @param PublicIpAddress 网关公网IP。
+     * Set Gateway public IP.
+     * @param PublicIpAddress Gateway public IP.
      */
     public void setPublicIpAddress(String PublicIpAddress) {
         this.PublicIpAddress = PublicIpAddress;
     }
 
     /**
-     * Get 网关续费类型：'NOTIFY_AND_MANUAL_RENEW'：手动续费，'NOTIFY_AND_AUTO_RENEW'：自动续费，'NOT_NOTIFY_AND_NOT_RENEW'：到期不续费。 
-     * @return RenewFlag 网关续费类型：'NOTIFY_AND_MANUAL_RENEW'：手动续费，'NOTIFY_AND_AUTO_RENEW'：自动续费，'NOT_NOTIFY_AND_NOT_RENEW'：到期不续费。
+     * Get Gateway renewal type: 'NOTIFY_AND_MANUAL_RENEW': Manual renewal. 'NOTIFY_AND_AUTO_RENEW': Automatic renewal. 'NOT_NOTIFY_AND_NOT_RENEW': No renewal after expiration. 
+     * @return RenewFlag Gateway renewal type: 'NOTIFY_AND_MANUAL_RENEW': Manual renewal. 'NOTIFY_AND_AUTO_RENEW': Automatic renewal. 'NOT_NOTIFY_AND_NOT_RENEW': No renewal after expiration.
      */
     public String getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 网关续费类型：'NOTIFY_AND_MANUAL_RENEW'：手动续费，'NOTIFY_AND_AUTO_RENEW'：自动续费，'NOT_NOTIFY_AND_NOT_RENEW'：到期不续费。
-     * @param RenewFlag 网关续费类型：'NOTIFY_AND_MANUAL_RENEW'：手动续费，'NOTIFY_AND_AUTO_RENEW'：自动续费，'NOT_NOTIFY_AND_NOT_RENEW'：到期不续费。
+     * Set Gateway renewal type: 'NOTIFY_AND_MANUAL_RENEW': Manual renewal. 'NOTIFY_AND_AUTO_RENEW': Automatic renewal. 'NOT_NOTIFY_AND_NOT_RENEW': No renewal after expiration.
+     * @param RenewFlag Gateway renewal type: 'NOTIFY_AND_MANUAL_RENEW': Manual renewal. 'NOTIFY_AND_AUTO_RENEW': Automatic renewal. 'NOT_NOTIFY_AND_NOT_RENEW': No renewal after expiration.
      */
     public void setRenewFlag(String RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 网关付费类型：POSTPAID_BY_HOUR：按小时后付费，PREPAID：包年包月预付费， 
-     * @return InstanceChargeType 网关付费类型：POSTPAID_BY_HOUR：按小时后付费，PREPAID：包年包月预付费，
+     * Get Gateway billing type: POSTPAID_BY_HOUR: Postpaid by hour; PREPAID: Prepaid. 
+     * @return InstanceChargeType Gateway billing type: POSTPAID_BY_HOUR: Postpaid by hour; PREPAID: Prepaid.
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set 网关付费类型：POSTPAID_BY_HOUR：按小时后付费，PREPAID：包年包月预付费，
-     * @param InstanceChargeType 网关付费类型：POSTPAID_BY_HOUR：按小时后付费，PREPAID：包年包月预付费，
+     * Set Gateway billing type: POSTPAID_BY_HOUR: Postpaid by hour; PREPAID: Prepaid.
+     * @param InstanceChargeType Gateway billing type: POSTPAID_BY_HOUR: Postpaid by hour; PREPAID: Prepaid.
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
     }
 
     /**
-     * Get 网关出带宽。 
-     * @return InternetMaxBandwidthOut 网关出带宽。
+     * Get Outbound bandwidth of gateway. 
+     * @return InternetMaxBandwidthOut Outbound bandwidth of gateway.
      */
     public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
     /**
-     * Set 网关出带宽。
-     * @param InternetMaxBandwidthOut 网关出带宽。
+     * Set Outbound bandwidth of gateway.
+     * @param InternetMaxBandwidthOut Outbound bandwidth of gateway.
      */
     public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
     }
 
     /**
-     * Get 创建时间。 
-     * @return CreatedTime 创建时间。
+     * Get Creation Time. 
+     * @return CreatedTime Creation Time.
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间。
-     * @param CreatedTime 创建时间。
+     * Set Creation Time.
+     * @param CreatedTime Creation Time.
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 预付费网关过期时间。 
-     * @return ExpiredTime 预付费网关过期时间。
+     * Get Expiration time of the prepaid gateway. 
+     * @return ExpiredTime Expiration time of the prepaid gateway.
      */
     public String getExpiredTime() {
         return this.ExpiredTime;
     }
 
     /**
-     * Set 预付费网关过期时间。
-     * @param ExpiredTime 预付费网关过期时间。
+     * Set Expiration time of the prepaid gateway.
+     * @param ExpiredTime Expiration time of the prepaid gateway.
      */
     public void setExpiredTime(String ExpiredTime) {
         this.ExpiredTime = ExpiredTime;
     }
 
     /**
-     * Get 公网IP是否被封堵。 
-     * @return IsAddressBlocked 公网IP是否被封堵。
+     * Get Whether the public IP is blocked. 
+     * @return IsAddressBlocked Whether the public IP is blocked.
      */
     public Boolean getIsAddressBlocked() {
         return this.IsAddressBlocked;
     }
 
     /**
-     * Set 公网IP是否被封堵。
-     * @param IsAddressBlocked 公网IP是否被封堵。
+     * Set Whether the public IP is blocked.
+     * @param IsAddressBlocked Whether the public IP is blocked.
      */
     public void setIsAddressBlocked(Boolean IsAddressBlocked) {
         this.IsAddressBlocked = IsAddressBlocked;
     }
 
     /**
-     * Get 计费模式变更，PREPAID_TO_POSTPAID：包年包月预付费到期转按小时后付费。 
-     * @return NewPurchasePlan 计费模式变更，PREPAID_TO_POSTPAID：包年包月预付费到期转按小时后付费。
+     * Get Change of billing method. PREPAID_TO_POSTPAID: Monthly subscription prepaid to postpaid by hour. 
+     * @return NewPurchasePlan Change of billing method. PREPAID_TO_POSTPAID: Monthly subscription prepaid to postpaid by hour.
      */
     public String getNewPurchasePlan() {
         return this.NewPurchasePlan;
     }
 
     /**
-     * Set 计费模式变更，PREPAID_TO_POSTPAID：包年包月预付费到期转按小时后付费。
-     * @param NewPurchasePlan 计费模式变更，PREPAID_TO_POSTPAID：包年包月预付费到期转按小时后付费。
+     * Set Change of billing method. PREPAID_TO_POSTPAID: Monthly subscription prepaid to postpaid by hour.
+     * @param NewPurchasePlan Change of billing method. PREPAID_TO_POSTPAID: Monthly subscription prepaid to postpaid by hour.
      */
     public void setNewPurchasePlan(String NewPurchasePlan) {
         this.NewPurchasePlan = NewPurchasePlan;
     }
 
     /**
-     * Get 网关计费装，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。 
-     * @return RestrictState 网关计费装，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
+     * Get Gateway billing status. PROTECTIVELY_ISOLATED: Instance is isolated; NORMAL: Normal. 
+     * @return RestrictState Gateway billing status. PROTECTIVELY_ISOLATED: Instance is isolated; NORMAL: Normal.
      */
     public String getRestrictState() {
         return this.RestrictState;
     }
 
     /**
-     * Set 网关计费装，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
-     * @param RestrictState 网关计费装，PROTECTIVELY_ISOLATED：被安全隔离的实例，NORMAL：正常。
+     * Set Gateway billing status. PROTECTIVELY_ISOLATED: Instance is isolated; NORMAL: Normal.
+     * @param RestrictState Gateway billing status. PROTECTIVELY_ISOLATED: Instance is isolated; NORMAL: Normal.
      */
     public void setRestrictState(String RestrictState) {
         this.RestrictState = RestrictState;
     }
 
     /**
-     * Get 可用区，如：ap-guangzhou-2 
-     * @return Zone 可用区，如：ap-guangzhou-2
+     * Get The availability zone, such as `ap-guangzhou-2` 
+     * @return Zone The availability zone, such as `ap-guangzhou-2`
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区，如：ap-guangzhou-2
-     * @param Zone 可用区，如：ap-guangzhou-2
+     * Set The availability zone, such as `ap-guangzhou-2`
+     * @param Zone The availability zone, such as `ap-guangzhou-2`
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

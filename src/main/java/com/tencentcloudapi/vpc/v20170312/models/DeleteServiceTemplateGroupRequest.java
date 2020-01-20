@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeleteServiceTemplateGroupRequest extends AbstractModel{
 
     /**
-    * 协议端口模板集合实例ID，例如：ppmg-n17uxvve。
+    * The protocol port template group instance ID, such as `ppmg-n17uxvve`.
     */
     @SerializedName("ServiceTemplateGroupId")
     @Expose
     private String ServiceTemplateGroupId;
 
     /**
-     * Get 协议端口模板集合实例ID，例如：ppmg-n17uxvve。 
-     * @return ServiceTemplateGroupId 协议端口模板集合实例ID，例如：ppmg-n17uxvve。
+     * Get The protocol port template group instance ID, such as `ppmg-n17uxvve`. 
+     * @return ServiceTemplateGroupId The protocol port template group instance ID, such as `ppmg-n17uxvve`.
      */
     public String getServiceTemplateGroupId() {
         return this.ServiceTemplateGroupId;
     }
 
     /**
-     * Set 协议端口模板集合实例ID，例如：ppmg-n17uxvve。
-     * @param ServiceTemplateGroupId 协议端口模板集合实例ID，例如：ppmg-n17uxvve。
+     * Set The protocol port template group instance ID, such as `ppmg-n17uxvve`.
+     * @param ServiceTemplateGroupId The protocol port template group instance ID, such as `ppmg-n17uxvve`.
      */
     public void setServiceTemplateGroupId(String ServiceTemplateGroupId) {
         this.ServiceTemplateGroupId = ServiceTemplateGroupId;

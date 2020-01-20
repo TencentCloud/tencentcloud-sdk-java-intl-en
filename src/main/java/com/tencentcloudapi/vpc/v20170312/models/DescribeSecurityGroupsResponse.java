@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeSecurityGroupsResponse extends AbstractModel{
 
     /**
-    * 安全组对象。
+    * Security group object.
     */
     @SerializedName("SecurityGroupSet")
     @Expose
     private SecurityGroup [] SecurityGroupSet;
 
     /**
-    * 符合条件的实例数量。
+    * The number of instances meeting the filter condition.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeSecurityGroupsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 安全组对象。 
-     * @return SecurityGroupSet 安全组对象。
+     * Get Security group object. 
+     * @return SecurityGroupSet Security group object.
      */
     public SecurityGroup [] getSecurityGroupSet() {
         return this.SecurityGroupSet;
     }
 
     /**
-     * Set 安全组对象。
-     * @param SecurityGroupSet 安全组对象。
+     * Set Security group object.
+     * @param SecurityGroupSet Security group object.
      */
     public void setSecurityGroupSet(SecurityGroup [] SecurityGroupSet) {
         this.SecurityGroupSet = SecurityGroupSet;
     }
 
     /**
-     * Get 符合条件的实例数量。 
-     * @return TotalCount 符合条件的实例数量。
+     * Get The number of instances meeting the filter condition. 
+     * @return TotalCount The number of instances meeting the filter condition.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的实例数量。
-     * @param TotalCount 符合条件的实例数量。
+     * Set The number of instances meeting the filter condition.
+     * @param TotalCount The number of instances meeting the filter condition.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

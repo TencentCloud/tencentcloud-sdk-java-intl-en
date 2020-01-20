@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class AttachCcnInstancesRequest extends AbstractModel{
 
     /**
-    * CCN实例ID。形如：ccn-f49l6u0z。
+    * The CCN instance ID, such as `ccn-f49l6u0z`.
     */
     @SerializedName("CcnId")
     @Expose
     private String CcnId;
 
     /**
-    * 关联网络实例列表
+    * List of associated network instances
     */
     @SerializedName("Instances")
     @Expose
     private CcnInstance [] Instances;
 
     /**
-    * CCN所属UIN（根账号），默认当前账号所属UIN
+    * The UIN (root account) of the CCN. By default, the current account belongs to the UIN
     */
     @SerializedName("CcnUin")
     @Expose
     private String CcnUin;
 
     /**
-     * Get CCN实例ID。形如：ccn-f49l6u0z。 
-     * @return CcnId CCN实例ID。形如：ccn-f49l6u0z。
+     * Get The CCN instance ID, such as `ccn-f49l6u0z`. 
+     * @return CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
      */
     public String getCcnId() {
         return this.CcnId;
     }
 
     /**
-     * Set CCN实例ID。形如：ccn-f49l6u0z。
-     * @param CcnId CCN实例ID。形如：ccn-f49l6u0z。
+     * Set The CCN instance ID, such as `ccn-f49l6u0z`.
+     * @param CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;
     }
 
     /**
-     * Get 关联网络实例列表 
-     * @return Instances 关联网络实例列表
+     * Get List of associated network instances 
+     * @return Instances List of associated network instances
      */
     public CcnInstance [] getInstances() {
         return this.Instances;
     }
 
     /**
-     * Set 关联网络实例列表
-     * @param Instances 关联网络实例列表
+     * Set List of associated network instances
+     * @param Instances List of associated network instances
      */
     public void setInstances(CcnInstance [] Instances) {
         this.Instances = Instances;
     }
 
     /**
-     * Get CCN所属UIN（根账号），默认当前账号所属UIN 
-     * @return CcnUin CCN所属UIN（根账号），默认当前账号所属UIN
+     * Get The UIN (root account) of the CCN. By default, the current account belongs to the UIN 
+     * @return CcnUin The UIN (root account) of the CCN. By default, the current account belongs to the UIN
      */
     public String getCcnUin() {
         return this.CcnUin;
     }
 
     /**
-     * Set CCN所属UIN（根账号），默认当前账号所属UIN
-     * @param CcnUin CCN所属UIN（根账号），默认当前账号所属UIN
+     * Set The UIN (root account) of the CCN. By default, the current account belongs to the UIN
+     * @param CcnUin The UIN (root account) of the CCN. By default, the current account belongs to the UIN
      */
     public void setCcnUin(String CcnUin) {
         this.CcnUin = CcnUin;

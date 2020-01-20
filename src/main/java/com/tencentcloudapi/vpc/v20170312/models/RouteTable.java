@@ -23,161 +23,161 @@ import java.util.HashMap;
 public class RouteTable extends AbstractModel{
 
     /**
-    * VPC实例ID。
+    * VPC instance ID.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 路由表实例ID，例如：rtb-azd4dt1c。
+    * The route table instance ID, such as `rtb-azd4dt1c`.
     */
     @SerializedName("RouteTableId")
     @Expose
     private String RouteTableId;
 
     /**
-    * 路由表名称。
+    * Route table name.
     */
     @SerializedName("RouteTableName")
     @Expose
     private String RouteTableName;
 
     /**
-    * 路由表关联关系。
+    * The association relationships of the route table.
     */
     @SerializedName("AssociationSet")
     @Expose
     private RouteTableAssociation [] AssociationSet;
 
     /**
-    * 路由表策略集合。
+    * Route table policy set.
     */
     @SerializedName("RouteSet")
     @Expose
     private Route [] RouteSet;
 
     /**
-    * 是否默认路由表。
+    * Whether it is the default route table.
     */
     @SerializedName("Main")
     @Expose
     private Boolean Main;
 
     /**
-    * 创建时间。
+    * Creation Time.
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-     * Get VPC实例ID。 
-     * @return VpcId VPC实例ID。
+     * Get VPC instance ID. 
+     * @return VpcId VPC instance ID.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC实例ID。
-     * @param VpcId VPC实例ID。
+     * Set VPC instance ID.
+     * @param VpcId VPC instance ID.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 路由表实例ID，例如：rtb-azd4dt1c。 
-     * @return RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
+     * Get The route table instance ID, such as `rtb-azd4dt1c`. 
+     * @return RouteTableId The route table instance ID, such as `rtb-azd4dt1c`.
      */
     public String getRouteTableId() {
         return this.RouteTableId;
     }
 
     /**
-     * Set 路由表实例ID，例如：rtb-azd4dt1c。
-     * @param RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
+     * Set The route table instance ID, such as `rtb-azd4dt1c`.
+     * @param RouteTableId The route table instance ID, such as `rtb-azd4dt1c`.
      */
     public void setRouteTableId(String RouteTableId) {
         this.RouteTableId = RouteTableId;
     }
 
     /**
-     * Get 路由表名称。 
-     * @return RouteTableName 路由表名称。
+     * Get Route table name. 
+     * @return RouteTableName Route table name.
      */
     public String getRouteTableName() {
         return this.RouteTableName;
     }
 
     /**
-     * Set 路由表名称。
-     * @param RouteTableName 路由表名称。
+     * Set Route table name.
+     * @param RouteTableName Route table name.
      */
     public void setRouteTableName(String RouteTableName) {
         this.RouteTableName = RouteTableName;
     }
 
     /**
-     * Get 路由表关联关系。 
-     * @return AssociationSet 路由表关联关系。
+     * Get The association relationships of the route table. 
+     * @return AssociationSet The association relationships of the route table.
      */
     public RouteTableAssociation [] getAssociationSet() {
         return this.AssociationSet;
     }
 
     /**
-     * Set 路由表关联关系。
-     * @param AssociationSet 路由表关联关系。
+     * Set The association relationships of the route table.
+     * @param AssociationSet The association relationships of the route table.
      */
     public void setAssociationSet(RouteTableAssociation [] AssociationSet) {
         this.AssociationSet = AssociationSet;
     }
 
     /**
-     * Get 路由表策略集合。 
-     * @return RouteSet 路由表策略集合。
+     * Get Route table policy set. 
+     * @return RouteSet Route table policy set.
      */
     public Route [] getRouteSet() {
         return this.RouteSet;
     }
 
     /**
-     * Set 路由表策略集合。
-     * @param RouteSet 路由表策略集合。
+     * Set Route table policy set.
+     * @param RouteSet Route table policy set.
      */
     public void setRouteSet(Route [] RouteSet) {
         this.RouteSet = RouteSet;
     }
 
     /**
-     * Get 是否默认路由表。 
-     * @return Main 是否默认路由表。
+     * Get Whether it is the default route table. 
+     * @return Main Whether it is the default route table.
      */
     public Boolean getMain() {
         return this.Main;
     }
 
     /**
-     * Set 是否默认路由表。
-     * @param Main 是否默认路由表。
+     * Set Whether it is the default route table.
+     * @param Main Whether it is the default route table.
      */
     public void setMain(Boolean Main) {
         this.Main = Main;
     }
 
     /**
-     * Get 创建时间。 
-     * @return CreatedTime 创建时间。
+     * Get Creation Time. 
+     * @return CreatedTime Creation Time.
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间。
-     * @param CreatedTime 创建时间。
+     * Set Creation Time.
+     * @param CreatedTime Creation Time.
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;

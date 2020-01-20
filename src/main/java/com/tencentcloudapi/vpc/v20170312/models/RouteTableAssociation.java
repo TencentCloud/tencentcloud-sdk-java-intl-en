@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class RouteTableAssociation extends AbstractModel{
 
     /**
-    * 子网实例ID。
+    * Subnet instance ID.
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 路由表实例ID。
+    * Route table instance ID.
     */
     @SerializedName("RouteTableId")
     @Expose
     private String RouteTableId;
 
     /**
-     * Get 子网实例ID。 
-     * @return SubnetId 子网实例ID。
+     * Get Subnet instance ID. 
+     * @return SubnetId Subnet instance ID.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网实例ID。
-     * @param SubnetId 子网实例ID。
+     * Set Subnet instance ID.
+     * @param SubnetId Subnet instance ID.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 路由表实例ID。 
-     * @return RouteTableId 路由表实例ID。
+     * Get Route table instance ID. 
+     * @return RouteTableId Route table instance ID.
      */
     public String getRouteTableId() {
         return this.RouteTableId;
     }
 
     /**
-     * Set 路由表实例ID。
-     * @param RouteTableId 路由表实例ID。
+     * Set Route table instance ID.
+     * @param RouteTableId Route table instance ID.
      */
     public void setRouteTableId(String RouteTableId) {
         this.RouteTableId = RouteTableId;

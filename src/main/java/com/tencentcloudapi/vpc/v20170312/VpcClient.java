@@ -38,7 +38,7 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *本接口（AcceptAttachCcnInstances）用于跨账号关联实例时，云联网所有者接受并同意关联操作。
+     *This API (AcceptAttachCcnInstances) is used to associate instances across accounts. Cloud Connect Network (CCN) owners accept and agree to the operations.
      * @param req AcceptAttachCcnInstancesRequest
      * @return AcceptAttachCcnInstancesResponse
      * @throws TencentCloudSDKException
@@ -77,12 +77,12 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *本接口（AssignIpv6Addresses）用于弹性网卡申请`IPv6`地址。<br />
-本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`QueryTask`接口。
-* 一个弹性网卡支持绑定的IP地址是有限制的，更多资源限制信息详见<a href="/document/product/576/18527">弹性网卡使用限制</a>。
-* 可以指定`IPv6`地址申请，地址类型不能为主`IP`，`IPv6`地址暂时只支持作为辅助`IP`。
-* 地址必须要在弹性网卡所在子网内，而且不能被占用。
-* 在弹性网卡上申请一个到多个辅助`IPv6`地址，接口会在弹性网卡所在子网段内返回指定数量的辅助`IPv6`地址。
+     *This API (AssignIpv6Addresses) is used to apply for an IPv6 address for the ENI.<br />
+This API is completed asynchronously. If you need to query the async execution results, use the `RequestId` returned by this API to query the `QueryTask` API.
+* An ENI can only be bound with a limited number of IPs. For more information about resource limits, see<a href="/document/product/576/18527">ENI use limits</a>.
+* You can specify the `IPv6` address when applying. The address type cannot be the primary `IP`. Currently, `IPv6` can only be supported as the secondary `IP`.
+* The address must be unoccupied and is in the subnet to which the ENI belongs.
+* When applying for one to multiple secondary `IPv6` addresses on ENI, the API will return the specified number of secondary `IPv6` addresses in the subnet range where the ENI is located.
      * @param req AssignIpv6AddressesRequest
      * @return AssignIpv6AddressesResponse
      * @throws TencentCloudSDKException
@@ -120,9 +120,9 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *本接口（AssignIpv6SubnetCidrBlock）用于分配IPv6子网段。
-* 给子网分配 `IPv6` 网段，要求子网所属 `VPC` 已获得 `IPv6` 网段。如果尚未分配，请先通过接口 `AssignIpv6CidrBlock` 给子网所属 `VPC` 分配一个 `IPv6` 网段。否则无法分配 `IPv6` 子网段。
-* 每个子网只能分配一个IPv6网段。
+     *This API (AssignIpv6SubnetCidrBlock) is used to assign IPv6 subnet IP ranges.
+* To assign an `IPv6` IP range to a subnet, the `VPC` that the subnet belongs to should have obtained the `IPv6` IP range. If this has not been assigned, use the `AssignIpv6CidrBlock` API to assign an `IPv6` IP range to the `VPC` to which the subnet belongs. Otherwise, the `IPv6` subnet IP range cannot be assigned.
+* Each subnet can only be assigned one IPv6 IP range.
      * @param req AssignIpv6SubnetCidrBlockRequest
      * @return AssignIpv6SubnetCidrBlockResponse
      * @throws TencentCloudSDKException
@@ -140,13 +140,13 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *本接口 (AssociateAddress) 用于将[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）绑定到实例或弹性网卡的指定内网 IP 上。
-* 将 EIP 绑定到实例（CVM）上，其本质是将 EIP 绑定到实例上主网卡的主内网 IP 上。
-* 将 EIP 绑定到主网卡的主内网IP上，绑定过程会把其上绑定的普通公网 IP 自动解绑并释放。
-* 将 EIP 绑定到指定网卡的内网 IP上（非主网卡的主内网IP），则必须先解绑该 EIP，才能再绑定新的。
-* 将 EIP 绑定到NAT网关，请使用接口[EipBindNatGateway](https://cloud.tencent.com/document/product/215/4093)
-* EIP 如果欠费或被封堵，则不能被绑定。
-* 只有状态为 UNBIND 的 EIP 才能够被绑定。
+     *This API (AssociateAddress) is used to bind an [Elastic IP](https://cloud.tencent.com/document/product/213/1941) (EIP for short) to the specified private IP of an instance or ENI.
+* Essentially, binding an EIP to an instance (CVM) means binding an EIP to the primary private IP of the primary ENI on an instance.
+* When you bind an EIP to the primary private IP of the primary ENI, the previously bound public IP is automatically unbound and released.
+* To bind the EIP to the private IP of the specified ENI (not the primary private IP of the primary ENI), you must unbind the EIP before you can bind a new one.
+* To bind the EIP to a NAT gateway, use the API [EipBindNatGateway](https://cloud.tencent.com/document/product/215/4093)
+* EIP that is in arrears or blocked cannot be bound.
+* Only EIP in the UNBIND status can be bound.
      * @param req AssociateAddressRequest
      * @return AssociateAddressResponse
      * @throws TencentCloudSDKException
@@ -164,8 +164,8 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *本接口（AttachCcnInstances）用于将网络实例加载到云联网实例中，网络实例包括VPC和专线网关。<br />
-每个云联网能够关联的网络实例个数是有限的，详请参考产品文档。如果需要扩充请联系在线客服。
+     *This API (AttachCcnInstances) is used to load a network instance to a CCN instance. Network instances include VPCs and Direct Connect gateways.<br />
+The number of network instances that each CCN can be associated with is limited. For more information, see the product documentation. If you need to associate more instances, please contact online customer service.
      * @param req AttachCcnInstancesRequest
      * @return AttachCcnInstancesResponse
      * @throws TencentCloudSDKException
@@ -183,9 +183,9 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *本接口(AttachClassicLinkVpc)用于创建私有网络和基础网络设备互通。
-* 私有网络和基础网络设备必须在同一个地域。
-* 私有网络和基础网络的区别详见vpc产品文档-<a href="https://cloud.tencent.com/document/product/215/535#2.-.E7.A7.81.E6.9C.89.E7.BD.91.E7.BB.9C.E4.B8.8E.E5.9F.BA.E7.A1.80.E7.BD.91.E7.BB.9C">私有网络与基础网络</a>。
+     *This API (AttachClassicLinkVpc) is used to create a Classiclink between a VPC and a basic network device.
+* The VPC and the basic network device must be in the same region.
+* For the difference between VPCs and basic networks, see VPC product documentation-<a href="https://cloud.tencent.com/document/product/215/535#2.-.E7.A7.81.E6.9C.89.E7.BD.91.E7.BB.9C.E4.B8.8E.E5.9F.BA.E7.A1.80.E7.BD.91.E7.BB.9C">VPCs and basic networks</a>.
      * @param req AttachClassicLinkVpcRequest
      * @return AttachClassicLinkVpcResponse
      * @throws TencentCloudSDKException
@@ -203,11 +203,11 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *本接口（AttachNetworkInterface）用于弹性网卡绑定云主机。
-* 一个云主机可以绑定多个弹性网卡，但只能绑定一个主网卡。更多限制信息详见<a href="https://cloud.tencent.com/document/product/215/6513">弹性网卡使用限制</a>。
-* 一个弹性网卡只能同时绑定一个云主机。
-* 只有运行中或者已关机状态的云主机才能绑定弹性网卡，查看云主机状态详见<a href="https://cloud.tencent.com/document/api/213/9452#instance_state">腾讯云主机信息</a>。
-* 弹性网卡绑定的云主机必须是私有网络的，而且云主机所在可用区必须和弹性网卡子网的可用区相同。
+     *This API (AttachNetworkInterface) is used to bind an ENI to a CVM.
+* One CVM can be bound to multiple ENIs, but only one primary ENI. For more information on the limits, see <a href="https://cloud.tencent.com/document/product/215/6513">ENI use limits</a>.
+* An ENI can only be bound to one CVM at a time.
+* Only CVMs in running or shutdown status can be bound to an ENI. For more information about CVM status, see <a href="https://cloud.tencent.com/document/api/213/9452#instance_state">Tencent CVM information</a>.
+* An ENI can only be bound to a CVM in VPC, and the CVM must reside in the same availability zone as the subnet of the ENI.
      * @param req AttachNetworkInterfaceRequest
      * @return AttachNetworkInterfaceResponse
      * @throws TencentCloudSDKException
@@ -243,7 +243,7 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *本接口（CreateAddressTemplate）用于创建IP地址模版
+     *This API (CreateAddressTemplate) is used to create an IP address template.
      * @param req CreateAddressTemplateRequest
      * @return CreateAddressTemplateResponse
      * @throws TencentCloudSDKException
@@ -261,7 +261,7 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *本接口（CreateAddressTemplateGroup）用于创建IP地址模版集合
+     *This API (CreateAddressTemplateGroup) is used to create an IP address template group.
      * @param req CreateAddressTemplateGroupRequest
      * @return CreateAddressTemplateGroupResponse
      * @throws TencentCloudSDKException
@@ -279,8 +279,8 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *本接口（CreateCcn）用于创建云联网（CCN）。<br />
-每个账号能创建的云联网实例个数是有限的，详请参考产品文档。如果需要扩充请联系在线客服。
+     *This API (CreateCcn) is used to create a Cloud Connect Network (CCN).<br />
+Each account can only create a limited number of CCN instances. For more information, see the product documentation. If you need to create more instances, please contact the online customer service.
      * @param req CreateCcnRequest
      * @return CreateCcnResponse
      * @throws TencentCloudSDKException
@@ -324,7 +324,7 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
-     *本接口（CreateDirectConnectGatewayCcnRoutes）用于创建专线网关的云联网路由（IDC网段）
+     *This API (CreateDirectConnectGatewayCcnRoutes) is used to create the CCN route (IDC IP range) of a Direct Connect gateway.
      * @param req CreateDirectConnectGatewayCcnRoutesRequest
      * @return CreateDirectConnectGatewayCcnRoutesResponse
      * @throws TencentCloudSDKException
@@ -342,7 +342,7 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
-     *本接口（CreateHaVip）用于创建高可用虚拟IP（HAVIP）
+     *This API (CreateHaVip) is used to create a highly available virtual IP (HAVIP)
      * @param req CreateHaVipRequest
      * @return CreateHaVipResponse
      * @throws TencentCloudSDKException
@@ -360,7 +360,7 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
-     *本接口(CreateNatGateway)用于创建NAT网关。
+     *This API (CreateNatGateway) is used to create a NAT gateway.
      * @param req CreateNatGatewayRequest
      * @return CreateNatGatewayResponse
      * @throws TencentCloudSDKException
@@ -378,7 +378,7 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
-     *本接口(CreateNatGatewayDestinationIpPortTranslationNatRule)用于创建NAT网关端口转发规则。
+     *This API (CreateNatGatewayDestinationIpPortTranslationNatRule) is used to create a port forwarding rule for a NAT gateway.
      * @param req CreateNatGatewayDestinationIpPortTranslationNatRuleRequest
      * @return CreateNatGatewayDestinationIpPortTranslationNatRuleResponse
      * @throws TencentCloudSDKException
@@ -437,8 +437,8 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
-     *本接口(CreateRouteTable)用于创建路由表。
-* 创建了VPC后，系统会创建一个默认路由表，所有新建的子网都会关联到默认路由表。默认情况下您可以直接使用默认路由表来管理您的路由策略。当您的路由策略较多时，您可以调用创建路由表接口创建更多路由表管理您的路由策略。
+     *This API (CreateRouteTable) is used to create a route table.
+* After the VPC has been created, the system will create a default route table with which all newly created subnets will be associated. By default, you can use this route table to manage your routing policies. If you have multiple routing policies, you can call the API for creating route table to create more route tables to manage your routing policies.
      * @param req CreateRouteTableRequest
      * @return CreateRouteTableResponse
      * @throws TencentCloudSDKException
@@ -456,8 +456,8 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
-     *本接口(CreateRoutes)用于创建路由策略。
-* 向指定路由表批量新增路由策略。
+     *This API (CreateRoutes) is used to create a routing policy.
+* You can create routing policies in batch for a specified route table.
      * @param req CreateRoutesRequest
      * @return CreateRoutesResponse
      * @throws TencentCloudSDKException
@@ -475,9 +475,9 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
-     *本接口（CreateSecurityGroup）用于创建新的安全组（SecurityGroup）。
-* 每个账户下每个地域的每个项目的<a href="https://cloud.tencent.com/document/product/213/500#2.-.E5.AE.89.E5.85.A8.E7.BB.84.E7.9A.84.E9.99.90.E5.88.B6">安全组数量限制</a>。
-* 新建的安全组的入站和出站规则默认都是全部拒绝，在创建后通常您需要再调用CreateSecurityGroupPolicies将安全组的规则设置为需要的规则。
+     *This API (CreateSecurityGroup) is used to create security groups (SecurityGroup).
+* <a href="https://cloud.tencent.com/document/product/213/500#2.-.E5.AE.89.E5.85.A8.E7.BB.84.E7.9A.84.E9.99.90.E5.88.B6">Security group limits</a> for each project in each region under each account.
+* Both the inbound and outbound rules for a newly created security group are Deny All by default. You need to call CreateSecurityGroupPolicies to set the security group rules according to your needs.
      * @param req CreateSecurityGroupRequest
      * @return CreateSecurityGroupResponse
      * @throws TencentCloudSDKException
@@ -523,7 +523,7 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
-     *本接口（CreateServiceTemplate）用于创建协议端口模板
+     *This API (CreateServiceTemplate) is used to create a protocol port template.
      * @param req CreateServiceTemplateRequest
      * @return CreateServiceTemplateResponse
      * @throws TencentCloudSDKException
@@ -541,7 +541,7 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
-     *本接口（CreateServiceTemplateGroup）用于创建协议端口模板集合
+     *This API (CreateServiceTemplateGroup) is used to create a protocol port template group.
      * @param req CreateServiceTemplateGroupRequest
      * @return CreateServiceTemplateGroupResponse
      * @throws TencentCloudSDKException
@@ -605,9 +605,9 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
-     *本接口(CreateVpc)用于创建私有网络(VPC)。
-* 用户可以创建的最小网段子网掩码为28（有16个IP地址），最大网段子网掩码为16（65,536个IP地址）,如果规划VPC网段请参见VPC网段规划说明。
-* 同一个地域能创建的VPC资源个数也是有限制的，详见 <a href="https://cloud.tencent.com/doc/product/215/537" title="VPC使用限制">VPC使用限制</a>,如果需要扩充请联系在线客服。
+     *This API (CreateVpc) is used to create a VPC.
+* The subnet mask of the smallest IP address range that can be created is 28 (16 IP addresses), and that of the largest IP address range is 16 (65,536 IP addresses). For more information, please see corresponding documents about VPC IP address ranges.
+* The number of VPCs that can be created in a region is limited. For more information, please see <a href="https://intl.cloud.tencent.com/doc/product/215/537" title="VPC use limits">VPC use limits</a>. To request more resources, please contact the online customer service.
      * @param req CreateVpcRequest
      * @return CreateVpcResponse
      * @throws TencentCloudSDKException
@@ -625,7 +625,7 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
-     *本接口（CreateVpnConnection）用于创建VPN通道。
+     *This API (CreateVpnConnection) is used to create VPN tunnel.
      * @param req CreateVpnConnectionRequest
      * @return CreateVpnConnectionResponse
      * @throws TencentCloudSDKException
@@ -643,7 +643,7 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
-     *本接口（CreateVpnGateway）用于创建VPN网关。
+     *This API (CreateVpnGateway) is used to create a VPN gateway.
      * @param req CreateVpnGatewayRequest
      * @return CreateVpnGatewayResponse
      * @throws TencentCloudSDKException
@@ -661,7 +661,7 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
-     *本接口（DeleteAddressTemplate）用于删除IP地址模板
+     *This API (DeleteAddressTemplate) is used to delete an IP address template.
      * @param req DeleteAddressTemplateRequest
      * @return DeleteAddressTemplateResponse
      * @throws TencentCloudSDKException
@@ -679,7 +679,7 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
-     *本接口（DeleteAddressTemplateGroup）用于删除IP地址模板集合
+     *This API (DeleteAddressTemplateGroup) is used to delete an IP address template group.
      * @param req DeleteAddressTemplateGroupRequest
      * @return DeleteAddressTemplateGroupResponse
      * @throws TencentCloudSDKException
@@ -697,9 +697,9 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
-     *本接口（DeleteCcn）用于删除云联网。
-* 删除后，云联网关联的所有实例间路由将被删除，网络将会中断，请务必确认
-* 删除云联网是不可逆的操作，请谨慎处理。
+     *This API (DeleteCcn) is used to delete CCNs.
+* After deletion, the routes between all instances associated with the CCN will be deleted, and the network will be interrupted. Please confirm this operation in advance.
+* CCN deletion is an irreversible operation. Please proceed with caution.
 
      * @param req DeleteCcnRequest
      * @return DeleteCcnResponse
@@ -718,7 +718,7 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
-     *本接口（DeleteDirectConnectGatewayCcnRoutes）用于删除专线网关的云联网路由（IDC网段）
+     *This API (DeleteDirectConnectGatewayCcnRoutes) is used to delete the CCN routes (IDC IP range) of a Direct Connect gateway.
      * @param req DeleteDirectConnectGatewayCcnRoutesRequest
      * @return DeleteDirectConnectGatewayCcnRoutesResponse
      * @throws TencentCloudSDKException
@@ -736,8 +736,8 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
-     *本接口（DeleteHaVip）用于删除高可用虚拟IP（HAVIP）<br />
-本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`QueryTask`接口
+     *This API (DeleteHaVip) is used to delete Highly Available Virtual IP (HAVIP)<br />
+This API is completed asynchronously. If you need to query the async job execution results, please use the `RequestId` returned by this API to query the `QueryTask` API.
      * @param req DeleteHaVipRequest
      * @return DeleteHaVipResponse
      * @throws TencentCloudSDKException
@@ -755,8 +755,8 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
-     *本接口（DeleteNatGateway）用于删除NAT网关。
-删除 NAT 网关后，系统会自动删除路由表中包含此 NAT 网关的路由项，同时也会解绑弹性公网IP（EIP）。
+     *This API (DeleteNatGateway) is used to delete a NAT gateway.
+After the deletion of a NAT gateway, the system will automatically delete the routing entry that contains the NAT gateway from the route table. It will also unbind the Elastic IP.
      * @param req DeleteNatGatewayRequest
      * @return DeleteNatGatewayResponse
      * @throws TencentCloudSDKException
@@ -774,7 +774,7 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
-     *本接口（DeleteNatGatewayDestinationIpPortTranslationNatRule）用于删除NAT网关端口转发规则。
+     *This API (DeleteNatGatewayDestinationIpPortTranslationNatRule) is used to delete a port forwarding rule for a NAT gateway.
      * @param req DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest
      * @return DeleteNatGatewayDestinationIpPortTranslationNatRuleResponse
      * @throws TencentCloudSDKException
@@ -830,7 +830,7 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
-     *删除路由表
+     *This API is used to delete a route table.
      * @param req DeleteRouteTableRequest
      * @return DeleteRouteTableResponse
      * @throws TencentCloudSDKException
@@ -848,7 +848,7 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
-     *本接口(DeleteRoutes)用于对某个路由表批量删除路由策略（Route）。
+     *This API (DeleteRoutes) is used to delete routing policies in batches from a route table.
      * @param req DeleteRoutesRequest
      * @return DeleteRoutesResponse
      * @throws TencentCloudSDKException
@@ -866,10 +866,10 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
-     *本接口（DeleteSecurityGroup）用于删除安全组（SecurityGroup）。
-* 只有当前账号下的安全组允许被删除。
-* 安全组实例ID如果在其他安全组的规则中被引用，则无法直接删除。这种情况下，需要先进行规则修改，再删除安全组。
-* 删除的安全组无法再找回，请谨慎调用。
+     *This API (DeleteSecurityGroup) is used to delete security groups (SecurityGroup).
+* Only security groups under the current account can be deleted.
+* A security group cannot be deleted directly if its instance ID is used in the policy of another security group. You need to modify the policy first and then delete the security group.
+* A security group cannot be recovered after deletion, please proceed with caution.
      * @param req DeleteSecurityGroupRequest
      * @return DeleteSecurityGroupResponse
      * @throws TencentCloudSDKException
@@ -887,8 +887,8 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
-     *本接口（DeleteSecurityGroupPolicies）用于用于删除安全组规则（SecurityGroupPolicy）。
-* SecurityGroupPolicySet.Version 用于指定要操作的安全组的版本。传入 Version 版本号若不等于当前安全组的最新版本，将返回失败；若不传 Version 则直接删除指定PolicyIndex的规则。
+     *This API (DeleteSecurityGroupPolicies) is used to delete security group policies (SecurityGroupPolicy).
+* SecurityGroupPolicySet.Version is used to specify the version of the security group you are operating. If the specified Version number differs from the latest version of the current security group, a failure will be returned. If Version is not specified, the policy of the specified PolicyIndex will be deleted directly.
      * @param req DeleteSecurityGroupPoliciesRequest
      * @return DeleteSecurityGroupPoliciesResponse
      * @throws TencentCloudSDKException
@@ -906,7 +906,7 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
-     *本接口（DeleteServiceTemplate）用于删除协议端口模板
+     *This API (DeleteServiceTemplate) is used to delete a protocol port template.
      * @param req DeleteServiceTemplateRequest
      * @return DeleteServiceTemplateResponse
      * @throws TencentCloudSDKException
@@ -924,7 +924,7 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
-     *本接口（DeleteServiceTemplateGroup）用于删除协议端口模板集合
+     *This API (DeleteServiceTemplateGroup) is used to delete a protocol port template group.
      * @param req DeleteServiceTemplateGroupRequest
      * @return DeleteServiceTemplateGroupResponse
      * @throws TencentCloudSDKException
@@ -981,7 +981,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口(DeleteVpnConnection)用于删除VPN通道。
+     *This API (DeleteVpnConnection) is used to delete VPN tunnels.
      * @param req DeleteVpnConnectionRequest
      * @return DeleteVpnConnectionResponse
      * @throws TencentCloudSDKException
@@ -999,7 +999,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（DeleteVpnGateway）用于删除VPN网关。目前只支持删除运行中的按量计费的IPSEC网关实例。
+     *This API (DeleteVpnGateway) is used to delete a VPN gateway. Currently, only deletion of pay-as-you-go IPSEC gateway instances in running status is supported.
      * @param req DeleteVpnGatewayRequest
      * @return DeleteVpnGatewayResponse
      * @throws TencentCloudSDKException
@@ -1017,7 +1017,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（DescribeAccountAttributes）用于查询用户账号私有属性。
+     *This API (DescribeAccountAttributes) is used to query your account attributes.
      * @param req DescribeAccountAttributesRequest
      * @return DescribeAccountAttributesResponse
      * @throws TencentCloudSDKException
@@ -1035,7 +1035,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口 (DescribeAddressQuota) 用于查询您账户的[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）在当前地域的配额信息。配额详情可参见 [EIP 产品简介](https://cloud.tencent.com/document/product/213/5733)。
+     *This API (DescribeAddressQuota) is used to query the quota information of your [Elastic IP](https://cloud.tencent.com/document/product/213/1941) (EIP) in the current region. For more information, see [EIP product introduction](https://cloud.tencent.com/document/product/213/5733).
      * @param req DescribeAddressQuotaRequest
      * @return DescribeAddressQuotaResponse
      * @throws TencentCloudSDKException
@@ -1053,7 +1053,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（DescribeAddressTemplateGroups）用于查询IP地址模板集合
+     *This API (DescribeAddressTemplateGroups) is used to query an IP address template group.
      * @param req DescribeAddressTemplateGroupsRequest
      * @return DescribeAddressTemplateGroupsResponse
      * @throws TencentCloudSDKException
@@ -1071,7 +1071,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（DescribeAddressTemplates）用于查询IP地址模板
+     *This API (DescribeAddressTemplates) is used to query an IP address template.
      * @param req DescribeAddressTemplatesRequest
      * @return DescribeAddressTemplatesResponse
      * @throws TencentCloudSDKException
@@ -1089,8 +1089,8 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口 (DescribeAddresses) 用于查询一个或多个[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）的详细信息。
-* 如果参数为空，返回当前用户一定数量（Limit所指定的数量，默认为20）的 EIP。
+     *This API (DescribeAddresses) is used to query the information of one or multiple [Elastic IPs](https://cloud.tencent.com/document/product/213/1941).
+* If the parameter is empty, a number (as specified by the `Limit`, the default value is 20) of EIPs will be returned.
      * @param req DescribeAddressesRequest
      * @return DescribeAddressesResponse
      * @throws TencentCloudSDKException
@@ -1108,7 +1108,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（DescribeCcnAttachedInstances）用于查询云联网实例下已关联的网络实例。
+     *This API (DescribeCcnAttachedInstances) is used to query the network instances associated with the CCN instance.
      * @param req DescribeCcnAttachedInstancesRequest
      * @return DescribeCcnAttachedInstancesResponse
      * @throws TencentCloudSDKException
@@ -1126,7 +1126,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（DescribeCcnRoutes）用于查询已加入云联网（CCN）的路由
+     *This API (DescribeCcnRoutes) is used to query routes that have been added to a CCN.
      * @param req DescribeCcnRoutesRequest
      * @return DescribeCcnRoutesResponse
      * @throws TencentCloudSDKException
@@ -1144,7 +1144,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（DescribeCcns）用于查询云联网（CCN）列表。
+     *This API (DescribeCcns) is used to query the CCN list.
      * @param req DescribeCcnsRequest
      * @return DescribeCcnsResponse
      * @throws TencentCloudSDKException
@@ -1162,7 +1162,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口(DescribeClassicLinkInstances)用于查询私有网络和基础网络设备互通列表。
+     *This API (DescribeClassicLinkInstances) is used to query the Classiclink instances list.
      * @param req DescribeClassicLinkInstancesRequest
      * @return DescribeClassicLinkInstancesResponse
      * @throws TencentCloudSDKException
@@ -1180,7 +1180,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（DescribeDirectConnectGatewayCcnRoutes）用于查询专线网关的云联网路由（IDC网段）
+     *This API (DescribeDirectConnectGatewayCcnRoutes) is used to query the CCN routes (IDC IP range) of the Direct Connect gateway.
      * @param req DescribeDirectConnectGatewayCcnRoutesRequest
      * @return DescribeDirectConnectGatewayCcnRoutesResponse
      * @throws TencentCloudSDKException
@@ -1198,9 +1198,9 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（DescribeGatewayFlowMonitorDetail）用于查询网关流量监控明细。
-* 只支持单个网关实例查询。即入参 `VpnId` `DirectConnectGatewayId` `PeeringConnectionId` `NatId` 最多只支持传一个，且必须传一个。
-* 如果网关有流量，但调用本接口没有返回数据，请在控制台对应网关详情页确认是否开启网关流量监控。
+     *This API (DescribeGatewayFlowMonitorDetail) is used to query the monitoring details of the gateway traffic.
+* Only querying of a single gateway instance is supported. That is, only one of the `VpnId`, `DirectConnectGatewayId`, `PeeringConnectionId`, or `NatId` input parameters is supported, and one must be used.
+* If the gateway has traffic, but no data is returned when this API is called, please check whether gateway traffic monitoring has been enabled in the corresponding gateway details page in the console.
      * @param req DescribeGatewayFlowMonitorDetailRequest
      * @return DescribeGatewayFlowMonitorDetailResponse
      * @throws TencentCloudSDKException
@@ -1218,7 +1218,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（DescribeHaVips）用于查询高可用虚拟IP（HAVIP）列表。
+     *This API (DescribeHaVips) is used to query the list of highly available virtual IPs (HAVIP).
      * @param req DescribeHaVipsRequest
      * @return DescribeHaVipsResponse
      * @throws TencentCloudSDKException
@@ -1236,7 +1236,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（DescribeNatGatewayDestinationIpPortTranslationNatRules）用于查询NAT网关端口转发规则对象数组。
+     *This API (DescribeNatGatewayDestinationIpPortTranslationNatRules) is used to query the array of objects of the port forwarding rules for a NAT gateway.
      * @param req DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest
      * @return DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse
      * @throws TencentCloudSDKException
@@ -1254,7 +1254,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（DescribeNatGateways）用于查询 NAT 网关。
+     *This API (DescribeNatGateways) is used to query NAT gateways.
      * @param req DescribeNatGatewaysRequest
      * @return DescribeNatGatewaysResponse
      * @throws TencentCloudSDKException
@@ -1326,7 +1326,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（DescribeSecurityGroupAssociationStatistics）用于查询安全组关联的实例统计。
+     *This API (DescribeSecurityGroupAssociationStatistics) is used to query statistics on the instances associated with a security group.
      * @param req DescribeSecurityGroupAssociationStatisticsRequest
      * @return DescribeSecurityGroupAssociationStatisticsResponse
      * @throws TencentCloudSDKException
@@ -1344,7 +1344,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（DescribeSecurityGroupPolicies）用于查询安全组规则。
+     *This API (DescribeSecurityGroupPolicies) is used to query security group policies.
      * @param req DescribeSecurityGroupPoliciesRequest
      * @return DescribeSecurityGroupPoliciesResponse
      * @throws TencentCloudSDKException
@@ -1362,7 +1362,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（DescribeSecurityGroups）用于查询安全组。
+     *This API (DescribeSecurityGroups) is used to query security groups.
      * @param req DescribeSecurityGroupsRequest
      * @return DescribeSecurityGroupsResponse
      * @throws TencentCloudSDKException
@@ -1380,7 +1380,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（DescribeServiceTemplateGroups）用于查询协议端口模板集合
+     *This API (DescribeServiceTemplateGroups) is used to query a protocol port template group.
      * @param req DescribeServiceTemplateGroupsRequest
      * @return DescribeServiceTemplateGroupsResponse
      * @throws TencentCloudSDKException
@@ -1398,7 +1398,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（DescribeServiceTemplates）用于查询协议端口模板
+     *This API (DescribeServiceTemplates) is used to query protocol port templates.
      * @param req DescribeServiceTemplatesRequest
      * @return DescribeServiceTemplatesResponse
      * @throws TencentCloudSDKException
@@ -1416,7 +1416,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（DescribeSubnets）用于查询子网列表。
+     *This API (DescribeSubnets) is used to query the list of subnets.
      * @param req DescribeSubnetsRequest
      * @return DescribeSubnetsResponse
      * @throws TencentCloudSDKException
@@ -1434,7 +1434,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *查询EIP异步任务执行结果
+     *This API is used to query the EIP async job execution results.
      * @param req DescribeTaskResultRequest
      * @return DescribeTaskResultResponse
      * @throws TencentCloudSDKException
@@ -1452,8 +1452,8 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（DescribeVpcIpv6Addresses）用于查询 `VPC` `IPv6` 信息。
-只能查询已使用的`IPv6`信息，当查询未使用的IP时，本接口不会报错，但不会出现在返回结果里。
+     *This API (DescribeVpcIpv6Addresses) is used to query `VPC` `IPv6` information.
+This API is used to query only the information of `IPv6` addresses that are already in use. When querying IPs that have not yet been used, this API will not report an error, but the IPs will not appear in the returned results.
      * @param req DescribeVpcIpv6AddressesRequest
      * @return DescribeVpcIpv6AddressesResponse
      * @throws TencentCloudSDKException
@@ -1471,8 +1471,8 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（DescribeVpcPrivateIpAddresses）用于查询VPC内网IP信息。<br />
-只能查询已使用的IP信息，当查询未使用的IP时，本接口不会报错，但不会出现在返回结果里。
+     *This API (DescribeVpcPrivateIpAddresses) is used to query the private IP information of a VPC.<br />
+This API is used to query only the information of IP addresses that are already in use. When querying IPs that have not yet been used, this API will not report an error, but the IPs will not appear in the returned results.
      * @param req DescribeVpcPrivateIpAddressesRequest
      * @return DescribeVpcPrivateIpAddressesResponse
      * @throws TencentCloudSDKException
@@ -1490,7 +1490,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（DescribeVpcs）用于查询私有网络列表。
+     *This API (DescribeVpcs) is used to query the VPC list.
      * @param req DescribeVpcsRequest
      * @return DescribeVpcsResponse
      * @throws TencentCloudSDKException
@@ -1508,7 +1508,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     * 本接口（DescribeVpnConnections）查询VPN通道列表。
+     * This API (DescribeVpnConnections) is used to query the VPN tunnel list.
      * @param req DescribeVpnConnectionsRequest
      * @return DescribeVpnConnectionsResponse
      * @throws TencentCloudSDKException
@@ -1526,7 +1526,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（DescribeVpnGateways）用于查询VPN网关列表。
+     *This API (DescribeVpnGateways) is used to query the VPN gateway list.
      * @param req DescribeVpnGatewaysRequest
      * @return DescribeVpnGatewaysResponse
      * @throws TencentCloudSDKException
@@ -1544,8 +1544,8 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（DetachCcnInstances）用于从云联网实例中解关联指定的网络实例。<br />
-解关联网络实例后，相应的路由策略会一并删除。
+     *This API (DetachCcnInstances) is used to unbind a specified network instance from a CCN instance.<br />
+After unbinding the network instance, the corresponding routing policy will also be deleted.
      * @param req DetachCcnInstancesRequest
      * @return DetachCcnInstancesResponse
      * @throws TencentCloudSDKException
@@ -1563,7 +1563,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口(DetachClassicLinkVpc)用于删除私有网络和基础网络设备互通。
+     *This API (DetachClassicLinkVpc) is used to delete a Classiclink.
      * @param req DetachClassicLinkVpcRequest
      * @return DetachClassicLinkVpcResponse
      * @throws TencentCloudSDKException
@@ -1581,7 +1581,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（DetachNetworkInterface）用于弹性网卡解绑云主机。
+     *This API (DetachNetworkInterface) is used to unbind an ENI from a CVM.
      * @param req DetachNetworkInterfaceRequest
      * @return DetachNetworkInterfaceResponse
      * @throws TencentCloudSDKException
@@ -1599,7 +1599,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（DisableCcnRoutes）用于禁用已经启用的云联网（CCN）路由
+     *This API (DisableCcnRoutes) is used to disable CCN routes that are already enabled.
      * @param req DisableCcnRoutesRequest
      * @return DisableCcnRoutesResponse
      * @throws TencentCloudSDKException
@@ -1617,11 +1617,11 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口 (DisassociateAddress) 用于解绑[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）。
-* 支持CVM实例，弹性网卡上的EIP解绑
-* 不支持NAT上的EIP解绑。NAT上的EIP解绑请参考[EipUnBindNatGateway](https://cloud.tencent.com/document/product/215/4092)
-* 只有状态为 BIND 和 BIND_ENI 的 EIP 才能进行解绑定操作。
-* EIP 如果被封堵，则不能进行解绑定操作。
+     *This API (DisassociateAddress) is used to unbind [Elastic IPs](https://cloud.tencent.com/document/product/213/1941).
+* The unbinding of EIPs from CVM instances and ENIs is supported.
+* The unbinding of EIPs from NATs is not supported. For information about how to unbind an EIP from a NAT, see [EipUnBindNatGateway](https://cloud.tencent.com/document/product/215/4092).
+* You can only unbind EIPs in BIND or BIND_ENI status.
+* Blocked EIPs cannot be unbound.
      * @param req DisassociateAddressRequest
      * @return DisassociateAddressResponse
      * @throws TencentCloudSDKException
@@ -1639,7 +1639,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（DisassociateNatGatewayAddress）用于NAT网关解绑弹性IP。
+     *This API (DisassociateNatGatewayAddress) is used to unbind an EIP from a NAT gateway.
      * @param req DisassociateNatGatewayAddressRequest
      * @return DisassociateNatGatewayAddressResponse
      * @throws TencentCloudSDKException
@@ -1657,7 +1657,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口(DownloadCustomerGatewayConfiguration)用于下载VPN通道配置。
+     *This API (DownloadCustomerGatewayConfiguration) is used to download a VPN tunnel configuration.
      * @param req DownloadCustomerGatewayConfigurationRequest
      * @return DownloadCustomerGatewayConfigurationResponse
      * @throws TencentCloudSDKException
@@ -1675,8 +1675,8 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（EnableCcnRoutes）用于启用已经加入云联网（CCN）的路由。<br />
-本接口会校验启用后，是否与已有路由冲突，如果冲突，则无法启用，失败处理。路由冲突时，需要先禁用与之冲突的路由，才能启用该路由。
+     *This API (EnableCcnRoutes) is used to enable CCN routes that are already added.<br />
+This API is used to verify whether there will be conflict with an existing route after a CCN route is enabled. If there is a conflict, the route will not be enabled, and the process will fail. When a conflict occurs, you must disable the conflicting route before you can enable the desired route.
      * @param req EnableCcnRoutesRequest
      * @return EnableCcnRoutesResponse
      * @throws TencentCloudSDKException
@@ -1694,8 +1694,8 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（HaVipAssociateAddressIp）用于高可用虚拟IP（HAVIP）绑定弹性公网IP（EIP）<br />
-本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`QueryTask`接口
+     *This API (HaVipAssociateAddressIp) is used to bind an EIP to an HAVIP.<br />
+This API is completed asynchronously. If you need to query the async job execution results, please use the `RequestId` returned by this API to query the `QueryTask` API.
      * @param req HaVipAssociateAddressIpRequest
      * @return HaVipAssociateAddressIpResponse
      * @throws TencentCloudSDKException
@@ -1713,8 +1713,8 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（HaVipDisassociateAddressIp）用于将高可用虚拟IP（HAVIP）已绑定的弹性公网IP（EIP）解除绑定<br />
-本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`QueryTask`接口
+     *This API (HaVipDisassociateAddressIp) is used to unbind an EIP which has been bound to an HAVIP.<br />
+This API is completed asynchronously. If you need to query the async job execution results, please use the `RequestId` returned by this API to query the `QueryTask` API.
      * @param req HaVipDisassociateAddressIpRequest
      * @return HaVipDisassociateAddressIpResponse
      * @throws TencentCloudSDKException
@@ -1732,7 +1732,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（InquiryPriceCreateVpnGateway）用于创建VPN网关询价。
+     *This API (InquiryPriceCreateVpnGateway) is used to query the price for VPN gateway creation.
      * @param req InquiryPriceCreateVpnGatewayRequest
      * @return InquiryPriceCreateVpnGatewayResponse
      * @throws TencentCloudSDKException
@@ -1750,7 +1750,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（MigrateNetworkInterface）用于弹性网卡迁移。
+     *This API (MigrateNetworkInterface) is used to migrate ENIs.
      * @param req MigrateNetworkInterfaceRequest
      * @return MigrateNetworkInterfaceResponse
      * @throws TencentCloudSDKException
@@ -1768,10 +1768,10 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     * 本接口（MigratePrivateIpAddress）用于弹性网卡内网IP迁移。
+     * This API (MigratePrivateIpAddress) is used to migrate the private IPs of ENIs.
 
-* 该接口用于将一个内网IP从一个弹性网卡上迁移到另外一个弹性网卡，主IP地址不支持迁移。
-* 迁移前后的弹性网卡必须在同一个子网内。
+* This API is used to migrate a private IP from one ENI to another. Primary IPs cannot be migrated.
+* The ENIs before and after migration must belong to the same subnet.
      * @param req MigratePrivateIpAddressRequest
      * @return MigratePrivateIpAddressResponse
      * @throws TencentCloudSDKException
@@ -1789,7 +1789,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口 (ModifyAddressAttribute) 用于修改[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）的名称。
+     *This API (ModifyAddressAttribute) is used to modify the name of an [Elastic IP](https://cloud.tencent.com/document/product/213/1941).
      * @param req ModifyAddressAttributeRequest
      * @return ModifyAddressAttributeResponse
      * @throws TencentCloudSDKException
@@ -1807,7 +1807,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（ModifyAddressTemplateAttribute）用于修改IP地址模板
+     *This API (ModifyAddressTemplateAttribute) is used to modify an IP address template.
      * @param req ModifyAddressTemplateAttributeRequest
      * @return ModifyAddressTemplateAttributeResponse
      * @throws TencentCloudSDKException
@@ -1825,7 +1825,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（ModifyAddressTemplateGroupAttribute）用于修改IP地址模板集合
+     *This API (ModifyAddressTemplateGroupAttribute) is used to modify an IP address template group.
      * @param req ModifyAddressTemplateGroupAttributeRequest
      * @return ModifyAddressTemplateGroupAttributeResponse
      * @throws TencentCloudSDKException
@@ -1843,7 +1843,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（ModifyAddressesBandwidth）用于调整[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)(简称EIP)带宽，包括后付费EIP, 预付费EIP和带宽包EIP
+     *This API (ModifyAddressesBandwidth) is used to adjust [Elastic IP](https://cloud.tencent.com/document/product/213/1941) bandwidth, including the postpaid EIP, prepaid EIP and bandwidth package EIP.
      * @param req ModifyAddressesBandwidthRequest
      * @return ModifyAddressesBandwidthResponse
      * @throws TencentCloudSDKException
@@ -1861,7 +1861,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（ModifyCcnAttribute）用于修改云联网（CCN）的相关属性。
+     *This API (ModifyCcnAttribute) is used to modify CCN attributes.
      * @param req ModifyCcnAttributeRequest
      * @return ModifyCcnAttributeResponse
      * @throws TencentCloudSDKException
@@ -1879,7 +1879,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（ModifyHaVipAttribute）用于修改高可用虚拟IP（HAVIP）属性
+     *This API (ModifyHaVipAttribute) is used to modify HAVIP attributes.
      * @param req ModifyHaVipAttributeRequest
      * @return ModifyHaVipAttributeResponse
      * @throws TencentCloudSDKException
@@ -1897,7 +1897,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（ModifyIpv6AddressesAttribute）用于修改弹性网卡内网IPv6地址属性。
+     *This API (ModifyIpv6AddressesAttribute) is used to modify the private IPv6 address attributes of an ENI.
      * @param req ModifyIpv6AddressesAttributeRequest
      * @return ModifyIpv6AddressesAttributeResponse
      * @throws TencentCloudSDKException
@@ -1915,7 +1915,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（ModifyNatGatewayAttribute）用于修改NAT网关的属性。
+     *This API (ModifyNatGatewayAttribute) is used to modify the attributes of a NAT gateway.
      * @param req ModifyNatGatewayAttributeRequest
      * @return ModifyNatGatewayAttributeResponse
      * @throws TencentCloudSDKException
@@ -1933,7 +1933,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（ModifyNatGatewayDestinationIpPortTranslationNatRule）用于修改NAT网关端口转发规则。
+     *This API (ModifyNatGatewayDestinationIpPortTranslationNatRule) is used to modify a port forwarding rule for a NAT gateway.
      * @param req ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest
      * @return ModifyNatGatewayDestinationIpPortTranslationNatRuleResponse
      * @throws TencentCloudSDKException
@@ -1969,7 +1969,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（ModifyNetworkInterfaceAttribute）用于修改弹性网卡属性。
+     *This API (ModifyNetworkInterfaceAttribute) is used to modify ENI attributes.
      * @param req ModifyNetworkInterfaceAttributeRequest
      * @return ModifyNetworkInterfaceAttributeResponse
      * @throws TencentCloudSDKException
@@ -1987,7 +1987,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（ModifyPrivateIpAddressesAttribute）用于修改弹性网卡内网IP属性。
+     *This API (ModifyPrivateIpAddressesAttribute) is used to modify the private IP attributes of an ENI.
      * @param req ModifyPrivateIpAddressesAttributeRequest
      * @return ModifyPrivateIpAddressesAttributeResponse
      * @throws TencentCloudSDKException
@@ -2005,7 +2005,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（ModifyRouteTableAttribute）用于修改路由表（RouteTable）属性。
+     *This API (ModifyRouteTableAttribute) is used to modify the attributes of a route table.
      * @param req ModifyRouteTableAttributeRequest
      * @return ModifyRouteTableAttributeResponse
      * @throws TencentCloudSDKException
@@ -2023,7 +2023,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（ModifySecurityGroupAttribute）用于修改安全组（SecurityGroupPolicy）属性。
+     *This API (ModifySecurityGroupAttribute) is used to modify the attributes of a security group (SecurityGroupPolicy).
      * @param req ModifySecurityGroupAttributeRequest
      * @return ModifySecurityGroupAttributeResponse
      * @throws TencentCloudSDKException
@@ -2069,7 +2069,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（ModifyServiceTemplateAttribute）用于修改协议端口模板
+     *This API (ModifyServiceTemplateAttribute) is used to modify a protocol port template.
      * @param req ModifyServiceTemplateAttributeRequest
      * @return ModifyServiceTemplateAttributeResponse
      * @throws TencentCloudSDKException
@@ -2087,7 +2087,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（ModifyServiceTemplateGroupAttribute）用于修改协议端口模板集合。
+     *This API (ModifyServiceTemplateGroupAttribute) is used to modify a protocol port template group.
      * @param req ModifyServiceTemplateGroupAttributeRequest
      * @return ModifyServiceTemplateGroupAttributeResponse
      * @throws TencentCloudSDKException
@@ -2105,7 +2105,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（ModifySubnetAttribute）用于修改子网属性。
+     *This API (ModifySubnetAttribute) is used to modify subnet attributes.
      * @param req ModifySubnetAttributeRequest
      * @return ModifySubnetAttributeResponse
      * @throws TencentCloudSDKException
@@ -2123,7 +2123,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（ModifyVpcAttribute）用于修改私有网络（VPC）的相关属性。
+     *This API (ModifyVpcAttribute) is used to modify VPC attributes.
      * @param req ModifyVpcAttributeRequest
      * @return ModifyVpcAttributeResponse
      * @throws TencentCloudSDKException
@@ -2141,7 +2141,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（ModifyVpnConnectionAttribute）用于修改VPN通道。
+     *This API (ModifyVpnConnectionAttribute) is used to modify VPN tunnels.
      * @param req ModifyVpnConnectionAttributeRequest
      * @return ModifyVpnConnectionAttributeResponse
      * @throws TencentCloudSDKException
@@ -2159,7 +2159,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（ModifyVpnGatewayAttribute）用于修改VPN网关属性。
+     *This API (ModifyVpnGatewayAttribute) is used to modify the attributes of VPN gateways.
      * @param req ModifyVpnGatewayAttributeRequest
      * @return ModifyVpnGatewayAttributeResponse
      * @throws TencentCloudSDKException
@@ -2177,7 +2177,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（RejectAttachCcnInstances）用于跨账号关联实例时，云联网所有者拒绝关联操作。
+     *This API (RejectAttachCcnInstances) is used to reject association operations when instances are associated across accounts for the CCN owner.
 
      * @param req RejectAttachCcnInstancesRequest
      * @return RejectAttachCcnInstancesResponse
@@ -2196,9 +2196,9 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口 (ReleaseAddresses) 用于释放一个或多个[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）。
-* 该操作不可逆，释放后 EIP 关联的 IP 地址将不再属于您的名下。
-* 只有状态为 UNBIND 的 EIP 才能进行释放操作。
+     *This API (ReleaseAddresses) is used to release one or multiple [Elastic IPs](https://cloud.tencent.com/document/product/213/1941).
+* This operation is irreversible. Once you release an EIP, the IP address associated with the EIP no longer belongs to you.
+* Only EIPs in UNBIND status can be released.
      * @param req ReleaseAddressesRequest
      * @return ReleaseAddressesResponse
      * @throws TencentCloudSDKException
@@ -2216,7 +2216,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（ReplaceDirectConnectGatewayCcnRoutes）根据路由ID（RouteId）修改指定的路由（Route），支持批量修改。
+     *This API (ReplaceDirectConnectGatewayCcnRoutes) is used to modify the specified route according to the route ID. Batch modification is supported.
      * @param req ReplaceDirectConnectGatewayCcnRoutesRequest
      * @return ReplaceDirectConnectGatewayCcnRoutesResponse
      * @throws TencentCloudSDKException
@@ -2234,8 +2234,8 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（ReplaceRouteTableAssociation)用于修改子网（Subnet）关联的路由表（RouteTable）。
-* 一个子网只能关联一个路由表。
+     *This API (ReplaceRouteTableAssociation) is used to modify the route table associated with a subnet.
+* A subnet can only be associated with one route table.
      * @param req ReplaceRouteTableAssociationRequest
      * @return ReplaceRouteTableAssociationResponse
      * @throws TencentCloudSDKException
@@ -2253,7 +2253,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（ReplaceRoutes）根据路由策略ID（RouteId）修改指定的路由策略（Route），支持批量修改。
+     *This API (ReplaceRoutes) is used to modify a specified routing policy by its ID (RouteId). Batch modification is supported.
      * @param req ReplaceRoutesRequest
      * @return ReplaceRoutesResponse
      * @throws TencentCloudSDKException
@@ -2271,8 +2271,8 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（ReplaceSecurityGroupPolicy）用于替换单条安全组规则（SecurityGroupPolicy）。
-单个请求中只能替换单个方向的一条规则, 必须要指定索引（PolicyIndex）。
+     *This API (ReplaceSecurityGroupPolicy) is used to replace a single security group policy (SecurityGroupPolicy).
+Only one policy in a single direction can be replaced in each request, and the PolicyIndex parameter must be specified.
      * @param req ReplaceSecurityGroupPolicyRequest
      * @return ReplaceSecurityGroupPolicyResponse
      * @throws TencentCloudSDKException
@@ -2290,7 +2290,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（ResetAttachCcnInstances）用于跨账号关联实例申请过期时，重新申请关联操作。
+     *This API (ResetAttachCcnInstances) is used to re-apply for the association operation when the application for cross-account instance association expires.
      * @param req ResetAttachCcnInstancesRequest
      * @return ResetAttachCcnInstancesResponse
      * @throws TencentCloudSDKException
@@ -2308,7 +2308,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（ResetNatGatewayConnection）用来NAT网关并发连接上限。
+     *This API (ResetNatGatewayConnection) is used to adjust concurrent connection cap for the NAT gateway.
      * @param req ResetNatGatewayConnectionRequest
      * @return ResetNatGatewayConnectionResponse
      * @throws TencentCloudSDKException
@@ -2326,8 +2326,8 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（ResetRoutes）用于对某个路由表名称和所有路由策略（Route）进行重新设置。<br />
-注意: 调用本接口是先删除当前路由表中所有路由策略, 再保存新提交的路由策略内容, 会引起网络中断。
+     *This API (ResetRoutes) is used to reset the name of a route table and all its routing policies.<br />
+Note: When this API is called, all routing policies in the current route table are deleted before new routing policies are saved, which may incur network interruption.
      * @param req ResetRoutesRequest
      * @return ResetRoutesResponse
      * @throws TencentCloudSDKException
@@ -2345,7 +2345,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口(ResetVpnConnection)用于重置VPN通道。
+     *The API (ResetVpnConnection) is used to reset VPN tunnels.
      * @param req ResetVpnConnectionRequest
      * @return ResetVpnConnectionResponse
      * @throws TencentCloudSDKException
@@ -2363,7 +2363,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（ResetVpnGatewayInternetMaxBandwidth）调整VPN网关带宽上限。目前支持升级配置，如果是包年包月VPN网关需要在有效期内。
+     *This API (ResetVpnGatewayInternetMaxBandwidth) is used to adjust the bandwidth cap of VPN gateways. Currently, only configuration upgrade is supported. VPN gateways with monthly subscription must be within the validity period.
      * @param req ResetVpnGatewayInternetMaxBandwidthRequest
      * @return ResetVpnGatewayInternetMaxBandwidthResponse
      * @throws TencentCloudSDKException
@@ -2381,7 +2381,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（SetCcnRegionBandwidthLimits）用于设置云联网（CCN）各地域出带宽上限，该接口只能设置已关联网络实例包含的地域的出带宽上限
+     *This API (SetCcnRegionBandwidthLimits) is used to set the outbound bandwidth cap for CCNs in each region. This API can only set the outbound bandwidth cap for regions in the network instances that have already been associated.
      * @param req SetCcnRegionBandwidthLimitsRequest
      * @return SetCcnRegionBandwidthLimitsResponse
      * @throws TencentCloudSDKException
@@ -2399,8 +2399,8 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口 (TransformAddress) 用于将实例的普通公网 IP 转换为[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）。
-* 平台对用户每地域每日解绑 EIP 重新分配普通公网 IP 次数有所限制（可参见 [EIP 产品简介](/document/product/213/1941)）。上述配额可通过 [DescribeAddressQuota](https://cloud.tencent.com/document/api/213/1378) 接口获取。
+     *This API (TransformAddress) is used to switch common public IPs into [Elastic IPs](https://cloud.tencent.com/document/product/213/1941).
+* The platform limits the number of times that a user can unbind an EIP and reassign public IPs in each region per day. For more information, see [EIP product introduction](/document/product/213/1941)). The preceding quota can be obtained through the [DescribeAddressQuota](https://cloud.tencent.com/document/api/213/1378) API.
      * @param req TransformAddressRequest
      * @return TransformAddressResponse
      * @throws TencentCloudSDKException
@@ -2418,8 +2418,8 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（UnassignIpv6Addresses）用于释放弹性网卡`IPv6`地址。<br />
-本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`QueryTask`接口。
+     *This API (UnassignIpv6Addresses) is used to release ENI `IPv6` addresses.<br />
+This API is completed asynchronously. If you need to query the async execution results, use the `RequestId` returned by this API to query the `QueryTask` API.
      * @param req UnassignIpv6AddressesRequest
      * @return UnassignIpv6AddressesResponse
      * @throws TencentCloudSDKException
@@ -2437,8 +2437,8 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（UnassignIpv6CidrBlock）用于释放IPv6网段。<br />
-网段如果还有IP占用且未回收，则网段无法释放。
+     *This API (UnassignIpv6CidrBlock) is used to release IPv6 IP ranges.
+If the IP range still has occupied IPs that are not yet repossessed, the IP range cannot be released.
      * @param req UnassignIpv6CidrBlockRequest
      * @return UnassignIpv6CidrBlockResponse
      * @throws TencentCloudSDKException
@@ -2456,8 +2456,8 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（UnassignIpv6SubnetCidrBlock）用于释放IPv6子网段。<br />
-子网段如果还有IP占用且未回收，则子网段无法释放。
+     *This API (UnassignIpv6SubnetCidrBlock) is used to release IPv6 subnet IP ranges.
+If the subnet IP range still has occupied IPs that are not yet repossessed, the subnet IP range cannot be released.
      * @param req UnassignIpv6SubnetCidrBlockRequest
      * @return UnassignIpv6SubnetCidrBlockResponse
      * @throws TencentCloudSDKException
@@ -2475,8 +2475,8 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *本接口（UnassignPrivateIpAddresses）用于弹性网卡退还内网 IP。
-* 退还弹性网卡上的辅助内网IP，接口自动解关联弹性公网 IP。不能退还弹性网卡的主内网IP。
+     *This API (UnassignPrivateIpAddresses) is used to return the private IPs of ENI.
+* To return the secondary private IPs of an ENI, the API will automatically unbind the IPs of an ENI. The primary private IP of the ENI cannot be returned.
      * @param req UnassignPrivateIpAddressesRequest
      * @return UnassignPrivateIpAddressesResponse
      * @throws TencentCloudSDKException

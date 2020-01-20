@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeVpnGatewaysResponse extends AbstractModel{
 
     /**
-    * 符合条件的实例数量。
+    * The number of instances meeting the filter condition.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * VPN网关实例详细信息列表。
+    * The list of details of VPN gateway instances.
     */
     @SerializedName("VpnGatewaySet")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeVpnGatewaysResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 符合条件的实例数量。 
-     * @return TotalCount 符合条件的实例数量。
+     * Get The number of instances meeting the filter condition. 
+     * @return TotalCount The number of instances meeting the filter condition.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的实例数量。
-     * @param TotalCount 符合条件的实例数量。
+     * Set The number of instances meeting the filter condition.
+     * @param TotalCount The number of instances meeting the filter condition.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get VPN网关实例详细信息列表。 
-     * @return VpnGatewaySet VPN网关实例详细信息列表。
+     * Get The list of details of VPN gateway instances. 
+     * @return VpnGatewaySet The list of details of VPN gateway instances.
      */
     public VpnGateway [] getVpnGatewaySet() {
         return this.VpnGatewaySet;
     }
 
     /**
-     * Set VPN网关实例详细信息列表。
-     * @param VpnGatewaySet VPN网关实例详细信息列表。
+     * Set The list of details of VPN gateway instances.
+     * @param VpnGatewaySet The list of details of VPN gateway instances.
      */
     public void setVpnGatewaySet(VpnGateway [] VpnGatewaySet) {
         this.VpnGatewaySet = VpnGatewaySet;

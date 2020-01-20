@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateRouteTableResponse extends AbstractModel{
 
     /**
-    * 路由表对象。
+    * Route table object.
     */
     @SerializedName("RouteTable")
     @Expose
@@ -37,16 +37,16 @@ public class CreateRouteTableResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 路由表对象。 
-     * @return RouteTable 路由表对象。
+     * Get Route table object. 
+     * @return RouteTable Route table object.
      */
     public RouteTable getRouteTable() {
         return this.RouteTable;
     }
 
     /**
-     * Set 路由表对象。
-     * @param RouteTable 路由表对象。
+     * Set Route table object.
+     * @param RouteTable Route table object.
      */
     public void setRouteTable(RouteTable RouteTable) {
         this.RouteTable = RouteTable;

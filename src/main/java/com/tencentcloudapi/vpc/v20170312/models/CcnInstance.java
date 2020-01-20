@@ -23,84 +23,84 @@ import java.util.HashMap;
 public class CcnInstance extends AbstractModel{
 
     /**
-    * 关联实例ID。
+    * The ID of the associated instance.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 关联实例ID所属大区，例如：ap-guangzhou。
+    * The region to which the associated instance ID belongs, such as `ap-guangzhou`.
     */
     @SerializedName("InstanceRegion")
     @Expose
     private String InstanceRegion;
 
     /**
-    * 关联实例类型，可选值：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li>
+    * The type of the associated instance. Available values are:
+<li>`VPC`: VPC</li>
+<li>`DIRECTCONNECT`: Direct Connect</li>
+<li>`BMVPC`: BM VPC</li>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-     * Get 关联实例ID。 
-     * @return InstanceId 关联实例ID。
+     * Get The ID of the associated instance. 
+     * @return InstanceId The ID of the associated instance.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 关联实例ID。
-     * @param InstanceId 关联实例ID。
+     * Set The ID of the associated instance.
+     * @param InstanceId The ID of the associated instance.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 关联实例ID所属大区，例如：ap-guangzhou。 
-     * @return InstanceRegion 关联实例ID所属大区，例如：ap-guangzhou。
+     * Get The region to which the associated instance ID belongs, such as `ap-guangzhou`. 
+     * @return InstanceRegion The region to which the associated instance ID belongs, such as `ap-guangzhou`.
      */
     public String getInstanceRegion() {
         return this.InstanceRegion;
     }
 
     /**
-     * Set 关联实例ID所属大区，例如：ap-guangzhou。
-     * @param InstanceRegion 关联实例ID所属大区，例如：ap-guangzhou。
+     * Set The region to which the associated instance ID belongs, such as `ap-guangzhou`.
+     * @param InstanceRegion The region to which the associated instance ID belongs, such as `ap-guangzhou`.
      */
     public void setInstanceRegion(String InstanceRegion) {
         this.InstanceRegion = InstanceRegion;
     }
 
     /**
-     * Get 关联实例类型，可选值：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li> 
-     * @return InstanceType 关联实例类型，可选值：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li>
+     * Get The type of the associated instance. Available values are:
+<li>`VPC`: VPC</li>
+<li>`DIRECTCONNECT`: Direct Connect</li>
+<li>`BMVPC`: BM VPC</li> 
+     * @return InstanceType The type of the associated instance. Available values are:
+<li>`VPC`: VPC</li>
+<li>`DIRECTCONNECT`: Direct Connect</li>
+<li>`BMVPC`: BM VPC</li>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 关联实例类型，可选值：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li>
-     * @param InstanceType 关联实例类型，可选值：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li>
+     * Set The type of the associated instance. Available values are:
+<li>`VPC`: VPC</li>
+<li>`DIRECTCONNECT`: Direct Connect</li>
+<li>`BMVPC`: BM VPC</li>
+     * @param InstanceType The type of the associated instance. Available values are:
+<li>`VPC`: VPC</li>
+<li>`DIRECTCONNECT`: Direct Connect</li>
+<li>`BMVPC`: BM VPC</li>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;

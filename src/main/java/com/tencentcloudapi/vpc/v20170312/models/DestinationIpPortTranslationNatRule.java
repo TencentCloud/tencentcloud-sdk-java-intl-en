@@ -23,138 +23,138 @@ import java.util.HashMap;
 public class DestinationIpPortTranslationNatRule extends AbstractModel{
 
     /**
-    * 网络协议，可选值：`TCP`、`UDP`。
+    * Network protocol. Available choices: `TCP`, `UDP`.
     */
     @SerializedName("IpProtocol")
     @Expose
     private String IpProtocol;
 
     /**
-    * 弹性IP。
+    * EIP.
     */
     @SerializedName("PublicIpAddress")
     @Expose
     private String PublicIpAddress;
 
     /**
-    * 公网端口。
+    * Public port.
     */
     @SerializedName("PublicPort")
     @Expose
     private Long PublicPort;
 
     /**
-    * 内网地址。
+    * Private network address.
     */
     @SerializedName("PrivateIpAddress")
     @Expose
     private String PrivateIpAddress;
 
     /**
-    * 内网端口。
+    * Private network port.
     */
     @SerializedName("PrivatePort")
     @Expose
     private Long PrivatePort;
 
     /**
-    * NAT网关转发规则描述。
+    * NAT gateway forwarding rule description.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get 网络协议，可选值：`TCP`、`UDP`。 
-     * @return IpProtocol 网络协议，可选值：`TCP`、`UDP`。
+     * Get Network protocol. Available choices: `TCP`, `UDP`. 
+     * @return IpProtocol Network protocol. Available choices: `TCP`, `UDP`.
      */
     public String getIpProtocol() {
         return this.IpProtocol;
     }
 
     /**
-     * Set 网络协议，可选值：`TCP`、`UDP`。
-     * @param IpProtocol 网络协议，可选值：`TCP`、`UDP`。
+     * Set Network protocol. Available choices: `TCP`, `UDP`.
+     * @param IpProtocol Network protocol. Available choices: `TCP`, `UDP`.
      */
     public void setIpProtocol(String IpProtocol) {
         this.IpProtocol = IpProtocol;
     }
 
     /**
-     * Get 弹性IP。 
-     * @return PublicIpAddress 弹性IP。
+     * Get EIP. 
+     * @return PublicIpAddress EIP.
      */
     public String getPublicIpAddress() {
         return this.PublicIpAddress;
     }
 
     /**
-     * Set 弹性IP。
-     * @param PublicIpAddress 弹性IP。
+     * Set EIP.
+     * @param PublicIpAddress EIP.
      */
     public void setPublicIpAddress(String PublicIpAddress) {
         this.PublicIpAddress = PublicIpAddress;
     }
 
     /**
-     * Get 公网端口。 
-     * @return PublicPort 公网端口。
+     * Get Public port. 
+     * @return PublicPort Public port.
      */
     public Long getPublicPort() {
         return this.PublicPort;
     }
 
     /**
-     * Set 公网端口。
-     * @param PublicPort 公网端口。
+     * Set Public port.
+     * @param PublicPort Public port.
      */
     public void setPublicPort(Long PublicPort) {
         this.PublicPort = PublicPort;
     }
 
     /**
-     * Get 内网地址。 
-     * @return PrivateIpAddress 内网地址。
+     * Get Private network address. 
+     * @return PrivateIpAddress Private network address.
      */
     public String getPrivateIpAddress() {
         return this.PrivateIpAddress;
     }
 
     /**
-     * Set 内网地址。
-     * @param PrivateIpAddress 内网地址。
+     * Set Private network address.
+     * @param PrivateIpAddress Private network address.
      */
     public void setPrivateIpAddress(String PrivateIpAddress) {
         this.PrivateIpAddress = PrivateIpAddress;
     }
 
     /**
-     * Get 内网端口。 
-     * @return PrivatePort 内网端口。
+     * Get Private network port. 
+     * @return PrivatePort Private network port.
      */
     public Long getPrivatePort() {
         return this.PrivatePort;
     }
 
     /**
-     * Set 内网端口。
-     * @param PrivatePort 内网端口。
+     * Set Private network port.
+     * @param PrivatePort Private network port.
      */
     public void setPrivatePort(Long PrivatePort) {
         this.PrivatePort = PrivatePort;
     }
 
     /**
-     * Get NAT网关转发规则描述。 
-     * @return Description NAT网关转发规则描述。
+     * Get NAT gateway forwarding rule description. 
+     * @return Description NAT gateway forwarding rule description.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set NAT网关转发规则描述。
-     * @param Description NAT网关转发规则描述。
+     * Set NAT gateway forwarding rule description.
+     * @param Description NAT gateway forwarding rule description.
      */
     public void setDescription(String Description) {
         this.Description = Description;

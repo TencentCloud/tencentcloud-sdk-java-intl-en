@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class ItemPrice extends AbstractModel{
 
     /**
-    * 按量计费后付费单价，单位：元。
+    * The pay-as-you-go billing method. Unit: CNY.
     */
     @SerializedName("UnitPrice")
     @Expose
     private Float UnitPrice;
 
     /**
-    * 按量计费后付费计价单元，可取值范围： HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：实例按小时后付费（POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）： GB：表示计价单元是按每GB来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）。
+    * Pay-as-you-go billing method. Value Range: HOUR: Indicates billing by the hour. Scenarios using this hourly billing unit include: Instances postpaid on an hourly basis (POSTPAID_BY_HOUR), and bandwidth postpaid on an hourly basis (BANDWIDTH_POSTPAID_BY_HOUR). GB: Indicates billing on a per-GB basis. Scenarios using this billing unit include: Traffic postpaid on an hourly basis (TRAFFIC_POSTPAID_BY_HOUR).
     */
     @SerializedName("ChargeUnit")
     @Expose
     private String ChargeUnit;
 
     /**
-    * 预付费商品的原价，单位：元。
+    * Original price of the prepaid product. Unit: CNY.
     */
     @SerializedName("OriginalPrice")
     @Expose
     private Float OriginalPrice;
 
     /**
-    * 预付费商品的折扣价，单位：元。
+    * Discount price of the prepaid product. Unit: CNY.
     */
     @SerializedName("DiscountPrice")
     @Expose
     private Float DiscountPrice;
 
     /**
-     * Get 按量计费后付费单价，单位：元。 
-     * @return UnitPrice 按量计费后付费单价，单位：元。
+     * Get The pay-as-you-go billing method. Unit: CNY. 
+     * @return UnitPrice The pay-as-you-go billing method. Unit: CNY.
      */
     public Float getUnitPrice() {
         return this.UnitPrice;
     }
 
     /**
-     * Set 按量计费后付费单价，单位：元。
-     * @param UnitPrice 按量计费后付费单价，单位：元。
+     * Set The pay-as-you-go billing method. Unit: CNY.
+     * @param UnitPrice The pay-as-you-go billing method. Unit: CNY.
      */
     public void setUnitPrice(Float UnitPrice) {
         this.UnitPrice = UnitPrice;
     }
 
     /**
-     * Get 按量计费后付费计价单元，可取值范围： HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：实例按小时后付费（POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）： GB：表示计价单元是按每GB来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）。 
-     * @return ChargeUnit 按量计费后付费计价单元，可取值范围： HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：实例按小时后付费（POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）： GB：表示计价单元是按每GB来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）。
+     * Get Pay-as-you-go billing method. Value Range: HOUR: Indicates billing by the hour. Scenarios using this hourly billing unit include: Instances postpaid on an hourly basis (POSTPAID_BY_HOUR), and bandwidth postpaid on an hourly basis (BANDWIDTH_POSTPAID_BY_HOUR). GB: Indicates billing on a per-GB basis. Scenarios using this billing unit include: Traffic postpaid on an hourly basis (TRAFFIC_POSTPAID_BY_HOUR). 
+     * @return ChargeUnit Pay-as-you-go billing method. Value Range: HOUR: Indicates billing by the hour. Scenarios using this hourly billing unit include: Instances postpaid on an hourly basis (POSTPAID_BY_HOUR), and bandwidth postpaid on an hourly basis (BANDWIDTH_POSTPAID_BY_HOUR). GB: Indicates billing on a per-GB basis. Scenarios using this billing unit include: Traffic postpaid on an hourly basis (TRAFFIC_POSTPAID_BY_HOUR).
      */
     public String getChargeUnit() {
         return this.ChargeUnit;
     }
 
     /**
-     * Set 按量计费后付费计价单元，可取值范围： HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：实例按小时后付费（POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）： GB：表示计价单元是按每GB来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）。
-     * @param ChargeUnit 按量计费后付费计价单元，可取值范围： HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：实例按小时后付费（POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）： GB：表示计价单元是按每GB来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）。
+     * Set Pay-as-you-go billing method. Value Range: HOUR: Indicates billing by the hour. Scenarios using this hourly billing unit include: Instances postpaid on an hourly basis (POSTPAID_BY_HOUR), and bandwidth postpaid on an hourly basis (BANDWIDTH_POSTPAID_BY_HOUR). GB: Indicates billing on a per-GB basis. Scenarios using this billing unit include: Traffic postpaid on an hourly basis (TRAFFIC_POSTPAID_BY_HOUR).
+     * @param ChargeUnit Pay-as-you-go billing method. Value Range: HOUR: Indicates billing by the hour. Scenarios using this hourly billing unit include: Instances postpaid on an hourly basis (POSTPAID_BY_HOUR), and bandwidth postpaid on an hourly basis (BANDWIDTH_POSTPAID_BY_HOUR). GB: Indicates billing on a per-GB basis. Scenarios using this billing unit include: Traffic postpaid on an hourly basis (TRAFFIC_POSTPAID_BY_HOUR).
      */
     public void setChargeUnit(String ChargeUnit) {
         this.ChargeUnit = ChargeUnit;
     }
 
     /**
-     * Get 预付费商品的原价，单位：元。 
-     * @return OriginalPrice 预付费商品的原价，单位：元。
+     * Get Original price of the prepaid product. Unit: CNY. 
+     * @return OriginalPrice Original price of the prepaid product. Unit: CNY.
      */
     public Float getOriginalPrice() {
         return this.OriginalPrice;
     }
 
     /**
-     * Set 预付费商品的原价，单位：元。
-     * @param OriginalPrice 预付费商品的原价，单位：元。
+     * Set Original price of the prepaid product. Unit: CNY.
+     * @param OriginalPrice Original price of the prepaid product. Unit: CNY.
      */
     public void setOriginalPrice(Float OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 
     /**
-     * Get 预付费商品的折扣价，单位：元。 
-     * @return DiscountPrice 预付费商品的折扣价，单位：元。
+     * Get Discount price of the prepaid product. Unit: CNY. 
+     * @return DiscountPrice Discount price of the prepaid product. Unit: CNY.
      */
     public Float getDiscountPrice() {
         return this.DiscountPrice;
     }
 
     /**
-     * Set 预付费商品的折扣价，单位：元。
-     * @param DiscountPrice 预付费商品的折扣价，单位：元。
+     * Set Discount price of the prepaid product. Unit: CNY.
+     * @param DiscountPrice Discount price of the prepaid product. Unit: CNY.
      */
     public void setDiscountPrice(Float DiscountPrice) {
         this.DiscountPrice = DiscountPrice;

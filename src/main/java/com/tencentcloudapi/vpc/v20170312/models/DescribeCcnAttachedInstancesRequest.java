@@ -23,158 +23,158 @@ import java.util.HashMap;
 public class DescribeCcnAttachedInstancesRequest extends AbstractModel{
 
     /**
-    * 偏移量
+    * Offset
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量
+    * The returned quantity
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 过滤条件：
-<li>ccn-id - String -（过滤条件）CCN实例ID。</li>
-<li>instance-type - String -（过滤条件）关联实例类型。</li>
-<li>instance-region - String -（过滤条件）关联实例所属地域。</li>
-<li>instance-id - String -（过滤条件）关联实例实例ID。</li>
+    * Filter conditions:
+<li>ccn-id - String - (Filter condition) The CCN instance ID.</li>
+<li>instance-type - String - (Filter condition) The associated instance type.</li>
+<li>instance-region - String - (Filter condition) The associated instance region.</li>
+<li>instance-type - String - (Filter condition) The instance ID of the associated instance.</li>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 云联网实例ID
+    * The ID of the CCN instance
     */
     @SerializedName("CcnId")
     @Expose
     private String CcnId;
 
     /**
-    * 排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。
+    * The order field supports `CcnId`, `InstanceType`, `InstanceId`, `InstanceName`, `InstanceRegion`, `AttachedTime`, and `State`.
     */
     @SerializedName("OrderField")
     @Expose
     private String OrderField;
 
     /**
-    * 排序方法。顺序：`ASC`，倒序：`DESC`。
+    * Order methods. Ascending: `ASC`, Descending: `DESC`.
     */
     @SerializedName("OrderDirection")
     @Expose
     private String OrderDirection;
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get Offset 
+     * @return Offset Offset
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set Offset
+     * @param Offset Offset
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量 
-     * @return Limit 返回数量
+     * Get The returned quantity 
+     * @return Limit The returned quantity
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量
-     * @param Limit 返回数量
+     * Set The returned quantity
+     * @param Limit The returned quantity
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 过滤条件：
-<li>ccn-id - String -（过滤条件）CCN实例ID。</li>
-<li>instance-type - String -（过滤条件）关联实例类型。</li>
-<li>instance-region - String -（过滤条件）关联实例所属地域。</li>
-<li>instance-id - String -（过滤条件）关联实例实例ID。</li> 
-     * @return Filters 过滤条件：
-<li>ccn-id - String -（过滤条件）CCN实例ID。</li>
-<li>instance-type - String -（过滤条件）关联实例类型。</li>
-<li>instance-region - String -（过滤条件）关联实例所属地域。</li>
-<li>instance-id - String -（过滤条件）关联实例实例ID。</li>
+     * Get Filter conditions:
+<li>ccn-id - String - (Filter condition) The CCN instance ID.</li>
+<li>instance-type - String - (Filter condition) The associated instance type.</li>
+<li>instance-region - String - (Filter condition) The associated instance region.</li>
+<li>instance-type - String - (Filter condition) The instance ID of the associated instance.</li> 
+     * @return Filters Filter conditions:
+<li>ccn-id - String - (Filter condition) The CCN instance ID.</li>
+<li>instance-type - String - (Filter condition) The associated instance type.</li>
+<li>instance-region - String - (Filter condition) The associated instance region.</li>
+<li>instance-type - String - (Filter condition) The instance ID of the associated instance.</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件：
-<li>ccn-id - String -（过滤条件）CCN实例ID。</li>
-<li>instance-type - String -（过滤条件）关联实例类型。</li>
-<li>instance-region - String -（过滤条件）关联实例所属地域。</li>
-<li>instance-id - String -（过滤条件）关联实例实例ID。</li>
-     * @param Filters 过滤条件：
-<li>ccn-id - String -（过滤条件）CCN实例ID。</li>
-<li>instance-type - String -（过滤条件）关联实例类型。</li>
-<li>instance-region - String -（过滤条件）关联实例所属地域。</li>
-<li>instance-id - String -（过滤条件）关联实例实例ID。</li>
+     * Set Filter conditions:
+<li>ccn-id - String - (Filter condition) The CCN instance ID.</li>
+<li>instance-type - String - (Filter condition) The associated instance type.</li>
+<li>instance-region - String - (Filter condition) The associated instance region.</li>
+<li>instance-type - String - (Filter condition) The instance ID of the associated instance.</li>
+     * @param Filters Filter conditions:
+<li>ccn-id - String - (Filter condition) The CCN instance ID.</li>
+<li>instance-type - String - (Filter condition) The associated instance type.</li>
+<li>instance-region - String - (Filter condition) The associated instance region.</li>
+<li>instance-type - String - (Filter condition) The instance ID of the associated instance.</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 云联网实例ID 
-     * @return CcnId 云联网实例ID
+     * Get The ID of the CCN instance 
+     * @return CcnId The ID of the CCN instance
      */
     public String getCcnId() {
         return this.CcnId;
     }
 
     /**
-     * Set 云联网实例ID
-     * @param CcnId 云联网实例ID
+     * Set The ID of the CCN instance
+     * @param CcnId The ID of the CCN instance
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;
     }
 
     /**
-     * Get 排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。 
-     * @return OrderField 排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。
+     * Get The order field supports `CcnId`, `InstanceType`, `InstanceId`, `InstanceName`, `InstanceRegion`, `AttachedTime`, and `State`. 
+     * @return OrderField The order field supports `CcnId`, `InstanceType`, `InstanceId`, `InstanceName`, `InstanceRegion`, `AttachedTime`, and `State`.
      */
     public String getOrderField() {
         return this.OrderField;
     }
 
     /**
-     * Set 排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。
-     * @param OrderField 排序字段。支持：`CcnId` `InstanceType` `InstanceId` `InstanceName` `InstanceRegion` `AttachedTime` `State`。
+     * Set The order field supports `CcnId`, `InstanceType`, `InstanceId`, `InstanceName`, `InstanceRegion`, `AttachedTime`, and `State`.
+     * @param OrderField The order field supports `CcnId`, `InstanceType`, `InstanceId`, `InstanceName`, `InstanceRegion`, `AttachedTime`, and `State`.
      */
     public void setOrderField(String OrderField) {
         this.OrderField = OrderField;
     }
 
     /**
-     * Get 排序方法。顺序：`ASC`，倒序：`DESC`。 
-     * @return OrderDirection 排序方法。顺序：`ASC`，倒序：`DESC`。
+     * Get Order methods. Ascending: `ASC`, Descending: `DESC`. 
+     * @return OrderDirection Order methods. Ascending: `ASC`, Descending: `DESC`.
      */
     public String getOrderDirection() {
         return this.OrderDirection;
     }
 
     /**
-     * Set 排序方法。顺序：`ASC`，倒序：`DESC`。
-     * @param OrderDirection 排序方法。顺序：`ASC`，倒序：`DESC`。
+     * Set Order methods. Ascending: `ASC`, Descending: `DESC`.
+     * @param OrderDirection Order methods. Ascending: `ASC`, Descending: `DESC`.
      */
     public void setOrderDirection(String OrderDirection) {
         this.OrderDirection = OrderDirection;

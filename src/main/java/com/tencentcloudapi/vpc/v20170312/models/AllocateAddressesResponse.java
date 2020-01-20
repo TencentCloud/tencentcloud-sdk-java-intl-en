@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AllocateAddressesResponse extends AbstractModel{
 
     /**
-    * 申请到的 EIP 的唯一 ID 列表。
+    * List of the unique IDs of the requested EIPs.
     */
     @SerializedName("AddressSet")
     @Expose
@@ -44,16 +44,16 @@ public class AllocateAddressesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 申请到的 EIP 的唯一 ID 列表。 
-     * @return AddressSet 申请到的 EIP 的唯一 ID 列表。
+     * Get List of the unique IDs of the requested EIPs. 
+     * @return AddressSet List of the unique IDs of the requested EIPs.
      */
     public String [] getAddressSet() {
         return this.AddressSet;
     }
 
     /**
-     * Set 申请到的 EIP 的唯一 ID 列表。
-     * @param AddressSet 申请到的 EIP 的唯一 ID 列表。
+     * Set List of the unique IDs of the requested EIPs.
+     * @param AddressSet List of the unique IDs of the requested EIPs.
      */
     public void setAddressSet(String [] AddressSet) {
         this.AddressSet = AddressSet;

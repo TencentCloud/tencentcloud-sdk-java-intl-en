@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class ReplaceDirectConnectGatewayCcnRoutesRequest extends AbstractModel{
 
     /**
-    * 专线网关ID，形如：dcg-prpqlmg1
+    * The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`
     */
     @SerializedName("DirectConnectGatewayId")
     @Expose
     private String DirectConnectGatewayId;
 
     /**
-    * 需要连通的IDC网段列表
+    * The list of IDC IP range that must be connected
     */
     @SerializedName("Routes")
     @Expose
     private DirectConnectGatewayCcnRoute [] Routes;
 
     /**
-     * Get 专线网关ID，形如：dcg-prpqlmg1 
-     * @return DirectConnectGatewayId 专线网关ID，形如：dcg-prpqlmg1
+     * Get The ID of the Direct Connect gateway, such as `dcg-prpqlmg1` 
+     * @return DirectConnectGatewayId The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`
      */
     public String getDirectConnectGatewayId() {
         return this.DirectConnectGatewayId;
     }
 
     /**
-     * Set 专线网关ID，形如：dcg-prpqlmg1
-     * @param DirectConnectGatewayId 专线网关ID，形如：dcg-prpqlmg1
+     * Set The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`
+     * @param DirectConnectGatewayId The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`
      */
     public void setDirectConnectGatewayId(String DirectConnectGatewayId) {
         this.DirectConnectGatewayId = DirectConnectGatewayId;
     }
 
     /**
-     * Get 需要连通的IDC网段列表 
-     * @return Routes 需要连通的IDC网段列表
+     * Get The list of IDC IP range that must be connected 
+     * @return Routes The list of IDC IP range that must be connected
      */
     public DirectConnectGatewayCcnRoute [] getRoutes() {
         return this.Routes;
     }
 
     /**
-     * Set 需要连通的IDC网段列表
-     * @param Routes 需要连通的IDC网段列表
+     * Set The list of IDC IP range that must be connected
+     * @param Routes The list of IDC IP range that must be connected
      */
     public void setRoutes(DirectConnectGatewayCcnRoute [] Routes) {
         this.Routes = Routes;

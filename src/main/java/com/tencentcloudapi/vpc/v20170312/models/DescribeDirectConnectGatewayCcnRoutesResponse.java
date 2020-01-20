@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeDirectConnectGatewayCcnRoutesResponse extends AbstractModel{
 
     /**
-    * 符合条件的对象数。
+    * The number of objects meeting the condition.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 云联网路由（IDC网段）列表。
+    * The CCN route (IDC IP range) list.
     */
     @SerializedName("RouteSet")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeDirectConnectGatewayCcnRoutesResponse extends AbstractModel
     private String RequestId;
 
     /**
-     * Get 符合条件的对象数。 
-     * @return TotalCount 符合条件的对象数。
+     * Get The number of objects meeting the condition. 
+     * @return TotalCount The number of objects meeting the condition.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的对象数。
-     * @param TotalCount 符合条件的对象数。
+     * Set The number of objects meeting the condition.
+     * @param TotalCount The number of objects meeting the condition.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 云联网路由（IDC网段）列表。 
-     * @return RouteSet 云联网路由（IDC网段）列表。
+     * Get The CCN route (IDC IP range) list. 
+     * @return RouteSet The CCN route (IDC IP range) list.
      */
     public DirectConnectGatewayCcnRoute [] getRouteSet() {
         return this.RouteSet;
     }
 
     /**
-     * Set 云联网路由（IDC网段）列表。
-     * @param RouteSet 云联网路由（IDC网段）列表。
+     * Set The CCN route (IDC IP range) list.
+     * @param RouteSet The CCN route (IDC IP range) list.
      */
     public void setRouteSet(DirectConnectGatewayCcnRoute [] RouteSet) {
         this.RouteSet = RouteSet;

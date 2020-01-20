@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class ModifySubnetAttributeRequest extends AbstractModel{
 
     /**
-    * 子网实例ID。形如：subnet-pxir56ns。
+    * Subnet instance ID, such as `subnet-pxir56ns`.
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 子网名称，最大长度不能超过60个字节。
+    * The subnet name. The maximum length is 60 bytes.
     */
     @SerializedName("SubnetName")
     @Expose
     private String SubnetName;
 
     /**
-    * 子网是否开启广播。
+    * Whether the subnet has broadcast enabled.
     */
     @SerializedName("EnableBroadcast")
     @Expose
     private String EnableBroadcast;
 
     /**
-     * Get 子网实例ID。形如：subnet-pxir56ns。 
-     * @return SubnetId 子网实例ID。形如：subnet-pxir56ns。
+     * Get Subnet instance ID, such as `subnet-pxir56ns`. 
+     * @return SubnetId Subnet instance ID, such as `subnet-pxir56ns`.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网实例ID。形如：subnet-pxir56ns。
-     * @param SubnetId 子网实例ID。形如：subnet-pxir56ns。
+     * Set Subnet instance ID, such as `subnet-pxir56ns`.
+     * @param SubnetId Subnet instance ID, such as `subnet-pxir56ns`.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 子网名称，最大长度不能超过60个字节。 
-     * @return SubnetName 子网名称，最大长度不能超过60个字节。
+     * Get The subnet name. The maximum length is 60 bytes. 
+     * @return SubnetName The subnet name. The maximum length is 60 bytes.
      */
     public String getSubnetName() {
         return this.SubnetName;
     }
 
     /**
-     * Set 子网名称，最大长度不能超过60个字节。
-     * @param SubnetName 子网名称，最大长度不能超过60个字节。
+     * Set The subnet name. The maximum length is 60 bytes.
+     * @param SubnetName The subnet name. The maximum length is 60 bytes.
      */
     public void setSubnetName(String SubnetName) {
         this.SubnetName = SubnetName;
     }
 
     /**
-     * Get 子网是否开启广播。 
-     * @return EnableBroadcast 子网是否开启广播。
+     * Get Whether the subnet has broadcast enabled. 
+     * @return EnableBroadcast Whether the subnet has broadcast enabled.
      */
     public String getEnableBroadcast() {
         return this.EnableBroadcast;
     }
 
     /**
-     * Set 子网是否开启广播。
-     * @param EnableBroadcast 子网是否开启广播。
+     * Set Whether the subnet has broadcast enabled.
+     * @param EnableBroadcast Whether the subnet has broadcast enabled.
      */
     public void setEnableBroadcast(String EnableBroadcast) {
         this.EnableBroadcast = EnableBroadcast;

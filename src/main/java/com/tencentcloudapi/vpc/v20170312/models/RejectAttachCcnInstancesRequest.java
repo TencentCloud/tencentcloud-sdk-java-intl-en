@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class RejectAttachCcnInstancesRequest extends AbstractModel{
 
     /**
-    * CCN实例ID。形如：ccn-f49l6u0z。
+    * The CCN instance ID, such as `ccn-f49l6u0z`.
     */
     @SerializedName("CcnId")
     @Expose
     private String CcnId;
 
     /**
-    * 拒绝关联实例列表。
+    * The list of instances whose association is rejected.
     */
     @SerializedName("Instances")
     @Expose
     private CcnInstance [] Instances;
 
     /**
-     * Get CCN实例ID。形如：ccn-f49l6u0z。 
-     * @return CcnId CCN实例ID。形如：ccn-f49l6u0z。
+     * Get The CCN instance ID, such as `ccn-f49l6u0z`. 
+     * @return CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
      */
     public String getCcnId() {
         return this.CcnId;
     }
 
     /**
-     * Set CCN实例ID。形如：ccn-f49l6u0z。
-     * @param CcnId CCN实例ID。形如：ccn-f49l6u0z。
+     * Set The CCN instance ID, such as `ccn-f49l6u0z`.
+     * @param CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;
     }
 
     /**
-     * Get 拒绝关联实例列表。 
-     * @return Instances 拒绝关联实例列表。
+     * Get The list of instances whose association is rejected. 
+     * @return Instances The list of instances whose association is rejected.
      */
     public CcnInstance [] getInstances() {
         return this.Instances;
     }
 
     /**
-     * Set 拒绝关联实例列表。
-     * @param Instances 拒绝关联实例列表。
+     * Set The list of instances whose association is rejected.
+     * @param Instances The list of instances whose association is rejected.
      */
     public void setInstances(CcnInstance [] Instances) {
         this.Instances = Instances;

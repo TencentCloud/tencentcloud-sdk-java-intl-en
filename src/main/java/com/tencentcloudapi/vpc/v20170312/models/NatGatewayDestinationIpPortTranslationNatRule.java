@@ -23,222 +23,222 @@ import java.util.HashMap;
 public class NatGatewayDestinationIpPortTranslationNatRule extends AbstractModel{
 
     /**
-    * 网络协议，可选值：`TCP`、`UDP`。
+    * Network protocol. Available choices: `TCP`, `UDP`.
     */
     @SerializedName("IpProtocol")
     @Expose
     private String IpProtocol;
 
     /**
-    * 弹性IP。
+    * EIP.
     */
     @SerializedName("PublicIpAddress")
     @Expose
     private String PublicIpAddress;
 
     /**
-    * 公网端口。
+    * Public port.
     */
     @SerializedName("PublicPort")
     @Expose
     private Long PublicPort;
 
     /**
-    * 内网地址。
+    * Private network address.
     */
     @SerializedName("PrivateIpAddress")
     @Expose
     private String PrivateIpAddress;
 
     /**
-    * 内网端口。
+    * Private network port.
     */
     @SerializedName("PrivatePort")
     @Expose
     private Long PrivatePort;
 
     /**
-    * NAT网关转发规则描述。
+    * NAT gateway forwarding rule description.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * NAT网关的ID。
-注意：此字段可能返回 null，表示取不到有效值。
+    * NAT gateway ID.
+Note: This field may return null, indicating no valid value.
     */
     @SerializedName("NatGatewayId")
     @Expose
     private String NatGatewayId;
 
     /**
-    * 私有网络VPC的ID。
-注意：此字段可能返回 null，表示取不到有效值。
+    * VPC ID.
+Note: This field may return null, indicating no valid value.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * NAT网关转发规则创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
+    * The creation time of the NAT gateway forwarding rule.
+Note: This field may return null, indicating no valid value.
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-     * Get 网络协议，可选值：`TCP`、`UDP`。 
-     * @return IpProtocol 网络协议，可选值：`TCP`、`UDP`。
+     * Get Network protocol. Available choices: `TCP`, `UDP`. 
+     * @return IpProtocol Network protocol. Available choices: `TCP`, `UDP`.
      */
     public String getIpProtocol() {
         return this.IpProtocol;
     }
 
     /**
-     * Set 网络协议，可选值：`TCP`、`UDP`。
-     * @param IpProtocol 网络协议，可选值：`TCP`、`UDP`。
+     * Set Network protocol. Available choices: `TCP`, `UDP`.
+     * @param IpProtocol Network protocol. Available choices: `TCP`, `UDP`.
      */
     public void setIpProtocol(String IpProtocol) {
         this.IpProtocol = IpProtocol;
     }
 
     /**
-     * Get 弹性IP。 
-     * @return PublicIpAddress 弹性IP。
+     * Get EIP. 
+     * @return PublicIpAddress EIP.
      */
     public String getPublicIpAddress() {
         return this.PublicIpAddress;
     }
 
     /**
-     * Set 弹性IP。
-     * @param PublicIpAddress 弹性IP。
+     * Set EIP.
+     * @param PublicIpAddress EIP.
      */
     public void setPublicIpAddress(String PublicIpAddress) {
         this.PublicIpAddress = PublicIpAddress;
     }
 
     /**
-     * Get 公网端口。 
-     * @return PublicPort 公网端口。
+     * Get Public port. 
+     * @return PublicPort Public port.
      */
     public Long getPublicPort() {
         return this.PublicPort;
     }
 
     /**
-     * Set 公网端口。
-     * @param PublicPort 公网端口。
+     * Set Public port.
+     * @param PublicPort Public port.
      */
     public void setPublicPort(Long PublicPort) {
         this.PublicPort = PublicPort;
     }
 
     /**
-     * Get 内网地址。 
-     * @return PrivateIpAddress 内网地址。
+     * Get Private network address. 
+     * @return PrivateIpAddress Private network address.
      */
     public String getPrivateIpAddress() {
         return this.PrivateIpAddress;
     }
 
     /**
-     * Set 内网地址。
-     * @param PrivateIpAddress 内网地址。
+     * Set Private network address.
+     * @param PrivateIpAddress Private network address.
      */
     public void setPrivateIpAddress(String PrivateIpAddress) {
         this.PrivateIpAddress = PrivateIpAddress;
     }
 
     /**
-     * Get 内网端口。 
-     * @return PrivatePort 内网端口。
+     * Get Private network port. 
+     * @return PrivatePort Private network port.
      */
     public Long getPrivatePort() {
         return this.PrivatePort;
     }
 
     /**
-     * Set 内网端口。
-     * @param PrivatePort 内网端口。
+     * Set Private network port.
+     * @param PrivatePort Private network port.
      */
     public void setPrivatePort(Long PrivatePort) {
         this.PrivatePort = PrivatePort;
     }
 
     /**
-     * Get NAT网关转发规则描述。 
-     * @return Description NAT网关转发规则描述。
+     * Get NAT gateway forwarding rule description. 
+     * @return Description NAT gateway forwarding rule description.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set NAT网关转发规则描述。
-     * @param Description NAT网关转发规则描述。
+     * Set NAT gateway forwarding rule description.
+     * @param Description NAT gateway forwarding rule description.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get NAT网关的ID。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NatGatewayId NAT网关的ID。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get NAT gateway ID.
+Note: This field may return null, indicating no valid value. 
+     * @return NatGatewayId NAT gateway ID.
+Note: This field may return null, indicating no valid value.
      */
     public String getNatGatewayId() {
         return this.NatGatewayId;
     }
 
     /**
-     * Set NAT网关的ID。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param NatGatewayId NAT网关的ID。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set NAT gateway ID.
+Note: This field may return null, indicating no valid value.
+     * @param NatGatewayId NAT gateway ID.
+Note: This field may return null, indicating no valid value.
      */
     public void setNatGatewayId(String NatGatewayId) {
         this.NatGatewayId = NatGatewayId;
     }
 
     /**
-     * Get 私有网络VPC的ID。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VpcId 私有网络VPC的ID。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get VPC ID.
+Note: This field may return null, indicating no valid value. 
+     * @return VpcId VPC ID.
+Note: This field may return null, indicating no valid value.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络VPC的ID。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param VpcId 私有网络VPC的ID。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set VPC ID.
+Note: This field may return null, indicating no valid value.
+     * @param VpcId VPC ID.
+Note: This field may return null, indicating no valid value.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get NAT网关转发规则创建时间。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreatedTime NAT网关转发规则创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get The creation time of the NAT gateway forwarding rule.
+Note: This field may return null, indicating no valid value. 
+     * @return CreatedTime The creation time of the NAT gateway forwarding rule.
+Note: This field may return null, indicating no valid value.
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set NAT网关转发规则创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreatedTime NAT网关转发规则创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set The creation time of the NAT gateway forwarding rule.
+Note: This field may return null, indicating no valid value.
+     * @param CreatedTime The creation time of the NAT gateway forwarding rule.
+Note: This field may return null, indicating no valid value.
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;

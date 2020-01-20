@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeGatewayFlowMonitorDetailResponse extends AbstractModel{
 
     /**
-    * 符合条件的对象数。
+    * The number of objects meeting the condition.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 网关流量监控明细。
+    * The gateway traffic monitoring details.
     */
     @SerializedName("GatewayFlowMonitorDetailSet")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeGatewayFlowMonitorDetailResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 符合条件的对象数。 
-     * @return TotalCount 符合条件的对象数。
+     * Get The number of objects meeting the condition. 
+     * @return TotalCount The number of objects meeting the condition.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的对象数。
-     * @param TotalCount 符合条件的对象数。
+     * Set The number of objects meeting the condition.
+     * @param TotalCount The number of objects meeting the condition.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 网关流量监控明细。 
-     * @return GatewayFlowMonitorDetailSet 网关流量监控明细。
+     * Get The gateway traffic monitoring details. 
+     * @return GatewayFlowMonitorDetailSet The gateway traffic monitoring details.
      */
     public GatewayFlowMonitorDetail [] getGatewayFlowMonitorDetailSet() {
         return this.GatewayFlowMonitorDetailSet;
     }
 
     /**
-     * Set 网关流量监控明细。
-     * @param GatewayFlowMonitorDetailSet 网关流量监控明细。
+     * Set The gateway traffic monitoring details.
+     * @param GatewayFlowMonitorDetailSet The gateway traffic monitoring details.
      */
     public void setGatewayFlowMonitorDetailSet(GatewayFlowMonitorDetail [] GatewayFlowMonitorDetailSet) {
         this.GatewayFlowMonitorDetailSet = GatewayFlowMonitorDetailSet;

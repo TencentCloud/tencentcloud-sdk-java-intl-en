@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class ModifyNetworkInterfaceAttributeRequest extends AbstractModel{
 
     /**
-    * 弹性网卡实例ID，例如：eni-pxir56ns。
+    * The ID of the ENI instance, such as `eni-pxir56ns`.
     */
     @SerializedName("NetworkInterfaceId")
     @Expose
     private String NetworkInterfaceId;
 
     /**
-    * 弹性网卡名称，最大长度不能超过60个字节。
+    * The name of the ENI. The maximum length is 60 characters.
     */
     @SerializedName("NetworkInterfaceName")
     @Expose
     private String NetworkInterfaceName;
 
     /**
-    * 弹性网卡描述，可任意命名，但不得超过60个字符。
+    * ENI description can be named freely, but the maximum length is 60 characters.
     */
     @SerializedName("NetworkInterfaceDescription")
     @Expose
     private String NetworkInterfaceDescription;
 
     /**
-    * 指定绑定的安全组，例如:['sg-1dd51d']。
+    * The specified security groups to be bound with, such as ['sg-1dd51d'].
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-     * Get 弹性网卡实例ID，例如：eni-pxir56ns。 
-     * @return NetworkInterfaceId 弹性网卡实例ID，例如：eni-pxir56ns。
+     * Get The ID of the ENI instance, such as `eni-pxir56ns`. 
+     * @return NetworkInterfaceId The ID of the ENI instance, such as `eni-pxir56ns`.
      */
     public String getNetworkInterfaceId() {
         return this.NetworkInterfaceId;
     }
 
     /**
-     * Set 弹性网卡实例ID，例如：eni-pxir56ns。
-     * @param NetworkInterfaceId 弹性网卡实例ID，例如：eni-pxir56ns。
+     * Set The ID of the ENI instance, such as `eni-pxir56ns`.
+     * @param NetworkInterfaceId The ID of the ENI instance, such as `eni-pxir56ns`.
      */
     public void setNetworkInterfaceId(String NetworkInterfaceId) {
         this.NetworkInterfaceId = NetworkInterfaceId;
     }
 
     /**
-     * Get 弹性网卡名称，最大长度不能超过60个字节。 
-     * @return NetworkInterfaceName 弹性网卡名称，最大长度不能超过60个字节。
+     * Get The name of the ENI. The maximum length is 60 characters. 
+     * @return NetworkInterfaceName The name of the ENI. The maximum length is 60 characters.
      */
     public String getNetworkInterfaceName() {
         return this.NetworkInterfaceName;
     }
 
     /**
-     * Set 弹性网卡名称，最大长度不能超过60个字节。
-     * @param NetworkInterfaceName 弹性网卡名称，最大长度不能超过60个字节。
+     * Set The name of the ENI. The maximum length is 60 characters.
+     * @param NetworkInterfaceName The name of the ENI. The maximum length is 60 characters.
      */
     public void setNetworkInterfaceName(String NetworkInterfaceName) {
         this.NetworkInterfaceName = NetworkInterfaceName;
     }
 
     /**
-     * Get 弹性网卡描述，可任意命名，但不得超过60个字符。 
-     * @return NetworkInterfaceDescription 弹性网卡描述，可任意命名，但不得超过60个字符。
+     * Get ENI description can be named freely, but the maximum length is 60 characters. 
+     * @return NetworkInterfaceDescription ENI description can be named freely, but the maximum length is 60 characters.
      */
     public String getNetworkInterfaceDescription() {
         return this.NetworkInterfaceDescription;
     }
 
     /**
-     * Set 弹性网卡描述，可任意命名，但不得超过60个字符。
-     * @param NetworkInterfaceDescription 弹性网卡描述，可任意命名，但不得超过60个字符。
+     * Set ENI description can be named freely, but the maximum length is 60 characters.
+     * @param NetworkInterfaceDescription ENI description can be named freely, but the maximum length is 60 characters.
      */
     public void setNetworkInterfaceDescription(String NetworkInterfaceDescription) {
         this.NetworkInterfaceDescription = NetworkInterfaceDescription;
     }
 
     /**
-     * Get 指定绑定的安全组，例如:['sg-1dd51d']。 
-     * @return SecurityGroupIds 指定绑定的安全组，例如:['sg-1dd51d']。
+     * Get The specified security groups to be bound with, such as ['sg-1dd51d']. 
+     * @return SecurityGroupIds The specified security groups to be bound with, such as ['sg-1dd51d'].
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 指定绑定的安全组，例如:['sg-1dd51d']。
-     * @param SecurityGroupIds 指定绑定的安全组，例如:['sg-1dd51d']。
+     * Set The specified security groups to be bound with, such as ['sg-1dd51d'].
+     * @param SecurityGroupIds The specified security groups to be bound with, such as ['sg-1dd51d'].
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;

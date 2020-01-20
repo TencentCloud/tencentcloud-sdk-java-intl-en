@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DeleteDirectConnectGatewayCcnRoutesRequest extends AbstractModel{
 
     /**
-    * 专线网关ID，形如：dcg-prpqlmg1
+    * The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`
     */
     @SerializedName("DirectConnectGatewayId")
     @Expose
     private String DirectConnectGatewayId;
 
     /**
-    * 路由ID。形如：ccnr-f49l6u0z。
+    * The route ID, such as `ccnr-f49l6u0z`.
     */
     @SerializedName("RouteIds")
     @Expose
     private String [] RouteIds;
 
     /**
-     * Get 专线网关ID，形如：dcg-prpqlmg1 
-     * @return DirectConnectGatewayId 专线网关ID，形如：dcg-prpqlmg1
+     * Get The ID of the Direct Connect gateway, such as `dcg-prpqlmg1` 
+     * @return DirectConnectGatewayId The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`
      */
     public String getDirectConnectGatewayId() {
         return this.DirectConnectGatewayId;
     }
 
     /**
-     * Set 专线网关ID，形如：dcg-prpqlmg1
-     * @param DirectConnectGatewayId 专线网关ID，形如：dcg-prpqlmg1
+     * Set The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`
+     * @param DirectConnectGatewayId The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`
      */
     public void setDirectConnectGatewayId(String DirectConnectGatewayId) {
         this.DirectConnectGatewayId = DirectConnectGatewayId;
     }
 
     /**
-     * Get 路由ID。形如：ccnr-f49l6u0z。 
-     * @return RouteIds 路由ID。形如：ccnr-f49l6u0z。
+     * Get The route ID, such as `ccnr-f49l6u0z`. 
+     * @return RouteIds The route ID, such as `ccnr-f49l6u0z`.
      */
     public String [] getRouteIds() {
         return this.RouteIds;
     }
 
     /**
-     * Set 路由ID。形如：ccnr-f49l6u0z。
-     * @param RouteIds 路由ID。形如：ccnr-f49l6u0z。
+     * Set The route ID, such as `ccnr-f49l6u0z`.
+     * @param RouteIds The route ID, such as `ccnr-f49l6u0z`.
      */
     public void setRouteIds(String [] RouteIds) {
         this.RouteIds = RouteIds;

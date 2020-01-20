@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DownloadCustomerGatewayConfigurationResponse extends AbstractModel{
 
     /**
-    * XML格式配置信息。
+    * Configuration information in XML format.
     */
     @SerializedName("CustomerGatewayConfiguration")
     @Expose
@@ -37,16 +37,16 @@ public class DownloadCustomerGatewayConfigurationResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get XML格式配置信息。 
-     * @return CustomerGatewayConfiguration XML格式配置信息。
+     * Get Configuration information in XML format. 
+     * @return CustomerGatewayConfiguration Configuration information in XML format.
      */
     public String getCustomerGatewayConfiguration() {
         return this.CustomerGatewayConfiguration;
     }
 
     /**
-     * Set XML格式配置信息。
-     * @param CustomerGatewayConfiguration XML格式配置信息。
+     * Set Configuration information in XML format.
+     * @param CustomerGatewayConfiguration Configuration information in XML format.
      */
     public void setCustomerGatewayConfiguration(String CustomerGatewayConfiguration) {
         this.CustomerGatewayConfiguration = CustomerGatewayConfiguration;

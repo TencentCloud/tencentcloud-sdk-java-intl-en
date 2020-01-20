@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class AddressTemplate extends AbstractModel{
 
     /**
-    * IP地址模板名称。
+    * IP address template name.
     */
     @SerializedName("AddressTemplateName")
     @Expose
     private String AddressTemplateName;
 
     /**
-    * IP地址模板实例唯一ID。
+    * The unique ID of the IP address template instance.
     */
     @SerializedName("AddressTemplateId")
     @Expose
     private String AddressTemplateId;
 
     /**
-    * IP地址信息。
+    * IP address information.
     */
     @SerializedName("AddressSet")
     @Expose
     private String [] AddressSet;
 
     /**
-    * 创建时间。
+    * Creation Time.
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-     * Get IP地址模板名称。 
-     * @return AddressTemplateName IP地址模板名称。
+     * Get IP address template name. 
+     * @return AddressTemplateName IP address template name.
      */
     public String getAddressTemplateName() {
         return this.AddressTemplateName;
     }
 
     /**
-     * Set IP地址模板名称。
-     * @param AddressTemplateName IP地址模板名称。
+     * Set IP address template name.
+     * @param AddressTemplateName IP address template name.
      */
     public void setAddressTemplateName(String AddressTemplateName) {
         this.AddressTemplateName = AddressTemplateName;
     }
 
     /**
-     * Get IP地址模板实例唯一ID。 
-     * @return AddressTemplateId IP地址模板实例唯一ID。
+     * Get The unique ID of the IP address template instance. 
+     * @return AddressTemplateId The unique ID of the IP address template instance.
      */
     public String getAddressTemplateId() {
         return this.AddressTemplateId;
     }
 
     /**
-     * Set IP地址模板实例唯一ID。
-     * @param AddressTemplateId IP地址模板实例唯一ID。
+     * Set The unique ID of the IP address template instance.
+     * @param AddressTemplateId The unique ID of the IP address template instance.
      */
     public void setAddressTemplateId(String AddressTemplateId) {
         this.AddressTemplateId = AddressTemplateId;
     }
 
     /**
-     * Get IP地址信息。 
-     * @return AddressSet IP地址信息。
+     * Get IP address information. 
+     * @return AddressSet IP address information.
      */
     public String [] getAddressSet() {
         return this.AddressSet;
     }
 
     /**
-     * Set IP地址信息。
-     * @param AddressSet IP地址信息。
+     * Set IP address information.
+     * @param AddressSet IP address information.
      */
     public void setAddressSet(String [] AddressSet) {
         this.AddressSet = AddressSet;
     }
 
     /**
-     * Get 创建时间。 
-     * @return CreatedTime 创建时间。
+     * Get Creation Time. 
+     * @return CreatedTime Creation Time.
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间。
-     * @param CreatedTime 创建时间。
+     * Set Creation Time.
+     * @param CreatedTime Creation Time.
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;

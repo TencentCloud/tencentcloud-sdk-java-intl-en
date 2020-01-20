@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class ResetAttachCcnInstancesRequest extends AbstractModel{
 
     /**
-    * CCN实例ID。形如：ccn-f49l6u0z。
+    * The CCN instance ID, such as `ccn-f49l6u0z`.
     */
     @SerializedName("CcnId")
     @Expose
     private String CcnId;
 
     /**
-    * CCN所属UIN（根账号）。
+    * The UIN (root account) to which the CCN belongs.
     */
     @SerializedName("CcnUin")
     @Expose
     private String CcnUin;
 
     /**
-    * 重新申请关联网络实例列表。
+    * The list of network instances that re-apply for association.
     */
     @SerializedName("Instances")
     @Expose
     private CcnInstance [] Instances;
 
     /**
-     * Get CCN实例ID。形如：ccn-f49l6u0z。 
-     * @return CcnId CCN实例ID。形如：ccn-f49l6u0z。
+     * Get The CCN instance ID, such as `ccn-f49l6u0z`. 
+     * @return CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
      */
     public String getCcnId() {
         return this.CcnId;
     }
 
     /**
-     * Set CCN实例ID。形如：ccn-f49l6u0z。
-     * @param CcnId CCN实例ID。形如：ccn-f49l6u0z。
+     * Set The CCN instance ID, such as `ccn-f49l6u0z`.
+     * @param CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;
     }
 
     /**
-     * Get CCN所属UIN（根账号）。 
-     * @return CcnUin CCN所属UIN（根账号）。
+     * Get The UIN (root account) to which the CCN belongs. 
+     * @return CcnUin The UIN (root account) to which the CCN belongs.
      */
     public String getCcnUin() {
         return this.CcnUin;
     }
 
     /**
-     * Set CCN所属UIN（根账号）。
-     * @param CcnUin CCN所属UIN（根账号）。
+     * Set The UIN (root account) to which the CCN belongs.
+     * @param CcnUin The UIN (root account) to which the CCN belongs.
      */
     public void setCcnUin(String CcnUin) {
         this.CcnUin = CcnUin;
     }
 
     /**
-     * Get 重新申请关联网络实例列表。 
-     * @return Instances 重新申请关联网络实例列表。
+     * Get The list of network instances that re-apply for association. 
+     * @return Instances The list of network instances that re-apply for association.
      */
     public CcnInstance [] getInstances() {
         return this.Instances;
     }
 
     /**
-     * Set 重新申请关联网络实例列表。
-     * @param Instances 重新申请关联网络实例列表。
+     * Set The list of network instances that re-apply for association.
+     * @param Instances The list of network instances that re-apply for association.
      */
     public void setInstances(CcnInstance [] Instances) {
         this.Instances = Instances;

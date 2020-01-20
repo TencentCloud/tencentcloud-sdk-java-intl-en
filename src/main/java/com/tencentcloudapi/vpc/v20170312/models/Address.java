@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class Address extends AbstractModel{
 
     /**
-    * `EIP`的`ID`，是`EIP`的唯一标识。
+    * `EIP` `ID`, the unique ID of the `EIP`.
     */
     @SerializedName("AddressId")
     @Expose
     private String AddressId;
 
     /**
-    * `EIP`名称。
+    * The `EIP` name.
     */
     @SerializedName("AddressName")
     @Expose
@@ -44,102 +44,102 @@ public class Address extends AbstractModel{
     private String AddressStatus;
 
     /**
-    * 外网IP地址
+    * The public IP address
     */
     @SerializedName("AddressIp")
     @Expose
     private String AddressIp;
 
     /**
-    * 绑定的资源实例`ID`。可能是一个`CVM`，`NAT`。
+    * The ID of the bound resource instance. This can be a `CVM` or `NAT`.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+    * The creation time, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * 绑定的弹性网卡ID
+    * The ID of the bound ENI
     */
     @SerializedName("NetworkInterfaceId")
     @Expose
     private String NetworkInterfaceId;
 
     /**
-    * 绑定的资源内网ip
+    * The private IP of the bound resources
     */
     @SerializedName("PrivateAddressIp")
     @Expose
     private String PrivateAddressIp;
 
     /**
-    * 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态
+    * The isolation status of the resource. `True` indicates the EIP is isolated. `False` indicates that the resource is not isolated.
     */
     @SerializedName("IsArrears")
     @Expose
     private Boolean IsArrears;
 
     /**
-    * 资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
+    * The block status of the resource. `True` indicates the EIP is blocked. `False` indicates that the EIP is not blocked.
     */
     @SerializedName("IsBlocked")
     @Expose
     private Boolean IsBlocked;
 
     /**
-    * eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
+    * Whether the EIP supports direct connection mode. `True` indicates the EIP supports direct connection. `False` indicates that the resource does not support direct connection.
     */
     @SerializedName("IsEipDirectConnection")
     @Expose
     private Boolean IsEipDirectConnection;
 
     /**
-    * eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
+    * The resource type of the EIP. This includes `CalcIP`, `WanIP`, `EIP`, and `AnycastEIP`. Among these, `CalcIP` indicates the device IP, `WanIP` indicates the common public IP, `EIP` indicates Elastic IP, and `AnycastEip` indicates accelerated EIP.
     */
     @SerializedName("AddressType")
     @Expose
     private String AddressType;
 
     /**
-    * eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
+    * Whether the EIP is automatically released after being unbound. `True` indicates the EIP will be automatically released after being unbound. `False` indicates the EIP will not be automatically released after being unbound.
     */
     @SerializedName("CascadeRelease")
     @Expose
     private Boolean CascadeRelease;
 
     /**
-     * Get `EIP`的`ID`，是`EIP`的唯一标识。 
-     * @return AddressId `EIP`的`ID`，是`EIP`的唯一标识。
+     * Get `EIP` `ID`, the unique ID of the `EIP`. 
+     * @return AddressId `EIP` `ID`, the unique ID of the `EIP`.
      */
     public String getAddressId() {
         return this.AddressId;
     }
 
     /**
-     * Set `EIP`的`ID`，是`EIP`的唯一标识。
-     * @param AddressId `EIP`的`ID`，是`EIP`的唯一标识。
+     * Set `EIP` `ID`, the unique ID of the `EIP`.
+     * @param AddressId `EIP` `ID`, the unique ID of the `EIP`.
      */
     public void setAddressId(String AddressId) {
         this.AddressId = AddressId;
     }
 
     /**
-     * Get `EIP`名称。 
-     * @return AddressName `EIP`名称。
+     * Get The `EIP` name. 
+     * @return AddressName The `EIP` name.
      */
     public String getAddressName() {
         return this.AddressName;
     }
 
     /**
-     * Set `EIP`名称。
-     * @param AddressName `EIP`名称。
+     * Set The `EIP` name.
+     * @param AddressName The `EIP` name.
      */
     public void setAddressName(String AddressName) {
         this.AddressName = AddressName;
@@ -162,160 +162,160 @@ public class Address extends AbstractModel{
     }
 
     /**
-     * Get 外网IP地址 
-     * @return AddressIp 外网IP地址
+     * Get The public IP address 
+     * @return AddressIp The public IP address
      */
     public String getAddressIp() {
         return this.AddressIp;
     }
 
     /**
-     * Set 外网IP地址
-     * @param AddressIp 外网IP地址
+     * Set The public IP address
+     * @param AddressIp The public IP address
      */
     public void setAddressIp(String AddressIp) {
         this.AddressIp = AddressIp;
     }
 
     /**
-     * Get 绑定的资源实例`ID`。可能是一个`CVM`，`NAT`。 
-     * @return InstanceId 绑定的资源实例`ID`。可能是一个`CVM`，`NAT`。
+     * Get The ID of the bound resource instance. This can be a `CVM` or `NAT`. 
+     * @return InstanceId The ID of the bound resource instance. This can be a `CVM` or `NAT`.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 绑定的资源实例`ID`。可能是一个`CVM`，`NAT`。
-     * @param InstanceId 绑定的资源实例`ID`。可能是一个`CVM`，`NAT`。
+     * Set The ID of the bound resource instance. This can be a `CVM` or `NAT`.
+     * @param InstanceId The ID of the bound resource instance. This can be a `CVM` or `NAT`.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。 
-     * @return CreatedTime 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+     * Get The creation time, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`. 
+     * @return CreatedTime The creation time, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
-     * @param CreatedTime 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+     * Set The creation time, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
+     * @param CreatedTime The creation time, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 绑定的弹性网卡ID 
-     * @return NetworkInterfaceId 绑定的弹性网卡ID
+     * Get The ID of the bound ENI 
+     * @return NetworkInterfaceId The ID of the bound ENI
      */
     public String getNetworkInterfaceId() {
         return this.NetworkInterfaceId;
     }
 
     /**
-     * Set 绑定的弹性网卡ID
-     * @param NetworkInterfaceId 绑定的弹性网卡ID
+     * Set The ID of the bound ENI
+     * @param NetworkInterfaceId The ID of the bound ENI
      */
     public void setNetworkInterfaceId(String NetworkInterfaceId) {
         this.NetworkInterfaceId = NetworkInterfaceId;
     }
 
     /**
-     * Get 绑定的资源内网ip 
-     * @return PrivateAddressIp 绑定的资源内网ip
+     * Get The private IP of the bound resources 
+     * @return PrivateAddressIp The private IP of the bound resources
      */
     public String getPrivateAddressIp() {
         return this.PrivateAddressIp;
     }
 
     /**
-     * Set 绑定的资源内网ip
-     * @param PrivateAddressIp 绑定的资源内网ip
+     * Set The private IP of the bound resources
+     * @param PrivateAddressIp The private IP of the bound resources
      */
     public void setPrivateAddressIp(String PrivateAddressIp) {
         this.PrivateAddressIp = PrivateAddressIp;
     }
 
     /**
-     * Get 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态 
-     * @return IsArrears 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态
+     * Get The isolation status of the resource. `True` indicates the EIP is isolated. `False` indicates that the resource is not isolated. 
+     * @return IsArrears The isolation status of the resource. `True` indicates the EIP is isolated. `False` indicates that the resource is not isolated.
      */
     public Boolean getIsArrears() {
         return this.IsArrears;
     }
 
     /**
-     * Set 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态
-     * @param IsArrears 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态
+     * Set The isolation status of the resource. `True` indicates the EIP is isolated. `False` indicates that the resource is not isolated.
+     * @param IsArrears The isolation status of the resource. `True` indicates the EIP is isolated. `False` indicates that the resource is not isolated.
      */
     public void setIsArrears(Boolean IsArrears) {
         this.IsArrears = IsArrears;
     }
 
     /**
-     * Get 资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态 
-     * @return IsBlocked 资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
+     * Get The block status of the resource. `True` indicates the EIP is blocked. `False` indicates that the EIP is not blocked. 
+     * @return IsBlocked The block status of the resource. `True` indicates the EIP is blocked. `False` indicates that the EIP is not blocked.
      */
     public Boolean getIsBlocked() {
         return this.IsBlocked;
     }
 
     /**
-     * Set 资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
-     * @param IsBlocked 资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
+     * Set The block status of the resource. `True` indicates the EIP is blocked. `False` indicates that the EIP is not blocked.
+     * @param IsBlocked The block status of the resource. `True` indicates the EIP is blocked. `False` indicates that the EIP is not blocked.
      */
     public void setIsBlocked(Boolean IsBlocked) {
         this.IsBlocked = IsBlocked;
     }
 
     /**
-     * Get eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式 
-     * @return IsEipDirectConnection eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
+     * Get Whether the EIP supports direct connection mode. `True` indicates the EIP supports direct connection. `False` indicates that the resource does not support direct connection. 
+     * @return IsEipDirectConnection Whether the EIP supports direct connection mode. `True` indicates the EIP supports direct connection. `False` indicates that the resource does not support direct connection.
      */
     public Boolean getIsEipDirectConnection() {
         return this.IsEipDirectConnection;
     }
 
     /**
-     * Set eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
-     * @param IsEipDirectConnection eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
+     * Set Whether the EIP supports direct connection mode. `True` indicates the EIP supports direct connection. `False` indicates that the resource does not support direct connection.
+     * @param IsEipDirectConnection Whether the EIP supports direct connection mode. `True` indicates the EIP supports direct connection. `False` indicates that the resource does not support direct connection.
      */
     public void setIsEipDirectConnection(Boolean IsEipDirectConnection) {
         this.IsEipDirectConnection = IsEipDirectConnection;
     }
 
     /**
-     * Get eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP 
-     * @return AddressType eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
+     * Get The resource type of the EIP. This includes `CalcIP`, `WanIP`, `EIP`, and `AnycastEIP`. Among these, `CalcIP` indicates the device IP, `WanIP` indicates the common public IP, `EIP` indicates Elastic IP, and `AnycastEip` indicates accelerated EIP. 
+     * @return AddressType The resource type of the EIP. This includes `CalcIP`, `WanIP`, `EIP`, and `AnycastEIP`. Among these, `CalcIP` indicates the device IP, `WanIP` indicates the common public IP, `EIP` indicates Elastic IP, and `AnycastEip` indicates accelerated EIP.
      */
     public String getAddressType() {
         return this.AddressType;
     }
 
     /**
-     * Set eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
-     * @param AddressType eip资源类型，包括"CalcIP","WanIP","EIP","AnycastEIP"。其中"CalcIP"表示设备ip，“WanIP”表示普通公网ip，“EIP”表示弹性公网ip，“AnycastEip”表示加速EIP
+     * Set The resource type of the EIP. This includes `CalcIP`, `WanIP`, `EIP`, and `AnycastEIP`. Among these, `CalcIP` indicates the device IP, `WanIP` indicates the common public IP, `EIP` indicates Elastic IP, and `AnycastEip` indicates accelerated EIP.
+     * @param AddressType The resource type of the EIP. This includes `CalcIP`, `WanIP`, `EIP`, and `AnycastEIP`. Among these, `CalcIP` indicates the device IP, `WanIP` indicates the common public IP, `EIP` indicates Elastic IP, and `AnycastEip` indicates accelerated EIP.
      */
     public void setAddressType(String AddressType) {
         this.AddressType = AddressType;
     }
 
     /**
-     * Get eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放 
-     * @return CascadeRelease eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
+     * Get Whether the EIP is automatically released after being unbound. `True` indicates the EIP will be automatically released after being unbound. `False` indicates the EIP will not be automatically released after being unbound. 
+     * @return CascadeRelease Whether the EIP is automatically released after being unbound. `True` indicates the EIP will be automatically released after being unbound. `False` indicates the EIP will not be automatically released after being unbound.
      */
     public Boolean getCascadeRelease() {
         return this.CascadeRelease;
     }
 
     /**
-     * Set eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
-     * @param CascadeRelease eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
+     * Set Whether the EIP is automatically released after being unbound. `True` indicates the EIP will be automatically released after being unbound. `False` indicates the EIP will not be automatically released after being unbound.
+     * @param CascadeRelease Whether the EIP is automatically released after being unbound. `True` indicates the EIP will be automatically released after being unbound. `False` indicates the EIP will not be automatically released after being unbound.
      */
     public void setCascadeRelease(Boolean CascadeRelease) {
         this.CascadeRelease = CascadeRelease;

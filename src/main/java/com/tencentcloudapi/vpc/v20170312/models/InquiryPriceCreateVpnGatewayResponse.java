@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class InquiryPriceCreateVpnGatewayResponse extends AbstractModel{
 
     /**
-    * 商品价格。
+    * Product price.
     */
     @SerializedName("Price")
     @Expose
@@ -37,16 +37,16 @@ public class InquiryPriceCreateVpnGatewayResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 商品价格。 
-     * @return Price 商品价格。
+     * Get Product price. 
+     * @return Price Product price.
      */
     public Price getPrice() {
         return this.Price;
     }
 
     /**
-     * Set 商品价格。
-     * @param Price 商品价格。
+     * Set Product price.
+     * @param Price Product price.
      */
     public void setPrice(Price Price) {
         this.Price = Price;

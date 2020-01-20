@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class ServiceTemplate extends AbstractModel{
 
     /**
-    * 协议端口实例ID，例如：ppm-f5n1f8da。
+    * Protocol port instance ID, such as `ppm-f5n1f8da`.
     */
     @SerializedName("ServiceTemplateId")
     @Expose
     private String ServiceTemplateId;
 
     /**
-    * 模板名称。
+    * Template name.
     */
     @SerializedName("ServiceTemplateName")
     @Expose
     private String ServiceTemplateName;
 
     /**
-    * 协议端口信息。
+    * Protocol port information.
     */
     @SerializedName("ServiceSet")
     @Expose
     private String [] ServiceSet;
 
     /**
-    * 创建时间。
+    * Creation Time.
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-     * Get 协议端口实例ID，例如：ppm-f5n1f8da。 
-     * @return ServiceTemplateId 协议端口实例ID，例如：ppm-f5n1f8da。
+     * Get Protocol port instance ID, such as `ppm-f5n1f8da`. 
+     * @return ServiceTemplateId Protocol port instance ID, such as `ppm-f5n1f8da`.
      */
     public String getServiceTemplateId() {
         return this.ServiceTemplateId;
     }
 
     /**
-     * Set 协议端口实例ID，例如：ppm-f5n1f8da。
-     * @param ServiceTemplateId 协议端口实例ID，例如：ppm-f5n1f8da。
+     * Set Protocol port instance ID, such as `ppm-f5n1f8da`.
+     * @param ServiceTemplateId Protocol port instance ID, such as `ppm-f5n1f8da`.
      */
     public void setServiceTemplateId(String ServiceTemplateId) {
         this.ServiceTemplateId = ServiceTemplateId;
     }
 
     /**
-     * Get 模板名称。 
-     * @return ServiceTemplateName 模板名称。
+     * Get Template name. 
+     * @return ServiceTemplateName Template name.
      */
     public String getServiceTemplateName() {
         return this.ServiceTemplateName;
     }
 
     /**
-     * Set 模板名称。
-     * @param ServiceTemplateName 模板名称。
+     * Set Template name.
+     * @param ServiceTemplateName Template name.
      */
     public void setServiceTemplateName(String ServiceTemplateName) {
         this.ServiceTemplateName = ServiceTemplateName;
     }
 
     /**
-     * Get 协议端口信息。 
-     * @return ServiceSet 协议端口信息。
+     * Get Protocol port information. 
+     * @return ServiceSet Protocol port information.
      */
     public String [] getServiceSet() {
         return this.ServiceSet;
     }
 
     /**
-     * Set 协议端口信息。
-     * @param ServiceSet 协议端口信息。
+     * Set Protocol port information.
+     * @param ServiceSet Protocol port information.
      */
     public void setServiceSet(String [] ServiceSet) {
         this.ServiceSet = ServiceSet;
     }
 
     /**
-     * Get 创建时间。 
-     * @return CreatedTime 创建时间。
+     * Get Creation Time. 
+     * @return CreatedTime Creation Time.
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间。
-     * @param CreatedTime 创建时间。
+     * Set Creation Time.
+     * @param CreatedTime Creation Time.
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;

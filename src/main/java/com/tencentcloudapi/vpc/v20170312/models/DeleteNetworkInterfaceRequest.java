@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeleteNetworkInterfaceRequest extends AbstractModel{
 
     /**
-    * 弹性网卡实例ID，例如：eni-m6dyj72l。
+    * The ID of the ENI instance, such as `eni-m6dyj72l`.
     */
     @SerializedName("NetworkInterfaceId")
     @Expose
     private String NetworkInterfaceId;
 
     /**
-     * Get 弹性网卡实例ID，例如：eni-m6dyj72l。 
-     * @return NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
+     * Get The ID of the ENI instance, such as `eni-m6dyj72l`. 
+     * @return NetworkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
      */
     public String getNetworkInterfaceId() {
         return this.NetworkInterfaceId;
     }
 
     /**
-     * Set 弹性网卡实例ID，例如：eni-m6dyj72l。
-     * @param NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
+     * Set The ID of the ENI instance, such as `eni-m6dyj72l`.
+     * @param NetworkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
      */
     public void setNetworkInterfaceId(String NetworkInterfaceId) {
         this.NetworkInterfaceId = NetworkInterfaceId;

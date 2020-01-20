@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeHaVipsResponse extends AbstractModel{
 
     /**
-    * 符合条件的对象数。
+    * The number of objects meeting the condition.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * `HAVIP`对象数组。
+    * `HAVIP` object array.
     */
     @SerializedName("HaVipSet")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeHaVipsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 符合条件的对象数。 
-     * @return TotalCount 符合条件的对象数。
+     * Get The number of objects meeting the condition. 
+     * @return TotalCount The number of objects meeting the condition.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的对象数。
-     * @param TotalCount 符合条件的对象数。
+     * Set The number of objects meeting the condition.
+     * @param TotalCount The number of objects meeting the condition.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get `HAVIP`对象数组。 
-     * @return HaVipSet `HAVIP`对象数组。
+     * Get `HAVIP` object array. 
+     * @return HaVipSet `HAVIP` object array.
      */
     public HaVip [] getHaVipSet() {
         return this.HaVipSet;
     }
 
     /**
-     * Set `HAVIP`对象数组。
-     * @param HaVipSet `HAVIP`对象数组。
+     * Set `HAVIP` object array.
+     * @param HaVipSet `HAVIP` object array.
      */
     public void setHaVipSet(HaVip [] HaVipSet) {
         this.HaVipSet = HaVipSet;

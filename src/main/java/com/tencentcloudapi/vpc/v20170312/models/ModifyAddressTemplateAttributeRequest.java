@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class ModifyAddressTemplateAttributeRequest extends AbstractModel{
 
     /**
-    * IP地址模板实例ID，例如：ipm-mdunqeb6。
+    * IP address template instance ID, such as `ipm-mdunqeb6`.
     */
     @SerializedName("AddressTemplateId")
     @Expose
     private String AddressTemplateId;
 
     /**
-    * IP地址模板名称。
+    * IP address template name.
     */
     @SerializedName("AddressTemplateName")
     @Expose
     private String AddressTemplateName;
 
     /**
-    * 地址信息，支持 IP、CIDR、IP 范围。
+    * Address information, including IP, CIDR and IP address range.
     */
     @SerializedName("Addresses")
     @Expose
     private String [] Addresses;
 
     /**
-     * Get IP地址模板实例ID，例如：ipm-mdunqeb6。 
-     * @return AddressTemplateId IP地址模板实例ID，例如：ipm-mdunqeb6。
+     * Get IP address template instance ID, such as `ipm-mdunqeb6`. 
+     * @return AddressTemplateId IP address template instance ID, such as `ipm-mdunqeb6`.
      */
     public String getAddressTemplateId() {
         return this.AddressTemplateId;
     }
 
     /**
-     * Set IP地址模板实例ID，例如：ipm-mdunqeb6。
-     * @param AddressTemplateId IP地址模板实例ID，例如：ipm-mdunqeb6。
+     * Set IP address template instance ID, such as `ipm-mdunqeb6`.
+     * @param AddressTemplateId IP address template instance ID, such as `ipm-mdunqeb6`.
      */
     public void setAddressTemplateId(String AddressTemplateId) {
         this.AddressTemplateId = AddressTemplateId;
     }
 
     /**
-     * Get IP地址模板名称。 
-     * @return AddressTemplateName IP地址模板名称。
+     * Get IP address template name. 
+     * @return AddressTemplateName IP address template name.
      */
     public String getAddressTemplateName() {
         return this.AddressTemplateName;
     }
 
     /**
-     * Set IP地址模板名称。
-     * @param AddressTemplateName IP地址模板名称。
+     * Set IP address template name.
+     * @param AddressTemplateName IP address template name.
      */
     public void setAddressTemplateName(String AddressTemplateName) {
         this.AddressTemplateName = AddressTemplateName;
     }
 
     /**
-     * Get 地址信息，支持 IP、CIDR、IP 范围。 
-     * @return Addresses 地址信息，支持 IP、CIDR、IP 范围。
+     * Get Address information, including IP, CIDR and IP address range. 
+     * @return Addresses Address information, including IP, CIDR and IP address range.
      */
     public String [] getAddresses() {
         return this.Addresses;
     }
 
     /**
-     * Set 地址信息，支持 IP、CIDR、IP 范围。
-     * @param Addresses 地址信息，支持 IP、CIDR、IP 范围。
+     * Set Address information, including IP, CIDR and IP address range.
+     * @param Addresses Address information, including IP, CIDR and IP address range.
      */
     public void setAddresses(String [] Addresses) {
         this.Addresses = Addresses;

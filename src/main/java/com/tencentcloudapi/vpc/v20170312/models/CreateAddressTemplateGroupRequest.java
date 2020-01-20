@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class CreateAddressTemplateGroupRequest extends AbstractModel{
 
     /**
-    * IP地址模版集合名称。
+    * The name of the IP address template group.
     */
     @SerializedName("AddressTemplateGroupName")
     @Expose
     private String AddressTemplateGroupName;
 
     /**
-    * IP地址模版实例ID，例如：ipm-mdunqeb6。
+    * The instance ID of the IP address template, such as `ipm-mdunqeb6`.
     */
     @SerializedName("AddressTemplateIds")
     @Expose
     private String [] AddressTemplateIds;
 
     /**
-     * Get IP地址模版集合名称。 
-     * @return AddressTemplateGroupName IP地址模版集合名称。
+     * Get The name of the IP address template group. 
+     * @return AddressTemplateGroupName The name of the IP address template group.
      */
     public String getAddressTemplateGroupName() {
         return this.AddressTemplateGroupName;
     }
 
     /**
-     * Set IP地址模版集合名称。
-     * @param AddressTemplateGroupName IP地址模版集合名称。
+     * Set The name of the IP address template group.
+     * @param AddressTemplateGroupName The name of the IP address template group.
      */
     public void setAddressTemplateGroupName(String AddressTemplateGroupName) {
         this.AddressTemplateGroupName = AddressTemplateGroupName;
     }
 
     /**
-     * Get IP地址模版实例ID，例如：ipm-mdunqeb6。 
-     * @return AddressTemplateIds IP地址模版实例ID，例如：ipm-mdunqeb6。
+     * Get The instance ID of the IP address template, such as `ipm-mdunqeb6`. 
+     * @return AddressTemplateIds The instance ID of the IP address template, such as `ipm-mdunqeb6`.
      */
     public String [] getAddressTemplateIds() {
         return this.AddressTemplateIds;
     }
 
     /**
-     * Set IP地址模版实例ID，例如：ipm-mdunqeb6。
-     * @param AddressTemplateIds IP地址模版实例ID，例如：ipm-mdunqeb6。
+     * Set The instance ID of the IP address template, such as `ipm-mdunqeb6`.
+     * @param AddressTemplateIds The instance ID of the IP address template, such as `ipm-mdunqeb6`.
      */
     public void setAddressTemplateIds(String [] AddressTemplateIds) {
         this.AddressTemplateIds = AddressTemplateIds;

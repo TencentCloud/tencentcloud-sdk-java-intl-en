@@ -23,161 +23,161 @@ import java.util.HashMap;
 public class SecurityGroupAssociationStatistics extends AbstractModel{
 
     /**
-    * 安全组实例ID。
+    * Security group instance ID.
     */
     @SerializedName("SecurityGroupId")
     @Expose
     private String SecurityGroupId;
 
     /**
-    * 云主机实例数。
+    * Number of CVM instances.
     */
     @SerializedName("CVM")
     @Expose
     private Long CVM;
 
     /**
-    * 数据库实例数。
+    * Number of database instances.
     */
     @SerializedName("CDB")
     @Expose
     private Long CDB;
 
     /**
-    * 弹性网卡实例数。
+    * Number of ENI instances.
     */
     @SerializedName("ENI")
     @Expose
     private Long ENI;
 
     /**
-    * 被安全组引用数。
+    * Number of times a security group is referenced by other security groups
     */
     @SerializedName("SG")
     @Expose
     private Long SG;
 
     /**
-    * 负载均衡实例数。
+    * Number of load balancer instances.
     */
     @SerializedName("CLB")
     @Expose
     private Long CLB;
 
     /**
-    * 全量实例的绑定统计。
+    * The binding statistics for all instances.
     */
     @SerializedName("InstanceStatistics")
     @Expose
     private InstanceStatistic [] InstanceStatistics;
 
     /**
-     * Get 安全组实例ID。 
-     * @return SecurityGroupId 安全组实例ID。
+     * Get Security group instance ID. 
+     * @return SecurityGroupId Security group instance ID.
      */
     public String getSecurityGroupId() {
         return this.SecurityGroupId;
     }
 
     /**
-     * Set 安全组实例ID。
-     * @param SecurityGroupId 安全组实例ID。
+     * Set Security group instance ID.
+     * @param SecurityGroupId Security group instance ID.
      */
     public void setSecurityGroupId(String SecurityGroupId) {
         this.SecurityGroupId = SecurityGroupId;
     }
 
     /**
-     * Get 云主机实例数。 
-     * @return CVM 云主机实例数。
+     * Get Number of CVM instances. 
+     * @return CVM Number of CVM instances.
      */
     public Long getCVM() {
         return this.CVM;
     }
 
     /**
-     * Set 云主机实例数。
-     * @param CVM 云主机实例数。
+     * Set Number of CVM instances.
+     * @param CVM Number of CVM instances.
      */
     public void setCVM(Long CVM) {
         this.CVM = CVM;
     }
 
     /**
-     * Get 数据库实例数。 
-     * @return CDB 数据库实例数。
+     * Get Number of database instances. 
+     * @return CDB Number of database instances.
      */
     public Long getCDB() {
         return this.CDB;
     }
 
     /**
-     * Set 数据库实例数。
-     * @param CDB 数据库实例数。
+     * Set Number of database instances.
+     * @param CDB Number of database instances.
      */
     public void setCDB(Long CDB) {
         this.CDB = CDB;
     }
 
     /**
-     * Get 弹性网卡实例数。 
-     * @return ENI 弹性网卡实例数。
+     * Get Number of ENI instances. 
+     * @return ENI Number of ENI instances.
      */
     public Long getENI() {
         return this.ENI;
     }
 
     /**
-     * Set 弹性网卡实例数。
-     * @param ENI 弹性网卡实例数。
+     * Set Number of ENI instances.
+     * @param ENI Number of ENI instances.
      */
     public void setENI(Long ENI) {
         this.ENI = ENI;
     }
 
     /**
-     * Get 被安全组引用数。 
-     * @return SG 被安全组引用数。
+     * Get Number of times a security group is referenced by other security groups 
+     * @return SG Number of times a security group is referenced by other security groups
      */
     public Long getSG() {
         return this.SG;
     }
 
     /**
-     * Set 被安全组引用数。
-     * @param SG 被安全组引用数。
+     * Set Number of times a security group is referenced by other security groups
+     * @param SG Number of times a security group is referenced by other security groups
      */
     public void setSG(Long SG) {
         this.SG = SG;
     }
 
     /**
-     * Get 负载均衡实例数。 
-     * @return CLB 负载均衡实例数。
+     * Get Number of load balancer instances. 
+     * @return CLB Number of load balancer instances.
      */
     public Long getCLB() {
         return this.CLB;
     }
 
     /**
-     * Set 负载均衡实例数。
-     * @param CLB 负载均衡实例数。
+     * Set Number of load balancer instances.
+     * @param CLB Number of load balancer instances.
      */
     public void setCLB(Long CLB) {
         this.CLB = CLB;
     }
 
     /**
-     * Get 全量实例的绑定统计。 
-     * @return InstanceStatistics 全量实例的绑定统计。
+     * Get The binding statistics for all instances. 
+     * @return InstanceStatistics The binding statistics for all instances.
      */
     public InstanceStatistic [] getInstanceStatistics() {
         return this.InstanceStatistics;
     }
 
     /**
-     * Set 全量实例的绑定统计。
-     * @param InstanceStatistics 全量实例的绑定统计。
+     * Set The binding statistics for all instances.
+     * @param InstanceStatistics The binding statistics for all instances.
      */
     public void setInstanceStatistics(InstanceStatistic [] InstanceStatistics) {
         this.InstanceStatistics = InstanceStatistics;

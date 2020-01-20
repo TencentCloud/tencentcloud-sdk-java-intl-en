@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class DirectConnectGatewayCcnRoute extends AbstractModel{
 
     /**
-    * 路由ID。
+    * Route ID.
     */
     @SerializedName("RouteId")
     @Expose
     private String RouteId;
 
     /**
-    * IDC网段。
+    * IDC IP range.
     */
     @SerializedName("DestinationCidrBlock")
     @Expose
     private String DestinationCidrBlock;
 
     /**
-    * `BGP`的`AS-Path`属性。
+    * The `AS-Path` attribute of `BGP`.
     */
     @SerializedName("ASPath")
     @Expose
     private String [] ASPath;
 
     /**
-     * Get 路由ID。 
-     * @return RouteId 路由ID。
+     * Get Route ID. 
+     * @return RouteId Route ID.
      */
     public String getRouteId() {
         return this.RouteId;
     }
 
     /**
-     * Set 路由ID。
-     * @param RouteId 路由ID。
+     * Set Route ID.
+     * @param RouteId Route ID.
      */
     public void setRouteId(String RouteId) {
         this.RouteId = RouteId;
     }
 
     /**
-     * Get IDC网段。 
-     * @return DestinationCidrBlock IDC网段。
+     * Get IDC IP range. 
+     * @return DestinationCidrBlock IDC IP range.
      */
     public String getDestinationCidrBlock() {
         return this.DestinationCidrBlock;
     }
 
     /**
-     * Set IDC网段。
-     * @param DestinationCidrBlock IDC网段。
+     * Set IDC IP range.
+     * @param DestinationCidrBlock IDC IP range.
      */
     public void setDestinationCidrBlock(String DestinationCidrBlock) {
         this.DestinationCidrBlock = DestinationCidrBlock;
     }
 
     /**
-     * Get `BGP`的`AS-Path`属性。 
-     * @return ASPath `BGP`的`AS-Path`属性。
+     * Get The `AS-Path` attribute of `BGP`. 
+     * @return ASPath The `AS-Path` attribute of `BGP`.
      */
     public String [] getASPath() {
         return this.ASPath;
     }
 
     /**
-     * Set `BGP`的`AS-Path`属性。
-     * @param ASPath `BGP`的`AS-Path`属性。
+     * Set The `AS-Path` attribute of `BGP`.
+     * @param ASPath The `AS-Path` attribute of `BGP`.
      */
     public void setASPath(String [] ASPath) {
         this.ASPath = ASPath;

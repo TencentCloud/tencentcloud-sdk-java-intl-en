@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeSecurityGroupAssociationStatisticsResponse extends AbstractModel{
 
     /**
-    * 安全组关联实例统计。
+    * Statistics on the instances associated with a security group.
     */
     @SerializedName("SecurityGroupAssociationStatisticsSet")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeSecurityGroupAssociationStatisticsResponse extends Abstract
     private String RequestId;
 
     /**
-     * Get 安全组关联实例统计。 
-     * @return SecurityGroupAssociationStatisticsSet 安全组关联实例统计。
+     * Get Statistics on the instances associated with a security group. 
+     * @return SecurityGroupAssociationStatisticsSet Statistics on the instances associated with a security group.
      */
     public SecurityGroupAssociationStatistics [] getSecurityGroupAssociationStatisticsSet() {
         return this.SecurityGroupAssociationStatisticsSet;
     }
 
     /**
-     * Set 安全组关联实例统计。
-     * @param SecurityGroupAssociationStatisticsSet 安全组关联实例统计。
+     * Set Statistics on the instances associated with a security group.
+     * @param SecurityGroupAssociationStatisticsSet Statistics on the instances associated with a security group.
      */
     public void setSecurityGroupAssociationStatisticsSet(SecurityGroupAssociationStatistics [] SecurityGroupAssociationStatisticsSet) {
         this.SecurityGroupAssociationStatisticsSet = SecurityGroupAssociationStatisticsSet;

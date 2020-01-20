@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class InstanceStatistic extends AbstractModel{
 
     /**
-    * 实例的类型
+    * Type of instance
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 实例的个数
+    * Number of instances
     */
     @SerializedName("InstanceCount")
     @Expose
     private Long InstanceCount;
 
     /**
-     * Get 实例的类型 
-     * @return InstanceType 实例的类型
+     * Get Type of instance 
+     * @return InstanceType Type of instance
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例的类型
-     * @param InstanceType 实例的类型
+     * Set Type of instance
+     * @param InstanceType Type of instance
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 实例的个数 
-     * @return InstanceCount 实例的个数
+     * Get Number of instances 
+     * @return InstanceCount Number of instances
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
     /**
-     * Set 实例的个数
-     * @param InstanceCount 实例的个数
+     * Set Number of instances
+     * @param InstanceCount Number of instances
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;

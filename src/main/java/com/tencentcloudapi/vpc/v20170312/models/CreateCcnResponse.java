@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateCcnResponse extends AbstractModel{
 
     /**
-    * 云联网（CCN）对象。
+    * The CCN object.
     */
     @SerializedName("Ccn")
     @Expose
@@ -37,16 +37,16 @@ public class CreateCcnResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 云联网（CCN）对象。 
-     * @return Ccn 云联网（CCN）对象。
+     * Get The CCN object. 
+     * @return Ccn The CCN object.
      */
     public CCN getCcn() {
         return this.Ccn;
     }
 
     /**
-     * Set 云联网（CCN）对象。
-     * @param Ccn 云联网（CCN）对象。
+     * Set The CCN object.
+     * @param Ccn The CCN object.
      */
     public void setCcn(CCN Ccn) {
         this.Ccn = Ccn;

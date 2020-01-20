@@ -23,107 +23,107 @@ import java.util.HashMap;
 public class DescribeNatGatewaysRequest extends AbstractModel{
 
     /**
-    * NAT网关统一 ID，形如：`nat-123xx454`。
+    * The unified ID of the NAT gateways, such as `nat-123xx454`.
     */
     @SerializedName("NatGatewayIds")
     @Expose
     private String [] NatGatewayIds;
 
     /**
-    * 过滤条件，参数不支持同时指定NatGatewayIds和Filters。
-<li>nat-gateway-id - String - （过滤条件）协议端口模板实例ID，形如：`nat-123xx454`。</li>
-<li>vpc-id - String - （过滤条件）私有网络 唯一ID，形如：`vpc-123xx454`。</li>
-<li>nat-gateway-name - String - （过滤条件）协议端口模板实例ID，形如：`test_nat`。</li>
+    * Filter condition. `NatGatewayIds` and `Filters` cannot be specified at the same time.
+<li>nat-gateway-id - String - (Filter condition) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
+<li>vpc-id - String - (Filter condition) The unique ID of the VPC, such as `vpc-123xx454`.</li>
+<li>nat-gateway-name - String - (Filter condition) The ID of the protocol port template instance, such as `test_nat`.</li>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 偏移量，默认为0。
+    * Offset. The default value is 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量，默认为20，最大值为100。
+    * Number of values to be returned. The default value is 20. Maximum is 100.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get NAT网关统一 ID，形如：`nat-123xx454`。 
-     * @return NatGatewayIds NAT网关统一 ID，形如：`nat-123xx454`。
+     * Get The unified ID of the NAT gateways, such as `nat-123xx454`. 
+     * @return NatGatewayIds The unified ID of the NAT gateways, such as `nat-123xx454`.
      */
     public String [] getNatGatewayIds() {
         return this.NatGatewayIds;
     }
 
     /**
-     * Set NAT网关统一 ID，形如：`nat-123xx454`。
-     * @param NatGatewayIds NAT网关统一 ID，形如：`nat-123xx454`。
+     * Set The unified ID of the NAT gateways, such as `nat-123xx454`.
+     * @param NatGatewayIds The unified ID of the NAT gateways, such as `nat-123xx454`.
      */
     public void setNatGatewayIds(String [] NatGatewayIds) {
         this.NatGatewayIds = NatGatewayIds;
     }
 
     /**
-     * Get 过滤条件，参数不支持同时指定NatGatewayIds和Filters。
-<li>nat-gateway-id - String - （过滤条件）协议端口模板实例ID，形如：`nat-123xx454`。</li>
-<li>vpc-id - String - （过滤条件）私有网络 唯一ID，形如：`vpc-123xx454`。</li>
-<li>nat-gateway-name - String - （过滤条件）协议端口模板实例ID，形如：`test_nat`。</li> 
-     * @return Filters 过滤条件，参数不支持同时指定NatGatewayIds和Filters。
-<li>nat-gateway-id - String - （过滤条件）协议端口模板实例ID，形如：`nat-123xx454`。</li>
-<li>vpc-id - String - （过滤条件）私有网络 唯一ID，形如：`vpc-123xx454`。</li>
-<li>nat-gateway-name - String - （过滤条件）协议端口模板实例ID，形如：`test_nat`。</li>
+     * Get Filter condition. `NatGatewayIds` and `Filters` cannot be specified at the same time.
+<li>nat-gateway-id - String - (Filter condition) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
+<li>vpc-id - String - (Filter condition) The unique ID of the VPC, such as `vpc-123xx454`.</li>
+<li>nat-gateway-name - String - (Filter condition) The ID of the protocol port template instance, such as `test_nat`.</li> 
+     * @return Filters Filter condition. `NatGatewayIds` and `Filters` cannot be specified at the same time.
+<li>nat-gateway-id - String - (Filter condition) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
+<li>vpc-id - String - (Filter condition) The unique ID of the VPC, such as `vpc-123xx454`.</li>
+<li>nat-gateway-name - String - (Filter condition) The ID of the protocol port template instance, such as `test_nat`.</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件，参数不支持同时指定NatGatewayIds和Filters。
-<li>nat-gateway-id - String - （过滤条件）协议端口模板实例ID，形如：`nat-123xx454`。</li>
-<li>vpc-id - String - （过滤条件）私有网络 唯一ID，形如：`vpc-123xx454`。</li>
-<li>nat-gateway-name - String - （过滤条件）协议端口模板实例ID，形如：`test_nat`。</li>
-     * @param Filters 过滤条件，参数不支持同时指定NatGatewayIds和Filters。
-<li>nat-gateway-id - String - （过滤条件）协议端口模板实例ID，形如：`nat-123xx454`。</li>
-<li>vpc-id - String - （过滤条件）私有网络 唯一ID，形如：`vpc-123xx454`。</li>
-<li>nat-gateway-name - String - （过滤条件）协议端口模板实例ID，形如：`test_nat`。</li>
+     * Set Filter condition. `NatGatewayIds` and `Filters` cannot be specified at the same time.
+<li>nat-gateway-id - String - (Filter condition) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
+<li>vpc-id - String - (Filter condition) The unique ID of the VPC, such as `vpc-123xx454`.</li>
+<li>nat-gateway-name - String - (Filter condition) The ID of the protocol port template instance, such as `test_nat`.</li>
+     * @param Filters Filter condition. `NatGatewayIds` and `Filters` cannot be specified at the same time.
+<li>nat-gateway-id - String - (Filter condition) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
+<li>vpc-id - String - (Filter condition) The unique ID of the VPC, such as `vpc-123xx454`.</li>
+<li>nat-gateway-name - String - (Filter condition) The ID of the protocol port template instance, such as `test_nat`.</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 偏移量，默认为0。 
-     * @return Offset 偏移量，默认为0。
+     * Get Offset. The default value is 0. 
+     * @return Offset Offset. The default value is 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0。
-     * @param Offset 偏移量，默认为0。
+     * Set Offset. The default value is 0.
+     * @param Offset Offset. The default value is 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量，默认为20，最大值为100。 
-     * @return Limit 返回数量，默认为20，最大值为100。
+     * Get Number of values to be returned. The default value is 20. Maximum is 100. 
+     * @return Limit Number of values to be returned. The default value is 20. Maximum is 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为20，最大值为100。
-     * @param Limit 返回数量，默认为20，最大值为100。
+     * Set Number of values to be returned. The default value is 20. Maximum is 100.
+     * @param Limit Number of values to be returned. The default value is 20. Maximum is 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

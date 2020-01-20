@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeClassicLinkInstancesResponse extends AbstractModel{
 
     /**
-    * 符合条件的实例数量。
+    * The number of instances meeting the filter condition.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 私有网络和基础网络互通设备。
+    * Classiclink instance.
     */
     @SerializedName("ClassicLinkInstanceSet")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeClassicLinkInstancesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 符合条件的实例数量。 
-     * @return TotalCount 符合条件的实例数量。
+     * Get The number of instances meeting the filter condition. 
+     * @return TotalCount The number of instances meeting the filter condition.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的实例数量。
-     * @param TotalCount 符合条件的实例数量。
+     * Set The number of instances meeting the filter condition.
+     * @param TotalCount The number of instances meeting the filter condition.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 私有网络和基础网络互通设备。 
-     * @return ClassicLinkInstanceSet 私有网络和基础网络互通设备。
+     * Get Classiclink instance. 
+     * @return ClassicLinkInstanceSet Classiclink instance.
      */
     public ClassicLinkInstance [] getClassicLinkInstanceSet() {
         return this.ClassicLinkInstanceSet;
     }
 
     /**
-     * Set 私有网络和基础网络互通设备。
-     * @param ClassicLinkInstanceSet 私有网络和基础网络互通设备。
+     * Set Classiclink instance.
+     * @param ClassicLinkInstanceSet Classiclink instance.
      */
     public void setClassicLinkInstanceSet(ClassicLinkInstance [] ClassicLinkInstanceSet) {
         this.ClassicLinkInstanceSet = ClassicLinkInstanceSet;

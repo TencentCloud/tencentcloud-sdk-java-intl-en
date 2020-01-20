@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class ModifySecurityGroupAttributeRequest extends AbstractModel{
 
     /**
-    * 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
+    * The security group instance ID, such as `sg-33ocnj9n`. This can be obtained through DescribeSecurityGroups.
     */
     @SerializedName("SecurityGroupId")
     @Expose
     private String SecurityGroupId;
 
     /**
-    * 安全组名称，可任意命名，但不得超过60个字符。
+    * Security group can be named freely, but cannot exceed 60 characters.
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * 安全组备注，最多100个字符。
+    * The remarks for the security group. The maximum length is 100 characters.
     */
     @SerializedName("GroupDescription")
     @Expose
     private String GroupDescription;
 
     /**
-     * Get 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。 
-     * @return SecurityGroupId 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
+     * Get The security group instance ID, such as `sg-33ocnj9n`. This can be obtained through DescribeSecurityGroups. 
+     * @return SecurityGroupId The security group instance ID, such as `sg-33ocnj9n`. This can be obtained through DescribeSecurityGroups.
      */
     public String getSecurityGroupId() {
         return this.SecurityGroupId;
     }
 
     /**
-     * Set 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
-     * @param SecurityGroupId 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
+     * Set The security group instance ID, such as `sg-33ocnj9n`. This can be obtained through DescribeSecurityGroups.
+     * @param SecurityGroupId The security group instance ID, such as `sg-33ocnj9n`. This can be obtained through DescribeSecurityGroups.
      */
     public void setSecurityGroupId(String SecurityGroupId) {
         this.SecurityGroupId = SecurityGroupId;
     }
 
     /**
-     * Get 安全组名称，可任意命名，但不得超过60个字符。 
-     * @return GroupName 安全组名称，可任意命名，但不得超过60个字符。
+     * Get Security group can be named freely, but cannot exceed 60 characters. 
+     * @return GroupName Security group can be named freely, but cannot exceed 60 characters.
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 安全组名称，可任意命名，但不得超过60个字符。
-     * @param GroupName 安全组名称，可任意命名，但不得超过60个字符。
+     * Set Security group can be named freely, but cannot exceed 60 characters.
+     * @param GroupName Security group can be named freely, but cannot exceed 60 characters.
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 安全组备注，最多100个字符。 
-     * @return GroupDescription 安全组备注，最多100个字符。
+     * Get The remarks for the security group. The maximum length is 100 characters. 
+     * @return GroupDescription The remarks for the security group. The maximum length is 100 characters.
      */
     public String getGroupDescription() {
         return this.GroupDescription;
     }
 
     /**
-     * Set 安全组备注，最多100个字符。
-     * @param GroupDescription 安全组备注，最多100个字符。
+     * Set The remarks for the security group. The maximum length is 100 characters.
+     * @param GroupDescription The remarks for the security group. The maximum length is 100 characters.
      */
     public void setGroupDescription(String GroupDescription) {
         this.GroupDescription = GroupDescription;

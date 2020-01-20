@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class Price extends AbstractModel{
 
     /**
-    * 实例价格。
+    * Instance price.
     */
     @SerializedName("InstancePrice")
     @Expose
     private ItemPrice InstancePrice;
 
     /**
-    * 网络价格。
+    * Network price.
     */
     @SerializedName("BandwidthPrice")
     @Expose
     private ItemPrice BandwidthPrice;
 
     /**
-     * Get 实例价格。 
-     * @return InstancePrice 实例价格。
+     * Get Instance price. 
+     * @return InstancePrice Instance price.
      */
     public ItemPrice getInstancePrice() {
         return this.InstancePrice;
     }
 
     /**
-     * Set 实例价格。
-     * @param InstancePrice 实例价格。
+     * Set Instance price.
+     * @param InstancePrice Instance price.
      */
     public void setInstancePrice(ItemPrice InstancePrice) {
         this.InstancePrice = InstancePrice;
     }
 
     /**
-     * Get 网络价格。 
-     * @return BandwidthPrice 网络价格。
+     * Get Network price. 
+     * @return BandwidthPrice Network price.
      */
     public ItemPrice getBandwidthPrice() {
         return this.BandwidthPrice;
     }
 
     /**
-     * Set 网络价格。
-     * @param BandwidthPrice 网络价格。
+     * Set Network price.
+     * @param BandwidthPrice Network price.
      */
     public void setBandwidthPrice(ItemPrice BandwidthPrice) {
         this.BandwidthPrice = BandwidthPrice;

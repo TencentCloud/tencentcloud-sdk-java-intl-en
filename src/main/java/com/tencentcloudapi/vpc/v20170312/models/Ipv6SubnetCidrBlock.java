@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class Ipv6SubnetCidrBlock extends AbstractModel{
 
     /**
-    * 子网实例`ID`。形如：`subnet-pxir56ns`。
+    * The `ID` of the subnet instance, such as `subnet-pxir56ns`.
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * `IPv6`子网段。形如：`3402:4e00:20:1001::/64`
+    * The `IPv6` subnet IP range, such as `3402:4e00:20:1001::/64`
     */
     @SerializedName("Ipv6CidrBlock")
     @Expose
     private String Ipv6CidrBlock;
 
     /**
-     * Get 子网实例`ID`。形如：`subnet-pxir56ns`。 
-     * @return SubnetId 子网实例`ID`。形如：`subnet-pxir56ns`。
+     * Get The `ID` of the subnet instance, such as `subnet-pxir56ns`. 
+     * @return SubnetId The `ID` of the subnet instance, such as `subnet-pxir56ns`.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网实例`ID`。形如：`subnet-pxir56ns`。
-     * @param SubnetId 子网实例`ID`。形如：`subnet-pxir56ns`。
+     * Set The `ID` of the subnet instance, such as `subnet-pxir56ns`.
+     * @param SubnetId The `ID` of the subnet instance, such as `subnet-pxir56ns`.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get `IPv6`子网段。形如：`3402:4e00:20:1001::/64` 
-     * @return Ipv6CidrBlock `IPv6`子网段。形如：`3402:4e00:20:1001::/64`
+     * Get The `IPv6` subnet IP range, such as `3402:4e00:20:1001::/64` 
+     * @return Ipv6CidrBlock The `IPv6` subnet IP range, such as `3402:4e00:20:1001::/64`
      */
     public String getIpv6CidrBlock() {
         return this.Ipv6CidrBlock;
     }
 
     /**
-     * Set `IPv6`子网段。形如：`3402:4e00:20:1001::/64`
-     * @param Ipv6CidrBlock `IPv6`子网段。形如：`3402:4e00:20:1001::/64`
+     * Set The `IPv6` subnet IP range, such as `3402:4e00:20:1001::/64`
+     * @param Ipv6CidrBlock The `IPv6` subnet IP range, such as `3402:4e00:20:1001::/64`
      */
     public void setIpv6CidrBlock(String Ipv6CidrBlock) {
         this.Ipv6CidrBlock = Ipv6CidrBlock;

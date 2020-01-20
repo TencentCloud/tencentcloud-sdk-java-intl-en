@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateServiceTemplateResponse extends AbstractModel{
 
     /**
-    * 协议端口模板对象。
+    * Protocol port template object.
     */
     @SerializedName("ServiceTemplate")
     @Expose
@@ -37,16 +37,16 @@ public class CreateServiceTemplateResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 协议端口模板对象。 
-     * @return ServiceTemplate 协议端口模板对象。
+     * Get Protocol port template object. 
+     * @return ServiceTemplate Protocol port template object.
      */
     public ServiceTemplate getServiceTemplate() {
         return this.ServiceTemplate;
     }
 
     /**
-     * Set 协议端口模板对象。
-     * @param ServiceTemplate 协议端口模板对象。
+     * Set Protocol port template object.
+     * @param ServiceTemplate Protocol port template object.
      */
     public void setServiceTemplate(ServiceTemplate ServiceTemplate) {
         this.ServiceTemplate = ServiceTemplate;

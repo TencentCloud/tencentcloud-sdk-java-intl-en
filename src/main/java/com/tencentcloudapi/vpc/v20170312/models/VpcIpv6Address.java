@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class VpcIpv6Address extends AbstractModel{
 
     /**
-    * `VPC`内`IPv6`地址。
+    * `VPC` private `IPv6` address
     */
     @SerializedName("Ipv6Address")
     @Expose
     private String Ipv6Address;
 
     /**
-    * 所属子网 `IPv6` `CIDR`。
+    * The `IPv6` `CIDR` belonging to the subnet.
     */
     @SerializedName("CidrBlock")
     @Expose
     private String CidrBlock;
 
     /**
-    * `IPv6`类型。
+    * `IPv6` type.
     */
     @SerializedName("Ipv6AddressType")
     @Expose
     private String Ipv6AddressType;
 
     /**
-    * `IPv6`申请时间。
+    * `IPv6` application time.
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-     * Get `VPC`内`IPv6`地址。 
-     * @return Ipv6Address `VPC`内`IPv6`地址。
+     * Get `VPC` private `IPv6` address 
+     * @return Ipv6Address `VPC` private `IPv6` address
      */
     public String getIpv6Address() {
         return this.Ipv6Address;
     }
 
     /**
-     * Set `VPC`内`IPv6`地址。
-     * @param Ipv6Address `VPC`内`IPv6`地址。
+     * Set `VPC` private `IPv6` address
+     * @param Ipv6Address `VPC` private `IPv6` address
      */
     public void setIpv6Address(String Ipv6Address) {
         this.Ipv6Address = Ipv6Address;
     }
 
     /**
-     * Get 所属子网 `IPv6` `CIDR`。 
-     * @return CidrBlock 所属子网 `IPv6` `CIDR`。
+     * Get The `IPv6` `CIDR` belonging to the subnet. 
+     * @return CidrBlock The `IPv6` `CIDR` belonging to the subnet.
      */
     public String getCidrBlock() {
         return this.CidrBlock;
     }
 
     /**
-     * Set 所属子网 `IPv6` `CIDR`。
-     * @param CidrBlock 所属子网 `IPv6` `CIDR`。
+     * Set The `IPv6` `CIDR` belonging to the subnet.
+     * @param CidrBlock The `IPv6` `CIDR` belonging to the subnet.
      */
     public void setCidrBlock(String CidrBlock) {
         this.CidrBlock = CidrBlock;
     }
 
     /**
-     * Get `IPv6`类型。 
-     * @return Ipv6AddressType `IPv6`类型。
+     * Get `IPv6` type. 
+     * @return Ipv6AddressType `IPv6` type.
      */
     public String getIpv6AddressType() {
         return this.Ipv6AddressType;
     }
 
     /**
-     * Set `IPv6`类型。
-     * @param Ipv6AddressType `IPv6`类型。
+     * Set `IPv6` type.
+     * @param Ipv6AddressType `IPv6` type.
      */
     public void setIpv6AddressType(String Ipv6AddressType) {
         this.Ipv6AddressType = Ipv6AddressType;
     }
 
     /**
-     * Get `IPv6`申请时间。 
-     * @return CreatedTime `IPv6`申请时间。
+     * Get `IPv6` application time. 
+     * @return CreatedTime `IPv6` application time.
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set `IPv6`申请时间。
-     * @param CreatedTime `IPv6`申请时间。
+     * Set `IPv6` application time.
+     * @param CreatedTime `IPv6` application time.
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;

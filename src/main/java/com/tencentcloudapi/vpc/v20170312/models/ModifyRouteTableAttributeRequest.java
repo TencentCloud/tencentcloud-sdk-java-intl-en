@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class ModifyRouteTableAttributeRequest extends AbstractModel{
 
     /**
-    * 路由表实例ID，例如：rtb-azd4dt1c。
+    * The route table instance ID, such as `rtb-azd4dt1c`.
     */
     @SerializedName("RouteTableId")
     @Expose
     private String RouteTableId;
 
     /**
-    * 路由表名称。
+    * Route table name.
     */
     @SerializedName("RouteTableName")
     @Expose
     private String RouteTableName;
 
     /**
-     * Get 路由表实例ID，例如：rtb-azd4dt1c。 
-     * @return RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
+     * Get The route table instance ID, such as `rtb-azd4dt1c`. 
+     * @return RouteTableId The route table instance ID, such as `rtb-azd4dt1c`.
      */
     public String getRouteTableId() {
         return this.RouteTableId;
     }
 
     /**
-     * Set 路由表实例ID，例如：rtb-azd4dt1c。
-     * @param RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
+     * Set The route table instance ID, such as `rtb-azd4dt1c`.
+     * @param RouteTableId The route table instance ID, such as `rtb-azd4dt1c`.
      */
     public void setRouteTableId(String RouteTableId) {
         this.RouteTableId = RouteTableId;
     }
 
     /**
-     * Get 路由表名称。 
-     * @return RouteTableName 路由表名称。
+     * Get Route table name. 
+     * @return RouteTableName Route table name.
      */
     public String getRouteTableName() {
         return this.RouteTableName;
     }
 
     /**
-     * Set 路由表名称。
-     * @param RouteTableName 路由表名称。
+     * Set Route table name.
+     * @param RouteTableName Route table name.
      */
     public void setRouteTableName(String RouteTableName) {
         this.RouteTableName = RouteTableName;

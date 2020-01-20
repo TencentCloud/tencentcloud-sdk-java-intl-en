@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class CreateServiceTemplateRequest extends AbstractModel{
 
     /**
-    * 协议端口模板名称
+    * Template name of the protocol port
     */
     @SerializedName("ServiceTemplateName")
     @Expose
     private String ServiceTemplateName;
 
     /**
-    * 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
+    * It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
     */
     @SerializedName("Services")
     @Expose
     private String [] Services;
 
     /**
-     * Get 协议端口模板名称 
-     * @return ServiceTemplateName 协议端口模板名称
+     * Get Template name of the protocol port 
+     * @return ServiceTemplateName Template name of the protocol port
      */
     public String getServiceTemplateName() {
         return this.ServiceTemplateName;
     }
 
     /**
-     * Set 协议端口模板名称
-     * @param ServiceTemplateName 协议端口模板名称
+     * Set Template name of the protocol port
+     * @param ServiceTemplateName Template name of the protocol port
      */
     public void setServiceTemplateName(String ServiceTemplateName) {
         this.ServiceTemplateName = ServiceTemplateName;
     }
 
     /**
-     * Get 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。 
-     * @return Services 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
+     * Get It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE. 
+     * @return Services It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
      */
     public String [] getServices() {
         return this.Services;
     }
 
     /**
-     * Set 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
-     * @param Services 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
+     * Set It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
+     * @param Services It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
      */
     public void setServices(String [] Services) {
         this.Services = Services;

@@ -23,127 +23,127 @@ import java.util.HashMap;
 public class DescribeVpnGatewaysRequest extends AbstractModel{
 
     /**
-    * VPN网关实例ID。形如：vpngw-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnGatewayIds和Filters。
+    * The VPN gateway instance ID, such as `vpngw-f49l6u0z`. Each request can have a maximum of 100 instances. `VpnGatewayIds` and `Filters` cannot be specified at the same time.
     */
     @SerializedName("VpnGatewayIds")
     @Expose
     private String [] VpnGatewayIds;
 
     /**
-    * 过滤条件，参数不支持同时指定VpnGatewayIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
-<li>vpn-gateway-id - String - （过滤条件）VPN实例ID形如：vpngw-5aluhh9t。</li>
-<li>vpn-gateway-name - String - （过滤条件）VPN实例名称。</li>
-<li>type - String - （过滤条件）VPN网关类型：'IPSEC', 'SSL'。</li>
-<li>public-ip-address- String - （过滤条件）公网IP。</li>
-<li>renew-flag - String - （过滤条件）网关续费类型，手动续费：'NOTIFY_AND_MANUAL_RENEW'、自动续费：'NOTIFY_AND_AUTO_RENEW'。</li>
-<li>zone - String - （过滤条件）VPN所在可用区，形如：ap-guangzhou-2。</li>
+    * Filter condition. `VpnGatewayIds` and `Filters` cannot be specified at the same time.
+<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
+<li>vpn-gateway-id - String - (Filter condition) VPN instance ID, such as `vpngw-5aluhh9t`.</li>
+<li>vpn-gateway-name - String - (Filter condition) VPN instance name.</li>
+<li>type - String - (Filter condition) VPN gateway type: 'IPSEC', 'SSL'.</li>
+<li>public-ip-address- String - (Filter condition) Public IP.</li>
+<li>renew-flag - String - (Filter condition) Gateway renewal type. Manual renewal: `NOTIFY_AND_MANUAL_RENEW`, Automatic renewal: `NOTIFY_AND_AUTO_RENEW`.</li>
+<li>zone - String - (Filter condition) The availability zone where the VPN is located, such as `ap-guangzhou-2`.</li>
     */
     @SerializedName("Filters")
     @Expose
     private FilterObject [] Filters;
 
     /**
-    * 偏移量
+    * Offset
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 请求对象个数
+    * The number of request objects.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get VPN网关实例ID。形如：vpngw-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnGatewayIds和Filters。 
-     * @return VpnGatewayIds VPN网关实例ID。形如：vpngw-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnGatewayIds和Filters。
+     * Get The VPN gateway instance ID, such as `vpngw-f49l6u0z`. Each request can have a maximum of 100 instances. `VpnGatewayIds` and `Filters` cannot be specified at the same time. 
+     * @return VpnGatewayIds The VPN gateway instance ID, such as `vpngw-f49l6u0z`. Each request can have a maximum of 100 instances. `VpnGatewayIds` and `Filters` cannot be specified at the same time.
      */
     public String [] getVpnGatewayIds() {
         return this.VpnGatewayIds;
     }
 
     /**
-     * Set VPN网关实例ID。形如：vpngw-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnGatewayIds和Filters。
-     * @param VpnGatewayIds VPN网关实例ID。形如：vpngw-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnGatewayIds和Filters。
+     * Set The VPN gateway instance ID, such as `vpngw-f49l6u0z`. Each request can have a maximum of 100 instances. `VpnGatewayIds` and `Filters` cannot be specified at the same time.
+     * @param VpnGatewayIds The VPN gateway instance ID, such as `vpngw-f49l6u0z`. Each request can have a maximum of 100 instances. `VpnGatewayIds` and `Filters` cannot be specified at the same time.
      */
     public void setVpnGatewayIds(String [] VpnGatewayIds) {
         this.VpnGatewayIds = VpnGatewayIds;
     }
 
     /**
-     * Get 过滤条件，参数不支持同时指定VpnGatewayIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
-<li>vpn-gateway-id - String - （过滤条件）VPN实例ID形如：vpngw-5aluhh9t。</li>
-<li>vpn-gateway-name - String - （过滤条件）VPN实例名称。</li>
-<li>type - String - （过滤条件）VPN网关类型：'IPSEC', 'SSL'。</li>
-<li>public-ip-address- String - （过滤条件）公网IP。</li>
-<li>renew-flag - String - （过滤条件）网关续费类型，手动续费：'NOTIFY_AND_MANUAL_RENEW'、自动续费：'NOTIFY_AND_AUTO_RENEW'。</li>
-<li>zone - String - （过滤条件）VPN所在可用区，形如：ap-guangzhou-2。</li> 
-     * @return Filters 过滤条件，参数不支持同时指定VpnGatewayIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
-<li>vpn-gateway-id - String - （过滤条件）VPN实例ID形如：vpngw-5aluhh9t。</li>
-<li>vpn-gateway-name - String - （过滤条件）VPN实例名称。</li>
-<li>type - String - （过滤条件）VPN网关类型：'IPSEC', 'SSL'。</li>
-<li>public-ip-address- String - （过滤条件）公网IP。</li>
-<li>renew-flag - String - （过滤条件）网关续费类型，手动续费：'NOTIFY_AND_MANUAL_RENEW'、自动续费：'NOTIFY_AND_AUTO_RENEW'。</li>
-<li>zone - String - （过滤条件）VPN所在可用区，形如：ap-guangzhou-2。</li>
+     * Get Filter condition. `VpnGatewayIds` and `Filters` cannot be specified at the same time.
+<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
+<li>vpn-gateway-id - String - (Filter condition) VPN instance ID, such as `vpngw-5aluhh9t`.</li>
+<li>vpn-gateway-name - String - (Filter condition) VPN instance name.</li>
+<li>type - String - (Filter condition) VPN gateway type: 'IPSEC', 'SSL'.</li>
+<li>public-ip-address- String - (Filter condition) Public IP.</li>
+<li>renew-flag - String - (Filter condition) Gateway renewal type. Manual renewal: `NOTIFY_AND_MANUAL_RENEW`, Automatic renewal: `NOTIFY_AND_AUTO_RENEW`.</li>
+<li>zone - String - (Filter condition) The availability zone where the VPN is located, such as `ap-guangzhou-2`.</li> 
+     * @return Filters Filter condition. `VpnGatewayIds` and `Filters` cannot be specified at the same time.
+<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
+<li>vpn-gateway-id - String - (Filter condition) VPN instance ID, such as `vpngw-5aluhh9t`.</li>
+<li>vpn-gateway-name - String - (Filter condition) VPN instance name.</li>
+<li>type - String - (Filter condition) VPN gateway type: 'IPSEC', 'SSL'.</li>
+<li>public-ip-address- String - (Filter condition) Public IP.</li>
+<li>renew-flag - String - (Filter condition) Gateway renewal type. Manual renewal: `NOTIFY_AND_MANUAL_RENEW`, Automatic renewal: `NOTIFY_AND_AUTO_RENEW`.</li>
+<li>zone - String - (Filter condition) The availability zone where the VPN is located, such as `ap-guangzhou-2`.</li>
      */
     public FilterObject [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件，参数不支持同时指定VpnGatewayIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
-<li>vpn-gateway-id - String - （过滤条件）VPN实例ID形如：vpngw-5aluhh9t。</li>
-<li>vpn-gateway-name - String - （过滤条件）VPN实例名称。</li>
-<li>type - String - （过滤条件）VPN网关类型：'IPSEC', 'SSL'。</li>
-<li>public-ip-address- String - （过滤条件）公网IP。</li>
-<li>renew-flag - String - （过滤条件）网关续费类型，手动续费：'NOTIFY_AND_MANUAL_RENEW'、自动续费：'NOTIFY_AND_AUTO_RENEW'。</li>
-<li>zone - String - （过滤条件）VPN所在可用区，形如：ap-guangzhou-2。</li>
-     * @param Filters 过滤条件，参数不支持同时指定VpnGatewayIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID形如：vpc-f49l6u0z。</li>
-<li>vpn-gateway-id - String - （过滤条件）VPN实例ID形如：vpngw-5aluhh9t。</li>
-<li>vpn-gateway-name - String - （过滤条件）VPN实例名称。</li>
-<li>type - String - （过滤条件）VPN网关类型：'IPSEC', 'SSL'。</li>
-<li>public-ip-address- String - （过滤条件）公网IP。</li>
-<li>renew-flag - String - （过滤条件）网关续费类型，手动续费：'NOTIFY_AND_MANUAL_RENEW'、自动续费：'NOTIFY_AND_AUTO_RENEW'。</li>
-<li>zone - String - （过滤条件）VPN所在可用区，形如：ap-guangzhou-2。</li>
+     * Set Filter condition. `VpnGatewayIds` and `Filters` cannot be specified at the same time.
+<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
+<li>vpn-gateway-id - String - (Filter condition) VPN instance ID, such as `vpngw-5aluhh9t`.</li>
+<li>vpn-gateway-name - String - (Filter condition) VPN instance name.</li>
+<li>type - String - (Filter condition) VPN gateway type: 'IPSEC', 'SSL'.</li>
+<li>public-ip-address- String - (Filter condition) Public IP.</li>
+<li>renew-flag - String - (Filter condition) Gateway renewal type. Manual renewal: `NOTIFY_AND_MANUAL_RENEW`, Automatic renewal: `NOTIFY_AND_AUTO_RENEW`.</li>
+<li>zone - String - (Filter condition) The availability zone where the VPN is located, such as `ap-guangzhou-2`.</li>
+     * @param Filters Filter condition. `VpnGatewayIds` and `Filters` cannot be specified at the same time.
+<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
+<li>vpn-gateway-id - String - (Filter condition) VPN instance ID, such as `vpngw-5aluhh9t`.</li>
+<li>vpn-gateway-name - String - (Filter condition) VPN instance name.</li>
+<li>type - String - (Filter condition) VPN gateway type: 'IPSEC', 'SSL'.</li>
+<li>public-ip-address- String - (Filter condition) Public IP.</li>
+<li>renew-flag - String - (Filter condition) Gateway renewal type. Manual renewal: `NOTIFY_AND_MANUAL_RENEW`, Automatic renewal: `NOTIFY_AND_AUTO_RENEW`.</li>
+<li>zone - String - (Filter condition) The availability zone where the VPN is located, such as `ap-guangzhou-2`.</li>
      */
     public void setFilters(FilterObject [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get Offset 
+     * @return Offset Offset
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set Offset
+     * @param Offset Offset
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 请求对象个数 
-     * @return Limit 请求对象个数
+     * Get The number of request objects. 
+     * @return Limit The number of request objects.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 请求对象个数
-     * @param Limit 请求对象个数
+     * Set The number of request objects.
+     * @param Limit The number of request objects.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

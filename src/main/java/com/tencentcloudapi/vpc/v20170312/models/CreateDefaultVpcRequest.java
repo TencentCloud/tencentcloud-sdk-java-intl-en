@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class CreateDefaultVpcRequest extends AbstractModel{
 
     /**
-    * 子网所在的可用区ID，不指定将随机选择可用区
+    * The ID of the availability zone in which the subnet resides. The availability zone will be randomly selected if not specified.
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 是否强制返回默认VPC
+    * Whether to forcibly return a default VPC
     */
     @SerializedName("Force")
     @Expose
     private Boolean Force;
 
     /**
-     * Get 子网所在的可用区ID，不指定将随机选择可用区 
-     * @return Zone 子网所在的可用区ID，不指定将随机选择可用区
+     * Get The ID of the availability zone in which the subnet resides. The availability zone will be randomly selected if not specified. 
+     * @return Zone The ID of the availability zone in which the subnet resides. The availability zone will be randomly selected if not specified.
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 子网所在的可用区ID，不指定将随机选择可用区
-     * @param Zone 子网所在的可用区ID，不指定将随机选择可用区
+     * Set The ID of the availability zone in which the subnet resides. The availability zone will be randomly selected if not specified.
+     * @param Zone The ID of the availability zone in which the subnet resides. The availability zone will be randomly selected if not specified.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 是否强制返回默认VPC 
-     * @return Force 是否强制返回默认VPC
+     * Get Whether to forcibly return a default VPC 
+     * @return Force Whether to forcibly return a default VPC
      */
     public Boolean getForce() {
         return this.Force;
     }
 
     /**
-     * Set 是否强制返回默认VPC
-     * @param Force 是否强制返回默认VPC
+     * Set Whether to forcibly return a default VPC
+     * @param Force Whether to forcibly return a default VPC
      */
     public void setForce(Boolean Force) {
         this.Force = Force;

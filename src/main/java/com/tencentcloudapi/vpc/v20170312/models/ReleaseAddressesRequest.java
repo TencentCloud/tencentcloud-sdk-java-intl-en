@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class ReleaseAddressesRequest extends AbstractModel{
 
     /**
-    * 标识 EIP 的唯一 ID 列表。EIP 唯一 ID 形如：`eip-11112222`。
+    * The unique ID list of the EIP. The unique ID of an EIP is as follows: `eip-11112222`.
     */
     @SerializedName("AddressIds")
     @Expose
     private String [] AddressIds;
 
     /**
-     * Get 标识 EIP 的唯一 ID 列表。EIP 唯一 ID 形如：`eip-11112222`。 
-     * @return AddressIds 标识 EIP 的唯一 ID 列表。EIP 唯一 ID 形如：`eip-11112222`。
+     * Get The unique ID list of the EIP. The unique ID of an EIP is as follows: `eip-11112222`. 
+     * @return AddressIds The unique ID list of the EIP. The unique ID of an EIP is as follows: `eip-11112222`.
      */
     public String [] getAddressIds() {
         return this.AddressIds;
     }
 
     /**
-     * Set 标识 EIP 的唯一 ID 列表。EIP 唯一 ID 形如：`eip-11112222`。
-     * @param AddressIds 标识 EIP 的唯一 ID 列表。EIP 唯一 ID 形如：`eip-11112222`。
+     * Set The unique ID list of the EIP. The unique ID of an EIP is as follows: `eip-11112222`.
+     * @param AddressIds The unique ID list of the EIP. The unique ID of an EIP is as follows: `eip-11112222`.
      */
     public void setAddressIds(String [] AddressIds) {
         this.AddressIds = AddressIds;

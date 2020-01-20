@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class AccountAttribute extends AbstractModel{
 
     /**
-    * 属性名
+    * Attribute name
     */
     @SerializedName("AttributeName")
     @Expose
     private String AttributeName;
 
     /**
-    * 属性值
+    * Attribute values
     */
     @SerializedName("AttributeValues")
     @Expose
     private String [] AttributeValues;
 
     /**
-     * Get 属性名 
-     * @return AttributeName 属性名
+     * Get Attribute name 
+     * @return AttributeName Attribute name
      */
     public String getAttributeName() {
         return this.AttributeName;
     }
 
     /**
-     * Set 属性名
-     * @param AttributeName 属性名
+     * Set Attribute name
+     * @param AttributeName Attribute name
      */
     public void setAttributeName(String AttributeName) {
         this.AttributeName = AttributeName;
     }
 
     /**
-     * Get 属性值 
-     * @return AttributeValues 属性值
+     * Get Attribute values 
+     * @return AttributeValues Attribute values
      */
     public String [] getAttributeValues() {
         return this.AttributeValues;
     }
 
     /**
-     * Set 属性值
-     * @param AttributeValues 属性值
+     * Set Attribute values
+     * @param AttributeValues Attribute values
      */
     public void setAttributeValues(String [] AttributeValues) {
         this.AttributeValues = AttributeValues;

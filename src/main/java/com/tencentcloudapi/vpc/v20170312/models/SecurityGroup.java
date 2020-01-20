@@ -23,138 +23,138 @@ import java.util.HashMap;
 public class SecurityGroup extends AbstractModel{
 
     /**
-    * 安全组实例ID，例如：sg-ohuuioma。
+    * The security group instance ID, such as `sg-ohuuioma`.
     */
     @SerializedName("SecurityGroupId")
     @Expose
     private String SecurityGroupId;
 
     /**
-    * 安全组名称，可任意命名，但不得超过60个字符。
+    * Security group can be named freely, but cannot exceed 60 characters.
     */
     @SerializedName("SecurityGroupName")
     @Expose
     private String SecurityGroupName;
 
     /**
-    * 安全组备注，最多100个字符。
+    * The remarks for the security group. The maximum length is 100 characters.
     */
     @SerializedName("SecurityGroupDesc")
     @Expose
     private String SecurityGroupDesc;
 
     /**
-    * 项目id，默认0。可在qcloud控制台项目管理页面查询到。
+    * The project id is 0 by default. You can query this in the project management page of the Qcloud console.
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * 是否是默认安全组，默认安全组不支持删除。
+    * Whether it is the default security group (which cannot be deleted).
     */
     @SerializedName("IsDefault")
     @Expose
     private Boolean IsDefault;
 
     /**
-    * 安全组创建时间。
+    * Security group creation time.
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-     * Get 安全组实例ID，例如：sg-ohuuioma。 
-     * @return SecurityGroupId 安全组实例ID，例如：sg-ohuuioma。
+     * Get The security group instance ID, such as `sg-ohuuioma`. 
+     * @return SecurityGroupId The security group instance ID, such as `sg-ohuuioma`.
      */
     public String getSecurityGroupId() {
         return this.SecurityGroupId;
     }
 
     /**
-     * Set 安全组实例ID，例如：sg-ohuuioma。
-     * @param SecurityGroupId 安全组实例ID，例如：sg-ohuuioma。
+     * Set The security group instance ID, such as `sg-ohuuioma`.
+     * @param SecurityGroupId The security group instance ID, such as `sg-ohuuioma`.
      */
     public void setSecurityGroupId(String SecurityGroupId) {
         this.SecurityGroupId = SecurityGroupId;
     }
 
     /**
-     * Get 安全组名称，可任意命名，但不得超过60个字符。 
-     * @return SecurityGroupName 安全组名称，可任意命名，但不得超过60个字符。
+     * Get Security group can be named freely, but cannot exceed 60 characters. 
+     * @return SecurityGroupName Security group can be named freely, but cannot exceed 60 characters.
      */
     public String getSecurityGroupName() {
         return this.SecurityGroupName;
     }
 
     /**
-     * Set 安全组名称，可任意命名，但不得超过60个字符。
-     * @param SecurityGroupName 安全组名称，可任意命名，但不得超过60个字符。
+     * Set Security group can be named freely, but cannot exceed 60 characters.
+     * @param SecurityGroupName Security group can be named freely, but cannot exceed 60 characters.
      */
     public void setSecurityGroupName(String SecurityGroupName) {
         this.SecurityGroupName = SecurityGroupName;
     }
 
     /**
-     * Get 安全组备注，最多100个字符。 
-     * @return SecurityGroupDesc 安全组备注，最多100个字符。
+     * Get The remarks for the security group. The maximum length is 100 characters. 
+     * @return SecurityGroupDesc The remarks for the security group. The maximum length is 100 characters.
      */
     public String getSecurityGroupDesc() {
         return this.SecurityGroupDesc;
     }
 
     /**
-     * Set 安全组备注，最多100个字符。
-     * @param SecurityGroupDesc 安全组备注，最多100个字符。
+     * Set The remarks for the security group. The maximum length is 100 characters.
+     * @param SecurityGroupDesc The remarks for the security group. The maximum length is 100 characters.
      */
     public void setSecurityGroupDesc(String SecurityGroupDesc) {
         this.SecurityGroupDesc = SecurityGroupDesc;
     }
 
     /**
-     * Get 项目id，默认0。可在qcloud控制台项目管理页面查询到。 
-     * @return ProjectId 项目id，默认0。可在qcloud控制台项目管理页面查询到。
+     * Get The project id is 0 by default. You can query this in the project management page of the Qcloud console. 
+     * @return ProjectId The project id is 0 by default. You can query this in the project management page of the Qcloud console.
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目id，默认0。可在qcloud控制台项目管理页面查询到。
-     * @param ProjectId 项目id，默认0。可在qcloud控制台项目管理页面查询到。
+     * Set The project id is 0 by default. You can query this in the project management page of the Qcloud console.
+     * @param ProjectId The project id is 0 by default. You can query this in the project management page of the Qcloud console.
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 是否是默认安全组，默认安全组不支持删除。 
-     * @return IsDefault 是否是默认安全组，默认安全组不支持删除。
+     * Get Whether it is the default security group (which cannot be deleted). 
+     * @return IsDefault Whether it is the default security group (which cannot be deleted).
      */
     public Boolean getIsDefault() {
         return this.IsDefault;
     }
 
     /**
-     * Set 是否是默认安全组，默认安全组不支持删除。
-     * @param IsDefault 是否是默认安全组，默认安全组不支持删除。
+     * Set Whether it is the default security group (which cannot be deleted).
+     * @param IsDefault Whether it is the default security group (which cannot be deleted).
      */
     public void setIsDefault(Boolean IsDefault) {
         this.IsDefault = IsDefault;
     }
 
     /**
-     * Get 安全组创建时间。 
-     * @return CreatedTime 安全组创建时间。
+     * Get Security group creation time. 
+     * @return CreatedTime Security group creation time.
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 安全组创建时间。
-     * @param CreatedTime 安全组创建时间。
+     * Set Security group creation time.
+     * @param CreatedTime Security group creation time.
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;

@@ -23,11 +23,39 @@ import java.util.HashMap;
 public class DescribeDomainErrorPageInfoResponse extends AbstractModel{
 
     /**
+    * Configuration set of a custom error response
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ErrorPageSet")
+    @Expose
+    private DomainErrorPageInfo [] ErrorPageSet;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get Configuration set of a custom error response
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ErrorPageSet Configuration set of a custom error response
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public DomainErrorPageInfo [] getErrorPageSet() {
+        return this.ErrorPageSet;
+    }
+
+    /**
+     * Set Configuration set of a custom error response
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ErrorPageSet Configuration set of a custom error response
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setErrorPageSet(DomainErrorPageInfo [] ErrorPageSet) {
+        this.ErrorPageSet = ErrorPageSet;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -49,6 +77,7 @@ public class DescribeDomainErrorPageInfoResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "ErrorPageSet.", this.ErrorPageSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

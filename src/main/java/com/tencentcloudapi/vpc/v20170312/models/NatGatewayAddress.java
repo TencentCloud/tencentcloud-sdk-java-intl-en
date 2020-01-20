@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class NatGatewayAddress extends AbstractModel{
 
     /**
-    * 弹性公网IP（EIP）的唯一 ID，形如：`eip-11112222`。
+    * The unique ID of the Elastic IP (EIP), such as `eip-11112222`.
     */
     @SerializedName("AddressId")
     @Expose
     private String AddressId;
 
     /**
-    * 外网IP地址，形如：`123.121.34.33`。
+    * The public IP address, such as `123.121.34.33`.
     */
     @SerializedName("PublicIpAddress")
     @Expose
     private String PublicIpAddress;
 
     /**
-    * 资源封堵状态。true表示弹性ip处于封堵状态，false表示弹性ip处于未封堵状态。
+    * The block status of the resource. `true` indicates the EIP is blocked. `false` indicates that the EIP is not blocked.
     */
     @SerializedName("IsBlocked")
     @Expose
     private Boolean IsBlocked;
 
     /**
-     * Get 弹性公网IP（EIP）的唯一 ID，形如：`eip-11112222`。 
-     * @return AddressId 弹性公网IP（EIP）的唯一 ID，形如：`eip-11112222`。
+     * Get The unique ID of the Elastic IP (EIP), such as `eip-11112222`. 
+     * @return AddressId The unique ID of the Elastic IP (EIP), such as `eip-11112222`.
      */
     public String getAddressId() {
         return this.AddressId;
     }
 
     /**
-     * Set 弹性公网IP（EIP）的唯一 ID，形如：`eip-11112222`。
-     * @param AddressId 弹性公网IP（EIP）的唯一 ID，形如：`eip-11112222`。
+     * Set The unique ID of the Elastic IP (EIP), such as `eip-11112222`.
+     * @param AddressId The unique ID of the Elastic IP (EIP), such as `eip-11112222`.
      */
     public void setAddressId(String AddressId) {
         this.AddressId = AddressId;
     }
 
     /**
-     * Get 外网IP地址，形如：`123.121.34.33`。 
-     * @return PublicIpAddress 外网IP地址，形如：`123.121.34.33`。
+     * Get The public IP address, such as `123.121.34.33`. 
+     * @return PublicIpAddress The public IP address, such as `123.121.34.33`.
      */
     public String getPublicIpAddress() {
         return this.PublicIpAddress;
     }
 
     /**
-     * Set 外网IP地址，形如：`123.121.34.33`。
-     * @param PublicIpAddress 外网IP地址，形如：`123.121.34.33`。
+     * Set The public IP address, such as `123.121.34.33`.
+     * @param PublicIpAddress The public IP address, such as `123.121.34.33`.
      */
     public void setPublicIpAddress(String PublicIpAddress) {
         this.PublicIpAddress = PublicIpAddress;
     }
 
     /**
-     * Get 资源封堵状态。true表示弹性ip处于封堵状态，false表示弹性ip处于未封堵状态。 
-     * @return IsBlocked 资源封堵状态。true表示弹性ip处于封堵状态，false表示弹性ip处于未封堵状态。
+     * Get The block status of the resource. `true` indicates the EIP is blocked. `false` indicates that the EIP is not blocked. 
+     * @return IsBlocked The block status of the resource. `true` indicates the EIP is blocked. `false` indicates that the EIP is not blocked.
      */
     public Boolean getIsBlocked() {
         return this.IsBlocked;
     }
 
     /**
-     * Set 资源封堵状态。true表示弹性ip处于封堵状态，false表示弹性ip处于未封堵状态。
-     * @param IsBlocked 资源封堵状态。true表示弹性ip处于封堵状态，false表示弹性ip处于未封堵状态。
+     * Set The block status of the resource. `true` indicates the EIP is blocked. `false` indicates that the EIP is not blocked.
+     * @param IsBlocked The block status of the resource. `true` indicates the EIP is blocked. `false` indicates that the EIP is not blocked.
      */
     public void setIsBlocked(Boolean IsBlocked) {
         this.IsBlocked = IsBlocked;

@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class CreateCcnRequest extends AbstractModel{
 
     /**
-    * CCN名称，最大长度不能超过60个字节。
+    * The name of the CCN. The maximum length is 60 characters.
     */
     @SerializedName("CcnName")
     @Expose
     private String CcnName;
 
     /**
-    * CCN描述信息，最大长度不能超过100个字节。
+    * The description of the CCN. The maximum length is 100 characters.
     */
     @SerializedName("CcnDescription")
     @Expose
     private String CcnDescription;
 
     /**
-    * CCN服务质量，'PT'：白金，'AU'：金，'AG'：银，默认为‘AU’。
+    * CCN service quality, 'PT': Platinum, 'AU': Gold, 'AG': Silver. The default is ‘AU’.
     */
     @SerializedName("QosLevel")
     @Expose
@@ -58,48 +58,48 @@ public class CreateCcnRequest extends AbstractModel{
     private String BandwidthLimitType;
 
     /**
-     * Get CCN名称，最大长度不能超过60个字节。 
-     * @return CcnName CCN名称，最大长度不能超过60个字节。
+     * Get The name of the CCN. The maximum length is 60 characters. 
+     * @return CcnName The name of the CCN. The maximum length is 60 characters.
      */
     public String getCcnName() {
         return this.CcnName;
     }
 
     /**
-     * Set CCN名称，最大长度不能超过60个字节。
-     * @param CcnName CCN名称，最大长度不能超过60个字节。
+     * Set The name of the CCN. The maximum length is 60 characters.
+     * @param CcnName The name of the CCN. The maximum length is 60 characters.
      */
     public void setCcnName(String CcnName) {
         this.CcnName = CcnName;
     }
 
     /**
-     * Get CCN描述信息，最大长度不能超过100个字节。 
-     * @return CcnDescription CCN描述信息，最大长度不能超过100个字节。
+     * Get The description of the CCN. The maximum length is 100 characters. 
+     * @return CcnDescription The description of the CCN. The maximum length is 100 characters.
      */
     public String getCcnDescription() {
         return this.CcnDescription;
     }
 
     /**
-     * Set CCN描述信息，最大长度不能超过100个字节。
-     * @param CcnDescription CCN描述信息，最大长度不能超过100个字节。
+     * Set The description of the CCN. The maximum length is 100 characters.
+     * @param CcnDescription The description of the CCN. The maximum length is 100 characters.
      */
     public void setCcnDescription(String CcnDescription) {
         this.CcnDescription = CcnDescription;
     }
 
     /**
-     * Get CCN服务质量，'PT'：白金，'AU'：金，'AG'：银，默认为‘AU’。 
-     * @return QosLevel CCN服务质量，'PT'：白金，'AU'：金，'AG'：银，默认为‘AU’。
+     * Get CCN service quality, 'PT': Platinum, 'AU': Gold, 'AG': Silver. The default is ‘AU’. 
+     * @return QosLevel CCN service quality, 'PT': Platinum, 'AU': Gold, 'AG': Silver. The default is ‘AU’.
      */
     public String getQosLevel() {
         return this.QosLevel;
     }
 
     /**
-     * Set CCN服务质量，'PT'：白金，'AU'：金，'AG'：银，默认为‘AU’。
-     * @param QosLevel CCN服务质量，'PT'：白金，'AU'：金，'AG'：银，默认为‘AU’。
+     * Set CCN service quality, 'PT': Platinum, 'AU': Gold, 'AG': Silver. The default is ‘AU’.
+     * @param QosLevel CCN service quality, 'PT': Platinum, 'AU': Gold, 'AG': Silver. The default is ‘AU’.
      */
     public void setQosLevel(String QosLevel) {
         this.QosLevel = QosLevel;

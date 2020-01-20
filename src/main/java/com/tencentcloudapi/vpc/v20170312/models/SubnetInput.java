@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class SubnetInput extends AbstractModel{
 
     /**
-    * 子网的`CIDR`。
+    * The `CIDR` of the subnet.
     */
     @SerializedName("CidrBlock")
     @Expose
     private String CidrBlock;
 
     /**
-    * 子网名称。
+    * Subnet name.
     */
     @SerializedName("SubnetName")
     @Expose
     private String SubnetName;
 
     /**
-    * 可用区。形如：`ap-guangzhou-2`。
+    * The availability zone, such as `ap-guangzhou-2`.
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 指定关联路由表，形如：`rtb-3ryrwzuu`。
+    * The specified associated route table, such as `rtb-3ryrwzuu`.
     */
     @SerializedName("RouteTableId")
     @Expose
     private String RouteTableId;
 
     /**
-     * Get 子网的`CIDR`。 
-     * @return CidrBlock 子网的`CIDR`。
+     * Get The `CIDR` of the subnet. 
+     * @return CidrBlock The `CIDR` of the subnet.
      */
     public String getCidrBlock() {
         return this.CidrBlock;
     }
 
     /**
-     * Set 子网的`CIDR`。
-     * @param CidrBlock 子网的`CIDR`。
+     * Set The `CIDR` of the subnet.
+     * @param CidrBlock The `CIDR` of the subnet.
      */
     public void setCidrBlock(String CidrBlock) {
         this.CidrBlock = CidrBlock;
     }
 
     /**
-     * Get 子网名称。 
-     * @return SubnetName 子网名称。
+     * Get Subnet name. 
+     * @return SubnetName Subnet name.
      */
     public String getSubnetName() {
         return this.SubnetName;
     }
 
     /**
-     * Set 子网名称。
-     * @param SubnetName 子网名称。
+     * Set Subnet name.
+     * @param SubnetName Subnet name.
      */
     public void setSubnetName(String SubnetName) {
         this.SubnetName = SubnetName;
     }
 
     /**
-     * Get 可用区。形如：`ap-guangzhou-2`。 
-     * @return Zone 可用区。形如：`ap-guangzhou-2`。
+     * Get The availability zone, such as `ap-guangzhou-2`. 
+     * @return Zone The availability zone, such as `ap-guangzhou-2`.
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区。形如：`ap-guangzhou-2`。
-     * @param Zone 可用区。形如：`ap-guangzhou-2`。
+     * Set The availability zone, such as `ap-guangzhou-2`.
+     * @param Zone The availability zone, such as `ap-guangzhou-2`.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 指定关联路由表，形如：`rtb-3ryrwzuu`。 
-     * @return RouteTableId 指定关联路由表，形如：`rtb-3ryrwzuu`。
+     * Get The specified associated route table, such as `rtb-3ryrwzuu`. 
+     * @return RouteTableId The specified associated route table, such as `rtb-3ryrwzuu`.
      */
     public String getRouteTableId() {
         return this.RouteTableId;
     }
 
     /**
-     * Set 指定关联路由表，形如：`rtb-3ryrwzuu`。
-     * @param RouteTableId 指定关联路由表，形如：`rtb-3ryrwzuu`。
+     * Set The specified associated route table, such as `rtb-3ryrwzuu`.
+     * @param RouteTableId The specified associated route table, such as `rtb-3ryrwzuu`.
      */
     public void setRouteTableId(String RouteTableId) {
         this.RouteTableId = RouteTableId;

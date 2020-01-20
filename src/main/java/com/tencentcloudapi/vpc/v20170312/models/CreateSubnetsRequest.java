@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class CreateSubnetsRequest extends AbstractModel{
 
     /**
-    * `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
+    * The `ID` of the `VPC` instance, such as `vpc-6v2ht8q5`.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网对象列表。
+    * The subnet object list.
     */
     @SerializedName("Subnets")
     @Expose
     private SubnetInput [] Subnets;
 
     /**
-     * Get `VPC`实例`ID`。形如：`vpc-6v2ht8q5` 
-     * @return VpcId `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
+     * Get The `ID` of the `VPC` instance, such as `vpc-6v2ht8q5`. 
+     * @return VpcId The `ID` of the `VPC` instance, such as `vpc-6v2ht8q5`.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
-     * @param VpcId `VPC`实例`ID`。形如：`vpc-6v2ht8q5`
+     * Set The `ID` of the `VPC` instance, such as `vpc-6v2ht8q5`.
+     * @param VpcId The `ID` of the `VPC` instance, such as `vpc-6v2ht8q5`.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网对象列表。 
-     * @return Subnets 子网对象列表。
+     * Get The subnet object list. 
+     * @return Subnets The subnet object list.
      */
     public SubnetInput [] getSubnets() {
         return this.Subnets;
     }
 
     /**
-     * Set 子网对象列表。
-     * @param Subnets 子网对象列表。
+     * Set The subnet object list.
+     * @param Subnets The subnet object list.
      */
     public void setSubnets(SubnetInput [] Subnets) {
         this.Subnets = Subnets;

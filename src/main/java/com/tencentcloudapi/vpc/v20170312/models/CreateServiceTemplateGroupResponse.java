@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateServiceTemplateGroupResponse extends AbstractModel{
 
     /**
-    * 协议端口模板集合对象。
+    * Group object of the protocol port template.
     */
     @SerializedName("ServiceTemplateGroup")
     @Expose
@@ -37,16 +37,16 @@ public class CreateServiceTemplateGroupResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 协议端口模板集合对象。 
-     * @return ServiceTemplateGroup 协议端口模板集合对象。
+     * Get Group object of the protocol port template. 
+     * @return ServiceTemplateGroup Group object of the protocol port template.
      */
     public ServiceTemplateGroup getServiceTemplateGroup() {
         return this.ServiceTemplateGroup;
     }
 
     /**
-     * Set 协议端口模板集合对象。
-     * @param ServiceTemplateGroup 协议端口模板集合对象。
+     * Set Group object of the protocol port template.
+     * @param ServiceTemplateGroup Group object of the protocol port template.
      */
     public void setServiceTemplateGroup(ServiceTemplateGroup ServiceTemplateGroup) {
         this.ServiceTemplateGroup = ServiceTemplateGroup;

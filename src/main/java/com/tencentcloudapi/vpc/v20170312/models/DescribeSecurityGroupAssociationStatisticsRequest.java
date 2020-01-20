@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeSecurityGroupAssociationStatisticsRequest extends AbstractModel{
 
     /**
-    * 安全实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
+    * The Security instance ID, such as `sg-33ocnj9n`. It can be obtained through DescribeSecurityGroups.
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-     * Get 安全实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。 
-     * @return SecurityGroupIds 安全实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
+     * Get The Security instance ID, such as `sg-33ocnj9n`. It can be obtained through DescribeSecurityGroups. 
+     * @return SecurityGroupIds The Security instance ID, such as `sg-33ocnj9n`. It can be obtained through DescribeSecurityGroups.
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 安全实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
-     * @param SecurityGroupIds 安全实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
+     * Set The Security instance ID, such as `sg-33ocnj9n`. It can be obtained through DescribeSecurityGroups.
+     * @param SecurityGroupIds The Security instance ID, such as `sg-33ocnj9n`. It can be obtained through DescribeSecurityGroups.
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;

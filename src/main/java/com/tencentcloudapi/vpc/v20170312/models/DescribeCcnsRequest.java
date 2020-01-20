@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeCcnsRequest extends AbstractModel{
 
     /**
-    * CCN实例ID。形如：ccn-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定CcnIds和Filters。
+    * The CCN instance ID, such as `ccn-f49l6u0z`. Each request can have a maximum of 100 instances. `CcnIds` and `Filters` cannot be specified at the same time
     */
     @SerializedName("CcnIds")
     @Expose
@@ -43,44 +43,44 @@ public class DescribeCcnsRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
-    * 偏移量
+    * Offset
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量
+    * The returned quantity
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 排序字段。支持：`CcnId` `CcnName` `CreateTime` `State` `QosLevel`
+    * Order fields support `CcnId`, `CcnName`, `CreateTime`, `State`, and `QosLevel`
     */
     @SerializedName("OrderField")
     @Expose
     private String OrderField;
 
     /**
-    * 排序方法。顺序：`ASC`，倒序：`DESC`。
+    * Order methods. Ascending: `ASC`, Descending: `DESC`.
     */
     @SerializedName("OrderDirection")
     @Expose
     private String OrderDirection;
 
     /**
-     * Get CCN实例ID。形如：ccn-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定CcnIds和Filters。 
-     * @return CcnIds CCN实例ID。形如：ccn-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定CcnIds和Filters。
+     * Get The CCN instance ID, such as `ccn-f49l6u0z`. Each request can have a maximum of 100 instances. `CcnIds` and `Filters` cannot be specified at the same time 
+     * @return CcnIds The CCN instance ID, such as `ccn-f49l6u0z`. Each request can have a maximum of 100 instances. `CcnIds` and `Filters` cannot be specified at the same time
      */
     public String [] getCcnIds() {
         return this.CcnIds;
     }
 
     /**
-     * Set CCN实例ID。形如：ccn-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定CcnIds和Filters。
-     * @param CcnIds CCN实例ID。形如：ccn-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定CcnIds和Filters。
+     * Set The CCN instance ID, such as `ccn-f49l6u0z`. Each request can have a maximum of 100 instances. `CcnIds` and `Filters` cannot be specified at the same time
+     * @param CcnIds The CCN instance ID, such as `ccn-f49l6u0z`. Each request can have a maximum of 100 instances. `CcnIds` and `Filters` cannot be specified at the same time
      */
     public void setCcnIds(String [] CcnIds) {
         this.CcnIds = CcnIds;
@@ -127,64 +127,64 @@ public class DescribeCcnsRequest extends AbstractModel{
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get Offset 
+     * @return Offset Offset
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set Offset
+     * @param Offset Offset
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量 
-     * @return Limit 返回数量
+     * Get The returned quantity 
+     * @return Limit The returned quantity
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量
-     * @param Limit 返回数量
+     * Set The returned quantity
+     * @param Limit The returned quantity
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 排序字段。支持：`CcnId` `CcnName` `CreateTime` `State` `QosLevel` 
-     * @return OrderField 排序字段。支持：`CcnId` `CcnName` `CreateTime` `State` `QosLevel`
+     * Get Order fields support `CcnId`, `CcnName`, `CreateTime`, `State`, and `QosLevel` 
+     * @return OrderField Order fields support `CcnId`, `CcnName`, `CreateTime`, `State`, and `QosLevel`
      */
     public String getOrderField() {
         return this.OrderField;
     }
 
     /**
-     * Set 排序字段。支持：`CcnId` `CcnName` `CreateTime` `State` `QosLevel`
-     * @param OrderField 排序字段。支持：`CcnId` `CcnName` `CreateTime` `State` `QosLevel`
+     * Set Order fields support `CcnId`, `CcnName`, `CreateTime`, `State`, and `QosLevel`
+     * @param OrderField Order fields support `CcnId`, `CcnName`, `CreateTime`, `State`, and `QosLevel`
      */
     public void setOrderField(String OrderField) {
         this.OrderField = OrderField;
     }
 
     /**
-     * Get 排序方法。顺序：`ASC`，倒序：`DESC`。 
-     * @return OrderDirection 排序方法。顺序：`ASC`，倒序：`DESC`。
+     * Get Order methods. Ascending: `ASC`, Descending: `DESC`. 
+     * @return OrderDirection Order methods. Ascending: `ASC`, Descending: `DESC`.
      */
     public String getOrderDirection() {
         return this.OrderDirection;
     }
 
     /**
-     * Set 排序方法。顺序：`ASC`，倒序：`DESC`。
-     * @param OrderDirection 排序方法。顺序：`ASC`，倒序：`DESC`。
+     * Set Order methods. Ascending: `ASC`, Descending: `DESC`.
+     * @param OrderDirection Order methods. Ascending: `ASC`, Descending: `DESC`.
      */
     public void setOrderDirection(String OrderDirection) {
         this.OrderDirection = OrderDirection;

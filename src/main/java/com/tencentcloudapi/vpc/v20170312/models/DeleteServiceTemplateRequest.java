@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeleteServiceTemplateRequest extends AbstractModel{
 
     /**
-    * 协议端口模板实例ID，例如：ppm-e6dy460g。
+    * Protocol port template instance ID, such as `ppm-e6dy460g`.
     */
     @SerializedName("ServiceTemplateId")
     @Expose
     private String ServiceTemplateId;
 
     /**
-     * Get 协议端口模板实例ID，例如：ppm-e6dy460g。 
-     * @return ServiceTemplateId 协议端口模板实例ID，例如：ppm-e6dy460g。
+     * Get Protocol port template instance ID, such as `ppm-e6dy460g`. 
+     * @return ServiceTemplateId Protocol port template instance ID, such as `ppm-e6dy460g`.
      */
     public String getServiceTemplateId() {
         return this.ServiceTemplateId;
     }
 
     /**
-     * Set 协议端口模板实例ID，例如：ppm-e6dy460g。
-     * @param ServiceTemplateId 协议端口模板实例ID，例如：ppm-e6dy460g。
+     * Set Protocol port template instance ID, such as `ppm-e6dy460g`.
+     * @param ServiceTemplateId Protocol port template instance ID, such as `ppm-e6dy460g`.
      */
     public void setServiceTemplateId(String ServiceTemplateId) {
         this.ServiceTemplateId = ServiceTemplateId;

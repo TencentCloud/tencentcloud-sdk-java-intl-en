@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateNetworkInterfaceResponse extends AbstractModel{
 
     /**
-    * 弹性网卡实例。
+    * ENI instance.
     */
     @SerializedName("NetworkInterface")
     @Expose
@@ -37,16 +37,16 @@ public class CreateNetworkInterfaceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 弹性网卡实例。 
-     * @return NetworkInterface 弹性网卡实例。
+     * Get ENI instance. 
+     * @return NetworkInterface ENI instance.
      */
     public NetworkInterface getNetworkInterface() {
         return this.NetworkInterface;
     }
 
     /**
-     * Set 弹性网卡实例。
-     * @param NetworkInterface 弹性网卡实例。
+     * Set ENI instance.
+     * @param NetworkInterface ENI instance.
      */
     public void setNetworkInterface(NetworkInterface NetworkInterface) {
         this.NetworkInterface = NetworkInterface;

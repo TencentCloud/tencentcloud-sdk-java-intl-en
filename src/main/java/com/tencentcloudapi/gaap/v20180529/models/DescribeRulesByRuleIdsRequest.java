@@ -23,9 +23,33 @@ import java.util.HashMap;
 public class DescribeRulesByRuleIdsRequest extends AbstractModel{
 
     /**
+    * List of rule IDs. Up to 10 rules are supported.
+    */
+    @SerializedName("RuleIds")
+    @Expose
+    private String [] RuleIds;
+
+    /**
+     * Get List of rule IDs. Up to 10 rules are supported. 
+     * @return RuleIds List of rule IDs. Up to 10 rules are supported.
+     */
+    public String [] getRuleIds() {
+        return this.RuleIds;
+    }
+
+    /**
+     * Set List of rule IDs. Up to 10 rules are supported.
+     * @param RuleIds List of rule IDs. Up to 10 rules are supported.
+     */
+    public void setRuleIds(String [] RuleIds) {
+        this.RuleIds = RuleIds;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "RuleIds.", this.RuleIds);
 
     }
 }

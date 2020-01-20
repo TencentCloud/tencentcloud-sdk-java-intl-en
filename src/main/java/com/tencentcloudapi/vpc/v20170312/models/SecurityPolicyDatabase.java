@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class SecurityPolicyDatabase extends AbstractModel{
 
     /**
-    * 本端网段
+    * Local IP range
     */
     @SerializedName("LocalCidrBlock")
     @Expose
     private String LocalCidrBlock;
 
     /**
-    * 对端网段
+    * Opposite IP range
     */
     @SerializedName("RemoteCidrBlock")
     @Expose
     private String [] RemoteCidrBlock;
 
     /**
-     * Get 本端网段 
-     * @return LocalCidrBlock 本端网段
+     * Get Local IP range 
+     * @return LocalCidrBlock Local IP range
      */
     public String getLocalCidrBlock() {
         return this.LocalCidrBlock;
     }
 
     /**
-     * Set 本端网段
-     * @param LocalCidrBlock 本端网段
+     * Set Local IP range
+     * @param LocalCidrBlock Local IP range
      */
     public void setLocalCidrBlock(String LocalCidrBlock) {
         this.LocalCidrBlock = LocalCidrBlock;
     }
 
     /**
-     * Get 对端网段 
-     * @return RemoteCidrBlock 对端网段
+     * Get Opposite IP range 
+     * @return RemoteCidrBlock Opposite IP range
      */
     public String [] getRemoteCidrBlock() {
         return this.RemoteCidrBlock;
     }
 
     /**
-     * Set 对端网段
-     * @param RemoteCidrBlock 对端网段
+     * Set Opposite IP range
+     * @param RemoteCidrBlock Opposite IP range
      */
     public void setRemoteCidrBlock(String [] RemoteCidrBlock) {
         this.RemoteCidrBlock = RemoteCidrBlock;

@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DetachClassicLinkVpcRequest extends AbstractModel{
 
     /**
-    * VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+    * The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * CVM实例ID查询。形如：ins-r8hr2upy。
+    * Queries the ID of the CVM instance, such as `ins-r8hr2upy`.
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-     * Get VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。 
-     * @return VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * Get The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API. 
+     * @return VpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
-     * @param VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * Set The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+     * @param VpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get CVM实例ID查询。形如：ins-r8hr2upy。 
-     * @return InstanceIds CVM实例ID查询。形如：ins-r8hr2upy。
+     * Get Queries the ID of the CVM instance, such as `ins-r8hr2upy`. 
+     * @return InstanceIds Queries the ID of the CVM instance, such as `ins-r8hr2upy`.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set CVM实例ID查询。形如：ins-r8hr2upy。
-     * @param InstanceIds CVM实例ID查询。形如：ins-r8hr2upy。
+     * Set Queries the ID of the CVM instance, such as `ins-r8hr2upy`.
+     * @param InstanceIds Queries the ID of the CVM instance, such as `ins-r8hr2upy`.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

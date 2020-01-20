@@ -32,14 +32,14 @@ public class DescribeClassicLinkInstancesRequest extends AbstractModel{
     private FilterObject [] Filters;
 
     /**
-    * 偏移量
+    * Offset
     */
     @SerializedName("Offset")
     @Expose
     private String Offset;
 
     /**
-    * 返回数量
+    * The returned quantity
     */
     @SerializedName("Limit")
     @Expose
@@ -70,32 +70,32 @@ public class DescribeClassicLinkInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get Offset 
+     * @return Offset Offset
      */
     public String getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set Offset
+     * @param Offset Offset
      */
     public void setOffset(String Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量 
-     * @return Limit 返回数量
+     * Get The returned quantity 
+     * @return Limit The returned quantity
      */
     public String getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量
-     * @param Limit 返回数量
+     * Set The returned quantity
+     * @param Limit The returned quantity
      */
     public void setLimit(String Limit) {
         this.Limit = Limit;

@@ -23,290 +23,290 @@ import java.util.HashMap;
 public class CcnAttachedInstance extends AbstractModel{
 
     /**
-    * 云联网实例ID。
+    * The ID of a CCN instance.
     */
     @SerializedName("CcnId")
     @Expose
     private String CcnId;
 
     /**
-    * 关联实例类型：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li>
+    * The type of associated instances:
+<li>`VPC`: VPC</li>
+<li>`DIRECTCONNECT`: Direct Connect</li>
+<li>`BMVPC`: BM VPC</li>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 关联实例ID。
+    * The ID of the associated instance.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 关联实例名称。
+    * The name of the associated instance.
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 关联实例所属大区，例如：ap-guangzhou。
+    * The region to which the associated instance belongs, such as `ap-guangzhou`.
     */
     @SerializedName("InstanceRegion")
     @Expose
     private String InstanceRegion;
 
     /**
-    * 关联实例所属UIN（根账号）。
+    * The UIN (root account) to which the associated instance belongs.
     */
     @SerializedName("InstanceUin")
     @Expose
     private String InstanceUin;
 
     /**
-    * 关联实例CIDR。
+    * The CIDR of the associated instance.
     */
     @SerializedName("CidrBlock")
     @Expose
     private String [] CidrBlock;
 
     /**
-    * 关联实例状态：
-<li>`PENDING`：申请中</li>
-<li>`ACTIVE`：已连接</li>
-<li>`EXPIRED`：已过期</li>
-<li>`REJECTED`：已拒绝</li>
-<li>`DELETED`：已删除</li>
-<li>`FAILED`：失败的（2小时后将异步强制解关联）</li>
-<li>`ATTACHING`：关联中</li>
-<li>`DETACHING`：解关联中</li>
-<li>`DETACHFAILED`：解关联失败（2小时后将异步强制解关联）</li>
+    * The status of the associated instance:
+<li>`PENDING`: In application</li>
+<li>`ACTIVE`: Connected</li>
+<li>`EXPIRED`: Expired</li>
+<li>`REJECTED`: Rejected</li>
+<li>`DELETED`: Deleted</li>
+<li>`FAILED`: Failed (it will be asynchronously unbound after 2 hours)</li>
+<li>`ATTACHING`: binding</li>
+<li>`DETACHING`: Unbinding</li>
+<li>`DETACHFAILED`: The unbinding failed (it will be asynchronously unbound after 2 hours)</li>
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * 关联时间。
+    * Association Time.
     */
     @SerializedName("AttachedTime")
     @Expose
     private String AttachedTime;
 
     /**
-    * 云联网所属UIN（根账号）。
+    * The UIN (root account) to which the CCN belongs.
     */
     @SerializedName("CcnUin")
     @Expose
     private String CcnUin;
 
     /**
-     * Get 云联网实例ID。 
-     * @return CcnId 云联网实例ID。
+     * Get The ID of a CCN instance. 
+     * @return CcnId The ID of a CCN instance.
      */
     public String getCcnId() {
         return this.CcnId;
     }
 
     /**
-     * Set 云联网实例ID。
-     * @param CcnId 云联网实例ID。
+     * Set The ID of a CCN instance.
+     * @param CcnId The ID of a CCN instance.
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;
     }
 
     /**
-     * Get 关联实例类型：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li> 
-     * @return InstanceType 关联实例类型：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li>
+     * Get The type of associated instances:
+<li>`VPC`: VPC</li>
+<li>`DIRECTCONNECT`: Direct Connect</li>
+<li>`BMVPC`: BM VPC</li> 
+     * @return InstanceType The type of associated instances:
+<li>`VPC`: VPC</li>
+<li>`DIRECTCONNECT`: Direct Connect</li>
+<li>`BMVPC`: BM VPC</li>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 关联实例类型：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li>
-     * @param InstanceType 关联实例类型：
-<li>`VPC`：私有网络</li>
-<li>`DIRECTCONNECT`：专线网关</li>
-<li>`BMVPC`：黑石私有网络</li>
+     * Set The type of associated instances:
+<li>`VPC`: VPC</li>
+<li>`DIRECTCONNECT`: Direct Connect</li>
+<li>`BMVPC`: BM VPC</li>
+     * @param InstanceType The type of associated instances:
+<li>`VPC`: VPC</li>
+<li>`DIRECTCONNECT`: Direct Connect</li>
+<li>`BMVPC`: BM VPC</li>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 关联实例ID。 
-     * @return InstanceId 关联实例ID。
+     * Get The ID of the associated instance. 
+     * @return InstanceId The ID of the associated instance.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 关联实例ID。
-     * @param InstanceId 关联实例ID。
+     * Set The ID of the associated instance.
+     * @param InstanceId The ID of the associated instance.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 关联实例名称。 
-     * @return InstanceName 关联实例名称。
+     * Get The name of the associated instance. 
+     * @return InstanceName The name of the associated instance.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 关联实例名称。
-     * @param InstanceName 关联实例名称。
+     * Set The name of the associated instance.
+     * @param InstanceName The name of the associated instance.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 关联实例所属大区，例如：ap-guangzhou。 
-     * @return InstanceRegion 关联实例所属大区，例如：ap-guangzhou。
+     * Get The region to which the associated instance belongs, such as `ap-guangzhou`. 
+     * @return InstanceRegion The region to which the associated instance belongs, such as `ap-guangzhou`.
      */
     public String getInstanceRegion() {
         return this.InstanceRegion;
     }
 
     /**
-     * Set 关联实例所属大区，例如：ap-guangzhou。
-     * @param InstanceRegion 关联实例所属大区，例如：ap-guangzhou。
+     * Set The region to which the associated instance belongs, such as `ap-guangzhou`.
+     * @param InstanceRegion The region to which the associated instance belongs, such as `ap-guangzhou`.
      */
     public void setInstanceRegion(String InstanceRegion) {
         this.InstanceRegion = InstanceRegion;
     }
 
     /**
-     * Get 关联实例所属UIN（根账号）。 
-     * @return InstanceUin 关联实例所属UIN（根账号）。
+     * Get The UIN (root account) to which the associated instance belongs. 
+     * @return InstanceUin The UIN (root account) to which the associated instance belongs.
      */
     public String getInstanceUin() {
         return this.InstanceUin;
     }
 
     /**
-     * Set 关联实例所属UIN（根账号）。
-     * @param InstanceUin 关联实例所属UIN（根账号）。
+     * Set The UIN (root account) to which the associated instance belongs.
+     * @param InstanceUin The UIN (root account) to which the associated instance belongs.
      */
     public void setInstanceUin(String InstanceUin) {
         this.InstanceUin = InstanceUin;
     }
 
     /**
-     * Get 关联实例CIDR。 
-     * @return CidrBlock 关联实例CIDR。
+     * Get The CIDR of the associated instance. 
+     * @return CidrBlock The CIDR of the associated instance.
      */
     public String [] getCidrBlock() {
         return this.CidrBlock;
     }
 
     /**
-     * Set 关联实例CIDR。
-     * @param CidrBlock 关联实例CIDR。
+     * Set The CIDR of the associated instance.
+     * @param CidrBlock The CIDR of the associated instance.
      */
     public void setCidrBlock(String [] CidrBlock) {
         this.CidrBlock = CidrBlock;
     }
 
     /**
-     * Get 关联实例状态：
-<li>`PENDING`：申请中</li>
-<li>`ACTIVE`：已连接</li>
-<li>`EXPIRED`：已过期</li>
-<li>`REJECTED`：已拒绝</li>
-<li>`DELETED`：已删除</li>
-<li>`FAILED`：失败的（2小时后将异步强制解关联）</li>
-<li>`ATTACHING`：关联中</li>
-<li>`DETACHING`：解关联中</li>
-<li>`DETACHFAILED`：解关联失败（2小时后将异步强制解关联）</li> 
-     * @return State 关联实例状态：
-<li>`PENDING`：申请中</li>
-<li>`ACTIVE`：已连接</li>
-<li>`EXPIRED`：已过期</li>
-<li>`REJECTED`：已拒绝</li>
-<li>`DELETED`：已删除</li>
-<li>`FAILED`：失败的（2小时后将异步强制解关联）</li>
-<li>`ATTACHING`：关联中</li>
-<li>`DETACHING`：解关联中</li>
-<li>`DETACHFAILED`：解关联失败（2小时后将异步强制解关联）</li>
+     * Get The status of the associated instance:
+<li>`PENDING`: In application</li>
+<li>`ACTIVE`: Connected</li>
+<li>`EXPIRED`: Expired</li>
+<li>`REJECTED`: Rejected</li>
+<li>`DELETED`: Deleted</li>
+<li>`FAILED`: Failed (it will be asynchronously unbound after 2 hours)</li>
+<li>`ATTACHING`: binding</li>
+<li>`DETACHING`: Unbinding</li>
+<li>`DETACHFAILED`: The unbinding failed (it will be asynchronously unbound after 2 hours)</li> 
+     * @return State The status of the associated instance:
+<li>`PENDING`: In application</li>
+<li>`ACTIVE`: Connected</li>
+<li>`EXPIRED`: Expired</li>
+<li>`REJECTED`: Rejected</li>
+<li>`DELETED`: Deleted</li>
+<li>`FAILED`: Failed (it will be asynchronously unbound after 2 hours)</li>
+<li>`ATTACHING`: binding</li>
+<li>`DETACHING`: Unbinding</li>
+<li>`DETACHFAILED`: The unbinding failed (it will be asynchronously unbound after 2 hours)</li>
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set 关联实例状态：
-<li>`PENDING`：申请中</li>
-<li>`ACTIVE`：已连接</li>
-<li>`EXPIRED`：已过期</li>
-<li>`REJECTED`：已拒绝</li>
-<li>`DELETED`：已删除</li>
-<li>`FAILED`：失败的（2小时后将异步强制解关联）</li>
-<li>`ATTACHING`：关联中</li>
-<li>`DETACHING`：解关联中</li>
-<li>`DETACHFAILED`：解关联失败（2小时后将异步强制解关联）</li>
-     * @param State 关联实例状态：
-<li>`PENDING`：申请中</li>
-<li>`ACTIVE`：已连接</li>
-<li>`EXPIRED`：已过期</li>
-<li>`REJECTED`：已拒绝</li>
-<li>`DELETED`：已删除</li>
-<li>`FAILED`：失败的（2小时后将异步强制解关联）</li>
-<li>`ATTACHING`：关联中</li>
-<li>`DETACHING`：解关联中</li>
-<li>`DETACHFAILED`：解关联失败（2小时后将异步强制解关联）</li>
+     * Set The status of the associated instance:
+<li>`PENDING`: In application</li>
+<li>`ACTIVE`: Connected</li>
+<li>`EXPIRED`: Expired</li>
+<li>`REJECTED`: Rejected</li>
+<li>`DELETED`: Deleted</li>
+<li>`FAILED`: Failed (it will be asynchronously unbound after 2 hours)</li>
+<li>`ATTACHING`: binding</li>
+<li>`DETACHING`: Unbinding</li>
+<li>`DETACHFAILED`: The unbinding failed (it will be asynchronously unbound after 2 hours)</li>
+     * @param State The status of the associated instance:
+<li>`PENDING`: In application</li>
+<li>`ACTIVE`: Connected</li>
+<li>`EXPIRED`: Expired</li>
+<li>`REJECTED`: Rejected</li>
+<li>`DELETED`: Deleted</li>
+<li>`FAILED`: Failed (it will be asynchronously unbound after 2 hours)</li>
+<li>`ATTACHING`: binding</li>
+<li>`DETACHING`: Unbinding</li>
+<li>`DETACHFAILED`: The unbinding failed (it will be asynchronously unbound after 2 hours)</li>
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get 关联时间。 
-     * @return AttachedTime 关联时间。
+     * Get Association Time. 
+     * @return AttachedTime Association Time.
      */
     public String getAttachedTime() {
         return this.AttachedTime;
     }
 
     /**
-     * Set 关联时间。
-     * @param AttachedTime 关联时间。
+     * Set Association Time.
+     * @param AttachedTime Association Time.
      */
     public void setAttachedTime(String AttachedTime) {
         this.AttachedTime = AttachedTime;
     }
 
     /**
-     * Get 云联网所属UIN（根账号）。 
-     * @return CcnUin 云联网所属UIN（根账号）。
+     * Get The UIN (root account) to which the CCN belongs. 
+     * @return CcnUin The UIN (root account) to which the CCN belongs.
      */
     public String getCcnUin() {
         return this.CcnUin;
     }
 
     /**
-     * Set 云联网所属UIN（根账号）。
-     * @param CcnUin 云联网所属UIN（根账号）。
+     * Set The UIN (root account) to which the CCN belongs.
+     * @param CcnUin The UIN (root account) to which the CCN belongs.
      */
     public void setCcnUin(String CcnUin) {
         this.CcnUin = CcnUin;

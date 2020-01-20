@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class SetCcnRegionBandwidthLimitsRequest extends AbstractModel{
 
     /**
-    * CCN实例ID。形如：ccn-f49l6u0z。
+    * The CCN instance ID, such as `ccn-f49l6u0z`.
     */
     @SerializedName("CcnId")
     @Expose
     private String CcnId;
 
     /**
-    * 云联网（CCN）各地域出带宽上限。
+    * The outbound bandwidth cap of each CCN region.
     */
     @SerializedName("CcnRegionBandwidthLimits")
     @Expose
     private CcnRegionBandwidthLimit [] CcnRegionBandwidthLimits;
 
     /**
-     * Get CCN实例ID。形如：ccn-f49l6u0z。 
-     * @return CcnId CCN实例ID。形如：ccn-f49l6u0z。
+     * Get The CCN instance ID, such as `ccn-f49l6u0z`. 
+     * @return CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
      */
     public String getCcnId() {
         return this.CcnId;
     }
 
     /**
-     * Set CCN实例ID。形如：ccn-f49l6u0z。
-     * @param CcnId CCN实例ID。形如：ccn-f49l6u0z。
+     * Set The CCN instance ID, such as `ccn-f49l6u0z`.
+     * @param CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;
     }
 
     /**
-     * Get 云联网（CCN）各地域出带宽上限。 
-     * @return CcnRegionBandwidthLimits 云联网（CCN）各地域出带宽上限。
+     * Get The outbound bandwidth cap of each CCN region. 
+     * @return CcnRegionBandwidthLimits The outbound bandwidth cap of each CCN region.
      */
     public CcnRegionBandwidthLimit [] getCcnRegionBandwidthLimits() {
         return this.CcnRegionBandwidthLimits;
     }
 
     /**
-     * Set 云联网（CCN）各地域出带宽上限。
-     * @param CcnRegionBandwidthLimits 云联网（CCN）各地域出带宽上限。
+     * Set The outbound bandwidth cap of each CCN region.
+     * @param CcnRegionBandwidthLimits The outbound bandwidth cap of each CCN region.
      */
     public void setCcnRegionBandwidthLimits(CcnRegionBandwidthLimit [] CcnRegionBandwidthLimits) {
         this.CcnRegionBandwidthLimits = CcnRegionBandwidthLimits;

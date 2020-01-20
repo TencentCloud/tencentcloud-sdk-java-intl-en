@@ -23,263 +23,263 @@ import java.util.HashMap;
 public class NatGateway extends AbstractModel{
 
     /**
-    * NAT网关的ID。
+    * NAT gateway ID.
     */
     @SerializedName("NatGatewayId")
     @Expose
     private String NatGatewayId;
 
     /**
-    * NAT网关的名称。
+    * NAT gateway name.
     */
     @SerializedName("NatGatewayName")
     @Expose
     private String NatGatewayName;
 
     /**
-    * NAT网关创建的时间。
+    * NAT gateway creation time.
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * NAT网关的状态。
- 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中，'UPDATING'：升级中，
-‘FAILED’：失败。
+    * The status of the NAT gateway.
+ 'PENDING': Creating, 'DELETING': Deleting, 'AVAILABLE': Operating, 'UPDATING': Upgrading,
+‘FAILED’: Failed.
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * 网关最大外网出带宽(单位:Mbps)。
+    * The maximum outbound bandwidth of the gateway. Unit: Mbps.
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
     private Long InternetMaxBandwidthOut;
 
     /**
-    * 网关并发连接上限。
+    * The concurrent connections cap of the gateway.
     */
     @SerializedName("MaxConcurrentConnection")
     @Expose
     private Long MaxConcurrentConnection;
 
     /**
-    * 绑定NAT网关的公网IP对象数组。
+    * The public IP object array of the bound NAT gateway.
     */
     @SerializedName("PublicIpAddressSet")
     @Expose
     private NatGatewayAddress [] PublicIpAddressSet;
 
     /**
-    * NAT网关网络状态。“AVAILABLE”:运行中, “UNAVAILABLE”:不可用, “INSUFFICIENT”:欠费停服。
+    * The NAT gateway status. `AVAILABLE`: Operating, `UNAVAILABLE`: Unavailable, `INSUFFICIENT`: Account is in arrears and the service is suspended.
     */
     @SerializedName("NetworkState")
     @Expose
     private String NetworkState;
 
     /**
-    * NAT网关的端口转发规则。
+    * The port forwarding rules of the NAT gateway.
     */
     @SerializedName("DestinationIpPortTranslationNatRuleSet")
     @Expose
     private DestinationIpPortTranslationNatRule [] DestinationIpPortTranslationNatRuleSet;
 
     /**
-    * VPC实例ID。
+    * VPC instance ID.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * NAT网关所在的可用区。
+    * The availability zone in which the NAT gateway is located.
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-     * Get NAT网关的ID。 
-     * @return NatGatewayId NAT网关的ID。
+     * Get NAT gateway ID. 
+     * @return NatGatewayId NAT gateway ID.
      */
     public String getNatGatewayId() {
         return this.NatGatewayId;
     }
 
     /**
-     * Set NAT网关的ID。
-     * @param NatGatewayId NAT网关的ID。
+     * Set NAT gateway ID.
+     * @param NatGatewayId NAT gateway ID.
      */
     public void setNatGatewayId(String NatGatewayId) {
         this.NatGatewayId = NatGatewayId;
     }
 
     /**
-     * Get NAT网关的名称。 
-     * @return NatGatewayName NAT网关的名称。
+     * Get NAT gateway name. 
+     * @return NatGatewayName NAT gateway name.
      */
     public String getNatGatewayName() {
         return this.NatGatewayName;
     }
 
     /**
-     * Set NAT网关的名称。
-     * @param NatGatewayName NAT网关的名称。
+     * Set NAT gateway name.
+     * @param NatGatewayName NAT gateway name.
      */
     public void setNatGatewayName(String NatGatewayName) {
         this.NatGatewayName = NatGatewayName;
     }
 
     /**
-     * Get NAT网关创建的时间。 
-     * @return CreatedTime NAT网关创建的时间。
+     * Get NAT gateway creation time. 
+     * @return CreatedTime NAT gateway creation time.
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set NAT网关创建的时间。
-     * @param CreatedTime NAT网关创建的时间。
+     * Set NAT gateway creation time.
+     * @param CreatedTime NAT gateway creation time.
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get NAT网关的状态。
- 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中，'UPDATING'：升级中，
-‘FAILED’：失败。 
-     * @return State NAT网关的状态。
- 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中，'UPDATING'：升级中，
-‘FAILED’：失败。
+     * Get The status of the NAT gateway.
+ 'PENDING': Creating, 'DELETING': Deleting, 'AVAILABLE': Operating, 'UPDATING': Upgrading,
+‘FAILED’: Failed. 
+     * @return State The status of the NAT gateway.
+ 'PENDING': Creating, 'DELETING': Deleting, 'AVAILABLE': Operating, 'UPDATING': Upgrading,
+‘FAILED’: Failed.
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set NAT网关的状态。
- 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中，'UPDATING'：升级中，
-‘FAILED’：失败。
-     * @param State NAT网关的状态。
- 'PENDING'：生产中，'DELETING'：删除中，'AVAILABLE'：运行中，'UPDATING'：升级中，
-‘FAILED’：失败。
+     * Set The status of the NAT gateway.
+ 'PENDING': Creating, 'DELETING': Deleting, 'AVAILABLE': Operating, 'UPDATING': Upgrading,
+‘FAILED’: Failed.
+     * @param State The status of the NAT gateway.
+ 'PENDING': Creating, 'DELETING': Deleting, 'AVAILABLE': Operating, 'UPDATING': Upgrading,
+‘FAILED’: Failed.
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get 网关最大外网出带宽(单位:Mbps)。 
-     * @return InternetMaxBandwidthOut 网关最大外网出带宽(单位:Mbps)。
+     * Get The maximum outbound bandwidth of the gateway. Unit: Mbps. 
+     * @return InternetMaxBandwidthOut The maximum outbound bandwidth of the gateway. Unit: Mbps.
      */
     public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
     /**
-     * Set 网关最大外网出带宽(单位:Mbps)。
-     * @param InternetMaxBandwidthOut 网关最大外网出带宽(单位:Mbps)。
+     * Set The maximum outbound bandwidth of the gateway. Unit: Mbps.
+     * @param InternetMaxBandwidthOut The maximum outbound bandwidth of the gateway. Unit: Mbps.
      */
     public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
     }
 
     /**
-     * Get 网关并发连接上限。 
-     * @return MaxConcurrentConnection 网关并发连接上限。
+     * Get The concurrent connections cap of the gateway. 
+     * @return MaxConcurrentConnection The concurrent connections cap of the gateway.
      */
     public Long getMaxConcurrentConnection() {
         return this.MaxConcurrentConnection;
     }
 
     /**
-     * Set 网关并发连接上限。
-     * @param MaxConcurrentConnection 网关并发连接上限。
+     * Set The concurrent connections cap of the gateway.
+     * @param MaxConcurrentConnection The concurrent connections cap of the gateway.
      */
     public void setMaxConcurrentConnection(Long MaxConcurrentConnection) {
         this.MaxConcurrentConnection = MaxConcurrentConnection;
     }
 
     /**
-     * Get 绑定NAT网关的公网IP对象数组。 
-     * @return PublicIpAddressSet 绑定NAT网关的公网IP对象数组。
+     * Get The public IP object array of the bound NAT gateway. 
+     * @return PublicIpAddressSet The public IP object array of the bound NAT gateway.
      */
     public NatGatewayAddress [] getPublicIpAddressSet() {
         return this.PublicIpAddressSet;
     }
 
     /**
-     * Set 绑定NAT网关的公网IP对象数组。
-     * @param PublicIpAddressSet 绑定NAT网关的公网IP对象数组。
+     * Set The public IP object array of the bound NAT gateway.
+     * @param PublicIpAddressSet The public IP object array of the bound NAT gateway.
      */
     public void setPublicIpAddressSet(NatGatewayAddress [] PublicIpAddressSet) {
         this.PublicIpAddressSet = PublicIpAddressSet;
     }
 
     /**
-     * Get NAT网关网络状态。“AVAILABLE”:运行中, “UNAVAILABLE”:不可用, “INSUFFICIENT”:欠费停服。 
-     * @return NetworkState NAT网关网络状态。“AVAILABLE”:运行中, “UNAVAILABLE”:不可用, “INSUFFICIENT”:欠费停服。
+     * Get The NAT gateway status. `AVAILABLE`: Operating, `UNAVAILABLE`: Unavailable, `INSUFFICIENT`: Account is in arrears and the service is suspended. 
+     * @return NetworkState The NAT gateway status. `AVAILABLE`: Operating, `UNAVAILABLE`: Unavailable, `INSUFFICIENT`: Account is in arrears and the service is suspended.
      */
     public String getNetworkState() {
         return this.NetworkState;
     }
 
     /**
-     * Set NAT网关网络状态。“AVAILABLE”:运行中, “UNAVAILABLE”:不可用, “INSUFFICIENT”:欠费停服。
-     * @param NetworkState NAT网关网络状态。“AVAILABLE”:运行中, “UNAVAILABLE”:不可用, “INSUFFICIENT”:欠费停服。
+     * Set The NAT gateway status. `AVAILABLE`: Operating, `UNAVAILABLE`: Unavailable, `INSUFFICIENT`: Account is in arrears and the service is suspended.
+     * @param NetworkState The NAT gateway status. `AVAILABLE`: Operating, `UNAVAILABLE`: Unavailable, `INSUFFICIENT`: Account is in arrears and the service is suspended.
      */
     public void setNetworkState(String NetworkState) {
         this.NetworkState = NetworkState;
     }
 
     /**
-     * Get NAT网关的端口转发规则。 
-     * @return DestinationIpPortTranslationNatRuleSet NAT网关的端口转发规则。
+     * Get The port forwarding rules of the NAT gateway. 
+     * @return DestinationIpPortTranslationNatRuleSet The port forwarding rules of the NAT gateway.
      */
     public DestinationIpPortTranslationNatRule [] getDestinationIpPortTranslationNatRuleSet() {
         return this.DestinationIpPortTranslationNatRuleSet;
     }
 
     /**
-     * Set NAT网关的端口转发规则。
-     * @param DestinationIpPortTranslationNatRuleSet NAT网关的端口转发规则。
+     * Set The port forwarding rules of the NAT gateway.
+     * @param DestinationIpPortTranslationNatRuleSet The port forwarding rules of the NAT gateway.
      */
     public void setDestinationIpPortTranslationNatRuleSet(DestinationIpPortTranslationNatRule [] DestinationIpPortTranslationNatRuleSet) {
         this.DestinationIpPortTranslationNatRuleSet = DestinationIpPortTranslationNatRuleSet;
     }
 
     /**
-     * Get VPC实例ID。 
-     * @return VpcId VPC实例ID。
+     * Get VPC instance ID. 
+     * @return VpcId VPC instance ID.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC实例ID。
-     * @param VpcId VPC实例ID。
+     * Set VPC instance ID.
+     * @param VpcId VPC instance ID.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get NAT网关所在的可用区。 
-     * @return Zone NAT网关所在的可用区。
+     * Get The availability zone in which the NAT gateway is located. 
+     * @return Zone The availability zone in which the NAT gateway is located.
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set NAT网关所在的可用区。
-     * @param Zone NAT网关所在的可用区。
+     * Set The availability zone in which the NAT gateway is located.
+     * @param Zone The availability zone in which the NAT gateway is located.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

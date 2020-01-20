@@ -23,79 +23,79 @@ import java.util.HashMap;
 public class DescribeServiceTemplatesRequest extends AbstractModel{
 
     /**
-    * 过滤条件。
-<li>service-template-name - String - （过滤条件）协议端口模板名称。</li>
-<li>service-template-id - String - （过滤条件）协议端口模板实例ID，例如：ppm-e6dy460g。</li>
+    * Filter conditions.
+<li>service-template-name - String - (Filter condition) Protocol port template name.</li>
+<li>service-template-id - String - (Filter condition) Protocol port template instance ID, such as `ppm-e6dy460g`.</li>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 偏移量，默认为0。
+    * Offset. The default value is 0.
     */
     @SerializedName("Offset")
     @Expose
     private String Offset;
 
     /**
-    * 返回数量，默认为20，最大值为100。
+    * Number of values to be returned. The default value is 20. Maximum is 100.
     */
     @SerializedName("Limit")
     @Expose
     private String Limit;
 
     /**
-     * Get 过滤条件。
-<li>service-template-name - String - （过滤条件）协议端口模板名称。</li>
-<li>service-template-id - String - （过滤条件）协议端口模板实例ID，例如：ppm-e6dy460g。</li> 
-     * @return Filters 过滤条件。
-<li>service-template-name - String - （过滤条件）协议端口模板名称。</li>
-<li>service-template-id - String - （过滤条件）协议端口模板实例ID，例如：ppm-e6dy460g。</li>
+     * Get Filter conditions.
+<li>service-template-name - String - (Filter condition) Protocol port template name.</li>
+<li>service-template-id - String - (Filter condition) Protocol port template instance ID, such as `ppm-e6dy460g`.</li> 
+     * @return Filters Filter conditions.
+<li>service-template-name - String - (Filter condition) Protocol port template name.</li>
+<li>service-template-id - String - (Filter condition) Protocol port template instance ID, such as `ppm-e6dy460g`.</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件。
-<li>service-template-name - String - （过滤条件）协议端口模板名称。</li>
-<li>service-template-id - String - （过滤条件）协议端口模板实例ID，例如：ppm-e6dy460g。</li>
-     * @param Filters 过滤条件。
-<li>service-template-name - String - （过滤条件）协议端口模板名称。</li>
-<li>service-template-id - String - （过滤条件）协议端口模板实例ID，例如：ppm-e6dy460g。</li>
+     * Set Filter conditions.
+<li>service-template-name - String - (Filter condition) Protocol port template name.</li>
+<li>service-template-id - String - (Filter condition) Protocol port template instance ID, such as `ppm-e6dy460g`.</li>
+     * @param Filters Filter conditions.
+<li>service-template-name - String - (Filter condition) Protocol port template name.</li>
+<li>service-template-id - String - (Filter condition) Protocol port template instance ID, such as `ppm-e6dy460g`.</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 偏移量，默认为0。 
-     * @return Offset 偏移量，默认为0。
+     * Get Offset. The default value is 0. 
+     * @return Offset Offset. The default value is 0.
      */
     public String getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0。
-     * @param Offset 偏移量，默认为0。
+     * Set Offset. The default value is 0.
+     * @param Offset Offset. The default value is 0.
      */
     public void setOffset(String Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量，默认为20，最大值为100。 
-     * @return Limit 返回数量，默认为20，最大值为100。
+     * Get Number of values to be returned. The default value is 20. Maximum is 100. 
+     * @return Limit Number of values to be returned. The default value is 20. Maximum is 100.
      */
     public String getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为20，最大值为100。
-     * @param Limit 返回数量，默认为20，最大值为100。
+     * Set Number of values to be returned. The default value is 20. Maximum is 100.
+     * @param Limit Number of values to be returned. The default value is 20. Maximum is 100.
      */
     public void setLimit(String Limit) {
         this.Limit = Limit;

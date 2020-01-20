@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class CreateHaVipRequest extends AbstractModel{
 
     /**
-    * `HAVIP`所在私有网络`ID`。
+    * The `ID` of the VPC to which the `HAVIP` belongs.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * `HAVIP`所在子网`ID`。
+    * The `ID` of the subnet to which the `HAVIP` belongs.
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * `HAVIP`名称。
+    * The name of the `HAVIP`.
     */
     @SerializedName("HaVipName")
     @Expose
     private String HaVipName;
 
     /**
-    * 指定虚拟IP地址，必须在`VPC`网段内且未被占用。不指定则自动分配。
+    * The specified virtual IP address, which must be within the IP range of the `VPC` and not in use. It will be automatically assigned if not specified.
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-     * Get `HAVIP`所在私有网络`ID`。 
-     * @return VpcId `HAVIP`所在私有网络`ID`。
+     * Get The `ID` of the VPC to which the `HAVIP` belongs. 
+     * @return VpcId The `ID` of the VPC to which the `HAVIP` belongs.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set `HAVIP`所在私有网络`ID`。
-     * @param VpcId `HAVIP`所在私有网络`ID`。
+     * Set The `ID` of the VPC to which the `HAVIP` belongs.
+     * @param VpcId The `ID` of the VPC to which the `HAVIP` belongs.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get `HAVIP`所在子网`ID`。 
-     * @return SubnetId `HAVIP`所在子网`ID`。
+     * Get The `ID` of the subnet to which the `HAVIP` belongs. 
+     * @return SubnetId The `ID` of the subnet to which the `HAVIP` belongs.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set `HAVIP`所在子网`ID`。
-     * @param SubnetId `HAVIP`所在子网`ID`。
+     * Set The `ID` of the subnet to which the `HAVIP` belongs.
+     * @param SubnetId The `ID` of the subnet to which the `HAVIP` belongs.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get `HAVIP`名称。 
-     * @return HaVipName `HAVIP`名称。
+     * Get The name of the `HAVIP`. 
+     * @return HaVipName The name of the `HAVIP`.
      */
     public String getHaVipName() {
         return this.HaVipName;
     }
 
     /**
-     * Set `HAVIP`名称。
-     * @param HaVipName `HAVIP`名称。
+     * Set The name of the `HAVIP`.
+     * @param HaVipName The name of the `HAVIP`.
      */
     public void setHaVipName(String HaVipName) {
         this.HaVipName = HaVipName;
     }
 
     /**
-     * Get 指定虚拟IP地址，必须在`VPC`网段内且未被占用。不指定则自动分配。 
-     * @return Vip 指定虚拟IP地址，必须在`VPC`网段内且未被占用。不指定则自动分配。
+     * Get The specified virtual IP address, which must be within the IP range of the `VPC` and not in use. It will be automatically assigned if not specified. 
+     * @return Vip The specified virtual IP address, which must be within the IP range of the `VPC` and not in use. It will be automatically assigned if not specified.
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set 指定虚拟IP地址，必须在`VPC`网段内且未被占用。不指定则自动分配。
-     * @param Vip 指定虚拟IP地址，必须在`VPC`网段内且未被占用。不指定则自动分配。
+     * Set The specified virtual IP address, which must be within the IP range of the `VPC` and not in use. It will be automatically assigned if not specified.
+     * @param Vip The specified virtual IP address, which must be within the IP range of the `VPC` and not in use. It will be automatically assigned if not specified.
      */
     public void setVip(String Vip) {
         this.Vip = Vip;

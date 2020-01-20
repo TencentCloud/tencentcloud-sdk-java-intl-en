@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class ServiceTemplateGroup extends AbstractModel{
 
     /**
-    * 协议端口模板集合实例ID，例如：ppmg-2klmrefu。
+    * Protocol port template group instance ID, such as `ppmg-2klmrefu`.
     */
     @SerializedName("ServiceTemplateGroupId")
     @Expose
     private String ServiceTemplateGroupId;
 
     /**
-    * 协议端口模板集合名称。
+    * Protocol port template group name.
     */
     @SerializedName("ServiceTemplateGroupName")
     @Expose
     private String ServiceTemplateGroupName;
 
     /**
-    * 协议端口模板实例ID。
+    * Protocol port template instance ID.
     */
     @SerializedName("ServiceTemplateIdSet")
     @Expose
     private String [] ServiceTemplateIdSet;
 
     /**
-    * 创建时间。
+    * Creation Time.
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-     * Get 协议端口模板集合实例ID，例如：ppmg-2klmrefu。 
-     * @return ServiceTemplateGroupId 协议端口模板集合实例ID，例如：ppmg-2klmrefu。
+     * Get Protocol port template group instance ID, such as `ppmg-2klmrefu`. 
+     * @return ServiceTemplateGroupId Protocol port template group instance ID, such as `ppmg-2klmrefu`.
      */
     public String getServiceTemplateGroupId() {
         return this.ServiceTemplateGroupId;
     }
 
     /**
-     * Set 协议端口模板集合实例ID，例如：ppmg-2klmrefu。
-     * @param ServiceTemplateGroupId 协议端口模板集合实例ID，例如：ppmg-2klmrefu。
+     * Set Protocol port template group instance ID, such as `ppmg-2klmrefu`.
+     * @param ServiceTemplateGroupId Protocol port template group instance ID, such as `ppmg-2klmrefu`.
      */
     public void setServiceTemplateGroupId(String ServiceTemplateGroupId) {
         this.ServiceTemplateGroupId = ServiceTemplateGroupId;
     }
 
     /**
-     * Get 协议端口模板集合名称。 
-     * @return ServiceTemplateGroupName 协议端口模板集合名称。
+     * Get Protocol port template group name. 
+     * @return ServiceTemplateGroupName Protocol port template group name.
      */
     public String getServiceTemplateGroupName() {
         return this.ServiceTemplateGroupName;
     }
 
     /**
-     * Set 协议端口模板集合名称。
-     * @param ServiceTemplateGroupName 协议端口模板集合名称。
+     * Set Protocol port template group name.
+     * @param ServiceTemplateGroupName Protocol port template group name.
      */
     public void setServiceTemplateGroupName(String ServiceTemplateGroupName) {
         this.ServiceTemplateGroupName = ServiceTemplateGroupName;
     }
 
     /**
-     * Get 协议端口模板实例ID。 
-     * @return ServiceTemplateIdSet 协议端口模板实例ID。
+     * Get Protocol port template instance ID. 
+     * @return ServiceTemplateIdSet Protocol port template instance ID.
      */
     public String [] getServiceTemplateIdSet() {
         return this.ServiceTemplateIdSet;
     }
 
     /**
-     * Set 协议端口模板实例ID。
-     * @param ServiceTemplateIdSet 协议端口模板实例ID。
+     * Set Protocol port template instance ID.
+     * @param ServiceTemplateIdSet Protocol port template instance ID.
      */
     public void setServiceTemplateIdSet(String [] ServiceTemplateIdSet) {
         this.ServiceTemplateIdSet = ServiceTemplateIdSet;
     }
 
     /**
-     * Get 创建时间。 
-     * @return CreatedTime 创建时间。
+     * Get Creation Time. 
+     * @return CreatedTime Creation Time.
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间。
-     * @param CreatedTime 创建时间。
+     * Set Creation Time.
+     * @param CreatedTime Creation Time.
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;

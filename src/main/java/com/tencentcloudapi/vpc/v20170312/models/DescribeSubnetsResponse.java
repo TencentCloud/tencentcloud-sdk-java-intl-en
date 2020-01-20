@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeSubnetsResponse extends AbstractModel{
 
     /**
-    * 符合条件的实例数量。
+    * The number of instances meeting the filter condition.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 子网对象。
+    * Subnet object.
     */
     @SerializedName("SubnetSet")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeSubnetsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 符合条件的实例数量。 
-     * @return TotalCount 符合条件的实例数量。
+     * Get The number of instances meeting the filter condition. 
+     * @return TotalCount The number of instances meeting the filter condition.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的实例数量。
-     * @param TotalCount 符合条件的实例数量。
+     * Set The number of instances meeting the filter condition.
+     * @param TotalCount The number of instances meeting the filter condition.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 子网对象。 
-     * @return SubnetSet 子网对象。
+     * Get Subnet object. 
+     * @return SubnetSet Subnet object.
      */
     public Subnet [] getSubnetSet() {
         return this.SubnetSet;
     }
 
     /**
-     * Set 子网对象。
-     * @param SubnetSet 子网对象。
+     * Set Subnet object.
+     * @param SubnetSet Subnet object.
      */
     public void setSubnetSet(Subnet [] SubnetSet) {
         this.SubnetSet = SubnetSet;

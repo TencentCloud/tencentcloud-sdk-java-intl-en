@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeServiceTemplatesResponse extends AbstractModel{
 
     /**
-    * 符合条件的实例数量。
+    * The number of instances meeting the filter condition.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 协议端口模板对象。
+    * Protocol port template object.
     */
     @SerializedName("ServiceTemplateSet")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeServiceTemplatesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 符合条件的实例数量。 
-     * @return TotalCount 符合条件的实例数量。
+     * Get The number of instances meeting the filter condition. 
+     * @return TotalCount The number of instances meeting the filter condition.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的实例数量。
-     * @param TotalCount 符合条件的实例数量。
+     * Set The number of instances meeting the filter condition.
+     * @param TotalCount The number of instances meeting the filter condition.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 协议端口模板对象。 
-     * @return ServiceTemplateSet 协议端口模板对象。
+     * Get Protocol port template object. 
+     * @return ServiceTemplateSet Protocol port template object.
      */
     public ServiceTemplate [] getServiceTemplateSet() {
         return this.ServiceTemplateSet;
     }
 
     /**
-     * Set 协议端口模板对象。
-     * @param ServiceTemplateSet 协议端口模板对象。
+     * Set Protocol port template object.
+     * @param ServiceTemplateSet Protocol port template object.
      */
     public void setServiceTemplateSet(ServiceTemplate [] ServiceTemplateSet) {
         this.ServiceTemplateSet = ServiceTemplateSet;

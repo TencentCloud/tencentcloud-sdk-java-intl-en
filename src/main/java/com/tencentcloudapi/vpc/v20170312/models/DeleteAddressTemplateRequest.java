@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeleteAddressTemplateRequest extends AbstractModel{
 
     /**
-    * IP地址模板实例ID，例如：ipm-09o5m8kc。
+    * The IP address template instance ID, such as `ipm-09o5m8kc`.
     */
     @SerializedName("AddressTemplateId")
     @Expose
     private String AddressTemplateId;
 
     /**
-     * Get IP地址模板实例ID，例如：ipm-09o5m8kc。 
-     * @return AddressTemplateId IP地址模板实例ID，例如：ipm-09o5m8kc。
+     * Get The IP address template instance ID, such as `ipm-09o5m8kc`. 
+     * @return AddressTemplateId The IP address template instance ID, such as `ipm-09o5m8kc`.
      */
     public String getAddressTemplateId() {
         return this.AddressTemplateId;
     }
 
     /**
-     * Set IP地址模板实例ID，例如：ipm-09o5m8kc。
-     * @param AddressTemplateId IP地址模板实例ID，例如：ipm-09o5m8kc。
+     * Set The IP address template instance ID, such as `ipm-09o5m8kc`.
+     * @param AddressTemplateId The IP address template instance ID, such as `ipm-09o5m8kc`.
      */
     public void setAddressTemplateId(String AddressTemplateId) {
         this.AddressTemplateId = AddressTemplateId;

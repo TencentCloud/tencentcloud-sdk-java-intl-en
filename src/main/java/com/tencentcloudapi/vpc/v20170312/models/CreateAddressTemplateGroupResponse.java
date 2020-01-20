@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateAddressTemplateGroupResponse extends AbstractModel{
 
     /**
-    * IP地址模板集合对象。
+    * Group object of the IP address template.
     */
     @SerializedName("AddressTemplateGroup")
     @Expose
@@ -37,16 +37,16 @@ public class CreateAddressTemplateGroupResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get IP地址模板集合对象。 
-     * @return AddressTemplateGroup IP地址模板集合对象。
+     * Get Group object of the IP address template. 
+     * @return AddressTemplateGroup Group object of the IP address template.
      */
     public AddressTemplateGroup getAddressTemplateGroup() {
         return this.AddressTemplateGroup;
     }
 
     /**
-     * Set IP地址模板集合对象。
-     * @param AddressTemplateGroup IP地址模板集合对象。
+     * Set Group object of the IP address template.
+     * @param AddressTemplateGroup Group object of the IP address template.
      */
     public void setAddressTemplateGroup(AddressTemplateGroup AddressTemplateGroup) {
         this.AddressTemplateGroup = AddressTemplateGroup;

@@ -23,158 +23,158 @@ import java.util.HashMap;
 public class Ipv6Address extends AbstractModel{
 
     /**
-    * `IPv6`地址，形如：`3402:4e00:20:100:0:8cd9:2a67:71f3`
+    * `IPv6` address, such as `3402:4e00:20:100:0:8cd9:2a67:71f3`
     */
     @SerializedName("Address")
     @Expose
     private String Address;
 
     /**
-    * 是否是主`IP`。
+    * Whether it is a primary `IP`.
     */
     @SerializedName("Primary")
     @Expose
     private Boolean Primary;
 
     /**
-    * `EIP`实例`ID`，形如：`eip-hxlqja90`。
+    * The `ID` of the `EIP` instance, such as `eip-hxlqja90`.
     */
     @SerializedName("AddressId")
     @Expose
     private String AddressId;
 
     /**
-    * 描述信息。
+    * Message description
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 公网IP是否被封堵。
+    * Whether the public IP is blocked.
     */
     @SerializedName("IsWanIpBlocked")
     @Expose
     private Boolean IsWanIpBlocked;
 
     /**
-    * `IPv6`地址状态：
-<li>`PENDING`：生产中</li>
-<li>`MIGRATING`：迁移中</li>
-<li>`DELETING`：删除中</li>
-<li>`AVAILABLE`：可用的</li>
+    * `IPv6` address status:
+<li>`PENDING`: Creating</li>
+<li>`MIGRATING`: Migrating</li>
+<li>`DELETING`: Deleting</li>
+<li>`AVAILABLE`: Available</li>
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-     * Get `IPv6`地址，形如：`3402:4e00:20:100:0:8cd9:2a67:71f3` 
-     * @return Address `IPv6`地址，形如：`3402:4e00:20:100:0:8cd9:2a67:71f3`
+     * Get `IPv6` address, such as `3402:4e00:20:100:0:8cd9:2a67:71f3` 
+     * @return Address `IPv6` address, such as `3402:4e00:20:100:0:8cd9:2a67:71f3`
      */
     public String getAddress() {
         return this.Address;
     }
 
     /**
-     * Set `IPv6`地址，形如：`3402:4e00:20:100:0:8cd9:2a67:71f3`
-     * @param Address `IPv6`地址，形如：`3402:4e00:20:100:0:8cd9:2a67:71f3`
+     * Set `IPv6` address, such as `3402:4e00:20:100:0:8cd9:2a67:71f3`
+     * @param Address `IPv6` address, such as `3402:4e00:20:100:0:8cd9:2a67:71f3`
      */
     public void setAddress(String Address) {
         this.Address = Address;
     }
 
     /**
-     * Get 是否是主`IP`。 
-     * @return Primary 是否是主`IP`。
+     * Get Whether it is a primary `IP`. 
+     * @return Primary Whether it is a primary `IP`.
      */
     public Boolean getPrimary() {
         return this.Primary;
     }
 
     /**
-     * Set 是否是主`IP`。
-     * @param Primary 是否是主`IP`。
+     * Set Whether it is a primary `IP`.
+     * @param Primary Whether it is a primary `IP`.
      */
     public void setPrimary(Boolean Primary) {
         this.Primary = Primary;
     }
 
     /**
-     * Get `EIP`实例`ID`，形如：`eip-hxlqja90`。 
-     * @return AddressId `EIP`实例`ID`，形如：`eip-hxlqja90`。
+     * Get The `ID` of the `EIP` instance, such as `eip-hxlqja90`. 
+     * @return AddressId The `ID` of the `EIP` instance, such as `eip-hxlqja90`.
      */
     public String getAddressId() {
         return this.AddressId;
     }
 
     /**
-     * Set `EIP`实例`ID`，形如：`eip-hxlqja90`。
-     * @param AddressId `EIP`实例`ID`，形如：`eip-hxlqja90`。
+     * Set The `ID` of the `EIP` instance, such as `eip-hxlqja90`.
+     * @param AddressId The `ID` of the `EIP` instance, such as `eip-hxlqja90`.
      */
     public void setAddressId(String AddressId) {
         this.AddressId = AddressId;
     }
 
     /**
-     * Get 描述信息。 
-     * @return Description 描述信息。
+     * Get Message description 
+     * @return Description Message description
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述信息。
-     * @param Description 描述信息。
+     * Set Message description
+     * @param Description Message description
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 公网IP是否被封堵。 
-     * @return IsWanIpBlocked 公网IP是否被封堵。
+     * Get Whether the public IP is blocked. 
+     * @return IsWanIpBlocked Whether the public IP is blocked.
      */
     public Boolean getIsWanIpBlocked() {
         return this.IsWanIpBlocked;
     }
 
     /**
-     * Set 公网IP是否被封堵。
-     * @param IsWanIpBlocked 公网IP是否被封堵。
+     * Set Whether the public IP is blocked.
+     * @param IsWanIpBlocked Whether the public IP is blocked.
      */
     public void setIsWanIpBlocked(Boolean IsWanIpBlocked) {
         this.IsWanIpBlocked = IsWanIpBlocked;
     }
 
     /**
-     * Get `IPv6`地址状态：
-<li>`PENDING`：生产中</li>
-<li>`MIGRATING`：迁移中</li>
-<li>`DELETING`：删除中</li>
-<li>`AVAILABLE`：可用的</li> 
-     * @return State `IPv6`地址状态：
-<li>`PENDING`：生产中</li>
-<li>`MIGRATING`：迁移中</li>
-<li>`DELETING`：删除中</li>
-<li>`AVAILABLE`：可用的</li>
+     * Get `IPv6` address status:
+<li>`PENDING`: Creating</li>
+<li>`MIGRATING`: Migrating</li>
+<li>`DELETING`: Deleting</li>
+<li>`AVAILABLE`: Available</li> 
+     * @return State `IPv6` address status:
+<li>`PENDING`: Creating</li>
+<li>`MIGRATING`: Migrating</li>
+<li>`DELETING`: Deleting</li>
+<li>`AVAILABLE`: Available</li>
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set `IPv6`地址状态：
-<li>`PENDING`：生产中</li>
-<li>`MIGRATING`：迁移中</li>
-<li>`DELETING`：删除中</li>
-<li>`AVAILABLE`：可用的</li>
-     * @param State `IPv6`地址状态：
-<li>`PENDING`：生产中</li>
-<li>`MIGRATING`：迁移中</li>
-<li>`DELETING`：删除中</li>
-<li>`AVAILABLE`：可用的</li>
+     * Set `IPv6` address status:
+<li>`PENDING`: Creating</li>
+<li>`MIGRATING`: Migrating</li>
+<li>`DELETING`: Deleting</li>
+<li>`AVAILABLE`: Available</li>
+     * @param State `IPv6` address status:
+<li>`PENDING`: Creating</li>
+<li>`MIGRATING`: Migrating</li>
+<li>`DELETING`: Deleting</li>
+<li>`AVAILABLE`: Available</li>
      */
     public void setState(String State) {
         this.State = State;

@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeleteRouteTableRequest extends AbstractModel{
 
     /**
-    * 路由表实例ID，例如：rtb-azd4dt1c。
+    * The route table instance ID, such as `rtb-azd4dt1c`.
     */
     @SerializedName("RouteTableId")
     @Expose
     private String RouteTableId;
 
     /**
-     * Get 路由表实例ID，例如：rtb-azd4dt1c。 
-     * @return RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
+     * Get The route table instance ID, such as `rtb-azd4dt1c`. 
+     * @return RouteTableId The route table instance ID, such as `rtb-azd4dt1c`.
      */
     public String getRouteTableId() {
         return this.RouteTableId;
     }
 
     /**
-     * Set 路由表实例ID，例如：rtb-azd4dt1c。
-     * @param RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
+     * Set The route table instance ID, such as `rtb-azd4dt1c`.
+     * @param RouteTableId The route table instance ID, such as `rtb-azd4dt1c`.
      */
     public void setRouteTableId(String RouteTableId) {
         this.RouteTableId = RouteTableId;

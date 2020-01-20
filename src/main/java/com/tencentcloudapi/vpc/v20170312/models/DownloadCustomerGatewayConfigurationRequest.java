@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class DownloadCustomerGatewayConfigurationRequest extends AbstractModel{
 
     /**
-    * VPN网关实例ID。
+    * The ID of the VPN gateway instance.
     */
     @SerializedName("VpnGatewayId")
     @Expose
     private String VpnGatewayId;
 
     /**
-    * VPN通道实例ID。形如：vpnx-f49l6u0z。
+    * The ID of the VPN tunnel instance, such as `vpnx-f49l6u0z`.
     */
     @SerializedName("VpnConnectionId")
     @Expose
     private String VpnConnectionId;
 
     /**
-    * 对端网关厂商信息对象，可通过DescribeCustomerGatewayVendors获取。
+    * Customer gateway vendor information object, which can be obtained through DescribeCustomerGatewayVendors.
     */
     @SerializedName("CustomerGatewayVendor")
     @Expose
     private CustomerGatewayVendor CustomerGatewayVendor;
 
     /**
-    * 通道接入设备物理接口名称。
+    * Name of the physical API for tunnel access device.
     */
     @SerializedName("InterfaceName")
     @Expose
     private String InterfaceName;
 
     /**
-     * Get VPN网关实例ID。 
-     * @return VpnGatewayId VPN网关实例ID。
+     * Get The ID of the VPN gateway instance. 
+     * @return VpnGatewayId The ID of the VPN gateway instance.
      */
     public String getVpnGatewayId() {
         return this.VpnGatewayId;
     }
 
     /**
-     * Set VPN网关实例ID。
-     * @param VpnGatewayId VPN网关实例ID。
+     * Set The ID of the VPN gateway instance.
+     * @param VpnGatewayId The ID of the VPN gateway instance.
      */
     public void setVpnGatewayId(String VpnGatewayId) {
         this.VpnGatewayId = VpnGatewayId;
     }
 
     /**
-     * Get VPN通道实例ID。形如：vpnx-f49l6u0z。 
-     * @return VpnConnectionId VPN通道实例ID。形如：vpnx-f49l6u0z。
+     * Get The ID of the VPN tunnel instance, such as `vpnx-f49l6u0z`. 
+     * @return VpnConnectionId The ID of the VPN tunnel instance, such as `vpnx-f49l6u0z`.
      */
     public String getVpnConnectionId() {
         return this.VpnConnectionId;
     }
 
     /**
-     * Set VPN通道实例ID。形如：vpnx-f49l6u0z。
-     * @param VpnConnectionId VPN通道实例ID。形如：vpnx-f49l6u0z。
+     * Set The ID of the VPN tunnel instance, such as `vpnx-f49l6u0z`.
+     * @param VpnConnectionId The ID of the VPN tunnel instance, such as `vpnx-f49l6u0z`.
      */
     public void setVpnConnectionId(String VpnConnectionId) {
         this.VpnConnectionId = VpnConnectionId;
     }
 
     /**
-     * Get 对端网关厂商信息对象，可通过DescribeCustomerGatewayVendors获取。 
-     * @return CustomerGatewayVendor 对端网关厂商信息对象，可通过DescribeCustomerGatewayVendors获取。
+     * Get Customer gateway vendor information object, which can be obtained through DescribeCustomerGatewayVendors. 
+     * @return CustomerGatewayVendor Customer gateway vendor information object, which can be obtained through DescribeCustomerGatewayVendors.
      */
     public CustomerGatewayVendor getCustomerGatewayVendor() {
         return this.CustomerGatewayVendor;
     }
 
     /**
-     * Set 对端网关厂商信息对象，可通过DescribeCustomerGatewayVendors获取。
-     * @param CustomerGatewayVendor 对端网关厂商信息对象，可通过DescribeCustomerGatewayVendors获取。
+     * Set Customer gateway vendor information object, which can be obtained through DescribeCustomerGatewayVendors.
+     * @param CustomerGatewayVendor Customer gateway vendor information object, which can be obtained through DescribeCustomerGatewayVendors.
      */
     public void setCustomerGatewayVendor(CustomerGatewayVendor CustomerGatewayVendor) {
         this.CustomerGatewayVendor = CustomerGatewayVendor;
     }
 
     /**
-     * Get 通道接入设备物理接口名称。 
-     * @return InterfaceName 通道接入设备物理接口名称。
+     * Get Name of the physical API for tunnel access device. 
+     * @return InterfaceName Name of the physical API for tunnel access device.
      */
     public String getInterfaceName() {
         return this.InterfaceName;
     }
 
     /**
-     * Set 通道接入设备物理接口名称。
-     * @param InterfaceName 通道接入设备物理接口名称。
+     * Set Name of the physical API for tunnel access device.
+     * @param InterfaceName Name of the physical API for tunnel access device.
      */
     public void setInterfaceName(String InterfaceName) {
         this.InterfaceName = InterfaceName;

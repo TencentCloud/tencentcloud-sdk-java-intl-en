@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DisassociateNatGatewayAddressRequest extends AbstractModel{
 
     /**
-    * NAT网关的ID，形如：`nat-df45454`。
+    * The ID of the NAT gateway, such as `nat-df45454`.
     */
     @SerializedName("NatGatewayId")
     @Expose
     private String NatGatewayId;
 
     /**
-    * 绑定NAT网关的弹性IP数组。
+    * The array of EIPs bound to the NAT gateway.
     */
     @SerializedName("PublicIpAddresses")
     @Expose
     private String [] PublicIpAddresses;
 
     /**
-     * Get NAT网关的ID，形如：`nat-df45454`。 
-     * @return NatGatewayId NAT网关的ID，形如：`nat-df45454`。
+     * Get The ID of the NAT gateway, such as `nat-df45454`. 
+     * @return NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
      */
     public String getNatGatewayId() {
         return this.NatGatewayId;
     }
 
     /**
-     * Set NAT网关的ID，形如：`nat-df45454`。
-     * @param NatGatewayId NAT网关的ID，形如：`nat-df45454`。
+     * Set The ID of the NAT gateway, such as `nat-df45454`.
+     * @param NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
      */
     public void setNatGatewayId(String NatGatewayId) {
         this.NatGatewayId = NatGatewayId;
     }
 
     /**
-     * Get 绑定NAT网关的弹性IP数组。 
-     * @return PublicIpAddresses 绑定NAT网关的弹性IP数组。
+     * Get The array of EIPs bound to the NAT gateway. 
+     * @return PublicIpAddresses The array of EIPs bound to the NAT gateway.
      */
     public String [] getPublicIpAddresses() {
         return this.PublicIpAddresses;
     }
 
     /**
-     * Set 绑定NAT网关的弹性IP数组。
-     * @param PublicIpAddresses 绑定NAT网关的弹性IP数组。
+     * Set The array of EIPs bound to the NAT gateway.
+     * @param PublicIpAddresses The array of EIPs bound to the NAT gateway.
      */
     public void setPublicIpAddresses(String [] PublicIpAddresses) {
         this.PublicIpAddresses = PublicIpAddresses;

@@ -23,137 +23,137 @@ import java.util.HashMap;
 public class DescribeSubnetsRequest extends AbstractModel{
 
     /**
-    * 子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定SubnetIds和Filters。
+    * Queries the ID of the subnet instance, such as `subnet-pxir56ns`. Each request can have a maximum of 100 instances. `SubnetIds` and `Filters` cannot be specified at the same time.
     */
     @SerializedName("SubnetIds")
     @Expose
     private String [] SubnetIds;
 
     /**
-    * 过滤条件，参数不支持同时指定SubnetIds和Filters。
-<li>subnet-id - String - （过滤条件）Subnet实例名称。</li>
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
-<li>cidr-block - String - （过滤条件）子网网段，形如: 192.168.1.0 。</li>
-<li>is-default - Boolean - （过滤条件）是否是默认子网。</li>
-<li>is-remote-vpc-snat - Boolean - （过滤条件）是否为VPC SNAT地址池子网。</li>
-<li>subnet-name - String - （过滤条件）子网名称。</li>
-<li>zone - String - （过滤条件）可用区。</li>
-<li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
-<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li>
+    * Filter condition. `SubnetIds` and `Filters` cannot be specified at the same time.
+<li>subnet-id - String - (Filter condition) Subnet instance name.</li>
+<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
+<li>cidr-block - String - (Filter condition) The subnet IP range, such as 192.168.1.0.</li>
+<li>is-default - Boolean - (Filter condition) Whether it is the default subnet.</li>
+<li>is-remote-vpc-snat - Boolean - (Filter condition) Whether it is a VPC SNAT address pool subnet.</li>
+<li>subnet-name - String - (Filter condition) Subnet name.</li>
+<li>zone - String - (Filter condition) Availability zone.</li>
+<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
+<li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key is replaced with the specific tag key. For usage, refer to case 2.</li>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 偏移量
+    * Offset
     */
     @SerializedName("Offset")
     @Expose
     private String Offset;
 
     /**
-    * 返回数量
+    * The returned quantity
     */
     @SerializedName("Limit")
     @Expose
     private String Limit;
 
     /**
-     * Get 子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定SubnetIds和Filters。 
-     * @return SubnetIds 子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定SubnetIds和Filters。
+     * Get Queries the ID of the subnet instance, such as `subnet-pxir56ns`. Each request can have a maximum of 100 instances. `SubnetIds` and `Filters` cannot be specified at the same time. 
+     * @return SubnetIds Queries the ID of the subnet instance, such as `subnet-pxir56ns`. Each request can have a maximum of 100 instances. `SubnetIds` and `Filters` cannot be specified at the same time.
      */
     public String [] getSubnetIds() {
         return this.SubnetIds;
     }
 
     /**
-     * Set 子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定SubnetIds和Filters。
-     * @param SubnetIds 子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定SubnetIds和Filters。
+     * Set Queries the ID of the subnet instance, such as `subnet-pxir56ns`. Each request can have a maximum of 100 instances. `SubnetIds` and `Filters` cannot be specified at the same time.
+     * @param SubnetIds Queries the ID of the subnet instance, such as `subnet-pxir56ns`. Each request can have a maximum of 100 instances. `SubnetIds` and `Filters` cannot be specified at the same time.
      */
     public void setSubnetIds(String [] SubnetIds) {
         this.SubnetIds = SubnetIds;
     }
 
     /**
-     * Get 过滤条件，参数不支持同时指定SubnetIds和Filters。
-<li>subnet-id - String - （过滤条件）Subnet实例名称。</li>
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
-<li>cidr-block - String - （过滤条件）子网网段，形如: 192.168.1.0 。</li>
-<li>is-default - Boolean - （过滤条件）是否是默认子网。</li>
-<li>is-remote-vpc-snat - Boolean - （过滤条件）是否为VPC SNAT地址池子网。</li>
-<li>subnet-name - String - （过滤条件）子网名称。</li>
-<li>zone - String - （过滤条件）可用区。</li>
-<li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
-<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li> 
-     * @return Filters 过滤条件，参数不支持同时指定SubnetIds和Filters。
-<li>subnet-id - String - （过滤条件）Subnet实例名称。</li>
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
-<li>cidr-block - String - （过滤条件）子网网段，形如: 192.168.1.0 。</li>
-<li>is-default - Boolean - （过滤条件）是否是默认子网。</li>
-<li>is-remote-vpc-snat - Boolean - （过滤条件）是否为VPC SNAT地址池子网。</li>
-<li>subnet-name - String - （过滤条件）子网名称。</li>
-<li>zone - String - （过滤条件）可用区。</li>
-<li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
-<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li>
+     * Get Filter condition. `SubnetIds` and `Filters` cannot be specified at the same time.
+<li>subnet-id - String - (Filter condition) Subnet instance name.</li>
+<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
+<li>cidr-block - String - (Filter condition) The subnet IP range, such as 192.168.1.0.</li>
+<li>is-default - Boolean - (Filter condition) Whether it is the default subnet.</li>
+<li>is-remote-vpc-snat - Boolean - (Filter condition) Whether it is a VPC SNAT address pool subnet.</li>
+<li>subnet-name - String - (Filter condition) Subnet name.</li>
+<li>zone - String - (Filter condition) Availability zone.</li>
+<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
+<li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key is replaced with the specific tag key. For usage, refer to case 2.</li> 
+     * @return Filters Filter condition. `SubnetIds` and `Filters` cannot be specified at the same time.
+<li>subnet-id - String - (Filter condition) Subnet instance name.</li>
+<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
+<li>cidr-block - String - (Filter condition) The subnet IP range, such as 192.168.1.0.</li>
+<li>is-default - Boolean - (Filter condition) Whether it is the default subnet.</li>
+<li>is-remote-vpc-snat - Boolean - (Filter condition) Whether it is a VPC SNAT address pool subnet.</li>
+<li>subnet-name - String - (Filter condition) Subnet name.</li>
+<li>zone - String - (Filter condition) Availability zone.</li>
+<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
+<li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key is replaced with the specific tag key. For usage, refer to case 2.</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件，参数不支持同时指定SubnetIds和Filters。
-<li>subnet-id - String - （过滤条件）Subnet实例名称。</li>
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
-<li>cidr-block - String - （过滤条件）子网网段，形如: 192.168.1.0 。</li>
-<li>is-default - Boolean - （过滤条件）是否是默认子网。</li>
-<li>is-remote-vpc-snat - Boolean - （过滤条件）是否为VPC SNAT地址池子网。</li>
-<li>subnet-name - String - （过滤条件）子网名称。</li>
-<li>zone - String - （过滤条件）可用区。</li>
-<li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
-<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li>
-     * @param Filters 过滤条件，参数不支持同时指定SubnetIds和Filters。
-<li>subnet-id - String - （过滤条件）Subnet实例名称。</li>
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
-<li>cidr-block - String - （过滤条件）子网网段，形如: 192.168.1.0 。</li>
-<li>is-default - Boolean - （过滤条件）是否是默认子网。</li>
-<li>is-remote-vpc-snat - Boolean - （过滤条件）是否为VPC SNAT地址池子网。</li>
-<li>subnet-name - String - （过滤条件）子网名称。</li>
-<li>zone - String - （过滤条件）可用区。</li>
-<li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
-<li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li>
+     * Set Filter condition. `SubnetIds` and `Filters` cannot be specified at the same time.
+<li>subnet-id - String - (Filter condition) Subnet instance name.</li>
+<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
+<li>cidr-block - String - (Filter condition) The subnet IP range, such as 192.168.1.0.</li>
+<li>is-default - Boolean - (Filter condition) Whether it is the default subnet.</li>
+<li>is-remote-vpc-snat - Boolean - (Filter condition) Whether it is a VPC SNAT address pool subnet.</li>
+<li>subnet-name - String - (Filter condition) Subnet name.</li>
+<li>zone - String - (Filter condition) Availability zone.</li>
+<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
+<li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key is replaced with the specific tag key. For usage, refer to case 2.</li>
+     * @param Filters Filter condition. `SubnetIds` and `Filters` cannot be specified at the same time.
+<li>subnet-id - String - (Filter condition) Subnet instance name.</li>
+<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
+<li>cidr-block - String - (Filter condition) The subnet IP range, such as 192.168.1.0.</li>
+<li>is-default - Boolean - (Filter condition) Whether it is the default subnet.</li>
+<li>is-remote-vpc-snat - Boolean - (Filter condition) Whether it is a VPC SNAT address pool subnet.</li>
+<li>subnet-name - String - (Filter condition) Subnet name.</li>
+<li>zone - String - (Filter condition) Availability zone.</li>
+<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
+<li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key is replaced with the specific tag key. For usage, refer to case 2.</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get Offset 
+     * @return Offset Offset
      */
     public String getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set Offset
+     * @param Offset Offset
      */
     public void setOffset(String Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量 
-     * @return Limit 返回数量
+     * Get The returned quantity 
+     * @return Limit The returned quantity
      */
     public String getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量
-     * @param Limit 返回数量
+     * Set The returned quantity
+     * @param Limit The returned quantity
      */
     public void setLimit(String Limit) {
         this.Limit = Limit;

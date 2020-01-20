@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class MigratePrivateIpAddressRequest extends AbstractModel{
 
     /**
-    * 当内网IP绑定的弹性网卡实例ID，例如：eni-m6dyj72l。
+    * ID of the ENI instance bound with the private IP, such as `eni-m6dyj72l`.
     */
     @SerializedName("SourceNetworkInterfaceId")
     @Expose
     private String SourceNetworkInterfaceId;
 
     /**
-    * 待迁移的目的弹性网卡实例ID。
+    * ID of the destination ENI instance to be migrated.
     */
     @SerializedName("DestinationNetworkInterfaceId")
     @Expose
     private String DestinationNetworkInterfaceId;
 
     /**
-    * 迁移的内网IP地址，例如：10.0.0.6。
+    * The private IP to be migrated, such as 10.0.0.6.
     */
     @SerializedName("PrivateIpAddress")
     @Expose
     private String PrivateIpAddress;
 
     /**
-     * Get 当内网IP绑定的弹性网卡实例ID，例如：eni-m6dyj72l。 
-     * @return SourceNetworkInterfaceId 当内网IP绑定的弹性网卡实例ID，例如：eni-m6dyj72l。
+     * Get ID of the ENI instance bound with the private IP, such as `eni-m6dyj72l`. 
+     * @return SourceNetworkInterfaceId ID of the ENI instance bound with the private IP, such as `eni-m6dyj72l`.
      */
     public String getSourceNetworkInterfaceId() {
         return this.SourceNetworkInterfaceId;
     }
 
     /**
-     * Set 当内网IP绑定的弹性网卡实例ID，例如：eni-m6dyj72l。
-     * @param SourceNetworkInterfaceId 当内网IP绑定的弹性网卡实例ID，例如：eni-m6dyj72l。
+     * Set ID of the ENI instance bound with the private IP, such as `eni-m6dyj72l`.
+     * @param SourceNetworkInterfaceId ID of the ENI instance bound with the private IP, such as `eni-m6dyj72l`.
      */
     public void setSourceNetworkInterfaceId(String SourceNetworkInterfaceId) {
         this.SourceNetworkInterfaceId = SourceNetworkInterfaceId;
     }
 
     /**
-     * Get 待迁移的目的弹性网卡实例ID。 
-     * @return DestinationNetworkInterfaceId 待迁移的目的弹性网卡实例ID。
+     * Get ID of the destination ENI instance to be migrated. 
+     * @return DestinationNetworkInterfaceId ID of the destination ENI instance to be migrated.
      */
     public String getDestinationNetworkInterfaceId() {
         return this.DestinationNetworkInterfaceId;
     }
 
     /**
-     * Set 待迁移的目的弹性网卡实例ID。
-     * @param DestinationNetworkInterfaceId 待迁移的目的弹性网卡实例ID。
+     * Set ID of the destination ENI instance to be migrated.
+     * @param DestinationNetworkInterfaceId ID of the destination ENI instance to be migrated.
      */
     public void setDestinationNetworkInterfaceId(String DestinationNetworkInterfaceId) {
         this.DestinationNetworkInterfaceId = DestinationNetworkInterfaceId;
     }
 
     /**
-     * Get 迁移的内网IP地址，例如：10.0.0.6。 
-     * @return PrivateIpAddress 迁移的内网IP地址，例如：10.0.0.6。
+     * Get The private IP to be migrated, such as 10.0.0.6. 
+     * @return PrivateIpAddress The private IP to be migrated, such as 10.0.0.6.
      */
     public String getPrivateIpAddress() {
         return this.PrivateIpAddress;
     }
 
     /**
-     * Set 迁移的内网IP地址，例如：10.0.0.6。
-     * @param PrivateIpAddress 迁移的内网IP地址，例如：10.0.0.6。
+     * Set The private IP to be migrated, such as 10.0.0.6.
+     * @param PrivateIpAddress The private IP to be migrated, such as 10.0.0.6.
      */
     public void setPrivateIpAddress(String PrivateIpAddress) {
         this.PrivateIpAddress = PrivateIpAddress;

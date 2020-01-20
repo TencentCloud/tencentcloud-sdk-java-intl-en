@@ -23,11 +23,57 @@ import java.util.HashMap;
 public class DescribeRulesByRuleIdsResponse extends AbstractModel{
 
     /**
+    * The number of returned rules.
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
+    * List of returned rules.
+    */
+    @SerializedName("RuleSet")
+    @Expose
+    private RuleInfo [] RuleSet;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get The number of returned rules. 
+     * @return TotalCount The number of returned rules.
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set The number of returned rules.
+     * @param TotalCount The number of returned rules.
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get List of returned rules. 
+     * @return RuleSet List of returned rules.
+     */
+    public RuleInfo [] getRuleSet() {
+        return this.RuleSet;
+    }
+
+    /**
+     * Set List of returned rules.
+     * @param RuleSet List of returned rules.
+     */
+    public void setRuleSet(RuleInfo [] RuleSet) {
+        this.RuleSet = RuleSet;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -49,6 +95,8 @@ public class DescribeRulesByRuleIdsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "RuleSet.", this.RuleSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class ReplaceRouteTableAssociationRequest extends AbstractModel{
 
     /**
-    * 子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。
+    * Subnet instance ID, such as `subnet-3x5lf5q0`. This can be queried using the DescribeSubnets API.
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 路由表实例ID，例如：rtb-azd4dt1c。
+    * The route table instance ID, such as `rtb-azd4dt1c`.
     */
     @SerializedName("RouteTableId")
     @Expose
     private String RouteTableId;
 
     /**
-     * Get 子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。 
-     * @return SubnetId 子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。
+     * Get Subnet instance ID, such as `subnet-3x5lf5q0`. This can be queried using the DescribeSubnets API. 
+     * @return SubnetId Subnet instance ID, such as `subnet-3x5lf5q0`. This can be queried using the DescribeSubnets API.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。
-     * @param SubnetId 子网实例ID，例如：subnet-3x5lf5q0。可通过DescribeSubnets接口查询。
+     * Set Subnet instance ID, such as `subnet-3x5lf5q0`. This can be queried using the DescribeSubnets API.
+     * @param SubnetId Subnet instance ID, such as `subnet-3x5lf5q0`. This can be queried using the DescribeSubnets API.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 路由表实例ID，例如：rtb-azd4dt1c。 
-     * @return RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
+     * Get The route table instance ID, such as `rtb-azd4dt1c`. 
+     * @return RouteTableId The route table instance ID, such as `rtb-azd4dt1c`.
      */
     public String getRouteTableId() {
         return this.RouteTableId;
     }
 
     /**
-     * Set 路由表实例ID，例如：rtb-azd4dt1c。
-     * @param RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
+     * Set The route table instance ID, such as `rtb-azd4dt1c`.
+     * @param RouteTableId The route table instance ID, such as `rtb-azd4dt1c`.
      */
     public void setRouteTableId(String RouteTableId) {
         this.RouteTableId = RouteTableId;

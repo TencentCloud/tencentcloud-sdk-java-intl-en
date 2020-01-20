@@ -23,207 +23,207 @@ import java.util.HashMap;
 public class DescribeGatewayFlowMonitorDetailRequest extends AbstractModel{
 
     /**
-    * 时间点。表示要查询这分钟内的明细。如：`2019-02-28 18:15:20`，将查询 `18:15` 这一分钟内的明细。
+    * The point in time. This indicates details of this minute will be queried. For example, in `2019-02-28 18:15:20`, details at `18:15` will be queried.
     */
     @SerializedName("TimePoint")
     @Expose
     private String TimePoint;
 
     /**
-    * VPN网关实例ID，形如：`vpn-ltjahce6`。
+    * The instance ID of the VPN gateway, such as `vpn-ltjahce6`.
     */
     @SerializedName("VpnId")
     @Expose
     private String VpnId;
 
     /**
-    * 专线网关实例ID，形如：`dcg-ltjahce6`。
+    * The instance ID of the Direct Connect gateway, such as `dcg-ltjahce6`.
     */
     @SerializedName("DirectConnectGatewayId")
     @Expose
     private String DirectConnectGatewayId;
 
     /**
-    * 对等连接实例ID，形如：`pcx-ltjahce6`。
+    * The instance ID of the peering connection, such as `pcx-ltjahce6`.
     */
     @SerializedName("PeeringConnectionId")
     @Expose
     private String PeeringConnectionId;
 
     /**
-    * NAT网关实例ID，形如：`nat-ltjahce6`。
+    * The instance ID of the NAT gateway, such as `nat-ltjahce6`.
     */
     @SerializedName("NatId")
     @Expose
     private String NatId;
 
     /**
-    * 偏移量。
+    * Offset.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量。
+    * The returned quantity.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 排序字段。支持 `InPkg` `OutPkg` `InTraffic` `OutTraffic`。
+    * The order field supports `InPkg`, `OutPkg`, `InTraffic`, and `OutTraffic`.
     */
     @SerializedName("OrderField")
     @Expose
     private String OrderField;
 
     /**
-    * 排序方法。顺序：`ASC`，倒序：`DESC`。
+    * Order methods. Ascending: `ASC`, Descending: `DESC`.
     */
     @SerializedName("OrderDirection")
     @Expose
     private String OrderDirection;
 
     /**
-     * Get 时间点。表示要查询这分钟内的明细。如：`2019-02-28 18:15:20`，将查询 `18:15` 这一分钟内的明细。 
-     * @return TimePoint 时间点。表示要查询这分钟内的明细。如：`2019-02-28 18:15:20`，将查询 `18:15` 这一分钟内的明细。
+     * Get The point in time. This indicates details of this minute will be queried. For example, in `2019-02-28 18:15:20`, details at `18:15` will be queried. 
+     * @return TimePoint The point in time. This indicates details of this minute will be queried. For example, in `2019-02-28 18:15:20`, details at `18:15` will be queried.
      */
     public String getTimePoint() {
         return this.TimePoint;
     }
 
     /**
-     * Set 时间点。表示要查询这分钟内的明细。如：`2019-02-28 18:15:20`，将查询 `18:15` 这一分钟内的明细。
-     * @param TimePoint 时间点。表示要查询这分钟内的明细。如：`2019-02-28 18:15:20`，将查询 `18:15` 这一分钟内的明细。
+     * Set The point in time. This indicates details of this minute will be queried. For example, in `2019-02-28 18:15:20`, details at `18:15` will be queried.
+     * @param TimePoint The point in time. This indicates details of this minute will be queried. For example, in `2019-02-28 18:15:20`, details at `18:15` will be queried.
      */
     public void setTimePoint(String TimePoint) {
         this.TimePoint = TimePoint;
     }
 
     /**
-     * Get VPN网关实例ID，形如：`vpn-ltjahce6`。 
-     * @return VpnId VPN网关实例ID，形如：`vpn-ltjahce6`。
+     * Get The instance ID of the VPN gateway, such as `vpn-ltjahce6`. 
+     * @return VpnId The instance ID of the VPN gateway, such as `vpn-ltjahce6`.
      */
     public String getVpnId() {
         return this.VpnId;
     }
 
     /**
-     * Set VPN网关实例ID，形如：`vpn-ltjahce6`。
-     * @param VpnId VPN网关实例ID，形如：`vpn-ltjahce6`。
+     * Set The instance ID of the VPN gateway, such as `vpn-ltjahce6`.
+     * @param VpnId The instance ID of the VPN gateway, such as `vpn-ltjahce6`.
      */
     public void setVpnId(String VpnId) {
         this.VpnId = VpnId;
     }
 
     /**
-     * Get 专线网关实例ID，形如：`dcg-ltjahce6`。 
-     * @return DirectConnectGatewayId 专线网关实例ID，形如：`dcg-ltjahce6`。
+     * Get The instance ID of the Direct Connect gateway, such as `dcg-ltjahce6`. 
+     * @return DirectConnectGatewayId The instance ID of the Direct Connect gateway, such as `dcg-ltjahce6`.
      */
     public String getDirectConnectGatewayId() {
         return this.DirectConnectGatewayId;
     }
 
     /**
-     * Set 专线网关实例ID，形如：`dcg-ltjahce6`。
-     * @param DirectConnectGatewayId 专线网关实例ID，形如：`dcg-ltjahce6`。
+     * Set The instance ID of the Direct Connect gateway, such as `dcg-ltjahce6`.
+     * @param DirectConnectGatewayId The instance ID of the Direct Connect gateway, such as `dcg-ltjahce6`.
      */
     public void setDirectConnectGatewayId(String DirectConnectGatewayId) {
         this.DirectConnectGatewayId = DirectConnectGatewayId;
     }
 
     /**
-     * Get 对等连接实例ID，形如：`pcx-ltjahce6`。 
-     * @return PeeringConnectionId 对等连接实例ID，形如：`pcx-ltjahce6`。
+     * Get The instance ID of the peering connection, such as `pcx-ltjahce6`. 
+     * @return PeeringConnectionId The instance ID of the peering connection, such as `pcx-ltjahce6`.
      */
     public String getPeeringConnectionId() {
         return this.PeeringConnectionId;
     }
 
     /**
-     * Set 对等连接实例ID，形如：`pcx-ltjahce6`。
-     * @param PeeringConnectionId 对等连接实例ID，形如：`pcx-ltjahce6`。
+     * Set The instance ID of the peering connection, such as `pcx-ltjahce6`.
+     * @param PeeringConnectionId The instance ID of the peering connection, such as `pcx-ltjahce6`.
      */
     public void setPeeringConnectionId(String PeeringConnectionId) {
         this.PeeringConnectionId = PeeringConnectionId;
     }
 
     /**
-     * Get NAT网关实例ID，形如：`nat-ltjahce6`。 
-     * @return NatId NAT网关实例ID，形如：`nat-ltjahce6`。
+     * Get The instance ID of the NAT gateway, such as `nat-ltjahce6`. 
+     * @return NatId The instance ID of the NAT gateway, such as `nat-ltjahce6`.
      */
     public String getNatId() {
         return this.NatId;
     }
 
     /**
-     * Set NAT网关实例ID，形如：`nat-ltjahce6`。
-     * @param NatId NAT网关实例ID，形如：`nat-ltjahce6`。
+     * Set The instance ID of the NAT gateway, such as `nat-ltjahce6`.
+     * @param NatId The instance ID of the NAT gateway, such as `nat-ltjahce6`.
      */
     public void setNatId(String NatId) {
         this.NatId = NatId;
     }
 
     /**
-     * Get 偏移量。 
-     * @return Offset 偏移量。
+     * Get Offset. 
+     * @return Offset Offset.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量。
-     * @param Offset 偏移量。
+     * Set Offset.
+     * @param Offset Offset.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量。 
-     * @return Limit 返回数量。
+     * Get The returned quantity. 
+     * @return Limit The returned quantity.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量。
-     * @param Limit 返回数量。
+     * Set The returned quantity.
+     * @param Limit The returned quantity.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 排序字段。支持 `InPkg` `OutPkg` `InTraffic` `OutTraffic`。 
-     * @return OrderField 排序字段。支持 `InPkg` `OutPkg` `InTraffic` `OutTraffic`。
+     * Get The order field supports `InPkg`, `OutPkg`, `InTraffic`, and `OutTraffic`. 
+     * @return OrderField The order field supports `InPkg`, `OutPkg`, `InTraffic`, and `OutTraffic`.
      */
     public String getOrderField() {
         return this.OrderField;
     }
 
     /**
-     * Set 排序字段。支持 `InPkg` `OutPkg` `InTraffic` `OutTraffic`。
-     * @param OrderField 排序字段。支持 `InPkg` `OutPkg` `InTraffic` `OutTraffic`。
+     * Set The order field supports `InPkg`, `OutPkg`, `InTraffic`, and `OutTraffic`.
+     * @param OrderField The order field supports `InPkg`, `OutPkg`, `InTraffic`, and `OutTraffic`.
      */
     public void setOrderField(String OrderField) {
         this.OrderField = OrderField;
     }
 
     /**
-     * Get 排序方法。顺序：`ASC`，倒序：`DESC`。 
-     * @return OrderDirection 排序方法。顺序：`ASC`，倒序：`DESC`。
+     * Get Order methods. Ascending: `ASC`, Descending: `DESC`. 
+     * @return OrderDirection Order methods. Ascending: `ASC`, Descending: `DESC`.
      */
     public String getOrderDirection() {
         return this.OrderDirection;
     }
 
     /**
-     * Set 排序方法。顺序：`ASC`，倒序：`DESC`。
-     * @param OrderDirection 排序方法。顺序：`ASC`，倒序：`DESC`。
+     * Set Order methods. Ascending: `ASC`, Descending: `DESC`.
+     * @param OrderDirection Order methods. Ascending: `ASC`, Descending: `DESC`.
      */
     public void setOrderDirection(String OrderDirection) {
         this.OrderDirection = OrderDirection;

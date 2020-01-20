@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class ModifyCcnAttributeRequest extends AbstractModel{
 
     /**
-    * CCN实例ID。形如：ccn-f49l6u0z。
+    * The CCN instance ID, such as `ccn-f49l6u0z`.
     */
     @SerializedName("CcnId")
     @Expose
     private String CcnId;
 
     /**
-    * CCN名称，最大长度不能超过60个字节。
+    * The name of the CCN. The maximum length is 60 characters.
     */
     @SerializedName("CcnName")
     @Expose
     private String CcnName;
 
     /**
-    * CCN描述信息，最大长度不能超过100个字节。
+    * The description of the CCN. The maximum length is 100 characters.
     */
     @SerializedName("CcnDescription")
     @Expose
     private String CcnDescription;
 
     /**
-     * Get CCN实例ID。形如：ccn-f49l6u0z。 
-     * @return CcnId CCN实例ID。形如：ccn-f49l6u0z。
+     * Get The CCN instance ID, such as `ccn-f49l6u0z`. 
+     * @return CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
      */
     public String getCcnId() {
         return this.CcnId;
     }
 
     /**
-     * Set CCN实例ID。形如：ccn-f49l6u0z。
-     * @param CcnId CCN实例ID。形如：ccn-f49l6u0z。
+     * Set The CCN instance ID, such as `ccn-f49l6u0z`.
+     * @param CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;
     }
 
     /**
-     * Get CCN名称，最大长度不能超过60个字节。 
-     * @return CcnName CCN名称，最大长度不能超过60个字节。
+     * Get The name of the CCN. The maximum length is 60 characters. 
+     * @return CcnName The name of the CCN. The maximum length is 60 characters.
      */
     public String getCcnName() {
         return this.CcnName;
     }
 
     /**
-     * Set CCN名称，最大长度不能超过60个字节。
-     * @param CcnName CCN名称，最大长度不能超过60个字节。
+     * Set The name of the CCN. The maximum length is 60 characters.
+     * @param CcnName The name of the CCN. The maximum length is 60 characters.
      */
     public void setCcnName(String CcnName) {
         this.CcnName = CcnName;
     }
 
     /**
-     * Get CCN描述信息，最大长度不能超过100个字节。 
-     * @return CcnDescription CCN描述信息，最大长度不能超过100个字节。
+     * Get The description of the CCN. The maximum length is 100 characters. 
+     * @return CcnDescription The description of the CCN. The maximum length is 100 characters.
      */
     public String getCcnDescription() {
         return this.CcnDescription;
     }
 
     /**
-     * Set CCN描述信息，最大长度不能超过100个字节。
-     * @param CcnDescription CCN描述信息，最大长度不能超过100个字节。
+     * Set The description of the CCN. The maximum length is 100 characters.
+     * @param CcnDescription The description of the CCN. The maximum length is 100 characters.
      */
     public void setCcnDescription(String CcnDescription) {
         this.CcnDescription = CcnDescription;

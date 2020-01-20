@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class DescribeVpcIpv6AddressesRequest extends AbstractModel{
 
     /**
-    * `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
+    * The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * `IP`地址列表，批量查询单次请求最多支持`10`个。
+    * The `IP` address list. Each request supports a maximum of `10` batch querying.
     */
     @SerializedName("Ipv6Addresses")
     @Expose
     private String [] Ipv6Addresses;
 
     /**
-    * 偏移量。
+    * Offset.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量。
+    * The returned quantity.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get `VPC`实例`ID`，形如：`vpc-f49l6u0z`。 
-     * @return VpcId `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
+     * Get The `ID` of the `VPC`, such as `vpc-f49l6u0z`. 
+     * @return VpcId The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
-     * @param VpcId `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
+     * Set The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
+     * @param VpcId The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get `IP`地址列表，批量查询单次请求最多支持`10`个。 
-     * @return Ipv6Addresses `IP`地址列表，批量查询单次请求最多支持`10`个。
+     * Get The `IP` address list. Each request supports a maximum of `10` batch querying. 
+     * @return Ipv6Addresses The `IP` address list. Each request supports a maximum of `10` batch querying.
      */
     public String [] getIpv6Addresses() {
         return this.Ipv6Addresses;
     }
 
     /**
-     * Set `IP`地址列表，批量查询单次请求最多支持`10`个。
-     * @param Ipv6Addresses `IP`地址列表，批量查询单次请求最多支持`10`个。
+     * Set The `IP` address list. Each request supports a maximum of `10` batch querying.
+     * @param Ipv6Addresses The `IP` address list. Each request supports a maximum of `10` batch querying.
      */
     public void setIpv6Addresses(String [] Ipv6Addresses) {
         this.Ipv6Addresses = Ipv6Addresses;
     }
 
     /**
-     * Get 偏移量。 
-     * @return Offset 偏移量。
+     * Get Offset. 
+     * @return Offset Offset.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量。
-     * @param Offset 偏移量。
+     * Set Offset.
+     * @param Offset Offset.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量。 
-     * @return Limit 返回数量。
+     * Get The returned quantity. 
+     * @return Limit The returned quantity.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量。
-     * @param Limit 返回数量。
+     * Set The returned quantity.
+     * @param Limit The returned quantity.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

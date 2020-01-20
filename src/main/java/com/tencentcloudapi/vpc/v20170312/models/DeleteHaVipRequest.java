@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeleteHaVipRequest extends AbstractModel{
 
     /**
-    * `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
+    * The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
     */
     @SerializedName("HaVipId")
     @Expose
     private String HaVipId;
 
     /**
-     * Get `HAVIP`唯一`ID`，形如：`havip-9o233uri`。 
-     * @return HaVipId `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
+     * Get The unique `ID` of the `HAVIP`, such as `havip-9o233uri`. 
+     * @return HaVipId The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
      */
     public String getHaVipId() {
         return this.HaVipId;
     }
 
     /**
-     * Set `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
-     * @param HaVipId `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
+     * Set The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
+     * @param HaVipId The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
      */
     public void setHaVipId(String HaVipId) {
         this.HaVipId = HaVipId;

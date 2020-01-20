@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateSubnetResponse extends AbstractModel{
 
     /**
-    * 子网对象。
+    * Subnet object.
     */
     @SerializedName("Subnet")
     @Expose
@@ -37,16 +37,16 @@ public class CreateSubnetResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 子网对象。 
-     * @return Subnet 子网对象。
+     * Get Subnet object. 
+     * @return Subnet Subnet object.
      */
     public Subnet getSubnet() {
         return this.Subnet;
     }
 
     /**
-     * Set 子网对象。
-     * @param Subnet 子网对象。
+     * Set Subnet object.
+     * @param Subnet Subnet object.
      */
     public void setSubnet(Subnet Subnet) {
         this.Subnet = Subnet;

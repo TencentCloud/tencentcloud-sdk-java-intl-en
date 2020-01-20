@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeServiceTemplateGroupsResponse extends AbstractModel{
 
     /**
-    * 符合条件的实例数量。
+    * The number of instances meeting the filter condition.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 协议端口模板集合。
+    * Protocol port template group.
     */
     @SerializedName("ServiceTemplateGroupSet")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeServiceTemplateGroupsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 符合条件的实例数量。 
-     * @return TotalCount 符合条件的实例数量。
+     * Get The number of instances meeting the filter condition. 
+     * @return TotalCount The number of instances meeting the filter condition.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的实例数量。
-     * @param TotalCount 符合条件的实例数量。
+     * Set The number of instances meeting the filter condition.
+     * @param TotalCount The number of instances meeting the filter condition.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 协议端口模板集合。 
-     * @return ServiceTemplateGroupSet 协议端口模板集合。
+     * Get Protocol port template group. 
+     * @return ServiceTemplateGroupSet Protocol port template group.
      */
     public ServiceTemplateGroup [] getServiceTemplateGroupSet() {
         return this.ServiceTemplateGroupSet;
     }
 
     /**
-     * Set 协议端口模板集合。
-     * @param ServiceTemplateGroupSet 协议端口模板集合。
+     * Set Protocol port template group.
+     * @param ServiceTemplateGroupSet Protocol port template group.
      */
     public void setServiceTemplateGroupSet(ServiceTemplateGroup [] ServiceTemplateGroupSet) {
         this.ServiceTemplateGroupSet = ServiceTemplateGroupSet;

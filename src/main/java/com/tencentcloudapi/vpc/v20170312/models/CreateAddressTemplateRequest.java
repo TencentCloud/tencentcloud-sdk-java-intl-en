@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class CreateAddressTemplateRequest extends AbstractModel{
 
     /**
-    * IP地址模版名称
+    * The name of the IP address template
     */
     @SerializedName("AddressTemplateName")
     @Expose
     private String AddressTemplateName;
 
     /**
-    * 地址信息，支持 IP、CIDR、IP 范围。
+    * Address information, including IP, CIDR and IP address range.
     */
     @SerializedName("Addresses")
     @Expose
     private String [] Addresses;
 
     /**
-     * Get IP地址模版名称 
-     * @return AddressTemplateName IP地址模版名称
+     * Get The name of the IP address template 
+     * @return AddressTemplateName The name of the IP address template
      */
     public String getAddressTemplateName() {
         return this.AddressTemplateName;
     }
 
     /**
-     * Set IP地址模版名称
-     * @param AddressTemplateName IP地址模版名称
+     * Set The name of the IP address template
+     * @param AddressTemplateName The name of the IP address template
      */
     public void setAddressTemplateName(String AddressTemplateName) {
         this.AddressTemplateName = AddressTemplateName;
     }
 
     /**
-     * Get 地址信息，支持 IP、CIDR、IP 范围。 
-     * @return Addresses 地址信息，支持 IP、CIDR、IP 范围。
+     * Get Address information, including IP, CIDR and IP address range. 
+     * @return Addresses Address information, including IP, CIDR and IP address range.
      */
     public String [] getAddresses() {
         return this.Addresses;
     }
 
     /**
-     * Set 地址信息，支持 IP、CIDR、IP 范围。
-     * @param Addresses 地址信息，支持 IP、CIDR、IP 范围。
+     * Set Address information, including IP, CIDR and IP address range.
+     * @param Addresses Address information, including IP, CIDR and IP address range.
      */
     public void setAddresses(String [] Addresses) {
         this.Addresses = Addresses;

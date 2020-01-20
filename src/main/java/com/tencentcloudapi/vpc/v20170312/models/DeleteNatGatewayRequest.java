@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeleteNatGatewayRequest extends AbstractModel{
 
     /**
-    * NAT网关的ID，形如：`nat-df45454`。
+    * The ID of the NAT gateway, such as `nat-df45454`.
     */
     @SerializedName("NatGatewayId")
     @Expose
     private String NatGatewayId;
 
     /**
-     * Get NAT网关的ID，形如：`nat-df45454`。 
-     * @return NatGatewayId NAT网关的ID，形如：`nat-df45454`。
+     * Get The ID of the NAT gateway, such as `nat-df45454`. 
+     * @return NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
      */
     public String getNatGatewayId() {
         return this.NatGatewayId;
     }
 
     /**
-     * Set NAT网关的ID，形如：`nat-df45454`。
-     * @param NatGatewayId NAT网关的ID，形如：`nat-df45454`。
+     * Set The ID of the NAT gateway, such as `nat-df45454`.
+     * @param NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
      */
     public void setNatGatewayId(String NatGatewayId) {
         this.NatGatewayId = NatGatewayId;

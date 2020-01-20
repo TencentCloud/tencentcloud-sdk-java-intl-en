@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class ModifyAddressAttributeRequest extends AbstractModel{
 
     /**
-    * 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
+    * The unique ID of the EIP, such as `eip-11112222`.
     */
     @SerializedName("AddressId")
     @Expose
     private String AddressId;
 
     /**
-    * 修改后的 EIP 名称。长度上限为20个字符。
+    * The EIP name after modification. The maximum length is 20 characters.
     */
     @SerializedName("AddressName")
     @Expose
@@ -44,32 +44,32 @@ public class ModifyAddressAttributeRequest extends AbstractModel{
     private String EipDirectConnection;
 
     /**
-     * Get 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。 
-     * @return AddressId 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
+     * Get The unique ID of the EIP, such as `eip-11112222`. 
+     * @return AddressId The unique ID of the EIP, such as `eip-11112222`.
      */
     public String getAddressId() {
         return this.AddressId;
     }
 
     /**
-     * Set 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
-     * @param AddressId 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
+     * Set The unique ID of the EIP, such as `eip-11112222`.
+     * @param AddressId The unique ID of the EIP, such as `eip-11112222`.
      */
     public void setAddressId(String AddressId) {
         this.AddressId = AddressId;
     }
 
     /**
-     * Get 修改后的 EIP 名称。长度上限为20个字符。 
-     * @return AddressName 修改后的 EIP 名称。长度上限为20个字符。
+     * Get The EIP name after modification. The maximum length is 20 characters. 
+     * @return AddressName The EIP name after modification. The maximum length is 20 characters.
      */
     public String getAddressName() {
         return this.AddressName;
     }
 
     /**
-     * Set 修改后的 EIP 名称。长度上限为20个字符。
-     * @param AddressName 修改后的 EIP 名称。长度上限为20个字符。
+     * Set The EIP name after modification. The maximum length is 20 characters.
+     * @param AddressName The EIP name after modification. The maximum length is 20 characters.
      */
     public void setAddressName(String AddressName) {
         this.AddressName = AddressName;

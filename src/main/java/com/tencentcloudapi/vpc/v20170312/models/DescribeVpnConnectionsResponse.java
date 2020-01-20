@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeVpnConnectionsResponse extends AbstractModel{
 
     /**
-    * 符合条件的实例数量。
+    * The number of instances meeting the filter condition.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * VPN通道实例。
+    * VPN tunnel instance.
     */
     @SerializedName("VpnConnectionSet")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeVpnConnectionsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 符合条件的实例数量。 
-     * @return TotalCount 符合条件的实例数量。
+     * Get The number of instances meeting the filter condition. 
+     * @return TotalCount The number of instances meeting the filter condition.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的实例数量。
-     * @param TotalCount 符合条件的实例数量。
+     * Set The number of instances meeting the filter condition.
+     * @param TotalCount The number of instances meeting the filter condition.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get VPN通道实例。 
-     * @return VpnConnectionSet VPN通道实例。
+     * Get VPN tunnel instance. 
+     * @return VpnConnectionSet VPN tunnel instance.
      */
     public VpnConnection [] getVpnConnectionSet() {
         return this.VpnConnectionSet;
     }
 
     /**
-     * Set VPN通道实例。
-     * @param VpnConnectionSet VPN通道实例。
+     * Set VPN tunnel instance.
+     * @param VpnConnectionSet VPN tunnel instance.
      */
     public void setVpnConnectionSet(VpnConnection [] VpnConnectionSet) {
         this.VpnConnectionSet = VpnConnectionSet;

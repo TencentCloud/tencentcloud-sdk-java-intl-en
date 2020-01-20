@@ -23,115 +23,115 @@ import java.util.HashMap;
 public class ModifyVpcAttributeRequest extends AbstractModel{
 
     /**
-    * VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
+    * Security group can be named freely, but cannot exceed 60 characters.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 私有网络名称，可任意命名，但不得超过60个字符。
+    * VPC can be named freely, but the maximum length is 60 characters.
     */
     @SerializedName("VpcName")
     @Expose
     private String VpcName;
 
     /**
-    * 是否开启组播。true: 开启, false: 关闭。
+    * Whether multicast is enabled. `true`: Enabled. `false`: Off.
     */
     @SerializedName("EnableMulticast")
     @Expose
     private String EnableMulticast;
 
     /**
-    * DNS地址，最多支持4个，第1个默认为主，其余为备
+    * DNS address. A maximum of 4 addresses is supported. The first one is master server by default, and the rest are slave servers.
     */
     @SerializedName("DnsServers")
     @Expose
     private String [] DnsServers;
 
     /**
-    * 域名
+    * Domain name
     */
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
 
     /**
-     * Get VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。 
-     * @return VpcId VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
+     * Get Security group can be named freely, but cannot exceed 60 characters. 
+     * @return VpcId Security group can be named freely, but cannot exceed 60 characters.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
-     * @param VpcId VPC实例ID。形如：vpc-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpcIds和Filters。
+     * Set Security group can be named freely, but cannot exceed 60 characters.
+     * @param VpcId Security group can be named freely, but cannot exceed 60 characters.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 私有网络名称，可任意命名，但不得超过60个字符。 
-     * @return VpcName 私有网络名称，可任意命名，但不得超过60个字符。
+     * Get VPC can be named freely, but the maximum length is 60 characters. 
+     * @return VpcName VPC can be named freely, but the maximum length is 60 characters.
      */
     public String getVpcName() {
         return this.VpcName;
     }
 
     /**
-     * Set 私有网络名称，可任意命名，但不得超过60个字符。
-     * @param VpcName 私有网络名称，可任意命名，但不得超过60个字符。
+     * Set VPC can be named freely, but the maximum length is 60 characters.
+     * @param VpcName VPC can be named freely, but the maximum length is 60 characters.
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
     }
 
     /**
-     * Get 是否开启组播。true: 开启, false: 关闭。 
-     * @return EnableMulticast 是否开启组播。true: 开启, false: 关闭。
+     * Get Whether multicast is enabled. `true`: Enabled. `false`: Off. 
+     * @return EnableMulticast Whether multicast is enabled. `true`: Enabled. `false`: Off.
      */
     public String getEnableMulticast() {
         return this.EnableMulticast;
     }
 
     /**
-     * Set 是否开启组播。true: 开启, false: 关闭。
-     * @param EnableMulticast 是否开启组播。true: 开启, false: 关闭。
+     * Set Whether multicast is enabled. `true`: Enabled. `false`: Off.
+     * @param EnableMulticast Whether multicast is enabled. `true`: Enabled. `false`: Off.
      */
     public void setEnableMulticast(String EnableMulticast) {
         this.EnableMulticast = EnableMulticast;
     }
 
     /**
-     * Get DNS地址，最多支持4个，第1个默认为主，其余为备 
-     * @return DnsServers DNS地址，最多支持4个，第1个默认为主，其余为备
+     * Get DNS address. A maximum of 4 addresses is supported. The first one is master server by default, and the rest are slave servers. 
+     * @return DnsServers DNS address. A maximum of 4 addresses is supported. The first one is master server by default, and the rest are slave servers.
      */
     public String [] getDnsServers() {
         return this.DnsServers;
     }
 
     /**
-     * Set DNS地址，最多支持4个，第1个默认为主，其余为备
-     * @param DnsServers DNS地址，最多支持4个，第1个默认为主，其余为备
+     * Set DNS address. A maximum of 4 addresses is supported. The first one is master server by default, and the rest are slave servers.
+     * @param DnsServers DNS address. A maximum of 4 addresses is supported. The first one is master server by default, and the rest are slave servers.
      */
     public void setDnsServers(String [] DnsServers) {
         this.DnsServers = DnsServers;
     }
 
     /**
-     * Get 域名 
-     * @return DomainName 域名
+     * Get Domain name 
+     * @return DomainName Domain name
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * Set 域名
-     * @param DomainName 域名
+     * Set Domain name
+     * @param DomainName Domain name
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;

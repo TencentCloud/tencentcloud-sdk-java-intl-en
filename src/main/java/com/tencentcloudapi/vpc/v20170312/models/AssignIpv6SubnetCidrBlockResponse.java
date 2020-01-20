@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AssignIpv6SubnetCidrBlockResponse extends AbstractModel{
 
     /**
-    * 分配 `IPv6` 子网段列表。
+    * The assigned `IPv6` subnet IP range list.
     */
     @SerializedName("Ipv6SubnetCidrBlockSet")
     @Expose
@@ -37,16 +37,16 @@ public class AssignIpv6SubnetCidrBlockResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 分配 `IPv6` 子网段列表。 
-     * @return Ipv6SubnetCidrBlockSet 分配 `IPv6` 子网段列表。
+     * Get The assigned `IPv6` subnet IP range list. 
+     * @return Ipv6SubnetCidrBlockSet The assigned `IPv6` subnet IP range list.
      */
     public Ipv6SubnetCidrBlock [] getIpv6SubnetCidrBlockSet() {
         return this.Ipv6SubnetCidrBlockSet;
     }
 
     /**
-     * Set 分配 `IPv6` 子网段列表。
-     * @param Ipv6SubnetCidrBlockSet 分配 `IPv6` 子网段列表。
+     * Set The assigned `IPv6` subnet IP range list.
+     * @param Ipv6SubnetCidrBlockSet The assigned `IPv6` subnet IP range list.
      */
     public void setIpv6SubnetCidrBlockSet(Ipv6SubnetCidrBlock [] Ipv6SubnetCidrBlockSet) {
         this.Ipv6SubnetCidrBlockSet = Ipv6SubnetCidrBlockSet;

@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class CreateSecurityGroupRequest extends AbstractModel{
 
     /**
-    * 安全组名称，可任意命名，但不得超过60个字符。
+    * Security group can be named freely, but cannot exceed 60 characters.
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * 安全组备注，最多100个字符。
+    * The remarks for the security group. The maximum length is 100 characters.
     */
     @SerializedName("GroupDescription")
     @Expose
     private String GroupDescription;
 
     /**
-    * 项目id，默认0。可在qcloud控制台项目管理页面查询到。
+    * The project id is 0 by default. You can query this in the project management page of the Qcloud console.
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-     * Get 安全组名称，可任意命名，但不得超过60个字符。 
-     * @return GroupName 安全组名称，可任意命名，但不得超过60个字符。
+     * Get Security group can be named freely, but cannot exceed 60 characters. 
+     * @return GroupName Security group can be named freely, but cannot exceed 60 characters.
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 安全组名称，可任意命名，但不得超过60个字符。
-     * @param GroupName 安全组名称，可任意命名，但不得超过60个字符。
+     * Set Security group can be named freely, but cannot exceed 60 characters.
+     * @param GroupName Security group can be named freely, but cannot exceed 60 characters.
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 安全组备注，最多100个字符。 
-     * @return GroupDescription 安全组备注，最多100个字符。
+     * Get The remarks for the security group. The maximum length is 100 characters. 
+     * @return GroupDescription The remarks for the security group. The maximum length is 100 characters.
      */
     public String getGroupDescription() {
         return this.GroupDescription;
     }
 
     /**
-     * Set 安全组备注，最多100个字符。
-     * @param GroupDescription 安全组备注，最多100个字符。
+     * Set The remarks for the security group. The maximum length is 100 characters.
+     * @param GroupDescription The remarks for the security group. The maximum length is 100 characters.
      */
     public void setGroupDescription(String GroupDescription) {
         this.GroupDescription = GroupDescription;
     }
 
     /**
-     * Get 项目id，默认0。可在qcloud控制台项目管理页面查询到。 
-     * @return ProjectId 项目id，默认0。可在qcloud控制台项目管理页面查询到。
+     * Get The project id is 0 by default. You can query this in the project management page of the Qcloud console. 
+     * @return ProjectId The project id is 0 by default. You can query this in the project management page of the Qcloud console.
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目id，默认0。可在qcloud控制台项目管理页面查询到。
-     * @param ProjectId 项目id，默认0。可在qcloud控制台项目管理页面查询到。
+     * Set The project id is 0 by default. You can query this in the project management page of the Qcloud console.
+     * @param ProjectId The project id is 0 by default. You can query this in the project management page of the Qcloud console.
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;

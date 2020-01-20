@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeCcnAttachedInstancesResponse extends AbstractModel{
 
     /**
-    * 符合条件的对象数。
+    * The number of objects meeting the condition.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 关联实例列表。
+    * The list of associated instances.
     */
     @SerializedName("InstanceSet")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeCcnAttachedInstancesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 符合条件的对象数。 
-     * @return TotalCount 符合条件的对象数。
+     * Get The number of objects meeting the condition. 
+     * @return TotalCount The number of objects meeting the condition.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的对象数。
-     * @param TotalCount 符合条件的对象数。
+     * Set The number of objects meeting the condition.
+     * @param TotalCount The number of objects meeting the condition.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 关联实例列表。 
-     * @return InstanceSet 关联实例列表。
+     * Get The list of associated instances. 
+     * @return InstanceSet The list of associated instances.
      */
     public CcnAttachedInstance [] getInstanceSet() {
         return this.InstanceSet;
     }
 
     /**
-     * Set 关联实例列表。
-     * @param InstanceSet 关联实例列表。
+     * Set The list of associated instances.
+     * @param InstanceSet The list of associated instances.
      */
     public void setInstanceSet(CcnAttachedInstance [] InstanceSet) {
         this.InstanceSet = InstanceSet;

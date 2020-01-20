@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DisableCcnRoutesRequest extends AbstractModel{
 
     /**
-    * CCN实例ID。形如：ccn-f49l6u0z。
+    * The CCN instance ID, such as `ccn-f49l6u0z`.
     */
     @SerializedName("CcnId")
     @Expose
     private String CcnId;
 
     /**
-    * CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
+    * The unique ID of the CCN routing policy, such as `ccnr-f49l6u0z`.
     */
     @SerializedName("RouteIds")
     @Expose
     private String [] RouteIds;
 
     /**
-     * Get CCN实例ID。形如：ccn-f49l6u0z。 
-     * @return CcnId CCN实例ID。形如：ccn-f49l6u0z。
+     * Get The CCN instance ID, such as `ccn-f49l6u0z`. 
+     * @return CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
      */
     public String getCcnId() {
         return this.CcnId;
     }
 
     /**
-     * Set CCN实例ID。形如：ccn-f49l6u0z。
-     * @param CcnId CCN实例ID。形如：ccn-f49l6u0z。
+     * Set The CCN instance ID, such as `ccn-f49l6u0z`.
+     * @param CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;
     }
 
     /**
-     * Get CCN路由策略唯一ID。形如：ccnr-f49l6u0z。 
-     * @return RouteIds CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
+     * Get The unique ID of the CCN routing policy, such as `ccnr-f49l6u0z`. 
+     * @return RouteIds The unique ID of the CCN routing policy, such as `ccnr-f49l6u0z`.
      */
     public String [] getRouteIds() {
         return this.RouteIds;
     }
 
     /**
-     * Set CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
-     * @param RouteIds CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
+     * Set The unique ID of the CCN routing policy, such as `ccnr-f49l6u0z`.
+     * @param RouteIds The unique ID of the CCN routing policy, such as `ccnr-f49l6u0z`.
      */
     public void setRouteIds(String [] RouteIds) {
         this.RouteIds = RouteIds;

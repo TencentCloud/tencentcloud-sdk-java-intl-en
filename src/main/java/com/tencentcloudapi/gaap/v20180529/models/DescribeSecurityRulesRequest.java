@@ -23,9 +23,33 @@ import java.util.HashMap;
 public class DescribeSecurityRulesRequest extends AbstractModel{
 
     /**
+    * List of security rule IDs. Up to 20 security rules are supported.
+    */
+    @SerializedName("SecurityRuleIds")
+    @Expose
+    private String [] SecurityRuleIds;
+
+    /**
+     * Get List of security rule IDs. Up to 20 security rules are supported. 
+     * @return SecurityRuleIds List of security rule IDs. Up to 20 security rules are supported.
+     */
+    public String [] getSecurityRuleIds() {
+        return this.SecurityRuleIds;
+    }
+
+    /**
+     * Set List of security rule IDs. Up to 20 security rules are supported.
+     * @param SecurityRuleIds List of security rule IDs. Up to 20 security rules are supported.
+     */
+    public void setSecurityRuleIds(String [] SecurityRuleIds) {
+        this.SecurityRuleIds = SecurityRuleIds;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "SecurityRuleIds.", this.SecurityRuleIds);
 
     }
 }

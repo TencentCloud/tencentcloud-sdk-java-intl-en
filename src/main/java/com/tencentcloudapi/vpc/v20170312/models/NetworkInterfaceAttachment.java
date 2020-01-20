@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class NetworkInterfaceAttachment extends AbstractModel{
 
     /**
-    * 云主机实例ID。
+    * CVM instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 网卡在云主机实例内的序号。
+    * The serial number of ENI in the CVM instance.
     */
     @SerializedName("DeviceIndex")
     @Expose
     private Long DeviceIndex;
 
     /**
-    * 云主机所有者账户信息。
+    * The account information of the CVM owner.
     */
     @SerializedName("InstanceAccountId")
     @Expose
     private String InstanceAccountId;
 
     /**
-    * 绑定时间。
+    * Binding time
     */
     @SerializedName("AttachTime")
     @Expose
     private String AttachTime;
 
     /**
-     * Get 云主机实例ID。 
-     * @return InstanceId 云主机实例ID。
+     * Get CVM instance ID. 
+     * @return InstanceId CVM instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 云主机实例ID。
-     * @param InstanceId 云主机实例ID。
+     * Set CVM instance ID.
+     * @param InstanceId CVM instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 网卡在云主机实例内的序号。 
-     * @return DeviceIndex 网卡在云主机实例内的序号。
+     * Get The serial number of ENI in the CVM instance. 
+     * @return DeviceIndex The serial number of ENI in the CVM instance.
      */
     public Long getDeviceIndex() {
         return this.DeviceIndex;
     }
 
     /**
-     * Set 网卡在云主机实例内的序号。
-     * @param DeviceIndex 网卡在云主机实例内的序号。
+     * Set The serial number of ENI in the CVM instance.
+     * @param DeviceIndex The serial number of ENI in the CVM instance.
      */
     public void setDeviceIndex(Long DeviceIndex) {
         this.DeviceIndex = DeviceIndex;
     }
 
     /**
-     * Get 云主机所有者账户信息。 
-     * @return InstanceAccountId 云主机所有者账户信息。
+     * Get The account information of the CVM owner. 
+     * @return InstanceAccountId The account information of the CVM owner.
      */
     public String getInstanceAccountId() {
         return this.InstanceAccountId;
     }
 
     /**
-     * Set 云主机所有者账户信息。
-     * @param InstanceAccountId 云主机所有者账户信息。
+     * Set The account information of the CVM owner.
+     * @param InstanceAccountId The account information of the CVM owner.
      */
     public void setInstanceAccountId(String InstanceAccountId) {
         this.InstanceAccountId = InstanceAccountId;
     }
 
     /**
-     * Get 绑定时间。 
-     * @return AttachTime 绑定时间。
+     * Get Binding time 
+     * @return AttachTime Binding time
      */
     public String getAttachTime() {
         return this.AttachTime;
     }
 
     /**
-     * Set 绑定时间。
-     * @param AttachTime 绑定时间。
+     * Set Binding time
+     * @param AttachTime Binding time
      */
     public void setAttachTime(String AttachTime) {
         this.AttachTime = AttachTime;

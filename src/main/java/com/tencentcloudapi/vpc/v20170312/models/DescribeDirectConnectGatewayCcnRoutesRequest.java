@@ -23,102 +23,102 @@ import java.util.HashMap;
 public class DescribeDirectConnectGatewayCcnRoutesRequest extends AbstractModel{
 
     /**
-    * 专线网关ID，形如：`dcg-prpqlmg1`。
+    * The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`.
     */
     @SerializedName("DirectConnectGatewayId")
     @Expose
     private String DirectConnectGatewayId;
 
     /**
-    * 云联网路由学习类型，可选值：
-<li>`BGP` - 自动学习。</li>
-<li>`STATIC` - 静态，即用户配置，默认值。</li>
+    * The route learning type of the CCN. Available values:
+<li>`BGP` - Automatic learning.</li>
+<li>`STATIC` - Static means user-configured. This is the default value.</li>
     */
     @SerializedName("CcnRouteType")
     @Expose
     private String CcnRouteType;
 
     /**
-    * 偏移量。
+    * Offset.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量。
+    * The returned quantity.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 专线网关ID，形如：`dcg-prpqlmg1`。 
-     * @return DirectConnectGatewayId 专线网关ID，形如：`dcg-prpqlmg1`。
+     * Get The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`. 
+     * @return DirectConnectGatewayId The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`.
      */
     public String getDirectConnectGatewayId() {
         return this.DirectConnectGatewayId;
     }
 
     /**
-     * Set 专线网关ID，形如：`dcg-prpqlmg1`。
-     * @param DirectConnectGatewayId 专线网关ID，形如：`dcg-prpqlmg1`。
+     * Set The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`.
+     * @param DirectConnectGatewayId The ID of the Direct Connect gateway, such as `dcg-prpqlmg1`.
      */
     public void setDirectConnectGatewayId(String DirectConnectGatewayId) {
         this.DirectConnectGatewayId = DirectConnectGatewayId;
     }
 
     /**
-     * Get 云联网路由学习类型，可选值：
-<li>`BGP` - 自动学习。</li>
-<li>`STATIC` - 静态，即用户配置，默认值。</li> 
-     * @return CcnRouteType 云联网路由学习类型，可选值：
-<li>`BGP` - 自动学习。</li>
-<li>`STATIC` - 静态，即用户配置，默认值。</li>
+     * Get The route learning type of the CCN. Available values:
+<li>`BGP` - Automatic learning.</li>
+<li>`STATIC` - Static means user-configured. This is the default value.</li> 
+     * @return CcnRouteType The route learning type of the CCN. Available values:
+<li>`BGP` - Automatic learning.</li>
+<li>`STATIC` - Static means user-configured. This is the default value.</li>
      */
     public String getCcnRouteType() {
         return this.CcnRouteType;
     }
 
     /**
-     * Set 云联网路由学习类型，可选值：
-<li>`BGP` - 自动学习。</li>
-<li>`STATIC` - 静态，即用户配置，默认值。</li>
-     * @param CcnRouteType 云联网路由学习类型，可选值：
-<li>`BGP` - 自动学习。</li>
-<li>`STATIC` - 静态，即用户配置，默认值。</li>
+     * Set The route learning type of the CCN. Available values:
+<li>`BGP` - Automatic learning.</li>
+<li>`STATIC` - Static means user-configured. This is the default value.</li>
+     * @param CcnRouteType The route learning type of the CCN. Available values:
+<li>`BGP` - Automatic learning.</li>
+<li>`STATIC` - Static means user-configured. This is the default value.</li>
      */
     public void setCcnRouteType(String CcnRouteType) {
         this.CcnRouteType = CcnRouteType;
     }
 
     /**
-     * Get 偏移量。 
-     * @return Offset 偏移量。
+     * Get Offset. 
+     * @return Offset Offset.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量。
-     * @param Offset 偏移量。
+     * Set Offset.
+     * @param Offset Offset.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量。 
-     * @return Limit 返回数量。
+     * Get The returned quantity. 
+     * @return Limit The returned quantity.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量。
-     * @param Limit 返回数量。
+     * Set The returned quantity.
+     * @param Limit The returned quantity.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

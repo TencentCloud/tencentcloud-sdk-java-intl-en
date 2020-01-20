@@ -23,11 +23,57 @@ import java.util.HashMap;
 public class DescribeSecurityRulesResponse extends AbstractModel{
 
     /**
+    * The number of returned security rules.
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
+    * List of returned security rules.
+    */
+    @SerializedName("SecurityRuleSet")
+    @Expose
+    private SecurityPolicyRuleOut [] SecurityRuleSet;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get The number of returned security rules. 
+     * @return TotalCount The number of returned security rules.
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set The number of returned security rules.
+     * @param TotalCount The number of returned security rules.
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get List of returned security rules. 
+     * @return SecurityRuleSet List of returned security rules.
+     */
+    public SecurityPolicyRuleOut [] getSecurityRuleSet() {
+        return this.SecurityRuleSet;
+    }
+
+    /**
+     * Set List of returned security rules.
+     * @param SecurityRuleSet List of returned security rules.
+     */
+    public void setSecurityRuleSet(SecurityPolicyRuleOut [] SecurityRuleSet) {
+        this.SecurityRuleSet = SecurityRuleSet;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -49,6 +95,8 @@ public class DescribeSecurityRulesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "SecurityRuleSet.", this.SecurityRuleSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class HaVipAssociateAddressIpRequest extends AbstractModel{
 
     /**
-    * `HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP`
+    * The unique `ID` of the `HAVIP`, such as `havip-9o233uri`. This must be a `HAVIP` that has not been bound to an `EIP`
     */
     @SerializedName("HaVipId")
     @Expose
     private String HaVipId;
 
     /**
-    * 弹性公网`IP`。必须是没有绑定`HAVIP`的`EIP`
+    * The Elastic `IP`. This must be an `EIP` that has not been bound to a `HAVIP`
     */
     @SerializedName("AddressIp")
     @Expose
     private String AddressIp;
 
     /**
-     * Get `HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP` 
-     * @return HaVipId `HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP`
+     * Get The unique `ID` of the `HAVIP`, such as `havip-9o233uri`. This must be a `HAVIP` that has not been bound to an `EIP` 
+     * @return HaVipId The unique `ID` of the `HAVIP`, such as `havip-9o233uri`. This must be a `HAVIP` that has not been bound to an `EIP`
      */
     public String getHaVipId() {
         return this.HaVipId;
     }
 
     /**
-     * Set `HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP`
-     * @param HaVipId `HAVIP`唯一`ID`，形如：`havip-9o233uri`。必须是没有绑定`EIP`的`HAVIP`
+     * Set The unique `ID` of the `HAVIP`, such as `havip-9o233uri`. This must be a `HAVIP` that has not been bound to an `EIP`
+     * @param HaVipId The unique `ID` of the `HAVIP`, such as `havip-9o233uri`. This must be a `HAVIP` that has not been bound to an `EIP`
      */
     public void setHaVipId(String HaVipId) {
         this.HaVipId = HaVipId;
     }
 
     /**
-     * Get 弹性公网`IP`。必须是没有绑定`HAVIP`的`EIP` 
-     * @return AddressIp 弹性公网`IP`。必须是没有绑定`HAVIP`的`EIP`
+     * Get The Elastic `IP`. This must be an `EIP` that has not been bound to a `HAVIP` 
+     * @return AddressIp The Elastic `IP`. This must be an `EIP` that has not been bound to a `HAVIP`
      */
     public String getAddressIp() {
         return this.AddressIp;
     }
 
     /**
-     * Set 弹性公网`IP`。必须是没有绑定`HAVIP`的`EIP`
-     * @param AddressIp 弹性公网`IP`。必须是没有绑定`HAVIP`的`EIP`
+     * Set The Elastic `IP`. This must be an `EIP` that has not been bound to a `HAVIP`
+     * @param AddressIp The Elastic `IP`. This must be an `EIP` that has not been bound to a `HAVIP`
      */
     public void setAddressIp(String AddressIp) {
         this.AddressIp = AddressIp;

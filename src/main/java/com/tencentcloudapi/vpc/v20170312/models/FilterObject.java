@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class FilterObject extends AbstractModel{
 
     /**
-    * 属性名称, 若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
+    * The attribute name. If more than one Filter exists, the logical relation between these Filters is `AND`.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
+    * The attribute value. If there are multiple Values for one Filter, the logical relation between these Values under the same Filter is `OR`.
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-     * Get 属性名称, 若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。 
-     * @return Name 属性名称, 若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
+     * Get The attribute name. If more than one Filter exists, the logical relation between these Filters is `AND`. 
+     * @return Name The attribute name. If more than one Filter exists, the logical relation between these Filters is `AND`.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 属性名称, 若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
-     * @param Name 属性名称, 若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
+     * Set The attribute name. If more than one Filter exists, the logical relation between these Filters is `AND`.
+     * @param Name The attribute name. If more than one Filter exists, the logical relation between these Filters is `AND`.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。 
-     * @return Values 属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
+     * Get The attribute value. If there are multiple Values for one Filter, the logical relation between these Values under the same Filter is `OR`. 
+     * @return Values The attribute value. If there are multiple Values for one Filter, the logical relation between these Values under the same Filter is `OR`.
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set 属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
-     * @param Values 属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
+     * Set The attribute value. If there are multiple Values for one Filter, the logical relation between these Values under the same Filter is `OR`.
+     * @param Values The attribute value. If there are multiple Values for one Filter, the logical relation between these Values under the same Filter is `OR`.
      */
     public void setValues(String [] Values) {
         this.Values = Values;

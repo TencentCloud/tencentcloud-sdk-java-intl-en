@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class AssignIpv6AddressesRequest extends AbstractModel{
 
     /**
-    * 弹性网卡实例`ID`，形如：`eni-m6dyj72l`。
+    * The `ID` of the ENI instance, such as `eni-m6dyj72l`.
     */
     @SerializedName("NetworkInterfaceId")
     @Expose
     private String NetworkInterfaceId;
 
     /**
-    * 指定的`IPv6`地址列表，单次最多指定10个。与入参`Ipv6AddressCount`合并计算配额。
+    * The specified `IPv6` address list. You can specify a maximum of 10 at one time. The quota is calculated together with the `Ipv6AddressCount` input parameter.
     */
     @SerializedName("Ipv6Addresses")
     @Expose
     private Ipv6Address [] Ipv6Addresses;
 
     /**
-    * 自动分配`IPv6`地址个数，内网IP地址个数总和不能超过配数。与入参`Ipv6Addresses`合并计算配额。
+    * The number of automatically assigned `IPv6` addresses. The total number of private IP addresses cannot exceed the quota. The quota is calculated together with the `Ipv6Addresses` input parameter.
     */
     @SerializedName("Ipv6AddressCount")
     @Expose
     private Long Ipv6AddressCount;
 
     /**
-     * Get 弹性网卡实例`ID`，形如：`eni-m6dyj72l`。 
-     * @return NetworkInterfaceId 弹性网卡实例`ID`，形如：`eni-m6dyj72l`。
+     * Get The `ID` of the ENI instance, such as `eni-m6dyj72l`. 
+     * @return NetworkInterfaceId The `ID` of the ENI instance, such as `eni-m6dyj72l`.
      */
     public String getNetworkInterfaceId() {
         return this.NetworkInterfaceId;
     }
 
     /**
-     * Set 弹性网卡实例`ID`，形如：`eni-m6dyj72l`。
-     * @param NetworkInterfaceId 弹性网卡实例`ID`，形如：`eni-m6dyj72l`。
+     * Set The `ID` of the ENI instance, such as `eni-m6dyj72l`.
+     * @param NetworkInterfaceId The `ID` of the ENI instance, such as `eni-m6dyj72l`.
      */
     public void setNetworkInterfaceId(String NetworkInterfaceId) {
         this.NetworkInterfaceId = NetworkInterfaceId;
     }
 
     /**
-     * Get 指定的`IPv6`地址列表，单次最多指定10个。与入参`Ipv6AddressCount`合并计算配额。 
-     * @return Ipv6Addresses 指定的`IPv6`地址列表，单次最多指定10个。与入参`Ipv6AddressCount`合并计算配额。
+     * Get The specified `IPv6` address list. You can specify a maximum of 10 at one time. The quota is calculated together with the `Ipv6AddressCount` input parameter. 
+     * @return Ipv6Addresses The specified `IPv6` address list. You can specify a maximum of 10 at one time. The quota is calculated together with the `Ipv6AddressCount` input parameter.
      */
     public Ipv6Address [] getIpv6Addresses() {
         return this.Ipv6Addresses;
     }
 
     /**
-     * Set 指定的`IPv6`地址列表，单次最多指定10个。与入参`Ipv6AddressCount`合并计算配额。
-     * @param Ipv6Addresses 指定的`IPv6`地址列表，单次最多指定10个。与入参`Ipv6AddressCount`合并计算配额。
+     * Set The specified `IPv6` address list. You can specify a maximum of 10 at one time. The quota is calculated together with the `Ipv6AddressCount` input parameter.
+     * @param Ipv6Addresses The specified `IPv6` address list. You can specify a maximum of 10 at one time. The quota is calculated together with the `Ipv6AddressCount` input parameter.
      */
     public void setIpv6Addresses(Ipv6Address [] Ipv6Addresses) {
         this.Ipv6Addresses = Ipv6Addresses;
     }
 
     /**
-     * Get 自动分配`IPv6`地址个数，内网IP地址个数总和不能超过配数。与入参`Ipv6Addresses`合并计算配额。 
-     * @return Ipv6AddressCount 自动分配`IPv6`地址个数，内网IP地址个数总和不能超过配数。与入参`Ipv6Addresses`合并计算配额。
+     * Get The number of automatically assigned `IPv6` addresses. The total number of private IP addresses cannot exceed the quota. The quota is calculated together with the `Ipv6Addresses` input parameter. 
+     * @return Ipv6AddressCount The number of automatically assigned `IPv6` addresses. The total number of private IP addresses cannot exceed the quota. The quota is calculated together with the `Ipv6Addresses` input parameter.
      */
     public Long getIpv6AddressCount() {
         return this.Ipv6AddressCount;
     }
 
     /**
-     * Set 自动分配`IPv6`地址个数，内网IP地址个数总和不能超过配数。与入参`Ipv6Addresses`合并计算配额。
-     * @param Ipv6AddressCount 自动分配`IPv6`地址个数，内网IP地址个数总和不能超过配数。与入参`Ipv6Addresses`合并计算配额。
+     * Set The number of automatically assigned `IPv6` addresses. The total number of private IP addresses cannot exceed the quota. The quota is calculated together with the `Ipv6Addresses` input parameter.
+     * @param Ipv6AddressCount The number of automatically assigned `IPv6` addresses. The total number of private IP addresses cannot exceed the quota. The quota is calculated together with the `Ipv6Addresses` input parameter.
      */
     public void setIpv6AddressCount(Long Ipv6AddressCount) {
         this.Ipv6AddressCount = Ipv6AddressCount;

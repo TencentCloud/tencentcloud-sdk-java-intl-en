@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeAccountAttributesResponse extends AbstractModel{
 
     /**
-    * 用户账号属性对象
+    * User account attribute object
     */
     @SerializedName("AccountAttributeSet")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeAccountAttributesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 用户账号属性对象 
-     * @return AccountAttributeSet 用户账号属性对象
+     * Get User account attribute object 
+     * @return AccountAttributeSet User account attribute object
      */
     public AccountAttribute [] getAccountAttributeSet() {
         return this.AccountAttributeSet;
     }
 
     /**
-     * Set 用户账号属性对象
-     * @param AccountAttributeSet 用户账号属性对象
+     * Set User account attribute object
+     * @param AccountAttributeSet User account attribute object
      */
     public void setAccountAttributeSet(AccountAttribute [] AccountAttributeSet) {
         this.AccountAttributeSet = AccountAttributeSet;

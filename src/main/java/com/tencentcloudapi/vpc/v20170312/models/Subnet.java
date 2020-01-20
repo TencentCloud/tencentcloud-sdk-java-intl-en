@@ -23,299 +23,299 @@ import java.util.HashMap;
 public class Subnet extends AbstractModel{
 
     /**
-    * `VPC`实例`ID`。
+    * The `ID` of the `VPC` instance.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网实例`ID`，例如：subnet-bthucmmy。
+    * Subnet instance `ID`, such as `subnet-bthucmmy`.
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 子网名称。
+    * Subnet name.
     */
     @SerializedName("SubnetName")
     @Expose
     private String SubnetName;
 
     /**
-    * 子网的 `IPv4` `CIDR`。
+    * The `IPv4` `CIDR` of the subnet.
     */
     @SerializedName("CidrBlock")
     @Expose
     private String CidrBlock;
 
     /**
-    * 是否默认子网。
+    * Whether it is the default subnet.
     */
     @SerializedName("IsDefault")
     @Expose
     private Boolean IsDefault;
 
     /**
-    * 是否开启广播。
+    * Whether to enable broadcast.
     */
     @SerializedName("EnableBroadcast")
     @Expose
     private Boolean EnableBroadcast;
 
     /**
-    * 可用区。
+    * Availability Zone.
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 路由表实例ID，例如：rtb-l2h8d7c2。
+    * The route table instance ID, such as `rtb-l2h8d7c2`.
     */
     @SerializedName("RouteTableId")
     @Expose
     private String RouteTableId;
 
     /**
-    * 创建时间。
+    * Creation Time.
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * 可用`IP`数。
+    * The number of available `IP`s.
     */
     @SerializedName("AvailableIpAddressCount")
     @Expose
     private Long AvailableIpAddressCount;
 
     /**
-    * 子网的 `IPv6` `CIDR`。
+    * The `IPv6` `CIDR` of the subnet.
     */
     @SerializedName("Ipv6CidrBlock")
     @Expose
     private String Ipv6CidrBlock;
 
     /**
-    * 关联`ACL`ID
+    * The associated `ACL`ID
     */
     @SerializedName("NetworkAclId")
     @Expose
     private String NetworkAclId;
 
     /**
-    * 是否为 `SNAT` 地址池子网。
+    * Whether it is a `SNAT` address pool subnet.
     */
     @SerializedName("IsRemoteVpcSnat")
     @Expose
     private Boolean IsRemoteVpcSnat;
 
     /**
-     * Get `VPC`实例`ID`。 
-     * @return VpcId `VPC`实例`ID`。
+     * Get The `ID` of the `VPC` instance. 
+     * @return VpcId The `ID` of the `VPC` instance.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set `VPC`实例`ID`。
-     * @param VpcId `VPC`实例`ID`。
+     * Set The `ID` of the `VPC` instance.
+     * @param VpcId The `ID` of the `VPC` instance.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网实例`ID`，例如：subnet-bthucmmy。 
-     * @return SubnetId 子网实例`ID`，例如：subnet-bthucmmy。
+     * Get Subnet instance `ID`, such as `subnet-bthucmmy`. 
+     * @return SubnetId Subnet instance `ID`, such as `subnet-bthucmmy`.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网实例`ID`，例如：subnet-bthucmmy。
-     * @param SubnetId 子网实例`ID`，例如：subnet-bthucmmy。
+     * Set Subnet instance `ID`, such as `subnet-bthucmmy`.
+     * @param SubnetId Subnet instance `ID`, such as `subnet-bthucmmy`.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 子网名称。 
-     * @return SubnetName 子网名称。
+     * Get Subnet name. 
+     * @return SubnetName Subnet name.
      */
     public String getSubnetName() {
         return this.SubnetName;
     }
 
     /**
-     * Set 子网名称。
-     * @param SubnetName 子网名称。
+     * Set Subnet name.
+     * @param SubnetName Subnet name.
      */
     public void setSubnetName(String SubnetName) {
         this.SubnetName = SubnetName;
     }
 
     /**
-     * Get 子网的 `IPv4` `CIDR`。 
-     * @return CidrBlock 子网的 `IPv4` `CIDR`。
+     * Get The `IPv4` `CIDR` of the subnet. 
+     * @return CidrBlock The `IPv4` `CIDR` of the subnet.
      */
     public String getCidrBlock() {
         return this.CidrBlock;
     }
 
     /**
-     * Set 子网的 `IPv4` `CIDR`。
-     * @param CidrBlock 子网的 `IPv4` `CIDR`。
+     * Set The `IPv4` `CIDR` of the subnet.
+     * @param CidrBlock The `IPv4` `CIDR` of the subnet.
      */
     public void setCidrBlock(String CidrBlock) {
         this.CidrBlock = CidrBlock;
     }
 
     /**
-     * Get 是否默认子网。 
-     * @return IsDefault 是否默认子网。
+     * Get Whether it is the default subnet. 
+     * @return IsDefault Whether it is the default subnet.
      */
     public Boolean getIsDefault() {
         return this.IsDefault;
     }
 
     /**
-     * Set 是否默认子网。
-     * @param IsDefault 是否默认子网。
+     * Set Whether it is the default subnet.
+     * @param IsDefault Whether it is the default subnet.
      */
     public void setIsDefault(Boolean IsDefault) {
         this.IsDefault = IsDefault;
     }
 
     /**
-     * Get 是否开启广播。 
-     * @return EnableBroadcast 是否开启广播。
+     * Get Whether to enable broadcast. 
+     * @return EnableBroadcast Whether to enable broadcast.
      */
     public Boolean getEnableBroadcast() {
         return this.EnableBroadcast;
     }
 
     /**
-     * Set 是否开启广播。
-     * @param EnableBroadcast 是否开启广播。
+     * Set Whether to enable broadcast.
+     * @param EnableBroadcast Whether to enable broadcast.
      */
     public void setEnableBroadcast(Boolean EnableBroadcast) {
         this.EnableBroadcast = EnableBroadcast;
     }
 
     /**
-     * Get 可用区。 
-     * @return Zone 可用区。
+     * Get Availability Zone. 
+     * @return Zone Availability Zone.
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区。
-     * @param Zone 可用区。
+     * Set Availability Zone.
+     * @param Zone Availability Zone.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 路由表实例ID，例如：rtb-l2h8d7c2。 
-     * @return RouteTableId 路由表实例ID，例如：rtb-l2h8d7c2。
+     * Get The route table instance ID, such as `rtb-l2h8d7c2`. 
+     * @return RouteTableId The route table instance ID, such as `rtb-l2h8d7c2`.
      */
     public String getRouteTableId() {
         return this.RouteTableId;
     }
 
     /**
-     * Set 路由表实例ID，例如：rtb-l2h8d7c2。
-     * @param RouteTableId 路由表实例ID，例如：rtb-l2h8d7c2。
+     * Set The route table instance ID, such as `rtb-l2h8d7c2`.
+     * @param RouteTableId The route table instance ID, such as `rtb-l2h8d7c2`.
      */
     public void setRouteTableId(String RouteTableId) {
         this.RouteTableId = RouteTableId;
     }
 
     /**
-     * Get 创建时间。 
-     * @return CreatedTime 创建时间。
+     * Get Creation Time. 
+     * @return CreatedTime Creation Time.
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间。
-     * @param CreatedTime 创建时间。
+     * Set Creation Time.
+     * @param CreatedTime Creation Time.
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 可用`IP`数。 
-     * @return AvailableIpAddressCount 可用`IP`数。
+     * Get The number of available `IP`s. 
+     * @return AvailableIpAddressCount The number of available `IP`s.
      */
     public Long getAvailableIpAddressCount() {
         return this.AvailableIpAddressCount;
     }
 
     /**
-     * Set 可用`IP`数。
-     * @param AvailableIpAddressCount 可用`IP`数。
+     * Set The number of available `IP`s.
+     * @param AvailableIpAddressCount The number of available `IP`s.
      */
     public void setAvailableIpAddressCount(Long AvailableIpAddressCount) {
         this.AvailableIpAddressCount = AvailableIpAddressCount;
     }
 
     /**
-     * Get 子网的 `IPv6` `CIDR`。 
-     * @return Ipv6CidrBlock 子网的 `IPv6` `CIDR`。
+     * Get The `IPv6` `CIDR` of the subnet. 
+     * @return Ipv6CidrBlock The `IPv6` `CIDR` of the subnet.
      */
     public String getIpv6CidrBlock() {
         return this.Ipv6CidrBlock;
     }
 
     /**
-     * Set 子网的 `IPv6` `CIDR`。
-     * @param Ipv6CidrBlock 子网的 `IPv6` `CIDR`。
+     * Set The `IPv6` `CIDR` of the subnet.
+     * @param Ipv6CidrBlock The `IPv6` `CIDR` of the subnet.
      */
     public void setIpv6CidrBlock(String Ipv6CidrBlock) {
         this.Ipv6CidrBlock = Ipv6CidrBlock;
     }
 
     /**
-     * Get 关联`ACL`ID 
-     * @return NetworkAclId 关联`ACL`ID
+     * Get The associated `ACL`ID 
+     * @return NetworkAclId The associated `ACL`ID
      */
     public String getNetworkAclId() {
         return this.NetworkAclId;
     }
 
     /**
-     * Set 关联`ACL`ID
-     * @param NetworkAclId 关联`ACL`ID
+     * Set The associated `ACL`ID
+     * @param NetworkAclId The associated `ACL`ID
      */
     public void setNetworkAclId(String NetworkAclId) {
         this.NetworkAclId = NetworkAclId;
     }
 
     /**
-     * Get 是否为 `SNAT` 地址池子网。 
-     * @return IsRemoteVpcSnat 是否为 `SNAT` 地址池子网。
+     * Get Whether it is a `SNAT` address pool subnet. 
+     * @return IsRemoteVpcSnat Whether it is a `SNAT` address pool subnet.
      */
     public Boolean getIsRemoteVpcSnat() {
         return this.IsRemoteVpcSnat;
     }
 
     /**
-     * Set 是否为 `SNAT` 地址池子网。
-     * @param IsRemoteVpcSnat 是否为 `SNAT` 地址池子网。
+     * Set Whether it is a `SNAT` address pool subnet.
+     * @param IsRemoteVpcSnat Whether it is a `SNAT` address pool subnet.
      */
     public void setIsRemoteVpcSnat(Boolean IsRemoteVpcSnat) {
         this.IsRemoteVpcSnat = IsRemoteVpcSnat;

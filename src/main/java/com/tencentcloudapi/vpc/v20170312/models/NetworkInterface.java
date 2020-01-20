@@ -23,111 +23,111 @@ import java.util.HashMap;
 public class NetworkInterface extends AbstractModel{
 
     /**
-    * 弹性网卡实例ID，例如：eni-f1xjkw1b。
+    * The ID of the ENI instance, such as `eni-f1xjkw1b`.
     */
     @SerializedName("NetworkInterfaceId")
     @Expose
     private String NetworkInterfaceId;
 
     /**
-    * 弹性网卡名称。
+    * ENI Name
     */
     @SerializedName("NetworkInterfaceName")
     @Expose
     private String NetworkInterfaceName;
 
     /**
-    * 弹性网卡描述。
+    * ENI description.
     */
     @SerializedName("NetworkInterfaceDescription")
     @Expose
     private String NetworkInterfaceDescription;
 
     /**
-    * 子网实例ID。
+    * Subnet instance ID.
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * VPC实例ID。
+    * VPC instance ID.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 绑定的安全组。
+    * Bound security group.
     */
     @SerializedName("GroupSet")
     @Expose
     private String [] GroupSet;
 
     /**
-    * 是否是主网卡。
+    * Whether it is the primary ENI.
     */
     @SerializedName("Primary")
     @Expose
     private Boolean Primary;
 
     /**
-    * MAC地址。
+    * MAC address
     */
     @SerializedName("MacAddress")
     @Expose
     private String MacAddress;
 
     /**
-    * 弹性网卡状态：
-<li>`PENDING`：创建中</li>
-<li>`AVAILABLE`：可用的</li>
-<li>`ATTACHING`：绑定中</li>
-<li>`DETACHING`：解绑中</li>
-<li>`DELETING`：删除中</li>
+    * ENI status:
+<li>`PENDING`: Creating</li>
+<li>`AVAILABLE`: Available</li>
+<li>`ATTACHING`: Binding</li>
+<li>`DETACHING`: Unbinding</li>
+<li>`DELETING`: Deleting</li>
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * 内网IP信息。
+    * Private IP information.
     */
     @SerializedName("PrivateIpAddressSet")
     @Expose
     private PrivateIpAddressSpecification [] PrivateIpAddressSet;
 
     /**
-    * 绑定的云服务器对象。
-注意：此字段可能返回 null，表示取不到有效值。
+    * Bound CVM object.
+Note: This field may return null, indicating no valid value.
     */
     @SerializedName("Attachment")
     @Expose
     private NetworkInterfaceAttachment Attachment;
 
     /**
-    * 可用区。
+    * Availability Zone.
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 创建时间。
+    * Creation Time.
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * `IPv6`地址列表。
+    * The `IPv6` address list.
     */
     @SerializedName("Ipv6AddressSet")
     @Expose
     private Ipv6Address [] Ipv6AddressSet;
 
     /**
-    * 标签键值对。
+    * Tag key-value pair.
     */
     @SerializedName("TagSet")
     @Expose
@@ -141,264 +141,264 @@ public class NetworkInterface extends AbstractModel{
     private Long EniType;
 
     /**
-     * Get 弹性网卡实例ID，例如：eni-f1xjkw1b。 
-     * @return NetworkInterfaceId 弹性网卡实例ID，例如：eni-f1xjkw1b。
+     * Get The ID of the ENI instance, such as `eni-f1xjkw1b`. 
+     * @return NetworkInterfaceId The ID of the ENI instance, such as `eni-f1xjkw1b`.
      */
     public String getNetworkInterfaceId() {
         return this.NetworkInterfaceId;
     }
 
     /**
-     * Set 弹性网卡实例ID，例如：eni-f1xjkw1b。
-     * @param NetworkInterfaceId 弹性网卡实例ID，例如：eni-f1xjkw1b。
+     * Set The ID of the ENI instance, such as `eni-f1xjkw1b`.
+     * @param NetworkInterfaceId The ID of the ENI instance, such as `eni-f1xjkw1b`.
      */
     public void setNetworkInterfaceId(String NetworkInterfaceId) {
         this.NetworkInterfaceId = NetworkInterfaceId;
     }
 
     /**
-     * Get 弹性网卡名称。 
-     * @return NetworkInterfaceName 弹性网卡名称。
+     * Get ENI Name 
+     * @return NetworkInterfaceName ENI Name
      */
     public String getNetworkInterfaceName() {
         return this.NetworkInterfaceName;
     }
 
     /**
-     * Set 弹性网卡名称。
-     * @param NetworkInterfaceName 弹性网卡名称。
+     * Set ENI Name
+     * @param NetworkInterfaceName ENI Name
      */
     public void setNetworkInterfaceName(String NetworkInterfaceName) {
         this.NetworkInterfaceName = NetworkInterfaceName;
     }
 
     /**
-     * Get 弹性网卡描述。 
-     * @return NetworkInterfaceDescription 弹性网卡描述。
+     * Get ENI description. 
+     * @return NetworkInterfaceDescription ENI description.
      */
     public String getNetworkInterfaceDescription() {
         return this.NetworkInterfaceDescription;
     }
 
     /**
-     * Set 弹性网卡描述。
-     * @param NetworkInterfaceDescription 弹性网卡描述。
+     * Set ENI description.
+     * @param NetworkInterfaceDescription ENI description.
      */
     public void setNetworkInterfaceDescription(String NetworkInterfaceDescription) {
         this.NetworkInterfaceDescription = NetworkInterfaceDescription;
     }
 
     /**
-     * Get 子网实例ID。 
-     * @return SubnetId 子网实例ID。
+     * Get Subnet instance ID. 
+     * @return SubnetId Subnet instance ID.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网实例ID。
-     * @param SubnetId 子网实例ID。
+     * Set Subnet instance ID.
+     * @param SubnetId Subnet instance ID.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get VPC实例ID。 
-     * @return VpcId VPC实例ID。
+     * Get VPC instance ID. 
+     * @return VpcId VPC instance ID.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC实例ID。
-     * @param VpcId VPC实例ID。
+     * Set VPC instance ID.
+     * @param VpcId VPC instance ID.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 绑定的安全组。 
-     * @return GroupSet 绑定的安全组。
+     * Get Bound security group. 
+     * @return GroupSet Bound security group.
      */
     public String [] getGroupSet() {
         return this.GroupSet;
     }
 
     /**
-     * Set 绑定的安全组。
-     * @param GroupSet 绑定的安全组。
+     * Set Bound security group.
+     * @param GroupSet Bound security group.
      */
     public void setGroupSet(String [] GroupSet) {
         this.GroupSet = GroupSet;
     }
 
     /**
-     * Get 是否是主网卡。 
-     * @return Primary 是否是主网卡。
+     * Get Whether it is the primary ENI. 
+     * @return Primary Whether it is the primary ENI.
      */
     public Boolean getPrimary() {
         return this.Primary;
     }
 
     /**
-     * Set 是否是主网卡。
-     * @param Primary 是否是主网卡。
+     * Set Whether it is the primary ENI.
+     * @param Primary Whether it is the primary ENI.
      */
     public void setPrimary(Boolean Primary) {
         this.Primary = Primary;
     }
 
     /**
-     * Get MAC地址。 
-     * @return MacAddress MAC地址。
+     * Get MAC address 
+     * @return MacAddress MAC address
      */
     public String getMacAddress() {
         return this.MacAddress;
     }
 
     /**
-     * Set MAC地址。
-     * @param MacAddress MAC地址。
+     * Set MAC address
+     * @param MacAddress MAC address
      */
     public void setMacAddress(String MacAddress) {
         this.MacAddress = MacAddress;
     }
 
     /**
-     * Get 弹性网卡状态：
-<li>`PENDING`：创建中</li>
-<li>`AVAILABLE`：可用的</li>
-<li>`ATTACHING`：绑定中</li>
-<li>`DETACHING`：解绑中</li>
-<li>`DELETING`：删除中</li> 
-     * @return State 弹性网卡状态：
-<li>`PENDING`：创建中</li>
-<li>`AVAILABLE`：可用的</li>
-<li>`ATTACHING`：绑定中</li>
-<li>`DETACHING`：解绑中</li>
-<li>`DELETING`：删除中</li>
+     * Get ENI status:
+<li>`PENDING`: Creating</li>
+<li>`AVAILABLE`: Available</li>
+<li>`ATTACHING`: Binding</li>
+<li>`DETACHING`: Unbinding</li>
+<li>`DELETING`: Deleting</li> 
+     * @return State ENI status:
+<li>`PENDING`: Creating</li>
+<li>`AVAILABLE`: Available</li>
+<li>`ATTACHING`: Binding</li>
+<li>`DETACHING`: Unbinding</li>
+<li>`DELETING`: Deleting</li>
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set 弹性网卡状态：
-<li>`PENDING`：创建中</li>
-<li>`AVAILABLE`：可用的</li>
-<li>`ATTACHING`：绑定中</li>
-<li>`DETACHING`：解绑中</li>
-<li>`DELETING`：删除中</li>
-     * @param State 弹性网卡状态：
-<li>`PENDING`：创建中</li>
-<li>`AVAILABLE`：可用的</li>
-<li>`ATTACHING`：绑定中</li>
-<li>`DETACHING`：解绑中</li>
-<li>`DELETING`：删除中</li>
+     * Set ENI status:
+<li>`PENDING`: Creating</li>
+<li>`AVAILABLE`: Available</li>
+<li>`ATTACHING`: Binding</li>
+<li>`DETACHING`: Unbinding</li>
+<li>`DELETING`: Deleting</li>
+     * @param State ENI status:
+<li>`PENDING`: Creating</li>
+<li>`AVAILABLE`: Available</li>
+<li>`ATTACHING`: Binding</li>
+<li>`DETACHING`: Unbinding</li>
+<li>`DELETING`: Deleting</li>
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get 内网IP信息。 
-     * @return PrivateIpAddressSet 内网IP信息。
+     * Get Private IP information. 
+     * @return PrivateIpAddressSet Private IP information.
      */
     public PrivateIpAddressSpecification [] getPrivateIpAddressSet() {
         return this.PrivateIpAddressSet;
     }
 
     /**
-     * Set 内网IP信息。
-     * @param PrivateIpAddressSet 内网IP信息。
+     * Set Private IP information.
+     * @param PrivateIpAddressSet Private IP information.
      */
     public void setPrivateIpAddressSet(PrivateIpAddressSpecification [] PrivateIpAddressSet) {
         this.PrivateIpAddressSet = PrivateIpAddressSet;
     }
 
     /**
-     * Get 绑定的云服务器对象。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Attachment 绑定的云服务器对象。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get Bound CVM object.
+Note: This field may return null, indicating no valid value. 
+     * @return Attachment Bound CVM object.
+Note: This field may return null, indicating no valid value.
      */
     public NetworkInterfaceAttachment getAttachment() {
         return this.Attachment;
     }
 
     /**
-     * Set 绑定的云服务器对象。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Attachment 绑定的云服务器对象。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set Bound CVM object.
+Note: This field may return null, indicating no valid value.
+     * @param Attachment Bound CVM object.
+Note: This field may return null, indicating no valid value.
      */
     public void setAttachment(NetworkInterfaceAttachment Attachment) {
         this.Attachment = Attachment;
     }
 
     /**
-     * Get 可用区。 
-     * @return Zone 可用区。
+     * Get Availability Zone. 
+     * @return Zone Availability Zone.
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 可用区。
-     * @param Zone 可用区。
+     * Set Availability Zone.
+     * @param Zone Availability Zone.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 创建时间。 
-     * @return CreatedTime 创建时间。
+     * Get Creation Time. 
+     * @return CreatedTime Creation Time.
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间。
-     * @param CreatedTime 创建时间。
+     * Set Creation Time.
+     * @param CreatedTime Creation Time.
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get `IPv6`地址列表。 
-     * @return Ipv6AddressSet `IPv6`地址列表。
+     * Get The `IPv6` address list. 
+     * @return Ipv6AddressSet The `IPv6` address list.
      */
     public Ipv6Address [] getIpv6AddressSet() {
         return this.Ipv6AddressSet;
     }
 
     /**
-     * Set `IPv6`地址列表。
-     * @param Ipv6AddressSet `IPv6`地址列表。
+     * Set The `IPv6` address list.
+     * @param Ipv6AddressSet The `IPv6` address list.
      */
     public void setIpv6AddressSet(Ipv6Address [] Ipv6AddressSet) {
         this.Ipv6AddressSet = Ipv6AddressSet;
     }
 
     /**
-     * Get 标签键值对。 
-     * @return TagSet 标签键值对。
+     * Get Tag key-value pair. 
+     * @return TagSet Tag key-value pair.
      */
     public Tag [] getTagSet() {
         return this.TagSet;
     }
 
     /**
-     * Set 标签键值对。
-     * @param TagSet 标签键值对。
+     * Set Tag key-value pair.
+     * @param TagSet Tag key-value pair.
      */
     public void setTagSet(Tag [] TagSet) {
         this.TagSet = TagSet;

@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeCcnRoutesResponse extends AbstractModel{
 
     /**
-    * 符合条件的对象数。
+    * The number of objects meeting the condition.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * CCN路由策略对象。
+    * The CCN routing policy object.
     */
     @SerializedName("RouteSet")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeCcnRoutesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 符合条件的对象数。 
-     * @return TotalCount 符合条件的对象数。
+     * Get The number of objects meeting the condition. 
+     * @return TotalCount The number of objects meeting the condition.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的对象数。
-     * @param TotalCount 符合条件的对象数。
+     * Set The number of objects meeting the condition.
+     * @param TotalCount The number of objects meeting the condition.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get CCN路由策略对象。 
-     * @return RouteSet CCN路由策略对象。
+     * Get The CCN routing policy object. 
+     * @return RouteSet The CCN routing policy object.
      */
     public CcnRoute [] getRouteSet() {
         return this.RouteSet;
     }
 
     /**
-     * Set CCN路由策略对象。
-     * @param RouteSet CCN路由策略对象。
+     * Set The CCN routing policy object.
+     * @param RouteSet The CCN routing policy object.
      */
     public void setRouteSet(CcnRoute [] RouteSet) {
         this.RouteSet = RouteSet;

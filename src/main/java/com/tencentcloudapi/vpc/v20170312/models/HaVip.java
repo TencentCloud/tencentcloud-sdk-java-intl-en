@@ -23,240 +23,240 @@ import java.util.HashMap;
 public class HaVip extends AbstractModel{
 
     /**
-    * `HAVIP`的`ID`，是`HAVIP`的唯一标识。
+    * The `ID` of the `HAVIP`. This is the unique identifier of the `HAVIP`.
     */
     @SerializedName("HaVipId")
     @Expose
     private String HaVipId;
 
     /**
-    * `HAVIP`名称。
+    * The name of the `HAVIP`.
     */
     @SerializedName("HaVipName")
     @Expose
     private String HaVipName;
 
     /**
-    * 虚拟IP地址。
+    * The virtual IP address.
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * `HAVIP`所在私有网络`ID`。
+    * The `ID` of the VPC to which the `HAVIP` belongs.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * `HAVIP`所在子网`ID`。
+    * The `ID` of the subnet to which the `HAVIP` belongs.
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * `HAVIP`关联弹性网卡`ID`。
+    * The `ID` of the ENI associated with the `HAVIP`.
     */
     @SerializedName("NetworkInterfaceId")
     @Expose
     private String NetworkInterfaceId;
 
     /**
-    * 被绑定的实例`ID`。
+    * The `ID` of the bound instance.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 绑定`EIP`。
+    * Bound `EIP`.
     */
     @SerializedName("AddressIp")
     @Expose
     private String AddressIp;
 
     /**
-    * 状态：
-<li>`AVAILABLE`：运行中</li>
-<li>`UNBIND`：未绑定</li>
+    * Status:
+<li>`AVAILABLE`: Operating</li>
+<li>`UNBIND`: Not bound</li>
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * 创建时间。
+    * Creation Time.
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-     * Get `HAVIP`的`ID`，是`HAVIP`的唯一标识。 
-     * @return HaVipId `HAVIP`的`ID`，是`HAVIP`的唯一标识。
+     * Get The `ID` of the `HAVIP`. This is the unique identifier of the `HAVIP`. 
+     * @return HaVipId The `ID` of the `HAVIP`. This is the unique identifier of the `HAVIP`.
      */
     public String getHaVipId() {
         return this.HaVipId;
     }
 
     /**
-     * Set `HAVIP`的`ID`，是`HAVIP`的唯一标识。
-     * @param HaVipId `HAVIP`的`ID`，是`HAVIP`的唯一标识。
+     * Set The `ID` of the `HAVIP`. This is the unique identifier of the `HAVIP`.
+     * @param HaVipId The `ID` of the `HAVIP`. This is the unique identifier of the `HAVIP`.
      */
     public void setHaVipId(String HaVipId) {
         this.HaVipId = HaVipId;
     }
 
     /**
-     * Get `HAVIP`名称。 
-     * @return HaVipName `HAVIP`名称。
+     * Get The name of the `HAVIP`. 
+     * @return HaVipName The name of the `HAVIP`.
      */
     public String getHaVipName() {
         return this.HaVipName;
     }
 
     /**
-     * Set `HAVIP`名称。
-     * @param HaVipName `HAVIP`名称。
+     * Set The name of the `HAVIP`.
+     * @param HaVipName The name of the `HAVIP`.
      */
     public void setHaVipName(String HaVipName) {
         this.HaVipName = HaVipName;
     }
 
     /**
-     * Get 虚拟IP地址。 
-     * @return Vip 虚拟IP地址。
+     * Get The virtual IP address. 
+     * @return Vip The virtual IP address.
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set 虚拟IP地址。
-     * @param Vip 虚拟IP地址。
+     * Set The virtual IP address.
+     * @param Vip The virtual IP address.
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get `HAVIP`所在私有网络`ID`。 
-     * @return VpcId `HAVIP`所在私有网络`ID`。
+     * Get The `ID` of the VPC to which the `HAVIP` belongs. 
+     * @return VpcId The `ID` of the VPC to which the `HAVIP` belongs.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set `HAVIP`所在私有网络`ID`。
-     * @param VpcId `HAVIP`所在私有网络`ID`。
+     * Set The `ID` of the VPC to which the `HAVIP` belongs.
+     * @param VpcId The `ID` of the VPC to which the `HAVIP` belongs.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get `HAVIP`所在子网`ID`。 
-     * @return SubnetId `HAVIP`所在子网`ID`。
+     * Get The `ID` of the subnet to which the `HAVIP` belongs. 
+     * @return SubnetId The `ID` of the subnet to which the `HAVIP` belongs.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set `HAVIP`所在子网`ID`。
-     * @param SubnetId `HAVIP`所在子网`ID`。
+     * Set The `ID` of the subnet to which the `HAVIP` belongs.
+     * @param SubnetId The `ID` of the subnet to which the `HAVIP` belongs.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get `HAVIP`关联弹性网卡`ID`。 
-     * @return NetworkInterfaceId `HAVIP`关联弹性网卡`ID`。
+     * Get The `ID` of the ENI associated with the `HAVIP`. 
+     * @return NetworkInterfaceId The `ID` of the ENI associated with the `HAVIP`.
      */
     public String getNetworkInterfaceId() {
         return this.NetworkInterfaceId;
     }
 
     /**
-     * Set `HAVIP`关联弹性网卡`ID`。
-     * @param NetworkInterfaceId `HAVIP`关联弹性网卡`ID`。
+     * Set The `ID` of the ENI associated with the `HAVIP`.
+     * @param NetworkInterfaceId The `ID` of the ENI associated with the `HAVIP`.
      */
     public void setNetworkInterfaceId(String NetworkInterfaceId) {
         this.NetworkInterfaceId = NetworkInterfaceId;
     }
 
     /**
-     * Get 被绑定的实例`ID`。 
-     * @return InstanceId 被绑定的实例`ID`。
+     * Get The `ID` of the bound instance. 
+     * @return InstanceId The `ID` of the bound instance.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 被绑定的实例`ID`。
-     * @param InstanceId 被绑定的实例`ID`。
+     * Set The `ID` of the bound instance.
+     * @param InstanceId The `ID` of the bound instance.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 绑定`EIP`。 
-     * @return AddressIp 绑定`EIP`。
+     * Get Bound `EIP`. 
+     * @return AddressIp Bound `EIP`.
      */
     public String getAddressIp() {
         return this.AddressIp;
     }
 
     /**
-     * Set 绑定`EIP`。
-     * @param AddressIp 绑定`EIP`。
+     * Set Bound `EIP`.
+     * @param AddressIp Bound `EIP`.
      */
     public void setAddressIp(String AddressIp) {
         this.AddressIp = AddressIp;
     }
 
     /**
-     * Get 状态：
-<li>`AVAILABLE`：运行中</li>
-<li>`UNBIND`：未绑定</li> 
-     * @return State 状态：
-<li>`AVAILABLE`：运行中</li>
-<li>`UNBIND`：未绑定</li>
+     * Get Status:
+<li>`AVAILABLE`: Operating</li>
+<li>`UNBIND`: Not bound</li> 
+     * @return State Status:
+<li>`AVAILABLE`: Operating</li>
+<li>`UNBIND`: Not bound</li>
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set 状态：
-<li>`AVAILABLE`：运行中</li>
-<li>`UNBIND`：未绑定</li>
-     * @param State 状态：
-<li>`AVAILABLE`：运行中</li>
-<li>`UNBIND`：未绑定</li>
+     * Set Status:
+<li>`AVAILABLE`: Operating</li>
+<li>`UNBIND`: Not bound</li>
+     * @param State Status:
+<li>`AVAILABLE`: Operating</li>
+<li>`UNBIND`: Not bound</li>
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get 创建时间。 
-     * @return CreatedTime 创建时间。
+     * Get Creation Time. 
+     * @return CreatedTime Creation Time.
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间。
-     * @param CreatedTime 创建时间。
+     * Set Creation Time.
+     * @param CreatedTime Creation Time.
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;

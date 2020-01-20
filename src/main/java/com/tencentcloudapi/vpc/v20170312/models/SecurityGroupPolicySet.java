@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class SecurityGroupPolicySet extends AbstractModel{
 
     /**
-    * 安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
+    * The version of the security group policy. The version number is automatically increased by one each time users update the security policy, to prevent the expiration of updated routing policies. Conflict is ignored if it is left empty.
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * 出站规则。
+    * Outbound policy.
     */
     @SerializedName("Egress")
     @Expose
     private SecurityGroupPolicy [] Egress;
 
     /**
-    * 入站规则。
+    * Inbound policy.
     */
     @SerializedName("Ingress")
     @Expose
     private SecurityGroupPolicy [] Ingress;
 
     /**
-     * Get 安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。 
-     * @return Version 安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
+     * Get The version of the security group policy. The version number is automatically increased by one each time users update the security policy, to prevent the expiration of updated routing policies. Conflict is ignored if it is left empty. 
+     * @return Version The version of the security group policy. The version number is automatically increased by one each time users update the security policy, to prevent the expiration of updated routing policies. Conflict is ignored if it is left empty.
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set 安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
-     * @param Version 安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
+     * Set The version of the security group policy. The version number is automatically increased by one each time users update the security policy, to prevent the expiration of updated routing policies. Conflict is ignored if it is left empty.
+     * @param Version The version of the security group policy. The version number is automatically increased by one each time users update the security policy, to prevent the expiration of updated routing policies. Conflict is ignored if it is left empty.
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 出站规则。 
-     * @return Egress 出站规则。
+     * Get Outbound policy. 
+     * @return Egress Outbound policy.
      */
     public SecurityGroupPolicy [] getEgress() {
         return this.Egress;
     }
 
     /**
-     * Set 出站规则。
-     * @param Egress 出站规则。
+     * Set Outbound policy.
+     * @param Egress Outbound policy.
      */
     public void setEgress(SecurityGroupPolicy [] Egress) {
         this.Egress = Egress;
     }
 
     /**
-     * Get 入站规则。 
-     * @return Ingress 入站规则。
+     * Get Inbound policy. 
+     * @return Ingress Inbound policy.
      */
     public SecurityGroupPolicy [] getIngress() {
         return this.Ingress;
     }
 
     /**
-     * Set 入站规则。
-     * @param Ingress 入站规则。
+     * Set Inbound policy.
+     * @param Ingress Inbound policy.
      */
     public void setIngress(SecurityGroupPolicy [] Ingress) {
         this.Ingress = Ingress;

@@ -23,207 +23,207 @@ import java.util.HashMap;
 public class CcnRoute extends AbstractModel{
 
     /**
-    * 路由策略ID
+    * The ID of the routing policy
     */
     @SerializedName("RouteId")
     @Expose
     private String RouteId;
 
     /**
-    * 目的端
+    * Destination
     */
     @SerializedName("DestinationCidrBlock")
     @Expose
     private String DestinationCidrBlock;
 
     /**
-    * 下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT
+    * The type of the next hop (associated instance type). Available types: VPC, DIRECTCONNECT
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 下一跳（关联实例）
+    * The next hop (associated instance)
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 下一跳名称（关联实例名称）
+    * The name of the next hop (associated instance name)
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 下一跳所属地域（关联实例所属地域）
+    * The region of the next hop (the region of the associated instance)
     */
     @SerializedName("InstanceRegion")
     @Expose
     private String InstanceRegion;
 
     /**
-    * 更新时间
+    * Update Time
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 路由是否启用
+    * Whether the route is enabled
     */
     @SerializedName("Enabled")
     @Expose
     private Boolean Enabled;
 
     /**
-    * 关联实例所属UIN（根账号）
+    * The UIN (root account) to which the associated instance belongs
     */
     @SerializedName("InstanceUin")
     @Expose
     private String InstanceUin;
 
     /**
-     * Get 路由策略ID 
-     * @return RouteId 路由策略ID
+     * Get The ID of the routing policy 
+     * @return RouteId The ID of the routing policy
      */
     public String getRouteId() {
         return this.RouteId;
     }
 
     /**
-     * Set 路由策略ID
-     * @param RouteId 路由策略ID
+     * Set The ID of the routing policy
+     * @param RouteId The ID of the routing policy
      */
     public void setRouteId(String RouteId) {
         this.RouteId = RouteId;
     }
 
     /**
-     * Get 目的端 
-     * @return DestinationCidrBlock 目的端
+     * Get Destination 
+     * @return DestinationCidrBlock Destination
      */
     public String getDestinationCidrBlock() {
         return this.DestinationCidrBlock;
     }
 
     /**
-     * Set 目的端
-     * @param DestinationCidrBlock 目的端
+     * Set Destination
+     * @param DestinationCidrBlock Destination
      */
     public void setDestinationCidrBlock(String DestinationCidrBlock) {
         this.DestinationCidrBlock = DestinationCidrBlock;
     }
 
     /**
-     * Get 下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT 
-     * @return InstanceType 下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT
+     * Get The type of the next hop (associated instance type). Available types: VPC, DIRECTCONNECT 
+     * @return InstanceType The type of the next hop (associated instance type). Available types: VPC, DIRECTCONNECT
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT
-     * @param InstanceType 下一跳类型（关联实例类型），所有类型：VPC、DIRECTCONNECT
+     * Set The type of the next hop (associated instance type). Available types: VPC, DIRECTCONNECT
+     * @param InstanceType The type of the next hop (associated instance type). Available types: VPC, DIRECTCONNECT
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 下一跳（关联实例） 
-     * @return InstanceId 下一跳（关联实例）
+     * Get The next hop (associated instance) 
+     * @return InstanceId The next hop (associated instance)
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 下一跳（关联实例）
-     * @param InstanceId 下一跳（关联实例）
+     * Set The next hop (associated instance)
+     * @param InstanceId The next hop (associated instance)
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 下一跳名称（关联实例名称） 
-     * @return InstanceName 下一跳名称（关联实例名称）
+     * Get The name of the next hop (associated instance name) 
+     * @return InstanceName The name of the next hop (associated instance name)
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 下一跳名称（关联实例名称）
-     * @param InstanceName 下一跳名称（关联实例名称）
+     * Set The name of the next hop (associated instance name)
+     * @param InstanceName The name of the next hop (associated instance name)
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 下一跳所属地域（关联实例所属地域） 
-     * @return InstanceRegion 下一跳所属地域（关联实例所属地域）
+     * Get The region of the next hop (the region of the associated instance) 
+     * @return InstanceRegion The region of the next hop (the region of the associated instance)
      */
     public String getInstanceRegion() {
         return this.InstanceRegion;
     }
 
     /**
-     * Set 下一跳所属地域（关联实例所属地域）
-     * @param InstanceRegion 下一跳所属地域（关联实例所属地域）
+     * Set The region of the next hop (the region of the associated instance)
+     * @param InstanceRegion The region of the next hop (the region of the associated instance)
      */
     public void setInstanceRegion(String InstanceRegion) {
         this.InstanceRegion = InstanceRegion;
     }
 
     /**
-     * Get 更新时间 
-     * @return UpdateTime 更新时间
+     * Get Update Time 
+     * @return UpdateTime Update Time
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 更新时间
-     * @param UpdateTime 更新时间
+     * Set Update Time
+     * @param UpdateTime Update Time
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 路由是否启用 
-     * @return Enabled 路由是否启用
+     * Get Whether the route is enabled 
+     * @return Enabled Whether the route is enabled
      */
     public Boolean getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set 路由是否启用
-     * @param Enabled 路由是否启用
+     * Set Whether the route is enabled
+     * @param Enabled Whether the route is enabled
      */
     public void setEnabled(Boolean Enabled) {
         this.Enabled = Enabled;
     }
 
     /**
-     * Get 关联实例所属UIN（根账号） 
-     * @return InstanceUin 关联实例所属UIN（根账号）
+     * Get The UIN (root account) to which the associated instance belongs 
+     * @return InstanceUin The UIN (root account) to which the associated instance belongs
      */
     public String getInstanceUin() {
         return this.InstanceUin;
     }
 
     /**
-     * Set 关联实例所属UIN（根账号）
-     * @param InstanceUin 关联实例所属UIN（根账号）
+     * Set The UIN (root account) to which the associated instance belongs
+     * @param InstanceUin The UIN (root account) to which the associated instance belongs
      */
     public void setInstanceUin(String InstanceUin) {
         this.InstanceUin = InstanceUin;

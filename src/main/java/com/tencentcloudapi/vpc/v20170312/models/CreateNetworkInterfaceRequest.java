@@ -23,49 +23,49 @@ import java.util.HashMap;
 public class CreateNetworkInterfaceRequest extends AbstractModel{
 
     /**
-    * VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+    * The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 弹性网卡名称，最大长度不能超过60个字节。
+    * The name of the ENI. The maximum length is 60 characters.
     */
     @SerializedName("NetworkInterfaceName")
     @Expose
     private String NetworkInterfaceName;
 
     /**
-    * 弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。
+    * The subnet instance ID of the ENI, such as `subnet-0ap8nwca`.
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 弹性网卡描述，可任意命名，但不得超过60个字符。
+    * ENI description can be named freely, but the maximum length is 60 characters.
     */
     @SerializedName("NetworkInterfaceDescription")
     @Expose
     private String NetworkInterfaceDescription;
 
     /**
-    * 新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
+    * The number of private IP addresses that is newly applied for. The total number of private IP addresses cannot exceed the quota.
     */
     @SerializedName("SecondaryPrivateIpAddressCount")
     @Expose
     private Long SecondaryPrivateIpAddressCount;
 
     /**
-    * 指定绑定的安全组，例如：['sg-1dd51d']。
+    * Specifies the security group to be bound with, such as ['sg-1dd51d'].
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * 指定的内网IP信息，单次最多指定10个。
+    * The information of the specified private IPs. You can specify a maximum of 10 each time.
     */
     @SerializedName("PrivateIpAddresses")
     @Expose
@@ -79,112 +79,112 @@ public class CreateNetworkInterfaceRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
-     * Get VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。 
-     * @return VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * Get The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API. 
+     * @return VpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
-     * @param VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * Set The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+     * @param VpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 弹性网卡名称，最大长度不能超过60个字节。 
-     * @return NetworkInterfaceName 弹性网卡名称，最大长度不能超过60个字节。
+     * Get The name of the ENI. The maximum length is 60 characters. 
+     * @return NetworkInterfaceName The name of the ENI. The maximum length is 60 characters.
      */
     public String getNetworkInterfaceName() {
         return this.NetworkInterfaceName;
     }
 
     /**
-     * Set 弹性网卡名称，最大长度不能超过60个字节。
-     * @param NetworkInterfaceName 弹性网卡名称，最大长度不能超过60个字节。
+     * Set The name of the ENI. The maximum length is 60 characters.
+     * @param NetworkInterfaceName The name of the ENI. The maximum length is 60 characters.
      */
     public void setNetworkInterfaceName(String NetworkInterfaceName) {
         this.NetworkInterfaceName = NetworkInterfaceName;
     }
 
     /**
-     * Get 弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。 
-     * @return SubnetId 弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。
+     * Get The subnet instance ID of the ENI, such as `subnet-0ap8nwca`. 
+     * @return SubnetId The subnet instance ID of the ENI, such as `subnet-0ap8nwca`.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。
-     * @param SubnetId 弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。
+     * Set The subnet instance ID of the ENI, such as `subnet-0ap8nwca`.
+     * @param SubnetId The subnet instance ID of the ENI, such as `subnet-0ap8nwca`.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 弹性网卡描述，可任意命名，但不得超过60个字符。 
-     * @return NetworkInterfaceDescription 弹性网卡描述，可任意命名，但不得超过60个字符。
+     * Get ENI description can be named freely, but the maximum length is 60 characters. 
+     * @return NetworkInterfaceDescription ENI description can be named freely, but the maximum length is 60 characters.
      */
     public String getNetworkInterfaceDescription() {
         return this.NetworkInterfaceDescription;
     }
 
     /**
-     * Set 弹性网卡描述，可任意命名，但不得超过60个字符。
-     * @param NetworkInterfaceDescription 弹性网卡描述，可任意命名，但不得超过60个字符。
+     * Set ENI description can be named freely, but the maximum length is 60 characters.
+     * @param NetworkInterfaceDescription ENI description can be named freely, but the maximum length is 60 characters.
      */
     public void setNetworkInterfaceDescription(String NetworkInterfaceDescription) {
         this.NetworkInterfaceDescription = NetworkInterfaceDescription;
     }
 
     /**
-     * Get 新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。 
-     * @return SecondaryPrivateIpAddressCount 新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
+     * Get The number of private IP addresses that is newly applied for. The total number of private IP addresses cannot exceed the quota. 
+     * @return SecondaryPrivateIpAddressCount The number of private IP addresses that is newly applied for. The total number of private IP addresses cannot exceed the quota.
      */
     public Long getSecondaryPrivateIpAddressCount() {
         return this.SecondaryPrivateIpAddressCount;
     }
 
     /**
-     * Set 新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
-     * @param SecondaryPrivateIpAddressCount 新申请的内网IP地址个数，内网IP地址个数总和不能超过配数。
+     * Set The number of private IP addresses that is newly applied for. The total number of private IP addresses cannot exceed the quota.
+     * @param SecondaryPrivateIpAddressCount The number of private IP addresses that is newly applied for. The total number of private IP addresses cannot exceed the quota.
      */
     public void setSecondaryPrivateIpAddressCount(Long SecondaryPrivateIpAddressCount) {
         this.SecondaryPrivateIpAddressCount = SecondaryPrivateIpAddressCount;
     }
 
     /**
-     * Get 指定绑定的安全组，例如：['sg-1dd51d']。 
-     * @return SecurityGroupIds 指定绑定的安全组，例如：['sg-1dd51d']。
+     * Get Specifies the security group to be bound with, such as ['sg-1dd51d']. 
+     * @return SecurityGroupIds Specifies the security group to be bound with, such as ['sg-1dd51d'].
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 指定绑定的安全组，例如：['sg-1dd51d']。
-     * @param SecurityGroupIds 指定绑定的安全组，例如：['sg-1dd51d']。
+     * Set Specifies the security group to be bound with, such as ['sg-1dd51d'].
+     * @param SecurityGroupIds Specifies the security group to be bound with, such as ['sg-1dd51d'].
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get 指定的内网IP信息，单次最多指定10个。 
-     * @return PrivateIpAddresses 指定的内网IP信息，单次最多指定10个。
+     * Get The information of the specified private IPs. You can specify a maximum of 10 each time. 
+     * @return PrivateIpAddresses The information of the specified private IPs. You can specify a maximum of 10 each time.
      */
     public PrivateIpAddressSpecification [] getPrivateIpAddresses() {
         return this.PrivateIpAddresses;
     }
 
     /**
-     * Set 指定的内网IP信息，单次最多指定10个。
-     * @param PrivateIpAddresses 指定的内网IP信息，单次最多指定10个。
+     * Set The information of the specified private IPs. You can specify a maximum of 10 each time.
+     * @param PrivateIpAddresses The information of the specified private IPs. You can specify a maximum of 10 each time.
      */
     public void setPrivateIpAddresses(PrivateIpAddressSpecification [] PrivateIpAddresses) {
         this.PrivateIpAddresses = PrivateIpAddresses;

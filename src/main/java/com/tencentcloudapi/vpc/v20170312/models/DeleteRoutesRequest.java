@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DeleteRoutesRequest extends AbstractModel{
 
     /**
-    * 路由表实例ID。
+    * Route table instance ID.
     */
     @SerializedName("RouteTableId")
     @Expose
     private String RouteTableId;
 
     /**
-    * 路由策略对象。
+    * Routing policy object.
     */
     @SerializedName("Routes")
     @Expose
     private Route [] Routes;
 
     /**
-     * Get 路由表实例ID。 
-     * @return RouteTableId 路由表实例ID。
+     * Get Route table instance ID. 
+     * @return RouteTableId Route table instance ID.
      */
     public String getRouteTableId() {
         return this.RouteTableId;
     }
 
     /**
-     * Set 路由表实例ID。
-     * @param RouteTableId 路由表实例ID。
+     * Set Route table instance ID.
+     * @param RouteTableId Route table instance ID.
      */
     public void setRouteTableId(String RouteTableId) {
         this.RouteTableId = RouteTableId;
     }
 
     /**
-     * Get 路由策略对象。 
-     * @return Routes 路由策略对象。
+     * Get Routing policy object. 
+     * @return Routes Routing policy object.
      */
     public Route [] getRoutes() {
         return this.Routes;
     }
 
     /**
-     * Set 路由策略对象。
-     * @param Routes 路由策略对象。
+     * Set Routing policy object.
+     * @param Routes Routing policy object.
      */
     public void setRoutes(Route [] Routes) {
         this.Routes = Routes;

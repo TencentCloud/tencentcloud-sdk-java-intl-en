@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class ServiceTemplateSpecification extends AbstractModel{
 
     /**
-    * 协议端口ID，例如：ppm-f5n1f8da。
+    * Protocol port ID, such as `ppm-f5n1f8da`.
     */
     @SerializedName("ServiceId")
     @Expose
     private String ServiceId;
 
     /**
-    * 协议端口组ID，例如：ppmg-f5n1f8da。
+    * Protocol port group ID, such as `ppmg-f5n1f8da`.
     */
     @SerializedName("ServiceGroupId")
     @Expose
     private String ServiceGroupId;
 
     /**
-     * Get 协议端口ID，例如：ppm-f5n1f8da。 
-     * @return ServiceId 协议端口ID，例如：ppm-f5n1f8da。
+     * Get Protocol port ID, such as `ppm-f5n1f8da`. 
+     * @return ServiceId Protocol port ID, such as `ppm-f5n1f8da`.
      */
     public String getServiceId() {
         return this.ServiceId;
     }
 
     /**
-     * Set 协议端口ID，例如：ppm-f5n1f8da。
-     * @param ServiceId 协议端口ID，例如：ppm-f5n1f8da。
+     * Set Protocol port ID, such as `ppm-f5n1f8da`.
+     * @param ServiceId Protocol port ID, such as `ppm-f5n1f8da`.
      */
     public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;
     }
 
     /**
-     * Get 协议端口组ID，例如：ppmg-f5n1f8da。 
-     * @return ServiceGroupId 协议端口组ID，例如：ppmg-f5n1f8da。
+     * Get Protocol port group ID, such as `ppmg-f5n1f8da`. 
+     * @return ServiceGroupId Protocol port group ID, such as `ppmg-f5n1f8da`.
      */
     public String getServiceGroupId() {
         return this.ServiceGroupId;
     }
 
     /**
-     * Set 协议端口组ID，例如：ppmg-f5n1f8da。
-     * @param ServiceGroupId 协议端口组ID，例如：ppmg-f5n1f8da。
+     * Set Protocol port group ID, such as `ppmg-f5n1f8da`.
+     * @param ServiceGroupId Protocol port group ID, such as `ppmg-f5n1f8da`.
      */
     public void setServiceGroupId(String ServiceGroupId) {
         this.ServiceGroupId = ServiceGroupId;

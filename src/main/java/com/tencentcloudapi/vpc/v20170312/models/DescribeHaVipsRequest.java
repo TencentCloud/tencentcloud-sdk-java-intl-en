@@ -23,117 +23,117 @@ import java.util.HashMap;
 public class DescribeHaVipsRequest extends AbstractModel{
 
     /**
-    * `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
+    * The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
     */
     @SerializedName("HaVipIds")
     @Expose
     private String [] HaVipIds;
 
     /**
-    * 过滤条件，参数不支持同时指定`HaVipIds`和`Filters`。
-<li>havip-id - String - `HAVIP`唯一`ID`，形如：`havip-9o233uri`。</li>
-<li>havip-name - String - `HAVIP`名称。</li>
-<li>vpc-id - String - `HAVIP`所在私有网络`ID`。</li>
-<li>subnet-id - String - `HAVIP`所在子网`ID`。</li>
-<li>address-ip - String - `HAVIP`绑定的弹性公网`IP`。</li>
+    * Filter condition. `HaVipIds` and `Filters` cannot be specified at the same time.
+<li>havip-id - String - The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.</li>
+<li>havip-name - String - `HAVIP` name.</li>
+<li>vpc-id - String - The `ID` of the VPC where `HAVIP` is located.</li>
+<li>subnet-id - String - The `ID` of the subnet where `HAVIP` is located.</li>
+<li>address-ip - String - The `EIP` to which `HAVIP` is bound.</li>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 偏移量
+    * Offset
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量
+    * The returned quantity
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get `HAVIP`唯一`ID`，形如：`havip-9o233uri`。 
-     * @return HaVipIds `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
+     * Get The unique `ID` of the `HAVIP`, such as `havip-9o233uri`. 
+     * @return HaVipIds The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
      */
     public String [] getHaVipIds() {
         return this.HaVipIds;
     }
 
     /**
-     * Set `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
-     * @param HaVipIds `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
+     * Set The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
+     * @param HaVipIds The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
      */
     public void setHaVipIds(String [] HaVipIds) {
         this.HaVipIds = HaVipIds;
     }
 
     /**
-     * Get 过滤条件，参数不支持同时指定`HaVipIds`和`Filters`。
-<li>havip-id - String - `HAVIP`唯一`ID`，形如：`havip-9o233uri`。</li>
-<li>havip-name - String - `HAVIP`名称。</li>
-<li>vpc-id - String - `HAVIP`所在私有网络`ID`。</li>
-<li>subnet-id - String - `HAVIP`所在子网`ID`。</li>
-<li>address-ip - String - `HAVIP`绑定的弹性公网`IP`。</li> 
-     * @return Filters 过滤条件，参数不支持同时指定`HaVipIds`和`Filters`。
-<li>havip-id - String - `HAVIP`唯一`ID`，形如：`havip-9o233uri`。</li>
-<li>havip-name - String - `HAVIP`名称。</li>
-<li>vpc-id - String - `HAVIP`所在私有网络`ID`。</li>
-<li>subnet-id - String - `HAVIP`所在子网`ID`。</li>
-<li>address-ip - String - `HAVIP`绑定的弹性公网`IP`。</li>
+     * Get Filter condition. `HaVipIds` and `Filters` cannot be specified at the same time.
+<li>havip-id - String - The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.</li>
+<li>havip-name - String - `HAVIP` name.</li>
+<li>vpc-id - String - The `ID` of the VPC where `HAVIP` is located.</li>
+<li>subnet-id - String - The `ID` of the subnet where `HAVIP` is located.</li>
+<li>address-ip - String - The `EIP` to which `HAVIP` is bound.</li> 
+     * @return Filters Filter condition. `HaVipIds` and `Filters` cannot be specified at the same time.
+<li>havip-id - String - The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.</li>
+<li>havip-name - String - `HAVIP` name.</li>
+<li>vpc-id - String - The `ID` of the VPC where `HAVIP` is located.</li>
+<li>subnet-id - String - The `ID` of the subnet where `HAVIP` is located.</li>
+<li>address-ip - String - The `EIP` to which `HAVIP` is bound.</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件，参数不支持同时指定`HaVipIds`和`Filters`。
-<li>havip-id - String - `HAVIP`唯一`ID`，形如：`havip-9o233uri`。</li>
-<li>havip-name - String - `HAVIP`名称。</li>
-<li>vpc-id - String - `HAVIP`所在私有网络`ID`。</li>
-<li>subnet-id - String - `HAVIP`所在子网`ID`。</li>
-<li>address-ip - String - `HAVIP`绑定的弹性公网`IP`。</li>
-     * @param Filters 过滤条件，参数不支持同时指定`HaVipIds`和`Filters`。
-<li>havip-id - String - `HAVIP`唯一`ID`，形如：`havip-9o233uri`。</li>
-<li>havip-name - String - `HAVIP`名称。</li>
-<li>vpc-id - String - `HAVIP`所在私有网络`ID`。</li>
-<li>subnet-id - String - `HAVIP`所在子网`ID`。</li>
-<li>address-ip - String - `HAVIP`绑定的弹性公网`IP`。</li>
+     * Set Filter condition. `HaVipIds` and `Filters` cannot be specified at the same time.
+<li>havip-id - String - The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.</li>
+<li>havip-name - String - `HAVIP` name.</li>
+<li>vpc-id - String - The `ID` of the VPC where `HAVIP` is located.</li>
+<li>subnet-id - String - The `ID` of the subnet where `HAVIP` is located.</li>
+<li>address-ip - String - The `EIP` to which `HAVIP` is bound.</li>
+     * @param Filters Filter condition. `HaVipIds` and `Filters` cannot be specified at the same time.
+<li>havip-id - String - The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.</li>
+<li>havip-name - String - `HAVIP` name.</li>
+<li>vpc-id - String - The `ID` of the VPC where `HAVIP` is located.</li>
+<li>subnet-id - String - The `ID` of the subnet where `HAVIP` is located.</li>
+<li>address-ip - String - The `EIP` to which `HAVIP` is bound.</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get Offset 
+     * @return Offset Offset
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set Offset
+     * @param Offset Offset
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量 
-     * @return Limit 返回数量
+     * Get The returned quantity 
+     * @return Limit The returned quantity
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量
-     * @param Limit 返回数量
+     * Set The returned quantity
+     * @param Limit The returned quantity
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

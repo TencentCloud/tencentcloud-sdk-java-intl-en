@@ -23,132 +23,132 @@ import java.util.HashMap;
 public class DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest extends AbstractModel{
 
     /**
-    * NAT网关ID。
+    * NAT gateway ID.
     */
     @SerializedName("NatGatewayIds")
     @Expose
     private String [] NatGatewayIds;
 
     /**
-    * 过滤条件:
-参数不支持同时指定NatGatewayIds和Filters。
-<li> nat-gateway-id，NAT网关的ID，如`nat-0yi4hekt`</li>
-<li> vpc-id，私有网络VPC的ID，如`vpc-0yi4hekt`</li>
-<li> public-ip-address， 弹性IP，如`139.199.232.238`。</li>
-<li>public-port， 公网端口。</li>
-<li>private-ip-address， 内网IP，如`10.0.0.1`。</li>
-<li>private-port， 内网端口。</li>
-<li>description，规则描述。</li>
+    * Filter conditions:
+`NatGatewayIds` and `Filters` cannot be specified at the same time.
+<li> nat-gateway-id, the NAT gateway ID, such as `nat-0yi4hekt`.</li>
+<li> vpc-id, the VPC ID, such as `vpc-0yi4hekt`.</li>
+<li> public-ip-address, the EIP, such as `139.199.232.238`.</li>
+<li>public-port, the public network port.</li>
+<li>private-ip-address, the private IP, such as `10.0.0.1`.</li>
+<li>private-port, the private network port.</li>
+<li>description, the rule description.</li>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 偏移量，默认为0。
+    * Offset. The default value is 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量，默认为20，最大值为100。
+    * Number of values to be returned. The default value is 20. Maximum is 100.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get NAT网关ID。 
-     * @return NatGatewayIds NAT网关ID。
+     * Get NAT gateway ID. 
+     * @return NatGatewayIds NAT gateway ID.
      */
     public String [] getNatGatewayIds() {
         return this.NatGatewayIds;
     }
 
     /**
-     * Set NAT网关ID。
-     * @param NatGatewayIds NAT网关ID。
+     * Set NAT gateway ID.
+     * @param NatGatewayIds NAT gateway ID.
      */
     public void setNatGatewayIds(String [] NatGatewayIds) {
         this.NatGatewayIds = NatGatewayIds;
     }
 
     /**
-     * Get 过滤条件:
-参数不支持同时指定NatGatewayIds和Filters。
-<li> nat-gateway-id，NAT网关的ID，如`nat-0yi4hekt`</li>
-<li> vpc-id，私有网络VPC的ID，如`vpc-0yi4hekt`</li>
-<li> public-ip-address， 弹性IP，如`139.199.232.238`。</li>
-<li>public-port， 公网端口。</li>
-<li>private-ip-address， 内网IP，如`10.0.0.1`。</li>
-<li>private-port， 内网端口。</li>
-<li>description，规则描述。</li> 
-     * @return Filters 过滤条件:
-参数不支持同时指定NatGatewayIds和Filters。
-<li> nat-gateway-id，NAT网关的ID，如`nat-0yi4hekt`</li>
-<li> vpc-id，私有网络VPC的ID，如`vpc-0yi4hekt`</li>
-<li> public-ip-address， 弹性IP，如`139.199.232.238`。</li>
-<li>public-port， 公网端口。</li>
-<li>private-ip-address， 内网IP，如`10.0.0.1`。</li>
-<li>private-port， 内网端口。</li>
-<li>description，规则描述。</li>
+     * Get Filter conditions:
+`NatGatewayIds` and `Filters` cannot be specified at the same time.
+<li> nat-gateway-id, the NAT gateway ID, such as `nat-0yi4hekt`.</li>
+<li> vpc-id, the VPC ID, such as `vpc-0yi4hekt`.</li>
+<li> public-ip-address, the EIP, such as `139.199.232.238`.</li>
+<li>public-port, the public network port.</li>
+<li>private-ip-address, the private IP, such as `10.0.0.1`.</li>
+<li>private-port, the private network port.</li>
+<li>description, the rule description.</li> 
+     * @return Filters Filter conditions:
+`NatGatewayIds` and `Filters` cannot be specified at the same time.
+<li> nat-gateway-id, the NAT gateway ID, such as `nat-0yi4hekt`.</li>
+<li> vpc-id, the VPC ID, such as `vpc-0yi4hekt`.</li>
+<li> public-ip-address, the EIP, such as `139.199.232.238`.</li>
+<li>public-port, the public network port.</li>
+<li>private-ip-address, the private IP, such as `10.0.0.1`.</li>
+<li>private-port, the private network port.</li>
+<li>description, the rule description.</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件:
-参数不支持同时指定NatGatewayIds和Filters。
-<li> nat-gateway-id，NAT网关的ID，如`nat-0yi4hekt`</li>
-<li> vpc-id，私有网络VPC的ID，如`vpc-0yi4hekt`</li>
-<li> public-ip-address， 弹性IP，如`139.199.232.238`。</li>
-<li>public-port， 公网端口。</li>
-<li>private-ip-address， 内网IP，如`10.0.0.1`。</li>
-<li>private-port， 内网端口。</li>
-<li>description，规则描述。</li>
-     * @param Filters 过滤条件:
-参数不支持同时指定NatGatewayIds和Filters。
-<li> nat-gateway-id，NAT网关的ID，如`nat-0yi4hekt`</li>
-<li> vpc-id，私有网络VPC的ID，如`vpc-0yi4hekt`</li>
-<li> public-ip-address， 弹性IP，如`139.199.232.238`。</li>
-<li>public-port， 公网端口。</li>
-<li>private-ip-address， 内网IP，如`10.0.0.1`。</li>
-<li>private-port， 内网端口。</li>
-<li>description，规则描述。</li>
+     * Set Filter conditions:
+`NatGatewayIds` and `Filters` cannot be specified at the same time.
+<li> nat-gateway-id, the NAT gateway ID, such as `nat-0yi4hekt`.</li>
+<li> vpc-id, the VPC ID, such as `vpc-0yi4hekt`.</li>
+<li> public-ip-address, the EIP, such as `139.199.232.238`.</li>
+<li>public-port, the public network port.</li>
+<li>private-ip-address, the private IP, such as `10.0.0.1`.</li>
+<li>private-port, the private network port.</li>
+<li>description, the rule description.</li>
+     * @param Filters Filter conditions:
+`NatGatewayIds` and `Filters` cannot be specified at the same time.
+<li> nat-gateway-id, the NAT gateway ID, such as `nat-0yi4hekt`.</li>
+<li> vpc-id, the VPC ID, such as `vpc-0yi4hekt`.</li>
+<li> public-ip-address, the EIP, such as `139.199.232.238`.</li>
+<li>public-port, the public network port.</li>
+<li>private-ip-address, the private IP, such as `10.0.0.1`.</li>
+<li>private-port, the private network port.</li>
+<li>description, the rule description.</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 偏移量，默认为0。 
-     * @return Offset 偏移量，默认为0。
+     * Get Offset. The default value is 0. 
+     * @return Offset Offset. The default value is 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0。
-     * @param Offset 偏移量，默认为0。
+     * Set Offset. The default value is 0.
+     * @param Offset Offset. The default value is 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量，默认为20，最大值为100。 
-     * @return Limit 返回数量，默认为20，最大值为100。
+     * Get Number of values to be returned. The default value is 20. Maximum is 100. 
+     * @return Limit Number of values to be returned. The default value is 20. Maximum is 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为20，最大值为100。
-     * @param Limit 返回数量，默认为20，最大值为100。
+     * Set Number of values to be returned. The default value is 20. Maximum is 100.
+     * @param Limit Number of values to be returned. The default value is 20. Maximum is 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class ModifyServiceTemplateAttributeRequest extends AbstractModel{
 
     /**
-    * 协议端口模板实例ID，例如：ppm-529nwwj8。
+    * Protocol port template instance ID, such as `ppm-529nwwj8`.
     */
     @SerializedName("ServiceTemplateId")
     @Expose
     private String ServiceTemplateId;
 
     /**
-    * 协议端口模板名称。
+    * Protocol port template name.
     */
     @SerializedName("ServiceTemplateName")
     @Expose
     private String ServiceTemplateName;
 
     /**
-    * 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
+    * It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
     */
     @SerializedName("Services")
     @Expose
     private String [] Services;
 
     /**
-     * Get 协议端口模板实例ID，例如：ppm-529nwwj8。 
-     * @return ServiceTemplateId 协议端口模板实例ID，例如：ppm-529nwwj8。
+     * Get Protocol port template instance ID, such as `ppm-529nwwj8`. 
+     * @return ServiceTemplateId Protocol port template instance ID, such as `ppm-529nwwj8`.
      */
     public String getServiceTemplateId() {
         return this.ServiceTemplateId;
     }
 
     /**
-     * Set 协议端口模板实例ID，例如：ppm-529nwwj8。
-     * @param ServiceTemplateId 协议端口模板实例ID，例如：ppm-529nwwj8。
+     * Set Protocol port template instance ID, such as `ppm-529nwwj8`.
+     * @param ServiceTemplateId Protocol port template instance ID, such as `ppm-529nwwj8`.
      */
     public void setServiceTemplateId(String ServiceTemplateId) {
         this.ServiceTemplateId = ServiceTemplateId;
     }
 
     /**
-     * Get 协议端口模板名称。 
-     * @return ServiceTemplateName 协议端口模板名称。
+     * Get Protocol port template name. 
+     * @return ServiceTemplateName Protocol port template name.
      */
     public String getServiceTemplateName() {
         return this.ServiceTemplateName;
     }
 
     /**
-     * Set 协议端口模板名称。
-     * @param ServiceTemplateName 协议端口模板名称。
+     * Set Protocol port template name.
+     * @param ServiceTemplateName Protocol port template name.
      */
     public void setServiceTemplateName(String ServiceTemplateName) {
         this.ServiceTemplateName = ServiceTemplateName;
     }
 
     /**
-     * Get 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。 
-     * @return Services 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
+     * Get It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE. 
+     * @return Services It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
      */
     public String [] getServices() {
         return this.Services;
     }
 
     /**
-     * Set 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
-     * @param Services 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
+     * Set It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
+     * @param Services It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
      */
     public void setServices(String [] Services) {
         this.Services = Services;

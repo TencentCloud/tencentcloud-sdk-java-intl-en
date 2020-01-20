@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse extends AbstractModel{
 
     /**
-    * NAT网关端口转发规则对象数组。
+    * The object array of port forwarding rules for the NAT gateway.
     */
     @SerializedName("NatGatewayDestinationIpPortTranslationNatRuleSet")
     @Expose
     private NatGatewayDestinationIpPortTranslationNatRule [] NatGatewayDestinationIpPortTranslationNatRuleSet;
 
     /**
-    * 符合条件的NAT网关端口转发规则对象数目。
+    * The number of object arrays of NAT port forwarding rules meeting the conditions.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse exte
     private String RequestId;
 
     /**
-     * Get NAT网关端口转发规则对象数组。 
-     * @return NatGatewayDestinationIpPortTranslationNatRuleSet NAT网关端口转发规则对象数组。
+     * Get The object array of port forwarding rules for the NAT gateway. 
+     * @return NatGatewayDestinationIpPortTranslationNatRuleSet The object array of port forwarding rules for the NAT gateway.
      */
     public NatGatewayDestinationIpPortTranslationNatRule [] getNatGatewayDestinationIpPortTranslationNatRuleSet() {
         return this.NatGatewayDestinationIpPortTranslationNatRuleSet;
     }
 
     /**
-     * Set NAT网关端口转发规则对象数组。
-     * @param NatGatewayDestinationIpPortTranslationNatRuleSet NAT网关端口转发规则对象数组。
+     * Set The object array of port forwarding rules for the NAT gateway.
+     * @param NatGatewayDestinationIpPortTranslationNatRuleSet The object array of port forwarding rules for the NAT gateway.
      */
     public void setNatGatewayDestinationIpPortTranslationNatRuleSet(NatGatewayDestinationIpPortTranslationNatRule [] NatGatewayDestinationIpPortTranslationNatRuleSet) {
         this.NatGatewayDestinationIpPortTranslationNatRuleSet = NatGatewayDestinationIpPortTranslationNatRuleSet;
     }
 
     /**
-     * Get 符合条件的NAT网关端口转发规则对象数目。 
-     * @return TotalCount 符合条件的NAT网关端口转发规则对象数目。
+     * Get The number of object arrays of NAT port forwarding rules meeting the conditions. 
+     * @return TotalCount The number of object arrays of NAT port forwarding rules meeting the conditions.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的NAT网关端口转发规则对象数目。
-     * @param TotalCount 符合条件的NAT网关端口转发规则对象数目。
+     * Set The number of object arrays of NAT port forwarding rules meeting the conditions.
+     * @param TotalCount The number of object arrays of NAT port forwarding rules meeting the conditions.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

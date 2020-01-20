@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateHaVipResponse extends AbstractModel{
 
     /**
-    * `HAVIP`对象。
+    * `HAVIP` object.
     */
     @SerializedName("HaVip")
     @Expose
@@ -37,16 +37,16 @@ public class CreateHaVipResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get `HAVIP`对象。 
-     * @return HaVip `HAVIP`对象。
+     * Get `HAVIP` object. 
+     * @return HaVip `HAVIP` object.
      */
     public HaVip getHaVip() {
         return this.HaVip;
     }
 
     /**
-     * Set `HAVIP`对象。
-     * @param HaVip `HAVIP`对象。
+     * Set `HAVIP` object.
+     * @param HaVip `HAVIP` object.
      */
     public void setHaVip(HaVip HaVip) {
         this.HaVip = HaVip;

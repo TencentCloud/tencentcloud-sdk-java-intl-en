@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DefaultVpcSubnet extends AbstractModel{
 
     /**
-    * 默认VpcId
+    * Default VpcId
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 默认SubnetId
+    * Default SubnetId
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-     * Get 默认VpcId 
-     * @return VpcId 默认VpcId
+     * Get Default VpcId 
+     * @return VpcId Default VpcId
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 默认VpcId
-     * @param VpcId 默认VpcId
+     * Set Default VpcId
+     * @param VpcId Default VpcId
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 默认SubnetId 
-     * @return SubnetId 默认SubnetId
+     * Get Default SubnetId 
+     * @return SubnetId Default SubnetId
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 默认SubnetId
-     * @param SubnetId 默认SubnetId
+     * Set Default SubnetId
+     * @param SubnetId Default SubnetId
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;

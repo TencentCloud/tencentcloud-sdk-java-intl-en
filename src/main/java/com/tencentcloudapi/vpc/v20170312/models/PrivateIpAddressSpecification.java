@@ -23,181 +23,181 @@ import java.util.HashMap;
 public class PrivateIpAddressSpecification extends AbstractModel{
 
     /**
-    * 内网IP地址。
+    * Private IP address.
     */
     @SerializedName("PrivateIpAddress")
     @Expose
     private String PrivateIpAddress;
 
     /**
-    * 是否是主IP。
+    * Whether it is a primary IP.
     */
     @SerializedName("Primary")
     @Expose
     private Boolean Primary;
 
     /**
-    * 公网IP地址。
+    * Public IP address.
     */
     @SerializedName("PublicIpAddress")
     @Expose
     private String PublicIpAddress;
 
     /**
-    * EIP实例ID，例如：eip-11112222。
+    * EIP instance ID, such as `eip-11112222`。
     */
     @SerializedName("AddressId")
     @Expose
     private String AddressId;
 
     /**
-    * 内网IP描述信息。
+    * Private IP description.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 公网IP是否被封堵。
+    * Whether the public IP is blocked.
     */
     @SerializedName("IsWanIpBlocked")
     @Expose
     private Boolean IsWanIpBlocked;
 
     /**
-    * IP状态：
-PENDING：生产中
-MIGRATING：迁移中
-DELETING：删除中
-AVAILABLE：可用的
+    * IP status:
+PENDING: Creating
+MIGRATING: Migrating
+DELETING: Deleting
+AVAILABLE: Available
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-     * Get 内网IP地址。 
-     * @return PrivateIpAddress 内网IP地址。
+     * Get Private IP address. 
+     * @return PrivateIpAddress Private IP address.
      */
     public String getPrivateIpAddress() {
         return this.PrivateIpAddress;
     }
 
     /**
-     * Set 内网IP地址。
-     * @param PrivateIpAddress 内网IP地址。
+     * Set Private IP address.
+     * @param PrivateIpAddress Private IP address.
      */
     public void setPrivateIpAddress(String PrivateIpAddress) {
         this.PrivateIpAddress = PrivateIpAddress;
     }
 
     /**
-     * Get 是否是主IP。 
-     * @return Primary 是否是主IP。
+     * Get Whether it is a primary IP. 
+     * @return Primary Whether it is a primary IP.
      */
     public Boolean getPrimary() {
         return this.Primary;
     }
 
     /**
-     * Set 是否是主IP。
-     * @param Primary 是否是主IP。
+     * Set Whether it is a primary IP.
+     * @param Primary Whether it is a primary IP.
      */
     public void setPrimary(Boolean Primary) {
         this.Primary = Primary;
     }
 
     /**
-     * Get 公网IP地址。 
-     * @return PublicIpAddress 公网IP地址。
+     * Get Public IP address. 
+     * @return PublicIpAddress Public IP address.
      */
     public String getPublicIpAddress() {
         return this.PublicIpAddress;
     }
 
     /**
-     * Set 公网IP地址。
-     * @param PublicIpAddress 公网IP地址。
+     * Set Public IP address.
+     * @param PublicIpAddress Public IP address.
      */
     public void setPublicIpAddress(String PublicIpAddress) {
         this.PublicIpAddress = PublicIpAddress;
     }
 
     /**
-     * Get EIP实例ID，例如：eip-11112222。 
-     * @return AddressId EIP实例ID，例如：eip-11112222。
+     * Get EIP instance ID, such as `eip-11112222`。 
+     * @return AddressId EIP instance ID, such as `eip-11112222`。
      */
     public String getAddressId() {
         return this.AddressId;
     }
 
     /**
-     * Set EIP实例ID，例如：eip-11112222。
-     * @param AddressId EIP实例ID，例如：eip-11112222。
+     * Set EIP instance ID, such as `eip-11112222`。
+     * @param AddressId EIP instance ID, such as `eip-11112222`。
      */
     public void setAddressId(String AddressId) {
         this.AddressId = AddressId;
     }
 
     /**
-     * Get 内网IP描述信息。 
-     * @return Description 内网IP描述信息。
+     * Get Private IP description. 
+     * @return Description Private IP description.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 内网IP描述信息。
-     * @param Description 内网IP描述信息。
+     * Set Private IP description.
+     * @param Description Private IP description.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 公网IP是否被封堵。 
-     * @return IsWanIpBlocked 公网IP是否被封堵。
+     * Get Whether the public IP is blocked. 
+     * @return IsWanIpBlocked Whether the public IP is blocked.
      */
     public Boolean getIsWanIpBlocked() {
         return this.IsWanIpBlocked;
     }
 
     /**
-     * Set 公网IP是否被封堵。
-     * @param IsWanIpBlocked 公网IP是否被封堵。
+     * Set Whether the public IP is blocked.
+     * @param IsWanIpBlocked Whether the public IP is blocked.
      */
     public void setIsWanIpBlocked(Boolean IsWanIpBlocked) {
         this.IsWanIpBlocked = IsWanIpBlocked;
     }
 
     /**
-     * Get IP状态：
-PENDING：生产中
-MIGRATING：迁移中
-DELETING：删除中
-AVAILABLE：可用的 
-     * @return State IP状态：
-PENDING：生产中
-MIGRATING：迁移中
-DELETING：删除中
-AVAILABLE：可用的
+     * Get IP status:
+PENDING: Creating
+MIGRATING: Migrating
+DELETING: Deleting
+AVAILABLE: Available 
+     * @return State IP status:
+PENDING: Creating
+MIGRATING: Migrating
+DELETING: Deleting
+AVAILABLE: Available
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set IP状态：
-PENDING：生产中
-MIGRATING：迁移中
-DELETING：删除中
-AVAILABLE：可用的
-     * @param State IP状态：
-PENDING：生产中
-MIGRATING：迁移中
-DELETING：删除中
-AVAILABLE：可用的
+     * Set IP status:
+PENDING: Creating
+MIGRATING: Migrating
+DELETING: Deleting
+AVAILABLE: Available
+     * @param State IP status:
+PENDING: Creating
+MIGRATING: Migrating
+DELETING: Deleting
+AVAILABLE: Available
      */
     public void setState(String State) {
         this.State = State;

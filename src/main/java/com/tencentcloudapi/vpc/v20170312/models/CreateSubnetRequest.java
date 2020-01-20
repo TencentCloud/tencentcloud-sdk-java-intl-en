@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class CreateSubnetRequest extends AbstractModel{
 
     /**
-    * 待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+    * The ID of the VPC instance to be operated on. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网名称，最大长度不能超过60个字节。
+    * The subnet name. The maximum length is 60 bytes.
     */
     @SerializedName("SubnetName")
     @Expose
     private String SubnetName;
 
     /**
-    * 子网网段，子网网段必须在VPC网段内，相同VPC内子网网段不能重叠。
+    * The subnet IP address range. It must be within the VPC IP address range. Subnet IP address ranges cannot overlap with each other within the same VPC.
     */
     @SerializedName("CidrBlock")
     @Expose
     private String CidrBlock;
 
     /**
-    * 子网所在的可用区ID，不同子网选择不同可用区可以做跨可用区灾备。
+    * The ID of the availability zone in which the subnet resides. You can set up disaster recovery across availability zones by choosing different availability zones for different subnets.
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-     * Get 待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。 
-     * @return VpcId 待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * Get The ID of the VPC instance to be operated on. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API. 
+     * @return VpcId The ID of the VPC instance to be operated on. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
-     * @param VpcId 待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * Set The ID of the VPC instance to be operated on. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+     * @param VpcId The ID of the VPC instance to be operated on. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网名称，最大长度不能超过60个字节。 
-     * @return SubnetName 子网名称，最大长度不能超过60个字节。
+     * Get The subnet name. The maximum length is 60 bytes. 
+     * @return SubnetName The subnet name. The maximum length is 60 bytes.
      */
     public String getSubnetName() {
         return this.SubnetName;
     }
 
     /**
-     * Set 子网名称，最大长度不能超过60个字节。
-     * @param SubnetName 子网名称，最大长度不能超过60个字节。
+     * Set The subnet name. The maximum length is 60 bytes.
+     * @param SubnetName The subnet name. The maximum length is 60 bytes.
      */
     public void setSubnetName(String SubnetName) {
         this.SubnetName = SubnetName;
     }
 
     /**
-     * Get 子网网段，子网网段必须在VPC网段内，相同VPC内子网网段不能重叠。 
-     * @return CidrBlock 子网网段，子网网段必须在VPC网段内，相同VPC内子网网段不能重叠。
+     * Get The subnet IP address range. It must be within the VPC IP address range. Subnet IP address ranges cannot overlap with each other within the same VPC. 
+     * @return CidrBlock The subnet IP address range. It must be within the VPC IP address range. Subnet IP address ranges cannot overlap with each other within the same VPC.
      */
     public String getCidrBlock() {
         return this.CidrBlock;
     }
 
     /**
-     * Set 子网网段，子网网段必须在VPC网段内，相同VPC内子网网段不能重叠。
-     * @param CidrBlock 子网网段，子网网段必须在VPC网段内，相同VPC内子网网段不能重叠。
+     * Set The subnet IP address range. It must be within the VPC IP address range. Subnet IP address ranges cannot overlap with each other within the same VPC.
+     * @param CidrBlock The subnet IP address range. It must be within the VPC IP address range. Subnet IP address ranges cannot overlap with each other within the same VPC.
      */
     public void setCidrBlock(String CidrBlock) {
         this.CidrBlock = CidrBlock;
     }
 
     /**
-     * Get 子网所在的可用区ID，不同子网选择不同可用区可以做跨可用区灾备。 
-     * @return Zone 子网所在的可用区ID，不同子网选择不同可用区可以做跨可用区灾备。
+     * Get The ID of the availability zone in which the subnet resides. You can set up disaster recovery across availability zones by choosing different availability zones for different subnets. 
+     * @return Zone The ID of the availability zone in which the subnet resides. You can set up disaster recovery across availability zones by choosing different availability zones for different subnets.
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 子网所在的可用区ID，不同子网选择不同可用区可以做跨可用区灾备。
-     * @param Zone 子网所在的可用区ID，不同子网选择不同可用区可以做跨可用区灾备。
+     * Set The ID of the availability zone in which the subnet resides. You can set up disaster recovery across availability zones by choosing different availability zones for different subnets.
+     * @param Zone The ID of the availability zone in which the subnet resides. You can set up disaster recovery across availability zones by choosing different availability zones for different subnets.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

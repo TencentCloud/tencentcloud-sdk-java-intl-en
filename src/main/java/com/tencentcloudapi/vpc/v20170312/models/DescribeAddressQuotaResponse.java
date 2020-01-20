@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeAddressQuotaResponse extends AbstractModel{
 
     /**
-    * 账户 EIP 配额信息。
+    * The quota information of EIPs in an account.
     */
     @SerializedName("QuotaSet")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeAddressQuotaResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 账户 EIP 配额信息。 
-     * @return QuotaSet 账户 EIP 配额信息。
+     * Get The quota information of EIPs in an account. 
+     * @return QuotaSet The quota information of EIPs in an account.
      */
     public Quota [] getQuotaSet() {
         return this.QuotaSet;
     }
 
     /**
-     * Set 账户 EIP 配额信息。
-     * @param QuotaSet 账户 EIP 配额信息。
+     * Set The quota information of EIPs in an account.
+     * @param QuotaSet The quota information of EIPs in an account.
      */
     public void setQuotaSet(Quota [] QuotaSet) {
         this.QuotaSet = QuotaSet;

@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class UnassignIpv6CidrBlockRequest extends AbstractModel{
 
     /**
-    * `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
+    * The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * `IPv6`网段。形如：`3402:4e00:20:1000::/56`
+    * The `IPv6` IP range, such as `3402:4e00:20:1000::/56`
     */
     @SerializedName("Ipv6CidrBlock")
     @Expose
     private String Ipv6CidrBlock;
 
     /**
-     * Get `VPC`实例`ID`，形如：`vpc-f49l6u0z`。 
-     * @return VpcId `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
+     * Get The `ID` of the `VPC`, such as `vpc-f49l6u0z`. 
+     * @return VpcId The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
-     * @param VpcId `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
+     * Set The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
+     * @param VpcId The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get `IPv6`网段。形如：`3402:4e00:20:1000::/56` 
-     * @return Ipv6CidrBlock `IPv6`网段。形如：`3402:4e00:20:1000::/56`
+     * Get The `IPv6` IP range, such as `3402:4e00:20:1000::/56` 
+     * @return Ipv6CidrBlock The `IPv6` IP range, such as `3402:4e00:20:1000::/56`
      */
     public String getIpv6CidrBlock() {
         return this.Ipv6CidrBlock;
     }
 
     /**
-     * Set `IPv6`网段。形如：`3402:4e00:20:1000::/56`
-     * @param Ipv6CidrBlock `IPv6`网段。形如：`3402:4e00:20:1000::/56`
+     * Set The `IPv6` IP range, such as `3402:4e00:20:1000::/56`
+     * @param Ipv6CidrBlock The `IPv6` IP range, such as `3402:4e00:20:1000::/56`
      */
     public void setIpv6CidrBlock(String Ipv6CidrBlock) {
         this.Ipv6CidrBlock = Ipv6CidrBlock;

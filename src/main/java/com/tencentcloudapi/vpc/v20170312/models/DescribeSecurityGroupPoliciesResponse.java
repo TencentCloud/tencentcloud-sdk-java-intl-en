@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeSecurityGroupPoliciesResponse extends AbstractModel{
 
     /**
-    * 安全组规则集合。
+    * Security group policy set.
     */
     @SerializedName("SecurityGroupPolicySet")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeSecurityGroupPoliciesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 安全组规则集合。 
-     * @return SecurityGroupPolicySet 安全组规则集合。
+     * Get Security group policy set. 
+     * @return SecurityGroupPolicySet Security group policy set.
      */
     public SecurityGroupPolicySet getSecurityGroupPolicySet() {
         return this.SecurityGroupPolicySet;
     }
 
     /**
-     * Set 安全组规则集合。
-     * @param SecurityGroupPolicySet 安全组规则集合。
+     * Set Security group policy set.
+     * @param SecurityGroupPolicySet Security group policy set.
      */
     public void setSecurityGroupPolicySet(SecurityGroupPolicySet SecurityGroupPolicySet) {
         this.SecurityGroupPolicySet = SecurityGroupPolicySet;

@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeleteSubnetRequest extends AbstractModel{
 
     /**
-    * 子网实例ID。可通过DescribeSubnets接口返回值中的SubnetId获取。
+    * The ID of the subnet instance. You can obtain the parameter value from the SubnetId field in the returned result of DescribeSubnets API.
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-     * Get 子网实例ID。可通过DescribeSubnets接口返回值中的SubnetId获取。 
-     * @return SubnetId 子网实例ID。可通过DescribeSubnets接口返回值中的SubnetId获取。
+     * Get The ID of the subnet instance. You can obtain the parameter value from the SubnetId field in the returned result of DescribeSubnets API. 
+     * @return SubnetId The ID of the subnet instance. You can obtain the parameter value from the SubnetId field in the returned result of DescribeSubnets API.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网实例ID。可通过DescribeSubnets接口返回值中的SubnetId获取。
-     * @param SubnetId 子网实例ID。可通过DescribeSubnets接口返回值中的SubnetId获取。
+     * Set The ID of the subnet instance. You can obtain the parameter value from the SubnetId field in the returned result of DescribeSubnets API.
+     * @param SubnetId The ID of the subnet instance. You can obtain the parameter value from the SubnetId field in the returned result of DescribeSubnets API.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;

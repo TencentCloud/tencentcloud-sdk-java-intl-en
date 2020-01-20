@@ -23,9 +23,33 @@ import java.util.HashMap;
 public class DeleteDomainErrorPageInfoRequest extends AbstractModel{
 
     /**
+    * Unique ID of a custom error page. For more information, please see the response to CreateDomainErrorPageInfo.
+    */
+    @SerializedName("ErrorPageId")
+    @Expose
+    private String ErrorPageId;
+
+    /**
+     * Get Unique ID of a custom error page. For more information, please see the response to CreateDomainErrorPageInfo. 
+     * @return ErrorPageId Unique ID of a custom error page. For more information, please see the response to CreateDomainErrorPageInfo.
+     */
+    public String getErrorPageId() {
+        return this.ErrorPageId;
+    }
+
+    /**
+     * Set Unique ID of a custom error page. For more information, please see the response to CreateDomainErrorPageInfo.
+     * @param ErrorPageId Unique ID of a custom error page. For more information, please see the response to CreateDomainErrorPageInfo.
+     */
+    public void setErrorPageId(String ErrorPageId) {
+        this.ErrorPageId = ErrorPageId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ErrorPageId", this.ErrorPageId);
 
     }
 }

@@ -30,21 +30,21 @@ public class ModifyAddressesBandwidthRequest extends AbstractModel{
     private String [] AddressIds;
 
     /**
-    * 调整带宽目标值
+    * Target bandwidth value adjustment
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
     private Long InternetMaxBandwidthOut;
 
     /**
-    * 包月带宽起始时间
+    * The monthly bandwidth start time
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 包月带宽结束时间
+    * The monthly bandwidth end time
     */
     @SerializedName("EndTime")
     @Expose
@@ -67,48 +67,48 @@ public class ModifyAddressesBandwidthRequest extends AbstractModel{
     }
 
     /**
-     * Get 调整带宽目标值 
-     * @return InternetMaxBandwidthOut 调整带宽目标值
+     * Get Target bandwidth value adjustment 
+     * @return InternetMaxBandwidthOut Target bandwidth value adjustment
      */
     public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
     /**
-     * Set 调整带宽目标值
-     * @param InternetMaxBandwidthOut 调整带宽目标值
+     * Set Target bandwidth value adjustment
+     * @param InternetMaxBandwidthOut Target bandwidth value adjustment
      */
     public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
     }
 
     /**
-     * Get 包月带宽起始时间 
-     * @return StartTime 包月带宽起始时间
+     * Get The monthly bandwidth start time 
+     * @return StartTime The monthly bandwidth start time
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 包月带宽起始时间
-     * @param StartTime 包月带宽起始时间
+     * Set The monthly bandwidth start time
+     * @param StartTime The monthly bandwidth start time
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 包月带宽结束时间 
-     * @return EndTime 包月带宽结束时间
+     * Get The monthly bandwidth end time 
+     * @return EndTime The monthly bandwidth end time
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 包月带宽结束时间
-     * @param EndTime 包月带宽结束时间
+     * Set The monthly bandwidth end time
+     * @param EndTime The monthly bandwidth end time
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

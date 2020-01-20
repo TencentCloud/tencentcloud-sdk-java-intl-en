@@ -23,9 +23,177 @@ import java.util.HashMap;
 public class CreateDomainErrorPageInfoRequest extends AbstractModel{
 
     /**
+    * Listener ID
+    */
+    @SerializedName("ListenerId")
+    @Expose
+    private String ListenerId;
+
+    /**
+    * Domain name
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
+    * Original error code
+    */
+    @SerializedName("ErrorNos")
+    @Expose
+    private Long [] ErrorNos;
+
+    /**
+    * New response packet
+    */
+    @SerializedName("Body")
+    @Expose
+    private String Body;
+
+    /**
+    * New error code
+    */
+    @SerializedName("NewErrorNo")
+    @Expose
+    private Long NewErrorNo;
+
+    /**
+    * Response header to be deleted
+    */
+    @SerializedName("ClearHeaders")
+    @Expose
+    private String [] ClearHeaders;
+
+    /**
+    * Response header to be set
+    */
+    @SerializedName("SetHeaders")
+    @Expose
+    private HttpHeaderParam [] SetHeaders;
+
+    /**
+     * Get Listener ID 
+     * @return ListenerId Listener ID
+     */
+    public String getListenerId() {
+        return this.ListenerId;
+    }
+
+    /**
+     * Set Listener ID
+     * @param ListenerId Listener ID
+     */
+    public void setListenerId(String ListenerId) {
+        this.ListenerId = ListenerId;
+    }
+
+    /**
+     * Get Domain name 
+     * @return Domain Domain name
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set Domain name
+     * @param Domain Domain name
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
+    /**
+     * Get Original error code 
+     * @return ErrorNos Original error code
+     */
+    public Long [] getErrorNos() {
+        return this.ErrorNos;
+    }
+
+    /**
+     * Set Original error code
+     * @param ErrorNos Original error code
+     */
+    public void setErrorNos(Long [] ErrorNos) {
+        this.ErrorNos = ErrorNos;
+    }
+
+    /**
+     * Get New response packet 
+     * @return Body New response packet
+     */
+    public String getBody() {
+        return this.Body;
+    }
+
+    /**
+     * Set New response packet
+     * @param Body New response packet
+     */
+    public void setBody(String Body) {
+        this.Body = Body;
+    }
+
+    /**
+     * Get New error code 
+     * @return NewErrorNo New error code
+     */
+    public Long getNewErrorNo() {
+        return this.NewErrorNo;
+    }
+
+    /**
+     * Set New error code
+     * @param NewErrorNo New error code
+     */
+    public void setNewErrorNo(Long NewErrorNo) {
+        this.NewErrorNo = NewErrorNo;
+    }
+
+    /**
+     * Get Response header to be deleted 
+     * @return ClearHeaders Response header to be deleted
+     */
+    public String [] getClearHeaders() {
+        return this.ClearHeaders;
+    }
+
+    /**
+     * Set Response header to be deleted
+     * @param ClearHeaders Response header to be deleted
+     */
+    public void setClearHeaders(String [] ClearHeaders) {
+        this.ClearHeaders = ClearHeaders;
+    }
+
+    /**
+     * Get Response header to be set 
+     * @return SetHeaders Response header to be set
+     */
+    public HttpHeaderParam [] getSetHeaders() {
+        return this.SetHeaders;
+    }
+
+    /**
+     * Set Response header to be set
+     * @param SetHeaders Response header to be set
+     */
+    public void setSetHeaders(HttpHeaderParam [] SetHeaders) {
+        this.SetHeaders = SetHeaders;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamArraySimple(map, prefix + "ErrorNos.", this.ErrorNos);
+        this.setParamSimple(map, prefix + "Body", this.Body);
+        this.setParamSimple(map, prefix + "NewErrorNo", this.NewErrorNo);
+        this.setParamArraySimple(map, prefix + "ClearHeaders.", this.ClearHeaders);
+        this.setParamArrayObj(map, prefix + "SetHeaders.", this.SetHeaders);
 
     }
 }

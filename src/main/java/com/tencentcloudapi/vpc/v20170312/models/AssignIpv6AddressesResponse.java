@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AssignIpv6AddressesResponse extends AbstractModel{
 
     /**
-    * 分配给弹性网卡的`IPv6`地址列表。
+    * The list of `IPv6` addresses assigned to ENIs.
     */
     @SerializedName("Ipv6AddressSet")
     @Expose
@@ -37,16 +37,16 @@ public class AssignIpv6AddressesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 分配给弹性网卡的`IPv6`地址列表。 
-     * @return Ipv6AddressSet 分配给弹性网卡的`IPv6`地址列表。
+     * Get The list of `IPv6` addresses assigned to ENIs. 
+     * @return Ipv6AddressSet The list of `IPv6` addresses assigned to ENIs.
      */
     public Ipv6Address [] getIpv6AddressSet() {
         return this.Ipv6AddressSet;
     }
 
     /**
-     * Set 分配给弹性网卡的`IPv6`地址列表。
-     * @param Ipv6AddressSet 分配给弹性网卡的`IPv6`地址列表。
+     * Set The list of `IPv6` addresses assigned to ENIs.
+     * @param Ipv6AddressSet The list of `IPv6` addresses assigned to ENIs.
      */
     public void setIpv6AddressSet(Ipv6Address [] Ipv6AddressSet) {
         this.Ipv6AddressSet = Ipv6AddressSet;

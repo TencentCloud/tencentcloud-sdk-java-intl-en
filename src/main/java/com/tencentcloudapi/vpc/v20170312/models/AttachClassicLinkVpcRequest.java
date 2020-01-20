@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class AttachClassicLinkVpcRequest extends AbstractModel{
 
     /**
-    * VPC实例ID
+    * VPC instance ID
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * CVM实例ID
+    * CVM Instance ID
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-     * Get VPC实例ID 
-     * @return VpcId VPC实例ID
+     * Get VPC instance ID 
+     * @return VpcId VPC instance ID
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC实例ID
-     * @param VpcId VPC实例ID
+     * Set VPC instance ID
+     * @param VpcId VPC instance ID
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get CVM实例ID 
-     * @return InstanceIds CVM实例ID
+     * Get CVM Instance ID 
+     * @return InstanceIds CVM Instance ID
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set CVM实例ID
-     * @param InstanceIds CVM实例ID
+     * Set CVM Instance ID
+     * @param InstanceIds CVM Instance ID
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

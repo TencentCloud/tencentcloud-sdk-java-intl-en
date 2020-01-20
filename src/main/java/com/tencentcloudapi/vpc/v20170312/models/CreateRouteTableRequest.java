@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class CreateRouteTableRequest extends AbstractModel{
 
     /**
-    * 待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+    * The ID of the VPC instance to be operated on. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 路由表名称，最大长度不能超过60个字节。
+    * The route table name. The maximum length is 60 characters.
     */
     @SerializedName("RouteTableName")
     @Expose
     private String RouteTableName;
 
     /**
-     * Get 待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。 
-     * @return VpcId 待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * Get The ID of the VPC instance to be operated on. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API. 
+     * @return VpcId The ID of the VPC instance to be operated on. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
-     * @param VpcId 待操作的VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * Set The ID of the VPC instance to be operated on. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+     * @param VpcId The ID of the VPC instance to be operated on. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 路由表名称，最大长度不能超过60个字节。 
-     * @return RouteTableName 路由表名称，最大长度不能超过60个字节。
+     * Get The route table name. The maximum length is 60 characters. 
+     * @return RouteTableName The route table name. The maximum length is 60 characters.
      */
     public String getRouteTableName() {
         return this.RouteTableName;
     }
 
     /**
-     * Set 路由表名称，最大长度不能超过60个字节。
-     * @param RouteTableName 路由表名称，最大长度不能超过60个字节。
+     * Set The route table name. The maximum length is 60 characters.
+     * @param RouteTableName The route table name. The maximum length is 60 characters.
      */
     public void setRouteTableName(String RouteTableName) {
         this.RouteTableName = RouteTableName;

@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeTaskResultResponse extends AbstractModel{
 
     /**
-    * 任务ID
+    * Job ID
     */
     @SerializedName("TaskId")
     @Expose
     private Long TaskId;
 
     /**
-    * 执行结果，包括"SUCCESS", "FAILED", "RUNNING"
+    * The execution results, including `SUCCESS`, `FAILED`, and `RUNNING`
     */
     @SerializedName("Result")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeTaskResultResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 任务ID 
-     * @return TaskId 任务ID
+     * Get Job ID 
+     * @return TaskId Job ID
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID
-     * @param TaskId 任务ID
+     * Set Job ID
+     * @param TaskId Job ID
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 执行结果，包括"SUCCESS", "FAILED", "RUNNING" 
-     * @return Result 执行结果，包括"SUCCESS", "FAILED", "RUNNING"
+     * Get The execution results, including `SUCCESS`, `FAILED`, and `RUNNING` 
+     * @return Result The execution results, including `SUCCESS`, `FAILED`, and `RUNNING`
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set 执行结果，包括"SUCCESS", "FAILED", "RUNNING"
-     * @param Result 执行结果，包括"SUCCESS", "FAILED", "RUNNING"
+     * Set The execution results, including `SUCCESS`, `FAILED`, and `RUNNING`
+     * @param Result The execution results, including `SUCCESS`, `FAILED`, and `RUNNING`
      */
     public void setResult(String Result) {
         this.Result = Result;

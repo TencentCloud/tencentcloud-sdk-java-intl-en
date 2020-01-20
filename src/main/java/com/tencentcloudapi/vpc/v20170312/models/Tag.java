@@ -23,56 +23,56 @@ import java.util.HashMap;
 public class Tag extends AbstractModel{
 
     /**
-    * 标签键
-注意：此字段可能返回 null，表示取不到有效值。
+    * Tag key
+Note: This field may return null, indicating no valid value.
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * 标签值
-注意：此字段可能返回 null，表示取不到有效值。
+    * Tag value
+Note: This field may return null, indicating no valid value.
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 标签键
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Key 标签键
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get Tag key
+Note: This field may return null, indicating no valid value. 
+     * @return Key Tag key
+Note: This field may return null, indicating no valid value.
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set 标签键
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Key 标签键
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set Tag key
+Note: This field may return null, indicating no valid value.
+     * @param Key Tag key
+Note: This field may return null, indicating no valid value.
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 标签值
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Value 标签值
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get Tag value
+Note: This field may return null, indicating no valid value. 
+     * @return Value Tag value
+Note: This field may return null, indicating no valid value.
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set 标签值
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Value 标签值
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set Tag value
+Note: This field may return null, indicating no valid value.
+     * @param Value Tag value
+Note: This field may return null, indicating no valid value.
      */
     public void setValue(String Value) {
         this.Value = Value;

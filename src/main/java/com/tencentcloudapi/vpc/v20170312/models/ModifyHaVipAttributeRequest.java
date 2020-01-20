@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class ModifyHaVipAttributeRequest extends AbstractModel{
 
     /**
-    * `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
+    * The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
     */
     @SerializedName("HaVipId")
     @Expose
     private String HaVipId;
 
     /**
-    * `HAVIP`名称，可任意命名，但不得超过60个字符。
+    * `HAVIP` can be named freely, but the maximum length is 60 characters.
     */
     @SerializedName("HaVipName")
     @Expose
     private String HaVipName;
 
     /**
-     * Get `HAVIP`唯一`ID`，形如：`havip-9o233uri`。 
-     * @return HaVipId `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
+     * Get The unique `ID` of the `HAVIP`, such as `havip-9o233uri`. 
+     * @return HaVipId The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
      */
     public String getHaVipId() {
         return this.HaVipId;
     }
 
     /**
-     * Set `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
-     * @param HaVipId `HAVIP`唯一`ID`，形如：`havip-9o233uri`。
+     * Set The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
+     * @param HaVipId The unique `ID` of the `HAVIP`, such as `havip-9o233uri`.
      */
     public void setHaVipId(String HaVipId) {
         this.HaVipId = HaVipId;
     }
 
     /**
-     * Get `HAVIP`名称，可任意命名，但不得超过60个字符。 
-     * @return HaVipName `HAVIP`名称，可任意命名，但不得超过60个字符。
+     * Get `HAVIP` can be named freely, but the maximum length is 60 characters. 
+     * @return HaVipName `HAVIP` can be named freely, but the maximum length is 60 characters.
      */
     public String getHaVipName() {
         return this.HaVipName;
     }
 
     /**
-     * Set `HAVIP`名称，可任意命名，但不得超过60个字符。
-     * @param HaVipName `HAVIP`名称，可任意命名，但不得超过60个字符。
+     * Set `HAVIP` can be named freely, but the maximum length is 60 characters.
+     * @param HaVipName `HAVIP` can be named freely, but the maximum length is 60 characters.
      */
     public void setHaVipName(String HaVipName) {
         this.HaVipName = HaVipName;

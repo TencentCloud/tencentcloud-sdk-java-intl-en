@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class ModifyVpnGatewayAttributeRequest extends AbstractModel{
 
     /**
-    * VPN网关实例ID。
+    * The ID of the VPN gateway instance.
     */
     @SerializedName("VpnGatewayId")
     @Expose
     private String VpnGatewayId;
 
     /**
-    * VPN网关名称，最大长度不能超过60个字节。
+    * The VPN gateway name. The maximum length is 60 bytes.
     */
     @SerializedName("VpnGatewayName")
     @Expose
     private String VpnGatewayName;
 
     /**
-    * VPN网关计费模式，目前只支持预付费（即包年包月）到后付费（即按量计费）的转换。即参数只支持：POSTPAID_BY_HOUR。
+    * VPN gateway billing mode. Currently, only the conversion of prepaid (monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
     */
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
 
     /**
-     * Get VPN网关实例ID。 
-     * @return VpnGatewayId VPN网关实例ID。
+     * Get The ID of the VPN gateway instance. 
+     * @return VpnGatewayId The ID of the VPN gateway instance.
      */
     public String getVpnGatewayId() {
         return this.VpnGatewayId;
     }
 
     /**
-     * Set VPN网关实例ID。
-     * @param VpnGatewayId VPN网关实例ID。
+     * Set The ID of the VPN gateway instance.
+     * @param VpnGatewayId The ID of the VPN gateway instance.
      */
     public void setVpnGatewayId(String VpnGatewayId) {
         this.VpnGatewayId = VpnGatewayId;
     }
 
     /**
-     * Get VPN网关名称，最大长度不能超过60个字节。 
-     * @return VpnGatewayName VPN网关名称，最大长度不能超过60个字节。
+     * Get The VPN gateway name. The maximum length is 60 bytes. 
+     * @return VpnGatewayName The VPN gateway name. The maximum length is 60 bytes.
      */
     public String getVpnGatewayName() {
         return this.VpnGatewayName;
     }
 
     /**
-     * Set VPN网关名称，最大长度不能超过60个字节。
-     * @param VpnGatewayName VPN网关名称，最大长度不能超过60个字节。
+     * Set The VPN gateway name. The maximum length is 60 bytes.
+     * @param VpnGatewayName The VPN gateway name. The maximum length is 60 bytes.
      */
     public void setVpnGatewayName(String VpnGatewayName) {
         this.VpnGatewayName = VpnGatewayName;
     }
 
     /**
-     * Get VPN网关计费模式，目前只支持预付费（即包年包月）到后付费（即按量计费）的转换。即参数只支持：POSTPAID_BY_HOUR。 
-     * @return InstanceChargeType VPN网关计费模式，目前只支持预付费（即包年包月）到后付费（即按量计费）的转换。即参数只支持：POSTPAID_BY_HOUR。
+     * Get VPN gateway billing mode. Currently, only the conversion of prepaid (monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR. 
+     * @return InstanceChargeType VPN gateway billing mode. Currently, only the conversion of prepaid (monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set VPN网关计费模式，目前只支持预付费（即包年包月）到后付费（即按量计费）的转换。即参数只支持：POSTPAID_BY_HOUR。
-     * @param InstanceChargeType VPN网关计费模式，目前只支持预付费（即包年包月）到后付费（即按量计费）的转换。即参数只支持：POSTPAID_BY_HOUR。
+     * Set VPN gateway billing mode. Currently, only the conversion of prepaid (monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
+     * @param InstanceChargeType VPN gateway billing mode. Currently, only the conversion of prepaid (monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;

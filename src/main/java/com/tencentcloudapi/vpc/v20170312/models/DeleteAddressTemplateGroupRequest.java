@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeleteAddressTemplateGroupRequest extends AbstractModel{
 
     /**
-    * IP地址模板集合实例ID，例如：ipmg-90cex8mq。
+    * The IP address template group instance ID, such as `ipmg-90cex8mq`.
     */
     @SerializedName("AddressTemplateGroupId")
     @Expose
     private String AddressTemplateGroupId;
 
     /**
-     * Get IP地址模板集合实例ID，例如：ipmg-90cex8mq。 
-     * @return AddressTemplateGroupId IP地址模板集合实例ID，例如：ipmg-90cex8mq。
+     * Get The IP address template group instance ID, such as `ipmg-90cex8mq`. 
+     * @return AddressTemplateGroupId The IP address template group instance ID, such as `ipmg-90cex8mq`.
      */
     public String getAddressTemplateGroupId() {
         return this.AddressTemplateGroupId;
     }
 
     /**
-     * Set IP地址模板集合实例ID，例如：ipmg-90cex8mq。
-     * @param AddressTemplateGroupId IP地址模板集合实例ID，例如：ipmg-90cex8mq。
+     * Set The IP address template group instance ID, such as `ipmg-90cex8mq`.
+     * @param AddressTemplateGroupId The IP address template group instance ID, such as `ipmg-90cex8mq`.
      */
     public void setAddressTemplateGroupId(String AddressTemplateGroupId) {
         this.AddressTemplateGroupId = AddressTemplateGroupId;

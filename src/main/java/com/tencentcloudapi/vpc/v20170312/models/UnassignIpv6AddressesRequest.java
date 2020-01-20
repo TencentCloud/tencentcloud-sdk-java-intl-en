@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class UnassignIpv6AddressesRequest extends AbstractModel{
 
     /**
-    * 弹性网卡实例`ID`，形如：`eni-m6dyj72l`。
+    * The `ID` of the ENI instance, such as `eni-m6dyj72l`.
     */
     @SerializedName("NetworkInterfaceId")
     @Expose
     private String NetworkInterfaceId;
 
     /**
-    * 指定的`IPv6`地址列表，单次最多指定10个。
+    * The list of specified `IPv6` addresses. A maximum of 10 can be specified each time.
     */
     @SerializedName("Ipv6Addresses")
     @Expose
     private Ipv6Address [] Ipv6Addresses;
 
     /**
-     * Get 弹性网卡实例`ID`，形如：`eni-m6dyj72l`。 
-     * @return NetworkInterfaceId 弹性网卡实例`ID`，形如：`eni-m6dyj72l`。
+     * Get The `ID` of the ENI instance, such as `eni-m6dyj72l`. 
+     * @return NetworkInterfaceId The `ID` of the ENI instance, such as `eni-m6dyj72l`.
      */
     public String getNetworkInterfaceId() {
         return this.NetworkInterfaceId;
     }
 
     /**
-     * Set 弹性网卡实例`ID`，形如：`eni-m6dyj72l`。
-     * @param NetworkInterfaceId 弹性网卡实例`ID`，形如：`eni-m6dyj72l`。
+     * Set The `ID` of the ENI instance, such as `eni-m6dyj72l`.
+     * @param NetworkInterfaceId The `ID` of the ENI instance, such as `eni-m6dyj72l`.
      */
     public void setNetworkInterfaceId(String NetworkInterfaceId) {
         this.NetworkInterfaceId = NetworkInterfaceId;
     }
 
     /**
-     * Get 指定的`IPv6`地址列表，单次最多指定10个。 
-     * @return Ipv6Addresses 指定的`IPv6`地址列表，单次最多指定10个。
+     * Get The list of specified `IPv6` addresses. A maximum of 10 can be specified each time. 
+     * @return Ipv6Addresses The list of specified `IPv6` addresses. A maximum of 10 can be specified each time.
      */
     public Ipv6Address [] getIpv6Addresses() {
         return this.Ipv6Addresses;
     }
 
     /**
-     * Set 指定的`IPv6`地址列表，单次最多指定10个。
-     * @param Ipv6Addresses 指定的`IPv6`地址列表，单次最多指定10个。
+     * Set The list of specified `IPv6` addresses. A maximum of 10 can be specified each time.
+     * @param Ipv6Addresses The list of specified `IPv6` addresses. A maximum of 10 can be specified each time.
      */
     public void setIpv6Addresses(Ipv6Address [] Ipv6Addresses) {
         this.Ipv6Addresses = Ipv6Addresses;

@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class AddressTemplateSpecification extends AbstractModel{
 
     /**
-    * IP地址ID，例如：ipm-2uw6ujo6。
+    * The ID of the IP address, such as `ipm-2uw6ujo6`.
     */
     @SerializedName("AddressId")
     @Expose
     private String AddressId;
 
     /**
-    * IP地址组ID，例如：ipmg-2uw6ujo6。
+    * The ID of the IP address group, such as `ipmg-2uw6ujo6`.
     */
     @SerializedName("AddressGroupId")
     @Expose
     private String AddressGroupId;
 
     /**
-     * Get IP地址ID，例如：ipm-2uw6ujo6。 
-     * @return AddressId IP地址ID，例如：ipm-2uw6ujo6。
+     * Get The ID of the IP address, such as `ipm-2uw6ujo6`. 
+     * @return AddressId The ID of the IP address, such as `ipm-2uw6ujo6`.
      */
     public String getAddressId() {
         return this.AddressId;
     }
 
     /**
-     * Set IP地址ID，例如：ipm-2uw6ujo6。
-     * @param AddressId IP地址ID，例如：ipm-2uw6ujo6。
+     * Set The ID of the IP address, such as `ipm-2uw6ujo6`.
+     * @param AddressId The ID of the IP address, such as `ipm-2uw6ujo6`.
      */
     public void setAddressId(String AddressId) {
         this.AddressId = AddressId;
     }
 
     /**
-     * Get IP地址组ID，例如：ipmg-2uw6ujo6。 
-     * @return AddressGroupId IP地址组ID，例如：ipmg-2uw6ujo6。
+     * Get The ID of the IP address group, such as `ipmg-2uw6ujo6`. 
+     * @return AddressGroupId The ID of the IP address group, such as `ipmg-2uw6ujo6`.
      */
     public String getAddressGroupId() {
         return this.AddressGroupId;
     }
 
     /**
-     * Set IP地址组ID，例如：ipmg-2uw6ujo6。
-     * @param AddressGroupId IP地址组ID，例如：ipmg-2uw6ujo6。
+     * Set The ID of the IP address group, such as `ipmg-2uw6ujo6`.
+     * @param AddressGroupId The ID of the IP address group, such as `ipmg-2uw6ujo6`.
      */
     public void setAddressGroupId(String AddressGroupId) {
         this.AddressGroupId = AddressGroupId;

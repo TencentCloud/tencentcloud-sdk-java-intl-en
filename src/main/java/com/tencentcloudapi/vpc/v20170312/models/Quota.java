@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class Quota extends AbstractModel{
 
     /**
-    * 配额名称，取值范围：<br><li>`TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；<br><li>`DAILY_EIP_APPLY`：用户当前地域下今日申购次数；<br><li>`DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数。
+    * Quota name. Value range:<br><li>`TOTAL_EIP_QUOTA`:EIP quota under the user's current region<br><li>`DAILY_EIP_APPLY`: Number of EIP applications submitted daily under the user's current region<br><li>`DAILY_PUBLIC_IP_ASSIGN`: Number of public IP reassignments under the user's current region.
     */
     @SerializedName("QuotaId")
     @Expose
     private String QuotaId;
 
     /**
-    * 当前数量
+    * Current count
     */
     @SerializedName("QuotaCurrent")
     @Expose
     private Long QuotaCurrent;
 
     /**
-    * 配额数量
+    * Quota
     */
     @SerializedName("QuotaLimit")
     @Expose
     private Long QuotaLimit;
 
     /**
-     * Get 配额名称，取值范围：<br><li>`TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；<br><li>`DAILY_EIP_APPLY`：用户当前地域下今日申购次数；<br><li>`DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数。 
-     * @return QuotaId 配额名称，取值范围：<br><li>`TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；<br><li>`DAILY_EIP_APPLY`：用户当前地域下今日申购次数；<br><li>`DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数。
+     * Get Quota name. Value range:<br><li>`TOTAL_EIP_QUOTA`:EIP quota under the user's current region<br><li>`DAILY_EIP_APPLY`: Number of EIP applications submitted daily under the user's current region<br><li>`DAILY_PUBLIC_IP_ASSIGN`: Number of public IP reassignments under the user's current region. 
+     * @return QuotaId Quota name. Value range:<br><li>`TOTAL_EIP_QUOTA`:EIP quota under the user's current region<br><li>`DAILY_EIP_APPLY`: Number of EIP applications submitted daily under the user's current region<br><li>`DAILY_PUBLIC_IP_ASSIGN`: Number of public IP reassignments under the user's current region.
      */
     public String getQuotaId() {
         return this.QuotaId;
     }
 
     /**
-     * Set 配额名称，取值范围：<br><li>`TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；<br><li>`DAILY_EIP_APPLY`：用户当前地域下今日申购次数；<br><li>`DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数。
-     * @param QuotaId 配额名称，取值范围：<br><li>`TOTAL_EIP_QUOTA`：用户当前地域下EIP的配额数；<br><li>`DAILY_EIP_APPLY`：用户当前地域下今日申购次数；<br><li>`DAILY_PUBLIC_IP_ASSIGN`：用户当前地域下，重新分配公网 IP次数。
+     * Set Quota name. Value range:<br><li>`TOTAL_EIP_QUOTA`:EIP quota under the user's current region<br><li>`DAILY_EIP_APPLY`: Number of EIP applications submitted daily under the user's current region<br><li>`DAILY_PUBLIC_IP_ASSIGN`: Number of public IP reassignments under the user's current region.
+     * @param QuotaId Quota name. Value range:<br><li>`TOTAL_EIP_QUOTA`:EIP quota under the user's current region<br><li>`DAILY_EIP_APPLY`: Number of EIP applications submitted daily under the user's current region<br><li>`DAILY_PUBLIC_IP_ASSIGN`: Number of public IP reassignments under the user's current region.
      */
     public void setQuotaId(String QuotaId) {
         this.QuotaId = QuotaId;
     }
 
     /**
-     * Get 当前数量 
-     * @return QuotaCurrent 当前数量
+     * Get Current count 
+     * @return QuotaCurrent Current count
      */
     public Long getQuotaCurrent() {
         return this.QuotaCurrent;
     }
 
     /**
-     * Set 当前数量
-     * @param QuotaCurrent 当前数量
+     * Set Current count
+     * @param QuotaCurrent Current count
      */
     public void setQuotaCurrent(Long QuotaCurrent) {
         this.QuotaCurrent = QuotaCurrent;
     }
 
     /**
-     * Get 配额数量 
-     * @return QuotaLimit 配额数量
+     * Get Quota 
+     * @return QuotaLimit Quota
      */
     public Long getQuotaLimit() {
         return this.QuotaLimit;
     }
 
     /**
-     * Set 配额数量
-     * @param QuotaLimit 配额数量
+     * Set Quota
+     * @param QuotaLimit Quota
      */
     public void setQuotaLimit(Long QuotaLimit) {
         this.QuotaLimit = QuotaLimit;

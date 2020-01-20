@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeVpcPrivateIpAddressesResponse extends AbstractModel{
 
     /**
-    * 内网`IP`地址信息列表。
+    * The list of private `IP` address information.
     */
     @SerializedName("VpcPrivateIpAddressSet")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeVpcPrivateIpAddressesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 内网`IP`地址信息列表。 
-     * @return VpcPrivateIpAddressSet 内网`IP`地址信息列表。
+     * Get The list of private `IP` address information. 
+     * @return VpcPrivateIpAddressSet The list of private `IP` address information.
      */
     public VpcPrivateIpAddress [] getVpcPrivateIpAddressSet() {
         return this.VpcPrivateIpAddressSet;
     }
 
     /**
-     * Set 内网`IP`地址信息列表。
-     * @param VpcPrivateIpAddressSet 内网`IP`地址信息列表。
+     * Set The list of private `IP` address information.
+     * @param VpcPrivateIpAddressSet The list of private `IP` address information.
      */
     public void setVpcPrivateIpAddressSet(VpcPrivateIpAddress [] VpcPrivateIpAddressSet) {
         this.VpcPrivateIpAddressSet = VpcPrivateIpAddressSet;

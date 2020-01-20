@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class ResetNatGatewayConnectionRequest extends AbstractModel{
 
     /**
-    * NAT网关ID。
+    * NAT gateway ID.
     */
     @SerializedName("NatGatewayId")
     @Expose
     private String NatGatewayId;
 
     /**
-    * NAT网关并发连接上限，形如：1000000、3000000、10000000。
+    * Concurrent connections cap of the NAT gateway, such as 1000000, 3000000, 10000000.
     */
     @SerializedName("MaxConcurrentConnection")
     @Expose
     private Long MaxConcurrentConnection;
 
     /**
-     * Get NAT网关ID。 
-     * @return NatGatewayId NAT网关ID。
+     * Get NAT gateway ID. 
+     * @return NatGatewayId NAT gateway ID.
      */
     public String getNatGatewayId() {
         return this.NatGatewayId;
     }
 
     /**
-     * Set NAT网关ID。
-     * @param NatGatewayId NAT网关ID。
+     * Set NAT gateway ID.
+     * @param NatGatewayId NAT gateway ID.
      */
     public void setNatGatewayId(String NatGatewayId) {
         this.NatGatewayId = NatGatewayId;
     }
 
     /**
-     * Get NAT网关并发连接上限，形如：1000000、3000000、10000000。 
-     * @return MaxConcurrentConnection NAT网关并发连接上限，形如：1000000、3000000、10000000。
+     * Get Concurrent connections cap of the NAT gateway, such as 1000000, 3000000, 10000000. 
+     * @return MaxConcurrentConnection Concurrent connections cap of the NAT gateway, such as 1000000, 3000000, 10000000.
      */
     public Long getMaxConcurrentConnection() {
         return this.MaxConcurrentConnection;
     }
 
     /**
-     * Set NAT网关并发连接上限，形如：1000000、3000000、10000000。
-     * @param MaxConcurrentConnection NAT网关并发连接上限，形如：1000000、3000000、10000000。
+     * Set Concurrent connections cap of the NAT gateway, such as 1000000, 3000000, 10000000.
+     * @param MaxConcurrentConnection Concurrent connections cap of the NAT gateway, such as 1000000, 3000000, 10000000.
      */
     public void setMaxConcurrentConnection(Long MaxConcurrentConnection) {
         this.MaxConcurrentConnection = MaxConcurrentConnection;

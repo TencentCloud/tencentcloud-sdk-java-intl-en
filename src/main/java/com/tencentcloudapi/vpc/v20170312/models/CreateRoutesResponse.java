@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreateRoutesResponse extends AbstractModel{
 
     /**
-    * 新增的实例个数。
+    * The number of newly added instances.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 路由表对象。
+    * Route table object.
     */
     @SerializedName("RouteTableSet")
     @Expose
@@ -44,32 +44,32 @@ public class CreateRoutesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 新增的实例个数。 
-     * @return TotalCount 新增的实例个数。
+     * Get The number of newly added instances. 
+     * @return TotalCount The number of newly added instances.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 新增的实例个数。
-     * @param TotalCount 新增的实例个数。
+     * Set The number of newly added instances.
+     * @param TotalCount The number of newly added instances.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 路由表对象。 
-     * @return RouteTableSet 路由表对象。
+     * Get Route table object. 
+     * @return RouteTableSet Route table object.
      */
     public RouteTable [] getRouteTableSet() {
         return this.RouteTableSet;
     }
 
     /**
-     * Set 路由表对象。
-     * @param RouteTableSet 路由表对象。
+     * Set Route table object.
+     * @param RouteTableSet Route table object.
      */
     public void setRouteTableSet(RouteTable [] RouteTableSet) {
         this.RouteTableSet = RouteTableSet;

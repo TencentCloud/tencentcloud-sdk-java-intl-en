@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest extends AbstractModel{
 
     /**
-    * NAT网关的ID，形如：`nat-df45454`。
+    * The ID of the NAT gateway, such as `nat-df45454`.
     */
     @SerializedName("NatGatewayId")
     @Expose
     private String NatGatewayId;
 
     /**
-    * 源NAT网关的端口转换规则。
+    * The port forwarding rule of the source NAT gateway.
     */
     @SerializedName("SourceNatRule")
     @Expose
     private DestinationIpPortTranslationNatRule SourceNatRule;
 
     /**
-    * 目的NAT网关的端口转换规则。
+    * The port forwarding rule of the destination NAT gateway.
     */
     @SerializedName("DestinationNatRule")
     @Expose
     private DestinationIpPortTranslationNatRule DestinationNatRule;
 
     /**
-     * Get NAT网关的ID，形如：`nat-df45454`。 
-     * @return NatGatewayId NAT网关的ID，形如：`nat-df45454`。
+     * Get The ID of the NAT gateway, such as `nat-df45454`. 
+     * @return NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
      */
     public String getNatGatewayId() {
         return this.NatGatewayId;
     }
 
     /**
-     * Set NAT网关的ID，形如：`nat-df45454`。
-     * @param NatGatewayId NAT网关的ID，形如：`nat-df45454`。
+     * Set The ID of the NAT gateway, such as `nat-df45454`.
+     * @param NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
      */
     public void setNatGatewayId(String NatGatewayId) {
         this.NatGatewayId = NatGatewayId;
     }
 
     /**
-     * Get 源NAT网关的端口转换规则。 
-     * @return SourceNatRule 源NAT网关的端口转换规则。
+     * Get The port forwarding rule of the source NAT gateway. 
+     * @return SourceNatRule The port forwarding rule of the source NAT gateway.
      */
     public DestinationIpPortTranslationNatRule getSourceNatRule() {
         return this.SourceNatRule;
     }
 
     /**
-     * Set 源NAT网关的端口转换规则。
-     * @param SourceNatRule 源NAT网关的端口转换规则。
+     * Set The port forwarding rule of the source NAT gateway.
+     * @param SourceNatRule The port forwarding rule of the source NAT gateway.
      */
     public void setSourceNatRule(DestinationIpPortTranslationNatRule SourceNatRule) {
         this.SourceNatRule = SourceNatRule;
     }
 
     /**
-     * Get 目的NAT网关的端口转换规则。 
-     * @return DestinationNatRule 目的NAT网关的端口转换规则。
+     * Get The port forwarding rule of the destination NAT gateway. 
+     * @return DestinationNatRule The port forwarding rule of the destination NAT gateway.
      */
     public DestinationIpPortTranslationNatRule getDestinationNatRule() {
         return this.DestinationNatRule;
     }
 
     /**
-     * Set 目的NAT网关的端口转换规则。
-     * @param DestinationNatRule 目的NAT网关的端口转换规则。
+     * Set The port forwarding rule of the destination NAT gateway.
+     * @param DestinationNatRule The port forwarding rule of the destination NAT gateway.
      */
     public void setDestinationNatRule(DestinationIpPortTranslationNatRule DestinationNatRule) {
         this.DestinationNatRule = DestinationNatRule;

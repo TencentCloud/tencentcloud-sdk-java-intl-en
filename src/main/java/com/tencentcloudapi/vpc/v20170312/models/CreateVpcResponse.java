@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateVpcResponse extends AbstractModel{
 
     /**
-    * Vpc对象。
+    * The VPC object.
     */
     @SerializedName("Vpc")
     @Expose
@@ -37,16 +37,16 @@ public class CreateVpcResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Vpc对象。 
-     * @return Vpc Vpc对象。
+     * Get The VPC object. 
+     * @return Vpc The VPC object.
      */
     public Vpc getVpc() {
         return this.Vpc;
     }
 
     /**
-     * Set Vpc对象。
-     * @param Vpc Vpc对象。
+     * Set The VPC object.
+     * @param Vpc The VPC object.
      */
     public void setVpc(Vpc Vpc) {
         this.Vpc = Vpc;

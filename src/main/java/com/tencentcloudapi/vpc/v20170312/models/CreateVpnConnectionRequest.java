@@ -23,184 +23,184 @@ import java.util.HashMap;
 public class CreateVpnConnectionRequest extends AbstractModel{
 
     /**
-    * VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+    * The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * VPN网关实例ID。
+    * The ID of the VPN gateway instance.
     */
     @SerializedName("VpnGatewayId")
     @Expose
     private String VpnGatewayId;
 
     /**
-    * 对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。
+    * The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the `DescribeCustomerGateways` API.
     */
     @SerializedName("CustomerGatewayId")
     @Expose
     private String CustomerGatewayId;
 
     /**
-    * 通道名称，可任意命名，但不得超过60个字符。
+    * Gateway can be named freely, but the maximum length is 60 characters.
     */
     @SerializedName("VpnConnectionName")
     @Expose
     private String VpnConnectionName;
 
     /**
-    * 预共享密钥。
+    * The pre-shared key.
     */
     @SerializedName("PreShareKey")
     @Expose
     private String PreShareKey;
 
     /**
-    * SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。
+    * The SPD policy group, for example: {"10.0.0.5/24":["172.123.10.5/16"]}. 10.0.0.5/24 is the VPC internal IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
     */
     @SerializedName("SecurityPolicyDatabases")
     @Expose
     private SecurityPolicyDatabase [] SecurityPolicyDatabases;
 
     /**
-    * IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议
+    * Internet Key Exchange (IKE) configuration. IKE has a self-protection mechanism. The network security protocol is configured by the user.
     */
     @SerializedName("IKEOptionsSpecification")
     @Expose
     private IKEOptionsSpecification IKEOptionsSpecification;
 
     /**
-    * IPSec配置，腾讯云提供IPSec安全会话设置
+    * IPSec configuration. The IPSec secure session configuration is provided by Tencent Cloud.
     */
     @SerializedName("IPSECOptionsSpecification")
     @Expose
     private IPSECOptionsSpecification IPSECOptionsSpecification;
 
     /**
-     * Get VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。 
-     * @return VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * Get The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API. 
+     * @return VpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
-     * @param VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
+     * Set The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+     * @param VpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get VPN网关实例ID。 
-     * @return VpnGatewayId VPN网关实例ID。
+     * Get The ID of the VPN gateway instance. 
+     * @return VpnGatewayId The ID of the VPN gateway instance.
      */
     public String getVpnGatewayId() {
         return this.VpnGatewayId;
     }
 
     /**
-     * Set VPN网关实例ID。
-     * @param VpnGatewayId VPN网关实例ID。
+     * Set The ID of the VPN gateway instance.
+     * @param VpnGatewayId The ID of the VPN gateway instance.
      */
     public void setVpnGatewayId(String VpnGatewayId) {
         this.VpnGatewayId = VpnGatewayId;
     }
 
     /**
-     * Get 对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。 
-     * @return CustomerGatewayId 对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。
+     * Get The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the `DescribeCustomerGateways` API. 
+     * @return CustomerGatewayId The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the `DescribeCustomerGateways` API.
      */
     public String getCustomerGatewayId() {
         return this.CustomerGatewayId;
     }
 
     /**
-     * Set 对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。
-     * @param CustomerGatewayId 对端网关ID，例如：cgw-2wqq41m9，可通过DescribeCustomerGateways接口查询对端网关。
+     * Set The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the `DescribeCustomerGateways` API.
+     * @param CustomerGatewayId The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the `DescribeCustomerGateways` API.
      */
     public void setCustomerGatewayId(String CustomerGatewayId) {
         this.CustomerGatewayId = CustomerGatewayId;
     }
 
     /**
-     * Get 通道名称，可任意命名，但不得超过60个字符。 
-     * @return VpnConnectionName 通道名称，可任意命名，但不得超过60个字符。
+     * Get Gateway can be named freely, but the maximum length is 60 characters. 
+     * @return VpnConnectionName Gateway can be named freely, but the maximum length is 60 characters.
      */
     public String getVpnConnectionName() {
         return this.VpnConnectionName;
     }
 
     /**
-     * Set 通道名称，可任意命名，但不得超过60个字符。
-     * @param VpnConnectionName 通道名称，可任意命名，但不得超过60个字符。
+     * Set Gateway can be named freely, but the maximum length is 60 characters.
+     * @param VpnConnectionName Gateway can be named freely, but the maximum length is 60 characters.
      */
     public void setVpnConnectionName(String VpnConnectionName) {
         this.VpnConnectionName = VpnConnectionName;
     }
 
     /**
-     * Get 预共享密钥。 
-     * @return PreShareKey 预共享密钥。
+     * Get The pre-shared key. 
+     * @return PreShareKey The pre-shared key.
      */
     public String getPreShareKey() {
         return this.PreShareKey;
     }
 
     /**
-     * Set 预共享密钥。
-     * @param PreShareKey 预共享密钥。
+     * Set The pre-shared key.
+     * @param PreShareKey The pre-shared key.
      */
     public void setPreShareKey(String PreShareKey) {
         this.PreShareKey = PreShareKey;
     }
 
     /**
-     * Get SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。 
-     * @return SecurityPolicyDatabases SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。
+     * Get The SPD policy group, for example: {"10.0.0.5/24":["172.123.10.5/16"]}. 10.0.0.5/24 is the VPC internal IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC. 
+     * @return SecurityPolicyDatabases The SPD policy group, for example: {"10.0.0.5/24":["172.123.10.5/16"]}. 10.0.0.5/24 is the VPC internal IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
      */
     public SecurityPolicyDatabase [] getSecurityPolicyDatabases() {
         return this.SecurityPolicyDatabases;
     }
 
     /**
-     * Set SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。
-     * @param SecurityPolicyDatabases SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。
+     * Set The SPD policy group, for example: {"10.0.0.5/24":["172.123.10.5/16"]}. 10.0.0.5/24 is the VPC internal IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
+     * @param SecurityPolicyDatabases The SPD policy group, for example: {"10.0.0.5/24":["172.123.10.5/16"]}. 10.0.0.5/24 is the VPC internal IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
      */
     public void setSecurityPolicyDatabases(SecurityPolicyDatabase [] SecurityPolicyDatabases) {
         this.SecurityPolicyDatabases = SecurityPolicyDatabases;
     }
 
     /**
-     * Get IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议 
-     * @return IKEOptionsSpecification IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议
+     * Get Internet Key Exchange (IKE) configuration. IKE has a self-protection mechanism. The network security protocol is configured by the user. 
+     * @return IKEOptionsSpecification Internet Key Exchange (IKE) configuration. IKE has a self-protection mechanism. The network security protocol is configured by the user.
      */
     public IKEOptionsSpecification getIKEOptionsSpecification() {
         return this.IKEOptionsSpecification;
     }
 
     /**
-     * Set IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议
-     * @param IKEOptionsSpecification IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议
+     * Set Internet Key Exchange (IKE) configuration. IKE has a self-protection mechanism. The network security protocol is configured by the user.
+     * @param IKEOptionsSpecification Internet Key Exchange (IKE) configuration. IKE has a self-protection mechanism. The network security protocol is configured by the user.
      */
     public void setIKEOptionsSpecification(IKEOptionsSpecification IKEOptionsSpecification) {
         this.IKEOptionsSpecification = IKEOptionsSpecification;
     }
 
     /**
-     * Get IPSec配置，腾讯云提供IPSec安全会话设置 
-     * @return IPSECOptionsSpecification IPSec配置，腾讯云提供IPSec安全会话设置
+     * Get IPSec configuration. The IPSec secure session configuration is provided by Tencent Cloud. 
+     * @return IPSECOptionsSpecification IPSec configuration. The IPSec secure session configuration is provided by Tencent Cloud.
      */
     public IPSECOptionsSpecification getIPSECOptionsSpecification() {
         return this.IPSECOptionsSpecification;
     }
 
     /**
-     * Set IPSec配置，腾讯云提供IPSec安全会话设置
-     * @param IPSECOptionsSpecification IPSec配置，腾讯云提供IPSec安全会话设置
+     * Set IPSec configuration. The IPSec secure session configuration is provided by Tencent Cloud.
+     * @param IPSECOptionsSpecification IPSec configuration. The IPSec secure session configuration is provided by Tencent Cloud.
      */
     public void setIPSECOptionsSpecification(IPSECOptionsSpecification IPSECOptionsSpecification) {
         this.IPSECOptionsSpecification = IPSECOptionsSpecification;

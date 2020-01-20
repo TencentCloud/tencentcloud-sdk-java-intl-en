@@ -23,117 +23,117 @@ import java.util.HashMap;
 public class DescribeVpnConnectionsRequest extends AbstractModel{
 
     /**
-    * VPN通道实例ID。形如：vpnx-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnConnectionIds和Filters。
+    * The instance ID of the VPN tunnel, such as `vpnx-f49l6u0z`. Each request can have a maximum of 100 instances. `VpnConnectionIds` and `Filters` cannot be specified at the same time.
     */
     @SerializedName("VpnConnectionIds")
     @Expose
     private String [] VpnConnectionIds;
 
     /**
-    * 过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定VpnConnectionIds和Filters。
-<li>vpc-id - String - VPC实例ID，形如：`vpc-0a36uwkr`。</li>
-<li>vpn-gateway-id - String - VPN网关实例ID，形如：`vpngw-p4lmqawn`。</li>
-<li>customer-gateway-id - String - 对端网关实例ID，形如：`cgw-l4rblw63`。</li>
-<li>vpn-connection-name - String - 通道名称，形如：`test-vpn`。</li>
-<li>vpn-connection-id - String - 通道实例ID，形如：`vpnx-5p7vkch8"`。</li>
+    * The filter condition. For details, see the Instance Filter Conditions Table. The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. `VpnConnectionIds` and `Filters` cannot be specified at the same time.
+<li>vpc-id - String - The VPC instance ID, such as `vpc-0a36uwkr`.</li>
+<li>vpn-gateway-id - String - The VPN gateway instance ID, such as `vpngw-p4lmqawn`.</li>
+<li>customer-gateway-id - String - The customer gateway instance ID, such as `cgw-l4rblw63`.</li>
+<li>vpn-connection-name - String - The connection name, such as `test-vpn`.</li>
+<li>vpn-connection-id - String - The connection instance ID, such as `vpnx-5p7vkch8"`.</li>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
+    * The Offset. The default value is 0. For more information about Offset, see the relevant section in the API Introduction.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量，默认为20，最大值为100。
+    * Number of values to be returned. The default value is 20. Maximum is 100.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get VPN通道实例ID。形如：vpnx-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnConnectionIds和Filters。 
-     * @return VpnConnectionIds VPN通道实例ID。形如：vpnx-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnConnectionIds和Filters。
+     * Get The instance ID of the VPN tunnel, such as `vpnx-f49l6u0z`. Each request can have a maximum of 100 instances. `VpnConnectionIds` and `Filters` cannot be specified at the same time. 
+     * @return VpnConnectionIds The instance ID of the VPN tunnel, such as `vpnx-f49l6u0z`. Each request can have a maximum of 100 instances. `VpnConnectionIds` and `Filters` cannot be specified at the same time.
      */
     public String [] getVpnConnectionIds() {
         return this.VpnConnectionIds;
     }
 
     /**
-     * Set VPN通道实例ID。形如：vpnx-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnConnectionIds和Filters。
-     * @param VpnConnectionIds VPN通道实例ID。形如：vpnx-f49l6u0z。每次请求的实例的上限为100。参数不支持同时指定VpnConnectionIds和Filters。
+     * Set The instance ID of the VPN tunnel, such as `vpnx-f49l6u0z`. Each request can have a maximum of 100 instances. `VpnConnectionIds` and `Filters` cannot be specified at the same time.
+     * @param VpnConnectionIds The instance ID of the VPN tunnel, such as `vpnx-f49l6u0z`. Each request can have a maximum of 100 instances. `VpnConnectionIds` and `Filters` cannot be specified at the same time.
      */
     public void setVpnConnectionIds(String [] VpnConnectionIds) {
         this.VpnConnectionIds = VpnConnectionIds;
     }
 
     /**
-     * Get 过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定VpnConnectionIds和Filters。
-<li>vpc-id - String - VPC实例ID，形如：`vpc-0a36uwkr`。</li>
-<li>vpn-gateway-id - String - VPN网关实例ID，形如：`vpngw-p4lmqawn`。</li>
-<li>customer-gateway-id - String - 对端网关实例ID，形如：`cgw-l4rblw63`。</li>
-<li>vpn-connection-name - String - 通道名称，形如：`test-vpn`。</li>
-<li>vpn-connection-id - String - 通道实例ID，形如：`vpnx-5p7vkch8"`。</li> 
-     * @return Filters 过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定VpnConnectionIds和Filters。
-<li>vpc-id - String - VPC实例ID，形如：`vpc-0a36uwkr`。</li>
-<li>vpn-gateway-id - String - VPN网关实例ID，形如：`vpngw-p4lmqawn`。</li>
-<li>customer-gateway-id - String - 对端网关实例ID，形如：`cgw-l4rblw63`。</li>
-<li>vpn-connection-name - String - 通道名称，形如：`test-vpn`。</li>
-<li>vpn-connection-id - String - 通道实例ID，形如：`vpnx-5p7vkch8"`。</li>
+     * Get The filter condition. For details, see the Instance Filter Conditions Table. The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. `VpnConnectionIds` and `Filters` cannot be specified at the same time.
+<li>vpc-id - String - The VPC instance ID, such as `vpc-0a36uwkr`.</li>
+<li>vpn-gateway-id - String - The VPN gateway instance ID, such as `vpngw-p4lmqawn`.</li>
+<li>customer-gateway-id - String - The customer gateway instance ID, such as `cgw-l4rblw63`.</li>
+<li>vpn-connection-name - String - The connection name, such as `test-vpn`.</li>
+<li>vpn-connection-id - String - The connection instance ID, such as `vpnx-5p7vkch8"`.</li> 
+     * @return Filters The filter condition. For details, see the Instance Filter Conditions Table. The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. `VpnConnectionIds` and `Filters` cannot be specified at the same time.
+<li>vpc-id - String - The VPC instance ID, such as `vpc-0a36uwkr`.</li>
+<li>vpn-gateway-id - String - The VPN gateway instance ID, such as `vpngw-p4lmqawn`.</li>
+<li>customer-gateway-id - String - The customer gateway instance ID, such as `cgw-l4rblw63`.</li>
+<li>vpn-connection-name - String - The connection name, such as `test-vpn`.</li>
+<li>vpn-connection-id - String - The connection instance ID, such as `vpnx-5p7vkch8"`.</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定VpnConnectionIds和Filters。
-<li>vpc-id - String - VPC实例ID，形如：`vpc-0a36uwkr`。</li>
-<li>vpn-gateway-id - String - VPN网关实例ID，形如：`vpngw-p4lmqawn`。</li>
-<li>customer-gateway-id - String - 对端网关实例ID，形如：`cgw-l4rblw63`。</li>
-<li>vpn-connection-name - String - 通道名称，形如：`test-vpn`。</li>
-<li>vpn-connection-id - String - 通道实例ID，形如：`vpnx-5p7vkch8"`。</li>
-     * @param Filters 过滤条件，详见下表：实例过滤条件表。每次请求的Filters的上限为10，Filter.Values的上限为5。参数不支持同时指定VpnConnectionIds和Filters。
-<li>vpc-id - String - VPC实例ID，形如：`vpc-0a36uwkr`。</li>
-<li>vpn-gateway-id - String - VPN网关实例ID，形如：`vpngw-p4lmqawn`。</li>
-<li>customer-gateway-id - String - 对端网关实例ID，形如：`cgw-l4rblw63`。</li>
-<li>vpn-connection-name - String - 通道名称，形如：`test-vpn`。</li>
-<li>vpn-connection-id - String - 通道实例ID，形如：`vpnx-5p7vkch8"`。</li>
+     * Set The filter condition. For details, see the Instance Filter Conditions Table. The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. `VpnConnectionIds` and `Filters` cannot be specified at the same time.
+<li>vpc-id - String - The VPC instance ID, such as `vpc-0a36uwkr`.</li>
+<li>vpn-gateway-id - String - The VPN gateway instance ID, such as `vpngw-p4lmqawn`.</li>
+<li>customer-gateway-id - String - The customer gateway instance ID, such as `cgw-l4rblw63`.</li>
+<li>vpn-connection-name - String - The connection name, such as `test-vpn`.</li>
+<li>vpn-connection-id - String - The connection instance ID, such as `vpnx-5p7vkch8"`.</li>
+     * @param Filters The filter condition. For details, see the Instance Filter Conditions Table. The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. `VpnConnectionIds` and `Filters` cannot be specified at the same time.
+<li>vpc-id - String - The VPC instance ID, such as `vpc-0a36uwkr`.</li>
+<li>vpn-gateway-id - String - The VPN gateway instance ID, such as `vpngw-p4lmqawn`.</li>
+<li>customer-gateway-id - String - The customer gateway instance ID, such as `cgw-l4rblw63`.</li>
+<li>vpn-connection-name - String - The connection name, such as `test-vpn`.</li>
+<li>vpn-connection-id - String - The connection instance ID, such as `vpnx-5p7vkch8"`.</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。 
-     * @return Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
+     * Get The Offset. The default value is 0. For more information about Offset, see the relevant section in the API Introduction. 
+     * @return Offset The Offset. The default value is 0. For more information about Offset, see the relevant section in the API Introduction.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
-     * @param Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
+     * Set The Offset. The default value is 0. For more information about Offset, see the relevant section in the API Introduction.
+     * @param Offset The Offset. The default value is 0. For more information about Offset, see the relevant section in the API Introduction.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量，默认为20，最大值为100。 
-     * @return Limit 返回数量，默认为20，最大值为100。
+     * Get Number of values to be returned. The default value is 20. Maximum is 100. 
+     * @return Limit Number of values to be returned. The default value is 20. Maximum is 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为20，最大值为100。
-     * @param Limit 返回数量，默认为20，最大值为100。
+     * Set Number of values to be returned. The default value is 20. Maximum is 100.
+     * @param Limit Number of values to be returned. The default value is 20. Maximum is 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

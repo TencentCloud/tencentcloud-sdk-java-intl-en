@@ -23,345 +23,345 @@ import java.util.HashMap;
 public class VpnConnection extends AbstractModel{
 
     /**
-    * 通道实例ID。
+    * Tunnel instance ID.
     */
     @SerializedName("VpnConnectionId")
     @Expose
     private String VpnConnectionId;
 
     /**
-    * 通道名称。
+    * Tunnel name.
     */
     @SerializedName("VpnConnectionName")
     @Expose
     private String VpnConnectionName;
 
     /**
-    * VPC实例ID。
+    * VPC instance ID.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * VPN网关实例ID。
+    * The ID of the VPN gateway instance.
     */
     @SerializedName("VpnGatewayId")
     @Expose
     private String VpnGatewayId;
 
     /**
-    * 对端网关实例ID。
+    * Customer gateway instance ID.
     */
     @SerializedName("CustomerGatewayId")
     @Expose
     private String CustomerGatewayId;
 
     /**
-    * 预共享密钥。
+    * The pre-shared key.
     */
     @SerializedName("PreShareKey")
     @Expose
     private String PreShareKey;
 
     /**
-    * 通道传输协议。
+    * Tunnel transmission protocol.
     */
     @SerializedName("VpnProto")
     @Expose
     private String VpnProto;
 
     /**
-    * 通道加密协议。
+    * Tunnel encryption protocol.
     */
     @SerializedName("EncryptProto")
     @Expose
     private String EncryptProto;
 
     /**
-    * 路由类型。
+    * Route Type.
     */
     @SerializedName("RouteType")
     @Expose
     private String RouteType;
 
     /**
-    * 创建时间。
+    * Creation Time.
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * 通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。
+    * Production status of the tunnel. PENDING: Creating; AVAILABLE: Running; DELETING: Deleting.
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * 通道连接状态，AVAILABLE：已连接。
+    * Connection status of the tunnel. AVAILABLE: Connected.
     */
     @SerializedName("NetStatus")
     @Expose
     private String NetStatus;
 
     /**
-    * SPD。
+    * SPD.
     */
     @SerializedName("SecurityPolicyDatabaseSet")
     @Expose
     private SecurityPolicyDatabase [] SecurityPolicyDatabaseSet;
 
     /**
-    * IKE选项。
+    * IKE options.
     */
     @SerializedName("IKEOptionsSpecification")
     @Expose
     private IKEOptionsSpecification IKEOptionsSpecification;
 
     /**
-    * IPSEC选择。
+    * IPSEC options.
     */
     @SerializedName("IPSECOptionsSpecification")
     @Expose
     private IPSECOptionsSpecification IPSECOptionsSpecification;
 
     /**
-     * Get 通道实例ID。 
-     * @return VpnConnectionId 通道实例ID。
+     * Get Tunnel instance ID. 
+     * @return VpnConnectionId Tunnel instance ID.
      */
     public String getVpnConnectionId() {
         return this.VpnConnectionId;
     }
 
     /**
-     * Set 通道实例ID。
-     * @param VpnConnectionId 通道实例ID。
+     * Set Tunnel instance ID.
+     * @param VpnConnectionId Tunnel instance ID.
      */
     public void setVpnConnectionId(String VpnConnectionId) {
         this.VpnConnectionId = VpnConnectionId;
     }
 
     /**
-     * Get 通道名称。 
-     * @return VpnConnectionName 通道名称。
+     * Get Tunnel name. 
+     * @return VpnConnectionName Tunnel name.
      */
     public String getVpnConnectionName() {
         return this.VpnConnectionName;
     }
 
     /**
-     * Set 通道名称。
-     * @param VpnConnectionName 通道名称。
+     * Set Tunnel name.
+     * @param VpnConnectionName Tunnel name.
      */
     public void setVpnConnectionName(String VpnConnectionName) {
         this.VpnConnectionName = VpnConnectionName;
     }
 
     /**
-     * Get VPC实例ID。 
-     * @return VpcId VPC实例ID。
+     * Get VPC instance ID. 
+     * @return VpcId VPC instance ID.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC实例ID。
-     * @param VpcId VPC实例ID。
+     * Set VPC instance ID.
+     * @param VpcId VPC instance ID.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get VPN网关实例ID。 
-     * @return VpnGatewayId VPN网关实例ID。
+     * Get The ID of the VPN gateway instance. 
+     * @return VpnGatewayId The ID of the VPN gateway instance.
      */
     public String getVpnGatewayId() {
         return this.VpnGatewayId;
     }
 
     /**
-     * Set VPN网关实例ID。
-     * @param VpnGatewayId VPN网关实例ID。
+     * Set The ID of the VPN gateway instance.
+     * @param VpnGatewayId The ID of the VPN gateway instance.
      */
     public void setVpnGatewayId(String VpnGatewayId) {
         this.VpnGatewayId = VpnGatewayId;
     }
 
     /**
-     * Get 对端网关实例ID。 
-     * @return CustomerGatewayId 对端网关实例ID。
+     * Get Customer gateway instance ID. 
+     * @return CustomerGatewayId Customer gateway instance ID.
      */
     public String getCustomerGatewayId() {
         return this.CustomerGatewayId;
     }
 
     /**
-     * Set 对端网关实例ID。
-     * @param CustomerGatewayId 对端网关实例ID。
+     * Set Customer gateway instance ID.
+     * @param CustomerGatewayId Customer gateway instance ID.
      */
     public void setCustomerGatewayId(String CustomerGatewayId) {
         this.CustomerGatewayId = CustomerGatewayId;
     }
 
     /**
-     * Get 预共享密钥。 
-     * @return PreShareKey 预共享密钥。
+     * Get The pre-shared key. 
+     * @return PreShareKey The pre-shared key.
      */
     public String getPreShareKey() {
         return this.PreShareKey;
     }
 
     /**
-     * Set 预共享密钥。
-     * @param PreShareKey 预共享密钥。
+     * Set The pre-shared key.
+     * @param PreShareKey The pre-shared key.
      */
     public void setPreShareKey(String PreShareKey) {
         this.PreShareKey = PreShareKey;
     }
 
     /**
-     * Get 通道传输协议。 
-     * @return VpnProto 通道传输协议。
+     * Get Tunnel transmission protocol. 
+     * @return VpnProto Tunnel transmission protocol.
      */
     public String getVpnProto() {
         return this.VpnProto;
     }
 
     /**
-     * Set 通道传输协议。
-     * @param VpnProto 通道传输协议。
+     * Set Tunnel transmission protocol.
+     * @param VpnProto Tunnel transmission protocol.
      */
     public void setVpnProto(String VpnProto) {
         this.VpnProto = VpnProto;
     }
 
     /**
-     * Get 通道加密协议。 
-     * @return EncryptProto 通道加密协议。
+     * Get Tunnel encryption protocol. 
+     * @return EncryptProto Tunnel encryption protocol.
      */
     public String getEncryptProto() {
         return this.EncryptProto;
     }
 
     /**
-     * Set 通道加密协议。
-     * @param EncryptProto 通道加密协议。
+     * Set Tunnel encryption protocol.
+     * @param EncryptProto Tunnel encryption protocol.
      */
     public void setEncryptProto(String EncryptProto) {
         this.EncryptProto = EncryptProto;
     }
 
     /**
-     * Get 路由类型。 
-     * @return RouteType 路由类型。
+     * Get Route Type. 
+     * @return RouteType Route Type.
      */
     public String getRouteType() {
         return this.RouteType;
     }
 
     /**
-     * Set 路由类型。
-     * @param RouteType 路由类型。
+     * Set Route Type.
+     * @param RouteType Route Type.
      */
     public void setRouteType(String RouteType) {
         this.RouteType = RouteType;
     }
 
     /**
-     * Get 创建时间。 
-     * @return CreatedTime 创建时间。
+     * Get Creation Time. 
+     * @return CreatedTime Creation Time.
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间。
-     * @param CreatedTime 创建时间。
+     * Set Creation Time.
+     * @param CreatedTime Creation Time.
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。 
-     * @return State 通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。
+     * Get Production status of the tunnel. PENDING: Creating; AVAILABLE: Running; DELETING: Deleting. 
+     * @return State Production status of the tunnel. PENDING: Creating; AVAILABLE: Running; DELETING: Deleting.
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set 通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。
-     * @param State 通道的生产状态，PENDING：生产中，AVAILABLE：运行中，DELETING：删除中。
+     * Set Production status of the tunnel. PENDING: Creating; AVAILABLE: Running; DELETING: Deleting.
+     * @param State Production status of the tunnel. PENDING: Creating; AVAILABLE: Running; DELETING: Deleting.
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get 通道连接状态，AVAILABLE：已连接。 
-     * @return NetStatus 通道连接状态，AVAILABLE：已连接。
+     * Get Connection status of the tunnel. AVAILABLE: Connected. 
+     * @return NetStatus Connection status of the tunnel. AVAILABLE: Connected.
      */
     public String getNetStatus() {
         return this.NetStatus;
     }
 
     /**
-     * Set 通道连接状态，AVAILABLE：已连接。
-     * @param NetStatus 通道连接状态，AVAILABLE：已连接。
+     * Set Connection status of the tunnel. AVAILABLE: Connected.
+     * @param NetStatus Connection status of the tunnel. AVAILABLE: Connected.
      */
     public void setNetStatus(String NetStatus) {
         this.NetStatus = NetStatus;
     }
 
     /**
-     * Get SPD。 
-     * @return SecurityPolicyDatabaseSet SPD。
+     * Get SPD. 
+     * @return SecurityPolicyDatabaseSet SPD.
      */
     public SecurityPolicyDatabase [] getSecurityPolicyDatabaseSet() {
         return this.SecurityPolicyDatabaseSet;
     }
 
     /**
-     * Set SPD。
-     * @param SecurityPolicyDatabaseSet SPD。
+     * Set SPD.
+     * @param SecurityPolicyDatabaseSet SPD.
      */
     public void setSecurityPolicyDatabaseSet(SecurityPolicyDatabase [] SecurityPolicyDatabaseSet) {
         this.SecurityPolicyDatabaseSet = SecurityPolicyDatabaseSet;
     }
 
     /**
-     * Get IKE选项。 
-     * @return IKEOptionsSpecification IKE选项。
+     * Get IKE options. 
+     * @return IKEOptionsSpecification IKE options.
      */
     public IKEOptionsSpecification getIKEOptionsSpecification() {
         return this.IKEOptionsSpecification;
     }
 
     /**
-     * Set IKE选项。
-     * @param IKEOptionsSpecification IKE选项。
+     * Set IKE options.
+     * @param IKEOptionsSpecification IKE options.
      */
     public void setIKEOptionsSpecification(IKEOptionsSpecification IKEOptionsSpecification) {
         this.IKEOptionsSpecification = IKEOptionsSpecification;
     }
 
     /**
-     * Get IPSEC选择。 
-     * @return IPSECOptionsSpecification IPSEC选择。
+     * Get IPSEC options. 
+     * @return IPSECOptionsSpecification IPSEC options.
      */
     public IPSECOptionsSpecification getIPSECOptionsSpecification() {
         return this.IPSECOptionsSpecification;
     }
 
     /**
-     * Set IPSEC选择。
-     * @param IPSECOptionsSpecification IPSEC选择。
+     * Set IPSEC options.
+     * @param IPSECOptionsSpecification IPSEC options.
      */
     public void setIPSECOptionsSpecification(IPSECOptionsSpecification IPSECOptionsSpecification) {
         this.IPSECOptionsSpecification = IPSECOptionsSpecification;

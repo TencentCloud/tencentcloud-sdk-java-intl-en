@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class ModifyAddressTemplateGroupAttributeRequest extends AbstractModel{
 
     /**
-    * IP地址模板集合实例ID，例如：ipmg-2uw6ujo6。
+    * IP address template group instance ID, such as `ipmg-2uw6ujo6`.
     */
     @SerializedName("AddressTemplateGroupId")
     @Expose
     private String AddressTemplateGroupId;
 
     /**
-    * IP地址模板集合名称。
+    * IP address template group name.
     */
     @SerializedName("AddressTemplateGroupName")
     @Expose
     private String AddressTemplateGroupName;
 
     /**
-    * IP地址模板实例ID， 例如：ipm-mdunqeb6。
+    * IP address template instance ID, such as `ipm-mdunqeb6`.
     */
     @SerializedName("AddressTemplateIds")
     @Expose
     private String [] AddressTemplateIds;
 
     /**
-     * Get IP地址模板集合实例ID，例如：ipmg-2uw6ujo6。 
-     * @return AddressTemplateGroupId IP地址模板集合实例ID，例如：ipmg-2uw6ujo6。
+     * Get IP address template group instance ID, such as `ipmg-2uw6ujo6`. 
+     * @return AddressTemplateGroupId IP address template group instance ID, such as `ipmg-2uw6ujo6`.
      */
     public String getAddressTemplateGroupId() {
         return this.AddressTemplateGroupId;
     }
 
     /**
-     * Set IP地址模板集合实例ID，例如：ipmg-2uw6ujo6。
-     * @param AddressTemplateGroupId IP地址模板集合实例ID，例如：ipmg-2uw6ujo6。
+     * Set IP address template group instance ID, such as `ipmg-2uw6ujo6`.
+     * @param AddressTemplateGroupId IP address template group instance ID, such as `ipmg-2uw6ujo6`.
      */
     public void setAddressTemplateGroupId(String AddressTemplateGroupId) {
         this.AddressTemplateGroupId = AddressTemplateGroupId;
     }
 
     /**
-     * Get IP地址模板集合名称。 
-     * @return AddressTemplateGroupName IP地址模板集合名称。
+     * Get IP address template group name. 
+     * @return AddressTemplateGroupName IP address template group name.
      */
     public String getAddressTemplateGroupName() {
         return this.AddressTemplateGroupName;
     }
 
     /**
-     * Set IP地址模板集合名称。
-     * @param AddressTemplateGroupName IP地址模板集合名称。
+     * Set IP address template group name.
+     * @param AddressTemplateGroupName IP address template group name.
      */
     public void setAddressTemplateGroupName(String AddressTemplateGroupName) {
         this.AddressTemplateGroupName = AddressTemplateGroupName;
     }
 
     /**
-     * Get IP地址模板实例ID， 例如：ipm-mdunqeb6。 
-     * @return AddressTemplateIds IP地址模板实例ID， 例如：ipm-mdunqeb6。
+     * Get IP address template instance ID, such as `ipm-mdunqeb6`. 
+     * @return AddressTemplateIds IP address template instance ID, such as `ipm-mdunqeb6`.
      */
     public String [] getAddressTemplateIds() {
         return this.AddressTemplateIds;
     }
 
     /**
-     * Set IP地址模板实例ID， 例如：ipm-mdunqeb6。
-     * @param AddressTemplateIds IP地址模板实例ID， 例如：ipm-mdunqeb6。
+     * Set IP address template instance ID, such as `ipm-mdunqeb6`.
+     * @param AddressTemplateIds IP address template instance ID, such as `ipm-mdunqeb6`.
      */
     public void setAddressTemplateIds(String [] AddressTemplateIds) {
         this.AddressTemplateIds = AddressTemplateIds;

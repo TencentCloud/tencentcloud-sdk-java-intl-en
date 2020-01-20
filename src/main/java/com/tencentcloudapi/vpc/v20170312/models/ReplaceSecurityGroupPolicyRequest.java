@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class ReplaceSecurityGroupPolicyRequest extends AbstractModel{
 
     /**
-    * 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
+    * The security group instance ID, such as `sg-33ocnj9n`. This can be obtained through DescribeSecurityGroups.
     */
     @SerializedName("SecurityGroupId")
     @Expose
     private String SecurityGroupId;
 
     /**
-    * 安全组规则集合对象。
+    * Security group policy set object.
     */
     @SerializedName("SecurityGroupPolicySet")
     @Expose
     private SecurityGroupPolicySet SecurityGroupPolicySet;
 
     /**
-     * Get 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。 
-     * @return SecurityGroupId 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
+     * Get The security group instance ID, such as `sg-33ocnj9n`. This can be obtained through DescribeSecurityGroups. 
+     * @return SecurityGroupId The security group instance ID, such as `sg-33ocnj9n`. This can be obtained through DescribeSecurityGroups.
      */
     public String getSecurityGroupId() {
         return this.SecurityGroupId;
     }
 
     /**
-     * Set 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
-     * @param SecurityGroupId 安全组实例ID，例如sg-33ocnj9n，可通过DescribeSecurityGroups获取。
+     * Set The security group instance ID, such as `sg-33ocnj9n`. This can be obtained through DescribeSecurityGroups.
+     * @param SecurityGroupId The security group instance ID, such as `sg-33ocnj9n`. This can be obtained through DescribeSecurityGroups.
      */
     public void setSecurityGroupId(String SecurityGroupId) {
         this.SecurityGroupId = SecurityGroupId;
     }
 
     /**
-     * Get 安全组规则集合对象。 
-     * @return SecurityGroupPolicySet 安全组规则集合对象。
+     * Get Security group policy set object. 
+     * @return SecurityGroupPolicySet Security group policy set object.
      */
     public SecurityGroupPolicySet getSecurityGroupPolicySet() {
         return this.SecurityGroupPolicySet;
     }
 
     /**
-     * Set 安全组规则集合对象。
-     * @param SecurityGroupPolicySet 安全组规则集合对象。
+     * Set Security group policy set object.
+     * @param SecurityGroupPolicySet Security group policy set object.
      */
     public void setSecurityGroupPolicySet(SecurityGroupPolicySet SecurityGroupPolicySet) {
         this.SecurityGroupPolicySet = SecurityGroupPolicySet;

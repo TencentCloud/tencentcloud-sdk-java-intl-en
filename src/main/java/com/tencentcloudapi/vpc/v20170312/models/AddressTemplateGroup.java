@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class AddressTemplateGroup extends AbstractModel{
 
     /**
-    * IP地址模板集合名称。
+    * IP address template group name.
     */
     @SerializedName("AddressTemplateGroupName")
     @Expose
     private String AddressTemplateGroupName;
 
     /**
-    * IP地址模板集合实例ID，例如：ipmg-dih8xdbq。
+    * IP address template group instance ID, such as `ipmg-dih8xdbq`.
     */
     @SerializedName("AddressTemplateGroupId")
     @Expose
     private String AddressTemplateGroupId;
 
     /**
-    * IP地址模板ID。
+    * IP address template ID.
     */
     @SerializedName("AddressTemplateIdSet")
     @Expose
     private String [] AddressTemplateIdSet;
 
     /**
-    * 创建时间。
+    * Creation Time.
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-     * Get IP地址模板集合名称。 
-     * @return AddressTemplateGroupName IP地址模板集合名称。
+     * Get IP address template group name. 
+     * @return AddressTemplateGroupName IP address template group name.
      */
     public String getAddressTemplateGroupName() {
         return this.AddressTemplateGroupName;
     }
 
     /**
-     * Set IP地址模板集合名称。
-     * @param AddressTemplateGroupName IP地址模板集合名称。
+     * Set IP address template group name.
+     * @param AddressTemplateGroupName IP address template group name.
      */
     public void setAddressTemplateGroupName(String AddressTemplateGroupName) {
         this.AddressTemplateGroupName = AddressTemplateGroupName;
     }
 
     /**
-     * Get IP地址模板集合实例ID，例如：ipmg-dih8xdbq。 
-     * @return AddressTemplateGroupId IP地址模板集合实例ID，例如：ipmg-dih8xdbq。
+     * Get IP address template group instance ID, such as `ipmg-dih8xdbq`. 
+     * @return AddressTemplateGroupId IP address template group instance ID, such as `ipmg-dih8xdbq`.
      */
     public String getAddressTemplateGroupId() {
         return this.AddressTemplateGroupId;
     }
 
     /**
-     * Set IP地址模板集合实例ID，例如：ipmg-dih8xdbq。
-     * @param AddressTemplateGroupId IP地址模板集合实例ID，例如：ipmg-dih8xdbq。
+     * Set IP address template group instance ID, such as `ipmg-dih8xdbq`.
+     * @param AddressTemplateGroupId IP address template group instance ID, such as `ipmg-dih8xdbq`.
      */
     public void setAddressTemplateGroupId(String AddressTemplateGroupId) {
         this.AddressTemplateGroupId = AddressTemplateGroupId;
     }
 
     /**
-     * Get IP地址模板ID。 
-     * @return AddressTemplateIdSet IP地址模板ID。
+     * Get IP address template ID. 
+     * @return AddressTemplateIdSet IP address template ID.
      */
     public String [] getAddressTemplateIdSet() {
         return this.AddressTemplateIdSet;
     }
 
     /**
-     * Set IP地址模板ID。
-     * @param AddressTemplateIdSet IP地址模板ID。
+     * Set IP address template ID.
+     * @param AddressTemplateIdSet IP address template ID.
      */
     public void setAddressTemplateIdSet(String [] AddressTemplateIdSet) {
         this.AddressTemplateIdSet = AddressTemplateIdSet;
     }
 
     /**
-     * Get 创建时间。 
-     * @return CreatedTime 创建时间。
+     * Get Creation Time. 
+     * @return CreatedTime Creation Time.
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set 创建时间。
-     * @param CreatedTime 创建时间。
+     * Set Creation Time.
+     * @param CreatedTime Creation Time.
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;

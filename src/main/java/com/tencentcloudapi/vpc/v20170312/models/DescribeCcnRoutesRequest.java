@@ -23,140 +23,140 @@ import java.util.HashMap;
 public class DescribeCcnRoutesRequest extends AbstractModel{
 
     /**
-    * CCN实例ID，形如：ccn-gree226l。
+    * The CCN instance ID, such as `ccn-gree226l`.
     */
     @SerializedName("CcnId")
     @Expose
     private String CcnId;
 
     /**
-    * CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
+    * The unique ID of the CCN routing policy, such as `ccnr-f49l6u0z`.
     */
     @SerializedName("RouteIds")
     @Expose
     private String [] RouteIds;
 
     /**
-    * 过滤条件，参数不支持同时指定RouteIds和Filters。
-<li>route-id - String -（过滤条件）路由策略ID。</li>
-<li>cidr-block - String -（过滤条件）目的端。</li>
-<li>instance-type - String -（过滤条件）下一跳类型。</li>
-<li>instance-region - String -（过滤条件）下一跳所属地域。</li>
-<li>instance-id - String -（过滤条件）下一跳实例ID。</li>
+    * Filter condition. `RouteIds` and `Filters` cannot be specified at the same time.
+<li>route-id - String - (Filter condition) Routing policy ID.</li>
+<li>cidr-block - String - (Filter condition) Destination port.</li>
+<li>instance-type - String - (Filter condition) The next hop type.</li>
+<li>instance-region - String - (Filter condition) The next hop region.</li>
+<li>instance-type - String - (Filter condition) The instance ID of the next hop.</li>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 偏移量
+    * Offset
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量
+    * The returned quantity
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get CCN实例ID，形如：ccn-gree226l。 
-     * @return CcnId CCN实例ID，形如：ccn-gree226l。
+     * Get The CCN instance ID, such as `ccn-gree226l`. 
+     * @return CcnId The CCN instance ID, such as `ccn-gree226l`.
      */
     public String getCcnId() {
         return this.CcnId;
     }
 
     /**
-     * Set CCN实例ID，形如：ccn-gree226l。
-     * @param CcnId CCN实例ID，形如：ccn-gree226l。
+     * Set The CCN instance ID, such as `ccn-gree226l`.
+     * @param CcnId The CCN instance ID, such as `ccn-gree226l`.
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;
     }
 
     /**
-     * Get CCN路由策略唯一ID。形如：ccnr-f49l6u0z。 
-     * @return RouteIds CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
+     * Get The unique ID of the CCN routing policy, such as `ccnr-f49l6u0z`. 
+     * @return RouteIds The unique ID of the CCN routing policy, such as `ccnr-f49l6u0z`.
      */
     public String [] getRouteIds() {
         return this.RouteIds;
     }
 
     /**
-     * Set CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
-     * @param RouteIds CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
+     * Set The unique ID of the CCN routing policy, such as `ccnr-f49l6u0z`.
+     * @param RouteIds The unique ID of the CCN routing policy, such as `ccnr-f49l6u0z`.
      */
     public void setRouteIds(String [] RouteIds) {
         this.RouteIds = RouteIds;
     }
 
     /**
-     * Get 过滤条件，参数不支持同时指定RouteIds和Filters。
-<li>route-id - String -（过滤条件）路由策略ID。</li>
-<li>cidr-block - String -（过滤条件）目的端。</li>
-<li>instance-type - String -（过滤条件）下一跳类型。</li>
-<li>instance-region - String -（过滤条件）下一跳所属地域。</li>
-<li>instance-id - String -（过滤条件）下一跳实例ID。</li> 
-     * @return Filters 过滤条件，参数不支持同时指定RouteIds和Filters。
-<li>route-id - String -（过滤条件）路由策略ID。</li>
-<li>cidr-block - String -（过滤条件）目的端。</li>
-<li>instance-type - String -（过滤条件）下一跳类型。</li>
-<li>instance-region - String -（过滤条件）下一跳所属地域。</li>
-<li>instance-id - String -（过滤条件）下一跳实例ID。</li>
+     * Get Filter condition. `RouteIds` and `Filters` cannot be specified at the same time.
+<li>route-id - String - (Filter condition) Routing policy ID.</li>
+<li>cidr-block - String - (Filter condition) Destination port.</li>
+<li>instance-type - String - (Filter condition) The next hop type.</li>
+<li>instance-region - String - (Filter condition) The next hop region.</li>
+<li>instance-type - String - (Filter condition) The instance ID of the next hop.</li> 
+     * @return Filters Filter condition. `RouteIds` and `Filters` cannot be specified at the same time.
+<li>route-id - String - (Filter condition) Routing policy ID.</li>
+<li>cidr-block - String - (Filter condition) Destination port.</li>
+<li>instance-type - String - (Filter condition) The next hop type.</li>
+<li>instance-region - String - (Filter condition) The next hop region.</li>
+<li>instance-type - String - (Filter condition) The instance ID of the next hop.</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件，参数不支持同时指定RouteIds和Filters。
-<li>route-id - String -（过滤条件）路由策略ID。</li>
-<li>cidr-block - String -（过滤条件）目的端。</li>
-<li>instance-type - String -（过滤条件）下一跳类型。</li>
-<li>instance-region - String -（过滤条件）下一跳所属地域。</li>
-<li>instance-id - String -（过滤条件）下一跳实例ID。</li>
-     * @param Filters 过滤条件，参数不支持同时指定RouteIds和Filters。
-<li>route-id - String -（过滤条件）路由策略ID。</li>
-<li>cidr-block - String -（过滤条件）目的端。</li>
-<li>instance-type - String -（过滤条件）下一跳类型。</li>
-<li>instance-region - String -（过滤条件）下一跳所属地域。</li>
-<li>instance-id - String -（过滤条件）下一跳实例ID。</li>
+     * Set Filter condition. `RouteIds` and `Filters` cannot be specified at the same time.
+<li>route-id - String - (Filter condition) Routing policy ID.</li>
+<li>cidr-block - String - (Filter condition) Destination port.</li>
+<li>instance-type - String - (Filter condition) The next hop type.</li>
+<li>instance-region - String - (Filter condition) The next hop region.</li>
+<li>instance-type - String - (Filter condition) The instance ID of the next hop.</li>
+     * @param Filters Filter condition. `RouteIds` and `Filters` cannot be specified at the same time.
+<li>route-id - String - (Filter condition) Routing policy ID.</li>
+<li>cidr-block - String - (Filter condition) Destination port.</li>
+<li>instance-type - String - (Filter condition) The next hop type.</li>
+<li>instance-region - String - (Filter condition) The next hop region.</li>
+<li>instance-type - String - (Filter condition) The instance ID of the next hop.</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get Offset 
+     * @return Offset Offset
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set Offset
+     * @param Offset Offset
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量 
-     * @return Limit 返回数量
+     * Get The returned quantity 
+     * @return Limit The returned quantity
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量
-     * @param Limit 返回数量
+     * Set The returned quantity
+     * @param Limit The returned quantity
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

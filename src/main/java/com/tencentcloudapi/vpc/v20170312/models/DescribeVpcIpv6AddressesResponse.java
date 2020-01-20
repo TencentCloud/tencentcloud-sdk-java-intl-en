@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeVpcIpv6AddressesResponse extends AbstractModel{
 
     /**
-    * `IPv6`地址列表。
+    * The `IPv6` address list.
     */
     @SerializedName("Ipv6AddressSet")
     @Expose
     private VpcIpv6Address [] Ipv6AddressSet;
 
     /**
-    * `IPv6`地址总数。
+    * The total number of `IPv6` addresses.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeVpcIpv6AddressesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get `IPv6`地址列表。 
-     * @return Ipv6AddressSet `IPv6`地址列表。
+     * Get The `IPv6` address list. 
+     * @return Ipv6AddressSet The `IPv6` address list.
      */
     public VpcIpv6Address [] getIpv6AddressSet() {
         return this.Ipv6AddressSet;
     }
 
     /**
-     * Set `IPv6`地址列表。
-     * @param Ipv6AddressSet `IPv6`地址列表。
+     * Set The `IPv6` address list.
+     * @param Ipv6AddressSet The `IPv6` address list.
      */
     public void setIpv6AddressSet(VpcIpv6Address [] Ipv6AddressSet) {
         this.Ipv6AddressSet = Ipv6AddressSet;
     }
 
     /**
-     * Get `IPv6`地址总数。 
-     * @return TotalCount `IPv6`地址总数。
+     * Get The total number of `IPv6` addresses. 
+     * @return TotalCount The total number of `IPv6` addresses.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set `IPv6`地址总数。
-     * @param TotalCount `IPv6`地址总数。
+     * Set The total number of `IPv6` addresses.
+     * @param TotalCount The total number of `IPv6` addresses.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

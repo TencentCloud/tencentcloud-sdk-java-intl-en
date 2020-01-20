@@ -23,35 +23,35 @@ import java.util.HashMap;
 public class SecurityGroupPolicy extends AbstractModel{
 
     /**
-    * 安全组规则索引号。
+    * Security group policy index number.
     */
     @SerializedName("PolicyIndex")
     @Expose
     private Long PolicyIndex;
 
     /**
-    * 协议, 取值: TCP,UDP, ICMP。
+    * Protocol. Values: TCP, UDP, ICMP
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * 端口(all, 离散port,  range)。
+    * Port (all, discrete port, range).
     */
     @SerializedName("Port")
     @Expose
     private String Port;
 
     /**
-    * 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
+    * Protocol port ID or protocol port group ID. ServiceTemplate and Protocol+Port are mutually exclusive.
     */
     @SerializedName("ServiceTemplate")
     @Expose
     private ServiceTemplateSpecification ServiceTemplate;
 
     /**
-    * 网段或IP(互斥)。
+    * IP range or IP (mutually exclusive).
     */
     @SerializedName("CidrBlock")
     @Expose
@@ -65,28 +65,28 @@ public class SecurityGroupPolicy extends AbstractModel{
     private String Ipv6CidrBlock;
 
     /**
-    * 安全组实例ID，例如：sg-ohuuioma。
+    * The security group instance ID, such as `sg-ohuuioma`.
     */
     @SerializedName("SecurityGroupId")
     @Expose
     private String SecurityGroupId;
 
     /**
-    * IP地址ID或者ID地址组ID。
+    * IP address ID or IP address group ID.
     */
     @SerializedName("AddressTemplate")
     @Expose
     private AddressTemplateSpecification AddressTemplate;
 
     /**
-    * ACCEPT 或 DROP。
+    * ACCEPT or DROP.
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * 安全组规则描述。
+    * Security group policy description.
     */
     @SerializedName("PolicyDescription")
     @Expose
@@ -100,80 +100,80 @@ public class SecurityGroupPolicy extends AbstractModel{
     private String ModifyTime;
 
     /**
-     * Get 安全组规则索引号。 
-     * @return PolicyIndex 安全组规则索引号。
+     * Get Security group policy index number. 
+     * @return PolicyIndex Security group policy index number.
      */
     public Long getPolicyIndex() {
         return this.PolicyIndex;
     }
 
     /**
-     * Set 安全组规则索引号。
-     * @param PolicyIndex 安全组规则索引号。
+     * Set Security group policy index number.
+     * @param PolicyIndex Security group policy index number.
      */
     public void setPolicyIndex(Long PolicyIndex) {
         this.PolicyIndex = PolicyIndex;
     }
 
     /**
-     * Get 协议, 取值: TCP,UDP, ICMP。 
-     * @return Protocol 协议, 取值: TCP,UDP, ICMP。
+     * Get Protocol. Values: TCP, UDP, ICMP 
+     * @return Protocol Protocol. Values: TCP, UDP, ICMP
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 协议, 取值: TCP,UDP, ICMP。
-     * @param Protocol 协议, 取值: TCP,UDP, ICMP。
+     * Set Protocol. Values: TCP, UDP, ICMP
+     * @param Protocol Protocol. Values: TCP, UDP, ICMP
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 端口(all, 离散port,  range)。 
-     * @return Port 端口(all, 离散port,  range)。
+     * Get Port (all, discrete port, range). 
+     * @return Port Port (all, discrete port, range).
      */
     public String getPort() {
         return this.Port;
     }
 
     /**
-     * Set 端口(all, 离散port,  range)。
-     * @param Port 端口(all, 离散port,  range)。
+     * Set Port (all, discrete port, range).
+     * @param Port Port (all, discrete port, range).
      */
     public void setPort(String Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。 
-     * @return ServiceTemplate 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
+     * Get Protocol port ID or protocol port group ID. ServiceTemplate and Protocol+Port are mutually exclusive. 
+     * @return ServiceTemplate Protocol port ID or protocol port group ID. ServiceTemplate and Protocol+Port are mutually exclusive.
      */
     public ServiceTemplateSpecification getServiceTemplate() {
         return this.ServiceTemplate;
     }
 
     /**
-     * Set 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
-     * @param ServiceTemplate 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
+     * Set Protocol port ID or protocol port group ID. ServiceTemplate and Protocol+Port are mutually exclusive.
+     * @param ServiceTemplate Protocol port ID or protocol port group ID. ServiceTemplate and Protocol+Port are mutually exclusive.
      */
     public void setServiceTemplate(ServiceTemplateSpecification ServiceTemplate) {
         this.ServiceTemplate = ServiceTemplate;
     }
 
     /**
-     * Get 网段或IP(互斥)。 
-     * @return CidrBlock 网段或IP(互斥)。
+     * Get IP range or IP (mutually exclusive). 
+     * @return CidrBlock IP range or IP (mutually exclusive).
      */
     public String getCidrBlock() {
         return this.CidrBlock;
     }
 
     /**
-     * Set 网段或IP(互斥)。
-     * @param CidrBlock 网段或IP(互斥)。
+     * Set IP range or IP (mutually exclusive).
+     * @param CidrBlock IP range or IP (mutually exclusive).
      */
     public void setCidrBlock(String CidrBlock) {
         this.CidrBlock = CidrBlock;
@@ -196,64 +196,64 @@ public class SecurityGroupPolicy extends AbstractModel{
     }
 
     /**
-     * Get 安全组实例ID，例如：sg-ohuuioma。 
-     * @return SecurityGroupId 安全组实例ID，例如：sg-ohuuioma。
+     * Get The security group instance ID, such as `sg-ohuuioma`. 
+     * @return SecurityGroupId The security group instance ID, such as `sg-ohuuioma`.
      */
     public String getSecurityGroupId() {
         return this.SecurityGroupId;
     }
 
     /**
-     * Set 安全组实例ID，例如：sg-ohuuioma。
-     * @param SecurityGroupId 安全组实例ID，例如：sg-ohuuioma。
+     * Set The security group instance ID, such as `sg-ohuuioma`.
+     * @param SecurityGroupId The security group instance ID, such as `sg-ohuuioma`.
      */
     public void setSecurityGroupId(String SecurityGroupId) {
         this.SecurityGroupId = SecurityGroupId;
     }
 
     /**
-     * Get IP地址ID或者ID地址组ID。 
-     * @return AddressTemplate IP地址ID或者ID地址组ID。
+     * Get IP address ID or IP address group ID. 
+     * @return AddressTemplate IP address ID or IP address group ID.
      */
     public AddressTemplateSpecification getAddressTemplate() {
         return this.AddressTemplate;
     }
 
     /**
-     * Set IP地址ID或者ID地址组ID。
-     * @param AddressTemplate IP地址ID或者ID地址组ID。
+     * Set IP address ID or IP address group ID.
+     * @param AddressTemplate IP address ID or IP address group ID.
      */
     public void setAddressTemplate(AddressTemplateSpecification AddressTemplate) {
         this.AddressTemplate = AddressTemplate;
     }
 
     /**
-     * Get ACCEPT 或 DROP。 
-     * @return Action ACCEPT 或 DROP。
+     * Get ACCEPT or DROP. 
+     * @return Action ACCEPT or DROP.
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set ACCEPT 或 DROP。
-     * @param Action ACCEPT 或 DROP。
+     * Set ACCEPT or DROP.
+     * @param Action ACCEPT or DROP.
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get 安全组规则描述。 
-     * @return PolicyDescription 安全组规则描述。
+     * Get Security group policy description. 
+     * @return PolicyDescription Security group policy description.
      */
     public String getPolicyDescription() {
         return this.PolicyDescription;
     }
 
     /**
-     * Set 安全组规则描述。
-     * @param PolicyDescription 安全组规则描述。
+     * Set Security group policy description.
+     * @param PolicyDescription Security group policy description.
      */
     public void setPolicyDescription(String PolicyDescription) {
         this.PolicyDescription = PolicyDescription;

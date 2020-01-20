@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeCcnsResponse extends AbstractModel{
 
     /**
-    * 符合条件的对象数。
+    * The number of objects meeting the condition.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * CCN对象。
+    * CCN object.
     */
     @SerializedName("CcnSet")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeCcnsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 符合条件的对象数。 
-     * @return TotalCount 符合条件的对象数。
+     * Get The number of objects meeting the condition. 
+     * @return TotalCount The number of objects meeting the condition.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的对象数。
-     * @param TotalCount 符合条件的对象数。
+     * Set The number of objects meeting the condition.
+     * @param TotalCount The number of objects meeting the condition.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get CCN对象。 
-     * @return CcnSet CCN对象。
+     * Get CCN object. 
+     * @return CcnSet CCN object.
      */
     public CCN [] getCcnSet() {
         return this.CcnSet;
     }
 
     /**
-     * Set CCN对象。
-     * @param CcnSet CCN对象。
+     * Set CCN object.
+     * @param CcnSet CCN object.
      */
     public void setCcnSet(CCN [] CcnSet) {
         this.CcnSet = CcnSet;

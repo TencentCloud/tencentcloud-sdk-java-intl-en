@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class CreateDomainErrorPageInfoResponse extends AbstractModel{
 
     /**
+    * Configuration ID of a custom error response
+    */
+    @SerializedName("ErrorPageId")
+    @Expose
+    private String ErrorPageId;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get Configuration ID of a custom error response 
+     * @return ErrorPageId Configuration ID of a custom error response
+     */
+    public String getErrorPageId() {
+        return this.ErrorPageId;
+    }
+
+    /**
+     * Set Configuration ID of a custom error response
+     * @param ErrorPageId Configuration ID of a custom error response
+     */
+    public void setErrorPageId(String ErrorPageId) {
+        this.ErrorPageId = ErrorPageId;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -49,6 +72,7 @@ public class CreateDomainErrorPageInfoResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ErrorPageId", this.ErrorPageId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

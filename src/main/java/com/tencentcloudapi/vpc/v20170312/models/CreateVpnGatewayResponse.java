@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateVpnGatewayResponse extends AbstractModel{
 
     /**
-    * VPN网关对象
+    * VPN gateway object.
     */
     @SerializedName("VpnGateway")
     @Expose
@@ -37,16 +37,16 @@ public class CreateVpnGatewayResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get VPN网关对象 
-     * @return VpnGateway VPN网关对象
+     * Get VPN gateway object. 
+     * @return VpnGateway VPN gateway object.
      */
     public VpnGateway getVpnGateway() {
         return this.VpnGateway;
     }
 
     /**
-     * Set VPN网关对象
-     * @param VpnGateway VPN网关对象
+     * Set VPN gateway object.
+     * @param VpnGateway VPN gateway object.
      */
     public void setVpnGateway(VpnGateway VpnGateway) {
         this.VpnGateway = VpnGateway;

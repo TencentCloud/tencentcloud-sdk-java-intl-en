@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class ReplaceRoutesRequest extends AbstractModel{
 
     /**
-    * 路由表实例ID，例如：rtb-azd4dt1c。
+    * The route table instance ID, such as `rtb-azd4dt1c`.
     */
     @SerializedName("RouteTableId")
     @Expose
     private String RouteTableId;
 
     /**
-    * 路由策略对象。需要指定路由策略ID（RouteId）。
+    * Routing policy object. The routing policy ID (RouteId) must be specified.
     */
     @SerializedName("Routes")
     @Expose
     private Route [] Routes;
 
     /**
-     * Get 路由表实例ID，例如：rtb-azd4dt1c。 
-     * @return RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
+     * Get The route table instance ID, such as `rtb-azd4dt1c`. 
+     * @return RouteTableId The route table instance ID, such as `rtb-azd4dt1c`.
      */
     public String getRouteTableId() {
         return this.RouteTableId;
     }
 
     /**
-     * Set 路由表实例ID，例如：rtb-azd4dt1c。
-     * @param RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
+     * Set The route table instance ID, such as `rtb-azd4dt1c`.
+     * @param RouteTableId The route table instance ID, such as `rtb-azd4dt1c`.
      */
     public void setRouteTableId(String RouteTableId) {
         this.RouteTableId = RouteTableId;
     }
 
     /**
-     * Get 路由策略对象。需要指定路由策略ID（RouteId）。 
-     * @return Routes 路由策略对象。需要指定路由策略ID（RouteId）。
+     * Get Routing policy object. The routing policy ID (RouteId) must be specified. 
+     * @return Routes Routing policy object. The routing policy ID (RouteId) must be specified.
      */
     public Route [] getRoutes() {
         return this.Routes;
     }
 
     /**
-     * Set 路由策略对象。需要指定路由策略ID（RouteId）。
-     * @param Routes 路由策略对象。需要指定路由策略ID（RouteId）。
+     * Set Routing policy object. The routing policy ID (RouteId) must be specified.
+     * @param Routes Routing policy object. The routing policy ID (RouteId) must be specified.
      */
     public void setRoutes(Route [] Routes) {
         this.Routes = Routes;

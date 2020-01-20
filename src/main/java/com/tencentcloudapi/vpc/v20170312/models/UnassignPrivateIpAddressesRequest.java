@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class UnassignPrivateIpAddressesRequest extends AbstractModel{
 
     /**
-    * 弹性网卡实例ID，例如：eni-m6dyj72l。
+    * The ID of the ENI instance, such as `eni-m6dyj72l`.
     */
     @SerializedName("NetworkInterfaceId")
     @Expose
     private String NetworkInterfaceId;
 
     /**
-    * 指定的内网IP信息，单次最多指定10个。
+    * The information of the specified private IPs. You can specify a maximum of 10 each time.
     */
     @SerializedName("PrivateIpAddresses")
     @Expose
     private PrivateIpAddressSpecification [] PrivateIpAddresses;
 
     /**
-     * Get 弹性网卡实例ID，例如：eni-m6dyj72l。 
-     * @return NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
+     * Get The ID of the ENI instance, such as `eni-m6dyj72l`. 
+     * @return NetworkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
      */
     public String getNetworkInterfaceId() {
         return this.NetworkInterfaceId;
     }
 
     /**
-     * Set 弹性网卡实例ID，例如：eni-m6dyj72l。
-     * @param NetworkInterfaceId 弹性网卡实例ID，例如：eni-m6dyj72l。
+     * Set The ID of the ENI instance, such as `eni-m6dyj72l`.
+     * @param NetworkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
      */
     public void setNetworkInterfaceId(String NetworkInterfaceId) {
         this.NetworkInterfaceId = NetworkInterfaceId;
     }
 
     /**
-     * Get 指定的内网IP信息，单次最多指定10个。 
-     * @return PrivateIpAddresses 指定的内网IP信息，单次最多指定10个。
+     * Get The information of the specified private IPs. You can specify a maximum of 10 each time. 
+     * @return PrivateIpAddresses The information of the specified private IPs. You can specify a maximum of 10 each time.
      */
     public PrivateIpAddressSpecification [] getPrivateIpAddresses() {
         return this.PrivateIpAddresses;
     }
 
     /**
-     * Set 指定的内网IP信息，单次最多指定10个。
-     * @param PrivateIpAddresses 指定的内网IP信息，单次最多指定10个。
+     * Set The information of the specified private IPs. You can specify a maximum of 10 each time.
+     * @param PrivateIpAddresses The information of the specified private IPs. You can specify a maximum of 10 each time.
      */
     public void setPrivateIpAddresses(PrivateIpAddressSpecification [] PrivateIpAddresses) {
         this.PrivateIpAddresses = PrivateIpAddresses;

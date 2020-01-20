@@ -23,115 +23,115 @@ import java.util.HashMap;
 public class GatewayFlowMonitorDetail extends AbstractModel{
 
     /**
-    * 来源`IP`。
+    * Origin `IP`.
     */
     @SerializedName("PrivateIpAddress")
     @Expose
     private String PrivateIpAddress;
 
     /**
-    * 入包量。
+    * Inbound packets.
     */
     @SerializedName("InPkg")
     @Expose
     private Long InPkg;
 
     /**
-    * 出包量。
+    * Outbound packets.
     */
     @SerializedName("OutPkg")
     @Expose
     private Long OutPkg;
 
     /**
-    * 入带宽，单位：`Byte`。
+    * Inbound bandwidth, unit: `Byte`.
     */
     @SerializedName("InTraffic")
     @Expose
     private Long InTraffic;
 
     /**
-    * 出带宽，单位：`Byte`。
+    * Outbound bandwidth, unit: `Byte`.
     */
     @SerializedName("OutTraffic")
     @Expose
     private Long OutTraffic;
 
     /**
-     * Get 来源`IP`。 
-     * @return PrivateIpAddress 来源`IP`。
+     * Get Origin `IP`. 
+     * @return PrivateIpAddress Origin `IP`.
      */
     public String getPrivateIpAddress() {
         return this.PrivateIpAddress;
     }
 
     /**
-     * Set 来源`IP`。
-     * @param PrivateIpAddress 来源`IP`。
+     * Set Origin `IP`.
+     * @param PrivateIpAddress Origin `IP`.
      */
     public void setPrivateIpAddress(String PrivateIpAddress) {
         this.PrivateIpAddress = PrivateIpAddress;
     }
 
     /**
-     * Get 入包量。 
-     * @return InPkg 入包量。
+     * Get Inbound packets. 
+     * @return InPkg Inbound packets.
      */
     public Long getInPkg() {
         return this.InPkg;
     }
 
     /**
-     * Set 入包量。
-     * @param InPkg 入包量。
+     * Set Inbound packets.
+     * @param InPkg Inbound packets.
      */
     public void setInPkg(Long InPkg) {
         this.InPkg = InPkg;
     }
 
     /**
-     * Get 出包量。 
-     * @return OutPkg 出包量。
+     * Get Outbound packets. 
+     * @return OutPkg Outbound packets.
      */
     public Long getOutPkg() {
         return this.OutPkg;
     }
 
     /**
-     * Set 出包量。
-     * @param OutPkg 出包量。
+     * Set Outbound packets.
+     * @param OutPkg Outbound packets.
      */
     public void setOutPkg(Long OutPkg) {
         this.OutPkg = OutPkg;
     }
 
     /**
-     * Get 入带宽，单位：`Byte`。 
-     * @return InTraffic 入带宽，单位：`Byte`。
+     * Get Inbound bandwidth, unit: `Byte`. 
+     * @return InTraffic Inbound bandwidth, unit: `Byte`.
      */
     public Long getInTraffic() {
         return this.InTraffic;
     }
 
     /**
-     * Set 入带宽，单位：`Byte`。
-     * @param InTraffic 入带宽，单位：`Byte`。
+     * Set Inbound bandwidth, unit: `Byte`.
+     * @param InTraffic Inbound bandwidth, unit: `Byte`.
      */
     public void setInTraffic(Long InTraffic) {
         this.InTraffic = InTraffic;
     }
 
     /**
-     * Get 出带宽，单位：`Byte`。 
-     * @return OutTraffic 出带宽，单位：`Byte`。
+     * Get Outbound bandwidth, unit: `Byte`. 
+     * @return OutTraffic Outbound bandwidth, unit: `Byte`.
      */
     public Long getOutTraffic() {
         return this.OutTraffic;
     }
 
     /**
-     * Set 出带宽，单位：`Byte`。
-     * @param OutTraffic 出带宽，单位：`Byte`。
+     * Set Outbound bandwidth, unit: `Byte`.
+     * @param OutTraffic Outbound bandwidth, unit: `Byte`.
      */
     public void setOutTraffic(Long OutTraffic) {
         this.OutTraffic = OutTraffic;

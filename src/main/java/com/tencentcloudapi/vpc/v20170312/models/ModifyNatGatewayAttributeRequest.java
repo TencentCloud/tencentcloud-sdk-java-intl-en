@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class ModifyNatGatewayAttributeRequest extends AbstractModel{
 
     /**
-    * NAT网关的ID，形如：`nat-df45454`。
+    * The ID of the NAT gateway, such as `nat-df45454`.
     */
     @SerializedName("NatGatewayId")
     @Expose
     private String NatGatewayId;
 
     /**
-    * NAT网关的名称，形如：`test_nat`。
+    * The NAT gateway name, such as `test_nat`.
     */
     @SerializedName("NatGatewayName")
     @Expose
     private String NatGatewayName;
 
     /**
-    * NAT网关最大外网出带宽(单位:Mbps)。
+    * The maximum outbound bandwidth of the NAT gateway. Unit: Mbps.
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
     private Long InternetMaxBandwidthOut;
 
     /**
-     * Get NAT网关的ID，形如：`nat-df45454`。 
-     * @return NatGatewayId NAT网关的ID，形如：`nat-df45454`。
+     * Get The ID of the NAT gateway, such as `nat-df45454`. 
+     * @return NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
      */
     public String getNatGatewayId() {
         return this.NatGatewayId;
     }
 
     /**
-     * Set NAT网关的ID，形如：`nat-df45454`。
-     * @param NatGatewayId NAT网关的ID，形如：`nat-df45454`。
+     * Set The ID of the NAT gateway, such as `nat-df45454`.
+     * @param NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
      */
     public void setNatGatewayId(String NatGatewayId) {
         this.NatGatewayId = NatGatewayId;
     }
 
     /**
-     * Get NAT网关的名称，形如：`test_nat`。 
-     * @return NatGatewayName NAT网关的名称，形如：`test_nat`。
+     * Get The NAT gateway name, such as `test_nat`. 
+     * @return NatGatewayName The NAT gateway name, such as `test_nat`.
      */
     public String getNatGatewayName() {
         return this.NatGatewayName;
     }
 
     /**
-     * Set NAT网关的名称，形如：`test_nat`。
-     * @param NatGatewayName NAT网关的名称，形如：`test_nat`。
+     * Set The NAT gateway name, such as `test_nat`.
+     * @param NatGatewayName The NAT gateway name, such as `test_nat`.
      */
     public void setNatGatewayName(String NatGatewayName) {
         this.NatGatewayName = NatGatewayName;
     }
 
     /**
-     * Get NAT网关最大外网出带宽(单位:Mbps)。 
-     * @return InternetMaxBandwidthOut NAT网关最大外网出带宽(单位:Mbps)。
+     * Get The maximum outbound bandwidth of the NAT gateway. Unit: Mbps. 
+     * @return InternetMaxBandwidthOut The maximum outbound bandwidth of the NAT gateway. Unit: Mbps.
      */
     public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
     /**
-     * Set NAT网关最大外网出带宽(单位:Mbps)。
-     * @param InternetMaxBandwidthOut NAT网关最大外网出带宽(单位:Mbps)。
+     * Set The maximum outbound bandwidth of the NAT gateway. Unit: Mbps.
+     * @param InternetMaxBandwidthOut The maximum outbound bandwidth of the NAT gateway. Unit: Mbps.
      */
     public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateVpcRequest extends AbstractModel{
 
     /**
-    * vpc名称，最大长度不能超过60个字节。
+    * The VPC name. The maximum length is 60 bytes.
     */
     @SerializedName("VpcName")
     @Expose
@@ -37,37 +37,37 @@ public class CreateVpcRequest extends AbstractModel{
     private String CidrBlock;
 
     /**
-    * 是否开启组播。true: 开启, false: 不开启。
+    * Whether multicast is enabled. `true`: Enabled. `false`: Not enabled.
     */
     @SerializedName("EnableMulticast")
     @Expose
     private String EnableMulticast;
 
     /**
-    * DNS地址，最多支持4个
+    * The DNS address. A maximum of 4 addresses is supported.
     */
     @SerializedName("DnsServers")
     @Expose
     private String [] DnsServers;
 
     /**
-    * 域名
+    * Domain name
     */
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
 
     /**
-     * Get vpc名称，最大长度不能超过60个字节。 
-     * @return VpcName vpc名称，最大长度不能超过60个字节。
+     * Get The VPC name. The maximum length is 60 bytes. 
+     * @return VpcName The VPC name. The maximum length is 60 bytes.
      */
     public String getVpcName() {
         return this.VpcName;
     }
 
     /**
-     * Set vpc名称，最大长度不能超过60个字节。
-     * @param VpcName vpc名称，最大长度不能超过60个字节。
+     * Set The VPC name. The maximum length is 60 bytes.
+     * @param VpcName The VPC name. The maximum length is 60 bytes.
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
@@ -90,48 +90,48 @@ public class CreateVpcRequest extends AbstractModel{
     }
 
     /**
-     * Get 是否开启组播。true: 开启, false: 不开启。 
-     * @return EnableMulticast 是否开启组播。true: 开启, false: 不开启。
+     * Get Whether multicast is enabled. `true`: Enabled. `false`: Not enabled. 
+     * @return EnableMulticast Whether multicast is enabled. `true`: Enabled. `false`: Not enabled.
      */
     public String getEnableMulticast() {
         return this.EnableMulticast;
     }
 
     /**
-     * Set 是否开启组播。true: 开启, false: 不开启。
-     * @param EnableMulticast 是否开启组播。true: 开启, false: 不开启。
+     * Set Whether multicast is enabled. `true`: Enabled. `false`: Not enabled.
+     * @param EnableMulticast Whether multicast is enabled. `true`: Enabled. `false`: Not enabled.
      */
     public void setEnableMulticast(String EnableMulticast) {
         this.EnableMulticast = EnableMulticast;
     }
 
     /**
-     * Get DNS地址，最多支持4个 
-     * @return DnsServers DNS地址，最多支持4个
+     * Get The DNS address. A maximum of 4 addresses is supported. 
+     * @return DnsServers The DNS address. A maximum of 4 addresses is supported.
      */
     public String [] getDnsServers() {
         return this.DnsServers;
     }
 
     /**
-     * Set DNS地址，最多支持4个
-     * @param DnsServers DNS地址，最多支持4个
+     * Set The DNS address. A maximum of 4 addresses is supported.
+     * @param DnsServers The DNS address. A maximum of 4 addresses is supported.
      */
     public void setDnsServers(String [] DnsServers) {
         this.DnsServers = DnsServers;
     }
 
     /**
-     * Get 域名 
-     * @return DomainName 域名
+     * Get Domain name 
+     * @return DomainName Domain name
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * Set 域名
-     * @param DomainName 域名
+     * Set Domain name
+     * @param DomainName Domain name
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;

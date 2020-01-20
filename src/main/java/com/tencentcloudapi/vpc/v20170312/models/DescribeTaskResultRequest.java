@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DescribeTaskResultRequest extends AbstractModel{
 
     /**
-    * 异步任务ID
+    * The async job ID
     */
     @SerializedName("TaskId")
     @Expose
     private Long TaskId;
 
     /**
-    * 计费订单号
+    * The billing order ID
     */
     @SerializedName("DealName")
     @Expose
     private String DealName;
 
     /**
-     * Get 异步任务ID 
-     * @return TaskId 异步任务ID
+     * Get The async job ID 
+     * @return TaskId The async job ID
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 异步任务ID
-     * @param TaskId 异步任务ID
+     * Set The async job ID
+     * @param TaskId The async job ID
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 计费订单号 
-     * @return DealName 计费订单号
+     * Get The billing order ID 
+     * @return DealName The billing order ID
      */
     public String getDealName() {
         return this.DealName;
     }
 
     /**
-     * Set 计费订单号
-     * @param DealName 计费订单号
+     * Set The billing order ID
+     * @param DealName The billing order ID
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;

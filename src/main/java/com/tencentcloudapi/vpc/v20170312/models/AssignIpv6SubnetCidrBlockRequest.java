@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class AssignIpv6SubnetCidrBlockRequest extends AbstractModel{
 
     /**
-    * 子网所在私有网络`ID`。形如：`vpc-f49l6u0z`。
+    * The `ID` of the VPC where the subnet is located, such as `vpc-f49l6u0z`.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 分配 `IPv6` 子网段列表。
+    * The assigned `IPv6` subnet IP range list.
     */
     @SerializedName("Ipv6SubnetCidrBlocks")
     @Expose
     private Ipv6SubnetCidrBlock [] Ipv6SubnetCidrBlocks;
 
     /**
-     * Get 子网所在私有网络`ID`。形如：`vpc-f49l6u0z`。 
-     * @return VpcId 子网所在私有网络`ID`。形如：`vpc-f49l6u0z`。
+     * Get The `ID` of the VPC where the subnet is located, such as `vpc-f49l6u0z`. 
+     * @return VpcId The `ID` of the VPC where the subnet is located, such as `vpc-f49l6u0z`.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 子网所在私有网络`ID`。形如：`vpc-f49l6u0z`。
-     * @param VpcId 子网所在私有网络`ID`。形如：`vpc-f49l6u0z`。
+     * Set The `ID` of the VPC where the subnet is located, such as `vpc-f49l6u0z`.
+     * @param VpcId The `ID` of the VPC where the subnet is located, such as `vpc-f49l6u0z`.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 分配 `IPv6` 子网段列表。 
-     * @return Ipv6SubnetCidrBlocks 分配 `IPv6` 子网段列表。
+     * Get The assigned `IPv6` subnet IP range list. 
+     * @return Ipv6SubnetCidrBlocks The assigned `IPv6` subnet IP range list.
      */
     public Ipv6SubnetCidrBlock [] getIpv6SubnetCidrBlocks() {
         return this.Ipv6SubnetCidrBlocks;
     }
 
     /**
-     * Set 分配 `IPv6` 子网段列表。
-     * @param Ipv6SubnetCidrBlocks 分配 `IPv6` 子网段列表。
+     * Set The assigned `IPv6` subnet IP range list.
+     * @param Ipv6SubnetCidrBlocks The assigned `IPv6` subnet IP range list.
      */
     public void setIpv6SubnetCidrBlocks(Ipv6SubnetCidrBlock [] Ipv6SubnetCidrBlocks) {
         this.Ipv6SubnetCidrBlocks = Ipv6SubnetCidrBlocks;

@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class CreateServiceTemplateGroupRequest extends AbstractModel{
 
     /**
-    * 协议端口模板集合名称
+    * Group name of the protocol port template.
     */
     @SerializedName("ServiceTemplateGroupName")
     @Expose
     private String ServiceTemplateGroupName;
 
     /**
-    * 协议端口模板实例ID，例如：ppm-4dw6agho。
+    * Instance ID of the protocol port template, such as `ppm-4dw6agho`.
     */
     @SerializedName("ServiceTemplateIds")
     @Expose
     private String [] ServiceTemplateIds;
 
     /**
-     * Get 协议端口模板集合名称 
-     * @return ServiceTemplateGroupName 协议端口模板集合名称
+     * Get Group name of the protocol port template. 
+     * @return ServiceTemplateGroupName Group name of the protocol port template.
      */
     public String getServiceTemplateGroupName() {
         return this.ServiceTemplateGroupName;
     }
 
     /**
-     * Set 协议端口模板集合名称
-     * @param ServiceTemplateGroupName 协议端口模板集合名称
+     * Set Group name of the protocol port template.
+     * @param ServiceTemplateGroupName Group name of the protocol port template.
      */
     public void setServiceTemplateGroupName(String ServiceTemplateGroupName) {
         this.ServiceTemplateGroupName = ServiceTemplateGroupName;
     }
 
     /**
-     * Get 协议端口模板实例ID，例如：ppm-4dw6agho。 
-     * @return ServiceTemplateIds 协议端口模板实例ID，例如：ppm-4dw6agho。
+     * Get Instance ID of the protocol port template, such as `ppm-4dw6agho`. 
+     * @return ServiceTemplateIds Instance ID of the protocol port template, such as `ppm-4dw6agho`.
      */
     public String [] getServiceTemplateIds() {
         return this.ServiceTemplateIds;
     }
 
     /**
-     * Set 协议端口模板实例ID，例如：ppm-4dw6agho。
-     * @param ServiceTemplateIds 协议端口模板实例ID，例如：ppm-4dw6agho。
+     * Set Instance ID of the protocol port template, such as `ppm-4dw6agho`.
+     * @param ServiceTemplateIds Instance ID of the protocol port template, such as `ppm-4dw6agho`.
      */
     public void setServiceTemplateIds(String [] ServiceTemplateIds) {
         this.ServiceTemplateIds = ServiceTemplateIds;

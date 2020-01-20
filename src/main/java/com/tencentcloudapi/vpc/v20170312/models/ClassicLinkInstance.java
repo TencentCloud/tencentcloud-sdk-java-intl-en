@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class ClassicLinkInstance extends AbstractModel{
 
     /**
-    * VPC实例ID
+    * VPC instance ID
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 云服务器实例唯一ID
+    * The unique ID of the CVM instance
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get VPC实例ID 
-     * @return VpcId VPC实例ID
+     * Get VPC instance ID 
+     * @return VpcId VPC instance ID
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC实例ID
-     * @param VpcId VPC实例ID
+     * Set VPC instance ID
+     * @param VpcId VPC instance ID
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 云服务器实例唯一ID 
-     * @return InstanceId 云服务器实例唯一ID
+     * Get The unique ID of the CVM instance 
+     * @return InstanceId The unique ID of the CVM instance
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 云服务器实例唯一ID
-     * @param InstanceId 云服务器实例唯一ID
+     * Set The unique ID of the CVM instance
+     * @param InstanceId The unique ID of the CVM instance
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

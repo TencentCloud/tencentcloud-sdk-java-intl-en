@@ -23,120 +23,120 @@ import java.util.HashMap;
 public class CcnRegionBandwidthLimit extends AbstractModel{
 
     /**
-    * 地域，例如：ap-guangzhou
+    * Region, such as `ap-guangzhou`
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 出带宽上限，单位：Mbps
+    * The outbound bandwidth cap. Units: Mbps
     */
     @SerializedName("BandwidthLimit")
     @Expose
     private Long BandwidthLimit;
 
     /**
-    * 是否黑石地域，默认`false`。
+    * Whether it is a BM region. The default is `false`.
     */
     @SerializedName("IsBm")
     @Expose
     private Boolean IsBm;
 
     /**
-    * 目的地域，例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
+    * The target region, such as `ap-shanghai`
+Note: This field may return null, indicating no valid value.
     */
     @SerializedName("DstRegion")
     @Expose
     private String DstRegion;
 
     /**
-    * 目的地域是否为黑石地域，默认`false`。
+    * Whether the target region is a BM region. The default is `false`.
     */
     @SerializedName("DstIsBm")
     @Expose
     private Boolean DstIsBm;
 
     /**
-     * Get 地域，例如：ap-guangzhou 
-     * @return Region 地域，例如：ap-guangzhou
+     * Get Region, such as `ap-guangzhou` 
+     * @return Region Region, such as `ap-guangzhou`
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 地域，例如：ap-guangzhou
-     * @param Region 地域，例如：ap-guangzhou
+     * Set Region, such as `ap-guangzhou`
+     * @param Region Region, such as `ap-guangzhou`
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 出带宽上限，单位：Mbps 
-     * @return BandwidthLimit 出带宽上限，单位：Mbps
+     * Get The outbound bandwidth cap. Units: Mbps 
+     * @return BandwidthLimit The outbound bandwidth cap. Units: Mbps
      */
     public Long getBandwidthLimit() {
         return this.BandwidthLimit;
     }
 
     /**
-     * Set 出带宽上限，单位：Mbps
-     * @param BandwidthLimit 出带宽上限，单位：Mbps
+     * Set The outbound bandwidth cap. Units: Mbps
+     * @param BandwidthLimit The outbound bandwidth cap. Units: Mbps
      */
     public void setBandwidthLimit(Long BandwidthLimit) {
         this.BandwidthLimit = BandwidthLimit;
     }
 
     /**
-     * Get 是否黑石地域，默认`false`。 
-     * @return IsBm 是否黑石地域，默认`false`。
+     * Get Whether it is a BM region. The default is `false`. 
+     * @return IsBm Whether it is a BM region. The default is `false`.
      */
     public Boolean getIsBm() {
         return this.IsBm;
     }
 
     /**
-     * Set 是否黑石地域，默认`false`。
-     * @param IsBm 是否黑石地域，默认`false`。
+     * Set Whether it is a BM region. The default is `false`.
+     * @param IsBm Whether it is a BM region. The default is `false`.
      */
     public void setIsBm(Boolean IsBm) {
         this.IsBm = IsBm;
     }
 
     /**
-     * Get 目的地域，例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DstRegion 目的地域，例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get The target region, such as `ap-shanghai`
+Note: This field may return null, indicating no valid value. 
+     * @return DstRegion The target region, such as `ap-shanghai`
+Note: This field may return null, indicating no valid value.
      */
     public String getDstRegion() {
         return this.DstRegion;
     }
 
     /**
-     * Set 目的地域，例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param DstRegion 目的地域，例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set The target region, such as `ap-shanghai`
+Note: This field may return null, indicating no valid value.
+     * @param DstRegion The target region, such as `ap-shanghai`
+Note: This field may return null, indicating no valid value.
      */
     public void setDstRegion(String DstRegion) {
         this.DstRegion = DstRegion;
     }
 
     /**
-     * Get 目的地域是否为黑石地域，默认`false`。 
-     * @return DstIsBm 目的地域是否为黑石地域，默认`false`。
+     * Get Whether the target region is a BM region. The default is `false`. 
+     * @return DstIsBm Whether the target region is a BM region. The default is `false`.
      */
     public Boolean getDstIsBm() {
         return this.DstIsBm;
     }
 
     /**
-     * Set 目的地域是否为黑石地域，默认`false`。
-     * @param DstIsBm 目的地域是否为黑石地域，默认`false`。
+     * Set Whether the target region is a BM region. The default is `false`.
+     * @param DstIsBm Whether the target region is a BM region. The default is `false`.
      */
     public void setDstIsBm(Boolean DstIsBm) {
         this.DstIsBm = DstIsBm;

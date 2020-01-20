@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DescribeVpcPrivateIpAddressesRequest extends AbstractModel{
 
     /**
-    * `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
+    * The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 内网`IP`地址列表，批量查询单次请求最多支持`10`个。
+    * The private `IP` address list. Each request supports a maximum of `10` batch querying.
     */
     @SerializedName("PrivateIpAddresses")
     @Expose
     private String [] PrivateIpAddresses;
 
     /**
-     * Get `VPC`实例`ID`，形如：`vpc-f49l6u0z`。 
-     * @return VpcId `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
+     * Get The `ID` of the `VPC`, such as `vpc-f49l6u0z`. 
+     * @return VpcId The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
-     * @param VpcId `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
+     * Set The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
+     * @param VpcId The `ID` of the `VPC`, such as `vpc-f49l6u0z`.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 内网`IP`地址列表，批量查询单次请求最多支持`10`个。 
-     * @return PrivateIpAddresses 内网`IP`地址列表，批量查询单次请求最多支持`10`个。
+     * Get The private `IP` address list. Each request supports a maximum of `10` batch querying. 
+     * @return PrivateIpAddresses The private `IP` address list. Each request supports a maximum of `10` batch querying.
      */
     public String [] getPrivateIpAddresses() {
         return this.PrivateIpAddresses;
     }
 
     /**
-     * Set 内网`IP`地址列表，批量查询单次请求最多支持`10`个。
-     * @param PrivateIpAddresses 内网`IP`地址列表，批量查询单次请求最多支持`10`个。
+     * Set The private `IP` address list. Each request supports a maximum of `10` batch querying.
+     * @param PrivateIpAddresses The private `IP` address list. Each request supports a maximum of `10` batch querying.
      */
     public void setPrivateIpAddresses(String [] PrivateIpAddresses) {
         this.PrivateIpAddresses = PrivateIpAddresses;

@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeNatGatewaysResponse extends AbstractModel{
 
     /**
-    * NAT网关对象数组。
+    * NAT gateway object array.
     */
     @SerializedName("NatGatewaySet")
     @Expose
     private NatGateway [] NatGatewaySet;
 
     /**
-    * 符合条件的NAT网关对象个数。
+    * The number of NAT gateway object sets meeting the conditions.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeNatGatewaysResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get NAT网关对象数组。 
-     * @return NatGatewaySet NAT网关对象数组。
+     * Get NAT gateway object array. 
+     * @return NatGatewaySet NAT gateway object array.
      */
     public NatGateway [] getNatGatewaySet() {
         return this.NatGatewaySet;
     }
 
     /**
-     * Set NAT网关对象数组。
-     * @param NatGatewaySet NAT网关对象数组。
+     * Set NAT gateway object array.
+     * @param NatGatewaySet NAT gateway object array.
      */
     public void setNatGatewaySet(NatGateway [] NatGatewaySet) {
         this.NatGatewaySet = NatGatewaySet;
     }
 
     /**
-     * Get 符合条件的NAT网关对象个数。 
-     * @return TotalCount 符合条件的NAT网关对象个数。
+     * Get The number of NAT gateway object sets meeting the conditions. 
+     * @return TotalCount The number of NAT gateway object sets meeting the conditions.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的NAT网关对象个数。
-     * @param TotalCount 符合条件的NAT网关对象个数。
+     * Set The number of NAT gateway object sets meeting the conditions.
+     * @param TotalCount The number of NAT gateway object sets meeting the conditions.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

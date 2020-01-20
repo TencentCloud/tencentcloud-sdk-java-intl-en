@@ -23,49 +23,49 @@ import java.util.HashMap;
 public class CCN extends AbstractModel{
 
     /**
-    * 云联网唯一ID
+    * The unique ID of the CCN
     */
     @SerializedName("CcnId")
     @Expose
     private String CcnId;
 
     /**
-    * 云联网名称
+    * The name of the CCN
     */
     @SerializedName("CcnName")
     @Expose
     private String CcnName;
 
     /**
-    * 云联网描述信息
+    * The detailed information of the CCN
     */
     @SerializedName("CcnDescription")
     @Expose
     private String CcnDescription;
 
     /**
-    * 关联实例数量
+    * The number of associated instances
     */
     @SerializedName("InstanceCount")
     @Expose
     private Long InstanceCount;
 
     /**
-    * 创建时间
+    * The creation time
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 实例状态， 'ISOLATED': 隔离中（欠费停服），'AVAILABLE'：运行中。
+    * The instance status. 'ISOLATED': Being isolated (instance is in arrears and service is suspended). 'AVAILABLE': Operating.
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * 实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
+    * The instance service quality. ’PT’: Platinum , 'AU': Gold, 'AG': Silver.
     */
     @SerializedName("QosLevel")
     @Expose
@@ -80,120 +80,120 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String InstanceChargeType;
 
     /**
-    * 限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
-注意：此字段可能返回 null，表示取不到有效值。
+    * The limit type. INTER_REGION_LIMIT is the limit between regions. OUTER_REGION_LIMIT is a region egress limit.
+Note: This field may return null, indicating no valid value.
     */
     @SerializedName("BandwidthLimitType")
     @Expose
     private String BandwidthLimitType;
 
     /**
-     * Get 云联网唯一ID 
-     * @return CcnId 云联网唯一ID
+     * Get The unique ID of the CCN 
+     * @return CcnId The unique ID of the CCN
      */
     public String getCcnId() {
         return this.CcnId;
     }
 
     /**
-     * Set 云联网唯一ID
-     * @param CcnId 云联网唯一ID
+     * Set The unique ID of the CCN
+     * @param CcnId The unique ID of the CCN
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;
     }
 
     /**
-     * Get 云联网名称 
-     * @return CcnName 云联网名称
+     * Get The name of the CCN 
+     * @return CcnName The name of the CCN
      */
     public String getCcnName() {
         return this.CcnName;
     }
 
     /**
-     * Set 云联网名称
-     * @param CcnName 云联网名称
+     * Set The name of the CCN
+     * @param CcnName The name of the CCN
      */
     public void setCcnName(String CcnName) {
         this.CcnName = CcnName;
     }
 
     /**
-     * Get 云联网描述信息 
-     * @return CcnDescription 云联网描述信息
+     * Get The detailed information of the CCN 
+     * @return CcnDescription The detailed information of the CCN
      */
     public String getCcnDescription() {
         return this.CcnDescription;
     }
 
     /**
-     * Set 云联网描述信息
-     * @param CcnDescription 云联网描述信息
+     * Set The detailed information of the CCN
+     * @param CcnDescription The detailed information of the CCN
      */
     public void setCcnDescription(String CcnDescription) {
         this.CcnDescription = CcnDescription;
     }
 
     /**
-     * Get 关联实例数量 
-     * @return InstanceCount 关联实例数量
+     * Get The number of associated instances 
+     * @return InstanceCount The number of associated instances
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
     /**
-     * Set 关联实例数量
-     * @param InstanceCount 关联实例数量
+     * Set The number of associated instances
+     * @param InstanceCount The number of associated instances
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
     }
 
     /**
-     * Get 创建时间 
-     * @return CreateTime 创建时间
+     * Get The creation time 
+     * @return CreateTime The creation time
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 创建时间
-     * @param CreateTime 创建时间
+     * Set The creation time
+     * @param CreateTime The creation time
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 实例状态， 'ISOLATED': 隔离中（欠费停服），'AVAILABLE'：运行中。 
-     * @return State 实例状态， 'ISOLATED': 隔离中（欠费停服），'AVAILABLE'：运行中。
+     * Get The instance status. 'ISOLATED': Being isolated (instance is in arrears and service is suspended). 'AVAILABLE': Operating. 
+     * @return State The instance status. 'ISOLATED': Being isolated (instance is in arrears and service is suspended). 'AVAILABLE': Operating.
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set 实例状态， 'ISOLATED': 隔离中（欠费停服），'AVAILABLE'：运行中。
-     * @param State 实例状态， 'ISOLATED': 隔离中（欠费停服），'AVAILABLE'：运行中。
+     * Set The instance status. 'ISOLATED': Being isolated (instance is in arrears and service is suspended). 'AVAILABLE': Operating.
+     * @param State The instance status. 'ISOLATED': Being isolated (instance is in arrears and service is suspended). 'AVAILABLE': Operating.
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get 实例服务质量，’PT’：白金，'AU'：金，'AG'：银。 
-     * @return QosLevel 实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
+     * Get The instance service quality. ’PT’: Platinum , 'AU': Gold, 'AG': Silver. 
+     * @return QosLevel The instance service quality. ’PT’: Platinum , 'AU': Gold, 'AG': Silver.
      */
     public String getQosLevel() {
         return this.QosLevel;
     }
 
     /**
-     * Set 实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
-     * @param QosLevel 实例服务质量，’PT’：白金，'AU'：金，'AG'：银。
+     * Set The instance service quality. ’PT’: Platinum , 'AU': Gold, 'AG': Silver.
+     * @param QosLevel The instance service quality. ’PT’: Platinum , 'AU': Gold, 'AG': Silver.
      */
     public void setQosLevel(String QosLevel) {
         this.QosLevel = QosLevel;
@@ -220,20 +220,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get 限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BandwidthLimitType 限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get The limit type. INTER_REGION_LIMIT is the limit between regions. OUTER_REGION_LIMIT is a region egress limit.
+Note: This field may return null, indicating no valid value. 
+     * @return BandwidthLimitType The limit type. INTER_REGION_LIMIT is the limit between regions. OUTER_REGION_LIMIT is a region egress limit.
+Note: This field may return null, indicating no valid value.
      */
     public String getBandwidthLimitType() {
         return this.BandwidthLimitType;
     }
 
     /**
-     * Set 限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param BandwidthLimitType 限速类型，INTER_REGION_LIMIT为地域间限速；OUTER_REGION_LIMIT为地域出口限速。
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set The limit type. INTER_REGION_LIMIT is the limit between regions. OUTER_REGION_LIMIT is a region egress limit.
+Note: This field may return null, indicating no valid value.
+     * @param BandwidthLimitType The limit type. INTER_REGION_LIMIT is the limit between regions. OUTER_REGION_LIMIT is a region egress limit.
+Note: This field may return null, indicating no valid value.
      */
     public void setBandwidthLimitType(String BandwidthLimitType) {
         this.BandwidthLimitType = BandwidthLimitType;

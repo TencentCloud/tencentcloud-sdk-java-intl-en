@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeAddressTemplatesResponse extends AbstractModel{
 
     /**
-    * 符合条件的实例数量。
+    * The number of instances meeting the filter condition.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * IP地址模版。
+    * IP address template.
     */
     @SerializedName("AddressTemplateSet")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeAddressTemplatesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 符合条件的实例数量。 
-     * @return TotalCount 符合条件的实例数量。
+     * Get The number of instances meeting the filter condition. 
+     * @return TotalCount The number of instances meeting the filter condition.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的实例数量。
-     * @param TotalCount 符合条件的实例数量。
+     * Set The number of instances meeting the filter condition.
+     * @param TotalCount The number of instances meeting the filter condition.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get IP地址模版。 
-     * @return AddressTemplateSet IP地址模版。
+     * Get IP address template. 
+     * @return AddressTemplateSet IP address template.
      */
     public AddressTemplate [] getAddressTemplateSet() {
         return this.AddressTemplateSet;
     }
 
     /**
-     * Set IP地址模版。
-     * @param AddressTemplateSet IP地址模版。
+     * Set IP address template.
+     * @param AddressTemplateSet IP address template.
      */
     public void setAddressTemplateSet(AddressTemplate [] AddressTemplateSet) {
         this.AddressTemplateSet = AddressTemplateSet;

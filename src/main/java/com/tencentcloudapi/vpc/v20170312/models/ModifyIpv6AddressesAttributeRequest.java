@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class ModifyIpv6AddressesAttributeRequest extends AbstractModel{
 
     /**
-    * 弹性网卡实例`ID`，形如：`eni-m6dyj72l`。
+    * The `ID` of the ENI instance, such as `eni-m6dyj72l`.
     */
     @SerializedName("NetworkInterfaceId")
     @Expose
     private String NetworkInterfaceId;
 
     /**
-    * 指定的内网IPv6`地址信息。
+    * The information of the specified private `IPv6` addresses.
     */
     @SerializedName("Ipv6Addresses")
     @Expose
     private Ipv6Address [] Ipv6Addresses;
 
     /**
-     * Get 弹性网卡实例`ID`，形如：`eni-m6dyj72l`。 
-     * @return NetworkInterfaceId 弹性网卡实例`ID`，形如：`eni-m6dyj72l`。
+     * Get The `ID` of the ENI instance, such as `eni-m6dyj72l`. 
+     * @return NetworkInterfaceId The `ID` of the ENI instance, such as `eni-m6dyj72l`.
      */
     public String getNetworkInterfaceId() {
         return this.NetworkInterfaceId;
     }
 
     /**
-     * Set 弹性网卡实例`ID`，形如：`eni-m6dyj72l`。
-     * @param NetworkInterfaceId 弹性网卡实例`ID`，形如：`eni-m6dyj72l`。
+     * Set The `ID` of the ENI instance, such as `eni-m6dyj72l`.
+     * @param NetworkInterfaceId The `ID` of the ENI instance, such as `eni-m6dyj72l`.
      */
     public void setNetworkInterfaceId(String NetworkInterfaceId) {
         this.NetworkInterfaceId = NetworkInterfaceId;
     }
 
     /**
-     * Get 指定的内网IPv6`地址信息。 
-     * @return Ipv6Addresses 指定的内网IPv6`地址信息。
+     * Get The information of the specified private `IPv6` addresses. 
+     * @return Ipv6Addresses The information of the specified private `IPv6` addresses.
      */
     public Ipv6Address [] getIpv6Addresses() {
         return this.Ipv6Addresses;
     }
 
     /**
-     * Set 指定的内网IPv6`地址信息。
-     * @param Ipv6Addresses 指定的内网IPv6`地址信息。
+     * Set The information of the specified private `IPv6` addresses.
+     * @param Ipv6Addresses The information of the specified private `IPv6` addresses.
      */
     public void setIpv6Addresses(Ipv6Address [] Ipv6Addresses) {
         this.Ipv6Addresses = Ipv6Addresses;

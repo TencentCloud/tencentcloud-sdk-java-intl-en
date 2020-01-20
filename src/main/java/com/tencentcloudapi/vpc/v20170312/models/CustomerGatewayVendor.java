@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class CustomerGatewayVendor extends AbstractModel{
 
     /**
-    * 平台。
+    * Platform.
     */
     @SerializedName("Platform")
     @Expose
     private String Platform;
 
     /**
-    * 软件版本。
+    * Software version.
     */
     @SerializedName("SoftwareVersion")
     @Expose
     private String SoftwareVersion;
 
     /**
-    * 供应商名称。
+    * Vendor name.
     */
     @SerializedName("VendorName")
     @Expose
     private String VendorName;
 
     /**
-     * Get 平台。 
-     * @return Platform 平台。
+     * Get Platform. 
+     * @return Platform Platform.
      */
     public String getPlatform() {
         return this.Platform;
     }
 
     /**
-     * Set 平台。
-     * @param Platform 平台。
+     * Set Platform.
+     * @param Platform Platform.
      */
     public void setPlatform(String Platform) {
         this.Platform = Platform;
     }
 
     /**
-     * Get 软件版本。 
-     * @return SoftwareVersion 软件版本。
+     * Get Software version. 
+     * @return SoftwareVersion Software version.
      */
     public String getSoftwareVersion() {
         return this.SoftwareVersion;
     }
 
     /**
-     * Set 软件版本。
-     * @param SoftwareVersion 软件版本。
+     * Set Software version.
+     * @param SoftwareVersion Software version.
      */
     public void setSoftwareVersion(String SoftwareVersion) {
         this.SoftwareVersion = SoftwareVersion;
     }
 
     /**
-     * Get 供应商名称。 
-     * @return VendorName 供应商名称。
+     * Get Vendor name. 
+     * @return VendorName Vendor name.
      */
     public String getVendorName() {
         return this.VendorName;
     }
 
     /**
-     * Set 供应商名称。
-     * @param VendorName 供应商名称。
+     * Set Vendor name.
+     * @param VendorName Vendor name.
      */
     public void setVendorName(String VendorName) {
         this.VendorName = VendorName;
