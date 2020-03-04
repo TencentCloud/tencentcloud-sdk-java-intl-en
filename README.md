@@ -1,33 +1,36 @@
+![](https://img.shields.io/maven-central/v/com.tencentcloudapi/tencentcloud-sdk-java-intl-en?label=maven)
+
 # Overview
-Welcome to Tencent Cloud Software Development Kit (SDK) 3.0, a companion tool for the TencentCloud API 3.0 platform. Current supported products include CVM, VPC and CBS. All Tencent Cloud services and products will be integrated in the future. The new SDK version is unified and features the same SDK usage, API call methods, error codes, and return packet formats for different languages.
-Tencent Cloud SDK for Java helps Java developers debug and use Tencent Cloud APIs. In this document, you will learn about Tencent Cloud SDK for Java and how to quickly use it with code samples provided.
+Welcome to Tencent Cloud Software Development Kit (SDK) 3.0, a companion tool for the TencentCloud API 3.0 platform. Currently supported products include CVM, VPC, and CBS. All Tencent Cloud services and products will be connected to it in the future. The new SDK version is unified and features the same SDK usage, API call methods, error codes, and returned packet formats for different languages.
+Tencent Cloud SDK for Java helps Java developers debug and use TencentCloud APIs with ease. This document describes Tencent Cloud SDK for Java and how to quickly use it with code examples provided.
 
-# Dependencies
-1. Dependencies: JDK version 7 or higher.
+# Dependent Environment
+1. Dependent environment: JDK 7 or higher.
 2. Activate your product in the Tencent Cloud Console.
-3. Get the SecretID, SecretKey, and endpoint. The general format of the endpoint is *.tencentcloudapi.com. For example, the endpoint of CVM is cvm.tencentcloudapi.com. For details, see the documentation of the specified product.
+3. Get the `SecretID`, `SecretKey`, and endpoint. The general format of endpoint is `\*.tencentcloudapi.com`. For example, the endpoint of CVM is `cvm.tencentcloudapi.com`. For more information, please see the documentation of the specified product.
 
-## Installation
-Before installing Tencent Cloud SDK for Java and using Tencent Cloud API, apply for security credentials in the Tencent Cloud Console. Security credential consists of SecretID and SecretKey. SecretID is for identifying the API requester. SecretKey is a key used for signature string encryption, and signature string verification by the server. Secure your SecretKey and do not disclose it to others.
-## Installing via Maven (Recommended)
-Installing via Maven is the recommended way to use the SDK for Java. Maven is a dependency management tool for Java. It supports the dependencies your project requires and installs them into your project. For more information on Maven, see Maven's official website.
-1. Go to [Maven's official website](https://maven.apache.org/), download the Maven installation package supported by your operating system and install.
-2. Add Maven dependencies to your project by adding the following dependencies in Maven's pom.xml. **Please note that the version number here is just an example, and you can view the latest version number in the [Maven repository](https://search.maven.org/search?q=tencentcloud-sdk-java-intl-en).**
+# Installation
+Before installing Tencent Cloud SDK for Java and using TencentCloud API, apply for security credentials in the Tencent Cloud Console. Security credential consists of `SecretID` and `SecretKey`. `SecretID` is for identifying the API requester. `SecretKey` is a key used for signature string encryption and authentication by the server. Please keep your `SecretKey` private and do not disclose it to others.
+## Installing via Maven (recommended)
+Installing through Maven is the recommended way to use the SDK for Java. Maven is a dependency manager for Java that supports the dependencies your project requires and installs them into your project. For more information, please visit Maven's official website.
+1. Go to [Maven's official website](https://maven.apache.org/) to download the corresponding Maven installation package for your system and install it.
+2. Add Maven dependencies to your project by adding the following dependencies in Maven's `pom.xml`. Please note that the version number here is just an example, and you can find the latest version in the [Maven repository](https://search.maven.org/search?q=tencentcloud-sdk-java-intl-en). Currently, the latest version is ![](https://img.shields.io/maven-central/v/com.tencentcloudapi/tencentcloud-sdk-java-intl-en?label=maven):
 ```xml
 <dependency>
-	<groupId>com.tencentcloudapi</groupId>
-	<artifactId>tencentcloud-sdk-java-intl-en</artifactId>
-	<!-- go to https://search.maven.org/search?q=tencentcloud-sdk-java-intl-en and get the latest version. -->
-	<version>3.0.2</version>
+    <groupId>com.tencentcloudapi</groupId>
+    <artifactId>tencentcloud-sdk-java-intl-en</artifactId>
+    <!-- go to https://search.maven.org/search?q=tencentcloud-sdk-java-intl-en and get the latest version. -->
+    <!-- Please query the latest version at https://search.maven.org/search?q=tencentcloud-sdk-java-intl-en -->
+    <version>3.0.3</version>
 </dependency>
 ```
-3. For reference methods, see the example.
+3. For importing methods, please see the example.
 
-## Installing via Source Package
-1. Go to the [GitHub code hosting page](https://github.com/tencentcloud/tencentcloud-sdk-java-intl-en) to download the source code package.
-2. Decompress the package to an appropriate location for your project.
-3. You need to put the jar package under the vendor directory in a path that can be found by Java.
-4. For reference methods, see the example.
+## Installing via source package
+1. Go to the [Github code hosting page](https://github.com/tencentcloud/tencentcloud-sdk-java-intl-en) to download the source code package.
+2. Decompress the source package to an appropriate location in your project.
+3. You need to put the jar package under the `vendor` directory in a path that can be found by Java.
+4. For importing methods, please see the example.
 
 # Example
 Take the API for querying availability zones as an example:
@@ -35,32 +38,32 @@ Take the API for querying availability zones as an example:
 import com.tencentcloudapi.common.Credential;
 import com.tencentcloudapi.common.exception.TencentCloudSDKException;
 import com.tencentcloudapi.common.profile.ClientProfile;
-// Import the client of the corresponding product module.
+// Import the client of the corresponding product module
 import com.tencentcloudapi.cvm.v20170312.CvmClient;
-// Import the request response class corresponding to the request API.
-import com.tencentcloudapi.cvm.v20170312.models.DescribeZonesRequest;
-import com.tencentcloudapi.cvm.v20170312.models.DescribeZonesResponse;
+// Import the request response class corresponding to the request API
+import com.tencentcloudapi.cvm.v20170312.models.DescribeInstancesRequest;
+import com.tencentcloudapi.cvm.v20170312.models.DescribeInstancesResponse;
 
-public class DescribeZones
+public class DescribeInstances
 {
     public static void main(String [] args) {
         try{
-            // Instantiate an authentication object. The Tencent Cloud account secretId and secretKey need to be passed in as the input parameters.
+            // Instantiate an authentication object. The Tencent Cloud account `secretId` and `secretKey` need to be passed in as the input parameters
             Credential cred = new Credential("secretId", "secretKey");
             
-            // Instantiate the client object to request the product (with CVM as an example).
+            // Instantiate the client object of the requested product (with CVM as an example)
             ClientProfile clientProfile = new ClientProfile();
             clientProfile.setSignMethod(ClientProfile.SIGN_TC3_256);
             CvmClient client = new CvmClient(cred, "ap-guangzhou", clientProfile);
             
-            // Instantiate a request object.
-            DescribeZonesRequest req = new DescribeZonesRequest();
+            // Instantiate a request object
+            DescribeInstancesRequest req = new DescribeInstancesRequest();
             
-            // Call the API you want to access through the client object; you need to pass in the request object.
-            DescribeZonesResponse resp = client.DescribeZones(req);
+            // Call the API you want to access through the client object. You need to pass in the request object
+            DescribeInstancesResponse resp = client.DescribeInstances(req);
             
-            // The output is a string return packet in json format
-            System.out.println(DescribeZonesRequest.toJsonString(resp));
+            // A string return packet in JSON format is output
+            System.out.println(DescribeInstancesRequest.toJsonString(resp));
         } catch (TencentCloudSDKException e) {
                 System.out.println(e.toString());
         }
@@ -70,19 +73,28 @@ public class DescribeZones
 } 
 ```
 
-## More Examples
+## More examples
 
-You can find more detailed examples in the [GitHub repository](https://github.com/tencentcloud/tencentcloud-sdk-java-intl-en).
+You can find more detailed examples in the `examples` directory of the [GitHub repository](https://github.com/tencentcloud/tencentcloud-sdk-java-intl-en).
 
-# Related Configuration
+# Relevant Configuration
 
 ## Proxy
 
-Currently, the Java SDK does not support proxy specifying; instead, it can only read the system's proxies. You can set the following in the code before initiating a request:
+Specify proxy access. Currently, only HTTP proxy is supported:
 
 ```
-System.setProperty("https.proxyHost", "real proxy ip");
-System.setProperty("https.proxyPort", "real proxy port");
+HttpProfile httpProfile = new HttpProfile();
+httpProfile.setProxyHost("real proxy IP");
+httpProfile.setProxyPort(real proxy port);
 ```
 
-You can also set in the launch parameters when running the program.
+Or, set the system proxy before initiating a request in the code:
+
+```
+System.setProperty("https.proxyHost", "Real proxy IP");
+System.setProperty("https.proxyPort", "Real proxy port");
+```
+
+Or, set it in the startup parameters when running the program.
+
