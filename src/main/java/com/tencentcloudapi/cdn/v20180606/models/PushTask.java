@@ -71,6 +71,14 @@ public class PushTask extends AbstractModel{
     private String Area;
 
     /**
+    * Prefetch task update time
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
      * Get Prefetch task ID 
      * @return TaskId Prefetch task ID
      */
@@ -191,6 +199,26 @@ public class PushTask extends AbstractModel{
     }
 
     /**
+     * Get Prefetch task update time
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return UpdateTime Prefetch task update time
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set Prefetch task update time
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param UpdateTime Prefetch task update time
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -200,6 +228,7 @@ public class PushTask extends AbstractModel{
         this.setParamSimple(map, prefix + "Percent", this.Percent);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 
     }
 }

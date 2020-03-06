@@ -70,7 +70,7 @@ In both scheduled and real-time video recording modes, this parameter is valid a
     private String RecordType;
 
     /**
-    * Recording file format. Value range:
+    * Recording file format. Valid values:
 "flv" **(default)**, "hls", "mp4", "aac", "mp3".
 In both scheduled and real-time video recording modes, this parameter is valid and is not case sensitive.
     */
@@ -99,7 +99,7 @@ In both scheduled and real-time video recording modes, this parameter is valid.
 
     /**
     * Recording stream parameter. The following parameters are supported currently:
-record_interval: Recording interval in seconds. Value range: 1,800-7,200
+record_interval: Recording interval in seconds. Value range: 1,800–7,200
 storage_time: Recording file duration in seconds
 eg. record_interval=3600&storage_time=2592000
 Note: The parameter needs url encode.
@@ -226,10 +226,10 @@ In both scheduled and real-time video recording modes, this parameter is valid a
     }
 
     /**
-     * Get Recording file format. Value range:
+     * Get Recording file format. Valid values:
 "flv" **(default)**, "hls", "mp4", "aac", "mp3".
 In both scheduled and real-time video recording modes, this parameter is valid and is not case sensitive. 
-     * @return FileFormat Recording file format. Value range:
+     * @return FileFormat Recording file format. Valid values:
 "flv" **(default)**, "hls", "mp4", "aac", "mp3".
 In both scheduled and real-time video recording modes, this parameter is valid and is not case sensitive.
      */
@@ -238,10 +238,10 @@ In both scheduled and real-time video recording modes, this parameter is valid a
     }
 
     /**
-     * Set Recording file format. Value range:
+     * Set Recording file format. Valid values:
 "flv" **(default)**, "hls", "mp4", "aac", "mp3".
 In both scheduled and real-time video recording modes, this parameter is valid and is not case sensitive.
-     * @param FileFormat Recording file format. Value range:
+     * @param FileFormat Recording file format. Valid values:
 "flv" **(default)**, "hls", "mp4", "aac", "mp3".
 In both scheduled and real-time video recording modes, this parameter is valid and is not case sensitive.
      */
@@ -303,13 +303,13 @@ In both scheduled and real-time video recording modes, this parameter is valid.
 
     /**
      * Get Recording stream parameter. The following parameters are supported currently:
-record_interval: Recording interval in seconds. Value range: 1,800-7,200
+record_interval: Recording interval in seconds. Value range: 1,800–7,200
 storage_time: Recording file duration in seconds
 eg. record_interval=3600&storage_time=2592000
 Note: The parameter needs url encode.
 In both scheduled and real-time video recording modes, this parameter is valid. 
      * @return StreamParam Recording stream parameter. The following parameters are supported currently:
-record_interval: Recording interval in seconds. Value range: 1,800-7,200
+record_interval: Recording interval in seconds. Value range: 1,800–7,200
 storage_time: Recording file duration in seconds
 eg. record_interval=3600&storage_time=2592000
 Note: The parameter needs url encode.
@@ -321,13 +321,13 @@ In both scheduled and real-time video recording modes, this parameter is valid.
 
     /**
      * Set Recording stream parameter. The following parameters are supported currently:
-record_interval: Recording interval in seconds. Value range: 1,800-7,200
+record_interval: Recording interval in seconds. Value range: 1,800–7,200
 storage_time: Recording file duration in seconds
 eg. record_interval=3600&storage_time=2592000
 Note: The parameter needs url encode.
 In both scheduled and real-time video recording modes, this parameter is valid.
      * @param StreamParam Recording stream parameter. The following parameters are supported currently:
-record_interval: Recording interval in seconds. Value range: 1,800-7,200
+record_interval: Recording interval in seconds. Value range: 1,800–7,200
 storage_time: Recording file duration in seconds
 eg. record_interval=3600&storage_time=2592000
 Note: The parameter needs url encode.

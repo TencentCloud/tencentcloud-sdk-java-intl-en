@@ -38,6 +38,42 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *This API is used to add a CDN acceleration domain name.
+     * @param req AddCdnDomainRequest
+     * @return AddCdnDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddCdnDomainResponse AddCdnDomain(AddCdnDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddCdnDomainResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddCdnDomainResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AddCdnDomain"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a specified acceleration domain name.
+     * @param req DeleteCdnDomainRequest
+     * @return DeleteCdnDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCdnDomainResponse DeleteCdnDomain(DeleteCdnDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteCdnDomainResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteCdnDomainResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteCdnDomain"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (DescribeCdnData) is used to query CDN real-time access monitoring data and supports the following metrics:
 
 + Traffic (in bytes)
@@ -94,6 +130,42 @@ public class CdnClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeCdnIpResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeCdnIp"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the basic configuration information of CDN acceleration domain names (inside and outside mainland China), including the project ID, service status, business type, creation time, and update time, etc.
+     * @param req DescribeDomainsRequest
+     * @return DescribeDomainsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDomainsResponse DescribeDomains(DescribeDomainsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDomainsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDomainsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDomains"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query all the configuration information of CDN acceleration domain names (inside and outside mainland China).
+     * @param req DescribeDomainsConfigRequest
+     * @return DescribeDomainsConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDomainsConfigResponse DescribeDomainsConfig(DescribeDomainsConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDomainsConfigResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDomainsConfigResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDomainsConfig"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -223,6 +295,25 @@ This API is in beta test and not fully available yet. Please stay tuned.
     }
 
     /**
+     *This API is used to query the list of domain name URLs containing regulation-violating content scanned and detected by the CDN system, and the current status of the URLs.
+It corresponds to the **Pornography Detection** page of the CDN Console.
+     * @param req DescribeUrlViolationsRequest
+     * @return DescribeUrlViolationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUrlViolationsResponse DescribeUrlViolations(DescribeUrlViolationsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUrlViolationsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUrlViolationsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeUrlViolations"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (DisableCaches) is used to block access to a specific URL on CDN. After a URL is blocked, error 403 will be returned for all access requests to it. (This API is during beta test and not fully available now.)
      * @param req DisableCachesRequest
      * @return DisableCachesResponse
@@ -259,7 +350,7 @@ This API is in beta test and not fully available yet. Please stay tuned.
     }
 
     /**
-     *This API (GetDisableRecords) is used to query the resource blocking history and the current URL status. (This API is during beta test and not fully available now.)
+     *This API is used to query the resource blocking history and the current URL status. (This API is in beta test and not fully available yet.)
      * @param req GetDisableRecordsRequest
      * @return GetDisableRecordsResponse
      * @throws TencentCloudSDKException
@@ -277,13 +368,15 @@ This API is in beta test and not fully available yet. Please stay tuned.
     }
 
     /**
-     *This API (ListTopData) is used to query the following sorting data by using different combinations of the `Metric` and `Filter` input parameters:
+     *This API is used to query the following sorting data by using different combinations of the Metric and Filter input parameters:
 
-+ Sorts access URLs by total traffic and total requests and returns top 1,000 URLs in descending order.
-+ Sorts client districts by total traffic and total requests and returns the list of districts in descending order.
-+ Sorts client ISPs by total traffic and total requests and returns the list of ISPs in descending order.
-+ Sorts domain names by total traffic, peak bandwidth, total requests, average hit rate, and 2XX/3XX/4XX/5XX status codes and returns the list of domain names in descending order.
-+ Sorts domain names by total origin-pull traffic, peak origin-pull bandwidth, total origin-pull requests, average origin-pull failure rate, and 2XX/3XX/4XX/5XX origin-pull status codes and returns the list of domain names in descending order.
++ It sorts access URLs by total traffic and total requests, and returns the top 1,000 URLs in descending order.
++ It sorts client districts by total traffic and total requests, and returns the list of districts in descending order.
++ It sorts client ISPs by total traffic and total requests, and returns the list of ISPs in descending order.
++ It sorts domain names by total traffic, peak bandwidth, total requests, average hit rate, and 2XX/3XX/4XX/5XX status codes, and returns the list of domain names in descending order.
++ It sorts domain names by total origin-pull traffic, peak origin-pull bandwidth, total origin-pull requests, average origin-pull failure rate, and 2XX/3XX/4XX/5XX origin-pull status codes, and returns the list of domain names in descending order.
+
+Note: only querying of data within the past 90 days is supported.
      * @param req ListTopDataRequest
      * @return ListTopDataResponse
      * @throws TencentCloudSDKException
@@ -352,6 +445,80 @@ This API is in beta test and not fully available yet. Please stay tuned.
                 Type type = new TypeToken<JsonResponseModel<PushUrlsCacheResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "PushUrlsCache"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to enable the acceleration service for a disabled domain name.
+     * @param req StartCdnDomainRequest
+     * @return StartCdnDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartCdnDomainResponse StartCdnDomain(StartCdnDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartCdnDomainResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartCdnDomainResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "StartCdnDomain"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to suspend the acceleration service for a domain name.
+Note: after the acceleration service has been suspended, the requests to the cache node will directly return 404. In order to avoid impact to your business, please release it before suspending the acceleration service.
+     * @param req StopCdnDomainRequest
+     * @return StopCdnDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopCdnDomainResponse StopCdnDomain(StopCdnDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopCdnDomainResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopCdnDomainResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "StopCdnDomain"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the configuration information of the CDN acceleration domain names.
+Note: if you need to update complex configuration items, you must pass all the attributes of the entire object. Attributes that are not passed will use the default value. It is recommended that you call the querying API to obtain the configuration attributes first, and then you directly modify them and pass them to this API. Due to the special nature of the certificate, for HTTPS configuration, the certificate and key fields do not need to be passed.
+     * @param req UpdateDomainConfigRequest
+     * @return UpdateDomainConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateDomainConfigResponse UpdateDomainConfig(UpdateDomainConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateDomainConfigResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateDomainConfigResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UpdateDomainConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the billing mode of an account. At present, the billing mode of monthly-billed accounts and sub-accounts cannot be modified.
+     * @param req UpdatePayTypeRequest
+     * @return UpdatePayTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdatePayTypeResponse UpdatePayType(UpdatePayTypeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdatePayTypeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdatePayTypeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UpdatePayType"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

@@ -258,6 +258,13 @@ Note: This field may return null, indicating that no valid value was found.
     private Long SnapshotSize;
 
     /**
+    * Indicates whether a snapshot should be created for backup when the cloud disk is terminated due to arrears or expiration. `True`: create a snapshot to backup the disk upon termination. `False`: terminate the disk without backup
+    */
+    @SerializedName("BackupDisk")
+    @Expose
+    private Boolean BackupDisk;
+
+    /**
      * Get Cloud disk ID. 
      * @return DiskId Cloud disk ID.
      */
@@ -814,6 +821,22 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
+     * Get Indicates whether a snapshot should be created for backup when the cloud disk is terminated due to arrears or expiration. `True`: create a snapshot to backup the disk upon termination. `False`: terminate the disk without backup 
+     * @return BackupDisk Indicates whether a snapshot should be created for backup when the cloud disk is terminated due to arrears or expiration. `True`: create a snapshot to backup the disk upon termination. `False`: terminate the disk without backup
+     */
+    public Boolean getBackupDisk() {
+        return this.BackupDisk;
+    }
+
+    /**
+     * Set Indicates whether a snapshot should be created for backup when the cloud disk is terminated due to arrears or expiration. `True`: create a snapshot to backup the disk upon termination. `False`: terminate the disk without backup
+     * @param BackupDisk Indicates whether a snapshot should be created for backup when the cloud disk is terminated due to arrears or expiration. `True`: create a snapshot to backup the disk upon termination. `False`: terminate the disk without backup
+     */
+    public void setBackupDisk(Boolean BackupDisk) {
+        this.BackupDisk = BackupDisk;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -849,6 +872,7 @@ Note: This field may return null, indicating that no valid value was found.
         this.setParamArraySimple(map, prefix + "InstanceIdList.", this.InstanceIdList);
         this.setParamSimple(map, prefix + "SnapshotCount", this.SnapshotCount);
         this.setParamSimple(map, prefix + "SnapshotSize", this.SnapshotSize);
+        this.setParamSimple(map, prefix + "BackupDisk", this.BackupDisk);
 
     }
 }

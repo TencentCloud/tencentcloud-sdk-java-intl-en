@@ -155,7 +155,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RealServerCertificateDomain;
 
     /**
-    * Returns IDs and list of multiple certificates when there are multiple client certificates.
+    * Returns IDs and aliases of multiple certificates when there are multiple client certificates.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PolyClientCertificateAliasInfo")
@@ -163,7 +163,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private CertificateAliasInfo [] PolyClientCertificateAliasInfo;
 
     /**
-    * 
+    * Returns IDs and aliases of multiple certificates when there are multiple origin certificates.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PolyRealServerCertificateAliasInfo")
     @Expose
@@ -506,9 +507,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Returns IDs and list of multiple certificates when there are multiple client certificates.
+     * Get Returns IDs and aliases of multiple certificates when there are multiple client certificates.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PolyClientCertificateAliasInfo Returns IDs and list of multiple certificates when there are multiple client certificates.
+     * @return PolyClientCertificateAliasInfo Returns IDs and aliases of multiple certificates when there are multiple client certificates.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public CertificateAliasInfo [] getPolyClientCertificateAliasInfo() {
@@ -516,9 +517,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Returns IDs and list of multiple certificates when there are multiple client certificates.
+     * Set Returns IDs and aliases of multiple certificates when there are multiple client certificates.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PolyClientCertificateAliasInfo Returns IDs and list of multiple certificates when there are multiple client certificates.
+     * @param PolyClientCertificateAliasInfo Returns IDs and aliases of multiple certificates when there are multiple client certificates.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPolyClientCertificateAliasInfo(CertificateAliasInfo [] PolyClientCertificateAliasInfo) {
@@ -526,16 +527,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return PolyRealServerCertificateAliasInfo 
+     * Get Returns IDs and aliases of multiple certificates when there are multiple origin certificates.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return PolyRealServerCertificateAliasInfo Returns IDs and aliases of multiple certificates when there are multiple origin certificates.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public CertificateAliasInfo [] getPolyRealServerCertificateAliasInfo() {
         return this.PolyRealServerCertificateAliasInfo;
     }
 
     /**
-     * Set 
-     * @param PolyRealServerCertificateAliasInfo 
+     * Set Returns IDs and aliases of multiple certificates when there are multiple origin certificates.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PolyRealServerCertificateAliasInfo Returns IDs and aliases of multiple certificates when there are multiple origin certificates.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPolyRealServerCertificateAliasInfo(CertificateAliasInfo [] PolyRealServerCertificateAliasInfo) {
         this.PolyRealServerCertificateAliasInfo = PolyRealServerCertificateAliasInfo;

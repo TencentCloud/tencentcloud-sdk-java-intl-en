@@ -37,7 +37,7 @@ public class ModifyLiveRecordTemplateRequest extends AbstractModel{
     private String TemplateName;
 
     /**
-    * Description.
+    * Message description
     */
     @SerializedName("Description")
     @Expose
@@ -58,7 +58,7 @@ public class ModifyLiveRecordTemplateRequest extends AbstractModel{
     private RecordParam HlsParam;
 
     /**
-    * MP4 recording parameter, which is set when MP4 recording is enabled.
+    * Mp4 recording parameter, which is set when Mp4 recording is enabled.
     */
     @SerializedName("Mp4Param")
     @Expose
@@ -79,7 +79,7 @@ public class ModifyLiveRecordTemplateRequest extends AbstractModel{
     private HlsSpecialParam HlsSpecialParam;
 
     /**
-    * MP3 recording parameter, which is set when MP3 recording is enabled.
+    * Mp3 recording parameter, which is set when Mp3 recording is enabled.
     */
     @SerializedName("Mp3Param")
     @Expose
@@ -118,16 +118,16 @@ public class ModifyLiveRecordTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get Description. 
-     * @return Description Description.
+     * Get Message description 
+     * @return Description Message description
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Description.
-     * @param Description Description.
+     * Set Message description
+     * @param Description Message description
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -166,16 +166,16 @@ public class ModifyLiveRecordTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get MP4 recording parameter, which is set when MP4 recording is enabled. 
-     * @return Mp4Param MP4 recording parameter, which is set when MP4 recording is enabled.
+     * Get Mp4 recording parameter, which is set when Mp4 recording is enabled. 
+     * @return Mp4Param Mp4 recording parameter, which is set when Mp4 recording is enabled.
      */
     public RecordParam getMp4Param() {
         return this.Mp4Param;
     }
 
     /**
-     * Set MP4 recording parameter, which is set when MP4 recording is enabled.
-     * @param Mp4Param MP4 recording parameter, which is set when MP4 recording is enabled.
+     * Set Mp4 recording parameter, which is set when Mp4 recording is enabled.
+     * @param Mp4Param Mp4 recording parameter, which is set when Mp4 recording is enabled.
      */
     public void setMp4Param(RecordParam Mp4Param) {
         this.Mp4Param = Mp4Param;
@@ -214,16 +214,16 @@ public class ModifyLiveRecordTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get MP3 recording parameter, which is set when MP3 recording is enabled. 
-     * @return Mp3Param MP3 recording parameter, which is set when MP3 recording is enabled.
+     * Get Mp3 recording parameter, which is set when Mp3 recording is enabled. 
+     * @return Mp3Param Mp3 recording parameter, which is set when Mp3 recording is enabled.
      */
     public RecordParam getMp3Param() {
         return this.Mp3Param;
     }
 
     /**
-     * Set MP3 recording parameter, which is set when MP3 recording is enabled.
-     * @param Mp3Param MP3 recording parameter, which is set when MP3 recording is enabled.
+     * Set Mp3 recording parameter, which is set when Mp3 recording is enabled.
+     * @param Mp3Param Mp3 recording parameter, which is set when Mp3 recording is enabled.
      */
     public void setMp3Param(RecordParam Mp3Param) {
         this.Mp3Param = Mp3Param;

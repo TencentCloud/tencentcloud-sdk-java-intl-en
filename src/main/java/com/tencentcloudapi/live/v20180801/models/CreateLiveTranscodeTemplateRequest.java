@@ -30,15 +30,15 @@ public class CreateLiveTranscodeTemplateRequest extends AbstractModel{
     private String TemplateName;
 
     /**
-    * Video bitrate. Value range: 100-8,000.
+    * Video bitrate. Value range: 100–8,000.
+Note: The bitrate must be a multiple of 100.
     */
     @SerializedName("VideoBitrate")
     @Expose
     private Long VideoBitrate;
 
     /**
-    * Video encoding format. Value range: h264, h265. Default value: h264.
-Note: This parameter will take effect later.
+    * Video encoding format. Valid values: h264, h265. Default value: h264.
     */
     @SerializedName("Vcodec")
     @Expose
@@ -53,7 +53,7 @@ Note: This parameter will take effect later.
     private String Acodec;
 
     /**
-    * Audio bitrate. Value range: 0-500. Default value: 0.
+    * Audio bitrate. Value range: 0–500. Default value: 0.
     */
     @SerializedName("AudioBitrate")
     @Expose
@@ -145,14 +145,14 @@ baseline/main/high. Default value: baseline.
     private Long FpsToOrig;
 
     /**
-    * Whether it is an Ultra-fast HD template. 0: no; 1: yes. Default value: 0.
+    * Whether it is a TESHD template. 0: no; 1: yes. Default value: 0.
     */
     @SerializedName("AiTransCode")
     @Expose
     private Long AiTransCode;
 
     /**
-    * VideoBitrate minus Ultra-fast HD bitrate. Value range: 0.1-0.5.
+    * VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5.
     */
     @SerializedName("AdaptBitratePercent")
     @Expose
@@ -175,36 +175,36 @@ baseline/main/high. Default value: baseline.
     }
 
     /**
-     * Get Video bitrate. Value range: 100-8,000. 
-     * @return VideoBitrate Video bitrate. Value range: 100-8,000.
+     * Get Video bitrate. Value range: 100–8,000.
+Note: The bitrate must be a multiple of 100. 
+     * @return VideoBitrate Video bitrate. Value range: 100–8,000.
+Note: The bitrate must be a multiple of 100.
      */
     public Long getVideoBitrate() {
         return this.VideoBitrate;
     }
 
     /**
-     * Set Video bitrate. Value range: 100-8,000.
-     * @param VideoBitrate Video bitrate. Value range: 100-8,000.
+     * Set Video bitrate. Value range: 100–8,000.
+Note: The bitrate must be a multiple of 100.
+     * @param VideoBitrate Video bitrate. Value range: 100–8,000.
+Note: The bitrate must be a multiple of 100.
      */
     public void setVideoBitrate(Long VideoBitrate) {
         this.VideoBitrate = VideoBitrate;
     }
 
     /**
-     * Get Video encoding format. Value range: h264, h265. Default value: h264.
-Note: This parameter will take effect later. 
-     * @return Vcodec Video encoding format. Value range: h264, h265. Default value: h264.
-Note: This parameter will take effect later.
+     * Get Video encoding format. Valid values: h264, h265. Default value: h264. 
+     * @return Vcodec Video encoding format. Valid values: h264, h265. Default value: h264.
      */
     public String getVcodec() {
         return this.Vcodec;
     }
 
     /**
-     * Set Video encoding format. Value range: h264, h265. Default value: h264.
-Note: This parameter will take effect later.
-     * @param Vcodec Video encoding format. Value range: h264, h265. Default value: h264.
-Note: This parameter will take effect later.
+     * Set Video encoding format. Valid values: h264, h265. Default value: h264.
+     * @param Vcodec Video encoding format. Valid values: h264, h265. Default value: h264.
      */
     public void setVcodec(String Vcodec) {
         this.Vcodec = Vcodec;
@@ -231,16 +231,16 @@ Note: This parameter will take effect later.
     }
 
     /**
-     * Get Audio bitrate. Value range: 0-500. Default value: 0. 
-     * @return AudioBitrate Audio bitrate. Value range: 0-500. Default value: 0.
+     * Get Audio bitrate. Value range: 0–500. Default value: 0. 
+     * @return AudioBitrate Audio bitrate. Value range: 0–500. Default value: 0.
      */
     public Long getAudioBitrate() {
         return this.AudioBitrate;
     }
 
     /**
-     * Set Audio bitrate. Value range: 0-500. Default value: 0.
-     * @param AudioBitrate Audio bitrate. Value range: 0-500. Default value: 0.
+     * Set Audio bitrate. Value range: 0–500. Default value: 0.
+     * @param AudioBitrate Audio bitrate. Value range: 0–500. Default value: 0.
      */
     public void setAudioBitrate(Long AudioBitrate) {
         this.AudioBitrate = AudioBitrate;
@@ -443,32 +443,32 @@ baseline/main/high. Default value: baseline.
     }
 
     /**
-     * Get Whether it is an Ultra-fast HD template. 0: no; 1: yes. Default value: 0. 
-     * @return AiTransCode Whether it is an Ultra-fast HD template. 0: no; 1: yes. Default value: 0.
+     * Get Whether it is a TESHD template. 0: no; 1: yes. Default value: 0. 
+     * @return AiTransCode Whether it is a TESHD template. 0: no; 1: yes. Default value: 0.
      */
     public Long getAiTransCode() {
         return this.AiTransCode;
     }
 
     /**
-     * Set Whether it is an Ultra-fast HD template. 0: no; 1: yes. Default value: 0.
-     * @param AiTransCode Whether it is an Ultra-fast HD template. 0: no; 1: yes. Default value: 0.
+     * Set Whether it is a TESHD template. 0: no; 1: yes. Default value: 0.
+     * @param AiTransCode Whether it is a TESHD template. 0: no; 1: yes. Default value: 0.
      */
     public void setAiTransCode(Long AiTransCode) {
         this.AiTransCode = AiTransCode;
     }
 
     /**
-     * Get VideoBitrate minus Ultra-fast HD bitrate. Value range: 0.1-0.5. 
-     * @return AdaptBitratePercent VideoBitrate minus Ultra-fast HD bitrate. Value range: 0.1-0.5.
+     * Get VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5. 
+     * @return AdaptBitratePercent VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5.
      */
     public Float getAdaptBitratePercent() {
         return this.AdaptBitratePercent;
     }
 
     /**
-     * Set VideoBitrate minus Ultra-fast HD bitrate. Value range: 0.1-0.5.
-     * @param AdaptBitratePercent VideoBitrate minus Ultra-fast HD bitrate. Value range: 0.1-0.5.
+     * Set VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5.
+     * @param AdaptBitratePercent VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5.
      */
     public void setAdaptBitratePercent(Float AdaptBitratePercent) {
         this.AdaptBitratePercent = AdaptBitratePercent;

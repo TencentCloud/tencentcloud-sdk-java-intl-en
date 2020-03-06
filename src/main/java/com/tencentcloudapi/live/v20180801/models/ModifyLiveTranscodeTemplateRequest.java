@@ -31,7 +31,7 @@ public class ModifyLiveTranscodeTemplateRequest extends AbstractModel{
 
     /**
     * Video encoding format:
-H.264/H.265.
+h264/h265.
     */
     @SerializedName("Vcodec")
     @Expose
@@ -39,14 +39,14 @@ H.264/H.265.
 
     /**
     * Audio encoding format:
-AAC/MP3.
+aac/mp3.
     */
     @SerializedName("Acodec")
     @Expose
     private String Acodec;
 
     /**
-    * Audio bitrate. Value range: 0-500. Default value: 0.
+    * Audio bitrate. Value range: 0–500. Default value: 0.
     */
     @SerializedName("AudioBitrate")
     @Expose
@@ -60,14 +60,14 @@ AAC/MP3.
     private String Description;
 
     /**
-    * Video bitrate. Value range: 100-8,000
+    * Video bitrate. Value range: 100–8,000
     */
     @SerializedName("VideoBitrate")
     @Expose
     private Long VideoBitrate;
 
     /**
-    * Width. Value range: 0-3,000
+    * Width. Value range: 0–3,000
     */
     @SerializedName("Width")
     @Expose
@@ -88,28 +88,28 @@ AAC/MP3.
     private Long NeedAudio;
 
     /**
-    * Height. Value range: 0-3,000
+    * Height. Value range: 0–3,000
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * Frame rate. Value range: 0-200
+    * Frame rate. Value range: 0–200
     */
     @SerializedName("Fps")
     @Expose
     private Long Fps;
 
     /**
-    * Keyframe interval in seconds. Value range: 0-50
+    * Keyframe interval in seconds. Value range: 0–50
     */
     @SerializedName("Gop")
     @Expose
     private Long Gop;
 
     /**
-    * Rotation angle. Value range: 0, 90, 180, 270
+    * Rotation angle. Valid values: 0, 90, 180, 270
     */
     @SerializedName("Rotate")
     @Expose
@@ -145,7 +145,7 @@ baseline/main/high.
     private Long FpsToOrig;
 
     /**
-    * VideoBitrate minus Ultra-fast HD bitrate. Value range: 0.1-0.5.
+    * VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5.
     */
     @SerializedName("AdaptBitratePercent")
     @Expose
@@ -169,9 +169,9 @@ baseline/main/high.
 
     /**
      * Get Video encoding format:
-H.264/H.265. 
+h264/h265. 
      * @return Vcodec Video encoding format:
-H.264/H.265.
+h264/h265.
      */
     public String getVcodec() {
         return this.Vcodec;
@@ -179,9 +179,9 @@ H.264/H.265.
 
     /**
      * Set Video encoding format:
-H.264/H.265.
+h264/h265.
      * @param Vcodec Video encoding format:
-H.264/H.265.
+h264/h265.
      */
     public void setVcodec(String Vcodec) {
         this.Vcodec = Vcodec;
@@ -189,9 +189,9 @@ H.264/H.265.
 
     /**
      * Get Audio encoding format:
-AAC/MP3. 
+aac/mp3. 
      * @return Acodec Audio encoding format:
-AAC/MP3.
+aac/mp3.
      */
     public String getAcodec() {
         return this.Acodec;
@@ -199,25 +199,25 @@ AAC/MP3.
 
     /**
      * Set Audio encoding format:
-AAC/MP3.
+aac/mp3.
      * @param Acodec Audio encoding format:
-AAC/MP3.
+aac/mp3.
      */
     public void setAcodec(String Acodec) {
         this.Acodec = Acodec;
     }
 
     /**
-     * Get Audio bitrate. Value range: 0-500. Default value: 0. 
-     * @return AudioBitrate Audio bitrate. Value range: 0-500. Default value: 0.
+     * Get Audio bitrate. Value range: 0–500. Default value: 0. 
+     * @return AudioBitrate Audio bitrate. Value range: 0–500. Default value: 0.
      */
     public Long getAudioBitrate() {
         return this.AudioBitrate;
     }
 
     /**
-     * Set Audio bitrate. Value range: 0-500. Default value: 0.
-     * @param AudioBitrate Audio bitrate. Value range: 0-500. Default value: 0.
+     * Set Audio bitrate. Value range: 0–500. Default value: 0.
+     * @param AudioBitrate Audio bitrate. Value range: 0–500. Default value: 0.
      */
     public void setAudioBitrate(Long AudioBitrate) {
         this.AudioBitrate = AudioBitrate;
@@ -240,32 +240,32 @@ AAC/MP3.
     }
 
     /**
-     * Get Video bitrate. Value range: 100-8,000 
-     * @return VideoBitrate Video bitrate. Value range: 100-8,000
+     * Get Video bitrate. Value range: 100–8,000 
+     * @return VideoBitrate Video bitrate. Value range: 100–8,000
      */
     public Long getVideoBitrate() {
         return this.VideoBitrate;
     }
 
     /**
-     * Set Video bitrate. Value range: 100-8,000
-     * @param VideoBitrate Video bitrate. Value range: 100-8,000
+     * Set Video bitrate. Value range: 100–8,000
+     * @param VideoBitrate Video bitrate. Value range: 100–8,000
      */
     public void setVideoBitrate(Long VideoBitrate) {
         this.VideoBitrate = VideoBitrate;
     }
 
     /**
-     * Get Width. Value range: 0-3,000 
-     * @return Width Width. Value range: 0-3,000
+     * Get Width. Value range: 0–3,000 
+     * @return Width Width. Value range: 0–3,000
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Width. Value range: 0-3,000
-     * @param Width Width. Value range: 0-3,000
+     * Set Width. Value range: 0–3,000
+     * @param Width Width. Value range: 0–3,000
      */
     public void setWidth(Long Width) {
         this.Width = Width;
@@ -304,64 +304,64 @@ AAC/MP3.
     }
 
     /**
-     * Get Height. Value range: 0-3,000 
-     * @return Height Height. Value range: 0-3,000
+     * Get Height. Value range: 0–3,000 
+     * @return Height Height. Value range: 0–3,000
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Height. Value range: 0-3,000
-     * @param Height Height. Value range: 0-3,000
+     * Set Height. Value range: 0–3,000
+     * @param Height Height. Value range: 0–3,000
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get Frame rate. Value range: 0-200 
-     * @return Fps Frame rate. Value range: 0-200
+     * Get Frame rate. Value range: 0–200 
+     * @return Fps Frame rate. Value range: 0–200
      */
     public Long getFps() {
         return this.Fps;
     }
 
     /**
-     * Set Frame rate. Value range: 0-200
-     * @param Fps Frame rate. Value range: 0-200
+     * Set Frame rate. Value range: 0–200
+     * @param Fps Frame rate. Value range: 0–200
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;
     }
 
     /**
-     * Get Keyframe interval in seconds. Value range: 0-50 
-     * @return Gop Keyframe interval in seconds. Value range: 0-50
+     * Get Keyframe interval in seconds. Value range: 0–50 
+     * @return Gop Keyframe interval in seconds. Value range: 0–50
      */
     public Long getGop() {
         return this.Gop;
     }
 
     /**
-     * Set Keyframe interval in seconds. Value range: 0-50
-     * @param Gop Keyframe interval in seconds. Value range: 0-50
+     * Set Keyframe interval in seconds. Value range: 0–50
+     * @param Gop Keyframe interval in seconds. Value range: 0–50
      */
     public void setGop(Long Gop) {
         this.Gop = Gop;
     }
 
     /**
-     * Get Rotation angle. Value range: 0, 90, 180, 270 
-     * @return Rotate Rotation angle. Value range: 0, 90, 180, 270
+     * Get Rotation angle. Valid values: 0, 90, 180, 270 
+     * @return Rotate Rotation angle. Valid values: 0, 90, 180, 270
      */
     public Long getRotate() {
         return this.Rotate;
     }
 
     /**
-     * Set Rotation angle. Value range: 0, 90, 180, 270
-     * @param Rotate Rotation angle. Value range: 0, 90, 180, 270
+     * Set Rotation angle. Valid values: 0, 90, 180, 270
+     * @param Rotate Rotation angle. Valid values: 0, 90, 180, 270
      */
     public void setRotate(Long Rotate) {
         this.Rotate = Rotate;
@@ -436,16 +436,16 @@ baseline/main/high.
     }
 
     /**
-     * Get VideoBitrate minus Ultra-fast HD bitrate. Value range: 0.1-0.5. 
-     * @return AdaptBitratePercent VideoBitrate minus Ultra-fast HD bitrate. Value range: 0.1-0.5.
+     * Get VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5. 
+     * @return AdaptBitratePercent VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5.
      */
     public Float getAdaptBitratePercent() {
         return this.AdaptBitratePercent;
     }
 
     /**
-     * Set VideoBitrate minus Ultra-fast HD bitrate. Value range: 0.1-0.5.
-     * @param AdaptBitratePercent VideoBitrate minus Ultra-fast HD bitrate. Value range: 0.1-0.5.
+     * Set VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5.
+     * @param AdaptBitratePercent VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5.
      */
     public void setAdaptBitratePercent(Float AdaptBitratePercent) {
         this.AdaptBitratePercent = AdaptBitratePercent;

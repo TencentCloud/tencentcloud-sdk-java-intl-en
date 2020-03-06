@@ -51,7 +51,7 @@ public class PlayAuthKeyInfo extends AbstractModel{
     private Long AuthDelta;
 
     /**
-    * Authentication back key.
+    * Authentication BackKey.
     */
     @SerializedName("AuthBackKey")
     @Expose
@@ -122,16 +122,16 @@ public class PlayAuthKeyInfo extends AbstractModel{
     }
 
     /**
-     * Get Authentication back key. 
-     * @return AuthBackKey Authentication back key.
+     * Get Authentication BackKey. 
+     * @return AuthBackKey Authentication BackKey.
      */
     public String getAuthBackKey() {
         return this.AuthBackKey;
     }
 
     /**
-     * Set Authentication back key.
-     * @param AuthBackKey Authentication back key.
+     * Set Authentication BackKey.
+     * @param AuthBackKey Authentication BackKey.
      */
     public void setAuthBackKey(String AuthBackKey) {
         this.AuthBackKey = AuthBackKey;

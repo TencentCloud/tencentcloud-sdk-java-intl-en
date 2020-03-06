@@ -37,7 +37,7 @@ public class RecordTemplateInfo extends AbstractModel{
     private String TemplateName;
 
     /**
-    * Description.
+    * Message description
     */
     @SerializedName("Description")
     @Expose
@@ -58,7 +58,7 @@ public class RecordTemplateInfo extends AbstractModel{
     private RecordParam HlsParam;
 
     /**
-    * MP4 recording parameter.
+    * Mp4 recording parameter.
     */
     @SerializedName("Mp4Param")
     @Expose
@@ -87,7 +87,7 @@ public class RecordTemplateInfo extends AbstractModel{
     private HlsSpecialParam HlsSpecialParam;
 
     /**
-    * MP3 recording parameter.
+    * Mp3 recording parameter.
     */
     @SerializedName("Mp3Param")
     @Expose
@@ -126,16 +126,16 @@ public class RecordTemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get Description. 
-     * @return Description Description.
+     * Get Message description 
+     * @return Description Message description
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Description.
-     * @param Description Description.
+     * Set Message description
+     * @param Description Message description
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -174,16 +174,16 @@ public class RecordTemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get MP4 recording parameter. 
-     * @return Mp4Param MP4 recording parameter.
+     * Get Mp4 recording parameter. 
+     * @return Mp4Param Mp4 recording parameter.
      */
     public RecordParam getMp4Param() {
         return this.Mp4Param;
     }
 
     /**
-     * Set MP4 recording parameter.
-     * @param Mp4Param MP4 recording parameter.
+     * Set Mp4 recording parameter.
+     * @param Mp4Param Mp4 recording parameter.
      */
     public void setMp4Param(RecordParam Mp4Param) {
         this.Mp4Param = Mp4Param;
@@ -242,16 +242,16 @@ public class RecordTemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get MP3 recording parameter. 
-     * @return Mp3Param MP3 recording parameter.
+     * Get Mp3 recording parameter. 
+     * @return Mp3Param Mp3 recording parameter.
      */
     public RecordParam getMp3Param() {
         return this.Mp3Param;
     }
 
     /**
-     * Set MP3 recording parameter.
-     * @param Mp3Param MP3 recording parameter.
+     * Set Mp3 recording parameter.
+     * @param Mp3Param Mp3 recording parameter.
      */
     public void setMp3Param(RecordParam Mp3Param) {
         this.Mp3Param = Mp3Param;

@@ -1,0 +1,395 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.vod.v20180717.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class AnimatedGraphicsTemplate extends AbstractModel{
+
+    /**
+    * Unique ID of an animated image generating template.
+    */
+    @SerializedName("Definition")
+    @Expose
+    private Long Definition;
+
+    /**
+    * Template type. Valid values:
+<li>Preset: preset template;</li>
+<li>Custom: custom template.</li>
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
+    * Name of an animated image generating template.
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * Description of an animated image generating template.
+    */
+    @SerializedName("Comment")
+    @Expose
+    private String Comment;
+
+    /**
+    * Maximum value of the width (or long side) of an animated image in px. Value range: 0 and [128, 4,096].
+<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
+<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
+<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
+<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
+Default value: 0.
+    */
+    @SerializedName("Width")
+    @Expose
+    private Long Width;
+
+    /**
+    * Maximum value of the height (or short side) of an animated image in px. Value range: 0 and [128, 4,096].
+<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
+<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
+<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
+<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
+Default value: 0.
+    */
+    @SerializedName("Height")
+    @Expose
+    private Long Height;
+
+    /**
+    * Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open.
+    */
+    @SerializedName("ResolutionAdaptive")
+    @Expose
+    private String ResolutionAdaptive;
+
+    /**
+    * Animated image format.
+    */
+    @SerializedName("Format")
+    @Expose
+    private String Format;
+
+    /**
+    * Frame rate.
+    */
+    @SerializedName("Fps")
+    @Expose
+    private Long Fps;
+
+    /**
+    * Image quality.
+    */
+    @SerializedName("Quality")
+    @Expose
+    private Float Quality;
+
+    /**
+    * Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
+     * Get Unique ID of an animated image generating template. 
+     * @return Definition Unique ID of an animated image generating template.
+     */
+    public Long getDefinition() {
+        return this.Definition;
+    }
+
+    /**
+     * Set Unique ID of an animated image generating template.
+     * @param Definition Unique ID of an animated image generating template.
+     */
+    public void setDefinition(Long Definition) {
+        this.Definition = Definition;
+    }
+
+    /**
+     * Get Template type. Valid values:
+<li>Preset: preset template;</li>
+<li>Custom: custom template.</li> 
+     * @return Type Template type. Valid values:
+<li>Preset: preset template;</li>
+<li>Custom: custom template.</li>
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set Template type. Valid values:
+<li>Preset: preset template;</li>
+<li>Custom: custom template.</li>
+     * @param Type Template type. Valid values:
+<li>Preset: preset template;</li>
+<li>Custom: custom template.</li>
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get Name of an animated image generating template. 
+     * @return Name Name of an animated image generating template.
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set Name of an animated image generating template.
+     * @param Name Name of an animated image generating template.
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get Description of an animated image generating template. 
+     * @return Comment Description of an animated image generating template.
+     */
+    public String getComment() {
+        return this.Comment;
+    }
+
+    /**
+     * Set Description of an animated image generating template.
+     * @param Comment Description of an animated image generating template.
+     */
+    public void setComment(String Comment) {
+        this.Comment = Comment;
+    }
+
+    /**
+     * Get Maximum value of the width (or long side) of an animated image in px. Value range: 0 and [128, 4,096].
+<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
+<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
+<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
+<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
+Default value: 0. 
+     * @return Width Maximum value of the width (or long side) of an animated image in px. Value range: 0 and [128, 4,096].
+<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
+<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
+<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
+<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
+Default value: 0.
+     */
+    public Long getWidth() {
+        return this.Width;
+    }
+
+    /**
+     * Set Maximum value of the width (or long side) of an animated image in px. Value range: 0 and [128, 4,096].
+<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
+<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
+<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
+<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
+Default value: 0.
+     * @param Width Maximum value of the width (or long side) of an animated image in px. Value range: 0 and [128, 4,096].
+<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
+<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
+<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
+<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
+Default value: 0.
+     */
+    public void setWidth(Long Width) {
+        this.Width = Width;
+    }
+
+    /**
+     * Get Maximum value of the height (or short side) of an animated image in px. Value range: 0 and [128, 4,096].
+<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
+<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
+<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
+<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
+Default value: 0. 
+     * @return Height Maximum value of the height (or short side) of an animated image in px. Value range: 0 and [128, 4,096].
+<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
+<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
+<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
+<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
+Default value: 0.
+     */
+    public Long getHeight() {
+        return this.Height;
+    }
+
+    /**
+     * Set Maximum value of the height (or short side) of an animated image in px. Value range: 0 and [128, 4,096].
+<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
+<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
+<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
+<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
+Default value: 0.
+     * @param Height Maximum value of the height (or short side) of an animated image in px. Value range: 0 and [128, 4,096].
+<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
+<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
+<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
+<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
+Default value: 0.
+     */
+    public void setHeight(Long Height) {
+        this.Height = Height;
+    }
+
+    /**
+     * Get Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open. 
+     * @return ResolutionAdaptive Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open.
+     */
+    public String getResolutionAdaptive() {
+        return this.ResolutionAdaptive;
+    }
+
+    /**
+     * Set Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open.
+     * @param ResolutionAdaptive Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open.
+     */
+    public void setResolutionAdaptive(String ResolutionAdaptive) {
+        this.ResolutionAdaptive = ResolutionAdaptive;
+    }
+
+    /**
+     * Get Animated image format. 
+     * @return Format Animated image format.
+     */
+    public String getFormat() {
+        return this.Format;
+    }
+
+    /**
+     * Set Animated image format.
+     * @param Format Animated image format.
+     */
+    public void setFormat(String Format) {
+        this.Format = Format;
+    }
+
+    /**
+     * Get Frame rate. 
+     * @return Fps Frame rate.
+     */
+    public Long getFps() {
+        return this.Fps;
+    }
+
+    /**
+     * Set Frame rate.
+     * @param Fps Frame rate.
+     */
+    public void setFps(Long Fps) {
+        this.Fps = Fps;
+    }
+
+    /**
+     * Get Image quality. 
+     * @return Quality Image quality.
+     */
+    public Float getQuality() {
+        return this.Quality;
+    }
+
+    /**
+     * Set Image quality.
+     * @param Quality Image quality.
+     */
+    public void setQuality(Float Quality) {
+        this.Quality = Quality;
+    }
+
+    /**
+     * Get Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). 
+     * @return CreateTime Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * @param CreateTime Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). 
+     * @return UpdateTime Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     */
+    public String getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * @param UpdateTime Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     */
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamSimple(map, prefix + "Width", this.Width);
+        this.setParamSimple(map, prefix + "Height", this.Height);
+        this.setParamSimple(map, prefix + "ResolutionAdaptive", this.ResolutionAdaptive);
+        this.setParamSimple(map, prefix + "Format", this.Format);
+        this.setParamSimple(map, prefix + "Fps", this.Fps);
+        this.setParamSimple(map, prefix + "Quality", this.Quality);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+
+    }
+}
+

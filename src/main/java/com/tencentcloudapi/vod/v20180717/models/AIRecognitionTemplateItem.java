@@ -1,0 +1,408 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.vod.v20180717.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class AIRecognitionTemplateItem extends AbstractModel{
+
+    /**
+    * Unique ID of video content recognition template.
+    */
+    @SerializedName("Definition")
+    @Expose
+    private Long Definition;
+
+    /**
+    * Video content recognition template name.
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * Video content recognition template description.
+    */
+    @SerializedName("Comment")
+    @Expose
+    private String Comment;
+
+    /**
+    * Control parameter of opening and closing credits recognition.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("HeadTailConfigure")
+    @Expose
+    private HeadTailConfigureInfo HeadTailConfigure;
+
+    /**
+    * Control parameter of splitting recognition.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SegmentConfigure")
+    @Expose
+    private SegmentConfigureInfo SegmentConfigure;
+
+    /**
+    * Face recognition control parameter.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("FaceConfigure")
+    @Expose
+    private FaceConfigureInfo FaceConfigure;
+
+    /**
+    * Full text recognition control parameter.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("OcrFullTextConfigure")
+    @Expose
+    private OcrFullTextConfigureInfo OcrFullTextConfigure;
+
+    /**
+    * Text keyword recognition control parameter.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("OcrWordsConfigure")
+    @Expose
+    private OcrWordsConfigureInfo OcrWordsConfigure;
+
+    /**
+    * Full speech recognition control parameter.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AsrFullTextConfigure")
+    @Expose
+    private AsrFullTextConfigureInfo AsrFullTextConfigure;
+
+    /**
+    * Speech keyword recognition control parameter.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AsrWordsConfigure")
+    @Expose
+    private AsrWordsConfigureInfo AsrWordsConfigure;
+
+    /**
+    * Control parameter of object recognition.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ObjectConfigure")
+    @Expose
+    private ObjectConfigureInfo ObjectConfigure;
+
+    /**
+    * Screencapturing interval in seconds.
+    */
+    @SerializedName("ScreenshotInterval")
+    @Expose
+    private Float ScreenshotInterval;
+
+    /**
+    * Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
+     * Get Unique ID of video content recognition template. 
+     * @return Definition Unique ID of video content recognition template.
+     */
+    public Long getDefinition() {
+        return this.Definition;
+    }
+
+    /**
+     * Set Unique ID of video content recognition template.
+     * @param Definition Unique ID of video content recognition template.
+     */
+    public void setDefinition(Long Definition) {
+        this.Definition = Definition;
+    }
+
+    /**
+     * Get Video content recognition template name. 
+     * @return Name Video content recognition template name.
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set Video content recognition template name.
+     * @param Name Video content recognition template name.
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get Video content recognition template description. 
+     * @return Comment Video content recognition template description.
+     */
+    public String getComment() {
+        return this.Comment;
+    }
+
+    /**
+     * Set Video content recognition template description.
+     * @param Comment Video content recognition template description.
+     */
+    public void setComment(String Comment) {
+        this.Comment = Comment;
+    }
+
+    /**
+     * Get Control parameter of opening and closing credits recognition.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return HeadTailConfigure Control parameter of opening and closing credits recognition.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public HeadTailConfigureInfo getHeadTailConfigure() {
+        return this.HeadTailConfigure;
+    }
+
+    /**
+     * Set Control parameter of opening and closing credits recognition.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param HeadTailConfigure Control parameter of opening and closing credits recognition.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setHeadTailConfigure(HeadTailConfigureInfo HeadTailConfigure) {
+        this.HeadTailConfigure = HeadTailConfigure;
+    }
+
+    /**
+     * Get Control parameter of splitting recognition.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return SegmentConfigure Control parameter of splitting recognition.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public SegmentConfigureInfo getSegmentConfigure() {
+        return this.SegmentConfigure;
+    }
+
+    /**
+     * Set Control parameter of splitting recognition.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param SegmentConfigure Control parameter of splitting recognition.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSegmentConfigure(SegmentConfigureInfo SegmentConfigure) {
+        this.SegmentConfigure = SegmentConfigure;
+    }
+
+    /**
+     * Get Face recognition control parameter.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return FaceConfigure Face recognition control parameter.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public FaceConfigureInfo getFaceConfigure() {
+        return this.FaceConfigure;
+    }
+
+    /**
+     * Set Face recognition control parameter.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param FaceConfigure Face recognition control parameter.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setFaceConfigure(FaceConfigureInfo FaceConfigure) {
+        this.FaceConfigure = FaceConfigure;
+    }
+
+    /**
+     * Get Full text recognition control parameter.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return OcrFullTextConfigure Full text recognition control parameter.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public OcrFullTextConfigureInfo getOcrFullTextConfigure() {
+        return this.OcrFullTextConfigure;
+    }
+
+    /**
+     * Set Full text recognition control parameter.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param OcrFullTextConfigure Full text recognition control parameter.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setOcrFullTextConfigure(OcrFullTextConfigureInfo OcrFullTextConfigure) {
+        this.OcrFullTextConfigure = OcrFullTextConfigure;
+    }
+
+    /**
+     * Get Text keyword recognition control parameter.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return OcrWordsConfigure Text keyword recognition control parameter.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public OcrWordsConfigureInfo getOcrWordsConfigure() {
+        return this.OcrWordsConfigure;
+    }
+
+    /**
+     * Set Text keyword recognition control parameter.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param OcrWordsConfigure Text keyword recognition control parameter.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setOcrWordsConfigure(OcrWordsConfigureInfo OcrWordsConfigure) {
+        this.OcrWordsConfigure = OcrWordsConfigure;
+    }
+
+    /**
+     * Get Full speech recognition control parameter.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return AsrFullTextConfigure Full speech recognition control parameter.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public AsrFullTextConfigureInfo getAsrFullTextConfigure() {
+        return this.AsrFullTextConfigure;
+    }
+
+    /**
+     * Set Full speech recognition control parameter.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AsrFullTextConfigure Full speech recognition control parameter.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAsrFullTextConfigure(AsrFullTextConfigureInfo AsrFullTextConfigure) {
+        this.AsrFullTextConfigure = AsrFullTextConfigure;
+    }
+
+    /**
+     * Get Speech keyword recognition control parameter.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return AsrWordsConfigure Speech keyword recognition control parameter.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public AsrWordsConfigureInfo getAsrWordsConfigure() {
+        return this.AsrWordsConfigure;
+    }
+
+    /**
+     * Set Speech keyword recognition control parameter.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AsrWordsConfigure Speech keyword recognition control parameter.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAsrWordsConfigure(AsrWordsConfigureInfo AsrWordsConfigure) {
+        this.AsrWordsConfigure = AsrWordsConfigure;
+    }
+
+    /**
+     * Get Control parameter of object recognition.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return ObjectConfigure Control parameter of object recognition.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public ObjectConfigureInfo getObjectConfigure() {
+        return this.ObjectConfigure;
+    }
+
+    /**
+     * Set Control parameter of object recognition.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param ObjectConfigure Control parameter of object recognition.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setObjectConfigure(ObjectConfigureInfo ObjectConfigure) {
+        this.ObjectConfigure = ObjectConfigure;
+    }
+
+    /**
+     * Get Screencapturing interval in seconds. 
+     * @return ScreenshotInterval Screencapturing interval in seconds.
+     */
+    public Float getScreenshotInterval() {
+        return this.ScreenshotInterval;
+    }
+
+    /**
+     * Set Screencapturing interval in seconds.
+     * @param ScreenshotInterval Screencapturing interval in seconds.
+     */
+    public void setScreenshotInterval(Float ScreenshotInterval) {
+        this.ScreenshotInterval = ScreenshotInterval;
+    }
+
+    /**
+     * Get Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). 
+     * @return CreateTime Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * @param CreateTime Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). 
+     * @return UpdateTime Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     */
+    public String getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * @param UpdateTime Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     */
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamObj(map, prefix + "HeadTailConfigure.", this.HeadTailConfigure);
+        this.setParamObj(map, prefix + "SegmentConfigure.", this.SegmentConfigure);
+        this.setParamObj(map, prefix + "FaceConfigure.", this.FaceConfigure);
+        this.setParamObj(map, prefix + "OcrFullTextConfigure.", this.OcrFullTextConfigure);
+        this.setParamObj(map, prefix + "OcrWordsConfigure.", this.OcrWordsConfigure);
+        this.setParamObj(map, prefix + "AsrFullTextConfigure.", this.AsrFullTextConfigure);
+        this.setParamObj(map, prefix + "AsrWordsConfigure.", this.AsrWordsConfigure);
+        this.setParamObj(map, prefix + "ObjectConfigure.", this.ObjectConfigure);
+        this.setParamSimple(map, prefix + "ScreenshotInterval", this.ScreenshotInterval);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+
+    }
+}
+

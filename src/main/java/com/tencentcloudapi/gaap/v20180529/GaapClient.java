@@ -634,7 +634,7 @@ This API only supports connections of version 3.0.
     }
 
     /**
-     *This API is used to query the custom error response to the current domain name.
+     *This API is used to query the custom error response to a domain name.
      * @param req DescribeDomainErrorPageInfoRequest
      * @return DescribeDomainErrorPageInfoResponse
      * @throws TencentCloudSDKException

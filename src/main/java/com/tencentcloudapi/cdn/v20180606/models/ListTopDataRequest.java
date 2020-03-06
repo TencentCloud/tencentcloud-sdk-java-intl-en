@@ -23,14 +23,20 @@ import java.util.HashMap;
 public class ListTopDataRequest extends AbstractModel{
 
     /**
-    * Starting time of the queried period, such as `2018-09-09 00:00:00`. Currently, only 1-day granularity is supported, so only the date information will be used for the query.
+    * Query start date. Example: 2018-09-09.
+It only supports data query at daily granularity. The date information in the input parameter is the start date.
+Returns data generated at or after 00:00:00 on the start date.
+It only supports querying of data within 90 days.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time of the queried period, such as `2018-09-10 00:00:00`. Currently, only 1-day granularity is supported, so only the date information will be used for the query. For example, to query data on September 10, 2018, just enter `StartTime=2018-09-10 00:00:00` and `EndTime=2018-09-10 00:00:00`.
+    * Query end date. Example: 2018-09-10
+It only supports data query at daily granularity. The date information in the input parameter is the end date.
+Returns data generated before or at 23:59:59 on the end date.
+EndTime must be greater than or equal to StartTime
     */
     @SerializedName("EndTime")
     @Expose
@@ -119,32 +125,56 @@ If `Metric` is `Url`, `Path`, `District`, or `Isp` and `Filter` is `flux` or `re
     private String AreaType;
 
     /**
-     * Get Starting time of the queried period, such as `2018-09-09 00:00:00`. Currently, only 1-day granularity is supported, so only the date information will be used for the query. 
-     * @return StartTime Starting time of the queried period, such as `2018-09-09 00:00:00`. Currently, only 1-day granularity is supported, so only the date information will be used for the query.
+     * Get Query start date. Example: 2018-09-09.
+It only supports data query at daily granularity. The date information in the input parameter is the start date.
+Returns data generated at or after 00:00:00 on the start date.
+It only supports querying of data within 90 days. 
+     * @return StartTime Query start date. Example: 2018-09-09.
+It only supports data query at daily granularity. The date information in the input parameter is the start date.
+Returns data generated at or after 00:00:00 on the start date.
+It only supports querying of data within 90 days.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Starting time of the queried period, such as `2018-09-09 00:00:00`. Currently, only 1-day granularity is supported, so only the date information will be used for the query.
-     * @param StartTime Starting time of the queried period, such as `2018-09-09 00:00:00`. Currently, only 1-day granularity is supported, so only the date information will be used for the query.
+     * Set Query start date. Example: 2018-09-09.
+It only supports data query at daily granularity. The date information in the input parameter is the start date.
+Returns data generated at or after 00:00:00 on the start date.
+It only supports querying of data within 90 days.
+     * @param StartTime Query start date. Example: 2018-09-09.
+It only supports data query at daily granularity. The date information in the input parameter is the start date.
+Returns data generated at or after 00:00:00 on the start date.
+It only supports querying of data within 90 days.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time of the queried period, such as `2018-09-10 00:00:00`. Currently, only 1-day granularity is supported, so only the date information will be used for the query. For example, to query data on September 10, 2018, just enter `StartTime=2018-09-10 00:00:00` and `EndTime=2018-09-10 00:00:00`. 
-     * @return EndTime End time of the queried period, such as `2018-09-10 00:00:00`. Currently, only 1-day granularity is supported, so only the date information will be used for the query. For example, to query data on September 10, 2018, just enter `StartTime=2018-09-10 00:00:00` and `EndTime=2018-09-10 00:00:00`.
+     * Get Query end date. Example: 2018-09-10
+It only supports data query at daily granularity. The date information in the input parameter is the end date.
+Returns data generated before or at 23:59:59 on the end date.
+EndTime must be greater than or equal to StartTime 
+     * @return EndTime Query end date. Example: 2018-09-10
+It only supports data query at daily granularity. The date information in the input parameter is the end date.
+Returns data generated before or at 23:59:59 on the end date.
+EndTime must be greater than or equal to StartTime
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time of the queried period, such as `2018-09-10 00:00:00`. Currently, only 1-day granularity is supported, so only the date information will be used for the query. For example, to query data on September 10, 2018, just enter `StartTime=2018-09-10 00:00:00` and `EndTime=2018-09-10 00:00:00`.
-     * @param EndTime End time of the queried period, such as `2018-09-10 00:00:00`. Currently, only 1-day granularity is supported, so only the date information will be used for the query. For example, to query data on September 10, 2018, just enter `StartTime=2018-09-10 00:00:00` and `EndTime=2018-09-10 00:00:00`.
+     * Set Query end date. Example: 2018-09-10
+It only supports data query at daily granularity. The date information in the input parameter is the end date.
+Returns data generated before or at 23:59:59 on the end date.
+EndTime must be greater than or equal to StartTime
+     * @param EndTime Query end date. Example: 2018-09-10
+It only supports data query at daily granularity. The date information in the input parameter is the end date.
+Returns data generated before or at 23:59:59 on the end date.
+EndTime must be greater than or equal to StartTime
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

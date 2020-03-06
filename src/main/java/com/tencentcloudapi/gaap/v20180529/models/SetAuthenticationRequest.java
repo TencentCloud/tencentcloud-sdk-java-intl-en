@@ -81,7 +81,7 @@ The default value is 0.
     private String GaapCertificateId;
 
     /**
-    * Origin server CA certificate ID, which is obtained from the certificate management page.
+    * CA certificate ID of the origin server, which is obtained from the certificate management page. When authenticating the origin server, enter this parameter or the `RealServerCertificateIds` parameter.
     */
     @SerializedName("RealServerCertificateId")
     @Expose
@@ -93,6 +93,13 @@ The default value is 0.
     @SerializedName("RealServerCertificateDomain")
     @Expose
     private String RealServerCertificateDomain;
+
+    /**
+    * CA certificate IDs of multiple origin servers, which are obtained from the certificate management page. When authenticating the origin servers, enter this parameter or the `RealServerCertificateId` parameter.
+    */
+    @SerializedName("PolyRealServerCertificateIds")
+    @Expose
+    private String [] PolyRealServerCertificateIds;
 
     /**
      * Get Listener ID. 
@@ -243,16 +250,16 @@ The default value is 0.
     }
 
     /**
-     * Get Origin server CA certificate ID, which is obtained from the certificate management page. 
-     * @return RealServerCertificateId Origin server CA certificate ID, which is obtained from the certificate management page.
+     * Get CA certificate ID of the origin server, which is obtained from the certificate management page. When authenticating the origin server, enter this parameter or the `RealServerCertificateIds` parameter. 
+     * @return RealServerCertificateId CA certificate ID of the origin server, which is obtained from the certificate management page. When authenticating the origin server, enter this parameter or the `RealServerCertificateIds` parameter.
      */
     public String getRealServerCertificateId() {
         return this.RealServerCertificateId;
     }
 
     /**
-     * Set Origin server CA certificate ID, which is obtained from the certificate management page.
-     * @param RealServerCertificateId Origin server CA certificate ID, which is obtained from the certificate management page.
+     * Set CA certificate ID of the origin server, which is obtained from the certificate management page. When authenticating the origin server, enter this parameter or the `RealServerCertificateIds` parameter.
+     * @param RealServerCertificateId CA certificate ID of the origin server, which is obtained from the certificate management page. When authenticating the origin server, enter this parameter or the `RealServerCertificateIds` parameter.
      */
     public void setRealServerCertificateId(String RealServerCertificateId) {
         this.RealServerCertificateId = RealServerCertificateId;
@@ -275,6 +282,22 @@ The default value is 0.
     }
 
     /**
+     * Get CA certificate IDs of multiple origin servers, which are obtained from the certificate management page. When authenticating the origin servers, enter this parameter or the `RealServerCertificateId` parameter. 
+     * @return PolyRealServerCertificateIds CA certificate IDs of multiple origin servers, which are obtained from the certificate management page. When authenticating the origin servers, enter this parameter or the `RealServerCertificateId` parameter.
+     */
+    public String [] getPolyRealServerCertificateIds() {
+        return this.PolyRealServerCertificateIds;
+    }
+
+    /**
+     * Set CA certificate IDs of multiple origin servers, which are obtained from the certificate management page. When authenticating the origin servers, enter this parameter or the `RealServerCertificateId` parameter.
+     * @param PolyRealServerCertificateIds CA certificate IDs of multiple origin servers, which are obtained from the certificate management page. When authenticating the origin servers, enter this parameter or the `RealServerCertificateId` parameter.
+     */
+    public void setPolyRealServerCertificateIds(String [] PolyRealServerCertificateIds) {
+        this.PolyRealServerCertificateIds = PolyRealServerCertificateIds;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -287,6 +310,7 @@ The default value is 0.
         this.setParamSimple(map, prefix + "GaapCertificateId", this.GaapCertificateId);
         this.setParamSimple(map, prefix + "RealServerCertificateId", this.RealServerCertificateId);
         this.setParamSimple(map, prefix + "RealServerCertificateDomain", this.RealServerCertificateDomain);
+        this.setParamArraySimple(map, prefix + "PolyRealServerCertificateIds.", this.PolyRealServerCertificateIds);
 
     }
 }

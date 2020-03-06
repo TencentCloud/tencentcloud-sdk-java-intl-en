@@ -37,7 +37,7 @@ public class CreateLiveTranscodeRuleRequest extends AbstractModel{
     private String AppName;
 
     /**
-    * Stream name.
+    * Stream name. If only the domain name or path is bound, leave this parameter blank.
     */
     @SerializedName("StreamName")
     @Expose
@@ -83,16 +83,16 @@ public class CreateLiveTranscodeRuleRequest extends AbstractModel{
     }
 
     /**
-     * Get Stream name. 
-     * @return StreamName Stream name.
+     * Get Stream name. If only the domain name or path is bound, leave this parameter blank. 
+     * @return StreamName Stream name. If only the domain name or path is bound, leave this parameter blank.
      */
     public String getStreamName() {
         return this.StreamName;
     }
 
     /**
-     * Set Stream name.
-     * @param StreamName Stream name.
+     * Set Stream name. If only the domain name or path is bound, leave this parameter blank.
+     * @param StreamName Stream name. If only the domain name or path is bound, leave this parameter blank.
      */
     public void setStreamName(String StreamName) {
         this.StreamName = StreamName;
