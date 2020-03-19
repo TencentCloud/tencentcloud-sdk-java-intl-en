@@ -72,7 +72,7 @@ public class DCDBInstanceInfo extends AbstractModel{
     private Long VpcId;
 
     /**
-    * Subnet数字ID
+    * Subnet Digital ID
     */
     @SerializedName("SubnetId")
     @Expose
@@ -402,16 +402,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Subnet数字ID 
-     * @return SubnetId Subnet数字ID
+     * Get Subnet Digital ID 
+     * @return SubnetId Subnet Digital ID
      */
     public Long getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Subnet数字ID
-     * @param SubnetId Subnet数字ID
+     * Set Subnet Digital ID
+     * @param SubnetId Subnet Digital ID
      */
     public void setSubnetId(Long SubnetId) {
         this.SubnetId = SubnetId;
