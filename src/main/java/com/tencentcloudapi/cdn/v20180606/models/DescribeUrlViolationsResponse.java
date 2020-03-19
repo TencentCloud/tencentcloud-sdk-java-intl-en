@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeUrlViolationsResponse extends AbstractModel{
 
     /**
-    * Details of violating URLs
+    * Details of URLs in violation
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UrlRecordList")
@@ -45,9 +45,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Details of violating URLs
+     * Get Details of URLs in violation
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return UrlRecordList Details of violating URLs
+     * @return UrlRecordList Details of URLs in violation
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public ViolationUrl [] getUrlRecordList() {
@@ -55,9 +55,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Details of violating URLs
+     * Set Details of URLs in violation
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param UrlRecordList Details of violating URLs
+     * @param UrlRecordList Details of URLs in violation
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setUrlRecordList(ViolationUrl [] UrlRecordList) {

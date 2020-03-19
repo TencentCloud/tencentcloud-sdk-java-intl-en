@@ -32,16 +32,16 @@ public class ModifyInstanceRequest extends AbstractModel{
     /**
     * Instance ID
     */
-    @SerializedName("InstanceId")
+    @SerializedName("InstanceIds")
     @Expose
-    private String InstanceId;
+    private String [] InstanceIds;
 
     /**
-    * New name of an instance
+    * New name of instance
     */
-    @SerializedName("InstanceName")
+    @SerializedName("InstanceNames")
     @Expose
-    private String InstanceName;
+    private String [] InstanceNames;
 
     /**
     * Project ID
@@ -51,7 +51,28 @@ public class ModifyInstanceRequest extends AbstractModel{
     private Long ProjectId;
 
     /**
-    * Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
+    * Auto-renewal flag. 0: default status (manual renewal), 1: auto-renewal enabled, 2: auto-renewal disabled
+    */
+    @SerializedName("AutoRenews")
+    @Expose
+    private Long [] AutoRenews;
+
+    /**
+    * Disused
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * Disused
+    */
+    @SerializedName("InstanceName")
+    @Expose
+    private String InstanceName;
+
+    /**
+    * Disused
     */
     @SerializedName("AutoRenew")
     @Expose
@@ -75,34 +96,34 @@ public class ModifyInstanceRequest extends AbstractModel{
 
     /**
      * Get Instance ID 
-     * @return InstanceId Instance ID
+     * @return InstanceIds Instance ID
      */
-    public String getInstanceId() {
-        return this.InstanceId;
+    public String [] getInstanceIds() {
+        return this.InstanceIds;
     }
 
     /**
      * Set Instance ID
-     * @param InstanceId Instance ID
+     * @param InstanceIds Instance ID
      */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
+    public void setInstanceIds(String [] InstanceIds) {
+        this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get New name of an instance 
-     * @return InstanceName New name of an instance
+     * Get New name of instance 
+     * @return InstanceNames New name of instance
      */
-    public String getInstanceName() {
-        return this.InstanceName;
+    public String [] getInstanceNames() {
+        return this.InstanceNames;
     }
 
     /**
-     * Set New name of an instance
-     * @param InstanceName New name of an instance
+     * Set New name of instance
+     * @param InstanceNames New name of instance
      */
-    public void setInstanceName(String InstanceName) {
-        this.InstanceName = InstanceName;
+    public void setInstanceNames(String [] InstanceNames) {
+        this.InstanceNames = InstanceNames;
     }
 
     /**
@@ -122,16 +143,64 @@ public class ModifyInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled 
-     * @return AutoRenew Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
+     * Get Auto-renewal flag. 0: default status (manual renewal), 1: auto-renewal enabled, 2: auto-renewal disabled 
+     * @return AutoRenews Auto-renewal flag. 0: default status (manual renewal), 1: auto-renewal enabled, 2: auto-renewal disabled
+     */
+    public Long [] getAutoRenews() {
+        return this.AutoRenews;
+    }
+
+    /**
+     * Set Auto-renewal flag. 0: default status (manual renewal), 1: auto-renewal enabled, 2: auto-renewal disabled
+     * @param AutoRenews Auto-renewal flag. 0: default status (manual renewal), 1: auto-renewal enabled, 2: auto-renewal disabled
+     */
+    public void setAutoRenews(Long [] AutoRenews) {
+        this.AutoRenews = AutoRenews;
+    }
+
+    /**
+     * Get Disused 
+     * @return InstanceId Disused
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set Disused
+     * @param InstanceId Disused
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get Disused 
+     * @return InstanceName Disused
+     */
+    public String getInstanceName() {
+        return this.InstanceName;
+    }
+
+    /**
+     * Set Disused
+     * @param InstanceName Disused
+     */
+    public void setInstanceName(String InstanceName) {
+        this.InstanceName = InstanceName;
+    }
+
+    /**
+     * Get Disused 
+     * @return AutoRenew Disused
      */
     public Long getAutoRenew() {
         return this.AutoRenew;
     }
 
     /**
-     * Set Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
-     * @param AutoRenew Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
+     * Set Disused
+     * @param AutoRenew Disused
      */
     public void setAutoRenew(Long AutoRenew) {
         this.AutoRenew = AutoRenew;
@@ -142,9 +211,12 @@ public class ModifyInstanceRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Operation", this.Operation);
+        this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+        this.setParamArraySimple(map, prefix + "InstanceNames.", this.InstanceNames);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamArraySimple(map, prefix + "AutoRenews.", this.AutoRenews);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
-        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
 
     }

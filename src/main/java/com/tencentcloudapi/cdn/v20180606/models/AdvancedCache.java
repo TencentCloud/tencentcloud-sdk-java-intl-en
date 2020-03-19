@@ -34,8 +34,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     * Forced cache configuration
 on: enabled
 off: disabled
-When it is enabled, if the origin server returns no-cache, no-store headers, node caching will still be performed according to the cache expiration rules.
-It is disabled by default
+When this is enabled, if the origin server returns no-cache, no-store headers, node caching will still be performed according to the cache expiration rules.
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IgnoreCacheControl")
@@ -46,7 +46,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     * Ignore the Set-Cookie header of an origin server
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IgnoreSetCookie")
@@ -77,14 +77,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Get Forced cache configuration
 on: enabled
 off: disabled
-When it is enabled, if the origin server returns no-cache, no-store headers, node caching will still be performed according to the cache expiration rules.
-It is disabled by default
+When this is enabled, if the origin server returns no-cache, no-store headers, node caching will still be performed according to the cache expiration rules.
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return IgnoreCacheControl Forced cache configuration
 on: enabled
 off: disabled
-When it is enabled, if the origin server returns no-cache, no-store headers, node caching will still be performed according to the cache expiration rules.
-It is disabled by default
+When this is enabled, if the origin server returns no-cache, no-store headers, node caching will still be performed according to the cache expiration rules.
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getIgnoreCacheControl() {
@@ -95,14 +95,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Set Forced cache configuration
 on: enabled
 off: disabled
-When it is enabled, if the origin server returns no-cache, no-store headers, node caching will still be performed according to the cache expiration rules.
-It is disabled by default
+When this is enabled, if the origin server returns no-cache, no-store headers, node caching will still be performed according to the cache expiration rules.
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param IgnoreCacheControl Forced cache configuration
 on: enabled
 off: disabled
-When it is enabled, if the origin server returns no-cache, no-store headers, node caching will still be performed according to the cache expiration rules.
-It is disabled by default
+When this is enabled, if the origin server returns no-cache, no-store headers, node caching will still be performed according to the cache expiration rules.
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setIgnoreCacheControl(String IgnoreCacheControl) {
@@ -113,12 +113,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Get Ignore the Set-Cookie header of an origin server
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return IgnoreSetCookie Ignore the Set-Cookie header of an origin server
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getIgnoreSetCookie() {
@@ -129,12 +129,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Set Ignore the Set-Cookie header of an origin server
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param IgnoreSetCookie Ignore the Set-Cookie header of an origin server
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setIgnoreSetCookie(String IgnoreSetCookie) {

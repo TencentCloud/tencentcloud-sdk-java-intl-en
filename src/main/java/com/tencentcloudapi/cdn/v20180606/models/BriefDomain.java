@@ -23,299 +23,409 @@ import java.util.HashMap;
 public class BriefDomain extends AbstractModel{
 
     /**
-    * Domain name ID.
+    * Domain name ID
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * Tencent Cloud account ID.
+    * Tencent Cloud account ID
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * CDN acceleration domain name.
+    * Acceleration domain name
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * Domain name CNAME.
+    * CNAME address of domain name
     */
     @SerializedName("Cname")
     @Expose
     private String Cname;
 
     /**
-    * Domain name status. pending: under review; rejected: review failed; processing: review succeeded and under deployment; online: enabled; offline: disabled; deleted: deleted.
+    * Acceleration service status
+rejected: the domain name is rejected due to expiration/deregistration of its ICP filing
+processing: deploying
+online: activated
+offline: disabled
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Project ID.
+    * Project ID, which can be viewed on the Tencent Cloud project management page
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * Domain name business type. web: static acceleration; download: download acceleration; media: streaming media acceleration.
+    * Domain name service type
+web: static acceleration
+download: download acceleration
+media: streaming VOD acceleration
     */
     @SerializedName("ServiceType")
     @Expose
     private String ServiceType;
 
     /**
-    * Domain name creation time.
+    * Domain name creation time
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Domain name update time.
+    * Last modified time of domain name
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * Origin server configuration details.
+    * Origin server configuration details
     */
     @SerializedName("Origin")
     @Expose
     private Origin Origin;
 
     /**
-    * Domain name block status, including normal, overdue, quota, malicious, ddos, idle, unlicensed, capping, and readonly.
+    * Domain name block status
+normal: normal
+overdue: the domain name has been disabled due to account arrears. The acceleration service can be resumed after the account is topped up.
+malicious: the acceleration service has been forcibly disabled due to detection of malicious behavior.
+ddos: the acceleration service has been disabled due to large-scale DDoS attacks to the domain name
+idle: no operations or data has been detected for more than 90 days. The domain name is determined to be inactive which automatically disables the acceleration service. You can restart the service.
+unlicensed: the acceleration service has been automatically disabled as the domain name has no ICP filing or its ICP filing is deregistered. Service can be resumed after an ICP filing is obtained.
+capping: the configured upper limit for bandwidth has been reached.
+readonly: the domain name has a special configuration and has been locked.
     */
     @SerializedName("Disable")
     @Expose
     private String Disable;
 
     /**
-    * Acceleration region, including mainland, overseas, and global.
+    * Acceleration region
+mainland: acceleration in Mainland China
+overseas: acceleration outside Mainland China
+global: global acceleration
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * Domain name lock status. normal: not locked; mainland: locked in mainland China; overseas: locked outside mainland China; global: locked globally.
+    * Domain name lock status
+normal: not locked
+mainland: locked in Mainland China
+overseas: locked outside Mainland China
+global: locked globally
     */
     @SerializedName("Readonly")
     @Expose
     private String Readonly;
 
     /**
-     * Get Domain name ID. 
-     * @return ResourceId Domain name ID.
+     * Get Domain name ID 
+     * @return ResourceId Domain name ID
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set Domain name ID.
-     * @param ResourceId Domain name ID.
+     * Set Domain name ID
+     * @param ResourceId Domain name ID
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get Tencent Cloud account ID. 
-     * @return AppId Tencent Cloud account ID.
+     * Get Tencent Cloud account ID 
+     * @return AppId Tencent Cloud account ID
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set Tencent Cloud account ID.
-     * @param AppId Tencent Cloud account ID.
+     * Set Tencent Cloud account ID
+     * @param AppId Tencent Cloud account ID
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get CDN acceleration domain name. 
-     * @return Domain CDN acceleration domain name.
+     * Get Acceleration domain name 
+     * @return Domain Acceleration domain name
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set CDN acceleration domain name.
-     * @param Domain CDN acceleration domain name.
+     * Set Acceleration domain name
+     * @param Domain Acceleration domain name
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get Domain name CNAME. 
-     * @return Cname Domain name CNAME.
+     * Get CNAME address of domain name 
+     * @return Cname CNAME address of domain name
      */
     public String getCname() {
         return this.Cname;
     }
 
     /**
-     * Set Domain name CNAME.
-     * @param Cname Domain name CNAME.
+     * Set CNAME address of domain name
+     * @param Cname CNAME address of domain name
      */
     public void setCname(String Cname) {
         this.Cname = Cname;
     }
 
     /**
-     * Get Domain name status. pending: under review; rejected: review failed; processing: review succeeded and under deployment; online: enabled; offline: disabled; deleted: deleted. 
-     * @return Status Domain name status. pending: under review; rejected: review failed; processing: review succeeded and under deployment; online: enabled; offline: disabled; deleted: deleted.
+     * Get Acceleration service status
+rejected: the domain name is rejected due to expiration/deregistration of its ICP filing
+processing: deploying
+online: activated
+offline: disabled 
+     * @return Status Acceleration service status
+rejected: the domain name is rejected due to expiration/deregistration of its ICP filing
+processing: deploying
+online: activated
+offline: disabled
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Domain name status. pending: under review; rejected: review failed; processing: review succeeded and under deployment; online: enabled; offline: disabled; deleted: deleted.
-     * @param Status Domain name status. pending: under review; rejected: review failed; processing: review succeeded and under deployment; online: enabled; offline: disabled; deleted: deleted.
+     * Set Acceleration service status
+rejected: the domain name is rejected due to expiration/deregistration of its ICP filing
+processing: deploying
+online: activated
+offline: disabled
+     * @param Status Acceleration service status
+rejected: the domain name is rejected due to expiration/deregistration of its ICP filing
+processing: deploying
+online: activated
+offline: disabled
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Project ID. 
-     * @return ProjectId Project ID.
+     * Get Project ID, which can be viewed on the Tencent Cloud project management page 
+     * @return ProjectId Project ID, which can be viewed on the Tencent Cloud project management page
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID.
-     * @param ProjectId Project ID.
+     * Set Project ID, which can be viewed on the Tencent Cloud project management page
+     * @param ProjectId Project ID, which can be viewed on the Tencent Cloud project management page
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get Domain name business type. web: static acceleration; download: download acceleration; media: streaming media acceleration. 
-     * @return ServiceType Domain name business type. web: static acceleration; download: download acceleration; media: streaming media acceleration.
+     * Get Domain name service type
+web: static acceleration
+download: download acceleration
+media: streaming VOD acceleration 
+     * @return ServiceType Domain name service type
+web: static acceleration
+download: download acceleration
+media: streaming VOD acceleration
      */
     public String getServiceType() {
         return this.ServiceType;
     }
 
     /**
-     * Set Domain name business type. web: static acceleration; download: download acceleration; media: streaming media acceleration.
-     * @param ServiceType Domain name business type. web: static acceleration; download: download acceleration; media: streaming media acceleration.
+     * Set Domain name service type
+web: static acceleration
+download: download acceleration
+media: streaming VOD acceleration
+     * @param ServiceType Domain name service type
+web: static acceleration
+download: download acceleration
+media: streaming VOD acceleration
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;
     }
 
     /**
-     * Get Domain name creation time. 
-     * @return CreateTime Domain name creation time.
+     * Get Domain name creation time 
+     * @return CreateTime Domain name creation time
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Domain name creation time.
-     * @param CreateTime Domain name creation time.
+     * Set Domain name creation time
+     * @param CreateTime Domain name creation time
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Domain name update time. 
-     * @return UpdateTime Domain name update time.
+     * Get Last modified time of domain name 
+     * @return UpdateTime Last modified time of domain name
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Domain name update time.
-     * @param UpdateTime Domain name update time.
+     * Set Last modified time of domain name
+     * @param UpdateTime Last modified time of domain name
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Origin server configuration details. 
-     * @return Origin Origin server configuration details.
+     * Get Origin server configuration details 
+     * @return Origin Origin server configuration details
      */
     public Origin getOrigin() {
         return this.Origin;
     }
 
     /**
-     * Set Origin server configuration details.
-     * @param Origin Origin server configuration details.
+     * Set Origin server configuration details
+     * @param Origin Origin server configuration details
      */
     public void setOrigin(Origin Origin) {
         this.Origin = Origin;
     }
 
     /**
-     * Get Domain name block status, including normal, overdue, quota, malicious, ddos, idle, unlicensed, capping, and readonly. 
-     * @return Disable Domain name block status, including normal, overdue, quota, malicious, ddos, idle, unlicensed, capping, and readonly.
+     * Get Domain name block status
+normal: normal
+overdue: the domain name has been disabled due to account arrears. The acceleration service can be resumed after the account is topped up.
+malicious: the acceleration service has been forcibly disabled due to detection of malicious behavior.
+ddos: the acceleration service has been disabled due to large-scale DDoS attacks to the domain name
+idle: no operations or data has been detected for more than 90 days. The domain name is determined to be inactive which automatically disables the acceleration service. You can restart the service.
+unlicensed: the acceleration service has been automatically disabled as the domain name has no ICP filing or its ICP filing is deregistered. Service can be resumed after an ICP filing is obtained.
+capping: the configured upper limit for bandwidth has been reached.
+readonly: the domain name has a special configuration and has been locked. 
+     * @return Disable Domain name block status
+normal: normal
+overdue: the domain name has been disabled due to account arrears. The acceleration service can be resumed after the account is topped up.
+malicious: the acceleration service has been forcibly disabled due to detection of malicious behavior.
+ddos: the acceleration service has been disabled due to large-scale DDoS attacks to the domain name
+idle: no operations or data has been detected for more than 90 days. The domain name is determined to be inactive which automatically disables the acceleration service. You can restart the service.
+unlicensed: the acceleration service has been automatically disabled as the domain name has no ICP filing or its ICP filing is deregistered. Service can be resumed after an ICP filing is obtained.
+capping: the configured upper limit for bandwidth has been reached.
+readonly: the domain name has a special configuration and has been locked.
      */
     public String getDisable() {
         return this.Disable;
     }
 
     /**
-     * Set Domain name block status, including normal, overdue, quota, malicious, ddos, idle, unlicensed, capping, and readonly.
-     * @param Disable Domain name block status, including normal, overdue, quota, malicious, ddos, idle, unlicensed, capping, and readonly.
+     * Set Domain name block status
+normal: normal
+overdue: the domain name has been disabled due to account arrears. The acceleration service can be resumed after the account is topped up.
+malicious: the acceleration service has been forcibly disabled due to detection of malicious behavior.
+ddos: the acceleration service has been disabled due to large-scale DDoS attacks to the domain name
+idle: no operations or data has been detected for more than 90 days. The domain name is determined to be inactive which automatically disables the acceleration service. You can restart the service.
+unlicensed: the acceleration service has been automatically disabled as the domain name has no ICP filing or its ICP filing is deregistered. Service can be resumed after an ICP filing is obtained.
+capping: the configured upper limit for bandwidth has been reached.
+readonly: the domain name has a special configuration and has been locked.
+     * @param Disable Domain name block status
+normal: normal
+overdue: the domain name has been disabled due to account arrears. The acceleration service can be resumed after the account is topped up.
+malicious: the acceleration service has been forcibly disabled due to detection of malicious behavior.
+ddos: the acceleration service has been disabled due to large-scale DDoS attacks to the domain name
+idle: no operations or data has been detected for more than 90 days. The domain name is determined to be inactive which automatically disables the acceleration service. You can restart the service.
+unlicensed: the acceleration service has been automatically disabled as the domain name has no ICP filing or its ICP filing is deregistered. Service can be resumed after an ICP filing is obtained.
+capping: the configured upper limit for bandwidth has been reached.
+readonly: the domain name has a special configuration and has been locked.
      */
     public void setDisable(String Disable) {
         this.Disable = Disable;
     }
 
     /**
-     * Get Acceleration region, including mainland, overseas, and global. 
-     * @return Area Acceleration region, including mainland, overseas, and global.
+     * Get Acceleration region
+mainland: acceleration in Mainland China
+overseas: acceleration outside Mainland China
+global: global acceleration 
+     * @return Area Acceleration region
+mainland: acceleration in Mainland China
+overseas: acceleration outside Mainland China
+global: global acceleration
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Acceleration region, including mainland, overseas, and global.
-     * @param Area Acceleration region, including mainland, overseas, and global.
+     * Set Acceleration region
+mainland: acceleration in Mainland China
+overseas: acceleration outside Mainland China
+global: global acceleration
+     * @param Area Acceleration region
+mainland: acceleration in Mainland China
+overseas: acceleration outside Mainland China
+global: global acceleration
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get Domain name lock status. normal: not locked; mainland: locked in mainland China; overseas: locked outside mainland China; global: locked globally. 
-     * @return Readonly Domain name lock status. normal: not locked; mainland: locked in mainland China; overseas: locked outside mainland China; global: locked globally.
+     * Get Domain name lock status
+normal: not locked
+mainland: locked in Mainland China
+overseas: locked outside Mainland China
+global: locked globally 
+     * @return Readonly Domain name lock status
+normal: not locked
+mainland: locked in Mainland China
+overseas: locked outside Mainland China
+global: locked globally
      */
     public String getReadonly() {
         return this.Readonly;
     }
 
     /**
-     * Set Domain name lock status. normal: not locked; mainland: locked in mainland China; overseas: locked outside mainland China; global: locked globally.
-     * @param Readonly Domain name lock status. normal: not locked; mainland: locked in mainland China; overseas: locked outside mainland China; global: locked globally.
+     * Set Domain name lock status
+normal: not locked
+mainland: locked in Mainland China
+overseas: locked outside Mainland China
+global: locked globally
+     * @param Readonly Domain name lock status
+normal: not locked
+mainland: locked in Mainland China
+overseas: locked outside Mainland China
+global: locked globally
      */
     public void setReadonly(String Readonly) {
         this.Readonly = Readonly;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class RenewInstanceResponse extends AbstractModel{
 
     /**
-    * Transaction Id
+    * Transaction ID
     */
     @SerializedName("DealId")
     @Expose
@@ -37,16 +37,16 @@ public class RenewInstanceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Transaction Id 
-     * @return DealId Transaction Id
+     * Get Transaction ID 
+     * @return DealId Transaction ID
      */
     public String getDealId() {
         return this.DealId;
     }
 
     /**
-     * Set Transaction Id
-     * @param DealId Transaction Id
+     * Set Transaction ID
+     * @param DealId Transaction ID
      */
     public void setDealId(String DealId) {
         this.DealId = DealId;

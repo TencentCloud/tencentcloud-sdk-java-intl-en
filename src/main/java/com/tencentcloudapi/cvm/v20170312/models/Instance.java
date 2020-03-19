@@ -221,6 +221,28 @@ Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>ST
     private String LatestOperationRequestId;
 
     /**
+    * ID of a spread placement group.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DisasterRecoverGroupId")
+    @Expose
+    private String DisasterRecoverGroupId;
+
+    /**
+    * 
+    */
+    @SerializedName("IPv6Addresses")
+    @Expose
+    private String IPv6Addresses;
+
+    /**
+    * 
+    */
+    @SerializedName("CamRoleName")
+    @Expose
+    private String CamRoleName;
+
+    /**
      * Get Location of the instance 
      * @return Placement Location of the instance
      */
@@ -677,6 +699,58 @@ Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>ST
     }
 
     /**
+     * Get ID of a spread placement group.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return DisasterRecoverGroupId ID of a spread placement group.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getDisasterRecoverGroupId() {
+        return this.DisasterRecoverGroupId;
+    }
+
+    /**
+     * Set ID of a spread placement group.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param DisasterRecoverGroupId ID of a spread placement group.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDisasterRecoverGroupId(String DisasterRecoverGroupId) {
+        this.DisasterRecoverGroupId = DisasterRecoverGroupId;
+    }
+
+    /**
+     * Get  
+     * @return IPv6Addresses 
+     */
+    public String getIPv6Addresses() {
+        return this.IPv6Addresses;
+    }
+
+    /**
+     * Set 
+     * @param IPv6Addresses 
+     */
+    public void setIPv6Addresses(String IPv6Addresses) {
+        this.IPv6Addresses = IPv6Addresses;
+    }
+
+    /**
+     * Get  
+     * @return CamRoleName 
+     */
+    public String getCamRoleName() {
+        return this.CamRoleName;
+    }
+
+    /**
+     * Set 
+     * @param CamRoleName 
+     */
+    public void setCamRoleName(String CamRoleName) {
+        this.CamRoleName = CamRoleName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -708,6 +782,9 @@ Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>ST
         this.setParamSimple(map, prefix + "LatestOperation", this.LatestOperation);
         this.setParamSimple(map, prefix + "LatestOperationState", this.LatestOperationState);
         this.setParamSimple(map, prefix + "LatestOperationRequestId", this.LatestOperationRequestId);
+        this.setParamSimple(map, prefix + "DisasterRecoverGroupId", this.DisasterRecoverGroupId);
+        this.setParamSimple(map, prefix + "IPv6Addresses", this.IPv6Addresses);
+        this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
 
     }
 }

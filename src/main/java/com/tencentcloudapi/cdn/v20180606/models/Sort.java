@@ -23,56 +23,56 @@ import java.util.HashMap;
 public class Sort extends AbstractModel{
 
     /**
-    * Sorting field, which currently supports:
-createTime, domain name creation time.
-certExpireTime, certificate expiration time.
+    * Fields that can be sorted. Currently supports:
+`createTime`: domain name creation time.
+`certExpireTime`: certificate expiration time.
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * asc/desc, which is desc by default.
+    * `asc` or `desc`. Default: `desc`.
     */
     @SerializedName("Sequence")
     @Expose
     private String Sequence;
 
     /**
-     * Get Sorting field, which currently supports:
-createTime, domain name creation time.
-certExpireTime, certificate expiration time. 
-     * @return Key Sorting field, which currently supports:
-createTime, domain name creation time.
-certExpireTime, certificate expiration time.
+     * Get Fields that can be sorted. Currently supports:
+`createTime`: domain name creation time.
+`certExpireTime`: certificate expiration time. 
+     * @return Key Fields that can be sorted. Currently supports:
+`createTime`: domain name creation time.
+`certExpireTime`: certificate expiration time.
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set Sorting field, which currently supports:
-createTime, domain name creation time.
-certExpireTime, certificate expiration time.
-     * @param Key Sorting field, which currently supports:
-createTime, domain name creation time.
-certExpireTime, certificate expiration time.
+     * Set Fields that can be sorted. Currently supports:
+`createTime`: domain name creation time.
+`certExpireTime`: certificate expiration time.
+     * @param Key Fields that can be sorted. Currently supports:
+`createTime`: domain name creation time.
+`certExpireTime`: certificate expiration time.
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get asc/desc, which is desc by default. 
-     * @return Sequence asc/desc, which is desc by default.
+     * Get `asc` or `desc`. Default: `desc`. 
+     * @return Sequence `asc` or `desc`. Default: `desc`.
      */
     public String getSequence() {
         return this.Sequence;
     }
 
     /**
-     * Set asc/desc, which is desc by default.
-     * @param Sequence asc/desc, which is desc by default.
+     * Set `asc` or `desc`. Default: `desc`.
+     * @param Sequence `asc` or `desc`. Default: `desc`.
      */
     public void setSequence(String Sequence) {
         this.Sequence = Sequence;

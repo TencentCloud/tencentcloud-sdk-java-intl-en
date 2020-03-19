@@ -30,7 +30,7 @@ public class CreateInstanceRequest extends AbstractModel{
     private String Zone;
 
     /**
-    * Instance version ("5.6.4" or "6.4.3")
+    * Instance version ("5.6.4", "6.4.3", "6.8.2", or "7.5.1")
     */
     @SerializedName("EsVersion")
     @Expose
@@ -65,7 +65,8 @@ public class CreateInstanceRequest extends AbstractModel{
     private String InstanceName;
 
     /**
-    * Number of nodes (2-50)
+    * This parameter has been disused. Please use `NodeInfoList`
+Number of nodes (2–50)
     */
     @SerializedName("NodeNum")
     @Expose
@@ -93,21 +94,24 @@ public class CreateInstanceRequest extends AbstractModel{
     private String RenewFlag;
 
     /**
-    * Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+    * This parameter has been disused. Please use `NodeInfoList`
+Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
     */
     @SerializedName("NodeType")
     @Expose
     private String NodeType;
 
     /**
-    * Node disk type <li>CLOUD_SSD: SSD cloud disk </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD
+    * This parameter has been disused. Please use `NodeInfoList`
+Node storage type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: premium cloud storage </li>Default value: CLOUD_SSD
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * Node disk size in GB
+    * This parameter has been disused. Please use `NodeInfoList`
+Node disk size in GB
     */
     @SerializedName("DiskSize")
     @Expose
@@ -135,28 +139,32 @@ public class CreateInstanceRequest extends AbstractModel{
     private String [] VoucherIds;
 
     /**
-    * Whether to create a dedicated master node <li>true: Yes </li><li>false: No </li>Default value: false
+    * This parameter has been disused. Please use `NodeInfoList`
+Whether to create a dedicated master node <li>true: yes </li><li>false: no </li>Default value: false
     */
     @SerializedName("EnableDedicatedMaster")
     @Expose
     private Boolean EnableDedicatedMaster;
 
     /**
-    * Number of dedicated master nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is true)
+    * This parameter has been disused. Please use `NodeInfoList`
+Number of dedicated master nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
     */
     @SerializedName("MasterNodeNum")
     @Expose
     private Long MasterNodeNum;
 
     /**
-    * Dedicated master node type, which must be passed in if `EnableDedicatedMaster` is true <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+    * This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
     */
     @SerializedName("MasterNodeType")
     @Expose
     private String MasterNodeType;
 
     /**
-    * Dedicated master node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
+    * This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
     */
     @SerializedName("MasterNodeDiskSize")
     @Expose
@@ -191,21 +199,21 @@ public class CreateInstanceRequest extends AbstractModel{
     private String LicenseType;
 
     /**
-    * 
+    * Node information list, which is used to describe the specification information of various types of nodes in the cluster, such as node type, node quantity, node specification, disk type, and disk size
     */
     @SerializedName("NodeInfoList")
     @Expose
     private NodeInfo [] NodeInfoList;
 
     /**
-    * 
+    * Node tag information list
     */
     @SerializedName("TagList")
     @Expose
     private TagInfo [] TagList;
 
     /**
-    * 
+    * Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
     */
     @SerializedName("BasicSecurityType")
     @Expose
@@ -228,16 +236,16 @@ public class CreateInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Instance version ("5.6.4" or "6.4.3") 
-     * @return EsVersion Instance version ("5.6.4" or "6.4.3")
+     * Get Instance version ("5.6.4", "6.4.3", "6.8.2", or "7.5.1") 
+     * @return EsVersion Instance version ("5.6.4", "6.4.3", "6.8.2", or "7.5.1")
      */
     public String getEsVersion() {
         return this.EsVersion;
     }
 
     /**
-     * Set Instance version ("5.6.4" or "6.4.3")
-     * @param EsVersion Instance version ("5.6.4" or "6.4.3")
+     * Set Instance version ("5.6.4", "6.4.3", "6.8.2", or "7.5.1")
+     * @param EsVersion Instance version ("5.6.4", "6.4.3", "6.8.2", or "7.5.1")
      */
     public void setEsVersion(String EsVersion) {
         this.EsVersion = EsVersion;
@@ -308,16 +316,20 @@ public class CreateInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Number of nodes (2-50) 
-     * @return NodeNum Number of nodes (2-50)
+     * Get This parameter has been disused. Please use `NodeInfoList`
+Number of nodes (2–50) 
+     * @return NodeNum This parameter has been disused. Please use `NodeInfoList`
+Number of nodes (2–50)
      */
     public Long getNodeNum() {
         return this.NodeNum;
     }
 
     /**
-     * Set Number of nodes (2-50)
-     * @param NodeNum Number of nodes (2-50)
+     * Set This parameter has been disused. Please use `NodeInfoList`
+Number of nodes (2–50)
+     * @param NodeNum This parameter has been disused. Please use `NodeInfoList`
+Number of nodes (2–50)
      */
     public void setNodeNum(Long NodeNum) {
         this.NodeNum = NodeNum;
@@ -372,48 +384,60 @@ public class CreateInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li> 
-     * @return NodeType Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+     * Get This parameter has been disused. Please use `NodeInfoList`
+Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li> 
+     * @return NodeType This parameter has been disused. Please use `NodeInfoList`
+Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
      */
     public String getNodeType() {
         return this.NodeType;
     }
 
     /**
-     * Set Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-     * @param NodeType Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+     * Set This parameter has been disused. Please use `NodeInfoList`
+Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+     * @param NodeType This parameter has been disused. Please use `NodeInfoList`
+Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
      */
     public void setNodeType(String NodeType) {
         this.NodeType = NodeType;
     }
 
     /**
-     * Get Node disk type <li>CLOUD_SSD: SSD cloud disk </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD 
-     * @return DiskType Node disk type <li>CLOUD_SSD: SSD cloud disk </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD
+     * Get This parameter has been disused. Please use `NodeInfoList`
+Node storage type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: premium cloud storage </li>Default value: CLOUD_SSD 
+     * @return DiskType This parameter has been disused. Please use `NodeInfoList`
+Node storage type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: premium cloud storage </li>Default value: CLOUD_SSD
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set Node disk type <li>CLOUD_SSD: SSD cloud disk </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD
-     * @param DiskType Node disk type <li>CLOUD_SSD: SSD cloud disk </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD
+     * Set This parameter has been disused. Please use `NodeInfoList`
+Node storage type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: premium cloud storage </li>Default value: CLOUD_SSD
+     * @param DiskType This parameter has been disused. Please use `NodeInfoList`
+Node storage type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: premium cloud storage </li>Default value: CLOUD_SSD
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get Node disk size in GB 
-     * @return DiskSize Node disk size in GB
+     * Get This parameter has been disused. Please use `NodeInfoList`
+Node disk size in GB 
+     * @return DiskSize This parameter has been disused. Please use `NodeInfoList`
+Node disk size in GB
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set Node disk size in GB
-     * @param DiskSize Node disk size in GB
+     * Set This parameter has been disused. Please use `NodeInfoList`
+Node disk size in GB
+     * @param DiskSize This parameter has been disused. Please use `NodeInfoList`
+Node disk size in GB
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
@@ -468,64 +492,80 @@ public class CreateInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to create a dedicated master node <li>true: Yes </li><li>false: No </li>Default value: false 
-     * @return EnableDedicatedMaster Whether to create a dedicated master node <li>true: Yes </li><li>false: No </li>Default value: false
+     * Get This parameter has been disused. Please use `NodeInfoList`
+Whether to create a dedicated master node <li>true: yes </li><li>false: no </li>Default value: false 
+     * @return EnableDedicatedMaster This parameter has been disused. Please use `NodeInfoList`
+Whether to create a dedicated master node <li>true: yes </li><li>false: no </li>Default value: false
      */
     public Boolean getEnableDedicatedMaster() {
         return this.EnableDedicatedMaster;
     }
 
     /**
-     * Set Whether to create a dedicated master node <li>true: Yes </li><li>false: No </li>Default value: false
-     * @param EnableDedicatedMaster Whether to create a dedicated master node <li>true: Yes </li><li>false: No </li>Default value: false
+     * Set This parameter has been disused. Please use `NodeInfoList`
+Whether to create a dedicated master node <li>true: yes </li><li>false: no </li>Default value: false
+     * @param EnableDedicatedMaster This parameter has been disused. Please use `NodeInfoList`
+Whether to create a dedicated master node <li>true: yes </li><li>false: no </li>Default value: false
      */
     public void setEnableDedicatedMaster(Boolean EnableDedicatedMaster) {
         this.EnableDedicatedMaster = EnableDedicatedMaster;
     }
 
     /**
-     * Get Number of dedicated master nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is true) 
-     * @return MasterNodeNum Number of dedicated master nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is true)
+     * Get This parameter has been disused. Please use `NodeInfoList`
+Number of dedicated master nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`) 
+     * @return MasterNodeNum This parameter has been disused. Please use `NodeInfoList`
+Number of dedicated master nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
      */
     public Long getMasterNodeNum() {
         return this.MasterNodeNum;
     }
 
     /**
-     * Set Number of dedicated master nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is true)
-     * @param MasterNodeNum Number of dedicated master nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is true)
+     * Set This parameter has been disused. Please use `NodeInfoList`
+Number of dedicated master nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
+     * @param MasterNodeNum This parameter has been disused. Please use `NodeInfoList`
+Number of dedicated master nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
      */
     public void setMasterNodeNum(Long MasterNodeNum) {
         this.MasterNodeNum = MasterNodeNum;
     }
 
     /**
-     * Get Dedicated master node type, which must be passed in if `EnableDedicatedMaster` is true <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li> 
-     * @return MasterNodeType Dedicated master node type, which must be passed in if `EnableDedicatedMaster` is true <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+     * Get This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li> 
+     * @return MasterNodeType This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
      */
     public String getMasterNodeType() {
         return this.MasterNodeType;
     }
 
     /**
-     * Set Dedicated master node type, which must be passed in if `EnableDedicatedMaster` is true <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
-     * @param MasterNodeType Dedicated master node type, which must be passed in if `EnableDedicatedMaster` is true <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+     * Set This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+     * @param MasterNodeType This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
      */
     public void setMasterNodeType(String MasterNodeType) {
         this.MasterNodeType = MasterNodeType;
     }
 
     /**
-     * Get Dedicated master node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently 
-     * @return MasterNodeDiskSize Dedicated master node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
+     * Get This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently 
+     * @return MasterNodeDiskSize This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
      */
     public Long getMasterNodeDiskSize() {
         return this.MasterNodeDiskSize;
     }
 
     /**
-     * Set Dedicated master node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
-     * @param MasterNodeDiskSize Dedicated master node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
+     * Set This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
+     * @param MasterNodeDiskSize This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
      */
     public void setMasterNodeDiskSize(Long MasterNodeDiskSize) {
         this.MasterNodeDiskSize = MasterNodeDiskSize;
@@ -596,48 +636,48 @@ public class CreateInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return NodeInfoList 
+     * Get Node information list, which is used to describe the specification information of various types of nodes in the cluster, such as node type, node quantity, node specification, disk type, and disk size 
+     * @return NodeInfoList Node information list, which is used to describe the specification information of various types of nodes in the cluster, such as node type, node quantity, node specification, disk type, and disk size
      */
     public NodeInfo [] getNodeInfoList() {
         return this.NodeInfoList;
     }
 
     /**
-     * Set 
-     * @param NodeInfoList 
+     * Set Node information list, which is used to describe the specification information of various types of nodes in the cluster, such as node type, node quantity, node specification, disk type, and disk size
+     * @param NodeInfoList Node information list, which is used to describe the specification information of various types of nodes in the cluster, such as node type, node quantity, node specification, disk type, and disk size
      */
     public void setNodeInfoList(NodeInfo [] NodeInfoList) {
         this.NodeInfoList = NodeInfoList;
     }
 
     /**
-     * Get  
-     * @return TagList 
+     * Get Node tag information list 
+     * @return TagList Node tag information list
      */
     public TagInfo [] getTagList() {
         return this.TagList;
     }
 
     /**
-     * Set 
-     * @param TagList 
+     * Set Node tag information list
+     * @param TagList Node tag information list
      */
     public void setTagList(TagInfo [] TagList) {
         this.TagList = TagList;
     }
 
     /**
-     * Get  
-     * @return BasicSecurityType 
+     * Get Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li> 
+     * @return BasicSecurityType Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
      */
     public Long getBasicSecurityType() {
         return this.BasicSecurityType;
     }
 
     /**
-     * Set 
-     * @param BasicSecurityType 
+     * Set Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
+     * @param BasicSecurityType Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
      */
     public void setBasicSecurityType(Long BasicSecurityType) {
         this.BasicSecurityType = BasicSecurityType;

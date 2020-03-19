@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ListAttachedGroupPoliciesRequest extends AbstractModel{
 
     /**
-    * User Group ID
+    * User group ID
     */
     @SerializedName("TargetGroupId")
     @Expose
@@ -44,16 +44,16 @@ public class ListAttachedGroupPoliciesRequest extends AbstractModel{
     private Long Rp;
 
     /**
-     * Get User Group ID 
-     * @return TargetGroupId User Group ID
+     * Get User group ID 
+     * @return TargetGroupId User group ID
      */
     public Long getTargetGroupId() {
         return this.TargetGroupId;
     }
 
     /**
-     * Set User Group ID
-     * @param TargetGroupId User Group ID
+     * Set User group ID
+     * @param TargetGroupId User group ID
      */
     public void setTargetGroupId(Long TargetGroupId) {
         this.TargetGroupId = TargetGroupId;

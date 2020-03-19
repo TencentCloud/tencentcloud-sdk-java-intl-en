@@ -36,7 +36,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     * HTTP2 configuration switch
 on: enabled
 off: disabled
-The first time HTTPS acceleration is enabled, it will enable HTTP2 configuration by default.
+Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Http2")
@@ -47,7 +47,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     * OCSP configuration switch
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OcspStapling")
@@ -58,7 +58,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     * Client certificate authentication feature
 on: enabled
 off: disabled
-It is disabled by default. If it is enabled, you need to upload the client certificate information. This configuration is in beta test and not fully available yet.
+This is disabled by default. The client certificate information is needed when enabled. This is still in beta and not generally available yet.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VerifyClient")
@@ -85,7 +85,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     * Spdy configuration switch
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Spdy")
@@ -95,7 +95,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
     * HTTPS certificate deployment status
 closed: already closed
-deploying: being deployed
+deploying: in deployment
 deployed: successfully deployed
 failed: deployment failed
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -136,12 +136,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Get HTTP2 configuration switch
 on: enabled
 off: disabled
-The first time HTTPS acceleration is enabled, it will enable HTTP2 configuration by default.
+Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return Http2 HTTP2 configuration switch
 on: enabled
 off: disabled
-The first time HTTPS acceleration is enabled, it will enable HTTP2 configuration by default.
+Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getHttp2() {
@@ -152,12 +152,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Set HTTP2 configuration switch
 on: enabled
 off: disabled
-The first time HTTPS acceleration is enabled, it will enable HTTP2 configuration by default.
+Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param Http2 HTTP2 configuration switch
 on: enabled
 off: disabled
-The first time HTTPS acceleration is enabled, it will enable HTTP2 configuration by default.
+Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setHttp2(String Http2) {
@@ -168,12 +168,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Get OCSP configuration switch
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return OcspStapling OCSP configuration switch
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getOcspStapling() {
@@ -184,12 +184,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Set OCSP configuration switch
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param OcspStapling OCSP configuration switch
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setOcspStapling(String OcspStapling) {
@@ -200,12 +200,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Get Client certificate authentication feature
 on: enabled
 off: disabled
-It is disabled by default. If it is enabled, you need to upload the client certificate information. This configuration is in beta test and not fully available yet.
+This is disabled by default. The client certificate information is needed when enabled. This is still in beta and not generally available yet.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return VerifyClient Client certificate authentication feature
 on: enabled
 off: disabled
-It is disabled by default. If it is enabled, you need to upload the client certificate information. This configuration is in beta test and not fully available yet.
+This is disabled by default. The client certificate information is needed when enabled. This is still in beta and not generally available yet.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getVerifyClient() {
@@ -216,12 +216,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Set Client certificate authentication feature
 on: enabled
 off: disabled
-It is disabled by default. If it is enabled, you need to upload the client certificate information. This configuration is in beta test and not fully available yet.
+This is disabled by default. The client certificate information is needed when enabled. This is still in beta and not generally available yet.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param VerifyClient Client certificate authentication feature
 on: enabled
 off: disabled
-It is disabled by default. If it is enabled, you need to upload the client certificate information. This configuration is in beta test and not fully available yet.
+This is disabled by default. The client certificate information is needed when enabled. This is still in beta and not generally available yet.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setVerifyClient(String VerifyClient) {
@@ -272,12 +272,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Get Spdy configuration switch
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return Spdy Spdy configuration switch
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getSpdy() {
@@ -288,12 +288,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Set Spdy configuration switch
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param Spdy Spdy configuration switch
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setSpdy(String Spdy) {
@@ -303,13 +303,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Get HTTPS certificate deployment status
 closed: already closed
-deploying: being deployed
+deploying: in deployment
 deployed: successfully deployed
 failed: deployment failed
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return SslStatus HTTPS certificate deployment status
 closed: already closed
-deploying: being deployed
+deploying: in deployment
 deployed: successfully deployed
 failed: deployment failed
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -321,13 +321,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Set HTTPS certificate deployment status
 closed: already closed
-deploying: being deployed
+deploying: in deployment
 deployed: successfully deployed
 failed: deployment failed
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param SslStatus HTTPS certificate deployment status
 closed: already closed
-deploying: being deployed
+deploying: in deployment
 deployed: successfully deployed
 failed: deployment failed
 Note: this field may return null, indicating that no valid values can be obtained.

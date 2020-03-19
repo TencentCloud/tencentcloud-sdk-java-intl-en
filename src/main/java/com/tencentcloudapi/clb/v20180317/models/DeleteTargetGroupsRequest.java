@@ -23,9 +23,33 @@ import java.util.HashMap;
 public class DeleteTargetGroupsRequest extends AbstractModel{
 
     /**
+    * Target group ID array
+    */
+    @SerializedName("TargetGroupIds")
+    @Expose
+    private String [] TargetGroupIds;
+
+    /**
+     * Get Target group ID array 
+     * @return TargetGroupIds Target group ID array
+     */
+    public String [] getTargetGroupIds() {
+        return this.TargetGroupIds;
+    }
+
+    /**
+     * Set Target group ID array
+     * @param TargetGroupIds Target group ID array
+     */
+    public void setTargetGroupIds(String [] TargetGroupIds) {
+        this.TargetGroupIds = TargetGroupIds;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "TargetGroupIds.", this.TargetGroupIds);
 
     }
 }

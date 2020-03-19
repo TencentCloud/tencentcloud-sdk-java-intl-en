@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CompressionRule extends AbstractModel{
 
     /**
-    * true: must be set as true, to enable compression
+    * true: must be set as true, enables compression
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Compress")
@@ -59,7 +59,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
     * File compression algorithm
 gzip: specifies Gzip compression
-brotli: It can be enabled when the Gzip compression is specified
+brotli: this can be enabled when the Gzip compression is specified
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Algorithms")
@@ -67,9 +67,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String [] Algorithms;
 
     /**
-     * Get true: must be set as true, to enable compression
+     * Get true: must be set as true, enables compression
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Compress true: must be set as true, to enable compression
+     * @return Compress true: must be set as true, enables compression
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getCompress() {
@@ -77,9 +77,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set true: must be set as true, to enable compression
+     * Set true: must be set as true, enables compression
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Compress true: must be set as true, to enable compression
+     * @param Compress true: must be set as true, enables compression
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setCompress(Boolean Compress) {
@@ -157,11 +157,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Get File compression algorithm
 gzip: specifies Gzip compression
-brotli: It can be enabled when the Gzip compression is specified
+brotli: this can be enabled when the Gzip compression is specified
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return Algorithms File compression algorithm
 gzip: specifies Gzip compression
-brotli: It can be enabled when the Gzip compression is specified
+brotli: this can be enabled when the Gzip compression is specified
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String [] getAlgorithms() {
@@ -171,11 +171,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Set File compression algorithm
 gzip: specifies Gzip compression
-brotli: It can be enabled when the Gzip compression is specified
+brotli: this can be enabled when the Gzip compression is specified
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param Algorithms File compression algorithm
 gzip: specifies Gzip compression
-brotli: It can be enabled when the Gzip compression is specified
+brotli: this can be enabled when the Gzip compression is specified
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setAlgorithms(String [] Algorithms) {

@@ -31,7 +31,7 @@ public class DescribeDomainsResponse extends AbstractModel{
 
     /**
     * The number of domain names that matched the query conditions
-Used for paged queries
+Used for paginated queries
     */
     @SerializedName("TotalNumber")
     @Expose
@@ -62,9 +62,9 @@ Used for paged queries
 
     /**
      * Get The number of domain names that matched the query conditions
-Used for paged queries 
+Used for paginated queries 
      * @return TotalNumber The number of domain names that matched the query conditions
-Used for paged queries
+Used for paginated queries
      */
     public Long getTotalNumber() {
         return this.TotalNumber;
@@ -72,9 +72,9 @@ Used for paged queries
 
     /**
      * Set The number of domain names that matched the query conditions
-Used for paged queries
+Used for paginated queries
      * @param TotalNumber The number of domain names that matched the query conditions
-Used for paged queries
+Used for paginated queries
      */
     public void setTotalNumber(Long TotalNumber) {
         this.TotalNumber = TotalNumber;

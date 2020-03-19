@@ -143,7 +143,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private OriginPullOptimization OriginPullOptimization;
 
     /**
-    * Range origin-pull configuration.
+    * Range GETs configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RangeOriginPull")
@@ -191,7 +191,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Seo Seo;
 
     /**
-    * Domain name business type. web: static acceleration; download: download acceleration; media: streaming media acceleration.
+    * Domain name service type. `web`: static acceleration; `download`: download acceleration; `media`: streaming media acceleration.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServiceType")
@@ -515,9 +515,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Range origin-pull configuration.
+     * Get Range GETs configuration.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RangeOriginPull Range origin-pull configuration.
+     * @return RangeOriginPull Range GETs configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public RangeOriginPull getRangeOriginPull() {
@@ -525,9 +525,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Range origin-pull configuration.
+     * Set Range GETs configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RangeOriginPull Range origin-pull configuration.
+     * @param RangeOriginPull Range GETs configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setRangeOriginPull(RangeOriginPull RangeOriginPull) {
@@ -635,9 +635,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Domain name business type. web: static acceleration; download: download acceleration; media: streaming media acceleration.
+     * Get Domain name service type. `web`: static acceleration; `download`: download acceleration; `media`: streaming media acceleration.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ServiceType Domain name business type. web: static acceleration; download: download acceleration; media: streaming media acceleration.
+     * @return ServiceType Domain name service type. `web`: static acceleration; `download`: download acceleration; `media`: streaming media acceleration.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getServiceType() {
@@ -645,9 +645,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Domain name business type. web: static acceleration; download: download acceleration; media: streaming media acceleration.
+     * Set Domain name service type. `web`: static acceleration; `download`: download acceleration; `media`: streaming media acceleration.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ServiceType Domain name business type. web: static acceleration; download: download acceleration; media: streaming media acceleration.
+     * @param ServiceType Domain name service type. `web`: static acceleration; `download`: download acceleration; `media`: streaming media acceleration.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setServiceType(String ServiceType) {

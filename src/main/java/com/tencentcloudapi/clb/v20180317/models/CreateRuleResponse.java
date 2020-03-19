@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class CreateRuleResponse extends AbstractModel{
 
     /**
+    * Array of unique IDs of created forwarding rules
+    */
+    @SerializedName("LocationIds")
+    @Expose
+    private String [] LocationIds;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get Array of unique IDs of created forwarding rules 
+     * @return LocationIds Array of unique IDs of created forwarding rules
+     */
+    public String [] getLocationIds() {
+        return this.LocationIds;
+    }
+
+    /**
+     * Set Array of unique IDs of created forwarding rules
+     * @param LocationIds Array of unique IDs of created forwarding rules
+     */
+    public void setLocationIds(String [] LocationIds) {
+        this.LocationIds = LocationIds;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -49,6 +72,7 @@ public class CreateRuleResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "LocationIds.", this.LocationIds);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

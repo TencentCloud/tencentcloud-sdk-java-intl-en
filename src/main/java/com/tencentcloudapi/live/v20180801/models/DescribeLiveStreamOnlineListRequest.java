@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeLiveStreamOnlineListRequest extends AbstractModel{
 
     /**
-    * Push domain name.
+    * Push domain name. If you use multiple paths, enter the `DomainName`.
     */
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
 
     /**
-    * Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+    * Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. If you use multiple paths, enter the `AppName`.
     */
     @SerializedName("AppName")
     @Expose
@@ -60,32 +60,32 @@ Default value: 10.
     private String StreamName;
 
     /**
-     * Get Push domain name. 
-     * @return DomainName Push domain name.
+     * Get Push domain name. If you use multiple paths, enter the `DomainName`. 
+     * @return DomainName Push domain name. If you use multiple paths, enter the `DomainName`.
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * Set Push domain name.
-     * @param DomainName Push domain name.
+     * Set Push domain name. If you use multiple paths, enter the `DomainName`.
+     * @param DomainName Push domain name. If you use multiple paths, enter the `DomainName`.
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
     }
 
     /**
-     * Get Push path, which is the same as the AppName in push and playback addresses and is "live" by default. 
-     * @return AppName Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+     * Get Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. If you use multiple paths, enter the `AppName`. 
+     * @return AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. If you use multiple paths, enter the `AppName`.
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
-     * @param AppName Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+     * Set Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. If you use multiple paths, enter the `AppName`.
+     * @param AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. If you use multiple paths, enter the `AppName`.
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;

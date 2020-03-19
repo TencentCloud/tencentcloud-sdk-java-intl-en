@@ -44,7 +44,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Status code returned for forced redirect 
-It supports 301, 302.
+Supports 301, 302.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RedirectStatusCode")
@@ -109,10 +109,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Status code returned for forced redirect 
-It supports 301, 302.
+Supports 301, 302.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return RedirectStatusCode Status code returned for forced redirect 
-It supports 301, 302.
+Supports 301, 302.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getRedirectStatusCode() {
@@ -121,10 +121,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Status code returned for forced redirect 
-It supports 301, 302.
+Supports 301, 302.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param RedirectStatusCode Status code returned for forced redirect 
-It supports 301, 302.
+Supports 301, 302.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setRedirectStatusCode(Long RedirectStatusCode) {

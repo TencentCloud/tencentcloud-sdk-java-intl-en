@@ -278,6 +278,61 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Boolean NoAuth;
 
     /**
+    * Number of client connections
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ClientLimit")
+    @Expose
+    private Long ClientLimit;
+
+    /**
+    * DTS status (internal parameter, which can be ignored)
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DtsStatus")
+    @Expose
+    private Long DtsStatus;
+
+    /**
+    * Upper shard bandwidth limit in MB
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("NetLimit")
+    @Expose
+    private Long NetLimit;
+
+    /**
+    * Password-free instance flag (internal parameter, which can be ignored)
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PasswordFree")
+    @Expose
+    private Long PasswordFree;
+
+    /**
+    * Read-only instance flag (internal parameter, which can be ignored)
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ReadOnly")
+    @Expose
+    private Long ReadOnly;
+
+    /**
+    * Internal parameter, which can be ignored
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Vip6")
+    @Expose
+    private String Vip6;
+
+    /**
+    * 
+    */
+    @SerializedName("RemainBandwidthDuration")
+    @Expose
+    private String RemainBandwidthDuration;
+
+    /**
      * Get Instance name 
      * @return InstanceName Instance name
      */
@@ -866,6 +921,142 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Number of client connections
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return ClientLimit Number of client connections
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getClientLimit() {
+        return this.ClientLimit;
+    }
+
+    /**
+     * Set Number of client connections
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param ClientLimit Number of client connections
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setClientLimit(Long ClientLimit) {
+        this.ClientLimit = ClientLimit;
+    }
+
+    /**
+     * Get DTS status (internal parameter, which can be ignored)
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return DtsStatus DTS status (internal parameter, which can be ignored)
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getDtsStatus() {
+        return this.DtsStatus;
+    }
+
+    /**
+     * Set DTS status (internal parameter, which can be ignored)
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param DtsStatus DTS status (internal parameter, which can be ignored)
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDtsStatus(Long DtsStatus) {
+        this.DtsStatus = DtsStatus;
+    }
+
+    /**
+     * Get Upper shard bandwidth limit in MB
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return NetLimit Upper shard bandwidth limit in MB
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getNetLimit() {
+        return this.NetLimit;
+    }
+
+    /**
+     * Set Upper shard bandwidth limit in MB
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param NetLimit Upper shard bandwidth limit in MB
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setNetLimit(Long NetLimit) {
+        this.NetLimit = NetLimit;
+    }
+
+    /**
+     * Get Password-free instance flag (internal parameter, which can be ignored)
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return PasswordFree Password-free instance flag (internal parameter, which can be ignored)
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getPasswordFree() {
+        return this.PasswordFree;
+    }
+
+    /**
+     * Set Password-free instance flag (internal parameter, which can be ignored)
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param PasswordFree Password-free instance flag (internal parameter, which can be ignored)
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setPasswordFree(Long PasswordFree) {
+        this.PasswordFree = PasswordFree;
+    }
+
+    /**
+     * Get Read-only instance flag (internal parameter, which can be ignored)
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return ReadOnly Read-only instance flag (internal parameter, which can be ignored)
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getReadOnly() {
+        return this.ReadOnly;
+    }
+
+    /**
+     * Set Read-only instance flag (internal parameter, which can be ignored)
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param ReadOnly Read-only instance flag (internal parameter, which can be ignored)
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setReadOnly(Long ReadOnly) {
+        this.ReadOnly = ReadOnly;
+    }
+
+    /**
+     * Get Internal parameter, which can be ignored
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Vip6 Internal parameter, which can be ignored
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getVip6() {
+        return this.Vip6;
+    }
+
+    /**
+     * Set Internal parameter, which can be ignored
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Vip6 Internal parameter, which can be ignored
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setVip6(String Vip6) {
+        this.Vip6 = Vip6;
+    }
+
+    /**
+     * Get  
+     * @return RemainBandwidthDuration 
+     */
+    public String getRemainBandwidthDuration() {
+        return this.RemainBandwidthDuration;
+    }
+
+    /**
+     * Set 
+     * @param RemainBandwidthDuration 
+     */
+    public void setRemainBandwidthDuration(String RemainBandwidthDuration) {
+        this.RemainBandwidthDuration = RemainBandwidthDuration;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -905,6 +1096,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
         this.setParamSimple(map, prefix + "ProjectName", this.ProjectName);
         this.setParamSimple(map, prefix + "NoAuth", this.NoAuth);
+        this.setParamSimple(map, prefix + "ClientLimit", this.ClientLimit);
+        this.setParamSimple(map, prefix + "DtsStatus", this.DtsStatus);
+        this.setParamSimple(map, prefix + "NetLimit", this.NetLimit);
+        this.setParamSimple(map, prefix + "PasswordFree", this.PasswordFree);
+        this.setParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
+        this.setParamSimple(map, prefix + "Vip6", this.Vip6);
+        this.setParamSimple(map, prefix + "RemainBandwidthDuration", this.RemainBandwidthDuration);
 
     }
 }

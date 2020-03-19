@@ -23,9 +23,81 @@ import java.util.HashMap;
 public class ModifyTargetGroupAttributeRequest extends AbstractModel{
 
     /**
+    * Target group ID
+    */
+    @SerializedName("TargetGroupId")
+    @Expose
+    private String TargetGroupId;
+
+    /**
+    * New name of target group
+    */
+    @SerializedName("TargetGroupName")
+    @Expose
+    private String TargetGroupName;
+
+    /**
+    * New default port of target group
+    */
+    @SerializedName("Port")
+    @Expose
+    private Long Port;
+
+    /**
+     * Get Target group ID 
+     * @return TargetGroupId Target group ID
+     */
+    public String getTargetGroupId() {
+        return this.TargetGroupId;
+    }
+
+    /**
+     * Set Target group ID
+     * @param TargetGroupId Target group ID
+     */
+    public void setTargetGroupId(String TargetGroupId) {
+        this.TargetGroupId = TargetGroupId;
+    }
+
+    /**
+     * Get New name of target group 
+     * @return TargetGroupName New name of target group
+     */
+    public String getTargetGroupName() {
+        return this.TargetGroupName;
+    }
+
+    /**
+     * Set New name of target group
+     * @param TargetGroupName New name of target group
+     */
+    public void setTargetGroupName(String TargetGroupName) {
+        this.TargetGroupName = TargetGroupName;
+    }
+
+    /**
+     * Get New default port of target group 
+     * @return Port New default port of target group
+     */
+    public Long getPort() {
+        return this.Port;
+    }
+
+    /**
+     * Set New default port of target group
+     * @param Port New default port of target group
+     */
+    public void setPort(Long Port) {
+        this.Port = Port;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TargetGroupId", this.TargetGroupId);
+        this.setParamSimple(map, prefix + "TargetGroupName", this.TargetGroupName);
+        this.setParamSimple(map, prefix + "Port", this.Port);
 
     }
 }

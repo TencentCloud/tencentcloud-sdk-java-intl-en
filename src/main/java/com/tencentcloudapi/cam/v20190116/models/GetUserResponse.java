@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class GetUserResponse extends AbstractModel{
 
     /**
-    * Sub-user user ID
+    * Sub-user UIN
     */
     @SerializedName("Uin")
     @Expose
@@ -86,16 +86,16 @@ public class GetUserResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Sub-user user ID 
-     * @return Uin Sub-user user ID
+     * Get Sub-user UIN 
+     * @return Uin Sub-user UIN
      */
     public Long getUin() {
         return this.Uin;
     }
 
     /**
-     * Set Sub-user user ID
-     * @param Uin Sub-user user ID
+     * Set Sub-user UIN
+     * @param Uin Sub-user UIN
      */
     public void setUin(Long Uin) {
         this.Uin = Uin;

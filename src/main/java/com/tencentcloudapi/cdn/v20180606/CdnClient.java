@@ -137,7 +137,7 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the basic configuration information of CDN acceleration domain names (inside and outside mainland China), including the project ID, service status, business type, creation time, and update time, etc.
+     *This API is used to query the basic configuration information of CDN acceleration domain names (inside and outside mainland China), including the project ID, service status, service type, creation time, and update time, etc.
      * @param req DescribeDomainsRequest
      * @return DescribeDomainsResponse
      * @throws TencentCloudSDKException
@@ -155,7 +155,7 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query all the configuration information of CDN acceleration domain names (inside and outside mainland China).
+     *This API is used to query the complete configuration information of CDN acceleration domain names (inside and outside mainland China).
      * @param req DescribeDomainsConfigRequest
      * @return DescribeDomainsConfigResponse
      * @throws TencentCloudSDKException
@@ -296,7 +296,7 @@ This API is in beta test and not fully available yet. Please stay tuned.
 
     /**
      *This API is used to query the list of domain name URLs containing regulation-violating content scanned and detected by the CDN system, and the current status of the URLs.
-It corresponds to the **Pornography Detection** page of the CDN Console.
+It corresponds to the **Pornography Detection** page on the CDN Console.
      * @param req DescribeUrlViolationsRequest
      * @return DescribeUrlViolationsResponse
      * @throws TencentCloudSDKException
@@ -350,7 +350,7 @@ It corresponds to the **Pornography Detection** page of the CDN Console.
     }
 
     /**
-     *This API is used to query the resource blocking history and the current URL status. (This API is in beta test and not fully available yet.)
+     *This API is used to query the resource blocking history and the current URL status. (This API is in beta test and not generally available yet.)
      * @param req GetDisableRecordsRequest
      * @return GetDisableRecordsResponse
      * @throws TencentCloudSDKException
@@ -368,7 +368,7 @@ It corresponds to the **Pornography Detection** page of the CDN Console.
     }
 
     /**
-     *This API is used to query the following sorting data by using different combinations of the Metric and Filter input parameters:
+     *This API is used to list data sorted the following ways by using different combinations of the Metric and Filter input parameters:
 
 + It sorts access URLs by total traffic and total requests, and returns the top 1,000 URLs in descending order.
 + It sorts client districts by total traffic and total requests, and returns the list of districts in descending order.
@@ -376,7 +376,7 @@ It corresponds to the **Pornography Detection** page of the CDN Console.
 + It sorts domain names by total traffic, peak bandwidth, total requests, average hit rate, and 2XX/3XX/4XX/5XX status codes, and returns the list of domain names in descending order.
 + It sorts domain names by total origin-pull traffic, peak origin-pull bandwidth, total origin-pull requests, average origin-pull failure rate, and 2XX/3XX/4XX/5XX origin-pull status codes, and returns the list of domain names in descending order.
 
-Note: only querying of data within the past 90 days is supported.
+Note: only data from the last 90 days will be queried.
      * @param req ListTopDataRequest
      * @return ListTopDataResponse
      * @throws TencentCloudSDKException
@@ -471,7 +471,7 @@ This API is in beta test and not fully available yet. Please stay tuned.
 
     /**
      *This API is used to suspend the acceleration service for a domain name.
-Note: after the acceleration service has been suspended, the requests to the cache node will directly return 404. In order to avoid impact to your business, please release it before suspending the acceleration service.
+Note: after the acceleration service has been suspended, requests to the cache node will return a 404 error. In order to avoid impact to your business, please move the domain name to another service before suspending the acceleration service.
      * @param req StopCdnDomainRequest
      * @return StopCdnDomainResponse
      * @throws TencentCloudSDKException
@@ -489,8 +489,8 @@ Note: after the acceleration service has been suspended, the requests to the cac
     }
 
     /**
-     *This API is used to modify the configuration information of the CDN acceleration domain names.
-Note: if you need to update complex configuration items, you must pass all the attributes of the entire object. Attributes that are not passed will use the default value. It is recommended that you call the querying API to obtain the configuration attributes first, and then you directly modify them and pass them to this API. Due to the special nature of the certificate, for HTTPS configuration, the certificate and key fields do not need to be passed.
+     *This API is used to modify the configuration of CDN acceleration domain names.
+Note: if you need to update complex configuration items, you must pass all the attributes of the entire object. The default value will be used for attributes that are not passed. We recommend calling the querying API to obtain the configuration attributes first. You can then modify and pass the attributes to the API. The certificate and key fields do not need to be passed for HTTPS configuration.
      * @param req UpdateDomainConfigRequest
      * @return UpdateDomainConfigResponse
      * @throws TencentCloudSDKException
@@ -508,7 +508,7 @@ Note: if you need to update complex configuration items, you must pass all the a
     }
 
     /**
-     *This API is used to modify the billing mode of an account. At present, the billing mode of monthly-billed accounts and sub-accounts cannot be modified.
+     *This API is used to modify the billing mode of an account. At present, the billing mode of accounts on a monthly billing cycle and sub-accounts cannot be modified.
      * @param req UpdatePayTypeRequest
      * @return UpdatePayTypeResponse
      * @throws TencentCloudSDKException

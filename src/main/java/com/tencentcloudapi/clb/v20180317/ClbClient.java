@@ -38,8 +38,8 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
-     *监听器或转发规则绑定目标组。
-本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
+     *This API is used to bind target groups to CLB listeners (layer-4 protocol) or forwarding rules (layer-7 protocol).
+This is an async API. After it is returned successfully, you can call the `DescribeTaskStatus` API with the returned `RequestID` as an input parameter to check whether this task is successful.
      * @param req AssociateTargetGroupsRequest
      * @return AssociateTargetGroupsResponse
      * @throws TencentCloudSDKException
@@ -93,8 +93,8 @@ public class ClbClient extends AbstractClient{
     }
 
     /**
-     *This API (BatchModifyTargetWeight) is used to batch modify the forwarding weights of real servers bound to a listener. Currently, it only supports HTTP/HTTPS listeners.
-This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestID as an input parameter to check whether this task is successful.
+     *This API is used to modify the forwarding weights of real servers bound to a CLB listener in batches. It supports layer-4 and layer-7 CLB listeners but not Classic CLB.
+This is an async API. After it is returned successfully, you can call the `DescribeTaskStatus` API with the returned `RequestID` as an input parameter to check whether this task is successful.
      * @param req BatchModifyTargetWeightRequest
      * @return BatchModifyTargetWeightResponse
      * @throws TencentCloudSDKException
@@ -112,7 +112,7 @@ This is an async API. After it is returned successfully, you can call the Descri
     }
 
     /**
-     *This API is used to bind CVM instances or ENIs in batches. It supports cross-region binding and only layer-4 (TCP/UDP) protocols.
+     *This API is used to bind CVM instances or ENIs in batches. It supports cross-region binding and layer-4 and layer-7 (TCP, UDP, HTTP, HTTPS) protocols.
      * @param req BatchRegisterTargetsRequest
      * @return BatchRegisterTargetsResponse
      * @throws TencentCloudSDKException
@@ -188,7 +188,7 @@ This is an async API. After it is returned successfully, you can call the Descri
     }
 
     /**
-     *创建目标组。（目标组功能正在灰度中，需要开通白名单支持）
+     *This API is used to create a target group. (The target group feature is currently in beta test. To try it out, submit a ticket for application.)
      * @param req CreateTargetGroupRequest
      * @return CreateTargetGroupResponse
      * @throws TencentCloudSDKException
@@ -281,7 +281,7 @@ This is an async API. After it is returned successfully, you can call the Descri
     }
 
     /**
-     *删除目标组
+     *This API is used to delete a target group.
      * @param req DeleteTargetGroupsRequest
      * @return DeleteTargetGroupsResponse
      * @throws TencentCloudSDKException
@@ -299,8 +299,8 @@ This is an async API. After it is returned successfully, you can call the Descri
     }
 
     /**
-     *将服务器从目标组中解绑。
-本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
+     *This API is used to unbind a server from a target group.
+This is an async API. After it is returned successfully, you can call the `DescribeTaskStatus` API with the returned `RequestID` as an input parameter to check whether this task is successful.
      * @param req DeregisterTargetGroupInstancesRequest
      * @return DeregisterTargetGroupInstancesResponse
      * @throws TencentCloudSDKException
@@ -428,7 +428,7 @@ This is an async API. After it is returned successfully, you can call the Descri
     }
 
     /**
-     *This API (DescribeListeners) is used to get the list of listeners by CLB IDs, listener protocol, or port. If no filter is specified, the default number (20) of listeners for the instance will be returned.
+     *This API is used to get the list of listeners by CLB instance ID, listener protocol, or port. If no filter is specified, all listeners under the CLB instance will be returned.
      * @param req DescribeListenersRequest
      * @return DescribeListenersResponse
      * @throws TencentCloudSDKException
@@ -446,7 +446,7 @@ This is an async API. After it is returned successfully, you can call the Descri
     }
 
     /**
-     *根据证书ID查询其在一个地域中所关联到负载均衡实例列表
+     *This API is used to query the list of CLB instances associated with a certificate in a region by certificate ID.
      * @param req DescribeLoadBalancerListByCertIdRequest
      * @return DescribeLoadBalancerListByCertIdResponse
      * @throws TencentCloudSDKException
@@ -464,7 +464,7 @@ This is an async API. After it is returned successfully, you can call the Descri
     }
 
     /**
-     *This API is used to query the list of CLB instances.
+     *This API is used to query the list of CLB instances in a region.
 
      * @param req DescribeLoadBalancersRequest
      * @return DescribeLoadBalancersResponse
@@ -501,7 +501,7 @@ This is an async API. After it is returned successfully, you can call the Descri
     }
 
     /**
-     *获取目标组绑定的服务器信息
+     *This API is used to get the information of servers bound to a target group.
      * @param req DescribeTargetGroupInstancesRequest
      * @return DescribeTargetGroupInstancesResponse
      * @throws TencentCloudSDKException
@@ -519,7 +519,7 @@ This is an async API. After it is returned successfully, you can call the Descri
     }
 
     /**
-     *获取目标组列表
+     *This API is used to get the target group list.
      * @param req DescribeTargetGroupListRequest
      * @return DescribeTargetGroupListResponse
      * @throws TencentCloudSDKException
@@ -537,7 +537,7 @@ This is an async API. After it is returned successfully, you can call the Descri
     }
 
     /**
-     *查询目标组信息
+     *This API is used to query the target group information.
      * @param req DescribeTargetGroupsRequest
      * @return DescribeTargetGroupsResponse
      * @throws TencentCloudSDKException
@@ -609,8 +609,8 @@ This is an async API. After it is returned successfully, you can call the Descri
     }
 
     /**
-     *解除规则的目标组关联关系。
-本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
+     *This API is used to unbind target groups from a rule.
+This is an async API. After it is returned successfully, you can call the `DescribeTaskStatus` API with the returned `RequestID` as an input parameter to check whether this task is successful.
      * @param req DisassociateTargetGroupsRequest
      * @return DisassociateTargetGroupsResponse
      * @throws TencentCloudSDKException
@@ -740,7 +740,7 @@ This is an async API. After it is returned successfully, you can call the Descri
     }
 
     /**
-     *修改目标组的名称或者默认端口属性
+     *This API is used to rename a target group or modify its default port attribute.
      * @param req ModifyTargetGroupAttributeRequest
      * @return ModifyTargetGroupAttributeResponse
      * @throws TencentCloudSDKException
@@ -758,8 +758,8 @@ This is an async API. After it is returned successfully, you can call the Descri
     }
 
     /**
-     *批量修改目标组服务器端口。
-本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
+     *This API is used to modify server ports of a target group in batches.
+This is an async API. After it is returned successfully, you can call the `DescribeTaskStatus` API with the returned `RequestID` as an input parameter to check whether this task is successful.
      * @param req ModifyTargetGroupInstancesPortRequest
      * @return ModifyTargetGroupInstancesPortResponse
      * @throws TencentCloudSDKException
@@ -777,8 +777,8 @@ This is an async API. After it is returned successfully, you can call the Descri
     }
 
     /**
-     *批量修改目标组的服务器权重。
-本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
+     *This API is used to modify server weights of a target group in batches.
+This is an async API. After it is returned successfully, you can call the `DescribeTaskStatus` API with the returned `RequestID` as an input parameter to check whether this task is successful.
      * @param req ModifyTargetGroupInstancesWeightRequest
      * @return ModifyTargetGroupInstancesWeightResponse
      * @throws TencentCloudSDKException
@@ -834,8 +834,8 @@ This is an async API. After it is returned successfully, you can call the Descri
     }
 
     /**
-     *注册服务器到目标组。
-本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
+     *This API is used to register servers to a target group.
+This is an async API. After it is returned successfully, you can call the `DescribeTaskStatus` API with the returned `RequestID` as an input parameter to check whether this task is successful.
      * @param req RegisterTargetGroupInstancesRequest
      * @return RegisterTargetGroupInstancesResponse
      * @throws TencentCloudSDKException

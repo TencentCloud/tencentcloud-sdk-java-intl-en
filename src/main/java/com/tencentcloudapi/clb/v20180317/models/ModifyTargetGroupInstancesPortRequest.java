@@ -23,9 +23,57 @@ import java.util.HashMap;
 public class ModifyTargetGroupInstancesPortRequest extends AbstractModel{
 
     /**
+    * Target group ID
+    */
+    @SerializedName("TargetGroupId")
+    @Expose
+    private String TargetGroupId;
+
+    /**
+    * Array of servers for which to modify port
+    */
+    @SerializedName("TargetGroupInstances")
+    @Expose
+    private TargetGroupInstance [] TargetGroupInstances;
+
+    /**
+     * Get Target group ID 
+     * @return TargetGroupId Target group ID
+     */
+    public String getTargetGroupId() {
+        return this.TargetGroupId;
+    }
+
+    /**
+     * Set Target group ID
+     * @param TargetGroupId Target group ID
+     */
+    public void setTargetGroupId(String TargetGroupId) {
+        this.TargetGroupId = TargetGroupId;
+    }
+
+    /**
+     * Get Array of servers for which to modify port 
+     * @return TargetGroupInstances Array of servers for which to modify port
+     */
+    public TargetGroupInstance [] getTargetGroupInstances() {
+        return this.TargetGroupInstances;
+    }
+
+    /**
+     * Set Array of servers for which to modify port
+     * @param TargetGroupInstances Array of servers for which to modify port
+     */
+    public void setTargetGroupInstances(TargetGroupInstance [] TargetGroupInstances) {
+        this.TargetGroupInstances = TargetGroupInstances;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TargetGroupId", this.TargetGroupId);
+        this.setParamArrayObj(map, prefix + "TargetGroupInstances.", this.TargetGroupInstances);
 
     }
 }

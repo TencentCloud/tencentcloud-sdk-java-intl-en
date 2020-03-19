@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeUrlViolationsRequest extends AbstractModel{
 
     /**
-    * Offset for paged queries. Default value: 0 (the first page).
+    * Offset for paginated queries. Default value: 0 (the first page).
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Limit on paged queries. Default value: 100.
+    * Limit on paginated queries. Default value: 100.
     */
     @SerializedName("Limit")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeUrlViolationsRequest extends AbstractModel{
     private String [] Domains;
 
     /**
-     * Get Offset for paged queries. Default value: 0 (the first page). 
-     * @return Offset Offset for paged queries. Default value: 0 (the first page).
+     * Get Offset for paginated queries. Default value: 0 (the first page). 
+     * @return Offset Offset for paginated queries. Default value: 0 (the first page).
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset for paged queries. Default value: 0 (the first page).
-     * @param Offset Offset for paged queries. Default value: 0 (the first page).
+     * Set Offset for paginated queries. Default value: 0 (the first page).
+     * @param Offset Offset for paginated queries. Default value: 0 (the first page).
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Limit on paged queries. Default value: 100. 
-     * @return Limit Limit on paged queries. Default value: 100.
+     * Get Limit on paginated queries. Default value: 100. 
+     * @return Limit Limit on paginated queries. Default value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit on paged queries. Default value: 100.
-     * @param Limit Limit on paged queries. Default value: 100.
+     * Set Limit on paginated queries. Default value: 100.
+     * @param Limit Limit on paginated queries. Default value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

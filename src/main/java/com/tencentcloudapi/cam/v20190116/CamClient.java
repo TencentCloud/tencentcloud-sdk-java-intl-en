@@ -686,7 +686,7 @@ public class CamClient extends AbstractClient{
     }
 
     /**
-     *This API is used to set user login, sensitive operations and async login.
+     *This API is used to set account verification for login and sensitive operation protection.
      * @param req SetFlagRequest
      * @return SetFlagResponse
      * @throws TencentCloudSDKException

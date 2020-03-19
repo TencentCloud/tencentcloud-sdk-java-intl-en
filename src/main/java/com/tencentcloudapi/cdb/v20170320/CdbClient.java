@@ -74,6 +74,24 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to rebalance the loads of instances in an RO group. Please note that the database connections to those instances will be interrupted transiently; therefore, you should ensure that your application can reconnect to the databases. This operation should be performed with caution.
+     * @param req BalanceRoGroupLoadRequest
+     * @return BalanceRoGroupLoadResponse
+     * @throws TencentCloudSDKException
+     */
+    public BalanceRoGroupLoadResponse BalanceRoGroupLoad(BalanceRoGroupLoadRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BalanceRoGroupLoadResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<BalanceRoGroupLoadResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "BalanceRoGroupLoad"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (CloseWanService) is used to disable public network access for TencentDB instance, which will make public IP addresses inaccessible.
      * @param req CloseWanServiceRequest
      * @return CloseWanServiceResponse
@@ -366,6 +384,42 @@ The new API (CreateBackup) can specify the table to be backed up when a logical 
     }
 
     /**
+     *This API is used to query the backup overview of a user. It will return the user's current total number of backups, total capacity used by backups, capacity in the free tier, and paid capacity (all capacity values are in bytes).
+     * @param req DescribeBackupOverviewRequest
+     * @return DescribeBackupOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupOverviewResponse DescribeBackupOverview(DescribeBackupOverviewRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupOverviewResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupOverviewResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeBackupOverview"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the statistics of backups. It will return the capacity used by backups at the instance level and the number and used capacity of data backups and log backups of each instance (all capacity values are in bytes).
+     * @param req DescribeBackupSummariesRequest
+     * @return DescribeBackupSummariesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupSummariesResponse DescribeBackupSummaries(DescribeBackupSummariesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupSummariesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupSummariesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeBackupSummaries"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the backup tables of the specified database. It has been disused.
 After the legacy version becomes capable of full backup, if you want to download logical backup files by table, you need to use this API.
 The new API (CreateBackup) can specify the table to be backed up when a logical backup file is created, which can be downloaded directly.
@@ -397,6 +451,24 @@ The new API (CreateBackup) can specify the table to be backed up when a logical 
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeBackups"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the log backup overview of a user in the current region.
+     * @param req DescribeBinlogBackupOverviewRequest
+     * @return DescribeBinlogBackupOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBinlogBackupOverviewResponse DescribeBinlogBackupOverview(DescribeBinlogBackupOverviewRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBinlogBackupOverviewResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBinlogBackupOverviewResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeBinlogBackupOverview"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -577,6 +649,24 @@ The new API (CreateBackup) can specify the table to be backed up when a logical 
                 Type type = new TypeToken<JsonResponseModel<DescribeDBZoneConfigResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeDBZoneConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the data backup overview of a user in the current region.
+     * @param req DescribeDataBackupOverviewRequest
+     * @return DescribeDataBackupOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataBackupOverviewResponse DescribeDataBackupOverview(DescribeDataBackupOverviewRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDataBackupOverviewResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDataBackupOverviewResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDataBackupOverview"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1156,6 +1246,24 @@ Note that when modifying account permissions, you need to pass in the full permi
                 Type type = new TypeToken<JsonResponseModel<ModifyParamTemplateResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyParamTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to update the information of a TencentDB RO group, such as configuring an instance removal policy in case of excessive delay and setting read weights of RO instances.
+     * @param req ModifyRoGroupInfoRequest
+     * @return ModifyRoGroupInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRoGroupInfoResponse ModifyRoGroupInfo(ModifyRoGroupInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRoGroupInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRoGroupInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyRoGroupInfo"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

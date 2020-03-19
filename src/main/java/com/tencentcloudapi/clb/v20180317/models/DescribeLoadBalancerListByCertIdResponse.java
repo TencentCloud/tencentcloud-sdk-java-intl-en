@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class DescribeLoadBalancerListByCertIdResponse extends AbstractModel{
 
     /**
+    * Certificate ID and list of CLB instances associated with it
+    */
+    @SerializedName("CertSet")
+    @Expose
+    private CertIdRelatedWithLoadBalancers [] CertSet;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get Certificate ID and list of CLB instances associated with it 
+     * @return CertSet Certificate ID and list of CLB instances associated with it
+     */
+    public CertIdRelatedWithLoadBalancers [] getCertSet() {
+        return this.CertSet;
+    }
+
+    /**
+     * Set Certificate ID and list of CLB instances associated with it
+     * @param CertSet Certificate ID and list of CLB instances associated with it
+     */
+    public void setCertSet(CertIdRelatedWithLoadBalancers [] CertSet) {
+        this.CertSet = CertSet;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -49,6 +72,7 @@ public class DescribeLoadBalancerListByCertIdResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "CertSet.", this.CertSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

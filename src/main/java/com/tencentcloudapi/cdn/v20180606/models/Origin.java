@@ -33,17 +33,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Master origin server type
-The following types are supported in input parameters:
+The following types are supported for input parameters:
 domain: domain name type
 cos: COS origin
-ip: IP list is used as origin server
+ip: IP list used as origin server
 ipv6: origin server list is a single IPv6 address
 ip_ipv6: origin server list is multiple IPv4 addresses and an IPv6 address
 The following types of output parameters are added:
-image: cloud Infinite origin
-ftp: historical FTP origin, which is no longer maintained.
-When modifying Origins, you need to enter the corresponding OriginType.
-The IPv6 feature is not fully available yet. To use this feature, you need to apply for it first.
+image: Cloud Infinite origin
+ftp: legacy FTP origin, which is no longer maintained.
+When modifying `Origins`, you need to enter the corresponding OriginType.
+The IPv6 feature is not generally available yet. Please send in a whitelist application to use this feature.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OriginType")
@@ -51,8 +51,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String OriginType;
 
     /**
-    * Host header used when pulling the master origin server. If the Host header is not entered, it will be the acceleration domain name by default.
-If a wildcard domain name is accessed, then the Host header is the sub-domain name during the access by default.
+    * Host header used when accessing the master origin server. If left empty, the acceleration domain name will be used by default.
+If a wildcard domain name is accessed, then the sub-domain name during the access will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServerName")
@@ -60,8 +60,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ServerName;
 
     /**
-    * When OriginType is COS, you can specify whether to allow access to private buckets.
-Note: to enable this configuration, you need to authorize the CDN to access this private bucket first.
+    * When OriginType is COS, you can specify if access to private buckets is allowed.
+Note: to enable this configuration, you need to first grant CDN access to the private bucket.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CosPrivateAccess")
@@ -72,7 +72,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     * Origin-pull protocol configuration
 http: forced HTTP origin-pull
 follow: protocol follow origin-pull
-https: forced HTTPS origin-pull. It only supports origin server port 443 for origin-pull.
+https: forced HTTPS origin-pull. This only supports origin server port 443 for origin-pull.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OriginPullProtocol")
@@ -91,7 +91,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
     * Backup origin server type, which supports the following types:
 domain: domain name type
-ip: IP list is used as origin server
+ip: IP list used as origin server
 When modifying BackupOrigins, you need to enter the corresponding BackupOriginType.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
@@ -100,7 +100,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String BackupOriginType;
 
     /**
-    * Host header used when pulling the backup origin server. If the Host header is not entered, it will be the ServerName of master origin server by default.
+    * Host header used when accessing the backup origin server. If left empty, the ServerName of master origin server will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BackupServerName")
@@ -133,30 +133,30 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Master origin server type
-The following types are supported in input parameters:
+The following types are supported for input parameters:
 domain: domain name type
 cos: COS origin
-ip: IP list is used as origin server
+ip: IP list used as origin server
 ipv6: origin server list is a single IPv6 address
 ip_ipv6: origin server list is multiple IPv4 addresses and an IPv6 address
 The following types of output parameters are added:
-image: cloud Infinite origin
-ftp: historical FTP origin, which is no longer maintained.
-When modifying Origins, you need to enter the corresponding OriginType.
-The IPv6 feature is not fully available yet. To use this feature, you need to apply for it first.
+image: Cloud Infinite origin
+ftp: legacy FTP origin, which is no longer maintained.
+When modifying `Origins`, you need to enter the corresponding OriginType.
+The IPv6 feature is not generally available yet. Please send in a whitelist application to use this feature.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return OriginType Master origin server type
-The following types are supported in input parameters:
+The following types are supported for input parameters:
 domain: domain name type
 cos: COS origin
-ip: IP list is used as origin server
+ip: IP list used as origin server
 ipv6: origin server list is a single IPv6 address
 ip_ipv6: origin server list is multiple IPv4 addresses and an IPv6 address
 The following types of output parameters are added:
-image: cloud Infinite origin
-ftp: historical FTP origin, which is no longer maintained.
-When modifying Origins, you need to enter the corresponding OriginType.
-The IPv6 feature is not fully available yet. To use this feature, you need to apply for it first.
+image: Cloud Infinite origin
+ftp: legacy FTP origin, which is no longer maintained.
+When modifying `Origins`, you need to enter the corresponding OriginType.
+The IPv6 feature is not generally available yet. Please send in a whitelist application to use this feature.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getOriginType() {
@@ -165,30 +165,30 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Master origin server type
-The following types are supported in input parameters:
+The following types are supported for input parameters:
 domain: domain name type
 cos: COS origin
-ip: IP list is used as origin server
+ip: IP list used as origin server
 ipv6: origin server list is a single IPv6 address
 ip_ipv6: origin server list is multiple IPv4 addresses and an IPv6 address
 The following types of output parameters are added:
-image: cloud Infinite origin
-ftp: historical FTP origin, which is no longer maintained.
-When modifying Origins, you need to enter the corresponding OriginType.
-The IPv6 feature is not fully available yet. To use this feature, you need to apply for it first.
+image: Cloud Infinite origin
+ftp: legacy FTP origin, which is no longer maintained.
+When modifying `Origins`, you need to enter the corresponding OriginType.
+The IPv6 feature is not generally available yet. Please send in a whitelist application to use this feature.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param OriginType Master origin server type
-The following types are supported in input parameters:
+The following types are supported for input parameters:
 domain: domain name type
 cos: COS origin
-ip: IP list is used as origin server
+ip: IP list used as origin server
 ipv6: origin server list is a single IPv6 address
 ip_ipv6: origin server list is multiple IPv4 addresses and an IPv6 address
 The following types of output parameters are added:
-image: cloud Infinite origin
-ftp: historical FTP origin, which is no longer maintained.
-When modifying Origins, you need to enter the corresponding OriginType.
-The IPv6 feature is not fully available yet. To use this feature, you need to apply for it first.
+image: Cloud Infinite origin
+ftp: legacy FTP origin, which is no longer maintained.
+When modifying `Origins`, you need to enter the corresponding OriginType.
+The IPv6 feature is not generally available yet. Please send in a whitelist application to use this feature.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setOriginType(String OriginType) {
@@ -196,11 +196,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Host header used when pulling the master origin server. If the Host header is not entered, it will be the acceleration domain name by default.
-If a wildcard domain name is accessed, then the Host header is the sub-domain name during the access by default.
+     * Get Host header used when accessing the master origin server. If left empty, the acceleration domain name will be used by default.
+If a wildcard domain name is accessed, then the sub-domain name during the access will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ServerName Host header used when pulling the master origin server. If the Host header is not entered, it will be the acceleration domain name by default.
-If a wildcard domain name is accessed, then the Host header is the sub-domain name during the access by default.
+     * @return ServerName Host header used when accessing the master origin server. If left empty, the acceleration domain name will be used by default.
+If a wildcard domain name is accessed, then the sub-domain name during the access will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getServerName() {
@@ -208,11 +208,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Host header used when pulling the master origin server. If the Host header is not entered, it will be the acceleration domain name by default.
-If a wildcard domain name is accessed, then the Host header is the sub-domain name during the access by default.
+     * Set Host header used when accessing the master origin server. If left empty, the acceleration domain name will be used by default.
+If a wildcard domain name is accessed, then the sub-domain name during the access will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ServerName Host header used when pulling the master origin server. If the Host header is not entered, it will be the acceleration domain name by default.
-If a wildcard domain name is accessed, then the Host header is the sub-domain name during the access by default.
+     * @param ServerName Host header used when accessing the master origin server. If left empty, the acceleration domain name will be used by default.
+If a wildcard domain name is accessed, then the sub-domain name during the access will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setServerName(String ServerName) {
@@ -220,11 +220,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get When OriginType is COS, you can specify whether to allow access to private buckets.
-Note: to enable this configuration, you need to authorize the CDN to access this private bucket first.
+     * Get When OriginType is COS, you can specify if access to private buckets is allowed.
+Note: to enable this configuration, you need to first grant CDN access to the private bucket.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CosPrivateAccess When OriginType is COS, you can specify whether to allow access to private buckets.
-Note: to enable this configuration, you need to authorize the CDN to access this private bucket first.
+     * @return CosPrivateAccess When OriginType is COS, you can specify if access to private buckets is allowed.
+Note: to enable this configuration, you need to first grant CDN access to the private bucket.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getCosPrivateAccess() {
@@ -232,11 +232,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set When OriginType is COS, you can specify whether to allow access to private buckets.
-Note: to enable this configuration, you need to authorize the CDN to access this private bucket first.
+     * Set When OriginType is COS, you can specify if access to private buckets is allowed.
+Note: to enable this configuration, you need to first grant CDN access to the private bucket.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CosPrivateAccess When OriginType is COS, you can specify whether to allow access to private buckets.
-Note: to enable this configuration, you need to authorize the CDN to access this private bucket first.
+     * @param CosPrivateAccess When OriginType is COS, you can specify if access to private buckets is allowed.
+Note: to enable this configuration, you need to first grant CDN access to the private bucket.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setCosPrivateAccess(String CosPrivateAccess) {
@@ -247,12 +247,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Get Origin-pull protocol configuration
 http: forced HTTP origin-pull
 follow: protocol follow origin-pull
-https: forced HTTPS origin-pull. It only supports origin server port 443 for origin-pull.
+https: forced HTTPS origin-pull. This only supports origin server port 443 for origin-pull.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return OriginPullProtocol Origin-pull protocol configuration
 http: forced HTTP origin-pull
 follow: protocol follow origin-pull
-https: forced HTTPS origin-pull. It only supports origin server port 443 for origin-pull.
+https: forced HTTPS origin-pull. This only supports origin server port 443 for origin-pull.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getOriginPullProtocol() {
@@ -263,12 +263,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Set Origin-pull protocol configuration
 http: forced HTTP origin-pull
 follow: protocol follow origin-pull
-https: forced HTTPS origin-pull. It only supports origin server port 443 for origin-pull.
+https: forced HTTPS origin-pull. This only supports origin server port 443 for origin-pull.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param OriginPullProtocol Origin-pull protocol configuration
 http: forced HTTP origin-pull
 follow: protocol follow origin-pull
-https: forced HTTPS origin-pull. It only supports origin server port 443 for origin-pull.
+https: forced HTTPS origin-pull. This only supports origin server port 443 for origin-pull.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setOriginPullProtocol(String OriginPullProtocol) {
@@ -302,12 +302,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Get Backup origin server type, which supports the following types:
 domain: domain name type
-ip: IP list is used as origin server
+ip: IP list used as origin server
 When modifying BackupOrigins, you need to enter the corresponding BackupOriginType.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return BackupOriginType Backup origin server type, which supports the following types:
 domain: domain name type
-ip: IP list is used as origin server
+ip: IP list used as origin server
 When modifying BackupOrigins, you need to enter the corresponding BackupOriginType.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
@@ -318,12 +318,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Set Backup origin server type, which supports the following types:
 domain: domain name type
-ip: IP list is used as origin server
+ip: IP list used as origin server
 When modifying BackupOrigins, you need to enter the corresponding BackupOriginType.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param BackupOriginType Backup origin server type, which supports the following types:
 domain: domain name type
-ip: IP list is used as origin server
+ip: IP list used as origin server
 When modifying BackupOrigins, you need to enter the corresponding BackupOriginType.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
@@ -332,9 +332,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Host header used when pulling the backup origin server. If the Host header is not entered, it will be the ServerName of master origin server by default.
+     * Get Host header used when accessing the backup origin server. If left empty, the ServerName of master origin server will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return BackupServerName Host header used when pulling the backup origin server. If the Host header is not entered, it will be the ServerName of master origin server by default.
+     * @return BackupServerName Host header used when accessing the backup origin server. If left empty, the ServerName of master origin server will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getBackupServerName() {
@@ -342,9 +342,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Host header used when pulling the backup origin server. If the Host header is not entered, it will be the ServerName of master origin server by default.
+     * Set Host header used when accessing the backup origin server. If left empty, the ServerName of master origin server will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param BackupServerName Host header used when pulling the backup origin server. If the Host header is not entered, it will be the ServerName of master origin server by default.
+     * @param BackupServerName Host header used when accessing the backup origin server. If left empty, the ServerName of master origin server will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setBackupServerName(String BackupServerName) {

@@ -37,7 +37,8 @@ public class UpdateInstanceRequest extends AbstractModel{
     private String InstanceName;
 
     /**
-    * Number of nodes (2-50)
+    * This parameter has been disused. Please use `NodeInfoList`
+Number of nodes (2–50)
     */
     @SerializedName("NodeNum")
     @Expose
@@ -65,35 +66,40 @@ public class UpdateInstanceRequest extends AbstractModel{
     private EsAcl EsAcl;
 
     /**
-    * Disk size in GB
+    * This parameter has been disused. Please use `NodeInfoList`
+Disk size in GB
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+    * This parameter has been disused. Please use `NodeInfoList`
+Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
     */
     @SerializedName("NodeType")
     @Expose
     private String NodeType;
 
     /**
-    * Number of dedicated master nodes (only 3 and 5 are supported)
+    * This parameter has been disused. Please use `NodeInfoList`
+Number of dedicated master nodes (only 3 and 5 are supported)
     */
     @SerializedName("MasterNodeNum")
     @Expose
     private Long MasterNodeNum;
 
     /**
-    * Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+    * This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
     */
     @SerializedName("MasterNodeType")
     @Expose
     private String MasterNodeType;
 
     /**
-    * Dedicated master node disk size in GB. This is 50 GB by default and currently cannot be customized
+    * This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node disk size in GB. This is 50 GB by default and currently cannot be customized
     */
     @SerializedName("MasterNodeDiskSize")
     @Expose
@@ -114,35 +120,35 @@ public class UpdateInstanceRequest extends AbstractModel{
     private CosBackup CosBackup;
 
     /**
-    * 
+    * Node information list. You can pass in only the nodes to be updated and their corresponding specification information. Supported operations include: <li>modifying the number of nodes in the same type </li><li>modifying the specification and disk size of nodes in the same type </li><li>adding a node type (you must also specify the node type, quantity, specification, disk, etc.) </li>The above operations can only be performed one at a time, and the disk type cannot be modified
     */
     @SerializedName("NodeInfoList")
     @Expose
     private NodeInfo [] NodeInfoList;
 
     /**
-    * 
+    * Public network access status
     */
     @SerializedName("PublicAccess")
     @Expose
     private String PublicAccess;
 
     /**
-    * 
+    * Public network ACL
     */
     @SerializedName("EsPublicAcl")
     @Expose
     private EsPublicAcl EsPublicAcl;
 
     /**
-    * 
+    * Public network access status of Kibana
     */
     @SerializedName("KibanaPublicAccess")
     @Expose
     private String KibanaPublicAccess;
 
     /**
-    * 
+    * Private network access status of Kibana
     */
     @SerializedName("KibanaPrivateAccess")
     @Expose
@@ -181,16 +187,20 @@ public class UpdateInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Number of nodes (2-50) 
-     * @return NodeNum Number of nodes (2-50)
+     * Get This parameter has been disused. Please use `NodeInfoList`
+Number of nodes (2–50) 
+     * @return NodeNum This parameter has been disused. Please use `NodeInfoList`
+Number of nodes (2–50)
      */
     public Long getNodeNum() {
         return this.NodeNum;
     }
 
     /**
-     * Set Number of nodes (2-50)
-     * @param NodeNum Number of nodes (2-50)
+     * Set This parameter has been disused. Please use `NodeInfoList`
+Number of nodes (2–50)
+     * @param NodeNum This parameter has been disused. Please use `NodeInfoList`
+Number of nodes (2–50)
      */
     public void setNodeNum(Long NodeNum) {
         this.NodeNum = NodeNum;
@@ -245,80 +255,100 @@ public class UpdateInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Disk size in GB 
-     * @return DiskSize Disk size in GB
+     * Get This parameter has been disused. Please use `NodeInfoList`
+Disk size in GB 
+     * @return DiskSize This parameter has been disused. Please use `NodeInfoList`
+Disk size in GB
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set Disk size in GB
-     * @param DiskSize Disk size in GB
+     * Set This parameter has been disused. Please use `NodeInfoList`
+Disk size in GB
+     * @param DiskSize This parameter has been disused. Please use `NodeInfoList`
+Disk size in GB
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li> 
-     * @return NodeType Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+     * Get This parameter has been disused. Please use `NodeInfoList`
+Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li> 
+     * @return NodeType This parameter has been disused. Please use `NodeInfoList`
+Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
      */
     public String getNodeType() {
         return this.NodeType;
     }
 
     /**
-     * Set Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-     * @param NodeType Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+     * Set This parameter has been disused. Please use `NodeInfoList`
+Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+     * @param NodeType This parameter has been disused. Please use `NodeInfoList`
+Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
      */
     public void setNodeType(String NodeType) {
         this.NodeType = NodeType;
     }
 
     /**
-     * Get Number of dedicated master nodes (only 3 and 5 are supported) 
-     * @return MasterNodeNum Number of dedicated master nodes (only 3 and 5 are supported)
+     * Get This parameter has been disused. Please use `NodeInfoList`
+Number of dedicated master nodes (only 3 and 5 are supported) 
+     * @return MasterNodeNum This parameter has been disused. Please use `NodeInfoList`
+Number of dedicated master nodes (only 3 and 5 are supported)
      */
     public Long getMasterNodeNum() {
         return this.MasterNodeNum;
     }
 
     /**
-     * Set Number of dedicated master nodes (only 3 and 5 are supported)
-     * @param MasterNodeNum Number of dedicated master nodes (only 3 and 5 are supported)
+     * Set This parameter has been disused. Please use `NodeInfoList`
+Number of dedicated master nodes (only 3 and 5 are supported)
+     * @param MasterNodeNum This parameter has been disused. Please use `NodeInfoList`
+Number of dedicated master nodes (only 3 and 5 are supported)
      */
     public void setMasterNodeNum(Long MasterNodeNum) {
         this.MasterNodeNum = MasterNodeNum;
     }
 
     /**
-     * Get Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li> 
-     * @return MasterNodeType Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+     * Get This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li> 
+     * @return MasterNodeType This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
      */
     public String getMasterNodeType() {
         return this.MasterNodeType;
     }
 
     /**
-     * Set Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
-     * @param MasterNodeType Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+     * Set This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+     * @param MasterNodeType This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
      */
     public void setMasterNodeType(String MasterNodeType) {
         this.MasterNodeType = MasterNodeType;
     }
 
     /**
-     * Get Dedicated master node disk size in GB. This is 50 GB by default and currently cannot be customized 
-     * @return MasterNodeDiskSize Dedicated master node disk size in GB. This is 50 GB by default and currently cannot be customized
+     * Get This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node disk size in GB. This is 50 GB by default and currently cannot be customized 
+     * @return MasterNodeDiskSize This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node disk size in GB. This is 50 GB by default and currently cannot be customized
      */
     public Long getMasterNodeDiskSize() {
         return this.MasterNodeDiskSize;
     }
 
     /**
-     * Set Dedicated master node disk size in GB. This is 50 GB by default and currently cannot be customized
-     * @param MasterNodeDiskSize Dedicated master node disk size in GB. This is 50 GB by default and currently cannot be customized
+     * Set This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node disk size in GB. This is 50 GB by default and currently cannot be customized
+     * @param MasterNodeDiskSize This parameter has been disused. Please use `NodeInfoList`
+Dedicated master node disk size in GB. This is 50 GB by default and currently cannot be customized
      */
     public void setMasterNodeDiskSize(Long MasterNodeDiskSize) {
         this.MasterNodeDiskSize = MasterNodeDiskSize;
@@ -357,80 +387,80 @@ public class UpdateInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return NodeInfoList 
+     * Get Node information list. You can pass in only the nodes to be updated and their corresponding specification information. Supported operations include: <li>modifying the number of nodes in the same type </li><li>modifying the specification and disk size of nodes in the same type </li><li>adding a node type (you must also specify the node type, quantity, specification, disk, etc.) </li>The above operations can only be performed one at a time, and the disk type cannot be modified 
+     * @return NodeInfoList Node information list. You can pass in only the nodes to be updated and their corresponding specification information. Supported operations include: <li>modifying the number of nodes in the same type </li><li>modifying the specification and disk size of nodes in the same type </li><li>adding a node type (you must also specify the node type, quantity, specification, disk, etc.) </li>The above operations can only be performed one at a time, and the disk type cannot be modified
      */
     public NodeInfo [] getNodeInfoList() {
         return this.NodeInfoList;
     }
 
     /**
-     * Set 
-     * @param NodeInfoList 
+     * Set Node information list. You can pass in only the nodes to be updated and their corresponding specification information. Supported operations include: <li>modifying the number of nodes in the same type </li><li>modifying the specification and disk size of nodes in the same type </li><li>adding a node type (you must also specify the node type, quantity, specification, disk, etc.) </li>The above operations can only be performed one at a time, and the disk type cannot be modified
+     * @param NodeInfoList Node information list. You can pass in only the nodes to be updated and their corresponding specification information. Supported operations include: <li>modifying the number of nodes in the same type </li><li>modifying the specification and disk size of nodes in the same type </li><li>adding a node type (you must also specify the node type, quantity, specification, disk, etc.) </li>The above operations can only be performed one at a time, and the disk type cannot be modified
      */
     public void setNodeInfoList(NodeInfo [] NodeInfoList) {
         this.NodeInfoList = NodeInfoList;
     }
 
     /**
-     * Get  
-     * @return PublicAccess 
+     * Get Public network access status 
+     * @return PublicAccess Public network access status
      */
     public String getPublicAccess() {
         return this.PublicAccess;
     }
 
     /**
-     * Set 
-     * @param PublicAccess 
+     * Set Public network access status
+     * @param PublicAccess Public network access status
      */
     public void setPublicAccess(String PublicAccess) {
         this.PublicAccess = PublicAccess;
     }
 
     /**
-     * Get  
-     * @return EsPublicAcl 
+     * Get Public network ACL 
+     * @return EsPublicAcl Public network ACL
      */
     public EsPublicAcl getEsPublicAcl() {
         return this.EsPublicAcl;
     }
 
     /**
-     * Set 
-     * @param EsPublicAcl 
+     * Set Public network ACL
+     * @param EsPublicAcl Public network ACL
      */
     public void setEsPublicAcl(EsPublicAcl EsPublicAcl) {
         this.EsPublicAcl = EsPublicAcl;
     }
 
     /**
-     * Get  
-     * @return KibanaPublicAccess 
+     * Get Public network access status of Kibana 
+     * @return KibanaPublicAccess Public network access status of Kibana
      */
     public String getKibanaPublicAccess() {
         return this.KibanaPublicAccess;
     }
 
     /**
-     * Set 
-     * @param KibanaPublicAccess 
+     * Set Public network access status of Kibana
+     * @param KibanaPublicAccess Public network access status of Kibana
      */
     public void setKibanaPublicAccess(String KibanaPublicAccess) {
         this.KibanaPublicAccess = KibanaPublicAccess;
     }
 
     /**
-     * Get  
-     * @return KibanaPrivateAccess 
+     * Get Private network access status of Kibana 
+     * @return KibanaPrivateAccess Private network access status of Kibana
      */
     public String getKibanaPrivateAccess() {
         return this.KibanaPrivateAccess;
     }
 
     /**
-     * Set 
-     * @param KibanaPrivateAccess 
+     * Set Private network access status of Kibana
+     * @param KibanaPrivateAccess Private network access status of Kibana
      */
     public void setKibanaPrivateAccess(String KibanaPrivateAccess) {
         this.KibanaPrivateAccess = KibanaPrivateAccess;

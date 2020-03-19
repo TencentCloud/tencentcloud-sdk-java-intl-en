@@ -24,7 +24,7 @@ public class ServerCert extends AbstractModel{
 
     /**
     * Server certificate ID
-It is auto-generated when the certificate is being hosted by the SSL Certificate Service
+This is auto-generated when the certificate is being hosted by the SSL Certificate Service
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CertId")
@@ -33,7 +33,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Server certificate name
-It is auto-generated when the certificate is being hosted by the SSL Certificate Service
+This is auto-generated when the certificate is being hosted by the SSL Certificate Service
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CertName")
@@ -42,7 +42,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Server certificate information
-It is required when uploading an external certificate, which should contain the complete certificate chain.
+This is required when uploading an external certificate, which should contain the complete certificate chain.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Certificate")
@@ -51,7 +51,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Server key information
-It is required when uploading an external certificate.
+This is required when uploading an external certificate.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PrivateKey")
@@ -60,7 +60,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Certificate expiration time
-When it is used as an input parameter, it can be left blank.
+Can be left blank when used as an input parameter
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExpireTime")
@@ -69,7 +69,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Certificate issuance time
-When it is used as an input parameter, it can be left blank.
+Can be left blank when used as an input parameter
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DeployTime")
@@ -86,10 +86,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Server certificate ID
-It is auto-generated when the certificate is being hosted by the SSL Certificate Service
+This is auto-generated when the certificate is being hosted by the SSL Certificate Service
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return CertId Server certificate ID
-It is auto-generated when the certificate is being hosted by the SSL Certificate Service
+This is auto-generated when the certificate is being hosted by the SSL Certificate Service
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getCertId() {
@@ -98,10 +98,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Server certificate ID
-It is auto-generated when the certificate is being hosted by the SSL Certificate Service
+This is auto-generated when the certificate is being hosted by the SSL Certificate Service
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param CertId Server certificate ID
-It is auto-generated when the certificate is being hosted by the SSL Certificate Service
+This is auto-generated when the certificate is being hosted by the SSL Certificate Service
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setCertId(String CertId) {
@@ -110,10 +110,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Server certificate name
-It is auto-generated when the certificate is being hosted by the SSL Certificate Service
+This is auto-generated when the certificate is being hosted by the SSL Certificate Service
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return CertName Server certificate name
-It is auto-generated when the certificate is being hosted by the SSL Certificate Service
+This is auto-generated when the certificate is being hosted by the SSL Certificate Service
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getCertName() {
@@ -122,10 +122,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Server certificate name
-It is auto-generated when the certificate is being hosted by the SSL Certificate Service
+This is auto-generated when the certificate is being hosted by the SSL Certificate Service
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param CertName Server certificate name
-It is auto-generated when the certificate is being hosted by the SSL Certificate Service
+This is auto-generated when the certificate is being hosted by the SSL Certificate Service
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setCertName(String CertName) {
@@ -134,10 +134,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Server certificate information
-It is required when uploading an external certificate, which should contain the complete certificate chain.
+This is required when uploading an external certificate, which should contain the complete certificate chain.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return Certificate Server certificate information
-It is required when uploading an external certificate, which should contain the complete certificate chain.
+This is required when uploading an external certificate, which should contain the complete certificate chain.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getCertificate() {
@@ -146,10 +146,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Server certificate information
-It is required when uploading an external certificate, which should contain the complete certificate chain.
+This is required when uploading an external certificate, which should contain the complete certificate chain.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param Certificate Server certificate information
-It is required when uploading an external certificate, which should contain the complete certificate chain.
+This is required when uploading an external certificate, which should contain the complete certificate chain.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setCertificate(String Certificate) {
@@ -158,10 +158,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Server key information
-It is required when uploading an external certificate.
+This is required when uploading an external certificate.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return PrivateKey Server key information
-It is required when uploading an external certificate.
+This is required when uploading an external certificate.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getPrivateKey() {
@@ -170,10 +170,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Server key information
-It is required when uploading an external certificate.
+This is required when uploading an external certificate.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param PrivateKey Server key information
-It is required when uploading an external certificate.
+This is required when uploading an external certificate.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setPrivateKey(String PrivateKey) {
@@ -182,10 +182,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Certificate expiration time
-When it is used as an input parameter, it can be left blank.
+Can be left blank when used as an input parameter
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return ExpireTime Certificate expiration time
-When it is used as an input parameter, it can be left blank.
+Can be left blank when used as an input parameter
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getExpireTime() {
@@ -194,10 +194,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Certificate expiration time
-When it is used as an input parameter, it can be left blank.
+Can be left blank when used as an input parameter
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param ExpireTime Certificate expiration time
-When it is used as an input parameter, it can be left blank.
+Can be left blank when used as an input parameter
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setExpireTime(String ExpireTime) {
@@ -206,10 +206,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Certificate issuance time
-When it is used as an input parameter, it can be left blank.
+Can be left blank when used as an input parameter
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return DeployTime Certificate issuance time
-When it is used as an input parameter, it can be left blank.
+Can be left blank when used as an input parameter
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getDeployTime() {
@@ -218,10 +218,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Certificate issuance time
-When it is used as an input parameter, it can be left blank.
+Can be left blank when used as an input parameter
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param DeployTime Certificate issuance time
-When it is used as an input parameter, it can be left blank.
+Can be left blank when used as an input parameter
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDeployTime(String DeployTime) {

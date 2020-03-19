@@ -58,7 +58,7 @@ public class CreateListenerRequest extends AbstractModel{
     private HealthCheck HealthCheck;
 
     /**
-    * Certificate information. This parameter is applicable only to HTTPS/TCP_SSL listeners.
+    * Certificate information. This parameter is applicable only to TCP_SSL listeners and HTTPS listeners with the SNI feature not enabled.
     */
     @SerializedName("Certificate")
     @Expose
@@ -167,16 +167,16 @@ They represent weighted round robin and least connections, respectively. Default
     }
 
     /**
-     * Get Certificate information. This parameter is applicable only to HTTPS/TCP_SSL listeners. 
-     * @return Certificate Certificate information. This parameter is applicable only to HTTPS/TCP_SSL listeners.
+     * Get Certificate information. This parameter is applicable only to TCP_SSL listeners and HTTPS listeners with the SNI feature not enabled. 
+     * @return Certificate Certificate information. This parameter is applicable only to TCP_SSL listeners and HTTPS listeners with the SNI feature not enabled.
      */
     public CertificateInput getCertificate() {
         return this.Certificate;
     }
 
     /**
-     * Set Certificate information. This parameter is applicable only to HTTPS/TCP_SSL listeners.
-     * @param Certificate Certificate information. This parameter is applicable only to HTTPS/TCP_SSL listeners.
+     * Set Certificate information. This parameter is applicable only to TCP_SSL listeners and HTTPS listeners with the SNI feature not enabled.
+     * @param Certificate Certificate information. This parameter is applicable only to TCP_SSL listeners and HTTPS listeners with the SNI feature not enabled.
      */
     public void setCertificate(CertificateInput Certificate) {
         this.Certificate = Certificate;

@@ -72,6 +72,13 @@ public class UpgradeLifecycleHookRequest extends AbstractModel{
     private NotificationTarget NotificationTarget;
 
     /**
+    * The scenario where the lifecycle hook is applied. `EXTENSION`: the lifecycle hook will be triggered when AttachInstances, DetachInstances or RemoveInstaces is called. `NORMAL`: the lifecycle hook is not triggered by the above APIs. 
+    */
+    @SerializedName("LifecycleTransitionType")
+    @Expose
+    private String LifecycleTransitionType;
+
+    /**
      * Get Lifecycle hook ID 
      * @return LifecycleHookId Lifecycle hook ID
      */
@@ -184,6 +191,22 @@ public class UpgradeLifecycleHookRequest extends AbstractModel{
     }
 
     /**
+     * Get The scenario where the lifecycle hook is applied. `EXTENSION`: the lifecycle hook will be triggered when AttachInstances, DetachInstances or RemoveInstaces is called. `NORMAL`: the lifecycle hook is not triggered by the above APIs.  
+     * @return LifecycleTransitionType The scenario where the lifecycle hook is applied. `EXTENSION`: the lifecycle hook will be triggered when AttachInstances, DetachInstances or RemoveInstaces is called. `NORMAL`: the lifecycle hook is not triggered by the above APIs. 
+     */
+    public String getLifecycleTransitionType() {
+        return this.LifecycleTransitionType;
+    }
+
+    /**
+     * Set The scenario where the lifecycle hook is applied. `EXTENSION`: the lifecycle hook will be triggered when AttachInstances, DetachInstances or RemoveInstaces is called. `NORMAL`: the lifecycle hook is not triggered by the above APIs. 
+     * @param LifecycleTransitionType The scenario where the lifecycle hook is applied. `EXTENSION`: the lifecycle hook will be triggered when AttachInstances, DetachInstances or RemoveInstaces is called. `NORMAL`: the lifecycle hook is not triggered by the above APIs. 
+     */
+    public void setLifecycleTransitionType(String LifecycleTransitionType) {
+        this.LifecycleTransitionType = LifecycleTransitionType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class UpgradeLifecycleHookRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "HeartbeatTimeout", this.HeartbeatTimeout);
         this.setParamSimple(map, prefix + "NotificationMetadata", this.NotificationMetadata);
         this.setParamObj(map, prefix + "NotificationTarget.", this.NotificationTarget);
+        this.setParamSimple(map, prefix + "LifecycleTransitionType", this.LifecycleTransitionType);
 
     }
 }

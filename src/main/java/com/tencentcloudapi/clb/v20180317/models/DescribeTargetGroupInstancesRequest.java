@@ -23,9 +23,81 @@ import java.util.HashMap;
 public class DescribeTargetGroupInstancesRequest extends AbstractModel{
 
     /**
+    * Filter. Currently, only filtering by `TargetGroupId`, `BindIP`, or `InstanceId` is supported.
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
+    * Number of displayed results. Default value: 20
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * Display offset. Default value: 0
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+     * Get Filter. Currently, only filtering by `TargetGroupId`, `BindIP`, or `InstanceId` is supported. 
+     * @return Filters Filter. Currently, only filtering by `TargetGroupId`, `BindIP`, or `InstanceId` is supported.
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set Filter. Currently, only filtering by `TargetGroupId`, `BindIP`, or `InstanceId` is supported.
+     * @param Filters Filter. Currently, only filtering by `TargetGroupId`, `BindIP`, or `InstanceId` is supported.
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
+     * Get Number of displayed results. Default value: 20 
+     * @return Limit Number of displayed results. Default value: 20
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set Number of displayed results. Default value: 20
+     * @param Limit Number of displayed results. Default value: 20
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get Display offset. Default value: 0 
+     * @return Offset Display offset. Default value: 0
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set Display offset. Default value: 0
+     * @param Offset Display offset. Default value: 0
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

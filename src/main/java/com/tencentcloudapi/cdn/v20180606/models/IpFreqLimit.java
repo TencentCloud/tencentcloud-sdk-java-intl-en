@@ -32,8 +32,8 @@ off: disabled
     private String Switch;
 
     /**
-    * Sets the number limit of request per second
-514 will be returned to the requests that exceed the limit
+    * Sets the limited number of requests per second
+514 will be returned for requests that exceed the limit
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Qps")
@@ -65,11 +65,11 @@ off: disabled
     }
 
     /**
-     * Get Sets the number limit of request per second
-514 will be returned to the requests that exceed the limit
+     * Get Sets the limited number of requests per second
+514 will be returned for requests that exceed the limit
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Qps Sets the number limit of request per second
-514 will be returned to the requests that exceed the limit
+     * @return Qps Sets the limited number of requests per second
+514 will be returned for requests that exceed the limit
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getQps() {
@@ -77,11 +77,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Sets the number limit of request per second
-514 will be returned to the requests that exceed the limit
+     * Set Sets the limited number of requests per second
+514 will be returned for requests that exceed the limit
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Qps Sets the number limit of request per second
-514 will be returned to the requests that exceed the limit
+     * @param Qps Sets the limited number of requests per second
+514 will be returned for requests that exceed the limit
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setQps(Long Qps) {

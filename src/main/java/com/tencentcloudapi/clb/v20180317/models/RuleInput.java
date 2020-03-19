@@ -66,7 +66,7 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     private String Scheduler;
 
     /**
-    * Forwarding protocol between CLB and real server. Currently, HTTP is supported
+    * Forwarding protocol between the CLB instance and real server. Currently, HTTP/HTTPS/TRPC are supported.
     */
     @SerializedName("ForwardType")
     @Expose
@@ -80,7 +80,7 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     private Boolean DefaultServer;
 
     /**
-    * Whether to enable Http2. Note: Http2 can be enabled only for HTTPS domain names.
+    * Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
     */
     @SerializedName("Http2")
     @Expose
@@ -94,14 +94,14 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     private String TargetType;
 
     /**
-    * 
+    * TRPC callee server route, which is required when `ForwardType` is `TRPC`.
     */
     @SerializedName("TrpcCallee")
     @Expose
     private String TrpcCallee;
 
     /**
-    * 
+    * TRPC calling service API, which is required when `ForwardType` is `TRPC`.
     */
     @SerializedName("TrpcFunc")
     @Expose
@@ -208,16 +208,16 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     }
 
     /**
-     * Get Forwarding protocol between CLB and real server. Currently, HTTP is supported 
-     * @return ForwardType Forwarding protocol between CLB and real server. Currently, HTTP is supported
+     * Get Forwarding protocol between the CLB instance and real server. Currently, HTTP/HTTPS/TRPC are supported. 
+     * @return ForwardType Forwarding protocol between the CLB instance and real server. Currently, HTTP/HTTPS/TRPC are supported.
      */
     public String getForwardType() {
         return this.ForwardType;
     }
 
     /**
-     * Set Forwarding protocol between CLB and real server. Currently, HTTP is supported
-     * @param ForwardType Forwarding protocol between CLB and real server. Currently, HTTP is supported
+     * Set Forwarding protocol between the CLB instance and real server. Currently, HTTP/HTTPS/TRPC are supported.
+     * @param ForwardType Forwarding protocol between the CLB instance and real server. Currently, HTTP/HTTPS/TRPC are supported.
      */
     public void setForwardType(String ForwardType) {
         this.ForwardType = ForwardType;
@@ -240,16 +240,16 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     }
 
     /**
-     * Get Whether to enable Http2. Note: Http2 can be enabled only for HTTPS domain names. 
-     * @return Http2 Whether to enable Http2. Note: Http2 can be enabled only for HTTPS domain names.
+     * Get Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names. 
+     * @return Http2 Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
      */
     public Boolean getHttp2() {
         return this.Http2;
     }
 
     /**
-     * Set Whether to enable Http2. Note: Http2 can be enabled only for HTTPS domain names.
-     * @param Http2 Whether to enable Http2. Note: Http2 can be enabled only for HTTPS domain names.
+     * Set Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
+     * @param Http2 Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
      */
     public void setHttp2(Boolean Http2) {
         this.Http2 = Http2;
@@ -272,32 +272,32 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     }
 
     /**
-     * Get  
-     * @return TrpcCallee 
+     * Get TRPC callee server route, which is required when `ForwardType` is `TRPC`. 
+     * @return TrpcCallee TRPC callee server route, which is required when `ForwardType` is `TRPC`.
      */
     public String getTrpcCallee() {
         return this.TrpcCallee;
     }
 
     /**
-     * Set 
-     * @param TrpcCallee 
+     * Set TRPC callee server route, which is required when `ForwardType` is `TRPC`.
+     * @param TrpcCallee TRPC callee server route, which is required when `ForwardType` is `TRPC`.
      */
     public void setTrpcCallee(String TrpcCallee) {
         this.TrpcCallee = TrpcCallee;
     }
 
     /**
-     * Get  
-     * @return TrpcFunc 
+     * Get TRPC calling service API, which is required when `ForwardType` is `TRPC`. 
+     * @return TrpcFunc TRPC calling service API, which is required when `ForwardType` is `TRPC`.
      */
     public String getTrpcFunc() {
         return this.TrpcFunc;
     }
 
     /**
-     * Set 
-     * @param TrpcFunc 
+     * Set TRPC calling service API, which is required when `ForwardType` is `TRPC`.
+     * @param TrpcFunc TRPC calling service API, which is required when `ForwardType` is `TRPC`.
      */
     public void setTrpcFunc(String TrpcFunc) {
         this.TrpcFunc = TrpcFunc;

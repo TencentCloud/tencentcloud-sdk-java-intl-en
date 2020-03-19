@@ -51,6 +51,13 @@ public class ForwardLoadBalancer extends AbstractModel{
     private String LocationId;
 
     /**
+    * The region of CLB instance. It defaults to the region of AS service and is in the format of the common parameter `Region`, such as `ap-guangzhou`.
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
      * Get Load balancer ID 
      * @return LoadBalancerId Load balancer ID
      */
@@ -115,6 +122,22 @@ public class ForwardLoadBalancer extends AbstractModel{
     }
 
     /**
+     * Get The region of CLB instance. It defaults to the region of AS service and is in the format of the common parameter `Region`, such as `ap-guangzhou`. 
+     * @return Region The region of CLB instance. It defaults to the region of AS service and is in the format of the common parameter `Region`, such as `ap-guangzhou`.
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set The region of CLB instance. It defaults to the region of AS service and is in the format of the common parameter `Region`, such as `ap-guangzhou`.
+     * @param Region The region of CLB instance. It defaults to the region of AS service and is in the format of the common parameter `Region`, such as `ap-guangzhou`.
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class ForwardLoadBalancer extends AbstractModel{
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);
         this.setParamArrayObj(map, prefix + "TargetAttributes.", this.TargetAttributes);
         this.setParamSimple(map, prefix + "LocationId", this.LocationId);
+        this.setParamSimple(map, prefix + "Region", this.Region);
 
     }
 }

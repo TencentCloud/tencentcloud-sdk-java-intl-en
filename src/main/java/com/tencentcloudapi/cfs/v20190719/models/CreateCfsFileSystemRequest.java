@@ -86,6 +86,13 @@ public class CreateCfsFileSystemRequest extends AbstractModel{
     private String FsName;
 
     /**
+    * File system tag
+    */
+    @SerializedName("ResourceTags")
+    @Expose
+    private TagInfo [] ResourceTags;
+
+    /**
      * Get AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://cloud.tencent.com/document/product/582/13225) 
      * @return Zone AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://cloud.tencent.com/document/product/582/13225)
      */
@@ -230,6 +237,22 @@ public class CreateCfsFileSystemRequest extends AbstractModel{
     }
 
     /**
+     * Get File system tag 
+     * @return ResourceTags File system tag
+     */
+    public TagInfo [] getResourceTags() {
+        return this.ResourceTags;
+    }
+
+    /**
+     * Set File system tag
+     * @param ResourceTags File system tag
+     */
+    public void setResourceTags(TagInfo [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +265,7 @@ public class CreateCfsFileSystemRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "MountIP", this.MountIP);
         this.setParamSimple(map, prefix + "FsName", this.FsName);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
 
     }
 }

@@ -108,6 +108,14 @@ Note: This field may return null, indicating that no valid value is found.
     private ItemPrice Price;
 
     /**
+    * Details of sold out items
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SoldOutReason")
+    @Expose
+    private String SoldOutReason;
+
+    /**
      * Get Availability zone. 
      * @return Zone Availability zone.
      */
@@ -304,6 +312,26 @@ Note: This field may return null, indicating that no valid value is found.
     }
 
     /**
+     * Get Details of sold out items
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return SoldOutReason Details of sold out items
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getSoldOutReason() {
+        return this.SoldOutReason;
+    }
+
+    /**
+     * Set Details of sold out items
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param SoldOutReason Details of sold out items
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSoldOutReason(String SoldOutReason) {
+        this.SoldOutReason = SoldOutReason;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -319,6 +347,7 @@ Note: This field may return null, indicating that no valid value is found.
         this.setParamArrayObj(map, prefix + "LocalDiskTypeList.", this.LocalDiskTypeList);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamObj(map, prefix + "Price.", this.Price);
+        this.setParamSimple(map, prefix + "SoldOutReason", this.SoldOutReason);
 
     }
 }

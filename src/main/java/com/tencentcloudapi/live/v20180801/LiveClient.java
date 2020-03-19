@@ -59,6 +59,117 @@ Currently, this API only supports stream granularity, and the feature supporting
     }
 
     /**
+     *This API is used to add a domain name. Only one domain name can be submitted at a time, and it must have an ICP filing.
+     * @param req AddLiveDomainRequest
+     * @return AddLiveDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddLiveDomainResponse AddLiveDomain(AddLiveDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddLiveDomainResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddLiveDomainResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AddLiveDomain"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *After a watermark is added and a watermark ID is successfully returned, you need to call the [CreateLiveWatermarkRule](/document/product/267/32629) API and bind the watermark ID to the stream.
+     * @param req AddLiveWatermarkRequest
+     * @return AddLiveWatermarkResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddLiveWatermarkResponse AddLiveWatermark(AddLiveWatermarkRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddLiveWatermarkResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddLiveWatermarkResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AddLiveWatermark"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to bind a domain name certificate.
+Note: you need to call the `CreateLiveCert` API first to add a certificate. After getting the certificate ID, call this API for binding.
+     * @param req BindLiveDomainCertRequest
+     * @return BindLiveDomainCertResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindLiveDomainCertResponse BindLiveDomainCert(BindLiveDomainCertRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BindLiveDomainCertResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<BindLiveDomainCertResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "BindLiveDomainCert"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *To create a callback rule, you need to first call the [CreateLiveCallbackTemplate](/document/product/267/32637) API to create a callback template and bind the returned template ID to the domain name/path.
+<br>Callback protocol-related document: [Event Message Notification](/document/product/267/32744).
+     * @param req CreateLiveCallbackRuleRequest
+     * @return CreateLiveCallbackRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLiveCallbackRuleResponse CreateLiveCallbackRule(CreateLiveCallbackRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLiveCallbackRuleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLiveCallbackRuleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateLiveCallbackRule"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *After a callback template is created and a template ID is successfully returned, you need to call the [CreateLiveCallbackRule](/document/product/267/32638) API and bind the template ID to the domain name/path.
+<br>Callback protocol-related document: [Event Message Notification](/document/product/267/32744).
+     * @param req CreateLiveCallbackTemplateRequest
+     * @return CreateLiveCallbackTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLiveCallbackTemplateResponse CreateLiveCallbackTemplate(CreateLiveCallbackTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLiveCallbackTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLiveCallbackTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateLiveCallbackTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to add a certificate.
+     * @param req CreateLiveCertRequest
+     * @return CreateLiveCertResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLiveCertResponse CreateLiveCert(CreateLiveCertRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLiveCertResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLiveCertResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateLiveCert"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *- Prerequisites
   1. Recording files are stored on the VOD platform, so if you need to use the recording feature, you must first activate the VOD service.
   2. After the recording files are stored, applicable fees (including storage fees and downstream playback traffic fees) will be charged according to the VOD billing mode. For more information, please see the [corresponding document](https://cloud.tencent.com/document/product/266/2838).
@@ -72,7 +183,8 @@ Currently, this API only supports stream granularity, and the feature supporting
 
 - Precautions
   1. The API call timeout period should be set to more than 3 seconds; otherwise, retries and frequent calls may result in repeated recording tasks.
-  2. Subject to the audio and video file formats (FLV/MP4/HLS), the video codec of H.264 and audio codec of ACC are supported.
+  2. Subject to the audio and video file formats (FLV/MP4/HLS), the video codec of H.264 and audio codec of AAC are supported.
+  3. In order to avoid malicious or non-subjective frequent API requests, the maximum number of tasks that can be created in scheduled recording mode is limited: up to 4,000 tasks can be created per day (excluding deleted ones), and up to 400 ones can run concurrently. If you need a higher upper limit, please submit a ticket for application.
      * @param req CreateLiveRecordRequest
      * @return CreateLiveRecordResponse
      * @throws TencentCloudSDKException
@@ -128,6 +240,44 @@ Currently, this API only supports stream granularity, and the feature supporting
     }
 
     /**
+     *To create a screencapturing rule, you need to first call the [CreateLiveSnapshotTemplate](/document/product/267/32624) API to create a screencapturing template and bind the returned template ID to the stream.
+<br>Screencapturing-related document: [LVB Screencapturing](/document/product/267/32737).
+     * @param req CreateLiveSnapshotRuleRequest
+     * @return CreateLiveSnapshotRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLiveSnapshotRuleResponse CreateLiveSnapshotRule(CreateLiveSnapshotRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLiveSnapshotRuleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLiveSnapshotRuleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateLiveSnapshotRule"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *After a screencapturing template is created and a template ID is successfully returned, you need to call the [CreateLiveSnapshotRule](/document/product/267/32625) API and bind the template ID to the stream.
+<br>Screencapturing-related document: [LVB Screencapturing](/document/product/267/32737).
+     * @param req CreateLiveSnapshotTemplateRequest
+     * @return CreateLiveSnapshotTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLiveSnapshotTemplateResponse CreateLiveSnapshotTemplate(CreateLiveSnapshotTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLiveSnapshotTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLiveSnapshotTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateLiveSnapshotTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *To create a transcoding rule, you need to first call the [CreateLiveTranscodeTemplate](/document/product/267/32646) API to create a transcoding template and bind the returned template ID to the stream.
 <br>Transcoding-related document: [LVB Remuxing and Transcoding](/document/product/267/32736).
      * @param req CreateLiveTranscodeRuleRequest
@@ -159,6 +309,96 @@ Currently, this API only supports stream granularity, and the feature supporting
                 Type type = new TypeToken<JsonResponseModel<CreateLiveTranscodeTemplateResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateLiveTranscodeTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *To create a watermarking rule, you need to first call the [AddLiveWatermark](/document/product/267/30154) API to add a watermark and bind the returned watermark ID to the stream.
+     * @param req CreateLiveWatermarkRuleRequest
+     * @return CreateLiveWatermarkRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLiveWatermarkRuleResponse CreateLiveWatermarkRule(CreateLiveWatermarkRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLiveWatermarkRuleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLiveWatermarkRuleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateLiveWatermarkRule"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a callback rule.
+     * @param req DeleteLiveCallbackRuleRequest
+     * @return DeleteLiveCallbackRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLiveCallbackRuleResponse DeleteLiveCallbackRule(DeleteLiveCallbackRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLiveCallbackRuleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLiveCallbackRuleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteLiveCallbackRule"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API deletes a callback template.
+     * @param req DeleteLiveCallbackTemplateRequest
+     * @return DeleteLiveCallbackTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLiveCallbackTemplateResponse DeleteLiveCallbackTemplate(DeleteLiveCallbackTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLiveCallbackTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLiveCallbackTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteLiveCallbackTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a certificate corresponding to the domain name.
+     * @param req DeleteLiveCertRequest
+     * @return DeleteLiveCertResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLiveCertResponse DeleteLiveCert(DeleteLiveCertRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLiveCertResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLiveCertResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteLiveCert"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete an added LVB domain name.
+     * @param req DeleteLiveDomainRequest
+     * @return DeleteLiveDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLiveDomainResponse DeleteLiveDomain(DeleteLiveDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLiveDomainResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLiveDomainResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteLiveDomain"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -220,6 +460,42 @@ Currently, this API only supports stream granularity, and the feature supporting
     }
 
     /**
+     *This API is used to delete a screencapturing rule.
+     * @param req DeleteLiveSnapshotRuleRequest
+     * @return DeleteLiveSnapshotRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLiveSnapshotRuleResponse DeleteLiveSnapshotRule(DeleteLiveSnapshotRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLiveSnapshotRuleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLiveSnapshotRuleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteLiveSnapshotRule"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a screencapturing template.
+     * @param req DeleteLiveSnapshotTemplateRequest
+     * @return DeleteLiveSnapshotTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLiveSnapshotTemplateResponse DeleteLiveSnapshotTemplate(DeleteLiveSnapshotTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLiveSnapshotTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLiveSnapshotTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteLiveSnapshotTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete a transcoding rule.
      * @param req DeleteLiveTranscodeRuleRequest
      * @return DeleteLiveTranscodeRuleResponse
@@ -256,6 +532,132 @@ Currently, this API only supports stream granularity, and the feature supporting
     }
 
     /**
+     *This API is used to delete a watermark.
+     * @param req DeleteLiveWatermarkRequest
+     * @return DeleteLiveWatermarkResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLiveWatermarkResponse DeleteLiveWatermark(DeleteLiveWatermarkRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLiveWatermarkResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLiveWatermarkResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteLiveWatermark"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a watermarking rule.
+     * @param req DeleteLiveWatermarkRuleRequest
+     * @return DeleteLiveWatermarkRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLiveWatermarkRuleResponse DeleteLiveWatermarkRule(DeleteLiveWatermarkRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLiveWatermarkRuleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLiveWatermarkRuleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteLiveWatermarkRule"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the callback rule list.
+     * @param req DescribeLiveCallbackRulesRequest
+     * @return DescribeLiveCallbackRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveCallbackRulesResponse DescribeLiveCallbackRules(DescribeLiveCallbackRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveCallbackRulesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveCallbackRulesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLiveCallbackRules"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get a single callback template.
+     * @param req DescribeLiveCallbackTemplateRequest
+     * @return DescribeLiveCallbackTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveCallbackTemplateResponse DescribeLiveCallbackTemplate(DescribeLiveCallbackTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveCallbackTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveCallbackTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLiveCallbackTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the callback template list.
+     * @param req DescribeLiveCallbackTemplatesRequest
+     * @return DescribeLiveCallbackTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveCallbackTemplatesResponse DescribeLiveCallbackTemplates(DescribeLiveCallbackTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveCallbackTemplatesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveCallbackTemplatesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLiveCallbackTemplates"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get certificate information.
+     * @param req DescribeLiveCertRequest
+     * @return DescribeLiveCertResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveCertResponse DescribeLiveCert(DescribeLiveCertRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveCertResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveCertResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLiveCert"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the certificate information list.
+     * @param req DescribeLiveCertsRequest
+     * @return DescribeLiveCertsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveCertsResponse DescribeLiveCerts(DescribeLiveCertsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveCertsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveCertsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLiveCerts"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the list of delayed playbacks.
      * @param req DescribeLiveDelayInfoListRequest
      * @return DescribeLiveDelayInfoListResponse
@@ -267,6 +669,60 @@ Currently, this API only supports stream granularity, and the feature supporting
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveDelayInfoListResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeLiveDelayInfoList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the LVB domain name information.
+     * @param req DescribeLiveDomainRequest
+     * @return DescribeLiveDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveDomainResponse DescribeLiveDomain(DescribeLiveDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveDomainResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveDomainResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLiveDomain"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the domain name certificate information.
+     * @param req DescribeLiveDomainCertRequest
+     * @return DescribeLiveDomainCertResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveDomainCertResponse DescribeLiveDomainCert(DescribeLiveDomainCertRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveDomainCertResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveDomainCertResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLiveDomainCert"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query domain names by domain name status and type.
+     * @param req DescribeLiveDomainsRequest
+     * @return DescribeLiveDomainsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveDomainsResponse DescribeLiveDomains(DescribeLiveDomainsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveDomainsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveDomainsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLiveDomains"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -375,6 +831,60 @@ Currently, this API only supports stream granularity, and the feature supporting
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveRecordTemplatesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeLiveRecordTemplates"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the screencapturing rule list.
+     * @param req DescribeLiveSnapshotRulesRequest
+     * @return DescribeLiveSnapshotRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveSnapshotRulesResponse DescribeLiveSnapshotRules(DescribeLiveSnapshotRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveSnapshotRulesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveSnapshotRulesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLiveSnapshotRules"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get a single screencapturing template.
+     * @param req DescribeLiveSnapshotTemplateRequest
+     * @return DescribeLiveSnapshotTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveSnapshotTemplateResponse DescribeLiveSnapshotTemplate(DescribeLiveSnapshotTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveSnapshotTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveSnapshotTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLiveSnapshotTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the screencapturing template list.
+     * @param req DescribeLiveSnapshotTemplatesRequest
+     * @return DescribeLiveSnapshotTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveSnapshotTemplatesResponse DescribeLiveSnapshotTemplates(DescribeLiveSnapshotTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveSnapshotTemplatesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveSnapshotTemplatesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLiveSnapshotTemplates"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -511,6 +1021,60 @@ Note: Up to 10,000 entries can be queried per page. More data can be obtained by
     }
 
     /**
+     *This API is used to get the information of a single watermark.
+     * @param req DescribeLiveWatermarkRequest
+     * @return DescribeLiveWatermarkResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveWatermarkResponse DescribeLiveWatermark(DescribeLiveWatermarkRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveWatermarkResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveWatermarkResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLiveWatermark"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the watermarking rule list.
+     * @param req DescribeLiveWatermarkRulesRequest
+     * @return DescribeLiveWatermarkRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveWatermarkRulesResponse DescribeLiveWatermarkRules(DescribeLiveWatermarkRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveWatermarkRulesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveWatermarkRulesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLiveWatermarkRules"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the watermark list.
+     * @param req DescribeLiveWatermarksRequest
+     * @return DescribeLiveWatermarksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveWatermarksResponse DescribeLiveWatermarks(DescribeLiveWatermarksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveWatermarksResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveWatermarksResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLiveWatermarks"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to disconnect the push connection, which can be resumed.
      * @param req DropLiveStreamRequest
      * @return DropLiveStreamResponse
@@ -522,6 +1086,42 @@ Note: Up to 10,000 entries can be queried per page. More data can be obtained by
                 Type type = new TypeToken<JsonResponseModel<DropLiveStreamResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DropLiveStream"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to enable a disabled LVB domain name.
+     * @param req EnableLiveDomainRequest
+     * @return EnableLiveDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableLiveDomainResponse EnableLiveDomain(EnableLiveDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableLiveDomainResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableLiveDomainResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "EnableLiveDomain"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to disable an LVB domain name.
+     * @param req ForbidLiveDomainRequest
+     * @return ForbidLiveDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public ForbidLiveDomainResponse ForbidLiveDomain(ForbidLiveDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ForbidLiveDomainResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ForbidLiveDomainResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ForbidLiveDomain"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -547,6 +1147,60 @@ Note: Up to 10,000 entries can be queried per page. More data can be obtained by
     }
 
     /**
+     *This API is used to modify a callback template.
+     * @param req ModifyLiveCallbackTemplateRequest
+     * @return ModifyLiveCallbackTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLiveCallbackTemplateResponse ModifyLiveCallbackTemplate(ModifyLiveCallbackTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLiveCallbackTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLiveCallbackTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyLiveCallbackTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify a certificate.
+     * @param req ModifyLiveCertRequest
+     * @return ModifyLiveCertResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLiveCertResponse ModifyLiveCert(ModifyLiveCertRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLiveCertResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLiveCertResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyLiveCert"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the domain name and certificate binding information.
+     * @param req ModifyLiveDomainCertRequest
+     * @return ModifyLiveDomainCertResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLiveDomainCertResponse ModifyLiveDomainCert(ModifyLiveDomainCertRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLiveDomainCertResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLiveDomainCertResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyLiveDomainCert"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify the playback authentication key.
      * @param req ModifyLivePlayAuthKeyRequest
      * @return ModifyLivePlayAuthKeyResponse
@@ -558,6 +1212,24 @@ Note: Up to 10,000 entries can be queried per page. More data can be obtained by
                 Type type = new TypeToken<JsonResponseModel<ModifyLivePlayAuthKeyResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyLivePlayAuthKey"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify a playback domain name.
+     * @param req ModifyLivePlayDomainRequest
+     * @return ModifyLivePlayDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLivePlayDomainResponse ModifyLivePlayDomain(ModifyLivePlayDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLivePlayDomainResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLivePlayDomainResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyLivePlayDomain"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -594,6 +1266,24 @@ Note: Up to 10,000 entries can be queried per page. More data can be obtained by
                 Type type = new TypeToken<JsonResponseModel<ModifyLiveRecordTemplateResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyLiveRecordTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the screencapturing template configuration.
+     * @param req ModifyLiveSnapshotTemplateRequest
+     * @return ModifyLiveSnapshotTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLiveSnapshotTemplateResponse ModifyLiveSnapshotTemplate(ModifyLiveSnapshotTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLiveSnapshotTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLiveSnapshotTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyLiveSnapshotTemplate"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -666,6 +1356,42 @@ Note: Up to 10,000 entries can be queried per page. More data can be obtained by
                 Type type = new TypeToken<JsonResponseModel<StopLiveRecordResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "StopLiveRecord"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to unbind a domain name certificate.
+     * @param req UnBindLiveDomainCertRequest
+     * @return UnBindLiveDomainCertResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnBindLiveDomainCertResponse UnBindLiveDomainCert(UnBindLiveDomainCertRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UnBindLiveDomainCertResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UnBindLiveDomainCertResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UnBindLiveDomainCert"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to update a watermark.
+     * @param req UpdateLiveWatermarkRequest
+     * @return UpdateLiveWatermarkResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateLiveWatermarkResponse UpdateLiveWatermark(UpdateLiveWatermarkRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateLiveWatermarkResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateLiveWatermarkResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UpdateLiveWatermark"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

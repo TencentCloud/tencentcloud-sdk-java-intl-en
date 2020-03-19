@@ -30,24 +30,24 @@ public class ViolationUrl extends AbstractModel{
     private Long Id;
 
     /**
-    * Origin access URL for violating resources
+    * Origin access URL of the resource in violation
     */
     @SerializedName("RealUrl")
     @Expose
     private String RealUrl;
 
     /**
-    * Snapshot path, which is used in the console to show the violating content snapshot.
+    * Snapshot path. This is used to display a snapshot of the content in violation on the console.
     */
     @SerializedName("DownloadUrl")
     @Expose
     private String DownloadUrl;
 
     /**
-    * Current status of violating resources
+    * Current status of the resources in violation
 forbid: blocked
 release: unblocked
-delay: handling delayed
+delay: processing delayed 
 reject: appeal dismissed. The status is still blocked.
 complain: appeal in process
     */
@@ -86,48 +86,48 @@ complain: appeal in process
     }
 
     /**
-     * Get Origin access URL for violating resources 
-     * @return RealUrl Origin access URL for violating resources
+     * Get Origin access URL of the resource in violation 
+     * @return RealUrl Origin access URL of the resource in violation
      */
     public String getRealUrl() {
         return this.RealUrl;
     }
 
     /**
-     * Set Origin access URL for violating resources
-     * @param RealUrl Origin access URL for violating resources
+     * Set Origin access URL of the resource in violation
+     * @param RealUrl Origin access URL of the resource in violation
      */
     public void setRealUrl(String RealUrl) {
         this.RealUrl = RealUrl;
     }
 
     /**
-     * Get Snapshot path, which is used in the console to show the violating content snapshot. 
-     * @return DownloadUrl Snapshot path, which is used in the console to show the violating content snapshot.
+     * Get Snapshot path. This is used to display a snapshot of the content in violation on the console. 
+     * @return DownloadUrl Snapshot path. This is used to display a snapshot of the content in violation on the console.
      */
     public String getDownloadUrl() {
         return this.DownloadUrl;
     }
 
     /**
-     * Set Snapshot path, which is used in the console to show the violating content snapshot.
-     * @param DownloadUrl Snapshot path, which is used in the console to show the violating content snapshot.
+     * Set Snapshot path. This is used to display a snapshot of the content in violation on the console.
+     * @param DownloadUrl Snapshot path. This is used to display a snapshot of the content in violation on the console.
      */
     public void setDownloadUrl(String DownloadUrl) {
         this.DownloadUrl = DownloadUrl;
     }
 
     /**
-     * Get Current status of violating resources
+     * Get Current status of the resources in violation
 forbid: blocked
 release: unblocked
-delay: handling delayed
+delay: processing delayed 
 reject: appeal dismissed. The status is still blocked.
 complain: appeal in process 
-     * @return UrlStatus Current status of violating resources
+     * @return UrlStatus Current status of the resources in violation
 forbid: blocked
 release: unblocked
-delay: handling delayed
+delay: processing delayed 
 reject: appeal dismissed. The status is still blocked.
 complain: appeal in process
      */
@@ -136,16 +136,16 @@ complain: appeal in process
     }
 
     /**
-     * Set Current status of violating resources
+     * Set Current status of the resources in violation
 forbid: blocked
 release: unblocked
-delay: handling delayed
+delay: processing delayed 
 reject: appeal dismissed. The status is still blocked.
 complain: appeal in process
-     * @param UrlStatus Current status of violating resources
+     * @param UrlStatus Current status of the resources in violation
 forbid: blocked
 release: unblocked
-delay: handling delayed
+delay: processing delayed 
 reject: appeal dismissed. The status is still blocked.
 complain: appeal in process
      */

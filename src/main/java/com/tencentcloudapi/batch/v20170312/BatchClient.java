@@ -38,6 +38,30 @@ public class BatchClient extends AbstractClient{
     }
 
     /**
+     *This API is used to add existing instances to the compute environment.
+Considerations: <br/>
+1. The instance should not be in the batch compute system.<br/>
+2. The instance status should be “running”.<br/>
+3. It supports dedicated CVMs and pay-as-you-go instances that billed on an hourly basis. Spot instances are not supported.<b/>
+
+For instances added to the compute environment, their UserData will be reset and the operating systems will be reinstalled.
+     * @param req AttachInstancesRequest
+     * @return AttachInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public AttachInstancesResponse AttachInstances(AttachInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AttachInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AttachInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AttachInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a compute environment.
      * @param req CreateComputeEnvRequest
      * @return CreateComputeEnvResponse
@@ -375,6 +399,24 @@ The job to be deleted must be in a completed state, and all task instances conta
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskTemplatesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeTaskTemplates"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to remove instances that from compute environment. 
+     * @param req DetachInstancesRequest
+     * @return DetachInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetachInstancesResponse DetachInstances(DetachInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DetachInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DetachInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DetachInstances"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

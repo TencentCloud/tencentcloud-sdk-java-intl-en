@@ -24,7 +24,7 @@ public class HttpHeaderPathRule extends AbstractModel{
 
     /**
     * HTTP header setting method
-add: add header. If a header exists, then there will be a repeated header.
+add: add header. If a header exists, then there will be a duplicated header.
 set: only supports origin-pull header configuration. If a header exists, it will be overwritten. If one does not exist, then the header will be added.
 del: delete header
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -43,8 +43,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * HTTP header value. Up to 1000 characters can be set.
-It is not required when Mode is del
-It is required when Mode is add/set
+Not required when Mode is del
+Required when Mode is add/set
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HeaderValue")
@@ -53,10 +53,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Rule types:
-all: all files take effect
-file: specified file suffixes take effect
-directory: specified paths take effect
-path: specified absolute paths take effect
+`all`: effective for all files
+`file`: effective for specified file suffixes
+`directory`: effective for specified paths
+`path`: effective for specified absolute paths
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RuleType")
@@ -64,11 +64,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RuleType;
 
     /**
-    * Matching content under the corresponding types for RuleType:
-For "all", enter an asterisk (*).
-For "file", enter the suffix, such as jpg, txt.
-For "directory", enter the path, such as /xxx/test/.
-For "path", enter the corresponding absolute path, such as /xxx/test.html.
+    * Content for each RuleType:
+For `all`, enter an asterisk (*).
+For `file`, enter the suffix, such as jpg, txt.
+For `directory`, enter the path, such as /xxx/test/.
+For `path`, enter the corresponding absolute path, such as /xxx/test.html.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RulePaths")
@@ -77,12 +77,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get HTTP header setting method
-add: add header. If a header exists, then there will be a repeated header.
+add: add header. If a header exists, then there will be a duplicated header.
 set: only supports origin-pull header configuration. If a header exists, it will be overwritten. If one does not exist, then the header will be added.
 del: delete header
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return HeaderMode HTTP header setting method
-add: add header. If a header exists, then there will be a repeated header.
+add: add header. If a header exists, then there will be a duplicated header.
 set: only supports origin-pull header configuration. If a header exists, it will be overwritten. If one does not exist, then the header will be added.
 del: delete header
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -93,12 +93,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set HTTP header setting method
-add: add header. If a header exists, then there will be a repeated header.
+add: add header. If a header exists, then there will be a duplicated header.
 set: only supports origin-pull header configuration. If a header exists, it will be overwritten. If one does not exist, then the header will be added.
 del: delete header
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param HeaderMode HTTP header setting method
-add: add header. If a header exists, then there will be a repeated header.
+add: add header. If a header exists, then there will be a duplicated header.
 set: only supports origin-pull header configuration. If a header exists, it will be overwritten. If one does not exist, then the header will be added.
 del: delete header
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -129,12 +129,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get HTTP header value. Up to 1000 characters can be set.
-It is not required when Mode is del
-It is required when Mode is add/set
+Not required when Mode is del
+Required when Mode is add/set
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return HeaderValue HTTP header value. Up to 1000 characters can be set.
-It is not required when Mode is del
-It is required when Mode is add/set
+Not required when Mode is del
+Required when Mode is add/set
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getHeaderValue() {
@@ -143,12 +143,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set HTTP header value. Up to 1000 characters can be set.
-It is not required when Mode is del
-It is required when Mode is add/set
+Not required when Mode is del
+Required when Mode is add/set
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param HeaderValue HTTP header value. Up to 1000 characters can be set.
-It is not required when Mode is del
-It is required when Mode is add/set
+Not required when Mode is del
+Required when Mode is add/set
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setHeaderValue(String HeaderValue) {
@@ -157,16 +157,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Rule types:
-all: all files take effect
-file: specified file suffixes take effect
-directory: specified paths take effect
-path: specified absolute paths take effect
+`all`: effective for all files
+`file`: effective for specified file suffixes
+`directory`: effective for specified paths
+`path`: effective for specified absolute paths
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return RuleType Rule types:
-all: all files take effect
-file: specified file suffixes take effect
-directory: specified paths take effect
-path: specified absolute paths take effect
+`all`: effective for all files
+`file`: effective for specified file suffixes
+`directory`: effective for specified paths
+`path`: effective for specified absolute paths
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getRuleType() {
@@ -175,16 +175,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Rule types:
-all: all files take effect
-file: specified file suffixes take effect
-directory: specified paths take effect
-path: specified absolute paths take effect
+`all`: effective for all files
+`file`: effective for specified file suffixes
+`directory`: effective for specified paths
+`path`: effective for specified absolute paths
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param RuleType Rule types:
-all: all files take effect
-file: specified file suffixes take effect
-directory: specified paths take effect
-path: specified absolute paths take effect
+`all`: effective for all files
+`file`: effective for specified file suffixes
+`directory`: effective for specified paths
+`path`: effective for specified absolute paths
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setRuleType(String RuleType) {
@@ -192,17 +192,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Matching content under the corresponding types for RuleType:
-For "all", enter an asterisk (*).
-For "file", enter the suffix, such as jpg, txt.
-For "directory", enter the path, such as /xxx/test/.
-For "path", enter the corresponding absolute path, such as /xxx/test.html.
+     * Get Content for each RuleType:
+For `all`, enter an asterisk (*).
+For `file`, enter the suffix, such as jpg, txt.
+For `directory`, enter the path, such as /xxx/test/.
+For `path`, enter the corresponding absolute path, such as /xxx/test.html.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RulePaths Matching content under the corresponding types for RuleType:
-For "all", enter an asterisk (*).
-For "file", enter the suffix, such as jpg, txt.
-For "directory", enter the path, such as /xxx/test/.
-For "path", enter the corresponding absolute path, such as /xxx/test.html.
+     * @return RulePaths Content for each RuleType:
+For `all`, enter an asterisk (*).
+For `file`, enter the suffix, such as jpg, txt.
+For `directory`, enter the path, such as /xxx/test/.
+For `path`, enter the corresponding absolute path, such as /xxx/test.html.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String [] getRulePaths() {
@@ -210,17 +210,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Matching content under the corresponding types for RuleType:
-For "all", enter an asterisk (*).
-For "file", enter the suffix, such as jpg, txt.
-For "directory", enter the path, such as /xxx/test/.
-For "path", enter the corresponding absolute path, such as /xxx/test.html.
+     * Set Content for each RuleType:
+For `all`, enter an asterisk (*).
+For `file`, enter the suffix, such as jpg, txt.
+For `directory`, enter the path, such as /xxx/test/.
+For `path`, enter the corresponding absolute path, such as /xxx/test.html.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RulePaths Matching content under the corresponding types for RuleType:
-For "all", enter an asterisk (*).
-For "file", enter the suffix, such as jpg, txt.
-For "directory", enter the path, such as /xxx/test/.
-For "path", enter the corresponding absolute path, such as /xxx/test.html.
+     * @param RulePaths Content for each RuleType:
+For `all`, enter an asterisk (*).
+For `file`, enter the suffix, such as jpg, txt.
+For `directory`, enter the path, such as /xxx/test/.
+For `path`, enter the corresponding absolute path, such as /xxx/test.html.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setRulePaths(String [] RulePaths) {

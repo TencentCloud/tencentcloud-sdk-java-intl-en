@@ -23,11 +23,57 @@ import java.util.HashMap;
 public class DescribeTargetGroupsResponse extends AbstractModel{
 
     /**
+    * Number of displayed results
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
+    * Information set of displayed target groups
+    */
+    @SerializedName("TargetGroupSet")
+    @Expose
+    private TargetGroupInfo [] TargetGroupSet;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get Number of displayed results 
+     * @return TotalCount Number of displayed results
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set Number of displayed results
+     * @param TotalCount Number of displayed results
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get Information set of displayed target groups 
+     * @return TargetGroupSet Information set of displayed target groups
+     */
+    public TargetGroupInfo [] getTargetGroupSet() {
+        return this.TargetGroupSet;
+    }
+
+    /**
+     * Set Information set of displayed target groups
+     * @param TargetGroupSet Information set of displayed target groups
+     */
+    public void setTargetGroupSet(TargetGroupInfo [] TargetGroupSet) {
+        this.TargetGroupSet = TargetGroupSet;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -49,6 +95,8 @@ public class DescribeTargetGroupsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "TargetGroupSet.", this.TargetGroupSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

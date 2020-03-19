@@ -23,9 +23,57 @@ import java.util.HashMap;
 public class EsPublicAcl extends AbstractModel{
 
     /**
+    * Access blacklist
+    */
+    @SerializedName("BlackIpList")
+    @Expose
+    private String [] BlackIpList;
+
+    /**
+    * Access whitelist
+    */
+    @SerializedName("WhiteIpList")
+    @Expose
+    private String [] WhiteIpList;
+
+    /**
+     * Get Access blacklist 
+     * @return BlackIpList Access blacklist
+     */
+    public String [] getBlackIpList() {
+        return this.BlackIpList;
+    }
+
+    /**
+     * Set Access blacklist
+     * @param BlackIpList Access blacklist
+     */
+    public void setBlackIpList(String [] BlackIpList) {
+        this.BlackIpList = BlackIpList;
+    }
+
+    /**
+     * Get Access whitelist 
+     * @return WhiteIpList Access whitelist
+     */
+    public String [] getWhiteIpList() {
+        return this.WhiteIpList;
+    }
+
+    /**
+     * Set Access whitelist
+     * @param WhiteIpList Access whitelist
+     */
+    public void setWhiteIpList(String [] WhiteIpList) {
+        this.WhiteIpList = WhiteIpList;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "BlackIpList.", this.BlackIpList);
+        this.setParamArraySimple(map, prefix + "WhiteIpList.", this.WhiteIpList);
 
     }
 }

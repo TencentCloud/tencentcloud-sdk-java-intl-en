@@ -90,11 +90,19 @@ Note: This field may return null, indicating that no valid value was found.
     private Long OperateUinType;
 
     /**
-    * 
+    * Queries if the policy has been deactivated
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Deactived")
     @Expose
     private Long Deactived;
+
+    /**
+    * 
+    */
+    @SerializedName("DeactivedDetail")
+    @Expose
+    private String [] DeactivedDetail;
 
     /**
      * Get Policy ID 
@@ -257,19 +265,39 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get  
-     * @return Deactived 
+     * Get Queries if the policy has been deactivated
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Deactived Queries if the policy has been deactivated
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getDeactived() {
         return this.Deactived;
     }
 
     /**
-     * Set 
-     * @param Deactived 
+     * Set Queries if the policy has been deactivated
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Deactived Queries if the policy has been deactivated
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDeactived(Long Deactived) {
         this.Deactived = Deactived;
+    }
+
+    /**
+     * Get  
+     * @return DeactivedDetail 
+     */
+    public String [] getDeactivedDetail() {
+        return this.DeactivedDetail;
+    }
+
+    /**
+     * Set 
+     * @param DeactivedDetail 
+     */
+    public void setDeactivedDetail(String [] DeactivedDetail) {
+        this.DeactivedDetail = DeactivedDetail;
     }
 
     /**
@@ -286,6 +314,7 @@ Note: This field may return null, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "OperateUin", this.OperateUin);
         this.setParamSimple(map, prefix + "OperateUinType", this.OperateUinType);
         this.setParamSimple(map, prefix + "Deactived", this.Deactived);
+        this.setParamArraySimple(map, prefix + "DeactivedDetail.", this.DeactivedDetail);
 
     }
 }

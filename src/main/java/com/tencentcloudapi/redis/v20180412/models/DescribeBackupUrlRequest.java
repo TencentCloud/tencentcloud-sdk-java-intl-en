@@ -30,7 +30,7 @@ public class DescribeBackupUrlRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Backup ID, which can be queried through the DescribeInstanceBackups API
+    * Backup ID, which can be queried through the `DescribeInstanceBackups` API
     */
     @SerializedName("BackupId")
     @Expose
@@ -53,16 +53,16 @@ public class DescribeBackupUrlRequest extends AbstractModel{
     }
 
     /**
-     * Get Backup ID, which can be queried through the DescribeInstanceBackups API 
-     * @return BackupId Backup ID, which can be queried through the DescribeInstanceBackups API
+     * Get Backup ID, which can be queried through the `DescribeInstanceBackups` API 
+     * @return BackupId Backup ID, which can be queried through the `DescribeInstanceBackups` API
      */
     public String getBackupId() {
         return this.BackupId;
     }
 
     /**
-     * Set Backup ID, which can be queried through the DescribeInstanceBackups API
-     * @param BackupId Backup ID, which can be queried through the DescribeInstanceBackups API
+     * Set Backup ID, which can be queried through the `DescribeInstanceBackups` API
+     * @param BackupId Backup ID, which can be queried through the `DescribeInstanceBackups` API
      */
     public void setBackupId(String BackupId) {
         this.BackupId = BackupId;

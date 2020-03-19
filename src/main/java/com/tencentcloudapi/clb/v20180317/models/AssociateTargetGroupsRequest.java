@@ -23,9 +23,33 @@ import java.util.HashMap;
 public class AssociateTargetGroupsRequest extends AbstractModel{
 
     /**
+    * Association array
+    */
+    @SerializedName("Associations")
+    @Expose
+    private TargetGroupAssociation [] Associations;
+
+    /**
+     * Get Association array 
+     * @return Associations Association array
+     */
+    public TargetGroupAssociation [] getAssociations() {
+        return this.Associations;
+    }
+
+    /**
+     * Set Association array
+     * @param Associations Association array
+     */
+    public void setAssociations(TargetGroupAssociation [] Associations) {
+        this.Associations = Associations;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Associations.", this.Associations);
 
     }
 }

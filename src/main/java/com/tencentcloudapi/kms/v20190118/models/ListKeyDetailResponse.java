@@ -23,11 +23,62 @@ import java.util.HashMap;
 public class ListKeyDetailResponse extends AbstractModel{
 
     /**
+    * 
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
+    * List of returned attribute information.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("KeyMetadatas")
+    @Expose
+    private KeyMetadata [] KeyMetadatas;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get  
+     * @return TotalCount 
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 
+     * @param TotalCount 
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get List of returned attribute information.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return KeyMetadatas List of returned attribute information.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public KeyMetadata [] getKeyMetadatas() {
+        return this.KeyMetadatas;
+    }
+
+    /**
+     * Set List of returned attribute information.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param KeyMetadatas List of returned attribute information.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setKeyMetadatas(KeyMetadata [] KeyMetadatas) {
+        this.KeyMetadatas = KeyMetadatas;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -49,6 +100,8 @@ public class ListKeyDetailResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "KeyMetadatas.", this.KeyMetadatas);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

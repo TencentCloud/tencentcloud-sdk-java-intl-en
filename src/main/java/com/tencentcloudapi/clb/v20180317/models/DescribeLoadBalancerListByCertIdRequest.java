@@ -23,9 +23,33 @@ import java.util.HashMap;
 public class DescribeLoadBalancerListByCertIdRequest extends AbstractModel{
 
     /**
+    * Server or client certificate ID
+    */
+    @SerializedName("CertIds")
+    @Expose
+    private String [] CertIds;
+
+    /**
+     * Get Server or client certificate ID 
+     * @return CertIds Server or client certificate ID
+     */
+    public String [] getCertIds() {
+        return this.CertIds;
+    }
+
+    /**
+     * Set Server or client certificate ID
+     * @param CertIds Server or client certificate ID
+     */
+    public void setCertIds(String [] CertIds) {
+        this.CertIds = CertIds;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "CertIds.", this.CertIds);
 
     }
 }

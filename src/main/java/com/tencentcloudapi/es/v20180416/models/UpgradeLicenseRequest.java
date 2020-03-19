@@ -51,14 +51,14 @@ public class UpgradeLicenseRequest extends AbstractModel{
     private String [] VoucherIds;
 
     /**
-    * 
+    * Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
     */
     @SerializedName("BasicSecurityType")
     @Expose
     private Long BasicSecurityType;
 
     /**
-    * 
+    * Whether to force restart <li>true: yes </li><li>false: no </li>Default value: false
     */
     @SerializedName("ForceRestart")
     @Expose
@@ -129,32 +129,32 @@ public class UpgradeLicenseRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return BasicSecurityType 
+     * Get Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li> 
+     * @return BasicSecurityType Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
      */
     public Long getBasicSecurityType() {
         return this.BasicSecurityType;
     }
 
     /**
-     * Set 
-     * @param BasicSecurityType 
+     * Set Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
+     * @param BasicSecurityType Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
      */
     public void setBasicSecurityType(Long BasicSecurityType) {
         this.BasicSecurityType = BasicSecurityType;
     }
 
     /**
-     * Get  
-     * @return ForceRestart 
+     * Get Whether to force restart <li>true: yes </li><li>false: no </li>Default value: false 
+     * @return ForceRestart Whether to force restart <li>true: yes </li><li>false: no </li>Default value: false
      */
     public Boolean getForceRestart() {
         return this.ForceRestart;
     }
 
     /**
-     * Set 
-     * @param ForceRestart 
+     * Set Whether to force restart <li>true: yes </li><li>false: no </li>Default value: false
+     * @param ForceRestart Whether to force restart <li>true: yes </li><li>false: no </li>Default value: false
      */
     public void setForceRestart(Boolean ForceRestart) {
         this.ForceRestart = ForceRestart;

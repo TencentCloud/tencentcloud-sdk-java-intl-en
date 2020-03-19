@@ -86,6 +86,13 @@ public class LifecycleHook extends AbstractModel{
     private NotificationTarget NotificationTarget;
 
     /**
+    * Applicable scenario of the lifecycle hook
+    */
+    @SerializedName("LifecycleTransitionType")
+    @Expose
+    private String LifecycleTransitionType;
+
+    /**
      * Get Lifecycle hook ID 
      * @return LifecycleHookId Lifecycle hook ID
      */
@@ -230,6 +237,22 @@ public class LifecycleHook extends AbstractModel{
     }
 
     /**
+     * Get Applicable scenario of the lifecycle hook 
+     * @return LifecycleTransitionType Applicable scenario of the lifecycle hook
+     */
+    public String getLifecycleTransitionType() {
+        return this.LifecycleTransitionType;
+    }
+
+    /**
+     * Set Applicable scenario of the lifecycle hook
+     * @param LifecycleTransitionType Applicable scenario of the lifecycle hook
+     */
+    public void setLifecycleTransitionType(String LifecycleTransitionType) {
+        this.LifecycleTransitionType = LifecycleTransitionType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +265,7 @@ public class LifecycleHook extends AbstractModel{
         this.setParamSimple(map, prefix + "NotificationMetadata", this.NotificationMetadata);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamObj(map, prefix + "NotificationTarget.", this.NotificationTarget);
+        this.setParamSimple(map, prefix + "LifecycleTransitionType", this.LifecycleTransitionType);
 
     }
 }

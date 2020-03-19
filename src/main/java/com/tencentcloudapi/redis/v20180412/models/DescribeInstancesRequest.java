@@ -149,7 +149,7 @@ public class DescribeInstancesRequest extends AbstractModel{
     private String BillingMode;
 
     /**
-    * Instance type. 1: legacy Redis cluster edition; 2: Redis 2.8 master-slave edition; 3: CKV master-slave edition; 4: CKV cluster edition; 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition
+    * Instance type. 1: legacy Redis Cluster Edition, 2: Redis 2.8 Master-Slave Edition, 3: CKV Master-Slave Edition, 4: CKV Cluster Edition, 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
     */
     @SerializedName("Type")
     @Expose
@@ -161,6 +161,13 @@ public class DescribeInstancesRequest extends AbstractModel{
     @SerializedName("SearchKeys")
     @Expose
     private String [] SearchKeys;
+
+    /**
+    * Internal parameter, which can be ignored
+    */
+    @SerializedName("TypeList")
+    @Expose
+    private Long [] TypeList;
 
     /**
      * Get Instance list size. Default value: 20 
@@ -451,16 +458,16 @@ public class DescribeInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Instance type. 1: legacy Redis cluster edition; 2: Redis 2.8 master-slave edition; 3: CKV master-slave edition; 4: CKV cluster edition; 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition 
-     * @return Type Instance type. 1: legacy Redis cluster edition; 2: Redis 2.8 master-slave edition; 3: CKV master-slave edition; 4: CKV cluster edition; 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition
+     * Get Instance type. 1: legacy Redis Cluster Edition, 2: Redis 2.8 Master-Slave Edition, 3: CKV Master-Slave Edition, 4: CKV Cluster Edition, 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition, 
+     * @return Type Instance type. 1: legacy Redis Cluster Edition, 2: Redis 2.8 Master-Slave Edition, 3: CKV Master-Slave Edition, 4: CKV Cluster Edition, 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set Instance type. 1: legacy Redis cluster edition; 2: Redis 2.8 master-slave edition; 3: CKV master-slave edition; 4: CKV cluster edition; 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition
-     * @param Type Instance type. 1: legacy Redis cluster edition; 2: Redis 2.8 master-slave edition; 3: CKV master-slave edition; 4: CKV cluster edition; 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition
+     * Set Instance type. 1: legacy Redis Cluster Edition, 2: Redis 2.8 Master-Slave Edition, 3: CKV Master-Slave Edition, 4: CKV Cluster Edition, 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
+     * @param Type Instance type. 1: legacy Redis Cluster Edition, 2: Redis 2.8 Master-Slave Edition, 3: CKV Master-Slave Edition, 4: CKV Cluster Edition, 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
      */
     public void setType(Long Type) {
         this.Type = Type;
@@ -480,6 +487,22 @@ public class DescribeInstancesRequest extends AbstractModel{
      */
     public void setSearchKeys(String [] SearchKeys) {
         this.SearchKeys = SearchKeys;
+    }
+
+    /**
+     * Get Internal parameter, which can be ignored 
+     * @return TypeList Internal parameter, which can be ignored
+     */
+    public Long [] getTypeList() {
+        return this.TypeList;
+    }
+
+    /**
+     * Set Internal parameter, which can be ignored
+     * @param TypeList Internal parameter, which can be ignored
+     */
+    public void setTypeList(Long [] TypeList) {
+        this.TypeList = TypeList;
     }
 
     /**
@@ -506,6 +529,7 @@ public class DescribeInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BillingMode", this.BillingMode);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamArraySimple(map, prefix + "SearchKeys.", this.SearchKeys);
+        this.setParamArraySimple(map, prefix + "TypeList.", this.TypeList);
 
     }
 }

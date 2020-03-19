@@ -43,7 +43,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * IP blacklist/whitelist list
-It supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
+Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
 Up to 50 whitelists or blacklists can be entered
 Note: this field may return null, indicating that no valid values can be obtained.
     */
@@ -105,11 +105,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get IP blacklist/whitelist list
-It supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
+Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
 Up to 50 whitelists or blacklists can be entered
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return Filters IP blacklist/whitelist list
-It supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
+Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
 Up to 50 whitelists or blacklists can be entered
 Note: this field may return null, indicating that no valid values can be obtained.
      */
@@ -119,11 +119,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set IP blacklist/whitelist list
-It supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
+Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
 Up to 50 whitelists or blacklists can be entered
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param Filters IP blacklist/whitelist list
-It supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
+Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
 Up to 50 whitelists or blacklists can be entered
 Note: this field may return null, indicating that no valid values can be obtained.
      */

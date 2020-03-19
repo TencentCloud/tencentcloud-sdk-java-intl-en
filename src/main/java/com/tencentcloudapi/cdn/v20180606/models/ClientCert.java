@@ -41,7 +41,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Certificate expiration time
-When it is used as an input parameter, it can be left blank.
+When this is used as an input parameter, it can be left blank.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExpireTime")
@@ -50,7 +50,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Certificate issuance time
-When it is used as an input parameter, it can be left blank.
+When this is used as an input parameter, it can be left blank.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DeployTime")
@@ -103,10 +103,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Certificate expiration time
-When it is used as an input parameter, it can be left blank.
+When this is used as an input parameter, it can be left blank.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return ExpireTime Certificate expiration time
-When it is used as an input parameter, it can be left blank.
+When this is used as an input parameter, it can be left blank.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getExpireTime() {
@@ -115,10 +115,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Certificate expiration time
-When it is used as an input parameter, it can be left blank.
+When this is used as an input parameter, it can be left blank.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param ExpireTime Certificate expiration time
-When it is used as an input parameter, it can be left blank.
+When this is used as an input parameter, it can be left blank.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setExpireTime(String ExpireTime) {
@@ -127,10 +127,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Certificate issuance time
-When it is used as an input parameter, it can be left blank.
+When this is used as an input parameter, it can be left blank.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return DeployTime Certificate issuance time
-When it is used as an input parameter, it can be left blank.
+When this is used as an input parameter, it can be left blank.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getDeployTime() {
@@ -139,10 +139,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Certificate issuance time
-When it is used as an input parameter, it can be left blank.
+When this is used as an input parameter, it can be left blank.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param DeployTime Certificate issuance time
-When it is used as an input parameter, it can be left blank.
+When this is used as an input parameter, it can be left blank.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDeployTime(String DeployTime) {

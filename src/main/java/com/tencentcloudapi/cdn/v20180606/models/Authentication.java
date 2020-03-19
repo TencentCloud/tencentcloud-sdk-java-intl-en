@@ -26,7 +26,7 @@ public class Authentication extends AbstractModel{
     * Hotlink protection configuration switch
 on: enabled
 off: disabled
-When it is enabled, only one mode needs to be configured. Other modes need to be set to null.
+When this is enabled, one mode needs to be configured. Other modes need to be set to null.
     */
     @SerializedName("Switch")
     @Expose
@@ -41,7 +41,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private AuthenticationTypeA TypeA;
 
     /**
-    * Timestamp hotlink protection mode B configuration (the mode B backend is being upgraded and the configuration is currently not supported)
+    * Timestamp hotlink protection mode B configuration (mode B is being upgraded and is currently not supported)
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TypeB")
@@ -68,11 +68,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Get Hotlink protection configuration switch
 on: enabled
 off: disabled
-When it is enabled, only one mode needs to be configured. Other modes need to be set to null. 
+When this is enabled, one mode needs to be configured. Other modes need to be set to null. 
      * @return Switch Hotlink protection configuration switch
 on: enabled
 off: disabled
-When it is enabled, only one mode needs to be configured. Other modes need to be set to null.
+When this is enabled, one mode needs to be configured. Other modes need to be set to null.
      */
     public String getSwitch() {
         return this.Switch;
@@ -82,11 +82,11 @@ When it is enabled, only one mode needs to be configured. Other modes need to be
      * Set Hotlink protection configuration switch
 on: enabled
 off: disabled
-When it is enabled, only one mode needs to be configured. Other modes need to be set to null.
+When this is enabled, one mode needs to be configured. Other modes need to be set to null.
      * @param Switch Hotlink protection configuration switch
 on: enabled
 off: disabled
-When it is enabled, only one mode needs to be configured. Other modes need to be set to null.
+When this is enabled, one mode needs to be configured. Other modes need to be set to null.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
@@ -113,9 +113,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Timestamp hotlink protection mode B configuration (the mode B backend is being upgraded and the configuration is currently not supported)
+     * Get Timestamp hotlink protection mode B configuration (mode B is being upgraded and is currently not supported)
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TypeB Timestamp hotlink protection mode B configuration (the mode B backend is being upgraded and the configuration is currently not supported)
+     * @return TypeB Timestamp hotlink protection mode B configuration (mode B is being upgraded and is currently not supported)
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public AuthenticationTypeB getTypeB() {
@@ -123,9 +123,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Timestamp hotlink protection mode B configuration (the mode B backend is being upgraded and the configuration is currently not supported)
+     * Set Timestamp hotlink protection mode B configuration (mode B is being upgraded and is currently not supported)
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TypeB Timestamp hotlink protection mode B configuration (the mode B backend is being upgraded and the configuration is currently not supported)
+     * @param TypeB Timestamp hotlink protection mode B configuration (mode B is being upgraded and is currently not supported)
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setTypeB(AuthenticationTypeB TypeB) {

@@ -65,7 +65,7 @@ public class SrcInfo extends AbstractModel{
     private String RdsInstanceId;
 
     /**
-    * Short CVM instance ID in the format of ins-olgl39y8. It is the same as the instance ID displayed on the CVM Console page. For CVM-created instances, this field needs to be passed in.
+    * Short CVM instance ID in the format of `ins-olgl39y8`. It is the same as the instance ID displayed on the CVM Console page. For CVM-based self-created instances, this field needs to be passed in
     */
     @SerializedName("CvmInstanceId")
     @Expose
@@ -232,16 +232,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Short CVM instance ID in the format of ins-olgl39y8. It is the same as the instance ID displayed on the CVM Console page. For CVM-created instances, this field needs to be passed in. 
-     * @return CvmInstanceId Short CVM instance ID in the format of ins-olgl39y8. It is the same as the instance ID displayed on the CVM Console page. For CVM-created instances, this field needs to be passed in.
+     * Get Short CVM instance ID in the format of `ins-olgl39y8`. It is the same as the instance ID displayed on the CVM Console page. For CVM-based self-created instances, this field needs to be passed in 
+     * @return CvmInstanceId Short CVM instance ID in the format of `ins-olgl39y8`. It is the same as the instance ID displayed on the CVM Console page. For CVM-based self-created instances, this field needs to be passed in
      */
     public String getCvmInstanceId() {
         return this.CvmInstanceId;
     }
 
     /**
-     * Set Short CVM instance ID in the format of ins-olgl39y8. It is the same as the instance ID displayed on the CVM Console page. For CVM-created instances, this field needs to be passed in.
-     * @param CvmInstanceId Short CVM instance ID in the format of ins-olgl39y8. It is the same as the instance ID displayed on the CVM Console page. For CVM-created instances, this field needs to be passed in.
+     * Set Short CVM instance ID in the format of `ins-olgl39y8`. It is the same as the instance ID displayed on the CVM Console page. For CVM-based self-created instances, this field needs to be passed in
+     * @param CvmInstanceId Short CVM instance ID in the format of `ins-olgl39y8`. It is the same as the instance ID displayed on the CVM Console page. For CVM-based self-created instances, this field needs to be passed in
      */
     public void setCvmInstanceId(String CvmInstanceId) {
         this.CvmInstanceId = CvmInstanceId;

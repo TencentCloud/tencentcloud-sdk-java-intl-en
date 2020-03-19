@@ -44,11 +44,18 @@ public class CreateRoleRequest extends AbstractModel{
     private String Description;
 
     /**
-    * If login is allowed
+    * Whether login is allowed. 1: yes, 0: no
     */
     @SerializedName("ConsoleLogin")
     @Expose
     private Long ConsoleLogin;
+
+    /**
+    * 
+    */
+    @SerializedName("SessionDuration")
+    @Expose
+    private Long SessionDuration;
 
     /**
      * Get Role name 
@@ -99,19 +106,35 @@ public class CreateRoleRequest extends AbstractModel{
     }
 
     /**
-     * Get If login is allowed 
-     * @return ConsoleLogin If login is allowed
+     * Get Whether login is allowed. 1: yes, 0: no 
+     * @return ConsoleLogin Whether login is allowed. 1: yes, 0: no
      */
     public Long getConsoleLogin() {
         return this.ConsoleLogin;
     }
 
     /**
-     * Set If login is allowed
-     * @param ConsoleLogin If login is allowed
+     * Set Whether login is allowed. 1: yes, 0: no
+     * @param ConsoleLogin Whether login is allowed. 1: yes, 0: no
      */
     public void setConsoleLogin(Long ConsoleLogin) {
         this.ConsoleLogin = ConsoleLogin;
+    }
+
+    /**
+     * Get  
+     * @return SessionDuration 
+     */
+    public Long getSessionDuration() {
+        return this.SessionDuration;
+    }
+
+    /**
+     * Set 
+     * @param SessionDuration 
+     */
+    public void setSessionDuration(Long SessionDuration) {
+        this.SessionDuration = SessionDuration;
     }
 
     /**
@@ -122,6 +145,7 @@ public class CreateRoleRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PolicyDocument", this.PolicyDocument);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "ConsoleLogin", this.ConsoleLogin);
+        this.setParamSimple(map, prefix + "SessionDuration", this.SessionDuration);
 
     }
 }

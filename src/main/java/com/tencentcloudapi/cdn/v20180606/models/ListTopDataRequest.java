@@ -24,9 +24,9 @@ public class ListTopDataRequest extends AbstractModel{
 
     /**
     * Query start date. Example: 2018-09-09.
-It only supports data query at daily granularity. The date information in the input parameter is the start date.
-Returns data generated at or after 00:00:00 on the start date.
-It only supports querying of data within 90 days.
+Only supports data query at daily granularity. The date in the input parameter is used as the start date.
+Data generated at or after 00:00:00 on the start date will be returned.
+Only data from the last 90 days will be queried.
     */
     @SerializedName("StartTime")
     @Expose
@@ -34,8 +34,8 @@ It only supports querying of data within 90 days.
 
     /**
     * Query end date. Example: 2018-09-10
-It only supports data query at daily granularity. The date information in the input parameter is the end date.
-Returns data generated before or at 23:59:59 on the end date.
+Only supports data query at daily granularity. The date in the input parameter is used as the end date.
+Data generated before or at 23:59:59 on the end date will be returned.
 EndTime must be greater than or equal to StartTime
     */
     @SerializedName("EndTime")
@@ -126,13 +126,13 @@ If `Metric` is `Url`, `Path`, `District`, or `Isp` and `Filter` is `flux` or `re
 
     /**
      * Get Query start date. Example: 2018-09-09.
-It only supports data query at daily granularity. The date information in the input parameter is the start date.
-Returns data generated at or after 00:00:00 on the start date.
-It only supports querying of data within 90 days. 
+Only supports data query at daily granularity. The date in the input parameter is used as the start date.
+Data generated at or after 00:00:00 on the start date will be returned.
+Only data from the last 90 days will be queried. 
      * @return StartTime Query start date. Example: 2018-09-09.
-It only supports data query at daily granularity. The date information in the input parameter is the start date.
-Returns data generated at or after 00:00:00 on the start date.
-It only supports querying of data within 90 days.
+Only supports data query at daily granularity. The date in the input parameter is used as the start date.
+Data generated at or after 00:00:00 on the start date will be returned.
+Only data from the last 90 days will be queried.
      */
     public String getStartTime() {
         return this.StartTime;
@@ -140,13 +140,13 @@ It only supports querying of data within 90 days.
 
     /**
      * Set Query start date. Example: 2018-09-09.
-It only supports data query at daily granularity. The date information in the input parameter is the start date.
-Returns data generated at or after 00:00:00 on the start date.
-It only supports querying of data within 90 days.
+Only supports data query at daily granularity. The date in the input parameter is used as the start date.
+Data generated at or after 00:00:00 on the start date will be returned.
+Only data from the last 90 days will be queried.
      * @param StartTime Query start date. Example: 2018-09-09.
-It only supports data query at daily granularity. The date information in the input parameter is the start date.
-Returns data generated at or after 00:00:00 on the start date.
-It only supports querying of data within 90 days.
+Only supports data query at daily granularity. The date in the input parameter is used as the start date.
+Data generated at or after 00:00:00 on the start date will be returned.
+Only data from the last 90 days will be queried.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
@@ -154,12 +154,12 @@ It only supports querying of data within 90 days.
 
     /**
      * Get Query end date. Example: 2018-09-10
-It only supports data query at daily granularity. The date information in the input parameter is the end date.
-Returns data generated before or at 23:59:59 on the end date.
+Only supports data query at daily granularity. The date in the input parameter is used as the end date.
+Data generated before or at 23:59:59 on the end date will be returned.
 EndTime must be greater than or equal to StartTime 
      * @return EndTime Query end date. Example: 2018-09-10
-It only supports data query at daily granularity. The date information in the input parameter is the end date.
-Returns data generated before or at 23:59:59 on the end date.
+Only supports data query at daily granularity. The date in the input parameter is used as the end date.
+Data generated before or at 23:59:59 on the end date will be returned.
 EndTime must be greater than or equal to StartTime
      */
     public String getEndTime() {
@@ -168,12 +168,12 @@ EndTime must be greater than or equal to StartTime
 
     /**
      * Set Query end date. Example: 2018-09-10
-It only supports data query at daily granularity. The date information in the input parameter is the end date.
-Returns data generated before or at 23:59:59 on the end date.
+Only supports data query at daily granularity. The date in the input parameter is used as the end date.
+Data generated before or at 23:59:59 on the end date will be returned.
 EndTime must be greater than or equal to StartTime
      * @param EndTime Query end date. Example: 2018-09-10
-It only supports data query at daily granularity. The date information in the input parameter is the end date.
-Returns data generated before or at 23:59:59 on the end date.
+Only supports data query at daily granularity. The date in the input parameter is used as the end date.
+Data generated before or at 23:59:59 on the end date will be returned.
 EndTime must be greater than or equal to StartTime
      */
     public void setEndTime(String EndTime) {

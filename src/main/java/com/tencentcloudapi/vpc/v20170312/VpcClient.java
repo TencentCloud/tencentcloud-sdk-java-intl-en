@@ -1879,6 +1879,24 @@ This API is completed asynchronously. If you need to query the async job executi
     }
 
     /**
+     *This API (ModifyCcnRegionBandwidthlimitsType) is used to modify the bandwidth limits policy of the postpaid Ccn instances.
+     * @param req ModifyCcnRegionBandwidthLimitsTypeRequest
+     * @return ModifyCcnRegionBandwidthLimitsTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCcnRegionBandwidthLimitsTypeResponse ModifyCcnRegionBandwidthLimitsType(ModifyCcnRegionBandwidthLimitsTypeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCcnRegionBandwidthLimitsTypeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCcnRegionBandwidthLimitsTypeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyCcnRegionBandwidthLimitsType"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (ModifyHaVipAttribute) is used to modify HAVIP attributes.
      * @param req ModifyHaVipAttributeRequest
      * @return ModifyHaVipAttributeResponse

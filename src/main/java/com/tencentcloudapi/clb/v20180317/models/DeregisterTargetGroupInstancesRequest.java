@@ -23,9 +23,57 @@ import java.util.HashMap;
 public class DeregisterTargetGroupInstancesRequest extends AbstractModel{
 
     /**
+    * Target group ID
+    */
+    @SerializedName("TargetGroupId")
+    @Expose
+    private String TargetGroupId;
+
+    /**
+    * Information of server to be unbound
+    */
+    @SerializedName("TargetGroupInstances")
+    @Expose
+    private TargetGroupInstance [] TargetGroupInstances;
+
+    /**
+     * Get Target group ID 
+     * @return TargetGroupId Target group ID
+     */
+    public String getTargetGroupId() {
+        return this.TargetGroupId;
+    }
+
+    /**
+     * Set Target group ID
+     * @param TargetGroupId Target group ID
+     */
+    public void setTargetGroupId(String TargetGroupId) {
+        this.TargetGroupId = TargetGroupId;
+    }
+
+    /**
+     * Get Information of server to be unbound 
+     * @return TargetGroupInstances Information of server to be unbound
+     */
+    public TargetGroupInstance [] getTargetGroupInstances() {
+        return this.TargetGroupInstances;
+    }
+
+    /**
+     * Set Information of server to be unbound
+     * @param TargetGroupInstances Information of server to be unbound
+     */
+    public void setTargetGroupInstances(TargetGroupInstance [] TargetGroupInstances) {
+        this.TargetGroupInstances = TargetGroupInstances;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TargetGroupId", this.TargetGroupId);
+        this.setParamArrayObj(map, prefix + "TargetGroupInstances.", this.TargetGroupInstances);
 
     }
 }

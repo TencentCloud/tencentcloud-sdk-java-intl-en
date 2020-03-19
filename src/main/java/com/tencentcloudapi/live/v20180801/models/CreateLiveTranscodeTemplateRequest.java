@@ -145,14 +145,14 @@ baseline/main/high. Default value: baseline.
     private Long FpsToOrig;
 
     /**
-    * Whether it is a TESHD template. 0: no; 1: yes. Default value: 0.
+    * Whether it is a top speed codec template. 0: no, 1: yes. Default value: 0.
     */
     @SerializedName("AiTransCode")
     @Expose
     private Long AiTransCode;
 
     /**
-    * VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5.
+    * `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
     */
     @SerializedName("AdaptBitratePercent")
     @Expose
@@ -443,32 +443,32 @@ baseline/main/high. Default value: baseline.
     }
 
     /**
-     * Get Whether it is a TESHD template. 0: no; 1: yes. Default value: 0. 
-     * @return AiTransCode Whether it is a TESHD template. 0: no; 1: yes. Default value: 0.
+     * Get Whether it is a top speed codec template. 0: no, 1: yes. Default value: 0. 
+     * @return AiTransCode Whether it is a top speed codec template. 0: no, 1: yes. Default value: 0.
      */
     public Long getAiTransCode() {
         return this.AiTransCode;
     }
 
     /**
-     * Set Whether it is a TESHD template. 0: no; 1: yes. Default value: 0.
-     * @param AiTransCode Whether it is a TESHD template. 0: no; 1: yes. Default value: 0.
+     * Set Whether it is a top speed codec template. 0: no, 1: yes. Default value: 0.
+     * @param AiTransCode Whether it is a top speed codec template. 0: no, 1: yes. Default value: 0.
      */
     public void setAiTransCode(Long AiTransCode) {
         this.AiTransCode = AiTransCode;
     }
 
     /**
-     * Get VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5. 
-     * @return AdaptBitratePercent VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5.
+     * Get `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5. 
+     * @return AdaptBitratePercent `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
      */
     public Float getAdaptBitratePercent() {
         return this.AdaptBitratePercent;
     }
 
     /**
-     * Set VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5.
-     * @param AdaptBitratePercent VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5.
+     * Set `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
+     * @param AdaptBitratePercent `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
      */
     public void setAdaptBitratePercent(Float AdaptBitratePercent) {
         this.AdaptBitratePercent = AdaptBitratePercent;

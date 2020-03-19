@@ -32,7 +32,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String SecretKey;
 
     /**
-    * Signature expiration time settings
+    * Signature expiration time
 Unit: second. The maximum value is 31536000.
     */
     @SerializedName("ExpireTime")
@@ -40,7 +40,7 @@ Unit: second. The maximum value is 31536000.
     private Long ExpireTime;
 
     /**
-    * File extension list settings for authentication/no authentication
+    * File extension list settings determining if authentication should be performed
 If it contains an asterisk (*), this indicates all files.
     */
     @SerializedName("FileExtensions")
@@ -48,8 +48,8 @@ If it contains an asterisk (*), this indicates all files.
     private String [] FileExtensions;
 
     /**
-    * whitelist: indicating that all types apart from the FileExtensions list are authenticated
-blacklist: indicating that only the types in the FileExtensions list are authenticated
+    * whitelist: indicates that all file types apart from the FileExtensions list are authenticated
+blacklist: indicates that only the file types in the FileExtensions list are authenticated
     */
     @SerializedName("FilterType")
     @Expose
@@ -80,9 +80,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Signature expiration time settings
+     * Get Signature expiration time
 Unit: second. The maximum value is 31536000. 
-     * @return ExpireTime Signature expiration time settings
+     * @return ExpireTime Signature expiration time
 Unit: second. The maximum value is 31536000.
      */
     public Long getExpireTime() {
@@ -90,9 +90,9 @@ Unit: second. The maximum value is 31536000.
     }
 
     /**
-     * Set Signature expiration time settings
+     * Set Signature expiration time
 Unit: second. The maximum value is 31536000.
-     * @param ExpireTime Signature expiration time settings
+     * @param ExpireTime Signature expiration time
 Unit: second. The maximum value is 31536000.
      */
     public void setExpireTime(Long ExpireTime) {
@@ -100,9 +100,9 @@ Unit: second. The maximum value is 31536000.
     }
 
     /**
-     * Get File extension list settings for authentication/no authentication
+     * Get File extension list settings determining if authentication should be performed
 If it contains an asterisk (*), this indicates all files. 
-     * @return FileExtensions File extension list settings for authentication/no authentication
+     * @return FileExtensions File extension list settings determining if authentication should be performed
 If it contains an asterisk (*), this indicates all files.
      */
     public String [] getFileExtensions() {
@@ -110,9 +110,9 @@ If it contains an asterisk (*), this indicates all files.
     }
 
     /**
-     * Set File extension list settings for authentication/no authentication
+     * Set File extension list settings determining if authentication should be performed
 If it contains an asterisk (*), this indicates all files.
-     * @param FileExtensions File extension list settings for authentication/no authentication
+     * @param FileExtensions File extension list settings determining if authentication should be performed
 If it contains an asterisk (*), this indicates all files.
      */
     public void setFileExtensions(String [] FileExtensions) {
@@ -120,20 +120,20 @@ If it contains an asterisk (*), this indicates all files.
     }
 
     /**
-     * Get whitelist: indicating that all types apart from the FileExtensions list are authenticated
-blacklist: indicating that only the types in the FileExtensions list are authenticated 
-     * @return FilterType whitelist: indicating that all types apart from the FileExtensions list are authenticated
-blacklist: indicating that only the types in the FileExtensions list are authenticated
+     * Get whitelist: indicates that all file types apart from the FileExtensions list are authenticated
+blacklist: indicates that only the file types in the FileExtensions list are authenticated 
+     * @return FilterType whitelist: indicates that all file types apart from the FileExtensions list are authenticated
+blacklist: indicates that only the file types in the FileExtensions list are authenticated
      */
     public String getFilterType() {
         return this.FilterType;
     }
 
     /**
-     * Set whitelist: indicating that all types apart from the FileExtensions list are authenticated
-blacklist: indicating that only the types in the FileExtensions list are authenticated
-     * @param FilterType whitelist: indicating that all types apart from the FileExtensions list are authenticated
-blacklist: indicating that only the types in the FileExtensions list are authenticated
+     * Set whitelist: indicates that all file types apart from the FileExtensions list are authenticated
+blacklist: indicates that only the file types in the FileExtensions list are authenticated
+     * @param FilterType whitelist: indicates that all file types apart from the FileExtensions list are authenticated
+blacklist: indicates that only the file types in the FileExtensions list are authenticated
      */
     public void setFilterType(String FilterType) {
         this.FilterType = FilterType;

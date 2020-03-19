@@ -135,7 +135,7 @@ public class CreateInstanceRequest extends AbstractModel{
     private PreExecuteFileSettings [] PreExecutedFileSettings;
 
     /**
-    * Auto-renewal flag. Valid values:
+    * Whether auto-renewal is enabled. Valid values:
 <li>0: auto-renewal not enabled.</li>
 <li>1: auto-renewal enabled.</li>
     */
@@ -193,6 +193,37 @@ public class CreateInstanceRequest extends AbstractModel{
     @SerializedName("DisasterRecoverGroupIds")
     @Expose
     private String [] DisasterRecoverGroupIds;
+
+    /**
+    * CBS disk encryption at the cluster level. 0: not encrypted, 1: encrypted
+    */
+    @SerializedName("CbsEncrypt")
+    @Expose
+    private Long CbsEncrypt;
+
+    /**
+    * Hive-shared metadatabase type. Valid values:
+<li>EMR_DEFAULT_META: the cluster creates one by default.</li>
+<li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
+<li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li>
+    */
+    @SerializedName("MetaType")
+    @Expose
+    private String MetaType;
+
+    /**
+    * EMR-MetaDB instance
+    */
+    @SerializedName("UnifyMetaInstanceId")
+    @Expose
+    private String UnifyMetaInstanceId;
+
+    /**
+    * Custom MetaDB instance information
+    */
+    @SerializedName("MetaDBInfo")
+    @Expose
+    private CustomMetaInfo MetaDBInfo;
 
     /**
      * Get Product ID. Different product IDs represent different EMR product versions. Valid values:
@@ -475,10 +506,10 @@ public class CreateInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Auto-renewal flag. Valid values:
+     * Get Whether auto-renewal is enabled. Valid values:
 <li>0: auto-renewal not enabled.</li>
 <li>1: auto-renewal enabled.</li> 
-     * @return AutoRenew Auto-renewal flag. Valid values:
+     * @return AutoRenew Whether auto-renewal is enabled. Valid values:
 <li>0: auto-renewal not enabled.</li>
 <li>1: auto-renewal enabled.</li>
      */
@@ -487,10 +518,10 @@ public class CreateInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Set Auto-renewal flag. Valid values:
+     * Set Whether auto-renewal is enabled. Valid values:
 <li>0: auto-renewal not enabled.</li>
 <li>1: auto-renewal enabled.</li>
-     * @param AutoRenew Auto-renewal flag. Valid values:
+     * @param AutoRenew Whether auto-renewal is enabled. Valid values:
 <li>0: auto-renewal not enabled.</li>
 <li>1: auto-renewal enabled.</li>
      */
@@ -619,6 +650,82 @@ public class CreateInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get CBS disk encryption at the cluster level. 0: not encrypted, 1: encrypted 
+     * @return CbsEncrypt CBS disk encryption at the cluster level. 0: not encrypted, 1: encrypted
+     */
+    public Long getCbsEncrypt() {
+        return this.CbsEncrypt;
+    }
+
+    /**
+     * Set CBS disk encryption at the cluster level. 0: not encrypted, 1: encrypted
+     * @param CbsEncrypt CBS disk encryption at the cluster level. 0: not encrypted, 1: encrypted
+     */
+    public void setCbsEncrypt(Long CbsEncrypt) {
+        this.CbsEncrypt = CbsEncrypt;
+    }
+
+    /**
+     * Get Hive-shared metadatabase type. Valid values:
+<li>EMR_DEFAULT_META: the cluster creates one by default.</li>
+<li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
+<li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li> 
+     * @return MetaType Hive-shared metadatabase type. Valid values:
+<li>EMR_DEFAULT_META: the cluster creates one by default.</li>
+<li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
+<li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li>
+     */
+    public String getMetaType() {
+        return this.MetaType;
+    }
+
+    /**
+     * Set Hive-shared metadatabase type. Valid values:
+<li>EMR_DEFAULT_META: the cluster creates one by default.</li>
+<li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
+<li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li>
+     * @param MetaType Hive-shared metadatabase type. Valid values:
+<li>EMR_DEFAULT_META: the cluster creates one by default.</li>
+<li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
+<li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li>
+     */
+    public void setMetaType(String MetaType) {
+        this.MetaType = MetaType;
+    }
+
+    /**
+     * Get EMR-MetaDB instance 
+     * @return UnifyMetaInstanceId EMR-MetaDB instance
+     */
+    public String getUnifyMetaInstanceId() {
+        return this.UnifyMetaInstanceId;
+    }
+
+    /**
+     * Set EMR-MetaDB instance
+     * @param UnifyMetaInstanceId EMR-MetaDB instance
+     */
+    public void setUnifyMetaInstanceId(String UnifyMetaInstanceId) {
+        this.UnifyMetaInstanceId = UnifyMetaInstanceId;
+    }
+
+    /**
+     * Get Custom MetaDB instance information 
+     * @return MetaDBInfo Custom MetaDB instance information
+     */
+    public CustomMetaInfo getMetaDBInfo() {
+        return this.MetaDBInfo;
+    }
+
+    /**
+     * Set Custom MetaDB instance information
+     * @param MetaDBInfo Custom MetaDB instance information
+     */
+    public void setMetaDBInfo(CustomMetaInfo MetaDBInfo) {
+        this.MetaDBInfo = MetaDBInfo;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -644,6 +751,10 @@ public class CreateInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ExtendFsField", this.ExtendFsField);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
+        this.setParamSimple(map, prefix + "CbsEncrypt", this.CbsEncrypt);
+        this.setParamSimple(map, prefix + "MetaType", this.MetaType);
+        this.setParamSimple(map, prefix + "UnifyMetaInstanceId", this.UnifyMetaInstanceId);
+        this.setParamObj(map, prefix + "MetaDBInfo.", this.MetaDBInfo);
 
     }
 }

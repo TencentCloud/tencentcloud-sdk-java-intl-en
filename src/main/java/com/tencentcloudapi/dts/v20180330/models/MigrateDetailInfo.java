@@ -51,14 +51,14 @@ public class MigrateDetailInfo extends AbstractModel{
     private String CurrentStepProgress;
 
     /**
-    * Master/slave difference in MB
+    * Master/slave lag in MB, which is valid during incremental sync and currently supported by TencentDB for Redis and MySQL
     */
     @SerializedName("MasterSlaveDistance")
     @Expose
     private Long MasterSlaveDistance;
 
     /**
-    * Master/slave difference in seconds
+    * Master/slave lag in seconds, which is valid during incremental sync and currently supported by TencentDB for MySQL
     */
     @SerializedName("SecondsBehindMaster")
     @Expose
@@ -136,32 +136,32 @@ public class MigrateDetailInfo extends AbstractModel{
     }
 
     /**
-     * Get Master/slave difference in MB 
-     * @return MasterSlaveDistance Master/slave difference in MB
+     * Get Master/slave lag in MB, which is valid during incremental sync and currently supported by TencentDB for Redis and MySQL 
+     * @return MasterSlaveDistance Master/slave lag in MB, which is valid during incremental sync and currently supported by TencentDB for Redis and MySQL
      */
     public Long getMasterSlaveDistance() {
         return this.MasterSlaveDistance;
     }
 
     /**
-     * Set Master/slave difference in MB
-     * @param MasterSlaveDistance Master/slave difference in MB
+     * Set Master/slave lag in MB, which is valid during incremental sync and currently supported by TencentDB for Redis and MySQL
+     * @param MasterSlaveDistance Master/slave lag in MB, which is valid during incremental sync and currently supported by TencentDB for Redis and MySQL
      */
     public void setMasterSlaveDistance(Long MasterSlaveDistance) {
         this.MasterSlaveDistance = MasterSlaveDistance;
     }
 
     /**
-     * Get Master/slave difference in seconds 
-     * @return SecondsBehindMaster Master/slave difference in seconds
+     * Get Master/slave lag in seconds, which is valid during incremental sync and currently supported by TencentDB for MySQL 
+     * @return SecondsBehindMaster Master/slave lag in seconds, which is valid during incremental sync and currently supported by TencentDB for MySQL
      */
     public Long getSecondsBehindMaster() {
         return this.SecondsBehindMaster;
     }
 
     /**
-     * Set Master/slave difference in seconds
-     * @param SecondsBehindMaster Master/slave difference in seconds
+     * Set Master/slave lag in seconds, which is valid during incremental sync and currently supported by TencentDB for MySQL
+     * @param SecondsBehindMaster Master/slave lag in seconds, which is valid during incremental sync and currently supported by TencentDB for MySQL
      */
     public void setSecondsBehindMaster(Long SecondsBehindMaster) {
         this.SecondsBehindMaster = SecondsBehindMaster;

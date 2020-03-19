@@ -34,8 +34,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     * Follows origin server Cache-Control: max-age configurations
 on: enabled
 off: disabled
-If it is enabled, resources that do not match CacheRules rules will be cached by the node according to the max-age value returned by the origin server. Resources that match CacheRules rules will be cached on the node according to the cache expiration time set in CacheRules.
-It conflicts with CompareMaxAge. They cannot be enabled at the same time.
+If this is enabled, resources that do not match CacheRules rules will be cached by the node according to the max-age value returned by the origin server. Resources that match CacheRules rules will be cached on the node according to the cache expiration time set in CacheRules.
+This conflicts with CompareMaxAge. The two cannot be enabled at the same time.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FollowOrigin")
@@ -46,7 +46,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     * Forced cache
 on: enabled
 off: disabled
-It is disabled by default. If it is enabled, no-store and no-cache resources returned from the origin server will be cached according to CacheRules rules.
+This is disabled by default. If enabled, `no-store` and `no-cache` resources returned from the origin server will be cached according to CacheRules rules.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IgnoreCacheControl")
@@ -57,7 +57,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     * Ignores the Set-Cookie header of the origin server
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IgnoreSetCookie")
@@ -65,10 +65,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String IgnoreSetCookie;
 
     /**
-    * Advanced cache expiration configuration. If it is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
+    * Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CompareMaxAge")
@@ -99,14 +99,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Get Follows origin server Cache-Control: max-age configurations
 on: enabled
 off: disabled
-If it is enabled, resources that do not match CacheRules rules will be cached by the node according to the max-age value returned by the origin server. Resources that match CacheRules rules will be cached on the node according to the cache expiration time set in CacheRules.
-It conflicts with CompareMaxAge. They cannot be enabled at the same time.
+If this is enabled, resources that do not match CacheRules rules will be cached by the node according to the max-age value returned by the origin server. Resources that match CacheRules rules will be cached on the node according to the cache expiration time set in CacheRules.
+This conflicts with CompareMaxAge. The two cannot be enabled at the same time.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return FollowOrigin Follows origin server Cache-Control: max-age configurations
 on: enabled
 off: disabled
-If it is enabled, resources that do not match CacheRules rules will be cached by the node according to the max-age value returned by the origin server. Resources that match CacheRules rules will be cached on the node according to the cache expiration time set in CacheRules.
-It conflicts with CompareMaxAge. They cannot be enabled at the same time.
+If this is enabled, resources that do not match CacheRules rules will be cached by the node according to the max-age value returned by the origin server. Resources that match CacheRules rules will be cached on the node according to the cache expiration time set in CacheRules.
+This conflicts with CompareMaxAge. The two cannot be enabled at the same time.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getFollowOrigin() {
@@ -117,14 +117,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Set Follows origin server Cache-Control: max-age configurations
 on: enabled
 off: disabled
-If it is enabled, resources that do not match CacheRules rules will be cached by the node according to the max-age value returned by the origin server. Resources that match CacheRules rules will be cached on the node according to the cache expiration time set in CacheRules.
-It conflicts with CompareMaxAge. They cannot be enabled at the same time.
+If this is enabled, resources that do not match CacheRules rules will be cached by the node according to the max-age value returned by the origin server. Resources that match CacheRules rules will be cached on the node according to the cache expiration time set in CacheRules.
+This conflicts with CompareMaxAge. The two cannot be enabled at the same time.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param FollowOrigin Follows origin server Cache-Control: max-age configurations
 on: enabled
 off: disabled
-If it is enabled, resources that do not match CacheRules rules will be cached by the node according to the max-age value returned by the origin server. Resources that match CacheRules rules will be cached on the node according to the cache expiration time set in CacheRules.
-It conflicts with CompareMaxAge. They cannot be enabled at the same time.
+If this is enabled, resources that do not match CacheRules rules will be cached by the node according to the max-age value returned by the origin server. Resources that match CacheRules rules will be cached on the node according to the cache expiration time set in CacheRules.
+This conflicts with CompareMaxAge. The two cannot be enabled at the same time.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setFollowOrigin(String FollowOrigin) {
@@ -135,12 +135,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Get Forced cache
 on: enabled
 off: disabled
-It is disabled by default. If it is enabled, no-store and no-cache resources returned from the origin server will be cached according to CacheRules rules.
+This is disabled by default. If enabled, `no-store` and `no-cache` resources returned from the origin server will be cached according to CacheRules rules.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return IgnoreCacheControl Forced cache
 on: enabled
 off: disabled
-It is disabled by default. If it is enabled, no-store and no-cache resources returned from the origin server will be cached according to CacheRules rules.
+This is disabled by default. If enabled, `no-store` and `no-cache` resources returned from the origin server will be cached according to CacheRules rules.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getIgnoreCacheControl() {
@@ -151,12 +151,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Set Forced cache
 on: enabled
 off: disabled
-It is disabled by default. If it is enabled, no-store and no-cache resources returned from the origin server will be cached according to CacheRules rules.
+This is disabled by default. If enabled, `no-store` and `no-cache` resources returned from the origin server will be cached according to CacheRules rules.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param IgnoreCacheControl Forced cache
 on: enabled
 off: disabled
-It is disabled by default. If it is enabled, no-store and no-cache resources returned from the origin server will be cached according to CacheRules rules.
+This is disabled by default. If enabled, `no-store` and `no-cache` resources returned from the origin server will be cached according to CacheRules rules.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setIgnoreCacheControl(String IgnoreCacheControl) {
@@ -167,12 +167,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Get Ignores the Set-Cookie header of the origin server
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return IgnoreSetCookie Ignores the Set-Cookie header of the origin server
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getIgnoreSetCookie() {
@@ -183,12 +183,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Set Ignores the Set-Cookie header of the origin server
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param IgnoreSetCookie Ignores the Set-Cookie header of the origin server
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setIgnoreSetCookie(String IgnoreSetCookie) {
@@ -196,15 +196,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Advanced cache expiration configuration. If it is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
+     * Get Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CompareMaxAge Advanced cache expiration configuration. If it is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
+     * @return CompareMaxAge Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getCompareMaxAge() {
@@ -212,15 +212,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Advanced cache expiration configuration. If it is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
+     * Set Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CompareMaxAge Advanced cache expiration configuration. If it is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
+     * @param CompareMaxAge Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
 on: enabled
 off: disabled
-It is disabled by default
+This is disabled by default
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setCompareMaxAge(String CompareMaxAge) {

@@ -23,51 +23,66 @@ import java.util.HashMap;
 public class CdnIpHistory extends AbstractModel{
 
     /**
-    * Node status. `online`: activated; `offline`: deactivated
+    * Operation type
+online: node is online
+offline: node is offline
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Operation time. If its value is `null`, it means there is no status change record.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Operation time corresponding to operation type
+If this value is null, there are no status change records
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Datetime")
     @Expose
     private String Datetime;
 
     /**
-     * Get Node status. `online`: activated; `offline`: deactivated 
-     * @return Status Node status. `online`: activated; `offline`: deactivated
+     * Get Operation type
+online: node is online
+offline: node is offline 
+     * @return Status Operation type
+online: node is online
+offline: node is offline
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Node status. `online`: activated; `offline`: deactivated
-     * @param Status Node status. `online`: activated; `offline`: deactivated
+     * Set Operation type
+online: node is online
+offline: node is offline
+     * @param Status Operation type
+online: node is online
+offline: node is offline
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Operation time. If its value is `null`, it means there is no status change record.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Datetime Operation time. If its value is `null`, it means there is no status change record.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Operation time corresponding to operation type
+If this value is null, there are no status change records
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Datetime Operation time corresponding to operation type
+If this value is null, there are no status change records
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getDatetime() {
         return this.Datetime;
     }
 
     /**
-     * Set Operation time. If its value is `null`, it means there is no status change record.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Datetime Operation time. If its value is `null`, it means there is no status change record.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Operation time corresponding to operation type
+If this value is null, there are no status change records
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Datetime Operation time corresponding to operation type
+If this value is null, there are no status change records
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDatetime(String Datetime) {
         this.Datetime = Datetime;

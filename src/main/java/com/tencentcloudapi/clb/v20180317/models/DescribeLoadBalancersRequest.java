@@ -87,7 +87,7 @@ OPEN: public network; INTERNAL: private network.
     private Long Offset;
 
     /**
-    * Number of CLB instances to be returned. Default value: 20.
+    * Number of returned CLB instances. Default value: 20. Maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
@@ -299,16 +299,16 @@ OPEN: public network; INTERNAL: private network.
     }
 
     /**
-     * Get Number of CLB instances to be returned. Default value: 20. 
-     * @return Limit Number of CLB instances to be returned. Default value: 20.
+     * Get Number of returned CLB instances. Default value: 20. Maximum value: 100. 
+     * @return Limit Number of returned CLB instances. Default value: 20. Maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of CLB instances to be returned. Default value: 20.
-     * @param Limit Number of CLB instances to be returned. Default value: 20.
+     * Set Number of returned CLB instances. Default value: 20. Maximum value: 100.
+     * @param Limit Number of returned CLB instances. Default value: 20. Maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

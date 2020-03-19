@@ -72,6 +72,21 @@ public class RoleInfo extends AbstractModel{
     private Long ConsoleLogin;
 
     /**
+    * User role. Valid values: user, system
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RoleType")
+    @Expose
+    private String RoleType;
+
+    /**
+    * 
+    */
+    @SerializedName("SessionDuration")
+    @Expose
+    private Long SessionDuration;
+
+    /**
      * Get Role ID 
      * @return RoleId Role ID
      */
@@ -184,6 +199,42 @@ public class RoleInfo extends AbstractModel{
     }
 
     /**
+     * Get User role. Valid values: user, system
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return RoleType User role. Valid values: user, system
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getRoleType() {
+        return this.RoleType;
+    }
+
+    /**
+     * Set User role. Valid values: user, system
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param RoleType User role. Valid values: user, system
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRoleType(String RoleType) {
+        this.RoleType = RoleType;
+    }
+
+    /**
+     * Get  
+     * @return SessionDuration 
+     */
+    public Long getSessionDuration() {
+        return this.SessionDuration;
+    }
+
+    /**
+     * Set 
+     * @param SessionDuration 
+     */
+    public void setSessionDuration(Long SessionDuration) {
+        this.SessionDuration = SessionDuration;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +245,8 @@ public class RoleInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "AddTime", this.AddTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "ConsoleLogin", this.ConsoleLogin);
+        this.setParamSimple(map, prefix + "RoleType", this.RoleType);
+        this.setParamSimple(map, prefix + "SessionDuration", this.SessionDuration);
 
     }
 }

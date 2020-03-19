@@ -53,7 +53,7 @@ Note: If this name is the same as the name of an existing CLB instance in the sy
     private String VpcId;
 
     /**
-    * A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet. This parameter is not supported in other cases.
+    * A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet.
     */
     @SerializedName("SubnetId")
     @Expose
@@ -67,7 +67,7 @@ Note: If this name is the same as the name of an existing CLB instance in the sy
     private Long ProjectId;
 
     /**
-    * IP version. Value range: IPv4, IPv6. Default value: IPv4. This parameter is applicable only to public network CLB.
+    * IP version. Valid values: IPv4, IPv6, IPv6FullChain. Default value: IPv4. This parameter is applicable only to public network CLB instances.
     */
     @SerializedName("AddressIPVersion")
     @Expose
@@ -96,11 +96,18 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
     private String ZoneId;
 
     /**
-    * CLB network billing method. This parameter is applicable only to public network CLB, and takes effect only for users whose bandwidth is managed in IP and CLB.
+    * CLB network billing mode. This parameter is applicable only to public network CLB instances.
     */
     @SerializedName("InternetAccessible")
     @Expose
     private InternetAccessible InternetAccessible;
+
+    /**
+    * This parameter is applicable only to public network CLB instances. Valid values: CMCC (China Mobile), CTCC (China Telecom), CUCC (China Unicom). If this parameter is not specified, BGP will be used by default. ISPs supported in a region can be queried with the `DescribeSingleIsp` API. If an ISP is specified, only bill-by-bandwidth-package (BANDWIDTH_PACKAGE) can be used as the network billing mode.
+    */
+    @SerializedName("VipIsp")
+    @Expose
+    private String VipIsp;
 
     /**
     * Tags a CLB instance when purchasing it
@@ -182,16 +189,16 @@ Note: If this name is the same as the name of an existing CLB instance in the sy
     }
 
     /**
-     * Get A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet. This parameter is not supported in other cases. 
-     * @return SubnetId A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet. This parameter is not supported in other cases.
+     * Get A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet. 
+     * @return SubnetId A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet. This parameter is not supported in other cases.
-     * @param SubnetId A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet. This parameter is not supported in other cases.
+     * Set A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet.
+     * @param SubnetId A subnet ID must be specified when you purchase a private network CLB instance in a VPC, and the VIP of this instance will be generated in this subnet.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -214,16 +221,16 @@ Note: If this name is the same as the name of an existing CLB instance in the sy
     }
 
     /**
-     * Get IP version. Value range: IPv4, IPv6. Default value: IPv4. This parameter is applicable only to public network CLB. 
-     * @return AddressIPVersion IP version. Value range: IPv4, IPv6. Default value: IPv4. This parameter is applicable only to public network CLB.
+     * Get IP version. Valid values: IPv4, IPv6, IPv6FullChain. Default value: IPv4. This parameter is applicable only to public network CLB instances. 
+     * @return AddressIPVersion IP version. Valid values: IPv4, IPv6, IPv6FullChain. Default value: IPv4. This parameter is applicable only to public network CLB instances.
      */
     public String getAddressIPVersion() {
         return this.AddressIPVersion;
     }
 
     /**
-     * Set IP version. Value range: IPv4, IPv6. Default value: IPv4. This parameter is applicable only to public network CLB.
-     * @param AddressIPVersion IP version. Value range: IPv4, IPv6. Default value: IPv4. This parameter is applicable only to public network CLB.
+     * Set IP version. Valid values: IPv4, IPv6, IPv6FullChain. Default value: IPv4. This parameter is applicable only to public network CLB instances.
+     * @param AddressIPVersion IP version. Valid values: IPv4, IPv6, IPv6FullChain. Default value: IPv4. This parameter is applicable only to public network CLB instances.
      */
     public void setAddressIPVersion(String AddressIPVersion) {
         this.AddressIPVersion = AddressIPVersion;
@@ -282,19 +289,35 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
     }
 
     /**
-     * Get CLB network billing method. This parameter is applicable only to public network CLB, and takes effect only for users whose bandwidth is managed in IP and CLB. 
-     * @return InternetAccessible CLB network billing method. This parameter is applicable only to public network CLB, and takes effect only for users whose bandwidth is managed in IP and CLB.
+     * Get CLB network billing mode. This parameter is applicable only to public network CLB instances. 
+     * @return InternetAccessible CLB network billing mode. This parameter is applicable only to public network CLB instances.
      */
     public InternetAccessible getInternetAccessible() {
         return this.InternetAccessible;
     }
 
     /**
-     * Set CLB network billing method. This parameter is applicable only to public network CLB, and takes effect only for users whose bandwidth is managed in IP and CLB.
-     * @param InternetAccessible CLB network billing method. This parameter is applicable only to public network CLB, and takes effect only for users whose bandwidth is managed in IP and CLB.
+     * Set CLB network billing mode. This parameter is applicable only to public network CLB instances.
+     * @param InternetAccessible CLB network billing mode. This parameter is applicable only to public network CLB instances.
      */
     public void setInternetAccessible(InternetAccessible InternetAccessible) {
         this.InternetAccessible = InternetAccessible;
+    }
+
+    /**
+     * Get This parameter is applicable only to public network CLB instances. Valid values: CMCC (China Mobile), CTCC (China Telecom), CUCC (China Unicom). If this parameter is not specified, BGP will be used by default. ISPs supported in a region can be queried with the `DescribeSingleIsp` API. If an ISP is specified, only bill-by-bandwidth-package (BANDWIDTH_PACKAGE) can be used as the network billing mode. 
+     * @return VipIsp This parameter is applicable only to public network CLB instances. Valid values: CMCC (China Mobile), CTCC (China Telecom), CUCC (China Unicom). If this parameter is not specified, BGP will be used by default. ISPs supported in a region can be queried with the `DescribeSingleIsp` API. If an ISP is specified, only bill-by-bandwidth-package (BANDWIDTH_PACKAGE) can be used as the network billing mode.
+     */
+    public String getVipIsp() {
+        return this.VipIsp;
+    }
+
+    /**
+     * Set This parameter is applicable only to public network CLB instances. Valid values: CMCC (China Mobile), CTCC (China Telecom), CUCC (China Unicom). If this parameter is not specified, BGP will be used by default. ISPs supported in a region can be queried with the `DescribeSingleIsp` API. If an ISP is specified, only bill-by-bandwidth-package (BANDWIDTH_PACKAGE) can be used as the network billing mode.
+     * @param VipIsp This parameter is applicable only to public network CLB instances. Valid values: CMCC (China Mobile), CTCC (China Telecom), CUCC (China Unicom). If this parameter is not specified, BGP will be used by default. ISPs supported in a region can be queried with the `DescribeSingleIsp` API. If an ISP is specified, only bill-by-bandwidth-package (BANDWIDTH_PACKAGE) can be used as the network billing mode.
+     */
+    public void setVipIsp(String VipIsp) {
+        this.VipIsp = VipIsp;
     }
 
     /**
@@ -328,6 +351,7 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
         this.setParamSimple(map, prefix + "MasterZoneId", this.MasterZoneId);
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
+        this.setParamSimple(map, prefix + "VipIsp", this.VipIsp);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }

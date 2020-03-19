@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreatePolicyResponse extends AbstractModel{
 
     /**
-    * Newly added policy ID
+    * ID of newly added policy
     */
     @SerializedName("PolicyId")
     @Expose
@@ -37,16 +37,16 @@ public class CreatePolicyResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Newly added policy ID 
-     * @return PolicyId Newly added policy ID
+     * Get ID of newly added policy 
+     * @return PolicyId ID of newly added policy
      */
     public Long getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set Newly added policy ID
-     * @param PolicyId Newly added policy ID
+     * Set ID of newly added policy
+     * @param PolicyId ID of newly added policy
      */
     public void setPolicyId(Long PolicyId) {
         this.PolicyId = PolicyId;

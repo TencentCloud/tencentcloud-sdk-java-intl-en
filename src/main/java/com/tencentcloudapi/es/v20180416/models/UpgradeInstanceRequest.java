@@ -51,7 +51,7 @@ public class UpgradeInstanceRequest extends AbstractModel{
     private String LicenseType;
 
     /**
-    * 
+    * Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
     */
     @SerializedName("BasicSecurityType")
     @Expose
@@ -122,16 +122,16 @@ public class UpgradeInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return BasicSecurityType 
+     * Get Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li> 
+     * @return BasicSecurityType Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
      */
     public Long getBasicSecurityType() {
         return this.BasicSecurityType;
     }
 
     /**
-     * Set 
-     * @param BasicSecurityType 
+     * Set Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
+     * @param BasicSecurityType Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
      */
     public void setBasicSecurityType(Long BasicSecurityType) {
         this.BasicSecurityType = BasicSecurityType;

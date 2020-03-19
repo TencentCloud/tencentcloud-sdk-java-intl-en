@@ -51,7 +51,7 @@ public class OffsiteFlag extends AbstractModel{
     private Long NotifyWechat;
 
     /**
-    * 
+    * Alert
     */
     @SerializedName("Tips")
     @Expose
@@ -122,16 +122,16 @@ public class OffsiteFlag extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return Tips 
+     * Get Alert 
+     * @return Tips Alert
      */
     public Long getTips() {
         return this.Tips;
     }
 
     /**
-     * Set 
-     * @param Tips 
+     * Set Alert
+     * @param Tips Alert
      */
     public void setTips(Long Tips) {
         this.Tips = Tips;

@@ -90,6 +90,41 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
     private VPCSettings VPCSettings;
 
     /**
+    * Hive-shared metadatabase type. Valid values:
+<li>EMR_DEFAULT_META: the cluster creates one by default.</li>
+<li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
+<li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li>
+    */
+    @SerializedName("MetaType")
+    @Expose
+    private String MetaType;
+
+    /**
+    * EMR-MetaDB instance
+    */
+    @SerializedName("UnifyMetaInstanceId")
+    @Expose
+    private String UnifyMetaInstanceId;
+
+    /**
+    * Custom MetaDB instance information
+    */
+    @SerializedName("MetaDBInfo")
+    @Expose
+    private CustomMetaInfo MetaDBInfo;
+
+    /**
+    * Product ID. Different product IDs represent different EMR product versions. Valid values:
+<li>1: EMR v1.3.1.</li>
+<li>2: EMR v2.0.1.</li>
+<li>4: EMR v2.1.0.</li>
+<li>7: EMR v3.0.0.</li>
+    */
+    @SerializedName("ProductId")
+    @Expose
+    private Long ProductId;
+
+    /**
      * Get Time unit of instance purchase duration. Valid values:
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li> 
      * @return TimeUnit Time unit of instance purchase duration. Valid values:
@@ -250,6 +285,98 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get Hive-shared metadatabase type. Valid values:
+<li>EMR_DEFAULT_META: the cluster creates one by default.</li>
+<li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
+<li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li> 
+     * @return MetaType Hive-shared metadatabase type. Valid values:
+<li>EMR_DEFAULT_META: the cluster creates one by default.</li>
+<li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
+<li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li>
+     */
+    public String getMetaType() {
+        return this.MetaType;
+    }
+
+    /**
+     * Set Hive-shared metadatabase type. Valid values:
+<li>EMR_DEFAULT_META: the cluster creates one by default.</li>
+<li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
+<li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li>
+     * @param MetaType Hive-shared metadatabase type. Valid values:
+<li>EMR_DEFAULT_META: the cluster creates one by default.</li>
+<li>EMR_EXIST_META: the cluster uses the specified EMR-MetaDB instance.</li>
+<li>USER_CUSTOM_META: the cluster uses a custom MetaDB instance.</li>
+     */
+    public void setMetaType(String MetaType) {
+        this.MetaType = MetaType;
+    }
+
+    /**
+     * Get EMR-MetaDB instance 
+     * @return UnifyMetaInstanceId EMR-MetaDB instance
+     */
+    public String getUnifyMetaInstanceId() {
+        return this.UnifyMetaInstanceId;
+    }
+
+    /**
+     * Set EMR-MetaDB instance
+     * @param UnifyMetaInstanceId EMR-MetaDB instance
+     */
+    public void setUnifyMetaInstanceId(String UnifyMetaInstanceId) {
+        this.UnifyMetaInstanceId = UnifyMetaInstanceId;
+    }
+
+    /**
+     * Get Custom MetaDB instance information 
+     * @return MetaDBInfo Custom MetaDB instance information
+     */
+    public CustomMetaInfo getMetaDBInfo() {
+        return this.MetaDBInfo;
+    }
+
+    /**
+     * Set Custom MetaDB instance information
+     * @param MetaDBInfo Custom MetaDB instance information
+     */
+    public void setMetaDBInfo(CustomMetaInfo MetaDBInfo) {
+        this.MetaDBInfo = MetaDBInfo;
+    }
+
+    /**
+     * Get Product ID. Different product IDs represent different EMR product versions. Valid values:
+<li>1: EMR v1.3.1.</li>
+<li>2: EMR v2.0.1.</li>
+<li>4: EMR v2.1.0.</li>
+<li>7: EMR v3.0.0.</li> 
+     * @return ProductId Product ID. Different product IDs represent different EMR product versions. Valid values:
+<li>1: EMR v1.3.1.</li>
+<li>2: EMR v2.0.1.</li>
+<li>4: EMR v2.1.0.</li>
+<li>7: EMR v3.0.0.</li>
+     */
+    public Long getProductId() {
+        return this.ProductId;
+    }
+
+    /**
+     * Set Product ID. Different product IDs represent different EMR product versions. Valid values:
+<li>1: EMR v1.3.1.</li>
+<li>2: EMR v2.0.1.</li>
+<li>4: EMR v2.1.0.</li>
+<li>7: EMR v3.0.0.</li>
+     * @param ProductId Product ID. Different product IDs represent different EMR product versions. Valid values:
+<li>1: EMR v1.3.1.</li>
+<li>2: EMR v2.0.1.</li>
+<li>4: EMR v2.1.0.</li>
+<li>7: EMR v3.0.0.</li>
+     */
+    public void setProductId(Long ProductId) {
+        this.ProductId = ProductId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -262,6 +389,10 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Software.", this.Software);
         this.setParamObj(map, prefix + "Placement.", this.Placement);
         this.setParamObj(map, prefix + "VPCSettings.", this.VPCSettings);
+        this.setParamSimple(map, prefix + "MetaType", this.MetaType);
+        this.setParamSimple(map, prefix + "UnifyMetaInstanceId", this.UnifyMetaInstanceId);
+        this.setParamObj(map, prefix + "MetaDBInfo.", this.MetaDBInfo);
+        this.setParamSimple(map, prefix + "ProductId", this.ProductId);
 
     }
 }

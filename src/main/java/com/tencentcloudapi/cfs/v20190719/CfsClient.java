@@ -290,6 +290,24 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to update a file system name.
+     * @param req UpdateCfsFileSystemNameRequest
+     * @return UpdateCfsFileSystemNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateCfsFileSystemNameResponse UpdateCfsFileSystemName(UpdateCfsFileSystemNameRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateCfsFileSystemNameResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateCfsFileSystemNameResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UpdateCfsFileSystemName"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to update the permission group used by a file system.
      * @param req UpdateCfsFileSystemPGroupRequest
      * @return UpdateCfsFileSystemPGroupResponse

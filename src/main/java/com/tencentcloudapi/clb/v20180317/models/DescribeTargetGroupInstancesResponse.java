@@ -23,11 +23,80 @@ import java.util.HashMap;
 public class DescribeTargetGroupInstancesResponse extends AbstractModel{
 
     /**
+    * Number of results in current query
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
+    * Information of the bound server
+    */
+    @SerializedName("TargetGroupInstanceSet")
+    @Expose
+    private TargetGroupBackend [] TargetGroupInstanceSet;
+
+    /**
+    * Actual statistics, which are not affected by `Limit`, `Offset`, and `CAM`.
+    */
+    @SerializedName("RealCount")
+    @Expose
+    private Long RealCount;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get Number of results in current query 
+     * @return TotalCount Number of results in current query
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set Number of results in current query
+     * @param TotalCount Number of results in current query
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get Information of the bound server 
+     * @return TargetGroupInstanceSet Information of the bound server
+     */
+    public TargetGroupBackend [] getTargetGroupInstanceSet() {
+        return this.TargetGroupInstanceSet;
+    }
+
+    /**
+     * Set Information of the bound server
+     * @param TargetGroupInstanceSet Information of the bound server
+     */
+    public void setTargetGroupInstanceSet(TargetGroupBackend [] TargetGroupInstanceSet) {
+        this.TargetGroupInstanceSet = TargetGroupInstanceSet;
+    }
+
+    /**
+     * Get Actual statistics, which are not affected by `Limit`, `Offset`, and `CAM`. 
+     * @return RealCount Actual statistics, which are not affected by `Limit`, `Offset`, and `CAM`.
+     */
+    public Long getRealCount() {
+        return this.RealCount;
+    }
+
+    /**
+     * Set Actual statistics, which are not affected by `Limit`, `Offset`, and `CAM`.
+     * @param RealCount Actual statistics, which are not affected by `Limit`, `Offset`, and `CAM`.
+     */
+    public void setRealCount(Long RealCount) {
+        this.RealCount = RealCount;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -49,6 +118,9 @@ public class DescribeTargetGroupInstancesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "TargetGroupInstanceSet.", this.TargetGroupInstanceSet);
+        this.setParamSimple(map, prefix + "RealCount", this.RealCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -46,14 +46,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ClientToken;
 
     /**
-    * 
+    * Scaling workflow ID.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FlowId")
     @Expose
     private Long FlowId;
 
     /**
-    * 
+    * Big order number.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BillId")
     @Expose
@@ -123,32 +125,40 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return FlowId 
+     * Get Scaling workflow ID.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return FlowId Scaling workflow ID.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 
-     * @param FlowId 
+     * Set Scaling workflow ID.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param FlowId Scaling workflow ID.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get  
-     * @return BillId 
+     * Get Big order number.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return BillId Big order number.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getBillId() {
         return this.BillId;
     }
 
     /**
-     * Set 
-     * @param BillId 
+     * Set Big order number.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param BillId Big order number.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setBillId(String BillId) {
         this.BillId = BillId;

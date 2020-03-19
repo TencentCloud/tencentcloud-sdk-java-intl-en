@@ -23,9 +23,105 @@ import java.util.HashMap;
 public class CreateTargetGroupRequest extends AbstractModel{
 
     /**
+    * Target group name (up to 50 characters)
+    */
+    @SerializedName("TargetGroupName")
+    @Expose
+    private String TargetGroupName;
+
+    /**
+    * `vpcid` attribute of a target group. If this parameter is left empty, the default VPC will be used.
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+
+    /**
+    * Default port of a target group, which can be used for subsequently added servers.
+    */
+    @SerializedName("Port")
+    @Expose
+    private Long Port;
+
+    /**
+    * Real server bound to a target group
+    */
+    @SerializedName("TargetGroupInstances")
+    @Expose
+    private TargetGroupInstance [] TargetGroupInstances;
+
+    /**
+     * Get Target group name (up to 50 characters) 
+     * @return TargetGroupName Target group name (up to 50 characters)
+     */
+    public String getTargetGroupName() {
+        return this.TargetGroupName;
+    }
+
+    /**
+     * Set Target group name (up to 50 characters)
+     * @param TargetGroupName Target group name (up to 50 characters)
+     */
+    public void setTargetGroupName(String TargetGroupName) {
+        this.TargetGroupName = TargetGroupName;
+    }
+
+    /**
+     * Get `vpcid` attribute of a target group. If this parameter is left empty, the default VPC will be used. 
+     * @return VpcId `vpcid` attribute of a target group. If this parameter is left empty, the default VPC will be used.
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set `vpcid` attribute of a target group. If this parameter is left empty, the default VPC will be used.
+     * @param VpcId `vpcid` attribute of a target group. If this parameter is left empty, the default VPC will be used.
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
+    /**
+     * Get Default port of a target group, which can be used for subsequently added servers. 
+     * @return Port Default port of a target group, which can be used for subsequently added servers.
+     */
+    public Long getPort() {
+        return this.Port;
+    }
+
+    /**
+     * Set Default port of a target group, which can be used for subsequently added servers.
+     * @param Port Default port of a target group, which can be used for subsequently added servers.
+     */
+    public void setPort(Long Port) {
+        this.Port = Port;
+    }
+
+    /**
+     * Get Real server bound to a target group 
+     * @return TargetGroupInstances Real server bound to a target group
+     */
+    public TargetGroupInstance [] getTargetGroupInstances() {
+        return this.TargetGroupInstances;
+    }
+
+    /**
+     * Set Real server bound to a target group
+     * @param TargetGroupInstances Real server bound to a target group
+     */
+    public void setTargetGroupInstances(TargetGroupInstance [] TargetGroupInstances) {
+        this.TargetGroupInstances = TargetGroupInstances;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TargetGroupName", this.TargetGroupName);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "Port", this.Port);
+        this.setParamArrayObj(map, prefix + "TargetGroupInstances.", this.TargetGroupInstances);
 
     }
 }

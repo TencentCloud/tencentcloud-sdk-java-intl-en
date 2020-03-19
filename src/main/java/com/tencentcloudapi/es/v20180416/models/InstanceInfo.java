@@ -268,8 +268,8 @@ public class InstanceInfo extends AbstractModel{
     private String LicenseType;
 
     /**
-    * Whether it is a hot/warm cluster <li> true: yes </li><li>false: no</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether it is a hot/warm cluster <li>true: yes </li><li>false: no</li>
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EnableHotWarmMode")
     @Expose
@@ -963,20 +963,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether it is a hot/warm cluster <li> true: yes </li><li>false: no</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EnableHotWarmMode Whether it is a hot/warm cluster <li> true: yes </li><li>false: no</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether it is a hot/warm cluster <li>true: yes </li><li>false: no</li>
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return EnableHotWarmMode Whether it is a hot/warm cluster <li>true: yes </li><li>false: no</li>
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getEnableHotWarmMode() {
         return this.EnableHotWarmMode;
     }
 
     /**
-     * Set Whether it is a hot/warm cluster <li> true: yes </li><li>false: no</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EnableHotWarmMode Whether it is a hot/warm cluster <li> true: yes </li><li>false: no</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether it is a hot/warm cluster <li>true: yes </li><li>false: no</li>
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param EnableHotWarmMode Whether it is a hot/warm cluster <li>true: yes </li><li>false: no</li>
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setEnableHotWarmMode(Boolean EnableHotWarmMode) {
         this.EnableHotWarmMode = EnableHotWarmMode;

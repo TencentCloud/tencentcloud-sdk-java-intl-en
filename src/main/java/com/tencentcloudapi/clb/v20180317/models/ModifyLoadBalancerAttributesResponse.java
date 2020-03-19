@@ -23,7 +23,8 @@ import java.util.HashMap;
 public class ModifyLoadBalancerAttributesResponse extends AbstractModel{
 
     /**
-    * 
+    * This parameter can be used to query whether CLB billing mode switch is successful.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DealName")
     @Expose
@@ -37,16 +38,20 @@ public class ModifyLoadBalancerAttributesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get  
-     * @return DealName 
+     * Get This parameter can be used to query whether CLB billing mode switch is successful.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return DealName This parameter can be used to query whether CLB billing mode switch is successful.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getDealName() {
         return this.DealName;
     }
 
     /**
-     * Set 
-     * @param DealName 
+     * Set This parameter can be used to query whether CLB billing mode switch is successful.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param DealName This parameter can be used to query whether CLB billing mode switch is successful.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;

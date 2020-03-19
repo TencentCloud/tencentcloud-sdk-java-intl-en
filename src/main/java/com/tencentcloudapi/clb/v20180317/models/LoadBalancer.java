@@ -180,8 +180,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String AnycastZone;
 
     /**
-    * IP version. Value range: ipv4, ipv6
-Note: This field may return null, indicating that no valid values can be obtained.
+    * IP version. Valid values: ipv4, ipv6
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AddressIPVersion")
     @Expose
@@ -308,26 +308,58 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ConfigId;
 
     /**
-    * Whether a real server opens the traffic from a CLB instance to the internet by default
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether a real server opens the traffic from a CLB instance to the internet
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LoadBalancerPassToTarget")
     @Expose
     private Boolean LoadBalancerPassToTarget;
 
     /**
-    * 
+    * Private network dedicated cluster
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExclusiveCluster")
     @Expose
     private ExclusiveCluster ExclusiveCluster;
 
     /**
-    * 
+    * This field is meaningful only when the IP address version is `ipv6`. Valid values: IPv6Nat64, IPv6FullChain
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IPv6Mode")
     @Expose
     private String IPv6Mode;
+
+    /**
+    * Whether to enable SnatPro
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SnatPro")
+    @Expose
+    private Boolean SnatPro;
+
+    /**
+    * SnatIp list after SnatPro load balancing is enabled
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SnatIps")
+    @Expose
+    private SnatIp [] SnatIps;
+
+    /**
+    * 
+    */
+    @SerializedName("SlaType")
+    @Expose
+    private String SlaType;
+
+    /**
+    * 
+    */
+    @SerializedName("IsBlock")
+    @Expose
+    private Boolean IsBlock;
 
     /**
      * Get CLB instance ID. 
@@ -718,20 +750,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get IP version. Value range: ipv4, ipv6
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AddressIPVersion IP version. Value range: ipv4, ipv6
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get IP version. Valid values: ipv4, ipv6
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return AddressIPVersion IP version. Valid values: ipv4, ipv6
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getAddressIPVersion() {
         return this.AddressIPVersion;
     }
 
     /**
-     * Set IP version. Value range: ipv4, ipv6
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AddressIPVersion IP version. Value range: ipv4, ipv6
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set IP version. Valid values: ipv4, ipv6
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AddressIPVersion IP version. Valid values: ipv4, ipv6
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setAddressIPVersion(String AddressIPVersion) {
         this.AddressIPVersion = AddressIPVersion;
@@ -1038,55 +1070,135 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether a real server opens the traffic from a CLB instance to the internet by default
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LoadBalancerPassToTarget Whether a real server opens the traffic from a CLB instance to the internet by default
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether a real server opens the traffic from a CLB instance to the internet
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return LoadBalancerPassToTarget Whether a real server opens the traffic from a CLB instance to the internet
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getLoadBalancerPassToTarget() {
         return this.LoadBalancerPassToTarget;
     }
 
     /**
-     * Set Whether a real server opens the traffic from a CLB instance to the internet by default
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LoadBalancerPassToTarget Whether a real server opens the traffic from a CLB instance to the internet by default
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether a real server opens the traffic from a CLB instance to the internet
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param LoadBalancerPassToTarget Whether a real server opens the traffic from a CLB instance to the internet
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setLoadBalancerPassToTarget(Boolean LoadBalancerPassToTarget) {
         this.LoadBalancerPassToTarget = LoadBalancerPassToTarget;
     }
 
     /**
-     * Get  
-     * @return ExclusiveCluster 
+     * Get Private network dedicated cluster
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return ExclusiveCluster Private network dedicated cluster
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public ExclusiveCluster getExclusiveCluster() {
         return this.ExclusiveCluster;
     }
 
     /**
-     * Set 
-     * @param ExclusiveCluster 
+     * Set Private network dedicated cluster
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param ExclusiveCluster Private network dedicated cluster
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setExclusiveCluster(ExclusiveCluster ExclusiveCluster) {
         this.ExclusiveCluster = ExclusiveCluster;
     }
 
     /**
-     * Get  
-     * @return IPv6Mode 
+     * Get This field is meaningful only when the IP address version is `ipv6`. Valid values: IPv6Nat64, IPv6FullChain
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return IPv6Mode This field is meaningful only when the IP address version is `ipv6`. Valid values: IPv6Nat64, IPv6FullChain
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getIPv6Mode() {
         return this.IPv6Mode;
     }
 
     /**
-     * Set 
-     * @param IPv6Mode 
+     * Set This field is meaningful only when the IP address version is `ipv6`. Valid values: IPv6Nat64, IPv6FullChain
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param IPv6Mode This field is meaningful only when the IP address version is `ipv6`. Valid values: IPv6Nat64, IPv6FullChain
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setIPv6Mode(String IPv6Mode) {
         this.IPv6Mode = IPv6Mode;
+    }
+
+    /**
+     * Get Whether to enable SnatPro
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return SnatPro Whether to enable SnatPro
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Boolean getSnatPro() {
+        return this.SnatPro;
+    }
+
+    /**
+     * Set Whether to enable SnatPro
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param SnatPro Whether to enable SnatPro
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSnatPro(Boolean SnatPro) {
+        this.SnatPro = SnatPro;
+    }
+
+    /**
+     * Get SnatIp list after SnatPro load balancing is enabled
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return SnatIps SnatIp list after SnatPro load balancing is enabled
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public SnatIp [] getSnatIps() {
+        return this.SnatIps;
+    }
+
+    /**
+     * Set SnatIp list after SnatPro load balancing is enabled
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param SnatIps SnatIp list after SnatPro load balancing is enabled
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSnatIps(SnatIp [] SnatIps) {
+        this.SnatIps = SnatIps;
+    }
+
+    /**
+     * Get  
+     * @return SlaType 
+     */
+    public String getSlaType() {
+        return this.SlaType;
+    }
+
+    /**
+     * Set 
+     * @param SlaType 
+     */
+    public void setSlaType(String SlaType) {
+        this.SlaType = SlaType;
+    }
+
+    /**
+     * Get  
+     * @return IsBlock 
+     */
+    public Boolean getIsBlock() {
+        return this.IsBlock;
+    }
+
+    /**
+     * Set 
+     * @param IsBlock 
+     */
+    public void setIsBlock(Boolean IsBlock) {
+        this.IsBlock = IsBlock;
     }
 
     /**
@@ -1132,6 +1244,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
         this.setParamObj(map, prefix + "ExclusiveCluster.", this.ExclusiveCluster);
         this.setParamSimple(map, prefix + "IPv6Mode", this.IPv6Mode);
+        this.setParamSimple(map, prefix + "SnatPro", this.SnatPro);
+        this.setParamArrayObj(map, prefix + "SnatIps.", this.SnatIps);
+        this.setParamSimple(map, prefix + "SlaType", this.SlaType);
+        this.setParamSimple(map, prefix + "IsBlock", this.IsBlock);
 
     }
 }

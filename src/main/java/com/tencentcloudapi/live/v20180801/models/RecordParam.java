@@ -49,6 +49,13 @@ In seconds. Value range: 0–93,312,000.
     private Long Enable;
 
     /**
+    * VOD subapplication ID.
+    */
+    @SerializedName("VodSubAppId")
+    @Expose
+    private Long VodSubAppId;
+
+    /**
      * Get Recording interval.
 In seconds. Default value: 1,800.
 Value range: 300–7,200.
@@ -117,12 +124,29 @@ In seconds. Value range: 0–93,312,000.
     }
 
     /**
+     * Get VOD subapplication ID. 
+     * @return VodSubAppId VOD subapplication ID.
+     */
+    public Long getVodSubAppId() {
+        return this.VodSubAppId;
+    }
+
+    /**
+     * Set VOD subapplication ID.
+     * @param VodSubAppId VOD subapplication ID.
+     */
+    public void setVodSubAppId(Long VodSubAppId) {
+        this.VodSubAppId = VodSubAppId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RecordInterval", this.RecordInterval);
         this.setParamSimple(map, prefix + "StorageTime", this.StorageTime);
         this.setParamSimple(map, prefix + "Enable", this.Enable);
+        this.setParamSimple(map, prefix + "VodSubAppId", this.VodSubAppId);
 
     }
 }

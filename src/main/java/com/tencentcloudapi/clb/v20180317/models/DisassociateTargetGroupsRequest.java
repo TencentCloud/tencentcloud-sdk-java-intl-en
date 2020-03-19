@@ -23,9 +23,33 @@ import java.util.HashMap;
 public class DisassociateTargetGroupsRequest extends AbstractModel{
 
     /**
+    * Array of rules to be unbound
+    */
+    @SerializedName("Associations")
+    @Expose
+    private TargetGroupAssociation [] Associations;
+
+    /**
+     * Get Array of rules to be unbound 
+     * @return Associations Array of rules to be unbound
+     */
+    public TargetGroupAssociation [] getAssociations() {
+        return this.Associations;
+    }
+
+    /**
+     * Set Array of rules to be unbound
+     * @param Associations Array of rules to be unbound
+     */
+    public void setAssociations(TargetGroupAssociation [] Associations) {
+        this.Associations = Associations;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Associations.", this.Associations);
 
     }
 }

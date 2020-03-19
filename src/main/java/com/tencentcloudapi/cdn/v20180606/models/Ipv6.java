@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Ipv6 extends AbstractModel{
 
     /**
-    * Whether to enable the IPv6 feature for a domain name, which can be on or off.
+    * Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Switch")
@@ -31,9 +31,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Switch;
 
     /**
-     * Get Whether to enable the IPv6 feature for a domain name, which can be on or off.
+     * Get Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Switch Whether to enable the IPv6 feature for a domain name, which can be on or off.
+     * @return Switch Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getSwitch() {
@@ -41,9 +41,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether to enable the IPv6 feature for a domain name, which can be on or off.
+     * Set Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Switch Whether to enable the IPv6 feature for a domain name, which can be on or off.
+     * @param Switch Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setSwitch(String Switch) {

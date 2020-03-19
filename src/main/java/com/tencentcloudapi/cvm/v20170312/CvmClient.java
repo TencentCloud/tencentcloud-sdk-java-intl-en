@@ -347,6 +347,24 @@ If you currently use a password to log in, you will no longer be able to do so a
     }
 
     /**
+     *This API is used to query the list of model families that are available for the current user and in the current region.
+     * @param req DescribeInstanceFamilyConfigsRequest
+     * @return DescribeInstanceFamilyConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceFamilyConfigsResponse DescribeInstanceFamilyConfigs(DescribeInstanceFamilyConfigsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceFamilyConfigsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceFamilyConfigsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstanceFamilyConfigs"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the model configuration of an instance.
 
 * You can filter the query results with `zone` or `instance-family`. For more information on filtering conditions, see `Filter`.
@@ -529,6 +547,24 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 Type type = new TypeToken<JsonResponseModel<DescribeZoneInstanceConfigInfosResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeZoneInstanceConfigInfos"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query availability zones.
+     * @param req DescribeZonesRequest
+     * @return DescribeZonesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeZonesResponse DescribeZones(DescribeZonesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeZonesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeZonesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeZones"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

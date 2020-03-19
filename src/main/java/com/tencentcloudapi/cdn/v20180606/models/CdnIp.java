@@ -23,115 +23,145 @@ import java.util.HashMap;
 public class CdnIp extends AbstractModel{
 
     /**
-    * IP of the node.
+    * IP to be queried
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * Whether the IP is a Tencent Cloud CDN cache node. `yes`: it is a Tencent Cloud CDN cache node; `no`: it is not.
+    * IP ownership:
+yes: Tencent Cloud CDN node
+no: non-Tencent Cloud CDN node
     */
     @SerializedName("Platform")
     @Expose
     private String Platform;
 
     /**
-    * District/country where the node is located. `unknown`: the node location is unknown.
+    * Node district/country
+unknown: unknown node location
     */
     @SerializedName("Location")
     @Expose
     private String Location;
 
     /**
-    * Activation and deactivation history of the node.
+    * Node activation and deactivation history
     */
     @SerializedName("History")
     @Expose
     private CdnIpHistory [] History;
 
     /**
-    * Service region of the node. `mainland`: Mainland China; `overseas`: outside Mainland China; `unknown`: unknown
+    * Node region
+mainland: cache node in Mainland China
+overseas: cache node outside Mainland China
+unknown: service region unknown
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-     * Get IP of the node. 
-     * @return Ip IP of the node.
+     * Get IP to be queried 
+     * @return Ip IP to be queried
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set IP of the node.
-     * @param Ip IP of the node.
+     * Set IP to be queried
+     * @param Ip IP to be queried
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get Whether the IP is a Tencent Cloud CDN cache node. `yes`: it is a Tencent Cloud CDN cache node; `no`: it is not. 
-     * @return Platform Whether the IP is a Tencent Cloud CDN cache node. `yes`: it is a Tencent Cloud CDN cache node; `no`: it is not.
+     * Get IP ownership:
+yes: Tencent Cloud CDN node
+no: non-Tencent Cloud CDN node 
+     * @return Platform IP ownership:
+yes: Tencent Cloud CDN node
+no: non-Tencent Cloud CDN node
      */
     public String getPlatform() {
         return this.Platform;
     }
 
     /**
-     * Set Whether the IP is a Tencent Cloud CDN cache node. `yes`: it is a Tencent Cloud CDN cache node; `no`: it is not.
-     * @param Platform Whether the IP is a Tencent Cloud CDN cache node. `yes`: it is a Tencent Cloud CDN cache node; `no`: it is not.
+     * Set IP ownership:
+yes: Tencent Cloud CDN node
+no: non-Tencent Cloud CDN node
+     * @param Platform IP ownership:
+yes: Tencent Cloud CDN node
+no: non-Tencent Cloud CDN node
      */
     public void setPlatform(String Platform) {
         this.Platform = Platform;
     }
 
     /**
-     * Get District/country where the node is located. `unknown`: the node location is unknown. 
-     * @return Location District/country where the node is located. `unknown`: the node location is unknown.
+     * Get Node district/country
+unknown: unknown node location 
+     * @return Location Node district/country
+unknown: unknown node location
      */
     public String getLocation() {
         return this.Location;
     }
 
     /**
-     * Set District/country where the node is located. `unknown`: the node location is unknown.
-     * @param Location District/country where the node is located. `unknown`: the node location is unknown.
+     * Set Node district/country
+unknown: unknown node location
+     * @param Location Node district/country
+unknown: unknown node location
      */
     public void setLocation(String Location) {
         this.Location = Location;
     }
 
     /**
-     * Get Activation and deactivation history of the node. 
-     * @return History Activation and deactivation history of the node.
+     * Get Node activation and deactivation history 
+     * @return History Node activation and deactivation history
      */
     public CdnIpHistory [] getHistory() {
         return this.History;
     }
 
     /**
-     * Set Activation and deactivation history of the node.
-     * @param History Activation and deactivation history of the node.
+     * Set Node activation and deactivation history
+     * @param History Node activation and deactivation history
      */
     public void setHistory(CdnIpHistory [] History) {
         this.History = History;
     }
 
     /**
-     * Get Service region of the node. `mainland`: Mainland China; `overseas`: outside Mainland China; `unknown`: unknown 
-     * @return Area Service region of the node. `mainland`: Mainland China; `overseas`: outside Mainland China; `unknown`: unknown
+     * Get Node region
+mainland: cache node in Mainland China
+overseas: cache node outside Mainland China
+unknown: service region unknown 
+     * @return Area Node region
+mainland: cache node in Mainland China
+overseas: cache node outside Mainland China
+unknown: service region unknown
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Service region of the node. `mainland`: Mainland China; `overseas`: outside Mainland China; `unknown`: unknown
-     * @param Area Service region of the node. `mainland`: Mainland China; `overseas`: outside Mainland China; `unknown`: unknown
+     * Set Node region
+mainland: cache node in Mainland China
+overseas: cache node outside Mainland China
+unknown: service region unknown
+     * @param Area Node region
+mainland: cache node in Mainland China
+overseas: cache node outside Mainland China
+unknown: service region unknown
      */
     public void setArea(String Area) {
         this.Area = Area;

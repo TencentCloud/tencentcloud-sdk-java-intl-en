@@ -24,7 +24,7 @@ public class ErrorPageRule extends AbstractModel{
 
     /**
     * Status code
-It supports 400, 403, 404, 500.
+Supports 400, 403, 404, 500.
     */
     @SerializedName("StatusCode")
     @Expose
@@ -32,7 +32,7 @@ It supports 400, 403, 404, 500.
 
     /**
     * Redirect status code settings
-It supports 301 or 302.
+Supports 301 or 302.
     */
     @SerializedName("RedirectCode")
     @Expose
@@ -40,7 +40,7 @@ It supports 301 or 302.
 
     /**
     * Redirect URL
-It requires a full redirect path, such as https://www.test.com/error.html.
+Requires a full redirect path, such as https://www.test.com/error.html.
     */
     @SerializedName("RedirectUrl")
     @Expose
@@ -48,9 +48,9 @@ It requires a full redirect path, such as https://www.test.com/error.html.
 
     /**
      * Get Status code
-It supports 400, 403, 404, 500. 
+Supports 400, 403, 404, 500. 
      * @return StatusCode Status code
-It supports 400, 403, 404, 500.
+Supports 400, 403, 404, 500.
      */
     public Long getStatusCode() {
         return this.StatusCode;
@@ -58,9 +58,9 @@ It supports 400, 403, 404, 500.
 
     /**
      * Set Status code
-It supports 400, 403, 404, 500.
+Supports 400, 403, 404, 500.
      * @param StatusCode Status code
-It supports 400, 403, 404, 500.
+Supports 400, 403, 404, 500.
      */
     public void setStatusCode(Long StatusCode) {
         this.StatusCode = StatusCode;
@@ -68,9 +68,9 @@ It supports 400, 403, 404, 500.
 
     /**
      * Get Redirect status code settings
-It supports 301 or 302. 
+Supports 301 or 302. 
      * @return RedirectCode Redirect status code settings
-It supports 301 or 302.
+Supports 301 or 302.
      */
     public Long getRedirectCode() {
         return this.RedirectCode;
@@ -78,9 +78,9 @@ It supports 301 or 302.
 
     /**
      * Set Redirect status code settings
-It supports 301 or 302.
+Supports 301 or 302.
      * @param RedirectCode Redirect status code settings
-It supports 301 or 302.
+Supports 301 or 302.
      */
     public void setRedirectCode(Long RedirectCode) {
         this.RedirectCode = RedirectCode;
@@ -88,9 +88,9 @@ It supports 301 or 302.
 
     /**
      * Get Redirect URL
-It requires a full redirect path, such as https://www.test.com/error.html. 
+Requires a full redirect path, such as https://www.test.com/error.html. 
      * @return RedirectUrl Redirect URL
-It requires a full redirect path, such as https://www.test.com/error.html.
+Requires a full redirect path, such as https://www.test.com/error.html.
      */
     public String getRedirectUrl() {
         return this.RedirectUrl;
@@ -98,9 +98,9 @@ It requires a full redirect path, such as https://www.test.com/error.html.
 
     /**
      * Set Redirect URL
-It requires a full redirect path, such as https://www.test.com/error.html.
+Requires a full redirect path, such as https://www.test.com/error.html.
      * @param RedirectUrl Redirect URL
-It requires a full redirect path, such as https://www.test.com/error.html.
+Requires a full redirect path, such as https://www.test.com/error.html.
      */
     public void setRedirectUrl(String RedirectUrl) {
         this.RedirectUrl = RedirectUrl;

@@ -79,7 +79,7 @@ public class UpdateDomainConfigRequest extends AbstractModel{
     private BandwidthAlert BandwidthAlert;
 
     /**
-    * Range origin-pull configuration
+    * Range GETs configuration
     */
     @SerializedName("RangeOriginPull")
     @Expose
@@ -93,7 +93,7 @@ public class UpdateDomainConfigRequest extends AbstractModel{
     private FollowRedirect FollowRedirect;
 
     /**
-    * Error code redirect configuration (This feature is in beta test and not fully available yet.)
+    * Error code redirect configuration (This feature is in beta and not generally available yet.)
     */
     @SerializedName("ErrorPage")
     @Expose
@@ -191,7 +191,7 @@ public class UpdateDomainConfigRequest extends AbstractModel{
     private Referer Referer;
 
     /**
-    * Browser cache configuration (This feature is in beta test and not fully available yet.)
+    * Browser cache configuration (This feature is in beta and not generally available yet.)
     */
     @SerializedName("MaxAge")
     @Expose
@@ -208,8 +208,8 @@ media: streaming media VOD acceleration
     private String ServiceType;
 
     /**
-    * Specific configuration for region attributes
-Applicable to use cases where the configuration of accelerating domain names inside mainland China is inconsistent with the configuration outside mainland China.
+    * Specific region configuration
+Applicable to cases where the acceleration domain name configuration differs for regions in and outside mainland China.
     */
     @SerializedName("SpecificConfig")
     @Expose
@@ -224,6 +224,20 @@ global: global acceleration
     @SerializedName("Area")
     @Expose
     private String Area;
+
+    /**
+    * Origin-pull timeout configuration
+    */
+    @SerializedName("OriginPullTimeout")
+    @Expose
+    private OriginPullTimeout OriginPullTimeout;
+
+    /**
+    * 
+    */
+    @SerializedName("AwsPrivateAccess")
+    @Expose
+    private AwsPrivateAccess AwsPrivateAccess;
 
     /**
      * Get Domain name 
@@ -354,16 +368,16 @@ global: global acceleration
     }
 
     /**
-     * Get Range origin-pull configuration 
-     * @return RangeOriginPull Range origin-pull configuration
+     * Get Range GETs configuration 
+     * @return RangeOriginPull Range GETs configuration
      */
     public RangeOriginPull getRangeOriginPull() {
         return this.RangeOriginPull;
     }
 
     /**
-     * Set Range origin-pull configuration
-     * @param RangeOriginPull Range origin-pull configuration
+     * Set Range GETs configuration
+     * @param RangeOriginPull Range GETs configuration
      */
     public void setRangeOriginPull(RangeOriginPull RangeOriginPull) {
         this.RangeOriginPull = RangeOriginPull;
@@ -386,16 +400,16 @@ global: global acceleration
     }
 
     /**
-     * Get Error code redirect configuration (This feature is in beta test and not fully available yet.) 
-     * @return ErrorPage Error code redirect configuration (This feature is in beta test and not fully available yet.)
+     * Get Error code redirect configuration (This feature is in beta and not generally available yet.) 
+     * @return ErrorPage Error code redirect configuration (This feature is in beta and not generally available yet.)
      */
     public ErrorPage getErrorPage() {
         return this.ErrorPage;
     }
 
     /**
-     * Set Error code redirect configuration (This feature is in beta test and not fully available yet.)
-     * @param ErrorPage Error code redirect configuration (This feature is in beta test and not fully available yet.)
+     * Set Error code redirect configuration (This feature is in beta and not generally available yet.)
+     * @param ErrorPage Error code redirect configuration (This feature is in beta and not generally available yet.)
      */
     public void setErrorPage(ErrorPage ErrorPage) {
         this.ErrorPage = ErrorPage;
@@ -610,16 +624,16 @@ global: global acceleration
     }
 
     /**
-     * Get Browser cache configuration (This feature is in beta test and not fully available yet.) 
-     * @return MaxAge Browser cache configuration (This feature is in beta test and not fully available yet.)
+     * Get Browser cache configuration (This feature is in beta and not generally available yet.) 
+     * @return MaxAge Browser cache configuration (This feature is in beta and not generally available yet.)
      */
     public MaxAge getMaxAge() {
         return this.MaxAge;
     }
 
     /**
-     * Set Browser cache configuration (This feature is in beta test and not fully available yet.)
-     * @param MaxAge Browser cache configuration (This feature is in beta test and not fully available yet.)
+     * Set Browser cache configuration (This feature is in beta and not generally available yet.)
+     * @param MaxAge Browser cache configuration (This feature is in beta and not generally available yet.)
      */
     public void setMaxAge(MaxAge MaxAge) {
         this.MaxAge = MaxAge;
@@ -654,20 +668,20 @@ media: streaming media VOD acceleration
     }
 
     /**
-     * Get Specific configuration for region attributes
-Applicable to use cases where the configuration of accelerating domain names inside mainland China is inconsistent with the configuration outside mainland China. 
-     * @return SpecificConfig Specific configuration for region attributes
-Applicable to use cases where the configuration of accelerating domain names inside mainland China is inconsistent with the configuration outside mainland China.
+     * Get Specific region configuration
+Applicable to cases where the acceleration domain name configuration differs for regions in and outside mainland China. 
+     * @return SpecificConfig Specific region configuration
+Applicable to cases where the acceleration domain name configuration differs for regions in and outside mainland China.
      */
     public SpecificConfig getSpecificConfig() {
         return this.SpecificConfig;
     }
 
     /**
-     * Set Specific configuration for region attributes
-Applicable to use cases where the configuration of accelerating domain names inside mainland China is inconsistent with the configuration outside mainland China.
-     * @param SpecificConfig Specific configuration for region attributes
-Applicable to use cases where the configuration of accelerating domain names inside mainland China is inconsistent with the configuration outside mainland China.
+     * Set Specific region configuration
+Applicable to cases where the acceleration domain name configuration differs for regions in and outside mainland China.
+     * @param SpecificConfig Specific region configuration
+Applicable to cases where the acceleration domain name configuration differs for regions in and outside mainland China.
      */
     public void setSpecificConfig(SpecificConfig SpecificConfig) {
         this.SpecificConfig = SpecificConfig;
@@ -702,6 +716,38 @@ global: global acceleration
     }
 
     /**
+     * Get Origin-pull timeout configuration 
+     * @return OriginPullTimeout Origin-pull timeout configuration
+     */
+    public OriginPullTimeout getOriginPullTimeout() {
+        return this.OriginPullTimeout;
+    }
+
+    /**
+     * Set Origin-pull timeout configuration
+     * @param OriginPullTimeout Origin-pull timeout configuration
+     */
+    public void setOriginPullTimeout(OriginPullTimeout OriginPullTimeout) {
+        this.OriginPullTimeout = OriginPullTimeout;
+    }
+
+    /**
+     * Get  
+     * @return AwsPrivateAccess 
+     */
+    public AwsPrivateAccess getAwsPrivateAccess() {
+        return this.AwsPrivateAccess;
+    }
+
+    /**
+     * Set 
+     * @param AwsPrivateAccess 
+     */
+    public void setAwsPrivateAccess(AwsPrivateAccess AwsPrivateAccess) {
+        this.AwsPrivateAccess = AwsPrivateAccess;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -733,6 +779,8 @@ global: global acceleration
         this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
         this.setParamObj(map, prefix + "SpecificConfig.", this.SpecificConfig);
         this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamObj(map, prefix + "OriginPullTimeout.", this.OriginPullTimeout);
+        this.setParamObj(map, prefix + "AwsPrivateAccess.", this.AwsPrivateAccess);
 
     }
 }

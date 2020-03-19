@@ -56,6 +56,24 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the information of a hardware node.
+     * @param req DescribeClusterNodesRequest
+     * @return DescribeClusterNodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterNodesResponse DescribeClusterNodes(DescribeClusterNodesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterNodesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterNodesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeClusterNodes"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query EMR instances.
      * @param req DescribeInstancesRequest
      * @return DescribeInstancesResponse
@@ -164,7 +182,7 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *This API is used to terminate EMR instance.
+     *This API is used to terminate an EMR instance. It is only supported in the official paid edition of EMR.
      * @param req TerminateInstanceRequest
      * @return TerminateInstanceResponse
      * @throws TencentCloudSDKException

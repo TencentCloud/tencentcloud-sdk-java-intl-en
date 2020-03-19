@@ -30,6 +30,14 @@ public class DescribeListenersResponse extends AbstractModel{
     private Listener [] Listeners;
 
     /**
+    * Total number of listeners
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -53,6 +61,26 @@ public class DescribeListenersResponse extends AbstractModel{
     }
 
     /**
+     * Get Total number of listeners
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return TotalCount Total number of listeners
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set Total number of listeners
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param TotalCount Total number of listeners
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -73,6 +101,7 @@ public class DescribeListenersResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Listeners.", this.Listeners);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

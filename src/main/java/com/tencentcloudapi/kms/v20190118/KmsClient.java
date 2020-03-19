@@ -38,7 +38,43 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
-     *取消CMK的计划删除操作
+     *This API is used to decrypt data with the specified private key that is encrypted with RSA asymmetric cryptographic algorithm. The ciphertext must be encrypted with the corresponding public key. The asymmetric key must be in `Enabled` state for decryption.
+     * @param req AsymmetricRsaDecryptRequest
+     * @return AsymmetricRsaDecryptResponse
+     * @throws TencentCloudSDKException
+     */
+    public AsymmetricRsaDecryptResponse AsymmetricRsaDecrypt(AsymmetricRsaDecryptRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AsymmetricRsaDecryptResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AsymmetricRsaDecryptResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AsymmetricRsaDecrypt"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to decrypt data with the specified private key that is encrypted with SM2 asymmetric cryptographic algorithm. The ciphertext must be encrypted with the corresponding public key. The asymmetric key must be in `Enabled` state for decryption. The length of the ciphertext passed in cannot exceed 256 bytes.
+     * @param req AsymmetricSm2DecryptRequest
+     * @return AsymmetricSm2DecryptResponse
+     * @throws TencentCloudSDKException
+     */
+    public AsymmetricSm2DecryptResponse AsymmetricSm2Decrypt(AsymmetricSm2DecryptRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AsymmetricSm2DecryptResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AsymmetricSm2DecryptResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AsymmetricSm2Decrypt"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *Cancel the scheduled deletion of CMK
      * @param req CancelKeyDeletionRequest
      * @return CancelKeyDeletionResponse
      * @throws TencentCloudSDKException
@@ -56,7 +92,7 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
-     *创建用户管理数据密钥的主密钥CMK（Custom Master Key）。
+     *Create a master key CMK (Custom Master Key) for user management data keys
      * @param req CreateKeyRequest
      * @return CreateKeyResponse
      * @throws TencentCloudSDKException
@@ -74,7 +110,7 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
-     *本接口用于解密密文，得到明文数据。
+     *This API is used to decrypt the ciphertext and obtain the plaintext data.
      * @param req DecryptRequest
      * @return DecryptResponse
      * @throws TencentCloudSDKException
@@ -110,7 +146,43 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
-     *本接口用于禁用一个主密钥，处于禁用状态的Key无法用于加密、解密操作。
+     *This API is used to get the attribute details of the CMK with a specified `KeyId`.
+     * @param req DescribeKeyRequest
+     * @return DescribeKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKeyResponse DescribeKey(DescribeKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeKeyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeKeyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeKey"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the attribute information of CMKs in batches.
+     * @param req DescribeKeysRequest
+     * @return DescribeKeysResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKeysResponse DescribeKeys(DescribeKeysRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeKeysResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeKeysResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeKeys"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to disable a master key. The disabled key cannot be used for encryption and decryption operations.
      * @param req DisableKeyRequest
      * @return DisableKeyResponse
      * @throws TencentCloudSDKException
@@ -128,7 +200,7 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
-     *对指定的CMK禁止密钥轮换功能。
+     *Disabled key rotation for the specified CMK.
      * @param req DisableKeyRotationRequest
      * @return DisableKeyRotationResponse
      * @throws TencentCloudSDKException
@@ -146,7 +218,7 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
-     *该接口用于批量禁止CMK的使用。
+     *This API is used to batch prohibit the use of CMK.
      * @param req DisableKeysRequest
      * @return DisableKeysResponse
      * @throws TencentCloudSDKException
@@ -164,7 +236,7 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
-     *用于启用一个指定的CMK。
+     *Enable a specified CMK.
      * @param req EnableKeyRequest
      * @return EnableKeyResponse
      * @throws TencentCloudSDKException
@@ -182,7 +254,7 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
-     *对指定的CMK开启密钥轮换功能。
+     *Turn on the key rotation function for the specified CMK.
      * @param req EnableKeyRotationRequest
      * @return EnableKeyRotationResponse
      * @throws TencentCloudSDKException
@@ -200,7 +272,7 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
-     *该接口用于批量启用CMK。
+     *This API is used to enable CMK in batches.
      * @param req EnableKeysRequest
      * @return EnableKeysResponse
      * @throws TencentCloudSDKException
@@ -218,7 +290,7 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
-     *本接口用于加密最多为4KB任意数据，可用于加密数据库密码，RSA Key，或其它较小的敏感信息。对于应用的数据加密，使用GenerateDataKey生成的DataKey进行本地数据的加解密操作
+     *This API is used to encrypt any data up to 4KB. It can be used to encrypt database passwords, RSA Key, or other small sensitive information. For application data encryption, use the DataKey generated by GenerateDataKey to perform local data encryption and decryption operations
      * @param req EncryptRequest
      * @return EncryptResponse
      * @throws TencentCloudSDKException
@@ -236,7 +308,7 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
-     *本接口生成一个数据密钥，您可以用这个密钥进行本地数据的加密。
+     *This API generates a data key, which you can use to encrypt local data.
      * @param req GenerateDataKeyRequest
      * @return GenerateDataKeyResponse
      * @throws TencentCloudSDKException
@@ -272,7 +344,7 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
-     *查询指定的CMK是否开启了密钥轮换功能。
+     *Query whether the specified CMK has the key rotation function.
      * @param req GetKeyRotationStatusRequest
      * @return GetKeyRotationStatusResponse
      * @throws TencentCloudSDKException
@@ -308,7 +380,25 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
-     *用于查询该用户是否已开通KMS服务
+     *This API is used to get the information of the public key that is encrypted with the asymmetric cryptographic algorithm and of which the `KeyUsage` is `ASYMMETRIC_DECRYPT_RSA_2048` or `ASYMMETRIC_DECRYPT_SM2`. This public key can be used to encrypt data locally, and the data encrypted with it can only be decrypted with the corresponding private key through KMS. The public key can only be obtained from the asymmetric key in `Enabled` state.
+     * @param req GetPublicKeyRequest
+     * @return GetPublicKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetPublicKeyResponse GetPublicKey(GetPublicKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetPublicKeyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetPublicKeyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetPublicKey"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *Used to query whether the user has activated the KMS service.
      * @param req GetServiceStatusRequest
      * @return GetServiceStatusResponse
      * @throws TencentCloudSDKException
@@ -345,7 +435,25 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
     }
 
     /**
-     *根据指定Offset和Limit获取主密钥列表详情。
+     *This API is used to list the encryption methods supported in the current region.
+     * @param req ListAlgorithmsRequest
+     * @return ListAlgorithmsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListAlgorithmsResponse ListAlgorithms(ListAlgorithmsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListAlgorithmsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListAlgorithmsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ListAlgorithms"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *Get the master key list details according to the specified Offset and Limit.
      * @param req ListKeyDetailRequest
      * @return ListKeyDetailResponse
      * @throws TencentCloudSDKException
@@ -381,7 +489,7 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
     }
 
     /**
-     *使用指定CMK对密文重新加密。
+     *Re-encrypt the ciphertext using the specified CMK.
      * @param req ReEncryptRequest
      * @return ReEncryptResponse
      * @throws TencentCloudSDKException
@@ -399,7 +507,7 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
     }
 
     /**
-     *CMK计划删除接口，用于指定CMK删除的时间，可选时间区间为[7,30]天
+     *CMK planned deletion API, used to specify the time of CMK deletion, the optional time interval is [7,30] days
      * @param req ScheduleKeyDeletionRequest
      * @return ScheduleKeyDeletionResponse
      * @throws TencentCloudSDKException

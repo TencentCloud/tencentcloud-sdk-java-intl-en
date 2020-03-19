@@ -24,7 +24,7 @@ public class StartCdnDomainRequest extends AbstractModel{
 
     /**
     * Domain name
-The domain name status should be **Disabled**
+The domain name status should be `Disabled`
     */
     @SerializedName("Domain")
     @Expose
@@ -32,9 +32,9 @@ The domain name status should be **Disabled**
 
     /**
      * Get Domain name
-The domain name status should be **Disabled** 
+The domain name status should be `Disabled` 
      * @return Domain Domain name
-The domain name status should be **Disabled**
+The domain name status should be `Disabled`
      */
     public String getDomain() {
         return this.Domain;
@@ -42,9 +42,9 @@ The domain name status should be **Disabled**
 
     /**
      * Set Domain name
-The domain name status should be **Disabled**
+The domain name status should be `Disabled`
      * @param Domain Domain name
-The domain name status should be **Disabled**
+The domain name status should be `Disabled`
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;

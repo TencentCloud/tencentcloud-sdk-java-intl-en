@@ -23,9 +23,57 @@ import java.util.HashMap;
 public class UpdateKeyDescriptionRequest extends AbstractModel{
 
     /**
+    * 
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
+    * ID of the CMK for which to modify the description
+    */
+    @SerializedName("KeyId")
+    @Expose
+    private String KeyId;
+
+    /**
+     * Get  
+     * @return Description 
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 
+     * @param Description 
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
+     * Get ID of the CMK for which to modify the description 
+     * @return KeyId ID of the CMK for which to modify the description
+     */
+    public String getKeyId() {
+        return this.KeyId;
+    }
+
+    /**
+     * Set ID of the CMK for which to modify the description
+     * @param KeyId ID of the CMK for which to modify the description
+     */
+    public void setKeyId(String KeyId) {
+        this.KeyId = KeyId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "KeyId", this.KeyId);
 
     }
 }

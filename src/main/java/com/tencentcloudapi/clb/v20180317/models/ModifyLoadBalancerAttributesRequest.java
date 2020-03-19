@@ -44,11 +44,25 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel{
     private TargetRegionInfo TargetRegionInfo;
 
     /**
-    * Network billing parameter. Note: The maximum outbound bandwidth can be modified, but the network billing method cannot be modified.
+    * Network billing parameter
     */
     @SerializedName("InternetChargeInfo")
     @Expose
     private InternetAccessible InternetChargeInfo;
+
+    /**
+    * Whether the target opens traffic from CLB to the internet. If yes (true), only security groups on CLB will be verified; if no (false), security groups on both CLB and backend instance need to be verified.
+    */
+    @SerializedName("LoadBalancerPassToTarget")
+    @Expose
+    private Boolean LoadBalancerPassToTarget;
+
+    /**
+    * Whether to enable SnatPro
+    */
+    @SerializedName("SnatPro")
+    @Expose
+    private Boolean SnatPro;
 
     /**
      * Get Unique CLB ID 
@@ -99,19 +113,51 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel{
     }
 
     /**
-     * Get Network billing parameter. Note: The maximum outbound bandwidth can be modified, but the network billing method cannot be modified. 
-     * @return InternetChargeInfo Network billing parameter. Note: The maximum outbound bandwidth can be modified, but the network billing method cannot be modified.
+     * Get Network billing parameter 
+     * @return InternetChargeInfo Network billing parameter
      */
     public InternetAccessible getInternetChargeInfo() {
         return this.InternetChargeInfo;
     }
 
     /**
-     * Set Network billing parameter. Note: The maximum outbound bandwidth can be modified, but the network billing method cannot be modified.
-     * @param InternetChargeInfo Network billing parameter. Note: The maximum outbound bandwidth can be modified, but the network billing method cannot be modified.
+     * Set Network billing parameter
+     * @param InternetChargeInfo Network billing parameter
      */
     public void setInternetChargeInfo(InternetAccessible InternetChargeInfo) {
         this.InternetChargeInfo = InternetChargeInfo;
+    }
+
+    /**
+     * Get Whether the target opens traffic from CLB to the internet. If yes (true), only security groups on CLB will be verified; if no (false), security groups on both CLB and backend instance need to be verified. 
+     * @return LoadBalancerPassToTarget Whether the target opens traffic from CLB to the internet. If yes (true), only security groups on CLB will be verified; if no (false), security groups on both CLB and backend instance need to be verified.
+     */
+    public Boolean getLoadBalancerPassToTarget() {
+        return this.LoadBalancerPassToTarget;
+    }
+
+    /**
+     * Set Whether the target opens traffic from CLB to the internet. If yes (true), only security groups on CLB will be verified; if no (false), security groups on both CLB and backend instance need to be verified.
+     * @param LoadBalancerPassToTarget Whether the target opens traffic from CLB to the internet. If yes (true), only security groups on CLB will be verified; if no (false), security groups on both CLB and backend instance need to be verified.
+     */
+    public void setLoadBalancerPassToTarget(Boolean LoadBalancerPassToTarget) {
+        this.LoadBalancerPassToTarget = LoadBalancerPassToTarget;
+    }
+
+    /**
+     * Get Whether to enable SnatPro 
+     * @return SnatPro Whether to enable SnatPro
+     */
+    public Boolean getSnatPro() {
+        return this.SnatPro;
+    }
+
+    /**
+     * Set Whether to enable SnatPro
+     * @param SnatPro Whether to enable SnatPro
+     */
+    public void setSnatPro(Boolean SnatPro) {
+        this.SnatPro = SnatPro;
     }
 
     /**
@@ -122,6 +168,8 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "LoadBalancerName", this.LoadBalancerName);
         this.setParamObj(map, prefix + "TargetRegionInfo.", this.TargetRegionInfo);
         this.setParamObj(map, prefix + "InternetChargeInfo.", this.InternetChargeInfo);
+        this.setParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
+        this.setParamSimple(map, prefix + "SnatPro", this.SnatPro);
 
     }
 }

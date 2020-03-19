@@ -72,14 +72,14 @@ public class DescribeInstancesRequest extends AbstractModel{
     private Long OrderByType;
 
     /**
-    * 
+    * Node tag information list
     */
     @SerializedName("TagList")
     @Expose
     private TagInfo [] TagList;
 
     /**
-    * 
+    * VPC VIP list
     */
     @SerializedName("IpList")
     @Expose
@@ -198,32 +198,32 @@ public class DescribeInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return TagList 
+     * Get Node tag information list 
+     * @return TagList Node tag information list
      */
     public TagInfo [] getTagList() {
         return this.TagList;
     }
 
     /**
-     * Set 
-     * @param TagList 
+     * Set Node tag information list
+     * @param TagList Node tag information list
      */
     public void setTagList(TagInfo [] TagList) {
         this.TagList = TagList;
     }
 
     /**
-     * Get  
-     * @return IpList 
+     * Get VPC VIP list 
+     * @return IpList VPC VIP list
      */
     public String [] getIpList() {
         return this.IpList;
     }
 
     /**
-     * Set 
-     * @param IpList 
+     * Set VPC VIP list
+     * @param IpList VPC VIP list
      */
     public void setIpList(String [] IpList) {
         this.IpList = IpList;

@@ -31,7 +31,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private SimpleCache SimpleCache;
 
     /**
-    * Advanced cache expiration time configuration (This feature is in beta test and not fully available yet.)
+    * Advanced cache expiration configuration (This feature is in beta and not generally available yet.)
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AdvancedCache")
@@ -59,9 +59,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Advanced cache expiration time configuration (This feature is in beta test and not fully available yet.)
+     * Get Advanced cache expiration configuration (This feature is in beta and not generally available yet.)
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AdvancedCache Advanced cache expiration time configuration (This feature is in beta test and not fully available yet.)
+     * @return AdvancedCache Advanced cache expiration configuration (This feature is in beta and not generally available yet.)
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public AdvancedCache getAdvancedCache() {
@@ -69,9 +69,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Advanced cache expiration time configuration (This feature is in beta test and not fully available yet.)
+     * Set Advanced cache expiration configuration (This feature is in beta and not generally available yet.)
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AdvancedCache Advanced cache expiration time configuration (This feature is in beta test and not fully available yet.)
+     * @param AdvancedCache Advanced cache expiration configuration (This feature is in beta and not generally available yet.)
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setAdvancedCache(AdvancedCache AdvancedCache) {

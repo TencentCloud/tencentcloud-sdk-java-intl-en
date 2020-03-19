@@ -668,7 +668,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify instance information (renaming an instance is supported currently).
+     *This API is used to modify instance information.
      * @param req ModifyInstanceRequest
      * @return ModifyInstanceResponse
      * @throws TencentCloudSDKException

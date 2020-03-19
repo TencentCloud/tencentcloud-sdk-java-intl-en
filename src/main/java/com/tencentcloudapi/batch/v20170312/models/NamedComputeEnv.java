@@ -100,6 +100,13 @@ public class NamedComputeEnv extends AbstractModel{
     private String ActionIfComputeNodeInactive;
 
     /**
+    * When the instances are failed to be created or returned because of exceptions, the related compute node will retry to create instances periodically. This parameter specifies the maximum retry attempts. The max value is 11 and the default value is 7.
+    */
+    @SerializedName("ResourceMaxRetryCount")
+    @Expose
+    private Long ResourceMaxRetryCount;
+
+    /**
      * Get Compute environment name 
      * @return EnvName Compute environment name
      */
@@ -276,6 +283,22 @@ public class NamedComputeEnv extends AbstractModel{
     }
 
     /**
+     * Get When the instances are failed to be created or returned because of exceptions, the related compute node will retry to create instances periodically. This parameter specifies the maximum retry attempts. The max value is 11 and the default value is 7. 
+     * @return ResourceMaxRetryCount When the instances are failed to be created or returned because of exceptions, the related compute node will retry to create instances periodically. This parameter specifies the maximum retry attempts. The max value is 11 and the default value is 7.
+     */
+    public Long getResourceMaxRetryCount() {
+        return this.ResourceMaxRetryCount;
+    }
+
+    /**
+     * Set When the instances are failed to be created or returned because of exceptions, the related compute node will retry to create instances periodically. This parameter specifies the maximum retry attempts. The max value is 11 and the default value is 7.
+     * @param ResourceMaxRetryCount When the instances are failed to be created or returned because of exceptions, the related compute node will retry to create instances periodically. This parameter specifies the maximum retry attempts. The max value is 11 and the default value is 7.
+     */
+    public void setResourceMaxRetryCount(Long ResourceMaxRetryCount) {
+        this.ResourceMaxRetryCount = ResourceMaxRetryCount;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -290,6 +313,7 @@ public class NamedComputeEnv extends AbstractModel{
         this.setParamObj(map, prefix + "AgentRunningMode.", this.AgentRunningMode);
         this.setParamObj(map, prefix + "Notifications.", this.Notifications);
         this.setParamSimple(map, prefix + "ActionIfComputeNodeInactive", this.ActionIfComputeNodeInactive);
+        this.setParamSimple(map, prefix + "ResourceMaxRetryCount", this.ResourceMaxRetryCount);
 
     }
 }

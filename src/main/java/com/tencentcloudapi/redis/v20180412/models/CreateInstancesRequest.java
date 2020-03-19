@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreateInstancesRequest extends AbstractModel{
 
     /**
-    * ID of the AZ where the instance resides
+    * AZ ID of instance
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * Instance type. 2: Redis 2.8 master-slave edition; 3: Redis 3.2 master-slave edition (CKV master-slave edition); 4: Redis 3.2 cluster edition (CKV cluster edition); 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition
+    * Instance type. 2: Redis 2.8 Master-Slave Edition, 3: Redis 3.2 Master-Slave Edition (CKV Master-Slave Edition), 4: Redis 3.2 Cluster Edition (CKV Cluster Edition), 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
     */
     @SerializedName("TypeId")
     @Expose
@@ -107,7 +107,7 @@ public class CreateInstancesRequest extends AbstractModel{
     private String [] SecurityGroupIdList;
 
     /**
-    * User-defined port. If this parameter is left blank, 6379 will be used by default
+    * User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024,65535]
     */
     @SerializedName("VPort")
     @Expose
@@ -149,32 +149,32 @@ public class CreateInstancesRequest extends AbstractModel{
     private Boolean NoAuth;
 
     /**
-     * Get ID of the AZ where the instance resides 
-     * @return ZoneId ID of the AZ where the instance resides
+     * Get AZ ID of instance 
+     * @return ZoneId AZ ID of instance
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set ID of the AZ where the instance resides
-     * @param ZoneId ID of the AZ where the instance resides
+     * Set AZ ID of instance
+     * @param ZoneId AZ ID of instance
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Instance type. 2: Redis 2.8 master-slave edition; 3: Redis 3.2 master-slave edition (CKV master-slave edition); 4: Redis 3.2 cluster edition (CKV cluster edition); 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition 
-     * @return TypeId Instance type. 2: Redis 2.8 master-slave edition; 3: Redis 3.2 master-slave edition (CKV master-slave edition); 4: Redis 3.2 cluster edition (CKV cluster edition); 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition
+     * Get Instance type. 2: Redis 2.8 Master-Slave Edition, 3: Redis 3.2 Master-Slave Edition (CKV Master-Slave Edition), 4: Redis 3.2 Cluster Edition (CKV Cluster Edition), 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition, 
+     * @return TypeId Instance type. 2: Redis 2.8 Master-Slave Edition, 3: Redis 3.2 Master-Slave Edition (CKV Master-Slave Edition), 4: Redis 3.2 Cluster Edition (CKV Cluster Edition), 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
      */
     public Long getTypeId() {
         return this.TypeId;
     }
 
     /**
-     * Set Instance type. 2: Redis 2.8 master-slave edition; 3: Redis 3.2 master-slave edition (CKV master-slave edition); 4: Redis 3.2 cluster edition (CKV cluster edition); 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition
-     * @param TypeId Instance type. 2: Redis 2.8 master-slave edition; 3: Redis 3.2 master-slave edition (CKV master-slave edition); 4: Redis 3.2 cluster edition (CKV cluster edition); 5: Redis 2.8 standalone edition; 6: Redis 4.0 master-slave edition; 7: Redis 4.0 cluster edition
+     * Set Instance type. 2: Redis 2.8 Master-Slave Edition, 3: Redis 3.2 Master-Slave Edition (CKV Master-Slave Edition), 4: Redis 3.2 Cluster Edition (CKV Cluster Edition), 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
+     * @param TypeId Instance type. 2: Redis 2.8 Master-Slave Edition, 3: Redis 3.2 Master-Slave Edition (CKV Master-Slave Edition), 4: Redis 3.2 Cluster Edition (CKV Cluster Edition), 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
      */
     public void setTypeId(Long TypeId) {
         this.TypeId = TypeId;
@@ -341,16 +341,16 @@ public class CreateInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get User-defined port. If this parameter is left blank, 6379 will be used by default 
-     * @return VPort User-defined port. If this parameter is left blank, 6379 will be used by default
+     * Get User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024,65535] 
+     * @return VPort User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024,65535]
      */
     public Long getVPort() {
         return this.VPort;
     }
 
     /**
-     * Set User-defined port. If this parameter is left blank, 6379 will be used by default
-     * @param VPort User-defined port. If this parameter is left blank, 6379 will be used by default
+     * Set User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024,65535]
+     * @param VPort User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024,65535]
      */
     public void setVPort(Long VPort) {
         this.VPort = VPort;

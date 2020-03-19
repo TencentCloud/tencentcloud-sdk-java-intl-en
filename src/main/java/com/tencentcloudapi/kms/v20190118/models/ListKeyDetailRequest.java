@@ -30,7 +30,7 @@ public class ListKeyDetailRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 
+    * This parameter has the same meaning of the `Limit` in an SQL query, indicating that up to `Limit` value elements can be obtained in this request. The default value is 10 and the maximum value is 200.
     */
     @SerializedName("Limit")
     @Expose
@@ -72,6 +72,13 @@ public class ListKeyDetailRequest extends AbstractModel{
     private String Origin;
 
     /**
+    * Filter by `KeyUsage` of CMKs. If this parameter is left empty, it means to filter all CMKs. Valid values: ENCRYPT_DECRYPT, ASYMMETRIC_DECRYPT_RSA_2048, ASYMMETRIC_DECRYPT_SM2
+    */
+    @SerializedName("KeyUsage")
+    @Expose
+    private String KeyUsage;
+
+    /**
      * Get  
      * @return Offset 
      */
@@ -88,16 +95,16 @@ public class ListKeyDetailRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return Limit 
+     * Get This parameter has the same meaning of the `Limit` in an SQL query, indicating that up to `Limit` value elements can be obtained in this request. The default value is 10 and the maximum value is 200. 
+     * @return Limit This parameter has the same meaning of the `Limit` in an SQL query, indicating that up to `Limit` value elements can be obtained in this request. The default value is 10 and the maximum value is 200.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 
-     * @param Limit 
+     * Set This parameter has the same meaning of the `Limit` in an SQL query, indicating that up to `Limit` value elements can be obtained in this request. The default value is 10 and the maximum value is 200.
+     * @param Limit This parameter has the same meaning of the `Limit` in an SQL query, indicating that up to `Limit` value elements can be obtained in this request. The default value is 10 and the maximum value is 200.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -184,6 +191,22 @@ public class ListKeyDetailRequest extends AbstractModel{
     }
 
     /**
+     * Get Filter by `KeyUsage` of CMKs. If this parameter is left empty, it means to filter all CMKs. Valid values: ENCRYPT_DECRYPT, ASYMMETRIC_DECRYPT_RSA_2048, ASYMMETRIC_DECRYPT_SM2 
+     * @return KeyUsage Filter by `KeyUsage` of CMKs. If this parameter is left empty, it means to filter all CMKs. Valid values: ENCRYPT_DECRYPT, ASYMMETRIC_DECRYPT_RSA_2048, ASYMMETRIC_DECRYPT_SM2
+     */
+    public String getKeyUsage() {
+        return this.KeyUsage;
+    }
+
+    /**
+     * Set Filter by `KeyUsage` of CMKs. If this parameter is left empty, it means to filter all CMKs. Valid values: ENCRYPT_DECRYPT, ASYMMETRIC_DECRYPT_RSA_2048, ASYMMETRIC_DECRYPT_SM2
+     * @param KeyUsage Filter by `KeyUsage` of CMKs. If this parameter is left empty, it means to filter all CMKs. Valid values: ENCRYPT_DECRYPT, ASYMMETRIC_DECRYPT_RSA_2048, ASYMMETRIC_DECRYPT_SM2
+     */
+    public void setKeyUsage(String KeyUsage) {
+        this.KeyUsage = KeyUsage;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class ListKeyDetailRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "KeyState", this.KeyState);
         this.setParamSimple(map, prefix + "SearchKeyAlias", this.SearchKeyAlias);
         this.setParamSimple(map, prefix + "Origin", this.Origin);
+        this.setParamSimple(map, prefix + "KeyUsage", this.KeyUsage);
 
     }
 }

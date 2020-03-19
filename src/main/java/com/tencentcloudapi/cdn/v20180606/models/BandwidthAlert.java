@@ -40,9 +40,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long BpsThreshold;
 
     /**
-    * Operation after threshold is reached
-RESOLVE_DNS_TO_ORIGIN: directly origin-pull. It is only supported for domain names of external origin.
-RETURN_404: return 404 to all requests.
+    * Action taken when threshold is reached
+RESOLVE_DNS_TO_ORIGIN: requests will be forwarded to the origin server. This is only supported for domain names of external origin.
+RETURN_404: a 404 error will be returned for all requests.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CounterMeasure")
@@ -102,13 +102,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Operation after threshold is reached
-RESOLVE_DNS_TO_ORIGIN: directly origin-pull. It is only supported for domain names of external origin.
-RETURN_404: return 404 to all requests.
+     * Get Action taken when threshold is reached
+RESOLVE_DNS_TO_ORIGIN: requests will be forwarded to the origin server. This is only supported for domain names of external origin.
+RETURN_404: a 404 error will be returned for all requests.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CounterMeasure Operation after threshold is reached
-RESOLVE_DNS_TO_ORIGIN: directly origin-pull. It is only supported for domain names of external origin.
-RETURN_404: return 404 to all requests.
+     * @return CounterMeasure Action taken when threshold is reached
+RESOLVE_DNS_TO_ORIGIN: requests will be forwarded to the origin server. This is only supported for domain names of external origin.
+RETURN_404: a 404 error will be returned for all requests.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getCounterMeasure() {
@@ -116,13 +116,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Operation after threshold is reached
-RESOLVE_DNS_TO_ORIGIN: directly origin-pull. It is only supported for domain names of external origin.
-RETURN_404: return 404 to all requests.
+     * Set Action taken when threshold is reached
+RESOLVE_DNS_TO_ORIGIN: requests will be forwarded to the origin server. This is only supported for domain names of external origin.
+RETURN_404: a 404 error will be returned for all requests.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CounterMeasure Operation after threshold is reached
-RESOLVE_DNS_TO_ORIGIN: directly origin-pull. It is only supported for domain names of external origin.
-RETURN_404: return 404 to all requests.
+     * @param CounterMeasure Action taken when threshold is reached
+RESOLVE_DNS_TO_ORIGIN: requests will be forwarded to the origin server. This is only supported for domain names of external origin.
+RETURN_404: a 404 error will be returned for all requests.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setCounterMeasure(String CounterMeasure) {

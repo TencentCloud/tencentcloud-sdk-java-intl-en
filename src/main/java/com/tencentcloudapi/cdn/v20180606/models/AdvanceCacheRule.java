@@ -24,11 +24,11 @@ public class AdvanceCacheRule extends AbstractModel{
 
     /**
     * Rule types:
-all: all files take effect
-file: specified file suffixes take effect
-directory: specified paths take effect
-path: specified absolute paths take effect
-default: the cache rules when the origin server has not returned max-age
+`all`: effective for all files
+`file`: effective for specified file suffixes
+`directory`: effective for specified paths
+`path`: effective for specified absolute paths
+`default`: the cache rules when the origin server has not returned max-age
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CacheType")
@@ -36,12 +36,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String CacheType;
 
     /**
-    * Matching content under the corresponding types:
-For "all", enter an asterisk (*).
-For "file", enter the suffix, such as jpg, txt.
-For "directory", enter the path, such as /xxx/test/.
-For "path", enter the corresponding absolute path, such as /xxx/test.html.
-For "default", enter "no max-age".
+    * Content for each CacheType:
+For `all`, enter an asterisk (*).
+For `file`, enter the suffix, such as jpg, txt.
+For `directory`, enter the path, such as /xxx/test/.
+For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+For `default`, enter "no max-age".
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CacheContents")
@@ -59,18 +59,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Rule types:
-all: all files take effect
-file: specified file suffixes take effect
-directory: specified paths take effect
-path: specified absolute paths take effect
-default: the cache rules when the origin server has not returned max-age
+`all`: effective for all files
+`file`: effective for specified file suffixes
+`directory`: effective for specified paths
+`path`: effective for specified absolute paths
+`default`: the cache rules when the origin server has not returned max-age
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return CacheType Rule types:
-all: all files take effect
-file: specified file suffixes take effect
-directory: specified paths take effect
-path: specified absolute paths take effect
-default: the cache rules when the origin server has not returned max-age
+`all`: effective for all files
+`file`: effective for specified file suffixes
+`directory`: effective for specified paths
+`path`: effective for specified absolute paths
+`default`: the cache rules when the origin server has not returned max-age
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getCacheType() {
@@ -79,18 +79,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Rule types:
-all: all files take effect
-file: specified file suffixes take effect
-directory: specified paths take effect
-path: specified absolute paths take effect
-default: the cache rules when the origin server has not returned max-age
+`all`: effective for all files
+`file`: effective for specified file suffixes
+`directory`: effective for specified paths
+`path`: effective for specified absolute paths
+`default`: the cache rules when the origin server has not returned max-age
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param CacheType Rule types:
-all: all files take effect
-file: specified file suffixes take effect
-directory: specified paths take effect
-path: specified absolute paths take effect
-default: the cache rules when the origin server has not returned max-age
+`all`: effective for all files
+`file`: effective for specified file suffixes
+`directory`: effective for specified paths
+`path`: effective for specified absolute paths
+`default`: the cache rules when the origin server has not returned max-age
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setCacheType(String CacheType) {
@@ -98,19 +98,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Matching content under the corresponding types:
-For "all", enter an asterisk (*).
-For "file", enter the suffix, such as jpg, txt.
-For "directory", enter the path, such as /xxx/test/.
-For "path", enter the corresponding absolute path, such as /xxx/test.html.
-For "default", enter "no max-age".
+     * Get Content for each CacheType:
+For `all`, enter an asterisk (*).
+For `file`, enter the suffix, such as jpg, txt.
+For `directory`, enter the path, such as /xxx/test/.
+For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+For `default`, enter "no max-age".
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CacheContents Matching content under the corresponding types:
-For "all", enter an asterisk (*).
-For "file", enter the suffix, such as jpg, txt.
-For "directory", enter the path, such as /xxx/test/.
-For "path", enter the corresponding absolute path, such as /xxx/test.html.
-For "default", enter "no max-age".
+     * @return CacheContents Content for each CacheType:
+For `all`, enter an asterisk (*).
+For `file`, enter the suffix, such as jpg, txt.
+For `directory`, enter the path, such as /xxx/test/.
+For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+For `default`, enter "no max-age".
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String [] getCacheContents() {
@@ -118,19 +118,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Matching content under the corresponding types:
-For "all", enter an asterisk (*).
-For "file", enter the suffix, such as jpg, txt.
-For "directory", enter the path, such as /xxx/test/.
-For "path", enter the corresponding absolute path, such as /xxx/test.html.
-For "default", enter "no max-age".
+     * Set Content for each CacheType:
+For `all`, enter an asterisk (*).
+For `file`, enter the suffix, such as jpg, txt.
+For `directory`, enter the path, such as /xxx/test/.
+For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+For `default`, enter "no max-age".
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CacheContents Matching content under the corresponding types:
-For "all", enter an asterisk (*).
-For "file", enter the suffix, such as jpg, txt.
-For "directory", enter the path, such as /xxx/test/.
-For "path", enter the corresponding absolute path, such as /xxx/test.html.
-For "default", enter "no max-age".
+     * @param CacheContents Content for each CacheType:
+For `all`, enter an asterisk (*).
+For `file`, enter the suffix, such as jpg, txt.
+For `directory`, enter the path, such as /xxx/test/.
+For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+For `default`, enter "no max-age".
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setCacheContents(String [] CacheContents) {
