@@ -59,7 +59,7 @@ import com.google.gson.JsonSyntaxException;
 public abstract class AbstractClient {
 
   public static final int HTTP_RSP_OK = 200;
-  public static final String SDK_VERSION = "SDK_JAVA_INTL_EN_3.0.8";
+  public static final String SDK_VERSION = "SDK_JAVA_INTL_EN_3.0.9";
 
   private Credential credential;
   private ClientProfile profile;
@@ -213,6 +213,9 @@ public abstract class AbstractClient {
     }
     if (this.profile.isUnsignedPayload()) {
       hb.add("X-TC-Content-SHA256", "UNSIGNED-PAYLOAD");
+    }
+    if (null != this.profile.getLanguage()) {
+      hb.add("X-TC-Language", this.profile.getLanguage().getValue());
     }
 
     Headers headers = hb.build();
@@ -469,6 +472,9 @@ public abstract class AbstractClient {
     if (this.profile.isUnsignedPayload()) {
       hb.add("X-TC-Content-SHA256", "UNSIGNED-PAYLOAD");
     }
+    if (null != this.profile.getLanguage()) {
+      hb.add("X-TC-Language", this.profile.getLanguage().getValue());
+    }
 
     Headers headers = hb.build();
     if (httpRequestMethod.equals(HttpProfile.REQ_GET)) {
@@ -550,6 +556,10 @@ public abstract class AbstractClient {
 
     if (this.credential.getToken() != null && (!this.credential.getToken().isEmpty())) {
       param.put("Token", this.credential.getToken());
+    }
+
+    if (null != this.profile.getLanguage()) {
+      param.put("Language", this.profile.getLanguage().getValue());
     }
 
     String endpoint = this.endpoint;
