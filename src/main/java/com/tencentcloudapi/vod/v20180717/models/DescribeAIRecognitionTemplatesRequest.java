@@ -30,7 +30,7 @@ public class DescribeAIRecognitionTemplatesRequest extends AbstractModel{
     private Long [] Definitions;
 
     /**
-    * Paged offset. Default value: 0.
+    * Pagination offset. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
@@ -67,16 +67,16 @@ public class DescribeAIRecognitionTemplatesRequest extends AbstractModel{
     }
 
     /**
-     * Get Paged offset. Default value: 0. 
-     * @return Offset Paged offset. Default value: 0.
+     * Get Pagination offset. Default value: 0. 
+     * @return Offset Pagination offset. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Paged offset. Default value: 0.
-     * @param Offset Paged offset. Default value: 0.
+     * Set Pagination offset. Default value: 0.
+     * @param Offset Pagination offset. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

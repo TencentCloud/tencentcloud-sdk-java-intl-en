@@ -1,0 +1,575 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.ckafka.v20190819.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class InstanceDetail extends AbstractModel{
+
+    /**
+    * Instance ID
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * Instance name
+    */
+    @SerializedName("InstanceName")
+    @Expose
+    private String InstanceName;
+
+    /**
+    * Instance VIP information
+    */
+    @SerializedName("Vip")
+    @Expose
+    private String Vip;
+
+    /**
+    * Instance port information
+    */
+    @SerializedName("Vport")
+    @Expose
+    private String Vport;
+
+    /**
+    * Virtual IP list
+    */
+    @SerializedName("VipList")
+    @Expose
+    private VipEntity [] VipList;
+
+    /**
+    * Instance status. 0: creating, 1: running, 2: deleting, 5: isolated, -1: creation failed
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+    * Instance bandwidth in Mbps
+    */
+    @SerializedName("Bandwidth")
+    @Expose
+    private Long Bandwidth;
+
+    /**
+    * Instance storage capacity in GB
+    */
+    @SerializedName("DiskSize")
+    @Expose
+    private Long DiskSize;
+
+    /**
+    * AZ ID
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private Long ZoneId;
+
+    /**
+    * vpcId. If this parameter is empty, it means the basic network
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+
+    /**
+    * Subnet ID
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
+
+    /**
+    * Whether to renew the instance automatically, which is an int-type enumerated value. 1: yes, 2: no
+    */
+    @SerializedName("RenewFlag")
+    @Expose
+    private Long RenewFlag;
+
+    /**
+    * Instance status, which is an int-type value. 0: healthy, 1: alarmed, 2: exceptional
+    */
+    @SerializedName("Healthy")
+    @Expose
+    private Long Healthy;
+
+    /**
+    * Instance status information
+    */
+    @SerializedName("HealthyMessage")
+    @Expose
+    private String HealthyMessage;
+
+    /**
+    * Instance creation time
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private Long CreateTime;
+
+    /**
+    * Instance expiration time
+    */
+    @SerializedName("ExpireTime")
+    @Expose
+    private Long ExpireTime;
+
+    /**
+    * Whether it is an internal customer. 1: yes
+    */
+    @SerializedName("IsInternal")
+    @Expose
+    private Long IsInternal;
+
+    /**
+    * Number of topics
+    */
+    @SerializedName("TopicNum")
+    @Expose
+    private Long TopicNum;
+
+    /**
+    * Tag
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+    * Kafka version information
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Version")
+    @Expose
+    private String Version;
+
+    /**
+    * Cross-AZ
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ZoneIds")
+    @Expose
+    private Long [] ZoneIds;
+
+    /**
+    * CKafka sale type
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Cvm")
+    @Expose
+    private Long Cvm;
+
+    /**
+     * Get Instance ID 
+     * @return InstanceId Instance ID
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set Instance ID
+     * @param InstanceId Instance ID
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get Instance name 
+     * @return InstanceName Instance name
+     */
+    public String getInstanceName() {
+        return this.InstanceName;
+    }
+
+    /**
+     * Set Instance name
+     * @param InstanceName Instance name
+     */
+    public void setInstanceName(String InstanceName) {
+        this.InstanceName = InstanceName;
+    }
+
+    /**
+     * Get Instance VIP information 
+     * @return Vip Instance VIP information
+     */
+    public String getVip() {
+        return this.Vip;
+    }
+
+    /**
+     * Set Instance VIP information
+     * @param Vip Instance VIP information
+     */
+    public void setVip(String Vip) {
+        this.Vip = Vip;
+    }
+
+    /**
+     * Get Instance port information 
+     * @return Vport Instance port information
+     */
+    public String getVport() {
+        return this.Vport;
+    }
+
+    /**
+     * Set Instance port information
+     * @param Vport Instance port information
+     */
+    public void setVport(String Vport) {
+        this.Vport = Vport;
+    }
+
+    /**
+     * Get Virtual IP list 
+     * @return VipList Virtual IP list
+     */
+    public VipEntity [] getVipList() {
+        return this.VipList;
+    }
+
+    /**
+     * Set Virtual IP list
+     * @param VipList Virtual IP list
+     */
+    public void setVipList(VipEntity [] VipList) {
+        this.VipList = VipList;
+    }
+
+    /**
+     * Get Instance status. 0: creating, 1: running, 2: deleting, 5: isolated, -1: creation failed 
+     * @return Status Instance status. 0: creating, 1: running, 2: deleting, 5: isolated, -1: creation failed
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set Instance status. 0: creating, 1: running, 2: deleting, 5: isolated, -1: creation failed
+     * @param Status Instance status. 0: creating, 1: running, 2: deleting, 5: isolated, -1: creation failed
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get Instance bandwidth in Mbps 
+     * @return Bandwidth Instance bandwidth in Mbps
+     */
+    public Long getBandwidth() {
+        return this.Bandwidth;
+    }
+
+    /**
+     * Set Instance bandwidth in Mbps
+     * @param Bandwidth Instance bandwidth in Mbps
+     */
+    public void setBandwidth(Long Bandwidth) {
+        this.Bandwidth = Bandwidth;
+    }
+
+    /**
+     * Get Instance storage capacity in GB 
+     * @return DiskSize Instance storage capacity in GB
+     */
+    public Long getDiskSize() {
+        return this.DiskSize;
+    }
+
+    /**
+     * Set Instance storage capacity in GB
+     * @param DiskSize Instance storage capacity in GB
+     */
+    public void setDiskSize(Long DiskSize) {
+        this.DiskSize = DiskSize;
+    }
+
+    /**
+     * Get AZ ID 
+     * @return ZoneId AZ ID
+     */
+    public Long getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * Set AZ ID
+     * @param ZoneId AZ ID
+     */
+    public void setZoneId(Long ZoneId) {
+        this.ZoneId = ZoneId;
+    }
+
+    /**
+     * Get vpcId. If this parameter is empty, it means the basic network 
+     * @return VpcId vpcId. If this parameter is empty, it means the basic network
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set vpcId. If this parameter is empty, it means the basic network
+     * @param VpcId vpcId. If this parameter is empty, it means the basic network
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
+    /**
+     * Get Subnet ID 
+     * @return SubnetId Subnet ID
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set Subnet ID
+     * @param SubnetId Subnet ID
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
+    }
+
+    /**
+     * Get Whether to renew the instance automatically, which is an int-type enumerated value. 1: yes, 2: no 
+     * @return RenewFlag Whether to renew the instance automatically, which is an int-type enumerated value. 1: yes, 2: no
+     */
+    public Long getRenewFlag() {
+        return this.RenewFlag;
+    }
+
+    /**
+     * Set Whether to renew the instance automatically, which is an int-type enumerated value. 1: yes, 2: no
+     * @param RenewFlag Whether to renew the instance automatically, which is an int-type enumerated value. 1: yes, 2: no
+     */
+    public void setRenewFlag(Long RenewFlag) {
+        this.RenewFlag = RenewFlag;
+    }
+
+    /**
+     * Get Instance status, which is an int-type value. 0: healthy, 1: alarmed, 2: exceptional 
+     * @return Healthy Instance status, which is an int-type value. 0: healthy, 1: alarmed, 2: exceptional
+     */
+    public Long getHealthy() {
+        return this.Healthy;
+    }
+
+    /**
+     * Set Instance status, which is an int-type value. 0: healthy, 1: alarmed, 2: exceptional
+     * @param Healthy Instance status, which is an int-type value. 0: healthy, 1: alarmed, 2: exceptional
+     */
+    public void setHealthy(Long Healthy) {
+        this.Healthy = Healthy;
+    }
+
+    /**
+     * Get Instance status information 
+     * @return HealthyMessage Instance status information
+     */
+    public String getHealthyMessage() {
+        return this.HealthyMessage;
+    }
+
+    /**
+     * Set Instance status information
+     * @param HealthyMessage Instance status information
+     */
+    public void setHealthyMessage(String HealthyMessage) {
+        this.HealthyMessage = HealthyMessage;
+    }
+
+    /**
+     * Get Instance creation time 
+     * @return CreateTime Instance creation time
+     */
+    public Long getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set Instance creation time
+     * @param CreateTime Instance creation time
+     */
+    public void setCreateTime(Long CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get Instance expiration time 
+     * @return ExpireTime Instance expiration time
+     */
+    public Long getExpireTime() {
+        return this.ExpireTime;
+    }
+
+    /**
+     * Set Instance expiration time
+     * @param ExpireTime Instance expiration time
+     */
+    public void setExpireTime(Long ExpireTime) {
+        this.ExpireTime = ExpireTime;
+    }
+
+    /**
+     * Get Whether it is an internal customer. 1: yes 
+     * @return IsInternal Whether it is an internal customer. 1: yes
+     */
+    public Long getIsInternal() {
+        return this.IsInternal;
+    }
+
+    /**
+     * Set Whether it is an internal customer. 1: yes
+     * @param IsInternal Whether it is an internal customer. 1: yes
+     */
+    public void setIsInternal(Long IsInternal) {
+        this.IsInternal = IsInternal;
+    }
+
+    /**
+     * Get Number of topics 
+     * @return TopicNum Number of topics
+     */
+    public Long getTopicNum() {
+        return this.TopicNum;
+    }
+
+    /**
+     * Set Number of topics
+     * @param TopicNum Number of topics
+     */
+    public void setTopicNum(Long TopicNum) {
+        this.TopicNum = TopicNum;
+    }
+
+    /**
+     * Get Tag 
+     * @return Tags Tag
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag
+     * @param Tags Tag
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get Kafka version information
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Version Kafka version information
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getVersion() {
+        return this.Version;
+    }
+
+    /**
+     * Set Kafka version information
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Version Kafka version information
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setVersion(String Version) {
+        this.Version = Version;
+    }
+
+    /**
+     * Get Cross-AZ
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return ZoneIds Cross-AZ
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long [] getZoneIds() {
+        return this.ZoneIds;
+    }
+
+    /**
+     * Set Cross-AZ
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param ZoneIds Cross-AZ
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setZoneIds(Long [] ZoneIds) {
+        this.ZoneIds = ZoneIds;
+    }
+
+    /**
+     * Get CKafka sale type
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Cvm CKafka sale type
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getCvm() {
+        return this.Cvm;
+    }
+
+    /**
+     * Set CKafka sale type
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Cvm CKafka sale type
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCvm(Long Cvm) {
+        this.Cvm = Cvm;
+    }
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
+        this.setParamSimple(map, prefix + "Vip", this.Vip);
+        this.setParamSimple(map, prefix + "Vport", this.Vport);
+        this.setParamArrayObj(map, prefix + "VipList.", this.VipList);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+        this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+        this.setParamSimple(map, prefix + "Healthy", this.Healthy);
+        this.setParamSimple(map, prefix + "HealthyMessage", this.HealthyMessage);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "IsInternal", this.IsInternal);
+        this.setParamSimple(map, prefix + "TopicNum", this.TopicNum);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "Version", this.Version);
+        this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
+        this.setParamSimple(map, prefix + "Cvm", this.Cvm);
+
+    }
+}
+

@@ -38,7 +38,7 @@ public class EventContent extends AbstractModel{
 <li>EditMediaComplete: video editing completion;</li>
 <li>WechatPublishComplete: release on WeChat completion;</li>
 <li>ComposeMediaComplete: media file composing completion;</li>
-<li>WechatMiniProgramPublishComplete: release in WeChat Mini Program completion.</li>
+<li>WechatMiniProgramPublishComplete: release on WeChat Mini Program completion.</li>
 <b>Event types compatible with v2017:</b>
 <li>TranscodeComplete: video transcoding completion;</li>
 <li>ConcatComplete: video splicing completion;</li>
@@ -147,7 +147,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private ComposeMediaTask ComposeMediaCompleteEvent;
 
     /**
-    * Release in WeChat Mini Program task completion event, which is valid if the event type is `WechatMiniProgramPublishComplete`.
+    * Release on WeChat Mini Program task completion event, which is valid if the event type is `WechatMiniProgramPublishComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("WechatMiniProgramPublishCompleteEvent")
@@ -179,7 +179,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>EditMediaComplete: video editing completion;</li>
 <li>WechatPublishComplete: release on WeChat completion;</li>
 <li>ComposeMediaComplete: media file composing completion;</li>
-<li>WechatMiniProgramPublishComplete: release in WeChat Mini Program completion.</li>
+<li>WechatMiniProgramPublishComplete: release on WeChat Mini Program completion.</li>
 <b>Event types compatible with v2017:</b>
 <li>TranscodeComplete: video transcoding completion;</li>
 <li>ConcatComplete: video splicing completion;</li>
@@ -194,7 +194,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>EditMediaComplete: video editing completion;</li>
 <li>WechatPublishComplete: release on WeChat completion;</li>
 <li>ComposeMediaComplete: media file composing completion;</li>
-<li>WechatMiniProgramPublishComplete: release in WeChat Mini Program completion.</li>
+<li>WechatMiniProgramPublishComplete: release on WeChat Mini Program completion.</li>
 <b>Event types compatible with v2017:</b>
 <li>TranscodeComplete: video transcoding completion;</li>
 <li>ConcatComplete: video splicing completion;</li>
@@ -215,7 +215,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>EditMediaComplete: video editing completion;</li>
 <li>WechatPublishComplete: release on WeChat completion;</li>
 <li>ComposeMediaComplete: media file composing completion;</li>
-<li>WechatMiniProgramPublishComplete: release in WeChat Mini Program completion.</li>
+<li>WechatMiniProgramPublishComplete: release on WeChat Mini Program completion.</li>
 <b>Event types compatible with v2017:</b>
 <li>TranscodeComplete: video transcoding completion;</li>
 <li>ConcatComplete: video splicing completion;</li>
@@ -230,7 +230,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>EditMediaComplete: video editing completion;</li>
 <li>WechatPublishComplete: release on WeChat completion;</li>
 <li>ComposeMediaComplete: media file composing completion;</li>
-<li>WechatMiniProgramPublishComplete: release in WeChat Mini Program completion.</li>
+<li>WechatMiniProgramPublishComplete: release on WeChat Mini Program completion.</li>
 <b>Event types compatible with v2017:</b>
 <li>TranscodeComplete: video transcoding completion;</li>
 <li>ConcatComplete: video splicing completion;</li>
@@ -483,9 +483,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Release in WeChat Mini Program task completion event, which is valid if the event type is `WechatMiniProgramPublishComplete`.
+     * Get Release on WeChat Mini Program task completion event, which is valid if the event type is `WechatMiniProgramPublishComplete`.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return WechatMiniProgramPublishCompleteEvent Release in WeChat Mini Program task completion event, which is valid if the event type is `WechatMiniProgramPublishComplete`.
+     * @return WechatMiniProgramPublishCompleteEvent Release on WeChat Mini Program task completion event, which is valid if the event type is `WechatMiniProgramPublishComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public WechatMiniProgramPublishTask getWechatMiniProgramPublishCompleteEvent() {
@@ -493,9 +493,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Release in WeChat Mini Program task completion event, which is valid if the event type is `WechatMiniProgramPublishComplete`.
+     * Set Release on WeChat Mini Program task completion event, which is valid if the event type is `WechatMiniProgramPublishComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param WechatMiniProgramPublishCompleteEvent Release in WeChat Mini Program task completion event, which is valid if the event type is `WechatMiniProgramPublishComplete`.
+     * @param WechatMiniProgramPublishCompleteEvent Release on WeChat Mini Program task completion event, which is valid if the event type is `WechatMiniProgramPublishComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setWechatMiniProgramPublishCompleteEvent(WechatMiniProgramPublishTask WechatMiniProgramPublishCompleteEvent) {

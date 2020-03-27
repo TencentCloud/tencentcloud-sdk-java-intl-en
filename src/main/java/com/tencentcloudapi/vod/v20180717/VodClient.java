@@ -117,7 +117,7 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a custom video content analysis template. Up to 50 ones can be created.
+     *This API is used to create a custom video content analysis template. Up to 50 templates can be created.
      * @param req CreateAIAnalysisTemplateRequest
      * @return CreateAIAnalysisTemplateResponse
      * @throws TencentCloudSDKException
@@ -153,6 +153,27 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     ** This API is used to categorize media assets for management;
+* It does not affect the categories of existing media assets. If you want to modify the category of a media asset, call the [ModifyMediaInfo](/document/product/266/31762) API.
+* There can be up to 4 levels of categories.
+* One category can have up to 500 subcategories under it.
+     * @param req CreateClassRequest
+     * @return CreateClassResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateClassResponse CreateClass(CreateClassRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateClassResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateClassResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateClass"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a custom image sprite generating template. Up to 16 templates can be created.
      * @param req CreateImageSpriteTemplateRequest
      * @return CreateImageSpriteTemplateResponse
@@ -171,7 +192,7 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a custom task flow template. Up to 50 ones can be created.
+     *This API is used to create a custom task flow template. Up to 50 templates can be created.
      * @param req CreateProcedureTemplateRequest
      * @return CreateProcedureTemplateResponse
      * @throws TencentCloudSDKException
@@ -225,7 +246,7 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a custom transcoding template. Up to 100 ones can be created.
+     *This API is used to create a custom transcoding template. Up to 100 templates can be created.
      * @param req CreateTranscodeTemplateRequest
      * @return CreateTranscodeTemplateResponse
      * @throws TencentCloudSDKException
@@ -243,7 +264,7 @@ public class VodClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a custom watermarking template. Up to 1,000 ones can be created.
+     *This API is used to create a custom watermarking template. Up to 1,000 templates can be created.
      * @param req CreateWatermarkTemplateRequest
      * @return CreateWatermarkTemplateResponse
      * @throws TencentCloudSDKException
@@ -583,6 +604,26 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
+     *This API is used to query the information of video processing usage within the specified time range.
+   1. Statistics on video processing for the last 365 days can be queried.
+   2. The query time range cannot be more than 90 days.
+     * @param req DescribeMediaProcessUsageDataRequest
+     * @return DescribeMediaProcessUsageDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMediaProcessUsageDataResponse DescribeMediaProcessUsageData(DescribeMediaProcessUsageDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMediaProcessUsageDataResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMediaProcessUsageDataResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeMediaProcessUsageData"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the list of task flow template details by task flow template name.
      * @param req DescribeProcedureTemplatesRequest
      * @return DescribeProcedureTemplatesResponse
@@ -658,7 +699,47 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
-     *This API is used to get the list of subapplications to which the current account has permissions, including primary applications. If the subapplication feature has not been enabled, this API will return 
+     *This API is used to query the storage capacity usage and number of files.
+     * @param req DescribeStorageDataRequest
+     * @return DescribeStorageDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStorageDataResponse DescribeStorageData(DescribeStorageDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStorageDataResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStorageDataResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeStorageData"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the used VOD storage capacity in bytes within the specified time range.
+   1. Only storage capacity usage data for the last 365 days can be queried.
+   2. The query time range cannot be more than 90 days;
+   3. The query time range at the minute granularity cannot be more than 5 days;
+   4. The query time range at the hour granularity cannot be more than 10 days.
+     * @param req DescribeStorageDetailsRequest
+     * @return DescribeStorageDetailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStorageDetailsResponse DescribeStorageDetails(DescribeStorageDetailsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStorageDetailsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStorageDetailsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeStorageDetails"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the list of subapplications to which the current account has permissions, including primary applications. If the subapplication feature has not been enabled, this API will return. 
  `FailedOperation`.
      * @param req DescribeSubAppIdsRequest
      * @return DescribeSubAppIdsResponse
@@ -828,7 +909,7 @@ Note:
 ### Persistent clipping
 In persistent clipping mode, the clipped video is saved as an independent video file with a `FileId`, and its lifecycle is not subject to the source LVB recording video (even if the source video is deleted, the clipped video will not be affected in any way). It can be further processed (transcoded, published on WeChat, etc.).
 
-An example is as follows: for a complete football match, the source LVB recording video may be up to 2 hours in length. You want to store this video for only 2 months for the purpose of cost savings. However, you want to specify a longer retention period for the "highlights" video created by live clipping, and perform additional VOD operations on it such as transcoding and release on WeChat. In this case, you need to choose the persistent clipping mode of live clipping.
+An example is as follows: for a complete football match, the source LVB recording video may be up to 2 hours in length. You want to store this video for only 2 months for the purpose of cost savings. However, you want to specify a longer retention period for the "highlights" video created by live clipping and perform additional VOD operations on it such as transcoding and release on WeChat. In this case, you need to choose the persistent clipping mode of live clipping.
 
 The advantage of persistent clipping is that the clipped video has a lifecycle independent of the source recording video and can be managed independently and stored persistently.
 
@@ -1218,7 +1299,7 @@ Note: the clipped video shares the same ts segments with the source video, and o
     }
 
     /**
-     *This API is used to publish a VOD video in WeChat Mini Program for playback in the WeChat Mini Program player.
+     *This API is used to publish a VOD video on WeChat Mini Program for playback in the WeChat Mini Program player.
      * @param req WeChatMiniProgramPublishRequest
      * @return WeChatMiniProgramPublishResponse
      * @throws TencentCloudSDKException

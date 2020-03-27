@@ -70,7 +70,7 @@ FINISH: completed.
     private Long SourceDefinition;
 
     /**
-    * Status of video release in WeChat Mini Program. Valid values:
+    * Status of video release on WeChat Mini Program. Valid values:
 <li>Pass: successfully published;</li>
 <li>Failed: failed to publish;</li>
 <li>Rejected: rejected.</li>
@@ -196,11 +196,11 @@ FINISH: completed.
     }
 
     /**
-     * Get Status of video release in WeChat Mini Program. Valid values:
+     * Get Status of video release on WeChat Mini Program. Valid values:
 <li>Pass: successfully published;</li>
 <li>Failed: failed to publish;</li>
 <li>Rejected: rejected.</li> 
-     * @return PublishResult Status of video release in WeChat Mini Program. Valid values:
+     * @return PublishResult Status of video release on WeChat Mini Program. Valid values:
 <li>Pass: successfully published;</li>
 <li>Failed: failed to publish;</li>
 <li>Rejected: rejected.</li>
@@ -210,11 +210,11 @@ FINISH: completed.
     }
 
     /**
-     * Set Status of video release in WeChat Mini Program. Valid values:
+     * Set Status of video release on WeChat Mini Program. Valid values:
 <li>Pass: successfully published;</li>
 <li>Failed: failed to publish;</li>
 <li>Rejected: rejected.</li>
-     * @param PublishResult Status of video release in WeChat Mini Program. Valid values:
+     * @param PublishResult Status of video release on WeChat Mini Program. Valid values:
 <li>Pass: successfully published;</li>
 <li>Failed: failed to publish;</li>
 <li>Rejected: rejected.</li>

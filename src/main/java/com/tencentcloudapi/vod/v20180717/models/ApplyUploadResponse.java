@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ApplyUploadResponse extends AbstractModel{
 
     /**
-    * Bucket, which is used as the `bucket_name` in the URL of the upload API.
+    * Storage bucket, which is used as the `bucket_name` in the URL of the upload API.
     */
     @SerializedName("StorageBucket")
     @Expose
@@ -74,16 +74,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Bucket, which is used as the `bucket_name` in the URL of the upload API. 
-     * @return StorageBucket Bucket, which is used as the `bucket_name` in the URL of the upload API.
+     * Get Storage bucket, which is used as the `bucket_name` in the URL of the upload API. 
+     * @return StorageBucket Storage bucket, which is used as the `bucket_name` in the URL of the upload API.
      */
     public String getStorageBucket() {
         return this.StorageBucket;
     }
 
     /**
-     * Set Bucket, which is used as the `bucket_name` in the URL of the upload API.
-     * @param StorageBucket Bucket, which is used as the `bucket_name` in the URL of the upload API.
+     * Set Storage bucket, which is used as the `bucket_name` in the URL of the upload API.
+     * @param StorageBucket Storage bucket, which is used as the `bucket_name` in the URL of the upload API.
      */
     public void setStorageBucket(String StorageBucket) {
         this.StorageBucket = StorageBucket;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class MediaMiniProgramReviewInfoItem extends AbstractModel{
 
     /**
-    * Template ID, which is the ID of the transcoding template corresponding to the video published in WeChat Mini Program. 0 represents the source video.
+    * Template ID, which is the ID of the transcoding template corresponding to the video published on WeChat Mini Program. 0 represents the source video.
     */
     @SerializedName("Definition")
     @Expose
@@ -45,7 +45,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Url;
 
     /**
-    * Status of video release in WeChat Mini Program
+    * Status of video release on WeChat Mini Program
 <li>Pass: succeeded.</li>
 <li>Rejected: rejected.</li>
     */
@@ -62,16 +62,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private MediaMiniProgramReviewElem [] ReviewSummary;
 
     /**
-     * Get Template ID, which is the ID of the transcoding template corresponding to the video published in WeChat Mini Program. 0 represents the source video. 
-     * @return Definition Template ID, which is the ID of the transcoding template corresponding to the video published in WeChat Mini Program. 0 represents the source video.
+     * Get Template ID, which is the ID of the transcoding template corresponding to the video published on WeChat Mini Program. 0 represents the source video. 
+     * @return Definition Template ID, which is the ID of the transcoding template corresponding to the video published on WeChat Mini Program. 0 represents the source video.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Template ID, which is the ID of the transcoding template corresponding to the video published in WeChat Mini Program. 0 represents the source video.
-     * @param Definition Template ID, which is the ID of the transcoding template corresponding to the video published in WeChat Mini Program. 0 represents the source video.
+     * Set Template ID, which is the ID of the transcoding template corresponding to the video published on WeChat Mini Program. 0 represents the source video.
+     * @param Definition Template ID, which is the ID of the transcoding template corresponding to the video published on WeChat Mini Program. 0 represents the source video.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
@@ -114,10 +114,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Status of video release in WeChat Mini Program
+     * Get Status of video release on WeChat Mini Program
 <li>Pass: succeeded.</li>
 <li>Rejected: rejected.</li> 
-     * @return ReviewResult Status of video release in WeChat Mini Program
+     * @return ReviewResult Status of video release on WeChat Mini Program
 <li>Pass: succeeded.</li>
 <li>Rejected: rejected.</li>
      */
@@ -126,10 +126,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Status of video release in WeChat Mini Program
+     * Set Status of video release on WeChat Mini Program
 <li>Pass: succeeded.</li>
 <li>Rejected: rejected.</li>
-     * @param ReviewResult Status of video release in WeChat Mini Program
+     * @param ReviewResult Status of video release on WeChat Mini Program
 <li>Pass: succeeded.</li>
 <li>Rejected: rejected.</li>
      */

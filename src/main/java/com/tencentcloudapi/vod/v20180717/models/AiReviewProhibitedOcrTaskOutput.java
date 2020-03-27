@@ -41,7 +41,6 @@ public class AiReviewProhibitedOcrTaskOutput extends AbstractModel{
 
     /**
     * List of video segments that contain the OCR-detected prohibited information in text.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SegmentSet")
     @Expose
@@ -92,10 +91,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of video segments that contain the OCR-detected prohibited information in text.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get List of video segments that contain the OCR-detected prohibited information in text. 
      * @return SegmentSet List of video segments that contain the OCR-detected prohibited information in text.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public MediaContentReviewOcrTextSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
@@ -103,9 +100,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List of video segments that contain the OCR-detected prohibited information in text.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param SegmentSet List of video segments that contain the OCR-detected prohibited information in text.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setSegmentSet(MediaContentReviewOcrTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

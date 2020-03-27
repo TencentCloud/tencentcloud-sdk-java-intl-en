@@ -30,7 +30,7 @@ public class VideoTrackItem extends AbstractModel{
     private String SourceMedia;
 
     /**
-    * Starting time of video segment in material file in seconds. Default value: 0.
+    * Start time of video segment in material file in seconds. Default value: 0.
     */
     @SerializedName("SourceMediaStartTime")
     @Expose
@@ -129,16 +129,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Starting time of video segment in material file in seconds. Default value: 0. 
-     * @return SourceMediaStartTime Starting time of video segment in material file in seconds. Default value: 0.
+     * Get Start time of video segment in material file in seconds. Default value: 0. 
+     * @return SourceMediaStartTime Start time of video segment in material file in seconds. Default value: 0.
      */
     public Float getSourceMediaStartTime() {
         return this.SourceMediaStartTime;
     }
 
     /**
-     * Set Starting time of video segment in material file in seconds. Default value: 0.
-     * @param SourceMediaStartTime Starting time of video segment in material file in seconds. Default value: 0.
+     * Set Start time of video segment in material file in seconds. Default value: 0.
+     * @param SourceMediaStartTime Start time of video segment in material file in seconds. Default value: 0.
      */
     public void setSourceMediaStartTime(Float SourceMediaStartTime) {
         this.SourceMediaStartTime = SourceMediaStartTime;

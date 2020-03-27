@@ -27,7 +27,7 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 <li>Procedure: video processing task;</li>
 <li>EditMedia: video editing task;</li>
 <li>WechatPublish: release on WeChat task;</li>
-<li>WechatMiniProgramPublish: release in WeChat Mini Program task;</li>
+<li>WechatMiniProgramPublish: release on WeChat Mini Program task;</li>
 <li>ComposeMedia: media file composing task;</li>
 <li>PullUpload: media file pulling for upload task.</li>
 
@@ -53,21 +53,21 @@ Task types compatible with v2017:
     private String Status;
 
     /**
-    * Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+    * Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+    * Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
     */
     @SerializedName("BeginProcessTime")
     @Expose
     private String BeginProcessTime;
 
     /**
-    * End time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+    * End time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
     */
     @SerializedName("FinishTime")
     @Expose
@@ -154,7 +154,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private CreateImageSpriteTask2017 CreateImageSpriteTask;
 
     /**
-    * Release in WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
+    * Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("WechatMiniProgramPublishTask")
@@ -173,7 +173,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>Procedure: video processing task;</li>
 <li>EditMedia: video editing task;</li>
 <li>WechatPublish: release on WeChat task;</li>
-<li>WechatMiniProgramPublish: release in WeChat Mini Program task;</li>
+<li>WechatMiniProgramPublish: release on WeChat Mini Program task;</li>
 <li>ComposeMedia: media file composing task;</li>
 <li>PullUpload: media file pulling for upload task.</li>
 
@@ -187,7 +187,7 @@ Task types compatible with v2017:
 <li>Procedure: video processing task;</li>
 <li>EditMedia: video editing task;</li>
 <li>WechatPublish: release on WeChat task;</li>
-<li>WechatMiniProgramPublish: release in WeChat Mini Program task;</li>
+<li>WechatMiniProgramPublish: release on WeChat Mini Program task;</li>
 <li>ComposeMedia: media file composing task;</li>
 <li>PullUpload: media file pulling for upload task.</li>
 
@@ -207,7 +207,7 @@ Task types compatible with v2017:
 <li>Procedure: video processing task;</li>
 <li>EditMedia: video editing task;</li>
 <li>WechatPublish: release on WeChat task;</li>
-<li>WechatMiniProgramPublish: release in WeChat Mini Program task;</li>
+<li>WechatMiniProgramPublish: release on WeChat Mini Program task;</li>
 <li>ComposeMedia: media file composing task;</li>
 <li>PullUpload: media file pulling for upload task.</li>
 
@@ -221,7 +221,7 @@ Task types compatible with v2017:
 <li>Procedure: video processing task;</li>
 <li>EditMedia: video editing task;</li>
 <li>WechatPublish: release on WeChat task;</li>
-<li>WechatMiniProgramPublish: release in WeChat Mini Program task;</li>
+<li>WechatMiniProgramPublish: release on WeChat Mini Program task;</li>
 <li>ComposeMedia: media file composing task;</li>
 <li>PullUpload: media file pulling for upload task.</li>
 
@@ -265,48 +265,48 @@ Task types compatible with v2017:
     }
 
     /**
-     * Get Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). 
-     * @return CreateTime Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * Get Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). 
+     * @return CreateTime Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-     * @param CreateTime Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * Set Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * @param CreateTime Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). 
-     * @return BeginProcessTime Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * Get Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). 
+     * @return BeginProcessTime Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
      */
     public String getBeginProcessTime() {
         return this.BeginProcessTime;
     }
 
     /**
-     * Set Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-     * @param BeginProcessTime Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * Set Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * @param BeginProcessTime Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
      */
     public void setBeginProcessTime(String BeginProcessTime) {
         this.BeginProcessTime = BeginProcessTime;
     }
 
     /**
-     * Get End time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). 
-     * @return FinishTime End time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * Get End time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). 
+     * @return FinishTime End time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set End time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-     * @param FinishTime End time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * Set End time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * @param FinishTime End time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;
@@ -513,9 +513,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Release in WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
+     * Get Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return WechatMiniProgramPublishTask Release in WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
+     * @return WechatMiniProgramPublishTask Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public WechatMiniProgramPublishTask getWechatMiniProgramPublishTask() {
@@ -523,9 +523,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Release in WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
+     * Set Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param WechatMiniProgramPublishTask Release in WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
+     * @param WechatMiniProgramPublishTask Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setWechatMiniProgramPublishTask(WechatMiniProgramPublishTask WechatMiniProgramPublishTask) {

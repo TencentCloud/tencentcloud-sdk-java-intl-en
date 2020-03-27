@@ -71,7 +71,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     * Control parameter of prohibited information detection. Prohibited information includes:
 <li>Abusive;</li>
 <li>Drug-related.</li>
-Note: this parameter is not supported yet
+Note: this parameter is not supported yet.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProhibitedConfigure")
     @Expose
@@ -227,11 +228,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Get Control parameter of prohibited information detection. Prohibited information includes:
 <li>Abusive;</li>
 <li>Drug-related.</li>
-Note: this parameter is not supported yet 
+Note: this parameter is not supported yet.
+Note: this field may return null, indicating that no valid values can be obtained. 
      * @return ProhibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
 <li>Abusive;</li>
 <li>Drug-related.</li>
-Note: this parameter is not supported yet
+Note: this parameter is not supported yet.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public ProhibitedConfigureInfo getProhibitedConfigure() {
         return this.ProhibitedConfigure;
@@ -241,11 +244,13 @@ Note: this parameter is not supported yet
      * Set Control parameter of prohibited information detection. Prohibited information includes:
 <li>Abusive;</li>
 <li>Drug-related.</li>
-Note: this parameter is not supported yet
+Note: this parameter is not supported yet.
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param ProhibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
 <li>Abusive;</li>
 <li>Drug-related.</li>
-Note: this parameter is not supported yet
+Note: this parameter is not supported yet.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setProhibitedConfigure(ProhibitedConfigureInfo ProhibitedConfigure) {
         this.ProhibitedConfigure = ProhibitedConfigure;

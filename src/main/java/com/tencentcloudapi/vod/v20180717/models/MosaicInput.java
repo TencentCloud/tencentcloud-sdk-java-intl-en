@@ -65,7 +65,7 @@ Default value: 10%.
     * Blur height. % and px formats are supported:
 <li>If the string ends in %, the `Height` of the blur will be the specified percentage of the video height; for example, `10%` means that `Height` is 10% of the video height;</li>
 <li>If the string ends in px, the `Height` of the blur will be in px; for example, `100px` means that `Height` is 100 px.</li>
-Default value: 0 px, which means that `Height` will be proportionally scaled according to the aspect ratio of the original blur image.
+Default value: 10%.
     */
     @SerializedName("Height")
     @Expose
@@ -203,11 +203,11 @@ Default value: 10%.
      * Get Blur height. % and px formats are supported:
 <li>If the string ends in %, the `Height` of the blur will be the specified percentage of the video height; for example, `10%` means that `Height` is 10% of the video height;</li>
 <li>If the string ends in px, the `Height` of the blur will be in px; for example, `100px` means that `Height` is 100 px.</li>
-Default value: 0 px, which means that `Height` will be proportionally scaled according to the aspect ratio of the original blur image. 
+Default value: 10%. 
      * @return Height Blur height. % and px formats are supported:
 <li>If the string ends in %, the `Height` of the blur will be the specified percentage of the video height; for example, `10%` means that `Height` is 10% of the video height;</li>
 <li>If the string ends in px, the `Height` of the blur will be in px; for example, `100px` means that `Height` is 100 px.</li>
-Default value: 0 px, which means that `Height` will be proportionally scaled according to the aspect ratio of the original blur image.
+Default value: 10%.
      */
     public String getHeight() {
         return this.Height;
@@ -217,11 +217,11 @@ Default value: 0 px, which means that `Height` will be proportionally scaled acc
      * Set Blur height. % and px formats are supported:
 <li>If the string ends in %, the `Height` of the blur will be the specified percentage of the video height; for example, `10%` means that `Height` is 10% of the video height;</li>
 <li>If the string ends in px, the `Height` of the blur will be in px; for example, `100px` means that `Height` is 100 px.</li>
-Default value: 0 px, which means that `Height` will be proportionally scaled according to the aspect ratio of the original blur image.
+Default value: 10%.
      * @param Height Blur height. % and px formats are supported:
 <li>If the string ends in %, the `Height` of the blur will be the specified percentage of the video height; for example, `10%` means that `Height` is 10% of the video height;</li>
 <li>If the string ends in px, the `Height` of the blur will be in px; for example, `100px` means that `Height` is 100 px.</li>
-Default value: 0 px, which means that `Height` will be proportionally scaled according to the aspect ratio of the original blur image.
+Default value: 10%.
      */
     public void setHeight(String Height) {
         this.Height = Height;

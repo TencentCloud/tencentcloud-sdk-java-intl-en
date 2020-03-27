@@ -30,7 +30,7 @@ public class AudioTrackItem extends AbstractModel{
     private String SourceMedia;
 
     /**
-    * Starting time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material.
+    * Start time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material.
     */
     @SerializedName("SourceMediaStartTime")
     @Expose
@@ -68,16 +68,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Starting time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material. 
-     * @return SourceMediaStartTime Starting time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material.
+     * Get Start time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material. 
+     * @return SourceMediaStartTime Start time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material.
      */
     public Float getSourceMediaStartTime() {
         return this.SourceMediaStartTime;
     }
 
     /**
-     * Set Starting time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material.
-     * @param SourceMediaStartTime Starting time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material.
+     * Set Start time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material.
+     * @param SourceMediaStartTime Start time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material.
      */
     public void setSourceMediaStartTime(Float SourceMediaStartTime) {
         this.SourceMediaStartTime = SourceMediaStartTime;

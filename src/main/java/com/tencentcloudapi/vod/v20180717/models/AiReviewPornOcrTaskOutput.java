@@ -24,7 +24,6 @@ public class AiReviewPornOcrTaskOutput extends AbstractModel{
 
     /**
     * Score of OCR-detected porn information in text between 0 and 100.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Confidence")
     @Expose
@@ -35,7 +34,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Suggestion")
     @Expose
@@ -43,17 +41,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * List of video segments that contain the OCR-detected porn information in text.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SegmentSet")
     @Expose
     private MediaContentReviewOcrTextSegmentItem [] SegmentSet;
 
     /**
-     * Get Score of OCR-detected porn information in text between 0 and 100.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Score of OCR-detected porn information in text between 0 and 100. 
      * @return Confidence Score of OCR-detected porn information in text between 0 and 100.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Float getConfidence() {
         return this.Confidence;
@@ -61,9 +56,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Score of OCR-detected porn information in text between 0 and 100.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param Confidence Score of OCR-detected porn information in text between 0 and 100.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
@@ -73,13 +66,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Get Suggestion for OCR-detected porn information in text. Valid values:
 <li>pass.</li>
 <li>review.</li>
-<li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained. 
+<li>block.</li> 
      * @return Suggestion Suggestion for OCR-detected porn information in text. Valid values:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getSuggestion() {
         return this.Suggestion;
@@ -90,22 +81,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param Suggestion Suggestion for OCR-detected porn information in text. Valid values:
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get List of video segments that contain the OCR-detected porn information in text.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get List of video segments that contain the OCR-detected porn information in text. 
      * @return SegmentSet List of video segments that contain the OCR-detected porn information in text.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public MediaContentReviewOcrTextSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
@@ -113,9 +100,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List of video segments that contain the OCR-detected porn information in text.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param SegmentSet List of video segments that contain the OCR-detected porn information in text.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setSegmentSet(MediaContentReviewOcrTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

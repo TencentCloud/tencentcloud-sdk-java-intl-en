@@ -87,6 +87,21 @@ If this field is a blank string, DRM will not be performed on the video.
     private AudioTrackTemplateInfo [] AudioTrackTemplateSet;
 
     /**
+    * Adaptive bitstream format. Valid value:
+<li>HLS.</li>
+    */
+    @SerializedName("Format")
+    @Expose
+    private String Format;
+
+    /**
+    * Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input.
+    */
+    @SerializedName("StreamInfos")
+    @Expose
+    private AdaptiveStreamTemplate [] StreamInfos;
+
+    /**
     * Whether to prohibit transcoding from low bitrate to high bitrate. Valid values:
 <li>0: no,</li>
 <li>1: yes.</li>
@@ -279,6 +294,42 @@ If this field is a blank string, DRM will not be performed on the video.
     }
 
     /**
+     * Get Adaptive bitstream format. Valid value:
+<li>HLS.</li> 
+     * @return Format Adaptive bitstream format. Valid value:
+<li>HLS.</li>
+     */
+    public String getFormat() {
+        return this.Format;
+    }
+
+    /**
+     * Set Adaptive bitstream format. Valid value:
+<li>HLS.</li>
+     * @param Format Adaptive bitstream format. Valid value:
+<li>HLS.</li>
+     */
+    public void setFormat(String Format) {
+        this.Format = Format;
+    }
+
+    /**
+     * Get Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input. 
+     * @return StreamInfos Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input.
+     */
+    public AdaptiveStreamTemplate [] getStreamInfos() {
+        return this.StreamInfos;
+    }
+
+    /**
+     * Set Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input.
+     * @param StreamInfos Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input.
+     */
+    public void setStreamInfos(AdaptiveStreamTemplate [] StreamInfos) {
+        this.StreamInfos = StreamInfos;
+    }
+
+    /**
      * Get Whether to prohibit transcoding from low bitrate to high bitrate. Valid values:
 <li>0: no,</li>
 <li>1: yes.</li> 
@@ -370,6 +421,8 @@ If this field is a blank string, DRM will not be performed on the video.
         this.setParamSimple(map, prefix + "DrmType", this.DrmType);
         this.setParamArrayObj(map, prefix + "VideoTrackTemplateSet.", this.VideoTrackTemplateSet);
         this.setParamArrayObj(map, prefix + "AudioTrackTemplateSet.", this.AudioTrackTemplateSet);
+        this.setParamSimple(map, prefix + "Format", this.Format);
+        this.setParamArrayObj(map, prefix + "StreamInfos.", this.StreamInfos);
         this.setParamSimple(map, prefix + "DisableHigherVideoBitrate", this.DisableHigherVideoBitrate);
         this.setParamSimple(map, prefix + "DisableHigherVideoResolution", this.DisableHigherVideoResolution);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);

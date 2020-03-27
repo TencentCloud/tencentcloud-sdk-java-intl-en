@@ -74,6 +74,13 @@ public class EditMediaRequest extends AbstractModel{
     private String SessionContext;
 
     /**
+    * Task priority. The higher the value, the higher the priority. Value range: -10–10. If this parameter is left empty, 0 will be used.
+    */
+    @SerializedName("TasksPriority")
+    @Expose
+    private Long TasksPriority;
+
+    /**
     * ID used for task deduplication. If there was a request with the same ID in the last day, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
     */
     @SerializedName("SessionId")
@@ -208,6 +215,22 @@ public class EditMediaRequest extends AbstractModel{
     }
 
     /**
+     * Get Task priority. The higher the value, the higher the priority. Value range: -10–10. If this parameter is left empty, 0 will be used. 
+     * @return TasksPriority Task priority. The higher the value, the higher the priority. Value range: -10–10. If this parameter is left empty, 0 will be used.
+     */
+    public Long getTasksPriority() {
+        return this.TasksPriority;
+    }
+
+    /**
+     * Set Task priority. The higher the value, the higher the priority. Value range: -10–10. If this parameter is left empty, 0 will be used.
+     * @param TasksPriority Task priority. The higher the value, the higher the priority. Value range: -10–10. If this parameter is left empty, 0 will be used.
+     */
+    public void setTasksPriority(Long TasksPriority) {
+        this.TasksPriority = TasksPriority;
+    }
+
+    /**
      * Get ID used for task deduplication. If there was a request with the same ID in the last day, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed. 
      * @return SessionId ID used for task deduplication. If there was a request with the same ID in the last day, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
      */
@@ -250,6 +273,7 @@ public class EditMediaRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ProcedureName", this.ProcedureName);
         this.setParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
+        this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
