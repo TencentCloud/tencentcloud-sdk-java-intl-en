@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class OperationCountLimit extends AbstractModel{
 
     /**
-    * Operations on an instance.
+    * Instance operation. Valid values: <br><li>`INSTANCE_DEGRADE`: downgrade an instance<br><li>`INTERNET_CHARGE_TYPE_CHANGE`: modify the billing plan of the network connection
     */
     @SerializedName("Operation")
     @Expose
@@ -51,16 +51,16 @@ public class OperationCountLimit extends AbstractModel{
     private Long LimitCount;
 
     /**
-     * Get Operations on an instance. 
-     * @return Operation Operations on an instance.
+     * Get Instance operation. Valid values: <br><li>`INSTANCE_DEGRADE`: downgrade an instance<br><li>`INTERNET_CHARGE_TYPE_CHANGE`: modify the billing plan of the network connection 
+     * @return Operation Instance operation. Valid values: <br><li>`INSTANCE_DEGRADE`: downgrade an instance<br><li>`INTERNET_CHARGE_TYPE_CHANGE`: modify the billing plan of the network connection
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * Set Operations on an instance.
-     * @param Operation Operations on an instance.
+     * Set Instance operation. Valid values: <br><li>`INSTANCE_DEGRADE`: downgrade an instance<br><li>`INTERNET_CHARGE_TYPE_CHANGE`: modify the billing plan of the network connection
+     * @param Operation Instance operation. Valid values: <br><li>`INSTANCE_DEGRADE`: downgrade an instance<br><li>`INTERNET_CHARGE_TYPE_CHANGE`: modify the billing plan of the network connection
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;

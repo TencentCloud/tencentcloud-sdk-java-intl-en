@@ -97,11 +97,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long Deactived;
 
     /**
-    * 
+    * List of deprecated products
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DeactivedDetail")
     @Expose
     private String [] DeactivedDetail;
+
+    /**
+    * 
+    */
+    @SerializedName("IsServiceLinkedPolicy")
+    @Expose
+    private Long IsServiceLinkedPolicy;
 
     /**
      * Get Policy ID 
@@ -280,19 +288,39 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return DeactivedDetail 
+     * Get List of deprecated products
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return DeactivedDetail List of deprecated products
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String [] getDeactivedDetail() {
         return this.DeactivedDetail;
     }
 
     /**
-     * Set 
-     * @param DeactivedDetail 
+     * Set List of deprecated products
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param DeactivedDetail List of deprecated products
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDeactivedDetail(String [] DeactivedDetail) {
         this.DeactivedDetail = DeactivedDetail;
+    }
+
+    /**
+     * Get  
+     * @return IsServiceLinkedPolicy 
+     */
+    public Long getIsServiceLinkedPolicy() {
+        return this.IsServiceLinkedPolicy;
+    }
+
+    /**
+     * Set 
+     * @param IsServiceLinkedPolicy 
+     */
+    public void setIsServiceLinkedPolicy(Long IsServiceLinkedPolicy) {
+        this.IsServiceLinkedPolicy = IsServiceLinkedPolicy;
     }
 
     /**
@@ -310,6 +338,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "IsAttached", this.IsAttached);
         this.setParamSimple(map, prefix + "Deactived", this.Deactived);
         this.setParamArraySimple(map, prefix + "DeactivedDetail.", this.DeactivedDetail);
+        this.setParamSimple(map, prefix + "IsServiceLinkedPolicy", this.IsServiceLinkedPolicy);
 
     }
 }

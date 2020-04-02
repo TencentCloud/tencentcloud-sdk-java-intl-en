@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Placement extends AbstractModel{
 
     /**
-    * ID of the [Availability Zone](/document/product/213/9452#zone) where the instance resides. To obtain the availability zone IDs, you can call [DescribeZones](/document/api/213/9455) and look for the `Zone` fields in the response.
+    * The ID of [availability zone](https://cloud.tencent.com/document/product/213/15753#ZoneInfo) where the instance locates. It can obtained in the `Zone` field returned by [DescribeZones](https://cloud.tencent.com/document/213/15707) API.
     */
     @SerializedName("Zone")
     @Expose
@@ -51,16 +51,23 @@ public class Placement extends AbstractModel{
     private String [] HostIps;
 
     /**
-     * Get ID of the [Availability Zone](/document/product/213/9452#zone) where the instance resides. To obtain the availability zone IDs, you can call [DescribeZones](/document/api/213/9455) and look for the `Zone` fields in the response. 
-     * @return Zone ID of the [Availability Zone](/document/product/213/9452#zone) where the instance resides. To obtain the availability zone IDs, you can call [DescribeZones](/document/api/213/9455) and look for the `Zone` fields in the response.
+    * 
+    */
+    @SerializedName("HostId")
+    @Expose
+    private String HostId;
+
+    /**
+     * Get The ID of [availability zone](https://cloud.tencent.com/document/product/213/15753#ZoneInfo) where the instance locates. It can obtained in the `Zone` field returned by [DescribeZones](https://cloud.tencent.com/document/213/15707) API. 
+     * @return Zone The ID of [availability zone](https://cloud.tencent.com/document/product/213/15753#ZoneInfo) where the instance locates. It can obtained in the `Zone` field returned by [DescribeZones](https://cloud.tencent.com/document/213/15707) API.
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set ID of the [Availability Zone](/document/product/213/9452#zone) where the instance resides. To obtain the availability zone IDs, you can call [DescribeZones](/document/api/213/9455) and look for the `Zone` fields in the response.
-     * @param Zone ID of the [Availability Zone](/document/product/213/9452#zone) where the instance resides. To obtain the availability zone IDs, you can call [DescribeZones](/document/api/213/9455) and look for the `Zone` fields in the response.
+     * Set The ID of [availability zone](https://cloud.tencent.com/document/product/213/15753#ZoneInfo) where the instance locates. It can obtained in the `Zone` field returned by [DescribeZones](https://cloud.tencent.com/document/213/15707) API.
+     * @param Zone The ID of [availability zone](https://cloud.tencent.com/document/product/213/15753#ZoneInfo) where the instance locates. It can obtained in the `Zone` field returned by [DescribeZones](https://cloud.tencent.com/document/213/15707) API.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
@@ -115,6 +122,22 @@ public class Placement extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return HostId 
+     */
+    public String getHostId() {
+        return this.HostId;
+    }
+
+    /**
+     * Set 
+     * @param HostId 
+     */
+    public void setHostId(String HostId) {
+        this.HostId = HostId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class Placement extends AbstractModel{
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamArraySimple(map, prefix + "HostIds.", this.HostIds);
         this.setParamArraySimple(map, prefix + "HostIps.", this.HostIps);
+        this.setParamSimple(map, prefix + "HostId", this.HostId);
 
     }
 }

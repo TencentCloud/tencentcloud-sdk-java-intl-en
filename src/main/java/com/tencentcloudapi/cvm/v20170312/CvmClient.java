@@ -347,7 +347,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     }
 
     /**
-     *This API is used to query the list of model families that are available for the current user and in the current region.
+     *This API is used to query a list of model families available to the current user in the current region.
      * @param req DescribeInstanceFamilyConfigsRequest
      * @return DescribeInstanceFamilyConfigsResponse
      * @throws TencentCloudSDKException

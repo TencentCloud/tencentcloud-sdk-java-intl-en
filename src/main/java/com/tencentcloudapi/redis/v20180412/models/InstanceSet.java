@@ -326,7 +326,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Vip6;
 
     /**
-    * 
+    * Internal parameter, which can be ignored
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RemainBandwidthDuration")
     @Expose
@@ -1041,16 +1042,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return RemainBandwidthDuration 
+     * Get Internal parameter, which can be ignored
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return RemainBandwidthDuration Internal parameter, which can be ignored
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getRemainBandwidthDuration() {
         return this.RemainBandwidthDuration;
     }
 
     /**
-     * Set 
-     * @param RemainBandwidthDuration 
+     * Set Internal parameter, which can be ignored
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param RemainBandwidthDuration Internal parameter, which can be ignored
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setRemainBandwidthDuration(String RemainBandwidthDuration) {
         this.RemainBandwidthDuration = RemainBandwidthDuration;

@@ -348,7 +348,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private OriginPullTimeout OriginPullTimeout;
 
     /**
-    * 
+    * S3 bucket origin access authentication configuration
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AwsPrivateAccess")
     @Expose
@@ -1187,16 +1188,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return AwsPrivateAccess 
+     * Get S3 bucket origin access authentication configuration
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return AwsPrivateAccess S3 bucket origin access authentication configuration
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public AwsPrivateAccess getAwsPrivateAccess() {
         return this.AwsPrivateAccess;
     }
 
     /**
-     * Set 
-     * @param AwsPrivateAccess 
+     * Set S3 bucket origin access authentication configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AwsPrivateAccess S3 bucket origin access authentication configuration
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setAwsPrivateAccess(AwsPrivateAccess AwsPrivateAccess) {
         this.AwsPrivateAccess = AwsPrivateAccess;

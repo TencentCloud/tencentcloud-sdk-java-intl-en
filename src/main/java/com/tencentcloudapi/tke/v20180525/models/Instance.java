@@ -51,6 +51,29 @@ public class Instance extends AbstractModel{
     private String InstanceState;
 
     /**
+    * Whether the instance is drained
+Note: this field may return null, indicating that no valid value is obtained.
+    */
+    @SerializedName("DrainStatus")
+    @Expose
+    private String DrainStatus;
+
+    /**
+    * Node settings
+Note: this field may return null, indicating that no valid value is obtained.
+    */
+    @SerializedName("InstanceAdvancedSettings")
+    @Expose
+    private InstanceAdvancedSettings InstanceAdvancedSettings;
+
+    /**
+    * Creation time
+    */
+    @SerializedName("CreatedTime")
+    @Expose
+    private String CreatedTime;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -115,6 +138,62 @@ public class Instance extends AbstractModel{
     }
 
     /**
+     * Get Whether the instance is drained
+Note: this field may return null, indicating that no valid value is obtained. 
+     * @return DrainStatus Whether the instance is drained
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public String getDrainStatus() {
+        return this.DrainStatus;
+    }
+
+    /**
+     * Set Whether the instance is drained
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param DrainStatus Whether the instance is drained
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public void setDrainStatus(String DrainStatus) {
+        this.DrainStatus = DrainStatus;
+    }
+
+    /**
+     * Get Node settings
+Note: this field may return null, indicating that no valid value is obtained. 
+     * @return InstanceAdvancedSettings Node settings
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public InstanceAdvancedSettings getInstanceAdvancedSettings() {
+        return this.InstanceAdvancedSettings;
+    }
+
+    /**
+     * Set Node settings
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param InstanceAdvancedSettings Node settings
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public void setInstanceAdvancedSettings(InstanceAdvancedSettings InstanceAdvancedSettings) {
+        this.InstanceAdvancedSettings = InstanceAdvancedSettings;
+    }
+
+    /**
+     * Get Creation time 
+     * @return CreatedTime Creation time
+     */
+    public String getCreatedTime() {
+        return this.CreatedTime;
+    }
+
+    /**
+     * Set Creation time
+     * @param CreatedTime Creation time
+     */
+    public void setCreatedTime(String CreatedTime) {
+        this.CreatedTime = CreatedTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +201,9 @@ public class Instance extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceRole", this.InstanceRole);
         this.setParamSimple(map, prefix + "FailedReason", this.FailedReason);
         this.setParamSimple(map, prefix + "InstanceState", this.InstanceState);
+        this.setParamSimple(map, prefix + "DrainStatus", this.DrainStatus);
+        this.setParamObj(map, prefix + "InstanceAdvancedSettings.", this.InstanceAdvancedSettings);
+        this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
 
     }
 }

@@ -30,6 +30,13 @@ public class CreateDBInstancesResponse extends AbstractModel{
     private String DealName;
 
     /**
+    * Order name array
+    */
+    @SerializedName("DealNames")
+    @Expose
+    private String [] DealNames;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -53,6 +60,22 @@ public class CreateDBInstancesResponse extends AbstractModel{
     }
 
     /**
+     * Get Order name array 
+     * @return DealNames Order name array
+     */
+    public String [] getDealNames() {
+        return this.DealNames;
+    }
+
+    /**
+     * Set Order name array
+     * @param DealNames Order name array
+     */
+    public void setDealNames(String [] DealNames) {
+        this.DealNames = DealNames;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -73,6 +96,7 @@ public class CreateDBInstancesResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DealName", this.DealName);
+        this.setParamArraySimple(map, prefix + "DealNames.", this.DealNames);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

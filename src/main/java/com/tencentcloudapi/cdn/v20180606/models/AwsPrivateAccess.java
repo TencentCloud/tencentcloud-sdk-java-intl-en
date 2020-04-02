@@ -23,9 +23,91 @@ import java.util.HashMap;
 public class AwsPrivateAccess extends AbstractModel{
 
     /**
+    * Switch, which can be set to on or off.
+    */
+    @SerializedName("Switch")
+    @Expose
+    private String Switch;
+
+    /**
+    * Access ID.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AccessKey")
+    @Expose
+    private String AccessKey;
+
+    /**
+    * Key.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SecretKey")
+    @Expose
+    private String SecretKey;
+
+    /**
+     * Get Switch, which can be set to on or off. 
+     * @return Switch Switch, which can be set to on or off.
+     */
+    public String getSwitch() {
+        return this.Switch;
+    }
+
+    /**
+     * Set Switch, which can be set to on or off.
+     * @param Switch Switch, which can be set to on or off.
+     */
+    public void setSwitch(String Switch) {
+        this.Switch = Switch;
+    }
+
+    /**
+     * Get Access ID.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return AccessKey Access ID.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getAccessKey() {
+        return this.AccessKey;
+    }
+
+    /**
+     * Set Access ID.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AccessKey Access ID.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAccessKey(String AccessKey) {
+        this.AccessKey = AccessKey;
+    }
+
+    /**
+     * Get Key.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return SecretKey Key.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getSecretKey() {
+        return this.SecretKey;
+    }
+
+    /**
+     * Set Key.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param SecretKey Key.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSecretKey(String SecretKey) {
+        this.SecretKey = SecretKey;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Switch", this.Switch);
+        this.setParamSimple(map, prefix + "AccessKey", this.AccessKey);
+        this.setParamSimple(map, prefix + "SecretKey", this.SecretKey);
 
     }
 }

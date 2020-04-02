@@ -60,6 +60,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Backend [] Targets;
 
     /**
+    * Ending port in port range if port range is supported; 0 if port range is not supported
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("EndPort")
+    @Expose
+    private Long EndPort;
+
+    /**
      * Get Listener ID 
      * @return ListenerId Listener ID
      */
@@ -148,6 +156,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Ending port in port range if port range is supported; 0 if port range is not supported
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return EndPort Ending port in port range if port range is supported; 0 if port range is not supported
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getEndPort() {
+        return this.EndPort;
+    }
+
+    /**
+     * Set Ending port in port range if port range is supported; 0 if port range is not supported
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param EndPort Ending port in port range if port range is supported; 0 if port range is not supported
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setEndPort(Long EndPort) {
+        this.EndPort = EndPort;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -156,6 +184,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
         this.setParamArrayObj(map, prefix + "Targets.", this.Targets);
+        this.setParamSimple(map, prefix + "EndPort", this.EndPort);
 
     }
 }

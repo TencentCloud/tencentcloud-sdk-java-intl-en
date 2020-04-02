@@ -348,18 +348,27 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private SnatIp [] SnatIps;
 
     /**
-    * 
+    * Performance guarantee specification
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SlaType")
     @Expose
     private String SlaType;
 
     /**
-    * 
+    * Whether VIP is blocked
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsBlock")
     @Expose
     private Boolean IsBlock;
+
+    /**
+    * 
+    */
+    @SerializedName("IsBlockTime")
+    @Expose
+    private String IsBlockTime;
 
     /**
      * Get CLB instance ID. 
@@ -1170,35 +1179,59 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return SlaType 
+     * Get Performance guarantee specification
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return SlaType Performance guarantee specification
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getSlaType() {
         return this.SlaType;
     }
 
     /**
-     * Set 
-     * @param SlaType 
+     * Set Performance guarantee specification
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param SlaType Performance guarantee specification
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setSlaType(String SlaType) {
         this.SlaType = SlaType;
     }
 
     /**
-     * Get  
-     * @return IsBlock 
+     * Get Whether VIP is blocked
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return IsBlock Whether VIP is blocked
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getIsBlock() {
         return this.IsBlock;
     }
 
     /**
-     * Set 
-     * @param IsBlock 
+     * Set Whether VIP is blocked
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param IsBlock Whether VIP is blocked
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setIsBlock(Boolean IsBlock) {
         this.IsBlock = IsBlock;
+    }
+
+    /**
+     * Get  
+     * @return IsBlockTime 
+     */
+    public String getIsBlockTime() {
+        return this.IsBlockTime;
+    }
+
+    /**
+     * Set 
+     * @param IsBlockTime 
+     */
+    public void setIsBlockTime(String IsBlockTime) {
+        this.IsBlockTime = IsBlockTime;
     }
 
     /**
@@ -1248,6 +1281,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "SnatIps.", this.SnatIps);
         this.setParamSimple(map, prefix + "SlaType", this.SlaType);
         this.setParamSimple(map, prefix + "IsBlock", this.IsBlock);
+        this.setParamSimple(map, prefix + "IsBlockTime", this.IsBlockTime);
 
     }
 }

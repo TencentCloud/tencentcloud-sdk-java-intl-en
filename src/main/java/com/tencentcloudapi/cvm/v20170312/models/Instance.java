@@ -72,7 +72,7 @@ public class Instance extends AbstractModel{
     private String InstanceName;
 
     /**
-    * Instance billing method. Valid values: <br><li>`PREPAID`: prepaid, i.e., monthly subscription <br><li>`POSTPAID_BY_HOUR`: pay-as-you-go <br><li>`CDHPAID`: you are only billed for the CDH instances, not the CVMs running on the CDHs. <br><li>`SPOTPAID`: you are billed based on your bid.
+    * Instance billing plan. Valid values:<br><li>`POSTPAID_BY_HOUR`: pay after use. You are billed by the hour, by traffic.<br><li>`CDHPAID`: `CDH` billing plan. Applicable to `CDH` only, not the instances on the host.<br>
     */
     @SerializedName("InstanceChargeType")
     @Expose
@@ -129,7 +129,8 @@ Note: This field may return null, indicating that no valid value is found.
     private String ImageId;
 
     /**
-    * Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: neither notify upon expiration nor renew automatically.
+    * Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: do not notify upon expiration and do not renew automatically.
+<br><li>Note: this parameter is `null` for postpaid instances.
     */
     @SerializedName("RenewFlag")
     @Expose
@@ -143,7 +144,7 @@ Note: This field may return null, indicating that no valid value is found.
     private String CreatedTime;
 
     /**
-    * Expiration time following the `ISO8601` standard and using `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
+    * Expiration time in UTC format following the `ISO8601` standard: `YYYY-MM-DDThh:mm:ssZ`. Note: this parameter is `null` for postpaid instances.
     */
     @SerializedName("ExpiredTime")
     @Expose
@@ -222,21 +223,23 @@ Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>ST
 
     /**
     * ID of a spread placement group.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid value is obtained.
     */
     @SerializedName("DisasterRecoverGroupId")
     @Expose
     private String DisasterRecoverGroupId;
 
     /**
-    * 
+    * IPv6 address of the instance.
+Note: this field may return null, indicating that no valid value is obtained.
     */
     @SerializedName("IPv6Addresses")
     @Expose
-    private String IPv6Addresses;
+    private String [] IPv6Addresses;
 
     /**
-    * 
+    * CAM role name.
+Note: this field may return null, indicating that no valid value is obtained.
     */
     @SerializedName("CamRoleName")
     @Expose
@@ -355,16 +358,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Instance billing method. Valid values: <br><li>`PREPAID`: prepaid, i.e., monthly subscription <br><li>`POSTPAID_BY_HOUR`: pay-as-you-go <br><li>`CDHPAID`: you are only billed for the CDH instances, not the CVMs running on the CDHs. <br><li>`SPOTPAID`: you are billed based on your bid. 
-     * @return InstanceChargeType Instance billing method. Valid values: <br><li>`PREPAID`: prepaid, i.e., monthly subscription <br><li>`POSTPAID_BY_HOUR`: pay-as-you-go <br><li>`CDHPAID`: you are only billed for the CDH instances, not the CVMs running on the CDHs. <br><li>`SPOTPAID`: you are billed based on your bid.
+     * Get Instance billing plan. Valid values:<br><li>`POSTPAID_BY_HOUR`: pay after use. You are billed by the hour, by traffic.<br><li>`CDHPAID`: `CDH` billing plan. Applicable to `CDH` only, not the instances on the host.<br> 
+     * @return InstanceChargeType Instance billing plan. Valid values:<br><li>`POSTPAID_BY_HOUR`: pay after use. You are billed by the hour, by traffic.<br><li>`CDHPAID`: `CDH` billing plan. Applicable to `CDH` only, not the instances on the host.<br>
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set Instance billing method. Valid values: <br><li>`PREPAID`: prepaid, i.e., monthly subscription <br><li>`POSTPAID_BY_HOUR`: pay-as-you-go <br><li>`CDHPAID`: you are only billed for the CDH instances, not the CVMs running on the CDHs. <br><li>`SPOTPAID`: you are billed based on your bid.
-     * @param InstanceChargeType Instance billing method. Valid values: <br><li>`PREPAID`: prepaid, i.e., monthly subscription <br><li>`POSTPAID_BY_HOUR`: pay-as-you-go <br><li>`CDHPAID`: you are only billed for the CDH instances, not the CVMs running on the CDHs. <br><li>`SPOTPAID`: you are billed based on your bid.
+     * Set Instance billing plan. Valid values:<br><li>`POSTPAID_BY_HOUR`: pay after use. You are billed by the hour, by traffic.<br><li>`CDHPAID`: `CDH` billing plan. Applicable to `CDH` only, not the instances on the host.<br>
+     * @param InstanceChargeType Instance billing plan. Valid values:<br><li>`POSTPAID_BY_HOUR`: pay after use. You are billed by the hour, by traffic.<br><li>`CDHPAID`: `CDH` billing plan. Applicable to `CDH` only, not the instances on the host.<br>
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
@@ -487,16 +490,20 @@ Note: This field may return null, indicating that no valid value is found.
     }
 
     /**
-     * Get Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: neither notify upon expiration nor renew automatically. 
-     * @return RenewFlag Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: neither notify upon expiration nor renew automatically.
+     * Get Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: do not notify upon expiration and do not renew automatically.
+<br><li>Note: this parameter is `null` for postpaid instances. 
+     * @return RenewFlag Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: do not notify upon expiration and do not renew automatically.
+<br><li>Note: this parameter is `null` for postpaid instances.
      */
     public String getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: neither notify upon expiration nor renew automatically.
-     * @param RenewFlag Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: neither notify upon expiration nor renew automatically.
+     * Set Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: do not notify upon expiration and do not renew automatically.
+<br><li>Note: this parameter is `null` for postpaid instances.
+     * @param RenewFlag Auto renewal flag. Valid values: <br><li>`NOTIFY_AND_MANUAL_RENEW`: notify upon expiration, but do not renew automatically <br><li>`NOTIFY_AND_AUTO_RENEW`: notify upon expiration and renew automatically <br><li>`DISABLE_NOTIFY_AND_MANUAL_RENEW`: do not notify upon expiration and do not renew automatically.
+<br><li>Note: this parameter is `null` for postpaid instances.
      */
     public void setRenewFlag(String RenewFlag) {
         this.RenewFlag = RenewFlag;
@@ -519,16 +526,16 @@ Note: This field may return null, indicating that no valid value is found.
     }
 
     /**
-     * Get Expiration time following the `ISO8601` standard and using `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`. 
-     * @return ExpiredTime Expiration time following the `ISO8601` standard and using `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
+     * Get Expiration time in UTC format following the `ISO8601` standard: `YYYY-MM-DDThh:mm:ssZ`. Note: this parameter is `null` for postpaid instances. 
+     * @return ExpiredTime Expiration time in UTC format following the `ISO8601` standard: `YYYY-MM-DDThh:mm:ssZ`. Note: this parameter is `null` for postpaid instances.
      */
     public String getExpiredTime() {
         return this.ExpiredTime;
     }
 
     /**
-     * Set Expiration time following the `ISO8601` standard and using `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
-     * @param ExpiredTime Expiration time following the `ISO8601` standard and using `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
+     * Set Expiration time in UTC format following the `ISO8601` standard: `YYYY-MM-DDThh:mm:ssZ`. Note: this parameter is `null` for postpaid instances.
+     * @param ExpiredTime Expiration time in UTC format following the `ISO8601` standard: `YYYY-MM-DDThh:mm:ssZ`. Note: this parameter is `null` for postpaid instances.
      */
     public void setExpiredTime(String ExpiredTime) {
         this.ExpiredTime = ExpiredTime;
@@ -700,9 +707,9 @@ Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>ST
 
     /**
      * Get ID of a spread placement group.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: this field may return null, indicating that no valid value is obtained. 
      * @return DisasterRecoverGroupId ID of a spread placement group.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid value is obtained.
      */
     public String getDisasterRecoverGroupId() {
         return this.DisasterRecoverGroupId;
@@ -710,41 +717,49 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set ID of a spread placement group.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid value is obtained.
      * @param DisasterRecoverGroupId ID of a spread placement group.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid value is obtained.
      */
     public void setDisasterRecoverGroupId(String DisasterRecoverGroupId) {
         this.DisasterRecoverGroupId = DisasterRecoverGroupId;
     }
 
     /**
-     * Get  
-     * @return IPv6Addresses 
+     * Get IPv6 address of the instance.
+Note: this field may return null, indicating that no valid value is obtained. 
+     * @return IPv6Addresses IPv6 address of the instance.
+Note: this field may return null, indicating that no valid value is obtained.
      */
-    public String getIPv6Addresses() {
+    public String [] getIPv6Addresses() {
         return this.IPv6Addresses;
     }
 
     /**
-     * Set 
-     * @param IPv6Addresses 
+     * Set IPv6 address of the instance.
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param IPv6Addresses IPv6 address of the instance.
+Note: this field may return null, indicating that no valid value is obtained.
      */
-    public void setIPv6Addresses(String IPv6Addresses) {
+    public void setIPv6Addresses(String [] IPv6Addresses) {
         this.IPv6Addresses = IPv6Addresses;
     }
 
     /**
-     * Get  
-     * @return CamRoleName 
+     * Get CAM role name.
+Note: this field may return null, indicating that no valid value is obtained. 
+     * @return CamRoleName CAM role name.
+Note: this field may return null, indicating that no valid value is obtained.
      */
     public String getCamRoleName() {
         return this.CamRoleName;
     }
 
     /**
-     * Set 
-     * @param CamRoleName 
+     * Set CAM role name.
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param CamRoleName CAM role name.
+Note: this field may return null, indicating that no valid value is obtained.
      */
     public void setCamRoleName(String CamRoleName) {
         this.CamRoleName = CamRoleName;
@@ -783,7 +798,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "LatestOperationState", this.LatestOperationState);
         this.setParamSimple(map, prefix + "LatestOperationRequestId", this.LatestOperationRequestId);
         this.setParamSimple(map, prefix + "DisasterRecoverGroupId", this.DisasterRecoverGroupId);
-        this.setParamSimple(map, prefix + "IPv6Addresses", this.IPv6Addresses);
+        this.setParamArraySimple(map, prefix + "IPv6Addresses.", this.IPv6Addresses);
         this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
 
     }

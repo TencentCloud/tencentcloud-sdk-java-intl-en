@@ -51,7 +51,7 @@ public class CreateRoleRequest extends AbstractModel{
     private Long ConsoleLogin;
 
     /**
-    * 
+    * The maximum validity period of the temporary key for creating a role (range: 0-43200)
     */
     @SerializedName("SessionDuration")
     @Expose
@@ -122,16 +122,16 @@ public class CreateRoleRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return SessionDuration 
+     * Get The maximum validity period of the temporary key for creating a role (range: 0-43200) 
+     * @return SessionDuration The maximum validity period of the temporary key for creating a role (range: 0-43200)
      */
     public Long getSessionDuration() {
         return this.SessionDuration;
     }
 
     /**
-     * Set 
-     * @param SessionDuration 
+     * Set The maximum validity period of the temporary key for creating a role (range: 0-43200)
+     * @param SessionDuration The maximum validity period of the temporary key for creating a role (range: 0-43200)
      */
     public void setSessionDuration(Long SessionDuration) {
         this.SessionDuration = SessionDuration;

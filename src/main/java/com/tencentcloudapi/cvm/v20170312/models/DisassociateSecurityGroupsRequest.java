@@ -30,7 +30,7 @@ public class DisassociateSecurityGroupsRequest extends AbstractModel{
     private String [] SecurityGroupIds;
 
     /**
-    * ID(s) of the instance(s) to be disassociated, such as `ins-lesecurk`. You can specify multiple instances.
+    * ID(s) of the instance(s) to be disassociated，such as `ins-lesecurk`. You can specify multiple instances.
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -53,16 +53,16 @@ public class DisassociateSecurityGroupsRequest extends AbstractModel{
     }
 
     /**
-     * Get ID(s) of the instance(s) to be disassociated, such as `ins-lesecurk`. You can specify multiple instances. 
-     * @return InstanceIds ID(s) of the instance(s) to be disassociated, such as `ins-lesecurk`. You can specify multiple instances.
+     * Get ID(s) of the instance(s) to be disassociated，such as `ins-lesecurk`. You can specify multiple instances. 
+     * @return InstanceIds ID(s) of the instance(s) to be disassociated，such as `ins-lesecurk`. You can specify multiple instances.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set ID(s) of the instance(s) to be disassociated, such as `ins-lesecurk`. You can specify multiple instances.
-     * @param InstanceIds ID(s) of the instance(s) to be disassociated, such as `ins-lesecurk`. You can specify multiple instances.
+     * Set ID(s) of the instance(s) to be disassociated，such as `ins-lesecurk`. You can specify multiple instances.
+     * @param InstanceIds ID(s) of the instance(s) to be disassociated，such as `ins-lesecurk`. You can specify multiple instances.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

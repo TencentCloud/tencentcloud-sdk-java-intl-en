@@ -23,9 +23,129 @@ import java.util.HashMap;
 public class DataDisk extends AbstractModel{
 
     /**
+    * 
+    */
+    @SerializedName("DiskType")
+    @Expose
+    private String DiskType;
+
+    /**
+    * File system (ext3/ext4/xfs)
+    */
+    @SerializedName("FileSystem")
+    @Expose
+    private String FileSystem;
+
+    /**
+    * 
+    */
+    @SerializedName("DiskSize")
+    @Expose
+    private Long DiskSize;
+
+    /**
+    * Whether to automatically format and mount the disk
+    */
+    @SerializedName("AutoFormatAndMount")
+    @Expose
+    private Boolean AutoFormatAndMount;
+
+    /**
+    * 
+    */
+    @SerializedName("MountTarget")
+    @Expose
+    private String MountTarget;
+
+    /**
+     * Get  
+     * @return DiskType 
+     */
+    public String getDiskType() {
+        return this.DiskType;
+    }
+
+    /**
+     * Set 
+     * @param DiskType 
+     */
+    public void setDiskType(String DiskType) {
+        this.DiskType = DiskType;
+    }
+
+    /**
+     * Get File system (ext3/ext4/xfs) 
+     * @return FileSystem File system (ext3/ext4/xfs)
+     */
+    public String getFileSystem() {
+        return this.FileSystem;
+    }
+
+    /**
+     * Set File system (ext3/ext4/xfs)
+     * @param FileSystem File system (ext3/ext4/xfs)
+     */
+    public void setFileSystem(String FileSystem) {
+        this.FileSystem = FileSystem;
+    }
+
+    /**
+     * Get  
+     * @return DiskSize 
+     */
+    public Long getDiskSize() {
+        return this.DiskSize;
+    }
+
+    /**
+     * Set 
+     * @param DiskSize 
+     */
+    public void setDiskSize(Long DiskSize) {
+        this.DiskSize = DiskSize;
+    }
+
+    /**
+     * Get Whether to automatically format and mount the disk 
+     * @return AutoFormatAndMount Whether to automatically format and mount the disk
+     */
+    public Boolean getAutoFormatAndMount() {
+        return this.AutoFormatAndMount;
+    }
+
+    /**
+     * Set Whether to automatically format and mount the disk
+     * @param AutoFormatAndMount Whether to automatically format and mount the disk
+     */
+    public void setAutoFormatAndMount(Boolean AutoFormatAndMount) {
+        this.AutoFormatAndMount = AutoFormatAndMount;
+    }
+
+    /**
+     * Get  
+     * @return MountTarget 
+     */
+    public String getMountTarget() {
+        return this.MountTarget;
+    }
+
+    /**
+     * Set 
+     * @param MountTarget 
+     */
+    public void setMountTarget(String MountTarget) {
+        this.MountTarget = MountTarget;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "DiskType", this.DiskType);
+        this.setParamSimple(map, prefix + "FileSystem", this.FileSystem);
+        this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
+        this.setParamSimple(map, prefix + "AutoFormatAndMount", this.AutoFormatAndMount);
+        this.setParamSimple(map, prefix + "MountTarget", this.MountTarget);
 
     }
 }

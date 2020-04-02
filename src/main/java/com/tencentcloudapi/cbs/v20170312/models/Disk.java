@@ -158,7 +158,7 @@ Note: This field may return null, indicating that no valid value was found.
     private String RenewFlag;
 
     /**
-    * This field is only applicable when the instance is already mounted to the cloud disk, and both the instance and the cloud disk use monthly subscription. <br><li>true: Expiration time of cloud disk is earlier than that of the instance.<br><li>false: Expiration time of cloud disk is later than that of the instance.
+    * This field is only applicable when the instance is already mounted to the cloud disk, and both the instance and the cloud disk use monthly subscription. <br><li>true: Expiration time of cloud disk is earlier than that of the instance.<br><li>false:Expiration time of cloud disk is later than that of the instance.
 Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("DeadlineError")
@@ -577,9 +577,9 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get This field is only applicable when the instance is already mounted to the cloud disk, and both the instance and the cloud disk use monthly subscription. <br><li>true: Expiration time of cloud disk is earlier than that of the instance.<br><li>false: Expiration time of cloud disk is later than that of the instance.
+     * Get This field is only applicable when the instance is already mounted to the cloud disk, and both the instance and the cloud disk use monthly subscription. <br><li>true: Expiration time of cloud disk is earlier than that of the instance.<br><li>false:Expiration time of cloud disk is later than that of the instance.
 Note: This field may return null, indicating that no valid value was found. 
-     * @return DeadlineError This field is only applicable when the instance is already mounted to the cloud disk, and both the instance and the cloud disk use monthly subscription. <br><li>true: Expiration time of cloud disk is earlier than that of the instance.<br><li>false: Expiration time of cloud disk is later than that of the instance.
+     * @return DeadlineError This field is only applicable when the instance is already mounted to the cloud disk, and both the instance and the cloud disk use monthly subscription. <br><li>true: Expiration time of cloud disk is earlier than that of the instance.<br><li>false:Expiration time of cloud disk is later than that of the instance.
 Note: This field may return null, indicating that no valid value was found.
      */
     public Boolean getDeadlineError() {
@@ -587,9 +587,9 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Set This field is only applicable when the instance is already mounted to the cloud disk, and both the instance and the cloud disk use monthly subscription. <br><li>true: Expiration time of cloud disk is earlier than that of the instance.<br><li>false: Expiration time of cloud disk is later than that of the instance.
+     * Set This field is only applicable when the instance is already mounted to the cloud disk, and both the instance and the cloud disk use monthly subscription. <br><li>true: Expiration time of cloud disk is earlier than that of the instance.<br><li>false:Expiration time of cloud disk is later than that of the instance.
 Note: This field may return null, indicating that no valid value was found.
-     * @param DeadlineError This field is only applicable when the instance is already mounted to the cloud disk, and both the instance and the cloud disk use monthly subscription. <br><li>true: Expiration time of cloud disk is earlier than that of the instance.<br><li>false: Expiration time of cloud disk is later than that of the instance.
+     * @param DeadlineError This field is only applicable when the instance is already mounted to the cloud disk, and both the instance and the cloud disk use monthly subscription. <br><li>true: Expiration time of cloud disk is earlier than that of the instance.<br><li>false:Expiration time of cloud disk is later than that of the instance.
 Note: This field may return null, indicating that no valid value was found.
      */
     public void setDeadlineError(Boolean DeadlineError) {

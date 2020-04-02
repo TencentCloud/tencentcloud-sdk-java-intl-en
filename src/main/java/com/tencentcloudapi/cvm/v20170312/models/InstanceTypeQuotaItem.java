@@ -37,7 +37,7 @@ public class InstanceTypeQuotaItem extends AbstractModel{
     private String InstanceType;
 
     /**
-    * Instance billing method. Valid values: <br><li>`PREPAID`: prepaid, i.e., monthly subscription <br><li>`POSTPAID_BY_HOUR`: pay-as-you-go <br><li>`CDHPAID`: you are only billed for the [CDH](https://cloud.tencent.com/document/product/416) instances, not the CVMs running on the CDHs. <br><li>`SPOTPAID`: you are billed based on your bid.
+    * Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://cloud.tencent.com/document/product/416) billing plan. Applicable to `CDH` only, not the instances on the host.
     */
     @SerializedName("InstanceChargeType")
     @Expose
@@ -108,8 +108,8 @@ Note: This field may return null, indicating that no valid value is found.
     private ItemPrice Price;
 
     /**
-    * Details of sold out items
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Details of out-of-stock items
+Note: this field may return null, indicating that no valid value is obtained.
     */
     @SerializedName("SoldOutReason")
     @Expose
@@ -148,16 +148,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Instance billing method. Valid values: <br><li>`PREPAID`: prepaid, i.e., monthly subscription <br><li>`POSTPAID_BY_HOUR`: pay-as-you-go <br><li>`CDHPAID`: you are only billed for the [CDH](https://cloud.tencent.com/document/product/416) instances, not the CVMs running on the CDHs. <br><li>`SPOTPAID`: you are billed based on your bid. 
-     * @return InstanceChargeType Instance billing method. Valid values: <br><li>`PREPAID`: prepaid, i.e., monthly subscription <br><li>`POSTPAID_BY_HOUR`: pay-as-you-go <br><li>`CDHPAID`: you are only billed for the [CDH](https://cloud.tencent.com/document/product/416) instances, not the CVMs running on the CDHs. <br><li>`SPOTPAID`: you are billed based on your bid.
+     * Get Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://cloud.tencent.com/document/product/416) billing plan. Applicable to `CDH` only, not the instances on the host. 
+     * @return InstanceChargeType Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://cloud.tencent.com/document/product/416) billing plan. Applicable to `CDH` only, not the instances on the host.
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set Instance billing method. Valid values: <br><li>`PREPAID`: prepaid, i.e., monthly subscription <br><li>`POSTPAID_BY_HOUR`: pay-as-you-go <br><li>`CDHPAID`: you are only billed for the [CDH](https://cloud.tencent.com/document/product/416) instances, not the CVMs running on the CDHs. <br><li>`SPOTPAID`: you are billed based on your bid.
-     * @param InstanceChargeType Instance billing method. Valid values: <br><li>`PREPAID`: prepaid, i.e., monthly subscription <br><li>`POSTPAID_BY_HOUR`: pay-as-you-go <br><li>`CDHPAID`: you are only billed for the [CDH](https://cloud.tencent.com/document/product/416) instances, not the CVMs running on the CDHs. <br><li>`SPOTPAID`: you are billed based on your bid.
+     * Set Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://cloud.tencent.com/document/product/416) billing plan. Applicable to `CDH` only, not the instances on the host.
+     * @param InstanceChargeType Instance billing plan. Valid values: <br><li>POSTPAID_BY_HOUR: pay after use. You are billed for your traffic by the hour.<br><li>`CDHPAID`: [`CDH`](https://cloud.tencent.com/document/product/416) billing plan. Applicable to `CDH` only, not the instances on the host.
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
@@ -312,20 +312,20 @@ Note: This field may return null, indicating that no valid value is found.
     }
 
     /**
-     * Get Details of sold out items
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SoldOutReason Details of sold out items
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Details of out-of-stock items
+Note: this field may return null, indicating that no valid value is obtained. 
+     * @return SoldOutReason Details of out-of-stock items
+Note: this field may return null, indicating that no valid value is obtained.
      */
     public String getSoldOutReason() {
         return this.SoldOutReason;
     }
 
     /**
-     * Set Details of sold out items
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SoldOutReason Details of sold out items
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Details of out-of-stock items
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param SoldOutReason Details of out-of-stock items
+Note: this field may return null, indicating that no valid value is obtained.
      */
     public void setSoldOutReason(String SoldOutReason) {
         this.SoldOutReason = SoldOutReason;

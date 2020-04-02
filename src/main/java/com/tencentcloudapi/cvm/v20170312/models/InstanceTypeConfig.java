@@ -65,6 +65,13 @@ public class InstanceTypeConfig extends AbstractModel{
     private Long Memory;
 
     /**
+    * Number of FPGA cores; unit: core.
+    */
+    @SerializedName("FPGA")
+    @Expose
+    private Long FPGA;
+
+    /**
      * Get Availability zone. 
      * @return Zone Availability zone.
      */
@@ -161,6 +168,22 @@ public class InstanceTypeConfig extends AbstractModel{
     }
 
     /**
+     * Get Number of FPGA cores; unit: core. 
+     * @return FPGA Number of FPGA cores; unit: core.
+     */
+    public Long getFPGA() {
+        return this.FPGA;
+    }
+
+    /**
+     * Set Number of FPGA cores; unit: core.
+     * @param FPGA Number of FPGA cores; unit: core.
+     */
+    public void setFPGA(Long FPGA) {
+        this.FPGA = FPGA;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class InstanceTypeConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "GPU", this.GPU);
         this.setParamSimple(map, prefix + "CPU", this.CPU);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
+        this.setParamSimple(map, prefix + "FPGA", this.FPGA);
 
     }
 }

@@ -187,6 +187,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String [] ShardSlaveZones;
 
     /**
+    * Number of CPU cores
+    */
+    @SerializedName("Cpu")
+    @Expose
+    private Long Cpu;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -567,6 +574,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Number of CPU cores 
+     * @return Cpu Number of CPU cores
+     */
+    public Long getCpu() {
+        return this.Cpu;
+    }
+
+    /**
+     * Set Number of CPU cores
+     * @param Cpu Number of CPU cores
+     */
+    public void setCpu(Long Cpu) {
+        this.Cpu = Cpu;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -593,6 +616,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Paymode", this.Paymode);
         this.setParamSimple(map, prefix + "ShardMasterZone", this.ShardMasterZone);
         this.setParamArraySimple(map, prefix + "ShardSlaveZones.", this.ShardSlaveZones);
+        this.setParamSimple(map, prefix + "Cpu", this.Cpu);
 
     }
 }

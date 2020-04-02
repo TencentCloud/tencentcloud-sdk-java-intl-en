@@ -13,67 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tke.v20180525.models;
+package com.tencentcloudapi.cbs.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Label extends AbstractModel{
-
-    /**
-    * 
-    */
-    @SerializedName("Name")
-    @Expose
-    private String Name;
-
-    /**
-    * 
-    */
-    @SerializedName("Value")
-    @Expose
-    private String Value;
-
-    /**
-     * Get  
-     * @return Name 
-     */
-    public String getName() {
-        return this.Name;
-    }
-
-    /**
-     * Set 
-     * @param Name 
-     */
-    public void setName(String Name) {
-        this.Name = Name;
-    }
-
-    /**
-     * Get  
-     * @return Value 
-     */
-    public String getValue() {
-        return this.Value;
-    }
-
-    /**
-     * Set 
-     * @param Value 
-     */
-    public void setValue(String Value) {
-        this.Value = Value;
-    }
+public class GetSnapOverviewRequest extends AbstractModel{
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamSimple(map, prefix + "Value", this.Value);
 
     }
 }

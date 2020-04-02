@@ -98,7 +98,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long Deactived;
 
     /**
-    * 
+    * List of deprecated products
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DeactivedDetail")
     @Expose
@@ -285,16 +286,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return DeactivedDetail 
+     * Get List of deprecated products
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return DeactivedDetail List of deprecated products
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String [] getDeactivedDetail() {
         return this.DeactivedDetail;
     }
 
     /**
-     * Set 
-     * @param DeactivedDetail 
+     * Set List of deprecated products
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param DeactivedDetail List of deprecated products
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDeactivedDetail(String [] DeactivedDetail) {
         this.DeactivedDetail = DeactivedDetail;

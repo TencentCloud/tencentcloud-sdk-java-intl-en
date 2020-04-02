@@ -107,6 +107,45 @@ public class Cluster extends AbstractModel{
     private String Property;
 
     /**
+    * Number of master nodes currently in the cluster
+    */
+    @SerializedName("ClusterMaterNodeNum")
+    @Expose
+    private Long ClusterMaterNodeNum;
+
+    /**
+    * ID of the image used by the cluster
+Note: this field may return null, indicating that no valid value is obtained.
+    */
+    @SerializedName("ImageId")
+    @Expose
+    private String ImageId;
+
+    /**
+    * OsCustomizeType
+Note: this field may return null, indicating that no valid value is obtained.
+    */
+    @SerializedName("OsCustomizeType")
+    @Expose
+    private String OsCustomizeType;
+
+    /**
+    * Runtime environment of the cluster. Values can be `docker` or `containerd`.
+Note: this field may return null, indicating that no valid value is obtained.
+    */
+    @SerializedName("ContainerRuntime")
+    @Expose
+    private String ContainerRuntime;
+
+    /**
+    * Creation time
+Note: this field may return null, indicating that no valid value is obtained.
+    */
+    @SerializedName("CreatedTime")
+    @Expose
+    private String CreatedTime;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -299,6 +338,102 @@ public class Cluster extends AbstractModel{
     }
 
     /**
+     * Get Number of master nodes currently in the cluster 
+     * @return ClusterMaterNodeNum Number of master nodes currently in the cluster
+     */
+    public Long getClusterMaterNodeNum() {
+        return this.ClusterMaterNodeNum;
+    }
+
+    /**
+     * Set Number of master nodes currently in the cluster
+     * @param ClusterMaterNodeNum Number of master nodes currently in the cluster
+     */
+    public void setClusterMaterNodeNum(Long ClusterMaterNodeNum) {
+        this.ClusterMaterNodeNum = ClusterMaterNodeNum;
+    }
+
+    /**
+     * Get ID of the image used by the cluster
+Note: this field may return null, indicating that no valid value is obtained. 
+     * @return ImageId ID of the image used by the cluster
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public String getImageId() {
+        return this.ImageId;
+    }
+
+    /**
+     * Set ID of the image used by the cluster
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param ImageId ID of the image used by the cluster
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public void setImageId(String ImageId) {
+        this.ImageId = ImageId;
+    }
+
+    /**
+     * Get OsCustomizeType
+Note: this field may return null, indicating that no valid value is obtained. 
+     * @return OsCustomizeType OsCustomizeType
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public String getOsCustomizeType() {
+        return this.OsCustomizeType;
+    }
+
+    /**
+     * Set OsCustomizeType
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param OsCustomizeType OsCustomizeType
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public void setOsCustomizeType(String OsCustomizeType) {
+        this.OsCustomizeType = OsCustomizeType;
+    }
+
+    /**
+     * Get Runtime environment of the cluster. Values can be `docker` or `containerd`.
+Note: this field may return null, indicating that no valid value is obtained. 
+     * @return ContainerRuntime Runtime environment of the cluster. Values can be `docker` or `containerd`.
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public String getContainerRuntime() {
+        return this.ContainerRuntime;
+    }
+
+    /**
+     * Set Runtime environment of the cluster. Values can be `docker` or `containerd`.
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param ContainerRuntime Runtime environment of the cluster. Values can be `docker` or `containerd`.
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public void setContainerRuntime(String ContainerRuntime) {
+        this.ContainerRuntime = ContainerRuntime;
+    }
+
+    /**
+     * Get Creation time
+Note: this field may return null, indicating that no valid value is obtained. 
+     * @return CreatedTime Creation time
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public String getCreatedTime() {
+        return this.CreatedTime;
+    }
+
+    /**
+     * Set Creation time
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param CreatedTime Creation time
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public void setCreatedTime(String CreatedTime) {
+        this.CreatedTime = CreatedTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -314,6 +449,11 @@ public class Cluster extends AbstractModel{
         this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
         this.setParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
         this.setParamSimple(map, prefix + "Property", this.Property);
+        this.setParamSimple(map, prefix + "ClusterMaterNodeNum", this.ClusterMaterNodeNum);
+        this.setParamSimple(map, prefix + "ImageId", this.ImageId);
+        this.setParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
+        this.setParamSimple(map, prefix + "ContainerRuntime", this.ContainerRuntime);
+        this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
 
     }
 }

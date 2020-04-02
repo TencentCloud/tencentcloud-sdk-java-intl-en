@@ -37,7 +37,7 @@ public class DCDBInstanceInfo extends AbstractModel{
     private String InstanceName;
 
     /**
-    * APPID
+    * AppID
     */
     @SerializedName("AppId")
     @Expose
@@ -184,7 +184,7 @@ public class DCDBInstanceInfo extends AbstractModel{
     private Long IsTmp;
 
     /**
-    * Exclusive cluster ID. If this parameter is left empty, the instance is a non-dedicated cluster instance
+    * Dedicated cluster ID. If this parameter is empty, the instance is a non-dedicated cluster instance
     */
     @SerializedName("ExclusterId")
     @Expose
@@ -205,7 +205,7 @@ public class DCDBInstanceInfo extends AbstractModel{
     private String UniqueSubnetId;
 
     /**
-    * Numeric ID of an instance (this field is obsolete and should not be depended on)
+    * Numeric ID of instance (this field is obsolete and should not be depended on)
     */
     @SerializedName("Id")
     @Expose
@@ -290,6 +290,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long IsAuditSupported;
 
     /**
+    * Number of CPU cores
+    */
+    @SerializedName("Cpu")
+    @Expose
+    private Long Cpu;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -322,16 +329,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get APPID 
-     * @return AppId APPID
+     * Get AppID 
+     * @return AppId AppID
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set APPID
-     * @param AppId APPID
+     * Set AppID
+     * @param AppId AppID
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
@@ -658,16 +665,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Exclusive cluster ID. If this parameter is left empty, the instance is a non-dedicated cluster instance 
-     * @return ExclusterId Exclusive cluster ID. If this parameter is left empty, the instance is a non-dedicated cluster instance
+     * Get Dedicated cluster ID. If this parameter is empty, the instance is a non-dedicated cluster instance 
+     * @return ExclusterId Dedicated cluster ID. If this parameter is empty, the instance is a non-dedicated cluster instance
      */
     public String getExclusterId() {
         return this.ExclusterId;
     }
 
     /**
-     * Set Exclusive cluster ID. If this parameter is left empty, the instance is a non-dedicated cluster instance
-     * @param ExclusterId Exclusive cluster ID. If this parameter is left empty, the instance is a non-dedicated cluster instance
+     * Set Dedicated cluster ID. If this parameter is empty, the instance is a non-dedicated cluster instance
+     * @param ExclusterId Dedicated cluster ID. If this parameter is empty, the instance is a non-dedicated cluster instance
      */
     public void setExclusterId(String ExclusterId) {
         this.ExclusterId = ExclusterId;
@@ -706,16 +713,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Numeric ID of an instance (this field is obsolete and should not be depended on) 
-     * @return Id Numeric ID of an instance (this field is obsolete and should not be depended on)
+     * Get Numeric ID of instance (this field is obsolete and should not be depended on) 
+     * @return Id Numeric ID of instance (this field is obsolete and should not be depended on)
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set Numeric ID of an instance (this field is obsolete and should not be depended on)
-     * @param Id Numeric ID of an instance (this field is obsolete and should not be depended on)
+     * Set Numeric ID of instance (this field is obsolete and should not be depended on)
+     * @param Id Numeric ID of instance (this field is obsolete and should not be depended on)
      */
     public void setId(Long Id) {
         this.Id = Id;
@@ -902,6 +909,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Number of CPU cores 
+     * @return Cpu Number of CPU cores
+     */
+    public Long getCpu() {
+        return this.Cpu;
+    }
+
+    /**
+     * Set Number of CPU cores
+     * @param Cpu Number of CPU cores
+     */
+    public void setCpu(Long Cpu) {
+        this.Cpu = Cpu;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -943,6 +966,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Locker", this.Locker);
         this.setParamSimple(map, prefix + "WanStatus", this.WanStatus);
         this.setParamSimple(map, prefix + "IsAuditSupported", this.IsAuditSupported);
+        this.setParamSimple(map, prefix + "Cpu", this.Cpu);
 
     }
 }

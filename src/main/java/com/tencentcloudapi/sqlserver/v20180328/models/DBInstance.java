@@ -233,6 +233,20 @@ public class DBInstance extends AbstractModel{
     private Long Pid;
 
     /**
+    * Unique string-type ID of instance VPC in the format of `vpc-xxx`, which is an empty string if the basic network is used
+    */
+    @SerializedName("UniqVpcId")
+    @Expose
+    private String UniqVpcId;
+
+    /**
+    * Unique string-type ID of instance subnet in the format of `subnet-xxx`, which is an empty string if the basic network is used
+    */
+    @SerializedName("UniqSubnetId")
+    @Expose
+    private String UniqSubnetId;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -713,6 +727,38 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
+     * Get Unique string-type ID of instance VPC in the format of `vpc-xxx`, which is an empty string if the basic network is used 
+     * @return UniqVpcId Unique string-type ID of instance VPC in the format of `vpc-xxx`, which is an empty string if the basic network is used
+     */
+    public String getUniqVpcId() {
+        return this.UniqVpcId;
+    }
+
+    /**
+     * Set Unique string-type ID of instance VPC in the format of `vpc-xxx`, which is an empty string if the basic network is used
+     * @param UniqVpcId Unique string-type ID of instance VPC in the format of `vpc-xxx`, which is an empty string if the basic network is used
+     */
+    public void setUniqVpcId(String UniqVpcId) {
+        this.UniqVpcId = UniqVpcId;
+    }
+
+    /**
+     * Get Unique string-type ID of instance subnet in the format of `subnet-xxx`, which is an empty string if the basic network is used 
+     * @return UniqSubnetId Unique string-type ID of instance subnet in the format of `subnet-xxx`, which is an empty string if the basic network is used
+     */
+    public String getUniqSubnetId() {
+        return this.UniqSubnetId;
+    }
+
+    /**
+     * Set Unique string-type ID of instance subnet in the format of `subnet-xxx`, which is an empty string if the basic network is used
+     * @param UniqSubnetId Unique string-type ID of instance subnet in the format of `subnet-xxx`, which is an empty string if the basic network is used
+     */
+    public void setUniqSubnetId(String UniqSubnetId) {
+        this.UniqSubnetId = UniqSubnetId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -746,6 +792,8 @@ public class DBInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Pid", this.Pid);
+        this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
+        this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
 
     }
 }

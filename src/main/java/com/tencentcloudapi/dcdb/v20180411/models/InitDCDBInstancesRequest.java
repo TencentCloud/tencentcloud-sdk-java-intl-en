@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class InitDCDBInstancesRequest extends AbstractModel{
 
     /**
-    * List of IDs of instances to be initialized. The ID is in the format of dcdbt-ow728lmc and can be obtained through the `DescribeDCDBInstances` API.
+    * List of IDs of instances to be initialized. The ID is in the format of `dcdbt-ow728lmc` and can be obtained through the `DescribeDCDBInstances` API.
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -37,16 +37,16 @@ public class InitDCDBInstancesRequest extends AbstractModel{
     private DBParamValue [] Params;
 
     /**
-     * Get List of IDs of instances to be initialized. The ID is in the format of dcdbt-ow728lmc and can be obtained through the `DescribeDCDBInstances` API. 
-     * @return InstanceIds List of IDs of instances to be initialized. The ID is in the format of dcdbt-ow728lmc and can be obtained through the `DescribeDCDBInstances` API.
+     * Get List of IDs of instances to be initialized. The ID is in the format of `dcdbt-ow728lmc` and can be obtained through the `DescribeDCDBInstances` API. 
+     * @return InstanceIds List of IDs of instances to be initialized. The ID is in the format of `dcdbt-ow728lmc` and can be obtained through the `DescribeDCDBInstances` API.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set List of IDs of instances to be initialized. The ID is in the format of dcdbt-ow728lmc and can be obtained through the `DescribeDCDBInstances` API.
-     * @param InstanceIds List of IDs of instances to be initialized. The ID is in the format of dcdbt-ow728lmc and can be obtained through the `DescribeDCDBInstances` API.
+     * Set List of IDs of instances to be initialized. The ID is in the format of `dcdbt-ow728lmc` and can be obtained through the `DescribeDCDBInstances` API.
+     * @param InstanceIds List of IDs of instances to be initialized. The ID is in the format of `dcdbt-ow728lmc` and can be obtained through the `DescribeDCDBInstances` API.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

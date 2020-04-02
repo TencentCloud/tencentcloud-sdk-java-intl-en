@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateAccountResponse extends AbstractModel{
 
     /**
-    * Instance Id, which is passed through from the input parameters.
+    * Instance ID, which is passed through from the input parameters.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -58,16 +58,16 @@ public class CreateAccountResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Instance Id, which is passed through from the input parameters. 
-     * @return InstanceId Instance Id, which is passed through from the input parameters.
+     * Get Instance ID, which is passed through from the input parameters. 
+     * @return InstanceId Instance ID, which is passed through from the input parameters.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance Id, which is passed through from the input parameters.
-     * @param InstanceId Instance Id, which is passed through from the input parameters.
+     * Set Instance ID, which is passed through from the input parameters.
+     * @param InstanceId Instance ID, which is passed through from the input parameters.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

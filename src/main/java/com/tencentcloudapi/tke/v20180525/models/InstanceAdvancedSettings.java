@@ -65,6 +65,13 @@ public class InstanceAdvancedSettings extends AbstractModel{
     private DataDisk [] DataDisks;
 
     /**
+    * Information about node custom parameters
+    */
+    @SerializedName("ExtraArgs")
+    @Expose
+    private InstanceExtraArgs ExtraArgs;
+
+    /**
      * Get Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk. 
      * @return MountTarget Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
      */
@@ -161,6 +168,22 @@ public class InstanceAdvancedSettings extends AbstractModel{
     }
 
     /**
+     * Get Information about node custom parameters 
+     * @return ExtraArgs Information about node custom parameters
+     */
+    public InstanceExtraArgs getExtraArgs() {
+        return this.ExtraArgs;
+    }
+
+    /**
+     * Set Information about node custom parameters
+     * @param ExtraArgs Information about node custom parameters
+     */
+    public void setExtraArgs(InstanceExtraArgs ExtraArgs) {
+        this.ExtraArgs = ExtraArgs;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class InstanceAdvancedSettings extends AbstractModel{
         this.setParamSimple(map, prefix + "Unschedulable", this.Unschedulable);
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
         this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
+        this.setParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
 
     }
 }

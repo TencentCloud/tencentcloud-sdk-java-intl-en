@@ -51,6 +51,27 @@ public class ClusterAdvancedSettings extends AbstractModel{
     private String NodeNameType;
 
     /**
+    * Cluster custom parameter
+    */
+    @SerializedName("ExtraArgs")
+    @Expose
+    private ClusterExtraArgs ExtraArgs;
+
+    /**
+    * Cluster network type, which can be GR (Global Router) or VPC-CNI. The default value is GR.
+    */
+    @SerializedName("NetworkType")
+    @Expose
+    private String NetworkType;
+
+    /**
+    * Whether a cluster in VPC-CNI mode uses dynamic IP addresses. The default value is FALSE, which indicates that static IP addresses are used.
+    */
+    @SerializedName("IsNonStaticIpMode")
+    @Expose
+    private Boolean IsNonStaticIpMode;
+
+    /**
      * Get Whether IPVS is enabled 
      * @return IPVS Whether IPVS is enabled
      */
@@ -115,6 +136,54 @@ public class ClusterAdvancedSettings extends AbstractModel{
     }
 
     /**
+     * Get Cluster custom parameter 
+     * @return ExtraArgs Cluster custom parameter
+     */
+    public ClusterExtraArgs getExtraArgs() {
+        return this.ExtraArgs;
+    }
+
+    /**
+     * Set Cluster custom parameter
+     * @param ExtraArgs Cluster custom parameter
+     */
+    public void setExtraArgs(ClusterExtraArgs ExtraArgs) {
+        this.ExtraArgs = ExtraArgs;
+    }
+
+    /**
+     * Get Cluster network type, which can be GR (Global Router) or VPC-CNI. The default value is GR. 
+     * @return NetworkType Cluster network type, which can be GR (Global Router) or VPC-CNI. The default value is GR.
+     */
+    public String getNetworkType() {
+        return this.NetworkType;
+    }
+
+    /**
+     * Set Cluster network type, which can be GR (Global Router) or VPC-CNI. The default value is GR.
+     * @param NetworkType Cluster network type, which can be GR (Global Router) or VPC-CNI. The default value is GR.
+     */
+    public void setNetworkType(String NetworkType) {
+        this.NetworkType = NetworkType;
+    }
+
+    /**
+     * Get Whether a cluster in VPC-CNI mode uses dynamic IP addresses. The default value is FALSE, which indicates that static IP addresses are used. 
+     * @return IsNonStaticIpMode Whether a cluster in VPC-CNI mode uses dynamic IP addresses. The default value is FALSE, which indicates that static IP addresses are used.
+     */
+    public Boolean getIsNonStaticIpMode() {
+        return this.IsNonStaticIpMode;
+    }
+
+    /**
+     * Set Whether a cluster in VPC-CNI mode uses dynamic IP addresses. The default value is FALSE, which indicates that static IP addresses are used.
+     * @param IsNonStaticIpMode Whether a cluster in VPC-CNI mode uses dynamic IP addresses. The default value is FALSE, which indicates that static IP addresses are used.
+     */
+    public void setIsNonStaticIpMode(Boolean IsNonStaticIpMode) {
+        this.IsNonStaticIpMode = IsNonStaticIpMode;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +191,9 @@ public class ClusterAdvancedSettings extends AbstractModel{
         this.setParamSimple(map, prefix + "AsEnabled", this.AsEnabled);
         this.setParamSimple(map, prefix + "ContainerRuntime", this.ContainerRuntime);
         this.setParamSimple(map, prefix + "NodeNameType", this.NodeNameType);
+        this.setParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
+        this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
+        this.setParamSimple(map, prefix + "IsNonStaticIpMode", this.IsNonStaticIpMode);
 
     }
 }

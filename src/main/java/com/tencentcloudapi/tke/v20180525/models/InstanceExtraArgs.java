@@ -20,60 +20,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Label extends AbstractModel{
+public class InstanceExtraArgs extends AbstractModel{
 
     /**
-    * 
+    * Kubelet custom parameter
+Note: this field may return null, indicating that no valid value is obtained.
     */
-    @SerializedName("Name")
+    @SerializedName("Kubelet")
     @Expose
-    private String Name;
+    private String [] Kubelet;
 
     /**
-    * 
-    */
-    @SerializedName("Value")
-    @Expose
-    private String Value;
-
-    /**
-     * Get  
-     * @return Name 
+     * Get Kubelet custom parameter
+Note: this field may return null, indicating that no valid value is obtained. 
+     * @return Kubelet Kubelet custom parameter
+Note: this field may return null, indicating that no valid value is obtained.
      */
-    public String getName() {
-        return this.Name;
+    public String [] getKubelet() {
+        return this.Kubelet;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Kubelet custom parameter
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param Kubelet Kubelet custom parameter
+Note: this field may return null, indicating that no valid value is obtained.
      */
-    public void setName(String Name) {
-        this.Name = Name;
-    }
-
-    /**
-     * Get  
-     * @return Value 
-     */
-    public String getValue() {
-        return this.Value;
-    }
-
-    /**
-     * Set 
-     * @param Value 
-     */
-    public void setValue(String Value) {
-        this.Value = Value;
+    public void setKubelet(String [] Kubelet) {
+        this.Kubelet = Kubelet;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamArraySimple(map, prefix + "Kubelet.", this.Kubelet);
 
     }
 }

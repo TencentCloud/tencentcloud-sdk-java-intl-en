@@ -233,7 +233,7 @@ global: global acceleration
     private OriginPullTimeout OriginPullTimeout;
 
     /**
-    * 
+    * Origin access authentication for S3 bucket
     */
     @SerializedName("AwsPrivateAccess")
     @Expose
@@ -732,16 +732,16 @@ global: global acceleration
     }
 
     /**
-     * Get  
-     * @return AwsPrivateAccess 
+     * Get Origin access authentication for S3 bucket 
+     * @return AwsPrivateAccess Origin access authentication for S3 bucket
      */
     public AwsPrivateAccess getAwsPrivateAccess() {
         return this.AwsPrivateAccess;
     }
 
     /**
-     * Set 
-     * @param AwsPrivateAccess 
+     * Set Origin access authentication for S3 bucket
+     * @param AwsPrivateAccess Origin access authentication for S3 bucket
      */
     public void setAwsPrivateAccess(AwsPrivateAccess AwsPrivateAccess) {
         this.AwsPrivateAccess = AwsPrivateAccess;

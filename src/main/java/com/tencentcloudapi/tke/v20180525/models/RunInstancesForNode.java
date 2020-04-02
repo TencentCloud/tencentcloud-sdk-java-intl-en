@@ -37,6 +37,13 @@ public class RunInstancesForNode extends AbstractModel{
     private String [] RunInstancesPara;
 
     /**
+    * An advanced node setting. This parameter overrides the InstanceAdvancedSettings item set at the cluster level and corresponds to RunInstancesPara in a one-to-one sequential manner (currently valid for the ExtraArgs node custom parameter only).
+    */
+    @SerializedName("InstanceAdvancedSettingsOverrides")
+    @Expose
+    private InstanceAdvancedSettings [] InstanceAdvancedSettingsOverrides;
+
+    /**
      * Get Node role. Values: MASTER_ETCD, WORKER. You only need to specify MASTER_ETCD when creating a self-deployed cluster (INDEPENDENT_CLUSTER). 
      * @return NodeRole Node role. Values: MASTER_ETCD, WORKER. You only need to specify MASTER_ETCD when creating a self-deployed cluster (INDEPENDENT_CLUSTER).
      */
@@ -69,11 +76,28 @@ public class RunInstancesForNode extends AbstractModel{
     }
 
     /**
+     * Get An advanced node setting. This parameter overrides the InstanceAdvancedSettings item set at the cluster level and corresponds to RunInstancesPara in a one-to-one sequential manner (currently valid for the ExtraArgs node custom parameter only). 
+     * @return InstanceAdvancedSettingsOverrides An advanced node setting. This parameter overrides the InstanceAdvancedSettings item set at the cluster level and corresponds to RunInstancesPara in a one-to-one sequential manner (currently valid for the ExtraArgs node custom parameter only).
+     */
+    public InstanceAdvancedSettings [] getInstanceAdvancedSettingsOverrides() {
+        return this.InstanceAdvancedSettingsOverrides;
+    }
+
+    /**
+     * Set An advanced node setting. This parameter overrides the InstanceAdvancedSettings item set at the cluster level and corresponds to RunInstancesPara in a one-to-one sequential manner (currently valid for the ExtraArgs node custom parameter only).
+     * @param InstanceAdvancedSettingsOverrides An advanced node setting. This parameter overrides the InstanceAdvancedSettings item set at the cluster level and corresponds to RunInstancesPara in a one-to-one sequential manner (currently valid for the ExtraArgs node custom parameter only).
+     */
+    public void setInstanceAdvancedSettingsOverrides(InstanceAdvancedSettings [] InstanceAdvancedSettingsOverrides) {
+        this.InstanceAdvancedSettingsOverrides = InstanceAdvancedSettingsOverrides;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NodeRole", this.NodeRole);
         this.setParamArraySimple(map, prefix + "RunInstancesPara.", this.RunInstancesPara);
+        this.setParamArrayObj(map, prefix + "InstanceAdvancedSettingsOverrides.", this.InstanceAdvancedSettingsOverrides);
 
     }
 }

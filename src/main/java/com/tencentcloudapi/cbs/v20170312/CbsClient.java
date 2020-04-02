@@ -407,6 +407,24 @@ You can filter according to the snapshot ID. The snapshot ID format is as follow
     }
 
     /**
+     *This API is used to get snapshot overview information.
+     * @param req GetSnapOverviewRequest
+     * @return GetSnapOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetSnapOverviewResponse GetSnapOverview(GetSnapOverviewRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetSnapOverviewResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetSnapOverviewResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetSnapOverview"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (InquiryPriceCreateDisks) is used to inquire the price for cloud disk creation.
 
 * It supports inquiring the price for the creation of multiple cloud disks. The total price for the creation is returned.
@@ -420,27 +438,6 @@ You can filter according to the snapshot ID. The snapshot ID format is as follow
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceCreateDisksResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "InquiryPriceCreateDisks"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to query the price of renewing one or more cloud disks.
-
-* You can query the price for renewing cloud disks together with their bound instances. To do so, you need to specify `CurInstanceDeadline` in the [DiskChargePrepaid](/document/product/362/15669#DiskChargePrepaid) parameter, In this case, the API will query the price for renewing the cloud disk to the expiration time of the bound instance.
-* You can specify different renewal lengths for multiple cloud disks in a single request. In such cases, the price returned will be the total price of renewing multiple cloud disks.
-     * @param req InquiryPriceRenewDisksRequest
-     * @return InquiryPriceRenewDisksResponse
-     * @throws TencentCloudSDKException
-     */
-    public InquiryPriceRenewDisksResponse InquiryPriceRenewDisks(InquiryPriceRenewDisksRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<InquiryPriceRenewDisksResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<InquiryPriceRenewDisksResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "InquiryPriceRenewDisks"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -500,49 +497,6 @@ You can filter according to the snapshot ID. The snapshot ID format is as follow
                 Type type = new TypeToken<JsonResponseModel<ModifyDiskAttributesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyDiskAttributes"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *API domain name: cbs.tencentcloudapi.com.
-
-This API is used to change the billing mode of cloud disks.
-
-You can only use this API to change the billing method from `POSTPAID_BY_HOUR` to `PREPAID`.
-This API does not support non-elastic cloud disks. Please use `modifyinstanceschargetype` API to convert CVM instances and the bound non-elastic cloud disks. 
-Default API request frequency limit: 10 times/second.
-
-     * @param req ModifyDisksChargeTypeRequest
-     * @return ModifyDisksChargeTypeResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyDisksChargeTypeResponse ModifyDisksChargeType(ModifyDisksChargeTypeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDisksChargeTypeResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyDisksChargeTypeResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "ModifyDisksChargeType"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API (ModifyDisksRenewFlag) is used to modify the renewal flag of the cloud disk, which supports batch modification.
-     * @param req ModifyDisksRenewFlagRequest
-     * @return ModifyDisksRenewFlagResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyDisksRenewFlagResponse ModifyDisksRenewFlag(ModifyDisksRenewFlagRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDisksRenewFlagResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyDisksRenewFlagResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "ModifyDisksRenewFlag"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

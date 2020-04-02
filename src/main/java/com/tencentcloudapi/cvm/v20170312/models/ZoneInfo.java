@@ -23,8 +23,8 @@ import java.util.HashMap;
 public class ZoneInfo extends AbstractModel{
 
     /**
-    * Availability zone name. For example, ap-guangzhou-3.
-Names of availability zones throughout the entire network:
+    * Availability zone name, such as ap-guangzhou-3.
+The following is a list of all availability zones:
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
 <li> ap-chengdu-1 </li>
@@ -83,15 +83,15 @@ Names of availability zones throughout the entire network:
     private String ZoneId;
 
     /**
-    * Availability zone state. Valid values: `AVAILABLE`, available; `UNAVAILABLE`, unavailable.
+    * Availability zone status. Valid values: `AVAILABLE`: available; `UNAVAILABLE`: unavailable.
     */
     @SerializedName("ZoneState")
     @Expose
     private String ZoneState;
 
     /**
-     * Get Availability zone name. For example, ap-guangzhou-3.
-Names of availability zones throughout the entire network:
+     * Get Availability zone name, such as ap-guangzhou-3.
+The following is a list of all availability zones:
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
 <li> ap-chengdu-1 </li>
@@ -130,8 +130,8 @@ Names of availability zones throughout the entire network:
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
 <li> ap-nanjing-2 </li> 
-     * @return Zone Availability zone name. For example, ap-guangzhou-3.
-Names of availability zones throughout the entire network:
+     * @return Zone Availability zone name, such as ap-guangzhou-3.
+The following is a list of all availability zones:
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
 <li> ap-chengdu-1 </li>
@@ -176,8 +176,8 @@ Names of availability zones throughout the entire network:
     }
 
     /**
-     * Set Availability zone name. For example, ap-guangzhou-3.
-Names of availability zones throughout the entire network:
+     * Set Availability zone name, such as ap-guangzhou-3.
+The following is a list of all availability zones:
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
 <li> ap-chengdu-1 </li>
@@ -216,8 +216,8 @@ Names of availability zones throughout the entire network:
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
 <li> ap-nanjing-2 </li>
-     * @param Zone Availability zone name. For example, ap-guangzhou-3.
-Names of availability zones throughout the entire network:
+     * @param Zone Availability zone name, such as ap-guangzhou-3.
+The following is a list of all availability zones:
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
 <li> ap-chengdu-1 </li>
@@ -294,16 +294,16 @@ Names of availability zones throughout the entire network:
     }
 
     /**
-     * Get Availability zone state. Valid values: `AVAILABLE`, available; `UNAVAILABLE`, unavailable. 
-     * @return ZoneState Availability zone state. Valid values: `AVAILABLE`, available; `UNAVAILABLE`, unavailable.
+     * Get Availability zone status. Valid values: `AVAILABLE`: available; `UNAVAILABLE`: unavailable. 
+     * @return ZoneState Availability zone status. Valid values: `AVAILABLE`: available; `UNAVAILABLE`: unavailable.
      */
     public String getZoneState() {
         return this.ZoneState;
     }
 
     /**
-     * Set Availability zone state. Valid values: `AVAILABLE`, available; `UNAVAILABLE`, unavailable.
-     * @param ZoneState Availability zone state. Valid values: `AVAILABLE`, available; `UNAVAILABLE`, unavailable.
+     * Set Availability zone status. Valid values: `AVAILABLE`: available; `UNAVAILABLE`: unavailable.
+     * @param ZoneState Availability zone status. Valid values: `AVAILABLE`: available; `UNAVAILABLE`: unavailable.
      */
     public void setZoneState(String ZoneState) {
         this.ZoneState = ZoneState;

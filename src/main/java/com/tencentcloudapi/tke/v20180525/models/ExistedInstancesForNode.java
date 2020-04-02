@@ -37,6 +37,13 @@ public class ExistedInstancesForNode extends AbstractModel{
     private ExistedInstancesPara ExistedInstancesPara;
 
     /**
+    * Advanced node setting, which overrides the InstanceAdvancedSettings item set at the cluster level (currently valid for the ExtraArgs node custom parameter only)
+    */
+    @SerializedName("InstanceAdvancedSettingsOverride")
+    @Expose
+    private InstanceAdvancedSettings InstanceAdvancedSettingsOverride;
+
+    /**
      * Get Node role. Values: MASTER_ETCD, WORKER. You only need to specify MASTER_ETCD when creating a self-deployed cluster (INDEPENDENT_CLUSTER). 
      * @return NodeRole Node role. Values: MASTER_ETCD, WORKER. You only need to specify MASTER_ETCD when creating a self-deployed cluster (INDEPENDENT_CLUSTER).
      */
@@ -69,11 +76,28 @@ public class ExistedInstancesForNode extends AbstractModel{
     }
 
     /**
+     * Get Advanced node setting, which overrides the InstanceAdvancedSettings item set at the cluster level (currently valid for the ExtraArgs node custom parameter only) 
+     * @return InstanceAdvancedSettingsOverride Advanced node setting, which overrides the InstanceAdvancedSettings item set at the cluster level (currently valid for the ExtraArgs node custom parameter only)
+     */
+    public InstanceAdvancedSettings getInstanceAdvancedSettingsOverride() {
+        return this.InstanceAdvancedSettingsOverride;
+    }
+
+    /**
+     * Set Advanced node setting, which overrides the InstanceAdvancedSettings item set at the cluster level (currently valid for the ExtraArgs node custom parameter only)
+     * @param InstanceAdvancedSettingsOverride Advanced node setting, which overrides the InstanceAdvancedSettings item set at the cluster level (currently valid for the ExtraArgs node custom parameter only)
+     */
+    public void setInstanceAdvancedSettingsOverride(InstanceAdvancedSettings InstanceAdvancedSettingsOverride) {
+        this.InstanceAdvancedSettingsOverride = InstanceAdvancedSettingsOverride;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NodeRole", this.NodeRole);
         this.setParamObj(map, prefix + "ExistedInstancesPara.", this.ExistedInstancesPara);
+        this.setParamObj(map, prefix + "InstanceAdvancedSettingsOverride.", this.InstanceAdvancedSettingsOverride);
 
     }
 }

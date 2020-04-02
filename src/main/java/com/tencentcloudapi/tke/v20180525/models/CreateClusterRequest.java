@@ -72,7 +72,7 @@ public class CreateClusterRequest extends AbstractModel{
     private ExistedInstancesForNode [] ExistedInstancesForNode;
 
     /**
-    * 
+    * CVM type and the corresponding data disk mounting configuration information.
     */
     @SerializedName("InstanceDataDiskMountSettings")
     @Expose
@@ -191,16 +191,16 @@ public class CreateClusterRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return InstanceDataDiskMountSettings 
+     * Get CVM type and the corresponding data disk mounting configuration information. 
+     * @return InstanceDataDiskMountSettings CVM type and the corresponding data disk mounting configuration information.
      */
     public InstanceDataDiskMountSetting [] getInstanceDataDiskMountSettings() {
         return this.InstanceDataDiskMountSettings;
     }
 
     /**
-     * Set 
-     * @param InstanceDataDiskMountSettings 
+     * Set CVM type and the corresponding data disk mounting configuration information.
+     * @param InstanceDataDiskMountSettings CVM type and the corresponding data disk mounting configuration information.
      */
     public void setInstanceDataDiskMountSettings(InstanceDataDiskMountSetting [] InstanceDataDiskMountSettings) {
         this.InstanceDataDiskMountSettings = InstanceDataDiskMountSettings;

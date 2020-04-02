@@ -80,11 +80,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RoleType;
 
     /**
-    * 
+    * Valid period
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SessionDuration")
     @Expose
     private Long SessionDuration;
+
+    /**
+    * 
+    */
+    @SerializedName("DeletionTaskId")
+    @Expose
+    private String DeletionTaskId;
 
     /**
      * Get Role ID 
@@ -219,19 +227,39 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return SessionDuration 
+     * Get Valid period
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return SessionDuration Valid period
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getSessionDuration() {
         return this.SessionDuration;
     }
 
     /**
-     * Set 
-     * @param SessionDuration 
+     * Set Valid period
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param SessionDuration Valid period
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setSessionDuration(Long SessionDuration) {
         this.SessionDuration = SessionDuration;
+    }
+
+    /**
+     * Get  
+     * @return DeletionTaskId 
+     */
+    public String getDeletionTaskId() {
+        return this.DeletionTaskId;
+    }
+
+    /**
+     * Set 
+     * @param DeletionTaskId 
+     */
+    public void setDeletionTaskId(String DeletionTaskId) {
+        this.DeletionTaskId = DeletionTaskId;
     }
 
     /**
@@ -247,6 +275,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ConsoleLogin", this.ConsoleLogin);
         this.setParamSimple(map, prefix + "RoleType", this.RoleType);
         this.setParamSimple(map, prefix + "SessionDuration", this.SessionDuration);
+        this.setParamSimple(map, prefix + "DeletionTaskId", this.DeletionTaskId);
 
     }
 }

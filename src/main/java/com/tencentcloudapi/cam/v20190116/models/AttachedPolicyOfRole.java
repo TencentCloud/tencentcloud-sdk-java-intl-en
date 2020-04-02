@@ -59,7 +59,7 @@ Note: This field may return null, indicating that no valid value was found.
     private Long CreateMode;
 
     /**
-    * Queries if the policy has been deactivated
+    * Whether the product has been deprecated (0: no; 1: yes)
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Deactived")
@@ -67,11 +67,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long Deactived;
 
     /**
-    * 
+    * List of deprecated products
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DeactivedDetail")
     @Expose
     private String [] DeactivedDetail;
+
+    /**
+    * Policy description
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
 
     /**
      * Get Policy ID 
@@ -158,9 +167,9 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Queries if the policy has been deactivated
+     * Get Whether the product has been deprecated (0: no; 1: yes)
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Deactived Queries if the policy has been deactivated
+     * @return Deactived Whether the product has been deprecated (0: no; 1: yes)
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getDeactived() {
@@ -168,9 +177,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Queries if the policy has been deactivated
+     * Set Whether the product has been deprecated (0: no; 1: yes)
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Deactived Queries if the policy has been deactivated
+     * @param Deactived Whether the product has been deprecated (0: no; 1: yes)
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDeactived(Long Deactived) {
@@ -178,19 +187,43 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return DeactivedDetail 
+     * Get List of deprecated products
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return DeactivedDetail List of deprecated products
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String [] getDeactivedDetail() {
         return this.DeactivedDetail;
     }
 
     /**
-     * Set 
-     * @param DeactivedDetail 
+     * Set List of deprecated products
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param DeactivedDetail List of deprecated products
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDeactivedDetail(String [] DeactivedDetail) {
         this.DeactivedDetail = DeactivedDetail;
+    }
+
+    /**
+     * Get Policy description
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Description Policy description
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set Policy description
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Description Policy description
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
     }
 
     /**
@@ -204,6 +237,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "CreateMode", this.CreateMode);
         this.setParamSimple(map, prefix + "Deactived", this.Deactived);
         this.setParamArraySimple(map, prefix + "DeactivedDetail.", this.DeactivedDetail);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

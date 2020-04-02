@@ -30,7 +30,7 @@ public class DescribeDCDBShardsRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * List of shard IDs.
+    * Shard ID list.
     */
     @SerializedName("ShardInstanceIds")
     @Expose
@@ -81,16 +81,16 @@ public class DescribeDCDBShardsRequest extends AbstractModel{
     }
 
     /**
-     * Get List of shard IDs. 
-     * @return ShardInstanceIds List of shard IDs.
+     * Get Shard ID list. 
+     * @return ShardInstanceIds Shard ID list.
      */
     public String [] getShardInstanceIds() {
         return this.ShardInstanceIds;
     }
 
     /**
-     * Set List of shard IDs.
-     * @param ShardInstanceIds List of shard IDs.
+     * Set Shard ID list.
+     * @param ShardInstanceIds Shard ID list.
      */
     public void setShardInstanceIds(String [] ShardInstanceIds) {
         this.ShardInstanceIds = ShardInstanceIds;

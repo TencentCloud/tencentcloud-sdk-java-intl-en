@@ -59,6 +59,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private ParamConstraint Constraint;
 
     /**
+    * Whether a value has been set. false: no, true: yes
+    */
+    @SerializedName("HaveSetValue")
+    @Expose
+    private Boolean HaveSetValue;
+
+    /**
      * Get Parameter name 
      * @return Param Parameter name
      */
@@ -143,6 +150,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Whether a value has been set. false: no, true: yes 
+     * @return HaveSetValue Whether a value has been set. false: no, true: yes
+     */
+    public Boolean getHaveSetValue() {
+        return this.HaveSetValue;
+    }
+
+    /**
+     * Set Whether a value has been set. false: no, true: yes
+     * @param HaveSetValue Whether a value has been set. false: no, true: yes
+     */
+    public void setHaveSetValue(Boolean HaveSetValue) {
+        this.HaveSetValue = HaveSetValue;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -151,6 +174,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "SetValue", this.SetValue);
         this.setParamSimple(map, prefix + "Default", this.Default);
         this.setParamObj(map, prefix + "Constraint.", this.Constraint);
+        this.setParamSimple(map, prefix + "HaveSetValue", this.HaveSetValue);
 
     }
 }
