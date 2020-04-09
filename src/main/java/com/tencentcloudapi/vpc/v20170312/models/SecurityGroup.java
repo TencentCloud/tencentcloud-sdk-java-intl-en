@@ -65,6 +65,13 @@ public class SecurityGroup extends AbstractModel{
     private String CreatedTime;
 
     /**
+    * Tag key-value pairs.
+    */
+    @SerializedName("TagSet")
+    @Expose
+    private Tag [] TagSet;
+
+    /**
      * Get The security group instance ID, such as `sg-ohuuioma`. 
      * @return SecurityGroupId The security group instance ID, such as `sg-ohuuioma`.
      */
@@ -161,6 +168,22 @@ public class SecurityGroup extends AbstractModel{
     }
 
     /**
+     * Get Tag key-value pairs. 
+     * @return TagSet Tag key-value pairs.
+     */
+    public Tag [] getTagSet() {
+        return this.TagSet;
+    }
+
+    /**
+     * Set Tag key-value pairs.
+     * @param TagSet Tag key-value pairs.
+     */
+    public void setTagSet(Tag [] TagSet) {
+        this.TagSet = TagSet;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class SecurityGroup extends AbstractModel{
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
 
     }
 }

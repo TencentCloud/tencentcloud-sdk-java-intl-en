@@ -30,15 +30,15 @@ public class Route extends AbstractModel{
     private String DestinationCidrBlock;
 
     /**
-    * The type of the next hop. Currently supported types include:
-CVM: Public gateway-type CVM;
+    * Type of the next hop. Currently supported types are:
+CVM: CVM of the public gateway type;
 VPN: VPN gateway;
-DIRECTCONNECT: Direct connect gateway;
-PEERCONNECTION: Peering connection;
+DIRECTCONNECT: direct connect gateway;
+PEERCONNECTION: peering connection;
 SSLVPN: sslvpn gateway;
 NAT: NAT gateway; 
-NORMAL_CVM: Normal CVM;
-EIP: The public IP of the CVM;
+NORMAL_CVM: normal CVM;
+EIP: public IP address of the CVM;
 CCN: Cloud Connect Network.
     */
     @SerializedName("GatewayType")
@@ -86,6 +86,13 @@ Users can only add and operate USER-type routes.
     private String RouteType;
 
     /**
+    * Route table instance ID, such as rtb-azd4dt1c.
+    */
+    @SerializedName("RouteTableId")
+    @Expose
+    private String RouteTableId;
+
+    /**
      * Get Destination IP range, such as 112.20.51.0/24. Values cannot be in the VPC IP range. 
      * @return DestinationCidrBlock Destination IP range, such as 112.20.51.0/24. Values cannot be in the VPC IP range.
      */
@@ -102,25 +109,25 @@ Users can only add and operate USER-type routes.
     }
 
     /**
-     * Get The type of the next hop. Currently supported types include:
-CVM: Public gateway-type CVM;
+     * Get Type of the next hop. Currently supported types are:
+CVM: CVM of the public gateway type;
 VPN: VPN gateway;
-DIRECTCONNECT: Direct connect gateway;
-PEERCONNECTION: Peering connection;
+DIRECTCONNECT: direct connect gateway;
+PEERCONNECTION: peering connection;
 SSLVPN: sslvpn gateway;
 NAT: NAT gateway; 
-NORMAL_CVM: Normal CVM;
-EIP: The public IP of the CVM;
+NORMAL_CVM: normal CVM;
+EIP: public IP address of the CVM;
 CCN: Cloud Connect Network. 
-     * @return GatewayType The type of the next hop. Currently supported types include:
-CVM: Public gateway-type CVM;
+     * @return GatewayType Type of the next hop. Currently supported types are:
+CVM: CVM of the public gateway type;
 VPN: VPN gateway;
-DIRECTCONNECT: Direct connect gateway;
-PEERCONNECTION: Peering connection;
+DIRECTCONNECT: direct connect gateway;
+PEERCONNECTION: peering connection;
 SSLVPN: sslvpn gateway;
 NAT: NAT gateway; 
-NORMAL_CVM: Normal CVM;
-EIP: The public IP of the CVM;
+NORMAL_CVM: normal CVM;
+EIP: public IP address of the CVM;
 CCN: Cloud Connect Network.
      */
     public String getGatewayType() {
@@ -128,25 +135,25 @@ CCN: Cloud Connect Network.
     }
 
     /**
-     * Set The type of the next hop. Currently supported types include:
-CVM: Public gateway-type CVM;
+     * Set Type of the next hop. Currently supported types are:
+CVM: CVM of the public gateway type;
 VPN: VPN gateway;
-DIRECTCONNECT: Direct connect gateway;
-PEERCONNECTION: Peering connection;
+DIRECTCONNECT: direct connect gateway;
+PEERCONNECTION: peering connection;
 SSLVPN: sslvpn gateway;
 NAT: NAT gateway; 
-NORMAL_CVM: Normal CVM;
-EIP: The public IP of the CVM;
+NORMAL_CVM: normal CVM;
+EIP: public IP address of the CVM;
 CCN: Cloud Connect Network.
-     * @param GatewayType The type of the next hop. Currently supported types include:
-CVM: Public gateway-type CVM;
+     * @param GatewayType Type of the next hop. Currently supported types are:
+CVM: CVM of the public gateway type;
 VPN: VPN gateway;
-DIRECTCONNECT: Direct connect gateway;
-PEERCONNECTION: Peering connection;
+DIRECTCONNECT: direct connect gateway;
+PEERCONNECTION: peering connection;
 SSLVPN: sslvpn gateway;
 NAT: NAT gateway; 
-NORMAL_CVM: Normal CVM;
-EIP: The public IP of the CVM;
+NORMAL_CVM: normal CVM;
+EIP: public IP address of the CVM;
 CCN: Cloud Connect Network.
      */
     public void setGatewayType(String GatewayType) {
@@ -254,6 +261,22 @@ Users can only add and operate USER-type routes.
     }
 
     /**
+     * Get Route table instance ID, such as rtb-azd4dt1c. 
+     * @return RouteTableId Route table instance ID, such as rtb-azd4dt1c.
+     */
+    public String getRouteTableId() {
+        return this.RouteTableId;
+    }
+
+    /**
+     * Set Route table instance ID, such as rtb-azd4dt1c.
+     * @param RouteTableId Route table instance ID, such as rtb-azd4dt1c.
+     */
+    public void setRouteTableId(String RouteTableId) {
+        this.RouteTableId = RouteTableId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -264,6 +287,7 @@ Users can only add and operate USER-type routes.
         this.setParamSimple(map, prefix + "RouteDescription", this.RouteDescription);
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
         this.setParamSimple(map, prefix + "RouteType", this.RouteType);
+        this.setParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
 
     }
 }

@@ -30,7 +30,7 @@ public class DescribeNetworkInterfaceLimitResponse extends AbstractModel{
     private Long EniQuantity;
 
     /**
-    * The quota of IP addresses that can be allocated to each ENI.
+    * Quota of IP addresses that can be allocated to each ENI.
     */
     @SerializedName("EniPrivateIpAddressQuantity")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeNetworkInterfaceLimitResponse extends AbstractModel{
     }
 
     /**
-     * Get The quota of IP addresses that can be allocated to each ENI. 
-     * @return EniPrivateIpAddressQuantity The quota of IP addresses that can be allocated to each ENI.
+     * Get Quota of IP addresses that can be allocated to each ENI. 
+     * @return EniPrivateIpAddressQuantity Quota of IP addresses that can be allocated to each ENI.
      */
     public Long getEniPrivateIpAddressQuantity() {
         return this.EniPrivateIpAddressQuantity;
     }
 
     /**
-     * Set The quota of IP addresses that can be allocated to each ENI.
-     * @param EniPrivateIpAddressQuantity The quota of IP addresses that can be allocated to each ENI.
+     * Set Quota of IP addresses that can be allocated to each ENI.
+     * @param EniPrivateIpAddressQuantity Quota of IP addresses that can be allocated to each ENI.
      */
     public void setEniPrivateIpAddressQuantity(Long EniPrivateIpAddressQuantity) {
         this.EniPrivateIpAddressQuantity = EniPrivateIpAddressQuantity;

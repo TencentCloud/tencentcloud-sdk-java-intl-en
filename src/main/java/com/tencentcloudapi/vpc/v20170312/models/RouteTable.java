@@ -72,6 +72,13 @@ public class RouteTable extends AbstractModel{
     private String CreatedTime;
 
     /**
+    * Tag key-value pairs.
+    */
+    @SerializedName("TagSet")
+    @Expose
+    private Tag [] TagSet;
+
+    /**
      * Get VPC instance ID. 
      * @return VpcId VPC instance ID.
      */
@@ -184,6 +191,22 @@ public class RouteTable extends AbstractModel{
     }
 
     /**
+     * Get Tag key-value pairs. 
+     * @return TagSet Tag key-value pairs.
+     */
+    public Tag [] getTagSet() {
+        return this.TagSet;
+    }
+
+    /**
+     * Set Tag key-value pairs.
+     * @param TagSet Tag key-value pairs.
+     */
+    public void setTagSet(Tag [] TagSet) {
+        this.TagSet = TagSet;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class RouteTable extends AbstractModel{
         this.setParamArrayObj(map, prefix + "RouteSet.", this.RouteSet);
         this.setParamSimple(map, prefix + "Main", this.Main);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
 
     }
 }

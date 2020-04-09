@@ -51,6 +51,13 @@ public class ServiceTemplateGroup extends AbstractModel{
     private String CreatedTime;
 
     /**
+    * Protocol port template instance information.
+    */
+    @SerializedName("ServiceTemplateSet")
+    @Expose
+    private ServiceTemplate [] ServiceTemplateSet;
+
+    /**
      * Get Protocol port template group instance ID, such as `ppmg-2klmrefu`. 
      * @return ServiceTemplateGroupId Protocol port template group instance ID, such as `ppmg-2klmrefu`.
      */
@@ -115,6 +122,22 @@ public class ServiceTemplateGroup extends AbstractModel{
     }
 
     /**
+     * Get Protocol port template instance information. 
+     * @return ServiceTemplateSet Protocol port template instance information.
+     */
+    public ServiceTemplate [] getServiceTemplateSet() {
+        return this.ServiceTemplateSet;
+    }
+
+    /**
+     * Set Protocol port template instance information.
+     * @param ServiceTemplateSet Protocol port template instance information.
+     */
+    public void setServiceTemplateSet(ServiceTemplate [] ServiceTemplateSet) {
+        this.ServiceTemplateSet = ServiceTemplateSet;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class ServiceTemplateGroup extends AbstractModel{
         this.setParamSimple(map, prefix + "ServiceTemplateGroupName", this.ServiceTemplateGroupName);
         this.setParamArraySimple(map, prefix + "ServiceTemplateIdSet.", this.ServiceTemplateIdSet);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamArrayObj(map, prefix + "ServiceTemplateSet.", this.ServiceTemplateSet);
 
     }
 }

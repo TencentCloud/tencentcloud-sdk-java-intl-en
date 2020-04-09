@@ -434,6 +434,42 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to get image information.
+     * @param req DescribeImagesRequest
+     * @return DescribeImagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImagesResponse DescribeImages(DescribeImagesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeImagesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeImagesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeImages"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to obtain all regions supported by TKE.
+     * @param req DescribeRegionsRequest
+     * @return DescribeRegionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRegionsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRegionsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRegions"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the list of route table conflicts.
      * @param req DescribeRouteTableConflictsRequest
      * @return DescribeRouteTableConflictsResponse
@@ -445,6 +481,24 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeRouteTableConflictsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeRouteTableConflicts"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify cluster attributes.
+     * @param req ModifyClusterAttributeRequest
+     * @return ModifyClusterAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterAttributeResponse ModifyClusterAttribute(ModifyClusterAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyClusterAttributeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyClusterAttributeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyClusterAttribute"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

@@ -37,6 +37,13 @@ public class CreateSubnetsRequest extends AbstractModel{
     private SubnetInput [] Subnets;
 
     /**
+    * Bound tags. Note that the collection of tags here is shared by all subnet objects in the list. You cannot specify tags for each subnet. Example: [{"Key": "city", "Value": "shanghai"}].
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get The `ID` of the `VPC` instance, such as `vpc-6v2ht8q5`. 
      * @return VpcId The `ID` of the `VPC` instance, such as `vpc-6v2ht8q5`.
      */
@@ -69,11 +76,28 @@ public class CreateSubnetsRequest extends AbstractModel{
     }
 
     /**
+     * Get Bound tags. Note that the collection of tags here is shared by all subnet objects in the list. You cannot specify tags for each subnet. Example: [{"Key": "city", "Value": "shanghai"}]. 
+     * @return Tags Bound tags. Note that the collection of tags here is shared by all subnet objects in the list. You cannot specify tags for each subnet. Example: [{"Key": "city", "Value": "shanghai"}].
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Bound tags. Note that the collection of tags here is shared by all subnet objects in the list. You cannot specify tags for each subnet. Example: [{"Key": "city", "Value": "shanghai"}].
+     * @param Tags Bound tags. Note that the collection of tags here is shared by all subnet objects in the list. You cannot specify tags for each subnet. Example: [{"Key": "city", "Value": "shanghai"}].
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamArrayObj(map, prefix + "Subnets.", this.Subnets);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

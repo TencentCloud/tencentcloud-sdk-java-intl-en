@@ -73,11 +73,25 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     private Long SessionExpireTime;
 
     /**
-    * Forwarding protocol between CLB instance and real server. Value range: HTTP, HTTPS. Default value: HTTP
+    * Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, TRPC.
     */
     @SerializedName("ForwardType")
     @Expose
     private String ForwardType;
+
+    /**
+    * TRPC callee server route, which is required when `ForwardType` is `TRPC`.
+    */
+    @SerializedName("TrpcCallee")
+    @Expose
+    private String TrpcCallee;
+
+    /**
+    * TRPC calling service API, which is required when `ForwardType` is `TRPC`.
+    */
+    @SerializedName("TrpcFunc")
+    @Expose
+    private String TrpcFunc;
 
     /**
      * Get CLB instance ID 
@@ -196,19 +210,51 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     }
 
     /**
-     * Get Forwarding protocol between CLB instance and real server. Value range: HTTP, HTTPS. Default value: HTTP 
-     * @return ForwardType Forwarding protocol between CLB instance and real server. Value range: HTTP, HTTPS. Default value: HTTP
+     * Get Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, TRPC. 
+     * @return ForwardType Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, TRPC.
      */
     public String getForwardType() {
         return this.ForwardType;
     }
 
     /**
-     * Set Forwarding protocol between CLB instance and real server. Value range: HTTP, HTTPS. Default value: HTTP
-     * @param ForwardType Forwarding protocol between CLB instance and real server. Value range: HTTP, HTTPS. Default value: HTTP
+     * Set Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, TRPC.
+     * @param ForwardType Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, TRPC.
      */
     public void setForwardType(String ForwardType) {
         this.ForwardType = ForwardType;
+    }
+
+    /**
+     * Get TRPC callee server route, which is required when `ForwardType` is `TRPC`. 
+     * @return TrpcCallee TRPC callee server route, which is required when `ForwardType` is `TRPC`.
+     */
+    public String getTrpcCallee() {
+        return this.TrpcCallee;
+    }
+
+    /**
+     * Set TRPC callee server route, which is required when `ForwardType` is `TRPC`.
+     * @param TrpcCallee TRPC callee server route, which is required when `ForwardType` is `TRPC`.
+     */
+    public void setTrpcCallee(String TrpcCallee) {
+        this.TrpcCallee = TrpcCallee;
+    }
+
+    /**
+     * Get TRPC calling service API, which is required when `ForwardType` is `TRPC`. 
+     * @return TrpcFunc TRPC calling service API, which is required when `ForwardType` is `TRPC`.
+     */
+    public String getTrpcFunc() {
+        return this.TrpcFunc;
+    }
+
+    /**
+     * Set TRPC calling service API, which is required when `ForwardType` is `TRPC`.
+     * @param TrpcFunc TRPC calling service API, which is required when `ForwardType` is `TRPC`.
+     */
+    public void setTrpcFunc(String TrpcFunc) {
+        this.TrpcFunc = TrpcFunc;
     }
 
     /**
@@ -223,6 +269,8 @@ They represent weighted round robin, least connections, and IP hash, respectivel
         this.setParamSimple(map, prefix + "Scheduler", this.Scheduler);
         this.setParamSimple(map, prefix + "SessionExpireTime", this.SessionExpireTime);
         this.setParamSimple(map, prefix + "ForwardType", this.ForwardType);
+        this.setParamSimple(map, prefix + "TrpcCallee", this.TrpcCallee);
+        this.setParamSimple(map, prefix + "TrpcFunc", this.TrpcFunc);
 
     }
 }

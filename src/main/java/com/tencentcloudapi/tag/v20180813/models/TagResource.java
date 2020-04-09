@@ -58,6 +58,14 @@ public class TagResource extends AbstractModel{
     private String TagValueMd5;
 
     /**
+    * Resource type
+Note: this field may return null, indicating that no valid values found.
+    */
+    @SerializedName("ServiceType")
+    @Expose
+    private String ServiceType;
+
+    /**
      * Get Tag key. 
      * @return TagKey Tag key.
      */
@@ -138,6 +146,26 @@ public class TagResource extends AbstractModel{
     }
 
     /**
+     * Get Resource type
+Note: this field may return null, indicating that no valid values found. 
+     * @return ServiceType Resource type
+Note: this field may return null, indicating that no valid values found.
+     */
+    public String getServiceType() {
+        return this.ServiceType;
+    }
+
+    /**
+     * Set Resource type
+Note: this field may return null, indicating that no valid values found.
+     * @param ServiceType Resource type
+Note: this field may return null, indicating that no valid values found.
+     */
+    public void setServiceType(String ServiceType) {
+        this.ServiceType = ServiceType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +174,7 @@ public class TagResource extends AbstractModel{
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "TagKeyMd5", this.TagKeyMd5);
         this.setParamSimple(map, prefix + "TagValueMd5", this.TagValueMd5);
+        this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
 
     }
 }

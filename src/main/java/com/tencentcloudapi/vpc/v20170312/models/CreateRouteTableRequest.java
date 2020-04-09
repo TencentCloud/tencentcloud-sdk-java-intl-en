@@ -37,6 +37,13 @@ public class CreateRouteTableRequest extends AbstractModel{
     private String RouteTableName;
 
     /**
+    * Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get The ID of the VPC instance to be operated on. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API. 
      * @return VpcId The ID of the VPC instance to be operated on. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
      */
@@ -69,11 +76,28 @@ public class CreateRouteTableRequest extends AbstractModel{
     }
 
     /**
+     * Get Bound tags, such as [{"Key": "city", "Value": "shanghai"}]. 
+     * @return Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     * @param Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "RouteTableName", this.RouteTableName);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

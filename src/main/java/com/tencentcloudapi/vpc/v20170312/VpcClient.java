@@ -140,6 +140,27 @@ This API is completed asynchronously. If you need to query the async execution r
     }
 
     /**
+     *This API (AssignPrivateIpAddresses) is used for the ENI to apply for private IPs.
+* An ENI can only be bound with a limited number of IPs. For more information about resource limits, see<a href="/document/product/576/18527">ENI use limits</a>.
+* You can specify the private IP you want to apply for. It cannot be the primary IP, which already exists and cannot be modified. The private IP must be in the same subnet as the ENI, and cannot be occupied.
+* You can apply for more than one secondary private IP on the ENI. The API will return the specified number of secondary private IPs in the subnet IP range of the ENI.
+     * @param req AssignPrivateIpAddressesRequest
+     * @return AssignPrivateIpAddressesResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssignPrivateIpAddressesResponse AssignPrivateIpAddresses(AssignPrivateIpAddressesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AssignPrivateIpAddressesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AssignPrivateIpAddressesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AssignPrivateIpAddresses"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (AssociateAddress) is used to bind an [Elastic IP](https://cloud.tencent.com/document/product/213/1941) (EIP for short) to the specified private IP of an instance or ENI.
 * Essentially, binding an EIP to an instance (CVM) means binding an EIP to the primary private IP of the primary ENI on an instance.
 * When you bind an EIP to the primary private IP of the primary ENI, the previously bound public IP is automatically unbound and released.
@@ -157,6 +178,24 @@ This API is completed asynchronously. If you need to query the async execution r
                 Type type = new TypeToken<JsonResponseModel<AssociateAddressResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "AssociateAddress"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to associate a network ACL with subnets in a VPC instance.
+     * @param req AssociateNetworkAclSubnetsRequest
+     * @return AssociateNetworkAclSubnetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssociateNetworkAclSubnetsResponse AssociateNetworkAclSubnets(AssociateNetworkAclSubnetsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AssociateNetworkAclSubnetsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AssociateNetworkAclSubnetsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AssociateNetworkAclSubnets"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -183,9 +222,9 @@ The number of network instances that each CCN can be associated with is limited.
     }
 
     /**
-     *This API (AttachClassicLinkVpc) is used to create a Classiclink between a VPC and a basic network device.
-* The VPC and the basic network device must be in the same region.
-* For the difference between VPCs and basic networks, see VPC product documentation-<a href="https://cloud.tencent.com/document/product/215/535#2.-.E7.A7.81.E6.9C.89.E7.BD.91.E7.BB.9C.E4.B8.8E.E5.9F.BA.E7.A1.80.E7.BD.91.E7.BB.9C">VPCs and basic networks</a>.
+     *This API is used to create a Classiclink between a VPC instance and a basic network device.
+* The VPC instance and the basic network device must be in the same region.
+* For differences between VPC and basic networks, see <a href="https://cloud.tencent.com/document/product/215/30720">VPC and Basic Networks</a>.
      * @param req AttachClassicLinkVpcRequest
      * @return AttachClassicLinkVpcResponse
      * @throws TencentCloudSDKException
@@ -203,11 +242,11 @@ The number of network instances that each CCN can be associated with is limited.
     }
 
     /**
-     *This API (AttachNetworkInterface) is used to bind an ENI to a CVM.
-* One CVM can be bound to multiple ENIs, but only one primary ENI. For more information on the limits, see <a href="https://cloud.tencent.com/document/product/215/6513">ENI use limits</a>.
+     *This API is used to bind an ENI to a CVM.
+* One CVM can be bound to multiple ENIs, but only one primary ENI. For more information on the limits, see <a href="https://cloud.tencent.com/document/product/576/18527">ENI Use Limits</a>.
 * An ENI can only be bound to one CVM at a time.
-* Only CVMs in running or shutdown status can be bound to an ENI. For more information about CVM status, see <a href="https://cloud.tencent.com/document/api/213/9452#instance_state">Tencent CVM information</a>.
-* An ENI can only be bound to a CVM in VPC, and the CVM must reside in the same availability zone as the subnet of the ENI.
+* Only CVMs in the running or shutdown state can be bound to an ENI. For more information on CVM states, see <a href="https://cloud.tencent.com/document/api/213/9452#InstanceStatus">Tencent CVM Information</a>.
+* An ENI can only be bound to a CVM in a VPC instance, and the CVM must reside in the same availability zone as the subnet of the ENI.
      * @param req AttachNetworkInterfaceRequest
      * @return AttachNetworkInterfaceResponse
      * @throws TencentCloudSDKException
@@ -279,8 +318,9 @@ The number of network instances that each CCN can be associated with is limited.
     }
 
     /**
-     *This API (CreateCcn) is used to create a Cloud Connect Network (CCN).<br />
-Each account can only create a limited number of CCN instances. For more information, see the product documentation. If you need to create more instances, please contact the online customer service.
+     *This API is used to create a Cloud Connect Network (CCN).<br />
+* You can bind a tag when creating a CCN instance. The tag list in the response indicates the tags that have been successfully added.
+Each account can only create a limited number of CCN instances. For more information, see product documentation. To create more instances, contact the online customer service.
      * @param req CreateCcnRequest
      * @return CreateCcnResponse
      * @throws TencentCloudSDKException
@@ -414,6 +454,25 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
+     *This API is used to create a <a href="https://cloud.tencent.com/document/product/215/20088">network ACL</a>.
+* The inbound and outbound rules for a new network ACL are "Deny All" by default. You need to call `ModifyNetworkAclEntries` after creation to set rules for the network ACL as needed.
+     * @param req CreateNetworkAclRequest
+     * @return CreateNetworkAclResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNetworkAclResponse CreateNetworkAcl(CreateNetworkAclRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateNetworkAclResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateNetworkAclResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateNetworkAcl"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create one or more ENIs.
 * You can specify private IP addresses and a primary IP when creating an ENI. The specified private IP must be in the same subnet as the ENI and is not occupied.
 * When creating an ENI, you can specify the number of private IP addresses that you want to apply for. The system will randomly generate private IP addresses.
@@ -437,8 +496,9 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
-     *This API (CreateRouteTable) is used to create a route table.
-* After the VPC has been created, the system will create a default route table with which all newly created subnets will be associated. By default, you can use this route table to manage your routing policies. If you have multiple routing policies, you can call the API for creating route table to create more route tables to manage your routing policies.
+     *This API is used to create a route table.
+* After the VPC instance has been created, the system creates a default route table with which all newly created subnets will be associated. By default, you can use this route table to manage your routing policies. If you have multiple routing policies, you can call the API for creating route tables to create more route tables to manage these routing policies.
+* You can bind a tag when creating a route table. The tag list in the response indicates the tags that have been successfully added.
      * @param req CreateRouteTableRequest
      * @return CreateRouteTableResponse
      * @throws TencentCloudSDKException
@@ -475,9 +535,10 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
-     *This API (CreateSecurityGroup) is used to create security groups (SecurityGroup).
-* <a href="https://cloud.tencent.com/document/product/213/500#2.-.E5.AE.89.E5.85.A8.E7.BB.84.E7.9A.84.E9.99.90.E5.88.B6">Security group limits</a> for each project in each region under each account.
-* Both the inbound and outbound rules for a newly created security group are Deny All by default. You need to call CreateSecurityGroupPolicies to set the security group rules according to your needs.
+     *This API is used to create a security group (SecurityGroup).
+* Note the <a href="https://cloud.tencent.com/document/product/213/12453">maximum number of security groups</a> per project in each region under each account.
+* Both the inbound and outbound rules for a newly created security group are "Deny All" by default. You need to call CreateSecurityGroupPolicies to set security group rules based on your needs.
+* You can bind a tag when creating a security group. The tag list in the response indicates the tags that have been successfully added.
      * @param req CreateSecurityGroupRequest
      * @return CreateSecurityGroupResponse
      * @throws TencentCloudSDKException
@@ -559,12 +620,13 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
-     *This API (CreateSubnet) is used to create subnets.
-* You must create a VPC before creating a subnet.
-* After the subnet is successfully created, its IP address range cannot be modified. The subnet IP address range must fall within the VPC IP address range. They can be the same if the VPC has only one subnet. We recommend that you keep the subnet IP address range within the VPC IP address range to reserve IP address ranges for other subnets.
+     *This API is used to create a subnet.
+* You must create a VPC instance before creating a subnet.
+* After the subnet is successfully created, its IP address range cannot be modified. The subnet IP address range must fall within the VPC IP address range. They can be the same if the VPC instance has only one subnet. We recommend that you keep the subnet IP address range within the VPC IP address range to reserve IP address ranges for other subnets.
 * The subnet mask of the smallest IP address range that can be created is 28 (16 IP addresses), and that of the largest IP address range is 16 (65,536 IP addresses).
-* IP address ranges of different subnets cannot overlap with each other within the same VPC.
+* IP address ranges of different subnets cannot overlap with each other within the same VPC instance.
 * A subnet is automatically associated with the default route table once created.
+* You can bind a tag when creating a subnet. The tag list in the response indicates the tags that have been successfully added.
      * @param req CreateSubnetRequest
      * @return CreateSubnetResponse
      * @throws TencentCloudSDKException
@@ -582,12 +644,13 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
-     *This API (CreateSubnets) is used to create subnets in batches.
-* You must create a VPC before creating a subnet.
+     *This API is used to create subnets in batches.
+* You must create a VPC instance before creating a subnet.
 * After the subnet is successfully created, its IP address range cannot be modified. The subnet IP address range must fall within the VPC IP address range. They can be the same if the VPC has only one subnet. We recommend that you keep the subnet IP address range within the VPC IP address range to reserve IP address ranges for other subnets.
 * The subnet mask of the smallest IP address range that can be created is 28 (16 IP addresses), and that of the largest IP address range is 16 (65,536 IP addresses).
-* IP address ranges of different subnets cannot overlap with each other within the same VPC.
+* IP address ranges of different subnets cannot overlap with each other within the same VPC instance.
 * A subnet is automatically associated with the default route table once created.
+* You can bind a tag when creating a subnet. The tag list in the response indicates the tags that have been successfully added.
      * @param req CreateSubnetsRequest
      * @return CreateSubnetsResponse
      * @throws TencentCloudSDKException
@@ -605,9 +668,10 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
-     *This API (CreateVpc) is used to create a VPC.
-* The subnet mask of the smallest IP address range that can be created is 28 (16 IP addresses), and that of the largest IP address range is 16 (65,536 IP addresses). For more information, please see corresponding documents about VPC IP address ranges.
-* The number of VPCs that can be created in a region is limited. For more information, please see <a href="https://intl.cloud.tencent.com/doc/product/215/537" title="VPC use limits">VPC use limits</a>. To request more resources, please contact the online customer service.
+     *This API is used to create a VPC instance.
+* The subnet mask of the smallest IP address range that can be created is 28 (16 IP addresses), and that of the largest IP address range is 16 (65,536 IP addresses). For more information, see the corresponding documents about VPC IP address ranges.
+* The number of VPC instances that can be created in a region is limited. For more information, see <a href="https://intl.cloud.tencent.com/doc/product/215/537" title="VPC Use Limits">VPC Use Limits</a>. To request more resources, contact the online customer service.
+* You can bind a tag when creating a VPC instance. The tag list in the response indicates the tags that have been successfully added.
      * @param req CreateVpcRequest
      * @return CreateVpcResponse
      * @throws TencentCloudSDKException
@@ -803,6 +867,24 @@ After the deletion of a NAT gateway, the system will automatically delete the ro
                 Type type = new TypeToken<JsonResponseModel<DeleteNetDetectResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteNetDetect"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a network ACL.
+     * @param req DeleteNetworkAclRequest
+     * @return DeleteNetworkAclResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteNetworkAclResponse DeleteNetworkAcl(DeleteNetworkAclRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteNetworkAclResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteNetworkAclResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteNetworkAcl"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1308,7 +1390,25 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *This API (DescribeNetworkInterfaceLimit) is used to query the ENI quota based on the CVM instance ID. It returns the ENI quota to which the CVM instance can be bound and the IP address quota that can be allocated to each ENI.
+     *This API is used to query a list of network ACLs.
+     * @param req DescribeNetworkAclsRequest
+     * @return DescribeNetworkAclsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNetworkAclsResponse DescribeNetworkAcls(DescribeNetworkAclsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNetworkAclsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNetworkAclsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeNetworkAcls"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the ENI quota based on the CVM instance ID. It returns the ENI quota to which the CVM instance can be bound and the IP address quota that can be allocated to each ENI.
      * @param req DescribeNetworkInterfaceLimitRequest
      * @return DescribeNetworkInterfaceLimitResponse
      * @throws TencentCloudSDKException
@@ -1319,6 +1419,42 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
                 Type type = new TypeToken<JsonResponseModel<DescribeNetworkInterfaceLimitResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeNetworkInterfaceLimit"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API (DescribeNetworkInterfaces) is used to query the ENI list.
+     * @param req DescribeNetworkInterfacesRequest
+     * @return DescribeNetworkInterfacesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNetworkInterfacesResponse DescribeNetworkInterfaces(DescribeNetworkInterfacesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNetworkInterfacesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNetworkInterfacesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeNetworkInterfaces"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     * This API (DescribeRouteTables) is used to query route tables.
+     * @param req DescribeRouteTablesRequest
+     * @return DescribeRouteTablesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRouteTablesResponse DescribeRouteTables(DescribeRouteTablesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRouteTablesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRouteTablesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRouteTables"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1657,6 +1793,24 @@ After unbinding the network instance, the corresponding routing policy will also
     }
 
     /**
+     *This API is used to disassociate a network ACL from subnets in a VPC instance.
+     * @param req DisassociateNetworkAclSubnetsRequest
+     * @return DisassociateNetworkAclSubnetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisassociateNetworkAclSubnetsResponse DisassociateNetworkAclSubnets(DisassociateNetworkAclSubnetsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisassociateNetworkAclSubnetsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisassociateNetworkAclSubnetsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DisassociateNetworkAclSubnets"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (DownloadCustomerGatewayConfiguration) is used to download a VPN tunnel configuration.
      * @param req DownloadCustomerGatewayConfigurationRequest
      * @return DownloadCustomerGatewayConfigurationResponse
@@ -1879,7 +2033,7 @@ This API is completed asynchronously. If you need to query the async job executi
     }
 
     /**
-     *This API (ModifyCcnRegionBandwidthlimitsType) is used to modify the bandwidth limits policy of the postpaid Ccn instances.
+     *This API is used to modify the bandwidth limit policy of a postpaid CCN instance.
      * @param req ModifyCcnRegionBandwidthLimitsTypeRequest
      * @return ModifyCcnRegionBandwidthLimitsTypeResponse
      * @throws TencentCloudSDKException
@@ -1980,6 +2134,42 @@ This API is completed asynchronously. If you need to query the async job executi
                 Type type = new TypeToken<JsonResponseModel<ModifyNetDetectResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyNetDetect"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the attributes of a network ACL.
+     * @param req ModifyNetworkAclAttributeRequest
+     * @return ModifyNetworkAclAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNetworkAclAttributeResponse ModifyNetworkAclAttribute(ModifyNetworkAclAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyNetworkAclAttributeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyNetworkAclAttributeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyNetworkAclAttribute"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify (add or delete) the inbound and outbound rules of a network ACL.
+     * @param req ModifyNetworkAclEntriesRequest
+     * @return ModifyNetworkAclEntriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNetworkAclEntriesResponse ModifyNetworkAclEntries(ModifyNetworkAclEntriesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyNetworkAclEntriesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyNetworkAclEntriesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyNetworkAclEntries"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

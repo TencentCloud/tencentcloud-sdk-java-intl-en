@@ -72,6 +72,13 @@ public class CreateNatGatewayRequest extends AbstractModel{
     private String Zone;
 
     /**
+    * Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get NAT gateway name 
      * @return NatGatewayName NAT gateway name
      */
@@ -184,6 +191,22 @@ public class CreateNatGatewayRequest extends AbstractModel{
     }
 
     /**
+     * Get Bound tags, such as [{"Key": "city", "Value": "shanghai"}]. 
+     * @return Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     * @param Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class CreateNatGatewayRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AddressCount", this.AddressCount);
         this.setParamArraySimple(map, prefix + "PublicIpAddresses.", this.PublicIpAddresses);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

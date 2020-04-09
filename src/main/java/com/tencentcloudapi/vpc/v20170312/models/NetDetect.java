@@ -79,7 +79,7 @@ public class NetDetect extends AbstractModel{
     private String [] DetectSourceIp;
 
     /**
-    * The type of the next hop. Currently supported types are:
+    * Type of the next hop. Currently supported types are:
 VPN: VPN gateway;
 DIRECTCONNECT: direct connect gateway;
 PEERCONNECTION: peering connection;
@@ -91,7 +91,7 @@ NORMAL_CVM: normal CVM.
     private String NextHopType;
 
     /**
-    * The next-hop destination gateway. The value is related to NextHopType.
+    * Next-hop destination gateway. The value is related to NextHopType.
 If NextHopType is set to VPN, the value of this parameter is the VPN gateway ID, such as vpngw-12345678.
 If NextHopType is set to DIRECTCONNECT, the value of this parameter is the direct connect gateway ID, such as dcg-12345678.
 If NextHopType is set to PEERCONNECTION, the value of this parameter is the peering connection ID, such as pcx-12345678.
@@ -255,13 +255,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The type of the next hop. Currently supported types are:
+     * Get Type of the next hop. Currently supported types are:
 VPN: VPN gateway;
 DIRECTCONNECT: direct connect gateway;
 PEERCONNECTION: peering connection;
 NAT: NAT gateway;
 NORMAL_CVM: normal CVM. 
-     * @return NextHopType The type of the next hop. Currently supported types are:
+     * @return NextHopType Type of the next hop. Currently supported types are:
 VPN: VPN gateway;
 DIRECTCONNECT: direct connect gateway;
 PEERCONNECTION: peering connection;
@@ -273,13 +273,13 @@ NORMAL_CVM: normal CVM.
     }
 
     /**
-     * Set The type of the next hop. Currently supported types are:
+     * Set Type of the next hop. Currently supported types are:
 VPN: VPN gateway;
 DIRECTCONNECT: direct connect gateway;
 PEERCONNECTION: peering connection;
 NAT: NAT gateway;
 NORMAL_CVM: normal CVM.
-     * @param NextHopType The type of the next hop. Currently supported types are:
+     * @param NextHopType Type of the next hop. Currently supported types are:
 VPN: VPN gateway;
 DIRECTCONNECT: direct connect gateway;
 PEERCONNECTION: peering connection;
@@ -291,13 +291,13 @@ NORMAL_CVM: normal CVM.
     }
 
     /**
-     * Get The next-hop destination gateway. The value is related to NextHopType.
+     * Get Next-hop destination gateway. The value is related to NextHopType.
 If NextHopType is set to VPN, the value of this parameter is the VPN gateway ID, such as vpngw-12345678.
 If NextHopType is set to DIRECTCONNECT, the value of this parameter is the direct connect gateway ID, such as dcg-12345678.
 If NextHopType is set to PEERCONNECTION, the value of this parameter is the peering connection ID, such as pcx-12345678.
 If NextHopType is set to NAT, the value of this parameter is the NAT gateway ID, such as nat-12345678.
 If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 address of the CVM, such as 10.0.0.12. 
-     * @return NextHopDestination The next-hop destination gateway. The value is related to NextHopType.
+     * @return NextHopDestination Next-hop destination gateway. The value is related to NextHopType.
 If NextHopType is set to VPN, the value of this parameter is the VPN gateway ID, such as vpngw-12345678.
 If NextHopType is set to DIRECTCONNECT, the value of this parameter is the direct connect gateway ID, such as dcg-12345678.
 If NextHopType is set to PEERCONNECTION, the value of this parameter is the peering connection ID, such as pcx-12345678.
@@ -309,13 +309,13 @@ If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 add
     }
 
     /**
-     * Set The next-hop destination gateway. The value is related to NextHopType.
+     * Set Next-hop destination gateway. The value is related to NextHopType.
 If NextHopType is set to VPN, the value of this parameter is the VPN gateway ID, such as vpngw-12345678.
 If NextHopType is set to DIRECTCONNECT, the value of this parameter is the direct connect gateway ID, such as dcg-12345678.
 If NextHopType is set to PEERCONNECTION, the value of this parameter is the peering connection ID, such as pcx-12345678.
 If NextHopType is set to NAT, the value of this parameter is the NAT gateway ID, such as nat-12345678.
 If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 address of the CVM, such as 10.0.0.12.
-     * @param NextHopDestination The next-hop destination gateway. The value is related to NextHopType.
+     * @param NextHopDestination Next-hop destination gateway. The value is related to NextHopType.
 If NextHopType is set to VPN, the value of this parameter is the VPN gateway ID, such as vpngw-12345678.
 If NextHopType is set to DIRECTCONNECT, the value of this parameter is the direct connect gateway ID, such as dcg-12345678.
 If NextHopType is set to PEERCONNECTION, the value of this parameter is the peering connection ID, such as pcx-12345678.

@@ -151,6 +151,14 @@ Basic network does not support queries by VpcId.
     private String MasterZone;
 
     /**
+    * Each request can have up to 10 `Filters` and 100 `Filter.Values`. Detailed filter conditions:
+<li> internet-charge-type - Type: String - Required: No - Filter by CLB network billing mode, including `TRAFFIC_POSTPAID_BY_HOUR`</li>
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
      * Get CLB instance ID. 
      * @return LoadBalancerIds CLB instance ID.
      */
@@ -447,6 +455,26 @@ Basic network does not support queries by VpcId.
     }
 
     /**
+     * Get Each request can have up to 10 `Filters` and 100 `Filter.Values`. Detailed filter conditions:
+<li> internet-charge-type - Type: String - Required: No - Filter by CLB network billing mode, including `TRAFFIC_POSTPAID_BY_HOUR`</li> 
+     * @return Filters Each request can have up to 10 `Filters` and 100 `Filter.Values`. Detailed filter conditions:
+<li> internet-charge-type - Type: String - Required: No - Filter by CLB network billing mode, including `TRAFFIC_POSTPAID_BY_HOUR`</li>
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set Each request can have up to 10 `Filters` and 100 `Filter.Values`. Detailed filter conditions:
+<li> internet-charge-type - Type: String - Required: No - Filter by CLB network billing mode, including `TRAFFIC_POSTPAID_BY_HOUR`</li>
+     * @param Filters Each request can have up to 10 `Filters` and 100 `Filter.Values`. Detailed filter conditions:
+<li> internet-charge-type - Type: String - Required: No - Filter by CLB network billing mode, including `TRAFFIC_POSTPAID_BY_HOUR`</li>
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -468,6 +496,7 @@ Basic network does not support queries by VpcId.
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SecurityGroup", this.SecurityGroup);
         this.setParamSimple(map, prefix + "MasterZone", this.MasterZone);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

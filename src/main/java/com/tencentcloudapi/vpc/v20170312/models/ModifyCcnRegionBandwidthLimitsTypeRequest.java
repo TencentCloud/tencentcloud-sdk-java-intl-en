@@ -23,9 +23,57 @@ import java.util.HashMap;
 public class ModifyCcnRegionBandwidthLimitsTypeRequest extends AbstractModel{
 
     /**
+    * CCN instance ID.
+    */
+    @SerializedName("CcnId")
+    @Expose
+    private String CcnId;
+
+    /**
+    * CCN bandwidth limit type. INTER_REGION_LIMIT: limit between regions. OUTER_REGION_LIMIT: region egress limit.
+    */
+    @SerializedName("BandwidthLimitType")
+    @Expose
+    private String BandwidthLimitType;
+
+    /**
+     * Get CCN instance ID. 
+     * @return CcnId CCN instance ID.
+     */
+    public String getCcnId() {
+        return this.CcnId;
+    }
+
+    /**
+     * Set CCN instance ID.
+     * @param CcnId CCN instance ID.
+     */
+    public void setCcnId(String CcnId) {
+        this.CcnId = CcnId;
+    }
+
+    /**
+     * Get CCN bandwidth limit type. INTER_REGION_LIMIT: limit between regions. OUTER_REGION_LIMIT: region egress limit. 
+     * @return BandwidthLimitType CCN bandwidth limit type. INTER_REGION_LIMIT: limit between regions. OUTER_REGION_LIMIT: region egress limit.
+     */
+    public String getBandwidthLimitType() {
+        return this.BandwidthLimitType;
+    }
+
+    /**
+     * Set CCN bandwidth limit type. INTER_REGION_LIMIT: limit between regions. OUTER_REGION_LIMIT: region egress limit.
+     * @param BandwidthLimitType CCN bandwidth limit type. INTER_REGION_LIMIT: limit between regions. OUTER_REGION_LIMIT: region egress limit.
+     */
+    public void setBandwidthLimitType(String BandwidthLimitType) {
+        this.BandwidthLimitType = BandwidthLimitType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "CcnId", this.CcnId);
+        this.setParamSimple(map, prefix + "BandwidthLimitType", this.BandwidthLimitType);
 
     }
 }

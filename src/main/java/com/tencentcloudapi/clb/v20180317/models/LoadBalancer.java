@@ -364,7 +364,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Boolean IsBlock;
 
     /**
-    * 
+    * Time blocked or unblocked
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsBlockTime")
     @Expose
@@ -1219,16 +1220,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return IsBlockTime 
+     * Get Time blocked or unblocked
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return IsBlockTime Time blocked or unblocked
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getIsBlockTime() {
         return this.IsBlockTime;
     }
 
     /**
-     * Set 
-     * @param IsBlockTime 
+     * Set Time blocked or unblocked
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param IsBlockTime Time blocked or unblocked
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setIsBlockTime(String IsBlockTime) {
         this.IsBlockTime = IsBlockTime;

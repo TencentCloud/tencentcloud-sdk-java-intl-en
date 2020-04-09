@@ -95,6 +95,13 @@ public class HaVip extends AbstractModel{
     private String CreatedTime;
 
     /**
+    * Identifier for businesses that use HAVIP.
+    */
+    @SerializedName("Business")
+    @Expose
+    private String Business;
+
+    /**
      * Get The `ID` of the `HAVIP`. This is the unique identifier of the `HAVIP`. 
      * @return HaVipId The `ID` of the `HAVIP`. This is the unique identifier of the `HAVIP`.
      */
@@ -263,6 +270,22 @@ public class HaVip extends AbstractModel{
     }
 
     /**
+     * Get Identifier for businesses that use HAVIP. 
+     * @return Business Identifier for businesses that use HAVIP.
+     */
+    public String getBusiness() {
+        return this.Business;
+    }
+
+    /**
+     * Set Identifier for businesses that use HAVIP.
+     * @param Business Identifier for businesses that use HAVIP.
+     */
+    public void setBusiness(String Business) {
+        this.Business = Business;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -276,6 +299,7 @@ public class HaVip extends AbstractModel{
         this.setParamSimple(map, prefix + "AddressIp", this.AddressIp);
         this.setParamSimple(map, prefix + "State", this.State);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamSimple(map, prefix + "Business", this.Business);
 
     }
 }

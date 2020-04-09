@@ -58,6 +58,13 @@ public class CreateVpcRequest extends AbstractModel{
     private String DomainName;
 
     /**
+    * Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get The VPC name. The maximum length is 60 bytes. 
      * @return VpcName The VPC name. The maximum length is 60 bytes.
      */
@@ -138,6 +145,22 @@ public class CreateVpcRequest extends AbstractModel{
     }
 
     /**
+     * Get Bound tags, such as [{"Key": "city", "Value": "shanghai"}]. 
+     * @return Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     * @param Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class CreateVpcRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EnableMulticast", this.EnableMulticast);
         this.setParamArraySimple(map, prefix + "DnsServers.", this.DnsServers);
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

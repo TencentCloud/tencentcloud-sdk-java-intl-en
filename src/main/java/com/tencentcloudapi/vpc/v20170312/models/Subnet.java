@@ -114,6 +114,20 @@ public class Subnet extends AbstractModel{
     private Boolean IsRemoteVpcSnat;
 
     /**
+    * Total number of subnet `IP` addresses.
+    */
+    @SerializedName("TotalIpAddressCount")
+    @Expose
+    private Long TotalIpAddressCount;
+
+    /**
+    * Tag key-value pairs
+    */
+    @SerializedName("TagSet")
+    @Expose
+    private Tag [] TagSet;
+
+    /**
      * Get The `ID` of the `VPC` instance. 
      * @return VpcId The `ID` of the `VPC` instance.
      */
@@ -322,6 +336,38 @@ public class Subnet extends AbstractModel{
     }
 
     /**
+     * Get Total number of subnet `IP` addresses. 
+     * @return TotalIpAddressCount Total number of subnet `IP` addresses.
+     */
+    public Long getTotalIpAddressCount() {
+        return this.TotalIpAddressCount;
+    }
+
+    /**
+     * Set Total number of subnet `IP` addresses.
+     * @param TotalIpAddressCount Total number of subnet `IP` addresses.
+     */
+    public void setTotalIpAddressCount(Long TotalIpAddressCount) {
+        this.TotalIpAddressCount = TotalIpAddressCount;
+    }
+
+    /**
+     * Get Tag key-value pairs 
+     * @return TagSet Tag key-value pairs
+     */
+    public Tag [] getTagSet() {
+        return this.TagSet;
+    }
+
+    /**
+     * Set Tag key-value pairs
+     * @param TagSet Tag key-value pairs
+     */
+    public void setTagSet(Tag [] TagSet) {
+        this.TagSet = TagSet;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -338,6 +384,8 @@ public class Subnet extends AbstractModel{
         this.setParamSimple(map, prefix + "Ipv6CidrBlock", this.Ipv6CidrBlock);
         this.setParamSimple(map, prefix + "NetworkAclId", this.NetworkAclId);
         this.setParamSimple(map, prefix + "IsRemoteVpcSnat", this.IsRemoteVpcSnat);
+        this.setParamSimple(map, prefix + "TotalIpAddressCount", this.TotalIpAddressCount);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
 
     }
 }

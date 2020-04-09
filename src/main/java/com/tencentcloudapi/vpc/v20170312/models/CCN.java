@@ -88,6 +88,13 @@ Note: This field may return null, indicating no valid value.
     private String BandwidthLimitType;
 
     /**
+    * Tag key-value pairs.
+    */
+    @SerializedName("TagSet")
+    @Expose
+    private Tag [] TagSet;
+
+    /**
      * Get The unique ID of the CCN 
      * @return CcnId The unique ID of the CCN
      */
@@ -240,6 +247,22 @@ Note: This field may return null, indicating no valid value.
     }
 
     /**
+     * Get Tag key-value pairs. 
+     * @return TagSet Tag key-value pairs.
+     */
+    public Tag [] getTagSet() {
+        return this.TagSet;
+    }
+
+    /**
+     * Set Tag key-value pairs.
+     * @param TagSet Tag key-value pairs.
+     */
+    public void setTagSet(Tag [] TagSet) {
+        this.TagSet = TagSet;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -252,6 +275,7 @@ Note: This field may return null, indicating no valid value.
         this.setParamSimple(map, prefix + "QosLevel", this.QosLevel);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamSimple(map, prefix + "BandwidthLimitType", this.BandwidthLimitType);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
 
     }
 }

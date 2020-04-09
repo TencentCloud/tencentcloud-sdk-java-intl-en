@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class Filter extends AbstractModel{
 
     /**
-    * Attribute name. If more than one Filter exists, the logical relationship between these Filters is AND.
+    * Filters.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Attribute value. If there are multiple Values for one Filter, the logical relationship between the Values under the same Filter is OR.
+    * Filter values.
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-     * Get Attribute name. If more than one Filter exists, the logical relationship between these Filters is AND. 
-     * @return Name Attribute name. If more than one Filter exists, the logical relationship between these Filters is AND.
+     * Get Filters. 
+     * @return Name Filters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Attribute name. If more than one Filter exists, the logical relationship between these Filters is AND.
-     * @param Name Attribute name. If more than one Filter exists, the logical relationship between these Filters is AND.
+     * Set Filters.
+     * @param Name Filters.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Attribute value. If there are multiple Values for one Filter, the logical relationship between the Values under the same Filter is OR. 
-     * @return Values Attribute value. If there are multiple Values for one Filter, the logical relationship between the Values under the same Filter is OR.
+     * Get Filter values. 
+     * @return Values Filter values.
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set Attribute value. If there are multiple Values for one Filter, the logical relationship between the Values under the same Filter is OR.
-     * @param Values Attribute value. If there are multiple Values for one Filter, the logical relationship between the Values under the same Filter is OR.
+     * Set Filter values.
+     * @param Values Filter values.
      */
     public void setValues(String [] Values) {
         this.Values = Values;

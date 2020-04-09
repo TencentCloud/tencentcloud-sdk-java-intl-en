@@ -44,7 +44,7 @@ public class VpnGateway extends AbstractModel{
     private String VpnGatewayName;
 
     /**
-    * Gateway instance type: 'IPSEC' and 'SSL'.
+    * Gateway instance type. Valid values: 'IPSEC', 'SSL', and 'CCN'.
     */
     @SerializedName("Type")
     @Expose
@@ -135,6 +135,20 @@ public class VpnGateway extends AbstractModel{
     private VpnGatewayQuota [] VpnGatewayQuotaSet;
 
     /**
+    * Gateway instance version.
+    */
+    @SerializedName("Version")
+    @Expose
+    private String Version;
+
+    /**
+    * CCN instance ID when the value of Type is CCN.
+    */
+    @SerializedName("NetworkInstanceId")
+    @Expose
+    private String NetworkInstanceId;
+
+    /**
      * Get Gateway instance ID. 
      * @return VpnGatewayId Gateway instance ID.
      */
@@ -183,16 +197,16 @@ public class VpnGateway extends AbstractModel{
     }
 
     /**
-     * Get Gateway instance type: 'IPSEC' and 'SSL'. 
-     * @return Type Gateway instance type: 'IPSEC' and 'SSL'.
+     * Get Gateway instance type. Valid values: 'IPSEC', 'SSL', and 'CCN'. 
+     * @return Type Gateway instance type. Valid values: 'IPSEC', 'SSL', and 'CCN'.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Gateway instance type: 'IPSEC' and 'SSL'.
-     * @param Type Gateway instance type: 'IPSEC' and 'SSL'.
+     * Set Gateway instance type. Valid values: 'IPSEC', 'SSL', and 'CCN'.
+     * @param Type Gateway instance type. Valid values: 'IPSEC', 'SSL', and 'CCN'.
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -391,6 +405,38 @@ public class VpnGateway extends AbstractModel{
     }
 
     /**
+     * Get Gateway instance version. 
+     * @return Version Gateway instance version.
+     */
+    public String getVersion() {
+        return this.Version;
+    }
+
+    /**
+     * Set Gateway instance version.
+     * @param Version Gateway instance version.
+     */
+    public void setVersion(String Version) {
+        this.Version = Version;
+    }
+
+    /**
+     * Get CCN instance ID when the value of Type is CCN. 
+     * @return NetworkInstanceId CCN instance ID when the value of Type is CCN.
+     */
+    public String getNetworkInstanceId() {
+        return this.NetworkInstanceId;
+    }
+
+    /**
+     * Set CCN instance ID when the value of Type is CCN.
+     * @param NetworkInstanceId CCN instance ID when the value of Type is CCN.
+     */
+    public void setNetworkInstanceId(String NetworkInstanceId) {
+        this.NetworkInstanceId = NetworkInstanceId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -410,6 +456,8 @@ public class VpnGateway extends AbstractModel{
         this.setParamSimple(map, prefix + "RestrictState", this.RestrictState);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamArrayObj(map, prefix + "VpnGatewayQuotaSet.", this.VpnGatewayQuotaSet);
+        this.setParamSimple(map, prefix + "Version", this.Version);
+        this.setParamSimple(map, prefix + "NetworkInstanceId", this.NetworkInstanceId);
 
     }
 }

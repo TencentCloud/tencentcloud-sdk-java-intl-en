@@ -536,6 +536,24 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
+     *This API is used to list reserved instances the user has purchased.
+     * @param req DescribeReservedInstancesRequest
+     * @return DescribeReservedInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReservedInstancesResponse DescribeReservedInstances(DescribeReservedInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeReservedInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeReservedInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeReservedInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the configurations of models in an availability zone.
      * @param req DescribeZoneInstanceConfigInfosRequest
      * @return DescribeZoneInstanceConfigInfosResponse

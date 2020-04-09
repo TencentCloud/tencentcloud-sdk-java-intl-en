@@ -37,11 +37,18 @@ public class CreateSecurityGroupRequest extends AbstractModel{
     private String GroupDescription;
 
     /**
-    * The project id is 0 by default. You can query this in the project management page of the Qcloud console.
+    * Project ID. The default is 0. You can query it on the project management page of the Qcloud console.
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
+
+    /**
+    * Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
 
     /**
      * Get Security group can be named freely, but cannot exceed 60 characters. 
@@ -76,19 +83,35 @@ public class CreateSecurityGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get The project id is 0 by default. You can query this in the project management page of the Qcloud console. 
-     * @return ProjectId The project id is 0 by default. You can query this in the project management page of the Qcloud console.
+     * Get Project ID. The default is 0. You can query it on the project management page of the Qcloud console. 
+     * @return ProjectId Project ID. The default is 0. You can query it on the project management page of the Qcloud console.
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set The project id is 0 by default. You can query this in the project management page of the Qcloud console.
-     * @param ProjectId The project id is 0 by default. You can query this in the project management page of the Qcloud console.
+     * Set Project ID. The default is 0. You can query it on the project management page of the Qcloud console.
+     * @param ProjectId Project ID. The default is 0. You can query it on the project management page of the Qcloud console.
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
+    }
+
+    /**
+     * Get Bound tags, such as [{"Key": "city", "Value": "shanghai"}]. 
+     * @return Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     * @param Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
     }
 
     /**
@@ -98,6 +121,7 @@ public class CreateSecurityGroupRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);
         this.setParamSimple(map, prefix + "GroupDescription", this.GroupDescription);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

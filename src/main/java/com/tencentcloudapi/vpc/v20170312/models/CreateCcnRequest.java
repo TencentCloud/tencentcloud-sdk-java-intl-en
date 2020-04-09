@@ -58,6 +58,13 @@ public class CreateCcnRequest extends AbstractModel{
     private String BandwidthLimitType;
 
     /**
+    * Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get The name of the CCN. The maximum length is 60 characters. 
      * @return CcnName The name of the CCN. The maximum length is 60 characters.
      */
@@ -138,6 +145,22 @@ public class CreateCcnRequest extends AbstractModel{
     }
 
     /**
+     * Get Bound tags, such as [{"Key": "city", "Value": "shanghai"}]. 
+     * @return Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     * @param Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class CreateCcnRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "QosLevel", this.QosLevel);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamSimple(map, prefix + "BandwidthLimitType", this.BandwidthLimitType);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

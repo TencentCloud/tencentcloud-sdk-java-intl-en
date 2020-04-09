@@ -114,6 +114,13 @@ public class Address extends AbstractModel{
     private Boolean CascadeRelease;
 
     /**
+    * Type of the protocol used in EIP ALG
+    */
+    @SerializedName("EipAlgType")
+    @Expose
+    private AlgType EipAlgType;
+
+    /**
      * Get `EIP` `ID`, the unique ID of the `EIP`. 
      * @return AddressId `EIP` `ID`, the unique ID of the `EIP`.
      */
@@ -322,6 +329,22 @@ public class Address extends AbstractModel{
     }
 
     /**
+     * Get Type of the protocol used in EIP ALG 
+     * @return EipAlgType Type of the protocol used in EIP ALG
+     */
+    public AlgType getEipAlgType() {
+        return this.EipAlgType;
+    }
+
+    /**
+     * Set Type of the protocol used in EIP ALG
+     * @param EipAlgType Type of the protocol used in EIP ALG
+     */
+    public void setEipAlgType(AlgType EipAlgType) {
+        this.EipAlgType = EipAlgType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -338,6 +361,7 @@ public class Address extends AbstractModel{
         this.setParamSimple(map, prefix + "IsEipDirectConnection", this.IsEipDirectConnection);
         this.setParamSimple(map, prefix + "AddressType", this.AddressType);
         this.setParamSimple(map, prefix + "CascadeRelease", this.CascadeRelease);
+        this.setParamObj(map, prefix + "EipAlgType.", this.EipAlgType);
 
     }
 }

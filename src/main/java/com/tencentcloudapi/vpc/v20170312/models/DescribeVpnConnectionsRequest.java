@@ -30,12 +30,12 @@ public class DescribeVpnConnectionsRequest extends AbstractModel{
     private String [] VpnConnectionIds;
 
     /**
-    * The filter condition. For details, see the Instance Filter Conditions Table. The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. `VpnConnectionIds` and `Filters` cannot be specified at the same time.
-<li>vpc-id - String - The VPC instance ID, such as `vpc-0a36uwkr`.</li>
-<li>vpn-gateway-id - String - The VPN gateway instance ID, such as `vpngw-p4lmqawn`.</li>
-<li>customer-gateway-id - String - The customer gateway instance ID, such as `cgw-l4rblw63`.</li>
-<li>vpn-connection-name - String - The connection name, such as `test-vpn`.</li>
-<li>vpn-connection-id - String - The connection instance ID, such as `vpnx-5p7vkch8"`.</li>
+    * Filter condition. In each request, the upper limit for `Filters` is 10 and 5 for `Filter.Values`. `VpnConnectionIds` and `Filters` cannot be specified at the same time.
+<li>vpc-id - String - VPC instance ID, such as `vpc-0a36uwkr`.</li>
+<li>vpn-gateway-id - String - VPN gateway instance ID, such as `vpngw-p4lmqawn`.</li>
+<li>customer-gateway-id - String - Customer gateway instance ID, such as `cgw-l4rblw63`.</li>
+<li>vpn-connection-name - String - Connection name, such as `test-vpn`.</li>
+<li>vpn-connection-id - String - Connection instance ID, such as `vpnx-5p7vkch8"`.</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -72,36 +72,36 @@ public class DescribeVpnConnectionsRequest extends AbstractModel{
     }
 
     /**
-     * Get The filter condition. For details, see the Instance Filter Conditions Table. The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. `VpnConnectionIds` and `Filters` cannot be specified at the same time.
-<li>vpc-id - String - The VPC instance ID, such as `vpc-0a36uwkr`.</li>
-<li>vpn-gateway-id - String - The VPN gateway instance ID, such as `vpngw-p4lmqawn`.</li>
-<li>customer-gateway-id - String - The customer gateway instance ID, such as `cgw-l4rblw63`.</li>
-<li>vpn-connection-name - String - The connection name, such as `test-vpn`.</li>
-<li>vpn-connection-id - String - The connection instance ID, such as `vpnx-5p7vkch8"`.</li> 
-     * @return Filters The filter condition. For details, see the Instance Filter Conditions Table. The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. `VpnConnectionIds` and `Filters` cannot be specified at the same time.
-<li>vpc-id - String - The VPC instance ID, such as `vpc-0a36uwkr`.</li>
-<li>vpn-gateway-id - String - The VPN gateway instance ID, such as `vpngw-p4lmqawn`.</li>
-<li>customer-gateway-id - String - The customer gateway instance ID, such as `cgw-l4rblw63`.</li>
-<li>vpn-connection-name - String - The connection name, such as `test-vpn`.</li>
-<li>vpn-connection-id - String - The connection instance ID, such as `vpnx-5p7vkch8"`.</li>
+     * Get Filter condition. In each request, the upper limit for `Filters` is 10 and 5 for `Filter.Values`. `VpnConnectionIds` and `Filters` cannot be specified at the same time.
+<li>vpc-id - String - VPC instance ID, such as `vpc-0a36uwkr`.</li>
+<li>vpn-gateway-id - String - VPN gateway instance ID, such as `vpngw-p4lmqawn`.</li>
+<li>customer-gateway-id - String - Customer gateway instance ID, such as `cgw-l4rblw63`.</li>
+<li>vpn-connection-name - String - Connection name, such as `test-vpn`.</li>
+<li>vpn-connection-id - String - Connection instance ID, such as `vpnx-5p7vkch8"`.</li> 
+     * @return Filters Filter condition. In each request, the upper limit for `Filters` is 10 and 5 for `Filter.Values`. `VpnConnectionIds` and `Filters` cannot be specified at the same time.
+<li>vpc-id - String - VPC instance ID, such as `vpc-0a36uwkr`.</li>
+<li>vpn-gateway-id - String - VPN gateway instance ID, such as `vpngw-p4lmqawn`.</li>
+<li>customer-gateway-id - String - Customer gateway instance ID, such as `cgw-l4rblw63`.</li>
+<li>vpn-connection-name - String - Connection name, such as `test-vpn`.</li>
+<li>vpn-connection-id - String - Connection instance ID, such as `vpnx-5p7vkch8"`.</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set The filter condition. For details, see the Instance Filter Conditions Table. The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. `VpnConnectionIds` and `Filters` cannot be specified at the same time.
-<li>vpc-id - String - The VPC instance ID, such as `vpc-0a36uwkr`.</li>
-<li>vpn-gateway-id - String - The VPN gateway instance ID, such as `vpngw-p4lmqawn`.</li>
-<li>customer-gateway-id - String - The customer gateway instance ID, such as `cgw-l4rblw63`.</li>
-<li>vpn-connection-name - String - The connection name, such as `test-vpn`.</li>
-<li>vpn-connection-id - String - The connection instance ID, such as `vpnx-5p7vkch8"`.</li>
-     * @param Filters The filter condition. For details, see the Instance Filter Conditions Table. The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. `VpnConnectionIds` and `Filters` cannot be specified at the same time.
-<li>vpc-id - String - The VPC instance ID, such as `vpc-0a36uwkr`.</li>
-<li>vpn-gateway-id - String - The VPN gateway instance ID, such as `vpngw-p4lmqawn`.</li>
-<li>customer-gateway-id - String - The customer gateway instance ID, such as `cgw-l4rblw63`.</li>
-<li>vpn-connection-name - String - The connection name, such as `test-vpn`.</li>
-<li>vpn-connection-id - String - The connection instance ID, such as `vpnx-5p7vkch8"`.</li>
+     * Set Filter condition. In each request, the upper limit for `Filters` is 10 and 5 for `Filter.Values`. `VpnConnectionIds` and `Filters` cannot be specified at the same time.
+<li>vpc-id - String - VPC instance ID, such as `vpc-0a36uwkr`.</li>
+<li>vpn-gateway-id - String - VPN gateway instance ID, such as `vpngw-p4lmqawn`.</li>
+<li>customer-gateway-id - String - Customer gateway instance ID, such as `cgw-l4rblw63`.</li>
+<li>vpn-connection-name - String - Connection name, such as `test-vpn`.</li>
+<li>vpn-connection-id - String - Connection instance ID, such as `vpnx-5p7vkch8"`.</li>
+     * @param Filters Filter condition. In each request, the upper limit for `Filters` is 10 and 5 for `Filter.Values`. `VpnConnectionIds` and `Filters` cannot be specified at the same time.
+<li>vpc-id - String - VPC instance ID, such as `vpc-0a36uwkr`.</li>
+<li>vpn-gateway-id - String - VPN gateway instance ID, such as `vpngw-p4lmqawn`.</li>
+<li>customer-gateway-id - String - Customer gateway instance ID, such as `cgw-l4rblw63`.</li>
+<li>vpn-connection-name - String - Connection name, such as `test-vpn`.</li>
+<li>vpn-connection-id - String - Connection instance ID, such as `vpnx-5p7vkch8"`.</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
