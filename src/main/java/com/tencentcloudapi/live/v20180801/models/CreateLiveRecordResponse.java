@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateLiveRecordResponse extends AbstractModel{
 
     /**
-    * Task ID, which uniquely identifies the recording task globally.
+    * Task ID, which uniquely identifies a recording task globally.
     */
     @SerializedName("TaskId")
     @Expose
@@ -37,16 +37,16 @@ public class CreateLiveRecordResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Task ID, which uniquely identifies the recording task globally. 
-     * @return TaskId Task ID, which uniquely identifies the recording task globally.
+     * Get Task ID, which uniquely identifies a recording task globally. 
+     * @return TaskId Task ID, which uniquely identifies a recording task globally.
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID, which uniquely identifies the recording task globally.
-     * @param TaskId Task ID, which uniquely identifies the recording task globally.
+     * Set Task ID, which uniquely identifies a recording task globally.
+     * @param TaskId Task ID, which uniquely identifies a recording task globally.
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

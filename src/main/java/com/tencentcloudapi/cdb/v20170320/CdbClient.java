@@ -166,6 +166,32 @@ Note that the files for a data import task must be uploaded to Tencent Cloud in 
     }
 
     /**
+     *This API is used to create a pay-as-you-go TencentDB instance (which can be a master, disaster recovery, or read-only instance) by passing in information such as instance specifications, MySQL version number, and quantity.
+
+This is an async API. You can also use the [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) API to query the instance details. If the `Status` value of an instance is 1 and `TaskStatus` is 0, the instance has been successfully delivered.
+
+1. Please use the [DescribeDBZoneConfig](https://cloud.tencent.com/document/api/236/17229) API to query the supported instance specifications first and then use the [DescribeDBPrice](https://cloud.tencent.com/document/api/236/18566) API to query the prices of the supported instances;
+2. You can create up to 100 instances at a time, with an instance validity period of up to 36 months;
+3. MySQL v5.5, v5.6, and v5.7 are supported;
+4. Master instances, read-only instances, and disaster recovery instances can be created;
+5. If `Port`, `ParamList`, or `Password` is set in the input parameters, the instance will be initialized.
+     * @param req CreateDBInstanceHourRequest
+     * @return CreateDBInstanceHourResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDBInstanceHourResponse CreateDBInstanceHour(CreateDBInstanceHourRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDBInstanceHourResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDBInstanceHourResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateDBInstanceHour"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a placement group for placing instances.
      * @param req CreateDeployGroupRequest
      * @return CreateDeployGroupResponse
@@ -220,7 +246,7 @@ Note that the files for a data import task must be uploaded to Tencent Cloud in 
     }
 
     /**
-     *This API (DeleteBackup) is used to delete a TencentDB instance backup.
+     *This API is used to delete a database backup. It can only delete manually initiated backups.
      * @param req DeleteBackupRequest
      * @return DeleteBackupResponse
      * @throws TencentCloudSDKException
@@ -746,6 +772,24 @@ The new API (CreateBackup) can specify the table to be backed up when a logical 
     }
 
     /**
+     *This API is used to query the details of instance error logs by search criteria. You can only query error logs within a month.
+     * @param req DescribeErrorLogDataRequest
+     * @return DescribeErrorLogDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeErrorLogDataResponse DescribeErrorLogData(DescribeErrorLogDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeErrorLogDataResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeErrorLogDataResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeErrorLogData"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (DescribeInstanceParamRecords) is used to query the parameter modification records of an instance.
      * @param req DescribeInstanceParamRecordsRequest
      * @return DescribeInstanceParamRecordsResponse
@@ -836,6 +880,24 @@ The new API (CreateBackup) can specify the table to be backed up when a logical 
     }
 
     /**
+     *This API is used to query the information of all RO groups of a TencentDB instance.
+     * @param req DescribeRoGroupsRequest
+     * @return DescribeRoGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRoGroupsResponse DescribeRoGroups(DescribeRoGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRoGroupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRoGroupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRoGroups"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (DescribeRollbackRangeTime) is used to query the time range available for instance rollback.
      * @param req DescribeRollbackRangeTimeRequest
      * @return DescribeRollbackRangeTimeResponse
@@ -847,6 +909,24 @@ The new API (CreateBackup) can specify the table to be backed up when a logical 
                 Type type = new TypeToken<JsonResponseModel<DescribeRollbackRangeTimeResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeRollbackRangeTime"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to search for slow logs of an instance by criteria. You can only view slow logs within a month.
+     * @param req DescribeSlowLogDataRequest
+     * @return DescribeSlowLogDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSlowLogDataResponse DescribeSlowLogData(DescribeSlowLogDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSlowLogDataResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSlowLogDataResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSlowLogData"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -955,6 +1035,24 @@ The new API (CreateBackup) can specify the table to be backed up when a logical 
                 Type type = new TypeToken<JsonResponseModel<DescribeTimeWindowResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeTimeWindow"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of user-imported SQL files.
+     * @param req DescribeUploadedFilesRequest
+     * @return DescribeUploadedFilesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUploadedFilesResponse DescribeUploadedFiles(DescribeUploadedFilesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUploadedFilesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUploadedFilesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeUploadedFiles"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1349,6 +1447,24 @@ Note that before enabling public network access, you need to first [initialize t
     }
 
     /**
+     *This API is used to deisolate an isolated TencentDB instance.
+     * @param req ReleaseIsolatedDBInstancesRequest
+     * @return ReleaseIsolatedDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReleaseIsolatedDBInstancesResponse ReleaseIsolatedDBInstances(ReleaseIsolatedDBInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReleaseIsolatedDBInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReleaseIsolatedDBInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ReleaseIsolatedDBInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (RestartDBInstances) is used to restart TencentDB instances.
 
 Note:
@@ -1418,6 +1534,24 @@ Note:
                 Type type = new TypeToken<JsonResponseModel<SwitchForUpgradeResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "SwitchForUpgrade"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to upgrade or downgrade a TencentDB instance, which can be a master instance, disaster recovery instance, or read-only instance.
+     * @param req UpgradeDBInstanceRequest
+     * @return UpgradeDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeDBInstanceResponse UpgradeDBInstance(UpgradeDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpgradeDBInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpgradeDBInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UpgradeDBInstance"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

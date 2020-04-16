@@ -105,7 +105,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String [] DeactivedDetail;
 
     /**
-    * 
+    * The deletion task identifier used to check the deletion status of the service-linked role
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsServiceLinkedPolicy")
     @Expose
@@ -308,16 +309,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return IsServiceLinkedPolicy 
+     * Get The deletion task identifier used to check the deletion status of the service-linked role
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return IsServiceLinkedPolicy The deletion task identifier used to check the deletion status of the service-linked role
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getIsServiceLinkedPolicy() {
         return this.IsServiceLinkedPolicy;
     }
 
     /**
-     * Set 
-     * @param IsServiceLinkedPolicy 
+     * Set The deletion task identifier used to check the deletion status of the service-linked role
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param IsServiceLinkedPolicy The deletion task identifier used to check the deletion status of the service-linked role
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setIsServiceLinkedPolicy(Long IsServiceLinkedPolicy) {
         this.IsServiceLinkedPolicy = IsServiceLinkedPolicy;

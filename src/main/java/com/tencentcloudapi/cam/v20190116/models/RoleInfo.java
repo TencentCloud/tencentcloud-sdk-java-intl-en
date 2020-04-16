@@ -72,7 +72,7 @@ public class RoleInfo extends AbstractModel{
     private Long ConsoleLogin;
 
     /**
-    * User role. Valid values: user, system
+    * User role. Valid values: `user`, `system`, `service_linked`
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RoleType")
@@ -88,7 +88,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long SessionDuration;
 
     /**
-    * 
+    * Task identifier for deleting a service-linked role 
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DeletionTaskId")
     @Expose
@@ -207,9 +208,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get User role. Valid values: user, system
+     * Get User role. Valid values: `user`, `system`, `service_linked`
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RoleType User role. Valid values: user, system
+     * @return RoleType User role. Valid values: `user`, `system`, `service_linked`
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getRoleType() {
@@ -217,9 +218,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set User role. Valid values: user, system
+     * Set User role. Valid values: `user`, `system`, `service_linked`
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RoleType User role. Valid values: user, system
+     * @param RoleType User role. Valid values: `user`, `system`, `service_linked`
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setRoleType(String RoleType) {
@@ -247,16 +248,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return DeletionTaskId 
+     * Get Task identifier for deleting a service-linked role 
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return DeletionTaskId Task identifier for deleting a service-linked role 
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getDeletionTaskId() {
         return this.DeletionTaskId;
     }
 
     /**
-     * Set 
-     * @param DeletionTaskId 
+     * Set Task identifier for deleting a service-linked role 
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param DeletionTaskId Task identifier for deleting a service-linked role 
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDeletionTaskId(String DeletionTaskId) {
         this.DeletionTaskId = DeletionTaskId;

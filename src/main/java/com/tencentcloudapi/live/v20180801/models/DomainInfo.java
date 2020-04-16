@@ -102,7 +102,9 @@ public class DomainInfo extends AbstractModel{
     private String RentExpireTime;
 
     /**
-    * 
+    * 0: LVB,
+1: LVB on WeChat Mini Program.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsMiniProgramLive")
     @Expose
@@ -293,16 +295,24 @@ public class DomainInfo extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return IsMiniProgramLive 
+     * Get 0: LVB,
+1: LVB on WeChat Mini Program.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return IsMiniProgramLive 0: LVB,
+1: LVB on WeChat Mini Program.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getIsMiniProgramLive() {
         return this.IsMiniProgramLive;
     }
 
     /**
-     * Set 
-     * @param IsMiniProgramLive 
+     * Set 0: LVB,
+1: LVB on WeChat Mini Program.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param IsMiniProgramLive 0: LVB,
+1: LVB on WeChat Mini Program.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setIsMiniProgramLive(Long IsMiniProgramLive) {
         this.IsMiniProgramLive = IsMiniProgramLive;

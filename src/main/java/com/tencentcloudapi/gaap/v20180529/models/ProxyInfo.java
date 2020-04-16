@@ -195,6 +195,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long SupportSecurity;
 
     /**
+    * Billing mode. 0: bill by bandwidth; 1: bill by traffic
+Note: this field may return null, indicating that no valid value is obtained.
+    */
+    @SerializedName("BillingType")
+    @Expose
+    private Long BillingType;
+
+    /**
      * Get Connection instance ID; It’s an old parameter, please switch to ProxyId.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return InstanceId Connection instance ID; It’s an old parameter, please switch to ProxyId.
@@ -619,6 +627,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Billing mode. 0: bill by bandwidth; 1: bill by traffic
+Note: this field may return null, indicating that no valid value is obtained. 
+     * @return BillingType Billing mode. 0: bill by bandwidth; 1: bill by traffic
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public Long getBillingType() {
+        return this.BillingType;
+    }
+
+    /**
+     * Set Billing mode. 0: bill by bandwidth; 1: bill by traffic
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param BillingType Billing mode. 0: bill by bandwidth; 1: bill by traffic
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public void setBillingType(Long BillingType) {
+        this.BillingType = BillingType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -644,6 +672,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ForwardIP", this.ForwardIP);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "SupportSecurity", this.SupportSecurity);
+        this.setParamSimple(map, prefix + "BillingType", this.BillingType);
 
     }
 }

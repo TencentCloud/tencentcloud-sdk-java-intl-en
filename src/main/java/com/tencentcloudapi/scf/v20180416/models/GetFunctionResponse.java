@@ -262,7 +262,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private PublicNetConfigOut PublicNetConfig;
 
     /**
-    * 
+    * Whether Ons is enabled
+Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("OnsEnable")
     @Expose
@@ -824,16 +825,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return OnsEnable 
+     * Get Whether Ons is enabled
+Note: This field may return null, indicating that no valid value was found. 
+     * @return OnsEnable Whether Ons is enabled
+Note: This field may return null, indicating that no valid value was found.
      */
     public String getOnsEnable() {
         return this.OnsEnable;
     }
 
     /**
-     * Set 
-     * @param OnsEnable 
+     * Set Whether Ons is enabled
+Note: This field may return null, indicating that no valid value was found.
+     * @param OnsEnable Whether Ons is enabled
+Note: This field may return null, indicating that no valid value was found.
      */
     public void setOnsEnable(String OnsEnable) {
         this.OnsEnable = OnsEnable;

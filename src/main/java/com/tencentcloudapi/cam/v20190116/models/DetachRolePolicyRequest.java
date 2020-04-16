@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DetachRolePolicyRequest extends AbstractModel{
 
     /**
-    * Policy ID
+    * Policy ID. Either `PolicyId` or `PolicyName` must be entered
     */
     @SerializedName("PolicyId")
     @Expose
@@ -44,16 +44,23 @@ public class DetachRolePolicyRequest extends AbstractModel{
     private String DetachRoleName;
 
     /**
-     * Get Policy ID 
-     * @return PolicyId Policy ID
+    * Policy name. Either `PolicyId` or `PolicyName` must be entered
+    */
+    @SerializedName("PolicyName")
+    @Expose
+    private String PolicyName;
+
+    /**
+     * Get Policy ID. Either `PolicyId` or `PolicyName` must be entered 
+     * @return PolicyId Policy ID. Either `PolicyId` or `PolicyName` must be entered
      */
     public Long getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set Policy ID
-     * @param PolicyId Policy ID
+     * Set Policy ID. Either `PolicyId` or `PolicyName` must be entered
+     * @param PolicyId Policy ID. Either `PolicyId` or `PolicyName` must be entered
      */
     public void setPolicyId(Long PolicyId) {
         this.PolicyId = PolicyId;
@@ -92,12 +99,29 @@ public class DetachRolePolicyRequest extends AbstractModel{
     }
 
     /**
+     * Get Policy name. Either `PolicyId` or `PolicyName` must be entered 
+     * @return PolicyName Policy name. Either `PolicyId` or `PolicyName` must be entered
+     */
+    public String getPolicyName() {
+        return this.PolicyName;
+    }
+
+    /**
+     * Set Policy name. Either `PolicyId` or `PolicyName` must be entered
+     * @param PolicyName Policy name. Either `PolicyId` or `PolicyName` must be entered
+     */
+    public void setPolicyName(String PolicyName) {
+        this.PolicyName = PolicyName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
         this.setParamSimple(map, prefix + "DetachRoleId", this.DetachRoleId);
         this.setParamSimple(map, prefix + "DetachRoleName", this.DetachRoleName);
+        this.setParamSimple(map, prefix + "PolicyName", this.PolicyName);
 
     }
 }

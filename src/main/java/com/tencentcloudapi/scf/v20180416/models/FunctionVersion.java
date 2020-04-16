@@ -38,6 +38,22 @@ Note: This field may return null, indicating that no valid values is found.
     private String Description;
 
     /**
+    * The creation time
+Note: This field may return null, indicating that no valid value was found.
+    */
+    @SerializedName("AddTime")
+    @Expose
+    private String AddTime;
+
+    /**
+    * Update time
+Note: This field may return null, indicating that no valid value was found.
+    */
+    @SerializedName("ModTime")
+    @Expose
+    private String ModTime;
+
+    /**
      * Get Function version name 
      * @return Version Function version name
      */
@@ -74,11 +90,53 @@ Note: This field may return null, indicating that no valid values is found.
     }
 
     /**
+     * Get The creation time
+Note: This field may return null, indicating that no valid value was found. 
+     * @return AddTime The creation time
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public String getAddTime() {
+        return this.AddTime;
+    }
+
+    /**
+     * Set The creation time
+Note: This field may return null, indicating that no valid value was found.
+     * @param AddTime The creation time
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public void setAddTime(String AddTime) {
+        this.AddTime = AddTime;
+    }
+
+    /**
+     * Get Update time
+Note: This field may return null, indicating that no valid value was found. 
+     * @return ModTime Update time
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public String getModTime() {
+        return this.ModTime;
+    }
+
+    /**
+     * Set Update time
+Note: This field may return null, indicating that no valid value was found.
+     * @param ModTime Update time
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public void setModTime(String ModTime) {
+        this.ModTime = ModTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "AddTime", this.AddTime);
+        this.setParamSimple(map, prefix + "ModTime", this.ModTime);
 
     }
 }

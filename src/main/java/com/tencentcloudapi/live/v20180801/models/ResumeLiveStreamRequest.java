@@ -30,7 +30,7 @@ public class ResumeLiveStreamRequest extends AbstractModel{
     private String AppName;
 
     /**
-    * Your acceleration domain name.
+    * Your push domain name.
     */
     @SerializedName("DomainName")
     @Expose
@@ -60,16 +60,16 @@ public class ResumeLiveStreamRequest extends AbstractModel{
     }
 
     /**
-     * Get Your acceleration domain name. 
-     * @return DomainName Your acceleration domain name.
+     * Get Your push domain name. 
+     * @return DomainName Your push domain name.
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * Set Your acceleration domain name.
-     * @param DomainName Your acceleration domain name.
+     * Set Your push domain name.
+     * @param DomainName Your push domain name.
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;

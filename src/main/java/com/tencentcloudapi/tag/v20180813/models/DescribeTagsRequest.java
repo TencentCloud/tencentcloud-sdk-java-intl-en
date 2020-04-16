@@ -58,6 +58,20 @@ public class DescribeTagsRequest extends AbstractModel{
     private Long CreateUin;
 
     /**
+    * Tag key array, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried. If it is passed in together with `TagKey`, it will be used and the `TagKey` will be ignored
+    */
+    @SerializedName("TagKeys")
+    @Expose
+    private String [] TagKeys;
+
+    /**
+    * Whether to show project tag
+    */
+    @SerializedName("ShowProject")
+    @Expose
+    private Long ShowProject;
+
+    /**
      * Get Tag key. Either exists or does not exist alongside the tag value. If it does not exist, all of the user’s tags will be queried. 
      * @return TagKey Tag key. Either exists or does not exist alongside the tag value. If it does not exist, all of the user’s tags will be queried.
      */
@@ -138,6 +152,38 @@ public class DescribeTagsRequest extends AbstractModel{
     }
 
     /**
+     * Get Tag key array, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried. If it is passed in together with `TagKey`, it will be used and the `TagKey` will be ignored 
+     * @return TagKeys Tag key array, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried. If it is passed in together with `TagKey`, it will be used and the `TagKey` will be ignored
+     */
+    public String [] getTagKeys() {
+        return this.TagKeys;
+    }
+
+    /**
+     * Set Tag key array, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried. If it is passed in together with `TagKey`, it will be used and the `TagKey` will be ignored
+     * @param TagKeys Tag key array, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried. If it is passed in together with `TagKey`, it will be used and the `TagKey` will be ignored
+     */
+    public void setTagKeys(String [] TagKeys) {
+        this.TagKeys = TagKeys;
+    }
+
+    /**
+     * Get Whether to show project tag 
+     * @return ShowProject Whether to show project tag
+     */
+    public Long getShowProject() {
+        return this.ShowProject;
+    }
+
+    /**
+     * Set Whether to show project tag
+     * @param ShowProject Whether to show project tag
+     */
+    public void setShowProject(Long ShowProject) {
+        this.ShowProject = ShowProject;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +192,8 @@ public class DescribeTagsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "CreateUin", this.CreateUin);
+        this.setParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
+        this.setParamSimple(map, prefix + "ShowProject", this.ShowProject);
 
     }
 }

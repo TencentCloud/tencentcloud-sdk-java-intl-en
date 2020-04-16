@@ -44,6 +44,13 @@ public class DescribeTagKeysRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * Whether to show project
+    */
+    @SerializedName("ShowProject")
+    @Expose
+    private Long ShowProject;
+
+    /**
      * Get Creator `Uin`. If not specified, `Uin` is only used as the query condition. 
      * @return CreateUin Creator `Uin`. If not specified, `Uin` is only used as the query condition.
      */
@@ -92,12 +99,29 @@ public class DescribeTagKeysRequest extends AbstractModel{
     }
 
     /**
+     * Get Whether to show project 
+     * @return ShowProject Whether to show project
+     */
+    public Long getShowProject() {
+        return this.ShowProject;
+    }
+
+    /**
+     * Set Whether to show project
+     * @param ShowProject Whether to show project
+     */
+    public void setShowProject(Long ShowProject) {
+        this.ShowProject = ShowProject;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CreateUin", this.CreateUin);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "ShowProject", this.ShowProject);
 
     }
 }

@@ -121,6 +121,21 @@ public class ZoneSellConf extends AbstractModel{
     private String [] DrZone;
 
     /**
+    * Whether cross-AZ read-only access is supported
+    */
+    @SerializedName("IsSupportRemoteRo")
+    @Expose
+    private Boolean IsSupportRemoteRo;
+
+    /**
+    * Information of supported cross-AZ read-only zone
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RemoteRoZone")
+    @Expose
+    private String [] RemoteRoZone;
+
+    /**
      * Get AZ status. Value range: 0 (not available), 1 (available), 2 (purchasable), 3 (not purchasable), 4 (not displayed) 
      * @return Status AZ status. Value range: 0 (not available), 1 (available), 2 (purchasable), 3 (not purchasable), 4 (not displayed)
      */
@@ -345,6 +360,42 @@ public class ZoneSellConf extends AbstractModel{
     }
 
     /**
+     * Get Whether cross-AZ read-only access is supported 
+     * @return IsSupportRemoteRo Whether cross-AZ read-only access is supported
+     */
+    public Boolean getIsSupportRemoteRo() {
+        return this.IsSupportRemoteRo;
+    }
+
+    /**
+     * Set Whether cross-AZ read-only access is supported
+     * @param IsSupportRemoteRo Whether cross-AZ read-only access is supported
+     */
+    public void setIsSupportRemoteRo(Boolean IsSupportRemoteRo) {
+        this.IsSupportRemoteRo = IsSupportRemoteRo;
+    }
+
+    /**
+     * Get Information of supported cross-AZ read-only zone
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return RemoteRoZone Information of supported cross-AZ read-only zone
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String [] getRemoteRoZone() {
+        return this.RemoteRoZone;
+    }
+
+    /**
+     * Set Information of supported cross-AZ read-only zone
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param RemoteRoZone Information of supported cross-AZ read-only zone
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRemoteRoZone(String [] RemoteRoZone) {
+        this.RemoteRoZone = RemoteRoZone;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -362,6 +413,8 @@ public class ZoneSellConf extends AbstractModel{
         this.setParamArrayObj(map, prefix + "SellType.", this.SellType);
         this.setParamObj(map, prefix + "ZoneConf.", this.ZoneConf);
         this.setParamArraySimple(map, prefix + "DrZone.", this.DrZone);
+        this.setParamSimple(map, prefix + "IsSupportRemoteRo", this.IsSupportRemoteRo);
+        this.setParamArraySimple(map, prefix + "RemoteRoZone.", this.RemoteRoZone);
 
     }
 }

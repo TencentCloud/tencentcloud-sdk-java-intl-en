@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DeleteLiveTranscodeRuleRequest extends AbstractModel{
 
     /**
-    * Push domain name.
+    * Playback domain name.
 For transcoding at the domain name level, domain name+AppName+StreamName uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
     */
     @SerializedName("DomainName")
@@ -55,9 +55,9 @@ Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcodi
     private Long TemplateId;
 
     /**
-     * Get Push domain name.
+     * Get Playback domain name.
 For transcoding at the domain name level, domain name+AppName+StreamName uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match. 
-     * @return DomainName Push domain name.
+     * @return DomainName Playback domain name.
 For transcoding at the domain name level, domain name+AppName+StreamName uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
      */
     public String getDomainName() {
@@ -65,9 +65,9 @@ For transcoding at the domain name level, domain name+AppName+StreamName uniquel
     }
 
     /**
-     * Set Push domain name.
+     * Set Playback domain name.
 For transcoding at the domain name level, domain name+AppName+StreamName uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
-     * @param DomainName Push domain name.
+     * @param DomainName Playback domain name.
 For transcoding at the domain name level, domain name+AppName+StreamName uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
      */
     public void setDomainName(String DomainName) {

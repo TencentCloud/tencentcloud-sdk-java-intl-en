@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyAppStatusRequest extends AbstractModel{
 
     /**
-    * Application ID, which is generated and returned by the backend after application creation
+    * Application ID, which is generated and returned by the backend after application creation.
     */
     @SerializedName("BizId")
     @Expose
@@ -37,16 +37,16 @@ public class ModifyAppStatusRequest extends AbstractModel{
     private String Status;
 
     /**
-     * Get Application ID, which is generated and returned by the backend after application creation 
-     * @return BizId Application ID, which is generated and returned by the backend after application creation
+     * Get Application ID, which is generated and returned by the backend after application creation. 
+     * @return BizId Application ID, which is generated and returned by the backend after application creation.
      */
     public Long getBizId() {
         return this.BizId;
     }
 
     /**
-     * Set Application ID, which is generated and returned by the backend after application creation
-     * @param BizId Application ID, which is generated and returned by the backend after application creation
+     * Set Application ID, which is generated and returned by the backend after application creation.
+     * @param BizId Application ID, which is generated and returned by the backend after application creation.
      */
     public void setBizId(Long BizId) {
         this.BizId = BizId;

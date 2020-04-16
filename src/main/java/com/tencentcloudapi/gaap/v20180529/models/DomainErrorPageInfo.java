@@ -83,6 +83,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Body;
 
     /**
+    * Rule status. 0: success
+Note: this field may return null, indicating that no valid value is obtained.
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
      * Get Configuration ID of a custom error response 
      * @return ErrorPageId Configuration ID of a custom error response
      */
@@ -227,6 +235,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Rule status. 0: success
+Note: this field may return null, indicating that no valid value is obtained. 
+     * @return Status Rule status. 0: success
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set Rule status. 0: success
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param Status Rule status. 0: success
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -238,6 +266,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArraySimple(map, prefix + "ClearHeaders.", this.ClearHeaders);
         this.setParamArrayObj(map, prefix + "SetHeaders.", this.SetHeaders);
         this.setParamSimple(map, prefix + "Body", this.Body);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

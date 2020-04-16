@@ -30,7 +30,7 @@ public class CreateLiveRecordRequest extends AbstractModel{
     private String StreamName;
 
     /**
-    * Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+    * Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
     */
     @SerializedName("AppName")
     @Expose
@@ -53,7 +53,7 @@ In scheduled recording mode, this field must be set; in real-time video recordin
 
     /**
     * Recording end time, which is China standard time and should be URL-encoded (RFC3986). For example, the encoding of 2017-01-01 10:30:01 is 2017-01-01+10%3a30%3a01.
-In scheduled recording mode, this field must be set; in real-time video recording mode, this field is optional. If the recording is set to real-time video recording mode through the Highlight parameter, the end time set should not be more than 30 minutes after the current time. If the set end time is more than 30 minutes after the current time, earlier than the current time or left blank, the actual end time will be 30 minutes after the current time.
+In scheduled recording mode, this field must be set; in real-time video recording mode, this field is optional. If the recording is set to real-time video recording mode through the `Highlight` parameter, the set end time should not be more than 30 minutes after the current time. If the set end time is more than 30 minutes after the current time, earlier than the current time, or left empty, the actual end time will be 30 minutes after the current time.
     */
     @SerializedName("EndTime")
     @Expose
@@ -88,7 +88,7 @@ In both scheduled and real-time video recording modes, this parameter is valid a
     private Long Highlight;
 
     /**
-    * Mark for enabling A+B=C mixed stream recording.
+    * Flag for enabling A+B=C mixed stream recording.
 0: A+B=C mixed stream recording is not enabled **(default)**.
 1: A+B=C mixed stream recording is enabled.
 In both scheduled and real-time video recording modes, this parameter is valid.
@@ -99,10 +99,10 @@ In both scheduled and real-time video recording modes, this parameter is valid.
 
     /**
     * Recording stream parameter. The following parameters are supported currently:
-record_interval: Recording interval in seconds. Value range: 1,800–7,200
-storage_time: Recording file duration in seconds
-eg. record_interval=3600&storage_time=2592000
-Note: The parameter needs url encode.
+record_interval: recording interval in seconds. Value range: 1800-7200.
+storage_time: recording file storage duration in seconds.
+Example: record_interval=3600&storage_time=2592000.
+Note: the parameter needs to be URL-encoded.
 In both scheduled and real-time video recording modes, this parameter is valid.
     */
     @SerializedName("StreamParam")
@@ -126,16 +126,16 @@ In both scheduled and real-time video recording modes, this parameter is valid.
     }
 
     /**
-     * Get Push path, which is the same as the AppName in push and playback addresses and is "live" by default. 
-     * @return AppName Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+     * Get Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. 
+     * @return AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
-     * @param AppName Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+     * Set Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
+     * @param AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
@@ -179,9 +179,9 @@ In scheduled recording mode, this field must be set; in real-time video recordin
 
     /**
      * Get Recording end time, which is China standard time and should be URL-encoded (RFC3986). For example, the encoding of 2017-01-01 10:30:01 is 2017-01-01+10%3a30%3a01.
-In scheduled recording mode, this field must be set; in real-time video recording mode, this field is optional. If the recording is set to real-time video recording mode through the Highlight parameter, the end time set should not be more than 30 minutes after the current time. If the set end time is more than 30 minutes after the current time, earlier than the current time or left blank, the actual end time will be 30 minutes after the current time. 
+In scheduled recording mode, this field must be set; in real-time video recording mode, this field is optional. If the recording is set to real-time video recording mode through the `Highlight` parameter, the set end time should not be more than 30 minutes after the current time. If the set end time is more than 30 minutes after the current time, earlier than the current time, or left empty, the actual end time will be 30 minutes after the current time. 
      * @return EndTime Recording end time, which is China standard time and should be URL-encoded (RFC3986). For example, the encoding of 2017-01-01 10:30:01 is 2017-01-01+10%3a30%3a01.
-In scheduled recording mode, this field must be set; in real-time video recording mode, this field is optional. If the recording is set to real-time video recording mode through the Highlight parameter, the end time set should not be more than 30 minutes after the current time. If the set end time is more than 30 minutes after the current time, earlier than the current time or left blank, the actual end time will be 30 minutes after the current time.
+In scheduled recording mode, this field must be set; in real-time video recording mode, this field is optional. If the recording is set to real-time video recording mode through the `Highlight` parameter, the set end time should not be more than 30 minutes after the current time. If the set end time is more than 30 minutes after the current time, earlier than the current time, or left empty, the actual end time will be 30 minutes after the current time.
      */
     public String getEndTime() {
         return this.EndTime;
@@ -189,9 +189,9 @@ In scheduled recording mode, this field must be set; in real-time video recordin
 
     /**
      * Set Recording end time, which is China standard time and should be URL-encoded (RFC3986). For example, the encoding of 2017-01-01 10:30:01 is 2017-01-01+10%3a30%3a01.
-In scheduled recording mode, this field must be set; in real-time video recording mode, this field is optional. If the recording is set to real-time video recording mode through the Highlight parameter, the end time set should not be more than 30 minutes after the current time. If the set end time is more than 30 minutes after the current time, earlier than the current time or left blank, the actual end time will be 30 minutes after the current time.
+In scheduled recording mode, this field must be set; in real-time video recording mode, this field is optional. If the recording is set to real-time video recording mode through the `Highlight` parameter, the set end time should not be more than 30 minutes after the current time. If the set end time is more than 30 minutes after the current time, earlier than the current time, or left empty, the actual end time will be 30 minutes after the current time.
      * @param EndTime Recording end time, which is China standard time and should be URL-encoded (RFC3986). For example, the encoding of 2017-01-01 10:30:01 is 2017-01-01+10%3a30%3a01.
-In scheduled recording mode, this field must be set; in real-time video recording mode, this field is optional. If the recording is set to real-time video recording mode through the Highlight parameter, the end time set should not be more than 30 minutes after the current time. If the set end time is more than 30 minutes after the current time, earlier than the current time or left blank, the actual end time will be 30 minutes after the current time.
+In scheduled recording mode, this field must be set; in real-time video recording mode, this field is optional. If the recording is set to real-time video recording mode through the `Highlight` parameter, the set end time should not be more than 30 minutes after the current time. If the set end time is more than 30 minutes after the current time, earlier than the current time, or left empty, the actual end time will be 30 minutes after the current time.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -274,11 +274,11 @@ In both scheduled and real-time video recording modes, this parameter is valid a
     }
 
     /**
-     * Get Mark for enabling A+B=C mixed stream recording.
+     * Get Flag for enabling A+B=C mixed stream recording.
 0: A+B=C mixed stream recording is not enabled **(default)**.
 1: A+B=C mixed stream recording is enabled.
 In both scheduled and real-time video recording modes, this parameter is valid. 
-     * @return MixStream Mark for enabling A+B=C mixed stream recording.
+     * @return MixStream Flag for enabling A+B=C mixed stream recording.
 0: A+B=C mixed stream recording is not enabled **(default)**.
 1: A+B=C mixed stream recording is enabled.
 In both scheduled and real-time video recording modes, this parameter is valid.
@@ -288,11 +288,11 @@ In both scheduled and real-time video recording modes, this parameter is valid.
     }
 
     /**
-     * Set Mark for enabling A+B=C mixed stream recording.
+     * Set Flag for enabling A+B=C mixed stream recording.
 0: A+B=C mixed stream recording is not enabled **(default)**.
 1: A+B=C mixed stream recording is enabled.
 In both scheduled and real-time video recording modes, this parameter is valid.
-     * @param MixStream Mark for enabling A+B=C mixed stream recording.
+     * @param MixStream Flag for enabling A+B=C mixed stream recording.
 0: A+B=C mixed stream recording is not enabled **(default)**.
 1: A+B=C mixed stream recording is enabled.
 In both scheduled and real-time video recording modes, this parameter is valid.
@@ -303,16 +303,16 @@ In both scheduled and real-time video recording modes, this parameter is valid.
 
     /**
      * Get Recording stream parameter. The following parameters are supported currently:
-record_interval: Recording interval in seconds. Value range: 1,800–7,200
-storage_time: Recording file duration in seconds
-eg. record_interval=3600&storage_time=2592000
-Note: The parameter needs url encode.
+record_interval: recording interval in seconds. Value range: 1800-7200.
+storage_time: recording file storage duration in seconds.
+Example: record_interval=3600&storage_time=2592000.
+Note: the parameter needs to be URL-encoded.
 In both scheduled and real-time video recording modes, this parameter is valid. 
      * @return StreamParam Recording stream parameter. The following parameters are supported currently:
-record_interval: Recording interval in seconds. Value range: 1,800–7,200
-storage_time: Recording file duration in seconds
-eg. record_interval=3600&storage_time=2592000
-Note: The parameter needs url encode.
+record_interval: recording interval in seconds. Value range: 1800-7200.
+storage_time: recording file storage duration in seconds.
+Example: record_interval=3600&storage_time=2592000.
+Note: the parameter needs to be URL-encoded.
 In both scheduled and real-time video recording modes, this parameter is valid.
      */
     public String getStreamParam() {
@@ -321,16 +321,16 @@ In both scheduled and real-time video recording modes, this parameter is valid.
 
     /**
      * Set Recording stream parameter. The following parameters are supported currently:
-record_interval: Recording interval in seconds. Value range: 1,800–7,200
-storage_time: Recording file duration in seconds
-eg. record_interval=3600&storage_time=2592000
-Note: The parameter needs url encode.
+record_interval: recording interval in seconds. Value range: 1800-7200.
+storage_time: recording file storage duration in seconds.
+Example: record_interval=3600&storage_time=2592000.
+Note: the parameter needs to be URL-encoded.
 In both scheduled and real-time video recording modes, this parameter is valid.
      * @param StreamParam Recording stream parameter. The following parameters are supported currently:
-record_interval: Recording interval in seconds. Value range: 1,800–7,200
-storage_time: Recording file duration in seconds
-eg. record_interval=3600&storage_time=2592000
-Note: The parameter needs url encode.
+record_interval: recording interval in seconds. Value range: 1800-7200.
+storage_time: recording file storage duration in seconds.
+Example: record_interval=3600&storage_time=2592000.
+Note: the parameter needs to be URL-encoded.
 In both scheduled and real-time video recording modes, this parameter is valid.
      */
     public void setStreamParam(String StreamParam) {

@@ -51,7 +51,7 @@ public class SetFlagRequest extends AbstractModel{
     private OffsiteFlag OffsiteFlag;
 
     /**
-    * If MFA requires top-up
+    * Whether or not to reset MFA
     */
     @SerializedName("NeedResetMfa")
     @Expose
@@ -122,16 +122,16 @@ public class SetFlagRequest extends AbstractModel{
     }
 
     /**
-     * Get If MFA requires top-up 
-     * @return NeedResetMfa If MFA requires top-up
+     * Get Whether or not to reset MFA 
+     * @return NeedResetMfa Whether or not to reset MFA
      */
     public Long getNeedResetMfa() {
         return this.NeedResetMfa;
     }
 
     /**
-     * Set If MFA requires top-up
-     * @param NeedResetMfa If MFA requires top-up
+     * Set Whether or not to reset MFA
+     * @param NeedResetMfa Whether or not to reset MFA
      */
     public void setNeedResetMfa(Long NeedResetMfa) {
         this.NeedResetMfa = NeedResetMfa;

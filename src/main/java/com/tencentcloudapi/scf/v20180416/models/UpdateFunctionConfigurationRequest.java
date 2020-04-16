@@ -114,7 +114,7 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     private String L5Enable;
 
     /**
-    * List of layer versions with which a function will be associated. Layers will be overwritten sequentially in the order in the list.
+    * List of layer versions that bound with the function. Files with the same name will be overridden by the bound layer versions according to the ascending order in the list. 
     */
     @SerializedName("Layers")
     @Expose
@@ -128,7 +128,7 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     private DeadLetterConfig DeadLetterConfig;
 
     /**
-    * 
+    * Whether to enable Ons access. TRUE: enable; FALSE: not enable
     */
     @SerializedName("OnsEnable")
     @Expose
@@ -343,16 +343,16 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     }
 
     /**
-     * Get List of layer versions with which a function will be associated. Layers will be overwritten sequentially in the order in the list. 
-     * @return Layers List of layer versions with which a function will be associated. Layers will be overwritten sequentially in the order in the list.
+     * Get List of layer versions that bound with the function. Files with the same name will be overridden by the bound layer versions according to the ascending order in the list.  
+     * @return Layers List of layer versions that bound with the function. Files with the same name will be overridden by the bound layer versions according to the ascending order in the list. 
      */
     public LayerVersionSimple [] getLayers() {
         return this.Layers;
     }
 
     /**
-     * Set List of layer versions with which a function will be associated. Layers will be overwritten sequentially in the order in the list.
-     * @param Layers List of layer versions with which a function will be associated. Layers will be overwritten sequentially in the order in the list.
+     * Set List of layer versions that bound with the function. Files with the same name will be overridden by the bound layer versions according to the ascending order in the list. 
+     * @param Layers List of layer versions that bound with the function. Files with the same name will be overridden by the bound layer versions according to the ascending order in the list. 
      */
     public void setLayers(LayerVersionSimple [] Layers) {
         this.Layers = Layers;
@@ -375,16 +375,16 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return OnsEnable 
+     * Get Whether to enable Ons access. TRUE: enable; FALSE: not enable 
+     * @return OnsEnable Whether to enable Ons access. TRUE: enable; FALSE: not enable
      */
     public String getOnsEnable() {
         return this.OnsEnable;
     }
 
     /**
-     * Set 
-     * @param OnsEnable 
+     * Set Whether to enable Ons access. TRUE: enable; FALSE: not enable
+     * @param OnsEnable Whether to enable Ons access. TRUE: enable; FALSE: not enable
      */
     public void setOnsEnable(String OnsEnable) {
         this.OnsEnable = OnsEnable;

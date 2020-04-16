@@ -30,21 +30,21 @@ public class CreateAppRequest extends AbstractModel{
     private String AppName;
 
     /**
-    * Tencent Cloud project ID. Default value: 0, which means that the default project is used
+    * Tencent Cloud project ID. Default value: 0, which means the default project
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * List of engines to be supported. Valid values: android, ios, unity, cocos, unreal, windows. All values are selected by default.
+    * List of engines to be supported. All values are selected by default.
     */
     @SerializedName("EngineList")
     @Expose
     private String [] EngineList;
 
     /**
-    * List of service regions. Valid values: mainland (Mainland China), sa (South America), eu (Europe), oc (Australia), me (Middle East). All values are selected by default.
+    * Service region list. All values are selected by default.
     */
     @SerializedName("RegionList")
     @Expose
@@ -95,48 +95,48 @@ public class CreateAppRequest extends AbstractModel{
     }
 
     /**
-     * Get Tencent Cloud project ID. Default value: 0, which means that the default project is used 
-     * @return ProjectId Tencent Cloud project ID. Default value: 0, which means that the default project is used
+     * Get Tencent Cloud project ID. Default value: 0, which means the default project 
+     * @return ProjectId Tencent Cloud project ID. Default value: 0, which means the default project
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Tencent Cloud project ID. Default value: 0, which means that the default project is used
-     * @param ProjectId Tencent Cloud project ID. Default value: 0, which means that the default project is used
+     * Set Tencent Cloud project ID. Default value: 0, which means the default project
+     * @param ProjectId Tencent Cloud project ID. Default value: 0, which means the default project
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get List of engines to be supported. Valid values: android, ios, unity, cocos, unreal, windows. All values are selected by default. 
-     * @return EngineList List of engines to be supported. Valid values: android, ios, unity, cocos, unreal, windows. All values are selected by default.
+     * Get List of engines to be supported. All values are selected by default. 
+     * @return EngineList List of engines to be supported. All values are selected by default.
      */
     public String [] getEngineList() {
         return this.EngineList;
     }
 
     /**
-     * Set List of engines to be supported. Valid values: android, ios, unity, cocos, unreal, windows. All values are selected by default.
-     * @param EngineList List of engines to be supported. Valid values: android, ios, unity, cocos, unreal, windows. All values are selected by default.
+     * Set List of engines to be supported. All values are selected by default.
+     * @param EngineList List of engines to be supported. All values are selected by default.
      */
     public void setEngineList(String [] EngineList) {
         this.EngineList = EngineList;
     }
 
     /**
-     * Get List of service regions. Valid values: mainland (Mainland China), sa (South America), eu (Europe), oc (Australia), me (Middle East). All values are selected by default. 
-     * @return RegionList List of service regions. Valid values: mainland (Mainland China), sa (South America), eu (Europe), oc (Australia), me (Middle East). All values are selected by default.
+     * Get Service region list. All values are selected by default. 
+     * @return RegionList Service region list. All values are selected by default.
      */
     public String [] getRegionList() {
         return this.RegionList;
     }
 
     /**
-     * Set List of service regions. Valid values: mainland (Mainland China), sa (South America), eu (Europe), oc (Australia), me (Middle East). All values are selected by default.
-     * @param RegionList List of service regions. Valid values: mainland (Mainland China), sa (South America), eu (Europe), oc (Australia), me (Middle East). All values are selected by default.
+     * Set Service region list. All values are selected by default.
+     * @param RegionList Service region list. All values are selected by default.
      */
     public void setRegionList(String [] RegionList) {
         this.RegionList = RegionList;

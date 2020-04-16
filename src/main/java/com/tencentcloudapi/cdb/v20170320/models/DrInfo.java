@@ -51,7 +51,12 @@ public class DrInfo extends AbstractModel{
     private String Region;
 
     /**
-    * Instance synchronization status
+    * Instance sync status. Possible returned values include:
+0 - disaster recovery not synced;
+1 - disaster recovery syncing;
+2 - disaster recovery synced successfully;
+3 - disaster recovery sync failed;
+4 - repairing disaster recovery sync;
     */
     @SerializedName("SyncStatus")
     @Expose
@@ -136,16 +141,36 @@ public class DrInfo extends AbstractModel{
     }
 
     /**
-     * Get Instance synchronization status 
-     * @return SyncStatus Instance synchronization status
+     * Get Instance sync status. Possible returned values include:
+0 - disaster recovery not synced;
+1 - disaster recovery syncing;
+2 - disaster recovery synced successfully;
+3 - disaster recovery sync failed;
+4 - repairing disaster recovery sync; 
+     * @return SyncStatus Instance sync status. Possible returned values include:
+0 - disaster recovery not synced;
+1 - disaster recovery syncing;
+2 - disaster recovery synced successfully;
+3 - disaster recovery sync failed;
+4 - repairing disaster recovery sync;
      */
     public Long getSyncStatus() {
         return this.SyncStatus;
     }
 
     /**
-     * Set Instance synchronization status
-     * @param SyncStatus Instance synchronization status
+     * Set Instance sync status. Possible returned values include:
+0 - disaster recovery not synced;
+1 - disaster recovery syncing;
+2 - disaster recovery synced successfully;
+3 - disaster recovery sync failed;
+4 - repairing disaster recovery sync;
+     * @param SyncStatus Instance sync status. Possible returned values include:
+0 - disaster recovery not synced;
+1 - disaster recovery syncing;
+2 - disaster recovery synced successfully;
+3 - disaster recovery sync failed;
+4 - repairing disaster recovery sync;
      */
     public void setSyncStatus(Long SyncStatus) {
         this.SyncStatus = SyncStatus;

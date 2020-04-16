@@ -51,6 +51,13 @@ public class CreateDeployGroupRequest extends AbstractModel{
     private Long LimitNum;
 
     /**
+    * Model attribute of placement group. Valid values: SH12+SH02, TS85.
+    */
+    @SerializedName("DevClass")
+    @Expose
+    private String [] DevClass;
+
+    /**
      * Get Name of a placement group, which can contain up to 60 characters. 
      * @return DeployGroupName Name of a placement group, which can contain up to 60 characters.
      */
@@ -115,6 +122,22 @@ public class CreateDeployGroupRequest extends AbstractModel{
     }
 
     /**
+     * Get Model attribute of placement group. Valid values: SH12+SH02, TS85. 
+     * @return DevClass Model attribute of placement group. Valid values: SH12+SH02, TS85.
+     */
+    public String [] getDevClass() {
+        return this.DevClass;
+    }
+
+    /**
+     * Set Model attribute of placement group. Valid values: SH12+SH02, TS85.
+     * @param DevClass Model attribute of placement group. Valid values: SH12+SH02, TS85.
+     */
+    public void setDevClass(String [] DevClass) {
+        this.DevClass = DevClass;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class CreateDeployGroupRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamArraySimple(map, prefix + "Affinity.", this.Affinity);
         this.setParamSimple(map, prefix + "LimitNum", this.LimitNum);
+        this.setParamArraySimple(map, prefix + "DevClass.", this.DevClass);
 
     }
 }

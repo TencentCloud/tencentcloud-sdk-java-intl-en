@@ -68,10 +68,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String LayerName;
 
     /**
-    * Current status of a layer. Valid values:
-publishing
-available
-unavailable
+    * The status of the layer version. Values can be: 
+`Active`: normal
+`Publishing`: publishing
+`PublishFailed`: failed to publish
+`Deleted`: deleted
     */
     @SerializedName("Status")
     @Expose
@@ -186,28 +187,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Current status of a layer. Valid values:
-publishing
-available
-unavailable 
-     * @return Status Current status of a layer. Valid values:
-publishing
-available
-unavailable
+     * Get The status of the layer version. Values can be: 
+`Active`: normal
+`Publishing`: publishing
+`PublishFailed`: failed to publish
+`Deleted`: deleted 
+     * @return Status The status of the layer version. Values can be: 
+`Active`: normal
+`Publishing`: publishing
+`PublishFailed`: failed to publish
+`Deleted`: deleted
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Current status of a layer. Valid values:
-publishing
-available
-unavailable
-     * @param Status Current status of a layer. Valid values:
-publishing
-available
-unavailable
+     * Set The status of the layer version. Values can be: 
+`Active`: normal
+`Publishing`: publishing
+`PublishFailed`: failed to publish
+`Deleted`: deleted
+     * @param Status The status of the layer version. Values can be: 
+`Active`: normal
+`Publishing`: publishing
+`PublishFailed`: failed to publish
+`Deleted`: deleted
      */
     public void setStatus(String Status) {
         this.Status = Status;
