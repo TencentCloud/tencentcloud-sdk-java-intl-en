@@ -58,6 +58,13 @@ public class ModifyDBInstanceVipVportRequest extends AbstractModel{
     private String UniqSubnetId;
 
     /**
+    * Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0–168 hours. Default value: 24 hours.
+    */
+    @SerializedName("ReleaseDuration")
+    @Expose
+    private Long ReleaseDuration;
+
+    /**
      * Get Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://cloud.tencent.com/document/api/236/15872) to query the ID, whose value is the `InstanceId` value in output parameters. 
      * @return InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://cloud.tencent.com/document/api/236/15872) to query the ID, whose value is the `InstanceId` value in output parameters.
      */
@@ -138,6 +145,22 @@ public class ModifyDBInstanceVipVportRequest extends AbstractModel{
     }
 
     /**
+     * Get Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0–168 hours. Default value: 24 hours. 
+     * @return ReleaseDuration Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0–168 hours. Default value: 24 hours.
+     */
+    public Long getReleaseDuration() {
+        return this.ReleaseDuration;
+    }
+
+    /**
+     * Set Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0–168 hours. Default value: 24 hours.
+     * @param ReleaseDuration Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0–168 hours. Default value: 24 hours.
+     */
+    public void setReleaseDuration(Long ReleaseDuration) {
+        this.ReleaseDuration = ReleaseDuration;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class ModifyDBInstanceVipVportRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DstPort", this.DstPort);
         this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
         this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
+        this.setParamSimple(map, prefix + "ReleaseDuration", this.ReleaseDuration);
 
     }
 }

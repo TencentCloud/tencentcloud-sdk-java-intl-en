@@ -56,6 +56,24 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a log topic. Note: up to 10 log topics can be created under one logset.
+     * @param req CreateClsLogTopicRequest
+     * @return CreateClsLogTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateClsLogTopicResponse CreateClsLogTopic(CreateClsLogTopicRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateClsLogTopicResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateClsLogTopicResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateClsLogTopic"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete a specified acceleration domain name.
      * @param req DeleteCdnDomainRequest
      * @return DeleteCdnDomainResponse
@@ -67,6 +85,24 @@ public class CdnClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteCdnDomainResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteCdnDomain"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a log topic. Note: when a log topic is deleted, all logs of the domain names bound to it will no longer be published to the topic, and the logs previously published to the topic will be deleted. This action will take effect within 5–15 minutes.
+     * @param req DeleteClsLogTopicRequest
+     * @return DeleteClsLogTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteClsLogTopicResponse DeleteClsLogTopic(DeleteClsLogTopicRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteClsLogTopicResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteClsLogTopicResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteClsLogTopic"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -130,6 +166,24 @@ public class CdnClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeCdnIpResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeCdnIp"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to verify an SSL certificate and extract the domain names. It will then return the list of domain names connected to CDN and the list of domain names with the certificate configured.
+     * @param req DescribeCertDomainsRequest
+     * @return DescribeCertDomainsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCertDomainsResponse DescribeCertDomains(DescribeCertDomainsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCertDomainsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCertDomainsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCertDomains"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -332,6 +386,25 @@ It corresponds to the **Pornography Detection** page on the CDN Console.
     }
 
     /**
+     *This API is used to stop publishing to a log topic. Note: after a log topic is disabled, all logs of the domain names bound to it will no longer be published to the topic, and the logs that have already been published will be retained. This action will take effect within 5–15 minutes.
+
+     * @param req DisableClsLogTopicRequest
+     * @return DisableClsLogTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableClsLogTopicResponse DisableClsLogTopic(DisableClsLogTopicRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableClsLogTopicResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableClsLogTopicResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DisableClsLogTopic"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (EnableCaches) is used to unblock manually blocked URLs. After a URL is successfully unblocked, it takes about 5 to 10 minutes to take effect across the entire network. (This API is during beta test and not fully available now.)
      * @param req EnableCachesRequest
      * @return EnableCachesResponse
@@ -350,6 +423,24 @@ It corresponds to the **Pornography Detection** page on the CDN Console.
     }
 
     /**
+     *This API is used to start publishing to a log topic. Note: after a log topic is enabled, all logs of the domain names bound to the topic will be published to it. This action will take effect within 5–15 minutes.
+     * @param req EnableClsLogTopicRequest
+     * @return EnableClsLogTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableClsLogTopicResponse EnableClsLogTopic(EnableClsLogTopicRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableClsLogTopicResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableClsLogTopicResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "EnableClsLogTopic"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the resource blocking history and the current URL status. (This API is in beta test and not generally available yet.)
      * @param req GetDisableRecordsRequest
      * @return GetDisableRecordsResponse
@@ -361,6 +452,42 @@ It corresponds to the **Pornography Detection** page on the CDN Console.
                 Type type = new TypeToken<JsonResponseModel<GetDisableRecordsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "GetDisableRecords"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to display the list of log topics. Note: a logset can contain up to 10 log topics.
+     * @param req ListClsLogTopicsRequest
+     * @return ListClsLogTopicsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListClsLogTopicsResponse ListClsLogTopics(ListClsLogTopicsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListClsLogTopicsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListClsLogTopicsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ListClsLogTopics"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the list of domain names bound to a log topic.
+     * @param req ListClsTopicDomainsRequest
+     * @return ListClsTopicDomainsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListClsTopicDomainsResponse ListClsTopicDomains(ListClsTopicDomainsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListClsTopicDomainsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListClsTopicDomainsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ListClsTopicDomains"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -387,6 +514,24 @@ Note: only data from the last 90 days will be queried.
                 Type type = new TypeToken<JsonResponseModel<ListTopDataResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ListTopData"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to manage the list of domain names bound to a log topic.
+     * @param req ManageClsTopicDomainsRequest
+     * @return ManageClsTopicDomainsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ManageClsTopicDomainsResponse ManageClsTopicDomains(ManageClsTopicDomainsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ManageClsTopicDomainsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ManageClsTopicDomainsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ManageClsTopicDomains"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -445,6 +590,24 @@ This API is in beta test and not fully available yet. Please stay tuned.
                 Type type = new TypeToken<JsonResponseModel<PushUrlsCacheResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "PushUrlsCache"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to search for CLS logs. Search filters can be set to today, 24 hours (one of the last 7 days), and the last 7 days.
+     * @param req SearchClsLogRequest
+     * @return SearchClsLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchClsLogResponse SearchClsLog(SearchClsLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SearchClsLogResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SearchClsLogResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SearchClsLog"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

@@ -912,6 +912,24 @@ Note: This API can only be called in the Guangzhou region; for other regions, an
     }
 
     /**
+     *This API is used to add, delete, and update the CLS topic of a CLB instance.
+     * @param req SetLoadBalancerClsLogRequest
+     * @return SetLoadBalancerClsLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetLoadBalancerClsLogResponse SetLoadBalancerClsLog(SetLoadBalancerClsLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetLoadBalancerClsLogResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetLoadBalancerClsLogResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SetLoadBalancerClsLog"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (SetLoadBalancerSecurityGroups) is used to bind/unbind security groups for a public network CLB instance. You can use the DescribeLoadBalancers API to query the security groups bound to a CLB instance. This API uses `set` semantics.
 During a binding operation, the input parameters need to be all security groups to be bound to the CLB instance (including those already bound ones and new ones).
 During an unbinding operation, the input parameters need to be all the security groups still bound to the CLB instance after the unbinding operation. To unbind all security groups, you can leave this parameter empty or pass in an empty array. Note: Private network CLB do not support binding security groups.

@@ -71,6 +71,22 @@ Note: This field may return null, indicating that no valid value was found.
     private String PolicyDocument;
 
     /**
+    * Remarks
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PresetAlias")
+    @Expose
+    private String PresetAlias;
+
+    /**
+    * Whether it is a service-linked policy
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IsServiceLinkedRolePolicy")
+    @Expose
+    private Long IsServiceLinkedRolePolicy;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -198,6 +214,46 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
+     * Get Remarks
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return PresetAlias Remarks
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getPresetAlias() {
+        return this.PresetAlias;
+    }
+
+    /**
+     * Set Remarks
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param PresetAlias Remarks
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setPresetAlias(String PresetAlias) {
+        this.PresetAlias = PresetAlias;
+    }
+
+    /**
+     * Get Whether it is a service-linked policy
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return IsServiceLinkedRolePolicy Whether it is a service-linked policy
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getIsServiceLinkedRolePolicy() {
+        return this.IsServiceLinkedRolePolicy;
+    }
+
+    /**
+     * Set Whether it is a service-linked policy
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param IsServiceLinkedRolePolicy Whether it is a service-linked policy
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIsServiceLinkedRolePolicy(Long IsServiceLinkedRolePolicy) {
+        this.IsServiceLinkedRolePolicy = IsServiceLinkedRolePolicy;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -223,6 +279,8 @@ Note: This field may return null, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "AddTime", this.AddTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "PolicyDocument", this.PolicyDocument);
+        this.setParamSimple(map, prefix + "PresetAlias", this.PresetAlias);
+        this.setParamSimple(map, prefix + "IsServiceLinkedRolePolicy", this.IsServiceLinkedRolePolicy);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

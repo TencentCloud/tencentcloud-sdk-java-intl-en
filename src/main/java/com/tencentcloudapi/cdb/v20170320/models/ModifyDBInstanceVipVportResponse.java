@@ -23,7 +23,8 @@ import java.util.HashMap;
 public class ModifyDBInstanceVipVportResponse extends AbstractModel{
 
     /**
-    * Async task ID.
+    * Async task ID. (This returned field has been disused)
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AsyncRequestId")
     @Expose
@@ -37,16 +38,20 @@ public class ModifyDBInstanceVipVportResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Async task ID. 
-     * @return AsyncRequestId Async task ID.
+     * Get Async task ID. (This returned field has been disused)
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return AsyncRequestId Async task ID. (This returned field has been disused)
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
     }
 
     /**
-     * Set Async task ID.
-     * @param AsyncRequestId Async task ID.
+     * Set Async task ID. (This returned field has been disused)
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AsyncRequestId Async task ID. (This returned field has been disused)
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

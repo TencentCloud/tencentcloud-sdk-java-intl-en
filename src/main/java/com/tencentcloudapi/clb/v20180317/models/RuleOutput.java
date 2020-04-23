@@ -172,6 +172,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String TrpcFunc;
 
     /**
+    * QUIC status
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("QuicStatus")
+    @Expose
+    private String QuicStatus;
+
+    /**
      * Get Forwarding rule ID 
      * @return LocationId Forwarding rule ID
      */
@@ -528,6 +536,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get QUIC status
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return QuicStatus QUIC status
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getQuicStatus() {
+        return this.QuicStatus;
+    }
+
+    /**
+     * Set QUIC status
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param QuicStatus QUIC status
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setQuicStatus(String QuicStatus) {
+        this.QuicStatus = QuicStatus;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -551,6 +579,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "WafDomainId", this.WafDomainId);
         this.setParamSimple(map, prefix + "TrpcCallee", this.TrpcCallee);
         this.setParamSimple(map, prefix + "TrpcFunc", this.TrpcFunc);
+        this.setParamSimple(map, prefix + "QuicStatus", this.QuicStatus);
 
     }
 }

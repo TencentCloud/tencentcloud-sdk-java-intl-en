@@ -44,6 +44,13 @@ public class DescribeAccountsRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * Regular expression for matching account names, which complies with the rules at MySQL official website.
+    */
+    @SerializedName("AccountRegexp")
+    @Expose
+    private String AccountRegexp;
+
+    /**
      * Get Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. 
      * @return InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      */
@@ -92,12 +99,29 @@ public class DescribeAccountsRequest extends AbstractModel{
     }
 
     /**
+     * Get Regular expression for matching account names, which complies with the rules at MySQL official website. 
+     * @return AccountRegexp Regular expression for matching account names, which complies with the rules at MySQL official website.
+     */
+    public String getAccountRegexp() {
+        return this.AccountRegexp;
+    }
+
+    /**
+     * Set Regular expression for matching account names, which complies with the rules at MySQL official website.
+     * @param AccountRegexp Regular expression for matching account names, which complies with the rules at MySQL official website.
+     */
+    public void setAccountRegexp(String AccountRegexp) {
+        this.AccountRegexp = AccountRegexp;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "AccountRegexp", this.AccountRegexp);
 
     }
 }

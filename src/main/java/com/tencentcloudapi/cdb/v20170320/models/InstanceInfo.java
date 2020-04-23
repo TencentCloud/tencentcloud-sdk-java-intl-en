@@ -174,7 +174,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private MasterInfo MasterInfo;
 
     /**
-    * Instance type. Value range: HA (high availability edition), BASIC (basic edition)
+    * Instance type. Value range: HA (High-Availability Edition), FE (Finance Edition), BASIC (Basic Edition)
     */
     @SerializedName("DeviceType")
     @Expose
@@ -670,16 +670,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Instance type. Value range: HA (high availability edition), BASIC (basic edition) 
-     * @return DeviceType Instance type. Value range: HA (high availability edition), BASIC (basic edition)
+     * Get Instance type. Value range: HA (High-Availability Edition), FE (Finance Edition), BASIC (Basic Edition) 
+     * @return DeviceType Instance type. Value range: HA (High-Availability Edition), FE (Finance Edition), BASIC (Basic Edition)
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set Instance type. Value range: HA (high availability edition), BASIC (basic edition)
-     * @param DeviceType Instance type. Value range: HA (high availability edition), BASIC (basic edition)
+     * Set Instance type. Value range: HA (High-Availability Edition), FE (Finance Edition), BASIC (Basic Edition)
+     * @param DeviceType Instance type. Value range: HA (High-Availability Edition), FE (Finance Edition), BASIC (Basic Edition)
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;

@@ -44,7 +44,7 @@ public class DescribeDatabasesRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * Regular expression for matching database names, which complies with the rules at MySQL's official website
+    * Regular expression for matching database names.
     */
     @SerializedName("DatabaseRegexp")
     @Expose
@@ -99,16 +99,16 @@ public class DescribeDatabasesRequest extends AbstractModel{
     }
 
     /**
-     * Get Regular expression for matching database names, which complies with the rules at MySQL's official website 
-     * @return DatabaseRegexp Regular expression for matching database names, which complies with the rules at MySQL's official website
+     * Get Regular expression for matching database names. 
+     * @return DatabaseRegexp Regular expression for matching database names.
      */
     public String getDatabaseRegexp() {
         return this.DatabaseRegexp;
     }
 
     /**
-     * Set Regular expression for matching database names, which complies with the rules at MySQL's official website
-     * @param DatabaseRegexp Regular expression for matching database names, which complies with the rules at MySQL's official website
+     * Set Regular expression for matching database names.
+     * @param DatabaseRegexp Regular expression for matching database names.
      */
     public void setDatabaseRegexp(String DatabaseRegexp) {
         this.DatabaseRegexp = DatabaseRegexp;

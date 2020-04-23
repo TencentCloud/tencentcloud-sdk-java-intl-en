@@ -542,6 +542,24 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *This API is used to get the collaborator list.
+     * @param req ListCollaboratorsRequest
+     * @return ListCollaboratorsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListCollaboratorsResponse ListCollaborators(ListCollaboratorsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListCollaboratorsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListCollaboratorsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ListCollaborators"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (ListEntitiesForPolicy) is used to query the list of entities associated with a policy.
      * @param req ListEntitiesForPolicyRequest
      * @return ListEntitiesForPolicyResponse
@@ -686,24 +704,6 @@ public class CamClient extends AbstractClient{
     }
 
     /**
-     *This API is used to set account verification for login and sensitive operation protection.
-     * @param req SetFlagRequest
-     * @return SetFlagResponse
-     * @throws TencentCloudSDKException
-     */
-    public SetFlagResponse SetFlag(SetFlagRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SetFlagResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<SetFlagResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "SetFlag"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API (UpdateAssumeRolePolicy) is used to modify the trust policy of a role.
      * @param req UpdateAssumeRolePolicyRequest
      * @return UpdateAssumeRolePolicyResponse
@@ -733,6 +733,24 @@ public class CamClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpdateGroupResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "UpdateGroup"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify a role’s login permissions.
+     * @param req UpdateRoleConsoleLoginRequest
+     * @return UpdateRoleConsoleLoginResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateRoleConsoleLoginResponse UpdateRoleConsoleLogin(UpdateRoleConsoleLoginRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateRoleConsoleLoginResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateRoleConsoleLoginResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UpdateRoleConsoleLogin"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

@@ -108,6 +108,13 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     private String TrpcFunc;
 
     /**
+    * Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names
+    */
+    @SerializedName("Quic")
+    @Expose
+    private Boolean Quic;
+
+    /**
      * Get Domain name of the forwarding rule. Length: 1-80. 
      * @return Domain Domain name of the forwarding rule. Length: 1-80.
      */
@@ -304,6 +311,22 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     }
 
     /**
+     * Get Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names 
+     * @return Quic Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names
+     */
+    public Boolean getQuic() {
+        return this.Quic;
+    }
+
+    /**
+     * Set Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names
+     * @param Quic Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names
+     */
+    public void setQuic(Boolean Quic) {
+        this.Quic = Quic;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -319,6 +342,7 @@ They represent weighted round robin, least connections, and IP hash, respectivel
         this.setParamSimple(map, prefix + "TargetType", this.TargetType);
         this.setParamSimple(map, prefix + "TrpcCallee", this.TrpcCallee);
         this.setParamSimple(map, prefix + "TrpcFunc", this.TrpcFunc);
+        this.setParamSimple(map, prefix + "Quic", this.Quic);
 
     }
 }

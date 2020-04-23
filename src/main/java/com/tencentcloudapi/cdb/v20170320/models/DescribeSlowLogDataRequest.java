@@ -44,7 +44,7 @@ public class DescribeSlowLogDataRequest extends AbstractModel{
     private Long EndTime;
 
     /**
-    * Client Host list.
+    * Client `Host` list.
     */
     @SerializedName("UserHosts")
     @Expose
@@ -141,16 +141,16 @@ public class DescribeSlowLogDataRequest extends AbstractModel{
     }
 
     /**
-     * Get Client Host list. 
-     * @return UserHosts Client Host list.
+     * Get Client `Host` list. 
+     * @return UserHosts Client `Host` list.
      */
     public String [] getUserHosts() {
         return this.UserHosts;
     }
 
     /**
-     * Set Client Host list.
-     * @param UserHosts Client Host list.
+     * Set Client `Host` list.
+     * @param UserHosts Client `Host` list.
      */
     public void setUserHosts(String [] UserHosts) {
         this.UserHosts = UserHosts;

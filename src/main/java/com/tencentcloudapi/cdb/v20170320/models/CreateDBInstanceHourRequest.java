@@ -198,7 +198,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     private String ClientToken;
 
     /**
-    * 
+    * Instance type. Valid values: HA (High-Availability Edition), BASIC (Basic Edition). If this parameter is not specified, High-Availability Edition will be used by default.
     */
     @SerializedName("DeviceType")
     @Expose
@@ -605,16 +605,16 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return DeviceType 
+     * Get Instance type. Valid values: HA (High-Availability Edition), BASIC (Basic Edition). If this parameter is not specified, High-Availability Edition will be used by default. 
+     * @return DeviceType Instance type. Valid values: HA (High-Availability Edition), BASIC (Basic Edition). If this parameter is not specified, High-Availability Edition will be used by default.
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set 
-     * @param DeviceType 
+     * Set Instance type. Valid values: HA (High-Availability Edition), BASIC (Basic Edition). If this parameter is not specified, High-Availability Edition will be used by default.
+     * @param DeviceType Instance type. Valid values: HA (High-Availability Edition), BASIC (Basic Edition). If this parameter is not specified, High-Availability Edition will be used by default.
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
