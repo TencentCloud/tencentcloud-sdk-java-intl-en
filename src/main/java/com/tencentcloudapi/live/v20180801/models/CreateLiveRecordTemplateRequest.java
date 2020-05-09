@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateLiveRecordTemplateRequest extends AbstractModel{
 
     /**
-    * Template name, which is a non-empty string.
+    * Template name. Only letters, digits, underscores, and hyphens can be contained.
     */
     @SerializedName("TemplateName")
     @Expose
@@ -65,7 +65,8 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel{
     private RecordParam AacParam;
 
     /**
-    * 0: LVB,
+    * LVB type. Default value: 0.
+0: LVB.
 1: LCB.
     */
     @SerializedName("IsDelayLive")
@@ -87,16 +88,16 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel{
     private RecordParam Mp3Param;
 
     /**
-     * Get Template name, which is a non-empty string. 
-     * @return TemplateName Template name, which is a non-empty string.
+     * Get Template name. Only letters, digits, underscores, and hyphens can be contained. 
+     * @return TemplateName Template name. Only letters, digits, underscores, and hyphens can be contained.
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set Template name, which is a non-empty string.
-     * @param TemplateName Template name, which is a non-empty string.
+     * Set Template name. Only letters, digits, underscores, and hyphens can be contained.
+     * @param TemplateName Template name. Only letters, digits, underscores, and hyphens can be contained.
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
@@ -183,9 +184,11 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get 0: LVB,
+     * Get LVB type. Default value: 0.
+0: LVB.
 1: LCB. 
-     * @return IsDelayLive 0: LVB,
+     * @return IsDelayLive LVB type. Default value: 0.
+0: LVB.
 1: LCB.
      */
     public Long getIsDelayLive() {
@@ -193,9 +196,11 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Set 0: LVB,
+     * Set LVB type. Default value: 0.
+0: LVB.
 1: LCB.
-     * @param IsDelayLive 0: LVB,
+     * @param IsDelayLive LVB type. Default value: 0.
+0: LVB.
 1: LCB.
      */
     public void setIsDelayLive(Long IsDelayLive) {

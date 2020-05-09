@@ -38,6 +38,24 @@ public class DtsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to configure a data subscription, which can be called only for subscription instances in unconfigured status.
+     * @param req ActivateSubscribeRequest
+     * @return ActivateSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ActivateSubscribeResponse ActivateSubscribe(ActivateSubscribeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ActivateSubscribeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ActivateSubscribeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ActivateSubscribe"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (CompleteMigrateJob) is used to complete a data migration task.
 For tasks in incremental migration mode, you need to call this API before migration gets ready, so as to stop migrating incremental data.
 If the task status queried through the (DescribeMigrateJobs) API is ready (status=8), you can call this API to complete the migration task.
@@ -92,6 +110,24 @@ For a finance zone linkage, please use the domain name dts.ap-shenzhen-fsi.tence
                 Type type = new TypeToken<JsonResponseModel<CreateMigrateJobResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateMigrateJob"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a data subscription instance.
+     * @param req CreateSubscribeRequest
+     * @return CreateSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSubscribeResponse CreateSubscribe(CreateSubscribeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSubscribeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSubscribeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateSubscribe"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -173,6 +209,24 @@ After successful creation, check can be initiated through the CreateSyncCheckJob
     }
 
     /**
+     *This API is used to query the execution result of a task.
+     * @param req DescribeAsyncRequestInfoRequest
+     * @return DescribeAsyncRequestInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAsyncRequestInfoResponse DescribeAsyncRequestInfo(DescribeAsyncRequestInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAsyncRequestInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAsyncRequestInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAsyncRequestInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the check result and query check status and progress after a check is created. 
 If the check succeeds, you can call the StartMigrateJob API to start migration.
 If the check fails, the reason can be queried. Please modify the migration configuration or adjust relevant parameters of the source/target instances through the ModifyMigrateJob API based on the error message.
@@ -205,6 +259,60 @@ For a finance zone linkage, please use the domain name https://dts.ap-shenzhen-f
                 Type type = new TypeToken<JsonResponseModel<DescribeMigrateJobsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeMigrateJobs"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the purchasable subscription instance regions.
+     * @param req DescribeRegionConfRequest
+     * @return DescribeRegionConfResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRegionConfResponse DescribeRegionConf(DescribeRegionConfRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRegionConfResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRegionConfResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRegionConf"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the subscription instance configuration.
+     * @param req DescribeSubscribeConfRequest
+     * @return DescribeSubscribeConfResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSubscribeConfResponse DescribeSubscribeConf(DescribeSubscribeConfRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSubscribeConfResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSubscribeConfResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSubscribeConf"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the information list of data subscription instances. Pagination is enabled by default with 20 results returned each time.
+     * @param req DescribeSubscribesRequest
+     * @return DescribeSubscribesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSubscribesResponse DescribeSubscribes(DescribeSubscribesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSubscribesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSubscribesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSubscribes"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -253,6 +361,24 @@ If Status=finished and CheckFlag !=1, the check fails.
     }
 
     /**
+     *This API is used to isolate an hourly billed subscription instance. After this API is called, the instance will become unavailable and billing will stop for it.
+     * @param req IsolateSubscribeRequest
+     * @return IsolateSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public IsolateSubscribeResponse IsolateSubscribe(IsolateSubscribeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<IsolateSubscribeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<IsolateSubscribeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "IsolateSubscribe"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (ModifyMigrateJob) is used to modify a data migration task.
 If the status of a migration task is creating (status=1), check succeeded (status=4), check failed (status=5), or migration failed (status=10), this API can be called to modify the task, but the type of the source and target instances and the region of the target instance cannot be modified.
 
@@ -274,6 +400,78 @@ For a finance zone linkage, please use the domain name dts.ap-shenzhen-fsi.tence
     }
 
     /**
+     *This API is used to modify the consumption time point of a data subscription channel.
+     * @param req ModifySubscribeConsumeTimeRequest
+     * @return ModifySubscribeConsumeTimeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySubscribeConsumeTimeResponse ModifySubscribeConsumeTime(ModifySubscribeConsumeTimeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySubscribeConsumeTimeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySubscribeConsumeTimeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifySubscribeConsumeTime"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to rename a data subscription instance.
+     * @param req ModifySubscribeNameRequest
+     * @return ModifySubscribeNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySubscribeNameResponse ModifySubscribeName(ModifySubscribeNameRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySubscribeNameResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySubscribeNameResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifySubscribeName"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the subscription rule of a data subscription channel.
+     * @param req ModifySubscribeObjectsRequest
+     * @return ModifySubscribeObjectsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySubscribeObjectsResponse ModifySubscribeObjects(ModifySubscribeObjectsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySubscribeObjectsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySubscribeObjectsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifySubscribeObjects"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the IP and port number of a data subscription instance.
+     * @param req ModifySubscribeVipVportRequest
+     * @return ModifySubscribeVipVportResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySubscribeVipVportResponse ModifySubscribeVipVport(ModifySubscribeVipVportRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySubscribeVipVportResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySubscribeVipVportResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifySubscribeVipVport"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify a disaster recovery sync task. 
 If the status of a sync task is creating, created, check succeeded, or check failed, this API can be called to modify the task. 
 The information of the source and target instances cannot be modified, but the task name and the tables to be synced can.
@@ -287,6 +485,42 @@ The information of the source and target instances cannot be modified, but the t
                 Type type = new TypeToken<JsonResponseModel<ModifySyncJobResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifySyncJob"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to deactivate an isolated data subscription instance.
+     * @param req OfflineIsolatedSubscribeRequest
+     * @return OfflineIsolatedSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public OfflineIsolatedSubscribeResponse OfflineIsolatedSubscribe(OfflineIsolatedSubscribeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<OfflineIsolatedSubscribeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<OfflineIsolatedSubscribeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "OfflineIsolatedSubscribe"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to reset a data subscription instance. Once reset, an activated instance can be bound to other database instances through the `ActivateSubscribe` API.
+     * @param req ResetSubscribeRequest
+     * @return ResetSubscribeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetSubscribeResponse ResetSubscribe(ResetSubscribeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ResetSubscribeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ResetSubscribeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ResetSubscribe"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

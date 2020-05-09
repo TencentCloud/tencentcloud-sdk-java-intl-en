@@ -24,25 +24,25 @@ public class RecordParam extends AbstractModel{
 
     /**
     * Recording interval.
-In seconds. Default value: 1,800.
-Value range: 300–7,200.
-This parameter is not valid for HLS, and a file is generated from push start to push end when HLS is recorded.
+In seconds. Default value: 1800.
+Value range: 300–7200.
+This parameter is not valid for HLS, and a file will be generated from push start to interruption during HLS recording.
     */
     @SerializedName("RecordInterval")
     @Expose
     private Long RecordInterval;
 
     /**
-    * Recording storage duration.
-In seconds. Value range: 0–93,312,000.
-0 represents permanent storage.
+    * Recording storage period.
+In seconds. Value range: 0–93312000.
+0: permanent storage.
     */
     @SerializedName("StorageTime")
     @Expose
     private Long StorageTime;
 
     /**
-    * Whether to enable recording in the current format. 0: no; 1: yes. Default value: 0.
+    * Whether to enable recording in the current format. Default value: 0. 0: no, 1: yes.
     */
     @SerializedName("Enable")
     @Expose
@@ -56,14 +56,21 @@ In seconds. Value range: 0–93,312,000.
     private Long VodSubAppId;
 
     /**
+    * 
+    */
+    @SerializedName("VodFileName")
+    @Expose
+    private String VodFileName;
+
+    /**
      * Get Recording interval.
-In seconds. Default value: 1,800.
-Value range: 300–7,200.
-This parameter is not valid for HLS, and a file is generated from push start to push end when HLS is recorded. 
+In seconds. Default value: 1800.
+Value range: 300–7200.
+This parameter is not valid for HLS, and a file will be generated from push start to interruption during HLS recording. 
      * @return RecordInterval Recording interval.
-In seconds. Default value: 1,800.
-Value range: 300–7,200.
-This parameter is not valid for HLS, and a file is generated from push start to push end when HLS is recorded.
+In seconds. Default value: 1800.
+Value range: 300–7200.
+This parameter is not valid for HLS, and a file will be generated from push start to interruption during HLS recording.
      */
     public Long getRecordInterval() {
         return this.RecordInterval;
@@ -71,53 +78,53 @@ This parameter is not valid for HLS, and a file is generated from push start to 
 
     /**
      * Set Recording interval.
-In seconds. Default value: 1,800.
-Value range: 300–7,200.
-This parameter is not valid for HLS, and a file is generated from push start to push end when HLS is recorded.
+In seconds. Default value: 1800.
+Value range: 300–7200.
+This parameter is not valid for HLS, and a file will be generated from push start to interruption during HLS recording.
      * @param RecordInterval Recording interval.
-In seconds. Default value: 1,800.
-Value range: 300–7,200.
-This parameter is not valid for HLS, and a file is generated from push start to push end when HLS is recorded.
+In seconds. Default value: 1800.
+Value range: 300–7200.
+This parameter is not valid for HLS, and a file will be generated from push start to interruption during HLS recording.
      */
     public void setRecordInterval(Long RecordInterval) {
         this.RecordInterval = RecordInterval;
     }
 
     /**
-     * Get Recording storage duration.
-In seconds. Value range: 0–93,312,000.
-0 represents permanent storage. 
-     * @return StorageTime Recording storage duration.
-In seconds. Value range: 0–93,312,000.
-0 represents permanent storage.
+     * Get Recording storage period.
+In seconds. Value range: 0–93312000.
+0: permanent storage. 
+     * @return StorageTime Recording storage period.
+In seconds. Value range: 0–93312000.
+0: permanent storage.
      */
     public Long getStorageTime() {
         return this.StorageTime;
     }
 
     /**
-     * Set Recording storage duration.
-In seconds. Value range: 0–93,312,000.
-0 represents permanent storage.
-     * @param StorageTime Recording storage duration.
-In seconds. Value range: 0–93,312,000.
-0 represents permanent storage.
+     * Set Recording storage period.
+In seconds. Value range: 0–93312000.
+0: permanent storage.
+     * @param StorageTime Recording storage period.
+In seconds. Value range: 0–93312000.
+0: permanent storage.
      */
     public void setStorageTime(Long StorageTime) {
         this.StorageTime = StorageTime;
     }
 
     /**
-     * Get Whether to enable recording in the current format. 0: no; 1: yes. Default value: 0. 
-     * @return Enable Whether to enable recording in the current format. 0: no; 1: yes. Default value: 0.
+     * Get Whether to enable recording in the current format. Default value: 0. 0: no, 1: yes. 
+     * @return Enable Whether to enable recording in the current format. Default value: 0. 0: no, 1: yes.
      */
     public Long getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set Whether to enable recording in the current format. 0: no; 1: yes. Default value: 0.
-     * @param Enable Whether to enable recording in the current format. 0: no; 1: yes. Default value: 0.
+     * Set Whether to enable recording in the current format. Default value: 0. 0: no, 1: yes.
+     * @param Enable Whether to enable recording in the current format. Default value: 0. 0: no, 1: yes.
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;
@@ -140,6 +147,22 @@ In seconds. Value range: 0–93,312,000.
     }
 
     /**
+     * Get  
+     * @return VodFileName 
+     */
+    public String getVodFileName() {
+        return this.VodFileName;
+    }
+
+    /**
+     * Set 
+     * @param VodFileName 
+     */
+    public void setVodFileName(String VodFileName) {
+        this.VodFileName = VodFileName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -147,6 +170,7 @@ In seconds. Value range: 0–93,312,000.
         this.setParamSimple(map, prefix + "StorageTime", this.StorageTime);
         this.setParamSimple(map, prefix + "Enable", this.Enable);
         this.setParamSimple(map, prefix + "VodSubAppId", this.VodSubAppId);
+        this.setParamSimple(map, prefix + "VodFileName", this.VodFileName);
 
     }
 }

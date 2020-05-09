@@ -128,6 +128,13 @@ public class MigrateJobInfo extends AbstractModel{
     private MigrateDetailInfo Detail;
 
     /**
+    * Prompt message for task error, which is not null or empty when an error occurs with the task
+    */
+    @SerializedName("ErrorInfo")
+    @Expose
+    private ErrorInfo [] ErrorInfo;
+
+    /**
      * Get Data migration task ID 
      * @return JobId Data migration task ID
      */
@@ -368,6 +375,22 @@ public class MigrateJobInfo extends AbstractModel{
     }
 
     /**
+     * Get Prompt message for task error, which is not null or empty when an error occurs with the task 
+     * @return ErrorInfo Prompt message for task error, which is not null or empty when an error occurs with the task
+     */
+    public ErrorInfo [] getErrorInfo() {
+        return this.ErrorInfo;
+    }
+
+    /**
+     * Set Prompt message for task error, which is not null or empty when an error occurs with the task
+     * @param ErrorInfo Prompt message for task error, which is not null or empty when an error occurs with the task
+     */
+    public void setErrorInfo(ErrorInfo [] ErrorInfo) {
+        this.ErrorInfo = ErrorInfo;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -386,6 +409,7 @@ public class MigrateJobInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamObj(map, prefix + "Detail.", this.Detail);
+        this.setParamArrayObj(map, prefix + "ErrorInfo.", this.ErrorInfo);
 
     }
 }

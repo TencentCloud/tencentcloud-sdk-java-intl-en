@@ -68,14 +68,16 @@ Value range: 5–600s.
     private Long Height;
 
     /**
-    * Whether to enable porn detection. 0: no, 1: yes.
+    * Whether to enable porn detection. Default value: 0.
+0: do not enable.
+1: enable.
     */
     @SerializedName("PornFlag")
     @Expose
     private Long PornFlag;
 
     /**
-    * COS `AppId`.
+    * COS application ID.
     */
     @SerializedName("CosAppId")
     @Expose
@@ -94,6 +96,20 @@ Value range: 5–600s.
     @SerializedName("CosRegion")
     @Expose
     private String CosRegion;
+
+    /**
+    * COS bucket folder prefix.
+    */
+    @SerializedName("CosPrefix")
+    @Expose
+    private String CosPrefix;
+
+    /**
+    * COS filename.
+    */
+    @SerializedName("CosFileName")
+    @Expose
+    private String CosFileName;
 
     /**
      * Get Template ID. 
@@ -204,32 +220,40 @@ Value range: 5–600s.
     }
 
     /**
-     * Get Whether to enable porn detection. 0: no, 1: yes. 
-     * @return PornFlag Whether to enable porn detection. 0: no, 1: yes.
+     * Get Whether to enable porn detection. Default value: 0.
+0: do not enable.
+1: enable. 
+     * @return PornFlag Whether to enable porn detection. Default value: 0.
+0: do not enable.
+1: enable.
      */
     public Long getPornFlag() {
         return this.PornFlag;
     }
 
     /**
-     * Set Whether to enable porn detection. 0: no, 1: yes.
-     * @param PornFlag Whether to enable porn detection. 0: no, 1: yes.
+     * Set Whether to enable porn detection. Default value: 0.
+0: do not enable.
+1: enable.
+     * @param PornFlag Whether to enable porn detection. Default value: 0.
+0: do not enable.
+1: enable.
      */
     public void setPornFlag(Long PornFlag) {
         this.PornFlag = PornFlag;
     }
 
     /**
-     * Get COS `AppId`. 
-     * @return CosAppId COS `AppId`.
+     * Get COS application ID. 
+     * @return CosAppId COS application ID.
      */
     public Long getCosAppId() {
         return this.CosAppId;
     }
 
     /**
-     * Set COS `AppId`.
-     * @param CosAppId COS `AppId`.
+     * Set COS application ID.
+     * @param CosAppId COS application ID.
      */
     public void setCosAppId(Long CosAppId) {
         this.CosAppId = CosAppId;
@@ -268,6 +292,38 @@ Value range: 5–600s.
     }
 
     /**
+     * Get COS bucket folder prefix. 
+     * @return CosPrefix COS bucket folder prefix.
+     */
+    public String getCosPrefix() {
+        return this.CosPrefix;
+    }
+
+    /**
+     * Set COS bucket folder prefix.
+     * @param CosPrefix COS bucket folder prefix.
+     */
+    public void setCosPrefix(String CosPrefix) {
+        this.CosPrefix = CosPrefix;
+    }
+
+    /**
+     * Get COS filename. 
+     * @return CosFileName COS filename.
+     */
+    public String getCosFileName() {
+        return this.CosFileName;
+    }
+
+    /**
+     * Set COS filename.
+     * @param CosFileName COS filename.
+     */
+    public void setCosFileName(String CosFileName) {
+        this.CosFileName = CosFileName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -281,6 +337,8 @@ Value range: 5–600s.
         this.setParamSimple(map, prefix + "CosAppId", this.CosAppId);
         this.setParamSimple(map, prefix + "CosBucket", this.CosBucket);
         this.setParamSimple(map, prefix + "CosRegion", this.CosRegion);
+        this.setParamSimple(map, prefix + "CosPrefix", this.CosPrefix);
+        this.setParamSimple(map, prefix + "CosFileName", this.CosFileName);
 
     }
 }

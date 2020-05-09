@@ -51,7 +51,7 @@ public class CallBackTemplateInfo extends AbstractModel{
     private String StreamBeginNotifyUrl;
 
     /**
-    * Stream ending callback URL.
+    * Interruption callback URL.
     */
     @SerializedName("StreamEndNotifyUrl")
     @Expose
@@ -157,16 +157,16 @@ public class CallBackTemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get Stream ending callback URL. 
-     * @return StreamEndNotifyUrl Stream ending callback URL.
+     * Get Interruption callback URL. 
+     * @return StreamEndNotifyUrl Interruption callback URL.
      */
     public String getStreamEndNotifyUrl() {
         return this.StreamEndNotifyUrl;
     }
 
     /**
-     * Set Stream ending callback URL.
-     * @param StreamEndNotifyUrl Stream ending callback URL.
+     * Set Interruption callback URL.
+     * @param StreamEndNotifyUrl Interruption callback URL.
      */
     public void setStreamEndNotifyUrl(String StreamEndNotifyUrl) {
         this.StreamEndNotifyUrl = StreamEndNotifyUrl;

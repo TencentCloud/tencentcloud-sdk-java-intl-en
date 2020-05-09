@@ -24,14 +24,17 @@ public class DescribeLiveSnapshotTemplateRequest extends AbstractModel{
 
     /**
     * Template ID.
+Template ID returned by the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
     */
     @SerializedName("TemplateId")
     @Expose
     private Long TemplateId;
 
     /**
-     * Get Template ID. 
+     * Get Template ID.
+Template ID returned by the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call. 
      * @return TemplateId Template ID.
+Template ID returned by the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
      */
     public Long getTemplateId() {
         return this.TemplateId;
@@ -39,7 +42,9 @@ public class DescribeLiveSnapshotTemplateRequest extends AbstractModel{
 
     /**
      * Set Template ID.
+Template ID returned by the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
      * @param TemplateId Template ID.
+Template ID returned by the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;

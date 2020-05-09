@@ -60,6 +60,16 @@ Default value: 0.
     private Long IsDelayLive;
 
     /**
+    * Whether it is LVB on Mini Program.
+0: LVB.
+1: LVB on Mini Program.
+Default value: 0.
+    */
+    @SerializedName("IsMiniProgramLive")
+    @Expose
+    private Long IsMiniProgramLive;
+
+    /**
      * Get Domain name. 
      * @return DomainName Domain name.
      */
@@ -160,6 +170,34 @@ Default value: 0.
     }
 
     /**
+     * Get Whether it is LVB on Mini Program.
+0: LVB.
+1: LVB on Mini Program.
+Default value: 0. 
+     * @return IsMiniProgramLive Whether it is LVB on Mini Program.
+0: LVB.
+1: LVB on Mini Program.
+Default value: 0.
+     */
+    public Long getIsMiniProgramLive() {
+        return this.IsMiniProgramLive;
+    }
+
+    /**
+     * Set Whether it is LVB on Mini Program.
+0: LVB.
+1: LVB on Mini Program.
+Default value: 0.
+     * @param IsMiniProgramLive Whether it is LVB on Mini Program.
+0: LVB.
+1: LVB on Mini Program.
+Default value: 0.
+     */
+    public void setIsMiniProgramLive(Long IsMiniProgramLive) {
+        this.IsMiniProgramLive = IsMiniProgramLive;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -167,6 +205,7 @@ Default value: 0.
         this.setParamSimple(map, prefix + "DomainType", this.DomainType);
         this.setParamSimple(map, prefix + "PlayType", this.PlayType);
         this.setParamSimple(map, prefix + "IsDelayLive", this.IsDelayLive);
+        this.setParamSimple(map, prefix + "IsMiniProgramLive", this.IsMiniProgramLive);
 
     }
 }

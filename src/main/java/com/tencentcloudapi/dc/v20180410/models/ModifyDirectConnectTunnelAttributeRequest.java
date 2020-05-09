@@ -72,6 +72,13 @@ public class ModifyDirectConnectTunnelAttributeRequest extends AbstractModel{
     private Long Bandwidth;
 
     /**
+    * Tencent-side standby IP address
+    */
+    @SerializedName("TencentBackupAddress")
+    @Expose
+    private String TencentBackupAddress;
+
+    /**
      * Get Dedicated tunnel ID. 
      * @return DirectConnectTunnelId Dedicated tunnel ID.
      */
@@ -184,6 +191,22 @@ public class ModifyDirectConnectTunnelAttributeRequest extends AbstractModel{
     }
 
     /**
+     * Get Tencent-side standby IP address 
+     * @return TencentBackupAddress Tencent-side standby IP address
+     */
+    public String getTencentBackupAddress() {
+        return this.TencentBackupAddress;
+    }
+
+    /**
+     * Set Tencent-side standby IP address
+     * @param TencentBackupAddress Tencent-side standby IP address
+     */
+    public void setTencentBackupAddress(String TencentBackupAddress) {
+        this.TencentBackupAddress = TencentBackupAddress;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class ModifyDirectConnectTunnelAttributeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TencentAddress", this.TencentAddress);
         this.setParamSimple(map, prefix + "CustomerAddress", this.CustomerAddress);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+        this.setParamSimple(map, prefix + "TencentBackupAddress", this.TencentBackupAddress);
 
     }
 }

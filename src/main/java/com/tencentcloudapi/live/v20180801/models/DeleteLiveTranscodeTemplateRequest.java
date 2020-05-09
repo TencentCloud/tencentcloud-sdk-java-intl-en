@@ -24,14 +24,20 @@ public class DeleteLiveTranscodeTemplateRequest extends AbstractModel{
 
     /**
     * Template ID.
+1. Get the template ID in the returned value of the [CreateLiveTranscodeTemplate](/document/product/267/32646) API call.
+2. You can query the list of created templates through the [DescribeLiveTranscodeTemplates](/document/product/267/32641) API.
     */
     @SerializedName("TemplateId")
     @Expose
     private Long TemplateId;
 
     /**
-     * Get Template ID. 
+     * Get Template ID.
+1. Get the template ID in the returned value of the [CreateLiveTranscodeTemplate](/document/product/267/32646) API call.
+2. You can query the list of created templates through the [DescribeLiveTranscodeTemplates](/document/product/267/32641) API. 
      * @return TemplateId Template ID.
+1. Get the template ID in the returned value of the [CreateLiveTranscodeTemplate](/document/product/267/32646) API call.
+2. You can query the list of created templates through the [DescribeLiveTranscodeTemplates](/document/product/267/32641) API.
      */
     public Long getTemplateId() {
         return this.TemplateId;
@@ -39,7 +45,11 @@ public class DeleteLiveTranscodeTemplateRequest extends AbstractModel{
 
     /**
      * Set Template ID.
+1. Get the template ID in the returned value of the [CreateLiveTranscodeTemplate](/document/product/267/32646) API call.
+2. You can query the list of created templates through the [DescribeLiveTranscodeTemplates](/document/product/267/32641) API.
      * @param TemplateId Template ID.
+1. Get the template ID in the returned value of the [CreateLiveTranscodeTemplate](/document/product/267/32646) API call.
+2. You can query the list of created templates through the [DescribeLiveTranscodeTemplates](/document/product/267/32641) API.
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;

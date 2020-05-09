@@ -49,7 +49,7 @@ This supports querying data in the past 60 days.
     private String StartTime;
 
     /**
-    * Push path, which is the same as the AppName in push and playback addresses and is "live" by default. Fuzzy match is not supported.
+    * Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. Fuzzy match is not supported.
     */
     @SerializedName("AppName")
     @Expose
@@ -149,16 +149,16 @@ This supports querying data in the past 60 days.
     }
 
     /**
-     * Get Push path, which is the same as the AppName in push and playback addresses and is "live" by default. Fuzzy match is not supported. 
-     * @return AppName Push path, which is the same as the AppName in push and playback addresses and is "live" by default. Fuzzy match is not supported.
+     * Get Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. Fuzzy match is not supported. 
+     * @return AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. Fuzzy match is not supported.
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set Push path, which is the same as the AppName in push and playback addresses and is "live" by default. Fuzzy match is not supported.
-     * @param AppName Push path, which is the same as the AppName in push and playback addresses and is "live" by default. Fuzzy match is not supported.
+     * Set Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. Fuzzy match is not supported.
+     * @param AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. Fuzzy match is not supported.
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;

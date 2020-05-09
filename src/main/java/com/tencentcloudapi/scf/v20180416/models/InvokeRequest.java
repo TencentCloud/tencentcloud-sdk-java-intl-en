@@ -65,6 +65,13 @@ public class InvokeRequest extends AbstractModel{
     private String Namespace;
 
     /**
+    * Traffic routing config in json format, e.g., {"k":"v"}. Please note that both "k" and "v" must be strings. Up to 1024 bytes allowed.
+    */
+    @SerializedName("RoutingKey")
+    @Expose
+    private String RoutingKey;
+
+    /**
      * Get Function name 
      * @return FunctionName Function name
      */
@@ -161,6 +168,22 @@ public class InvokeRequest extends AbstractModel{
     }
 
     /**
+     * Get Traffic routing config in json format, e.g., {"k":"v"}. Please note that both "k" and "v" must be strings. Up to 1024 bytes allowed. 
+     * @return RoutingKey Traffic routing config in json format, e.g., {"k":"v"}. Please note that both "k" and "v" must be strings. Up to 1024 bytes allowed.
+     */
+    public String getRoutingKey() {
+        return this.RoutingKey;
+    }
+
+    /**
+     * Set Traffic routing config in json format, e.g., {"k":"v"}. Please note that both "k" and "v" must be strings. Up to 1024 bytes allowed.
+     * @param RoutingKey Traffic routing config in json format, e.g., {"k":"v"}. Please note that both "k" and "v" must be strings. Up to 1024 bytes allowed.
+     */
+    public void setRoutingKey(String RoutingKey) {
+        this.RoutingKey = RoutingKey;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class InvokeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ClientContext", this.ClientContext);
         this.setParamSimple(map, prefix + "LogType", this.LogType);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamSimple(map, prefix + "RoutingKey", this.RoutingKey);
 
     }
 }

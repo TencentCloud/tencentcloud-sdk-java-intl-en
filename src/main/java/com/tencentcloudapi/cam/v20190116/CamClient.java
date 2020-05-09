@@ -740,6 +740,24 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *This API (UpdatePolicy) is used to update a policy.
+     * @param req UpdatePolicyRequest
+     * @return UpdatePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdatePolicyResponse UpdatePolicy(UpdatePolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdatePolicyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdatePolicyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UpdatePolicy"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify a role’s login permissions.
      * @param req UpdateRoleConsoleLoginRequest
      * @return UpdateRoleConsoleLoginResponse

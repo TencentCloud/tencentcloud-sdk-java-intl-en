@@ -130,6 +130,13 @@ Default value: Non-zero.
     private String CustomerAddress;
 
     /**
+    * TencentBackupAddress, i.e., Tencent-side standby IP address
+    */
+    @SerializedName("TencentBackupAddress")
+    @Expose
+    private String TencentBackupAddress;
+
+    /**
      * Get Direct Connect ID, such as `dc-kd7d06of`. 
      * @return DirectConnectId Direct Connect ID, such as `dc-kd7d06of`.
      */
@@ -390,6 +397,22 @@ Default value: Non-zero.
     }
 
     /**
+     * Get TencentBackupAddress, i.e., Tencent-side standby IP address 
+     * @return TencentBackupAddress TencentBackupAddress, i.e., Tencent-side standby IP address
+     */
+    public String getTencentBackupAddress() {
+        return this.TencentBackupAddress;
+    }
+
+    /**
+     * Set TencentBackupAddress, i.e., Tencent-side standby IP address
+     * @param TencentBackupAddress TencentBackupAddress, i.e., Tencent-side standby IP address
+     */
+    public void setTencentBackupAddress(String TencentBackupAddress) {
+        this.TencentBackupAddress = TencentBackupAddress;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -407,6 +430,7 @@ Default value: Non-zero.
         this.setParamSimple(map, prefix + "Vlan", this.Vlan);
         this.setParamSimple(map, prefix + "TencentAddress", this.TencentAddress);
         this.setParamSimple(map, prefix + "CustomerAddress", this.CustomerAddress);
+        this.setParamSimple(map, prefix + "TencentBackupAddress", this.TencentBackupAddress);
 
     }
 }

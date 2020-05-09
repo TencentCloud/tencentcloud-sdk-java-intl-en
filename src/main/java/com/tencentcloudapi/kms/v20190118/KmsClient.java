@@ -110,6 +110,24 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a white-box key. Up to 50 ones can be created.
+     * @param req CreateWhiteBoxKeyRequest
+     * @return CreateWhiteBoxKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateWhiteBoxKeyResponse CreateWhiteBoxKey(CreateWhiteBoxKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateWhiteBoxKeyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateWhiteBoxKeyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateWhiteBoxKey"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to decrypt the ciphertext and obtain the plaintext data.
      * @param req DecryptRequest
      * @return DecryptResponse
@@ -146,6 +164,24 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete a white-box key. Note: only disabled white-box keys can be deleted.
+     * @param req DeleteWhiteBoxKeyRequest
+     * @return DeleteWhiteBoxKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteWhiteBoxKeyResponse DeleteWhiteBoxKey(DeleteWhiteBoxKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteWhiteBoxKeyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteWhiteBoxKeyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteWhiteBoxKey"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the attribute details of the CMK with a specified `KeyId`.
      * @param req DescribeKeyRequest
      * @return DescribeKeyResponse
@@ -175,6 +211,78 @@ public class KmsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeKeysResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeKeys"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get a white-box decryption key.
+     * @param req DescribeWhiteBoxDecryptKeyRequest
+     * @return DescribeWhiteBoxDecryptKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWhiteBoxDecryptKeyResponse DescribeWhiteBoxDecryptKey(DescribeWhiteBoxDecryptKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWhiteBoxDecryptKeyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWhiteBoxDecryptKeyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeWhiteBoxDecryptKey"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to display white-box key information.
+     * @param req DescribeWhiteBoxKeyRequest
+     * @return DescribeWhiteBoxKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWhiteBoxKeyResponse DescribeWhiteBoxKey(DescribeWhiteBoxKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWhiteBoxKeyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWhiteBoxKeyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeWhiteBoxKey"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the white-box key list.
+     * @param req DescribeWhiteBoxKeyDetailsRequest
+     * @return DescribeWhiteBoxKeyDetailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWhiteBoxKeyDetailsResponse DescribeWhiteBoxKeyDetails(DescribeWhiteBoxKeyDetailsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWhiteBoxKeyDetailsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWhiteBoxKeyDetailsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeWhiteBoxKeyDetails"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the white-box key service status.
+     * @param req DescribeWhiteBoxServiceStatusRequest
+     * @return DescribeWhiteBoxServiceStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWhiteBoxServiceStatusResponse DescribeWhiteBoxServiceStatus(DescribeWhiteBoxServiceStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWhiteBoxServiceStatusResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWhiteBoxServiceStatusResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeWhiteBoxServiceStatus"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -236,6 +344,42 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to disable a white-box key.
+     * @param req DisableWhiteBoxKeyRequest
+     * @return DisableWhiteBoxKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableWhiteBoxKeyResponse DisableWhiteBoxKey(DisableWhiteBoxKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableWhiteBoxKeyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableWhiteBoxKeyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DisableWhiteBoxKey"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to disable white-box keys in batches.
+     * @param req DisableWhiteBoxKeysRequest
+     * @return DisableWhiteBoxKeysResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableWhiteBoxKeysResponse DisableWhiteBoxKeys(DisableWhiteBoxKeysRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableWhiteBoxKeysResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableWhiteBoxKeysResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DisableWhiteBoxKeys"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *Enable a specified CMK.
      * @param req EnableKeyRequest
      * @return EnableKeyResponse
@@ -290,6 +434,42 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to enable a white-box key.
+     * @param req EnableWhiteBoxKeyRequest
+     * @return EnableWhiteBoxKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableWhiteBoxKeyResponse EnableWhiteBoxKey(EnableWhiteBoxKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableWhiteBoxKeyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableWhiteBoxKeyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "EnableWhiteBoxKey"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to enable white-box keys in batches.
+     * @param req EnableWhiteBoxKeysRequest
+     * @return EnableWhiteBoxKeysResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableWhiteBoxKeysResponse EnableWhiteBoxKeys(EnableWhiteBoxKeysRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableWhiteBoxKeysResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableWhiteBoxKeysResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "EnableWhiteBoxKeys"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to encrypt any data up to 4KB. It can be used to encrypt database passwords, RSA Key, or other small sensitive information. For application data encryption, use the DataKey generated by GenerateDataKey to perform local data encryption and decryption operations
      * @param req EncryptRequest
      * @return EncryptResponse
@@ -301,6 +481,24 @@ public class KmsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<EncryptResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "Encrypt"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to encrypt data with a white-box key.
+     * @param req EncryptByWhiteBoxRequest
+     * @return EncryptByWhiteBoxResponse
+     * @throws TencentCloudSDKException
+     */
+    public EncryptByWhiteBoxResponse EncryptByWhiteBox(EncryptByWhiteBoxRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EncryptByWhiteBoxResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<EncryptByWhiteBoxResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "EncryptByWhiteBox"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

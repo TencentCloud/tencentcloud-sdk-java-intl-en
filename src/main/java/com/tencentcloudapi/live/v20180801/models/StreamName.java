@@ -45,8 +45,7 @@ public class StreamName extends AbstractModel{
 
     /**
     * Push start time.
-In UTC format.
-Example: 2019-01-07T12:00:00Z.
+In UTC format, such as 2019-01-07T12:00:00Z.
     */
     @SerializedName("StreamStartTime")
     @Expose
@@ -54,8 +53,7 @@ Example: 2019-01-07T12:00:00Z.
 
     /**
     * Push end time.
-In UTC format.
-Example: 2019-01-07T15:00:00Z.
+In UTC format, such as 2019-01-07T15:00:00Z.
     */
     @SerializedName("StreamEndTime")
     @Expose
@@ -139,11 +137,9 @@ Example: 2019-01-07T15:00:00Z.
 
     /**
      * Get Push start time.
-In UTC format.
-Example: 2019-01-07T12:00:00Z. 
+In UTC format, such as 2019-01-07T12:00:00Z. 
      * @return StreamStartTime Push start time.
-In UTC format.
-Example: 2019-01-07T12:00:00Z.
+In UTC format, such as 2019-01-07T12:00:00Z.
      */
     public String getStreamStartTime() {
         return this.StreamStartTime;
@@ -151,11 +147,9 @@ Example: 2019-01-07T12:00:00Z.
 
     /**
      * Set Push start time.
-In UTC format.
-Example: 2019-01-07T12:00:00Z.
+In UTC format, such as 2019-01-07T12:00:00Z.
      * @param StreamStartTime Push start time.
-In UTC format.
-Example: 2019-01-07T12:00:00Z.
+In UTC format, such as 2019-01-07T12:00:00Z.
      */
     public void setStreamStartTime(String StreamStartTime) {
         this.StreamStartTime = StreamStartTime;
@@ -163,11 +157,9 @@ Example: 2019-01-07T12:00:00Z.
 
     /**
      * Get Push end time.
-In UTC format.
-Example: 2019-01-07T15:00:00Z. 
+In UTC format, such as 2019-01-07T15:00:00Z. 
      * @return StreamEndTime Push end time.
-In UTC format.
-Example: 2019-01-07T15:00:00Z.
+In UTC format, such as 2019-01-07T15:00:00Z.
      */
     public String getStreamEndTime() {
         return this.StreamEndTime;
@@ -175,11 +167,9 @@ Example: 2019-01-07T15:00:00Z.
 
     /**
      * Set Push end time.
-In UTC format.
-Example: 2019-01-07T15:00:00Z.
+In UTC format, such as 2019-01-07T15:00:00Z.
      * @param StreamEndTime Push end time.
-In UTC format.
-Example: 2019-01-07T15:00:00Z.
+In UTC format, such as 2019-01-07T15:00:00Z.
      */
     public void setStreamEndTime(String StreamEndTime) {
         this.StreamEndTime = StreamEndTime;

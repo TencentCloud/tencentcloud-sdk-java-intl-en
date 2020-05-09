@@ -61,6 +61,21 @@ Default value: hotData
     private Long DiskSize;
 
     /**
+    * Local disk information
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("LocalDiskInfo")
+    @Expose
+    private LocalDiskInfo LocalDiskInfo;
+
+    /**
+    * Number of node disks
+    */
+    @SerializedName("DiskCount")
+    @Expose
+    private Long DiskCount;
+
+    /**
      * Get Number of nodes 
      * @return NodeNum Number of nodes
      */
@@ -153,6 +168,42 @@ Default value: hotData
     }
 
     /**
+     * Get Local disk information
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return LocalDiskInfo Local disk information
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public LocalDiskInfo getLocalDiskInfo() {
+        return this.LocalDiskInfo;
+    }
+
+    /**
+     * Set Local disk information
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param LocalDiskInfo Local disk information
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setLocalDiskInfo(LocalDiskInfo LocalDiskInfo) {
+        this.LocalDiskInfo = LocalDiskInfo;
+    }
+
+    /**
+     * Get Number of node disks 
+     * @return DiskCount Number of node disks
+     */
+    public Long getDiskCount() {
+        return this.DiskCount;
+    }
+
+    /**
+     * Set Number of node disks
+     * @param DiskCount Number of node disks
+     */
+    public void setDiskCount(Long DiskCount) {
+        this.DiskCount = DiskCount;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -161,6 +212,8 @@ Default value: hotData
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
+        this.setParamObj(map, prefix + "LocalDiskInfo.", this.LocalDiskInfo);
+        this.setParamSimple(map, prefix + "DiskCount", this.DiskCount);
 
     }
 }

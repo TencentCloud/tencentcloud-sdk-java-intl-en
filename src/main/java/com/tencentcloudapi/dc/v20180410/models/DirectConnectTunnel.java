@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DirectConnectTunnel extends AbstractModel{
 
     /**
-    * Dedicated tunnel ID.
+    * Dedicated tunnel ID
     */
     @SerializedName("DirectConnectTunnelId")
     @Expose
@@ -37,16 +37,16 @@ public class DirectConnectTunnel extends AbstractModel{
     private String DirectConnectId;
 
     /**
-    * Dedicated tunnel status.
-AVAILABLE: Ready or connected.
-PENDING: Applying.
-ALLOCATING: Configuring.
-ALLOCATED: Configured.
-ALTERING: Modifying.
-DELETING: Deleting.
-DELETED: Deleted.
-COMFIRMING: To be accepted.
-REJECTED: Rejected.
+    * Dedicated tunnel status
+AVAILABLE: ready or connected
+PENDING: applying
+ALLOCATING: configuring
+ALLOCATED: configured
+ALTERING: modifying
+DELETING: deleting
+DELETED: deleted
+CONFIRMING: to be accepted
+REJECTED: rejected
     */
     @SerializedName("State")
     @Expose
@@ -60,7 +60,7 @@ REJECTED: Rejected.
     private String DirectConnectOwnerAccount;
 
     /**
-    * Dedicated tunnel owner, i.e., developer account ID.
+    * Dedicated tunnel owner, i.e., developer account ID
     */
     @SerializedName("OwnerAccount")
     @Expose
@@ -117,7 +117,7 @@ REJECTED: Rejected.
     private RouteFilterPrefix [] RouteFilterPrefixes;
 
     /**
-    * VLAN of a dedicated tunnel.
+    * Dedicated tunnel `Vlan`
     */
     @SerializedName("Vlan")
     @Expose
@@ -138,28 +138,28 @@ REJECTED: Rejected.
     private String CustomerAddress;
 
     /**
-    * Dedicated tunnel name.
+    * Dedicated tunnel name
     */
     @SerializedName("DirectConnectTunnelName")
     @Expose
     private String DirectConnectTunnelName;
 
     /**
-    * Creation time of a dedicated tunnel.
+    * Dedicated tunnel creation time
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * Bandwidth value of a dedicated tunnel.
+    * Dedicated tunnel bandwidth value
     */
     @SerializedName("Bandwidth")
     @Expose
     private Long Bandwidth;
 
     /**
-    * Tag value of a dedicated tunnel.
+    * Dedicated tunnel tag value
     */
     @SerializedName("TagSet")
     @Expose
@@ -206,7 +206,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long BfdEnable;
 
     /**
-    * Access point type of a dedicated tunnel.
+    * Dedicated tunnel access point type
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AccessPointType")
@@ -230,16 +230,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String VpcName;
 
     /**
-     * Get Dedicated tunnel ID. 
-     * @return DirectConnectTunnelId Dedicated tunnel ID.
+    * TencentBackupAddress, i.e., Tencent-side standby IP address
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TencentBackupAddress")
+    @Expose
+    private String TencentBackupAddress;
+
+    /**
+     * Get Dedicated tunnel ID 
+     * @return DirectConnectTunnelId Dedicated tunnel ID
      */
     public String getDirectConnectTunnelId() {
         return this.DirectConnectTunnelId;
     }
 
     /**
-     * Set Dedicated tunnel ID.
-     * @param DirectConnectTunnelId Dedicated tunnel ID.
+     * Set Dedicated tunnel ID
+     * @param DirectConnectTunnelId Dedicated tunnel ID
      */
     public void setDirectConnectTunnelId(String DirectConnectTunnelId) {
         this.DirectConnectTunnelId = DirectConnectTunnelId;
@@ -262,52 +270,52 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Dedicated tunnel status.
-AVAILABLE: Ready or connected.
-PENDING: Applying.
-ALLOCATING: Configuring.
-ALLOCATED: Configured.
-ALTERING: Modifying.
-DELETING: Deleting.
-DELETED: Deleted.
-COMFIRMING: To be accepted.
-REJECTED: Rejected. 
-     * @return State Dedicated tunnel status.
-AVAILABLE: Ready or connected.
-PENDING: Applying.
-ALLOCATING: Configuring.
-ALLOCATED: Configured.
-ALTERING: Modifying.
-DELETING: Deleting.
-DELETED: Deleted.
-COMFIRMING: To be accepted.
-REJECTED: Rejected.
+     * Get Dedicated tunnel status
+AVAILABLE: ready or connected
+PENDING: applying
+ALLOCATING: configuring
+ALLOCATED: configured
+ALTERING: modifying
+DELETING: deleting
+DELETED: deleted
+CONFIRMING: to be accepted
+REJECTED: rejected 
+     * @return State Dedicated tunnel status
+AVAILABLE: ready or connected
+PENDING: applying
+ALLOCATING: configuring
+ALLOCATED: configured
+ALTERING: modifying
+DELETING: deleting
+DELETED: deleted
+CONFIRMING: to be accepted
+REJECTED: rejected
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set Dedicated tunnel status.
-AVAILABLE: Ready or connected.
-PENDING: Applying.
-ALLOCATING: Configuring.
-ALLOCATED: Configured.
-ALTERING: Modifying.
-DELETING: Deleting.
-DELETED: Deleted.
-COMFIRMING: To be accepted.
-REJECTED: Rejected.
-     * @param State Dedicated tunnel status.
-AVAILABLE: Ready or connected.
-PENDING: Applying.
-ALLOCATING: Configuring.
-ALLOCATED: Configured.
-ALTERING: Modifying.
-DELETING: Deleting.
-DELETED: Deleted.
-COMFIRMING: To be accepted.
-REJECTED: Rejected.
+     * Set Dedicated tunnel status
+AVAILABLE: ready or connected
+PENDING: applying
+ALLOCATING: configuring
+ALLOCATED: configured
+ALTERING: modifying
+DELETING: deleting
+DELETED: deleted
+CONFIRMING: to be accepted
+REJECTED: rejected
+     * @param State Dedicated tunnel status
+AVAILABLE: ready or connected
+PENDING: applying
+ALLOCATING: configuring
+ALLOCATED: configured
+ALTERING: modifying
+DELETING: deleting
+DELETED: deleted
+CONFIRMING: to be accepted
+REJECTED: rejected
      */
     public void setState(String State) {
         this.State = State;
@@ -330,16 +338,16 @@ REJECTED: Rejected.
     }
 
     /**
-     * Get Dedicated tunnel owner, i.e., developer account ID. 
-     * @return OwnerAccount Dedicated tunnel owner, i.e., developer account ID.
+     * Get Dedicated tunnel owner, i.e., developer account ID 
+     * @return OwnerAccount Dedicated tunnel owner, i.e., developer account ID
      */
     public String getOwnerAccount() {
         return this.OwnerAccount;
     }
 
     /**
-     * Set Dedicated tunnel owner, i.e., developer account ID.
-     * @param OwnerAccount Dedicated tunnel owner, i.e., developer account ID.
+     * Set Dedicated tunnel owner, i.e., developer account ID
+     * @param OwnerAccount Dedicated tunnel owner, i.e., developer account ID
      */
     public void setOwnerAccount(String OwnerAccount) {
         this.OwnerAccount = OwnerAccount;
@@ -462,16 +470,16 @@ REJECTED: Rejected.
     }
 
     /**
-     * Get VLAN of a dedicated tunnel. 
-     * @return Vlan VLAN of a dedicated tunnel.
+     * Get Dedicated tunnel `Vlan` 
+     * @return Vlan Dedicated tunnel `Vlan`
      */
     public Long getVlan() {
         return this.Vlan;
     }
 
     /**
-     * Set VLAN of a dedicated tunnel.
-     * @param Vlan VLAN of a dedicated tunnel.
+     * Set Dedicated tunnel `Vlan`
+     * @param Vlan Dedicated tunnel `Vlan`
      */
     public void setVlan(Long Vlan) {
         this.Vlan = Vlan;
@@ -510,64 +518,64 @@ REJECTED: Rejected.
     }
 
     /**
-     * Get Dedicated tunnel name. 
-     * @return DirectConnectTunnelName Dedicated tunnel name.
+     * Get Dedicated tunnel name 
+     * @return DirectConnectTunnelName Dedicated tunnel name
      */
     public String getDirectConnectTunnelName() {
         return this.DirectConnectTunnelName;
     }
 
     /**
-     * Set Dedicated tunnel name.
-     * @param DirectConnectTunnelName Dedicated tunnel name.
+     * Set Dedicated tunnel name
+     * @param DirectConnectTunnelName Dedicated tunnel name
      */
     public void setDirectConnectTunnelName(String DirectConnectTunnelName) {
         this.DirectConnectTunnelName = DirectConnectTunnelName;
     }
 
     /**
-     * Get Creation time of a dedicated tunnel. 
-     * @return CreatedTime Creation time of a dedicated tunnel.
+     * Get Dedicated tunnel creation time 
+     * @return CreatedTime Dedicated tunnel creation time
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set Creation time of a dedicated tunnel.
-     * @param CreatedTime Creation time of a dedicated tunnel.
+     * Set Dedicated tunnel creation time
+     * @param CreatedTime Dedicated tunnel creation time
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get Bandwidth value of a dedicated tunnel. 
-     * @return Bandwidth Bandwidth value of a dedicated tunnel.
+     * Get Dedicated tunnel bandwidth value 
+     * @return Bandwidth Dedicated tunnel bandwidth value
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set Bandwidth value of a dedicated tunnel.
-     * @param Bandwidth Bandwidth value of a dedicated tunnel.
+     * Set Dedicated tunnel bandwidth value
+     * @param Bandwidth Dedicated tunnel bandwidth value
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
     /**
-     * Get Tag value of a dedicated tunnel. 
-     * @return TagSet Tag value of a dedicated tunnel.
+     * Get Dedicated tunnel tag value 
+     * @return TagSet Dedicated tunnel tag value
      */
     public Tag [] getTagSet() {
         return this.TagSet;
     }
 
     /**
-     * Set Tag value of a dedicated tunnel.
-     * @param TagSet Tag value of a dedicated tunnel.
+     * Set Dedicated tunnel tag value
+     * @param TagSet Dedicated tunnel tag value
      */
     public void setTagSet(Tag [] TagSet) {
         this.TagSet = TagSet;
@@ -674,9 +682,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Access point type of a dedicated tunnel.
+     * Get Dedicated tunnel access point type
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AccessPointType Access point type of a dedicated tunnel.
+     * @return AccessPointType Dedicated tunnel access point type
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getAccessPointType() {
@@ -684,9 +692,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Access point type of a dedicated tunnel.
+     * Set Dedicated tunnel access point type
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AccessPointType Access point type of a dedicated tunnel.
+     * @param AccessPointType Dedicated tunnel access point type
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setAccessPointType(String AccessPointType) {
@@ -734,6 +742,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get TencentBackupAddress, i.e., Tencent-side standby IP address
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return TencentBackupAddress TencentBackupAddress, i.e., Tencent-side standby IP address
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getTencentBackupAddress() {
+        return this.TencentBackupAddress;
+    }
+
+    /**
+     * Set TencentBackupAddress, i.e., Tencent-side standby IP address
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param TencentBackupAddress TencentBackupAddress, i.e., Tencent-side standby IP address
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTencentBackupAddress(String TencentBackupAddress) {
+        this.TencentBackupAddress = TencentBackupAddress;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -764,6 +792,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "AccessPointType", this.AccessPointType);
         this.setParamSimple(map, prefix + "DirectConnectGatewayName", this.DirectConnectGatewayName);
         this.setParamSimple(map, prefix + "VpcName", this.VpcName);
+        this.setParamSimple(map, prefix + "TencentBackupAddress", this.TencentBackupAddress);
 
     }
 }

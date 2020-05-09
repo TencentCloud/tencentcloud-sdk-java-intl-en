@@ -1,0 +1,224 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.monitor.v20180724.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class CreatePolicyGroupCondition extends AbstractModel{
+
+    /**
+    * Metric ID.
+    */
+    @SerializedName("MetricId")
+    @Expose
+    private Long MetricId;
+
+    /**
+    * Alarm sending and converging type. The value 0 indicates that alarms are sent consecutively. The value 1 indicates that alarms are sent exponentially.
+    */
+    @SerializedName("AlarmNotifyType")
+    @Expose
+    private Long AlarmNotifyType;
+
+    /**
+    * Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm is triggered only once. The value >0 indicates that an alarm is triggered at the interval of triggerTime.
+    */
+    @SerializedName("AlarmNotifyPeriod")
+    @Expose
+    private Long AlarmNotifyPeriod;
+
+    /**
+    * Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. This parameter may not be set if a default comparative type is set for a metric.
+    */
+    @SerializedName("CalcType")
+    @Expose
+    private Long CalcType;
+
+    /**
+    * Comparative value. This parameter may not be set if a metric has no requirement.
+    */
+    @SerializedName("CalcValue")
+    @Expose
+    private Float CalcValue;
+
+    /**
+    * Data statistics period in seconds. This parameter may not be set if a metric has a default value.
+    */
+    @SerializedName("CalcPeriod")
+    @Expose
+    private Long CalcPeriod;
+
+    /**
+    * Number of consecutive periods after which an alarm will be triggered.
+    */
+    @SerializedName("ContinuePeriod")
+    @Expose
+    private Long ContinuePeriod;
+
+    /**
+    * If a metric is created based on a template, the RuleId of the metric in the template must be input.
+    */
+    @SerializedName("RuleId")
+    @Expose
+    private Long RuleId;
+
+    /**
+     * Get Metric ID. 
+     * @return MetricId Metric ID.
+     */
+    public Long getMetricId() {
+        return this.MetricId;
+    }
+
+    /**
+     * Set Metric ID.
+     * @param MetricId Metric ID.
+     */
+    public void setMetricId(Long MetricId) {
+        this.MetricId = MetricId;
+    }
+
+    /**
+     * Get Alarm sending and converging type. The value 0 indicates that alarms are sent consecutively. The value 1 indicates that alarms are sent exponentially. 
+     * @return AlarmNotifyType Alarm sending and converging type. The value 0 indicates that alarms are sent consecutively. The value 1 indicates that alarms are sent exponentially.
+     */
+    public Long getAlarmNotifyType() {
+        return this.AlarmNotifyType;
+    }
+
+    /**
+     * Set Alarm sending and converging type. The value 0 indicates that alarms are sent consecutively. The value 1 indicates that alarms are sent exponentially.
+     * @param AlarmNotifyType Alarm sending and converging type. The value 0 indicates that alarms are sent consecutively. The value 1 indicates that alarms are sent exponentially.
+     */
+    public void setAlarmNotifyType(Long AlarmNotifyType) {
+        this.AlarmNotifyType = AlarmNotifyType;
+    }
+
+    /**
+     * Get Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm is triggered only once. The value >0 indicates that an alarm is triggered at the interval of triggerTime. 
+     * @return AlarmNotifyPeriod Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm is triggered only once. The value >0 indicates that an alarm is triggered at the interval of triggerTime.
+     */
+    public Long getAlarmNotifyPeriod() {
+        return this.AlarmNotifyPeriod;
+    }
+
+    /**
+     * Set Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm is triggered only once. The value >0 indicates that an alarm is triggered at the interval of triggerTime.
+     * @param AlarmNotifyPeriod Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm is triggered only once. The value >0 indicates that an alarm is triggered at the interval of triggerTime.
+     */
+    public void setAlarmNotifyPeriod(Long AlarmNotifyPeriod) {
+        this.AlarmNotifyPeriod = AlarmNotifyPeriod;
+    }
+
+    /**
+     * Get Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. This parameter may not be set if a default comparative type is set for a metric. 
+     * @return CalcType Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. This parameter may not be set if a default comparative type is set for a metric.
+     */
+    public Long getCalcType() {
+        return this.CalcType;
+    }
+
+    /**
+     * Set Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. This parameter may not be set if a default comparative type is set for a metric.
+     * @param CalcType Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. This parameter may not be set if a default comparative type is set for a metric.
+     */
+    public void setCalcType(Long CalcType) {
+        this.CalcType = CalcType;
+    }
+
+    /**
+     * Get Comparative value. This parameter may not be set if a metric has no requirement. 
+     * @return CalcValue Comparative value. This parameter may not be set if a metric has no requirement.
+     */
+    public Float getCalcValue() {
+        return this.CalcValue;
+    }
+
+    /**
+     * Set Comparative value. This parameter may not be set if a metric has no requirement.
+     * @param CalcValue Comparative value. This parameter may not be set if a metric has no requirement.
+     */
+    public void setCalcValue(Float CalcValue) {
+        this.CalcValue = CalcValue;
+    }
+
+    /**
+     * Get Data statistics period in seconds. This parameter may not be set if a metric has a default value. 
+     * @return CalcPeriod Data statistics period in seconds. This parameter may not be set if a metric has a default value.
+     */
+    public Long getCalcPeriod() {
+        return this.CalcPeriod;
+    }
+
+    /**
+     * Set Data statistics period in seconds. This parameter may not be set if a metric has a default value.
+     * @param CalcPeriod Data statistics period in seconds. This parameter may not be set if a metric has a default value.
+     */
+    public void setCalcPeriod(Long CalcPeriod) {
+        this.CalcPeriod = CalcPeriod;
+    }
+
+    /**
+     * Get Number of consecutive periods after which an alarm will be triggered. 
+     * @return ContinuePeriod Number of consecutive periods after which an alarm will be triggered.
+     */
+    public Long getContinuePeriod() {
+        return this.ContinuePeriod;
+    }
+
+    /**
+     * Set Number of consecutive periods after which an alarm will be triggered.
+     * @param ContinuePeriod Number of consecutive periods after which an alarm will be triggered.
+     */
+    public void setContinuePeriod(Long ContinuePeriod) {
+        this.ContinuePeriod = ContinuePeriod;
+    }
+
+    /**
+     * Get If a metric is created based on a template, the RuleId of the metric in the template must be input. 
+     * @return RuleId If a metric is created based on a template, the RuleId of the metric in the template must be input.
+     */
+    public Long getRuleId() {
+        return this.RuleId;
+    }
+
+    /**
+     * Set If a metric is created based on a template, the RuleId of the metric in the template must be input.
+     * @param RuleId If a metric is created based on a template, the RuleId of the metric in the template must be input.
+     */
+    public void setRuleId(Long RuleId) {
+        this.RuleId = RuleId;
+    }
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "MetricId", this.MetricId);
+        this.setParamSimple(map, prefix + "AlarmNotifyType", this.AlarmNotifyType);
+        this.setParamSimple(map, prefix + "AlarmNotifyPeriod", this.AlarmNotifyPeriod);
+        this.setParamSimple(map, prefix + "CalcType", this.CalcType);
+        this.setParamSimple(map, prefix + "CalcValue", this.CalcValue);
+        this.setParamSimple(map, prefix + "CalcPeriod", this.CalcPeriod);
+        this.setParamSimple(map, prefix + "ContinuePeriod", this.ContinuePeriod);
+        this.setParamSimple(map, prefix + "RuleId", this.RuleId);
+
+    }
+}
+

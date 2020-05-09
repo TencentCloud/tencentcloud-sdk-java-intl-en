@@ -30,7 +30,9 @@ public class PlayAuthKeyInfo extends AbstractModel{
     private String DomainName;
 
     /**
-    * Whether to enable. 0: disabled; 1: enabled.
+    * Whether to enable:
+0: disable.
+1: enable.
     */
     @SerializedName("Enable")
     @Expose
@@ -51,7 +53,7 @@ public class PlayAuthKeyInfo extends AbstractModel{
     private Long AuthDelta;
 
     /**
-    * Authentication BackKey.
+    * Authentication `BackKey`.
     */
     @SerializedName("AuthBackKey")
     @Expose
@@ -74,16 +76,24 @@ public class PlayAuthKeyInfo extends AbstractModel{
     }
 
     /**
-     * Get Whether to enable. 0: disabled; 1: enabled. 
-     * @return Enable Whether to enable. 0: disabled; 1: enabled.
+     * Get Whether to enable:
+0: disable.
+1: enable. 
+     * @return Enable Whether to enable:
+0: disable.
+1: enable.
      */
     public Long getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set Whether to enable. 0: disabled; 1: enabled.
-     * @param Enable Whether to enable. 0: disabled; 1: enabled.
+     * Set Whether to enable:
+0: disable.
+1: enable.
+     * @param Enable Whether to enable:
+0: disable.
+1: enable.
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;
@@ -122,16 +132,16 @@ public class PlayAuthKeyInfo extends AbstractModel{
     }
 
     /**
-     * Get Authentication BackKey. 
-     * @return AuthBackKey Authentication BackKey.
+     * Get Authentication `BackKey`. 
+     * @return AuthBackKey Authentication `BackKey`.
      */
     public String getAuthBackKey() {
         return this.AuthBackKey;
     }
 
     /**
-     * Set Authentication BackKey.
-     * @param AuthBackKey Authentication BackKey.
+     * Set Authentication `BackKey`.
+     * @param AuthBackKey Authentication `BackKey`.
      */
     public void setAuthBackKey(String AuthBackKey) {
         this.AuthBackKey = AuthBackKey;

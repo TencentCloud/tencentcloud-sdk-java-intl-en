@@ -114,6 +114,43 @@ Note: you need to call the `CreateLiveCert` API first to add a certificate. Afte
     }
 
     /**
+     *This API is used to cancel a stream mix. It can be used basically in the same way as `mix_streamv2.cancel_mix_stream`.
+     * @param req CancelCommonMixStreamRequest
+     * @return CancelCommonMixStreamResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelCommonMixStreamResponse CancelCommonMixStream(CancelCommonMixStreamRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CancelCommonMixStreamResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CancelCommonMixStreamResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CancelCommonMixStream"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a general stream mix. It can be used basically in the same way as the legacy `mix_streamv2.cancel_mix_stream` API.
+Note: currently, up to 16 streams can be mixed.
+     * @param req CreateCommonMixStreamRequest
+     * @return CreateCommonMixStreamResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCommonMixStreamResponse CreateCommonMixStream(CreateCommonMixStreamRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCommonMixStreamResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCommonMixStreamResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateCommonMixStream"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *To create a callback rule, you need to first call the [CreateLiveCallbackTemplate](/document/product/267/32637) API to create a callback template and bind the returned template ID to the domain name/path.
 <br>Callback protocol-related document: [Event Message Notification](/document/product/267/32744).
      * @param req CreateLiveCallbackRuleRequest
@@ -133,8 +170,8 @@ Note: you need to call the `CreateLiveCert` API first to add a certificate. Afte
     }
 
     /**
-     *After a callback template is created and a template ID is successfully returned, you need to call the [CreateLiveCallbackRule](/document/product/267/32638) API and bind the template ID to the domain name/path.
-<br>Callback protocol-related document: [Event Message Notification](/document/product/267/32744).
+     *This API is used to create a callback template. After a template ID is successfully returned, you need to call the [CreateLiveCallbackRule](/document/product/267/32638) API to bind the template ID to the domain name/path.
+<br>Callback protocol document: [Event Message Notification](/document/product/267/32744).
      * @param req CreateLiveCallbackTemplateRequest
      * @return CreateLiveCallbackTemplateResponse
      * @throws TencentCloudSDKException
@@ -240,8 +277,9 @@ Note: you need to call the `CreateLiveCert` API first to add a certificate. Afte
     }
 
     /**
-     *To create a screencapturing rule, you need to first call the [CreateLiveSnapshotTemplate](/document/product/267/32624) API to create a screencapturing template and bind the returned template ID to the stream.
-<br>Screencapturing-related document: [LVB Screencapturing](/document/product/267/32737).
+     *This API is used to create a screencapturing rule. You need to first call the [CreateLiveSnapshotTemplate](/document/product/267/32624) API to create a screencapturing template to bind the returned template ID to the stream.
+<br>Screencapturing document: [LVB Screencapturing](/document/product/267/32737).
+Note: only one screencapturing template can be associated with one domain name.
      * @param req CreateLiveSnapshotRuleRequest
      * @return CreateLiveSnapshotRuleResponse
      * @throws TencentCloudSDKException
@@ -730,7 +768,7 @@ Note: you need to call the `CreateLiveCert` API first to add a certificate. Afte
     }
 
     /**
-     *This API is used to get the list of forbidden streams.
+     *This API is used to get the forbidden stream list.
      * @param req DescribeLiveForbidStreamListRequest
      * @return DescribeLiveForbidStreamListResponse
      * @throws TencentCloudSDKException
@@ -820,7 +858,7 @@ Note: you need to call the `CreateLiveCert` API first to add a certificate. Afte
     }
 
     /**
-     *This API is used to get the list of recording templates.
+     *This API is used to get the recording template list.
      * @param req DescribeLiveRecordTemplatesRequest
      * @return DescribeLiveRecordTemplatesResponse
      * @throws TencentCloudSDKException
@@ -912,7 +950,7 @@ Note: This API can filter by IsFilter and return the push history.
     }
 
     /**
-     *This API is used to return the list of live streams.
+     *This API is used to return the live stream list.
      * @param req DescribeLiveStreamOnlineListRequest
      * @return DescribeLiveStreamOnlineListResponse
      * @throws TencentCloudSDKException
@@ -1003,7 +1041,7 @@ Note: Up to 10,000 entries can be queried per page. More data can be obtained by
     }
 
     /**
-     *This API is used to get the list of transcoding templates.
+     *This API is used to get the transcoding template list.
      * @param req DescribeLiveTranscodeTemplatesRequest
      * @return DescribeLiveTranscodeTemplatesResponse
      * @throws TencentCloudSDKException

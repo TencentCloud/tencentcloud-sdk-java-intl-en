@@ -74,6 +74,42 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the eligible ES cluster logs in the current region.
+     * @param req DescribeInstanceLogsRequest
+     * @return DescribeInstanceLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceLogsResponse DescribeInstanceLogs(DescribeInstanceLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceLogsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceLogsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstanceLogs"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the operation history of an instance by specified criteria.
+     * @param req DescribeInstanceOperationsRequest
+     * @return DescribeInstanceOperationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceOperationsResponse DescribeInstanceOperations(DescribeInstanceOperationsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceOperationsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceOperationsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstanceOperations"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query all eligible instances in the current region under the current account.
      * @param req DescribeInstancesRequest
      * @return DescribeInstancesResponse

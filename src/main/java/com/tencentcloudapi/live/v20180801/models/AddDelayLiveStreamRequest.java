@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AddDelayLiveStreamRequest extends AbstractModel{
 
     /**
-    * Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+    * Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
     */
     @SerializedName("AppName")
     @Expose
@@ -61,16 +61,16 @@ Notes:
     private String ExpireTime;
 
     /**
-     * Get Push path, which is the same as the AppName in push and playback addresses and is "live" by default. 
-     * @return AppName Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+     * Get Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. 
+     * @return AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
-     * @param AppName Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+     * Set Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
+     * @param AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;

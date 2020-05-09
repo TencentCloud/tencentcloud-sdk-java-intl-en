@@ -155,6 +155,13 @@ Dedicated master node disk size in GB. This is 50 GB by default and currently ca
     private String KibanaPrivateAccess;
 
     /**
+    * Enables or disables user authentication for ES Basic Edition v6.8 and above
+    */
+    @SerializedName("BasicSecurityType")
+    @Expose
+    private Long BasicSecurityType;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -467,6 +474,22 @@ Dedicated master node disk size in GB. This is 50 GB by default and currently ca
     }
 
     /**
+     * Get Enables or disables user authentication for ES Basic Edition v6.8 and above 
+     * @return BasicSecurityType Enables or disables user authentication for ES Basic Edition v6.8 and above
+     */
+    public Long getBasicSecurityType() {
+        return this.BasicSecurityType;
+    }
+
+    /**
+     * Set Enables or disables user authentication for ES Basic Edition v6.8 and above
+     * @param BasicSecurityType Enables or disables user authentication for ES Basic Edition v6.8 and above
+     */
+    public void setBasicSecurityType(Long BasicSecurityType) {
+        this.BasicSecurityType = BasicSecurityType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -488,6 +511,7 @@ Dedicated master node disk size in GB. This is 50 GB by default and currently ca
         this.setParamObj(map, prefix + "EsPublicAcl.", this.EsPublicAcl);
         this.setParamSimple(map, prefix + "KibanaPublicAccess", this.KibanaPublicAccess);
         this.setParamSimple(map, prefix + "KibanaPrivateAccess", this.KibanaPrivateAccess);
+        this.setParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
 
     }
 }

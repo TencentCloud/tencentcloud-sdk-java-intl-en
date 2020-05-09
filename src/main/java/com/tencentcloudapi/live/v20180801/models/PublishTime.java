@@ -23,28 +23,28 @@ import java.util.HashMap;
 public class PublishTime extends AbstractModel{
 
     /**
-    * Push time
-In UTC format, for example: 2018-06-29T19:00:00Z.
+    * Push time.
+In UTC format, such as 2018-06-29T19:00:00Z.
     */
     @SerializedName("PublishTime")
     @Expose
     private String PublishTime;
 
     /**
-     * Get Push time
-In UTC format, for example: 2018-06-29T19:00:00Z. 
-     * @return PublishTime Push time
-In UTC format, for example: 2018-06-29T19:00:00Z.
+     * Get Push time.
+In UTC format, such as 2018-06-29T19:00:00Z. 
+     * @return PublishTime Push time.
+In UTC format, such as 2018-06-29T19:00:00Z.
      */
     public String getPublishTime() {
         return this.PublishTime;
     }
 
     /**
-     * Set Push time
-In UTC format, for example: 2018-06-29T19:00:00Z.
-     * @param PublishTime Push time
-In UTC format, for example: 2018-06-29T19:00:00Z.
+     * Set Push time.
+In UTC format, such as 2018-06-29T19:00:00Z.
+     * @param PublishTime Push time.
+In UTC format, such as 2018-06-29T19:00:00Z.
      */
     public void setPublishTime(String PublishTime) {
         this.PublishTime = PublishTime;

@@ -30,7 +30,7 @@ public class DeleteLiveWatermarkRuleRequest extends AbstractModel{
     private String DomainName;
 
     /**
-    * Push path.
+    * Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
     */
     @SerializedName("AppName")
     @Expose
@@ -60,16 +60,16 @@ public class DeleteLiveWatermarkRuleRequest extends AbstractModel{
     }
 
     /**
-     * Get Push path. 
-     * @return AppName Push path.
+     * Get Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. 
+     * @return AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set Push path.
-     * @param AppName Push path.
+     * Set Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
+     * @param AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;

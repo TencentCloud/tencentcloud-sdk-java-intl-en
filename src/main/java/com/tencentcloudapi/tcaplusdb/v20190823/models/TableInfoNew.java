@@ -231,6 +231,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long SortRule;
 
     /**
+    * Distributed index information of table
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DbClusterInfoStruct")
+    @Expose
+    private String DbClusterInfoStruct;
+
+    /**
      * Get Table name
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return TableName Table name
@@ -751,6 +759,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Distributed index information of table
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return DbClusterInfoStruct Distributed index information of table
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getDbClusterInfoStruct() {
+        return this.DbClusterInfoStruct;
+    }
+
+    /**
+     * Set Distributed index information of table
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param DbClusterInfoStruct Distributed index information of table
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDbClusterInfoStruct(String DbClusterInfoStruct) {
+        this.DbClusterInfoStruct = DbClusterInfoStruct;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -780,6 +808,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ApiAccessId", this.ApiAccessId);
         this.setParamSimple(map, prefix + "SortFieldNum", this.SortFieldNum);
         this.setParamSimple(map, prefix + "SortRule", this.SortRule);
+        this.setParamSimple(map, prefix + "DbClusterInfoStruct", this.DbClusterInfoStruct);
 
     }
 }

@@ -23,15 +23,16 @@ import java.util.HashMap;
 public class CreateLiveSnapshotTemplateRequest extends AbstractModel{
 
     /**
-    * Template name, which is a non-empty string.
+    * Template name.
 Maximum length: 255 bytes.
+Only letters, digits, underscores, and hyphens can be contained.
     */
     @SerializedName("TemplateName")
     @Expose
     private String TemplateName;
 
     /**
-    * COS `AppId`.
+    * COS application ID.
     */
     @SerializedName("CosAppId")
     @Expose
@@ -54,6 +55,7 @@ Maximum length: 255 bytes.
     /**
     * Description.
 Maximum length: 1,024 bytes.
+Only letters, digits, underscores, and hyphens can be contained.
     */
     @SerializedName("Description")
     @Expose
@@ -89,36 +91,54 @@ Value range: 5–600s.
     private Long PornFlag;
 
     /**
-     * Get Template name, which is a non-empty string.
-Maximum length: 255 bytes. 
-     * @return TemplateName Template name, which is a non-empty string.
+    * COS bucket folder prefix.
+    */
+    @SerializedName("CosPrefix")
+    @Expose
+    private String CosPrefix;
+
+    /**
+    * COS filename.
+    */
+    @SerializedName("CosFileName")
+    @Expose
+    private String CosFileName;
+
+    /**
+     * Get Template name.
 Maximum length: 255 bytes.
+Only letters, digits, underscores, and hyphens can be contained. 
+     * @return TemplateName Template name.
+Maximum length: 255 bytes.
+Only letters, digits, underscores, and hyphens can be contained.
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set Template name, which is a non-empty string.
+     * Set Template name.
 Maximum length: 255 bytes.
-     * @param TemplateName Template name, which is a non-empty string.
+Only letters, digits, underscores, and hyphens can be contained.
+     * @param TemplateName Template name.
 Maximum length: 255 bytes.
+Only letters, digits, underscores, and hyphens can be contained.
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
     }
 
     /**
-     * Get COS `AppId`. 
-     * @return CosAppId COS `AppId`.
+     * Get COS application ID. 
+     * @return CosAppId COS application ID.
      */
     public Long getCosAppId() {
         return this.CosAppId;
     }
 
     /**
-     * Set COS `AppId`.
-     * @param CosAppId COS `AppId`.
+     * Set COS application ID.
+     * @param CosAppId COS application ID.
      */
     public void setCosAppId(Long CosAppId) {
         this.CosAppId = CosAppId;
@@ -158,9 +178,11 @@ Maximum length: 255 bytes.
 
     /**
      * Get Description.
-Maximum length: 1,024 bytes. 
+Maximum length: 1,024 bytes.
+Only letters, digits, underscores, and hyphens can be contained. 
      * @return Description Description.
 Maximum length: 1,024 bytes.
+Only letters, digits, underscores, and hyphens can be contained.
      */
     public String getDescription() {
         return this.Description;
@@ -169,8 +191,10 @@ Maximum length: 1,024 bytes.
     /**
      * Set Description.
 Maximum length: 1,024 bytes.
+Only letters, digits, underscores, and hyphens can be contained.
      * @param Description Description.
 Maximum length: 1,024 bytes.
+Only letters, digits, underscores, and hyphens can be contained.
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -245,6 +269,38 @@ Value range: 5–600s.
     }
 
     /**
+     * Get COS bucket folder prefix. 
+     * @return CosPrefix COS bucket folder prefix.
+     */
+    public String getCosPrefix() {
+        return this.CosPrefix;
+    }
+
+    /**
+     * Set COS bucket folder prefix.
+     * @param CosPrefix COS bucket folder prefix.
+     */
+    public void setCosPrefix(String CosPrefix) {
+        this.CosPrefix = CosPrefix;
+    }
+
+    /**
+     * Get COS filename. 
+     * @return CosFileName COS filename.
+     */
+    public String getCosFileName() {
+        return this.CosFileName;
+    }
+
+    /**
+     * Set COS filename.
+     * @param CosFileName COS filename.
+     */
+    public void setCosFileName(String CosFileName) {
+        this.CosFileName = CosFileName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -257,6 +313,8 @@ Value range: 5–600s.
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
         this.setParamSimple(map, prefix + "PornFlag", this.PornFlag);
+        this.setParamSimple(map, prefix + "CosPrefix", this.CosPrefix);
+        this.setParamSimple(map, prefix + "CosFileName", this.CosFileName);
 
     }
 }

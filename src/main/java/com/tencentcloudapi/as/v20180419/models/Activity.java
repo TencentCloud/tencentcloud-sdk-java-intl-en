@@ -114,6 +114,13 @@ public class Activity extends AbstractModel{
     private String StatusMessageSimplified;
 
     /**
+    * Result of the lifecycle hook action in the scaling activity
+    */
+    @SerializedName("LifecycleActionResultSet")
+    @Expose
+    private LifecycleActionResultInfo [] LifecycleActionResultSet;
+
+    /**
      * Get Auto scaling group ID. 
      * @return AutoScalingGroupId Auto scaling group ID.
      */
@@ -334,6 +341,22 @@ public class Activity extends AbstractModel{
     }
 
     /**
+     * Get Result of the lifecycle hook action in the scaling activity 
+     * @return LifecycleActionResultSet Result of the lifecycle hook action in the scaling activity
+     */
+    public LifecycleActionResultInfo [] getLifecycleActionResultSet() {
+        return this.LifecycleActionResultSet;
+    }
+
+    /**
+     * Set Result of the lifecycle hook action in the scaling activity
+     * @param LifecycleActionResultSet Result of the lifecycle hook action in the scaling activity
+     */
+    public void setLifecycleActionResultSet(LifecycleActionResultInfo [] LifecycleActionResultSet) {
+        this.LifecycleActionResultSet = LifecycleActionResultSet;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -349,6 +372,7 @@ public class Activity extends AbstractModel{
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamArrayObj(map, prefix + "ActivityRelatedInstanceSet.", this.ActivityRelatedInstanceSet);
         this.setParamSimple(map, prefix + "StatusMessageSimplified", this.StatusMessageSimplified);
+        this.setParamArrayObj(map, prefix + "LifecycleActionResultSet.", this.LifecycleActionResultSet);
 
     }
 }

@@ -30,9 +30,9 @@ public class DescribeTemplateListStatus extends AbstractModel{
     private Long TemplateId;
 
     /**
-    * Whether it is Global SMS. Valid values:
+    * Whether it is Global SMS:
 0: Mainland China SMS.
-1: Global SMS
+1: Global SMS.
     */
     @SerializedName("International")
     @Expose
@@ -85,24 +85,24 @@ public class DescribeTemplateListStatus extends AbstractModel{
     }
 
     /**
-     * Get Whether it is Global SMS. Valid values:
+     * Get Whether it is Global SMS:
 0: Mainland China SMS.
-1: Global SMS 
-     * @return International Whether it is Global SMS. Valid values:
+1: Global SMS. 
+     * @return International Whether it is Global SMS:
 0: Mainland China SMS.
-1: Global SMS
+1: Global SMS.
      */
     public Long getInternational() {
         return this.International;
     }
 
     /**
-     * Set Whether it is Global SMS. Valid values:
+     * Set Whether it is Global SMS:
 0: Mainland China SMS.
-1: Global SMS
-     * @param International Whether it is Global SMS. Valid values:
+1: Global SMS.
+     * @param International Whether it is Global SMS:
 0: Mainland China SMS.
-1: Global SMS
+1: Global SMS.
      */
     public void setInternational(Long International) {
         this.International = International;

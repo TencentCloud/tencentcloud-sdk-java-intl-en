@@ -58,7 +58,7 @@ public class ModifyLiveRecordTemplateRequest extends AbstractModel{
     private RecordParam HlsParam;
 
     /**
-    * Mp4 recording parameter, which is set when Mp4 recording is enabled.
+    * MP4 recording parameter, which is set when MP4 recording is enabled.
     */
     @SerializedName("Mp4Param")
     @Expose
@@ -79,7 +79,7 @@ public class ModifyLiveRecordTemplateRequest extends AbstractModel{
     private HlsSpecialParam HlsSpecialParam;
 
     /**
-    * Mp3 recording parameter, which is set when Mp3 recording is enabled.
+    * MP3 recording parameter, which is set when MP3 recording is enabled.
     */
     @SerializedName("Mp3Param")
     @Expose
@@ -166,16 +166,16 @@ public class ModifyLiveRecordTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get Mp4 recording parameter, which is set when Mp4 recording is enabled. 
-     * @return Mp4Param Mp4 recording parameter, which is set when Mp4 recording is enabled.
+     * Get MP4 recording parameter, which is set when MP4 recording is enabled. 
+     * @return Mp4Param MP4 recording parameter, which is set when MP4 recording is enabled.
      */
     public RecordParam getMp4Param() {
         return this.Mp4Param;
     }
 
     /**
-     * Set Mp4 recording parameter, which is set when Mp4 recording is enabled.
-     * @param Mp4Param Mp4 recording parameter, which is set when Mp4 recording is enabled.
+     * Set MP4 recording parameter, which is set when MP4 recording is enabled.
+     * @param Mp4Param MP4 recording parameter, which is set when MP4 recording is enabled.
      */
     public void setMp4Param(RecordParam Mp4Param) {
         this.Mp4Param = Mp4Param;
@@ -214,16 +214,16 @@ public class ModifyLiveRecordTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get Mp3 recording parameter, which is set when Mp3 recording is enabled. 
-     * @return Mp3Param Mp3 recording parameter, which is set when Mp3 recording is enabled.
+     * Get MP3 recording parameter, which is set when MP3 recording is enabled. 
+     * @return Mp3Param MP3 recording parameter, which is set when MP3 recording is enabled.
      */
     public RecordParam getMp3Param() {
         return this.Mp3Param;
     }
 
     /**
-     * Set Mp3 recording parameter, which is set when Mp3 recording is enabled.
-     * @param Mp3Param Mp3 recording parameter, which is set when Mp3 recording is enabled.
+     * Set MP3 recording parameter, which is set when MP3 recording is enabled.
+     * @param Mp3Param MP3 recording parameter, which is set when MP3 recording is enabled.
      */
     public void setMp3Param(RecordParam Mp3Param) {
         this.Mp3Param = Mp3Param;

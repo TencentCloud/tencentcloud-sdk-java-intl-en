@@ -23,42 +23,48 @@ import java.util.HashMap;
 public class DomainInfo extends AbstractModel{
 
     /**
-    * LVB domain name
+    * LVB domain name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Domain name type. 0: push, 1: playback
+    * Domain name type:
+0: push.
+1: playback.
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * Domain name status. 0: disabled, 1: enabled.
+    * Domain name status:
+0: deactivated.
+1: activated.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Creation time
+    * Creation time.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Whether there is a CNAME record pointing to a fixed rule. 0: no, 1: yes.
+    * Whether there is a CNAME record pointing to a fixed rule domain name:
+0: no.
+1: yes.
     */
     @SerializedName("BCName")
     @Expose
     private Long BCName;
 
     /**
-    * Domain name corresponding to the CNAME record
+    * Domain name corresponding to CNAME record.
     */
     @SerializedName("TargetDomain")
     @Expose
@@ -66,14 +72,17 @@ public class DomainInfo extends AbstractModel{
 
     /**
     * Playback region. This parameter is valid only if `Type` is 1.
-1: Mainland China, 2: global, 3: outside Mainland China.
+1: in Mainland China.
+2: global.
+3: outside Mainland China.
     */
     @SerializedName("PlayType")
     @Expose
     private Long PlayType;
 
     /**
-    * 0: LVB,
+    * Whether it is LCB:
+0: LVB.
 1: LCB.
     */
     @SerializedName("IsDelayLive")
@@ -81,29 +90,29 @@ public class DomainInfo extends AbstractModel{
     private Long IsDelayLive;
 
     /**
-    * Information of currently used CNAME record
+    * Information of currently used CNAME record.
     */
     @SerializedName("CurrentCName")
     @Expose
     private String CurrentCName;
 
     /**
-    * Whether it is a leased domain name
+    * Disused parameter, which can be ignored.
     */
     @SerializedName("RentTag")
     @Expose
     private Long RentTag;
 
     /**
-    * Expiration time of leased domain name
+    * Disused parameter, which can be ignored.
     */
     @SerializedName("RentExpireTime")
     @Expose
     private String RentExpireTime;
 
     /**
-    * 0: LVB,
-1: LVB on WeChat Mini Program.
+    * 0: LVB.
+1: LVB on Mini Program.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsMiniProgramLive")
@@ -111,96 +120,120 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long IsMiniProgramLive;
 
     /**
-     * Get LVB domain name 
-     * @return Name LVB domain name
+     * Get LVB domain name. 
+     * @return Name LVB domain name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set LVB domain name
-     * @param Name LVB domain name
+     * Set LVB domain name.
+     * @param Name LVB domain name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Domain name type. 0: push, 1: playback 
-     * @return Type Domain name type. 0: push, 1: playback
+     * Get Domain name type:
+0: push.
+1: playback. 
+     * @return Type Domain name type:
+0: push.
+1: playback.
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set Domain name type. 0: push, 1: playback
-     * @param Type Domain name type. 0: push, 1: playback
+     * Set Domain name type:
+0: push.
+1: playback.
+     * @param Type Domain name type:
+0: push.
+1: playback.
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Domain name status. 0: disabled, 1: enabled. 
-     * @return Status Domain name status. 0: disabled, 1: enabled.
+     * Get Domain name status:
+0: deactivated.
+1: activated. 
+     * @return Status Domain name status:
+0: deactivated.
+1: activated.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Domain name status. 0: disabled, 1: enabled.
-     * @param Status Domain name status. 0: disabled, 1: enabled.
+     * Set Domain name status:
+0: deactivated.
+1: activated.
+     * @param Status Domain name status:
+0: deactivated.
+1: activated.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Creation time 
-     * @return CreateTime Creation time
+     * Get Creation time. 
+     * @return CreateTime Creation time.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time
-     * @param CreateTime Creation time
+     * Set Creation time.
+     * @param CreateTime Creation time.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Whether there is a CNAME record pointing to a fixed rule. 0: no, 1: yes. 
-     * @return BCName Whether there is a CNAME record pointing to a fixed rule. 0: no, 1: yes.
+     * Get Whether there is a CNAME record pointing to a fixed rule domain name:
+0: no.
+1: yes. 
+     * @return BCName Whether there is a CNAME record pointing to a fixed rule domain name:
+0: no.
+1: yes.
      */
     public Long getBCName() {
         return this.BCName;
     }
 
     /**
-     * Set Whether there is a CNAME record pointing to a fixed rule. 0: no, 1: yes.
-     * @param BCName Whether there is a CNAME record pointing to a fixed rule. 0: no, 1: yes.
+     * Set Whether there is a CNAME record pointing to a fixed rule domain name:
+0: no.
+1: yes.
+     * @param BCName Whether there is a CNAME record pointing to a fixed rule domain name:
+0: no.
+1: yes.
      */
     public void setBCName(Long BCName) {
         this.BCName = BCName;
     }
 
     /**
-     * Get Domain name corresponding to the CNAME record 
-     * @return TargetDomain Domain name corresponding to the CNAME record
+     * Get Domain name corresponding to CNAME record. 
+     * @return TargetDomain Domain name corresponding to CNAME record.
      */
     public String getTargetDomain() {
         return this.TargetDomain;
     }
 
     /**
-     * Set Domain name corresponding to the CNAME record
-     * @param TargetDomain Domain name corresponding to the CNAME record
+     * Set Domain name corresponding to CNAME record.
+     * @param TargetDomain Domain name corresponding to CNAME record.
      */
     public void setTargetDomain(String TargetDomain) {
         this.TargetDomain = TargetDomain;
@@ -208,9 +241,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Playback region. This parameter is valid only if `Type` is 1.
-1: Mainland China, 2: global, 3: outside Mainland China. 
+1: in Mainland China.
+2: global.
+3: outside Mainland China. 
      * @return PlayType Playback region. This parameter is valid only if `Type` is 1.
-1: Mainland China, 2: global, 3: outside Mainland China.
+1: in Mainland China.
+2: global.
+3: outside Mainland China.
      */
     public Long getPlayType() {
         return this.PlayType;
@@ -218,18 +255,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Playback region. This parameter is valid only if `Type` is 1.
-1: Mainland China, 2: global, 3: outside Mainland China.
+1: in Mainland China.
+2: global.
+3: outside Mainland China.
      * @param PlayType Playback region. This parameter is valid only if `Type` is 1.
-1: Mainland China, 2: global, 3: outside Mainland China.
+1: in Mainland China.
+2: global.
+3: outside Mainland China.
      */
     public void setPlayType(Long PlayType) {
         this.PlayType = PlayType;
     }
 
     /**
-     * Get 0: LVB,
+     * Get Whether it is LCB:
+0: LVB.
 1: LCB. 
-     * @return IsDelayLive 0: LVB,
+     * @return IsDelayLive Whether it is LCB:
+0: LVB.
 1: LCB.
      */
     public Long getIsDelayLive() {
@@ -237,9 +280,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set 0: LVB,
+     * Set Whether it is LCB:
+0: LVB.
 1: LCB.
-     * @param IsDelayLive 0: LVB,
+     * @param IsDelayLive Whether it is LCB:
+0: LVB.
 1: LCB.
      */
     public void setIsDelayLive(Long IsDelayLive) {
@@ -247,59 +292,59 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Information of currently used CNAME record 
-     * @return CurrentCName Information of currently used CNAME record
+     * Get Information of currently used CNAME record. 
+     * @return CurrentCName Information of currently used CNAME record.
      */
     public String getCurrentCName() {
         return this.CurrentCName;
     }
 
     /**
-     * Set Information of currently used CNAME record
-     * @param CurrentCName Information of currently used CNAME record
+     * Set Information of currently used CNAME record.
+     * @param CurrentCName Information of currently used CNAME record.
      */
     public void setCurrentCName(String CurrentCName) {
         this.CurrentCName = CurrentCName;
     }
 
     /**
-     * Get Whether it is a leased domain name 
-     * @return RentTag Whether it is a leased domain name
+     * Get Disused parameter, which can be ignored. 
+     * @return RentTag Disused parameter, which can be ignored.
      */
     public Long getRentTag() {
         return this.RentTag;
     }
 
     /**
-     * Set Whether it is a leased domain name
-     * @param RentTag Whether it is a leased domain name
+     * Set Disused parameter, which can be ignored.
+     * @param RentTag Disused parameter, which can be ignored.
      */
     public void setRentTag(Long RentTag) {
         this.RentTag = RentTag;
     }
 
     /**
-     * Get Expiration time of leased domain name 
-     * @return RentExpireTime Expiration time of leased domain name
+     * Get Disused parameter, which can be ignored. 
+     * @return RentExpireTime Disused parameter, which can be ignored.
      */
     public String getRentExpireTime() {
         return this.RentExpireTime;
     }
 
     /**
-     * Set Expiration time of leased domain name
-     * @param RentExpireTime Expiration time of leased domain name
+     * Set Disused parameter, which can be ignored.
+     * @param RentExpireTime Disused parameter, which can be ignored.
      */
     public void setRentExpireTime(String RentExpireTime) {
         this.RentExpireTime = RentExpireTime;
     }
 
     /**
-     * Get 0: LVB,
-1: LVB on WeChat Mini Program.
+     * Get 0: LVB.
+1: LVB on Mini Program.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return IsMiniProgramLive 0: LVB,
-1: LVB on WeChat Mini Program.
+     * @return IsMiniProgramLive 0: LVB.
+1: LVB on Mini Program.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getIsMiniProgramLive() {
@@ -307,11 +352,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set 0: LVB,
-1: LVB on WeChat Mini Program.
+     * Set 0: LVB.
+1: LVB on Mini Program.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param IsMiniProgramLive 0: LVB,
-1: LVB on WeChat Mini Program.
+     * @param IsMiniProgramLive 0: LVB.
+1: LVB on Mini Program.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setIsMiniProgramLive(Long IsMiniProgramLive) {

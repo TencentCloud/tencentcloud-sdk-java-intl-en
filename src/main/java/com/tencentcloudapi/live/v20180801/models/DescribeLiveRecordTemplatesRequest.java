@@ -23,23 +23,33 @@ import java.util.HashMap;
 public class DescribeLiveRecordTemplatesRequest extends AbstractModel{
 
     /**
-    * Whether it is an LCB template
+    * Whether it is an LCB template. Default value: 0.
+0: LVB.
+1: LCB.
     */
     @SerializedName("IsDelayLive")
     @Expose
     private Long IsDelayLive;
 
     /**
-     * Get Whether it is an LCB template 
-     * @return IsDelayLive Whether it is an LCB template
+     * Get Whether it is an LCB template. Default value: 0.
+0: LVB.
+1: LCB. 
+     * @return IsDelayLive Whether it is an LCB template. Default value: 0.
+0: LVB.
+1: LCB.
      */
     public Long getIsDelayLive() {
         return this.IsDelayLive;
     }
 
     /**
-     * Set Whether it is an LCB template
-     * @param IsDelayLive Whether it is an LCB template
+     * Set Whether it is an LCB template. Default value: 0.
+0: LVB.
+1: LCB.
+     * @param IsDelayLive Whether it is an LCB template. Default value: 0.
+0: LVB.
+1: LCB.
      */
     public void setIsDelayLive(Long IsDelayLive) {
         this.IsDelayLive = IsDelayLive;

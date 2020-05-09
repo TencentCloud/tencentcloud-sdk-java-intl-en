@@ -24,14 +24,20 @@ public class DescribeLiveCallbackTemplateRequest extends AbstractModel{
 
     /**
     * Template ID.
+1. Get the template ID in the returned value of the [CreateLiveCallbackTemplate](/document/product/267/32637) API call.
+2. You can query the list of created templates through the [DescribeLiveCallbackTemplates](/document/product/267/32632) API.
     */
     @SerializedName("TemplateId")
     @Expose
     private Long TemplateId;
 
     /**
-     * Get Template ID. 
+     * Get Template ID.
+1. Get the template ID in the returned value of the [CreateLiveCallbackTemplate](/document/product/267/32637) API call.
+2. You can query the list of created templates through the [DescribeLiveCallbackTemplates](/document/product/267/32632) API. 
      * @return TemplateId Template ID.
+1. Get the template ID in the returned value of the [CreateLiveCallbackTemplate](/document/product/267/32637) API call.
+2. You can query the list of created templates through the [DescribeLiveCallbackTemplates](/document/product/267/32632) API.
      */
     public Long getTemplateId() {
         return this.TemplateId;
@@ -39,7 +45,11 @@ public class DescribeLiveCallbackTemplateRequest extends AbstractModel{
 
     /**
      * Set Template ID.
+1. Get the template ID in the returned value of the [CreateLiveCallbackTemplate](/document/product/267/32637) API call.
+2. You can query the list of created templates through the [DescribeLiveCallbackTemplates](/document/product/267/32632) API.
      * @param TemplateId Template ID.
+1. Get the template ID in the returned value of the [CreateLiveCallbackTemplate](/document/product/267/32637) API call.
+2. You can query the list of created templates through the [DescribeLiveCallbackTemplates](/document/product/267/32632) API.
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;

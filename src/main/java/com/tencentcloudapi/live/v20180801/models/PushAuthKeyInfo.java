@@ -44,7 +44,7 @@ public class PushAuthKeyInfo extends AbstractModel{
     private String MasterAuthKey;
 
     /**
-    * Backup authentication key.
+    * Standby authentication key.
     */
     @SerializedName("BackupAuthKey")
     @Expose
@@ -106,16 +106,16 @@ public class PushAuthKeyInfo extends AbstractModel{
     }
 
     /**
-     * Get Backup authentication key. 
-     * @return BackupAuthKey Backup authentication key.
+     * Get Standby authentication key. 
+     * @return BackupAuthKey Standby authentication key.
      */
     public String getBackupAuthKey() {
         return this.BackupAuthKey;
     }
 
     /**
-     * Set Backup authentication key.
-     * @param BackupAuthKey Backup authentication key.
+     * Set Standby authentication key.
+     * @param BackupAuthKey Standby authentication key.
      */
     public void setBackupAuthKey(String BackupAuthKey) {
         this.BackupAuthKey = BackupAuthKey;

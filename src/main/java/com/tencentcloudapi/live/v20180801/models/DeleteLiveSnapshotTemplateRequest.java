@@ -24,14 +24,20 @@ public class DeleteLiveSnapshotTemplateRequest extends AbstractModel{
 
     /**
     * Template ID.
+1. Get from the returned value of the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
+2. You can query the list of created screencapturing templates through the [DescribeLiveSnapshotTemplates](/document/product/267/32619) API.
     */
     @SerializedName("TemplateId")
     @Expose
     private Long TemplateId;
 
     /**
-     * Get Template ID. 
+     * Get Template ID.
+1. Get from the returned value of the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
+2. You can query the list of created screencapturing templates through the [DescribeLiveSnapshotTemplates](/document/product/267/32619) API. 
      * @return TemplateId Template ID.
+1. Get from the returned value of the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
+2. You can query the list of created screencapturing templates through the [DescribeLiveSnapshotTemplates](/document/product/267/32619) API.
      */
     public Long getTemplateId() {
         return this.TemplateId;
@@ -39,7 +45,11 @@ public class DeleteLiveSnapshotTemplateRequest extends AbstractModel{
 
     /**
      * Set Template ID.
+1. Get from the returned value of the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
+2. You can query the list of created screencapturing templates through the [DescribeLiveSnapshotTemplates](/document/product/267/32619) API.
      * @param TemplateId Template ID.
+1. Get from the returned value of the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
+2. You can query the list of created screencapturing templates through the [DescribeLiveSnapshotTemplates](/document/product/267/32619) API.
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;

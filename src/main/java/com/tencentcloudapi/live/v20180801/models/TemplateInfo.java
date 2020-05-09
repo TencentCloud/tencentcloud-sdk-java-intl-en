@@ -31,65 +31,64 @@ h264/h265.
     private String Vcodec;
 
     /**
-    * Video bitrate in Kbps. Value range: 100–8,000
+    * Video bitrate. Value range: 100–8000 Kbps.
     */
     @SerializedName("VideoBitrate")
     @Expose
     private Long VideoBitrate;
 
     /**
-    * Audio encoding format: AAC/MP3
-aac/mp3.
+    * Audio codec. Valid values: aac, mp3.
     */
     @SerializedName("Acodec")
     @Expose
     private String Acodec;
 
     /**
-    * Audio bitrate. Value range: 0–500
+    * Audio bitrate. Value range: 0–500 Kbps.
     */
     @SerializedName("AudioBitrate")
     @Expose
     private Long AudioBitrate;
 
     /**
-    * Width. Value range: 0–3,000
+    * Width. Value range: 0–3000.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * Height. Value range: 0–3,000
+    * Height. Value range: 0–3000.
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * Frame rate. Value range: 0–200
+    * Frame rate. Value range: 0–200 FPS.
     */
     @SerializedName("Fps")
     @Expose
     private Long Fps;
 
     /**
-    * Keyframe interval in seconds. Value range: 1–50
+    * Keyframe interval. Value range: 1–50s.
     */
     @SerializedName("Gop")
     @Expose
     private Long Gop;
 
     /**
-    * Rotation angle. Valid values: 0, 90, 180, 270
+    * Rotation angle. Valid values: 0, 90, 180, 270.
     */
     @SerializedName("Rotate")
     @Expose
     private Long Rotate;
 
     /**
-    * Encoding quality:
-baseline/main/high.
+    * Encoding quality. Valid values:
+baseline, main, high.
     */
     @SerializedName("Profile")
     @Expose
@@ -138,28 +137,28 @@ baseline/main/high.
     private Long TemplateId;
 
     /**
-    * Template name
+    * Template name.
     */
     @SerializedName("TemplateName")
     @Expose
     private String TemplateName;
 
     /**
-    * Template description
+    * Template description.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Whether it is a TESHD template. 0: no; 1: yes. Default value: 0.
+    * Whether it is a top speed codec template. 0: no, 1: yes. Default value: 0.
     */
     @SerializedName("AiTransCode")
     @Expose
     private Long AiTransCode;
 
     /**
-    * VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5.
+    * `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
     */
     @SerializedName("AdaptBitratePercent")
     @Expose
@@ -186,152 +185,148 @@ h264/h265.
     }
 
     /**
-     * Get Video bitrate in Kbps. Value range: 100–8,000 
-     * @return VideoBitrate Video bitrate in Kbps. Value range: 100–8,000
+     * Get Video bitrate. Value range: 100–8000 Kbps. 
+     * @return VideoBitrate Video bitrate. Value range: 100–8000 Kbps.
      */
     public Long getVideoBitrate() {
         return this.VideoBitrate;
     }
 
     /**
-     * Set Video bitrate in Kbps. Value range: 100–8,000
-     * @param VideoBitrate Video bitrate in Kbps. Value range: 100–8,000
+     * Set Video bitrate. Value range: 100–8000 Kbps.
+     * @param VideoBitrate Video bitrate. Value range: 100–8000 Kbps.
      */
     public void setVideoBitrate(Long VideoBitrate) {
         this.VideoBitrate = VideoBitrate;
     }
 
     /**
-     * Get Audio encoding format: AAC/MP3
-aac/mp3. 
-     * @return Acodec Audio encoding format: AAC/MP3
-aac/mp3.
+     * Get Audio codec. Valid values: aac, mp3. 
+     * @return Acodec Audio codec. Valid values: aac, mp3.
      */
     public String getAcodec() {
         return this.Acodec;
     }
 
     /**
-     * Set Audio encoding format: AAC/MP3
-aac/mp3.
-     * @param Acodec Audio encoding format: AAC/MP3
-aac/mp3.
+     * Set Audio codec. Valid values: aac, mp3.
+     * @param Acodec Audio codec. Valid values: aac, mp3.
      */
     public void setAcodec(String Acodec) {
         this.Acodec = Acodec;
     }
 
     /**
-     * Get Audio bitrate. Value range: 0–500 
-     * @return AudioBitrate Audio bitrate. Value range: 0–500
+     * Get Audio bitrate. Value range: 0–500 Kbps. 
+     * @return AudioBitrate Audio bitrate. Value range: 0–500 Kbps.
      */
     public Long getAudioBitrate() {
         return this.AudioBitrate;
     }
 
     /**
-     * Set Audio bitrate. Value range: 0–500
-     * @param AudioBitrate Audio bitrate. Value range: 0–500
+     * Set Audio bitrate. Value range: 0–500 Kbps.
+     * @param AudioBitrate Audio bitrate. Value range: 0–500 Kbps.
      */
     public void setAudioBitrate(Long AudioBitrate) {
         this.AudioBitrate = AudioBitrate;
     }
 
     /**
-     * Get Width. Value range: 0–3,000 
-     * @return Width Width. Value range: 0–3,000
+     * Get Width. Value range: 0–3000. 
+     * @return Width Width. Value range: 0–3000.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Width. Value range: 0–3,000
-     * @param Width Width. Value range: 0–3,000
+     * Set Width. Value range: 0–3000.
+     * @param Width Width. Value range: 0–3000.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get Height. Value range: 0–3,000 
-     * @return Height Height. Value range: 0–3,000
+     * Get Height. Value range: 0–3000. 
+     * @return Height Height. Value range: 0–3000.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Height. Value range: 0–3,000
-     * @param Height Height. Value range: 0–3,000
+     * Set Height. Value range: 0–3000.
+     * @param Height Height. Value range: 0–3000.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get Frame rate. Value range: 0–200 
-     * @return Fps Frame rate. Value range: 0–200
+     * Get Frame rate. Value range: 0–200 FPS. 
+     * @return Fps Frame rate. Value range: 0–200 FPS.
      */
     public Long getFps() {
         return this.Fps;
     }
 
     /**
-     * Set Frame rate. Value range: 0–200
-     * @param Fps Frame rate. Value range: 0–200
+     * Set Frame rate. Value range: 0–200 FPS.
+     * @param Fps Frame rate. Value range: 0–200 FPS.
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;
     }
 
     /**
-     * Get Keyframe interval in seconds. Value range: 1–50 
-     * @return Gop Keyframe interval in seconds. Value range: 1–50
+     * Get Keyframe interval. Value range: 1–50s. 
+     * @return Gop Keyframe interval. Value range: 1–50s.
      */
     public Long getGop() {
         return this.Gop;
     }
 
     /**
-     * Set Keyframe interval in seconds. Value range: 1–50
-     * @param Gop Keyframe interval in seconds. Value range: 1–50
+     * Set Keyframe interval. Value range: 1–50s.
+     * @param Gop Keyframe interval. Value range: 1–50s.
      */
     public void setGop(Long Gop) {
         this.Gop = Gop;
     }
 
     /**
-     * Get Rotation angle. Valid values: 0, 90, 180, 270 
-     * @return Rotate Rotation angle. Valid values: 0, 90, 180, 270
+     * Get Rotation angle. Valid values: 0, 90, 180, 270. 
+     * @return Rotate Rotation angle. Valid values: 0, 90, 180, 270.
      */
     public Long getRotate() {
         return this.Rotate;
     }
 
     /**
-     * Set Rotation angle. Valid values: 0, 90, 180, 270
-     * @param Rotate Rotation angle. Valid values: 0, 90, 180, 270
+     * Set Rotation angle. Valid values: 0, 90, 180, 270.
+     * @param Rotate Rotation angle. Valid values: 0, 90, 180, 270.
      */
     public void setRotate(Long Rotate) {
         this.Rotate = Rotate;
     }
 
     /**
-     * Get Encoding quality:
-baseline/main/high. 
-     * @return Profile Encoding quality:
-baseline/main/high.
+     * Get Encoding quality. Valid values:
+baseline, main, high. 
+     * @return Profile Encoding quality. Valid values:
+baseline, main, high.
      */
     public String getProfile() {
         return this.Profile;
     }
 
     /**
-     * Set Encoding quality:
-baseline/main/high.
-     * @param Profile Encoding quality:
-baseline/main/high.
+     * Set Encoding quality. Valid values:
+baseline, main, high.
+     * @param Profile Encoding quality. Valid values:
+baseline, main, high.
      */
     public void setProfile(String Profile) {
         this.Profile = Profile;
@@ -434,64 +429,64 @@ baseline/main/high.
     }
 
     /**
-     * Get Template name 
-     * @return TemplateName Template name
+     * Get Template name. 
+     * @return TemplateName Template name.
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set Template name
-     * @param TemplateName Template name
+     * Set Template name.
+     * @param TemplateName Template name.
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
     }
 
     /**
-     * Get Template description 
-     * @return Description Template description
+     * Get Template description. 
+     * @return Description Template description.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Template description
-     * @param Description Template description
+     * Set Template description.
+     * @param Description Template description.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Whether it is a TESHD template. 0: no; 1: yes. Default value: 0. 
-     * @return AiTransCode Whether it is a TESHD template. 0: no; 1: yes. Default value: 0.
+     * Get Whether it is a top speed codec template. 0: no, 1: yes. Default value: 0. 
+     * @return AiTransCode Whether it is a top speed codec template. 0: no, 1: yes. Default value: 0.
      */
     public Long getAiTransCode() {
         return this.AiTransCode;
     }
 
     /**
-     * Set Whether it is a TESHD template. 0: no; 1: yes. Default value: 0.
-     * @param AiTransCode Whether it is a TESHD template. 0: no; 1: yes. Default value: 0.
+     * Set Whether it is a top speed codec template. 0: no, 1: yes. Default value: 0.
+     * @param AiTransCode Whether it is a top speed codec template. 0: no, 1: yes. Default value: 0.
      */
     public void setAiTransCode(Long AiTransCode) {
         this.AiTransCode = AiTransCode;
     }
 
     /**
-     * Get VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5. 
-     * @return AdaptBitratePercent VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5.
+     * Get `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5. 
+     * @return AdaptBitratePercent `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
      */
     public Float getAdaptBitratePercent() {
         return this.AdaptBitratePercent;
     }
 
     /**
-     * Set VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5.
-     * @param AdaptBitratePercent VideoBitrate minus TESHD bitrate. Value range: 0.1–0.5.
+     * Set `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
+     * @param AdaptBitratePercent `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
      */
     public void setAdaptBitratePercent(Float AdaptBitratePercent) {
         this.AdaptBitratePercent = AdaptBitratePercent;

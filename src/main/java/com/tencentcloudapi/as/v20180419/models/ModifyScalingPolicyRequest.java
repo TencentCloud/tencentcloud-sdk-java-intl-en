@@ -65,7 +65,7 @@ public class ModifyScalingPolicyRequest extends AbstractModel{
     private MetricAlarm MetricAlarm;
 
     /**
-    * Array of String | Notification group ID, which is the set of user group IDs and can be queried through the [DescribeUserGroup API](https://cloud.tencent.com/document/api/378/4404).
+    * Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://cloud.tencent.com/document/product/598/34589) API.
 If you want to clear the user group, you need to pass in the specific string "NULL" to the list.
     */
     @SerializedName("NotificationUserGroupIds")
@@ -169,9 +169,9 @@ If you want to clear the user group, you need to pass in the specific string "NU
     }
 
     /**
-     * Get Array of String | Notification group ID, which is the set of user group IDs and can be queried through the [DescribeUserGroup API](https://cloud.tencent.com/document/api/378/4404).
+     * Get Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://cloud.tencent.com/document/product/598/34589) API.
 If you want to clear the user group, you need to pass in the specific string "NULL" to the list. 
-     * @return NotificationUserGroupIds Array of String | Notification group ID, which is the set of user group IDs and can be queried through the [DescribeUserGroup API](https://cloud.tencent.com/document/api/378/4404).
+     * @return NotificationUserGroupIds Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://cloud.tencent.com/document/product/598/34589) API.
 If you want to clear the user group, you need to pass in the specific string "NULL" to the list.
      */
     public String [] getNotificationUserGroupIds() {
@@ -179,9 +179,9 @@ If you want to clear the user group, you need to pass in the specific string "NU
     }
 
     /**
-     * Set Array of String | Notification group ID, which is the set of user group IDs and can be queried through the [DescribeUserGroup API](https://cloud.tencent.com/document/api/378/4404).
+     * Set Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://cloud.tencent.com/document/product/598/34589) API.
 If you want to clear the user group, you need to pass in the specific string "NULL" to the list.
-     * @param NotificationUserGroupIds Array of String | Notification group ID, which is the set of user group IDs and can be queried through the [DescribeUserGroup API](https://cloud.tencent.com/document/api/378/4404).
+     * @param NotificationUserGroupIds Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://cloud.tencent.com/document/product/598/34589) API.
 If you want to clear the user group, you need to pass in the specific string "NULL" to the list.
      */
     public void setNotificationUserGroupIds(String [] NotificationUserGroupIds) {

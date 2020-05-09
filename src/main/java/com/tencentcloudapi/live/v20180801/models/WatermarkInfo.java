@@ -72,14 +72,14 @@ public class WatermarkInfo extends AbstractModel{
     private String CreateTime;
 
     /**
-    * Watermark width
+    * Watermark width.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * Watermark height
+    * Watermark height.
     */
     @SerializedName("Height")
     @Expose
@@ -198,32 +198,32 @@ public class WatermarkInfo extends AbstractModel{
     }
 
     /**
-     * Get Watermark width 
-     * @return Width Watermark width
+     * Get Watermark width. 
+     * @return Width Watermark width.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Watermark width
-     * @param Width Watermark width
+     * Set Watermark width.
+     * @param Width Watermark width.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get Watermark height 
-     * @return Height Watermark height
+     * Get Watermark height. 
+     * @return Height Watermark height.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Watermark height
-     * @param Height Watermark height
+     * Set Watermark height.
+     * @param Height Watermark height.
      */
     public void setHeight(Long Height) {
         this.Height = Height;

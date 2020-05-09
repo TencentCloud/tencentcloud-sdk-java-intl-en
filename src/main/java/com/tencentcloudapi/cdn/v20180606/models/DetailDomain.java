@@ -356,6 +356,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private AwsPrivateAccess AwsPrivateAccess;
 
     /**
+    * SCDN configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SecurityConfig")
+    @Expose
+    private SecurityConfig SecurityConfig;
+
+    /**
+    * 
+    */
+    @SerializedName("ImageOptimization")
+    @Expose
+    private ImageOptimization ImageOptimization;
+
+    /**
+    * 
+    */
+    @SerializedName("UserAgentFilter")
+    @Expose
+    private UserAgentFilter UserAgentFilter;
+
+    /**
      * Get Domain name ID 
      * @return ResourceId Domain name ID
      */
@@ -1208,6 +1230,58 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get SCDN configuration
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return SecurityConfig SCDN configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public SecurityConfig getSecurityConfig() {
+        return this.SecurityConfig;
+    }
+
+    /**
+     * Set SCDN configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param SecurityConfig SCDN configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSecurityConfig(SecurityConfig SecurityConfig) {
+        this.SecurityConfig = SecurityConfig;
+    }
+
+    /**
+     * Get  
+     * @return ImageOptimization 
+     */
+    public ImageOptimization getImageOptimization() {
+        return this.ImageOptimization;
+    }
+
+    /**
+     * Set 
+     * @param ImageOptimization 
+     */
+    public void setImageOptimization(ImageOptimization ImageOptimization) {
+        this.ImageOptimization = ImageOptimization;
+    }
+
+    /**
+     * Get  
+     * @return UserAgentFilter 
+     */
+    public UserAgentFilter getUserAgentFilter() {
+        return this.UserAgentFilter;
+    }
+
+    /**
+     * Set 
+     * @param UserAgentFilter 
+     */
+    public void setUserAgentFilter(UserAgentFilter UserAgentFilter) {
+        this.UserAgentFilter = UserAgentFilter;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1251,6 +1325,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Readonly", this.Readonly);
         this.setParamObj(map, prefix + "OriginPullTimeout.", this.OriginPullTimeout);
         this.setParamObj(map, prefix + "AwsPrivateAccess.", this.AwsPrivateAccess);
+        this.setParamObj(map, prefix + "SecurityConfig.", this.SecurityConfig);
+        this.setParamObj(map, prefix + "ImageOptimization.", this.ImageOptimization);
+        this.setParamObj(map, prefix + "UserAgentFilter.", this.UserAgentFilter);
 
     }
 }

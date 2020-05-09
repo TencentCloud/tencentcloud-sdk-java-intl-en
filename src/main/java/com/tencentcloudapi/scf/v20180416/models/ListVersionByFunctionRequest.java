@@ -23,49 +23,141 @@ import java.util.HashMap;
 public class ListVersionByFunctionRequest extends AbstractModel{
 
     /**
-    * Function ID
+    * Function Name
     */
     @SerializedName("FunctionName")
     @Expose
     private String FunctionName;
 
     /**
-    * Namespace
+    * The namespace where the function locates
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-     * Get Function ID 
-     * @return FunctionName Function ID
+    * Data offset. The default value is `0`.
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * Return data length. The default value is `20`.
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * It specifies whether to return the results in ascending or descending order. The value is `ASC` or `DESC`.
+    */
+    @SerializedName("Order")
+    @Expose
+    private String Order;
+
+    /**
+    * It specifies the sorting order of the results according to a specified field, such as `AddTime`, `ModTime`.
+    */
+    @SerializedName("OrderBy")
+    @Expose
+    private String OrderBy;
+
+    /**
+     * Get Function Name 
+     * @return FunctionName Function Name
      */
     public String getFunctionName() {
         return this.FunctionName;
     }
 
     /**
-     * Set Function ID
-     * @param FunctionName Function ID
+     * Set Function Name
+     * @param FunctionName Function Name
      */
     public void setFunctionName(String FunctionName) {
         this.FunctionName = FunctionName;
     }
 
     /**
-     * Get Namespace 
-     * @return Namespace Namespace
+     * Get The namespace where the function locates 
+     * @return Namespace The namespace where the function locates
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set Namespace
-     * @param Namespace Namespace
+     * Set The namespace where the function locates
+     * @param Namespace The namespace where the function locates
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
+    }
+
+    /**
+     * Get Data offset. The default value is `0`. 
+     * @return Offset Data offset. The default value is `0`.
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set Data offset. The default value is `0`.
+     * @param Offset Data offset. The default value is `0`.
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get Return data length. The default value is `20`. 
+     * @return Limit Return data length. The default value is `20`.
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set Return data length. The default value is `20`.
+     * @param Limit Return data length. The default value is `20`.
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get It specifies whether to return the results in ascending or descending order. The value is `ASC` or `DESC`. 
+     * @return Order It specifies whether to return the results in ascending or descending order. The value is `ASC` or `DESC`.
+     */
+    public String getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set It specifies whether to return the results in ascending or descending order. The value is `ASC` or `DESC`.
+     * @param Order It specifies whether to return the results in ascending or descending order. The value is `ASC` or `DESC`.
+     */
+    public void setOrder(String Order) {
+        this.Order = Order;
+    }
+
+    /**
+     * Get It specifies the sorting order of the results according to a specified field, such as `AddTime`, `ModTime`. 
+     * @return OrderBy It specifies the sorting order of the results according to a specified field, such as `AddTime`, `ModTime`.
+     */
+    public String getOrderBy() {
+        return this.OrderBy;
+    }
+
+    /**
+     * Set It specifies the sorting order of the results according to a specified field, such as `AddTime`, `ModTime`.
+     * @param OrderBy It specifies the sorting order of the results according to a specified field, such as `AddTime`, `ModTime`.
+     */
+    public void setOrderBy(String OrderBy) {
+        this.OrderBy = OrderBy;
     }
 
     /**
@@ -74,6 +166,10 @@ public class ListVersionByFunctionRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FunctionName", this.FunctionName);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Order", this.Order);
+        this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
 
     }
 }

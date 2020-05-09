@@ -30,7 +30,8 @@ public class DelayInfo extends AbstractModel{
     private String DomainName;
 
     /**
-    * Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+    * Push path, which is the same as the 
+ `AppName` in push and playback addresses and is `live` by default.
     */
     @SerializedName("AppName")
     @Expose
@@ -51,27 +52,27 @@ public class DelayInfo extends AbstractModel{
     private Long DelayInterval;
 
     /**
-    * Creation time in UTC format.
-Note: Beijing time is 8 hours ahead of UTC.
-Example: 2019-06-18T12:00:00Z (20:00:00, June 18, 2019, Beijing time).
+    * Creation time in UTC time.
+Note: the difference between UTC time and Beijing time is 8 hours.
+Example: 2019-06-18T12:00:00Z (i.e., June 18, 2019 20:00:00 Beijing time).
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Expiration time in UTC format.
-Note: Beijing time is 8 hours ahead of UTC.
-Example: 2019-06-18T12:00:00Z (20:00:00, June 18, 2019, Beijing time).
+    * Expiration time in UTC time.
+Note: the difference between UTC time and Beijing time is 8 hours.
+Example: 2019-06-18T12:00:00Z (i.e., June 18, 2019 20:00:00 Beijing time).
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * Current status,
--1: Expired,
-1: Effective.
+    * Current status:
+-1: expired.
+1: in effect.
     */
     @SerializedName("Status")
     @Expose
@@ -94,16 +95,20 @@ Example: 2019-06-18T12:00:00Z (20:00:00, June 18, 2019, Beijing time).
     }
 
     /**
-     * Get Push path, which is the same as the AppName in push and playback addresses and is "live" by default. 
-     * @return AppName Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+     * Get Push path, which is the same as the 
+ `AppName` in push and playback addresses and is `live` by default. 
+     * @return AppName Push path, which is the same as the 
+ `AppName` in push and playback addresses and is `live` by default.
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
-     * @param AppName Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+     * Set Push path, which is the same as the 
+ `AppName` in push and playback addresses and is `live` by default.
+     * @param AppName Push path, which is the same as the 
+ `AppName` in push and playback addresses and is `live` by default.
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
@@ -142,72 +147,72 @@ Example: 2019-06-18T12:00:00Z (20:00:00, June 18, 2019, Beijing time).
     }
 
     /**
-     * Get Creation time in UTC format.
-Note: Beijing time is 8 hours ahead of UTC.
-Example: 2019-06-18T12:00:00Z (20:00:00, June 18, 2019, Beijing time). 
-     * @return CreateTime Creation time in UTC format.
-Note: Beijing time is 8 hours ahead of UTC.
-Example: 2019-06-18T12:00:00Z (20:00:00, June 18, 2019, Beijing time).
+     * Get Creation time in UTC time.
+Note: the difference between UTC time and Beijing time is 8 hours.
+Example: 2019-06-18T12:00:00Z (i.e., June 18, 2019 20:00:00 Beijing time). 
+     * @return CreateTime Creation time in UTC time.
+Note: the difference between UTC time and Beijing time is 8 hours.
+Example: 2019-06-18T12:00:00Z (i.e., June 18, 2019 20:00:00 Beijing time).
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time in UTC format.
-Note: Beijing time is 8 hours ahead of UTC.
-Example: 2019-06-18T12:00:00Z (20:00:00, June 18, 2019, Beijing time).
-     * @param CreateTime Creation time in UTC format.
-Note: Beijing time is 8 hours ahead of UTC.
-Example: 2019-06-18T12:00:00Z (20:00:00, June 18, 2019, Beijing time).
+     * Set Creation time in UTC time.
+Note: the difference between UTC time and Beijing time is 8 hours.
+Example: 2019-06-18T12:00:00Z (i.e., June 18, 2019 20:00:00 Beijing time).
+     * @param CreateTime Creation time in UTC time.
+Note: the difference between UTC time and Beijing time is 8 hours.
+Example: 2019-06-18T12:00:00Z (i.e., June 18, 2019 20:00:00 Beijing time).
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Expiration time in UTC format.
-Note: Beijing time is 8 hours ahead of UTC.
-Example: 2019-06-18T12:00:00Z (20:00:00, June 18, 2019, Beijing time). 
-     * @return ExpireTime Expiration time in UTC format.
-Note: Beijing time is 8 hours ahead of UTC.
-Example: 2019-06-18T12:00:00Z (20:00:00, June 18, 2019, Beijing time).
+     * Get Expiration time in UTC time.
+Note: the difference between UTC time and Beijing time is 8 hours.
+Example: 2019-06-18T12:00:00Z (i.e., June 18, 2019 20:00:00 Beijing time). 
+     * @return ExpireTime Expiration time in UTC time.
+Note: the difference between UTC time and Beijing time is 8 hours.
+Example: 2019-06-18T12:00:00Z (i.e., June 18, 2019 20:00:00 Beijing time).
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Expiration time in UTC format.
-Note: Beijing time is 8 hours ahead of UTC.
-Example: 2019-06-18T12:00:00Z (20:00:00, June 18, 2019, Beijing time).
-     * @param ExpireTime Expiration time in UTC format.
-Note: Beijing time is 8 hours ahead of UTC.
-Example: 2019-06-18T12:00:00Z (20:00:00, June 18, 2019, Beijing time).
+     * Set Expiration time in UTC time.
+Note: the difference between UTC time and Beijing time is 8 hours.
+Example: 2019-06-18T12:00:00Z (i.e., June 18, 2019 20:00:00 Beijing time).
+     * @param ExpireTime Expiration time in UTC time.
+Note: the difference between UTC time and Beijing time is 8 hours.
+Example: 2019-06-18T12:00:00Z (i.e., June 18, 2019 20:00:00 Beijing time).
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get Current status,
--1: Expired,
-1: Effective. 
-     * @return Status Current status,
--1: Expired,
-1: Effective.
+     * Get Current status:
+-1: expired.
+1: in effect. 
+     * @return Status Current status:
+-1: expired.
+1: in effect.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Current status,
--1: Expired,
-1: Effective.
-     * @param Status Current status,
--1: Expired,
-1: Effective.
+     * Set Current status:
+-1: expired.
+1: in effect.
+     * @param Status Current status:
+-1: expired.
+1: in effect.
      */
     public void setStatus(Long Status) {
         this.Status = Status;

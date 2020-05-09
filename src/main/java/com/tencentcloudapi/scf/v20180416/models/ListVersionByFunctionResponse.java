@@ -38,6 +38,14 @@ Note: This field may return null, indicating that no valid values is found.
     private FunctionVersion [] Versions;
 
     /**
+    * Total number of function versions
+Note: This field may return null, indicating that no valid value was found.
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -81,6 +89,26 @@ Note: This field may return null, indicating that no valid values is found.
     }
 
     /**
+     * Get Total number of function versions
+Note: This field may return null, indicating that no valid value was found. 
+     * @return TotalCount Total number of function versions
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set Total number of function versions
+Note: This field may return null, indicating that no valid value was found.
+     * @param TotalCount Total number of function versions
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -102,6 +130,7 @@ Note: This field may return null, indicating that no valid values is found.
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "FunctionVersion.", this.FunctionVersion);
         this.setParamArrayObj(map, prefix + "Versions.", this.Versions);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

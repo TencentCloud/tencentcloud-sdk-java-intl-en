@@ -30,7 +30,7 @@ public class UpgradeInstanceRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Target ES version
+    * Target ES version. Valid values: 6.4.3, 6.8.2, 7.5.1
     */
     @SerializedName("EsVersion")
     @Expose
@@ -74,16 +74,16 @@ public class UpgradeInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Target ES version 
-     * @return EsVersion Target ES version
+     * Get Target ES version. Valid values: 6.4.3, 6.8.2, 7.5.1 
+     * @return EsVersion Target ES version. Valid values: 6.4.3, 6.8.2, 7.5.1
      */
     public String getEsVersion() {
         return this.EsVersion;
     }
 
     /**
-     * Set Target ES version
-     * @param EsVersion Target ES version
+     * Set Target ES version. Valid values: 6.4.3, 6.8.2, 7.5.1
+     * @param EsVersion Target ES version. Valid values: 6.4.3, 6.8.2, 7.5.1
      */
     public void setEsVersion(String EsVersion) {
         this.EsVersion = EsVersion;

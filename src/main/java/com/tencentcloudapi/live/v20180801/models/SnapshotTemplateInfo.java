@@ -37,21 +37,23 @@ public class SnapshotTemplateInfo extends AbstractModel{
     private String TemplateName;
 
     /**
-    * Screencapturing interval in seconds. Value range: 5–300s.
+    * Screencapturing interval. Value range: 5–300s.
     */
     @SerializedName("SnapshotInterval")
     @Expose
     private Long SnapshotInterval;
 
     /**
-    * Screenshot width. Value range: 0–3000. 0: original width and fit to the original aspect ratio
+    * Screenshot width. Value range: 0–3000. 
+0: original width and fit to the original ratio.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * Screenshot height. Value range: 0–2,000. 0: original height and fit to the original aspect ratio
+    * Screenshot height. Value range: 0–2000.
+0: original height and fit to the original ratio.
     */
     @SerializedName("Height")
     @Expose
@@ -65,7 +67,7 @@ public class SnapshotTemplateInfo extends AbstractModel{
     private Long PornFlag;
 
     /**
-    * COS `AppId`.
+    * COS application ID.
     */
     @SerializedName("CosAppId")
     @Expose
@@ -86,11 +88,27 @@ public class SnapshotTemplateInfo extends AbstractModel{
     private String CosRegion;
 
     /**
-    * Template description
+    * Template description.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
+
+    /**
+    * COS bucket folder prefix.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CosPrefix")
+    @Expose
+    private String CosPrefix;
+
+    /**
+    * COS filename.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CosFileName")
+    @Expose
+    private String CosFileName;
 
     /**
      * Get Template ID. 
@@ -125,48 +143,56 @@ public class SnapshotTemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get Screencapturing interval in seconds. Value range: 5–300s. 
-     * @return SnapshotInterval Screencapturing interval in seconds. Value range: 5–300s.
+     * Get Screencapturing interval. Value range: 5–300s. 
+     * @return SnapshotInterval Screencapturing interval. Value range: 5–300s.
      */
     public Long getSnapshotInterval() {
         return this.SnapshotInterval;
     }
 
     /**
-     * Set Screencapturing interval in seconds. Value range: 5–300s.
-     * @param SnapshotInterval Screencapturing interval in seconds. Value range: 5–300s.
+     * Set Screencapturing interval. Value range: 5–300s.
+     * @param SnapshotInterval Screencapturing interval. Value range: 5–300s.
      */
     public void setSnapshotInterval(Long SnapshotInterval) {
         this.SnapshotInterval = SnapshotInterval;
     }
 
     /**
-     * Get Screenshot width. Value range: 0–3000. 0: original width and fit to the original aspect ratio 
-     * @return Width Screenshot width. Value range: 0–3000. 0: original width and fit to the original aspect ratio
+     * Get Screenshot width. Value range: 0–3000. 
+0: original width and fit to the original ratio. 
+     * @return Width Screenshot width. Value range: 0–3000. 
+0: original width and fit to the original ratio.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Screenshot width. Value range: 0–3000. 0: original width and fit to the original aspect ratio
-     * @param Width Screenshot width. Value range: 0–3000. 0: original width and fit to the original aspect ratio
+     * Set Screenshot width. Value range: 0–3000. 
+0: original width and fit to the original ratio.
+     * @param Width Screenshot width. Value range: 0–3000. 
+0: original width and fit to the original ratio.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get Screenshot height. Value range: 0–2,000. 0: original height and fit to the original aspect ratio 
-     * @return Height Screenshot height. Value range: 0–2,000. 0: original height and fit to the original aspect ratio
+     * Get Screenshot height. Value range: 0–2000.
+0: original height and fit to the original ratio. 
+     * @return Height Screenshot height. Value range: 0–2000.
+0: original height and fit to the original ratio.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Screenshot height. Value range: 0–2,000. 0: original height and fit to the original aspect ratio
-     * @param Height Screenshot height. Value range: 0–2,000. 0: original height and fit to the original aspect ratio
+     * Set Screenshot height. Value range: 0–2000.
+0: original height and fit to the original ratio.
+     * @param Height Screenshot height. Value range: 0–2000.
+0: original height and fit to the original ratio.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
@@ -189,16 +215,16 @@ public class SnapshotTemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get COS `AppId`. 
-     * @return CosAppId COS `AppId`.
+     * Get COS application ID. 
+     * @return CosAppId COS application ID.
      */
     public Long getCosAppId() {
         return this.CosAppId;
     }
 
     /**
-     * Set COS `AppId`.
-     * @param CosAppId COS `AppId`.
+     * Set COS application ID.
+     * @param CosAppId COS application ID.
      */
     public void setCosAppId(Long CosAppId) {
         this.CosAppId = CosAppId;
@@ -237,19 +263,59 @@ public class SnapshotTemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get Template description 
-     * @return Description Template description
+     * Get Template description. 
+     * @return Description Template description.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Template description
-     * @param Description Template description
+     * Set Template description.
+     * @param Description Template description.
      */
     public void setDescription(String Description) {
         this.Description = Description;
+    }
+
+    /**
+     * Get COS bucket folder prefix.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return CosPrefix COS bucket folder prefix.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getCosPrefix() {
+        return this.CosPrefix;
+    }
+
+    /**
+     * Set COS bucket folder prefix.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param CosPrefix COS bucket folder prefix.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCosPrefix(String CosPrefix) {
+        this.CosPrefix = CosPrefix;
+    }
+
+    /**
+     * Get COS filename.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return CosFileName COS filename.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getCosFileName() {
+        return this.CosFileName;
+    }
+
+    /**
+     * Set COS filename.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param CosFileName COS filename.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCosFileName(String CosFileName) {
+        this.CosFileName = CosFileName;
     }
 
     /**
@@ -266,6 +332,8 @@ public class SnapshotTemplateInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CosBucket", this.CosBucket);
         this.setParamSimple(map, prefix + "CosRegion", this.CosRegion);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "CosPrefix", this.CosPrefix);
+        this.setParamSimple(map, prefix + "CosFileName", this.CosFileName);
 
     }
 }

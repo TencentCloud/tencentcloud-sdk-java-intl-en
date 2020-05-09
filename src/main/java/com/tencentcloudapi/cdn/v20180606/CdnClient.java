@@ -349,6 +349,24 @@ This API is in beta test and not fully available yet. Please stay tuned.
     }
 
     /**
+     *This API is used to query the daily/weekly/monthly report data at domain name/project levels.
+     * @param req DescribeReportDataRequest
+     * @return DescribeReportDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReportDataResponse DescribeReportData(DescribeReportDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeReportDataResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeReportDataResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeReportData"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the list of domain name URLs containing regulation-violating content scanned and detected by the CDN system, and the current status of the URLs.
 It corresponds to the **Pornography Detection** page on the CDN Console.
      * @param req DescribeUrlViolationsRequest

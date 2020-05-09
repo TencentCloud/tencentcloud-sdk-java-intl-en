@@ -58,7 +58,7 @@ public class RecordTemplateInfo extends AbstractModel{
     private RecordParam HlsParam;
 
     /**
-    * Mp4 recording parameter.
+    * MP4 recording parameter.
     */
     @SerializedName("Mp4Param")
     @Expose
@@ -80,14 +80,14 @@ public class RecordTemplateInfo extends AbstractModel{
     private Long IsDelayLive;
 
     /**
-    * Custom HLS recording parameter.
+    * Custom HLS recording parameter
     */
     @SerializedName("HlsSpecialParam")
     @Expose
     private HlsSpecialParam HlsSpecialParam;
 
     /**
-    * Mp3 recording parameter.
+    * MP3 recording parameter.
     */
     @SerializedName("Mp3Param")
     @Expose
@@ -174,16 +174,16 @@ public class RecordTemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get Mp4 recording parameter. 
-     * @return Mp4Param Mp4 recording parameter.
+     * Get MP4 recording parameter. 
+     * @return Mp4Param MP4 recording parameter.
      */
     public RecordParam getMp4Param() {
         return this.Mp4Param;
     }
 
     /**
-     * Set Mp4 recording parameter.
-     * @param Mp4Param Mp4 recording parameter.
+     * Set MP4 recording parameter.
+     * @param Mp4Param MP4 recording parameter.
      */
     public void setMp4Param(RecordParam Mp4Param) {
         this.Mp4Param = Mp4Param;
@@ -226,32 +226,32 @@ public class RecordTemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get Custom HLS recording parameter. 
-     * @return HlsSpecialParam Custom HLS recording parameter.
+     * Get Custom HLS recording parameter 
+     * @return HlsSpecialParam Custom HLS recording parameter
      */
     public HlsSpecialParam getHlsSpecialParam() {
         return this.HlsSpecialParam;
     }
 
     /**
-     * Set Custom HLS recording parameter.
-     * @param HlsSpecialParam Custom HLS recording parameter.
+     * Set Custom HLS recording parameter
+     * @param HlsSpecialParam Custom HLS recording parameter
      */
     public void setHlsSpecialParam(HlsSpecialParam HlsSpecialParam) {
         this.HlsSpecialParam = HlsSpecialParam;
     }
 
     /**
-     * Get Mp3 recording parameter. 
-     * @return Mp3Param Mp3 recording parameter.
+     * Get MP3 recording parameter. 
+     * @return Mp3Param MP3 recording parameter.
      */
     public RecordParam getMp3Param() {
         return this.Mp3Param;
     }
 
     /**
-     * Set Mp3 recording parameter.
-     * @param Mp3Param Mp3 recording parameter.
+     * Set MP3 recording parameter.
+     * @param Mp3Param MP3 recording parameter.
      */
     public void setMp3Param(RecordParam Mp3Param) {
         this.Mp3Param = Mp3Param;

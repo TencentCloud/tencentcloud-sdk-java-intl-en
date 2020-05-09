@@ -51,7 +51,7 @@ public class ModifyLiveCallbackTemplateRequest extends AbstractModel{
     private String StreamBeginNotifyUrl;
 
     /**
-    * Stream ending callback URL.
+    * Interruption callback URL.
     */
     @SerializedName("StreamEndNotifyUrl")
     @Expose
@@ -79,7 +79,8 @@ public class ModifyLiveCallbackTemplateRequest extends AbstractModel{
     private String PornCensorshipNotifyUrl;
 
     /**
-    * Callback key, which is shared by callback URLs. For more information on authentication callback, please see the callback format document.
+    * Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
+[Event Message Notification](/document/product/267/32744).
     */
     @SerializedName("CallbackKey")
     @Expose
@@ -150,16 +151,16 @@ public class ModifyLiveCallbackTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get Stream ending callback URL. 
-     * @return StreamEndNotifyUrl Stream ending callback URL.
+     * Get Interruption callback URL. 
+     * @return StreamEndNotifyUrl Interruption callback URL.
      */
     public String getStreamEndNotifyUrl() {
         return this.StreamEndNotifyUrl;
     }
 
     /**
-     * Set Stream ending callback URL.
-     * @param StreamEndNotifyUrl Stream ending callback URL.
+     * Set Interruption callback URL.
+     * @param StreamEndNotifyUrl Interruption callback URL.
      */
     public void setStreamEndNotifyUrl(String StreamEndNotifyUrl) {
         this.StreamEndNotifyUrl = StreamEndNotifyUrl;
@@ -214,16 +215,20 @@ public class ModifyLiveCallbackTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get Callback key, which is shared by callback URLs. For more information on authentication callback, please see the callback format document. 
-     * @return CallbackKey Callback key, which is shared by callback URLs. For more information on authentication callback, please see the callback format document.
+     * Get Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
+[Event Message Notification](/document/product/267/32744). 
+     * @return CallbackKey Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
+[Event Message Notification](/document/product/267/32744).
      */
     public String getCallbackKey() {
         return this.CallbackKey;
     }
 
     /**
-     * Set Callback key, which is shared by callback URLs. For more information on authentication callback, please see the callback format document.
-     * @param CallbackKey Callback key, which is shared by callback URLs. For more information on authentication callback, please see the callback format document.
+     * Set Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
+[Event Message Notification](/document/product/267/32744).
+     * @param CallbackKey Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
+[Event Message Notification](/document/product/267/32744).
      */
     public void setCallbackKey(String CallbackKey) {
         this.CallbackKey = CallbackKey;

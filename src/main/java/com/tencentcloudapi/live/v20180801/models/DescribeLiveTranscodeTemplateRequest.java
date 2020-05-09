@@ -24,14 +24,17 @@ public class DescribeLiveTranscodeTemplateRequest extends AbstractModel{
 
     /**
     * Template ID.
+Note: get the template ID in the returned value of the [CreateLiveTranscodeTemplate](/document/product/267/32646) API call.
     */
     @SerializedName("TemplateId")
     @Expose
     private Long TemplateId;
 
     /**
-     * Get Template ID. 
+     * Get Template ID.
+Note: get the template ID in the returned value of the [CreateLiveTranscodeTemplate](/document/product/267/32646) API call. 
      * @return TemplateId Template ID.
+Note: get the template ID in the returned value of the [CreateLiveTranscodeTemplate](/document/product/267/32646) API call.
      */
     public Long getTemplateId() {
         return this.TemplateId;
@@ -39,7 +42,9 @@ public class DescribeLiveTranscodeTemplateRequest extends AbstractModel{
 
     /**
      * Set Template ID.
+Note: get the template ID in the returned value of the [CreateLiveTranscodeTemplate](/document/product/267/32646) API call.
      * @param TemplateId Template ID.
+Note: get the template ID in the returned value of the [CreateLiveTranscodeTemplate](/document/product/267/32646) API call.
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;

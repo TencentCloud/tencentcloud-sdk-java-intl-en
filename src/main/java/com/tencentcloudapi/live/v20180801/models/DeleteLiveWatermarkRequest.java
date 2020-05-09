@@ -24,14 +24,17 @@ public class DeleteLiveWatermarkRequest extends AbstractModel{
 
     /**
     * Watermark ID.
+Get the watermark ID in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
     */
     @SerializedName("WatermarkId")
     @Expose
     private Long WatermarkId;
 
     /**
-     * Get Watermark ID. 
+     * Get Watermark ID.
+Get the watermark ID in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call. 
      * @return WatermarkId Watermark ID.
+Get the watermark ID in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
      */
     public Long getWatermarkId() {
         return this.WatermarkId;
@@ -39,7 +42,9 @@ public class DeleteLiveWatermarkRequest extends AbstractModel{
 
     /**
      * Set Watermark ID.
+Get the watermark ID in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
      * @param WatermarkId Watermark ID.
+Get the watermark ID in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
      */
     public void setWatermarkId(Long WatermarkId) {
         this.WatermarkId = WatermarkId;

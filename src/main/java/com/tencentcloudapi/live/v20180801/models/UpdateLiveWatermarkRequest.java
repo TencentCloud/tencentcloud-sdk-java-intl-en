@@ -24,6 +24,7 @@ public class UpdateLiveWatermarkRequest extends AbstractModel{
 
     /**
     * Watermark ID.
+Get the watermark ID in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
     */
     @SerializedName("WatermarkId")
     @Expose
@@ -37,14 +38,14 @@ public class UpdateLiveWatermarkRequest extends AbstractModel{
     private String PictureUrl;
 
     /**
-    * Display position: X-axis offset.
+    * Display position: X-axis offset. Default value: 0.
     */
     @SerializedName("XPosition")
     @Expose
     private Long XPosition;
 
     /**
-    * Display position: Y-axis offset.
+    * Display position: Y-axis offset. Default value: 0.
     */
     @SerializedName("YPosition")
     @Expose
@@ -58,22 +59,24 @@ public class UpdateLiveWatermarkRequest extends AbstractModel{
     private String WatermarkName;
 
     /**
-    * Watermark width or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions.
+    * Watermark width or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original width is used by default.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions.
+    * Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original height is used by default.
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-     * Get Watermark ID. 
+     * Get Watermark ID.
+Get the watermark ID in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call. 
      * @return WatermarkId Watermark ID.
+Get the watermark ID in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
      */
     public Long getWatermarkId() {
         return this.WatermarkId;
@@ -81,7 +84,9 @@ public class UpdateLiveWatermarkRequest extends AbstractModel{
 
     /**
      * Set Watermark ID.
+Get the watermark ID in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
      * @param WatermarkId Watermark ID.
+Get the watermark ID in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
      */
     public void setWatermarkId(Long WatermarkId) {
         this.WatermarkId = WatermarkId;
@@ -104,32 +109,32 @@ public class UpdateLiveWatermarkRequest extends AbstractModel{
     }
 
     /**
-     * Get Display position: X-axis offset. 
-     * @return XPosition Display position: X-axis offset.
+     * Get Display position: X-axis offset. Default value: 0. 
+     * @return XPosition Display position: X-axis offset. Default value: 0.
      */
     public Long getXPosition() {
         return this.XPosition;
     }
 
     /**
-     * Set Display position: X-axis offset.
-     * @param XPosition Display position: X-axis offset.
+     * Set Display position: X-axis offset. Default value: 0.
+     * @param XPosition Display position: X-axis offset. Default value: 0.
      */
     public void setXPosition(Long XPosition) {
         this.XPosition = XPosition;
     }
 
     /**
-     * Get Display position: Y-axis offset. 
-     * @return YPosition Display position: Y-axis offset.
+     * Get Display position: Y-axis offset. Default value: 0. 
+     * @return YPosition Display position: Y-axis offset. Default value: 0.
      */
     public Long getYPosition() {
         return this.YPosition;
     }
 
     /**
-     * Set Display position: Y-axis offset.
-     * @param YPosition Display position: Y-axis offset.
+     * Set Display position: Y-axis offset. Default value: 0.
+     * @param YPosition Display position: Y-axis offset. Default value: 0.
      */
     public void setYPosition(Long YPosition) {
         this.YPosition = YPosition;
@@ -152,32 +157,32 @@ public class UpdateLiveWatermarkRequest extends AbstractModel{
     }
 
     /**
-     * Get Watermark width or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. 
-     * @return Width Watermark width or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions.
+     * Get Watermark width or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original width is used by default. 
+     * @return Width Watermark width or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original width is used by default.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Watermark width or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions.
-     * @param Width Watermark width or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions.
+     * Set Watermark width or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original width is used by default.
+     * @param Width Watermark width or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original width is used by default.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. 
-     * @return Height Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions.
+     * Get Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original height is used by default. 
+     * @return Height Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original height is used by default.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions.
-     * @param Height Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions.
+     * Set Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original height is used by default.
+     * @param Height Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original height is used by default.
      */
     public void setHeight(Long Height) {
         this.Height = Height;

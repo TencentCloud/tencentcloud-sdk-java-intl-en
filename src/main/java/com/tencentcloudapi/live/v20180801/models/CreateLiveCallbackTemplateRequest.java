@@ -23,8 +23,9 @@ import java.util.HashMap;
 public class CreateLiveCallbackTemplateRequest extends AbstractModel{
 
     /**
-    * Template name, which is a non-empty string.
+    * Template name.
 Maximum length: 255 bytes.
+Only letters, digits, underscores, and hyphens can be contained.
     */
     @SerializedName("TemplateName")
     @Expose
@@ -33,6 +34,7 @@ Maximum length: 255 bytes.
     /**
     * Description.
 Maximum length: 1,024 bytes.
+Only letters, digits, underscores, and hyphens can be contained.
     */
     @SerializedName("Description")
     @Expose
@@ -40,15 +42,15 @@ Maximum length: 1,024 bytes.
 
     /**
     * Stream starting callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](/document/product/267/32744).
     */
     @SerializedName("StreamBeginNotifyUrl")
     @Expose
     private String StreamBeginNotifyUrl;
 
     /**
-    * Stream ending callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744).
+    * Interruption callback URL,
+Protocol document: [Event Message Notification](/document/product/267/32744).
     */
     @SerializedName("StreamEndNotifyUrl")
     @Expose
@@ -56,7 +58,7 @@ Protocol-related document: [Event Message Notification](/document/product/267/32
 
     /**
     * Recording callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](/document/product/267/32744).
     */
     @SerializedName("RecordNotifyUrl")
     @Expose
@@ -64,7 +66,7 @@ Protocol-related document: [Event Message Notification](/document/product/267/32
 
     /**
     * Screencapturing callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](/document/product/267/32744).
     */
     @SerializedName("SnapshotNotifyUrl")
     @Expose
@@ -72,34 +74,39 @@ Protocol-related document: [Event Message Notification](/document/product/267/32
 
     /**
     * Porn detection callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32741).
+Protocol document: [Event Message Notification](/document/product/267/32741).
     */
     @SerializedName("PornCensorshipNotifyUrl")
     @Expose
     private String PornCensorshipNotifyUrl;
 
     /**
-    * Callback key, which is shared by callback URLs. For more information on authentication callback, please see the callback format document
+    * Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
+[Event Message Notification](/document/product/267/32744).
     */
     @SerializedName("CallbackKey")
     @Expose
     private String CallbackKey;
 
     /**
-     * Get Template name, which is a non-empty string.
-Maximum length: 255 bytes. 
-     * @return TemplateName Template name, which is a non-empty string.
+     * Get Template name.
 Maximum length: 255 bytes.
+Only letters, digits, underscores, and hyphens can be contained. 
+     * @return TemplateName Template name.
+Maximum length: 255 bytes.
+Only letters, digits, underscores, and hyphens can be contained.
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set Template name, which is a non-empty string.
+     * Set Template name.
 Maximum length: 255 bytes.
-     * @param TemplateName Template name, which is a non-empty string.
+Only letters, digits, underscores, and hyphens can be contained.
+     * @param TemplateName Template name.
 Maximum length: 255 bytes.
+Only letters, digits, underscores, and hyphens can be contained.
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
@@ -107,9 +114,11 @@ Maximum length: 255 bytes.
 
     /**
      * Get Description.
-Maximum length: 1,024 bytes. 
+Maximum length: 1,024 bytes.
+Only letters, digits, underscores, and hyphens can be contained. 
      * @return Description Description.
 Maximum length: 1,024 bytes.
+Only letters, digits, underscores, and hyphens can be contained.
      */
     public String getDescription() {
         return this.Description;
@@ -118,8 +127,10 @@ Maximum length: 1,024 bytes.
     /**
      * Set Description.
 Maximum length: 1,024 bytes.
+Only letters, digits, underscores, and hyphens can be contained.
      * @param Description Description.
 Maximum length: 1,024 bytes.
+Only letters, digits, underscores, and hyphens can be contained.
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -127,9 +138,9 @@ Maximum length: 1,024 bytes.
 
     /**
      * Get Stream starting callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744). 
+Protocol document: [Event Message Notification](/document/product/267/32744). 
      * @return StreamBeginNotifyUrl Stream starting callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](/document/product/267/32744).
      */
     public String getStreamBeginNotifyUrl() {
         return this.StreamBeginNotifyUrl;
@@ -137,29 +148,29 @@ Protocol-related document: [Event Message Notification](/document/product/267/32
 
     /**
      * Set Stream starting callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](/document/product/267/32744).
      * @param StreamBeginNotifyUrl Stream starting callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](/document/product/267/32744).
      */
     public void setStreamBeginNotifyUrl(String StreamBeginNotifyUrl) {
         this.StreamBeginNotifyUrl = StreamBeginNotifyUrl;
     }
 
     /**
-     * Get Stream ending callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744). 
-     * @return StreamEndNotifyUrl Stream ending callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744).
+     * Get Interruption callback URL,
+Protocol document: [Event Message Notification](/document/product/267/32744). 
+     * @return StreamEndNotifyUrl Interruption callback URL,
+Protocol document: [Event Message Notification](/document/product/267/32744).
      */
     public String getStreamEndNotifyUrl() {
         return this.StreamEndNotifyUrl;
     }
 
     /**
-     * Set Stream ending callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744).
-     * @param StreamEndNotifyUrl Stream ending callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744).
+     * Set Interruption callback URL,
+Protocol document: [Event Message Notification](/document/product/267/32744).
+     * @param StreamEndNotifyUrl Interruption callback URL,
+Protocol document: [Event Message Notification](/document/product/267/32744).
      */
     public void setStreamEndNotifyUrl(String StreamEndNotifyUrl) {
         this.StreamEndNotifyUrl = StreamEndNotifyUrl;
@@ -167,9 +178,9 @@ Protocol-related document: [Event Message Notification](/document/product/267/32
 
     /**
      * Get Recording callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744). 
+Protocol document: [Event Message Notification](/document/product/267/32744). 
      * @return RecordNotifyUrl Recording callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](/document/product/267/32744).
      */
     public String getRecordNotifyUrl() {
         return this.RecordNotifyUrl;
@@ -177,9 +188,9 @@ Protocol-related document: [Event Message Notification](/document/product/267/32
 
     /**
      * Set Recording callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](/document/product/267/32744).
      * @param RecordNotifyUrl Recording callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](/document/product/267/32744).
      */
     public void setRecordNotifyUrl(String RecordNotifyUrl) {
         this.RecordNotifyUrl = RecordNotifyUrl;
@@ -187,9 +198,9 @@ Protocol-related document: [Event Message Notification](/document/product/267/32
 
     /**
      * Get Screencapturing callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744). 
+Protocol document: [Event Message Notification](/document/product/267/32744). 
      * @return SnapshotNotifyUrl Screencapturing callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](/document/product/267/32744).
      */
     public String getSnapshotNotifyUrl() {
         return this.SnapshotNotifyUrl;
@@ -197,9 +208,9 @@ Protocol-related document: [Event Message Notification](/document/product/267/32
 
     /**
      * Set Screencapturing callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](/document/product/267/32744).
      * @param SnapshotNotifyUrl Screencapturing callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](/document/product/267/32744).
      */
     public void setSnapshotNotifyUrl(String SnapshotNotifyUrl) {
         this.SnapshotNotifyUrl = SnapshotNotifyUrl;
@@ -207,9 +218,9 @@ Protocol-related document: [Event Message Notification](/document/product/267/32
 
     /**
      * Get Porn detection callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32741). 
+Protocol document: [Event Message Notification](/document/product/267/32741). 
      * @return PornCensorshipNotifyUrl Porn detection callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32741).
+Protocol document: [Event Message Notification](/document/product/267/32741).
      */
     public String getPornCensorshipNotifyUrl() {
         return this.PornCensorshipNotifyUrl;
@@ -217,25 +228,29 @@ Protocol-related document: [Event Message Notification](/document/product/267/32
 
     /**
      * Set Porn detection callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32741).
+Protocol document: [Event Message Notification](/document/product/267/32741).
      * @param PornCensorshipNotifyUrl Porn detection callback URL,
-Protocol-related document: [Event Message Notification](/document/product/267/32741).
+Protocol document: [Event Message Notification](/document/product/267/32741).
      */
     public void setPornCensorshipNotifyUrl(String PornCensorshipNotifyUrl) {
         this.PornCensorshipNotifyUrl = PornCensorshipNotifyUrl;
     }
 
     /**
-     * Get Callback key, which is shared by callback URLs. For more information on authentication callback, please see the callback format document 
-     * @return CallbackKey Callback key, which is shared by callback URLs. For more information on authentication callback, please see the callback format document
+     * Get Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
+[Event Message Notification](/document/product/267/32744). 
+     * @return CallbackKey Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
+[Event Message Notification](/document/product/267/32744).
      */
     public String getCallbackKey() {
         return this.CallbackKey;
     }
 
     /**
-     * Set Callback key, which is shared by callback URLs. For more information on authentication callback, please see the callback format document
-     * @param CallbackKey Callback key, which is shared by callback URLs. For more information on authentication callback, please see the callback format document
+     * Set Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
+[Event Message Notification](/document/product/267/32744).
+     * @param CallbackKey Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
+[Event Message Notification](/document/product/267/32744).
      */
     public void setCallbackKey(String CallbackKey) {
         this.CallbackKey = CallbackKey;
