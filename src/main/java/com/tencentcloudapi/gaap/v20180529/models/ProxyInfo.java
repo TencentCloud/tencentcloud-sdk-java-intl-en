@@ -80,16 +80,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Concurrent;
 
     /**
-    * Connection status:
+    * Connection status. Valid values:
 RUNNING: running;
 CREATING: creating;
 DESTROYING: terminating;
 OPENING: enabling;
 CLOSING: disabling;
 CLOSED: disabled;
-ADJUSTING: adjusting configuration
-ISOLATING: isolating (it’s triggered when the account is in arrears);
-ISOLATED: isolated (it’s triggered when the account is in arrears);
+ADJUSTING: adjusting configuration;
+ISOLATING: isolating;
+ISOLATED: isolated;
+CLONING: copying;
 UNKNOWN: unknown status.
     */
     @SerializedName("Status")
@@ -335,27 +336,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Connection status:
+     * Get Connection status. Valid values:
 RUNNING: running;
 CREATING: creating;
 DESTROYING: terminating;
 OPENING: enabling;
 CLOSING: disabling;
 CLOSED: disabled;
-ADJUSTING: adjusting configuration
-ISOLATING: isolating (it’s triggered when the account is in arrears);
-ISOLATED: isolated (it’s triggered when the account is in arrears);
+ADJUSTING: adjusting configuration;
+ISOLATING: isolating;
+ISOLATED: isolated;
+CLONING: copying;
 UNKNOWN: unknown status. 
-     * @return Status Connection status:
+     * @return Status Connection status. Valid values:
 RUNNING: running;
 CREATING: creating;
 DESTROYING: terminating;
 OPENING: enabling;
 CLOSING: disabling;
 CLOSED: disabled;
-ADJUSTING: adjusting configuration
-ISOLATING: isolating (it’s triggered when the account is in arrears);
-ISOLATED: isolated (it’s triggered when the account is in arrears);
+ADJUSTING: adjusting configuration;
+ISOLATING: isolating;
+ISOLATED: isolated;
+CLONING: copying;
 UNKNOWN: unknown status.
      */
     public String getStatus() {
@@ -363,27 +366,29 @@ UNKNOWN: unknown status.
     }
 
     /**
-     * Set Connection status:
+     * Set Connection status. Valid values:
 RUNNING: running;
 CREATING: creating;
 DESTROYING: terminating;
 OPENING: enabling;
 CLOSING: disabling;
 CLOSED: disabled;
-ADJUSTING: adjusting configuration
-ISOLATING: isolating (it’s triggered when the account is in arrears);
-ISOLATED: isolated (it’s triggered when the account is in arrears);
+ADJUSTING: adjusting configuration;
+ISOLATING: isolating;
+ISOLATED: isolated;
+CLONING: copying;
 UNKNOWN: unknown status.
-     * @param Status Connection status:
+     * @param Status Connection status. Valid values:
 RUNNING: running;
 CREATING: creating;
 DESTROYING: terminating;
 OPENING: enabling;
 CLOSING: disabling;
 CLOSED: disabled;
-ADJUSTING: adjusting configuration
-ISOLATING: isolating (it’s triggered when the account is in arrears);
-ISOLATED: isolated (it’s triggered when the account is in arrears);
+ADJUSTING: adjusting configuration;
+ISOLATING: isolating;
+ISOLATED: isolated;
+CLONING: copying;
 UNKNOWN: unknown status.
      */
     public void setStatus(String Status) {

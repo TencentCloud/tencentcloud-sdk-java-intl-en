@@ -54,28 +54,28 @@ If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 add
     private String NextHopDestination;
 
     /**
-    * The ID of a network detection instance, such as netd-12345678.
+    * ID of a network inspector instance, e.g. netd-12345678. Enter at least one of this parameter, VpcId, SubnetId, and NetDetectName. Use NetDetectId if it is present.
     */
     @SerializedName("NetDetectId")
     @Expose
     private String NetDetectId;
 
     /**
-    * The `ID` of a `VPC` instance, such as `vpc-12345678`.
+    * ID of a `VPC` instance, e.g. `vpc-12345678`, which is used together with SubnetId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * The ID of a subnet instance, such as subnet-12345678.
+    * ID of a subnet instance, e.g. `subnet-12345678`, which is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * The name of a network detection instance. The maximum length is 60 characters.
+    * The name of a network inspector, up to 60 bytes in length. It is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
     */
     @SerializedName("NetDetectName")
     @Expose
@@ -170,64 +170,64 @@ If NextHopType is set to NORMAL_CVM, the value of this parameter is the IPv4 add
     }
 
     /**
-     * Get The ID of a network detection instance, such as netd-12345678. 
-     * @return NetDetectId The ID of a network detection instance, such as netd-12345678.
+     * Get ID of a network inspector instance, e.g. netd-12345678. Enter at least one of this parameter, VpcId, SubnetId, and NetDetectName. Use NetDetectId if it is present. 
+     * @return NetDetectId ID of a network inspector instance, e.g. netd-12345678. Enter at least one of this parameter, VpcId, SubnetId, and NetDetectName. Use NetDetectId if it is present.
      */
     public String getNetDetectId() {
         return this.NetDetectId;
     }
 
     /**
-     * Set The ID of a network detection instance, such as netd-12345678.
-     * @param NetDetectId The ID of a network detection instance, such as netd-12345678.
+     * Set ID of a network inspector instance, e.g. netd-12345678. Enter at least one of this parameter, VpcId, SubnetId, and NetDetectName. Use NetDetectId if it is present.
+     * @param NetDetectId ID of a network inspector instance, e.g. netd-12345678. Enter at least one of this parameter, VpcId, SubnetId, and NetDetectName. Use NetDetectId if it is present.
      */
     public void setNetDetectId(String NetDetectId) {
         this.NetDetectId = NetDetectId;
     }
 
     /**
-     * Get The `ID` of a `VPC` instance, such as `vpc-12345678`. 
-     * @return VpcId The `ID` of a `VPC` instance, such as `vpc-12345678`.
+     * Get ID of a `VPC` instance, e.g. `vpc-12345678`, which is used together with SubnetId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present. 
+     * @return VpcId ID of a `VPC` instance, e.g. `vpc-12345678`, which is used together with SubnetId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set The `ID` of a `VPC` instance, such as `vpc-12345678`.
-     * @param VpcId The `ID` of a `VPC` instance, such as `vpc-12345678`.
+     * Set ID of a `VPC` instance, e.g. `vpc-12345678`, which is used together with SubnetId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
+     * @param VpcId ID of a `VPC` instance, e.g. `vpc-12345678`, which is used together with SubnetId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get The ID of a subnet instance, such as subnet-12345678. 
-     * @return SubnetId The ID of a subnet instance, such as subnet-12345678.
+     * Get ID of a subnet instance, e.g. `subnet-12345678`, which is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present. 
+     * @return SubnetId ID of a subnet instance, e.g. `subnet-12345678`, which is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set The ID of a subnet instance, such as subnet-12345678.
-     * @param SubnetId The ID of a subnet instance, such as subnet-12345678.
+     * Set ID of a subnet instance, e.g. `subnet-12345678`, which is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
+     * @param SubnetId ID of a subnet instance, e.g. `subnet-12345678`, which is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get The name of a network detection instance. The maximum length is 60 characters. 
-     * @return NetDetectName The name of a network detection instance. The maximum length is 60 characters.
+     * Get The name of a network inspector, up to 60 bytes in length. It is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present. 
+     * @return NetDetectName The name of a network inspector, up to 60 bytes in length. It is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
      */
     public String getNetDetectName() {
         return this.NetDetectName;
     }
 
     /**
-     * Set The name of a network detection instance. The maximum length is 60 characters.
-     * @param NetDetectName The name of a network detection instance. The maximum length is 60 characters.
+     * Set The name of a network inspector, up to 60 bytes in length. It is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
+     * @param NetDetectName The name of a network inspector, up to 60 bytes in length. It is used together with VpcId and NetDetectName. You should enter either this parameter or NetDetectId, or both. Use NetDetectId if it is present.
      */
     public void setNetDetectName(String NetDetectName) {
         this.NetDetectName = NetDetectName;

@@ -72,6 +72,13 @@ public class SecurityGroupAssociationStatistics extends AbstractModel{
     private InstanceStatistic [] InstanceStatistics;
 
     /**
+    * Total count of all resources (excluding resources referenced by security groups).
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
      * Get Security group instance ID. 
      * @return SecurityGroupId Security group instance ID.
      */
@@ -184,6 +191,22 @@ public class SecurityGroupAssociationStatistics extends AbstractModel{
     }
 
     /**
+     * Get Total count of all resources (excluding resources referenced by security groups). 
+     * @return TotalCount Total count of all resources (excluding resources referenced by security groups).
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set Total count of all resources (excluding resources referenced by security groups).
+     * @param TotalCount Total count of all resources (excluding resources referenced by security groups).
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class SecurityGroupAssociationStatistics extends AbstractModel{
         this.setParamSimple(map, prefix + "SG", this.SG);
         this.setParamSimple(map, prefix + "CLB", this.CLB);
         this.setParamArrayObj(map, prefix + "InstanceStatistics.", this.InstanceStatistics);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
 
     }
 }

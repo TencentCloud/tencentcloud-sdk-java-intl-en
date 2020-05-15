@@ -30,7 +30,7 @@ public class RealServerStatus extends AbstractModel{
     private String RealServerId;
 
     /**
-    * 0: not bound; 1: bound to rules or listeners.
+    * 0: not bound, 1: bound to rule or listener.
     */
     @SerializedName("BindStatus")
     @Expose
@@ -60,16 +60,16 @@ public class RealServerStatus extends AbstractModel{
     }
 
     /**
-     * Get 0: not bound; 1: bound to rules or listeners. 
-     * @return BindStatus 0: not bound; 1: bound to rules or listeners.
+     * Get 0: not bound, 1: bound to rule or listener. 
+     * @return BindStatus 0: not bound, 1: bound to rule or listener.
      */
     public Long getBindStatus() {
         return this.BindStatus;
     }
 
     /**
-     * Set 0: not bound; 1: bound to rules or listeners.
-     * @param BindStatus 0: not bound; 1: bound to rules or listeners.
+     * Set 0: not bound, 1: bound to rule or listener.
+     * @param BindStatus 0: not bound, 1: bound to rule or listener.
      */
     public void setBindStatus(Long BindStatus) {
         this.BindStatus = BindStatus;

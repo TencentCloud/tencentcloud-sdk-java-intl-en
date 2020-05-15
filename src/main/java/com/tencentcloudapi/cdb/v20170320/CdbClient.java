@@ -592,6 +592,24 @@ The new API (CreateBackup) can specify the table to be backed up when a logical 
     }
 
     /**
+     *This API is used to query the basic information of an instance (instance ID, instance name, and whether encryption is enabled).
+     * @param req DescribeDBInstanceInfoRequest
+     * @return DescribeDBInstanceInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBInstanceInfoResponse DescribeDBInstanceInfo(DescribeDBInstanceInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBInstanceInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBInstanceInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDBInstanceInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (DescribeDBInstanceRebootTime) is used to query the estimated time needed for a TencentDB instance to restart.
      * @param req DescribeDBInstanceRebootTimeRequest
      * @return DescribeDBInstanceRebootTimeResponse
@@ -909,6 +927,24 @@ The new API (CreateBackup) can specify the table to be backed up when a logical 
                 Type type = new TypeToken<JsonResponseModel<DescribeRollbackRangeTimeResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeRollbackRangeTime"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the details of a TencentDB instance rollback task.
+     * @param req DescribeRollbackTaskDetailRequest
+     * @return DescribeRollbackTaskDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRollbackTaskDetailResponse DescribeRollbackTaskDetail(DescribeRollbackTaskDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRollbackTaskDetailResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRollbackTaskDetailResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRollbackTaskDetail"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

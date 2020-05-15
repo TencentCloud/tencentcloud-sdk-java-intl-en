@@ -258,11 +258,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String HiveMetaDb;
 
     /**
-    * 
+    * Cluster type: EMR, CLICKHOUSE, DRUID
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServiceClass")
     @Expose
     private String ServiceClass;
+
+    /**
+    * Alias serialization of all nodes in cluster
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AliasInfo")
+    @Expose
+    private String AliasInfo;
+
+    /**
+    * Cluster version ID
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ProductId")
+    @Expose
+    private Long ProductId;
 
     /**
      * Get ID
@@ -893,19 +910,63 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return ServiceClass 
+     * Get Cluster type: EMR, CLICKHOUSE, DRUID
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return ServiceClass Cluster type: EMR, CLICKHOUSE, DRUID
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getServiceClass() {
         return this.ServiceClass;
     }
 
     /**
-     * Set 
-     * @param ServiceClass 
+     * Set Cluster type: EMR, CLICKHOUSE, DRUID
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param ServiceClass Cluster type: EMR, CLICKHOUSE, DRUID
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setServiceClass(String ServiceClass) {
         this.ServiceClass = ServiceClass;
+    }
+
+    /**
+     * Get Alias serialization of all nodes in cluster
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return AliasInfo Alias serialization of all nodes in cluster
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getAliasInfo() {
+        return this.AliasInfo;
+    }
+
+    /**
+     * Set Alias serialization of all nodes in cluster
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AliasInfo Alias serialization of all nodes in cluster
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAliasInfo(String AliasInfo) {
+        this.AliasInfo = AliasInfo;
+    }
+
+    /**
+     * Get Cluster version ID
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return ProductId Cluster version ID
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getProductId() {
+        return this.ProductId;
+    }
+
+    /**
+     * Set Cluster version ID
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param ProductId Cluster version ID
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setProductId(Long ProductId) {
+        this.ProductId = ProductId;
     }
 
     /**
@@ -939,6 +1000,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "HiveMetaDb", this.HiveMetaDb);
         this.setParamSimple(map, prefix + "ServiceClass", this.ServiceClass);
+        this.setParamSimple(map, prefix + "AliasInfo", this.AliasInfo);
+        this.setParamSimple(map, prefix + "ProductId", this.ProductId);
 
     }
 }

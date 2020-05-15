@@ -121,6 +121,13 @@ public class Address extends AbstractModel{
     private AlgType EipAlgType;
 
     /**
+    * The ISP of an EIP/Elastic IP, with possible return values currently including "CMCC", "CTCC", "CUCC" and "BGP"
+    */
+    @SerializedName("InternetServiceProvider")
+    @Expose
+    private String InternetServiceProvider;
+
+    /**
      * Get `EIP` `ID`, the unique ID of the `EIP`. 
      * @return AddressId `EIP` `ID`, the unique ID of the `EIP`.
      */
@@ -345,6 +352,22 @@ public class Address extends AbstractModel{
     }
 
     /**
+     * Get The ISP of an EIP/Elastic IP, with possible return values currently including "CMCC", "CTCC", "CUCC" and "BGP" 
+     * @return InternetServiceProvider The ISP of an EIP/Elastic IP, with possible return values currently including "CMCC", "CTCC", "CUCC" and "BGP"
+     */
+    public String getInternetServiceProvider() {
+        return this.InternetServiceProvider;
+    }
+
+    /**
+     * Set The ISP of an EIP/Elastic IP, with possible return values currently including "CMCC", "CTCC", "CUCC" and "BGP"
+     * @param InternetServiceProvider The ISP of an EIP/Elastic IP, with possible return values currently including "CMCC", "CTCC", "CUCC" and "BGP"
+     */
+    public void setInternetServiceProvider(String InternetServiceProvider) {
+        this.InternetServiceProvider = InternetServiceProvider;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -362,6 +385,7 @@ public class Address extends AbstractModel{
         this.setParamSimple(map, prefix + "AddressType", this.AddressType);
         this.setParamSimple(map, prefix + "CascadeRelease", this.CascadeRelease);
         this.setParamObj(map, prefix + "EipAlgType.", this.EipAlgType);
+        this.setParamSimple(map, prefix + "InternetServiceProvider", this.InternetServiceProvider);
 
     }
 }

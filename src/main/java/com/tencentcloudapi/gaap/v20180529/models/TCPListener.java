@@ -66,7 +66,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Protocol;
 
     /**
-    * Listener status:
+    * Listener status. Valid values:
 0: running;
 1: creating;
 2: terminating;
@@ -78,10 +78,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long ListenerStatus;
 
     /**
-    * Origin server access policy of listeners:
+    * Origin server access policy of listener. Valid values:
 rr: round robin;
 wrr: weighted round robin;
-lc: least connections.
+lc: least connection.
     */
     @SerializedName("Scheduler")
     @Expose
@@ -102,17 +102,17 @@ lc: least connections.
     private Long DelayLoop;
 
     /**
-    * Whether to enable the listener health check:
-0: disable;
-1: enable.
+    * Whether health check is enabled for listener. Valid values:
+0: disabled;
+1: enabled
     */
     @SerializedName("HealthCheck")
     @Expose
     private Long HealthCheck;
 
     /**
-    * Status of the origin server bound to listeners:
-0: exception;
+    * Status of origin server bound to listener. Valid values:
+0: exceptional;
 1: normal.
     */
     @SerializedName("BindStatus")
@@ -235,13 +235,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Listener status:
+     * Get Listener status. Valid values:
 0: running;
 1: creating;
 2: terminating;
 3: adjusting origin server;
 4: adjusting configuration. 
-     * @return ListenerStatus Listener status:
+     * @return ListenerStatus Listener status. Valid values:
 0: running;
 1: creating;
 2: terminating;
@@ -253,13 +253,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Listener status:
+     * Set Listener status. Valid values:
 0: running;
 1: creating;
 2: terminating;
 3: adjusting origin server;
 4: adjusting configuration.
-     * @param ListenerStatus Listener status:
+     * @param ListenerStatus Listener status. Valid values:
 0: running;
 1: creating;
 2: terminating;
@@ -271,28 +271,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Origin server access policy of listeners:
+     * Get Origin server access policy of listener. Valid values:
 rr: round robin;
 wrr: weighted round robin;
-lc: least connections. 
-     * @return Scheduler Origin server access policy of listeners:
+lc: least connection. 
+     * @return Scheduler Origin server access policy of listener. Valid values:
 rr: round robin;
 wrr: weighted round robin;
-lc: least connections.
+lc: least connection.
      */
     public String getScheduler() {
         return this.Scheduler;
     }
 
     /**
-     * Set Origin server access policy of listeners:
+     * Set Origin server access policy of listener. Valid values:
 rr: round robin;
 wrr: weighted round robin;
-lc: least connections.
-     * @param Scheduler Origin server access policy of listeners:
+lc: least connection.
+     * @param Scheduler Origin server access policy of listener. Valid values:
 rr: round robin;
 wrr: weighted round robin;
-lc: least connections.
+lc: least connection.
      */
     public void setScheduler(String Scheduler) {
         this.Scheduler = Scheduler;
@@ -331,35 +331,35 @@ lc: least connections.
     }
 
     /**
-     * Get Whether to enable the listener health check:
-0: disable;
-1: enable. 
-     * @return HealthCheck Whether to enable the listener health check:
-0: disable;
-1: enable.
+     * Get Whether health check is enabled for listener. Valid values:
+0: disabled;
+1: enabled 
+     * @return HealthCheck Whether health check is enabled for listener. Valid values:
+0: disabled;
+1: enabled
      */
     public Long getHealthCheck() {
         return this.HealthCheck;
     }
 
     /**
-     * Set Whether to enable the listener health check:
-0: disable;
-1: enable.
-     * @param HealthCheck Whether to enable the listener health check:
-0: disable;
-1: enable.
+     * Set Whether health check is enabled for listener. Valid values:
+0: disabled;
+1: enabled
+     * @param HealthCheck Whether health check is enabled for listener. Valid values:
+0: disabled;
+1: enabled
      */
     public void setHealthCheck(Long HealthCheck) {
         this.HealthCheck = HealthCheck;
     }
 
     /**
-     * Get Status of the origin server bound to listeners:
-0: exception;
+     * Get Status of origin server bound to listener. Valid values:
+0: exceptional;
 1: normal. 
-     * @return BindStatus Status of the origin server bound to listeners:
-0: exception;
+     * @return BindStatus Status of origin server bound to listener. Valid values:
+0: exceptional;
 1: normal.
      */
     public Long getBindStatus() {
@@ -367,11 +367,11 @@ lc: least connections.
     }
 
     /**
-     * Set Status of the origin server bound to listeners:
-0: exception;
+     * Set Status of origin server bound to listener. Valid values:
+0: exceptional;
 1: normal.
-     * @param BindStatus Status of the origin server bound to listeners:
-0: exception;
+     * @param BindStatus Status of origin server bound to listener. Valid values:
+0: exceptional;
 1: normal.
      */
     public void setBindStatus(Long BindStatus) {

@@ -24,6 +24,7 @@ public class RollbackTableName extends AbstractModel{
 
     /**
     * Original table name before rollback
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TableName")
     @Expose
@@ -31,14 +32,17 @@ public class RollbackTableName extends AbstractModel{
 
     /**
     * New table name after rollback
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("NewTableName")
     @Expose
     private String NewTableName;
 
     /**
-     * Get Original table name before rollback 
+     * Get Original table name before rollback
+Note: this field may return null, indicating that no valid values can be obtained. 
      * @return TableName Original table name before rollback
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getTableName() {
         return this.TableName;
@@ -46,15 +50,19 @@ public class RollbackTableName extends AbstractModel{
 
     /**
      * Set Original table name before rollback
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param TableName Original table name before rollback
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setTableName(String TableName) {
         this.TableName = TableName;
     }
 
     /**
-     * Get New table name after rollback 
+     * Get New table name after rollback
+Note: this field may return null, indicating that no valid values can be obtained. 
      * @return NewTableName New table name after rollback
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getNewTableName() {
         return this.NewTableName;
@@ -62,7 +70,9 @@ public class RollbackTableName extends AbstractModel{
 
     /**
      * Set New table name after rollback
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param NewTableName New table name after rollback
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setNewTableName(String NewTableName) {
         this.NewTableName = NewTableName;

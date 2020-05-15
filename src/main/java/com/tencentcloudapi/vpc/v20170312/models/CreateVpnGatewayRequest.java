@@ -65,6 +65,13 @@ public class CreateVpnGatewayRequest extends AbstractModel{
     private String Zone;
 
     /**
+    * VPN gateway type. Value: `CCN`, indicates CCN-type VPN gateway
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
      * Get The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API. 
      * @return VpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
      */
@@ -161,6 +168,22 @@ public class CreateVpnGatewayRequest extends AbstractModel{
     }
 
     /**
+     * Get VPN gateway type. Value: `CCN`, indicates CCN-type VPN gateway 
+     * @return Type VPN gateway type. Value: `CCN`, indicates CCN-type VPN gateway
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set VPN gateway type. Value: `CCN`, indicates CCN-type VPN gateway
+     * @param Type VPN gateway type. Value: `CCN`, indicates CCN-type VPN gateway
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class CreateVpnGatewayRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

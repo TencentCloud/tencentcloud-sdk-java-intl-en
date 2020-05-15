@@ -30,14 +30,14 @@ public class AssignPrivateIpAddressesRequest extends AbstractModel{
     private String NetworkInterfaceId;
 
     /**
-    * The information of the specified private IPs. You can specify a maximum of 10 each time.
+    * The information on private IP addresses, of which you can specify a maximum of 10 at a time. You should provide either this parameter or SecondaryPrivateIpAddressCount, or both.
     */
     @SerializedName("PrivateIpAddresses")
     @Expose
     private PrivateIpAddressSpecification [] PrivateIpAddresses;
 
     /**
-    * The number of private IP addresses that is newly applied for. The total number of private IP addresses cannot exceed the quota.
+    * The number of newly-applied private IP addresses. You should provide either this parameter or PrivateIpAddresses, or both. The total number of private IP addresses cannot exceed the quota. For more information, see<a href="/document/product/576/18527">ENI Use Limits</a>.
     */
     @SerializedName("SecondaryPrivateIpAddressCount")
     @Expose
@@ -60,32 +60,32 @@ public class AssignPrivateIpAddressesRequest extends AbstractModel{
     }
 
     /**
-     * Get The information of the specified private IPs. You can specify a maximum of 10 each time. 
-     * @return PrivateIpAddresses The information of the specified private IPs. You can specify a maximum of 10 each time.
+     * Get The information on private IP addresses, of which you can specify a maximum of 10 at a time. You should provide either this parameter or SecondaryPrivateIpAddressCount, or both. 
+     * @return PrivateIpAddresses The information on private IP addresses, of which you can specify a maximum of 10 at a time. You should provide either this parameter or SecondaryPrivateIpAddressCount, or both.
      */
     public PrivateIpAddressSpecification [] getPrivateIpAddresses() {
         return this.PrivateIpAddresses;
     }
 
     /**
-     * Set The information of the specified private IPs. You can specify a maximum of 10 each time.
-     * @param PrivateIpAddresses The information of the specified private IPs. You can specify a maximum of 10 each time.
+     * Set The information on private IP addresses, of which you can specify a maximum of 10 at a time. You should provide either this parameter or SecondaryPrivateIpAddressCount, or both.
+     * @param PrivateIpAddresses The information on private IP addresses, of which you can specify a maximum of 10 at a time. You should provide either this parameter or SecondaryPrivateIpAddressCount, or both.
      */
     public void setPrivateIpAddresses(PrivateIpAddressSpecification [] PrivateIpAddresses) {
         this.PrivateIpAddresses = PrivateIpAddresses;
     }
 
     /**
-     * Get The number of private IP addresses that is newly applied for. The total number of private IP addresses cannot exceed the quota. 
-     * @return SecondaryPrivateIpAddressCount The number of private IP addresses that is newly applied for. The total number of private IP addresses cannot exceed the quota.
+     * Get The number of newly-applied private IP addresses. You should provide either this parameter or PrivateIpAddresses, or both. The total number of private IP addresses cannot exceed the quota. For more information, see<a href="/document/product/576/18527">ENI Use Limits</a>. 
+     * @return SecondaryPrivateIpAddressCount The number of newly-applied private IP addresses. You should provide either this parameter or PrivateIpAddresses, or both. The total number of private IP addresses cannot exceed the quota. For more information, see<a href="/document/product/576/18527">ENI Use Limits</a>.
      */
     public Long getSecondaryPrivateIpAddressCount() {
         return this.SecondaryPrivateIpAddressCount;
     }
 
     /**
-     * Set The number of private IP addresses that is newly applied for. The total number of private IP addresses cannot exceed the quota.
-     * @param SecondaryPrivateIpAddressCount The number of private IP addresses that is newly applied for. The total number of private IP addresses cannot exceed the quota.
+     * Set The number of newly-applied private IP addresses. You should provide either this parameter or PrivateIpAddresses, or both. The total number of private IP addresses cannot exceed the quota. For more information, see<a href="/document/product/576/18527">ENI Use Limits</a>.
+     * @param SecondaryPrivateIpAddressCount The number of newly-applied private IP addresses. You should provide either this parameter or PrivateIpAddresses, or both. The total number of private IP addresses cannot exceed the quota. For more information, see<a href="/document/product/576/18527">ENI Use Limits</a>.
      */
     public void setSecondaryPrivateIpAddressCount(Long SecondaryPrivateIpAddressCount) {
         this.SecondaryPrivateIpAddressCount = SecondaryPrivateIpAddressCount;

@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DescribeTaskResultRequest extends AbstractModel{
 
     /**
-    * The async job ID
+    * Async task ID. Either TaskId or DealName must be entered.
     */
     @SerializedName("TaskId")
     @Expose
     private Long TaskId;
 
     /**
-    * The billing order ID
+    * Billing order No. Either TaskId or DealName must be entered.
     */
     @SerializedName("DealName")
     @Expose
     private String DealName;
 
     /**
-     * Get The async job ID 
-     * @return TaskId The async job ID
+     * Get Async task ID. Either TaskId or DealName must be entered. 
+     * @return TaskId Async task ID. Either TaskId or DealName must be entered.
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set The async job ID
-     * @param TaskId The async job ID
+     * Set Async task ID. Either TaskId or DealName must be entered.
+     * @param TaskId Async task ID. Either TaskId or DealName must be entered.
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get The billing order ID 
-     * @return DealName The billing order ID
+     * Get Billing order No. Either TaskId or DealName must be entered. 
+     * @return DealName Billing order No. Either TaskId or DealName must be entered.
      */
     public String getDealName() {
         return this.DealName;
     }
 
     /**
-     * Set The billing order ID
-     * @param DealName The billing order ID
+     * Set Billing order No. Either TaskId or DealName must be entered.
+     * @param DealName Billing order No. Either TaskId or DealName must be entered.
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;

@@ -46,7 +46,7 @@ If this parameter is left empty, 0 will be used by default.
 
     /**
     * Output width of input video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, the input stream width will be used by default.
 If percentage is used, the expected output is (percentage * background width).
@@ -57,7 +57,7 @@ If percentage is used, the expected output is (percentage * background width).
 
     /**
     * Output height of input video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, the input stream height will be used by default.
 If percentage is used, the expected output is (percentage * background height).
@@ -68,7 +68,7 @@ If percentage is used, the expected output is (percentage * background height).
 
     /**
     * X-axis offset of input in output video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, 0 will be used by default.
 Horizontal offset from the top-left corner of main host background video image. 
@@ -80,7 +80,7 @@ If percentage is used, the expected output is (percentage * background width).
 
     /**
     * Y-axis offset of input in output video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, 0 will be used by default.
 Vertical offset from the top-left corner of main host background video image. 
@@ -178,12 +178,12 @@ If this parameter is left empty, 0 will be used by default.
 
     /**
      * Get Output width of input video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, the input stream width will be used by default.
 If percentage is used, the expected output is (percentage * background width). 
      * @return ImageWidth Output width of input video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, the input stream width will be used by default.
 If percentage is used, the expected output is (percentage * background width).
@@ -194,12 +194,12 @@ If percentage is used, the expected output is (percentage * background width).
 
     /**
      * Set Output width of input video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, the input stream width will be used by default.
 If percentage is used, the expected output is (percentage * background width).
      * @param ImageWidth Output width of input video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, the input stream width will be used by default.
 If percentage is used, the expected output is (percentage * background width).
@@ -210,12 +210,12 @@ If percentage is used, the expected output is (percentage * background width).
 
     /**
      * Get Output height of input video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, the input stream height will be used by default.
 If percentage is used, the expected output is (percentage * background height). 
      * @return ImageHeight Output height of input video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, the input stream height will be used by default.
 If percentage is used, the expected output is (percentage * background height).
@@ -226,12 +226,12 @@ If percentage is used, the expected output is (percentage * background height).
 
     /**
      * Set Output height of input video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, the input stream height will be used by default.
 If percentage is used, the expected output is (percentage * background height).
      * @param ImageHeight Output height of input video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, the input stream height will be used by default.
 If percentage is used, the expected output is (percentage * background height).
@@ -242,13 +242,13 @@ If percentage is used, the expected output is (percentage * background height).
 
     /**
      * Get X-axis offset of input in output video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, 0 will be used by default.
 Horizontal offset from the top-left corner of main host background video image. 
 If percentage is used, the expected output is (percentage * background width). 
      * @return LocationX X-axis offset of input in output video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, 0 will be used by default.
 Horizontal offset from the top-left corner of main host background video image. 
@@ -260,13 +260,13 @@ If percentage is used, the expected output is (percentage * background width).
 
     /**
      * Set X-axis offset of input in output video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, 0 will be used by default.
 Horizontal offset from the top-left corner of main host background video image. 
 If percentage is used, the expected output is (percentage * background width).
      * @param LocationX X-axis offset of input in output video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, 0 will be used by default.
 Horizontal offset from the top-left corner of main host background video image. 
@@ -278,13 +278,13 @@ If percentage is used, the expected output is (percentage * background width).
 
     /**
      * Get Y-axis offset of input in output video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, 0 will be used by default.
 Vertical offset from the top-left corner of main host background video image. 
 If percentage is used, the expected output is (percentage * background width) 
      * @return LocationY Y-axis offset of input in output video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, 0 will be used by default.
 Vertical offset from the top-left corner of main host background video image. 
@@ -296,13 +296,13 @@ If percentage is used, the expected output is (percentage * background width)
 
     /**
      * Set Y-axis offset of input in output video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, 0 will be used by default.
 Vertical offset from the top-left corner of main host background video image. 
 If percentage is used, the expected output is (percentage * background width)
      * @param LocationY Y-axis offset of input in output video image. Value range:
-Pixel: [0,3000]
+Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, 0 will be used by default.
 Vertical offset from the top-left corner of main host background video image. 

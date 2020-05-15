@@ -308,7 +308,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the big key size distribution of an instance
+     *This API is used to query the distribution of instance access duration.
      * @param req DescribeInstanceMonitorTookDistRequest
      * @return DescribeInstanceMonitorTookDistResponse
      * @throws TencentCloudSDKException

@@ -37,14 +37,14 @@ public class MigrateDetailInfo extends AbstractModel{
     private Long StepNow;
 
     /**
-    * Overall progress, such as:
+    * Overall progress, such as "10"
     */
     @SerializedName("Progress")
     @Expose
     private String Progress;
 
     /**
-    * Progress of the current step, such as:
+    * Progress of current step, such as "1"
     */
     @SerializedName("CurrentStepProgress")
     @Expose
@@ -104,32 +104,32 @@ public class MigrateDetailInfo extends AbstractModel{
     }
 
     /**
-     * Get Overall progress, such as: 
-     * @return Progress Overall progress, such as:
+     * Get Overall progress, such as "10" 
+     * @return Progress Overall progress, such as "10"
      */
     public String getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Overall progress, such as:
-     * @param Progress Overall progress, such as:
+     * Set Overall progress, such as "10"
+     * @param Progress Overall progress, such as "10"
      */
     public void setProgress(String Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get Progress of the current step, such as: 
-     * @return CurrentStepProgress Progress of the current step, such as:
+     * Get Progress of current step, such as "1" 
+     * @return CurrentStepProgress Progress of current step, such as "1"
      */
     public String getCurrentStepProgress() {
         return this.CurrentStepProgress;
     }
 
     /**
-     * Set Progress of the current step, such as:
-     * @param CurrentStepProgress Progress of the current step, such as:
+     * Set Progress of current step, such as "1"
+     * @param CurrentStepProgress Progress of current step, such as "1"
      */
     public void setCurrentStepProgress(String CurrentStepProgress) {
         this.CurrentStepProgress = CurrentStepProgress;

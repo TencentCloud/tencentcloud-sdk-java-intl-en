@@ -48,7 +48,7 @@ public class ProxyGroupDetail extends AbstractModel{
 0: running normally;
 1: creating;
 4: terminating;
-11. Migrating.
+11: migrating;
     */
     @SerializedName("Status")
     @Expose
@@ -172,12 +172,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 0: running normally;
 1: creating;
 4: terminating;
-11. Migrating. 
+11: migrating; 
      * @return Status Connection group status:
 0: running normally;
 1: creating;
 4: terminating;
-11. Migrating.
+11: migrating;
      */
     public Long getStatus() {
         return this.Status;
@@ -188,12 +188,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 0: running normally;
 1: creating;
 4: terminating;
-11. Migrating.
+11: migrating;
      * @param Status Connection group status:
 0: running normally;
 1: creating;
 4: terminating;
-11. Migrating.
+11: migrating;
      */
     public void setStatus(Long Status) {
         this.Status = Status;

@@ -65,14 +65,14 @@ public class RuleInfo extends AbstractModel{
     private String Scheduler;
 
     /**
-    * Health check identifier: 1 (enable), 0 (disable).
+    * Whether health check is enabled. 1: enabled, 0: disabled
     */
     @SerializedName("HealthCheck")
     @Expose
     private Long HealthCheck;
 
     /**
-    * Origin server status. 0: running; 1: creating; 2: terminating; 3: binding or unbinding; 4: updating configuration
+    * Rule status. 0: running, 1: creating, 2: terminating, 3: binding/unbinding origin server, 4: updating configuration
     */
     @SerializedName("RuleStatus")
     @Expose
@@ -93,7 +93,9 @@ public class RuleInfo extends AbstractModel{
     private BindRealServer [] RealServerSet;
 
     /**
-    * Origin server binding status. 0: normal; 1: origin server IP exception; 2: origin server domain name resolution exception.
+    * Origin server service status. 0: exceptional, 1: normal
+If health check is not enabled, this status will always be normal.
+As long as one origin server is exceptional, this status will be exceptional. Please view `RealServerSet` for the status of specific origin servers.
     */
     @SerializedName("BindStatus")
     @Expose
@@ -204,32 +206,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Health check identifier: 1 (enable), 0 (disable). 
-     * @return HealthCheck Health check identifier: 1 (enable), 0 (disable).
+     * Get Whether health check is enabled. 1: enabled, 0: disabled 
+     * @return HealthCheck Whether health check is enabled. 1: enabled, 0: disabled
      */
     public Long getHealthCheck() {
         return this.HealthCheck;
     }
 
     /**
-     * Set Health check identifier: 1 (enable), 0 (disable).
-     * @param HealthCheck Health check identifier: 1 (enable), 0 (disable).
+     * Set Whether health check is enabled. 1: enabled, 0: disabled
+     * @param HealthCheck Whether health check is enabled. 1: enabled, 0: disabled
      */
     public void setHealthCheck(Long HealthCheck) {
         this.HealthCheck = HealthCheck;
     }
 
     /**
-     * Get Origin server status. 0: running; 1: creating; 2: terminating; 3: binding or unbinding; 4: updating configuration 
-     * @return RuleStatus Origin server status. 0: running; 1: creating; 2: terminating; 3: binding or unbinding; 4: updating configuration
+     * Get Rule status. 0: running, 1: creating, 2: terminating, 3: binding/unbinding origin server, 4: updating configuration 
+     * @return RuleStatus Rule status. 0: running, 1: creating, 2: terminating, 3: binding/unbinding origin server, 4: updating configuration
      */
     public Long getRuleStatus() {
         return this.RuleStatus;
     }
 
     /**
-     * Set Origin server status. 0: running; 1: creating; 2: terminating; 3: binding or unbinding; 4: updating configuration
-     * @param RuleStatus Origin server status. 0: running; 1: creating; 2: terminating; 3: binding or unbinding; 4: updating configuration
+     * Set Rule status. 0: running, 1: creating, 2: terminating, 3: binding/unbinding origin server, 4: updating configuration
+     * @param RuleStatus Rule status. 0: running, 1: creating, 2: terminating, 3: binding/unbinding origin server, 4: updating configuration
      */
     public void setRuleStatus(Long RuleStatus) {
         this.RuleStatus = RuleStatus;
@@ -268,16 +270,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Origin server binding status. 0: normal; 1: origin server IP exception; 2: origin server domain name resolution exception. 
-     * @return BindStatus Origin server binding status. 0: normal; 1: origin server IP exception; 2: origin server domain name resolution exception.
+     * Get Origin server service status. 0: exceptional, 1: normal
+If health check is not enabled, this status will always be normal.
+As long as one origin server is exceptional, this status will be exceptional. Please view `RealServerSet` for the status of specific origin servers. 
+     * @return BindStatus Origin server service status. 0: exceptional, 1: normal
+If health check is not enabled, this status will always be normal.
+As long as one origin server is exceptional, this status will be exceptional. Please view `RealServerSet` for the status of specific origin servers.
      */
     public Long getBindStatus() {
         return this.BindStatus;
     }
 
     /**
-     * Set Origin server binding status. 0: normal; 1: origin server IP exception; 2: origin server domain name resolution exception.
-     * @param BindStatus Origin server binding status. 0: normal; 1: origin server IP exception; 2: origin server domain name resolution exception.
+     * Set Origin server service status. 0: exceptional, 1: normal
+If health check is not enabled, this status will always be normal.
+As long as one origin server is exceptional, this status will be exceptional. Please view `RealServerSet` for the status of specific origin servers.
+     * @param BindStatus Origin server service status. 0: exceptional, 1: normal
+If health check is not enabled, this status will always be normal.
+As long as one origin server is exceptional, this status will be exceptional. Please view `RealServerSet` for the status of specific origin servers.
      */
     public void setBindStatus(Long BindStatus) {
         this.BindStatus = BindStatus;

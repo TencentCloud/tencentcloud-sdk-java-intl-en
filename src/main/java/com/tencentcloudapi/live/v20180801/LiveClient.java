@@ -535,6 +535,7 @@ Note: only one screencapturing template can be associated with one domain name.
 
     /**
      *This API is used to delete a transcoding rule.
+`DomainName+AppName+StreamName+TemplateId` uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. `TemplateId` is required. Even if other parameters are empty, you still need to pass in an empty string to make a strong match.
      * @param req DeleteLiveTranscodeRuleRequest
      * @return DeleteLiveTranscodeRuleResponse
      * @throws TencentCloudSDKException
@@ -599,6 +600,42 @@ Note: only one screencapturing template can be associated with one domain name.
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveWatermarkRuleResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteLiveWatermarkRule"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the data of billable LVB bandwidth and traffic.
+     * @param req DescribeBillBandwidthAndFluxListRequest
+     * @return DescribeBillBandwidthAndFluxListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBillBandwidthAndFluxListResponse DescribeBillBandwidthAndFluxList(DescribeBillBandwidthAndFluxListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBillBandwidthAndFluxListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBillBandwidthAndFluxListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeBillBandwidthAndFluxList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the downstream playback data by district and ISP.
+     * @param req DescribeGroupProIspPlayInfoListRequest
+     * @return DescribeGroupProIspPlayInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGroupProIspPlayInfoListResponse DescribeGroupProIspPlayInfoList(DescribeGroupProIspPlayInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGroupProIspPlayInfoListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGroupProIspPlayInfoListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeGroupProIspPlayInfoList"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1106,6 +1143,60 @@ Note: Up to 10,000 entries can be queried per page. More data can be obtained by
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveWatermarksResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeLiveWatermarks"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the average traffic per second, total traffic, and number of total requests by ISP and district in a certain period of time.
+     * @param req DescribeProIspPlaySumInfoListRequest
+     * @return DescribeProIspPlaySumInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProIspPlaySumInfoListResponse DescribeProIspPlaySumInfoList(DescribeProIspPlaySumInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProIspPlaySumInfoListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProIspPlaySumInfoListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeProIspPlaySumInfoList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the playback data of each stream at the day level, including the total traffic.
+     * @param req DescribeStreamDayPlayInfoListRequest
+     * @return DescribeStreamDayPlayInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamDayPlayInfoListResponse DescribeStreamDayPlayInfoList(DescribeStreamDayPlayInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamDayPlayInfoListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamDayPlayInfoListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeStreamDayPlayInfoList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the upstream push quality data by stream ID, including frame rate, bitrate, elapsed time, and encoding format of audio and video files.
+     * @param req DescribeStreamPushInfoListRequest
+     * @return DescribeStreamPushInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPushInfoListResponse DescribeStreamPushInfoList(DescribeStreamPushInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamPushInfoListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamPushInfoListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeStreamPushInfoList"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

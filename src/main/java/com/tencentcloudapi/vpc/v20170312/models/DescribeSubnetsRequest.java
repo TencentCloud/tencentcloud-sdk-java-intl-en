@@ -46,14 +46,14 @@ public class DescribeSubnetsRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
-    * Offset
+    * Offset. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private String Offset;
 
     /**
-    * The returned quantity
+    * Number of returned results. Default value: 20. Maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
@@ -128,32 +128,32 @@ public class DescribeSubnetsRequest extends AbstractModel{
     }
 
     /**
-     * Get Offset 
-     * @return Offset Offset
+     * Get Offset. Default value: 0. 
+     * @return Offset Offset. Default value: 0.
      */
     public String getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset
-     * @param Offset Offset
+     * Set Offset. Default value: 0.
+     * @param Offset Offset. Default value: 0.
      */
     public void setOffset(String Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get The returned quantity 
-     * @return Limit The returned quantity
+     * Get Number of returned results. Default value: 20. Maximum value: 100. 
+     * @return Limit Number of returned results. Default value: 20. Maximum value: 100.
      */
     public String getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The returned quantity
-     * @param Limit The returned quantity
+     * Set Number of returned results. Default value: 20. Maximum value: 100.
+     * @param Limit Number of returned results. Default value: 20. Maximum value: 100.
      */
     public void setLimit(String Limit) {
         this.Limit = Limit;

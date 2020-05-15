@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeRouteTablesResponse extends AbstractModel{
 
     /**
-    * The number of instances meeting the filter condition.
+    * Number of eligible instances.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -44,16 +44,16 @@ public class DescribeRouteTablesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get The number of instances meeting the filter condition. 
-     * @return TotalCount The number of instances meeting the filter condition.
+     * Get Number of eligible instances. 
+     * @return TotalCount Number of eligible instances.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set The number of instances meeting the filter condition.
-     * @param TotalCount The number of instances meeting the filter condition.
+     * Set Number of eligible instances.
+     * @param TotalCount Number of eligible instances.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

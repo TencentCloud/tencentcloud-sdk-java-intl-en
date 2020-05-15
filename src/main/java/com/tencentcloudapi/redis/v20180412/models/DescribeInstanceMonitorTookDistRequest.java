@@ -37,7 +37,7 @@ public class DescribeInstanceMonitorTookDistRequest extends AbstractModel{
     private String Date;
 
     /**
-    * Request type. 1: string type; 2: all types
+    * Time span. 1: real time; 2: last 30 minutes; 3: last 6 hours; 4: last 24 hours
     */
     @SerializedName("SpanType")
     @Expose
@@ -76,16 +76,16 @@ public class DescribeInstanceMonitorTookDistRequest extends AbstractModel{
     }
 
     /**
-     * Get Request type. 1: string type; 2: all types 
-     * @return SpanType Request type. 1: string type; 2: all types
+     * Get Time span. 1: real time; 2: last 30 minutes; 3: last 6 hours; 4: last 24 hours 
+     * @return SpanType Time span. 1: real time; 2: last 30 minutes; 3: last 6 hours; 4: last 24 hours
      */
     public Long getSpanType() {
         return this.SpanType;
     }
 
     /**
-     * Set Request type. 1: string type; 2: all types
-     * @param SpanType Request type. 1: string type; 2: all types
+     * Set Time span. 1: real time; 2: last 30 minutes; 3: last 6 hours; 4: last 24 hours
+     * @param SpanType Time span. 1: real time; 2: last 30 minutes; 3: last 6 hours; 4: last 24 hours
      */
     public void setSpanType(Long SpanType) {
         this.SpanType = SpanType;

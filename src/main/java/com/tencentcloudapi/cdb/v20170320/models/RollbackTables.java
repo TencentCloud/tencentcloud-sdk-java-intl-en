@@ -24,6 +24,7 @@ public class RollbackTables extends AbstractModel{
 
     /**
     * Database name
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Database")
     @Expose
@@ -31,14 +32,17 @@ public class RollbackTables extends AbstractModel{
 
     /**
     * Table details
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Table")
     @Expose
     private RollbackTableName [] Table;
 
     /**
-     * Get Database name 
+     * Get Database name
+Note: this field may return null, indicating that no valid values can be obtained. 
      * @return Database Database name
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getDatabase() {
         return this.Database;
@@ -46,15 +50,19 @@ public class RollbackTables extends AbstractModel{
 
     /**
      * Set Database name
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param Database Database name
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDatabase(String Database) {
         this.Database = Database;
     }
 
     /**
-     * Get Table details 
+     * Get Table details
+Note: this field may return null, indicating that no valid values can be obtained. 
      * @return Table Table details
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public RollbackTableName [] getTable() {
         return this.Table;
@@ -62,7 +70,9 @@ public class RollbackTables extends AbstractModel{
 
     /**
      * Set Table details
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param Table Table details
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setTable(RollbackTableName [] Table) {
         this.Table = Table;

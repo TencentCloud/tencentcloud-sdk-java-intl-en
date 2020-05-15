@@ -123,6 +123,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long ValidTo;
 
     /**
+    * Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
+
+    /**
      * Get  
      * @return KeyId 
      */
@@ -355,6 +362,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Resource ID in the format of `creatorUin/$creatorUin/$keyId`. 
+     * @return ResourceId Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
+     * @param ResourceId Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -372,6 +395,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "DeletionDate", this.DeletionDate);
         this.setParamSimple(map, prefix + "Origin", this.Origin);
         this.setParamSimple(map, prefix + "ValidTo", this.ValidTo);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
 
     }
 }

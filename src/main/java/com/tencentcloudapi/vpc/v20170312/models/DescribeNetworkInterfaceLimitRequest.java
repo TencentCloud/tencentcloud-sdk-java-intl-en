@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeNetworkInterfaceLimitRequest extends AbstractModel{
 
     /**
-    * The ID of the CVM instance to be queried.
+    * ID of a CVM instance or ENI to query
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get The ID of the CVM instance to be queried. 
-     * @return InstanceId The ID of the CVM instance to be queried.
+     * Get ID of a CVM instance or ENI to query 
+     * @return InstanceId ID of a CVM instance or ENI to query
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set The ID of the CVM instance to be queried.
-     * @param InstanceId The ID of the CVM instance to be queried.
+     * Set ID of a CVM instance or ENI to query
+     * @param InstanceId ID of a CVM instance or ENI to query
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

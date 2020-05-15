@@ -44,7 +44,11 @@ public class BindRealServer extends AbstractModel{
     private Long RealServerWeight;
 
     /**
-    * 
+    * Origin server health check status. Valid values:
+0: normal;
+1: exceptional.
+If health check is not enabled, this status will always be normal.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RealServerStatus")
     @Expose
@@ -114,16 +118,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return RealServerStatus 
+     * Get Origin server health check status. Valid values:
+0: normal;
+1: exceptional.
+If health check is not enabled, this status will always be normal.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return RealServerStatus Origin server health check status. Valid values:
+0: normal;
+1: exceptional.
+If health check is not enabled, this status will always be normal.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getRealServerStatus() {
         return this.RealServerStatus;
     }
 
     /**
-     * Set 
-     * @param RealServerStatus 
+     * Set Origin server health check status. Valid values:
+0: normal;
+1: exceptional.
+If health check is not enabled, this status will always be normal.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param RealServerStatus Origin server health check status. Valid values:
+0: normal;
+1: exceptional.
+If health check is not enabled, this status will always be normal.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setRealServerStatus(Long RealServerStatus) {
         this.RealServerStatus = RealServerStatus;

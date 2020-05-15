@@ -303,7 +303,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Tag [] Tags;
 
     /**
-    * 
+    * Whether it is an automatically scalable node. 0: general node, 1: automatically scalable node.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AutoFlag")
     @Expose
@@ -1010,16 +1011,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return AutoFlag 
+     * Get Whether it is an automatically scalable node. 0: general node, 1: automatically scalable node.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return AutoFlag Whether it is an automatically scalable node. 0: general node, 1: automatically scalable node.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getAutoFlag() {
         return this.AutoFlag;
     }
 
     /**
-     * Set 
-     * @param AutoFlag 
+     * Set Whether it is an automatically scalable node. 0: general node, 1: automatically scalable node.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AutoFlag Whether it is an automatically scalable node. 0: general node, 1: automatically scalable node.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setAutoFlag(Long AutoFlag) {
         this.AutoFlag = AutoFlag;

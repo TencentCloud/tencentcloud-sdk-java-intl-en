@@ -30,14 +30,14 @@ public class GenerateDataKeyResponse extends AbstractModel{
     private String KeyId;
 
     /**
-    * 
+    * Plaintext of the generated data key. The plaintext is Base64-encoded and can be used locally after having it Base64-decoded.
     */
     @SerializedName("Plaintext")
     @Expose
     private String Plaintext;
 
     /**
-    * Base64-encoded ciphertext that is encrypted by `DataKey`. You should keep the ciphertext private.
+    * Ciphertext of the data key, which should be kept by yourself. KMS does not host user data keys. You can call the `Decrypt` API to get the plaintext of the data key from `CiphertextBlob`.
     */
     @SerializedName("CiphertextBlob")
     @Expose
@@ -67,32 +67,32 @@ public class GenerateDataKeyResponse extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return Plaintext 
+     * Get Plaintext of the generated data key. The plaintext is Base64-encoded and can be used locally after having it Base64-decoded. 
+     * @return Plaintext Plaintext of the generated data key. The plaintext is Base64-encoded and can be used locally after having it Base64-decoded.
      */
     public String getPlaintext() {
         return this.Plaintext;
     }
 
     /**
-     * Set 
-     * @param Plaintext 
+     * Set Plaintext of the generated data key. The plaintext is Base64-encoded and can be used locally after having it Base64-decoded.
+     * @param Plaintext Plaintext of the generated data key. The plaintext is Base64-encoded and can be used locally after having it Base64-decoded.
      */
     public void setPlaintext(String Plaintext) {
         this.Plaintext = Plaintext;
     }
 
     /**
-     * Get Base64-encoded ciphertext that is encrypted by `DataKey`. You should keep the ciphertext private. 
-     * @return CiphertextBlob Base64-encoded ciphertext that is encrypted by `DataKey`. You should keep the ciphertext private.
+     * Get Ciphertext of the data key, which should be kept by yourself. KMS does not host user data keys. You can call the `Decrypt` API to get the plaintext of the data key from `CiphertextBlob`. 
+     * @return CiphertextBlob Ciphertext of the data key, which should be kept by yourself. KMS does not host user data keys. You can call the `Decrypt` API to get the plaintext of the data key from `CiphertextBlob`.
      */
     public String getCiphertextBlob() {
         return this.CiphertextBlob;
     }
 
     /**
-     * Set Base64-encoded ciphertext that is encrypted by `DataKey`. You should keep the ciphertext private.
-     * @param CiphertextBlob Base64-encoded ciphertext that is encrypted by `DataKey`. You should keep the ciphertext private.
+     * Set Ciphertext of the data key, which should be kept by yourself. KMS does not host user data keys. You can call the `Decrypt` API to get the plaintext of the data key from `CiphertextBlob`.
+     * @param CiphertextBlob Ciphertext of the data key, which should be kept by yourself. KMS does not host user data keys. You can call the `Decrypt` API to get the plaintext of the data key from `CiphertextBlob`.
      */
     public void setCiphertextBlob(String CiphertextBlob) {
         this.CiphertextBlob = CiphertextBlob;

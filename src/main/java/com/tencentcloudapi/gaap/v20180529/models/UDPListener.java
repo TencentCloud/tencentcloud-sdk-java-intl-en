@@ -66,7 +66,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Protocol;
 
     /**
-    * Listener status:
+    * Listener status. Valid values:
 0: running;
 1: creating;
 2: terminating;
@@ -85,7 +85,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Scheduler;
 
     /**
-    * Origin server binding status of listeners. 0: normal; 1: IP exception; 2: domain name resolution exception.
+    * Status of origin server bound to listener. 0: normal, 1: exceptional IP, 2: exceptional domain name resolution
     */
     @SerializedName("BindStatus")
     @Expose
@@ -206,13 +206,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Listener status:
+     * Get Listener status. Valid values:
 0: running;
 1: creating;
 2: terminating;
 3: adjusting origin server;
 4: adjusting configuration. 
-     * @return ListenerStatus Listener status:
+     * @return ListenerStatus Listener status. Valid values:
 0: running;
 1: creating;
 2: terminating;
@@ -224,13 +224,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Listener status:
+     * Set Listener status. Valid values:
 0: running;
 1: creating;
 2: terminating;
 3: adjusting origin server;
 4: adjusting configuration.
-     * @param ListenerStatus Listener status:
+     * @param ListenerStatus Listener status. Valid values:
 0: running;
 1: creating;
 2: terminating;
@@ -258,16 +258,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Origin server binding status of listeners. 0: normal; 1: IP exception; 2: domain name resolution exception. 
-     * @return BindStatus Origin server binding status of listeners. 0: normal; 1: IP exception; 2: domain name resolution exception.
+     * Get Status of origin server bound to listener. 0: normal, 1: exceptional IP, 2: exceptional domain name resolution 
+     * @return BindStatus Status of origin server bound to listener. 0: normal, 1: exceptional IP, 2: exceptional domain name resolution
      */
     public Long getBindStatus() {
         return this.BindStatus;
     }
 
     /**
-     * Set Origin server binding status of listeners. 0: normal; 1: IP exception; 2: domain name resolution exception.
-     * @param BindStatus Origin server binding status of listeners. 0: normal; 1: IP exception; 2: domain name resolution exception.
+     * Set Status of origin server bound to listener. 0: normal, 1: exceptional IP, 2: exceptional domain name resolution
+     * @param BindStatus Status of origin server bound to listener. 0: normal, 1: exceptional IP, 2: exceptional domain name resolution
      */
     public void setBindStatus(Long BindStatus) {
         this.BindStatus = BindStatus;

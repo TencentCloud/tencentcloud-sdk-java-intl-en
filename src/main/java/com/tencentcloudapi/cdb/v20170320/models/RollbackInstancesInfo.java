@@ -24,6 +24,7 @@ public class RollbackInstancesInfo extends AbstractModel{
 
     /**
     * TencentDB instance ID
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -45,6 +46,7 @@ public class RollbackInstancesInfo extends AbstractModel{
 
     /**
     * Information of the databases to be rolled back, which means rollback at the database level
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Databases")
     @Expose
@@ -52,14 +54,17 @@ public class RollbackInstancesInfo extends AbstractModel{
 
     /**
     * Information of the tables to be rolled back, which means rollback at the table level
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Tables")
     @Expose
     private RollbackTables [] Tables;
 
     /**
-     * Get TencentDB instance ID 
+     * Get TencentDB instance ID
+Note: this field may return null, indicating that no valid values can be obtained. 
      * @return InstanceId TencentDB instance ID
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -67,7 +72,9 @@ public class RollbackInstancesInfo extends AbstractModel{
 
     /**
      * Set TencentDB instance ID
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param InstanceId TencentDB instance ID
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -106,8 +113,10 @@ public class RollbackInstancesInfo extends AbstractModel{
     }
 
     /**
-     * Get Information of the databases to be rolled back, which means rollback at the database level 
+     * Get Information of the databases to be rolled back, which means rollback at the database level
+Note: this field may return null, indicating that no valid values can be obtained. 
      * @return Databases Information of the databases to be rolled back, which means rollback at the database level
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public RollbackDBName [] getDatabases() {
         return this.Databases;
@@ -115,15 +124,19 @@ public class RollbackInstancesInfo extends AbstractModel{
 
     /**
      * Set Information of the databases to be rolled back, which means rollback at the database level
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param Databases Information of the databases to be rolled back, which means rollback at the database level
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDatabases(RollbackDBName [] Databases) {
         this.Databases = Databases;
     }
 
     /**
-     * Get Information of the tables to be rolled back, which means rollback at the table level 
+     * Get Information of the tables to be rolled back, which means rollback at the table level
+Note: this field may return null, indicating that no valid values can be obtained. 
      * @return Tables Information of the tables to be rolled back, which means rollback at the table level
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public RollbackTables [] getTables() {
         return this.Tables;
@@ -131,7 +144,9 @@ public class RollbackInstancesInfo extends AbstractModel{
 
     /**
      * Set Information of the tables to be rolled back, which means rollback at the table level
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param Tables Information of the tables to be rolled back, which means rollback at the table level
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setTables(RollbackTables [] Tables) {
         this.Tables = Tables;

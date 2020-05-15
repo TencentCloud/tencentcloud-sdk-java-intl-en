@@ -30,14 +30,14 @@ public class NetworkAclEntry extends AbstractModel{
     private String ModifyTime;
 
     /**
-    * Protocol. Valid values: TCP, UDP, and ICMP.
+    * Protocol. Valid values: TCP, UDP, ICMP, ALL.
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * Port (all, a single port, or a port range).
+    * Port. Valid values: all, single port, range. When Protocol takes the value `ALL` or `ICMP`, Port cannot be specified.
     */
     @SerializedName("Port")
     @Expose
@@ -88,32 +88,32 @@ public class NetworkAclEntry extends AbstractModel{
     }
 
     /**
-     * Get Protocol. Valid values: TCP, UDP, and ICMP. 
-     * @return Protocol Protocol. Valid values: TCP, UDP, and ICMP.
+     * Get Protocol. Valid values: TCP, UDP, ICMP, ALL. 
+     * @return Protocol Protocol. Valid values: TCP, UDP, ICMP, ALL.
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Protocol. Valid values: TCP, UDP, and ICMP.
-     * @param Protocol Protocol. Valid values: TCP, UDP, and ICMP.
+     * Set Protocol. Valid values: TCP, UDP, ICMP, ALL.
+     * @param Protocol Protocol. Valid values: TCP, UDP, ICMP, ALL.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get Port (all, a single port, or a port range). 
-     * @return Port Port (all, a single port, or a port range).
+     * Get Port. Valid values: all, single port, range. When Protocol takes the value `ALL` or `ICMP`, Port cannot be specified. 
+     * @return Port Port. Valid values: all, single port, range. When Protocol takes the value `ALL` or `ICMP`, Port cannot be specified.
      */
     public String getPort() {
         return this.Port;
     }
 
     /**
-     * Set Port (all, a single port, or a port range).
-     * @param Port Port (all, a single port, or a port range).
+     * Set Port. Valid values: all, single port, range. When Protocol takes the value `ALL` or `ICMP`, Port cannot be specified.
+     * @param Port Port. Valid values: all, single port, range. When Protocol takes the value `ALL` or `ICMP`, Port cannot be specified.
      */
     public void setPort(String Port) {
         this.Port = Port;

@@ -372,6 +372,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String IsBlockTime;
 
     /**
+    * Whether the IP type is the local BGP
+Note: this field may return null, indicating that no valid values can be obtained
+    */
+    @SerializedName("LocalBgp")
+    @Expose
+    private Boolean LocalBgp;
+
+    /**
      * Get CLB instance ID. 
      * @return LoadBalancerId CLB instance ID.
      */
@@ -1240,6 +1248,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Whether the IP type is the local BGP
+Note: this field may return null, indicating that no valid values can be obtained 
+     * @return LocalBgp Whether the IP type is the local BGP
+Note: this field may return null, indicating that no valid values can be obtained
+     */
+    public Boolean getLocalBgp() {
+        return this.LocalBgp;
+    }
+
+    /**
+     * Set Whether the IP type is the local BGP
+Note: this field may return null, indicating that no valid values can be obtained
+     * @param LocalBgp Whether the IP type is the local BGP
+Note: this field may return null, indicating that no valid values can be obtained
+     */
+    public void setLocalBgp(Boolean LocalBgp) {
+        this.LocalBgp = LocalBgp;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1287,6 +1315,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "SlaType", this.SlaType);
         this.setParamSimple(map, prefix + "IsBlock", this.IsBlock);
         this.setParamSimple(map, prefix + "IsBlockTime", this.IsBlockTime);
+        this.setParamSimple(map, prefix + "LocalBgp", this.LocalBgp);
 
     }
 }

@@ -93,7 +93,7 @@ public class WhiteboxKeyInfo extends AbstractModel{
     private String DecryptKey;
 
     /**
-    * 
+    * Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
     */
     @SerializedName("ResourceId")
     @Expose
@@ -260,16 +260,16 @@ public class WhiteboxKeyInfo extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return ResourceId 
+     * Get Resource ID in the format of `creatorUin/$creatorUin/$keyId`. 
+     * @return ResourceId Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 
-     * @param ResourceId 
+     * Set Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
+     * @param ResourceId Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;

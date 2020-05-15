@@ -58,6 +58,20 @@ public class DstInfo extends AbstractModel{
     private Long ReadOnly;
 
     /**
+    * Target database account
+    */
+    @SerializedName("User")
+    @Expose
+    private String User;
+
+    /**
+    * Target database password
+    */
+    @SerializedName("Password")
+    @Expose
+    private String Password;
+
+    /**
      * Get Target instance ID, such as cdb-jd92ijd8 
      * @return InstanceId Target instance ID, such as cdb-jd92ijd8
      */
@@ -138,6 +152,38 @@ public class DstInfo extends AbstractModel{
     }
 
     /**
+     * Get Target database account 
+     * @return User Target database account
+     */
+    public String getUser() {
+        return this.User;
+    }
+
+    /**
+     * Set Target database account
+     * @param User Target database account
+     */
+    public void setUser(String User) {
+        this.User = User;
+    }
+
+    /**
+     * Get Target database password 
+     * @return Password Target database password
+     */
+    public String getPassword() {
+        return this.Password;
+    }
+
+    /**
+     * Set Target database password
+     * @param Password Target database password
+     */
+    public void setPassword(String Password) {
+        this.Password = Password;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +192,8 @@ public class DstInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Ip", this.Ip);
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
+        this.setParamSimple(map, prefix + "User", this.User);
+        this.setParamSimple(map, prefix + "Password", this.Password);
 
     }
 }

@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class CommonMixCropParams extends AbstractModel{
 
     /**
-    * Crop width. Value range: [0,3000].
+    * Crop width. Value range: [0,2000].
     */
     @SerializedName("CropWidth")
     @Expose
     private Float CropWidth;
 
     /**
-    * Crop height. Value range: [0,3000].
+    * Crop height. Value range: [0,2000].
     */
     @SerializedName("CropHeight")
     @Expose
     private Float CropHeight;
 
     /**
-    * Starting crop X coordinate. Value range: [0,3000].
+    * Starting crop X coordinate. Value range: [0,2000].
     */
     @SerializedName("CropStartLocationX")
     @Expose
     private Float CropStartLocationX;
 
     /**
-    * Starting crop Y coordinate. Value range: [0,3000].
+    * Starting crop Y coordinate. Value range: [0,2000].
     */
     @SerializedName("CropStartLocationY")
     @Expose
     private Float CropStartLocationY;
 
     /**
-     * Get Crop width. Value range: [0,3000]. 
-     * @return CropWidth Crop width. Value range: [0,3000].
+     * Get Crop width. Value range: [0,2000]. 
+     * @return CropWidth Crop width. Value range: [0,2000].
      */
     public Float getCropWidth() {
         return this.CropWidth;
     }
 
     /**
-     * Set Crop width. Value range: [0,3000].
-     * @param CropWidth Crop width. Value range: [0,3000].
+     * Set Crop width. Value range: [0,2000].
+     * @param CropWidth Crop width. Value range: [0,2000].
      */
     public void setCropWidth(Float CropWidth) {
         this.CropWidth = CropWidth;
     }
 
     /**
-     * Get Crop height. Value range: [0,3000]. 
-     * @return CropHeight Crop height. Value range: [0,3000].
+     * Get Crop height. Value range: [0,2000]. 
+     * @return CropHeight Crop height. Value range: [0,2000].
      */
     public Float getCropHeight() {
         return this.CropHeight;
     }
 
     /**
-     * Set Crop height. Value range: [0,3000].
-     * @param CropHeight Crop height. Value range: [0,3000].
+     * Set Crop height. Value range: [0,2000].
+     * @param CropHeight Crop height. Value range: [0,2000].
      */
     public void setCropHeight(Float CropHeight) {
         this.CropHeight = CropHeight;
     }
 
     /**
-     * Get Starting crop X coordinate. Value range: [0,3000]. 
-     * @return CropStartLocationX Starting crop X coordinate. Value range: [0,3000].
+     * Get Starting crop X coordinate. Value range: [0,2000]. 
+     * @return CropStartLocationX Starting crop X coordinate. Value range: [0,2000].
      */
     public Float getCropStartLocationX() {
         return this.CropStartLocationX;
     }
 
     /**
-     * Set Starting crop X coordinate. Value range: [0,3000].
-     * @param CropStartLocationX Starting crop X coordinate. Value range: [0,3000].
+     * Set Starting crop X coordinate. Value range: [0,2000].
+     * @param CropStartLocationX Starting crop X coordinate. Value range: [0,2000].
      */
     public void setCropStartLocationX(Float CropStartLocationX) {
         this.CropStartLocationX = CropStartLocationX;
     }
 
     /**
-     * Get Starting crop Y coordinate. Value range: [0,3000]. 
-     * @return CropStartLocationY Starting crop Y coordinate. Value range: [0,3000].
+     * Get Starting crop Y coordinate. Value range: [0,2000]. 
+     * @return CropStartLocationY Starting crop Y coordinate. Value range: [0,2000].
      */
     public Float getCropStartLocationY() {
         return this.CropStartLocationY;
     }
 
     /**
-     * Set Starting crop Y coordinate. Value range: [0,3000].
-     * @param CropStartLocationY Starting crop Y coordinate. Value range: [0,3000].
+     * Set Starting crop Y coordinate. Value range: [0,2000].
+     * @param CropStartLocationY Starting crop Y coordinate. Value range: [0,2000].
      */
     public void setCropStartLocationY(Float CropStartLocationY) {
         this.CropStartLocationY = CropStartLocationY;

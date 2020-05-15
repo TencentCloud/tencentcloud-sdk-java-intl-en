@@ -88,14 +88,14 @@ Whether the Anycast EIP can be bound to CLB instances.
     private Boolean ApplicableForCLB;
 
     /**
-    * 
+    * List of tags to be bound.
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 
+    * The unique ID of a BGP bandwidth package. If you configure this parameter and set InternetChargeType as BANDWIDTH_PACKAGE, the new EIP is added to this package and billed by the bandwidth package mode.
     */
     @SerializedName("BandwidthPackageId")
     @Expose
@@ -278,32 +278,32 @@ Whether the Anycast EIP can be bound to CLB instances.
     }
 
     /**
-     * Get  
-     * @return Tags 
+     * Get List of tags to be bound. 
+     * @return Tags List of tags to be bound.
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 
-     * @param Tags 
+     * Set List of tags to be bound.
+     * @param Tags List of tags to be bound.
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get  
-     * @return BandwidthPackageId 
+     * Get The unique ID of a BGP bandwidth package. If you configure this parameter and set InternetChargeType as BANDWIDTH_PACKAGE, the new EIP is added to this package and billed by the bandwidth package mode. 
+     * @return BandwidthPackageId The unique ID of a BGP bandwidth package. If you configure this parameter and set InternetChargeType as BANDWIDTH_PACKAGE, the new EIP is added to this package and billed by the bandwidth package mode.
      */
     public String getBandwidthPackageId() {
         return this.BandwidthPackageId;
     }
 
     /**
-     * Set 
-     * @param BandwidthPackageId 
+     * Set The unique ID of a BGP bandwidth package. If you configure this parameter and set InternetChargeType as BANDWIDTH_PACKAGE, the new EIP is added to this package and billed by the bandwidth package mode.
+     * @param BandwidthPackageId The unique ID of a BGP bandwidth package. If you configure this parameter and set InternetChargeType as BANDWIDTH_PACKAGE, the new EIP is added to this package and billed by the bandwidth package mode.
      */
     public void setBandwidthPackageId(String BandwidthPackageId) {
         this.BandwidthPackageId = BandwidthPackageId;

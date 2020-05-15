@@ -24,15 +24,13 @@ public class DeleteLiveTranscodeRuleRequest extends AbstractModel{
 
     /**
     * Playback domain name.
-For transcoding at the domain name level, domain name+AppName+StreamName uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
     */
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
 
     /**
-    * Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
-Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
+    * Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
     */
     @SerializedName("AppName")
     @Expose
@@ -40,7 +38,6 @@ Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcodi
 
     /**
     * Stream name.
-Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
     */
     @SerializedName("StreamName")
     @Expose
@@ -48,17 +45,14 @@ Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcodi
 
     /**
     * Template ID.
-Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
     */
     @SerializedName("TemplateId")
     @Expose
     private Long TemplateId;
 
     /**
-     * Get Playback domain name.
-For transcoding at the domain name level, domain name+AppName+StreamName uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match. 
+     * Get Playback domain name. 
      * @return DomainName Playback domain name.
-For transcoding at the domain name level, domain name+AppName+StreamName uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
      */
     public String getDomainName() {
         return this.DomainName;
@@ -66,39 +60,31 @@ For transcoding at the domain name level, domain name+AppName+StreamName uniquel
 
     /**
      * Set Playback domain name.
-For transcoding at the domain name level, domain name+AppName+StreamName uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
      * @param DomainName Playback domain name.
-For transcoding at the domain name level, domain name+AppName+StreamName uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
     }
 
     /**
-     * Get Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
-Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match. 
-     * @return AppName Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
-Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
+     * Get Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. 
+     * @return AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
-Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
-     * @param AppName Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
-Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
+     * Set Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
+     * @param AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
     }
 
     /**
-     * Get Stream name.
-Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match. 
+     * Get Stream name. 
      * @return StreamName Stream name.
-Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
      */
     public String getStreamName() {
         return this.StreamName;
@@ -106,19 +92,15 @@ Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcodi
 
     /**
      * Set Stream name.
-Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
      * @param StreamName Stream name.
-Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
      */
     public void setStreamName(String StreamName) {
         this.StreamName = StreamName;
     }
 
     /**
-     * Get Template ID.
-Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match. 
+     * Get Template ID. 
      * @return TemplateId Template ID.
-Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
      */
     public Long getTemplateId() {
         return this.TemplateId;
@@ -126,9 +108,7 @@ Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcodi
 
     /**
      * Set Template ID.
-Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
      * @param TemplateId Template ID.
-Domain name+AppName+StreamName+TemplateId uniquely identifies a single transcoding rule. If you need to delete it, strong match is required. For example, even if AppName is blank, you need to pass in a blank string to make a strong match.
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;

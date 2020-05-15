@@ -111,6 +111,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Tag [] Tags;
 
     /**
+    * Number of disks
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DiskNum")
+    @Expose
+    private Long DiskNum;
+
+    /**
+    * Number of local disks
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("LocalDiskNum")
+    @Expose
+    private Long LocalDiskNum;
+
+    /**
      * Get Target specification
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return Spec Target specification
@@ -331,6 +347,46 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Number of disks
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return DiskNum Number of disks
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getDiskNum() {
+        return this.DiskNum;
+    }
+
+    /**
+     * Set Number of disks
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param DiskNum Number of disks
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDiskNum(Long DiskNum) {
+        this.DiskNum = DiskNum;
+    }
+
+    /**
+     * Get Number of local disks
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return LocalDiskNum Number of local disks
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getLocalDiskNum() {
+        return this.LocalDiskNum;
+    }
+
+    /**
+     * Set Number of local disks
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param LocalDiskNum Number of local disks
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setLocalDiskNum(Long LocalDiskNum) {
+        this.LocalDiskNum = LocalDiskNum;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -345,6 +401,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "DiskCnt", this.DiskCnt);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "DiskNum", this.DiskNum);
+        this.setParamSimple(map, prefix + "LocalDiskNum", this.LocalDiskNum);
 
     }
 }
