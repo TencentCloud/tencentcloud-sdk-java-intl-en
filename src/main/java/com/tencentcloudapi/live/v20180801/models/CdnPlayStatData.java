@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CdnPlayStatData extends AbstractModel{
 
     /**
-    * Time point in the format of yyyy-mm-dd HH:MM:SS.
+    * Time point in the format of `yyyy-mm-dd HH:MM:SS`.
     */
     @SerializedName("Time")
     @Expose
@@ -58,16 +58,16 @@ public class CdnPlayStatData extends AbstractModel{
     private Long Online;
 
     /**
-     * Get Time point in the format of yyyy-mm-dd HH:MM:SS. 
-     * @return Time Time point in the format of yyyy-mm-dd HH:MM:SS.
+     * Get Time point in the format of `yyyy-mm-dd HH:MM:SS`. 
+     * @return Time Time point in the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public String getTime() {
         return this.Time;
     }
 
     /**
-     * Set Time point in the format of yyyy-mm-dd HH:MM:SS.
-     * @param Time Time point in the format of yyyy-mm-dd HH:MM:SS.
+     * Set Time point in the format of `yyyy-mm-dd HH:MM:SS`.
+     * @param Time Time point in the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public void setTime(String Time) {
         this.Time = Time;

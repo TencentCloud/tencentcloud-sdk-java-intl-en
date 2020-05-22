@@ -74,6 +74,28 @@ Note: this field may return null, indicating that no valid value is obtained.
     private String CreatedTime;
 
     /**
+    * Node private IP
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("LanIP")
+    @Expose
+    private String LanIP;
+
+    /**
+    * 
+    */
+    @SerializedName("NodePoolId")
+    @Expose
+    private String NodePoolId;
+
+    /**
+    * 
+    */
+    @SerializedName("AutoscalingGroupId")
+    @Expose
+    private String AutoscalingGroupId;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -194,6 +216,58 @@ Note: this field may return null, indicating that no valid value is obtained.
     }
 
     /**
+     * Get Node private IP
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return LanIP Node private IP
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getLanIP() {
+        return this.LanIP;
+    }
+
+    /**
+     * Set Node private IP
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param LanIP Node private IP
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setLanIP(String LanIP) {
+        this.LanIP = LanIP;
+    }
+
+    /**
+     * Get  
+     * @return NodePoolId 
+     */
+    public String getNodePoolId() {
+        return this.NodePoolId;
+    }
+
+    /**
+     * Set 
+     * @param NodePoolId 
+     */
+    public void setNodePoolId(String NodePoolId) {
+        this.NodePoolId = NodePoolId;
+    }
+
+    /**
+     * Get  
+     * @return AutoscalingGroupId 
+     */
+    public String getAutoscalingGroupId() {
+        return this.AutoscalingGroupId;
+    }
+
+    /**
+     * Set 
+     * @param AutoscalingGroupId 
+     */
+    public void setAutoscalingGroupId(String AutoscalingGroupId) {
+        this.AutoscalingGroupId = AutoscalingGroupId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -204,6 +278,9 @@ Note: this field may return null, indicating that no valid value is obtained.
         this.setParamSimple(map, prefix + "DrainStatus", this.DrainStatus);
         this.setParamObj(map, prefix + "InstanceAdvancedSettings.", this.InstanceAdvancedSettings);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamSimple(map, prefix + "LanIP", this.LanIP);
+        this.setParamSimple(map, prefix + "NodePoolId", this.NodePoolId);
+        this.setParamSimple(map, prefix + "AutoscalingGroupId", this.AutoscalingGroupId);
 
     }
 }

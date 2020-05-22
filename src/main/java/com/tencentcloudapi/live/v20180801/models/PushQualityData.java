@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class PushQualityData extends AbstractModel{
 
     /**
-    * Data time in the format of %Y-%m-%d %H:%M:%S.%ms and accurate down to the millisecond level.
+    * Data time in the format of `%Y-%m-%d %H:%M:%S.%ms` and accurate down to the millisecond level.
     */
     @SerializedName("Time")
     @Expose
@@ -51,7 +51,7 @@ public class PushQualityData extends AbstractModel{
     private String ClientIp;
 
     /**
-    * Push start time in the format of %Y-%m-%d %H:%M:%S.%ms and accurate down to the millisecond level.
+    * Push start time in the format of `%Y-%m-%d %H:%M:%S.%ms` and accurate down to the millisecond level.
     */
     @SerializedName("BeginPushTime")
     @Expose
@@ -65,14 +65,14 @@ public class PushQualityData extends AbstractModel{
     private String Resolution;
 
     /**
-    * Video encoding format.
+    * Video codec.
     */
     @SerializedName("VCodec")
     @Expose
     private String VCodec;
 
     /**
-    * Audio encoding format.
+    * Audio codec.
     */
     @SerializedName("ACodec")
     @Expose
@@ -135,16 +135,37 @@ public class PushQualityData extends AbstractModel{
     private Long AudioTs;
 
     /**
-     * Get Data time in the format of %Y-%m-%d %H:%M:%S.%ms and accurate down to the millisecond level. 
-     * @return Time Data time in the format of %Y-%m-%d %H:%M:%S.%ms and accurate down to the millisecond level.
+    * Video bitrate in `metadata` in Kbps.
+    */
+    @SerializedName("MetaVideoRate")
+    @Expose
+    private Long MetaVideoRate;
+
+    /**
+    * Audio bitrate in `metadata` in Kbps.
+    */
+    @SerializedName("MetaAudioRate")
+    @Expose
+    private Long MetaAudioRate;
+
+    /**
+    * Frame rate in `metadata`.
+    */
+    @SerializedName("MateFps")
+    @Expose
+    private Long MateFps;
+
+    /**
+     * Get Data time in the format of `%Y-%m-%d %H:%M:%S.%ms` and accurate down to the millisecond level. 
+     * @return Time Data time in the format of `%Y-%m-%d %H:%M:%S.%ms` and accurate down to the millisecond level.
      */
     public String getTime() {
         return this.Time;
     }
 
     /**
-     * Set Data time in the format of %Y-%m-%d %H:%M:%S.%ms and accurate down to the millisecond level.
-     * @param Time Data time in the format of %Y-%m-%d %H:%M:%S.%ms and accurate down to the millisecond level.
+     * Set Data time in the format of `%Y-%m-%d %H:%M:%S.%ms` and accurate down to the millisecond level.
+     * @param Time Data time in the format of `%Y-%m-%d %H:%M:%S.%ms` and accurate down to the millisecond level.
      */
     public void setTime(String Time) {
         this.Time = Time;
@@ -199,16 +220,16 @@ public class PushQualityData extends AbstractModel{
     }
 
     /**
-     * Get Push start time in the format of %Y-%m-%d %H:%M:%S.%ms and accurate down to the millisecond level. 
-     * @return BeginPushTime Push start time in the format of %Y-%m-%d %H:%M:%S.%ms and accurate down to the millisecond level.
+     * Get Push start time in the format of `%Y-%m-%d %H:%M:%S.%ms` and accurate down to the millisecond level. 
+     * @return BeginPushTime Push start time in the format of `%Y-%m-%d %H:%M:%S.%ms` and accurate down to the millisecond level.
      */
     public String getBeginPushTime() {
         return this.BeginPushTime;
     }
 
     /**
-     * Set Push start time in the format of %Y-%m-%d %H:%M:%S.%ms and accurate down to the millisecond level.
-     * @param BeginPushTime Push start time in the format of %Y-%m-%d %H:%M:%S.%ms and accurate down to the millisecond level.
+     * Set Push start time in the format of `%Y-%m-%d %H:%M:%S.%ms` and accurate down to the millisecond level.
+     * @param BeginPushTime Push start time in the format of `%Y-%m-%d %H:%M:%S.%ms` and accurate down to the millisecond level.
      */
     public void setBeginPushTime(String BeginPushTime) {
         this.BeginPushTime = BeginPushTime;
@@ -231,32 +252,32 @@ public class PushQualityData extends AbstractModel{
     }
 
     /**
-     * Get Video encoding format. 
-     * @return VCodec Video encoding format.
+     * Get Video codec. 
+     * @return VCodec Video codec.
      */
     public String getVCodec() {
         return this.VCodec;
     }
 
     /**
-     * Set Video encoding format.
-     * @param VCodec Video encoding format.
+     * Set Video codec.
+     * @param VCodec Video codec.
      */
     public void setVCodec(String VCodec) {
         this.VCodec = VCodec;
     }
 
     /**
-     * Get Audio encoding format. 
-     * @return ACodec Audio encoding format.
+     * Get Audio codec. 
+     * @return ACodec Audio codec.
      */
     public String getACodec() {
         return this.ACodec;
     }
 
     /**
-     * Set Audio encoding format.
-     * @param ACodec Audio encoding format.
+     * Set Audio codec.
+     * @param ACodec Audio codec.
      */
     public void setACodec(String ACodec) {
         this.ACodec = ACodec;
@@ -391,6 +412,54 @@ public class PushQualityData extends AbstractModel{
     }
 
     /**
+     * Get Video bitrate in `metadata` in Kbps. 
+     * @return MetaVideoRate Video bitrate in `metadata` in Kbps.
+     */
+    public Long getMetaVideoRate() {
+        return this.MetaVideoRate;
+    }
+
+    /**
+     * Set Video bitrate in `metadata` in Kbps.
+     * @param MetaVideoRate Video bitrate in `metadata` in Kbps.
+     */
+    public void setMetaVideoRate(Long MetaVideoRate) {
+        this.MetaVideoRate = MetaVideoRate;
+    }
+
+    /**
+     * Get Audio bitrate in `metadata` in Kbps. 
+     * @return MetaAudioRate Audio bitrate in `metadata` in Kbps.
+     */
+    public Long getMetaAudioRate() {
+        return this.MetaAudioRate;
+    }
+
+    /**
+     * Set Audio bitrate in `metadata` in Kbps.
+     * @param MetaAudioRate Audio bitrate in `metadata` in Kbps.
+     */
+    public void setMetaAudioRate(Long MetaAudioRate) {
+        this.MetaAudioRate = MetaAudioRate;
+    }
+
+    /**
+     * Get Frame rate in `metadata`. 
+     * @return MateFps Frame rate in `metadata`.
+     */
+    public Long getMateFps() {
+        return this.MateFps;
+    }
+
+    /**
+     * Set Frame rate in `metadata`.
+     * @param MateFps Frame rate in `metadata`.
+     */
+    public void setMateFps(Long MateFps) {
+        this.MateFps = MateFps;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -410,6 +479,9 @@ public class PushQualityData extends AbstractModel{
         this.setParamSimple(map, prefix + "LocalTs", this.LocalTs);
         this.setParamSimple(map, prefix + "VideoTs", this.VideoTs);
         this.setParamSimple(map, prefix + "AudioTs", this.AudioTs);
+        this.setParamSimple(map, prefix + "MetaVideoRate", this.MetaVideoRate);
+        this.setParamSimple(map, prefix + "MetaAudioRate", this.MetaAudioRate);
+        this.setParamSimple(map, prefix + "MateFps", this.MateFps);
 
     }
 }

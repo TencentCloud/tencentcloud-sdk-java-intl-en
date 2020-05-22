@@ -23,8 +23,8 @@ import java.util.HashMap;
 public class DescribeStreamDayPlayInfoListRequest extends AbstractModel{
 
     /**
-    * Date,
-In the format of YYYY-mm-dd.
+    * Date in the format of `YYYY-mm-dd`.
+Data is available at 3 AM the next day. You are recommended to query the latest data after this time point.
     */
     @SerializedName("DayTime")
     @Expose
@@ -38,7 +38,7 @@ In the format of YYYY-mm-dd.
     private String PlayDomain;
 
     /**
-    * Page number. Value range: [1,10]. Default value: 1.
+    * Page number. Value range: [1,1000]. Default value: 1.
     */
     @SerializedName("PageNum")
     @Expose
@@ -52,20 +52,20 @@ In the format of YYYY-mm-dd.
     private Long PageSize;
 
     /**
-     * Get Date,
-In the format of YYYY-mm-dd. 
-     * @return DayTime Date,
-In the format of YYYY-mm-dd.
+     * Get Date in the format of `YYYY-mm-dd`.
+Data is available at 3 AM the next day. You are recommended to query the latest data after this time point. 
+     * @return DayTime Date in the format of `YYYY-mm-dd`.
+Data is available at 3 AM the next day. You are recommended to query the latest data after this time point.
      */
     public String getDayTime() {
         return this.DayTime;
     }
 
     /**
-     * Set Date,
-In the format of YYYY-mm-dd.
-     * @param DayTime Date,
-In the format of YYYY-mm-dd.
+     * Set Date in the format of `YYYY-mm-dd`.
+Data is available at 3 AM the next day. You are recommended to query the latest data after this time point.
+     * @param DayTime Date in the format of `YYYY-mm-dd`.
+Data is available at 3 AM the next day. You are recommended to query the latest data after this time point.
      */
     public void setDayTime(String DayTime) {
         this.DayTime = DayTime;
@@ -88,16 +88,16 @@ In the format of YYYY-mm-dd.
     }
 
     /**
-     * Get Page number. Value range: [1,10]. Default value: 1. 
-     * @return PageNum Page number. Value range: [1,10]. Default value: 1.
+     * Get Page number. Value range: [1,1000]. Default value: 1. 
+     * @return PageNum Page number. Value range: [1,1000]. Default value: 1.
      */
     public Long getPageNum() {
         return this.PageNum;
     }
 
     /**
-     * Set Page number. Value range: [1,10]. Default value: 1.
-     * @param PageNum Page number. Value range: [1,10]. Default value: 1.
+     * Set Page number. Value range: [1,1000]. Default value: 1.
+     * @param PageNum Page number. Value range: [1,1000]. Default value: 1.
      */
     public void setPageNum(Long PageNum) {
         this.PageNum = PageNum;

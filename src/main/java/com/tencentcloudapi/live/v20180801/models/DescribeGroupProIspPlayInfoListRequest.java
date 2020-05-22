@@ -23,143 +23,143 @@ import java.util.HashMap;
 public class DescribeGroupProIspPlayInfoListRequest extends AbstractModel{
 
     /**
-    * Start time point in the format of yyyy-mm-dd HH:MM:SS.
+    * Start time point in the format of `yyyy-mm-dd HH:MM:SS`.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time point in the format of yyyy-mm-dd HH:MM:SS
-The time interval is (0, 3 hours]. Data for the past month can be queried.
+    * End time point in the format of `yyyy-mm-dd HH:MM:SS`
+The time span is (0,3 hours]. Data for the last month can be queried.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Playback domain name. If it is blank by default, the full data will be queried.
+    * Playback domain name. If this parameter is left empty, full data will be queried.
     */
     @SerializedName("PlayDomains")
     @Expose
     private String [] PlayDomains;
 
     /**
-    * List of districts. If it is blank by default, data of all districts will be returned.
+    * District list. If this parameter is left empty, data for all districts will be returned.
     */
     @SerializedName("ProvinceNames")
     @Expose
     private String [] ProvinceNames;
 
     /**
-    * List of ISPs. If it is blank by default, data of all ISPs will be returned.
+    * ISP list. If this parameter is left empty, data of all ISPs will be returned.
     */
     @SerializedName("IspNames")
     @Expose
     private String [] IspNames;
 
     /**
-    * Within or outside Mainland China. Value range: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China). If it is blank, data for all regions will be queried.
+    * Within or outside Mainland China. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China). If this parameter is left empty, data for all regions will be queried.
     */
     @SerializedName("MainlandOrOversea")
     @Expose
     private String MainlandOrOversea;
 
     /**
-     * Get Start time point in the format of yyyy-mm-dd HH:MM:SS. 
-     * @return StartTime Start time point in the format of yyyy-mm-dd HH:MM:SS.
+     * Get Start time point in the format of `yyyy-mm-dd HH:MM:SS`. 
+     * @return StartTime Start time point in the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time point in the format of yyyy-mm-dd HH:MM:SS.
-     * @param StartTime Start time point in the format of yyyy-mm-dd HH:MM:SS.
+     * Set Start time point in the format of `yyyy-mm-dd HH:MM:SS`.
+     * @param StartTime Start time point in the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time point in the format of yyyy-mm-dd HH:MM:SS
-The time interval is (0, 3 hours]. Data for the past month can be queried. 
-     * @return EndTime End time point in the format of yyyy-mm-dd HH:MM:SS
-The time interval is (0, 3 hours]. Data for the past month can be queried.
+     * Get End time point in the format of `yyyy-mm-dd HH:MM:SS`
+The time span is (0,3 hours]. Data for the last month can be queried. 
+     * @return EndTime End time point in the format of `yyyy-mm-dd HH:MM:SS`
+The time span is (0,3 hours]. Data for the last month can be queried.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time point in the format of yyyy-mm-dd HH:MM:SS
-The time interval is (0, 3 hours]. Data for the past month can be queried.
-     * @param EndTime End time point in the format of yyyy-mm-dd HH:MM:SS
-The time interval is (0, 3 hours]. Data for the past month can be queried.
+     * Set End time point in the format of `yyyy-mm-dd HH:MM:SS`
+The time span is (0,3 hours]. Data for the last month can be queried.
+     * @param EndTime End time point in the format of `yyyy-mm-dd HH:MM:SS`
+The time span is (0,3 hours]. Data for the last month can be queried.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Playback domain name. If it is blank by default, the full data will be queried. 
-     * @return PlayDomains Playback domain name. If it is blank by default, the full data will be queried.
+     * Get Playback domain name. If this parameter is left empty, full data will be queried. 
+     * @return PlayDomains Playback domain name. If this parameter is left empty, full data will be queried.
      */
     public String [] getPlayDomains() {
         return this.PlayDomains;
     }
 
     /**
-     * Set Playback domain name. If it is blank by default, the full data will be queried.
-     * @param PlayDomains Playback domain name. If it is blank by default, the full data will be queried.
+     * Set Playback domain name. If this parameter is left empty, full data will be queried.
+     * @param PlayDomains Playback domain name. If this parameter is left empty, full data will be queried.
      */
     public void setPlayDomains(String [] PlayDomains) {
         this.PlayDomains = PlayDomains;
     }
 
     /**
-     * Get List of districts. If it is blank by default, data of all districts will be returned. 
-     * @return ProvinceNames List of districts. If it is blank by default, data of all districts will be returned.
+     * Get District list. If this parameter is left empty, data for all districts will be returned. 
+     * @return ProvinceNames District list. If this parameter is left empty, data for all districts will be returned.
      */
     public String [] getProvinceNames() {
         return this.ProvinceNames;
     }
 
     /**
-     * Set List of districts. If it is blank by default, data of all districts will be returned.
-     * @param ProvinceNames List of districts. If it is blank by default, data of all districts will be returned.
+     * Set District list. If this parameter is left empty, data for all districts will be returned.
+     * @param ProvinceNames District list. If this parameter is left empty, data for all districts will be returned.
      */
     public void setProvinceNames(String [] ProvinceNames) {
         this.ProvinceNames = ProvinceNames;
     }
 
     /**
-     * Get List of ISPs. If it is blank by default, data of all ISPs will be returned. 
-     * @return IspNames List of ISPs. If it is blank by default, data of all ISPs will be returned.
+     * Get ISP list. If this parameter is left empty, data of all ISPs will be returned. 
+     * @return IspNames ISP list. If this parameter is left empty, data of all ISPs will be returned.
      */
     public String [] getIspNames() {
         return this.IspNames;
     }
 
     /**
-     * Set List of ISPs. If it is blank by default, data of all ISPs will be returned.
-     * @param IspNames List of ISPs. If it is blank by default, data of all ISPs will be returned.
+     * Set ISP list. If this parameter is left empty, data of all ISPs will be returned.
+     * @param IspNames ISP list. If this parameter is left empty, data of all ISPs will be returned.
      */
     public void setIspNames(String [] IspNames) {
         this.IspNames = IspNames;
     }
 
     /**
-     * Get Within or outside Mainland China. Value range: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China). If it is blank, data for all regions will be queried. 
-     * @return MainlandOrOversea Within or outside Mainland China. Value range: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China). If it is blank, data for all regions will be queried.
+     * Get Within or outside Mainland China. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China). If this parameter is left empty, data for all regions will be queried. 
+     * @return MainlandOrOversea Within or outside Mainland China. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China). If this parameter is left empty, data for all regions will be queried.
      */
     public String getMainlandOrOversea() {
         return this.MainlandOrOversea;
     }
 
     /**
-     * Set Within or outside Mainland China. Value range: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China). If it is blank, data for all regions will be queried.
-     * @param MainlandOrOversea Within or outside Mainland China. Value range: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China). If it is blank, data for all regions will be queried.
+     * Set Within or outside Mainland China. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China). If this parameter is left empty, data for all regions will be queried.
+     * @param MainlandOrOversea Within or outside Mainland China. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China). If this parameter is left empty, data for all regions will be queried.
      */
     public void setMainlandOrOversea(String MainlandOrOversea) {
         this.MainlandOrOversea = MainlandOrOversea;

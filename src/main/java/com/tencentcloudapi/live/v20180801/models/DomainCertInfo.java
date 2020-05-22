@@ -81,7 +81,7 @@ public class DomainCertInfo extends AbstractModel{
     private String DomainName;
 
     /**
-    * Certificate status
+    * Certificate status.
     */
     @SerializedName("Status")
     @Expose
@@ -224,16 +224,16 @@ public class DomainCertInfo extends AbstractModel{
     }
 
     /**
-     * Get Certificate status 
-     * @return Status Certificate status
+     * Get Certificate status. 
+     * @return Status Certificate status.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Certificate status
-     * @param Status Certificate status
+     * Set Certificate status.
+     * @param Status Certificate status.
      */
     public void setStatus(Long Status) {
         this.Status = Status;

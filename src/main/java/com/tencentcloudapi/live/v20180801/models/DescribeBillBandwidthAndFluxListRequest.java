@@ -23,41 +23,42 @@ import java.util.HashMap;
 public class DescribeBillBandwidthAndFluxListRequest extends AbstractModel{
 
     /**
-    * Start time point in the format of yyyy-mm-dd HH:MM:SS.
+    * Start time point in the format of `yyyy-mm-dd HH:MM:SS`.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time point in the format of yyyy-mm-dd HH:MM:SS. The difference between the start time and end time cannot be greater than 31 days.
+    * End time point in the format of `yyyy-mm-dd HH:MM:SS`. The difference between the start time and end time cannot be greater than 31 days.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * LVB playback domain name. If it is left blank, the full data will be queried.
+    * LVB playback domain name. If this parameter is left empty, full data will be queried.
     */
     @SerializedName("PlayDomains")
     @Expose
     private String [] PlayDomains;
 
     /**
-    * Value range:
-Mainland: Query data for Mainland China,
-Oversea: Query data for regions outside Mainland China.
-Default: Query data for all regions.
+    * Valid values:
+Mainland: query data for Mainland China,
+Oversea: query data for regions outside Mainland China,
+Default: query data for all regions.
+Note: LEB only supports querying data for all regions.
     */
     @SerializedName("MainlandOrOversea")
     @Expose
     private String MainlandOrOversea;
 
     /**
-    * Data granularity. Supported granularity:
-5: 5-minute granularity (the query interval should be within 1 day),
-60: 1-hour granularity (the query interval should be within one month),
-1440: 1-day granularity (the query interval should be within one month).
+    * Data granularity. Valid values:
+5: 5-minute granularity (the query time span should be within 1 day),
+60: 1-hour granularity (the query time span should be within one month),
+1440: 1-day granularity (the query time span should be within one month).
 Default value: 5.
     */
     @SerializedName("Granularity")
@@ -65,91 +66,102 @@ Default value: 5.
     private Long Granularity;
 
     /**
-     * Get Start time point in the format of yyyy-mm-dd HH:MM:SS. 
-     * @return StartTime Start time point in the format of yyyy-mm-dd HH:MM:SS.
+    * Service name. Valid values: LVB, LEB. Default value: LVB.
+    */
+    @SerializedName("ServiceName")
+    @Expose
+    private String ServiceName;
+
+    /**
+     * Get Start time point in the format of `yyyy-mm-dd HH:MM:SS`. 
+     * @return StartTime Start time point in the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time point in the format of yyyy-mm-dd HH:MM:SS.
-     * @param StartTime Start time point in the format of yyyy-mm-dd HH:MM:SS.
+     * Set Start time point in the format of `yyyy-mm-dd HH:MM:SS`.
+     * @param StartTime Start time point in the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time point in the format of yyyy-mm-dd HH:MM:SS. The difference between the start time and end time cannot be greater than 31 days. 
-     * @return EndTime End time point in the format of yyyy-mm-dd HH:MM:SS. The difference between the start time and end time cannot be greater than 31 days.
+     * Get End time point in the format of `yyyy-mm-dd HH:MM:SS`. The difference between the start time and end time cannot be greater than 31 days. 
+     * @return EndTime End time point in the format of `yyyy-mm-dd HH:MM:SS`. The difference between the start time and end time cannot be greater than 31 days.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time point in the format of yyyy-mm-dd HH:MM:SS. The difference between the start time and end time cannot be greater than 31 days.
-     * @param EndTime End time point in the format of yyyy-mm-dd HH:MM:SS. The difference between the start time and end time cannot be greater than 31 days.
+     * Set End time point in the format of `yyyy-mm-dd HH:MM:SS`. The difference between the start time and end time cannot be greater than 31 days.
+     * @param EndTime End time point in the format of `yyyy-mm-dd HH:MM:SS`. The difference between the start time and end time cannot be greater than 31 days.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get LVB playback domain name. If it is left blank, the full data will be queried. 
-     * @return PlayDomains LVB playback domain name. If it is left blank, the full data will be queried.
+     * Get LVB playback domain name. If this parameter is left empty, full data will be queried. 
+     * @return PlayDomains LVB playback domain name. If this parameter is left empty, full data will be queried.
      */
     public String [] getPlayDomains() {
         return this.PlayDomains;
     }
 
     /**
-     * Set LVB playback domain name. If it is left blank, the full data will be queried.
-     * @param PlayDomains LVB playback domain name. If it is left blank, the full data will be queried.
+     * Set LVB playback domain name. If this parameter is left empty, full data will be queried.
+     * @param PlayDomains LVB playback domain name. If this parameter is left empty, full data will be queried.
      */
     public void setPlayDomains(String [] PlayDomains) {
         this.PlayDomains = PlayDomains;
     }
 
     /**
-     * Get Value range:
-Mainland: Query data for Mainland China,
-Oversea: Query data for regions outside Mainland China.
-Default: Query data for all regions. 
-     * @return MainlandOrOversea Value range:
-Mainland: Query data for Mainland China,
-Oversea: Query data for regions outside Mainland China.
-Default: Query data for all regions.
+     * Get Valid values:
+Mainland: query data for Mainland China,
+Oversea: query data for regions outside Mainland China,
+Default: query data for all regions.
+Note: LEB only supports querying data for all regions. 
+     * @return MainlandOrOversea Valid values:
+Mainland: query data for Mainland China,
+Oversea: query data for regions outside Mainland China,
+Default: query data for all regions.
+Note: LEB only supports querying data for all regions.
      */
     public String getMainlandOrOversea() {
         return this.MainlandOrOversea;
     }
 
     /**
-     * Set Value range:
-Mainland: Query data for Mainland China,
-Oversea: Query data for regions outside Mainland China.
-Default: Query data for all regions.
-     * @param MainlandOrOversea Value range:
-Mainland: Query data for Mainland China,
-Oversea: Query data for regions outside Mainland China.
-Default: Query data for all regions.
+     * Set Valid values:
+Mainland: query data for Mainland China,
+Oversea: query data for regions outside Mainland China,
+Default: query data for all regions.
+Note: LEB only supports querying data for all regions.
+     * @param MainlandOrOversea Valid values:
+Mainland: query data for Mainland China,
+Oversea: query data for regions outside Mainland China,
+Default: query data for all regions.
+Note: LEB only supports querying data for all regions.
      */
     public void setMainlandOrOversea(String MainlandOrOversea) {
         this.MainlandOrOversea = MainlandOrOversea;
     }
 
     /**
-     * Get Data granularity. Supported granularity:
-5: 5-minute granularity (the query interval should be within 1 day),
-60: 1-hour granularity (the query interval should be within one month),
-1440: 1-day granularity (the query interval should be within one month).
+     * Get Data granularity. Valid values:
+5: 5-minute granularity (the query time span should be within 1 day),
+60: 1-hour granularity (the query time span should be within one month),
+1440: 1-day granularity (the query time span should be within one month).
 Default value: 5. 
-     * @return Granularity Data granularity. Supported granularity:
-5: 5-minute granularity (the query interval should be within 1 day),
-60: 1-hour granularity (the query interval should be within one month),
-1440: 1-day granularity (the query interval should be within one month).
+     * @return Granularity Data granularity. Valid values:
+5: 5-minute granularity (the query time span should be within 1 day),
+60: 1-hour granularity (the query time span should be within one month),
+1440: 1-day granularity (the query time span should be within one month).
 Default value: 5.
      */
     public Long getGranularity() {
@@ -157,19 +169,35 @@ Default value: 5.
     }
 
     /**
-     * Set Data granularity. Supported granularity:
-5: 5-minute granularity (the query interval should be within 1 day),
-60: 1-hour granularity (the query interval should be within one month),
-1440: 1-day granularity (the query interval should be within one month).
+     * Set Data granularity. Valid values:
+5: 5-minute granularity (the query time span should be within 1 day),
+60: 1-hour granularity (the query time span should be within one month),
+1440: 1-day granularity (the query time span should be within one month).
 Default value: 5.
-     * @param Granularity Data granularity. Supported granularity:
-5: 5-minute granularity (the query interval should be within 1 day),
-60: 1-hour granularity (the query interval should be within one month),
-1440: 1-day granularity (the query interval should be within one month).
+     * @param Granularity Data granularity. Valid values:
+5: 5-minute granularity (the query time span should be within 1 day),
+60: 1-hour granularity (the query time span should be within one month),
+1440: 1-day granularity (the query time span should be within one month).
 Default value: 5.
      */
     public void setGranularity(Long Granularity) {
         this.Granularity = Granularity;
+    }
+
+    /**
+     * Get Service name. Valid values: LVB, LEB. Default value: LVB. 
+     * @return ServiceName Service name. Valid values: LVB, LEB. Default value: LVB.
+     */
+    public String getServiceName() {
+        return this.ServiceName;
+    }
+
+    /**
+     * Set Service name. Valid values: LVB, LEB. Default value: LVB.
+     * @param ServiceName Service name. Valid values: LVB, LEB. Default value: LVB.
+     */
+    public void setServiceName(String ServiceName) {
+        this.ServiceName = ServiceName;
     }
 
     /**
@@ -181,6 +209,7 @@ Default value: 5.
         this.setParamArraySimple(map, prefix + "PlayDomains.", this.PlayDomains);
         this.setParamSimple(map, prefix + "MainlandOrOversea", this.MainlandOrOversea);
         this.setParamSimple(map, prefix + "Granularity", this.Granularity);
+        this.setParamSimple(map, prefix + "ServiceName", this.ServiceName);
 
     }
 }

@@ -51,7 +51,7 @@ public class ReceiverInfo extends AbstractModel{
     private String ReceiverType;
 
     /**
-    * Id
+    * ReceiverId
     */
     @SerializedName("Id")
     @Expose
@@ -192,16 +192,16 @@ public class ReceiverInfo extends AbstractModel{
     }
 
     /**
-     * Get Id 
-     * @return Id Id
+     * Get ReceiverId 
+     * @return Id ReceiverId
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set Id
-     * @param Id Id
+     * Set ReceiverId
+     * @param Id ReceiverId
      */
     public void setId(Long Id) {
         this.Id = Id;

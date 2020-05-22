@@ -100,7 +100,7 @@ public class DescribeBasicAlarmListRequest extends AbstractModel{
     private Long [] InstanceGroupIds;
 
     /**
-    * 
+    * Filtering by metric names
     */
     @SerializedName("MetricNames")
     @Expose
@@ -283,16 +283,16 @@ public class DescribeBasicAlarmListRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return MetricNames 
+     * Get Filtering by metric names 
+     * @return MetricNames Filtering by metric names
      */
     public String [] getMetricNames() {
         return this.MetricNames;
     }
 
     /**
-     * Set 
-     * @param MetricNames 
+     * Set Filtering by metric names
+     * @param MetricNames Filtering by metric names
      */
     public void setMetricNames(String [] MetricNames) {
         this.MetricNames = MetricNames;

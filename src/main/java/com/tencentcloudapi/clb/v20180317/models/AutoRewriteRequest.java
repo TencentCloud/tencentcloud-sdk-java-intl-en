@@ -30,14 +30,14 @@ public class AutoRewriteRequest extends AbstractModel{
     private String LoadBalancerId;
 
     /**
-    * HTTPS:443 listener ID
+    * `HTTPS:443` listener ID
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * Domain name to be redirected under an HTTPS:443 listener
+    * The domain name to be redirected under the listener `HTTPS:443`. If it is left empty, all domain names under the listener `HTTPS:443` will be configured with redirects.
     */
     @SerializedName("Domains")
     @Expose
@@ -60,32 +60,32 @@ public class AutoRewriteRequest extends AbstractModel{
     }
 
     /**
-     * Get HTTPS:443 listener ID 
-     * @return ListenerId HTTPS:443 listener ID
+     * Get `HTTPS:443` listener ID 
+     * @return ListenerId `HTTPS:443` listener ID
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set HTTPS:443 listener ID
-     * @param ListenerId HTTPS:443 listener ID
+     * Set `HTTPS:443` listener ID
+     * @param ListenerId `HTTPS:443` listener ID
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get Domain name to be redirected under an HTTPS:443 listener 
-     * @return Domains Domain name to be redirected under an HTTPS:443 listener
+     * Get The domain name to be redirected under the listener `HTTPS:443`. If it is left empty, all domain names under the listener `HTTPS:443` will be configured with redirects. 
+     * @return Domains The domain name to be redirected under the listener `HTTPS:443`. If it is left empty, all domain names under the listener `HTTPS:443` will be configured with redirects.
      */
     public String [] getDomains() {
         return this.Domains;
     }
 
     /**
-     * Set Domain name to be redirected under an HTTPS:443 listener
-     * @param Domains Domain name to be redirected under an HTTPS:443 listener
+     * Set The domain name to be redirected under the listener `HTTPS:443`. If it is left empty, all domain names under the listener `HTTPS:443` will be configured with redirects.
+     * @param Domains The domain name to be redirected under the listener `HTTPS:443`. If it is left empty, all domain names under the listener `HTTPS:443` will be configured with redirects.
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;

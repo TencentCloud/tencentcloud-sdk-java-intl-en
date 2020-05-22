@@ -72,6 +72,13 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
     private Boolean DefaultServer;
 
     /**
+    * A listener must be configured with a default domain name. If you need to disable the default domain name, you must specify another one as the new default domain name.
+    */
+    @SerializedName("NewDefaultServerDomain")
+    @Expose
+    private String NewDefaultServerDomain;
+
+    /**
      * Get CLB instance ID 
      * @return LoadBalancerId CLB instance ID
      */
@@ -184,6 +191,22 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
     }
 
     /**
+     * Get A listener must be configured with a default domain name. If you need to disable the default domain name, you must specify another one as the new default domain name. 
+     * @return NewDefaultServerDomain A listener must be configured with a default domain name. If you need to disable the default domain name, you must specify another one as the new default domain name.
+     */
+    public String getNewDefaultServerDomain() {
+        return this.NewDefaultServerDomain;
+    }
+
+    /**
+     * Set A listener must be configured with a default domain name. If you need to disable the default domain name, you must specify another one as the new default domain name.
+     * @param NewDefaultServerDomain A listener must be configured with a default domain name. If you need to disable the default domain name, you must specify another one as the new default domain name.
+     */
+    public void setNewDefaultServerDomain(String NewDefaultServerDomain) {
+        this.NewDefaultServerDomain = NewDefaultServerDomain;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Certificate.", this.Certificate);
         this.setParamSimple(map, prefix + "Http2", this.Http2);
         this.setParamSimple(map, prefix + "DefaultServer", this.DefaultServer);
+        this.setParamSimple(map, prefix + "NewDefaultServerDomain", this.NewDefaultServerDomain);
 
     }
 }

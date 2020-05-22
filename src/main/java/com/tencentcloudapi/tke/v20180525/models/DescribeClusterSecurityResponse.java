@@ -72,6 +72,21 @@ public class DescribeClusterSecurityResponse extends AbstractModel{
     private String [] SecurityPolicy;
 
     /**
+    * Cluster Kubeconfig file
+Note: This field may return null, indicating that no valid value was found.
+    */
+    @SerializedName("Kubeconfig")
+    @Expose
+    private String Kubeconfig;
+
+    /**
+    * 
+    */
+    @SerializedName("JnsGwEndpoint")
+    @Expose
+    private String JnsGwEndpoint;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -191,6 +206,42 @@ public class DescribeClusterSecurityResponse extends AbstractModel{
     }
 
     /**
+     * Get Cluster Kubeconfig file
+Note: This field may return null, indicating that no valid value was found. 
+     * @return Kubeconfig Cluster Kubeconfig file
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public String getKubeconfig() {
+        return this.Kubeconfig;
+    }
+
+    /**
+     * Set Cluster Kubeconfig file
+Note: This field may return null, indicating that no valid value was found.
+     * @param Kubeconfig Cluster Kubeconfig file
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public void setKubeconfig(String Kubeconfig) {
+        this.Kubeconfig = Kubeconfig;
+    }
+
+    /**
+     * Get  
+     * @return JnsGwEndpoint 
+     */
+    public String getJnsGwEndpoint() {
+        return this.JnsGwEndpoint;
+    }
+
+    /**
+     * Set 
+     * @param JnsGwEndpoint 
+     */
+    public void setJnsGwEndpoint(String JnsGwEndpoint) {
+        this.JnsGwEndpoint = JnsGwEndpoint;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -217,6 +268,8 @@ public class DescribeClusterSecurityResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "PgwEndpoint", this.PgwEndpoint);
         this.setParamArraySimple(map, prefix + "SecurityPolicy.", this.SecurityPolicy);
+        this.setParamSimple(map, prefix + "Kubeconfig", this.Kubeconfig);
+        this.setParamSimple(map, prefix + "JnsGwEndpoint", this.JnsGwEndpoint);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

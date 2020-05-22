@@ -30,14 +30,14 @@ public class DescribeStreamPushInfoListRequest extends AbstractModel{
     private String StreamName;
 
     /**
-    * Start time point in the format of yyyy-mm-dd HH:MM:SS.
+    * Start time point in the format of `yyyy-mm-dd HH:MM:SS`.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time point in the format of yyyy-mm-dd HH:MM:SS. The maximum time interval is 6 hours. Data in the past 6 days can be queried.
+    * End time point in the format of `yyyy-mm-dd HH:MM:SS`. The maximum time span is 6 hours. Data for the last 6 days can be queried.
     */
     @SerializedName("EndTime")
     @Expose
@@ -51,7 +51,7 @@ public class DescribeStreamPushInfoListRequest extends AbstractModel{
     private String PushDomain;
 
     /**
-    * Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+    * Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
     */
     @SerializedName("AppName")
     @Expose
@@ -74,32 +74,32 @@ public class DescribeStreamPushInfoListRequest extends AbstractModel{
     }
 
     /**
-     * Get Start time point in the format of yyyy-mm-dd HH:MM:SS. 
-     * @return StartTime Start time point in the format of yyyy-mm-dd HH:MM:SS.
+     * Get Start time point in the format of `yyyy-mm-dd HH:MM:SS`. 
+     * @return StartTime Start time point in the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time point in the format of yyyy-mm-dd HH:MM:SS.
-     * @param StartTime Start time point in the format of yyyy-mm-dd HH:MM:SS.
+     * Set Start time point in the format of `yyyy-mm-dd HH:MM:SS`.
+     * @param StartTime Start time point in the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time point in the format of yyyy-mm-dd HH:MM:SS. The maximum time interval is 6 hours. Data in the past 6 days can be queried. 
-     * @return EndTime End time point in the format of yyyy-mm-dd HH:MM:SS. The maximum time interval is 6 hours. Data in the past 6 days can be queried.
+     * Get End time point in the format of `yyyy-mm-dd HH:MM:SS`. The maximum time span is 6 hours. Data for the last 6 days can be queried. 
+     * @return EndTime End time point in the format of `yyyy-mm-dd HH:MM:SS`. The maximum time span is 6 hours. Data for the last 6 days can be queried.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time point in the format of yyyy-mm-dd HH:MM:SS. The maximum time interval is 6 hours. Data in the past 6 days can be queried.
-     * @param EndTime End time point in the format of yyyy-mm-dd HH:MM:SS. The maximum time interval is 6 hours. Data in the past 6 days can be queried.
+     * Set End time point in the format of `yyyy-mm-dd HH:MM:SS`. The maximum time span is 6 hours. Data for the last 6 days can be queried.
+     * @param EndTime End time point in the format of `yyyy-mm-dd HH:MM:SS`. The maximum time span is 6 hours. Data for the last 6 days can be queried.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -122,16 +122,16 @@ public class DescribeStreamPushInfoListRequest extends AbstractModel{
     }
 
     /**
-     * Get Push path, which is the same as the AppName in push and playback addresses and is "live" by default. 
-     * @return AppName Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+     * Get Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. 
+     * @return AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
-     * @param AppName Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+     * Set Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
+     * @param AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;

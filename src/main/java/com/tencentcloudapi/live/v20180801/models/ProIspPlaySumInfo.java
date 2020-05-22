@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ProIspPlaySumInfo extends AbstractModel{
 
     /**
-    * District/ISP.
+    * District/ISP/country/region.
     */
     @SerializedName("Name")
     @Expose
@@ -44,23 +44,23 @@ public class ProIspPlaySumInfo extends AbstractModel{
     private Long TotalRequest;
 
     /**
-    * Average download traffic in MB.
+    * Average download traffic in MB/s.
     */
     @SerializedName("AvgFluxPerSecond")
     @Expose
     private Float AvgFluxPerSecond;
 
     /**
-     * Get District/ISP. 
-     * @return Name District/ISP.
+     * Get District/ISP/country/region. 
+     * @return Name District/ISP/country/region.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set District/ISP.
-     * @param Name District/ISP.
+     * Set District/ISP/country/region.
+     * @param Name District/ISP/country/region.
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -99,16 +99,16 @@ public class ProIspPlaySumInfo extends AbstractModel{
     }
 
     /**
-     * Get Average download traffic in MB. 
-     * @return AvgFluxPerSecond Average download traffic in MB.
+     * Get Average download traffic in MB/s. 
+     * @return AvgFluxPerSecond Average download traffic in MB/s.
      */
     public Float getAvgFluxPerSecond() {
         return this.AvgFluxPerSecond;
     }
 
     /**
-     * Set Average download traffic in MB.
-     * @param AvgFluxPerSecond Average download traffic in MB.
+     * Set Average download traffic in MB/s.
+     * @param AvgFluxPerSecond Average download traffic in MB/s.
      */
     public void setAvgFluxPerSecond(Float AvgFluxPerSecond) {
         this.AvgFluxPerSecond = AvgFluxPerSecond;

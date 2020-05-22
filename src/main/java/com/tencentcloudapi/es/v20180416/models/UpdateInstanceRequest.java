@@ -162,6 +162,13 @@ Dedicated master node disk size in GB. This is 50 GB by default and currently ca
     private Long BasicSecurityType;
 
     /**
+    * Kibana private port
+    */
+    @SerializedName("KibanaPrivatePort")
+    @Expose
+    private Long KibanaPrivatePort;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -490,6 +497,22 @@ Dedicated master node disk size in GB. This is 50 GB by default and currently ca
     }
 
     /**
+     * Get Kibana private port 
+     * @return KibanaPrivatePort Kibana private port
+     */
+    public Long getKibanaPrivatePort() {
+        return this.KibanaPrivatePort;
+    }
+
+    /**
+     * Set Kibana private port
+     * @param KibanaPrivatePort Kibana private port
+     */
+    public void setKibanaPrivatePort(Long KibanaPrivatePort) {
+        this.KibanaPrivatePort = KibanaPrivatePort;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -512,6 +535,7 @@ Dedicated master node disk size in GB. This is 50 GB by default and currently ca
         this.setParamSimple(map, prefix + "KibanaPublicAccess", this.KibanaPublicAccess);
         this.setParamSimple(map, prefix + "KibanaPrivateAccess", this.KibanaPrivateAccess);
         this.setParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
+        this.setParamSimple(map, prefix + "KibanaPrivatePort", this.KibanaPrivatePort);
 
     }
 }

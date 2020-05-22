@@ -24,7 +24,7 @@ public class DescribeProIspPlaySumInfoListRequest extends AbstractModel{
 
     /**
     * Start time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
+In the format of `yyyy-mm-dd HH:MM:SS`.
     */
     @SerializedName("StartTime")
     @Expose
@@ -32,53 +32,50 @@ In the format of yyyy-mm-dd HH:MM:SS.
 
     /**
     * End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day.
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Statistics type. Value range: "Province", "Isp".
+    * Statistics type. Valid values: Province, Isp, CountryOrArea.
     */
     @SerializedName("StatType")
     @Expose
     private String StatType;
 
     /**
-    * If it is blank by default, the full data will be queried.
+    * If this parameter is left empty, full data will be queried.
     */
     @SerializedName("PlayDomains")
     @Expose
     private String [] PlayDomains;
 
     /**
-    * Page number.
-Value range: [1,1000],
-Default value: 1.
+    * Page number. Value range: [1,1000]. Default value: 1.
     */
     @SerializedName("PageNum")
     @Expose
     private Long PageNum;
 
     /**
-    * Number of entries per page. Value range: [1,1000],
-Default value: 20.
+    * Number of entries per page. Value range: [1,1000]. Default value: 20.
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 
+    * Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
     */
     @SerializedName("MainlandOrOversea")
     @Expose
     private String MainlandOrOversea;
 
     /**
-    * 
+    * Language used in the output field. Valid values: Chinese (default), English. Currently, country/region, district, and ISP parameters support multiple languages.
     */
     @SerializedName("OutLanguage")
     @Expose
@@ -86,9 +83,9 @@ Default value: 20.
 
     /**
      * Get Start time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS. 
+In the format of `yyyy-mm-dd HH:MM:SS`. 
      * @return StartTime Start time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
+In the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public String getStartTime() {
         return this.StartTime;
@@ -96,9 +93,9 @@ In the format of yyyy-mm-dd HH:MM:SS.
 
     /**
      * Set Start time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
+In the format of `yyyy-mm-dd HH:MM:SS`.
      * @param StartTime Start time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
+In the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
@@ -106,11 +103,11 @@ In the format of yyyy-mm-dd HH:MM:SS.
 
     /**
      * Get End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day. 
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day. 
      * @return EndTime End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day.
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day.
      */
     public String getEndTime() {
         return this.EndTime;
@@ -118,119 +115,107 @@ Note: EndTime and StartTime only support querying data on the past day.
 
     /**
      * Set End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day.
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day.
      * @param EndTime End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day.
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Statistics type. Value range: "Province", "Isp". 
-     * @return StatType Statistics type. Value range: "Province", "Isp".
+     * Get Statistics type. Valid values: Province, Isp, CountryOrArea. 
+     * @return StatType Statistics type. Valid values: Province, Isp, CountryOrArea.
      */
     public String getStatType() {
         return this.StatType;
     }
 
     /**
-     * Set Statistics type. Value range: "Province", "Isp".
-     * @param StatType Statistics type. Value range: "Province", "Isp".
+     * Set Statistics type. Valid values: Province, Isp, CountryOrArea.
+     * @param StatType Statistics type. Valid values: Province, Isp, CountryOrArea.
      */
     public void setStatType(String StatType) {
         this.StatType = StatType;
     }
 
     /**
-     * Get If it is blank by default, the full data will be queried. 
-     * @return PlayDomains If it is blank by default, the full data will be queried.
+     * Get If this parameter is left empty, full data will be queried. 
+     * @return PlayDomains If this parameter is left empty, full data will be queried.
      */
     public String [] getPlayDomains() {
         return this.PlayDomains;
     }
 
     /**
-     * Set If it is blank by default, the full data will be queried.
-     * @param PlayDomains If it is blank by default, the full data will be queried.
+     * Set If this parameter is left empty, full data will be queried.
+     * @param PlayDomains If this parameter is left empty, full data will be queried.
      */
     public void setPlayDomains(String [] PlayDomains) {
         this.PlayDomains = PlayDomains;
     }
 
     /**
-     * Get Page number.
-Value range: [1,1000],
-Default value: 1. 
-     * @return PageNum Page number.
-Value range: [1,1000],
-Default value: 1.
+     * Get Page number. Value range: [1,1000]. Default value: 1. 
+     * @return PageNum Page number. Value range: [1,1000]. Default value: 1.
      */
     public Long getPageNum() {
         return this.PageNum;
     }
 
     /**
-     * Set Page number.
-Value range: [1,1000],
-Default value: 1.
-     * @param PageNum Page number.
-Value range: [1,1000],
-Default value: 1.
+     * Set Page number. Value range: [1,1000]. Default value: 1.
+     * @param PageNum Page number. Value range: [1,1000]. Default value: 1.
      */
     public void setPageNum(Long PageNum) {
         this.PageNum = PageNum;
     }
 
     /**
-     * Get Number of entries per page. Value range: [1,1000],
-Default value: 20. 
-     * @return PageSize Number of entries per page. Value range: [1,1000],
-Default value: 20.
+     * Get Number of entries per page. Value range: [1,1000]. Default value: 20. 
+     * @return PageSize Number of entries per page. Value range: [1,1000]. Default value: 20.
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set Number of entries per page. Value range: [1,1000],
-Default value: 20.
-     * @param PageSize Number of entries per page. Value range: [1,1000],
-Default value: 20.
+     * Set Number of entries per page. Value range: [1,1000]. Default value: 20.
+     * @param PageSize Number of entries per page. Value range: [1,1000]. Default value: 20.
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get  
-     * @return MainlandOrOversea 
+     * Get Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried. 
+     * @return MainlandOrOversea Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
      */
     public String getMainlandOrOversea() {
         return this.MainlandOrOversea;
     }
 
     /**
-     * Set 
-     * @param MainlandOrOversea 
+     * Set Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
+     * @param MainlandOrOversea Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
      */
     public void setMainlandOrOversea(String MainlandOrOversea) {
         this.MainlandOrOversea = MainlandOrOversea;
     }
 
     /**
-     * Get  
-     * @return OutLanguage 
+     * Get Language used in the output field. Valid values: Chinese (default), English. Currently, country/region, district, and ISP parameters support multiple languages. 
+     * @return OutLanguage Language used in the output field. Valid values: Chinese (default), English. Currently, country/region, district, and ISP parameters support multiple languages.
      */
     public String getOutLanguage() {
         return this.OutLanguage;
     }
 
     /**
-     * Set 
-     * @param OutLanguage 
+     * Set Language used in the output field. Valid values: Chinese (default), English. Currently, country/region, district, and ISP parameters support multiple languages.
+     * @param OutLanguage Language used in the output field. Valid values: Chinese (default), English. Currently, country/region, district, and ISP parameters support multiple languages.
      */
     public void setOutLanguage(String OutLanguage) {
         this.OutLanguage = OutLanguage;

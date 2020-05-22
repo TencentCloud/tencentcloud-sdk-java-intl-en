@@ -37,6 +37,13 @@ public class DeleteClusterRequest extends AbstractModel{
     private String InstanceDeleteMode;
 
     /**
+    * Specifies the policy to deal with resources in the cluster when the cluster is deleted. It only supports CBS now. The default policy is to retain CBS disks.
+    */
+    @SerializedName("ResourceDeleteOptions")
+    @Expose
+    private ResourceDeleteOption [] ResourceDeleteOptions;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -69,11 +76,28 @@ public class DeleteClusterRequest extends AbstractModel{
     }
 
     /**
+     * Get Specifies the policy to deal with resources in the cluster when the cluster is deleted. It only supports CBS now. The default policy is to retain CBS disks. 
+     * @return ResourceDeleteOptions Specifies the policy to deal with resources in the cluster when the cluster is deleted. It only supports CBS now. The default policy is to retain CBS disks.
+     */
+    public ResourceDeleteOption [] getResourceDeleteOptions() {
+        return this.ResourceDeleteOptions;
+    }
+
+    /**
+     * Set Specifies the policy to deal with resources in the cluster when the cluster is deleted. It only supports CBS now. The default policy is to retain CBS disks.
+     * @param ResourceDeleteOptions Specifies the policy to deal with resources in the cluster when the cluster is deleted. It only supports CBS now. The default policy is to retain CBS disks.
+     */
+    public void setResourceDeleteOptions(ResourceDeleteOption [] ResourceDeleteOptions) {
+        this.ResourceDeleteOptions = ResourceDeleteOptions;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "InstanceDeleteMode", this.InstanceDeleteMode);
+        this.setParamArrayObj(map, prefix + "ResourceDeleteOptions.", this.ResourceDeleteOptions);
 
     }
 }

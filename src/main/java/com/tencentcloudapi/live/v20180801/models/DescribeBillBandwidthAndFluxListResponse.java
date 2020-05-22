@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class DescribeBillBandwidthAndFluxListResponse extends AbstractModel{
 
     /**
-    * Time point of peak bandwidth value in the format of yyyy-mm-dd HH:MM:SS.
+    * Time point of peak bandwidth value in the format of `yyyy-mm-dd HH:MM:SS`.
     */
     @SerializedName("PeakBandwidthTime")
     @Expose
     private String PeakBandwidthTime;
 
     /**
-    * Bandwidth in Mbps.
+    * Peak bandwidth in Mbps.
     */
     @SerializedName("PeakBandwidth")
     @Expose
     private Float PeakBandwidth;
 
     /**
-    * Time point of the 95th percentile bandwidth value in the format of yyyy-mm-dd HH:MM:SS.
+    * Time point of 95th percentile bandwidth value in the format of `yyyy-mm-dd HH:MM:SS`.
     */
     @SerializedName("P95PeakBandwidthTime")
     @Expose
@@ -72,48 +72,48 @@ public class DescribeBillBandwidthAndFluxListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Time point of peak bandwidth value in the format of yyyy-mm-dd HH:MM:SS. 
-     * @return PeakBandwidthTime Time point of peak bandwidth value in the format of yyyy-mm-dd HH:MM:SS.
+     * Get Time point of peak bandwidth value in the format of `yyyy-mm-dd HH:MM:SS`. 
+     * @return PeakBandwidthTime Time point of peak bandwidth value in the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public String getPeakBandwidthTime() {
         return this.PeakBandwidthTime;
     }
 
     /**
-     * Set Time point of peak bandwidth value in the format of yyyy-mm-dd HH:MM:SS.
-     * @param PeakBandwidthTime Time point of peak bandwidth value in the format of yyyy-mm-dd HH:MM:SS.
+     * Set Time point of peak bandwidth value in the format of `yyyy-mm-dd HH:MM:SS`.
+     * @param PeakBandwidthTime Time point of peak bandwidth value in the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public void setPeakBandwidthTime(String PeakBandwidthTime) {
         this.PeakBandwidthTime = PeakBandwidthTime;
     }
 
     /**
-     * Get Bandwidth in Mbps. 
-     * @return PeakBandwidth Bandwidth in Mbps.
+     * Get Peak bandwidth in Mbps. 
+     * @return PeakBandwidth Peak bandwidth in Mbps.
      */
     public Float getPeakBandwidth() {
         return this.PeakBandwidth;
     }
 
     /**
-     * Set Bandwidth in Mbps.
-     * @param PeakBandwidth Bandwidth in Mbps.
+     * Set Peak bandwidth in Mbps.
+     * @param PeakBandwidth Peak bandwidth in Mbps.
      */
     public void setPeakBandwidth(Float PeakBandwidth) {
         this.PeakBandwidth = PeakBandwidth;
     }
 
     /**
-     * Get Time point of the 95th percentile bandwidth value in the format of yyyy-mm-dd HH:MM:SS. 
-     * @return P95PeakBandwidthTime Time point of the 95th percentile bandwidth value in the format of yyyy-mm-dd HH:MM:SS.
+     * Get Time point of 95th percentile bandwidth value in the format of `yyyy-mm-dd HH:MM:SS`. 
+     * @return P95PeakBandwidthTime Time point of 95th percentile bandwidth value in the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public String getP95PeakBandwidthTime() {
         return this.P95PeakBandwidthTime;
     }
 
     /**
-     * Set Time point of the 95th percentile bandwidth value in the format of yyyy-mm-dd HH:MM:SS.
-     * @param P95PeakBandwidthTime Time point of the 95th percentile bandwidth value in the format of yyyy-mm-dd HH:MM:SS.
+     * Set Time point of 95th percentile bandwidth value in the format of `yyyy-mm-dd HH:MM:SS`.
+     * @param P95PeakBandwidthTime Time point of 95th percentile bandwidth value in the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public void setP95PeakBandwidthTime(String P95PeakBandwidthTime) {
         this.P95PeakBandwidthTime = P95PeakBandwidthTime;

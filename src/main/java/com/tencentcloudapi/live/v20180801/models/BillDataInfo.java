@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class BillDataInfo extends AbstractModel{
 
     /**
-    * Time point in the format of yyyy-mm-dd HH:MM:SS.
+    * Time point in the format of `yyyy-mm-dd HH:MM:SS`.
     */
     @SerializedName("Time")
     @Expose
@@ -44,23 +44,23 @@ public class BillDataInfo extends AbstractModel{
     private Float Flux;
 
     /**
-    * 
+    * Time point of peak value in the format of `yyyy-mm-dd HH:MM:SS`. As raw data is at a 5-minute granularity, if data at a 1-hour or 1-day granularity is queried, the time point of peak bandwidth value at the corresponding granularity will be returned.
     */
     @SerializedName("PeakTime")
     @Expose
     private String PeakTime;
 
     /**
-     * Get Time point in the format of yyyy-mm-dd HH:MM:SS. 
-     * @return Time Time point in the format of yyyy-mm-dd HH:MM:SS.
+     * Get Time point in the format of `yyyy-mm-dd HH:MM:SS`. 
+     * @return Time Time point in the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public String getTime() {
         return this.Time;
     }
 
     /**
-     * Set Time point in the format of yyyy-mm-dd HH:MM:SS.
-     * @param Time Time point in the format of yyyy-mm-dd HH:MM:SS.
+     * Set Time point in the format of `yyyy-mm-dd HH:MM:SS`.
+     * @param Time Time point in the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public void setTime(String Time) {
         this.Time = Time;
@@ -99,16 +99,16 @@ public class BillDataInfo extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return PeakTime 
+     * Get Time point of peak value in the format of `yyyy-mm-dd HH:MM:SS`. As raw data is at a 5-minute granularity, if data at a 1-hour or 1-day granularity is queried, the time point of peak bandwidth value at the corresponding granularity will be returned. 
+     * @return PeakTime Time point of peak value in the format of `yyyy-mm-dd HH:MM:SS`. As raw data is at a 5-minute granularity, if data at a 1-hour or 1-day granularity is queried, the time point of peak bandwidth value at the corresponding granularity will be returned.
      */
     public String getPeakTime() {
         return this.PeakTime;
     }
 
     /**
-     * Set 
-     * @param PeakTime 
+     * Set Time point of peak value in the format of `yyyy-mm-dd HH:MM:SS`. As raw data is at a 5-minute granularity, if data at a 1-hour or 1-day granularity is queried, the time point of peak bandwidth value at the corresponding granularity will be returned.
+     * @param PeakTime Time point of peak value in the format of `yyyy-mm-dd HH:MM:SS`. As raw data is at a 5-minute granularity, if data at a 1-hour or 1-day granularity is queried, the time point of peak bandwidth value at the corresponding granularity will be returned.
      */
     public void setPeakTime(String PeakTime) {
         this.PeakTime = PeakTime;

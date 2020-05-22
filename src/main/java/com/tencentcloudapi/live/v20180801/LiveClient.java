@@ -625,6 +625,24 @@ Note: only one screencapturing template can be associated with one domain name.
     }
 
     /**
+     *This API is used to query the number of concurrent recording channels, which is applicable to LCB and LVB.
+     * @param req DescribeConcurrentRecordStreamNumRequest
+     * @return DescribeConcurrentRecordStreamNumResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConcurrentRecordStreamNumResponse DescribeConcurrentRecordStreamNum(DescribeConcurrentRecordStreamNumRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeConcurrentRecordStreamNumResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeConcurrentRecordStreamNumResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeConcurrentRecordStreamNum"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the downstream playback data by district and ISP.
      * @param req DescribeGroupProIspPlayInfoListRequest
      * @return DescribeGroupProIspPlayInfoListResponse
@@ -1150,7 +1168,7 @@ Note: Up to 10,000 entries can be queried per page. More data can be obtained by
     }
 
     /**
-     *This API is used to query the average traffic per second, total traffic, and number of total requests by ISP and district in a certain period of time.
+     *This API is used to query the average traffic per second, total traffic, and number of total requests by country/region, district, and ISP in a certain period of time.
      * @param req DescribeProIspPlaySumInfoListRequest
      * @return DescribeProIspPlaySumInfoListResponse
      * @throws TencentCloudSDKException
@@ -1186,7 +1204,7 @@ Note: Up to 10,000 entries can be queried per page. More data can be obtained by
     }
 
     /**
-     *This API is used to query the upstream push quality data by stream ID, including frame rate, bitrate, elapsed time, and encoding format of audio and video files.
+     *This API is used to query the upstream push quality data by stream ID, including frame rate, bitrate, elapsed time, and codec of audio and video files.
      * @param req DescribeStreamPushInfoListRequest
      * @return DescribeStreamPushInfoListResponse
      * @throws TencentCloudSDKException

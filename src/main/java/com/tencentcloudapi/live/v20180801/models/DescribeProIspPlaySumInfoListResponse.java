@@ -72,7 +72,7 @@ public class DescribeProIspPlaySumInfoListResponse extends AbstractModel{
     private Long TotalPage;
 
     /**
-    * List of aggregated playback data by ISP or district.
+    * Aggregated data list by district, ISP, or country/region.
     */
     @SerializedName("DataInfoList")
     @Expose
@@ -205,16 +205,16 @@ public class DescribeProIspPlaySumInfoListResponse extends AbstractModel{
     }
 
     /**
-     * Get List of aggregated playback data by ISP or district. 
-     * @return DataInfoList List of aggregated playback data by ISP or district.
+     * Get Aggregated data list by district, ISP, or country/region. 
+     * @return DataInfoList Aggregated data list by district, ISP, or country/region.
      */
     public ProIspPlaySumInfo [] getDataInfoList() {
         return this.DataInfoList;
     }
 
     /**
-     * Set List of aggregated playback data by ISP or district.
-     * @param DataInfoList List of aggregated playback data by ISP or district.
+     * Set Aggregated data list by district, ISP, or country/region.
+     * @param DataInfoList Aggregated data list by district, ISP, or country/region.
      */
     public void setDataInfoList(ProIspPlaySumInfo [] DataInfoList) {
         this.DataInfoList = DataInfoList;
