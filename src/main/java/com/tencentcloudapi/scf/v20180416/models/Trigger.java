@@ -72,6 +72,13 @@ public class Trigger extends AbstractModel{
     private String CustomArgument;
 
     /**
+    * Trigger status
+    */
+    @SerializedName("AvailableStatus")
+    @Expose
+    private String AvailableStatus;
+
+    /**
      * Get Latest modification time of the trigger 
      * @return ModTime Latest modification time of the trigger
      */
@@ -184,6 +191,22 @@ public class Trigger extends AbstractModel{
     }
 
     /**
+     * Get Trigger status 
+     * @return AvailableStatus Trigger status
+     */
+    public String getAvailableStatus() {
+        return this.AvailableStatus;
+    }
+
+    /**
+     * Set Trigger status
+     * @param AvailableStatus Trigger status
+     */
+    public void setAvailableStatus(String AvailableStatus) {
+        this.AvailableStatus = AvailableStatus;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class Trigger extends AbstractModel{
         this.setParamSimple(map, prefix + "AddTime", this.AddTime);
         this.setParamSimple(map, prefix + "Enable", this.Enable);
         this.setParamSimple(map, prefix + "CustomArgument", this.CustomArgument);
+        this.setParamSimple(map, prefix + "AvailableStatus", this.AvailableStatus);
 
     }
 }

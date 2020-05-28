@@ -52,7 +52,7 @@ You must specify either a task ID or a starting time.
     private String Keyword;
 
     /**
-    * Offset for paged queries. Default value: 0 (the first page)
+    * Offset for paginated queries. Default value: 0
     */
     @SerializedName("Offset")
     @Expose
@@ -154,16 +154,16 @@ You must specify either a task ID or a starting time.
     }
 
     /**
-     * Get Offset for paged queries. Default value: 0 (the first page) 
-     * @return Offset Offset for paged queries. Default value: 0 (the first page)
+     * Get Offset for paginated queries. Default value: 0 
+     * @return Offset Offset for paginated queries. Default value: 0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset for paged queries. Default value: 0 (the first page)
-     * @param Offset Offset for paged queries. Default value: 0 (the first page)
+     * Set Offset for paginated queries. Default value: 0
+     * @param Offset Offset for paginated queries. Default value: 0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

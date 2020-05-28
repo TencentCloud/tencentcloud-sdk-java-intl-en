@@ -62,6 +62,25 @@ You can manually configure the function after replication as required.
     }
 
     /**
+     *This API is used to create an alias for a function version. You can use the alias to mark a specific function version such as DEV/RELEASE. You can also modify the version pointed to by the alias at any time.
+An alias must point to a master version and can point to an additional version at the same time. If you specify an alias when invoking a function, the request will be sent to the versions pointed to by the alias. You can configure the ratio between the master version and additional version during request sending.
+     * @param req CreateAliasRequest
+     * @return CreateAliasResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAliasResponse CreateAlias(CreateAliasRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAliasResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAliasResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateAlias"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a function based on the input parameters.
      * @param req CreateFunctionRequest
      * @return CreateFunctionResponse
@@ -116,6 +135,24 @@ You can manually configure the function after replication as required.
     }
 
     /**
+     *This API is used to delete an alias of a function version.
+     * @param req DeleteAliasRequest
+     * @return DeleteAliasResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAliasResponse DeleteAlias(DeleteAliasRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAliasResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAliasResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteAlias"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete a function based on the input parameters.
      * @param req DeleteFunctionRequest
      * @return DeleteFunctionResponse
@@ -127,6 +164,24 @@ You can manually configure the function after replication as required.
                 Type type = new TypeToken<JsonResponseModel<DeleteFunctionResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteFunction"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a specified version of a specified layer. The deleted version cannot be associated with a function, but the deletion does not affect functions that are referencing this layer.
+     * @param req DeleteLayerVersionRequest
+     * @return DeleteLayerVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLayerVersionResponse DeleteLayerVersion(DeleteLayerVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLayerVersionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLayerVersionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteLayerVersion"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -163,6 +218,24 @@ You can manually configure the function after replication as required.
                 Type type = new TypeToken<JsonResponseModel<DeleteTriggerResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteTrigger"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the alias details such as the name, description, version, and routing information.
+     * @param req GetAliasRequest
+     * @return GetAliasResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetAliasResponse GetAlias(GetAliasRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetAliasResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetAliasResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetAlias"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -224,6 +297,24 @@ You can manually configure the function after replication as required.
     }
 
     /**
+     *This API is used to get the layer version details, including links used to download files in the layer.
+     * @param req GetLayerVersionRequest
+     * @return GetLayerVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetLayerVersionResponse GetLayerVersion(GetLayerVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetLayerVersionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetLayerVersionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetLayerVersion"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to run a function.
      * @param req InvokeRequest
      * @return InvokeResponse
@@ -235,6 +326,24 @@ You can manually configure the function after replication as required.
                 Type type = new TypeToken<JsonResponseModel<InvokeResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "Invoke"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to return the list of all aliases under a function. You can filter them by the specific function version.
+     * @param req ListAliasesRequest
+     * @return ListAliasesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListAliasesResponse ListAliases(ListAliasesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListAliasesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListAliasesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ListAliases"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -260,6 +369,42 @@ You can manually configure the function after replication as required.
     }
 
     /**
+     *This API is used to get the information of all versions of a specified layer.
+     * @param req ListLayerVersionsRequest
+     * @return ListLayerVersionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListLayerVersionsResponse ListLayerVersions(ListLayerVersionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListLayerVersionsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListLayerVersionsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ListLayerVersions"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to return the list of all layers, including the information of the latest version of each layer. You can filter them by the compatible runtime.
+     * @param req ListLayersRequest
+     * @return ListLayersResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListLayersResponse ListLayers(ListLayersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListLayersResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListLayersResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ListLayers"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to display a namespace list.
      * @param req ListNamespacesRequest
      * @return ListNamespacesResponse
@@ -271,6 +416,24 @@ You can manually configure the function after replication as required.
                 Type type = new TypeToken<JsonResponseModel<ListNamespacesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ListNamespaces"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the function trigger list.
+     * @param req ListTriggersRequest
+     * @return ListTriggersResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListTriggersResponse ListTriggers(ListTriggersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListTriggersResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListTriggersResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ListTriggers"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -296,6 +459,24 @@ You can manually configure the function after replication as required.
     }
 
     /**
+     *This API is used to create a version for a layer by using the given .zip file or COS object. Each time this API is called with the same layer name, a new version will be generated.
+     * @param req PublishLayerVersionRequest
+     * @return PublishLayerVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public PublishLayerVersionResponse PublishLayerVersion(PublishLayerVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PublishLayerVersionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<PublishLayerVersionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "PublishLayerVersion"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used for users to release a new version of the function.
      * @param req PublishVersionRequest
      * @return PublishVersionResponse
@@ -307,6 +488,24 @@ You can manually configure the function after replication as required.
                 Type type = new TypeToken<JsonResponseModel<PublishVersionResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "PublishVersion"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to update the configuration of an alias.
+     * @param req UpdateAliasRequest
+     * @return UpdateAliasResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateAliasResponse UpdateAlias(UpdateAliasRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateAliasResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateAliasResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UpdateAlias"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

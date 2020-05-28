@@ -72,14 +72,14 @@ public class DescribePolicyGroupInfoResponse extends AbstractModel{
     private String LastEditUin;
 
     /**
-    * Last update time.
+    * Last edited time.
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * Regions that support this policy.
+    * Regions supported by this policy.
     */
     @SerializedName("Region")
     @Expose
@@ -133,7 +133,7 @@ Note: This field may return null, indicating that no valid value was found.
     private DescribePolicyGroupInfoConditionTpl ConditionsTemp;
 
     /**
-    * Whether the policy can be set as the default policy.
+    * Whether the policy can be configured as the default policy.
     */
     @SerializedName("CanSetDefault")
     @Expose
@@ -267,32 +267,32 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Last update time. 
-     * @return UpdateTime Last update time.
+     * Get Last edited time. 
+     * @return UpdateTime Last edited time.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Last update time.
-     * @param UpdateTime Last update time.
+     * Set Last edited time.
+     * @param UpdateTime Last edited time.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Regions that support this policy. 
-     * @return Region Regions that support this policy.
+     * Get Regions supported by this policy. 
+     * @return Region Regions supported by this policy.
      */
     public String [] getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Regions that support this policy.
-     * @param Region Regions that support this policy.
+     * Set Regions supported by this policy.
+     * @param Region Regions supported by this policy.
      */
     public void setRegion(String [] Region) {
         this.Region = Region;
@@ -415,16 +415,16 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Whether the policy can be set as the default policy. 
-     * @return CanSetDefault Whether the policy can be set as the default policy.
+     * Get Whether the policy can be configured as the default policy. 
+     * @return CanSetDefault Whether the policy can be configured as the default policy.
      */
     public Boolean getCanSetDefault() {
         return this.CanSetDefault;
     }
 
     /**
-     * Set Whether the policy can be set as the default policy.
-     * @param CanSetDefault Whether the policy can be set as the default policy.
+     * Set Whether the policy can be configured as the default policy.
+     * @param CanSetDefault Whether the policy can be configured as the default policy.
      */
     public void setCanSetDefault(Boolean CanSetDefault) {
         this.CanSetDefault = CanSetDefault;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeProductEventListRequest extends AbstractModel{
 
     /**
-    * API module name. It is fixed to monitor.
+    * API component name. It is fixed to monitor.
     */
     @SerializedName("Module")
     @Expose
@@ -65,7 +65,7 @@ public class DescribeProductEventListRequest extends AbstractModel{
     private String [] RegionList;
 
     /**
-    * Filter by event type. Valid values: ["status_change","abnormal"], which indicate events whose statuses have changed and exceptional events respectively.
+    * Filter by event type. Valid values: ["status_change","abnormal"], which indicate events whose statuses have changed and events with exceptions respectively.
     */
     @SerializedName("Type")
     @Expose
@@ -100,7 +100,7 @@ public class DescribeProductEventListRequest extends AbstractModel{
     private String TimeOrder;
 
     /**
-    * Start time, which is the timestamp one day ago by default.
+    * Start time, which is the timestamp one day prior by default.
     */
     @SerializedName("StartTime")
     @Expose
@@ -128,16 +128,16 @@ public class DescribeProductEventListRequest extends AbstractModel{
     private Long Limit;
 
     /**
-     * Get API module name. It is fixed to monitor. 
-     * @return Module API module name. It is fixed to monitor.
+     * Get API component name. It is fixed to monitor. 
+     * @return Module API component name. It is fixed to monitor.
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * Set API module name. It is fixed to monitor.
-     * @param Module API module name. It is fixed to monitor.
+     * Set API component name. It is fixed to monitor.
+     * @param Module API component name. It is fixed to monitor.
      */
     public void setModule(String Module) {
         this.Module = Module;
@@ -224,16 +224,16 @@ public class DescribeProductEventListRequest extends AbstractModel{
     }
 
     /**
-     * Get Filter by event type. Valid values: ["status_change","abnormal"], which indicate events whose statuses have changed and exceptional events respectively. 
-     * @return Type Filter by event type. Valid values: ["status_change","abnormal"], which indicate events whose statuses have changed and exceptional events respectively.
+     * Get Filter by event type. Valid values: ["status_change","abnormal"], which indicate events whose statuses have changed and events with exceptions respectively. 
+     * @return Type Filter by event type. Valid values: ["status_change","abnormal"], which indicate events whose statuses have changed and events with exceptions respectively.
      */
     public String [] getType() {
         return this.Type;
     }
 
     /**
-     * Set Filter by event type. Valid values: ["status_change","abnormal"], which indicate events whose statuses have changed and exceptional events respectively.
-     * @param Type Filter by event type. Valid values: ["status_change","abnormal"], which indicate events whose statuses have changed and exceptional events respectively.
+     * Set Filter by event type. Valid values: ["status_change","abnormal"], which indicate events whose statuses have changed and events with exceptions respectively.
+     * @param Type Filter by event type. Valid values: ["status_change","abnormal"], which indicate events whose statuses have changed and events with exceptions respectively.
      */
     public void setType(String [] Type) {
         this.Type = Type;
@@ -304,16 +304,16 @@ public class DescribeProductEventListRequest extends AbstractModel{
     }
 
     /**
-     * Get Start time, which is the timestamp one day ago by default. 
-     * @return StartTime Start time, which is the timestamp one day ago by default.
+     * Get Start time, which is the timestamp one day prior by default. 
+     * @return StartTime Start time, which is the timestamp one day prior by default.
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time, which is the timestamp one day ago by default.
-     * @param StartTime Start time, which is the timestamp one day ago by default.
+     * Set Start time, which is the timestamp one day prior by default.
+     * @param StartTime Start time, which is the timestamp one day prior by default.
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;

@@ -30,7 +30,7 @@ public class BindingPolicyObjectRequest extends AbstractModel{
     private Long GroupId;
 
     /**
-    * Required. It is fixed to monitor.
+    * Required. The value is fixed to monitor.
     */
     @SerializedName("Module")
     @Expose
@@ -67,16 +67,16 @@ public class BindingPolicyObjectRequest extends AbstractModel{
     }
 
     /**
-     * Get Required. It is fixed to monitor. 
-     * @return Module Required. It is fixed to monitor.
+     * Get Required. The value is fixed to monitor. 
+     * @return Module Required. The value is fixed to monitor.
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * Set Required. It is fixed to monitor.
-     * @param Module Required. It is fixed to monitor.
+     * Set Required. The value is fixed to monitor.
+     * @param Module Required. The value is fixed to monitor.
      */
     public void setModule(String Module) {
         this.Module = Module;

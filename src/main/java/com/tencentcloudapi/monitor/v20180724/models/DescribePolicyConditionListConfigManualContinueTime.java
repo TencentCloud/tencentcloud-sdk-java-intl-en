@@ -31,7 +31,7 @@ Note: This field may return null, indicating that no valid value was found.
     private Long Default;
 
     /**
-    * Optional duration in seconds.
+    * Custom durations in seconds.
 Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("Keys")
@@ -66,9 +66,9 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Optional duration in seconds.
+     * Get Custom durations in seconds.
 Note: This field may return null, indicating that no valid value was found. 
-     * @return Keys Optional duration in seconds.
+     * @return Keys Custom durations in seconds.
 Note: This field may return null, indicating that no valid value was found.
      */
     public Long [] getKeys() {
@@ -76,9 +76,9 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Set Optional duration in seconds.
+     * Set Custom durations in seconds.
 Note: This field may return null, indicating that no valid value was found.
-     * @param Keys Optional duration in seconds.
+     * @param Keys Custom durations in seconds.
 Note: This field may return null, indicating that no valid value was found.
      */
     public void setKeys(Long [] Keys) {

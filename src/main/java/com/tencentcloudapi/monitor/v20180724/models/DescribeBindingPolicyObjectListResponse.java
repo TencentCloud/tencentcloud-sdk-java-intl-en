@@ -45,7 +45,7 @@ Note: This field may return null, indicating that no valid value was found.
     private Long NoShieldedSum;
 
     /**
-    * Bound instance group information. You do not need to set this parameter if no instance group is bound.
+    * Bound instance group information. This parameter is not configured if no instance group is bound.
 Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("InstanceGroup")
@@ -112,9 +112,9 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Bound instance group information. You do not need to set this parameter if no instance group is bound.
+     * Get Bound instance group information. This parameter is not configured if no instance group is bound.
 Note: This field may return null, indicating that no valid value was found. 
-     * @return InstanceGroup Bound instance group information. You do not need to set this parameter if no instance group is bound.
+     * @return InstanceGroup Bound instance group information. This parameter is not configured if no instance group is bound.
 Note: This field may return null, indicating that no valid value was found.
      */
     public DescribeBindingPolicyObjectListInstanceGroup getInstanceGroup() {
@@ -122,9 +122,9 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Set Bound instance group information. You do not need to set this parameter if no instance group is bound.
+     * Set Bound instance group information. This parameter is not configured if no instance group is bound.
 Note: This field may return null, indicating that no valid value was found.
-     * @param InstanceGroup Bound instance group information. You do not need to set this parameter if no instance group is bound.
+     * @param InstanceGroup Bound instance group information. This parameter is not configured if no instance group is bound.
 Note: This field may return null, indicating that no valid value was found.
      */
     public void setInstanceGroup(DescribeBindingPolicyObjectListInstanceGroup InstanceGroup) {

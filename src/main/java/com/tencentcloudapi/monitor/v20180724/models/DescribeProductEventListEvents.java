@@ -31,7 +31,7 @@ Note: This field may return null, indicating that no valid value was found.
     private Long EventId;
 
     /**
-    * Chinese event name.
+    * Event name in Chinese.
 Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("EventCName")
@@ -39,7 +39,7 @@ Note: This field may return null, indicating that no valid value was found.
     private String EventCName;
 
     /**
-    * English event name.
+    * Event name in English.
 Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("EventEName")
@@ -55,7 +55,7 @@ Note: This field may return null, indicating that no valid value was found.
     private String EventName;
 
     /**
-    * Chinese product name.
+    * Product name in Chinese.
 Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("ProductCName")
@@ -63,7 +63,7 @@ Note: This field may return null, indicating that no valid value was found.
     private String ProductCName;
 
     /**
-    * English product name.
+    * Product name in English.
 Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("ProductEName")
@@ -203,9 +203,9 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Chinese event name.
+     * Get Event name in Chinese.
 Note: This field may return null, indicating that no valid value was found. 
-     * @return EventCName Chinese event name.
+     * @return EventCName Event name in Chinese.
 Note: This field may return null, indicating that no valid value was found.
      */
     public String getEventCName() {
@@ -213,9 +213,9 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Set Chinese event name.
+     * Set Event name in Chinese.
 Note: This field may return null, indicating that no valid value was found.
-     * @param EventCName Chinese event name.
+     * @param EventCName Event name in Chinese.
 Note: This field may return null, indicating that no valid value was found.
      */
     public void setEventCName(String EventCName) {
@@ -223,9 +223,9 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get English event name.
+     * Get Event name in English.
 Note: This field may return null, indicating that no valid value was found. 
-     * @return EventEName English event name.
+     * @return EventEName Event name in English.
 Note: This field may return null, indicating that no valid value was found.
      */
     public String getEventEName() {
@@ -233,9 +233,9 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Set English event name.
+     * Set Event name in English.
 Note: This field may return null, indicating that no valid value was found.
-     * @param EventEName English event name.
+     * @param EventEName Event name in English.
 Note: This field may return null, indicating that no valid value was found.
      */
     public void setEventEName(String EventEName) {
@@ -263,9 +263,9 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Chinese product name.
+     * Get Product name in Chinese.
 Note: This field may return null, indicating that no valid value was found. 
-     * @return ProductCName Chinese product name.
+     * @return ProductCName Product name in Chinese.
 Note: This field may return null, indicating that no valid value was found.
      */
     public String getProductCName() {
@@ -273,9 +273,9 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Set Chinese product name.
+     * Set Product name in Chinese.
 Note: This field may return null, indicating that no valid value was found.
-     * @param ProductCName Chinese product name.
+     * @param ProductCName Product name in Chinese.
 Note: This field may return null, indicating that no valid value was found.
      */
     public void setProductCName(String ProductCName) {
@@ -283,9 +283,9 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get English product name.
+     * Get Product name in English.
 Note: This field may return null, indicating that no valid value was found. 
-     * @return ProductEName English product name.
+     * @return ProductEName Product name in English.
 Note: This field may return null, indicating that no valid value was found.
      */
     public String getProductEName() {
@@ -293,9 +293,9 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Set English product name.
+     * Set Product name in English.
 Note: This field may return null, indicating that no valid value was found.
-     * @param ProductEName English product name.
+     * @param ProductEName Product name in English.
 Note: This field may return null, indicating that no valid value was found.
      */
     public void setProductEName(String ProductEName) {

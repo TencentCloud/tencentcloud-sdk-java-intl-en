@@ -274,11 +274,29 @@ If you need to call a lot of metrics and objects, there may be cases where the c
     }
 
     /**
-     *This API is used to customize monitoring data to be reported. The default API request rate limit is 50 requests/sec.
+     *This API is used to update policy group.
+     * @param req ModifyPolicyGroupRequest
+     * @return ModifyPolicyGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPolicyGroupResponse ModifyPolicyGroup(ModifyPolicyGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyPolicyGroupResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyPolicyGroupResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyPolicyGroup"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *The default API request rate limit is 50 requests/sec.
 The default upper limit on metrics of a single tenant is 100.
 A maximum of 30 metric/value pairs can be reported at a time. When an error is returned for a request, no metrics/values in the request will be saved.
 
-The reporting timestamp is the timestamp when you want to save the data. It is recommended that you construct a timestamp at integer minutes.
+The reporting timestamp is the timestamp when you want to save the data. We recommend that you construct a timestamp at integer minutes.
 The time range of a timestamp is from 300 seconds before the current time to the current time.
 The data of the same IP metric/value pair must be reported by minute in chronological order.
      * @param req PutMonitorDataRequest
@@ -298,7 +316,7 @@ The data of the same IP metric/value pair must be reported by minute in chronolo
     }
 
     /**
-     *This API is used to send a custom alarm message.
+     *This API is used to send a custom alarm notification.
      * @param req SendCustomAlarmMsgRequest
      * @return SendCustomAlarmMsgResponse
      * @throws TencentCloudSDKException

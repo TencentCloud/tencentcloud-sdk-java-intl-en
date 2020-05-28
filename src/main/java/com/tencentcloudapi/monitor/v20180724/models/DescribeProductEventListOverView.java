@@ -39,7 +39,7 @@ Note: This field may return null, indicating that no valid value was found.
     private Long UnConfigAlarmAmount;
 
     /**
-    * Number of exceptional events.
+    * Number of events with exceptions.
 Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("UnNormalEventAmount")
@@ -95,9 +95,9 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Number of exceptional events.
+     * Get Number of events with exceptions.
 Note: This field may return null, indicating that no valid value was found. 
-     * @return UnNormalEventAmount Number of exceptional events.
+     * @return UnNormalEventAmount Number of events with exceptions.
 Note: This field may return null, indicating that no valid value was found.
      */
     public Long getUnNormalEventAmount() {
@@ -105,9 +105,9 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Set Number of exceptional events.
+     * Set Number of events with exceptions.
 Note: This field may return null, indicating that no valid value was found.
-     * @param UnNormalEventAmount Number of exceptional events.
+     * @param UnNormalEventAmount Number of events with exceptions.
 Note: This field may return null, indicating that no valid value was found.
      */
     public void setUnNormalEventAmount(Long UnNormalEventAmount) {

@@ -23,11 +23,39 @@ import java.util.HashMap;
 public class UpdatePolicyResponse extends AbstractModel{
 
     /**
+    * Policy ID
+Note: This field may return null, indicating that no valid value was found.
+    */
+    @SerializedName("PolicyId")
+    @Expose
+    private Long PolicyId;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get Policy ID
+Note: This field may return null, indicating that no valid value was found. 
+     * @return PolicyId Policy ID
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public Long getPolicyId() {
+        return this.PolicyId;
+    }
+
+    /**
+     * Set Policy ID
+Note: This field may return null, indicating that no valid value was found.
+     * @param PolicyId Policy ID
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public void setPolicyId(Long PolicyId) {
+        this.PolicyId = PolicyId;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -49,6 +77,7 @@ public class UpdatePolicyResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

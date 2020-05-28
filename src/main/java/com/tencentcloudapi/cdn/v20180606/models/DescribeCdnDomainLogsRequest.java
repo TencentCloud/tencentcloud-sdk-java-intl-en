@@ -44,7 +44,7 @@ public class DescribeCdnDomainLogsRequest extends AbstractModel{
     private String EndTime;
 
     /**
-    * Offset for paged queries. Default value: 0 (the first page)
+    * Offset for paginated queries. Default value: 0
     */
     @SerializedName("Offset")
     @Expose
@@ -67,6 +67,14 @@ Default value: `mainland`.
     @SerializedName("Area")
     @Expose
     private String Area;
+
+    /**
+    * The type of log to be downloaded.
+access: access logs
+    */
+    @SerializedName("LogType")
+    @Expose
+    private String LogType;
 
     /**
      * Get Specifies a domain name for the query 
@@ -117,16 +125,16 @@ Default value: `mainland`.
     }
 
     /**
-     * Get Offset for paged queries. Default value: 0 (the first page) 
-     * @return Offset Offset for paged queries. Default value: 0 (the first page)
+     * Get Offset for paginated queries. Default value: 0 
+     * @return Offset Offset for paginated queries. Default value: 0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset for paged queries. Default value: 0 (the first page)
-     * @param Offset Offset for paged queries. Default value: 0 (the first page)
+     * Set Offset for paginated queries. Default value: 0
+     * @param Offset Offset for paginated queries. Default value: 0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -181,6 +189,26 @@ Default value: `mainland`.
     }
 
     /**
+     * Get The type of log to be downloaded.
+access: access logs 
+     * @return LogType The type of log to be downloaded.
+access: access logs
+     */
+    public String getLogType() {
+        return this.LogType;
+    }
+
+    /**
+     * Set The type of log to be downloaded.
+access: access logs
+     * @param LogType The type of log to be downloaded.
+access: access logs
+     */
+    public void setLogType(String LogType) {
+        this.LogType = LogType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -190,6 +218,7 @@ Default value: `mainland`.
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamSimple(map, prefix + "LogType", this.LogType);
 
     }
 }

@@ -37,7 +37,7 @@ public class CreatePolicyGroupRequest extends AbstractModel{
     private String Module;
 
     /**
-    * Name of the view to which the policy group belongs. If the policy group is created based on a template, this parameter may not be set.
+    * Name of the view to which the policy group belongs. If the policy group is created based on a template, this parameter is optional.
     */
     @SerializedName("ViewName")
     @Expose
@@ -72,14 +72,14 @@ public class CreatePolicyGroupRequest extends AbstractModel{
     private String Remark;
 
     /**
-    * Insertion time in the format of Unix timestamp. If you do not set this parameter, the background processing time is used.
+    * Insertion time in the format of Unix timestamp. If this parameter is not configured, the backend processing time is used.
     */
     @SerializedName("InsertTime")
     @Expose
     private Long InsertTime;
 
     /**
-    * Alarm threshold rule in the policy group.
+    * Alarm threshold rules in the policy group.
     */
     @SerializedName("Conditions")
     @Expose
@@ -93,14 +93,14 @@ public class CreatePolicyGroupRequest extends AbstractModel{
     private CreatePolicyGroupEventCondition [] EventConditions;
 
     /**
-    * Whether to invoke at the background. Only when the value is 1, the rules in the background pull policy template are filled into the Conditions and EventConditions fields.
+    * Whether it is a backend call. If the value is 1, rules from the policy template will be used to fill in the `Conditions` and `EventConditions` fields.
     */
     @SerializedName("BackEndCall")
     @Expose
     private Long BackEndCall;
 
     /**
-    * The “AND” and “OR” rules for alarm metrics. The value 0 indicates “OR”, which means that an alarm will be reported when any rule is met. The value 1 indicates “AND”, which means that an alarm will be reported only when all rules are met.
+    * The “AND” and “OR” rules for alarm metrics. The value 0 indicates “OR”, which means that an alarm will be triggered when any rule is met. The value 1 indicates “AND”, which means that an alarm will be triggered only when all rules are met.
     */
     @SerializedName("IsUnionRule")
     @Expose
@@ -139,16 +139,16 @@ public class CreatePolicyGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get Name of the view to which the policy group belongs. If the policy group is created based on a template, this parameter may not be set. 
-     * @return ViewName Name of the view to which the policy group belongs. If the policy group is created based on a template, this parameter may not be set.
+     * Get Name of the view to which the policy group belongs. If the policy group is created based on a template, this parameter is optional. 
+     * @return ViewName Name of the view to which the policy group belongs. If the policy group is created based on a template, this parameter is optional.
      */
     public String getViewName() {
         return this.ViewName;
     }
 
     /**
-     * Set Name of the view to which the policy group belongs. If the policy group is created based on a template, this parameter may not be set.
-     * @param ViewName Name of the view to which the policy group belongs. If the policy group is created based on a template, this parameter may not be set.
+     * Set Name of the view to which the policy group belongs. If the policy group is created based on a template, this parameter is optional.
+     * @param ViewName Name of the view to which the policy group belongs. If the policy group is created based on a template, this parameter is optional.
      */
     public void setViewName(String ViewName) {
         this.ViewName = ViewName;
@@ -219,32 +219,32 @@ public class CreatePolicyGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get Insertion time in the format of Unix timestamp. If you do not set this parameter, the background processing time is used. 
-     * @return InsertTime Insertion time in the format of Unix timestamp. If you do not set this parameter, the background processing time is used.
+     * Get Insertion time in the format of Unix timestamp. If this parameter is not configured, the backend processing time is used. 
+     * @return InsertTime Insertion time in the format of Unix timestamp. If this parameter is not configured, the backend processing time is used.
      */
     public Long getInsertTime() {
         return this.InsertTime;
     }
 
     /**
-     * Set Insertion time in the format of Unix timestamp. If you do not set this parameter, the background processing time is used.
-     * @param InsertTime Insertion time in the format of Unix timestamp. If you do not set this parameter, the background processing time is used.
+     * Set Insertion time in the format of Unix timestamp. If this parameter is not configured, the backend processing time is used.
+     * @param InsertTime Insertion time in the format of Unix timestamp. If this parameter is not configured, the backend processing time is used.
      */
     public void setInsertTime(Long InsertTime) {
         this.InsertTime = InsertTime;
     }
 
     /**
-     * Get Alarm threshold rule in the policy group. 
-     * @return Conditions Alarm threshold rule in the policy group.
+     * Get Alarm threshold rules in the policy group. 
+     * @return Conditions Alarm threshold rules in the policy group.
      */
     public CreatePolicyGroupCondition [] getConditions() {
         return this.Conditions;
     }
 
     /**
-     * Set Alarm threshold rule in the policy group.
-     * @param Conditions Alarm threshold rule in the policy group.
+     * Set Alarm threshold rules in the policy group.
+     * @param Conditions Alarm threshold rules in the policy group.
      */
     public void setConditions(CreatePolicyGroupCondition [] Conditions) {
         this.Conditions = Conditions;
@@ -267,32 +267,32 @@ public class CreatePolicyGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to invoke at the background. Only when the value is 1, the rules in the background pull policy template are filled into the Conditions and EventConditions fields. 
-     * @return BackEndCall Whether to invoke at the background. Only when the value is 1, the rules in the background pull policy template are filled into the Conditions and EventConditions fields.
+     * Get Whether it is a backend call. If the value is 1, rules from the policy template will be used to fill in the `Conditions` and `EventConditions` fields. 
+     * @return BackEndCall Whether it is a backend call. If the value is 1, rules from the policy template will be used to fill in the `Conditions` and `EventConditions` fields.
      */
     public Long getBackEndCall() {
         return this.BackEndCall;
     }
 
     /**
-     * Set Whether to invoke at the background. Only when the value is 1, the rules in the background pull policy template are filled into the Conditions and EventConditions fields.
-     * @param BackEndCall Whether to invoke at the background. Only when the value is 1, the rules in the background pull policy template are filled into the Conditions and EventConditions fields.
+     * Set Whether it is a backend call. If the value is 1, rules from the policy template will be used to fill in the `Conditions` and `EventConditions` fields.
+     * @param BackEndCall Whether it is a backend call. If the value is 1, rules from the policy template will be used to fill in the `Conditions` and `EventConditions` fields.
      */
     public void setBackEndCall(Long BackEndCall) {
         this.BackEndCall = BackEndCall;
     }
 
     /**
-     * Get The “AND” and “OR” rules for alarm metrics. The value 0 indicates “OR”, which means that an alarm will be reported when any rule is met. The value 1 indicates “AND”, which means that an alarm will be reported only when all rules are met. 
-     * @return IsUnionRule The “AND” and “OR” rules for alarm metrics. The value 0 indicates “OR”, which means that an alarm will be reported when any rule is met. The value 1 indicates “AND”, which means that an alarm will be reported only when all rules are met.
+     * Get The “AND” and “OR” rules for alarm metrics. The value 0 indicates “OR”, which means that an alarm will be triggered when any rule is met. The value 1 indicates “AND”, which means that an alarm will be triggered only when all rules are met. 
+     * @return IsUnionRule The “AND” and “OR” rules for alarm metrics. The value 0 indicates “OR”, which means that an alarm will be triggered when any rule is met. The value 1 indicates “AND”, which means that an alarm will be triggered only when all rules are met.
      */
     public Long getIsUnionRule() {
         return this.IsUnionRule;
     }
 
     /**
-     * Set The “AND” and “OR” rules for alarm metrics. The value 0 indicates “OR”, which means that an alarm will be reported when any rule is met. The value 1 indicates “AND”, which means that an alarm will be reported only when all rules are met.
-     * @param IsUnionRule The “AND” and “OR” rules for alarm metrics. The value 0 indicates “OR”, which means that an alarm will be reported when any rule is met. The value 1 indicates “AND”, which means that an alarm will be reported only when all rules are met.
+     * Set The “AND” and “OR” rules for alarm metrics. The value 0 indicates “OR”, which means that an alarm will be triggered when any rule is met. The value 1 indicates “AND”, which means that an alarm will be triggered only when all rules are met.
+     * @param IsUnionRule The “AND” and “OR” rules for alarm metrics. The value 0 indicates “OR”, which means that an alarm will be triggered when any rule is met. The value 1 indicates “AND”, which means that an alarm will be triggered only when all rules are met.
      */
     public void setIsUnionRule(Long IsUnionRule) {
         this.IsUnionRule = IsUnionRule;

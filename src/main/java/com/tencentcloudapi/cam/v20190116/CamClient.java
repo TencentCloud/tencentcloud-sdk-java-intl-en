@@ -182,6 +182,24 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *This API is used to add a policy version. After creating a policy version, you can easily change the policy by changing the policy version.
+     * @param req CreatePolicyVersionRequest
+     * @return CreatePolicyVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePolicyVersionResponse CreatePolicyVersion(CreatePolicyVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePolicyVersionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePolicyVersionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreatePolicyVersion"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (CreateRole) is used to create a role.
      * @param req CreateRoleRequest
      * @return CreateRoleResponse
@@ -211,6 +229,24 @@ public class CamClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateSAMLProviderResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateSAMLProvider"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a service-linked role.
+     * @param req CreateServiceLinkedRoleRequest
+     * @return CreateServiceLinkedRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateServiceLinkedRoleResponse CreateServiceLinkedRole(CreateServiceLinkedRoleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateServiceLinkedRoleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateServiceLinkedRoleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateServiceLinkedRole"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -254,6 +290,24 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete a policy version of a policy.
+     * @param req DeletePolicyVersionRequest
+     * @return DeletePolicyVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePolicyVersionResponse DeletePolicyVersion(DeletePolicyVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeletePolicyVersionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeletePolicyVersionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeletePolicyVersion"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (DeleteRole) is used to delete a specified role.
      * @param req DeleteRoleRequest
      * @return DeleteRoleResponse
@@ -283,6 +337,24 @@ public class CamClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteSAMLProviderResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteSAMLProvider"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a service-linked role.
+     * @param req DeleteServiceLinkedRoleRequest
+     * @return DeleteServiceLinkedRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteServiceLinkedRoleResponse DeleteServiceLinkedRole(DeleteServiceLinkedRoleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteServiceLinkedRoleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteServiceLinkedRoleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteServiceLinkedRole"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -434,6 +506,24 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query policy version details.
+     * @param req GetPolicyVersionRequest
+     * @return GetPolicyVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetPolicyVersionResponse GetPolicyVersion(GetPolicyVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetPolicyVersionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetPolicyVersionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetPolicyVersion"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (GetRole) is used to get the details of a specified role.
      * @param req GetRoleRequest
      * @return GetRoleResponse
@@ -463,6 +553,24 @@ public class CamClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<GetSAMLProviderResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "GetSAMLProvider"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the status of the service-linked role deletion based on the `TaskId`
+     * @param req GetServiceLinkedRoleDeletionStatusRequest
+     * @return GetServiceLinkedRoleDeletionStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetServiceLinkedRoleDeletionStatusResponse GetServiceLinkedRoleDeletionStatus(GetServiceLinkedRoleDeletionStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetServiceLinkedRoleDeletionStatusResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetServiceLinkedRoleDeletionStatusResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetServiceLinkedRoleDeletionStatus"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -614,7 +722,7 @@ public class CamClient extends AbstractClient{
     }
 
     /**
-     *This API (ListPolicies) is used to query the list of policies.
+     *This API is used to query the policy list.
      * @param req ListPoliciesRequest
      * @return ListPoliciesResponse
      * @throws TencentCloudSDKException
@@ -625,6 +733,24 @@ public class CamClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ListPoliciesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ListPolicies"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the list of policy versions.
+     * @param req ListPolicyVersionsRequest
+     * @return ListPolicyVersionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListPolicyVersionsResponse ListPolicyVersions(ListPolicyVersionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListPolicyVersionsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListPolicyVersionsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ListPolicyVersions"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -704,6 +830,42 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *This API is used to set the operative policy version.
+     * @param req SetDefaultPolicyVersionRequest
+     * @return SetDefaultPolicyVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetDefaultPolicyVersionResponse SetDefaultPolicyVersion(SetDefaultPolicyVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetDefaultPolicyVersionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetDefaultPolicyVersionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SetDefaultPolicyVersion"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to set account verification for login and sensitive operations for sub-users.
+     * @param req SetMfaFlagRequest
+     * @return SetMfaFlagResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetMfaFlagResponse SetMfaFlag(SetMfaFlagRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetMfaFlagResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetMfaFlagResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SetMfaFlag"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (UpdateAssumeRolePolicy) is used to modify the trust policy of a role.
      * @param req UpdateAssumeRolePolicyRequest
      * @return UpdateAssumeRolePolicyResponse
@@ -740,7 +902,8 @@ public class CamClient extends AbstractClient{
     }
 
     /**
-     *This API (UpdatePolicy) is used to update a policy.
+     *This API is used to update a policy.
+This API will update the default version of an existing policy instead of creating a new one. If no policy exists, a default version will be created.
      * @param req UpdatePolicyRequest
      * @return UpdatePolicyResponse
      * @throws TencentCloudSDKException

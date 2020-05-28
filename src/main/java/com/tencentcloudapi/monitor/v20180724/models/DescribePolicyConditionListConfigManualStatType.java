@@ -39,7 +39,7 @@ Note: This field may return null, indicating that no valid value was found.
     private String P10;
 
     /**
-    * Data aggregation method in a period of 1 second.
+    * Data aggregation method in a period of 1 minute.
 Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("P60")
@@ -127,9 +127,9 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Data aggregation method in a period of 1 second.
+     * Get Data aggregation method in a period of 1 minute.
 Note: This field may return null, indicating that no valid value was found. 
-     * @return P60 Data aggregation method in a period of 1 second.
+     * @return P60 Data aggregation method in a period of 1 minute.
 Note: This field may return null, indicating that no valid value was found.
      */
     public String getP60() {
@@ -137,9 +137,9 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Set Data aggregation method in a period of 1 second.
+     * Set Data aggregation method in a period of 1 minute.
 Note: This field may return null, indicating that no valid value was found.
-     * @param P60 Data aggregation method in a period of 1 second.
+     * @param P60 Data aggregation method in a period of 1 minute.
 Note: This field may return null, indicating that no valid value was found.
      */
     public void setP60(String P60) {

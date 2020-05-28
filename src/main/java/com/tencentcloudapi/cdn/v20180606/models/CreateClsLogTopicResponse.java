@@ -23,11 +23,39 @@ import java.util.HashMap;
 public class CreateClsLogTopicResponse extends AbstractModel{
 
     /**
+    * Topic ID
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TopicId")
+    @Expose
+    private String TopicId;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get Topic ID
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TopicId Topic ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getTopicId() {
+        return this.TopicId;
+    }
+
+    /**
+     * Set Topic ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TopicId Topic ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTopicId(String TopicId) {
+        this.TopicId = TopicId;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -49,6 +77,7 @@ public class CreateClsLogTopicResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TopicId", this.TopicId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

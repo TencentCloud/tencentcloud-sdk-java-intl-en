@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SendCustomAlarmMsgRequest extends AbstractModel{
 
     /**
-    * API module name. The value for the current API is monitor.
+    * API component name. The value for the current API is monitor.
     */
     @SerializedName("Module")
     @Expose
@@ -44,16 +44,16 @@ public class SendCustomAlarmMsgRequest extends AbstractModel{
     private String Msg;
 
     /**
-     * Get API module name. The value for the current API is monitor. 
-     * @return Module API module name. The value for the current API is monitor.
+     * Get API component name. The value for the current API is monitor. 
+     * @return Module API component name. The value for the current API is monitor.
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * Set API module name. The value for the current API is monitor.
-     * @param Module API module name. The value for the current API is monitor.
+     * Set API component name. The value for the current API is monitor.
+     * @param Module API component name. The value for the current API is monitor.
      */
     public void setModule(String Module) {
         this.Module = Module;

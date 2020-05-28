@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeUrlViolationsRequest extends AbstractModel{
 
     /**
-    * Offset for paginated queries. Default value: 0 (the first page).
+    * Offset for paginated queries. Default value: 0
     */
     @SerializedName("Offset")
     @Expose
@@ -44,16 +44,16 @@ public class DescribeUrlViolationsRequest extends AbstractModel{
     private String [] Domains;
 
     /**
-     * Get Offset for paginated queries. Default value: 0 (the first page). 
-     * @return Offset Offset for paginated queries. Default value: 0 (the first page).
+     * Get Offset for paginated queries. Default value: 0 
+     * @return Offset Offset for paginated queries. Default value: 0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset for paginated queries. Default value: 0 (the first page).
-     * @param Offset Offset for paginated queries. Default value: 0 (the first page).
+     * Set Offset for paginated queries. Default value: 0
+     * @param Offset Offset for paginated queries. Default value: 0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

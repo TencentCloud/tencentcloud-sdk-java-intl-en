@@ -31,7 +31,7 @@ Note: This field may return null, indicating that no valid value was found.
     private Long Default;
 
     /**
-    * Number of optional periods.
+    * Number of custom periods.
 Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("Keys")
@@ -66,9 +66,9 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Number of optional periods.
+     * Get Number of custom periods.
 Note: This field may return null, indicating that no valid value was found. 
-     * @return Keys Number of optional periods.
+     * @return Keys Number of custom periods.
 Note: This field may return null, indicating that no valid value was found.
      */
     public Long [] getKeys() {
@@ -76,9 +76,9 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Set Number of optional periods.
+     * Set Number of custom periods.
 Note: This field may return null, indicating that no valid value was found.
-     * @param Keys Number of optional periods.
+     * @param Keys Number of custom periods.
 Note: This field may return null, indicating that no valid value was found.
      */
     public void setKeys(Long [] Keys) {

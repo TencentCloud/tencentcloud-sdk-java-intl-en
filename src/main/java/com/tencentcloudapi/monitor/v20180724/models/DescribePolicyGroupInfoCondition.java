@@ -30,7 +30,7 @@ public class DescribePolicyGroupInfoCondition extends AbstractModel{
     private String MetricShowName;
 
     /**
-    * Data statistics period in seconds.
+    * Data aggregation period in seconds.
     */
     @SerializedName("Period")
     @Expose
@@ -112,16 +112,16 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Data statistics period in seconds. 
-     * @return Period Data statistics period in seconds.
+     * Get Data aggregation period in seconds. 
+     * @return Period Data aggregation period in seconds.
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set Data statistics period in seconds.
-     * @param Period Data statistics period in seconds.
+     * Set Data aggregation period in seconds.
+     * @param Period Data aggregation period in seconds.
      */
     public void setPeriod(Long Period) {
         this.Period = Period;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribePolicyGroupInfoReceiverInfo extends AbstractModel{
 
     /**
-    * List of alarm receiver group IDs.
+    * List of alarm recipient group IDs.
     */
     @SerializedName("ReceiverGroupList")
     @Expose
@@ -58,14 +58,14 @@ public class DescribePolicyGroupInfoReceiverInfo extends AbstractModel{
     private String ReceiverType;
 
     /**
-    * Alarm notification type. Valid values: "SMS", "SITE", "EMAIL", "CALL", and "WECHAT".
+    * Alarm notification method. Valid values: "SMS", "SITE", "EMAIL", "CALL", and "WECHAT".
     */
     @SerializedName("NotifyWay")
     @Expose
     private String [] NotifyWay;
 
     /**
-    * Uid of the alarm call receiver.
+    * Uid of the alarm call recipient.
 Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("UidList")
@@ -80,14 +80,14 @@ Note: This field may return null, indicating that no valid value was found.
     private Long RoundNumber;
 
     /**
-    * Round interval of alarm calls in seconds.
+    * Intervals of alarm call rounds in seconds.
     */
     @SerializedName("RoundInterval")
     @Expose
     private Long RoundInterval;
 
     /**
-    * Person interval of alarm calls in seconds.
+    * Alarm call intervals for individuals in seconds.
     */
     @SerializedName("PersonInterval")
     @Expose
@@ -101,14 +101,14 @@ Note: This field may return null, indicating that no valid value was found.
     private Long NeedSendNotice;
 
     /**
-    * Alarm call notification time. Valid values: OCCUR (indicating that a notice is sent when the alarm is reported) and RECOVER (indicating that a notice is sent when the alarm is cleared).
+    * Alarm call notification time. Valid values: OCCUR (indicating that a notice is sent when the alarm is triggered) and RECOVER (indicating that a notice is sent when the alarm is recovered).
     */
     @SerializedName("SendFor")
     @Expose
     private String [] SendFor;
 
     /**
-    * Notification method when an alarm is cleared. Valid value: SMS.
+    * Notification method when an alarm is recovered. Valid value: SMS.
     */
     @SerializedName("RecoverNotify")
     @Expose
@@ -123,16 +123,16 @@ Note: This field may return null, indicating that no valid value was found.
     private String ReceiveLanguage;
 
     /**
-     * Get List of alarm receiver group IDs. 
-     * @return ReceiverGroupList List of alarm receiver group IDs.
+     * Get List of alarm recipient group IDs. 
+     * @return ReceiverGroupList List of alarm recipient group IDs.
      */
     public Long [] getReceiverGroupList() {
         return this.ReceiverGroupList;
     }
 
     /**
-     * Set List of alarm receiver group IDs.
-     * @param ReceiverGroupList List of alarm receiver group IDs.
+     * Set List of alarm recipient group IDs.
+     * @param ReceiverGroupList List of alarm recipient group IDs.
      */
     public void setReceiverGroupList(Long [] ReceiverGroupList) {
         this.ReceiverGroupList = ReceiverGroupList;
@@ -203,25 +203,25 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Alarm notification type. Valid values: "SMS", "SITE", "EMAIL", "CALL", and "WECHAT". 
-     * @return NotifyWay Alarm notification type. Valid values: "SMS", "SITE", "EMAIL", "CALL", and "WECHAT".
+     * Get Alarm notification method. Valid values: "SMS", "SITE", "EMAIL", "CALL", and "WECHAT". 
+     * @return NotifyWay Alarm notification method. Valid values: "SMS", "SITE", "EMAIL", "CALL", and "WECHAT".
      */
     public String [] getNotifyWay() {
         return this.NotifyWay;
     }
 
     /**
-     * Set Alarm notification type. Valid values: "SMS", "SITE", "EMAIL", "CALL", and "WECHAT".
-     * @param NotifyWay Alarm notification type. Valid values: "SMS", "SITE", "EMAIL", "CALL", and "WECHAT".
+     * Set Alarm notification method. Valid values: "SMS", "SITE", "EMAIL", "CALL", and "WECHAT".
+     * @param NotifyWay Alarm notification method. Valid values: "SMS", "SITE", "EMAIL", "CALL", and "WECHAT".
      */
     public void setNotifyWay(String [] NotifyWay) {
         this.NotifyWay = NotifyWay;
     }
 
     /**
-     * Get Uid of the alarm call receiver.
+     * Get Uid of the alarm call recipient.
 Note: This field may return null, indicating that no valid value was found. 
-     * @return UidList Uid of the alarm call receiver.
+     * @return UidList Uid of the alarm call recipient.
 Note: This field may return null, indicating that no valid value was found.
      */
     public Long [] getUidList() {
@@ -229,9 +229,9 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Set Uid of the alarm call receiver.
+     * Set Uid of the alarm call recipient.
 Note: This field may return null, indicating that no valid value was found.
-     * @param UidList Uid of the alarm call receiver.
+     * @param UidList Uid of the alarm call recipient.
 Note: This field may return null, indicating that no valid value was found.
      */
     public void setUidList(Long [] UidList) {
@@ -255,32 +255,32 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Round interval of alarm calls in seconds. 
-     * @return RoundInterval Round interval of alarm calls in seconds.
+     * Get Intervals of alarm call rounds in seconds. 
+     * @return RoundInterval Intervals of alarm call rounds in seconds.
      */
     public Long getRoundInterval() {
         return this.RoundInterval;
     }
 
     /**
-     * Set Round interval of alarm calls in seconds.
-     * @param RoundInterval Round interval of alarm calls in seconds.
+     * Set Intervals of alarm call rounds in seconds.
+     * @param RoundInterval Intervals of alarm call rounds in seconds.
      */
     public void setRoundInterval(Long RoundInterval) {
         this.RoundInterval = RoundInterval;
     }
 
     /**
-     * Get Person interval of alarm calls in seconds. 
-     * @return PersonInterval Person interval of alarm calls in seconds.
+     * Get Alarm call intervals for individuals in seconds. 
+     * @return PersonInterval Alarm call intervals for individuals in seconds.
      */
     public Long getPersonInterval() {
         return this.PersonInterval;
     }
 
     /**
-     * Set Person interval of alarm calls in seconds.
-     * @param PersonInterval Person interval of alarm calls in seconds.
+     * Set Alarm call intervals for individuals in seconds.
+     * @param PersonInterval Alarm call intervals for individuals in seconds.
      */
     public void setPersonInterval(Long PersonInterval) {
         this.PersonInterval = PersonInterval;
@@ -303,32 +303,32 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Alarm call notification time. Valid values: OCCUR (indicating that a notice is sent when the alarm is reported) and RECOVER (indicating that a notice is sent when the alarm is cleared). 
-     * @return SendFor Alarm call notification time. Valid values: OCCUR (indicating that a notice is sent when the alarm is reported) and RECOVER (indicating that a notice is sent when the alarm is cleared).
+     * Get Alarm call notification time. Valid values: OCCUR (indicating that a notice is sent when the alarm is triggered) and RECOVER (indicating that a notice is sent when the alarm is recovered). 
+     * @return SendFor Alarm call notification time. Valid values: OCCUR (indicating that a notice is sent when the alarm is triggered) and RECOVER (indicating that a notice is sent when the alarm is recovered).
      */
     public String [] getSendFor() {
         return this.SendFor;
     }
 
     /**
-     * Set Alarm call notification time. Valid values: OCCUR (indicating that a notice is sent when the alarm is reported) and RECOVER (indicating that a notice is sent when the alarm is cleared).
-     * @param SendFor Alarm call notification time. Valid values: OCCUR (indicating that a notice is sent when the alarm is reported) and RECOVER (indicating that a notice is sent when the alarm is cleared).
+     * Set Alarm call notification time. Valid values: OCCUR (indicating that a notice is sent when the alarm is triggered) and RECOVER (indicating that a notice is sent when the alarm is recovered).
+     * @param SendFor Alarm call notification time. Valid values: OCCUR (indicating that a notice is sent when the alarm is triggered) and RECOVER (indicating that a notice is sent when the alarm is recovered).
      */
     public void setSendFor(String [] SendFor) {
         this.SendFor = SendFor;
     }
 
     /**
-     * Get Notification method when an alarm is cleared. Valid value: SMS. 
-     * @return RecoverNotify Notification method when an alarm is cleared. Valid value: SMS.
+     * Get Notification method when an alarm is recovered. Valid value: SMS. 
+     * @return RecoverNotify Notification method when an alarm is recovered. Valid value: SMS.
      */
     public String [] getRecoverNotify() {
         return this.RecoverNotify;
     }
 
     /**
-     * Set Notification method when an alarm is cleared. Valid value: SMS.
-     * @param RecoverNotify Notification method when an alarm is cleared. Valid value: SMS.
+     * Set Notification method when an alarm is recovered. Valid value: SMS.
+     * @param RecoverNotify Notification method when an alarm is recovered. Valid value: SMS.
      */
     public void setRecoverNotify(String [] RecoverNotify) {
         this.RecoverNotify = RecoverNotify;

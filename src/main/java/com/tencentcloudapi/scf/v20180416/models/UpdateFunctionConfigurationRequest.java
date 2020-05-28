@@ -37,21 +37,21 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     private String Description;
 
     /**
-    * Memory size when the function is running. The value ranges from 128 MB (default) to 1,536 MB.
+    * Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB.
     */
     @SerializedName("MemorySize")
     @Expose
     private Long MemorySize;
 
     /**
-    * The longest function running time. The unit is second (s). The value ranges from 1 to 300 seconds. The default value is 3 seconds.
+    * Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
     */
     @SerializedName("Timeout")
     @Expose
     private Long Timeout;
 
     /**
-    * Function running environment. Currently, only Python 2.7, Python 3.6, Nodejs 6.10, PHP 5, PHP 7, Golang 1, and Java 8 are supported.
+    * Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, PHP5, PHP7, Golang1, Java8
     */
     @SerializedName("Runtime")
     @Expose
@@ -128,11 +128,11 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     private DeadLetterConfig DeadLetterConfig;
 
     /**
-    * Whether to enable Ons access. TRUE: enable; FALSE: not enable
+    * Public network access configuration
     */
-    @SerializedName("OnsEnable")
+    @SerializedName("PublicNetConfig")
     @Expose
-    private String OnsEnable;
+    private PublicNetConfigIn PublicNetConfig;
 
     /**
      * Get Name of the function to be modified 
@@ -167,48 +167,48 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     }
 
     /**
-     * Get Memory size when the function is running. The value ranges from 128 MB (default) to 1,536 MB. 
-     * @return MemorySize Memory size when the function is running. The value ranges from 128 MB (default) to 1,536 MB.
+     * Get Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB. 
+     * @return MemorySize Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB.
      */
     public Long getMemorySize() {
         return this.MemorySize;
     }
 
     /**
-     * Set Memory size when the function is running. The value ranges from 128 MB (default) to 1,536 MB.
-     * @param MemorySize Memory size when the function is running. The value ranges from 128 MB (default) to 1,536 MB.
+     * Set Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB.
+     * @param MemorySize Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB.
      */
     public void setMemorySize(Long MemorySize) {
         this.MemorySize = MemorySize;
     }
 
     /**
-     * Get The longest function running time. The unit is second (s). The value ranges from 1 to 300 seconds. The default value is 3 seconds. 
-     * @return Timeout The longest function running time. The unit is second (s). The value ranges from 1 to 300 seconds. The default value is 3 seconds.
+     * Get Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds 
+     * @return Timeout Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
      */
     public Long getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set The longest function running time. The unit is second (s). The value ranges from 1 to 300 seconds. The default value is 3 seconds.
-     * @param Timeout The longest function running time. The unit is second (s). The value ranges from 1 to 300 seconds. The default value is 3 seconds.
+     * Set Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
+     * @param Timeout Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
      */
     public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;
     }
 
     /**
-     * Get Function running environment. Currently, only Python 2.7, Python 3.6, Nodejs 6.10, PHP 5, PHP 7, Golang 1, and Java 8 are supported. 
-     * @return Runtime Function running environment. Currently, only Python 2.7, Python 3.6, Nodejs 6.10, PHP 5, PHP 7, Golang 1, and Java 8 are supported.
+     * Get Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, PHP5, PHP7, Golang1, Java8 
+     * @return Runtime Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, PHP5, PHP7, Golang1, Java8
      */
     public String getRuntime() {
         return this.Runtime;
     }
 
     /**
-     * Set Function running environment. Currently, only Python 2.7, Python 3.6, Nodejs 6.10, PHP 5, PHP 7, Golang 1, and Java 8 are supported.
-     * @param Runtime Function running environment. Currently, only Python 2.7, Python 3.6, Nodejs 6.10, PHP 5, PHP 7, Golang 1, and Java 8 are supported.
+     * Set Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, PHP5, PHP7, Golang1, Java8
+     * @param Runtime Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, PHP5, PHP7, Golang1, Java8
      */
     public void setRuntime(String Runtime) {
         this.Runtime = Runtime;
@@ -375,19 +375,19 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to enable Ons access. TRUE: enable; FALSE: not enable 
-     * @return OnsEnable Whether to enable Ons access. TRUE: enable; FALSE: not enable
+     * Get Public network access configuration 
+     * @return PublicNetConfig Public network access configuration
      */
-    public String getOnsEnable() {
-        return this.OnsEnable;
+    public PublicNetConfigIn getPublicNetConfig() {
+        return this.PublicNetConfig;
     }
 
     /**
-     * Set Whether to enable Ons access. TRUE: enable; FALSE: not enable
-     * @param OnsEnable Whether to enable Ons access. TRUE: enable; FALSE: not enable
+     * Set Public network access configuration
+     * @param PublicNetConfig Public network access configuration
      */
-    public void setOnsEnable(String OnsEnable) {
-        this.OnsEnable = OnsEnable;
+    public void setPublicNetConfig(PublicNetConfigIn PublicNetConfig) {
+        this.PublicNetConfig = PublicNetConfig;
     }
 
     /**
@@ -409,7 +409,7 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "L5Enable", this.L5Enable);
         this.setParamArrayObj(map, prefix + "Layers.", this.Layers);
         this.setParamObj(map, prefix + "DeadLetterConfig.", this.DeadLetterConfig);
-        this.setParamSimple(map, prefix + "OnsEnable", this.OnsEnable);
+        this.setParamObj(map, prefix + "PublicNetConfig.", this.PublicNetConfig);
 
     }
 }

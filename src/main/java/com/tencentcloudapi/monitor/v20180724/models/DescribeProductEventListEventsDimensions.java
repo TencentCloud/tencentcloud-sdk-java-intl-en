@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeProductEventListEventsDimensions extends AbstractModel{
 
     /**
-    * English dimension name.
+    * Dimension name in English.
 Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("Key")
@@ -31,7 +31,7 @@ Note: This field may return null, indicating that no valid value was found.
     private String Key;
 
     /**
-    * Chinese dimension name.
+    * Dimension name in Chinese.
 Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("Name")
@@ -47,9 +47,9 @@ Note: This field may return null, indicating that no valid value was found.
     private String Value;
 
     /**
-     * Get English dimension name.
+     * Get Dimension name in English.
 Note: This field may return null, indicating that no valid value was found. 
-     * @return Key English dimension name.
+     * @return Key Dimension name in English.
 Note: This field may return null, indicating that no valid value was found.
      */
     public String getKey() {
@@ -57,9 +57,9 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Set English dimension name.
+     * Set Dimension name in English.
 Note: This field may return null, indicating that no valid value was found.
-     * @param Key English dimension name.
+     * @param Key Dimension name in English.
 Note: This field may return null, indicating that no valid value was found.
      */
     public void setKey(String Key) {
@@ -67,9 +67,9 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Chinese dimension name.
+     * Get Dimension name in Chinese.
 Note: This field may return null, indicating that no valid value was found. 
-     * @return Name Chinese dimension name.
+     * @return Name Dimension name in Chinese.
 Note: This field may return null, indicating that no valid value was found.
      */
     public String getName() {
@@ -77,9 +77,9 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Set Chinese dimension name.
+     * Set Dimension name in Chinese.
 Note: This field may return null, indicating that no valid value was found.
-     * @param Name Chinese dimension name.
+     * @param Name Dimension name in Chinese.
 Note: This field may return null, indicating that no valid value was found.
      */
     public void setName(String Name) {

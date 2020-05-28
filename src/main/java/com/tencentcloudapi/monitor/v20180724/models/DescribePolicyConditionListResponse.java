@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribePolicyConditionListResponse extends AbstractModel{
 
     /**
-    * List of Alarm policy conditions.
+    * List of alarm policy conditions.
     */
     @SerializedName("Conditions")
     @Expose
@@ -37,16 +37,16 @@ public class DescribePolicyConditionListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get List of Alarm policy conditions. 
-     * @return Conditions List of Alarm policy conditions.
+     * Get List of alarm policy conditions. 
+     * @return Conditions List of alarm policy conditions.
      */
     public DescribePolicyConditionListCondition [] getConditions() {
         return this.Conditions;
     }
 
     /**
-     * Set List of Alarm policy conditions.
-     * @param Conditions List of Alarm policy conditions.
+     * Set List of alarm policy conditions.
+     * @param Conditions List of alarm policy conditions.
      */
     public void setConditions(DescribePolicyConditionListCondition [] Conditions) {
         this.Conditions = Conditions;

@@ -37,7 +37,7 @@ public class DescribePolicyGroupListGroupInstanceGroup extends AbstractModel{
     private String ViewName;
 
     /**
-    * Uin that is last edited.
+    * Uin that was last edited.
     */
     @SerializedName("LastEditUin")
     @Expose
@@ -104,16 +104,16 @@ public class DescribePolicyGroupListGroupInstanceGroup extends AbstractModel{
     }
 
     /**
-     * Get Uin that is last edited. 
-     * @return LastEditUin Uin that is last edited.
+     * Get Uin that was last edited. 
+     * @return LastEditUin Uin that was last edited.
      */
     public String getLastEditUin() {
         return this.LastEditUin;
     }
 
     /**
-     * Set Uin that is last edited.
-     * @param LastEditUin Uin that is last edited.
+     * Set Uin that was last edited.
+     * @param LastEditUin Uin that was last edited.
      */
     public void setLastEditUin(String LastEditUin) {
         this.LastEditUin = LastEditUin;

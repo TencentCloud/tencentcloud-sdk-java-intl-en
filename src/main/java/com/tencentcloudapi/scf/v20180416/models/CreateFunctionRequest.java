@@ -51,14 +51,14 @@ public class CreateFunctionRequest extends AbstractModel{
     private String Description;
 
     /**
-    * Memory size of a running function. The value ranges from 128 MB (default) to 1,536 MB with a granularity of 128 MB.
+    * Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB
     */
     @SerializedName("MemorySize")
     @Expose
     private Long MemorySize;
 
     /**
-    * The longest function running time. The unit is second (s). The value ranges from 1 to 300 seconds. The default value is 3 seconds.
+    * Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
     */
     @SerializedName("Timeout")
     @Expose
@@ -72,7 +72,7 @@ public class CreateFunctionRequest extends AbstractModel{
     private Environment Environment;
 
     /**
-    * Function running environment. Currently, only Python 2.7 (default), Python 3.6, Nodejs 6.10, PHP 5, PHP 7, Golang 1, and Java 8 are supported.
+    * Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, PHP5, PHP7, Golang1, Java8. Default value: Python2.7
     */
     @SerializedName("Runtime")
     @Expose
@@ -142,6 +142,13 @@ public class CreateFunctionRequest extends AbstractModel{
     private DeadLetterConfig DeadLetterConfig;
 
     /**
+    * Public network access configuration
+    */
+    @SerializedName("PublicNetConfig")
+    @Expose
+    private PublicNetConfigIn PublicNetConfig;
+
+    /**
      * Get Name of the new function. The name can contain 2 to 60 characters, including English letters, digits, hyphens (-), and underscores (_). The name must start with a letter and cannot end with a hyphen or underscore. 
      * @return FunctionName Name of the new function. The name can contain 2 to 60 characters, including English letters, digits, hyphens (-), and underscores (_). The name must start with a letter and cannot end with a hyphen or underscore.
      */
@@ -206,32 +213,32 @@ public class CreateFunctionRequest extends AbstractModel{
     }
 
     /**
-     * Get Memory size of a running function. The value ranges from 128 MB (default) to 1,536 MB with a granularity of 128 MB. 
-     * @return MemorySize Memory size of a running function. The value ranges from 128 MB (default) to 1,536 MB with a granularity of 128 MB.
+     * Get Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB 
+     * @return MemorySize Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB
      */
     public Long getMemorySize() {
         return this.MemorySize;
     }
 
     /**
-     * Set Memory size of a running function. The value ranges from 128 MB (default) to 1,536 MB with a granularity of 128 MB.
-     * @param MemorySize Memory size of a running function. The value ranges from 128 MB (default) to 1,536 MB with a granularity of 128 MB.
+     * Set Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB
+     * @param MemorySize Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB
      */
     public void setMemorySize(Long MemorySize) {
         this.MemorySize = MemorySize;
     }
 
     /**
-     * Get The longest function running time. The unit is second (s). The value ranges from 1 to 300 seconds. The default value is 3 seconds. 
-     * @return Timeout The longest function running time. The unit is second (s). The value ranges from 1 to 300 seconds. The default value is 3 seconds.
+     * Get Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds 
+     * @return Timeout Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
      */
     public Long getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set The longest function running time. The unit is second (s). The value ranges from 1 to 300 seconds. The default value is 3 seconds.
-     * @param Timeout The longest function running time. The unit is second (s). The value ranges from 1 to 300 seconds. The default value is 3 seconds.
+     * Set Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
+     * @param Timeout Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
      */
     public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;
@@ -254,16 +261,16 @@ public class CreateFunctionRequest extends AbstractModel{
     }
 
     /**
-     * Get Function running environment. Currently, only Python 2.7 (default), Python 3.6, Nodejs 6.10, PHP 5, PHP 7, Golang 1, and Java 8 are supported. 
-     * @return Runtime Function running environment. Currently, only Python 2.7 (default), Python 3.6, Nodejs 6.10, PHP 5, PHP 7, Golang 1, and Java 8 are supported.
+     * Get Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, PHP5, PHP7, Golang1, Java8. Default value: Python2.7 
+     * @return Runtime Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, PHP5, PHP7, Golang1, Java8. Default value: Python2.7
      */
     public String getRuntime() {
         return this.Runtime;
     }
 
     /**
-     * Set Function running environment. Currently, only Python 2.7 (default), Python 3.6, Nodejs 6.10, PHP 5, PHP 7, Golang 1, and Java 8 are supported.
-     * @param Runtime Function running environment. Currently, only Python 2.7 (default), Python 3.6, Nodejs 6.10, PHP 5, PHP 7, Golang 1, and Java 8 are supported.
+     * Set Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, PHP5, PHP7, Golang1, Java8. Default value: Python2.7
+     * @param Runtime Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, PHP5, PHP7, Golang1, Java8. Default value: Python2.7
      */
     public void setRuntime(String Runtime) {
         this.Runtime = Runtime;
@@ -414,6 +421,22 @@ public class CreateFunctionRequest extends AbstractModel{
     }
 
     /**
+     * Get Public network access configuration 
+     * @return PublicNetConfig Public network access configuration
+     */
+    public PublicNetConfigIn getPublicNetConfig() {
+        return this.PublicNetConfig;
+    }
+
+    /**
+     * Set Public network access configuration
+     * @param PublicNetConfig Public network access configuration
+     */
+    public void setPublicNetConfig(PublicNetConfigIn PublicNetConfig) {
+        this.PublicNetConfig = PublicNetConfig;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -434,6 +457,7 @@ public class CreateFunctionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CodeSource", this.CodeSource);
         this.setParamArrayObj(map, prefix + "Layers.", this.Layers);
         this.setParamObj(map, prefix + "DeadLetterConfig.", this.DeadLetterConfig);
+        this.setParamObj(map, prefix + "PublicNetConfig.", this.PublicNetConfig);
 
     }
 }

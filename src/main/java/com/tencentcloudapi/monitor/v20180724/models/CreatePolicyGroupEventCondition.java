@@ -37,14 +37,14 @@ public class CreatePolicyGroupEventCondition extends AbstractModel{
     private Long AlarmNotifyType;
 
     /**
-    * Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm will be triggered only once. The value >0 indicates that an alarm will be triggered at the interval of triggerTime.
+    * Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm is triggered only once. The value >0 indicates that an alarm is triggered at the interval of triggerTime.
     */
     @SerializedName("AlarmNotifyPeriod")
     @Expose
     private Long AlarmNotifyPeriod;
 
     /**
-    * If a metric is created based on a template, the RuleId of the metric in the template must be input.
+    * If a metric is created based on a template, the RuleId of the metric in the template must be passed in.
     */
     @SerializedName("RuleId")
     @Expose
@@ -83,32 +83,32 @@ public class CreatePolicyGroupEventCondition extends AbstractModel{
     }
 
     /**
-     * Get Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm will be triggered only once. The value >0 indicates that an alarm will be triggered at the interval of triggerTime. 
-     * @return AlarmNotifyPeriod Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm will be triggered only once. The value >0 indicates that an alarm will be triggered at the interval of triggerTime.
+     * Get Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm is triggered only once. The value >0 indicates that an alarm is triggered at the interval of triggerTime. 
+     * @return AlarmNotifyPeriod Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm is triggered only once. The value >0 indicates that an alarm is triggered at the interval of triggerTime.
      */
     public Long getAlarmNotifyPeriod() {
         return this.AlarmNotifyPeriod;
     }
 
     /**
-     * Set Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm will be triggered only once. The value >0 indicates that an alarm will be triggered at the interval of triggerTime.
-     * @param AlarmNotifyPeriod Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm will be triggered only once. The value >0 indicates that an alarm will be triggered at the interval of triggerTime.
+     * Set Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm is triggered only once. The value >0 indicates that an alarm is triggered at the interval of triggerTime.
+     * @param AlarmNotifyPeriod Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm is triggered only once. The value >0 indicates that an alarm is triggered at the interval of triggerTime.
      */
     public void setAlarmNotifyPeriod(Long AlarmNotifyPeriod) {
         this.AlarmNotifyPeriod = AlarmNotifyPeriod;
     }
 
     /**
-     * Get If a metric is created based on a template, the RuleId of the metric in the template must be input. 
-     * @return RuleId If a metric is created based on a template, the RuleId of the metric in the template must be input.
+     * Get If a metric is created based on a template, the RuleId of the metric in the template must be passed in. 
+     * @return RuleId If a metric is created based on a template, the RuleId of the metric in the template must be passed in.
      */
     public Long getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set If a metric is created based on a template, the RuleId of the metric in the template must be input.
-     * @param RuleId If a metric is created based on a template, the RuleId of the metric in the template must be input.
+     * Set If a metric is created based on a template, the RuleId of the metric in the template must be passed in.
+     * @param RuleId If a metric is created based on a template, the RuleId of the metric in the template must be passed in.
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;

@@ -51,14 +51,14 @@ public class DescribePolicyGroupListGroup extends AbstractModel{
     private String ViewName;
 
     /**
-    * Uin that is last edited.
+    * Uin that was last edited.
     */
     @SerializedName("LastEditUin")
     @Expose
     private String LastEditUin;
 
     /**
-    * Last update time.
+    * Last modified time.
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -93,7 +93,7 @@ public class DescribePolicyGroupListGroup extends AbstractModel{
     private Long IsDefault;
 
     /**
-    * Whether the policy can be set as the default policy.
+    * Whether the policy can be configured as the default policy.
     */
     @SerializedName("CanSetDefault")
     @Expose
@@ -161,7 +161,7 @@ Note: This field may return null, indicating that no valid value was found.
     private DescribePolicyGroupListGroupInstanceGroup InstanceGroup;
 
     /**
-    * The “AND” or “OR” rule. The value 0 indicates the “OR” rule (indicating that an alarm will be reported if any rule reaches the threshold condition). The value 1 indicates the “AND” rule (indicating that an alarm will be reported when all rules reach the threshold conditions).
+    * The “AND” or “OR” rule. The value 0 indicates the “OR” rule (indicating that an alarm will be triggered if any rule meets the threshold condition). The value 1 indicates the “AND” rule (indicating that an alarm will be triggered when all rules meet the threshold conditions).
 Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("IsUnionRule")
@@ -233,32 +233,32 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Uin that is last edited. 
-     * @return LastEditUin Uin that is last edited.
+     * Get Uin that was last edited. 
+     * @return LastEditUin Uin that was last edited.
      */
     public String getLastEditUin() {
         return this.LastEditUin;
     }
 
     /**
-     * Set Uin that is last edited.
-     * @param LastEditUin Uin that is last edited.
+     * Set Uin that was last edited.
+     * @param LastEditUin Uin that was last edited.
      */
     public void setLastEditUin(String LastEditUin) {
         this.LastEditUin = LastEditUin;
     }
 
     /**
-     * Get Last update time. 
-     * @return UpdateTime Last update time.
+     * Get Last modified time. 
+     * @return UpdateTime Last modified time.
      */
     public Long getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Last update time.
-     * @param UpdateTime Last update time.
+     * Set Last modified time.
+     * @param UpdateTime Last modified time.
      */
     public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -329,16 +329,16 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Whether the policy can be set as the default policy. 
-     * @return CanSetDefault Whether the policy can be set as the default policy.
+     * Get Whether the policy can be configured as the default policy. 
+     * @return CanSetDefault Whether the policy can be configured as the default policy.
      */
     public Boolean getCanSetDefault() {
         return this.CanSetDefault;
     }
 
     /**
-     * Set Whether the policy can be set as the default policy.
-     * @param CanSetDefault Whether the policy can be set as the default policy.
+     * Set Whether the policy can be configured as the default policy.
+     * @param CanSetDefault Whether the policy can be configured as the default policy.
      */
     public void setCanSetDefault(Boolean CanSetDefault) {
         this.CanSetDefault = CanSetDefault;
@@ -493,9 +493,9 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get The “AND” or “OR” rule. The value 0 indicates the “OR” rule (indicating that an alarm will be reported if any rule reaches the threshold condition). The value 1 indicates the “AND” rule (indicating that an alarm will be reported when all rules reach the threshold conditions).
+     * Get The “AND” or “OR” rule. The value 0 indicates the “OR” rule (indicating that an alarm will be triggered if any rule meets the threshold condition). The value 1 indicates the “AND” rule (indicating that an alarm will be triggered when all rules meet the threshold conditions).
 Note: This field may return null, indicating that no valid value was found. 
-     * @return IsUnionRule The “AND” or “OR” rule. The value 0 indicates the “OR” rule (indicating that an alarm will be reported if any rule reaches the threshold condition). The value 1 indicates the “AND” rule (indicating that an alarm will be reported when all rules reach the threshold conditions).
+     * @return IsUnionRule The “AND” or “OR” rule. The value 0 indicates the “OR” rule (indicating that an alarm will be triggered if any rule meets the threshold condition). The value 1 indicates the “AND” rule (indicating that an alarm will be triggered when all rules meet the threshold conditions).
 Note: This field may return null, indicating that no valid value was found.
      */
     public Long getIsUnionRule() {
@@ -503,9 +503,9 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Set The “AND” or “OR” rule. The value 0 indicates the “OR” rule (indicating that an alarm will be reported if any rule reaches the threshold condition). The value 1 indicates the “AND” rule (indicating that an alarm will be reported when all rules reach the threshold conditions).
+     * Set The “AND” or “OR” rule. The value 0 indicates the “OR” rule (indicating that an alarm will be triggered if any rule meets the threshold condition). The value 1 indicates the “AND” rule (indicating that an alarm will be triggered when all rules meet the threshold conditions).
 Note: This field may return null, indicating that no valid value was found.
-     * @param IsUnionRule The “AND” or “OR” rule. The value 0 indicates the “OR” rule (indicating that an alarm will be reported if any rule reaches the threshold condition). The value 1 indicates the “AND” rule (indicating that an alarm will be reported when all rules reach the threshold conditions).
+     * @param IsUnionRule The “AND” or “OR” rule. The value 0 indicates the “OR” rule (indicating that an alarm will be triggered if any rule meets the threshold condition). The value 1 indicates the “AND” rule (indicating that an alarm will be triggered when all rules meet the threshold conditions).
 Note: This field may return null, indicating that no valid value was found.
      */
     public void setIsUnionRule(Long IsUnionRule) {

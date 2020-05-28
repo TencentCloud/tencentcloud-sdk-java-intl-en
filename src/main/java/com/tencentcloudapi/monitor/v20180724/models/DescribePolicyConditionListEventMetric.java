@@ -44,7 +44,7 @@ public class DescribePolicyConditionListEventMetric extends AbstractModel{
     private Boolean NeedRecovered;
 
     /**
-    * Event type, which is a reserved field. At present, it is fixed to 2.
+    * Event type, which is a reserved field. Currently, it is fixed to 2.
     */
     @SerializedName("Type")
     @Expose
@@ -99,16 +99,16 @@ public class DescribePolicyConditionListEventMetric extends AbstractModel{
     }
 
     /**
-     * Get Event type, which is a reserved field. At present, it is fixed to 2. 
-     * @return Type Event type, which is a reserved field. At present, it is fixed to 2.
+     * Get Event type, which is a reserved field. Currently, it is fixed to 2. 
+     * @return Type Event type, which is a reserved field. Currently, it is fixed to 2.
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set Event type, which is a reserved field. At present, it is fixed to 2.
-     * @param Type Event type, which is a reserved field. At present, it is fixed to 2.
+     * Set Event type, which is a reserved field. Currently, it is fixed to 2.
+     * @param Type Event type, which is a reserved field. Currently, it is fixed to 2.
      */
     public void setType(Long Type) {
         this.Type = Type;

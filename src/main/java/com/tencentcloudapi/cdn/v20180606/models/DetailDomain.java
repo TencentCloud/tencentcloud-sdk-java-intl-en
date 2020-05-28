@@ -364,14 +364,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private SecurityConfig SecurityConfig;
 
     /**
-    * 
+    * `ImageOptimization` configuration
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ImageOptimization")
     @Expose
     private ImageOptimization ImageOptimization;
 
     /**
-    * 
+    * `UA` blacklist/whitelist Configuration
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UserAgentFilter")
     @Expose
@@ -1250,32 +1252,40 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return ImageOptimization 
+     * Get `ImageOptimization` configuration
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return ImageOptimization `ImageOptimization` configuration
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public ImageOptimization getImageOptimization() {
         return this.ImageOptimization;
     }
 
     /**
-     * Set 
-     * @param ImageOptimization 
+     * Set `ImageOptimization` configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param ImageOptimization `ImageOptimization` configuration
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setImageOptimization(ImageOptimization ImageOptimization) {
         this.ImageOptimization = ImageOptimization;
     }
 
     /**
-     * Get  
-     * @return UserAgentFilter 
+     * Get `UA` blacklist/whitelist Configuration
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return UserAgentFilter `UA` blacklist/whitelist Configuration
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public UserAgentFilter getUserAgentFilter() {
         return this.UserAgentFilter;
     }
 
     /**
-     * Set 
-     * @param UserAgentFilter 
+     * Set `UA` blacklist/whitelist Configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param UserAgentFilter `UA` blacklist/whitelist Configuration
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setUserAgentFilter(UserAgentFilter UserAgentFilter) {
         this.UserAgentFilter = UserAgentFilter;

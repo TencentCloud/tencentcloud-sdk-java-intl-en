@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeBasicAlarmListRequest extends AbstractModel{
 
     /**
-    * API module name. The value for the current API is monitor.
+    * API component name. The value for the current API is monitor.
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * Start time, which is the timestamp one day ago by default.
+    * Start time, which is the timestamp one day prior by default.
     */
     @SerializedName("StartTime")
     @Expose
@@ -107,32 +107,32 @@ public class DescribeBasicAlarmListRequest extends AbstractModel{
     private String [] MetricNames;
 
     /**
-     * Get API module name. The value for the current API is monitor. 
-     * @return Module API module name. The value for the current API is monitor.
+     * Get API component name. The value for the current API is monitor. 
+     * @return Module API component name. The value for the current API is monitor.
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * Set API module name. The value for the current API is monitor.
-     * @param Module API module name. The value for the current API is monitor.
+     * Set API component name. The value for the current API is monitor.
+     * @param Module API component name. The value for the current API is monitor.
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * Get Start time, which is the timestamp one day ago by default. 
-     * @return StartTime Start time, which is the timestamp one day ago by default.
+     * Get Start time, which is the timestamp one day prior by default. 
+     * @return StartTime Start time, which is the timestamp one day prior by default.
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time, which is the timestamp one day ago by default.
-     * @param StartTime Start time, which is the timestamp one day ago by default.
+     * Set Start time, which is the timestamp one day prior by default.
+     * @param StartTime Start time, which is the timestamp one day prior by default.
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;

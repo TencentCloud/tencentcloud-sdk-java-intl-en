@@ -44,21 +44,21 @@ public class CreatePolicyGroupCondition extends AbstractModel{
     private Long AlarmNotifyPeriod;
 
     /**
-    * Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. This parameter may not be set if a default comparative type is set for a metric.
+    * Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. This parameter is optional if a default comparative type is configured for the metric.
     */
     @SerializedName("CalcType")
     @Expose
     private Long CalcType;
 
     /**
-    * Comparative value. This parameter may not be set if a metric has no requirement.
+    * Comparative value. This parameter is optional if the metric has no requirement.
     */
     @SerializedName("CalcValue")
     @Expose
     private Float CalcValue;
 
     /**
-    * Data statistics period in seconds. This parameter may not be set if a metric has a default value.
+    * Data aggregation period in seconds. This parameter is optional if the metric has a default value.
     */
     @SerializedName("CalcPeriod")
     @Expose
@@ -72,7 +72,7 @@ public class CreatePolicyGroupCondition extends AbstractModel{
     private Long ContinuePeriod;
 
     /**
-    * If a metric is created based on a template, the RuleId of the metric in the template must be input.
+    * If a metric is created based on a template, the RuleId of the metric in the template must be passed in.
     */
     @SerializedName("RuleId")
     @Expose
@@ -127,48 +127,48 @@ public class CreatePolicyGroupCondition extends AbstractModel{
     }
 
     /**
-     * Get Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. This parameter may not be set if a default comparative type is set for a metric. 
-     * @return CalcType Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. This parameter may not be set if a default comparative type is set for a metric.
+     * Get Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. This parameter is optional if a default comparative type is configured for the metric. 
+     * @return CalcType Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. This parameter is optional if a default comparative type is configured for the metric.
      */
     public Long getCalcType() {
         return this.CalcType;
     }
 
     /**
-     * Set Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. This parameter may not be set if a default comparative type is set for a metric.
-     * @param CalcType Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. This parameter may not be set if a default comparative type is set for a metric.
+     * Set Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. This parameter is optional if a default comparative type is configured for the metric.
+     * @param CalcType Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. This parameter is optional if a default comparative type is configured for the metric.
      */
     public void setCalcType(Long CalcType) {
         this.CalcType = CalcType;
     }
 
     /**
-     * Get Comparative value. This parameter may not be set if a metric has no requirement. 
-     * @return CalcValue Comparative value. This parameter may not be set if a metric has no requirement.
+     * Get Comparative value. This parameter is optional if the metric has no requirement. 
+     * @return CalcValue Comparative value. This parameter is optional if the metric has no requirement.
      */
     public Float getCalcValue() {
         return this.CalcValue;
     }
 
     /**
-     * Set Comparative value. This parameter may not be set if a metric has no requirement.
-     * @param CalcValue Comparative value. This parameter may not be set if a metric has no requirement.
+     * Set Comparative value. This parameter is optional if the metric has no requirement.
+     * @param CalcValue Comparative value. This parameter is optional if the metric has no requirement.
      */
     public void setCalcValue(Float CalcValue) {
         this.CalcValue = CalcValue;
     }
 
     /**
-     * Get Data statistics period in seconds. This parameter may not be set if a metric has a default value. 
-     * @return CalcPeriod Data statistics period in seconds. This parameter may not be set if a metric has a default value.
+     * Get Data aggregation period in seconds. This parameter is optional if the metric has a default value. 
+     * @return CalcPeriod Data aggregation period in seconds. This parameter is optional if the metric has a default value.
      */
     public Long getCalcPeriod() {
         return this.CalcPeriod;
     }
 
     /**
-     * Set Data statistics period in seconds. This parameter may not be set if a metric has a default value.
-     * @param CalcPeriod Data statistics period in seconds. This parameter may not be set if a metric has a default value.
+     * Set Data aggregation period in seconds. This parameter is optional if the metric has a default value.
+     * @param CalcPeriod Data aggregation period in seconds. This parameter is optional if the metric has a default value.
      */
     public void setCalcPeriod(Long CalcPeriod) {
         this.CalcPeriod = CalcPeriod;
@@ -191,16 +191,16 @@ public class CreatePolicyGroupCondition extends AbstractModel{
     }
 
     /**
-     * Get If a metric is created based on a template, the RuleId of the metric in the template must be input. 
-     * @return RuleId If a metric is created based on a template, the RuleId of the metric in the template must be input.
+     * Get If a metric is created based on a template, the RuleId of the metric in the template must be passed in. 
+     * @return RuleId If a metric is created based on a template, the RuleId of the metric in the template must be passed in.
      */
     public Long getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set If a metric is created based on a template, the RuleId of the metric in the template must be input.
-     * @param RuleId If a metric is created based on a template, the RuleId of the metric in the template must be input.
+     * Set If a metric is created based on a template, the RuleId of the metric in the template must be passed in.
+     * @param RuleId If a metric is created based on a template, the RuleId of the metric in the template must be passed in.
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;

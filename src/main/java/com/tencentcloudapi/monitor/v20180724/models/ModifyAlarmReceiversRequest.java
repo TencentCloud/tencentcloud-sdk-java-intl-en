@@ -37,7 +37,7 @@ public class ModifyAlarmReceiversRequest extends AbstractModel{
     private String Module;
 
     /**
-    * New recipient information. If this parameter is not set, all recipients will be deleted.
+    * New recipient information. If this parameter is not configured, all recipients will be deleted.
     */
     @SerializedName("ReceiverInfos")
     @Expose
@@ -76,16 +76,16 @@ public class ModifyAlarmReceiversRequest extends AbstractModel{
     }
 
     /**
-     * Get New recipient information. If this parameter is not set, all recipients will be deleted. 
-     * @return ReceiverInfos New recipient information. If this parameter is not set, all recipients will be deleted.
+     * Get New recipient information. If this parameter is not configured, all recipients will be deleted. 
+     * @return ReceiverInfos New recipient information. If this parameter is not configured, all recipients will be deleted.
      */
     public ReceiverInfo [] getReceiverInfos() {
         return this.ReceiverInfos;
     }
 
     /**
-     * Set New recipient information. If this parameter is not set, all recipients will be deleted.
-     * @param ReceiverInfos New recipient information. If this parameter is not set, all recipients will be deleted.
+     * Set New recipient information. If this parameter is not configured, all recipients will be deleted.
+     * @param ReceiverInfos New recipient information. If this parameter is not configured, all recipients will be deleted.
      */
     public void setReceiverInfos(ReceiverInfo [] ReceiverInfos) {
         this.ReceiverInfos = ReceiverInfos;

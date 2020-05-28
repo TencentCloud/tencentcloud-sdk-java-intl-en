@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeAccidentEventListRequest extends AbstractModel{
 
     /**
-    * API module name. The value for the current API is monitor.
+    * API component name. The value for the current API is monitor.
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * Start time, which is the timestamp one day earlier by default.
+    * Start time, which is the timestamp one day prior by default.
     */
     @SerializedName("StartTime")
     @Expose
@@ -65,7 +65,7 @@ public class DescribeAccidentEventListRequest extends AbstractModel{
     private String UpdateTimeOrder;
 
     /**
-    * Sorting rule by OccurTime. Valid values: asc or desc. Sorting by UpdateTimeOrder takes a higher priority.
+    * Sorting rule by OccurTime. Valid values: asc or desc. Sorting by UpdateTimeOrder takes priority.
     */
     @SerializedName("OccurTimeOrder")
     @Expose
@@ -79,7 +79,7 @@ public class DescribeAccidentEventListRequest extends AbstractModel{
     private Long [] AccidentType;
 
     /**
-    * Filter by event. The value 1 indicates CVM storage issues. The value 2 indicates CVM network connection issues. The value 3 indicates that the CVM runs exceptionally. The value 202 indicates that an ISP network jitter occurs.
+    * Filter by event. The value 1 indicates CVM storage issues. The value 2 indicates CVM network connection issues. The value 3 indicates that the CVM has an exception. The value 202 indicates that an ISP network jitter occurs.
     */
     @SerializedName("AccidentEvent")
     @Expose
@@ -107,32 +107,32 @@ public class DescribeAccidentEventListRequest extends AbstractModel{
     private String AffectResource;
 
     /**
-     * Get API module name. The value for the current API is monitor. 
-     * @return Module API module name. The value for the current API is monitor.
+     * Get API component name. The value for the current API is monitor. 
+     * @return Module API component name. The value for the current API is monitor.
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * Set API module name. The value for the current API is monitor.
-     * @param Module API module name. The value for the current API is monitor.
+     * Set API component name. The value for the current API is monitor.
+     * @param Module API component name. The value for the current API is monitor.
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * Get Start time, which is the timestamp one day earlier by default. 
-     * @return StartTime Start time, which is the timestamp one day earlier by default.
+     * Get Start time, which is the timestamp one day prior by default. 
+     * @return StartTime Start time, which is the timestamp one day prior by default.
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time, which is the timestamp one day earlier by default.
-     * @param StartTime Start time, which is the timestamp one day earlier by default.
+     * Set Start time, which is the timestamp one day prior by default.
+     * @param StartTime Start time, which is the timestamp one day prior by default.
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
@@ -203,16 +203,16 @@ public class DescribeAccidentEventListRequest extends AbstractModel{
     }
 
     /**
-     * Get Sorting rule by OccurTime. Valid values: asc or desc. Sorting by UpdateTimeOrder takes a higher priority. 
-     * @return OccurTimeOrder Sorting rule by OccurTime. Valid values: asc or desc. Sorting by UpdateTimeOrder takes a higher priority.
+     * Get Sorting rule by OccurTime. Valid values: asc or desc. Sorting by UpdateTimeOrder takes priority. 
+     * @return OccurTimeOrder Sorting rule by OccurTime. Valid values: asc or desc. Sorting by UpdateTimeOrder takes priority.
      */
     public String getOccurTimeOrder() {
         return this.OccurTimeOrder;
     }
 
     /**
-     * Set Sorting rule by OccurTime. Valid values: asc or desc. Sorting by UpdateTimeOrder takes a higher priority.
-     * @param OccurTimeOrder Sorting rule by OccurTime. Valid values: asc or desc. Sorting by UpdateTimeOrder takes a higher priority.
+     * Set Sorting rule by OccurTime. Valid values: asc or desc. Sorting by UpdateTimeOrder takes priority.
+     * @param OccurTimeOrder Sorting rule by OccurTime. Valid values: asc or desc. Sorting by UpdateTimeOrder takes priority.
      */
     public void setOccurTimeOrder(String OccurTimeOrder) {
         this.OccurTimeOrder = OccurTimeOrder;
@@ -235,16 +235,16 @@ public class DescribeAccidentEventListRequest extends AbstractModel{
     }
 
     /**
-     * Get Filter by event. The value 1 indicates CVM storage issues. The value 2 indicates CVM network connection issues. The value 3 indicates that the CVM runs exceptionally. The value 202 indicates that an ISP network jitter occurs. 
-     * @return AccidentEvent Filter by event. The value 1 indicates CVM storage issues. The value 2 indicates CVM network connection issues. The value 3 indicates that the CVM runs exceptionally. The value 202 indicates that an ISP network jitter occurs.
+     * Get Filter by event. The value 1 indicates CVM storage issues. The value 2 indicates CVM network connection issues. The value 3 indicates that the CVM has an exception. The value 202 indicates that an ISP network jitter occurs. 
+     * @return AccidentEvent Filter by event. The value 1 indicates CVM storage issues. The value 2 indicates CVM network connection issues. The value 3 indicates that the CVM has an exception. The value 202 indicates that an ISP network jitter occurs.
      */
     public Long [] getAccidentEvent() {
         return this.AccidentEvent;
     }
 
     /**
-     * Set Filter by event. The value 1 indicates CVM storage issues. The value 2 indicates CVM network connection issues. The value 3 indicates that the CVM runs exceptionally. The value 202 indicates that an ISP network jitter occurs.
-     * @param AccidentEvent Filter by event. The value 1 indicates CVM storage issues. The value 2 indicates CVM network connection issues. The value 3 indicates that the CVM runs exceptionally. The value 202 indicates that an ISP network jitter occurs.
+     * Set Filter by event. The value 1 indicates CVM storage issues. The value 2 indicates CVM network connection issues. The value 3 indicates that the CVM has an exception. The value 202 indicates that an ISP network jitter occurs.
+     * @param AccidentEvent Filter by event. The value 1 indicates CVM storage issues. The value 2 indicates CVM network connection issues. The value 3 indicates that the CVM has an exception. The value 202 indicates that an ISP network jitter occurs.
      */
     public void setAccidentEvent(Long [] AccidentEvent) {
         this.AccidentEvent = AccidentEvent;

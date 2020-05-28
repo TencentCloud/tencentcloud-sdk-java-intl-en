@@ -32,6 +32,14 @@ off: disable full-path cache (i.e., enable parameter filter)
     private String FullUrlCache;
 
     /**
+    * Whether the cache ignores letter case
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CaseSensitive")
+    @Expose
+    private String CaseSensitive;
+
+    /**
      * Get Whether to enable full-path cache
 on: enable full-path cache (i.e., disable parameter filter)
 off: disable full-path cache (i.e., enable parameter filter) 
@@ -56,10 +64,31 @@ off: disable full-path cache (i.e., enable parameter filter)
     }
 
     /**
+     * Get Whether the cache ignores letter case
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return CaseSensitive Whether the cache ignores letter case
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getCaseSensitive() {
+        return this.CaseSensitive;
+    }
+
+    /**
+     * Set Whether the cache ignores letter case
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param CaseSensitive Whether the cache ignores letter case
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCaseSensitive(String CaseSensitive) {
+        this.CaseSensitive = CaseSensitive;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FullUrlCache", this.FullUrlCache);
+        this.setParamSimple(map, prefix + "CaseSensitive", this.CaseSensitive);
 
     }
 }
