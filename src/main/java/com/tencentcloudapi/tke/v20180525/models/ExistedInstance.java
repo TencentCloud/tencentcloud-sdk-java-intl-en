@@ -86,17 +86,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String CreatedTime;
 
     /**
-    * Instance’s billing mode. Value range:
-PREPAID: Prepaid (Monthly Subscription)
-POSTPAID_BY_HOUR: Postpaid (Pay-as-you-go)
-CDHPAID: CDH-paid. Only CDH is charged and instances on the CDH do not incur fees.
-Note: This field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("InstanceChargeType")
-    @Expose
-    private String InstanceChargeType;
-
-    /**
     * Instance’s number of CPU cores. Unit: cores.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -127,6 +116,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
+
+    /**
+    * Auto scaling group ID
+Note: This field may return null, indicating that no valid value was found.
+    */
+    @SerializedName("AutoscalingGroupId")
+    @Expose
+    private String AutoscalingGroupId;
+
+    /**
+    * Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
+Note: This field may return null, indicating that no valid value was found.
+    */
+    @SerializedName("InstanceChargeType")
+    @Expose
+    private String InstanceChargeType;
 
     /**
      * Get Whether the instance supports being added to the cluster (TRUE: support; FALSE: not support).
@@ -285,38 +290,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Instance’s billing mode. Value range:
-PREPAID: Prepaid (Monthly Subscription)
-POSTPAID_BY_HOUR: Postpaid (Pay-as-you-go)
-CDHPAID: CDH-paid. Only CDH is charged and instances on the CDH do not incur fees.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceChargeType Instance’s billing mode. Value range:
-PREPAID: Prepaid (Monthly Subscription)
-POSTPAID_BY_HOUR: Postpaid (Pay-as-you-go)
-CDHPAID: CDH-paid. Only CDH is charged and instances on the CDH do not incur fees.
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public String getInstanceChargeType() {
-        return this.InstanceChargeType;
-    }
-
-    /**
-     * Set Instance’s billing mode. Value range:
-PREPAID: Prepaid (Monthly Subscription)
-POSTPAID_BY_HOUR: Postpaid (Pay-as-you-go)
-CDHPAID: CDH-paid. Only CDH is charged and instances on the CDH do not incur fees.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceChargeType Instance’s billing mode. Value range:
-PREPAID: Prepaid (Monthly Subscription)
-POSTPAID_BY_HOUR: Postpaid (Pay-as-you-go)
-CDHPAID: CDH-paid. Only CDH is charged and instances on the CDH do not incur fees.
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public void setInstanceChargeType(String InstanceChargeType) {
-        this.InstanceChargeType = InstanceChargeType;
-    }
-
-    /**
      * Get Instance’s number of CPU cores. Unit: cores.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return CPU Instance’s number of CPU cores. Unit: cores.
@@ -397,6 +370,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Auto scaling group ID
+Note: This field may return null, indicating that no valid value was found. 
+     * @return AutoscalingGroupId Auto scaling group ID
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public String getAutoscalingGroupId() {
+        return this.AutoscalingGroupId;
+    }
+
+    /**
+     * Set Auto scaling group ID
+Note: This field may return null, indicating that no valid value was found.
+     * @param AutoscalingGroupId Auto scaling group ID
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public void setAutoscalingGroupId(String AutoscalingGroupId) {
+        this.AutoscalingGroupId = AutoscalingGroupId;
+    }
+
+    /**
+     * Get Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
+Note: This field may return null, indicating that no valid value was found. 
+     * @return InstanceChargeType Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public String getInstanceChargeType() {
+        return this.InstanceChargeType;
+    }
+
+    /**
+     * Set Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
+Note: This field may return null, indicating that no valid value was found.
+     * @param InstanceChargeType Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public void setInstanceChargeType(String InstanceChargeType) {
+        this.InstanceChargeType = InstanceChargeType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -408,11 +421,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArraySimple(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
         this.setParamArraySimple(map, prefix + "PublicIpAddresses.", this.PublicIpAddresses);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
-        this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamSimple(map, prefix + "CPU", this.CPU);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "OsName", this.OsName);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "AutoscalingGroupId", this.AutoscalingGroupId);
+        this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
 
     }
 }

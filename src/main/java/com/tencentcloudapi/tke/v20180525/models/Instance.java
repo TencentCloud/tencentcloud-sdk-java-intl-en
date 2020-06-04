@@ -82,14 +82,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String LanIP;
 
     /**
-    * 
+    * Resource pool ID
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("NodePoolId")
     @Expose
     private String NodePoolId;
 
     /**
-    * 
+    * ID of the auto-scaling group
+Note: this field may return null, indicating that no valid value is obtained.
     */
     @SerializedName("AutoscalingGroupId")
     @Expose
@@ -236,32 +238,40 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return NodePoolId 
+     * Get Resource pool ID
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return NodePoolId Resource pool ID
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getNodePoolId() {
         return this.NodePoolId;
     }
 
     /**
-     * Set 
-     * @param NodePoolId 
+     * Set Resource pool ID
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param NodePoolId Resource pool ID
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setNodePoolId(String NodePoolId) {
         this.NodePoolId = NodePoolId;
     }
 
     /**
-     * Get  
-     * @return AutoscalingGroupId 
+     * Get ID of the auto-scaling group
+Note: this field may return null, indicating that no valid value is obtained. 
+     * @return AutoscalingGroupId ID of the auto-scaling group
+Note: this field may return null, indicating that no valid value is obtained.
      */
     public String getAutoscalingGroupId() {
         return this.AutoscalingGroupId;
     }
 
     /**
-     * Set 
-     * @param AutoscalingGroupId 
+     * Set ID of the auto-scaling group
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param AutoscalingGroupId ID of the auto-scaling group
+Note: this field may return null, indicating that no valid value is obtained.
      */
     public void setAutoscalingGroupId(String AutoscalingGroupId) {
         this.AutoscalingGroupId = AutoscalingGroupId;

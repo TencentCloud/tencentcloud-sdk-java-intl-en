@@ -24,6 +24,7 @@ public class InstanceAdvancedSettings extends AbstractModel{
 
     /**
     * Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
+Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("MountTarget")
     @Expose
@@ -31,6 +32,7 @@ public class InstanceAdvancedSettings extends AbstractModel{
 
     /**
     * Specified value of dockerd --graph. Default value: /var/lib/docker
+Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("DockerGraphPath")
     @Expose
@@ -38,6 +40,7 @@ public class InstanceAdvancedSettings extends AbstractModel{
 
     /**
     * Base64-encoded user script, which will be executed after the K8s component starts running. You need to ensure the reentrant and retry logic of the script. The script and its log files can be viewed at the node path: /data/ccs_userscript/. If you want to initialize nodes before adding them to the scheduling list, you can use this parameter together with the unschedulable parameter. After the final initialization of userScript is completed, add the kubectl uncordon nodename --kubeconfig=/root/.kube/config command to enable the node for scheduling.
+Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("UserScript")
     @Expose
@@ -51,14 +54,16 @@ public class InstanceAdvancedSettings extends AbstractModel{
     private Long Unschedulable;
 
     /**
-    * 
+    * Node label array
+Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("Labels")
     @Expose
     private Label [] Labels;
 
     /**
-    * 
+    * Data disk information
+Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("DataDisks")
     @Expose
@@ -66,14 +71,17 @@ public class InstanceAdvancedSettings extends AbstractModel{
 
     /**
     * Information about node custom parameters
+Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("ExtraArgs")
     @Expose
     private InstanceExtraArgs ExtraArgs;
 
     /**
-     * Get Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk. 
+     * Get Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
+Note: This field may return null, indicating that no valid value was found. 
      * @return MountTarget Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
+Note: This field may return null, indicating that no valid value was found.
      */
     public String getMountTarget() {
         return this.MountTarget;
@@ -81,15 +89,19 @@ public class InstanceAdvancedSettings extends AbstractModel{
 
     /**
      * Set Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
+Note: This field may return null, indicating that no valid value was found.
      * @param MountTarget Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
+Note: This field may return null, indicating that no valid value was found.
      */
     public void setMountTarget(String MountTarget) {
         this.MountTarget = MountTarget;
     }
 
     /**
-     * Get Specified value of dockerd --graph. Default value: /var/lib/docker 
+     * Get Specified value of dockerd --graph. Default value: /var/lib/docker
+Note: This field may return null, indicating that no valid value was found. 
      * @return DockerGraphPath Specified value of dockerd --graph. Default value: /var/lib/docker
+Note: This field may return null, indicating that no valid value was found.
      */
     public String getDockerGraphPath() {
         return this.DockerGraphPath;
@@ -97,15 +109,19 @@ public class InstanceAdvancedSettings extends AbstractModel{
 
     /**
      * Set Specified value of dockerd --graph. Default value: /var/lib/docker
+Note: This field may return null, indicating that no valid value was found.
      * @param DockerGraphPath Specified value of dockerd --graph. Default value: /var/lib/docker
+Note: This field may return null, indicating that no valid value was found.
      */
     public void setDockerGraphPath(String DockerGraphPath) {
         this.DockerGraphPath = DockerGraphPath;
     }
 
     /**
-     * Get Base64-encoded user script, which will be executed after the K8s component starts running. You need to ensure the reentrant and retry logic of the script. The script and its log files can be viewed at the node path: /data/ccs_userscript/. If you want to initialize nodes before adding them to the scheduling list, you can use this parameter together with the unschedulable parameter. After the final initialization of userScript is completed, add the kubectl uncordon nodename --kubeconfig=/root/.kube/config command to enable the node for scheduling. 
+     * Get Base64-encoded user script, which will be executed after the K8s component starts running. You need to ensure the reentrant and retry logic of the script. The script and its log files can be viewed at the node path: /data/ccs_userscript/. If you want to initialize nodes before adding them to the scheduling list, you can use this parameter together with the unschedulable parameter. After the final initialization of userScript is completed, add the kubectl uncordon nodename --kubeconfig=/root/.kube/config command to enable the node for scheduling.
+Note: This field may return null, indicating that no valid value was found. 
      * @return UserScript Base64-encoded user script, which will be executed after the K8s component starts running. You need to ensure the reentrant and retry logic of the script. The script and its log files can be viewed at the node path: /data/ccs_userscript/. If you want to initialize nodes before adding them to the scheduling list, you can use this parameter together with the unschedulable parameter. After the final initialization of userScript is completed, add the kubectl uncordon nodename --kubeconfig=/root/.kube/config command to enable the node for scheduling.
+Note: This field may return null, indicating that no valid value was found.
      */
     public String getUserScript() {
         return this.UserScript;
@@ -113,7 +129,9 @@ public class InstanceAdvancedSettings extends AbstractModel{
 
     /**
      * Set Base64-encoded user script, which will be executed after the K8s component starts running. You need to ensure the reentrant and retry logic of the script. The script and its log files can be viewed at the node path: /data/ccs_userscript/. If you want to initialize nodes before adding them to the scheduling list, you can use this parameter together with the unschedulable parameter. After the final initialization of userScript is completed, add the kubectl uncordon nodename --kubeconfig=/root/.kube/config command to enable the node for scheduling.
+Note: This field may return null, indicating that no valid value was found.
      * @param UserScript Base64-encoded user script, which will be executed after the K8s component starts running. You need to ensure the reentrant and retry logic of the script. The script and its log files can be viewed at the node path: /data/ccs_userscript/. If you want to initialize nodes before adding them to the scheduling list, you can use this parameter together with the unschedulable parameter. After the final initialization of userScript is completed, add the kubectl uncordon nodename --kubeconfig=/root/.kube/config command to enable the node for scheduling.
+Note: This field may return null, indicating that no valid value was found.
      */
     public void setUserScript(String UserScript) {
         this.UserScript = UserScript;
@@ -136,40 +154,50 @@ public class InstanceAdvancedSettings extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return Labels 
+     * Get Node label array
+Note: This field may return null, indicating that no valid value was found. 
+     * @return Labels Node label array
+Note: This field may return null, indicating that no valid value was found.
      */
     public Label [] getLabels() {
         return this.Labels;
     }
 
     /**
-     * Set 
-     * @param Labels 
+     * Set Node label array
+Note: This field may return null, indicating that no valid value was found.
+     * @param Labels Node label array
+Note: This field may return null, indicating that no valid value was found.
      */
     public void setLabels(Label [] Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get  
-     * @return DataDisks 
+     * Get Data disk information
+Note: This field may return null, indicating that no valid value was found. 
+     * @return DataDisks Data disk information
+Note: This field may return null, indicating that no valid value was found.
      */
     public DataDisk [] getDataDisks() {
         return this.DataDisks;
     }
 
     /**
-     * Set 
-     * @param DataDisks 
+     * Set Data disk information
+Note: This field may return null, indicating that no valid value was found.
+     * @param DataDisks Data disk information
+Note: This field may return null, indicating that no valid value was found.
      */
     public void setDataDisks(DataDisk [] DataDisks) {
         this.DataDisks = DataDisks;
     }
 
     /**
-     * Get Information about node custom parameters 
+     * Get Information about node custom parameters
+Note: This field may return null, indicating that no valid value was found. 
      * @return ExtraArgs Information about node custom parameters
+Note: This field may return null, indicating that no valid value was found.
      */
     public InstanceExtraArgs getExtraArgs() {
         return this.ExtraArgs;
@@ -177,7 +205,9 @@ public class InstanceAdvancedSettings extends AbstractModel{
 
     /**
      * Set Information about node custom parameters
+Note: This field may return null, indicating that no valid value was found.
      * @param ExtraArgs Information about node custom parameters
+Note: This field may return null, indicating that no valid value was found.
      */
     public void setExtraArgs(InstanceExtraArgs ExtraArgs) {
         this.ExtraArgs = ExtraArgs;

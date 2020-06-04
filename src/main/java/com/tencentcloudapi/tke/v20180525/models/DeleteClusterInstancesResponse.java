@@ -23,11 +23,95 @@ import java.util.HashMap;
 public class DeleteClusterInstancesResponse extends AbstractModel{
 
     /**
+    * IDs of deleted instances
+Note: This field may return null, indicating that no valid value was found.
+    */
+    @SerializedName("SuccInstanceIds")
+    @Expose
+    private String [] SuccInstanceIds;
+
+    /**
+    * IDs of instances failed to be deleted
+Note: This field may return null, indicating that no valid value was found.
+    */
+    @SerializedName("FailedInstanceIds")
+    @Expose
+    private String [] FailedInstanceIds;
+
+    /**
+    * IDs of instances that cannot be found
+Note: This field may return null, indicating that no valid value was found.
+    */
+    @SerializedName("NotFoundInstanceIds")
+    @Expose
+    private String [] NotFoundInstanceIds;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get IDs of deleted instances
+Note: This field may return null, indicating that no valid value was found. 
+     * @return SuccInstanceIds IDs of deleted instances
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public String [] getSuccInstanceIds() {
+        return this.SuccInstanceIds;
+    }
+
+    /**
+     * Set IDs of deleted instances
+Note: This field may return null, indicating that no valid value was found.
+     * @param SuccInstanceIds IDs of deleted instances
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public void setSuccInstanceIds(String [] SuccInstanceIds) {
+        this.SuccInstanceIds = SuccInstanceIds;
+    }
+
+    /**
+     * Get IDs of instances failed to be deleted
+Note: This field may return null, indicating that no valid value was found. 
+     * @return FailedInstanceIds IDs of instances failed to be deleted
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public String [] getFailedInstanceIds() {
+        return this.FailedInstanceIds;
+    }
+
+    /**
+     * Set IDs of instances failed to be deleted
+Note: This field may return null, indicating that no valid value was found.
+     * @param FailedInstanceIds IDs of instances failed to be deleted
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public void setFailedInstanceIds(String [] FailedInstanceIds) {
+        this.FailedInstanceIds = FailedInstanceIds;
+    }
+
+    /**
+     * Get IDs of instances that cannot be found
+Note: This field may return null, indicating that no valid value was found. 
+     * @return NotFoundInstanceIds IDs of instances that cannot be found
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public String [] getNotFoundInstanceIds() {
+        return this.NotFoundInstanceIds;
+    }
+
+    /**
+     * Set IDs of instances that cannot be found
+Note: This field may return null, indicating that no valid value was found.
+     * @param NotFoundInstanceIds IDs of instances that cannot be found
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public void setNotFoundInstanceIds(String [] NotFoundInstanceIds) {
+        this.NotFoundInstanceIds = NotFoundInstanceIds;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -49,6 +133,9 @@ public class DeleteClusterInstancesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "SuccInstanceIds.", this.SuccInstanceIds);
+        this.setParamArraySimple(map, prefix + "FailedInstanceIds.", this.FailedInstanceIds);
+        this.setParamArraySimple(map, prefix + "NotFoundInstanceIds.", this.NotFoundInstanceIds);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

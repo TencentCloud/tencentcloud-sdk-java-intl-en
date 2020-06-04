@@ -24,6 +24,7 @@ public class AddExistedInstancesResponse extends AbstractModel{
 
     /**
     * IDs of failed nodes
+Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("FailedInstanceIds")
     @Expose
@@ -31,6 +32,7 @@ public class AddExistedInstancesResponse extends AbstractModel{
 
     /**
     * IDs of successful nodes
+Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("SuccInstanceIds")
     @Expose
@@ -38,6 +40,7 @@ public class AddExistedInstancesResponse extends AbstractModel{
 
     /**
     * IDs of (successful or failed) nodes that timed out
+Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("TimeoutInstanceIds")
     @Expose
@@ -51,8 +54,10 @@ public class AddExistedInstancesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get IDs of failed nodes 
+     * Get IDs of failed nodes
+Note: This field may return null, indicating that no valid value was found. 
      * @return FailedInstanceIds IDs of failed nodes
+Note: This field may return null, indicating that no valid value was found.
      */
     public String [] getFailedInstanceIds() {
         return this.FailedInstanceIds;
@@ -60,15 +65,19 @@ public class AddExistedInstancesResponse extends AbstractModel{
 
     /**
      * Set IDs of failed nodes
+Note: This field may return null, indicating that no valid value was found.
      * @param FailedInstanceIds IDs of failed nodes
+Note: This field may return null, indicating that no valid value was found.
      */
     public void setFailedInstanceIds(String [] FailedInstanceIds) {
         this.FailedInstanceIds = FailedInstanceIds;
     }
 
     /**
-     * Get IDs of successful nodes 
+     * Get IDs of successful nodes
+Note: This field may return null, indicating that no valid value was found. 
      * @return SuccInstanceIds IDs of successful nodes
+Note: This field may return null, indicating that no valid value was found.
      */
     public String [] getSuccInstanceIds() {
         return this.SuccInstanceIds;
@@ -76,15 +85,19 @@ public class AddExistedInstancesResponse extends AbstractModel{
 
     /**
      * Set IDs of successful nodes
+Note: This field may return null, indicating that no valid value was found.
      * @param SuccInstanceIds IDs of successful nodes
+Note: This field may return null, indicating that no valid value was found.
      */
     public void setSuccInstanceIds(String [] SuccInstanceIds) {
         this.SuccInstanceIds = SuccInstanceIds;
     }
 
     /**
-     * Get IDs of (successful or failed) nodes that timed out 
+     * Get IDs of (successful or failed) nodes that timed out
+Note: This field may return null, indicating that no valid value was found. 
      * @return TimeoutInstanceIds IDs of (successful or failed) nodes that timed out
+Note: This field may return null, indicating that no valid value was found.
      */
     public String [] getTimeoutInstanceIds() {
         return this.TimeoutInstanceIds;
@@ -92,7 +105,9 @@ public class AddExistedInstancesResponse extends AbstractModel{
 
     /**
      * Set IDs of (successful or failed) nodes that timed out
+Note: This field may return null, indicating that no valid value was found.
      * @param TimeoutInstanceIds IDs of (successful or failed) nodes that timed out
+Note: This field may return null, indicating that no valid value was found.
      */
     public void setTimeoutInstanceIds(String [] TimeoutInstanceIds) {
         this.TimeoutInstanceIds = TimeoutInstanceIds;

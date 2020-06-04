@@ -164,6 +164,60 @@ public class MdlClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the channel alarm information.
+     * @param req DescribeMediaLiveChannelAlertsRequest
+     * @return DescribeMediaLiveChannelAlertsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMediaLiveChannelAlertsResponse DescribeMediaLiveChannelAlerts(DescribeMediaLiveChannelAlertsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMediaLiveChannelAlertsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMediaLiveChannelAlertsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeMediaLiveChannelAlerts"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the input statistics.
+     * @param req DescribeMediaLiveChannelInputStatisticsRequest
+     * @return DescribeMediaLiveChannelInputStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMediaLiveChannelInputStatisticsResponse DescribeMediaLiveChannelInputStatistics(DescribeMediaLiveChannelInputStatisticsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMediaLiveChannelInputStatisticsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMediaLiveChannelInputStatisticsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeMediaLiveChannelInputStatistics"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the output statistics of a channel.
+     * @param req DescribeMediaLiveChannelOutputStatisticsRequest
+     * @return DescribeMediaLiveChannelOutputStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMediaLiveChannelOutputStatisticsResponse DescribeMediaLiveChannelOutputStatistics(DescribeMediaLiveChannelOutputStatisticsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMediaLiveChannelOutputStatisticsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMediaLiveChannelOutputStatisticsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeMediaLiveChannelOutputStatistics"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the information of MediaLive channels in batches.
      * @param req DescribeMediaLiveChannelsRequest
      * @return DescribeMediaLiveChannelsResponse

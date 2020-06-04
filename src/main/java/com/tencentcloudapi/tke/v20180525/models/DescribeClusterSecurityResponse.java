@@ -66,6 +66,7 @@ public class DescribeClusterSecurityResponse extends AbstractModel{
 
     /**
     * Cluster’s access policy group
+Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("SecurityPolicy")
     @Expose
@@ -80,7 +81,8 @@ Note: This field may return null, indicating that no valid value was found.
     private String Kubeconfig;
 
     /**
-    * 
+    * Access address of the cluster JnsGw
+Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("JnsGwEndpoint")
     @Expose
@@ -190,8 +192,10 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Cluster’s access policy group 
+     * Get Cluster’s access policy group
+Note: This field may return null, indicating that no valid value was found. 
      * @return SecurityPolicy Cluster’s access policy group
+Note: This field may return null, indicating that no valid value was found.
      */
     public String [] getSecurityPolicy() {
         return this.SecurityPolicy;
@@ -199,7 +203,9 @@ Note: This field may return null, indicating that no valid value was found.
 
     /**
      * Set Cluster’s access policy group
+Note: This field may return null, indicating that no valid value was found.
      * @param SecurityPolicy Cluster’s access policy group
+Note: This field may return null, indicating that no valid value was found.
      */
     public void setSecurityPolicy(String [] SecurityPolicy) {
         this.SecurityPolicy = SecurityPolicy;
@@ -226,16 +232,20 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get  
-     * @return JnsGwEndpoint 
+     * Get Access address of the cluster JnsGw
+Note: This field may return null, indicating that no valid value was found. 
+     * @return JnsGwEndpoint Access address of the cluster JnsGw
+Note: This field may return null, indicating that no valid value was found.
      */
     public String getJnsGwEndpoint() {
         return this.JnsGwEndpoint;
     }
 
     /**
-     * Set 
-     * @param JnsGwEndpoint 
+     * Set Access address of the cluster JnsGw
+Note: This field may return null, indicating that no valid value was found.
+     * @param JnsGwEndpoint Access address of the cluster JnsGw
+Note: This field may return null, indicating that no valid value was found.
      */
     public void setJnsGwEndpoint(String JnsGwEndpoint) {
         this.JnsGwEndpoint = JnsGwEndpoint;

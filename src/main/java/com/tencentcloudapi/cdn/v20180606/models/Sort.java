@@ -26,6 +26,7 @@ public class Sort extends AbstractModel{
     * Fields that can be sorted. Currently supports:
 `createTime`: domain name creation time.
 `certExpireTime`: certificate expiration time.
+Default value: createTime.
     */
     @SerializedName("Key")
     @Expose
@@ -41,10 +42,12 @@ public class Sort extends AbstractModel{
     /**
      * Get Fields that can be sorted. Currently supports:
 `createTime`: domain name creation time.
-`certExpireTime`: certificate expiration time. 
+`certExpireTime`: certificate expiration time.
+Default value: createTime. 
      * @return Key Fields that can be sorted. Currently supports:
 `createTime`: domain name creation time.
 `certExpireTime`: certificate expiration time.
+Default value: createTime.
      */
     public String getKey() {
         return this.Key;
@@ -54,9 +57,11 @@ public class Sort extends AbstractModel{
      * Set Fields that can be sorted. Currently supports:
 `createTime`: domain name creation time.
 `certExpireTime`: certificate expiration time.
+Default value: createTime.
      * @param Key Fields that can be sorted. Currently supports:
 `createTime`: domain name creation time.
 `certExpireTime`: certificate expiration time.
+Default value: createTime.
      */
     public void setKey(String Key) {
         this.Key = Key;
