@@ -24,7 +24,6 @@ public class DeleteClusterInstancesResponse extends AbstractModel{
 
     /**
     * IDs of deleted instances
-Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("SuccInstanceIds")
     @Expose
@@ -32,7 +31,6 @@ Note: This field may return null, indicating that no valid value was found.
 
     /**
     * IDs of instances failed to be deleted
-Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("FailedInstanceIds")
     @Expose
@@ -40,7 +38,6 @@ Note: This field may return null, indicating that no valid value was found.
 
     /**
     * IDs of instances that cannot be found
-Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("NotFoundInstanceIds")
     @Expose
@@ -54,10 +51,8 @@ Note: This field may return null, indicating that no valid value was found.
     private String RequestId;
 
     /**
-     * Get IDs of deleted instances
-Note: This field may return null, indicating that no valid value was found. 
+     * Get IDs of deleted instances 
      * @return SuccInstanceIds IDs of deleted instances
-Note: This field may return null, indicating that no valid value was found.
      */
     public String [] getSuccInstanceIds() {
         return this.SuccInstanceIds;
@@ -65,19 +60,15 @@ Note: This field may return null, indicating that no valid value was found.
 
     /**
      * Set IDs of deleted instances
-Note: This field may return null, indicating that no valid value was found.
      * @param SuccInstanceIds IDs of deleted instances
-Note: This field may return null, indicating that no valid value was found.
      */
     public void setSuccInstanceIds(String [] SuccInstanceIds) {
         this.SuccInstanceIds = SuccInstanceIds;
     }
 
     /**
-     * Get IDs of instances failed to be deleted
-Note: This field may return null, indicating that no valid value was found. 
+     * Get IDs of instances failed to be deleted 
      * @return FailedInstanceIds IDs of instances failed to be deleted
-Note: This field may return null, indicating that no valid value was found.
      */
     public String [] getFailedInstanceIds() {
         return this.FailedInstanceIds;
@@ -85,19 +76,15 @@ Note: This field may return null, indicating that no valid value was found.
 
     /**
      * Set IDs of instances failed to be deleted
-Note: This field may return null, indicating that no valid value was found.
      * @param FailedInstanceIds IDs of instances failed to be deleted
-Note: This field may return null, indicating that no valid value was found.
      */
     public void setFailedInstanceIds(String [] FailedInstanceIds) {
         this.FailedInstanceIds = FailedInstanceIds;
     }
 
     /**
-     * Get IDs of instances that cannot be found
-Note: This field may return null, indicating that no valid value was found. 
+     * Get IDs of instances that cannot be found 
      * @return NotFoundInstanceIds IDs of instances that cannot be found
-Note: This field may return null, indicating that no valid value was found.
      */
     public String [] getNotFoundInstanceIds() {
         return this.NotFoundInstanceIds;
@@ -105,9 +92,7 @@ Note: This field may return null, indicating that no valid value was found.
 
     /**
      * Set IDs of instances that cannot be found
-Note: This field may return null, indicating that no valid value was found.
      * @param NotFoundInstanceIds IDs of instances that cannot be found
-Note: This field may return null, indicating that no valid value was found.
      */
     public void setNotFoundInstanceIds(String [] NotFoundInstanceIds) {
         this.NotFoundInstanceIds = NotFoundInstanceIds;

@@ -30,7 +30,7 @@ public class CreateImageRequest extends AbstractModel{
     private String ImageName;
 
     /**
-    * The ID of the instance used to create an image
+    * Instance ID used to create an image.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -58,21 +58,21 @@ public class CreateImageRequest extends AbstractModel{
     private String Sysprep;
 
     /**
-    * The ID of the data disk used to create an image
+    * Specified data disk ID included in the full image created from the instance.
     */
     @SerializedName("DataDiskIds")
     @Expose
     private String [] DataDiskIds;
 
     /**
-    * The ID of the snapshot used to create an image. A system disk snapshot must be included.
+    * Specified snapshot ID used to create an image. A system disk snapshot must be included. It cannot be passed together with `InstanceId`.
     */
     @SerializedName("SnapshotIds")
     @Expose
     private String [] SnapshotIds;
 
     /**
-    * Verifies the validity of the request without affecting the resources involved.
+    * Success status of this request, without affecting the resources involved
     */
     @SerializedName("DryRun")
     @Expose
@@ -95,16 +95,16 @@ public class CreateImageRequest extends AbstractModel{
     }
 
     /**
-     * Get The ID of the instance used to create an image 
-     * @return InstanceId The ID of the instance used to create an image
+     * Get Instance ID used to create an image. 
+     * @return InstanceId Instance ID used to create an image.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set The ID of the instance used to create an image
-     * @param InstanceId The ID of the instance used to create an image
+     * Set Instance ID used to create an image.
+     * @param InstanceId Instance ID used to create an image.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -159,48 +159,48 @@ public class CreateImageRequest extends AbstractModel{
     }
 
     /**
-     * Get The ID of the data disk used to create an image 
-     * @return DataDiskIds The ID of the data disk used to create an image
+     * Get Specified data disk ID included in the full image created from the instance. 
+     * @return DataDiskIds Specified data disk ID included in the full image created from the instance.
      */
     public String [] getDataDiskIds() {
         return this.DataDiskIds;
     }
 
     /**
-     * Set The ID of the data disk used to create an image
-     * @param DataDiskIds The ID of the data disk used to create an image
+     * Set Specified data disk ID included in the full image created from the instance.
+     * @param DataDiskIds Specified data disk ID included in the full image created from the instance.
      */
     public void setDataDiskIds(String [] DataDiskIds) {
         this.DataDiskIds = DataDiskIds;
     }
 
     /**
-     * Get The ID of the snapshot used to create an image. A system disk snapshot must be included. 
-     * @return SnapshotIds The ID of the snapshot used to create an image. A system disk snapshot must be included.
+     * Get Specified snapshot ID used to create an image. A system disk snapshot must be included. It cannot be passed together with `InstanceId`. 
+     * @return SnapshotIds Specified snapshot ID used to create an image. A system disk snapshot must be included. It cannot be passed together with `InstanceId`.
      */
     public String [] getSnapshotIds() {
         return this.SnapshotIds;
     }
 
     /**
-     * Set The ID of the snapshot used to create an image. A system disk snapshot must be included.
-     * @param SnapshotIds The ID of the snapshot used to create an image. A system disk snapshot must be included.
+     * Set Specified snapshot ID used to create an image. A system disk snapshot must be included. It cannot be passed together with `InstanceId`.
+     * @param SnapshotIds Specified snapshot ID used to create an image. A system disk snapshot must be included. It cannot be passed together with `InstanceId`.
      */
     public void setSnapshotIds(String [] SnapshotIds) {
         this.SnapshotIds = SnapshotIds;
     }
 
     /**
-     * Get Verifies the validity of the request without affecting the resources involved. 
-     * @return DryRun Verifies the validity of the request without affecting the resources involved.
+     * Get Success status of this request, without affecting the resources involved 
+     * @return DryRun Success status of this request, without affecting the resources involved
      */
     public Boolean getDryRun() {
         return this.DryRun;
     }
 
     /**
-     * Set Verifies the validity of the request without affecting the resources involved.
-     * @param DryRun Verifies the validity of the request without affecting the resources involved.
+     * Set Success status of this request, without affecting the resources involved
+     * @param DryRun Success status of this request, without affecting the resources involved
      */
     public void setDryRun(Boolean DryRun) {
         this.DryRun = DryRun;

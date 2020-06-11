@@ -44,7 +44,7 @@ public class AllocateHostsRequest extends AbstractModel{
     private ChargePrepaid HostChargePrepaid;
 
     /**
-    * The billing method of an instance. Currently only `PREPAID` is supported.
+    * Instance billing model, only monthly or yearly subscription supported. Default value: `PREPAID'.
     */
     @SerializedName("HostChargeType")
     @Expose
@@ -58,7 +58,7 @@ public class AllocateHostsRequest extends AbstractModel{
     private String HostType;
 
     /**
-    * The quantity of CDH instances you want to purchase.
+    * Quantity of CDH instances purchased. Default value: 1.
     */
     @SerializedName("HostCount")
     @Expose
@@ -120,16 +120,16 @@ public class AllocateHostsRequest extends AbstractModel{
     }
 
     /**
-     * Get The billing method of an instance. Currently only `PREPAID` is supported. 
-     * @return HostChargeType The billing method of an instance. Currently only `PREPAID` is supported.
+     * Get Instance billing model, only monthly or yearly subscription supported. Default value: `PREPAID'. 
+     * @return HostChargeType Instance billing model, only monthly or yearly subscription supported. Default value: `PREPAID'.
      */
     public String getHostChargeType() {
         return this.HostChargeType;
     }
 
     /**
-     * Set The billing method of an instance. Currently only `PREPAID` is supported.
-     * @param HostChargeType The billing method of an instance. Currently only `PREPAID` is supported.
+     * Set Instance billing model, only monthly or yearly subscription supported. Default value: `PREPAID'.
+     * @param HostChargeType Instance billing model, only monthly or yearly subscription supported. Default value: `PREPAID'.
      */
     public void setHostChargeType(String HostChargeType) {
         this.HostChargeType = HostChargeType;
@@ -152,16 +152,16 @@ public class AllocateHostsRequest extends AbstractModel{
     }
 
     /**
-     * Get The quantity of CDH instances you want to purchase. 
-     * @return HostCount The quantity of CDH instances you want to purchase.
+     * Get Quantity of CDH instances purchased. Default value: 1. 
+     * @return HostCount Quantity of CDH instances purchased. Default value: 1.
      */
     public Long getHostCount() {
         return this.HostCount;
     }
 
     /**
-     * Set The quantity of CDH instances you want to purchase.
-     * @param HostCount The quantity of CDH instances you want to purchase.
+     * Set Quantity of CDH instances purchased. Default value: 1.
+     * @param HostCount Quantity of CDH instances purchased. Default value: 1.
      */
     public void setHostCount(Long HostCount) {
         this.HostCount = HostCount;

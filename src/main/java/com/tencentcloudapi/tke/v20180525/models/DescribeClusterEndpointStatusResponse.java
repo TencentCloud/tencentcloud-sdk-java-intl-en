@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class DescribeClusterEndpointStatusResponse extends AbstractModel{
 
     /**
+    * Queries cluster access port status (Created = successfully enabled; Creating = in the process of being enabled; NotFound = not enabled).
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get Queries cluster access port status (Created = successfully enabled; Creating = in the process of being enabled; NotFound = not enabled). 
+     * @return Status Queries cluster access port status (Created = successfully enabled; Creating = in the process of being enabled; NotFound = not enabled).
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set Queries cluster access port status (Created = successfully enabled; Creating = in the process of being enabled; NotFound = not enabled).
+     * @param Status Queries cluster access port status (Created = successfully enabled; Creating = in the process of being enabled; NotFound = not enabled).
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -49,6 +72,7 @@ public class DescribeClusterEndpointStatusResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

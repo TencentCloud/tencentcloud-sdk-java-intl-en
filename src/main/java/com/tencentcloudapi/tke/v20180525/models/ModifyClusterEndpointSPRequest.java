@@ -23,9 +23,57 @@ import java.util.HashMap;
 public class ModifyClusterEndpointSPRequest extends AbstractModel{
 
     /**
+    * Cluster ID
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+    * Security policy opens single IP or CIDR block to the Internet (for example: “192.168.1.0/24”, with “reject all” as the default).
+    */
+    @SerializedName("SecurityPolicies")
+    @Expose
+    private String [] SecurityPolicies;
+
+    /**
+     * Get Cluster ID 
+     * @return ClusterId Cluster ID
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set Cluster ID
+     * @param ClusterId Cluster ID
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get Security policy opens single IP or CIDR block to the Internet (for example: “192.168.1.0/24”, with “reject all” as the default). 
+     * @return SecurityPolicies Security policy opens single IP or CIDR block to the Internet (for example: “192.168.1.0/24”, with “reject all” as the default).
+     */
+    public String [] getSecurityPolicies() {
+        return this.SecurityPolicies;
+    }
+
+    /**
+     * Set Security policy opens single IP or CIDR block to the Internet (for example: “192.168.1.0/24”, with “reject all” as the default).
+     * @param SecurityPolicies Security policy opens single IP or CIDR block to the Internet (for example: “192.168.1.0/24”, with “reject all” as the default).
+     */
+    public void setSecurityPolicies(String [] SecurityPolicies) {
+        this.SecurityPolicies = SecurityPolicies;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamArraySimple(map, prefix + "SecurityPolicies.", this.SecurityPolicies);
 
     }
 }

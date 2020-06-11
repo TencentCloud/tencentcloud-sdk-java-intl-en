@@ -23,11 +23,57 @@ import java.util.HashMap;
 public class CreateClusterAsGroupResponse extends AbstractModel{
 
     /**
+    * Launch configuration ID
+    */
+    @SerializedName("LaunchConfigurationId")
+    @Expose
+    private String LaunchConfigurationId;
+
+    /**
+    * Scaling group ID
+    */
+    @SerializedName("AutoScalingGroupId")
+    @Expose
+    private String AutoScalingGroupId;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get Launch configuration ID 
+     * @return LaunchConfigurationId Launch configuration ID
+     */
+    public String getLaunchConfigurationId() {
+        return this.LaunchConfigurationId;
+    }
+
+    /**
+     * Set Launch configuration ID
+     * @param LaunchConfigurationId Launch configuration ID
+     */
+    public void setLaunchConfigurationId(String LaunchConfigurationId) {
+        this.LaunchConfigurationId = LaunchConfigurationId;
+    }
+
+    /**
+     * Get Scaling group ID 
+     * @return AutoScalingGroupId Scaling group ID
+     */
+    public String getAutoScalingGroupId() {
+        return this.AutoScalingGroupId;
+    }
+
+    /**
+     * Set Scaling group ID
+     * @param AutoScalingGroupId Scaling group ID
+     */
+    public void setAutoScalingGroupId(String AutoScalingGroupId) {
+        this.AutoScalingGroupId = AutoScalingGroupId;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -49,6 +95,8 @@ public class CreateClusterAsGroupResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "LaunchConfigurationId", this.LaunchConfigurationId);
+        this.setParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

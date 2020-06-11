@@ -367,7 +367,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     /**
      *This API is used to query the model configuration of an instance.
 
-* You can filter the query results with `zone` or `instance-family`. For more information on filtering conditions, see `Filter`.
+* You can filter the query results with `zone` or `instance-family`. For more information on filtering conditions, see [`Filter`](https://cloud.tencent.com/document/api/213/15753#Filter).
 * If no parameter is defined, the model configuration of all the instances in the specified region will be returned.
      * @param req DescribeInstanceTypeConfigsRequest
      * @return DescribeInstanceTypeConfigsResponse
@@ -386,16 +386,17 @@ If you currently use a password to log in, you will no longer be able to do so a
     }
 
     /**
-     *This API is used to query the VNC URL of an instance.
+     *This API is used to query the Virtual Network Console (VNC) URL of an instance for its login to the VNC.
 
 * It does not support `STOPPED` CVMs.
-* A VNC URL is only valid for 15 sec. If you do not access the URL within 15 seconds, it will become invalid and you will have to query another one.
-* Once you access a VNC URL, it will become invalid and you will have to query another one.
-* If the connection breaks up, you can make up to 30 requests per minute to reestablish the connection.
-* After you get the value of `InstanceVncUrl`, you need to append `InstanceVncUrl=xxxx` to the end of the link <https://img.qcloud.com/qcloud/app/active_vnc/index.html?>.
-  - Parameter `InstanceVncUrl`: the value of `InstanceVncUrl` returned after a successful API call.
+* A VNC URL is only valid for 15 seconds. If you do not access the URL within 15 seconds, it will become invalid and you have to query a URL again.
+* Once the VNC URL is accessed, it will become invalid and you have to query a URL again if needed.
+* If the connection is interrupted, you can make up to 30 reconnection attempts per minute.
+* After getting the value `InstanceVncUrl`, you need to append `InstanceVncUrl=xxxx` to the end of the link <https://img.qcloud.com/qcloud/app/active_vnc/index.html?>.
 
-    The final URLs are in the following format:
+  - `InstanceVncUrl`: its value will be returned after the API is successfully called.
+
+    The final URL is in the following format:
 
 ```
 https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F%2Fbjvnc.qcloud.com%3A26789%2Fvnc%3Fs%3DaHpjWnRVMFNhYmxKdDM5MjRHNlVTSVQwajNUSW0wb2tBbmFtREFCTmFrcy8vUUNPMG0wSHZNOUUxRm5PMmUzWmFDcWlOdDJIbUJxSTZDL0RXcHZxYnZZMmRkWWZWcEZia2lyb09XMzdKNmM9
@@ -547,6 +548,24 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 Type type = new TypeToken<JsonResponseModel<DescribeReservedInstancesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeReservedInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to describe Reserved Instance offerings that are available for purchase.
+     * @param req DescribeReservedInstancesOfferingsRequest
+     * @return DescribeReservedInstancesOfferingsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReservedInstancesOfferingsResponse DescribeReservedInstancesOfferings(DescribeReservedInstancesOfferingsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeReservedInstancesOfferingsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeReservedInstancesOfferingsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeReservedInstancesOfferings"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -878,10 +897,11 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     /**
      *This API is used to change the project to which an instance belongs.
 
-* Project is a virtual concept. Users can create multiple projects under one account, manage different resources in each project, and assign different instances to different projects. You may use [`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) to query instances and use the project ID to filter results.
-* You cannot modify the project of an instance which is bound to a load balancer. You need to unbind the load balancer from the instance with [`DeregisterInstancesFromLoadBalancer`](https://cloud.tencent.com/document/api/214/1258) before using this API.
-* If you modify the project of an instance, security groups associated with the instance will be automatically disassociated. You can use [`ModifySecurityGroupsOfInstance`](https://cloud.tencent.com/document/api/213/1367) to associate the instance with certian security groups again.
-* Batch operations are supported. The maximum number of instances in each request is 100.
+* Project is a virtual concept. You can create multiple projects under one account, manage different resources in each project, and assign different instances to different projects. You may use the [`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API to query instances and use the project ID to filter results.
+* You cannot modify the project of an instance that is bound to a load balancer. You need to firstly unbind the load balancer from the instance by using the [`DeregisterInstancesFromLoadBalancer`](https://cloud.tencent.com/document/api/214/1258) API.
+[^_^]: # (If you modify the project of an instance, security groups associated with the instance will be automatically disassociated. You can use the [`ModifyInstancesAttribute`](https://cloud.tencent.com/document/api/213/15739) API to associate the instance with the security groups again.
+* Batch operations are supported. You can operate up to 100 instances in each request.
+* You can call the [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) API and find the result of the operation in the response parameter `LatestOperationState`. If the value is `SUCCESS`, the operation is successful.
      * @param req ModifyInstancesProjectRequest
      * @return ModifyInstancesProjectResponse
      * @throws TencentCloudSDKException
@@ -934,6 +954,24 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 Type type = new TypeToken<JsonResponseModel<ModifyKeyPairAttributeResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyKeyPairAttribute"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to purchase one or more specific Reserved Instances.
+     * @param req PurchaseReservedInstancesOfferingRequest
+     * @return PurchaseReservedInstancesOfferingResponse
+     * @throws TencentCloudSDKException
+     */
+    public PurchaseReservedInstancesOfferingResponse PurchaseReservedInstancesOffering(PurchaseReservedInstancesOfferingRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PurchaseReservedInstancesOfferingResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<PurchaseReservedInstancesOfferingResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "PurchaseReservedInstancesOffering"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1010,11 +1048,12 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
-     *This API is used to reset the password of the instance OS to a user-specified password.
+     *This API is used to reset the password of the operating system instances to a user-specified password.
 
-* You can only use this API to modify the password of the administrator account. The name of the administrator account varies depending on the operating system. On Windows, it is `Administrator`; `Ubuntu`, `ubuntu`; `Linux`, `root`.)
-* To reset the password of a running instance, you need to explicitly specify the force shutdown parameter `ForceStop`. Otherwise, you can only reset passwords of instances that have been shut down.
-* Batch operations are supported. You can reset the passwords of multiple instances to the same one. The maximum number of instances in each request is 100.
+* To modify the password of the administrator account: the name of the administrator account varies with the operating system. In Windows, it is `Administrator`; in Ubuntu, it is `ubuntu`; in Linux, it is `root`.
+* To reset the password of a running instance, you need to set the parameter `ForceStop` to `True` for a forced shutdown. If not, only passwords of stopped instances can be reset.
+* Batch operations are supported. You can reset the passwords of up to 100 instances to the same value once.
+* You can call the [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) API and find the result of the operation in the response parameter `LatestOperationState`. If the value is `SUCCESS`, the operation is successful.
      * @param req ResetInstancesPasswordRequest
      * @return ResetInstancesPasswordResponse
      * @throws TencentCloudSDKException

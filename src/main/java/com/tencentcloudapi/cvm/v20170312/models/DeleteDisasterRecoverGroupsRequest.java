@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeleteDisasterRecoverGroupsRequest extends AbstractModel{
 
     /**
-    * List of spread placement group IDs, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810) API.
+    * ID list of spread placement groups, obtainable via the [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810) API. You can operate up to 100 spread placement groups in each request.
     */
     @SerializedName("DisasterRecoverGroupIds")
     @Expose
     private String [] DisasterRecoverGroupIds;
 
     /**
-     * Get List of spread placement group IDs, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810) API. 
-     * @return DisasterRecoverGroupIds List of spread placement group IDs, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810) API.
+     * Get ID list of spread placement groups, obtainable via the [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810) API. You can operate up to 100 spread placement groups in each request. 
+     * @return DisasterRecoverGroupIds ID list of spread placement groups, obtainable via the [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810) API. You can operate up to 100 spread placement groups in each request.
      */
     public String [] getDisasterRecoverGroupIds() {
         return this.DisasterRecoverGroupIds;
     }
 
     /**
-     * Set List of spread placement group IDs, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810) API.
-     * @param DisasterRecoverGroupIds List of spread placement group IDs, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810) API.
+     * Set ID list of spread placement groups, obtainable via the [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810) API. You can operate up to 100 spread placement groups in each request.
+     * @param DisasterRecoverGroupIds ID list of spread placement groups, obtainable via the [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810) API. You can operate up to 100 spread placement groups in each request.
      */
     public void setDisasterRecoverGroupIds(String [] DisasterRecoverGroupIds) {
         this.DisasterRecoverGroupIds = DisasterRecoverGroupIds;

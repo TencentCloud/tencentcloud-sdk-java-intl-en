@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class CreateClusterEndpointVipResponse extends AbstractModel{
 
     /**
+    * Request job’s FlowId
+    */
+    @SerializedName("RequestFlowId")
+    @Expose
+    private Long RequestFlowId;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get Request job’s FlowId 
+     * @return RequestFlowId Request job’s FlowId
+     */
+    public Long getRequestFlowId() {
+        return this.RequestFlowId;
+    }
+
+    /**
+     * Set Request job’s FlowId
+     * @param RequestFlowId Request job’s FlowId
+     */
+    public void setRequestFlowId(Long RequestFlowId) {
+        this.RequestFlowId = RequestFlowId;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -49,6 +72,7 @@ public class CreateClusterEndpointVipResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "RequestFlowId", this.RequestFlowId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

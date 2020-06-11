@@ -23,9 +23,81 @@ import java.util.HashMap;
 public class CreateClusterEndpointRequest extends AbstractModel{
 
     /**
+    * Cluster ID
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+    * The ID of the subnet where the cluster’s port is located (only needs to be entered when the non-public network access is enabled, and must be within the subnet of the cluster’s VPC). 
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
+
+    /**
+    * Whether public network access is enabled or not (True = public network access, FALSE = private network access, with the default value as FALSE).
+    */
+    @SerializedName("IsExtranet")
+    @Expose
+    private Boolean IsExtranet;
+
+    /**
+     * Get Cluster ID 
+     * @return ClusterId Cluster ID
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set Cluster ID
+     * @param ClusterId Cluster ID
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get The ID of the subnet where the cluster’s port is located (only needs to be entered when the non-public network access is enabled, and must be within the subnet of the cluster’s VPC).  
+     * @return SubnetId The ID of the subnet where the cluster’s port is located (only needs to be entered when the non-public network access is enabled, and must be within the subnet of the cluster’s VPC). 
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set The ID of the subnet where the cluster’s port is located (only needs to be entered when the non-public network access is enabled, and must be within the subnet of the cluster’s VPC). 
+     * @param SubnetId The ID of the subnet where the cluster’s port is located (only needs to be entered when the non-public network access is enabled, and must be within the subnet of the cluster’s VPC). 
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
+    }
+
+    /**
+     * Get Whether public network access is enabled or not (True = public network access, FALSE = private network access, with the default value as FALSE). 
+     * @return IsExtranet Whether public network access is enabled or not (True = public network access, FALSE = private network access, with the default value as FALSE).
+     */
+    public Boolean getIsExtranet() {
+        return this.IsExtranet;
+    }
+
+    /**
+     * Set Whether public network access is enabled or not (True = public network access, FALSE = private network access, with the default value as FALSE).
+     * @param IsExtranet Whether public network access is enabled or not (True = public network access, FALSE = private network access, with the default value as FALSE).
+     */
+    public void setIsExtranet(Boolean IsExtranet) {
+        this.IsExtranet = IsExtranet;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "IsExtranet", this.IsExtranet);
 
     }
 }

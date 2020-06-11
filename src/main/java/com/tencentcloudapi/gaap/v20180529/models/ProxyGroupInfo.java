@@ -61,11 +61,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Connection group status.
-Valid values:
+Where:
 0: running;
 1: creating;
 4: terminating;
-11: migrating connection;
+11: connection migrating.
     */
     @SerializedName("Status")
     @Expose
@@ -168,17 +168,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Connection group status.
-Valid values:
+Where:
 0: running;
 1: creating;
 4: terminating;
-11: migrating connection; 
+11: connection migrating. 
      * @return Status Connection group status.
-Valid values:
+Where:
 0: running;
 1: creating;
 4: terminating;
-11: migrating connection;
+11: connection migrating.
      */
     public String getStatus() {
         return this.Status;
@@ -186,17 +186,17 @@ Valid values:
 
     /**
      * Set Connection group status.
-Valid values:
+Where:
 0: running;
 1: creating;
 4: terminating;
-11: migrating connection;
+11: connection migrating.
      * @param Status Connection group status.
-Valid values:
+Where:
 0: running;
 1: creating;
 4: terminating;
-11: migrating connection;
+11: connection migrating.
      */
     public void setStatus(String Status) {
         this.Status = Status;

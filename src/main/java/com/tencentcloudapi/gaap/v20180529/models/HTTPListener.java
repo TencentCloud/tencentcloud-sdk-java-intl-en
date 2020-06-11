@@ -58,12 +58,12 @@ public class HTTPListener extends AbstractModel{
     private String Protocol;
 
     /**
-    * Listener status. Valid values:
+    * Listener status:
 0: running;
 1: creating;
 2: terminating;
 3: adjusting origin server;
-4: adjusting configuration.
+4: modifying configuration.
     */
     @SerializedName("ListenerStatus")
     @Expose
@@ -150,36 +150,36 @@ public class HTTPListener extends AbstractModel{
     }
 
     /**
-     * Get Listener status. Valid values:
+     * Get Listener status:
 0: running;
 1: creating;
 2: terminating;
 3: adjusting origin server;
-4: adjusting configuration. 
-     * @return ListenerStatus Listener status. Valid values:
+4: modifying configuration. 
+     * @return ListenerStatus Listener status:
 0: running;
 1: creating;
 2: terminating;
 3: adjusting origin server;
-4: adjusting configuration.
+4: modifying configuration.
      */
     public Long getListenerStatus() {
         return this.ListenerStatus;
     }
 
     /**
-     * Set Listener status. Valid values:
+     * Set Listener status:
 0: running;
 1: creating;
 2: terminating;
 3: adjusting origin server;
-4: adjusting configuration.
-     * @param ListenerStatus Listener status. Valid values:
+4: modifying configuration.
+     * @param ListenerStatus Listener status:
 0: running;
 1: creating;
 2: terminating;
 3: adjusting origin server;
-4: adjusting configuration.
+4: modifying configuration.
      */
     public void setListenerStatus(Long ListenerStatus) {
         this.ListenerStatus = ListenerStatus;

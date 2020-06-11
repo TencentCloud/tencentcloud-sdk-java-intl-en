@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeInstancesRequest extends AbstractModel{
 
     /**
-    * Instance ID(s) in the format of `ins-xxxxxxxx`. For more information on the format of this parameter, see the `id.N` section of [API Introduction](https://cloud.tencent.com/document/api/213/15688). The maximum number of instances in each request is 100. You cannot specify `InstanceIds` and `Filters` at the same time.
+    * Query by instance ID(s). For example, instance ID: `ins-xxxxxxxx`. For the specific format, refer to section `Ids.N` of the API [Introduction](https://cloud.tencent.com/document/api/213/15688). You can query up to 100 instances in each request. However, `InstanceIds` and `Filters` cannot be specified at the same time.
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -66,16 +66,16 @@ Each request can have up to 10 `Filters` and 5 `Filters.Values`. You cannot spec
     private Long Limit;
 
     /**
-     * Get Instance ID(s) in the format of `ins-xxxxxxxx`. For more information on the format of this parameter, see the `id.N` section of [API Introduction](https://cloud.tencent.com/document/api/213/15688). The maximum number of instances in each request is 100. You cannot specify `InstanceIds` and `Filters` at the same time. 
-     * @return InstanceIds Instance ID(s) in the format of `ins-xxxxxxxx`. For more information on the format of this parameter, see the `id.N` section of [API Introduction](https://cloud.tencent.com/document/api/213/15688). The maximum number of instances in each request is 100. You cannot specify `InstanceIds` and `Filters` at the same time.
+     * Get Query by instance ID(s). For example, instance ID: `ins-xxxxxxxx`. For the specific format, refer to section `Ids.N` of the API [Introduction](https://cloud.tencent.com/document/api/213/15688). You can query up to 100 instances in each request. However, `InstanceIds` and `Filters` cannot be specified at the same time. 
+     * @return InstanceIds Query by instance ID(s). For example, instance ID: `ins-xxxxxxxx`. For the specific format, refer to section `Ids.N` of the API [Introduction](https://cloud.tencent.com/document/api/213/15688). You can query up to 100 instances in each request. However, `InstanceIds` and `Filters` cannot be specified at the same time.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set Instance ID(s) in the format of `ins-xxxxxxxx`. For more information on the format of this parameter, see the `id.N` section of [API Introduction](https://cloud.tencent.com/document/api/213/15688). The maximum number of instances in each request is 100. You cannot specify `InstanceIds` and `Filters` at the same time.
-     * @param InstanceIds Instance ID(s) in the format of `ins-xxxxxxxx`. For more information on the format of this parameter, see the `id.N` section of [API Introduction](https://cloud.tencent.com/document/api/213/15688). The maximum number of instances in each request is 100. You cannot specify `InstanceIds` and `Filters` at the same time.
+     * Set Query by instance ID(s). For example, instance ID: `ins-xxxxxxxx`. For the specific format, refer to section `Ids.N` of the API [Introduction](https://cloud.tencent.com/document/api/213/15688). You can query up to 100 instances in each request. However, `InstanceIds` and `Filters` cannot be specified at the same time.
+     * @param InstanceIds Query by instance ID(s). For example, instance ID: `ins-xxxxxxxx`. For the specific format, refer to section `Ids.N` of the API [Introduction](https://cloud.tencent.com/document/api/213/15688). You can query up to 100 instances in each request. However, `InstanceIds` and `Filters` cannot be specified at the same time.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

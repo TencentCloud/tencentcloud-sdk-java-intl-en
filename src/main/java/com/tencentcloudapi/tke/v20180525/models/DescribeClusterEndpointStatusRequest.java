@@ -23,9 +23,57 @@ import java.util.HashMap;
 public class DescribeClusterEndpointStatusRequest extends AbstractModel{
 
     /**
+    * Cluster ID
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+    * Whether public network access is enabled or not (True = public network access, FALSE = private network access, with the default value as FALSE).
+    */
+    @SerializedName("IsExtranet")
+    @Expose
+    private Boolean IsExtranet;
+
+    /**
+     * Get Cluster ID 
+     * @return ClusterId Cluster ID
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set Cluster ID
+     * @param ClusterId Cluster ID
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get Whether public network access is enabled or not (True = public network access, FALSE = private network access, with the default value as FALSE). 
+     * @return IsExtranet Whether public network access is enabled or not (True = public network access, FALSE = private network access, with the default value as FALSE).
+     */
+    public Boolean getIsExtranet() {
+        return this.IsExtranet;
+    }
+
+    /**
+     * Set Whether public network access is enabled or not (True = public network access, FALSE = private network access, with the default value as FALSE).
+     * @param IsExtranet Whether public network access is enabled or not (True = public network access, FALSE = private network access, with the default value as FALSE).
+     */
+    public void setIsExtranet(Boolean IsExtranet) {
+        this.IsExtranet = IsExtranet;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "IsExtranet", this.IsExtranet);
 
     }
 }

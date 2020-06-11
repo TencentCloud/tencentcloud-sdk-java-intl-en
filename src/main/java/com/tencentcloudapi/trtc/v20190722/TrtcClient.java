@@ -38,6 +38,114 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the user list and user call quality data in a specified time period. It can query data of up to 6 users for the last 5 days, and the query time range cannot exceed 1 hour.
+     * @param req DescribeCallDetailRequest
+     * @return DescribeCallDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCallDetailResponse DescribeCallDetail(DescribeCallDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCallDetailResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCallDetailResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCallDetail"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the number of historical rooms and users for the last 5 days. It can query once per minute.
+     * @param req DescribeHistoryScaleRequest
+     * @return DescribeHistoryScaleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHistoryScaleResponse DescribeHistoryScale(DescribeHistoryScaleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHistoryScaleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHistoryScaleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeHistoryScale"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query real-time network status for the last 24 hours according to `sdkappid`, including upstream and downstream packet losses. The query time range cannot exceed 1 hour.
+     * @param req DescribeRealtimeNetworkRequest
+     * @return DescribeRealtimeNetworkResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRealtimeNetworkResponse DescribeRealtimeNetwork(DescribeRealtimeNetworkRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRealtimeNetworkResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRealtimeNetworkResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRealtimeNetwork"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query real-time quality data for the last 24 hours according to `sdkappid`, including the room entry success rate, instant playback rate of the first frame, audio lag rate, and video lag rate. The query time range cannot exceed 1 hour.
+     * @param req DescribeRealtimeQualityRequest
+     * @return DescribeRealtimeQualityResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRealtimeQualityResponse DescribeRealtimeQuality(DescribeRealtimeQualityRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRealtimeQualityResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRealtimeQualityResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRealtimeQuality"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the real-time scale for the last 24 hours according to `sdkappid`. The query time range cannot exceed 1 hour.
+     * @param req DescribeRealtimeScaleRequest
+     * @return DescribeRealtimeScaleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRealtimeScaleResponse DescribeRealtimeScale(DescribeRealtimeScaleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRealtimeScaleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRealtimeScaleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRealtimeScale"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the room list for the last 5 days according to `sdkappid`. It returns 10 calls by default and up to 100 calls at a time.
+     * @param req DescribeRoomInformationRequest
+     * @return DescribeRoomInformationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRoomInformationResponse DescribeRoomInformation(DescribeRoomInformationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRoomInformationResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRoomInformationResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRoomInformation"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to remove all users from a room and dismiss the room. It supports all platforms. For Android, iOS, Windows, and macOS, the TRTC SDK needs to be upgraded to v6.6 or above.
      * @param req DismissRoomRequest
      * @return DismissRoomResponse

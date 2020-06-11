@@ -23,9 +23,81 @@ import java.util.HashMap;
 public class DeleteClusterAsGroupsRequest extends AbstractModel{
 
     /**
+    * The cluster ID, obtained through the [DescribeClusters](https://cloud.tencent.com/document/api/457/31862) API.
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+    * Cluster scaling group ID list
+    */
+    @SerializedName("AutoScalingGroupIds")
+    @Expose
+    private String [] AutoScalingGroupIds;
+
+    /**
+    * Whether to keep nodes in the scaling group. Default to **false** (not keep)
+    */
+    @SerializedName("KeepInstance")
+    @Expose
+    private Boolean KeepInstance;
+
+    /**
+     * Get The cluster ID, obtained through the [DescribeClusters](https://cloud.tencent.com/document/api/457/31862) API. 
+     * @return ClusterId The cluster ID, obtained through the [DescribeClusters](https://cloud.tencent.com/document/api/457/31862) API.
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set The cluster ID, obtained through the [DescribeClusters](https://cloud.tencent.com/document/api/457/31862) API.
+     * @param ClusterId The cluster ID, obtained through the [DescribeClusters](https://cloud.tencent.com/document/api/457/31862) API.
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get Cluster scaling group ID list 
+     * @return AutoScalingGroupIds Cluster scaling group ID list
+     */
+    public String [] getAutoScalingGroupIds() {
+        return this.AutoScalingGroupIds;
+    }
+
+    /**
+     * Set Cluster scaling group ID list
+     * @param AutoScalingGroupIds Cluster scaling group ID list
+     */
+    public void setAutoScalingGroupIds(String [] AutoScalingGroupIds) {
+        this.AutoScalingGroupIds = AutoScalingGroupIds;
+    }
+
+    /**
+     * Get Whether to keep nodes in the scaling group. Default to **false** (not keep) 
+     * @return KeepInstance Whether to keep nodes in the scaling group. Default to **false** (not keep)
+     */
+    public Boolean getKeepInstance() {
+        return this.KeepInstance;
+    }
+
+    /**
+     * Set Whether to keep nodes in the scaling group. Default to **false** (not keep)
+     * @param KeepInstance Whether to keep nodes in the scaling group. Default to **false** (not keep)
+     */
+    public void setKeepInstance(Boolean KeepInstance) {
+        this.KeepInstance = KeepInstance;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamArraySimple(map, prefix + "AutoScalingGroupIds.", this.AutoScalingGroupIds);
+        this.setParamSimple(map, prefix + "KeepInstance", this.KeepInstance);
 
     }
 }

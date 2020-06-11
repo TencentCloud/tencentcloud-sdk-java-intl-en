@@ -23,12 +23,17 @@ import java.util.HashMap;
 public class DescribeHostsRequest extends AbstractModel{
 
     /**
-    * Filters.
-<li> `zone` - String - Optional - Filter results by availability zone.</li>
-<li> `project-id` - Integer - Optional - Filter results by project ID. You can call `DescribeProject` or log in to the console to view the list of existing projects. You can also create a new project by calling `AddProject`.</li>
-<li> `host-id` - String - Optional - Filter results by CDH ID. CDH IDs are in the format of `host-11112222`.</li>
-<li> `host-name` - String - Optional - Filter results by CDH instance name.</li>
-<li> `host-state` - String - Optional - Filter results by CDH instance state. (PENDING: creating | LAUNCH_FAILURE: creation failed | RUNNING: running | EXPIRED: expired)</li>
+    * <li><strong>zone</strong></li>
+<p style="padding-left: 30px;">Filter results by **<strong>availability zones</strong>**. For example, availability zone: ap-guangzhou-1;</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Required: no</p><p style="padding-left: 30px;">Valid values: <a href="https://cloud.tencent.com/document/product/213/6091">list of availability zones</a></p>
+<li><strong>project-id</strong></li>
+<p style="padding-left: 30px;">Filter results by **<strong>project ID</strong>**. You can query the existing project list through the [DescribeProject](https://cloud.tencent.com/document/api/378/4400) API or [CVM console](https://console.cloud.tencent.com/cvm/index), or create a project by calling the [AddProject](https://cloud.tencent.com/document/api/378/4398) API. For example, project ID: 1002189;</p><p style="padding-left: 30px;">Type: Integer</p><p style="padding-left: 30px;">Required: no</p>
+<li><strong>host-id</strong></li>
+<p style="padding-left: 30px;">Filter results by **<strong>[CDH](https://cloud.tencent.com/document/product/416) ID</strong>**. For example, [CDH](https://cloud.tencent.com/document/product/416) ID: host-xxxxxxxx;</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Required: no</p>
+<li><strong>state</strong></li>
+<p style="padding-left: 30px;">Filter results by **<strong>CDH instance name</strong>**. </p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Required: no</p>
+<li><strong>state</strong></li>
+<p style="padding-left: 30px;">Filter results by **<strong>CDH instance status </strong>**. (PENDING: creating | LAUNCH_FAILURE: creation failed | RUNNING: running | EXPIRED: expired)</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Required: no</p>
+Each request can have up to 10 `Filters` and 5 `Filters.Values`.
     */
     @SerializedName("Filters")
     @Expose
@@ -49,36 +54,56 @@ public class DescribeHostsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-     * Get Filters.
-<li> `zone` - String - Optional - Filter results by availability zone.</li>
-<li> `project-id` - Integer - Optional - Filter results by project ID. You can call `DescribeProject` or log in to the console to view the list of existing projects. You can also create a new project by calling `AddProject`.</li>
-<li> `host-id` - String - Optional - Filter results by CDH ID. CDH IDs are in the format of `host-11112222`.</li>
-<li> `host-name` - String - Optional - Filter results by CDH instance name.</li>
-<li> `host-state` - String - Optional - Filter results by CDH instance state. (PENDING: creating | LAUNCH_FAILURE: creation failed | RUNNING: running | EXPIRED: expired)</li> 
-     * @return Filters Filters.
-<li> `zone` - String - Optional - Filter results by availability zone.</li>
-<li> `project-id` - Integer - Optional - Filter results by project ID. You can call `DescribeProject` or log in to the console to view the list of existing projects. You can also create a new project by calling `AddProject`.</li>
-<li> `host-id` - String - Optional - Filter results by CDH ID. CDH IDs are in the format of `host-11112222`.</li>
-<li> `host-name` - String - Optional - Filter results by CDH instance name.</li>
-<li> `host-state` - String - Optional - Filter results by CDH instance state. (PENDING: creating | LAUNCH_FAILURE: creation failed | RUNNING: running | EXPIRED: expired)</li>
+     * Get <li><strong>zone</strong></li>
+<p style="padding-left: 30px;">Filter results by **<strong>availability zones</strong>**. For example, availability zone: ap-guangzhou-1;</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Required: no</p><p style="padding-left: 30px;">Valid values: <a href="https://cloud.tencent.com/document/product/213/6091">list of availability zones</a></p>
+<li><strong>project-id</strong></li>
+<p style="padding-left: 30px;">Filter results by **<strong>project ID</strong>**. You can query the existing project list through the [DescribeProject](https://cloud.tencent.com/document/api/378/4400) API or [CVM console](https://console.cloud.tencent.com/cvm/index), or create a project by calling the [AddProject](https://cloud.tencent.com/document/api/378/4398) API. For example, project ID: 1002189;</p><p style="padding-left: 30px;">Type: Integer</p><p style="padding-left: 30px;">Required: no</p>
+<li><strong>host-id</strong></li>
+<p style="padding-left: 30px;">Filter results by **<strong>[CDH](https://cloud.tencent.com/document/product/416) ID</strong>**. For example, [CDH](https://cloud.tencent.com/document/product/416) ID: host-xxxxxxxx;</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Required: no</p>
+<li><strong>state</strong></li>
+<p style="padding-left: 30px;">Filter results by **<strong>CDH instance name</strong>**. </p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Required: no</p>
+<li><strong>state</strong></li>
+<p style="padding-left: 30px;">Filter results by **<strong>CDH instance status </strong>**. (PENDING: creating | LAUNCH_FAILURE: creation failed | RUNNING: running | EXPIRED: expired)</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Required: no</p>
+Each request can have up to 10 `Filters` and 5 `Filters.Values`. 
+     * @return Filters <li><strong>zone</strong></li>
+<p style="padding-left: 30px;">Filter results by **<strong>availability zones</strong>**. For example, availability zone: ap-guangzhou-1;</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Required: no</p><p style="padding-left: 30px;">Valid values: <a href="https://cloud.tencent.com/document/product/213/6091">list of availability zones</a></p>
+<li><strong>project-id</strong></li>
+<p style="padding-left: 30px;">Filter results by **<strong>project ID</strong>**. You can query the existing project list through the [DescribeProject](https://cloud.tencent.com/document/api/378/4400) API or [CVM console](https://console.cloud.tencent.com/cvm/index), or create a project by calling the [AddProject](https://cloud.tencent.com/document/api/378/4398) API. For example, project ID: 1002189;</p><p style="padding-left: 30px;">Type: Integer</p><p style="padding-left: 30px;">Required: no</p>
+<li><strong>host-id</strong></li>
+<p style="padding-left: 30px;">Filter results by **<strong>[CDH](https://cloud.tencent.com/document/product/416) ID</strong>**. For example, [CDH](https://cloud.tencent.com/document/product/416) ID: host-xxxxxxxx;</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Required: no</p>
+<li><strong>state</strong></li>
+<p style="padding-left: 30px;">Filter results by **<strong>CDH instance name</strong>**. </p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Required: no</p>
+<li><strong>state</strong></li>
+<p style="padding-left: 30px;">Filter results by **<strong>CDH instance status </strong>**. (PENDING: creating | LAUNCH_FAILURE: creation failed | RUNNING: running | EXPIRED: expired)</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Required: no</p>
+Each request can have up to 10 `Filters` and 5 `Filters.Values`.
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filters.
-<li> `zone` - String - Optional - Filter results by availability zone.</li>
-<li> `project-id` - Integer - Optional - Filter results by project ID. You can call `DescribeProject` or log in to the console to view the list of existing projects. You can also create a new project by calling `AddProject`.</li>
-<li> `host-id` - String - Optional - Filter results by CDH ID. CDH IDs are in the format of `host-11112222`.</li>
-<li> `host-name` - String - Optional - Filter results by CDH instance name.</li>
-<li> `host-state` - String - Optional - Filter results by CDH instance state. (PENDING: creating | LAUNCH_FAILURE: creation failed | RUNNING: running | EXPIRED: expired)</li>
-     * @param Filters Filters.
-<li> `zone` - String - Optional - Filter results by availability zone.</li>
-<li> `project-id` - Integer - Optional - Filter results by project ID. You can call `DescribeProject` or log in to the console to view the list of existing projects. You can also create a new project by calling `AddProject`.</li>
-<li> `host-id` - String - Optional - Filter results by CDH ID. CDH IDs are in the format of `host-11112222`.</li>
-<li> `host-name` - String - Optional - Filter results by CDH instance name.</li>
-<li> `host-state` - String - Optional - Filter results by CDH instance state. (PENDING: creating | LAUNCH_FAILURE: creation failed | RUNNING: running | EXPIRED: expired)</li>
+     * Set <li><strong>zone</strong></li>
+<p style="padding-left: 30px;">Filter results by **<strong>availability zones</strong>**. For example, availability zone: ap-guangzhou-1;</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Required: no</p><p style="padding-left: 30px;">Valid values: <a href="https://cloud.tencent.com/document/product/213/6091">list of availability zones</a></p>
+<li><strong>project-id</strong></li>
+<p style="padding-left: 30px;">Filter results by **<strong>project ID</strong>**. You can query the existing project list through the [DescribeProject](https://cloud.tencent.com/document/api/378/4400) API or [CVM console](https://console.cloud.tencent.com/cvm/index), or create a project by calling the [AddProject](https://cloud.tencent.com/document/api/378/4398) API. For example, project ID: 1002189;</p><p style="padding-left: 30px;">Type: Integer</p><p style="padding-left: 30px;">Required: no</p>
+<li><strong>host-id</strong></li>
+<p style="padding-left: 30px;">Filter results by **<strong>[CDH](https://cloud.tencent.com/document/product/416) ID</strong>**. For example, [CDH](https://cloud.tencent.com/document/product/416) ID: host-xxxxxxxx;</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Required: no</p>
+<li><strong>state</strong></li>
+<p style="padding-left: 30px;">Filter results by **<strong>CDH instance name</strong>**. </p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Required: no</p>
+<li><strong>state</strong></li>
+<p style="padding-left: 30px;">Filter results by **<strong>CDH instance status </strong>**. (PENDING: creating | LAUNCH_FAILURE: creation failed | RUNNING: running | EXPIRED: expired)</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Required: no</p>
+Each request can have up to 10 `Filters` and 5 `Filters.Values`.
+     * @param Filters <li><strong>zone</strong></li>
+<p style="padding-left: 30px;">Filter results by **<strong>availability zones</strong>**. For example, availability zone: ap-guangzhou-1;</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Required: no</p><p style="padding-left: 30px;">Valid values: <a href="https://cloud.tencent.com/document/product/213/6091">list of availability zones</a></p>
+<li><strong>project-id</strong></li>
+<p style="padding-left: 30px;">Filter results by **<strong>project ID</strong>**. You can query the existing project list through the [DescribeProject](https://cloud.tencent.com/document/api/378/4400) API or [CVM console](https://console.cloud.tencent.com/cvm/index), or create a project by calling the [AddProject](https://cloud.tencent.com/document/api/378/4398) API. For example, project ID: 1002189;</p><p style="padding-left: 30px;">Type: Integer</p><p style="padding-left: 30px;">Required: no</p>
+<li><strong>host-id</strong></li>
+<p style="padding-left: 30px;">Filter results by **<strong>[CDH](https://cloud.tencent.com/document/product/416) ID</strong>**. For example, [CDH](https://cloud.tencent.com/document/product/416) ID: host-xxxxxxxx;</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Required: no</p>
+<li><strong>state</strong></li>
+<p style="padding-left: 30px;">Filter results by **<strong>CDH instance name</strong>**. </p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Required: no</p>
+<li><strong>state</strong></li>
+<p style="padding-left: 30px;">Filter results by **<strong>CDH instance status </strong>**. (PENDING: creating | LAUNCH_FAILURE: creation failed | RUNNING: running | EXPIRED: expired)</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Required: no</p>
+Each request can have up to 10 `Filters` and 5 `Filters.Values`.
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

@@ -30,7 +30,7 @@ public class AssociateSecurityGroupsRequest extends AbstractModel{
     private String [] SecurityGroupIds;
 
     /**
-    * ID(s) of the instance(s) to be associated，such as `ins-lesecurk`. You can specify multiple instances.
+    * ID of the instance bound in the format of ins-lesecurk. You can specify up to 100 instances in each request.
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -53,16 +53,16 @@ public class AssociateSecurityGroupsRequest extends AbstractModel{
     }
 
     /**
-     * Get ID(s) of the instance(s) to be associated，such as `ins-lesecurk`. You can specify multiple instances. 
-     * @return InstanceIds ID(s) of the instance(s) to be associated，such as `ins-lesecurk`. You can specify multiple instances.
+     * Get ID of the instance bound in the format of ins-lesecurk. You can specify up to 100 instances in each request. 
+     * @return InstanceIds ID of the instance bound in the format of ins-lesecurk. You can specify up to 100 instances in each request.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set ID(s) of the instance(s) to be associated，such as `ins-lesecurk`. You can specify multiple instances.
-     * @param InstanceIds ID(s) of the instance(s) to be associated，such as `ins-lesecurk`. You can specify multiple instances.
+     * Set ID of the instance bound in the format of ins-lesecurk. You can specify up to 100 instances in each request.
+     * @param InstanceIds ID of the instance bound in the format of ins-lesecurk. You can specify up to 100 instances in each request.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

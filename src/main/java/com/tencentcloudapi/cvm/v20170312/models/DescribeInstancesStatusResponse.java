@@ -30,7 +30,7 @@ public class DescribeInstancesStatusResponse extends AbstractModel{
     private Long TotalCount;
 
     /**
-    * List of [instance states](https://cloud.tencent.com/document/api/213/15728).
+    * [Instance status](https://cloud.tencent.com/document/api/213/15728) list.
     */
     @SerializedName("InstanceStatusSet")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeInstancesStatusResponse extends AbstractModel{
     }
 
     /**
-     * Get List of [instance states](https://cloud.tencent.com/document/api/213/15728). 
-     * @return InstanceStatusSet List of [instance states](https://cloud.tencent.com/document/api/213/15728).
+     * Get [Instance status](https://cloud.tencent.com/document/api/213/15728) list. 
+     * @return InstanceStatusSet [Instance status](https://cloud.tencent.com/document/api/213/15728) list.
      */
     public InstanceStatus [] getInstanceStatusSet() {
         return this.InstanceStatusSet;
     }
 
     /**
-     * Set List of [instance states](https://cloud.tencent.com/document/api/213/15728).
-     * @param InstanceStatusSet List of [instance states](https://cloud.tencent.com/document/api/213/15728).
+     * Set [Instance status](https://cloud.tencent.com/document/api/213/15728) list.
+     * @param InstanceStatusSet [Instance status](https://cloud.tencent.com/document/api/213/15728) list.
      */
     public void setInstanceStatusSet(InstanceStatus [] InstanceStatusSet) {
         this.InstanceStatusSet = InstanceStatusSet;

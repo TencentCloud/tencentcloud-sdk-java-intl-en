@@ -31,8 +31,8 @@ Note: This field may return null, indicating that no valid value is found.
     private Boolean ReleaseAddress;
 
     /**
-    * Unsupported network types
-Note: This field may return null, indicating that no valid value is found.
+    * Not supported network. Value: <br><li>BASIC: classic network<br><li>VPC1.0: VPC1.0
+Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("UnsupportNetworks")
     @Expose
@@ -67,20 +67,20 @@ Note: This field may return null, indicating that no valid value is found.
     }
 
     /**
-     * Get Unsupported network types
-Note: This field may return null, indicating that no valid value is found. 
-     * @return UnsupportNetworks Unsupported network types
-Note: This field may return null, indicating that no valid value is found.
+     * Get Not supported network. Value: <br><li>BASIC: classic network<br><li>VPC1.0: VPC1.0
+Note: This field may return null, indicating that no valid value was found. 
+     * @return UnsupportNetworks Not supported network. Value: <br><li>BASIC: classic network<br><li>VPC1.0: VPC1.0
+Note: This field may return null, indicating that no valid value was found.
      */
     public String [] getUnsupportNetworks() {
         return this.UnsupportNetworks;
     }
 
     /**
-     * Set Unsupported network types
-Note: This field may return null, indicating that no valid value is found.
-     * @param UnsupportNetworks Unsupported network types
-Note: This field may return null, indicating that no valid value is found.
+     * Set Not supported network. Value: <br><li>BASIC: classic network<br><li>VPC1.0: VPC1.0
+Note: This field may return null, indicating that no valid value was found.
+     * @param UnsupportNetworks Not supported network. Value: <br><li>BASIC: classic network<br><li>VPC1.0: VPC1.0
+Note: This field may return null, indicating that no valid value was found.
      */
     public void setUnsupportNetworks(String [] UnsupportNetworks) {
         this.UnsupportNetworks = UnsupportNetworks;
