@@ -32,7 +32,6 @@ public class ChannelPipelineAlerts extends AbstractModel{
     /**
     * Alarm end time in UTC time.
 This time is available only after the alarm ends.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ClearTime")
     @Expose
@@ -70,11 +69,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Alarm end time in UTC time.
-This time is available only after the alarm ends.
-Note: this field may return null, indicating that no valid values can be obtained. 
+This time is available only after the alarm ends. 
      * @return ClearTime Alarm end time in UTC time.
 This time is available only after the alarm ends.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getClearTime() {
         return this.ClearTime;
@@ -83,10 +80,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Set Alarm end time in UTC time.
 This time is available only after the alarm ends.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param ClearTime Alarm end time in UTC time.
 This time is available only after the alarm ends.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setClearTime(String ClearTime) {
         this.ClearTime = ClearTime;

@@ -104,7 +104,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Protocol;
 
     /**
-    * Whether to enable debugging on purchase.
+    * Whether to enable debugging after purchase.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsDebugAfterCharge")
@@ -352,9 +352,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to enable debugging on purchase.
+     * Get Whether to enable debugging after purchase.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return IsDebugAfterCharge Whether to enable debugging on purchase.
+     * @return IsDebugAfterCharge Whether to enable debugging after purchase.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getIsDebugAfterCharge() {
@@ -362,9 +362,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether to enable debugging on purchase.
+     * Set Whether to enable debugging after purchase.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param IsDebugAfterCharge Whether to enable debugging on purchase.
+     * @param IsDebugAfterCharge Whether to enable debugging after purchase.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setIsDebugAfterCharge(Boolean IsDebugAfterCharge) {

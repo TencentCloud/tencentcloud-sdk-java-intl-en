@@ -30,7 +30,7 @@ public class GenerateApiDocumentRequest extends AbstractModel{
     private String ServiceId;
 
     /**
-    * Environment of the service for which the SDK is to be created.
+    * Environment of the service for which to create an SDK.
     */
     @SerializedName("GenEnvironment")
     @Expose
@@ -60,16 +60,16 @@ public class GenerateApiDocumentRequest extends AbstractModel{
     }
 
     /**
-     * Get Environment of the service for which the SDK is to be created. 
-     * @return GenEnvironment Environment of the service for which the SDK is to be created.
+     * Get Environment of the service for which to create an SDK. 
+     * @return GenEnvironment Environment of the service for which to create an SDK.
      */
     public String getGenEnvironment() {
         return this.GenEnvironment;
     }
 
     /**
-     * Set Environment of the service for which the SDK is to be created.
-     * @param GenEnvironment Environment of the service for which the SDK is to be created.
+     * Set Environment of the service for which to create an SDK.
+     * @param GenEnvironment Environment of the service for which to create an SDK.
      */
     public void setGenEnvironment(String GenEnvironment) {
         this.GenEnvironment = GenEnvironment;

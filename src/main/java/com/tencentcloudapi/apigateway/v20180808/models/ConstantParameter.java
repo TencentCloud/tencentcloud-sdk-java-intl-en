@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class ConstantParameter extends AbstractModel{
 
     /**
-    * Constant parameter name. This parameter takes effect only when `ServiceType` is `HTTP`.
+    * Constant parameter name, which is used only if `ServiceType` is `HTTP`.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Constant parameter description. This parameter takes effect only when `ServiceType` is `HTTP`.
+    * Constant parameter description, which is used only if `ServiceType` is `HTTP`.
     */
     @SerializedName("Desc")
     @Expose
     private String Desc;
 
     /**
-    * Constant parameter location. This parameter takes effect only when `ServiceType` is `HTTP`.
+    * Constant parameter position, which is used only if `ServiceType` is `HTTP`.
     */
     @SerializedName("Position")
     @Expose
     private String Position;
 
     /**
-    * Constant parameter default value. This parameter takes effect only when `ServiceType` is `HTTP`.
+    * Default value of constant parameter, which is used only if `ServiceType` is `HTTP`.
     */
     @SerializedName("DefaultValue")
     @Expose
     private String DefaultValue;
 
     /**
-     * Get Constant parameter name. This parameter takes effect only when `ServiceType` is `HTTP`. 
-     * @return Name Constant parameter name. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * Get Constant parameter name, which is used only if `ServiceType` is `HTTP`. 
+     * @return Name Constant parameter name, which is used only if `ServiceType` is `HTTP`.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Constant parameter name. This parameter takes effect only when `ServiceType` is `HTTP`.
-     * @param Name Constant parameter name. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * Set Constant parameter name, which is used only if `ServiceType` is `HTTP`.
+     * @param Name Constant parameter name, which is used only if `ServiceType` is `HTTP`.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Constant parameter description. This parameter takes effect only when `ServiceType` is `HTTP`. 
-     * @return Desc Constant parameter description. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * Get Constant parameter description, which is used only if `ServiceType` is `HTTP`. 
+     * @return Desc Constant parameter description, which is used only if `ServiceType` is `HTTP`.
      */
     public String getDesc() {
         return this.Desc;
     }
 
     /**
-     * Set Constant parameter description. This parameter takes effect only when `ServiceType` is `HTTP`.
-     * @param Desc Constant parameter description. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * Set Constant parameter description, which is used only if `ServiceType` is `HTTP`.
+     * @param Desc Constant parameter description, which is used only if `ServiceType` is `HTTP`.
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;
     }
 
     /**
-     * Get Constant parameter location. This parameter takes effect only when `ServiceType` is `HTTP`. 
-     * @return Position Constant parameter location. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * Get Constant parameter position, which is used only if `ServiceType` is `HTTP`. 
+     * @return Position Constant parameter position, which is used only if `ServiceType` is `HTTP`.
      */
     public String getPosition() {
         return this.Position;
     }
 
     /**
-     * Set Constant parameter location. This parameter takes effect only when `ServiceType` is `HTTP`.
-     * @param Position Constant parameter location. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * Set Constant parameter position, which is used only if `ServiceType` is `HTTP`.
+     * @param Position Constant parameter position, which is used only if `ServiceType` is `HTTP`.
      */
     public void setPosition(String Position) {
         this.Position = Position;
     }
 
     /**
-     * Get Constant parameter default value. This parameter takes effect only when `ServiceType` is `HTTP`. 
-     * @return DefaultValue Constant parameter default value. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * Get Default value of constant parameter, which is used only if `ServiceType` is `HTTP`. 
+     * @return DefaultValue Default value of constant parameter, which is used only if `ServiceType` is `HTTP`.
      */
     public String getDefaultValue() {
         return this.DefaultValue;
     }
 
     /**
-     * Set Constant parameter default value. This parameter takes effect only when `ServiceType` is `HTTP`.
-     * @param DefaultValue Constant parameter default value. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * Set Default value of constant parameter, which is used only if `ServiceType` is `HTTP`.
+     * @param DefaultValue Default value of constant parameter, which is used only if `ServiceType` is `HTTP`.
      */
     public void setDefaultValue(String DefaultValue) {
         this.DefaultValue = DefaultValue;

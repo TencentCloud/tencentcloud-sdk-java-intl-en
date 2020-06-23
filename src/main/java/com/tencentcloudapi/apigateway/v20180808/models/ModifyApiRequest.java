@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyApiRequest extends AbstractModel{
 
     /**
-    * Unique ID of API's service.
+    * Unique service ID of API.
     */
     @SerializedName("ServiceId")
     @Expose
@@ -65,21 +65,21 @@ public class ModifyApiRequest extends AbstractModel{
     private String ApiDesc;
 
     /**
-    * API type. Valid values: NORMAL (default value), TSF.
+    * API type. Valid values: NORMAL, TSF. Default value: NORMAL.
     */
     @SerializedName("ApiType")
     @Expose
     private String ApiType;
 
     /**
-    * API authentication type. Valid values: SECRET, NONE (default), OAUTH.
+    * API authentication type. Valid values: SECRET, NONE, OAUTH. Default value: NONE.
     */
     @SerializedName("AuthType")
     @Expose
     private String AuthType;
 
     /**
-    * Whether signature authentication is required. `True` indicates yes while `False` indicates no. This parameter is to be disused.
+    * Whether signature authentication is required. True: yes; False: no. This parameter is to be disused.
     */
     @SerializedName("AuthRequired")
     @Expose
@@ -100,35 +100,35 @@ public class ModifyApiRequest extends AbstractModel{
     private String Protocol;
 
     /**
-    * Whether to enable CORS. `True` indicates yes while `False` indicates no.
+    * Whether to enable CORS. True: yes; False: no.
     */
     @SerializedName("EnableCORS")
     @Expose
     private Boolean EnableCORS;
 
     /**
-    * Constant parameters.
+    * Constant parameter.
     */
     @SerializedName("ConstantParameters")
     @Expose
     private ConstantParameter [] ConstantParameters;
 
     /**
-    * Frontend request parameters.
+    * Frontend request parameter.
     */
     @SerializedName("RequestParameters")
     @Expose
     private ReqParameter [] RequestParameters;
 
     /**
-    * This field takes effect when `AuthType` is `OAUTH`. NORMAL: business API. OAUTH: authorization API.
+    * This field is valid if `AuthType` is `OAUTH`. NORMAL: business API; OAUTH: authorization API.
     */
     @SerializedName("ApiBusinessType")
     @Expose
     private String ApiBusinessType;
 
     /**
-    * Returned information of API backend mocking. This parameter is required when `ServiceType` is `Mock`.
+    * Returned message of API backend Mock, which is required if `ServiceType` is `Mock`.
     */
     @SerializedName("ServiceMockReturnMessage")
     @Expose
@@ -142,14 +142,14 @@ public class ModifyApiRequest extends AbstractModel{
     private MicroServiceReq [] MicroServices;
 
     /**
-    * Microservice load balancing configuration.
+    * Load balancing configuration of microservice.
     */
     @SerializedName("ServiceTsfLoadBalanceConf")
     @Expose
     private TsfLoadBalanceConfResp ServiceTsfLoadBalanceConf;
 
     /**
-    * Microservice health check configuration.
+    * Health check configuration of microservice.
     */
     @SerializedName("ServiceTsfHealthCheckConf")
     @Expose
@@ -170,98 +170,98 @@ public class ModifyApiRequest extends AbstractModel{
     private HealthCheckConf TargetServicesHealthCheckConf;
 
     /**
-    * SCF function name. This parameter takes effect when the backend type is `SCF`.
+    * SCF function name, which takes effect if the backend type is `SCF`.
     */
     @SerializedName("ServiceScfFunctionName")
     @Expose
     private String ServiceScfFunctionName;
 
     /**
-    * SCF WebSocket registration function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+    * SCF WebSocket registration function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
     */
     @SerializedName("ServiceWebsocketRegisterFunctionName")
     @Expose
     private String ServiceWebsocketRegisterFunctionName;
 
     /**
-    * SCF WebSocket cleanup function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+    * SCF WebSocket cleanup function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
     */
     @SerializedName("ServiceWebsocketCleanupFunctionName")
     @Expose
     private String ServiceWebsocketCleanupFunctionName;
 
     /**
-    * SCF WebSocket transfer function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+    * SCF WebSocket transfer function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
     */
     @SerializedName("ServiceWebsocketTransportFunctionName")
     @Expose
     private String ServiceWebsocketTransportFunctionName;
 
     /**
-    * SCF function namespace. This parameter takes effect when the backend type is `SCF`.
+    * SCF function namespace, which takes effect if the backend type is `SCF`.
     */
     @SerializedName("ServiceScfFunctionNamespace")
     @Expose
     private String ServiceScfFunctionNamespace;
 
     /**
-    * SCF function version. This parameter takes effect when the backend type is `SCF`.
+    * SCF function version, which takes effect if the backend type is `SCF`.
     */
     @SerializedName("ServiceScfFunctionQualifier")
     @Expose
     private String ServiceScfFunctionQualifier;
 
     /**
-    * SCF WebSocket registration function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+    * SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
     */
     @SerializedName("ServiceWebsocketRegisterFunctionNamespace")
     @Expose
     private String ServiceWebsocketRegisterFunctionNamespace;
 
     /**
-    * SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+    * SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
     */
     @SerializedName("ServiceWebsocketRegisterFunctionQualifier")
     @Expose
     private String ServiceWebsocketRegisterFunctionQualifier;
 
     /**
-    * SCF WebSocket transfer function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+    * SCF WebSocket transfer function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
     */
     @SerializedName("ServiceWebsocketTransportFunctionNamespace")
     @Expose
     private String ServiceWebsocketTransportFunctionNamespace;
 
     /**
-    * SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+    * SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
     */
     @SerializedName("ServiceWebsocketTransportFunctionQualifier")
     @Expose
     private String ServiceWebsocketTransportFunctionQualifier;
 
     /**
-    * SCF WebSocket cleanup function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+    * SCF WebSocket cleanup function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
     */
     @SerializedName("ServiceWebsocketCleanupFunctionNamespace")
     @Expose
     private String ServiceWebsocketCleanupFunctionNamespace;
 
     /**
-    * SCF WebSocket cleanup function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+    * SCF WebSocket cleanup function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
     */
     @SerializedName("ServiceWebsocketCleanupFunctionQualifier")
     @Expose
     private String ServiceWebsocketCleanupFunctionQualifier;
 
     /**
-    * Whether to enable response integration. This parameter takes effect when the backend type is `SCF`.
+    * Whether to enable response integration, which takes effect if the backend type is `SCF`.
     */
     @SerializedName("ServiceScfIsIntegratedResponse")
     @Expose
     private Boolean ServiceScfIsIntegratedResponse;
 
     /**
-    * Billing after debugging starts (reserved for marketplace).
+    * Billing after debugging starts (reserved field for marketplace).
     */
     @SerializedName("IsDebugAfterCharge")
     @Expose
@@ -275,7 +275,7 @@ public class ModifyApiRequest extends AbstractModel{
     private Tag TagSpecifications;
 
     /**
-    * Whether to delete the custom response configuration error codes. If the value is left empty or `False`, the error codes will not be deleted. If the value is `True`, all custom response configuration error codes of the API will be deleted.
+    * Whether to delete the error codes for custom response configuration. If the value is left empty or `False`, the error codes will not be deleted. If the value is `True`, all custom response configuration error codes of the API will be deleted.
     */
     @SerializedName("IsDeleteResponseErrorCodes")
     @Expose
@@ -289,14 +289,14 @@ public class ModifyApiRequest extends AbstractModel{
     private String ResponseType;
 
     /**
-    * Successful response sample of custom response configuration.
+    * Sample response for successful custom response configuration.
     */
     @SerializedName("ResponseSuccessExample")
     @Expose
     private String ResponseSuccessExample;
 
     /**
-    * Response failure sample of custom response configuration.
+    * Sample response for failed custom response configuration.
     */
     @SerializedName("ResponseFailExample")
     @Expose
@@ -310,21 +310,21 @@ public class ModifyApiRequest extends AbstractModel{
     private ServiceConfig ServiceConfig;
 
     /**
-    * Unique ID of associated authorization API. This parameter takes effect only when `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
+    * Unique ID of associated authorization API, which takes effect only if `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
     */
     @SerializedName("AuthRelationApiId")
     @Expose
     private String AuthRelationApiId;
 
     /**
-    * API backend service parameters.
+    * API backend service parameter.
     */
     @SerializedName("ServiceParameters")
     @Expose
     private ServiceParameter [] ServiceParameters;
 
     /**
-    * OAuth configuration. This parameter takes effect when `AuthType` is `OAUTH`.
+    * OAuth configuration, which takes effect if `AuthType` is `OAUTH`.
     */
     @SerializedName("OauthConfig")
     @Expose
@@ -338,16 +338,16 @@ public class ModifyApiRequest extends AbstractModel{
     private ResponseErrorCodeReq [] ResponseErrorCodes;
 
     /**
-     * Get Unique ID of API's service. 
-     * @return ServiceId Unique ID of API's service.
+     * Get Unique service ID of API. 
+     * @return ServiceId Unique service ID of API.
      */
     public String getServiceId() {
         return this.ServiceId;
     }
 
     /**
-     * Set Unique ID of API's service.
-     * @param ServiceId Unique ID of API's service.
+     * Set Unique service ID of API.
+     * @param ServiceId Unique service ID of API.
      */
     public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;
@@ -434,48 +434,48 @@ public class ModifyApiRequest extends AbstractModel{
     }
 
     /**
-     * Get API type. Valid values: NORMAL (default value), TSF. 
-     * @return ApiType API type. Valid values: NORMAL (default value), TSF.
+     * Get API type. Valid values: NORMAL, TSF. Default value: NORMAL. 
+     * @return ApiType API type. Valid values: NORMAL, TSF. Default value: NORMAL.
      */
     public String getApiType() {
         return this.ApiType;
     }
 
     /**
-     * Set API type. Valid values: NORMAL (default value), TSF.
-     * @param ApiType API type. Valid values: NORMAL (default value), TSF.
+     * Set API type. Valid values: NORMAL, TSF. Default value: NORMAL.
+     * @param ApiType API type. Valid values: NORMAL, TSF. Default value: NORMAL.
      */
     public void setApiType(String ApiType) {
         this.ApiType = ApiType;
     }
 
     /**
-     * Get API authentication type. Valid values: SECRET, NONE (default), OAUTH. 
-     * @return AuthType API authentication type. Valid values: SECRET, NONE (default), OAUTH.
+     * Get API authentication type. Valid values: SECRET, NONE, OAUTH. Default value: NONE. 
+     * @return AuthType API authentication type. Valid values: SECRET, NONE, OAUTH. Default value: NONE.
      */
     public String getAuthType() {
         return this.AuthType;
     }
 
     /**
-     * Set API authentication type. Valid values: SECRET, NONE (default), OAUTH.
-     * @param AuthType API authentication type. Valid values: SECRET, NONE (default), OAUTH.
+     * Set API authentication type. Valid values: SECRET, NONE, OAUTH. Default value: NONE.
+     * @param AuthType API authentication type. Valid values: SECRET, NONE, OAUTH. Default value: NONE.
      */
     public void setAuthType(String AuthType) {
         this.AuthType = AuthType;
     }
 
     /**
-     * Get Whether signature authentication is required. `True` indicates yes while `False` indicates no. This parameter is to be disused. 
-     * @return AuthRequired Whether signature authentication is required. `True` indicates yes while `False` indicates no. This parameter is to be disused.
+     * Get Whether signature authentication is required. True: yes; False: no. This parameter is to be disused. 
+     * @return AuthRequired Whether signature authentication is required. True: yes; False: no. This parameter is to be disused.
      */
     public Boolean getAuthRequired() {
         return this.AuthRequired;
     }
 
     /**
-     * Set Whether signature authentication is required. `True` indicates yes while `False` indicates no. This parameter is to be disused.
-     * @param AuthRequired Whether signature authentication is required. `True` indicates yes while `False` indicates no. This parameter is to be disused.
+     * Set Whether signature authentication is required. True: yes; False: no. This parameter is to be disused.
+     * @param AuthRequired Whether signature authentication is required. True: yes; False: no. This parameter is to be disused.
      */
     public void setAuthRequired(Boolean AuthRequired) {
         this.AuthRequired = AuthRequired;
@@ -514,80 +514,80 @@ public class ModifyApiRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to enable CORS. `True` indicates yes while `False` indicates no. 
-     * @return EnableCORS Whether to enable CORS. `True` indicates yes while `False` indicates no.
+     * Get Whether to enable CORS. True: yes; False: no. 
+     * @return EnableCORS Whether to enable CORS. True: yes; False: no.
      */
     public Boolean getEnableCORS() {
         return this.EnableCORS;
     }
 
     /**
-     * Set Whether to enable CORS. `True` indicates yes while `False` indicates no.
-     * @param EnableCORS Whether to enable CORS. `True` indicates yes while `False` indicates no.
+     * Set Whether to enable CORS. True: yes; False: no.
+     * @param EnableCORS Whether to enable CORS. True: yes; False: no.
      */
     public void setEnableCORS(Boolean EnableCORS) {
         this.EnableCORS = EnableCORS;
     }
 
     /**
-     * Get Constant parameters. 
-     * @return ConstantParameters Constant parameters.
+     * Get Constant parameter. 
+     * @return ConstantParameters Constant parameter.
      */
     public ConstantParameter [] getConstantParameters() {
         return this.ConstantParameters;
     }
 
     /**
-     * Set Constant parameters.
-     * @param ConstantParameters Constant parameters.
+     * Set Constant parameter.
+     * @param ConstantParameters Constant parameter.
      */
     public void setConstantParameters(ConstantParameter [] ConstantParameters) {
         this.ConstantParameters = ConstantParameters;
     }
 
     /**
-     * Get Frontend request parameters. 
-     * @return RequestParameters Frontend request parameters.
+     * Get Frontend request parameter. 
+     * @return RequestParameters Frontend request parameter.
      */
     public ReqParameter [] getRequestParameters() {
         return this.RequestParameters;
     }
 
     /**
-     * Set Frontend request parameters.
-     * @param RequestParameters Frontend request parameters.
+     * Set Frontend request parameter.
+     * @param RequestParameters Frontend request parameter.
      */
     public void setRequestParameters(ReqParameter [] RequestParameters) {
         this.RequestParameters = RequestParameters;
     }
 
     /**
-     * Get This field takes effect when `AuthType` is `OAUTH`. NORMAL: business API. OAUTH: authorization API. 
-     * @return ApiBusinessType This field takes effect when `AuthType` is `OAUTH`. NORMAL: business API. OAUTH: authorization API.
+     * Get This field is valid if `AuthType` is `OAUTH`. NORMAL: business API; OAUTH: authorization API. 
+     * @return ApiBusinessType This field is valid if `AuthType` is `OAUTH`. NORMAL: business API; OAUTH: authorization API.
      */
     public String getApiBusinessType() {
         return this.ApiBusinessType;
     }
 
     /**
-     * Set This field takes effect when `AuthType` is `OAUTH`. NORMAL: business API. OAUTH: authorization API.
-     * @param ApiBusinessType This field takes effect when `AuthType` is `OAUTH`. NORMAL: business API. OAUTH: authorization API.
+     * Set This field is valid if `AuthType` is `OAUTH`. NORMAL: business API; OAUTH: authorization API.
+     * @param ApiBusinessType This field is valid if `AuthType` is `OAUTH`. NORMAL: business API; OAUTH: authorization API.
      */
     public void setApiBusinessType(String ApiBusinessType) {
         this.ApiBusinessType = ApiBusinessType;
     }
 
     /**
-     * Get Returned information of API backend mocking. This parameter is required when `ServiceType` is `Mock`. 
-     * @return ServiceMockReturnMessage Returned information of API backend mocking. This parameter is required when `ServiceType` is `Mock`.
+     * Get Returned message of API backend Mock, which is required if `ServiceType` is `Mock`. 
+     * @return ServiceMockReturnMessage Returned message of API backend Mock, which is required if `ServiceType` is `Mock`.
      */
     public String getServiceMockReturnMessage() {
         return this.ServiceMockReturnMessage;
     }
 
     /**
-     * Set Returned information of API backend mocking. This parameter is required when `ServiceType` is `Mock`.
-     * @param ServiceMockReturnMessage Returned information of API backend mocking. This parameter is required when `ServiceType` is `Mock`.
+     * Set Returned message of API backend Mock, which is required if `ServiceType` is `Mock`.
+     * @param ServiceMockReturnMessage Returned message of API backend Mock, which is required if `ServiceType` is `Mock`.
      */
     public void setServiceMockReturnMessage(String ServiceMockReturnMessage) {
         this.ServiceMockReturnMessage = ServiceMockReturnMessage;
@@ -610,32 +610,32 @@ public class ModifyApiRequest extends AbstractModel{
     }
 
     /**
-     * Get Microservice load balancing configuration. 
-     * @return ServiceTsfLoadBalanceConf Microservice load balancing configuration.
+     * Get Load balancing configuration of microservice. 
+     * @return ServiceTsfLoadBalanceConf Load balancing configuration of microservice.
      */
     public TsfLoadBalanceConfResp getServiceTsfLoadBalanceConf() {
         return this.ServiceTsfLoadBalanceConf;
     }
 
     /**
-     * Set Microservice load balancing configuration.
-     * @param ServiceTsfLoadBalanceConf Microservice load balancing configuration.
+     * Set Load balancing configuration of microservice.
+     * @param ServiceTsfLoadBalanceConf Load balancing configuration of microservice.
      */
     public void setServiceTsfLoadBalanceConf(TsfLoadBalanceConfResp ServiceTsfLoadBalanceConf) {
         this.ServiceTsfLoadBalanceConf = ServiceTsfLoadBalanceConf;
     }
 
     /**
-     * Get Microservice health check configuration. 
-     * @return ServiceTsfHealthCheckConf Microservice health check configuration.
+     * Get Health check configuration of microservice. 
+     * @return ServiceTsfHealthCheckConf Health check configuration of microservice.
      */
     public HealthCheckConf getServiceTsfHealthCheckConf() {
         return this.ServiceTsfHealthCheckConf;
     }
 
     /**
-     * Set Microservice health check configuration.
-     * @param ServiceTsfHealthCheckConf Microservice health check configuration.
+     * Set Health check configuration of microservice.
+     * @param ServiceTsfHealthCheckConf Health check configuration of microservice.
      */
     public void setServiceTsfHealthCheckConf(HealthCheckConf ServiceTsfHealthCheckConf) {
         this.ServiceTsfHealthCheckConf = ServiceTsfHealthCheckConf;
@@ -674,224 +674,224 @@ public class ModifyApiRequest extends AbstractModel{
     }
 
     /**
-     * Get SCF function name. This parameter takes effect when the backend type is `SCF`. 
-     * @return ServiceScfFunctionName SCF function name. This parameter takes effect when the backend type is `SCF`.
+     * Get SCF function name, which takes effect if the backend type is `SCF`. 
+     * @return ServiceScfFunctionName SCF function name, which takes effect if the backend type is `SCF`.
      */
     public String getServiceScfFunctionName() {
         return this.ServiceScfFunctionName;
     }
 
     /**
-     * Set SCF function name. This parameter takes effect when the backend type is `SCF`.
-     * @param ServiceScfFunctionName SCF function name. This parameter takes effect when the backend type is `SCF`.
+     * Set SCF function name, which takes effect if the backend type is `SCF`.
+     * @param ServiceScfFunctionName SCF function name, which takes effect if the backend type is `SCF`.
      */
     public void setServiceScfFunctionName(String ServiceScfFunctionName) {
         this.ServiceScfFunctionName = ServiceScfFunctionName;
     }
 
     /**
-     * Get SCF WebSocket registration function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`. 
-     * @return ServiceWebsocketRegisterFunctionName SCF WebSocket registration function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * Get SCF WebSocket registration function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`. 
+     * @return ServiceWebsocketRegisterFunctionName SCF WebSocket registration function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
      */
     public String getServiceWebsocketRegisterFunctionName() {
         return this.ServiceWebsocketRegisterFunctionName;
     }
 
     /**
-     * Set SCF WebSocket registration function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
-     * @param ServiceWebsocketRegisterFunctionName SCF WebSocket registration function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * Set SCF WebSocket registration function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @param ServiceWebsocketRegisterFunctionName SCF WebSocket registration function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
      */
     public void setServiceWebsocketRegisterFunctionName(String ServiceWebsocketRegisterFunctionName) {
         this.ServiceWebsocketRegisterFunctionName = ServiceWebsocketRegisterFunctionName;
     }
 
     /**
-     * Get SCF WebSocket cleanup function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`. 
-     * @return ServiceWebsocketCleanupFunctionName SCF WebSocket cleanup function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * Get SCF WebSocket cleanup function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`. 
+     * @return ServiceWebsocketCleanupFunctionName SCF WebSocket cleanup function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
      */
     public String getServiceWebsocketCleanupFunctionName() {
         return this.ServiceWebsocketCleanupFunctionName;
     }
 
     /**
-     * Set SCF WebSocket cleanup function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
-     * @param ServiceWebsocketCleanupFunctionName SCF WebSocket cleanup function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * Set SCF WebSocket cleanup function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @param ServiceWebsocketCleanupFunctionName SCF WebSocket cleanup function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
      */
     public void setServiceWebsocketCleanupFunctionName(String ServiceWebsocketCleanupFunctionName) {
         this.ServiceWebsocketCleanupFunctionName = ServiceWebsocketCleanupFunctionName;
     }
 
     /**
-     * Get SCF WebSocket transfer function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`. 
-     * @return ServiceWebsocketTransportFunctionName SCF WebSocket transfer function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * Get SCF WebSocket transfer function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`. 
+     * @return ServiceWebsocketTransportFunctionName SCF WebSocket transfer function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
      */
     public String getServiceWebsocketTransportFunctionName() {
         return this.ServiceWebsocketTransportFunctionName;
     }
 
     /**
-     * Set SCF WebSocket transfer function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
-     * @param ServiceWebsocketTransportFunctionName SCF WebSocket transfer function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * Set SCF WebSocket transfer function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @param ServiceWebsocketTransportFunctionName SCF WebSocket transfer function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
      */
     public void setServiceWebsocketTransportFunctionName(String ServiceWebsocketTransportFunctionName) {
         this.ServiceWebsocketTransportFunctionName = ServiceWebsocketTransportFunctionName;
     }
 
     /**
-     * Get SCF function namespace. This parameter takes effect when the backend type is `SCF`. 
-     * @return ServiceScfFunctionNamespace SCF function namespace. This parameter takes effect when the backend type is `SCF`.
+     * Get SCF function namespace, which takes effect if the backend type is `SCF`. 
+     * @return ServiceScfFunctionNamespace SCF function namespace, which takes effect if the backend type is `SCF`.
      */
     public String getServiceScfFunctionNamespace() {
         return this.ServiceScfFunctionNamespace;
     }
 
     /**
-     * Set SCF function namespace. This parameter takes effect when the backend type is `SCF`.
-     * @param ServiceScfFunctionNamespace SCF function namespace. This parameter takes effect when the backend type is `SCF`.
+     * Set SCF function namespace, which takes effect if the backend type is `SCF`.
+     * @param ServiceScfFunctionNamespace SCF function namespace, which takes effect if the backend type is `SCF`.
      */
     public void setServiceScfFunctionNamespace(String ServiceScfFunctionNamespace) {
         this.ServiceScfFunctionNamespace = ServiceScfFunctionNamespace;
     }
 
     /**
-     * Get SCF function version. This parameter takes effect when the backend type is `SCF`. 
-     * @return ServiceScfFunctionQualifier SCF function version. This parameter takes effect when the backend type is `SCF`.
+     * Get SCF function version, which takes effect if the backend type is `SCF`. 
+     * @return ServiceScfFunctionQualifier SCF function version, which takes effect if the backend type is `SCF`.
      */
     public String getServiceScfFunctionQualifier() {
         return this.ServiceScfFunctionQualifier;
     }
 
     /**
-     * Set SCF function version. This parameter takes effect when the backend type is `SCF`.
-     * @param ServiceScfFunctionQualifier SCF function version. This parameter takes effect when the backend type is `SCF`.
+     * Set SCF function version, which takes effect if the backend type is `SCF`.
+     * @param ServiceScfFunctionQualifier SCF function version, which takes effect if the backend type is `SCF`.
      */
     public void setServiceScfFunctionQualifier(String ServiceScfFunctionQualifier) {
         this.ServiceScfFunctionQualifier = ServiceScfFunctionQualifier;
     }
 
     /**
-     * Get SCF WebSocket registration function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`. 
-     * @return ServiceWebsocketRegisterFunctionNamespace SCF WebSocket registration function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * Get SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`. 
+     * @return ServiceWebsocketRegisterFunctionNamespace SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
      */
     public String getServiceWebsocketRegisterFunctionNamespace() {
         return this.ServiceWebsocketRegisterFunctionNamespace;
     }
 
     /**
-     * Set SCF WebSocket registration function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
-     * @param ServiceWebsocketRegisterFunctionNamespace SCF WebSocket registration function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * Set SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @param ServiceWebsocketRegisterFunctionNamespace SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
      */
     public void setServiceWebsocketRegisterFunctionNamespace(String ServiceWebsocketRegisterFunctionNamespace) {
         this.ServiceWebsocketRegisterFunctionNamespace = ServiceWebsocketRegisterFunctionNamespace;
     }
 
     /**
-     * Get SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`. 
-     * @return ServiceWebsocketRegisterFunctionQualifier SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * Get SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`. 
+     * @return ServiceWebsocketRegisterFunctionQualifier SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
      */
     public String getServiceWebsocketRegisterFunctionQualifier() {
         return this.ServiceWebsocketRegisterFunctionQualifier;
     }
 
     /**
-     * Set SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
-     * @param ServiceWebsocketRegisterFunctionQualifier SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * Set SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @param ServiceWebsocketRegisterFunctionQualifier SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
      */
     public void setServiceWebsocketRegisterFunctionQualifier(String ServiceWebsocketRegisterFunctionQualifier) {
         this.ServiceWebsocketRegisterFunctionQualifier = ServiceWebsocketRegisterFunctionQualifier;
     }
 
     /**
-     * Get SCF WebSocket transfer function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`. 
-     * @return ServiceWebsocketTransportFunctionNamespace SCF WebSocket transfer function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * Get SCF WebSocket transfer function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`. 
+     * @return ServiceWebsocketTransportFunctionNamespace SCF WebSocket transfer function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
      */
     public String getServiceWebsocketTransportFunctionNamespace() {
         return this.ServiceWebsocketTransportFunctionNamespace;
     }
 
     /**
-     * Set SCF WebSocket transfer function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
-     * @param ServiceWebsocketTransportFunctionNamespace SCF WebSocket transfer function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * Set SCF WebSocket transfer function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @param ServiceWebsocketTransportFunctionNamespace SCF WebSocket transfer function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
      */
     public void setServiceWebsocketTransportFunctionNamespace(String ServiceWebsocketTransportFunctionNamespace) {
         this.ServiceWebsocketTransportFunctionNamespace = ServiceWebsocketTransportFunctionNamespace;
     }
 
     /**
-     * Get SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`. 
-     * @return ServiceWebsocketTransportFunctionQualifier SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * Get SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`. 
+     * @return ServiceWebsocketTransportFunctionQualifier SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
      */
     public String getServiceWebsocketTransportFunctionQualifier() {
         return this.ServiceWebsocketTransportFunctionQualifier;
     }
 
     /**
-     * Set SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
-     * @param ServiceWebsocketTransportFunctionQualifier SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * Set SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @param ServiceWebsocketTransportFunctionQualifier SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
      */
     public void setServiceWebsocketTransportFunctionQualifier(String ServiceWebsocketTransportFunctionQualifier) {
         this.ServiceWebsocketTransportFunctionQualifier = ServiceWebsocketTransportFunctionQualifier;
     }
 
     /**
-     * Get SCF WebSocket cleanup function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`. 
-     * @return ServiceWebsocketCleanupFunctionNamespace SCF WebSocket cleanup function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * Get SCF WebSocket cleanup function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`. 
+     * @return ServiceWebsocketCleanupFunctionNamespace SCF WebSocket cleanup function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
      */
     public String getServiceWebsocketCleanupFunctionNamespace() {
         return this.ServiceWebsocketCleanupFunctionNamespace;
     }
 
     /**
-     * Set SCF WebSocket cleanup function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
-     * @param ServiceWebsocketCleanupFunctionNamespace SCF WebSocket cleanup function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * Set SCF WebSocket cleanup function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @param ServiceWebsocketCleanupFunctionNamespace SCF WebSocket cleanup function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
      */
     public void setServiceWebsocketCleanupFunctionNamespace(String ServiceWebsocketCleanupFunctionNamespace) {
         this.ServiceWebsocketCleanupFunctionNamespace = ServiceWebsocketCleanupFunctionNamespace;
     }
 
     /**
-     * Get SCF WebSocket cleanup function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`. 
-     * @return ServiceWebsocketCleanupFunctionQualifier SCF WebSocket cleanup function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * Get SCF WebSocket cleanup function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`. 
+     * @return ServiceWebsocketCleanupFunctionQualifier SCF WebSocket cleanup function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
      */
     public String getServiceWebsocketCleanupFunctionQualifier() {
         return this.ServiceWebsocketCleanupFunctionQualifier;
     }
 
     /**
-     * Set SCF WebSocket cleanup function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
-     * @param ServiceWebsocketCleanupFunctionQualifier SCF WebSocket cleanup function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * Set SCF WebSocket cleanup function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @param ServiceWebsocketCleanupFunctionQualifier SCF WebSocket cleanup function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
      */
     public void setServiceWebsocketCleanupFunctionQualifier(String ServiceWebsocketCleanupFunctionQualifier) {
         this.ServiceWebsocketCleanupFunctionQualifier = ServiceWebsocketCleanupFunctionQualifier;
     }
 
     /**
-     * Get Whether to enable response integration. This parameter takes effect when the backend type is `SCF`. 
-     * @return ServiceScfIsIntegratedResponse Whether to enable response integration. This parameter takes effect when the backend type is `SCF`.
+     * Get Whether to enable response integration, which takes effect if the backend type is `SCF`. 
+     * @return ServiceScfIsIntegratedResponse Whether to enable response integration, which takes effect if the backend type is `SCF`.
      */
     public Boolean getServiceScfIsIntegratedResponse() {
         return this.ServiceScfIsIntegratedResponse;
     }
 
     /**
-     * Set Whether to enable response integration. This parameter takes effect when the backend type is `SCF`.
-     * @param ServiceScfIsIntegratedResponse Whether to enable response integration. This parameter takes effect when the backend type is `SCF`.
+     * Set Whether to enable response integration, which takes effect if the backend type is `SCF`.
+     * @param ServiceScfIsIntegratedResponse Whether to enable response integration, which takes effect if the backend type is `SCF`.
      */
     public void setServiceScfIsIntegratedResponse(Boolean ServiceScfIsIntegratedResponse) {
         this.ServiceScfIsIntegratedResponse = ServiceScfIsIntegratedResponse;
     }
 
     /**
-     * Get Billing after debugging starts (reserved for marketplace). 
-     * @return IsDebugAfterCharge Billing after debugging starts (reserved for marketplace).
+     * Get Billing after debugging starts (reserved field for marketplace). 
+     * @return IsDebugAfterCharge Billing after debugging starts (reserved field for marketplace).
      */
     public Boolean getIsDebugAfterCharge() {
         return this.IsDebugAfterCharge;
     }
 
     /**
-     * Set Billing after debugging starts (reserved for marketplace).
-     * @param IsDebugAfterCharge Billing after debugging starts (reserved for marketplace).
+     * Set Billing after debugging starts (reserved field for marketplace).
+     * @param IsDebugAfterCharge Billing after debugging starts (reserved field for marketplace).
      */
     public void setIsDebugAfterCharge(Boolean IsDebugAfterCharge) {
         this.IsDebugAfterCharge = IsDebugAfterCharge;
@@ -914,16 +914,16 @@ public class ModifyApiRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to delete the custom response configuration error codes. If the value is left empty or `False`, the error codes will not be deleted. If the value is `True`, all custom response configuration error codes of the API will be deleted. 
-     * @return IsDeleteResponseErrorCodes Whether to delete the custom response configuration error codes. If the value is left empty or `False`, the error codes will not be deleted. If the value is `True`, all custom response configuration error codes of the API will be deleted.
+     * Get Whether to delete the error codes for custom response configuration. If the value is left empty or `False`, the error codes will not be deleted. If the value is `True`, all custom response configuration error codes of the API will be deleted. 
+     * @return IsDeleteResponseErrorCodes Whether to delete the error codes for custom response configuration. If the value is left empty or `False`, the error codes will not be deleted. If the value is `True`, all custom response configuration error codes of the API will be deleted.
      */
     public Boolean getIsDeleteResponseErrorCodes() {
         return this.IsDeleteResponseErrorCodes;
     }
 
     /**
-     * Set Whether to delete the custom response configuration error codes. If the value is left empty or `False`, the error codes will not be deleted. If the value is `True`, all custom response configuration error codes of the API will be deleted.
-     * @param IsDeleteResponseErrorCodes Whether to delete the custom response configuration error codes. If the value is left empty or `False`, the error codes will not be deleted. If the value is `True`, all custom response configuration error codes of the API will be deleted.
+     * Set Whether to delete the error codes for custom response configuration. If the value is left empty or `False`, the error codes will not be deleted. If the value is `True`, all custom response configuration error codes of the API will be deleted.
+     * @param IsDeleteResponseErrorCodes Whether to delete the error codes for custom response configuration. If the value is left empty or `False`, the error codes will not be deleted. If the value is `True`, all custom response configuration error codes of the API will be deleted.
      */
     public void setIsDeleteResponseErrorCodes(Boolean IsDeleteResponseErrorCodes) {
         this.IsDeleteResponseErrorCodes = IsDeleteResponseErrorCodes;
@@ -946,32 +946,32 @@ public class ModifyApiRequest extends AbstractModel{
     }
 
     /**
-     * Get Successful response sample of custom response configuration. 
-     * @return ResponseSuccessExample Successful response sample of custom response configuration.
+     * Get Sample response for successful custom response configuration. 
+     * @return ResponseSuccessExample Sample response for successful custom response configuration.
      */
     public String getResponseSuccessExample() {
         return this.ResponseSuccessExample;
     }
 
     /**
-     * Set Successful response sample of custom response configuration.
-     * @param ResponseSuccessExample Successful response sample of custom response configuration.
+     * Set Sample response for successful custom response configuration.
+     * @param ResponseSuccessExample Sample response for successful custom response configuration.
      */
     public void setResponseSuccessExample(String ResponseSuccessExample) {
         this.ResponseSuccessExample = ResponseSuccessExample;
     }
 
     /**
-     * Get Response failure sample of custom response configuration. 
-     * @return ResponseFailExample Response failure sample of custom response configuration.
+     * Get Sample response for failed custom response configuration. 
+     * @return ResponseFailExample Sample response for failed custom response configuration.
      */
     public String getResponseFailExample() {
         return this.ResponseFailExample;
     }
 
     /**
-     * Set Response failure sample of custom response configuration.
-     * @param ResponseFailExample Response failure sample of custom response configuration.
+     * Set Sample response for failed custom response configuration.
+     * @param ResponseFailExample Sample response for failed custom response configuration.
      */
     public void setResponseFailExample(String ResponseFailExample) {
         this.ResponseFailExample = ResponseFailExample;
@@ -994,48 +994,48 @@ public class ModifyApiRequest extends AbstractModel{
     }
 
     /**
-     * Get Unique ID of associated authorization API. This parameter takes effect only when `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API. 
-     * @return AuthRelationApiId Unique ID of associated authorization API. This parameter takes effect only when `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
+     * Get Unique ID of associated authorization API, which takes effect only if `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API. 
+     * @return AuthRelationApiId Unique ID of associated authorization API, which takes effect only if `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
      */
     public String getAuthRelationApiId() {
         return this.AuthRelationApiId;
     }
 
     /**
-     * Set Unique ID of associated authorization API. This parameter takes effect only when `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
-     * @param AuthRelationApiId Unique ID of associated authorization API. This parameter takes effect only when `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
+     * Set Unique ID of associated authorization API, which takes effect only if `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
+     * @param AuthRelationApiId Unique ID of associated authorization API, which takes effect only if `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
      */
     public void setAuthRelationApiId(String AuthRelationApiId) {
         this.AuthRelationApiId = AuthRelationApiId;
     }
 
     /**
-     * Get API backend service parameters. 
-     * @return ServiceParameters API backend service parameters.
+     * Get API backend service parameter. 
+     * @return ServiceParameters API backend service parameter.
      */
     public ServiceParameter [] getServiceParameters() {
         return this.ServiceParameters;
     }
 
     /**
-     * Set API backend service parameters.
-     * @param ServiceParameters API backend service parameters.
+     * Set API backend service parameter.
+     * @param ServiceParameters API backend service parameter.
      */
     public void setServiceParameters(ServiceParameter [] ServiceParameters) {
         this.ServiceParameters = ServiceParameters;
     }
 
     /**
-     * Get OAuth configuration. This parameter takes effect when `AuthType` is `OAUTH`. 
-     * @return OauthConfig OAuth configuration. This parameter takes effect when `AuthType` is `OAUTH`.
+     * Get OAuth configuration, which takes effect if `AuthType` is `OAUTH`. 
+     * @return OauthConfig OAuth configuration, which takes effect if `AuthType` is `OAUTH`.
      */
     public OauthConfig getOauthConfig() {
         return this.OauthConfig;
     }
 
     /**
-     * Set OAuth configuration. This parameter takes effect when `AuthType` is `OAUTH`.
-     * @param OauthConfig OAuth configuration. This parameter takes effect when `AuthType` is `OAUTH`.
+     * Set OAuth configuration, which takes effect if `AuthType` is `OAUTH`.
+     * @param OauthConfig OAuth configuration, which takes effect if `AuthType` is `OAUTH`.
      */
     public void setOauthConfig(OauthConfig OauthConfig) {
         this.OauthConfig = OauthConfig;

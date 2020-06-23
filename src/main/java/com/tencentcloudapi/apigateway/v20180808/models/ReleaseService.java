@@ -31,7 +31,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ReleaseDesc;
 
     /**
-    * Release version ID.
+    * Published version ID.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ReleaseVersion")
@@ -59,9 +59,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Release version ID.
+     * Get Published version ID.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ReleaseVersion Release version ID.
+     * @return ReleaseVersion Published version ID.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getReleaseVersion() {
@@ -69,9 +69,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Release version ID.
+     * Set Published version ID.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ReleaseVersion Release version ID.
+     * @param ReleaseVersion Published version ID.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setReleaseVersion(String ReleaseVersion) {

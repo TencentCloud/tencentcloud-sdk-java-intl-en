@@ -812,6 +812,24 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to swap the VIPs of instances for instance disaster recovery switch in scenarios where cross-AZ disaster recovery is supported through DTS. After the VIPs of the source and target instances are swapped, the target instance can be written into and the DTS sync task between them will be disconnected.
+     * @param req SwitchInstanceVipRequest
+     * @return SwitchInstanceVipResponse
+     * @throws TencentCloudSDKException
+     */
+    public SwitchInstanceVipResponse SwitchInstanceVip(SwitchInstanceVipRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SwitchInstanceVipResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SwitchInstanceVipResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SwitchInstanceVip"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to upgrade an instance.
      * @param req UpgradeInstanceRequest
      * @return UpgradeInstanceResponse

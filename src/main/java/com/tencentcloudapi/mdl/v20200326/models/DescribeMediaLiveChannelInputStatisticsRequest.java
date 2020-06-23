@@ -46,6 +46,13 @@ UTC time, such as `2020-01-01T12:00:00Z`.
     private String EndTime;
 
     /**
+    * 
+    */
+    @SerializedName("Period")
+    @Expose
+    private String Period;
+
+    /**
      * Get Channel ID. 
      * @return ChannelId Channel ID.
      */
@@ -102,12 +109,29 @@ UTC time, such as `2020-01-01T12:00:00Z`.
     }
 
     /**
+     * Get  
+     * @return Period 
+     */
+    public String getPeriod() {
+        return this.Period;
+    }
+
+    /**
+     * Set 
+     * @param Period 
+     */
+    public void setPeriod(String Period) {
+        this.Period = Period;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "Period", this.Period);
 
     }
 }

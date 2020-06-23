@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class UpdateApiKeyResponse extends AbstractModel{
 
     /**
-    * Changed key details.
+    * Key details after change.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Result")
@@ -38,9 +38,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Changed key details.
+     * Get Key details after change.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Result Changed key details.
+     * @return Result Key details after change.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public ApiKey getResult() {
@@ -48,9 +48,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Changed key details.
+     * Set Key details after change.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Result Changed key details.
+     * @param Result Key details after change.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setResult(ApiKey Result) {

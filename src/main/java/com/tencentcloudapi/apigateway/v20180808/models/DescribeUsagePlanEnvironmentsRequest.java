@@ -30,14 +30,14 @@ public class DescribeUsagePlanEnvironmentsRequest extends AbstractModel{
     private String UsagePlanId;
 
     /**
-    * Binding type. Valid values: API, SERVICE (default value).
+    * Binding type. Valid values: API, SERVICE. Default value: SERVICE.
     */
     @SerializedName("BindType")
     @Expose
     private String BindType;
 
     /**
-    * Number of returned results. Default value: 20. Maximum value: 100.
+    * Number of results to be returned. Default value: 20. Maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
@@ -67,32 +67,32 @@ public class DescribeUsagePlanEnvironmentsRequest extends AbstractModel{
     }
 
     /**
-     * Get Binding type. Valid values: API, SERVICE (default value). 
-     * @return BindType Binding type. Valid values: API, SERVICE (default value).
+     * Get Binding type. Valid values: API, SERVICE. Default value: SERVICE. 
+     * @return BindType Binding type. Valid values: API, SERVICE. Default value: SERVICE.
      */
     public String getBindType() {
         return this.BindType;
     }
 
     /**
-     * Set Binding type. Valid values: API, SERVICE (default value).
-     * @param BindType Binding type. Valid values: API, SERVICE (default value).
+     * Set Binding type. Valid values: API, SERVICE. Default value: SERVICE.
+     * @param BindType Binding type. Valid values: API, SERVICE. Default value: SERVICE.
      */
     public void setBindType(String BindType) {
         this.BindType = BindType;
     }
 
     /**
-     * Get Number of returned results. Default value: 20. Maximum value: 100. 
-     * @return Limit Number of returned results. Default value: 20. Maximum value: 100.
+     * Get Number of results to be returned. Default value: 20. Maximum value: 100. 
+     * @return Limit Number of results to be returned. Default value: 20. Maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned results. Default value: 20. Maximum value: 100.
-     * @param Limit Number of returned results. Default value: 20. Maximum value: 100.
+     * Set Number of results to be returned. Default value: 20. Maximum value: 100.
+     * @param Limit Number of results to be returned. Default value: 20. Maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

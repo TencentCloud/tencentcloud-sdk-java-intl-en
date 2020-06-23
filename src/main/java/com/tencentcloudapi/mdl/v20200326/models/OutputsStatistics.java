@@ -31,7 +31,6 @@ public class OutputsStatistics extends AbstractModel{
 
     /**
     * Output information of pipeline 1.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Pipeline1")
     @Expose
@@ -54,10 +53,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Output information of pipeline 1.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Output information of pipeline 1. 
      * @return Pipeline1 Output information of pipeline 1.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public PipelineOutputStatistics [] getPipeline1() {
         return this.Pipeline1;
@@ -65,9 +62,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Output information of pipeline 1.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param Pipeline1 Output information of pipeline 1.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setPipeline1(PipelineOutputStatistics [] Pipeline1) {
         this.Pipeline1 = Pipeline1;

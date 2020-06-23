@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class HealthCheckConf extends AbstractModel{
 
     /**
-    * Whether to enable health check.
+    * Whether health check is enabled.
     */
     @SerializedName("IsHealthCheck")
     @Expose
@@ -51,16 +51,16 @@ public class HealthCheckConf extends AbstractModel{
     private Long ErrorThresholdPercentage;
 
     /**
-     * Get Whether to enable health check. 
-     * @return IsHealthCheck Whether to enable health check.
+     * Get Whether health check is enabled. 
+     * @return IsHealthCheck Whether health check is enabled.
      */
     public Boolean getIsHealthCheck() {
         return this.IsHealthCheck;
     }
 
     /**
-     * Set Whether to enable health check.
-     * @param IsHealthCheck Whether to enable health check.
+     * Set Whether health check is enabled.
+     * @param IsHealthCheck Whether health check is enabled.
      */
     public void setIsHealthCheck(Boolean IsHealthCheck) {
         this.IsHealthCheck = IsHealthCheck;

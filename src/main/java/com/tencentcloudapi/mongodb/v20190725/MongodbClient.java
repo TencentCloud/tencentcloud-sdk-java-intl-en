@@ -147,6 +147,42 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to get the slow log statistics of a database instance.
+     * @param req DescribeSlowLogPatternsRequest
+     * @return DescribeSlowLogPatternsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSlowLogPatternsResponse DescribeSlowLogPatterns(DescribeSlowLogPatternsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSlowLogPatternsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSlowLogPatternsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSlowLogPatterns"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the slow log information of a TencentDB instance. Only slow logs for the last 7 days can be queried.
+     * @param req DescribeSlowLogsRequest
+     * @return DescribeSlowLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSlowLogsResponse DescribeSlowLogs(DescribeSlowLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSlowLogsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSlowLogsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSlowLogs"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the purchasable instance specifications.
      * @param req DescribeSpecInfoRequest
      * @return DescribeSpecInfoResponse
@@ -158,6 +194,24 @@ public class MongodbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeSpecInfoResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeSpecInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to run the `FlushRouterConfig` command on all mongos instances.
+     * @param req FlushInstanceRouterConfigRequest
+     * @return FlushInstanceRouterConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public FlushInstanceRouterConfigResponse FlushInstanceRouterConfig(FlushInstanceRouterConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<FlushInstanceRouterConfigResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<FlushInstanceRouterConfigResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "FlushInstanceRouterConfig"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

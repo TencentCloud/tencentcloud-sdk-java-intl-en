@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeApiEnvironmentStrategyRequest extends AbstractModel{
 
     /**
-    * Unique ID of the service of API.
+    * Unique service ID of API.
     */
     @SerializedName("ServiceId")
     @Expose
@@ -44,7 +44,7 @@ public class DescribeApiEnvironmentStrategyRequest extends AbstractModel{
     private String ApiId;
 
     /**
-    * Number of returned results. Default value: 20. Maximum value: 100.
+    * Number of results to be returned. Default value: 20. Maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
@@ -58,16 +58,16 @@ public class DescribeApiEnvironmentStrategyRequest extends AbstractModel{
     private Long Offset;
 
     /**
-     * Get Unique ID of the service of API. 
-     * @return ServiceId Unique ID of the service of API.
+     * Get Unique service ID of API. 
+     * @return ServiceId Unique service ID of API.
      */
     public String getServiceId() {
         return this.ServiceId;
     }
 
     /**
-     * Set Unique ID of the service of API.
-     * @param ServiceId Unique ID of the service of API.
+     * Set Unique service ID of API.
+     * @param ServiceId Unique service ID of API.
      */
     public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;
@@ -106,16 +106,16 @@ public class DescribeApiEnvironmentStrategyRequest extends AbstractModel{
     }
 
     /**
-     * Get Number of returned results. Default value: 20. Maximum value: 100. 
-     * @return Limit Number of returned results. Default value: 20. Maximum value: 100.
+     * Get Number of results to be returned. Default value: 20. Maximum value: 100. 
+     * @return Limit Number of results to be returned. Default value: 20. Maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned results. Default value: 20. Maximum value: 100.
-     * @param Limit Number of returned results. Default value: 20. Maximum value: 100.
+     * Set Number of results to be returned. Default value: 20. Maximum value: 100.
+     * @param Limit Number of results to be returned. Default value: 20. Maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

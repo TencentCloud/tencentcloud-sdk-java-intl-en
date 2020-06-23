@@ -1,0 +1,95 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.iai.v20200303.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class CheckSimilarPersonRequest extends AbstractModel{
+
+    /**
+    * List of groups to be checked. 
+There can be up to 2 million persons in one group and up to 10 groups.
+    */
+    @SerializedName("GroupIds")
+    @Expose
+    private String [] GroupIds;
+
+    /**
+    * Control over the strictness of duplicate person check.
+1: archive sorting with high strictness, which can eliminate more duplicate identities but leads to higher false elimination rate for non-duplicate identities.
+2: archive sorting with low strictness, which leads to lower false elimination rate for non-duplicate identities and lower elimination rate for duplicate identities.
+    */
+    @SerializedName("UniquePersonControl")
+    @Expose
+    private Long UniquePersonControl;
+
+    /**
+     * Get List of groups to be checked. 
+There can be up to 2 million persons in one group and up to 10 groups. 
+     * @return GroupIds List of groups to be checked. 
+There can be up to 2 million persons in one group and up to 10 groups.
+     */
+    public String [] getGroupIds() {
+        return this.GroupIds;
+    }
+
+    /**
+     * Set List of groups to be checked. 
+There can be up to 2 million persons in one group and up to 10 groups.
+     * @param GroupIds List of groups to be checked. 
+There can be up to 2 million persons in one group and up to 10 groups.
+     */
+    public void setGroupIds(String [] GroupIds) {
+        this.GroupIds = GroupIds;
+    }
+
+    /**
+     * Get Control over the strictness of duplicate person check.
+1: archive sorting with high strictness, which can eliminate more duplicate identities but leads to higher false elimination rate for non-duplicate identities.
+2: archive sorting with low strictness, which leads to lower false elimination rate for non-duplicate identities and lower elimination rate for duplicate identities. 
+     * @return UniquePersonControl Control over the strictness of duplicate person check.
+1: archive sorting with high strictness, which can eliminate more duplicate identities but leads to higher false elimination rate for non-duplicate identities.
+2: archive sorting with low strictness, which leads to lower false elimination rate for non-duplicate identities and lower elimination rate for duplicate identities.
+     */
+    public Long getUniquePersonControl() {
+        return this.UniquePersonControl;
+    }
+
+    /**
+     * Set Control over the strictness of duplicate person check.
+1: archive sorting with high strictness, which can eliminate more duplicate identities but leads to higher false elimination rate for non-duplicate identities.
+2: archive sorting with low strictness, which leads to lower false elimination rate for non-duplicate identities and lower elimination rate for duplicate identities.
+     * @param UniquePersonControl Control over the strictness of duplicate person check.
+1: archive sorting with high strictness, which can eliminate more duplicate identities but leads to higher false elimination rate for non-duplicate identities.
+2: archive sorting with low strictness, which leads to lower false elimination rate for non-duplicate identities and lower elimination rate for duplicate identities.
+     */
+    public void setUniquePersonControl(Long UniquePersonControl) {
+        this.UniquePersonControl = UniquePersonControl;
+    }
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
+        this.setParamSimple(map, prefix + "UniquePersonControl", this.UniquePersonControl);
+
+    }
+}
+

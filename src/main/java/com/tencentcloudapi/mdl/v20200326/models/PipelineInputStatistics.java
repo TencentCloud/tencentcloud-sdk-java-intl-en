@@ -40,7 +40,6 @@ public class PipelineInputStatistics extends AbstractModel{
     * Video information array.
 For `rtp/udp` input, the quantity is the number of `Pid` of the input video.
 For other inputs, the quantity is 1.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Video")
     @Expose
@@ -50,7 +49,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
     * Audio information array.
 For `rtp/udp` input, the quantity is the number of `Pid` of the input audio.
 For other inputs, the quantity is 1.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Audio")
     @Expose
@@ -91,12 +89,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Get Video information array.
 For `rtp/udp` input, the quantity is the number of `Pid` of the input video.
-For other inputs, the quantity is 1.
-Note: this field may return null, indicating that no valid values can be obtained. 
+For other inputs, the quantity is 1. 
      * @return Video Video information array.
 For `rtp/udp` input, the quantity is the number of `Pid` of the input video.
 For other inputs, the quantity is 1.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public VideoPipelineInputStatistics [] getVideo() {
         return this.Video;
@@ -106,11 +102,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Set Video information array.
 For `rtp/udp` input, the quantity is the number of `Pid` of the input video.
 For other inputs, the quantity is 1.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param Video Video information array.
 For `rtp/udp` input, the quantity is the number of `Pid` of the input video.
 For other inputs, the quantity is 1.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setVideo(VideoPipelineInputStatistics [] Video) {
         this.Video = Video;
@@ -119,12 +113,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Get Audio information array.
 For `rtp/udp` input, the quantity is the number of `Pid` of the input audio.
-For other inputs, the quantity is 1.
-Note: this field may return null, indicating that no valid values can be obtained. 
+For other inputs, the quantity is 1. 
      * @return Audio Audio information array.
 For `rtp/udp` input, the quantity is the number of `Pid` of the input audio.
 For other inputs, the quantity is 1.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public AudioPipelineInputStatistics [] getAudio() {
         return this.Audio;
@@ -134,11 +126,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Set Audio information array.
 For `rtp/udp` input, the quantity is the number of `Pid` of the input audio.
 For other inputs, the quantity is 1.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param Audio Audio information array.
 For `rtp/udp` input, the quantity is the number of `Pid` of the input audio.
 For other inputs, the quantity is 1.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setAudio(AudioPipelineInputStatistics [] Audio) {
         this.Audio = Audio;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class UnBindEnvironmentRequest extends AbstractModel{
 
     /**
-    * Binding type. Valid values: API, SERVICE (default value).
+    * Binding type. Valid values: API, SERVICE. Default value: SERVICE.
     */
     @SerializedName("BindType")
     @Expose
@@ -51,23 +51,23 @@ public class UnBindEnvironmentRequest extends AbstractModel{
     private String ServiceId;
 
     /**
-    * Unique API ID array. This parameter will be required when `BindType` is `API`.
+    * Unique API ID array, which is required if `BindType` is `API`.
     */
     @SerializedName("ApiIds")
     @Expose
     private String [] ApiIds;
 
     /**
-     * Get Binding type. Valid values: API, SERVICE (default value). 
-     * @return BindType Binding type. Valid values: API, SERVICE (default value).
+     * Get Binding type. Valid values: API, SERVICE. Default value: SERVICE. 
+     * @return BindType Binding type. Valid values: API, SERVICE. Default value: SERVICE.
      */
     public String getBindType() {
         return this.BindType;
     }
 
     /**
-     * Set Binding type. Valid values: API, SERVICE (default value).
-     * @param BindType Binding type. Valid values: API, SERVICE (default value).
+     * Set Binding type. Valid values: API, SERVICE. Default value: SERVICE.
+     * @param BindType Binding type. Valid values: API, SERVICE. Default value: SERVICE.
      */
     public void setBindType(String BindType) {
         this.BindType = BindType;
@@ -122,16 +122,16 @@ public class UnBindEnvironmentRequest extends AbstractModel{
     }
 
     /**
-     * Get Unique API ID array. This parameter will be required when `BindType` is `API`. 
-     * @return ApiIds Unique API ID array. This parameter will be required when `BindType` is `API`.
+     * Get Unique API ID array, which is required if `BindType` is `API`. 
+     * @return ApiIds Unique API ID array, which is required if `BindType` is `API`.
      */
     public String [] getApiIds() {
         return this.ApiIds;
     }
 
     /**
-     * Set Unique API ID array. This parameter will be required when `BindType` is `API`.
-     * @param ApiIds Unique API ID array. This parameter will be required when `BindType` is `API`.
+     * Set Unique API ID array, which is required if `BindType` is `API`.
+     * @param ApiIds Unique API ID array, which is required if `BindType` is `API`.
      */
     public void setApiIds(String [] ApiIds) {
         this.ApiIds = ApiIds;

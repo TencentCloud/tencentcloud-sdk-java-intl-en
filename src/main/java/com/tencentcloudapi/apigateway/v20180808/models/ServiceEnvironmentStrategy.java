@@ -44,7 +44,7 @@ public class ServiceEnvironmentStrategy extends AbstractModel{
     private Long Status;
 
     /**
-    * Release version ID.
+    * Published version number.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VersionName")
@@ -107,9 +107,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Release version ID.
+     * Get Published version number.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return VersionName Release version ID.
+     * @return VersionName Published version number.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getVersionName() {
@@ -117,9 +117,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Release version ID.
+     * Set Published version number.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param VersionName Release version ID.
+     * @param VersionName Published version number.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setVersionName(String VersionName) {

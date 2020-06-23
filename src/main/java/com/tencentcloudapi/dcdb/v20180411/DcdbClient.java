@@ -311,6 +311,24 @@ If no filter is specified, 10 instances will be returned by default. Up to 100 i
     }
 
     /**
+     *This API is used to query the project list.
+     * @param req DescribeProjectsRequest
+     * @return DescribeProjectsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProjectsResponse DescribeProjects(DescribeProjectsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProjectsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProjectsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeProjects"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to grant permissions to a TencentDB account.
 Note: accounts with the same username but different hosts are different accounts.
      * @param req GrantAccountPrivilegesRequest

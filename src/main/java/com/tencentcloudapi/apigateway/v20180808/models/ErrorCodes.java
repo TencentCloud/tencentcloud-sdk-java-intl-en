@@ -39,7 +39,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Msg;
 
     /**
-    * Remarks of the custom response configuration error code.
+    * Custom response configuration error code remarks.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Desc")
@@ -103,9 +103,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Remarks of the custom response configuration error code.
+     * Get Custom response configuration error code remarks.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Desc Remarks of the custom response configuration error code.
+     * @return Desc Custom response configuration error code remarks.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getDesc() {
@@ -113,9 +113,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Remarks of the custom response configuration error code.
+     * Set Custom response configuration error code remarks.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Desc Remarks of the custom response configuration error code.
+     * @param Desc Custom response configuration error code remarks.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDesc(String Desc) {

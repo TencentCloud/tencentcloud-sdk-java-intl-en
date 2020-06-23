@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ServiceEnvironmentStrategyStatus extends AbstractModel{
 
     /**
-    * Throttling policy number.
+    * Number of throttling policies.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TotalCount")
@@ -39,9 +39,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private ServiceEnvironmentStrategy [] EnvironmentList;
 
     /**
-     * Get Throttling policy number.
+     * Get Number of throttling policies.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCount Throttling policy number.
+     * @return TotalCount Number of throttling policies.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getTotalCount() {
@@ -49,9 +49,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Throttling policy number.
+     * Set Number of throttling policies.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TotalCount Throttling policy number.
+     * @param TotalCount Number of throttling policies.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setTotalCount(Long TotalCount) {

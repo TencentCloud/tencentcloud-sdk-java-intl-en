@@ -31,7 +31,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long TotalCount;
 
     /**
-    * Environment status of the services bound to usage plan.
+    * Environment status of services bound to usage plan.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EnvironmentList")
@@ -59,9 +59,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Environment status of the services bound to usage plan.
+     * Get Environment status of services bound to usage plan.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return EnvironmentList Environment status of the services bound to usage plan.
+     * @return EnvironmentList Environment status of services bound to usage plan.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public UsagePlanEnvironment [] getEnvironmentList() {
@@ -69,9 +69,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Environment status of the services bound to usage plan.
+     * Set Environment status of services bound to usage plan.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param EnvironmentList Environment status of the services bound to usage plan.
+     * @param EnvironmentList Environment status of services bound to usage plan.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setEnvironmentList(UsagePlanEnvironment [] EnvironmentList) {

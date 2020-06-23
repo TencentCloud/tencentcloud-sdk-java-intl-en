@@ -44,7 +44,7 @@ public class ModifyApiIncrementRequest extends AbstractModel{
     private String BusinessType;
 
     /**
-    * Public key value to be modified of OAuth API
+    * Public key value to be modified by OAuth API
     */
     @SerializedName("PublicKey")
     @Expose
@@ -106,16 +106,16 @@ public class ModifyApiIncrementRequest extends AbstractModel{
     }
 
     /**
-     * Get Public key value to be modified of OAuth API 
-     * @return PublicKey Public key value to be modified of OAuth API
+     * Get Public key value to be modified by OAuth API 
+     * @return PublicKey Public key value to be modified by OAuth API
      */
     public String getPublicKey() {
         return this.PublicKey;
     }
 
     /**
-     * Set Public key value to be modified of OAuth API
-     * @param PublicKey Public key value to be modified of OAuth API
+     * Set Public key value to be modified by OAuth API
+     * @param PublicKey Public key value to be modified by OAuth API
      */
     public void setPublicKey(String PublicKey) {
         this.PublicKey = PublicKey;

@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DocumentSDK extends AbstractModel{
 
     /**
-    * Download link of generated file. Generated documents are stored in COS.
+    * Download link of generated file. Generated documents will be stored in COS.
     */
     @SerializedName("DocumentURL")
     @Expose
     private String DocumentURL;
 
     /**
-    * Download link of generated SDK file. Generated SDKs are stored in COS.
+    * Download link of generated SDK file. Generated SDK files will be stored in COS.
     */
     @SerializedName("SdkURL")
     @Expose
     private String SdkURL;
 
     /**
-     * Get Download link of generated file. Generated documents are stored in COS. 
-     * @return DocumentURL Download link of generated file. Generated documents are stored in COS.
+     * Get Download link of generated file. Generated documents will be stored in COS. 
+     * @return DocumentURL Download link of generated file. Generated documents will be stored in COS.
      */
     public String getDocumentURL() {
         return this.DocumentURL;
     }
 
     /**
-     * Set Download link of generated file. Generated documents are stored in COS.
-     * @param DocumentURL Download link of generated file. Generated documents are stored in COS.
+     * Set Download link of generated file. Generated documents will be stored in COS.
+     * @param DocumentURL Download link of generated file. Generated documents will be stored in COS.
      */
     public void setDocumentURL(String DocumentURL) {
         this.DocumentURL = DocumentURL;
     }
 
     /**
-     * Get Download link of generated SDK file. Generated SDKs are stored in COS. 
-     * @return SdkURL Download link of generated SDK file. Generated SDKs are stored in COS.
+     * Get Download link of generated SDK file. Generated SDK files will be stored in COS. 
+     * @return SdkURL Download link of generated SDK file. Generated SDK files will be stored in COS.
      */
     public String getSdkURL() {
         return this.SdkURL;
     }
 
     /**
-     * Set Download link of generated SDK file. Generated SDKs are stored in COS.
-     * @param SdkURL Download link of generated SDK file. Generated SDKs are stored in COS.
+     * Set Download link of generated SDK file. Generated SDK files will be stored in COS.
+     * @param SdkURL Download link of generated SDK file. Generated SDK files will be stored in COS.
      */
     public void setSdkURL(String SdkURL) {
         this.SdkURL = SdkURL;

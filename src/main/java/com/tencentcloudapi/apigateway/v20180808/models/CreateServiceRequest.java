@@ -51,14 +51,14 @@ public class CreateServiceRequest extends AbstractModel{
     private String ExclusiveSetName;
 
     /**
-    * Network type list, which is used to specify the supported network types. `INNER` indicates access over private network, and `OUTER` indicates access over public network. The default value is `OUTER`.
+    * Network type list, which is used to specify the supported network types. INNER: private network access; OUTER: public network access. Default value: OUTER.
     */
     @SerializedName("NetTypes")
     @Expose
     private String [] NetTypes;
 
     /**
-    * IP version number. Valid values: IPv4 (default value), IPv6
+    * IP version number. Valid values: IPv4, IPv6. Default value: IPv4.
     */
     @SerializedName("IpVersion")
     @Expose
@@ -143,32 +143,32 @@ public class CreateServiceRequest extends AbstractModel{
     }
 
     /**
-     * Get Network type list, which is used to specify the supported network types. `INNER` indicates access over private network, and `OUTER` indicates access over public network. The default value is `OUTER`. 
-     * @return NetTypes Network type list, which is used to specify the supported network types. `INNER` indicates access over private network, and `OUTER` indicates access over public network. The default value is `OUTER`.
+     * Get Network type list, which is used to specify the supported network types. INNER: private network access; OUTER: public network access. Default value: OUTER. 
+     * @return NetTypes Network type list, which is used to specify the supported network types. INNER: private network access; OUTER: public network access. Default value: OUTER.
      */
     public String [] getNetTypes() {
         return this.NetTypes;
     }
 
     /**
-     * Set Network type list, which is used to specify the supported network types. `INNER` indicates access over private network, and `OUTER` indicates access over public network. The default value is `OUTER`.
-     * @param NetTypes Network type list, which is used to specify the supported network types. `INNER` indicates access over private network, and `OUTER` indicates access over public network. The default value is `OUTER`.
+     * Set Network type list, which is used to specify the supported network types. INNER: private network access; OUTER: public network access. Default value: OUTER.
+     * @param NetTypes Network type list, which is used to specify the supported network types. INNER: private network access; OUTER: public network access. Default value: OUTER.
      */
     public void setNetTypes(String [] NetTypes) {
         this.NetTypes = NetTypes;
     }
 
     /**
-     * Get IP version number. Valid values: IPv4 (default value), IPv6 
-     * @return IpVersion IP version number. Valid values: IPv4 (default value), IPv6
+     * Get IP version number. Valid values: IPv4, IPv6. Default value: IPv4. 
+     * @return IpVersion IP version number. Valid values: IPv4, IPv6. Default value: IPv4.
      */
     public String getIpVersion() {
         return this.IpVersion;
     }
 
     /**
-     * Set IP version number. Valid values: IPv4 (default value), IPv6
-     * @param IpVersion IP version number. Valid values: IPv4 (default value), IPv6
+     * Set IP version number. Valid values: IPv4, IPv6. Default value: IPv4.
+     * @param IpVersion IP version number. Valid values: IPv4, IPv6. Default value: IPv4.
      */
     public void setIpVersion(String IpVersion) {
         this.IpVersion = IpVersion;

@@ -56,6 +56,24 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create one or more TencentDB for PostgreSQL instances.
+     * @param req CreateDBInstancesRequest
+     * @return CreateDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDBInstancesResponse CreateDBInstances(CreateDBInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDBInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDBInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateDBInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the instance user list.
      * @param req DescribeAccountsRequest
      * @return DescribeAccountsResponse
@@ -121,6 +139,24 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDBInstanceAttributeResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeDBInstanceAttribute"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the details of one or more instances.
+     * @param req DescribeDBInstancesRequest
+     * @return DescribeDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBInstancesResponse DescribeDBInstances(DescribeDBInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDBInstances"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -373,6 +409,24 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RestartDBInstanceResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "RestartDBInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to upgrade an instance.
+     * @param req UpgradeDBInstanceRequest
+     * @return UpgradeDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeDBInstanceResponse UpgradeDBInstance(UpgradeDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpgradeDBInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpgradeDBInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UpgradeDBInstance"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

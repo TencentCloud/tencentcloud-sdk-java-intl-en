@@ -51,7 +51,7 @@ public class CreateServiceResponse extends AbstractModel{
     private String OuterSubDomain;
 
     /**
-    * Default domain name of VPC private network
+    * Default private network domain name of VPC
     */
     @SerializedName("InnerSubDomain")
     @Expose
@@ -65,7 +65,7 @@ public class CreateServiceResponse extends AbstractModel{
     private String CreatedTime;
 
     /**
-    * Network type list. `INNER` indicates access over private network, and `OUTER` indicates access over public network.
+    * Network type list. INNER: private network access; OUTER: public network access.
     */
     @SerializedName("NetTypes")
     @Expose
@@ -151,16 +151,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Default domain name of VPC private network 
-     * @return InnerSubDomain Default domain name of VPC private network
+     * Get Default private network domain name of VPC 
+     * @return InnerSubDomain Default private network domain name of VPC
      */
     public String getInnerSubDomain() {
         return this.InnerSubDomain;
     }
 
     /**
-     * Set Default domain name of VPC private network
-     * @param InnerSubDomain Default domain name of VPC private network
+     * Set Default private network domain name of VPC
+     * @param InnerSubDomain Default private network domain name of VPC
      */
     public void setInnerSubDomain(String InnerSubDomain) {
         this.InnerSubDomain = InnerSubDomain;
@@ -183,16 +183,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Network type list. `INNER` indicates access over private network, and `OUTER` indicates access over public network. 
-     * @return NetTypes Network type list. `INNER` indicates access over private network, and `OUTER` indicates access over public network.
+     * Get Network type list. INNER: private network access; OUTER: public network access. 
+     * @return NetTypes Network type list. INNER: private network access; OUTER: public network access.
      */
     public String [] getNetTypes() {
         return this.NetTypes;
     }
 
     /**
-     * Set Network type list. `INNER` indicates access over private network, and `OUTER` indicates access over public network.
-     * @param NetTypes Network type list. `INNER` indicates access over private network, and `OUTER` indicates access over public network.
+     * Set Network type list. INNER: private network access; OUTER: public network access.
+     * @param NetTypes Network type list. INNER: private network access; OUTER: public network access.
      */
     public void setNetTypes(String [] NetTypes) {
         this.NetTypes = NetTypes;

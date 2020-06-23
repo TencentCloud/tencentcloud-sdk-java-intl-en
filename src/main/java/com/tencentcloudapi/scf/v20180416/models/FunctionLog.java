@@ -107,6 +107,13 @@ public class FunctionLog extends AbstractModel{
     private String Source;
 
     /**
+    * Number of retries
+    */
+    @SerializedName("RetryNum")
+    @Expose
+    private Long RetryNum;
+
+    /**
      * Get Function name 
      * @return FunctionName Function name
      */
@@ -299,6 +306,22 @@ public class FunctionLog extends AbstractModel{
     }
 
     /**
+     * Get Number of retries 
+     * @return RetryNum Number of retries
+     */
+    public Long getRetryNum() {
+        return this.RetryNum;
+    }
+
+    /**
+     * Set Number of retries
+     * @param RetryNum Number of retries
+     */
+    public void setRetryNum(Long RetryNum) {
+        this.RetryNum = RetryNum;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -314,6 +337,7 @@ public class FunctionLog extends AbstractModel{
         this.setParamSimple(map, prefix + "Log", this.Log);
         this.setParamSimple(map, prefix + "Level", this.Level);
         this.setParamSimple(map, prefix + "Source", this.Source);
+        this.setParamSimple(map, prefix + "RetryNum", this.RetryNum);
 
     }
 }

@@ -30,7 +30,7 @@ public class DescribeUsagePlanSecretIdsRequest extends AbstractModel{
     private String UsagePlanId;
 
     /**
-    * Number of returned results. Default value: 20. Maximum value: 100.
+    * Number of results to be returned. Default value: 20. Maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeUsagePlanSecretIdsRequest extends AbstractModel{
     }
 
     /**
-     * Get Number of returned results. Default value: 20. Maximum value: 100. 
-     * @return Limit Number of returned results. Default value: 20. Maximum value: 100.
+     * Get Number of results to be returned. Default value: 20. Maximum value: 100. 
+     * @return Limit Number of results to be returned. Default value: 20. Maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned results. Default value: 20. Maximum value: 100.
-     * @param Limit Number of returned results. Default value: 20. Maximum value: 100.
+     * Set Number of results to be returned. Default value: 20. Maximum value: 100.
+     * @param Limit Number of results to be returned. Default value: 20. Maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

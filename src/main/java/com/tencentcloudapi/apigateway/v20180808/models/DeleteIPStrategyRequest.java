@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DeleteIPStrategyRequest extends AbstractModel{
 
     /**
-    * Unique ID of the service of the IP policy to be deleted.
+    * Unique service ID of the IP policy to be deleted.
     */
     @SerializedName("ServiceId")
     @Expose
@@ -37,16 +37,16 @@ public class DeleteIPStrategyRequest extends AbstractModel{
     private String StrategyId;
 
     /**
-     * Get Unique ID of the service of the IP policy to be deleted. 
-     * @return ServiceId Unique ID of the service of the IP policy to be deleted.
+     * Get Unique service ID of the IP policy to be deleted. 
+     * @return ServiceId Unique service ID of the IP policy to be deleted.
      */
     public String getServiceId() {
         return this.ServiceId;
     }
 
     /**
-     * Set Unique ID of the service of the IP policy to be deleted.
-     * @param ServiceId Unique ID of the service of the IP policy to be deleted.
+     * Set Unique service ID of the IP policy to be deleted.
+     * @param ServiceId Unique service ID of the IP policy to be deleted.
      */
     public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;

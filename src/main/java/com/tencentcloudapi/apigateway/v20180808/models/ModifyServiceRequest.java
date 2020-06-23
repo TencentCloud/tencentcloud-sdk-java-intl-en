@@ -30,28 +30,28 @@ public class ModifyServiceRequest extends AbstractModel{
     private String ServiceId;
 
     /**
-    * Modified service name.
+    * Service name after modification.
     */
     @SerializedName("ServiceName")
     @Expose
     private String ServiceName;
 
     /**
-    * Modified service description.
+    * Service description after modification.
     */
     @SerializedName("ServiceDesc")
     @Expose
     private String ServiceDesc;
 
     /**
-    * Modified service frontend request type, such as `http`, `https`, and `http&https`.
+    * Service frontend request type after modification, such as `http`, `https`, and `http&https`.
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * Network type list, which is used to specify the supported network types. `INNER` indicates access over private network, and `OUTER` indicates access over public network. The default value is `OUTER`.
+    * Network type list, which is used to specify the supported network types. INNER: private network access; OUTER: public network access. Default value: OUTER.
     */
     @SerializedName("NetTypes")
     @Expose
@@ -74,64 +74,64 @@ public class ModifyServiceRequest extends AbstractModel{
     }
 
     /**
-     * Get Modified service name. 
-     * @return ServiceName Modified service name.
+     * Get Service name after modification. 
+     * @return ServiceName Service name after modification.
      */
     public String getServiceName() {
         return this.ServiceName;
     }
 
     /**
-     * Set Modified service name.
-     * @param ServiceName Modified service name.
+     * Set Service name after modification.
+     * @param ServiceName Service name after modification.
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;
     }
 
     /**
-     * Get Modified service description. 
-     * @return ServiceDesc Modified service description.
+     * Get Service description after modification. 
+     * @return ServiceDesc Service description after modification.
      */
     public String getServiceDesc() {
         return this.ServiceDesc;
     }
 
     /**
-     * Set Modified service description.
-     * @param ServiceDesc Modified service description.
+     * Set Service description after modification.
+     * @param ServiceDesc Service description after modification.
      */
     public void setServiceDesc(String ServiceDesc) {
         this.ServiceDesc = ServiceDesc;
     }
 
     /**
-     * Get Modified service frontend request type, such as `http`, `https`, and `http&https`. 
-     * @return Protocol Modified service frontend request type, such as `http`, `https`, and `http&https`.
+     * Get Service frontend request type after modification, such as `http`, `https`, and `http&https`. 
+     * @return Protocol Service frontend request type after modification, such as `http`, `https`, and `http&https`.
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Modified service frontend request type, such as `http`, `https`, and `http&https`.
-     * @param Protocol Modified service frontend request type, such as `http`, `https`, and `http&https`.
+     * Set Service frontend request type after modification, such as `http`, `https`, and `http&https`.
+     * @param Protocol Service frontend request type after modification, such as `http`, `https`, and `http&https`.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get Network type list, which is used to specify the supported network types. `INNER` indicates access over private network, and `OUTER` indicates access over public network. The default value is `OUTER`. 
-     * @return NetTypes Network type list, which is used to specify the supported network types. `INNER` indicates access over private network, and `OUTER` indicates access over public network. The default value is `OUTER`.
+     * Get Network type list, which is used to specify the supported network types. INNER: private network access; OUTER: public network access. Default value: OUTER. 
+     * @return NetTypes Network type list, which is used to specify the supported network types. INNER: private network access; OUTER: public network access. Default value: OUTER.
      */
     public String [] getNetTypes() {
         return this.NetTypes;
     }
 
     /**
-     * Set Network type list, which is used to specify the supported network types. `INNER` indicates access over private network, and `OUTER` indicates access over public network. The default value is `OUTER`.
-     * @param NetTypes Network type list, which is used to specify the supported network types. `INNER` indicates access over private network, and `OUTER` indicates access over public network. The default value is `OUTER`.
+     * Set Network type list, which is used to specify the supported network types. INNER: private network access; OUTER: public network access. Default value: OUTER.
+     * @param NetTypes Network type list, which is used to specify the supported network types. INNER: private network access; OUTER: public network access. Default value: OUTER.
      */
     public void setNetTypes(String [] NetTypes) {
         this.NetTypes = NetTypes;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ApiInfo extends AbstractModel{
 
     /**
-    * Unique ID of API's service.
+    * Unique service ID of API.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServiceId")
@@ -31,7 +31,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ServiceId;
 
     /**
-    * Name of API's service.
+    * Service name of API.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServiceName")
@@ -39,7 +39,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ServiceName;
 
     /**
-    * Description of API's service.
+    * Service description of API.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServiceDesc")
@@ -135,7 +135,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private OauthConfig OauthConfig;
 
     /**
-    * Whether to enable debugging on purchase (reserved for the marketplace).
+    * Whether to enable debugging after purchase (reserved field for the marketplace).
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsDebugAfterCharge")
@@ -159,7 +159,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ResponseType;
 
     /**
-    * Successful response sample of custom response configuration.
+    * Sample response for successful custom response configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ResponseSuccessExample")
@@ -167,7 +167,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ResponseSuccessExample;
 
     /**
-    * Response failure sample of custom response configuration.
+    * Sample response for failed custom response configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ResponseFailExample")
@@ -183,7 +183,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private ErrorCodes [] ResponseErrorCodes;
 
     /**
-    * Frontend request parameters.
+    * Frontend request parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RequestParameters")
@@ -215,7 +215,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private ServiceConfig ServiceConfig;
 
     /**
-    * API backend service parameters.
+    * API backend service parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServiceParameters")
@@ -223,7 +223,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private ServiceParameter [] ServiceParameters;
 
     /**
-    * Constant parameters.
+    * Constant parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ConstantParameters")
@@ -231,7 +231,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private ConstantParameter [] ConstantParameters;
 
     /**
-    * Returned information of API backend mocking. This parameter is required when `ServiceType` is `Mock`.
+    * Returned message of API backend Mock, which is required if `ServiceType` is `Mock`.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServiceMockReturnMessage")
@@ -239,7 +239,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ServiceMockReturnMessage;
 
     /**
-    * SCF function name. This parameter takes effect when the backend type is `SCF`.
+    * SCF function name, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServiceScfFunctionName")
@@ -247,7 +247,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ServiceScfFunctionName;
 
     /**
-    * SCF function namespace. This parameter takes effect when the backend type is `SCF`.
+    * SCF function namespace, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServiceScfFunctionNamespace")
@@ -255,7 +255,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ServiceScfFunctionNamespace;
 
     /**
-    * SCF function version. This parameter takes effect when the backend type is `SCF`.
+    * SCF function version, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServiceScfFunctionQualifier")
@@ -263,7 +263,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ServiceScfFunctionQualifier;
 
     /**
-    * Whether to enable integrated response.
+    * Whether integrated response is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServiceScfIsIntegratedResponse")
@@ -271,7 +271,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Boolean ServiceScfIsIntegratedResponse;
 
     /**
-    * SCF WebSocket registration function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`
+    * SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServiceWebsocketRegisterFunctionName")
@@ -279,7 +279,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ServiceWebsocketRegisterFunctionName;
 
     /**
-    * SCF WebSocket registration function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+    * SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServiceWebsocketRegisterFunctionNamespace")
@@ -287,7 +287,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ServiceWebsocketRegisterFunctionNamespace;
 
     /**
-    * SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+    * SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServiceWebsocketRegisterFunctionQualifier")
@@ -295,7 +295,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ServiceWebsocketRegisterFunctionQualifier;
 
     /**
-    * SCF WebSocket cleanup function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+    * SCF WebSocket cleanup function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServiceWebsocketCleanupFunctionName")
@@ -303,7 +303,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ServiceWebsocketCleanupFunctionName;
 
     /**
-    * SCF WebSocket cleanup function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+    * SCF WebSocket cleanup function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServiceWebsocketCleanupFunctionNamespace")
@@ -311,7 +311,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ServiceWebsocketCleanupFunctionNamespace;
 
     /**
-    * SCF WebSocket cleanup function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+    * SCF WebSocket cleanup function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServiceWebsocketCleanupFunctionQualifier")
@@ -319,7 +319,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ServiceWebsocketCleanupFunctionQualifier;
 
     /**
-    * WebSocket pushback address.
+    * WebSocket callback address.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InternalDomain")
@@ -327,7 +327,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String InternalDomain;
 
     /**
-    * SCF WebSocket transfer function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+    * SCF WebSocket transfer function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServiceWebsocketTransportFunctionName")
@@ -335,7 +335,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ServiceWebsocketTransportFunctionName;
 
     /**
-    * SCF WebSocket transfer function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+    * SCF WebSocket transfer function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServiceWebsocketTransportFunctionNamespace")
@@ -343,7 +343,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ServiceWebsocketTransportFunctionNamespace;
 
     /**
-    * SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+    * SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServiceWebsocketTransportFunctionQualifier")
@@ -359,7 +359,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private MicroService [] MicroServices;
 
     /**
-    * Microservice detailed information.
+    * Microservice details.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MicroServicesInfo")
@@ -367,7 +367,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long [] MicroServicesInfo;
 
     /**
-    * Microservice load balancing configuration.
+    * Load balancing configuration of microservice.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServiceTsfLoadBalanceConf")
@@ -375,7 +375,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private TsfLoadBalanceConfResp ServiceTsfLoadBalanceConf;
 
     /**
-    * Microservice health check configuration.
+    * Health check configuration of microservice.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServiceTsfHealthCheckConf")
@@ -399,9 +399,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Tag [] Tags;
 
     /**
-     * Get Unique ID of API's service.
+     * Get Unique service ID of API.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ServiceId Unique ID of API's service.
+     * @return ServiceId Unique service ID of API.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getServiceId() {
@@ -409,9 +409,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Unique ID of API's service.
+     * Set Unique service ID of API.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ServiceId Unique ID of API's service.
+     * @param ServiceId Unique service ID of API.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setServiceId(String ServiceId) {
@@ -419,9 +419,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Name of API's service.
+     * Get Service name of API.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ServiceName Name of API's service.
+     * @return ServiceName Service name of API.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getServiceName() {
@@ -429,9 +429,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Name of API's service.
+     * Set Service name of API.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ServiceName Name of API's service.
+     * @param ServiceName Service name of API.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setServiceName(String ServiceName) {
@@ -439,9 +439,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Description of API's service.
+     * Get Service description of API.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ServiceDesc Description of API's service.
+     * @return ServiceDesc Service description of API.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getServiceDesc() {
@@ -449,9 +449,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Description of API's service.
+     * Set Service description of API.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ServiceDesc Description of API's service.
+     * @param ServiceDesc Service description of API.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setServiceDesc(String ServiceDesc) {
@@ -679,9 +679,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to enable debugging on purchase (reserved for the marketplace).
+     * Get Whether to enable debugging after purchase (reserved field for the marketplace).
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return IsDebugAfterCharge Whether to enable debugging on purchase (reserved for the marketplace).
+     * @return IsDebugAfterCharge Whether to enable debugging after purchase (reserved field for the marketplace).
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getIsDebugAfterCharge() {
@@ -689,9 +689,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether to enable debugging on purchase (reserved for the marketplace).
+     * Set Whether to enable debugging after purchase (reserved field for the marketplace).
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param IsDebugAfterCharge Whether to enable debugging on purchase (reserved for the marketplace).
+     * @param IsDebugAfterCharge Whether to enable debugging after purchase (reserved field for the marketplace).
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setIsDebugAfterCharge(Boolean IsDebugAfterCharge) {
@@ -739,9 +739,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Successful response sample of custom response configuration.
+     * Get Sample response for successful custom response configuration.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ResponseSuccessExample Successful response sample of custom response configuration.
+     * @return ResponseSuccessExample Sample response for successful custom response configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getResponseSuccessExample() {
@@ -749,9 +749,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Successful response sample of custom response configuration.
+     * Set Sample response for successful custom response configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ResponseSuccessExample Successful response sample of custom response configuration.
+     * @param ResponseSuccessExample Sample response for successful custom response configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setResponseSuccessExample(String ResponseSuccessExample) {
@@ -759,9 +759,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Response failure sample of custom response configuration.
+     * Get Sample response for failed custom response configuration.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ResponseFailExample Response failure sample of custom response configuration.
+     * @return ResponseFailExample Sample response for failed custom response configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getResponseFailExample() {
@@ -769,9 +769,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Response failure sample of custom response configuration.
+     * Set Sample response for failed custom response configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ResponseFailExample Response failure sample of custom response configuration.
+     * @param ResponseFailExample Sample response for failed custom response configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setResponseFailExample(String ResponseFailExample) {
@@ -799,9 +799,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Frontend request parameters.
+     * Get Frontend request parameter.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RequestParameters Frontend request parameters.
+     * @return RequestParameters Frontend request parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public ReqParameter [] getRequestParameters() {
@@ -809,9 +809,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Frontend request parameters.
+     * Set Frontend request parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RequestParameters Frontend request parameters.
+     * @param RequestParameters Frontend request parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setRequestParameters(ReqParameter [] RequestParameters) {
@@ -879,9 +879,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get API backend service parameters.
+     * Get API backend service parameter.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ServiceParameters API backend service parameters.
+     * @return ServiceParameters API backend service parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public ServiceParameter [] getServiceParameters() {
@@ -889,9 +889,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set API backend service parameters.
+     * Set API backend service parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ServiceParameters API backend service parameters.
+     * @param ServiceParameters API backend service parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setServiceParameters(ServiceParameter [] ServiceParameters) {
@@ -899,9 +899,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Constant parameters.
+     * Get Constant parameter.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ConstantParameters Constant parameters.
+     * @return ConstantParameters Constant parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public ConstantParameter [] getConstantParameters() {
@@ -909,9 +909,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Constant parameters.
+     * Set Constant parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ConstantParameters Constant parameters.
+     * @param ConstantParameters Constant parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setConstantParameters(ConstantParameter [] ConstantParameters) {
@@ -919,9 +919,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Returned information of API backend mocking. This parameter is required when `ServiceType` is `Mock`.
+     * Get Returned message of API backend Mock, which is required if `ServiceType` is `Mock`.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ServiceMockReturnMessage Returned information of API backend mocking. This parameter is required when `ServiceType` is `Mock`.
+     * @return ServiceMockReturnMessage Returned message of API backend Mock, which is required if `ServiceType` is `Mock`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getServiceMockReturnMessage() {
@@ -929,9 +929,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Returned information of API backend mocking. This parameter is required when `ServiceType` is `Mock`.
+     * Set Returned message of API backend Mock, which is required if `ServiceType` is `Mock`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ServiceMockReturnMessage Returned information of API backend mocking. This parameter is required when `ServiceType` is `Mock`.
+     * @param ServiceMockReturnMessage Returned message of API backend Mock, which is required if `ServiceType` is `Mock`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setServiceMockReturnMessage(String ServiceMockReturnMessage) {
@@ -939,9 +939,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get SCF function name. This parameter takes effect when the backend type is `SCF`.
+     * Get SCF function name, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ServiceScfFunctionName SCF function name. This parameter takes effect when the backend type is `SCF`.
+     * @return ServiceScfFunctionName SCF function name, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getServiceScfFunctionName() {
@@ -949,9 +949,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set SCF function name. This parameter takes effect when the backend type is `SCF`.
+     * Set SCF function name, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ServiceScfFunctionName SCF function name. This parameter takes effect when the backend type is `SCF`.
+     * @param ServiceScfFunctionName SCF function name, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setServiceScfFunctionName(String ServiceScfFunctionName) {
@@ -959,9 +959,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get SCF function namespace. This parameter takes effect when the backend type is `SCF`.
+     * Get SCF function namespace, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ServiceScfFunctionNamespace SCF function namespace. This parameter takes effect when the backend type is `SCF`.
+     * @return ServiceScfFunctionNamespace SCF function namespace, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getServiceScfFunctionNamespace() {
@@ -969,9 +969,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set SCF function namespace. This parameter takes effect when the backend type is `SCF`.
+     * Set SCF function namespace, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ServiceScfFunctionNamespace SCF function namespace. This parameter takes effect when the backend type is `SCF`.
+     * @param ServiceScfFunctionNamespace SCF function namespace, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setServiceScfFunctionNamespace(String ServiceScfFunctionNamespace) {
@@ -979,9 +979,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get SCF function version. This parameter takes effect when the backend type is `SCF`.
+     * Get SCF function version, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ServiceScfFunctionQualifier SCF function version. This parameter takes effect when the backend type is `SCF`.
+     * @return ServiceScfFunctionQualifier SCF function version, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getServiceScfFunctionQualifier() {
@@ -989,9 +989,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set SCF function version. This parameter takes effect when the backend type is `SCF`.
+     * Set SCF function version, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ServiceScfFunctionQualifier SCF function version. This parameter takes effect when the backend type is `SCF`.
+     * @param ServiceScfFunctionQualifier SCF function version, which takes effect if the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setServiceScfFunctionQualifier(String ServiceScfFunctionQualifier) {
@@ -999,9 +999,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to enable integrated response.
+     * Get Whether integrated response is enabled.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ServiceScfIsIntegratedResponse Whether to enable integrated response.
+     * @return ServiceScfIsIntegratedResponse Whether integrated response is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getServiceScfIsIntegratedResponse() {
@@ -1009,9 +1009,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether to enable integrated response.
+     * Set Whether integrated response is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ServiceScfIsIntegratedResponse Whether to enable integrated response.
+     * @param ServiceScfIsIntegratedResponse Whether integrated response is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setServiceScfIsIntegratedResponse(Boolean ServiceScfIsIntegratedResponse) {
@@ -1019,9 +1019,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get SCF WebSocket registration function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`
+     * Get SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ServiceWebsocketRegisterFunctionName SCF WebSocket registration function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`
+     * @return ServiceWebsocketRegisterFunctionName SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getServiceWebsocketRegisterFunctionName() {
@@ -1029,9 +1029,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set SCF WebSocket registration function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`
+     * Set SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ServiceWebsocketRegisterFunctionName SCF WebSocket registration function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`
+     * @param ServiceWebsocketRegisterFunctionName SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setServiceWebsocketRegisterFunctionName(String ServiceWebsocketRegisterFunctionName) {
@@ -1039,9 +1039,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get SCF WebSocket registration function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * Get SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ServiceWebsocketRegisterFunctionNamespace SCF WebSocket registration function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @return ServiceWebsocketRegisterFunctionNamespace SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getServiceWebsocketRegisterFunctionNamespace() {
@@ -1049,9 +1049,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set SCF WebSocket registration function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * Set SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ServiceWebsocketRegisterFunctionNamespace SCF WebSocket registration function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @param ServiceWebsocketRegisterFunctionNamespace SCF WebSocket registration function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setServiceWebsocketRegisterFunctionNamespace(String ServiceWebsocketRegisterFunctionNamespace) {
@@ -1059,9 +1059,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * Get SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ServiceWebsocketRegisterFunctionQualifier SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @return ServiceWebsocketRegisterFunctionQualifier SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getServiceWebsocketRegisterFunctionQualifier() {
@@ -1069,9 +1069,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * Set SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ServiceWebsocketRegisterFunctionQualifier SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @param ServiceWebsocketRegisterFunctionQualifier SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setServiceWebsocketRegisterFunctionQualifier(String ServiceWebsocketRegisterFunctionQualifier) {
@@ -1079,9 +1079,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get SCF WebSocket cleanup function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * Get SCF WebSocket cleanup function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ServiceWebsocketCleanupFunctionName SCF WebSocket cleanup function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @return ServiceWebsocketCleanupFunctionName SCF WebSocket cleanup function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getServiceWebsocketCleanupFunctionName() {
@@ -1089,9 +1089,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set SCF WebSocket cleanup function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * Set SCF WebSocket cleanup function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ServiceWebsocketCleanupFunctionName SCF WebSocket cleanup function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @param ServiceWebsocketCleanupFunctionName SCF WebSocket cleanup function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setServiceWebsocketCleanupFunctionName(String ServiceWebsocketCleanupFunctionName) {
@@ -1099,9 +1099,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get SCF WebSocket cleanup function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * Get SCF WebSocket cleanup function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ServiceWebsocketCleanupFunctionNamespace SCF WebSocket cleanup function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @return ServiceWebsocketCleanupFunctionNamespace SCF WebSocket cleanup function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getServiceWebsocketCleanupFunctionNamespace() {
@@ -1109,9 +1109,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set SCF WebSocket cleanup function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * Set SCF WebSocket cleanup function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ServiceWebsocketCleanupFunctionNamespace SCF WebSocket cleanup function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @param ServiceWebsocketCleanupFunctionNamespace SCF WebSocket cleanup function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setServiceWebsocketCleanupFunctionNamespace(String ServiceWebsocketCleanupFunctionNamespace) {
@@ -1119,9 +1119,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get SCF WebSocket cleanup function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * Get SCF WebSocket cleanup function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ServiceWebsocketCleanupFunctionQualifier SCF WebSocket cleanup function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @return ServiceWebsocketCleanupFunctionQualifier SCF WebSocket cleanup function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getServiceWebsocketCleanupFunctionQualifier() {
@@ -1129,9 +1129,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set SCF WebSocket cleanup function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * Set SCF WebSocket cleanup function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ServiceWebsocketCleanupFunctionQualifier SCF WebSocket cleanup function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @param ServiceWebsocketCleanupFunctionQualifier SCF WebSocket cleanup function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setServiceWebsocketCleanupFunctionQualifier(String ServiceWebsocketCleanupFunctionQualifier) {
@@ -1139,9 +1139,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get WebSocket pushback address.
+     * Get WebSocket callback address.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return InternalDomain WebSocket pushback address.
+     * @return InternalDomain WebSocket callback address.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getInternalDomain() {
@@ -1149,9 +1149,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set WebSocket pushback address.
+     * Set WebSocket callback address.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param InternalDomain WebSocket pushback address.
+     * @param InternalDomain WebSocket callback address.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setInternalDomain(String InternalDomain) {
@@ -1159,9 +1159,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get SCF WebSocket transfer function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * Get SCF WebSocket transfer function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ServiceWebsocketTransportFunctionName SCF WebSocket transfer function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @return ServiceWebsocketTransportFunctionName SCF WebSocket transfer function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getServiceWebsocketTransportFunctionName() {
@@ -1169,9 +1169,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set SCF WebSocket transfer function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * Set SCF WebSocket transfer function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ServiceWebsocketTransportFunctionName SCF WebSocket transfer function. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @param ServiceWebsocketTransportFunctionName SCF WebSocket transfer function, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setServiceWebsocketTransportFunctionName(String ServiceWebsocketTransportFunctionName) {
@@ -1179,9 +1179,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get SCF WebSocket transfer function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * Get SCF WebSocket transfer function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ServiceWebsocketTransportFunctionNamespace SCF WebSocket transfer function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @return ServiceWebsocketTransportFunctionNamespace SCF WebSocket transfer function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getServiceWebsocketTransportFunctionNamespace() {
@@ -1189,9 +1189,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set SCF WebSocket transfer function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * Set SCF WebSocket transfer function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ServiceWebsocketTransportFunctionNamespace SCF WebSocket transfer function namespace. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @param ServiceWebsocketTransportFunctionNamespace SCF WebSocket transfer function namespace, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setServiceWebsocketTransportFunctionNamespace(String ServiceWebsocketTransportFunctionNamespace) {
@@ -1199,9 +1199,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * Get SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ServiceWebsocketTransportFunctionQualifier SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @return ServiceWebsocketTransportFunctionQualifier SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getServiceWebsocketTransportFunctionQualifier() {
@@ -1209,9 +1209,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * Set SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ServiceWebsocketTransportFunctionQualifier SCF WebSocket transfer function version. This parameter takes effect when the frontend type is `WEBSOCKET` and the backend type is `SCF`.
+     * @param ServiceWebsocketTransportFunctionQualifier SCF WebSocket transfer function version, which takes effect if the frontend type is `WEBSOCKET` and the backend type is `SCF`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setServiceWebsocketTransportFunctionQualifier(String ServiceWebsocketTransportFunctionQualifier) {
@@ -1239,9 +1239,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Microservice detailed information.
+     * Get Microservice details.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MicroServicesInfo Microservice detailed information.
+     * @return MicroServicesInfo Microservice details.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long [] getMicroServicesInfo() {
@@ -1249,9 +1249,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Microservice detailed information.
+     * Set Microservice details.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MicroServicesInfo Microservice detailed information.
+     * @param MicroServicesInfo Microservice details.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setMicroServicesInfo(Long [] MicroServicesInfo) {
@@ -1259,9 +1259,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Microservice load balancing configuration.
+     * Get Load balancing configuration of microservice.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ServiceTsfLoadBalanceConf Microservice load balancing configuration.
+     * @return ServiceTsfLoadBalanceConf Load balancing configuration of microservice.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public TsfLoadBalanceConfResp getServiceTsfLoadBalanceConf() {
@@ -1269,9 +1269,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Microservice load balancing configuration.
+     * Set Load balancing configuration of microservice.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ServiceTsfLoadBalanceConf Microservice load balancing configuration.
+     * @param ServiceTsfLoadBalanceConf Load balancing configuration of microservice.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setServiceTsfLoadBalanceConf(TsfLoadBalanceConfResp ServiceTsfLoadBalanceConf) {
@@ -1279,9 +1279,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Microservice health check configuration.
+     * Get Health check configuration of microservice.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ServiceTsfHealthCheckConf Microservice health check configuration.
+     * @return ServiceTsfHealthCheckConf Health check configuration of microservice.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public HealthCheckConf getServiceTsfHealthCheckConf() {
@@ -1289,9 +1289,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Microservice health check configuration.
+     * Set Health check configuration of microservice.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ServiceTsfHealthCheckConf Microservice health check configuration.
+     * @param ServiceTsfHealthCheckConf Health check configuration of microservice.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setServiceTsfHealthCheckConf(HealthCheckConf ServiceTsfHealthCheckConf) {

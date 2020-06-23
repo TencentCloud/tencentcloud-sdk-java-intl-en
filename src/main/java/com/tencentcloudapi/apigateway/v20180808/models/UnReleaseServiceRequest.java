@@ -30,7 +30,7 @@ public class UnReleaseServiceRequest extends AbstractModel{
     private String ServiceId;
 
     /**
-    * Name of the environment to be deactivated. Valid values: test (testing environment), prepub (pre-publish environment), release (release environment).
+    * Name of the environment to be deactivated. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
     */
     @SerializedName("EnvironmentName")
     @Expose
@@ -60,16 +60,16 @@ public class UnReleaseServiceRequest extends AbstractModel{
     }
 
     /**
-     * Get Name of the environment to be deactivated. Valid values: test (testing environment), prepub (pre-publish environment), release (release environment). 
-     * @return EnvironmentName Name of the environment to be deactivated. Valid values: test (testing environment), prepub (pre-publish environment), release (release environment).
+     * Get Name of the environment to be deactivated. Valid values: test (test environment), prepub (pre-release environment), release (release environment). 
+     * @return EnvironmentName Name of the environment to be deactivated. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
      */
     public String getEnvironmentName() {
         return this.EnvironmentName;
     }
 
     /**
-     * Set Name of the environment to be deactivated. Valid values: test (testing environment), prepub (pre-publish environment), release (release environment).
-     * @param EnvironmentName Name of the environment to be deactivated. Valid values: test (testing environment), prepub (pre-publish environment), release (release environment).
+     * Set Name of the environment to be deactivated. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
+     * @param EnvironmentName Name of the environment to be deactivated. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
      */
     public void setEnvironmentName(String EnvironmentName) {
         this.EnvironmentName = EnvironmentName;

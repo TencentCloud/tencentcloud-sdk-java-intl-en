@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeServiceSubDomainsResponse extends AbstractModel{
 
     /**
-    * Custom service domain names.
+    * Custom service domain name query.
     */
     @SerializedName("Result")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeServiceSubDomainsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Custom service domain names. 
-     * @return Result Custom service domain names.
+     * Get Custom service domain name query. 
+     * @return Result Custom service domain name query.
      */
     public DomainSets getResult() {
         return this.Result;
     }
 
     /**
-     * Set Custom service domain names.
-     * @param Result Custom service domain names.
+     * Set Custom service domain name query.
+     * @param Result Custom service domain name query.
      */
     public void setResult(DomainSets Result) {
         this.Result = Result;

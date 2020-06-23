@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ServiceReleaseVersion extends AbstractModel{
 
     /**
-    * Total number of release versions.
+    * Total number of published versions.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TotalCount")
@@ -39,9 +39,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private ServiceReleaseHistoryInfo [] VersionList;
 
     /**
-     * Get Total number of release versions.
+     * Get Total number of published versions.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCount Total number of release versions.
+     * @return TotalCount Total number of published versions.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getTotalCount() {
@@ -49,9 +49,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Total number of release versions.
+     * Set Total number of published versions.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TotalCount Total number of release versions.
+     * @param TotalCount Total number of published versions.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setTotalCount(Long TotalCount) {

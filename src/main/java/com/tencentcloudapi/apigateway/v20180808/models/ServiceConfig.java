@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ServiceConfig extends AbstractModel{
 
     /**
-    * Backend type. This parameter takes effect when VPC is enabled. Currently, only `clb` is supported.
+    * Backend type, which takes effect when VPC is enabled. Currently, only `clb` is supported.
     */
     @SerializedName("Product")
     @Expose
@@ -37,37 +37,37 @@ public class ServiceConfig extends AbstractModel{
     private String UniqVpcId;
 
     /**
-    * API backend service URL. This parameter is required when `ServiceType` is `HTTP`.
+    * API backend service URL, which is required if `ServiceType` is `HTTP`.
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * API backend service path, such as `/path`. If `ServiceType` is `HTTP`, this parameter will be required. The frontend and backend paths can be different.
+    * API backend service path, such as `/path`, which is required if `ServiceType` is `HTTP`. The frontend and backend paths can be different.
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * API backend service request method, such as `GET`. If `ServiceType` is `HTTP`, this parameter will be required. The frontend and backend methods can be different
+    * API backend service request method, such as `GET`, which is required if `ServiceType` is `HTTP`. The frontend and backend methods can be different
     */
     @SerializedName("Method")
     @Expose
     private String Method;
 
     /**
-     * Get Backend type. This parameter takes effect when VPC is enabled. Currently, only `clb` is supported. 
-     * @return Product Backend type. This parameter takes effect when VPC is enabled. Currently, only `clb` is supported.
+     * Get Backend type, which takes effect when VPC is enabled. Currently, only `clb` is supported. 
+     * @return Product Backend type, which takes effect when VPC is enabled. Currently, only `clb` is supported.
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set Backend type. This parameter takes effect when VPC is enabled. Currently, only `clb` is supported.
-     * @param Product Backend type. This parameter takes effect when VPC is enabled. Currently, only `clb` is supported.
+     * Set Backend type, which takes effect when VPC is enabled. Currently, only `clb` is supported.
+     * @param Product Backend type, which takes effect when VPC is enabled. Currently, only `clb` is supported.
      */
     public void setProduct(String Product) {
         this.Product = Product;
@@ -90,48 +90,48 @@ public class ServiceConfig extends AbstractModel{
     }
 
     /**
-     * Get API backend service URL. This parameter is required when `ServiceType` is `HTTP`. 
-     * @return Url API backend service URL. This parameter is required when `ServiceType` is `HTTP`.
+     * Get API backend service URL, which is required if `ServiceType` is `HTTP`. 
+     * @return Url API backend service URL, which is required if `ServiceType` is `HTTP`.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set API backend service URL. This parameter is required when `ServiceType` is `HTTP`.
-     * @param Url API backend service URL. This parameter is required when `ServiceType` is `HTTP`.
+     * Set API backend service URL, which is required if `ServiceType` is `HTTP`.
+     * @param Url API backend service URL, which is required if `ServiceType` is `HTTP`.
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get API backend service path, such as `/path`. If `ServiceType` is `HTTP`, this parameter will be required. The frontend and backend paths can be different. 
-     * @return Path API backend service path, such as `/path`. If `ServiceType` is `HTTP`, this parameter will be required. The frontend and backend paths can be different.
+     * Get API backend service path, such as `/path`, which is required if `ServiceType` is `HTTP`. The frontend and backend paths can be different. 
+     * @return Path API backend service path, such as `/path`, which is required if `ServiceType` is `HTTP`. The frontend and backend paths can be different.
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set API backend service path, such as `/path`. If `ServiceType` is `HTTP`, this parameter will be required. The frontend and backend paths can be different.
-     * @param Path API backend service path, such as `/path`. If `ServiceType` is `HTTP`, this parameter will be required. The frontend and backend paths can be different.
+     * Set API backend service path, such as `/path`, which is required if `ServiceType` is `HTTP`. The frontend and backend paths can be different.
+     * @param Path API backend service path, such as `/path`, which is required if `ServiceType` is `HTTP`. The frontend and backend paths can be different.
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get API backend service request method, such as `GET`. If `ServiceType` is `HTTP`, this parameter will be required. The frontend and backend methods can be different 
-     * @return Method API backend service request method, such as `GET`. If `ServiceType` is `HTTP`, this parameter will be required. The frontend and backend methods can be different
+     * Get API backend service request method, such as `GET`, which is required if `ServiceType` is `HTTP`. The frontend and backend methods can be different 
+     * @return Method API backend service request method, such as `GET`, which is required if `ServiceType` is `HTTP`. The frontend and backend methods can be different
      */
     public String getMethod() {
         return this.Method;
     }
 
     /**
-     * Set API backend service request method, such as `GET`. If `ServiceType` is `HTTP`, this parameter will be required. The frontend and backend methods can be different
-     * @param Method API backend service request method, such as `GET`. If `ServiceType` is `HTTP`, this parameter will be required. The frontend and backend methods can be different
+     * Set API backend service request method, such as `GET`, which is required if `ServiceType` is `HTTP`. The frontend and backend methods can be different
+     * @param Method API backend service request method, such as `GET`, which is required if `ServiceType` is `HTTP`. The frontend and backend methods can be different
      */
     public void setMethod(String Method) {
         this.Method = Method;

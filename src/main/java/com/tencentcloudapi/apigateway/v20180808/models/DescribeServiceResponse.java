@@ -52,7 +52,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ServiceDesc;
 
     /**
-    * Protocols supported by service. Valid values: http, https, http&https.
+    * Protocol supported by service. Valid values: http, https, http&https.
     */
     @SerializedName("Protocol")
     @Expose
@@ -80,28 +80,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ExclusiveSetName;
 
     /**
-    * Network type list. `INNER` indicates access over private network, and `OUTER` indicates access over public network.
+    * Network type list. INNER: private network access; OUTER: public network access.
     */
     @SerializedName("NetTypes")
     @Expose
     private String [] NetTypes;
 
     /**
-    * Private network access subdomain name.
+    * Subdomain name for private network access.
     */
     @SerializedName("InternalSubDomain")
     @Expose
     private String InternalSubDomain;
 
     /**
-    * Public network access subdomain name.
+    * Subdomain name for public network access.
     */
     @SerializedName("OuterSubDomain")
     @Expose
     private String OuterSubDomain;
 
     /**
-    * Port number for HTTP access over private network.
+    * Service port number for HTTP access over private network.
     */
     @SerializedName("InnerHttpPort")
     @Expose
@@ -244,16 +244,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Protocols supported by service. Valid values: http, https, http&https. 
-     * @return Protocol Protocols supported by service. Valid values: http, https, http&https.
+     * Get Protocol supported by service. Valid values: http, https, http&https. 
+     * @return Protocol Protocol supported by service. Valid values: http, https, http&https.
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Protocols supported by service. Valid values: http, https, http&https.
-     * @param Protocol Protocols supported by service. Valid values: http, https, http&https.
+     * Set Protocol supported by service. Valid values: http, https, http&https.
+     * @param Protocol Protocol supported by service. Valid values: http, https, http&https.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
@@ -308,64 +308,64 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Network type list. `INNER` indicates access over private network, and `OUTER` indicates access over public network. 
-     * @return NetTypes Network type list. `INNER` indicates access over private network, and `OUTER` indicates access over public network.
+     * Get Network type list. INNER: private network access; OUTER: public network access. 
+     * @return NetTypes Network type list. INNER: private network access; OUTER: public network access.
      */
     public String [] getNetTypes() {
         return this.NetTypes;
     }
 
     /**
-     * Set Network type list. `INNER` indicates access over private network, and `OUTER` indicates access over public network.
-     * @param NetTypes Network type list. `INNER` indicates access over private network, and `OUTER` indicates access over public network.
+     * Set Network type list. INNER: private network access; OUTER: public network access.
+     * @param NetTypes Network type list. INNER: private network access; OUTER: public network access.
      */
     public void setNetTypes(String [] NetTypes) {
         this.NetTypes = NetTypes;
     }
 
     /**
-     * Get Private network access subdomain name. 
-     * @return InternalSubDomain Private network access subdomain name.
+     * Get Subdomain name for private network access. 
+     * @return InternalSubDomain Subdomain name for private network access.
      */
     public String getInternalSubDomain() {
         return this.InternalSubDomain;
     }
 
     /**
-     * Set Private network access subdomain name.
-     * @param InternalSubDomain Private network access subdomain name.
+     * Set Subdomain name for private network access.
+     * @param InternalSubDomain Subdomain name for private network access.
      */
     public void setInternalSubDomain(String InternalSubDomain) {
         this.InternalSubDomain = InternalSubDomain;
     }
 
     /**
-     * Get Public network access subdomain name. 
-     * @return OuterSubDomain Public network access subdomain name.
+     * Get Subdomain name for public network access. 
+     * @return OuterSubDomain Subdomain name for public network access.
      */
     public String getOuterSubDomain() {
         return this.OuterSubDomain;
     }
 
     /**
-     * Set Public network access subdomain name.
-     * @param OuterSubDomain Public network access subdomain name.
+     * Set Subdomain name for public network access.
+     * @param OuterSubDomain Subdomain name for public network access.
      */
     public void setOuterSubDomain(String OuterSubDomain) {
         this.OuterSubDomain = OuterSubDomain;
     }
 
     /**
-     * Get Port number for HTTP access over private network. 
-     * @return InnerHttpPort Port number for HTTP access over private network.
+     * Get Service port number for HTTP access over private network. 
+     * @return InnerHttpPort Service port number for HTTP access over private network.
      */
     public Long getInnerHttpPort() {
         return this.InnerHttpPort;
     }
 
     /**
-     * Set Port number for HTTP access over private network.
-     * @param InnerHttpPort Port number for HTTP access over private network.
+     * Set Service port number for HTTP access over private network.
+     * @param InnerHttpPort Service port number for HTTP access over private network.
      */
     public void setInnerHttpPort(Long InnerHttpPort) {
         this.InnerHttpPort = InnerHttpPort;

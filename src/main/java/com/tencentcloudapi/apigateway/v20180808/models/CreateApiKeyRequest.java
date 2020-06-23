@@ -37,14 +37,14 @@ public class CreateApiKeyRequest extends AbstractModel{
     private String AccessKeyType;
 
     /**
-    * Custom key ID, which is required when `AccessKeyType` is `manual`. It can contain 5 to 50 letters, digits, and underscores.
+    * Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5–50 letters, digits, and underscores.
     */
     @SerializedName("AccessKeyId")
     @Expose
     private String AccessKeyId;
 
     /**
-    * Custom key, which is required when `AccessKeyType` is `manual`. It can contain 10 to 50 letters, digits, and underscores.
+    * Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10–50 letters, digits, and underscores.
     */
     @SerializedName("AccessKeySecret")
     @Expose
@@ -83,32 +83,32 @@ public class CreateApiKeyRequest extends AbstractModel{
     }
 
     /**
-     * Get Custom key ID, which is required when `AccessKeyType` is `manual`. It can contain 5 to 50 letters, digits, and underscores. 
-     * @return AccessKeyId Custom key ID, which is required when `AccessKeyType` is `manual`. It can contain 5 to 50 letters, digits, and underscores.
+     * Get Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5–50 letters, digits, and underscores. 
+     * @return AccessKeyId Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5–50 letters, digits, and underscores.
      */
     public String getAccessKeyId() {
         return this.AccessKeyId;
     }
 
     /**
-     * Set Custom key ID, which is required when `AccessKeyType` is `manual`. It can contain 5 to 50 letters, digits, and underscores.
-     * @param AccessKeyId Custom key ID, which is required when `AccessKeyType` is `manual`. It can contain 5 to 50 letters, digits, and underscores.
+     * Set Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5–50 letters, digits, and underscores.
+     * @param AccessKeyId Custom key ID, which is required if `AccessKeyType` is `manual`. It can contain 5–50 letters, digits, and underscores.
      */
     public void setAccessKeyId(String AccessKeyId) {
         this.AccessKeyId = AccessKeyId;
     }
 
     /**
-     * Get Custom key, which is required when `AccessKeyType` is `manual`. It can contain 10 to 50 letters, digits, and underscores. 
-     * @return AccessKeySecret Custom key, which is required when `AccessKeyType` is `manual`. It can contain 10 to 50 letters, digits, and underscores.
+     * Get Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10–50 letters, digits, and underscores. 
+     * @return AccessKeySecret Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10–50 letters, digits, and underscores.
      */
     public String getAccessKeySecret() {
         return this.AccessKeySecret;
     }
 
     /**
-     * Set Custom key, which is required when `AccessKeyType` is `manual`. It can contain 10 to 50 letters, digits, and underscores.
-     * @param AccessKeySecret Custom key, which is required when `AccessKeyType` is `manual`. It can contain 10 to 50 letters, digits, and underscores.
+     * Set Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10–50 letters, digits, and underscores.
+     * @param AccessKeySecret Custom key, which is required if `AccessKeyType` is `manual`. It can contain 10–50 letters, digits, and underscores.
      */
     public void setAccessKeySecret(String AccessKeySecret) {
         this.AccessKeySecret = AccessKeySecret;

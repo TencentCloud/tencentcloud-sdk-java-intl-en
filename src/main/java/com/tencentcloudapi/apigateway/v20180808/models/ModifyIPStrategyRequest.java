@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyIPStrategyRequest extends AbstractModel{
 
     /**
-    * Unique ID of the service of the policy to be modified.
+    * Unique service ID of the policy to be modified.
     */
     @SerializedName("ServiceId")
     @Expose
@@ -44,16 +44,16 @@ public class ModifyIPStrategyRequest extends AbstractModel{
     private String StrategyData;
 
     /**
-     * Get Unique ID of the service of the policy to be modified. 
-     * @return ServiceId Unique ID of the service of the policy to be modified.
+     * Get Unique service ID of the policy to be modified. 
+     * @return ServiceId Unique service ID of the policy to be modified.
      */
     public String getServiceId() {
         return this.ServiceId;
     }
 
     /**
-     * Set Unique ID of the service of the policy to be modified.
-     * @param ServiceId Unique ID of the service of the policy to be modified.
+     * Set Unique service ID of the policy to be modified.
+     * @param ServiceId Unique service ID of the policy to be modified.
      */
     public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;

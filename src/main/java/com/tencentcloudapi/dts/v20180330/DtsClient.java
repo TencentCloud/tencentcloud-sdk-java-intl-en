@@ -583,4 +583,22 @@ During migration, this API can be used to cancel migration if the task status qu
         return rsp.response;
     }
 
+    /**
+     *This API is used to promote a disaster recovery instance to a master instance, which will stop sync from the original master instance and end the master/slave relationship.
+     * @param req SwitchDrToMasterRequest
+     * @return SwitchDrToMasterResponse
+     * @throws TencentCloudSDKException
+     */
+    public SwitchDrToMasterResponse SwitchDrToMaster(SwitchDrToMasterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SwitchDrToMasterResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SwitchDrToMasterResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SwitchDrToMaster"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

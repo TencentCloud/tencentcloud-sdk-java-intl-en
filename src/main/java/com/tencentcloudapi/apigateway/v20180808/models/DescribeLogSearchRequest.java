@@ -51,7 +51,7 @@ public class DescribeLogSearchRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
-    * Number of logs returned at a time. Up to 100 logs can be returned at a time
+    * Number of logs to be returned at a time. Maximum value: 100
     */
     @SerializedName("Limit")
     @Expose
@@ -65,18 +65,25 @@ public class DescribeLogSearchRequest extends AbstractModel{
     private String ConText;
 
     /**
-    * Log sorting by time in ascending order (asc) or descending order (desc). The default value is `desc`
+    * Sorting by time. Valid values: asc (ascending), desc (descending). Default value: desc
     */
     @SerializedName("Sort")
     @Expose
     private String Sort;
 
     /**
-    * Fuzzy search of logs by keyword
+    * Fuzzy search for log by keyword
     */
     @SerializedName("Query")
     @Expose
     private String Query;
+
+    /**
+    * 
+    */
+    @SerializedName("LogQuerys")
+    @Expose
+    private LogQuery [] LogQuerys;
 
     /**
      * Get Log start time 
@@ -143,16 +150,16 @@ public class DescribeLogSearchRequest extends AbstractModel{
     }
 
     /**
-     * Get Number of logs returned at a time. Up to 100 logs can be returned at a time 
-     * @return Limit Number of logs returned at a time. Up to 100 logs can be returned at a time
+     * Get Number of logs to be returned at a time. Maximum value: 100 
+     * @return Limit Number of logs to be returned at a time. Maximum value: 100
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of logs returned at a time. Up to 100 logs can be returned at a time
-     * @param Limit Number of logs returned at a time. Up to 100 logs can be returned at a time
+     * Set Number of logs to be returned at a time. Maximum value: 100
+     * @param Limit Number of logs to be returned at a time. Maximum value: 100
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -175,35 +182,51 @@ public class DescribeLogSearchRequest extends AbstractModel{
     }
 
     /**
-     * Get Log sorting by time in ascending order (asc) or descending order (desc). The default value is `desc` 
-     * @return Sort Log sorting by time in ascending order (asc) or descending order (desc). The default value is `desc`
+     * Get Sorting by time. Valid values: asc (ascending), desc (descending). Default value: desc 
+     * @return Sort Sorting by time. Valid values: asc (ascending), desc (descending). Default value: desc
      */
     public String getSort() {
         return this.Sort;
     }
 
     /**
-     * Set Log sorting by time in ascending order (asc) or descending order (desc). The default value is `desc`
-     * @param Sort Log sorting by time in ascending order (asc) or descending order (desc). The default value is `desc`
+     * Set Sorting by time. Valid values: asc (ascending), desc (descending). Default value: desc
+     * @param Sort Sorting by time. Valid values: asc (ascending), desc (descending). Default value: desc
      */
     public void setSort(String Sort) {
         this.Sort = Sort;
     }
 
     /**
-     * Get Fuzzy search of logs by keyword 
-     * @return Query Fuzzy search of logs by keyword
+     * Get Fuzzy search for log by keyword 
+     * @return Query Fuzzy search for log by keyword
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set Fuzzy search of logs by keyword
-     * @param Query Fuzzy search of logs by keyword
+     * Set Fuzzy search for log by keyword
+     * @param Query Fuzzy search for log by keyword
      */
     public void setQuery(String Query) {
         this.Query = Query;
+    }
+
+    /**
+     * Get  
+     * @return LogQuerys 
+     */
+    public LogQuery [] getLogQuerys() {
+        return this.LogQuerys;
+    }
+
+    /**
+     * Set 
+     * @param LogQuerys 
+     */
+    public void setLogQuerys(LogQuery [] LogQuerys) {
+        this.LogQuerys = LogQuerys;
     }
 
     /**
@@ -218,6 +241,7 @@ public class DescribeLogSearchRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ConText", this.ConText);
         this.setParamSimple(map, prefix + "Sort", this.Sort);
         this.setParamSimple(map, prefix + "Query", this.Query);
+        this.setParamArrayObj(map, prefix + "LogQuerys.", this.LogQuerys);
 
     }
 }

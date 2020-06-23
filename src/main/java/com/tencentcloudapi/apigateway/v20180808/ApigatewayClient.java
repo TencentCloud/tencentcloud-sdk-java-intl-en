@@ -316,8 +316,8 @@ You can use this API if you use a custom domain name and custom mapping. Please 
 
     /**
      *This API is used to demote a usage plan of a service in an environment to the API level.
-To make authentication and throttling for a service take effect, you need to bind a usage plan to it. This API is used to query all usage plans bound to the service.
-This operation will be denied if there are no APIs under a service.
+ 
+This operation will be denied if there are no APIs under the service.
 This operation will also be denied if the current environment has not been published.
      * @param req DemoteServiceUsagePlanRequest
      * @return DemoteServiceUsagePlanResponse
@@ -336,7 +336,7 @@ This operation will also be denied if the current environment has not been publi
     }
 
     /**
-     *This API is used to query the detailed information of an API deployed in API Gateway.
+     *This API is used to query the details of an API deployed in API Gateway.
      * @param req DescribeApiRequest
      * @return DescribeApiResponse
      * @throws TencentCloudSDKException
@@ -372,8 +372,8 @@ This operation will also be denied if the current environment has not been publi
     }
 
     /**
-     *This API is used to query key details.
-After creating an API key, you can query its details using this API which will display its key.
+     *This API is used to query the details of a key.
+After creating an API key, you can query its details by using this API.
      * @param req DescribeApiKeyRequest
      * @return DescribeApiKeyResponse
      * @throws TencentCloudSDKException
@@ -392,7 +392,7 @@ After creating an API key, you can query its details using this API which will d
 
     /**
      *This API is used to query the details of API usage plans in a service.
-To make authentication and throttling for a service takes effect, you need to bind usage plans to it. This API is used to query all usage plans bound to a service and APIs under it.
+To make authentication and throttling for a service take effect, you need to bind a usage plan to it. This API is used to query all usage plans bound to a service and APIs under it.
      * @param req DescribeApiUsagePlanRequest
      * @return DescribeApiUsagePlanResponse
      * @throws TencentCloudSDKException
@@ -464,8 +464,8 @@ To make authentication and throttling for a service takes effect, you need to bi
     }
 
     /**
-     *This API is used to query the release history of a service environment.
-A service can only be used when it is published to an environment after creation. This API is used to query the release history of an environment under a service.
+     *This API is used to query the release history in a service environment.
+A service can only be used when it is published to an environment after creation. This API is used to query the release history in an environment under a service.
      * @param req DescribeServiceEnvironmentReleaseHistoryRequest
      * @return DescribeServiceEnvironmentReleaseHistoryResponse
      * @throws TencentCloudSDKException
@@ -483,7 +483,7 @@ A service can only be used when it is published to an environment after creation
     }
 
     /**
-     *This API is used to display service throttling policies.
+     *This API is used to display a service throttling policy.
      * @param req DescribeServiceEnvironmentStrategyRequest
      * @return DescribeServiceEnvironmentStrategyResponse
      * @throws TencentCloudSDKException
@@ -521,7 +521,7 @@ A service is generally published on several versions. This API can be used to qu
 
     /**
      *This API is used to query the path mappings of a custom domain name.
-In API Gateway, you can bind a custom domain name to a service and map the paths for it. You can custom different path mappings to up to 3 environments under the service. This API is used to query the list of path mappings of a custom domain name bound to a service.
+In API Gateway, you can bind a custom domain name to a service and map its paths. You can customize different path mappings to up to 3 environments under the service. This API is used to query the list of path mappings of a custom domain name bound to a service.
      * @param req DescribeServiceSubDomainMappingsRequest
      * @return DescribeServiceSubDomainMappingsResponse
      * @throws TencentCloudSDKException
@@ -559,7 +559,7 @@ In API Gateway, you can bind custom domain names to a service for service call. 
 
     /**
      *This API is used to query the details of usage plans in a service.
-To make authentication and throttling for a service take effect, you need to bind a usage plan to it. This API is used to query all usage plans bound to the service.
+To make authentication and throttling for a service take effect, you need to bind a usage plan to it. This API is used to query all usage plans bound to a service.
      * @param req DescribeServiceUsagePlanRequest
      * @return DescribeServiceUsagePlanResponse
      * @throws TencentCloudSDKException
@@ -633,7 +633,7 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
     }
 
     /**
-     *This API is used to disable an API key pair.
+     *This API is used to disable an API key.
      * @param req DisableApiKeyRequest
      * @return DisableApiKeyResponse
      * @throws TencentCloudSDKException
@@ -651,7 +651,7 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
     }
 
     /**
-     *This API is used to enable a disabled API key pair.
+     *This API is used to enable a disabled API key.
      * @param req EnableApiKeyRequest
      * @return EnableApiKeyResponse
      * @throws TencentCloudSDKException
@@ -669,7 +669,7 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
     }
 
     /**
-     *This API is used to automatically generate API documentation and SDKs. A document and an SDK will be generated for each environment under each service, respectively.
+     *This API is used to automatically generate API documents and SDKs. One document and one SDK will be generated for each environment under each service, respectively.
      * @param req GenerateApiDocumentRequest
      * @return GenerateApiDocumentResponse
      * @throws TencentCloudSDKException
@@ -723,7 +723,7 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
     }
 
     /**
-     *This API is used to incrementally update an API and mainly called by programs (different from `ModifyApi`, which requires full API parameters be passed in and is suitable for being used with the console).
+     *This API is used to incrementally update an API and mainly called by programs (different from `ModifyApi`, which requires that full API parameters be passed in and is suitable for use in the console).
      * @param req ModifyApiIncrementRequest
      * @return ModifyApiIncrementResponse
      * @throws TencentCloudSDKException
@@ -759,7 +759,7 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
     }
 
     /**
-     *This API is used to modify the relevant information of a service. After a service is created, its name, description, and service type all can be modified.
+     *This API is used to modify the relevant information of a service. After a service is created, its name, description, and service type can be modified.
      * @param req ModifyServiceRequest
      * @return ModifyServiceResponse
      * @throws TencentCloudSDKException
@@ -795,7 +795,7 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
     }
 
     /**
-     *This API is used to modify the path mapping in the custom domain name settings of the service. The path mapping rule can be modified before it is bound to the custom domain name.
+     *This API is used to modify the path mapping in the custom domain name settings of a service. The path mapping rule can be modified before it is bound to the custom domain name.
      * @param req ModifySubDomainRequest
      * @return ModifySubDomainResponse
      * @throws TencentCloudSDKException
@@ -905,7 +905,7 @@ An API Gateway service can only be called when it is published to an environment
 
     /**
      *This API is used to unbind a custom domain name.
-After binding a custom domain name to a service using API Gateway, you can use this API to unbind it.
+After binding a custom domain name to a service by using API Gateway, you can use this API to unbind it.
      * @param req UnBindSubDomainRequest
      * @return UnBindSubDomainResponse
      * @throws TencentCloudSDKException
@@ -924,7 +924,7 @@ After binding a custom domain name to a service using API Gateway, you can use t
 
     /**
      *This API is used to deactivate a service.
-Only when a service is published to an environment can its APIs be called by callers. You can call this API to deactivate a service from the release environment. Once deactivated, the service cannot be called.
+Only after a service is published to an environment can its APIs be called. You can call this API to deactivate a service in the release environment. Once deactivated, the service cannot be called.
      * @param req UnReleaseServiceRequest
      * @return UnReleaseServiceResponse
      * @throws TencentCloudSDKException
@@ -960,7 +960,7 @@ Only when a service is published to an environment can its APIs be called by cal
     }
 
     /**
-     *This API is used to switch the running version published in an environment of a service to a specified version. After you create a service by using API Gateway and publish it to an environment, multiple versions will be generated during development. In this case, you can call this API to switch versions.
+     *This API is used to switch the running version of a service published in an environment to a specified version. After you create a service by using API Gateway and publish it to an environment, multiple versions will be generated during development. In this case, you can call this API to switch versions.
      * @param req UpdateServiceRequest
      * @return UpdateServiceResponse
      * @throws TencentCloudSDKException

@@ -63,7 +63,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Method;
 
     /**
-    * Name of the bound environment.
+    * Name of bound environment.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Environment")
@@ -87,7 +87,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long MaxRequestNum;
 
     /**
-    * Maximum requests per second.
+    * Maximum number of requests per second.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MaxRequestNumPreSec")
@@ -219,9 +219,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Name of the bound environment.
+     * Get Name of bound environment.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Environment Name of the bound environment.
+     * @return Environment Name of bound environment.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getEnvironment() {
@@ -229,9 +229,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Name of the bound environment.
+     * Set Name of bound environment.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Environment Name of the bound environment.
+     * @param Environment Name of bound environment.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setEnvironment(String Environment) {
@@ -279,9 +279,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Maximum requests per second.
+     * Get Maximum number of requests per second.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MaxRequestNumPreSec Maximum requests per second.
+     * @return MaxRequestNumPreSec Maximum number of requests per second.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getMaxRequestNumPreSec() {
@@ -289,9 +289,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Maximum requests per second.
+     * Set Maximum number of requests per second.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MaxRequestNumPreSec Maximum requests per second.
+     * @param MaxRequestNumPreSec Maximum number of requests per second.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setMaxRequestNumPreSec(Long MaxRequestNumPreSec) {

@@ -55,12 +55,12 @@ Note: this field may return null, indicating that no valid value is obtained.
     private Float DiscountPrice;
 
     /**
-    * Percentage of the original price. For example, if you enter "20", the discounted price will be 20% of the original price.
-Note: this field may return null, indicating that no valid value is obtained.
+    * Percentage of the original price. For example, if you enter "20.0", the discounted price will be 20% of the original price.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Discount")
     @Expose
-    private Long Discount;
+    private Float Discount;
 
     /**
     * The discounted unit price for pay-as-you-go mode in USD. <br><li>When a billing tier is returned, it indicates the price fo the returned billing tier. For example, if `UnitPriceSecondStep` is returned, it refers to the unit price for the usage between 0 to 96 hours. Otherwise, it refers to the unit price for the usage between 0 and ∞ hours.
@@ -183,22 +183,22 @@ Note: this field may return null, indicating that no valid value is obtained.
     }
 
     /**
-     * Get Percentage of the original price. For example, if you enter "20", the discounted price will be 20% of the original price.
-Note: this field may return null, indicating that no valid value is obtained. 
-     * @return Discount Percentage of the original price. For example, if you enter "20", the discounted price will be 20% of the original price.
-Note: this field may return null, indicating that no valid value is obtained.
+     * Get Percentage of the original price. For example, if you enter "20.0", the discounted price will be 20% of the original price.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Discount Percentage of the original price. For example, if you enter "20.0", the discounted price will be 20% of the original price.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
-    public Long getDiscount() {
+    public Float getDiscount() {
         return this.Discount;
     }
 
     /**
-     * Set Percentage of the original price. For example, if you enter "20", the discounted price will be 20% of the original price.
-Note: this field may return null, indicating that no valid value is obtained.
-     * @param Discount Percentage of the original price. For example, if you enter "20", the discounted price will be 20% of the original price.
-Note: this field may return null, indicating that no valid value is obtained.
+     * Set Percentage of the original price. For example, if you enter "20.0", the discounted price will be 20% of the original price.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Discount Percentage of the original price. For example, if you enter "20.0", the discounted price will be 20% of the original price.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
-    public void setDiscount(Long Discount) {
+    public void setDiscount(Float Discount) {
         this.Discount = Discount;
     }
 

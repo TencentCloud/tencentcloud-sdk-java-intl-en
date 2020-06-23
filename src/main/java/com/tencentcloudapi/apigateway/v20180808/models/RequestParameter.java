@@ -37,7 +37,7 @@ public class RequestParameter extends AbstractModel{
     private String Desc;
 
     /**
-    * Parameter location
+    * Parameter position
     */
     @SerializedName("Position")
     @Expose
@@ -58,7 +58,7 @@ public class RequestParameter extends AbstractModel{
     private String DefaultValue;
 
     /**
-    * Required
+    * Whether it is required
     */
     @SerializedName("Required")
     @Expose
@@ -97,16 +97,16 @@ public class RequestParameter extends AbstractModel{
     }
 
     /**
-     * Get Parameter location 
-     * @return Position Parameter location
+     * Get Parameter position 
+     * @return Position Parameter position
      */
     public String getPosition() {
         return this.Position;
     }
 
     /**
-     * Set Parameter location
-     * @param Position Parameter location
+     * Set Parameter position
+     * @param Position Parameter position
      */
     public void setPosition(String Position) {
         this.Position = Position;
@@ -145,16 +145,16 @@ public class RequestParameter extends AbstractModel{
     }
 
     /**
-     * Get Required 
-     * @return Required Required
+     * Get Whether it is required 
+     * @return Required Whether it is required
      */
     public Boolean getRequired() {
         return this.Required;
     }
 
     /**
-     * Set Required
-     * @param Required Required
+     * Set Whether it is required
+     * @param Required Whether it is required
      */
     public void setRequired(Boolean Required) {
         this.Required = Required;

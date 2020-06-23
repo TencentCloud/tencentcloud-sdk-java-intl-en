@@ -33,7 +33,7 @@ ID of VPN gateway instance, e.g. `vpn-ltjahce6`.
     private String GatewayId;
 
     /**
-    * Bandwidth limit value.
+    * Bandwidth limit value. Valid values: >0, limited to a specified Mbps; 0, completely limited; -1, no bandwidth limit.
     */
     @SerializedName("Bandwidth")
     @Expose
@@ -75,16 +75,16 @@ ID of VPN gateway instance, e.g. `vpn-ltjahce6`.
     }
 
     /**
-     * Get Bandwidth limit value. 
-     * @return Bandwidth Bandwidth limit value.
+     * Get Bandwidth limit value. Valid values: >0, limited to a specified Mbps; 0, completely limited; -1, no bandwidth limit. 
+     * @return Bandwidth Bandwidth limit value. Valid values: >0, limited to a specified Mbps; 0, completely limited; -1, no bandwidth limit.
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set Bandwidth limit value.
-     * @param Bandwidth Bandwidth limit value.
+     * Set Bandwidth limit value. Valid values: >0, limited to a specified Mbps; 0, completely limited; -1, no bandwidth limit.
+     * @param Bandwidth Bandwidth limit value. Valid values: >0, limited to a specified Mbps; 0, completely limited; -1, no bandwidth limit.
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;

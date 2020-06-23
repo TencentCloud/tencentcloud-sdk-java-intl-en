@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ServiceParameter extends AbstractModel{
 
     /**
-    * API backend service parameter name. This parameter takes effect only when `ServiceType` is `HTTP`. Frontend and backend parameter names can be different.
+    * API backend service parameter name, which is used only if `ServiceType` is `HTTP`. The frontend and backend parameter names can be different.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Name")
@@ -31,7 +31,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Name;
 
     /**
-    * API backend service parameter position, such as `head`. This parameter takes effect only when `ServiceType` is `HTTP`.
+    * Position of API backend service parameter, such as `head`, which is used only if `ServiceType` is `HTTP`. The positions of frontend and backend parameters can be different.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Position")
@@ -39,7 +39,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Position;
 
     /**
-    * Position of the API frontend parameter corresponding to backend service parameter, such as `head`. This parameter takes effect only when `ServiceType` is `HTTP`.
+    * Position of the API frontend parameter corresponding to the backend service parameter, such as `head`, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RelevantRequestParameterPosition")
@@ -47,7 +47,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RelevantRequestParameterPosition;
 
     /**
-    * Name of the API frontend parameter corresponding to backend service parameter. This parameter takes effect only when `ServiceType` is `HTTP`.
+    * Name of the API frontend parameter corresponding to the backend service parameter, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RelevantRequestParameterName")
@@ -55,7 +55,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RelevantRequestParameterName;
 
     /**
-    * API backend service parameter default value. This parameter takes effect only when `ServiceType` is `HTTP`.
+    * Default value of API backend service parameter, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DefaultValue")
@@ -63,7 +63,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String DefaultValue;
 
     /**
-    * API backend service parameter remarks. This parameter takes effect only when `ServiceType` is `HTTP`.
+    * API backend service parameter remarks, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RelevantRequestParameterDesc")
@@ -71,7 +71,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RelevantRequestParameterDesc;
 
     /**
-    * API backend service parameter type. This parameter takes effect only when `ServiceType` is `HTTP`.
+    * API backend service parameter type, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RelevantRequestParameterType")
@@ -79,9 +79,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RelevantRequestParameterType;
 
     /**
-     * Get API backend service parameter name. This parameter takes effect only when `ServiceType` is `HTTP`. Frontend and backend parameter names can be different.
+     * Get API backend service parameter name, which is used only if `ServiceType` is `HTTP`. The frontend and backend parameter names can be different.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Name API backend service parameter name. This parameter takes effect only when `ServiceType` is `HTTP`. Frontend and backend parameter names can be different.
+     * @return Name API backend service parameter name, which is used only if `ServiceType` is `HTTP`. The frontend and backend parameter names can be different.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getName() {
@@ -89,9 +89,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set API backend service parameter name. This parameter takes effect only when `ServiceType` is `HTTP`. Frontend and backend parameter names can be different.
+     * Set API backend service parameter name, which is used only if `ServiceType` is `HTTP`. The frontend and backend parameter names can be different.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Name API backend service parameter name. This parameter takes effect only when `ServiceType` is `HTTP`. Frontend and backend parameter names can be different.
+     * @param Name API backend service parameter name, which is used only if `ServiceType` is `HTTP`. The frontend and backend parameter names can be different.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setName(String Name) {
@@ -99,9 +99,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get API backend service parameter position, such as `head`. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * Get Position of API backend service parameter, such as `head`, which is used only if `ServiceType` is `HTTP`. The positions of frontend and backend parameters can be different.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Position API backend service parameter position, such as `head`. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * @return Position Position of API backend service parameter, such as `head`, which is used only if `ServiceType` is `HTTP`. The positions of frontend and backend parameters can be different.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getPosition() {
@@ -109,9 +109,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set API backend service parameter position, such as `head`. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * Set Position of API backend service parameter, such as `head`, which is used only if `ServiceType` is `HTTP`. The positions of frontend and backend parameters can be different.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Position API backend service parameter position, such as `head`. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * @param Position Position of API backend service parameter, such as `head`, which is used only if `ServiceType` is `HTTP`. The positions of frontend and backend parameters can be different.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setPosition(String Position) {
@@ -119,9 +119,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Position of the API frontend parameter corresponding to backend service parameter, such as `head`. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * Get Position of the API frontend parameter corresponding to the backend service parameter, such as `head`, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RelevantRequestParameterPosition Position of the API frontend parameter corresponding to backend service parameter, such as `head`. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * @return RelevantRequestParameterPosition Position of the API frontend parameter corresponding to the backend service parameter, such as `head`, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getRelevantRequestParameterPosition() {
@@ -129,9 +129,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Position of the API frontend parameter corresponding to backend service parameter, such as `head`. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * Set Position of the API frontend parameter corresponding to the backend service parameter, such as `head`, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RelevantRequestParameterPosition Position of the API frontend parameter corresponding to backend service parameter, such as `head`. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * @param RelevantRequestParameterPosition Position of the API frontend parameter corresponding to the backend service parameter, such as `head`, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setRelevantRequestParameterPosition(String RelevantRequestParameterPosition) {
@@ -139,9 +139,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Name of the API frontend parameter corresponding to backend service parameter. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * Get Name of the API frontend parameter corresponding to the backend service parameter, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RelevantRequestParameterName Name of the API frontend parameter corresponding to backend service parameter. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * @return RelevantRequestParameterName Name of the API frontend parameter corresponding to the backend service parameter, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getRelevantRequestParameterName() {
@@ -149,9 +149,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Name of the API frontend parameter corresponding to backend service parameter. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * Set Name of the API frontend parameter corresponding to the backend service parameter, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RelevantRequestParameterName Name of the API frontend parameter corresponding to backend service parameter. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * @param RelevantRequestParameterName Name of the API frontend parameter corresponding to the backend service parameter, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setRelevantRequestParameterName(String RelevantRequestParameterName) {
@@ -159,9 +159,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get API backend service parameter default value. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * Get Default value of API backend service parameter, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DefaultValue API backend service parameter default value. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * @return DefaultValue Default value of API backend service parameter, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getDefaultValue() {
@@ -169,9 +169,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set API backend service parameter default value. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * Set Default value of API backend service parameter, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DefaultValue API backend service parameter default value. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * @param DefaultValue Default value of API backend service parameter, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDefaultValue(String DefaultValue) {
@@ -179,9 +179,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get API backend service parameter remarks. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * Get API backend service parameter remarks, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RelevantRequestParameterDesc API backend service parameter remarks. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * @return RelevantRequestParameterDesc API backend service parameter remarks, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getRelevantRequestParameterDesc() {
@@ -189,9 +189,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set API backend service parameter remarks. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * Set API backend service parameter remarks, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RelevantRequestParameterDesc API backend service parameter remarks. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * @param RelevantRequestParameterDesc API backend service parameter remarks, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setRelevantRequestParameterDesc(String RelevantRequestParameterDesc) {
@@ -199,9 +199,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get API backend service parameter type. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * Get API backend service parameter type, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RelevantRequestParameterType API backend service parameter type. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * @return RelevantRequestParameterType API backend service parameter type, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getRelevantRequestParameterType() {
@@ -209,9 +209,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set API backend service parameter type. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * Set API backend service parameter type, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RelevantRequestParameterType API backend service parameter type. This parameter takes effect only when `ServiceType` is `HTTP`.
+     * @param RelevantRequestParameterType API backend service parameter type, which is used only if `ServiceType` is `HTTP`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setRelevantRequestParameterType(String RelevantRequestParameterType) {

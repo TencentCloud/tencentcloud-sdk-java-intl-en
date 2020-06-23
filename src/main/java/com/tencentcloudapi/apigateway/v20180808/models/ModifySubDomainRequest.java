@@ -30,35 +30,35 @@ public class ModifySubDomainRequest extends AbstractModel{
     private String ServiceId;
 
     /**
-    * Custom domain name for which the path mapping is to be modified.
+    * Custom domain name whose path mapping is to be modified.
     */
     @SerializedName("SubDomain")
     @Expose
     private String SubDomain;
 
     /**
-    * Whether to change to the default path mapping. true: use the default path mapping. false: use the custom path mapping.
+    * Whether to change to the default path mapping. true: use the default path mapping; false: use the custom path mapping.
     */
     @SerializedName("IsDefaultMapping")
     @Expose
     private Boolean IsDefaultMapping;
 
     /**
-    * Certificate ID, which is required when the HTTPS protocol is included.
+    * Certificate ID, which is required if the HTTPS protocol is included.
     */
     @SerializedName("CertificateId")
     @Expose
     private String CertificateId;
 
     /**
-    * Modified custom domain name protocol type. Valid values: http, https, http&https.
+    * Custom domain name protocol type after modification. Valid values: http, https, http&https.
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * Modified path mapping list.
+    * Path mapping list after modification.
     */
     @SerializedName("PathMappingSet")
     @Expose
@@ -88,80 +88,80 @@ public class ModifySubDomainRequest extends AbstractModel{
     }
 
     /**
-     * Get Custom domain name for which the path mapping is to be modified. 
-     * @return SubDomain Custom domain name for which the path mapping is to be modified.
+     * Get Custom domain name whose path mapping is to be modified. 
+     * @return SubDomain Custom domain name whose path mapping is to be modified.
      */
     public String getSubDomain() {
         return this.SubDomain;
     }
 
     /**
-     * Set Custom domain name for which the path mapping is to be modified.
-     * @param SubDomain Custom domain name for which the path mapping is to be modified.
+     * Set Custom domain name whose path mapping is to be modified.
+     * @param SubDomain Custom domain name whose path mapping is to be modified.
      */
     public void setSubDomain(String SubDomain) {
         this.SubDomain = SubDomain;
     }
 
     /**
-     * Get Whether to change to the default path mapping. true: use the default path mapping. false: use the custom path mapping. 
-     * @return IsDefaultMapping Whether to change to the default path mapping. true: use the default path mapping. false: use the custom path mapping.
+     * Get Whether to change to the default path mapping. true: use the default path mapping; false: use the custom path mapping. 
+     * @return IsDefaultMapping Whether to change to the default path mapping. true: use the default path mapping; false: use the custom path mapping.
      */
     public Boolean getIsDefaultMapping() {
         return this.IsDefaultMapping;
     }
 
     /**
-     * Set Whether to change to the default path mapping. true: use the default path mapping. false: use the custom path mapping.
-     * @param IsDefaultMapping Whether to change to the default path mapping. true: use the default path mapping. false: use the custom path mapping.
+     * Set Whether to change to the default path mapping. true: use the default path mapping; false: use the custom path mapping.
+     * @param IsDefaultMapping Whether to change to the default path mapping. true: use the default path mapping; false: use the custom path mapping.
      */
     public void setIsDefaultMapping(Boolean IsDefaultMapping) {
         this.IsDefaultMapping = IsDefaultMapping;
     }
 
     /**
-     * Get Certificate ID, which is required when the HTTPS protocol is included. 
-     * @return CertificateId Certificate ID, which is required when the HTTPS protocol is included.
+     * Get Certificate ID, which is required if the HTTPS protocol is included. 
+     * @return CertificateId Certificate ID, which is required if the HTTPS protocol is included.
      */
     public String getCertificateId() {
         return this.CertificateId;
     }
 
     /**
-     * Set Certificate ID, which is required when the HTTPS protocol is included.
-     * @param CertificateId Certificate ID, which is required when the HTTPS protocol is included.
+     * Set Certificate ID, which is required if the HTTPS protocol is included.
+     * @param CertificateId Certificate ID, which is required if the HTTPS protocol is included.
      */
     public void setCertificateId(String CertificateId) {
         this.CertificateId = CertificateId;
     }
 
     /**
-     * Get Modified custom domain name protocol type. Valid values: http, https, http&https. 
-     * @return Protocol Modified custom domain name protocol type. Valid values: http, https, http&https.
+     * Get Custom domain name protocol type after modification. Valid values: http, https, http&https. 
+     * @return Protocol Custom domain name protocol type after modification. Valid values: http, https, http&https.
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Modified custom domain name protocol type. Valid values: http, https, http&https.
-     * @param Protocol Modified custom domain name protocol type. Valid values: http, https, http&https.
+     * Set Custom domain name protocol type after modification. Valid values: http, https, http&https.
+     * @param Protocol Custom domain name protocol type after modification. Valid values: http, https, http&https.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get Modified path mapping list. 
-     * @return PathMappingSet Modified path mapping list.
+     * Get Path mapping list after modification. 
+     * @return PathMappingSet Path mapping list after modification.
      */
     public PathMapping [] getPathMappingSet() {
         return this.PathMappingSet;
     }
 
     /**
-     * Set Modified path mapping list.
-     * @param PathMappingSet Modified path mapping list.
+     * Set Path mapping list after modification.
+     * @param PathMappingSet Path mapping list after modification.
      */
     public void setPathMappingSet(PathMapping [] PathMappingSet) {
         this.PathMappingSet = PathMappingSet;

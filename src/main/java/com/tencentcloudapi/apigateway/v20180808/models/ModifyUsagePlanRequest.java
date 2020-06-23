@@ -30,14 +30,14 @@ public class ModifyUsagePlanRequest extends AbstractModel{
     private String UsagePlanId;
 
     /**
-    * Modified custom usage plan name.
+    * Custom usage plan name after modification.
     */
     @SerializedName("UsagePlanName")
     @Expose
     private String UsagePlanName;
 
     /**
-    * Modified custom usage plan description.
+    * Custom usage plan description after modification.
     */
     @SerializedName("UsagePlanDesc")
     @Expose
@@ -74,32 +74,32 @@ public class ModifyUsagePlanRequest extends AbstractModel{
     }
 
     /**
-     * Get Modified custom usage plan name. 
-     * @return UsagePlanName Modified custom usage plan name.
+     * Get Custom usage plan name after modification. 
+     * @return UsagePlanName Custom usage plan name after modification.
      */
     public String getUsagePlanName() {
         return this.UsagePlanName;
     }
 
     /**
-     * Set Modified custom usage plan name.
-     * @param UsagePlanName Modified custom usage plan name.
+     * Set Custom usage plan name after modification.
+     * @param UsagePlanName Custom usage plan name after modification.
      */
     public void setUsagePlanName(String UsagePlanName) {
         this.UsagePlanName = UsagePlanName;
     }
 
     /**
-     * Get Modified custom usage plan description. 
-     * @return UsagePlanDesc Modified custom usage plan description.
+     * Get Custom usage plan description after modification. 
+     * @return UsagePlanDesc Custom usage plan description after modification.
      */
     public String getUsagePlanDesc() {
         return this.UsagePlanDesc;
     }
 
     /**
-     * Set Modified custom usage plan description.
-     * @param UsagePlanDesc Modified custom usage plan description.
+     * Set Custom usage plan description after modification.
+     * @param UsagePlanDesc Custom usage plan description after modification.
      */
     public void setUsagePlanDesc(String UsagePlanDesc) {
         this.UsagePlanDesc = UsagePlanDesc;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class BindIPStrategyRequest extends AbstractModel{
 
     /**
-    * Unique ID of the service of the IP policy to be bound.
+    * Unique service ID of the IP policy to be bound.
     */
     @SerializedName("ServiceId")
     @Expose
@@ -37,7 +37,7 @@ public class BindIPStrategyRequest extends AbstractModel{
     private String StrategyId;
 
     /**
-    * Environment to be bound to IP policy
+    * Environment to be bound to IP policy.
     */
     @SerializedName("EnvironmentName")
     @Expose
@@ -51,16 +51,16 @@ public class BindIPStrategyRequest extends AbstractModel{
     private String [] BindApiIds;
 
     /**
-     * Get Unique ID of the service of the IP policy to be bound. 
-     * @return ServiceId Unique ID of the service of the IP policy to be bound.
+     * Get Unique service ID of the IP policy to be bound. 
+     * @return ServiceId Unique service ID of the IP policy to be bound.
      */
     public String getServiceId() {
         return this.ServiceId;
     }
 
     /**
-     * Set Unique ID of the service of the IP policy to be bound.
-     * @param ServiceId Unique ID of the service of the IP policy to be bound.
+     * Set Unique service ID of the IP policy to be bound.
+     * @param ServiceId Unique service ID of the IP policy to be bound.
      */
     public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;
@@ -83,16 +83,16 @@ public class BindIPStrategyRequest extends AbstractModel{
     }
 
     /**
-     * Get Environment to be bound to IP policy 
-     * @return EnvironmentName Environment to be bound to IP policy
+     * Get Environment to be bound to IP policy. 
+     * @return EnvironmentName Environment to be bound to IP policy.
      */
     public String getEnvironmentName() {
         return this.EnvironmentName;
     }
 
     /**
-     * Set Environment to be bound to IP policy
-     * @param EnvironmentName Environment to be bound to IP policy
+     * Set Environment to be bound to IP policy.
+     * @param EnvironmentName Environment to be bound to IP policy.
      */
     public void setEnvironmentName(String EnvironmentName) {
         this.EnvironmentName = EnvironmentName;

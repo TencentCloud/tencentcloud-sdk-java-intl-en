@@ -31,7 +31,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long TotalCount;
 
     /**
-    * List of environments bound to service
+    * List of environments bound to service.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EnvironmentList")
@@ -59,9 +59,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of environments bound to service
+     * Get List of environments bound to service.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return EnvironmentList List of environments bound to service
+     * @return EnvironmentList List of environments bound to service.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Environment [] getEnvironmentList() {
@@ -69,9 +69,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set List of environments bound to service
+     * Set List of environments bound to service.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param EnvironmentList List of environments bound to service
+     * @param EnvironmentList List of environments bound to service.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setEnvironmentList(Environment [] EnvironmentList) {

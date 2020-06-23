@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DeleteApiRequest extends AbstractModel{
 
     /**
-    * Unique ID of API's service.
+    * Unique service ID of API.
     */
     @SerializedName("ServiceId")
     @Expose
@@ -37,16 +37,16 @@ public class DeleteApiRequest extends AbstractModel{
     private String ApiId;
 
     /**
-     * Get Unique ID of API's service. 
-     * @return ServiceId Unique ID of API's service.
+     * Get Unique service ID of API. 
+     * @return ServiceId Unique service ID of API.
      */
     public String getServiceId() {
         return this.ServiceId;
     }
 
     /**
-     * Set Unique ID of API's service.
-     * @param ServiceId Unique ID of API's service.
+     * Set Unique service ID of API.
+     * @param ServiceId Unique service ID of API.
      */
     public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;

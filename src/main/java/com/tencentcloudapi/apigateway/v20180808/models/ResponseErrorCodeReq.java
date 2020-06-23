@@ -37,7 +37,7 @@ public class ResponseErrorCodeReq extends AbstractModel{
     private String Msg;
 
     /**
-    * Remarks of the custom response configuration error code.
+    * Custom response configuration error code remarks.
     */
     @SerializedName("Desc")
     @Expose
@@ -90,16 +90,16 @@ public class ResponseErrorCodeReq extends AbstractModel{
     }
 
     /**
-     * Get Remarks of the custom response configuration error code. 
-     * @return Desc Remarks of the custom response configuration error code.
+     * Get Custom response configuration error code remarks. 
+     * @return Desc Custom response configuration error code remarks.
      */
     public String getDesc() {
         return this.Desc;
     }
 
     /**
-     * Set Remarks of the custom response configuration error code.
-     * @param Desc Remarks of the custom response configuration error code.
+     * Set Custom response configuration error code remarks.
+     * @param Desc Custom response configuration error code remarks.
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;

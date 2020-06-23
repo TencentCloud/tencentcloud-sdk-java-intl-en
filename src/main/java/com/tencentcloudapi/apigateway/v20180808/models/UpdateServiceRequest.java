@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class UpdateServiceRequest extends AbstractModel{
 
     /**
-    * Unique ID of the service to be switch to.
+    * Unique ID of the service to be switch.
     */
     @SerializedName("ServiceId")
     @Expose
     private String ServiceId;
 
     /**
-    * Name of the environment to be switched to. Valid values: test (testing environment), prepub (pre-publish environment), release (release environment).
+    * Name of the environment to be switched to. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
     */
     @SerializedName("EnvironmentName")
     @Expose
@@ -51,32 +51,32 @@ public class UpdateServiceRequest extends AbstractModel{
     private String UpdateDesc;
 
     /**
-     * Get Unique ID of the service to be switch to. 
-     * @return ServiceId Unique ID of the service to be switch to.
+     * Get Unique ID of the service to be switch. 
+     * @return ServiceId Unique ID of the service to be switch.
      */
     public String getServiceId() {
         return this.ServiceId;
     }
 
     /**
-     * Set Unique ID of the service to be switch to.
-     * @param ServiceId Unique ID of the service to be switch to.
+     * Set Unique ID of the service to be switch.
+     * @param ServiceId Unique ID of the service to be switch.
      */
     public void setServiceId(String ServiceId) {
         this.ServiceId = ServiceId;
     }
 
     /**
-     * Get Name of the environment to be switched to. Valid values: test (testing environment), prepub (pre-publish environment), release (release environment). 
-     * @return EnvironmentName Name of the environment to be switched to. Valid values: test (testing environment), prepub (pre-publish environment), release (release environment).
+     * Get Name of the environment to be switched to. Valid values: test (test environment), prepub (pre-release environment), release (release environment). 
+     * @return EnvironmentName Name of the environment to be switched to. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
      */
     public String getEnvironmentName() {
         return this.EnvironmentName;
     }
 
     /**
-     * Set Name of the environment to be switched to. Valid values: test (testing environment), prepub (pre-publish environment), release (release environment).
-     * @param EnvironmentName Name of the environment to be switched to. Valid values: test (testing environment), prepub (pre-publish environment), release (release environment).
+     * Set Name of the environment to be switched to. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
+     * @param EnvironmentName Name of the environment to be switched to. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
      */
     public void setEnvironmentName(String EnvironmentName) {
         this.EnvironmentName = EnvironmentName;

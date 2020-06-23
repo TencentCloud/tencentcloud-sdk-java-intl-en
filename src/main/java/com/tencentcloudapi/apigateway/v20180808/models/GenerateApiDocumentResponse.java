@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class GenerateApiDocumentResponse extends AbstractModel{
 
     /**
-    * API documentation and SDK link.
+    * API document and SDK link.
     */
     @SerializedName("Result")
     @Expose
@@ -37,16 +37,16 @@ public class GenerateApiDocumentResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get API documentation and SDK link. 
-     * @return Result API documentation and SDK link.
+     * Get API document and SDK link. 
+     * @return Result API document and SDK link.
      */
     public DocumentSDK getResult() {
         return this.Result;
     }
 
     /**
-     * Set API documentation and SDK link.
-     * @param Result API documentation and SDK link.
+     * Set API document and SDK link.
+     * @param Result API document and SDK link.
      */
     public void setResult(DocumentSDK Result) {
         this.Result = Result;

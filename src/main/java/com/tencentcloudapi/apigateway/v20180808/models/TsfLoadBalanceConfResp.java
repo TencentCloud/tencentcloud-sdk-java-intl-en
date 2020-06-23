@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TsfLoadBalanceConfResp extends AbstractModel{
 
     /**
-    * Whether to enable load balancing.
+    * Whether load balancing is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsLoadBalance")
@@ -39,7 +39,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Method;
 
     /**
-    * Whether to enable session persistence.
+    * Whether session persistence is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SessionStickRequired")
@@ -55,9 +55,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long SessionStickTimeout;
 
     /**
-     * Get Whether to enable load balancing.
+     * Get Whether load balancing is enabled.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return IsLoadBalance Whether to enable load balancing.
+     * @return IsLoadBalance Whether load balancing is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getIsLoadBalance() {
@@ -65,9 +65,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether to enable load balancing.
+     * Set Whether load balancing is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param IsLoadBalance Whether to enable load balancing.
+     * @param IsLoadBalance Whether load balancing is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setIsLoadBalance(Boolean IsLoadBalance) {
@@ -95,9 +95,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to enable session persistence.
+     * Get Whether session persistence is enabled.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SessionStickRequired Whether to enable session persistence.
+     * @return SessionStickRequired Whether session persistence is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getSessionStickRequired() {
@@ -105,9 +105,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether to enable session persistence.
+     * Set Whether session persistence is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SessionStickRequired Whether to enable session persistence.
+     * @param SessionStickRequired Whether session persistence is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setSessionStickRequired(Boolean SessionStickRequired) {

@@ -38,7 +38,6 @@ public class VideoPipelineInputStatistics extends AbstractModel{
 
     /**
     * Video `Pid`, which is available only if the input is `rtp/udp`.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Pid")
     @Expose
@@ -77,10 +76,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Video `Pid`, which is available only if the input is `rtp/udp`.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Video `Pid`, which is available only if the input is `rtp/udp`. 
      * @return Pid Video `Pid`, which is available only if the input is `rtp/udp`.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getPid() {
         return this.Pid;
@@ -88,9 +85,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Video `Pid`, which is available only if the input is `rtp/udp`.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param Pid Video `Pid`, which is available only if the input is `rtp/udp`.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setPid(Long Pid) {
         this.Pid = Pid;

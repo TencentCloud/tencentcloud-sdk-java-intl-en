@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class UpdateApiKeyRequest extends AbstractModel{
 
     /**
-    * ID of the key to be updated.
+    * ID of the key to be changed.
     */
     @SerializedName("AccessKeyId")
     @Expose
     private String AccessKeyId;
 
     /**
-    * Key to be updated, which is required when a custom key is updated. It can contain 10 to 50 letters, digits, and underscores.
+    * Key to be updated, which is required when a custom key is updated. It can contain 10–50 letters, digits, and underscores.
     */
     @SerializedName("AccessKeySecret")
     @Expose
     private String AccessKeySecret;
 
     /**
-     * Get ID of the key to be updated. 
-     * @return AccessKeyId ID of the key to be updated.
+     * Get ID of the key to be changed. 
+     * @return AccessKeyId ID of the key to be changed.
      */
     public String getAccessKeyId() {
         return this.AccessKeyId;
     }
 
     /**
-     * Set ID of the key to be updated.
-     * @param AccessKeyId ID of the key to be updated.
+     * Set ID of the key to be changed.
+     * @param AccessKeyId ID of the key to be changed.
      */
     public void setAccessKeyId(String AccessKeyId) {
         this.AccessKeyId = AccessKeyId;
     }
 
     /**
-     * Get Key to be updated, which is required when a custom key is updated. It can contain 10 to 50 letters, digits, and underscores. 
-     * @return AccessKeySecret Key to be updated, which is required when a custom key is updated. It can contain 10 to 50 letters, digits, and underscores.
+     * Get Key to be updated, which is required when a custom key is updated. It can contain 10–50 letters, digits, and underscores. 
+     * @return AccessKeySecret Key to be updated, which is required when a custom key is updated. It can contain 10–50 letters, digits, and underscores.
      */
     public String getAccessKeySecret() {
         return this.AccessKeySecret;
     }
 
     /**
-     * Set Key to be updated, which is required when a custom key is updated. It can contain 10 to 50 letters, digits, and underscores.
-     * @param AccessKeySecret Key to be updated, which is required when a custom key is updated. It can contain 10 to 50 letters, digits, and underscores.
+     * Set Key to be updated, which is required when a custom key is updated. It can contain 10–50 letters, digits, and underscores.
+     * @param AccessKeySecret Key to be updated, which is required when a custom key is updated. It can contain 10–50 letters, digits, and underscores.
      */
     public void setAccessKeySecret(String AccessKeySecret) {
         this.AccessKeySecret = AccessKeySecret;

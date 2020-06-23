@@ -122,8 +122,8 @@ Note: this field may return null, indicating that no valid value is obtained.
     private String ImageId;
 
     /**
-    * OsCustomizeType
-Note: this field may return null, indicating that no valid value is obtained.
+    * Container image tag
+Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("OsCustomizeType")
     @Expose
@@ -144,6 +144,14 @@ Note: this field may return null, indicating that no valid value is obtained.
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
+
+    /**
+    * Whether Deletion Protection is enabled
+Note: this field may return null, indicating that no valid value is obtained.
+    */
+    @SerializedName("DeletionProtection")
+    @Expose
+    private Boolean DeletionProtection;
 
     /**
      * Get Cluster ID 
@@ -374,20 +382,20 @@ Note: this field may return null, indicating that no valid value is obtained.
     }
 
     /**
-     * Get OsCustomizeType
-Note: this field may return null, indicating that no valid value is obtained. 
-     * @return OsCustomizeType OsCustomizeType
-Note: this field may return null, indicating that no valid value is obtained.
+     * Get Container image tag
+Note: This field may return null, indicating that no valid value was found. 
+     * @return OsCustomizeType Container image tag
+Note: This field may return null, indicating that no valid value was found.
      */
     public String getOsCustomizeType() {
         return this.OsCustomizeType;
     }
 
     /**
-     * Set OsCustomizeType
-Note: this field may return null, indicating that no valid value is obtained.
-     * @param OsCustomizeType OsCustomizeType
-Note: this field may return null, indicating that no valid value is obtained.
+     * Set Container image tag
+Note: This field may return null, indicating that no valid value was found.
+     * @param OsCustomizeType Container image tag
+Note: This field may return null, indicating that no valid value was found.
      */
     public void setOsCustomizeType(String OsCustomizeType) {
         this.OsCustomizeType = OsCustomizeType;
@@ -434,6 +442,26 @@ Note: this field may return null, indicating that no valid value is obtained.
     }
 
     /**
+     * Get Whether Deletion Protection is enabled
+Note: this field may return null, indicating that no valid value is obtained. 
+     * @return DeletionProtection Whether Deletion Protection is enabled
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public Boolean getDeletionProtection() {
+        return this.DeletionProtection;
+    }
+
+    /**
+     * Set Whether Deletion Protection is enabled
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param DeletionProtection Whether Deletion Protection is enabled
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public void setDeletionProtection(Boolean DeletionProtection) {
+        this.DeletionProtection = DeletionProtection;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -454,6 +482,7 @@ Note: this field may return null, indicating that no valid value is obtained.
         this.setParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
         this.setParamSimple(map, prefix + "ContainerRuntime", this.ContainerRuntime);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
 
     }
 }

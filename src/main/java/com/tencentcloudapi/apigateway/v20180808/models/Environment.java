@@ -37,7 +37,7 @@ public class Environment extends AbstractModel{
     private String Url;
 
     /**
-    * Release status. 1: released. 0: not released.
+    * Release status. 1: published. 0: not published.
     */
     @SerializedName("Status")
     @Expose
@@ -83,16 +83,16 @@ public class Environment extends AbstractModel{
     }
 
     /**
-     * Get Release status. 1: released. 0: not released. 
-     * @return Status Release status. 1: released. 0: not released.
+     * Get Release status. 1: published. 0: not published. 
+     * @return Status Release status. 1: published. 0: not published.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Release status. 1: released. 0: not released.
-     * @param Status Release status. 1: released. 0: not released.
+     * Set Release status. 1: published. 0: not published.
+     * @param Status Release status. 1: published. 0: not published.
      */
     public void setStatus(Long Status) {
         this.Status = Status;

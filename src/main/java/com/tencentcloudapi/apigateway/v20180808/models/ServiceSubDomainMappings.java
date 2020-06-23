@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ServiceSubDomainMappings extends AbstractModel{
 
     /**
-    * Whether to use the default path mapping. true: use the default path mapping. false: use the custom path mapping (`PathMappingSet` is required).
+    * Whether the default path mapping is used. true: use the default path mapping; false: use the custom path mapping (`PathMappingSet` is required in this case).
     */
     @SerializedName("IsDefaultMapping")
     @Expose
@@ -37,16 +37,16 @@ public class ServiceSubDomainMappings extends AbstractModel{
     private PathMapping [] PathMappingSet;
 
     /**
-     * Get Whether to use the default path mapping. true: use the default path mapping. false: use the custom path mapping (`PathMappingSet` is required). 
-     * @return IsDefaultMapping Whether to use the default path mapping. true: use the default path mapping. false: use the custom path mapping (`PathMappingSet` is required).
+     * Get Whether the default path mapping is used. true: use the default path mapping; false: use the custom path mapping (`PathMappingSet` is required in this case). 
+     * @return IsDefaultMapping Whether the default path mapping is used. true: use the default path mapping; false: use the custom path mapping (`PathMappingSet` is required in this case).
      */
     public Boolean getIsDefaultMapping() {
         return this.IsDefaultMapping;
     }
 
     /**
-     * Set Whether to use the default path mapping. true: use the default path mapping. false: use the custom path mapping (`PathMappingSet` is required).
-     * @param IsDefaultMapping Whether to use the default path mapping. true: use the default path mapping. false: use the custom path mapping (`PathMappingSet` is required).
+     * Set Whether the default path mapping is used. true: use the default path mapping; false: use the custom path mapping (`PathMappingSet` is required in this case).
+     * @param IsDefaultMapping Whether the default path mapping is used. true: use the default path mapping; false: use the custom path mapping (`PathMappingSet` is required in this case).
      */
     public void setIsDefaultMapping(Boolean IsDefaultMapping) {
         this.IsDefaultMapping = IsDefaultMapping;

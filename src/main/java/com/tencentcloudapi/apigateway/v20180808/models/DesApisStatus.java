@@ -85,7 +85,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String UniqVpcId;
 
     /**
-    * API type. Valid values (general API), TSF (microservice API).
+    * API type. Valid values: NORMAL (general API), TSF (microservice API).
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ApiType")
@@ -101,7 +101,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Protocol;
 
     /**
-    * Whether to enable debugging on purchase (reserved for the marketplace)
+    * Whether to enable debugging after purchase (reserved field for the marketplace)
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsDebugAfterCharge")
@@ -117,7 +117,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String AuthType;
 
     /**
-    * OAuth API type. This parameter takes effect when `AuthType` is `OAUTH`. Valid values: NORMAL (business API), OAUTH (authorization API).
+    * OAuth API type, which is valid if `AuthType` is `OAUTH`. Valid values: NORMAL (business API), OAUTH (authorization API).
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ApiBusinessType")
@@ -125,7 +125,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ApiBusinessType;
 
     /**
-    * Unique ID of associated authorization API. This parameter takes effect only when `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
+    * Unique ID of associated authorization API, which takes effect only if `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AuthRelationApiId")
@@ -133,7 +133,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String AuthRelationApiId;
 
     /**
-    * OAuth configuration information. This parameter takes effect when `AuthType` is `OAUTH`.
+    * OAuth configuration information, which takes effect if `AuthType` is `OAUTH`.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OauthConfig")
@@ -325,9 +325,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get API type. Valid values (general API), TSF (microservice API).
+     * Get API type. Valid values: NORMAL (general API), TSF (microservice API).
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ApiType API type. Valid values (general API), TSF (microservice API).
+     * @return ApiType API type. Valid values: NORMAL (general API), TSF (microservice API).
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getApiType() {
@@ -335,9 +335,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set API type. Valid values (general API), TSF (microservice API).
+     * Set API type. Valid values: NORMAL (general API), TSF (microservice API).
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ApiType API type. Valid values (general API), TSF (microservice API).
+     * @param ApiType API type. Valid values: NORMAL (general API), TSF (microservice API).
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setApiType(String ApiType) {
@@ -365,9 +365,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to enable debugging on purchase (reserved for the marketplace)
+     * Get Whether to enable debugging after purchase (reserved field for the marketplace)
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return IsDebugAfterCharge Whether to enable debugging on purchase (reserved for the marketplace)
+     * @return IsDebugAfterCharge Whether to enable debugging after purchase (reserved field for the marketplace)
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getIsDebugAfterCharge() {
@@ -375,9 +375,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether to enable debugging on purchase (reserved for the marketplace)
+     * Set Whether to enable debugging after purchase (reserved field for the marketplace)
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param IsDebugAfterCharge Whether to enable debugging on purchase (reserved for the marketplace)
+     * @param IsDebugAfterCharge Whether to enable debugging after purchase (reserved field for the marketplace)
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setIsDebugAfterCharge(Boolean IsDebugAfterCharge) {
@@ -405,9 +405,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get OAuth API type. This parameter takes effect when `AuthType` is `OAUTH`. Valid values: NORMAL (business API), OAUTH (authorization API).
+     * Get OAuth API type, which is valid if `AuthType` is `OAUTH`. Valid values: NORMAL (business API), OAUTH (authorization API).
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ApiBusinessType OAuth API type. This parameter takes effect when `AuthType` is `OAUTH`. Valid values: NORMAL (business API), OAUTH (authorization API).
+     * @return ApiBusinessType OAuth API type, which is valid if `AuthType` is `OAUTH`. Valid values: NORMAL (business API), OAUTH (authorization API).
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getApiBusinessType() {
@@ -415,9 +415,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set OAuth API type. This parameter takes effect when `AuthType` is `OAUTH`. Valid values: NORMAL (business API), OAUTH (authorization API).
+     * Set OAuth API type, which is valid if `AuthType` is `OAUTH`. Valid values: NORMAL (business API), OAUTH (authorization API).
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ApiBusinessType OAuth API type. This parameter takes effect when `AuthType` is `OAUTH`. Valid values: NORMAL (business API), OAUTH (authorization API).
+     * @param ApiBusinessType OAuth API type, which is valid if `AuthType` is `OAUTH`. Valid values: NORMAL (business API), OAUTH (authorization API).
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setApiBusinessType(String ApiBusinessType) {
@@ -425,9 +425,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Unique ID of associated authorization API. This parameter takes effect only when `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
+     * Get Unique ID of associated authorization API, which takes effect only if `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AuthRelationApiId Unique ID of associated authorization API. This parameter takes effect only when `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
+     * @return AuthRelationApiId Unique ID of associated authorization API, which takes effect only if `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getAuthRelationApiId() {
@@ -435,9 +435,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Unique ID of associated authorization API. This parameter takes effect only when `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
+     * Set Unique ID of associated authorization API, which takes effect only if `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AuthRelationApiId Unique ID of associated authorization API. This parameter takes effect only when `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
+     * @param AuthRelationApiId Unique ID of associated authorization API, which takes effect only if `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setAuthRelationApiId(String AuthRelationApiId) {
@@ -445,9 +445,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get OAuth configuration information. This parameter takes effect when `AuthType` is `OAUTH`.
+     * Get OAuth configuration information, which takes effect if `AuthType` is `OAUTH`.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return OauthConfig OAuth configuration information. This parameter takes effect when `AuthType` is `OAUTH`.
+     * @return OauthConfig OAuth configuration information, which takes effect if `AuthType` is `OAUTH`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public OauthConfig getOauthConfig() {
@@ -455,9 +455,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set OAuth configuration information. This parameter takes effect when `AuthType` is `OAUTH`.
+     * Set OAuth configuration information, which takes effect if `AuthType` is `OAUTH`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param OauthConfig OAuth configuration information. This parameter takes effect when `AuthType` is `OAUTH`.
+     * @param OauthConfig OAuth configuration information, which takes effect if `AuthType` is `OAUTH`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setOauthConfig(OauthConfig OauthConfig) {

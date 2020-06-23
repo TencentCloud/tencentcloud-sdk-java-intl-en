@@ -37,21 +37,21 @@ public class BindSubDomainRequest extends AbstractModel{
     private String SubDomain;
 
     /**
-    * Protocols supported by service. Valid values: http, https, http&https.
+    * Protocol supported by service. Valid values: http, https, http&https.
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * Network type. Valid values: INNER, OUTER.
+    * Network type. Valid values: OUTER, INNER.
     */
     @SerializedName("NetType")
     @Expose
     private String NetType;
 
     /**
-    * Whether to use the default path mapping. The default value is `true`. If the value is `false`, the custom path mapping will be used and `PathMappingSet` is required.
+    * Whether the default path mapping is used. The default value is `true`. If the value is `false`, the custom path mapping will be used and `PathMappingSet` will be required in this case.
     */
     @SerializedName("IsDefaultMapping")
     @Expose
@@ -65,14 +65,14 @@ public class BindSubDomainRequest extends AbstractModel{
     private String NetSubDomain;
 
     /**
-    * Unique ID of the certificate of the custom domain name to be bound. The certificate can be uploaded only when `Protocol` is `https` or `http&https`.
+    * Unique certificate ID of the custom domain name to be bound. The certificate can be uploaded if `Protocol` is `https` or `http&https`.
     */
     @SerializedName("CertificateId")
     @Expose
     private String CertificateId;
 
     /**
-    * Custom domain name path mapping. It can contain up to 3 `Environment` parameters which can be set to only `test`, `prepub`, or `release`.
+    * Custom domain name path mapping. It can contain up to 3 `Environment` values which can be set to only `test`, `prepub`, and `release`, respectively.
     */
     @SerializedName("PathMappingSet")
     @Expose
@@ -111,48 +111,48 @@ public class BindSubDomainRequest extends AbstractModel{
     }
 
     /**
-     * Get Protocols supported by service. Valid values: http, https, http&https. 
-     * @return Protocol Protocols supported by service. Valid values: http, https, http&https.
+     * Get Protocol supported by service. Valid values: http, https, http&https. 
+     * @return Protocol Protocol supported by service. Valid values: http, https, http&https.
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Protocols supported by service. Valid values: http, https, http&https.
-     * @param Protocol Protocols supported by service. Valid values: http, https, http&https.
+     * Set Protocol supported by service. Valid values: http, https, http&https.
+     * @param Protocol Protocol supported by service. Valid values: http, https, http&https.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get Network type. Valid values: INNER, OUTER. 
-     * @return NetType Network type. Valid values: INNER, OUTER.
+     * Get Network type. Valid values: OUTER, INNER. 
+     * @return NetType Network type. Valid values: OUTER, INNER.
      */
     public String getNetType() {
         return this.NetType;
     }
 
     /**
-     * Set Network type. Valid values: INNER, OUTER.
-     * @param NetType Network type. Valid values: INNER, OUTER.
+     * Set Network type. Valid values: OUTER, INNER.
+     * @param NetType Network type. Valid values: OUTER, INNER.
      */
     public void setNetType(String NetType) {
         this.NetType = NetType;
     }
 
     /**
-     * Get Whether to use the default path mapping. The default value is `true`. If the value is `false`, the custom path mapping will be used and `PathMappingSet` is required. 
-     * @return IsDefaultMapping Whether to use the default path mapping. The default value is `true`. If the value is `false`, the custom path mapping will be used and `PathMappingSet` is required.
+     * Get Whether the default path mapping is used. The default value is `true`. If the value is `false`, the custom path mapping will be used and `PathMappingSet` will be required in this case. 
+     * @return IsDefaultMapping Whether the default path mapping is used. The default value is `true`. If the value is `false`, the custom path mapping will be used and `PathMappingSet` will be required in this case.
      */
     public Boolean getIsDefaultMapping() {
         return this.IsDefaultMapping;
     }
 
     /**
-     * Set Whether to use the default path mapping. The default value is `true`. If the value is `false`, the custom path mapping will be used and `PathMappingSet` is required.
-     * @param IsDefaultMapping Whether to use the default path mapping. The default value is `true`. If the value is `false`, the custom path mapping will be used and `PathMappingSet` is required.
+     * Set Whether the default path mapping is used. The default value is `true`. If the value is `false`, the custom path mapping will be used and `PathMappingSet` will be required in this case.
+     * @param IsDefaultMapping Whether the default path mapping is used. The default value is `true`. If the value is `false`, the custom path mapping will be used and `PathMappingSet` will be required in this case.
      */
     public void setIsDefaultMapping(Boolean IsDefaultMapping) {
         this.IsDefaultMapping = IsDefaultMapping;
@@ -175,32 +175,32 @@ public class BindSubDomainRequest extends AbstractModel{
     }
 
     /**
-     * Get Unique ID of the certificate of the custom domain name to be bound. The certificate can be uploaded only when `Protocol` is `https` or `http&https`. 
-     * @return CertificateId Unique ID of the certificate of the custom domain name to be bound. The certificate can be uploaded only when `Protocol` is `https` or `http&https`.
+     * Get Unique certificate ID of the custom domain name to be bound. The certificate can be uploaded if `Protocol` is `https` or `http&https`. 
+     * @return CertificateId Unique certificate ID of the custom domain name to be bound. The certificate can be uploaded if `Protocol` is `https` or `http&https`.
      */
     public String getCertificateId() {
         return this.CertificateId;
     }
 
     /**
-     * Set Unique ID of the certificate of the custom domain name to be bound. The certificate can be uploaded only when `Protocol` is `https` or `http&https`.
-     * @param CertificateId Unique ID of the certificate of the custom domain name to be bound. The certificate can be uploaded only when `Protocol` is `https` or `http&https`.
+     * Set Unique certificate ID of the custom domain name to be bound. The certificate can be uploaded if `Protocol` is `https` or `http&https`.
+     * @param CertificateId Unique certificate ID of the custom domain name to be bound. The certificate can be uploaded if `Protocol` is `https` or `http&https`.
      */
     public void setCertificateId(String CertificateId) {
         this.CertificateId = CertificateId;
     }
 
     /**
-     * Get Custom domain name path mapping. It can contain up to 3 `Environment` parameters which can be set to only `test`, `prepub`, or `release`. 
-     * @return PathMappingSet Custom domain name path mapping. It can contain up to 3 `Environment` parameters which can be set to only `test`, `prepub`, or `release`.
+     * Get Custom domain name path mapping. It can contain up to 3 `Environment` values which can be set to only `test`, `prepub`, and `release`, respectively. 
+     * @return PathMappingSet Custom domain name path mapping. It can contain up to 3 `Environment` values which can be set to only `test`, `prepub`, and `release`, respectively.
      */
     public PathMapping [] getPathMappingSet() {
         return this.PathMappingSet;
     }
 
     /**
-     * Set Custom domain name path mapping. It can contain up to 3 `Environment` parameters which can be set to only `test`, `prepub`, or `release`.
-     * @param PathMappingSet Custom domain name path mapping. It can contain up to 3 `Environment` parameters which can be set to only `test`, `prepub`, or `release`.
+     * Set Custom domain name path mapping. It can contain up to 3 `Environment` values which can be set to only `test`, `prepub`, and `release`, respectively.
+     * @param PathMappingSet Custom domain name path mapping. It can contain up to 3 `Environment` values which can be set to only `test`, `prepub`, and `release`, respectively.
      */
     public void setPathMappingSet(PathMapping [] PathMappingSet) {
         this.PathMappingSet = PathMappingSet;

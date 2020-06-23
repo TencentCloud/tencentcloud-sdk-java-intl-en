@@ -37,7 +37,7 @@ public class DeleteServiceSubDomainMappingRequest extends AbstractModel{
     private String SubDomain;
 
     /**
-    * Name of the environment whose mapping is to be deleted. Valid values: test (testing environment), prepub (pre-publish environment), release (release environment).
+    * Name of the environment whose mapping is to be deleted. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
     */
     @SerializedName("Environment")
     @Expose
@@ -76,16 +76,16 @@ public class DeleteServiceSubDomainMappingRequest extends AbstractModel{
     }
 
     /**
-     * Get Name of the environment whose mapping is to be deleted. Valid values: test (testing environment), prepub (pre-publish environment), release (release environment). 
-     * @return Environment Name of the environment whose mapping is to be deleted. Valid values: test (testing environment), prepub (pre-publish environment), release (release environment).
+     * Get Name of the environment whose mapping is to be deleted. Valid values: test (test environment), prepub (pre-release environment), release (release environment). 
+     * @return Environment Name of the environment whose mapping is to be deleted. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
      */
     public String getEnvironment() {
         return this.Environment;
     }
 
     /**
-     * Set Name of the environment whose mapping is to be deleted. Valid values: test (testing environment), prepub (pre-publish environment), release (release environment).
-     * @param Environment Name of the environment whose mapping is to be deleted. Valid values: test (testing environment), prepub (pre-publish environment), release (release environment).
+     * Set Name of the environment whose mapping is to be deleted. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
+     * @param Environment Name of the environment whose mapping is to be deleted. Valid values: test (test environment), prepub (pre-release environment), release (release environment).
      */
     public void setEnvironment(String Environment) {
         this.Environment = Environment;
