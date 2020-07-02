@@ -200,6 +200,24 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *This API is used to pull the list of databases.
+     * @param req DescribeDatabasesRequest
+     * @return DescribeDatabasesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDatabasesResponse DescribeDatabases(DescribeDatabasesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDatabasesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDatabasesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDatabases"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get order information.
      * @param req DescribeOrdersRequest
      * @return DescribeOrdersResponse
@@ -272,6 +290,24 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *This API is used to terminate the instance corresponding to a specified `DBInstanceId`.
+     * @param req DestroyDBInstanceRequest
+     * @return DestroyDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DestroyDBInstanceResponse DestroyDBInstance(DestroyDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DestroyDBInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DestroyDBInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DestroyDBInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to initialize a TencentDB for PostgreSQL instance.
      * @param req InitDBInstancesRequest
      * @return InitDBInstancesResponse
@@ -283,6 +319,42 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<InitDBInstancesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "InitDBInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the purchase price of one or multiple instances.
+     * @param req InquiryPriceCreateDBInstancesRequest
+     * @return InquiryPriceCreateDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceCreateDBInstancesResponse InquiryPriceCreateDBInstances(InquiryPriceCreateDBInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquiryPriceCreateDBInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquiryPriceCreateDBInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "InquiryPriceCreateDBInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the renewal price of an instance.
+     * @param req InquiryPriceRenewDBInstanceRequest
+     * @return InquiryPriceRenewDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceRenewDBInstanceResponse InquiryPriceRenewDBInstance(InquiryPriceRenewDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquiryPriceRenewDBInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquiryPriceRenewDBInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "InquiryPriceRenewDBInstance"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -380,6 +452,24 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *This API is used to renew an instance.
+     * @param req RenewInstanceRequest
+     * @return RenewInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewInstanceResponse RenewInstance(RenewInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RenewInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<RenewInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "RenewInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to reset the account password of an instance.
      * @param req ResetAccountPasswordRequest
      * @return ResetAccountPasswordResponse
@@ -409,6 +499,24 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RestartDBInstanceResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "RestartDBInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to set auto-renewal.
+     * @param req SetAutoRenewFlagRequest
+     * @return SetAutoRenewFlagResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetAutoRenewFlagResponse SetAutoRenewFlag(SetAutoRenewFlagRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetAutoRenewFlagResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetAutoRenewFlagResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "SetAutoRenewFlag"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

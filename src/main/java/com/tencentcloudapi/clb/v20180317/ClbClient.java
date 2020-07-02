@@ -169,6 +169,24 @@ This is an async API. After it is returned successfully, you can call the Descri
     }
 
     /**
+     *针对SnatPro负载均衡，这个接口用于添加SnatIp，如果负载均衡没有开启SnatPro，添加SnatIp后会自动开启
+     * @param req CreateLoadBalancerSnatIpsRequest
+     * @return CreateLoadBalancerSnatIpsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLoadBalancerSnatIpsResponse CreateLoadBalancerSnatIps(CreateLoadBalancerSnatIpsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLoadBalancerSnatIpsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLoadBalancerSnatIpsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateLoadBalancerSnatIps"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (CreateRule) is used to create a forwarding rule under an existing layer-7 CLB listener, where real servers must be bound to the rule instead of the listener.
 This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestID as an input parameter to check whether this task is successful.
      * @param req CreateRuleRequest
@@ -237,6 +255,43 @@ This is an async API. After it is returned successfully, you can call the Descri
                 Type type = new TypeToken<JsonResponseModel<DeleteLoadBalancerResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteLoadBalancer"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *该接口支持删除负载均衡的多个监听器。
+本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
+     * @param req DeleteLoadBalancerListenersRequest
+     * @return DeleteLoadBalancerListenersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLoadBalancerListenersResponse DeleteLoadBalancerListeners(DeleteLoadBalancerListenersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLoadBalancerListenersResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLoadBalancerListenersResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteLoadBalancerListeners"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *对于SnatPro的负载均衡，这个接口用于删除SnatIp
+     * @param req DeleteLoadBalancerSnatIpsRequest
+     * @return DeleteLoadBalancerSnatIpsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLoadBalancerSnatIpsResponse DeleteLoadBalancerSnatIps(DeleteLoadBalancerSnatIpsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLoadBalancerSnatIpsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLoadBalancerSnatIpsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteLoadBalancerSnatIps"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -349,6 +404,42 @@ This is an async API. After it is returned successfully, you can call the Descri
                 Type type = new TypeToken<JsonResponseModel<DeregisterTargetsFromClassicalLBResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeregisterTargetsFromClassicalLB"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *查询一个负载均衡所封禁的IP列表（黑名单）。（接口灰度中，如需使用请提工单）
+     * @param req DescribeBlockIPListRequest
+     * @return DescribeBlockIPListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBlockIPListResponse DescribeBlockIPList(DescribeBlockIPListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBlockIPListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBlockIPListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeBlockIPList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *根据 ModifyBlockIPList 接口返回的异步任务的ID，查询封禁IP（黑名单）异步任务的执行状态。（接口灰度中，如需使用请提工单）
+     * @param req DescribeBlockIPTaskRequest
+     * @return DescribeBlockIPTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBlockIPTaskResponse DescribeBlockIPTask(DescribeBlockIPTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBlockIPTaskResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBlockIPTaskResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeBlockIPTask"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -639,6 +730,25 @@ This is an async API. After it is returned successfully, you can call the `Descr
                 Type type = new TypeToken<JsonResponseModel<ManualRewriteResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ManualRewrite"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *修改负载均衡的IP（client IP）封禁黑名单列表，一个转发规则最多支持封禁 2000000 个IP，及黑名单容量为 2000000。
+（接口灰度中，如需使用请提工单）
+     * @param req ModifyBlockIPListRequest
+     * @return ModifyBlockIPListResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBlockIPListResponse ModifyBlockIPList(ModifyBlockIPListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyBlockIPListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyBlockIPListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyBlockIPList"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

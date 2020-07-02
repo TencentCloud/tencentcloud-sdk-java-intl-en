@@ -23,11 +23,103 @@ import java.util.HashMap;
 public class ReEncryptResponse extends AbstractModel{
 
     /**
+    * Re-encrypted ciphertext
+    */
+    @SerializedName("CiphertextBlob")
+    @Expose
+    private String CiphertextBlob;
+
+    /**
+    * CMK used for re-encryption
+    */
+    @SerializedName("KeyId")
+    @Expose
+    private String KeyId;
+
+    /**
+    * CMK used by ciphertext before re-encryption
+    */
+    @SerializedName("SourceKeyId")
+    @Expose
+    private String SourceKeyId;
+
+    /**
+    * `true` indicates that the ciphertext has been re-encrypted. When re-encryption is initiated by using the same CMK, as long as the CMK is not rotated, no actual re-encryption will be performed, and the original ciphertext will be returned
+    */
+    @SerializedName("ReEncrypted")
+    @Expose
+    private Boolean ReEncrypted;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get Re-encrypted ciphertext 
+     * @return CiphertextBlob Re-encrypted ciphertext
+     */
+    public String getCiphertextBlob() {
+        return this.CiphertextBlob;
+    }
+
+    /**
+     * Set Re-encrypted ciphertext
+     * @param CiphertextBlob Re-encrypted ciphertext
+     */
+    public void setCiphertextBlob(String CiphertextBlob) {
+        this.CiphertextBlob = CiphertextBlob;
+    }
+
+    /**
+     * Get CMK used for re-encryption 
+     * @return KeyId CMK used for re-encryption
+     */
+    public String getKeyId() {
+        return this.KeyId;
+    }
+
+    /**
+     * Set CMK used for re-encryption
+     * @param KeyId CMK used for re-encryption
+     */
+    public void setKeyId(String KeyId) {
+        this.KeyId = KeyId;
+    }
+
+    /**
+     * Get CMK used by ciphertext before re-encryption 
+     * @return SourceKeyId CMK used by ciphertext before re-encryption
+     */
+    public String getSourceKeyId() {
+        return this.SourceKeyId;
+    }
+
+    /**
+     * Set CMK used by ciphertext before re-encryption
+     * @param SourceKeyId CMK used by ciphertext before re-encryption
+     */
+    public void setSourceKeyId(String SourceKeyId) {
+        this.SourceKeyId = SourceKeyId;
+    }
+
+    /**
+     * Get `true` indicates that the ciphertext has been re-encrypted. When re-encryption is initiated by using the same CMK, as long as the CMK is not rotated, no actual re-encryption will be performed, and the original ciphertext will be returned 
+     * @return ReEncrypted `true` indicates that the ciphertext has been re-encrypted. When re-encryption is initiated by using the same CMK, as long as the CMK is not rotated, no actual re-encryption will be performed, and the original ciphertext will be returned
+     */
+    public Boolean getReEncrypted() {
+        return this.ReEncrypted;
+    }
+
+    /**
+     * Set `true` indicates that the ciphertext has been re-encrypted. When re-encryption is initiated by using the same CMK, as long as the CMK is not rotated, no actual re-encryption will be performed, and the original ciphertext will be returned
+     * @param ReEncrypted `true` indicates that the ciphertext has been re-encrypted. When re-encryption is initiated by using the same CMK, as long as the CMK is not rotated, no actual re-encryption will be performed, and the original ciphertext will be returned
+     */
+    public void setReEncrypted(Boolean ReEncrypted) {
+        this.ReEncrypted = ReEncrypted;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -49,6 +141,10 @@ public class ReEncryptResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "CiphertextBlob", this.CiphertextBlob);
+        this.setParamSimple(map, prefix + "KeyId", this.KeyId);
+        this.setParamSimple(map, prefix + "SourceKeyId", this.SourceKeyId);
+        this.setParamSimple(map, prefix + "ReEncrypted", this.ReEncrypted);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

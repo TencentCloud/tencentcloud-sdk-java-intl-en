@@ -23,9 +23,33 @@ import java.util.HashMap;
 public class DisableKeysRequest extends AbstractModel{
 
     /**
+    * List of IDs of the CMKs to be disabled in batches. Up to 100 CMKs are supported at a time
+    */
+    @SerializedName("KeyIds")
+    @Expose
+    private String [] KeyIds;
+
+    /**
+     * Get List of IDs of the CMKs to be disabled in batches. Up to 100 CMKs are supported at a time 
+     * @return KeyIds List of IDs of the CMKs to be disabled in batches. Up to 100 CMKs are supported at a time
+     */
+    public String [] getKeyIds() {
+        return this.KeyIds;
+    }
+
+    /**
+     * Set List of IDs of the CMKs to be disabled in batches. Up to 100 CMKs are supported at a time
+     * @param KeyIds List of IDs of the CMKs to be disabled in batches. Up to 100 CMKs are supported at a time
+     */
+    public void setKeyIds(String [] KeyIds) {
+        this.KeyIds = KeyIds;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
 
     }
 }

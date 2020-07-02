@@ -23,9 +23,57 @@ import java.util.HashMap;
 public class UpdateAliasRequest extends AbstractModel{
 
     /**
+    * New alias containing 1–60 characters or digits
+    */
+    @SerializedName("Alias")
+    @Expose
+    private String Alias;
+
+    /**
+    * Globally unique CMK ID
+    */
+    @SerializedName("KeyId")
+    @Expose
+    private String KeyId;
+
+    /**
+     * Get New alias containing 1–60 characters or digits 
+     * @return Alias New alias containing 1–60 characters or digits
+     */
+    public String getAlias() {
+        return this.Alias;
+    }
+
+    /**
+     * Set New alias containing 1–60 characters or digits
+     * @param Alias New alias containing 1–60 characters or digits
+     */
+    public void setAlias(String Alias) {
+        this.Alias = Alias;
+    }
+
+    /**
+     * Get Globally unique CMK ID 
+     * @return KeyId Globally unique CMK ID
+     */
+    public String getKeyId() {
+        return this.KeyId;
+    }
+
+    /**
+     * Set Globally unique CMK ID
+     * @param KeyId Globally unique CMK ID
+     */
+    public void setKeyId(String KeyId) {
+        this.KeyId = KeyId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Alias", this.Alias);
+        this.setParamSimple(map, prefix + "KeyId", this.KeyId);
 
     }
 }

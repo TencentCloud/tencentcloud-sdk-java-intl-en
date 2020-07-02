@@ -23,11 +23,57 @@ import java.util.HashMap;
 public class DecryptResponse extends AbstractModel{
 
     /**
+    * Globally unique CMK ID
+    */
+    @SerializedName("KeyId")
+    @Expose
+    private String KeyId;
+
+    /**
+    * Decrypted plaintext. This field is Base64-encoded. In order to get the original plaintext, the Base64-decoding is needed
+    */
+    @SerializedName("Plaintext")
+    @Expose
+    private String Plaintext;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get Globally unique CMK ID 
+     * @return KeyId Globally unique CMK ID
+     */
+    public String getKeyId() {
+        return this.KeyId;
+    }
+
+    /**
+     * Set Globally unique CMK ID
+     * @param KeyId Globally unique CMK ID
+     */
+    public void setKeyId(String KeyId) {
+        this.KeyId = KeyId;
+    }
+
+    /**
+     * Get Decrypted plaintext. This field is Base64-encoded. In order to get the original plaintext, the Base64-decoding is needed 
+     * @return Plaintext Decrypted plaintext. This field is Base64-encoded. In order to get the original plaintext, the Base64-decoding is needed
+     */
+    public String getPlaintext() {
+        return this.Plaintext;
+    }
+
+    /**
+     * Set Decrypted plaintext. This field is Base64-encoded. In order to get the original plaintext, the Base64-decoding is needed
+     * @param Plaintext Decrypted plaintext. This field is Base64-encoded. In order to get the original plaintext, the Base64-decoding is needed
+     */
+    public void setPlaintext(String Plaintext) {
+        this.Plaintext = Plaintext;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -49,6 +95,8 @@ public class DecryptResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "KeyId", this.KeyId);
+        this.setParamSimple(map, prefix + "Plaintext", this.Plaintext);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

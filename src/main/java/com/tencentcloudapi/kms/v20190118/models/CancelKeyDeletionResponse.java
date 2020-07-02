@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class CancelKeyDeletionResponse extends AbstractModel{
 
     /**
+    * Unique ID of the CMK for which the schedule deletion is canceled
+    */
+    @SerializedName("KeyId")
+    @Expose
+    private String KeyId;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get Unique ID of the CMK for which the schedule deletion is canceled 
+     * @return KeyId Unique ID of the CMK for which the schedule deletion is canceled
+     */
+    public String getKeyId() {
+        return this.KeyId;
+    }
+
+    /**
+     * Set Unique ID of the CMK for which the schedule deletion is canceled
+     * @param KeyId Unique ID of the CMK for which the schedule deletion is canceled
+     */
+    public void setKeyId(String KeyId) {
+        this.KeyId = KeyId;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -49,6 +72,7 @@ public class CancelKeyDeletionResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "KeyId", this.KeyId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

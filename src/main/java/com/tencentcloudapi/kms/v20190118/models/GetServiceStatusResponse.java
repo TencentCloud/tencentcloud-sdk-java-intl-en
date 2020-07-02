@@ -23,11 +23,57 @@ import java.util.HashMap;
 public class GetServiceStatusResponse extends AbstractModel{
 
     /**
+    * Whether the KMS service has been activated. true: activated
+    */
+    @SerializedName("ServiceEnabled")
+    @Expose
+    private Boolean ServiceEnabled;
+
+    /**
+    * Service unavailability type. 0: not purchased; 1: normal; 2: suspended due to arrears; 3: resource released
+    */
+    @SerializedName("InvalidType")
+    @Expose
+    private Long InvalidType;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get Whether the KMS service has been activated. true: activated 
+     * @return ServiceEnabled Whether the KMS service has been activated. true: activated
+     */
+    public Boolean getServiceEnabled() {
+        return this.ServiceEnabled;
+    }
+
+    /**
+     * Set Whether the KMS service has been activated. true: activated
+     * @param ServiceEnabled Whether the KMS service has been activated. true: activated
+     */
+    public void setServiceEnabled(Boolean ServiceEnabled) {
+        this.ServiceEnabled = ServiceEnabled;
+    }
+
+    /**
+     * Get Service unavailability type. 0: not purchased; 1: normal; 2: suspended due to arrears; 3: resource released 
+     * @return InvalidType Service unavailability type. 0: not purchased; 1: normal; 2: suspended due to arrears; 3: resource released
+     */
+    public Long getInvalidType() {
+        return this.InvalidType;
+    }
+
+    /**
+     * Set Service unavailability type. 0: not purchased; 1: normal; 2: suspended due to arrears; 3: resource released
+     * @param InvalidType Service unavailability type. 0: not purchased; 1: normal; 2: suspended due to arrears; 3: resource released
+     */
+    public void setInvalidType(Long InvalidType) {
+        this.InvalidType = InvalidType;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -49,6 +95,8 @@ public class GetServiceStatusResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ServiceEnabled", this.ServiceEnabled);
+        this.setParamSimple(map, prefix + "InvalidType", this.InvalidType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

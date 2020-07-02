@@ -362,6 +362,24 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *This API is used to view route information.
+     * @param req DescribeRouteRequest
+     * @return DescribeRouteResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRouteResponse DescribeRoute(DescribeRouteRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRouteResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRouteResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeRoute"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *API domain name: https://ckafka.tencentcloudapi.com
 This API is used to get the list of topics in a CKafka instance of a user.
      * @param req DescribeTopicRequest

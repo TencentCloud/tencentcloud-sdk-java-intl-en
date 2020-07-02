@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class GetKeyRotationStatusResponse extends AbstractModel{
 
     /**
+    * Whether key rotation is enabled
+    */
+    @SerializedName("KeyRotationEnabled")
+    @Expose
+    private Boolean KeyRotationEnabled;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get Whether key rotation is enabled 
+     * @return KeyRotationEnabled Whether key rotation is enabled
+     */
+    public Boolean getKeyRotationEnabled() {
+        return this.KeyRotationEnabled;
+    }
+
+    /**
+     * Set Whether key rotation is enabled
+     * @param KeyRotationEnabled Whether key rotation is enabled
+     */
+    public void setKeyRotationEnabled(Boolean KeyRotationEnabled) {
+        this.KeyRotationEnabled = KeyRotationEnabled;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -49,6 +72,7 @@ public class GetKeyRotationStatusResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "KeyRotationEnabled", this.KeyRotationEnabled);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

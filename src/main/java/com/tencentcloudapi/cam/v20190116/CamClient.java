@@ -596,6 +596,24 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *This API is used to list the access keys associated with a specified CAM user.
+     * @param req ListAccessKeysRequest
+     * @return ListAccessKeysResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListAccessKeysResponse ListAccessKeys(ListAccessKeysRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListAccessKeysResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListAccessKeysResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ListAccessKeys"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (ListAttachedGroupPolicies) is used to query the list of policies associated with a user group.
      * @param req ListAttachedGroupPoliciesRequest
      * @return ListAttachedGroupPoliciesResponse

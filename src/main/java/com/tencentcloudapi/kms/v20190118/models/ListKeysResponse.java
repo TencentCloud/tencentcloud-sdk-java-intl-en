@@ -23,11 +23,57 @@ import java.util.HashMap;
 public class ListKeysResponse extends AbstractModel{
 
     /**
+    * CMK list array
+    */
+    @SerializedName("Keys")
+    @Expose
+    private Key [] Keys;
+
+    /**
+    * Total number of CMKs
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get CMK list array 
+     * @return Keys CMK list array
+     */
+    public Key [] getKeys() {
+        return this.Keys;
+    }
+
+    /**
+     * Set CMK list array
+     * @param Keys CMK list array
+     */
+    public void setKeys(Key [] Keys) {
+        this.Keys = Keys;
+    }
+
+    /**
+     * Get Total number of CMKs 
+     * @return TotalCount Total number of CMKs
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set Total number of CMKs
+     * @param TotalCount Total number of CMKs
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -49,6 +95,8 @@ public class ListKeysResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Keys.", this.Keys);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

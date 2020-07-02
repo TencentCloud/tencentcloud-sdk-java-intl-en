@@ -23,11 +23,57 @@ import java.util.HashMap;
 public class ScheduleKeyDeletionResponse extends AbstractModel{
 
     /**
+    * Schedule deletion execution time
+    */
+    @SerializedName("DeletionDate")
+    @Expose
+    private Long DeletionDate;
+
+    /**
+    * Unique ID of the CMK scheduled for deletion
+    */
+    @SerializedName("KeyId")
+    @Expose
+    private String KeyId;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get Schedule deletion execution time 
+     * @return DeletionDate Schedule deletion execution time
+     */
+    public Long getDeletionDate() {
+        return this.DeletionDate;
+    }
+
+    /**
+     * Set Schedule deletion execution time
+     * @param DeletionDate Schedule deletion execution time
+     */
+    public void setDeletionDate(Long DeletionDate) {
+        this.DeletionDate = DeletionDate;
+    }
+
+    /**
+     * Get Unique ID of the CMK scheduled for deletion 
+     * @return KeyId Unique ID of the CMK scheduled for deletion
+     */
+    public String getKeyId() {
+        return this.KeyId;
+    }
+
+    /**
+     * Set Unique ID of the CMK scheduled for deletion
+     * @param KeyId Unique ID of the CMK scheduled for deletion
+     */
+    public void setKeyId(String KeyId) {
+        this.KeyId = KeyId;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -49,6 +95,8 @@ public class ScheduleKeyDeletionResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "DeletionDate", this.DeletionDate);
+        this.setParamSimple(map, prefix + "KeyId", this.KeyId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

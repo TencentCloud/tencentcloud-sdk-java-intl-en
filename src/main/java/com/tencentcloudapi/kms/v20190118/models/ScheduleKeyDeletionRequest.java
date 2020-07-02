@@ -23,9 +23,57 @@ import java.util.HashMap;
 public class ScheduleKeyDeletionRequest extends AbstractModel{
 
     /**
+    * Unique CMK ID
+    */
+    @SerializedName("KeyId")
+    @Expose
+    private String KeyId;
+
+    /**
+    * Schedule deletion time range. Value range: [7,30]
+    */
+    @SerializedName("PendingWindowInDays")
+    @Expose
+    private Long PendingWindowInDays;
+
+    /**
+     * Get Unique CMK ID 
+     * @return KeyId Unique CMK ID
+     */
+    public String getKeyId() {
+        return this.KeyId;
+    }
+
+    /**
+     * Set Unique CMK ID
+     * @param KeyId Unique CMK ID
+     */
+    public void setKeyId(String KeyId) {
+        this.KeyId = KeyId;
+    }
+
+    /**
+     * Get Schedule deletion time range. Value range: [7,30] 
+     * @return PendingWindowInDays Schedule deletion time range. Value range: [7,30]
+     */
+    public Long getPendingWindowInDays() {
+        return this.PendingWindowInDays;
+    }
+
+    /**
+     * Set Schedule deletion time range. Value range: [7,30]
+     * @param PendingWindowInDays Schedule deletion time range. Value range: [7,30]
+     */
+    public void setPendingWindowInDays(Long PendingWindowInDays) {
+        this.PendingWindowInDays = PendingWindowInDays;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "KeyId", this.KeyId);
+        this.setParamSimple(map, prefix + "PendingWindowInDays", this.PendingWindowInDays);
 
     }
 }

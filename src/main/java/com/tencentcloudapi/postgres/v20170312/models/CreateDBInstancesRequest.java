@@ -121,11 +121,18 @@ public class CreateDBInstancesRequest extends AbstractModel{
     private Long ActivityId;
 
     /**
-    * 
+    * Instance name (which will be supported in the future)
     */
     @SerializedName("Name")
     @Expose
     private String Name;
+
+    /**
+    * 
+    */
+    @SerializedName("NeedSupportIpv6")
+    @Expose
+    private Long NeedSupportIpv6;
 
     /**
      * Get Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API. 
@@ -352,19 +359,35 @@ public class CreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get Instance name (which will be supported in the future) 
+     * @return Name Instance name (which will be supported in the future)
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Instance name (which will be supported in the future)
+     * @param Name Instance name (which will be supported in the future)
      */
     public void setName(String Name) {
         this.Name = Name;
+    }
+
+    /**
+     * Get  
+     * @return NeedSupportIpv6 
+     */
+    public Long getNeedSupportIpv6() {
+        return this.NeedSupportIpv6;
+    }
+
+    /**
+     * Set 
+     * @param NeedSupportIpv6 
+     */
+    public void setNeedSupportIpv6(Long NeedSupportIpv6) {
+        this.NeedSupportIpv6 = NeedSupportIpv6;
     }
 
     /**
@@ -386,6 +409,7 @@ public class CreateDBInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "ActivityId", this.ActivityId);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "NeedSupportIpv6", this.NeedSupportIpv6);
 
     }
 }

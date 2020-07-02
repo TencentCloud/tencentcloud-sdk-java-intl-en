@@ -51,7 +51,7 @@ public class DescribeDBBackupsRequest extends AbstractModel{
     private String EndTime;
 
     /**
-    * Number of entries returned per page for backup list. Default value: 20. Minimum value: 1. Maximum value: 100.
+    * Number of entries to be returned per page for backup list. Default value: 20. Minimum value: 1. Maximum value: 100. (If this parameter is left empty or 0, the default value will be used)
     */
     @SerializedName("Limit")
     @Expose
@@ -129,16 +129,16 @@ public class DescribeDBBackupsRequest extends AbstractModel{
     }
 
     /**
-     * Get Number of entries returned per page for backup list. Default value: 20. Minimum value: 1. Maximum value: 100. 
-     * @return Limit Number of entries returned per page for backup list. Default value: 20. Minimum value: 1. Maximum value: 100.
+     * Get Number of entries to be returned per page for backup list. Default value: 20. Minimum value: 1. Maximum value: 100. (If this parameter is left empty or 0, the default value will be used) 
+     * @return Limit Number of entries to be returned per page for backup list. Default value: 20. Minimum value: 1. Maximum value: 100. (If this parameter is left empty or 0, the default value will be used)
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of entries returned per page for backup list. Default value: 20. Minimum value: 1. Maximum value: 100.
-     * @param Limit Number of entries returned per page for backup list. Default value: 20. Minimum value: 1. Maximum value: 100.
+     * Set Number of entries to be returned per page for backup list. Default value: 20. Minimum value: 1. Maximum value: 100. (If this parameter is left empty or 0, the default value will be used)
+     * @param Limit Number of entries to be returned per page for backup list. Default value: 20. Minimum value: 1. Maximum value: 100. (If this parameter is left empty or 0, the default value will be used)
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

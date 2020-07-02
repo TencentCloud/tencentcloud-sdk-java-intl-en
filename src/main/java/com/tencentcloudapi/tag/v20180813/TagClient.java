@@ -110,6 +110,24 @@ public class TagClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the tags associated with a resource.
+     * @param req DescribeResourceTagsRequest
+     * @return DescribeResourceTagsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceTagsResponse DescribeResourceTags(DescribeResourceTagsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeResourceTagsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeResourceTagsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeResourceTags"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query tag key and value pairs for existing resources.
      * @param req DescribeResourceTagsByResourceIdsRequest
      * @return DescribeResourceTagsByResourceIdsResponse

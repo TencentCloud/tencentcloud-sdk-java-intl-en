@@ -23,11 +23,195 @@ import java.util.HashMap;
 public class CreateKeyResponse extends AbstractModel{
 
     /**
+    * Globally unique CMK ID
+    */
+    @SerializedName("KeyId")
+    @Expose
+    private String KeyId;
+
+    /**
+    * Alias that makes a key more recognizable and understandable
+    */
+    @SerializedName("Alias")
+    @Expose
+    private String Alias;
+
+    /**
+    * Key creation time in UNIX timestamp format
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private Long CreateTime;
+
+    /**
+    * CMK description
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
+    * CMK status
+    */
+    @SerializedName("KeyState")
+    @Expose
+    private String KeyState;
+
+    /**
+    * CMK usage
+    */
+    @SerializedName("KeyUsage")
+    @Expose
+    private String KeyUsage;
+
+    /**
+    * Tag operation return code. 0: success; 1: internal error; 2: business processing error
+    */
+    @SerializedName("TagCode")
+    @Expose
+    private Long TagCode;
+
+    /**
+    * Tag operation return information
+    */
+    @SerializedName("TagMsg")
+    @Expose
+    private String TagMsg;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get Globally unique CMK ID 
+     * @return KeyId Globally unique CMK ID
+     */
+    public String getKeyId() {
+        return this.KeyId;
+    }
+
+    /**
+     * Set Globally unique CMK ID
+     * @param KeyId Globally unique CMK ID
+     */
+    public void setKeyId(String KeyId) {
+        this.KeyId = KeyId;
+    }
+
+    /**
+     * Get Alias that makes a key more recognizable and understandable 
+     * @return Alias Alias that makes a key more recognizable and understandable
+     */
+    public String getAlias() {
+        return this.Alias;
+    }
+
+    /**
+     * Set Alias that makes a key more recognizable and understandable
+     * @param Alias Alias that makes a key more recognizable and understandable
+     */
+    public void setAlias(String Alias) {
+        this.Alias = Alias;
+    }
+
+    /**
+     * Get Key creation time in UNIX timestamp format 
+     * @return CreateTime Key creation time in UNIX timestamp format
+     */
+    public Long getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set Key creation time in UNIX timestamp format
+     * @param CreateTime Key creation time in UNIX timestamp format
+     */
+    public void setCreateTime(Long CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get CMK description 
+     * @return Description CMK description
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set CMK description
+     * @param Description CMK description
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
+     * Get CMK status 
+     * @return KeyState CMK status
+     */
+    public String getKeyState() {
+        return this.KeyState;
+    }
+
+    /**
+     * Set CMK status
+     * @param KeyState CMK status
+     */
+    public void setKeyState(String KeyState) {
+        this.KeyState = KeyState;
+    }
+
+    /**
+     * Get CMK usage 
+     * @return KeyUsage CMK usage
+     */
+    public String getKeyUsage() {
+        return this.KeyUsage;
+    }
+
+    /**
+     * Set CMK usage
+     * @param KeyUsage CMK usage
+     */
+    public void setKeyUsage(String KeyUsage) {
+        this.KeyUsage = KeyUsage;
+    }
+
+    /**
+     * Get Tag operation return code. 0: success; 1: internal error; 2: business processing error 
+     * @return TagCode Tag operation return code. 0: success; 1: internal error; 2: business processing error
+     */
+    public Long getTagCode() {
+        return this.TagCode;
+    }
+
+    /**
+     * Set Tag operation return code. 0: success; 1: internal error; 2: business processing error
+     * @param TagCode Tag operation return code. 0: success; 1: internal error; 2: business processing error
+     */
+    public void setTagCode(Long TagCode) {
+        this.TagCode = TagCode;
+    }
+
+    /**
+     * Get Tag operation return information 
+     * @return TagMsg Tag operation return information
+     */
+    public String getTagMsg() {
+        return this.TagMsg;
+    }
+
+    /**
+     * Set Tag operation return information
+     * @param TagMsg Tag operation return information
+     */
+    public void setTagMsg(String TagMsg) {
+        this.TagMsg = TagMsg;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -49,6 +233,14 @@ public class CreateKeyResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "KeyId", this.KeyId);
+        this.setParamSimple(map, prefix + "Alias", this.Alias);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "KeyState", this.KeyState);
+        this.setParamSimple(map, prefix + "KeyUsage", this.KeyUsage);
+        this.setParamSimple(map, prefix + "TagCode", this.TagCode);
+        this.setParamSimple(map, prefix + "TagMsg", this.TagMsg);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

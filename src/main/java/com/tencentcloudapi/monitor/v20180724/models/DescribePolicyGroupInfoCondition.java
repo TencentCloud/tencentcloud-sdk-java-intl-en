@@ -65,7 +65,7 @@ public class DescribePolicyGroupInfoCondition extends AbstractModel{
     private Long AlarmNotifyType;
 
     /**
-    * Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm is triggered only once. The value >0 indicates that an alarm is triggered at the interval of triggerTime.
+    * Alarm sending period in seconds. If the value is less than 0, no alarm will be triggered. If the value is 0, an alarm will be triggered only once. If the value is greater than 0, an alarm will be triggered at the interval of `triggerTime`.
     */
     @SerializedName("AlarmNotifyPeriod")
     @Expose
@@ -73,7 +73,6 @@ public class DescribePolicyGroupInfoCondition extends AbstractModel{
 
     /**
     * Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. The value 7 indicates day-on-day increase. The value 8 indicates day-on-day decrease. The value 9 indicates week-on-week increase. The value 10 indicates week-on-week decrease. The value 11 indicates periodical increase. The value 12 indicates periodical decrease.
-Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("CalcType")
     @Expose
@@ -81,7 +80,6 @@ Note: This field may return null, indicating that no valid value was found.
 
     /**
     * Threshold.
-Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("CalcValue")
     @Expose
@@ -89,11 +87,17 @@ Note: This field may return null, indicating that no valid value was found.
 
     /**
     * Duration at which an alarm will be triggered in seconds.
-Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("ContinueTime")
     @Expose
     private Long ContinueTime;
+
+    /**
+    * Alarm metric name.
+    */
+    @SerializedName("MetricName")
+    @Expose
+    private String MetricName;
 
     /**
      * Get Metric name. 
@@ -192,26 +196,24 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm is triggered only once. The value >0 indicates that an alarm is triggered at the interval of triggerTime. 
-     * @return AlarmNotifyPeriod Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm is triggered only once. The value >0 indicates that an alarm is triggered at the interval of triggerTime.
+     * Get Alarm sending period in seconds. If the value is less than 0, no alarm will be triggered. If the value is 0, an alarm will be triggered only once. If the value is greater than 0, an alarm will be triggered at the interval of `triggerTime`. 
+     * @return AlarmNotifyPeriod Alarm sending period in seconds. If the value is less than 0, no alarm will be triggered. If the value is 0, an alarm will be triggered only once. If the value is greater than 0, an alarm will be triggered at the interval of `triggerTime`.
      */
     public Long getAlarmNotifyPeriod() {
         return this.AlarmNotifyPeriod;
     }
 
     /**
-     * Set Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm is triggered only once. The value >0 indicates that an alarm is triggered at the interval of triggerTime.
-     * @param AlarmNotifyPeriod Alarm sending period in seconds. The value <0 indicates that no alarm will be triggered. The value 0 indicates that an alarm is triggered only once. The value >0 indicates that an alarm is triggered at the interval of triggerTime.
+     * Set Alarm sending period in seconds. If the value is less than 0, no alarm will be triggered. If the value is 0, an alarm will be triggered only once. If the value is greater than 0, an alarm will be triggered at the interval of `triggerTime`.
+     * @param AlarmNotifyPeriod Alarm sending period in seconds. If the value is less than 0, no alarm will be triggered. If the value is 0, an alarm will be triggered only once. If the value is greater than 0, an alarm will be triggered at the interval of `triggerTime`.
      */
     public void setAlarmNotifyPeriod(Long AlarmNotifyPeriod) {
         this.AlarmNotifyPeriod = AlarmNotifyPeriod;
     }
 
     /**
-     * Get Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. The value 7 indicates day-on-day increase. The value 8 indicates day-on-day decrease. The value 9 indicates week-on-week increase. The value 10 indicates week-on-week decrease. The value 11 indicates periodical increase. The value 12 indicates periodical decrease.
-Note: This field may return null, indicating that no valid value was found. 
+     * Get Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. The value 7 indicates day-on-day increase. The value 8 indicates day-on-day decrease. The value 9 indicates week-on-week increase. The value 10 indicates week-on-week decrease. The value 11 indicates periodical increase. The value 12 indicates periodical decrease. 
      * @return CalcType Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. The value 7 indicates day-on-day increase. The value 8 indicates day-on-day decrease. The value 9 indicates week-on-week increase. The value 10 indicates week-on-week decrease. The value 11 indicates periodical increase. The value 12 indicates periodical decrease.
-Note: This field may return null, indicating that no valid value was found.
      */
     public Long getCalcType() {
         return this.CalcType;
@@ -219,19 +221,15 @@ Note: This field may return null, indicating that no valid value was found.
 
     /**
      * Set Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. The value 7 indicates day-on-day increase. The value 8 indicates day-on-day decrease. The value 9 indicates week-on-week increase. The value 10 indicates week-on-week decrease. The value 11 indicates periodical increase. The value 12 indicates periodical decrease.
-Note: This field may return null, indicating that no valid value was found.
      * @param CalcType Comparative type. The value 1 indicates greater than. The value 2 indicates greater than or equal to. The value 3 indicates smaller than. The value 4 indicates smaller than or equal to. The value 5 indicates equal to. The value 6 indicates not equal to. The value 7 indicates day-on-day increase. The value 8 indicates day-on-day decrease. The value 9 indicates week-on-week increase. The value 10 indicates week-on-week decrease. The value 11 indicates periodical increase. The value 12 indicates periodical decrease.
-Note: This field may return null, indicating that no valid value was found.
      */
     public void setCalcType(Long CalcType) {
         this.CalcType = CalcType;
     }
 
     /**
-     * Get Threshold.
-Note: This field may return null, indicating that no valid value was found. 
+     * Get Threshold. 
      * @return CalcValue Threshold.
-Note: This field may return null, indicating that no valid value was found.
      */
     public String getCalcValue() {
         return this.CalcValue;
@@ -239,19 +237,15 @@ Note: This field may return null, indicating that no valid value was found.
 
     /**
      * Set Threshold.
-Note: This field may return null, indicating that no valid value was found.
      * @param CalcValue Threshold.
-Note: This field may return null, indicating that no valid value was found.
      */
     public void setCalcValue(String CalcValue) {
         this.CalcValue = CalcValue;
     }
 
     /**
-     * Get Duration at which an alarm will be triggered in seconds.
-Note: This field may return null, indicating that no valid value was found. 
+     * Get Duration at which an alarm will be triggered in seconds. 
      * @return ContinueTime Duration at which an alarm will be triggered in seconds.
-Note: This field may return null, indicating that no valid value was found.
      */
     public Long getContinueTime() {
         return this.ContinueTime;
@@ -259,12 +253,26 @@ Note: This field may return null, indicating that no valid value was found.
 
     /**
      * Set Duration at which an alarm will be triggered in seconds.
-Note: This field may return null, indicating that no valid value was found.
      * @param ContinueTime Duration at which an alarm will be triggered in seconds.
-Note: This field may return null, indicating that no valid value was found.
      */
     public void setContinueTime(Long ContinueTime) {
         this.ContinueTime = ContinueTime;
+    }
+
+    /**
+     * Get Alarm metric name. 
+     * @return MetricName Alarm metric name.
+     */
+    public String getMetricName() {
+        return this.MetricName;
+    }
+
+    /**
+     * Set Alarm metric name.
+     * @param MetricName Alarm metric name.
+     */
+    public void setMetricName(String MetricName) {
+        this.MetricName = MetricName;
     }
 
     /**
@@ -281,6 +289,7 @@ Note: This field may return null, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "CalcType", this.CalcType);
         this.setParamSimple(map, prefix + "CalcValue", this.CalcValue);
         this.setParamSimple(map, prefix + "ContinueTime", this.ContinueTime);
+        this.setParamSimple(map, prefix + "MetricName", this.MetricName);
 
     }
 }

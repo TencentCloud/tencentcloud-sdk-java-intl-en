@@ -23,9 +23,105 @@ import java.util.HashMap;
 public class ReEncryptRequest extends AbstractModel{
 
     /**
+    * Ciphertext to be re-encrypted
+    */
+    @SerializedName("CiphertextBlob")
+    @Expose
+    private String CiphertextBlob;
+
+    /**
+    * CMK used for re-encryption. If this parameter is empty, the ciphertext will be re-encrypted by using the original CMK (as long as the key is not rotated, the ciphertext will not be refreshed)
+    */
+    @SerializedName("DestinationKeyId")
+    @Expose
+    private String DestinationKeyId;
+
+    /**
+    * JSON string of the key-value pair used during ciphertext encryption by `CiphertextBlob`. If not used during encryption, this parameter will be empty
+    */
+    @SerializedName("SourceEncryptionContext")
+    @Expose
+    private String SourceEncryptionContext;
+
+    /**
+    * JSON string of the key-value pair used during re-encryption. If this field is used, the same string should be entered when the returned new ciphertext is decrypted
+    */
+    @SerializedName("DestinationEncryptionContext")
+    @Expose
+    private String DestinationEncryptionContext;
+
+    /**
+     * Get Ciphertext to be re-encrypted 
+     * @return CiphertextBlob Ciphertext to be re-encrypted
+     */
+    public String getCiphertextBlob() {
+        return this.CiphertextBlob;
+    }
+
+    /**
+     * Set Ciphertext to be re-encrypted
+     * @param CiphertextBlob Ciphertext to be re-encrypted
+     */
+    public void setCiphertextBlob(String CiphertextBlob) {
+        this.CiphertextBlob = CiphertextBlob;
+    }
+
+    /**
+     * Get CMK used for re-encryption. If this parameter is empty, the ciphertext will be re-encrypted by using the original CMK (as long as the key is not rotated, the ciphertext will not be refreshed) 
+     * @return DestinationKeyId CMK used for re-encryption. If this parameter is empty, the ciphertext will be re-encrypted by using the original CMK (as long as the key is not rotated, the ciphertext will not be refreshed)
+     */
+    public String getDestinationKeyId() {
+        return this.DestinationKeyId;
+    }
+
+    /**
+     * Set CMK used for re-encryption. If this parameter is empty, the ciphertext will be re-encrypted by using the original CMK (as long as the key is not rotated, the ciphertext will not be refreshed)
+     * @param DestinationKeyId CMK used for re-encryption. If this parameter is empty, the ciphertext will be re-encrypted by using the original CMK (as long as the key is not rotated, the ciphertext will not be refreshed)
+     */
+    public void setDestinationKeyId(String DestinationKeyId) {
+        this.DestinationKeyId = DestinationKeyId;
+    }
+
+    /**
+     * Get JSON string of the key-value pair used during ciphertext encryption by `CiphertextBlob`. If not used during encryption, this parameter will be empty 
+     * @return SourceEncryptionContext JSON string of the key-value pair used during ciphertext encryption by `CiphertextBlob`. If not used during encryption, this parameter will be empty
+     */
+    public String getSourceEncryptionContext() {
+        return this.SourceEncryptionContext;
+    }
+
+    /**
+     * Set JSON string of the key-value pair used during ciphertext encryption by `CiphertextBlob`. If not used during encryption, this parameter will be empty
+     * @param SourceEncryptionContext JSON string of the key-value pair used during ciphertext encryption by `CiphertextBlob`. If not used during encryption, this parameter will be empty
+     */
+    public void setSourceEncryptionContext(String SourceEncryptionContext) {
+        this.SourceEncryptionContext = SourceEncryptionContext;
+    }
+
+    /**
+     * Get JSON string of the key-value pair used during re-encryption. If this field is used, the same string should be entered when the returned new ciphertext is decrypted 
+     * @return DestinationEncryptionContext JSON string of the key-value pair used during re-encryption. If this field is used, the same string should be entered when the returned new ciphertext is decrypted
+     */
+    public String getDestinationEncryptionContext() {
+        return this.DestinationEncryptionContext;
+    }
+
+    /**
+     * Set JSON string of the key-value pair used during re-encryption. If this field is used, the same string should be entered when the returned new ciphertext is decrypted
+     * @param DestinationEncryptionContext JSON string of the key-value pair used during re-encryption. If this field is used, the same string should be entered when the returned new ciphertext is decrypted
+     */
+    public void setDestinationEncryptionContext(String DestinationEncryptionContext) {
+        this.DestinationEncryptionContext = DestinationEncryptionContext;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "CiphertextBlob", this.CiphertextBlob);
+        this.setParamSimple(map, prefix + "DestinationKeyId", this.DestinationKeyId);
+        this.setParamSimple(map, prefix + "SourceEncryptionContext", this.SourceEncryptionContext);
+        this.setParamSimple(map, prefix + "DestinationEncryptionContext", this.DestinationEncryptionContext);
 
     }
 }

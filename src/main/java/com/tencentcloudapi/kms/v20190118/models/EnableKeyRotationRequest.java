@@ -23,9 +23,33 @@ import java.util.HashMap;
 public class EnableKeyRotationRequest extends AbstractModel{
 
     /**
+    * Unique CMK ID
+    */
+    @SerializedName("KeyId")
+    @Expose
+    private String KeyId;
+
+    /**
+     * Get Unique CMK ID 
+     * @return KeyId Unique CMK ID
+     */
+    public String getKeyId() {
+        return this.KeyId;
+    }
+
+    /**
+     * Set Unique CMK ID
+     * @param KeyId Unique CMK ID
+     */
+    public void setKeyId(String KeyId) {
+        this.KeyId = KeyId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "KeyId", this.KeyId);
 
     }
 }
