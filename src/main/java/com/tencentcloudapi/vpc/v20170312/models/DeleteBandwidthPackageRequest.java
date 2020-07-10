@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeleteBandwidthPackageRequest extends AbstractModel{
 
     /**
-    * The bwpID of the bandwidth package to be deleted
+    * The unique ID of the bandwidth package to be deleted.
     */
     @SerializedName("BandwidthPackageId")
     @Expose
     private String BandwidthPackageId;
 
     /**
-     * Get The bwpID of the bandwidth package to be deleted 
-     * @return BandwidthPackageId The bwpID of the bandwidth package to be deleted
+     * Get The unique ID of the bandwidth package to be deleted. 
+     * @return BandwidthPackageId The unique ID of the bandwidth package to be deleted.
      */
     public String getBandwidthPackageId() {
         return this.BandwidthPackageId;
     }
 
     /**
-     * Set The bwpID of the bandwidth package to be deleted
-     * @param BandwidthPackageId The bwpID of the bandwidth package to be deleted
+     * Set The unique ID of the bandwidth package to be deleted.
+     * @param BandwidthPackageId The unique ID of the bandwidth package to be deleted.
      */
     public void setBandwidthPackageId(String BandwidthPackageId) {
         this.BandwidthPackageId = BandwidthPackageId;

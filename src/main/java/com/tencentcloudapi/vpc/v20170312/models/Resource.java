@@ -30,14 +30,14 @@ public class Resource extends AbstractModel{
     private String ResourceType;
 
     /**
-    * The bandwidth package ResourceId, such as `eip-xxxx`, `lb-xxxx`
+    * The bandwidth package ID, such as 'eip-xxxx' and 'lb-xxxx'.
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * Bandwidth package resource IP
+    * The bandwidth package resource IP.
     */
     @SerializedName("AddressIp")
     @Expose
@@ -60,32 +60,32 @@ public class Resource extends AbstractModel{
     }
 
     /**
-     * Get The bandwidth package ResourceId, such as `eip-xxxx`, `lb-xxxx` 
-     * @return ResourceId The bandwidth package ResourceId, such as `eip-xxxx`, `lb-xxxx`
+     * Get The bandwidth package ID, such as 'eip-xxxx' and 'lb-xxxx'. 
+     * @return ResourceId The bandwidth package ID, such as 'eip-xxxx' and 'lb-xxxx'.
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set The bandwidth package ResourceId, such as `eip-xxxx`, `lb-xxxx`
-     * @param ResourceId The bandwidth package ResourceId, such as `eip-xxxx`, `lb-xxxx`
+     * Set The bandwidth package ID, such as 'eip-xxxx' and 'lb-xxxx'.
+     * @param ResourceId The bandwidth package ID, such as 'eip-xxxx' and 'lb-xxxx'.
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get Bandwidth package resource IP 
-     * @return AddressIp Bandwidth package resource IP
+     * Get The bandwidth package resource IP. 
+     * @return AddressIp The bandwidth package resource IP.
      */
     public String getAddressIp() {
         return this.AddressIp;
     }
 
     /**
-     * Set Bandwidth package resource IP
-     * @param AddressIp Bandwidth package resource IP
+     * Set The bandwidth package resource IP.
+     * @param AddressIp The bandwidth package resource IP.
      */
     public void setAddressIp(String AddressIp) {
         this.AddressIp = AddressIp;

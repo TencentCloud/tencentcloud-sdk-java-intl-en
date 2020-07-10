@@ -57,6 +57,24 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a monthly subscription TencentDB for MongoDB instance. The purchasable specifications supported by this API can be obtained through the `DescribeSpecInfo` API.
+     * @param req CreateDBInstanceRequest
+     * @return CreateDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDBInstanceResponse CreateDBInstance(CreateDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDBInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDBInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateDBInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a pay-as-you-go TencentDB for MongoDB instance.
      * @param req CreateDBInstanceHourRequest
      * @return CreateDBInstanceHourResponse
@@ -122,6 +140,24 @@ public class MongodbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDBBackupsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeDBBackups"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get details of purchase, renewal, and specification adjustment orders of a MongoDB instance.
+     * @param req DescribeDBInstanceDealRequest
+     * @return DescribeDBInstanceDealResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBInstanceDealResponse DescribeDBInstanceDeal(DescribeDBInstanceDealRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBInstanceDealResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBInstanceDealResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDBInstanceDeal"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -219,6 +255,60 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query price of instance creation. The `region` parameter must be passed in this API, otherwise verification will fail. This API allows queries only for purchasable instance specifications.
+     * @param req InquirePriceCreateDBInstancesRequest
+     * @return InquirePriceCreateDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquirePriceCreateDBInstancesResponse InquirePriceCreateDBInstances(InquirePriceCreateDBInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquirePriceCreateDBInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquirePriceCreateDBInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "InquirePriceCreateDBInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query price of instance specification adjustment.
+     * @param req InquirePriceModifyDBInstanceSpecRequest
+     * @return InquirePriceModifyDBInstanceSpecResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquirePriceModifyDBInstanceSpecResponse InquirePriceModifyDBInstanceSpec(InquirePriceModifyDBInstanceSpecRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquirePriceModifyDBInstanceSpecResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquirePriceModifyDBInstanceSpecResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "InquirePriceModifyDBInstanceSpec"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the renewal price of a monthly subscription instance.
+     * @param req InquirePriceRenewDBInstancesRequest
+     * @return InquirePriceRenewDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquirePriceRenewDBInstancesResponse InquirePriceRenewDBInstances(InquirePriceRenewDBInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquirePriceRenewDBInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquirePriceRenewDBInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "InquirePriceRenewDBInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to isolate a pay-as-you-go TencentDB for MongoDB instance. An isolated instance is retained in the recycle bin and data can no longer be written to it. After it is isolated for a certain period of time, it will be completely deleted. For the retention period in the recycle bin, please see the terms of service for pay-as-you-go billing. Isolated pay-as-you-go instances cannot be recovered, so please proceed with caution.
      * @param req IsolateDBInstanceRequest
      * @return IsolateDBInstanceResponse
@@ -284,6 +374,24 @@ public class MongodbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RenameInstanceResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "RenameInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to renew a monthly subscription TencentDB instance. Only monthly subscription instances are supported, while pay-as-you-go instances do not need to be renewed.
+     * @param req RenewDBInstancesRequest
+     * @return RenewDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewDBInstancesResponse RenewDBInstances(RenewDBInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RenewDBInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<RenewDBInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "RenewDBInstances"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

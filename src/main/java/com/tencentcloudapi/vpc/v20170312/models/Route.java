@@ -93,6 +93,20 @@ Users can only add and operate USER-type routes.
     private String RouteTableId;
 
     /**
+    * Destination IPv6 IP range, which cannot be included in VPC IP range, such as 2402:4e00:1000:810b::/64.
+    */
+    @SerializedName("DestinationIpv6CidrBlock")
+    @Expose
+    private String DestinationIpv6CidrBlock;
+
+    /**
+    * Unique routing policy ID.
+    */
+    @SerializedName("RouteItemId")
+    @Expose
+    private String RouteItemId;
+
+    /**
      * Get Destination IP range, such as 112.20.51.0/24. Values cannot be in the VPC IP range. 
      * @return DestinationCidrBlock Destination IP range, such as 112.20.51.0/24. Values cannot be in the VPC IP range.
      */
@@ -277,6 +291,38 @@ Users can only add and operate USER-type routes.
     }
 
     /**
+     * Get Destination IPv6 IP range, which cannot be included in VPC IP range, such as 2402:4e00:1000:810b::/64. 
+     * @return DestinationIpv6CidrBlock Destination IPv6 IP range, which cannot be included in VPC IP range, such as 2402:4e00:1000:810b::/64.
+     */
+    public String getDestinationIpv6CidrBlock() {
+        return this.DestinationIpv6CidrBlock;
+    }
+
+    /**
+     * Set Destination IPv6 IP range, which cannot be included in VPC IP range, such as 2402:4e00:1000:810b::/64.
+     * @param DestinationIpv6CidrBlock Destination IPv6 IP range, which cannot be included in VPC IP range, such as 2402:4e00:1000:810b::/64.
+     */
+    public void setDestinationIpv6CidrBlock(String DestinationIpv6CidrBlock) {
+        this.DestinationIpv6CidrBlock = DestinationIpv6CidrBlock;
+    }
+
+    /**
+     * Get Unique routing policy ID. 
+     * @return RouteItemId Unique routing policy ID.
+     */
+    public String getRouteItemId() {
+        return this.RouteItemId;
+    }
+
+    /**
+     * Set Unique routing policy ID.
+     * @param RouteItemId Unique routing policy ID.
+     */
+    public void setRouteItemId(String RouteItemId) {
+        this.RouteItemId = RouteItemId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -288,6 +334,8 @@ Users can only add and operate USER-type routes.
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
         this.setParamSimple(map, prefix + "RouteType", this.RouteType);
         this.setParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
+        this.setParamSimple(map, prefix + "DestinationIpv6CidrBlock", this.DestinationIpv6CidrBlock);
+        this.setParamSimple(map, prefix + "RouteItemId", this.RouteItemId);
 
     }
 }

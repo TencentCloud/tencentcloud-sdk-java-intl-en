@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class BlockedIP extends AbstractModel{
 
     /**
-    * 黑名单IP
+    * Blacklisted IP
     */
     @SerializedName("IP")
     @Expose
     private String IP;
 
     /**
-    * 加入黑名单的时间
+    * Blacklisted time
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 过期时间
+    * Expiration time
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-     * Get 黑名单IP 
-     * @return IP 黑名单IP
+     * Get Blacklisted IP 
+     * @return IP Blacklisted IP
      */
     public String getIP() {
         return this.IP;
     }
 
     /**
-     * Set 黑名单IP
-     * @param IP 黑名单IP
+     * Set Blacklisted IP
+     * @param IP Blacklisted IP
      */
     public void setIP(String IP) {
         this.IP = IP;
     }
 
     /**
-     * Get 加入黑名单的时间 
-     * @return CreateTime 加入黑名单的时间
+     * Get Blacklisted time 
+     * @return CreateTime Blacklisted time
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 加入黑名单的时间
-     * @param CreateTime 加入黑名单的时间
+     * Set Blacklisted time
+     * @param CreateTime Blacklisted time
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 过期时间 
-     * @return ExpireTime 过期时间
+     * Get Expiration time 
+     * @return ExpireTime Expiration time
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 过期时间
-     * @param ExpireTime 过期时间
+     * Set Expiration time
+     * @param ExpireTime Expiration time
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;

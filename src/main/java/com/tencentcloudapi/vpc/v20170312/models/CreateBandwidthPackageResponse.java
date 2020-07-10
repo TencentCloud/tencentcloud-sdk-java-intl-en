@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreateBandwidthPackageResponse extends AbstractModel{
 
     /**
-    * The ID of the bandwidth package
+    * The unique ID of the bandwidth package.
     */
     @SerializedName("BandwidthPackageId")
     @Expose
     private String BandwidthPackageId;
 
     /**
-    * The IDs of the bandwidth package (valid when the applied number is greater than 1)
+    * The unique ID list of the bandwidth package (effective only when you apply for more than 1 bandwidth packages).
     */
     @SerializedName("BandwidthPackageIds")
     @Expose
@@ -44,32 +44,32 @@ public class CreateBandwidthPackageResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get The ID of the bandwidth package 
-     * @return BandwidthPackageId The ID of the bandwidth package
+     * Get The unique ID of the bandwidth package. 
+     * @return BandwidthPackageId The unique ID of the bandwidth package.
      */
     public String getBandwidthPackageId() {
         return this.BandwidthPackageId;
     }
 
     /**
-     * Set The ID of the bandwidth package
-     * @param BandwidthPackageId The ID of the bandwidth package
+     * Set The unique ID of the bandwidth package.
+     * @param BandwidthPackageId The unique ID of the bandwidth package.
      */
     public void setBandwidthPackageId(String BandwidthPackageId) {
         this.BandwidthPackageId = BandwidthPackageId;
     }
 
     /**
-     * Get The IDs of the bandwidth package (valid when the applied number is greater than 1) 
-     * @return BandwidthPackageIds The IDs of the bandwidth package (valid when the applied number is greater than 1)
+     * Get The unique ID list of the bandwidth package (effective only when you apply for more than 1 bandwidth packages). 
+     * @return BandwidthPackageIds The unique ID list of the bandwidth package (effective only when you apply for more than 1 bandwidth packages).
      */
     public String [] getBandwidthPackageIds() {
         return this.BandwidthPackageIds;
     }
 
     /**
-     * Set The IDs of the bandwidth package (valid when the applied number is greater than 1)
-     * @param BandwidthPackageIds The IDs of the bandwidth package (valid when the applied number is greater than 1)
+     * Set The unique ID list of the bandwidth package (effective only when you apply for more than 1 bandwidth packages).
+     * @param BandwidthPackageIds The unique ID list of the bandwidth package (effective only when you apply for more than 1 bandwidth packages).
      */
     public void setBandwidthPackageIds(String [] BandwidthPackageIds) {
         this.BandwidthPackageIds = BandwidthPackageIds;

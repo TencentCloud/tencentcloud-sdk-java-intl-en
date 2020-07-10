@@ -44,7 +44,7 @@ public class DescribeLogSearchRequest extends AbstractModel{
     private String ServiceId;
 
     /**
-    * Exact search by `apiid` or `reqid`
+    * Reserved field
     */
     @SerializedName("Filters")
     @Expose
@@ -72,14 +72,24 @@ public class DescribeLogSearchRequest extends AbstractModel{
     private String Sort;
 
     /**
-    * Fuzzy search for log by keyword
+    * Reserved field
     */
     @SerializedName("Query")
     @Expose
     private String Query;
 
     /**
-    * 
+    * Search criterion. Valid values:
+req_id: "="
+api_id: "="
+cip: "="
+uip: ":"
+err_msg: ":"
+rsp_st: "=", "!=", ":", ">", "<"
+req_t: ">=", "<="
+
+Note:
+":" indicates included, and "!=" indicates not equal to. For the meanings of fields, please see the `LogSet` description of the output parameter
     */
     @SerializedName("LogQuerys")
     @Expose
@@ -134,16 +144,16 @@ public class DescribeLogSearchRequest extends AbstractModel{
     }
 
     /**
-     * Get Exact search by `apiid` or `reqid` 
-     * @return Filters Exact search by `apiid` or `reqid`
+     * Get Reserved field 
+     * @return Filters Reserved field
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Exact search by `apiid` or `reqid`
-     * @param Filters Exact search by `apiid` or `reqid`
+     * Set Reserved field
+     * @param Filters Reserved field
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
@@ -198,32 +208,72 @@ public class DescribeLogSearchRequest extends AbstractModel{
     }
 
     /**
-     * Get Fuzzy search for log by keyword 
-     * @return Query Fuzzy search for log by keyword
+     * Get Reserved field 
+     * @return Query Reserved field
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set Fuzzy search for log by keyword
-     * @param Query Fuzzy search for log by keyword
+     * Set Reserved field
+     * @param Query Reserved field
      */
     public void setQuery(String Query) {
         this.Query = Query;
     }
 
     /**
-     * Get  
-     * @return LogQuerys 
+     * Get Search criterion. Valid values:
+req_id: "="
+api_id: "="
+cip: "="
+uip: ":"
+err_msg: ":"
+rsp_st: "=", "!=", ":", ">", "<"
+req_t: ">=", "<="
+
+Note:
+":" indicates included, and "!=" indicates not equal to. For the meanings of fields, please see the `LogSet` description of the output parameter 
+     * @return LogQuerys Search criterion. Valid values:
+req_id: "="
+api_id: "="
+cip: "="
+uip: ":"
+err_msg: ":"
+rsp_st: "=", "!=", ":", ">", "<"
+req_t: ">=", "<="
+
+Note:
+":" indicates included, and "!=" indicates not equal to. For the meanings of fields, please see the `LogSet` description of the output parameter
      */
     public LogQuery [] getLogQuerys() {
         return this.LogQuerys;
     }
 
     /**
-     * Set 
-     * @param LogQuerys 
+     * Set Search criterion. Valid values:
+req_id: "="
+api_id: "="
+cip: "="
+uip: ":"
+err_msg: ":"
+rsp_st: "=", "!=", ":", ">", "<"
+req_t: ">=", "<="
+
+Note:
+":" indicates included, and "!=" indicates not equal to. For the meanings of fields, please see the `LogSet` description of the output parameter
+     * @param LogQuerys Search criterion. Valid values:
+req_id: "="
+api_id: "="
+cip: "="
+uip: ":"
+err_msg: ":"
+rsp_st: "=", "!=", ":", ">", "<"
+req_t: ">=", "<="
+
+Note:
+":" indicates included, and "!=" indicates not equal to. For the meanings of fields, please see the `LogSet` description of the output parameter
      */
     public void setLogQuerys(LogQuery [] LogQuerys) {
         this.LogQuerys = LogQuerys;

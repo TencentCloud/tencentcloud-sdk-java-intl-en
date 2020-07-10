@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class OutputGroupsInfo extends AbstractModel{
 
     /**
-    * Channel output group name, which can contain 1–32 letters, digits, and underscores and must be unique at the channel level.
+    * 
     */
     @SerializedName("Name")
     @Expose
@@ -31,62 +31,66 @@ public class OutputGroupsInfo extends AbstractModel{
 
     /**
     * Output protocol type.
-Valid values: HLS/DASH/RTP/RTMP/HLS_ARCHIVE/DASH_ARCHIVE.
+Valid values: HLS, DASH, HLS_ARCHIVE, HLS_MEDIA_PACKAGE, DASH_MEDIA_PACKAGE.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Output information.
-Quantity limit: [1,1] for RTMP/RTP; [1,10] for HLS/DASH.
+    * 
     */
     @SerializedName("Outputs")
     @Expose
     private OutputInfo [] Outputs;
 
     /**
-    * Relay destination address. Quantity limit: [1,2].
+    * 
     */
     @SerializedName("Destinations")
     @Expose
     private DestinationInfo [] Destinations;
 
     /**
-    * HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("HlsRemuxSettings")
     @Expose
     private HlsRemuxSettingsInfo HlsRemuxSettings;
 
     /**
-    * DASH protocol configuration information, which takes effect only for DASH/DSAH_ARCHIVE.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("DashRemuxSettings")
     @Expose
     private DashRemuxSettingsInfo DashRemuxSettings;
 
     /**
-    * DRM configuration information.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("DrmSettings")
     @Expose
     private DrmSettingsInfo DrmSettings;
 
     /**
-     * Get Channel output group name, which can contain 1–32 letters, digits, and underscores and must be unique at the channel level. 
-     * @return Name Channel output group name, which can contain 1–32 letters, digits, and underscores and must be unique at the channel level.
+    * Configuration information of media packaging, which is required when `Type` is set to MediaPackage.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MediaPackageSettings")
+    @Expose
+    private MediaPackageSettingsInfo MediaPackageSettings;
+
+    /**
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Channel output group name, which can contain 1–32 letters, digits, and underscores and must be unique at the channel level.
-     * @param Name Channel output group name, which can contain 1–32 letters, digits, and underscores and must be unique at the channel level.
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -94,9 +98,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Output protocol type.
-Valid values: HLS/DASH/RTP/RTMP/HLS_ARCHIVE/DASH_ARCHIVE. 
+Valid values: HLS, DASH, HLS_ARCHIVE, HLS_MEDIA_PACKAGE, DASH_MEDIA_PACKAGE. 
      * @return Type Output protocol type.
-Valid values: HLS/DASH/RTP/RTMP/HLS_ARCHIVE/DASH_ARCHIVE.
+Valid values: HLS, DASH, HLS_ARCHIVE, HLS_MEDIA_PACKAGE, DASH_MEDIA_PACKAGE.
      */
     public String getType() {
         return this.Type;
@@ -104,108 +108,112 @@ Valid values: HLS/DASH/RTP/RTMP/HLS_ARCHIVE/DASH_ARCHIVE.
 
     /**
      * Set Output protocol type.
-Valid values: HLS/DASH/RTP/RTMP/HLS_ARCHIVE/DASH_ARCHIVE.
+Valid values: HLS, DASH, HLS_ARCHIVE, HLS_MEDIA_PACKAGE, DASH_MEDIA_PACKAGE.
      * @param Type Output protocol type.
-Valid values: HLS/DASH/RTP/RTMP/HLS_ARCHIVE/DASH_ARCHIVE.
+Valid values: HLS, DASH, HLS_ARCHIVE, HLS_MEDIA_PACKAGE, DASH_MEDIA_PACKAGE.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Output information.
-Quantity limit: [1,1] for RTMP/RTP; [1,10] for HLS/DASH. 
-     * @return Outputs Output information.
-Quantity limit: [1,1] for RTMP/RTP; [1,10] for HLS/DASH.
+     * Get  
+     * @return Outputs 
      */
     public OutputInfo [] getOutputs() {
         return this.Outputs;
     }
 
     /**
-     * Set Output information.
-Quantity limit: [1,1] for RTMP/RTP; [1,10] for HLS/DASH.
-     * @param Outputs Output information.
-Quantity limit: [1,1] for RTMP/RTP; [1,10] for HLS/DASH.
+     * Set 
+     * @param Outputs 
      */
     public void setOutputs(OutputInfo [] Outputs) {
         this.Outputs = Outputs;
     }
 
     /**
-     * Get Relay destination address. Quantity limit: [1,2]. 
-     * @return Destinations Relay destination address. Quantity limit: [1,2].
+     * Get  
+     * @return Destinations 
      */
     public DestinationInfo [] getDestinations() {
         return this.Destinations;
     }
 
     /**
-     * Set Relay destination address. Quantity limit: [1,2].
-     * @param Destinations Relay destination address. Quantity limit: [1,2].
+     * Set 
+     * @param Destinations 
      */
     public void setDestinations(DestinationInfo [] Destinations) {
         this.Destinations = Destinations;
     }
 
     /**
-     * Get HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return HlsRemuxSettings HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return HlsRemuxSettings 
      */
     public HlsRemuxSettingsInfo getHlsRemuxSettings() {
         return this.HlsRemuxSettings;
     }
 
     /**
-     * Set HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param HlsRemuxSettings HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param HlsRemuxSettings 
      */
     public void setHlsRemuxSettings(HlsRemuxSettingsInfo HlsRemuxSettings) {
         this.HlsRemuxSettings = HlsRemuxSettings;
     }
 
     /**
-     * Get DASH protocol configuration information, which takes effect only for DASH/DSAH_ARCHIVE.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DashRemuxSettings DASH protocol configuration information, which takes effect only for DASH/DSAH_ARCHIVE.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return DashRemuxSettings 
      */
     public DashRemuxSettingsInfo getDashRemuxSettings() {
         return this.DashRemuxSettings;
     }
 
     /**
-     * Set DASH protocol configuration information, which takes effect only for DASH/DSAH_ARCHIVE.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DashRemuxSettings DASH protocol configuration information, which takes effect only for DASH/DSAH_ARCHIVE.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param DashRemuxSettings 
      */
     public void setDashRemuxSettings(DashRemuxSettingsInfo DashRemuxSettings) {
         this.DashRemuxSettings = DashRemuxSettings;
     }
 
     /**
-     * Get DRM configuration information.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DrmSettings DRM configuration information.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return DrmSettings 
      */
     public DrmSettingsInfo getDrmSettings() {
         return this.DrmSettings;
     }
 
     /**
-     * Set DRM configuration information.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DrmSettings DRM configuration information.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param DrmSettings 
      */
     public void setDrmSettings(DrmSettingsInfo DrmSettings) {
         this.DrmSettings = DrmSettings;
+    }
+
+    /**
+     * Get Configuration information of media packaging, which is required when `Type` is set to MediaPackage.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return MediaPackageSettings Configuration information of media packaging, which is required when `Type` is set to MediaPackage.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public MediaPackageSettingsInfo getMediaPackageSettings() {
+        return this.MediaPackageSettings;
+    }
+
+    /**
+     * Set Configuration information of media packaging, which is required when `Type` is set to MediaPackage.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param MediaPackageSettings Configuration information of media packaging, which is required when `Type` is set to MediaPackage.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMediaPackageSettings(MediaPackageSettingsInfo MediaPackageSettings) {
+        this.MediaPackageSettings = MediaPackageSettings;
     }
 
     /**
@@ -219,6 +227,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "HlsRemuxSettings.", this.HlsRemuxSettings);
         this.setParamObj(map, prefix + "DashRemuxSettings.", this.DashRemuxSettings);
         this.setParamObj(map, prefix + "DrmSettings.", this.DrmSettings);
+        this.setParamObj(map, prefix + "MediaPackageSettings.", this.MediaPackageSettings);
 
     }
 }

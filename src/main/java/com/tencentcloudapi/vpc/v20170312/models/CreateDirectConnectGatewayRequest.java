@@ -23,16 +23,16 @@ import java.util.HashMap;
 public class CreateDirectConnectGatewayRequest extends AbstractModel{
 
     /**
-    * The name of the Direct Connect gateway
+    * The name of the direct connect gateway.
     */
     @SerializedName("DirectConnectGatewayName")
     @Expose
     private String DirectConnectGatewayName;
 
     /**
-    * The type of the associated network. Available values are:
-<li>VPC - VPC</li>
-<li>CCN - CCN</li>
+    * The type of the associated network. Valid values:
+<li>VPC</li>
+<li>CCN</li>
     */
     @SerializedName("NetworkType")
     @Expose
@@ -47,49 +47,49 @@ public class CreateDirectConnectGatewayRequest extends AbstractModel{
     private String NetworkInstanceId;
 
     /**
-    * The type of the gateway. Available values are:
+    * The type of the gateway. Valid values:
 <li>NORMAL - (Default) Standard type. Note: CCN only supports the standard type</li>
-<li>NAT - NAT-type</li>NAT-type supports network address switch configuration. After the type is confirmed, it cannot be modified. A VPC can create one NAT-type Direct Connect gateway and one non-NAT-type Direct Connect gateway
+<li>NAT - NAT type</li>NAT gateway supports network address translation. The specified type cannot be modified. A VPC can create one NAT direct connect gateway and one non-NAT direct connect gateway
     */
     @SerializedName("GatewayType")
     @Expose
     private String GatewayType;
 
     /**
-     * Get The name of the Direct Connect gateway 
-     * @return DirectConnectGatewayName The name of the Direct Connect gateway
+     * Get The name of the direct connect gateway. 
+     * @return DirectConnectGatewayName The name of the direct connect gateway.
      */
     public String getDirectConnectGatewayName() {
         return this.DirectConnectGatewayName;
     }
 
     /**
-     * Set The name of the Direct Connect gateway
-     * @param DirectConnectGatewayName The name of the Direct Connect gateway
+     * Set The name of the direct connect gateway.
+     * @param DirectConnectGatewayName The name of the direct connect gateway.
      */
     public void setDirectConnectGatewayName(String DirectConnectGatewayName) {
         this.DirectConnectGatewayName = DirectConnectGatewayName;
     }
 
     /**
-     * Get The type of the associated network. Available values are:
-<li>VPC - VPC</li>
-<li>CCN - CCN</li> 
-     * @return NetworkType The type of the associated network. Available values are:
-<li>VPC - VPC</li>
-<li>CCN - CCN</li>
+     * Get The type of the associated network. Valid values:
+<li>VPC</li>
+<li>CCN</li> 
+     * @return NetworkType The type of the associated network. Valid values:
+<li>VPC</li>
+<li>CCN</li>
      */
     public String getNetworkType() {
         return this.NetworkType;
     }
 
     /**
-     * Set The type of the associated network. Available values are:
-<li>VPC - VPC</li>
-<li>CCN - CCN</li>
-     * @param NetworkType The type of the associated network. Available values are:
-<li>VPC - VPC</li>
-<li>CCN - CCN</li>
+     * Set The type of the associated network. Valid values:
+<li>VPC</li>
+<li>CCN</li>
+     * @param NetworkType The type of the associated network. Valid values:
+<li>VPC</li>
+<li>CCN</li>
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;
@@ -116,24 +116,24 @@ public class CreateDirectConnectGatewayRequest extends AbstractModel{
     }
 
     /**
-     * Get The type of the gateway. Available values are:
+     * Get The type of the gateway. Valid values:
 <li>NORMAL - (Default) Standard type. Note: CCN only supports the standard type</li>
-<li>NAT - NAT-type</li>NAT-type supports network address switch configuration. After the type is confirmed, it cannot be modified. A VPC can create one NAT-type Direct Connect gateway and one non-NAT-type Direct Connect gateway 
-     * @return GatewayType The type of the gateway. Available values are:
+<li>NAT - NAT type</li>NAT gateway supports network address translation. The specified type cannot be modified. A VPC can create one NAT direct connect gateway and one non-NAT direct connect gateway 
+     * @return GatewayType The type of the gateway. Valid values:
 <li>NORMAL - (Default) Standard type. Note: CCN only supports the standard type</li>
-<li>NAT - NAT-type</li>NAT-type supports network address switch configuration. After the type is confirmed, it cannot be modified. A VPC can create one NAT-type Direct Connect gateway and one non-NAT-type Direct Connect gateway
+<li>NAT - NAT type</li>NAT gateway supports network address translation. The specified type cannot be modified. A VPC can create one NAT direct connect gateway and one non-NAT direct connect gateway
      */
     public String getGatewayType() {
         return this.GatewayType;
     }
 
     /**
-     * Set The type of the gateway. Available values are:
+     * Set The type of the gateway. Valid values:
 <li>NORMAL - (Default) Standard type. Note: CCN only supports the standard type</li>
-<li>NAT - NAT-type</li>NAT-type supports network address switch configuration. After the type is confirmed, it cannot be modified. A VPC can create one NAT-type Direct Connect gateway and one non-NAT-type Direct Connect gateway
-     * @param GatewayType The type of the gateway. Available values are:
+<li>NAT - NAT type</li>NAT gateway supports network address translation. The specified type cannot be modified. A VPC can create one NAT direct connect gateway and one non-NAT direct connect gateway
+     * @param GatewayType The type of the gateway. Valid values:
 <li>NORMAL - (Default) Standard type. Note: CCN only supports the standard type</li>
-<li>NAT - NAT-type</li>NAT-type supports network address switch configuration. After the type is confirmed, it cannot be modified. A VPC can create one NAT-type Direct Connect gateway and one non-NAT-type Direct Connect gateway
+<li>NAT - NAT type</li>NAT gateway supports network address translation. The specified type cannot be modified. A VPC can create one NAT direct connect gateway and one non-NAT direct connect gateway
      */
     public void setGatewayType(String GatewayType) {
         this.GatewayType = GatewayType;

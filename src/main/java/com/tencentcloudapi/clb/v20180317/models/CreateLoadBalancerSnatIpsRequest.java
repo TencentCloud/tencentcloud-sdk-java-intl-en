@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class CreateLoadBalancerSnatIpsRequest extends AbstractModel{
 
     /**
-    * 负载均衡唯一性Id，如lb-12345678
+    * Unique CLB instance ID, such as lb-12345678
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 添加SnatIp信息，可指定Ip申请，或者指定子网自动申请
+    * Information of the SNAT IP to be added. You can apply for a specified IP or apply for an automatically assigned IP by specifying a subnet.
     */
     @SerializedName("SnatIps")
     @Expose
     private SnatIp [] SnatIps;
 
     /**
-     * Get 负载均衡唯一性Id，如lb-12345678 
-     * @return LoadBalancerId 负载均衡唯一性Id，如lb-12345678
+     * Get Unique CLB instance ID, such as lb-12345678 
+     * @return LoadBalancerId Unique CLB instance ID, such as lb-12345678
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡唯一性Id，如lb-12345678
-     * @param LoadBalancerId 负载均衡唯一性Id，如lb-12345678
+     * Set Unique CLB instance ID, such as lb-12345678
+     * @param LoadBalancerId Unique CLB instance ID, such as lb-12345678
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 添加SnatIp信息，可指定Ip申请，或者指定子网自动申请 
-     * @return SnatIps 添加SnatIp信息，可指定Ip申请，或者指定子网自动申请
+     * Get Information of the SNAT IP to be added. You can apply for a specified IP or apply for an automatically assigned IP by specifying a subnet. 
+     * @return SnatIps Information of the SNAT IP to be added. You can apply for a specified IP or apply for an automatically assigned IP by specifying a subnet.
      */
     public SnatIp [] getSnatIps() {
         return this.SnatIps;
     }
 
     /**
-     * Set 添加SnatIp信息，可指定Ip申请，或者指定子网自动申请
-     * @param SnatIps 添加SnatIp信息，可指定Ip申请，或者指定子网自动申请
+     * Set Information of the SNAT IP to be added. You can apply for a specified IP or apply for an automatically assigned IP by specifying a subnet.
+     * @param SnatIps Information of the SNAT IP to be added. You can apply for a specified IP or apply for an automatically assigned IP by specifying a subnet.
      */
     public void setSnatIps(SnatIp [] SnatIps) {
         this.SnatIps = SnatIps;

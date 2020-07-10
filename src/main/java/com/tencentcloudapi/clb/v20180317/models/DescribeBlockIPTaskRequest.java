@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeBlockIPTaskRequest extends AbstractModel{
 
     /**
-    * ModifyBlockIPList 接口返回的异步任务的ID。
+    * Async task ID returned by the `ModifyBlockIPList` API
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * Get ModifyBlockIPList 接口返回的异步任务的ID。 
-     * @return TaskId ModifyBlockIPList 接口返回的异步任务的ID。
+     * Get Async task ID returned by the `ModifyBlockIPList` API 
+     * @return TaskId Async task ID returned by the `ModifyBlockIPList` API
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set ModifyBlockIPList 接口返回的异步任务的ID。
-     * @param TaskId ModifyBlockIPList 接口返回的异步任务的ID。
+     * Set Async task ID returned by the `ModifyBlockIPList` API
+     * @param TaskId Async task ID returned by the `ModifyBlockIPList` API
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

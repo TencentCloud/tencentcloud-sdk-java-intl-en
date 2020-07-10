@@ -23,161 +23,161 @@ import java.util.HashMap;
 public class CreateBandwidthPackageRequest extends AbstractModel{
 
     /**
-    * The bandwidth package type, including 'BGP', 'SINGLEISP', 'ANYCAST'
+    * The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'.
     */
     @SerializedName("NetworkType")
     @Expose
     private String NetworkType;
 
     /**
-    * The bandwidth package billing type, including 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
+    * The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'.
     */
     @SerializedName("ChargeType")
     @Expose
     private String ChargeType;
 
     /**
-    * The name of the bandwidth package
+    * The name of the bandwidth package.
     */
     @SerializedName("BandwidthPackageName")
     @Expose
     private String BandwidthPackageName;
 
     /**
-    * The number of bandwidth packages (non-upward accounts can only enter 1)
+    * The number of bandwidth packages (enter 1 for bill-by-CVM accounts).
     */
     @SerializedName("BandwidthPackageCount")
     @Expose
     private Long BandwidthPackageCount;
 
     /**
-    * The size limit of the bandwidth package. Unit: Mbps. -1 indicates there is no limit.
+    * The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
     */
     @SerializedName("InternetMaxBandwidth")
     @Expose
     private Long InternetMaxBandwidth;
 
     /**
-    * 
+    * The list of tags to be bound.
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * 
+    * The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'. Default value: 'ipv4'.
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-     * Get The bandwidth package type, including 'BGP', 'SINGLEISP', 'ANYCAST' 
-     * @return NetworkType The bandwidth package type, including 'BGP', 'SINGLEISP', 'ANYCAST'
+     * Get The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'. 
+     * @return NetworkType The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'.
      */
     public String getNetworkType() {
         return this.NetworkType;
     }
 
     /**
-     * Set The bandwidth package type, including 'BGP', 'SINGLEISP', 'ANYCAST'
-     * @param NetworkType The bandwidth package type, including 'BGP', 'SINGLEISP', 'ANYCAST'
+     * Set The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'.
+     * @param NetworkType The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'.
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;
     }
 
     /**
-     * Get The bandwidth package billing type, including 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH' 
-     * @return ChargeType The bandwidth package billing type, including 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
+     * Get The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'. 
+     * @return ChargeType The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'.
      */
     public String getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set The bandwidth package billing type, including 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
-     * @param ChargeType The bandwidth package billing type, including 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
+     * Set The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'.
+     * @param ChargeType The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'.
      */
     public void setChargeType(String ChargeType) {
         this.ChargeType = ChargeType;
     }
 
     /**
-     * Get The name of the bandwidth package 
-     * @return BandwidthPackageName The name of the bandwidth package
+     * Get The name of the bandwidth package. 
+     * @return BandwidthPackageName The name of the bandwidth package.
      */
     public String getBandwidthPackageName() {
         return this.BandwidthPackageName;
     }
 
     /**
-     * Set The name of the bandwidth package
-     * @param BandwidthPackageName The name of the bandwidth package
+     * Set The name of the bandwidth package.
+     * @param BandwidthPackageName The name of the bandwidth package.
      */
     public void setBandwidthPackageName(String BandwidthPackageName) {
         this.BandwidthPackageName = BandwidthPackageName;
     }
 
     /**
-     * Get The number of bandwidth packages (non-upward accounts can only enter 1) 
-     * @return BandwidthPackageCount The number of bandwidth packages (non-upward accounts can only enter 1)
+     * Get The number of bandwidth packages (enter 1 for bill-by-CVM accounts). 
+     * @return BandwidthPackageCount The number of bandwidth packages (enter 1 for bill-by-CVM accounts).
      */
     public Long getBandwidthPackageCount() {
         return this.BandwidthPackageCount;
     }
 
     /**
-     * Set The number of bandwidth packages (non-upward accounts can only enter 1)
-     * @param BandwidthPackageCount The number of bandwidth packages (non-upward accounts can only enter 1)
+     * Set The number of bandwidth packages (enter 1 for bill-by-CVM accounts).
+     * @param BandwidthPackageCount The number of bandwidth packages (enter 1 for bill-by-CVM accounts).
      */
     public void setBandwidthPackageCount(Long BandwidthPackageCount) {
         this.BandwidthPackageCount = BandwidthPackageCount;
     }
 
     /**
-     * Get The size limit of the bandwidth package. Unit: Mbps. -1 indicates there is no limit. 
-     * @return InternetMaxBandwidth The size limit of the bandwidth package. Unit: Mbps. -1 indicates there is no limit.
+     * Get The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit. 
+     * @return InternetMaxBandwidth The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
      */
     public Long getInternetMaxBandwidth() {
         return this.InternetMaxBandwidth;
     }
 
     /**
-     * Set The size limit of the bandwidth package. Unit: Mbps. -1 indicates there is no limit.
-     * @param InternetMaxBandwidth The size limit of the bandwidth package. Unit: Mbps. -1 indicates there is no limit.
+     * Set The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
+     * @param InternetMaxBandwidth The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
      */
     public void setInternetMaxBandwidth(Long InternetMaxBandwidth) {
         this.InternetMaxBandwidth = InternetMaxBandwidth;
     }
 
     /**
-     * Get  
-     * @return Tags 
+     * Get The list of tags to be bound. 
+     * @return Tags The list of tags to be bound.
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 
-     * @param Tags 
+     * Set The list of tags to be bound.
+     * @param Tags The list of tags to be bound.
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get  
-     * @return Protocol 
+     * Get The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'. Default value: 'ipv4'. 
+     * @return Protocol The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'. Default value: 'ipv4'.
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 
-     * @param Protocol 
+     * Set The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'. Default value: 'ipv4'.
+     * @param Protocol The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'. Default value: 'ipv4'.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

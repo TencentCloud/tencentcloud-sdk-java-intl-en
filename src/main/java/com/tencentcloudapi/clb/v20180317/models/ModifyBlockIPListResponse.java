@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyBlockIPListResponse extends AbstractModel{
 
     /**
-    * 异步任务的ID
+    * Async task ID
     */
     @SerializedName("JodId")
     @Expose
@@ -37,16 +37,16 @@ public class ModifyBlockIPListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 异步任务的ID 
-     * @return JodId 异步任务的ID
+     * Get Async task ID 
+     * @return JodId Async task ID
      */
     public String getJodId() {
         return this.JodId;
     }
 
     /**
-     * Set 异步任务的ID
-     * @param JodId 异步任务的ID
+     * Set Async task ID
+     * @param JodId Async task ID
      */
     public void setJodId(String JodId) {
         this.JodId = JodId;

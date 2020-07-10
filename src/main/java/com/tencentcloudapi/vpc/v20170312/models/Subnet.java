@@ -86,7 +86,7 @@ public class Subnet extends AbstractModel{
     private String CreatedTime;
 
     /**
-    * The number of available `IP`s.
+    * The number of available `IPv4`.
     */
     @SerializedName("AvailableIpAddressCount")
     @Expose
@@ -114,7 +114,7 @@ public class Subnet extends AbstractModel{
     private Boolean IsRemoteVpcSnat;
 
     /**
-    * Total number of subnet `IP` addresses.
+    * The total number of `IPv4` in the subnet.
     */
     @SerializedName("TotalIpAddressCount")
     @Expose
@@ -272,16 +272,16 @@ public class Subnet extends AbstractModel{
     }
 
     /**
-     * Get The number of available `IP`s. 
-     * @return AvailableIpAddressCount The number of available `IP`s.
+     * Get The number of available `IPv4`. 
+     * @return AvailableIpAddressCount The number of available `IPv4`.
      */
     public Long getAvailableIpAddressCount() {
         return this.AvailableIpAddressCount;
     }
 
     /**
-     * Set The number of available `IP`s.
-     * @param AvailableIpAddressCount The number of available `IP`s.
+     * Set The number of available `IPv4`.
+     * @param AvailableIpAddressCount The number of available `IPv4`.
      */
     public void setAvailableIpAddressCount(Long AvailableIpAddressCount) {
         this.AvailableIpAddressCount = AvailableIpAddressCount;
@@ -336,16 +336,16 @@ public class Subnet extends AbstractModel{
     }
 
     /**
-     * Get Total number of subnet `IP` addresses. 
-     * @return TotalIpAddressCount Total number of subnet `IP` addresses.
+     * Get The total number of `IPv4` in the subnet. 
+     * @return TotalIpAddressCount The total number of `IPv4` in the subnet.
      */
     public Long getTotalIpAddressCount() {
         return this.TotalIpAddressCount;
     }
 
     /**
-     * Set Total number of subnet `IP` addresses.
-     * @param TotalIpAddressCount Total number of subnet `IP` addresses.
+     * Set The total number of `IPv4` in the subnet.
+     * @param TotalIpAddressCount The total number of `IPv4` in the subnet.
      */
     public void setTotalIpAddressCount(Long TotalIpAddressCount) {
         this.TotalIpAddressCount = TotalIpAddressCount;

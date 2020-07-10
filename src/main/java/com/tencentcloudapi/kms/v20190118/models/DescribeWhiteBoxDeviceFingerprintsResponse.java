@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeWhiteBoxDeviceFingerprintsResponse extends AbstractModel{
 
     /**
-    * 设备指纹列表
+    * Device fingerprint list
     */
     @SerializedName("DeviceFingerprints")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeWhiteBoxDeviceFingerprintsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 设备指纹列表 
-     * @return DeviceFingerprints 设备指纹列表
+     * Get Device fingerprint list 
+     * @return DeviceFingerprints Device fingerprint list
      */
     public DeviceFingerprint [] getDeviceFingerprints() {
         return this.DeviceFingerprints;
     }
 
     /**
-     * Set 设备指纹列表
-     * @param DeviceFingerprints 设备指纹列表
+     * Set Device fingerprint list
+     * @param DeviceFingerprints Device fingerprint list
      */
     public void setDeviceFingerprints(DeviceFingerprint [] DeviceFingerprints) {
         this.DeviceFingerprints = DeviceFingerprints;

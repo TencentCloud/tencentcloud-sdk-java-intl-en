@@ -38,9 +38,9 @@ public class ApigatewayClient extends AbstractClient{
     }
 
     /**
-     *This API is used to bind a usage plan to a service environment.
+     *This API is used to bind a usage plan to a service or API.
 After you publish a service to an environment, if the API requires authentication and can be called only when it is bound to a usage plan, you can use this API to bind a usage plan to the specified environment.
-Currently, a usage plan can be bound to an API; however, under the same service, usage plans bound to a service and usage plans bound to an API cannot coexist. Therefore, in an environment to which a service-level usage plan has already been bound, please use the `DemoteServiceUsagePlan` API to demote it.
+Currently, a usage plan can be bound to an API; however, under the same service, usage plans bound to a service and usage plans bound to an API cannot coexist. Therefore, in an environment to which a service-level usage plan has already been bound, please use the `DemoteServiceUsagePlan` API to degrade it.
      * @param req BindEnvironmentRequest
      * @return BindEnvironmentResponse
      * @throws TencentCloudSDKException
@@ -315,8 +315,7 @@ You can use this API if you use a custom domain name and custom mapping. Please 
     }
 
     /**
-     *This API is used to demote a usage plan of a service in an environment to the API level.
- 
+     *This API is used to degrade a usage plan of a service in an environment to the API level.
 This operation will be denied if there are no APIs under the service.
 This operation will also be denied if the current environment has not been published.
      * @param req DemoteServiceUsagePlanRequest
@@ -391,6 +390,25 @@ After creating an API key, you can query its details by using this API.
     }
 
     /**
+     *This API is used to query the list of keys.
+If you have created multiple API key pairs, you can use this API to query the information of one or more keys. This API does not display the `secretKey`.
+     * @param req DescribeApiKeysStatusRequest
+     * @return DescribeApiKeysStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApiKeysStatusResponse DescribeApiKeysStatus(DescribeApiKeysStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeApiKeysStatusResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeApiKeysStatusResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeApiKeysStatus"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the details of API usage plans in a service.
 To make authentication and throttling for a service take effect, you need to bind a usage plan to it. This API is used to query all usage plans bound to a service and APIs under it.
      * @param req DescribeApiUsagePlanRequest
@@ -403,6 +421,78 @@ To make authentication and throttling for a service take effect, you need to bin
                 Type type = new TypeToken<JsonResponseModel<DescribeApiUsagePlanResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeApiUsagePlan"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to view a certain API or the list of all APIs under a service and relevant information.
+     * @param req DescribeApisStatusRequest
+     * @return DescribeApisStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApisStatusResponse DescribeApisStatus(DescribeApisStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeApisStatusResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeApisStatusResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeApisStatus"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query IP policy details.
+     * @param req DescribeIPStrategyRequest
+     * @return DescribeIPStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIPStrategyResponse DescribeIPStrategy(DescribeIPStrategyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeIPStrategyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeIPStrategyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeIPStrategy"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of APIs to which an IP policy can be bound, i.e., the difference set between all APIs under the service and the APIs already bound to the policy.
+     * @param req DescribeIPStrategyApisStatusRequest
+     * @return DescribeIPStrategyApisStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIPStrategyApisStatusResponse DescribeIPStrategyApisStatus(DescribeIPStrategyApisStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeIPStrategyApisStatusResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeIPStrategyApisStatusResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeIPStrategyApisStatus"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of service IP policies.
+     * @param req DescribeIPStrategysStatusRequest
+     * @return DescribeIPStrategysStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIPStrategysStatusResponse DescribeIPStrategysStatus(DescribeIPStrategysStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeIPStrategysStatusResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeIPStrategysStatusResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeIPStrategysStatus"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -577,6 +667,24 @@ To make authentication and throttling for a service take effect, you need to bin
     }
 
     /**
+     *This API is used to query the list of one or more services and return relevant domain name, time, and other information.
+     * @param req DescribeServicesStatusRequest
+     * @return DescribeServicesStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeServicesStatusResponse DescribeServicesStatus(DescribeServicesStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeServicesStatusResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeServicesStatusResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeServicesStatus"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the details of a usage plan, such as its name, QPS, creation time, and bound environment.
      * @param req DescribeUsagePlanRequest
      * @return DescribeUsagePlanResponse
@@ -626,6 +734,24 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
                 Type type = new TypeToken<JsonResponseModel<DescribeUsagePlanSecretIdsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeUsagePlanSecretIds"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of usage plans.
+     * @param req DescribeUsagePlansStatusRequest
+     * @return DescribeUsagePlansStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUsagePlansStatusResponse DescribeUsagePlansStatus(DescribeUsagePlansStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUsagePlansStatusResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUsagePlansStatusResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeUsagePlansStatus"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

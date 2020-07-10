@@ -51,7 +51,7 @@ public class CreateInstanceAccountRequest extends AbstractModel{
     private String [] ReadonlyPolicy;
 
     /**
-    * Read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
+    * Read/write policy. Valid values: r (read-only), rw (read/write).
     */
     @SerializedName("Privilege")
     @Expose
@@ -129,16 +129,16 @@ public class CreateInstanceAccountRequest extends AbstractModel{
     }
 
     /**
-     * Get Read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write 
-     * @return Privilege Read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
+     * Get Read/write policy. Valid values: r (read-only), rw (read/write). 
+     * @return Privilege Read/write policy. Valid values: r (read-only), rw (read/write).
      */
     public String getPrivilege() {
         return this.Privilege;
     }
 
     /**
-     * Set Read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
-     * @param Privilege Read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
+     * Set Read/write policy. Valid values: r (read-only), rw (read/write).
+     * @param Privilege Read/write policy. Valid values: r (read-only), rw (read/write).
      */
     public void setPrivilege(String Privilege) {
         this.Privilege = Privilege;

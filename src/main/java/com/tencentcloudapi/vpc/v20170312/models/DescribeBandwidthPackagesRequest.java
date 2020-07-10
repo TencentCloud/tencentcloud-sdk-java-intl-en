@@ -23,20 +23,20 @@ import java.util.HashMap;
 public class DescribeBandwidthPackagesRequest extends AbstractModel{
 
     /**
-    * The bandwidth package ID. Batch operation is supported.
+    * The unique ID list of bandwidth packages.
     */
     @SerializedName("BandwidthPackageIds")
     @Expose
     private String [] BandwidthPackageIds;
 
     /**
-    * The upper limit for `Filters` in each request is 10. `BandwidthPackageIds` and `Filters` cannot be specified at the same time. The specific filtering conditions are as follows:
+    * Each request can have up to 10 `Filters`. `BandwidthPackageIds` and `Filters` cannot be specified at the same time. The specific filter conditions are as follows:
 <li> bandwidth-package_id - String - Required: No - (Filter condition) Filter by the unique ID of the bandwidth package.</li>
 <li> bandwidth-package-name - String - Required: No - (Filter condition) Filter by the bandwidth package name. Fuzzy filtering is not supported.</li>
 <li> network-type - String - Required: No - (Filter condition) Filter by the bandwidth package type. Types include 'BGP', 'SINGLEISP', and 'ANYCAST'.</li>
-<li> charge-type - String - Required: No - (Filter condition) Filter by the bandwidth package billing type. Billing types include 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'</li>
-<li> resource.resource-type - String - Required: No - (Filter condition) Filter by the bandwidth package resource type. Resource types include 'Address' and 'LoadBalance'</li>
-<li> resource.resource-id - String - Required: No - (Filter condition) Filter by the bandwidth package resource ID, such as 'eip-xxxx', 'lb-xxxx'</li>
+<li> charge-type - String - Required: No - (Filter condition) Filter by the bandwidth package billing mode. Billing modes include 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'.</li>
+<li> resource.resource-type - String - Required: No - (Filter condition) Filter by the bandwidth package resource type. Resource types include 'Address' and 'LoadBalance'.</li>
+<li> resource.resource-id - String - Required: No - (Filter condition) Filter by the bandwidth package resource ID, such as 'eip-xxxx' and 'lb-xxxx'.</li>
 <li> resource.address-ip - String - Required: No - (Filter condition) Filter by the bandwidth package resource IP.</li>
     */
     @SerializedName("Filters")
@@ -44,51 +44,51 @@ public class DescribeBandwidthPackagesRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
-    * Queries bandwidth package offset
+    * Queries the bandwidth package offset.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Queries the limit on the number of bandwidth packages
+    * Queries the limit on the number of bandwidth packages.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get The bandwidth package ID. Batch operation is supported. 
-     * @return BandwidthPackageIds The bandwidth package ID. Batch operation is supported.
+     * Get The unique ID list of bandwidth packages. 
+     * @return BandwidthPackageIds The unique ID list of bandwidth packages.
      */
     public String [] getBandwidthPackageIds() {
         return this.BandwidthPackageIds;
     }
 
     /**
-     * Set The bandwidth package ID. Batch operation is supported.
-     * @param BandwidthPackageIds The bandwidth package ID. Batch operation is supported.
+     * Set The unique ID list of bandwidth packages.
+     * @param BandwidthPackageIds The unique ID list of bandwidth packages.
      */
     public void setBandwidthPackageIds(String [] BandwidthPackageIds) {
         this.BandwidthPackageIds = BandwidthPackageIds;
     }
 
     /**
-     * Get The upper limit for `Filters` in each request is 10. `BandwidthPackageIds` and `Filters` cannot be specified at the same time. The specific filtering conditions are as follows:
+     * Get Each request can have up to 10 `Filters`. `BandwidthPackageIds` and `Filters` cannot be specified at the same time. The specific filter conditions are as follows:
 <li> bandwidth-package_id - String - Required: No - (Filter condition) Filter by the unique ID of the bandwidth package.</li>
 <li> bandwidth-package-name - String - Required: No - (Filter condition) Filter by the bandwidth package name. Fuzzy filtering is not supported.</li>
 <li> network-type - String - Required: No - (Filter condition) Filter by the bandwidth package type. Types include 'BGP', 'SINGLEISP', and 'ANYCAST'.</li>
-<li> charge-type - String - Required: No - (Filter condition) Filter by the bandwidth package billing type. Billing types include 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'</li>
-<li> resource.resource-type - String - Required: No - (Filter condition) Filter by the bandwidth package resource type. Resource types include 'Address' and 'LoadBalance'</li>
-<li> resource.resource-id - String - Required: No - (Filter condition) Filter by the bandwidth package resource ID, such as 'eip-xxxx', 'lb-xxxx'</li>
+<li> charge-type - String - Required: No - (Filter condition) Filter by the bandwidth package billing mode. Billing modes include 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'.</li>
+<li> resource.resource-type - String - Required: No - (Filter condition) Filter by the bandwidth package resource type. Resource types include 'Address' and 'LoadBalance'.</li>
+<li> resource.resource-id - String - Required: No - (Filter condition) Filter by the bandwidth package resource ID, such as 'eip-xxxx' and 'lb-xxxx'.</li>
 <li> resource.address-ip - String - Required: No - (Filter condition) Filter by the bandwidth package resource IP.</li> 
-     * @return Filters The upper limit for `Filters` in each request is 10. `BandwidthPackageIds` and `Filters` cannot be specified at the same time. The specific filtering conditions are as follows:
+     * @return Filters Each request can have up to 10 `Filters`. `BandwidthPackageIds` and `Filters` cannot be specified at the same time. The specific filter conditions are as follows:
 <li> bandwidth-package_id - String - Required: No - (Filter condition) Filter by the unique ID of the bandwidth package.</li>
 <li> bandwidth-package-name - String - Required: No - (Filter condition) Filter by the bandwidth package name. Fuzzy filtering is not supported.</li>
 <li> network-type - String - Required: No - (Filter condition) Filter by the bandwidth package type. Types include 'BGP', 'SINGLEISP', and 'ANYCAST'.</li>
-<li> charge-type - String - Required: No - (Filter condition) Filter by the bandwidth package billing type. Billing types include 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'</li>
-<li> resource.resource-type - String - Required: No - (Filter condition) Filter by the bandwidth package resource type. Resource types include 'Address' and 'LoadBalance'</li>
-<li> resource.resource-id - String - Required: No - (Filter condition) Filter by the bandwidth package resource ID, such as 'eip-xxxx', 'lb-xxxx'</li>
+<li> charge-type - String - Required: No - (Filter condition) Filter by the bandwidth package billing mode. Billing modes include 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'.</li>
+<li> resource.resource-type - String - Required: No - (Filter condition) Filter by the bandwidth package resource type. Resource types include 'Address' and 'LoadBalance'.</li>
+<li> resource.resource-id - String - Required: No - (Filter condition) Filter by the bandwidth package resource ID, such as 'eip-xxxx' and 'lb-xxxx'.</li>
 <li> resource.address-ip - String - Required: No - (Filter condition) Filter by the bandwidth package resource IP.</li>
      */
     public Filter [] getFilters() {
@@ -96,21 +96,21 @@ public class DescribeBandwidthPackagesRequest extends AbstractModel{
     }
 
     /**
-     * Set The upper limit for `Filters` in each request is 10. `BandwidthPackageIds` and `Filters` cannot be specified at the same time. The specific filtering conditions are as follows:
+     * Set Each request can have up to 10 `Filters`. `BandwidthPackageIds` and `Filters` cannot be specified at the same time. The specific filter conditions are as follows:
 <li> bandwidth-package_id - String - Required: No - (Filter condition) Filter by the unique ID of the bandwidth package.</li>
 <li> bandwidth-package-name - String - Required: No - (Filter condition) Filter by the bandwidth package name. Fuzzy filtering is not supported.</li>
 <li> network-type - String - Required: No - (Filter condition) Filter by the bandwidth package type. Types include 'BGP', 'SINGLEISP', and 'ANYCAST'.</li>
-<li> charge-type - String - Required: No - (Filter condition) Filter by the bandwidth package billing type. Billing types include 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'</li>
-<li> resource.resource-type - String - Required: No - (Filter condition) Filter by the bandwidth package resource type. Resource types include 'Address' and 'LoadBalance'</li>
-<li> resource.resource-id - String - Required: No - (Filter condition) Filter by the bandwidth package resource ID, such as 'eip-xxxx', 'lb-xxxx'</li>
+<li> charge-type - String - Required: No - (Filter condition) Filter by the bandwidth package billing mode. Billing modes include 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'.</li>
+<li> resource.resource-type - String - Required: No - (Filter condition) Filter by the bandwidth package resource type. Resource types include 'Address' and 'LoadBalance'.</li>
+<li> resource.resource-id - String - Required: No - (Filter condition) Filter by the bandwidth package resource ID, such as 'eip-xxxx' and 'lb-xxxx'.</li>
 <li> resource.address-ip - String - Required: No - (Filter condition) Filter by the bandwidth package resource IP.</li>
-     * @param Filters The upper limit for `Filters` in each request is 10. `BandwidthPackageIds` and `Filters` cannot be specified at the same time. The specific filtering conditions are as follows:
+     * @param Filters Each request can have up to 10 `Filters`. `BandwidthPackageIds` and `Filters` cannot be specified at the same time. The specific filter conditions are as follows:
 <li> bandwidth-package_id - String - Required: No - (Filter condition) Filter by the unique ID of the bandwidth package.</li>
 <li> bandwidth-package-name - String - Required: No - (Filter condition) Filter by the bandwidth package name. Fuzzy filtering is not supported.</li>
 <li> network-type - String - Required: No - (Filter condition) Filter by the bandwidth package type. Types include 'BGP', 'SINGLEISP', and 'ANYCAST'.</li>
-<li> charge-type - String - Required: No - (Filter condition) Filter by the bandwidth package billing type. Billing types include 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'</li>
-<li> resource.resource-type - String - Required: No - (Filter condition) Filter by the bandwidth package resource type. Resource types include 'Address' and 'LoadBalance'</li>
-<li> resource.resource-id - String - Required: No - (Filter condition) Filter by the bandwidth package resource ID, such as 'eip-xxxx', 'lb-xxxx'</li>
+<li> charge-type - String - Required: No - (Filter condition) Filter by the bandwidth package billing mode. Billing modes include 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'.</li>
+<li> resource.resource-type - String - Required: No - (Filter condition) Filter by the bandwidth package resource type. Resource types include 'Address' and 'LoadBalance'.</li>
+<li> resource.resource-id - String - Required: No - (Filter condition) Filter by the bandwidth package resource ID, such as 'eip-xxxx' and 'lb-xxxx'.</li>
 <li> resource.address-ip - String - Required: No - (Filter condition) Filter by the bandwidth package resource IP.</li>
      */
     public void setFilters(Filter [] Filters) {
@@ -118,32 +118,32 @@ public class DescribeBandwidthPackagesRequest extends AbstractModel{
     }
 
     /**
-     * Get Queries bandwidth package offset 
-     * @return Offset Queries bandwidth package offset
+     * Get Queries the bandwidth package offset. 
+     * @return Offset Queries the bandwidth package offset.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Queries bandwidth package offset
-     * @param Offset Queries bandwidth package offset
+     * Set Queries the bandwidth package offset.
+     * @param Offset Queries the bandwidth package offset.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Queries the limit on the number of bandwidth packages 
-     * @return Limit Queries the limit on the number of bandwidth packages
+     * Get Queries the limit on the number of bandwidth packages. 
+     * @return Limit Queries the limit on the number of bandwidth packages.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Queries the limit on the number of bandwidth packages
-     * @param Limit Queries the limit on the number of bandwidth packages
+     * Set Queries the limit on the number of bandwidth packages.
+     * @param Limit Queries the limit on the number of bandwidth packages.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

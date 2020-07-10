@@ -23,230 +23,230 @@ import java.util.HashMap;
 public class FlowLog extends AbstractModel{
 
     /**
-    * The VPC ID or the unified ID. We recommend you use the unified ID
+    * The VPC ID or the unified ID. We recommend you use the unified ID.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * The unique ID of the flow log
+    * The unique ID of the flow log.
     */
     @SerializedName("FlowLogId")
     @Expose
     private String FlowLogId;
 
     /**
-    * The name of the flow log instance
+    * The name of the flow log instance.
     */
     @SerializedName("FlowLogName")
     @Expose
     private String FlowLogName;
 
     /**
-    * The type of resource to which the flow log belongs. VPC|SUBNET|NETWORKINTERFACE
+    * The type of resource to which the flow log belongs. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
     */
     @SerializedName("ResourceType")
     @Expose
     private String ResourceType;
 
     /**
-    * The unique ID of the resource
+    * The unique ID of the resource.
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * The collection type of the flow log. ACCEPT|REJECT|ALL
+    * The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
     */
     @SerializedName("TrafficType")
     @Expose
     private String TrafficType;
 
     /**
-    * The storage ID of the flow log
+    * The storage ID of the flow log.
     */
     @SerializedName("CloudLogId")
     @Expose
     private String CloudLogId;
 
     /**
-    * Flow log storage ID status
+    * The storage ID status of the flow log.
     */
     @SerializedName("CloudLogState")
     @Expose
     private String CloudLogState;
 
     /**
-    * Flow log description
+    * The flow log description.
     */
     @SerializedName("FlowLogDescription")
     @Expose
     private String FlowLogDescription;
 
     /**
-    * Flow log creation time
+    * The creation time of the flow log.
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-     * Get The VPC ID or the unified ID. We recommend you use the unified ID 
-     * @return VpcId The VPC ID or the unified ID. We recommend you use the unified ID
+     * Get The VPC ID or the unified ID. We recommend you use the unified ID. 
+     * @return VpcId The VPC ID or the unified ID. We recommend you use the unified ID.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set The VPC ID or the unified ID. We recommend you use the unified ID
-     * @param VpcId The VPC ID or the unified ID. We recommend you use the unified ID
+     * Set The VPC ID or the unified ID. We recommend you use the unified ID.
+     * @param VpcId The VPC ID or the unified ID. We recommend you use the unified ID.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get The unique ID of the flow log 
-     * @return FlowLogId The unique ID of the flow log
+     * Get The unique ID of the flow log. 
+     * @return FlowLogId The unique ID of the flow log.
      */
     public String getFlowLogId() {
         return this.FlowLogId;
     }
 
     /**
-     * Set The unique ID of the flow log
-     * @param FlowLogId The unique ID of the flow log
+     * Set The unique ID of the flow log.
+     * @param FlowLogId The unique ID of the flow log.
      */
     public void setFlowLogId(String FlowLogId) {
         this.FlowLogId = FlowLogId;
     }
 
     /**
-     * Get The name of the flow log instance 
-     * @return FlowLogName The name of the flow log instance
+     * Get The name of the flow log instance. 
+     * @return FlowLogName The name of the flow log instance.
      */
     public String getFlowLogName() {
         return this.FlowLogName;
     }
 
     /**
-     * Set The name of the flow log instance
-     * @param FlowLogName The name of the flow log instance
+     * Set The name of the flow log instance.
+     * @param FlowLogName The name of the flow log instance.
      */
     public void setFlowLogName(String FlowLogName) {
         this.FlowLogName = FlowLogName;
     }
 
     /**
-     * Get The type of resource to which the flow log belongs. VPC|SUBNET|NETWORKINTERFACE 
-     * @return ResourceType The type of resource to which the flow log belongs. VPC|SUBNET|NETWORKINTERFACE
+     * Get The type of resource to which the flow log belongs. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'. 
+     * @return ResourceType The type of resource to which the flow log belongs. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set The type of resource to which the flow log belongs. VPC|SUBNET|NETWORKINTERFACE
-     * @param ResourceType The type of resource to which the flow log belongs. VPC|SUBNET|NETWORKINTERFACE
+     * Set The type of resource to which the flow log belongs. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
+     * @param ResourceType The type of resource to which the flow log belongs. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get The unique ID of the resource 
-     * @return ResourceId The unique ID of the resource
+     * Get The unique ID of the resource. 
+     * @return ResourceId The unique ID of the resource.
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set The unique ID of the resource
-     * @param ResourceId The unique ID of the resource
+     * Set The unique ID of the resource.
+     * @param ResourceId The unique ID of the resource.
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get The collection type of the flow log. ACCEPT|REJECT|ALL 
-     * @return TrafficType The collection type of the flow log. ACCEPT|REJECT|ALL
+     * Get The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'. 
+     * @return TrafficType The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
      */
     public String getTrafficType() {
         return this.TrafficType;
     }
 
     /**
-     * Set The collection type of the flow log. ACCEPT|REJECT|ALL
-     * @param TrafficType The collection type of the flow log. ACCEPT|REJECT|ALL
+     * Set The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
+     * @param TrafficType The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
      */
     public void setTrafficType(String TrafficType) {
         this.TrafficType = TrafficType;
     }
 
     /**
-     * Get The storage ID of the flow log 
-     * @return CloudLogId The storage ID of the flow log
+     * Get The storage ID of the flow log. 
+     * @return CloudLogId The storage ID of the flow log.
      */
     public String getCloudLogId() {
         return this.CloudLogId;
     }
 
     /**
-     * Set The storage ID of the flow log
-     * @param CloudLogId The storage ID of the flow log
+     * Set The storage ID of the flow log.
+     * @param CloudLogId The storage ID of the flow log.
      */
     public void setCloudLogId(String CloudLogId) {
         this.CloudLogId = CloudLogId;
     }
 
     /**
-     * Get Flow log storage ID status 
-     * @return CloudLogState Flow log storage ID status
+     * Get The storage ID status of the flow log. 
+     * @return CloudLogState The storage ID status of the flow log.
      */
     public String getCloudLogState() {
         return this.CloudLogState;
     }
 
     /**
-     * Set Flow log storage ID status
-     * @param CloudLogState Flow log storage ID status
+     * Set The storage ID status of the flow log.
+     * @param CloudLogState The storage ID status of the flow log.
      */
     public void setCloudLogState(String CloudLogState) {
         this.CloudLogState = CloudLogState;
     }
 
     /**
-     * Get Flow log description 
-     * @return FlowLogDescription Flow log description
+     * Get The flow log description. 
+     * @return FlowLogDescription The flow log description.
      */
     public String getFlowLogDescription() {
         return this.FlowLogDescription;
     }
 
     /**
-     * Set Flow log description
-     * @param FlowLogDescription Flow log description
+     * Set The flow log description.
+     * @param FlowLogDescription The flow log description.
      */
     public void setFlowLogDescription(String FlowLogDescription) {
         this.FlowLogDescription = FlowLogDescription;
     }
 
     /**
-     * Get Flow log creation time 
-     * @return CreatedTime Flow log creation time
+     * Get The creation time of the flow log. 
+     * @return CreatedTime The creation time of the flow log.
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set Flow log creation time
-     * @param CreatedTime Flow log creation time
+     * Set The creation time of the flow log.
+     * @param CreatedTime The creation time of the flow log.
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateDirectConnectGatewayResponse extends AbstractModel{
 
     /**
-    * Direct Connect gateway object.
+    * The object of the direct connect gateway.
     */
     @SerializedName("DirectConnectGateway")
     @Expose
@@ -37,16 +37,16 @@ public class CreateDirectConnectGatewayResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Direct Connect gateway object. 
-     * @return DirectConnectGateway Direct Connect gateway object.
+     * Get The object of the direct connect gateway. 
+     * @return DirectConnectGateway The object of the direct connect gateway.
      */
     public DirectConnectGateway getDirectConnectGateway() {
         return this.DirectConnectGateway;
     }
 
     /**
-     * Set Direct Connect gateway object.
-     * @param DirectConnectGateway Direct Connect gateway object.
+     * Set The object of the direct connect gateway.
+     * @param DirectConnectGateway The object of the direct connect gateway.
      */
     public void setDirectConnectGateway(DirectConnectGateway DirectConnectGateway) {
         this.DirectConnectGateway = DirectConnectGateway;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeBlockIPTaskResponse extends AbstractModel{
 
     /**
-    * 1 running，2 fail，6 succ
+    * 1: running; 2: failed; 6: succeeded
     */
     @SerializedName("Status")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeBlockIPTaskResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 1 running，2 fail，6 succ 
-     * @return Status 1 running，2 fail，6 succ
+     * Get 1: running; 2: failed; 6: succeeded 
+     * @return Status 1: running; 2: failed; 6: succeeded
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 1 running，2 fail，6 succ
-     * @param Status 1 running，2 fail，6 succ
+     * Set 1: running; 2: failed; 6: succeeded
+     * @param Status 1: running; 2: failed; 6: succeeded
      */
     public void setStatus(Long Status) {
         this.Status = Status;

@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeBandwidthPackagesResponse extends AbstractModel{
 
     /**
-    * The number of bandwidth packages meeting the condition
+    * The number of eligible bandwidth packages.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * The description of the bandwidth packages
+    * The description of the bandwidth packages.
     */
     @SerializedName("BandwidthPackageSet")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeBandwidthPackagesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get The number of bandwidth packages meeting the condition 
-     * @return TotalCount The number of bandwidth packages meeting the condition
+     * Get The number of eligible bandwidth packages. 
+     * @return TotalCount The number of eligible bandwidth packages.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set The number of bandwidth packages meeting the condition
-     * @param TotalCount The number of bandwidth packages meeting the condition
+     * Set The number of eligible bandwidth packages.
+     * @param TotalCount The number of eligible bandwidth packages.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get The description of the bandwidth packages 
-     * @return BandwidthPackageSet The description of the bandwidth packages
+     * Get The description of the bandwidth packages. 
+     * @return BandwidthPackageSet The description of the bandwidth packages.
      */
     public BandwidthPackage [] getBandwidthPackageSet() {
         return this.BandwidthPackageSet;
     }
 
     /**
-     * Set The description of the bandwidth packages
-     * @param BandwidthPackageSet The description of the bandwidth packages
+     * Set The description of the bandwidth packages.
+     * @param BandwidthPackageSet The description of the bandwidth packages.
      */
     public void setBandwidthPackageSet(BandwidthPackage [] BandwidthPackageSet) {
         this.BandwidthPackageSet = BandwidthPackageSet;

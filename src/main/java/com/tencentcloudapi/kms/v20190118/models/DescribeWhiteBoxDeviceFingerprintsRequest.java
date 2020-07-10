@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeWhiteBoxDeviceFingerprintsRequest extends AbstractModel{
 
     /**
-    * 白盒密钥ID
+    * White-box key ID
     */
     @SerializedName("KeyId")
     @Expose
     private String KeyId;
 
     /**
-     * Get 白盒密钥ID 
-     * @return KeyId 白盒密钥ID
+     * Get White-box key ID 
+     * @return KeyId White-box key ID
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * Set 白盒密钥ID
-     * @param KeyId 白盒密钥ID
+     * Set White-box key ID
+     * @param KeyId White-box key ID
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;

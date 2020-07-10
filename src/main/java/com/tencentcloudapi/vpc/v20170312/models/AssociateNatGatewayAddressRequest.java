@@ -30,14 +30,14 @@ public class AssociateNatGatewayAddressRequest extends AbstractModel{
     private String NatGatewayId;
 
     /**
-    * The number of EIPs that needs to be applied for. The system will create N number of EIPs according to your requirements. Either AddressCount or PublicAddresses must be passed in.
+    * The number of EIPs you want to apply for. The system will create the same number of EIPs as you require. Either `AddressCount` or `PublicAddresses` must be passed in.
     */
     @SerializedName("AddressCount")
     @Expose
     private Long AddressCount;
 
     /**
-    * The EIP array bound to the NAT gateway. Either AddressCount or PublicAddresses must be passed in.
+    * The EIP array bound to the NAT gateway. Either `AddressCount` or `PublicAddresses` must be passed in.
     */
     @SerializedName("PublicIpAddresses")
     @Expose
@@ -67,32 +67,32 @@ public class AssociateNatGatewayAddressRequest extends AbstractModel{
     }
 
     /**
-     * Get The number of EIPs that needs to be applied for. The system will create N number of EIPs according to your requirements. Either AddressCount or PublicAddresses must be passed in. 
-     * @return AddressCount The number of EIPs that needs to be applied for. The system will create N number of EIPs according to your requirements. Either AddressCount or PublicAddresses must be passed in.
+     * Get The number of EIPs you want to apply for. The system will create the same number of EIPs as you require. Either `AddressCount` or `PublicAddresses` must be passed in. 
+     * @return AddressCount The number of EIPs you want to apply for. The system will create the same number of EIPs as you require. Either `AddressCount` or `PublicAddresses` must be passed in.
      */
     public Long getAddressCount() {
         return this.AddressCount;
     }
 
     /**
-     * Set The number of EIPs that needs to be applied for. The system will create N number of EIPs according to your requirements. Either AddressCount or PublicAddresses must be passed in.
-     * @param AddressCount The number of EIPs that needs to be applied for. The system will create N number of EIPs according to your requirements. Either AddressCount or PublicAddresses must be passed in.
+     * Set The number of EIPs you want to apply for. The system will create the same number of EIPs as you require. Either `AddressCount` or `PublicAddresses` must be passed in.
+     * @param AddressCount The number of EIPs you want to apply for. The system will create the same number of EIPs as you require. Either `AddressCount` or `PublicAddresses` must be passed in.
      */
     public void setAddressCount(Long AddressCount) {
         this.AddressCount = AddressCount;
     }
 
     /**
-     * Get The EIP array bound to the NAT gateway. Either AddressCount or PublicAddresses must be passed in. 
-     * @return PublicIpAddresses The EIP array bound to the NAT gateway. Either AddressCount or PublicAddresses must be passed in.
+     * Get The EIP array bound to the NAT gateway. Either `AddressCount` or `PublicAddresses` must be passed in. 
+     * @return PublicIpAddresses The EIP array bound to the NAT gateway. Either `AddressCount` or `PublicAddresses` must be passed in.
      */
     public String [] getPublicIpAddresses() {
         return this.PublicIpAddresses;
     }
 
     /**
-     * Set The EIP array bound to the NAT gateway. Either AddressCount or PublicAddresses must be passed in.
-     * @param PublicIpAddresses The EIP array bound to the NAT gateway. Either AddressCount or PublicAddresses must be passed in.
+     * Set The EIP array bound to the NAT gateway. Either `AddressCount` or `PublicAddresses` must be passed in.
+     * @param PublicIpAddresses The EIP array bound to the NAT gateway. Either `AddressCount` or `PublicAddresses` must be passed in.
      */
     public void setPublicIpAddresses(String [] PublicIpAddresses) {
         this.PublicIpAddresses = PublicIpAddresses;

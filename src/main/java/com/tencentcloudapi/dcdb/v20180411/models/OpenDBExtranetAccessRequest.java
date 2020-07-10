@@ -30,6 +30,13 @@ public class OpenDBExtranetAccessRequest extends AbstractModel{
     private String InstanceId;
 
     /**
+    * Whether IPv6 is used. Default value: 0
+    */
+    @SerializedName("Ipv6Flag")
+    @Expose
+    private Long Ipv6Flag;
+
+    /**
      * Get ID of an instance for which to enable public network access. The ID is in the format of dcdbt-ow728lmc. 
      * @return InstanceId ID of an instance for which to enable public network access. The ID is in the format of dcdbt-ow728lmc.
      */
@@ -46,10 +53,27 @@ public class OpenDBExtranetAccessRequest extends AbstractModel{
     }
 
     /**
+     * Get Whether IPv6 is used. Default value: 0 
+     * @return Ipv6Flag Whether IPv6 is used. Default value: 0
+     */
+    public Long getIpv6Flag() {
+        return this.Ipv6Flag;
+    }
+
+    /**
+     * Set Whether IPv6 is used. Default value: 0
+     * @param Ipv6Flag Whether IPv6 is used. Default value: 0
+     */
+    public void setIpv6Flag(Long Ipv6Flag) {
+        this.Ipv6Flag = Ipv6Flag;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Ipv6Flag", this.Ipv6Flag);
 
     }
 }

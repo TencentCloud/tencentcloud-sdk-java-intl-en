@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeBandwidthPackageQuotaResponse extends AbstractModel{
 
     /**
-    * The data structure of the bandwidth package quota
+    * The quota of the bandwidth package.
     */
     @SerializedName("QuotaSet")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeBandwidthPackageQuotaResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get The data structure of the bandwidth package quota 
-     * @return QuotaSet The data structure of the bandwidth package quota
+     * Get The quota of the bandwidth package. 
+     * @return QuotaSet The quota of the bandwidth package.
      */
     public Quota [] getQuotaSet() {
         return this.QuotaSet;
     }
 
     /**
-     * Set The data structure of the bandwidth package quota
-     * @param QuotaSet The data structure of the bandwidth package quota
+     * Set The quota of the bandwidth package.
+     * @param QuotaSet The quota of the bandwidth package.
      */
     public void setQuotaSet(Quota [] QuotaSet) {
         this.QuotaSet = QuotaSet;

@@ -56,7 +56,7 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *This API is used to add bandwidth package resources. This includes [Elastic IP](https://cloud.tencent.com/document/product/213/1941), [Cloud Load Balancer](https://cloud.tencent.com/document/product/214/517), and so on.
+     *This API is used to add a bandwidth package resource including [Elastic IP](https://cloud.tencent.com/document/product/213/1941), [Cloud Load Balancer](https://cloud.tencent.com/document/product/214/517), and so on.
      * @param req AddBandwidthPackageResourcesRequest
      * @return AddBandwidthPackageResourcesResponse
      * @throws TencentCloudSDKException
@@ -203,7 +203,7 @@ This API is completed asynchronously. If you need to query the async execution r
     }
 
     /**
-     *This API (AssociateNatGatewayAddress) is used to bind a NAT gateway to an Elastic IP (EIP).
+     *This API is used to bind a NAT Gateway to an Elastic IP (EIP).
      * @param req AssociateNatGatewayAddressRequest
      * @return AssociateNatGatewayAddressResponse
      * @throws TencentCloudSDKException
@@ -393,6 +393,29 @@ The number of network instances that each CCN can be associated with is limited.
     }
 
     /**
+     *This API is used to create an ENI and bind it to a CVM.
+* You can specify private IP addresses and a primary IP when creating an ENI. The specified private IP must be idle and in the same subnet as the ENI.
+* When creating an ENI, you can specify the number of private IP addresses that you want to apply for. The system will randomly generate private IP addresses.
+* An ENI can only be bound to a limited number of IP addresses. For more information about resource limits, see <a href="/document/product/576/18527">ENI Use Limits</a>.
+* You can bind an existing security group when creating an ENI.
+* You can bind a tag when creating an ENI. The tag list in the response indicates the tags that have been successfully added.
+     * @param req CreateAndAttachNetworkInterfaceRequest
+     * @return CreateAndAttachNetworkInterfaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAndAttachNetworkInterfaceResponse CreateAndAttachNetworkInterface(CreateAndAttachNetworkInterfaceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAndAttachNetworkInterfaceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAndAttachNetworkInterfaceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateAndAttachNetworkInterface"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (CreateAssistantCidr) is used to batch create secondary CIDR blocks. (To use this API that is in Beta, please submit a ticket.)
      * @param req CreateAssistantCidrRequest
      * @return CreateAssistantCidrResponse
@@ -411,7 +434,7 @@ The number of network instances that each CCN can be associated with is limited.
     }
 
     /**
-     *This API is used to support the creation of [Device bandwidth packages](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85) and [IP bandwidth packages](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85)
+     *This API is used to create [device bandwidth packages](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85) and [IP bandwidth packages](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85)
      * @param req CreateBandwidthPackageRequest
      * @return CreateBandwidthPackageResponse
      * @throws TencentCloudSDKException
@@ -493,7 +516,7 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
-     *This API (CreateDirectConnectGateway) is used to create a Direct Connect gateway.
+     *This API is used to create a direct connect gateway.
      * @param req CreateDirectConnectGatewayRequest
      * @return CreateDirectConnectGatewayResponse
      * @throws TencentCloudSDKException
@@ -529,7 +552,7 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
-     *This API (CreateFlowLog) is used to create flow logs.
+     *This API is used to create a flow log.
      * @param req CreateFlowLogRequest
      * @return CreateFlowLogResponse
      * @throws TencentCloudSDKException
@@ -979,7 +1002,7 @@ Description:
     }
 
     /**
-     *This API is used to support the deletion of shared bandwidth packages, including [Device bandwidth packages](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85) and [IP bandwidth packages](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85).
+     *This API is used to delete bandwidth packages, including [device bandwidth packages](https://cloud.tencent.com/document/product/684/15246#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85) and [IP bandwidth packages](https://cloud.tencent.com/document/product/684/15246#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85).
      * @param req DeleteBandwidthPackageRequest
      * @return DeleteBandwidthPackageResponse
      * @throws TencentCloudSDKException
@@ -1036,10 +1059,10 @@ Description:
     }
 
     /**
-     *This API (DeleteDirectConnectGateway) is used to delete Direct Connect gateways.
-<li>For a NAT gateway, NAT and ACL rules will be cleaned upon the deletion of a Direct Connect gateway.
-<li>After the deletion of a Direct Connect gateway, the routing policy associated with the gateway in the route table will also be deleted.
-This API is completed asynchronously. If you need to query the async job execution results, please use the `RequestId` returned by this API to query the `QueryTask` API.
+     *This API is used to delete a direct connect gateway.
+<li>For a NAT gateway, NAT and ACL rules will be cleared upon the deletion of a direct connect gateway.
+<li>After the deletion of a direct connect gateway, the routing policy associated with the gateway in the route table will also be deleted.
+This API is completed asynchronously. If you need to query the async job execution results, please use the `RequestId` returned by this API to poll the `QueryTask` API.
      * @param req DeleteDirectConnectGatewayRequest
      * @return DeleteDirectConnectGatewayResponse
      * @throws TencentCloudSDKException
@@ -1075,7 +1098,7 @@ This API is completed asynchronously. If you need to query the async job executi
     }
 
     /**
-     *This API (DeleteFlowLog) is used to delete flow logs.
+     *This API is used to delete a flow log.
      * @param req DeleteFlowLogRequest
      * @return DeleteFlowLogResponse
      * @throws TencentCloudSDKException
@@ -1501,7 +1524,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *This API is used to query the account’s maximum number of bandwidth packages and their usage in the current region.
+     *This API is used to query the maximum and used number of bandwidth packages under the account in the current region.
      * @param req DescribeBandwidthPackageQuotaRequest
      * @return DescribeBandwidthPackageQuotaResponse
      * @throws TencentCloudSDKException
@@ -1663,7 +1686,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *This API (DescribeDirectConnectGateways) is used to query Direct Connect gateways.
+     *This API is used to query direct connect gateways.
      * @param req DescribeDirectConnectGatewaysRequest
      * @return DescribeDirectConnectGatewaysResponse
      * @throws TencentCloudSDKException
@@ -1681,7 +1704,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *This API (DescribeFlowLog) is used to query flow log instance information.
+     *This API is used to query flow log instance information.
      * @param req DescribeFlowLogRequest
      * @return DescribeFlowLogResponse
      * @throws TencentCloudSDKException
@@ -1699,7 +1722,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *This API (DescribeFlowLogs) is used to query and obtain the flow log set.
+     *This API is used to query and obtain the flow log set.
      * @param req DescribeFlowLogsRequest
      * @return DescribeFlowLogsResponse
      * @throws TencentCloudSDKException
@@ -2429,6 +2452,24 @@ This API is used to verify whether there will be conflict with an existing route
     }
 
     /**
+     *This API is used to query the CCN bandwidth limits across regions. The monthly-subscribed CCN only supports the cross-region bandwidth limit, while the pay-as-you-go CCN supports both the cross-region and region egress bandwidth limit. Note: currently, this feature is in beta test. To use it, please [contact sales](https://intl.cloud.tencent.com/contact-sales).
+     * @param req GetCcnRegionBandwidthLimitsRequest
+     * @return GetCcnRegionBandwidthLimitsResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetCcnRegionBandwidthLimitsResponse GetCcnRegionBandwidthLimits(GetCcnRegionBandwidthLimitsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetCcnRegionBandwidthLimitsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetCcnRegionBandwidthLimitsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetCcnRegionBandwidthLimits"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (HaVipAssociateAddressIp) is used to bind an EIP to an HAVIP.<br />
 This API is completed asynchronously. If you need to query the async job execution results, please use the `RequestId` returned by this API to query the `QueryTask` API.
      * @param req HaVipAssociateAddressIpRequest
@@ -2670,7 +2711,7 @@ This API is completed asynchronously. If you need to query the async job executi
     }
 
     /**
-     *This API is used to modify bandwidth package attributes, including the bandwidth package name, and so on.
+     *This API is used to modify the attributes of a bandwidth package, including the bandwidth package name, and so on.
      * @param req ModifyBandwidthPackageAttributeRequest
      * @return ModifyBandwidthPackageAttributeResponse
      * @throws TencentCloudSDKException
@@ -2742,7 +2783,7 @@ This API is completed asynchronously. If you need to query the async job executi
     }
 
     /**
-     *This API (ModifyDirectConnectGatewayAttribute) is used to modify the Direct Connect gateway attributes.
+     *This API is used to modify the attributes of a direct connect gateway.
 
      * @param req ModifyDirectConnectGatewayAttributeRequest
      * @return ModifyDirectConnectGatewayAttributeResponse
@@ -2761,7 +2802,7 @@ This API is completed asynchronously. If you need to query the async job executi
     }
 
     /**
-     *This API (ModifyFlowLogAttribute) is used to modify flow log attributes.
+     *This API is used to modify the attributes of a flow log.
      * @param req ModifyFlowLogAttributeRequest
      * @return ModifyFlowLogAttributeResponse
      * @throws TencentCloudSDKException
@@ -3193,7 +3234,7 @@ This API is completed asynchronously. If you need to query the async job executi
     }
 
     /**
-     *This API is used to delete bandwidth package resources. This includes [Elastic IP](https://cloud.tencent.com/document/product/213/1941), [Cloud Load Balancer](https://cloud.tencent.com/document/product/214/517), and so on.
+     *This API is used to delete a bandwidth package resource, including [Elastic IP](https://cloud.tencent.com/document/product/213/1941), [Cloud Load Balancer](https://cloud.tencent.com/document/product/214/517), and so on.
      * @param req RemoveBandwidthPackageResourcesRequest
      * @return RemoveBandwidthPackageResourcesResponse
      * @throws TencentCloudSDKException

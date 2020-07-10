@@ -44,6 +44,16 @@ public class ModifyMediaLiveInputRequest extends AbstractModel{
     private String [] SecurityGroupIds;
 
     /**
+    * Input settings information.
+One or two sets of settings need to be configured for RTMP_PUSH/RTMP_PULL/HLS_PULL/MP4_PULL.
+This parameter can be left empty for RTP_PUSH and UDP_PUSH.
+Note: if it is left empty or the array is empty, the original `InputSettings` value will be used.
+    */
+    @SerializedName("InputSettings")
+    @Expose
+    private InputSettingInfo [] InputSettings;
+
+    /**
      * Get Media input ID. 
      * @return Id Media input ID.
      */
@@ -92,12 +102,41 @@ public class ModifyMediaLiveInputRequest extends AbstractModel{
     }
 
     /**
+     * Get Input settings information.
+One or two sets of settings need to be configured for RTMP_PUSH/RTMP_PULL/HLS_PULL/MP4_PULL.
+This parameter can be left empty for RTP_PUSH and UDP_PUSH.
+Note: if it is left empty or the array is empty, the original `InputSettings` value will be used. 
+     * @return InputSettings Input settings information.
+One or two sets of settings need to be configured for RTMP_PUSH/RTMP_PULL/HLS_PULL/MP4_PULL.
+This parameter can be left empty for RTP_PUSH and UDP_PUSH.
+Note: if it is left empty or the array is empty, the original `InputSettings` value will be used.
+     */
+    public InputSettingInfo [] getInputSettings() {
+        return this.InputSettings;
+    }
+
+    /**
+     * Set Input settings information.
+One or two sets of settings need to be configured for RTMP_PUSH/RTMP_PULL/HLS_PULL/MP4_PULL.
+This parameter can be left empty for RTP_PUSH and UDP_PUSH.
+Note: if it is left empty or the array is empty, the original `InputSettings` value will be used.
+     * @param InputSettings Input settings information.
+One or two sets of settings need to be configured for RTMP_PUSH/RTMP_PULL/HLS_PULL/MP4_PULL.
+This parameter can be left empty for RTP_PUSH and UDP_PUSH.
+Note: if it is left empty or the array is empty, the original `InputSettings` value will be used.
+     */
+    public void setInputSettings(InputSettingInfo [] InputSettings) {
+        this.InputSettings = InputSettings;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamArrayObj(map, prefix + "InputSettings.", this.InputSettings);
 
     }
 }

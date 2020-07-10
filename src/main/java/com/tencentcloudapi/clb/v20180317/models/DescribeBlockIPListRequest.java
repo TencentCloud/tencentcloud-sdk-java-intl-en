@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class DescribeBlockIPListRequest extends AbstractModel{
 
     /**
-    * 负载均衡实例 ID。
+    * CLB instance ID.
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 数据偏移量，默认为 0。
+    * Data offset. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回IP的最大个数，默认为 100000。
+    * Maximum number of IPs to be returned. Default value: 100,000.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 负载均衡实例 ID。 
-     * @return LoadBalancerId 负载均衡实例 ID。
+     * Get CLB instance ID. 
+     * @return LoadBalancerId CLB instance ID.
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡实例 ID。
-     * @param LoadBalancerId 负载均衡实例 ID。
+     * Set CLB instance ID.
+     * @param LoadBalancerId CLB instance ID.
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 数据偏移量，默认为 0。 
-     * @return Offset 数据偏移量，默认为 0。
+     * Get Data offset. Default value: 0. 
+     * @return Offset Data offset. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 数据偏移量，默认为 0。
-     * @param Offset 数据偏移量，默认为 0。
+     * Set Data offset. Default value: 0.
+     * @param Offset Data offset. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回IP的最大个数，默认为 100000。 
-     * @return Limit 返回IP的最大个数，默认为 100000。
+     * Get Maximum number of IPs to be returned. Default value: 100,000. 
+     * @return Limit Maximum number of IPs to be returned. Default value: 100,000.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回IP的最大个数，默认为 100000。
-     * @param Limit 返回IP的最大个数，默认为 100000。
+     * Set Maximum number of IPs to be returned. Default value: 100,000.
+     * @param Limit Maximum number of IPs to be returned. Default value: 100,000.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

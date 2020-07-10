@@ -23,28 +23,28 @@ import java.util.HashMap;
 public class BandwidthPackage extends AbstractModel{
 
     /**
-    * The unique ID of the bandwidth package
+    * The unique ID of the bandwidth package.
     */
     @SerializedName("BandwidthPackageId")
     @Expose
     private String BandwidthPackageId;
 
     /**
-    * The bandwidth package type, including 'BGP', 'SINGLEISP', 'ANYCAST'
+    * The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'
     */
     @SerializedName("NetworkType")
     @Expose
     private String NetworkType;
 
     /**
-    * The bandwidth package billing type, including 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
+    * The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
     */
     @SerializedName("ChargeType")
     @Expose
     private String ChargeType;
 
     /**
-    * The name of the bandwidth package
+    * The name of the bandwidth package.
     */
     @SerializedName("BandwidthPackageName")
     @Expose
@@ -58,85 +58,85 @@ public class BandwidthPackage extends AbstractModel{
     private String CreatedTime;
 
     /**
-    * The status of the bandwidth package, including 'CREATING', 'CREATED', 'DELETING', and 'DELETED'.
+    * The status of the bandwidth package. Valid values: 'CREATING', 'CREATED', 'DELETING', and 'DELETED'.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * The resource information of the bandwidth package
+    * The resource information of the bandwidth package.
     */
     @SerializedName("ResourceSet")
     @Expose
     private Resource [] ResourceSet;
 
     /**
-    * The size limit of the bandwidth package. Unit: Mbps. -1 indicates there is no limit.
+    * The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
     */
     @SerializedName("Bandwidth")
     @Expose
     private Long Bandwidth;
 
     /**
-     * Get The unique ID of the bandwidth package 
-     * @return BandwidthPackageId The unique ID of the bandwidth package
+     * Get The unique ID of the bandwidth package. 
+     * @return BandwidthPackageId The unique ID of the bandwidth package.
      */
     public String getBandwidthPackageId() {
         return this.BandwidthPackageId;
     }
 
     /**
-     * Set The unique ID of the bandwidth package
-     * @param BandwidthPackageId The unique ID of the bandwidth package
+     * Set The unique ID of the bandwidth package.
+     * @param BandwidthPackageId The unique ID of the bandwidth package.
      */
     public void setBandwidthPackageId(String BandwidthPackageId) {
         this.BandwidthPackageId = BandwidthPackageId;
     }
 
     /**
-     * Get The bandwidth package type, including 'BGP', 'SINGLEISP', 'ANYCAST' 
-     * @return NetworkType The bandwidth package type, including 'BGP', 'SINGLEISP', 'ANYCAST'
+     * Get The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST' 
+     * @return NetworkType The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'
      */
     public String getNetworkType() {
         return this.NetworkType;
     }
 
     /**
-     * Set The bandwidth package type, including 'BGP', 'SINGLEISP', 'ANYCAST'
-     * @param NetworkType The bandwidth package type, including 'BGP', 'SINGLEISP', 'ANYCAST'
+     * Set The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'
+     * @param NetworkType The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;
     }
 
     /**
-     * Get The bandwidth package billing type, including 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH' 
-     * @return ChargeType The bandwidth package billing type, including 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
+     * Get The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH' 
+     * @return ChargeType The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
      */
     public String getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set The bandwidth package billing type, including 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
-     * @param ChargeType The bandwidth package billing type, including 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
+     * Set The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
+     * @param ChargeType The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'
      */
     public void setChargeType(String ChargeType) {
         this.ChargeType = ChargeType;
     }
 
     /**
-     * Get The name of the bandwidth package 
-     * @return BandwidthPackageName The name of the bandwidth package
+     * Get The name of the bandwidth package. 
+     * @return BandwidthPackageName The name of the bandwidth package.
      */
     public String getBandwidthPackageName() {
         return this.BandwidthPackageName;
     }
 
     /**
-     * Set The name of the bandwidth package
-     * @param BandwidthPackageName The name of the bandwidth package
+     * Set The name of the bandwidth package.
+     * @param BandwidthPackageName The name of the bandwidth package.
      */
     public void setBandwidthPackageName(String BandwidthPackageName) {
         this.BandwidthPackageName = BandwidthPackageName;
@@ -159,48 +159,48 @@ public class BandwidthPackage extends AbstractModel{
     }
 
     /**
-     * Get The status of the bandwidth package, including 'CREATING', 'CREATED', 'DELETING', and 'DELETED'. 
-     * @return Status The status of the bandwidth package, including 'CREATING', 'CREATED', 'DELETING', and 'DELETED'.
+     * Get The status of the bandwidth package. Valid values: 'CREATING', 'CREATED', 'DELETING', and 'DELETED'. 
+     * @return Status The status of the bandwidth package. Valid values: 'CREATING', 'CREATED', 'DELETING', and 'DELETED'.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set The status of the bandwidth package, including 'CREATING', 'CREATED', 'DELETING', and 'DELETED'.
-     * @param Status The status of the bandwidth package, including 'CREATING', 'CREATED', 'DELETING', and 'DELETED'.
+     * Set The status of the bandwidth package. Valid values: 'CREATING', 'CREATED', 'DELETING', and 'DELETED'.
+     * @param Status The status of the bandwidth package. Valid values: 'CREATING', 'CREATED', 'DELETING', and 'DELETED'.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get The resource information of the bandwidth package 
-     * @return ResourceSet The resource information of the bandwidth package
+     * Get The resource information of the bandwidth package. 
+     * @return ResourceSet The resource information of the bandwidth package.
      */
     public Resource [] getResourceSet() {
         return this.ResourceSet;
     }
 
     /**
-     * Set The resource information of the bandwidth package
-     * @param ResourceSet The resource information of the bandwidth package
+     * Set The resource information of the bandwidth package.
+     * @param ResourceSet The resource information of the bandwidth package.
      */
     public void setResourceSet(Resource [] ResourceSet) {
         this.ResourceSet = ResourceSet;
     }
 
     /**
-     * Get The size limit of the bandwidth package. Unit: Mbps. -1 indicates there is no limit. 
-     * @return Bandwidth The size limit of the bandwidth package. Unit: Mbps. -1 indicates there is no limit.
+     * Get The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit. 
+     * @return Bandwidth The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set The size limit of the bandwidth package. Unit: Mbps. -1 indicates there is no limit.
-     * @param Bandwidth The size limit of the bandwidth package. Unit: Mbps. -1 indicates there is no limit.
+     * Set The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
+     * @param Bandwidth The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;

@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeDirectConnectGatewaysResponse extends AbstractModel{
 
     /**
-    * The number of objects meeting the condition.
+    * The number of eligible objects.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * The object array of the Direct Connect gateway.
+    * The object array of the direct connect gateway.
     */
     @SerializedName("DirectConnectGatewaySet")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeDirectConnectGatewaysResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get The number of objects meeting the condition. 
-     * @return TotalCount The number of objects meeting the condition.
+     * Get The number of eligible objects. 
+     * @return TotalCount The number of eligible objects.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set The number of objects meeting the condition.
-     * @param TotalCount The number of objects meeting the condition.
+     * Set The number of eligible objects.
+     * @param TotalCount The number of eligible objects.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get The object array of the Direct Connect gateway. 
-     * @return DirectConnectGatewaySet The object array of the Direct Connect gateway.
+     * Get The object array of the direct connect gateway. 
+     * @return DirectConnectGatewaySet The object array of the direct connect gateway.
      */
     public DirectConnectGateway [] getDirectConnectGatewaySet() {
         return this.DirectConnectGatewaySet;
     }
 
     /**
-     * Set The object array of the Direct Connect gateway.
-     * @param DirectConnectGatewaySet The object array of the Direct Connect gateway.
+     * Set The object array of the direct connect gateway.
+     * @param DirectConnectGatewaySet The object array of the direct connect gateway.
      */
     public void setDirectConnectGatewaySet(DirectConnectGateway [] DirectConnectGatewaySet) {
         this.DirectConnectGatewaySet = DirectConnectGatewaySet;

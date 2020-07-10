@@ -23,115 +23,115 @@ import java.util.HashMap;
 public class AddBandwidthPackageResourcesRequest extends AbstractModel{
 
     /**
-    * ResourceId, such as 'eip-xxxx', 'lb-xxxx'
+    * The unique ID of the source, such as 'eip-xxxx' and 'lb-xxxx'. EIP and LB resources are currently supported.
     */
     @SerializedName("ResourceIds")
     @Expose
     private String [] ResourceIds;
 
     /**
-    * The unique ID of the bandwidth package, such as 'bwp-xxxx'
+    * The unique ID of the bandwidth package, such as 'bwp-xxxx'.
     */
     @SerializedName("BandwidthPackageId")
     @Expose
     private String BandwidthPackageId;
 
     /**
-    * The bandwidth package type, including 'BGP', 'SINGLEISP', 'ANYCAST'
+    * The type of the bandwidth package. Valid value: 'BGP'. Internal resources will be represented by 'BGP IP'.
     */
     @SerializedName("NetworkType")
     @Expose
     private String NetworkType;
 
     /**
-    * The resource type, including 'Address', 'LoadBalance'
+    * The resource type, including 'Address' and 'LoadBalance'.
     */
     @SerializedName("ResourceType")
     @Expose
     private String ResourceType;
 
     /**
-    * 
+    * The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'.
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-     * Get ResourceId, such as 'eip-xxxx', 'lb-xxxx' 
-     * @return ResourceIds ResourceId, such as 'eip-xxxx', 'lb-xxxx'
+     * Get The unique ID of the source, such as 'eip-xxxx' and 'lb-xxxx'. EIP and LB resources are currently supported. 
+     * @return ResourceIds The unique ID of the source, such as 'eip-xxxx' and 'lb-xxxx'. EIP and LB resources are currently supported.
      */
     public String [] getResourceIds() {
         return this.ResourceIds;
     }
 
     /**
-     * Set ResourceId, such as 'eip-xxxx', 'lb-xxxx'
-     * @param ResourceIds ResourceId, such as 'eip-xxxx', 'lb-xxxx'
+     * Set The unique ID of the source, such as 'eip-xxxx' and 'lb-xxxx'. EIP and LB resources are currently supported.
+     * @param ResourceIds The unique ID of the source, such as 'eip-xxxx' and 'lb-xxxx'. EIP and LB resources are currently supported.
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;
     }
 
     /**
-     * Get The unique ID of the bandwidth package, such as 'bwp-xxxx' 
-     * @return BandwidthPackageId The unique ID of the bandwidth package, such as 'bwp-xxxx'
+     * Get The unique ID of the bandwidth package, such as 'bwp-xxxx'. 
+     * @return BandwidthPackageId The unique ID of the bandwidth package, such as 'bwp-xxxx'.
      */
     public String getBandwidthPackageId() {
         return this.BandwidthPackageId;
     }
 
     /**
-     * Set The unique ID of the bandwidth package, such as 'bwp-xxxx'
-     * @param BandwidthPackageId The unique ID of the bandwidth package, such as 'bwp-xxxx'
+     * Set The unique ID of the bandwidth package, such as 'bwp-xxxx'.
+     * @param BandwidthPackageId The unique ID of the bandwidth package, such as 'bwp-xxxx'.
      */
     public void setBandwidthPackageId(String BandwidthPackageId) {
         this.BandwidthPackageId = BandwidthPackageId;
     }
 
     /**
-     * Get The bandwidth package type, including 'BGP', 'SINGLEISP', 'ANYCAST' 
-     * @return NetworkType The bandwidth package type, including 'BGP', 'SINGLEISP', 'ANYCAST'
+     * Get The type of the bandwidth package. Valid value: 'BGP'. Internal resources will be represented by 'BGP IP'. 
+     * @return NetworkType The type of the bandwidth package. Valid value: 'BGP'. Internal resources will be represented by 'BGP IP'.
      */
     public String getNetworkType() {
         return this.NetworkType;
     }
 
     /**
-     * Set The bandwidth package type, including 'BGP', 'SINGLEISP', 'ANYCAST'
-     * @param NetworkType The bandwidth package type, including 'BGP', 'SINGLEISP', 'ANYCAST'
+     * Set The type of the bandwidth package. Valid value: 'BGP'. Internal resources will be represented by 'BGP IP'.
+     * @param NetworkType The type of the bandwidth package. Valid value: 'BGP'. Internal resources will be represented by 'BGP IP'.
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;
     }
 
     /**
-     * Get The resource type, including 'Address', 'LoadBalance' 
-     * @return ResourceType The resource type, including 'Address', 'LoadBalance'
+     * Get The resource type, including 'Address' and 'LoadBalance'. 
+     * @return ResourceType The resource type, including 'Address' and 'LoadBalance'.
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set The resource type, including 'Address', 'LoadBalance'
-     * @param ResourceType The resource type, including 'Address', 'LoadBalance'
+     * Set The resource type, including 'Address' and 'LoadBalance'.
+     * @param ResourceType The resource type, including 'Address' and 'LoadBalance'.
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get  
-     * @return Protocol 
+     * Get The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'. 
+     * @return Protocol The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'.
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 
-     * @param Protocol 
+     * Set The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'.
+     * @param Protocol The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

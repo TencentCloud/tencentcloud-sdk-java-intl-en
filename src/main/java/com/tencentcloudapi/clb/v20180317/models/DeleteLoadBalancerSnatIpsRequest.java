@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DeleteLoadBalancerSnatIpsRequest extends AbstractModel{
 
     /**
-    * 负载均衡唯一Id，如lb-12345678
+    * Unique CLB instance ID, such as lb-12345678
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 删除SnatIp地址数组
+    * Array of the SNAT IP addresses to be deleted
     */
     @SerializedName("Ips")
     @Expose
     private String [] Ips;
 
     /**
-     * Get 负载均衡唯一Id，如lb-12345678 
-     * @return LoadBalancerId 负载均衡唯一Id，如lb-12345678
+     * Get Unique CLB instance ID, such as lb-12345678 
+     * @return LoadBalancerId Unique CLB instance ID, such as lb-12345678
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡唯一Id，如lb-12345678
-     * @param LoadBalancerId 负载均衡唯一Id，如lb-12345678
+     * Set Unique CLB instance ID, such as lb-12345678
+     * @param LoadBalancerId Unique CLB instance ID, such as lb-12345678
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 删除SnatIp地址数组 
-     * @return Ips 删除SnatIp地址数组
+     * Get Array of the SNAT IP addresses to be deleted 
+     * @return Ips Array of the SNAT IP addresses to be deleted
      */
     public String [] getIps() {
         return this.Ips;
     }
 
     /**
-     * Set 删除SnatIp地址数组
-     * @param Ips 删除SnatIp地址数组
+     * Set Array of the SNAT IP addresses to be deleted
+     * @param Ips Array of the SNAT IP addresses to be deleted
      */
     public void setIps(String [] Ips) {
         this.Ips = Ips;

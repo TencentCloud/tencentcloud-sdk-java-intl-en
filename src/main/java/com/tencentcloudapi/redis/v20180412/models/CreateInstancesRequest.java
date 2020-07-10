@@ -30,7 +30,7 @@ public class CreateInstancesRequest extends AbstractModel{
     private Long ZoneId;
 
     /**
-    * Instance type. 2: Redis 2.8 Master-Slave Edition, 3: Redis 3.2 Master-Slave Edition (CKV Master-Slave Edition), 4: Redis 3.2 Cluster Edition (CKV Cluster Edition), 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
+    * Instance type. Valid values: 2 (Redis 2.8 memory edition in standard architecture), 3 (Redis 3.2 memory edition in standard architecture), 4 (CKV 3.2 memory edition in standard architecture), 6 (Redis 4.0 memory edition in standard architecture), 7 (Redis 4.0 memory edition in cluster architecture), 8 (Redis 5.0 memory edition in standard architecture), 9 (Redis 5.0 memory edition in cluster architecture).
     */
     @SerializedName("TypeId")
     @Expose
@@ -65,7 +65,7 @@ public class CreateInstancesRequest extends AbstractModel{
     private Long BillingMode;
 
     /**
-    * Instance password. Rules: 1. It can contain 8-16 characters; 2. It must contain at least two of the following three types of characters: letters, digits, and special characters !@^*(). (When creating a password-free instance, you can leave this field along and it will be ignored.)
+    * Instance password. It can contain 8-30 characters and must contain at least two of the following types of characters: lowercase letters, uppercase letters, digits, and special symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/). It cannot stat with the symbol (/).
     */
     @SerializedName("Password")
     @Expose
@@ -114,35 +114,35 @@ public class CreateInstancesRequest extends AbstractModel{
     private Long VPort;
 
     /**
-    * Number of instance shards. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, Redis 2.8 standalone edition, and Redis 4.0 master-slave edition
+    * Number of shards in an instance. This parameter is required for cluster edition instances. Valid values: 3, 5, 8, 12, 16, 24, 32, 64, 96, 128.
     */
     @SerializedName("RedisShardNum")
     @Expose
     private Long RedisShardNum;
 
     /**
-    * Number of instance replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
+    * Number of replicas in an instance. Redis 2.8 standard edition and CKV standard edition support 1 replica. Standard/cluster edition 4.0 and 5.0 support 1-5 replicas.
     */
     @SerializedName("RedisReplicasNum")
     @Expose
     private Long RedisReplicasNum;
 
     /**
-    * Whether to support read-only replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition |
+    * Whether to support read-only replicas. Neither Redis 2.8 standard edition nor CKV standard edition supports read-only replicas. Read/write separation will be automatically enabled for an instance after it enables read-only replicas. Write requests will be directed to the master node and read requests will be distributed on slave nodes. To enable read-only replicas, we recommend you create 2 or more replicas.
     */
     @SerializedName("ReplicasReadonly")
     @Expose
     private Boolean ReplicasReadonly;
 
     /**
-    * Instance name
+    * Instance name. It contains only letters, digits, underscores, and dashes with a length of up to 60 characters.
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * Whether to support the password-free feature. Value range: true (password-free instance); false (password-enabled instance). Default value: false
+    * Whether to support the password-free feature. Valid values: true (password-free instance), false (password-enabled instance). Default value: false. Only instances in a VPC support the password-free access.
     */
     @SerializedName("NoAuth")
     @Expose
@@ -165,16 +165,16 @@ public class CreateInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Instance type. 2: Redis 2.8 Master-Slave Edition, 3: Redis 3.2 Master-Slave Edition (CKV Master-Slave Edition), 4: Redis 3.2 Cluster Edition (CKV Cluster Edition), 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition, 
-     * @return TypeId Instance type. 2: Redis 2.8 Master-Slave Edition, 3: Redis 3.2 Master-Slave Edition (CKV Master-Slave Edition), 4: Redis 3.2 Cluster Edition (CKV Cluster Edition), 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
+     * Get Instance type. Valid values: 2 (Redis 2.8 memory edition in standard architecture), 3 (Redis 3.2 memory edition in standard architecture), 4 (CKV 3.2 memory edition in standard architecture), 6 (Redis 4.0 memory edition in standard architecture), 7 (Redis 4.0 memory edition in cluster architecture), 8 (Redis 5.0 memory edition in standard architecture), 9 (Redis 5.0 memory edition in cluster architecture). 
+     * @return TypeId Instance type. Valid values: 2 (Redis 2.8 memory edition in standard architecture), 3 (Redis 3.2 memory edition in standard architecture), 4 (CKV 3.2 memory edition in standard architecture), 6 (Redis 4.0 memory edition in standard architecture), 7 (Redis 4.0 memory edition in cluster architecture), 8 (Redis 5.0 memory edition in standard architecture), 9 (Redis 5.0 memory edition in cluster architecture).
      */
     public Long getTypeId() {
         return this.TypeId;
     }
 
     /**
-     * Set Instance type. 2: Redis 2.8 Master-Slave Edition, 3: Redis 3.2 Master-Slave Edition (CKV Master-Slave Edition), 4: Redis 3.2 Cluster Edition (CKV Cluster Edition), 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
-     * @param TypeId Instance type. 2: Redis 2.8 Master-Slave Edition, 3: Redis 3.2 Master-Slave Edition (CKV Master-Slave Edition), 4: Redis 3.2 Cluster Edition (CKV Cluster Edition), 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
+     * Set Instance type. Valid values: 2 (Redis 2.8 memory edition in standard architecture), 3 (Redis 3.2 memory edition in standard architecture), 4 (CKV 3.2 memory edition in standard architecture), 6 (Redis 4.0 memory edition in standard architecture), 7 (Redis 4.0 memory edition in cluster architecture), 8 (Redis 5.0 memory edition in standard architecture), 9 (Redis 5.0 memory edition in cluster architecture).
+     * @param TypeId Instance type. Valid values: 2 (Redis 2.8 memory edition in standard architecture), 3 (Redis 3.2 memory edition in standard architecture), 4 (CKV 3.2 memory edition in standard architecture), 6 (Redis 4.0 memory edition in standard architecture), 7 (Redis 4.0 memory edition in cluster architecture), 8 (Redis 5.0 memory edition in standard architecture), 9 (Redis 5.0 memory edition in cluster architecture).
      */
     public void setTypeId(Long TypeId) {
         this.TypeId = TypeId;
@@ -245,16 +245,16 @@ public class CreateInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Instance password. Rules: 1. It can contain 8-16 characters; 2. It must contain at least two of the following three types of characters: letters, digits, and special characters !@^*(). (When creating a password-free instance, you can leave this field along and it will be ignored.) 
-     * @return Password Instance password. Rules: 1. It can contain 8-16 characters; 2. It must contain at least two of the following three types of characters: letters, digits, and special characters !@^*(). (When creating a password-free instance, you can leave this field along and it will be ignored.)
+     * Get Instance password. It can contain 8-30 characters and must contain at least two of the following types of characters: lowercase letters, uppercase letters, digits, and special symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/). It cannot stat with the symbol (/). 
+     * @return Password Instance password. It can contain 8-30 characters and must contain at least two of the following types of characters: lowercase letters, uppercase letters, digits, and special symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/). It cannot stat with the symbol (/).
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Instance password. Rules: 1. It can contain 8-16 characters; 2. It must contain at least two of the following three types of characters: letters, digits, and special characters !@^*(). (When creating a password-free instance, you can leave this field along and it will be ignored.)
-     * @param Password Instance password. Rules: 1. It can contain 8-16 characters; 2. It must contain at least two of the following three types of characters: letters, digits, and special characters !@^*(). (When creating a password-free instance, you can leave this field along and it will be ignored.)
+     * Set Instance password. It can contain 8-30 characters and must contain at least two of the following types of characters: lowercase letters, uppercase letters, digits, and special symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/). It cannot stat with the symbol (/).
+     * @param Password Instance password. It can contain 8-30 characters and must contain at least two of the following types of characters: lowercase letters, uppercase letters, digits, and special symbols (()`~!@#$%^&*-+=_|{}[]:;<>,.?/). It cannot stat with the symbol (/).
      */
     public void setPassword(String Password) {
         this.Password = Password;
@@ -357,80 +357,80 @@ public class CreateInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Number of instance shards. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, Redis 2.8 standalone edition, and Redis 4.0 master-slave edition 
-     * @return RedisShardNum Number of instance shards. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, Redis 2.8 standalone edition, and Redis 4.0 master-slave edition
+     * Get Number of shards in an instance. This parameter is required for cluster edition instances. Valid values: 3, 5, 8, 12, 16, 24, 32, 64, 96, 128. 
+     * @return RedisShardNum Number of shards in an instance. This parameter is required for cluster edition instances. Valid values: 3, 5, 8, 12, 16, 24, 32, 64, 96, 128.
      */
     public Long getRedisShardNum() {
         return this.RedisShardNum;
     }
 
     /**
-     * Set Number of instance shards. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, Redis 2.8 standalone edition, and Redis 4.0 master-slave edition
-     * @param RedisShardNum Number of instance shards. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, Redis 2.8 standalone edition, and Redis 4.0 master-slave edition
+     * Set Number of shards in an instance. This parameter is required for cluster edition instances. Valid values: 3, 5, 8, 12, 16, 24, 32, 64, 96, 128.
+     * @param RedisShardNum Number of shards in an instance. This parameter is required for cluster edition instances. Valid values: 3, 5, 8, 12, 16, 24, 32, 64, 96, 128.
      */
     public void setRedisShardNum(Long RedisShardNum) {
         this.RedisShardNum = RedisShardNum;
     }
 
     /**
-     * Get Number of instance replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition 
-     * @return RedisReplicasNum Number of instance replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
+     * Get Number of replicas in an instance. Redis 2.8 standard edition and CKV standard edition support 1 replica. Standard/cluster edition 4.0 and 5.0 support 1-5 replicas. 
+     * @return RedisReplicasNum Number of replicas in an instance. Redis 2.8 standard edition and CKV standard edition support 1 replica. Standard/cluster edition 4.0 and 5.0 support 1-5 replicas.
      */
     public Long getRedisReplicasNum() {
         return this.RedisReplicasNum;
     }
 
     /**
-     * Set Number of instance replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
-     * @param RedisReplicasNum Number of instance replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition
+     * Set Number of replicas in an instance. Redis 2.8 standard edition and CKV standard edition support 1 replica. Standard/cluster edition 4.0 and 5.0 support 1-5 replicas.
+     * @param RedisReplicasNum Number of replicas in an instance. Redis 2.8 standard edition and CKV standard edition support 1 replica. Standard/cluster edition 4.0 and 5.0 support 1-5 replicas.
      */
     public void setRedisReplicasNum(Long RedisReplicasNum) {
         this.RedisReplicasNum = RedisReplicasNum;
     }
 
     /**
-     * Get Whether to support read-only replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition | 
-     * @return ReplicasReadonly Whether to support read-only replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition |
+     * Get Whether to support read-only replicas. Neither Redis 2.8 standard edition nor CKV standard edition supports read-only replicas. Read/write separation will be automatically enabled for an instance after it enables read-only replicas. Write requests will be directed to the master node and read requests will be distributed on slave nodes. To enable read-only replicas, we recommend you create 2 or more replicas. 
+     * @return ReplicasReadonly Whether to support read-only replicas. Neither Redis 2.8 standard edition nor CKV standard edition supports read-only replicas. Read/write separation will be automatically enabled for an instance after it enables read-only replicas. Write requests will be directed to the master node and read requests will be distributed on slave nodes. To enable read-only replicas, we recommend you create 2 or more replicas.
      */
     public Boolean getReplicasReadonly() {
         return this.ReplicasReadonly;
     }
 
     /**
-     * Set Whether to support read-only replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition |
-     * @param ReplicasReadonly Whether to support read-only replicas. This parameter can be left blank for Redis 2.8 master-slave edition, CKV master-slave edition, and Redis 2.8 standalone edition |
+     * Set Whether to support read-only replicas. Neither Redis 2.8 standard edition nor CKV standard edition supports read-only replicas. Read/write separation will be automatically enabled for an instance after it enables read-only replicas. Write requests will be directed to the master node and read requests will be distributed on slave nodes. To enable read-only replicas, we recommend you create 2 or more replicas.
+     * @param ReplicasReadonly Whether to support read-only replicas. Neither Redis 2.8 standard edition nor CKV standard edition supports read-only replicas. Read/write separation will be automatically enabled for an instance after it enables read-only replicas. Write requests will be directed to the master node and read requests will be distributed on slave nodes. To enable read-only replicas, we recommend you create 2 or more replicas.
      */
     public void setReplicasReadonly(Boolean ReplicasReadonly) {
         this.ReplicasReadonly = ReplicasReadonly;
     }
 
     /**
-     * Get Instance name 
-     * @return InstanceName Instance name
+     * Get Instance name. It contains only letters, digits, underscores, and dashes with a length of up to 60 characters. 
+     * @return InstanceName Instance name. It contains only letters, digits, underscores, and dashes with a length of up to 60 characters.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name
-     * @param InstanceName Instance name
+     * Set Instance name. It contains only letters, digits, underscores, and dashes with a length of up to 60 characters.
+     * @param InstanceName Instance name. It contains only letters, digits, underscores, and dashes with a length of up to 60 characters.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Whether to support the password-free feature. Value range: true (password-free instance); false (password-enabled instance). Default value: false 
-     * @return NoAuth Whether to support the password-free feature. Value range: true (password-free instance); false (password-enabled instance). Default value: false
+     * Get Whether to support the password-free feature. Valid values: true (password-free instance), false (password-enabled instance). Default value: false. Only instances in a VPC support the password-free access. 
+     * @return NoAuth Whether to support the password-free feature. Valid values: true (password-free instance), false (password-enabled instance). Default value: false. Only instances in a VPC support the password-free access.
      */
     public Boolean getNoAuth() {
         return this.NoAuth;
     }
 
     /**
-     * Set Whether to support the password-free feature. Value range: true (password-free instance); false (password-enabled instance). Default value: false
-     * @param NoAuth Whether to support the password-free feature. Value range: true (password-free instance); false (password-enabled instance). Default value: false
+     * Set Whether to support the password-free feature. Valid values: true (password-free instance), false (password-enabled instance). Default value: false. Only instances in a VPC support the password-free access.
+     * @param NoAuth Whether to support the password-free feature. Valid values: true (password-free instance), false (password-enabled instance). Default value: false. Only instances in a VPC support the password-free access.
      */
     public void setNoAuth(Boolean NoAuth) {
         this.NoAuth = NoAuth;

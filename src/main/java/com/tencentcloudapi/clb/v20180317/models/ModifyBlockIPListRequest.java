@@ -23,168 +23,168 @@ import java.util.HashMap;
 public class ModifyBlockIPListRequest extends AbstractModel{
 
     /**
-    * 负载均衡实例ID
+    * CLB instance ID
     */
     @SerializedName("LoadBalancerIds")
     @Expose
     private String [] LoadBalancerIds;
 
     /**
-    * 操作类型，可取：
-<li> add_customized_field（首次设置header，开启黑名单功能）</li>
-<li> set_customized_field（修改header）</li>
-<li> del_customized_field（删除header）</li>
-<li> add_blocked（添加黑名单）</li>
-<li> del_blocked（删除黑名单）</li>
-<li> flush_blocked（清空黑名单）</li>
+    * Operation type. Valid values:
+<li> add_customized_field (sets header initially to enable the blacklist feature)</li>
+<li> set_customized_field (modifies header)</li>
+<li> del_customized_field (deletes header)</li>
+<li> add_blocked (adds IPs to blacklist)</li>
+<li> del_blocked (deletes IPs from blacklist)</li>
+<li> flush_blocked (clears blacklist)</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 客户端真实IP存放的header字段名
+    * Header field that stores real client IPs
     */
     @SerializedName("ClientIPField")
     @Expose
     private String ClientIPField;
 
     /**
-    * 封禁IP列表，单次操作数组最大长度支持200000
+    * List of blocked IPs. The array can contain up to 200,000 entries in one operation.
     */
     @SerializedName("BlockIPList")
     @Expose
     private String [] BlockIPList;
 
     /**
-    * 过期时间，单位秒，默认值3600
+    * Expiration time in seconds. Default value: 3600
     */
     @SerializedName("ExpireTime")
     @Expose
     private Long ExpireTime;
 
     /**
-    * 添加IP的策略，可取：fifo（如果黑名单容量已满，新加入黑名单的IP采用先进先出策略）
+    * IP adding policy. Valid value: fifo (if a blacklist is full, new IPs added to the blacklist will adopt the first-in first-out policy)
     */
     @SerializedName("AddStrategy")
     @Expose
     private String AddStrategy;
 
     /**
-     * Get 负载均衡实例ID 
-     * @return LoadBalancerIds 负载均衡实例ID
+     * Get CLB instance ID 
+     * @return LoadBalancerIds CLB instance ID
      */
     public String [] getLoadBalancerIds() {
         return this.LoadBalancerIds;
     }
 
     /**
-     * Set 负载均衡实例ID
-     * @param LoadBalancerIds 负载均衡实例ID
+     * Set CLB instance ID
+     * @param LoadBalancerIds CLB instance ID
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {
         this.LoadBalancerIds = LoadBalancerIds;
     }
 
     /**
-     * Get 操作类型，可取：
-<li> add_customized_field（首次设置header，开启黑名单功能）</li>
-<li> set_customized_field（修改header）</li>
-<li> del_customized_field（删除header）</li>
-<li> add_blocked（添加黑名单）</li>
-<li> del_blocked（删除黑名单）</li>
-<li> flush_blocked（清空黑名单）</li> 
-     * @return Type 操作类型，可取：
-<li> add_customized_field（首次设置header，开启黑名单功能）</li>
-<li> set_customized_field（修改header）</li>
-<li> del_customized_field（删除header）</li>
-<li> add_blocked（添加黑名单）</li>
-<li> del_blocked（删除黑名单）</li>
-<li> flush_blocked（清空黑名单）</li>
+     * Get Operation type. Valid values:
+<li> add_customized_field (sets header initially to enable the blacklist feature)</li>
+<li> set_customized_field (modifies header)</li>
+<li> del_customized_field (deletes header)</li>
+<li> add_blocked (adds IPs to blacklist)</li>
+<li> del_blocked (deletes IPs from blacklist)</li>
+<li> flush_blocked (clears blacklist)</li> 
+     * @return Type Operation type. Valid values:
+<li> add_customized_field (sets header initially to enable the blacklist feature)</li>
+<li> set_customized_field (modifies header)</li>
+<li> del_customized_field (deletes header)</li>
+<li> add_blocked (adds IPs to blacklist)</li>
+<li> del_blocked (deletes IPs from blacklist)</li>
+<li> flush_blocked (clears blacklist)</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 操作类型，可取：
-<li> add_customized_field（首次设置header，开启黑名单功能）</li>
-<li> set_customized_field（修改header）</li>
-<li> del_customized_field（删除header）</li>
-<li> add_blocked（添加黑名单）</li>
-<li> del_blocked（删除黑名单）</li>
-<li> flush_blocked（清空黑名单）</li>
-     * @param Type 操作类型，可取：
-<li> add_customized_field（首次设置header，开启黑名单功能）</li>
-<li> set_customized_field（修改header）</li>
-<li> del_customized_field（删除header）</li>
-<li> add_blocked（添加黑名单）</li>
-<li> del_blocked（删除黑名单）</li>
-<li> flush_blocked（清空黑名单）</li>
+     * Set Operation type. Valid values:
+<li> add_customized_field (sets header initially to enable the blacklist feature)</li>
+<li> set_customized_field (modifies header)</li>
+<li> del_customized_field (deletes header)</li>
+<li> add_blocked (adds IPs to blacklist)</li>
+<li> del_blocked (deletes IPs from blacklist)</li>
+<li> flush_blocked (clears blacklist)</li>
+     * @param Type Operation type. Valid values:
+<li> add_customized_field (sets header initially to enable the blacklist feature)</li>
+<li> set_customized_field (modifies header)</li>
+<li> del_customized_field (deletes header)</li>
+<li> add_blocked (adds IPs to blacklist)</li>
+<li> del_blocked (deletes IPs from blacklist)</li>
+<li> flush_blocked (clears blacklist)</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 客户端真实IP存放的header字段名 
-     * @return ClientIPField 客户端真实IP存放的header字段名
+     * Get Header field that stores real client IPs 
+     * @return ClientIPField Header field that stores real client IPs
      */
     public String getClientIPField() {
         return this.ClientIPField;
     }
 
     /**
-     * Set 客户端真实IP存放的header字段名
-     * @param ClientIPField 客户端真实IP存放的header字段名
+     * Set Header field that stores real client IPs
+     * @param ClientIPField Header field that stores real client IPs
      */
     public void setClientIPField(String ClientIPField) {
         this.ClientIPField = ClientIPField;
     }
 
     /**
-     * Get 封禁IP列表，单次操作数组最大长度支持200000 
-     * @return BlockIPList 封禁IP列表，单次操作数组最大长度支持200000
+     * Get List of blocked IPs. The array can contain up to 200,000 entries in one operation. 
+     * @return BlockIPList List of blocked IPs. The array can contain up to 200,000 entries in one operation.
      */
     public String [] getBlockIPList() {
         return this.BlockIPList;
     }
 
     /**
-     * Set 封禁IP列表，单次操作数组最大长度支持200000
-     * @param BlockIPList 封禁IP列表，单次操作数组最大长度支持200000
+     * Set List of blocked IPs. The array can contain up to 200,000 entries in one operation.
+     * @param BlockIPList List of blocked IPs. The array can contain up to 200,000 entries in one operation.
      */
     public void setBlockIPList(String [] BlockIPList) {
         this.BlockIPList = BlockIPList;
     }
 
     /**
-     * Get 过期时间，单位秒，默认值3600 
-     * @return ExpireTime 过期时间，单位秒，默认值3600
+     * Get Expiration time in seconds. Default value: 3600 
+     * @return ExpireTime Expiration time in seconds. Default value: 3600
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 过期时间，单位秒，默认值3600
-     * @param ExpireTime 过期时间，单位秒，默认值3600
+     * Set Expiration time in seconds. Default value: 3600
+     * @param ExpireTime Expiration time in seconds. Default value: 3600
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 添加IP的策略，可取：fifo（如果黑名单容量已满，新加入黑名单的IP采用先进先出策略） 
-     * @return AddStrategy 添加IP的策略，可取：fifo（如果黑名单容量已满，新加入黑名单的IP采用先进先出策略）
+     * Get IP adding policy. Valid value: fifo (if a blacklist is full, new IPs added to the blacklist will adopt the first-in first-out policy) 
+     * @return AddStrategy IP adding policy. Valid value: fifo (if a blacklist is full, new IPs added to the blacklist will adopt the first-in first-out policy)
      */
     public String getAddStrategy() {
         return this.AddStrategy;
     }
 
     /**
-     * Set 添加IP的策略，可取：fifo（如果黑名单容量已满，新加入黑名单的IP采用先进先出策略）
-     * @param AddStrategy 添加IP的策略，可取：fifo（如果黑名单容量已满，新加入黑名单的IP采用先进先出策略）
+     * Set IP adding policy. Valid value: fifo (if a blacklist is full, new IPs added to the blacklist will adopt the first-in first-out policy)
+     * @param AddStrategy IP adding policy. Valid value: fifo (if a blacklist is full, new IPs added to the blacklist will adopt the first-in first-out policy)
      */
     public void setAddStrategy(String AddStrategy) {
         this.AddStrategy = AddStrategy;

@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class DescribeBlockIPListResponse extends AbstractModel{
 
     /**
-    * 返回的IP的数量
+    * Number of returned IPs
     */
     @SerializedName("BlockedIPCount")
     @Expose
     private Long BlockedIPCount;
 
     /**
-    * 获取用户真实IP的字段
+    * Field for getting real client IP
     */
     @SerializedName("ClientIPField")
     @Expose
     private String ClientIPField;
 
     /**
-    * 加入了12360黑名单的IP列表
+    * List of IPs added to blacklist 12360
     */
     @SerializedName("BlockedIPList")
     @Expose
@@ -51,48 +51,48 @@ public class DescribeBlockIPListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 返回的IP的数量 
-     * @return BlockedIPCount 返回的IP的数量
+     * Get Number of returned IPs 
+     * @return BlockedIPCount Number of returned IPs
      */
     public Long getBlockedIPCount() {
         return this.BlockedIPCount;
     }
 
     /**
-     * Set 返回的IP的数量
-     * @param BlockedIPCount 返回的IP的数量
+     * Set Number of returned IPs
+     * @param BlockedIPCount Number of returned IPs
      */
     public void setBlockedIPCount(Long BlockedIPCount) {
         this.BlockedIPCount = BlockedIPCount;
     }
 
     /**
-     * Get 获取用户真实IP的字段 
-     * @return ClientIPField 获取用户真实IP的字段
+     * Get Field for getting real client IP 
+     * @return ClientIPField Field for getting real client IP
      */
     public String getClientIPField() {
         return this.ClientIPField;
     }
 
     /**
-     * Set 获取用户真实IP的字段
-     * @param ClientIPField 获取用户真实IP的字段
+     * Set Field for getting real client IP
+     * @param ClientIPField Field for getting real client IP
      */
     public void setClientIPField(String ClientIPField) {
         this.ClientIPField = ClientIPField;
     }
 
     /**
-     * Get 加入了12360黑名单的IP列表 
-     * @return BlockedIPList 加入了12360黑名单的IP列表
+     * Get List of IPs added to blacklist 12360 
+     * @return BlockedIPList List of IPs added to blacklist 12360
      */
     public BlockedIP [] getBlockedIPList() {
         return this.BlockedIPList;
     }
 
     /**
-     * Set 加入了12360黑名单的IP列表
-     * @param BlockedIPList 加入了12360黑名单的IP列表
+     * Set List of IPs added to blacklist 12360
+     * @param BlockedIPList List of IPs added to blacklist 12360
      */
     public void setBlockedIPList(BlockedIP [] BlockedIPList) {
         this.BlockedIPList = BlockedIPList;

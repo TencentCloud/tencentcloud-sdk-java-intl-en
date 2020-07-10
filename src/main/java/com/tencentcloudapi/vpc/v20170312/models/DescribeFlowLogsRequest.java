@@ -23,279 +23,312 @@ import java.util.HashMap;
 public class DescribeFlowLogsRequest extends AbstractModel{
 
     /**
-    * The VPC ID or the unified ID. We recommend you use the unified ID
+    * The VPC ID or the unified ID. We recommend you use the unified ID.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * The unique ID of the flow log
+    * The unique ID of the flow log.
     */
     @SerializedName("FlowLogId")
     @Expose
     private String FlowLogId;
 
     /**
-    * The name of the flow log instance
+    * The name of the flow log instance.
     */
     @SerializedName("FlowLogName")
     @Expose
     private String FlowLogName;
 
     /**
-    * The type of resource to which the flow log belongs. VPC|SUBNET|NETWORKINTERFACE
+    * The type of resource to which the flow log belongs. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
     */
     @SerializedName("ResourceType")
     @Expose
     private String ResourceType;
 
     /**
-    * The unique ID of the resource
+    * The unique ID of the resource.
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * The collection type of the flow log. ACCEPT|REJECT|ALL
+    * The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
     */
     @SerializedName("TrafficType")
     @Expose
     private String TrafficType;
 
     /**
-    * The storage ID of the flow log
+    * The storage ID of the flow log.
     */
     @SerializedName("CloudLogId")
     @Expose
     private String CloudLogId;
 
     /**
-    * Flow log storage ID status
+    * The storage ID status of the flow log.
     */
     @SerializedName("CloudLogState")
     @Expose
     private String CloudLogState;
 
     /**
-    * Order by field. Supported fields: flowLogName, createTime. The default value is createTime.
+    * Order by field. Valid values: 'flowLogName' and 'createTime'. Default value: 'createTime'.
     */
     @SerializedName("OrderField")
     @Expose
     private String OrderField;
 
     /**
-    * Ascending (asc) and descending (desc). The default value is desc.
+    * In ascending (asc) or descending (desc) order. Default value: 'desc'.
     */
     @SerializedName("OrderDirection")
     @Expose
     private String OrderDirection;
 
     /**
-    * Offset. The default value is 0.
+    * The offset. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * The number of rows per page. The default value is 10.
+    * The number of rows per page. Default vaue: 10.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get The VPC ID or the unified ID. We recommend you use the unified ID 
-     * @return VpcId The VPC ID or the unified ID. We recommend you use the unified ID
+    * Filter condition. `FlowLogIds` and `Filters` cannot be specified at the same time.
+<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
+<li> tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter Filters;
+
+    /**
+     * Get The VPC ID or the unified ID. We recommend you use the unified ID. 
+     * @return VpcId The VPC ID or the unified ID. We recommend you use the unified ID.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set The VPC ID or the unified ID. We recommend you use the unified ID
-     * @param VpcId The VPC ID or the unified ID. We recommend you use the unified ID
+     * Set The VPC ID or the unified ID. We recommend you use the unified ID.
+     * @param VpcId The VPC ID or the unified ID. We recommend you use the unified ID.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get The unique ID of the flow log 
-     * @return FlowLogId The unique ID of the flow log
+     * Get The unique ID of the flow log. 
+     * @return FlowLogId The unique ID of the flow log.
      */
     public String getFlowLogId() {
         return this.FlowLogId;
     }
 
     /**
-     * Set The unique ID of the flow log
-     * @param FlowLogId The unique ID of the flow log
+     * Set The unique ID of the flow log.
+     * @param FlowLogId The unique ID of the flow log.
      */
     public void setFlowLogId(String FlowLogId) {
         this.FlowLogId = FlowLogId;
     }
 
     /**
-     * Get The name of the flow log instance 
-     * @return FlowLogName The name of the flow log instance
+     * Get The name of the flow log instance. 
+     * @return FlowLogName The name of the flow log instance.
      */
     public String getFlowLogName() {
         return this.FlowLogName;
     }
 
     /**
-     * Set The name of the flow log instance
-     * @param FlowLogName The name of the flow log instance
+     * Set The name of the flow log instance.
+     * @param FlowLogName The name of the flow log instance.
      */
     public void setFlowLogName(String FlowLogName) {
         this.FlowLogName = FlowLogName;
     }
 
     /**
-     * Get The type of resource to which the flow log belongs. VPC|SUBNET|NETWORKINTERFACE 
-     * @return ResourceType The type of resource to which the flow log belongs. VPC|SUBNET|NETWORKINTERFACE
+     * Get The type of resource to which the flow log belongs. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'. 
+     * @return ResourceType The type of resource to which the flow log belongs. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set The type of resource to which the flow log belongs. VPC|SUBNET|NETWORKINTERFACE
-     * @param ResourceType The type of resource to which the flow log belongs. VPC|SUBNET|NETWORKINTERFACE
+     * Set The type of resource to which the flow log belongs. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
+     * @param ResourceType The type of resource to which the flow log belongs. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get The unique ID of the resource 
-     * @return ResourceId The unique ID of the resource
+     * Get The unique ID of the resource. 
+     * @return ResourceId The unique ID of the resource.
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set The unique ID of the resource
-     * @param ResourceId The unique ID of the resource
+     * Set The unique ID of the resource.
+     * @param ResourceId The unique ID of the resource.
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get The collection type of the flow log. ACCEPT|REJECT|ALL 
-     * @return TrafficType The collection type of the flow log. ACCEPT|REJECT|ALL
+     * Get The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'. 
+     * @return TrafficType The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
      */
     public String getTrafficType() {
         return this.TrafficType;
     }
 
     /**
-     * Set The collection type of the flow log. ACCEPT|REJECT|ALL
-     * @param TrafficType The collection type of the flow log. ACCEPT|REJECT|ALL
+     * Set The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
+     * @param TrafficType The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
      */
     public void setTrafficType(String TrafficType) {
         this.TrafficType = TrafficType;
     }
 
     /**
-     * Get The storage ID of the flow log 
-     * @return CloudLogId The storage ID of the flow log
+     * Get The storage ID of the flow log. 
+     * @return CloudLogId The storage ID of the flow log.
      */
     public String getCloudLogId() {
         return this.CloudLogId;
     }
 
     /**
-     * Set The storage ID of the flow log
-     * @param CloudLogId The storage ID of the flow log
+     * Set The storage ID of the flow log.
+     * @param CloudLogId The storage ID of the flow log.
      */
     public void setCloudLogId(String CloudLogId) {
         this.CloudLogId = CloudLogId;
     }
 
     /**
-     * Get Flow log storage ID status 
-     * @return CloudLogState Flow log storage ID status
+     * Get The storage ID status of the flow log. 
+     * @return CloudLogState The storage ID status of the flow log.
      */
     public String getCloudLogState() {
         return this.CloudLogState;
     }
 
     /**
-     * Set Flow log storage ID status
-     * @param CloudLogState Flow log storage ID status
+     * Set The storage ID status of the flow log.
+     * @param CloudLogState The storage ID status of the flow log.
      */
     public void setCloudLogState(String CloudLogState) {
         this.CloudLogState = CloudLogState;
     }
 
     /**
-     * Get Order by field. Supported fields: flowLogName, createTime. The default value is createTime. 
-     * @return OrderField Order by field. Supported fields: flowLogName, createTime. The default value is createTime.
+     * Get Order by field. Valid values: 'flowLogName' and 'createTime'. Default value: 'createTime'. 
+     * @return OrderField Order by field. Valid values: 'flowLogName' and 'createTime'. Default value: 'createTime'.
      */
     public String getOrderField() {
         return this.OrderField;
     }
 
     /**
-     * Set Order by field. Supported fields: flowLogName, createTime. The default value is createTime.
-     * @param OrderField Order by field. Supported fields: flowLogName, createTime. The default value is createTime.
+     * Set Order by field. Valid values: 'flowLogName' and 'createTime'. Default value: 'createTime'.
+     * @param OrderField Order by field. Valid values: 'flowLogName' and 'createTime'. Default value: 'createTime'.
      */
     public void setOrderField(String OrderField) {
         this.OrderField = OrderField;
     }
 
     /**
-     * Get Ascending (asc) and descending (desc). The default value is desc. 
-     * @return OrderDirection Ascending (asc) and descending (desc). The default value is desc.
+     * Get In ascending (asc) or descending (desc) order. Default value: 'desc'. 
+     * @return OrderDirection In ascending (asc) or descending (desc) order. Default value: 'desc'.
      */
     public String getOrderDirection() {
         return this.OrderDirection;
     }
 
     /**
-     * Set Ascending (asc) and descending (desc). The default value is desc.
-     * @param OrderDirection Ascending (asc) and descending (desc). The default value is desc.
+     * Set In ascending (asc) or descending (desc) order. Default value: 'desc'.
+     * @param OrderDirection In ascending (asc) or descending (desc) order. Default value: 'desc'.
      */
     public void setOrderDirection(String OrderDirection) {
         this.OrderDirection = OrderDirection;
     }
 
     /**
-     * Get Offset. The default value is 0. 
-     * @return Offset Offset. The default value is 0.
+     * Get The offset. Default value: 0. 
+     * @return Offset The offset. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. The default value is 0.
-     * @param Offset Offset. The default value is 0.
+     * Set The offset. Default value: 0.
+     * @param Offset The offset. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get The number of rows per page. The default value is 10. 
-     * @return Limit The number of rows per page. The default value is 10.
+     * Get The number of rows per page. Default vaue: 10. 
+     * @return Limit The number of rows per page. Default vaue: 10.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The number of rows per page. The default value is 10.
-     * @param Limit The number of rows per page. The default value is 10.
+     * Set The number of rows per page. Default vaue: 10.
+     * @param Limit The number of rows per page. Default vaue: 10.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
+    }
+
+    /**
+     * Get Filter condition. `FlowLogIds` and `Filters` cannot be specified at the same time.
+<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
+<li> tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key.</li> 
+     * @return Filters Filter condition. `FlowLogIds` and `Filters` cannot be specified at the same time.
+<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
+<li> tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
+     */
+    public Filter getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set Filter condition. `FlowLogIds` and `Filters` cannot be specified at the same time.
+<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
+<li> tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
+     * @param Filters Filter condition. `FlowLogIds` and `Filters` cannot be specified at the same time.
+<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
+<li> tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
+     */
+    public void setFilters(Filter Filters) {
+        this.Filters = Filters;
     }
 
     /**
@@ -314,6 +347,7 @@ public class DescribeFlowLogsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

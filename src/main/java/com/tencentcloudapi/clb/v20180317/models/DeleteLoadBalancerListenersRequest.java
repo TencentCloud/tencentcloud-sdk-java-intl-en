@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DeleteLoadBalancerListenersRequest extends AbstractModel{
 
     /**
-    * 负载均衡实例 ID
+    * CLB instance ID
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 指定删除的监听器ID数组，若不填则删除负载均衡的所有监听器
+    * Array of IDs of the listeners to be deleted. If this parameter is left empty, all listeners of the CLB instance will be deleted.
     */
     @SerializedName("ListenerIds")
     @Expose
     private String [] ListenerIds;
 
     /**
-     * Get 负载均衡实例 ID 
-     * @return LoadBalancerId 负载均衡实例 ID
+     * Get CLB instance ID 
+     * @return LoadBalancerId CLB instance ID
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡实例 ID
-     * @param LoadBalancerId 负载均衡实例 ID
+     * Set CLB instance ID
+     * @param LoadBalancerId CLB instance ID
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 指定删除的监听器ID数组，若不填则删除负载均衡的所有监听器 
-     * @return ListenerIds 指定删除的监听器ID数组，若不填则删除负载均衡的所有监听器
+     * Get Array of IDs of the listeners to be deleted. If this parameter is left empty, all listeners of the CLB instance will be deleted. 
+     * @return ListenerIds Array of IDs of the listeners to be deleted. If this parameter is left empty, all listeners of the CLB instance will be deleted.
      */
     public String [] getListenerIds() {
         return this.ListenerIds;
     }
 
     /**
-     * Set 指定删除的监听器ID数组，若不填则删除负载均衡的所有监听器
-     * @param ListenerIds 指定删除的监听器ID数组，若不填则删除负载均衡的所有监听器
+     * Set Array of IDs of the listeners to be deleted. If this parameter is left empty, all listeners of the CLB instance will be deleted.
+     * @param ListenerIds Array of IDs of the listeners to be deleted. If this parameter is left empty, all listeners of the CLB instance will be deleted.
      */
     public void setListenerIds(String [] ListenerIds) {
         this.ListenerIds = ListenerIds;

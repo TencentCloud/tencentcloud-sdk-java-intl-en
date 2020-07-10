@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class ModifyDirectConnectGatewayAttributeRequest extends AbstractModel{
 
     /**
-    * The unique `ID` of the Direct Connect gateway, such as `dcg-9o233uri`.
+    * The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.
     */
     @SerializedName("DirectConnectGatewayId")
     @Expose
     private String DirectConnectGatewayId;
 
     /**
-    * Direct connect gateway can be named freely, but the maximum length is 60 characters.
+    * The direct connect gateway name. You can enter any name within 60 characters.
     */
     @SerializedName("DirectConnectGatewayName")
     @Expose
     private String DirectConnectGatewayName;
 
     /**
-    * CCN route learning type. Available values: `BGP` (Automatic learning), `STATIC` (Static, that is, user-configured). Modifying `CcnRouteType` is only possible if the Direct Connect is CCN-type and the BGP function is enabled.
+    * The CCN route-learning type. Valid values: `BGP` (Automatic learning), `STATIC` (Static, that is, user-configured). You can only modify `CcnRouteType` for a CCN direct connect gateway with BGP enabled.
     */
     @SerializedName("CcnRouteType")
     @Expose
     private String CcnRouteType;
 
     /**
-     * Get The unique `ID` of the Direct Connect gateway, such as `dcg-9o233uri`. 
-     * @return DirectConnectGatewayId The unique `ID` of the Direct Connect gateway, such as `dcg-9o233uri`.
+     * Get The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`. 
+     * @return DirectConnectGatewayId The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.
      */
     public String getDirectConnectGatewayId() {
         return this.DirectConnectGatewayId;
     }
 
     /**
-     * Set The unique `ID` of the Direct Connect gateway, such as `dcg-9o233uri`.
-     * @param DirectConnectGatewayId The unique `ID` of the Direct Connect gateway, such as `dcg-9o233uri`.
+     * Set The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.
+     * @param DirectConnectGatewayId The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.
      */
     public void setDirectConnectGatewayId(String DirectConnectGatewayId) {
         this.DirectConnectGatewayId = DirectConnectGatewayId;
     }
 
     /**
-     * Get Direct connect gateway can be named freely, but the maximum length is 60 characters. 
-     * @return DirectConnectGatewayName Direct connect gateway can be named freely, but the maximum length is 60 characters.
+     * Get The direct connect gateway name. You can enter any name within 60 characters. 
+     * @return DirectConnectGatewayName The direct connect gateway name. You can enter any name within 60 characters.
      */
     public String getDirectConnectGatewayName() {
         return this.DirectConnectGatewayName;
     }
 
     /**
-     * Set Direct connect gateway can be named freely, but the maximum length is 60 characters.
-     * @param DirectConnectGatewayName Direct connect gateway can be named freely, but the maximum length is 60 characters.
+     * Set The direct connect gateway name. You can enter any name within 60 characters.
+     * @param DirectConnectGatewayName The direct connect gateway name. You can enter any name within 60 characters.
      */
     public void setDirectConnectGatewayName(String DirectConnectGatewayName) {
         this.DirectConnectGatewayName = DirectConnectGatewayName;
     }
 
     /**
-     * Get CCN route learning type. Available values: `BGP` (Automatic learning), `STATIC` (Static, that is, user-configured). Modifying `CcnRouteType` is only possible if the Direct Connect is CCN-type and the BGP function is enabled. 
-     * @return CcnRouteType CCN route learning type. Available values: `BGP` (Automatic learning), `STATIC` (Static, that is, user-configured). Modifying `CcnRouteType` is only possible if the Direct Connect is CCN-type and the BGP function is enabled.
+     * Get The CCN route-learning type. Valid values: `BGP` (Automatic learning), `STATIC` (Static, that is, user-configured). You can only modify `CcnRouteType` for a CCN direct connect gateway with BGP enabled. 
+     * @return CcnRouteType The CCN route-learning type. Valid values: `BGP` (Automatic learning), `STATIC` (Static, that is, user-configured). You can only modify `CcnRouteType` for a CCN direct connect gateway with BGP enabled.
      */
     public String getCcnRouteType() {
         return this.CcnRouteType;
     }
 
     /**
-     * Set CCN route learning type. Available values: `BGP` (Automatic learning), `STATIC` (Static, that is, user-configured). Modifying `CcnRouteType` is only possible if the Direct Connect is CCN-type and the BGP function is enabled.
-     * @param CcnRouteType CCN route learning type. Available values: `BGP` (Automatic learning), `STATIC` (Static, that is, user-configured). Modifying `CcnRouteType` is only possible if the Direct Connect is CCN-type and the BGP function is enabled.
+     * Set The CCN route-learning type. Valid values: `BGP` (Automatic learning), `STATIC` (Static, that is, user-configured). You can only modify `CcnRouteType` for a CCN direct connect gateway with BGP enabled.
+     * @param CcnRouteType The CCN route-learning type. Valid values: `BGP` (Automatic learning), `STATIC` (Static, that is, user-configured). You can only modify `CcnRouteType` for a CCN direct connect gateway with BGP enabled.
      */
     public void setCcnRouteType(String CcnRouteType) {
         this.CcnRouteType = CcnRouteType;

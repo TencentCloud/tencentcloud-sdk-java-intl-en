@@ -87,6 +87,13 @@ They represent weighted round robin and least connections, respectively. Default
     private Long SniSwitch;
 
     /**
+    * Target real server type. `NODE`: binding a general node; `TARGETGROUP`: binding a target group.
+    */
+    @SerializedName("TargetType")
+    @Expose
+    private String TargetType;
+
+    /**
      * Get CLB instance ID 
      * @return LoadBalancerId CLB instance ID
      */
@@ -235,6 +242,22 @@ They represent weighted round robin and least connections, respectively. Default
     }
 
     /**
+     * Get Target real server type. `NODE`: binding a general node; `TARGETGROUP`: binding a target group. 
+     * @return TargetType Target real server type. `NODE`: binding a general node; `TARGETGROUP`: binding a target group.
+     */
+    public String getTargetType() {
+        return this.TargetType;
+    }
+
+    /**
+     * Set Target real server type. `NODE`: binding a general node; `TARGETGROUP`: binding a target group.
+     * @param TargetType Target real server type. `NODE`: binding a general node; `TARGETGROUP`: binding a target group.
+     */
+    public void setTargetType(String TargetType) {
+        this.TargetType = TargetType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -247,6 +270,7 @@ They represent weighted round robin and least connections, respectively. Default
         this.setParamSimple(map, prefix + "SessionExpireTime", this.SessionExpireTime);
         this.setParamSimple(map, prefix + "Scheduler", this.Scheduler);
         this.setParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
+        this.setParamSimple(map, prefix + "TargetType", this.TargetType);
 
     }
 }

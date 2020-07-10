@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DeleteFlowLogRequest extends AbstractModel{
 
     /**
-    * The VPC ID or the unified ID. We recommend you use the unified ID
+    * The VPC ID or the unified ID. We recommend you use the unified ID.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * The unique ID of the flow log
+    * The unique ID of the flow log.
     */
     @SerializedName("FlowLogId")
     @Expose
     private String FlowLogId;
 
     /**
-     * Get The VPC ID or the unified ID. We recommend you use the unified ID 
-     * @return VpcId The VPC ID or the unified ID. We recommend you use the unified ID
+     * Get The VPC ID or the unified ID. We recommend you use the unified ID. 
+     * @return VpcId The VPC ID or the unified ID. We recommend you use the unified ID.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set The VPC ID or the unified ID. We recommend you use the unified ID
-     * @param VpcId The VPC ID or the unified ID. We recommend you use the unified ID
+     * Set The VPC ID or the unified ID. We recommend you use the unified ID.
+     * @param VpcId The VPC ID or the unified ID. We recommend you use the unified ID.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get The unique ID of the flow log 
-     * @return FlowLogId The unique ID of the flow log
+     * Get The unique ID of the flow log. 
+     * @return FlowLogId The unique ID of the flow log.
      */
     public String getFlowLogId() {
         return this.FlowLogId;
     }
 
     /**
-     * Set The unique ID of the flow log
-     * @param FlowLogId The unique ID of the flow log
+     * Set The unique ID of the flow log.
+     * @param FlowLogId The unique ID of the flow log.
      */
     public void setFlowLogId(String FlowLogId) {
         this.FlowLogId = FlowLogId;

@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class OverwriteWhiteBoxDeviceFingerprintsRequest extends AbstractModel{
 
     /**
-    * 白盒密钥ID
+    * White-box key ID
     */
     @SerializedName("KeyId")
     @Expose
     private String KeyId;
 
     /**
-    * 设备指纹列表，如果列表为空，则表示删除该密钥对应的所有指纹信息。列表最大长度不超过200。
+    * Device fingerprint list. If the list is empty, it means to delete all fingerprint information corresponding to the key. There can be up to 200 entries in the list.
     */
     @SerializedName("DeviceFingerprints")
     @Expose
     private DeviceFingerprint [] DeviceFingerprints;
 
     /**
-     * Get 白盒密钥ID 
-     * @return KeyId 白盒密钥ID
+     * Get White-box key ID 
+     * @return KeyId White-box key ID
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * Set 白盒密钥ID
-     * @param KeyId 白盒密钥ID
+     * Set White-box key ID
+     * @param KeyId White-box key ID
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;
     }
 
     /**
-     * Get 设备指纹列表，如果列表为空，则表示删除该密钥对应的所有指纹信息。列表最大长度不超过200。 
-     * @return DeviceFingerprints 设备指纹列表，如果列表为空，则表示删除该密钥对应的所有指纹信息。列表最大长度不超过200。
+     * Get Device fingerprint list. If the list is empty, it means to delete all fingerprint information corresponding to the key. There can be up to 200 entries in the list. 
+     * @return DeviceFingerprints Device fingerprint list. If the list is empty, it means to delete all fingerprint information corresponding to the key. There can be up to 200 entries in the list.
      */
     public DeviceFingerprint [] getDeviceFingerprints() {
         return this.DeviceFingerprints;
     }
 
     /**
-     * Set 设备指纹列表，如果列表为空，则表示删除该密钥对应的所有指纹信息。列表最大长度不超过200。
-     * @param DeviceFingerprints 设备指纹列表，如果列表为空，则表示删除该密钥对应的所有指纹信息。列表最大长度不超过200。
+     * Set Device fingerprint list. If the list is empty, it means to delete all fingerprint information corresponding to the key. There can be up to 200 entries in the list.
+     * @param DeviceFingerprints Device fingerprint list. If the list is empty, it means to delete all fingerprint information corresponding to the key. There can be up to 200 entries in the list.
      */
     public void setDeviceFingerprints(DeviceFingerprint [] DeviceFingerprints) {
         this.DeviceFingerprints = DeviceFingerprints;

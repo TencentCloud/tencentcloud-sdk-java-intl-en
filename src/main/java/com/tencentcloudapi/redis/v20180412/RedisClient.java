@@ -38,6 +38,24 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to associate security groups with specified instances.
+     * @param req AssociateSecurityGroupsRequest
+     * @return AssociateSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssociateSecurityGroupsResponse AssociateSecurityGroups(AssociateSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AssociateSecurityGroupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AssociateSecurityGroupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AssociateSecurityGroups"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to deactivate an instance in the recycle bin immediately.
      * @param req CleanUpInstanceRequest
      * @return CleanUpInstanceResponse
@@ -164,6 +182,24 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the security group details of an instance.
+     * @param req DescribeDBSecurityGroupsRequest
+     * @return DescribeDBSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(DescribeDBSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBSecurityGroupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBSecurityGroupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDBSecurityGroups"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to view instance sub-account information.
      * @param req DescribeInstanceAccountRequest
      * @return DescribeInstanceAccountResponse
@@ -193,6 +229,24 @@ public class RedisClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceBackupsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstanceBackups"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the DTS task details of an instance.
+     * @param req DescribeInstanceDTSInfoRequest
+     * @return DescribeInstanceDTSInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceDTSInfoResponse DescribeInstanceDTSInfo(DescribeInstanceDTSInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceDTSInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceDTSInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeInstanceDTSInfo"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -488,6 +542,24 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the security group details of a project.
+     * @param req DescribeProjectSecurityGroupsRequest
+     * @return DescribeProjectSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProjectSecurityGroupsResponse DescribeProjectSecurityGroups(DescribeProjectSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProjectSecurityGroupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProjectSecurityGroupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeProjectSecurityGroups"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the slow log.
      * @param req DescribeSlowLogRequest
      * @return DescribeSlowLogResponse
@@ -596,6 +668,24 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to unassociate security groups from instances in batches.
+     * @param req DisassociateSecurityGroupsRequest
+     * @return DisassociateSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisassociateSecurityGroupsResponse DisassociateSecurityGroups(DisassociateSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisassociateSecurityGroupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisassociateSecurityGroupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DisassociateSecurityGroups"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to enable read/write separation.
      * @param req EnableReplicaReadonlyRequest
      * @return EnableReplicaReadonlyResponse
@@ -661,6 +751,24 @@ public class RedisClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyAutoBackupConfigResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyAutoBackupConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the security groups associated with an instance.
+     * @param req ModifyDBInstanceSecurityGroupsRequest
+     * @return ModifyDBInstanceSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(ModifyDBInstanceSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyDBInstanceSecurityGroups"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

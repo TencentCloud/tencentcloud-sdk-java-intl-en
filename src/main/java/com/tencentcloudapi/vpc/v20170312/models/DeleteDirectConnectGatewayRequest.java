@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeleteDirectConnectGatewayRequest extends AbstractModel{
 
     /**
-    * The unique `ID` of the Direct Connect gateway, such as `dcg-9o233uri`.
+    * The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.
     */
     @SerializedName("DirectConnectGatewayId")
     @Expose
     private String DirectConnectGatewayId;
 
     /**
-     * Get The unique `ID` of the Direct Connect gateway, such as `dcg-9o233uri`. 
-     * @return DirectConnectGatewayId The unique `ID` of the Direct Connect gateway, such as `dcg-9o233uri`.
+     * Get The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`. 
+     * @return DirectConnectGatewayId The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.
      */
     public String getDirectConnectGatewayId() {
         return this.DirectConnectGatewayId;
     }
 
     /**
-     * Set The unique `ID` of the Direct Connect gateway, such as `dcg-9o233uri`.
-     * @param DirectConnectGatewayId The unique `ID` of the Direct Connect gateway, such as `dcg-9o233uri`.
+     * Set The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.
+     * @param DirectConnectGatewayId The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.
      */
     public void setDirectConnectGatewayId(String DirectConnectGatewayId) {
         this.DirectConnectGatewayId = DirectConnectGatewayId;

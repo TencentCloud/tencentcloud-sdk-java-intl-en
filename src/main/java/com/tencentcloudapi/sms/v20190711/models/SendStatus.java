@@ -65,6 +65,13 @@ public class SendStatus extends AbstractModel{
     private String Message;
 
     /**
+    * Country code or region code, such as CN and US. If the country code or region code is not obtained, the returned value will be 'DEF' by default. For more information on the supported list, see price overview for non-Mainland China regions.
+    */
+    @SerializedName("IsoCode")
+    @Expose
+    private String IsoCode;
+
+    /**
      * Get Delivery serial number. 
      * @return SerialNo Delivery serial number.
      */
@@ -161,6 +168,22 @@ public class SendStatus extends AbstractModel{
     }
 
     /**
+     * Get Country code or region code, such as CN and US. If the country code or region code is not obtained, the returned value will be 'DEF' by default. For more information on the supported list, see price overview for non-Mainland China regions. 
+     * @return IsoCode Country code or region code, such as CN and US. If the country code or region code is not obtained, the returned value will be 'DEF' by default. For more information on the supported list, see price overview for non-Mainland China regions.
+     */
+    public String getIsoCode() {
+        return this.IsoCode;
+    }
+
+    /**
+     * Set Country code or region code, such as CN and US. If the country code or region code is not obtained, the returned value will be 'DEF' by default. For more information on the supported list, see price overview for non-Mainland China regions.
+     * @param IsoCode Country code or region code, such as CN and US. If the country code or region code is not obtained, the returned value will be 'DEF' by default. For more information on the supported list, see price overview for non-Mainland China regions.
+     */
+    public void setIsoCode(String IsoCode) {
+        this.IsoCode = IsoCode;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class SendStatus extends AbstractModel{
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "Code", this.Code);
         this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamSimple(map, prefix + "IsoCode", this.IsoCode);
 
     }
 }

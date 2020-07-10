@@ -46,7 +46,7 @@ Only one security group can be associated.
     private String [] SecurityGroupIds;
 
     /**
-    * Input settings information, two sets of which need to be configured for RTMP_PUSH/RTMP_PULL/HLS_PULL/MP4_PULL.
+    * Input settings information, one or two sets of which need to be configured for RTMP_PUSH/RTMP_PULL/HLS_PULL/MP4_PULL.
     */
     @SerializedName("InputSettings")
     @Expose
@@ -109,16 +109,16 @@ Only one security group can be associated.
     }
 
     /**
-     * Get Input settings information, two sets of which need to be configured for RTMP_PUSH/RTMP_PULL/HLS_PULL/MP4_PULL. 
-     * @return InputSettings Input settings information, two sets of which need to be configured for RTMP_PUSH/RTMP_PULL/HLS_PULL/MP4_PULL.
+     * Get Input settings information, one or two sets of which need to be configured for RTMP_PUSH/RTMP_PULL/HLS_PULL/MP4_PULL. 
+     * @return InputSettings Input settings information, one or two sets of which need to be configured for RTMP_PUSH/RTMP_PULL/HLS_PULL/MP4_PULL.
      */
     public InputSettingInfo [] getInputSettings() {
         return this.InputSettings;
     }
 
     /**
-     * Set Input settings information, two sets of which need to be configured for RTMP_PUSH/RTMP_PULL/HLS_PULL/MP4_PULL.
-     * @param InputSettings Input settings information, two sets of which need to be configured for RTMP_PUSH/RTMP_PULL/HLS_PULL/MP4_PULL.
+     * Set Input settings information, one or two sets of which need to be configured for RTMP_PUSH/RTMP_PULL/HLS_PULL/MP4_PULL.
+     * @param InputSettings Input settings information, one or two sets of which need to be configured for RTMP_PUSH/RTMP_PULL/HLS_PULL/MP4_PULL.
      */
     public void setInputSettings(InputSettingInfo [] InputSettings) {
         this.InputSettings = InputSettings;

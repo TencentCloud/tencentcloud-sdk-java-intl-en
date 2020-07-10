@@ -30,7 +30,7 @@ public class DomainSetList extends AbstractModel{
     private String DomainName;
 
     /**
-    * Domain name resolution status. True: success; Flase: failure.
+    * Domain name resolution status. True: success; False: failure.
     */
     @SerializedName("Status")
     @Expose
@@ -81,16 +81,16 @@ public class DomainSetList extends AbstractModel{
     }
 
     /**
-     * Get Domain name resolution status. True: success; Flase: failure. 
-     * @return Status Domain name resolution status. True: success; Flase: failure.
+     * Get Domain name resolution status. True: success; False: failure. 
+     * @return Status Domain name resolution status. True: success; False: failure.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Domain name resolution status. True: success; Flase: failure.
-     * @param Status Domain name resolution status. True: success; Flase: failure.
+     * Set Domain name resolution status. True: success; False: failure.
+     * @param Status Domain name resolution status. True: success; False: failure.
      */
     public void setStatus(Long Status) {
         this.Status = Status;

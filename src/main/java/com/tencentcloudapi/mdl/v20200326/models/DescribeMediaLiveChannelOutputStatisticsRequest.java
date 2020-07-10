@@ -46,7 +46,7 @@ UTC time, such as `2020-01-01T12:00:00Z`.
     private String EndTime;
 
     /**
-    * 
+    * Data interval. Valid values: 5s, 1min, 5min, 15min. Default value: 1min.
     */
     @SerializedName("Period")
     @Expose
@@ -109,16 +109,16 @@ UTC time, such as `2020-01-01T12:00:00Z`.
     }
 
     /**
-     * Get  
-     * @return Period 
+     * Get Data interval. Valid values: 5s, 1min, 5min, 15min. Default value: 1min. 
+     * @return Period Data interval. Valid values: 5s, 1min, 5min, 15min. Default value: 1min.
      */
     public String getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 
-     * @param Period 
+     * Set Data interval. Valid values: 5s, 1min, 5min, 15min. Default value: 1min.
+     * @param Period Data interval. Valid values: 5s, 1min, 5min, 15min. Default value: 1min.
      */
     public void setPeriod(String Period) {
         this.Period = Period;

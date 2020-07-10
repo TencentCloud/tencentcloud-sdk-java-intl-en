@@ -23,46 +23,51 @@ import java.util.HashMap;
 public class DeviceFingerprint extends AbstractModel{
 
     /**
-    * 指纹信息，由设备指纹采集工具采集获得，格式满足正则表达式：^[0-9a-f]{8}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{16}$
+    * Fingerprint information collected by device fingerprint collector. Its format must satisfy the following regular expression: ^[0-9a-f]{8}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{16}$
     */
     @SerializedName("Identity")
     @Expose
     private String Identity;
 
     /**
-    * 描述信息，如：IP，设备名称等，最大1024字节
+    * Description, such as IP and device name. Length limit: 1,024 bytes
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get 指纹信息，由设备指纹采集工具采集获得，格式满足正则表达式：^[0-9a-f]{8}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{16}$ 
-     * @return Identity 指纹信息，由设备指纹采集工具采集获得，格式满足正则表达式：^[0-9a-f]{8}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{16}$
+     * Get Fingerprint information collected by device fingerprint collector. Its format must satisfy the following regular expression: ^[0-9a-f]{8}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{16}$ 
+     * @return Identity Fingerprint information collected by device fingerprint collector. Its format must satisfy the following regular expression: ^[0-9a-f]{8}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{16}$
      */
     public String getIdentity() {
         return this.Identity;
     }
 
     /**
-     * Set 指纹信息，由设备指纹采集工具采集获得，格式满足正则表达式：^[0-9a-f]{8}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{16}$
-     * @param Identity 指纹信息，由设备指纹采集工具采集获得，格式满足正则表达式：^[0-9a-f]{8}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{16}$
+     * Set Fingerprint information collected by device fingerprint collector. Its format must satisfy the following regular expression: ^[0-9a-f]{8}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{16}$
+     * @param Identity Fingerprint information collected by device fingerprint collector. Its format must satisfy the following regular expression: ^[0-9a-f]{8}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{14}[\-][0-9a-f]{16}$
      */
     public void setIdentity(String Identity) {
         this.Identity = Identity;
     }
 
     /**
-     * Get 描述信息，如：IP，设备名称等，最大1024字节 
-     * @return Description 描述信息，如：IP，设备名称等，最大1024字节
+     * Get Description, such as IP and device name. Length limit: 1,024 bytes
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Description Description, such as IP and device name. Length limit: 1,024 bytes
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述信息，如：IP，设备名称等，最大1024字节
-     * @param Description 描述信息，如：IP，设备名称等，最大1024字节
+     * Set Description, such as IP and device name. Length limit: 1,024 bytes
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Description Description, such as IP and device name. Length limit: 1,024 bytes
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDescription(String Description) {
         this.Description = Description;

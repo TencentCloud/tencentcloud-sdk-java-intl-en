@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeFlowLogsResponse extends AbstractModel{
 
     /**
-    * The flow log instance set
+    * The instance set of flow logs.
     */
     @SerializedName("FlowLog")
     @Expose
     private FlowLog [] FlowLog;
 
     /**
-    * The total number of flow logs
+    * The total number of flow logs.
     */
     @SerializedName("TotalNum")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeFlowLogsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get The flow log instance set 
-     * @return FlowLog The flow log instance set
+     * Get The instance set of flow logs. 
+     * @return FlowLog The instance set of flow logs.
      */
     public FlowLog [] getFlowLog() {
         return this.FlowLog;
     }
 
     /**
-     * Set The flow log instance set
-     * @param FlowLog The flow log instance set
+     * Set The instance set of flow logs.
+     * @param FlowLog The instance set of flow logs.
      */
     public void setFlowLog(FlowLog [] FlowLog) {
         this.FlowLog = FlowLog;
     }
 
     /**
-     * Get The total number of flow logs 
-     * @return TotalNum The total number of flow logs
+     * Get The total number of flow logs. 
+     * @return TotalNum The total number of flow logs.
      */
     public Long getTotalNum() {
         return this.TotalNum;
     }
 
     /**
-     * Set The total number of flow logs
-     * @param TotalNum The total number of flow logs
+     * Set The total number of flow logs.
+     * @param TotalNum The total number of flow logs.
      */
     public void setTotalNum(Long TotalNum) {
         this.TotalNum = TotalNum;

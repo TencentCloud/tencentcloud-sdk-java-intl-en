@@ -23,42 +23,42 @@ import java.util.HashMap;
 public class CreateFlowLogRequest extends AbstractModel{
 
     /**
-    * The VPC ID or the unified ID. We recommend you use the unified ID
+    * The VPC ID or the unified ID. We recommend you use the unified ID.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * The name of the flow log instance
+    * The name of the flow log instance.
     */
     @SerializedName("FlowLogName")
     @Expose
     private String FlowLogName;
 
     /**
-    * The type of resources to which the flow log belongs. VPC|SUBNET|NETWORKINTERFACE
+    * The type of resources to which the flow log belongs. Valid values: 'VPC', 'SUBNET' and 'NETWORKINTERFACE'.
     */
     @SerializedName("ResourceType")
     @Expose
     private String ResourceType;
 
     /**
-    * The unique ID of the resource
+    * The unique ID of the resource.
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * The collection type of the flow log. ACCEPT|REJECT|ALL
+    * The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
     */
     @SerializedName("TrafficType")
     @Expose
     private String TrafficType;
 
     /**
-    * The storage ID of the flow log
+    * The storage ID of the flow log.
     */
     @SerializedName("CloudLogId")
     @Expose
@@ -72,96 +72,96 @@ public class CreateFlowLogRequest extends AbstractModel{
     private String FlowLogDescription;
 
     /**
-     * Get The VPC ID or the unified ID. We recommend you use the unified ID 
-     * @return VpcId The VPC ID or the unified ID. We recommend you use the unified ID
+     * Get The VPC ID or the unified ID. We recommend you use the unified ID. 
+     * @return VpcId The VPC ID or the unified ID. We recommend you use the unified ID.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set The VPC ID or the unified ID. We recommend you use the unified ID
-     * @param VpcId The VPC ID or the unified ID. We recommend you use the unified ID
+     * Set The VPC ID or the unified ID. We recommend you use the unified ID.
+     * @param VpcId The VPC ID or the unified ID. We recommend you use the unified ID.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get The name of the flow log instance 
-     * @return FlowLogName The name of the flow log instance
+     * Get The name of the flow log instance. 
+     * @return FlowLogName The name of the flow log instance.
      */
     public String getFlowLogName() {
         return this.FlowLogName;
     }
 
     /**
-     * Set The name of the flow log instance
-     * @param FlowLogName The name of the flow log instance
+     * Set The name of the flow log instance.
+     * @param FlowLogName The name of the flow log instance.
      */
     public void setFlowLogName(String FlowLogName) {
         this.FlowLogName = FlowLogName;
     }
 
     /**
-     * Get The type of resources to which the flow log belongs. VPC|SUBNET|NETWORKINTERFACE 
-     * @return ResourceType The type of resources to which the flow log belongs. VPC|SUBNET|NETWORKINTERFACE
+     * Get The type of resources to which the flow log belongs. Valid values: 'VPC', 'SUBNET' and 'NETWORKINTERFACE'. 
+     * @return ResourceType The type of resources to which the flow log belongs. Valid values: 'VPC', 'SUBNET' and 'NETWORKINTERFACE'.
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set The type of resources to which the flow log belongs. VPC|SUBNET|NETWORKINTERFACE
-     * @param ResourceType The type of resources to which the flow log belongs. VPC|SUBNET|NETWORKINTERFACE
+     * Set The type of resources to which the flow log belongs. Valid values: 'VPC', 'SUBNET' and 'NETWORKINTERFACE'.
+     * @param ResourceType The type of resources to which the flow log belongs. Valid values: 'VPC', 'SUBNET' and 'NETWORKINTERFACE'.
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get The unique ID of the resource 
-     * @return ResourceId The unique ID of the resource
+     * Get The unique ID of the resource. 
+     * @return ResourceId The unique ID of the resource.
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set The unique ID of the resource
-     * @param ResourceId The unique ID of the resource
+     * Set The unique ID of the resource.
+     * @param ResourceId The unique ID of the resource.
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get The collection type of the flow log. ACCEPT|REJECT|ALL 
-     * @return TrafficType The collection type of the flow log. ACCEPT|REJECT|ALL
+     * Get The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'. 
+     * @return TrafficType The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
      */
     public String getTrafficType() {
         return this.TrafficType;
     }
 
     /**
-     * Set The collection type of the flow log. ACCEPT|REJECT|ALL
-     * @param TrafficType The collection type of the flow log. ACCEPT|REJECT|ALL
+     * Set The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
+     * @param TrafficType The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
      */
     public void setTrafficType(String TrafficType) {
         this.TrafficType = TrafficType;
     }
 
     /**
-     * Get The storage ID of the flow log 
-     * @return CloudLogId The storage ID of the flow log
+     * Get The storage ID of the flow log. 
+     * @return CloudLogId The storage ID of the flow log.
      */
     public String getCloudLogId() {
         return this.CloudLogId;
     }
 
     /**
-     * Set The storage ID of the flow log
-     * @param CloudLogId The storage ID of the flow log
+     * Set The storage ID of the flow log.
+     * @param CloudLogId The storage ID of the flow log.
      */
     public void setCloudLogId(String CloudLogId) {
         this.CloudLogId = CloudLogId;

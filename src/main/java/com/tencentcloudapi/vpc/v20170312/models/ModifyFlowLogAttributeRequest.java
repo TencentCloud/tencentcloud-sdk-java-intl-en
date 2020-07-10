@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class ModifyFlowLogAttributeRequest extends AbstractModel{
 
     /**
-    * The VPC ID or the unified ID. We recommend you use the unified ID
+    * The VPC ID or the unified ID. We recommend you use the unified ID.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * The unique ID of the flow log
+    * The unique ID of the flow log.
     */
     @SerializedName("FlowLogId")
     @Expose
     private String FlowLogId;
 
     /**
-    * The name of the flow log instance
+    * The name of the flow log instance.
     */
     @SerializedName("FlowLogName")
     @Expose
     private String FlowLogName;
 
     /**
-    * The description of the flow log instance
+    * The description of the flow log instance.
     */
     @SerializedName("FlowLogDescription")
     @Expose
     private String FlowLogDescription;
 
     /**
-     * Get The VPC ID or the unified ID. We recommend you use the unified ID 
-     * @return VpcId The VPC ID or the unified ID. We recommend you use the unified ID
+     * Get The VPC ID or the unified ID. We recommend you use the unified ID. 
+     * @return VpcId The VPC ID or the unified ID. We recommend you use the unified ID.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set The VPC ID or the unified ID. We recommend you use the unified ID
-     * @param VpcId The VPC ID or the unified ID. We recommend you use the unified ID
+     * Set The VPC ID or the unified ID. We recommend you use the unified ID.
+     * @param VpcId The VPC ID or the unified ID. We recommend you use the unified ID.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get The unique ID of the flow log 
-     * @return FlowLogId The unique ID of the flow log
+     * Get The unique ID of the flow log. 
+     * @return FlowLogId The unique ID of the flow log.
      */
     public String getFlowLogId() {
         return this.FlowLogId;
     }
 
     /**
-     * Set The unique ID of the flow log
-     * @param FlowLogId The unique ID of the flow log
+     * Set The unique ID of the flow log.
+     * @param FlowLogId The unique ID of the flow log.
      */
     public void setFlowLogId(String FlowLogId) {
         this.FlowLogId = FlowLogId;
     }
 
     /**
-     * Get The name of the flow log instance 
-     * @return FlowLogName The name of the flow log instance
+     * Get The name of the flow log instance. 
+     * @return FlowLogName The name of the flow log instance.
      */
     public String getFlowLogName() {
         return this.FlowLogName;
     }
 
     /**
-     * Set The name of the flow log instance
-     * @param FlowLogName The name of the flow log instance
+     * Set The name of the flow log instance.
+     * @param FlowLogName The name of the flow log instance.
      */
     public void setFlowLogName(String FlowLogName) {
         this.FlowLogName = FlowLogName;
     }
 
     /**
-     * Get The description of the flow log instance 
-     * @return FlowLogDescription The description of the flow log instance
+     * Get The description of the flow log instance. 
+     * @return FlowLogDescription The description of the flow log instance.
      */
     public String getFlowLogDescription() {
         return this.FlowLogDescription;
     }
 
     /**
-     * Set The description of the flow log instance
-     * @param FlowLogDescription The description of the flow log instance
+     * Set The description of the flow log instance.
+     * @param FlowLogDescription The description of the flow log instance.
      */
     public void setFlowLogDescription(String FlowLogDescription) {
         this.FlowLogDescription = FlowLogDescription;

@@ -372,6 +372,32 @@ Note: only one screencapturing template can be associated with one domain name.
     }
 
     /**
+     *创建一个在指定时间启动、结束的录制任务，并使用指定录制模板ID对应的配置进行录制。
+- 使用前提
+1. 录制文件存放于点播平台，所以用户如需使用录制功能，需首先自行开通点播服务。
+2. 录制文件存放后相关费用（含存储以及下行播放流量）按照点播平台计费方式收取，具体请参考 对应文档。
+- 注意事项
+1. 断流会结束当前录制并生成录制文件。在结束时间到达之前任务仍然有效，期间只要正常推流都会正常录制，与是否多次推、断流无关。
+2. 使用上避免创建时间段相互重叠的录制任务。若同一条流当前存在多个时段重叠的任务，为避免重复录制系统将启动最多3个录制任务。
+3. 创建的录制任务记录在平台侧只保留3个月。
+4. 当前录制任务管理API（CreateRecordTask/StopRecordTask/DeleteRecordTask）与旧API（CreateLiveRecord/StopLiveRecord/DeleteLiveRecord）不兼容，两套接口不能混用。
+     * @param req CreateRecordTaskRequest
+     * @return CreateRecordTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRecordTaskResponse CreateRecordTask(CreateRecordTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateRecordTaskResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateRecordTaskResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateRecordTask"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete a callback rule.
      * @param req DeleteLiveCallbackRuleRequest
      * @return DeleteLiveCallbackRuleResponse
@@ -607,6 +633,42 @@ Note: only one screencapturing template can be associated with one domain name.
     }
 
     /**
+     *删除录制任务配置。删除操作不影响正在运行当中的任务，仅对删除之后新的推流有效。
+     * @param req DeleteRecordTaskRequest
+     * @return DeleteRecordTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRecordTaskResponse DeleteRecordTask(DeleteRecordTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRecordTaskResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRecordTaskResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteRecordTask"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *输入某个时间点（1分钟维度），查询该时间点所有流的下行信息。
+     * @param req DescribeAllStreamPlayInfoListRequest
+     * @return DescribeAllStreamPlayInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllStreamPlayInfoListResponse DescribeAllStreamPlayInfoList(DescribeAllStreamPlayInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAllStreamPlayInfoListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAllStreamPlayInfoListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAllStreamPlayInfoList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the data of billable LVB bandwidth and traffic.
      * @param req DescribeBillBandwidthAndFluxListRequest
      * @return DescribeBillBandwidthAndFluxListResponse
@@ -654,6 +716,25 @@ Note: only one screencapturing template can be associated with one domain name.
                 Type type = new TypeToken<JsonResponseModel<DescribeGroupProIspPlayInfoListResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeGroupProIspPlayInfoList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the number of each playback HTTP status code at a 5-minute granularity in a certain period of time.
+Note: Data can be queried one hour after it is generated. For example, data between 10:00 and 10:59 cannot be queried until 12:00.
+     * @param req DescribeHttpStatusInfoListRequest
+     * @return DescribeHttpStatusInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHttpStatusInfoListResponse DescribeHttpStatusInfoList(DescribeHttpStatusInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHttpStatusInfoListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHttpStatusInfoListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeHttpStatusInfoList"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -798,6 +879,24 @@ Note: only one screencapturing template can be associated with one domain name.
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveDomainCertResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeLiveDomainCert"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the real-time downstream playback data at the domain name level.
+     * @param req DescribeLiveDomainPlayInfoListRequest
+     * @return DescribeLiveDomainPlayInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveDomainPlayInfoListResponse DescribeLiveDomainPlayInfoList(DescribeLiveDomainPlayInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveDomainPlayInfoListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveDomainPlayInfoListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLiveDomainPlayInfoList"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1042,6 +1141,24 @@ Note: Up to 10,000 entries can be queried per page. More data can be obtained by
     }
 
     /**
+     *This API is used to query the push information of all real-time streams, including client IP, server IP, frame rate, bitrate, domain name, and push start time.
+     * @param req DescribeLiveStreamPushInfoListRequest
+     * @return DescribeLiveStreamPushInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveStreamPushInfoListResponse DescribeLiveStreamPushInfoList(DescribeLiveStreamPushInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveStreamPushInfoListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveStreamPushInfoListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLiveStreamPushInfoList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to return the stream status such as active, inactive, or forbidden.
      * @param req DescribeLiveStreamStateRequest
      * @return DescribeLiveStreamStateResponse
@@ -1053,6 +1170,25 @@ Note: Up to 10,000 entries can be queried per page. More data can be obtained by
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveStreamStateResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeLiveStreamState"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the transcoding details on a day.
+Note: Only the detailed data for one of the past 30 days can be queried currently.
+     * @param req DescribeLiveTranscodeDetailInfoRequest
+     * @return DescribeLiveTranscodeDetailInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveTranscodeDetailInfoResponse DescribeLiveTranscodeDetailInfo(DescribeLiveTranscodeDetailInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveTranscodeDetailInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveTranscodeDetailInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLiveTranscodeDetailInfo"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1168,6 +1304,44 @@ Note: Up to 10,000 entries can be queried per page. More data can be obtained by
     }
 
     /**
+     *This API is used to query the information of downstream playback error codes, i.e., the occurrences of each HTTP error code (4xx and 5xx) at a 1-minute granularity in a certain period of time.
+
+
+     * @param req DescribePlayErrorCodeDetailInfoListRequest
+     * @return DescribePlayErrorCodeDetailInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePlayErrorCodeDetailInfoListResponse DescribePlayErrorCodeDetailInfoList(DescribePlayErrorCodeDetailInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePlayErrorCodeDetailInfoListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePlayErrorCodeDetailInfoListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribePlayErrorCodeDetailInfoList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the information of downstream playback error codes.
+     * @param req DescribePlayErrorCodeSumInfoListRequest
+     * @return DescribePlayErrorCodeSumInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePlayErrorCodeSumInfoListResponse DescribePlayErrorCodeSumInfoList(DescribePlayErrorCodeSumInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePlayErrorCodeSumInfoListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePlayErrorCodeSumInfoListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribePlayErrorCodeSumInfoList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the average traffic per second, total traffic, and number of total requests by country/region, district, and ISP in a certain period of time.
      * @param req DescribeProIspPlaySumInfoListRequest
      * @return DescribeProIspPlaySumInfoListResponse
@@ -1179,6 +1353,42 @@ Note: Up to 10,000 entries can be queried per page. More data can be obtained by
                 Type type = new TypeToken<JsonResponseModel<DescribeProIspPlaySumInfoListResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeProIspPlaySumInfoList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the downstream playback data of an ISP in a district, including bandwidth, traffic, number of requests, and number of concurrent connections.
+     * @param req DescribeProvinceIspPlayInfoListRequest
+     * @return DescribeProvinceIspPlayInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProvinceIspPlayInfoListResponse DescribeProvinceIspPlayInfoList(DescribeProvinceIspPlayInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProvinceIspPlayInfoListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProvinceIspPlayInfoListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeProvinceIspPlayInfoList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *接口用来查询直播增值业务--截图的张数
+     * @param req DescribeScreenShotSheetNumListRequest
+     * @return DescribeScreenShotSheetNumListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScreenShotSheetNumListResponse DescribeScreenShotSheetNumList(DescribeScreenShotSheetNumListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeScreenShotSheetNumListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeScreenShotSheetNumListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeScreenShotSheetNumList"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1204,6 +1414,25 @@ Note: Up to 10,000 entries can be queried per page. More data can be obtained by
     }
 
     /**
+     *This API is used to query the playback data and supports querying the playback details by stream name and aggregated data by playback domain name.
+Note: To query by AppName, you need to submit a ticket for application.
+     * @param req DescribeStreamPlayInfoListRequest
+     * @return DescribeStreamPlayInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPlayInfoListResponse DescribeStreamPlayInfoList(DescribeStreamPlayInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamPlayInfoListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamPlayInfoListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeStreamPlayInfoList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the upstream push quality data by stream ID, including frame rate, bitrate, elapsed time, and codec of audio and video files.
      * @param req DescribeStreamPushInfoListRequest
      * @return DescribeStreamPushInfoListResponse
@@ -1215,6 +1444,42 @@ Note: Up to 10,000 entries can be queried per page. More data can be obtained by
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamPushInfoListResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeStreamPushInfoList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the information of the top n client IPs in a certain period of time (top 1,000 is supported currently).
+     * @param req DescribeTopClientIpSumInfoListRequest
+     * @return DescribeTopClientIpSumInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopClientIpSumInfoListResponse DescribeTopClientIpSumInfoList(DescribeTopClientIpSumInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTopClientIpSumInfoListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTopClientIpSumInfoListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTopClientIpSumInfoList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the information of the top n domain names and stream IDs in a certain period of time (top 1,000 is supported currently).
+     * @param req DescribeVisitTopSumInfoListRequest
+     * @return DescribeVisitTopSumInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVisitTopSumInfoListResponse DescribeVisitTopSumInfoList(DescribeVisitTopSumInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVisitTopSumInfoListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVisitTopSumInfoListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeVisitTopSumInfoList"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1503,6 +1768,24 @@ Note: Up to 10,000 entries can be queried per page. More data can be obtained by
                 Type type = new TypeToken<JsonResponseModel<StopLiveRecordResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "StopLiveRecord"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *提前结束录制，并中止运行中的录制任务。任务被成功中止后将不再启动。
+     * @param req StopRecordTaskRequest
+     * @return StopRecordTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopRecordTaskResponse StopRecordTask(StopRecordTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopRecordTaskResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopRecordTaskResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "StopRecordTask"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

@@ -23,49 +23,72 @@ import java.util.HashMap;
 public class ModifyBandwidthPackageAttributeRequest extends AbstractModel{
 
     /**
-    * The unique ID of the bandwidth package
+    * The unique ID of the bandwidth package.
     */
     @SerializedName("BandwidthPackageId")
     @Expose
     private String BandwidthPackageId;
 
     /**
-    * The name of the bandwidth package
+    * The name of the bandwidth package.
     */
     @SerializedName("BandwidthPackageName")
     @Expose
     private String BandwidthPackageName;
 
     /**
-     * Get The unique ID of the bandwidth package 
-     * @return BandwidthPackageId The unique ID of the bandwidth package
+    * The billing mode of the bandwidth package.
+    */
+    @SerializedName("ChargeType")
+    @Expose
+    private String ChargeType;
+
+    /**
+     * Get The unique ID of the bandwidth package. 
+     * @return BandwidthPackageId The unique ID of the bandwidth package.
      */
     public String getBandwidthPackageId() {
         return this.BandwidthPackageId;
     }
 
     /**
-     * Set The unique ID of the bandwidth package
-     * @param BandwidthPackageId The unique ID of the bandwidth package
+     * Set The unique ID of the bandwidth package.
+     * @param BandwidthPackageId The unique ID of the bandwidth package.
      */
     public void setBandwidthPackageId(String BandwidthPackageId) {
         this.BandwidthPackageId = BandwidthPackageId;
     }
 
     /**
-     * Get The name of the bandwidth package 
-     * @return BandwidthPackageName The name of the bandwidth package
+     * Get The name of the bandwidth package. 
+     * @return BandwidthPackageName The name of the bandwidth package.
      */
     public String getBandwidthPackageName() {
         return this.BandwidthPackageName;
     }
 
     /**
-     * Set The name of the bandwidth package
-     * @param BandwidthPackageName The name of the bandwidth package
+     * Set The name of the bandwidth package.
+     * @param BandwidthPackageName The name of the bandwidth package.
      */
     public void setBandwidthPackageName(String BandwidthPackageName) {
         this.BandwidthPackageName = BandwidthPackageName;
+    }
+
+    /**
+     * Get The billing mode of the bandwidth package. 
+     * @return ChargeType The billing mode of the bandwidth package.
+     */
+    public String getChargeType() {
+        return this.ChargeType;
+    }
+
+    /**
+     * Set The billing mode of the bandwidth package.
+     * @param ChargeType The billing mode of the bandwidth package.
+     */
+    public void setChargeType(String ChargeType) {
+        this.ChargeType = ChargeType;
     }
 
     /**
@@ -74,6 +97,7 @@ public class ModifyBandwidthPackageAttributeRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
         this.setParamSimple(map, prefix + "BandwidthPackageName", this.BandwidthPackageName);
+        this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
 
     }
 }
