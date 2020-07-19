@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class StopRecordTaskRequest extends AbstractModel{
 
     /**
-    * 录制任务ID。
+    * Recording task ID.
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * Get 录制任务ID。 
-     * @return TaskId 录制任务ID。
+     * Get Recording task ID. 
+     * @return TaskId Recording task ID.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 录制任务ID。
-     * @param TaskId 录制任务ID。
+     * Set Recording task ID.
+     * @param TaskId Recording task ID.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

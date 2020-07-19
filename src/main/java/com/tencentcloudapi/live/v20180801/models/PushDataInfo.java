@@ -44,7 +44,7 @@ public class PushDataInfo extends AbstractModel{
     private String ClientIp;
 
     /**
-    * Push receiving server IP.
+    * IP of the server that receives the stream.
     */
     @SerializedName("ServerIp")
     @Expose
@@ -93,7 +93,7 @@ public class PushDataInfo extends AbstractModel{
     private String BeginPushTime;
 
     /**
-    * Audio encoding format.
+    * Audio codec,
 Example: AAC.
     */
     @SerializedName("Acodec")
@@ -101,7 +101,7 @@ Example: AAC.
     private String Acodec;
 
     /**
-    * Video encoding format.
+    * Video codec,
 Example: H.264.
     */
     @SerializedName("Vcodec")
@@ -116,11 +116,32 @@ Example: H.264.
     private String Resolution;
 
     /**
-    * 
+    * Sample rate.
     */
     @SerializedName("AsampleRate")
     @Expose
     private Long AsampleRate;
+
+    /**
+    * Audio bitrate in `metadata` in Kbps.
+    */
+    @SerializedName("MetaAudioSpeed")
+    @Expose
+    private Long MetaAudioSpeed;
+
+    /**
+    * Video bitrate in `metadata` in Kbps.
+    */
+    @SerializedName("MetaVideoSpeed")
+    @Expose
+    private Long MetaVideoSpeed;
+
+    /**
+    * Frame rate in `metadata`.
+    */
+    @SerializedName("MetaFps")
+    @Expose
+    private Long MetaFps;
 
     /**
      * Get Stream name. 
@@ -171,16 +192,16 @@ Example: H.264.
     }
 
     /**
-     * Get Push receiving server IP. 
-     * @return ServerIp Push receiving server IP.
+     * Get IP of the server that receives the stream. 
+     * @return ServerIp IP of the server that receives the stream.
      */
     public String getServerIp() {
         return this.ServerIp;
     }
 
     /**
-     * Set Push receiving server IP.
-     * @param ServerIp Push receiving server IP.
+     * Set IP of the server that receives the stream.
+     * @param ServerIp IP of the server that receives the stream.
      */
     public void setServerIp(String ServerIp) {
         this.ServerIp = ServerIp;
@@ -283,9 +304,9 @@ Example: H.264.
     }
 
     /**
-     * Get Audio encoding format.
+     * Get Audio codec,
 Example: AAC. 
-     * @return Acodec Audio encoding format.
+     * @return Acodec Audio codec,
 Example: AAC.
      */
     public String getAcodec() {
@@ -293,9 +314,9 @@ Example: AAC.
     }
 
     /**
-     * Set Audio encoding format.
+     * Set Audio codec,
 Example: AAC.
-     * @param Acodec Audio encoding format.
+     * @param Acodec Audio codec,
 Example: AAC.
      */
     public void setAcodec(String Acodec) {
@@ -303,9 +324,9 @@ Example: AAC.
     }
 
     /**
-     * Get Video encoding format.
+     * Get Video codec,
 Example: H.264. 
-     * @return Vcodec Video encoding format.
+     * @return Vcodec Video codec,
 Example: H.264.
      */
     public String getVcodec() {
@@ -313,9 +334,9 @@ Example: H.264.
     }
 
     /**
-     * Set Video encoding format.
+     * Set Video codec,
 Example: H.264.
-     * @param Vcodec Video encoding format.
+     * @param Vcodec Video codec,
 Example: H.264.
      */
     public void setVcodec(String Vcodec) {
@@ -339,19 +360,67 @@ Example: H.264.
     }
 
     /**
-     * Get  
-     * @return AsampleRate 
+     * Get Sample rate. 
+     * @return AsampleRate Sample rate.
      */
     public Long getAsampleRate() {
         return this.AsampleRate;
     }
 
     /**
-     * Set 
-     * @param AsampleRate 
+     * Set Sample rate.
+     * @param AsampleRate Sample rate.
      */
     public void setAsampleRate(Long AsampleRate) {
         this.AsampleRate = AsampleRate;
+    }
+
+    /**
+     * Get Audio bitrate in `metadata` in Kbps. 
+     * @return MetaAudioSpeed Audio bitrate in `metadata` in Kbps.
+     */
+    public Long getMetaAudioSpeed() {
+        return this.MetaAudioSpeed;
+    }
+
+    /**
+     * Set Audio bitrate in `metadata` in Kbps.
+     * @param MetaAudioSpeed Audio bitrate in `metadata` in Kbps.
+     */
+    public void setMetaAudioSpeed(Long MetaAudioSpeed) {
+        this.MetaAudioSpeed = MetaAudioSpeed;
+    }
+
+    /**
+     * Get Video bitrate in `metadata` in Kbps. 
+     * @return MetaVideoSpeed Video bitrate in `metadata` in Kbps.
+     */
+    public Long getMetaVideoSpeed() {
+        return this.MetaVideoSpeed;
+    }
+
+    /**
+     * Set Video bitrate in `metadata` in Kbps.
+     * @param MetaVideoSpeed Video bitrate in `metadata` in Kbps.
+     */
+    public void setMetaVideoSpeed(Long MetaVideoSpeed) {
+        this.MetaVideoSpeed = MetaVideoSpeed;
+    }
+
+    /**
+     * Get Frame rate in `metadata`. 
+     * @return MetaFps Frame rate in `metadata`.
+     */
+    public Long getMetaFps() {
+        return this.MetaFps;
+    }
+
+    /**
+     * Set Frame rate in `metadata`.
+     * @param MetaFps Frame rate in `metadata`.
+     */
+    public void setMetaFps(Long MetaFps) {
+        this.MetaFps = MetaFps;
     }
 
     /**
@@ -372,6 +441,9 @@ Example: H.264.
         this.setParamSimple(map, prefix + "Vcodec", this.Vcodec);
         this.setParamSimple(map, prefix + "Resolution", this.Resolution);
         this.setParamSimple(map, prefix + "AsampleRate", this.AsampleRate);
+        this.setParamSimple(map, prefix + "MetaAudioSpeed", this.MetaAudioSpeed);
+        this.setParamSimple(map, prefix + "MetaVideoSpeed", this.MetaVideoSpeed);
+        this.setParamSimple(map, prefix + "MetaFps", this.MetaFps);
 
     }
 }

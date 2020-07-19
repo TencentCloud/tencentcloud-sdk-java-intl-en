@@ -23,51 +23,51 @@ import java.util.HashMap;
 public class PlayStatInfo extends AbstractModel{
 
     /**
-    * Data time point.
+    * Data point in time.
     */
     @SerializedName("Time")
     @Expose
     private String Time;
 
     /**
-    * Value of bandwidth/traffic/number of requests/number of concurrent connections/download speed. If there is no data, the value is 0.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Value of bandwidth/traffic/number of requests/number of concurrent connections/download speed. If there is no data returned, the value is 0.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Value")
     @Expose
     private Float Value;
 
     /**
-     * Get Data time point. 
-     * @return Time Data time point.
+     * Get Data point in time. 
+     * @return Time Data point in time.
      */
     public String getTime() {
         return this.Time;
     }
 
     /**
-     * Set Data time point.
-     * @param Time Data time point.
+     * Set Data point in time.
+     * @param Time Data point in time.
      */
     public void setTime(String Time) {
         this.Time = Time;
     }
 
     /**
-     * Get Value of bandwidth/traffic/number of requests/number of concurrent connections/download speed. If there is no data, the value is 0.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Value Value of bandwidth/traffic/number of requests/number of concurrent connections/download speed. If there is no data, the value is 0.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Value of bandwidth/traffic/number of requests/number of concurrent connections/download speed. If there is no data returned, the value is 0.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Value Value of bandwidth/traffic/number of requests/number of concurrent connections/download speed. If there is no data returned, the value is 0.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Float getValue() {
         return this.Value;
     }
 
     /**
-     * Set Value of bandwidth/traffic/number of requests/number of concurrent connections/download speed. If there is no data, the value is 0.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Value Value of bandwidth/traffic/number of requests/number of concurrent connections/download speed. If there is no data, the value is 0.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Value of bandwidth/traffic/number of requests/number of concurrent connections/download speed. If there is no data returned, the value is 0.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Value Value of bandwidth/traffic/number of requests/number of concurrent connections/download speed. If there is no data returned, the value is 0.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setValue(Float Value) {
         this.Value = Value;

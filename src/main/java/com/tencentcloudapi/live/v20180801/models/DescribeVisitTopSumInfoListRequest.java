@@ -23,37 +23,37 @@ import java.util.HashMap;
 public class DescribeVisitTopSumInfoListRequest extends AbstractModel{
 
     /**
-    * Start time point in the format of yyyy-mm-dd HH:MM:SS.
+    * Start point in time in the format of `yyyy-mm-dd HH:MM:SS`.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time point in the format of yyyy-mm-dd HH:MM:SS
-The time interval is (0, 4 hours]. Data in the past day can be queried.
+    * End point in time in the format of `yyyy-mm-dd HH:MM:SS`
+The time span is (0,4 hours]. Data for the last day can be queried.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Bandwidth metric. Value range: "Domain", "StreamId".
+    * Bandwidth metric. Valid values: "Domain", "StreamId".
     */
     @SerializedName("TopIndex")
     @Expose
     private String TopIndex;
 
     /**
-    * Playback domain name. If it is blank by default, the full data will be queried.
+    * Playback domain name. If this parameter is left empty, full data will be queried by default.
     */
     @SerializedName("PlayDomains")
     @Expose
     private String [] PlayDomains;
 
     /**
-    * Page number.
-Value range: [1,1000].
+    * Page number,
+Value range: [1,1000],
 Default value: 1.
     */
     @SerializedName("PageNum")
@@ -69,86 +69,86 @@ Default value: 20.
     private Long PageSize;
 
     /**
-    * Sorting metric. Value range: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
+    * Sorting metric. Valid values: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
     */
     @SerializedName("OrderParam")
     @Expose
     private String OrderParam;
 
     /**
-     * Get Start time point in the format of yyyy-mm-dd HH:MM:SS. 
-     * @return StartTime Start time point in the format of yyyy-mm-dd HH:MM:SS.
+     * Get Start point in time in the format of `yyyy-mm-dd HH:MM:SS`. 
+     * @return StartTime Start point in time in the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time point in the format of yyyy-mm-dd HH:MM:SS.
-     * @param StartTime Start time point in the format of yyyy-mm-dd HH:MM:SS.
+     * Set Start point in time in the format of `yyyy-mm-dd HH:MM:SS`.
+     * @param StartTime Start point in time in the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time point in the format of yyyy-mm-dd HH:MM:SS
-The time interval is (0, 4 hours]. Data in the past day can be queried. 
-     * @return EndTime End time point in the format of yyyy-mm-dd HH:MM:SS
-The time interval is (0, 4 hours]. Data in the past day can be queried.
+     * Get End point in time in the format of `yyyy-mm-dd HH:MM:SS`
+The time span is (0,4 hours]. Data for the last day can be queried. 
+     * @return EndTime End point in time in the format of `yyyy-mm-dd HH:MM:SS`
+The time span is (0,4 hours]. Data for the last day can be queried.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time point in the format of yyyy-mm-dd HH:MM:SS
-The time interval is (0, 4 hours]. Data in the past day can be queried.
-     * @param EndTime End time point in the format of yyyy-mm-dd HH:MM:SS
-The time interval is (0, 4 hours]. Data in the past day can be queried.
+     * Set End point in time in the format of `yyyy-mm-dd HH:MM:SS`
+The time span is (0,4 hours]. Data for the last day can be queried.
+     * @param EndTime End point in time in the format of `yyyy-mm-dd HH:MM:SS`
+The time span is (0,4 hours]. Data for the last day can be queried.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Bandwidth metric. Value range: "Domain", "StreamId". 
-     * @return TopIndex Bandwidth metric. Value range: "Domain", "StreamId".
+     * Get Bandwidth metric. Valid values: "Domain", "StreamId". 
+     * @return TopIndex Bandwidth metric. Valid values: "Domain", "StreamId".
      */
     public String getTopIndex() {
         return this.TopIndex;
     }
 
     /**
-     * Set Bandwidth metric. Value range: "Domain", "StreamId".
-     * @param TopIndex Bandwidth metric. Value range: "Domain", "StreamId".
+     * Set Bandwidth metric. Valid values: "Domain", "StreamId".
+     * @param TopIndex Bandwidth metric. Valid values: "Domain", "StreamId".
      */
     public void setTopIndex(String TopIndex) {
         this.TopIndex = TopIndex;
     }
 
     /**
-     * Get Playback domain name. If it is blank by default, the full data will be queried. 
-     * @return PlayDomains Playback domain name. If it is blank by default, the full data will be queried.
+     * Get Playback domain name. If this parameter is left empty, full data will be queried by default. 
+     * @return PlayDomains Playback domain name. If this parameter is left empty, full data will be queried by default.
      */
     public String [] getPlayDomains() {
         return this.PlayDomains;
     }
 
     /**
-     * Set Playback domain name. If it is blank by default, the full data will be queried.
-     * @param PlayDomains Playback domain name. If it is blank by default, the full data will be queried.
+     * Set Playback domain name. If this parameter is left empty, full data will be queried by default.
+     * @param PlayDomains Playback domain name. If this parameter is left empty, full data will be queried by default.
      */
     public void setPlayDomains(String [] PlayDomains) {
         this.PlayDomains = PlayDomains;
     }
 
     /**
-     * Get Page number.
-Value range: [1,1000].
+     * Get Page number,
+Value range: [1,1000],
 Default value: 1. 
-     * @return PageNum Page number.
-Value range: [1,1000].
+     * @return PageNum Page number,
+Value range: [1,1000],
 Default value: 1.
      */
     public Long getPageNum() {
@@ -156,11 +156,11 @@ Default value: 1.
     }
 
     /**
-     * Set Page number.
-Value range: [1,1000].
+     * Set Page number,
+Value range: [1,1000],
 Default value: 1.
-     * @param PageNum Page number.
-Value range: [1,1000].
+     * @param PageNum Page number,
+Value range: [1,1000],
 Default value: 1.
      */
     public void setPageNum(Long PageNum) {
@@ -188,16 +188,16 @@ Default value: 20.
     }
 
     /**
-     * Get Sorting metric. Value range: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux". 
-     * @return OrderParam Sorting metric. Value range: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
+     * Get Sorting metric. Valid values: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux". 
+     * @return OrderParam Sorting metric. Valid values: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
      */
     public String getOrderParam() {
         return this.OrderParam;
     }
 
     /**
-     * Set Sorting metric. Value range: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
-     * @param OrderParam Sorting metric. Value range: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
+     * Set Sorting metric. Valid values: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
+     * @param OrderParam Sorting metric. Valid values: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
      */
     public void setOrderParam(String OrderParam) {
         this.OrderParam = OrderParam;

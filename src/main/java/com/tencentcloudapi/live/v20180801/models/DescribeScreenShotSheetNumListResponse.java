@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeScreenShotSheetNumListResponse extends AbstractModel{
 
     /**
-    * 数据信息列表。
+    * Data information list.
     */
     @SerializedName("DataInfoList")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeScreenShotSheetNumListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 数据信息列表。 
-     * @return DataInfoList 数据信息列表。
+     * Get Data information list. 
+     * @return DataInfoList Data information list.
      */
     public TimeValue [] getDataInfoList() {
         return this.DataInfoList;
     }
 
     /**
-     * Set 数据信息列表。
-     * @param DataInfoList 数据信息列表。
+     * Set Data information list.
+     * @param DataInfoList Data information list.
      */
     public void setDataInfoList(TimeValue [] DataInfoList) {
         this.DataInfoList = DataInfoList;

@@ -30,16 +30,14 @@ public class TranscodeDetailInfo extends AbstractModel{
     private String StreamName;
 
     /**
-    * Start time (Beijing time),
-In the format of yyyy-mm-dd HH:MM.
+    * Start time (Beijing time) in the format of `yyyy-mm-dd HH:MM`.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM.
+    * End time (Beijing time) in the format of `yyyy-mm-dd HH:MM`.
     */
     @SerializedName("EndTime")
     @Expose
@@ -47,19 +45,19 @@ In the format of yyyy-mm-dd HH:MM.
 
     /**
     * Transcoding duration in minutes.
-Note: Given the possible interruptions during push, duration here is the sum of actual duration of transcoding instead of the interval between the start and end time.
+Note: given the possible interruptions during push, duration here is the sum of actual duration of transcoding instead of the interval between the start time and end time.
     */
     @SerializedName("Duration")
     @Expose
     private Long Duration;
 
     /**
-    * Encoding method, with modules,
+    * Codec with modules,
 Example:
-liveprocessor_H264: LVB transcoding-H264,
-liveprocessor_H265: LVB transcoding-H265,
-topspeed_H264 =》Ultra-fast HD-H264,
-topspeed_H265 =》Ultra-fast HD-H265.
+liveprocessor_H264: LVB transcoding - H264,
+liveprocessor_H265: LVB transcoding - H265,
+topspeed_H264: top speed codec - H264,
+topspeed_H265: top speed codec - H265.
     */
     @SerializedName("ModuleCodec")
     @Expose
@@ -73,7 +71,7 @@ topspeed_H265 =》Ultra-fast HD-H265.
     private Long Bitrate;
 
     /**
-    * Type. Value range: Transcode, MixStream, WaterMark.
+    * Type. Valid values: Transcode, MixStream, WaterMark.
     */
     @SerializedName("Type")
     @Expose
@@ -85,6 +83,13 @@ topspeed_H265 =》Ultra-fast HD-H265.
     @SerializedName("PushDomain")
     @Expose
     private String PushDomain;
+
+    /**
+    * Resolution.
+    */
+    @SerializedName("Resolution")
+    @Expose
+    private String Resolution;
 
     /**
      * Get Stream name. 
@@ -103,40 +108,32 @@ topspeed_H265 =》Ultra-fast HD-H265.
     }
 
     /**
-     * Get Start time (Beijing time),
-In the format of yyyy-mm-dd HH:MM. 
-     * @return StartTime Start time (Beijing time),
-In the format of yyyy-mm-dd HH:MM.
+     * Get Start time (Beijing time) in the format of `yyyy-mm-dd HH:MM`. 
+     * @return StartTime Start time (Beijing time) in the format of `yyyy-mm-dd HH:MM`.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time (Beijing time),
-In the format of yyyy-mm-dd HH:MM.
-     * @param StartTime Start time (Beijing time),
-In the format of yyyy-mm-dd HH:MM.
+     * Set Start time (Beijing time) in the format of `yyyy-mm-dd HH:MM`.
+     * @param StartTime Start time (Beijing time) in the format of `yyyy-mm-dd HH:MM`.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM. 
-     * @return EndTime End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM.
+     * Get End time (Beijing time) in the format of `yyyy-mm-dd HH:MM`. 
+     * @return EndTime End time (Beijing time) in the format of `yyyy-mm-dd HH:MM`.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM.
-     * @param EndTime End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM.
+     * Set End time (Beijing time) in the format of `yyyy-mm-dd HH:MM`.
+     * @param EndTime End time (Beijing time) in the format of `yyyy-mm-dd HH:MM`.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -144,9 +141,9 @@ In the format of yyyy-mm-dd HH:MM.
 
     /**
      * Get Transcoding duration in minutes.
-Note: Given the possible interruptions during push, duration here is the sum of actual duration of transcoding instead of the interval between the start and end time. 
+Note: given the possible interruptions during push, duration here is the sum of actual duration of transcoding instead of the interval between the start time and end time. 
      * @return Duration Transcoding duration in minutes.
-Note: Given the possible interruptions during push, duration here is the sum of actual duration of transcoding instead of the interval between the start and end time.
+Note: given the possible interruptions during push, duration here is the sum of actual duration of transcoding instead of the interval between the start time and end time.
      */
     public Long getDuration() {
         return this.Duration;
@@ -154,45 +151,45 @@ Note: Given the possible interruptions during push, duration here is the sum of 
 
     /**
      * Set Transcoding duration in minutes.
-Note: Given the possible interruptions during push, duration here is the sum of actual duration of transcoding instead of the interval between the start and end time.
+Note: given the possible interruptions during push, duration here is the sum of actual duration of transcoding instead of the interval between the start time and end time.
      * @param Duration Transcoding duration in minutes.
-Note: Given the possible interruptions during push, duration here is the sum of actual duration of transcoding instead of the interval between the start and end time.
+Note: given the possible interruptions during push, duration here is the sum of actual duration of transcoding instead of the interval between the start time and end time.
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get Encoding method, with modules,
+     * Get Codec with modules,
 Example:
-liveprocessor_H264: LVB transcoding-H264,
-liveprocessor_H265: LVB transcoding-H265,
-topspeed_H264 =》Ultra-fast HD-H264,
-topspeed_H265 =》Ultra-fast HD-H265. 
-     * @return ModuleCodec Encoding method, with modules,
+liveprocessor_H264: LVB transcoding - H264,
+liveprocessor_H265: LVB transcoding - H265,
+topspeed_H264: top speed codec - H264,
+topspeed_H265: top speed codec - H265. 
+     * @return ModuleCodec Codec with modules,
 Example:
-liveprocessor_H264: LVB transcoding-H264,
-liveprocessor_H265: LVB transcoding-H265,
-topspeed_H264 =》Ultra-fast HD-H264,
-topspeed_H265 =》Ultra-fast HD-H265.
+liveprocessor_H264: LVB transcoding - H264,
+liveprocessor_H265: LVB transcoding - H265,
+topspeed_H264: top speed codec - H264,
+topspeed_H265: top speed codec - H265.
      */
     public String getModuleCodec() {
         return this.ModuleCodec;
     }
 
     /**
-     * Set Encoding method, with modules,
+     * Set Codec with modules,
 Example:
-liveprocessor_H264: LVB transcoding-H264,
-liveprocessor_H265: LVB transcoding-H265,
-topspeed_H264 =》Ultra-fast HD-H264,
-topspeed_H265 =》Ultra-fast HD-H265.
-     * @param ModuleCodec Encoding method, with modules,
+liveprocessor_H264: LVB transcoding - H264,
+liveprocessor_H265: LVB transcoding - H265,
+topspeed_H264: top speed codec - H264,
+topspeed_H265: top speed codec - H265.
+     * @param ModuleCodec Codec with modules,
 Example:
-liveprocessor_H264: LVB transcoding-H264,
-liveprocessor_H265: LVB transcoding-H265,
-topspeed_H264 =》Ultra-fast HD-H264,
-topspeed_H265 =》Ultra-fast HD-H265.
+liveprocessor_H264: LVB transcoding - H264,
+liveprocessor_H265: LVB transcoding - H265,
+topspeed_H264: top speed codec - H264,
+topspeed_H265: top speed codec - H265.
      */
     public void setModuleCodec(String ModuleCodec) {
         this.ModuleCodec = ModuleCodec;
@@ -215,16 +212,16 @@ topspeed_H265 =》Ultra-fast HD-H265.
     }
 
     /**
-     * Get Type. Value range: Transcode, MixStream, WaterMark. 
-     * @return Type Type. Value range: Transcode, MixStream, WaterMark.
+     * Get Type. Valid values: Transcode, MixStream, WaterMark. 
+     * @return Type Type. Valid values: Transcode, MixStream, WaterMark.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Type. Value range: Transcode, MixStream, WaterMark.
-     * @param Type Type. Value range: Transcode, MixStream, WaterMark.
+     * Set Type. Valid values: Transcode, MixStream, WaterMark.
+     * @param Type Type. Valid values: Transcode, MixStream, WaterMark.
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -247,6 +244,22 @@ topspeed_H265 =》Ultra-fast HD-H265.
     }
 
     /**
+     * Get Resolution. 
+     * @return Resolution Resolution.
+     */
+    public String getResolution() {
+        return this.Resolution;
+    }
+
+    /**
+     * Set Resolution.
+     * @param Resolution Resolution.
+     */
+    public void setResolution(String Resolution) {
+        this.Resolution = Resolution;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -258,6 +271,7 @@ topspeed_H265 =》Ultra-fast HD-H265.
         this.setParamSimple(map, prefix + "Bitrate", this.Bitrate);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "PushDomain", this.PushDomain);
+        this.setParamSimple(map, prefix + "Resolution", this.Resolution);
 
     }
 }

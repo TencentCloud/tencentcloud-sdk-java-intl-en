@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeLiveTranscodeDetailInfoResponse extends AbstractModel{
 
     /**
-    * List of statistics.
+    * Statistics list.
     */
     @SerializedName("DataInfoList")
     @Expose
@@ -65,16 +65,16 @@ public class DescribeLiveTranscodeDetailInfoResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get List of statistics. 
-     * @return DataInfoList List of statistics.
+     * Get Statistics list. 
+     * @return DataInfoList Statistics list.
      */
     public TranscodeDetailInfo [] getDataInfoList() {
         return this.DataInfoList;
     }
 
     /**
-     * Set List of statistics.
-     * @param DataInfoList List of statistics.
+     * Set Statistics list.
+     * @param DataInfoList Statistics list.
      */
     public void setDataInfoList(TranscodeDetailInfo [] DataInfoList) {
         this.DataInfoList = DataInfoList;

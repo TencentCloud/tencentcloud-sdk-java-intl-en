@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeLiveDomainPlayInfoListRequest extends AbstractModel{
 
     /**
-    * List of playback domain names.
+    * Playback domain name list.
     */
     @SerializedName("PlayDomains")
     @Expose
     private String [] PlayDomains;
 
     /**
-     * Get List of playback domain names. 
-     * @return PlayDomains List of playback domain names.
+     * Get Playback domain name list. 
+     * @return PlayDomains Playback domain name list.
      */
     public String [] getPlayDomains() {
         return this.PlayDomains;
     }
 
     /**
-     * Set List of playback domain names.
-     * @param PlayDomains List of playback domain names.
+     * Set Playback domain name list.
+     * @param PlayDomains Playback domain name list.
      */
     public void setPlayDomains(String [] PlayDomains) {
         this.PlayDomains = PlayDomains;

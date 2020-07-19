@@ -23,24 +23,21 @@ import java.util.HashMap;
 public class DescribeTopClientIpSumInfoListResponse extends AbstractModel{
 
     /**
-    * Page number.
-Value range: [1,1000].
-Default value: 1.
+    * Page number. Value range: [1,1000]. Default value: 1.
     */
     @SerializedName("PageNum")
     @Expose
     private Long PageNum;
 
     /**
-    * Number of entries per page. Value range: [1,1000].
-Default value: 20.
+    * Number of entries per page. Value range: [1,1000]. Default value: 20.
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * Sorting metric. Value range: "TotalRequest", "FailedRequest", "TotalFlux".
+    * Sorting metric. Valid values: "TotalRequest", "FailedRequest", "TotalFlux".
     */
     @SerializedName("OrderParam")
     @Expose
@@ -75,60 +72,48 @@ Default value: 20.
     private String RequestId;
 
     /**
-     * Get Page number.
-Value range: [1,1000].
-Default value: 1. 
-     * @return PageNum Page number.
-Value range: [1,1000].
-Default value: 1.
+     * Get Page number. Value range: [1,1000]. Default value: 1. 
+     * @return PageNum Page number. Value range: [1,1000]. Default value: 1.
      */
     public Long getPageNum() {
         return this.PageNum;
     }
 
     /**
-     * Set Page number.
-Value range: [1,1000].
-Default value: 1.
-     * @param PageNum Page number.
-Value range: [1,1000].
-Default value: 1.
+     * Set Page number. Value range: [1,1000]. Default value: 1.
+     * @param PageNum Page number. Value range: [1,1000]. Default value: 1.
      */
     public void setPageNum(Long PageNum) {
         this.PageNum = PageNum;
     }
 
     /**
-     * Get Number of entries per page. Value range: [1,1000].
-Default value: 20. 
-     * @return PageSize Number of entries per page. Value range: [1,1000].
-Default value: 20.
+     * Get Number of entries per page. Value range: [1,1000]. Default value: 20. 
+     * @return PageSize Number of entries per page. Value range: [1,1000]. Default value: 20.
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set Number of entries per page. Value range: [1,1000].
-Default value: 20.
-     * @param PageSize Number of entries per page. Value range: [1,1000].
-Default value: 20.
+     * Set Number of entries per page. Value range: [1,1000]. Default value: 20.
+     * @param PageSize Number of entries per page. Value range: [1,1000]. Default value: 20.
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get Sorting metric. Value range: "TotalRequest", "FailedRequest", "TotalFlux". 
-     * @return OrderParam Sorting metric. Value range: "TotalRequest", "FailedRequest", "TotalFlux".
+     * Get Sorting metric. Valid values: "TotalRequest", "FailedRequest", "TotalFlux". 
+     * @return OrderParam Sorting metric. Valid values: "TotalRequest", "FailedRequest", "TotalFlux".
      */
     public String getOrderParam() {
         return this.OrderParam;
     }
 
     /**
-     * Set Sorting metric. Value range: "TotalRequest", "FailedRequest", "TotalFlux".
-     * @param OrderParam Sorting metric. Value range: "TotalRequest", "FailedRequest", "TotalFlux".
+     * Set Sorting metric. Valid values: "TotalRequest", "FailedRequest", "TotalFlux".
+     * @param OrderParam Sorting metric. Valid values: "TotalRequest", "FailedRequest", "TotalFlux".
      */
     public void setOrderParam(String OrderParam) {
         this.OrderParam = OrderParam;

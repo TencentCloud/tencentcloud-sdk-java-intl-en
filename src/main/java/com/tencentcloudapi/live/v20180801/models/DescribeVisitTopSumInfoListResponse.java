@@ -23,8 +23,8 @@ import java.util.HashMap;
 public class DescribeVisitTopSumInfoListResponse extends AbstractModel{
 
     /**
-    * Page number.
-Value range: [1,1000].
+    * Page number,
+Value range: [1,1000],
 Default value: 1.
     */
     @SerializedName("PageNum")
@@ -40,14 +40,14 @@ Default value: 20.
     private Long PageSize;
 
     /**
-    * Bandwidth metric. Value range: "Domain", "StreamId".
+    * Bandwidth metric. Valid values: "Domain", "StreamId".
     */
     @SerializedName("TopIndex")
     @Expose
     private String TopIndex;
 
     /**
-    * Sorting metric. Value range: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
+    * Sorting metric. Valid values: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
     */
     @SerializedName("OrderParam")
     @Expose
@@ -82,11 +82,11 @@ Default value: 20.
     private String RequestId;
 
     /**
-     * Get Page number.
-Value range: [1,1000].
+     * Get Page number,
+Value range: [1,1000],
 Default value: 1. 
-     * @return PageNum Page number.
-Value range: [1,1000].
+     * @return PageNum Page number,
+Value range: [1,1000],
 Default value: 1.
      */
     public Long getPageNum() {
@@ -94,11 +94,11 @@ Default value: 1.
     }
 
     /**
-     * Set Page number.
-Value range: [1,1000].
+     * Set Page number,
+Value range: [1,1000],
 Default value: 1.
-     * @param PageNum Page number.
-Value range: [1,1000].
+     * @param PageNum Page number,
+Value range: [1,1000],
 Default value: 1.
      */
     public void setPageNum(Long PageNum) {
@@ -126,32 +126,32 @@ Default value: 20.
     }
 
     /**
-     * Get Bandwidth metric. Value range: "Domain", "StreamId". 
-     * @return TopIndex Bandwidth metric. Value range: "Domain", "StreamId".
+     * Get Bandwidth metric. Valid values: "Domain", "StreamId". 
+     * @return TopIndex Bandwidth metric. Valid values: "Domain", "StreamId".
      */
     public String getTopIndex() {
         return this.TopIndex;
     }
 
     /**
-     * Set Bandwidth metric. Value range: "Domain", "StreamId".
-     * @param TopIndex Bandwidth metric. Value range: "Domain", "StreamId".
+     * Set Bandwidth metric. Valid values: "Domain", "StreamId".
+     * @param TopIndex Bandwidth metric. Valid values: "Domain", "StreamId".
      */
     public void setTopIndex(String TopIndex) {
         this.TopIndex = TopIndex;
     }
 
     /**
-     * Get Sorting metric. Value range: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux". 
-     * @return OrderParam Sorting metric. Value range: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
+     * Get Sorting metric. Valid values: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux". 
+     * @return OrderParam Sorting metric. Valid values: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
      */
     public String getOrderParam() {
         return this.OrderParam;
     }
 
     /**
-     * Set Sorting metric. Value range: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
-     * @param OrderParam Sorting metric. Value range: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
+     * Set Sorting metric. Valid values: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
+     * @param OrderParam Sorting metric. Valid values: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
      */
     public void setOrderParam(String OrderParam) {
         this.OrderParam = OrderParam;

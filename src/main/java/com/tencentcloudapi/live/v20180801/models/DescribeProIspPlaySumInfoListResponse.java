@@ -79,7 +79,7 @@ public class DescribeProIspPlaySumInfoListResponse extends AbstractModel{
     private ProIspPlaySumInfo [] DataInfoList;
 
     /**
-    * Average bandwidth.
+    * Download speed in MB/s. Calculation method: total traffic/total duration.
     */
     @SerializedName("AvgFluxPerSecond")
     @Expose
@@ -221,16 +221,16 @@ public class DescribeProIspPlaySumInfoListResponse extends AbstractModel{
     }
 
     /**
-     * Get Average bandwidth. 
-     * @return AvgFluxPerSecond Average bandwidth.
+     * Get Download speed in MB/s. Calculation method: total traffic/total duration. 
+     * @return AvgFluxPerSecond Download speed in MB/s. Calculation method: total traffic/total duration.
      */
     public Float getAvgFluxPerSecond() {
         return this.AvgFluxPerSecond;
     }
 
     /**
-     * Set Average bandwidth.
-     * @param AvgFluxPerSecond Average bandwidth.
+     * Set Download speed in MB/s. Calculation method: total traffic/total duration.
+     * @param AvgFluxPerSecond Download speed in MB/s. Calculation method: total traffic/total duration.
      */
     public void setAvgFluxPerSecond(Float AvgFluxPerSecond) {
         this.AvgFluxPerSecond = AvgFluxPerSecond;

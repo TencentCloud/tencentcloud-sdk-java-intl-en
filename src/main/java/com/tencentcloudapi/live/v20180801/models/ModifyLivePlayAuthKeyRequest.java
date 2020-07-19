@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyLivePlayAuthKeyRequest extends AbstractModel{
 
     /**
-    * Domain name.
+    * Playback domain name.
     */
     @SerializedName("DomainName")
     @Expose
@@ -31,6 +31,7 @@ public class ModifyLivePlayAuthKeyRequest extends AbstractModel{
 
     /**
     * Whether to enable. 0: disabled; 1: enabled.
+If this parameter is left empty, the current value will not be modified.
     */
     @SerializedName("Enable")
     @Expose
@@ -38,6 +39,7 @@ public class ModifyLivePlayAuthKeyRequest extends AbstractModel{
 
     /**
     * Authentication key.
+If this parameter is left empty, the current value will not be modified.
     */
     @SerializedName("AuthKey")
     @Expose
@@ -45,37 +47,41 @@ public class ModifyLivePlayAuthKeyRequest extends AbstractModel{
 
     /**
     * Validity period in seconds.
+If this parameter is left empty, the current value will not be modified.
     */
     @SerializedName("AuthDelta")
     @Expose
     private Long AuthDelta;
 
     /**
-    * Authentication backkey.
+    * Backup authentication key.
+If this parameter is left empty, the current value will not be modified.
     */
     @SerializedName("AuthBackKey")
     @Expose
     private String AuthBackKey;
 
     /**
-     * Get Domain name. 
-     * @return DomainName Domain name.
+     * Get Playback domain name. 
+     * @return DomainName Playback domain name.
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * Set Domain name.
-     * @param DomainName Domain name.
+     * Set Playback domain name.
+     * @param DomainName Playback domain name.
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
     }
 
     /**
-     * Get Whether to enable. 0: disabled; 1: enabled. 
+     * Get Whether to enable. 0: disabled; 1: enabled.
+If this parameter is left empty, the current value will not be modified. 
      * @return Enable Whether to enable. 0: disabled; 1: enabled.
+If this parameter is left empty, the current value will not be modified.
      */
     public Long getEnable() {
         return this.Enable;
@@ -83,15 +89,19 @@ public class ModifyLivePlayAuthKeyRequest extends AbstractModel{
 
     /**
      * Set Whether to enable. 0: disabled; 1: enabled.
+If this parameter is left empty, the current value will not be modified.
      * @param Enable Whether to enable. 0: disabled; 1: enabled.
+If this parameter is left empty, the current value will not be modified.
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get Authentication key. 
+     * Get Authentication key.
+If this parameter is left empty, the current value will not be modified. 
      * @return AuthKey Authentication key.
+If this parameter is left empty, the current value will not be modified.
      */
     public String getAuthKey() {
         return this.AuthKey;
@@ -99,15 +109,19 @@ public class ModifyLivePlayAuthKeyRequest extends AbstractModel{
 
     /**
      * Set Authentication key.
+If this parameter is left empty, the current value will not be modified.
      * @param AuthKey Authentication key.
+If this parameter is left empty, the current value will not be modified.
      */
     public void setAuthKey(String AuthKey) {
         this.AuthKey = AuthKey;
     }
 
     /**
-     * Get Validity period in seconds. 
+     * Get Validity period in seconds.
+If this parameter is left empty, the current value will not be modified. 
      * @return AuthDelta Validity period in seconds.
+If this parameter is left empty, the current value will not be modified.
      */
     public Long getAuthDelta() {
         return this.AuthDelta;
@@ -115,23 +129,29 @@ public class ModifyLivePlayAuthKeyRequest extends AbstractModel{
 
     /**
      * Set Validity period in seconds.
+If this parameter is left empty, the current value will not be modified.
      * @param AuthDelta Validity period in seconds.
+If this parameter is left empty, the current value will not be modified.
      */
     public void setAuthDelta(Long AuthDelta) {
         this.AuthDelta = AuthDelta;
     }
 
     /**
-     * Get Authentication backkey. 
-     * @return AuthBackKey Authentication backkey.
+     * Get Backup authentication key.
+If this parameter is left empty, the current value will not be modified. 
+     * @return AuthBackKey Backup authentication key.
+If this parameter is left empty, the current value will not be modified.
      */
     public String getAuthBackKey() {
         return this.AuthBackKey;
     }
 
     /**
-     * Set Authentication backkey.
-     * @param AuthBackKey Authentication backkey.
+     * Set Backup authentication key.
+If this parameter is left empty, the current value will not be modified.
+     * @param AuthBackKey Backup authentication key.
+If this parameter is left empty, the current value will not be modified.
      */
     public void setAuthBackKey(String AuthBackKey) {
         this.AuthBackKey = AuthBackKey;

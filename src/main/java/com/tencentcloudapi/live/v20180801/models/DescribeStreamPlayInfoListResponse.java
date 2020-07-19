@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeStreamPlayInfoListResponse extends AbstractModel{
 
     /**
-    * statistics list.
+    * Statistics list at a 1-minute granularity.
     */
     @SerializedName("DataInfoList")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeStreamPlayInfoListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get statistics list. 
-     * @return DataInfoList statistics list.
+     * Get Statistics list at a 1-minute granularity. 
+     * @return DataInfoList Statistics list at a 1-minute granularity.
      */
     public DayStreamPlayInfo [] getDataInfoList() {
         return this.DataInfoList;
     }
 
     /**
-     * Set statistics list.
-     * @param DataInfoList statistics list.
+     * Set Statistics list at a 1-minute granularity.
+     * @param DataInfoList Statistics list at a 1-minute granularity.
      */
     public void setDataInfoList(DayStreamPlayInfo [] DataInfoList) {
         this.DataInfoList = DataInfoList;

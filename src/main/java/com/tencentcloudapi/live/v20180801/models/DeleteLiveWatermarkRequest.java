@@ -24,7 +24,8 @@ public class DeleteLiveWatermarkRequest extends AbstractModel{
 
     /**
     * Watermark ID.
-Get the watermark ID in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Watermark ID obtained in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Watermark ID returned by the `DescribeLiveWatermarks` API.
     */
     @SerializedName("WatermarkId")
     @Expose
@@ -32,9 +33,11 @@ Get the watermark ID in the returned value of the [AddLiveWatermark](/document/p
 
     /**
      * Get Watermark ID.
-Get the watermark ID in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call. 
+Watermark ID obtained in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Watermark ID returned by the `DescribeLiveWatermarks` API. 
      * @return WatermarkId Watermark ID.
-Get the watermark ID in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Watermark ID obtained in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Watermark ID returned by the `DescribeLiveWatermarks` API.
      */
     public Long getWatermarkId() {
         return this.WatermarkId;
@@ -42,9 +45,11 @@ Get the watermark ID in the returned value of the [AddLiveWatermark](/document/p
 
     /**
      * Set Watermark ID.
-Get the watermark ID in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Watermark ID obtained in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Watermark ID returned by the `DescribeLiveWatermarks` API.
      * @param WatermarkId Watermark ID.
-Get the watermark ID in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Watermark ID obtained in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Watermark ID returned by the `DescribeLiveWatermarks` API.
      */
     public void setWatermarkId(Long WatermarkId) {
         this.WatermarkId = WatermarkId;

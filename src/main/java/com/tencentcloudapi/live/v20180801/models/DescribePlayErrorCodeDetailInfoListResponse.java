@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribePlayErrorCodeDetailInfoListResponse extends AbstractModel{
 
     /**
-    * statistics list.
+    * Statistics list.
     */
     @SerializedName("HttpCodeList")
     @Expose
@@ -44,16 +44,16 @@ public class DescribePlayErrorCodeDetailInfoListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get statistics list. 
-     * @return HttpCodeList statistics list.
+     * Get Statistics list. 
+     * @return HttpCodeList Statistics list.
      */
     public HttpCodeInfo [] getHttpCodeList() {
         return this.HttpCodeList;
     }
 
     /**
-     * Set statistics list.
-     * @param HttpCodeList statistics list.
+     * Set Statistics list.
+     * @param HttpCodeList Statistics list.
      */
     public void setHttpCodeList(HttpCodeInfo [] HttpCodeList) {
         this.HttpCodeList = HttpCodeList;

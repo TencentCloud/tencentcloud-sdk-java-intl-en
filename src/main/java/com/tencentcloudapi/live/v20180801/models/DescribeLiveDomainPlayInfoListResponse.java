@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeLiveDomainPlayInfoListResponse extends AbstractModel{
 
     /**
-    * Data time in the format of yyyy-mm-dd HH:MM:SS.
+    * Data time in the format of `yyyy-mm-dd HH:MM:SS`.
     */
     @SerializedName("Time")
     @Expose
@@ -44,7 +44,7 @@ public class DescribeLiveDomainPlayInfoListResponse extends AbstractModel{
     private Float TotalFlux;
 
     /**
-    * TotalRequest.
+    * Total number of requests.
     */
     @SerializedName("TotalRequest")
     @Expose
@@ -58,7 +58,7 @@ public class DescribeLiveDomainPlayInfoListResponse extends AbstractModel{
     private Long TotalOnline;
 
     /**
-    * Data by region name.
+    * Data by domain name.
     */
     @SerializedName("DomainInfoList")
     @Expose
@@ -72,16 +72,16 @@ public class DescribeLiveDomainPlayInfoListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Data time in the format of yyyy-mm-dd HH:MM:SS. 
-     * @return Time Data time in the format of yyyy-mm-dd HH:MM:SS.
+     * Get Data time in the format of `yyyy-mm-dd HH:MM:SS`. 
+     * @return Time Data time in the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public String getTime() {
         return this.Time;
     }
 
     /**
-     * Set Data time in the format of yyyy-mm-dd HH:MM:SS.
-     * @param Time Data time in the format of yyyy-mm-dd HH:MM:SS.
+     * Set Data time in the format of `yyyy-mm-dd HH:MM:SS`.
+     * @param Time Data time in the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public void setTime(String Time) {
         this.Time = Time;
@@ -120,16 +120,16 @@ public class DescribeLiveDomainPlayInfoListResponse extends AbstractModel{
     }
 
     /**
-     * Get TotalRequest. 
-     * @return TotalRequest TotalRequest.
+     * Get Total number of requests. 
+     * @return TotalRequest Total number of requests.
      */
     public Long getTotalRequest() {
         return this.TotalRequest;
     }
 
     /**
-     * Set TotalRequest.
-     * @param TotalRequest TotalRequest.
+     * Set Total number of requests.
+     * @param TotalRequest Total number of requests.
      */
     public void setTotalRequest(Long TotalRequest) {
         this.TotalRequest = TotalRequest;
@@ -152,16 +152,16 @@ public class DescribeLiveDomainPlayInfoListResponse extends AbstractModel{
     }
 
     /**
-     * Get Data by region name. 
-     * @return DomainInfoList Data by region name.
+     * Get Data by domain name. 
+     * @return DomainInfoList Data by domain name.
      */
     public DomainInfoList [] getDomainInfoList() {
         return this.DomainInfoList;
     }
 
     /**
-     * Set Data by region name.
-     * @param DomainInfoList Data by region name.
+     * Set Data by domain name.
+     * @param DomainInfoList Data by domain name.
      */
     public void setDomainInfoList(DomainInfoList [] DomainInfoList) {
         this.DomainInfoList = DomainInfoList;

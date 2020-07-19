@@ -23,219 +23,199 @@ import java.util.HashMap;
 public class DescribePlayErrorCodeSumInfoListRequest extends AbstractModel{
 
     /**
-    * Start time point (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
+    * Start point in time (Beijing time).
+In the format of `yyyy-mm-dd HH:MM:SS`.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time point (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day.
+    * End point in time (Beijing time).
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * List of playback domain names. If it is blank by default, the full data will be queried.
+    * Playback domain name list. If this parameter is left empty, full data will be queried.
     */
     @SerializedName("PlayDomains")
     @Expose
     private String [] PlayDomains;
 
     /**
-    * Page number.
-Value range: [1,1000],
-Default value: 1.
+    * Number of pages. Value range: [1,1000]. Default value: 1.
     */
     @SerializedName("PageNum")
     @Expose
     private Long PageNum;
 
     /**
-    * Number of entries per page,
-Value range: [1,1000],
-Default value: 20.
+    * Number of entries per page. Value range: [1,1000]. Default value: 20.
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 
+    * Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
     */
     @SerializedName("MainlandOrOversea")
     @Expose
     private String MainlandOrOversea;
 
     /**
-    * 
+    * Grouping parameter. Valid values: CountryProIsp (default value), Country (country/region). Grouping is made by country/region + district + ISP by default. Currently, districts and ISPs outside Mainland China cannot be recognized.
     */
     @SerializedName("GroupType")
     @Expose
     private String GroupType;
 
     /**
-    * 
+    * Language used in the output field. Valid values: Chinese (default), English. Currently, country/region, district, and ISP parameters support multiple languages.
     */
     @SerializedName("OutLanguage")
     @Expose
     private String OutLanguage;
 
     /**
-     * Get Start time point (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS. 
-     * @return StartTime Start time point (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
+     * Get Start point in time (Beijing time).
+In the format of `yyyy-mm-dd HH:MM:SS`. 
+     * @return StartTime Start point in time (Beijing time).
+In the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time point (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-     * @param StartTime Start time point (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
+     * Set Start point in time (Beijing time).
+In the format of `yyyy-mm-dd HH:MM:SS`.
+     * @param StartTime Start point in time (Beijing time).
+In the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time point (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day. 
-     * @return EndTime End time point (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day.
+     * Get End point in time (Beijing time).
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day. 
+     * @return EndTime End point in time (Beijing time).
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time point (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day.
-     * @param EndTime End time point (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day.
+     * Set End point in time (Beijing time).
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day.
+     * @param EndTime End point in time (Beijing time).
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get List of playback domain names. If it is blank by default, the full data will be queried. 
-     * @return PlayDomains List of playback domain names. If it is blank by default, the full data will be queried.
+     * Get Playback domain name list. If this parameter is left empty, full data will be queried. 
+     * @return PlayDomains Playback domain name list. If this parameter is left empty, full data will be queried.
      */
     public String [] getPlayDomains() {
         return this.PlayDomains;
     }
 
     /**
-     * Set List of playback domain names. If it is blank by default, the full data will be queried.
-     * @param PlayDomains List of playback domain names. If it is blank by default, the full data will be queried.
+     * Set Playback domain name list. If this parameter is left empty, full data will be queried.
+     * @param PlayDomains Playback domain name list. If this parameter is left empty, full data will be queried.
      */
     public void setPlayDomains(String [] PlayDomains) {
         this.PlayDomains = PlayDomains;
     }
 
     /**
-     * Get Page number.
-Value range: [1,1000],
-Default value: 1. 
-     * @return PageNum Page number.
-Value range: [1,1000],
-Default value: 1.
+     * Get Number of pages. Value range: [1,1000]. Default value: 1. 
+     * @return PageNum Number of pages. Value range: [1,1000]. Default value: 1.
      */
     public Long getPageNum() {
         return this.PageNum;
     }
 
     /**
-     * Set Page number.
-Value range: [1,1000],
-Default value: 1.
-     * @param PageNum Page number.
-Value range: [1,1000],
-Default value: 1.
+     * Set Number of pages. Value range: [1,1000]. Default value: 1.
+     * @param PageNum Number of pages. Value range: [1,1000]. Default value: 1.
      */
     public void setPageNum(Long PageNum) {
         this.PageNum = PageNum;
     }
 
     /**
-     * Get Number of entries per page,
-Value range: [1,1000],
-Default value: 20. 
-     * @return PageSize Number of entries per page,
-Value range: [1,1000],
-Default value: 20.
+     * Get Number of entries per page. Value range: [1,1000]. Default value: 20. 
+     * @return PageSize Number of entries per page. Value range: [1,1000]. Default value: 20.
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set Number of entries per page,
-Value range: [1,1000],
-Default value: 20.
-     * @param PageSize Number of entries per page,
-Value range: [1,1000],
-Default value: 20.
+     * Set Number of entries per page. Value range: [1,1000]. Default value: 20.
+     * @param PageSize Number of entries per page. Value range: [1,1000]. Default value: 20.
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get  
-     * @return MainlandOrOversea 
+     * Get Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried. 
+     * @return MainlandOrOversea Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
      */
     public String getMainlandOrOversea() {
         return this.MainlandOrOversea;
     }
 
     /**
-     * Set 
-     * @param MainlandOrOversea 
+     * Set Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
+     * @param MainlandOrOversea Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
      */
     public void setMainlandOrOversea(String MainlandOrOversea) {
         this.MainlandOrOversea = MainlandOrOversea;
     }
 
     /**
-     * Get  
-     * @return GroupType 
+     * Get Grouping parameter. Valid values: CountryProIsp (default value), Country (country/region). Grouping is made by country/region + district + ISP by default. Currently, districts and ISPs outside Mainland China cannot be recognized. 
+     * @return GroupType Grouping parameter. Valid values: CountryProIsp (default value), Country (country/region). Grouping is made by country/region + district + ISP by default. Currently, districts and ISPs outside Mainland China cannot be recognized.
      */
     public String getGroupType() {
         return this.GroupType;
     }
 
     /**
-     * Set 
-     * @param GroupType 
+     * Set Grouping parameter. Valid values: CountryProIsp (default value), Country (country/region). Grouping is made by country/region + district + ISP by default. Currently, districts and ISPs outside Mainland China cannot be recognized.
+     * @param GroupType Grouping parameter. Valid values: CountryProIsp (default value), Country (country/region). Grouping is made by country/region + district + ISP by default. Currently, districts and ISPs outside Mainland China cannot be recognized.
      */
     public void setGroupType(String GroupType) {
         this.GroupType = GroupType;
     }
 
     /**
-     * Get  
-     * @return OutLanguage 
+     * Get Language used in the output field. Valid values: Chinese (default), English. Currently, country/region, district, and ISP parameters support multiple languages. 
+     * @return OutLanguage Language used in the output field. Valid values: Chinese (default), English. Currently, country/region, district, and ISP parameters support multiple languages.
      */
     public String getOutLanguage() {
         return this.OutLanguage;
     }
 
     /**
-     * Set 
-     * @param OutLanguage 
+     * Set Language used in the output field. Valid values: Chinese (default), English. Currently, country/region, district, and ISP parameters support multiple languages.
+     * @param OutLanguage Language used in the output field. Valid values: Chinese (default), English. Currently, country/region, district, and ISP parameters support multiple languages.
      */
     public void setOutLanguage(String OutLanguage) {
         this.OutLanguage = OutLanguage;

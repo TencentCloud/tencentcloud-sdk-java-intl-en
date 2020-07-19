@@ -23,8 +23,8 @@ import java.util.HashMap;
 public class HttpStatusData extends AbstractModel{
 
     /**
-    * Data time point.
-In the format of yyyy-mm-dd HH:MM:SS.
+    * Data point in time,
+In the format of `yyyy-mm-dd HH:MM:SS`.
     */
     @SerializedName("Time")
     @Expose
@@ -38,20 +38,20 @@ In the format of yyyy-mm-dd HH:MM:SS.
     private HttpStatusInfo [] HttpStatusInfoList;
 
     /**
-     * Get Data time point.
-In the format of yyyy-mm-dd HH:MM:SS. 
-     * @return Time Data time point.
-In the format of yyyy-mm-dd HH:MM:SS.
+     * Get Data point in time,
+In the format of `yyyy-mm-dd HH:MM:SS`. 
+     * @return Time Data point in time,
+In the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public String getTime() {
         return this.Time;
     }
 
     /**
-     * Set Data time point.
-In the format of yyyy-mm-dd HH:MM:SS.
-     * @param Time Data time point.
-In the format of yyyy-mm-dd HH:MM:SS.
+     * Set Data point in time,
+In the format of `yyyy-mm-dd HH:MM:SS`.
+     * @param Time Data point in time,
+In the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public void setTime(String Time) {
         this.Time = Time;

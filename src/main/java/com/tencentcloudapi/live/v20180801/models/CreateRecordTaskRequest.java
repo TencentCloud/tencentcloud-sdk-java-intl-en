@@ -23,194 +23,194 @@ import java.util.HashMap;
 public class CreateRecordTaskRequest extends AbstractModel{
 
     /**
-    * 流名称。
+    * Stream name.
     */
     @SerializedName("StreamName")
     @Expose
     private String StreamName;
 
     /**
-    * 推流域名。
+    * Push domain name.
     */
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
 
     /**
-    * 推流路径。
+    * Push path.
     */
     @SerializedName("AppName")
     @Expose
     private String AppName;
 
     /**
-    * 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime，且不能超过从当前时刻开始24小时之内的时间。
+    * Recording task end time in UNIX timestamp, which must be after `StartTime` and within 24 hours from the current time.
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。不超过从当前时间开始24小时之内的时间。
+    * Recording task start time in UNIX timestamp. If this parameter is left empty, it indicates to start recording immediately. It must be within 24 hours from the current time.
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 推流类型，默认0。取值：
-0-直播推流。
-1-合成流，即 A+B=C 类型混流。
+    * Push type. Default value: 0. Valid values:
+0: LVB push.
+1: mixed stream, i.e., A + B = C mixed stream.
     */
     @SerializedName("StreamType")
     @Expose
     private Long StreamType;
 
     /**
-    * 录制模板ID，CreateLiveRecordTemplate 返回值。如果不填或者传入错误ID，则默认录制HLS格式、永久存储。
+    * Recording template ID, which is the returned value of `CreateLiveRecordTemplate`. If this parameter is left empty or incorrect, the stream will be recorded in HLS format and retained permanently by default.
     */
     @SerializedName("TemplateId")
     @Expose
     private Long TemplateId;
 
     /**
-    * 扩展字段，默认空。
+    * Extended field, which is empty by default.
     */
     @SerializedName("Extension")
     @Expose
     private String Extension;
 
     /**
-     * Get 流名称。 
-     * @return StreamName 流名称。
+     * Get Stream name. 
+     * @return StreamName Stream name.
      */
     public String getStreamName() {
         return this.StreamName;
     }
 
     /**
-     * Set 流名称。
-     * @param StreamName 流名称。
+     * Set Stream name.
+     * @param StreamName Stream name.
      */
     public void setStreamName(String StreamName) {
         this.StreamName = StreamName;
     }
 
     /**
-     * Get 推流域名。 
-     * @return DomainName 推流域名。
+     * Get Push domain name. 
+     * @return DomainName Push domain name.
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * Set 推流域名。
-     * @param DomainName 推流域名。
+     * Set Push domain name.
+     * @param DomainName Push domain name.
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
     }
 
     /**
-     * Get 推流路径。 
-     * @return AppName 推流路径。
+     * Get Push path. 
+     * @return AppName Push path.
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set 推流路径。
-     * @param AppName 推流路径。
+     * Set Push path.
+     * @param AppName Push path.
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
     }
 
     /**
-     * Get 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime，且不能超过从当前时刻开始24小时之内的时间。 
-     * @return EndTime 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime，且不能超过从当前时刻开始24小时之内的时间。
+     * Get Recording task end time in UNIX timestamp, which must be after `StartTime` and within 24 hours from the current time. 
+     * @return EndTime Recording task end time in UNIX timestamp, which must be after `StartTime` and within 24 hours from the current time.
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime，且不能超过从当前时刻开始24小时之内的时间。
-     * @param EndTime 录制任务结束时间，Unix时间戳。设置时间必须大于StartTime，且不能超过从当前时刻开始24小时之内的时间。
+     * Set Recording task end time in UNIX timestamp, which must be after `StartTime` and within 24 hours from the current time.
+     * @param EndTime Recording task end time in UNIX timestamp, which must be after `StartTime` and within 24 hours from the current time.
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。不超过从当前时间开始24小时之内的时间。 
-     * @return StartTime 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。不超过从当前时间开始24小时之内的时间。
+     * Get Recording task start time in UNIX timestamp. If this parameter is left empty, it indicates to start recording immediately. It must be within 24 hours from the current time. 
+     * @return StartTime Recording task start time in UNIX timestamp. If this parameter is left empty, it indicates to start recording immediately. It must be within 24 hours from the current time.
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。不超过从当前时间开始24小时之内的时间。
-     * @param StartTime 录制任务开始时间，Unix时间戳。如果不填表示立即启动录制。不超过从当前时间开始24小时之内的时间。
+     * Set Recording task start time in UNIX timestamp. If this parameter is left empty, it indicates to start recording immediately. It must be within 24 hours from the current time.
+     * @param StartTime Recording task start time in UNIX timestamp. If this parameter is left empty, it indicates to start recording immediately. It must be within 24 hours from the current time.
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 推流类型，默认0。取值：
-0-直播推流。
-1-合成流，即 A+B=C 类型混流。 
-     * @return StreamType 推流类型，默认0。取值：
-0-直播推流。
-1-合成流，即 A+B=C 类型混流。
+     * Get Push type. Default value: 0. Valid values:
+0: LVB push.
+1: mixed stream, i.e., A + B = C mixed stream. 
+     * @return StreamType Push type. Default value: 0. Valid values:
+0: LVB push.
+1: mixed stream, i.e., A + B = C mixed stream.
      */
     public Long getStreamType() {
         return this.StreamType;
     }
 
     /**
-     * Set 推流类型，默认0。取值：
-0-直播推流。
-1-合成流，即 A+B=C 类型混流。
-     * @param StreamType 推流类型，默认0。取值：
-0-直播推流。
-1-合成流，即 A+B=C 类型混流。
+     * Set Push type. Default value: 0. Valid values:
+0: LVB push.
+1: mixed stream, i.e., A + B = C mixed stream.
+     * @param StreamType Push type. Default value: 0. Valid values:
+0: LVB push.
+1: mixed stream, i.e., A + B = C mixed stream.
      */
     public void setStreamType(Long StreamType) {
         this.StreamType = StreamType;
     }
 
     /**
-     * Get 录制模板ID，CreateLiveRecordTemplate 返回值。如果不填或者传入错误ID，则默认录制HLS格式、永久存储。 
-     * @return TemplateId 录制模板ID，CreateLiveRecordTemplate 返回值。如果不填或者传入错误ID，则默认录制HLS格式、永久存储。
+     * Get Recording template ID, which is the returned value of `CreateLiveRecordTemplate`. If this parameter is left empty or incorrect, the stream will be recorded in HLS format and retained permanently by default. 
+     * @return TemplateId Recording template ID, which is the returned value of `CreateLiveRecordTemplate`. If this parameter is left empty or incorrect, the stream will be recorded in HLS format and retained permanently by default.
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 录制模板ID，CreateLiveRecordTemplate 返回值。如果不填或者传入错误ID，则默认录制HLS格式、永久存储。
-     * @param TemplateId 录制模板ID，CreateLiveRecordTemplate 返回值。如果不填或者传入错误ID，则默认录制HLS格式、永久存储。
+     * Set Recording template ID, which is the returned value of `CreateLiveRecordTemplate`. If this parameter is left empty or incorrect, the stream will be recorded in HLS format and retained permanently by default.
+     * @param TemplateId Recording template ID, which is the returned value of `CreateLiveRecordTemplate`. If this parameter is left empty or incorrect, the stream will be recorded in HLS format and retained permanently by default.
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 扩展字段，默认空。 
-     * @return Extension 扩展字段，默认空。
+     * Get Extended field, which is empty by default. 
+     * @return Extension Extended field, which is empty by default.
      */
     public String getExtension() {
         return this.Extension;
     }
 
     /**
-     * Set 扩展字段，默认空。
-     * @param Extension 扩展字段，默认空。
+     * Set Extended field, which is empty by default.
+     * @param Extension Extended field, which is empty by default.
      */
     public void setExtension(String Extension) {
         this.Extension = Extension;

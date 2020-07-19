@@ -23,46 +23,51 @@ import java.util.HashMap;
 public class PlayCodeTotalInfo extends AbstractModel{
 
     /**
-    * HTTP code. Value range: 400, 403, 404, 500, 502, 503, 504
+    * HTTP code. Valid values:
+400, 403, 404, 500, 502, 503, 504.
     */
     @SerializedName("Code")
     @Expose
     private String Code;
 
     /**
-    * Total occurrences
+    * Total occurrences.
     */
     @SerializedName("Num")
     @Expose
     private Long Num;
 
     /**
-     * Get HTTP code. Value range: 400, 403, 404, 500, 502, 503, 504 
-     * @return Code HTTP code. Value range: 400, 403, 404, 500, 502, 503, 504
+     * Get HTTP code. Valid values:
+400, 403, 404, 500, 502, 503, 504. 
+     * @return Code HTTP code. Valid values:
+400, 403, 404, 500, 502, 503, 504.
      */
     public String getCode() {
         return this.Code;
     }
 
     /**
-     * Set HTTP code. Value range: 400, 403, 404, 500, 502, 503, 504
-     * @param Code HTTP code. Value range: 400, 403, 404, 500, 502, 503, 504
+     * Set HTTP code. Valid values:
+400, 403, 404, 500, 502, 503, 504.
+     * @param Code HTTP code. Valid values:
+400, 403, 404, 500, 502, 503, 504.
      */
     public void setCode(String Code) {
         this.Code = Code;
     }
 
     /**
-     * Get Total occurrences 
-     * @return Num Total occurrences
+     * Get Total occurrences. 
+     * @return Num Total occurrences.
      */
     public Long getNum() {
         return this.Num;
     }
 
     /**
-     * Set Total occurrences
-     * @param Num Total occurrences
+     * Set Total occurrences.
+     * @param Num Total occurrences.
      */
     public void setNum(Long Num) {
         this.Num = Num;

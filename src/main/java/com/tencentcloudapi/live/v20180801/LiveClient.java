@@ -38,9 +38,10 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
-     *This API is used to set the delay time for the stream.
-Note: If you want to set delayed playback before pushing, you need to set 5 minutes in advance.
+     *This API is used to set the delay time for a stream.
+Note: if you want to set delayed playback before pushing, you need to do so 5 minutes in advance.
 Currently, this API only supports stream granularity, and the feature supporting domain name and application granularities will be available in the future.
+Use case: for important live streams, you can set delayed playback in advance to avoid contingency issues.
 
      * @param req AddDelayLiveStreamRequest
      * @return AddDelayLiveStreamResponse
@@ -214,14 +215,15 @@ Note: currently, up to 16 streams can be mixed.
 - Mode description
   This API supports two recording modes:
   1. Scheduled recording mode **(default mode)**.
-    The start time and end time need to be passed in, and the recording task will automatically start and end based on the time parameters.
+    The start time and end time need to be passed in, according to which the recording task will start and end automatically. Before the set end time expires (provided that `StopLiveRecord` is not called to terminate the task prematurely), the recording task is valid and will be started even after the push is interrupted and restarted multiple times.
   2. Real-time video recording mode.
     The start time passed in will be ignored, and recording will be started immediately after the recording task is created. The recording duration can be up to 30 minutes. If the end time passed in is more than 30 minutes after the current time, it will be counted as 30 minutes. Real-time video recording is mainly used for recording highlight scenes, and you are recommended to keep the duration within 5 minutes.
 
 - Precautions
-  1. The API call timeout period should be set to more than 3 seconds; otherwise, retries and frequent calls may result in repeated recording tasks.
+  1. The API call timeout period should be set to more than 3 seconds; otherwise, retries and calls by different start/end time values may result in repeated recording tasks and thus incur additional recording fees.
   2. Subject to the audio and video file formats (FLV/MP4/HLS), the video codec of H.264 and audio codec of AAC are supported.
-  3. In order to avoid malicious or non-subjective frequent API requests, the maximum number of tasks that can be created in scheduled recording mode is limited: up to 4,000 tasks can be created per day (excluding deleted ones), and up to 400 ones can run concurrently. If you need a higher upper limit, please submit a ticket for application.
+  3. In order to avoid malicious or unintended frequent API requests, the maximum number of tasks that can be created in scheduled recording mode is limited: up to 4,000 tasks can be created per day (excluding deleted ones), and up to 400 ones can run concurrently. If you need a higher upper limit, please submit a ticket for application.
+  4. This calling method does not support recording streams outside Mainland China for the time being.
      * @param req CreateLiveRecordRequest
      * @return CreateLiveRecordResponse
      * @throws TencentCloudSDKException
@@ -372,15 +374,15 @@ Note: only one screencapturing template can be associated with one domain name.
     }
 
     /**
-     *创建一个在指定时间启动、结束的录制任务，并使用指定录制模板ID对应的配置进行录制。
-- 使用前提
-1. 录制文件存放于点播平台，所以用户如需使用录制功能，需首先自行开通点播服务。
-2. 录制文件存放后相关费用（含存储以及下行播放流量）按照点播平台计费方式收取，具体请参考 对应文档。
-- 注意事项
-1. 断流会结束当前录制并生成录制文件。在结束时间到达之前任务仍然有效，期间只要正常推流都会正常录制，与是否多次推、断流无关。
-2. 使用上避免创建时间段相互重叠的录制任务。若同一条流当前存在多个时段重叠的任务，为避免重复录制系统将启动最多3个录制任务。
-3. 创建的录制任务记录在平台侧只保留3个月。
-4. 当前录制任务管理API（CreateRecordTask/StopRecordTask/DeleteRecordTask）与旧API（CreateLiveRecord/StopLiveRecord/DeleteLiveRecord）不兼容，两套接口不能混用。
+     *This API is used to create a recording task that starts and ends at specified times and records by using the configuration corresponding to a specified recording template ID.
+- Prerequisites
+1. Recording files are stored on the VOD platform, so if you need to use the recording feature, you must first activate the VOD service.
+2. After the recording files are stored, applicable fees (including storage fees and downstream playback traffic fees) will be charged according to the VOD billing mode. For more information, please see the corresponding document.
+- Precautions
+1. An interruption will end the current recording and generate a recording file. The task will still be valid before the end time expires, and as long as the stream is pushed normally during the period, it will record normally, regardless of whether the push is interrupted or restarted multiple times.
+2. Creating recording tasks with overlapping time periods must be avoided. If there are multiple tasks with overlapping time periods for the same stream, the system will start three recording tasks at most to avoid repeated recording.
+3. The record of a created recording task will be retained for 3 months on the platform.
+4. The current recording task management APIs (CreateRecordTask/StopRecordTask/DeleteRecordTask) are not compatible with the legacy APIs (CreateLiveRecord/StopLiveRecord/DeleteLiveRecord), and they cannot be mixed.
      * @param req CreateRecordTaskRequest
      * @return CreateRecordTaskResponse
      * @throws TencentCloudSDKException
@@ -633,7 +635,7 @@ Note: only one screencapturing template can be associated with one domain name.
     }
 
     /**
-     *删除录制任务配置。删除操作不影响正在运行当中的任务，仅对删除之后新的推流有效。
+     *This API is used to delete a recording task configuration. The deletion does not affect running tasks and takes effect only for new pushes.
      * @param req DeleteRecordTaskRequest
      * @return DeleteRecordTaskResponse
      * @throws TencentCloudSDKException
@@ -651,7 +653,7 @@ Note: only one screencapturing template can be associated with one domain name.
     }
 
     /**
-     *输入某个时间点（1分钟维度），查询该时间点所有流的下行信息。
+     *This API is used to query the downstream information of all streams at a specified point in time (at a 1-minute granularity).
      * @param req DescribeAllStreamPlayInfoListRequest
      * @return DescribeAllStreamPlayInfoListResponse
      * @throws TencentCloudSDKException
@@ -724,7 +726,7 @@ Note: only one screencapturing template can be associated with one domain name.
 
     /**
      *This API is used to query the number of each playback HTTP status code at a 5-minute granularity in a certain period of time.
-Note: Data can be queried one hour after it is generated. For example, data between 10:00 and 10:59 cannot be queried until 12:00.
+Note: data can be queried one hour after it is generated. For example, data between 10:00 and 10:59 cannot be queried until 12:00.
      * @param req DescribeHttpStatusInfoListRequest
      * @return DescribeHttpStatusInfoListResponse
      * @throws TencentCloudSDKException
@@ -886,7 +888,7 @@ Note: Data can be queried one hour after it is generated. For example, data betw
     }
 
     /**
-     *This API is used to query the real-time downstream playback data at the domain name level.
+     *This API is used to query the real-time downstream playback data at the domain name level. As it takes certain time to process data, the API queries quasi-real-time data generated 4 minutes ago by default.
      * @param req DescribeLiveDomainPlayInfoListRequest
      * @return DescribeLiveDomainPlayInfoListResponse
      * @throws TencentCloudSDKException
@@ -1177,8 +1179,7 @@ Note: Up to 10,000 entries can be queried per page. More data can be obtained by
     }
 
     /**
-     *This API is used to query the transcoding details on a day.
-Note: Only the detailed data for one of the past 30 days can be queried currently.
+     *This API is used to query the details of transcoding on a specified day or in a specified period of time.
      * @param req DescribeLiveTranscodeDetailInfoRequest
      * @return DescribeLiveTranscodeDetailInfoResponse
      * @throws TencentCloudSDKException
@@ -1360,7 +1361,7 @@ Note: Only the detailed data for one of the past 30 days can be queried currentl
     }
 
     /**
-     *This API is used to query the downstream playback data of an ISP in a district, including bandwidth, traffic, number of requests, and number of concurrent connections.
+     *This API is used to query the downstream playback data of a specified ISP in a specified district, including bandwidth, traffic, number of requests, and number of concurrent connections.
      * @param req DescribeProvinceIspPlayInfoListRequest
      * @return DescribeProvinceIspPlayInfoListResponse
      * @throws TencentCloudSDKException
@@ -1378,7 +1379,7 @@ Note: Only the detailed data for one of the past 30 days can be queried currentl
     }
 
     /**
-     *接口用来查询直播增值业务--截图的张数
+     *The API is used to query the number of screenshots as an LVB value-added service.
      * @param req DescribeScreenShotSheetNumListRequest
      * @return DescribeScreenShotSheetNumListResponse
      * @throws TencentCloudSDKException
@@ -1414,8 +1415,8 @@ Note: Only the detailed data for one of the past 30 days can be queried currentl
     }
 
     /**
-     *This API is used to query the playback data and supports querying the playback details by stream name and aggregated data by playback domain name.
-Note: To query by AppName, you need to submit a ticket for application.
+     *This API is used to query the playback data and supports querying playback details by stream name and aggregated data by playback domain name. The data has a delay of about 4 minutes.
+Note: to query by `AppName`, you need to submit a ticket for application.
      * @param req DescribeStreamPlayInfoListRequest
      * @return DescribeStreamPlayInfoListResponse
      * @throws TencentCloudSDKException
@@ -1469,7 +1470,7 @@ Note: To query by AppName, you need to submit a ticket for application.
     }
 
     /**
-     *This API is used to query the information of the top n domain names and stream IDs in a certain period of time (top 1,000 is supported currently).
+     *This API is used to query the information of the top n domain names or stream IDs in a certain period of time (top 1,000 is supported currently).
      * @param req DescribeVisitTopSumInfoListRequest
      * @return DescribeVisitTopSumInfoListResponse
      * @throws TencentCloudSDKException
@@ -1775,7 +1776,7 @@ Note: To query by AppName, you need to submit a ticket for application.
     }
 
     /**
-     *提前结束录制，并中止运行中的录制任务。任务被成功中止后将不再启动。
+     *This API is used to end a recording prematurely and terminate the running recording task. After the task is successfully terminated, it will no longer start.
      * @param req StopRecordTaskRequest
      * @return StopRecordTaskResponse
      * @throws TencentCloudSDKException

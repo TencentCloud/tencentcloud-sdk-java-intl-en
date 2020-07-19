@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeleteRecordTaskRequest extends AbstractModel{
 
     /**
-    * 任务ID，CreateRecordTask返回。删除TaskId指定的录制任务。
+    * Task ID returned by `CreateRecordTask`. The recording task specified by `TaskId` will be deleted.
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * Get 任务ID，CreateRecordTask返回。删除TaskId指定的录制任务。 
-     * @return TaskId 任务ID，CreateRecordTask返回。删除TaskId指定的录制任务。
+     * Get Task ID returned by `CreateRecordTask`. The recording task specified by `TaskId` will be deleted. 
+     * @return TaskId Task ID returned by `CreateRecordTask`. The recording task specified by `TaskId` will be deleted.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID，CreateRecordTask返回。删除TaskId指定的录制任务。
-     * @param TaskId 任务ID，CreateRecordTask返回。删除TaskId指定的录制任务。
+     * Set Task ID returned by `CreateRecordTask`. The recording task specified by `TaskId` will be deleted.
+     * @param TaskId Task ID returned by `CreateRecordTask`. The recording task specified by `TaskId` will be deleted.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

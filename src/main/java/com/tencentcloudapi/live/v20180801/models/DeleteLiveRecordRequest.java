@@ -30,8 +30,7 @@ public class DeleteLiveRecordRequest extends AbstractModel{
     private String StreamName;
 
     /**
-    * Task ID, which uniquely identifies a recording task globally.
-Get the `TaskId` from the returned value of the [CreateLiveRecord](/document/product/267/30148) API.
+    * Task ID returned by the `CreateLiveRecord` API.
     */
     @SerializedName("TaskId")
     @Expose
@@ -54,20 +53,16 @@ Get the `TaskId` from the returned value of the [CreateLiveRecord](/document/pro
     }
 
     /**
-     * Get Task ID, which uniquely identifies a recording task globally.
-Get the `TaskId` from the returned value of the [CreateLiveRecord](/document/product/267/30148) API. 
-     * @return TaskId Task ID, which uniquely identifies a recording task globally.
-Get the `TaskId` from the returned value of the [CreateLiveRecord](/document/product/267/30148) API.
+     * Get Task ID returned by the `CreateLiveRecord` API. 
+     * @return TaskId Task ID returned by the `CreateLiveRecord` API.
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID, which uniquely identifies a recording task globally.
-Get the `TaskId` from the returned value of the [CreateLiveRecord](/document/product/267/30148) API.
-     * @param TaskId Task ID, which uniquely identifies a recording task globally.
-Get the `TaskId` from the returned value of the [CreateLiveRecord](/document/product/267/30148) API.
+     * Set Task ID returned by the `CreateLiveRecord` API.
+     * @param TaskId Task ID returned by the `CreateLiveRecord` API.
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

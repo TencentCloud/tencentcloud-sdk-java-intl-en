@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeProvinceIspPlayInfoListRequest extends AbstractModel{
 
     /**
-    * Start time point (Beijing time).
+    * Start point in time (Beijing time).
 Example: 2019-02-21 10:00:00.
     */
     @SerializedName("StartTime")
@@ -31,9 +31,9 @@ Example: 2019-02-21 10:00:00.
     private String StartTime;
 
     /**
-    * End time point (Beijing time).
+    * End point in time (Beijing time).
 Example: 2019-02-21 12:00:00.
-Note: EndTime and StartTime only support querying data on the past day.
+Note: `EndTime` and `StartTime` only support querying data for the last day.
     */
     @SerializedName("EndTime")
     @Expose
@@ -49,48 +49,48 @@ Note: EndTime and StartTime only support querying data on the past day.
 
     /**
     * Statistical metric type:
-"Bandwidth": Bandwidth
-"FluxPerSecond": Average traffic
-"Flux": Traffic
-"Request": Number of requests
-"Online": Number of concurrent connections
+"Bandwidth": bandwidth
+"FluxPerSecond": average traffic
+"Flux": traffic
+"Request": number of requests
+"Online": number of concurrent connections
     */
     @SerializedName("StatType")
     @Expose
     private String StatType;
 
     /**
-    * List of playback domain names.
+    * Playback domain name list.
     */
     @SerializedName("PlayDomains")
     @Expose
     private String [] PlayDomains;
 
     /**
-    * An optional parameter, which is the list of the districts to be queried, such as Beijing
+    * List of the districts to be queried, such as Beijing.
     */
     @SerializedName("ProvinceNames")
     @Expose
     private String [] ProvinceNames;
 
     /**
-    * An optional parameter, which is the list of the ISPs to be queried, such as China Mobile. If it is blank, the data of all ISPs will be queried.
+    * List of the ISPs to be queried, such as China Mobile. If this parameter is left empty, the data of all ISPs will be queried.
     */
     @SerializedName("IspNames")
     @Expose
     private String [] IspNames;
 
     /**
-    * 
+    * Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
     */
     @SerializedName("MainlandOrOversea")
     @Expose
     private String MainlandOrOversea;
 
     /**
-     * Get Start time point (Beijing time).
+     * Get Start point in time (Beijing time).
 Example: 2019-02-21 10:00:00. 
-     * @return StartTime Start time point (Beijing time).
+     * @return StartTime Start point in time (Beijing time).
 Example: 2019-02-21 10:00:00.
      */
     public String getStartTime() {
@@ -98,9 +98,9 @@ Example: 2019-02-21 10:00:00.
     }
 
     /**
-     * Set Start time point (Beijing time).
+     * Set Start point in time (Beijing time).
 Example: 2019-02-21 10:00:00.
-     * @param StartTime Start time point (Beijing time).
+     * @param StartTime Start point in time (Beijing time).
 Example: 2019-02-21 10:00:00.
      */
     public void setStartTime(String StartTime) {
@@ -108,24 +108,24 @@ Example: 2019-02-21 10:00:00.
     }
 
     /**
-     * Get End time point (Beijing time).
+     * Get End point in time (Beijing time).
 Example: 2019-02-21 12:00:00.
-Note: EndTime and StartTime only support querying data on the past day. 
-     * @return EndTime End time point (Beijing time).
+Note: `EndTime` and `StartTime` only support querying data for the last day. 
+     * @return EndTime End point in time (Beijing time).
 Example: 2019-02-21 12:00:00.
-Note: EndTime and StartTime only support querying data on the past day.
+Note: `EndTime` and `StartTime` only support querying data for the last day.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time point (Beijing time).
+     * Set End point in time (Beijing time).
 Example: 2019-02-21 12:00:00.
-Note: EndTime and StartTime only support querying data on the past day.
-     * @param EndTime End time point (Beijing time).
+Note: `EndTime` and `StartTime` only support querying data for the last day.
+     * @param EndTime End point in time (Beijing time).
 Example: 2019-02-21 12:00:00.
-Note: EndTime and StartTime only support querying data on the past day.
+Note: `EndTime` and `StartTime` only support querying data for the last day.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -153,17 +153,17 @@ Note: EndTime and StartTime only support querying data on the past day.
 
     /**
      * Get Statistical metric type:
-"Bandwidth": Bandwidth
-"FluxPerSecond": Average traffic
-"Flux": Traffic
-"Request": Number of requests
-"Online": Number of concurrent connections 
+"Bandwidth": bandwidth
+"FluxPerSecond": average traffic
+"Flux": traffic
+"Request": number of requests
+"Online": number of concurrent connections 
      * @return StatType Statistical metric type:
-"Bandwidth": Bandwidth
-"FluxPerSecond": Average traffic
-"Flux": Traffic
-"Request": Number of requests
-"Online": Number of concurrent connections
+"Bandwidth": bandwidth
+"FluxPerSecond": average traffic
+"Flux": traffic
+"Request": number of requests
+"Online": number of concurrent connections
      */
     public String getStatType() {
         return this.StatType;
@@ -171,81 +171,81 @@ Note: EndTime and StartTime only support querying data on the past day.
 
     /**
      * Set Statistical metric type:
-"Bandwidth": Bandwidth
-"FluxPerSecond": Average traffic
-"Flux": Traffic
-"Request": Number of requests
-"Online": Number of concurrent connections
+"Bandwidth": bandwidth
+"FluxPerSecond": average traffic
+"Flux": traffic
+"Request": number of requests
+"Online": number of concurrent connections
      * @param StatType Statistical metric type:
-"Bandwidth": Bandwidth
-"FluxPerSecond": Average traffic
-"Flux": Traffic
-"Request": Number of requests
-"Online": Number of concurrent connections
+"Bandwidth": bandwidth
+"FluxPerSecond": average traffic
+"Flux": traffic
+"Request": number of requests
+"Online": number of concurrent connections
      */
     public void setStatType(String StatType) {
         this.StatType = StatType;
     }
 
     /**
-     * Get List of playback domain names. 
-     * @return PlayDomains List of playback domain names.
+     * Get Playback domain name list. 
+     * @return PlayDomains Playback domain name list.
      */
     public String [] getPlayDomains() {
         return this.PlayDomains;
     }
 
     /**
-     * Set List of playback domain names.
-     * @param PlayDomains List of playback domain names.
+     * Set Playback domain name list.
+     * @param PlayDomains Playback domain name list.
      */
     public void setPlayDomains(String [] PlayDomains) {
         this.PlayDomains = PlayDomains;
     }
 
     /**
-     * Get An optional parameter, which is the list of the districts to be queried, such as Beijing 
-     * @return ProvinceNames An optional parameter, which is the list of the districts to be queried, such as Beijing
+     * Get List of the districts to be queried, such as Beijing. 
+     * @return ProvinceNames List of the districts to be queried, such as Beijing.
      */
     public String [] getProvinceNames() {
         return this.ProvinceNames;
     }
 
     /**
-     * Set An optional parameter, which is the list of the districts to be queried, such as Beijing
-     * @param ProvinceNames An optional parameter, which is the list of the districts to be queried, such as Beijing
+     * Set List of the districts to be queried, such as Beijing.
+     * @param ProvinceNames List of the districts to be queried, such as Beijing.
      */
     public void setProvinceNames(String [] ProvinceNames) {
         this.ProvinceNames = ProvinceNames;
     }
 
     /**
-     * Get An optional parameter, which is the list of the ISPs to be queried, such as China Mobile. If it is blank, the data of all ISPs will be queried. 
-     * @return IspNames An optional parameter, which is the list of the ISPs to be queried, such as China Mobile. If it is blank, the data of all ISPs will be queried.
+     * Get List of the ISPs to be queried, such as China Mobile. If this parameter is left empty, the data of all ISPs will be queried. 
+     * @return IspNames List of the ISPs to be queried, such as China Mobile. If this parameter is left empty, the data of all ISPs will be queried.
      */
     public String [] getIspNames() {
         return this.IspNames;
     }
 
     /**
-     * Set An optional parameter, which is the list of the ISPs to be queried, such as China Mobile. If it is blank, the data of all ISPs will be queried.
-     * @param IspNames An optional parameter, which is the list of the ISPs to be queried, such as China Mobile. If it is blank, the data of all ISPs will be queried.
+     * Set List of the ISPs to be queried, such as China Mobile. If this parameter is left empty, the data of all ISPs will be queried.
+     * @param IspNames List of the ISPs to be queried, such as China Mobile. If this parameter is left empty, the data of all ISPs will be queried.
      */
     public void setIspNames(String [] IspNames) {
         this.IspNames = IspNames;
     }
 
     /**
-     * Get  
-     * @return MainlandOrOversea 
+     * Get Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried. 
+     * @return MainlandOrOversea Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
      */
     public String getMainlandOrOversea() {
         return this.MainlandOrOversea;
     }
 
     /**
-     * Set 
-     * @param MainlandOrOversea 
+     * Set Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
+     * @param MainlandOrOversea Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
      */
     public void setMainlandOrOversea(String MainlandOrOversea) {
         this.MainlandOrOversea = MainlandOrOversea;

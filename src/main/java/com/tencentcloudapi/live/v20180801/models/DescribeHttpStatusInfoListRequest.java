@@ -23,89 +23,89 @@ import java.util.HashMap;
 public class DescribeHttpStatusInfoListRequest extends AbstractModel{
 
     /**
-    * Start time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-StartTime cannot be more than 3 months ago.
+    * Start time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`.
+`StartTime` cannot be more than 3 months ago.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day.
+    * End time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * List of playback domain names.
+    * Playback domain name list.
     */
     @SerializedName("PlayDomains")
     @Expose
     private String [] PlayDomains;
 
     /**
-     * Get Start time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-StartTime cannot be more than 3 months ago. 
-     * @return StartTime Start time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-StartTime cannot be more than 3 months ago.
+     * Get Start time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`.
+`StartTime` cannot be more than 3 months ago. 
+     * @return StartTime Start time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`.
+`StartTime` cannot be more than 3 months ago.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-StartTime cannot be more than 3 months ago.
-     * @param StartTime Start time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-StartTime cannot be more than 3 months ago.
+     * Set Start time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`.
+`StartTime` cannot be more than 3 months ago.
+     * @param StartTime Start time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`.
+`StartTime` cannot be more than 3 months ago.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day. 
-     * @return EndTime End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day.
+     * Get End time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day. 
+     * @return EndTime End time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day.
-     * @param EndTime End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day.
+     * Set End time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day.
+     * @param EndTime End time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get List of playback domain names. 
-     * @return PlayDomains List of playback domain names.
+     * Get Playback domain name list. 
+     * @return PlayDomains Playback domain name list.
      */
     public String [] getPlayDomains() {
         return this.PlayDomains;
     }
 
     /**
-     * Set List of playback domain names.
-     * @param PlayDomains List of playback domain names.
+     * Set Playback domain name list.
+     * @param PlayDomains Playback domain name list.
      */
     public void setPlayDomains(String [] PlayDomains) {
         this.PlayDomains = PlayDomains;

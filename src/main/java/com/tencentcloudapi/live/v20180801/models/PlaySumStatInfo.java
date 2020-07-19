@@ -30,7 +30,9 @@ public class PlaySumStatInfo extends AbstractModel{
     private String Name;
 
     /**
-    * Average download speed in MB, which is the average download speed per minute.
+    * Average download speed,
+In MB/s.
+Calculation formula: average download speed per minute.
     */
     @SerializedName("AvgFluxPerSecond")
     @Expose
@@ -67,16 +69,24 @@ public class PlaySumStatInfo extends AbstractModel{
     }
 
     /**
-     * Get Average download speed in MB, which is the average download speed per minute. 
-     * @return AvgFluxPerSecond Average download speed in MB, which is the average download speed per minute.
+     * Get Average download speed,
+In MB/s.
+Calculation formula: average download speed per minute. 
+     * @return AvgFluxPerSecond Average download speed,
+In MB/s.
+Calculation formula: average download speed per minute.
      */
     public Float getAvgFluxPerSecond() {
         return this.AvgFluxPerSecond;
     }
 
     /**
-     * Set Average download speed in MB, which is the average download speed per minute.
-     * @param AvgFluxPerSecond Average download speed in MB, which is the average download speed per minute.
+     * Set Average download speed,
+In MB/s.
+Calculation formula: average download speed per minute.
+     * @param AvgFluxPerSecond Average download speed,
+In MB/s.
+Calculation formula: average download speed per minute.
      */
     public void setAvgFluxPerSecond(Float AvgFluxPerSecond) {
         this.AvgFluxPerSecond = AvgFluxPerSecond;

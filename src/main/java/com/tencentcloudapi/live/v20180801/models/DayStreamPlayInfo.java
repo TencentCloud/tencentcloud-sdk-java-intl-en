@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DayStreamPlayInfo extends AbstractModel{
 
     /**
-    * Data time point in the format of yyyy-mm-dd HH:MM:SS.
+    * Data point in time in the format of `yyyy-mm-dd HH:MM:SS`.
     */
     @SerializedName("Time")
     @Expose
@@ -58,16 +58,16 @@ public class DayStreamPlayInfo extends AbstractModel{
     private Long Online;
 
     /**
-     * Get Data time point in the format of yyyy-mm-dd HH:MM:SS. 
-     * @return Time Data time point in the format of yyyy-mm-dd HH:MM:SS.
+     * Get Data point in time in the format of `yyyy-mm-dd HH:MM:SS`. 
+     * @return Time Data point in time in the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public String getTime() {
         return this.Time;
     }
 
     /**
-     * Set Data time point in the format of yyyy-mm-dd HH:MM:SS.
-     * @param Time Data time point in the format of yyyy-mm-dd HH:MM:SS.
+     * Set Data point in time in the format of `yyyy-mm-dd HH:MM:SS`.
+     * @param Time Data point in time in the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public void setTime(String Time) {
         this.Time = Time;

@@ -51,7 +51,7 @@ public class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel{
     private Long TotalCode5xx;
 
     /**
-    * Total occurrences of all status codes. Codes 400, 403, 404, 500, 502, 503, and 504 are supported for the time being.
+    * Total occurrences of each status code.
     */
     @SerializedName("TotalCodeList")
     @Expose
@@ -86,14 +86,14 @@ public class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel{
     private Long TotalNum;
 
     /**
-    * 
+    * Occurrences of 2xx status codes.
     */
     @SerializedName("TotalCode2xx")
     @Expose
     private Long TotalCode2xx;
 
     /**
-    * 
+    * Occurrences of 3xx status codes.
     */
     @SerializedName("TotalCode3xx")
     @Expose
@@ -171,16 +171,16 @@ public class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel{
     }
 
     /**
-     * Get Total occurrences of all status codes. Codes 400, 403, 404, 500, 502, 503, and 504 are supported for the time being. 
-     * @return TotalCodeList Total occurrences of all status codes. Codes 400, 403, 404, 500, 502, 503, and 504 are supported for the time being.
+     * Get Total occurrences of each status code. 
+     * @return TotalCodeList Total occurrences of each status code.
      */
     public PlayCodeTotalInfo [] getTotalCodeList() {
         return this.TotalCodeList;
     }
 
     /**
-     * Set Total occurrences of all status codes. Codes 400, 403, 404, 500, 502, 503, and 504 are supported for the time being.
-     * @param TotalCodeList Total occurrences of all status codes. Codes 400, 403, 404, 500, 502, 503, and 504 are supported for the time being.
+     * Set Total occurrences of each status code.
+     * @param TotalCodeList Total occurrences of each status code.
      */
     public void setTotalCodeList(PlayCodeTotalInfo [] TotalCodeList) {
         this.TotalCodeList = TotalCodeList;
@@ -251,32 +251,32 @@ public class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return TotalCode2xx 
+     * Get Occurrences of 2xx status codes. 
+     * @return TotalCode2xx Occurrences of 2xx status codes.
      */
     public Long getTotalCode2xx() {
         return this.TotalCode2xx;
     }
 
     /**
-     * Set 
-     * @param TotalCode2xx 
+     * Set Occurrences of 2xx status codes.
+     * @param TotalCode2xx Occurrences of 2xx status codes.
      */
     public void setTotalCode2xx(Long TotalCode2xx) {
         this.TotalCode2xx = TotalCode2xx;
     }
 
     /**
-     * Get  
-     * @return TotalCode3xx 
+     * Get Occurrences of 3xx status codes. 
+     * @return TotalCode3xx Occurrences of 3xx status codes.
      */
     public Long getTotalCode3xx() {
         return this.TotalCode3xx;
     }
 
     /**
-     * Set 
-     * @param TotalCode3xx 
+     * Set Occurrences of 3xx status codes.
+     * @param TotalCode3xx Occurrences of 3xx status codes.
      */
     public void setTotalCode3xx(Long TotalCode3xx) {
         this.TotalCode3xx = TotalCode3xx;

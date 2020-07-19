@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeAllStreamPlayInfoListResponse extends AbstractModel{
 
     /**
-    * 查询时间点，回传的输入参数中的查询时间。
+    * Query point in time in the returned input parameters.
     */
     @SerializedName("QueryTime")
     @Expose
     private String QueryTime;
 
     /**
-    * 数据信息列表。
+    * Data information list.
     */
     @SerializedName("DataInfoList")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeAllStreamPlayInfoListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 查询时间点，回传的输入参数中的查询时间。 
-     * @return QueryTime 查询时间点，回传的输入参数中的查询时间。
+     * Get Query point in time in the returned input parameters. 
+     * @return QueryTime Query point in time in the returned input parameters.
      */
     public String getQueryTime() {
         return this.QueryTime;
     }
 
     /**
-     * Set 查询时间点，回传的输入参数中的查询时间。
-     * @param QueryTime 查询时间点，回传的输入参数中的查询时间。
+     * Set Query point in time in the returned input parameters.
+     * @param QueryTime Query point in time in the returned input parameters.
      */
     public void setQueryTime(String QueryTime) {
         this.QueryTime = QueryTime;
     }
 
     /**
-     * Get 数据信息列表。 
-     * @return DataInfoList 数据信息列表。
+     * Get Data information list. 
+     * @return DataInfoList Data information list.
      */
     public MonitorStreamPlayInfo [] getDataInfoList() {
         return this.DataInfoList;
     }
 
     /**
-     * Set 数据信息列表。
-     * @param DataInfoList 数据信息列表。
+     * Set Data information list.
+     * @param DataInfoList Data information list.
      */
     public void setDataInfoList(MonitorStreamPlayInfo [] DataInfoList) {
         this.DataInfoList = DataInfoList;

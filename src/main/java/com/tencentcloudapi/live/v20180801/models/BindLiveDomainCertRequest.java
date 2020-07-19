@@ -37,7 +37,7 @@ public class BindLiveDomainCertRequest extends AbstractModel{
     private String DomainName;
 
     /**
-    * Status. 0: off, 1: on.
+    * HTTPS status. 0: disabled, 1: enabled.
     */
     @SerializedName("Status")
     @Expose
@@ -76,16 +76,16 @@ public class BindLiveDomainCertRequest extends AbstractModel{
     }
 
     /**
-     * Get Status. 0: off, 1: on. 
-     * @return Status Status. 0: off, 1: on.
+     * Get HTTPS status. 0: disabled, 1: enabled. 
+     * @return Status HTTPS status. 0: disabled, 1: enabled.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status. 0: off, 1: on.
-     * @param Status Status. 0: off, 1: on.
+     * Set HTTPS status. 0: disabled, 1: enabled.
+     * @param Status HTTPS status. 0: disabled, 1: enabled.
      */
     public void setStatus(Long Status) {
         this.Status = Status;

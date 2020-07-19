@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeLiveStreamPushInfoListResponse extends AbstractModel{
 
     /**
-    * Live stream statistics list
+    * Live stream statistics list.
     */
     @SerializedName("DataInfoList")
     @Expose
@@ -65,16 +65,16 @@ public class DescribeLiveStreamPushInfoListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Live stream statistics list 
-     * @return DataInfoList Live stream statistics list
+     * Get Live stream statistics list. 
+     * @return DataInfoList Live stream statistics list.
      */
     public PushDataInfo [] getDataInfoList() {
         return this.DataInfoList;
     }
 
     /**
-     * Set Live stream statistics list
-     * @param DataInfoList Live stream statistics list
+     * Set Live stream statistics list.
+     * @param DataInfoList Live stream statistics list.
      */
     public void setDataInfoList(PushDataInfo [] DataInfoList) {
         this.DataInfoList = DataInfoList;

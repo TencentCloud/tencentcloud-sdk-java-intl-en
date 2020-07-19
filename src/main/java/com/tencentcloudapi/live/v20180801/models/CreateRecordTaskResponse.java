@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateRecordTaskResponse extends AbstractModel{
 
     /**
-    * 任务ID，全局唯一标识录制任务。
+    * Task ID, which uniquely identifies the recording task globally.
     */
     @SerializedName("TaskId")
     @Expose
@@ -37,16 +37,16 @@ public class CreateRecordTaskResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get 任务ID，全局唯一标识录制任务。 
-     * @return TaskId 任务ID，全局唯一标识录制任务。
+     * Get Task ID, which uniquely identifies the recording task globally. 
+     * @return TaskId Task ID, which uniquely identifies the recording task globally.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID，全局唯一标识录制任务。
-     * @param TaskId 任务ID，全局唯一标识录制任务。
+     * Set Task ID, which uniquely identifies the recording task globally.
+     * @param TaskId Task ID, which uniquely identifies the recording task globally.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

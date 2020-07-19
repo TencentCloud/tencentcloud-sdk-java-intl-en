@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class HttpCodeInfo extends AbstractModel{
 
     /**
-    * HTTP return code
+    * HTTP return code.
 Example: "2xx", "3xx", "4xx", "5xx".
     */
     @SerializedName("HttpCode")
@@ -31,16 +31,16 @@ Example: "2xx", "3xx", "4xx", "5xx".
     private String HttpCode;
 
     /**
-    * Statistics. 0 will be added for time points when there is no data.
+    * Statistics. 0 will be added for points in time when there is no data.
     */
     @SerializedName("ValueList")
     @Expose
     private HttpCodeValue [] ValueList;
 
     /**
-     * Get HTTP return code
+     * Get HTTP return code.
 Example: "2xx", "3xx", "4xx", "5xx". 
-     * @return HttpCode HTTP return code
+     * @return HttpCode HTTP return code.
 Example: "2xx", "3xx", "4xx", "5xx".
      */
     public String getHttpCode() {
@@ -48,9 +48,9 @@ Example: "2xx", "3xx", "4xx", "5xx".
     }
 
     /**
-     * Set HTTP return code
+     * Set HTTP return code.
 Example: "2xx", "3xx", "4xx", "5xx".
-     * @param HttpCode HTTP return code
+     * @param HttpCode HTTP return code.
 Example: "2xx", "3xx", "4xx", "5xx".
      */
     public void setHttpCode(String HttpCode) {
@@ -58,16 +58,16 @@ Example: "2xx", "3xx", "4xx", "5xx".
     }
 
     /**
-     * Get Statistics. 0 will be added for time points when there is no data. 
-     * @return ValueList Statistics. 0 will be added for time points when there is no data.
+     * Get Statistics. 0 will be added for points in time when there is no data. 
+     * @return ValueList Statistics. 0 will be added for points in time when there is no data.
      */
     public HttpCodeValue [] getValueList() {
         return this.ValueList;
     }
 
     /**
-     * Set Statistics. 0 will be added for time points when there is no data.
-     * @param ValueList Statistics. 0 will be added for time points when there is no data.
+     * Set Statistics. 0 will be added for points in time when there is no data.
+     * @param ValueList Statistics. 0 will be added for points in time when there is no data.
      */
     public void setValueList(HttpCodeValue [] ValueList) {
         this.ValueList = ValueList;

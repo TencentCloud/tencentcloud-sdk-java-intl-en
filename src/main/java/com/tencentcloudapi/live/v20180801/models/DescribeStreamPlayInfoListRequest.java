@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeStreamPlayInfoListRequest extends AbstractModel{
 
     /**
-    * Start time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS,
+    * Start time (Beijing time) in the format of `yyyy-mm-dd HH:MM:SS`,
 The start time cannot be more than 30 days after the current time.
     */
     @SerializedName("StartTime")
@@ -31,7 +31,7 @@ The start time cannot be more than 30 days after the current time.
     private String StartTime;
 
     /**
-    * End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
+    * End time (Beijing time) in the format of `yyyy-mm-dd HH:MM:SS`.
 The end time and start time must be on the same day.
     */
     @SerializedName("EndTime")
@@ -39,8 +39,8 @@ The end time and start time must be on the same day.
     private String EndTime;
 
     /**
-    * Playback domain name.
-If it is left blank, data of live streams of all playback domain names will be queried.
+    * Playback domain name,
+If this parameter is left empty, data of live streams of all playback domain names will be queried.
     */
     @SerializedName("PlayDomain")
     @Expose
@@ -48,25 +48,25 @@ If it is left blank, data of live streams of all playback domain names will be q
 
     /**
     * Stream name (exact match).
-If it is left blank, the full playback data will be queried.
+If this parameter is left empty, full playback data will be queried.
     */
     @SerializedName("StreamName")
     @Expose
     private String StreamName;
 
     /**
-    * push and playback addresses and is "live" by default. Exact match is required. Fuzzy match is not supported.
-If it is left blank, the full playback data will be queried.
-Note: To query by AppName, you need to submit a ticket for application.
+    * Push path, which is the same as the `AppName` in the playback address, subject to exact match, and valid if `StreamName` is passed in.
+If this parameter is left empty, full playback data will be queried.
+Note: to query by `AppName`, you need to submit a ticket for application.
     */
     @SerializedName("AppName")
     @Expose
     private String AppName;
 
     /**
-     * Get Start time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS,
+     * Get Start time (Beijing time) in the format of `yyyy-mm-dd HH:MM:SS`,
 The start time cannot be more than 30 days after the current time. 
-     * @return StartTime Start time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS,
+     * @return StartTime Start time (Beijing time) in the format of `yyyy-mm-dd HH:MM:SS`,
 The start time cannot be more than 30 days after the current time.
      */
     public String getStartTime() {
@@ -74,9 +74,9 @@ The start time cannot be more than 30 days after the current time.
     }
 
     /**
-     * Set Start time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS,
+     * Set Start time (Beijing time) in the format of `yyyy-mm-dd HH:MM:SS`,
 The start time cannot be more than 30 days after the current time.
-     * @param StartTime Start time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS,
+     * @param StartTime Start time (Beijing time) in the format of `yyyy-mm-dd HH:MM:SS`,
 The start time cannot be more than 30 days after the current time.
      */
     public void setStartTime(String StartTime) {
@@ -84,9 +84,9 @@ The start time cannot be more than 30 days after the current time.
     }
 
     /**
-     * Get End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
+     * Get End time (Beijing time) in the format of `yyyy-mm-dd HH:MM:SS`.
 The end time and start time must be on the same day. 
-     * @return EndTime End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
+     * @return EndTime End time (Beijing time) in the format of `yyyy-mm-dd HH:MM:SS`.
 The end time and start time must be on the same day.
      */
     public String getEndTime() {
@@ -94,9 +94,9 @@ The end time and start time must be on the same day.
     }
 
     /**
-     * Set End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
+     * Set End time (Beijing time) in the format of `yyyy-mm-dd HH:MM:SS`.
 The end time and start time must be on the same day.
-     * @param EndTime End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
+     * @param EndTime End time (Beijing time) in the format of `yyyy-mm-dd HH:MM:SS`.
 The end time and start time must be on the same day.
      */
     public void setEndTime(String EndTime) {
@@ -104,20 +104,20 @@ The end time and start time must be on the same day.
     }
 
     /**
-     * Get Playback domain name.
-If it is left blank, data of live streams of all playback domain names will be queried. 
-     * @return PlayDomain Playback domain name.
-If it is left blank, data of live streams of all playback domain names will be queried.
+     * Get Playback domain name,
+If this parameter is left empty, data of live streams of all playback domain names will be queried. 
+     * @return PlayDomain Playback domain name,
+If this parameter is left empty, data of live streams of all playback domain names will be queried.
      */
     public String getPlayDomain() {
         return this.PlayDomain;
     }
 
     /**
-     * Set Playback domain name.
-If it is left blank, data of live streams of all playback domain names will be queried.
-     * @param PlayDomain Playback domain name.
-If it is left blank, data of live streams of all playback domain names will be queried.
+     * Set Playback domain name,
+If this parameter is left empty, data of live streams of all playback domain names will be queried.
+     * @param PlayDomain Playback domain name,
+If this parameter is left empty, data of live streams of all playback domain names will be queried.
      */
     public void setPlayDomain(String PlayDomain) {
         this.PlayDomain = PlayDomain;
@@ -125,9 +125,9 @@ If it is left blank, data of live streams of all playback domain names will be q
 
     /**
      * Get Stream name (exact match).
-If it is left blank, the full playback data will be queried. 
+If this parameter is left empty, full playback data will be queried. 
      * @return StreamName Stream name (exact match).
-If it is left blank, the full playback data will be queried.
+If this parameter is left empty, full playback data will be queried.
      */
     public String getStreamName() {
         return this.StreamName;
@@ -135,33 +135,33 @@ If it is left blank, the full playback data will be queried.
 
     /**
      * Set Stream name (exact match).
-If it is left blank, the full playback data will be queried.
+If this parameter is left empty, full playback data will be queried.
      * @param StreamName Stream name (exact match).
-If it is left blank, the full playback data will be queried.
+If this parameter is left empty, full playback data will be queried.
      */
     public void setStreamName(String StreamName) {
         this.StreamName = StreamName;
     }
 
     /**
-     * Get push and playback addresses and is "live" by default. Exact match is required. Fuzzy match is not supported.
-If it is left blank, the full playback data will be queried.
-Note: To query by AppName, you need to submit a ticket for application. 
-     * @return AppName push and playback addresses and is "live" by default. Exact match is required. Fuzzy match is not supported.
-If it is left blank, the full playback data will be queried.
-Note: To query by AppName, you need to submit a ticket for application.
+     * Get Push path, which is the same as the `AppName` in the playback address, subject to exact match, and valid if `StreamName` is passed in.
+If this parameter is left empty, full playback data will be queried.
+Note: to query by `AppName`, you need to submit a ticket for application. 
+     * @return AppName Push path, which is the same as the `AppName` in the playback address, subject to exact match, and valid if `StreamName` is passed in.
+If this parameter is left empty, full playback data will be queried.
+Note: to query by `AppName`, you need to submit a ticket for application.
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set push and playback addresses and is "live" by default. Exact match is required. Fuzzy match is not supported.
-If it is left blank, the full playback data will be queried.
-Note: To query by AppName, you need to submit a ticket for application.
-     * @param AppName push and playback addresses and is "live" by default. Exact match is required. Fuzzy match is not supported.
-If it is left blank, the full playback data will be queried.
-Note: To query by AppName, you need to submit a ticket for application.
+     * Set Push path, which is the same as the `AppName` in the playback address, subject to exact match, and valid if `StreamName` is passed in.
+If this parameter is left empty, full playback data will be queried.
+Note: to query by `AppName`, you need to submit a ticket for application.
+     * @param AppName Push path, which is the same as the `AppName` in the playback address, subject to exact match, and valid if `StreamName` is passed in.
+If this parameter is left empty, full playback data will be queried.
+Note: to query by `AppName`, you need to submit a ticket for application.
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;

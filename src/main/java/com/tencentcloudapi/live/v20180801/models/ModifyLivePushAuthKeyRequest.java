@@ -31,6 +31,7 @@ public class ModifyLivePushAuthKeyRequest extends AbstractModel{
 
     /**
     * Whether to enable. 0: disabled; 1: enabled.
+If this parameter is left empty, the current value will not be modified.
     */
     @SerializedName("Enable")
     @Expose
@@ -38,6 +39,7 @@ public class ModifyLivePushAuthKeyRequest extends AbstractModel{
 
     /**
     * Master authentication key.
+If this parameter is left empty, the current value will not be modified.
     */
     @SerializedName("MasterAuthKey")
     @Expose
@@ -45,6 +47,7 @@ public class ModifyLivePushAuthKeyRequest extends AbstractModel{
 
     /**
     * Backup authentication key.
+If this parameter is left empty, the current value will not be modified.
     */
     @SerializedName("BackupAuthKey")
     @Expose
@@ -74,8 +77,10 @@ public class ModifyLivePushAuthKeyRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to enable. 0: disabled; 1: enabled. 
+     * Get Whether to enable. 0: disabled; 1: enabled.
+If this parameter is left empty, the current value will not be modified. 
      * @return Enable Whether to enable. 0: disabled; 1: enabled.
+If this parameter is left empty, the current value will not be modified.
      */
     public Long getEnable() {
         return this.Enable;
@@ -83,15 +88,19 @@ public class ModifyLivePushAuthKeyRequest extends AbstractModel{
 
     /**
      * Set Whether to enable. 0: disabled; 1: enabled.
+If this parameter is left empty, the current value will not be modified.
      * @param Enable Whether to enable. 0: disabled; 1: enabled.
+If this parameter is left empty, the current value will not be modified.
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get Master authentication key. 
+     * Get Master authentication key.
+If this parameter is left empty, the current value will not be modified. 
      * @return MasterAuthKey Master authentication key.
+If this parameter is left empty, the current value will not be modified.
      */
     public String getMasterAuthKey() {
         return this.MasterAuthKey;
@@ -99,15 +108,19 @@ public class ModifyLivePushAuthKeyRequest extends AbstractModel{
 
     /**
      * Set Master authentication key.
+If this parameter is left empty, the current value will not be modified.
      * @param MasterAuthKey Master authentication key.
+If this parameter is left empty, the current value will not be modified.
      */
     public void setMasterAuthKey(String MasterAuthKey) {
         this.MasterAuthKey = MasterAuthKey;
     }
 
     /**
-     * Get Backup authentication key. 
+     * Get Backup authentication key.
+If this parameter is left empty, the current value will not be modified. 
      * @return BackupAuthKey Backup authentication key.
+If this parameter is left empty, the current value will not be modified.
      */
     public String getBackupAuthKey() {
         return this.BackupAuthKey;
@@ -115,7 +128,9 @@ public class ModifyLivePushAuthKeyRequest extends AbstractModel{
 
     /**
      * Set Backup authentication key.
+If this parameter is left empty, the current value will not be modified.
      * @param BackupAuthKey Backup authentication key.
+If this parameter is left empty, the current value will not be modified.
      */
     public void setBackupAuthKey(String BackupAuthKey) {
         this.BackupAuthKey = BackupAuthKey;

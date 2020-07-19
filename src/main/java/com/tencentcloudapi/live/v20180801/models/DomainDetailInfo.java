@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class DomainDetailInfo extends AbstractModel{
 
     /**
-    * Within or outside Mainland China. Value range: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China).
+    * In or outside Mainland China:
+Mainland: data in Mainland China.
+Oversea: data outside Mainland China.
     */
     @SerializedName("MainlandOrOversea")
     @Expose
@@ -58,16 +60,24 @@ public class DomainDetailInfo extends AbstractModel{
     private Long Request;
 
     /**
-     * Get Within or outside Mainland China. Value range: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China). 
-     * @return MainlandOrOversea Within or outside Mainland China. Value range: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China).
+     * Get In or outside Mainland China:
+Mainland: data in Mainland China.
+Oversea: data outside Mainland China. 
+     * @return MainlandOrOversea In or outside Mainland China:
+Mainland: data in Mainland China.
+Oversea: data outside Mainland China.
      */
     public String getMainlandOrOversea() {
         return this.MainlandOrOversea;
     }
 
     /**
-     * Set Within or outside Mainland China. Value range: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China).
-     * @param MainlandOrOversea Within or outside Mainland China. Value range: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China).
+     * Set In or outside Mainland China:
+Mainland: data in Mainland China.
+Oversea: data outside Mainland China.
+     * @param MainlandOrOversea In or outside Mainland China:
+Mainland: data in Mainland China.
+Oversea: data outside Mainland China.
      */
     public void setMainlandOrOversea(String MainlandOrOversea) {
         this.MainlandOrOversea = MainlandOrOversea;

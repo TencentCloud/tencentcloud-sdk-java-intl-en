@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ClientIpPlaySumInfo extends AbstractModel{
 
     /**
-    * Client IP in the format of dot-decimal notation.
+    * Client IP in dotted-decimal notation.
     */
     @SerializedName("ClientIp")
     @Expose
@@ -51,30 +51,30 @@ public class ClientIpPlaySumInfo extends AbstractModel{
     private Long TotalRequest;
 
     /**
-    * Total number of failing requests.
+    * Total number of failed requests.
     */
     @SerializedName("TotalFailedRequest")
     @Expose
     private Long TotalFailedRequest;
 
     /**
-    * 
+    * Country/region where the client is located.
     */
     @SerializedName("CountryArea")
     @Expose
     private String CountryArea;
 
     /**
-     * Get Client IP in the format of dot-decimal notation. 
-     * @return ClientIp Client IP in the format of dot-decimal notation.
+     * Get Client IP in dotted-decimal notation. 
+     * @return ClientIp Client IP in dotted-decimal notation.
      */
     public String getClientIp() {
         return this.ClientIp;
     }
 
     /**
-     * Set Client IP in the format of dot-decimal notation.
-     * @param ClientIp Client IP in the format of dot-decimal notation.
+     * Set Client IP in dotted-decimal notation.
+     * @param ClientIp Client IP in dotted-decimal notation.
      */
     public void setClientIp(String ClientIp) {
         this.ClientIp = ClientIp;
@@ -129,32 +129,32 @@ public class ClientIpPlaySumInfo extends AbstractModel{
     }
 
     /**
-     * Get Total number of failing requests. 
-     * @return TotalFailedRequest Total number of failing requests.
+     * Get Total number of failed requests. 
+     * @return TotalFailedRequest Total number of failed requests.
      */
     public Long getTotalFailedRequest() {
         return this.TotalFailedRequest;
     }
 
     /**
-     * Set Total number of failing requests.
-     * @param TotalFailedRequest Total number of failing requests.
+     * Set Total number of failed requests.
+     * @param TotalFailedRequest Total number of failed requests.
      */
     public void setTotalFailedRequest(Long TotalFailedRequest) {
         this.TotalFailedRequest = TotalFailedRequest;
     }
 
     /**
-     * Get  
-     * @return CountryArea 
+     * Get Country/region where the client is located. 
+     * @return CountryArea Country/region where the client is located.
      */
     public String getCountryArea() {
         return this.CountryArea;
     }
 
     /**
-     * Set 
-     * @param CountryArea 
+     * Set Country/region where the client is located.
+     * @param CountryArea Country/region where the client is located.
      */
     public void setCountryArea(String CountryArea) {
         this.CountryArea = CountryArea;

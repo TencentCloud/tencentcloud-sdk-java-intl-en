@@ -23,161 +23,161 @@ import java.util.HashMap;
 public class MonitorStreamPlayInfo extends AbstractModel{
 
     /**
-    * 播放域名。
+    * Playback domain name.
     */
     @SerializedName("PlayDomain")
     @Expose
     private String PlayDomain;
 
     /**
-    * 流id。
+    * Stream ID.
     */
     @SerializedName("StreamName")
     @Expose
     private String StreamName;
 
     /**
-    * 播放码率，0表示原始码率。
+    * Playback bitrate. 0 indicates the original bitrate.
     */
     @SerializedName("Rate")
     @Expose
     private Long Rate;
 
     /**
-    * 播放协议，可选值包括 Unknown，Flv，Hls，Rtmp，Huyap2p。
+    * Playback protocol. Valid values: Unknown, Flv, Hls, Rtmp, Huyap2p.
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * 带宽，单位是Mbps。
+    * Bandwidth in Mbps.
     */
     @SerializedName("Bandwidth")
     @Expose
     private Float Bandwidth;
 
     /**
-    * 在线人数，1分钟采样一个点，统计采样点的tcp链接数目。
+    * Number of online viewers. A data point is sampled per minute, and the number of TCP connections across the sample points is calculated.
     */
     @SerializedName("Online")
     @Expose
     private Long Online;
 
     /**
-    * 请求数。
+    * Number of requests.
     */
     @SerializedName("Request")
     @Expose
     private Long Request;
 
     /**
-     * Get 播放域名。 
-     * @return PlayDomain 播放域名。
+     * Get Playback domain name. 
+     * @return PlayDomain Playback domain name.
      */
     public String getPlayDomain() {
         return this.PlayDomain;
     }
 
     /**
-     * Set 播放域名。
-     * @param PlayDomain 播放域名。
+     * Set Playback domain name.
+     * @param PlayDomain Playback domain name.
      */
     public void setPlayDomain(String PlayDomain) {
         this.PlayDomain = PlayDomain;
     }
 
     /**
-     * Get 流id。 
-     * @return StreamName 流id。
+     * Get Stream ID. 
+     * @return StreamName Stream ID.
      */
     public String getStreamName() {
         return this.StreamName;
     }
 
     /**
-     * Set 流id。
-     * @param StreamName 流id。
+     * Set Stream ID.
+     * @param StreamName Stream ID.
      */
     public void setStreamName(String StreamName) {
         this.StreamName = StreamName;
     }
 
     /**
-     * Get 播放码率，0表示原始码率。 
-     * @return Rate 播放码率，0表示原始码率。
+     * Get Playback bitrate. 0 indicates the original bitrate. 
+     * @return Rate Playback bitrate. 0 indicates the original bitrate.
      */
     public Long getRate() {
         return this.Rate;
     }
 
     /**
-     * Set 播放码率，0表示原始码率。
-     * @param Rate 播放码率，0表示原始码率。
+     * Set Playback bitrate. 0 indicates the original bitrate.
+     * @param Rate Playback bitrate. 0 indicates the original bitrate.
      */
     public void setRate(Long Rate) {
         this.Rate = Rate;
     }
 
     /**
-     * Get 播放协议，可选值包括 Unknown，Flv，Hls，Rtmp，Huyap2p。 
-     * @return Protocol 播放协议，可选值包括 Unknown，Flv，Hls，Rtmp，Huyap2p。
+     * Get Playback protocol. Valid values: Unknown, Flv, Hls, Rtmp, Huyap2p. 
+     * @return Protocol Playback protocol. Valid values: Unknown, Flv, Hls, Rtmp, Huyap2p.
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 播放协议，可选值包括 Unknown，Flv，Hls，Rtmp，Huyap2p。
-     * @param Protocol 播放协议，可选值包括 Unknown，Flv，Hls，Rtmp，Huyap2p。
+     * Set Playback protocol. Valid values: Unknown, Flv, Hls, Rtmp, Huyap2p.
+     * @param Protocol Playback protocol. Valid values: Unknown, Flv, Hls, Rtmp, Huyap2p.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 带宽，单位是Mbps。 
-     * @return Bandwidth 带宽，单位是Mbps。
+     * Get Bandwidth in Mbps. 
+     * @return Bandwidth Bandwidth in Mbps.
      */
     public Float getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set 带宽，单位是Mbps。
-     * @param Bandwidth 带宽，单位是Mbps。
+     * Set Bandwidth in Mbps.
+     * @param Bandwidth Bandwidth in Mbps.
      */
     public void setBandwidth(Float Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
     /**
-     * Get 在线人数，1分钟采样一个点，统计采样点的tcp链接数目。 
-     * @return Online 在线人数，1分钟采样一个点，统计采样点的tcp链接数目。
+     * Get Number of online viewers. A data point is sampled per minute, and the number of TCP connections across the sample points is calculated. 
+     * @return Online Number of online viewers. A data point is sampled per minute, and the number of TCP connections across the sample points is calculated.
      */
     public Long getOnline() {
         return this.Online;
     }
 
     /**
-     * Set 在线人数，1分钟采样一个点，统计采样点的tcp链接数目。
-     * @param Online 在线人数，1分钟采样一个点，统计采样点的tcp链接数目。
+     * Set Number of online viewers. A data point is sampled per minute, and the number of TCP connections across the sample points is calculated.
+     * @param Online Number of online viewers. A data point is sampled per minute, and the number of TCP connections across the sample points is calculated.
      */
     public void setOnline(Long Online) {
         this.Online = Online;
     }
 
     /**
-     * Get 请求数。 
-     * @return Request 请求数。
+     * Get Number of requests. 
+     * @return Request Number of requests.
      */
     public Long getRequest() {
         return this.Request;
     }
 
     /**
-     * Set 请求数。
-     * @param Request 请求数。
+     * Set Number of requests.
+     * @param Request Number of requests.
      */
     public void setRequest(Long Request) {
         this.Request = Request;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeHttpStatusInfoListResponse extends AbstractModel{
 
     /**
-    * List of playback status codes.
+    * Playback status code list.
     */
     @SerializedName("DataInfoList")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeHttpStatusInfoListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get List of playback status codes. 
-     * @return DataInfoList List of playback status codes.
+     * Get Playback status code list. 
+     * @return DataInfoList Playback status code list.
      */
     public HttpStatusData [] getDataInfoList() {
         return this.DataInfoList;
     }
 
     /**
-     * Set List of playback status codes.
-     * @param DataInfoList List of playback status codes.
+     * Set Playback status code list.
+     * @param DataInfoList Playback status code list.
      */
     public void setDataInfoList(HttpStatusData [] DataInfoList) {
         this.DataInfoList = DataInfoList;

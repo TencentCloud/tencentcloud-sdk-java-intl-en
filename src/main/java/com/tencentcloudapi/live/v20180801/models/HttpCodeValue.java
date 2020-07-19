@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class HttpCodeValue extends AbstractModel{
 
     /**
-    * Time in the format of yyyy-mm-dd HH:MM:SS.
+    * Time in the format of `yyyy-mm-dd HH:MM:SS`.
     */
     @SerializedName("Time")
     @Expose
@@ -44,16 +44,16 @@ public class HttpCodeValue extends AbstractModel{
     private Float Percentage;
 
     /**
-     * Get Time in the format of yyyy-mm-dd HH:MM:SS. 
-     * @return Time Time in the format of yyyy-mm-dd HH:MM:SS.
+     * Get Time in the format of `yyyy-mm-dd HH:MM:SS`. 
+     * @return Time Time in the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public String getTime() {
         return this.Time;
     }
 
     /**
-     * Set Time in the format of yyyy-mm-dd HH:MM:SS.
-     * @param Time Time in the format of yyyy-mm-dd HH:MM:SS.
+     * Set Time in the format of `yyyy-mm-dd HH:MM:SS`.
+     * @param Time Time in the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public void setTime(String Time) {
         this.Time = Time;

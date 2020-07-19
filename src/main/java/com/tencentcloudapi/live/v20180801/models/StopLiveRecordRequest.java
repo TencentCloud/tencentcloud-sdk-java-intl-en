@@ -30,7 +30,7 @@ public class StopLiveRecordRequest extends AbstractModel{
     private String StreamName;
 
     /**
-    * Task ID, which uniquely identifies the recording task globally.
+    * Task ID returned by the `CreateLiveRecord` API.
     */
     @SerializedName("TaskId")
     @Expose
@@ -53,16 +53,16 @@ public class StopLiveRecordRequest extends AbstractModel{
     }
 
     /**
-     * Get Task ID, which uniquely identifies the recording task globally. 
-     * @return TaskId Task ID, which uniquely identifies the recording task globally.
+     * Get Task ID returned by the `CreateLiveRecord` API. 
+     * @return TaskId Task ID returned by the `CreateLiveRecord` API.
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID, which uniquely identifies the recording task globally.
-     * @param TaskId Task ID, which uniquely identifies the recording task globally.
+     * Set Task ID returned by the `CreateLiveRecord` API.
+     * @param TaskId Task ID returned by the `CreateLiveRecord` API.
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

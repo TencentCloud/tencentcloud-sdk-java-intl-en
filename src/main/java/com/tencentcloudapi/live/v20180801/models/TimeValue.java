@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class TimeValue extends AbstractModel{
 
     /**
-    * UTC 时间，时间格式：yyyy-mm-ddTHH:MM:SSZ。
+    * UTC time in the format of `yyyy-mm-ddTHH:MM:SSZ`.
     */
     @SerializedName("Time")
     @Expose
     private String Time;
 
     /**
-    * 数值。
+    * Value.
     */
     @SerializedName("Num")
     @Expose
     private Long Num;
 
     /**
-     * Get UTC 时间，时间格式：yyyy-mm-ddTHH:MM:SSZ。 
-     * @return Time UTC 时间，时间格式：yyyy-mm-ddTHH:MM:SSZ。
+     * Get UTC time in the format of `yyyy-mm-ddTHH:MM:SSZ`. 
+     * @return Time UTC time in the format of `yyyy-mm-ddTHH:MM:SSZ`.
      */
     public String getTime() {
         return this.Time;
     }
 
     /**
-     * Set UTC 时间，时间格式：yyyy-mm-ddTHH:MM:SSZ。
-     * @param Time UTC 时间，时间格式：yyyy-mm-ddTHH:MM:SSZ。
+     * Set UTC time in the format of `yyyy-mm-ddTHH:MM:SSZ`.
+     * @param Time UTC time in the format of `yyyy-mm-ddTHH:MM:SSZ`.
      */
     public void setTime(String Time) {
         this.Time = Time;
     }
 
     /**
-     * Get 数值。 
-     * @return Num 数值。
+     * Get Value. 
+     * @return Num Value.
      */
     public Long getNum() {
         return this.Num;
     }
 
     /**
-     * Set 数值。
-     * @param Num 数值。
+     * Set Value.
+     * @param Num Value.
      */
     public void setNum(Long Num) {
         this.Num = Num;

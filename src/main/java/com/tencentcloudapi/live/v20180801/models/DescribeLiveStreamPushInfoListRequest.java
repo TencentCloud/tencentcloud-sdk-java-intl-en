@@ -30,14 +30,14 @@ public class DescribeLiveStreamPushInfoListRequest extends AbstractModel{
     private String PushDomain;
 
     /**
-    * Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+    * Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
     */
     @SerializedName("AppName")
     @Expose
     private String AppName;
 
     /**
-    * Page number.
+    * Number of pages,
 Value range: [1,10000],
 Default value: 1.
     */
@@ -71,26 +71,26 @@ Default value: 200.
     }
 
     /**
-     * Get Push path, which is the same as the AppName in push and playback addresses and is "live" by default. 
-     * @return AppName Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+     * Get Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. 
+     * @return AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
-     * @param AppName Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
+     * Set Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
+     * @param AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
     }
 
     /**
-     * Get Page number.
+     * Get Number of pages,
 Value range: [1,10000],
 Default value: 1. 
-     * @return PageNum Page number.
+     * @return PageNum Number of pages,
 Value range: [1,10000],
 Default value: 1.
      */
@@ -99,10 +99,10 @@ Default value: 1.
     }
 
     /**
-     * Set Page number.
+     * Set Number of pages,
 Value range: [1,10000],
 Default value: 1.
-     * @param PageNum Page number.
+     * @param PageNum Number of pages,
 Value range: [1,10000],
 Default value: 1.
      */

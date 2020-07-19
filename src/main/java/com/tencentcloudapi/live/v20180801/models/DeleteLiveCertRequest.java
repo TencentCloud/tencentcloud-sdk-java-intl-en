@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeleteLiveCertRequest extends AbstractModel{
 
     /**
-    * Certificate ID.
+    * Certificate ID obtained through the `DescribeLiveCerts` API.
     */
     @SerializedName("CertId")
     @Expose
     private Long CertId;
 
     /**
-     * Get Certificate ID. 
-     * @return CertId Certificate ID.
+     * Get Certificate ID obtained through the `DescribeLiveCerts` API. 
+     * @return CertId Certificate ID obtained through the `DescribeLiveCerts` API.
      */
     public Long getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set Certificate ID.
-     * @param CertId Certificate ID.
+     * Set Certificate ID obtained through the `DescribeLiveCerts` API.
+     * @param CertId Certificate ID obtained through the `DescribeLiveCerts` API.
      */
     public void setCertId(Long CertId) {
         this.CertId = CertId;

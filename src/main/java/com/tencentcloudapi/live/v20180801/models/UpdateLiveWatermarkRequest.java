@@ -38,14 +38,14 @@ Get the watermark ID in the returned value of the [AddLiveWatermark](/document/p
     private String PictureUrl;
 
     /**
-    * Display position: X-axis offset. Default value: 0.
+    * Display position: X-axis offset in %. Default value: 0.
     */
     @SerializedName("XPosition")
     @Expose
     private Long XPosition;
 
     /**
-    * Display position: Y-axis offset. Default value: 0.
+    * Display position: Y-axis offset in %. Default value: 0.
     */
     @SerializedName("YPosition")
     @Expose
@@ -53,6 +53,7 @@ Get the watermark ID in the returned value of the [AddLiveWatermark](/document/p
 
     /**
     * Watermark name.
+Up to 16 bytes.
     */
     @SerializedName("WatermarkName")
     @Expose
@@ -109,40 +110,42 @@ Get the watermark ID in the returned value of the [AddLiveWatermark](/document/p
     }
 
     /**
-     * Get Display position: X-axis offset. Default value: 0. 
-     * @return XPosition Display position: X-axis offset. Default value: 0.
+     * Get Display position: X-axis offset in %. Default value: 0. 
+     * @return XPosition Display position: X-axis offset in %. Default value: 0.
      */
     public Long getXPosition() {
         return this.XPosition;
     }
 
     /**
-     * Set Display position: X-axis offset. Default value: 0.
-     * @param XPosition Display position: X-axis offset. Default value: 0.
+     * Set Display position: X-axis offset in %. Default value: 0.
+     * @param XPosition Display position: X-axis offset in %. Default value: 0.
      */
     public void setXPosition(Long XPosition) {
         this.XPosition = XPosition;
     }
 
     /**
-     * Get Display position: Y-axis offset. Default value: 0. 
-     * @return YPosition Display position: Y-axis offset. Default value: 0.
+     * Get Display position: Y-axis offset in %. Default value: 0. 
+     * @return YPosition Display position: Y-axis offset in %. Default value: 0.
      */
     public Long getYPosition() {
         return this.YPosition;
     }
 
     /**
-     * Set Display position: Y-axis offset. Default value: 0.
-     * @param YPosition Display position: Y-axis offset. Default value: 0.
+     * Set Display position: Y-axis offset in %. Default value: 0.
+     * @param YPosition Display position: Y-axis offset in %. Default value: 0.
      */
     public void setYPosition(Long YPosition) {
         this.YPosition = YPosition;
     }
 
     /**
-     * Get Watermark name. 
+     * Get Watermark name.
+Up to 16 bytes. 
      * @return WatermarkName Watermark name.
+Up to 16 bytes.
      */
     public String getWatermarkName() {
         return this.WatermarkName;
@@ -150,7 +153,9 @@ Get the watermark ID in the returned value of the [AddLiveWatermark](/document/p
 
     /**
      * Set Watermark name.
+Up to 16 bytes.
      * @param WatermarkName Watermark name.
+Up to 16 bytes.
      */
     public void setWatermarkName(String WatermarkName) {
         this.WatermarkName = WatermarkName;

@@ -38,8 +38,8 @@ public class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel{
 
     /**
     * Start time (Beijing time).
-In the format of yyyymmdd.
-Note: Only the detailed data for one of the past 30 days can be queried currently.
+In the format of `yyyymmdd`.
+Note: details for a specified day in the last month can be queried.
     */
     @SerializedName("DayTime")
     @Expose
@@ -54,7 +54,7 @@ Up to 100 pages.
     private Long PageNum;
 
     /**
-    * Number of entries per page. Default value: 20
+    * Number of entries per page. Default value: 20,
 Value range: [10,1000].
     */
     @SerializedName("PageSize")
@@ -62,14 +62,18 @@ Value range: [10,1000].
     private Long PageSize;
 
     /**
-    * 
+    * Start day time (Beijing time),
+In the format of `yyyymmdd`.
+Note: details for the last month can be queried.
     */
     @SerializedName("StartDayTime")
     @Expose
     private String StartDayTime;
 
     /**
-    * 
+    * End day time (Beijing time),
+In the format of `yyyymmdd`.
+Note: detailed data for the last month can be queried. Either `DayTime` or `(StartDayTime,EndDayTime)` must be passed in. If both are passed in, `DayTime` shall prevail.
     */
     @SerializedName("EndDayTime")
     @Expose
@@ -109,11 +113,11 @@ Value range: [10,1000].
 
     /**
      * Get Start time (Beijing time).
-In the format of yyyymmdd.
-Note: Only the detailed data for one of the past 30 days can be queried currently. 
+In the format of `yyyymmdd`.
+Note: details for a specified day in the last month can be queried. 
      * @return DayTime Start time (Beijing time).
-In the format of yyyymmdd.
-Note: Only the detailed data for one of the past 30 days can be queried currently.
+In the format of `yyyymmdd`.
+Note: details for a specified day in the last month can be queried.
      */
     public String getDayTime() {
         return this.DayTime;
@@ -121,11 +125,11 @@ Note: Only the detailed data for one of the past 30 days can be queried currentl
 
     /**
      * Set Start time (Beijing time).
-In the format of yyyymmdd.
-Note: Only the detailed data for one of the past 30 days can be queried currently.
+In the format of `yyyymmdd`.
+Note: details for a specified day in the last month can be queried.
      * @param DayTime Start time (Beijing time).
-In the format of yyyymmdd.
-Note: Only the detailed data for one of the past 30 days can be queried currently.
+In the format of `yyyymmdd`.
+Note: details for a specified day in the last month can be queried.
      */
     public void setDayTime(String DayTime) {
         this.DayTime = DayTime;
@@ -152,9 +156,9 @@ Up to 100 pages.
     }
 
     /**
-     * Get Number of entries per page. Default value: 20
+     * Get Number of entries per page. Default value: 20,
 Value range: [10,1000]. 
-     * @return PageSize Number of entries per page. Default value: 20
+     * @return PageSize Number of entries per page. Default value: 20,
 Value range: [10,1000].
      */
     public Long getPageSize() {
@@ -162,9 +166,9 @@ Value range: [10,1000].
     }
 
     /**
-     * Set Number of entries per page. Default value: 20
+     * Set Number of entries per page. Default value: 20,
 Value range: [10,1000].
-     * @param PageSize Number of entries per page. Default value: 20
+     * @param PageSize Number of entries per page. Default value: 20,
 Value range: [10,1000].
      */
     public void setPageSize(Long PageSize) {
@@ -172,32 +176,48 @@ Value range: [10,1000].
     }
 
     /**
-     * Get  
-     * @return StartDayTime 
+     * Get Start day time (Beijing time),
+In the format of `yyyymmdd`.
+Note: details for the last month can be queried. 
+     * @return StartDayTime Start day time (Beijing time),
+In the format of `yyyymmdd`.
+Note: details for the last month can be queried.
      */
     public String getStartDayTime() {
         return this.StartDayTime;
     }
 
     /**
-     * Set 
-     * @param StartDayTime 
+     * Set Start day time (Beijing time),
+In the format of `yyyymmdd`.
+Note: details for the last month can be queried.
+     * @param StartDayTime Start day time (Beijing time),
+In the format of `yyyymmdd`.
+Note: details for the last month can be queried.
      */
     public void setStartDayTime(String StartDayTime) {
         this.StartDayTime = StartDayTime;
     }
 
     /**
-     * Get  
-     * @return EndDayTime 
+     * Get End day time (Beijing time),
+In the format of `yyyymmdd`.
+Note: detailed data for the last month can be queried. Either `DayTime` or `(StartDayTime,EndDayTime)` must be passed in. If both are passed in, `DayTime` shall prevail. 
+     * @return EndDayTime End day time (Beijing time),
+In the format of `yyyymmdd`.
+Note: detailed data for the last month can be queried. Either `DayTime` or `(StartDayTime,EndDayTime)` must be passed in. If both are passed in, `DayTime` shall prevail.
      */
     public String getEndDayTime() {
         return this.EndDayTime;
     }
 
     /**
-     * Set 
-     * @param EndDayTime 
+     * Set End day time (Beijing time),
+In the format of `yyyymmdd`.
+Note: detailed data for the last month can be queried. Either `DayTime` or `(StartDayTime,EndDayTime)` must be passed in. If both are passed in, `DayTime` shall prevail.
+     * @param EndDayTime End day time (Beijing time),
+In the format of `yyyymmdd`.
+Note: detailed data for the last month can be queried. Either `DayTime` or `(StartDayTime,EndDayTime)` must be passed in. If both are passed in, `DayTime` shall prevail.
      */
     public void setEndDayTime(String EndDayTime) {
         this.EndDayTime = EndDayTime;

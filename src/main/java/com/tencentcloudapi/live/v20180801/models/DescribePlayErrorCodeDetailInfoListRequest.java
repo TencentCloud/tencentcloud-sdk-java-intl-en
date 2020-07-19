@@ -23,17 +23,17 @@ import java.util.HashMap;
 public class DescribePlayErrorCodeDetailInfoListRequest extends AbstractModel{
 
     /**
-    * Start time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
+    * Start time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day.
+    * End time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day.
     */
     @SerializedName("EndTime")
     @Expose
@@ -48,65 +48,65 @@ Note: EndTime and StartTime only support querying data on the past day.
     private Long Granularity;
 
     /**
-    * Yes. Value range: "4xx", "5xx". Mixed codes in the form of "4xx,5xx" are also supported.
+    * Yes. Valid values: "4xx", "5xx". Mixed codes in the format of `4xx,5xx` are also supported.
     */
     @SerializedName("StatType")
     @Expose
     private String StatType;
 
     /**
-    * List of playback domain names.
+    * Playback domain name list.
     */
     @SerializedName("PlayDomains")
     @Expose
     private String [] PlayDomains;
 
     /**
-    * 
+    * Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
     */
     @SerializedName("MainlandOrOversea")
     @Expose
     private String MainlandOrOversea;
 
     /**
-     * Get Start time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS. 
-     * @return StartTime Start time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
+     * Get Start time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`. 
+     * @return StartTime Start time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-     * @param StartTime Start time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
+     * Set Start time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`.
+     * @param StartTime Start time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day. 
-     * @return EndTime End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day.
+     * Get End time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day. 
+     * @return EndTime End time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day.
-     * @param EndTime End time (Beijing time).
-In the format of yyyy-mm-dd HH:MM:SS.
-Note: EndTime and StartTime only support querying data on the past day.
+     * Set End time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day.
+     * @param EndTime End time (Beijing time),
+In the format of `yyyy-mm-dd HH:MM:SS`.
+Note: `EndTime` and `StartTime` only support querying data for the last day.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -133,48 +133,48 @@ Note: EndTime and StartTime only support querying data on the past day.
     }
 
     /**
-     * Get Yes. Value range: "4xx", "5xx". Mixed codes in the form of "4xx,5xx" are also supported. 
-     * @return StatType Yes. Value range: "4xx", "5xx". Mixed codes in the form of "4xx,5xx" are also supported.
+     * Get Yes. Valid values: "4xx", "5xx". Mixed codes in the format of `4xx,5xx` are also supported. 
+     * @return StatType Yes. Valid values: "4xx", "5xx". Mixed codes in the format of `4xx,5xx` are also supported.
      */
     public String getStatType() {
         return this.StatType;
     }
 
     /**
-     * Set Yes. Value range: "4xx", "5xx". Mixed codes in the form of "4xx,5xx" are also supported.
-     * @param StatType Yes. Value range: "4xx", "5xx". Mixed codes in the form of "4xx,5xx" are also supported.
+     * Set Yes. Valid values: "4xx", "5xx". Mixed codes in the format of `4xx,5xx` are also supported.
+     * @param StatType Yes. Valid values: "4xx", "5xx". Mixed codes in the format of `4xx,5xx` are also supported.
      */
     public void setStatType(String StatType) {
         this.StatType = StatType;
     }
 
     /**
-     * Get List of playback domain names. 
-     * @return PlayDomains List of playback domain names.
+     * Get Playback domain name list. 
+     * @return PlayDomains Playback domain name list.
      */
     public String [] getPlayDomains() {
         return this.PlayDomains;
     }
 
     /**
-     * Set List of playback domain names.
-     * @param PlayDomains List of playback domain names.
+     * Set Playback domain name list.
+     * @param PlayDomains Playback domain name list.
      */
     public void setPlayDomains(String [] PlayDomains) {
         this.PlayDomains = PlayDomains;
     }
 
     /**
-     * Get  
-     * @return MainlandOrOversea 
+     * Get Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried. 
+     * @return MainlandOrOversea Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
      */
     public String getMainlandOrOversea() {
         return this.MainlandOrOversea;
     }
 
     /**
-     * Set 
-     * @param MainlandOrOversea 
+     * Set Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
+     * @param MainlandOrOversea Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
      */
     public void setMainlandOrOversea(String MainlandOrOversea) {
         this.MainlandOrOversea = MainlandOrOversea;

@@ -76,7 +76,7 @@ Note: Currently, query for up to 10,000 entries is supported.
 Maximum value: 100.
 Value range: any integer between 1 and 100.
 Default value: 10.
-Note: Currently, query for up to 10,000 entries is supported.
+Note: currently, query for up to 10,000 entries is supported.
     */
     @SerializedName("PageSize")
     @Expose
@@ -239,12 +239,12 @@ Note: Currently, query for up to 10,000 entries is supported.
 Maximum value: 100.
 Value range: any integer between 1 and 100.
 Default value: 10.
-Note: Currently, query for up to 10,000 entries is supported. 
+Note: currently, query for up to 10,000 entries is supported. 
      * @return PageSize Number of entries per page.
 Maximum value: 100.
 Value range: any integer between 1 and 100.
 Default value: 10.
-Note: Currently, query for up to 10,000 entries is supported.
+Note: currently, query for up to 10,000 entries is supported.
      */
     public Long getPageSize() {
         return this.PageSize;
@@ -255,12 +255,12 @@ Note: Currently, query for up to 10,000 entries is supported.
 Maximum value: 100.
 Value range: any integer between 1 and 100.
 Default value: 10.
-Note: Currently, query for up to 10,000 entries is supported.
+Note: currently, query for up to 10,000 entries is supported.
      * @param PageSize Number of entries per page.
 Maximum value: 100.
 Value range: any integer between 1 and 100.
 Default value: 10.
-Note: Currently, query for up to 10,000 entries is supported.
+Note: currently, query for up to 10,000 entries is supported.
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;

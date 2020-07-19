@@ -24,14 +24,17 @@ public class CancelCommonMixStreamRequest extends AbstractModel{
 
     /**
     * ID of stream mix session (from applying for stream mix to canceling stream mix).
+This value is the same as the `MixStreamSessionId` in `CreateCommonMixStream`.
     */
     @SerializedName("MixStreamSessionId")
     @Expose
     private String MixStreamSessionId;
 
     /**
-     * Get ID of stream mix session (from applying for stream mix to canceling stream mix). 
+     * Get ID of stream mix session (from applying for stream mix to canceling stream mix).
+This value is the same as the `MixStreamSessionId` in `CreateCommonMixStream`. 
      * @return MixStreamSessionId ID of stream mix session (from applying for stream mix to canceling stream mix).
+This value is the same as the `MixStreamSessionId` in `CreateCommonMixStream`.
      */
     public String getMixStreamSessionId() {
         return this.MixStreamSessionId;
@@ -39,7 +42,9 @@ public class CancelCommonMixStreamRequest extends AbstractModel{
 
     /**
      * Set ID of stream mix session (from applying for stream mix to canceling stream mix).
+This value is the same as the `MixStreamSessionId` in `CreateCommonMixStream`.
      * @param MixStreamSessionId ID of stream mix session (from applying for stream mix to canceling stream mix).
+This value is the same as the `MixStreamSessionId` in `CreateCommonMixStream`.
      */
     public void setMixStreamSessionId(String MixStreamSessionId) {
         this.MixStreamSessionId = MixStreamSessionId;

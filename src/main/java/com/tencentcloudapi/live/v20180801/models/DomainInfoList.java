@@ -30,7 +30,7 @@ public class DomainInfoList extends AbstractModel{
     private String Domain;
 
     /**
-    * Detailed information.
+    * Details.
     */
     @SerializedName("DetailInfoList")
     @Expose
@@ -53,16 +53,16 @@ public class DomainInfoList extends AbstractModel{
     }
 
     /**
-     * Get Detailed information. 
-     * @return DetailInfoList Detailed information.
+     * Get Details. 
+     * @return DetailInfoList Details.
      */
     public DomainDetailInfo [] getDetailInfoList() {
         return this.DetailInfoList;
     }
 
     /**
-     * Set Detailed information.
-     * @param DetailInfoList Detailed information.
+     * Set Details.
+     * @param DetailInfoList Details.
      */
     public void setDetailInfoList(DomainDetailInfo [] DetailInfoList) {
         this.DetailInfoList = DetailInfoList;

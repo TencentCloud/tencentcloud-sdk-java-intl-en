@@ -57,6 +57,24 @@ In seconds. Value range: 0–93312000.
 
     /**
     * Recording filename.
+Supported special placeholders include:
+{StreamID}: stream ID
+{StartYear}: start time - year
+{StartMonth}: start time - month
+{StartDay}: start time - day
+{StartHour}: start time - hour
+{StartMinute}: start time - minute
+{StartSecond}: start time - second
+{StartMillisecond}: start time - millisecond
+{EndYear}: end time - year
+{EndMonth}: end time - month
+{EndDay}: end time - day
+{EndHour}: end time - hour
+{EndMinute}: end time - minute
+{EndSecond}: end time - second
+{EndMillisecond}: end time - millisecond
+
+If this parameter is not set, the recording filename will be `{StreamID}_{StartYear}-{StartMonth}-{StartDay}-{StartHour}-{StartMinute}-{StartSecond}_{EndYear}-{EndMonth}-{EndDay}-{EndHour}-{EndMinute}-{EndSecond}` by default
     */
     @SerializedName("VodFileName")
     @Expose
@@ -147,8 +165,44 @@ In seconds. Value range: 0–93312000.
     }
 
     /**
-     * Get Recording filename. 
+     * Get Recording filename.
+Supported special placeholders include:
+{StreamID}: stream ID
+{StartYear}: start time - year
+{StartMonth}: start time - month
+{StartDay}: start time - day
+{StartHour}: start time - hour
+{StartMinute}: start time - minute
+{StartSecond}: start time - second
+{StartMillisecond}: start time - millisecond
+{EndYear}: end time - year
+{EndMonth}: end time - month
+{EndDay}: end time - day
+{EndHour}: end time - hour
+{EndMinute}: end time - minute
+{EndSecond}: end time - second
+{EndMillisecond}: end time - millisecond
+
+If this parameter is not set, the recording filename will be `{StreamID}_{StartYear}-{StartMonth}-{StartDay}-{StartHour}-{StartMinute}-{StartSecond}_{EndYear}-{EndMonth}-{EndDay}-{EndHour}-{EndMinute}-{EndSecond}` by default 
      * @return VodFileName Recording filename.
+Supported special placeholders include:
+{StreamID}: stream ID
+{StartYear}: start time - year
+{StartMonth}: start time - month
+{StartDay}: start time - day
+{StartHour}: start time - hour
+{StartMinute}: start time - minute
+{StartSecond}: start time - second
+{StartMillisecond}: start time - millisecond
+{EndYear}: end time - year
+{EndMonth}: end time - month
+{EndDay}: end time - day
+{EndHour}: end time - hour
+{EndMinute}: end time - minute
+{EndSecond}: end time - second
+{EndMillisecond}: end time - millisecond
+
+If this parameter is not set, the recording filename will be `{StreamID}_{StartYear}-{StartMonth}-{StartDay}-{StartHour}-{StartMinute}-{StartSecond}_{EndYear}-{EndMonth}-{EndDay}-{EndHour}-{EndMinute}-{EndSecond}` by default
      */
     public String getVodFileName() {
         return this.VodFileName;
@@ -156,7 +210,43 @@ In seconds. Value range: 0–93312000.
 
     /**
      * Set Recording filename.
+Supported special placeholders include:
+{StreamID}: stream ID
+{StartYear}: start time - year
+{StartMonth}: start time - month
+{StartDay}: start time - day
+{StartHour}: start time - hour
+{StartMinute}: start time - minute
+{StartSecond}: start time - second
+{StartMillisecond}: start time - millisecond
+{EndYear}: end time - year
+{EndMonth}: end time - month
+{EndDay}: end time - day
+{EndHour}: end time - hour
+{EndMinute}: end time - minute
+{EndSecond}: end time - second
+{EndMillisecond}: end time - millisecond
+
+If this parameter is not set, the recording filename will be `{StreamID}_{StartYear}-{StartMonth}-{StartDay}-{StartHour}-{StartMinute}-{StartSecond}_{EndYear}-{EndMonth}-{EndDay}-{EndHour}-{EndMinute}-{EndSecond}` by default
      * @param VodFileName Recording filename.
+Supported special placeholders include:
+{StreamID}: stream ID
+{StartYear}: start time - year
+{StartMonth}: start time - month
+{StartDay}: start time - day
+{StartHour}: start time - hour
+{StartMinute}: start time - minute
+{StartSecond}: start time - second
+{StartMillisecond}: start time - millisecond
+{EndYear}: end time - year
+{EndMonth}: end time - month
+{EndDay}: end time - day
+{EndHour}: end time - hour
+{EndMinute}: end time - minute
+{EndSecond}: end time - second
+{EndMillisecond}: end time - millisecond
+
+If this parameter is not set, the recording filename will be `{StreamID}_{StartYear}-{StartMonth}-{StartDay}-{StartHour}-{StartMinute}-{StartSecond}_{EndYear}-{EndMonth}-{EndDay}-{EndHour}-{EndMinute}-{EndSecond}` by default
      */
     public void setVodFileName(String VodFileName) {
         this.VodFileName = VodFileName;

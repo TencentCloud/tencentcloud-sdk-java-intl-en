@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ProIspPlayCodeDataInfo extends AbstractModel{
 
     /**
-    * 
+    * Country or region.
     */
     @SerializedName("CountryAreaName")
     @Expose
@@ -44,14 +44,14 @@ public class ProIspPlayCodeDataInfo extends AbstractModel{
     private String IspName;
 
     /**
-    * 
+    * Occurrences of 2xx error codes.
     */
     @SerializedName("Code2xx")
     @Expose
     private Long Code2xx;
 
     /**
-    * 
+    * Occurrences of 3xx error codes.
     */
     @SerializedName("Code3xx")
     @Expose
@@ -72,16 +72,16 @@ public class ProIspPlayCodeDataInfo extends AbstractModel{
     private Long Code5xx;
 
     /**
-     * Get  
-     * @return CountryAreaName 
+     * Get Country or region. 
+     * @return CountryAreaName Country or region.
      */
     public String getCountryAreaName() {
         return this.CountryAreaName;
     }
 
     /**
-     * Set 
-     * @param CountryAreaName 
+     * Set Country or region.
+     * @param CountryAreaName Country or region.
      */
     public void setCountryAreaName(String CountryAreaName) {
         this.CountryAreaName = CountryAreaName;
@@ -120,32 +120,32 @@ public class ProIspPlayCodeDataInfo extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return Code2xx 
+     * Get Occurrences of 2xx error codes. 
+     * @return Code2xx Occurrences of 2xx error codes.
      */
     public Long getCode2xx() {
         return this.Code2xx;
     }
 
     /**
-     * Set 
-     * @param Code2xx 
+     * Set Occurrences of 2xx error codes.
+     * @param Code2xx Occurrences of 2xx error codes.
      */
     public void setCode2xx(Long Code2xx) {
         this.Code2xx = Code2xx;
     }
 
     /**
-     * Get  
-     * @return Code3xx 
+     * Get Occurrences of 3xx error codes. 
+     * @return Code3xx Occurrences of 3xx error codes.
      */
     public Long getCode3xx() {
         return this.Code3xx;
     }
 
     /**
-     * Set 
-     * @param Code3xx 
+     * Set Occurrences of 3xx error codes.
+     * @param Code3xx Occurrences of 3xx error codes.
      */
     public void setCode3xx(Long Code3xx) {
         this.Code3xx = Code3xx;
