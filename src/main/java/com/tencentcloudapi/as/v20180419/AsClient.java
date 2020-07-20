@@ -96,6 +96,26 @@ public class AsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create launch configurations and scaling groups from an instance.
+
+Note: the pay-as-you-go instance in the scaling group that is created from a monthly-subscribed instance can be expanded.
+     * @param req CreateAutoScalingGroupFromInstanceRequest
+     * @return CreateAutoScalingGroupFromInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAutoScalingGroupFromInstanceResponse CreateAutoScalingGroupFromInstance(CreateAutoScalingGroupFromInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAutoScalingGroupFromInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAutoScalingGroupFromInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateAutoScalingGroupFromInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (CreateLaunchConfiguration) is used to create a launch configuration.
 
 * A few fields of a launch configuration can be modified through `ModifyLaunchConfigurationAttributes`. To use a new launch configuration, it is recommended to create it from scratch.
@@ -814,6 +834,48 @@ When an instance has scale-in protection enabled, it will not be removed when sc
                 Type type = new TypeToken<JsonResponseModel<SetInstancesProtectionResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "SetInstancesProtection"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to launch CVM instances in the scaling group.
+* After the instance is launched and in the `IN_SERVICE` status, the desired capacity increases, but the desired capacity cannot exceed the maximum value.
+* This API supports batch operation. Up to 100 instances can be launched in each request.
+     * @param req StartAutoScalingInstancesRequest
+     * @return StartAutoScalingInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartAutoScalingInstancesResponse StartAutoScalingInstances(StartAutoScalingInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartAutoScalingInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartAutoScalingInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "StartAutoScalingInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to shut down CVM instances in the scaling group.
+* Use the `SOFT_FIRST` shutdown, which means the CVM will be forcibly shut down if the soft shutdown fails.
+* Shutting down instances in the `IN_SERVICE` status will reduce the desired capacity, but the desired capacity cannot be less than the minimum value.
+* To use the `STOP_CHARGING` shutdown, the instances you want to shut down must satisfy the conditions of [no charges when shut down](https://cloud.tencent.com/document/product/213/19918).
+* This API supports batch operation. Up to 100 instances can be shut down in each request.
+     * @param req StopAutoScalingInstancesRequest
+     * @return StopAutoScalingInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopAutoScalingInstancesResponse StopAutoScalingInstances(StopAutoScalingInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopAutoScalingInstancesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopAutoScalingInstancesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "StopAutoScalingInstances"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

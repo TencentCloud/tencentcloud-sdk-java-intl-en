@@ -138,7 +138,7 @@ If an availability zone or subnet in Zones/SubnetIds does not exist, a verificat
     private String ZonesCheckPolicy;
 
     /**
-    * List of tag descriptions. This parameter is used to bind a tag to an auto scaling group as well as the corresponding resource instances.
+    * List of tag descriptions. This parameter is used to bind a tag to a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
     */
     @SerializedName("Tags")
     @Expose
@@ -157,6 +157,13 @@ If an availability zone or subnet in Zones/SubnetIds does not exist, a verificat
     @SerializedName("Ipv6AddressCount")
     @Expose
     private Long Ipv6AddressCount;
+
+    /**
+    * 
+    */
+    @SerializedName("MultiZoneSubnetPolicy")
+    @Expose
+    private String MultiZoneSubnetPolicy;
 
     /**
      * Get Auto scaling group name, which can only contain letters, numbers, underscores, hyphens ("-"), and decimal points with a maximum length of 55 bytes and must be unique under your account. 
@@ -439,16 +446,16 @@ If an availability zone or subnet in Zones/SubnetIds does not exist, a verificat
     }
 
     /**
-     * Get List of tag descriptions. This parameter is used to bind a tag to an auto scaling group as well as the corresponding resource instances. 
-     * @return Tags List of tag descriptions. This parameter is used to bind a tag to an auto scaling group as well as the corresponding resource instances.
+     * Get List of tag descriptions. This parameter is used to bind a tag to a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags. 
+     * @return Tags List of tag descriptions. This parameter is used to bind a tag to a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set List of tag descriptions. This parameter is used to bind a tag to an auto scaling group as well as the corresponding resource instances.
-     * @param Tags List of tag descriptions. This parameter is used to bind a tag to an auto scaling group as well as the corresponding resource instances.
+     * Set List of tag descriptions. This parameter is used to bind a tag to a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
+     * @param Tags List of tag descriptions. This parameter is used to bind a tag to a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
@@ -487,6 +494,22 @@ If an availability zone or subnet in Zones/SubnetIds does not exist, a verificat
     }
 
     /**
+     * Get  
+     * @return MultiZoneSubnetPolicy 
+     */
+    public String getMultiZoneSubnetPolicy() {
+        return this.MultiZoneSubnetPolicy;
+    }
+
+    /**
+     * Set 
+     * @param MultiZoneSubnetPolicy 
+     */
+    public void setMultiZoneSubnetPolicy(String MultiZoneSubnetPolicy) {
+        this.MultiZoneSubnetPolicy = MultiZoneSubnetPolicy;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -508,6 +531,7 @@ If an availability zone or subnet in Zones/SubnetIds does not exist, a verificat
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "ServiceSettings.", this.ServiceSettings);
         this.setParamSimple(map, prefix + "Ipv6AddressCount", this.Ipv6AddressCount);
+        this.setParamSimple(map, prefix + "MultiZoneSubnetPolicy", this.MultiZoneSubnetPolicy);
 
     }
 }

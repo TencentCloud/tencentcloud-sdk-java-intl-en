@@ -32,6 +32,54 @@ off: disable full-path cache (i.e., enable parameter filter)
     private String FullUrlCache;
 
     /**
+    * Whether caches are case insensitive
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IgnoreCase")
+    @Expose
+    private String IgnoreCase;
+
+    /**
+    * Request parameter contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("QueryString")
+    @Expose
+    private QueryStringKey QueryString;
+
+    /**
+    * Cookie contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Cookie")
+    @Expose
+    private CookieKey Cookie;
+
+    /**
+    * Request header contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Header")
+    @Expose
+    private HeaderKey Header;
+
+    /**
+    * Custom string contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CacheTag")
+    @Expose
+    private CacheTagKey CacheTag;
+
+    /**
+    * Request protocol contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Scheme")
+    @Expose
+    private SchemeKey Scheme;
+
+    /**
      * Get Whether to enable full-path cache
 on: enable full-path cache (i.e., disable parameter filter)
 off: disable full-path cache (i.e., enable parameter filter) 
@@ -56,10 +104,136 @@ off: disable full-path cache (i.e., enable parameter filter)
     }
 
     /**
+     * Get Whether caches are case insensitive
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return IgnoreCase Whether caches are case insensitive
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getIgnoreCase() {
+        return this.IgnoreCase;
+    }
+
+    /**
+     * Set Whether caches are case insensitive
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param IgnoreCase Whether caches are case insensitive
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIgnoreCase(String IgnoreCase) {
+        this.IgnoreCase = IgnoreCase;
+    }
+
+    /**
+     * Get Request parameter contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return QueryString Request parameter contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public QueryStringKey getQueryString() {
+        return this.QueryString;
+    }
+
+    /**
+     * Set Request parameter contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param QueryString Request parameter contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setQueryString(QueryStringKey QueryString) {
+        this.QueryString = QueryString;
+    }
+
+    /**
+     * Get Cookie contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Cookie Cookie contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public CookieKey getCookie() {
+        return this.Cookie;
+    }
+
+    /**
+     * Set Cookie contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Cookie Cookie contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCookie(CookieKey Cookie) {
+        this.Cookie = Cookie;
+    }
+
+    /**
+     * Get Request header contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Header Request header contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public HeaderKey getHeader() {
+        return this.Header;
+    }
+
+    /**
+     * Set Request header contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Header Request header contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setHeader(HeaderKey Header) {
+        this.Header = Header;
+    }
+
+    /**
+     * Get Custom string contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return CacheTag Custom string contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public CacheTagKey getCacheTag() {
+        return this.CacheTag;
+    }
+
+    /**
+     * Set Custom string contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param CacheTag Custom string contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCacheTag(CacheTagKey CacheTag) {
+        this.CacheTag = CacheTag;
+    }
+
+    /**
+     * Get Request protocol contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Scheme Request protocol contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public SchemeKey getScheme() {
+        return this.Scheme;
+    }
+
+    /**
+     * Set Request protocol contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Scheme Request protocol contained in `CacheKey`
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setScheme(SchemeKey Scheme) {
+        this.Scheme = Scheme;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FullUrlCache", this.FullUrlCache);
+        this.setParamSimple(map, prefix + "IgnoreCase", this.IgnoreCase);
+        this.setParamObj(map, prefix + "QueryString.", this.QueryString);
+        this.setParamObj(map, prefix + "Cookie.", this.Cookie);
+        this.setParamObj(map, prefix + "Header.", this.Header);
+        this.setParamObj(map, prefix + "CacheTag.", this.CacheTag);
+        this.setParamObj(map, prefix + "Scheme.", this.Scheme);
 
     }
 }

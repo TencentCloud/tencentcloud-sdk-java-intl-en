@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class DescribeDirectConnectGatewaysRequest extends AbstractModel{
 
     /**
-    * The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.
+    * The unique ID of the direct connect gateway, such as `dcg-9o233uri`.
     */
     @SerializedName("DirectConnectGatewayIds")
     @Expose
     private String [] DirectConnectGatewayIds;
 
     /**
-    * Filter condition. `DirectConnectGatewayIds` and `Filters` cannot be specified at the same time..
-<li>direct-connect-gateway-id - String - The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.</li>
+    * Filter condition. `DirectConnectGatewayIds` and `Filters` cannot be specified at the same time.
+<li>direct-connect-gateway-id - String - The unique ID of the direct connect gateway, such as `dcg-9o233uri`.</li>
 <li>direct-connect-gateway-name - String - The name of the direct connect gateway. The default is fuzzy query.</li>
-<li>direct-connect-gateway-ip - String - The `IP` of the direct connect gateway.</li>
+<li>direct-connect-gateway-ip - String - The IP of the direct connect gateway.</li>
 <li>gateway-type - String - The gateway type. Valid values: `NORMAL` (Standard type), `NAT` (NAT type).</li>
 <li>network-type- String - The network type. Valid values: `VPC` (VPC type), `CCN` (CCN type).</li>
-<li>ccn-id - String - The `ID` of the CCN where the direct connect gateway resides.</li>
-<li>vpc-id - String - The `ID` of the VPC where the direct connect gateway resides.</li>
+<li>ccn-id - String - The ID of the CCN where the direct connect gateway resides.</li>
+<li>vpc-id - String - The ID of the VPC where the direct connect gateway resides.</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -51,67 +51,67 @@ public class DescribeDirectConnectGatewaysRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * The returned quantity.
+    * Max number of results returned
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`. 
-     * @return DirectConnectGatewayIds The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.
+     * Get The unique ID of the direct connect gateway, such as `dcg-9o233uri`. 
+     * @return DirectConnectGatewayIds The unique ID of the direct connect gateway, such as `dcg-9o233uri`.
      */
     public String [] getDirectConnectGatewayIds() {
         return this.DirectConnectGatewayIds;
     }
 
     /**
-     * Set The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.
-     * @param DirectConnectGatewayIds The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.
+     * Set The unique ID of the direct connect gateway, such as `dcg-9o233uri`.
+     * @param DirectConnectGatewayIds The unique ID of the direct connect gateway, such as `dcg-9o233uri`.
      */
     public void setDirectConnectGatewayIds(String [] DirectConnectGatewayIds) {
         this.DirectConnectGatewayIds = DirectConnectGatewayIds;
     }
 
     /**
-     * Get Filter condition. `DirectConnectGatewayIds` and `Filters` cannot be specified at the same time..
-<li>direct-connect-gateway-id - String - The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.</li>
+     * Get Filter condition. `DirectConnectGatewayIds` and `Filters` cannot be specified at the same time.
+<li>direct-connect-gateway-id - String - The unique ID of the direct connect gateway, such as `dcg-9o233uri`.</li>
 <li>direct-connect-gateway-name - String - The name of the direct connect gateway. The default is fuzzy query.</li>
-<li>direct-connect-gateway-ip - String - The `IP` of the direct connect gateway.</li>
+<li>direct-connect-gateway-ip - String - The IP of the direct connect gateway.</li>
 <li>gateway-type - String - The gateway type. Valid values: `NORMAL` (Standard type), `NAT` (NAT type).</li>
 <li>network-type- String - The network type. Valid values: `VPC` (VPC type), `CCN` (CCN type).</li>
-<li>ccn-id - String - The `ID` of the CCN where the direct connect gateway resides.</li>
-<li>vpc-id - String - The `ID` of the VPC where the direct connect gateway resides.</li> 
-     * @return Filters Filter condition. `DirectConnectGatewayIds` and `Filters` cannot be specified at the same time..
-<li>direct-connect-gateway-id - String - The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.</li>
+<li>ccn-id - String - The ID of the CCN where the direct connect gateway resides.</li>
+<li>vpc-id - String - The ID of the VPC where the direct connect gateway resides.</li> 
+     * @return Filters Filter condition. `DirectConnectGatewayIds` and `Filters` cannot be specified at the same time.
+<li>direct-connect-gateway-id - String - The unique ID of the direct connect gateway, such as `dcg-9o233uri`.</li>
 <li>direct-connect-gateway-name - String - The name of the direct connect gateway. The default is fuzzy query.</li>
-<li>direct-connect-gateway-ip - String - The `IP` of the direct connect gateway.</li>
+<li>direct-connect-gateway-ip - String - The IP of the direct connect gateway.</li>
 <li>gateway-type - String - The gateway type. Valid values: `NORMAL` (Standard type), `NAT` (NAT type).</li>
 <li>network-type- String - The network type. Valid values: `VPC` (VPC type), `CCN` (CCN type).</li>
-<li>ccn-id - String - The `ID` of the CCN where the direct connect gateway resides.</li>
-<li>vpc-id - String - The `ID` of the VPC where the direct connect gateway resides.</li>
+<li>ccn-id - String - The ID of the CCN where the direct connect gateway resides.</li>
+<li>vpc-id - String - The ID of the VPC where the direct connect gateway resides.</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter condition. `DirectConnectGatewayIds` and `Filters` cannot be specified at the same time..
-<li>direct-connect-gateway-id - String - The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.</li>
+     * Set Filter condition. `DirectConnectGatewayIds` and `Filters` cannot be specified at the same time.
+<li>direct-connect-gateway-id - String - The unique ID of the direct connect gateway, such as `dcg-9o233uri`.</li>
 <li>direct-connect-gateway-name - String - The name of the direct connect gateway. The default is fuzzy query.</li>
-<li>direct-connect-gateway-ip - String - The `IP` of the direct connect gateway.</li>
+<li>direct-connect-gateway-ip - String - The IP of the direct connect gateway.</li>
 <li>gateway-type - String - The gateway type. Valid values: `NORMAL` (Standard type), `NAT` (NAT type).</li>
 <li>network-type- String - The network type. Valid values: `VPC` (VPC type), `CCN` (CCN type).</li>
-<li>ccn-id - String - The `ID` of the CCN where the direct connect gateway resides.</li>
-<li>vpc-id - String - The `ID` of the VPC where the direct connect gateway resides.</li>
-     * @param Filters Filter condition. `DirectConnectGatewayIds` and `Filters` cannot be specified at the same time..
-<li>direct-connect-gateway-id - String - The unique `ID` of the direct connect gateway, such as `dcg-9o233uri`.</li>
+<li>ccn-id - String - The ID of the CCN where the direct connect gateway resides.</li>
+<li>vpc-id - String - The ID of the VPC where the direct connect gateway resides.</li>
+     * @param Filters Filter condition. `DirectConnectGatewayIds` and `Filters` cannot be specified at the same time.
+<li>direct-connect-gateway-id - String - The unique ID of the direct connect gateway, such as `dcg-9o233uri`.</li>
 <li>direct-connect-gateway-name - String - The name of the direct connect gateway. The default is fuzzy query.</li>
-<li>direct-connect-gateway-ip - String - The `IP` of the direct connect gateway.</li>
+<li>direct-connect-gateway-ip - String - The IP of the direct connect gateway.</li>
 <li>gateway-type - String - The gateway type. Valid values: `NORMAL` (Standard type), `NAT` (NAT type).</li>
 <li>network-type- String - The network type. Valid values: `VPC` (VPC type), `CCN` (CCN type).</li>
-<li>ccn-id - String - The `ID` of the CCN where the direct connect gateway resides.</li>
-<li>vpc-id - String - The `ID` of the VPC where the direct connect gateway resides.</li>
+<li>ccn-id - String - The ID of the CCN where the direct connect gateway resides.</li>
+<li>vpc-id - String - The ID of the VPC where the direct connect gateway resides.</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
@@ -134,16 +134,16 @@ public class DescribeDirectConnectGatewaysRequest extends AbstractModel{
     }
 
     /**
-     * Get The returned quantity. 
-     * @return Limit The returned quantity.
+     * Get Max number of results returned 
+     * @return Limit Max number of results returned
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The returned quantity.
-     * @param Limit The returned quantity.
+     * Set Max number of results returned
+     * @param Limit Max number of results returned
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

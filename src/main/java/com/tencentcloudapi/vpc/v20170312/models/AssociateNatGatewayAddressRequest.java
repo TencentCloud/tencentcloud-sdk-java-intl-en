@@ -37,14 +37,14 @@ public class AssociateNatGatewayAddressRequest extends AbstractModel{
     private Long AddressCount;
 
     /**
-    * The EIP array bound to the NAT gateway. Either `AddressCount` or `PublicAddresses` must be passed in.
+    * Array of the EIPs bound to the NAT gateway. Either `AddressCount` or `PublicAddresses` must be passed in.
     */
     @SerializedName("PublicIpAddresses")
     @Expose
     private String [] PublicIpAddresses;
 
     /**
-    * The EIP zone. This is passed in when EIP is automatically assigned.
+    * The availability zone of the EIP, which is passed in when the EIP is automatically assigned.
     */
     @SerializedName("Zone")
     @Expose
@@ -83,32 +83,32 @@ public class AssociateNatGatewayAddressRequest extends AbstractModel{
     }
 
     /**
-     * Get The EIP array bound to the NAT gateway. Either `AddressCount` or `PublicAddresses` must be passed in. 
-     * @return PublicIpAddresses The EIP array bound to the NAT gateway. Either `AddressCount` or `PublicAddresses` must be passed in.
+     * Get Array of the EIPs bound to the NAT gateway. Either `AddressCount` or `PublicAddresses` must be passed in. 
+     * @return PublicIpAddresses Array of the EIPs bound to the NAT gateway. Either `AddressCount` or `PublicAddresses` must be passed in.
      */
     public String [] getPublicIpAddresses() {
         return this.PublicIpAddresses;
     }
 
     /**
-     * Set The EIP array bound to the NAT gateway. Either `AddressCount` or `PublicAddresses` must be passed in.
-     * @param PublicIpAddresses The EIP array bound to the NAT gateway. Either `AddressCount` or `PublicAddresses` must be passed in.
+     * Set Array of the EIPs bound to the NAT gateway. Either `AddressCount` or `PublicAddresses` must be passed in.
+     * @param PublicIpAddresses Array of the EIPs bound to the NAT gateway. Either `AddressCount` or `PublicAddresses` must be passed in.
      */
     public void setPublicIpAddresses(String [] PublicIpAddresses) {
         this.PublicIpAddresses = PublicIpAddresses;
     }
 
     /**
-     * Get The EIP zone. This is passed in when EIP is automatically assigned. 
-     * @return Zone The EIP zone. This is passed in when EIP is automatically assigned.
+     * Get The availability zone of the EIP, which is passed in when the EIP is automatically assigned. 
+     * @return Zone The availability zone of the EIP, which is passed in when the EIP is automatically assigned.
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set The EIP zone. This is passed in when EIP is automatically assigned.
-     * @param Zone The EIP zone. This is passed in when EIP is automatically assigned.
+     * Set The availability zone of the EIP, which is passed in when the EIP is automatically assigned.
+     * @param Zone The availability zone of the EIP, which is passed in when the EIP is automatically assigned.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

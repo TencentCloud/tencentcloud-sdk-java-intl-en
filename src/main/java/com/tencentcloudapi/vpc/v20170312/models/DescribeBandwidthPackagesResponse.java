@@ -30,7 +30,7 @@ public class DescribeBandwidthPackagesResponse extends AbstractModel{
     private Long TotalCount;
 
     /**
-    * The description of the bandwidth packages.
+    * Detail information of the bandwidth package.
     */
     @SerializedName("BandwidthPackageSet")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeBandwidthPackagesResponse extends AbstractModel{
     }
 
     /**
-     * Get The description of the bandwidth packages. 
-     * @return BandwidthPackageSet The description of the bandwidth packages.
+     * Get Detail information of the bandwidth package. 
+     * @return BandwidthPackageSet Detail information of the bandwidth package.
      */
     public BandwidthPackage [] getBandwidthPackageSet() {
         return this.BandwidthPackageSet;
     }
 
     /**
-     * Set The description of the bandwidth packages.
-     * @param BandwidthPackageSet The description of the bandwidth packages.
+     * Set Detail information of the bandwidth package.
+     * @param BandwidthPackageSet Detail information of the bandwidth package.
      */
     public void setBandwidthPackageSet(BandwidthPackage [] BandwidthPackageSet) {
         this.BandwidthPackageSet = BandwidthPackageSet;

@@ -356,28 +356,33 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private AwsPrivateAccess AwsPrivateAccess;
 
     /**
-    * SCDN configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("SecurityConfig")
     @Expose
     private SecurityConfig SecurityConfig;
 
     /**
-    * `ImageOptimization` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("ImageOptimization")
     @Expose
     private ImageOptimization ImageOptimization;
 
     /**
-    * `UA` blacklist/whitelist Configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("UserAgentFilter")
     @Expose
     private UserAgentFilter UserAgentFilter;
+
+    /**
+    * Access control
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AccessControl")
+    @Expose
+    private AccessControl AccessControl;
 
     /**
      * Get Domain name ID 
@@ -1232,63 +1237,71 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get SCDN configuration
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SecurityConfig SCDN configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return SecurityConfig 
      */
     public SecurityConfig getSecurityConfig() {
         return this.SecurityConfig;
     }
 
     /**
-     * Set SCDN configuration
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SecurityConfig SCDN configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param SecurityConfig 
      */
     public void setSecurityConfig(SecurityConfig SecurityConfig) {
         this.SecurityConfig = SecurityConfig;
     }
 
     /**
-     * Get `ImageOptimization` configuration
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ImageOptimization `ImageOptimization` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return ImageOptimization 
      */
     public ImageOptimization getImageOptimization() {
         return this.ImageOptimization;
     }
 
     /**
-     * Set `ImageOptimization` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ImageOptimization `ImageOptimization` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param ImageOptimization 
      */
     public void setImageOptimization(ImageOptimization ImageOptimization) {
         this.ImageOptimization = ImageOptimization;
     }
 
     /**
-     * Get `UA` blacklist/whitelist Configuration
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return UserAgentFilter `UA` blacklist/whitelist Configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return UserAgentFilter 
      */
     public UserAgentFilter getUserAgentFilter() {
         return this.UserAgentFilter;
     }
 
     /**
-     * Set `UA` blacklist/whitelist Configuration
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param UserAgentFilter `UA` blacklist/whitelist Configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param UserAgentFilter 
      */
     public void setUserAgentFilter(UserAgentFilter UserAgentFilter) {
         this.UserAgentFilter = UserAgentFilter;
+    }
+
+    /**
+     * Get Access control
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return AccessControl Access control
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public AccessControl getAccessControl() {
+        return this.AccessControl;
+    }
+
+    /**
+     * Set Access control
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AccessControl Access control
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAccessControl(AccessControl AccessControl) {
+        this.AccessControl = AccessControl;
     }
 
     /**
@@ -1338,6 +1351,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "SecurityConfig.", this.SecurityConfig);
         this.setParamObj(map, prefix + "ImageOptimization.", this.ImageOptimization);
         this.setParamObj(map, prefix + "UserAgentFilter.", this.UserAgentFilter);
+        this.setParamObj(map, prefix + "AccessControl.", this.AccessControl);
 
     }
 }

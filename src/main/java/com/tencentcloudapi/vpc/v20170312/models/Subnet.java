@@ -86,7 +86,7 @@ public class Subnet extends AbstractModel{
     private String CreatedTime;
 
     /**
-    * The number of available `IPv4`.
+    * The number of available IPv4 addresses
     */
     @SerializedName("AvailableIpAddressCount")
     @Expose
@@ -114,7 +114,7 @@ public class Subnet extends AbstractModel{
     private Boolean IsRemoteVpcSnat;
 
     /**
-    * The total number of `IPv4` in the subnet.
+    * The total number of IPv4 addresses in the subnet.
     */
     @SerializedName("TotalIpAddressCount")
     @Expose
@@ -272,16 +272,16 @@ public class Subnet extends AbstractModel{
     }
 
     /**
-     * Get The number of available `IPv4`. 
-     * @return AvailableIpAddressCount The number of available `IPv4`.
+     * Get The number of available IPv4 addresses 
+     * @return AvailableIpAddressCount The number of available IPv4 addresses
      */
     public Long getAvailableIpAddressCount() {
         return this.AvailableIpAddressCount;
     }
 
     /**
-     * Set The number of available `IPv4`.
-     * @param AvailableIpAddressCount The number of available `IPv4`.
+     * Set The number of available IPv4 addresses
+     * @param AvailableIpAddressCount The number of available IPv4 addresses
      */
     public void setAvailableIpAddressCount(Long AvailableIpAddressCount) {
         this.AvailableIpAddressCount = AvailableIpAddressCount;
@@ -336,16 +336,16 @@ public class Subnet extends AbstractModel{
     }
 
     /**
-     * Get The total number of `IPv4` in the subnet. 
-     * @return TotalIpAddressCount The total number of `IPv4` in the subnet.
+     * Get The total number of IPv4 addresses in the subnet. 
+     * @return TotalIpAddressCount The total number of IPv4 addresses in the subnet.
      */
     public Long getTotalIpAddressCount() {
         return this.TotalIpAddressCount;
     }
 
     /**
-     * Set The total number of `IPv4` in the subnet.
-     * @param TotalIpAddressCount The total number of `IPv4` in the subnet.
+     * Set The total number of IPv4 addresses in the subnet.
+     * @param TotalIpAddressCount The total number of IPv4 addresses in the subnet.
      */
     public void setTotalIpAddressCount(Long TotalIpAddressCount) {
         this.TotalIpAddressCount = TotalIpAddressCount;

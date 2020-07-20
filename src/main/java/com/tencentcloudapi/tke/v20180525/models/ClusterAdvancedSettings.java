@@ -72,6 +72,20 @@ public class ClusterAdvancedSettings extends AbstractModel{
     private Boolean IsNonStaticIpMode;
 
     /**
+    * 
+    */
+    @SerializedName("DeletionProtection")
+    @Expose
+    private Boolean DeletionProtection;
+
+    /**
+    * Cluster network proxy model
+    */
+    @SerializedName("KubeProxyMode")
+    @Expose
+    private String KubeProxyMode;
+
+    /**
      * Get Whether IPVS is enabled 
      * @return IPVS Whether IPVS is enabled
      */
@@ -184,6 +198,38 @@ public class ClusterAdvancedSettings extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return DeletionProtection 
+     */
+    public Boolean getDeletionProtection() {
+        return this.DeletionProtection;
+    }
+
+    /**
+     * Set 
+     * @param DeletionProtection 
+     */
+    public void setDeletionProtection(Boolean DeletionProtection) {
+        this.DeletionProtection = DeletionProtection;
+    }
+
+    /**
+     * Get Cluster network proxy model 
+     * @return KubeProxyMode Cluster network proxy model
+     */
+    public String getKubeProxyMode() {
+        return this.KubeProxyMode;
+    }
+
+    /**
+     * Set Cluster network proxy model
+     * @param KubeProxyMode Cluster network proxy model
+     */
+    public void setKubeProxyMode(String KubeProxyMode) {
+        this.KubeProxyMode = KubeProxyMode;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +240,8 @@ public class ClusterAdvancedSettings extends AbstractModel{
         this.setParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
         this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
         this.setParamSimple(map, prefix + "IsNonStaticIpMode", this.IsNonStaticIpMode);
+        this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
+        this.setParamSimple(map, prefix + "KubeProxyMode", this.KubeProxyMode);
 
     }
 }

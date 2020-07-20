@@ -56,6 +56,27 @@ public class DcClient extends AbstractClient{
     }
 
     /**
+     *This API is used to apply for a connection.
+When calling this API, please note that:
+You need to complete identity verification for your account; otherwise, you cannot apply for a connection;
+If there is any connection in arrears under your account, you cannot apply for more connections.
+     * @param req CreateDirectConnectRequest
+     * @return CreateDirectConnectResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDirectConnectResponse CreateDirectConnect(CreateDirectConnectRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDirectConnectResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDirectConnectResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateDirectConnect"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a dedicated tunnel.
      * @param req CreateDirectConnectTunnelRequest
      * @return CreateDirectConnectTunnelResponse
@@ -74,6 +95,25 @@ public class DcClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete a connection.
+Only connected connections can be deleted.
+     * @param req DeleteDirectConnectRequest
+     * @return DeleteDirectConnectResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDirectConnectResponse DeleteDirectConnect(DeleteDirectConnectRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteDirectConnectResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteDirectConnectResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteDirectConnect"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete a dedicated tunnel.
      * @param req DeleteDirectConnectTunnelRequest
      * @return DeleteDirectConnectTunnelResponse
@@ -85,6 +125,25 @@ public class DcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteDirectConnectTunnelResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteDirectConnectTunnel"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query connection access points.
+
+     * @param req DescribeAccessPointsRequest
+     * @return DescribeAccessPointsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccessPointsResponse DescribeAccessPoints(DescribeAccessPointsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAccessPointsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAccessPointsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAccessPoints"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -121,6 +180,24 @@ public class DcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDirectConnectsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeDirectConnects"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify connection attributes.
+     * @param req ModifyDirectConnectAttributeRequest
+     * @return ModifyDirectConnectAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDirectConnectAttributeResponse ModifyDirectConnectAttribute(ModifyDirectConnectAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDirectConnectAttributeResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDirectConnectAttributeResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyDirectConnectAttribute"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

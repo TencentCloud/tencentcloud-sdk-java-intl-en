@@ -129,11 +129,12 @@ https: specifies the HTTPS metric to be queried
     private String DataSource;
 
     /**
-    * Specifies an IP protocol; if it is left blank, all IP protocols will be queried.
-`all`: All protocols
-`ipv4`: IPv4
-`ipv6`: IPv6
+    * Specified IP protocol to be queried. If this parameter is left empty, all protocols will be queried
+all: all protocols
+ipv4: specifies to query IPv4 metrics
+ipv6: specifies to query IPv6 metrics
 If the IP protocol to be queried is specified, the district and ISP cannot be specified at the same time
+Note: non-IPv6 whitelisted users cannot specify `ipv4` and `ipv6` for query
     */
     @SerializedName("IpProtocol")
     @Expose
@@ -450,32 +451,36 @@ https: specifies the HTTPS metric to be queried
     }
 
     /**
-     * Get Specifies an IP protocol; if it is left blank, all IP protocols will be queried.
-`all`: All protocols
-`ipv4`: IPv4
-`ipv6`: IPv6
-If the IP protocol to be queried is specified, the district and ISP cannot be specified at the same time 
-     * @return IpProtocol Specifies an IP protocol; if it is left blank, all IP protocols will be queried.
-`all`: All protocols
-`ipv4`: IPv4
-`ipv6`: IPv6
+     * Get Specified IP protocol to be queried. If this parameter is left empty, all protocols will be queried
+all: all protocols
+ipv4: specifies to query IPv4 metrics
+ipv6: specifies to query IPv6 metrics
 If the IP protocol to be queried is specified, the district and ISP cannot be specified at the same time
+Note: non-IPv6 whitelisted users cannot specify `ipv4` and `ipv6` for query 
+     * @return IpProtocol Specified IP protocol to be queried. If this parameter is left empty, all protocols will be queried
+all: all protocols
+ipv4: specifies to query IPv4 metrics
+ipv6: specifies to query IPv6 metrics
+If the IP protocol to be queried is specified, the district and ISP cannot be specified at the same time
+Note: non-IPv6 whitelisted users cannot specify `ipv4` and `ipv6` for query
      */
     public String getIpProtocol() {
         return this.IpProtocol;
     }
 
     /**
-     * Set Specifies an IP protocol; if it is left blank, all IP protocols will be queried.
-`all`: All protocols
-`ipv4`: IPv4
-`ipv6`: IPv6
+     * Set Specified IP protocol to be queried. If this parameter is left empty, all protocols will be queried
+all: all protocols
+ipv4: specifies to query IPv4 metrics
+ipv6: specifies to query IPv6 metrics
 If the IP protocol to be queried is specified, the district and ISP cannot be specified at the same time
-     * @param IpProtocol Specifies an IP protocol; if it is left blank, all IP protocols will be queried.
-`all`: All protocols
-`ipv4`: IPv4
-`ipv6`: IPv6
+Note: non-IPv6 whitelisted users cannot specify `ipv4` and `ipv6` for query
+     * @param IpProtocol Specified IP protocol to be queried. If this parameter is left empty, all protocols will be queried
+all: all protocols
+ipv4: specifies to query IPv4 metrics
+ipv6: specifies to query IPv6 metrics
 If the IP protocol to be queried is specified, the district and ISP cannot be specified at the same time
+Note: non-IPv6 whitelisted users cannot specify `ipv4` and `ipv6` for query
      */
     public void setIpProtocol(String IpProtocol) {
         this.IpProtocol = IpProtocol;

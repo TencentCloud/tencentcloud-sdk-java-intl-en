@@ -23,9 +23,129 @@ import java.util.HashMap;
 public class RawWatermarkParameter extends AbstractModel{
 
     /**
+    * 
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
+    * 
+    */
+    @SerializedName("CoordinateOrigin")
+    @Expose
+    private String CoordinateOrigin;
+
+    /**
+    * 
+    */
+    @SerializedName("XPos")
+    @Expose
+    private String XPos;
+
+    /**
+    * 
+    */
+    @SerializedName("YPos")
+    @Expose
+    private String YPos;
+
+    /**
+    * 
+    */
+    @SerializedName("ImageTemplate")
+    @Expose
+    private RawImageWatermarkInput ImageTemplate;
+
+    /**
+     * Get  
+     * @return Type 
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 
+     * @param Type 
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get  
+     * @return CoordinateOrigin 
+     */
+    public String getCoordinateOrigin() {
+        return this.CoordinateOrigin;
+    }
+
+    /**
+     * Set 
+     * @param CoordinateOrigin 
+     */
+    public void setCoordinateOrigin(String CoordinateOrigin) {
+        this.CoordinateOrigin = CoordinateOrigin;
+    }
+
+    /**
+     * Get  
+     * @return XPos 
+     */
+    public String getXPos() {
+        return this.XPos;
+    }
+
+    /**
+     * Set 
+     * @param XPos 
+     */
+    public void setXPos(String XPos) {
+        this.XPos = XPos;
+    }
+
+    /**
+     * Get  
+     * @return YPos 
+     */
+    public String getYPos() {
+        return this.YPos;
+    }
+
+    /**
+     * Set 
+     * @param YPos 
+     */
+    public void setYPos(String YPos) {
+        this.YPos = YPos;
+    }
+
+    /**
+     * Get  
+     * @return ImageTemplate 
+     */
+    public RawImageWatermarkInput getImageTemplate() {
+        return this.ImageTemplate;
+    }
+
+    /**
+     * Set 
+     * @param ImageTemplate 
+     */
+    public void setImageTemplate(RawImageWatermarkInput ImageTemplate) {
+        this.ImageTemplate = ImageTemplate;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "CoordinateOrigin", this.CoordinateOrigin);
+        this.setParamSimple(map, prefix + "XPos", this.XPos);
+        this.setParamSimple(map, prefix + "YPos", this.YPos);
+        this.setParamObj(map, prefix + "ImageTemplate.", this.ImageTemplate);
 
     }
 }

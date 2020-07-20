@@ -77,6 +77,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private MediaProcessTaskImageSpriteResult ImageSpriteTask;
 
     /**
+    * Query result of an adaptive bitrate streaming task, which is valid if the task type is `AdaptiveDynamicStreaming`.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AdaptiveDynamicStreamingTask")
+    @Expose
+    private MediaProcessTaskAdaptiveDynamicStreamingResult AdaptiveDynamicStreamingTask;
+
+    /**
      * Get Task type. Valid values:
 <li>Transcode: Transcoding</li>
 <li>AnimatedGraphics: Animated image generating</li>
@@ -221,6 +229,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Query result of an adaptive bitrate streaming task, which is valid if the task type is `AdaptiveDynamicStreaming`.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return AdaptiveDynamicStreamingTask Query result of an adaptive bitrate streaming task, which is valid if the task type is `AdaptiveDynamicStreaming`.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public MediaProcessTaskAdaptiveDynamicStreamingResult getAdaptiveDynamicStreamingTask() {
+        return this.AdaptiveDynamicStreamingTask;
+    }
+
+    /**
+     * Set Query result of an adaptive bitrate streaming task, which is valid if the task type is `AdaptiveDynamicStreaming`.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AdaptiveDynamicStreamingTask Query result of an adaptive bitrate streaming task, which is valid if the task type is `AdaptiveDynamicStreaming`.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAdaptiveDynamicStreamingTask(MediaProcessTaskAdaptiveDynamicStreamingResult AdaptiveDynamicStreamingTask) {
+        this.AdaptiveDynamicStreamingTask = AdaptiveDynamicStreamingTask;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -230,6 +258,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "SnapshotByTimeOffsetTask.", this.SnapshotByTimeOffsetTask);
         this.setParamObj(map, prefix + "SampleSnapshotTask.", this.SampleSnapshotTask);
         this.setParamObj(map, prefix + "ImageSpriteTask.", this.ImageSpriteTask);
+        this.setParamObj(map, prefix + "AdaptiveDynamicStreamingTask.", this.AdaptiveDynamicStreamingTask);
 
     }
 }

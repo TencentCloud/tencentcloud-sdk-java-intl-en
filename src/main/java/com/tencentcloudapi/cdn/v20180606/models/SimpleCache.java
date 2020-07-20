@@ -76,6 +76,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String CompareMaxAge;
 
     /**
+    * Always forwards to the origin server for verification
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Revalidate")
+    @Expose
+    private Revalidate Revalidate;
+
+    /**
      * Get Cache expiration time rules
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return CacheRules Cache expiration time rules
@@ -228,6 +236,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Always forwards to the origin server for verification
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Revalidate Always forwards to the origin server for verification
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Revalidate getRevalidate() {
+        return this.Revalidate;
+    }
+
+    /**
+     * Set Always forwards to the origin server for verification
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Revalidate Always forwards to the origin server for verification
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRevalidate(Revalidate Revalidate) {
+        this.Revalidate = Revalidate;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -236,6 +264,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "IgnoreCacheControl", this.IgnoreCacheControl);
         this.setParamSimple(map, prefix + "IgnoreSetCookie", this.IgnoreSetCookie);
         this.setParamSimple(map, prefix + "CompareMaxAge", this.CompareMaxAge);
+        this.setParamObj(map, prefix + "Revalidate.", this.Revalidate);
 
     }
 }

@@ -36,11 +36,11 @@ index: home page
 
     /**
     * Content for each CacheType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-For `index`, enter a backslash (/).
+Enter `*` for `all`
+Enter an extension for `file`, such as `jpg` or `txt`
+Enter a path for `directory`, such as `/xxx/test`
+Enter an absolute path for `path`, such as `/xxx/test.html`
+Enter `/` for `index`
     */
     @SerializedName("CacheContents")
     @Expose
@@ -92,17 +92,17 @@ index: home page
 
     /**
      * Get Content for each CacheType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-For `index`, enter a backslash (/). 
+Enter `*` for `all`
+Enter an extension for `file`, such as `jpg` or `txt`
+Enter a path for `directory`, such as `/xxx/test`
+Enter an absolute path for `path`, such as `/xxx/test.html`
+Enter `/` for `index` 
      * @return CacheContents Content for each CacheType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-For `index`, enter a backslash (/).
+Enter `*` for `all`
+Enter an extension for `file`, such as `jpg` or `txt`
+Enter a path for `directory`, such as `/xxx/test`
+Enter an absolute path for `path`, such as `/xxx/test.html`
+Enter `/` for `index`
      */
     public String [] getCacheContents() {
         return this.CacheContents;
@@ -110,17 +110,17 @@ For `index`, enter a backslash (/).
 
     /**
      * Set Content for each CacheType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-For `index`, enter a backslash (/).
+Enter `*` for `all`
+Enter an extension for `file`, such as `jpg` or `txt`
+Enter a path for `directory`, such as `/xxx/test`
+Enter an absolute path for `path`, such as `/xxx/test.html`
+Enter `/` for `index`
      * @param CacheContents Content for each CacheType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-For `index`, enter a backslash (/).
+Enter `*` for `all`
+Enter an extension for `file`, such as `jpg` or `txt`
+Enter a path for `directory`, such as `/xxx/test`
+Enter an absolute path for `path`, such as `/xxx/test.html`
+Enter `/` for `index`
      */
     public void setCacheContents(String [] CacheContents) {
         this.CacheContents = CacheContents;

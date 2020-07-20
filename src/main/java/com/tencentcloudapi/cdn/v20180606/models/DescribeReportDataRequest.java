@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeReportDataRequest extends AbstractModel{
 
     /**
-    * Query start time
+    * Query start time in the format of `yyyy-MM-dd`
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Query end time
+    * Query end time in the format of `yyyy-MM-dd`
     */
     @SerializedName("EndTime")
     @Expose
@@ -39,8 +39,8 @@ public class DescribeReportDataRequest extends AbstractModel{
     /**
     * Report type
 daily: daily report
-weekly: weekly report
-monthly: monthly report
+weekly: weekly report (Monday to Sunday)
+monthly: monthly report (calendar month)
     */
     @SerializedName("ReportType")
     @Expose
@@ -77,32 +77,32 @@ overseas: outside Mainland China
     private Long Project;
 
     /**
-     * Get Query start time 
-     * @return StartTime Query start time
+     * Get Query start time in the format of `yyyy-MM-dd` 
+     * @return StartTime Query start time in the format of `yyyy-MM-dd`
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Query start time
-     * @param StartTime Query start time
+     * Set Query start time in the format of `yyyy-MM-dd`
+     * @param StartTime Query start time in the format of `yyyy-MM-dd`
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Query end time 
-     * @return EndTime Query end time
+     * Get Query end time in the format of `yyyy-MM-dd` 
+     * @return EndTime Query end time in the format of `yyyy-MM-dd`
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Query end time
-     * @param EndTime Query end time
+     * Set Query end time in the format of `yyyy-MM-dd`
+     * @param EndTime Query end time in the format of `yyyy-MM-dd`
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -111,12 +111,12 @@ overseas: outside Mainland China
     /**
      * Get Report type
 daily: daily report
-weekly: weekly report
-monthly: monthly report 
+weekly: weekly report (Monday to Sunday)
+monthly: monthly report (calendar month) 
      * @return ReportType Report type
 daily: daily report
-weekly: weekly report
-monthly: monthly report
+weekly: weekly report (Monday to Sunday)
+monthly: monthly report (calendar month)
      */
     public String getReportType() {
         return this.ReportType;
@@ -125,12 +125,12 @@ monthly: monthly report
     /**
      * Set Report type
 daily: daily report
-weekly: weekly report
-monthly: monthly report
+weekly: weekly report (Monday to Sunday)
+monthly: monthly report (calendar month)
      * @param ReportType Report type
 daily: daily report
-weekly: weekly report
-monthly: monthly report
+weekly: weekly report (Monday to Sunday)
+monthly: monthly report (calendar month)
      */
     public void setReportType(String ReportType) {
         this.ReportType = ReportType;

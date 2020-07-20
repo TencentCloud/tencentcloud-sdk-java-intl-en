@@ -116,6 +116,55 @@ Note: this field may return null, indicating that no valid value is obtained.
     private String SoldOutReason;
 
     /**
+    * 
+    */
+    @SerializedName("InstanceBandwidth")
+    @Expose
+    private Float InstanceBandwidth;
+
+    /**
+    * 
+    */
+    @SerializedName("InstancePps")
+    @Expose
+    private Long InstancePps;
+
+    /**
+    * 
+    */
+    @SerializedName("StorageBlockAmount")
+    @Expose
+    private Long StorageBlockAmount;
+
+    /**
+    * 
+    */
+    @SerializedName("CpuType")
+    @Expose
+    private String CpuType;
+
+    /**
+    * Number of GPUs of the instance.
+    */
+    @SerializedName("Gpu")
+    @Expose
+    private Long Gpu;
+
+    /**
+    * Number of FPGAs of the instance.
+    */
+    @SerializedName("Fpga")
+    @Expose
+    private Long Fpga;
+
+    /**
+    * Descriptive information of the instance.
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
      * Get Availability zone. 
      * @return Zone Availability zone.
      */
@@ -332,6 +381,118 @@ Note: this field may return null, indicating that no valid value is obtained.
     }
 
     /**
+     * Get  
+     * @return InstanceBandwidth 
+     */
+    public Float getInstanceBandwidth() {
+        return this.InstanceBandwidth;
+    }
+
+    /**
+     * Set 
+     * @param InstanceBandwidth 
+     */
+    public void setInstanceBandwidth(Float InstanceBandwidth) {
+        this.InstanceBandwidth = InstanceBandwidth;
+    }
+
+    /**
+     * Get  
+     * @return InstancePps 
+     */
+    public Long getInstancePps() {
+        return this.InstancePps;
+    }
+
+    /**
+     * Set 
+     * @param InstancePps 
+     */
+    public void setInstancePps(Long InstancePps) {
+        this.InstancePps = InstancePps;
+    }
+
+    /**
+     * Get  
+     * @return StorageBlockAmount 
+     */
+    public Long getStorageBlockAmount() {
+        return this.StorageBlockAmount;
+    }
+
+    /**
+     * Set 
+     * @param StorageBlockAmount 
+     */
+    public void setStorageBlockAmount(Long StorageBlockAmount) {
+        this.StorageBlockAmount = StorageBlockAmount;
+    }
+
+    /**
+     * Get  
+     * @return CpuType 
+     */
+    public String getCpuType() {
+        return this.CpuType;
+    }
+
+    /**
+     * Set 
+     * @param CpuType 
+     */
+    public void setCpuType(String CpuType) {
+        this.CpuType = CpuType;
+    }
+
+    /**
+     * Get Number of GPUs of the instance. 
+     * @return Gpu Number of GPUs of the instance.
+     */
+    public Long getGpu() {
+        return this.Gpu;
+    }
+
+    /**
+     * Set Number of GPUs of the instance.
+     * @param Gpu Number of GPUs of the instance.
+     */
+    public void setGpu(Long Gpu) {
+        this.Gpu = Gpu;
+    }
+
+    /**
+     * Get Number of FPGAs of the instance. 
+     * @return Fpga Number of FPGAs of the instance.
+     */
+    public Long getFpga() {
+        return this.Fpga;
+    }
+
+    /**
+     * Set Number of FPGAs of the instance.
+     * @param Fpga Number of FPGAs of the instance.
+     */
+    public void setFpga(Long Fpga) {
+        this.Fpga = Fpga;
+    }
+
+    /**
+     * Get Descriptive information of the instance. 
+     * @return Remark Descriptive information of the instance.
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set Descriptive information of the instance.
+     * @param Remark Descriptive information of the instance.
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -348,6 +509,13 @@ Note: this field may return null, indicating that no valid value is obtained.
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamObj(map, prefix + "Price.", this.Price);
         this.setParamSimple(map, prefix + "SoldOutReason", this.SoldOutReason);
+        this.setParamSimple(map, prefix + "InstanceBandwidth", this.InstanceBandwidth);
+        this.setParamSimple(map, prefix + "InstancePps", this.InstancePps);
+        this.setParamSimple(map, prefix + "StorageBlockAmount", this.StorageBlockAmount);
+        this.setParamSimple(map, prefix + "CpuType", this.CpuType);
+        this.setParamSimple(map, prefix + "Gpu", this.Gpu);
+        this.setParamSimple(map, prefix + "Fpga", this.Fpga);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
 
     }
 }

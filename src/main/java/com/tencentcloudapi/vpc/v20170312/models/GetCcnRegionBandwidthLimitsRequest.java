@@ -39,7 +39,7 @@ public class GetCcnRegionBandwidthLimitsRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
-    * The sorting condition. Valid values: 'BandwidthLimit' and 'ExpireTime'.
+    * The sorting condition. Valid values: `BandwidthLimit` and `ExpireTime`.
     */
     @SerializedName("SortedBy")
     @Expose
@@ -107,16 +107,16 @@ public class GetCcnRegionBandwidthLimitsRequest extends AbstractModel{
     }
 
     /**
-     * Get The sorting condition. Valid values: 'BandwidthLimit' and 'ExpireTime'. 
-     * @return SortedBy The sorting condition. Valid values: 'BandwidthLimit' and 'ExpireTime'.
+     * Get The sorting condition. Valid values: `BandwidthLimit` and `ExpireTime`. 
+     * @return SortedBy The sorting condition. Valid values: `BandwidthLimit` and `ExpireTime`.
      */
     public String getSortedBy() {
         return this.SortedBy;
     }
 
     /**
-     * Set The sorting condition. Valid values: 'BandwidthLimit' and 'ExpireTime'.
-     * @param SortedBy The sorting condition. Valid values: 'BandwidthLimit' and 'ExpireTime'.
+     * Set The sorting condition. Valid values: `BandwidthLimit` and `ExpireTime`.
+     * @param SortedBy The sorting condition. Valid values: `BandwidthLimit` and `ExpireTime`.
      */
     public void setSortedBy(String SortedBy) {
         this.SortedBy = SortedBy;

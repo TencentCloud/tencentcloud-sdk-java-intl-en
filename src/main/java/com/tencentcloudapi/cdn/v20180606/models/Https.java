@@ -105,6 +105,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String SslStatus;
 
     /**
+    * 
+    */
+    @SerializedName("Hsts")
+    @Expose
+    private Hsts Hsts;
+
+    /**
      * Get HTTPS configuration switch
 on: enabled
 off: disabled
@@ -337,6 +344,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get  
+     * @return Hsts 
+     */
+    public Hsts getHsts() {
+        return this.Hsts;
+    }
+
+    /**
+     * Set 
+     * @param Hsts 
+     */
+    public void setHsts(Hsts Hsts) {
+        this.Hsts = Hsts;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -348,6 +371,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "ClientCertInfo.", this.ClientCertInfo);
         this.setParamSimple(map, prefix + "Spdy", this.Spdy);
         this.setParamSimple(map, prefix + "SslStatus", this.SslStatus);
+        this.setParamObj(map, prefix + "Hsts.", this.Hsts);
 
     }
 }

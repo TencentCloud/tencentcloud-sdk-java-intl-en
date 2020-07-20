@@ -66,8 +66,9 @@ It is supported to specify a status code for query. The return will be empty if 
     private String [] Domains;
 
     /**
-    * Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
-Please note that if domain names are specified, this parameter will be ignored.
+    * Project ID, which can be viewed [here](https://console.cloud.tencent.com/project)
+If the domain name is not specified, the specified project will be queried. Up to 30 acceleration domain names can be queried at a time
+If the domain name information is specified, the domain name will prevail
     */
     @SerializedName("Project")
     @Expose
@@ -226,20 +227,24 @@ It is supported to specify a status code for query. The return will be empty if 
     }
 
     /**
-     * Get Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
-Please note that if domain names are specified, this parameter will be ignored. 
-     * @return Project Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
-Please note that if domain names are specified, this parameter will be ignored.
+     * Get Project ID, which can be viewed [here](https://console.cloud.tencent.com/project)
+If the domain name is not specified, the specified project will be queried. Up to 30 acceleration domain names can be queried at a time
+If the domain name information is specified, the domain name will prevail 
+     * @return Project Project ID, which can be viewed [here](https://console.cloud.tencent.com/project)
+If the domain name is not specified, the specified project will be queried. Up to 30 acceleration domain names can be queried at a time
+If the domain name information is specified, the domain name will prevail
      */
     public Long getProject() {
         return this.Project;
     }
 
     /**
-     * Set Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
-Please note that if domain names are specified, this parameter will be ignored.
-     * @param Project Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
-Please note that if domain names are specified, this parameter will be ignored.
+     * Set Project ID, which can be viewed [here](https://console.cloud.tencent.com/project)
+If the domain name is not specified, the specified project will be queried. Up to 30 acceleration domain names can be queried at a time
+If the domain name information is specified, the domain name will prevail
+     * @param Project Project ID, which can be viewed [here](https://console.cloud.tencent.com/project)
+If the domain name is not specified, the specified project will be queried. Up to 30 acceleration domain names can be queried at a time
+If the domain name information is specified, the domain name will prevail
      */
     public void setProject(Long Project) {
         this.Project = Project;

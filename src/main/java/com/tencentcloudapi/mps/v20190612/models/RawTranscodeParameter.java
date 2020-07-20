@@ -23,9 +23,153 @@ import java.util.HashMap;
 public class RawTranscodeParameter extends AbstractModel{
 
     /**
+    * 
+    */
+    @SerializedName("Container")
+    @Expose
+    private String Container;
+
+    /**
+    * 
+    */
+    @SerializedName("RemoveVideo")
+    @Expose
+    private Long RemoveVideo;
+
+    /**
+    * 
+    */
+    @SerializedName("RemoveAudio")
+    @Expose
+    private Long RemoveAudio;
+
+    /**
+    * 
+    */
+    @SerializedName("VideoTemplate")
+    @Expose
+    private VideoTemplateInfo VideoTemplate;
+
+    /**
+    * 
+    */
+    @SerializedName("AudioTemplate")
+    @Expose
+    private AudioTemplateInfo AudioTemplate;
+
+    /**
+    * 
+    */
+    @SerializedName("TEHDConfig")
+    @Expose
+    private TEHDConfig TEHDConfig;
+
+    /**
+     * Get  
+     * @return Container 
+     */
+    public String getContainer() {
+        return this.Container;
+    }
+
+    /**
+     * Set 
+     * @param Container 
+     */
+    public void setContainer(String Container) {
+        this.Container = Container;
+    }
+
+    /**
+     * Get  
+     * @return RemoveVideo 
+     */
+    public Long getRemoveVideo() {
+        return this.RemoveVideo;
+    }
+
+    /**
+     * Set 
+     * @param RemoveVideo 
+     */
+    public void setRemoveVideo(Long RemoveVideo) {
+        this.RemoveVideo = RemoveVideo;
+    }
+
+    /**
+     * Get  
+     * @return RemoveAudio 
+     */
+    public Long getRemoveAudio() {
+        return this.RemoveAudio;
+    }
+
+    /**
+     * Set 
+     * @param RemoveAudio 
+     */
+    public void setRemoveAudio(Long RemoveAudio) {
+        this.RemoveAudio = RemoveAudio;
+    }
+
+    /**
+     * Get  
+     * @return VideoTemplate 
+     */
+    public VideoTemplateInfo getVideoTemplate() {
+        return this.VideoTemplate;
+    }
+
+    /**
+     * Set 
+     * @param VideoTemplate 
+     */
+    public void setVideoTemplate(VideoTemplateInfo VideoTemplate) {
+        this.VideoTemplate = VideoTemplate;
+    }
+
+    /**
+     * Get  
+     * @return AudioTemplate 
+     */
+    public AudioTemplateInfo getAudioTemplate() {
+        return this.AudioTemplate;
+    }
+
+    /**
+     * Set 
+     * @param AudioTemplate 
+     */
+    public void setAudioTemplate(AudioTemplateInfo AudioTemplate) {
+        this.AudioTemplate = AudioTemplate;
+    }
+
+    /**
+     * Get  
+     * @return TEHDConfig 
+     */
+    public TEHDConfig getTEHDConfig() {
+        return this.TEHDConfig;
+    }
+
+    /**
+     * Set 
+     * @param TEHDConfig 
+     */
+    public void setTEHDConfig(TEHDConfig TEHDConfig) {
+        this.TEHDConfig = TEHDConfig;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Container", this.Container);
+        this.setParamSimple(map, prefix + "RemoveVideo", this.RemoveVideo);
+        this.setParamSimple(map, prefix + "RemoveAudio", this.RemoveAudio);
+        this.setParamObj(map, prefix + "VideoTemplate.", this.VideoTemplate);
+        this.setParamObj(map, prefix + "AudioTemplate.", this.AudioTemplate);
+        this.setParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
 
     }
 }

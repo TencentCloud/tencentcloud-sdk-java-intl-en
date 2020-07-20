@@ -58,6 +58,13 @@ public class MediaProcessTaskInput extends AbstractModel{
     private ImageSpriteTaskInput [] ImageSpriteTaskSet;
 
     /**
+    * List of adaptive bitrate streaming tasks.
+    */
+    @SerializedName("AdaptiveDynamicStreamingTaskSet")
+    @Expose
+    private AdaptiveDynamicStreamingTaskInput [] AdaptiveDynamicStreamingTaskSet;
+
+    /**
      * Get List of transcoding tasks. 
      * @return TranscodeTaskSet List of transcoding tasks.
      */
@@ -138,6 +145,22 @@ public class MediaProcessTaskInput extends AbstractModel{
     }
 
     /**
+     * Get List of adaptive bitrate streaming tasks. 
+     * @return AdaptiveDynamicStreamingTaskSet List of adaptive bitrate streaming tasks.
+     */
+    public AdaptiveDynamicStreamingTaskInput [] getAdaptiveDynamicStreamingTaskSet() {
+        return this.AdaptiveDynamicStreamingTaskSet;
+    }
+
+    /**
+     * Set List of adaptive bitrate streaming tasks.
+     * @param AdaptiveDynamicStreamingTaskSet List of adaptive bitrate streaming tasks.
+     */
+    public void setAdaptiveDynamicStreamingTaskSet(AdaptiveDynamicStreamingTaskInput [] AdaptiveDynamicStreamingTaskSet) {
+        this.AdaptiveDynamicStreamingTaskSet = AdaptiveDynamicStreamingTaskSet;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class MediaProcessTaskInput extends AbstractModel{
         this.setParamArrayObj(map, prefix + "SnapshotByTimeOffsetTaskSet.", this.SnapshotByTimeOffsetTaskSet);
         this.setParamArrayObj(map, prefix + "SampleSnapshotTaskSet.", this.SampleSnapshotTaskSet);
         this.setParamArrayObj(map, prefix + "ImageSpriteTaskSet.", this.ImageSpriteTaskSet);
+        this.setParamArrayObj(map, prefix + "AdaptiveDynamicStreamingTaskSet.", this.AdaptiveDynamicStreamingTaskSet);
 
     }
 }

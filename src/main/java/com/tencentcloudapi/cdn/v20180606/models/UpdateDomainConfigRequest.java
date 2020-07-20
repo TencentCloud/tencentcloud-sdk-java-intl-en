@@ -30,7 +30,7 @@ public class UpdateDomainConfigRequest extends AbstractModel{
     private String Domain;
 
     /**
-    * Project ID
+    * Project ID
     */
     @SerializedName("ProjectId")
     @Expose
@@ -240,6 +240,13 @@ global: global acceleration
     private AwsPrivateAccess AwsPrivateAccess;
 
     /**
+    * UA blacklist/whitelist Configuration
+    */
+    @SerializedName("UserAgentFilter")
+    @Expose
+    private UserAgentFilter UserAgentFilter;
+
+    /**
      * Get Domain name 
      * @return Domain Domain name
      */
@@ -256,16 +263,16 @@ global: global acceleration
     }
 
     /**
-     * Get Project ID 
-     * @return ProjectId Project ID
+     * Get Project ID 
+     * @return ProjectId Project ID
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID
-     * @param ProjectId Project ID
+     * Set Project ID
+     * @param ProjectId Project ID
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
@@ -748,6 +755,22 @@ global: global acceleration
     }
 
     /**
+     * Get UA blacklist/whitelist Configuration 
+     * @return UserAgentFilter UA blacklist/whitelist Configuration
+     */
+    public UserAgentFilter getUserAgentFilter() {
+        return this.UserAgentFilter;
+    }
+
+    /**
+     * Set UA blacklist/whitelist Configuration
+     * @param UserAgentFilter UA blacklist/whitelist Configuration
+     */
+    public void setUserAgentFilter(UserAgentFilter UserAgentFilter) {
+        this.UserAgentFilter = UserAgentFilter;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -781,6 +804,7 @@ global: global acceleration
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamObj(map, prefix + "OriginPullTimeout.", this.OriginPullTimeout);
         this.setParamObj(map, prefix + "AwsPrivateAccess.", this.AwsPrivateAccess);
+        this.setParamObj(map, prefix + "UserAgentFilter.", this.UserAgentFilter);
 
     }
 }

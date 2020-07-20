@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class GetCcnRegionBandwidthLimitsResponse extends AbstractModel{
 
     /**
-    * The CCN outbound bandwidths in each region.
+    * The outbound bandwidth limits of regions in a CCN instance.
 Note: this field may return null, indicating that no valid value was found.
     */
     @SerializedName("CcnBandwidthSet")
@@ -46,9 +46,9 @@ Note: this field may return null, indicating that no valid value was found.
     private String RequestId;
 
     /**
-     * Get The CCN outbound bandwidths in each region.
+     * Get The outbound bandwidth limits of regions in a CCN instance.
 Note: this field may return null, indicating that no valid value was found. 
-     * @return CcnBandwidthSet The CCN outbound bandwidths in each region.
+     * @return CcnBandwidthSet The outbound bandwidth limits of regions in a CCN instance.
 Note: this field may return null, indicating that no valid value was found.
      */
     public CcnBandwidthInfo [] getCcnBandwidthSet() {
@@ -56,9 +56,9 @@ Note: this field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Set The CCN outbound bandwidths in each region.
+     * Set The outbound bandwidth limits of regions in a CCN instance.
 Note: this field may return null, indicating that no valid value was found.
-     * @param CcnBandwidthSet The CCN outbound bandwidths in each region.
+     * @param CcnBandwidthSet The outbound bandwidth limits of regions in a CCN instance.
 Note: this field may return null, indicating that no valid value was found.
      */
     public void setCcnBandwidthSet(CcnBandwidthInfo [] CcnBandwidthSet) {

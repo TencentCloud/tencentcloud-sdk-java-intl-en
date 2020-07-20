@@ -51,7 +51,7 @@ public class DBInstance extends AbstractModel{
     private String VpcId;
 
     /**
-    * SubnetId
+    * Subnet ID
     */
     @SerializedName("SubnetId")
     @Expose
@@ -72,7 +72,7 @@ public class DBInstance extends AbstractModel{
     private String DBInstanceName;
 
     /**
-    * Instance status
+    * Instance status. Valid values: applying, init (to be initialized), initing (initializing), running, limited run, isolated, recycling, recycled, job running, offline, migrating, expanding, readonly, restarting
     */
     @SerializedName("DBInstanceStatus")
     @Expose
@@ -191,6 +191,27 @@ public class DBInstance extends AbstractModel{
     private String Type;
 
     /**
+    * 
+    */
+    @SerializedName("AppId")
+    @Expose
+    private Long AppId;
+
+    /**
+    * 
+    */
+    @SerializedName("Uid")
+    @Expose
+    private Long Uid;
+
+    /**
+    * Whether the instance supports IPv6 address access. Valid values: 1 (yes), 0 (no)
+    */
+    @SerializedName("SupportIpv6")
+    @Expose
+    private Long SupportIpv6;
+
+    /**
      * Get Instance region such as ap-guangzhou, which corresponds to the `Region` field of `RegionSet` 
      * @return Region Instance region such as ap-guangzhou, which corresponds to the `Region` field of `RegionSet`
      */
@@ -255,16 +276,16 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
-     * Get SubnetId 
-     * @return SubnetId SubnetId
+     * Get Subnet ID 
+     * @return SubnetId Subnet ID
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set SubnetId
-     * @param SubnetId SubnetId
+     * Set Subnet ID
+     * @param SubnetId Subnet ID
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -303,16 +324,16 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
-     * Get Instance status 
-     * @return DBInstanceStatus Instance status
+     * Get Instance status. Valid values: applying, init (to be initialized), initing (initializing), running, limited run, isolated, recycling, recycled, job running, offline, migrating, expanding, readonly, restarting 
+     * @return DBInstanceStatus Instance status. Valid values: applying, init (to be initialized), initing (initializing), running, limited run, isolated, recycling, recycled, job running, offline, migrating, expanding, readonly, restarting
      */
     public String getDBInstanceStatus() {
         return this.DBInstanceStatus;
     }
 
     /**
-     * Set Instance status
-     * @param DBInstanceStatus Instance status
+     * Set Instance status. Valid values: applying, init (to be initialized), initing (initializing), running, limited run, isolated, recycling, recycled, job running, offline, migrating, expanding, readonly, restarting
+     * @param DBInstanceStatus Instance status. Valid values: applying, init (to be initialized), initing (initializing), running, limited run, isolated, recycling, recycled, job running, offline, migrating, expanding, readonly, restarting
      */
     public void setDBInstanceStatus(String DBInstanceStatus) {
         this.DBInstanceStatus = DBInstanceStatus;
@@ -575,6 +596,54 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return AppId 
+     */
+    public Long getAppId() {
+        return this.AppId;
+    }
+
+    /**
+     * Set 
+     * @param AppId 
+     */
+    public void setAppId(Long AppId) {
+        this.AppId = AppId;
+    }
+
+    /**
+     * Get  
+     * @return Uid 
+     */
+    public Long getUid() {
+        return this.Uid;
+    }
+
+    /**
+     * Set 
+     * @param Uid 
+     */
+    public void setUid(Long Uid) {
+        this.Uid = Uid;
+    }
+
+    /**
+     * Get Whether the instance supports IPv6 address access. Valid values: 1 (yes), 0 (no) 
+     * @return SupportIpv6 Whether the instance supports IPv6 address access. Valid values: 1 (yes), 0 (no)
+     */
+    public Long getSupportIpv6() {
+        return this.SupportIpv6;
+    }
+
+    /**
+     * Set Whether the instance supports IPv6 address access. Valid values: 1 (yes), 0 (no)
+     * @param SupportIpv6 Whether the instance supports IPv6 address access. Valid values: 1 (yes), 0 (no)
+     */
+    public void setSupportIpv6(Long SupportIpv6) {
+        this.SupportIpv6 = SupportIpv6;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -602,6 +671,9 @@ public class DBInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
         this.setParamArrayObj(map, prefix + "DBInstanceNetInfo.", this.DBInstanceNetInfo);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamSimple(map, prefix + "Uid", this.Uid);
+        this.setParamSimple(map, prefix + "SupportIpv6", this.SupportIpv6);
 
     }
 }

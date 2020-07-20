@@ -52,8 +52,9 @@ public class MLIDCardOCRResponse extends AbstractModel{
 
     /**
     * Alarm code
--9103 Alarm for photographed document
--9102 Alarm for photocopied document
+-9103	Alarm for photographed document
+-9102	Alarm for photocopied document
+-9106       Alarm for covered card
     */
     @SerializedName("Warn")
     @Expose
@@ -80,6 +81,19 @@ public class MLIDCardOCRResponse extends AbstractModel{
     @SerializedName("AdvancedInfo")
     @Expose
     private String AdvancedInfo;
+
+    /**
+    * Certificate types
+MyKad: Malaysian Identity Card
+MyPR: Malaysia Permanent Resident Identity Card
+MyTentera: Malaysian Armed Forces Identity Card
+MyKAS: Malaysian Temporary Resident Identity Card
+POLIS: Royal Malaysia Police Identity Card
+IKAD: Malaysia Temporary Employment Visit Pass
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -154,11 +168,13 @@ public class MLIDCardOCRResponse extends AbstractModel{
 
     /**
      * Get Alarm code
--9103 Alarm for photographed document
--9102 Alarm for photocopied document 
+-9103	Alarm for photographed document
+-9102	Alarm for photocopied document
+-9106       Alarm for covered card 
      * @return Warn Alarm code
--9103 Alarm for photographed document
--9102 Alarm for photocopied document
+-9103	Alarm for photographed document
+-9102	Alarm for photocopied document
+-9106       Alarm for covered card
      */
     public Long [] getWarn() {
         return this.Warn;
@@ -166,11 +182,13 @@ public class MLIDCardOCRResponse extends AbstractModel{
 
     /**
      * Set Alarm code
--9103 Alarm for photographed document
--9102 Alarm for photocopied document
+-9103	Alarm for photographed document
+-9102	Alarm for photocopied document
+-9106       Alarm for covered card
      * @param Warn Alarm code
--9103 Alarm for photographed document
--9102 Alarm for photocopied document
+-9103	Alarm for photographed document
+-9102	Alarm for photocopied document
+-9106       Alarm for covered card
      */
     public void setWarn(Long [] Warn) {
         this.Warn = Warn;
@@ -241,6 +259,46 @@ public class MLIDCardOCRResponse extends AbstractModel{
     }
 
     /**
+     * Get Certificate types
+MyKad: Malaysian Identity Card
+MyPR: Malaysia Permanent Resident Identity Card
+MyTentera: Malaysian Armed Forces Identity Card
+MyKAS: Malaysian Temporary Resident Identity Card
+POLIS: Royal Malaysia Police Identity Card
+IKAD: Malaysia Temporary Employment Visit Pass 
+     * @return Type Certificate types
+MyKad: Malaysian Identity Card
+MyPR: Malaysia Permanent Resident Identity Card
+MyTentera: Malaysian Armed Forces Identity Card
+MyKAS: Malaysian Temporary Resident Identity Card
+POLIS: Royal Malaysia Police Identity Card
+IKAD: Malaysia Temporary Employment Visit Pass
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set Certificate types
+MyKad: Malaysian Identity Card
+MyPR: Malaysia Permanent Resident Identity Card
+MyTentera: Malaysian Armed Forces Identity Card
+MyKAS: Malaysian Temporary Resident Identity Card
+POLIS: Royal Malaysia Police Identity Card
+IKAD: Malaysia Temporary Employment Visit Pass
+     * @param Type Certificate types
+MyKad: Malaysian Identity Card
+MyPR: Malaysia Permanent Resident Identity Card
+MyTentera: Malaysian Armed Forces Identity Card
+MyKAS: Malaysian Temporary Resident Identity Card
+POLIS: Royal Malaysia Police Identity Card
+IKAD: Malaysia Temporary Employment Visit Pass
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -267,6 +325,7 @@ public class MLIDCardOCRResponse extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Warn.", this.Warn);
         this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
+        this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

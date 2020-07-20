@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class RemoveBandwidthPackageResourcesRequest extends AbstractModel{
 
     /**
-    * The unique ID of the bandwidth package, such as 'bwp-xxxx'.
+    * The unique ID of the bandwidth package, such as `bwp-xxxx`.
     */
     @SerializedName("BandwidthPackageId")
     @Expose
     private String BandwidthPackageId;
 
     /**
-    * The resource type. Valid values: 'Address' and 'LoadBalance'.
+    * The resource type. Valid values: `Address` and `LoadBalance`.
     */
     @SerializedName("ResourceType")
     @Expose
     private String ResourceType;
 
     /**
-    * The resource IP, such as 'eip-xxxx' and 'lb-xxxx'.
+    * The resource IP, such as `eip-xxxx` and `lb-xxxx`.
     */
     @SerializedName("ResourceIds")
     @Expose
     private String [] ResourceIds;
 
     /**
-     * Get The unique ID of the bandwidth package, such as 'bwp-xxxx'. 
-     * @return BandwidthPackageId The unique ID of the bandwidth package, such as 'bwp-xxxx'.
+     * Get The unique ID of the bandwidth package, such as `bwp-xxxx`. 
+     * @return BandwidthPackageId The unique ID of the bandwidth package, such as `bwp-xxxx`.
      */
     public String getBandwidthPackageId() {
         return this.BandwidthPackageId;
     }
 
     /**
-     * Set The unique ID of the bandwidth package, such as 'bwp-xxxx'.
-     * @param BandwidthPackageId The unique ID of the bandwidth package, such as 'bwp-xxxx'.
+     * Set The unique ID of the bandwidth package, such as `bwp-xxxx`.
+     * @param BandwidthPackageId The unique ID of the bandwidth package, such as `bwp-xxxx`.
      */
     public void setBandwidthPackageId(String BandwidthPackageId) {
         this.BandwidthPackageId = BandwidthPackageId;
     }
 
     /**
-     * Get The resource type. Valid values: 'Address' and 'LoadBalance'. 
-     * @return ResourceType The resource type. Valid values: 'Address' and 'LoadBalance'.
+     * Get The resource type. Valid values: `Address` and `LoadBalance`. 
+     * @return ResourceType The resource type. Valid values: `Address` and `LoadBalance`.
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set The resource type. Valid values: 'Address' and 'LoadBalance'.
-     * @param ResourceType The resource type. Valid values: 'Address' and 'LoadBalance'.
+     * Set The resource type. Valid values: `Address` and `LoadBalance`.
+     * @param ResourceType The resource type. Valid values: `Address` and `LoadBalance`.
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get The resource IP, such as 'eip-xxxx' and 'lb-xxxx'. 
-     * @return ResourceIds The resource IP, such as 'eip-xxxx' and 'lb-xxxx'.
+     * Get The resource IP, such as `eip-xxxx` and `lb-xxxx`. 
+     * @return ResourceIds The resource IP, such as `eip-xxxx` and `lb-xxxx`.
      */
     public String [] getResourceIds() {
         return this.ResourceIds;
     }
 
     /**
-     * Set The resource IP, such as 'eip-xxxx' and 'lb-xxxx'.
-     * @param ResourceIds The resource IP, such as 'eip-xxxx' and 'lb-xxxx'.
+     * Set The resource IP, such as `eip-xxxx` and `lb-xxxx`.
+     * @param ResourceIds The resource IP, such as `eip-xxxx` and `lb-xxxx`.
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;

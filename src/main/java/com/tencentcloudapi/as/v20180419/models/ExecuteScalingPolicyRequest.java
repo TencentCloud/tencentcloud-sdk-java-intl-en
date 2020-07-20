@@ -37,6 +37,13 @@ public class ExecuteScalingPolicyRequest extends AbstractModel{
     private Boolean HonorCooldown;
 
     /**
+    * Trigger source that executes a scaling policy. Valid values: API and CLOUD_MONITOR. Default value: API. The value `CLOUD_MONITOR` is specific to the Cloud Monitor service.
+    */
+    @SerializedName("TriggerSource")
+    @Expose
+    private String TriggerSource;
+
+    /**
      * Get Alarm-based scaling policy ID 
      * @return AutoScalingPolicyId Alarm-based scaling policy ID
      */
@@ -69,11 +76,28 @@ public class ExecuteScalingPolicyRequest extends AbstractModel{
     }
 
     /**
+     * Get Trigger source that executes a scaling policy. Valid values: API and CLOUD_MONITOR. Default value: API. The value `CLOUD_MONITOR` is specific to the Cloud Monitor service. 
+     * @return TriggerSource Trigger source that executes a scaling policy. Valid values: API and CLOUD_MONITOR. Default value: API. The value `CLOUD_MONITOR` is specific to the Cloud Monitor service.
+     */
+    public String getTriggerSource() {
+        return this.TriggerSource;
+    }
+
+    /**
+     * Set Trigger source that executes a scaling policy. Valid values: API and CLOUD_MONITOR. Default value: API. The value `CLOUD_MONITOR` is specific to the Cloud Monitor service.
+     * @param TriggerSource Trigger source that executes a scaling policy. Valid values: API and CLOUD_MONITOR. Default value: API. The value `CLOUD_MONITOR` is specific to the Cloud Monitor service.
+     */
+    public void setTriggerSource(String TriggerSource) {
+        this.TriggerSource = TriggerSource;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoScalingPolicyId", this.AutoScalingPolicyId);
         this.setParamSimple(map, prefix + "HonorCooldown", this.HonorCooldown);
+        this.setParamSimple(map, prefix + "TriggerSource", this.TriggerSource);
 
     }
 }

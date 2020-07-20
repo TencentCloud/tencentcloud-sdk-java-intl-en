@@ -30,21 +30,21 @@ public class ModifyFlowLogAttributeRequest extends AbstractModel{
     private String VpcId;
 
     /**
-    * The unique ID of the flow log.
+    * The unique ID of the flow log collector.
     */
     @SerializedName("FlowLogId")
     @Expose
     private String FlowLogId;
 
     /**
-    * The name of the flow log instance.
+    * The name of the flow log collector.
     */
     @SerializedName("FlowLogName")
     @Expose
     private String FlowLogName;
 
     /**
-    * The description of the flow log instance.
+    * The description of the flow log collector.
     */
     @SerializedName("FlowLogDescription")
     @Expose
@@ -67,48 +67,48 @@ public class ModifyFlowLogAttributeRequest extends AbstractModel{
     }
 
     /**
-     * Get The unique ID of the flow log. 
-     * @return FlowLogId The unique ID of the flow log.
+     * Get The unique ID of the flow log collector. 
+     * @return FlowLogId The unique ID of the flow log collector.
      */
     public String getFlowLogId() {
         return this.FlowLogId;
     }
 
     /**
-     * Set The unique ID of the flow log.
-     * @param FlowLogId The unique ID of the flow log.
+     * Set The unique ID of the flow log collector.
+     * @param FlowLogId The unique ID of the flow log collector.
      */
     public void setFlowLogId(String FlowLogId) {
         this.FlowLogId = FlowLogId;
     }
 
     /**
-     * Get The name of the flow log instance. 
-     * @return FlowLogName The name of the flow log instance.
+     * Get The name of the flow log collector. 
+     * @return FlowLogName The name of the flow log collector.
      */
     public String getFlowLogName() {
         return this.FlowLogName;
     }
 
     /**
-     * Set The name of the flow log instance.
-     * @param FlowLogName The name of the flow log instance.
+     * Set The name of the flow log collector.
+     * @param FlowLogName The name of the flow log collector.
      */
     public void setFlowLogName(String FlowLogName) {
         this.FlowLogName = FlowLogName;
     }
 
     /**
-     * Get The description of the flow log instance. 
-     * @return FlowLogDescription The description of the flow log instance.
+     * Get The description of the flow log collector. 
+     * @return FlowLogDescription The description of the flow log collector.
      */
     public String getFlowLogDescription() {
         return this.FlowLogDescription;
     }
 
     /**
-     * Set The description of the flow log instance.
-     * @param FlowLogDescription The description of the flow log instance.
+     * Set The description of the flow log collector.
+     * @param FlowLogDescription The description of the flow log collector.
      */
     public void setFlowLogDescription(String FlowLogDescription) {
         this.FlowLogDescription = FlowLogDescription;

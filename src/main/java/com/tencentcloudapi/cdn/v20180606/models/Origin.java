@@ -108,6 +108,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String BackupServerName;
 
     /**
+    * Origin-pull path
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BasePath")
+    @Expose
+    private String BasePath;
+
+    /**
      * Get Master origin server list
 When modifying the origin server, you need to enter the corresponding OriginType.
 Note: this field may return null, indicating that no valid values can be obtained. 
@@ -352,6 +360,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Origin-pull path
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return BasePath Origin-pull path
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getBasePath() {
+        return this.BasePath;
+    }
+
+    /**
+     * Set Origin-pull path
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param BasePath Origin-pull path
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setBasePath(String BasePath) {
+        this.BasePath = BasePath;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -363,6 +391,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamArraySimple(map, prefix + "BackupOrigins.", this.BackupOrigins);
         this.setParamSimple(map, prefix + "BackupOriginType", this.BackupOriginType);
         this.setParamSimple(map, prefix + "BackupServerName", this.BackupServerName);
+        this.setParamSimple(map, prefix + "BasePath", this.BasePath);
 
     }
 }

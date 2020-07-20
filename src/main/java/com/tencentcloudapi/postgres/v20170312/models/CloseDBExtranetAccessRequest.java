@@ -30,6 +30,13 @@ public class CloseDBExtranetAccessRequest extends AbstractModel{
     private String DBInstanceId;
 
     /**
+    * Whether to disable public network access over IPv6 address. Valid values: 1 (yes), 0 (no)
+    */
+    @SerializedName("IsIpv6")
+    @Expose
+    private Long IsIpv6;
+
+    /**
      * Get Instance ID in the format of postgres-6r233v55 
      * @return DBInstanceId Instance ID in the format of postgres-6r233v55
      */
@@ -46,10 +53,27 @@ public class CloseDBExtranetAccessRequest extends AbstractModel{
     }
 
     /**
+     * Get Whether to disable public network access over IPv6 address. Valid values: 1 (yes), 0 (no) 
+     * @return IsIpv6 Whether to disable public network access over IPv6 address. Valid values: 1 (yes), 0 (no)
+     */
+    public Long getIsIpv6() {
+        return this.IsIpv6;
+    }
+
+    /**
+     * Set Whether to disable public network access over IPv6 address. Valid values: 1 (yes), 0 (no)
+     * @param IsIpv6 Whether to disable public network access over IPv6 address. Valid values: 1 (yes), 0 (no)
+     */
+    public void setIsIpv6(Long IsIpv6) {
+        this.IsIpv6 = IsIpv6;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);
+        this.setParamSimple(map, prefix + "IsIpv6", this.IsIpv6);
 
     }
 }

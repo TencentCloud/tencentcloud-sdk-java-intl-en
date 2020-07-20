@@ -37,21 +37,21 @@ public class AddBandwidthPackageResourcesRequest extends AbstractModel{
     private String BandwidthPackageId;
 
     /**
-    * The type of the bandwidth package. Valid value: 'BGP'. Internal resources will be represented by 'BGP IP'.
+    * The network type of the bandwidth package. Valid value: `BGP`, indicating that the internal resource is a BGP IP.
     */
     @SerializedName("NetworkType")
     @Expose
     private String NetworkType;
 
     /**
-    * The resource type, including 'Address' and 'LoadBalance'.
+    * The resource type, including `Address` and `LoadBalance`.
     */
     @SerializedName("ResourceType")
     @Expose
     private String ResourceType;
 
     /**
-    * The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'.
+    * The protocol type of the bandwidth package. Valid values: `ipv4` and `ipv6`.
     */
     @SerializedName("Protocol")
     @Expose
@@ -90,48 +90,48 @@ public class AddBandwidthPackageResourcesRequest extends AbstractModel{
     }
 
     /**
-     * Get The type of the bandwidth package. Valid value: 'BGP'. Internal resources will be represented by 'BGP IP'. 
-     * @return NetworkType The type of the bandwidth package. Valid value: 'BGP'. Internal resources will be represented by 'BGP IP'.
+     * Get The network type of the bandwidth package. Valid value: `BGP`, indicating that the internal resource is a BGP IP. 
+     * @return NetworkType The network type of the bandwidth package. Valid value: `BGP`, indicating that the internal resource is a BGP IP.
      */
     public String getNetworkType() {
         return this.NetworkType;
     }
 
     /**
-     * Set The type of the bandwidth package. Valid value: 'BGP'. Internal resources will be represented by 'BGP IP'.
-     * @param NetworkType The type of the bandwidth package. Valid value: 'BGP'. Internal resources will be represented by 'BGP IP'.
+     * Set The network type of the bandwidth package. Valid value: `BGP`, indicating that the internal resource is a BGP IP.
+     * @param NetworkType The network type of the bandwidth package. Valid value: `BGP`, indicating that the internal resource is a BGP IP.
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;
     }
 
     /**
-     * Get The resource type, including 'Address' and 'LoadBalance'. 
-     * @return ResourceType The resource type, including 'Address' and 'LoadBalance'.
+     * Get The resource type, including `Address` and `LoadBalance`. 
+     * @return ResourceType The resource type, including `Address` and `LoadBalance`.
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set The resource type, including 'Address' and 'LoadBalance'.
-     * @param ResourceType The resource type, including 'Address' and 'LoadBalance'.
+     * Set The resource type, including `Address` and `LoadBalance`.
+     * @param ResourceType The resource type, including `Address` and `LoadBalance`.
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'. 
-     * @return Protocol The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'.
+     * Get The protocol type of the bandwidth package. Valid values: `ipv4` and `ipv6`. 
+     * @return Protocol The protocol type of the bandwidth package. Valid values: `ipv4` and `ipv6`.
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'.
-     * @param Protocol The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'.
+     * Set The protocol type of the bandwidth package. Valid values: `ipv4` and `ipv6`.
+     * @param Protocol The protocol type of the bandwidth package. Valid values: `ipv4` and `ipv6`.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

@@ -51,6 +51,13 @@ public class ZoneInfo extends AbstractModel{
     private String ZoneState;
 
     /**
+    * Whether the availability zone supports IPv6 address access
+    */
+    @SerializedName("ZoneSupportIpv6")
+    @Expose
+    private Long ZoneSupportIpv6;
+
+    /**
      * Get AZ abbreviation 
      * @return Zone AZ abbreviation
      */
@@ -115,6 +122,22 @@ public class ZoneInfo extends AbstractModel{
     }
 
     /**
+     * Get Whether the availability zone supports IPv6 address access 
+     * @return ZoneSupportIpv6 Whether the availability zone supports IPv6 address access
+     */
+    public Long getZoneSupportIpv6() {
+        return this.ZoneSupportIpv6;
+    }
+
+    /**
+     * Set Whether the availability zone supports IPv6 address access
+     * @param ZoneSupportIpv6 Whether the availability zone supports IPv6 address access
+     */
+    public void setZoneSupportIpv6(Long ZoneSupportIpv6) {
+        this.ZoneSupportIpv6 = ZoneSupportIpv6;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class ZoneInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "ZoneState", this.ZoneState);
+        this.setParamSimple(map, prefix + "ZoneSupportIpv6", this.ZoneSupportIpv6);
 
     }
 }

@@ -44,7 +44,7 @@ public class DescribeFlowLogsRequest extends AbstractModel{
     private String FlowLogName;
 
     /**
-    * The type of resource to which the flow log belongs. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
+    * The resource type of the flow log. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
     */
     @SerializedName("ResourceType")
     @Expose
@@ -58,7 +58,7 @@ public class DescribeFlowLogsRequest extends AbstractModel{
     private String ResourceId;
 
     /**
-    * The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
+    * Type of flow logs to be collected. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
     */
     @SerializedName("TrafficType")
     @Expose
@@ -86,7 +86,7 @@ public class DescribeFlowLogsRequest extends AbstractModel{
     private String OrderField;
 
     /**
-    * In ascending (asc) or descending (desc) order. Default value: 'desc'.
+    * In ascending (`asc`) or descending (`desc`) order. Default value: 'desc'.
     */
     @SerializedName("OrderDirection")
     @Expose
@@ -100,7 +100,7 @@ public class DescribeFlowLogsRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * The number of rows per page. Default vaue: 10.
+    * The number of rows per page. Default value: 10.
     */
     @SerializedName("Limit")
     @Expose
@@ -164,16 +164,16 @@ public class DescribeFlowLogsRequest extends AbstractModel{
     }
 
     /**
-     * Get The type of resource to which the flow log belongs. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'. 
-     * @return ResourceType The type of resource to which the flow log belongs. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
+     * Get The resource type of the flow log. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'. 
+     * @return ResourceType The resource type of the flow log. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set The type of resource to which the flow log belongs. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
-     * @param ResourceType The type of resource to which the flow log belongs. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
+     * Set The resource type of the flow log. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
+     * @param ResourceType The resource type of the flow log. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
@@ -196,16 +196,16 @@ public class DescribeFlowLogsRequest extends AbstractModel{
     }
 
     /**
-     * Get The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'. 
-     * @return TrafficType The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
+     * Get Type of flow logs to be collected. Valid values: 'ACCEPT', 'REJECT' and 'ALL'. 
+     * @return TrafficType Type of flow logs to be collected. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
      */
     public String getTrafficType() {
         return this.TrafficType;
     }
 
     /**
-     * Set The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
-     * @param TrafficType The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
+     * Set Type of flow logs to be collected. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
+     * @param TrafficType Type of flow logs to be collected. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
      */
     public void setTrafficType(String TrafficType) {
         this.TrafficType = TrafficType;
@@ -260,16 +260,16 @@ public class DescribeFlowLogsRequest extends AbstractModel{
     }
 
     /**
-     * Get In ascending (asc) or descending (desc) order. Default value: 'desc'. 
-     * @return OrderDirection In ascending (asc) or descending (desc) order. Default value: 'desc'.
+     * Get In ascending (`asc`) or descending (`desc`) order. Default value: 'desc'. 
+     * @return OrderDirection In ascending (`asc`) or descending (`desc`) order. Default value: 'desc'.
      */
     public String getOrderDirection() {
         return this.OrderDirection;
     }
 
     /**
-     * Set In ascending (asc) or descending (desc) order. Default value: 'desc'.
-     * @param OrderDirection In ascending (asc) or descending (desc) order. Default value: 'desc'.
+     * Set In ascending (`asc`) or descending (`desc`) order. Default value: 'desc'.
+     * @param OrderDirection In ascending (`asc`) or descending (`desc`) order. Default value: 'desc'.
      */
     public void setOrderDirection(String OrderDirection) {
         this.OrderDirection = OrderDirection;
@@ -292,16 +292,16 @@ public class DescribeFlowLogsRequest extends AbstractModel{
     }
 
     /**
-     * Get The number of rows per page. Default vaue: 10. 
-     * @return Limit The number of rows per page. Default vaue: 10.
+     * Get The number of rows per page. Default value: 10. 
+     * @return Limit The number of rows per page. Default value: 10.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The number of rows per page. Default vaue: 10.
-     * @param Limit The number of rows per page. Default vaue: 10.
+     * Set The number of rows per page. Default value: 10.
+     * @param Limit The number of rows per page. Default value: 10.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

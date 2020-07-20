@@ -44,14 +44,14 @@ public class DescribeBandwidthPackagesRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
-    * Queries the bandwidth package offset.
+    * Offset of the query results
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Queries the limit on the number of bandwidth packages.
+    * Max number of the bandwidth packages to be returned.
     */
     @SerializedName("Limit")
     @Expose
@@ -118,32 +118,32 @@ public class DescribeBandwidthPackagesRequest extends AbstractModel{
     }
 
     /**
-     * Get Queries the bandwidth package offset. 
-     * @return Offset Queries the bandwidth package offset.
+     * Get Offset of the query results 
+     * @return Offset Offset of the query results
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Queries the bandwidth package offset.
-     * @param Offset Queries the bandwidth package offset.
+     * Set Offset of the query results
+     * @param Offset Offset of the query results
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Queries the limit on the number of bandwidth packages. 
-     * @return Limit Queries the limit on the number of bandwidth packages.
+     * Get Max number of the bandwidth packages to be returned. 
+     * @return Limit Max number of the bandwidth packages to be returned.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Queries the limit on the number of bandwidth packages.
-     * @param Limit Queries the limit on the number of bandwidth packages.
+     * Set Max number of the bandwidth packages to be returned.
+     * @param Limit Max number of the bandwidth packages to be returned.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

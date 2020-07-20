@@ -128,7 +128,7 @@ public class CreateDBInstancesRequest extends AbstractModel{
     private String Name;
 
     /**
-    * 
+    * Whether to support IPv6 address access. Valid values: 1 (yes), 0 (no)
     */
     @SerializedName("NeedSupportIpv6")
     @Expose
@@ -375,16 +375,16 @@ public class CreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return NeedSupportIpv6 
+     * Get Whether to support IPv6 address access. Valid values: 1 (yes), 0 (no) 
+     * @return NeedSupportIpv6 Whether to support IPv6 address access. Valid values: 1 (yes), 0 (no)
      */
     public Long getNeedSupportIpv6() {
         return this.NeedSupportIpv6;
     }
 
     /**
-     * Set 
-     * @param NeedSupportIpv6 
+     * Set Whether to support IPv6 address access. Valid values: 1 (yes), 0 (no)
+     * @param NeedSupportIpv6 Whether to support IPv6 address access. Valid values: 1 (yes), 0 (no)
      */
     public void setNeedSupportIpv6(Long NeedSupportIpv6) {
         this.NeedSupportIpv6 = NeedSupportIpv6;

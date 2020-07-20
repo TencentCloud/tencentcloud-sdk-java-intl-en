@@ -23,9 +23,33 @@ import java.util.HashMap;
 public class LiveStreamAiRecognitionResultInfo extends AbstractModel{
 
     /**
+    * 
+    */
+    @SerializedName("ResultSet")
+    @Expose
+    private LiveStreamAiRecognitionResultItem [] ResultSet;
+
+    /**
+     * Get  
+     * @return ResultSet 
+     */
+    public LiveStreamAiRecognitionResultItem [] getResultSet() {
+        return this.ResultSet;
+    }
+
+    /**
+     * Set 
+     * @param ResultSet 
+     */
+    public void setResultSet(LiveStreamAiRecognitionResultItem [] ResultSet) {
+        this.ResultSet = ResultSet;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "ResultSet.", this.ResultSet);
 
     }
 }

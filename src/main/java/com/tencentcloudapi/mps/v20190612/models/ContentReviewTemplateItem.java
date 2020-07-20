@@ -68,6 +68,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private PoliticalConfigureInfo PoliticalConfigure;
 
     /**
+    * Control parameter of prohibited information detection. Prohibited information includes:
+<li>Abusive;</li>
+<li>Drug-related.</li>
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ProhibitedConfigure")
+    @Expose
+    private ProhibitedConfigureInfo ProhibitedConfigure;
+
+    /**
     * Custom content audit control parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -198,6 +208,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Control parameter of prohibited information detection. Prohibited information includes:
+<li>Abusive;</li>
+<li>Drug-related.</li>
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return ProhibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
+<li>Abusive;</li>
+<li>Drug-related.</li>
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public ProhibitedConfigureInfo getProhibitedConfigure() {
+        return this.ProhibitedConfigure;
+    }
+
+    /**
+     * Set Control parameter of prohibited information detection. Prohibited information includes:
+<li>Abusive;</li>
+<li>Drug-related.</li>
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param ProhibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
+<li>Abusive;</li>
+<li>Drug-related.</li>
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setProhibitedConfigure(ProhibitedConfigureInfo ProhibitedConfigure) {
+        this.ProhibitedConfigure = ProhibitedConfigure;
+    }
+
+    /**
      * Get Custom content audit control parameter.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return UserDefineConfigure Custom content audit control parameter.
@@ -259,6 +297,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "PornConfigure.", this.PornConfigure);
         this.setParamObj(map, prefix + "TerrorismConfigure.", this.TerrorismConfigure);
         this.setParamObj(map, prefix + "PoliticalConfigure.", this.PoliticalConfigure);
+        this.setParamObj(map, prefix + "ProhibitedConfigure.", this.ProhibitedConfigure);
         this.setParamObj(map, prefix + "UserDefineConfigure.", this.UserDefineConfigure);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);

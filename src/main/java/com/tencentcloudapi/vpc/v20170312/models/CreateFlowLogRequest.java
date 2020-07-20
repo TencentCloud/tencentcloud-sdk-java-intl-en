@@ -51,7 +51,7 @@ public class CreateFlowLogRequest extends AbstractModel{
     private String ResourceId;
 
     /**
-    * The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
+    * Type of the flow logs to be collected. Valid values: `ACCEPT`, `REJECT` and `ALL`.
     */
     @SerializedName("TrafficType")
     @Expose
@@ -136,16 +136,16 @@ public class CreateFlowLogRequest extends AbstractModel{
     }
 
     /**
-     * Get The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'. 
-     * @return TrafficType The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
+     * Get Type of the flow logs to be collected. Valid values: `ACCEPT`, `REJECT` and `ALL`. 
+     * @return TrafficType Type of the flow logs to be collected. Valid values: `ACCEPT`, `REJECT` and `ALL`.
      */
     public String getTrafficType() {
         return this.TrafficType;
     }
 
     /**
-     * Set The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
-     * @param TrafficType The collection type of the flow log. Valid values: 'ACCEPT', 'REJECT' and 'ALL'.
+     * Set Type of the flow logs to be collected. Valid values: `ACCEPT`, `REJECT` and `ALL`.
+     * @param TrafficType Type of the flow logs to be collected. Valid values: `ACCEPT`, `REJECT` and `ALL`.
      */
     public void setTrafficType(String TrafficType) {
         this.TrafficType = TrafficType;

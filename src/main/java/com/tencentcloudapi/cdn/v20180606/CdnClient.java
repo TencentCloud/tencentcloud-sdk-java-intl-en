@@ -110,6 +110,24 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query billing data details.
+     * @param req DescribeBillingDataRequest
+     * @return DescribeBillingDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBillingDataResponse DescribeBillingData(DescribeBillingDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBillingDataResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBillingDataResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeBillingData"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (DescribeCdnData) is used to query CDN real-time access monitoring data and supports the following metrics:
 
 + Traffic (in bytes)
@@ -227,6 +245,24 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the status of the edge servers and intermediate nodes on the domain name acceleration platform. Note: edge servers are not generally available. This API can only be used by whitelisted accounts.
+     * @param req DescribeIpStatusRequest
+     * @return DescribeIpStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIpStatusResponse DescribeIpStatus(DescribeIpStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeIpStatusResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeIpStatusResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeIpStatus"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (DescribeIpVisit) is used to query the number of users who remain active for 5 minutes and the detailed number of daily active users.
 
 + Number of users who remain active for 5 minutes: Collects deduplicated statistics based on client IP addresses in the log with the 5-minute granularity.
@@ -312,6 +348,24 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the purge usage quota and daily available usage for an account.
+     * @param req DescribePurgeQuotaRequest
+     * @return DescribePurgeQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePurgeQuotaResponse DescribePurgeQuota(DescribePurgeQuotaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePurgeQuotaResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePurgeQuotaResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribePurgeQuota"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the record and progress of URL or directory purge tasks submitted via the `PurgePathCache` or `PurgeUrlsCache` APIs.
      * @param req DescribePurgeTasksRequest
      * @return DescribePurgeTasksResponse
@@ -323,6 +377,24 @@ public class CdnClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribePurgeTasksResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribePurgeTasks"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the prefetch quota and daily available usage.
+     * @param req DescribePushQuotaRequest
+     * @return DescribePushQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePushQuotaResponse DescribePushQuota(DescribePushQuotaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePushQuotaResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePushQuotaResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribePushQuota"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

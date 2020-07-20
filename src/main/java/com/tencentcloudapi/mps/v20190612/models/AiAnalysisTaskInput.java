@@ -23,9 +23,33 @@ import java.util.HashMap;
 public class AiAnalysisTaskInput extends AbstractModel{
 
     /**
+    * 
+    */
+    @SerializedName("Definition")
+    @Expose
+    private Long Definition;
+
+    /**
+     * Get  
+     * @return Definition 
+     */
+    public Long getDefinition() {
+        return this.Definition;
+    }
+
+    /**
+     * Set 
+     * @param Definition 
+     */
+    public void setDefinition(Long Definition) {
+        this.Definition = Definition;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Definition", this.Definition);
 
     }
 }

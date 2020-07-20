@@ -32,11 +32,15 @@ public class PoliticalImgReviewTemplateInfo extends AbstractModel{
     private String Switch;
 
     /**
-    * Filter tag for politically sensitive information detection in image. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
-<li>violation_photo: Violating photo;</li>
-<li>politician: Politically sensitive figure;</li>
-<li>entertainment: Entertainment celebrity;</li>
-<li>sport: Sports celebrity.</li>
+    * Filter tags for politically sensitive information detection of video images. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
+<li>violation_photo: violating photo;</li>
+<li>politician: sensitive figure;</li>
+<li>entertainment: entertainment celebrity;</li>
+<li>sport: sports figure;</li>
+<li>entrepreneur: business figure;</li>
+<li>scholar: educator;</li>
+<li>celebrity: public-known figure;</li>
+<li>military: military figure.</li>
     */
     @SerializedName("LabelSet")
     @Expose
@@ -81,32 +85,48 @@ public class PoliticalImgReviewTemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get Filter tag for politically sensitive information detection in image. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
-<li>violation_photo: Violating photo;</li>
-<li>politician: Politically sensitive figure;</li>
-<li>entertainment: Entertainment celebrity;</li>
-<li>sport: Sports celebrity.</li> 
-     * @return LabelSet Filter tag for politically sensitive information detection in image. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
-<li>violation_photo: Violating photo;</li>
-<li>politician: Politically sensitive figure;</li>
-<li>entertainment: Entertainment celebrity;</li>
-<li>sport: Sports celebrity.</li>
+     * Get Filter tags for politically sensitive information detection of video images. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
+<li>violation_photo: violating photo;</li>
+<li>politician: sensitive figure;</li>
+<li>entertainment: entertainment celebrity;</li>
+<li>sport: sports figure;</li>
+<li>entrepreneur: business figure;</li>
+<li>scholar: educator;</li>
+<li>celebrity: public-known figure;</li>
+<li>military: military figure.</li> 
+     * @return LabelSet Filter tags for politically sensitive information detection of video images. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
+<li>violation_photo: violating photo;</li>
+<li>politician: sensitive figure;</li>
+<li>entertainment: entertainment celebrity;</li>
+<li>sport: sports figure;</li>
+<li>entrepreneur: business figure;</li>
+<li>scholar: educator;</li>
+<li>celebrity: public-known figure;</li>
+<li>military: military figure.</li>
      */
     public String [] getLabelSet() {
         return this.LabelSet;
     }
 
     /**
-     * Set Filter tag for politically sensitive information detection in image. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
-<li>violation_photo: Violating photo;</li>
-<li>politician: Politically sensitive figure;</li>
-<li>entertainment: Entertainment celebrity;</li>
-<li>sport: Sports celebrity.</li>
-     * @param LabelSet Filter tag for politically sensitive information detection in image. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
-<li>violation_photo: Violating photo;</li>
-<li>politician: Politically sensitive figure;</li>
-<li>entertainment: Entertainment celebrity;</li>
-<li>sport: Sports celebrity.</li>
+     * Set Filter tags for politically sensitive information detection of video images. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
+<li>violation_photo: violating photo;</li>
+<li>politician: sensitive figure;</li>
+<li>entertainment: entertainment celebrity;</li>
+<li>sport: sports figure;</li>
+<li>entrepreneur: business figure;</li>
+<li>scholar: educator;</li>
+<li>celebrity: public-known figure;</li>
+<li>military: military figure.</li>
+     * @param LabelSet Filter tags for politically sensitive information detection of video images. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
+<li>violation_photo: violating photo;</li>
+<li>politician: sensitive figure;</li>
+<li>entertainment: entertainment celebrity;</li>
+<li>sport: sports figure;</li>
+<li>entrepreneur: business figure;</li>
+<li>scholar: educator;</li>
+<li>celebrity: public-known figure;</li>
+<li>military: military figure.</li>
      */
     public void setLabelSet(String [] LabelSet) {
         this.LabelSet = LabelSet;

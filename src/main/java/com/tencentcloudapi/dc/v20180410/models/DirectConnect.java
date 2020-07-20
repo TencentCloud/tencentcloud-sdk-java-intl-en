@@ -227,6 +227,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ChargeState;
 
     /**
+    * Connection activation time.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
      * Get Connection ID. 
      * @return DirectConnectId Connection ID.
      */
@@ -731,6 +739,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Connection activation time.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return StartTime Connection activation time.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set Connection activation time.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param StartTime Connection activation time.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -760,6 +788,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "AccessPointType", this.AccessPointType);
         this.setParamSimple(map, prefix + "IdcCity", this.IdcCity);
         this.setParamSimple(map, prefix + "ChargeState", this.ChargeState);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
 
     }
 }

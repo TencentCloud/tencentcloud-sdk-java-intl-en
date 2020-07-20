@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class Resource extends AbstractModel{
 
     /**
-    * The bandwidth package resource type, including 'Address', and 'LoadBalance'
+    * The bandwidth package resource type, including `Address`, and `LoadBalance`
     */
     @SerializedName("ResourceType")
     @Expose
     private String ResourceType;
 
     /**
-    * The bandwidth package ID, such as 'eip-xxxx' and 'lb-xxxx'.
+    * The bandwidth package ID, such as `eip-xxxx` and `lb-xxxx`.
     */
     @SerializedName("ResourceId")
     @Expose
@@ -44,32 +44,32 @@ public class Resource extends AbstractModel{
     private String AddressIp;
 
     /**
-     * Get The bandwidth package resource type, including 'Address', and 'LoadBalance' 
-     * @return ResourceType The bandwidth package resource type, including 'Address', and 'LoadBalance'
+     * Get The bandwidth package resource type, including `Address`, and `LoadBalance` 
+     * @return ResourceType The bandwidth package resource type, including `Address`, and `LoadBalance`
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set The bandwidth package resource type, including 'Address', and 'LoadBalance'
-     * @param ResourceType The bandwidth package resource type, including 'Address', and 'LoadBalance'
+     * Set The bandwidth package resource type, including `Address`, and `LoadBalance`
+     * @param ResourceType The bandwidth package resource type, including `Address`, and `LoadBalance`
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get The bandwidth package ID, such as 'eip-xxxx' and 'lb-xxxx'. 
-     * @return ResourceId The bandwidth package ID, such as 'eip-xxxx' and 'lb-xxxx'.
+     * Get The bandwidth package ID, such as `eip-xxxx` and `lb-xxxx`. 
+     * @return ResourceId The bandwidth package ID, such as `eip-xxxx` and `lb-xxxx`.
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set The bandwidth package ID, such as 'eip-xxxx' and 'lb-xxxx'.
-     * @param ResourceId The bandwidth package ID, such as 'eip-xxxx' and 'lb-xxxx'.
+     * Set The bandwidth package ID, such as `eip-xxxx` and `lb-xxxx`.
+     * @param ResourceId The bandwidth package ID, such as `eip-xxxx` and `lb-xxxx`.
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
