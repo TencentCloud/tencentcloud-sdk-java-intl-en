@@ -110,6 +110,16 @@ public class SearchMediaRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * File type:
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li>
+    */
+    @SerializedName("Categories")
+    @Expose
+    private String [] Categories;
+
+    /**
     * [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
     */
     @SerializedName("SubAppId")
@@ -333,6 +343,34 @@ public class SearchMediaRequest extends AbstractModel{
     }
 
     /**
+     * Get File type:
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li> 
+     * @return Categories File type:
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li>
+     */
+    public String [] getCategories() {
+        return this.Categories;
+    }
+
+    /**
+     * Set File type:
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li>
+     * @param Categories File type:
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li>
+     */
+    public void setCategories(String [] Categories) {
+        this.Categories = Categories;
+    }
+
+    /**
      * Get [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty. 
      * @return SubAppId [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
@@ -363,6 +401,7 @@ public class SearchMediaRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Sort.", this.Sort);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArraySimple(map, prefix + "Categories.", this.Categories);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }

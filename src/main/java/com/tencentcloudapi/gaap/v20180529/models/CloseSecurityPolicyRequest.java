@@ -30,6 +30,13 @@ public class CloseSecurityPolicyRequest extends AbstractModel{
     private String ProxyId;
 
     /**
+    * Security group policy ID
+    */
+    @SerializedName("PolicyId")
+    @Expose
+    private String PolicyId;
+
+    /**
      * Get Connection ID 
      * @return ProxyId Connection ID
      */
@@ -46,10 +53,27 @@ public class CloseSecurityPolicyRequest extends AbstractModel{
     }
 
     /**
+     * Get Security group policy ID 
+     * @return PolicyId Security group policy ID
+     */
+    public String getPolicyId() {
+        return this.PolicyId;
+    }
+
+    /**
+     * Set Security group policy ID
+     * @param PolicyId Security group policy ID
+     */
+    public void setPolicyId(String PolicyId) {
+        this.PolicyId = PolicyId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProxyId", this.ProxyId);
+        this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
 
     }
 }

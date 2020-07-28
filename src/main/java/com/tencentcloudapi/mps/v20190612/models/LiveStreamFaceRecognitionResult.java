@@ -59,7 +59,7 @@ public class LiveStreamFaceRecognitionResult extends AbstractModel{
     private Float EndPtsTime;
 
     /**
-    * Confidence of recognized segment. Value range: 0–100.
+    * Confidence of recognized segment. Value range: 0-100.
     */
     @SerializedName("Confidence")
     @Expose
@@ -157,16 +157,16 @@ public class LiveStreamFaceRecognitionResult extends AbstractModel{
     }
 
     /**
-     * Get Confidence of recognized segment. Value range: 0–100. 
-     * @return Confidence Confidence of recognized segment. Value range: 0–100.
+     * Get Confidence of recognized segment. Value range: 0-100. 
+     * @return Confidence Confidence of recognized segment. Value range: 0-100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Confidence of recognized segment. Value range: 0–100.
-     * @param Confidence Confidence of recognized segment. Value range: 0–100.
+     * Set Confidence of recognized segment. Value range: 0-100.
+     * @param Confidence Confidence of recognized segment. Value range: 0-100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;

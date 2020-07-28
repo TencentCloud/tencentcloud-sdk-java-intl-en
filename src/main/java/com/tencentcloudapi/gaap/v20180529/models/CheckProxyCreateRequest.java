@@ -51,6 +51,13 @@ public class CheckProxyCreateRequest extends AbstractModel{
     private Long Concurrent;
 
     /**
+    * Connection group ID that needs to be entered when a connection is created in a connection group
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
+
+    /**
      * Get Access (acceleration) region of the connection. The value can be obtained via the DescribeAccessRegionsByDestRegion API. 
      * @return AccessRegion Access (acceleration) region of the connection. The value can be obtained via the DescribeAccessRegionsByDestRegion API.
      */
@@ -115,6 +122,22 @@ public class CheckProxyCreateRequest extends AbstractModel{
     }
 
     /**
+     * Get Connection group ID that needs to be entered when a connection is created in a connection group 
+     * @return GroupId Connection group ID that needs to be entered when a connection is created in a connection group
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set Connection group ID that needs to be entered when a connection is created in a connection group
+     * @param GroupId Connection group ID that needs to be entered when a connection is created in a connection group
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class CheckProxyCreateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RealServerRegion", this.RealServerRegion);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         this.setParamSimple(map, prefix + "Concurrent", this.Concurrent);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 
     }
 }

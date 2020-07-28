@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeFlowLogsRequest extends AbstractModel{
 
     /**
-    * The VPC ID or the unified ID. We recommend you use the unified ID.
+    * ID of the VPC instance
     */
     @SerializedName("VpcId")
     @Expose
@@ -116,16 +116,16 @@ public class DescribeFlowLogsRequest extends AbstractModel{
     private Filter Filters;
 
     /**
-     * Get The VPC ID or the unified ID. We recommend you use the unified ID. 
-     * @return VpcId The VPC ID or the unified ID. We recommend you use the unified ID.
+     * Get ID of the VPC instance 
+     * @return VpcId ID of the VPC instance
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set The VPC ID or the unified ID. We recommend you use the unified ID.
-     * @param VpcId The VPC ID or the unified ID. We recommend you use the unified ID.
+     * Set ID of the VPC instance
+     * @param VpcId ID of the VPC instance
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;

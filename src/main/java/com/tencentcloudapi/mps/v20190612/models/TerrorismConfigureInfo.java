@@ -31,6 +31,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private TerrorismImgReviewTemplateInfo ImgReviewInfo;
 
     /**
+    * 
+    */
+    @SerializedName("OcrReviewInfo")
+    @Expose
+    private TerrorismOcrReviewTemplateInfo OcrReviewInfo;
+
+    /**
      * Get Control parameter of a terrorism information detection in image task.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ImgReviewInfo Control parameter of a terrorism information detection in image task.
@@ -51,10 +58,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get  
+     * @return OcrReviewInfo 
+     */
+    public TerrorismOcrReviewTemplateInfo getOcrReviewInfo() {
+        return this.OcrReviewInfo;
+    }
+
+    /**
+     * Set 
+     * @param OcrReviewInfo 
+     */
+    public void setOcrReviewInfo(TerrorismOcrReviewTemplateInfo OcrReviewInfo) {
+        this.OcrReviewInfo = OcrReviewInfo;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "ImgReviewInfo.", this.ImgReviewInfo);
+        this.setParamObj(map, prefix + "OcrReviewInfo.", this.OcrReviewInfo);
 
     }
 }

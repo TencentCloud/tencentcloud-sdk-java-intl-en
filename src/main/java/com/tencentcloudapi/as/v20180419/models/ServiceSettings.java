@@ -30,6 +30,13 @@ public class ServiceSettings extends AbstractModel{
     private Boolean ReplaceMonitorUnhealthy;
 
     /**
+    * 
+    */
+    @SerializedName("ScalingMode")
+    @Expose
+    private String ScalingMode;
+
+    /**
      * Get Enables unhealthy instance replacement. If this feature is enabled, AS will replace instances that are flagged as unhealthy by Cloud Monitor. If this parameter is not specified, the value will be False by default. 
      * @return ReplaceMonitorUnhealthy Enables unhealthy instance replacement. If this feature is enabled, AS will replace instances that are flagged as unhealthy by Cloud Monitor. If this parameter is not specified, the value will be False by default.
      */
@@ -46,10 +53,27 @@ public class ServiceSettings extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return ScalingMode 
+     */
+    public String getScalingMode() {
+        return this.ScalingMode;
+    }
+
+    /**
+     * Set 
+     * @param ScalingMode 
+     */
+    public void setScalingMode(String ScalingMode) {
+        this.ScalingMode = ScalingMode;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ReplaceMonitorUnhealthy", this.ReplaceMonitorUnhealthy);
+        this.setParamSimple(map, prefix + "ScalingMode", this.ScalingMode);
 
     }
 }

@@ -30,7 +30,7 @@ public class Certificate extends AbstractModel{
     private String CertificateId;
 
     /**
-    * Certificate name; It’s an old parameter, please switch to CertificateAlias.
+    * Certificate name; It's an old parameter, please switch to CertificateAlias.
     */
     @SerializedName("CertificateName")
     @Expose
@@ -107,16 +107,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Certificate name; It’s an old parameter, please switch to CertificateAlias. 
-     * @return CertificateName Certificate name; It’s an old parameter, please switch to CertificateAlias.
+     * Get Certificate name; It's an old parameter, please switch to CertificateAlias. 
+     * @return CertificateName Certificate name; It's an old parameter, please switch to CertificateAlias.
      */
     public String getCertificateName() {
         return this.CertificateName;
     }
 
     /**
-     * Set Certificate name; It’s an old parameter, please switch to CertificateAlias.
-     * @param CertificateName Certificate name; It’s an old parameter, please switch to CertificateAlias.
+     * Set Certificate name; It's an old parameter, please switch to CertificateAlias.
+     * @param CertificateName Certificate name; It's an old parameter, please switch to CertificateAlias.
      */
     public void setCertificateName(String CertificateName) {
         this.CertificateName = CertificateName;

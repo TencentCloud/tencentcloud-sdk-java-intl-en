@@ -37,6 +37,20 @@ public class ModifyInstanceParamRequest extends AbstractModel{
     private Parameter [] ParamList;
 
     /**
+    * 
+    */
+    @SerializedName("TemplateId")
+    @Expose
+    private Long TemplateId;
+
+    /**
+    * 
+    */
+    @SerializedName("WaitSwitch")
+    @Expose
+    private Long WaitSwitch;
+
+    /**
      * Get List of short instance IDs. 
      * @return InstanceIds List of short instance IDs.
      */
@@ -69,11 +83,45 @@ public class ModifyInstanceParamRequest extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return TemplateId 
+     */
+    public Long getTemplateId() {
+        return this.TemplateId;
+    }
+
+    /**
+     * Set 
+     * @param TemplateId 
+     */
+    public void setTemplateId(Long TemplateId) {
+        this.TemplateId = TemplateId;
+    }
+
+    /**
+     * Get  
+     * @return WaitSwitch 
+     */
+    public Long getWaitSwitch() {
+        return this.WaitSwitch;
+    }
+
+    /**
+     * Set 
+     * @param WaitSwitch 
+     */
+    public void setWaitSwitch(Long WaitSwitch) {
+        this.WaitSwitch = WaitSwitch;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamArrayObj(map, prefix + "ParamList.", this.ParamList);
+        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
+        this.setParamSimple(map, prefix + "WaitSwitch", this.WaitSwitch);
 
     }
 }

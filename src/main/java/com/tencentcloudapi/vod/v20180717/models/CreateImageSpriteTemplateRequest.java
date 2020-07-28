@@ -62,6 +62,23 @@ public class CreateImageSpriteTemplateRequest extends AbstractModel{
     private String Name;
 
     /**
+    * 
+    */
+    @SerializedName("Comment")
+    @Expose
+    private String Comment;
+
+    /**
+    * Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
+<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
+<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
+Default value: black.
+    */
+    @SerializedName("FillType")
+    @Expose
+    private String FillType;
+
+    /**
     * Maximum value of the width (or long side) of a subimage in an image sprite in px. Value range: 0 and [128, 4,096].
 <li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
 <li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
@@ -101,16 +118,6 @@ Default value: open.
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
-
-    /**
-    * Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black.
-    */
-    @SerializedName("FillType")
-    @Expose
-    private String FillType;
 
     /**
      * Get Sampling type. Valid values:
@@ -206,6 +213,50 @@ Default value: black.
      */
     public void setName(String Name) {
         this.Name = Name;
+    }
+
+    /**
+     * Get  
+     * @return Comment 
+     */
+    public String getComment() {
+        return this.Comment;
+    }
+
+    /**
+     * Set 
+     * @param Comment 
+     */
+    public void setComment(String Comment) {
+        this.Comment = Comment;
+    }
+
+    /**
+     * Get Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
+<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
+<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
+Default value: black. 
+     * @return FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
+<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
+<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
+Default value: black.
+     */
+    public String getFillType() {
+        return this.FillType;
+    }
+
+    /**
+     * Set Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
+<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
+<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
+Default value: black.
+     * @param FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
+<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
+<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
+Default value: black.
+     */
+    public void setFillType(String FillType) {
+        this.FillType = FillType;
     }
 
     /**
@@ -325,34 +376,6 @@ Default value: open.
     }
 
     /**
-     * Get Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black. 
-     * @return FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black.
-     */
-    public String getFillType() {
-        return this.FillType;
-    }
-
-    /**
-     * Set Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black.
-     * @param FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black.
-     */
-    public void setFillType(String FillType) {
-        this.FillType = FillType;
-    }
-
-    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -361,11 +384,12 @@ Default value: black.
         this.setParamSimple(map, prefix + "RowCount", this.RowCount);
         this.setParamSimple(map, prefix + "ColumnCount", this.ColumnCount);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamSimple(map, prefix + "FillType", this.FillType);
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
         this.setParamSimple(map, prefix + "ResolutionAdaptive", this.ResolutionAdaptive);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
-        this.setParamSimple(map, prefix + "FillType", this.FillType);
 
     }
 }

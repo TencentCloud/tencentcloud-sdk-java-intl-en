@@ -37,7 +37,7 @@ public class AiRecognitionTaskSegmentSegmentItem extends AbstractModel{
     private String SegmentUrl;
 
     /**
-    * Confidence of split segment. Value range: 0–100.
+    * Confidence of split segment. Value range: 0-100.
     */
     @SerializedName("Confidence")
     @Expose
@@ -104,16 +104,16 @@ public class AiRecognitionTaskSegmentSegmentItem extends AbstractModel{
     }
 
     /**
-     * Get Confidence of split segment. Value range: 0–100. 
-     * @return Confidence Confidence of split segment. Value range: 0–100.
+     * Get Confidence of split segment. Value range: 0-100. 
+     * @return Confidence Confidence of split segment. Value range: 0-100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Confidence of split segment. Value range: 0–100.
-     * @param Confidence Confidence of split segment. Value range: 0–100.
+     * Set Confidence of split segment. Value range: 0-100.
+     * @param Confidence Confidence of split segment. Value range: 0-100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;

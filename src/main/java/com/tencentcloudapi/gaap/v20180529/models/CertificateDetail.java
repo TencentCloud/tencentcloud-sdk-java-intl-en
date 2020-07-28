@@ -84,7 +84,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long EndTime;
 
     /**
-    * Common name of the certificate’s issuer.
+    * Common name of the certificate's issuer.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IssuerCN")
@@ -248,9 +248,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Common name of the certificate’s issuer.
+     * Get Common name of the certificate's issuer.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IssuerCN Common name of the certificate’s issuer.
+     * @return IssuerCN Common name of the certificate's issuer.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIssuerCN() {
@@ -258,9 +258,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Common name of the certificate’s issuer.
+     * Set Common name of the certificate's issuer.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IssuerCN Common name of the certificate’s issuer.
+     * @param IssuerCN Common name of the certificate's issuer.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIssuerCN(String IssuerCN) {

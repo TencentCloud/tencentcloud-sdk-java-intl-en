@@ -51,7 +51,7 @@ public class HTTPListener extends AbstractModel{
     private Long CreateTime;
 
     /**
-    * Listener protocol
+    * Listener protocol. Valid values: HTTP, HTTPS. The value `HTTP` is used for this structure
     */
     @SerializedName("Protocol")
     @Expose
@@ -134,16 +134,16 @@ public class HTTPListener extends AbstractModel{
     }
 
     /**
-     * Get Listener protocol 
-     * @return Protocol Listener protocol
+     * Get Listener protocol. Valid values: HTTP, HTTPS. The value `HTTP` is used for this structure 
+     * @return Protocol Listener protocol. Valid values: HTTP, HTTPS. The value `HTTP` is used for this structure
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Listener protocol
-     * @param Protocol Listener protocol
+     * Set Listener protocol. Valid values: HTTP, HTTPS. The value `HTTP` is used for this structure
+     * @param Protocol Listener protocol. Valid values: HTTP, HTTPS. The value `HTTP` is used for this structure
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

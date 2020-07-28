@@ -37,35 +37,35 @@ public class InquiryPriceCreateProxyRequest extends AbstractModel{
     private Long Bandwidth;
 
     /**
-    * Origin server region name. It’s an old parameter, please switch to RealServerRegion.
+    * Origin server region name. It's an old parameter, please switch to RealServerRegion.
     */
     @SerializedName("DestRegion")
     @Expose
     private String DestRegion;
 
     /**
-    * Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It’s an old parameter, please switch to Concurrent.
+    * Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It's an old parameter, please switch to Concurrent.
     */
     @SerializedName("Concurrency")
     @Expose
     private Long Concurrency;
 
     /**
-    * Origin server region name; It’s a new parameter.
+    * Origin server region name; It's a new parameter.
     */
     @SerializedName("RealServerRegion")
     @Expose
     private String RealServerRegion;
 
     /**
-    * Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It’s a new parameter.
+    * Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It's a new parameter.
     */
     @SerializedName("Concurrent")
     @Expose
     private Long Concurrent;
 
     /**
-    * Billing mode (0: bill-by-bandwidth, 1: bill-by-traffic. Default value: bill-by-bandwidth)
+    * Billing mode. Valid values: 0: bill-by-bandwidth (default value); 1: bill-by-traffic.
     */
     @SerializedName("BillingType")
     @Expose
@@ -104,80 +104,80 @@ public class InquiryPriceCreateProxyRequest extends AbstractModel{
     }
 
     /**
-     * Get Origin server region name. It’s an old parameter, please switch to RealServerRegion. 
-     * @return DestRegion Origin server region name. It’s an old parameter, please switch to RealServerRegion.
+     * Get Origin server region name. It's an old parameter, please switch to RealServerRegion. 
+     * @return DestRegion Origin server region name. It's an old parameter, please switch to RealServerRegion.
      */
     public String getDestRegion() {
         return this.DestRegion;
     }
 
     /**
-     * Set Origin server region name. It’s an old parameter, please switch to RealServerRegion.
-     * @param DestRegion Origin server region name. It’s an old parameter, please switch to RealServerRegion.
+     * Set Origin server region name. It's an old parameter, please switch to RealServerRegion.
+     * @param DestRegion Origin server region name. It's an old parameter, please switch to RealServerRegion.
      */
     public void setDestRegion(String DestRegion) {
         this.DestRegion = DestRegion;
     }
 
     /**
-     * Get Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It’s an old parameter, please switch to Concurrent. 
-     * @return Concurrency Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It’s an old parameter, please switch to Concurrent.
+     * Get Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It's an old parameter, please switch to Concurrent. 
+     * @return Concurrency Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It's an old parameter, please switch to Concurrent.
      */
     public Long getConcurrency() {
         return this.Concurrency;
     }
 
     /**
-     * Set Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It’s an old parameter, please switch to Concurrent.
-     * @param Concurrency Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It’s an old parameter, please switch to Concurrent.
+     * Set Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It's an old parameter, please switch to Concurrent.
+     * @param Concurrency Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It's an old parameter, please switch to Concurrent.
      */
     public void setConcurrency(Long Concurrency) {
         this.Concurrency = Concurrency;
     }
 
     /**
-     * Get Origin server region name; It’s a new parameter. 
-     * @return RealServerRegion Origin server region name; It’s a new parameter.
+     * Get Origin server region name; It's a new parameter. 
+     * @return RealServerRegion Origin server region name; It's a new parameter.
      */
     public String getRealServerRegion() {
         return this.RealServerRegion;
     }
 
     /**
-     * Set Origin server region name; It’s a new parameter.
-     * @param RealServerRegion Origin server region name; It’s a new parameter.
+     * Set Origin server region name; It's a new parameter.
+     * @param RealServerRegion Origin server region name; It's a new parameter.
      */
     public void setRealServerRegion(String RealServerRegion) {
         this.RealServerRegion = RealServerRegion;
     }
 
     /**
-     * Get Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It’s a new parameter. 
-     * @return Concurrent Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It’s a new parameter.
+     * Get Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It's a new parameter. 
+     * @return Concurrent Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It's a new parameter.
      */
     public Long getConcurrent() {
         return this.Concurrent;
     }
 
     /**
-     * Set Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It’s a new parameter.
-     * @param Concurrent Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It’s a new parameter.
+     * Set Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It's a new parameter.
+     * @param Concurrent Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It's a new parameter.
      */
     public void setConcurrent(Long Concurrent) {
         this.Concurrent = Concurrent;
     }
 
     /**
-     * Get Billing mode (0: bill-by-bandwidth, 1: bill-by-traffic. Default value: bill-by-bandwidth) 
-     * @return BillingType Billing mode (0: bill-by-bandwidth, 1: bill-by-traffic. Default value: bill-by-bandwidth)
+     * Get Billing mode. Valid values: 0: bill-by-bandwidth (default value); 1: bill-by-traffic. 
+     * @return BillingType Billing mode. Valid values: 0: bill-by-bandwidth (default value); 1: bill-by-traffic.
      */
     public Long getBillingType() {
         return this.BillingType;
     }
 
     /**
-     * Set Billing mode (0: bill-by-bandwidth, 1: bill-by-traffic. Default value: bill-by-bandwidth)
-     * @param BillingType Billing mode (0: bill-by-bandwidth, 1: bill-by-traffic. Default value: bill-by-bandwidth)
+     * Set Billing mode. Valid values: 0: bill-by-bandwidth (default value); 1: bill-by-traffic.
+     * @param BillingType Billing mode. Valid values: 0: bill-by-bandwidth (default value); 1: bill-by-traffic.
      */
     public void setBillingType(Long BillingType) {
         this.BillingType = BillingType;

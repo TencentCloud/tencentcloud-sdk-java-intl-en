@@ -37,7 +37,7 @@ public class AiRecognitionTaskAsrWordsSegmentItem extends AbstractModel{
     private Float EndTimeOffset;
 
     /**
-    * Confidence of a recognition segment. Value range: 0–100.
+    * Confidence of a recognition segment. Value range: 0-100.
     */
     @SerializedName("Confidence")
     @Expose
@@ -76,16 +76,16 @@ public class AiRecognitionTaskAsrWordsSegmentItem extends AbstractModel{
     }
 
     /**
-     * Get Confidence of a recognition segment. Value range: 0–100. 
-     * @return Confidence Confidence of a recognition segment. Value range: 0–100.
+     * Get Confidence of a recognition segment. Value range: 0-100. 
+     * @return Confidence Confidence of a recognition segment. Value range: 0-100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Confidence of a recognition segment. Value range: 0–100.
-     * @param Confidence Confidence of a recognition segment. Value range: 0–100.
+     * Set Confidence of a recognition segment. Value range: 0-100.
+     * @param Confidence Confidence of a recognition segment. Value range: 0-100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;

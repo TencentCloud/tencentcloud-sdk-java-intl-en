@@ -71,6 +71,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private WorkflowTask WorkflowTask;
 
     /**
+    * 
+    */
+    @SerializedName("EditMediaTask")
+    @Expose
+    private EditMediaTask EditMediaTask;
+
+    /**
     * Information of a live stream processing task. This field has a value only when `TaskType` is `LiveStreamProcessTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -235,6 +242,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get  
+     * @return EditMediaTask 
+     */
+    public EditMediaTask getEditMediaTask() {
+        return this.EditMediaTask;
+    }
+
+    /**
+     * Set 
+     * @param EditMediaTask 
+     */
+    public void setEditMediaTask(EditMediaTask EditMediaTask) {
+        this.EditMediaTask = EditMediaTask;
+    }
+
+    /**
      * Get Information of a live stream processing task. This field has a value only when `TaskType` is `LiveStreamProcessTask`.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return LiveStreamProcessTask Information of a live stream processing task. This field has a value only when `TaskType` is `LiveStreamProcessTask`.
@@ -348,6 +371,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "BeginProcessTime", this.BeginProcessTime);
         this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
         this.setParamObj(map, prefix + "WorkflowTask.", this.WorkflowTask);
+        this.setParamObj(map, prefix + "EditMediaTask.", this.EditMediaTask);
         this.setParamObj(map, prefix + "LiveStreamProcessTask.", this.LiveStreamProcessTask);
         this.setParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
         this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);

@@ -30,7 +30,7 @@ public class CreateClassRequest extends AbstractModel{
     private Long ParentId;
 
     /**
-    * Category name. Length limit: 1–64 characters.
+    * Category name. Length limit: 1-64 characters.
     */
     @SerializedName("ClassName")
     @Expose
@@ -60,16 +60,16 @@ public class CreateClassRequest extends AbstractModel{
     }
 
     /**
-     * Get Category name. Length limit: 1–64 characters. 
-     * @return ClassName Category name. Length limit: 1–64 characters.
+     * Get Category name. Length limit: 1-64 characters. 
+     * @return ClassName Category name. Length limit: 1-64 characters.
      */
     public String getClassName() {
         return this.ClassName;
     }
 
     /**
-     * Set Category name. Length limit: 1–64 characters.
-     * @param ClassName Category name. Length limit: 1–64 characters.
+     * Set Category name. Length limit: 1-64 characters.
+     * @param ClassName Category name. Length limit: 1-64 characters.
      */
     public void setClassName(String ClassName) {
         this.ClassName = ClassName;

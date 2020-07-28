@@ -30,7 +30,7 @@ public class StartAutoScalingInstancesRequest extends AbstractModel{
     private String AutoScalingGroupId;
 
     /**
-    * The list of the CVM instances you want to launch.
+    * The list of the CVM instances you want to start up.
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -53,16 +53,16 @@ public class StartAutoScalingInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get The list of the CVM instances you want to launch. 
-     * @return InstanceIds The list of the CVM instances you want to launch.
+     * Get The list of the CVM instances you want to start up. 
+     * @return InstanceIds The list of the CVM instances you want to start up.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set The list of the CVM instances you want to launch.
-     * @param InstanceIds The list of the CVM instances you want to launch.
+     * Set The list of the CVM instances you want to start up.
+     * @param InstanceIds The list of the CVM instances you want to start up.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

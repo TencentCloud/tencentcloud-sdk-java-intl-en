@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateAutoScalingGroupFromInstanceRequest extends AbstractModel{
 
     /**
-    * The scaling group name. It must be unique under your account. The name can only contain Chinese characters, English letters, numbers, underscore, hyphen “-” and periods. It cannot exceed 55 bytes.
+    * The scaling group name. It must be unique under your account. The name can only contain letters, numbers, underscore, hyphen “-” and periods. It cannot exceed 55 bytes.
     */
     @SerializedName("AutoScalingGroupName")
     @Expose
@@ -37,14 +37,14 @@ public class CreateAutoScalingGroupFromInstanceRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * The maximum number of instances. Value range: 0-2000.
+    * The minimum number of instances. Value range: 0 - 2000.
     */
     @SerializedName("MinSize")
     @Expose
     private Long MinSize;
 
     /**
-    * The minimum number of instances. Value range: 0-2000.
+    * The maximum number of instances. Value range: 0 - 2000.
     */
     @SerializedName("MaxSize")
     @Expose
@@ -65,16 +65,16 @@ public class CreateAutoScalingGroupFromInstanceRequest extends AbstractModel{
     private Boolean InheritInstanceTag;
 
     /**
-     * Get The scaling group name. It must be unique under your account. The name can only contain Chinese characters, English letters, numbers, underscore, hyphen “-” and periods. It cannot exceed 55 bytes. 
-     * @return AutoScalingGroupName The scaling group name. It must be unique under your account. The name can only contain Chinese characters, English letters, numbers, underscore, hyphen “-” and periods. It cannot exceed 55 bytes.
+     * Get The scaling group name. It must be unique under your account. The name can only contain letters, numbers, underscore, hyphen “-” and periods. It cannot exceed 55 bytes. 
+     * @return AutoScalingGroupName The scaling group name. It must be unique under your account. The name can only contain letters, numbers, underscore, hyphen “-” and periods. It cannot exceed 55 bytes.
      */
     public String getAutoScalingGroupName() {
         return this.AutoScalingGroupName;
     }
 
     /**
-     * Set The scaling group name. It must be unique under your account. The name can only contain Chinese characters, English letters, numbers, underscore, hyphen “-” and periods. It cannot exceed 55 bytes.
-     * @param AutoScalingGroupName The scaling group name. It must be unique under your account. The name can only contain Chinese characters, English letters, numbers, underscore, hyphen “-” and periods. It cannot exceed 55 bytes.
+     * Set The scaling group name. It must be unique under your account. The name can only contain letters, numbers, underscore, hyphen “-” and periods. It cannot exceed 55 bytes.
+     * @param AutoScalingGroupName The scaling group name. It must be unique under your account. The name can only contain letters, numbers, underscore, hyphen “-” and periods. It cannot exceed 55 bytes.
      */
     public void setAutoScalingGroupName(String AutoScalingGroupName) {
         this.AutoScalingGroupName = AutoScalingGroupName;
@@ -97,32 +97,32 @@ public class CreateAutoScalingGroupFromInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get The maximum number of instances. Value range: 0-2000. 
-     * @return MinSize The maximum number of instances. Value range: 0-2000.
+     * Get The minimum number of instances. Value range: 0 - 2000. 
+     * @return MinSize The minimum number of instances. Value range: 0 - 2000.
      */
     public Long getMinSize() {
         return this.MinSize;
     }
 
     /**
-     * Set The maximum number of instances. Value range: 0-2000.
-     * @param MinSize The maximum number of instances. Value range: 0-2000.
+     * Set The minimum number of instances. Value range: 0 - 2000.
+     * @param MinSize The minimum number of instances. Value range: 0 - 2000.
      */
     public void setMinSize(Long MinSize) {
         this.MinSize = MinSize;
     }
 
     /**
-     * Get The minimum number of instances. Value range: 0-2000. 
-     * @return MaxSize The minimum number of instances. Value range: 0-2000.
+     * Get The maximum number of instances. Value range: 0 - 2000. 
+     * @return MaxSize The maximum number of instances. Value range: 0 - 2000.
      */
     public Long getMaxSize() {
         return this.MaxSize;
     }
 
     /**
-     * Set The minimum number of instances. Value range: 0-2000.
-     * @param MaxSize The minimum number of instances. Value range: 0-2000.
+     * Set The maximum number of instances. Value range: 0 - 2000.
+     * @param MaxSize The maximum number of instances. Value range: 0 - 2000.
      */
     public void setMaxSize(Long MaxSize) {
         this.MaxSize = MaxSize;

@@ -195,6 +195,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private HostNameSettings HostNameSettings;
 
     /**
+    * 
+    */
+    @SerializedName("InstanceNameSettings")
+    @Expose
+    private InstanceNameSettings InstanceNameSettings;
+
+    /**
+    * 
+    */
+    @SerializedName("InstanceChargePrepaid")
+    @Expose
+    private InstanceChargePrepaid InstanceChargePrepaid;
+
+    /**
      * Get Project ID of the instance. 
      * @return ProjectId Project ID of the instance.
      */
@@ -595,6 +609,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get  
+     * @return InstanceNameSettings 
+     */
+    public InstanceNameSettings getInstanceNameSettings() {
+        return this.InstanceNameSettings;
+    }
+
+    /**
+     * Set 
+     * @param InstanceNameSettings 
+     */
+    public void setInstanceNameSettings(InstanceNameSettings InstanceNameSettings) {
+        this.InstanceNameSettings = InstanceNameSettings;
+    }
+
+    /**
+     * Get  
+     * @return InstanceChargePrepaid 
+     */
+    public InstanceChargePrepaid getInstanceChargePrepaid() {
+        return this.InstanceChargePrepaid;
+    }
+
+    /**
+     * Set 
+     * @param InstanceChargePrepaid 
+     */
+    public void setInstanceChargePrepaid(InstanceChargePrepaid InstanceChargePrepaid) {
+        this.InstanceChargePrepaid = InstanceChargePrepaid;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -622,6 +668,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
         this.setParamSimple(map, prefix + "LastOperationInstanceTypesCheckPolicy", this.LastOperationInstanceTypesCheckPolicy);
         this.setParamObj(map, prefix + "HostNameSettings.", this.HostNameSettings);
+        this.setParamObj(map, prefix + "InstanceNameSettings.", this.InstanceNameSettings);
+        this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
 
     }
 }

@@ -51,6 +51,13 @@ public class DescribeClustersRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * Whether to enable IPv6 address access
+    */
+    @SerializedName("Ipv6Enable")
+    @Expose
+    private Long Ipv6Enable;
+
+    /**
      * Get List of IDs of clusters to be queried 
      * @return ClusterIds List of IDs of clusters to be queried
      */
@@ -115,6 +122,22 @@ public class DescribeClustersRequest extends AbstractModel{
     }
 
     /**
+     * Get Whether to enable IPv6 address access 
+     * @return Ipv6Enable Whether to enable IPv6 address access
+     */
+    public Long getIpv6Enable() {
+        return this.Ipv6Enable;
+    }
+
+    /**
+     * Set Whether to enable IPv6 address access
+     * @param Ipv6Enable Whether to enable IPv6 address access
+     */
+    public void setIpv6Enable(Long Ipv6Enable) {
+        this.Ipv6Enable = Ipv6Enable;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class DescribeClustersRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Ipv6Enable", this.Ipv6Enable);
 
     }
 }

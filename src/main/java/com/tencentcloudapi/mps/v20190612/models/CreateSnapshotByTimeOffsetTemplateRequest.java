@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class CreateSnapshotByTimeOffsetTemplateRequest extends AbstractModel{
 
     /**
+    * Name of a time point screencapturing template. Length limit: 64 characters.
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
     * Image width in px. Value range: [128, 4,096].
     */
     @SerializedName("Width")
@@ -37,11 +44,11 @@ public class CreateSnapshotByTimeOffsetTemplateRequest extends AbstractModel{
     private Long Height;
 
     /**
-    * Name of a time point screencapturing template. Length limit: 64 characters.
+    * 
     */
-    @SerializedName("Name")
+    @SerializedName("ResolutionAdaptive")
     @Expose
-    private String Name;
+    private String ResolutionAdaptive;
 
     /**
     * Image format. Valid values: jpg; png. Default value: jpg.
@@ -56,6 +63,29 @@ public class CreateSnapshotByTimeOffsetTemplateRequest extends AbstractModel{
     @SerializedName("Comment")
     @Expose
     private String Comment;
+
+    /**
+    * 
+    */
+    @SerializedName("FillType")
+    @Expose
+    private String FillType;
+
+    /**
+     * Get Name of a time point screencapturing template. Length limit: 64 characters. 
+     * @return Name Name of a time point screencapturing template. Length limit: 64 characters.
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set Name of a time point screencapturing template. Length limit: 64 characters.
+     * @param Name Name of a time point screencapturing template. Length limit: 64 characters.
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
 
     /**
      * Get Image width in px. Value range: [128, 4,096]. 
@@ -90,19 +120,19 @@ public class CreateSnapshotByTimeOffsetTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get Name of a time point screencapturing template. Length limit: 64 characters. 
-     * @return Name Name of a time point screencapturing template. Length limit: 64 characters.
+     * Get  
+     * @return ResolutionAdaptive 
      */
-    public String getName() {
-        return this.Name;
+    public String getResolutionAdaptive() {
+        return this.ResolutionAdaptive;
     }
 
     /**
-     * Set Name of a time point screencapturing template. Length limit: 64 characters.
-     * @param Name Name of a time point screencapturing template. Length limit: 64 characters.
+     * Set 
+     * @param ResolutionAdaptive 
      */
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setResolutionAdaptive(String ResolutionAdaptive) {
+        this.ResolutionAdaptive = ResolutionAdaptive;
     }
 
     /**
@@ -138,14 +168,32 @@ public class CreateSnapshotByTimeOffsetTemplateRequest extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return FillType 
+     */
+    public String getFillType() {
+        return this.FillType;
+    }
+
+    /**
+     * Set 
+     * @param FillType 
+     */
+    public void setFillType(String FillType) {
+        this.FillType = FillType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
-        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "ResolutionAdaptive", this.ResolutionAdaptive);
         this.setParamSimple(map, prefix + "Format", this.Format);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamSimple(map, prefix + "FillType", this.FillType);
 
     }
 }

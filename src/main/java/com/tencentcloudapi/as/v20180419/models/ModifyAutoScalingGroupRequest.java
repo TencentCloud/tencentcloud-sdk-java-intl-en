@@ -145,6 +145,13 @@ If an availability zone or subnet in Zones/SubnetIds does not exist, a verificat
     private Long Ipv6AddressCount;
 
     /**
+    * 
+    */
+    @SerializedName("MultiZoneSubnetPolicy")
+    @Expose
+    private String MultiZoneSubnetPolicy;
+
+    /**
      * Get Auto scaling group ID 
      * @return AutoScalingGroupId Auto scaling group ID
      */
@@ -441,6 +448,22 @@ If an availability zone or subnet in Zones/SubnetIds does not exist, a verificat
     }
 
     /**
+     * Get  
+     * @return MultiZoneSubnetPolicy 
+     */
+    public String getMultiZoneSubnetPolicy() {
+        return this.MultiZoneSubnetPolicy;
+    }
+
+    /**
+     * Set 
+     * @param MultiZoneSubnetPolicy 
+     */
+    public void setMultiZoneSubnetPolicy(String MultiZoneSubnetPolicy) {
+        this.MultiZoneSubnetPolicy = MultiZoneSubnetPolicy;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -460,6 +483,7 @@ If an availability zone or subnet in Zones/SubnetIds does not exist, a verificat
         this.setParamSimple(map, prefix + "ZonesCheckPolicy", this.ZonesCheckPolicy);
         this.setParamObj(map, prefix + "ServiceSettings.", this.ServiceSettings);
         this.setParamSimple(map, prefix + "Ipv6AddressCount", this.Ipv6AddressCount);
+        this.setParamSimple(map, prefix + "MultiZoneSubnetPolicy", this.MultiZoneSubnetPolicy);
 
     }
 }

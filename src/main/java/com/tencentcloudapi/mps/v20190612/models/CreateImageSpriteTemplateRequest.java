@@ -23,20 +23,6 @@ import java.util.HashMap;
 public class CreateImageSpriteTemplateRequest extends AbstractModel{
 
     /**
-    * Subimage width of an image sprite in px. Value range: [128, 4,096].
-    */
-    @SerializedName("Width")
-    @Expose
-    private Long Width;
-
-    /**
-    * Subimage height of an image sprite in px. Value range: [128, 4,096].
-    */
-    @SerializedName("Height")
-    @Expose
-    private Long Height;
-
-    /**
     * Sampling type. Valid values:
 <li>Percent: By percent.</li>
 <li>Time: By time interval.</li>
@@ -76,36 +62,39 @@ public class CreateImageSpriteTemplateRequest extends AbstractModel{
     private String Name;
 
     /**
-     * Get Subimage width of an image sprite in px. Value range: [128, 4,096]. 
-     * @return Width Subimage width of an image sprite in px. Value range: [128, 4,096].
-     */
-    public Long getWidth() {
-        return this.Width;
-    }
+    * Subimage width of an image sprite in px. Value range: [128, 4,096].
+    */
+    @SerializedName("Width")
+    @Expose
+    private Long Width;
 
     /**
-     * Set Subimage width of an image sprite in px. Value range: [128, 4,096].
-     * @param Width Subimage width of an image sprite in px. Value range: [128, 4,096].
-     */
-    public void setWidth(Long Width) {
-        this.Width = Width;
-    }
+    * Subimage height of an image sprite in px. Value range: [128, 4,096].
+    */
+    @SerializedName("Height")
+    @Expose
+    private Long Height;
 
     /**
-     * Get Subimage height of an image sprite in px. Value range: [128, 4,096]. 
-     * @return Height Subimage height of an image sprite in px. Value range: [128, 4,096].
-     */
-    public Long getHeight() {
-        return this.Height;
-    }
+    * 
+    */
+    @SerializedName("ResolutionAdaptive")
+    @Expose
+    private String ResolutionAdaptive;
 
     /**
-     * Set Subimage height of an image sprite in px. Value range: [128, 4,096].
-     * @param Height Subimage height of an image sprite in px. Value range: [128, 4,096].
-     */
-    public void setHeight(Long Height) {
-        this.Height = Height;
-    }
+    * 
+    */
+    @SerializedName("FillType")
+    @Expose
+    private String FillType;
+
+    /**
+    * 
+    */
+    @SerializedName("Comment")
+    @Expose
+    private String Comment;
 
     /**
      * Get Sampling type. Valid values:
@@ -204,16 +193,99 @@ public class CreateImageSpriteTemplateRequest extends AbstractModel{
     }
 
     /**
+     * Get Subimage width of an image sprite in px. Value range: [128, 4,096]. 
+     * @return Width Subimage width of an image sprite in px. Value range: [128, 4,096].
+     */
+    public Long getWidth() {
+        return this.Width;
+    }
+
+    /**
+     * Set Subimage width of an image sprite in px. Value range: [128, 4,096].
+     * @param Width Subimage width of an image sprite in px. Value range: [128, 4,096].
+     */
+    public void setWidth(Long Width) {
+        this.Width = Width;
+    }
+
+    /**
+     * Get Subimage height of an image sprite in px. Value range: [128, 4,096]. 
+     * @return Height Subimage height of an image sprite in px. Value range: [128, 4,096].
+     */
+    public Long getHeight() {
+        return this.Height;
+    }
+
+    /**
+     * Set Subimage height of an image sprite in px. Value range: [128, 4,096].
+     * @param Height Subimage height of an image sprite in px. Value range: [128, 4,096].
+     */
+    public void setHeight(Long Height) {
+        this.Height = Height;
+    }
+
+    /**
+     * Get  
+     * @return ResolutionAdaptive 
+     */
+    public String getResolutionAdaptive() {
+        return this.ResolutionAdaptive;
+    }
+
+    /**
+     * Set 
+     * @param ResolutionAdaptive 
+     */
+    public void setResolutionAdaptive(String ResolutionAdaptive) {
+        this.ResolutionAdaptive = ResolutionAdaptive;
+    }
+
+    /**
+     * Get  
+     * @return FillType 
+     */
+    public String getFillType() {
+        return this.FillType;
+    }
+
+    /**
+     * Set 
+     * @param FillType 
+     */
+    public void setFillType(String FillType) {
+        this.FillType = FillType;
+    }
+
+    /**
+     * Get  
+     * @return Comment 
+     */
+    public String getComment() {
+        return this.Comment;
+    }
+
+    /**
+     * Set 
+     * @param Comment 
+     */
+    public void setComment(String Comment) {
+        this.Comment = Comment;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Width", this.Width);
-        this.setParamSimple(map, prefix + "Height", this.Height);
         this.setParamSimple(map, prefix + "SampleType", this.SampleType);
         this.setParamSimple(map, prefix + "SampleInterval", this.SampleInterval);
         this.setParamSimple(map, prefix + "RowCount", this.RowCount);
         this.setParamSimple(map, prefix + "ColumnCount", this.ColumnCount);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Width", this.Width);
+        this.setParamSimple(map, prefix + "Height", this.Height);
+        this.setParamSimple(map, prefix + "ResolutionAdaptive", this.ResolutionAdaptive);
+        this.setParamSimple(map, prefix + "FillType", this.FillType);
+        this.setParamSimple(map, prefix + "Comment", this.Comment);
 
     }
 }

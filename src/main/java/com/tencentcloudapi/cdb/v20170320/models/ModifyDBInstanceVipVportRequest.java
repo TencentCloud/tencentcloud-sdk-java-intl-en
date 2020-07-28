@@ -58,7 +58,7 @@ public class ModifyDBInstanceVipVportRequest extends AbstractModel{
     private String UniqSubnetId;
 
     /**
-    * Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0–168 hours. Default value: 24 hours.
+    * Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0-168 hours. Default value: 24 hours.
     */
     @SerializedName("ReleaseDuration")
     @Expose
@@ -145,16 +145,16 @@ public class ModifyDBInstanceVipVportRequest extends AbstractModel{
     }
 
     /**
-     * Get Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0–168 hours. Default value: 24 hours. 
-     * @return ReleaseDuration Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0–168 hours. Default value: 24 hours.
+     * Get Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0-168 hours. Default value: 24 hours. 
+     * @return ReleaseDuration Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0-168 hours. Default value: 24 hours.
      */
     public Long getReleaseDuration() {
         return this.ReleaseDuration;
     }
 
     /**
-     * Set Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0–168 hours. Default value: 24 hours.
-     * @param ReleaseDuration Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0–168 hours. Default value: 24 hours.
+     * Set Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0-168 hours. Default value: 24 hours.
+     * @param ReleaseDuration Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0-168 hours. Default value: 24 hours.
      */
     public void setReleaseDuration(Long ReleaseDuration) {
         this.ReleaseDuration = ReleaseDuration;

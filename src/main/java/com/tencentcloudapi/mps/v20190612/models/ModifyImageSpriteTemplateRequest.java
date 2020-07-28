@@ -51,6 +51,13 @@ public class ModifyImageSpriteTemplateRequest extends AbstractModel{
     private Long Height;
 
     /**
+    * 
+    */
+    @SerializedName("ResolutionAdaptive")
+    @Expose
+    private String ResolutionAdaptive;
+
+    /**
     * Sampling type. Valid values:
 <li>Percent: By percent.</li>
 <li>Time: By time interval.</li>
@@ -81,6 +88,20 @@ public class ModifyImageSpriteTemplateRequest extends AbstractModel{
     @SerializedName("ColumnCount")
     @Expose
     private Long ColumnCount;
+
+    /**
+    * 
+    */
+    @SerializedName("FillType")
+    @Expose
+    private String FillType;
+
+    /**
+    * 
+    */
+    @SerializedName("Comment")
+    @Expose
+    private String Comment;
 
     /**
      * Get Unique ID of an image sprite generating template. 
@@ -144,6 +165,22 @@ public class ModifyImageSpriteTemplateRequest extends AbstractModel{
      */
     public void setHeight(Long Height) {
         this.Height = Height;
+    }
+
+    /**
+     * Get  
+     * @return ResolutionAdaptive 
+     */
+    public String getResolutionAdaptive() {
+        return this.ResolutionAdaptive;
+    }
+
+    /**
+     * Set 
+     * @param ResolutionAdaptive 
+     */
+    public void setResolutionAdaptive(String ResolutionAdaptive) {
+        this.ResolutionAdaptive = ResolutionAdaptive;
     }
 
     /**
@@ -227,6 +264,38 @@ public class ModifyImageSpriteTemplateRequest extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return FillType 
+     */
+    public String getFillType() {
+        return this.FillType;
+    }
+
+    /**
+     * Set 
+     * @param FillType 
+     */
+    public void setFillType(String FillType) {
+        this.FillType = FillType;
+    }
+
+    /**
+     * Get  
+     * @return Comment 
+     */
+    public String getComment() {
+        return this.Comment;
+    }
+
+    /**
+     * Set 
+     * @param Comment 
+     */
+    public void setComment(String Comment) {
+        this.Comment = Comment;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -234,10 +303,13 @@ public class ModifyImageSpriteTemplateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
+        this.setParamSimple(map, prefix + "ResolutionAdaptive", this.ResolutionAdaptive);
         this.setParamSimple(map, prefix + "SampleType", this.SampleType);
         this.setParamSimple(map, prefix + "SampleInterval", this.SampleInterval);
         this.setParamSimple(map, prefix + "RowCount", this.RowCount);
         this.setParamSimple(map, prefix + "ColumnCount", this.ColumnCount);
+        this.setParamSimple(map, prefix + "FillType", this.FillType);
+        this.setParamSimple(map, prefix + "Comment", this.Comment);
 
     }
 }

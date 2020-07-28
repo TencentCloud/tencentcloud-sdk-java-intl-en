@@ -138,7 +138,7 @@ If an availability zone or subnet in Zones/SubnetIds does not exist, a verificat
     private String ZonesCheckPolicy;
 
     /**
-    * List of tag descriptions. This parameter is used to bind a tag to a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
+    * List of tag descriptions. In this parameter, you can specify the tags to be bound with a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
     */
     @SerializedName("Tags")
     @Expose
@@ -446,16 +446,16 @@ If an availability zone or subnet in Zones/SubnetIds does not exist, a verificat
     }
 
     /**
-     * Get List of tag descriptions. This parameter is used to bind a tag to a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags. 
-     * @return Tags List of tag descriptions. This parameter is used to bind a tag to a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
+     * Get List of tag descriptions. In this parameter, you can specify the tags to be bound with a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags. 
+     * @return Tags List of tag descriptions. In this parameter, you can specify the tags to be bound with a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set List of tag descriptions. This parameter is used to bind a tag to a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
-     * @param Tags List of tag descriptions. This parameter is used to bind a tag to a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
+     * Set List of tag descriptions. In this parameter, you can specify the tags to be bound with a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
+     * @param Tags List of tag descriptions. In this parameter, you can specify the tags to be bound with a scaling group as well as corresponding resource instances. Each scaling group can have up to 30 tags.
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

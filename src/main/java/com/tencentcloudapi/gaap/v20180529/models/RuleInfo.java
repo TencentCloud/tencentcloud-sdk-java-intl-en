@@ -102,7 +102,7 @@ As long as one origin server is exceptional, this status will be exceptional. Pl
     private Long BindStatus;
 
     /**
-    * The ‘host’ carried in the request forwarded from the connection to the origin server. `default` indicates directly forwarding the received “host”.
+    * The `host` carried in the request forwarded from the connection to the origin server. `default` indicates directly forwarding the received 'host'.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ForwardHost")
@@ -294,9 +294,9 @@ As long as one origin server is exceptional, this status will be exceptional. Pl
     }
 
     /**
-     * Get The ‘host’ carried in the request forwarded from the connection to the origin server. `default` indicates directly forwarding the received “host”.
+     * Get The `host` carried in the request forwarded from the connection to the origin server. `default` indicates directly forwarding the received 'host'.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ForwardHost The ‘host’ carried in the request forwarded from the connection to the origin server. `default` indicates directly forwarding the received “host”.
+     * @return ForwardHost The `host` carried in the request forwarded from the connection to the origin server. `default` indicates directly forwarding the received 'host'.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getForwardHost() {
@@ -304,9 +304,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The ‘host’ carried in the request forwarded from the connection to the origin server. `default` indicates directly forwarding the received “host”.
+     * Set The `host` carried in the request forwarded from the connection to the origin server. `default` indicates directly forwarding the received 'host'.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ForwardHost The ‘host’ carried in the request forwarded from the connection to the origin server. `default` indicates directly forwarding the received “host”.
+     * @param ForwardHost The `host` carried in the request forwarded from the connection to the origin server. `default` indicates directly forwarding the received 'host'.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setForwardHost(String ForwardHost) {

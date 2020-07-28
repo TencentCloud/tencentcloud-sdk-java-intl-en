@@ -65,7 +65,7 @@ public class CCN extends AbstractModel{
     private String State;
 
     /**
-    * The instance service quality. ’PT’: Platinum , 'AU': Gold, 'AG': Silver.
+    * The instance service quality. 'PT': Platinum , 'AU': Gold, 'AG': Silver.
     */
     @SerializedName("QosLevel")
     @Expose
@@ -191,16 +191,16 @@ Note: This field may return null, indicating no valid value.
     }
 
     /**
-     * Get The instance service quality. ’PT’: Platinum , 'AU': Gold, 'AG': Silver. 
-     * @return QosLevel The instance service quality. ’PT’: Platinum , 'AU': Gold, 'AG': Silver.
+     * Get The instance service quality. 'PT': Platinum , 'AU': Gold, 'AG': Silver. 
+     * @return QosLevel The instance service quality. 'PT': Platinum , 'AU': Gold, 'AG': Silver.
      */
     public String getQosLevel() {
         return this.QosLevel;
     }
 
     /**
-     * Set The instance service quality. ’PT’: Platinum , 'AU': Gold, 'AG': Silver.
-     * @param QosLevel The instance service quality. ’PT’: Platinum , 'AU': Gold, 'AG': Silver.
+     * Set The instance service quality. 'PT': Platinum , 'AU': Gold, 'AG': Silver.
+     * @param QosLevel The instance service quality. 'PT': Platinum , 'AU': Gold, 'AG': Silver.
      */
     public void setQosLevel(String QosLevel) {
         this.QosLevel = QosLevel;

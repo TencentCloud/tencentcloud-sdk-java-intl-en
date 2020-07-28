@@ -23,33 +23,183 @@ import java.util.HashMap;
 public class CcnBandwidthInfo extends AbstractModel{
 
     /**
-    * 
+    * The CCN ID that the bandwidth belongs to.
+Note: this field may return null, indicating that no valid value was found.
+    */
+    @SerializedName("CcnId")
+    @Expose
+    private String CcnId;
+
+    /**
+    * The creation time of the instance.
+Note: this field may return null, indicating that no valid value was found.
+    */
+    @SerializedName("CreatedTime")
+    @Expose
+    private String CreatedTime;
+
+    /**
+    * The expiration time of the instance.
+Note: this field may return null, indicating that no valid value was found.
+    */
+    @SerializedName("ExpiredTime")
+    @Expose
+    private String ExpiredTime;
+
+    /**
+    * The unique ID of the bandwidth instance.
+Note: this field may return null, indicating that no valid value was found.
+    */
+    @SerializedName("RegionFlowControlId")
+    @Expose
+    private String RegionFlowControlId;
+
+    /**
+    * The billing flag.
+Note: this field may return null, indicating that no valid value was found.
     */
     @SerializedName("RenewFlag")
     @Expose
     private String RenewFlag;
 
     /**
-     * Get  
-     * @return RenewFlag 
+    * The information of bandwidth regions and bandwidth caps.
+Note: this field may return null, indicating that no valid value was found.
+    */
+    @SerializedName("CcnRegionBandwidthLimit")
+    @Expose
+    private CcnRegionBandwidthLimit CcnRegionBandwidthLimit;
+
+    /**
+     * Get The CCN ID that the bandwidth belongs to.
+Note: this field may return null, indicating that no valid value was found. 
+     * @return CcnId The CCN ID that the bandwidth belongs to.
+Note: this field may return null, indicating that no valid value was found.
+     */
+    public String getCcnId() {
+        return this.CcnId;
+    }
+
+    /**
+     * Set The CCN ID that the bandwidth belongs to.
+Note: this field may return null, indicating that no valid value was found.
+     * @param CcnId The CCN ID that the bandwidth belongs to.
+Note: this field may return null, indicating that no valid value was found.
+     */
+    public void setCcnId(String CcnId) {
+        this.CcnId = CcnId;
+    }
+
+    /**
+     * Get The creation time of the instance.
+Note: this field may return null, indicating that no valid value was found. 
+     * @return CreatedTime The creation time of the instance.
+Note: this field may return null, indicating that no valid value was found.
+     */
+    public String getCreatedTime() {
+        return this.CreatedTime;
+    }
+
+    /**
+     * Set The creation time of the instance.
+Note: this field may return null, indicating that no valid value was found.
+     * @param CreatedTime The creation time of the instance.
+Note: this field may return null, indicating that no valid value was found.
+     */
+    public void setCreatedTime(String CreatedTime) {
+        this.CreatedTime = CreatedTime;
+    }
+
+    /**
+     * Get The expiration time of the instance.
+Note: this field may return null, indicating that no valid value was found. 
+     * @return ExpiredTime The expiration time of the instance.
+Note: this field may return null, indicating that no valid value was found.
+     */
+    public String getExpiredTime() {
+        return this.ExpiredTime;
+    }
+
+    /**
+     * Set The expiration time of the instance.
+Note: this field may return null, indicating that no valid value was found.
+     * @param ExpiredTime The expiration time of the instance.
+Note: this field may return null, indicating that no valid value was found.
+     */
+    public void setExpiredTime(String ExpiredTime) {
+        this.ExpiredTime = ExpiredTime;
+    }
+
+    /**
+     * Get The unique ID of the bandwidth instance.
+Note: this field may return null, indicating that no valid value was found. 
+     * @return RegionFlowControlId The unique ID of the bandwidth instance.
+Note: this field may return null, indicating that no valid value was found.
+     */
+    public String getRegionFlowControlId() {
+        return this.RegionFlowControlId;
+    }
+
+    /**
+     * Set The unique ID of the bandwidth instance.
+Note: this field may return null, indicating that no valid value was found.
+     * @param RegionFlowControlId The unique ID of the bandwidth instance.
+Note: this field may return null, indicating that no valid value was found.
+     */
+    public void setRegionFlowControlId(String RegionFlowControlId) {
+        this.RegionFlowControlId = RegionFlowControlId;
+    }
+
+    /**
+     * Get The billing flag.
+Note: this field may return null, indicating that no valid value was found. 
+     * @return RenewFlag The billing flag.
+Note: this field may return null, indicating that no valid value was found.
      */
     public String getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 
-     * @param RenewFlag 
+     * Set The billing flag.
+Note: this field may return null, indicating that no valid value was found.
+     * @param RenewFlag The billing flag.
+Note: this field may return null, indicating that no valid value was found.
      */
     public void setRenewFlag(String RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
+     * Get The information of bandwidth regions and bandwidth caps.
+Note: this field may return null, indicating that no valid value was found. 
+     * @return CcnRegionBandwidthLimit The information of bandwidth regions and bandwidth caps.
+Note: this field may return null, indicating that no valid value was found.
+     */
+    public CcnRegionBandwidthLimit getCcnRegionBandwidthLimit() {
+        return this.CcnRegionBandwidthLimit;
+    }
+
+    /**
+     * Set The information of bandwidth regions and bandwidth caps.
+Note: this field may return null, indicating that no valid value was found.
+     * @param CcnRegionBandwidthLimit The information of bandwidth regions and bandwidth caps.
+Note: this field may return null, indicating that no valid value was found.
+     */
+    public void setCcnRegionBandwidthLimit(CcnRegionBandwidthLimit CcnRegionBandwidthLimit) {
+        this.CcnRegionBandwidthLimit = CcnRegionBandwidthLimit;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "CcnId", this.CcnId);
+        this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
+        this.setParamSimple(map, prefix + "RegionFlowControlId", this.RegionFlowControlId);
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+        this.setParamObj(map, prefix + "CcnRegionBandwidthLimit.", this.CcnRegionBandwidthLimit);
 
     }
 }

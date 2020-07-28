@@ -39,6 +39,13 @@ public class ProcedureTemplate extends AbstractModel{
     private String Type;
 
     /**
+    * 
+    */
+    @SerializedName("Comment")
+    @Expose
+    private String Comment;
+
+    /**
     * Parameter of video processing task.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
@@ -130,6 +137,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
      */
     public void setType(String Type) {
         this.Type = Type;
+    }
+
+    /**
+     * Get  
+     * @return Comment 
+     */
+    public String getComment() {
+        return this.Comment;
+    }
+
+    /**
+     * Set 
+     * @param Comment 
+     */
+    public void setComment(String Comment) {
+        this.Comment = Comment;
     }
 
     /**
@@ -270,6 +293,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamObj(map, prefix + "MediaProcessTask.", this.MediaProcessTask);
         this.setParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
         this.setParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);

@@ -129,6 +129,24 @@ Note: This API unbinds the previously bound origin servers, and binds the origin
     }
 
     /**
+     *This API is used to disable a connection group. Once disabled, the connection group will no longer generate traffic, but the basic connection configuration fees will still be incurred every day.
+     * @param req CloseProxyGroupRequest
+     * @return CloseProxyGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloseProxyGroupResponse CloseProxyGroup(CloseProxyGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CloseProxyGroupResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CloseProxyGroupResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CloseProxyGroup"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to disable security policies.
      * @param req CloseSecurityPolicyRequest
      * @return CloseSecurityPolicyResponse
@@ -652,6 +670,24 @@ This API only supports connections of version 3.0.
     }
 
     /**
+     *This API is used to query the corresponding error response by a custom error ID.
+     * @param req DescribeDomainErrorPageInfoByIdsRequest
+     * @return DescribeDomainErrorPageInfoByIdsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDomainErrorPageInfoByIdsResponse DescribeDomainErrorPageInfoByIds(DescribeDomainErrorPageInfoByIdsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDomainErrorPageInfoByIdsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDomainErrorPageInfoByIdsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDomainErrorPageInfoByIds"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This is an internal API. It is used to query the information of connections and connection groups from which the statistics can be derived.
      * @param req DescribeGroupAndStatisticsProxyRequest
      * @return DescribeGroupAndStatisticsProxyResponse
@@ -904,7 +940,7 @@ This API only supports connections of version 3.0.
     }
 
     /**
-     *This API (DescribeRealServerStatistics) is used to query the statistics of an origin server’s health check results. Origin server status displayed as 1: normal, or 0: exceptional. The queried origin server must be bound to a listener or rule. The bound listener or rule ID must be specified when querying. This API supports displaying origin server status statistics for the past 1, 3, 6, 12, and 24 hours, with a granularity of 1 minute.
+     *This API (DescribeRealServerStatistics) is used to query the statistics of an origin server's health check results. Origin server status displayed as 1: normal, or 0: exceptional. The queried origin server must be bound to a listener or rule. The bound listener or rule ID must be specified when querying. This API supports displaying origin server status statistics for the past 1, 3, 6, 12, and 24 hours, with a granularity of 1 minute.
      * @param req DescribeRealServerStatisticsRequest
      * @return DescribeRealServerStatisticsResponse
      * @throws TencentCloudSDKException
@@ -1438,6 +1474,24 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
                 Type type = new TypeToken<JsonResponseModel<OpenProxiesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "OpenProxies"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to enable all connections in a connection group.
+     * @param req OpenProxyGroupRequest
+     * @return OpenProxyGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenProxyGroupResponse OpenProxyGroup(OpenProxyGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<OpenProxyGroupResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<OpenProxyGroupResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "OpenProxyGroup"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

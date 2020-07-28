@@ -33,7 +33,7 @@ Default value: 0.
     private Long Mute;
 
     /**
-    * Audio gain. Value range: 0–10.
+    * Audio gain. Value range: 0-10.
 <li>If the value is greater than 1, the volume will be increased.</li>
 <li>If the value is smaller than 1, the volume will be decreased.</li>
 <li>0 and 1: no change.</li>
@@ -72,12 +72,12 @@ Default value: 0.
     }
 
     /**
-     * Get Audio gain. Value range: 0–10.
+     * Get Audio gain. Value range: 0-10.
 <li>If the value is greater than 1, the volume will be increased.</li>
 <li>If the value is smaller than 1, the volume will be decreased.</li>
 <li>0 and 1: no change.</li>
 Default value: 0. 
-     * @return Gain Audio gain. Value range: 0–10.
+     * @return Gain Audio gain. Value range: 0-10.
 <li>If the value is greater than 1, the volume will be increased.</li>
 <li>If the value is smaller than 1, the volume will be decreased.</li>
 <li>0 and 1: no change.</li>
@@ -88,12 +88,12 @@ Default value: 0.
     }
 
     /**
-     * Set Audio gain. Value range: 0–10.
+     * Set Audio gain. Value range: 0-10.
 <li>If the value is greater than 1, the volume will be increased.</li>
 <li>If the value is smaller than 1, the volume will be decreased.</li>
 <li>0 and 1: no change.</li>
 Default value: 0.
-     * @param Gain Audio gain. Value range: 0–10.
+     * @param Gain Audio gain. Value range: 0-10.
 <li>If the value is greater than 1, the volume will be increased.</li>
 <li>If the value is smaller than 1, the volume will be decreased.</li>
 <li>0 and 1: no change.</li>

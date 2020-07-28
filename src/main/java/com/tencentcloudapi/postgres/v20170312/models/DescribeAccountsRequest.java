@@ -30,7 +30,7 @@ public class DescribeAccountsRequest extends AbstractModel{
     private String DBInstanceId;
 
     /**
-    * Number of entries returned per page. Default value: 20. Value range: 1–100.
+    * Number of entries returned per page. Default value: 20. Value range: 1-100.
     */
     @SerializedName("Limit")
     @Expose
@@ -74,16 +74,16 @@ public class DescribeAccountsRequest extends AbstractModel{
     }
 
     /**
-     * Get Number of entries returned per page. Default value: 20. Value range: 1–100. 
-     * @return Limit Number of entries returned per page. Default value: 20. Value range: 1–100.
+     * Get Number of entries returned per page. Default value: 20. Value range: 1-100. 
+     * @return Limit Number of entries returned per page. Default value: 20. Value range: 1-100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of entries returned per page. Default value: 20. Value range: 1–100.
-     * @param Limit Number of entries returned per page. Default value: 20. Value range: 1–100.
+     * Set Number of entries returned per page. Default value: 20. Value range: 1-100.
+     * @param Limit Number of entries returned per page. Default value: 20. Value range: 1-100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

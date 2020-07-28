@@ -44,6 +44,13 @@ public class RegionInfo extends AbstractModel{
     private Long RegionId;
 
     /**
+    * Whether to support IPv6 address access. Valid values: 0 (support), 1 (not support)
+    */
+    @SerializedName("Ipv6Enable")
+    @Expose
+    private Long Ipv6Enable;
+
+    /**
      * Get Region `Ap-code` 
      * @return RegionName Region `Ap-code`
      */
@@ -92,12 +99,29 @@ public class RegionInfo extends AbstractModel{
     }
 
     /**
+     * Get Whether to support IPv6 address access. Valid values: 0 (support), 1 (not support) 
+     * @return Ipv6Enable Whether to support IPv6 address access. Valid values: 0 (support), 1 (not support)
+     */
+    public Long getIpv6Enable() {
+        return this.Ipv6Enable;
+    }
+
+    /**
+     * Set Whether to support IPv6 address access. Valid values: 0 (support), 1 (not support)
+     * @param Ipv6Enable Whether to support IPv6 address access. Valid values: 0 (support), 1 (not support)
+     */
+    public void setIpv6Enable(Long Ipv6Enable) {
+        this.Ipv6Enable = Ipv6Enable;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RegionName", this.RegionName);
         this.setParamSimple(map, prefix + "RegionAbbr", this.RegionAbbr);
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
+        this.setParamSimple(map, prefix + "Ipv6Enable", this.Ipv6Enable);
 
     }
 }

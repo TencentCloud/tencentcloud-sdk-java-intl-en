@@ -20,21 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeVideoTrackTemplatesResponse extends AbstractModel{
-
-    /**
-    * Number of eligible entries.
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
-
-    /**
-    * List of video track template details.
-    */
-    @SerializedName("VideoTrackTemplateSet")
-    @Expose
-    private VideoTrackTemplateInfo [] VideoTrackTemplateSet;
+public class DeleteClassResponse extends AbstractModel{
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -42,38 +28,6 @@ public class DescribeVideoTrackTemplatesResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get Number of eligible entries. 
-     * @return TotalCount Number of eligible entries.
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set Number of eligible entries.
-     * @param TotalCount Number of eligible entries.
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get List of video track template details. 
-     * @return VideoTrackTemplateSet List of video track template details.
-     */
-    public VideoTrackTemplateInfo [] getVideoTrackTemplateSet() {
-        return this.VideoTrackTemplateSet;
-    }
-
-    /**
-     * Set List of video track template details.
-     * @param VideoTrackTemplateSet List of video track template details.
-     */
-    public void setVideoTrackTemplateSet(VideoTrackTemplateInfo [] VideoTrackTemplateSet) {
-        this.VideoTrackTemplateSet = VideoTrackTemplateSet;
-    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -95,8 +49,6 @@ public class DescribeVideoTrackTemplatesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "VideoTrackTemplateSet.", this.VideoTrackTemplateSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -20,21 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAudioTrackTemplatesResponse extends AbstractModel{
-
-    /**
-    * Number of eligible entries.
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
-
-    /**
-    * List of audio track template details.
-    */
-    @SerializedName("AudioTrackTemplateSet")
-    @Expose
-    private AudioTrackTemplateInfo [] AudioTrackTemplateSet;
+public class DeletePersonSampleResponse extends AbstractModel{
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -42,38 +28,6 @@ public class DescribeAudioTrackTemplatesResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get Number of eligible entries. 
-     * @return TotalCount Number of eligible entries.
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set Number of eligible entries.
-     * @param TotalCount Number of eligible entries.
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get List of audio track template details. 
-     * @return AudioTrackTemplateSet List of audio track template details.
-     */
-    public AudioTrackTemplateInfo [] getAudioTrackTemplateSet() {
-        return this.AudioTrackTemplateSet;
-    }
-
-    /**
-     * Set List of audio track template details.
-     * @param AudioTrackTemplateSet List of audio track template details.
-     */
-    public void setAudioTrackTemplateSet(AudioTrackTemplateInfo [] AudioTrackTemplateSet) {
-        this.AudioTrackTemplateSet = AudioTrackTemplateSet;
-    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -95,8 +49,6 @@ public class DescribeAudioTrackTemplatesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "AudioTrackTemplateSet.", this.AudioTrackTemplateSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

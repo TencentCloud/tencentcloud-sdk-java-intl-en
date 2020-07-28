@@ -31,14 +31,14 @@ public class DescribeSnapshotOperationLogsRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
-    * The start time of the operation logs to be queried, for example: “2019-11-22 00:00:00"
+    * The start time of the operation logs to be queried, for example: '2019-11-22 00:00:00"
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * The end time of the operation logs to be queried, for example: “2019-11-22 23:59:59"
+    * The end time of the operation logs to be queried, for example: '2019-11-22 23:59:59"
     */
     @SerializedName("EndTime")
     @Expose
@@ -65,32 +65,32 @@ public class DescribeSnapshotOperationLogsRequest extends AbstractModel{
     }
 
     /**
-     * Get The start time of the operation logs to be queried, for example: “2019-11-22 00:00:00" 
-     * @return BeginTime The start time of the operation logs to be queried, for example: “2019-11-22 00:00:00"
+     * Get The start time of the operation logs to be queried, for example: '2019-11-22 00:00:00" 
+     * @return BeginTime The start time of the operation logs to be queried, for example: '2019-11-22 00:00:00"
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set The start time of the operation logs to be queried, for example: “2019-11-22 00:00:00"
-     * @param BeginTime The start time of the operation logs to be queried, for example: “2019-11-22 00:00:00"
+     * Set The start time of the operation logs to be queried, for example: '2019-11-22 00:00:00"
+     * @param BeginTime The start time of the operation logs to be queried, for example: '2019-11-22 00:00:00"
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get The end time of the operation logs to be queried, for example: “2019-11-22 23:59:59" 
-     * @return EndTime The end time of the operation logs to be queried, for example: “2019-11-22 23:59:59"
+     * Get The end time of the operation logs to be queried, for example: '2019-11-22 23:59:59" 
+     * @return EndTime The end time of the operation logs to be queried, for example: '2019-11-22 23:59:59"
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set The end time of the operation logs to be queried, for example: “2019-11-22 23:59:59"
-     * @param EndTime The end time of the operation logs to be queried, for example: “2019-11-22 23:59:59"
+     * Set The end time of the operation logs to be queried, for example: '2019-11-22 23:59:59"
+     * @param EndTime The end time of the operation logs to be queried, for example: '2019-11-22 23:59:59"
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

@@ -44,6 +44,13 @@ public class CreateTablesRequest extends AbstractModel{
     private SelectedTableInfoNew [] SelectedTables;
 
     /**
+    * 
+    */
+    @SerializedName("ResourceTags")
+    @Expose
+    private TagInfoUnit [] ResourceTags;
+
+    /**
      * Get ID of the cluster where to create a table 
      * @return ClusterId ID of the cluster where to create a table
      */
@@ -92,12 +99,29 @@ public class CreateTablesRequest extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return ResourceTags 
+     */
+    public TagInfoUnit [] getResourceTags() {
+        return this.ResourceTags;
+    }
+
+    /**
+     * Set 
+     * @param ResourceTags 
+     */
+    public void setResourceTags(TagInfoUnit [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArrayObj(map, prefix + "IdlFiles.", this.IdlFiles);
         this.setParamArrayObj(map, prefix + "SelectedTables.", this.SelectedTables);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
 
     }
 }

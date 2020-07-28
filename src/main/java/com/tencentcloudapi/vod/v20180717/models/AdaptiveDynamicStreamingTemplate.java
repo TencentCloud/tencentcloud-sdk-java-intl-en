@@ -53,13 +53,12 @@ public class AdaptiveDynamicStreamingTemplate extends AbstractModel{
     private String Comment;
 
     /**
-    * Container type. Valid values:
-<li>hls; </li>
-<li>dash.</li>
+    * Adaptive bitstream format. Valid value:
+<li>HLS.</li>
     */
-    @SerializedName("PackageType")
+    @SerializedName("Format")
     @Expose
-    private String PackageType;
+    private String Format;
 
     /**
     * DRM type. Valid values:
@@ -71,28 +70,6 @@ If this field is a blank string, DRM will not be performed on the video.
     @SerializedName("DrmType")
     @Expose
     private String DrmType;
-
-    /**
-    * List of video track templates.
-    */
-    @SerializedName("VideoTrackTemplateSet")
-    @Expose
-    private VideoTrackTemplateInfo [] VideoTrackTemplateSet;
-
-    /**
-    * List of audio track templates.
-    */
-    @SerializedName("AudioTrackTemplateSet")
-    @Expose
-    private AudioTrackTemplateInfo [] AudioTrackTemplateSet;
-
-    /**
-    * Adaptive bitstream format. Valid value:
-<li>HLS.</li>
-    */
-    @SerializedName("Format")
-    @Expose
-    private String Format;
 
     /**
     * Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input.
@@ -206,27 +183,23 @@ If this field is a blank string, DRM will not be performed on the video.
     }
 
     /**
-     * Get Container type. Valid values:
-<li>hls; </li>
-<li>dash.</li> 
-     * @return PackageType Container type. Valid values:
-<li>hls; </li>
-<li>dash.</li>
+     * Get Adaptive bitstream format. Valid value:
+<li>HLS.</li> 
+     * @return Format Adaptive bitstream format. Valid value:
+<li>HLS.</li>
      */
-    public String getPackageType() {
-        return this.PackageType;
+    public String getFormat() {
+        return this.Format;
     }
 
     /**
-     * Set Container type. Valid values:
-<li>hls; </li>
-<li>dash.</li>
-     * @param PackageType Container type. Valid values:
-<li>hls; </li>
-<li>dash.</li>
+     * Set Adaptive bitstream format. Valid value:
+<li>HLS.</li>
+     * @param Format Adaptive bitstream format. Valid value:
+<li>HLS.</li>
      */
-    public void setPackageType(String PackageType) {
-        this.PackageType = PackageType;
+    public void setFormat(String Format) {
+        this.Format = Format;
     }
 
     /**
@@ -259,58 +232,6 @@ If this field is a blank string, DRM will not be performed on the video.
      */
     public void setDrmType(String DrmType) {
         this.DrmType = DrmType;
-    }
-
-    /**
-     * Get List of video track templates. 
-     * @return VideoTrackTemplateSet List of video track templates.
-     */
-    public VideoTrackTemplateInfo [] getVideoTrackTemplateSet() {
-        return this.VideoTrackTemplateSet;
-    }
-
-    /**
-     * Set List of video track templates.
-     * @param VideoTrackTemplateSet List of video track templates.
-     */
-    public void setVideoTrackTemplateSet(VideoTrackTemplateInfo [] VideoTrackTemplateSet) {
-        this.VideoTrackTemplateSet = VideoTrackTemplateSet;
-    }
-
-    /**
-     * Get List of audio track templates. 
-     * @return AudioTrackTemplateSet List of audio track templates.
-     */
-    public AudioTrackTemplateInfo [] getAudioTrackTemplateSet() {
-        return this.AudioTrackTemplateSet;
-    }
-
-    /**
-     * Set List of audio track templates.
-     * @param AudioTrackTemplateSet List of audio track templates.
-     */
-    public void setAudioTrackTemplateSet(AudioTrackTemplateInfo [] AudioTrackTemplateSet) {
-        this.AudioTrackTemplateSet = AudioTrackTemplateSet;
-    }
-
-    /**
-     * Get Adaptive bitstream format. Valid value:
-<li>HLS.</li> 
-     * @return Format Adaptive bitstream format. Valid value:
-<li>HLS.</li>
-     */
-    public String getFormat() {
-        return this.Format;
-    }
-
-    /**
-     * Set Adaptive bitstream format. Valid value:
-<li>HLS.</li>
-     * @param Format Adaptive bitstream format. Valid value:
-<li>HLS.</li>
-     */
-    public void setFormat(String Format) {
-        this.Format = Format;
     }
 
     /**
@@ -417,11 +338,8 @@ If this field is a blank string, DRM will not be performed on the video.
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
-        this.setParamSimple(map, prefix + "PackageType", this.PackageType);
-        this.setParamSimple(map, prefix + "DrmType", this.DrmType);
-        this.setParamArrayObj(map, prefix + "VideoTrackTemplateSet.", this.VideoTrackTemplateSet);
-        this.setParamArrayObj(map, prefix + "AudioTrackTemplateSet.", this.AudioTrackTemplateSet);
         this.setParamSimple(map, prefix + "Format", this.Format);
+        this.setParamSimple(map, prefix + "DrmType", this.DrmType);
         this.setParamArrayObj(map, prefix + "StreamInfos.", this.StreamInfos);
         this.setParamSimple(map, prefix + "DisableHigherVideoBitrate", this.DisableHigherVideoBitrate);
         this.setParamSimple(map, prefix + "DisableHigherVideoResolution", this.DisableHigherVideoResolution);

@@ -39,6 +39,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private WorkflowTask WorkflowTaskEvent;
 
     /**
+    * 
+    */
+    @SerializedName("EditMediaTaskEvent")
+    @Expose
+    private EditMediaTask EditMediaTaskEvent;
+
+    /**
     * The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
     */
     @SerializedName("SessionId")
@@ -100,6 +107,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get  
+     * @return EditMediaTaskEvent 
+     */
+    public EditMediaTask getEditMediaTaskEvent() {
+        return this.EditMediaTaskEvent;
+    }
+
+    /**
+     * Set 
+     * @param EditMediaTaskEvent 
+     */
+    public void setEditMediaTaskEvent(EditMediaTask EditMediaTaskEvent) {
+        this.EditMediaTaskEvent = EditMediaTaskEvent;
+    }
+
+    /**
      * Get The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed. 
      * @return SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
      */
@@ -153,6 +176,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EventType", this.EventType);
         this.setParamObj(map, prefix + "WorkflowTaskEvent.", this.WorkflowTaskEvent);
+        this.setParamObj(map, prefix + "EditMediaTaskEvent.", this.EditMediaTaskEvent);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);

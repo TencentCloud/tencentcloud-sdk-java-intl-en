@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CloseProxiesRequest extends AbstractModel{
 
     /**
-    * Connection instance ID; It’s an old parameter, please switch to ProxyIds.
+    * Connection instance ID; It's an old parameter, please switch to ProxyIds.
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -38,23 +38,23 @@ For more information, please see How to Ensure Idempotence.
     private String ClientToken;
 
     /**
-    * Connection instance ID; It’s a new parameter.
+    * Connection instance ID; It's a new parameter.
     */
     @SerializedName("ProxyIds")
     @Expose
     private String [] ProxyIds;
 
     /**
-     * Get Connection instance ID; It’s an old parameter, please switch to ProxyIds. 
-     * @return InstanceIds Connection instance ID; It’s an old parameter, please switch to ProxyIds.
+     * Get Connection instance ID; It's an old parameter, please switch to ProxyIds. 
+     * @return InstanceIds Connection instance ID; It's an old parameter, please switch to ProxyIds.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set Connection instance ID; It’s an old parameter, please switch to ProxyIds.
-     * @param InstanceIds Connection instance ID; It’s an old parameter, please switch to ProxyIds.
+     * Set Connection instance ID; It's an old parameter, please switch to ProxyIds.
+     * @param InstanceIds Connection instance ID; It's an old parameter, please switch to ProxyIds.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
@@ -81,16 +81,16 @@ For more information, please see How to Ensure Idempotence.
     }
 
     /**
-     * Get Connection instance ID; It’s a new parameter. 
-     * @return ProxyIds Connection instance ID; It’s a new parameter.
+     * Get Connection instance ID; It's a new parameter. 
+     * @return ProxyIds Connection instance ID; It's a new parameter.
      */
     public String [] getProxyIds() {
         return this.ProxyIds;
     }
 
     /**
-     * Set Connection instance ID; It’s a new parameter.
-     * @param ProxyIds Connection instance ID; It’s a new parameter.
+     * Set Connection instance ID; It's a new parameter.
+     * @param ProxyIds Connection instance ID; It's a new parameter.
      */
     public void setProxyIds(String [] ProxyIds) {
         this.ProxyIds = ProxyIds;

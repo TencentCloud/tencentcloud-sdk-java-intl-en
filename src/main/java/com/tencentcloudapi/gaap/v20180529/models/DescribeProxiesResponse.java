@@ -30,14 +30,14 @@ public class DescribeProxiesResponse extends AbstractModel{
     private Long TotalCount;
 
     /**
-    * Connection instance information list; It’s an old parameter, please switch to ProxySet.
+    * Connection instance information list; It's an old parameter, please switch to ProxySet.
     */
     @SerializedName("InstanceSet")
     @Expose
     private ProxyInfo [] InstanceSet;
 
     /**
-    * Connection instance information list; It’s a new parameter.
+    * Connection instance information list; It's a new parameter.
     */
     @SerializedName("ProxySet")
     @Expose
@@ -67,32 +67,32 @@ public class DescribeProxiesResponse extends AbstractModel{
     }
 
     /**
-     * Get Connection instance information list; It’s an old parameter, please switch to ProxySet. 
-     * @return InstanceSet Connection instance information list; It’s an old parameter, please switch to ProxySet.
+     * Get Connection instance information list; It's an old parameter, please switch to ProxySet. 
+     * @return InstanceSet Connection instance information list; It's an old parameter, please switch to ProxySet.
      */
     public ProxyInfo [] getInstanceSet() {
         return this.InstanceSet;
     }
 
     /**
-     * Set Connection instance information list; It’s an old parameter, please switch to ProxySet.
-     * @param InstanceSet Connection instance information list; It’s an old parameter, please switch to ProxySet.
+     * Set Connection instance information list; It's an old parameter, please switch to ProxySet.
+     * @param InstanceSet Connection instance information list; It's an old parameter, please switch to ProxySet.
      */
     public void setInstanceSet(ProxyInfo [] InstanceSet) {
         this.InstanceSet = InstanceSet;
     }
 
     /**
-     * Get Connection instance information list; It’s a new parameter. 
-     * @return ProxySet Connection instance information list; It’s a new parameter.
+     * Get Connection instance information list; It's a new parameter. 
+     * @return ProxySet Connection instance information list; It's a new parameter.
      */
     public ProxyInfo [] getProxySet() {
         return this.ProxySet;
     }
 
     /**
-     * Set Connection instance information list; It’s a new parameter.
-     * @param ProxySet Connection instance information list; It’s a new parameter.
+     * Set Connection instance information list; It's a new parameter.
+     * @param ProxySet Connection instance information list; It's a new parameter.
      */
     public void setProxySet(ProxyInfo [] ProxySet) {
         this.ProxySet = ProxySet;

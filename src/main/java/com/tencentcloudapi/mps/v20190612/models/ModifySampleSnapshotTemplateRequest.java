@@ -51,6 +51,13 @@ public class ModifySampleSnapshotTemplateRequest extends AbstractModel{
     private Long Height;
 
     /**
+    * 
+    */
+    @SerializedName("ResolutionAdaptive")
+    @Expose
+    private String ResolutionAdaptive;
+
+    /**
     * Sampled screencapturing type. Valid values:
 <li>Percent: By percent.</li>
 <li>Time: By time interval.</li>
@@ -81,6 +88,13 @@ public class ModifySampleSnapshotTemplateRequest extends AbstractModel{
     @SerializedName("Comment")
     @Expose
     private String Comment;
+
+    /**
+    * 
+    */
+    @SerializedName("FillType")
+    @Expose
+    private String FillType;
 
     /**
      * Get Unique ID of a sampled screencapturing template. 
@@ -144,6 +158,22 @@ public class ModifySampleSnapshotTemplateRequest extends AbstractModel{
      */
     public void setHeight(Long Height) {
         this.Height = Height;
+    }
+
+    /**
+     * Get  
+     * @return ResolutionAdaptive 
+     */
+    public String getResolutionAdaptive() {
+        return this.ResolutionAdaptive;
+    }
+
+    /**
+     * Set 
+     * @param ResolutionAdaptive 
+     */
+    public void setResolutionAdaptive(String ResolutionAdaptive) {
+        this.ResolutionAdaptive = ResolutionAdaptive;
     }
 
     /**
@@ -227,6 +257,22 @@ public class ModifySampleSnapshotTemplateRequest extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return FillType 
+     */
+    public String getFillType() {
+        return this.FillType;
+    }
+
+    /**
+     * Set 
+     * @param FillType 
+     */
+    public void setFillType(String FillType) {
+        this.FillType = FillType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -234,10 +280,12 @@ public class ModifySampleSnapshotTemplateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
+        this.setParamSimple(map, prefix + "ResolutionAdaptive", this.ResolutionAdaptive);
         this.setParamSimple(map, prefix + "SampleType", this.SampleType);
         this.setParamSimple(map, prefix + "SampleInterval", this.SampleInterval);
         this.setParamSimple(map, prefix + "Format", this.Format);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamSimple(map, prefix + "FillType", this.FillType);
 
     }
 }

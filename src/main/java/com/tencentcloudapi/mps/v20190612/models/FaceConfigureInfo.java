@@ -32,7 +32,7 @@ public class FaceConfigureInfo extends AbstractModel{
     private String Switch;
 
     /**
-    * Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100. Default value: 95.
+    * Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0-100. Default value: 95.
     */
     @SerializedName("Score")
     @Expose
@@ -92,16 +92,16 @@ Default value: All (both default and custom figure libraries will be used.)
     }
 
     /**
-     * Get Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100. Default value: 95. 
-     * @return Score Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100. Default value: 95.
+     * Get Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0-100. Default value: 95. 
+     * @return Score Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0-100. Default value: 95.
      */
     public Float getScore() {
         return this.Score;
     }
 
     /**
-     * Set Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100. Default value: 95.
-     * @param Score Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100. Default value: 95.
+     * Set Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0-100. Default value: 95.
+     * @param Score Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0-100. Default value: 95.
      */
     public void setScore(Float Score) {
         this.Score = Score;

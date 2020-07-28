@@ -30,6 +30,13 @@ public class OpenSecurityPolicyRequest extends AbstractModel{
     private String ProxyId;
 
     /**
+    * Security policy ID
+    */
+    @SerializedName("PolicyId")
+    @Expose
+    private String PolicyId;
+
+    /**
      * Get ID of the connections requiring enabled security policies. 
      * @return ProxyId ID of the connections requiring enabled security policies.
      */
@@ -46,10 +53,27 @@ public class OpenSecurityPolicyRequest extends AbstractModel{
     }
 
     /**
+     * Get Security policy ID 
+     * @return PolicyId Security policy ID
+     */
+    public String getPolicyId() {
+        return this.PolicyId;
+    }
+
+    /**
+     * Set Security policy ID
+     * @param PolicyId Security policy ID
+     */
+    public void setPolicyId(String PolicyId) {
+        this.PolicyId = PolicyId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProxyId", this.ProxyId);
+        this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
 
     }
 }

@@ -132,6 +132,13 @@ Default value: black.
     private String FillType;
 
     /**
+    * 
+    */
+    @SerializedName("Comment")
+    @Expose
+    private String Comment;
+
+    /**
      * Get Unique ID of an image sprite generating template. 
      * @return Definition Unique ID of an image sprite generating template.
      */
@@ -412,6 +419,22 @@ Default value: black.
     }
 
     /**
+     * Get  
+     * @return Comment 
+     */
+    public String getComment() {
+        return this.Comment;
+    }
+
+    /**
+     * Set 
+     * @param Comment 
+     */
+    public void setComment(String Comment) {
+        this.Comment = Comment;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -428,6 +451,7 @@ Default value: black.
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "FillType", this.FillType);
+        this.setParamSimple(map, prefix + "Comment", this.Comment);
 
     }
 }

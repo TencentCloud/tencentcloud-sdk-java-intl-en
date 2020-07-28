@@ -37,6 +37,13 @@ public class ModifyProxyGroupAttributeRequest extends AbstractModel{
     private String GroupName;
 
     /**
+    * Project ID
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private Long ProjectId;
+
+    /**
      * Get ID of the connection group to be modified. 
      * @return GroupId ID of the connection group to be modified.
      */
@@ -69,11 +76,28 @@ public class ModifyProxyGroupAttributeRequest extends AbstractModel{
     }
 
     /**
+     * Get Project ID 
+     * @return ProjectId Project ID
+     */
+    public Long getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set Project ID
+     * @param ProjectId Project ID
+     */
+    public void setProjectId(Long ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
 
     }
 }

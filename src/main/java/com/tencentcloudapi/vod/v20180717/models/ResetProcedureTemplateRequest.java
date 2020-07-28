@@ -30,6 +30,13 @@ public class ResetProcedureTemplateRequest extends AbstractModel{
     private String Name;
 
     /**
+    * 
+    */
+    @SerializedName("Comment")
+    @Expose
+    private String Comment;
+
+    /**
     * Parameter of video processing task.
     */
     @SerializedName("MediaProcessTask")
@@ -78,6 +85,22 @@ public class ResetProcedureTemplateRequest extends AbstractModel{
      */
     public void setName(String Name) {
         this.Name = Name;
+    }
+
+    /**
+     * Get  
+     * @return Comment 
+     */
+    public String getComment() {
+        return this.Comment;
+    }
+
+    /**
+     * Set 
+     * @param Comment 
+     */
+    public void setComment(String Comment) {
+        this.Comment = Comment;
     }
 
     /**
@@ -165,6 +188,7 @@ public class ResetProcedureTemplateRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamObj(map, prefix + "MediaProcessTask.", this.MediaProcessTask);
         this.setParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
         this.setParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);

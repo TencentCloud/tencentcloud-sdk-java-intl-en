@@ -65,7 +65,7 @@ public class DescribeDBSlowlogsRequest extends AbstractModel{
     private String OrderByType;
 
     /**
-    * Number of entries returned per page. Value range: 1–100. Default value: 20.
+    * Number of entries returned per page. Value range: 1-100. Default value: 20.
     */
     @SerializedName("Limit")
     @Expose
@@ -175,16 +175,16 @@ public class DescribeDBSlowlogsRequest extends AbstractModel{
     }
 
     /**
-     * Get Number of entries returned per page. Value range: 1–100. Default value: 20. 
-     * @return Limit Number of entries returned per page. Value range: 1–100. Default value: 20.
+     * Get Number of entries returned per page. Value range: 1-100. Default value: 20. 
+     * @return Limit Number of entries returned per page. Value range: 1-100. Default value: 20.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of entries returned per page. Value range: 1–100. Default value: 20.
-     * @param Limit Number of entries returned per page. Value range: 1–100. Default value: 20.
+     * Set Number of entries returned per page. Value range: 1-100. Default value: 20.
+     * @param Limit Number of entries returned per page. Value range: 1-100. Default value: 20.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

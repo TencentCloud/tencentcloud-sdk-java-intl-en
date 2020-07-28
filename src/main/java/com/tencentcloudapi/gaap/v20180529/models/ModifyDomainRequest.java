@@ -44,7 +44,7 @@ public class ModifyDomainRequest extends AbstractModel{
     private String NewDomain;
 
     /**
-    * Server SSL certificate ID. It’s only applicable to the connections of version 3.0:
+    * Server SSL certificate ID. It's only applicable to the connections of version 3.0:
 If this field is not passed in, the original certificate will be used;
 If this field is passed in, and CertificateId=default, the listener certificate will be used;
 For other cases, the certificate specified by CertificateId will be used.
@@ -54,7 +54,7 @@ For other cases, the certificate specified by CertificateId will be used.
     private String CertificateId;
 
     /**
-    * Client CA certificate ID. It’s only applicable to the connections of version 3.0:
+    * Client CA certificate ID. It's only applicable to the connections of version 3.0:
 If this field is not passed in, the original certificate will be used;
 If this field is passed in, and ClientCertificateId=default, the listener certificate will be used;
 For other cases, the certificate specified by ClientCertificateId will be used.
@@ -122,11 +122,11 @@ In other cases, the certificate specified by `ClientCertificateId` or `PolyClien
     }
 
     /**
-     * Get Server SSL certificate ID. It’s only applicable to the connections of version 3.0:
+     * Get Server SSL certificate ID. It's only applicable to the connections of version 3.0:
 If this field is not passed in, the original certificate will be used;
 If this field is passed in, and CertificateId=default, the listener certificate will be used;
 For other cases, the certificate specified by CertificateId will be used. 
-     * @return CertificateId Server SSL certificate ID. It’s only applicable to the connections of version 3.0:
+     * @return CertificateId Server SSL certificate ID. It's only applicable to the connections of version 3.0:
 If this field is not passed in, the original certificate will be used;
 If this field is passed in, and CertificateId=default, the listener certificate will be used;
 For other cases, the certificate specified by CertificateId will be used.
@@ -136,11 +136,11 @@ For other cases, the certificate specified by CertificateId will be used.
     }
 
     /**
-     * Set Server SSL certificate ID. It’s only applicable to the connections of version 3.0:
+     * Set Server SSL certificate ID. It's only applicable to the connections of version 3.0:
 If this field is not passed in, the original certificate will be used;
 If this field is passed in, and CertificateId=default, the listener certificate will be used;
 For other cases, the certificate specified by CertificateId will be used.
-     * @param CertificateId Server SSL certificate ID. It’s only applicable to the connections of version 3.0:
+     * @param CertificateId Server SSL certificate ID. It's only applicable to the connections of version 3.0:
 If this field is not passed in, the original certificate will be used;
 If this field is passed in, and CertificateId=default, the listener certificate will be used;
 For other cases, the certificate specified by CertificateId will be used.
@@ -150,11 +150,11 @@ For other cases, the certificate specified by CertificateId will be used.
     }
 
     /**
-     * Get Client CA certificate ID. It’s only applicable to the connections of version 3.0:
+     * Get Client CA certificate ID. It's only applicable to the connections of version 3.0:
 If this field is not passed in, the original certificate will be used;
 If this field is passed in, and ClientCertificateId=default, the listener certificate will be used;
 For other cases, the certificate specified by ClientCertificateId will be used. 
-     * @return ClientCertificateId Client CA certificate ID. It’s only applicable to the connections of version 3.0:
+     * @return ClientCertificateId Client CA certificate ID. It's only applicable to the connections of version 3.0:
 If this field is not passed in, the original certificate will be used;
 If this field is passed in, and ClientCertificateId=default, the listener certificate will be used;
 For other cases, the certificate specified by ClientCertificateId will be used.
@@ -164,11 +164,11 @@ For other cases, the certificate specified by ClientCertificateId will be used.
     }
 
     /**
-     * Set Client CA certificate ID. It’s only applicable to the connections of version 3.0:
+     * Set Client CA certificate ID. It's only applicable to the connections of version 3.0:
 If this field is not passed in, the original certificate will be used;
 If this field is passed in, and ClientCertificateId=default, the listener certificate will be used;
 For other cases, the certificate specified by ClientCertificateId will be used.
-     * @param ClientCertificateId Client CA certificate ID. It’s only applicable to the connections of version 3.0:
+     * @param ClientCertificateId Client CA certificate ID. It's only applicable to the connections of version 3.0:
 If this field is not passed in, the original certificate will be used;
 If this field is passed in, and ClientCertificateId=default, the listener certificate will be used;
 For other cases, the certificate specified by ClientCertificateId will be used.

@@ -44,6 +44,13 @@ public class UpgradeDBInstanceEngineVersionRequest extends AbstractModel{
     private Long WaitSwitch;
 
     /**
+    * Whether to upgrade kernel minor version. Valid values: 1 (upgrade kernel minor version), 0 (upgrade database engine).
+    */
+    @SerializedName("UpgradeSubversion")
+    @Expose
+    private Long UpgradeSubversion;
+
+    /**
      * Get Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://cloud.tencent.com/document/api/236/15872) to query the ID, whose value is the `InstanceId` value in output parameters. 
      * @return InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://cloud.tencent.com/document/api/236/15872) to query the ID, whose value is the `InstanceId` value in output parameters.
      */
@@ -92,12 +99,29 @@ public class UpgradeDBInstanceEngineVersionRequest extends AbstractModel{
     }
 
     /**
+     * Get Whether to upgrade kernel minor version. Valid values: 1 (upgrade kernel minor version), 0 (upgrade database engine). 
+     * @return UpgradeSubversion Whether to upgrade kernel minor version. Valid values: 1 (upgrade kernel minor version), 0 (upgrade database engine).
+     */
+    public Long getUpgradeSubversion() {
+        return this.UpgradeSubversion;
+    }
+
+    /**
+     * Set Whether to upgrade kernel minor version. Valid values: 1 (upgrade kernel minor version), 0 (upgrade database engine).
+     * @param UpgradeSubversion Whether to upgrade kernel minor version. Valid values: 1 (upgrade kernel minor version), 0 (upgrade database engine).
+     */
+    public void setUpgradeSubversion(Long UpgradeSubversion) {
+        this.UpgradeSubversion = UpgradeSubversion;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
         this.setParamSimple(map, prefix + "WaitSwitch", this.WaitSwitch);
+        this.setParamSimple(map, prefix + "UpgradeSubversion", this.UpgradeSubversion);
 
     }
 }

@@ -30,6 +30,13 @@ public class SnapshotByTimeOffsetTaskInput extends AbstractModel{
     private Long Definition;
 
     /**
+    * 
+    */
+    @SerializedName("ExtTimeOffsetSet")
+    @Expose
+    private String [] ExtTimeOffsetSet;
+
+    /**
     * List of time points of screenshots in <font color=red>seconds</font>.
     */
     @SerializedName("TimeOffsetSet")
@@ -81,6 +88,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
+    }
+
+    /**
+     * Get  
+     * @return ExtTimeOffsetSet 
+     */
+    public String [] getExtTimeOffsetSet() {
+        return this.ExtTimeOffsetSet;
+    }
+
+    /**
+     * Set 
+     * @param ExtTimeOffsetSet 
+     */
+    public void setExtTimeOffsetSet(String [] ExtTimeOffsetSet) {
+        this.ExtTimeOffsetSet = ExtTimeOffsetSet;
     }
 
     /**
@@ -180,6 +203,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamArraySimple(map, prefix + "ExtTimeOffsetSet.", this.ExtTimeOffsetSet);
         this.setParamArraySimple(map, prefix + "TimeOffsetSet.", this.TimeOffsetSet);
         this.setParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);

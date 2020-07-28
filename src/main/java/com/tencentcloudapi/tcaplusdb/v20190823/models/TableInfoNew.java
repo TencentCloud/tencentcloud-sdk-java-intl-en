@@ -87,7 +87,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String TableGroupName;
 
     /**
-    * JSON string of table’s primary key field structure
+    * JSON string of table's primary key field structure
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("KeyStruct")
@@ -183,7 +183,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String CreatedTime;
 
     /**
-    * Table’s last modified time
+    * Table's last modified time
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UpdatedTime")
@@ -229,6 +229,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     @SerializedName("SortRule")
     @Expose
     private Long SortRule;
+
+    /**
+    * 
+    */
+    @SerializedName("DbClusterInfoStruct")
+    @Expose
+    private String DbClusterInfoStruct;
 
     /**
      * Get Table name
@@ -391,9 +398,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get JSON string of table’s primary key field structure
+     * Get JSON string of table's primary key field structure
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return KeyStruct JSON string of table’s primary key field structure
+     * @return KeyStruct JSON string of table's primary key field structure
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getKeyStruct() {
@@ -401,9 +408,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set JSON string of table’s primary key field structure
+     * Set JSON string of table's primary key field structure
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param KeyStruct JSON string of table’s primary key field structure
+     * @param KeyStruct JSON string of table's primary key field structure
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setKeyStruct(String KeyStruct) {
@@ -631,9 +638,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Table’s last modified time
+     * Get Table's last modified time
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return UpdatedTime Table’s last modified time
+     * @return UpdatedTime Table's last modified time
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getUpdatedTime() {
@@ -641,9 +648,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Table’s last modified time
+     * Set Table's last modified time
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param UpdatedTime Table’s last modified time
+     * @param UpdatedTime Table's last modified time
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setUpdatedTime(String UpdatedTime) {
@@ -751,6 +758,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get  
+     * @return DbClusterInfoStruct 
+     */
+    public String getDbClusterInfoStruct() {
+        return this.DbClusterInfoStruct;
+    }
+
+    /**
+     * Set 
+     * @param DbClusterInfoStruct 
+     */
+    public void setDbClusterInfoStruct(String DbClusterInfoStruct) {
+        this.DbClusterInfoStruct = DbClusterInfoStruct;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -780,6 +803,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ApiAccessId", this.ApiAccessId);
         this.setParamSimple(map, prefix + "SortFieldNum", this.SortFieldNum);
         this.setParamSimple(map, prefix + "SortRule", this.SortRule);
+        this.setParamSimple(map, prefix + "DbClusterInfoStruct", this.DbClusterInfoStruct);
 
     }
 }

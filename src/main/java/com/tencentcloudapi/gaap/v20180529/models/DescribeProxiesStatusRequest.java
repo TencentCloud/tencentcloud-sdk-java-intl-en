@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DescribeProxiesStatusRequest extends AbstractModel{
 
     /**
-    * Connection ID list; It’s an old parameter, please switch to ProxyIds.
+    * Connection ID list; It's an old parameter, please switch to ProxyIds.
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * Connection ID list; It’s a new parameter.
+    * Connection ID list; It's a new parameter.
     */
     @SerializedName("ProxyIds")
     @Expose
     private String [] ProxyIds;
 
     /**
-     * Get Connection ID list; It’s an old parameter, please switch to ProxyIds. 
-     * @return InstanceIds Connection ID list; It’s an old parameter, please switch to ProxyIds.
+     * Get Connection ID list; It's an old parameter, please switch to ProxyIds. 
+     * @return InstanceIds Connection ID list; It's an old parameter, please switch to ProxyIds.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set Connection ID list; It’s an old parameter, please switch to ProxyIds.
-     * @param InstanceIds Connection ID list; It’s an old parameter, please switch to ProxyIds.
+     * Set Connection ID list; It's an old parameter, please switch to ProxyIds.
+     * @param InstanceIds Connection ID list; It's an old parameter, please switch to ProxyIds.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get Connection ID list; It’s a new parameter. 
-     * @return ProxyIds Connection ID list; It’s a new parameter.
+     * Get Connection ID list; It's a new parameter. 
+     * @return ProxyIds Connection ID list; It's a new parameter.
      */
     public String [] getProxyIds() {
         return this.ProxyIds;
     }
 
     /**
-     * Set Connection ID list; It’s a new parameter.
-     * @param ProxyIds Connection ID list; It’s a new parameter.
+     * Set Connection ID list; It's a new parameter.
+     * @param ProxyIds Connection ID list; It's a new parameter.
      */
     public void setProxyIds(String [] ProxyIds) {
         this.ProxyIds = ProxyIds;

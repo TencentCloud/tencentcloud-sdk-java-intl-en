@@ -51,7 +51,7 @@ public class CreateHTTPSListenerRequest extends AbstractModel{
     private String ForwardProtocol;
 
     /**
-    * Connection ID
+    * Connection ID, which cannot be set together with `GroupId` at the same time. A listener will be created for the corresponding connection.
     */
     @SerializedName("ProxyId")
     @Expose
@@ -80,6 +80,13 @@ The one-way authentication is used by default.
     @SerializedName("PolyClientCertificateIds")
     @Expose
     private String [] PolyClientCertificateIds;
+
+    /**
+    * Connection group ID, which cannot be set together with `ProxyId` at the same time. A listener will be created for the corresponding connection group.
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
 
     /**
      * Get Listener name 
@@ -146,16 +153,16 @@ The one-way authentication is used by default.
     }
 
     /**
-     * Get Connection ID 
-     * @return ProxyId Connection ID
+     * Get Connection ID, which cannot be set together with `GroupId` at the same time. A listener will be created for the corresponding connection. 
+     * @return ProxyId Connection ID, which cannot be set together with `GroupId` at the same time. A listener will be created for the corresponding connection.
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set Connection ID
-     * @param ProxyId Connection ID
+     * Set Connection ID, which cannot be set together with `GroupId` at the same time. A listener will be created for the corresponding connection.
+     * @param ProxyId Connection ID, which cannot be set together with `GroupId` at the same time. A listener will be created for the corresponding connection.
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
@@ -222,6 +229,22 @@ The one-way authentication is used by default.
     }
 
     /**
+     * Get Connection group ID, which cannot be set together with `ProxyId` at the same time. A listener will be created for the corresponding connection group. 
+     * @return GroupId Connection group ID, which cannot be set together with `ProxyId` at the same time. A listener will be created for the corresponding connection group.
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set Connection group ID, which cannot be set together with `ProxyId` at the same time. A listener will be created for the corresponding connection group.
+     * @param GroupId Connection group ID, which cannot be set together with `ProxyId` at the same time. A listener will be created for the corresponding connection group.
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -233,6 +256,7 @@ The one-way authentication is used by default.
         this.setParamSimple(map, prefix + "AuthType", this.AuthType);
         this.setParamSimple(map, prefix + "ClientCertificateId", this.ClientCertificateId);
         this.setParamArraySimple(map, prefix + "PolyClientCertificateIds.", this.PolyClientCertificateIds);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 
     }
 }

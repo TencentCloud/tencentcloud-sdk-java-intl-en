@@ -37,7 +37,7 @@ public class ProcessMediaByProcedureRequest extends AbstractModel{
     private String ProcedureName;
 
     /**
-    * Task flow priority. The higher the value, the higher the priority. Value range: -10–10. If this parameter is left empty, 0 will be used.
+    * Task flow priority. The higher the value, the higher the priority. Value range: -10-10. If this parameter is left empty, 0 will be used.
     */
     @SerializedName("TasksPriority")
     @Expose
@@ -111,16 +111,16 @@ public class ProcessMediaByProcedureRequest extends AbstractModel{
     }
 
     /**
-     * Get Task flow priority. The higher the value, the higher the priority. Value range: -10–10. If this parameter is left empty, 0 will be used. 
-     * @return TasksPriority Task flow priority. The higher the value, the higher the priority. Value range: -10–10. If this parameter is left empty, 0 will be used.
+     * Get Task flow priority. The higher the value, the higher the priority. Value range: -10-10. If this parameter is left empty, 0 will be used. 
+     * @return TasksPriority Task flow priority. The higher the value, the higher the priority. Value range: -10-10. If this parameter is left empty, 0 will be used.
      */
     public Long getTasksPriority() {
         return this.TasksPriority;
     }
 
     /**
-     * Set Task flow priority. The higher the value, the higher the priority. Value range: -10–10. If this parameter is left empty, 0 will be used.
-     * @param TasksPriority Task flow priority. The higher the value, the higher the priority. Value range: -10–10. If this parameter is left empty, 0 will be used.
+     * Set Task flow priority. The higher the value, the higher the priority. Value range: -10-10. If this parameter is left empty, 0 will be used.
+     * @param TasksPriority Task flow priority. The higher the value, the higher the priority. Value range: -10-10. If this parameter is left empty, 0 will be used.
      */
     public void setTasksPriority(Long TasksPriority) {
         this.TasksPriority = TasksPriority;

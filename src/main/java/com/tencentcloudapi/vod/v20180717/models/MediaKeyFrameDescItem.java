@@ -30,7 +30,7 @@ public class MediaKeyFrameDescItem extends AbstractModel{
     private Float TimeOffset;
 
     /**
-    * Content string of timestamp containing 1–128 characters.
+    * Content string of timestamp containing 1-128 characters.
     */
     @SerializedName("Content")
     @Expose
@@ -53,16 +53,16 @@ public class MediaKeyFrameDescItem extends AbstractModel{
     }
 
     /**
-     * Get Content string of timestamp containing 1–128 characters. 
-     * @return Content Content string of timestamp containing 1–128 characters.
+     * Get Content string of timestamp containing 1-128 characters. 
+     * @return Content Content string of timestamp containing 1-128 characters.
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set Content string of timestamp containing 1–128 characters.
-     * @param Content Content string of timestamp containing 1–128 characters.
+     * Set Content string of timestamp containing 1-128 characters.
+     * @param Content Content string of timestamp containing 1-128 characters.
      */
     public void setContent(String Content) {
         this.Content = Content;

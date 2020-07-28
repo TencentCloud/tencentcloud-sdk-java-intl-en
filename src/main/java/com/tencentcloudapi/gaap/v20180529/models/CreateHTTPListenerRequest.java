@@ -37,11 +37,18 @@ public class CreateHTTPListenerRequest extends AbstractModel{
     private Long Port;
 
     /**
-    * Connection ID
+    * Connection ID, which cannot be set together with `GroupId` at the same time. A listener will be created for the corresponding connection.
     */
     @SerializedName("ProxyId")
     @Expose
     private String ProxyId;
+
+    /**
+    * Connection group ID, which cannot be set together with `ProxyId` at the same time. A listener will be created for the corresponding connection group.
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
 
     /**
      * Get Listener name 
@@ -76,19 +83,35 @@ public class CreateHTTPListenerRequest extends AbstractModel{
     }
 
     /**
-     * Get Connection ID 
-     * @return ProxyId Connection ID
+     * Get Connection ID, which cannot be set together with `GroupId` at the same time. A listener will be created for the corresponding connection. 
+     * @return ProxyId Connection ID, which cannot be set together with `GroupId` at the same time. A listener will be created for the corresponding connection.
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set Connection ID
-     * @param ProxyId Connection ID
+     * Set Connection ID, which cannot be set together with `GroupId` at the same time. A listener will be created for the corresponding connection.
+     * @param ProxyId Connection ID, which cannot be set together with `GroupId` at the same time. A listener will be created for the corresponding connection.
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
+    }
+
+    /**
+     * Get Connection group ID, which cannot be set together with `ProxyId` at the same time. A listener will be created for the corresponding connection group. 
+     * @return GroupId Connection group ID, which cannot be set together with `ProxyId` at the same time. A listener will be created for the corresponding connection group.
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set Connection group ID, which cannot be set together with `ProxyId` at the same time. A listener will be created for the corresponding connection group.
+     * @param GroupId Connection group ID, which cannot be set together with `ProxyId` at the same time. A listener will be created for the corresponding connection group.
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
     }
 
     /**
@@ -98,6 +121,7 @@ public class CreateHTTPListenerRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ListenerName", this.ListenerName);
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "ProxyId", this.ProxyId);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 
     }
 }

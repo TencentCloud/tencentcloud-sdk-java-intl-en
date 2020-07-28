@@ -79,6 +79,22 @@ Where:
     private TagPair [] TagSet;
 
     /**
+    * Connection group version
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Version")
+    @Expose
+    private String Version;
+
+    /**
+    * Creation time
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private Long CreateTime;
+
+    /**
      * Get Connection group ID 
      * @return GroupId Connection group ID
      */
@@ -219,6 +235,46 @@ Where:
     }
 
     /**
+     * Get Connection group version
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Version Connection group version
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getVersion() {
+        return this.Version;
+    }
+
+    /**
+     * Set Connection group version
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Version Connection group version
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setVersion(String Version) {
+        this.Version = Version;
+    }
+
+    /**
+     * Get Creation time
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return CreateTime Creation time
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set Creation time
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param CreateTime Creation time
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCreateTime(Long CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -229,6 +285,8 @@ Where:
         this.setParamObj(map, prefix + "RealServerRegionInfo.", this.RealServerRegionInfo);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+        this.setParamSimple(map, prefix + "Version", this.Version);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

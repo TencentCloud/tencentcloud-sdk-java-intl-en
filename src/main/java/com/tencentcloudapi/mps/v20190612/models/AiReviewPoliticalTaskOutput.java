@@ -44,7 +44,7 @@ public class AiReviewPoliticalTaskOutput extends AbstractModel{
 violation_photo:
 <li>violation_photo: violating photo.</li>
 Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
-<li>politician: politically sensitive figure.</li>
+<li>politician: political figure.</li>
     */
     @SerializedName("Label")
     @Expose
@@ -106,12 +106,12 @@ Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/mili
 violation_photo:
 <li>violation_photo: violating photo.</li>
 Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
-<li>politician: politically sensitive figure.</li> 
+<li>politician: political figure.</li> 
      * @return Label Tags for the results of video politically sensitive information detection. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://cloud.tencent.com/document/api/862/37615#AiReviewPoliticalTaskOutput) and this parameter is as follows:
 violation_photo:
 <li>violation_photo: violating photo.</li>
 Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
-<li>politician: politically sensitive figure.</li>
+<li>politician: political figure.</li>
      */
     public String getLabel() {
         return this.Label;
@@ -122,12 +122,12 @@ Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/mili
 violation_photo:
 <li>violation_photo: violating photo.</li>
 Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
-<li>politician: politically sensitive figure.</li>
+<li>politician: political figure.</li>
      * @param Label Tags for the results of video politically sensitive information detection. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://cloud.tencent.com/document/api/862/37615#AiReviewPoliticalTaskOutput) and this parameter is as follows:
 violation_photo:
 <li>violation_photo: violating photo.</li>
 Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
-<li>politician: politically sensitive figure.</li>
+<li>politician: political figure.</li>
      */
     public void setLabel(String Label) {
         this.Label = Label;

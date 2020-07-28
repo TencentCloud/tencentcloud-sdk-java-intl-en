@@ -78,7 +78,7 @@ If `ForwardProtocol=default`, the `ForwardProtocol` of the listener will be used
     private String ForwardProtocol;
 
     /**
-    * The ‘host’ carried in the request forwarded from the acceleration connection to the origin server.
+    * The `host` carried in the request forwarded from the acceleration connection to the origin server.
 If `ForwardHost=default`, the domain name of rule will be used. For other cases, the value set in this field will be used.
     */
     @SerializedName("ForwardHost")
@@ -222,9 +222,9 @@ If `ForwardProtocol=default`, the `ForwardProtocol` of the listener will be used
     }
 
     /**
-     * Get The ‘host’ carried in the request forwarded from the acceleration connection to the origin server.
+     * Get The `host` carried in the request forwarded from the acceleration connection to the origin server.
 If `ForwardHost=default`, the domain name of rule will be used. For other cases, the value set in this field will be used. 
-     * @return ForwardHost The ‘host’ carried in the request forwarded from the acceleration connection to the origin server.
+     * @return ForwardHost The `host` carried in the request forwarded from the acceleration connection to the origin server.
 If `ForwardHost=default`, the domain name of rule will be used. For other cases, the value set in this field will be used.
      */
     public String getForwardHost() {
@@ -232,9 +232,9 @@ If `ForwardHost=default`, the domain name of rule will be used. For other cases,
     }
 
     /**
-     * Set The ‘host’ carried in the request forwarded from the acceleration connection to the origin server.
+     * Set The `host` carried in the request forwarded from the acceleration connection to the origin server.
 If `ForwardHost=default`, the domain name of rule will be used. For other cases, the value set in this field will be used.
-     * @param ForwardHost The ‘host’ carried in the request forwarded from the acceleration connection to the origin server.
+     * @param ForwardHost The `host` carried in the request forwarded from the acceleration connection to the origin server.
 If `ForwardHost=default`, the domain name of rule will be used. For other cases, the value set in this field will be used.
      */
     public void setForwardHost(String ForwardHost) {

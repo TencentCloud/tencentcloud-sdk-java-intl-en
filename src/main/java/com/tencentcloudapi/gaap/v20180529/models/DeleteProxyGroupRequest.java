@@ -30,6 +30,16 @@ public class DeleteProxyGroupRequest extends AbstractModel{
     private String GroupId;
 
     /**
+    * Whether to enable forced deletion. Valid values:
+0: no;
+1: yes.
+Default value: 0. If there is a connection or listener/rule bound to an origin server in the connection group and `Force` is 0, the operation will return a failure.
+    */
+    @SerializedName("Force")
+    @Expose
+    private Long Force;
+
+    /**
      * Get ID of the connection group to be deleted. 
      * @return GroupId ID of the connection group to be deleted.
      */
@@ -46,10 +56,39 @@ public class DeleteProxyGroupRequest extends AbstractModel{
     }
 
     /**
+     * Get Whether to enable forced deletion. Valid values:
+0: no;
+1: yes.
+Default value: 0. If there is a connection or listener/rule bound to an origin server in the connection group and `Force` is 0, the operation will return a failure. 
+     * @return Force Whether to enable forced deletion. Valid values:
+0: no;
+1: yes.
+Default value: 0. If there is a connection or listener/rule bound to an origin server in the connection group and `Force` is 0, the operation will return a failure.
+     */
+    public Long getForce() {
+        return this.Force;
+    }
+
+    /**
+     * Set Whether to enable forced deletion. Valid values:
+0: no;
+1: yes.
+Default value: 0. If there is a connection or listener/rule bound to an origin server in the connection group and `Force` is 0, the operation will return a failure.
+     * @param Force Whether to enable forced deletion. Valid values:
+0: no;
+1: yes.
+Default value: 0. If there is a connection or listener/rule bound to an origin server in the connection group and `Force` is 0, the operation will return a failure.
+     */
+    public void setForce(Long Force) {
+        this.Force = Force;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "Force", this.Force);
 
     }
 }

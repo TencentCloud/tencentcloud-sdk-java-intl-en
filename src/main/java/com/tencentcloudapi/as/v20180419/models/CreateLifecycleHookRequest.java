@@ -58,7 +58,7 @@ public class CreateLifecycleHookRequest extends AbstractModel{
     private Long HeartbeatTimeout;
 
     /**
-    * Additional information sent by Auto Scaling to the notification target. Default value is “”. Maximum length is 1024 characters.
+    * Additional information sent by Auto Scaling to the notification target. Default value is ''. Maximum length is 1024 characters.
     */
     @SerializedName("NotificationMetadata")
     @Expose
@@ -159,16 +159,16 @@ public class CreateLifecycleHookRequest extends AbstractModel{
     }
 
     /**
-     * Get Additional information sent by Auto Scaling to the notification target. Default value is “”. Maximum length is 1024 characters. 
-     * @return NotificationMetadata Additional information sent by Auto Scaling to the notification target. Default value is “”. Maximum length is 1024 characters.
+     * Get Additional information sent by Auto Scaling to the notification target. Default value is ''. Maximum length is 1024 characters. 
+     * @return NotificationMetadata Additional information sent by Auto Scaling to the notification target. Default value is ''. Maximum length is 1024 characters.
      */
     public String getNotificationMetadata() {
         return this.NotificationMetadata;
     }
 
     /**
-     * Set Additional information sent by Auto Scaling to the notification target. Default value is “”. Maximum length is 1024 characters.
-     * @param NotificationMetadata Additional information sent by Auto Scaling to the notification target. Default value is “”. Maximum length is 1024 characters.
+     * Set Additional information sent by Auto Scaling to the notification target. Default value is ''. Maximum length is 1024 characters.
+     * @param NotificationMetadata Additional information sent by Auto Scaling to the notification target. Default value is ''. Maximum length is 1024 characters.
      */
     public void setNotificationMetadata(String NotificationMetadata) {
         this.NotificationMetadata = NotificationMetadata;

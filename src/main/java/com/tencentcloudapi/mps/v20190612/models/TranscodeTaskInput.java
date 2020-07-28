@@ -45,6 +45,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private WatermarkInput [] WatermarkSet;
 
     /**
+    * 
+    */
+    @SerializedName("MosaicSet")
+    @Expose
+    private MosaicInput [] MosaicSet;
+
+    /**
     * Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -127,6 +134,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get  
+     * @return MosaicSet 
+     */
+    public MosaicInput [] getMosaicSet() {
+        return this.MosaicSet;
+    }
+
+    /**
+     * Set 
+     * @param MosaicSet 
+     */
+    public void setMosaicSet(MosaicInput [] MosaicSet) {
+        this.MosaicSet = MosaicSet;
+    }
+
+    /**
      * Get Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return OutputStorage Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
@@ -205,6 +228,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamObj(map, prefix + "RawParameter.", this.RawParameter);
         this.setParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
+        this.setParamArrayObj(map, prefix + "MosaicSet.", this.MosaicSet);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         this.setParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
         this.setParamSimple(map, prefix + "SegmentObjectName", this.SegmentObjectName);

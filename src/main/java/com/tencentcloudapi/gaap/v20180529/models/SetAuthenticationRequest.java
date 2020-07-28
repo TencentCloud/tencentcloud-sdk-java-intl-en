@@ -30,7 +30,7 @@ public class SetAuthenticationRequest extends AbstractModel{
     private String ListenerId;
 
     /**
-    * The domain name requiring advanced configuration, i.e., the domain name of the listener’s forwarding rules.
+    * The domain name requiring advanced configuration, i.e., the domain name of the listener's forwarding rules.
     */
     @SerializedName("Domain")
     @Expose
@@ -118,16 +118,16 @@ The default value is 0.
     }
 
     /**
-     * Get The domain name requiring advanced configuration, i.e., the domain name of the listener’s forwarding rules. 
-     * @return Domain The domain name requiring advanced configuration, i.e., the domain name of the listener’s forwarding rules.
+     * Get The domain name requiring advanced configuration, i.e., the domain name of the listener's forwarding rules. 
+     * @return Domain The domain name requiring advanced configuration, i.e., the domain name of the listener's forwarding rules.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set The domain name requiring advanced configuration, i.e., the domain name of the listener’s forwarding rules.
-     * @param Domain The domain name requiring advanced configuration, i.e., the domain name of the listener’s forwarding rules.
+     * Set The domain name requiring advanced configuration, i.e., the domain name of the listener's forwarding rules.
+     * @param Domain The domain name requiring advanced configuration, i.e., the domain name of the listener's forwarding rules.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;

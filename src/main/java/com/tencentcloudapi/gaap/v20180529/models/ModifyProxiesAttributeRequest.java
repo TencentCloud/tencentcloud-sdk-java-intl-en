@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyProxiesAttributeRequest extends AbstractModel{
 
     /**
-    * ID of one or multiple connections to be operated; It’s an old parameter, please switch to ProxyIds.
+    * ID of one or multiple connections to be operated; It's an old parameter, please switch to ProxyIds.
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -45,23 +45,23 @@ For more information, please see How to Ensure Idempotence.
     private String ClientToken;
 
     /**
-    * ID of one or multiple connections to be operated; It’s a new parameter.
+    * ID of one or multiple connections to be operated; It's a new parameter.
     */
     @SerializedName("ProxyIds")
     @Expose
     private String [] ProxyIds;
 
     /**
-     * Get ID of one or multiple connections to be operated; It’s an old parameter, please switch to ProxyIds. 
-     * @return InstanceIds ID of one or multiple connections to be operated; It’s an old parameter, please switch to ProxyIds.
+     * Get ID of one or multiple connections to be operated; It's an old parameter, please switch to ProxyIds. 
+     * @return InstanceIds ID of one or multiple connections to be operated; It's an old parameter, please switch to ProxyIds.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set ID of one or multiple connections to be operated; It’s an old parameter, please switch to ProxyIds.
-     * @param InstanceIds ID of one or multiple connections to be operated; It’s an old parameter, please switch to ProxyIds.
+     * Set ID of one or multiple connections to be operated; It's an old parameter, please switch to ProxyIds.
+     * @param InstanceIds ID of one or multiple connections to be operated; It's an old parameter, please switch to ProxyIds.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
@@ -104,16 +104,16 @@ For more information, please see How to Ensure Idempotence.
     }
 
     /**
-     * Get ID of one or multiple connections to be operated; It’s a new parameter. 
-     * @return ProxyIds ID of one or multiple connections to be operated; It’s a new parameter.
+     * Get ID of one or multiple connections to be operated; It's a new parameter. 
+     * @return ProxyIds ID of one or multiple connections to be operated; It's a new parameter.
      */
     public String [] getProxyIds() {
         return this.ProxyIds;
     }
 
     /**
-     * Set ID of one or multiple connections to be operated; It’s a new parameter.
-     * @param ProxyIds ID of one or multiple connections to be operated; It’s a new parameter.
+     * Set ID of one or multiple connections to be operated; It's a new parameter.
+     * @param ProxyIds ID of one or multiple connections to be operated; It's a new parameter.
      */
     public void setProxyIds(String [] ProxyIds) {
         this.ProxyIds = ProxyIds;

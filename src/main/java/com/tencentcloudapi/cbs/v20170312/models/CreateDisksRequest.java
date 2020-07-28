@@ -44,7 +44,7 @@ public class CreateDisksRequest extends AbstractModel{
     private Placement Placement;
 
     /**
-    * The displayed name of the cloud disk. If it is left empty, the default is “Not named”. The maximum length cannot exceed 60 bytes.
+    * The displayed name of the cloud disk. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
     */
     @SerializedName("DiskName")
     @Expose
@@ -155,16 +155,16 @@ public class CreateDisksRequest extends AbstractModel{
     }
 
     /**
-     * Get The displayed name of the cloud disk. If it is left empty, the default is “Not named”. The maximum length cannot exceed 60 bytes. 
-     * @return DiskName The displayed name of the cloud disk. If it is left empty, the default is “Not named”. The maximum length cannot exceed 60 bytes.
+     * Get The displayed name of the cloud disk. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes. 
+     * @return DiskName The displayed name of the cloud disk. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
      */
     public String getDiskName() {
         return this.DiskName;
     }
 
     /**
-     * Set The displayed name of the cloud disk. If it is left empty, the default is “Not named”. The maximum length cannot exceed 60 bytes.
-     * @param DiskName The displayed name of the cloud disk. If it is left empty, the default is “Not named”. The maximum length cannot exceed 60 bytes.
+     * Set The displayed name of the cloud disk. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
+     * @param DiskName The displayed name of the cloud disk. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
      */
     public void setDiskName(String DiskName) {
         this.DiskName = DiskName;

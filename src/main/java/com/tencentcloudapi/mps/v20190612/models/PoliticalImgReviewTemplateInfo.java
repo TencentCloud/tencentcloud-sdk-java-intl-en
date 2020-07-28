@@ -34,12 +34,12 @@ public class PoliticalImgReviewTemplateInfo extends AbstractModel{
     /**
     * Filter tags for politically sensitive information detection of video images. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
 <li>violation_photo: violating photo;</li>
-<li>politician: sensitive figure;</li>
+<li>politician: political figure;</li>
 <li>entertainment: entertainment celebrity;</li>
 <li>sport: sports figure;</li>
 <li>entrepreneur: business figure;</li>
 <li>scholar: educator;</li>
-<li>celebrity: public-known figure;</li>
+<li>celebrity: well-known figure;</li>
 <li>military: military figure.</li>
     */
     @SerializedName("LabelSet")
@@ -47,14 +47,14 @@ public class PoliticalImgReviewTemplateInfo extends AbstractModel{
     private String [] LabelSet;
 
     /**
-    * Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 97 will be used by default. Value range: 0–100.
+    * Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 97 will be used by default. Value range: 0-100.
     */
     @SerializedName("BlockConfidence")
     @Expose
     private Long BlockConfidence;
 
     /**
-    * Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 95 will be used by default. Value range: 0–100.
+    * Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 95 will be used by default. Value range: 0-100.
     */
     @SerializedName("ReviewConfidence")
     @Expose
@@ -87,21 +87,21 @@ public class PoliticalImgReviewTemplateInfo extends AbstractModel{
     /**
      * Get Filter tags for politically sensitive information detection of video images. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
 <li>violation_photo: violating photo;</li>
-<li>politician: sensitive figure;</li>
+<li>politician: political figure;</li>
 <li>entertainment: entertainment celebrity;</li>
 <li>sport: sports figure;</li>
 <li>entrepreneur: business figure;</li>
 <li>scholar: educator;</li>
-<li>celebrity: public-known figure;</li>
+<li>celebrity: well-known figure;</li>
 <li>military: military figure.</li> 
      * @return LabelSet Filter tags for politically sensitive information detection of video images. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
 <li>violation_photo: violating photo;</li>
-<li>politician: sensitive figure;</li>
+<li>politician: political figure;</li>
 <li>entertainment: entertainment celebrity;</li>
 <li>sport: sports figure;</li>
 <li>entrepreneur: business figure;</li>
 <li>scholar: educator;</li>
-<li>celebrity: public-known figure;</li>
+<li>celebrity: well-known figure;</li>
 <li>military: military figure.</li>
      */
     public String [] getLabelSet() {
@@ -111,21 +111,21 @@ public class PoliticalImgReviewTemplateInfo extends AbstractModel{
     /**
      * Set Filter tags for politically sensitive information detection of video images. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
 <li>violation_photo: violating photo;</li>
-<li>politician: sensitive figure;</li>
+<li>politician: political figure;</li>
 <li>entertainment: entertainment celebrity;</li>
 <li>sport: sports figure;</li>
 <li>entrepreneur: business figure;</li>
 <li>scholar: educator;</li>
-<li>celebrity: public-known figure;</li>
+<li>celebrity: well-known figure;</li>
 <li>military: military figure.</li>
      * @param LabelSet Filter tags for politically sensitive information detection of video images. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
 <li>violation_photo: violating photo;</li>
-<li>politician: sensitive figure;</li>
+<li>politician: political figure;</li>
 <li>entertainment: entertainment celebrity;</li>
 <li>sport: sports figure;</li>
 <li>entrepreneur: business figure;</li>
 <li>scholar: educator;</li>
-<li>celebrity: public-known figure;</li>
+<li>celebrity: well-known figure;</li>
 <li>military: military figure.</li>
      */
     public void setLabelSet(String [] LabelSet) {
@@ -133,32 +133,32 @@ public class PoliticalImgReviewTemplateInfo extends AbstractModel{
     }
 
     /**
-     * Get Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 97 will be used by default. Value range: 0–100. 
-     * @return BlockConfidence Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 97 will be used by default. Value range: 0–100.
+     * Get Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 97 will be used by default. Value range: 0-100. 
+     * @return BlockConfidence Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 97 will be used by default. Value range: 0-100.
      */
     public Long getBlockConfidence() {
         return this.BlockConfidence;
     }
 
     /**
-     * Set Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 97 will be used by default. Value range: 0–100.
-     * @param BlockConfidence Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 97 will be used by default. Value range: 0–100.
+     * Set Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 97 will be used by default. Value range: 0-100.
+     * @param BlockConfidence Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 97 will be used by default. Value range: 0-100.
      */
     public void setBlockConfidence(Long BlockConfidence) {
         this.BlockConfidence = BlockConfidence;
     }
 
     /**
-     * Get Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 95 will be used by default. Value range: 0–100. 
-     * @return ReviewConfidence Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 95 will be used by default. Value range: 0–100.
+     * Get Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 95 will be used by default. Value range: 0-100. 
+     * @return ReviewConfidence Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 95 will be used by default. Value range: 0-100.
      */
     public Long getReviewConfidence() {
         return this.ReviewConfidence;
     }
 
     /**
-     * Set Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 95 will be used by default. Value range: 0–100.
-     * @param ReviewConfidence Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 95 will be used by default. Value range: 0–100.
+     * Set Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 95 will be used by default. Value range: 0-100.
+     * @param ReviewConfidence Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 95 will be used by default. Value range: 0-100.
      */
     public void setReviewConfidence(Long ReviewConfidence) {
         this.ReviewConfidence = ReviewConfidence;

@@ -51,6 +51,13 @@ public class CreateProxyGroupRequest extends AbstractModel{
     private TagPair [] TagSet;
 
     /**
+    * List of acceleration regions, including their names, bandwidth, and concurrence configuration.
+    */
+    @SerializedName("AccessRegionSet")
+    @Expose
+    private AccessConfiguration [] AccessRegionSet;
+
+    /**
      * Get Project ID of connection group 
      * @return ProjectId Project ID of connection group
      */
@@ -115,6 +122,22 @@ public class CreateProxyGroupRequest extends AbstractModel{
     }
 
     /**
+     * Get List of acceleration regions, including their names, bandwidth, and concurrence configuration. 
+     * @return AccessRegionSet List of acceleration regions, including their names, bandwidth, and concurrence configuration.
+     */
+    public AccessConfiguration [] getAccessRegionSet() {
+        return this.AccessRegionSet;
+    }
+
+    /**
+     * Set List of acceleration regions, including their names, bandwidth, and concurrence configuration.
+     * @param AccessRegionSet List of acceleration regions, including their names, bandwidth, and concurrence configuration.
+     */
+    public void setAccessRegionSet(AccessConfiguration [] AccessRegionSet) {
+        this.AccessRegionSet = AccessRegionSet;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class CreateProxyGroupRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);
         this.setParamSimple(map, prefix + "RealServerRegion", this.RealServerRegion);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+        this.setParamArrayObj(map, prefix + "AccessRegionSet.", this.AccessRegionSet);
 
     }
 }

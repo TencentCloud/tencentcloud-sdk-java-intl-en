@@ -32,7 +32,7 @@ public class FaceConfigureInfoForUpdate extends AbstractModel{
     private String Switch;
 
     /**
-    * Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100.
+    * Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0-100.
     */
     @SerializedName("Score")
     @Expose
@@ -91,16 +91,16 @@ There can be up to 10 tags, each with a length limit of 16 characters.
     }
 
     /**
-     * Get Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100. 
-     * @return Score Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100.
+     * Get Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0-100. 
+     * @return Score Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0-100.
      */
     public Float getScore() {
         return this.Score;
     }
 
     /**
-     * Set Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100.
-     * @param Score Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100.
+     * Set Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0-100.
+     * @param Score Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0-100.
      */
     public void setScore(Float Score) {
         this.Score = Score;

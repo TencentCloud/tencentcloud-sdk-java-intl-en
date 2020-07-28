@@ -87,6 +87,13 @@ public class ApplyUploadRequest extends AbstractModel{
     private String SessionContext;
 
     /**
+    * 
+    */
+    @SerializedName("ExtInfo")
+    @Expose
+    private String ExtInfo;
+
+    /**
     * ID of a [subapplication](/document/product/266/14574) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
     */
     @SerializedName("SubAppId")
@@ -242,6 +249,22 @@ public class ApplyUploadRequest extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return ExtInfo 
+     */
+    public String getExtInfo() {
+        return this.ExtInfo;
+    }
+
+    /**
+     * Set 
+     * @param ExtInfo 
+     */
+    public void setExtInfo(String ExtInfo) {
+        this.ExtInfo = ExtInfo;
+    }
+
+    /**
      * Get ID of a [subapplication](/document/product/266/14574) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty. 
      * @return SubAppId ID of a [subapplication](/document/product/266/14574) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
@@ -270,6 +293,7 @@ public class ApplyUploadRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ClassId", this.ClassId);
         this.setParamSimple(map, prefix + "SourceContext", this.SourceContext);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
+        this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }

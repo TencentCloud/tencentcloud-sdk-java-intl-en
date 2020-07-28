@@ -33,7 +33,7 @@ Default value: Black.
     private String Color;
 
     /**
-    * Canvas width, which is the width of the output video. Value range: 0–4096 px.
+    * Canvas width, which is the width of the output video. Value range: 0-4096 px.
 Default value: 0, which means that the value is the same as the video width of the first video segment in the first video track.
     */
     @SerializedName("Width")
@@ -41,7 +41,7 @@ Default value: 0, which means that the value is the same as the video width of t
     private Long Width;
 
     /**
-    * Canvas height, which is the height (or long side) of the output video. Value range: 0–4096 px.
+    * Canvas height, which is the height (or long side) of the output video. Value range: 0-4096 px.
 Default value: 0, which means that the value is the same as the video height of the first video segment in the first video track.
     */
     @SerializedName("Height")
@@ -77,9 +77,9 @@ Default value: Black.
     }
 
     /**
-     * Get Canvas width, which is the width of the output video. Value range: 0–4096 px.
+     * Get Canvas width, which is the width of the output video. Value range: 0-4096 px.
 Default value: 0, which means that the value is the same as the video width of the first video segment in the first video track. 
-     * @return Width Canvas width, which is the width of the output video. Value range: 0–4096 px.
+     * @return Width Canvas width, which is the width of the output video. Value range: 0-4096 px.
 Default value: 0, which means that the value is the same as the video width of the first video segment in the first video track.
      */
     public Long getWidth() {
@@ -87,9 +87,9 @@ Default value: 0, which means that the value is the same as the video width of t
     }
 
     /**
-     * Set Canvas width, which is the width of the output video. Value range: 0–4096 px.
+     * Set Canvas width, which is the width of the output video. Value range: 0-4096 px.
 Default value: 0, which means that the value is the same as the video width of the first video segment in the first video track.
-     * @param Width Canvas width, which is the width of the output video. Value range: 0–4096 px.
+     * @param Width Canvas width, which is the width of the output video. Value range: 0-4096 px.
 Default value: 0, which means that the value is the same as the video width of the first video segment in the first video track.
      */
     public void setWidth(Long Width) {
@@ -97,9 +97,9 @@ Default value: 0, which means that the value is the same as the video width of t
     }
 
     /**
-     * Get Canvas height, which is the height (or long side) of the output video. Value range: 0–4096 px.
+     * Get Canvas height, which is the height (or long side) of the output video. Value range: 0-4096 px.
 Default value: 0, which means that the value is the same as the video height of the first video segment in the first video track. 
-     * @return Height Canvas height, which is the height (or long side) of the output video. Value range: 0–4096 px.
+     * @return Height Canvas height, which is the height (or long side) of the output video. Value range: 0-4096 px.
 Default value: 0, which means that the value is the same as the video height of the first video segment in the first video track.
      */
     public Long getHeight() {
@@ -107,9 +107,9 @@ Default value: 0, which means that the value is the same as the video height of 
     }
 
     /**
-     * Set Canvas height, which is the height (or long side) of the output video. Value range: 0–4096 px.
+     * Set Canvas height, which is the height (or long side) of the output video. Value range: 0-4096 px.
 Default value: 0, which means that the value is the same as the video height of the first video segment in the first video track.
-     * @param Height Canvas height, which is the height (or long side) of the output video. Value range: 0–4096 px.
+     * @param Height Canvas height, which is the height (or long side) of the output video. Value range: 0-4096 px.
 Default value: 0, which means that the value is the same as the video height of the first video segment in the first video track.
      */
     public void setHeight(Long Height) {

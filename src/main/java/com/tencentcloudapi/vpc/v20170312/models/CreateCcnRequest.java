@@ -37,7 +37,7 @@ public class CreateCcnRequest extends AbstractModel{
     private String CcnDescription;
 
     /**
-    * CCN service quality, 'PT': Platinum, 'AU': Gold, 'AG': Silver. The default is ‘AU’.
+    * CCN service quality, 'PT': Platinum, 'AU': Gold, 'AG': Silver. The default is 'AU'.
     */
     @SerializedName("QosLevel")
     @Expose
@@ -97,16 +97,16 @@ public class CreateCcnRequest extends AbstractModel{
     }
 
     /**
-     * Get CCN service quality, 'PT': Platinum, 'AU': Gold, 'AG': Silver. The default is ‘AU’. 
-     * @return QosLevel CCN service quality, 'PT': Platinum, 'AU': Gold, 'AG': Silver. The default is ‘AU’.
+     * Get CCN service quality, 'PT': Platinum, 'AU': Gold, 'AG': Silver. The default is 'AU'. 
+     * @return QosLevel CCN service quality, 'PT': Platinum, 'AU': Gold, 'AG': Silver. The default is 'AU'.
      */
     public String getQosLevel() {
         return this.QosLevel;
     }
 
     /**
-     * Set CCN service quality, 'PT': Platinum, 'AU': Gold, 'AG': Silver. The default is ‘AU’.
-     * @param QosLevel CCN service quality, 'PT': Platinum, 'AU': Gold, 'AG': Silver. The default is ‘AU’.
+     * Set CCN service quality, 'PT': Platinum, 'AU': Gold, 'AG': Silver. The default is 'AU'.
+     * @param QosLevel CCN service quality, 'PT': Platinum, 'AU': Gold, 'AG': Silver. The default is 'AU'.
      */
     public void setQosLevel(String QosLevel) {
         this.QosLevel = QosLevel;

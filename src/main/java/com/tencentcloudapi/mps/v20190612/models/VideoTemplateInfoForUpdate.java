@@ -76,6 +76,13 @@ If the value is 0, the bitrate of the video will be the same as that of the sour
     private Long Height;
 
     /**
+    * 
+    */
+    @SerializedName("Gop")
+    @Expose
+    private Long Gop;
+
+    /**
     * Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
 <li> stretch: Stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
 <li>black: Fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
@@ -226,6 +233,22 @@ If the value is 0, the bitrate of the video will be the same as that of the sour
     }
 
     /**
+     * Get  
+     * @return Gop 
+     */
+    public Long getGop() {
+        return this.Gop;
+    }
+
+    /**
+     * Set 
+     * @param Gop 
+     */
+    public void setGop(Long Gop) {
+        this.Gop = Gop;
+    }
+
+    /**
      * Get Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
 <li> stretch: Stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
 <li>black: Fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
@@ -263,6 +286,7 @@ Default value: black.
         this.setParamSimple(map, prefix + "ResolutionAdaptive", this.ResolutionAdaptive);
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
+        this.setParamSimple(map, prefix + "Gop", this.Gop);
         this.setParamSimple(map, prefix + "FillType", this.FillType);
 
     }

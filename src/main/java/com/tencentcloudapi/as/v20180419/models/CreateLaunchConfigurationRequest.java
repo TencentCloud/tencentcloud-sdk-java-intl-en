@@ -158,6 +158,20 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
     private HostNameSettings HostNameSettings;
 
     /**
+    * 
+    */
+    @SerializedName("InstanceNameSettings")
+    @Expose
+    private InstanceNameSettings InstanceNameSettings;
+
+    /**
+    * 
+    */
+    @SerializedName("InstanceChargePrepaid")
+    @Expose
+    private InstanceChargePrepaid InstanceChargePrepaid;
+
+    /**
      * Get Display name of the launch configuration, which can contain Chinese characters, letters, numbers, underscores, separators ("-"), and decimal points with a maximum length of 60 bytes. 
      * @return LaunchConfigurationName Display name of the launch configuration, which can contain Chinese characters, letters, numbers, underscores, separators ("-"), and decimal points with a maximum length of 60 bytes.
      */
@@ -482,6 +496,38 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
     }
 
     /**
+     * Get  
+     * @return InstanceNameSettings 
+     */
+    public InstanceNameSettings getInstanceNameSettings() {
+        return this.InstanceNameSettings;
+    }
+
+    /**
+     * Set 
+     * @param InstanceNameSettings 
+     */
+    public void setInstanceNameSettings(InstanceNameSettings InstanceNameSettings) {
+        this.InstanceNameSettings = InstanceNameSettings;
+    }
+
+    /**
+     * Get  
+     * @return InstanceChargePrepaid 
+     */
+    public InstanceChargePrepaid getInstanceChargePrepaid() {
+        return this.InstanceChargePrepaid;
+    }
+
+    /**
+     * Set 
+     * @param InstanceChargePrepaid 
+     */
+    public void setInstanceChargePrepaid(InstanceChargePrepaid InstanceChargePrepaid) {
+        this.InstanceChargePrepaid = InstanceChargePrepaid;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -503,6 +549,8 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
         this.setParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
         this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
         this.setParamObj(map, prefix + "HostNameSettings.", this.HostNameSettings);
+        this.setParamObj(map, prefix + "InstanceNameSettings.", this.InstanceNameSettings);
+        this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
 
     }
 }

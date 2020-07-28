@@ -61,6 +61,13 @@ Default value: 0.
     private Long Height;
 
     /**
+    * 
+    */
+    @SerializedName("ResolutionAdaptive")
+    @Expose
+    private String ResolutionAdaptive;
+
+    /**
     * Animated image format. Valid values: gif, webp.
     */
     @SerializedName("Format")
@@ -193,6 +200,22 @@ Default value: 0.
     }
 
     /**
+     * Get  
+     * @return ResolutionAdaptive 
+     */
+    public String getResolutionAdaptive() {
+        return this.ResolutionAdaptive;
+    }
+
+    /**
+     * Set 
+     * @param ResolutionAdaptive 
+     */
+    public void setResolutionAdaptive(String ResolutionAdaptive) {
+        this.ResolutionAdaptive = ResolutionAdaptive;
+    }
+
+    /**
      * Get Animated image format. Valid values: gif, webp. 
      * @return Format Animated image format. Valid values: gif, webp.
      */
@@ -264,6 +287,7 @@ Default value: 0.
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
+        this.setParamSimple(map, prefix + "ResolutionAdaptive", this.ResolutionAdaptive);
         this.setParamSimple(map, prefix + "Format", this.Format);
         this.setParamSimple(map, prefix + "Fps", this.Fps);
         this.setParamSimple(map, prefix + "Quality", this.Quality);

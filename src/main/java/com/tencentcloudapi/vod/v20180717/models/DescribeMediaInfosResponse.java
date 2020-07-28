@@ -24,7 +24,6 @@ public class DescribeMediaInfosResponse extends AbstractModel{
 
     /**
     * Media file information list.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MediaInfoSet")
     @Expose
@@ -32,7 +31,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * List of IDs of files that do not exist.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("NotExistFileIdSet")
     @Expose
@@ -46,10 +44,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Media file information list.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Media file information list. 
      * @return MediaInfoSet Media file information list.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public MediaInfo [] getMediaInfoSet() {
         return this.MediaInfoSet;
@@ -57,19 +53,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Media file information list.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param MediaInfoSet Media file information list.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setMediaInfoSet(MediaInfo [] MediaInfoSet) {
         this.MediaInfoSet = MediaInfoSet;
     }
 
     /**
-     * Get List of IDs of files that do not exist.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get List of IDs of files that do not exist. 
      * @return NotExistFileIdSet List of IDs of files that do not exist.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String [] getNotExistFileIdSet() {
         return this.NotExistFileIdSet;
@@ -77,9 +69,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List of IDs of files that do not exist.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param NotExistFileIdSet List of IDs of files that do not exist.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setNotExistFileIdSet(String [] NotExistFileIdSet) {
         this.NotExistFileIdSet = NotExistFileIdSet;

@@ -135,12 +135,27 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String [] TagSet;
 
     /**
-    * Unique ID of LVB recording file
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Unique ID of an LVB recording file.
     */
     @SerializedName("Vid")
     @Expose
     private String Vid;
+
+    /**
+    * 
+    */
+    @SerializedName("Category")
+    @Expose
+    private String Category;
+
+    /**
+    * File status. Valid values: Normal, Forbidden.
+
+*Note: this field is not supported yet.
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
 
     /**
      * Get Media filename.
@@ -423,23 +438,59 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Unique ID of LVB recording file
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Vid Unique ID of LVB recording file
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Unique ID of an LVB recording file. 
+     * @return Vid Unique ID of an LVB recording file.
      */
     public String getVid() {
         return this.Vid;
     }
 
     /**
-     * Set Unique ID of LVB recording file
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Vid Unique ID of LVB recording file
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Unique ID of an LVB recording file.
+     * @param Vid Unique ID of an LVB recording file.
      */
     public void setVid(String Vid) {
         this.Vid = Vid;
+    }
+
+    /**
+     * Get  
+     * @return Category 
+     */
+    public String getCategory() {
+        return this.Category;
+    }
+
+    /**
+     * Set 
+     * @param Category 
+     */
+    public void setCategory(String Category) {
+        this.Category = Category;
+    }
+
+    /**
+     * Get File status. Valid values: Normal, Forbidden.
+
+*Note: this field is not supported yet. 
+     * @return Status File status. Valid values: Normal, Forbidden.
+
+*Note: this field is not supported yet.
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set File status. Valid values: Normal, Forbidden.
+
+*Note: this field is not supported yet.
+     * @param Status File status. Valid values: Normal, Forbidden.
+
+*Note: this field is not supported yet.
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
     }
 
     /**
@@ -461,6 +512,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "StorageRegion", this.StorageRegion);
         this.setParamArraySimple(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "Vid", this.Vid);
+        this.setParamSimple(map, prefix + "Category", this.Category);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

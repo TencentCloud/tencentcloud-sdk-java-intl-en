@@ -44,7 +44,7 @@ public class CreateDBInstancesRequest extends AbstractModel{
     private Long Storage;
 
     /**
-    * Number of instances purchased at a time. Value range: 1–100.
+    * Number of instances purchased at a time. Value range: 1-100.
     */
     @SerializedName("InstanceCount")
     @Expose
@@ -183,16 +183,16 @@ public class CreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Number of instances purchased at a time. Value range: 1–100. 
-     * @return InstanceCount Number of instances purchased at a time. Value range: 1–100.
+     * Get Number of instances purchased at a time. Value range: 1-100. 
+     * @return InstanceCount Number of instances purchased at a time. Value range: 1-100.
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
     /**
-     * Set Number of instances purchased at a time. Value range: 1–100.
-     * @param InstanceCount Number of instances purchased at a time. Value range: 1–100.
+     * Set Number of instances purchased at a time. Value range: 1-100.
+     * @param InstanceCount Number of instances purchased at a time. Value range: 1-100.
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;

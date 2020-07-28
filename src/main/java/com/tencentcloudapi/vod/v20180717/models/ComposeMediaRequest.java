@@ -44,6 +44,20 @@ public class ComposeMediaRequest extends AbstractModel{
     private Canvas Canvas;
 
     /**
+    * 
+    */
+    @SerializedName("SessionContext")
+    @Expose
+    private String SessionContext;
+
+    /**
+    * 
+    */
+    @SerializedName("SessionId")
+    @Expose
+    private String SessionId;
+
+    /**
     * [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
     */
     @SerializedName("SubAppId")
@@ -99,6 +113,38 @@ public class ComposeMediaRequest extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return SessionContext 
+     */
+    public String getSessionContext() {
+        return this.SessionContext;
+    }
+
+    /**
+     * Set 
+     * @param SessionContext 
+     */
+    public void setSessionContext(String SessionContext) {
+        this.SessionContext = SessionContext;
+    }
+
+    /**
+     * Get  
+     * @return SessionId 
+     */
+    public String getSessionId() {
+        return this.SessionId;
+    }
+
+    /**
+     * Set 
+     * @param SessionId 
+     */
+    public void setSessionId(String SessionId) {
+        this.SessionId = SessionId;
+    }
+
+    /**
      * Get [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty. 
      * @return SubAppId [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
@@ -121,6 +167,8 @@ public class ComposeMediaRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Tracks.", this.Tracks);
         this.setParamObj(map, prefix + "Output.", this.Output);
         this.setParamObj(map, prefix + "Canvas.", this.Canvas);
+        this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
+        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }

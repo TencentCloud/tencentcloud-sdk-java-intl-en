@@ -23,20 +23,6 @@ import java.util.HashMap;
 public class CreateSampleSnapshotTemplateRequest extends AbstractModel{
 
     /**
-    * Image width in px. Value range: [128, 4,096].
-    */
-    @SerializedName("Width")
-    @Expose
-    private Long Width;
-
-    /**
-    * Image height in px. Value range: [128, 4,096].
-    */
-    @SerializedName("Height")
-    @Expose
-    private Long Height;
-
-    /**
     * Sampled screencapturing type. Valid values:
 <li>Percent: By percent.</li>
 <li>Time: By time interval.</li>
@@ -62,6 +48,27 @@ public class CreateSampleSnapshotTemplateRequest extends AbstractModel{
     private String Name;
 
     /**
+    * Image width in px. Value range: [128, 4,096].
+    */
+    @SerializedName("Width")
+    @Expose
+    private Long Width;
+
+    /**
+    * Image height in px. Value range: [128, 4,096].
+    */
+    @SerializedName("Height")
+    @Expose
+    private Long Height;
+
+    /**
+    * 
+    */
+    @SerializedName("ResolutionAdaptive")
+    @Expose
+    private String ResolutionAdaptive;
+
+    /**
     * Image format. Valid values: jpg; png. Default value: jpg.
     */
     @SerializedName("Format")
@@ -76,36 +83,11 @@ public class CreateSampleSnapshotTemplateRequest extends AbstractModel{
     private String Comment;
 
     /**
-     * Get Image width in px. Value range: [128, 4,096]. 
-     * @return Width Image width in px. Value range: [128, 4,096].
-     */
-    public Long getWidth() {
-        return this.Width;
-    }
-
-    /**
-     * Set Image width in px. Value range: [128, 4,096].
-     * @param Width Image width in px. Value range: [128, 4,096].
-     */
-    public void setWidth(Long Width) {
-        this.Width = Width;
-    }
-
-    /**
-     * Get Image height in px. Value range: [128, 4,096]. 
-     * @return Height Image height in px. Value range: [128, 4,096].
-     */
-    public Long getHeight() {
-        return this.Height;
-    }
-
-    /**
-     * Set Image height in px. Value range: [128, 4,096].
-     * @param Height Image height in px. Value range: [128, 4,096].
-     */
-    public void setHeight(Long Height) {
-        this.Height = Height;
-    }
+    * 
+    */
+    @SerializedName("FillType")
+    @Expose
+    private String FillType;
 
     /**
      * Get Sampled screencapturing type. Valid values:
@@ -172,6 +154,54 @@ public class CreateSampleSnapshotTemplateRequest extends AbstractModel{
     }
 
     /**
+     * Get Image width in px. Value range: [128, 4,096]. 
+     * @return Width Image width in px. Value range: [128, 4,096].
+     */
+    public Long getWidth() {
+        return this.Width;
+    }
+
+    /**
+     * Set Image width in px. Value range: [128, 4,096].
+     * @param Width Image width in px. Value range: [128, 4,096].
+     */
+    public void setWidth(Long Width) {
+        this.Width = Width;
+    }
+
+    /**
+     * Get Image height in px. Value range: [128, 4,096]. 
+     * @return Height Image height in px. Value range: [128, 4,096].
+     */
+    public Long getHeight() {
+        return this.Height;
+    }
+
+    /**
+     * Set Image height in px. Value range: [128, 4,096].
+     * @param Height Image height in px. Value range: [128, 4,096].
+     */
+    public void setHeight(Long Height) {
+        this.Height = Height;
+    }
+
+    /**
+     * Get  
+     * @return ResolutionAdaptive 
+     */
+    public String getResolutionAdaptive() {
+        return this.ResolutionAdaptive;
+    }
+
+    /**
+     * Set 
+     * @param ResolutionAdaptive 
+     */
+    public void setResolutionAdaptive(String ResolutionAdaptive) {
+        this.ResolutionAdaptive = ResolutionAdaptive;
+    }
+
+    /**
      * Get Image format. Valid values: jpg; png. Default value: jpg. 
      * @return Format Image format. Valid values: jpg; png. Default value: jpg.
      */
@@ -204,16 +234,34 @@ public class CreateSampleSnapshotTemplateRequest extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return FillType 
+     */
+    public String getFillType() {
+        return this.FillType;
+    }
+
+    /**
+     * Set 
+     * @param FillType 
+     */
+    public void setFillType(String FillType) {
+        this.FillType = FillType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Width", this.Width);
-        this.setParamSimple(map, prefix + "Height", this.Height);
         this.setParamSimple(map, prefix + "SampleType", this.SampleType);
         this.setParamSimple(map, prefix + "SampleInterval", this.SampleInterval);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Width", this.Width);
+        this.setParamSimple(map, prefix + "Height", this.Height);
+        this.setParamSimple(map, prefix + "ResolutionAdaptive", this.ResolutionAdaptive);
         this.setParamSimple(map, prefix + "Format", this.Format);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamSimple(map, prefix + "FillType", this.FillType);
 
     }
 }

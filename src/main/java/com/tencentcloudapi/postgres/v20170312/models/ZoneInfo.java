@@ -51,7 +51,7 @@ public class ZoneInfo extends AbstractModel{
     private String ZoneState;
 
     /**
-    * Whether the availability zone supports IPv6 address access
+    * Whether the AZ supports IPv6 address access
     */
     @SerializedName("ZoneSupportIpv6")
     @Expose
@@ -122,16 +122,16 @@ public class ZoneInfo extends AbstractModel{
     }
 
     /**
-     * Get Whether the availability zone supports IPv6 address access 
-     * @return ZoneSupportIpv6 Whether the availability zone supports IPv6 address access
+     * Get Whether the AZ supports IPv6 address access 
+     * @return ZoneSupportIpv6 Whether the AZ supports IPv6 address access
      */
     public Long getZoneSupportIpv6() {
         return this.ZoneSupportIpv6;
     }
 
     /**
-     * Set Whether the availability zone supports IPv6 address access
-     * @param ZoneSupportIpv6 Whether the availability zone supports IPv6 address access
+     * Set Whether the AZ supports IPv6 address access
+     * @param ZoneSupportIpv6 Whether the AZ supports IPv6 address access
      */
     public void setZoneSupportIpv6(Long ZoneSupportIpv6) {
         this.ZoneSupportIpv6 = ZoneSupportIpv6;

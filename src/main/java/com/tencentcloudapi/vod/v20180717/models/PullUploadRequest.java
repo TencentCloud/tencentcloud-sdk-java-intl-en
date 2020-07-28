@@ -23,8 +23,8 @@ import java.util.HashMap;
 public class PullUploadRequest extends AbstractModel{
 
     /**
-    * URL of the media to be pulled. Media files in HLS and Dash formats cannot be pulled currently.
-For the supported extensions, please see [Media Types](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
+    * URL of the media to be pulled. Supported media format: HLS; unsupported media format: DASH.
+For more information about supported extensions, please see [Media Types](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
     */
     @SerializedName("MediaUrl")
     @Expose
@@ -101,20 +101,27 @@ For the supported extensions, please see [Media Types](https://cloud.tencent.com
     private Long SubAppId;
 
     /**
-     * Get URL of the media to be pulled. Media files in HLS and Dash formats cannot be pulled currently.
-For the supported extensions, please see [Media Types](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B). 
-     * @return MediaUrl URL of the media to be pulled. Media files in HLS and Dash formats cannot be pulled currently.
-For the supported extensions, please see [Media Types](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
+    * Source context, which is used to pass through the user request information. The [upload callback](/document/product/266/7830) API will return the value of this field. It can contain up to 250 characters.
+    */
+    @SerializedName("SourceContext")
+    @Expose
+    private String SourceContext;
+
+    /**
+     * Get URL of the media to be pulled. Supported media format: HLS; unsupported media format: DASH.
+For more information about supported extensions, please see [Media Types](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B). 
+     * @return MediaUrl URL of the media to be pulled. Supported media format: HLS; unsupported media format: DASH.
+For more information about supported extensions, please see [Media Types](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
      */
     public String getMediaUrl() {
         return this.MediaUrl;
     }
 
     /**
-     * Set URL of the media to be pulled. Media files in HLS and Dash formats cannot be pulled currently.
-For the supported extensions, please see [Media Types](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
-     * @param MediaUrl URL of the media to be pulled. Media files in HLS and Dash formats cannot be pulled currently.
-For the supported extensions, please see [Media Types](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
+     * Set URL of the media to be pulled. Supported media format: HLS; unsupported media format: DASH.
+For more information about supported extensions, please see [Media Types](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
+     * @param MediaUrl URL of the media to be pulled. Supported media format: HLS; unsupported media format: DASH.
+For more information about supported extensions, please see [Media Types](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
      */
     public void setMediaUrl(String MediaUrl) {
         this.MediaUrl = MediaUrl;
@@ -281,6 +288,22 @@ For the supported extensions, please see [Media Types](https://cloud.tencent.com
     }
 
     /**
+     * Get Source context, which is used to pass through the user request information. The [upload callback](/document/product/266/7830) API will return the value of this field. It can contain up to 250 characters. 
+     * @return SourceContext Source context, which is used to pass through the user request information. The [upload callback](/document/product/266/7830) API will return the value of this field. It can contain up to 250 characters.
+     */
+    public String getSourceContext() {
+        return this.SourceContext;
+    }
+
+    /**
+     * Set Source context, which is used to pass through the user request information. The [upload callback](/document/product/266/7830) API will return the value of this field. It can contain up to 250 characters.
+     * @param SourceContext Source context, which is used to pass through the user request information. The [upload callback](/document/product/266/7830) API will return the value of this field. It can contain up to 250 characters.
+     */
+    public void setSourceContext(String SourceContext) {
+        this.SourceContext = SourceContext;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -295,6 +318,7 @@ For the supported extensions, please see [Media Types](https://cloud.tencent.com
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
+        this.setParamSimple(map, prefix + "SourceContext", this.SourceContext);
 
     }
 }

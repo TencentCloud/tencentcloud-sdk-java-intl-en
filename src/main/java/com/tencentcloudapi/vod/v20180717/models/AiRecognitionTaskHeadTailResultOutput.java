@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AiRecognitionTaskHeadTailResultOutput extends AbstractModel{
 
     /**
-    * Confidence of recognized opening credits. Value range: 0–100.
+    * Confidence of recognized opening credits. Value range: 0-100.
     */
     @SerializedName("HeadConfidence")
     @Expose
@@ -37,7 +37,7 @@ public class AiRecognitionTaskHeadTailResultOutput extends AbstractModel{
     private Float HeadTimeOffset;
 
     /**
-    * Confidence of recognized closing credits. Value range: 0–100.
+    * Confidence of recognized closing credits. Value range: 0-100.
     */
     @SerializedName("TailConfidence")
     @Expose
@@ -51,16 +51,16 @@ public class AiRecognitionTaskHeadTailResultOutput extends AbstractModel{
     private Float TailTimeOffset;
 
     /**
-     * Get Confidence of recognized opening credits. Value range: 0–100. 
-     * @return HeadConfidence Confidence of recognized opening credits. Value range: 0–100.
+     * Get Confidence of recognized opening credits. Value range: 0-100. 
+     * @return HeadConfidence Confidence of recognized opening credits. Value range: 0-100.
      */
     public Float getHeadConfidence() {
         return this.HeadConfidence;
     }
 
     /**
-     * Set Confidence of recognized opening credits. Value range: 0–100.
-     * @param HeadConfidence Confidence of recognized opening credits. Value range: 0–100.
+     * Set Confidence of recognized opening credits. Value range: 0-100.
+     * @param HeadConfidence Confidence of recognized opening credits. Value range: 0-100.
      */
     public void setHeadConfidence(Float HeadConfidence) {
         this.HeadConfidence = HeadConfidence;
@@ -83,16 +83,16 @@ public class AiRecognitionTaskHeadTailResultOutput extends AbstractModel{
     }
 
     /**
-     * Get Confidence of recognized closing credits. Value range: 0–100. 
-     * @return TailConfidence Confidence of recognized closing credits. Value range: 0–100.
+     * Get Confidence of recognized closing credits. Value range: 0-100. 
+     * @return TailConfidence Confidence of recognized closing credits. Value range: 0-100.
      */
     public Float getTailConfidence() {
         return this.TailConfidence;
     }
 
     /**
-     * Set Confidence of recognized closing credits. Value range: 0–100.
-     * @param TailConfidence Confidence of recognized closing credits. Value range: 0–100.
+     * Set Confidence of recognized closing credits. Value range: 0-100.
+     * @param TailConfidence Confidence of recognized closing credits. Value range: 0-100.
      */
     public void setTailConfidence(Float TailConfidence) {
         this.TailConfidence = TailConfidence;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AiRecognitionTaskAsrFullTextSegmentItem extends AbstractModel{
 
     /**
-    * Confidence of recognized segment. Value range: 0–100.
+    * Confidence of recognized segment. Value range: 0-100.
     */
     @SerializedName("Confidence")
     @Expose
@@ -51,16 +51,16 @@ public class AiRecognitionTaskAsrFullTextSegmentItem extends AbstractModel{
     private String Text;
 
     /**
-     * Get Confidence of recognized segment. Value range: 0–100. 
-     * @return Confidence Confidence of recognized segment. Value range: 0–100.
+     * Get Confidence of recognized segment. Value range: 0-100. 
+     * @return Confidence Confidence of recognized segment. Value range: 0-100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Confidence of recognized segment. Value range: 0–100.
-     * @param Confidence Confidence of recognized segment. Value range: 0–100.
+     * Set Confidence of recognized segment. Value range: 0-100.
+     * @param Confidence Confidence of recognized segment. Value range: 0-100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;

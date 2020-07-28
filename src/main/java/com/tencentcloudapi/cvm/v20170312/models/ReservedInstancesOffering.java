@@ -31,15 +31,15 @@ Valid value: <a href="https://cloud.tencent.com/document/product/213/6091">Avail
     private String Zone;
 
     /**
-    * The currency of the Reserved Instance you are purchasing. It's specified using ISO 4217 standard currency.
-Valid value: USD.
+    * The billing currency of the Reserved Instance you are purchasing. It's specified using ISO 4217 standard currency.
+Value: USD.
     */
     @SerializedName("CurrencyCode")
     @Expose
     private String CurrencyCode;
 
     /**
-    * The **duration** of the Reserved Instance in seconds, which is the purchased usage period. For example, 31536000.
+    * The **validity** of the Reserved Instance in seconds, which is the purchased usage period. For example, 31536000.
 Unit: second
     */
     @SerializedName("Duration")
@@ -55,15 +55,15 @@ Unit: this field uses the currency code specified in `currencyCode`, and only su
     private Float FixedPrice;
 
     /**
-    * The instance type on which the Reserved Instance can be used, such as S3.MEDIUM4.
-Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance Types</a>
+    * The instance model of the Reserved Instance, such as S3.MEDIUM4.
+Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance Models</a>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * The payment term of the Reserved Instance, such as All Upfront.
+    * The payment term of the Reserved Instance, such as **All Upfront**.
 Valid value: All Upfront.
     */
     @SerializedName("OfferingType")
@@ -78,7 +78,7 @@ Valid value: All Upfront.
     private String ReservedInstancesOfferingId;
 
     /**
-    * The platform description (operating system) of the Reserved Instance, such as linux.
+    * The operating system of the Reserved Instance, such as **linux**.
 Valid value: linux.
     */
     @SerializedName("ProductDescription")
@@ -87,7 +87,7 @@ Valid value: linux.
 
     /**
     * The hourly usage price of the Reserved Instance, such as 0.0.
-Currently, the only supported payment is “All Upfront”, so the default value of `UsagePrice` is 0 USD/hr.
+Currently, the only supported payment mode is **All Upfront**, so the default value of `UsagePrice` is 0 USD/hr.
 Unit: USD/hr. This field uses the currency code specified in `currencyCode`, and only supports “USD” at this time.
     */
     @SerializedName("UsagePrice")
@@ -115,29 +115,29 @@ Valid value: <a href="https://cloud.tencent.com/document/product/213/6091">Avail
     }
 
     /**
-     * Get The currency of the Reserved Instance you are purchasing. It's specified using ISO 4217 standard currency.
-Valid value: USD. 
-     * @return CurrencyCode The currency of the Reserved Instance you are purchasing. It's specified using ISO 4217 standard currency.
-Valid value: USD.
+     * Get The billing currency of the Reserved Instance you are purchasing. It's specified using ISO 4217 standard currency.
+Value: USD. 
+     * @return CurrencyCode The billing currency of the Reserved Instance you are purchasing. It's specified using ISO 4217 standard currency.
+Value: USD.
      */
     public String getCurrencyCode() {
         return this.CurrencyCode;
     }
 
     /**
-     * Set The currency of the Reserved Instance you are purchasing. It's specified using ISO 4217 standard currency.
-Valid value: USD.
-     * @param CurrencyCode The currency of the Reserved Instance you are purchasing. It's specified using ISO 4217 standard currency.
-Valid value: USD.
+     * Set The billing currency of the Reserved Instance you are purchasing. It's specified using ISO 4217 standard currency.
+Value: USD.
+     * @param CurrencyCode The billing currency of the Reserved Instance you are purchasing. It's specified using ISO 4217 standard currency.
+Value: USD.
      */
     public void setCurrencyCode(String CurrencyCode) {
         this.CurrencyCode = CurrencyCode;
     }
 
     /**
-     * Get The **duration** of the Reserved Instance in seconds, which is the purchased usage period. For example, 31536000.
+     * Get The **validity** of the Reserved Instance in seconds, which is the purchased usage period. For example, 31536000.
 Unit: second 
-     * @return Duration The **duration** of the Reserved Instance in seconds, which is the purchased usage period. For example, 31536000.
+     * @return Duration The **validity** of the Reserved Instance in seconds, which is the purchased usage period. For example, 31536000.
 Unit: second
      */
     public Long getDuration() {
@@ -145,9 +145,9 @@ Unit: second
     }
 
     /**
-     * Set The **duration** of the Reserved Instance in seconds, which is the purchased usage period. For example, 31536000.
+     * Set The **validity** of the Reserved Instance in seconds, which is the purchased usage period. For example, 31536000.
 Unit: second
-     * @param Duration The **duration** of the Reserved Instance in seconds, which is the purchased usage period. For example, 31536000.
+     * @param Duration The **validity** of the Reserved Instance in seconds, which is the purchased usage period. For example, 31536000.
 Unit: second
      */
     public void setDuration(Long Duration) {
@@ -175,29 +175,29 @@ Unit: this field uses the currency code specified in `currencyCode`, and only su
     }
 
     /**
-     * Get The instance type on which the Reserved Instance can be used, such as S3.MEDIUM4.
-Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance Types</a> 
-     * @return InstanceType The instance type on which the Reserved Instance can be used, such as S3.MEDIUM4.
-Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance Types</a>
+     * Get The instance model of the Reserved Instance, such as S3.MEDIUM4.
+Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance Models</a> 
+     * @return InstanceType The instance model of the Reserved Instance, such as S3.MEDIUM4.
+Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance Models</a>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set The instance type on which the Reserved Instance can be used, such as S3.MEDIUM4.
-Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance Types</a>
-     * @param InstanceType The instance type on which the Reserved Instance can be used, such as S3.MEDIUM4.
-Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance Types</a>
+     * Set The instance model of the Reserved Instance, such as S3.MEDIUM4.
+Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance Models</a>
+     * @param InstanceType The instance model of the Reserved Instance, such as S3.MEDIUM4.
+Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance Models</a>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get The payment term of the Reserved Instance, such as All Upfront.
+     * Get The payment term of the Reserved Instance, such as **All Upfront**.
 Valid value: All Upfront. 
-     * @return OfferingType The payment term of the Reserved Instance, such as All Upfront.
+     * @return OfferingType The payment term of the Reserved Instance, such as **All Upfront**.
 Valid value: All Upfront.
      */
     public String getOfferingType() {
@@ -205,9 +205,9 @@ Valid value: All Upfront.
     }
 
     /**
-     * Set The payment term of the Reserved Instance, such as All Upfront.
+     * Set The payment term of the Reserved Instance, such as **All Upfront**.
 Valid value: All Upfront.
-     * @param OfferingType The payment term of the Reserved Instance, such as All Upfront.
+     * @param OfferingType The payment term of the Reserved Instance, such as **All Upfront**.
 Valid value: All Upfront.
      */
     public void setOfferingType(String OfferingType) {
@@ -231,9 +231,9 @@ Valid value: All Upfront.
     }
 
     /**
-     * Get The platform description (operating system) of the Reserved Instance, such as linux.
+     * Get The operating system of the Reserved Instance, such as **linux**.
 Valid value: linux. 
-     * @return ProductDescription The platform description (operating system) of the Reserved Instance, such as linux.
+     * @return ProductDescription The operating system of the Reserved Instance, such as **linux**.
 Valid value: linux.
      */
     public String getProductDescription() {
@@ -241,9 +241,9 @@ Valid value: linux.
     }
 
     /**
-     * Set The platform description (operating system) of the Reserved Instance, such as linux.
+     * Set The operating system of the Reserved Instance, such as **linux**.
 Valid value: linux.
-     * @param ProductDescription The platform description (operating system) of the Reserved Instance, such as linux.
+     * @param ProductDescription The operating system of the Reserved Instance, such as **linux**.
 Valid value: linux.
      */
     public void setProductDescription(String ProductDescription) {
@@ -252,10 +252,10 @@ Valid value: linux.
 
     /**
      * Get The hourly usage price of the Reserved Instance, such as 0.0.
-Currently, the only supported payment is “All Upfront”, so the default value of `UsagePrice` is 0 USD/hr.
+Currently, the only supported payment mode is **All Upfront**, so the default value of `UsagePrice` is 0 USD/hr.
 Unit: USD/hr. This field uses the currency code specified in `currencyCode`, and only supports “USD” at this time. 
      * @return UsagePrice The hourly usage price of the Reserved Instance, such as 0.0.
-Currently, the only supported payment is “All Upfront”, so the default value of `UsagePrice` is 0 USD/hr.
+Currently, the only supported payment mode is **All Upfront**, so the default value of `UsagePrice` is 0 USD/hr.
 Unit: USD/hr. This field uses the currency code specified in `currencyCode`, and only supports “USD” at this time.
      */
     public Float getUsagePrice() {
@@ -264,10 +264,10 @@ Unit: USD/hr. This field uses the currency code specified in `currencyCode`, and
 
     /**
      * Set The hourly usage price of the Reserved Instance, such as 0.0.
-Currently, the only supported payment is “All Upfront”, so the default value of `UsagePrice` is 0 USD/hr.
+Currently, the only supported payment mode is **All Upfront**, so the default value of `UsagePrice` is 0 USD/hr.
 Unit: USD/hr. This field uses the currency code specified in `currencyCode`, and only supports “USD” at this time.
      * @param UsagePrice The hourly usage price of the Reserved Instance, such as 0.0.
-Currently, the only supported payment is “All Upfront”, so the default value of `UsagePrice` is 0 USD/hr.
+Currently, the only supported payment mode is **All Upfront**, so the default value of `UsagePrice` is 0 USD/hr.
 Unit: USD/hr. This field uses the currency code specified in `currencyCode`, and only supports “USD” at this time.
      */
     public void setUsagePrice(Float UsagePrice) {

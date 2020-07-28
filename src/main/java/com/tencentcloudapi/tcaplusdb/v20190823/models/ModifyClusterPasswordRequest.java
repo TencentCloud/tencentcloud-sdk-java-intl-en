@@ -44,7 +44,7 @@ public class ModifyClusterPasswordRequest extends AbstractModel{
     private String OldPasswordExpireTime;
 
     /**
-    * New cluster password, which must contain lowercase letters (a–z), uppercase letters (A–Z), and digits (0–9).
+    * New cluster password, which must contain lowercase letters (a-z), uppercase letters (A-Z), and digits (0-9).
     */
     @SerializedName("NewPassword")
     @Expose
@@ -106,16 +106,16 @@ public class ModifyClusterPasswordRequest extends AbstractModel{
     }
 
     /**
-     * Get New cluster password, which must contain lowercase letters (a–z), uppercase letters (A–Z), and digits (0–9). 
-     * @return NewPassword New cluster password, which must contain lowercase letters (a–z), uppercase letters (A–Z), and digits (0–9).
+     * Get New cluster password, which must contain lowercase letters (a-z), uppercase letters (A-Z), and digits (0-9). 
+     * @return NewPassword New cluster password, which must contain lowercase letters (a-z), uppercase letters (A-Z), and digits (0-9).
      */
     public String getNewPassword() {
         return this.NewPassword;
     }
 
     /**
-     * Set New cluster password, which must contain lowercase letters (a–z), uppercase letters (A–Z), and digits (0–9).
-     * @param NewPassword New cluster password, which must contain lowercase letters (a–z), uppercase letters (A–Z), and digits (0–9).
+     * Set New cluster password, which must contain lowercase letters (a-z), uppercase letters (A-Z), and digits (0-9).
+     * @param NewPassword New cluster password, which must contain lowercase letters (a-z), uppercase letters (A-Z), and digits (0-9).
      */
     public void setNewPassword(String NewPassword) {
         this.NewPassword = NewPassword;

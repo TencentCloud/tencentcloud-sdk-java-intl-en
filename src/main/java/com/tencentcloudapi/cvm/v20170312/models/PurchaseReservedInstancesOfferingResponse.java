@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class PurchaseReservedInstancesOfferingResponse extends AbstractModel{
 
     /**
-    * 
+    * The ID of the Reserved Instance purchased.
     */
     @SerializedName("ReservedInstanceId")
     @Expose
@@ -37,16 +37,16 @@ public class PurchaseReservedInstancesOfferingResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get  
-     * @return ReservedInstanceId 
+     * Get The ID of the Reserved Instance purchased. 
+     * @return ReservedInstanceId The ID of the Reserved Instance purchased.
      */
     public String getReservedInstanceId() {
         return this.ReservedInstanceId;
     }
 
     /**
-     * Set 
-     * @param ReservedInstanceId 
+     * Set The ID of the Reserved Instance purchased.
+     * @param ReservedInstanceId The ID of the Reserved Instance purchased.
      */
     public void setReservedInstanceId(String ReservedInstanceId) {
         this.ReservedInstanceId = ReservedInstanceId;

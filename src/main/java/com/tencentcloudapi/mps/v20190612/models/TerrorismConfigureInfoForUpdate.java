@@ -30,6 +30,13 @@ public class TerrorismConfigureInfoForUpdate extends AbstractModel{
     private TerrorismImgReviewTemplateInfoForUpdate ImgReviewInfo;
 
     /**
+    * 
+    */
+    @SerializedName("OcrReviewInfo")
+    @Expose
+    private TerrorismOcrReviewTemplateInfoForUpdate OcrReviewInfo;
+
+    /**
      * Get Control parameter of a terrorism information detection in image task. 
      * @return ImgReviewInfo Control parameter of a terrorism information detection in image task.
      */
@@ -46,10 +53,27 @@ public class TerrorismConfigureInfoForUpdate extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return OcrReviewInfo 
+     */
+    public TerrorismOcrReviewTemplateInfoForUpdate getOcrReviewInfo() {
+        return this.OcrReviewInfo;
+    }
+
+    /**
+     * Set 
+     * @param OcrReviewInfo 
+     */
+    public void setOcrReviewInfo(TerrorismOcrReviewTemplateInfoForUpdate OcrReviewInfo) {
+        this.OcrReviewInfo = OcrReviewInfo;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "ImgReviewInfo.", this.ImgReviewInfo);
+        this.setParamObj(map, prefix + "OcrReviewInfo.", this.OcrReviewInfo);
 
     }
 }

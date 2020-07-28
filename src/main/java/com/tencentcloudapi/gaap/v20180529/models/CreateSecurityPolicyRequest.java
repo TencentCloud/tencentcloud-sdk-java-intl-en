@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class CreateSecurityPolicyRequest extends AbstractModel{
 
     /**
-    * Acceleration connection ID
-    */
-    @SerializedName("ProxyId")
-    @Expose
-    private String ProxyId;
-
-    /**
     * Default policy: ACCEPT or DROP
     */
     @SerializedName("DefaultAction")
@@ -37,20 +30,18 @@ public class CreateSecurityPolicyRequest extends AbstractModel{
     private String DefaultAction;
 
     /**
-     * Get Acceleration connection ID 
-     * @return ProxyId Acceleration connection ID
-     */
-    public String getProxyId() {
-        return this.ProxyId;
-    }
+    * Acceleration connection ID
+    */
+    @SerializedName("ProxyId")
+    @Expose
+    private String ProxyId;
 
     /**
-     * Set Acceleration connection ID
-     * @param ProxyId Acceleration connection ID
-     */
-    public void setProxyId(String ProxyId) {
-        this.ProxyId = ProxyId;
-    }
+    * Connection group ID
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
 
     /**
      * Get Default policy: ACCEPT or DROP 
@@ -69,11 +60,44 @@ public class CreateSecurityPolicyRequest extends AbstractModel{
     }
 
     /**
+     * Get Acceleration connection ID 
+     * @return ProxyId Acceleration connection ID
+     */
+    public String getProxyId() {
+        return this.ProxyId;
+    }
+
+    /**
+     * Set Acceleration connection ID
+     * @param ProxyId Acceleration connection ID
+     */
+    public void setProxyId(String ProxyId) {
+        this.ProxyId = ProxyId;
+    }
+
+    /**
+     * Get Connection group ID 
+     * @return GroupId Connection group ID
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set Connection group ID
+     * @param GroupId Connection group ID
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ProxyId", this.ProxyId);
         this.setParamSimple(map, prefix + "DefaultAction", this.DefaultAction);
+        this.setParamSimple(map, prefix + "ProxyId", this.ProxyId);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 
     }
 }

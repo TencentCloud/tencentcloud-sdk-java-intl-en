@@ -46,7 +46,7 @@ public class NatGateway extends AbstractModel{
     /**
     * The status of the NAT gateway.
  'PENDING': Creating, 'DELETING': Deleting, 'AVAILABLE': Operating, 'UPDATING': Upgrading,
-‘FAILED’: Failed.
+'FAILED': Failed.
     */
     @SerializedName("State")
     @Expose
@@ -152,10 +152,10 @@ public class NatGateway extends AbstractModel{
     /**
      * Get The status of the NAT gateway.
  'PENDING': Creating, 'DELETING': Deleting, 'AVAILABLE': Operating, 'UPDATING': Upgrading,
-‘FAILED’: Failed. 
+'FAILED': Failed. 
      * @return State The status of the NAT gateway.
  'PENDING': Creating, 'DELETING': Deleting, 'AVAILABLE': Operating, 'UPDATING': Upgrading,
-‘FAILED’: Failed.
+'FAILED': Failed.
      */
     public String getState() {
         return this.State;
@@ -164,10 +164,10 @@ public class NatGateway extends AbstractModel{
     /**
      * Set The status of the NAT gateway.
  'PENDING': Creating, 'DELETING': Deleting, 'AVAILABLE': Operating, 'UPDATING': Upgrading,
-‘FAILED’: Failed.
+'FAILED': Failed.
      * @param State The status of the NAT gateway.
  'PENDING': Creating, 'DELETING': Deleting, 'AVAILABLE': Operating, 'UPDATING': Upgrading,
-‘FAILED’: Failed.
+'FAILED': Failed.
      */
     public void setState(String State) {
         this.State = State;

@@ -32,7 +32,7 @@ public class ImageTransform extends AbstractModel{
     private String Type;
 
     /**
-    * Rotation angle of image with its center point as origin. Value range: 0–360. This parameter is valid if `Type` is `Rotate`.
+    * Rotation angle of image with its center point as origin. Value range: 0-360. This parameter is valid if `Type` is `Rotate`.
     */
     @SerializedName("RotateAngle")
     @Expose
@@ -73,16 +73,16 @@ This is valid if `Type` is `Flip`.
     }
 
     /**
-     * Get Rotation angle of image with its center point as origin. Value range: 0–360. This parameter is valid if `Type` is `Rotate`. 
-     * @return RotateAngle Rotation angle of image with its center point as origin. Value range: 0–360. This parameter is valid if `Type` is `Rotate`.
+     * Get Rotation angle of image with its center point as origin. Value range: 0-360. This parameter is valid if `Type` is `Rotate`. 
+     * @return RotateAngle Rotation angle of image with its center point as origin. Value range: 0-360. This parameter is valid if `Type` is `Rotate`.
      */
     public Float getRotateAngle() {
         return this.RotateAngle;
     }
 
     /**
-     * Set Rotation angle of image with its center point as origin. Value range: 0–360. This parameter is valid if `Type` is `Rotate`.
-     * @param RotateAngle Rotation angle of image with its center point as origin. Value range: 0–360. This parameter is valid if `Type` is `Rotate`.
+     * Set Rotation angle of image with its center point as origin. Value range: 0-360. This parameter is valid if `Type` is `Rotate`.
+     * @param RotateAngle Rotation angle of image with its center point as origin. Value range: 0-360. This parameter is valid if `Type` is `Rotate`.
      */
     public void setRotateAngle(Float RotateAngle) {
         this.RotateAngle = RotateAngle;

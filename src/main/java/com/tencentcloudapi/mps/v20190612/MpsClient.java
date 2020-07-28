@@ -74,7 +74,7 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create up to 100 adaptive bitrate streaming templates.
+     *This API is used to create an adaptive bitrate streaming template. Up up to 100 such templates can be created.
      * @param req CreateAdaptiveDynamicStreamingTemplateRequest
      * @return CreateAdaptiveDynamicStreamingTemplateResponse
      * @throws TencentCloudSDKException

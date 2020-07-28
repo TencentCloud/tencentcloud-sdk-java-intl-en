@@ -108,6 +108,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private AiReviewTaskPoliticalOcrResult PoliticalOcrTask;
 
     /**
+    * 
+    */
+    @SerializedName("TerrorismOcrTask")
+    @Expose
+    private AiReviewTaskTerrorismOcrResult TerrorismOcrTask;
+
+    /**
+    * 
+    */
+    @SerializedName("ProhibitedAsrTask")
+    @Expose
+    private AiReviewTaskProhibitedAsrResult ProhibitedAsrTask;
+
+    /**
+    * 
+    */
+    @SerializedName("ProhibitedOcrTask")
+    @Expose
+    private AiReviewTaskProhibitedOcrResult ProhibitedOcrTask;
+
+    /**
      * Get Task type. Valid values:
 <li>Porn: Porn information detection in image</li>
 <li>Terrorism: Terrorism information detection in image</li>
@@ -328,6 +349,54 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get  
+     * @return TerrorismOcrTask 
+     */
+    public AiReviewTaskTerrorismOcrResult getTerrorismOcrTask() {
+        return this.TerrorismOcrTask;
+    }
+
+    /**
+     * Set 
+     * @param TerrorismOcrTask 
+     */
+    public void setTerrorismOcrTask(AiReviewTaskTerrorismOcrResult TerrorismOcrTask) {
+        this.TerrorismOcrTask = TerrorismOcrTask;
+    }
+
+    /**
+     * Get  
+     * @return ProhibitedAsrTask 
+     */
+    public AiReviewTaskProhibitedAsrResult getProhibitedAsrTask() {
+        return this.ProhibitedAsrTask;
+    }
+
+    /**
+     * Set 
+     * @param ProhibitedAsrTask 
+     */
+    public void setProhibitedAsrTask(AiReviewTaskProhibitedAsrResult ProhibitedAsrTask) {
+        this.ProhibitedAsrTask = ProhibitedAsrTask;
+    }
+
+    /**
+     * Get  
+     * @return ProhibitedOcrTask 
+     */
+    public AiReviewTaskProhibitedOcrResult getProhibitedOcrTask() {
+        return this.ProhibitedOcrTask;
+    }
+
+    /**
+     * Set 
+     * @param ProhibitedOcrTask 
+     */
+    public void setProhibitedOcrTask(AiReviewTaskProhibitedOcrResult ProhibitedOcrTask) {
+        this.ProhibitedOcrTask = ProhibitedOcrTask;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -341,6 +410,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "PornOcrTask.", this.PornOcrTask);
         this.setParamObj(map, prefix + "PoliticalAsrTask.", this.PoliticalAsrTask);
         this.setParamObj(map, prefix + "PoliticalOcrTask.", this.PoliticalOcrTask);
+        this.setParamObj(map, prefix + "TerrorismOcrTask.", this.TerrorismOcrTask);
+        this.setParamObj(map, prefix + "ProhibitedAsrTask.", this.ProhibitedAsrTask);
+        this.setParamObj(map, prefix + "ProhibitedOcrTask.", this.ProhibitedOcrTask);
 
     }
 }

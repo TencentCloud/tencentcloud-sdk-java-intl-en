@@ -61,7 +61,28 @@ public class MediaContentReviewPoliticalSegmentItem extends AbstractModel{
     private String Name;
 
     /**
-    * Tag of politically sensitive information detection result of a suspected segment.
+    * Tags for the results of politically sensitive information detection of suspected video segments. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://cloud.tencent.com/document/api/862/37615#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+violation_photo:
+<li>violation_photo: violating photo.</li>
+politician:
+<li>nation_politician: head of state/government;</li>
+<li>province_politician: province/state leader;</li>
+<li>bureau_politician: ministry leader;</li>
+<li>county_politician: county/city leader;</li>
+<li>rural_politician: town leader;</li>
+<li>sensitive_politician: politically sensitive figure.</li>
+entertainment:
+<li>sensitive_entertainment: sensitive entertainment celebrity.</li>
+sport:
+<li>sensitive_sport: sensitive sports figure.</li>
+entrepreneur:
+<li>sensitive_entrepreneur: sensitive business figure.</li>
+scholar:
+<li>sensitive_scholar: sensitive educator.</li>
+celebrity:
+<li>sensitive_celebrity: sensitive well-known figure.</li>
+military:
+<li>sensitive_military: militarily sensitive figure.</li>
     */
     @SerializedName("Label")
     @Expose
@@ -182,16 +203,100 @@ public class MediaContentReviewPoliticalSegmentItem extends AbstractModel{
     }
 
     /**
-     * Get Tag of politically sensitive information detection result of a suspected segment. 
-     * @return Label Tag of politically sensitive information detection result of a suspected segment.
+     * Get Tags for the results of politically sensitive information detection of suspected video segments. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://cloud.tencent.com/document/api/862/37615#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+violation_photo:
+<li>violation_photo: violating photo.</li>
+politician:
+<li>nation_politician: head of state/government;</li>
+<li>province_politician: province/state leader;</li>
+<li>bureau_politician: ministry leader;</li>
+<li>county_politician: county/city leader;</li>
+<li>rural_politician: town leader;</li>
+<li>sensitive_politician: politically sensitive figure.</li>
+entertainment:
+<li>sensitive_entertainment: sensitive entertainment celebrity.</li>
+sport:
+<li>sensitive_sport: sensitive sports figure.</li>
+entrepreneur:
+<li>sensitive_entrepreneur: sensitive business figure.</li>
+scholar:
+<li>sensitive_scholar: sensitive educator.</li>
+celebrity:
+<li>sensitive_celebrity: sensitive well-known figure.</li>
+military:
+<li>sensitive_military: militarily sensitive figure.</li> 
+     * @return Label Tags for the results of politically sensitive information detection of suspected video segments. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://cloud.tencent.com/document/api/862/37615#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+violation_photo:
+<li>violation_photo: violating photo.</li>
+politician:
+<li>nation_politician: head of state/government;</li>
+<li>province_politician: province/state leader;</li>
+<li>bureau_politician: ministry leader;</li>
+<li>county_politician: county/city leader;</li>
+<li>rural_politician: town leader;</li>
+<li>sensitive_politician: politically sensitive figure.</li>
+entertainment:
+<li>sensitive_entertainment: sensitive entertainment celebrity.</li>
+sport:
+<li>sensitive_sport: sensitive sports figure.</li>
+entrepreneur:
+<li>sensitive_entrepreneur: sensitive business figure.</li>
+scholar:
+<li>sensitive_scholar: sensitive educator.</li>
+celebrity:
+<li>sensitive_celebrity: sensitive well-known figure.</li>
+military:
+<li>sensitive_military: militarily sensitive figure.</li>
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set Tag of politically sensitive information detection result of a suspected segment.
-     * @param Label Tag of politically sensitive information detection result of a suspected segment.
+     * Set Tags for the results of politically sensitive information detection of suspected video segments. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://cloud.tencent.com/document/api/862/37615#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+violation_photo:
+<li>violation_photo: violating photo.</li>
+politician:
+<li>nation_politician: head of state/government;</li>
+<li>province_politician: province/state leader;</li>
+<li>bureau_politician: ministry leader;</li>
+<li>county_politician: county/city leader;</li>
+<li>rural_politician: town leader;</li>
+<li>sensitive_politician: politically sensitive figure.</li>
+entertainment:
+<li>sensitive_entertainment: sensitive entertainment celebrity.</li>
+sport:
+<li>sensitive_sport: sensitive sports figure.</li>
+entrepreneur:
+<li>sensitive_entrepreneur: sensitive business figure.</li>
+scholar:
+<li>sensitive_scholar: sensitive educator.</li>
+celebrity:
+<li>sensitive_celebrity: sensitive well-known figure.</li>
+military:
+<li>sensitive_military: militarily sensitive figure.</li>
+     * @param Label Tags for the results of politically sensitive information detection of suspected video segments. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://cloud.tencent.com/document/api/862/37615#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+violation_photo:
+<li>violation_photo: violating photo.</li>
+politician:
+<li>nation_politician: head of state/government;</li>
+<li>province_politician: province/state leader;</li>
+<li>bureau_politician: ministry leader;</li>
+<li>county_politician: county/city leader;</li>
+<li>rural_politician: town leader;</li>
+<li>sensitive_politician: politically sensitive figure.</li>
+entertainment:
+<li>sensitive_entertainment: sensitive entertainment celebrity.</li>
+sport:
+<li>sensitive_sport: sensitive sports figure.</li>
+entrepreneur:
+<li>sensitive_entrepreneur: sensitive business figure.</li>
+scholar:
+<li>sensitive_scholar: sensitive educator.</li>
+celebrity:
+<li>sensitive_celebrity: sensitive well-known figure.</li>
+military:
+<li>sensitive_military: militarily sensitive figure.</li>
      */
     public void setLabel(String Label) {
         this.Label = Label;

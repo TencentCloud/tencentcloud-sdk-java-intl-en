@@ -72,6 +72,13 @@ public class DescribeHTTPSListenersRequest extends AbstractModel{
     private String SearchValue;
 
     /**
+    * Connection group ID as a filter
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
+
+    /**
      * Get Filter condition. Connection ID. 
      * @return ProxyId Filter condition. Connection ID.
      */
@@ -184,6 +191,22 @@ public class DescribeHTTPSListenersRequest extends AbstractModel{
     }
 
     /**
+     * Get Connection group ID as a filter 
+     * @return GroupId Connection group ID as a filter
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set Connection group ID as a filter
+     * @param GroupId Connection group ID as a filter
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class DescribeHTTPSListenersRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "SearchValue", this.SearchValue);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 
     }
 }

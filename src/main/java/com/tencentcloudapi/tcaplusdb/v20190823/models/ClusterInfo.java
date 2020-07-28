@@ -122,6 +122,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String OldPasswordExpireTime;
 
     /**
+    * TcaplusDB SDK connection parameter for accessing IPv6 addresses
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ApiAccessIpv6")
+    @Expose
+    private String ApiAccessIpv6;
+
+    /**
      * Get Cluster name 
      * @return ClusterName Cluster name
      */
@@ -350,6 +358,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get TcaplusDB SDK connection parameter for accessing IPv6 addresses
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return ApiAccessIpv6 TcaplusDB SDK connection parameter for accessing IPv6 addresses
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getApiAccessIpv6() {
+        return this.ApiAccessIpv6;
+    }
+
+    /**
+     * Set TcaplusDB SDK connection parameter for accessing IPv6 addresses
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param ApiAccessIpv6 TcaplusDB SDK connection parameter for accessing IPv6 addresses
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setApiAccessIpv6(String ApiAccessIpv6) {
+        this.ApiAccessIpv6 = ApiAccessIpv6;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -367,6 +395,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ApiAccessIp", this.ApiAccessIp);
         this.setParamSimple(map, prefix + "ApiAccessPort", this.ApiAccessPort);
         this.setParamSimple(map, prefix + "OldPasswordExpireTime", this.OldPasswordExpireTime);
+        this.setParamSimple(map, prefix + "ApiAccessIpv6", this.ApiAccessIpv6);
 
     }
 }

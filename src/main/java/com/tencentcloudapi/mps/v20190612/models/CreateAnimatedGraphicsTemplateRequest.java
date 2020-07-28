@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class CreateAnimatedGraphicsTemplateRequest extends AbstractModel{
 
     /**
+    * Video frame rate in Hz. Value range: [1, 30].
+    */
+    @SerializedName("Fps")
+    @Expose
+    private Long Fps;
+
+    /**
     * Maximum value of the width (or long side) of an animated image in px. Value range: 0 and [128, 4,096].
 <li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
 <li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
@@ -47,11 +54,11 @@ Default value: 0.
     private Long Height;
 
     /**
-    * Video frame rate in Hz. Value range: [1, 30].
+    * 
     */
-    @SerializedName("Fps")
+    @SerializedName("ResolutionAdaptive")
     @Expose
-    private Long Fps;
+    private String ResolutionAdaptive;
 
     /**
     * Animated image format. Valid values: gif; webp. Default value: gif.
@@ -80,6 +87,22 @@ Default value: 0.
     @SerializedName("Comment")
     @Expose
     private String Comment;
+
+    /**
+     * Get Video frame rate in Hz. Value range: [1, 30]. 
+     * @return Fps Video frame rate in Hz. Value range: [1, 30].
+     */
+    public Long getFps() {
+        return this.Fps;
+    }
+
+    /**
+     * Set Video frame rate in Hz. Value range: [1, 30].
+     * @param Fps Video frame rate in Hz. Value range: [1, 30].
+     */
+    public void setFps(Long Fps) {
+        this.Fps = Fps;
+    }
 
     /**
      * Get Maximum value of the width (or long side) of an animated image in px. Value range: 0 and [128, 4,096].
@@ -154,19 +177,19 @@ Default value: 0.
     }
 
     /**
-     * Get Video frame rate in Hz. Value range: [1, 30]. 
-     * @return Fps Video frame rate in Hz. Value range: [1, 30].
+     * Get  
+     * @return ResolutionAdaptive 
      */
-    public Long getFps() {
-        return this.Fps;
+    public String getResolutionAdaptive() {
+        return this.ResolutionAdaptive;
     }
 
     /**
-     * Set Video frame rate in Hz. Value range: [1, 30].
-     * @param Fps Video frame rate in Hz. Value range: [1, 30].
+     * Set 
+     * @param ResolutionAdaptive 
      */
-    public void setFps(Long Fps) {
-        this.Fps = Fps;
+    public void setResolutionAdaptive(String ResolutionAdaptive) {
+        this.ResolutionAdaptive = ResolutionAdaptive;
     }
 
     /**
@@ -237,9 +260,10 @@ Default value: 0.
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Fps", this.Fps);
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
-        this.setParamSimple(map, prefix + "Fps", this.Fps);
+        this.setParamSimple(map, prefix + "ResolutionAdaptive", this.ResolutionAdaptive);
         this.setParamSimple(map, prefix + "Format", this.Format);
         this.setParamSimple(map, prefix + "Quality", this.Quality);
         this.setParamSimple(map, prefix + "Name", this.Name);

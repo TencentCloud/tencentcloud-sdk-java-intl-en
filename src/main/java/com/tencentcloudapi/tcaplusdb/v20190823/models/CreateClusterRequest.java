@@ -51,11 +51,25 @@ public class CreateClusterRequest extends AbstractModel{
     private String SubnetId;
 
     /**
-    * Cluster access password, which must contain lowercase letters (a–z), uppercase letters (A–Z), and digits (0–9).
+    * Cluster access password, which must contain lowercase letters (a-z), uppercase letters (A-Z), and digits (0-9).
     */
     @SerializedName("Password")
     @Expose
     private String Password;
+
+    /**
+    * 
+    */
+    @SerializedName("ResourceTags")
+    @Expose
+    private TagInfoUnit [] ResourceTags;
+
+    /**
+    * Whether to enable IPv6 address access for clusters
+    */
+    @SerializedName("Ipv6Enable")
+    @Expose
+    private Long Ipv6Enable;
 
     /**
      * Get Cluster data description language type, such as `PROTO`, `TDR`, or `MIX` 
@@ -122,19 +136,51 @@ public class CreateClusterRequest extends AbstractModel{
     }
 
     /**
-     * Get Cluster access password, which must contain lowercase letters (a–z), uppercase letters (A–Z), and digits (0–9). 
-     * @return Password Cluster access password, which must contain lowercase letters (a–z), uppercase letters (A–Z), and digits (0–9).
+     * Get Cluster access password, which must contain lowercase letters (a-z), uppercase letters (A-Z), and digits (0-9). 
+     * @return Password Cluster access password, which must contain lowercase letters (a-z), uppercase letters (A-Z), and digits (0-9).
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Cluster access password, which must contain lowercase letters (a–z), uppercase letters (A–Z), and digits (0–9).
-     * @param Password Cluster access password, which must contain lowercase letters (a–z), uppercase letters (A–Z), and digits (0–9).
+     * Set Cluster access password, which must contain lowercase letters (a-z), uppercase letters (A-Z), and digits (0-9).
+     * @param Password Cluster access password, which must contain lowercase letters (a-z), uppercase letters (A-Z), and digits (0-9).
      */
     public void setPassword(String Password) {
         this.Password = Password;
+    }
+
+    /**
+     * Get  
+     * @return ResourceTags 
+     */
+    public TagInfoUnit [] getResourceTags() {
+        return this.ResourceTags;
+    }
+
+    /**
+     * Set 
+     * @param ResourceTags 
+     */
+    public void setResourceTags(TagInfoUnit [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
+    }
+
+    /**
+     * Get Whether to enable IPv6 address access for clusters 
+     * @return Ipv6Enable Whether to enable IPv6 address access for clusters
+     */
+    public Long getIpv6Enable() {
+        return this.Ipv6Enable;
+    }
+
+    /**
+     * Set Whether to enable IPv6 address access for clusters
+     * @param Ipv6Enable Whether to enable IPv6 address access for clusters
+     */
+    public void setIpv6Enable(Long Ipv6Enable) {
+        this.Ipv6Enable = Ipv6Enable;
     }
 
     /**
@@ -146,6 +192,8 @@ public class CreateClusterRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "Password", this.Password);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+        this.setParamSimple(map, prefix + "Ipv6Enable", this.Ipv6Enable);
 
     }
 }

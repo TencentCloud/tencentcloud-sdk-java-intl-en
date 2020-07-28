@@ -65,6 +65,13 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel{
     private PoliticalConfigureInfoForUpdate PoliticalConfigure;
 
     /**
+    * 
+    */
+    @SerializedName("ProhibitedConfigure")
+    @Expose
+    private ProhibitedConfigureInfoForUpdate ProhibitedConfigure;
+
+    /**
     * Custom content audit control parameter.
     */
     @SerializedName("UserDefineConfigure")
@@ -168,6 +175,22 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return ProhibitedConfigure 
+     */
+    public ProhibitedConfigureInfoForUpdate getProhibitedConfigure() {
+        return this.ProhibitedConfigure;
+    }
+
+    /**
+     * Set 
+     * @param ProhibitedConfigure 
+     */
+    public void setProhibitedConfigure(ProhibitedConfigureInfoForUpdate ProhibitedConfigure) {
+        this.ProhibitedConfigure = ProhibitedConfigure;
+    }
+
+    /**
      * Get Custom content audit control parameter. 
      * @return UserDefineConfigure Custom content audit control parameter.
      */
@@ -193,6 +216,7 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel{
         this.setParamObj(map, prefix + "PornConfigure.", this.PornConfigure);
         this.setParamObj(map, prefix + "TerrorismConfigure.", this.TerrorismConfigure);
         this.setParamObj(map, prefix + "PoliticalConfigure.", this.PoliticalConfigure);
+        this.setParamObj(map, prefix + "ProhibitedConfigure.", this.ProhibitedConfigure);
         this.setParamObj(map, prefix + "UserDefineConfigure.", this.UserDefineConfigure);
 
     }

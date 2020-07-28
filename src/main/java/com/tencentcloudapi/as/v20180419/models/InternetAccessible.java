@@ -47,7 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Boolean PublicIpAssigned;
 
     /**
-    * Bandwidth package ID. You can obtain the parameter value from the `BandwidthPackageId` field in the response of the [DescribeBandwidthPackages](https://cloud.tencent.com/document/api/215/19209) API.
+    * Bandwidth package ID. You can obtain the ID from the `BandwidthPackageId` field in the response of the [DescribeBandwidthPackages](https://cloud.tencent.com/document/api/215/19209) API.
 Note: this field may return null, indicating that no valid value was found.
     */
     @SerializedName("BandwidthPackageId")
@@ -115,9 +115,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Bandwidth package ID. You can obtain the parameter value from the `BandwidthPackageId` field in the response of the [DescribeBandwidthPackages](https://cloud.tencent.com/document/api/215/19209) API.
+     * Get Bandwidth package ID. You can obtain the ID from the `BandwidthPackageId` field in the response of the [DescribeBandwidthPackages](https://cloud.tencent.com/document/api/215/19209) API.
 Note: this field may return null, indicating that no valid value was found. 
-     * @return BandwidthPackageId Bandwidth package ID. You can obtain the parameter value from the `BandwidthPackageId` field in the response of the [DescribeBandwidthPackages](https://cloud.tencent.com/document/api/215/19209) API.
+     * @return BandwidthPackageId Bandwidth package ID. You can obtain the ID from the `BandwidthPackageId` field in the response of the [DescribeBandwidthPackages](https://cloud.tencent.com/document/api/215/19209) API.
 Note: this field may return null, indicating that no valid value was found.
      */
     public String getBandwidthPackageId() {
@@ -125,9 +125,9 @@ Note: this field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Set Bandwidth package ID. You can obtain the parameter value from the `BandwidthPackageId` field in the response of the [DescribeBandwidthPackages](https://cloud.tencent.com/document/api/215/19209) API.
+     * Set Bandwidth package ID. You can obtain the ID from the `BandwidthPackageId` field in the response of the [DescribeBandwidthPackages](https://cloud.tencent.com/document/api/215/19209) API.
 Note: this field may return null, indicating that no valid value was found.
-     * @param BandwidthPackageId Bandwidth package ID. You can obtain the parameter value from the `BandwidthPackageId` field in the response of the [DescribeBandwidthPackages](https://cloud.tencent.com/document/api/215/19209) API.
+     * @param BandwidthPackageId Bandwidth package ID. You can obtain the ID from the `BandwidthPackageId` field in the response of the [DescribeBandwidthPackages](https://cloud.tencent.com/document/api/215/19209) API.
 Note: this field may return null, indicating that no valid value was found.
      */
     public void setBandwidthPackageId(String BandwidthPackageId) {

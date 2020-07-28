@@ -44,7 +44,7 @@ public class PrivateIpAddressSpecification extends AbstractModel{
     private String PublicIpAddress;
 
     /**
-    * EIP instance ID, such as `eip-11112222`。
+    * EIP instance ID, such as `eip-11112222`.
     */
     @SerializedName("AddressId")
     @Expose
@@ -124,16 +124,16 @@ AVAILABLE: Available
     }
 
     /**
-     * Get EIP instance ID, such as `eip-11112222`。 
-     * @return AddressId EIP instance ID, such as `eip-11112222`。
+     * Get EIP instance ID, such as `eip-11112222`. 
+     * @return AddressId EIP instance ID, such as `eip-11112222`.
      */
     public String getAddressId() {
         return this.AddressId;
     }
 
     /**
-     * Set EIP instance ID, such as `eip-11112222`。
-     * @param AddressId EIP instance ID, such as `eip-11112222`。
+     * Set EIP instance ID, such as `eip-11112222`.
+     * @param AddressId EIP instance ID, such as `eip-11112222`.
      */
     public void setAddressId(String AddressId) {
         this.AddressId = AddressId;

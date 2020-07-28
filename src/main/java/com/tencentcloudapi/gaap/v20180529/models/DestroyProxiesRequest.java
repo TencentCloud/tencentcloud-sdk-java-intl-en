@@ -33,7 +33,7 @@ If this identifier is 0, the deletion can be performed only when all the connect
     private Long Force;
 
     /**
-    * List of connection instance IDs; It’s an old parameter, please switch to ProxyIds.
+    * List of connection instance IDs; It's an old parameter, please switch to ProxyIds.
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -48,7 +48,7 @@ For more information, please see How to Ensure Idempotence.
     private String ClientToken;
 
     /**
-    * List of connection instance IDs; It’s a new parameter.
+    * List of connection instance IDs; It's a new parameter.
     */
     @SerializedName("ProxyIds")
     @Expose
@@ -83,16 +83,16 @@ If this identifier is 0, the deletion can be performed only when all the connect
     }
 
     /**
-     * Get List of connection instance IDs; It’s an old parameter, please switch to ProxyIds. 
-     * @return InstanceIds List of connection instance IDs; It’s an old parameter, please switch to ProxyIds.
+     * Get List of connection instance IDs; It's an old parameter, please switch to ProxyIds. 
+     * @return InstanceIds List of connection instance IDs; It's an old parameter, please switch to ProxyIds.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set List of connection instance IDs; It’s an old parameter, please switch to ProxyIds.
-     * @param InstanceIds List of connection instance IDs; It’s an old parameter, please switch to ProxyIds.
+     * Set List of connection instance IDs; It's an old parameter, please switch to ProxyIds.
+     * @param InstanceIds List of connection instance IDs; It's an old parameter, please switch to ProxyIds.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
@@ -119,16 +119,16 @@ For more information, please see How to Ensure Idempotence.
     }
 
     /**
-     * Get List of connection instance IDs; It’s a new parameter. 
-     * @return ProxyIds List of connection instance IDs; It’s a new parameter.
+     * Get List of connection instance IDs; It's a new parameter. 
+     * @return ProxyIds List of connection instance IDs; It's a new parameter.
      */
     public String [] getProxyIds() {
         return this.ProxyIds;
     }
 
     /**
-     * Set List of connection instance IDs; It’s a new parameter.
-     * @param ProxyIds List of connection instance IDs; It’s a new parameter.
+     * Set List of connection instance IDs; It's a new parameter.
+     * @param ProxyIds List of connection instance IDs; It's a new parameter.
      */
     public void setProxyIds(String [] ProxyIds) {
         this.ProxyIds = ProxyIds;

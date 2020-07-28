@@ -44,7 +44,7 @@ public class HTTPSListener extends AbstractModel{
     private Long Port;
 
     /**
-    * Listener protocol. The value is `HTTP`.
+    * Listener protocol. Valid values: HTTP, HTTPS. The value `HTTPS` is used for this structure
     */
     @SerializedName("Protocol")
     @Expose
@@ -100,10 +100,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ClientCertificateId;
 
     /**
-    * Listener authentication method:
+    * Listener authentication mode. Valid values:
 0: one-way authentication;
 1: mutual authentication.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AuthType")
     @Expose
@@ -174,16 +174,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Listener protocol. The value is `HTTP`. 
-     * @return Protocol Listener protocol. The value is `HTTP`.
+     * Get Listener protocol. Valid values: HTTP, HTTPS. The value `HTTPS` is used for this structure 
+     * @return Protocol Listener protocol. Valid values: HTTP, HTTPS. The value `HTTPS` is used for this structure
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Listener protocol. The value is `HTTP`.
-     * @param Protocol Listener protocol. The value is `HTTP`.
+     * Set Listener protocol. Valid values: HTTP, HTTPS. The value `HTTPS` is used for this structure
+     * @param Protocol Listener protocol. Valid values: HTTP, HTTPS. The value `HTTPS` is used for this structure
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
@@ -314,28 +314,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Listener authentication method:
+     * Get Listener authentication mode. Valid values:
 0: one-way authentication;
 1: mutual authentication.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AuthType Listener authentication method:
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return AuthType Listener authentication mode. Valid values:
 0: one-way authentication;
 1: mutual authentication.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getAuthType() {
         return this.AuthType;
     }
 
     /**
-     * Set Listener authentication method:
+     * Set Listener authentication mode. Valid values:
 0: one-way authentication;
 1: mutual authentication.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AuthType Listener authentication method:
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AuthType Listener authentication mode. Valid values:
 0: one-way authentication;
 1: mutual authentication.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setAuthType(Long AuthType) {
         this.AuthType = AuthType;

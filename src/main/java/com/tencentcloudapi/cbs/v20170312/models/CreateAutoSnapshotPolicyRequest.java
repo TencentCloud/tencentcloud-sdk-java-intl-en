@@ -30,7 +30,7 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel{
     private Policy [] Policy;
 
     /**
-    * The name of the scheduled snapshot policy to be created. If it is left empty, the default is “Not named”. The maximum length cannot exceed 60 bytes.
+    * The name of the scheduled snapshot policy to be created. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
     */
     @SerializedName("AutoSnapshotPolicyName")
     @Expose
@@ -81,16 +81,16 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get The name of the scheduled snapshot policy to be created. If it is left empty, the default is “Not named”. The maximum length cannot exceed 60 bytes. 
-     * @return AutoSnapshotPolicyName The name of the scheduled snapshot policy to be created. If it is left empty, the default is “Not named”. The maximum length cannot exceed 60 bytes.
+     * Get The name of the scheduled snapshot policy to be created. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes. 
+     * @return AutoSnapshotPolicyName The name of the scheduled snapshot policy to be created. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
      */
     public String getAutoSnapshotPolicyName() {
         return this.AutoSnapshotPolicyName;
     }
 
     /**
-     * Set The name of the scheduled snapshot policy to be created. If it is left empty, the default is “Not named”. The maximum length cannot exceed 60 bytes.
-     * @param AutoSnapshotPolicyName The name of the scheduled snapshot policy to be created. If it is left empty, the default is “Not named”. The maximum length cannot exceed 60 bytes.
+     * Set The name of the scheduled snapshot policy to be created. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
+     * @param AutoSnapshotPolicyName The name of the scheduled snapshot policy to be created. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
      */
     public void setAutoSnapshotPolicyName(String AutoSnapshotPolicyName) {
         this.AutoSnapshotPolicyName = AutoSnapshotPolicyName;

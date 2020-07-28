@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class OpenProxiesResponse extends AbstractModel{
 
     /**
-    * The connection instance ID list cannot be enabled if it’s not disabled.
+    * The connection instance ID list cannot be enabled if it's not disabled.
     */
     @SerializedName("InvalidStatusInstanceSet")
     @Expose
@@ -44,16 +44,16 @@ public class OpenProxiesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get The connection instance ID list cannot be enabled if it’s not disabled. 
-     * @return InvalidStatusInstanceSet The connection instance ID list cannot be enabled if it’s not disabled.
+     * Get The connection instance ID list cannot be enabled if it's not disabled. 
+     * @return InvalidStatusInstanceSet The connection instance ID list cannot be enabled if it's not disabled.
      */
     public String [] getInvalidStatusInstanceSet() {
         return this.InvalidStatusInstanceSet;
     }
 
     /**
-     * Set The connection instance ID list cannot be enabled if it’s not disabled.
-     * @param InvalidStatusInstanceSet The connection instance ID list cannot be enabled if it’s not disabled.
+     * Set The connection instance ID list cannot be enabled if it's not disabled.
+     * @param InvalidStatusInstanceSet The connection instance ID list cannot be enabled if it's not disabled.
      */
     public void setInvalidStatusInstanceSet(String [] InvalidStatusInstanceSet) {
         this.InvalidStatusInstanceSet = InvalidStatusInstanceSet;

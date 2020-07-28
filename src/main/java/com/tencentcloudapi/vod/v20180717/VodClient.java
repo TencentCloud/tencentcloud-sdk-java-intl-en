@@ -135,6 +135,42 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a custom video content recognition template. Up to 50 templates can be created.
+     * @param req CreateAIRecognitionTemplateRequest
+     * @return CreateAIRecognitionTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAIRecognitionTemplateResponse CreateAIRecognitionTemplate(CreateAIRecognitionTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAIRecognitionTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAIRecognitionTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateAIRecognitionTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create an adaptive bitrate streaming template. Up to 100 templates can be created.
+     * @param req CreateAdaptiveDynamicStreamingTemplateRequest
+     * @return CreateAdaptiveDynamicStreamingTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAdaptiveDynamicStreamingTemplateResponse CreateAdaptiveDynamicStreamingTemplate(CreateAdaptiveDynamicStreamingTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAdaptiveDynamicStreamingTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAdaptiveDynamicStreamingTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateAdaptiveDynamicStreamingTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a custom animated image generating template. Up to 16 templates can be created.
      * @param req CreateAnimatedGraphicsTemplateRequest
      * @return CreateAnimatedGraphicsTemplateResponse
@@ -174,6 +210,24 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a custom video content audit template. Up to 50 templates can be created.
+     * @param req CreateContentReviewTemplateRequest
+     * @return CreateContentReviewTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateContentReviewTemplateResponse CreateContentReviewTemplate(CreateContentReviewTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateContentReviewTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateContentReviewTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateContentReviewTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a custom image sprite generating template. Up to 16 templates can be created.
      * @param req CreateImageSpriteTemplateRequest
      * @return CreateImageSpriteTemplateResponse
@@ -185,6 +239,24 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateImageSpriteTemplateResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateImageSpriteTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a figure sample for video processing operations such as content recognition and audit using the face recognition technology.
+     * @param req CreatePersonSampleRequest
+     * @return CreatePersonSampleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePersonSampleResponse CreatePersonSample(CreatePersonSampleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePersonSampleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePersonSampleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreatePersonSample"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -246,6 +318,42 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a VOD subapplication.
+     * @param req CreateSubAppIdRequest
+     * @return CreateSubAppIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSubAppIdResponse CreateSubAppId(CreateSubAppIdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSubAppIdResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSubAppIdResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateSubAppId"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a superplayer configuration. Up to 100 configurations can be created.
+     * @param req CreateSuperPlayerConfigRequest
+     * @return CreateSuperPlayerConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSuperPlayerConfigResponse CreateSuperPlayerConfig(CreateSuperPlayerConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSuperPlayerConfigResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSuperPlayerConfigResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateSuperPlayerConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a custom transcoding template. Up to 100 templates can be created.
      * @param req CreateTranscodeTemplateRequest
      * @return CreateTranscodeTemplateResponse
@@ -275,6 +383,24 @@ public class VodClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateWatermarkTemplateResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateWatermarkTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create keyword samples in batches for video processing operations such as content recognition and audit by using the OCR and ASR technologies.
+     * @param req CreateWordSamplesRequest
+     * @return CreateWordSamplesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateWordSamplesResponse CreateWordSamples(CreateWordSamplesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateWordSamplesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateWordSamplesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateWordSamples"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -320,6 +446,24 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
+     *This API is used to delete an adaptive bitrate streaming template.
+     * @param req DeleteAdaptiveDynamicStreamingTemplateRequest
+     * @return DeleteAdaptiveDynamicStreamingTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAdaptiveDynamicStreamingTemplateResponse DeleteAdaptiveDynamicStreamingTemplate(DeleteAdaptiveDynamicStreamingTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAdaptiveDynamicStreamingTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAdaptiveDynamicStreamingTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteAdaptiveDynamicStreamingTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete a custom animated image generating template.
      * @param req DeleteAnimatedGraphicsTemplateRequest
      * @return DeleteAnimatedGraphicsTemplateResponse
@@ -338,6 +482,43 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
+     ** A category can be deleted only if it has no subcategories and associated media files;
+* Otherwise, [delete the media files](/document/product/266/31764) and subcategories first before deleting the category.
+     * @param req DeleteClassRequest
+     * @return DeleteClassResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteClassResponse DeleteClass(DeleteClassRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteClassResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteClassResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteClass"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a custom video content audit template.
+     * @param req DeleteContentReviewTemplateRequest
+     * @return DeleteContentReviewTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteContentReviewTemplateResponse DeleteContentReviewTemplate(DeleteContentReviewTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteContentReviewTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteContentReviewTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteContentReviewTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete an image sprite generating template.
      * @param req DeleteImageSpriteTemplateRequest
      * @return DeleteImageSpriteTemplateResponse
@@ -349,6 +530,43 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 Type type = new TypeToken<JsonResponseModel<DeleteImageSpriteTemplateResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteImageSpriteTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     ** This API is used to delete a media file and its corresponding files generated by video processing (such as transcoded videos, image sprites, screenshots, and videos published on WeChat);
+* The transcoded video files or video files published on WeChat can be deleted separately for a specified video ID.
+     * @param req DeleteMediaRequest
+     * @return DeleteMediaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteMediaResponse DeleteMedia(DeleteMediaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteMediaResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteMediaResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteMedia"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a figure sample based on figure ID.
+     * @param req DeletePersonSampleRequest
+     * @return DeletePersonSampleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePersonSampleResponse DeletePersonSample(DeletePersonSampleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeletePersonSampleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeletePersonSampleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeletePersonSample"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -410,6 +628,43 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
+     *This API is used to delete a superplayer configuration.  
+*Note: preset player configurations cannot be deleted.*
+     * @param req DeleteSuperPlayerConfigRequest
+     * @return DeleteSuperPlayerConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSuperPlayerConfigResponse DeleteSuperPlayerConfig(DeleteSuperPlayerConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteSuperPlayerConfigResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteSuperPlayerConfigResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteSuperPlayerConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a custom transcoding template.
+     * @param req DeleteTranscodeTemplateRequest
+     * @return DeleteTranscodeTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTranscodeTemplateResponse DeleteTranscodeTemplate(DeleteTranscodeTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteTranscodeTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteTranscodeTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteTranscodeTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete a custom watermarking template.
      * @param req DeleteWatermarkTemplateRequest
      * @return DeleteWatermarkTemplateResponse
@@ -421,6 +676,24 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 Type type = new TypeToken<JsonResponseModel<DeleteWatermarkTemplateResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteWatermarkTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete keyword samples in batches.
+     * @param req DeleteWordSamplesRequest
+     * @return DeleteWordSamplesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteWordSamplesResponse DeleteWordSamples(DeleteWordSamplesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteWordSamplesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteWordSamplesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteWordSamples"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -482,6 +755,24 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
+     ** This API is used to get the information of all categories.
+     * @param req DescribeAllClassRequest
+     * @return DescribeAllClassResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllClassResponse DescribeAllClass(DescribeAllClassRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAllClassResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAllClassResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAllClass"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the list of animated image generating templates and supports paged queries by filters.
      * @param req DescribeAnimatedGraphicsTemplatesRequest
      * @return DescribeAnimatedGraphicsTemplatesResponse
@@ -493,24 +784,6 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 Type type = new TypeToken<JsonResponseModel<DescribeAnimatedGraphicsTemplatesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeAnimatedGraphicsTemplates"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to query the list of transcoding to adaptive bitrate streaming audio track templates and supports paged queries by filters.
-     * @param req DescribeAudioTrackTemplatesRequest
-     * @return DescribeAudioTrackTemplatesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAudioTrackTemplatesResponse DescribeAudioTrackTemplates(DescribeAudioTrackTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAudioTrackTemplatesResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAudioTrackTemplatesResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAudioTrackTemplates"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -617,6 +890,24 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 Type type = new TypeToken<JsonResponseModel<DescribeMediaProcessUsageDataResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeMediaProcessUsageData"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the information of figure samples and supports paginated queries by figure ID, name, and tag.
+     * @param req DescribePersonSamplesRequest
+     * @return DescribePersonSamplesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePersonSamplesResponse DescribePersonSamples(DescribePersonSamplesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePersonSamplesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePersonSamplesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribePersonSamples"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -758,6 +1049,24 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
+     *This API is used to query the list of superplayer configurations and supports paginated queries by filters.
+     * @param req DescribeSuperPlayerConfigsRequest
+     * @return DescribeSuperPlayerConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSuperPlayerConfigsResponse DescribeSuperPlayerConfigs(DescribeSuperPlayerConfigsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSuperPlayerConfigsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSuperPlayerConfigsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSuperPlayerConfigs"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the details of execution status and result of a task submitted in the last 3 days by task ID.
      * @param req DescribeTaskDetailRequest
      * @return DescribeTaskDetailResponse
@@ -769,6 +1078,26 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskDetailResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeTaskDetail"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     ** This API is used to query the task list;
+* If there are many data entries in the list, one single call of the API may not be able to pull the entire list. The `ScrollToken` parameter can be used to pull the list in batches;
+* Only tasks in the last three days (72 hours) can be queried.
+     * @param req DescribeTasksRequest
+     * @return DescribeTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTasksResponse DescribeTasks(DescribeTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTasksResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTasksResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTasks"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -794,24 +1123,6 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
-     *This API is used to query the list of transcoding to adaptive bitrate streaming video track templates and supports paged queries by filters.
-     * @param req DescribeVideoTrackTemplatesRequest
-     * @return DescribeVideoTrackTemplatesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeVideoTrackTemplatesResponse DescribeVideoTrackTemplates(DescribeVideoTrackTemplatesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeVideoTrackTemplatesResponse> rsp = null;
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeVideoTrackTemplatesResponse>>() {
-                }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeVideoTrackTemplates"), type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to query custom watermarking templates and supports paged queries by filters.
      * @param req DescribeWatermarkTemplatesRequest
      * @return DescribeWatermarkTemplatesResponse
@@ -823,6 +1134,24 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 Type type = new TypeToken<JsonResponseModel<DescribeWatermarkTemplatesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeWatermarkTemplates"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to perform paginated queries of keyword sample information by use case, keyword, and tag.
+     * @param req DescribeWordSamplesRequest
+     * @return DescribeWordSamplesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWordSamplesResponse DescribeWordSamples(DescribeWordSamplesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeWordSamplesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeWordSamplesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeWordSamples"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -877,7 +1206,7 @@ You can also specify whether to perform a task flow for the generated new video.
 
     /**
      ** After a media file is forbidden, except previewing it in the VOD Console, accessing the URLs of its various resources (such as source file, output files, and screenshots) in other scenarios will return error 403.
-  It takes about 5–10 minutes for a forbidding/unblocking operation to take effect across the entire network.
+  It takes about 5-10 minutes for a forbidding/unblocking operation to take effect across the entire network.
      * @param req ForbidMediaDistributionRequest
      * @return ForbidMediaDistributionResponse
      * @throws TencentCloudSDKException
@@ -956,6 +1285,42 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     }
 
     /**
+     *This API is used to modify a custom video content recognition template.
+     * @param req ModifyAIRecognitionTemplateRequest
+     * @return ModifyAIRecognitionTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAIRecognitionTemplateResponse ModifyAIRecognitionTemplate(ModifyAIRecognitionTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAIRecognitionTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAIRecognitionTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyAIRecognitionTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify an adaptive bitrate streaming template.
+     * @param req ModifyAdaptiveDynamicStreamingTemplateRequest
+     * @return ModifyAdaptiveDynamicStreamingTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAdaptiveDynamicStreamingTemplateResponse ModifyAdaptiveDynamicStreamingTemplate(ModifyAdaptiveDynamicStreamingTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAdaptiveDynamicStreamingTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAdaptiveDynamicStreamingTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyAdaptiveDynamicStreamingTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify a custom animated image generating template.
      * @param req ModifyAnimatedGraphicsTemplateRequest
      * @return ModifyAnimatedGraphicsTemplateResponse
@@ -974,6 +1339,42 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     }
 
     /**
+     *This API is used to modify the category of a media file.
+     * @param req ModifyClassRequest
+     * @return ModifyClassResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClassResponse ModifyClass(ModifyClassRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyClassResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyClassResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyClass"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify a custom video content audit template.
+     * @param req ModifyContentReviewTemplateRequest
+     * @return ModifyContentReviewTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyContentReviewTemplateResponse ModifyContentReviewTemplate(ModifyContentReviewTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyContentReviewTemplateResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyContentReviewTemplateResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyContentReviewTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify a custom image sprite generating template.
      * @param req ModifyImageSpriteTemplateRequest
      * @return ModifyImageSpriteTemplateResponse
@@ -985,6 +1386,42 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
                 Type type = new TypeToken<JsonResponseModel<ModifyImageSpriteTemplateResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyImageSpriteTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the attributes of a media file, including category, name, description, tag, expiration time, timestamp information, and video cover.
+     * @param req ModifyMediaInfoRequest
+     * @return ModifyMediaInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMediaInfoResponse ModifyMediaInfo(ModifyMediaInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyMediaInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyMediaInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyMediaInfo"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify figure sample information based on figure ID, such as modifying the name and description and adding/deleting/resetting a face or tag. There should be at least one image left after the face deletion operation; otherwise, please use the reset operation.
+     * @param req ModifyPersonSampleRequest
+     * @return ModifyPersonSampleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPersonSampleResponse ModifyPersonSample(ModifyPersonSampleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyPersonSampleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyPersonSampleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyPersonSample"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1064,6 +1501,24 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     }
 
     /**
+     *This API is used to modify a superplayer configuration.
+     * @param req ModifySuperPlayerConfigRequest
+     * @return ModifySuperPlayerConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySuperPlayerConfigResponse ModifySuperPlayerConfig(ModifySuperPlayerConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySuperPlayerConfigResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySuperPlayerConfigResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifySuperPlayerConfig"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify a custom transcoding template.
      * @param req ModifyTranscodeTemplateRequest
      * @return ModifyTranscodeTemplateResponse
@@ -1093,6 +1548,42 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
                 Type type = new TypeToken<JsonResponseModel<ModifyWatermarkTemplateResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyWatermarkTemplate"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the use case and tag of a keyword. The keyword itself cannot be modified, but you can delete it and create another one if needed.
+     * @param req ModifyWordSampleRequest
+     * @return ModifyWordSampleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyWordSampleResponse ModifyWordSample(ModifyWordSampleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyWordSampleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyWordSampleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyWordSample"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to parse the index file content and return the list of segment files to be uploaded when an HLS video is uploaded. A segment file path must be a relative path of the current directory or subdirectory instead of a URL or absolute path.
+     * @param req ParseStreamingManifestRequest
+     * @return ParseStreamingManifestResponse
+     * @throws TencentCloudSDKException
+     */
+    public ParseStreamingManifestResponse ParseStreamingManifest(ParseStreamingManifestRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ParseStreamingManifestResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ParseStreamingManifestResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ParseStreamingManifest"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -1154,6 +1645,8 @@ There are two ways to create a task flow template:
 1. Intelligent content audit (detection of porn, terrorism, and politically sensitive information);
 2. Intelligent content analysis (tag, category, cover, and frame-specific tag);
 3. Intelligent content recognition (opening and closing credits, face, full text, text keyword, full speech, speech keyword, and object).
+
+If the event notification is used, its type is [Task Flow Status Change](https://cloud.tencent.com/document/product/266/9636).
      * @param req ProcessMediaByUrlRequest
      * @return ProcessMediaByUrlResponse
      * @throws TencentCloudSDKException
