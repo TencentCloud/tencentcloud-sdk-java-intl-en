@@ -30,7 +30,7 @@ public class DescribeLoginWhiteListResponse extends AbstractModel{
     private Long TotalCount;
 
     /**
-    * Login whitelist array
+    * Login allowlist array
     */
     @SerializedName("LoginWhiteLists")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeLoginWhiteListResponse extends AbstractModel{
     }
 
     /**
-     * Get Login whitelist array 
-     * @return LoginWhiteLists Login whitelist array
+     * Get Login allowlist array 
+     * @return LoginWhiteLists Login allowlist array
      */
     public LoginWhiteLists [] getLoginWhiteLists() {
         return this.LoginWhiteLists;
     }
 
     /**
-     * Set Login whitelist array
-     * @param LoginWhiteLists Login whitelist array
+     * Set Login allowlist array
+     * @param LoginWhiteLists Login allowlist array
      */
     public void setLoginWhiteLists(LoginWhiteLists [] LoginWhiteLists) {
         this.LoginWhiteLists = LoginWhiteLists;

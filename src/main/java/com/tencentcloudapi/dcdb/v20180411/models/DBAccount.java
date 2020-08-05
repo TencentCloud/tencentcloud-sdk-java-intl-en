@@ -58,14 +58,14 @@ public class DBAccount extends AbstractModel{
     private String UpdateTime;
 
     /**
-    * Read-only flag. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
+    * Read-only flag. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
     */
     @SerializedName("ReadOnly")
     @Expose
     private Long ReadOnly;
 
     /**
-    * If the slave delay exceeds the set value of this parameter, the slave will be deemed to have failed.
+    * If the secondary delay exceeds the set value of this parameter, the secondary will be deemed to have failed.
 It is recommended that this parameter be set to a value greater than 10. This parameter takes effect when `ReadOnly` is 1 or 2.
     */
     @SerializedName("DelayThresh")
@@ -153,25 +153,25 @@ It is recommended that this parameter be set to a value greater than 10. This pa
     }
 
     /**
-     * Get Read-only flag. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail. 
-     * @return ReadOnly Read-only flag. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
+     * Get Read-only flag. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail. 
+     * @return ReadOnly Read-only flag. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
      */
     public Long getReadOnly() {
         return this.ReadOnly;
     }
 
     /**
-     * Set Read-only flag. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
-     * @param ReadOnly Read-only flag. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
+     * Set Read-only flag. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
+     * @param ReadOnly Read-only flag. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
      */
     public void setReadOnly(Long ReadOnly) {
         this.ReadOnly = ReadOnly;
     }
 
     /**
-     * Get If the slave delay exceeds the set value of this parameter, the slave will be deemed to have failed.
+     * Get If the secondary delay exceeds the set value of this parameter, the secondary will be deemed to have failed.
 It is recommended that this parameter be set to a value greater than 10. This parameter takes effect when `ReadOnly` is 1 or 2. 
-     * @return DelayThresh If the slave delay exceeds the set value of this parameter, the slave will be deemed to have failed.
+     * @return DelayThresh If the secondary delay exceeds the set value of this parameter, the secondary will be deemed to have failed.
 It is recommended that this parameter be set to a value greater than 10. This parameter takes effect when `ReadOnly` is 1 or 2.
      */
     public Long getDelayThresh() {
@@ -179,9 +179,9 @@ It is recommended that this parameter be set to a value greater than 10. This pa
     }
 
     /**
-     * Set If the slave delay exceeds the set value of this parameter, the slave will be deemed to have failed.
+     * Set If the secondary delay exceeds the set value of this parameter, the secondary will be deemed to have failed.
 It is recommended that this parameter be set to a value greater than 10. This parameter takes effect when `ReadOnly` is 1 or 2.
-     * @param DelayThresh If the slave delay exceeds the set value of this parameter, the slave will be deemed to have failed.
+     * @param DelayThresh If the secondary delay exceeds the set value of this parameter, the secondary will be deemed to have failed.
 It is recommended that this parameter be set to a value greater than 10. This parameter takes effect when `ReadOnly` is 1 or 2.
      */
     public void setDelayThresh(Long DelayThresh) {

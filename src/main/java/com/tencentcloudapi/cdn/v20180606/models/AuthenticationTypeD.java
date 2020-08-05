@@ -48,7 +48,7 @@ If it contains an asterisk (*), this indicates all files.
     private String [] FileExtensions;
 
     /**
-    * whitelist: indicates that all file types apart from the FileExtensions list are authenticated
+    * allowlist: indicates that all file types apart from the FileExtensions list are authenticated
 blacklist: indicates that only the file types in the FileExtensions list are authenticated
     */
     @SerializedName("FilterType")
@@ -145,9 +145,9 @@ If it contains an asterisk (*), this indicates all files.
     }
 
     /**
-     * Get whitelist: indicates that all file types apart from the FileExtensions list are authenticated
+     * Get allowlist: indicates that all file types apart from the FileExtensions list are authenticated
 blacklist: indicates that only the file types in the FileExtensions list are authenticated 
-     * @return FilterType whitelist: indicates that all file types apart from the FileExtensions list are authenticated
+     * @return FilterType allowlist: indicates that all file types apart from the FileExtensions list are authenticated
 blacklist: indicates that only the file types in the FileExtensions list are authenticated
      */
     public String getFilterType() {
@@ -155,9 +155,9 @@ blacklist: indicates that only the file types in the FileExtensions list are aut
     }
 
     /**
-     * Set whitelist: indicates that all file types apart from the FileExtensions list are authenticated
+     * Set allowlist: indicates that all file types apart from the FileExtensions list are authenticated
 blacklist: indicates that only the file types in the FileExtensions list are authenticated
-     * @param FilterType whitelist: indicates that all file types apart from the FileExtensions list are authenticated
+     * @param FilterType allowlist: indicates that all file types apart from the FileExtensions list are authenticated
 blacklist: indicates that only the file types in the FileExtensions list are authenticated
      */
     public void setFilterType(String FilterType) {

@@ -44,7 +44,7 @@ public class ModifyTopicAttributesRequest extends AbstractModel{
     private String Note;
 
     /**
-    * IP whitelist switch. 1: enabled, 0: disabled.
+    * IP allowlist switch. 1: enabled, 0: disabled.
     */
     @SerializedName("EnableWhiteList")
     @Expose
@@ -141,16 +141,16 @@ public class ModifyTopicAttributesRequest extends AbstractModel{
     }
 
     /**
-     * Get IP whitelist switch. 1: enabled, 0: disabled. 
-     * @return EnableWhiteList IP whitelist switch. 1: enabled, 0: disabled.
+     * Get IP allowlist switch. 1: enabled, 0: disabled. 
+     * @return EnableWhiteList IP allowlist switch. 1: enabled, 0: disabled.
      */
     public Long getEnableWhiteList() {
         return this.EnableWhiteList;
     }
 
     /**
-     * Set IP whitelist switch. 1: enabled, 0: disabled.
-     * @param EnableWhiteList IP whitelist switch. 1: enabled, 0: disabled.
+     * Set IP allowlist switch. 1: enabled, 0: disabled.
+     * @param EnableWhiteList IP allowlist switch. 1: enabled, 0: disabled.
      */
     public void setEnableWhiteList(Long EnableWhiteList) {
         this.EnableWhiteList = EnableWhiteList;

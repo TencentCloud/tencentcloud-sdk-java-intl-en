@@ -44,7 +44,7 @@ public class ModifyAccountDescriptionRequest extends AbstractModel{
     private String Host;
 
     /**
-    * New account remarks, which can contain 0–256 characters.
+    * New account remarks, which can contain 0-256 characters.
     */
     @SerializedName("Description")
     @Expose
@@ -99,16 +99,16 @@ public class ModifyAccountDescriptionRequest extends AbstractModel{
     }
 
     /**
-     * Get New account remarks, which can contain 0–256 characters. 
-     * @return Description New account remarks, which can contain 0–256 characters.
+     * Get New account remarks, which can contain 0-256 characters. 
+     * @return Description New account remarks, which can contain 0-256 characters.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set New account remarks, which can contain 0–256 characters.
-     * @param Description New account remarks, which can contain 0–256 characters.
+     * Set New account remarks, which can contain 0-256 characters.
+     * @param Description New account remarks, which can contain 0-256 characters.
      */
     public void setDescription(String Description) {
         this.Description = Description;

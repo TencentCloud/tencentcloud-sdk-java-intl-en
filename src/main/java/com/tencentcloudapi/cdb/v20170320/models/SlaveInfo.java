@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class SlaveInfo extends AbstractModel{
 
     /**
-    * Information of slave server 1
+    * Information of secondary server 1
     */
     @SerializedName("First")
     @Expose
     private SlaveInstanceInfo First;
 
     /**
-    * Information of slave server 2
+    * Information of secondary server 2
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Second")
@@ -38,25 +38,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private SlaveInstanceInfo Second;
 
     /**
-     * Get Information of slave server 1 
-     * @return First Information of slave server 1
+     * Get Information of secondary server 1 
+     * @return First Information of secondary server 1
      */
     public SlaveInstanceInfo getFirst() {
         return this.First;
     }
 
     /**
-     * Set Information of slave server 1
-     * @param First Information of slave server 1
+     * Set Information of secondary server 1
+     * @param First Information of secondary server 1
      */
     public void setFirst(SlaveInstanceInfo First) {
         this.First = First;
     }
 
     /**
-     * Get Information of slave server 2
+     * Get Information of secondary server 2
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Second Information of slave server 2
+     * @return Second Information of secondary server 2
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public SlaveInstanceInfo getSecond() {
@@ -64,9 +64,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Information of slave server 2
+     * Set Information of secondary server 2
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Second Information of slave server 2
+     * @param Second Information of secondary server 2
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSecond(SlaveInstanceInfo Second) {

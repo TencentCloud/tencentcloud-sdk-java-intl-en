@@ -37,7 +37,7 @@ public class InputSecurityGroupInfo extends AbstractModel{
     private String Name;
 
     /**
-    * List of whitelist entries.
+    * List of allowlist entries.
     */
     @SerializedName("Whitelist")
     @Expose
@@ -91,16 +91,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of whitelist entries. 
-     * @return Whitelist List of whitelist entries.
+     * Get List of allowlist entries. 
+     * @return Whitelist List of allowlist entries.
      */
     public String [] getWhitelist() {
         return this.Whitelist;
     }
 
     /**
-     * Set List of whitelist entries.
-     * @param Whitelist List of whitelist entries.
+     * Set List of allowlist entries.
+     * @param Whitelist List of allowlist entries.
      */
     public void setWhitelist(String [] Whitelist) {
         this.Whitelist = Whitelist;

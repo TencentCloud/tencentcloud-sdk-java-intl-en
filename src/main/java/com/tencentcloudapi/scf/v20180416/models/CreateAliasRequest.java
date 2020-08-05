@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateAliasRequest extends AbstractModel{
 
     /**
-    * Alias name, which must be unique in the function, can contain 1–64 letters, digits, `_`, and `-`, and must begin with a letter
+    * Alias name, which must be unique in the function, can contain 1 to 64 letters, digits, `_`, and `-`, and must begin with a letter
     */
     @SerializedName("Name")
     @Expose
@@ -37,7 +37,7 @@ public class CreateAliasRequest extends AbstractModel{
     private String FunctionName;
 
     /**
-    * Master version of alias
+    * Master version pointed to by the alias
     */
     @SerializedName("FunctionVersion")
     @Expose
@@ -65,16 +65,16 @@ public class CreateAliasRequest extends AbstractModel{
     private String Description;
 
     /**
-     * Get Alias name, which must be unique in the function, can contain 1–64 letters, digits, `_`, and `-`, and must begin with a letter 
-     * @return Name Alias name, which must be unique in the function, can contain 1–64 letters, digits, `_`, and `-`, and must begin with a letter
+     * Get Alias name, which must be unique in the function, can contain 1 to 64 letters, digits, `_`, and `-`, and must begin with a letter 
+     * @return Name Alias name, which must be unique in the function, can contain 1 to 64 letters, digits, `_`, and `-`, and must begin with a letter
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Alias name, which must be unique in the function, can contain 1–64 letters, digits, `_`, and `-`, and must begin with a letter
-     * @param Name Alias name, which must be unique in the function, can contain 1–64 letters, digits, `_`, and `-`, and must begin with a letter
+     * Set Alias name, which must be unique in the function, can contain 1 to 64 letters, digits, `_`, and `-`, and must begin with a letter
+     * @param Name Alias name, which must be unique in the function, can contain 1 to 64 letters, digits, `_`, and `-`, and must begin with a letter
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -97,16 +97,16 @@ public class CreateAliasRequest extends AbstractModel{
     }
 
     /**
-     * Get Master version of alias 
-     * @return FunctionVersion Master version of alias
+     * Get Master version pointed to by the alias 
+     * @return FunctionVersion Master version pointed to by the alias
      */
     public String getFunctionVersion() {
         return this.FunctionVersion;
     }
 
     /**
-     * Set Master version of alias
-     * @param FunctionVersion Master version of alias
+     * Set Master version pointed to by the alias
+     * @param FunctionVersion Master version pointed to by the alias
      */
     public void setFunctionVersion(String FunctionVersion) {
         this.FunctionVersion = FunctionVersion;

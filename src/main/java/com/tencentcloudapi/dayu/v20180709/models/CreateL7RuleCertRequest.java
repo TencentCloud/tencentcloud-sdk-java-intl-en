@@ -30,7 +30,7 @@ public class CreateL7RuleCertRequest extends AbstractModel{
     private String Business;
 
     /**
-    * Anti-DDoS instance ID
+    * The resource instance ID, such as the ID of an Anti-DDoS Advanced instance or the ID of an Anti-DDoS Ultimate instance.
     */
     @SerializedName("Id")
     @Expose
@@ -88,16 +88,16 @@ public class CreateL7RuleCertRequest extends AbstractModel{
     }
 
     /**
-     * Get Anti-DDoS instance ID 
-     * @return Id Anti-DDoS instance ID
+     * Get The resource instance ID, such as the ID of an Anti-DDoS Advanced instance or the ID of an Anti-DDoS Ultimate instance. 
+     * @return Id The resource instance ID, such as the ID of an Anti-DDoS Advanced instance or the ID of an Anti-DDoS Ultimate instance.
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Anti-DDoS instance ID
-     * @param Id Anti-DDoS instance ID
+     * Set The resource instance ID, such as the ID of an Anti-DDoS Advanced instance or the ID of an Anti-DDoS Ultimate instance.
+     * @param Id The resource instance ID, such as the ID of an Anti-DDoS Advanced instance or the ID of an Anti-DDoS Ultimate instance.
      */
     public void setId(String Id) {
         this.Id = Id;

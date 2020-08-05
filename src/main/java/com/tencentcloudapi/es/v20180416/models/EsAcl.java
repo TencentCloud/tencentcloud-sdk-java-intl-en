@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class EsAcl extends AbstractModel{
 
     /**
-    * Kibana access blacklist
+    * Kibana access blocklist
     */
     @SerializedName("BlackIpList")
     @Expose
     private String [] BlackIpList;
 
     /**
-    * Kibana access whitelist
+    * Kibana access allowlist
     */
     @SerializedName("WhiteIpList")
     @Expose
     private String [] WhiteIpList;
 
     /**
-     * Get Kibana access blacklist 
-     * @return BlackIpList Kibana access blacklist
+     * Get Kibana access blocklist 
+     * @return BlackIpList Kibana access blocklist
      */
     public String [] getBlackIpList() {
         return this.BlackIpList;
     }
 
     /**
-     * Set Kibana access blacklist
-     * @param BlackIpList Kibana access blacklist
+     * Set Kibana access blocklist
+     * @param BlackIpList Kibana access blocklist
      */
     public void setBlackIpList(String [] BlackIpList) {
         this.BlackIpList = BlackIpList;
     }
 
     /**
-     * Get Kibana access whitelist 
-     * @return WhiteIpList Kibana access whitelist
+     * Get Kibana access allowlist 
+     * @return WhiteIpList Kibana access allowlist
      */
     public String [] getWhiteIpList() {
         return this.WhiteIpList;
     }
 
     /**
-     * Set Kibana access whitelist
-     * @param WhiteIpList Kibana access whitelist
+     * Set Kibana access allowlist
+     * @param WhiteIpList Kibana access allowlist
      */
     public void setWhiteIpList(String [] WhiteIpList) {
         this.WhiteIpList = WhiteIpList;

@@ -38,7 +38,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private PerformanceMonitorSet Slave1;
 
     /**
-    * Slave 2 performance monitoring data. If the instance is one-master-one-slave, it does not have this field
+    * Slave 2 performance monitoring data. If the instance is one-primary-one-secondary, it does not have this field
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Slave2")
@@ -89,9 +89,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Slave 2 performance monitoring data. If the instance is one-master-one-slave, it does not have this field
+     * Get Slave 2 performance monitoring data. If the instance is one-primary-one-secondary, it does not have this field
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Slave2 Slave 2 performance monitoring data. If the instance is one-master-one-slave, it does not have this field
+     * @return Slave2 Slave 2 performance monitoring data. If the instance is one-primary-one-secondary, it does not have this field
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public PerformanceMonitorSet getSlave2() {
@@ -99,9 +99,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Slave 2 performance monitoring data. If the instance is one-master-one-slave, it does not have this field
+     * Set Slave 2 performance monitoring data. If the instance is one-primary-one-secondary, it does not have this field
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Slave2 Slave 2 performance monitoring data. If the instance is one-master-one-slave, it does not have this field
+     * @param Slave2 Slave 2 performance monitoring data. If the instance is one-primary-one-secondary, it does not have this field
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setSlave2(PerformanceMonitorSet Slave2) {

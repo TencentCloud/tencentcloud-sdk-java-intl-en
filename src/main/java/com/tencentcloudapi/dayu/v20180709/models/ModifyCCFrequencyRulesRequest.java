@@ -51,7 +51,7 @@ public class ModifyCCFrequencyRulesRequest extends AbstractModel{
     private Long Period;
 
     /**
-    * Number of access requests. Value range: [1–10000]
+    * Number of access requests. Value range: [1-10000]
     */
     @SerializedName("ReqNumber")
     @Expose
@@ -157,16 +157,16 @@ public class ModifyCCFrequencyRulesRequest extends AbstractModel{
     }
 
     /**
-     * Get Number of access requests. Value range: [1–10000] 
-     * @return ReqNumber Number of access requests. Value range: [1–10000]
+     * Get Number of access requests. Value range: [1-10000] 
+     * @return ReqNumber Number of access requests. Value range: [1-10000]
      */
     public Long getReqNumber() {
         return this.ReqNumber;
     }
 
     /**
-     * Set Number of access requests. Value range: [1–10000]
-     * @param ReqNumber Number of access requests. Value range: [1–10000]
+     * Set Number of access requests. Value range: [1-10000]
+     * @param ReqNumber Number of access requests. Value range: [1-10000]
      */
     public void setReqNumber(Long ReqNumber) {
         this.ReqNumber = ReqNumber;

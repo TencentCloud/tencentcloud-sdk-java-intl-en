@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class SlaveConfig extends AbstractModel{
 
     /**
-    * Replication mode of the slave database. Value range: async, semi-sync
+    * Replication mode of the secondary database. Value range: async, semi-sync
     */
     @SerializedName("ReplicationMode")
     @Expose
     private String ReplicationMode;
 
     /**
-    * AZ name of the slave database, such as ap-shanghai-1
+    * AZ name of the secondary database, such as ap-shanghai-1
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-     * Get Replication mode of the slave database. Value range: async, semi-sync 
-     * @return ReplicationMode Replication mode of the slave database. Value range: async, semi-sync
+     * Get Replication mode of the secondary database. Value range: async, semi-sync 
+     * @return ReplicationMode Replication mode of the secondary database. Value range: async, semi-sync
      */
     public String getReplicationMode() {
         return this.ReplicationMode;
     }
 
     /**
-     * Set Replication mode of the slave database. Value range: async, semi-sync
-     * @param ReplicationMode Replication mode of the slave database. Value range: async, semi-sync
+     * Set Replication mode of the secondary database. Value range: async, semi-sync
+     * @param ReplicationMode Replication mode of the secondary database. Value range: async, semi-sync
      */
     public void setReplicationMode(String ReplicationMode) {
         this.ReplicationMode = ReplicationMode;
     }
 
     /**
-     * Get AZ name of the slave database, such as ap-shanghai-1 
-     * @return Zone AZ name of the slave database, such as ap-shanghai-1
+     * Get AZ name of the secondary database, such as ap-shanghai-1 
+     * @return Zone AZ name of the secondary database, such as ap-shanghai-1
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set AZ name of the slave database, such as ap-shanghai-1
-     * @param Zone AZ name of the slave database, such as ap-shanghai-1
+     * Set AZ name of the secondary database, such as ap-shanghai-1
+     * @param Zone AZ name of the secondary database, such as ap-shanghai-1
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

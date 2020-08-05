@@ -270,6 +270,30 @@ Note: This field may return null, indicating that no valid value was found.
     private String OnsEnable;
 
     /**
+    * File system configuration parameter, which is used for the function to mount the file system
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CfsConfig")
+    @Expose
+    private CfsConfig CfsConfig;
+
+    /**
+    * Function billing status
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AvailableStatus")
+    @Expose
+    private String AvailableStatus;
+
+    /**
+    * Function version
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Qualifier")
+    @Expose
+    private String Qualifier;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -845,6 +869,66 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
+     * Get File system configuration parameter, which is used for the function to mount the file system
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return CfsConfig File system configuration parameter, which is used for the function to mount the file system
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public CfsConfig getCfsConfig() {
+        return this.CfsConfig;
+    }
+
+    /**
+     * Set File system configuration parameter, which is used for the function to mount the file system
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param CfsConfig File system configuration parameter, which is used for the function to mount the file system
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCfsConfig(CfsConfig CfsConfig) {
+        this.CfsConfig = CfsConfig;
+    }
+
+    /**
+     * Get Function billing status
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return AvailableStatus Function billing status
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getAvailableStatus() {
+        return this.AvailableStatus;
+    }
+
+    /**
+     * Set Function billing status
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AvailableStatus Function billing status
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAvailableStatus(String AvailableStatus) {
+        this.AvailableStatus = AvailableStatus;
+    }
+
+    /**
+     * Get Function version
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Qualifier Function version
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getQualifier() {
+        return this.Qualifier;
+    }
+
+    /**
+     * Set Function version
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Qualifier Function version
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setQualifier(String Qualifier) {
+        this.Qualifier = Qualifier;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -899,6 +983,9 @@ Note: This field may return null, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "AddTime", this.AddTime);
         this.setParamObj(map, prefix + "PublicNetConfig.", this.PublicNetConfig);
         this.setParamSimple(map, prefix + "OnsEnable", this.OnsEnable);
+        this.setParamObj(map, prefix + "CfsConfig.", this.CfsConfig);
+        this.setParamSimple(map, prefix + "AvailableStatus", this.AvailableStatus);
+        this.setParamSimple(map, prefix + "Qualifier", this.Qualifier);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

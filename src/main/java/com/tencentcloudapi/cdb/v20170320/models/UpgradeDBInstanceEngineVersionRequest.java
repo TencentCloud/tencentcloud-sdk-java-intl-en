@@ -30,7 +30,7 @@ public class UpgradeDBInstanceEngineVersionRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Version of master instance database engine. Value range: 5.6, 5.7
+    * Version of primary instance database engine. Value range: 5.6, 5.7
     */
     @SerializedName("EngineVersion")
     @Expose
@@ -67,16 +67,16 @@ public class UpgradeDBInstanceEngineVersionRequest extends AbstractModel{
     }
 
     /**
-     * Get Version of master instance database engine. Value range: 5.6, 5.7 
-     * @return EngineVersion Version of master instance database engine. Value range: 5.6, 5.7
+     * Get Version of primary instance database engine. Value range: 5.6, 5.7 
+     * @return EngineVersion Version of primary instance database engine. Value range: 5.6, 5.7
      */
     public String getEngineVersion() {
         return this.EngineVersion;
     }
 
     /**
-     * Set Version of master instance database engine. Value range: 5.6, 5.7
-     * @param EngineVersion Version of master instance database engine. Value range: 5.6, 5.7
+     * Set Version of primary instance database engine. Value range: 5.6, 5.7
+     * @param EngineVersion Version of primary instance database engine. Value range: 5.6, 5.7
      */
     public void setEngineVersion(String EngineVersion) {
         this.EngineVersion = EngineVersion;

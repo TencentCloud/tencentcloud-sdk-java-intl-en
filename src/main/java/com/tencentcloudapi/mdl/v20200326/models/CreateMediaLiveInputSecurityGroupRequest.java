@@ -30,7 +30,7 @@ public class CreateMediaLiveInputSecurityGroupRequest extends AbstractModel{
     private String Name;
 
     /**
-    * List of whitelist entries. Quantity limit: [1,10].
+    * List of allowlist entries. Quantity limit: [1,10].
     */
     @SerializedName("Whitelist")
     @Expose
@@ -53,16 +53,16 @@ public class CreateMediaLiveInputSecurityGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get List of whitelist entries. Quantity limit: [1,10]. 
-     * @return Whitelist List of whitelist entries. Quantity limit: [1,10].
+     * Get List of allowlist entries. Quantity limit: [1,10]. 
+     * @return Whitelist List of allowlist entries. Quantity limit: [1,10].
      */
     public String [] getWhitelist() {
         return this.Whitelist;
     }
 
     /**
-     * Set List of whitelist entries. Quantity limit: [1,10].
-     * @param Whitelist List of whitelist entries. Quantity limit: [1,10].
+     * Set List of allowlist entries. Quantity limit: [1,10].
+     * @param Whitelist List of allowlist entries. Quantity limit: [1,10].
      */
     public void setWhitelist(String [] Whitelist) {
         this.Whitelist = Whitelist;

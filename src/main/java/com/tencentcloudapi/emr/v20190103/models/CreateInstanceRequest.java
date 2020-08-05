@@ -69,7 +69,7 @@ public class CreateInstanceRequest extends AbstractModel{
 
     /**
     * Instance name.
-<li>Length limit: 6–36 characters.</li>
+<li>Length limit: 6-36 characters.</li>
 <li>Only letters, numbers, dashes (-), and underscores (_) are supported.</li>
     */
     @SerializedName("InstanceName")
@@ -352,10 +352,10 @@ public class CreateInstanceRequest extends AbstractModel{
 
     /**
      * Get Instance name.
-<li>Length limit: 6–36 characters.</li>
+<li>Length limit: 6-36 characters.</li>
 <li>Only letters, numbers, dashes (-), and underscores (_) are supported.</li> 
      * @return InstanceName Instance name.
-<li>Length limit: 6–36 characters.</li>
+<li>Length limit: 6-36 characters.</li>
 <li>Only letters, numbers, dashes (-), and underscores (_) are supported.</li>
      */
     public String getInstanceName() {
@@ -364,10 +364,10 @@ public class CreateInstanceRequest extends AbstractModel{
 
     /**
      * Set Instance name.
-<li>Length limit: 6–36 characters.</li>
+<li>Length limit: 6-36 characters.</li>
 <li>Only letters, numbers, dashes (-), and underscores (_) are supported.</li>
      * @param InstanceName Instance name.
-<li>Length limit: 6–36 characters.</li>
+<li>Length limit: 6-36 characters.</li>
 <li>Only letters, numbers, dashes (-), and underscores (_) are supported.</li>
      */
     public void setInstanceName(String InstanceName) {

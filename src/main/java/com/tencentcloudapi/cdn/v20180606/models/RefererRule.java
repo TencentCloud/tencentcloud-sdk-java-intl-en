@@ -46,8 +46,8 @@ For `path`, enter the corresponding absolute path, such as /xxx/test.html.
 
     /**
     * Referer configuration types
-whitelist: whitelist
-blacklist: blacklist
+whitelist: allowlist
+blacklist: blocklist
     */
     @SerializedName("RefererType")
     @Expose
@@ -135,11 +135,11 @@ For `path`, enter the corresponding absolute path, such as /xxx/test.html.
 
     /**
      * Get Referer configuration types
-whitelist: whitelist
-blacklist: blacklist 
+whitelist: allowlist
+blacklist: blocklist 
      * @return RefererType Referer configuration types
-whitelist: whitelist
-blacklist: blacklist
+whitelist: allowlist
+blacklist: blocklist
      */
     public String getRefererType() {
         return this.RefererType;
@@ -147,11 +147,11 @@ blacklist: blacklist
 
     /**
      * Set Referer configuration types
-whitelist: whitelist
-blacklist: blacklist
+whitelist: allowlist
+blacklist: blocklist
      * @param RefererType Referer configuration types
-whitelist: whitelist
-blacklist: blacklist
+whitelist: allowlist
+blacklist: blocklist
      */
     public void setRefererType(String RefererType) {
         this.RefererType = RefererType;

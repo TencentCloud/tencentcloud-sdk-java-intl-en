@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class InputSettingInfo extends AbstractModel{
 
     /**
-    * Application name, which is used for RTMP_PUSH and can contain 1–32 letters and digits.
+    * Application name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AppName")
@@ -31,7 +31,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String AppName;
 
     /**
-    * Stream name, which is used for RTMP_PUSH and can contain 1–32 letters and digits.
+    * Stream name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StreamName")
@@ -55,9 +55,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String InputAddress;
 
     /**
-     * Get Application name, which is used for RTMP_PUSH and can contain 1–32 letters and digits.
+     * Get Application name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AppName Application name, which is used for RTMP_PUSH and can contain 1–32 letters and digits.
+     * @return AppName Application name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getAppName() {
@@ -65,9 +65,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Application name, which is used for RTMP_PUSH and can contain 1–32 letters and digits.
+     * Set Application name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AppName Application name, which is used for RTMP_PUSH and can contain 1–32 letters and digits.
+     * @param AppName Application name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setAppName(String AppName) {
@@ -75,9 +75,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Stream name, which is used for RTMP_PUSH and can contain 1–32 letters and digits.
+     * Get Stream name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return StreamName Stream name, which is used for RTMP_PUSH and can contain 1–32 letters and digits.
+     * @return StreamName Stream name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getStreamName() {
@@ -85,9 +85,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Stream name, which is used for RTMP_PUSH and can contain 1–32 letters and digits.
+     * Set Stream name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param StreamName Stream name, which is used for RTMP_PUSH and can contain 1–32 letters and digits.
+     * @param StreamName Stream name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setStreamName(String StreamName) {

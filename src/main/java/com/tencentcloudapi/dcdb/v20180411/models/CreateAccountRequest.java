@@ -44,28 +44,28 @@ public class CreateAccountRequest extends AbstractModel{
     private String Host;
 
     /**
-    * Account password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
+    * Account password, which can contain 6-32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail; 3: only the slave will be read from.
+    * Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail; 3: only the secondary will be read from.
     */
     @SerializedName("ReadOnly")
     @Expose
     private Long ReadOnly;
 
     /**
-    * Account remarks, which can contain 0–256 letters, digits, and common symbols.
+    * Account remarks, which can contain 0-256 letters, digits, and common symbols.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * If the slave delay exceeds the set value of this parameter, the slave will be deemed to have failed.
+    * If the secondary delay exceeds the set value of this parameter, the secondary will be deemed to have failed.
 It is recommended that this parameter be set to a value greater than 10. This parameter takes effect when `ReadOnly` is 1 or 2.
     */
     @SerializedName("DelayThresh")
@@ -121,57 +121,57 @@ It is recommended that this parameter be set to a value greater than 10. This pa
     }
 
     /**
-     * Get Account password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks. 
-     * @return Password Account password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
+     * Get Account password, which can contain 6-32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks. 
+     * @return Password Account password, which can contain 6-32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Account password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
-     * @param Password Account password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
+     * Set Account password, which can contain 6-32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
+     * @param Password Account password, which can contain 6-32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail; 3: only the slave will be read from. 
-     * @return ReadOnly Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail; 3: only the slave will be read from.
+     * Get Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail; 3: only the secondary will be read from. 
+     * @return ReadOnly Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail; 3: only the secondary will be read from.
      */
     public Long getReadOnly() {
         return this.ReadOnly;
     }
 
     /**
-     * Set Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail; 3: only the slave will be read from.
-     * @param ReadOnly Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail; 3: only the slave will be read from.
+     * Set Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail; 3: only the secondary will be read from.
+     * @param ReadOnly Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail; 3: only the secondary will be read from.
      */
     public void setReadOnly(Long ReadOnly) {
         this.ReadOnly = ReadOnly;
     }
 
     /**
-     * Get Account remarks, which can contain 0–256 letters, digits, and common symbols. 
-     * @return Description Account remarks, which can contain 0–256 letters, digits, and common symbols.
+     * Get Account remarks, which can contain 0-256 letters, digits, and common symbols. 
+     * @return Description Account remarks, which can contain 0-256 letters, digits, and common symbols.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Account remarks, which can contain 0–256 letters, digits, and common symbols.
-     * @param Description Account remarks, which can contain 0–256 letters, digits, and common symbols.
+     * Set Account remarks, which can contain 0-256 letters, digits, and common symbols.
+     * @param Description Account remarks, which can contain 0-256 letters, digits, and common symbols.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get If the slave delay exceeds the set value of this parameter, the slave will be deemed to have failed.
+     * Get If the secondary delay exceeds the set value of this parameter, the secondary will be deemed to have failed.
 It is recommended that this parameter be set to a value greater than 10. This parameter takes effect when `ReadOnly` is 1 or 2. 
-     * @return DelayThresh If the slave delay exceeds the set value of this parameter, the slave will be deemed to have failed.
+     * @return DelayThresh If the secondary delay exceeds the set value of this parameter, the secondary will be deemed to have failed.
 It is recommended that this parameter be set to a value greater than 10. This parameter takes effect when `ReadOnly` is 1 or 2.
      */
     public Long getDelayThresh() {
@@ -179,9 +179,9 @@ It is recommended that this parameter be set to a value greater than 10. This pa
     }
 
     /**
-     * Set If the slave delay exceeds the set value of this parameter, the slave will be deemed to have failed.
+     * Set If the secondary delay exceeds the set value of this parameter, the secondary will be deemed to have failed.
 It is recommended that this parameter be set to a value greater than 10. This parameter takes effect when `ReadOnly` is 1 or 2.
-     * @param DelayThresh If the slave delay exceeds the set value of this parameter, the slave will be deemed to have failed.
+     * @param DelayThresh If the secondary delay exceeds the set value of this parameter, the secondary will be deemed to have failed.
 It is recommended that this parameter be set to a value greater than 10. This parameter takes effect when `ReadOnly` is 1 or 2.
      */
     public void setDelayThresh(Long DelayThresh) {

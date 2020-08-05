@@ -62,7 +62,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String InstanceName;
 
     /**
-    * List of private IPs of the instance’s primary ENI.
+    * List of private IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PrivateIpAddresses")
@@ -70,7 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] PrivateIpAddresses;
 
     /**
-    * List of public IPs of the instance’s primary ENI.
+    * List of public IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PublicIpAddresses")
@@ -86,7 +86,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String CreatedTime;
 
     /**
-    * Instance’s number of CPU cores. Unit: cores.
+    * Instance's number of CPU cores. Unit: cores.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CPU")
@@ -94,7 +94,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long CPU;
 
     /**
-    * Instance’s memory capacity. Unit: GB.
+    * Instance's memory capacity. Unit: GB.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Memory")
@@ -230,9 +230,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of private IPs of the instance’s primary ENI.
+     * Get List of private IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PrivateIpAddresses List of private IPs of the instance’s primary ENI.
+     * @return PrivateIpAddresses List of private IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getPrivateIpAddresses() {
@@ -240,9 +240,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set List of private IPs of the instance’s primary ENI.
+     * Set List of private IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PrivateIpAddresses List of private IPs of the instance’s primary ENI.
+     * @param PrivateIpAddresses List of private IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPrivateIpAddresses(String [] PrivateIpAddresses) {
@@ -250,9 +250,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of public IPs of the instance’s primary ENI.
+     * Get List of public IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PublicIpAddresses List of public IPs of the instance’s primary ENI.
+     * @return PublicIpAddresses List of public IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getPublicIpAddresses() {
@@ -260,9 +260,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set List of public IPs of the instance’s primary ENI.
+     * Set List of public IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PublicIpAddresses List of public IPs of the instance’s primary ENI.
+     * @param PublicIpAddresses List of public IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPublicIpAddresses(String [] PublicIpAddresses) {
@@ -290,9 +290,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Instance’s number of CPU cores. Unit: cores.
+     * Get Instance's number of CPU cores. Unit: cores.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CPU Instance’s number of CPU cores. Unit: cores.
+     * @return CPU Instance's number of CPU cores. Unit: cores.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getCPU() {
@@ -300,9 +300,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Instance’s number of CPU cores. Unit: cores.
+     * Set Instance's number of CPU cores. Unit: cores.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CPU Instance’s number of CPU cores. Unit: cores.
+     * @param CPU Instance's number of CPU cores. Unit: cores.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCPU(Long CPU) {
@@ -310,9 +310,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Instance’s memory capacity. Unit: GB.
+     * Get Instance's memory capacity. Unit: GB.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Memory Instance’s memory capacity. Unit: GB.
+     * @return Memory Instance's memory capacity. Unit: GB.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getMemory() {
@@ -320,9 +320,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Instance’s memory capacity. Unit: GB.
+     * Set Instance's memory capacity. Unit: GB.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Memory Instance’s memory capacity. Unit: GB.
+     * @param Memory Instance's memory capacity. Unit: GB.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMemory(Long Memory) {

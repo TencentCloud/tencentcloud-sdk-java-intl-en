@@ -114,6 +114,48 @@ public class CreateDBInstancesRequest extends AbstractModel{
     private Long AutoRenewFlag;
 
     /**
+    * 
+    */
+    @SerializedName("SecurityGroupList")
+    @Expose
+    private String [] SecurityGroupList;
+
+    /**
+    * 
+    */
+    @SerializedName("Weekly")
+    @Expose
+    private Long [] Weekly;
+
+    /**
+    * 
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * 
+    */
+    @SerializedName("Span")
+    @Expose
+    private Long Span;
+
+    /**
+    * 
+    */
+    @SerializedName("HAType")
+    @Expose
+    private String HAType;
+
+    /**
+    * 
+    */
+    @SerializedName("MultiZones")
+    @Expose
+    private Boolean MultiZones;
+
+    /**
      * Get Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API 
      * @return Zone Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API
      */
@@ -322,6 +364,102 @@ public class CreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return SecurityGroupList 
+     */
+    public String [] getSecurityGroupList() {
+        return this.SecurityGroupList;
+    }
+
+    /**
+     * Set 
+     * @param SecurityGroupList 
+     */
+    public void setSecurityGroupList(String [] SecurityGroupList) {
+        this.SecurityGroupList = SecurityGroupList;
+    }
+
+    /**
+     * Get  
+     * @return Weekly 
+     */
+    public Long [] getWeekly() {
+        return this.Weekly;
+    }
+
+    /**
+     * Set 
+     * @param Weekly 
+     */
+    public void setWeekly(Long [] Weekly) {
+        this.Weekly = Weekly;
+    }
+
+    /**
+     * Get  
+     * @return StartTime 
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 
+     * @param StartTime 
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get  
+     * @return Span 
+     */
+    public Long getSpan() {
+        return this.Span;
+    }
+
+    /**
+     * Set 
+     * @param Span 
+     */
+    public void setSpan(Long Span) {
+        this.Span = Span;
+    }
+
+    /**
+     * Get  
+     * @return HAType 
+     */
+    public String getHAType() {
+        return this.HAType;
+    }
+
+    /**
+     * Set 
+     * @param HAType 
+     */
+    public void setHAType(String HAType) {
+        this.HAType = HAType;
+    }
+
+    /**
+     * Get  
+     * @return MultiZones 
+     */
+    public Boolean getMultiZones() {
+        return this.MultiZones;
+    }
+
+    /**
+     * Set 
+     * @param MultiZones 
+     */
+    public void setMultiZones(Boolean MultiZones) {
+        this.MultiZones = MultiZones;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -338,6 +476,12 @@ public class CreateDBInstancesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
         this.setParamSimple(map, prefix + "DBVersion", this.DBVersion);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+        this.setParamArraySimple(map, prefix + "SecurityGroupList.", this.SecurityGroupList);
+        this.setParamArraySimple(map, prefix + "Weekly.", this.Weekly);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "Span", this.Span);
+        this.setParamSimple(map, prefix + "HAType", this.HAType);
+        this.setParamSimple(map, prefix + "MultiZones", this.MultiZones);
 
     }
 }

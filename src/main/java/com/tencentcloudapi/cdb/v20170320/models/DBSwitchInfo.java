@@ -30,7 +30,7 @@ public class DBSwitchInfo extends AbstractModel{
     private String SwitchTime;
 
     /**
-    * Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (master/slave switch), RECOVERY (master/slave recovery)
+    * Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (primary/secondary switch), RECOVERY (primary/secondary recovery)
     */
     @SerializedName("SwitchType")
     @Expose
@@ -53,16 +53,16 @@ public class DBSwitchInfo extends AbstractModel{
     }
 
     /**
-     * Get Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (master/slave switch), RECOVERY (master/slave recovery) 
-     * @return SwitchType Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (master/slave switch), RECOVERY (master/slave recovery)
+     * Get Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (primary/secondary switch), RECOVERY (primary/secondary recovery) 
+     * @return SwitchType Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (primary/secondary switch), RECOVERY (primary/secondary recovery)
      */
     public String getSwitchType() {
         return this.SwitchType;
     }
 
     /**
-     * Set Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (master/slave switch), RECOVERY (master/slave recovery)
-     * @param SwitchType Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (master/slave switch), RECOVERY (master/slave recovery)
+     * Set Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (primary/secondary switch), RECOVERY (primary/secondary recovery)
+     * @param SwitchType Switch type. Value range: TRANSFER (data migration), MASTER2SLAVE (primary/secondary switch), RECOVERY (primary/secondary recovery)
      */
     public void setSwitchType(String SwitchType) {
         this.SwitchType = SwitchType;

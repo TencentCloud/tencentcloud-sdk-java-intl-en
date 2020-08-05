@@ -30,7 +30,7 @@ public class IpBlackWhite extends AbstractModel{
     private String Ip;
 
     /**
-    * Blacklist/whitelist type. Valid values: [black, white]
+    * Blocklist/allowlist type. Valid values: [black, white]
     */
     @SerializedName("Type")
     @Expose
@@ -53,16 +53,16 @@ public class IpBlackWhite extends AbstractModel{
     }
 
     /**
-     * Get Blacklist/whitelist type. Valid values: [black, white] 
-     * @return Type Blacklist/whitelist type. Valid values: [black, white]
+     * Get Blocklist/allowlist type. Valid values: [black, white] 
+     * @return Type Blocklist/allowlist type. Valid values: [black, white]
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Blacklist/whitelist type. Valid values: [black, white]
-     * @param Type Blacklist/whitelist type. Valid values: [black, white]
+     * Set Blocklist/allowlist type. Valid values: [black, white]
+     * @param Type Blocklist/allowlist type. Valid values: [black, white]
      */
     public void setType(String Type) {
         this.Type = Type;

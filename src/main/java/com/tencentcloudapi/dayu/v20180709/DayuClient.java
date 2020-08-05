@@ -579,7 +579,7 @@ public class DayuClient extends AbstractClient{
     }
 
     /**
-     *This API is used to get the CC IP blacklist/whitelist.
+     *This API is used to get the CC IP blocklist/allowlist.
      * @param req DescribeCCIpAllowDenyRequest
      * @return DescribeCCIpAllowDenyResponse
      * @throws TencentCloudSDKException
@@ -633,7 +633,7 @@ public class DayuClient extends AbstractClient{
     }
 
     /**
-     *This API is used to get the CC URL whitelist.
+     *This API is used to get the CC URL allowlist.
      * @param req DescribeCCUrlAllowRequest
      * @return DescribeCCUrlAllowResponse
      * @throws TencentCloudSDKException
@@ -1389,7 +1389,7 @@ public class DayuClient extends AbstractClient{
     }
 
     /**
-     *This API is used to add/remove a CC IP to/from the blacklist/whitelist.
+     *This API is used to add/remove a CC IP to/from the blocklist/allowlist.
      * @param req ModifyCCIpAllowDenyRequest
      * @return ModifyCCIpAllowDenyResponse
      * @throws TencentCloudSDKException
@@ -1479,7 +1479,7 @@ public class DayuClient extends AbstractClient{
     }
 
     /**
-     *This API is used to add/remove a CC URL to/from the whitelist.
+     *This API is used to add/remove a CC URL to/from the allowlist.
      * @param req ModifyCCUrlAllowRequest
      * @return ModifyCCUrlAllowResponse
      * @throws TencentCloudSDKException
@@ -1778,6 +1778,42 @@ public class DayuClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyNetReturnSwitchResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ModifyNetReturnSwitch"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify layer-7 forwarding rules.
+     * @param req ModifyNewDomainRulesRequest
+     * @return ModifyNewDomainRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNewDomainRulesResponse ModifyNewDomainRules(ModifyNewDomainRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyNewDomainRulesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyNewDomainRulesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyNewDomainRules"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify layer-4 forwarding rules.
+     * @param req ModifyNewL4RuleRequest
+     * @return ModifyNewL4RuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNewL4RuleResponse ModifyNewL4Rule(ModifyNewL4RuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyNewL4RuleResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyNewL4RuleResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyNewL4Rule"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

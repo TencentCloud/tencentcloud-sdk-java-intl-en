@@ -56,6 +56,13 @@ public class SecurityDynamic extends AbstractModel{
     private String Message;
 
     /**
+    * 
+    */
+    @SerializedName("SecurityLevel")
+    @Expose
+    private String SecurityLevel;
+
+    /**
      * Get CWP agent `UUID`. 
      * @return Uuid CWP agent `UUID`.
      */
@@ -140,6 +147,22 @@ public class SecurityDynamic extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return SecurityLevel 
+     */
+    public String getSecurityLevel() {
+        return this.SecurityLevel;
+    }
+
+    /**
+     * Set 
+     * @param SecurityLevel 
+     */
+    public void setSecurityLevel(String SecurityLevel) {
+        this.SecurityLevel = SecurityLevel;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -147,6 +170,7 @@ public class SecurityDynamic extends AbstractModel{
         this.setParamSimple(map, prefix + "EventTime", this.EventTime);
         this.setParamSimple(map, prefix + "EventType", this.EventType);
         this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamSimple(map, prefix + "SecurityLevel", this.SecurityLevel);
 
     }
 }

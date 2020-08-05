@@ -107,7 +107,7 @@ public class Cluster extends AbstractModel{
     private String Property;
 
     /**
-    * Number of master nodes currently in the cluster
+    * Number of primary nodes currently in the cluster
     */
     @SerializedName("ClusterMaterNodeNum")
     @Expose
@@ -346,16 +346,16 @@ Note: this field may return null, indicating that no valid value is obtained.
     }
 
     /**
-     * Get Number of master nodes currently in the cluster 
-     * @return ClusterMaterNodeNum Number of master nodes currently in the cluster
+     * Get Number of primary nodes currently in the cluster 
+     * @return ClusterMaterNodeNum Number of primary nodes currently in the cluster
      */
     public Long getClusterMaterNodeNum() {
         return this.ClusterMaterNodeNum;
     }
 
     /**
-     * Set Number of master nodes currently in the cluster
-     * @param ClusterMaterNodeNum Number of master nodes currently in the cluster
+     * Set Number of primary nodes currently in the cluster
+     * @param ClusterMaterNodeNum Number of primary nodes currently in the cluster
      */
     public void setClusterMaterNodeNum(Long ClusterMaterNodeNum) {
         this.ClusterMaterNodeNum = ClusterMaterNodeNum;

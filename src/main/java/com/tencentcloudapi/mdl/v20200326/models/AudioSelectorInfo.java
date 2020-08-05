@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AudioSelectorInfo extends AbstractModel{
 
     /**
-    * Audio name, which can contain 1–32 letters, digits, and underscores.
+    * Audio name, which can contain 1-32 letters, digits, and underscores.
     */
     @SerializedName("Name")
     @Expose
@@ -37,16 +37,16 @@ public class AudioSelectorInfo extends AbstractModel{
     private AudioPidSelectionInfo AudioPidSelection;
 
     /**
-     * Get Audio name, which can contain 1–32 letters, digits, and underscores. 
-     * @return Name Audio name, which can contain 1–32 letters, digits, and underscores.
+     * Get Audio name, which can contain 1-32 letters, digits, and underscores. 
+     * @return Name Audio name, which can contain 1-32 letters, digits, and underscores.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Audio name, which can contain 1–32 letters, digits, and underscores.
-     * @param Name Audio name, which can contain 1–32 letters, digits, and underscores.
+     * Set Audio name, which can contain 1-32 letters, digits, and underscores.
+     * @param Name Audio name, which can contain 1-32 letters, digits, and underscores.
      */
     public void setName(String Name) {
         this.Name = Name;

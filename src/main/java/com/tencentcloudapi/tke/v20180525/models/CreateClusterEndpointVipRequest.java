@@ -30,7 +30,7 @@ public class CreateClusterEndpointVipRequest extends AbstractModel{
     private String ClusterId;
 
     /**
-    * Security policy opens single IP or CIDR to the Internet (for example: “192.168.1.0/24”, with “reject all” as the default).
+    * Security policy opens single IP or CIDR to the Internet (for example: '192.168.1.0/24', with 'reject all' as the default).
     */
     @SerializedName("SecurityPolicies")
     @Expose
@@ -53,16 +53,16 @@ public class CreateClusterEndpointVipRequest extends AbstractModel{
     }
 
     /**
-     * Get Security policy opens single IP or CIDR to the Internet (for example: “192.168.1.0/24”, with “reject all” as the default). 
-     * @return SecurityPolicies Security policy opens single IP or CIDR to the Internet (for example: “192.168.1.0/24”, with “reject all” as the default).
+     * Get Security policy opens single IP or CIDR to the Internet (for example: '192.168.1.0/24', with 'reject all' as the default). 
+     * @return SecurityPolicies Security policy opens single IP or CIDR to the Internet (for example: '192.168.1.0/24', with 'reject all' as the default).
      */
     public String [] getSecurityPolicies() {
         return this.SecurityPolicies;
     }
 
     /**
-     * Set Security policy opens single IP or CIDR to the Internet (for example: “192.168.1.0/24”, with “reject all” as the default).
-     * @param SecurityPolicies Security policy opens single IP or CIDR to the Internet (for example: “192.168.1.0/24”, with “reject all” as the default).
+     * Set Security policy opens single IP or CIDR to the Internet (for example: '192.168.1.0/24', with 'reject all' as the default).
+     * @param SecurityPolicies Security policy opens single IP or CIDR to the Internet (for example: '192.168.1.0/24', with 'reject all' as the default).
      */
     public void setSecurityPolicies(String [] SecurityPolicies) {
         this.SecurityPolicies = SecurityPolicies;

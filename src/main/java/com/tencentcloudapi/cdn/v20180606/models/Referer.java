@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Referer extends AbstractModel{
 
     /**
-    * Referer blacklist/whitelist configuration switch
+    * Referer blocklist/allowlist configuration switch
 on: enabled
 off: disabled
     */
@@ -32,7 +32,7 @@ off: disabled
     private String Switch;
 
     /**
-    * Referer blacklist/whitelist configuration rule
+    * Referer blocklist/allowlist configuration rule
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RefererRules")
@@ -40,10 +40,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private RefererRule [] RefererRules;
 
     /**
-     * Get Referer blacklist/whitelist configuration switch
+     * Get Referer blocklist/allowlist configuration switch
 on: enabled
 off: disabled 
-     * @return Switch Referer blacklist/whitelist configuration switch
+     * @return Switch Referer blocklist/allowlist configuration switch
 on: enabled
 off: disabled
      */
@@ -52,10 +52,10 @@ off: disabled
     }
 
     /**
-     * Set Referer blacklist/whitelist configuration switch
+     * Set Referer blocklist/allowlist configuration switch
 on: enabled
 off: disabled
-     * @param Switch Referer blacklist/whitelist configuration switch
+     * @param Switch Referer blocklist/allowlist configuration switch
 on: enabled
 off: disabled
      */
@@ -64,9 +64,9 @@ off: disabled
     }
 
     /**
-     * Get Referer blacklist/whitelist configuration rule
+     * Get Referer blocklist/allowlist configuration rule
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RefererRules Referer blacklist/whitelist configuration rule
+     * @return RefererRules Referer blocklist/allowlist configuration rule
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public RefererRule [] getRefererRules() {
@@ -74,9 +74,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Referer blacklist/whitelist configuration rule
+     * Set Referer blocklist/allowlist configuration rule
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RefererRules Referer blacklist/whitelist configuration rule
+     * @param RefererRules Referer blocklist/allowlist configuration rule
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setRefererRules(RefererRule [] RefererRules) {

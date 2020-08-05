@@ -411,7 +411,7 @@ This is an async API. After it is returned successfully, you can call the Descri
     }
 
     /**
-     *This API is used to query the list of blocked IPs (blacklist) of a CLB instance. (This API is in beta test. To use it, please submit a ticket.)
+     *This API is used to query the list of blocked IPs (blocklist) of a CLB instance. (This API is in beta test. To use it, please submit a ticket.)
      * @param req DescribeBlockIPListRequest
      * @return DescribeBlockIPListResponse
      * @throws TencentCloudSDKException
@@ -429,7 +429,7 @@ This is an async API. After it is returned successfully, you can call the Descri
     }
 
     /**
-     *This API is used to query the execution status of an async IP blocking (blacklisting) task by the async task ID returned by the `ModifyBlockIPList` API. (This API is in beta test. To use it, please submit a ticket.)
+     *This API is used to query the execution status of an async IP blocking (blocklisting) task by the async task ID returned by the `ModifyBlockIPList` API. (This API is in beta test. To use it, please submit a ticket.)
      * @param req DescribeBlockIPTaskRequest
      * @return DescribeBlockIPTaskResponse
      * @throws TencentCloudSDKException
@@ -737,7 +737,7 @@ This is an async API. After it is returned successfully, you can call the `Descr
     }
 
     /**
-     *This API is used to modify the client IP blacklist of a CLB instance. One forwarding rule supports blocking up to 2,000,000 IPs. One blacklist can contain up to 2,000,000 entries.
+     *This API is used to modify the client IP blocklist of a CLB instance. One forwarding rule supports blocking up to 2,000,000 IPs. One blocklist can contain up to 2,000,000 entries.
 (This API is in beta test. To use it, please submit a ticket.)
      * @param req ModifyBlockIPListRequest
      * @return ModifyBlockIPListResponse

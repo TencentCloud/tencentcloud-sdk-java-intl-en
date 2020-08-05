@@ -44,6 +44,20 @@ public class CreateWhiteBoxKeyResponse extends AbstractModel{
     private String KeyId;
 
     /**
+    * 
+    */
+    @SerializedName("TagCode")
+    @Expose
+    private Long TagCode;
+
+    /**
+    * 
+    */
+    @SerializedName("TagMsg")
+    @Expose
+    private String TagMsg;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -99,6 +113,38 @@ public class CreateWhiteBoxKeyResponse extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return TagCode 
+     */
+    public Long getTagCode() {
+        return this.TagCode;
+    }
+
+    /**
+     * Set 
+     * @param TagCode 
+     */
+    public void setTagCode(Long TagCode) {
+        this.TagCode = TagCode;
+    }
+
+    /**
+     * Get  
+     * @return TagMsg 
+     */
+    public String getTagMsg() {
+        return this.TagMsg;
+    }
+
+    /**
+     * Set 
+     * @param TagMsg 
+     */
+    public void setTagMsg(String TagMsg) {
+        this.TagMsg = TagMsg;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -121,6 +167,8 @@ public class CreateWhiteBoxKeyResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "EncryptKey", this.EncryptKey);
         this.setParamSimple(map, prefix + "DecryptKey", this.DecryptKey);
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);
+        this.setParamSimple(map, prefix + "TagCode", this.TagCode);
+        this.setParamSimple(map, prefix + "TagMsg", this.TagMsg);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

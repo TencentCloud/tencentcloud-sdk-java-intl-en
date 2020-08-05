@@ -31,7 +31,7 @@ public class DescribeInstanceLogsRequest extends AbstractModel{
 
     /**
     * Log type. Default value: 1
-<li>1: master log</li>
+<li>1: primary log</li>
 <li>2: search slow log</li>
 <li>3: index slow log</li>
 <li>4: GC log</li>
@@ -102,12 +102,12 @@ public class DescribeInstanceLogsRequest extends AbstractModel{
 
     /**
      * Get Log type. Default value: 1
-<li>1: master log</li>
+<li>1: primary log</li>
 <li>2: search slow log</li>
 <li>3: index slow log</li>
 <li>4: GC log</li> 
      * @return LogType Log type. Default value: 1
-<li>1: master log</li>
+<li>1: primary log</li>
 <li>2: search slow log</li>
 <li>3: index slow log</li>
 <li>4: GC log</li>
@@ -118,12 +118,12 @@ public class DescribeInstanceLogsRequest extends AbstractModel{
 
     /**
      * Set Log type. Default value: 1
-<li>1: master log</li>
+<li>1: primary log</li>
 <li>2: search slow log</li>
 <li>3: index slow log</li>
 <li>4: GC log</li>
      * @param LogType Log type. Default value: 1
-<li>1: master log</li>
+<li>1: primary log</li>
 <li>2: search slow log</li>
 <li>3: index slow log</li>
 <li>4: GC log</li>

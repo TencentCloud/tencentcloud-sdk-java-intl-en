@@ -113,6 +113,34 @@ public class Machine extends AbstractModel{
     private MachineTag [] Tag;
 
     /**
+    * 
+    */
+    @SerializedName("BaselineNum")
+    @Expose
+    private Long BaselineNum;
+
+    /**
+    * 
+    */
+    @SerializedName("CyberAttackNum")
+    @Expose
+    private Long CyberAttackNum;
+
+    /**
+    * 
+    */
+    @SerializedName("SecurityStatus")
+    @Expose
+    private String SecurityStatus;
+
+    /**
+    * 
+    */
+    @SerializedName("InvasionNum")
+    @Expose
+    private Long InvasionNum;
+
+    /**
      * Get Server name. 
      * @return MachineName Server name.
      */
@@ -329,6 +357,70 @@ public class Machine extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return BaselineNum 
+     */
+    public Long getBaselineNum() {
+        return this.BaselineNum;
+    }
+
+    /**
+     * Set 
+     * @param BaselineNum 
+     */
+    public void setBaselineNum(Long BaselineNum) {
+        this.BaselineNum = BaselineNum;
+    }
+
+    /**
+     * Get  
+     * @return CyberAttackNum 
+     */
+    public Long getCyberAttackNum() {
+        return this.CyberAttackNum;
+    }
+
+    /**
+     * Set 
+     * @param CyberAttackNum 
+     */
+    public void setCyberAttackNum(Long CyberAttackNum) {
+        this.CyberAttackNum = CyberAttackNum;
+    }
+
+    /**
+     * Get  
+     * @return SecurityStatus 
+     */
+    public String getSecurityStatus() {
+        return this.SecurityStatus;
+    }
+
+    /**
+     * Set 
+     * @param SecurityStatus 
+     */
+    public void setSecurityStatus(String SecurityStatus) {
+        this.SecurityStatus = SecurityStatus;
+    }
+
+    /**
+     * Get  
+     * @return InvasionNum 
+     */
+    public Long getInvasionNum() {
+        return this.InvasionNum;
+    }
+
+    /**
+     * Set 
+     * @param InvasionNum 
+     */
+    public void setInvasionNum(Long InvasionNum) {
+        this.InvasionNum = InvasionNum;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -344,6 +436,10 @@ public class Machine extends AbstractModel{
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "MalwareNum", this.MalwareNum);
         this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
+        this.setParamSimple(map, prefix + "BaselineNum", this.BaselineNum);
+        this.setParamSimple(map, prefix + "CyberAttackNum", this.CyberAttackNum);
+        this.setParamSimple(map, prefix + "SecurityStatus", this.SecurityStatus);
+        this.setParamSimple(map, prefix + "InvasionNum", this.InvasionNum);
 
     }
 }

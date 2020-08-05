@@ -30,7 +30,7 @@ public class ZoneConf extends AbstractModel{
     private Long [] DeployMode;
 
     /**
-    * AZ where the master instance is located
+    * AZ where the primary instance is located
     */
     @SerializedName("MasterZone")
     @Expose
@@ -67,16 +67,16 @@ public class ZoneConf extends AbstractModel{
     }
 
     /**
-     * Get AZ where the master instance is located 
-     * @return MasterZone AZ where the master instance is located
+     * Get AZ where the primary instance is located 
+     * @return MasterZone AZ where the primary instance is located
      */
     public String [] getMasterZone() {
         return this.MasterZone;
     }
 
     /**
-     * Set AZ where the master instance is located
-     * @param MasterZone AZ where the master instance is located
+     * Set AZ where the primary instance is located
+     * @param MasterZone AZ where the primary instance is located
      */
     public void setMasterZone(String [] MasterZone) {
         this.MasterZone = MasterZone;

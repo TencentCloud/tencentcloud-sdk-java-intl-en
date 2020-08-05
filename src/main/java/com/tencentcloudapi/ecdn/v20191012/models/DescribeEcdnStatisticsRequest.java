@@ -60,9 +60,9 @@ dynamic_bandwidth: dynamic bandwidth in bps
     /**
     * Time granularity, which can be:
 1 day	 1, 5, 15, 30, 60, 120, 240, 1440 
-2–3 days 15, 30, 60, 120, 240, 1440
-4–7 days 30, 60, 120, 240, 1440
-8–90 days	 60, 120, 240, 1440
+2-3 days 15, 30, 60, 120, 240, 1440
+4-7 days 30, 60, 120, 240, 1440
+8-90 days	 60, 120, 240, 1440
     */
     @SerializedName("Interval")
     @Expose
@@ -192,14 +192,14 @@ dynamic_bandwidth: dynamic bandwidth in bps
     /**
      * Get Time granularity, which can be:
 1 day	 1, 5, 15, 30, 60, 120, 240, 1440 
-2–3 days 15, 30, 60, 120, 240, 1440
-4–7 days 30, 60, 120, 240, 1440
-8–90 days	 60, 120, 240, 1440 
+2-3 days 15, 30, 60, 120, 240, 1440
+4-7 days 30, 60, 120, 240, 1440
+8-90 days	 60, 120, 240, 1440 
      * @return Interval Time granularity, which can be:
 1 day	 1, 5, 15, 30, 60, 120, 240, 1440 
-2–3 days 15, 30, 60, 120, 240, 1440
-4–7 days 30, 60, 120, 240, 1440
-8–90 days	 60, 120, 240, 1440
+2-3 days 15, 30, 60, 120, 240, 1440
+4-7 days 30, 60, 120, 240, 1440
+8-90 days	 60, 120, 240, 1440
      */
     public Long getInterval() {
         return this.Interval;
@@ -208,14 +208,14 @@ dynamic_bandwidth: dynamic bandwidth in bps
     /**
      * Set Time granularity, which can be:
 1 day	 1, 5, 15, 30, 60, 120, 240, 1440 
-2–3 days 15, 30, 60, 120, 240, 1440
-4–7 days 30, 60, 120, 240, 1440
-8–90 days	 60, 120, 240, 1440
+2-3 days 15, 30, 60, 120, 240, 1440
+4-7 days 30, 60, 120, 240, 1440
+8-90 days	 60, 120, 240, 1440
      * @param Interval Time granularity, which can be:
 1 day	 1, 5, 15, 30, 60, 120, 240, 1440 
-2–3 days 15, 30, 60, 120, 240, 1440
-4–7 days 30, 60, 120, 240, 1440
-8–90 days	 60, 120, 240, 1440
+2-3 days 15, 30, 60, 120, 240, 1440
+4-7 days 30, 60, 120, 240, 1440
+8-90 days	 60, 120, 240, 1440
      */
     public void setInterval(Long Interval) {
         this.Interval = Interval;

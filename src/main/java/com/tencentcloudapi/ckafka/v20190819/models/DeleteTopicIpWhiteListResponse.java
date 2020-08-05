@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DeleteTopicIpWhiteListResponse extends AbstractModel{
 
     /**
-    * Result of deleting topic IP whitelist
+    * Result of deleting topic IP allowlist
     */
     @SerializedName("Result")
     @Expose
@@ -37,16 +37,16 @@ public class DeleteTopicIpWhiteListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Result of deleting topic IP whitelist 
-     * @return Result Result of deleting topic IP whitelist
+     * Get Result of deleting topic IP allowlist 
+     * @return Result Result of deleting topic IP allowlist
      */
     public JgwOperateResponse getResult() {
         return this.Result;
     }
 
     /**
-     * Set Result of deleting topic IP whitelist
-     * @param Result Result of deleting topic IP whitelist
+     * Set Result of deleting topic IP allowlist
+     * @param Result Result of deleting topic IP allowlist
      */
     public void setResult(JgwOperateResponse Result) {
         this.Result = Result;

@@ -79,7 +79,7 @@ public class DescribeDBSlowLogsRequest extends AbstractModel{
     private String OrderByType;
 
     /**
-    * Whether to query slow queries of the slave. 0: master, 1: slave
+    * Whether to query slow queries of the secondary. 0: primary, 1: secondary
     */
     @SerializedName("Slave")
     @Expose
@@ -214,16 +214,16 @@ public class DescribeDBSlowLogsRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to query slow queries of the slave. 0: master, 1: slave 
-     * @return Slave Whether to query slow queries of the slave. 0: master, 1: slave
+     * Get Whether to query slow queries of the secondary. 0: primary, 1: secondary 
+     * @return Slave Whether to query slow queries of the secondary. 0: primary, 1: secondary
      */
     public Long getSlave() {
         return this.Slave;
     }
 
     /**
-     * Set Whether to query slow queries of the slave. 0: master, 1: slave
-     * @param Slave Whether to query slow queries of the slave. 0: master, 1: slave
+     * Set Whether to query slow queries of the secondary. 0: primary, 1: secondary
+     * @param Slave Whether to query slow queries of the secondary. 0: primary, 1: secondary
      */
     public void setSlave(Long Slave) {
         this.Slave = Slave;

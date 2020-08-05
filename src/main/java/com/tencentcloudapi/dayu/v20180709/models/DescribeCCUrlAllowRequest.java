@@ -37,7 +37,7 @@ public class DescribeCCUrlAllowRequest extends AbstractModel{
     private String Id;
 
     /**
-    * Blacklist or whitelist. Valid value: [white (whitelist)]. Currently, only whitelist is supported.
+    * Blocklist or allowlist. Valid value: [white (allowlist)]. Currently, only allowlist is supported.
 Note: this array can only have one value which can only be `white`
     */
     @SerializedName("Type")
@@ -98,9 +98,9 @@ Note: this array can only have one value which can only be `white`
     }
 
     /**
-     * Get Blacklist or whitelist. Valid value: [white (whitelist)]. Currently, only whitelist is supported.
+     * Get Blocklist or allowlist. Valid value: [white (allowlist)]. Currently, only allowlist is supported.
 Note: this array can only have one value which can only be `white` 
-     * @return Type Blacklist or whitelist. Valid value: [white (whitelist)]. Currently, only whitelist is supported.
+     * @return Type Blocklist or allowlist. Valid value: [white (allowlist)]. Currently, only allowlist is supported.
 Note: this array can only have one value which can only be `white`
      */
     public String [] getType() {
@@ -108,9 +108,9 @@ Note: this array can only have one value which can only be `white`
     }
 
     /**
-     * Set Blacklist or whitelist. Valid value: [white (whitelist)]. Currently, only whitelist is supported.
+     * Set Blocklist or allowlist. Valid value: [white (allowlist)]. Currently, only allowlist is supported.
 Note: this array can only have one value which can only be `white`
-     * @param Type Blacklist or whitelist. Valid value: [white (whitelist)]. Currently, only whitelist is supported.
+     * @param Type Blocklist or allowlist. Valid value: [white (allowlist)]. Currently, only allowlist is supported.
 Note: this array can only have one value which can only be `white`
      */
     public void setType(String [] Type) {

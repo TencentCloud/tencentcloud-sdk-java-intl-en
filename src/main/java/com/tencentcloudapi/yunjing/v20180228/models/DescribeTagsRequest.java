@@ -23,9 +23,57 @@ import java.util.HashMap;
 public class DescribeTagsRequest extends AbstractModel{
 
     /**
+    * 
+    */
+    @SerializedName("MachineType")
+    @Expose
+    private String MachineType;
+
+    /**
+    * 
+    */
+    @SerializedName("MachineRegion")
+    @Expose
+    private String MachineRegion;
+
+    /**
+     * Get  
+     * @return MachineType 
+     */
+    public String getMachineType() {
+        return this.MachineType;
+    }
+
+    /**
+     * Set 
+     * @param MachineType 
+     */
+    public void setMachineType(String MachineType) {
+        this.MachineType = MachineType;
+    }
+
+    /**
+     * Get  
+     * @return MachineRegion 
+     */
+    public String getMachineRegion() {
+        return this.MachineRegion;
+    }
+
+    /**
+     * Set 
+     * @param MachineRegion 
+     */
+    public void setMachineRegion(String MachineRegion) {
+        this.MachineRegion = MachineRegion;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "MachineType", this.MachineType);
+        this.setParamSimple(map, prefix + "MachineRegion", this.MachineRegion);
 
     }
 }

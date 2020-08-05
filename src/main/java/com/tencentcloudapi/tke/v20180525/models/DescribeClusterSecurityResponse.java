@@ -23,28 +23,28 @@ import java.util.HashMap;
 public class DescribeClusterSecurityResponse extends AbstractModel{
 
     /**
-    * Cluster’s account name
+    * Cluster's account name
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * Cluster’s password
+    * Cluster's password
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * Cluster’s access CA certificate
+    * Cluster's access CA certificate
     */
     @SerializedName("CertificationAuthority")
     @Expose
     private String CertificationAuthority;
 
     /**
-    * Cluster’s access address
+    * Cluster's access address
     */
     @SerializedName("ClusterExternalEndpoint")
     @Expose
@@ -58,14 +58,14 @@ public class DescribeClusterSecurityResponse extends AbstractModel{
     private String Domain;
 
     /**
-    * Cluster’s endpoint address
+    * Cluster's endpoint address
     */
     @SerializedName("PgwEndpoint")
     @Expose
     private String PgwEndpoint;
 
     /**
-    * Cluster’s access policy group
+    * Cluster's access policy group
 Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("SecurityPolicy")
@@ -96,64 +96,64 @@ Note: This field may return null, indicating that no valid value was found.
     private String RequestId;
 
     /**
-     * Get Cluster’s account name 
-     * @return UserName Cluster’s account name
+     * Get Cluster's account name 
+     * @return UserName Cluster's account name
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set Cluster’s account name
-     * @param UserName Cluster’s account name
+     * Set Cluster's account name
+     * @param UserName Cluster's account name
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get Cluster’s password 
-     * @return Password Cluster’s password
+     * Get Cluster's password 
+     * @return Password Cluster's password
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Cluster’s password
-     * @param Password Cluster’s password
+     * Set Cluster's password
+     * @param Password Cluster's password
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get Cluster’s access CA certificate 
-     * @return CertificationAuthority Cluster’s access CA certificate
+     * Get Cluster's access CA certificate 
+     * @return CertificationAuthority Cluster's access CA certificate
      */
     public String getCertificationAuthority() {
         return this.CertificationAuthority;
     }
 
     /**
-     * Set Cluster’s access CA certificate
-     * @param CertificationAuthority Cluster’s access CA certificate
+     * Set Cluster's access CA certificate
+     * @param CertificationAuthority Cluster's access CA certificate
      */
     public void setCertificationAuthority(String CertificationAuthority) {
         this.CertificationAuthority = CertificationAuthority;
     }
 
     /**
-     * Get Cluster’s access address 
-     * @return ClusterExternalEndpoint Cluster’s access address
+     * Get Cluster's access address 
+     * @return ClusterExternalEndpoint Cluster's access address
      */
     public String getClusterExternalEndpoint() {
         return this.ClusterExternalEndpoint;
     }
 
     /**
-     * Set Cluster’s access address
-     * @param ClusterExternalEndpoint Cluster’s access address
+     * Set Cluster's access address
+     * @param ClusterExternalEndpoint Cluster's access address
      */
     public void setClusterExternalEndpoint(String ClusterExternalEndpoint) {
         this.ClusterExternalEndpoint = ClusterExternalEndpoint;
@@ -176,25 +176,25 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Cluster’s endpoint address 
-     * @return PgwEndpoint Cluster’s endpoint address
+     * Get Cluster's endpoint address 
+     * @return PgwEndpoint Cluster's endpoint address
      */
     public String getPgwEndpoint() {
         return this.PgwEndpoint;
     }
 
     /**
-     * Set Cluster’s endpoint address
-     * @param PgwEndpoint Cluster’s endpoint address
+     * Set Cluster's endpoint address
+     * @param PgwEndpoint Cluster's endpoint address
      */
     public void setPgwEndpoint(String PgwEndpoint) {
         this.PgwEndpoint = PgwEndpoint;
     }
 
     /**
-     * Get Cluster’s access policy group
+     * Get Cluster's access policy group
 Note: This field may return null, indicating that no valid value was found. 
-     * @return SecurityPolicy Cluster’s access policy group
+     * @return SecurityPolicy Cluster's access policy group
 Note: This field may return null, indicating that no valid value was found.
      */
     public String [] getSecurityPolicy() {
@@ -202,9 +202,9 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Set Cluster’s access policy group
+     * Set Cluster's access policy group
 Note: This field may return null, indicating that no valid value was found.
-     * @param SecurityPolicy Cluster’s access policy group
+     * @param SecurityPolicy Cluster's access policy group
 Note: This field may return null, indicating that no valid value was found.
      */
     public void setSecurityPolicy(String [] SecurityPolicy) {

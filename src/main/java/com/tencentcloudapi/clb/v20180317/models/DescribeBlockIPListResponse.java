@@ -37,7 +37,7 @@ public class DescribeBlockIPListResponse extends AbstractModel{
     private String ClientIPField;
 
     /**
-    * List of IPs added to blacklist 12360
+    * List of IPs added to blocklist 12360
     */
     @SerializedName("BlockedIPList")
     @Expose
@@ -83,16 +83,16 @@ public class DescribeBlockIPListResponse extends AbstractModel{
     }
 
     /**
-     * Get List of IPs added to blacklist 12360 
-     * @return BlockedIPList List of IPs added to blacklist 12360
+     * Get List of IPs added to blocklist 12360 
+     * @return BlockedIPList List of IPs added to blocklist 12360
      */
     public BlockedIP [] getBlockedIPList() {
         return this.BlockedIPList;
     }
 
     /**
-     * Set List of IPs added to blacklist 12360
-     * @param BlockedIPList List of IPs added to blacklist 12360
+     * Set List of IPs added to blocklist 12360
+     * @param BlockedIPList List of IPs added to blocklist 12360
      */
     public void setBlockedIPList(BlockedIP [] BlockedIPList) {
         this.BlockedIPList = BlockedIPList;

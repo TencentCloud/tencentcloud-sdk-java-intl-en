@@ -30,7 +30,7 @@ public class AudioTemplateInfo extends AbstractModel{
     private String AudioSelectorName;
 
     /**
-    * Audio transcoding template name, which can contain 1–20 letters and digits.
+    * Audio transcoding template name, which can contain 1-20 letters and digits.
     */
     @SerializedName("Name")
     @Expose
@@ -75,16 +75,16 @@ Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000,
     }
 
     /**
-     * Get Audio transcoding template name, which can contain 1–20 letters and digits. 
-     * @return Name Audio transcoding template name, which can contain 1–20 letters and digits.
+     * Get Audio transcoding template name, which can contain 1-20 letters and digits. 
+     * @return Name Audio transcoding template name, which can contain 1-20 letters and digits.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Audio transcoding template name, which can contain 1–20 letters and digits.
-     * @param Name Audio transcoding template name, which can contain 1–20 letters and digits.
+     * Set Audio transcoding template name, which can contain 1-20 letters and digits.
+     * @param Name Audio transcoding template name, which can contain 1-20 letters and digits.
      */
     public void setName(String Name) {
         this.Name = Name;

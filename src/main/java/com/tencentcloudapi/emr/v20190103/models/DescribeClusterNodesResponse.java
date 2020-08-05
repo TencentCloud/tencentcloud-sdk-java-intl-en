@@ -46,6 +46,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String [] TagKeys;
 
     /**
+    * 
+    */
+    @SerializedName("HardwareResourceTypeList")
+    @Expose
+    private String [] HardwareResourceTypeList;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -109,6 +116,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get  
+     * @return HardwareResourceTypeList 
+     */
+    public String [] getHardwareResourceTypeList() {
+        return this.HardwareResourceTypeList;
+    }
+
+    /**
+     * Set 
+     * @param HardwareResourceTypeList 
+     */
+    public void setHardwareResourceTypeList(String [] HardwareResourceTypeList) {
+        this.HardwareResourceTypeList = HardwareResourceTypeList;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -131,6 +154,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "TotalCnt", this.TotalCnt);
         this.setParamArrayObj(map, prefix + "NodeList.", this.NodeList);
         this.setParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
+        this.setParamArraySimple(map, prefix + "HardwareResourceTypeList.", this.HardwareResourceTypeList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

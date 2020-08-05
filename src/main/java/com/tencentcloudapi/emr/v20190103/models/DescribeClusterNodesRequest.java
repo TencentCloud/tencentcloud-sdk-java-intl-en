@@ -59,6 +59,20 @@ Note: only the above values are supported for the time being. Entering other val
     private Long Limit;
 
     /**
+    * 
+    */
+    @SerializedName("HardwareResourceType")
+    @Expose
+    private String HardwareResourceType;
+
+    /**
+    * 
+    */
+    @SerializedName("SearchFields")
+    @Expose
+    private SearchItem [] SearchFields;
+
+    /**
      * Get Cluster instance ID in the format of emr-xxxxxxxx 
      * @return InstanceId Cluster instance ID in the format of emr-xxxxxxxx
      */
@@ -155,6 +169,38 @@ Note: only the above values are supported for the time being. Entering other val
     }
 
     /**
+     * Get  
+     * @return HardwareResourceType 
+     */
+    public String getHardwareResourceType() {
+        return this.HardwareResourceType;
+    }
+
+    /**
+     * Set 
+     * @param HardwareResourceType 
+     */
+    public void setHardwareResourceType(String HardwareResourceType) {
+        this.HardwareResourceType = HardwareResourceType;
+    }
+
+    /**
+     * Get  
+     * @return SearchFields 
+     */
+    public SearchItem [] getSearchFields() {
+        return this.SearchFields;
+    }
+
+    /**
+     * Set 
+     * @param SearchFields 
+     */
+    public void setSearchFields(SearchItem [] SearchFields) {
+        this.SearchFields = SearchFields;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -162,6 +208,8 @@ Note: only the above values are supported for the time being. Entering other val
         this.setParamSimple(map, prefix + "NodeFlag", this.NodeFlag);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "HardwareResourceType", this.HardwareResourceType);
+        this.setParamArrayObj(map, prefix + "SearchFields.", this.SearchFields);
 
     }
 }

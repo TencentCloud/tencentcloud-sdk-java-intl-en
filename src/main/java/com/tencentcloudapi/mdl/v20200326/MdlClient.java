@@ -200,6 +200,24 @@ public class MdlClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query MediaLive channel logs, such as push event logs.
+     * @param req DescribeMediaLiveChannelLogsRequest
+     * @return DescribeMediaLiveChannelLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMediaLiveChannelLogsResponse DescribeMediaLiveChannelLogs(DescribeMediaLiveChannelLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMediaLiveChannelLogsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMediaLiveChannelLogsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeMediaLiveChannelLogs"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the output statistics of a channel.
      * @param req DescribeMediaLiveChannelOutputStatisticsRequest
      * @return DescribeMediaLiveChannelOutputStatisticsResponse

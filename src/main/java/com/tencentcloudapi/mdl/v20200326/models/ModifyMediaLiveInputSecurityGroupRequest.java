@@ -30,14 +30,14 @@ public class ModifyMediaLiveInputSecurityGroupRequest extends AbstractModel{
     private String Id;
 
     /**
-    * Input security group name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
+    * Input security group name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * List of whitelist entries. Up to 10 entries are allowed.
+    * List of allowlist entries. Up to 10 entries are allowed.
     */
     @SerializedName("Whitelist")
     @Expose
@@ -60,32 +60,32 @@ public class ModifyMediaLiveInputSecurityGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get Input security group name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level. 
-     * @return Name Input security group name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
+     * Get Input security group name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level. 
+     * @return Name Input security group name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Input security group name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
-     * @param Name Input security group name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
+     * Set Input security group name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level.
+     * @param Name Input security group name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get List of whitelist entries. Up to 10 entries are allowed. 
-     * @return Whitelist List of whitelist entries. Up to 10 entries are allowed.
+     * Get List of allowlist entries. Up to 10 entries are allowed. 
+     * @return Whitelist List of allowlist entries. Up to 10 entries are allowed.
      */
     public String [] getWhitelist() {
         return this.Whitelist;
     }
 
     /**
-     * Set List of whitelist entries. Up to 10 entries are allowed.
-     * @param Whitelist List of whitelist entries. Up to 10 entries are allowed.
+     * Set List of allowlist entries. Up to 10 entries are allowed.
+     * @param Whitelist List of allowlist entries. Up to 10 entries are allowed.
      */
     public void setWhitelist(String [] Whitelist) {
         this.Whitelist = Whitelist;

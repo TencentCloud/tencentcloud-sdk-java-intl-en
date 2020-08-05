@@ -37,14 +37,14 @@ public class DescribeLiveDomainsRequest extends AbstractModel{
     private Long DomainType;
 
     /**
-    * Number of entries per page. Value range: 10–100. Default value: 10.
+    * Number of entries per page. Value range: 10-100. Default value: 10.
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * Page number to get. Value range: 1–100000. Default value: 1.
+    * Page number to get. Value range: 1-100000. Default value: 1.
     */
     @SerializedName("PageNum")
     @Expose
@@ -97,32 +97,32 @@ public class DescribeLiveDomainsRequest extends AbstractModel{
     }
 
     /**
-     * Get Number of entries per page. Value range: 10–100. Default value: 10. 
-     * @return PageSize Number of entries per page. Value range: 10–100. Default value: 10.
+     * Get Number of entries per page. Value range: 10-100. Default value: 10. 
+     * @return PageSize Number of entries per page. Value range: 10-100. Default value: 10.
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set Number of entries per page. Value range: 10–100. Default value: 10.
-     * @param PageSize Number of entries per page. Value range: 10–100. Default value: 10.
+     * Set Number of entries per page. Value range: 10-100. Default value: 10.
+     * @param PageSize Number of entries per page. Value range: 10-100. Default value: 10.
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get Page number to get. Value range: 1–100000. Default value: 1. 
-     * @return PageNum Page number to get. Value range: 1–100000. Default value: 1.
+     * Get Page number to get. Value range: 1-100000. Default value: 1. 
+     * @return PageNum Page number to get. Value range: 1-100000. Default value: 1.
      */
     public Long getPageNum() {
         return this.PageNum;
     }
 
     /**
-     * Set Page number to get. Value range: 1–100000. Default value: 1.
-     * @param PageNum Page number to get. Value range: 1–100000. Default value: 1.
+     * Set Page number to get. Value range: 1-100000. Default value: 1.
+     * @param PageNum Page number to get. Value range: 1-100000. Default value: 1.
      */
     public void setPageNum(Long PageNum) {
         this.PageNum = PageNum;

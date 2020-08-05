@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateClusterEndpointVipResponse extends AbstractModel{
 
     /**
-    * Request job’s FlowId
+    * Request job's FlowId
     */
     @SerializedName("RequestFlowId")
     @Expose
@@ -37,16 +37,16 @@ public class CreateClusterEndpointVipResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Request job’s FlowId 
-     * @return RequestFlowId Request job’s FlowId
+     * Get Request job's FlowId 
+     * @return RequestFlowId Request job's FlowId
      */
     public Long getRequestFlowId() {
         return this.RequestFlowId;
     }
 
     /**
-     * Set Request job’s FlowId
-     * @param RequestFlowId Request job’s FlowId
+     * Set Request job's FlowId
+     * @param RequestFlowId Request job's FlowId
      */
     public void setRequestFlowId(Long RequestFlowId) {
         this.RequestFlowId = RequestFlowId;

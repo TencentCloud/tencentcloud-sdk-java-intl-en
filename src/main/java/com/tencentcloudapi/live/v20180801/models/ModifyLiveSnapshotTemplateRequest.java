@@ -47,7 +47,7 @@ Maximum length: 1,024 bytes.
 
     /**
     * Screencapturing interval in seconds. Default value: 10s.
-Value range: 5–600s.
+Value range: 5-600s.
     */
     @SerializedName("SnapshotInterval")
     @Expose
@@ -169,9 +169,9 @@ Maximum length: 1,024 bytes.
 
     /**
      * Get Screencapturing interval in seconds. Default value: 10s.
-Value range: 5–600s. 
+Value range: 5-600s. 
      * @return SnapshotInterval Screencapturing interval in seconds. Default value: 10s.
-Value range: 5–600s.
+Value range: 5-600s.
      */
     public Long getSnapshotInterval() {
         return this.SnapshotInterval;
@@ -179,9 +179,9 @@ Value range: 5–600s.
 
     /**
      * Set Screencapturing interval in seconds. Default value: 10s.
-Value range: 5–600s.
+Value range: 5-600s.
      * @param SnapshotInterval Screencapturing interval in seconds. Default value: 10s.
-Value range: 5–600s.
+Value range: 5-600s.
      */
     public void setSnapshotInterval(Long SnapshotInterval) {
         this.SnapshotInterval = SnapshotInterval;

@@ -47,7 +47,7 @@ public class DescribeTasksRequest extends AbstractModel{
 8 - enabling GTID of a TencentDB instance;
 9 - upgrading a read-only instance;
 10 - rolling back databases in batches;
-11 - upgrading a master instance;
+11 - upgrading a primary instance;
 12 - deleting a TencentDB table;
 13 - promoting a disaster recovery instance.
     */
@@ -141,7 +141,7 @@ public class DescribeTasksRequest extends AbstractModel{
 8 - enabling GTID of a TencentDB instance;
 9 - upgrading a read-only instance;
 10 - rolling back databases in batches;
-11 - upgrading a master instance;
+11 - upgrading a primary instance;
 12 - deleting a TencentDB table;
 13 - promoting a disaster recovery instance. 
      * @return TaskTypes Task type. If no value is passed in, all task types will be queried. Valid values:
@@ -154,7 +154,7 @@ public class DescribeTasksRequest extends AbstractModel{
 8 - enabling GTID of a TencentDB instance;
 9 - upgrading a read-only instance;
 10 - rolling back databases in batches;
-11 - upgrading a master instance;
+11 - upgrading a primary instance;
 12 - deleting a TencentDB table;
 13 - promoting a disaster recovery instance.
      */
@@ -173,7 +173,7 @@ public class DescribeTasksRequest extends AbstractModel{
 8 - enabling GTID of a TencentDB instance;
 9 - upgrading a read-only instance;
 10 - rolling back databases in batches;
-11 - upgrading a master instance;
+11 - upgrading a primary instance;
 12 - deleting a TencentDB table;
 13 - promoting a disaster recovery instance.
      * @param TaskTypes Task type. If no value is passed in, all task types will be queried. Valid values:
@@ -186,7 +186,7 @@ public class DescribeTasksRequest extends AbstractModel{
 8 - enabling GTID of a TencentDB instance;
 9 - upgrading a read-only instance;
 10 - rolling back databases in batches;
-11 - upgrading a master instance;
+11 - upgrading a primary instance;
 12 - deleting a TencentDB table;
 13 - promoting a disaster recovery instance.
      */

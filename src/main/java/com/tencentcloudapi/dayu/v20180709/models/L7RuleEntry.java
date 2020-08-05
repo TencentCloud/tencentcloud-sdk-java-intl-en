@@ -156,6 +156,14 @@ public class L7RuleEntry extends AbstractModel{
     private Long HttpsToHttpEnable;
 
     /**
+    * Access port number.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("VirtualPort")
+    @Expose
+    private Long VirtualPort;
+
+    /**
      * Get Forwarding protocol. Valid values: [http, https] 
      * @return Protocol Forwarding protocol. Valid values: [http, https]
      */
@@ -460,6 +468,26 @@ public class L7RuleEntry extends AbstractModel{
     }
 
     /**
+     * Get Access port number.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return VirtualPort Access port number.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getVirtualPort() {
+        return this.VirtualPort;
+    }
+
+    /**
+     * Set Access port number.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param VirtualPort Access port number.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setVirtualPort(Long VirtualPort) {
+        this.VirtualPort = VirtualPort;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -482,6 +510,7 @@ public class L7RuleEntry extends AbstractModel{
         this.setParamSimple(map, prefix + "CCThreshold", this.CCThreshold);
         this.setParamSimple(map, prefix + "CCLevel", this.CCLevel);
         this.setParamSimple(map, prefix + "HttpsToHttpEnable", this.HttpsToHttpEnable);
+        this.setParamSimple(map, prefix + "VirtualPort", this.VirtualPort);
 
     }
 }

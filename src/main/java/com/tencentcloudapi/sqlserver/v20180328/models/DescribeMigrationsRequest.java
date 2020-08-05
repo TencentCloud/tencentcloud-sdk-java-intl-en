@@ -37,7 +37,7 @@ public class DescribeMigrationsRequest extends AbstractModel{
     private String MigrateName;
 
     /**
-    * Number of results per page. Value range: 1–100. Default value: 100
+    * Number of results per page. Value range: 1-100. Default value: 100
     */
     @SerializedName("Limit")
     @Expose
@@ -97,16 +97,16 @@ public class DescribeMigrationsRequest extends AbstractModel{
     }
 
     /**
-     * Get Number of results per page. Value range: 1–100. Default value: 100 
-     * @return Limit Number of results per page. Value range: 1–100. Default value: 100
+     * Get Number of results per page. Value range: 1-100. Default value: 100 
+     * @return Limit Number of results per page. Value range: 1-100. Default value: 100
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results per page. Value range: 1–100. Default value: 100
-     * @param Limit Number of results per page. Value range: 1–100. Default value: 100
+     * Set Number of results per page. Value range: 1-100. Default value: 100
+     * @param Limit Number of results per page. Value range: 1-100. Default value: 100
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

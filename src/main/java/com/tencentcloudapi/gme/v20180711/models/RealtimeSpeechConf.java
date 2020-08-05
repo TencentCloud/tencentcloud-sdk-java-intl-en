@@ -30,7 +30,7 @@ public class RealtimeSpeechConf extends AbstractModel{
     private String Status;
 
     /**
-    * Voice chat sound quality type. Valid values: high (HD), ordinary (SD). Default value: high. SD sound quality is only available to whitelisted users. To try it out, please contact your Tencent Cloud rep.
+    * Voice chat sound quality type. Valid values: high (HD), ordinary (SD). Default value: high. SD sound quality is only available to allowllisted users. To try it out, please contact your Tencent Cloud rep.
     */
     @SerializedName("Quality")
     @Expose
@@ -53,16 +53,16 @@ public class RealtimeSpeechConf extends AbstractModel{
     }
 
     /**
-     * Get Voice chat sound quality type. Valid values: high (HD), ordinary (SD). Default value: high. SD sound quality is only available to whitelisted users. To try it out, please contact your Tencent Cloud rep. 
-     * @return Quality Voice chat sound quality type. Valid values: high (HD), ordinary (SD). Default value: high. SD sound quality is only available to whitelisted users. To try it out, please contact your Tencent Cloud rep.
+     * Get Voice chat sound quality type. Valid values: high (HD), ordinary (SD). Default value: high. SD sound quality is only available to allowllisted users. To try it out, please contact your Tencent Cloud rep. 
+     * @return Quality Voice chat sound quality type. Valid values: high (HD), ordinary (SD). Default value: high. SD sound quality is only available to allowllisted users. To try it out, please contact your Tencent Cloud rep.
      */
     public String getQuality() {
         return this.Quality;
     }
 
     /**
-     * Set Voice chat sound quality type. Valid values: high (HD), ordinary (SD). Default value: high. SD sound quality is only available to whitelisted users. To try it out, please contact your Tencent Cloud rep.
-     * @param Quality Voice chat sound quality type. Valid values: high (HD), ordinary (SD). Default value: high. SD sound quality is only available to whitelisted users. To try it out, please contact your Tencent Cloud rep.
+     * Set Voice chat sound quality type. Valid values: high (HD), ordinary (SD). Default value: high. SD sound quality is only available to allowllisted users. To try it out, please contact your Tencent Cloud rep.
+     * @param Quality Voice chat sound quality type. Valid values: high (HD), ordinary (SD). Default value: high. SD sound quality is only available to allowllisted users. To try it out, please contact your Tencent Cloud rep.
      */
     public void setQuality(String Quality) {
         this.Quality = Quality;

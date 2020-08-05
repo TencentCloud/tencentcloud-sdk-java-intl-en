@@ -58,14 +58,14 @@ public class DBAccount extends AbstractModel{
     private String UpdateTime;
 
     /**
-    * Read-only flag. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
+    * Read-only flag. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
     */
     @SerializedName("ReadOnly")
     @Expose
     private Long ReadOnly;
 
     /**
-    * This field is meaningful for read-only accounts, indicating to select a slave where the master/slave delay is below this value
+    * This field is meaningful for read-only accounts, indicating to select a secondary where the primary/secondary delay is below this value
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DelayThresh")
@@ -153,25 +153,25 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Read-only flag. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail. 
-     * @return ReadOnly Read-only flag. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
+     * Get Read-only flag. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail. 
+     * @return ReadOnly Read-only flag. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
      */
     public Long getReadOnly() {
         return this.ReadOnly;
     }
 
     /**
-     * Set Read-only flag. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
-     * @param ReadOnly Read-only flag. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
+     * Set Read-only flag. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
+     * @param ReadOnly Read-only flag. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
      */
     public void setReadOnly(Long ReadOnly) {
         this.ReadOnly = ReadOnly;
     }
 
     /**
-     * Get This field is meaningful for read-only accounts, indicating to select a slave where the master/slave delay is below this value
+     * Get This field is meaningful for read-only accounts, indicating to select a secondary where the primary/secondary delay is below this value
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DelayThresh This field is meaningful for read-only accounts, indicating to select a slave where the master/slave delay is below this value
+     * @return DelayThresh This field is meaningful for read-only accounts, indicating to select a secondary where the primary/secondary delay is below this value
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getDelayThresh() {
@@ -179,9 +179,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set This field is meaningful for read-only accounts, indicating to select a slave where the master/slave delay is below this value
+     * Set This field is meaningful for read-only accounts, indicating to select a secondary where the primary/secondary delay is below this value
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DelayThresh This field is meaningful for read-only accounts, indicating to select a slave where the master/slave delay is below this value
+     * @param DelayThresh This field is meaningful for read-only accounts, indicating to select a secondary where the primary/secondary delay is below this value
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDelayThresh(Long DelayThresh) {

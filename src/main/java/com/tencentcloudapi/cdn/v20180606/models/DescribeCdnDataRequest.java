@@ -122,7 +122,7 @@ https: specifies the HTTPS metric to be queried
     private String Protocol;
 
     /**
-    * Specifies the data source to be queried, which can be seen as the whitelist function.
+    * Specifies the data source to be queried, which can be seen as the allowlist function.
     */
     @SerializedName("DataSource")
     @Expose
@@ -134,7 +134,7 @@ all: all protocols
 ipv4: specifies to query IPv4 metrics
 ipv6: specifies to query IPv6 metrics
 If the IP protocol to be queried is specified, the district and ISP cannot be specified at the same time
-Note: non-IPv6 whitelisted users cannot specify `ipv4` and `ipv6` for query
+Note: non-IPv6 allowlisted users cannot specify `ipv4` and `ipv6` for query
     */
     @SerializedName("IpProtocol")
     @Expose
@@ -435,16 +435,16 @@ https: specifies the HTTPS metric to be queried
     }
 
     /**
-     * Get Specifies the data source to be queried, which can be seen as the whitelist function. 
-     * @return DataSource Specifies the data source to be queried, which can be seen as the whitelist function.
+     * Get Specifies the data source to be queried, which can be seen as the allowlist function. 
+     * @return DataSource Specifies the data source to be queried, which can be seen as the allowlist function.
      */
     public String getDataSource() {
         return this.DataSource;
     }
 
     /**
-     * Set Specifies the data source to be queried, which can be seen as the whitelist function.
-     * @param DataSource Specifies the data source to be queried, which can be seen as the whitelist function.
+     * Set Specifies the data source to be queried, which can be seen as the allowlist function.
+     * @param DataSource Specifies the data source to be queried, which can be seen as the allowlist function.
      */
     public void setDataSource(String DataSource) {
         this.DataSource = DataSource;
@@ -456,13 +456,13 @@ all: all protocols
 ipv4: specifies to query IPv4 metrics
 ipv6: specifies to query IPv6 metrics
 If the IP protocol to be queried is specified, the district and ISP cannot be specified at the same time
-Note: non-IPv6 whitelisted users cannot specify `ipv4` and `ipv6` for query 
+Note: non-IPv6 allowlisted users cannot specify `ipv4` and `ipv6` for query 
      * @return IpProtocol Specified IP protocol to be queried. If this parameter is left empty, all protocols will be queried
 all: all protocols
 ipv4: specifies to query IPv4 metrics
 ipv6: specifies to query IPv6 metrics
 If the IP protocol to be queried is specified, the district and ISP cannot be specified at the same time
-Note: non-IPv6 whitelisted users cannot specify `ipv4` and `ipv6` for query
+Note: non-IPv6 allowlisted users cannot specify `ipv4` and `ipv6` for query
      */
     public String getIpProtocol() {
         return this.IpProtocol;
@@ -474,13 +474,13 @@ all: all protocols
 ipv4: specifies to query IPv4 metrics
 ipv6: specifies to query IPv6 metrics
 If the IP protocol to be queried is specified, the district and ISP cannot be specified at the same time
-Note: non-IPv6 whitelisted users cannot specify `ipv4` and `ipv6` for query
+Note: non-IPv6 allowlisted users cannot specify `ipv4` and `ipv6` for query
      * @param IpProtocol Specified IP protocol to be queried. If this parameter is left empty, all protocols will be queried
 all: all protocols
 ipv4: specifies to query IPv4 metrics
 ipv6: specifies to query IPv6 metrics
 If the IP protocol to be queried is specified, the district and ISP cannot be specified at the same time
-Note: non-IPv6 whitelisted users cannot specify `ipv4` and `ipv6` for query
+Note: non-IPv6 allowlisted users cannot specify `ipv4` and `ipv6` for query
      */
     public void setIpProtocol(String IpProtocol) {
         this.IpProtocol = IpProtocol;

@@ -58,6 +58,41 @@ public class DescribeSecurityTrendsResponse extends AbstractModel{
     private SecurityTrend [] BaseLines;
 
     /**
+    * 
+    */
+    @SerializedName("MaliciousRequests")
+    @Expose
+    private SecurityTrend [] MaliciousRequests;
+
+    /**
+    * 
+    */
+    @SerializedName("HighRiskBashs")
+    @Expose
+    private SecurityTrend [] HighRiskBashs;
+
+    /**
+    * 
+    */
+    @SerializedName("ReverseShells")
+    @Expose
+    private SecurityTrend [] ReverseShells;
+
+    /**
+    * 
+    */
+    @SerializedName("PrivilegeEscalations")
+    @Expose
+    private SecurityTrend [] PrivilegeEscalations;
+
+    /**
+    * 
+    */
+    @SerializedName("CyberAttacks")
+    @Expose
+    private SecurityTrend [] CyberAttacks;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -145,6 +180,86 @@ public class DescribeSecurityTrendsResponse extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return MaliciousRequests 
+     */
+    public SecurityTrend [] getMaliciousRequests() {
+        return this.MaliciousRequests;
+    }
+
+    /**
+     * Set 
+     * @param MaliciousRequests 
+     */
+    public void setMaliciousRequests(SecurityTrend [] MaliciousRequests) {
+        this.MaliciousRequests = MaliciousRequests;
+    }
+
+    /**
+     * Get  
+     * @return HighRiskBashs 
+     */
+    public SecurityTrend [] getHighRiskBashs() {
+        return this.HighRiskBashs;
+    }
+
+    /**
+     * Set 
+     * @param HighRiskBashs 
+     */
+    public void setHighRiskBashs(SecurityTrend [] HighRiskBashs) {
+        this.HighRiskBashs = HighRiskBashs;
+    }
+
+    /**
+     * Get  
+     * @return ReverseShells 
+     */
+    public SecurityTrend [] getReverseShells() {
+        return this.ReverseShells;
+    }
+
+    /**
+     * Set 
+     * @param ReverseShells 
+     */
+    public void setReverseShells(SecurityTrend [] ReverseShells) {
+        this.ReverseShells = ReverseShells;
+    }
+
+    /**
+     * Get  
+     * @return PrivilegeEscalations 
+     */
+    public SecurityTrend [] getPrivilegeEscalations() {
+        return this.PrivilegeEscalations;
+    }
+
+    /**
+     * Set 
+     * @param PrivilegeEscalations 
+     */
+    public void setPrivilegeEscalations(SecurityTrend [] PrivilegeEscalations) {
+        this.PrivilegeEscalations = PrivilegeEscalations;
+    }
+
+    /**
+     * Get  
+     * @return CyberAttacks 
+     */
+    public SecurityTrend [] getCyberAttacks() {
+        return this.CyberAttacks;
+    }
+
+    /**
+     * Set 
+     * @param CyberAttacks 
+     */
+    public void setCyberAttacks(SecurityTrend [] CyberAttacks) {
+        this.CyberAttacks = CyberAttacks;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -169,6 +284,11 @@ public class DescribeSecurityTrendsResponse extends AbstractModel{
         this.setParamArrayObj(map, prefix + "BruteAttacks.", this.BruteAttacks);
         this.setParamArrayObj(map, prefix + "Vuls.", this.Vuls);
         this.setParamArrayObj(map, prefix + "BaseLines.", this.BaseLines);
+        this.setParamArrayObj(map, prefix + "MaliciousRequests.", this.MaliciousRequests);
+        this.setParamArrayObj(map, prefix + "HighRiskBashs.", this.HighRiskBashs);
+        this.setParamArrayObj(map, prefix + "ReverseShells.", this.ReverseShells);
+        this.setParamArrayObj(map, prefix + "PrivilegeEscalations.", this.PrivilegeEscalations);
+        this.setParamArrayObj(map, prefix + "CyberAttacks.", this.CyberAttacks);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

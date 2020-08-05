@@ -37,10 +37,10 @@ public class DescribeCCUrlAllowResponse extends AbstractModel{
     private Long Total;
 
     /**
-    * Returned Blacklist/whitelist record,
+    * Returned Blocklist/allowlist record,
 If "Key":"url", "Value": URL;
 If "Key":"domain", "Value": domain name.
-If "Key":"type", "Value" can be `white` (whitelist) or `black` (blacklist).
+If "Key":"type", "Value" can be `white` (allowlist) or `black` (blocklist).
 If "Key":"protocol", "Value": CC protection type (HTTP protection or HTTPS domain name protection);
     */
     @SerializedName("RecordList")
@@ -87,15 +87,15 @@ If "Key":"protocol", "Value": CC protection type (HTTP protection or HTTPS domai
     }
 
     /**
-     * Get Returned Blacklist/whitelist record,
+     * Get Returned Blocklist/allowlist record,
 If "Key":"url", "Value": URL;
 If "Key":"domain", "Value": domain name.
-If "Key":"type", "Value" can be `white` (whitelist) or `black` (blacklist).
+If "Key":"type", "Value" can be `white` (allowlist) or `black` (blocklist).
 If "Key":"protocol", "Value": CC protection type (HTTP protection or HTTPS domain name protection); 
-     * @return RecordList Returned Blacklist/whitelist record,
+     * @return RecordList Returned Blocklist/allowlist record,
 If "Key":"url", "Value": URL;
 If "Key":"domain", "Value": domain name.
-If "Key":"type", "Value" can be `white` (whitelist) or `black` (blacklist).
+If "Key":"type", "Value" can be `white` (allowlist) or `black` (blocklist).
 If "Key":"protocol", "Value": CC protection type (HTTP protection or HTTPS domain name protection);
      */
     public KeyValueRecord [] getRecordList() {
@@ -103,15 +103,15 @@ If "Key":"protocol", "Value": CC protection type (HTTP protection or HTTPS domai
     }
 
     /**
-     * Set Returned Blacklist/whitelist record,
+     * Set Returned Blocklist/allowlist record,
 If "Key":"url", "Value": URL;
 If "Key":"domain", "Value": domain name.
-If "Key":"type", "Value" can be `white` (whitelist) or `black` (blacklist).
+If "Key":"type", "Value" can be `white` (allowlist) or `black` (blocklist).
 If "Key":"protocol", "Value": CC protection type (HTTP protection or HTTPS domain name protection);
-     * @param RecordList Returned Blacklist/whitelist record,
+     * @param RecordList Returned Blocklist/allowlist record,
 If "Key":"url", "Value": URL;
 If "Key":"domain", "Value": domain name.
-If "Key":"type", "Value" can be `white` (whitelist) or `black` (blacklist).
+If "Key":"type", "Value" can be `white` (allowlist) or `black` (blocklist).
 If "Key":"protocol", "Value": CC protection type (HTTP protection or HTTPS domain name protection);
      */
     public void setRecordList(KeyValueRecord [] RecordList) {

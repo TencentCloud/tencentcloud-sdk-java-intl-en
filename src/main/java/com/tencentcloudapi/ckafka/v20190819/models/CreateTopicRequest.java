@@ -51,14 +51,14 @@ public class CreateTopicRequest extends AbstractModel{
     private Long ReplicaNum;
 
     /**
-    * IP whitelist switch. 1: enabled, 0: disabled. Default value: 0
+    * IP allowlist switch. 1: enabled, 0: disabled. Default value: 0
     */
     @SerializedName("EnableWhiteList")
     @Expose
     private Long EnableWhiteList;
 
     /**
-    * IP whitelist list for quota limit, which is required if `enableWhileList` is 1
+    * IP allowlist list for quota limit, which is required if `enableWhileList` is 1
     */
     @SerializedName("IpWhiteList")
     @Expose
@@ -171,32 +171,32 @@ public class CreateTopicRequest extends AbstractModel{
     }
 
     /**
-     * Get IP whitelist switch. 1: enabled, 0: disabled. Default value: 0 
-     * @return EnableWhiteList IP whitelist switch. 1: enabled, 0: disabled. Default value: 0
+     * Get IP allowlist switch. 1: enabled, 0: disabled. Default value: 0 
+     * @return EnableWhiteList IP allowlist switch. 1: enabled, 0: disabled. Default value: 0
      */
     public Long getEnableWhiteList() {
         return this.EnableWhiteList;
     }
 
     /**
-     * Set IP whitelist switch. 1: enabled, 0: disabled. Default value: 0
-     * @param EnableWhiteList IP whitelist switch. 1: enabled, 0: disabled. Default value: 0
+     * Set IP allowlist switch. 1: enabled, 0: disabled. Default value: 0
+     * @param EnableWhiteList IP allowlist switch. 1: enabled, 0: disabled. Default value: 0
      */
     public void setEnableWhiteList(Long EnableWhiteList) {
         this.EnableWhiteList = EnableWhiteList;
     }
 
     /**
-     * Get IP whitelist list for quota limit, which is required if `enableWhileList` is 1 
-     * @return IpWhiteList IP whitelist list for quota limit, which is required if `enableWhileList` is 1
+     * Get IP allowlist list for quota limit, which is required if `enableWhileList` is 1 
+     * @return IpWhiteList IP allowlist list for quota limit, which is required if `enableWhileList` is 1
      */
     public String [] getIpWhiteList() {
         return this.IpWhiteList;
     }
 
     /**
-     * Set IP whitelist list for quota limit, which is required if `enableWhileList` is 1
-     * @param IpWhiteList IP whitelist list for quota limit, which is required if `enableWhileList` is 1
+     * Set IP allowlist list for quota limit, which is required if `enableWhileList` is 1
+     * @param IpWhiteList IP allowlist list for quota limit, which is required if `enableWhileList` is 1
      */
     public void setIpWhiteList(String [] IpWhiteList) {
         this.IpWhiteList = IpWhiteList;

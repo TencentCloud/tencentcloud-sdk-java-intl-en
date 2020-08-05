@@ -30,7 +30,7 @@ public class ModifyMediaLiveInputRequest extends AbstractModel{
     private String Id;
 
     /**
-    * Media input name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
+    * Media input name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level.
     */
     @SerializedName("Name")
     @Expose
@@ -70,16 +70,16 @@ Note: if it is left empty or the array is empty, the original `InputSettings` va
     }
 
     /**
-     * Get Media input name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level. 
-     * @return Name Media input name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
+     * Get Media input name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level. 
+     * @return Name Media input name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Media input name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
-     * @param Name Media input name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
+     * Set Media input name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level.
+     * @param Name Media input name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level.
      */
     public void setName(String Name) {
         this.Name = Name;

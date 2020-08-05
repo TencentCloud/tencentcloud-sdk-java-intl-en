@@ -44,7 +44,7 @@ public class CreateInstanceAccountRequest extends AbstractModel{
     private String AccountPassword;
 
     /**
-    * Routing policy. Enter `master` for master node or `replication` for slave node
+    * Routing policy. Enter `master` for primary node or `replication` for secondary node
     */
     @SerializedName("ReadonlyPolicy")
     @Expose
@@ -113,16 +113,16 @@ public class CreateInstanceAccountRequest extends AbstractModel{
     }
 
     /**
-     * Get Routing policy. Enter `master` for master node or `replication` for slave node 
-     * @return ReadonlyPolicy Routing policy. Enter `master` for master node or `replication` for slave node
+     * Get Routing policy. Enter `master` for primary node or `replication` for secondary node 
+     * @return ReadonlyPolicy Routing policy. Enter `master` for primary node or `replication` for secondary node
      */
     public String [] getReadonlyPolicy() {
         return this.ReadonlyPolicy;
     }
 
     /**
-     * Set Routing policy. Enter `master` for master node or `replication` for slave node
-     * @param ReadonlyPolicy Routing policy. Enter `master` for master node or `replication` for slave node
+     * Set Routing policy. Enter `master` for primary node or `replication` for secondary node
+     * @param ReadonlyPolicy Routing policy. Enter `master` for primary node or `replication` for secondary node
      */
     public void setReadonlyPolicy(String [] ReadonlyPolicy) {
         this.ReadonlyPolicy = ReadonlyPolicy;

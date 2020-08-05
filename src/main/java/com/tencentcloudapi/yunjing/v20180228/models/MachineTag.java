@@ -37,6 +37,13 @@ public class MachineTag extends AbstractModel{
     private String Name;
 
     /**
+    * 
+    */
+    @SerializedName("TagId")
+    @Expose
+    private Long TagId;
+
+    /**
      * Get Associated tag ID 
      * @return Rid Associated tag ID
      */
@@ -69,11 +76,28 @@ public class MachineTag extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return TagId 
+     */
+    public Long getTagId() {
+        return this.TagId;
+    }
+
+    /**
+     * Set 
+     * @param TagId 
+     */
+    public void setTagId(Long TagId) {
+        this.TagId = TagId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Rid", this.Rid);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "TagId", this.TagId);
 
     }
 }

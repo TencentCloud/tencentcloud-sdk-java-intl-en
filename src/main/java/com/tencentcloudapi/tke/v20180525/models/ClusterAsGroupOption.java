@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ClusterAsGroupOption extends AbstractModel{
 
     /**
-    * Whether to enable scale-down
+    * Whether to enable scale-in
 Note: this field may return null, indicating that no valid value was found.
     */
     @SerializedName("IsScaleDownEnabled")
@@ -31,7 +31,7 @@ Note: this field may return null, indicating that no valid value was found.
     private Boolean IsScaleDownEnabled;
 
     /**
-    * Scale-up selection algorithm when there are multiple scaling groups (random: random selection. most-pods: pod with the most types. least-waste: least waste of resources. The default value is random.)
+    * The scale-out method when there are multiple scaling groups. `random`: select a random scaling group. `most-pods`: choose the scaling group that can schedule the most pods. `least-waste`: select the scaling group that can ensure the fewest remaining resources after Pod scheduling.. The default value is `random`.)
 Note: this field may return null, indicating that no valid value was found.
     */
     @SerializedName("Expander")
@@ -39,7 +39,7 @@ Note: this field may return null, indicating that no valid value was found.
     private String Expander;
 
     /**
-    * Max concurrent scale-down volume
+    * Max concurrent scale-in volume
 Note: this field may return null, indicating that no valid value was found.
     */
     @SerializedName("MaxEmptyBulkDelete")
@@ -47,7 +47,7 @@ Note: this field may return null, indicating that no valid value was found.
     private Long MaxEmptyBulkDelete;
 
     /**
-    * Number of minutes after cluster scale-up when the system starts judging whether to perform scale-down
+    * Number of minutes after cluster scale-out when the system starts judging whether to perform scale-in
 Note: this field may return null, indicating that no valid value was found.
     */
     @SerializedName("ScaleDownDelay")
@@ -55,7 +55,7 @@ Note: this field may return null, indicating that no valid value was found.
     private Long ScaleDownDelay;
 
     /**
-    * Number of consecutive minutes of idleness after which the node is subject to scale-down (default value: 10)
+    * Number of consecutive minutes of idleness after which the node is subject to scale-in (default value: 10)
 Note: this field may return null, indicating that no valid value was found.
     */
     @SerializedName("ScaleDownUnneededTime")
@@ -71,7 +71,7 @@ Note: this field may return null, indicating that no valid value was found.
     private Long ScaleDownUtilizationThreshold;
 
     /**
-    * Whether to skip scale-down for nodes with local storage pods (default value: False)
+    * During scale-in, ignore nodes with local storage pods (default value: False)
 Note: this field may return null, indicating that no valid value was found.
     */
     @SerializedName("SkipNodesWithLocalStorage")
@@ -79,7 +79,7 @@ Note: this field may return null, indicating that no valid value was found.
     private Boolean SkipNodesWithLocalStorage;
 
     /**
-    * Whether to skip scale-down for nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
+    * During scale-in, ignore nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
 Note: this field may return null, indicating that no valid value was found.
     */
     @SerializedName("SkipNodesWithSystemPods")
@@ -111,7 +111,7 @@ Note: this field may return null, indicating that no valid value was found.
     private Long MaxTotalUnreadyPercentage;
 
     /**
-    * Amount of time before unready nodes become eligible for scale-down
+    * Amount of time before unready nodes become eligible for scale-in
 Note: this field may return null, indicating that no valid value was found.
     */
     @SerializedName("ScaleDownUnreadyTime")
@@ -127,9 +127,9 @@ Note: this field may return null, indicating that no valid value was found.
     private Long UnregisteredNodeRemovalTime;
 
     /**
-     * Get Whether to enable scale-down
+     * Get Whether to enable scale-in
 Note: this field may return null, indicating that no valid value was found. 
-     * @return IsScaleDownEnabled Whether to enable scale-down
+     * @return IsScaleDownEnabled Whether to enable scale-in
 Note: this field may return null, indicating that no valid value was found.
      */
     public Boolean getIsScaleDownEnabled() {
@@ -137,9 +137,9 @@ Note: this field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Set Whether to enable scale-down
+     * Set Whether to enable scale-in
 Note: this field may return null, indicating that no valid value was found.
-     * @param IsScaleDownEnabled Whether to enable scale-down
+     * @param IsScaleDownEnabled Whether to enable scale-in
 Note: this field may return null, indicating that no valid value was found.
      */
     public void setIsScaleDownEnabled(Boolean IsScaleDownEnabled) {
@@ -147,9 +147,9 @@ Note: this field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Scale-up selection algorithm when there are multiple scaling groups (random: random selection. most-pods: pod with the most types. least-waste: least waste of resources. The default value is random.)
+     * Get The scale-out method when there are multiple scaling groups. `random`: select a random scaling group. `most-pods`: choose the scaling group that can schedule the most pods. `least-waste`: select the scaling group that can ensure the fewest remaining resources after Pod scheduling.. The default value is `random`.)
 Note: this field may return null, indicating that no valid value was found. 
-     * @return Expander Scale-up selection algorithm when there are multiple scaling groups (random: random selection. most-pods: pod with the most types. least-waste: least waste of resources. The default value is random.)
+     * @return Expander The scale-out method when there are multiple scaling groups. `random`: select a random scaling group. `most-pods`: choose the scaling group that can schedule the most pods. `least-waste`: select the scaling group that can ensure the fewest remaining resources after Pod scheduling.. The default value is `random`.)
 Note: this field may return null, indicating that no valid value was found.
      */
     public String getExpander() {
@@ -157,9 +157,9 @@ Note: this field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Set Scale-up selection algorithm when there are multiple scaling groups (random: random selection. most-pods: pod with the most types. least-waste: least waste of resources. The default value is random.)
+     * Set The scale-out method when there are multiple scaling groups. `random`: select a random scaling group. `most-pods`: choose the scaling group that can schedule the most pods. `least-waste`: select the scaling group that can ensure the fewest remaining resources after Pod scheduling.. The default value is `random`.)
 Note: this field may return null, indicating that no valid value was found.
-     * @param Expander Scale-up selection algorithm when there are multiple scaling groups (random: random selection. most-pods: pod with the most types. least-waste: least waste of resources. The default value is random.)
+     * @param Expander The scale-out method when there are multiple scaling groups. `random`: select a random scaling group. `most-pods`: choose the scaling group that can schedule the most pods. `least-waste`: select the scaling group that can ensure the fewest remaining resources after Pod scheduling.. The default value is `random`.)
 Note: this field may return null, indicating that no valid value was found.
      */
     public void setExpander(String Expander) {
@@ -167,9 +167,9 @@ Note: this field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Max concurrent scale-down volume
+     * Get Max concurrent scale-in volume
 Note: this field may return null, indicating that no valid value was found. 
-     * @return MaxEmptyBulkDelete Max concurrent scale-down volume
+     * @return MaxEmptyBulkDelete Max concurrent scale-in volume
 Note: this field may return null, indicating that no valid value was found.
      */
     public Long getMaxEmptyBulkDelete() {
@@ -177,9 +177,9 @@ Note: this field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Set Max concurrent scale-down volume
+     * Set Max concurrent scale-in volume
 Note: this field may return null, indicating that no valid value was found.
-     * @param MaxEmptyBulkDelete Max concurrent scale-down volume
+     * @param MaxEmptyBulkDelete Max concurrent scale-in volume
 Note: this field may return null, indicating that no valid value was found.
      */
     public void setMaxEmptyBulkDelete(Long MaxEmptyBulkDelete) {
@@ -187,9 +187,9 @@ Note: this field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Number of minutes after cluster scale-up when the system starts judging whether to perform scale-down
+     * Get Number of minutes after cluster scale-out when the system starts judging whether to perform scale-in
 Note: this field may return null, indicating that no valid value was found. 
-     * @return ScaleDownDelay Number of minutes after cluster scale-up when the system starts judging whether to perform scale-down
+     * @return ScaleDownDelay Number of minutes after cluster scale-out when the system starts judging whether to perform scale-in
 Note: this field may return null, indicating that no valid value was found.
      */
     public Long getScaleDownDelay() {
@@ -197,9 +197,9 @@ Note: this field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Set Number of minutes after cluster scale-up when the system starts judging whether to perform scale-down
+     * Set Number of minutes after cluster scale-out when the system starts judging whether to perform scale-in
 Note: this field may return null, indicating that no valid value was found.
-     * @param ScaleDownDelay Number of minutes after cluster scale-up when the system starts judging whether to perform scale-down
+     * @param ScaleDownDelay Number of minutes after cluster scale-out when the system starts judging whether to perform scale-in
 Note: this field may return null, indicating that no valid value was found.
      */
     public void setScaleDownDelay(Long ScaleDownDelay) {
@@ -207,9 +207,9 @@ Note: this field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Number of consecutive minutes of idleness after which the node is subject to scale-down (default value: 10)
+     * Get Number of consecutive minutes of idleness after which the node is subject to scale-in (default value: 10)
 Note: this field may return null, indicating that no valid value was found. 
-     * @return ScaleDownUnneededTime Number of consecutive minutes of idleness after which the node is subject to scale-down (default value: 10)
+     * @return ScaleDownUnneededTime Number of consecutive minutes of idleness after which the node is subject to scale-in (default value: 10)
 Note: this field may return null, indicating that no valid value was found.
      */
     public Long getScaleDownUnneededTime() {
@@ -217,9 +217,9 @@ Note: this field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Set Number of consecutive minutes of idleness after which the node is subject to scale-down (default value: 10)
+     * Set Number of consecutive minutes of idleness after which the node is subject to scale-in (default value: 10)
 Note: this field may return null, indicating that no valid value was found.
-     * @param ScaleDownUnneededTime Number of consecutive minutes of idleness after which the node is subject to scale-down (default value: 10)
+     * @param ScaleDownUnneededTime Number of consecutive minutes of idleness after which the node is subject to scale-in (default value: 10)
 Note: this field may return null, indicating that no valid value was found.
      */
     public void setScaleDownUnneededTime(Long ScaleDownUnneededTime) {
@@ -247,9 +247,9 @@ Note: this field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Whether to skip scale-down for nodes with local storage pods (default value: False)
+     * Get During scale-in, ignore nodes with local storage pods (default value: False)
 Note: this field may return null, indicating that no valid value was found. 
-     * @return SkipNodesWithLocalStorage Whether to skip scale-down for nodes with local storage pods (default value: False)
+     * @return SkipNodesWithLocalStorage During scale-in, ignore nodes with local storage pods (default value: False)
 Note: this field may return null, indicating that no valid value was found.
      */
     public Boolean getSkipNodesWithLocalStorage() {
@@ -257,9 +257,9 @@ Note: this field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Set Whether to skip scale-down for nodes with local storage pods (default value: False)
+     * Set During scale-in, ignore nodes with local storage pods (default value: False)
 Note: this field may return null, indicating that no valid value was found.
-     * @param SkipNodesWithLocalStorage Whether to skip scale-down for nodes with local storage pods (default value: False)
+     * @param SkipNodesWithLocalStorage During scale-in, ignore nodes with local storage pods (default value: False)
 Note: this field may return null, indicating that no valid value was found.
      */
     public void setSkipNodesWithLocalStorage(Boolean SkipNodesWithLocalStorage) {
@@ -267,9 +267,9 @@ Note: this field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Whether to skip scale-down for nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
+     * Get During scale-in, ignore nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
 Note: this field may return null, indicating that no valid value was found. 
-     * @return SkipNodesWithSystemPods Whether to skip scale-down for nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
+     * @return SkipNodesWithSystemPods During scale-in, ignore nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
 Note: this field may return null, indicating that no valid value was found.
      */
     public Boolean getSkipNodesWithSystemPods() {
@@ -277,9 +277,9 @@ Note: this field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Set Whether to skip scale-down for nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
+     * Set During scale-in, ignore nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
 Note: this field may return null, indicating that no valid value was found.
-     * @param SkipNodesWithSystemPods Whether to skip scale-down for nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
+     * @param SkipNodesWithSystemPods During scale-in, ignore nodes with pods in the kube-system namespace that are not managed by DaemonSet (default value: False)
 Note: this field may return null, indicating that no valid value was found.
      */
     public void setSkipNodesWithSystemPods(Boolean SkipNodesWithSystemPods) {
@@ -347,9 +347,9 @@ Note: this field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Amount of time before unready nodes become eligible for scale-down
+     * Get Amount of time before unready nodes become eligible for scale-in
 Note: this field may return null, indicating that no valid value was found. 
-     * @return ScaleDownUnreadyTime Amount of time before unready nodes become eligible for scale-down
+     * @return ScaleDownUnreadyTime Amount of time before unready nodes become eligible for scale-in
 Note: this field may return null, indicating that no valid value was found.
      */
     public Long getScaleDownUnreadyTime() {
@@ -357,9 +357,9 @@ Note: this field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Set Amount of time before unready nodes become eligible for scale-down
+     * Set Amount of time before unready nodes become eligible for scale-in
 Note: this field may return null, indicating that no valid value was found.
-     * @param ScaleDownUnreadyTime Amount of time before unready nodes become eligible for scale-down
+     * @param ScaleDownUnreadyTime Amount of time before unready nodes become eligible for scale-in
 Note: this field may return null, indicating that no valid value was found.
      */
     public void setScaleDownUnreadyTime(Long ScaleDownUnreadyTime) {

@@ -44,6 +44,13 @@ public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel{
     private Long Storage;
 
     /**
+    * 
+    */
+    @SerializedName("Cpu")
+    @Expose
+    private Long Cpu;
+
+    /**
      * Get Instance ID in the format of mssql-njj2mtpl 
      * @return InstanceId Instance ID in the format of mssql-njj2mtpl
      */
@@ -92,12 +99,29 @@ public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return Cpu 
+     */
+    public Long getCpu() {
+        return this.Cpu;
+    }
+
+    /**
+     * Set 
+     * @param Cpu 
+     */
+    public void setCpu(Long Cpu) {
+        this.Cpu = Cpu;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "Storage", this.Storage);
+        this.setParamSimple(map, prefix + "Cpu", this.Cpu);
 
     }
 }

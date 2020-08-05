@@ -51,14 +51,14 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
     private String InstanceChargeType;
 
     /**
-    * Length of purchase in months. Value range: 1–48. Default value: 1
+    * Length of purchase in months. Value range: 1-48. Default value: 1
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * Number of instances purchased at a time. Value range: 1–100. Default value: 1
+    * Number of instances purchased at a time. Value range: 1-100. Default value: 1
     */
     @SerializedName("GoodsNum")
     @Expose
@@ -70,6 +70,27 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
     @SerializedName("DBVersion")
     @Expose
     private String DBVersion;
+
+    /**
+    * 
+    */
+    @SerializedName("Cpu")
+    @Expose
+    private Long Cpu;
+
+    /**
+    * 
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
+    * 
+    */
+    @SerializedName("MachineType")
+    @Expose
+    private String MachineType;
 
     /**
      * Get AZ ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API 
@@ -136,32 +157,32 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Length of purchase in months. Value range: 1–48. Default value: 1 
-     * @return Period Length of purchase in months. Value range: 1–48. Default value: 1
+     * Get Length of purchase in months. Value range: 1-48. Default value: 1 
+     * @return Period Length of purchase in months. Value range: 1-48. Default value: 1
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set Length of purchase in months. Value range: 1–48. Default value: 1
-     * @param Period Length of purchase in months. Value range: 1–48. Default value: 1
+     * Set Length of purchase in months. Value range: 1-48. Default value: 1
+     * @param Period Length of purchase in months. Value range: 1-48. Default value: 1
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get Number of instances purchased at a time. Value range: 1–100. Default value: 1 
-     * @return GoodsNum Number of instances purchased at a time. Value range: 1–100. Default value: 1
+     * Get Number of instances purchased at a time. Value range: 1-100. Default value: 1 
+     * @return GoodsNum Number of instances purchased at a time. Value range: 1-100. Default value: 1
      */
     public Long getGoodsNum() {
         return this.GoodsNum;
     }
 
     /**
-     * Set Number of instances purchased at a time. Value range: 1–100. Default value: 1
-     * @param GoodsNum Number of instances purchased at a time. Value range: 1–100. Default value: 1
+     * Set Number of instances purchased at a time. Value range: 1-100. Default value: 1
+     * @param GoodsNum Number of instances purchased at a time. Value range: 1-100. Default value: 1
      */
     public void setGoodsNum(Long GoodsNum) {
         this.GoodsNum = GoodsNum;
@@ -184,6 +205,54 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return Cpu 
+     */
+    public Long getCpu() {
+        return this.Cpu;
+    }
+
+    /**
+     * Set 
+     * @param Cpu 
+     */
+    public void setCpu(Long Cpu) {
+        this.Cpu = Cpu;
+    }
+
+    /**
+     * Get  
+     * @return InstanceType 
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set 
+     * @param InstanceType 
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
+     * Get  
+     * @return MachineType 
+     */
+    public String getMachineType() {
+        return this.MachineType;
+    }
+
+    /**
+     * Set 
+     * @param MachineType 
+     */
+    public void setMachineType(String MachineType) {
+        this.MachineType = MachineType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +263,9 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "GoodsNum", this.GoodsNum);
         this.setParamSimple(map, prefix + "DBVersion", this.DBVersion);
+        this.setParamSimple(map, prefix + "Cpu", this.Cpu);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "MachineType", this.MachineType);
 
     }
 }

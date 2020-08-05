@@ -163,7 +163,7 @@ public class InstanceDetail extends AbstractModel{
     private String MachineType;
 
     /**
-    * Number of slave nodes of an instance
+    * Number of secondary nodes of an instance
     */
     @SerializedName("SecondaryNum")
     @Expose
@@ -233,7 +233,7 @@ public class InstanceDetail extends AbstractModel{
     private DBInstanceInfo [] CloneInstances;
 
     /**
-    * Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its master instance
+    * Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its primary instance
     */
     @SerializedName("RelatedInstance")
     @Expose
@@ -609,16 +609,16 @@ public class InstanceDetail extends AbstractModel{
     }
 
     /**
-     * Get Number of slave nodes of an instance 
-     * @return SecondaryNum Number of slave nodes of an instance
+     * Get Number of secondary nodes of an instance 
+     * @return SecondaryNum Number of secondary nodes of an instance
      */
     public Long getSecondaryNum() {
         return this.SecondaryNum;
     }
 
     /**
-     * Set Number of slave nodes of an instance
-     * @param SecondaryNum Number of slave nodes of an instance
+     * Set Number of secondary nodes of an instance
+     * @param SecondaryNum Number of secondary nodes of an instance
      */
     public void setSecondaryNum(Long SecondaryNum) {
         this.SecondaryNum = SecondaryNum;
@@ -769,16 +769,16 @@ public class InstanceDetail extends AbstractModel{
     }
 
     /**
-     * Get Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its master instance 
-     * @return RelatedInstance Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its master instance
+     * Get Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its primary instance 
+     * @return RelatedInstance Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its primary instance
      */
     public DBInstanceInfo getRelatedInstance() {
         return this.RelatedInstance;
     }
 
     /**
-     * Set Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its master instance
-     * @param RelatedInstance Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its master instance
+     * Set Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its primary instance
+     * @param RelatedInstance Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its primary instance
      */
     public void setRelatedInstance(DBInstanceInfo RelatedInstance) {
         this.RelatedInstance = RelatedInstance;

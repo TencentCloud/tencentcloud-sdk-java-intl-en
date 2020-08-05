@@ -30,21 +30,24 @@ public class ScaleInfomation extends AbstractModel{
     private Long Time;
 
     /**
-    * Number of users in room
+    * Number of users in room. If a user enters the room for multiple times, the user will be counted as one user.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UserNumber")
     @Expose
     private Long UserNumber;
 
     /**
-    * Number of times a room has been entered
+    * Number of room entries. Every time when a user enters the room, it will be counted as one room entry.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UserCount")
     @Expose
     private Long UserCount;
 
     /**
-    * Number of rooms.
+    * Number of rooms under `sdkappid` on a day
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RoomNumbers")
     @Expose
@@ -67,48 +70,60 @@ public class ScaleInfomation extends AbstractModel{
     }
 
     /**
-     * Get Number of users in room 
-     * @return UserNumber Number of users in room
+     * Get Number of users in room. If a user enters the room for multiple times, the user will be counted as one user.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return UserNumber Number of users in room. If a user enters the room for multiple times, the user will be counted as one user.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getUserNumber() {
         return this.UserNumber;
     }
 
     /**
-     * Set Number of users in room
-     * @param UserNumber Number of users in room
+     * Set Number of users in room. If a user enters the room for multiple times, the user will be counted as one user.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param UserNumber Number of users in room. If a user enters the room for multiple times, the user will be counted as one user.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setUserNumber(Long UserNumber) {
         this.UserNumber = UserNumber;
     }
 
     /**
-     * Get Number of times a room has been entered 
-     * @return UserCount Number of times a room has been entered
+     * Get Number of room entries. Every time when a user enters the room, it will be counted as one room entry.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return UserCount Number of room entries. Every time when a user enters the room, it will be counted as one room entry.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getUserCount() {
         return this.UserCount;
     }
 
     /**
-     * Set Number of times a room has been entered
-     * @param UserCount Number of times a room has been entered
+     * Set Number of room entries. Every time when a user enters the room, it will be counted as one room entry.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param UserCount Number of room entries. Every time when a user enters the room, it will be counted as one room entry.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setUserCount(Long UserCount) {
         this.UserCount = UserCount;
     }
 
     /**
-     * Get Number of rooms. 
-     * @return RoomNumbers Number of rooms.
+     * Get Number of rooms under `sdkappid` on a day
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return RoomNumbers Number of rooms under `sdkappid` on a day
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getRoomNumbers() {
         return this.RoomNumbers;
     }
 
     /**
-     * Set Number of rooms.
-     * @param RoomNumbers Number of rooms.
+     * Set Number of rooms under `sdkappid` on a day
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param RoomNumbers Number of rooms under `sdkappid` on a day
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setRoomNumbers(Long RoomNumbers) {
         this.RoomNumbers = RoomNumbers;

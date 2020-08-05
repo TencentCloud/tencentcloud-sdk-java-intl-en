@@ -79,7 +79,7 @@ public class RoInstanceInfo extends AbstractModel{
     private Long Status;
 
     /**
-    * Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only)
+    * Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
     */
     @SerializedName("InstanceType")
     @Expose
@@ -100,7 +100,7 @@ public class RoInstanceInfo extends AbstractModel{
     private Long HourFeeStatus;
 
     /**
-    * RO instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating slave <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance
+    * RO instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating secondary <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance
     */
     @SerializedName("TaskStatus")
     @Expose
@@ -312,16 +312,16 @@ public class RoInstanceInfo extends AbstractModel{
     }
 
     /**
-     * Get Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only) 
-     * @return InstanceType Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only)
+     * Get Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only) 
+     * @return InstanceType Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
      */
     public Long getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only)
-     * @param InstanceType Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only)
+     * Set Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
+     * @param InstanceType Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
      */
     public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
@@ -360,16 +360,16 @@ public class RoInstanceInfo extends AbstractModel{
     }
 
     /**
-     * Get RO instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating slave <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance 
-     * @return TaskStatus RO instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating slave <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance
+     * Get RO instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating secondary <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance 
+     * @return TaskStatus RO instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating secondary <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance
      */
     public Long getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set RO instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating slave <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance
-     * @param TaskStatus RO instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating slave <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance
+     * Set RO instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating secondary <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance
+     * @param TaskStatus RO instance task status. Value range: <br>0 - no task <br>1 - upgrading <br>2 - importing data <br>3 - activating secondary <br>4 - public network access enabled <br>5 - batch operation in progress <br>6 - rolling back <br>7 - public network access not enabled <br>8 - modifying password <br>9 - renaming instance <br>10 - restarting <br>12 - migrating self-built instance <br>13 - dropping table <br>14 - creating and syncing disaster recovery instance
      */
     public void setTaskStatus(Long TaskStatus) {
         this.TaskStatus = TaskStatus;

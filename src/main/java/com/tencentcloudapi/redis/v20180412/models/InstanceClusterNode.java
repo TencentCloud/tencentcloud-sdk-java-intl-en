@@ -37,7 +37,7 @@ public class InstanceClusterNode extends AbstractModel{
     private String RunId;
 
     /**
-    * Cluster role. 0: master; 1: slave
+    * Cluster role. 0: primary; 1: secondary
     */
     @SerializedName("Role")
     @Expose
@@ -146,16 +146,16 @@ public class InstanceClusterNode extends AbstractModel{
     }
 
     /**
-     * Get Cluster role. 0: master; 1: slave 
-     * @return Role Cluster role. 0: master; 1: slave
+     * Get Cluster role. 0: primary; 1: secondary 
+     * @return Role Cluster role. 0: primary; 1: secondary
      */
     public Long getRole() {
         return this.Role;
     }
 
     /**
-     * Set Cluster role. 0: master; 1: slave
-     * @param Role Cluster role. 0: master; 1: slave
+     * Set Cluster role. 0: primary; 1: secondary
+     * @param Role Cluster role. 0: primary; 1: secondary
      */
     public void setRole(Long Role) {
         this.Role = Role;

@@ -51,7 +51,7 @@ public class PerformanceMonitorSet extends AbstractModel{
     private MonitorData MemHitRate;
 
     /**
-    * Master/slave delay
+    * Primary/Secondary delay
     */
     @SerializedName("SlaveDelay")
     @Expose
@@ -86,7 +86,7 @@ public class PerformanceMonitorSet extends AbstractModel{
     private MonitorData InsertTotal;
 
     /**
-    * Whether master/slave switch occurred. 1: yes, 0: no
+    * Whether primary/Secondary switch occurred. 1: yes, 0: no
     */
     @SerializedName("IsMasterSwitched")
     @Expose
@@ -157,16 +157,16 @@ public class PerformanceMonitorSet extends AbstractModel{
     }
 
     /**
-     * Get Master/slave delay 
-     * @return SlaveDelay Master/slave delay
+     * Get Primary/Secondary delay 
+     * @return SlaveDelay Primary/Secondary delay
      */
     public MonitorData getSlaveDelay() {
         return this.SlaveDelay;
     }
 
     /**
-     * Set Master/slave delay
-     * @param SlaveDelay Master/slave delay
+     * Set Primary/Secondary delay
+     * @param SlaveDelay Primary/Secondary delay
      */
     public void setSlaveDelay(MonitorData SlaveDelay) {
         this.SlaveDelay = SlaveDelay;
@@ -237,16 +237,16 @@ public class PerformanceMonitorSet extends AbstractModel{
     }
 
     /**
-     * Get Whether master/slave switch occurred. 1: yes, 0: no 
-     * @return IsMasterSwitched Whether master/slave switch occurred. 1: yes, 0: no
+     * Get Whether primary/Secondary switch occurred. 1: yes, 0: no 
+     * @return IsMasterSwitched Whether primary/Secondary switch occurred. 1: yes, 0: no
      */
     public MonitorData getIsMasterSwitched() {
         return this.IsMasterSwitched;
     }
 
     /**
-     * Set Whether master/slave switch occurred. 1: yes, 0: no
-     * @param IsMasterSwitched Whether master/slave switch occurred. 1: yes, 0: no
+     * Set Whether primary/Secondary switch occurred. 1: yes, 0: no
+     * @param IsMasterSwitched Whether primary/Secondary switch occurred. 1: yes, 0: no
      */
     public void setIsMasterSwitched(MonitorData IsMasterSwitched) {
         this.IsMasterSwitched = IsMasterSwitched;

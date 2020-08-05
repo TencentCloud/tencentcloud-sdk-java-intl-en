@@ -233,7 +233,7 @@ public class InstanceInfo extends AbstractModel{
     private EsDictionaryInfo IkConfig;
 
     /**
-    * Dedicated master node configuration
+    * Dedicated primary node configuration
     */
     @SerializedName("MasterNodeInfo")
     @Expose
@@ -883,16 +883,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Dedicated master node configuration 
-     * @return MasterNodeInfo Dedicated master node configuration
+     * Get Dedicated primary node configuration 
+     * @return MasterNodeInfo Dedicated primary node configuration
      */
     public MasterNodeInfo getMasterNodeInfo() {
         return this.MasterNodeInfo;
     }
 
     /**
-     * Set Dedicated master node configuration
-     * @param MasterNodeInfo Dedicated master node configuration
+     * Set Dedicated primary node configuration
+     * @param MasterNodeInfo Dedicated primary node configuration
      */
     public void setMasterNodeInfo(MasterNodeInfo MasterNodeInfo) {
         this.MasterNodeInfo = MasterNodeInfo;

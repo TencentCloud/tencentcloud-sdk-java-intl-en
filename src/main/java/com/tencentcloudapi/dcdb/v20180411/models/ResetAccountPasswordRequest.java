@@ -44,7 +44,7 @@ public class ResetAccountPasswordRequest extends AbstractModel{
     private String Host;
 
     /**
-    * New password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
+    * New password, which can contain 6-32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
     */
     @SerializedName("Password")
     @Expose
@@ -99,16 +99,16 @@ public class ResetAccountPasswordRequest extends AbstractModel{
     }
 
     /**
-     * Get New password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks. 
-     * @return Password New password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
+     * Get New password, which can contain 6-32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks. 
+     * @return Password New password, which can contain 6-32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set New password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
-     * @param Password New password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
+     * Set New password, which can contain 6-32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
+     * @param Password New password, which can contain 6-32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
      */
     public void setPassword(String Password) {
         this.Password = Password;

@@ -92,7 +92,7 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete a log topic. Note: when a log topic is deleted, all logs of the domain names bound to it will no longer be published to the topic, and the logs previously published to the topic will be deleted. This action will take effect within 5–15 minutes.
+     *This API is used to delete a log topic. Note: when a log topic is deleted, all logs of the domain names bound to it will no longer be published to the topic, and the logs previously published to the topic will be deleted. This action will take effect within 5-15 minutes.
      * @param req DeleteClsLogTopicRequest
      * @return DeleteClsLogTopicResponse
      * @throws TencentCloudSDKException
@@ -245,7 +245,7 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the status of the edge servers and intermediate nodes on the domain name acceleration platform. Note: edge servers are not generally available. This API can only be used by whitelisted accounts.
+     *This API is used to query the status of the edge servers and intermediate nodes on the domain name acceleration platform. Note: edge servers are not generally available. This API can only be used by allowlisted accounts.
      * @param req DescribeIpStatusRequest
      * @return DescribeIpStatusResponse
      * @throws TencentCloudSDKException
@@ -476,7 +476,7 @@ It corresponds to the **Pornography Detection** page on the CDN Console.
     }
 
     /**
-     *This API is used to stop publishing to a log topic. Note: after a log topic is disabled, all logs of the domain names bound to it will no longer be published to the topic, and the logs that have already been published will be retained. This action will take effect within 5–15 minutes.
+     *This API is used to stop publishing to a log topic. Note: after a log topic is disabled, all logs of the domain names bound to it will no longer be published to the topic, and the logs that have already been published will be retained. This action will take effect within 5-15 minutes.
 
      * @param req DisableClsLogTopicRequest
      * @return DisableClsLogTopicResponse
@@ -513,7 +513,7 @@ It corresponds to the **Pornography Detection** page on the CDN Console.
     }
 
     /**
-     *This API is used to start publishing to a log topic. Note: after a log topic is enabled, all logs of the domain names bound to the topic will be published to it. This action will take effect within 5–15 minutes.
+     *This API is used to start publishing to a log topic. Note: after a log topic is enabled, all logs of the domain names bound to the topic will be published to it. This action will take effect within 5-15 minutes.
      * @param req EnableClsLogTopicRequest
      * @return EnableClsLogTopicResponse
      * @throws TencentCloudSDKException

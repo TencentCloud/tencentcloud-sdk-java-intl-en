@@ -73,7 +73,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long VpcId;
 
     /**
-    * Information of a slave server
+    * Information of a secondary server
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SlaveInfo")
@@ -124,7 +124,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long SubnetId;
 
     /**
-    * Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only)
+    * Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
     */
     @SerializedName("InstanceType")
     @Expose
@@ -159,14 +159,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long DeployMode;
 
     /**
-    * Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating slave; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
+    * Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating secondary; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
     */
     @SerializedName("TaskStatus")
     @Expose
     private Long TaskStatus;
 
     /**
-    * Details of a master instance
+    * Details of a primary instance
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MasterInfo")
@@ -434,9 +434,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Information of a slave server
+     * Get Information of a secondary server
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SlaveInfo Information of a slave server
+     * @return SlaveInfo Information of a secondary server
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public SlaveInfo getSlaveInfo() {
@@ -444,9 +444,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Information of a slave server
+     * Set Information of a secondary server
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SlaveInfo Information of a slave server
+     * @param SlaveInfo Information of a secondary server
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSlaveInfo(SlaveInfo SlaveInfo) {
@@ -554,16 +554,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only) 
-     * @return InstanceType Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only)
+     * Get Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only) 
+     * @return InstanceType Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
      */
     public Long getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only)
-     * @param InstanceType Instance type. Value range: 1 (master), 2 (disaster recovery), 3 (read-only)
+     * Set Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
+     * @param InstanceType Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
      */
     public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
@@ -634,25 +634,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating slave; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed 
-     * @return TaskStatus Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating slave; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
+     * Get Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating secondary; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed 
+     * @return TaskStatus Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating secondary; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
      */
     public Long getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating slave; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
-     * @param TaskStatus Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating slave; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
+     * Set Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating secondary; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
+     * @param TaskStatus Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating secondary; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
      */
     public void setTaskStatus(Long TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
     /**
-     * Get Details of a master instance
+     * Get Details of a primary instance
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MasterInfo Details of a master instance
+     * @return MasterInfo Details of a primary instance
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MasterInfo getMasterInfo() {
@@ -660,9 +660,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Details of a master instance
+     * Set Details of a primary instance
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MasterInfo Details of a master instance
+     * @param MasterInfo Details of a primary instance
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMasterInfo(MasterInfo MasterInfo) {

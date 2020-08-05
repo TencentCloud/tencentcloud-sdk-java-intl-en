@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class TimeValue extends AbstractModel{
 
     /**
-    * Time
+    * Time in the format of UNIX timestamp, such as 1590065877s.
     */
     @SerializedName("Time")
     @Expose
     private Long Time;
 
     /**
-    * Current time value in the format of UNIX timestamp
+    * Parameter value returned in the current time. For example, if `bigvCapFps` is set to 0 when the current time is 1590065877s (UNIX timestamp), the value of this parameter is 0.
     */
     @SerializedName("Value")
     @Expose
     private Float Value;
 
     /**
-     * Get Time 
-     * @return Time Time
+     * Get Time in the format of UNIX timestamp, such as 1590065877s. 
+     * @return Time Time in the format of UNIX timestamp, such as 1590065877s.
      */
     public Long getTime() {
         return this.Time;
     }
 
     /**
-     * Set Time
-     * @param Time Time
+     * Set Time in the format of UNIX timestamp, such as 1590065877s.
+     * @param Time Time in the format of UNIX timestamp, such as 1590065877s.
      */
     public void setTime(Long Time) {
         this.Time = Time;
     }
 
     /**
-     * Get Current time value in the format of UNIX timestamp 
-     * @return Value Current time value in the format of UNIX timestamp
+     * Get Parameter value returned in the current time. For example, if `bigvCapFps` is set to 0 when the current time is 1590065877s (UNIX timestamp), the value of this parameter is 0. 
+     * @return Value Parameter value returned in the current time. For example, if `bigvCapFps` is set to 0 when the current time is 1590065877s (UNIX timestamp), the value of this parameter is 0.
      */
     public Float getValue() {
         return this.Value;
     }
 
     /**
-     * Set Current time value in the format of UNIX timestamp
-     * @param Value Current time value in the format of UNIX timestamp
+     * Set Parameter value returned in the current time. For example, if `bigvCapFps` is set to 0 when the current time is 1590065877s (UNIX timestamp), the value of this parameter is 0.
+     * @param Value Parameter value returned in the current time. For example, if `bigvCapFps` is set to 0 when the current time is 1590065877s (UNIX timestamp), the value of this parameter is 0.
      */
     public void setValue(Float Value) {
         this.Value = Value;

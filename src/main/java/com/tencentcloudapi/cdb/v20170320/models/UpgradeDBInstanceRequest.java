@@ -44,28 +44,28 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     private Long Volume;
 
     /**
-    * Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). This parameter can be specified when upgrading master instances and is meaningless for read-only or disaster recovery instances.
+    * Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). This parameter can be specified when upgrading primary instances and is meaningless for read-only or disaster recovery instances.
     */
     @SerializedName("ProtectMode")
     @Expose
     private Long ProtectMode;
 
     /**
-    * Deployment mode. Valid values: 0 (single-AZ), 1 (multi-AZ). Default value: 0. This parameter can be specified when upgrading master instances and is meaningless for read-only or disaster recovery instances.
+    * Deployment mode. Valid values: 0 (single-AZ), 1 (multi-AZ). Default value: 0. This parameter can be specified when upgrading primary instances and is meaningless for read-only or disaster recovery instances.
     */
     @SerializedName("DeployMode")
     @Expose
     private Long DeployMode;
 
     /**
-    * AZ information of slave database 1, which is the `Zone` value of the instance by default. This parameter can be specified when upgrading master instances in multi-AZ mode and is meaningless for read-only or disaster recovery instances. You can use the [DescribeDBZoneConfig](https://cloud.tencent.com/document/product/236/17229) API to query the supported AZs.
+    * AZ information of secondary database 1, which is the `Zone` value of the instance by default. This parameter can be specified when upgrading primary instances in multi-AZ mode and is meaningless for read-only or disaster recovery instances. You can use the [DescribeDBZoneConfig](https://cloud.tencent.com/document/product/236/17229) API to query the supported AZs.
     */
     @SerializedName("SlaveZone")
     @Expose
     private String SlaveZone;
 
     /**
-    * Version of master instance database engine. Valid values: 5.5, 5.6, 5.7.
+    * Version of primary instance database engine. Valid values: 5.5, 5.6, 5.7.
     */
     @SerializedName("EngineVersion")
     @Expose
@@ -79,14 +79,14 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     private Long WaitSwitch;
 
     /**
-    * AZ information of slave database 2, which is empty by default. This parameter can be specified when upgrading master instances and is meaningless for read-only or disaster recovery instances.
+    * AZ information of secondary database 2, which is empty by default. This parameter can be specified when upgrading primary instances and is meaningless for read-only or disaster recovery instances.
     */
     @SerializedName("BackupZone")
     @Expose
     private String BackupZone;
 
     /**
-    * Instance type. Valid values: master (master instance), dr (disaster recovery instance), ro (read-only instance). Default value: master.
+    * Instance type. Valid values: master (primary instance), dr (disaster recovery instance), ro (read-only instance). Default value: master.
     */
     @SerializedName("InstanceRole")
     @Expose
@@ -141,64 +141,64 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). This parameter can be specified when upgrading master instances and is meaningless for read-only or disaster recovery instances. 
-     * @return ProtectMode Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). This parameter can be specified when upgrading master instances and is meaningless for read-only or disaster recovery instances.
+     * Get Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). This parameter can be specified when upgrading primary instances and is meaningless for read-only or disaster recovery instances. 
+     * @return ProtectMode Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). This parameter can be specified when upgrading primary instances and is meaningless for read-only or disaster recovery instances.
      */
     public Long getProtectMode() {
         return this.ProtectMode;
     }
 
     /**
-     * Set Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). This parameter can be specified when upgrading master instances and is meaningless for read-only or disaster recovery instances.
-     * @param ProtectMode Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). This parameter can be specified when upgrading master instances and is meaningless for read-only or disaster recovery instances.
+     * Set Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). This parameter can be specified when upgrading primary instances and is meaningless for read-only or disaster recovery instances.
+     * @param ProtectMode Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). This parameter can be specified when upgrading primary instances and is meaningless for read-only or disaster recovery instances.
      */
     public void setProtectMode(Long ProtectMode) {
         this.ProtectMode = ProtectMode;
     }
 
     /**
-     * Get Deployment mode. Valid values: 0 (single-AZ), 1 (multi-AZ). Default value: 0. This parameter can be specified when upgrading master instances and is meaningless for read-only or disaster recovery instances. 
-     * @return DeployMode Deployment mode. Valid values: 0 (single-AZ), 1 (multi-AZ). Default value: 0. This parameter can be specified when upgrading master instances and is meaningless for read-only or disaster recovery instances.
+     * Get Deployment mode. Valid values: 0 (single-AZ), 1 (multi-AZ). Default value: 0. This parameter can be specified when upgrading primary instances and is meaningless for read-only or disaster recovery instances. 
+     * @return DeployMode Deployment mode. Valid values: 0 (single-AZ), 1 (multi-AZ). Default value: 0. This parameter can be specified when upgrading primary instances and is meaningless for read-only or disaster recovery instances.
      */
     public Long getDeployMode() {
         return this.DeployMode;
     }
 
     /**
-     * Set Deployment mode. Valid values: 0 (single-AZ), 1 (multi-AZ). Default value: 0. This parameter can be specified when upgrading master instances and is meaningless for read-only or disaster recovery instances.
-     * @param DeployMode Deployment mode. Valid values: 0 (single-AZ), 1 (multi-AZ). Default value: 0. This parameter can be specified when upgrading master instances and is meaningless for read-only or disaster recovery instances.
+     * Set Deployment mode. Valid values: 0 (single-AZ), 1 (multi-AZ). Default value: 0. This parameter can be specified when upgrading primary instances and is meaningless for read-only or disaster recovery instances.
+     * @param DeployMode Deployment mode. Valid values: 0 (single-AZ), 1 (multi-AZ). Default value: 0. This parameter can be specified when upgrading primary instances and is meaningless for read-only or disaster recovery instances.
      */
     public void setDeployMode(Long DeployMode) {
         this.DeployMode = DeployMode;
     }
 
     /**
-     * Get AZ information of slave database 1, which is the `Zone` value of the instance by default. This parameter can be specified when upgrading master instances in multi-AZ mode and is meaningless for read-only or disaster recovery instances. You can use the [DescribeDBZoneConfig](https://cloud.tencent.com/document/product/236/17229) API to query the supported AZs. 
-     * @return SlaveZone AZ information of slave database 1, which is the `Zone` value of the instance by default. This parameter can be specified when upgrading master instances in multi-AZ mode and is meaningless for read-only or disaster recovery instances. You can use the [DescribeDBZoneConfig](https://cloud.tencent.com/document/product/236/17229) API to query the supported AZs.
+     * Get AZ information of secondary database 1, which is the `Zone` value of the instance by default. This parameter can be specified when upgrading primary instances in multi-AZ mode and is meaningless for read-only or disaster recovery instances. You can use the [DescribeDBZoneConfig](https://cloud.tencent.com/document/product/236/17229) API to query the supported AZs. 
+     * @return SlaveZone AZ information of secondary database 1, which is the `Zone` value of the instance by default. This parameter can be specified when upgrading primary instances in multi-AZ mode and is meaningless for read-only or disaster recovery instances. You can use the [DescribeDBZoneConfig](https://cloud.tencent.com/document/product/236/17229) API to query the supported AZs.
      */
     public String getSlaveZone() {
         return this.SlaveZone;
     }
 
     /**
-     * Set AZ information of slave database 1, which is the `Zone` value of the instance by default. This parameter can be specified when upgrading master instances in multi-AZ mode and is meaningless for read-only or disaster recovery instances. You can use the [DescribeDBZoneConfig](https://cloud.tencent.com/document/product/236/17229) API to query the supported AZs.
-     * @param SlaveZone AZ information of slave database 1, which is the `Zone` value of the instance by default. This parameter can be specified when upgrading master instances in multi-AZ mode and is meaningless for read-only or disaster recovery instances. You can use the [DescribeDBZoneConfig](https://cloud.tencent.com/document/product/236/17229) API to query the supported AZs.
+     * Set AZ information of secondary database 1, which is the `Zone` value of the instance by default. This parameter can be specified when upgrading primary instances in multi-AZ mode and is meaningless for read-only or disaster recovery instances. You can use the [DescribeDBZoneConfig](https://cloud.tencent.com/document/product/236/17229) API to query the supported AZs.
+     * @param SlaveZone AZ information of secondary database 1, which is the `Zone` value of the instance by default. This parameter can be specified when upgrading primary instances in multi-AZ mode and is meaningless for read-only or disaster recovery instances. You can use the [DescribeDBZoneConfig](https://cloud.tencent.com/document/product/236/17229) API to query the supported AZs.
      */
     public void setSlaveZone(String SlaveZone) {
         this.SlaveZone = SlaveZone;
     }
 
     /**
-     * Get Version of master instance database engine. Valid values: 5.5, 5.6, 5.7. 
-     * @return EngineVersion Version of master instance database engine. Valid values: 5.5, 5.6, 5.7.
+     * Get Version of primary instance database engine. Valid values: 5.5, 5.6, 5.7. 
+     * @return EngineVersion Version of primary instance database engine. Valid values: 5.5, 5.6, 5.7.
      */
     public String getEngineVersion() {
         return this.EngineVersion;
     }
 
     /**
-     * Set Version of master instance database engine. Valid values: 5.5, 5.6, 5.7.
-     * @param EngineVersion Version of master instance database engine. Valid values: 5.5, 5.6, 5.7.
+     * Set Version of primary instance database engine. Valid values: 5.5, 5.6, 5.7.
+     * @param EngineVersion Version of primary instance database engine. Valid values: 5.5, 5.6, 5.7.
      */
     public void setEngineVersion(String EngineVersion) {
         this.EngineVersion = EngineVersion;
@@ -221,32 +221,32 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get AZ information of slave database 2, which is empty by default. This parameter can be specified when upgrading master instances and is meaningless for read-only or disaster recovery instances. 
-     * @return BackupZone AZ information of slave database 2, which is empty by default. This parameter can be specified when upgrading master instances and is meaningless for read-only or disaster recovery instances.
+     * Get AZ information of secondary database 2, which is empty by default. This parameter can be specified when upgrading primary instances and is meaningless for read-only or disaster recovery instances. 
+     * @return BackupZone AZ information of secondary database 2, which is empty by default. This parameter can be specified when upgrading primary instances and is meaningless for read-only or disaster recovery instances.
      */
     public String getBackupZone() {
         return this.BackupZone;
     }
 
     /**
-     * Set AZ information of slave database 2, which is empty by default. This parameter can be specified when upgrading master instances and is meaningless for read-only or disaster recovery instances.
-     * @param BackupZone AZ information of slave database 2, which is empty by default. This parameter can be specified when upgrading master instances and is meaningless for read-only or disaster recovery instances.
+     * Set AZ information of secondary database 2, which is empty by default. This parameter can be specified when upgrading primary instances and is meaningless for read-only or disaster recovery instances.
+     * @param BackupZone AZ information of secondary database 2, which is empty by default. This parameter can be specified when upgrading primary instances and is meaningless for read-only or disaster recovery instances.
      */
     public void setBackupZone(String BackupZone) {
         this.BackupZone = BackupZone;
     }
 
     /**
-     * Get Instance type. Valid values: master (master instance), dr (disaster recovery instance), ro (read-only instance). Default value: master. 
-     * @return InstanceRole Instance type. Valid values: master (master instance), dr (disaster recovery instance), ro (read-only instance). Default value: master.
+     * Get Instance type. Valid values: master (primary instance), dr (disaster recovery instance), ro (read-only instance). Default value: master. 
+     * @return InstanceRole Instance type. Valid values: master (primary instance), dr (disaster recovery instance), ro (read-only instance). Default value: master.
      */
     public String getInstanceRole() {
         return this.InstanceRole;
     }
 
     /**
-     * Set Instance type. Valid values: master (master instance), dr (disaster recovery instance), ro (read-only instance). Default value: master.
-     * @param InstanceRole Instance type. Valid values: master (master instance), dr (disaster recovery instance), ro (read-only instance). Default value: master.
+     * Set Instance type. Valid values: master (primary instance), dr (disaster recovery instance), ro (read-only instance). Default value: master.
+     * @param InstanceRole Instance type. Valid values: master (primary instance), dr (disaster recovery instance), ro (read-only instance). Default value: master.
      */
     public void setInstanceRole(String InstanceRole) {
         this.InstanceRole = InstanceRole;

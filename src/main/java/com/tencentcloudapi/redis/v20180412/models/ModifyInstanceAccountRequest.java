@@ -51,7 +51,7 @@ public class ModifyInstanceAccountRequest extends AbstractModel{
     private String Remark;
 
     /**
-    * Sub-account routing policy. Enter `master` to route to the master node or `slave` to route to the slave node
+    * Sub-account routing policy. Enter `master` to route to the primary node or `slave` to route to the secondary node
     */
     @SerializedName("ReadonlyPolicy")
     @Expose
@@ -136,16 +136,16 @@ public class ModifyInstanceAccountRequest extends AbstractModel{
     }
 
     /**
-     * Get Sub-account routing policy. Enter `master` to route to the master node or `slave` to route to the slave node 
-     * @return ReadonlyPolicy Sub-account routing policy. Enter `master` to route to the master node or `slave` to route to the slave node
+     * Get Sub-account routing policy. Enter `master` to route to the primary node or `slave` to route to the secondary node 
+     * @return ReadonlyPolicy Sub-account routing policy. Enter `master` to route to the primary node or `slave` to route to the secondary node
      */
     public String [] getReadonlyPolicy() {
         return this.ReadonlyPolicy;
     }
 
     /**
-     * Set Sub-account routing policy. Enter `master` to route to the master node or `slave` to route to the slave node
-     * @param ReadonlyPolicy Sub-account routing policy. Enter `master` to route to the master node or `slave` to route to the slave node
+     * Set Sub-account routing policy. Enter `master` to route to the primary node or `slave` to route to the secondary node
+     * @param ReadonlyPolicy Sub-account routing policy. Enter `master` to route to the primary node or `slave` to route to the secondary node
      */
     public void setReadonlyPolicy(String [] ReadonlyPolicy) {
         this.ReadonlyPolicy = ReadonlyPolicy;

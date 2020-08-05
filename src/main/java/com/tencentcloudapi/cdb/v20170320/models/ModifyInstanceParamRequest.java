@@ -37,14 +37,14 @@ public class ModifyInstanceParamRequest extends AbstractModel{
     private Parameter [] ParamList;
 
     /**
-    * 
+    * Template ID. At least one of `ParamList` and `TemplateId` must be passed in.
     */
     @SerializedName("TemplateId")
     @Expose
     private Long TemplateId;
 
     /**
-    * 
+    * When to perform the parameter adjustment task. Default value: 0. Valid values: 0 - execute immediately, 1 - execute during window. When its value is 1, only one instance ID can be passed in (i.e., only one `InstanceIds` can be passed in).
     */
     @SerializedName("WaitSwitch")
     @Expose
@@ -83,32 +83,32 @@ public class ModifyInstanceParamRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return TemplateId 
+     * Get Template ID. At least one of `ParamList` and `TemplateId` must be passed in. 
+     * @return TemplateId Template ID. At least one of `ParamList` and `TemplateId` must be passed in.
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 
-     * @param TemplateId 
+     * Set Template ID. At least one of `ParamList` and `TemplateId` must be passed in.
+     * @param TemplateId Template ID. At least one of `ParamList` and `TemplateId` must be passed in.
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get  
-     * @return WaitSwitch 
+     * Get When to perform the parameter adjustment task. Default value: 0. Valid values: 0 - execute immediately, 1 - execute during window. When its value is 1, only one instance ID can be passed in (i.e., only one `InstanceIds` can be passed in). 
+     * @return WaitSwitch When to perform the parameter adjustment task. Default value: 0. Valid values: 0 - execute immediately, 1 - execute during window. When its value is 1, only one instance ID can be passed in (i.e., only one `InstanceIds` can be passed in).
      */
     public Long getWaitSwitch() {
         return this.WaitSwitch;
     }
 
     /**
-     * Set 
-     * @param WaitSwitch 
+     * Set When to perform the parameter adjustment task. Default value: 0. Valid values: 0 - execute immediately, 1 - execute during window. When its value is 1, only one instance ID can be passed in (i.e., only one `InstanceIds` can be passed in).
+     * @param WaitSwitch When to perform the parameter adjustment task. Default value: 0. Valid values: 0 - execute immediately, 1 - execute during window. When its value is 1, only one instance ID can be passed in (i.e., only one `InstanceIds` can be passed in).
      */
     public void setWaitSwitch(Long WaitSwitch) {
         this.WaitSwitch = WaitSwitch;

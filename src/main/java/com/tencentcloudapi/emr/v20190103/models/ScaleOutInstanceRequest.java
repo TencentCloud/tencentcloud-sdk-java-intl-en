@@ -126,6 +126,20 @@ public class ScaleOutInstanceRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * 
+    */
+    @SerializedName("HardwareResourceType")
+    @Expose
+    private String HardwareResourceType;
+
+    /**
+    * 
+    */
+    @SerializedName("PodSpec")
+    @Expose
+    private PodSpec PodSpec;
+
+    /**
      * Get Time unit of scale-out. Valid values:
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
 <li>m: month. When `PayMode` is 1, `TimeUnit` can only be `m`.</li> 
@@ -370,6 +384,38 @@ public class ScaleOutInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return HardwareResourceType 
+     */
+    public String getHardwareResourceType() {
+        return this.HardwareResourceType;
+    }
+
+    /**
+     * Set 
+     * @param HardwareResourceType 
+     */
+    public void setHardwareResourceType(String HardwareResourceType) {
+        this.HardwareResourceType = HardwareResourceType;
+    }
+
+    /**
+     * Get  
+     * @return PodSpec 
+     */
+    public PodSpec getPodSpec() {
+        return this.PodSpec;
+    }
+
+    /**
+     * Set 
+     * @param PodSpec 
+     */
+    public void setPodSpec(PodSpec PodSpec) {
+        this.PodSpec = PodSpec;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -387,6 +433,8 @@ public class ScaleOutInstanceRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "ServiceNodeInfo.", this.ServiceNodeInfo);
         this.setParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "HardwareResourceType", this.HardwareResourceType);
+        this.setParamObj(map, prefix + "PodSpec.", this.PodSpec);
 
     }
 }

@@ -30,6 +30,17 @@ public class PurgeUrlsCacheRequest extends AbstractModel{
     private String [] Urls;
 
     /**
+    * Purging region
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged
+The specified purging region should match the domain name acceleration region
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
      * Get List of URLs. The protocol header such as "http://" or "https://" needs to be included. 
      * @return Urls List of URLs. The protocol header such as "http://" or "https://" needs to be included.
      */
@@ -46,10 +57,43 @@ public class PurgeUrlsCacheRequest extends AbstractModel{
     }
 
     /**
+     * Get Purging region
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged
+The specified purging region should match the domain name acceleration region 
+     * @return Area Purging region
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged
+The specified purging region should match the domain name acceleration region
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set Purging region
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged
+The specified purging region should match the domain name acceleration region
+     * @param Area Purging region
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged
+The specified purging region should match the domain name acceleration region
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Urls.", this.Urls);
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }

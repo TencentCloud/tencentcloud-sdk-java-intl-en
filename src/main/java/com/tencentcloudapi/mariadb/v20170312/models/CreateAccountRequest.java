@@ -30,7 +30,7 @@ public class CreateAccountRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Login username, which can contain 1–32 letters, digits, underscores, and hyphens.
+    * Login username, which can contain 1-32 letters, digits, underscores, and hyphens.
     */
     @SerializedName("UserName")
     @Expose
@@ -44,28 +44,28 @@ public class CreateAccountRequest extends AbstractModel{
     private String Host;
 
     /**
-    * Account password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
+    * Account password, which can contain 6-32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
+    * Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
     */
     @SerializedName("ReadOnly")
     @Expose
     private Long ReadOnly;
 
     /**
-    * Account remarks, which can contain 0–256 letters, digits, and common symbols.
+    * Account remarks, which can contain 0-256 letters, digits, and common symbols.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Determines whether the slave is unavailable based on the passed-in time
+    * Determines whether the secondary is unavailable based on the passed-in time
     */
     @SerializedName("DelayThresh")
     @Expose
@@ -88,16 +88,16 @@ public class CreateAccountRequest extends AbstractModel{
     }
 
     /**
-     * Get Login username, which can contain 1–32 letters, digits, underscores, and hyphens. 
-     * @return UserName Login username, which can contain 1–32 letters, digits, underscores, and hyphens.
+     * Get Login username, which can contain 1-32 letters, digits, underscores, and hyphens. 
+     * @return UserName Login username, which can contain 1-32 letters, digits, underscores, and hyphens.
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set Login username, which can contain 1–32 letters, digits, underscores, and hyphens.
-     * @param UserName Login username, which can contain 1–32 letters, digits, underscores, and hyphens.
+     * Set Login username, which can contain 1-32 letters, digits, underscores, and hyphens.
+     * @param UserName Login username, which can contain 1-32 letters, digits, underscores, and hyphens.
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
@@ -120,64 +120,64 @@ public class CreateAccountRequest extends AbstractModel{
     }
 
     /**
-     * Get Account password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks. 
-     * @return Password Account password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
+     * Get Account password, which can contain 6-32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks. 
+     * @return Password Account password, which can contain 6-32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Account password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
-     * @param Password Account password, which can contain 6–32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
+     * Set Account password, which can contain 6-32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
+     * @param Password Account password, which can contain 6-32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail. 
-     * @return ReadOnly Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
+     * Get Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail. 
+     * @return ReadOnly Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
      */
     public Long getReadOnly() {
         return this.ReadOnly;
     }
 
     /**
-     * Set Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
-     * @param ReadOnly Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the slave will be used first, and if it is unavailable, the master will be used; 2: the slave will be used first, and if it is unavailable, the operation will fail.
+     * Set Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
+     * @param ReadOnly Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
      */
     public void setReadOnly(Long ReadOnly) {
         this.ReadOnly = ReadOnly;
     }
 
     /**
-     * Get Account remarks, which can contain 0–256 letters, digits, and common symbols. 
-     * @return Description Account remarks, which can contain 0–256 letters, digits, and common symbols.
+     * Get Account remarks, which can contain 0-256 letters, digits, and common symbols. 
+     * @return Description Account remarks, which can contain 0-256 letters, digits, and common symbols.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Account remarks, which can contain 0–256 letters, digits, and common symbols.
-     * @param Description Account remarks, which can contain 0–256 letters, digits, and common symbols.
+     * Set Account remarks, which can contain 0-256 letters, digits, and common symbols.
+     * @param Description Account remarks, which can contain 0-256 letters, digits, and common symbols.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Determines whether the slave is unavailable based on the passed-in time 
-     * @return DelayThresh Determines whether the slave is unavailable based on the passed-in time
+     * Get Determines whether the secondary is unavailable based on the passed-in time 
+     * @return DelayThresh Determines whether the secondary is unavailable based on the passed-in time
      */
     public Long getDelayThresh() {
         return this.DelayThresh;
     }
 
     /**
-     * Set Determines whether the slave is unavailable based on the passed-in time
-     * @param DelayThresh Determines whether the slave is unavailable based on the passed-in time
+     * Set Determines whether the secondary is unavailable based on the passed-in time
+     * @param DelayThresh Determines whether the secondary is unavailable based on the passed-in time
      */
     public void setDelayThresh(Long DelayThresh) {
         this.DelayThresh = DelayThresh;

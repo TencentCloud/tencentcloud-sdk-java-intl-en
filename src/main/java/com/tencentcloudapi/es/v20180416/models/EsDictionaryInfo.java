@@ -37,6 +37,27 @@ public class EsDictionaryInfo extends AbstractModel{
     private DictInfo [] Stopwords;
 
     /**
+    * 
+    */
+    @SerializedName("QQDict")
+    @Expose
+    private DictInfo [] QQDict;
+
+    /**
+    * 
+    */
+    @SerializedName("Synonym")
+    @Expose
+    private DictInfo [] Synonym;
+
+    /**
+    * 
+    */
+    @SerializedName("UpdateType")
+    @Expose
+    private String UpdateType;
+
+    /**
      * Get List of non-stop words 
      * @return MainDict List of non-stop words
      */
@@ -69,11 +90,62 @@ public class EsDictionaryInfo extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return QQDict 
+     */
+    public DictInfo [] getQQDict() {
+        return this.QQDict;
+    }
+
+    /**
+     * Set 
+     * @param QQDict 
+     */
+    public void setQQDict(DictInfo [] QQDict) {
+        this.QQDict = QQDict;
+    }
+
+    /**
+     * Get  
+     * @return Synonym 
+     */
+    public DictInfo [] getSynonym() {
+        return this.Synonym;
+    }
+
+    /**
+     * Set 
+     * @param Synonym 
+     */
+    public void setSynonym(DictInfo [] Synonym) {
+        this.Synonym = Synonym;
+    }
+
+    /**
+     * Get  
+     * @return UpdateType 
+     */
+    public String getUpdateType() {
+        return this.UpdateType;
+    }
+
+    /**
+     * Set 
+     * @param UpdateType 
+     */
+    public void setUpdateType(String UpdateType) {
+        this.UpdateType = UpdateType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "MainDict.", this.MainDict);
         this.setParamArrayObj(map, prefix + "Stopwords.", this.Stopwords);
+        this.setParamArrayObj(map, prefix + "QQDict.", this.QQDict);
+        this.setParamArrayObj(map, prefix + "Synonym.", this.Synonym);
+        this.setParamSimple(map, prefix + "UpdateType", this.UpdateType);
 
     }
 }

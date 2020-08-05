@@ -51,7 +51,7 @@ public class DDosPolicy extends AbstractModel{
     private DDoSPolicyPacketFilter [] PacketFilters;
 
     /**
-    * IP blacklist/whitelist
+    * IP blocklist/allowlist
     */
     @SerializedName("IpBlackWhiteLists")
     @Expose
@@ -173,16 +173,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get IP blacklist/whitelist 
-     * @return IpBlackWhiteLists IP blacklist/whitelist
+     * Get IP blocklist/allowlist 
+     * @return IpBlackWhiteLists IP blocklist/allowlist
      */
     public IpBlackWhite [] getIpBlackWhiteLists() {
         return this.IpBlackWhiteLists;
     }
 
     /**
-     * Set IP blacklist/whitelist
-     * @param IpBlackWhiteLists IP blacklist/whitelist
+     * Set IP blocklist/allowlist
+     * @param IpBlackWhiteLists IP blocklist/allowlist
      */
     public void setIpBlackWhiteLists(IpBlackWhite [] IpBlackWhiteLists) {
         this.IpBlackWhiteLists = IpBlackWhiteLists;

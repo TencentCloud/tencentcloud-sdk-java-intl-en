@@ -121,7 +121,7 @@ public class DescribeInstancesRequest extends AbstractModel{
     private Long [] Status;
 
     /**
-    * Type edition. 1: standalone edition; 2: master-slave edition; 3: cluster edition
+    * Type edition. 1: standalone edition; 2: primary-secondary edition; 3: cluster edition
     */
     @SerializedName("TypeVersion")
     @Expose
@@ -394,16 +394,16 @@ public class DescribeInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Type edition. 1: standalone edition; 2: master-slave edition; 3: cluster edition 
-     * @return TypeVersion Type edition. 1: standalone edition; 2: master-slave edition; 3: cluster edition
+     * Get Type edition. 1: standalone edition; 2: primary-secondary edition; 3: cluster edition 
+     * @return TypeVersion Type edition. 1: standalone edition; 2: primary-secondary edition; 3: cluster edition
      */
     public Long getTypeVersion() {
         return this.TypeVersion;
     }
 
     /**
-     * Set Type edition. 1: standalone edition; 2: master-slave edition; 3: cluster edition
-     * @param TypeVersion Type edition. 1: standalone edition; 2: master-slave edition; 3: cluster edition
+     * Set Type edition. 1: standalone edition; 2: primary-secondary edition; 3: cluster edition
+     * @param TypeVersion Type edition. 1: standalone edition; 2: primary-secondary edition; 3: cluster edition
      */
     public void setTypeVersion(Long TypeVersion) {
         this.TypeVersion = TypeVersion;

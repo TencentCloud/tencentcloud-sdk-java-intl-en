@@ -44,7 +44,7 @@ public class UpdateDomainConfigRequest extends AbstractModel{
     private Long ProjectId;
 
     /**
-    * IP blacklist/whitelist configuration.
+    * IP blocklist/allowlist configuration.
     */
     @SerializedName("IpFilter")
     @Expose
@@ -148,16 +148,16 @@ public class UpdateDomainConfigRequest extends AbstractModel{
     }
 
     /**
-     * Get IP blacklist/whitelist configuration. 
-     * @return IpFilter IP blacklist/whitelist configuration.
+     * Get IP blocklist/allowlist configuration. 
+     * @return IpFilter IP blocklist/allowlist configuration.
      */
     public IpFilter getIpFilter() {
         return this.IpFilter;
     }
 
     /**
-     * Set IP blacklist/whitelist configuration.
-     * @param IpFilter IP blacklist/whitelist configuration.
+     * Set IP blocklist/allowlist configuration.
+     * @param IpFilter IP blocklist/allowlist configuration.
      */
     public void setIpFilter(IpFilter IpFilter) {
         this.IpFilter = IpFilter;

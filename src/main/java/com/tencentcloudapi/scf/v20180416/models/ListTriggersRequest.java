@@ -66,7 +66,7 @@ public class ListTriggersRequest extends AbstractModel{
 
     /**
     * * Qualifier:
-Function version, i.e., alias
+Function version, alias
     */
     @SerializedName("Filters")
     @Expose
@@ -170,9 +170,9 @@ Function version, i.e., alias
 
     /**
      * Get * Qualifier:
-Function version, i.e., alias 
+Function version, alias 
      * @return Filters * Qualifier:
-Function version, i.e., alias
+Function version, alias
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -180,9 +180,9 @@ Function version, i.e., alias
 
     /**
      * Set * Qualifier:
-Function version, i.e., alias
+Function version, alias
      * @param Filters * Qualifier:
-Function version, i.e., alias
+Function version, alias
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

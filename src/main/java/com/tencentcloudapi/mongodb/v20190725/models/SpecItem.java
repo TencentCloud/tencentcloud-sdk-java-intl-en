@@ -121,14 +121,14 @@ public class SpecItem extends AbstractModel{
     private Long ClusterType;
 
     /**
-    * Minimum number of slave nodes in a replica set
+    * Minimum number of secondary nodes in a replica set
     */
     @SerializedName("MinNodeNum")
     @Expose
     private Long MinNodeNum;
 
     /**
-    * Maximum number of slave nodes in a replica set
+    * Maximum number of secondary nodes in a replica set
     */
     @SerializedName("MaxNodeNum")
     @Expose
@@ -149,14 +149,14 @@ public class SpecItem extends AbstractModel{
     private Long MaxReplicateSetNum;
 
     /**
-    * Minimum number of slave nodes in a shard
+    * Minimum number of secondary nodes in a shard
     */
     @SerializedName("MinReplicateSetNodeNum")
     @Expose
     private Long MinReplicateSetNodeNum;
 
     /**
-    * Maximum number of slave nodes in a shard
+    * Maximum number of secondary nodes in a shard
     */
     @SerializedName("MaxReplicateSetNodeNum")
     @Expose
@@ -394,32 +394,32 @@ public class SpecItem extends AbstractModel{
     }
 
     /**
-     * Get Minimum number of slave nodes in a replica set 
-     * @return MinNodeNum Minimum number of slave nodes in a replica set
+     * Get Minimum number of secondary nodes in a replica set 
+     * @return MinNodeNum Minimum number of secondary nodes in a replica set
      */
     public Long getMinNodeNum() {
         return this.MinNodeNum;
     }
 
     /**
-     * Set Minimum number of slave nodes in a replica set
-     * @param MinNodeNum Minimum number of slave nodes in a replica set
+     * Set Minimum number of secondary nodes in a replica set
+     * @param MinNodeNum Minimum number of secondary nodes in a replica set
      */
     public void setMinNodeNum(Long MinNodeNum) {
         this.MinNodeNum = MinNodeNum;
     }
 
     /**
-     * Get Maximum number of slave nodes in a replica set 
-     * @return MaxNodeNum Maximum number of slave nodes in a replica set
+     * Get Maximum number of secondary nodes in a replica set 
+     * @return MaxNodeNum Maximum number of secondary nodes in a replica set
      */
     public Long getMaxNodeNum() {
         return this.MaxNodeNum;
     }
 
     /**
-     * Set Maximum number of slave nodes in a replica set
-     * @param MaxNodeNum Maximum number of slave nodes in a replica set
+     * Set Maximum number of secondary nodes in a replica set
+     * @param MaxNodeNum Maximum number of secondary nodes in a replica set
      */
     public void setMaxNodeNum(Long MaxNodeNum) {
         this.MaxNodeNum = MaxNodeNum;
@@ -458,32 +458,32 @@ public class SpecItem extends AbstractModel{
     }
 
     /**
-     * Get Minimum number of slave nodes in a shard 
-     * @return MinReplicateSetNodeNum Minimum number of slave nodes in a shard
+     * Get Minimum number of secondary nodes in a shard 
+     * @return MinReplicateSetNodeNum Minimum number of secondary nodes in a shard
      */
     public Long getMinReplicateSetNodeNum() {
         return this.MinReplicateSetNodeNum;
     }
 
     /**
-     * Set Minimum number of slave nodes in a shard
-     * @param MinReplicateSetNodeNum Minimum number of slave nodes in a shard
+     * Set Minimum number of secondary nodes in a shard
+     * @param MinReplicateSetNodeNum Minimum number of secondary nodes in a shard
      */
     public void setMinReplicateSetNodeNum(Long MinReplicateSetNodeNum) {
         this.MinReplicateSetNodeNum = MinReplicateSetNodeNum;
     }
 
     /**
-     * Get Maximum number of slave nodes in a shard 
-     * @return MaxReplicateSetNodeNum Maximum number of slave nodes in a shard
+     * Get Maximum number of secondary nodes in a shard 
+     * @return MaxReplicateSetNodeNum Maximum number of secondary nodes in a shard
      */
     public Long getMaxReplicateSetNodeNum() {
         return this.MaxReplicateSetNodeNum;
     }
 
     /**
-     * Set Maximum number of slave nodes in a shard
-     * @param MaxReplicateSetNodeNum Maximum number of slave nodes in a shard
+     * Set Maximum number of secondary nodes in a shard
+     * @param MaxReplicateSetNodeNum Maximum number of secondary nodes in a shard
      */
     public void setMaxReplicateSetNodeNum(Long MaxReplicateSetNodeNum) {
         this.MaxReplicateSetNodeNum = MaxReplicateSetNodeNum;

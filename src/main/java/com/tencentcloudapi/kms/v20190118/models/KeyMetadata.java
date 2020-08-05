@@ -115,7 +115,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Origin;
 
     /**
-    * It’s valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
+    * It's valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ValidTo")
@@ -342,9 +342,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get It’s valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
+     * Get It's valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ValidTo It’s valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
+     * @return ValidTo It's valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getValidTo() {
@@ -352,9 +352,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set It’s valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
+     * Set It's valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ValidTo It’s valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
+     * @param ValidTo It's valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setValidTo(Long ValidTo) {

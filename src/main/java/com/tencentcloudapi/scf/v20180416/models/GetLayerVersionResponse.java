@@ -30,14 +30,14 @@ public class GetLayerVersionResponse extends AbstractModel{
     private String [] CompatibleRuntimes;
 
     /**
-    * SHA256 encoding of file on layer version
+    * SHA256 encoding of version file on the layer
     */
     @SerializedName("CodeSha256")
     @Expose
     private String CodeSha256;
 
     /**
-    * Download address of file on layer version
+    * Download address of version file on the layer
     */
     @SerializedName("Location")
     @Expose
@@ -113,32 +113,32 @@ Deleted: deleted
     }
 
     /**
-     * Get SHA256 encoding of file on layer version 
-     * @return CodeSha256 SHA256 encoding of file on layer version
+     * Get SHA256 encoding of version file on the layer 
+     * @return CodeSha256 SHA256 encoding of version file on the layer
      */
     public String getCodeSha256() {
         return this.CodeSha256;
     }
 
     /**
-     * Set SHA256 encoding of file on layer version
-     * @param CodeSha256 SHA256 encoding of file on layer version
+     * Set SHA256 encoding of version file on the layer
+     * @param CodeSha256 SHA256 encoding of version file on the layer
      */
     public void setCodeSha256(String CodeSha256) {
         this.CodeSha256 = CodeSha256;
     }
 
     /**
-     * Get Download address of file on layer version 
-     * @return Location Download address of file on layer version
+     * Get Download address of version file on the layer 
+     * @return Location Download address of version file on the layer
      */
     public String getLocation() {
         return this.Location;
     }
 
     /**
-     * Set Download address of file on layer version
-     * @param Location Download address of file on layer version
+     * Set Download address of version file on the layer
+     * @param Location Download address of version file on the layer
      */
     public void setLocation(String Location) {
         this.Location = Location;

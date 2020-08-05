@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class BackupConfig extends AbstractModel{
 
     /**
-    * Replication mode of slave database 2. Value range: async, semi-sync
+    * Replication mode of secondary database 2. Value range: async, semi-sync
     */
     @SerializedName("ReplicationMode")
     @Expose
     private String ReplicationMode;
 
     /**
-    * Name of the AZ of slave database 2, such as ap-shanghai-1
+    * Name of the AZ of secondary database 2, such as ap-shanghai-1
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * Private IP address of slave database 2
+    * Private IP address of secondary database 2
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * Access port of slave database 2
+    * Access port of secondary database 2
     */
     @SerializedName("Vport")
     @Expose
     private Long Vport;
 
     /**
-     * Get Replication mode of slave database 2. Value range: async, semi-sync 
-     * @return ReplicationMode Replication mode of slave database 2. Value range: async, semi-sync
+     * Get Replication mode of secondary database 2. Value range: async, semi-sync 
+     * @return ReplicationMode Replication mode of secondary database 2. Value range: async, semi-sync
      */
     public String getReplicationMode() {
         return this.ReplicationMode;
     }
 
     /**
-     * Set Replication mode of slave database 2. Value range: async, semi-sync
-     * @param ReplicationMode Replication mode of slave database 2. Value range: async, semi-sync
+     * Set Replication mode of secondary database 2. Value range: async, semi-sync
+     * @param ReplicationMode Replication mode of secondary database 2. Value range: async, semi-sync
      */
     public void setReplicationMode(String ReplicationMode) {
         this.ReplicationMode = ReplicationMode;
     }
 
     /**
-     * Get Name of the AZ of slave database 2, such as ap-shanghai-1 
-     * @return Zone Name of the AZ of slave database 2, such as ap-shanghai-1
+     * Get Name of the AZ of secondary database 2, such as ap-shanghai-1 
+     * @return Zone Name of the AZ of secondary database 2, such as ap-shanghai-1
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set Name of the AZ of slave database 2, such as ap-shanghai-1
-     * @param Zone Name of the AZ of slave database 2, such as ap-shanghai-1
+     * Set Name of the AZ of secondary database 2, such as ap-shanghai-1
+     * @param Zone Name of the AZ of secondary database 2, such as ap-shanghai-1
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get Private IP address of slave database 2 
-     * @return Vip Private IP address of slave database 2
+     * Get Private IP address of secondary database 2 
+     * @return Vip Private IP address of secondary database 2
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set Private IP address of slave database 2
-     * @param Vip Private IP address of slave database 2
+     * Set Private IP address of secondary database 2
+     * @param Vip Private IP address of secondary database 2
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get Access port of slave database 2 
-     * @return Vport Access port of slave database 2
+     * Get Access port of secondary database 2 
+     * @return Vport Access port of secondary database 2
      */
     public Long getVport() {
         return this.Vport;
     }
 
     /**
-     * Set Access port of slave database 2
-     * @param Vport Access port of slave database 2
+     * Set Access port of secondary database 2
+     * @param Vport Access port of secondary database 2
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TriggerInfo extends AbstractModel{
 
     /**
-    * Enablement switch
+    * Whether to enable
     */
     @SerializedName("Enable")
     @Expose
@@ -87,16 +87,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ModTime;
 
     /**
-     * Get Enablement switch 
-     * @return Enable Enablement switch
+     * Get Whether to enable 
+     * @return Enable Whether to enable
      */
     public Long getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set Enablement switch
-     * @param Enable Enablement switch
+     * Set Whether to enable
+     * @param Enable Whether to enable
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;

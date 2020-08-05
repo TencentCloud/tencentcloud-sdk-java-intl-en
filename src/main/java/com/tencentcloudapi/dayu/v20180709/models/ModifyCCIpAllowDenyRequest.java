@@ -44,14 +44,14 @@ public class ModifyCCIpAllowDenyRequest extends AbstractModel{
     private String Method;
 
     /**
-    * Blacklist/whitelist type. Valid values: [white (whitelist), black (blacklist)]
+    * Blocklist/allowlist type. Valid values: [white (allowlist), black (blocklist)]
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Blacklisted/whitelisted IP array
+    * Blocklisted/whitelisted IP array
     */
     @SerializedName("IpList")
     @Expose
@@ -128,32 +128,32 @@ If `Method` is `delete`, this field can be left empty;
     }
 
     /**
-     * Get Blacklist/whitelist type. Valid values: [white (whitelist), black (blacklist)] 
-     * @return Type Blacklist/whitelist type. Valid values: [white (whitelist), black (blacklist)]
+     * Get Blocklist/allowlist type. Valid values: [white (allowlist), black (blocklist)] 
+     * @return Type Blocklist/allowlist type. Valid values: [white (allowlist), black (blocklist)]
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Blacklist/whitelist type. Valid values: [white (whitelist), black (blacklist)]
-     * @param Type Blacklist/whitelist type. Valid values: [white (whitelist), black (blacklist)]
+     * Set Blocklist/allowlist type. Valid values: [white (allowlist), black (blocklist)]
+     * @param Type Blocklist/allowlist type. Valid values: [white (allowlist), black (blocklist)]
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Blacklisted/whitelisted IP array 
-     * @return IpList Blacklisted/whitelisted IP array
+     * Get Blocklisted/whitelisted IP array 
+     * @return IpList Blocklisted/whitelisted IP array
      */
     public String [] getIpList() {
         return this.IpList;
     }
 
     /**
-     * Set Blacklisted/whitelisted IP array
-     * @param IpList Blacklisted/whitelisted IP array
+     * Set Blocklisted/whitelisted IP array
+     * @param IpList Blocklisted/whitelisted IP array
      */
     public void setIpList(String [] IpList) {
         this.IpList = IpList;

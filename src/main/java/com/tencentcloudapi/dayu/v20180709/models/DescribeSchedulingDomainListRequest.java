@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeSchedulingDomainListRequest extends AbstractModel{
 
     /**
-    * Number of items in a page. Returned results are not paged if you enter “0”.
+    * Number of items in a page. Returned results are not paged if you enter '0'.
     */
     @SerializedName("Limit")
     @Expose
@@ -44,16 +44,16 @@ public class DescribeSchedulingDomainListRequest extends AbstractModel{
     private String Domain;
 
     /**
-     * Get Number of items in a page. Returned results are not paged if you enter “0”. 
-     * @return Limit Number of items in a page. Returned results are not paged if you enter “0”.
+     * Get Number of items in a page. Returned results are not paged if you enter '0'. 
+     * @return Limit Number of items in a page. Returned results are not paged if you enter '0'.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of items in a page. Returned results are not paged if you enter “0”.
-     * @param Limit Number of items in a page. Returned results are not paged if you enter “0”.
+     * Set Number of items in a page. Returned results are not paged if you enter '0'.
+     * @param Limit Number of items in a page. Returned results are not paged if you enter '0'.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

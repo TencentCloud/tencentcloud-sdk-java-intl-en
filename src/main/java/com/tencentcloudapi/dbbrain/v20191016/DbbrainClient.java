@@ -74,6 +74,24 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the overview of instance space usage during a specified time period, including disk usage growth (MB), available disk space (MB), total disk space (MB), and estimated number of available days.
+     * @param req DescribeDBSpaceStatusRequest
+     * @return DescribeDBSpaceStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBSpaceStatusResponse DescribeDBSpaceStatus(DescribeDBSpaceStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBSpaceStatusResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBSpaceStatusResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDBSpaceStatus"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the slow log statistics histogram.
      * @param req DescribeSlowLogTimeSeriesStatsRequest
      * @return DescribeSlowLogTimeSeriesStatsResponse
@@ -103,6 +121,42 @@ public class DbbrainClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeSlowLogTopSqlsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeSlowLogTopSqls"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the daily space data of top tables consuming the most instance space. The data is daily collected by DBbrain during a specified time period. The return results are sorted by size by default.
+     * @param req DescribeTopSpaceTableTimeSeriesRequest
+     * @return DescribeTopSpaceTableTimeSeriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopSpaceTableTimeSeriesResponse DescribeTopSpaceTableTimeSeries(DescribeTopSpaceTableTimeSeriesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTopSpaceTableTimeSeriesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTopSpaceTableTimeSeriesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTopSpaceTableTimeSeries"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query real-time space statistics of top tables of an instance. The return results are sorted by size by default.
+     * @param req DescribeTopSpaceTablesRequest
+     * @return DescribeTopSpaceTablesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopSpaceTablesResponse DescribeTopSpaceTables(DescribeTopSpaceTablesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTopSpaceTablesResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTopSpaceTablesResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeTopSpaceTables"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

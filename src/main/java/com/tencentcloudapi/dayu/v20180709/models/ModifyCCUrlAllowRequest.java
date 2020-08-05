@@ -44,7 +44,7 @@ public class ModifyCCUrlAllowRequest extends AbstractModel{
     private String Method;
 
     /**
-    * Blacklist/whitelist type. Valid value: [white (whitelist)]
+    * Blocklist/allowlist type. Valid value: [white (allowlist)]
     */
     @SerializedName("Type")
     @Expose
@@ -130,16 +130,16 @@ If `Method` is `delete`, this field can be left empty;
     }
 
     /**
-     * Get Blacklist/whitelist type. Valid value: [white (whitelist)] 
-     * @return Type Blacklist/whitelist type. Valid value: [white (whitelist)]
+     * Get Blocklist/allowlist type. Valid value: [white (allowlist)] 
+     * @return Type Blocklist/allowlist type. Valid value: [white (allowlist)]
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Blacklist/whitelist type. Valid value: [white (whitelist)]
-     * @param Type Blacklist/whitelist type. Valid value: [white (whitelist)]
+     * Set Blocklist/allowlist type. Valid value: [white (allowlist)]
+     * @param Type Blocklist/allowlist type. Valid value: [white (allowlist)]
      */
     public void setType(String Type) {
         this.Type = Type;

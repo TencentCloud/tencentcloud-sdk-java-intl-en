@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class VideoTemplateInfo extends AbstractModel{
 
     /**
-    * Video transcoding template name, which can contain 1–20 letters and digits.
+    * Video transcoding template name, which can contain 1-20 letters and digits.
     */
     @SerializedName("Name")
     @Expose
@@ -79,16 +79,16 @@ public class VideoTemplateInfo extends AbstractModel{
     private Long BitrateCompressionRatio;
 
     /**
-     * Get Video transcoding template name, which can contain 1–20 letters and digits. 
-     * @return Name Video transcoding template name, which can contain 1–20 letters and digits.
+     * Get Video transcoding template name, which can contain 1-20 letters and digits. 
+     * @return Name Video transcoding template name, which can contain 1-20 letters and digits.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Video transcoding template name, which can contain 1–20 letters and digits.
-     * @param Name Video transcoding template name, which can contain 1–20 letters and digits.
+     * Set Video transcoding template name, which can contain 1-20 letters and digits.
+     * @param Name Video transcoding template name, which can contain 1-20 letters and digits.
      */
     public void setName(String Name) {
         this.Name = Name;

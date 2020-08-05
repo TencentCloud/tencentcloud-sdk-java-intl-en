@@ -93,6 +93,20 @@ public class ComputeNode extends AbstractModel{
     private String [] PublicIpAddresses;
 
     /**
+    * 
+    */
+    @SerializedName("ResourceType")
+    @Expose
+    private String ResourceType;
+
+    /**
+    * 
+    */
+    @SerializedName("ResourceOrigin")
+    @Expose
+    private String ResourceOrigin;
+
+    /**
      * Get Compute node ID 
      * @return ComputeNodeId Compute node ID
      */
@@ -253,6 +267,38 @@ public class ComputeNode extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return ResourceType 
+     */
+    public String getResourceType() {
+        return this.ResourceType;
+    }
+
+    /**
+     * Set 
+     * @param ResourceType 
+     */
+    public void setResourceType(String ResourceType) {
+        this.ResourceType = ResourceType;
+    }
+
+    /**
+     * Get  
+     * @return ResourceOrigin 
+     */
+    public String getResourceOrigin() {
+        return this.ResourceOrigin;
+    }
+
+    /**
+     * Set 
+     * @param ResourceOrigin 
+     */
+    public void setResourceOrigin(String ResourceOrigin) {
+        this.ResourceOrigin = ResourceOrigin;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -266,6 +312,8 @@ public class ComputeNode extends AbstractModel{
         this.setParamSimple(map, prefix + "AgentVersion", this.AgentVersion);
         this.setParamArraySimple(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
         this.setParamArraySimple(map, prefix + "PublicIpAddresses.", this.PublicIpAddresses);
+        this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
+        this.setParamSimple(map, prefix + "ResourceOrigin", this.ResourceOrigin);
 
     }
 }

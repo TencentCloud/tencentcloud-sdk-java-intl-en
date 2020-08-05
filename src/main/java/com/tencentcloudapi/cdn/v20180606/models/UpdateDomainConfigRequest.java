@@ -44,7 +44,7 @@ public class UpdateDomainConfigRequest extends AbstractModel{
     private Origin Origin;
 
     /**
-    * IP blacklist/whitelist configuration
+    * IP blocklist/allowlist configuration
     */
     @SerializedName("IpFilter")
     @Expose
@@ -240,7 +240,7 @@ global: global acceleration
     private AwsPrivateAccess AwsPrivateAccess;
 
     /**
-    * UA blacklist/whitelist Configuration
+    * UA blocklist/allowlist Configuration
     */
     @SerializedName("UserAgentFilter")
     @Expose
@@ -295,16 +295,16 @@ global: global acceleration
     }
 
     /**
-     * Get IP blacklist/whitelist configuration 
-     * @return IpFilter IP blacklist/whitelist configuration
+     * Get IP blocklist/allowlist configuration 
+     * @return IpFilter IP blocklist/allowlist configuration
      */
     public IpFilter getIpFilter() {
         return this.IpFilter;
     }
 
     /**
-     * Set IP blacklist/whitelist configuration
-     * @param IpFilter IP blacklist/whitelist configuration
+     * Set IP blocklist/allowlist configuration
+     * @param IpFilter IP blocklist/allowlist configuration
      */
     public void setIpFilter(IpFilter IpFilter) {
         this.IpFilter = IpFilter;
@@ -755,16 +755,16 @@ global: global acceleration
     }
 
     /**
-     * Get UA blacklist/whitelist Configuration 
-     * @return UserAgentFilter UA blacklist/whitelist Configuration
+     * Get UA blocklist/allowlist Configuration 
+     * @return UserAgentFilter UA blocklist/allowlist Configuration
      */
     public UserAgentFilter getUserAgentFilter() {
         return this.UserAgentFilter;
     }
 
     /**
-     * Set UA blacklist/whitelist Configuration
-     * @param UserAgentFilter UA blacklist/whitelist Configuration
+     * Set UA blocklist/allowlist Configuration
+     * @param UserAgentFilter UA blocklist/allowlist Configuration
      */
     public void setUserAgentFilter(UserAgentFilter UserAgentFilter) {
         this.UserAgentFilter = UserAgentFilter;

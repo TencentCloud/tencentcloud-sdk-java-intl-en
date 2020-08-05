@@ -59,6 +59,13 @@ Note: this parameter is currently fixed at 0.
     private String SmsSdkAppid;
 
     /**
+    * 
+    */
+    @SerializedName("EndDateTime")
+    @Expose
+    private Long EndDateTime;
+
+    /**
      * Get Pull start time in seconds in the format of UNIX timestamp. 
      * @return SendDateTime Pull start time in seconds in the format of UNIX timestamp.
      */
@@ -143,6 +150,22 @@ Note: this parameter is currently fixed at 0.
     }
 
     /**
+     * Get  
+     * @return EndDateTime 
+     */
+    public Long getEndDateTime() {
+        return this.EndDateTime;
+    }
+
+    /**
+     * Set 
+     * @param EndDateTime 
+     */
+    public void setEndDateTime(Long EndDateTime) {
+        this.EndDateTime = EndDateTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -151,6 +174,7 @@ Note: this parameter is currently fixed at 0.
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "PhoneNumber", this.PhoneNumber);
         this.setParamSimple(map, prefix + "SmsSdkAppid", this.SmsSdkAppid);
+        this.setParamSimple(map, prefix + "EndDateTime", this.EndDateTime);
 
     }
 }

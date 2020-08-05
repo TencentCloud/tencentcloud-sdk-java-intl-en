@@ -79,14 +79,14 @@ public class DescribeDBPerformanceResponse extends AbstractModel{
     private MonitorData ConnActive;
 
     /**
-    * Whether master/slave switch occurred. 1: yes, 0: no
+    * Whether primary/secondary switch occurred. 1: yes, 0: no
     */
     @SerializedName("IsMasterSwitched")
     @Expose
     private MonitorData IsMasterSwitched;
 
     /**
-    * Master/slave delay
+    * primary/secondary delay
     */
     @SerializedName("SlaveDelay")
     @Expose
@@ -228,32 +228,32 @@ public class DescribeDBPerformanceResponse extends AbstractModel{
     }
 
     /**
-     * Get Whether master/slave switch occurred. 1: yes, 0: no 
-     * @return IsMasterSwitched Whether master/slave switch occurred. 1: yes, 0: no
+     * Get Whether primary/secondary switch occurred. 1: yes, 0: no 
+     * @return IsMasterSwitched Whether primary/secondary switch occurred. 1: yes, 0: no
      */
     public MonitorData getIsMasterSwitched() {
         return this.IsMasterSwitched;
     }
 
     /**
-     * Set Whether master/slave switch occurred. 1: yes, 0: no
-     * @param IsMasterSwitched Whether master/slave switch occurred. 1: yes, 0: no
+     * Set Whether primary/secondary switch occurred. 1: yes, 0: no
+     * @param IsMasterSwitched Whether primary/secondary switch occurred. 1: yes, 0: no
      */
     public void setIsMasterSwitched(MonitorData IsMasterSwitched) {
         this.IsMasterSwitched = IsMasterSwitched;
     }
 
     /**
-     * Get Master/slave delay 
-     * @return SlaveDelay Master/slave delay
+     * Get primary/secondary delay 
+     * @return SlaveDelay primary/secondary delay
      */
     public MonitorData getSlaveDelay() {
         return this.SlaveDelay;
     }
 
     /**
-     * Set Master/slave delay
-     * @param SlaveDelay Master/slave delay
+     * Set primary/secondary delay
+     * @param SlaveDelay primary/secondary delay
      */
     public void setSlaveDelay(MonitorData SlaveDelay) {
         this.SlaveDelay = SlaveDelay;

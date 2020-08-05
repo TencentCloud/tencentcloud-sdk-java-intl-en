@@ -30,7 +30,7 @@ public class ModifyMediaLiveChannelRequest extends AbstractModel{
     private String Id;
 
     /**
-    * Channel name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
+    * Channel name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level.
     */
     @SerializedName("Name")
     @Expose
@@ -81,16 +81,16 @@ public class ModifyMediaLiveChannelRequest extends AbstractModel{
     }
 
     /**
-     * Get Channel name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level. 
-     * @return Name Channel name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
+     * Get Channel name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level. 
+     * @return Name Channel name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Channel name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
-     * @param Name Channel name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
+     * Set Channel name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level.
+     * @param Name Channel name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level.
      */
     public void setName(String Name) {
         this.Name = Name;

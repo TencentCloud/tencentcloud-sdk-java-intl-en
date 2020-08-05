@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateDBInstanceRequest extends AbstractModel{
 
     /**
-    * Number of nodes in each replica set. Currently, the number of nodes per replica set is fixed at 3, while the number of slave nodes per shard is customizable. For more information, please see the parameter returned by the `DescribeSpecInfo` API.
+    * Number of nodes in each replica set. Currently, the number of nodes per replica set is fixed at 3, while the number of secondary nodes per shard is customizable. For more information, please see the parameter returned by the `DescribeSpecInfo` API.
     */
     @SerializedName("NodeNum")
     @Expose
@@ -114,7 +114,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
     private String SubnetId;
 
     /**
-    * Instance password. If this parameter is not set, you need to set an instance password through the `SetPassword` API after creating an instance. The password can only contain 8–16 characters and must contain at least two of the following types of characters: letters, digits, and special characters `!@#%^*()`.
+    * Instance password. If this parameter is not set, you need to set an instance password through the `SetPassword` API after creating an instance. The password can only contain 8-16 characters and must contain at least two of the following types of characters: letters, digits, and special characters `!@#%^*()`.
     */
     @SerializedName("Password")
     @Expose
@@ -135,16 +135,44 @@ public class CreateDBInstanceRequest extends AbstractModel{
     private Long AutoRenewFlag;
 
     /**
-     * Get Number of nodes in each replica set. Currently, the number of nodes per replica set is fixed at 3, while the number of slave nodes per shard is customizable. For more information, please see the parameter returned by the `DescribeSpecInfo` API. 
-     * @return NodeNum Number of nodes in each replica set. Currently, the number of nodes per replica set is fixed at 3, while the number of slave nodes per shard is customizable. For more information, please see the parameter returned by the `DescribeSpecInfo` API.
+    * 
+    */
+    @SerializedName("AutoVoucher")
+    @Expose
+    private Long AutoVoucher;
+
+    /**
+    * 
+    */
+    @SerializedName("Clone")
+    @Expose
+    private Long Clone;
+
+    /**
+    * 
+    */
+    @SerializedName("Father")
+    @Expose
+    private String Father;
+
+    /**
+    * 
+    */
+    @SerializedName("SecurityGroup")
+    @Expose
+    private String [] SecurityGroup;
+
+    /**
+     * Get Number of nodes in each replica set. Currently, the number of nodes per replica set is fixed at 3, while the number of secondary nodes per shard is customizable. For more information, please see the parameter returned by the `DescribeSpecInfo` API. 
+     * @return NodeNum Number of nodes in each replica set. Currently, the number of nodes per replica set is fixed at 3, while the number of secondary nodes per shard is customizable. For more information, please see the parameter returned by the `DescribeSpecInfo` API.
      */
     public Long getNodeNum() {
         return this.NodeNum;
     }
 
     /**
-     * Set Number of nodes in each replica set. Currently, the number of nodes per replica set is fixed at 3, while the number of slave nodes per shard is customizable. For more information, please see the parameter returned by the `DescribeSpecInfo` API.
-     * @param NodeNum Number of nodes in each replica set. Currently, the number of nodes per replica set is fixed at 3, while the number of slave nodes per shard is customizable. For more information, please see the parameter returned by the `DescribeSpecInfo` API.
+     * Set Number of nodes in each replica set. Currently, the number of nodes per replica set is fixed at 3, while the number of secondary nodes per shard is customizable. For more information, please see the parameter returned by the `DescribeSpecInfo` API.
+     * @param NodeNum Number of nodes in each replica set. Currently, the number of nodes per replica set is fixed at 3, while the number of secondary nodes per shard is customizable. For more information, please see the parameter returned by the `DescribeSpecInfo` API.
      */
     public void setNodeNum(Long NodeNum) {
         this.NodeNum = NodeNum;
@@ -343,16 +371,16 @@ public class CreateDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Instance password. If this parameter is not set, you need to set an instance password through the `SetPassword` API after creating an instance. The password can only contain 8–16 characters and must contain at least two of the following types of characters: letters, digits, and special characters `!@#%^*()`. 
-     * @return Password Instance password. If this parameter is not set, you need to set an instance password through the `SetPassword` API after creating an instance. The password can only contain 8–16 characters and must contain at least two of the following types of characters: letters, digits, and special characters `!@#%^*()`.
+     * Get Instance password. If this parameter is not set, you need to set an instance password through the `SetPassword` API after creating an instance. The password can only contain 8-16 characters and must contain at least two of the following types of characters: letters, digits, and special characters `!@#%^*()`. 
+     * @return Password Instance password. If this parameter is not set, you need to set an instance password through the `SetPassword` API after creating an instance. The password can only contain 8-16 characters and must contain at least two of the following types of characters: letters, digits, and special characters `!@#%^*()`.
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Instance password. If this parameter is not set, you need to set an instance password through the `SetPassword` API after creating an instance. The password can only contain 8–16 characters and must contain at least two of the following types of characters: letters, digits, and special characters `!@#%^*()`.
-     * @param Password Instance password. If this parameter is not set, you need to set an instance password through the `SetPassword` API after creating an instance. The password can only contain 8–16 characters and must contain at least two of the following types of characters: letters, digits, and special characters `!@#%^*()`.
+     * Set Instance password. If this parameter is not set, you need to set an instance password through the `SetPassword` API after creating an instance. The password can only contain 8-16 characters and must contain at least two of the following types of characters: letters, digits, and special characters `!@#%^*()`.
+     * @param Password Instance password. If this parameter is not set, you need to set an instance password through the `SetPassword` API after creating an instance. The password can only contain 8-16 characters and must contain at least two of the following types of characters: letters, digits, and special characters `!@#%^*()`.
      */
     public void setPassword(String Password) {
         this.Password = Password;
@@ -391,6 +419,70 @@ public class CreateDBInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return AutoVoucher 
+     */
+    public Long getAutoVoucher() {
+        return this.AutoVoucher;
+    }
+
+    /**
+     * Set 
+     * @param AutoVoucher 
+     */
+    public void setAutoVoucher(Long AutoVoucher) {
+        this.AutoVoucher = AutoVoucher;
+    }
+
+    /**
+     * Get  
+     * @return Clone 
+     */
+    public Long getClone() {
+        return this.Clone;
+    }
+
+    /**
+     * Set 
+     * @param Clone 
+     */
+    public void setClone(Long Clone) {
+        this.Clone = Clone;
+    }
+
+    /**
+     * Get  
+     * @return Father 
+     */
+    public String getFather() {
+        return this.Father;
+    }
+
+    /**
+     * Set 
+     * @param Father 
+     */
+    public void setFather(String Father) {
+        this.Father = Father;
+    }
+
+    /**
+     * Get  
+     * @return SecurityGroup 
+     */
+    public String [] getSecurityGroup() {
+        return this.SecurityGroup;
+    }
+
+    /**
+     * Set 
+     * @param SecurityGroup 
+     */
+    public void setSecurityGroup(String [] SecurityGroup) {
+        this.SecurityGroup = SecurityGroup;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -410,6 +502,10 @@ public class CreateDBInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+        this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
+        this.setParamSimple(map, prefix + "Clone", this.Clone);
+        this.setParamSimple(map, prefix + "Father", this.Father);
+        this.setParamArraySimple(map, prefix + "SecurityGroup.", this.SecurityGroup);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class EndpointAuthInfo extends AbstractModel{
 
     /**
-    * The security group whitelist in CIDR format.
+    * The security group allowlist in CIDR format.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("WhiteIpList")
@@ -31,7 +31,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String [] WhiteIpList;
 
     /**
-    * The security group blacklist in CIDR format.
+    * The security group blocklist in CIDR format.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BlackIpList")
@@ -47,9 +47,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String AuthKey;
 
     /**
-     * Get The security group whitelist in CIDR format.
+     * Get The security group allowlist in CIDR format.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return WhiteIpList The security group whitelist in CIDR format.
+     * @return WhiteIpList The security group allowlist in CIDR format.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String [] getWhiteIpList() {
@@ -57,9 +57,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The security group whitelist in CIDR format.
+     * Set The security group allowlist in CIDR format.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param WhiteIpList The security group whitelist in CIDR format.
+     * @param WhiteIpList The security group allowlist in CIDR format.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setWhiteIpList(String [] WhiteIpList) {
@@ -67,9 +67,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The security group blacklist in CIDR format.
+     * Get The security group blocklist in CIDR format.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return BlackIpList The security group blacklist in CIDR format.
+     * @return BlackIpList The security group blocklist in CIDR format.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String [] getBlackIpList() {
@@ -77,9 +77,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The security group blacklist in CIDR format.
+     * Set The security group blocklist in CIDR format.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param BlackIpList The security group blacklist in CIDR format.
+     * @param BlackIpList The security group blocklist in CIDR format.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setBlackIpList(String [] BlackIpList) {

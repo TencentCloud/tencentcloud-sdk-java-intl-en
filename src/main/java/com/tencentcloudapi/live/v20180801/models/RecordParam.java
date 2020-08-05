@@ -25,7 +25,7 @@ public class RecordParam extends AbstractModel{
     /**
     * Recording interval.
 In seconds. Default value: 1800.
-Value range: 300–7200.
+Value range: 300-7200.
 This parameter is not valid for HLS, and a file will be generated from push start to interruption during HLS recording.
     */
     @SerializedName("RecordInterval")
@@ -34,7 +34,7 @@ This parameter is not valid for HLS, and a file will be generated from push star
 
     /**
     * Recording storage period.
-In seconds. Value range: 0–93312000.
+In seconds. Value range: 0-93312000.
 0: permanent storage.
     */
     @SerializedName("StorageTime")
@@ -83,11 +83,11 @@ If this parameter is not set, the recording filename will be `{StreamID}_{StartY
     /**
      * Get Recording interval.
 In seconds. Default value: 1800.
-Value range: 300–7200.
+Value range: 300-7200.
 This parameter is not valid for HLS, and a file will be generated from push start to interruption during HLS recording. 
      * @return RecordInterval Recording interval.
 In seconds. Default value: 1800.
-Value range: 300–7200.
+Value range: 300-7200.
 This parameter is not valid for HLS, and a file will be generated from push start to interruption during HLS recording.
      */
     public Long getRecordInterval() {
@@ -97,11 +97,11 @@ This parameter is not valid for HLS, and a file will be generated from push star
     /**
      * Set Recording interval.
 In seconds. Default value: 1800.
-Value range: 300–7200.
+Value range: 300-7200.
 This parameter is not valid for HLS, and a file will be generated from push start to interruption during HLS recording.
      * @param RecordInterval Recording interval.
 In seconds. Default value: 1800.
-Value range: 300–7200.
+Value range: 300-7200.
 This parameter is not valid for HLS, and a file will be generated from push start to interruption during HLS recording.
      */
     public void setRecordInterval(Long RecordInterval) {
@@ -110,10 +110,10 @@ This parameter is not valid for HLS, and a file will be generated from push star
 
     /**
      * Get Recording storage period.
-In seconds. Value range: 0–93312000.
+In seconds. Value range: 0-93312000.
 0: permanent storage. 
      * @return StorageTime Recording storage period.
-In seconds. Value range: 0–93312000.
+In seconds. Value range: 0-93312000.
 0: permanent storage.
      */
     public Long getStorageTime() {
@@ -122,10 +122,10 @@ In seconds. Value range: 0–93312000.
 
     /**
      * Set Recording storage period.
-In seconds. Value range: 0–93312000.
+In seconds. Value range: 0-93312000.
 0: permanent storage.
      * @param StorageTime Recording storage period.
-In seconds. Value range: 0–93312000.
+In seconds. Value range: 0-93312000.
 0: permanent storage.
      */
     public void setStorageTime(Long StorageTime) {

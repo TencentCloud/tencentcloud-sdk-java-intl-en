@@ -170,7 +170,7 @@ public class DCDBInstanceInfo extends AbstractModel{
     private ShardInfo [] ShardDetail;
 
     /**
-    * Number of nodes. 2: one master and one slave; 3: one master and two slaves
+    * Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
     */
     @SerializedName("NodeCount")
     @Expose
@@ -633,16 +633,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Number of nodes. 2: one master and one slave; 3: one master and two slaves 
-     * @return NodeCount Number of nodes. 2: one master and one slave; 3: one master and two slaves
+     * Get Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries 
+     * @return NodeCount Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
      */
     public Long getNodeCount() {
         return this.NodeCount;
     }
 
     /**
-     * Set Number of nodes. 2: one master and one slave; 3: one master and two slaves
-     * @param NodeCount Number of nodes. 2: one master and one slave; 3: one master and two slaves
+     * Set Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
+     * @param NodeCount Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
      */
     public void setNodeCount(Long NodeCount) {
         this.NodeCount = NodeCount;

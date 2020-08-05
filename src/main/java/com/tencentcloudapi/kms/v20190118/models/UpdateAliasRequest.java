@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class UpdateAliasRequest extends AbstractModel{
 
     /**
-    * New alias containing 1–60 characters or digits
+    * New alias containing 1-60 characters or digits
     */
     @SerializedName("Alias")
     @Expose
@@ -37,16 +37,16 @@ public class UpdateAliasRequest extends AbstractModel{
     private String KeyId;
 
     /**
-     * Get New alias containing 1–60 characters or digits 
-     * @return Alias New alias containing 1–60 characters or digits
+     * Get New alias containing 1-60 characters or digits 
+     * @return Alias New alias containing 1-60 characters or digits
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * Set New alias containing 1–60 characters or digits
-     * @param Alias New alias containing 1–60 characters or digits
+     * Set New alias containing 1-60 characters or digits
+     * @param Alias New alias containing 1-60 characters or digits
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;

@@ -506,7 +506,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the purchasable capacity specifications of Redis instances in the specified AZ and instance type. If you are not in the whitelist for the AZ or instance type, you cannot view the details of the capacity specifications. To apply for the eligibility, please submit a ticket.
+     *This API is used to query the purchasable capacity specifications of Redis instances in the specified AZ and instance type. If you are not in the allowlist for the AZ or instance type, you cannot view the details of the capacity specifications. To apply for the eligibility, please submit a ticket.
      * @param req DescribeProductInfoRequest
      * @return DescribeProductInfoResponse
      * @throws TencentCloudSDKException

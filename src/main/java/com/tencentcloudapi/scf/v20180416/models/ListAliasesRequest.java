@@ -37,7 +37,7 @@ public class ListAliasesRequest extends AbstractModel{
     private String Namespace;
 
     /**
-    * If this parameter is provided, only aliases associated with this function version will be returned
+    * If this parameter is provided, only aliases associated with this function version will be returned.
     */
     @SerializedName("FunctionVersion")
     @Expose
@@ -90,16 +90,16 @@ public class ListAliasesRequest extends AbstractModel{
     }
 
     /**
-     * Get If this parameter is provided, only aliases associated with this function version will be returned 
-     * @return FunctionVersion If this parameter is provided, only aliases associated with this function version will be returned
+     * Get If this parameter is provided, only aliases associated with this function version will be returned. 
+     * @return FunctionVersion If this parameter is provided, only aliases associated with this function version will be returned.
      */
     public String getFunctionVersion() {
         return this.FunctionVersion;
     }
 
     /**
-     * Set If this parameter is provided, only aliases associated with this function version will be returned
-     * @param FunctionVersion If this parameter is provided, only aliases associated with this function version will be returned
+     * Set If this parameter is provided, only aliases associated with this function version will be returned.
+     * @param FunctionVersion If this parameter is provided, only aliases associated with this function version will be returned.
      */
     public void setFunctionVersion(String FunctionVersion) {
         this.FunctionVersion = FunctionVersion;

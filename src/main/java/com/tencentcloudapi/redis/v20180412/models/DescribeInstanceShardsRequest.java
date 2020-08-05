@@ -30,7 +30,7 @@ public class DescribeInstanceShardsRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Whether to filter out the slave node information
+    * Whether to filter out the secondary node information
     */
     @SerializedName("FilterSlave")
     @Expose
@@ -53,16 +53,16 @@ public class DescribeInstanceShardsRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to filter out the slave node information 
-     * @return FilterSlave Whether to filter out the slave node information
+     * Get Whether to filter out the secondary node information 
+     * @return FilterSlave Whether to filter out the secondary node information
      */
     public Boolean getFilterSlave() {
         return this.FilterSlave;
     }
 
     /**
-     * Set Whether to filter out the slave node information
-     * @param FilterSlave Whether to filter out the slave node information
+     * Set Whether to filter out the secondary node information
+     * @param FilterSlave Whether to filter out the secondary node information
      */
     public void setFilterSlave(Boolean FilterSlave) {
         this.FilterSlave = FilterSlave;

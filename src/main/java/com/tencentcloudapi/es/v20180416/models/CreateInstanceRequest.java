@@ -66,7 +66,7 @@ public class CreateInstanceRequest extends AbstractModel{
 
     /**
     * This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2–50)
+Number of nodes (2-50)
     */
     @SerializedName("NodeNum")
     @Expose
@@ -140,7 +140,7 @@ Node disk size in GB
 
     /**
     * This parameter has been disused. Please use `NodeInfoList`
-Whether to create a dedicated master node <li>true: yes </li><li>false: no </li>Default value: false
+Whether to create a dedicated primary node <li>true: yes </li><li>false: no </li>Default value: false
     */
     @SerializedName("EnableDedicatedMaster")
     @Expose
@@ -148,7 +148,7 @@ Whether to create a dedicated master node <li>true: yes </li><li>false: no </li>
 
     /**
     * This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated master nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
+Number of dedicated primary nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
     */
     @SerializedName("MasterNodeNum")
     @Expose
@@ -156,7 +156,7 @@ Number of dedicated master nodes (only 3 and 5 are supported. This value must be
 
     /**
     * This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+Dedicated primary node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
     */
     @SerializedName("MasterNodeType")
     @Expose
@@ -164,7 +164,7 @@ Dedicated master node type, which must be passed in if `EnableDedicatedMaster` i
 
     /**
     * This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
+Dedicated primary node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
     */
     @SerializedName("MasterNodeDiskSize")
     @Expose
@@ -317,9 +317,9 @@ Dedicated master node disk size in GB, which is optional. If passed in, it can o
 
     /**
      * Get This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2–50) 
+Number of nodes (2-50) 
      * @return NodeNum This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2–50)
+Number of nodes (2-50)
      */
     public Long getNodeNum() {
         return this.NodeNum;
@@ -327,9 +327,9 @@ Number of nodes (2–50)
 
     /**
      * Set This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2–50)
+Number of nodes (2-50)
      * @param NodeNum This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2–50)
+Number of nodes (2-50)
      */
     public void setNodeNum(Long NodeNum) {
         this.NodeNum = NodeNum;
@@ -493,9 +493,9 @@ Node disk size in GB
 
     /**
      * Get This parameter has been disused. Please use `NodeInfoList`
-Whether to create a dedicated master node <li>true: yes </li><li>false: no </li>Default value: false 
+Whether to create a dedicated primary node <li>true: yes </li><li>false: no </li>Default value: false 
      * @return EnableDedicatedMaster This parameter has been disused. Please use `NodeInfoList`
-Whether to create a dedicated master node <li>true: yes </li><li>false: no </li>Default value: false
+Whether to create a dedicated primary node <li>true: yes </li><li>false: no </li>Default value: false
      */
     public Boolean getEnableDedicatedMaster() {
         return this.EnableDedicatedMaster;
@@ -503,9 +503,9 @@ Whether to create a dedicated master node <li>true: yes </li><li>false: no </li>
 
     /**
      * Set This parameter has been disused. Please use `NodeInfoList`
-Whether to create a dedicated master node <li>true: yes </li><li>false: no </li>Default value: false
+Whether to create a dedicated primary node <li>true: yes </li><li>false: no </li>Default value: false
      * @param EnableDedicatedMaster This parameter has been disused. Please use `NodeInfoList`
-Whether to create a dedicated master node <li>true: yes </li><li>false: no </li>Default value: false
+Whether to create a dedicated primary node <li>true: yes </li><li>false: no </li>Default value: false
      */
     public void setEnableDedicatedMaster(Boolean EnableDedicatedMaster) {
         this.EnableDedicatedMaster = EnableDedicatedMaster;
@@ -513,9 +513,9 @@ Whether to create a dedicated master node <li>true: yes </li><li>false: no </li>
 
     /**
      * Get This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated master nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`) 
+Number of dedicated primary nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`) 
      * @return MasterNodeNum This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated master nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
+Number of dedicated primary nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
      */
     public Long getMasterNodeNum() {
         return this.MasterNodeNum;
@@ -523,9 +523,9 @@ Number of dedicated master nodes (only 3 and 5 are supported. This value must be
 
     /**
      * Set This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated master nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
+Number of dedicated primary nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
      * @param MasterNodeNum This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated master nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
+Number of dedicated primary nodes (only 3 and 5 are supported. This value must be passed in if `EnableDedicatedMaster` is `true`)
      */
     public void setMasterNodeNum(Long MasterNodeNum) {
         this.MasterNodeNum = MasterNodeNum;
@@ -533,9 +533,9 @@ Number of dedicated master nodes (only 3 and 5 are supported. This value must be
 
     /**
      * Get This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li> 
+Dedicated primary node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li> 
      * @return MasterNodeType This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+Dedicated primary node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
      */
     public String getMasterNodeType() {
         return this.MasterNodeType;
@@ -543,9 +543,9 @@ Dedicated master node type, which must be passed in if `EnableDedicatedMaster` i
 
     /**
      * Set This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+Dedicated primary node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
      * @param MasterNodeType This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+Dedicated primary node type, which must be passed in if `EnableDedicatedMaster` is `true` <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
      */
     public void setMasterNodeType(String MasterNodeType) {
         this.MasterNodeType = MasterNodeType;
@@ -553,9 +553,9 @@ Dedicated master node type, which must be passed in if `EnableDedicatedMaster` i
 
     /**
      * Get This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently 
+Dedicated primary node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently 
      * @return MasterNodeDiskSize This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
+Dedicated primary node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
      */
     public Long getMasterNodeDiskSize() {
         return this.MasterNodeDiskSize;
@@ -563,9 +563,9 @@ Dedicated master node disk size in GB, which is optional. If passed in, it can o
 
     /**
      * Set This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
+Dedicated primary node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
      * @param MasterNodeDiskSize This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
+Dedicated primary node disk size in GB, which is optional. If passed in, it can only be 50 and cannot be customized currently
      */
     public void setMasterNodeDiskSize(Long MasterNodeDiskSize) {
         this.MasterNodeDiskSize = MasterNodeDiskSize;

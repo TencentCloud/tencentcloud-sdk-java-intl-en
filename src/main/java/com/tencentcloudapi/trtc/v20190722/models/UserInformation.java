@@ -23,184 +23,184 @@ import java.util.HashMap;
 public class UserInformation extends AbstractModel{
 
     /**
-    * Room ID of string type.
+    * 
     */
     @SerializedName("RoomStr")
     @Expose
     private String RoomStr;
 
     /**
-    * User ID
+    * 
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * The time when the user enters the room
+    * 
     */
     @SerializedName("JoinTs")
     @Expose
     private Long JoinTs;
 
     /**
-    * The time when the user exits the room
+    * 
     */
     @SerializedName("LeaveTs")
     @Expose
     private Long LeaveTs;
 
     /**
-    * Device type
+    * 
     */
     @SerializedName("DeviceType")
     @Expose
     private String DeviceType;
 
     /**
-    * SDK version number
+    * 
     */
     @SerializedName("SdkVersion")
     @Expose
     private String SdkVersion;
 
     /**
-    * Client IP
+    * 
     */
     @SerializedName("ClientIp")
     @Expose
     private String ClientIp;
 
     /**
-    * Determine whether a user has left the room
+    * 
     */
     @SerializedName("Finished")
     @Expose
     private Boolean Finished;
 
     /**
-     * Get Room ID of string type. 
-     * @return RoomStr Room ID of string type.
+     * Get  
+     * @return RoomStr 
      */
     public String getRoomStr() {
         return this.RoomStr;
     }
 
     /**
-     * Set Room ID of string type.
-     * @param RoomStr Room ID of string type.
+     * Set 
+     * @param RoomStr 
      */
     public void setRoomStr(String RoomStr) {
         this.RoomStr = RoomStr;
     }
 
     /**
-     * Get User ID 
-     * @return UserId User ID
+     * Get  
+     * @return UserId 
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set User ID
-     * @param UserId User ID
+     * Set 
+     * @param UserId 
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get The time when the user enters the room 
-     * @return JoinTs The time when the user enters the room
+     * Get  
+     * @return JoinTs 
      */
     public Long getJoinTs() {
         return this.JoinTs;
     }
 
     /**
-     * Set The time when the user enters the room
-     * @param JoinTs The time when the user enters the room
+     * Set 
+     * @param JoinTs 
      */
     public void setJoinTs(Long JoinTs) {
         this.JoinTs = JoinTs;
     }
 
     /**
-     * Get The time when the user exits the room 
-     * @return LeaveTs The time when the user exits the room
+     * Get  
+     * @return LeaveTs 
      */
     public Long getLeaveTs() {
         return this.LeaveTs;
     }
 
     /**
-     * Set The time when the user exits the room
-     * @param LeaveTs The time when the user exits the room
+     * Set 
+     * @param LeaveTs 
      */
     public void setLeaveTs(Long LeaveTs) {
         this.LeaveTs = LeaveTs;
     }
 
     /**
-     * Get Device type 
-     * @return DeviceType Device type
+     * Get  
+     * @return DeviceType 
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set Device type
-     * @param DeviceType Device type
+     * Set 
+     * @param DeviceType 
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
     }
 
     /**
-     * Get SDK version number 
-     * @return SdkVersion SDK version number
+     * Get  
+     * @return SdkVersion 
      */
     public String getSdkVersion() {
         return this.SdkVersion;
     }
 
     /**
-     * Set SDK version number
-     * @param SdkVersion SDK version number
+     * Set 
+     * @param SdkVersion 
      */
     public void setSdkVersion(String SdkVersion) {
         this.SdkVersion = SdkVersion;
     }
 
     /**
-     * Get Client IP 
-     * @return ClientIp Client IP
+     * Get  
+     * @return ClientIp 
      */
     public String getClientIp() {
         return this.ClientIp;
     }
 
     /**
-     * Set Client IP
-     * @param ClientIp Client IP
+     * Set 
+     * @param ClientIp 
      */
     public void setClientIp(String ClientIp) {
         this.ClientIp = ClientIp;
     }
 
     /**
-     * Get Determine whether a user has left the room 
-     * @return Finished Determine whether a user has left the room
+     * Get  
+     * @return Finished 
      */
     public Boolean getFinished() {
         return this.Finished;
     }
 
     /**
-     * Set Determine whether a user has left the room
-     * @param Finished Determine whether a user has left the room
+     * Set 
+     * @param Finished 
      */
     public void setFinished(Boolean Finished) {
         this.Finished = Finished;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class GetAliasResponse extends AbstractModel{
 
     /**
-    * Master version of alias
+    * Master version pointed to by the alias
     */
     @SerializedName("FunctionVersion")
     @Expose
@@ -75,16 +75,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Master version of alias 
-     * @return FunctionVersion Master version of alias
+     * Get Master version pointed to by the alias 
+     * @return FunctionVersion Master version pointed to by the alias
      */
     public String getFunctionVersion() {
         return this.FunctionVersion;
     }
 
     /**
-     * Set Master version of alias
-     * @param FunctionVersion Master version of alias
+     * Set Master version pointed to by the alias
+     * @param FunctionVersion Master version pointed to by the alias
      */
     public void setFunctionVersion(String FunctionVersion) {
         this.FunctionVersion = FunctionVersion;

@@ -37,14 +37,14 @@ public class SnapshotTemplateInfo extends AbstractModel{
     private String TemplateName;
 
     /**
-    * Screencapturing interval. Value range: 5–300s.
+    * Screencapturing interval. Value range: 5-300s.
     */
     @SerializedName("SnapshotInterval")
     @Expose
     private Long SnapshotInterval;
 
     /**
-    * Screenshot width. Value range: 0–3000. 
+    * Screenshot width. Value range: 0-3000. 
 0: original width and fit to the original ratio.
     */
     @SerializedName("Width")
@@ -52,7 +52,7 @@ public class SnapshotTemplateInfo extends AbstractModel{
     private Long Width;
 
     /**
-    * Screenshot height. Value range: 0–2000.
+    * Screenshot height. Value range: 0-2000.
 0: original height and fit to the original ratio.
     */
     @SerializedName("Height")
@@ -143,25 +143,25 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Screencapturing interval. Value range: 5–300s. 
-     * @return SnapshotInterval Screencapturing interval. Value range: 5–300s.
+     * Get Screencapturing interval. Value range: 5-300s. 
+     * @return SnapshotInterval Screencapturing interval. Value range: 5-300s.
      */
     public Long getSnapshotInterval() {
         return this.SnapshotInterval;
     }
 
     /**
-     * Set Screencapturing interval. Value range: 5–300s.
-     * @param SnapshotInterval Screencapturing interval. Value range: 5–300s.
+     * Set Screencapturing interval. Value range: 5-300s.
+     * @param SnapshotInterval Screencapturing interval. Value range: 5-300s.
      */
     public void setSnapshotInterval(Long SnapshotInterval) {
         this.SnapshotInterval = SnapshotInterval;
     }
 
     /**
-     * Get Screenshot width. Value range: 0–3000. 
+     * Get Screenshot width. Value range: 0-3000. 
 0: original width and fit to the original ratio. 
-     * @return Width Screenshot width. Value range: 0–3000. 
+     * @return Width Screenshot width. Value range: 0-3000. 
 0: original width and fit to the original ratio.
      */
     public Long getWidth() {
@@ -169,9 +169,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Screenshot width. Value range: 0–3000. 
+     * Set Screenshot width. Value range: 0-3000. 
 0: original width and fit to the original ratio.
-     * @param Width Screenshot width. Value range: 0–3000. 
+     * @param Width Screenshot width. Value range: 0-3000. 
 0: original width and fit to the original ratio.
      */
     public void setWidth(Long Width) {
@@ -179,9 +179,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Screenshot height. Value range: 0–2000.
+     * Get Screenshot height. Value range: 0-2000.
 0: original height and fit to the original ratio. 
-     * @return Height Screenshot height. Value range: 0–2000.
+     * @return Height Screenshot height. Value range: 0-2000.
 0: original height and fit to the original ratio.
      */
     public Long getHeight() {
@@ -189,9 +189,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Screenshot height. Value range: 0–2000.
+     * Set Screenshot height. Value range: 0-2000.
 0: original height and fit to the original ratio.
-     * @param Height Screenshot height. Value range: 0–2000.
+     * @param Height Screenshot height. Value range: 0-2000.
 0: original height and fit to the original ratio.
      */
     public void setHeight(Long Height) {

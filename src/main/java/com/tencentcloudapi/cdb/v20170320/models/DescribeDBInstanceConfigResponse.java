@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeDBInstanceConfigResponse extends AbstractModel{
 
     /**
-    * Data protection mode of the master instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
+    * Data protection mode of the primary instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
     */
     @SerializedName("ProtectMode")
     @Expose
@@ -44,14 +44,14 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel{
     private String Zone;
 
     /**
-    * Configuration information of the slave database.
+    * Configuration information of the secondary database.
     */
     @SerializedName("SlaveConfig")
     @Expose
     private SlaveConfig SlaveConfig;
 
     /**
-    * Configuration information of slave database 2 of a strong sync instance.
+    * Configuration information of secondary database 2 of a strong sync instance.
     */
     @SerializedName("BackupConfig")
     @Expose
@@ -65,16 +65,16 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Data protection mode of the master instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication). 
-     * @return ProtectMode Data protection mode of the master instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
+     * Get Data protection mode of the primary instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication). 
+     * @return ProtectMode Data protection mode of the primary instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
      */
     public Long getProtectMode() {
         return this.ProtectMode;
     }
 
     /**
-     * Set Data protection mode of the master instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
-     * @param ProtectMode Data protection mode of the master instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
+     * Set Data protection mode of the primary instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
+     * @param ProtectMode Data protection mode of the primary instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
      */
     public void setProtectMode(Long ProtectMode) {
         this.ProtectMode = ProtectMode;
@@ -113,32 +113,32 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel{
     }
 
     /**
-     * Get Configuration information of the slave database. 
-     * @return SlaveConfig Configuration information of the slave database.
+     * Get Configuration information of the secondary database. 
+     * @return SlaveConfig Configuration information of the secondary database.
      */
     public SlaveConfig getSlaveConfig() {
         return this.SlaveConfig;
     }
 
     /**
-     * Set Configuration information of the slave database.
-     * @param SlaveConfig Configuration information of the slave database.
+     * Set Configuration information of the secondary database.
+     * @param SlaveConfig Configuration information of the secondary database.
      */
     public void setSlaveConfig(SlaveConfig SlaveConfig) {
         this.SlaveConfig = SlaveConfig;
     }
 
     /**
-     * Get Configuration information of slave database 2 of a strong sync instance. 
-     * @return BackupConfig Configuration information of slave database 2 of a strong sync instance.
+     * Get Configuration information of secondary database 2 of a strong sync instance. 
+     * @return BackupConfig Configuration information of secondary database 2 of a strong sync instance.
      */
     public BackupConfig getBackupConfig() {
         return this.BackupConfig;
     }
 
     /**
-     * Set Configuration information of slave database 2 of a strong sync instance.
-     * @param BackupConfig Configuration information of slave database 2 of a strong sync instance.
+     * Set Configuration information of secondary database 2 of a strong sync instance.
+     * @param BackupConfig Configuration information of secondary database 2 of a strong sync instance.
      */
     public void setBackupConfig(BackupConfig BackupConfig) {
         this.BackupConfig = BackupConfig;

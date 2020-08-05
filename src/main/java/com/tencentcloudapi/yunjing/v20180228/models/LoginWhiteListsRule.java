@@ -51,7 +51,7 @@ public class LoginWhiteListsRule extends AbstractModel{
     private Boolean IsGlobal;
 
     /**
-    * Server for which the whitelist takes effect
+    * Server for which the allowlist takes effect
     */
     @SerializedName("HostIp")
     @Expose
@@ -63,6 +63,20 @@ public class LoginWhiteListsRule extends AbstractModel{
     @SerializedName("Id")
     @Expose
     private Long Id;
+
+    /**
+    * 
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * 
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
 
     /**
      * Get Whitelisted location 
@@ -129,16 +143,16 @@ public class LoginWhiteListsRule extends AbstractModel{
     }
 
     /**
-     * Get Server for which the whitelist takes effect 
-     * @return HostIp Server for which the whitelist takes effect
+     * Get Server for which the allowlist takes effect 
+     * @return HostIp Server for which the allowlist takes effect
      */
     public String getHostIp() {
         return this.HostIp;
     }
 
     /**
-     * Set Server for which the whitelist takes effect
-     * @param HostIp Server for which the whitelist takes effect
+     * Set Server for which the allowlist takes effect
+     * @param HostIp Server for which the allowlist takes effect
      */
     public void setHostIp(String HostIp) {
         this.HostIp = HostIp;
@@ -161,6 +175,38 @@ public class LoginWhiteListsRule extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return StartTime 
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 
+     * @param StartTime 
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get  
+     * @return EndTime 
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set 
+     * @param EndTime 
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +216,8 @@ public class LoginWhiteListsRule extends AbstractModel{
         this.setParamSimple(map, prefix + "IsGlobal", this.IsGlobal);
         this.setParamSimple(map, prefix + "HostIp", this.HostIp);
         this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
 
     }
 }

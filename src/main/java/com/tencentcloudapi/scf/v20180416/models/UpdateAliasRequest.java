@@ -37,7 +37,7 @@ public class UpdateAliasRequest extends AbstractModel{
     private String Name;
 
     /**
-    * Master version of alias
+    * Master version pointed to by the alias
     */
     @SerializedName("FunctionVersion")
     @Expose
@@ -97,16 +97,16 @@ public class UpdateAliasRequest extends AbstractModel{
     }
 
     /**
-     * Get Master version of alias 
-     * @return FunctionVersion Master version of alias
+     * Get Master version pointed to by the alias 
+     * @return FunctionVersion Master version pointed to by the alias
      */
     public String getFunctionVersion() {
         return this.FunctionVersion;
     }
 
     /**
-     * Set Master version of alias
-     * @param FunctionVersion Master version of alias
+     * Set Master version pointed to by the alias
+     * @param FunctionVersion Master version pointed to by the alias
      */
     public void setFunctionVersion(String FunctionVersion) {
         this.FunctionVersion = FunctionVersion;

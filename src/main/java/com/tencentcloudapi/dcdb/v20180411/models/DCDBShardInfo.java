@@ -121,7 +121,7 @@ public class DCDBShardInfo extends AbstractModel{
     private String PeriodEndTime;
 
     /**
-    * Number of nodes. 2: one master and one slave; 3: one master and two slaves
+    * Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
     */
     @SerializedName("NodeCount")
     @Expose
@@ -179,7 +179,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ShardMasterZone;
 
     /**
-    * List of slave AZs of a shard
+    * List of secondary AZs of a shard
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ShardSlaveZones")
@@ -418,16 +418,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Number of nodes. 2: one master and one slave; 3: one master and two slaves 
-     * @return NodeCount Number of nodes. 2: one master and one slave; 3: one master and two slaves
+     * Get Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries 
+     * @return NodeCount Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
      */
     public Long getNodeCount() {
         return this.NodeCount;
     }
 
     /**
-     * Set Number of nodes. 2: one master and one slave; 3: one master and two slaves
-     * @param NodeCount Number of nodes. 2: one master and one slave; 3: one master and two slaves
+     * Set Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
+     * @param NodeCount Number of nodes. 2: one primary and one secondary; 3: one primary and two secondaries
      */
     public void setNodeCount(Long NodeCount) {
         this.NodeCount = NodeCount;
@@ -554,9 +554,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of slave AZs of a shard
+     * Get List of secondary AZs of a shard
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ShardSlaveZones List of slave AZs of a shard
+     * @return ShardSlaveZones List of secondary AZs of a shard
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String [] getShardSlaveZones() {
@@ -564,9 +564,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set List of slave AZs of a shard
+     * Set List of secondary AZs of a shard
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ShardSlaveZones List of slave AZs of a shard
+     * @param ShardSlaveZones List of secondary AZs of a shard
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setShardSlaveZones(String [] ShardSlaveZones) {

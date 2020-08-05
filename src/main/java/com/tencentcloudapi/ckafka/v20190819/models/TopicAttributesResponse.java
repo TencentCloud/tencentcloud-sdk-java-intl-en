@@ -52,14 +52,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long PartitionNum;
 
     /**
-    * IP whitelist switch. 1: enabled, 0: disabled
+    * IP allowlist switch. 1: enabled, 0: disabled
     */
     @SerializedName("EnableWhiteList")
     @Expose
     private Long EnableWhiteList;
 
     /**
-    * IP whitelist list
+    * IP allowlist list
     */
     @SerializedName("IpWhiteList")
     @Expose
@@ -148,32 +148,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get IP whitelist switch. 1: enabled, 0: disabled 
-     * @return EnableWhiteList IP whitelist switch. 1: enabled, 0: disabled
+     * Get IP allowlist switch. 1: enabled, 0: disabled 
+     * @return EnableWhiteList IP allowlist switch. 1: enabled, 0: disabled
      */
     public Long getEnableWhiteList() {
         return this.EnableWhiteList;
     }
 
     /**
-     * Set IP whitelist switch. 1: enabled, 0: disabled
-     * @param EnableWhiteList IP whitelist switch. 1: enabled, 0: disabled
+     * Set IP allowlist switch. 1: enabled, 0: disabled
+     * @param EnableWhiteList IP allowlist switch. 1: enabled, 0: disabled
      */
     public void setEnableWhiteList(Long EnableWhiteList) {
         this.EnableWhiteList = EnableWhiteList;
     }
 
     /**
-     * Get IP whitelist list 
-     * @return IpWhiteList IP whitelist list
+     * Get IP allowlist list 
+     * @return IpWhiteList IP allowlist list
      */
     public String [] getIpWhiteList() {
         return this.IpWhiteList;
     }
 
     /**
-     * Set IP whitelist list
-     * @param IpWhiteList IP whitelist list
+     * Set IP allowlist list
+     * @param IpWhiteList IP allowlist list
      */
     public void setIpWhiteList(String [] IpWhiteList) {
         this.IpWhiteList = IpWhiteList;

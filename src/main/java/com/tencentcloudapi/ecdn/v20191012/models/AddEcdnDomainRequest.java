@@ -51,7 +51,7 @@ public class AddEcdnDomainRequest extends AbstractModel{
     private Long ProjectId;
 
     /**
-    * IP blacklist/whitelist configuration.
+    * IP block/allowlist configuration.
     */
     @SerializedName("IpFilter")
     @Expose
@@ -164,16 +164,16 @@ public class AddEcdnDomainRequest extends AbstractModel{
     }
 
     /**
-     * Get IP blacklist/whitelist configuration. 
-     * @return IpFilter IP blacklist/whitelist configuration.
+     * Get IP block/allowlist configuration. 
+     * @return IpFilter IP block/allowlist configuration.
      */
     public IpFilter getIpFilter() {
         return this.IpFilter;
     }
 
     /**
-     * Set IP blacklist/whitelist configuration.
-     * @param IpFilter IP blacklist/whitelist configuration.
+     * Set IP block/allowlist configuration.
+     * @param IpFilter IP block/allowlist configuration.
      */
     public void setIpFilter(IpFilter IpFilter) {
         this.IpFilter = IpFilter;

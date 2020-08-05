@@ -45,7 +45,7 @@ Data generated before or at 23:59:59 on the end date will be returned
     /**
     * Object representing the sort criteria. The following objects are supported:
 url: sorts by access URL (including the query string). Supported filters are `flux` and `request`
-path: sorts by access URL (excluding the query string). Supported filters are `flux` and `request` (whitelist-based feature)
+path: sorts by access URL (excluding the query string). Supported filters are `flux` and `request` (allowlist-based feature)
 district: sorts by district. Supported filters are `flux` and `request`
 isp: sorts by ISP. Supported filters are `flux` and `request`
 host: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, 2XX, 3XX, 4XX, 5XX, and `statusCode`
@@ -92,7 +92,7 @@ Please note that if domain names are specified, this parameter will be ignored.
     private Long Project;
 
     /**
-    * Default is `false` for multi–domain name queries, which returns sorted results of all domain names. 
+    * Default is `false` for multi-domain name queries, which returns sorted results of all domain names. 
 If `Metric` is `url`, `path`, `district`, or `isp` and `Filter` is `flux` or `request`, it can be set to `true` to return the sorted results of each domain.
     */
     @SerializedName("Detail")
@@ -183,14 +183,14 @@ Data generated before or at 23:59:59 on the end date will be returned
     /**
      * Get Object representing the sort criteria. The following objects are supported:
 url: sorts by access URL (including the query string). Supported filters are `flux` and `request`
-path: sorts by access URL (excluding the query string). Supported filters are `flux` and `request` (whitelist-based feature)
+path: sorts by access URL (excluding the query string). Supported filters are `flux` and `request` (allowlist-based feature)
 district: sorts by district. Supported filters are `flux` and `request`
 isp: sorts by ISP. Supported filters are `flux` and `request`
 host: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, 2XX, 3XX, 4XX, 5XX, and `statusCode`
 originHost: sorts by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, `origin_2XX`, `origin_3XX`, `origin_4XX`, `origin_5XX`, and `OriginStatusCode` 
      * @return Metric Object representing the sort criteria. The following objects are supported:
 url: sorts by access URL (including the query string). Supported filters are `flux` and `request`
-path: sorts by access URL (excluding the query string). Supported filters are `flux` and `request` (whitelist-based feature)
+path: sorts by access URL (excluding the query string). Supported filters are `flux` and `request` (allowlist-based feature)
 district: sorts by district. Supported filters are `flux` and `request`
 isp: sorts by ISP. Supported filters are `flux` and `request`
 host: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, 2XX, 3XX, 4XX, 5XX, and `statusCode`
@@ -203,14 +203,14 @@ originHost: sorts by domain name origin-pull data. Supported filters are `flux`,
     /**
      * Set Object representing the sort criteria. The following objects are supported:
 url: sorts by access URL (including the query string). Supported filters are `flux` and `request`
-path: sorts by access URL (excluding the query string). Supported filters are `flux` and `request` (whitelist-based feature)
+path: sorts by access URL (excluding the query string). Supported filters are `flux` and `request` (allowlist-based feature)
 district: sorts by district. Supported filters are `flux` and `request`
 isp: sorts by ISP. Supported filters are `flux` and `request`
 host: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, 2XX, 3XX, 4XX, 5XX, and `statusCode`
 originHost: sorts by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, `origin_2XX`, `origin_3XX`, `origin_4XX`, `origin_5XX`, and `OriginStatusCode`
      * @param Metric Object representing the sort criteria. The following objects are supported:
 url: sorts by access URL (including the query string). Supported filters are `flux` and `request`
-path: sorts by access URL (excluding the query string). Supported filters are `flux` and `request` (whitelist-based feature)
+path: sorts by access URL (excluding the query string). Supported filters are `flux` and `request` (allowlist-based feature)
 district: sorts by district. Supported filters are `flux` and `request`
 isp: sorts by ISP. Supported filters are `flux` and `request`
 host: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, 2XX, 3XX, 4XX, 5XX, and `statusCode`
@@ -329,9 +329,9 @@ Please note that if domain names are specified, this parameter will be ignored.
     }
 
     /**
-     * Get Default is `false` for multi–domain name queries, which returns sorted results of all domain names. 
+     * Get Default is `false` for multi-domain name queries, which returns sorted results of all domain names. 
 If `Metric` is `url`, `path`, `district`, or `isp` and `Filter` is `flux` or `request`, it can be set to `true` to return the sorted results of each domain. 
-     * @return Detail Default is `false` for multi–domain name queries, which returns sorted results of all domain names. 
+     * @return Detail Default is `false` for multi-domain name queries, which returns sorted results of all domain names. 
 If `Metric` is `url`, `path`, `district`, or `isp` and `Filter` is `flux` or `request`, it can be set to `true` to return the sorted results of each domain.
      */
     public Boolean getDetail() {
@@ -339,9 +339,9 @@ If `Metric` is `url`, `path`, `district`, or `isp` and `Filter` is `flux` or `re
     }
 
     /**
-     * Set Default is `false` for multi–domain name queries, which returns sorted results of all domain names. 
+     * Set Default is `false` for multi-domain name queries, which returns sorted results of all domain names. 
 If `Metric` is `url`, `path`, `district`, or `isp` and `Filter` is `flux` or `request`, it can be set to `true` to return the sorted results of each domain.
-     * @param Detail Default is `false` for multi–domain name queries, which returns sorted results of all domain names. 
+     * @param Detail Default is `false` for multi-domain name queries, which returns sorted results of all domain names. 
 If `Metric` is `url`, `path`, `district`, or `isp` and `Filter` is `flux` or `request`, it can be set to `true` to return the sorted results of each domain.
      */
     public void setDetail(Boolean Detail) {

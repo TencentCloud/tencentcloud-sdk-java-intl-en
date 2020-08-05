@@ -39,7 +39,7 @@ public class NodeInfo extends AbstractModel{
     /**
     * Node type <li>hotData: hot data node</li>
 <li>warmData: warm data node</li>
-<li>dedicatedMaster: dedicated master node</li>
+<li>dedicatedMaster: dedicated primary node</li>
 Default value: hotData
     */
     @SerializedName("Type")
@@ -76,6 +76,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long DiskCount;
 
     /**
+    * 
+    */
+    @SerializedName("DiskEncrypt")
+    @Expose
+    private Long DiskEncrypt;
+
+    /**
      * Get Number of nodes 
      * @return NodeNum Number of nodes
      */
@@ -110,11 +117,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Get Node type <li>hotData: hot data node</li>
 <li>warmData: warm data node</li>
-<li>dedicatedMaster: dedicated master node</li>
+<li>dedicatedMaster: dedicated primary node</li>
 Default value: hotData 
      * @return Type Node type <li>hotData: hot data node</li>
 <li>warmData: warm data node</li>
-<li>dedicatedMaster: dedicated master node</li>
+<li>dedicatedMaster: dedicated primary node</li>
 Default value: hotData
      */
     public String getType() {
@@ -124,11 +131,11 @@ Default value: hotData
     /**
      * Set Node type <li>hotData: hot data node</li>
 <li>warmData: warm data node</li>
-<li>dedicatedMaster: dedicated master node</li>
+<li>dedicatedMaster: dedicated primary node</li>
 Default value: hotData
      * @param Type Node type <li>hotData: hot data node</li>
 <li>warmData: warm data node</li>
-<li>dedicatedMaster: dedicated master node</li>
+<li>dedicatedMaster: dedicated primary node</li>
 Default value: hotData
      */
     public void setType(String Type) {
@@ -204,6 +211,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get  
+     * @return DiskEncrypt 
+     */
+    public Long getDiskEncrypt() {
+        return this.DiskEncrypt;
+    }
+
+    /**
+     * Set 
+     * @param DiskEncrypt 
+     */
+    public void setDiskEncrypt(Long DiskEncrypt) {
+        this.DiskEncrypt = DiskEncrypt;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -214,6 +237,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
         this.setParamObj(map, prefix + "LocalDiskInfo.", this.LocalDiskInfo);
         this.setParamSimple(map, prefix + "DiskCount", this.DiskCount);
+        this.setParamSimple(map, prefix + "DiskEncrypt", this.DiskEncrypt);
 
     }
 }

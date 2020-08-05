@@ -65,7 +65,7 @@ public class ShardInfo extends AbstractModel{
     private Long OplogSize;
 
     /**
-    * Number of slave nodes of a shard
+    * Number of secondary nodes of a shard
     */
     @SerializedName("SecondaryNum")
     @Expose
@@ -175,16 +175,16 @@ public class ShardInfo extends AbstractModel{
     }
 
     /**
-     * Get Number of slave nodes of a shard 
-     * @return SecondaryNum Number of slave nodes of a shard
+     * Get Number of secondary nodes of a shard 
+     * @return SecondaryNum Number of secondary nodes of a shard
      */
     public Long getSecondaryNum() {
         return this.SecondaryNum;
     }
 
     /**
-     * Set Number of slave nodes of a shard
-     * @param SecondaryNum Number of slave nodes of a shard
+     * Set Number of secondary nodes of a shard
+     * @param SecondaryNum Number of secondary nodes of a shard
      */
     public void setSecondaryNum(Long SecondaryNum) {
         this.SecondaryNum = SecondaryNum;

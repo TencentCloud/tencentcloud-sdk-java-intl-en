@@ -51,7 +51,7 @@ public class CreateDDoSPolicyRequest extends AbstractModel{
     private DDoSPolicyPortLimit [] PortLimits;
 
     /**
-    * IP blacklist/whitelist. Enter an empty array if there is no IP blacklist/whitelist
+    * IP blocklist/allowlist. Enter an empty array if there is no IP blocklist/allowlist
     */
     @SerializedName("IpAllowDenys")
     @Expose
@@ -136,16 +136,16 @@ public class CreateDDoSPolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get IP blacklist/whitelist. Enter an empty array if there is no IP blacklist/whitelist 
-     * @return IpAllowDenys IP blacklist/whitelist. Enter an empty array if there is no IP blacklist/whitelist
+     * Get IP blocklist/allowlist. Enter an empty array if there is no IP blocklist/allowlist 
+     * @return IpAllowDenys IP blocklist/allowlist. Enter an empty array if there is no IP blocklist/allowlist
      */
     public IpBlackWhite [] getIpAllowDenys() {
         return this.IpAllowDenys;
     }
 
     /**
-     * Set IP blacklist/whitelist. Enter an empty array if there is no IP blacklist/whitelist
-     * @param IpAllowDenys IP blacklist/whitelist. Enter an empty array if there is no IP blacklist/whitelist
+     * Set IP blocklist/allowlist. Enter an empty array if there is no IP blocklist/allowlist
+     * @param IpAllowDenys IP blocklist/allowlist. Enter an empty array if there is no IP blocklist/allowlist
      */
     public void setIpAllowDenys(IpBlackWhite [] IpAllowDenys) {
         this.IpAllowDenys = IpAllowDenys;

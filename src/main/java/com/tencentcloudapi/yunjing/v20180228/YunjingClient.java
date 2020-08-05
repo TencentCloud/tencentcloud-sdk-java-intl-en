@@ -38,7 +38,7 @@ public class YunjingClient extends AbstractClient{
     }
 
     /**
-     *This API is used to add a whitelist rule.
+     *This API is used to add a allowlist rule.
      * @param req AddLoginWhiteListRequest
      * @return AddLoginWhiteListResponse
      * @throws TencentCloudSDKException
@@ -164,7 +164,7 @@ public class YunjingClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete a whitelist rule.
+     *This API is used to delete a allowlist rule.
      * @param req DeleteLoginWhiteListRequest
      * @return DeleteLoginWhiteListResponse
      * @throws TencentCloudSDKException
@@ -470,7 +470,7 @@ public class YunjingClient extends AbstractClient{
     }
 
     /**
-     *This API is used to get the list of login whitelist entries.
+     *This API is used to get the list of login allowlist entries.
      * @param req DescribeLoginWhiteListRequest
      * @return DescribeLoginWhiteListResponse
      * @throws TencentCloudSDKException
@@ -1139,7 +1139,7 @@ public class YunjingClient extends AbstractClient{
     }
 
     /**
-     *This API is used to edit a whitelist rule.
+     *This API is used to edit a allowlist rule.
      * @param req ModifyLoginWhiteListRequest
      * @return ModifyLoginWhiteListResponse
      * @throws TencentCloudSDKException

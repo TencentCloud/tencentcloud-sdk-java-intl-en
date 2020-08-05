@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class IpFilter extends AbstractModel{
 
     /**
-    * IP blacklist/whitelist configuration switch
+    * IP blocklist/allowlist configuration switch
 on: enabled
 off: disabled
     */
@@ -32,9 +32,9 @@ off: disabled
     private String Switch;
 
     /**
-    * IP blacklist/whitelist type
-whitelist: whitelist
-blacklist: blacklist
+    * IP blocklist/allowlist type
+whitelist: allowlist
+blacklist: blocklist
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FilterType")
@@ -42,9 +42,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String FilterType;
 
     /**
-    * IP blacklist/whitelist list
+    * IP blocklist/allowlist list
 Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 whitelists or blacklists can be entered
+Up to 50 allowlists or blocklists can be entered
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Filters")
@@ -52,10 +52,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String [] Filters;
 
     /**
-     * Get IP blacklist/whitelist configuration switch
+     * Get IP blocklist/allowlist configuration switch
 on: enabled
 off: disabled 
-     * @return Switch IP blacklist/whitelist configuration switch
+     * @return Switch IP blocklist/allowlist configuration switch
 on: enabled
 off: disabled
      */
@@ -64,10 +64,10 @@ off: disabled
     }
 
     /**
-     * Set IP blacklist/whitelist configuration switch
+     * Set IP blocklist/allowlist configuration switch
 on: enabled
 off: disabled
-     * @param Switch IP blacklist/whitelist configuration switch
+     * @param Switch IP blocklist/allowlist configuration switch
 on: enabled
 off: disabled
      */
@@ -76,13 +76,13 @@ off: disabled
     }
 
     /**
-     * Get IP blacklist/whitelist type
-whitelist: whitelist
-blacklist: blacklist
+     * Get IP blocklist/allowlist type
+whitelist: allowlist
+blacklist: blocklist
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return FilterType IP blacklist/whitelist type
-whitelist: whitelist
-blacklist: blacklist
+     * @return FilterType IP blocklist/allowlist type
+whitelist: allowlist
+blacklist: blocklist
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getFilterType() {
@@ -90,13 +90,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set IP blacklist/whitelist type
-whitelist: whitelist
-blacklist: blacklist
+     * Set IP blocklist/allowlist type
+whitelist: allowlist
+blacklist: blocklist
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param FilterType IP blacklist/whitelist type
-whitelist: whitelist
-blacklist: blacklist
+     * @param FilterType IP blocklist/allowlist type
+whitelist: allowlist
+blacklist: blocklist
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setFilterType(String FilterType) {
@@ -104,13 +104,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get IP blacklist/whitelist list
+     * Get IP blocklist/allowlist list
 Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 whitelists or blacklists can be entered
+Up to 50 allowlists or blocklists can be entered
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Filters IP blacklist/whitelist list
+     * @return Filters IP blocklist/allowlist list
 Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 whitelists or blacklists can be entered
+Up to 50 allowlists or blocklists can be entered
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String [] getFilters() {
@@ -118,13 +118,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set IP blacklist/whitelist list
+     * Set IP blocklist/allowlist list
 Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 whitelists or blacklists can be entered
+Up to 50 allowlists or blocklists can be entered
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Filters IP blacklist/whitelist list
+     * @param Filters IP blocklist/allowlist list
 Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 whitelists or blacklists can be entered
+Up to 50 allowlists or blocklists can be entered
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setFilters(String [] Filters) {

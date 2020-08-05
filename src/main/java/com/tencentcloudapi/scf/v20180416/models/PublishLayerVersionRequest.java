@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class PublishLayerVersionRequest extends AbstractModel{
 
     /**
-    * Layer name, which can contain 1–64 English letters, digits, hyphens, and underscores, must begin with a letter, and cannot end with a hyphen or underscore
+    * Layer name, which can contain 1-64 English letters, digits, hyphens, and underscores, must begin with a letter, and cannot end with a hyphen or underscore
     */
     @SerializedName("LayerName")
     @Expose
@@ -58,16 +58,16 @@ public class PublishLayerVersionRequest extends AbstractModel{
     private String LicenseInfo;
 
     /**
-     * Get Layer name, which can contain 1–64 English letters, digits, hyphens, and underscores, must begin with a letter, and cannot end with a hyphen or underscore 
-     * @return LayerName Layer name, which can contain 1–64 English letters, digits, hyphens, and underscores, must begin with a letter, and cannot end with a hyphen or underscore
+     * Get Layer name, which can contain 1-64 English letters, digits, hyphens, and underscores, must begin with a letter, and cannot end with a hyphen or underscore 
+     * @return LayerName Layer name, which can contain 1-64 English letters, digits, hyphens, and underscores, must begin with a letter, and cannot end with a hyphen or underscore
      */
     public String getLayerName() {
         return this.LayerName;
     }
 
     /**
-     * Set Layer name, which can contain 1–64 English letters, digits, hyphens, and underscores, must begin with a letter, and cannot end with a hyphen or underscore
-     * @param LayerName Layer name, which can contain 1–64 English letters, digits, hyphens, and underscores, must begin with a letter, and cannot end with a hyphen or underscore
+     * Set Layer name, which can contain 1-64 English letters, digits, hyphens, and underscores, must begin with a letter, and cannot end with a hyphen or underscore
+     * @param LayerName Layer name, which can contain 1-64 English letters, digits, hyphens, and underscores, must begin with a letter, and cannot end with a hyphen or underscore
      */
     public void setLayerName(String LayerName) {
         this.LayerName = LayerName;

@@ -100,7 +100,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     private String SubnetId;
 
     /**
-    * Instance password. If this parameter is not set, you need to set an instance password through the password setting API after creating an instance. The password can only contain 8–16 characters and must contain at least two of the following types of characters: letters, digits, and special characters `!@#%^*()` |
+    * Instance password. If this parameter is not set, you need to set an instance password through the password setting API after creating an instance. The password can only contain 8-16 characters and must contain at least two of the following types of characters: letters, digits, and special characters `!@#%^*()` |
     */
     @SerializedName("Password")
     @Expose
@@ -119,6 +119,27 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     @SerializedName("Tags")
     @Expose
     private TagInfo [] Tags;
+
+    /**
+    * 
+    */
+    @SerializedName("Clone")
+    @Expose
+    private Long Clone;
+
+    /**
+    * 
+    */
+    @SerializedName("Father")
+    @Expose
+    private String Father;
+
+    /**
+    * 
+    */
+    @SerializedName("SecurityGroup")
+    @Expose
+    private String [] SecurityGroup;
 
     /**
      * Get Instance memory size in GB 
@@ -297,16 +318,16 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     }
 
     /**
-     * Get Instance password. If this parameter is not set, you need to set an instance password through the password setting API after creating an instance. The password can only contain 8–16 characters and must contain at least two of the following types of characters: letters, digits, and special characters `!@#%^*()` | 
-     * @return Password Instance password. If this parameter is not set, you need to set an instance password through the password setting API after creating an instance. The password can only contain 8–16 characters and must contain at least two of the following types of characters: letters, digits, and special characters `!@#%^*()` |
+     * Get Instance password. If this parameter is not set, you need to set an instance password through the password setting API after creating an instance. The password can only contain 8-16 characters and must contain at least two of the following types of characters: letters, digits, and special characters `!@#%^*()` | 
+     * @return Password Instance password. If this parameter is not set, you need to set an instance password through the password setting API after creating an instance. The password can only contain 8-16 characters and must contain at least two of the following types of characters: letters, digits, and special characters `!@#%^*()` |
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Instance password. If this parameter is not set, you need to set an instance password through the password setting API after creating an instance. The password can only contain 8–16 characters and must contain at least two of the following types of characters: letters, digits, and special characters `!@#%^*()` |
-     * @param Password Instance password. If this parameter is not set, you need to set an instance password through the password setting API after creating an instance. The password can only contain 8–16 characters and must contain at least two of the following types of characters: letters, digits, and special characters `!@#%^*()` |
+     * Set Instance password. If this parameter is not set, you need to set an instance password through the password setting API after creating an instance. The password can only contain 8-16 characters and must contain at least two of the following types of characters: letters, digits, and special characters `!@#%^*()` |
+     * @param Password Instance password. If this parameter is not set, you need to set an instance password through the password setting API after creating an instance. The password can only contain 8-16 characters and must contain at least two of the following types of characters: letters, digits, and special characters `!@#%^*()` |
      */
     public void setPassword(String Password) {
         this.Password = Password;
@@ -345,6 +366,54 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return Clone 
+     */
+    public Long getClone() {
+        return this.Clone;
+    }
+
+    /**
+     * Set 
+     * @param Clone 
+     */
+    public void setClone(Long Clone) {
+        this.Clone = Clone;
+    }
+
+    /**
+     * Get  
+     * @return Father 
+     */
+    public String getFather() {
+        return this.Father;
+    }
+
+    /**
+     * Set 
+     * @param Father 
+     */
+    public void setFather(String Father) {
+        this.Father = Father;
+    }
+
+    /**
+     * Get  
+     * @return SecurityGroup 
+     */
+    public String [] getSecurityGroup() {
+        return this.SecurityGroup;
+    }
+
+    /**
+     * Set 
+     * @param SecurityGroup 
+     */
+    public void setSecurityGroup(String [] SecurityGroup) {
+        this.SecurityGroup = SecurityGroup;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -362,6 +431,9 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "Clone", this.Clone);
+        this.setParamSimple(map, prefix + "Father", this.Father);
+        this.setParamArraySimple(map, prefix + "SecurityGroup.", this.SecurityGroup);
 
     }
 }

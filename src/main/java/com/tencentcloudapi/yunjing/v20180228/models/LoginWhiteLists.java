@@ -93,6 +93,20 @@ public class LoginWhiteLists extends AbstractModel{
     private String HostIp;
 
     /**
+    * 
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * 
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
      * Get Record ID 
      * @return Id Record ID
      */
@@ -253,6 +267,38 @@ public class LoginWhiteLists extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return StartTime 
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 
+     * @param StartTime 
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get  
+     * @return EndTime 
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set 
+     * @param EndTime 
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -266,6 +312,8 @@ public class LoginWhiteLists extends AbstractModel{
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamSimple(map, prefix + "MachineName", this.MachineName);
         this.setParamSimple(map, prefix + "HostIp", this.HostIp);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
 
     }
 }

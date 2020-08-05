@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateMediaLiveInputRequest extends AbstractModel{
 
     /**
-    * Media input name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
+    * Media input name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level.
     */
     @SerializedName("Name")
     @Expose
@@ -53,16 +53,16 @@ Only one security group can be associated.
     private InputSettingInfo [] InputSettings;
 
     /**
-     * Get Media input name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level. 
-     * @return Name Media input name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
+     * Get Media input name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level. 
+     * @return Name Media input name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Media input name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
-     * @param Name Media input name, which can contain 1–32 letters, digits, and underscores and must be unique at the region level.
+     * Set Media input name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level.
+     * @param Name Media input name, which can contain 1-32 letters, digits, and underscores and must be unique at the region level.
      */
     public void setName(String Name) {
         this.Name = Name;

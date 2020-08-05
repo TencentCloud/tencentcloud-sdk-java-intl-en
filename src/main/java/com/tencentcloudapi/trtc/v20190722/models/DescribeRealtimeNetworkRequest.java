@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeRealtimeNetworkRequest extends AbstractModel{
 
     /**
-    * Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 24 hours.
+    * Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 24 hours.
     */
     @SerializedName("StartTime")
     @Expose
@@ -53,16 +53,16 @@ recvLossRateRaw: downstream packet loss rate.
     private String [] DataType;
 
     /**
-     * Get Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 24 hours. 
-     * @return StartTime Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 24 hours.
+     * Get Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 24 hours. 
+     * @return StartTime Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 24 hours.
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 24 hours.
-     * @param StartTime Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 24 hours.
+     * Set Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 24 hours.
+     * @param StartTime Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 24 hours.
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;

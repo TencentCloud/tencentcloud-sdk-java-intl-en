@@ -31,7 +31,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Switch;
 
     /**
-    * UA blacklist/whitelist effect rule list
+    * UA blocklist/allowlist effect rule list
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FilterRules")
@@ -59,9 +59,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get UA blacklist/whitelist effect rule list
+     * Get UA blocklist/allowlist effect rule list
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return FilterRules UA blacklist/whitelist effect rule list
+     * @return FilterRules UA blocklist/allowlist effect rule list
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public UserAgentFilterRule [] getFilterRules() {
@@ -69,9 +69,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set UA blacklist/whitelist effect rule list
+     * Set UA blocklist/allowlist effect rule list
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param FilterRules UA blacklist/whitelist effect rule list
+     * @param FilterRules UA blocklist/allowlist effect rule list
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setFilterRules(UserAgentFilterRule [] FilterRules) {

@@ -66,14 +66,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long CreateTime;
 
     /**
-    * Whether to enable IP authentication whitelist. true: yes, false: no
+    * Whether to enable IP authentication allowlist. true: yes, false: no
     */
     @SerializedName("EnableWhiteList")
     @Expose
     private Boolean EnableWhiteList;
 
     /**
-    * Number of IPs in IP whitelist
+    * Number of IPs in IP allowlist
     */
     @SerializedName("IpWhiteListCount")
     @Expose
@@ -210,32 +210,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to enable IP authentication whitelist. true: yes, false: no 
-     * @return EnableWhiteList Whether to enable IP authentication whitelist. true: yes, false: no
+     * Get Whether to enable IP authentication allowlist. true: yes, false: no 
+     * @return EnableWhiteList Whether to enable IP authentication allowlist. true: yes, false: no
      */
     public Boolean getEnableWhiteList() {
         return this.EnableWhiteList;
     }
 
     /**
-     * Set Whether to enable IP authentication whitelist. true: yes, false: no
-     * @param EnableWhiteList Whether to enable IP authentication whitelist. true: yes, false: no
+     * Set Whether to enable IP authentication allowlist. true: yes, false: no
+     * @param EnableWhiteList Whether to enable IP authentication allowlist. true: yes, false: no
      */
     public void setEnableWhiteList(Boolean EnableWhiteList) {
         this.EnableWhiteList = EnableWhiteList;
     }
 
     /**
-     * Get Number of IPs in IP whitelist 
-     * @return IpWhiteListCount Number of IPs in IP whitelist
+     * Get Number of IPs in IP allowlist 
+     * @return IpWhiteListCount Number of IPs in IP allowlist
      */
     public Long getIpWhiteListCount() {
         return this.IpWhiteListCount;
     }
 
     /**
-     * Set Number of IPs in IP whitelist
-     * @param IpWhiteListCount Number of IPs in IP whitelist
+     * Set Number of IPs in IP allowlist
+     * @param IpWhiteListCount Number of IPs in IP allowlist
      */
     public void setIpWhiteListCount(Long IpWhiteListCount) {
         this.IpWhiteListCount = IpWhiteListCount;

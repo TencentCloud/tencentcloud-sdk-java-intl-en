@@ -37,7 +37,7 @@ public class CreateFunctionRequest extends AbstractModel{
     private Code Code;
 
     /**
-    * Name of the handler, which is in the “file name.handler name” form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_).
+    * Name of the handler, which is in the 'file name.handler name' form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_).
     */
     @SerializedName("Handler")
     @Expose
@@ -51,14 +51,14 @@ public class CreateFunctionRequest extends AbstractModel{
     private String Description;
 
     /**
-    * Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB
+    * Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3072 MB in increments of 128 MB
     */
     @SerializedName("MemorySize")
     @Expose
     private Long MemorySize;
 
     /**
-    * Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
+    * Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
     */
     @SerializedName("Timeout")
     @Expose
@@ -149,6 +149,13 @@ public class CreateFunctionRequest extends AbstractModel{
     private PublicNetConfigIn PublicNetConfig;
 
     /**
+    * File system configuration parameter, which is used for the function to mount the file system
+    */
+    @SerializedName("CfsConfig")
+    @Expose
+    private CfsConfig CfsConfig;
+
+    /**
      * Get Name of the new function. The name can contain 2 to 60 characters, including English letters, digits, hyphens (-), and underscores (_). The name must start with a letter and cannot end with a hyphen or underscore. 
      * @return FunctionName Name of the new function. The name can contain 2 to 60 characters, including English letters, digits, hyphens (-), and underscores (_). The name must start with a letter and cannot end with a hyphen or underscore.
      */
@@ -181,16 +188,16 @@ public class CreateFunctionRequest extends AbstractModel{
     }
 
     /**
-     * Get Name of the handler, which is in the “file name.handler name” form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_). 
-     * @return Handler Name of the handler, which is in the “file name.handler name” form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_).
+     * Get Name of the handler, which is in the 'file name.handler name' form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_). 
+     * @return Handler Name of the handler, which is in the 'file name.handler name' form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_).
      */
     public String getHandler() {
         return this.Handler;
     }
 
     /**
-     * Set Name of the handler, which is in the “file name.handler name” form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_).
-     * @param Handler Name of the handler, which is in the “file name.handler name” form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_).
+     * Set Name of the handler, which is in the 'file name.handler name' form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_).
+     * @param Handler Name of the handler, which is in the 'file name.handler name' form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_).
      */
     public void setHandler(String Handler) {
         this.Handler = Handler;
@@ -213,32 +220,32 @@ public class CreateFunctionRequest extends AbstractModel{
     }
 
     /**
-     * Get Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB 
-     * @return MemorySize Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB
+     * Get Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3072 MB in increments of 128 MB 
+     * @return MemorySize Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3072 MB in increments of 128 MB
      */
     public Long getMemorySize() {
         return this.MemorySize;
     }
 
     /**
-     * Set Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB
-     * @param MemorySize Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB
+     * Set Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3072 MB in increments of 128 MB
+     * @param MemorySize Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3072 MB in increments of 128 MB
      */
     public void setMemorySize(Long MemorySize) {
         this.MemorySize = MemorySize;
     }
 
     /**
-     * Get Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds 
-     * @return Timeout Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
+     * Get Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds 
+     * @return Timeout Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
      */
     public Long getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
-     * @param Timeout Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
+     * Set Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
+     * @param Timeout Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
      */
     public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;
@@ -437,6 +444,22 @@ public class CreateFunctionRequest extends AbstractModel{
     }
 
     /**
+     * Get File system configuration parameter, which is used for the function to mount the file system 
+     * @return CfsConfig File system configuration parameter, which is used for the function to mount the file system
+     */
+    public CfsConfig getCfsConfig() {
+        return this.CfsConfig;
+    }
+
+    /**
+     * Set File system configuration parameter, which is used for the function to mount the file system
+     * @param CfsConfig File system configuration parameter, which is used for the function to mount the file system
+     */
+    public void setCfsConfig(CfsConfig CfsConfig) {
+        this.CfsConfig = CfsConfig;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -458,6 +481,7 @@ public class CreateFunctionRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Layers.", this.Layers);
         this.setParamObj(map, prefix + "DeadLetterConfig.", this.DeadLetterConfig);
         this.setParamObj(map, prefix + "PublicNetConfig.", this.PublicNetConfig);
+        this.setParamObj(map, prefix + "CfsConfig.", this.CfsConfig);
 
     }
 }

@@ -72,7 +72,7 @@ public class DBInstance extends AbstractModel{
     private Long SubnetId;
 
     /**
-    * Instance status. Valid values: <li>1: applying </li> <li>2: running </li> <li>3: restrictedly running (master/slave switching) </li> <li>4: isolated </li> <li>5: repossessing </li> <li>6: repossessed </li> <li>7: task running (e.g., backing up or rolling back the instance) </li> <li>8: decommissioned </li> <li>9: scaling </li> <li>10: migrating </li> <li>11: read-only </li> <li>12: restarting </li>
+    * Instance status. Valid values: <li>1: applying </li> <li>2: running </li> <li>3: restrictedly running (primary/secondary switching) </li> <li>4: isolated </li> <li>5: repossessing </li> <li>6: repossessed </li> <li>7: task running (e.g., backing up or rolling back the instance) </li> <li>8: decommissioned </li> <li>9: scaling </li> <li>10: migrating </li> <li>11: read-only </li> <li>12: restarting </li>
     */
     @SerializedName("Status")
     @Expose
@@ -247,6 +247,34 @@ public class DBInstance extends AbstractModel{
     private String UniqSubnetId;
 
     /**
+    * 
+    */
+    @SerializedName("IsolateOperator")
+    @Expose
+    private String IsolateOperator;
+
+    /**
+    * 
+    */
+    @SerializedName("SubFlag")
+    @Expose
+    private String SubFlag;
+
+    /**
+    * 
+    */
+    @SerializedName("ROFlag")
+    @Expose
+    private String ROFlag;
+
+    /**
+    * 
+    */
+    @SerializedName("HAFlag")
+    @Expose
+    private String HAFlag;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -359,16 +387,16 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
-     * Get Instance status. Valid values: <li>1: applying </li> <li>2: running </li> <li>3: restrictedly running (master/slave switching) </li> <li>4: isolated </li> <li>5: repossessing </li> <li>6: repossessed </li> <li>7: task running (e.g., backing up or rolling back the instance) </li> <li>8: decommissioned </li> <li>9: scaling </li> <li>10: migrating </li> <li>11: read-only </li> <li>12: restarting </li> 
-     * @return Status Instance status. Valid values: <li>1: applying </li> <li>2: running </li> <li>3: restrictedly running (master/slave switching) </li> <li>4: isolated </li> <li>5: repossessing </li> <li>6: repossessed </li> <li>7: task running (e.g., backing up or rolling back the instance) </li> <li>8: decommissioned </li> <li>9: scaling </li> <li>10: migrating </li> <li>11: read-only </li> <li>12: restarting </li>
+     * Get Instance status. Valid values: <li>1: applying </li> <li>2: running </li> <li>3: restrictedly running (primary/secondary switching) </li> <li>4: isolated </li> <li>5: repossessing </li> <li>6: repossessed </li> <li>7: task running (e.g., backing up or rolling back the instance) </li> <li>8: decommissioned </li> <li>9: scaling </li> <li>10: migrating </li> <li>11: read-only </li> <li>12: restarting </li> 
+     * @return Status Instance status. Valid values: <li>1: applying </li> <li>2: running </li> <li>3: restrictedly running (primary/secondary switching) </li> <li>4: isolated </li> <li>5: repossessing </li> <li>6: repossessed </li> <li>7: task running (e.g., backing up or rolling back the instance) </li> <li>8: decommissioned </li> <li>9: scaling </li> <li>10: migrating </li> <li>11: read-only </li> <li>12: restarting </li>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Instance status. Valid values: <li>1: applying </li> <li>2: running </li> <li>3: restrictedly running (master/slave switching) </li> <li>4: isolated </li> <li>5: repossessing </li> <li>6: repossessed </li> <li>7: task running (e.g., backing up or rolling back the instance) </li> <li>8: decommissioned </li> <li>9: scaling </li> <li>10: migrating </li> <li>11: read-only </li> <li>12: restarting </li>
-     * @param Status Instance status. Valid values: <li>1: applying </li> <li>2: running </li> <li>3: restrictedly running (master/slave switching) </li> <li>4: isolated </li> <li>5: repossessing </li> <li>6: repossessed </li> <li>7: task running (e.g., backing up or rolling back the instance) </li> <li>8: decommissioned </li> <li>9: scaling </li> <li>10: migrating </li> <li>11: read-only </li> <li>12: restarting </li>
+     * Set Instance status. Valid values: <li>1: applying </li> <li>2: running </li> <li>3: restrictedly running (primary/secondary switching) </li> <li>4: isolated </li> <li>5: repossessing </li> <li>6: repossessed </li> <li>7: task running (e.g., backing up or rolling back the instance) </li> <li>8: decommissioned </li> <li>9: scaling </li> <li>10: migrating </li> <li>11: read-only </li> <li>12: restarting </li>
+     * @param Status Instance status. Valid values: <li>1: applying </li> <li>2: running </li> <li>3: restrictedly running (primary/secondary switching) </li> <li>4: isolated </li> <li>5: repossessing </li> <li>6: repossessed </li> <li>7: task running (e.g., backing up or rolling back the instance) </li> <li>8: decommissioned </li> <li>9: scaling </li> <li>10: migrating </li> <li>11: read-only </li> <li>12: restarting </li>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -759,6 +787,70 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return IsolateOperator 
+     */
+    public String getIsolateOperator() {
+        return this.IsolateOperator;
+    }
+
+    /**
+     * Set 
+     * @param IsolateOperator 
+     */
+    public void setIsolateOperator(String IsolateOperator) {
+        this.IsolateOperator = IsolateOperator;
+    }
+
+    /**
+     * Get  
+     * @return SubFlag 
+     */
+    public String getSubFlag() {
+        return this.SubFlag;
+    }
+
+    /**
+     * Set 
+     * @param SubFlag 
+     */
+    public void setSubFlag(String SubFlag) {
+        this.SubFlag = SubFlag;
+    }
+
+    /**
+     * Get  
+     * @return ROFlag 
+     */
+    public String getROFlag() {
+        return this.ROFlag;
+    }
+
+    /**
+     * Set 
+     * @param ROFlag 
+     */
+    public void setROFlag(String ROFlag) {
+        this.ROFlag = ROFlag;
+    }
+
+    /**
+     * Get  
+     * @return HAFlag 
+     */
+    public String getHAFlag() {
+        return this.HAFlag;
+    }
+
+    /**
+     * Set 
+     * @param HAFlag 
+     */
+    public void setHAFlag(String HAFlag) {
+        this.HAFlag = HAFlag;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -794,6 +886,10 @@ public class DBInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "Pid", this.Pid);
         this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
         this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
+        this.setParamSimple(map, prefix + "IsolateOperator", this.IsolateOperator);
+        this.setParamSimple(map, prefix + "SubFlag", this.SubFlag);
+        this.setParamSimple(map, prefix + "ROFlag", this.ROFlag);
+        this.setParamSimple(map, prefix + "HAFlag", this.HAFlag);
 
     }
 }

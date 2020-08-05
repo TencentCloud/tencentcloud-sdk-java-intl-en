@@ -47,7 +47,7 @@ aac/mp3.
 
     /**
     * Audio bitrate. Default value: 0.
-Value range: 0–500.
+Value range: 0-500.
     */
     @SerializedName("AudioBitrate")
     @Expose
@@ -61,7 +61,7 @@ Value range: 0–500.
     private String Description;
 
     /**
-    * Video bitrate. Value range: 100–8000 Kbps.
+    * Video bitrate. Value range: 100-8000 Kbps.
 Note: the bitrate value must be a multiple of 100.
     */
     @SerializedName("VideoBitrate")
@@ -97,14 +97,14 @@ Note: the bitrate value must be a multiple of 100.
     private Long Height;
 
     /**
-    * Frame rate. Value range: 0–200.
+    * Frame rate. Value range: 0-200.
     */
     @SerializedName("Fps")
     @Expose
     private Long Fps;
 
     /**
-    * Keyframe interval in seconds. Value range: 0–50.
+    * Keyframe interval in seconds. Value range: 0-50.
     */
     @SerializedName("Gop")
     @Expose
@@ -148,7 +148,7 @@ baseline/main/high.
     private Long FpsToOrig;
 
     /**
-    * `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
+    * `VideoBitrate` minus top speed codec bitrate. Value range: 0.1-0.5.
     */
     @SerializedName("AdaptBitratePercent")
     @Expose
@@ -212,9 +212,9 @@ aac/mp3.
 
     /**
      * Get Audio bitrate. Default value: 0.
-Value range: 0–500. 
+Value range: 0-500. 
      * @return AudioBitrate Audio bitrate. Default value: 0.
-Value range: 0–500.
+Value range: 0-500.
      */
     public Long getAudioBitrate() {
         return this.AudioBitrate;
@@ -222,9 +222,9 @@ Value range: 0–500.
 
     /**
      * Set Audio bitrate. Default value: 0.
-Value range: 0–500.
+Value range: 0-500.
      * @param AudioBitrate Audio bitrate. Default value: 0.
-Value range: 0–500.
+Value range: 0-500.
      */
     public void setAudioBitrate(Long AudioBitrate) {
         this.AudioBitrate = AudioBitrate;
@@ -247,9 +247,9 @@ Value range: 0–500.
     }
 
     /**
-     * Get Video bitrate. Value range: 100–8000 Kbps.
+     * Get Video bitrate. Value range: 100-8000 Kbps.
 Note: the bitrate value must be a multiple of 100. 
-     * @return VideoBitrate Video bitrate. Value range: 100–8000 Kbps.
+     * @return VideoBitrate Video bitrate. Value range: 100-8000 Kbps.
 Note: the bitrate value must be a multiple of 100.
      */
     public Long getVideoBitrate() {
@@ -257,9 +257,9 @@ Note: the bitrate value must be a multiple of 100.
     }
 
     /**
-     * Set Video bitrate. Value range: 100–8000 Kbps.
+     * Set Video bitrate. Value range: 100-8000 Kbps.
 Note: the bitrate value must be a multiple of 100.
-     * @param VideoBitrate Video bitrate. Value range: 100–8000 Kbps.
+     * @param VideoBitrate Video bitrate. Value range: 100-8000 Kbps.
 Note: the bitrate value must be a multiple of 100.
      */
     public void setVideoBitrate(Long VideoBitrate) {
@@ -331,32 +331,32 @@ Note: the bitrate value must be a multiple of 100.
     }
 
     /**
-     * Get Frame rate. Value range: 0–200. 
-     * @return Fps Frame rate. Value range: 0–200.
+     * Get Frame rate. Value range: 0-200. 
+     * @return Fps Frame rate. Value range: 0-200.
      */
     public Long getFps() {
         return this.Fps;
     }
 
     /**
-     * Set Frame rate. Value range: 0–200.
-     * @param Fps Frame rate. Value range: 0–200.
+     * Set Frame rate. Value range: 0-200.
+     * @param Fps Frame rate. Value range: 0-200.
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;
     }
 
     /**
-     * Get Keyframe interval in seconds. Value range: 0–50. 
-     * @return Gop Keyframe interval in seconds. Value range: 0–50.
+     * Get Keyframe interval in seconds. Value range: 0-50. 
+     * @return Gop Keyframe interval in seconds. Value range: 0-50.
      */
     public Long getGop() {
         return this.Gop;
     }
 
     /**
-     * Set Keyframe interval in seconds. Value range: 0–50.
-     * @param Gop Keyframe interval in seconds. Value range: 0–50.
+     * Set Keyframe interval in seconds. Value range: 0-50.
+     * @param Gop Keyframe interval in seconds. Value range: 0-50.
      */
     public void setGop(Long Gop) {
         this.Gop = Gop;
@@ -451,16 +451,16 @@ baseline/main/high.
     }
 
     /**
-     * Get `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5. 
-     * @return AdaptBitratePercent `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
+     * Get `VideoBitrate` minus top speed codec bitrate. Value range: 0.1-0.5. 
+     * @return AdaptBitratePercent `VideoBitrate` minus top speed codec bitrate. Value range: 0.1-0.5.
      */
     public Float getAdaptBitratePercent() {
         return this.AdaptBitratePercent;
     }
 
     /**
-     * Set `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
-     * @param AdaptBitratePercent `VideoBitrate` minus top speed codec bitrate. Value range: 0.1–0.5.
+     * Set `VideoBitrate` minus top speed codec bitrate. Value range: 0.1-0.5.
+     * @param AdaptBitratePercent `VideoBitrate` minus top speed codec bitrate. Value range: 0.1-0.5.
      */
     public void setAdaptBitratePercent(Float AdaptBitratePercent) {
         this.AdaptBitratePercent = AdaptBitratePercent;

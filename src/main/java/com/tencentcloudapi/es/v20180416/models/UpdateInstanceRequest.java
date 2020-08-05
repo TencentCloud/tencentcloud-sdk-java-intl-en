@@ -38,7 +38,7 @@ public class UpdateInstanceRequest extends AbstractModel{
 
     /**
     * This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2–50)
+Number of nodes (2-50)
     */
     @SerializedName("NodeNum")
     @Expose
@@ -52,7 +52,7 @@ Number of nodes (2–50)
     private String EsConfig;
 
     /**
-    * Password of the default user “elastic“, which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
+    * Password of the default user 'elastic', which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
     */
     @SerializedName("Password")
     @Expose
@@ -83,7 +83,7 @@ Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 
 
     /**
     * This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated master nodes (only 3 and 5 are supported)
+Number of dedicated primary nodes (only 3 and 5 are supported)
     */
     @SerializedName("MasterNodeNum")
     @Expose
@@ -91,7 +91,7 @@ Number of dedicated master nodes (only 3 and 5 are supported)
 
     /**
     * This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
     */
     @SerializedName("MasterNodeType")
     @Expose
@@ -99,7 +99,7 @@ Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.
 
     /**
     * This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node disk size in GB. This is 50 GB by default and currently cannot be customized
+Dedicated primary node disk size in GB. This is 50 GB by default and currently cannot be customized
     */
     @SerializedName("MasterNodeDiskSize")
     @Expose
@@ -169,6 +169,13 @@ Dedicated master node disk size in GB. This is 50 GB by default and currently ca
     private Long KibanaPrivatePort;
 
     /**
+    * 
+    */
+    @SerializedName("ScaleType")
+    @Expose
+    private Long ScaleType;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -202,9 +209,9 @@ Dedicated master node disk size in GB. This is 50 GB by default and currently ca
 
     /**
      * Get This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2–50) 
+Number of nodes (2-50) 
      * @return NodeNum This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2–50)
+Number of nodes (2-50)
      */
     public Long getNodeNum() {
         return this.NodeNum;
@@ -212,9 +219,9 @@ Number of nodes (2–50)
 
     /**
      * Set This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2–50)
+Number of nodes (2-50)
      * @param NodeNum This parameter has been disused. Please use `NodeInfoList`
-Number of nodes (2–50)
+Number of nodes (2-50)
      */
     public void setNodeNum(Long NodeNum) {
         this.NodeNum = NodeNum;
@@ -237,16 +244,16 @@ Number of nodes (2–50)
     }
 
     /**
-     * Get Password of the default user “elastic“, which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?] 
-     * @return Password Password of the default user “elastic“, which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
+     * Get Password of the default user 'elastic', which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?] 
+     * @return Password Password of the default user 'elastic', which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Password of the default user “elastic“, which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
-     * @param Password Password of the default user “elastic“, which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
+     * Set Password of the default user 'elastic', which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
+     * @param Password Password of the default user 'elastic', which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
      */
     public void setPassword(String Password) {
         this.Password = Password;
@@ -310,9 +317,9 @@ Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 
 
     /**
      * Get This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated master nodes (only 3 and 5 are supported) 
+Number of dedicated primary nodes (only 3 and 5 are supported) 
      * @return MasterNodeNum This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated master nodes (only 3 and 5 are supported)
+Number of dedicated primary nodes (only 3 and 5 are supported)
      */
     public Long getMasterNodeNum() {
         return this.MasterNodeNum;
@@ -320,9 +327,9 @@ Number of dedicated master nodes (only 3 and 5 are supported)
 
     /**
      * Set This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated master nodes (only 3 and 5 are supported)
+Number of dedicated primary nodes (only 3 and 5 are supported)
      * @param MasterNodeNum This parameter has been disused. Please use `NodeInfoList`
-Number of dedicated master nodes (only 3 and 5 are supported)
+Number of dedicated primary nodes (only 3 and 5 are supported)
      */
     public void setMasterNodeNum(Long MasterNodeNum) {
         this.MasterNodeNum = MasterNodeNum;
@@ -330,9 +337,9 @@ Number of dedicated master nodes (only 3 and 5 are supported)
 
     /**
      * Get This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li> 
+Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li> 
      * @return MasterNodeType This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
      */
     public String getMasterNodeType() {
         return this.MasterNodeType;
@@ -340,9 +347,9 @@ Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.
 
     /**
      * Set This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
      * @param MasterNodeType This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
+Dedicated primary node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.MEDIUM4: 2-core 4 GB</li><li>ES.S1.MEDIUM8: 2-core 8 GB</li><li>ES.S1.LARGE16: 4-core 16 GB</li><li>ES.S1.2XLARGE32: 8-core 32 GB</li><li>ES.S1.4XLARGE32: 16-core 32 GB</li><li>ES.S1.4XLARGE64: 16-core 64 GB</li>
      */
     public void setMasterNodeType(String MasterNodeType) {
         this.MasterNodeType = MasterNodeType;
@@ -350,9 +357,9 @@ Dedicated master node specification <li>ES.S1.SMALL2: 1-core 2 GB</li><li>ES.S1.
 
     /**
      * Get This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node disk size in GB. This is 50 GB by default and currently cannot be customized 
+Dedicated primary node disk size in GB. This is 50 GB by default and currently cannot be customized 
      * @return MasterNodeDiskSize This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node disk size in GB. This is 50 GB by default and currently cannot be customized
+Dedicated primary node disk size in GB. This is 50 GB by default and currently cannot be customized
      */
     public Long getMasterNodeDiskSize() {
         return this.MasterNodeDiskSize;
@@ -360,9 +367,9 @@ Dedicated master node disk size in GB. This is 50 GB by default and currently ca
 
     /**
      * Set This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node disk size in GB. This is 50 GB by default and currently cannot be customized
+Dedicated primary node disk size in GB. This is 50 GB by default and currently cannot be customized
      * @param MasterNodeDiskSize This parameter has been disused. Please use `NodeInfoList`
-Dedicated master node disk size in GB. This is 50 GB by default and currently cannot be customized
+Dedicated primary node disk size in GB. This is 50 GB by default and currently cannot be customized
      */
     public void setMasterNodeDiskSize(Long MasterNodeDiskSize) {
         this.MasterNodeDiskSize = MasterNodeDiskSize;
@@ -513,6 +520,22 @@ Dedicated master node disk size in GB. This is 50 GB by default and currently ca
     }
 
     /**
+     * Get  
+     * @return ScaleType 
+     */
+    public Long getScaleType() {
+        return this.ScaleType;
+    }
+
+    /**
+     * Set 
+     * @param ScaleType 
+     */
+    public void setScaleType(Long ScaleType) {
+        this.ScaleType = ScaleType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -536,6 +559,7 @@ Dedicated master node disk size in GB. This is 50 GB by default and currently ca
         this.setParamSimple(map, prefix + "KibanaPrivateAccess", this.KibanaPrivateAccess);
         this.setParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
         this.setParamSimple(map, prefix + "KibanaPrivatePort", this.KibanaPrivatePort);
+        this.setParamSimple(map, prefix + "ScaleType", this.ScaleType);
 
     }
 }

@@ -76,7 +76,7 @@ public class TaskDetail extends AbstractModel{
 "OPEN GTID" - enabling GTID of a TencentDB instance;
 "UPGRADE RO" - upgrading a read-only instance;
 "BATCH ROLLBACK" - rolling back databases in batches;
-"UPGRADE MASTER" - upgrading a master instance;
+"UPGRADE MASTER" - upgrading a primary instance;
 "DROP TABLES" - dropping a TencentDB table;
 "SWITCH DR TO MASTER" - promoting a disaster recovery instance.
     */
@@ -236,7 +236,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 "OPEN GTID" - enabling GTID of a TencentDB instance;
 "UPGRADE RO" - upgrading a read-only instance;
 "BATCH ROLLBACK" - rolling back databases in batches;
-"UPGRADE MASTER" - upgrading a master instance;
+"UPGRADE MASTER" - upgrading a primary instance;
 "DROP TABLES" - dropping a TencentDB table;
 "SWITCH DR TO MASTER" - promoting a disaster recovery instance. 
      * @return TaskType Instance task type. Valid values:
@@ -249,7 +249,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 "OPEN GTID" - enabling GTID of a TencentDB instance;
 "UPGRADE RO" - upgrading a read-only instance;
 "BATCH ROLLBACK" - rolling back databases in batches;
-"UPGRADE MASTER" - upgrading a master instance;
+"UPGRADE MASTER" - upgrading a primary instance;
 "DROP TABLES" - dropping a TencentDB table;
 "SWITCH DR TO MASTER" - promoting a disaster recovery instance.
      */
@@ -268,7 +268,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 "OPEN GTID" - enabling GTID of a TencentDB instance;
 "UPGRADE RO" - upgrading a read-only instance;
 "BATCH ROLLBACK" - rolling back databases in batches;
-"UPGRADE MASTER" - upgrading a master instance;
+"UPGRADE MASTER" - upgrading a primary instance;
 "DROP TABLES" - dropping a TencentDB table;
 "SWITCH DR TO MASTER" - promoting a disaster recovery instance.
      * @param TaskType Instance task type. Valid values:
@@ -281,7 +281,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 "OPEN GTID" - enabling GTID of a TencentDB instance;
 "UPGRADE RO" - upgrading a read-only instance;
 "BATCH ROLLBACK" - rolling back databases in batches;
-"UPGRADE MASTER" - upgrading a master instance;
+"UPGRADE MASTER" - upgrading a primary instance;
 "DROP TABLES" - dropping a TencentDB table;
 "SWITCH DR TO MASTER" - promoting a disaster recovery instance.
      */

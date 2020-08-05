@@ -51,7 +51,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String [] UserAgents;
 
     /**
-    * Blacklist or whitelist. Valid values: blacklist, whitelist
+    * blocklist or allowlist. Valid values: blacklist, whitelist
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FilterType")
@@ -135,9 +135,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Blacklist or whitelist. Valid values: blacklist, whitelist
+     * Get blocklist or allowlist. Valid values: blacklist, whitelist
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return FilterType Blacklist or whitelist. Valid values: blacklist, whitelist
+     * @return FilterType blocklist or allowlist. Valid values: blacklist, whitelist
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getFilterType() {
@@ -145,9 +145,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Blacklist or whitelist. Valid values: blacklist, whitelist
+     * Set blocklist or allowlist. Valid values: blacklist, whitelist
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param FilterType Blacklist or whitelist. Valid values: blacklist, whitelist
+     * @param FilterType blocklist or allowlist. Valid values: blacklist, whitelist
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setFilterType(String FilterType) {

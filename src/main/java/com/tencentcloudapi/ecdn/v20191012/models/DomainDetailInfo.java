@@ -87,7 +87,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Origin Origin;
 
     /**
-    * IP blacklist/whitelist configuration.
+    * IP blocklist/allowlist configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IpFilter")
@@ -315,9 +315,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get IP blacklist/whitelist configuration.
+     * Get IP blocklist/allowlist configuration.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return IpFilter IP blacklist/whitelist configuration.
+     * @return IpFilter IP blocklist/allowlist configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public IpFilter getIpFilter() {
@@ -325,9 +325,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set IP blacklist/whitelist configuration.
+     * Set IP blocklist/allowlist configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param IpFilter IP blacklist/whitelist configuration.
+     * @param IpFilter IP blocklist/allowlist configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setIpFilter(IpFilter IpFilter) {

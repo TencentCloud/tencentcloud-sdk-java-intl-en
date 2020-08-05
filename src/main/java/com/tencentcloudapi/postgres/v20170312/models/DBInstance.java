@@ -107,14 +107,14 @@ public class DBInstance extends AbstractModel{
     private String DBInstanceClass;
 
     /**
-    * Instance type. 1: primary (master instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
+    * Instance type. 1: primary (primary instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
     */
     @SerializedName("DBInstanceType")
     @Expose
     private String DBInstanceType;
 
     /**
-    * Instance edition. Currently, only `standard` edition (dual-server high-availability one-master-one-slave edition) is supported
+    * Instance edition. Currently, only `standard` edition (dual-server high-availability one-primary-one-secondary edition) is supported
     */
     @SerializedName("DBInstanceVersion")
     @Expose
@@ -404,32 +404,32 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
-     * Get Instance type. 1: primary (master instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance) 
-     * @return DBInstanceType Instance type. 1: primary (master instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
+     * Get Instance type. 1: primary (primary instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance) 
+     * @return DBInstanceType Instance type. 1: primary (primary instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
      */
     public String getDBInstanceType() {
         return this.DBInstanceType;
     }
 
     /**
-     * Set Instance type. 1: primary (master instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
-     * @param DBInstanceType Instance type. 1: primary (master instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
+     * Set Instance type. 1: primary (primary instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
+     * @param DBInstanceType Instance type. 1: primary (primary instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
      */
     public void setDBInstanceType(String DBInstanceType) {
         this.DBInstanceType = DBInstanceType;
     }
 
     /**
-     * Get Instance edition. Currently, only `standard` edition (dual-server high-availability one-master-one-slave edition) is supported 
-     * @return DBInstanceVersion Instance edition. Currently, only `standard` edition (dual-server high-availability one-master-one-slave edition) is supported
+     * Get Instance edition. Currently, only `standard` edition (dual-server high-availability one-primary-one-secondary edition) is supported 
+     * @return DBInstanceVersion Instance edition. Currently, only `standard` edition (dual-server high-availability one-primary-one-secondary edition) is supported
      */
     public String getDBInstanceVersion() {
         return this.DBInstanceVersion;
     }
 
     /**
-     * Set Instance edition. Currently, only `standard` edition (dual-server high-availability one-master-one-slave edition) is supported
-     * @param DBInstanceVersion Instance edition. Currently, only `standard` edition (dual-server high-availability one-master-one-slave edition) is supported
+     * Set Instance edition. Currently, only `standard` edition (dual-server high-availability one-primary-one-secondary edition) is supported
+     * @param DBInstanceVersion Instance edition. Currently, only `standard` edition (dual-server high-availability one-primary-one-secondary edition) is supported
      */
     public void setDBInstanceVersion(String DBInstanceVersion) {
         this.DBInstanceVersion = DBInstanceVersion;

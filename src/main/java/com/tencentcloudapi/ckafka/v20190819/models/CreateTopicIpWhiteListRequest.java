@@ -37,7 +37,7 @@ public class CreateTopicIpWhiteListRequest extends AbstractModel{
     private String TopicName;
 
     /**
-    * IP whitelist list
+    * IP allowlist list
     */
     @SerializedName("IpWhiteList")
     @Expose
@@ -76,16 +76,16 @@ public class CreateTopicIpWhiteListRequest extends AbstractModel{
     }
 
     /**
-     * Get IP whitelist list 
-     * @return IpWhiteList IP whitelist list
+     * Get IP allowlist list 
+     * @return IpWhiteList IP allowlist list
      */
     public String [] getIpWhiteList() {
         return this.IpWhiteList;
     }
 
     /**
-     * Set IP whitelist list
-     * @param IpWhiteList IP whitelist list
+     * Set IP allowlist list
+     * @param IpWhiteList IP allowlist list
      */
     public void setIpWhiteList(String [] IpWhiteList) {
         this.IpWhiteList = IpWhiteList;

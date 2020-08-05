@@ -30,7 +30,7 @@ public class ClusterAsGroup extends AbstractModel{
     private String AutoScalingGroupId;
 
     /**
-    * Scaling group status (enabled, enabling, disabled, disabling, updating, deleting, scaleDownEnabling, scaleDownDisabling)
+    * Scaling group status (`enabled`, `enabling`, `disabled`, `disabling`, `updating`, `deleting`, `scaleDownEnabling`, `scaleDownDisabling`)
     */
     @SerializedName("Status")
     @Expose
@@ -76,16 +76,16 @@ Note: this field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Scaling group status (enabled, enabling, disabled, disabling, updating, deleting, scaleDownEnabling, scaleDownDisabling) 
-     * @return Status Scaling group status (enabled, enabling, disabled, disabling, updating, deleting, scaleDownEnabling, scaleDownDisabling)
+     * Get Scaling group status (`enabled`, `enabling`, `disabled`, `disabling`, `updating`, `deleting`, `scaleDownEnabling`, `scaleDownDisabling`) 
+     * @return Status Scaling group status (`enabled`, `enabling`, `disabled`, `disabling`, `updating`, `deleting`, `scaleDownEnabling`, `scaleDownDisabling`)
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Scaling group status (enabled, enabling, disabled, disabling, updating, deleting, scaleDownEnabling, scaleDownDisabling)
-     * @param Status Scaling group status (enabled, enabling, disabled, disabling, updating, deleting, scaleDownEnabling, scaleDownDisabling)
+     * Set Scaling group status (`enabled`, `enabling`, `disabled`, `disabling`, `updating`, `deleting`, `scaleDownEnabling`, `scaleDownDisabling`)
+     * @param Status Scaling group status (`enabled`, `enabling`, `disabled`, `disabling`, `updating`, `deleting`, `scaleDownEnabling`, `scaleDownDisabling`)
      */
     public void setStatus(String Status) {
         this.Status = Status;

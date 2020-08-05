@@ -37,14 +37,14 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     private String Description;
 
     /**
-    * Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB.
+    * Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3,072 MB in increments of 128 MB.
     */
     @SerializedName("MemorySize")
     @Expose
     private Long MemorySize;
 
     /**
-    * Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
+    * Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
     */
     @SerializedName("Timeout")
     @Expose
@@ -135,6 +135,13 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     private PublicNetConfigIn PublicNetConfig;
 
     /**
+    * File system configuration input parameter, which is used for the function to bind the file system
+    */
+    @SerializedName("CfsConfig")
+    @Expose
+    private CfsConfig CfsConfig;
+
+    /**
      * Get Name of the function to be modified 
      * @return FunctionName Name of the function to be modified
      */
@@ -167,32 +174,32 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     }
 
     /**
-     * Get Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB. 
-     * @return MemorySize Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB.
+     * Get Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3,072 MB in increments of 128 MB. 
+     * @return MemorySize Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3,072 MB in increments of 128 MB.
      */
     public Long getMemorySize() {
         return this.MemorySize;
     }
 
     /**
-     * Set Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB.
-     * @param MemorySize Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128–3,072 MB in increments of 128 MB.
+     * Set Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3,072 MB in increments of 128 MB.
+     * @param MemorySize Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3,072 MB in increments of 128 MB.
      */
     public void setMemorySize(Long MemorySize) {
         this.MemorySize = MemorySize;
     }
 
     /**
-     * Get Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds 
-     * @return Timeout Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
+     * Get Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds 
+     * @return Timeout Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
      */
     public Long getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
-     * @param Timeout Maximum execution duration of function in seconds. Value range: 1–900 seconds. Default value: 3 seconds
+     * Set Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
+     * @param Timeout Maximum execution duration of function in seconds. Value range: 1-900 seconds. Default value: 3 seconds
      */
     public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;
@@ -391,6 +398,22 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     }
 
     /**
+     * Get File system configuration input parameter, which is used for the function to bind the file system 
+     * @return CfsConfig File system configuration input parameter, which is used for the function to bind the file system
+     */
+    public CfsConfig getCfsConfig() {
+        return this.CfsConfig;
+    }
+
+    /**
+     * Set File system configuration input parameter, which is used for the function to bind the file system
+     * @param CfsConfig File system configuration input parameter, which is used for the function to bind the file system
+     */
+    public void setCfsConfig(CfsConfig CfsConfig) {
+        this.CfsConfig = CfsConfig;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -410,6 +433,7 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Layers.", this.Layers);
         this.setParamObj(map, prefix + "DeadLetterConfig.", this.DeadLetterConfig);
         this.setParamObj(map, prefix + "PublicNetConfig.", this.PublicNetConfig);
+        this.setParamObj(map, prefix + "CfsConfig.", this.CfsConfig);
 
     }
 }

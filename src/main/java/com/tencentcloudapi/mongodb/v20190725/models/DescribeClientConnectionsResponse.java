@@ -30,6 +30,13 @@ public class DescribeClientConnectionsResponse extends AbstractModel{
     private ClientConnection [] Clients;
 
     /**
+    * 
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -53,6 +60,22 @@ public class DescribeClientConnectionsResponse extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return TotalCount 
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 
+     * @param TotalCount 
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -73,6 +96,7 @@ public class DescribeClientConnectionsResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Clients.", this.Clients);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

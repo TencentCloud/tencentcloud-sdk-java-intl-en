@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class IpFilter extends AbstractModel{
 
     /**
-    * IP blacklist/whitelist switch. Valid values: on, off.
+    * IP blocklist/allowlist switch. Valid values: on, off.
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * IP blacklist/whitelist type. Valid values: whitelist, blacklist.
+    * IP blocklist/allowlist type. Valid values: whitelist, blacklist.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FilterType")
@@ -38,7 +38,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String FilterType;
 
     /**
-    * IP blacklist/whitelist list.
+    * IP blocklist/allowlist list.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Filters")
@@ -46,25 +46,25 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String [] Filters;
 
     /**
-     * Get IP blacklist/whitelist switch. Valid values: on, off. 
-     * @return Switch IP blacklist/whitelist switch. Valid values: on, off.
+     * Get IP blocklist/allowlist switch. Valid values: on, off. 
+     * @return Switch IP blocklist/allowlist switch. Valid values: on, off.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set IP blacklist/whitelist switch. Valid values: on, off.
-     * @param Switch IP blacklist/whitelist switch. Valid values: on, off.
+     * Set IP blocklist/allowlist switch. Valid values: on, off.
+     * @param Switch IP blocklist/allowlist switch. Valid values: on, off.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get IP blacklist/whitelist type. Valid values: whitelist, blacklist.
+     * Get IP blocklist/allowlist type. Valid values: whitelist, blacklist.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return FilterType IP blacklist/whitelist type. Valid values: whitelist, blacklist.
+     * @return FilterType IP blocklist/allowlist type. Valid values: whitelist, blacklist.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getFilterType() {
@@ -72,9 +72,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set IP blacklist/whitelist type. Valid values: whitelist, blacklist.
+     * Set IP blocklist/allowlist type. Valid values: whitelist, blacklist.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param FilterType IP blacklist/whitelist type. Valid values: whitelist, blacklist.
+     * @param FilterType IP blocklist/allowlist type. Valid values: whitelist, blacklist.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setFilterType(String FilterType) {
@@ -82,9 +82,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get IP blacklist/whitelist list.
+     * Get IP blocklist/allowlist list.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Filters IP blacklist/whitelist list.
+     * @return Filters IP blocklist/allowlist list.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String [] getFilters() {
@@ -92,9 +92,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set IP blacklist/whitelist list.
+     * Set IP blocklist/allowlist list.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Filters IP blacklist/whitelist list.
+     * @param Filters IP blocklist/allowlist list.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setFilters(String [] Filters) {

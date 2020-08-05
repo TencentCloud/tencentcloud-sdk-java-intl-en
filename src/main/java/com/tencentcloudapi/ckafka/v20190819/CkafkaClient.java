@@ -92,7 +92,7 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a topic IP whitelist.
+     *This API is used to create a topic IP allowlist.
      * @param req CreateTopicIpWhiteListRequest
      * @return CreateTopicIpWhiteListResponse
      * @throws TencentCloudSDKException
@@ -164,7 +164,7 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete a topic IP whitelist.
+     *This API is used to delete a topic IP allowlist.
      * @param req DeleteTopicIpWhiteListRequest
      * @return DeleteTopicIpWhiteListResponse
      * @throws TencentCloudSDKException

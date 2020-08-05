@@ -44,7 +44,7 @@ public class DescribeBackupsRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Number of results per page. Value range: 1–100. Default value: 20
+    * Number of results per page. Value range: 1-100. Default value: 20
     */
     @SerializedName("Limit")
     @Expose
@@ -106,16 +106,16 @@ public class DescribeBackupsRequest extends AbstractModel{
     }
 
     /**
-     * Get Number of results per page. Value range: 1–100. Default value: 20 
-     * @return Limit Number of results per page. Value range: 1–100. Default value: 20
+     * Get Number of results per page. Value range: 1-100. Default value: 20 
+     * @return Limit Number of results per page. Value range: 1-100. Default value: 20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results per page. Value range: 1–100. Default value: 20
-     * @param Limit Number of results per page. Value range: 1–100. Default value: 20
+     * Set Number of results per page. Value range: 1-100. Default value: 20
+     * @param Limit Number of results per page. Value range: 1-100. Default value: 20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

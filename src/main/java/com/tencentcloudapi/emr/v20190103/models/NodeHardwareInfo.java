@@ -303,12 +303,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Tag [] Tags;
 
     /**
-    * Whether it is an automatically scalable node. 0: general node, 1: automatically scalable node.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("AutoFlag")
     @Expose
     private Long AutoFlag;
+
+    /**
+    * 
+    */
+    @SerializedName("HardwareResourceType")
+    @Expose
+    private String HardwareResourceType;
 
     /**
      * Get User `APPID`
@@ -1011,23 +1017,35 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether it is an automatically scalable node. 0: general node, 1: automatically scalable node.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AutoFlag Whether it is an automatically scalable node. 0: general node, 1: automatically scalable node.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return AutoFlag 
      */
     public Long getAutoFlag() {
         return this.AutoFlag;
     }
 
     /**
-     * Set Whether it is an automatically scalable node. 0: general node, 1: automatically scalable node.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AutoFlag Whether it is an automatically scalable node. 0: general node, 1: automatically scalable node.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param AutoFlag 
      */
     public void setAutoFlag(Long AutoFlag) {
         this.AutoFlag = AutoFlag;
+    }
+
+    /**
+     * Get  
+     * @return HardwareResourceType 
+     */
+    public String getHardwareResourceType() {
+        return this.HardwareResourceType;
+    }
+
+    /**
+     * Set 
+     * @param HardwareResourceType 
+     */
+    public void setHardwareResourceType(String HardwareResourceType) {
+        this.HardwareResourceType = HardwareResourceType;
     }
 
     /**
@@ -1070,6 +1088,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Destroyable", this.Destroyable);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "AutoFlag", this.AutoFlag);
+        this.setParamSimple(map, prefix + "HardwareResourceType", this.HardwareResourceType);
 
     }
 }

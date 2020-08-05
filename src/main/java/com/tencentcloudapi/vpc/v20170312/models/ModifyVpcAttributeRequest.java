@@ -44,7 +44,7 @@ public class ModifyVpcAttributeRequest extends AbstractModel{
     private String EnableMulticast;
 
     /**
-    * DNS address. A maximum of 4 addresses is supported. The first one is master server by default, and the rest are slave servers.
+    * DNS address. A maximum of 4 addresses is supported. The first one is primary server by default, and the rest are secondary servers.
     */
     @SerializedName("DnsServers")
     @Expose
@@ -106,16 +106,16 @@ public class ModifyVpcAttributeRequest extends AbstractModel{
     }
 
     /**
-     * Get DNS address. A maximum of 4 addresses is supported. The first one is master server by default, and the rest are slave servers. 
-     * @return DnsServers DNS address. A maximum of 4 addresses is supported. The first one is master server by default, and the rest are slave servers.
+     * Get DNS address. A maximum of 4 addresses is supported. The first one is primary server by default, and the rest are secondary servers. 
+     * @return DnsServers DNS address. A maximum of 4 addresses is supported. The first one is primary server by default, and the rest are secondary servers.
      */
     public String [] getDnsServers() {
         return this.DnsServers;
     }
 
     /**
-     * Set DNS address. A maximum of 4 addresses is supported. The first one is master server by default, and the rest are slave servers.
-     * @param DnsServers DNS address. A maximum of 4 addresses is supported. The first one is master server by default, and the rest are slave servers.
+     * Set DNS address. A maximum of 4 addresses is supported. The first one is primary server by default, and the rest are secondary servers.
+     * @param DnsServers DNS address. A maximum of 4 addresses is supported. The first one is primary server by default, and the rest are secondary servers.
      */
     public void setDnsServers(String [] DnsServers) {
         this.DnsServers = DnsServers;

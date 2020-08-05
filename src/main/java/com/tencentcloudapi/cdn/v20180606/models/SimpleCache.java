@@ -44,9 +44,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Forced cache
-on: enabled
-off: disabled
-This is disabled by default. If enabled, `no-store` and `no-cache` resources returned from the origin server will be cached according to CacheRules rules.
+on: enable
+off: disable
+This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IgnoreCacheControl")
@@ -141,14 +141,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Forced cache
-on: enabled
-off: disabled
-This is disabled by default. If enabled, `no-store` and `no-cache` resources returned from the origin server will be cached according to CacheRules rules.
+on: enable
+off: disable
+This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return IgnoreCacheControl Forced cache
-on: enabled
-off: disabled
-This is disabled by default. If enabled, `no-store` and `no-cache` resources returned from the origin server will be cached according to CacheRules rules.
+on: enable
+off: disable
+This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getIgnoreCacheControl() {
@@ -157,14 +157,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Forced cache
-on: enabled
-off: disabled
-This is disabled by default. If enabled, `no-store` and `no-cache` resources returned from the origin server will be cached according to CacheRules rules.
+on: enable
+off: disable
+This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param IgnoreCacheControl Forced cache
-on: enabled
-off: disabled
-This is disabled by default. If enabled, `no-store` and `no-cache` resources returned from the origin server will be cached according to CacheRules rules.
+on: enable
+off: disable
+This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setIgnoreCacheControl(String IgnoreCacheControl) {

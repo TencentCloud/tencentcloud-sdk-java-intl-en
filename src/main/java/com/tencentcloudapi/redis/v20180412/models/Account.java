@@ -55,7 +55,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Privilege;
 
     /**
-    * Routing policy. master: master node; replication: slave node
+    * Routing policy. master: master node; replication: secondary node
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ReadonlyPolicy")
@@ -151,9 +151,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Routing policy. master: master node; replication: slave node
+     * Get Routing policy. master: master node; replication: secondary node
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ReadonlyPolicy Routing policy. master: master node; replication: slave node
+     * @return ReadonlyPolicy Routing policy. master: master node; replication: secondary node
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getReadonlyPolicy() {
@@ -161,9 +161,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Routing policy. master: master node; replication: slave node
+     * Set Routing policy. master: master node; replication: secondary node
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ReadonlyPolicy Routing policy. master: master node; replication: slave node
+     * @param ReadonlyPolicy Routing policy. master: master node; replication: secondary node
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setReadonlyPolicy(String [] ReadonlyPolicy) {

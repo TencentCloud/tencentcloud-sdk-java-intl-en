@@ -76,6 +76,16 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     private Boolean Encrypt;
 
     /**
+    * ID of the custom CMK in the format of UUID or “kms-abcd1234”. This parameter is used to encrypt cloud disks.
+
+Currently, this parameter is only used in the `RunInstances` API.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("KmsKeyId")
+    @Expose
+    private String KmsKeyId;
+
+    /**
      * Get Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [Storage Overview](https://cloud.tencent.com/document/product/213/4952). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation. 
      * @return DiskSize Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [Storage Overview](https://cloud.tencent.com/document/product/213/4952). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
      */
@@ -216,6 +226,34 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     }
 
     /**
+     * Get ID of the custom CMK in the format of UUID or “kms-abcd1234”. This parameter is used to encrypt cloud disks.
+
+Currently, this parameter is only used in the `RunInstances` API.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return KmsKeyId ID of the custom CMK in the format of UUID or “kms-abcd1234”. This parameter is used to encrypt cloud disks.
+
+Currently, this parameter is only used in the `RunInstances` API.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getKmsKeyId() {
+        return this.KmsKeyId;
+    }
+
+    /**
+     * Set ID of the custom CMK in the format of UUID or “kms-abcd1234”. This parameter is used to encrypt cloud disks.
+
+Currently, this parameter is only used in the `RunInstances` API.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param KmsKeyId ID of the custom CMK in the format of UUID or “kms-abcd1234”. This parameter is used to encrypt cloud disks.
+
+Currently, this parameter is only used in the `RunInstances` API.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setKmsKeyId(String KmsKeyId) {
+        this.KmsKeyId = KmsKeyId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -225,6 +263,7 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         this.setParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
         this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
         this.setParamSimple(map, prefix + "Encrypt", this.Encrypt);
+        this.setParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
 
     }
 }

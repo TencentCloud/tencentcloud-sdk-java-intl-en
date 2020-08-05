@@ -72,6 +72,27 @@ public class ComputeEnvView extends AbstractModel{
     private Long DesiredComputeNodeCount;
 
     /**
+    * 
+    */
+    @SerializedName("ResourceType")
+    @Expose
+    private String ResourceType;
+
+    /**
+    * 
+    */
+    @SerializedName("NextAction")
+    @Expose
+    private String NextAction;
+
+    /**
+    * 
+    */
+    @SerializedName("AttachedComputeNodeCount")
+    @Expose
+    private Long AttachedComputeNodeCount;
+
+    /**
      * Get Compute environment ID 
      * @return EnvId Compute environment ID
      */
@@ -184,6 +205,54 @@ public class ComputeEnvView extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return ResourceType 
+     */
+    public String getResourceType() {
+        return this.ResourceType;
+    }
+
+    /**
+     * Set 
+     * @param ResourceType 
+     */
+    public void setResourceType(String ResourceType) {
+        this.ResourceType = ResourceType;
+    }
+
+    /**
+     * Get  
+     * @return NextAction 
+     */
+    public String getNextAction() {
+        return this.NextAction;
+    }
+
+    /**
+     * Set 
+     * @param NextAction 
+     */
+    public void setNextAction(String NextAction) {
+        this.NextAction = NextAction;
+    }
+
+    /**
+     * Get  
+     * @return AttachedComputeNodeCount 
+     */
+    public Long getAttachedComputeNodeCount() {
+        return this.AttachedComputeNodeCount;
+    }
+
+    /**
+     * Set 
+     * @param AttachedComputeNodeCount 
+     */
+    public void setAttachedComputeNodeCount(Long AttachedComputeNodeCount) {
+        this.AttachedComputeNodeCount = AttachedComputeNodeCount;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +263,9 @@ public class ComputeEnvView extends AbstractModel{
         this.setParamObj(map, prefix + "ComputeNodeMetrics.", this.ComputeNodeMetrics);
         this.setParamSimple(map, prefix + "EnvType", this.EnvType);
         this.setParamSimple(map, prefix + "DesiredComputeNodeCount", this.DesiredComputeNodeCount);
+        this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
+        this.setParamSimple(map, prefix + "NextAction", this.NextAction);
+        this.setParamSimple(map, prefix + "AttachedComputeNodeCount", this.AttachedComputeNodeCount);
 
     }
 }

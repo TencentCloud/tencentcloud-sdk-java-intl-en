@@ -79,6 +79,27 @@ public class DescribeComputeEnvResponse extends AbstractModel{
     private String EnvType;
 
     /**
+    * 
+    */
+    @SerializedName("ResourceType")
+    @Expose
+    private String ResourceType;
+
+    /**
+    * 
+    */
+    @SerializedName("NextAction")
+    @Expose
+    private String NextAction;
+
+    /**
+    * 
+    */
+    @SerializedName("AttachedComputeNodeCount")
+    @Expose
+    private Long AttachedComputeNodeCount;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -214,6 +235,54 @@ public class DescribeComputeEnvResponse extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return ResourceType 
+     */
+    public String getResourceType() {
+        return this.ResourceType;
+    }
+
+    /**
+     * Set 
+     * @param ResourceType 
+     */
+    public void setResourceType(String ResourceType) {
+        this.ResourceType = ResourceType;
+    }
+
+    /**
+     * Get  
+     * @return NextAction 
+     */
+    public String getNextAction() {
+        return this.NextAction;
+    }
+
+    /**
+     * Set 
+     * @param NextAction 
+     */
+    public void setNextAction(String NextAction) {
+        this.NextAction = NextAction;
+    }
+
+    /**
+     * Get  
+     * @return AttachedComputeNodeCount 
+     */
+    public Long getAttachedComputeNodeCount() {
+        return this.AttachedComputeNodeCount;
+    }
+
+    /**
+     * Set 
+     * @param AttachedComputeNodeCount 
+     */
+    public void setAttachedComputeNodeCount(Long AttachedComputeNodeCount) {
+        this.AttachedComputeNodeCount = AttachedComputeNodeCount;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -241,6 +310,9 @@ public class DescribeComputeEnvResponse extends AbstractModel{
         this.setParamObj(map, prefix + "ComputeNodeMetrics.", this.ComputeNodeMetrics);
         this.setParamSimple(map, prefix + "DesiredComputeNodeCount", this.DesiredComputeNodeCount);
         this.setParamSimple(map, prefix + "EnvType", this.EnvType);
+        this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
+        this.setParamSimple(map, prefix + "NextAction", this.NextAction);
+        this.setParamSimple(map, prefix + "AttachedComputeNodeCount", this.AttachedComputeNodeCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

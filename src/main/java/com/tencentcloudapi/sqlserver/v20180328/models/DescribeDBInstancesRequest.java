@@ -33,7 +33,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     * Instance status. Valid values:
 <li>1: applying</li>
 <li>2: running</li>
-<li>3: running restrictedly (master/slave switching)</li>
+<li>3: running restrictedly (primary/secondary switching)</li>
 <li>4: isolated</li>
 <li>5: repossessing</li>
 <li>6: repossessed</li>
@@ -56,7 +56,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * Number of results per page. Value range: 1–100. Default value: 100
+    * Number of results per page. Value range: 1-100. Default value: 100
     */
     @SerializedName("Limit")
     @Expose
@@ -110,7 +110,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Get Instance status. Valid values:
 <li>1: applying</li>
 <li>2: running</li>
-<li>3: running restrictedly (master/slave switching)</li>
+<li>3: running restrictedly (primary/secondary switching)</li>
 <li>4: isolated</li>
 <li>5: repossessing</li>
 <li>6: repossessed</li>
@@ -123,7 +123,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * @return Status Instance status. Valid values:
 <li>1: applying</li>
 <li>2: running</li>
-<li>3: running restrictedly (master/slave switching)</li>
+<li>3: running restrictedly (primary/secondary switching)</li>
 <li>4: isolated</li>
 <li>5: repossessing</li>
 <li>6: repossessed</li>
@@ -142,7 +142,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * Set Instance status. Valid values:
 <li>1: applying</li>
 <li>2: running</li>
-<li>3: running restrictedly (master/slave switching)</li>
+<li>3: running restrictedly (primary/secondary switching)</li>
 <li>4: isolated</li>
 <li>5: repossessing</li>
 <li>6: repossessed</li>
@@ -155,7 +155,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
      * @param Status Instance status. Valid values:
 <li>1: applying</li>
 <li>2: running</li>
-<li>3: running restrictedly (master/slave switching)</li>
+<li>3: running restrictedly (primary/secondary switching)</li>
 <li>4: isolated</li>
 <li>5: repossessing</li>
 <li>6: repossessed</li>
@@ -187,16 +187,16 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Number of results per page. Value range: 1–100. Default value: 100 
-     * @return Limit Number of results per page. Value range: 1–100. Default value: 100
+     * Get Number of results per page. Value range: 1-100. Default value: 100 
+     * @return Limit Number of results per page. Value range: 1-100. Default value: 100
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results per page. Value range: 1–100. Default value: 100
-     * @param Limit Number of results per page. Value range: 1–100. Default value: 100
+     * Set Number of results per page. Value range: 1-100. Default value: 100
+     * @param Limit Number of results per page. Value range: 1-100. Default value: 100
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
