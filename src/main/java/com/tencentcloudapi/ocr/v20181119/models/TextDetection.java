@@ -30,7 +30,7 @@ public class TextDetection extends AbstractModel{
     private String DetectedText;
 
     /**
-    * Confidence. Value range: 0–100
+    * Confidence. Value range: 0-100
     */
     @SerializedName("Confidence")
     @Expose
@@ -76,16 +76,16 @@ The paragraph information `Parag` returned by the `GeneralBasicOcr` API contains
     }
 
     /**
-     * Get Confidence. Value range: 0–100 
-     * @return Confidence Confidence. Value range: 0–100
+     * Get Confidence. Value range: 0-100 
+     * @return Confidence Confidence. Value range: 0-100
      */
     public Long getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Confidence. Value range: 0–100
-     * @param Confidence Confidence. Value range: 0–100
+     * Set Confidence. Value range: 0-100
+     * @param Confidence Confidence. Value range: 0-100
      */
     public void setConfidence(Long Confidence) {
         this.Confidence = Confidence;

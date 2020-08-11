@@ -44,7 +44,7 @@ public class DescribeResourceTagsByResourceIdsRequest extends AbstractModel{
     private String [] ResourceIds;
 
     /**
-    * The resource’s region.
+    * The resource's region.
     */
     @SerializedName("ResourceRegion")
     @Expose
@@ -113,16 +113,16 @@ public class DescribeResourceTagsByResourceIdsRequest extends AbstractModel{
     }
 
     /**
-     * Get The resource’s region. 
-     * @return ResourceRegion The resource’s region.
+     * Get The resource's region. 
+     * @return ResourceRegion The resource's region.
      */
     public String getResourceRegion() {
         return this.ResourceRegion;
     }
 
     /**
-     * Set The resource’s region.
-     * @param ResourceRegion The resource’s region.
+     * Set The resource's region.
+     * @param ResourceRegion The resource's region.
      */
     public void setResourceRegion(String ResourceRegion) {
         this.ResourceRegion = ResourceRegion;

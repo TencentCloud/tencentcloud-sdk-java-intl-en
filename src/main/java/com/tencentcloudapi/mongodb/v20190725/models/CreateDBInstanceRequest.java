@@ -44,7 +44,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
     private Long Volume;
 
     /**
-    * Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition.
+    * Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition.
     */
     @SerializedName("MongoVersion")
     @Expose
@@ -72,21 +72,21 @@ public class CreateDBInstanceRequest extends AbstractModel{
     private Long Period;
 
     /**
-    * Server type. Valid values: HIO (high IO), HIO10G (10-gigabit high IO).
+    * Server type. Valid values: HIO (high IO), HIO10G (10-gigabit high IO), STDS5 (standard).
     */
     @SerializedName("MachineCode")
     @Expose
     private String MachineCode;
 
     /**
-    * Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster).
+    * Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster), STANDALONE (single-node).
     */
     @SerializedName("ClusterType")
     @Expose
     private String ClusterType;
 
     /**
-    * Number of replica sets. To create a replica set instance, set this parameter to 1; to create a shard instance, see the parameters returned by the `DescribeSpecInfo` API.
+    * Number of replica sets. To create a replica set instance, set this parameter to 1; to create a shard instance, see the parameters returned by the `DescribeSpecInfo` API; to create a single-node instance, set this parameter to 0.
     */
     @SerializedName("ReplicateSetNum")
     @Expose
@@ -135,28 +135,28 @@ public class CreateDBInstanceRequest extends AbstractModel{
     private Long AutoRenewFlag;
 
     /**
-    * 
+    * Whether to automatically use a voucher. Valid values: 1 (yes), 0 (no). Default value: 0.
     */
     @SerializedName("AutoVoucher")
     @Expose
     private Long AutoVoucher;
 
     /**
-    * 
+    * Valid values: 1 (regular instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance).
     */
     @SerializedName("Clone")
     @Expose
     private Long Clone;
 
     /**
-    * 
+    * Primary instance ID. It is required for read-only and disaster recovery instances.
     */
     @SerializedName("Father")
     @Expose
     private String Father;
 
     /**
-    * 
+    * Security group.
     */
     @SerializedName("SecurityGroup")
     @Expose
@@ -211,16 +211,16 @@ public class CreateDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition. 
-     * @return MongoVersion Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition.
+     * Get Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition. 
+     * @return MongoVersion Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition.
      */
     public String getMongoVersion() {
         return this.MongoVersion;
     }
 
     /**
-     * Set Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition.
-     * @param MongoVersion Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition.
+     * Set Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition.
+     * @param MongoVersion Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition.
      */
     public void setMongoVersion(String MongoVersion) {
         this.MongoVersion = MongoVersion;
@@ -275,48 +275,48 @@ public class CreateDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Server type. Valid values: HIO (high IO), HIO10G (10-gigabit high IO). 
-     * @return MachineCode Server type. Valid values: HIO (high IO), HIO10G (10-gigabit high IO).
+     * Get Server type. Valid values: HIO (high IO), HIO10G (10-gigabit high IO), STDS5 (standard). 
+     * @return MachineCode Server type. Valid values: HIO (high IO), HIO10G (10-gigabit high IO), STDS5 (standard).
      */
     public String getMachineCode() {
         return this.MachineCode;
     }
 
     /**
-     * Set Server type. Valid values: HIO (high IO), HIO10G (10-gigabit high IO).
-     * @param MachineCode Server type. Valid values: HIO (high IO), HIO10G (10-gigabit high IO).
+     * Set Server type. Valid values: HIO (high IO), HIO10G (10-gigabit high IO), STDS5 (standard).
+     * @param MachineCode Server type. Valid values: HIO (high IO), HIO10G (10-gigabit high IO), STDS5 (standard).
      */
     public void setMachineCode(String MachineCode) {
         this.MachineCode = MachineCode;
     }
 
     /**
-     * Get Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster). 
-     * @return ClusterType Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster).
+     * Get Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster), STANDALONE (single-node). 
+     * @return ClusterType Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster), STANDALONE (single-node).
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster).
-     * @param ClusterType Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster).
+     * Set Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster), STANDALONE (single-node).
+     * @param ClusterType Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster), STANDALONE (single-node).
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get Number of replica sets. To create a replica set instance, set this parameter to 1; to create a shard instance, see the parameters returned by the `DescribeSpecInfo` API. 
-     * @return ReplicateSetNum Number of replica sets. To create a replica set instance, set this parameter to 1; to create a shard instance, see the parameters returned by the `DescribeSpecInfo` API.
+     * Get Number of replica sets. To create a replica set instance, set this parameter to 1; to create a shard instance, see the parameters returned by the `DescribeSpecInfo` API; to create a single-node instance, set this parameter to 0. 
+     * @return ReplicateSetNum Number of replica sets. To create a replica set instance, set this parameter to 1; to create a shard instance, see the parameters returned by the `DescribeSpecInfo` API; to create a single-node instance, set this parameter to 0.
      */
     public Long getReplicateSetNum() {
         return this.ReplicateSetNum;
     }
 
     /**
-     * Set Number of replica sets. To create a replica set instance, set this parameter to 1; to create a shard instance, see the parameters returned by the `DescribeSpecInfo` API.
-     * @param ReplicateSetNum Number of replica sets. To create a replica set instance, set this parameter to 1; to create a shard instance, see the parameters returned by the `DescribeSpecInfo` API.
+     * Set Number of replica sets. To create a replica set instance, set this parameter to 1; to create a shard instance, see the parameters returned by the `DescribeSpecInfo` API; to create a single-node instance, set this parameter to 0.
+     * @param ReplicateSetNum Number of replica sets. To create a replica set instance, set this parameter to 1; to create a shard instance, see the parameters returned by the `DescribeSpecInfo` API; to create a single-node instance, set this parameter to 0.
      */
     public void setReplicateSetNum(Long ReplicateSetNum) {
         this.ReplicateSetNum = ReplicateSetNum;
@@ -419,64 +419,64 @@ public class CreateDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return AutoVoucher 
+     * Get Whether to automatically use a voucher. Valid values: 1 (yes), 0 (no). Default value: 0. 
+     * @return AutoVoucher Whether to automatically use a voucher. Valid values: 1 (yes), 0 (no). Default value: 0.
      */
     public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set 
-     * @param AutoVoucher 
+     * Set Whether to automatically use a voucher. Valid values: 1 (yes), 0 (no). Default value: 0.
+     * @param AutoVoucher Whether to automatically use a voucher. Valid values: 1 (yes), 0 (no). Default value: 0.
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
     }
 
     /**
-     * Get  
-     * @return Clone 
+     * Get Valid values: 1 (regular instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance). 
+     * @return Clone Valid values: 1 (regular instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance).
      */
     public Long getClone() {
         return this.Clone;
     }
 
     /**
-     * Set 
-     * @param Clone 
+     * Set Valid values: 1 (regular instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance).
+     * @param Clone Valid values: 1 (regular instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance).
      */
     public void setClone(Long Clone) {
         this.Clone = Clone;
     }
 
     /**
-     * Get  
-     * @return Father 
+     * Get Primary instance ID. It is required for read-only and disaster recovery instances. 
+     * @return Father Primary instance ID. It is required for read-only and disaster recovery instances.
      */
     public String getFather() {
         return this.Father;
     }
 
     /**
-     * Set 
-     * @param Father 
+     * Set Primary instance ID. It is required for read-only and disaster recovery instances.
+     * @param Father Primary instance ID. It is required for read-only and disaster recovery instances.
      */
     public void setFather(String Father) {
         this.Father = Father;
     }
 
     /**
-     * Get  
-     * @return SecurityGroup 
+     * Get Security group. 
+     * @return SecurityGroup Security group.
      */
     public String [] getSecurityGroup() {
         return this.SecurityGroup;
     }
 
     /**
-     * Set 
-     * @param SecurityGroup 
+     * Set Security group.
+     * @param SecurityGroup Security group.
      */
     public void setSecurityGroup(String [] SecurityGroup) {
         this.SecurityGroup = SecurityGroup;

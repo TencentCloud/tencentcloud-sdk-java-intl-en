@@ -308,6 +308,24 @@ public class DayuClient extends AbstractClient{
     }
 
     /**
+     *This API is used to batch upload Layer-7 forwarding rules.
+     * @param req CreateNewL7RulesUploadRequest
+     * @return CreateNewL7RulesUploadResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNewL7RulesUploadResponse CreateNewL7RulesUpload(CreateNewL7RulesUploadRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateNewL7RulesUploadResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateNewL7RulesUploadResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateNewL7RulesUpload"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to unblock an IP.
      * @param req CreateUnblockIpRequest
      * @return CreateUnblockIpResponse

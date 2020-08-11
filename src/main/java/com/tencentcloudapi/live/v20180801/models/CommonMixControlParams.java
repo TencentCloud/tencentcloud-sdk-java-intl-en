@@ -23,31 +23,49 @@ import java.util.HashMap;
 public class CommonMixControlParams extends AbstractModel{
 
     /**
-    * Valid values: [0,1].
-If 1 is entered, when the layer resolution in the parameter is different from the actual video resolution, the video will be automatically cropped according to the resolution set by the layer.
+    * 
     */
     @SerializedName("UseMixCropCenter")
     @Expose
     private Long UseMixCropCenter;
 
     /**
-     * Get Valid values: [0,1].
-If 1 is entered, when the layer resolution in the parameter is different from the actual video resolution, the video will be automatically cropped according to the resolution set by the layer. 
-     * @return UseMixCropCenter Valid values: [0,1].
-If 1 is entered, when the layer resolution in the parameter is different from the actual video resolution, the video will be automatically cropped according to the resolution set by the layer.
+    * 
+    */
+    @SerializedName("AllowCopy")
+    @Expose
+    private Long AllowCopy;
+
+    /**
+     * Get  
+     * @return UseMixCropCenter 
      */
     public Long getUseMixCropCenter() {
         return this.UseMixCropCenter;
     }
 
     /**
-     * Set Valid values: [0,1].
-If 1 is entered, when the layer resolution in the parameter is different from the actual video resolution, the video will be automatically cropped according to the resolution set by the layer.
-     * @param UseMixCropCenter Valid values: [0,1].
-If 1 is entered, when the layer resolution in the parameter is different from the actual video resolution, the video will be automatically cropped according to the resolution set by the layer.
+     * Set 
+     * @param UseMixCropCenter 
      */
     public void setUseMixCropCenter(Long UseMixCropCenter) {
         this.UseMixCropCenter = UseMixCropCenter;
+    }
+
+    /**
+     * Get  
+     * @return AllowCopy 
+     */
+    public Long getAllowCopy() {
+        return this.AllowCopy;
+    }
+
+    /**
+     * Set 
+     * @param AllowCopy 
+     */
+    public void setAllowCopy(Long AllowCopy) {
+        this.AllowCopy = AllowCopy;
     }
 
     /**
@@ -55,6 +73,7 @@ If 1 is entered, when the layer resolution in the parameter is different from th
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "UseMixCropCenter", this.UseMixCropCenter);
+        this.setParamSimple(map, prefix + "AllowCopy", this.AllowCopy);
 
     }
 }

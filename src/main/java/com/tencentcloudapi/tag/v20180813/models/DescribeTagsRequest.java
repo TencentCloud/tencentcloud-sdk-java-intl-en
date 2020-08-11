@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeTagsRequest extends AbstractModel{
 
     /**
-    * Tag key. Either exists or does not exist alongside the tag value. If it does not exist, all of the user’s tags will be queried.
+    * Tag key. Either exists or does not exist alongside the tag value. If it does not exist, all of the user's tags will be queried.
     */
     @SerializedName("TagKey")
     @Expose
     private String TagKey;
 
     /**
-    * Tag value. Either exists or does not exist alongside the tag key. If it does not exist, all of the user’s tags will be queried.
+    * Tag value. Either exists or does not exist alongside the tag key. If it does not exist, all of the user's tags will be queried.
     */
     @SerializedName("TagValue")
     @Expose
@@ -58,7 +58,7 @@ public class DescribeTagsRequest extends AbstractModel{
     private Long CreateUin;
 
     /**
-    * Tag key array, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried. If it is passed in together with `TagKey`, it will be used and the `TagKey` will be ignored
+    * Tag key array, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried. If it is passed in together with `TagKey`, it will be used and the `TagKey` will be ignored.
     */
     @SerializedName("TagKeys")
     @Expose
@@ -72,32 +72,32 @@ public class DescribeTagsRequest extends AbstractModel{
     private Long ShowProject;
 
     /**
-     * Get Tag key. Either exists or does not exist alongside the tag value. If it does not exist, all of the user’s tags will be queried. 
-     * @return TagKey Tag key. Either exists or does not exist alongside the tag value. If it does not exist, all of the user’s tags will be queried.
+     * Get Tag key. Either exists or does not exist alongside the tag value. If it does not exist, all of the user's tags will be queried. 
+     * @return TagKey Tag key. Either exists or does not exist alongside the tag value. If it does not exist, all of the user's tags will be queried.
      */
     public String getTagKey() {
         return this.TagKey;
     }
 
     /**
-     * Set Tag key. Either exists or does not exist alongside the tag value. If it does not exist, all of the user’s tags will be queried.
-     * @param TagKey Tag key. Either exists or does not exist alongside the tag value. If it does not exist, all of the user’s tags will be queried.
+     * Set Tag key. Either exists or does not exist alongside the tag value. If it does not exist, all of the user's tags will be queried.
+     * @param TagKey Tag key. Either exists or does not exist alongside the tag value. If it does not exist, all of the user's tags will be queried.
      */
     public void setTagKey(String TagKey) {
         this.TagKey = TagKey;
     }
 
     /**
-     * Get Tag value. Either exists or does not exist alongside the tag key. If it does not exist, all of the user’s tags will be queried. 
-     * @return TagValue Tag value. Either exists or does not exist alongside the tag key. If it does not exist, all of the user’s tags will be queried.
+     * Get Tag value. Either exists or does not exist alongside the tag key. If it does not exist, all of the user's tags will be queried. 
+     * @return TagValue Tag value. Either exists or does not exist alongside the tag key. If it does not exist, all of the user's tags will be queried.
      */
     public String getTagValue() {
         return this.TagValue;
     }
 
     /**
-     * Set Tag value. Either exists or does not exist alongside the tag key. If it does not exist, all of the user’s tags will be queried.
-     * @param TagValue Tag value. Either exists or does not exist alongside the tag key. If it does not exist, all of the user’s tags will be queried.
+     * Set Tag value. Either exists or does not exist alongside the tag key. If it does not exist, all of the user's tags will be queried.
+     * @param TagValue Tag value. Either exists or does not exist alongside the tag key. If it does not exist, all of the user's tags will be queried.
      */
     public void setTagValue(String TagValue) {
         this.TagValue = TagValue;
@@ -152,16 +152,16 @@ public class DescribeTagsRequest extends AbstractModel{
     }
 
     /**
-     * Get Tag key array, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried. If it is passed in together with `TagKey`, it will be used and the `TagKey` will be ignored 
-     * @return TagKeys Tag key array, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried. If it is passed in together with `TagKey`, it will be used and the `TagKey` will be ignored
+     * Get Tag key array, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried. If it is passed in together with `TagKey`, it will be used and the `TagKey` will be ignored. 
+     * @return TagKeys Tag key array, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried. If it is passed in together with `TagKey`, it will be used and the `TagKey` will be ignored.
      */
     public String [] getTagKeys() {
         return this.TagKeys;
     }
 
     /**
-     * Set Tag key array, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried. If it is passed in together with `TagKey`, it will be used and the `TagKey` will be ignored
-     * @param TagKeys Tag key array, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried. If it is passed in together with `TagKey`, it will be used and the `TagKey` will be ignored
+     * Set Tag key array, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried. If it is passed in together with `TagKey`, it will be used and the `TagKey` will be ignored.
+     * @param TagKeys Tag key array, which either exists or does not exist with the tag value. If it does not exist, all tags of the user will be queried. If it is passed in together with `TagKey`, it will be used and the `TagKey` will be ignored.
      */
     public void setTagKeys(String [] TagKeys) {
         this.TagKeys = TagKeys;

@@ -121,21 +121,21 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     private TagInfo [] Tags;
 
     /**
-    * 
+    * Valid values: 1 (regular instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance).
     */
     @SerializedName("Clone")
     @Expose
     private Long Clone;
 
     /**
-    * 
+    * Parent instance ID. It is required if the `Clone` is 3 or 4.
     */
     @SerializedName("Father")
     @Expose
     private String Father;
 
     /**
-    * 
+    * Security group.
     */
     @SerializedName("SecurityGroup")
     @Expose
@@ -366,48 +366,48 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return Clone 
+     * Get Valid values: 1 (regular instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance). 
+     * @return Clone Valid values: 1 (regular instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance).
      */
     public Long getClone() {
         return this.Clone;
     }
 
     /**
-     * Set 
-     * @param Clone 
+     * Set Valid values: 1 (regular instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance).
+     * @param Clone Valid values: 1 (regular instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance).
      */
     public void setClone(Long Clone) {
         this.Clone = Clone;
     }
 
     /**
-     * Get  
-     * @return Father 
+     * Get Parent instance ID. It is required if the `Clone` is 3 or 4. 
+     * @return Father Parent instance ID. It is required if the `Clone` is 3 or 4.
      */
     public String getFather() {
         return this.Father;
     }
 
     /**
-     * Set 
-     * @param Father 
+     * Set Parent instance ID. It is required if the `Clone` is 3 or 4.
+     * @param Father Parent instance ID. It is required if the `Clone` is 3 or 4.
      */
     public void setFather(String Father) {
         this.Father = Father;
     }
 
     /**
-     * Get  
-     * @return SecurityGroup 
+     * Get Security group. 
+     * @return SecurityGroup Security group.
      */
     public String [] getSecurityGroup() {
         return this.SecurityGroup;
     }
 
     /**
-     * Set 
-     * @param SecurityGroup 
+     * Set Security group.
+     * @param SecurityGroup Security group.
      */
     public void setSecurityGroup(String [] SecurityGroup) {
         this.SecurityGroup = SecurityGroup;

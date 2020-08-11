@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyResourceTagsRequest extends AbstractModel{
 
     /**
-    * Resource description in six-piece format.
+    * [Six-segment resource description](https://cloud.tencent.com/document/product/598/10606)
     */
     @SerializedName("Resource")
     @Expose
@@ -44,16 +44,16 @@ public class ModifyResourceTagsRequest extends AbstractModel{
     private TagKeyObject [] DeleteTags;
 
     /**
-     * Get Resource description in six-piece format. 
-     * @return Resource Resource description in six-piece format.
+     * Get [Six-segment resource description](https://cloud.tencent.com/document/product/598/10606) 
+     * @return Resource [Six-segment resource description](https://cloud.tencent.com/document/product/598/10606)
      */
     public String getResource() {
         return this.Resource;
     }
 
     /**
-     * Set Resource description in six-piece format.
-     * @param Resource Resource description in six-piece format.
+     * Set [Six-segment resource description](https://cloud.tencent.com/document/product/598/10606)
+     * @param Resource [Six-segment resource description](https://cloud.tencent.com/document/product/598/10606)
      */
     public void setResource(String Resource) {
         this.Resource = Resource;

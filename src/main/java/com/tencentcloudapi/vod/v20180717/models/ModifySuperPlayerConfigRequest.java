@@ -67,14 +67,17 @@ public class ModifySuperPlayerConfigRequest extends AbstractModel{
     private ResolutionNameInfo [] ResolutionNames;
 
     /**
-    * 
+    * Domain name used for playback. If its value is `Default`, the domain name configured in [Default Distribution Configuration](https://cloud.tencent.com/document/product/266/33373) will be used.
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 
+    * Scheme used for playback. Valid values:
+<li>Default: the scheme configured in [Default Distribution Configuration](https://cloud.tencent.com/document/product/266/33373) will be used;</li>
+<li>HTTP;</li>
+<li>HTTPS.</li>
     */
     @SerializedName("Scheme")
     @Expose
@@ -199,32 +202,44 @@ public class ModifySuperPlayerConfigRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return Domain 
+     * Get Domain name used for playback. If its value is `Default`, the domain name configured in [Default Distribution Configuration](https://cloud.tencent.com/document/product/266/33373) will be used. 
+     * @return Domain Domain name used for playback. If its value is `Default`, the domain name configured in [Default Distribution Configuration](https://cloud.tencent.com/document/product/266/33373) will be used.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 
-     * @param Domain 
+     * Set Domain name used for playback. If its value is `Default`, the domain name configured in [Default Distribution Configuration](https://cloud.tencent.com/document/product/266/33373) will be used.
+     * @param Domain Domain name used for playback. If its value is `Default`, the domain name configured in [Default Distribution Configuration](https://cloud.tencent.com/document/product/266/33373) will be used.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get  
-     * @return Scheme 
+     * Get Scheme used for playback. Valid values:
+<li>Default: the scheme configured in [Default Distribution Configuration](https://cloud.tencent.com/document/product/266/33373) will be used;</li>
+<li>HTTP;</li>
+<li>HTTPS.</li> 
+     * @return Scheme Scheme used for playback. Valid values:
+<li>Default: the scheme configured in [Default Distribution Configuration](https://cloud.tencent.com/document/product/266/33373) will be used;</li>
+<li>HTTP;</li>
+<li>HTTPS.</li>
      */
     public String getScheme() {
         return this.Scheme;
     }
 
     /**
-     * Set 
-     * @param Scheme 
+     * Set Scheme used for playback. Valid values:
+<li>Default: the scheme configured in [Default Distribution Configuration](https://cloud.tencent.com/document/product/266/33373) will be used;</li>
+<li>HTTP;</li>
+<li>HTTPS.</li>
+     * @param Scheme Scheme used for playback. Valid values:
+<li>Default: the scheme configured in [Default Distribution Configuration](https://cloud.tencent.com/document/product/266/33373) will be used;</li>
+<li>HTTP;</li>
+<li>HTTPS.</li>
      */
     public void setScheme(String Scheme) {
         this.Scheme = Scheme;

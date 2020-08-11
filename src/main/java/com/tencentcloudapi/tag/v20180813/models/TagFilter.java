@@ -30,7 +30,7 @@ public class TagFilter extends AbstractModel{
     private String TagKey;
 
     /**
-    * Tag value array. “**OR**” relation if multiple values.
+    * Tag value array. '**OR**' relation if multiple values.
     */
     @SerializedName("TagValue")
     @Expose
@@ -53,16 +53,16 @@ public class TagFilter extends AbstractModel{
     }
 
     /**
-     * Get Tag value array. “**OR**” relation if multiple values. 
-     * @return TagValue Tag value array. “**OR**” relation if multiple values.
+     * Get Tag value array. '**OR**' relation if multiple values. 
+     * @return TagValue Tag value array. '**OR**' relation if multiple values.
      */
     public String [] getTagValue() {
         return this.TagValue;
     }
 
     /**
-     * Set Tag value array. “**OR**” relation if multiple values.
-     * @param TagValue Tag value array. “**OR**” relation if multiple values.
+     * Set Tag value array. '**OR**' relation if multiple values.
+     * @param TagValue Tag value array. '**OR**' relation if multiple values.
      */
     public void setTagValue(String [] TagValue) {
         this.TagValue = TagValue;

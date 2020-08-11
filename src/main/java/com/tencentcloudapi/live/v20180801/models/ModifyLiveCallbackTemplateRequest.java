@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyLiveCallbackTemplateRequest extends AbstractModel{
 
     /**
-    * Template ID.
+    * Template ID returned by the `DescribeLiveCallbackTemplates` API.
     */
     @SerializedName("TemplateId")
     @Expose
@@ -87,16 +87,16 @@ public class ModifyLiveCallbackTemplateRequest extends AbstractModel{
     private String CallbackKey;
 
     /**
-     * Get Template ID. 
-     * @return TemplateId Template ID.
+     * Get Template ID returned by the `DescribeLiveCallbackTemplates` API. 
+     * @return TemplateId Template ID returned by the `DescribeLiveCallbackTemplates` API.
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set Template ID.
-     * @param TemplateId Template ID.
+     * Set Template ID returned by the `DescribeLiveCallbackTemplates` API.
+     * @param TemplateId Template ID returned by the `DescribeLiveCallbackTemplates` API.
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;

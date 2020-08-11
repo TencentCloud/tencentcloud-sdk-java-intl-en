@@ -130,6 +130,24 @@ This is an async API. After it is returned successfully, you can call the `Descr
     }
 
     /**
+     *This API is used to create a CLB exclusive logset for storing CLB logs.
+     * @param req CreateClsLogSetRequest
+     * @return CreateClsLogSetResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateClsLogSetResponse CreateClsLogSet(CreateClsLogSetRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateClsLogSetResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateClsLogSetResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateClsLogSet"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a listener for a CLB instance.
 This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestId as an input parameter to check whether this task is successful.
      * @param req CreateListenerRequest
@@ -217,6 +235,24 @@ This is an async API. After it is returned successfully, you can call the Descri
                 Type type = new TypeToken<JsonResponseModel<CreateTargetGroupResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateTargetGroup"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a topic with the full-text index and key-value index enabled by default. The creation will fail if there is no CLB exclusive logset.
+     * @param req CreateTopicRequest
+     * @return CreateTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTopicResponse CreateTopic(CreateTopicRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateTopicResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateTopicResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateTopic"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -512,6 +548,24 @@ This is an async API. After it is returned successfully, you can call the Descri
                 Type type = new TypeToken<JsonResponseModel<DescribeClassicalLBTargetsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeClassicalLBTargets"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to obtain the CLB exclusive logset of a user.
+     * @param req DescribeClsLogSetRequest
+     * @return DescribeClsLogSetResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClsLogSetResponse DescribeClsLogSet(DescribeClsLogSetRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClsLogSetResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClsLogSetResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeClsLogSet"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

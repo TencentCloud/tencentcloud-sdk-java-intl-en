@@ -228,6 +228,24 @@ This is an async API. You can also use the [DescribeDBInstances](https://cloud.t
     }
 
     /**
+     *This API is used to create a VIP exclusive to a TencentDB read-only instance.
+     * @param req CreateRoInstanceIpRequest
+     * @return CreateRoInstanceIpResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRoInstanceIpResponse CreateRoInstanceIp(CreateRoInstanceIpRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateRoInstanceIpResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateRoInstanceIpResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateRoInstanceIp"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (DeleteAccounts) is used to delete TencentDB accounts.
      * @param req DeleteAccountsRequest
      * @return DeleteAccountsResponse

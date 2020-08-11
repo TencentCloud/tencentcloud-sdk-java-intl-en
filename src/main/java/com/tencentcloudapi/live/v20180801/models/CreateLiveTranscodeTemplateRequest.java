@@ -68,6 +68,7 @@ Note: This parameter will take effect later.
 
     /**
     * Width. Default value: 0.
+Value range: [0-3000].
     */
     @SerializedName("Width")
     @Expose
@@ -89,6 +90,7 @@ Note: This parameter will take effect later.
 
     /**
     * Height. Default value: 0.
+Value range: [0-3000].
     */
     @SerializedName("Height")
     @Expose
@@ -263,8 +265,10 @@ Note: This parameter will take effect later.
     }
 
     /**
-     * Get Width. Default value: 0. 
+     * Get Width. Default value: 0.
+Value range: [0-3000]. 
      * @return Width Width. Default value: 0.
+Value range: [0-3000].
      */
     public Long getWidth() {
         return this.Width;
@@ -272,7 +276,9 @@ Note: This parameter will take effect later.
 
     /**
      * Set Width. Default value: 0.
+Value range: [0-3000].
      * @param Width Width. Default value: 0.
+Value range: [0-3000].
      */
     public void setWidth(Long Width) {
         this.Width = Width;
@@ -311,8 +317,10 @@ Note: This parameter will take effect later.
     }
 
     /**
-     * Get Height. Default value: 0. 
+     * Get Height. Default value: 0.
+Value range: [0-3000]. 
      * @return Height Height. Default value: 0.
+Value range: [0-3000].
      */
     public Long getHeight() {
         return this.Height;
@@ -320,7 +328,9 @@ Note: This parameter will take effect later.
 
     /**
      * Set Height. Default value: 0.
+Value range: [0-3000].
      * @param Height Height. Default value: 0.
+Value range: [0-3000].
      */
     public void setHeight(Long Height) {
         this.Height = Height;

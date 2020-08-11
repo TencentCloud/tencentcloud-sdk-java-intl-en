@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ResourceTag extends AbstractModel{
 
     /**
-    * The resource’s region.
+    * The resource's region.
 Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("ResourceRegion")
@@ -63,9 +63,9 @@ Note: This field may return null, indicating that no valid value is found.
     private Tag [] Tags;
 
     /**
-     * Get The resource’s region.
+     * Get The resource's region.
 Note: This field may return null, indicating that no valid value is found. 
-     * @return ResourceRegion The resource’s region.
+     * @return ResourceRegion The resource's region.
 Note: This field may return null, indicating that no valid value is found.
      */
     public String getResourceRegion() {
@@ -73,9 +73,9 @@ Note: This field may return null, indicating that no valid value is found.
     }
 
     /**
-     * Set The resource’s region.
+     * Set The resource's region.
 Note: This field may return null, indicating that no valid value is found.
-     * @param ResourceRegion The resource’s region.
+     * @param ResourceRegion The resource's region.
 Note: This field may return null, indicating that no valid value is found.
      */
     public void setResourceRegion(String ResourceRegion) {

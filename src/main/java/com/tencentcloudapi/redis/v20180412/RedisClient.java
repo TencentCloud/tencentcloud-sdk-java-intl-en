@@ -506,6 +506,24 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query instance maintenance window. The maintenance window specifies a time period during which compatible version upgrade, architecture upgrade, backend maintenance, and other operations can be performed to avoid affecting business.
+     * @param req DescribeMaintenanceWindowRequest
+     * @return DescribeMaintenanceWindowResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMaintenanceWindowResponse DescribeMaintenanceWindow(DescribeMaintenanceWindowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMaintenanceWindowResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMaintenanceWindowResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeMaintenanceWindow"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the purchasable capacity specifications of Redis instances in the specified AZ and instance type. If you are not in the allowlist for the AZ or instance type, you cannot view the details of the capacity specifications. To apply for the eligibility, please submit a ticket.
      * @param req DescribeProductInfoRequest
      * @return DescribeProductInfoResponse
@@ -830,6 +848,24 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify instance maintenance window. The maintenance window specifies a time period during which compatible version upgrade, architecture upgrade, backend maintenance, and other operations can be performed to avoid affecting business. Note: if the compatible version upgrade or architecture upgrade task has been initiated for an instance, its maintenance window cannot be modified.
+     * @param req ModifyMaintenanceWindowRequest
+     * @return ModifyMaintenanceWindowResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMaintenanceWindowResponse ModifyMaintenanceWindow(ModifyMaintenanceWindowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyMaintenanceWindowResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyMaintenanceWindowResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyMaintenanceWindow"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify the network configuration of an instance.
      * @param req ModifyNetworkConfigRequest
      * @return ModifyNetworkConfigResponse
@@ -949,6 +985,24 @@ public class RedisClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpgradeInstanceResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "UpgradeInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to upgrade compatible instance version (for example, from Redis 2.8 to 4.0), or upgrade instance architecture (for example, from standard architecture to cluster architecture).
+     * @param req UpgradeInstanceVersionRequest
+     * @return UpgradeInstanceVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeInstanceVersionResponse UpgradeInstanceVersion(UpgradeInstanceVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpgradeInstanceVersionResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpgradeInstanceVersionResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UpgradeInstanceVersion"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

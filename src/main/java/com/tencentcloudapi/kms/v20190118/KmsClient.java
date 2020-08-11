@@ -74,6 +74,24 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to bind a key with a Tencent Cloud resource. If the key has been set to be expired automatically, the setting will be canceled to ensure that the key will not be invalid automatically. If the key and the resource has already been bound, the call will still be successful.
+     * @param req BindCloudResourceRequest
+     * @return BindCloudResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindCloudResourceResponse BindCloudResource(BindCloudResourceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BindCloudResourceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<BindCloudResourceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "BindCloudResource"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *Cancel the scheduled deletion of CMK
      * @param req CancelKeyDeletionRequest
      * @return CancelKeyDeletionResponse
@@ -752,6 +770,24 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
                 Type type = new TypeToken<JsonResponseModel<ScheduleKeyDeletionResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ScheduleKeyDeletion"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to unbind a key with a Tencent Cloud resource, indicating that the Tencent Cloud resource will not use the key any longer.
+     * @param req UnbindCloudResourceRequest
+     * @return UnbindCloudResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnbindCloudResourceResponse UnbindCloudResource(UnbindCloudResourceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UnbindCloudResourceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UnbindCloudResourceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UnbindCloudResource"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

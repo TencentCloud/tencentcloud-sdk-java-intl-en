@@ -133,8 +133,9 @@ Note: you need to call the `CreateLiveCert` API first to add a certificate. Afte
     }
 
     /**
-     *This API is used to create a general stream mix. It can be used basically in the same way as the legacy `mix_streamv2.cancel_mix_stream` API.
+     *This API is used to create a general stream mix. It can be used basically in the same way as the legacy `mix_streamv2.start_mix_stream_advanced` API.
 Note: currently, up to 16 streams can be mixed.
+Best practice: https://cloud.tencent.com/document/product/267/45566
      * @param req CreateCommonMixStreamRequest
      * @return CreateCommonMixStreamResponse
      * @throws TencentCloudSDKException
@@ -707,6 +708,24 @@ Note: only one screencapturing template can be associated with one domain name.
     }
 
     /**
+     *This API is used to query the billable bandwidth of live stream relaying in the last 3 months. The query period is up to 31 days.
+     * @param req DescribeDeliverBandwidthListRequest
+     * @return DescribeDeliverBandwidthListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeliverBandwidthListResponse DescribeDeliverBandwidthList(DescribeDeliverBandwidthListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDeliverBandwidthListResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDeliverBandwidthListResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeDeliverBandwidthList"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the downstream playback data by district and ISP.
      * @param req DescribeGroupProIspPlayInfoListRequest
      * @return DescribeGroupProIspPlayInfoListResponse
@@ -1106,7 +1125,8 @@ Note: This API can filter by IsFilter and return the push history.
     }
 
     /**
-     *This API is used to return the live stream list.
+     *This API is used to return a list of live streams. It queries the information of live streams after they are pushed successfully.
+Note: this API can query up to 20,000 streams. If you want to query more than 20,000 streams, please contact after-sales service.
      * @param req DescribeLiveStreamOnlineListRequest
      * @return DescribeLiveStreamOnlineListResponse
      * @throws TencentCloudSDKException
