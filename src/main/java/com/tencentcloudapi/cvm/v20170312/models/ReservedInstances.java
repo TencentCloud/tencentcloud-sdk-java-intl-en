@@ -31,7 +31,7 @@ public class ReservedInstances extends AbstractModel{
 
     /**
     * The type of the reserved instance. For example, S3.MEDIUM4.
-Returned value: <a href="https://cloud.tencent.com/document/product/213/11518">list of reserved instance types</a>
+Returned value: <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">list of reserved instance types</a>
     */
     @SerializedName("InstanceType")
     @Expose
@@ -39,7 +39,7 @@ Returned value: <a href="https://cloud.tencent.com/document/product/213/11518">l
 
     /**
     * Availability zones in which the reserved instance can be purchased. For example, "ap-guangzhou-1".
-Returned values: <a href="https://cloud.tencent.com/document/product/213/6091">list of availability zones</a>
+Returned values: <a href="https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1">list of availability zones</a>
     */
     @SerializedName("Zone")
     @Expose
@@ -124,9 +124,9 @@ Returned value: All Upfront.
 
     /**
      * Get The type of the reserved instance. For example, S3.MEDIUM4.
-Returned value: <a href="https://cloud.tencent.com/document/product/213/11518">list of reserved instance types</a> 
+Returned value: <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">list of reserved instance types</a> 
      * @return InstanceType The type of the reserved instance. For example, S3.MEDIUM4.
-Returned value: <a href="https://cloud.tencent.com/document/product/213/11518">list of reserved instance types</a>
+Returned value: <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">list of reserved instance types</a>
      */
     public String getInstanceType() {
         return this.InstanceType;
@@ -134,9 +134,9 @@ Returned value: <a href="https://cloud.tencent.com/document/product/213/11518">l
 
     /**
      * Set The type of the reserved instance. For example, S3.MEDIUM4.
-Returned value: <a href="https://cloud.tencent.com/document/product/213/11518">list of reserved instance types</a>
+Returned value: <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">list of reserved instance types</a>
      * @param InstanceType The type of the reserved instance. For example, S3.MEDIUM4.
-Returned value: <a href="https://cloud.tencent.com/document/product/213/11518">list of reserved instance types</a>
+Returned value: <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">list of reserved instance types</a>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
@@ -144,9 +144,9 @@ Returned value: <a href="https://cloud.tencent.com/document/product/213/11518">l
 
     /**
      * Get Availability zones in which the reserved instance can be purchased. For example, "ap-guangzhou-1".
-Returned values: <a href="https://cloud.tencent.com/document/product/213/6091">list of availability zones</a> 
+Returned values: <a href="https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1">list of availability zones</a> 
      * @return Zone Availability zones in which the reserved instance can be purchased. For example, "ap-guangzhou-1".
-Returned values: <a href="https://cloud.tencent.com/document/product/213/6091">list of availability zones</a>
+Returned values: <a href="https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1">list of availability zones</a>
      */
     public String getZone() {
         return this.Zone;
@@ -154,9 +154,9 @@ Returned values: <a href="https://cloud.tencent.com/document/product/213/6091">l
 
     /**
      * Set Availability zones in which the reserved instance can be purchased. For example, "ap-guangzhou-1".
-Returned values: <a href="https://cloud.tencent.com/document/product/213/6091">list of availability zones</a>
+Returned values: <a href="https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1">list of availability zones</a>
      * @param Zone Availability zones in which the reserved instance can be purchased. For example, "ap-guangzhou-1".
-Returned values: <a href="https://cloud.tencent.com/document/product/213/6091">list of availability zones</a>
+Returned values: <a href="https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1">list of availability zones</a>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

@@ -44,14 +44,14 @@ public class OrgInvitation extends AbstractModel{
     private Long HostUin;
 
     /**
-    * Creator’s name
+    * Creator's name
     */
     @SerializedName("HostName")
     @Expose
     private String HostName;
 
     /**
-    * Creator’s email address
+    * Creator's email address
     */
     @SerializedName("HostMail")
     @Expose
@@ -148,32 +148,32 @@ public class OrgInvitation extends AbstractModel{
     }
 
     /**
-     * Get Creator’s name 
-     * @return HostName Creator’s name
+     * Get Creator's name 
+     * @return HostName Creator's name
      */
     public String getHostName() {
         return this.HostName;
     }
 
     /**
-     * Set Creator’s name
-     * @param HostName Creator’s name
+     * Set Creator's name
+     * @param HostName Creator's name
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
     }
 
     /**
-     * Get Creator’s email address 
-     * @return HostMail Creator’s email address
+     * Get Creator's email address 
+     * @return HostMail Creator's email address
      */
     public String getHostMail() {
         return this.HostMail;
     }
 
     /**
-     * Set Creator’s email address
-     * @param HostMail Creator’s email address
+     * Set Creator's email address
+     * @param HostMail Creator's email address
      */
     public void setHostMail(String HostMail) {
         this.HostMail = HostMail;

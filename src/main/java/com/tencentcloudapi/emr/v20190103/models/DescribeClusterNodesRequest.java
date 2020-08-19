@@ -59,14 +59,14 @@ Note: only the above values are supported for the time being. Entering other val
     private Long Limit;
 
     /**
-    * 
+    * Resource type. Valid values: all, host, pod. Default value: all
     */
     @SerializedName("HardwareResourceType")
     @Expose
     private String HardwareResourceType;
 
     /**
-    * 
+    * Searchable field
     */
     @SerializedName("SearchFields")
     @Expose
@@ -169,32 +169,32 @@ Note: only the above values are supported for the time being. Entering other val
     }
 
     /**
-     * Get  
-     * @return HardwareResourceType 
+     * Get Resource type. Valid values: all, host, pod. Default value: all 
+     * @return HardwareResourceType Resource type. Valid values: all, host, pod. Default value: all
      */
     public String getHardwareResourceType() {
         return this.HardwareResourceType;
     }
 
     /**
-     * Set 
-     * @param HardwareResourceType 
+     * Set Resource type. Valid values: all, host, pod. Default value: all
+     * @param HardwareResourceType Resource type. Valid values: all, host, pod. Default value: all
      */
     public void setHardwareResourceType(String HardwareResourceType) {
         this.HardwareResourceType = HardwareResourceType;
     }
 
     /**
-     * Get  
-     * @return SearchFields 
+     * Get Searchable field 
+     * @return SearchFields Searchable field
      */
     public SearchItem [] getSearchFields() {
         return this.SearchFields;
     }
 
     /**
-     * Set 
-     * @param SearchFields 
+     * Set Searchable field
+     * @param SearchFields Searchable field
      */
     public void setSearchFields(SearchItem [] SearchFields) {
         this.SearchFields = SearchFields;

@@ -45,13 +45,6 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
     private String LineOperator;
 
     /**
-    * Local IDC location.
-    */
-    @SerializedName("Location")
-    @Expose
-    private String Location;
-
-    /**
     * Port type of connection. Valid values: 100Base-T (100-Megabit electrical Ethernet interface), 1000Base-T (1-Gigabit electrical Ethernet interface), 1000Base-LX (1-Gigabit single-module optical Ethernet interface; 10 KM), 10GBase-T (10-Gigabit electrical Ethernet interface), 10GBase-LR (10-Gigabit single-module optical Ethernet interface; 10 KM). Default value: 1000Base-LX.
     */
     @SerializedName("PortType")
@@ -64,6 +57,13 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
     @SerializedName("CircuitCode")
     @Expose
     private String CircuitCode;
+
+    /**
+    * Local IDC location.
+    */
+    @SerializedName("Location")
+    @Expose
+    private String Location;
 
     /**
     * Connection port bandwidth in Mbps. Value range: [2,10240]. Default value: 1000.
@@ -136,6 +136,13 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
     private String FaultReportContactNumber;
 
     /**
+    * Whether the connection applicant has signed the service agreement. Default value: true.
+    */
+    @SerializedName("SignLaw")
+    @Expose
+    private Boolean SignLaw;
+
+    /**
      * Get Connection name. 
      * @return DirectConnectName Connection name.
      */
@@ -188,22 +195,6 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
     }
 
     /**
-     * Get Local IDC location. 
-     * @return Location Local IDC location.
-     */
-    public String getLocation() {
-        return this.Location;
-    }
-
-    /**
-     * Set Local IDC location.
-     * @param Location Local IDC location.
-     */
-    public void setLocation(String Location) {
-        this.Location = Location;
-    }
-
-    /**
      * Get Port type of connection. Valid values: 100Base-T (100-Megabit electrical Ethernet interface), 1000Base-T (1-Gigabit electrical Ethernet interface), 1000Base-LX (1-Gigabit single-module optical Ethernet interface; 10 KM), 10GBase-T (10-Gigabit electrical Ethernet interface), 10GBase-LR (10-Gigabit single-module optical Ethernet interface; 10 KM). Default value: 1000Base-LX. 
      * @return PortType Port type of connection. Valid values: 100Base-T (100-Megabit electrical Ethernet interface), 1000Base-T (1-Gigabit electrical Ethernet interface), 1000Base-LX (1-Gigabit single-module optical Ethernet interface; 10 KM), 10GBase-T (10-Gigabit electrical Ethernet interface), 10GBase-LR (10-Gigabit single-module optical Ethernet interface; 10 KM). Default value: 1000Base-LX.
      */
@@ -233,6 +224,22 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
      */
     public void setCircuitCode(String CircuitCode) {
         this.CircuitCode = CircuitCode;
+    }
+
+    /**
+     * Get Local IDC location. 
+     * @return Location Local IDC location.
+     */
+    public String getLocation() {
+        return this.Location;
+    }
+
+    /**
+     * Set Local IDC location.
+     * @param Location Local IDC location.
+     */
+    public void setLocation(String Location) {
+        this.Location = Location;
     }
 
     /**
@@ -396,15 +403,31 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
     }
 
     /**
+     * Get Whether the connection applicant has signed the service agreement. Default value: true. 
+     * @return SignLaw Whether the connection applicant has signed the service agreement. Default value: true.
+     */
+    public Boolean getSignLaw() {
+        return this.SignLaw;
+    }
+
+    /**
+     * Set Whether the connection applicant has signed the service agreement. Default value: true.
+     * @param SignLaw Whether the connection applicant has signed the service agreement. Default value: true.
+     */
+    public void setSignLaw(Boolean SignLaw) {
+        this.SignLaw = SignLaw;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DirectConnectName", this.DirectConnectName);
         this.setParamSimple(map, prefix + "AccessPointId", this.AccessPointId);
         this.setParamSimple(map, prefix + "LineOperator", this.LineOperator);
-        this.setParamSimple(map, prefix + "Location", this.Location);
         this.setParamSimple(map, prefix + "PortType", this.PortType);
         this.setParamSimple(map, prefix + "CircuitCode", this.CircuitCode);
+        this.setParamSimple(map, prefix + "Location", this.Location);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         this.setParamSimple(map, prefix + "RedundantDirectConnectId", this.RedundantDirectConnectId);
         this.setParamSimple(map, prefix + "Vlan", this.Vlan);
@@ -415,6 +438,7 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
         this.setParamSimple(map, prefix + "CustomerContactNumber", this.CustomerContactNumber);
         this.setParamSimple(map, prefix + "FaultReportContactPerson", this.FaultReportContactPerson);
         this.setParamSimple(map, prefix + "FaultReportContactNumber", this.FaultReportContactNumber);
+        this.setParamSimple(map, prefix + "SignLaw", this.SignLaw);
 
     }
 }

@@ -51,7 +51,7 @@ public class ModifyPolicyGroupRequest extends AbstractModel{
     private String GroupName;
 
     /**
-    * The “AND” and “OR” rules for metric alarms. The value 1 indicates “AND”, which means that an alarm will be triggered only when all rules are met. The value 0 indicates “OR”, which means that an alarm will be triggered when any rule is met.
+    * The 'AND' and 'OR' rules for metric alarms. The value 1 indicates 'AND', which means that an alarm will be triggered only when all rules are met. The value 0 indicates 'OR', which means that an alarm will be triggered when any rule is met.
     */
     @SerializedName("IsUnionRule")
     @Expose
@@ -143,16 +143,16 @@ public class ModifyPolicyGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get The “AND” and “OR” rules for metric alarms. The value 1 indicates “AND”, which means that an alarm will be triggered only when all rules are met. The value 0 indicates “OR”, which means that an alarm will be triggered when any rule is met. 
-     * @return IsUnionRule The “AND” and “OR” rules for metric alarms. The value 1 indicates “AND”, which means that an alarm will be triggered only when all rules are met. The value 0 indicates “OR”, which means that an alarm will be triggered when any rule is met.
+     * Get The 'AND' and 'OR' rules for metric alarms. The value 1 indicates 'AND', which means that an alarm will be triggered only when all rules are met. The value 0 indicates 'OR', which means that an alarm will be triggered when any rule is met. 
+     * @return IsUnionRule The 'AND' and 'OR' rules for metric alarms. The value 1 indicates 'AND', which means that an alarm will be triggered only when all rules are met. The value 0 indicates 'OR', which means that an alarm will be triggered when any rule is met.
      */
     public Long getIsUnionRule() {
         return this.IsUnionRule;
     }
 
     /**
-     * Set The “AND” and “OR” rules for metric alarms. The value 1 indicates “AND”, which means that an alarm will be triggered only when all rules are met. The value 0 indicates “OR”, which means that an alarm will be triggered when any rule is met.
-     * @param IsUnionRule The “AND” and “OR” rules for metric alarms. The value 1 indicates “AND”, which means that an alarm will be triggered only when all rules are met. The value 0 indicates “OR”, which means that an alarm will be triggered when any rule is met.
+     * Set The 'AND' and 'OR' rules for metric alarms. The value 1 indicates 'AND', which means that an alarm will be triggered only when all rules are met. The value 0 indicates 'OR', which means that an alarm will be triggered when any rule is met.
+     * @param IsUnionRule The 'AND' and 'OR' rules for metric alarms. The value 1 indicates 'AND', which means that an alarm will be triggered only when all rules are met. The value 0 indicates 'OR', which means that an alarm will be triggered when any rule is met.
      */
     public void setIsUnionRule(Long IsUnionRule) {
         this.IsUnionRule = IsUnionRule;

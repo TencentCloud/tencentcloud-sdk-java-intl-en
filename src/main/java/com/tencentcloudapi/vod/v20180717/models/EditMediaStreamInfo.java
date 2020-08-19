@@ -30,7 +30,7 @@ public class EditMediaStreamInfo extends AbstractModel{
     private String StreamId;
 
     /**
-    * Start time of stream clipping in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+    * Start time of stream clipping in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StartTime")
@@ -38,7 +38,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String StartTime;
 
     /**
-    * End time of stream clipping in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+    * End time of stream clipping in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EndTime")
@@ -62,9 +62,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Start time of stream clipping in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * Get Start time of stream clipping in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return StartTime Start time of stream clipping in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * @return StartTime Start time of stream clipping in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getStartTime() {
@@ -72,9 +72,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Start time of stream clipping in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * Set Start time of stream clipping in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param StartTime Start time of stream clipping in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * @param StartTime Start time of stream clipping in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setStartTime(String StartTime) {
@@ -82,9 +82,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get End time of stream clipping in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * Get End time of stream clipping in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return EndTime End time of stream clipping in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * @return EndTime End time of stream clipping in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getEndTime() {
@@ -92,9 +92,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set End time of stream clipping in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * Set End time of stream clipping in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param EndTime End time of stream clipping in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * @param EndTime End time of stream clipping in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setEndTime(String EndTime) {

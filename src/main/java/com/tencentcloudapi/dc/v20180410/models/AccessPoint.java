@@ -23,141 +23,169 @@ import java.util.HashMap;
 public class AccessPoint extends AbstractModel{
 
     /**
-    * Access point name.
+    * 
     */
     @SerializedName("AccessPointName")
     @Expose
     private String AccessPointName;
 
     /**
-    * Unique access point ID.
+    * 
     */
     @SerializedName("AccessPointId")
     @Expose
     private String AccessPointId;
 
     /**
-    * Access point status. Valid values: available, unavailable.
+    * 
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * Access point location.
+    * 
     */
     @SerializedName("Location")
     @Expose
     private String Location;
 
     /**
-    * List of ISPs supported by access point.
+    * 
     */
     @SerializedName("LineOperator")
     @Expose
     private String [] LineOperator;
 
     /**
-    * ID of the region that manages the access point.
+    * 
     */
     @SerializedName("RegionId")
     @Expose
     private String RegionId;
 
     /**
-     * Get Access point name. 
-     * @return AccessPointName Access point name.
+    * Available port type at the access point. Valid values: 1000BASE-T: gigabit electrical port; 1000BASE-LX: 10 km gigabit single-mode optical port; 1000BASE-ZX: 80 km gigabit single-mode optical port; 10GBASE-LR: 10 km 10-gigabit single-mode optical port; 10GBASE-ZR: 80 km 10-gigabit single-mode optical port; 10GBASE-LH: 40 km 10-gigabit single-mode optical port; 100GBASE-LR4: 10 km 100-gigabit single-mode optical portfiber optic port.
+Note: this field may return `null`, indicating that no valid value is obtained.
+    */
+    @SerializedName("AvailablePortType")
+    @Expose
+    private String [] AvailablePortType;
+
+    /**
+     * Get  
+     * @return AccessPointName 
      */
     public String getAccessPointName() {
         return this.AccessPointName;
     }
 
     /**
-     * Set Access point name.
-     * @param AccessPointName Access point name.
+     * Set 
+     * @param AccessPointName 
      */
     public void setAccessPointName(String AccessPointName) {
         this.AccessPointName = AccessPointName;
     }
 
     /**
-     * Get Unique access point ID. 
-     * @return AccessPointId Unique access point ID.
+     * Get  
+     * @return AccessPointId 
      */
     public String getAccessPointId() {
         return this.AccessPointId;
     }
 
     /**
-     * Set Unique access point ID.
-     * @param AccessPointId Unique access point ID.
+     * Set 
+     * @param AccessPointId 
      */
     public void setAccessPointId(String AccessPointId) {
         this.AccessPointId = AccessPointId;
     }
 
     /**
-     * Get Access point status. Valid values: available, unavailable. 
-     * @return State Access point status. Valid values: available, unavailable.
+     * Get  
+     * @return State 
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set Access point status. Valid values: available, unavailable.
-     * @param State Access point status. Valid values: available, unavailable.
+     * Set 
+     * @param State 
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get Access point location. 
-     * @return Location Access point location.
+     * Get  
+     * @return Location 
      */
     public String getLocation() {
         return this.Location;
     }
 
     /**
-     * Set Access point location.
-     * @param Location Access point location.
+     * Set 
+     * @param Location 
      */
     public void setLocation(String Location) {
         this.Location = Location;
     }
 
     /**
-     * Get List of ISPs supported by access point. 
-     * @return LineOperator List of ISPs supported by access point.
+     * Get  
+     * @return LineOperator 
      */
     public String [] getLineOperator() {
         return this.LineOperator;
     }
 
     /**
-     * Set List of ISPs supported by access point.
-     * @param LineOperator List of ISPs supported by access point.
+     * Set 
+     * @param LineOperator 
      */
     public void setLineOperator(String [] LineOperator) {
         this.LineOperator = LineOperator;
     }
 
     /**
-     * Get ID of the region that manages the access point. 
-     * @return RegionId ID of the region that manages the access point.
+     * Get  
+     * @return RegionId 
      */
     public String getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set ID of the region that manages the access point.
-     * @param RegionId ID of the region that manages the access point.
+     * Set 
+     * @param RegionId 
      */
     public void setRegionId(String RegionId) {
         this.RegionId = RegionId;
+    }
+
+    /**
+     * Get Available port type at the access point. Valid values: 1000BASE-T: gigabit electrical port; 1000BASE-LX: 10 km gigabit single-mode optical port; 1000BASE-ZX: 80 km gigabit single-mode optical port; 10GBASE-LR: 10 km 10-gigabit single-mode optical port; 10GBASE-ZR: 80 km 10-gigabit single-mode optical port; 10GBASE-LH: 40 km 10-gigabit single-mode optical port; 100GBASE-LR4: 10 km 100-gigabit single-mode optical portfiber optic port.
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return AvailablePortType Available port type at the access point. Valid values: 1000BASE-T: gigabit electrical port; 1000BASE-LX: 10 km gigabit single-mode optical port; 1000BASE-ZX: 80 km gigabit single-mode optical port; 10GBASE-LR: 10 km 10-gigabit single-mode optical port; 10GBASE-ZR: 80 km 10-gigabit single-mode optical port; 10GBASE-LH: 40 km 10-gigabit single-mode optical port; 100GBASE-LR4: 10 km 100-gigabit single-mode optical portfiber optic port.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public String [] getAvailablePortType() {
+        return this.AvailablePortType;
+    }
+
+    /**
+     * Set Available port type at the access point. Valid values: 1000BASE-T: gigabit electrical port; 1000BASE-LX: 10 km gigabit single-mode optical port; 1000BASE-ZX: 80 km gigabit single-mode optical port; 10GBASE-LR: 10 km 10-gigabit single-mode optical port; 10GBASE-ZR: 80 km 10-gigabit single-mode optical port; 10GBASE-LH: 40 km 10-gigabit single-mode optical port; 100GBASE-LR4: 10 km 100-gigabit single-mode optical portfiber optic port.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param AvailablePortType Available port type at the access point. Valid values: 1000BASE-T: gigabit electrical port; 1000BASE-LX: 10 km gigabit single-mode optical port; 1000BASE-ZX: 80 km gigabit single-mode optical port; 10GBASE-LR: 10 km 10-gigabit single-mode optical port; 10GBASE-ZR: 80 km 10-gigabit single-mode optical port; 10GBASE-LH: 40 km 10-gigabit single-mode optical port; 100GBASE-LR4: 10 km 100-gigabit single-mode optical portfiber optic port.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public void setAvailablePortType(String [] AvailablePortType) {
+        this.AvailablePortType = AvailablePortType;
     }
 
     /**
@@ -170,6 +198,7 @@ public class AccessPoint extends AbstractModel{
         this.setParamSimple(map, prefix + "Location", this.Location);
         this.setParamArraySimple(map, prefix + "LineOperator.", this.LineOperator);
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
+        this.setParamArraySimple(map, prefix + "AvailablePortType.", this.AvailablePortType);
 
     }
 }

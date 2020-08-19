@@ -247,28 +247,32 @@ public class DBInstance extends AbstractModel{
     private String UniqSubnetId;
 
     /**
-    * 
+    * Instance isolation.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsolateOperator")
     @Expose
     private String IsolateOperator;
 
     /**
-    * 
+    * Pub/sub flag. Valid values: SUB (subscribe instance), PUB (publish instance). If it is left empty, it refers to a regular instance without a pub/sub design.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SubFlag")
     @Expose
     private String SubFlag;
 
     /**
-    * 
+    * Read-only flag. Valid values: RO (read-only instance), MASTER (primary instance with read-only instances). If it is left empty, it refers to an instance which is not read-only and has no RO group.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ROFlag")
     @Expose
     private String ROFlag;
 
     /**
-    * 
+    * Disaster recovery type. Valid values: MIRROR (image), ALWAYSON (AlwaysOn), SINGLE (singleton).
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HAFlag")
     @Expose
@@ -787,64 +791,80 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return IsolateOperator 
+     * Get Instance isolation.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return IsolateOperator Instance isolation.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getIsolateOperator() {
         return this.IsolateOperator;
     }
 
     /**
-     * Set 
-     * @param IsolateOperator 
+     * Set Instance isolation.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param IsolateOperator Instance isolation.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setIsolateOperator(String IsolateOperator) {
         this.IsolateOperator = IsolateOperator;
     }
 
     /**
-     * Get  
-     * @return SubFlag 
+     * Get Pub/sub flag. Valid values: SUB (subscribe instance), PUB (publish instance). If it is left empty, it refers to a regular instance without a pub/sub design.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return SubFlag Pub/sub flag. Valid values: SUB (subscribe instance), PUB (publish instance). If it is left empty, it refers to a regular instance without a pub/sub design.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getSubFlag() {
         return this.SubFlag;
     }
 
     /**
-     * Set 
-     * @param SubFlag 
+     * Set Pub/sub flag. Valid values: SUB (subscribe instance), PUB (publish instance). If it is left empty, it refers to a regular instance without a pub/sub design.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param SubFlag Pub/sub flag. Valid values: SUB (subscribe instance), PUB (publish instance). If it is left empty, it refers to a regular instance without a pub/sub design.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setSubFlag(String SubFlag) {
         this.SubFlag = SubFlag;
     }
 
     /**
-     * Get  
-     * @return ROFlag 
+     * Get Read-only flag. Valid values: RO (read-only instance), MASTER (primary instance with read-only instances). If it is left empty, it refers to an instance which is not read-only and has no RO group.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return ROFlag Read-only flag. Valid values: RO (read-only instance), MASTER (primary instance with read-only instances). If it is left empty, it refers to an instance which is not read-only and has no RO group.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getROFlag() {
         return this.ROFlag;
     }
 
     /**
-     * Set 
-     * @param ROFlag 
+     * Set Read-only flag. Valid values: RO (read-only instance), MASTER (primary instance with read-only instances). If it is left empty, it refers to an instance which is not read-only and has no RO group.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param ROFlag Read-only flag. Valid values: RO (read-only instance), MASTER (primary instance with read-only instances). If it is left empty, it refers to an instance which is not read-only and has no RO group.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setROFlag(String ROFlag) {
         this.ROFlag = ROFlag;
     }
 
     /**
-     * Get  
-     * @return HAFlag 
+     * Get Disaster recovery type. Valid values: MIRROR (image), ALWAYSON (AlwaysOn), SINGLE (singleton).
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return HAFlag Disaster recovery type. Valid values: MIRROR (image), ALWAYSON (AlwaysOn), SINGLE (singleton).
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getHAFlag() {
         return this.HAFlag;
     }
 
     /**
-     * Set 
-     * @param HAFlag 
+     * Set Disaster recovery type. Valid values: MIRROR (image), ALWAYSON (AlwaysOn), SINGLE (singleton).
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param HAFlag Disaster recovery type. Valid values: MIRROR (image), ALWAYSON (AlwaysOn), SINGLE (singleton).
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setHAFlag(String HAFlag) {
         this.HAFlag = HAFlag;

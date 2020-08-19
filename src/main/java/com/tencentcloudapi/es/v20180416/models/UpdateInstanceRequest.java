@@ -169,7 +169,7 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
     private Long KibanaPrivatePort;
 
     /**
-    * 
+    * 0: scaling in blue/green deployment mode without cluster restart (default); 1: scaling by unmounting disk with rolling cluster restart
     */
     @SerializedName("ScaleType")
     @Expose
@@ -520,16 +520,16 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
     }
 
     /**
-     * Get  
-     * @return ScaleType 
+     * Get 0: scaling in blue/green deployment mode without cluster restart (default); 1: scaling by unmounting disk with rolling cluster restart 
+     * @return ScaleType 0: scaling in blue/green deployment mode without cluster restart (default); 1: scaling by unmounting disk with rolling cluster restart
      */
     public Long getScaleType() {
         return this.ScaleType;
     }
 
     /**
-     * Set 
-     * @param ScaleType 
+     * Set 0: scaling in blue/green deployment mode without cluster restart (default); 1: scaling by unmounting disk with rolling cluster restart
+     * @param ScaleType 0: scaling in blue/green deployment mode without cluster restart (default); 1: scaling by unmounting disk with rolling cluster restart
      */
     public void setScaleType(Long ScaleType) {
         this.ScaleType = ScaleType;

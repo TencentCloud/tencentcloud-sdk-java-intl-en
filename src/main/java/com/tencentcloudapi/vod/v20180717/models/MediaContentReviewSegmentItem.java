@@ -76,7 +76,7 @@ public class MediaContentReviewSegmentItem extends AbstractModel{
     private Long PicUrlExpireTimeStamp;
 
     /**
-    * Expiration time of suspected image URL in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+    * Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("PicUrlExpireTime")
     @Expose
@@ -211,16 +211,16 @@ public class MediaContentReviewSegmentItem extends AbstractModel{
     }
 
     /**
-     * Get Expiration time of suspected image URL in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). 
-     * @return PicUrlExpireTime Expiration time of suspected image URL in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * Get Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return PicUrlExpireTime Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getPicUrlExpireTime() {
         return this.PicUrlExpireTime;
     }
 
     /**
-     * Set Expiration time of suspected image URL in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
-     * @param PicUrlExpireTime Expiration time of suspected image URL in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * Set Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param PicUrlExpireTime Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setPicUrlExpireTime(String PicUrlExpireTime) {
         this.PicUrlExpireTime = PicUrlExpireTime;

@@ -44,7 +44,7 @@ public class CreateServiceRequest extends AbstractModel{
     private String ServiceDesc;
 
     /**
-    * Self-deployed cluster name, which is used to specify the self-deployed cluster where the service is to be created.
+    * Dedicated cluster name, which is used to specify the dedicated cluster where the service is to be created.
     */
     @SerializedName("ExclusiveSetName")
     @Expose
@@ -127,16 +127,16 @@ public class CreateServiceRequest extends AbstractModel{
     }
 
     /**
-     * Get Self-deployed cluster name, which is used to specify the self-deployed cluster where the service is to be created. 
-     * @return ExclusiveSetName Self-deployed cluster name, which is used to specify the self-deployed cluster where the service is to be created.
+     * Get Dedicated cluster name, which is used to specify the dedicated cluster where the service is to be created. 
+     * @return ExclusiveSetName Dedicated cluster name, which is used to specify the dedicated cluster where the service is to be created.
      */
     public String getExclusiveSetName() {
         return this.ExclusiveSetName;
     }
 
     /**
-     * Set Self-deployed cluster name, which is used to specify the self-deployed cluster where the service is to be created.
-     * @param ExclusiveSetName Self-deployed cluster name, which is used to specify the self-deployed cluster where the service is to be created.
+     * Set Dedicated cluster name, which is used to specify the dedicated cluster where the service is to be created.
+     * @param ExclusiveSetName Dedicated cluster name, which is used to specify the dedicated cluster where the service is to be created.
      */
     public void setExclusiveSetName(String ExclusiveSetName) {
         this.ExclusiveSetName = ExclusiveSetName;

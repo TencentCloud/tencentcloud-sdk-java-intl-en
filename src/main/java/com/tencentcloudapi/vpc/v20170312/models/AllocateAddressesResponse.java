@@ -30,7 +30,7 @@ public class AllocateAddressesResponse extends AbstractModel{
     private String [] AddressSet;
 
     /**
-    * The Async task ID. You can use the [DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271) API to query the task status.
+    * The Async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
     */
     @SerializedName("TaskId")
     @Expose
@@ -60,16 +60,16 @@ public class AllocateAddressesResponse extends AbstractModel{
     }
 
     /**
-     * Get The Async task ID. You can use the [DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271) API to query the task status. 
-     * @return TaskId The Async task ID. You can use the [DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271) API to query the task status.
+     * Get The Async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status. 
+     * @return TaskId The Async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set The Async task ID. You can use the [DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271) API to query the task status.
-     * @param TaskId The Async task ID. You can use the [DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271) API to query the task status.
+     * Set The Async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
+     * @param TaskId The Async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

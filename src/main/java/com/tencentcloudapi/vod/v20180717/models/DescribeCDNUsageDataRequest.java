@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeCDNUsageDataRequest extends AbstractModel{
 
     /**
-    * Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+    * Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The end date must be after the start date.
+    * End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date.
     */
     @SerializedName("EndTime")
     @Expose
@@ -65,7 +65,7 @@ When the value of this field is 1, the total usage of all subapplications (inclu
     private String [] DomainNames;
 
     /**
-    * ID of a [subapplication](/document/product/266/14574) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+    * ID of a [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
 When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin. In this case, only 1-day granularity is supported.
     */
     @SerializedName("SubAppId")
@@ -73,32 +73,32 @@ When the value of this field is 1, the total usage of all subapplications (inclu
     private Long SubAppId;
 
     /**
-     * Get Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). 
-     * @return StartTime Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * Get Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return StartTime Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
-     * @param StartTime Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * Set Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param StartTime Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The end date must be after the start date. 
-     * @return EndTime End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The end date must be after the start date.
+     * Get End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date. 
+     * @return EndTime End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The end date must be after the start date.
-     * @param EndTime End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The end date must be after the start date.
+     * Set End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date.
+     * @param EndTime End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -181,9 +181,9 @@ When the value of this field is 1, the total usage of all subapplications (inclu
     }
 
     /**
-     * Get ID of a [subapplication](/document/product/266/14574) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+     * Get ID of a [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
 When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin. In this case, only 1-day granularity is supported. 
-     * @return SubAppId ID of a [subapplication](/document/product/266/14574) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+     * @return SubAppId ID of a [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
 When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin. In this case, only 1-day granularity is supported.
      */
     public Long getSubAppId() {
@@ -191,9 +191,9 @@ When the value of this field is 1, the total usage of all subapplications (inclu
     }
 
     /**
-     * Set ID of a [subapplication](/document/product/266/14574) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+     * Set ID of a [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
 When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin. In this case, only 1-day granularity is supported.
-     * @param SubAppId ID of a [subapplication](/document/product/266/14574) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+     * @param SubAppId ID of a [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
 When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin. In this case, only 1-day granularity is supported.
      */
     public void setSubAppId(Long SubAppId) {

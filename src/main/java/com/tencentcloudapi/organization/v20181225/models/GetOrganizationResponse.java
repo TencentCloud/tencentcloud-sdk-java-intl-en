@@ -37,14 +37,14 @@ public class GetOrganizationResponse extends AbstractModel{
     private Long HostUin;
 
     /**
-    * Creator’s name
+    * Creator's name
     */
     @SerializedName("Nickname")
     @Expose
     private String Nickname;
 
     /**
-    * Creator’s email address
+    * Creator's email address
     */
     @SerializedName("Mail")
     @Expose
@@ -104,32 +104,32 @@ public class GetOrganizationResponse extends AbstractModel{
     }
 
     /**
-     * Get Creator’s name 
-     * @return Nickname Creator’s name
+     * Get Creator's name 
+     * @return Nickname Creator's name
      */
     public String getNickname() {
         return this.Nickname;
     }
 
     /**
-     * Set Creator’s name
-     * @param Nickname Creator’s name
+     * Set Creator's name
+     * @param Nickname Creator's name
      */
     public void setNickname(String Nickname) {
         this.Nickname = Nickname;
     }
 
     /**
-     * Get Creator’s email address 
-     * @return Mail Creator’s email address
+     * Get Creator's email address 
+     * @return Mail Creator's email address
      */
     public String getMail() {
         return this.Mail;
     }
 
     /**
-     * Set Creator’s email address
-     * @param Mail Creator’s email address
+     * Set Creator's email address
+     * @param Mail Creator's email address
      */
     public void setMail(String Mail) {
         this.Mail = Mail;

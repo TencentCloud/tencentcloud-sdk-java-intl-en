@@ -46,21 +46,21 @@ Task types compatible with v2017:
     private String TaskType;
 
     /**
-    * Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+    * Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). If the task has not been started yet, this field will be empty.
+    * Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been started yet, this field will be empty.
     */
     @SerializedName("BeginProcessTime")
     @Expose
     private String BeginProcessTime;
 
     /**
-    * End time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). If the task has not been completed yet, this field will be empty.
+    * End time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been completed yet, this field will be empty.
     */
     @SerializedName("FinishTime")
     @Expose
@@ -149,48 +149,48 @@ Task types compatible with v2017:
     }
 
     /**
-     * Get Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). 
-     * @return CreateTime Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * Get Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return CreateTime Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
-     * @param CreateTime Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * Set Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param CreateTime Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). If the task has not been started yet, this field will be empty. 
-     * @return BeginProcessTime Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). If the task has not been started yet, this field will be empty.
+     * Get Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been started yet, this field will be empty. 
+     * @return BeginProcessTime Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been started yet, this field will be empty.
      */
     public String getBeginProcessTime() {
         return this.BeginProcessTime;
     }
 
     /**
-     * Set Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). If the task has not been started yet, this field will be empty.
-     * @param BeginProcessTime Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). If the task has not been started yet, this field will be empty.
+     * Set Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been started yet, this field will be empty.
+     * @param BeginProcessTime Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been started yet, this field will be empty.
      */
     public void setBeginProcessTime(String BeginProcessTime) {
         this.BeginProcessTime = BeginProcessTime;
     }
 
     /**
-     * Get End time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). If the task has not been completed yet, this field will be empty. 
-     * @return FinishTime End time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). If the task has not been completed yet, this field will be empty.
+     * Get End time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been completed yet, this field will be empty. 
+     * @return FinishTime End time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been completed yet, this field will be empty.
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set End time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). If the task has not been completed yet, this field will be empty.
-     * @param FinishTime End time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). If the task has not been completed yet, this field will be empty.
+     * Set End time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been completed yet, this field will be empty.
+     * @param FinishTime End time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been completed yet, this field will be empty.
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;

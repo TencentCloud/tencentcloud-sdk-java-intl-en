@@ -114,11 +114,18 @@ public class DescribePolicyGroupListRequest extends AbstractModel{
     private String ConditionTempGroupId;
 
     /**
-    * Filter by recipient or recipient group. The value “user” indicates by recipient. The value “group” indicates by recipient group.
+    * Filter by recipient or recipient group. The value 'user' indicates by recipient. The value 'group' indicates by recipient group.
     */
     @SerializedName("ReceiverType")
     @Expose
     private String ReceiverType;
+
+    /**
+    * Filter conditions. Whether the alarm policy has been enabled or disabled
+    */
+    @SerializedName("IsOpen")
+    @Expose
+    private Boolean IsOpen;
 
     /**
      * Get The value is fixed to monitor. 
@@ -329,19 +336,35 @@ public class DescribePolicyGroupListRequest extends AbstractModel{
     }
 
     /**
-     * Get Filter by recipient or recipient group. The value “user” indicates by recipient. The value “group” indicates by recipient group. 
-     * @return ReceiverType Filter by recipient or recipient group. The value “user” indicates by recipient. The value “group” indicates by recipient group.
+     * Get Filter by recipient or recipient group. The value 'user' indicates by recipient. The value 'group' indicates by recipient group. 
+     * @return ReceiverType Filter by recipient or recipient group. The value 'user' indicates by recipient. The value 'group' indicates by recipient group.
      */
     public String getReceiverType() {
         return this.ReceiverType;
     }
 
     /**
-     * Set Filter by recipient or recipient group. The value “user” indicates by recipient. The value “group” indicates by recipient group.
-     * @param ReceiverType Filter by recipient or recipient group. The value “user” indicates by recipient. The value “group” indicates by recipient group.
+     * Set Filter by recipient or recipient group. The value 'user' indicates by recipient. The value 'group' indicates by recipient group.
+     * @param ReceiverType Filter by recipient or recipient group. The value 'user' indicates by recipient. The value 'group' indicates by recipient group.
      */
     public void setReceiverType(String ReceiverType) {
         this.ReceiverType = ReceiverType;
+    }
+
+    /**
+     * Get Filter conditions. Whether the alarm policy has been enabled or disabled 
+     * @return IsOpen Filter conditions. Whether the alarm policy has been enabled or disabled
+     */
+    public Boolean getIsOpen() {
+        return this.IsOpen;
+    }
+
+    /**
+     * Set Filter conditions. Whether the alarm policy has been enabled or disabled
+     * @param IsOpen Filter conditions. Whether the alarm policy has been enabled or disabled
+     */
+    public void setIsOpen(Boolean IsOpen) {
+        this.IsOpen = IsOpen;
     }
 
     /**
@@ -362,6 +385,7 @@ public class DescribePolicyGroupListRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Dimensions", this.Dimensions);
         this.setParamSimple(map, prefix + "ConditionTempGroupId", this.ConditionTempGroupId);
         this.setParamSimple(map, prefix + "ReceiverType", this.ReceiverType);
+        this.setParamSimple(map, prefix + "IsOpen", this.IsOpen);
 
     }
 }

@@ -488,6 +488,24 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify the backup policy.
+     * @param req ModifyBackupStrategyRequest
+     * @return ModifyBackupStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBackupStrategyResponse ModifyBackupStrategy(ModifyBackupStrategyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyBackupStrategyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyBackupStrategyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ModifyBackupStrategy"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to rename an instance.
      * @param req ModifyDBInstanceNameRequest
      * @return ModifyDBInstanceNameResponse

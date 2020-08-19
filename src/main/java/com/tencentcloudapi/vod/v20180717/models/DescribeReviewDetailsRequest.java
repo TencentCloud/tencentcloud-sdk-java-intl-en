@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class DescribeReviewDetailsRequest extends AbstractModel{
 
     /**
-    * Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+    * Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The end date must be after the start date.
+    * End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+    * [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-     * Get Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). 
-     * @return StartTime Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * Get Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return StartTime Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
-     * @param StartTime Start date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * Set Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param StartTime Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The end date must be after the start date. 
-     * @return EndTime End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The end date must be after the start date.
+     * Get End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date. 
+     * @return EndTime End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The end date must be after the start date.
-     * @param EndTime End date in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). The end date must be after the start date.
+     * Set End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date.
+     * @param EndTime End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty. 
-     * @return SubAppId [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+     * Get [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty. 
+     * @return SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     * @param SubAppId [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+     * Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+     * @param SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

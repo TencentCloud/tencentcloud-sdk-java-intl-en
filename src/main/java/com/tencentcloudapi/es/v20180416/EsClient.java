@@ -171,6 +171,24 @@ Only one of the parameters or parameter combinations above can be passed in at a
     }
 
     /**
+     *This API is used to change the list of plugins.
+     * @param req UpdatePluginsRequest
+     * @return UpdatePluginsResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdatePluginsResponse UpdatePlugins(UpdatePluginsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdatePluginsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdatePluginsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "UpdatePlugins"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to upgrade ES cluster version
      * @param req UpgradeInstanceRequest
      * @return UpgradeInstanceResponse

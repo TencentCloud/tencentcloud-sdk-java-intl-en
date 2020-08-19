@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class GetMonitorDataRequest extends AbstractModel{
 
     /**
-    * Namespace. Each Tencent Cloud product has a namespace
+    * Namespace. For detailed namespace descriptions of each Tencent Cloud service, see the corresponding [Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1) documentation
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-    * Metric name. For detailed metric descriptions of each Tencent Cloud product, see the corresponding [Monitoring API](https://cloud.tencent.com/document/product/248/30384) document
+    * Metric name. For detailed metric descriptions of each Tencent Cloud service, see the corresponding [Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1) documentation
     */
     @SerializedName("MetricName")
     @Expose
@@ -65,32 +65,32 @@ public class GetMonitorDataRequest extends AbstractModel{
     private String EndTime;
 
     /**
-     * Get Namespace. Each Tencent Cloud product has a namespace 
-     * @return Namespace Namespace. Each Tencent Cloud product has a namespace
+     * Get Namespace. For detailed namespace descriptions of each Tencent Cloud service, see the corresponding [Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1) documentation 
+     * @return Namespace Namespace. For detailed namespace descriptions of each Tencent Cloud service, see the corresponding [Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1) documentation
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set Namespace. Each Tencent Cloud product has a namespace
-     * @param Namespace Namespace. Each Tencent Cloud product has a namespace
+     * Set Namespace. For detailed namespace descriptions of each Tencent Cloud service, see the corresponding [Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1) documentation
+     * @param Namespace Namespace. For detailed namespace descriptions of each Tencent Cloud service, see the corresponding [Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1) documentation
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get Metric name. For detailed metric descriptions of each Tencent Cloud product, see the corresponding [Monitoring API](https://cloud.tencent.com/document/product/248/30384) document 
-     * @return MetricName Metric name. For detailed metric descriptions of each Tencent Cloud product, see the corresponding [Monitoring API](https://cloud.tencent.com/document/product/248/30384) document
+     * Get Metric name. For detailed metric descriptions of each Tencent Cloud service, see the corresponding [Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1) documentation 
+     * @return MetricName Metric name. For detailed metric descriptions of each Tencent Cloud service, see the corresponding [Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1) documentation
      */
     public String getMetricName() {
         return this.MetricName;
     }
 
     /**
-     * Set Metric name. For detailed metric descriptions of each Tencent Cloud product, see the corresponding [Monitoring API](https://cloud.tencent.com/document/product/248/30384) document
-     * @param MetricName Metric name. For detailed metric descriptions of each Tencent Cloud product, see the corresponding [Monitoring API](https://cloud.tencent.com/document/product/248/30384) document
+     * Set Metric name. For detailed metric descriptions of each Tencent Cloud service, see the corresponding [Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1) documentation
+     * @param MetricName Metric name. For detailed metric descriptions of each Tencent Cloud service, see the corresponding [Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1) documentation
      */
     public void setMetricName(String MetricName) {
         this.MetricName = MetricName;

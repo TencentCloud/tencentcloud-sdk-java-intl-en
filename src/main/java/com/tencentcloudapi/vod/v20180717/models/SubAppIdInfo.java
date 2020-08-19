@@ -44,7 +44,7 @@ public class SubAppIdInfo extends AbstractModel{
     private String Description;
 
     /**
-    * Subapplication creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+    * Subapplication creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("CreateTime")
     @Expose
@@ -108,16 +108,16 @@ public class SubAppIdInfo extends AbstractModel{
     }
 
     /**
-     * Get Subapplication creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). 
-     * @return CreateTime Subapplication creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * Get Subapplication creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return CreateTime Subapplication creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Subapplication creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
-     * @param CreateTime Subapplication creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * Set Subapplication creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param CreateTime Subapplication creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

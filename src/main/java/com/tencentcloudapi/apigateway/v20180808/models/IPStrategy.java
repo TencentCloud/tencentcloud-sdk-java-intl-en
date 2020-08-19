@@ -39,7 +39,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String StrategyName;
 
     /**
-    * Policy type. Valid values: WHITE (whitelist), BLACK (blacklist).
+    * Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StrategyType")
@@ -135,9 +135,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Policy type. Valid values: WHITE (whitelist), BLACK (blacklist).
+     * Get Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return StrategyType Policy type. Valid values: WHITE (whitelist), BLACK (blacklist).
+     * @return StrategyType Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getStrategyType() {
@@ -145,9 +145,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Policy type. Valid values: WHITE (whitelist), BLACK (blacklist).
+     * Set Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param StrategyType Policy type. Valid values: WHITE (whitelist), BLACK (blacklist).
+     * @param StrategyType Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setStrategyType(String StrategyType) {

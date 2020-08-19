@@ -23,8 +23,8 @@ import java.util.HashMap;
 public class UpdatePolicyResponse extends AbstractModel{
 
     /**
-    * Policy ID
-Note: This field may return null, indicating that no valid value was found.
+    * Policy ID, which will be returned only if the input parameter is `PolicyName`
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PolicyId")
     @Expose
@@ -38,20 +38,20 @@ Note: This field may return null, indicating that no valid value was found.
     private String RequestId;
 
     /**
-     * Get Policy ID
-Note: This field may return null, indicating that no valid value was found. 
-     * @return PolicyId Policy ID
-Note: This field may return null, indicating that no valid value was found.
+     * Get Policy ID, which will be returned only if the input parameter is `PolicyName`
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return PolicyId Policy ID, which will be returned only if the input parameter is `PolicyName`
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set Policy ID
-Note: This field may return null, indicating that no valid value was found.
-     * @param PolicyId Policy ID
-Note: This field may return null, indicating that no valid value was found.
+     * Set Policy ID, which will be returned only if the input parameter is `PolicyName`
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param PolicyId Policy ID, which will be returned only if the input parameter is `PolicyName`
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setPolicyId(Long PolicyId) {
         this.PolicyId = PolicyId;

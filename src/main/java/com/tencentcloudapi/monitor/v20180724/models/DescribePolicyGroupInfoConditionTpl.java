@@ -74,7 +74,7 @@ Note: This field may return null, indicating that no valid value was found.
     private Long InsertTime;
 
     /**
-    * Whether the “AND” rule is used.
+    * Whether the 'AND' rule is used.
 Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("IsUnionRule")
@@ -202,9 +202,9 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Whether the “AND” rule is used.
+     * Get Whether the 'AND' rule is used.
 Note: This field may return null, indicating that no valid value was found. 
-     * @return IsUnionRule Whether the “AND” rule is used.
+     * @return IsUnionRule Whether the 'AND' rule is used.
 Note: This field may return null, indicating that no valid value was found.
      */
     public Long getIsUnionRule() {
@@ -212,9 +212,9 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Set Whether the “AND” rule is used.
+     * Set Whether the 'AND' rule is used.
 Note: This field may return null, indicating that no valid value was found.
-     * @param IsUnionRule Whether the “AND” rule is used.
+     * @param IsUnionRule Whether the 'AND' rule is used.
 Note: This field may return null, indicating that no valid value was found.
      */
     public void setIsUnionRule(Long IsUnionRule) {

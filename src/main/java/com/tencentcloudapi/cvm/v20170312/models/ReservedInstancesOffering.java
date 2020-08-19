@@ -24,7 +24,7 @@ public class ReservedInstancesOffering extends AbstractModel{
 
     /**
     * The availability zones in which the Reserved Instance can be purchased, such as ap-guangzhou-1.
-Valid value: <a href="https://cloud.tencent.com/document/product/213/6091">Availability Zones</a>
+Valid value: <a href="https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1">Availability Zones</a>
     */
     @SerializedName("Zone")
     @Expose
@@ -56,7 +56,7 @@ Unit: this field uses the currency code specified in `currencyCode`, and only su
 
     /**
     * The instance model of the Reserved Instance, such as S3.MEDIUM4.
-Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance Models</a>
+Valid value: <a href="https://intl.cloud.tencent.com/product/cvm/instances?from_cn_redirect=1">Instance Models</a>
     */
     @SerializedName("InstanceType")
     @Expose
@@ -96,9 +96,9 @@ Unit: USD/hr. This field uses the currency code specified in `currencyCode`, and
 
     /**
      * Get The availability zones in which the Reserved Instance can be purchased, such as ap-guangzhou-1.
-Valid value: <a href="https://cloud.tencent.com/document/product/213/6091">Availability Zones</a> 
+Valid value: <a href="https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1">Availability Zones</a> 
      * @return Zone The availability zones in which the Reserved Instance can be purchased, such as ap-guangzhou-1.
-Valid value: <a href="https://cloud.tencent.com/document/product/213/6091">Availability Zones</a>
+Valid value: <a href="https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1">Availability Zones</a>
      */
     public String getZone() {
         return this.Zone;
@@ -106,9 +106,9 @@ Valid value: <a href="https://cloud.tencent.com/document/product/213/6091">Avail
 
     /**
      * Set The availability zones in which the Reserved Instance can be purchased, such as ap-guangzhou-1.
-Valid value: <a href="https://cloud.tencent.com/document/product/213/6091">Availability Zones</a>
+Valid value: <a href="https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1">Availability Zones</a>
      * @param Zone The availability zones in which the Reserved Instance can be purchased, such as ap-guangzhou-1.
-Valid value: <a href="https://cloud.tencent.com/document/product/213/6091">Availability Zones</a>
+Valid value: <a href="https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1">Availability Zones</a>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
@@ -176,9 +176,9 @@ Unit: this field uses the currency code specified in `currencyCode`, and only su
 
     /**
      * Get The instance model of the Reserved Instance, such as S3.MEDIUM4.
-Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance Models</a> 
+Valid value: <a href="https://intl.cloud.tencent.com/product/cvm/instances?from_cn_redirect=1">Instance Models</a> 
      * @return InstanceType The instance model of the Reserved Instance, such as S3.MEDIUM4.
-Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance Models</a>
+Valid value: <a href="https://intl.cloud.tencent.com/product/cvm/instances?from_cn_redirect=1">Instance Models</a>
      */
     public String getInstanceType() {
         return this.InstanceType;
@@ -186,9 +186,9 @@ Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance 
 
     /**
      * Set The instance model of the Reserved Instance, such as S3.MEDIUM4.
-Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance Models</a>
+Valid value: <a href="https://intl.cloud.tencent.com/product/cvm/instances?from_cn_redirect=1">Instance Models</a>
      * @param InstanceType The instance model of the Reserved Instance, such as S3.MEDIUM4.
-Valid value: <a href="https://cloud.tencent.com/product/cvm/instances">Instance Models</a>
+Valid value: <a href="https://intl.cloud.tencent.com/product/cvm/instances?from_cn_redirect=1">Instance Models</a>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;

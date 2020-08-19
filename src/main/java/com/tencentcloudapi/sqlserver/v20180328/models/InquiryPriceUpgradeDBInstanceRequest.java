@@ -44,7 +44,7 @@ public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel{
     private Long Storage;
 
     /**
-    * 
+    * The number of CUP cores after the instance is upgraded, which cannot be smaller than that of the current cores.
     */
     @SerializedName("Cpu")
     @Expose
@@ -99,16 +99,16 @@ public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return Cpu 
+     * Get The number of CUP cores after the instance is upgraded, which cannot be smaller than that of the current cores. 
+     * @return Cpu The number of CUP cores after the instance is upgraded, which cannot be smaller than that of the current cores.
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 
-     * @param Cpu 
+     * Set The number of CUP cores after the instance is upgraded, which cannot be smaller than that of the current cores.
+     * @param Cpu The number of CUP cores after the instance is upgraded, which cannot be smaller than that of the current cores.
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;

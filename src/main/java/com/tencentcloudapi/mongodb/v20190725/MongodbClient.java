@@ -57,6 +57,24 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create instance backups.
+     * @param req CreateBackupDBInstanceRequest
+     * @return CreateBackupDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBackupDBInstanceResponse CreateBackupDBInstance(CreateBackupDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateBackupDBInstanceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateBackupDBInstanceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CreateBackupDBInstance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a monthly subscription TencentDB for MongoDB instance. The purchasable specifications supported by this API can be obtained through the `DescribeSpecInfo` API.
      * @param req CreateDBInstanceRequest
      * @return CreateDBInstanceResponse
@@ -86,6 +104,24 @@ public class MongodbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateDBInstanceHourResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "CreateDBInstanceHour"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query async task status.
+     * @param req DescribeAsyncRequestInfoRequest
+     * @return DescribeAsyncRequestInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAsyncRequestInfoResponse DescribeAsyncRequestInfo(DescribeAsyncRequestInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAsyncRequestInfoResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAsyncRequestInfoResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeAsyncRequestInfo"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -392,6 +428,24 @@ public class MongodbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RenewDBInstancesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "RenewDBInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify instance password.
+     * @param req ResetDBInstancePasswordRequest
+     * @return ResetDBInstancePasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetDBInstancePasswordResponse ResetDBInstancePassword(ResetDBInstancePasswordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ResetDBInstancePasswordResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ResetDBInstancePasswordResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ResetDBInstancePassword"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

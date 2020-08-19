@@ -72,14 +72,14 @@ public class AIAnalysisTemplateItem extends AbstractModel{
     private FrameTagConfigureInfo FrameTagConfigure;
 
     /**
-    * Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/862/37710#52).
+    * Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/862/37710#52).
+    * Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -198,32 +198,32 @@ public class AIAnalysisTemplateItem extends AbstractModel{
     }
 
     /**
-     * Get Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/862/37710#52). 
-     * @return CreateTime Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/862/37710#52).
+     * Get Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52). 
+     * @return CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/862/37710#52).
-     * @param CreateTime Creation time of template in [ISO date format](https://cloud.tencent.com/document/product/862/37710#52).
+     * Set Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @param CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/862/37710#52). 
-     * @return UpdateTime Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/862/37710#52).
+     * Get Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52). 
+     * @return UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/862/37710#52).
-     * @param UpdateTime Last modified time of template in [ISO date format](https://cloud.tencent.com/document/product/862/37710#52).
+     * Set Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @param UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

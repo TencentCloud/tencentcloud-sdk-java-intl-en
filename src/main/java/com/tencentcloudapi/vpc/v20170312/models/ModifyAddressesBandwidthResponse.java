@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyAddressesBandwidthResponse extends AbstractModel{
 
     /**
-    * The async task ID. You can use the [DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271) API to query the task status.
+    * The async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
     */
     @SerializedName("TaskId")
     @Expose
@@ -37,16 +37,16 @@ public class ModifyAddressesBandwidthResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get The async task ID. You can use the [DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271) API to query the task status. 
-     * @return TaskId The async task ID. You can use the [DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271) API to query the task status.
+     * Get The async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status. 
+     * @return TaskId The async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set The async task ID. You can use the [DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271) API to query the task status.
-     * @param TaskId The async task ID. You can use the [DescribeTaskResult](https://cloud.tencent.com/document/api/215/36271) API to query the task status.
+     * Set The async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
+     * @param TaskId The async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

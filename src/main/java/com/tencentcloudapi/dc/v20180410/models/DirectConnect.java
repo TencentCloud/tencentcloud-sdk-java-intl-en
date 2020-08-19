@@ -227,12 +227,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ChargeState;
 
     /**
-    * Connection activation time.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
+
+    /**
+    * Whether the connection has the service agreement signed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+    */
+    @SerializedName("SignLaw")
+    @Expose
+    private Boolean SignLaw;
 
     /**
      * Get Connection ID. 
@@ -739,23 +746,39 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Connection activation time.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return StartTime Connection activation time.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return StartTime 
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Connection activation time.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param StartTime Connection activation time.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param StartTime 
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
+    }
+
+    /**
+     * Get Whether the connection has the service agreement signed.
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return SignLaw Whether the connection has the service agreement signed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public Boolean getSignLaw() {
+        return this.SignLaw;
+    }
+
+    /**
+     * Set Whether the connection has the service agreement signed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param SignLaw Whether the connection has the service agreement signed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public void setSignLaw(Boolean SignLaw) {
+        this.SignLaw = SignLaw;
     }
 
     /**
@@ -789,6 +812,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "IdcCity", this.IdcCity);
         this.setParamSimple(map, prefix + "ChargeState", this.ChargeState);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "SignLaw", this.SignLaw);
 
     }
 }

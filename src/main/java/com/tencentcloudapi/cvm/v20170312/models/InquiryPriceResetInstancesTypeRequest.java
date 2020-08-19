@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class InquiryPriceResetInstancesTypeRequest extends AbstractModel{
 
     /**
-    * Instance ID(s). You can obtain the instance IDs from the value of `InstanceId` returned by the [`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API. The maximum number of instances in each request is 1.
+    * Instance ID(s). You can obtain the instance IDs from the value of `InstanceId` returned by the [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) API. The maximum number of instances in each request is 1.
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * Instance model. Resources vary with the instance model. Specific values can be found in the tables of [Instance Types] (https://cloud.tencent.com/document/product/213/11518) or in the latest specifications via the [DescribeInstanceTypeConfigs] (https://cloud.tencent.com/document/product/213/15749) API.
+    * Instance model. Resources vary with the instance model. Specific values can be found in the tables of [Instance Types] (https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1) or in the latest specifications via the [DescribeInstanceTypeConfigs] (https://intl.cloud.tencent.com/document/product/213/15749?from_cn_redirect=1) API.
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-     * Get Instance ID(s). You can obtain the instance IDs from the value of `InstanceId` returned by the [`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API. The maximum number of instances in each request is 1. 
-     * @return InstanceIds Instance ID(s). You can obtain the instance IDs from the value of `InstanceId` returned by the [`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API. The maximum number of instances in each request is 1.
+     * Get Instance ID(s). You can obtain the instance IDs from the value of `InstanceId` returned by the [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) API. The maximum number of instances in each request is 1. 
+     * @return InstanceIds Instance ID(s). You can obtain the instance IDs from the value of `InstanceId` returned by the [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) API. The maximum number of instances in each request is 1.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set Instance ID(s). You can obtain the instance IDs from the value of `InstanceId` returned by the [`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API. The maximum number of instances in each request is 1.
-     * @param InstanceIds Instance ID(s). You can obtain the instance IDs from the value of `InstanceId` returned by the [`DescribeInstances`](https://cloud.tencent.com/document/api/213/15728) API. The maximum number of instances in each request is 1.
+     * Set Instance ID(s). You can obtain the instance IDs from the value of `InstanceId` returned by the [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) API. The maximum number of instances in each request is 1.
+     * @param InstanceIds Instance ID(s). You can obtain the instance IDs from the value of `InstanceId` returned by the [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) API. The maximum number of instances in each request is 1.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get Instance model. Resources vary with the instance model. Specific values can be found in the tables of [Instance Types] (https://cloud.tencent.com/document/product/213/11518) or in the latest specifications via the [DescribeInstanceTypeConfigs] (https://cloud.tencent.com/document/product/213/15749) API. 
-     * @return InstanceType Instance model. Resources vary with the instance model. Specific values can be found in the tables of [Instance Types] (https://cloud.tencent.com/document/product/213/11518) or in the latest specifications via the [DescribeInstanceTypeConfigs] (https://cloud.tencent.com/document/product/213/15749) API.
+     * Get Instance model. Resources vary with the instance model. Specific values can be found in the tables of [Instance Types] (https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1) or in the latest specifications via the [DescribeInstanceTypeConfigs] (https://intl.cloud.tencent.com/document/product/213/15749?from_cn_redirect=1) API. 
+     * @return InstanceType Instance model. Resources vary with the instance model. Specific values can be found in the tables of [Instance Types] (https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1) or in the latest specifications via the [DescribeInstanceTypeConfigs] (https://intl.cloud.tencent.com/document/product/213/15749?from_cn_redirect=1) API.
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Instance model. Resources vary with the instance model. Specific values can be found in the tables of [Instance Types] (https://cloud.tencent.com/document/product/213/11518) or in the latest specifications via the [DescribeInstanceTypeConfigs] (https://cloud.tencent.com/document/product/213/15749) API.
-     * @param InstanceType Instance model. Resources vary with the instance model. Specific values can be found in the tables of [Instance Types] (https://cloud.tencent.com/document/product/213/11518) or in the latest specifications via the [DescribeInstanceTypeConfigs] (https://cloud.tencent.com/document/product/213/15749) API.
+     * Set Instance model. Resources vary with the instance model. Specific values can be found in the tables of [Instance Types] (https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1) or in the latest specifications via the [DescribeInstanceTypeConfigs] (https://intl.cloud.tencent.com/document/product/213/15749?from_cn_redirect=1) API.
+     * @param InstanceType Instance model. Resources vary with the instance model. Specific values can be found in the tables of [Instance Types] (https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1) or in the latest specifications via the [DescribeInstanceTypeConfigs] (https://intl.cloud.tencent.com/document/product/213/15749?from_cn_redirect=1) API.
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;

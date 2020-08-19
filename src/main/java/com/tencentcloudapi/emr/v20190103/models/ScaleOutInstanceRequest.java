@@ -126,14 +126,14 @@ public class ScaleOutInstanceRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
-    * 
+    * Resource type selected for expansion. Valid values: host (general CVM resource), pod (resource provided by TKE cluster)
     */
     @SerializedName("HardwareResourceType")
     @Expose
     private String HardwareResourceType;
 
     /**
-    * 
+    * Specified information such as pod specification and source for expansion with pod resources
     */
     @SerializedName("PodSpec")
     @Expose
@@ -384,32 +384,32 @@ public class ScaleOutInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return HardwareResourceType 
+     * Get Resource type selected for expansion. Valid values: host (general CVM resource), pod (resource provided by TKE cluster) 
+     * @return HardwareResourceType Resource type selected for expansion. Valid values: host (general CVM resource), pod (resource provided by TKE cluster)
      */
     public String getHardwareResourceType() {
         return this.HardwareResourceType;
     }
 
     /**
-     * Set 
-     * @param HardwareResourceType 
+     * Set Resource type selected for expansion. Valid values: host (general CVM resource), pod (resource provided by TKE cluster)
+     * @param HardwareResourceType Resource type selected for expansion. Valid values: host (general CVM resource), pod (resource provided by TKE cluster)
      */
     public void setHardwareResourceType(String HardwareResourceType) {
         this.HardwareResourceType = HardwareResourceType;
     }
 
     /**
-     * Get  
-     * @return PodSpec 
+     * Get Specified information such as pod specification and source for expansion with pod resources 
+     * @return PodSpec Specified information such as pod specification and source for expansion with pod resources
      */
     public PodSpec getPodSpec() {
         return this.PodSpec;
     }
 
     /**
-     * Set 
-     * @param PodSpec 
+     * Set Specified information such as pod specification and source for expansion with pod resources
+     * @param PodSpec Specified information such as pod specification and source for expansion with pod resources
      */
     public void setPodSpec(PodSpec PodSpec) {
         this.PodSpec = PodSpec;

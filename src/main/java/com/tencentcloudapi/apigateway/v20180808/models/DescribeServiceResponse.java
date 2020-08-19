@@ -73,7 +73,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ModifiedTime;
 
     /**
-    * Self-deployed cluster name.
+    * Dedicated cluster name.
     */
     @SerializedName("ExclusiveSetName")
     @Expose
@@ -167,6 +167,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     @SerializedName("SetId")
     @Expose
     private Long SetId;
+
+    /**
+    * 
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -292,16 +299,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Self-deployed cluster name. 
-     * @return ExclusiveSetName Self-deployed cluster name.
+     * Get Dedicated cluster name. 
+     * @return ExclusiveSetName Dedicated cluster name.
      */
     public String getExclusiveSetName() {
         return this.ExclusiveSetName;
     }
 
     /**
-     * Set Self-deployed cluster name.
-     * @param ExclusiveSetName Self-deployed cluster name.
+     * Set Dedicated cluster name.
+     * @param ExclusiveSetName Dedicated cluster name.
      */
     public void setExclusiveSetName(String ExclusiveSetName) {
         this.ExclusiveSetName = ExclusiveSetName;
@@ -520,6 +527,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get  
+     * @return Tags 
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 
+     * @param Tags 
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -559,6 +582,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "IpVersion", this.IpVersion);
         this.setParamSimple(map, prefix + "UserType", this.UserType);
         this.setParamSimple(map, prefix + "SetId", this.SetId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

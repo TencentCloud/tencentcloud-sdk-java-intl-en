@@ -46,7 +46,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String [] TagKeys;
 
     /**
-    * 
+    * Resource type list
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HardwareResourceTypeList")
     @Expose
@@ -116,16 +117,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return HardwareResourceTypeList 
+     * Get Resource type list
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return HardwareResourceTypeList Resource type list
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String [] getHardwareResourceTypeList() {
         return this.HardwareResourceTypeList;
     }
 
     /**
-     * Set 
-     * @param HardwareResourceTypeList 
+     * Set Resource type list
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param HardwareResourceTypeList Resource type list
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setHardwareResourceTypeList(String [] HardwareResourceTypeList) {
         this.HardwareResourceTypeList = HardwareResourceTypeList;

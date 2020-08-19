@@ -72,21 +72,21 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
     private String DBVersion;
 
     /**
-    * 
+    * The number of CPU cores of the instance you want to purchase.
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 
+    * The type of purchased instance. Valid values: HA (high-availability edition, including dual-server high availability and AlwaysOn cluster), RO (read-only replica), SI (basic edition). Default value: HA.
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 
+    * The host type of purchased instance. Valid values: PM (physical machine), CLOUD_PREMIUM (physical machine with premium cloud disk), CLOUD_SSD (physical machine with SSD). Default value: PM.
     */
     @SerializedName("MachineType")
     @Expose
@@ -205,48 +205,48 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return Cpu 
+     * Get The number of CPU cores of the instance you want to purchase. 
+     * @return Cpu The number of CPU cores of the instance you want to purchase.
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 
-     * @param Cpu 
+     * Set The number of CPU cores of the instance you want to purchase.
+     * @param Cpu The number of CPU cores of the instance you want to purchase.
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get  
-     * @return InstanceType 
+     * Get The type of purchased instance. Valid values: HA (high-availability edition, including dual-server high availability and AlwaysOn cluster), RO (read-only replica), SI (basic edition). Default value: HA. 
+     * @return InstanceType The type of purchased instance. Valid values: HA (high-availability edition, including dual-server high availability and AlwaysOn cluster), RO (read-only replica), SI (basic edition). Default value: HA.
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 
-     * @param InstanceType 
+     * Set The type of purchased instance. Valid values: HA (high-availability edition, including dual-server high availability and AlwaysOn cluster), RO (read-only replica), SI (basic edition). Default value: HA.
+     * @param InstanceType The type of purchased instance. Valid values: HA (high-availability edition, including dual-server high availability and AlwaysOn cluster), RO (read-only replica), SI (basic edition). Default value: HA.
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get  
-     * @return MachineType 
+     * Get The host type of purchased instance. Valid values: PM (physical machine), CLOUD_PREMIUM (physical machine with premium cloud disk), CLOUD_SSD (physical machine with SSD). Default value: PM. 
+     * @return MachineType The host type of purchased instance. Valid values: PM (physical machine), CLOUD_PREMIUM (physical machine with premium cloud disk), CLOUD_SSD (physical machine with SSD). Default value: PM.
      */
     public String getMachineType() {
         return this.MachineType;
     }
 
     /**
-     * Set 
-     * @param MachineType 
+     * Set The host type of purchased instance. Valid values: PM (physical machine), CLOUD_PREMIUM (physical machine with premium cloud disk), CLOUD_SSD (physical machine with SSD). Default value: PM.
+     * @param MachineType The host type of purchased instance. Valid values: PM (physical machine), CLOUD_PREMIUM (physical machine with premium cloud disk), CLOUD_SSD (physical machine with SSD). Default value: PM.
      */
     public void setMachineType(String MachineType) {
         this.MachineType = MachineType;

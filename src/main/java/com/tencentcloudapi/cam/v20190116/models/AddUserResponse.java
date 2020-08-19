@@ -44,14 +44,14 @@ public class AddUserResponse extends AbstractModel{
     private String Password;
 
     /**
-    * Sub-user’s key ID
+    * Sub-user's key ID
     */
     @SerializedName("SecretId")
     @Expose
     private String SecretId;
 
     /**
-    * Sub-user’s secret key
+    * Sub-user's secret key
     */
     @SerializedName("SecretKey")
     @Expose
@@ -120,32 +120,32 @@ public class AddUserResponse extends AbstractModel{
     }
 
     /**
-     * Get Sub-user’s key ID 
-     * @return SecretId Sub-user’s key ID
+     * Get Sub-user's key ID 
+     * @return SecretId Sub-user's key ID
      */
     public String getSecretId() {
         return this.SecretId;
     }
 
     /**
-     * Set Sub-user’s key ID
-     * @param SecretId Sub-user’s key ID
+     * Set Sub-user's key ID
+     * @param SecretId Sub-user's key ID
      */
     public void setSecretId(String SecretId) {
         this.SecretId = SecretId;
     }
 
     /**
-     * Get Sub-user’s secret key 
-     * @return SecretKey Sub-user’s secret key
+     * Get Sub-user's secret key 
+     * @return SecretKey Sub-user's secret key
      */
     public String getSecretKey() {
         return this.SecretKey;
     }
 
     /**
-     * Set Sub-user’s secret key
-     * @param SecretKey Sub-user’s secret key
+     * Set Sub-user's secret key
+     * @param SecretKey Sub-user's secret key
      */
     public void setSecretKey(String SecretKey) {
         this.SecretKey = SecretKey;

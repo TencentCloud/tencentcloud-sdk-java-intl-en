@@ -44,7 +44,7 @@ public class UserInformation extends AbstractModel{
     private Long JoinTs;
 
     /**
-    * 
+    * The time when the user exits the room. If the user is still in the room, the current time will be returned
     */
     @SerializedName("LeaveTs")
     @Expose
@@ -127,16 +127,16 @@ public class UserInformation extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return LeaveTs 
+     * Get The time when the user exits the room. If the user is still in the room, the current time will be returned 
+     * @return LeaveTs The time when the user exits the room. If the user is still in the room, the current time will be returned
      */
     public Long getLeaveTs() {
         return this.LeaveTs;
     }
 
     /**
-     * Set 
-     * @param LeaveTs 
+     * Set The time when the user exits the room. If the user is still in the room, the current time will be returned
+     * @param LeaveTs The time when the user exits the room. If the user is still in the room, the current time will be returned
      */
     public void setLeaveTs(Long LeaveTs) {
         this.LeaveTs = LeaveTs;

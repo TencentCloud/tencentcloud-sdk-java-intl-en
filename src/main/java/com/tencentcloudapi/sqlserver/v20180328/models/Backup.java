@@ -100,6 +100,13 @@ public class Backup extends AbstractModel{
     private Long BackupWay;
 
     /**
+    * Backup name, which can be customized.
+    */
+    @SerializedName("BackupName")
+    @Expose
+    private String BackupName;
+
+    /**
      * Get Filename 
      * @return FileName Filename
      */
@@ -276,6 +283,22 @@ public class Backup extends AbstractModel{
     }
 
     /**
+     * Get Backup name, which can be customized. 
+     * @return BackupName Backup name, which can be customized.
+     */
+    public String getBackupName() {
+        return this.BackupName;
+    }
+
+    /**
+     * Set Backup name, which can be customized.
+     * @param BackupName Backup name, which can be customized.
+     */
+    public void setBackupName(String BackupName) {
+        this.BackupName = BackupName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -290,6 +313,7 @@ public class Backup extends AbstractModel{
         this.setParamArraySimple(map, prefix + "DBs.", this.DBs);
         this.setParamSimple(map, prefix + "Strategy", this.Strategy);
         this.setParamSimple(map, prefix + "BackupWay", this.BackupWay);
+        this.setParamSimple(map, prefix + "BackupName", this.BackupName);
 
     }
 }

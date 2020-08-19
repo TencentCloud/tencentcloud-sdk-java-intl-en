@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class UpdatePolicyRequest extends AbstractModel{
 
     /**
-    * Policy ID
+    * Policy ID. Either `PolicyId` or `PolicyName` must be entered
     */
     @SerializedName("PolicyId")
     @Expose
     private Long PolicyId;
 
     /**
-    * Policy Name
+    * Policy name. Either `PolicyName` or `PolicyId` must be entered
     */
     @SerializedName("PolicyName")
     @Expose
@@ -44,7 +44,7 @@ public class UpdatePolicyRequest extends AbstractModel{
     private String Description;
 
     /**
-    * Policy documentation, for example: `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the service that is authorized to use the role. For more information about this parameter, see **RoleInfo** under **Output Parameters** in the [GetRole](https://cloud.tencent.com/document/product/598/36221).
+    * Policy documentation, for example: `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the service that is authorized to use the role. For more information about this parameter, see **RoleInfo** under **Output Parameters** in the [GetRole](https://intl.cloud.tencent.com/document/product/598/36221?from_cn_redirect=1).
     */
     @SerializedName("PolicyDocument")
     @Expose
@@ -58,32 +58,32 @@ public class UpdatePolicyRequest extends AbstractModel{
     private String Alias;
 
     /**
-     * Get Policy ID 
-     * @return PolicyId Policy ID
+     * Get Policy ID. Either `PolicyId` or `PolicyName` must be entered 
+     * @return PolicyId Policy ID. Either `PolicyId` or `PolicyName` must be entered
      */
     public Long getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set Policy ID
-     * @param PolicyId Policy ID
+     * Set Policy ID. Either `PolicyId` or `PolicyName` must be entered
+     * @param PolicyId Policy ID. Either `PolicyId` or `PolicyName` must be entered
      */
     public void setPolicyId(Long PolicyId) {
         this.PolicyId = PolicyId;
     }
 
     /**
-     * Get Policy Name 
-     * @return PolicyName Policy Name
+     * Get Policy name. Either `PolicyName` or `PolicyId` must be entered 
+     * @return PolicyName Policy name. Either `PolicyName` or `PolicyId` must be entered
      */
     public String getPolicyName() {
         return this.PolicyName;
     }
 
     /**
-     * Set Policy Name
-     * @param PolicyName Policy Name
+     * Set Policy name. Either `PolicyName` or `PolicyId` must be entered
+     * @param PolicyName Policy name. Either `PolicyName` or `PolicyId` must be entered
      */
     public void setPolicyName(String PolicyName) {
         this.PolicyName = PolicyName;
@@ -106,16 +106,16 @@ public class UpdatePolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get Policy documentation, for example: `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the service that is authorized to use the role. For more information about this parameter, see **RoleInfo** under **Output Parameters** in the [GetRole](https://cloud.tencent.com/document/product/598/36221). 
-     * @return PolicyDocument Policy documentation, for example: `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the service that is authorized to use the role. For more information about this parameter, see **RoleInfo** under **Output Parameters** in the [GetRole](https://cloud.tencent.com/document/product/598/36221).
+     * Get Policy documentation, for example: `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the service that is authorized to use the role. For more information about this parameter, see **RoleInfo** under **Output Parameters** in the [GetRole](https://intl.cloud.tencent.com/document/product/598/36221?from_cn_redirect=1). 
+     * @return PolicyDocument Policy documentation, for example: `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the service that is authorized to use the role. For more information about this parameter, see **RoleInfo** under **Output Parameters** in the [GetRole](https://intl.cloud.tencent.com/document/product/598/36221?from_cn_redirect=1).
      */
     public String getPolicyDocument() {
         return this.PolicyDocument;
     }
 
     /**
-     * Set Policy documentation, for example: `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the service that is authorized to use the role. For more information about this parameter, see **RoleInfo** under **Output Parameters** in the [GetRole](https://cloud.tencent.com/document/product/598/36221).
-     * @param PolicyDocument Policy documentation, for example: `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the service that is authorized to use the role. For more information about this parameter, see **RoleInfo** under **Output Parameters** in the [GetRole](https://cloud.tencent.com/document/product/598/36221).
+     * Set Policy documentation, for example: `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the service that is authorized to use the role. For more information about this parameter, see **RoleInfo** under **Output Parameters** in the [GetRole](https://intl.cloud.tencent.com/document/product/598/36221?from_cn_redirect=1).
+     * @param PolicyDocument Policy documentation, for example: `{"version":"2.0","statement":[{"action":"name/sts:AssumeRole","effect":"allow","principal":{"service":["cloudaudit.cloud.tencent.com","cls.cloud.tencent.com"]}}]}`, where `principal` is used to specify the service that is authorized to use the role. For more information about this parameter, see **RoleInfo** under **Output Parameters** in the [GetRole](https://intl.cloud.tencent.com/document/product/598/36221?from_cn_redirect=1).
      */
     public void setPolicyDocument(String PolicyDocument) {
         this.PolicyDocument = PolicyDocument;

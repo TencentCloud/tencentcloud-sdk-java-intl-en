@@ -143,6 +143,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long TradeIsolateStatus;
 
     /**
+    * 
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get Port for HTTPS access over private network.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return InnerHttpsPort Port for HTTPS access over private network.
@@ -443,6 +450,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get  
+     * @return Tags 
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 
+     * @param Tags 
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -461,6 +484,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "InnerHttpPort", this.InnerHttpPort);
         this.setParamSimple(map, prefix + "InnerSubDomain", this.InnerSubDomain);
         this.setParamSimple(map, prefix + "TradeIsolateStatus", this.TradeIsolateStatus);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

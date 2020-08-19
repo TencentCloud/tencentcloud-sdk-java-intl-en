@@ -37,7 +37,7 @@ public class CreateIPStrategyRequest extends AbstractModel{
     private String StrategyName;
 
     /**
-    * Policy type. Valid values: WHITE (whitelist), BLACK (blacklist).
+    * Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
     */
     @SerializedName("StrategyType")
     @Expose
@@ -83,16 +83,16 @@ public class CreateIPStrategyRequest extends AbstractModel{
     }
 
     /**
-     * Get Policy type. Valid values: WHITE (whitelist), BLACK (blacklist). 
-     * @return StrategyType Policy type. Valid values: WHITE (whitelist), BLACK (blacklist).
+     * Get Policy type. Valid values: WHITE (allowlist), BLACK (blocklist). 
+     * @return StrategyType Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
      */
     public String getStrategyType() {
         return this.StrategyType;
     }
 
     /**
-     * Set Policy type. Valid values: WHITE (whitelist), BLACK (blacklist).
-     * @param StrategyType Policy type. Valid values: WHITE (whitelist), BLACK (blacklist).
+     * Set Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
+     * @param StrategyType Policy type. Valid values: WHITE (allowlist), BLACK (blocklist).
      */
     public void setStrategyType(String StrategyType) {
         this.StrategyType = StrategyType;

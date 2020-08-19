@@ -65,14 +65,14 @@ public class AiSamplePerson extends AbstractModel{
     private String [] UsageSet;
 
     /**
-    * Creation time in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+    * Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Last modified time in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+    * Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -175,32 +175,32 @@ public class AiSamplePerson extends AbstractModel{
     }
 
     /**
-     * Get Creation time in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). 
-     * @return CreateTime Creation time in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * Get Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return CreateTime Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
-     * @param CreateTime Creation time in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * Set Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param CreateTime Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Last modified time in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). 
-     * @return UpdateTime Last modified time in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * Get Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return UpdateTime Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Last modified time in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
-     * @param UpdateTime Last modified time in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * Set Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param UpdateTime Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

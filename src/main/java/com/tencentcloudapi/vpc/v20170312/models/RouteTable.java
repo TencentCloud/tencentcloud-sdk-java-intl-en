@@ -51,7 +51,7 @@ public class RouteTable extends AbstractModel{
     private RouteTableAssociation [] AssociationSet;
 
     /**
-    * Route table policy set.
+    * IPv4 routing policy set.
     */
     @SerializedName("RouteSet")
     @Expose
@@ -143,16 +143,16 @@ public class RouteTable extends AbstractModel{
     }
 
     /**
-     * Get Route table policy set. 
-     * @return RouteSet Route table policy set.
+     * Get IPv4 routing policy set. 
+     * @return RouteSet IPv4 routing policy set.
      */
     public Route [] getRouteSet() {
         return this.RouteSet;
     }
 
     /**
-     * Set Route table policy set.
-     * @param RouteSet Route table policy set.
+     * Set IPv4 routing policy set.
+     * @param RouteSet IPv4 routing policy set.
      */
     public void setRouteSet(Route [] RouteSet) {
         this.RouteSet = RouteSet;

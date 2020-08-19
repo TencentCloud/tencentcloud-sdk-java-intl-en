@@ -246,6 +246,22 @@ Note: this field may return null, indicating that no valid value is obtained.
     private String CamRoleName;
 
     /**
+    * HPC cluster ID.
+Note: this field may return null, indicating that no valid value was found.
+    */
+    @SerializedName("HpcClusterId")
+    @Expose
+    private String HpcClusterId;
+
+    /**
+    * IP list of HPC cluster.
+Note: this field may return null, indicating that no valid value was found.
+    */
+    @SerializedName("RdmaIpAddresses")
+    @Expose
+    private String [] RdmaIpAddresses;
+
+    /**
      * Get Location of the instance 
      * @return Placement Location of the instance
      */
@@ -766,6 +782,46 @@ Note: this field may return null, indicating that no valid value is obtained.
     }
 
     /**
+     * Get HPC cluster ID.
+Note: this field may return null, indicating that no valid value was found. 
+     * @return HpcClusterId HPC cluster ID.
+Note: this field may return null, indicating that no valid value was found.
+     */
+    public String getHpcClusterId() {
+        return this.HpcClusterId;
+    }
+
+    /**
+     * Set HPC cluster ID.
+Note: this field may return null, indicating that no valid value was found.
+     * @param HpcClusterId HPC cluster ID.
+Note: this field may return null, indicating that no valid value was found.
+     */
+    public void setHpcClusterId(String HpcClusterId) {
+        this.HpcClusterId = HpcClusterId;
+    }
+
+    /**
+     * Get IP list of HPC cluster.
+Note: this field may return null, indicating that no valid value was found. 
+     * @return RdmaIpAddresses IP list of HPC cluster.
+Note: this field may return null, indicating that no valid value was found.
+     */
+    public String [] getRdmaIpAddresses() {
+        return this.RdmaIpAddresses;
+    }
+
+    /**
+     * Set IP list of HPC cluster.
+Note: this field may return null, indicating that no valid value was found.
+     * @param RdmaIpAddresses IP list of HPC cluster.
+Note: this field may return null, indicating that no valid value was found.
+     */
+    public void setRdmaIpAddresses(String [] RdmaIpAddresses) {
+        this.RdmaIpAddresses = RdmaIpAddresses;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -800,6 +856,8 @@ Note: this field may return null, indicating that no valid value is obtained.
         this.setParamSimple(map, prefix + "DisasterRecoverGroupId", this.DisasterRecoverGroupId);
         this.setParamArraySimple(map, prefix + "IPv6Addresses.", this.IPv6Addresses);
         this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
+        this.setParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
+        this.setParamArraySimple(map, prefix + "RdmaIpAddresses.", this.RdmaIpAddresses);
 
     }
 }

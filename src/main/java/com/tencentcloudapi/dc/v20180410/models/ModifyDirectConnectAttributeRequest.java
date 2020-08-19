@@ -100,6 +100,13 @@ public class ModifyDirectConnectAttributeRequest extends AbstractModel{
     private String FaultReportContactNumber;
 
     /**
+    * Whether the connection applicant has signed the service agreement.
+    */
+    @SerializedName("SignLaw")
+    @Expose
+    private Boolean SignLaw;
+
+    /**
      * Get Connection ID. 
      * @return DirectConnectId Connection ID.
      */
@@ -276,6 +283,22 @@ public class ModifyDirectConnectAttributeRequest extends AbstractModel{
     }
 
     /**
+     * Get Whether the connection applicant has signed the service agreement. 
+     * @return SignLaw Whether the connection applicant has signed the service agreement.
+     */
+    public Boolean getSignLaw() {
+        return this.SignLaw;
+    }
+
+    /**
+     * Set Whether the connection applicant has signed the service agreement.
+     * @param SignLaw Whether the connection applicant has signed the service agreement.
+     */
+    public void setSignLaw(Boolean SignLaw) {
+        this.SignLaw = SignLaw;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -290,6 +313,7 @@ public class ModifyDirectConnectAttributeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CustomerContactNumber", this.CustomerContactNumber);
         this.setParamSimple(map, prefix + "FaultReportContactPerson", this.FaultReportContactPerson);
         this.setParamSimple(map, prefix + "FaultReportContactNumber", this.FaultReportContactNumber);
+        this.setParamSimple(map, prefix + "SignLaw", this.SignLaw);
 
     }
 }

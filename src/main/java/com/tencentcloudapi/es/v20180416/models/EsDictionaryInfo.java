@@ -37,21 +37,21 @@ public class EsDictionaryInfo extends AbstractModel{
     private DictInfo [] Stopwords;
 
     /**
-    * 
+    * QQ dictionary list
     */
     @SerializedName("QQDict")
     @Expose
     private DictInfo [] QQDict;
 
     /**
-    * 
+    * Synonym dictionary list
     */
     @SerializedName("Synonym")
     @Expose
     private DictInfo [] Synonym;
 
     /**
-    * 
+    * Update dictionary type
     */
     @SerializedName("UpdateType")
     @Expose
@@ -90,48 +90,48 @@ public class EsDictionaryInfo extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return QQDict 
+     * Get QQ dictionary list 
+     * @return QQDict QQ dictionary list
      */
     public DictInfo [] getQQDict() {
         return this.QQDict;
     }
 
     /**
-     * Set 
-     * @param QQDict 
+     * Set QQ dictionary list
+     * @param QQDict QQ dictionary list
      */
     public void setQQDict(DictInfo [] QQDict) {
         this.QQDict = QQDict;
     }
 
     /**
-     * Get  
-     * @return Synonym 
+     * Get Synonym dictionary list 
+     * @return Synonym Synonym dictionary list
      */
     public DictInfo [] getSynonym() {
         return this.Synonym;
     }
 
     /**
-     * Set 
-     * @param Synonym 
+     * Set Synonym dictionary list
+     * @param Synonym Synonym dictionary list
      */
     public void setSynonym(DictInfo [] Synonym) {
         this.Synonym = Synonym;
     }
 
     /**
-     * Get  
-     * @return UpdateType 
+     * Get Update dictionary type 
+     * @return UpdateType Update dictionary type
      */
     public String getUpdateType() {
         return this.UpdateType;
     }
 
     /**
-     * Set 
-     * @param UpdateType 
+     * Set Update dictionary type
+     * @param UpdateType Update dictionary type
      */
     public void setUpdateType(String UpdateType) {
         this.UpdateType = UpdateType;

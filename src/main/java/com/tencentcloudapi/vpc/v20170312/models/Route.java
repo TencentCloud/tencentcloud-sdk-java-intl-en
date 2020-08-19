@@ -54,7 +54,7 @@ Important note: When the GatewayType is EIP, the GatewayId has a fixed value `0`
     private String GatewayId;
 
     /**
-    * The ID of the routing policy.
+    * Routing policy ID. The IPv4 routing policy will have a meaningful value, while the IPv6 routing policy is always 0. We recommend using the unique ID `RouteItemId` for the routing policy.
     */
     @SerializedName("RouteId")
     @Expose
@@ -195,16 +195,16 @@ Important note: When the GatewayType is EIP, the GatewayId has a fixed value `0`
     }
 
     /**
-     * Get The ID of the routing policy. 
-     * @return RouteId The ID of the routing policy.
+     * Get Routing policy ID. The IPv4 routing policy will have a meaningful value, while the IPv6 routing policy is always 0. We recommend using the unique ID `RouteItemId` for the routing policy. 
+     * @return RouteId Routing policy ID. The IPv4 routing policy will have a meaningful value, while the IPv6 routing policy is always 0. We recommend using the unique ID `RouteItemId` for the routing policy.
      */
     public Long getRouteId() {
         return this.RouteId;
     }
 
     /**
-     * Set The ID of the routing policy.
-     * @param RouteId The ID of the routing policy.
+     * Set Routing policy ID. The IPv4 routing policy will have a meaningful value, while the IPv6 routing policy is always 0. We recommend using the unique ID `RouteItemId` for the routing policy.
+     * @param RouteId Routing policy ID. The IPv4 routing policy will have a meaningful value, while the IPv6 routing policy is always 0. We recommend using the unique ID `RouteItemId` for the routing policy.
      */
     public void setRouteId(Long RouteId) {
         this.RouteId = RouteId;

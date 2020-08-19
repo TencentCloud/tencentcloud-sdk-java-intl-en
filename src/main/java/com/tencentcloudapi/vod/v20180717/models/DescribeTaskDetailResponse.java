@@ -53,21 +53,21 @@ Task types compatible with v2017:
     private String Status;
 
     /**
-    * Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+    * Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+    * Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("BeginProcessTime")
     @Expose
     private String BeginProcessTime;
 
     /**
-    * End time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+    * End time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("FinishTime")
     @Expose
@@ -265,48 +265,48 @@ Task types compatible with v2017:
     }
 
     /**
-     * Get Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). 
-     * @return CreateTime Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * Get Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return CreateTime Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
-     * @param CreateTime Creation time of task in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * Set Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param CreateTime Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). 
-     * @return BeginProcessTime Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * Get Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return BeginProcessTime Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getBeginProcessTime() {
         return this.BeginProcessTime;
     }
 
     /**
-     * Set Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
-     * @param BeginProcessTime Start time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * Set Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param BeginProcessTime Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setBeginProcessTime(String BeginProcessTime) {
         this.BeginProcessTime = BeginProcessTime;
     }
 
     /**
-     * Get End time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). 
-     * @return FinishTime End time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * Get End time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return FinishTime End time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set End time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
-     * @param FinishTime End time of task execution in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * Set End time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param FinishTime End time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;

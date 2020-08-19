@@ -23,138 +23,138 @@ import java.util.HashMap;
 public class PodSpec extends AbstractModel{
 
     /**
-    * 
+    * Identifier of external resource provider, such as "cls-a1cd23fa".
     */
     @SerializedName("ResourceProviderIdentifier")
     @Expose
     private String ResourceProviderIdentifier;
 
     /**
-    * 
+    * Type of external resource provider, such as "tke". Currently, only "tke" is supported.
     */
     @SerializedName("ResourceProviderType")
     @Expose
     private String ResourceProviderType;
 
     /**
-    * 
+    * Purpose of the resource, i.e., node type, which currently can only be "TASK".
     */
     @SerializedName("NodeType")
     @Expose
     private String NodeType;
 
     /**
-    * 
+    * Number of CPU cores.
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 
+    * Memory size in GB.
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 
+    * Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod.
     */
     @SerializedName("DataVolumes")
     @Expose
     private String [] DataVolumes;
 
     /**
-     * Get  
-     * @return ResourceProviderIdentifier 
+     * Get Identifier of external resource provider, such as "cls-a1cd23fa". 
+     * @return ResourceProviderIdentifier Identifier of external resource provider, such as "cls-a1cd23fa".
      */
     public String getResourceProviderIdentifier() {
         return this.ResourceProviderIdentifier;
     }
 
     /**
-     * Set 
-     * @param ResourceProviderIdentifier 
+     * Set Identifier of external resource provider, such as "cls-a1cd23fa".
+     * @param ResourceProviderIdentifier Identifier of external resource provider, such as "cls-a1cd23fa".
      */
     public void setResourceProviderIdentifier(String ResourceProviderIdentifier) {
         this.ResourceProviderIdentifier = ResourceProviderIdentifier;
     }
 
     /**
-     * Get  
-     * @return ResourceProviderType 
+     * Get Type of external resource provider, such as "tke". Currently, only "tke" is supported. 
+     * @return ResourceProviderType Type of external resource provider, such as "tke". Currently, only "tke" is supported.
      */
     public String getResourceProviderType() {
         return this.ResourceProviderType;
     }
 
     /**
-     * Set 
-     * @param ResourceProviderType 
+     * Set Type of external resource provider, such as "tke". Currently, only "tke" is supported.
+     * @param ResourceProviderType Type of external resource provider, such as "tke". Currently, only "tke" is supported.
      */
     public void setResourceProviderType(String ResourceProviderType) {
         this.ResourceProviderType = ResourceProviderType;
     }
 
     /**
-     * Get  
-     * @return NodeType 
+     * Get Purpose of the resource, i.e., node type, which currently can only be "TASK". 
+     * @return NodeType Purpose of the resource, i.e., node type, which currently can only be "TASK".
      */
     public String getNodeType() {
         return this.NodeType;
     }
 
     /**
-     * Set 
-     * @param NodeType 
+     * Set Purpose of the resource, i.e., node type, which currently can only be "TASK".
+     * @param NodeType Purpose of the resource, i.e., node type, which currently can only be "TASK".
      */
     public void setNodeType(String NodeType) {
         this.NodeType = NodeType;
     }
 
     /**
-     * Get  
-     * @return Cpu 
+     * Get Number of CPU cores. 
+     * @return Cpu Number of CPU cores.
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 
-     * @param Cpu 
+     * Set Number of CPU cores.
+     * @param Cpu Number of CPU cores.
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get  
-     * @return Memory 
+     * Get Memory size in GB. 
+     * @return Memory Memory size in GB.
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 
-     * @param Memory 
+     * Set Memory size in GB.
+     * @param Memory Memory size in GB.
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get  
-     * @return DataVolumes 
+     * Get Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod. 
+     * @return DataVolumes Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod.
      */
     public String [] getDataVolumes() {
         return this.DataVolumes;
     }
 
     /**
-     * Set 
-     * @param DataVolumes 
+     * Set Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod.
+     * @param DataVolumes Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod.
      */
     public void setDataVolumes(String [] DataVolumes) {
         this.DataVolumes = DataVolumes;

@@ -58,7 +58,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     private String [] VoucherIds;
 
     /**
-    * 
+    * The number of CUP cores after the instance is upgraded.
     */
     @SerializedName("Cpu")
     @Expose
@@ -145,16 +145,16 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return Cpu 
+     * Get The number of CUP cores after the instance is upgraded. 
+     * @return Cpu The number of CUP cores after the instance is upgraded.
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 
-     * @param Cpu 
+     * Set The number of CUP cores after the instance is upgraded.
+     * @param Cpu The number of CUP cores after the instance is upgraded.
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;

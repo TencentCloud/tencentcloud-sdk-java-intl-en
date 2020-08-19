@@ -69,7 +69,8 @@ Note: This field may return null, indicating that no valid value was found.
     private String Remark;
 
     /**
-    * 
+    * Root account of the operator associating the policy
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OperateOwnerUin")
     @Expose
@@ -218,16 +219,20 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get  
-     * @return OperateOwnerUin 
+     * Get Root account of the operator associating the policy
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return OperateOwnerUin Root account of the operator associating the policy
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getOperateOwnerUin() {
         return this.OperateOwnerUin;
     }
 
     /**
-     * Set 
-     * @param OperateOwnerUin 
+     * Set Root account of the operator associating the policy
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param OperateOwnerUin Root account of the operator associating the policy
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setOperateOwnerUin(String OperateOwnerUin) {
         this.OperateOwnerUin = OperateOwnerUin;

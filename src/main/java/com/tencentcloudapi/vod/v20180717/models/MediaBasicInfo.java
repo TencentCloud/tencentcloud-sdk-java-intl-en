@@ -39,7 +39,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Description;
 
     /**
-    * Creation time of media file in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+    * Creation time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateTime")
@@ -47,7 +47,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String CreateTime;
 
     /**
-    * Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+    * Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UpdateTime")
@@ -55,7 +55,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String UpdateTime;
 
     /**
-    * Expiration time of media file in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
+    * Expiration time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExpireTime")
@@ -119,7 +119,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private MediaSourceData SourceInfo;
 
     /**
-    * Storage region of media file, such as ap-guangzhou. For more information, please see [Region List](https://cloud.tencent.com/document/api/213/15692#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+    * Storage region of media file, such as ap-guangzhou. For more information, please see [Region List](https://intl.cloud.tencent.com/document/api/213/15692?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StorageRegion")
@@ -198,9 +198,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Creation time of media file in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * Get Creation time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CreateTime Creation time of media file in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * @return CreateTime Creation time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getCreateTime() {
@@ -208,9 +208,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Creation time of media file in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * Set Creation time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CreateTime Creation time of media file in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * @param CreateTime Creation time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setCreateTime(String CreateTime) {
@@ -218,9 +218,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * Get Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return UpdateTime Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * @return UpdateTime Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getUpdateTime() {
@@ -228,9 +228,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * Set Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param UpdateTime Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I).
+     * @param UpdateTime Last update time of media file (by an operation that triggers updating of media file information such as modifying video attributes or initiating video processing) in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setUpdateTime(String UpdateTime) {
@@ -238,9 +238,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Expiration time of media file in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
+     * Get Expiration time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ExpireTime Expiration time of media file in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
+     * @return ExpireTime Expiration time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getExpireTime() {
@@ -248,9 +248,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Expiration time of media file in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
+     * Set Expiration time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ExpireTime Expiration time of media file in [ISO date format](https://cloud.tencent.com/document/product/266/11732#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
+     * @param ExpireTime Expiration time of media file in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). After the expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. `9999-12-31T23:59:59Z` means "never expire".
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setExpireTime(String ExpireTime) {
@@ -398,9 +398,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Storage region of media file, such as ap-guangzhou. For more information, please see [Region List](https://cloud.tencent.com/document/api/213/15692#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+     * Get Storage region of media file, such as ap-guangzhou. For more information, please see [Region List](https://intl.cloud.tencent.com/document/api/213/15692?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return StorageRegion Storage region of media file, such as ap-guangzhou. For more information, please see [Region List](https://cloud.tencent.com/document/api/213/15692#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+     * @return StorageRegion Storage region of media file, such as ap-guangzhou. For more information, please see [Region List](https://intl.cloud.tencent.com/document/api/213/15692?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getStorageRegion() {
@@ -408,9 +408,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Storage region of media file, such as ap-guangzhou. For more information, please see [Region List](https://cloud.tencent.com/document/api/213/15692#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+     * Set Storage region of media file, such as ap-guangzhou. For more information, please see [Region List](https://intl.cloud.tencent.com/document/api/213/15692?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param StorageRegion Storage region of media file, such as ap-guangzhou. For more information, please see [Region List](https://cloud.tencent.com/document/api/213/15692#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+     * @param StorageRegion Storage region of media file, such as ap-guangzhou. For more information, please see [Region List](https://intl.cloud.tencent.com/document/api/213/15692?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setStorageRegion(String StorageRegion) {

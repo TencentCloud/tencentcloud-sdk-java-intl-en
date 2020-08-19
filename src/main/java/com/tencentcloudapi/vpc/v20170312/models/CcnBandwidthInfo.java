@@ -63,7 +63,7 @@ Note: this field may return null, indicating that no valid value was found.
     private String RenewFlag;
 
     /**
-    * The information of bandwidth regions and bandwidth caps.
+    * The information of the bandwidth regions and bandwidth caps. The parameter is only returned for the cross-region limit mode, but not for egress limit.
 Note: this field may return null, indicating that no valid value was found.
     */
     @SerializedName("CcnRegionBandwidthLimit")
@@ -171,9 +171,9 @@ Note: this field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get The information of bandwidth regions and bandwidth caps.
+     * Get The information of the bandwidth regions and bandwidth caps. The parameter is only returned for the cross-region limit mode, but not for egress limit.
 Note: this field may return null, indicating that no valid value was found. 
-     * @return CcnRegionBandwidthLimit The information of bandwidth regions and bandwidth caps.
+     * @return CcnRegionBandwidthLimit The information of the bandwidth regions and bandwidth caps. The parameter is only returned for the cross-region limit mode, but not for egress limit.
 Note: this field may return null, indicating that no valid value was found.
      */
     public CcnRegionBandwidthLimit getCcnRegionBandwidthLimit() {
@@ -181,9 +181,9 @@ Note: this field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Set The information of bandwidth regions and bandwidth caps.
+     * Set The information of the bandwidth regions and bandwidth caps. The parameter is only returned for the cross-region limit mode, but not for egress limit.
 Note: this field may return null, indicating that no valid value was found.
-     * @param CcnRegionBandwidthLimit The information of bandwidth regions and bandwidth caps.
+     * @param CcnRegionBandwidthLimit The information of the bandwidth regions and bandwidth caps. The parameter is only returned for the cross-region limit mode, but not for egress limit.
 Note: this field may return null, indicating that no valid value was found.
      */
     public void setCcnRegionBandwidthLimit(CcnRegionBandwidthLimit CcnRegionBandwidthLimit) {

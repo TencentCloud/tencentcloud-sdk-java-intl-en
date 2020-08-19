@@ -114,42 +114,42 @@ public class CreateDBInstancesRequest extends AbstractModel{
     private Long AutoRenewFlag;
 
     /**
-    * 
+    * Security group list, which contains security group IDs in the format of sg-xxx.
     */
     @SerializedName("SecurityGroupList")
     @Expose
     private String [] SecurityGroupList;
 
     /**
-    * 
+    * Configuration of the maintenance window, which specifies the day of the week when maintenance can be performed. Valid values: 1 (Monday), 2 (Tuesday), 3 (Wednesday), 4 (Thursday), 5 (Friday), 6 (Saturday), 7 (Sunday).
     */
     @SerializedName("Weekly")
     @Expose
     private Long [] Weekly;
 
     /**
-    * 
+    * Configuration of the maintenance window, which specifies the start time of daily maintenance.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 
+    * Configuration of the maintenance window, which specifies the maintenance duration in hours.
     */
     @SerializedName("Span")
     @Expose
     private Long Span;
 
     /**
-    * 
+    * The type of purchased high-availability instance. Valid values: DUAL (dual-server high availability), CLUSTER (cluster). Default value: DUAL.
     */
     @SerializedName("HAType")
     @Expose
     private String HAType;
 
     /**
-    * 
+    * Whether to deploy across availability zones. Default value: false.
     */
     @SerializedName("MultiZones")
     @Expose
@@ -364,96 +364,96 @@ public class CreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return SecurityGroupList 
+     * Get Security group list, which contains security group IDs in the format of sg-xxx. 
+     * @return SecurityGroupList Security group list, which contains security group IDs in the format of sg-xxx.
      */
     public String [] getSecurityGroupList() {
         return this.SecurityGroupList;
     }
 
     /**
-     * Set 
-     * @param SecurityGroupList 
+     * Set Security group list, which contains security group IDs in the format of sg-xxx.
+     * @param SecurityGroupList Security group list, which contains security group IDs in the format of sg-xxx.
      */
     public void setSecurityGroupList(String [] SecurityGroupList) {
         this.SecurityGroupList = SecurityGroupList;
     }
 
     /**
-     * Get  
-     * @return Weekly 
+     * Get Configuration of the maintenance window, which specifies the day of the week when maintenance can be performed. Valid values: 1 (Monday), 2 (Tuesday), 3 (Wednesday), 4 (Thursday), 5 (Friday), 6 (Saturday), 7 (Sunday). 
+     * @return Weekly Configuration of the maintenance window, which specifies the day of the week when maintenance can be performed. Valid values: 1 (Monday), 2 (Tuesday), 3 (Wednesday), 4 (Thursday), 5 (Friday), 6 (Saturday), 7 (Sunday).
      */
     public Long [] getWeekly() {
         return this.Weekly;
     }
 
     /**
-     * Set 
-     * @param Weekly 
+     * Set Configuration of the maintenance window, which specifies the day of the week when maintenance can be performed. Valid values: 1 (Monday), 2 (Tuesday), 3 (Wednesday), 4 (Thursday), 5 (Friday), 6 (Saturday), 7 (Sunday).
+     * @param Weekly Configuration of the maintenance window, which specifies the day of the week when maintenance can be performed. Valid values: 1 (Monday), 2 (Tuesday), 3 (Wednesday), 4 (Thursday), 5 (Friday), 6 (Saturday), 7 (Sunday).
      */
     public void setWeekly(Long [] Weekly) {
         this.Weekly = Weekly;
     }
 
     /**
-     * Get  
-     * @return StartTime 
+     * Get Configuration of the maintenance window, which specifies the start time of daily maintenance. 
+     * @return StartTime Configuration of the maintenance window, which specifies the start time of daily maintenance.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 
-     * @param StartTime 
+     * Set Configuration of the maintenance window, which specifies the start time of daily maintenance.
+     * @param StartTime Configuration of the maintenance window, which specifies the start time of daily maintenance.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get  
-     * @return Span 
+     * Get Configuration of the maintenance window, which specifies the maintenance duration in hours. 
+     * @return Span Configuration of the maintenance window, which specifies the maintenance duration in hours.
      */
     public Long getSpan() {
         return this.Span;
     }
 
     /**
-     * Set 
-     * @param Span 
+     * Set Configuration of the maintenance window, which specifies the maintenance duration in hours.
+     * @param Span Configuration of the maintenance window, which specifies the maintenance duration in hours.
      */
     public void setSpan(Long Span) {
         this.Span = Span;
     }
 
     /**
-     * Get  
-     * @return HAType 
+     * Get The type of purchased high-availability instance. Valid values: DUAL (dual-server high availability), CLUSTER (cluster). Default value: DUAL. 
+     * @return HAType The type of purchased high-availability instance. Valid values: DUAL (dual-server high availability), CLUSTER (cluster). Default value: DUAL.
      */
     public String getHAType() {
         return this.HAType;
     }
 
     /**
-     * Set 
-     * @param HAType 
+     * Set The type of purchased high-availability instance. Valid values: DUAL (dual-server high availability), CLUSTER (cluster). Default value: DUAL.
+     * @param HAType The type of purchased high-availability instance. Valid values: DUAL (dual-server high availability), CLUSTER (cluster). Default value: DUAL.
      */
     public void setHAType(String HAType) {
         this.HAType = HAType;
     }
 
     /**
-     * Get  
-     * @return MultiZones 
+     * Get Whether to deploy across availability zones. Default value: false. 
+     * @return MultiZones Whether to deploy across availability zones. Default value: false.
      */
     public Boolean getMultiZones() {
         return this.MultiZones;
     }
 
     /**
-     * Set 
-     * @param MultiZones 
+     * Set Whether to deploy across availability zones. Default value: false.
+     * @param MultiZones Whether to deploy across availability zones. Default value: false.
      */
     public void setMultiZones(Boolean MultiZones) {
         this.MultiZones = MultiZones;

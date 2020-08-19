@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class DirectConnectGateway extends AbstractModel{
 
     /**
-    * The direct connect gateway ID.
+    * Direct Connect `ID`.
     */
     @SerializedName("DirectConnectGatewayId")
     @Expose
     private String DirectConnectGatewayId;
 
     /**
-    * The direct connect gateway name.
+    * Direct Connect gateway name.
     */
     @SerializedName("DirectConnectGatewayName")
     @Expose
     private String DirectConnectGatewayName;
 
     /**
-    * The ID of the VPC instance associated with the direct connect gateway.
+    * The `ID` of the `VPC` instance associated with the Direct Connect gateway.
     */
     @SerializedName("VpcId")
     @Expose
@@ -53,40 +53,40 @@ public class DirectConnectGateway extends AbstractModel{
     private String NetworkType;
 
     /**
-    * The ID of the associated network instance:
-<li>When the `NetworkType` is `VPC`, this value is the VPC instance ID</li>
-<li>When the `NetworkType` is `CCN`, this value is the CCN instance ID</li>
+    * The `ID` of the associated network instance:
+<li>When the NetworkType is `VPC`, this value is the VPC instance `ID`</li>
+<li>When the NetworkType is `CCN`, this value is the CCN instance `ID`</li>
     */
     @SerializedName("NetworkInstanceId")
     @Expose
     private String NetworkInstanceId;
 
     /**
-    * The gateway type:
+    * Gateway type:
 <li>NORMAL - Standard type. Note: CCN only supports the standard type</li>
-<li>NAT type</li>
-The NAT type supports network address translation. The specified type cannot be modified. A VPC can create one NAT direct connect gateway and one non-NAT direct connect gateway
+<li>NAT - NAT type</li>
+NAT type supports network address switch configuration. After the type is confirmed, it cannot be modified. A VPC can create one NAT-type Direct Connect gateway and one non-NAT-type Direct Connect gateway
     */
     @SerializedName("GatewayType")
     @Expose
     private String GatewayType;
 
     /**
-    * The creation time.
+    * Creation Time.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * The direct connect gateway IP.
+    * Direct Connect gateway IP.
     */
     @SerializedName("DirectConnectGatewayIp")
     @Expose
     private String DirectConnectGatewayIp;
 
     /**
-    * The ID of the CCN instance associated with the direct connect gateway.
+    * The `ID` of the `CCN` instance associated with the Direct Connect gateway.
     */
     @SerializedName("CcnId")
     @Expose
@@ -102,62 +102,70 @@ The NAT type supports network address translation. The specified type cannot be 
     private String CcnRouteType;
 
     /**
-    * Whether the BGP is enabled.
+    * Whether BGP is enabled.
     */
     @SerializedName("EnableBGP")
     @Expose
     private Boolean EnableBGP;
 
     /**
-    * Whether the `community` attribute of the BGP is enabled.
+    * 
     */
     @SerializedName("EnableBGPCommunity")
     @Expose
     private Boolean EnableBGPCommunity;
 
     /**
-     * Get The direct connect gateway ID. 
-     * @return DirectConnectGatewayId The direct connect gateway ID.
+    * ID of the NAT gateway bound.
+Note: this field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("NatGatewayId")
+    @Expose
+    private String NatGatewayId;
+
+    /**
+     * Get Direct Connect `ID`. 
+     * @return DirectConnectGatewayId Direct Connect `ID`.
      */
     public String getDirectConnectGatewayId() {
         return this.DirectConnectGatewayId;
     }
 
     /**
-     * Set The direct connect gateway ID.
-     * @param DirectConnectGatewayId The direct connect gateway ID.
+     * Set Direct Connect `ID`.
+     * @param DirectConnectGatewayId Direct Connect `ID`.
      */
     public void setDirectConnectGatewayId(String DirectConnectGatewayId) {
         this.DirectConnectGatewayId = DirectConnectGatewayId;
     }
 
     /**
-     * Get The direct connect gateway name. 
-     * @return DirectConnectGatewayName The direct connect gateway name.
+     * Get Direct Connect gateway name. 
+     * @return DirectConnectGatewayName Direct Connect gateway name.
      */
     public String getDirectConnectGatewayName() {
         return this.DirectConnectGatewayName;
     }
 
     /**
-     * Set The direct connect gateway name.
-     * @param DirectConnectGatewayName The direct connect gateway name.
+     * Set Direct Connect gateway name.
+     * @param DirectConnectGatewayName Direct Connect gateway name.
      */
     public void setDirectConnectGatewayName(String DirectConnectGatewayName) {
         this.DirectConnectGatewayName = DirectConnectGatewayName;
     }
 
     /**
-     * Get The ID of the VPC instance associated with the direct connect gateway. 
-     * @return VpcId The ID of the VPC instance associated with the direct connect gateway.
+     * Get The `ID` of the `VPC` instance associated with the Direct Connect gateway. 
+     * @return VpcId The `ID` of the `VPC` instance associated with the Direct Connect gateway.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set The ID of the VPC instance associated with the direct connect gateway.
-     * @param VpcId The ID of the VPC instance associated with the direct connect gateway.
+     * Set The `ID` of the `VPC` instance associated with the Direct Connect gateway.
+     * @param VpcId The `ID` of the `VPC` instance associated with the Direct Connect gateway.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -188,100 +196,100 @@ The NAT type supports network address translation. The specified type cannot be 
     }
 
     /**
-     * Get The ID of the associated network instance:
-<li>When the `NetworkType` is `VPC`, this value is the VPC instance ID</li>
-<li>When the `NetworkType` is `CCN`, this value is the CCN instance ID</li> 
-     * @return NetworkInstanceId The ID of the associated network instance:
-<li>When the `NetworkType` is `VPC`, this value is the VPC instance ID</li>
-<li>When the `NetworkType` is `CCN`, this value is the CCN instance ID</li>
+     * Get The `ID` of the associated network instance:
+<li>When the NetworkType is `VPC`, this value is the VPC instance `ID`</li>
+<li>When the NetworkType is `CCN`, this value is the CCN instance `ID`</li> 
+     * @return NetworkInstanceId The `ID` of the associated network instance:
+<li>When the NetworkType is `VPC`, this value is the VPC instance `ID`</li>
+<li>When the NetworkType is `CCN`, this value is the CCN instance `ID`</li>
      */
     public String getNetworkInstanceId() {
         return this.NetworkInstanceId;
     }
 
     /**
-     * Set The ID of the associated network instance:
-<li>When the `NetworkType` is `VPC`, this value is the VPC instance ID</li>
-<li>When the `NetworkType` is `CCN`, this value is the CCN instance ID</li>
-     * @param NetworkInstanceId The ID of the associated network instance:
-<li>When the `NetworkType` is `VPC`, this value is the VPC instance ID</li>
-<li>When the `NetworkType` is `CCN`, this value is the CCN instance ID</li>
+     * Set The `ID` of the associated network instance:
+<li>When the NetworkType is `VPC`, this value is the VPC instance `ID`</li>
+<li>When the NetworkType is `CCN`, this value is the CCN instance `ID`</li>
+     * @param NetworkInstanceId The `ID` of the associated network instance:
+<li>When the NetworkType is `VPC`, this value is the VPC instance `ID`</li>
+<li>When the NetworkType is `CCN`, this value is the CCN instance `ID`</li>
      */
     public void setNetworkInstanceId(String NetworkInstanceId) {
         this.NetworkInstanceId = NetworkInstanceId;
     }
 
     /**
-     * Get The gateway type:
+     * Get Gateway type:
 <li>NORMAL - Standard type. Note: CCN only supports the standard type</li>
-<li>NAT type</li>
-The NAT type supports network address translation. The specified type cannot be modified. A VPC can create one NAT direct connect gateway and one non-NAT direct connect gateway 
-     * @return GatewayType The gateway type:
+<li>NAT - NAT type</li>
+NAT type supports network address switch configuration. After the type is confirmed, it cannot be modified. A VPC can create one NAT-type Direct Connect gateway and one non-NAT-type Direct Connect gateway 
+     * @return GatewayType Gateway type:
 <li>NORMAL - Standard type. Note: CCN only supports the standard type</li>
-<li>NAT type</li>
-The NAT type supports network address translation. The specified type cannot be modified. A VPC can create one NAT direct connect gateway and one non-NAT direct connect gateway
+<li>NAT - NAT type</li>
+NAT type supports network address switch configuration. After the type is confirmed, it cannot be modified. A VPC can create one NAT-type Direct Connect gateway and one non-NAT-type Direct Connect gateway
      */
     public String getGatewayType() {
         return this.GatewayType;
     }
 
     /**
-     * Set The gateway type:
+     * Set Gateway type:
 <li>NORMAL - Standard type. Note: CCN only supports the standard type</li>
-<li>NAT type</li>
-The NAT type supports network address translation. The specified type cannot be modified. A VPC can create one NAT direct connect gateway and one non-NAT direct connect gateway
-     * @param GatewayType The gateway type:
+<li>NAT - NAT type</li>
+NAT type supports network address switch configuration. After the type is confirmed, it cannot be modified. A VPC can create one NAT-type Direct Connect gateway and one non-NAT-type Direct Connect gateway
+     * @param GatewayType Gateway type:
 <li>NORMAL - Standard type. Note: CCN only supports the standard type</li>
-<li>NAT type</li>
-The NAT type supports network address translation. The specified type cannot be modified. A VPC can create one NAT direct connect gateway and one non-NAT direct connect gateway
+<li>NAT - NAT type</li>
+NAT type supports network address switch configuration. After the type is confirmed, it cannot be modified. A VPC can create one NAT-type Direct Connect gateway and one non-NAT-type Direct Connect gateway
      */
     public void setGatewayType(String GatewayType) {
         this.GatewayType = GatewayType;
     }
 
     /**
-     * Get The creation time. 
-     * @return CreateTime The creation time.
+     * Get Creation Time. 
+     * @return CreateTime Creation Time.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set The creation time.
-     * @param CreateTime The creation time.
+     * Set Creation Time.
+     * @param CreateTime Creation Time.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get The direct connect gateway IP. 
-     * @return DirectConnectGatewayIp The direct connect gateway IP.
+     * Get Direct Connect gateway IP. 
+     * @return DirectConnectGatewayIp Direct Connect gateway IP.
      */
     public String getDirectConnectGatewayIp() {
         return this.DirectConnectGatewayIp;
     }
 
     /**
-     * Set The direct connect gateway IP.
-     * @param DirectConnectGatewayIp The direct connect gateway IP.
+     * Set Direct Connect gateway IP.
+     * @param DirectConnectGatewayIp Direct Connect gateway IP.
      */
     public void setDirectConnectGatewayIp(String DirectConnectGatewayIp) {
         this.DirectConnectGatewayIp = DirectConnectGatewayIp;
     }
 
     /**
-     * Get The ID of the CCN instance associated with the direct connect gateway. 
-     * @return CcnId The ID of the CCN instance associated with the direct connect gateway.
+     * Get The `ID` of the `CCN` instance associated with the Direct Connect gateway. 
+     * @return CcnId The `ID` of the `CCN` instance associated with the Direct Connect gateway.
      */
     public String getCcnId() {
         return this.CcnId;
     }
 
     /**
-     * Set The ID of the CCN instance associated with the direct connect gateway.
-     * @param CcnId The ID of the CCN instance associated with the direct connect gateway.
+     * Set The `ID` of the `CCN` instance associated with the Direct Connect gateway.
+     * @param CcnId The `ID` of the `CCN` instance associated with the Direct Connect gateway.
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;
@@ -312,35 +320,55 @@ The NAT type supports network address translation. The specified type cannot be 
     }
 
     /**
-     * Get Whether the BGP is enabled. 
-     * @return EnableBGP Whether the BGP is enabled.
+     * Get Whether BGP is enabled. 
+     * @return EnableBGP Whether BGP is enabled.
      */
     public Boolean getEnableBGP() {
         return this.EnableBGP;
     }
 
     /**
-     * Set Whether the BGP is enabled.
-     * @param EnableBGP Whether the BGP is enabled.
+     * Set Whether BGP is enabled.
+     * @param EnableBGP Whether BGP is enabled.
      */
     public void setEnableBGP(Boolean EnableBGP) {
         this.EnableBGP = EnableBGP;
     }
 
     /**
-     * Get Whether the `community` attribute of the BGP is enabled. 
-     * @return EnableBGPCommunity Whether the `community` attribute of the BGP is enabled.
+     * Get  
+     * @return EnableBGPCommunity 
      */
     public Boolean getEnableBGPCommunity() {
         return this.EnableBGPCommunity;
     }
 
     /**
-     * Set Whether the `community` attribute of the BGP is enabled.
-     * @param EnableBGPCommunity Whether the `community` attribute of the BGP is enabled.
+     * Set 
+     * @param EnableBGPCommunity 
      */
     public void setEnableBGPCommunity(Boolean EnableBGPCommunity) {
         this.EnableBGPCommunity = EnableBGPCommunity;
+    }
+
+    /**
+     * Get ID of the NAT gateway bound.
+Note: this field may return `null`, indicating that no valid value was found. 
+     * @return NatGatewayId ID of the NAT gateway bound.
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public String getNatGatewayId() {
+        return this.NatGatewayId;
+    }
+
+    /**
+     * Set ID of the NAT gateway bound.
+Note: this field may return `null`, indicating that no valid value was found.
+     * @param NatGatewayId ID of the NAT gateway bound.
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public void setNatGatewayId(String NatGatewayId) {
+        this.NatGatewayId = NatGatewayId;
     }
 
     /**
@@ -359,6 +387,7 @@ The NAT type supports network address translation. The specified type cannot be 
         this.setParamSimple(map, prefix + "CcnRouteType", this.CcnRouteType);
         this.setParamSimple(map, prefix + "EnableBGP", this.EnableBGP);
         this.setParamSimple(map, prefix + "EnableBGPCommunity", this.EnableBGPCommunity);
+        this.setParamSimple(map, prefix + "NatGatewayId", this.NatGatewayId);
 
     }
 }

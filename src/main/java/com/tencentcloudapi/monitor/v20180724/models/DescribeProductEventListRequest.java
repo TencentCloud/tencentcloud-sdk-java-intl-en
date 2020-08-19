@@ -30,7 +30,7 @@ public class DescribeProductEventListRequest extends AbstractModel{
     private String Module;
 
     /**
-    * Filter by product type. For example, “cvm” indicates Cloud Virtual Machine.
+    * Filter by product type. For example, 'cvm' indicates Cloud Virtual Machine.
     */
     @SerializedName("ProductName")
     @Expose
@@ -144,16 +144,16 @@ public class DescribeProductEventListRequest extends AbstractModel{
     }
 
     /**
-     * Get Filter by product type. For example, “cvm” indicates Cloud Virtual Machine. 
-     * @return ProductName Filter by product type. For example, “cvm” indicates Cloud Virtual Machine.
+     * Get Filter by product type. For example, 'cvm' indicates Cloud Virtual Machine. 
+     * @return ProductName Filter by product type. For example, 'cvm' indicates Cloud Virtual Machine.
      */
     public String [] getProductName() {
         return this.ProductName;
     }
 
     /**
-     * Set Filter by product type. For example, “cvm” indicates Cloud Virtual Machine.
-     * @param ProductName Filter by product type. For example, “cvm” indicates Cloud Virtual Machine.
+     * Set Filter by product type. For example, 'cvm' indicates Cloud Virtual Machine.
+     * @param ProductName Filter by product type. For example, 'cvm' indicates Cloud Virtual Machine.
      */
     public void setProductName(String [] ProductName) {
         this.ProductName = ProductName;

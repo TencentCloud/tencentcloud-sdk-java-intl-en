@@ -51,14 +51,14 @@ public class DescribeRoomInformationRequest extends AbstractModel{
     private String RoomId;
 
     /**
-    * Page index. If it is left empty, 10 entries will be returned by default.
+    * Page index starting from 0 (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default)
     */
     @SerializedName("PageNumber")
     @Expose
     private String PageNumber;
 
     /**
-    * Page size. Maximum value: 100. If it is left empty, 10 entries will be returned by default.
+    * Number of entries per page (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default. Maximum value: 100)
     */
     @SerializedName("PageSize")
     @Expose
@@ -129,32 +129,32 @@ public class DescribeRoomInformationRequest extends AbstractModel{
     }
 
     /**
-     * Get Page index. If it is left empty, 10 entries will be returned by default. 
-     * @return PageNumber Page index. If it is left empty, 10 entries will be returned by default.
+     * Get Page index starting from 0 (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default) 
+     * @return PageNumber Page index starting from 0 (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default)
      */
     public String getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set Page index. If it is left empty, 10 entries will be returned by default.
-     * @param PageNumber Page index. If it is left empty, 10 entries will be returned by default.
+     * Set Page index starting from 0 (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default)
+     * @param PageNumber Page index starting from 0 (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default)
      */
     public void setPageNumber(String PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get Page size. Maximum value: 100. If it is left empty, 10 entries will be returned by default. 
-     * @return PageSize Page size. Maximum value: 100. If it is left empty, 10 entries will be returned by default.
+     * Get Number of entries per page (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default. Maximum value: 100) 
+     * @return PageSize Number of entries per page (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default. Maximum value: 100)
      */
     public String getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set Page size. Maximum value: 100. If it is left empty, 10 entries will be returned by default.
-     * @param PageSize Page size. Maximum value: 100. If it is left empty, 10 entries will be returned by default.
+     * Set Number of entries per page (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default. Maximum value: 100)
+     * @param PageSize Number of entries per page (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default. Maximum value: 100)
      */
     public void setPageSize(String PageSize) {
         this.PageSize = PageSize;

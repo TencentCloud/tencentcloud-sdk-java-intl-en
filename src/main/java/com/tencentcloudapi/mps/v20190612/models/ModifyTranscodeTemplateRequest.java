@@ -44,7 +44,7 @@ public class ModifyTranscodeTemplateRequest extends AbstractModel{
     private String Name;
 
     /**
-    * Template description. Length limit: 256 bytes.
+    * Template description. Length limit: 256 characters.
     */
     @SerializedName("Comment")
     @Expose
@@ -138,16 +138,16 @@ public class ModifyTranscodeTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get Template description. Length limit: 256 bytes. 
-     * @return Comment Template description. Length limit: 256 bytes.
+     * Get Template description. Length limit: 256 characters. 
+     * @return Comment Template description. Length limit: 256 characters.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Template description. Length limit: 256 bytes.
-     * @param Comment Template description. Length limit: 256 bytes.
+     * Set Template description. Length limit: 256 characters.
+     * @param Comment Template description. Length limit: 256 characters.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;

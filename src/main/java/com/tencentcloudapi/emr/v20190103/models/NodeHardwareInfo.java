@@ -310,7 +310,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long AutoFlag;
 
     /**
-    * 
+    * Resource type. Valid values: host, pod
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HardwareResourceType")
     @Expose
@@ -1033,16 +1034,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return HardwareResourceType 
+     * Get Resource type. Valid values: host, pod
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return HardwareResourceType Resource type. Valid values: host, pod
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getHardwareResourceType() {
         return this.HardwareResourceType;
     }
 
     /**
-     * Set 
-     * @param HardwareResourceType 
+     * Set Resource type. Valid values: host, pod
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param HardwareResourceType Resource type. Valid values: host, pod
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setHardwareResourceType(String HardwareResourceType) {
         this.HardwareResourceType = HardwareResourceType;

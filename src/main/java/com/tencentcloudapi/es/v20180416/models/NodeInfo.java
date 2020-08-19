@@ -76,7 +76,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long DiskCount;
 
     /**
-    * 
+    * Whether to encrypt node disk. 0: no (default); 1: yes.
     */
     @SerializedName("DiskEncrypt")
     @Expose
@@ -211,16 +211,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return DiskEncrypt 
+     * Get Whether to encrypt node disk. 0: no (default); 1: yes. 
+     * @return DiskEncrypt Whether to encrypt node disk. 0: no (default); 1: yes.
      */
     public Long getDiskEncrypt() {
         return this.DiskEncrypt;
     }
 
     /**
-     * Set 
-     * @param DiskEncrypt 
+     * Set Whether to encrypt node disk. 0: no (default); 1: yes.
+     * @param DiskEncrypt Whether to encrypt node disk. 0: no (default); 1: yes.
      */
     public void setDiskEncrypt(Long DiskEncrypt) {
         this.DiskEncrypt = DiskEncrypt;

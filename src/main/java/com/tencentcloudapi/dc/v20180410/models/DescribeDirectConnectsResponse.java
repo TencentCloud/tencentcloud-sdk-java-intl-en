@@ -37,6 +37,14 @@ public class DescribeDirectConnectsResponse extends AbstractModel{
     private Long TotalCount;
 
     /**
+    * Whether all connections under the account have the service agreement signed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+    */
+    @SerializedName("AllSignLaw")
+    @Expose
+    private Boolean AllSignLaw;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -76,6 +84,26 @@ public class DescribeDirectConnectsResponse extends AbstractModel{
     }
 
     /**
+     * Get Whether all connections under the account have the service agreement signed.
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return AllSignLaw Whether all connections under the account have the service agreement signed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public Boolean getAllSignLaw() {
+        return this.AllSignLaw;
+    }
+
+    /**
+     * Set Whether all connections under the account have the service agreement signed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param AllSignLaw Whether all connections under the account have the service agreement signed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public void setAllSignLaw(Boolean AllSignLaw) {
+        this.AllSignLaw = AllSignLaw;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -97,6 +125,7 @@ public class DescribeDirectConnectsResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "DirectConnectSet.", this.DirectConnectSet);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "AllSignLaw", this.AllSignLaw);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

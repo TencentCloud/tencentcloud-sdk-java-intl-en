@@ -48,7 +48,7 @@ public class SearchMediaRequest extends AbstractModel{
     /**
     * Start time in the creation time range.
 <li>After or at the start time.</li>
-<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).</li>
+<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
     */
     @SerializedName("StartTime")
     @Expose
@@ -57,21 +57,21 @@ public class SearchMediaRequest extends AbstractModel{
     /**
     * End time in the creation time range.
 <li>Before the end time.</li>
-<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).</li>
+<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Media file source. For valid values, please see [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData).
+    * Media file source. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
     */
     @SerializedName("SourceType")
     @Expose
     private String SourceType;
 
     /**
-    * [LVB code](https://cloud.tencent.com/document/product/267/5959) of a stream.
+    * [LVB code](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) of a stream.
     */
     @SerializedName("StreamId")
     @Expose
@@ -120,7 +120,7 @@ public class SearchMediaRequest extends AbstractModel{
     private String [] Categories;
 
     /**
-    * [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+    * [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
     */
     @SerializedName("SubAppId")
     @Expose
@@ -185,10 +185,10 @@ public class SearchMediaRequest extends AbstractModel{
     /**
      * Get Start time in the creation time range.
 <li>After or at the start time.</li>
-<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).</li> 
+<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li> 
      * @return StartTime Start time in the creation time range.
 <li>After or at the start time.</li>
-<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).</li>
+<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
      */
     public String getStartTime() {
         return this.StartTime;
@@ -197,10 +197,10 @@ public class SearchMediaRequest extends AbstractModel{
     /**
      * Set Start time in the creation time range.
 <li>After or at the start time.</li>
-<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).</li>
+<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
      * @param StartTime Start time in the creation time range.
 <li>After or at the start time.</li>
-<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).</li>
+<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
@@ -209,10 +209,10 @@ public class SearchMediaRequest extends AbstractModel{
     /**
      * Get End time in the creation time range.
 <li>Before the end time.</li>
-<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).</li> 
+<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li> 
      * @return EndTime End time in the creation time range.
 <li>Before the end time.</li>
-<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).</li>
+<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
      */
     public String getEndTime() {
         return this.EndTime;
@@ -221,42 +221,42 @@ public class SearchMediaRequest extends AbstractModel{
     /**
      * Set End time in the creation time range.
 <li>Before the end time.</li>
-<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).</li>
+<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
      * @param EndTime End time in the creation time range.
 <li>Before the end time.</li>
-<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://cloud.tencent.com/document/product/266/11732#I).</li>
+<li>In ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Media file source. For valid values, please see [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData). 
-     * @return SourceType Media file source. For valid values, please see [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData).
+     * Get Media file source. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData). 
+     * @return SourceType Media file source. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
      */
     public String getSourceType() {
         return this.SourceType;
     }
 
     /**
-     * Set Media file source. For valid values, please see [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData).
-     * @param SourceType Media file source. For valid values, please see [SourceType](https://cloud.tencent.com/document/product/266/31773#MediaSourceData).
+     * Set Media file source. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
+     * @param SourceType Media file source. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
      */
     public void setSourceType(String SourceType) {
         this.SourceType = SourceType;
     }
 
     /**
-     * Get [LVB code](https://cloud.tencent.com/document/product/267/5959) of a stream. 
-     * @return StreamId [LVB code](https://cloud.tencent.com/document/product/267/5959) of a stream.
+     * Get [LVB code](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) of a stream. 
+     * @return StreamId [LVB code](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) of a stream.
      */
     public String getStreamId() {
         return this.StreamId;
     }
 
     /**
-     * Set [LVB code](https://cloud.tencent.com/document/product/267/5959) of a stream.
-     * @param StreamId [LVB code](https://cloud.tencent.com/document/product/267/5959) of a stream.
+     * Set [LVB code](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) of a stream.
+     * @param StreamId [LVB code](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) of a stream.
      */
     public void setStreamId(String StreamId) {
         this.StreamId = StreamId;
@@ -371,16 +371,16 @@ public class SearchMediaRequest extends AbstractModel{
     }
 
     /**
-     * Get [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty. 
-     * @return SubAppId [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+     * Get [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty. 
+     * @return SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     * @param SubAppId [Subapplication](/document/product/266/14574) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+     * Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+     * @param SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

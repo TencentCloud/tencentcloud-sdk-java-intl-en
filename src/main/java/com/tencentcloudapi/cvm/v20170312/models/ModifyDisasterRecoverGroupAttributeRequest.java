@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyDisasterRecoverGroupAttributeRequest extends AbstractModel{
 
     /**
-    * Spread placement group ID, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810) API.
+    * Spread placement group ID, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/api/213/17810?from_cn_redirect=1) API.
     */
     @SerializedName("DisasterRecoverGroupId")
     @Expose
@@ -37,16 +37,16 @@ public class ModifyDisasterRecoverGroupAttributeRequest extends AbstractModel{
     private String Name;
 
     /**
-     * Get Spread placement group ID, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810) API. 
-     * @return DisasterRecoverGroupId Spread placement group ID, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810) API.
+     * Get Spread placement group ID, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/api/213/17810?from_cn_redirect=1) API. 
+     * @return DisasterRecoverGroupId Spread placement group ID, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/api/213/17810?from_cn_redirect=1) API.
      */
     public String getDisasterRecoverGroupId() {
         return this.DisasterRecoverGroupId;
     }
 
     /**
-     * Set Spread placement group ID, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810) API.
-     * @param DisasterRecoverGroupId Spread placement group ID, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/api/213/17810) API.
+     * Set Spread placement group ID, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/api/213/17810?from_cn_redirect=1) API.
+     * @param DisasterRecoverGroupId Spread placement group ID, which can be obtained by calling the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/document/api/213/17810?from_cn_redirect=1) API.
      */
     public void setDisasterRecoverGroupId(String DisasterRecoverGroupId) {
         this.DisasterRecoverGroupId = DisasterRecoverGroupId;

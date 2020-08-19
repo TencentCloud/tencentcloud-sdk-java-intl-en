@@ -326,6 +326,24 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete a role permission boundary.
+     * @param req DeleteRolePermissionsBoundaryRequest
+     * @return DeleteRolePermissionsBoundaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRolePermissionsBoundaryResponse DeleteRolePermissionsBoundary(DeleteRolePermissionsBoundaryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRolePermissionsBoundaryResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRolePermissionsBoundaryResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteRolePermissionsBoundary"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete a SAML identity provider.
      * @param req DeleteSAMLProviderRequest
      * @return DeleteSAMLProviderResponse
@@ -373,6 +391,24 @@ public class CamClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteUserResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DeleteUser"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a user permission boundary.
+     * @param req DeleteUserPermissionsBoundaryRequest
+     * @return DeleteUserPermissionsBoundaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteUserPermissionsBoundaryResponse DeleteUserPermissionsBoundary(DeleteUserPermissionsBoundaryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteUserPermissionsBoundaryResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteUserPermissionsBoundaryResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DeleteUserPermissionsBoundary"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -830,6 +866,42 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *This API is used to set a role permission boundary.
+     * @param req PutRolePermissionsBoundaryRequest
+     * @return PutRolePermissionsBoundaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public PutRolePermissionsBoundaryResponse PutRolePermissionsBoundary(PutRolePermissionsBoundaryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PutRolePermissionsBoundaryResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<PutRolePermissionsBoundaryResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "PutRolePermissionsBoundary"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to set a user permission boundary.
+     * @param req PutUserPermissionsBoundaryRequest
+     * @return PutUserPermissionsBoundaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public PutUserPermissionsBoundaryResponse PutUserPermissionsBoundary(PutUserPermissionsBoundaryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PutUserPermissionsBoundaryResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<PutUserPermissionsBoundaryResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "PutUserPermissionsBoundary"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete users from a user group.
      * @param req RemoveUserFromGroupRequest
      * @return RemoveUserFromGroupResponse
@@ -939,7 +1011,7 @@ This API will update the default version of an existing policy instead of creati
     }
 
     /**
-     *This API is used to modify a role’s login permissions.
+     *This API is used to modify a role's login permissions.
      * @param req UpdateRoleConsoleLoginRequest
      * @return UpdateRoleConsoleLoginResponse
      * @throws TencentCloudSDKException

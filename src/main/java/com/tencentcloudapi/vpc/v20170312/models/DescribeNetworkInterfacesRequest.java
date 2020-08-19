@@ -34,14 +34,15 @@ public class DescribeNetworkInterfacesRequest extends AbstractModel{
 <li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
 <li>subnet-id - String - (Filter condition) Subnet instance ID, such as `subnet-f49l6u0z`.</li>
 <li>network-interface-id - String - (Filter condition) ENI instance ID, such as `eni-5k56k7k7`.</li>
-<li>attachment.instance-id - String - (Filter condition) CVM instance ID, such as `ins-3nqpdn3i`.</li>
-<li>groups.security-group-id - String - (Filter condition) Instance ID of the security group, such as `sg-f9ekbxeq`.</li>
+<li>attachment.instance-id - String - (Filter condition) ID of the bound CVM instance, such as `ins-3nqpdn3i`.</li>
+<li>groups.security-group-id - String - (Filter condition) ID of the bound security group, such as `sg-f9ekbxeq`.</li>
 <li>network-interface-name - String - (Filter condition) ENI instance name.</li>
 <li>network-interface-description - String - (Filter condition) ENI instance description.</li>
-<li>address-ip - String - (Filter condition) Private IPv4 address.</li>
-<li>tag-key - String - Required: no - (Filter condition) Filters by tag key. For more information, see Example 2.</li>
-<li> `tag:tag-key` - String - Required: no - (Filter condition) Filters by tag key pair. For this parameter, `tag-key` will be replaced with a specific tag key. For more information, see Example 3.</li>
-<li>is-primary - Boolean - Required: no - (Filter condition) Filters based on whether it is a primary ENI. If the value is 'true', filter only the primary ENI. If the value is 'false', filter only the secondary ENI. If the secondary filter parameter is provided, filter the both.</li>
+<li>address-ip - String - (Filter condition) Private IPv4 address. A single IP will be fuzzily matched with the suffix, while multiple IPs will be exactly matched. It can be used with `ip-exact-match` to query and exactly match a single IP.</li>
+<li>ip-exact-match - Boolean - (Filter condition) Exact match by private IPv4 address. The first value will be returned if multiple values are found.</li>
+<li>tag-key - String - Required: no - (Filter condition) Filter by tag key. See Example 2 for the detailed usage.</li>
+<li>tag:tag-key - String - Required: no - (Filter condition) Filter by tag key pair. Use a specific tag key to replace `tag-key`. See Example 3 for the detailed usage.</li>
+<li>is-primary - Boolean - Required: no - (Filter condition) Filter based on whether it is a primary ENI. If the value is `true`, filter only the primary ENI. If the value is `false`, filter only the secondary ENI. If this parameter is not specified, filter the both.</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -82,26 +83,28 @@ public class DescribeNetworkInterfacesRequest extends AbstractModel{
 <li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
 <li>subnet-id - String - (Filter condition) Subnet instance ID, such as `subnet-f49l6u0z`.</li>
 <li>network-interface-id - String - (Filter condition) ENI instance ID, such as `eni-5k56k7k7`.</li>
-<li>attachment.instance-id - String - (Filter condition) CVM instance ID, such as `ins-3nqpdn3i`.</li>
-<li>groups.security-group-id - String - (Filter condition) Instance ID of the security group, such as `sg-f9ekbxeq`.</li>
+<li>attachment.instance-id - String - (Filter condition) ID of the bound CVM instance, such as `ins-3nqpdn3i`.</li>
+<li>groups.security-group-id - String - (Filter condition) ID of the bound security group, such as `sg-f9ekbxeq`.</li>
 <li>network-interface-name - String - (Filter condition) ENI instance name.</li>
 <li>network-interface-description - String - (Filter condition) ENI instance description.</li>
-<li>address-ip - String - (Filter condition) Private IPv4 address.</li>
-<li>tag-key - String - Required: no - (Filter condition) Filters by tag key. For more information, see Example 2.</li>
-<li> `tag:tag-key` - String - Required: no - (Filter condition) Filters by tag key pair. For this parameter, `tag-key` will be replaced with a specific tag key. For more information, see Example 3.</li>
-<li>is-primary - Boolean - Required: no - (Filter condition) Filters based on whether it is a primary ENI. If the value is 'true', filter only the primary ENI. If the value is 'false', filter only the secondary ENI. If the secondary filter parameter is provided, filter the both.</li> 
+<li>address-ip - String - (Filter condition) Private IPv4 address. A single IP will be fuzzily matched with the suffix, while multiple IPs will be exactly matched. It can be used with `ip-exact-match` to query and exactly match a single IP.</li>
+<li>ip-exact-match - Boolean - (Filter condition) Exact match by private IPv4 address. The first value will be returned if multiple values are found.</li>
+<li>tag-key - String - Required: no - (Filter condition) Filter by tag key. See Example 2 for the detailed usage.</li>
+<li>tag:tag-key - String - Required: no - (Filter condition) Filter by tag key pair. Use a specific tag key to replace `tag-key`. See Example 3 for the detailed usage.</li>
+<li>is-primary - Boolean - Required: no - (Filter condition) Filter based on whether it is a primary ENI. If the value is `true`, filter only the primary ENI. If the value is `false`, filter only the secondary ENI. If this parameter is not specified, filter the both.</li> 
      * @return Filters Filter condition. `NetworkInterfaceIds` and `Filters` cannot be specified at the same time.
 <li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
 <li>subnet-id - String - (Filter condition) Subnet instance ID, such as `subnet-f49l6u0z`.</li>
 <li>network-interface-id - String - (Filter condition) ENI instance ID, such as `eni-5k56k7k7`.</li>
-<li>attachment.instance-id - String - (Filter condition) CVM instance ID, such as `ins-3nqpdn3i`.</li>
-<li>groups.security-group-id - String - (Filter condition) Instance ID of the security group, such as `sg-f9ekbxeq`.</li>
+<li>attachment.instance-id - String - (Filter condition) ID of the bound CVM instance, such as `ins-3nqpdn3i`.</li>
+<li>groups.security-group-id - String - (Filter condition) ID of the bound security group, such as `sg-f9ekbxeq`.</li>
 <li>network-interface-name - String - (Filter condition) ENI instance name.</li>
 <li>network-interface-description - String - (Filter condition) ENI instance description.</li>
-<li>address-ip - String - (Filter condition) Private IPv4 address.</li>
-<li>tag-key - String - Required: no - (Filter condition) Filters by tag key. For more information, see Example 2.</li>
-<li> `tag:tag-key` - String - Required: no - (Filter condition) Filters by tag key pair. For this parameter, `tag-key` will be replaced with a specific tag key. For more information, see Example 3.</li>
-<li>is-primary - Boolean - Required: no - (Filter condition) Filters based on whether it is a primary ENI. If the value is 'true', filter only the primary ENI. If the value is 'false', filter only the secondary ENI. If the secondary filter parameter is provided, filter the both.</li>
+<li>address-ip - String - (Filter condition) Private IPv4 address. A single IP will be fuzzily matched with the suffix, while multiple IPs will be exactly matched. It can be used with `ip-exact-match` to query and exactly match a single IP.</li>
+<li>ip-exact-match - Boolean - (Filter condition) Exact match by private IPv4 address. The first value will be returned if multiple values are found.</li>
+<li>tag-key - String - Required: no - (Filter condition) Filter by tag key. See Example 2 for the detailed usage.</li>
+<li>tag:tag-key - String - Required: no - (Filter condition) Filter by tag key pair. Use a specific tag key to replace `tag-key`. See Example 3 for the detailed usage.</li>
+<li>is-primary - Boolean - Required: no - (Filter condition) Filter based on whether it is a primary ENI. If the value is `true`, filter only the primary ENI. If the value is `false`, filter only the secondary ENI. If this parameter is not specified, filter the both.</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -112,26 +115,28 @@ public class DescribeNetworkInterfacesRequest extends AbstractModel{
 <li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
 <li>subnet-id - String - (Filter condition) Subnet instance ID, such as `subnet-f49l6u0z`.</li>
 <li>network-interface-id - String - (Filter condition) ENI instance ID, such as `eni-5k56k7k7`.</li>
-<li>attachment.instance-id - String - (Filter condition) CVM instance ID, such as `ins-3nqpdn3i`.</li>
-<li>groups.security-group-id - String - (Filter condition) Instance ID of the security group, such as `sg-f9ekbxeq`.</li>
+<li>attachment.instance-id - String - (Filter condition) ID of the bound CVM instance, such as `ins-3nqpdn3i`.</li>
+<li>groups.security-group-id - String - (Filter condition) ID of the bound security group, such as `sg-f9ekbxeq`.</li>
 <li>network-interface-name - String - (Filter condition) ENI instance name.</li>
 <li>network-interface-description - String - (Filter condition) ENI instance description.</li>
-<li>address-ip - String - (Filter condition) Private IPv4 address.</li>
-<li>tag-key - String - Required: no - (Filter condition) Filters by tag key. For more information, see Example 2.</li>
-<li> `tag:tag-key` - String - Required: no - (Filter condition) Filters by tag key pair. For this parameter, `tag-key` will be replaced with a specific tag key. For more information, see Example 3.</li>
-<li>is-primary - Boolean - Required: no - (Filter condition) Filters based on whether it is a primary ENI. If the value is 'true', filter only the primary ENI. If the value is 'false', filter only the secondary ENI. If the secondary filter parameter is provided, filter the both.</li>
+<li>address-ip - String - (Filter condition) Private IPv4 address. A single IP will be fuzzily matched with the suffix, while multiple IPs will be exactly matched. It can be used with `ip-exact-match` to query and exactly match a single IP.</li>
+<li>ip-exact-match - Boolean - (Filter condition) Exact match by private IPv4 address. The first value will be returned if multiple values are found.</li>
+<li>tag-key - String - Required: no - (Filter condition) Filter by tag key. See Example 2 for the detailed usage.</li>
+<li>tag:tag-key - String - Required: no - (Filter condition) Filter by tag key pair. Use a specific tag key to replace `tag-key`. See Example 3 for the detailed usage.</li>
+<li>is-primary - Boolean - Required: no - (Filter condition) Filter based on whether it is a primary ENI. If the value is `true`, filter only the primary ENI. If the value is `false`, filter only the secondary ENI. If this parameter is not specified, filter the both.</li>
      * @param Filters Filter condition. `NetworkInterfaceIds` and `Filters` cannot be specified at the same time.
 <li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
 <li>subnet-id - String - (Filter condition) Subnet instance ID, such as `subnet-f49l6u0z`.</li>
 <li>network-interface-id - String - (Filter condition) ENI instance ID, such as `eni-5k56k7k7`.</li>
-<li>attachment.instance-id - String - (Filter condition) CVM instance ID, such as `ins-3nqpdn3i`.</li>
-<li>groups.security-group-id - String - (Filter condition) Instance ID of the security group, such as `sg-f9ekbxeq`.</li>
+<li>attachment.instance-id - String - (Filter condition) ID of the bound CVM instance, such as `ins-3nqpdn3i`.</li>
+<li>groups.security-group-id - String - (Filter condition) ID of the bound security group, such as `sg-f9ekbxeq`.</li>
 <li>network-interface-name - String - (Filter condition) ENI instance name.</li>
 <li>network-interface-description - String - (Filter condition) ENI instance description.</li>
-<li>address-ip - String - (Filter condition) Private IPv4 address.</li>
-<li>tag-key - String - Required: no - (Filter condition) Filters by tag key. For more information, see Example 2.</li>
-<li> `tag:tag-key` - String - Required: no - (Filter condition) Filters by tag key pair. For this parameter, `tag-key` will be replaced with a specific tag key. For more information, see Example 3.</li>
-<li>is-primary - Boolean - Required: no - (Filter condition) Filters based on whether it is a primary ENI. If the value is 'true', filter only the primary ENI. If the value is 'false', filter only the secondary ENI. If the secondary filter parameter is provided, filter the both.</li>
+<li>address-ip - String - (Filter condition) Private IPv4 address. A single IP will be fuzzily matched with the suffix, while multiple IPs will be exactly matched. It can be used with `ip-exact-match` to query and exactly match a single IP.</li>
+<li>ip-exact-match - Boolean - (Filter condition) Exact match by private IPv4 address. The first value will be returned if multiple values are found.</li>
+<li>tag-key - String - Required: no - (Filter condition) Filter by tag key. See Example 2 for the detailed usage.</li>
+<li>tag:tag-key - String - Required: no - (Filter condition) Filter by tag key pair. Use a specific tag key to replace `tag-key`. See Example 3 for the detailed usage.</li>
+<li>is-primary - Boolean - Required: no - (Filter condition) Filter based on whether it is a primary ENI. If the value is `true`, filter only the primary ENI. If the value is `false`, filter only the secondary ENI. If this parameter is not specified, filter the both.</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

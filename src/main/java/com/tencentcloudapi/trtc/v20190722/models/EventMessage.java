@@ -41,7 +41,7 @@ public class EventMessage extends AbstractModel{
     private Long Time;
 
     /**
-    * Event ID. Events divide into SDK events and WebRTC events. For more information, please see Appendix - Event ID Mapping Table at https://cloud.tencent.com/document/product/647/44916
+    * Event ID. Events divide into SDK events and WebRTC events. For more information, please see Appendix - Event ID Mapping Table at https://intl.cloud.tencent.com/document/product/647/44916?from_cn_redirect=1
     */
     @SerializedName("EventId")
     @Expose
@@ -110,16 +110,16 @@ public class EventMessage extends AbstractModel{
     }
 
     /**
-     * Get Event ID. Events divide into SDK events and WebRTC events. For more information, please see Appendix - Event ID Mapping Table at https://cloud.tencent.com/document/product/647/44916 
-     * @return EventId Event ID. Events divide into SDK events and WebRTC events. For more information, please see Appendix - Event ID Mapping Table at https://cloud.tencent.com/document/product/647/44916
+     * Get Event ID. Events divide into SDK events and WebRTC events. For more information, please see Appendix - Event ID Mapping Table at https://intl.cloud.tencent.com/document/product/647/44916?from_cn_redirect=1 
+     * @return EventId Event ID. Events divide into SDK events and WebRTC events. For more information, please see Appendix - Event ID Mapping Table at https://intl.cloud.tencent.com/document/product/647/44916?from_cn_redirect=1
      */
     public Long getEventId() {
         return this.EventId;
     }
 
     /**
-     * Set Event ID. Events divide into SDK events and WebRTC events. For more information, please see Appendix - Event ID Mapping Table at https://cloud.tencent.com/document/product/647/44916
-     * @param EventId Event ID. Events divide into SDK events and WebRTC events. For more information, please see Appendix - Event ID Mapping Table at https://cloud.tencent.com/document/product/647/44916
+     * Set Event ID. Events divide into SDK events and WebRTC events. For more information, please see Appendix - Event ID Mapping Table at https://intl.cloud.tencent.com/document/product/647/44916?from_cn_redirect=1
+     * @param EventId Event ID. Events divide into SDK events and WebRTC events. For more information, please see Appendix - Event ID Mapping Table at https://intl.cloud.tencent.com/document/product/647/44916?from_cn_redirect=1
      */
     public void setEventId(Long EventId) {
         this.EventId = EventId;
