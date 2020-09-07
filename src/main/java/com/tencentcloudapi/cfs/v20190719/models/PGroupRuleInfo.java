@@ -51,7 +51,7 @@ public class PGroupRuleInfo extends AbstractModel{
     private String UserPermission;
 
     /**
-    * Rule priority. Value range: 1–100. 1 represents the highest priority, while 100 the lowest
+    * Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
     */
     @SerializedName("Priority")
     @Expose
@@ -122,16 +122,16 @@ public class PGroupRuleInfo extends AbstractModel{
     }
 
     /**
-     * Get Rule priority. Value range: 1–100. 1 represents the highest priority, while 100 the lowest 
-     * @return Priority Rule priority. Value range: 1–100. 1 represents the highest priority, while 100 the lowest
+     * Get Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest 
+     * @return Priority Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
      */
     public Long getPriority() {
         return this.Priority;
     }
 
     /**
-     * Set Rule priority. Value range: 1–100. 1 represents the highest priority, while 100 the lowest
-     * @param Priority Rule priority. Value range: 1–100. 1 represents the highest priority, while 100 the lowest
+     * Set Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
+     * @param Priority Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;

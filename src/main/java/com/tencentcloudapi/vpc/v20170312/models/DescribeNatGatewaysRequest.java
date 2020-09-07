@@ -33,7 +33,8 @@ public class DescribeNatGatewaysRequest extends AbstractModel{
     * Filter condition. `NatGatewayIds` and `Filters` cannot be specified at the same time.
 <li>nat-gateway-id - String - (Filter condition) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
 <li>vpc-id - String - (Filter condition) The unique ID of the VPC, such as `vpc-123xx454`.</li>
-<li>nat-gateway-name - String - (Filter condition) The ID of the protocol port template instance, such as `test_nat`.</li>
+<li>nat-gateway-name - String - (Filter condition) The name of the protocol port template instance, such as `test_nat`.</li>
+<li>tag-key - String - (Filter condition) The tag key, such as `test-key`.</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -73,11 +74,13 @@ public class DescribeNatGatewaysRequest extends AbstractModel{
      * Get Filter condition. `NatGatewayIds` and `Filters` cannot be specified at the same time.
 <li>nat-gateway-id - String - (Filter condition) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
 <li>vpc-id - String - (Filter condition) The unique ID of the VPC, such as `vpc-123xx454`.</li>
-<li>nat-gateway-name - String - (Filter condition) The ID of the protocol port template instance, such as `test_nat`.</li> 
+<li>nat-gateway-name - String - (Filter condition) The name of the protocol port template instance, such as `test_nat`.</li>
+<li>tag-key - String - (Filter condition) The tag key, such as `test-key`.</li> 
      * @return Filters Filter condition. `NatGatewayIds` and `Filters` cannot be specified at the same time.
 <li>nat-gateway-id - String - (Filter condition) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
 <li>vpc-id - String - (Filter condition) The unique ID of the VPC, such as `vpc-123xx454`.</li>
-<li>nat-gateway-name - String - (Filter condition) The ID of the protocol port template instance, such as `test_nat`.</li>
+<li>nat-gateway-name - String - (Filter condition) The name of the protocol port template instance, such as `test_nat`.</li>
+<li>tag-key - String - (Filter condition) The tag key, such as `test-key`.</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -87,11 +90,13 @@ public class DescribeNatGatewaysRequest extends AbstractModel{
      * Set Filter condition. `NatGatewayIds` and `Filters` cannot be specified at the same time.
 <li>nat-gateway-id - String - (Filter condition) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
 <li>vpc-id - String - (Filter condition) The unique ID of the VPC, such as `vpc-123xx454`.</li>
-<li>nat-gateway-name - String - (Filter condition) The ID of the protocol port template instance, such as `test_nat`.</li>
+<li>nat-gateway-name - String - (Filter condition) The name of the protocol port template instance, such as `test_nat`.</li>
+<li>tag-key - String - (Filter condition) The tag key, such as `test-key`.</li>
      * @param Filters Filter condition. `NatGatewayIds` and `Filters` cannot be specified at the same time.
 <li>nat-gateway-id - String - (Filter condition) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
 <li>vpc-id - String - (Filter condition) The unique ID of the VPC, such as `vpc-123xx454`.</li>
-<li>nat-gateway-name - String - (Filter condition) The ID of the protocol port template instance, such as `test_nat`.</li>
+<li>nat-gateway-name - String - (Filter condition) The name of the protocol port template instance, such as `test_nat`.</li>
+<li>tag-key - String - (Filter condition) The tag key, such as `test-key`.</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

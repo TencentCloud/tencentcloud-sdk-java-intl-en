@@ -51,6 +51,13 @@ public class LayoutParams extends AbstractModel{
     private SmallVideoLayoutParams SmallVideoLayoutParams;
 
     /**
+    * You can set the layout parameter as 1 or 0 in the screen sharing template. 1: big image on the right and small images on the left, 0: big image on the left and small images on the right. The default value is 0. 
+    */
+    @SerializedName("MainVideoRightAlign")
+    @Expose
+    private Long MainVideoRightAlign;
+
+    /**
      * Get On-cloud stream mix layout template ID. 0: floating template (default value); 1: grid template; 2: screen sharing template; 3: picture-in-picture template. 
      * @return Template On-cloud stream mix layout template ID. 0: floating template (default value); 1: grid template; 2: screen sharing template; 3: picture-in-picture template.
      */
@@ -115,6 +122,22 @@ public class LayoutParams extends AbstractModel{
     }
 
     /**
+     * Get You can set the layout parameter as 1 or 0 in the screen sharing template. 1: big image on the right and small images on the left, 0: big image on the left and small images on the right. The default value is 0.  
+     * @return MainVideoRightAlign You can set the layout parameter as 1 or 0 in the screen sharing template. 1: big image on the right and small images on the left, 0: big image on the left and small images on the right. The default value is 0. 
+     */
+    public Long getMainVideoRightAlign() {
+        return this.MainVideoRightAlign;
+    }
+
+    /**
+     * Set You can set the layout parameter as 1 or 0 in the screen sharing template. 1: big image on the right and small images on the left, 0: big image on the left and small images on the right. The default value is 0. 
+     * @param MainVideoRightAlign You can set the layout parameter as 1 or 0 in the screen sharing template. 1: big image on the right and small images on the left, 0: big image on the left and small images on the right. The default value is 0. 
+     */
+    public void setMainVideoRightAlign(Long MainVideoRightAlign) {
+        this.MainVideoRightAlign = MainVideoRightAlign;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class LayoutParams extends AbstractModel{
         this.setParamSimple(map, prefix + "MainVideoUserId", this.MainVideoUserId);
         this.setParamSimple(map, prefix + "MainVideoStreamType", this.MainVideoStreamType);
         this.setParamObj(map, prefix + "SmallVideoLayoutParams.", this.SmallVideoLayoutParams);
+        this.setParamSimple(map, prefix + "MainVideoRightAlign", this.MainVideoRightAlign);
 
     }
 }

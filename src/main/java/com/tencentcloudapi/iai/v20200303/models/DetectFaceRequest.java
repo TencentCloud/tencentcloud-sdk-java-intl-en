@@ -41,6 +41,7 @@ Faces below the `MinFaceSize` value will not be detected.
 
     /**
     * Base64-encoded image data, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
     */
     @SerializedName("Image")
@@ -49,6 +50,7 @@ Faces below the `MinFaceSize` value will not be detected.
 
     /**
     * Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
 You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
@@ -140,8 +142,10 @@ Faces below the `MinFaceSize` value will not be detected.
 
     /**
      * Get Base64-encoded image data, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not. 
      * @return Image Base64-encoded image data, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
      */
     public String getImage() {
@@ -150,8 +154,10 @@ Faces below the `MinFaceSize` value will not be detected.
 
     /**
      * Set Base64-encoded image data, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
      * @param Image Base64-encoded image data, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
      */
     public void setImage(String Image) {
@@ -160,11 +166,13 @@ Faces below the `MinFaceSize` value will not be detected.
 
     /**
      * Get Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
 You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not. 
      * @return Url Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
 You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
@@ -176,11 +184,13 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
 
     /**
      * Set Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
 You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
      * @param Url Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
 You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.

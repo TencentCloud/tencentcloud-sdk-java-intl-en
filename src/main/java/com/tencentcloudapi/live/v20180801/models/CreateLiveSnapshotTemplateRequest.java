@@ -40,6 +40,7 @@ Only letters, digits, underscores, and hyphens can be contained.
 
     /**
     * COS bucket name.
+Note: the value of `CosBucket` cannot contain `-[appid]`.
     */
     @SerializedName("CosBucket")
     @Expose
@@ -63,7 +64,7 @@ Only letters, digits, underscores, and hyphens can be contained.
 
     /**
     * Screencapturing interval in seconds. Default value: 10s.
-Value range: 5-600s.
+Value range: 5-300s.
     */
     @SerializedName("SnapshotInterval")
     @Expose
@@ -91,7 +92,10 @@ Value range: 5-600s.
     private Long PornFlag;
 
     /**
-    * COS bucket folder prefix.
+    * COS Bucket folder prefix.
+If no value is entered, the default value
+`/{Year}-{Month}-{Day}`
+will be used.
     */
     @SerializedName("CosPrefix")
     @Expose
@@ -99,6 +103,9 @@ Value range: 5-600s.
 
     /**
     * COS filename.
+If no value is entered, the default value 
+`{StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}`
+will be used.
     */
     @SerializedName("CosFileName")
     @Expose
@@ -145,8 +152,10 @@ Only letters, digits, underscores, and hyphens can be contained.
     }
 
     /**
-     * Get COS bucket name. 
+     * Get COS bucket name.
+Note: the value of `CosBucket` cannot contain `-[appid]`. 
      * @return CosBucket COS bucket name.
+Note: the value of `CosBucket` cannot contain `-[appid]`.
      */
     public String getCosBucket() {
         return this.CosBucket;
@@ -154,7 +163,9 @@ Only letters, digits, underscores, and hyphens can be contained.
 
     /**
      * Set COS bucket name.
+Note: the value of `CosBucket` cannot contain `-[appid]`.
      * @param CosBucket COS bucket name.
+Note: the value of `CosBucket` cannot contain `-[appid]`.
      */
     public void setCosBucket(String CosBucket) {
         this.CosBucket = CosBucket;
@@ -202,9 +213,9 @@ Only letters, digits, underscores, and hyphens can be contained.
 
     /**
      * Get Screencapturing interval in seconds. Default value: 10s.
-Value range: 5-600s. 
+Value range: 5-300s. 
      * @return SnapshotInterval Screencapturing interval in seconds. Default value: 10s.
-Value range: 5-600s.
+Value range: 5-300s.
      */
     public Long getSnapshotInterval() {
         return this.SnapshotInterval;
@@ -212,9 +223,9 @@ Value range: 5-600s.
 
     /**
      * Set Screencapturing interval in seconds. Default value: 10s.
-Value range: 5-600s.
+Value range: 5-300s.
      * @param SnapshotInterval Screencapturing interval in seconds. Default value: 10s.
-Value range: 5-600s.
+Value range: 5-300s.
      */
     public void setSnapshotInterval(Long SnapshotInterval) {
         this.SnapshotInterval = SnapshotInterval;
@@ -269,24 +280,42 @@ Value range: 5-600s.
     }
 
     /**
-     * Get COS bucket folder prefix. 
-     * @return CosPrefix COS bucket folder prefix.
+     * Get COS Bucket folder prefix.
+If no value is entered, the default value
+`/{Year}-{Month}-{Day}`
+will be used. 
+     * @return CosPrefix COS Bucket folder prefix.
+If no value is entered, the default value
+`/{Year}-{Month}-{Day}`
+will be used.
      */
     public String getCosPrefix() {
         return this.CosPrefix;
     }
 
     /**
-     * Set COS bucket folder prefix.
-     * @param CosPrefix COS bucket folder prefix.
+     * Set COS Bucket folder prefix.
+If no value is entered, the default value
+`/{Year}-{Month}-{Day}`
+will be used.
+     * @param CosPrefix COS Bucket folder prefix.
+If no value is entered, the default value
+`/{Year}-{Month}-{Day}`
+will be used.
      */
     public void setCosPrefix(String CosPrefix) {
         this.CosPrefix = CosPrefix;
     }
 
     /**
-     * Get COS filename. 
+     * Get COS filename.
+If no value is entered, the default value 
+`{StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}`
+will be used. 
      * @return CosFileName COS filename.
+If no value is entered, the default value 
+`{StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}`
+will be used.
      */
     public String getCosFileName() {
         return this.CosFileName;
@@ -294,7 +323,13 @@ Value range: 5-600s.
 
     /**
      * Set COS filename.
+If no value is entered, the default value 
+`{StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}`
+will be used.
      * @param CosFileName COS filename.
+If no value is entered, the default value 
+`{StreamID}-screenshot-{Hour}-{Minute}-{Second}-{Width}x{Height}{Ext}`
+will be used.
      */
     public void setCosFileName(String CosFileName) {
         this.CosFileName = CosFileName;

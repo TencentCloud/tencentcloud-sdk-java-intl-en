@@ -51,7 +51,7 @@ public class DBInstance extends AbstractModel{
     private String VpcId;
 
     /**
-    * Subnet ID
+    * SubnetId
     */
     @SerializedName("SubnetId")
     @Expose
@@ -72,7 +72,7 @@ public class DBInstance extends AbstractModel{
     private String DBInstanceName;
 
     /**
-    * Instance status. Valid values: applying, init (to be initialized), initing (initializing), running, limited run, isolated, recycling, recycled, job running, offline, migrating, expanding, readonly, restarting
+    * Instance status
     */
     @SerializedName("DBInstanceStatus")
     @Expose
@@ -107,14 +107,14 @@ public class DBInstance extends AbstractModel{
     private String DBInstanceClass;
 
     /**
-    * Instance type. 1: primary (primary instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
+    * Instance type. 1: primary (master instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
     */
     @SerializedName("DBInstanceType")
     @Expose
     private String DBInstanceType;
 
     /**
-    * Instance edition. Currently, only `standard` edition (dual-server high-availability one-primary-one-secondary edition) is supported
+    * Instance edition. Currently, only `standard` edition (dual-server high-availability one-master-one-slave edition) is supported
     */
     @SerializedName("DBInstanceVersion")
     @Expose
@@ -205,11 +205,19 @@ public class DBInstance extends AbstractModel{
     private Long Uid;
 
     /**
-    * Whether the instance supports IPv6 address access. Valid values: 1 (yes), 0 (no)
+    * 
     */
     @SerializedName("SupportIpv6")
     @Expose
     private Long SupportIpv6;
+
+    /**
+    * The information of tags associated with instances.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TagList")
+    @Expose
+    private Tag [] TagList;
 
     /**
      * Get Instance region such as ap-guangzhou, which corresponds to the `Region` field of `RegionSet` 
@@ -276,16 +284,16 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
-     * Get Subnet ID 
-     * @return SubnetId Subnet ID
+     * Get SubnetId 
+     * @return SubnetId SubnetId
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Subnet ID
-     * @param SubnetId Subnet ID
+     * Set SubnetId
+     * @param SubnetId SubnetId
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -324,16 +332,16 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
-     * Get Instance status. Valid values: applying, init (to be initialized), initing (initializing), running, limited run, isolated, recycling, recycled, job running, offline, migrating, expanding, readonly, restarting 
-     * @return DBInstanceStatus Instance status. Valid values: applying, init (to be initialized), initing (initializing), running, limited run, isolated, recycling, recycled, job running, offline, migrating, expanding, readonly, restarting
+     * Get Instance status 
+     * @return DBInstanceStatus Instance status
      */
     public String getDBInstanceStatus() {
         return this.DBInstanceStatus;
     }
 
     /**
-     * Set Instance status. Valid values: applying, init (to be initialized), initing (initializing), running, limited run, isolated, recycling, recycled, job running, offline, migrating, expanding, readonly, restarting
-     * @param DBInstanceStatus Instance status. Valid values: applying, init (to be initialized), initing (initializing), running, limited run, isolated, recycling, recycled, job running, offline, migrating, expanding, readonly, restarting
+     * Set Instance status
+     * @param DBInstanceStatus Instance status
      */
     public void setDBInstanceStatus(String DBInstanceStatus) {
         this.DBInstanceStatus = DBInstanceStatus;
@@ -404,32 +412,32 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
-     * Get Instance type. 1: primary (primary instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance) 
-     * @return DBInstanceType Instance type. 1: primary (primary instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
+     * Get Instance type. 1: primary (master instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance) 
+     * @return DBInstanceType Instance type. 1: primary (master instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
      */
     public String getDBInstanceType() {
         return this.DBInstanceType;
     }
 
     /**
-     * Set Instance type. 1: primary (primary instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
-     * @param DBInstanceType Instance type. 1: primary (primary instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
+     * Set Instance type. 1: primary (master instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
+     * @param DBInstanceType Instance type. 1: primary (master instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
      */
     public void setDBInstanceType(String DBInstanceType) {
         this.DBInstanceType = DBInstanceType;
     }
 
     /**
-     * Get Instance edition. Currently, only `standard` edition (dual-server high-availability one-primary-one-secondary edition) is supported 
-     * @return DBInstanceVersion Instance edition. Currently, only `standard` edition (dual-server high-availability one-primary-one-secondary edition) is supported
+     * Get Instance edition. Currently, only `standard` edition (dual-server high-availability one-master-one-slave edition) is supported 
+     * @return DBInstanceVersion Instance edition. Currently, only `standard` edition (dual-server high-availability one-master-one-slave edition) is supported
      */
     public String getDBInstanceVersion() {
         return this.DBInstanceVersion;
     }
 
     /**
-     * Set Instance edition. Currently, only `standard` edition (dual-server high-availability one-primary-one-secondary edition) is supported
-     * @param DBInstanceVersion Instance edition. Currently, only `standard` edition (dual-server high-availability one-primary-one-secondary edition) is supported
+     * Set Instance edition. Currently, only `standard` edition (dual-server high-availability one-master-one-slave edition) is supported
+     * @param DBInstanceVersion Instance edition. Currently, only `standard` edition (dual-server high-availability one-master-one-slave edition) is supported
      */
     public void setDBInstanceVersion(String DBInstanceVersion) {
         this.DBInstanceVersion = DBInstanceVersion;
@@ -628,19 +636,39 @@ public class DBInstance extends AbstractModel{
     }
 
     /**
-     * Get Whether the instance supports IPv6 address access. Valid values: 1 (yes), 0 (no) 
-     * @return SupportIpv6 Whether the instance supports IPv6 address access. Valid values: 1 (yes), 0 (no)
+     * Get  
+     * @return SupportIpv6 
      */
     public Long getSupportIpv6() {
         return this.SupportIpv6;
     }
 
     /**
-     * Set Whether the instance supports IPv6 address access. Valid values: 1 (yes), 0 (no)
-     * @param SupportIpv6 Whether the instance supports IPv6 address access. Valid values: 1 (yes), 0 (no)
+     * Set 
+     * @param SupportIpv6 
      */
     public void setSupportIpv6(Long SupportIpv6) {
         this.SupportIpv6 = SupportIpv6;
+    }
+
+    /**
+     * Get The information of tags associated with instances.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return TagList The information of tags associated with instances.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Tag [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set The information of tags associated with instances.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param TagList The information of tags associated with instances.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTagList(Tag [] TagList) {
+        this.TagList = TagList;
     }
 
     /**
@@ -674,6 +702,7 @@ public class DBInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "Uid", this.Uid);
         this.setParamSimple(map, prefix + "SupportIpv6", this.SupportIpv6);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
 
     }
 }

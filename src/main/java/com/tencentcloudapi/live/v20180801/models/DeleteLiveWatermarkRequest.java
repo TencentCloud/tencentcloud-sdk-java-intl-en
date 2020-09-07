@@ -24,7 +24,7 @@ public class DeleteLiveWatermarkRequest extends AbstractModel{
 
     /**
     * Watermark ID.
-Watermark ID obtained in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Watermark ID obtained in the returned value of the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API call.
 Watermark ID returned by the `DescribeLiveWatermarks` API.
     */
     @SerializedName("WatermarkId")
@@ -33,10 +33,10 @@ Watermark ID returned by the `DescribeLiveWatermarks` API.
 
     /**
      * Get Watermark ID.
-Watermark ID obtained in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Watermark ID obtained in the returned value of the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API call.
 Watermark ID returned by the `DescribeLiveWatermarks` API. 
      * @return WatermarkId Watermark ID.
-Watermark ID obtained in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Watermark ID obtained in the returned value of the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API call.
 Watermark ID returned by the `DescribeLiveWatermarks` API.
      */
     public Long getWatermarkId() {
@@ -45,10 +45,10 @@ Watermark ID returned by the `DescribeLiveWatermarks` API.
 
     /**
      * Set Watermark ID.
-Watermark ID obtained in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Watermark ID obtained in the returned value of the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API call.
 Watermark ID returned by the `DescribeLiveWatermarks` API.
      * @param WatermarkId Watermark ID.
-Watermark ID obtained in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Watermark ID obtained in the returned value of the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API call.
 Watermark ID returned by the `DescribeLiveWatermarks` API.
      */
     public void setWatermarkId(Long WatermarkId) {

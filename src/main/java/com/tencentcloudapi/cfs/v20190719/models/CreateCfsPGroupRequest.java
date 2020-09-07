@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class CreateCfsPGroupRequest extends AbstractModel{
 
     /**
-    * Permission group name, which can contain 1–64 Chinese characters, letters, numbers, underscores, or dashes
+    * Permission group name, which can contain 1-64 Chinese characters, letters, numbers, underscores, or dashes
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Permission group description, which can contain 1–255 characters
+    * Permission group description, which can contain 1-255 characters
     */
     @SerializedName("DescInfo")
     @Expose
     private String DescInfo;
 
     /**
-     * Get Permission group name, which can contain 1–64 Chinese characters, letters, numbers, underscores, or dashes 
-     * @return Name Permission group name, which can contain 1–64 Chinese characters, letters, numbers, underscores, or dashes
+     * Get Permission group name, which can contain 1-64 Chinese characters, letters, numbers, underscores, or dashes 
+     * @return Name Permission group name, which can contain 1-64 Chinese characters, letters, numbers, underscores, or dashes
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Permission group name, which can contain 1–64 Chinese characters, letters, numbers, underscores, or dashes
-     * @param Name Permission group name, which can contain 1–64 Chinese characters, letters, numbers, underscores, or dashes
+     * Set Permission group name, which can contain 1-64 Chinese characters, letters, numbers, underscores, or dashes
+     * @param Name Permission group name, which can contain 1-64 Chinese characters, letters, numbers, underscores, or dashes
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Permission group description, which can contain 1–255 characters 
-     * @return DescInfo Permission group description, which can contain 1–255 characters
+     * Get Permission group description, which can contain 1-255 characters 
+     * @return DescInfo Permission group description, which can contain 1-255 characters
      */
     public String getDescInfo() {
         return this.DescInfo;
     }
 
     /**
-     * Set Permission group description, which can contain 1–255 characters
-     * @param DescInfo Permission group description, which can contain 1–255 characters
+     * Set Permission group description, which can contain 1-255 characters
+     * @param DescInfo Permission group description, which can contain 1-255 characters
      */
     public void setDescInfo(String DescInfo) {
         this.DescInfo = DescInfo;

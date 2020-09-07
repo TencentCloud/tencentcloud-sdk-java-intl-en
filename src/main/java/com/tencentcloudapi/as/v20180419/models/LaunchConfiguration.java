@@ -195,14 +195,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private HostNameSettings HostNameSettings;
 
     /**
-    * 
+    * Settings of CVM instance names.
     */
     @SerializedName("InstanceNameSettings")
     @Expose
     private InstanceNameSettings InstanceNameSettings;
 
     /**
-    * 
+    * Sets prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
     */
     @SerializedName("InstanceChargePrepaid")
     @Expose
@@ -609,32 +609,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return InstanceNameSettings 
+     * Get Settings of CVM instance names. 
+     * @return InstanceNameSettings Settings of CVM instance names.
      */
     public InstanceNameSettings getInstanceNameSettings() {
         return this.InstanceNameSettings;
     }
 
     /**
-     * Set 
-     * @param InstanceNameSettings 
+     * Set Settings of CVM instance names.
+     * @param InstanceNameSettings Settings of CVM instance names.
      */
     public void setInstanceNameSettings(InstanceNameSettings InstanceNameSettings) {
         this.InstanceNameSettings = InstanceNameSettings;
     }
 
     /**
-     * Get  
-     * @return InstanceChargePrepaid 
+     * Get Sets prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances. 
+     * @return InstanceChargePrepaid Sets prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
      */
     public InstanceChargePrepaid getInstanceChargePrepaid() {
         return this.InstanceChargePrepaid;
     }
 
     /**
-     * Set 
-     * @param InstanceChargePrepaid 
+     * Set Sets prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
+     * @param InstanceChargePrepaid Sets prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
      */
     public void setInstanceChargePrepaid(InstanceChargePrepaid InstanceChargePrepaid) {
         this.InstanceChargePrepaid = InstanceChargePrepaid;

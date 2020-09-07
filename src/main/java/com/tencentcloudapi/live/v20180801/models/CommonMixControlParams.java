@@ -30,7 +30,8 @@ public class CommonMixControlParams extends AbstractModel{
     private Long UseMixCropCenter;
 
     /**
-    * 
+    * Value range: [0,1].
+If this parameter is set to 1, when both `InputStreamList` and `OutputParams.OutputStreamType` are set to 1, you can copy a stream instead of canceling it.
     */
     @SerializedName("AllowCopy")
     @Expose
@@ -53,16 +54,20 @@ public class CommonMixControlParams extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return AllowCopy 
+     * Get Value range: [0,1].
+If this parameter is set to 1, when both `InputStreamList` and `OutputParams.OutputStreamType` are set to 1, you can copy a stream instead of canceling it. 
+     * @return AllowCopy Value range: [0,1].
+If this parameter is set to 1, when both `InputStreamList` and `OutputParams.OutputStreamType` are set to 1, you can copy a stream instead of canceling it.
      */
     public Long getAllowCopy() {
         return this.AllowCopy;
     }
 
     /**
-     * Set 
-     * @param AllowCopy 
+     * Set Value range: [0,1].
+If this parameter is set to 1, when both `InputStreamList` and `OutputParams.OutputStreamType` are set to 1, you can copy a stream instead of canceling it.
+     * @param AllowCopy Value range: [0,1].
+If this parameter is set to 1, when both `InputStreamList` and `OutputParams.OutputStreamType` are set to 1, you can copy a stream instead of canceling it.
      */
     public void setAllowCopy(Long AllowCopy) {
         this.AllowCopy = AllowCopy;

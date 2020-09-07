@@ -86,6 +86,34 @@ public class CcnRoute extends AbstractModel{
     private String InstanceUin;
 
     /**
+    * Additional status of the route
+    */
+    @SerializedName("ExtraState")
+    @Expose
+    private String ExtraState;
+
+    /**
+    * Whether it is a dynamic route
+    */
+    @SerializedName("IsBgp")
+    @Expose
+    private Boolean IsBgp;
+
+    /**
+    * Route priority
+    */
+    @SerializedName("RoutePriority")
+    @Expose
+    private Long RoutePriority;
+
+    /**
+    * Next hop port name (associated instance’s port name)
+    */
+    @SerializedName("InstanceExtraName")
+    @Expose
+    private String InstanceExtraName;
+
+    /**
      * Get The ID of the routing policy 
      * @return RouteId The ID of the routing policy
      */
@@ -230,6 +258,70 @@ public class CcnRoute extends AbstractModel{
     }
 
     /**
+     * Get Additional status of the route 
+     * @return ExtraState Additional status of the route
+     */
+    public String getExtraState() {
+        return this.ExtraState;
+    }
+
+    /**
+     * Set Additional status of the route
+     * @param ExtraState Additional status of the route
+     */
+    public void setExtraState(String ExtraState) {
+        this.ExtraState = ExtraState;
+    }
+
+    /**
+     * Get Whether it is a dynamic route 
+     * @return IsBgp Whether it is a dynamic route
+     */
+    public Boolean getIsBgp() {
+        return this.IsBgp;
+    }
+
+    /**
+     * Set Whether it is a dynamic route
+     * @param IsBgp Whether it is a dynamic route
+     */
+    public void setIsBgp(Boolean IsBgp) {
+        this.IsBgp = IsBgp;
+    }
+
+    /**
+     * Get Route priority 
+     * @return RoutePriority Route priority
+     */
+    public Long getRoutePriority() {
+        return this.RoutePriority;
+    }
+
+    /**
+     * Set Route priority
+     * @param RoutePriority Route priority
+     */
+    public void setRoutePriority(Long RoutePriority) {
+        this.RoutePriority = RoutePriority;
+    }
+
+    /**
+     * Get Next hop port name (associated instance’s port name) 
+     * @return InstanceExtraName Next hop port name (associated instance’s port name)
+     */
+    public String getInstanceExtraName() {
+        return this.InstanceExtraName;
+    }
+
+    /**
+     * Set Next hop port name (associated instance’s port name)
+     * @param InstanceExtraName Next hop port name (associated instance’s port name)
+     */
+    public void setInstanceExtraName(String InstanceExtraName) {
+        this.InstanceExtraName = InstanceExtraName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +334,10 @@ public class CcnRoute extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
         this.setParamSimple(map, prefix + "InstanceUin", this.InstanceUin);
+        this.setParamSimple(map, prefix + "ExtraState", this.ExtraState);
+        this.setParamSimple(map, prefix + "IsBgp", this.IsBgp);
+        this.setParamSimple(map, prefix + "RoutePriority", this.RoutePriority);
+        this.setParamSimple(map, prefix + "InstanceExtraName", this.InstanceExtraName);
 
     }
 }

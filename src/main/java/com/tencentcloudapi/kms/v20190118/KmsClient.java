@@ -38,6 +38,24 @@ public class KmsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to archive keys. The archived keys can only be used for decryption but not encryption.
+     * @param req ArchiveKeyRequest
+     * @return ArchiveKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ArchiveKeyResponse ArchiveKey(ArchiveKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ArchiveKeyResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<ArchiveKeyResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "ArchiveKey"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to decrypt data with the specified private key that is encrypted with RSA asymmetric cryptographic algorithm. The ciphertext must be encrypted with the corresponding public key. The asymmetric key must be in `Enabled` state for decryption.
      * @param req AsymmetricRsaDecryptRequest
      * @return AsymmetricRsaDecryptResponse
@@ -85,6 +103,24 @@ public class KmsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<BindCloudResourceResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "BindCloudResource"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to unarchive keys. If a key is unarchived, its status will be `Enabled`.
+     * @param req CancelKeyArchiveRequest
+     * @return CancelKeyArchiveResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelKeyArchiveResponse CancelKeyArchive(CancelKeyArchiveRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CancelKeyArchiveResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<CancelKeyArchiveResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "CancelKeyArchive"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -625,6 +661,24 @@ public class KmsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<GetPublicKeyResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "GetPublicKey"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to obtain the list of supported regions.
+     * @param req GetRegionsRequest
+     * @return GetRegionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetRegionsResponse GetRegions(GetRegionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetRegionsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetRegionsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "GetRegions"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

@@ -102,6 +102,27 @@ public class NatGateway extends AbstractModel{
     private String Zone;
 
     /**
+    * 
+    */
+    @SerializedName("DirectConnectGatewayIds")
+    @Expose
+    private String [] DirectConnectGatewayIds;
+
+    /**
+    * 
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
+
+    /**
+    * Tag key-value pair.
+    */
+    @SerializedName("TagSet")
+    @Expose
+    private Tag [] TagSet;
+
+    /**
      * Get NAT gateway ID. 
      * @return NatGatewayId NAT gateway ID.
      */
@@ -286,6 +307,54 @@ public class NatGateway extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return DirectConnectGatewayIds 
+     */
+    public String [] getDirectConnectGatewayIds() {
+        return this.DirectConnectGatewayIds;
+    }
+
+    /**
+     * Set 
+     * @param DirectConnectGatewayIds 
+     */
+    public void setDirectConnectGatewayIds(String [] DirectConnectGatewayIds) {
+        this.DirectConnectGatewayIds = DirectConnectGatewayIds;
+    }
+
+    /**
+     * Get  
+     * @return SubnetId 
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set 
+     * @param SubnetId 
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
+    }
+
+    /**
+     * Get Tag key-value pair. 
+     * @return TagSet Tag key-value pair.
+     */
+    public Tag [] getTagSet() {
+        return this.TagSet;
+    }
+
+    /**
+     * Set Tag key-value pair.
+     * @param TagSet Tag key-value pair.
+     */
+    public void setTagSet(Tag [] TagSet) {
+        this.TagSet = TagSet;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -300,6 +369,9 @@ public class NatGateway extends AbstractModel{
         this.setParamArrayObj(map, prefix + "DestinationIpPortTranslationNatRuleSet.", this.DestinationIpPortTranslationNatRuleSet);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamArraySimple(map, prefix + "DirectConnectGatewayIds.", this.DirectConnectGatewayIds);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
 
     }
 }

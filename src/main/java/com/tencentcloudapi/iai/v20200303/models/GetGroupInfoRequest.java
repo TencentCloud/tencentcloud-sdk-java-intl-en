@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class GetGroupInfoRequest extends AbstractModel{
 
     /**
-    * Group ID.
+    * Group ID, which is the `GroupId` in the `CreateGroup` API
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-     * Get Group ID. 
-     * @return GroupId Group ID.
+     * Get Group ID, which is the `GroupId` in the `CreateGroup` API 
+     * @return GroupId Group ID, which is the `GroupId` in the `CreateGroup` API
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set Group ID.
-     * @param GroupId Group ID.
+     * Set Group ID, which is the `GroupId` in the `CreateGroup` API
+     * @param GroupId Group ID, which is the `GroupId` in the `CreateGroup` API
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;

@@ -191,14 +191,16 @@ public class AutoScalingGroup extends AbstractModel{
     private ServiceSettings ServiceSettings;
 
     /**
-    * 
+    * The number of IPv6 addresses that an instance has.
     */
     @SerializedName("Ipv6AddressCount")
     @Expose
     private Long Ipv6AddressCount;
 
     /**
-    * 
+    * The policy applied when there are multiple availability zones/subnets
+<br><li> PRIORITY: when creating instances, choose the availability zone/subnet based on the order in the list from top to bottom. If the first instance is successfully created in the availability zone/subnet of the highest priority, all instances will be created in this availability zone/subnet.
+<br><li> EQUALITY: chooses the availability zone/subnet with the least instances for scale-out. This gives each availability zone/subnet an opportunity for scale-out and disperses the instances created during multiple scale-out operations across different availability zones/subnets.
     */
     @SerializedName("MultiZoneSubnetPolicy")
     @Expose
@@ -589,32 +591,40 @@ public class AutoScalingGroup extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return Ipv6AddressCount 
+     * Get The number of IPv6 addresses that an instance has. 
+     * @return Ipv6AddressCount The number of IPv6 addresses that an instance has.
      */
     public Long getIpv6AddressCount() {
         return this.Ipv6AddressCount;
     }
 
     /**
-     * Set 
-     * @param Ipv6AddressCount 
+     * Set The number of IPv6 addresses that an instance has.
+     * @param Ipv6AddressCount The number of IPv6 addresses that an instance has.
      */
     public void setIpv6AddressCount(Long Ipv6AddressCount) {
         this.Ipv6AddressCount = Ipv6AddressCount;
     }
 
     /**
-     * Get  
-     * @return MultiZoneSubnetPolicy 
+     * Get The policy applied when there are multiple availability zones/subnets
+<br><li> PRIORITY: when creating instances, choose the availability zone/subnet based on the order in the list from top to bottom. If the first instance is successfully created in the availability zone/subnet of the highest priority, all instances will be created in this availability zone/subnet.
+<br><li> EQUALITY: chooses the availability zone/subnet with the least instances for scale-out. This gives each availability zone/subnet an opportunity for scale-out and disperses the instances created during multiple scale-out operations across different availability zones/subnets. 
+     * @return MultiZoneSubnetPolicy The policy applied when there are multiple availability zones/subnets
+<br><li> PRIORITY: when creating instances, choose the availability zone/subnet based on the order in the list from top to bottom. If the first instance is successfully created in the availability zone/subnet of the highest priority, all instances will be created in this availability zone/subnet.
+<br><li> EQUALITY: chooses the availability zone/subnet with the least instances for scale-out. This gives each availability zone/subnet an opportunity for scale-out and disperses the instances created during multiple scale-out operations across different availability zones/subnets.
      */
     public String getMultiZoneSubnetPolicy() {
         return this.MultiZoneSubnetPolicy;
     }
 
     /**
-     * Set 
-     * @param MultiZoneSubnetPolicy 
+     * Set The policy applied when there are multiple availability zones/subnets
+<br><li> PRIORITY: when creating instances, choose the availability zone/subnet based on the order in the list from top to bottom. If the first instance is successfully created in the availability zone/subnet of the highest priority, all instances will be created in this availability zone/subnet.
+<br><li> EQUALITY: chooses the availability zone/subnet with the least instances for scale-out. This gives each availability zone/subnet an opportunity for scale-out and disperses the instances created during multiple scale-out operations across different availability zones/subnets.
+     * @param MultiZoneSubnetPolicy The policy applied when there are multiple availability zones/subnets
+<br><li> PRIORITY: when creating instances, choose the availability zone/subnet based on the order in the list from top to bottom. If the first instance is successfully created in the availability zone/subnet of the highest priority, all instances will be created in this availability zone/subnet.
+<br><li> EQUALITY: chooses the availability zone/subnet with the least instances for scale-out. This gives each availability zone/subnet an opportunity for scale-out and disperses the instances created during multiple scale-out operations across different availability zones/subnets.
      */
     public void setMultiZoneSubnetPolicy(String MultiZoneSubnetPolicy) {
         this.MultiZoneSubnetPolicy = MultiZoneSubnetPolicy;

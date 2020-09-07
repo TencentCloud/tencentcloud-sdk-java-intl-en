@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class SecurityGroupPolicy extends AbstractModel{
 
     /**
-    * Security group policy index number.
+    * The index number of security group rules, which dynamically changes with the rules. This parameter can be obtained via the `DescribeSecurityGroupPolicies` API and used with the `Version` field in the returned value of the API.
     */
     @SerializedName("PolicyIndex")
     @Expose
     private Long PolicyIndex;
 
     /**
-    * Protocol. Values: TCP, UDP, ICMP
+    * Protocol. Valid values: TCP, UDP, ICMP, ICMPv6, ALL.
     */
     @SerializedName("Protocol")
     @Expose
@@ -100,32 +100,32 @@ public class SecurityGroupPolicy extends AbstractModel{
     private String ModifyTime;
 
     /**
-     * Get Security group policy index number. 
-     * @return PolicyIndex Security group policy index number.
+     * Get The index number of security group rules, which dynamically changes with the rules. This parameter can be obtained via the `DescribeSecurityGroupPolicies` API and used with the `Version` field in the returned value of the API. 
+     * @return PolicyIndex The index number of security group rules, which dynamically changes with the rules. This parameter can be obtained via the `DescribeSecurityGroupPolicies` API and used with the `Version` field in the returned value of the API.
      */
     public Long getPolicyIndex() {
         return this.PolicyIndex;
     }
 
     /**
-     * Set Security group policy index number.
-     * @param PolicyIndex Security group policy index number.
+     * Set The index number of security group rules, which dynamically changes with the rules. This parameter can be obtained via the `DescribeSecurityGroupPolicies` API and used with the `Version` field in the returned value of the API.
+     * @param PolicyIndex The index number of security group rules, which dynamically changes with the rules. This parameter can be obtained via the `DescribeSecurityGroupPolicies` API and used with the `Version` field in the returned value of the API.
      */
     public void setPolicyIndex(Long PolicyIndex) {
         this.PolicyIndex = PolicyIndex;
     }
 
     /**
-     * Get Protocol. Values: TCP, UDP, ICMP 
-     * @return Protocol Protocol. Values: TCP, UDP, ICMP
+     * Get Protocol. Valid values: TCP, UDP, ICMP, ICMPv6, ALL. 
+     * @return Protocol Protocol. Valid values: TCP, UDP, ICMP, ICMPv6, ALL.
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Protocol. Values: TCP, UDP, ICMP
-     * @param Protocol Protocol. Values: TCP, UDP, ICMP
+     * Set Protocol. Valid values: TCP, UDP, ICMP, ICMPv6, ALL.
+     * @param Protocol Protocol. Valid values: TCP, UDP, ICMP, ICMPv6, ALL.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

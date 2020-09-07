@@ -135,6 +135,13 @@ public class CreateDBInstancesRequest extends AbstractModel{
     private Long NeedSupportIpv6;
 
     /**
+    * The information of tags to be associated with instances. This parameter is left empty by default.
+    */
+    @SerializedName("TagList")
+    @Expose
+    private Tag [] TagList;
+
+    /**
      * Get Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API. 
      * @return SpecCode Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
      */
@@ -391,6 +398,22 @@ public class CreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get The information of tags to be associated with instances. This parameter is left empty by default. 
+     * @return TagList The information of tags to be associated with instances. This parameter is left empty by default.
+     */
+    public Tag [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set The information of tags to be associated with instances. This parameter is left empty by default.
+     * @param TagList The information of tags to be associated with instances. This parameter is left empty by default.
+     */
+    public void setTagList(Tag [] TagList) {
+        this.TagList = TagList;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -410,6 +433,7 @@ public class CreateDBInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ActivityId", this.ActivityId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "NeedSupportIpv6", this.NeedSupportIpv6);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
 
     }
 }

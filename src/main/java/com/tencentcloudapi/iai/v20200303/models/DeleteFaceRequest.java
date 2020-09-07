@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DeleteFaceRequest extends AbstractModel{
 
     /**
-    * Person ID
+    * Person ID, which is the `PersonId` in the `CreatePerson` API
     */
     @SerializedName("PersonId")
     @Expose
     private String PersonId;
 
     /**
-    * List of IDs of the faces to be deleted
+    * List of IDs of the faces to be deleted. The array element value is the `FaceId` returned by the `CreateFace` API
     */
     @SerializedName("FaceIds")
     @Expose
     private String [] FaceIds;
 
     /**
-     * Get Person ID 
-     * @return PersonId Person ID
+     * Get Person ID, which is the `PersonId` in the `CreatePerson` API 
+     * @return PersonId Person ID, which is the `PersonId` in the `CreatePerson` API
      */
     public String getPersonId() {
         return this.PersonId;
     }
 
     /**
-     * Set Person ID
-     * @param PersonId Person ID
+     * Set Person ID, which is the `PersonId` in the `CreatePerson` API
+     * @param PersonId Person ID, which is the `PersonId` in the `CreatePerson` API
      */
     public void setPersonId(String PersonId) {
         this.PersonId = PersonId;
     }
 
     /**
-     * Get List of IDs of the faces to be deleted 
-     * @return FaceIds List of IDs of the faces to be deleted
+     * Get List of IDs of the faces to be deleted. The array element value is the `FaceId` returned by the `CreateFace` API 
+     * @return FaceIds List of IDs of the faces to be deleted. The array element value is the `FaceId` returned by the `CreateFace` API
      */
     public String [] getFaceIds() {
         return this.FaceIds;
     }
 
     /**
-     * Set List of IDs of the faces to be deleted
-     * @param FaceIds List of IDs of the faces to be deleted
+     * Set List of IDs of the faces to be deleted. The array element value is the `FaceId` returned by the `CreateFace` API
+     * @param FaceIds List of IDs of the faces to be deleted. The array element value is the `FaceId` returned by the `CreateFace` API
      */
     public void setFaceIds(String [] FaceIds) {
         this.FaceIds = FaceIds;

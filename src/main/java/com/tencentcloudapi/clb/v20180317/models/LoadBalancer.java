@@ -332,7 +332,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String IPv6Mode;
 
     /**
-    * Whether to enable SnatPro
+    * Whether to enable SnatPro.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SnatPro")
@@ -340,7 +340,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Boolean SnatPro;
 
     /**
-    * SnatIp list after SnatPro load balancing is enabled
+    * `SnatIp` list after SnatPro load balancing is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SnatIps")
@@ -372,12 +372,27 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String IsBlockTime;
 
     /**
-    * Whether the IP type is the local BGP
-Note: this field may return null, indicating that no valid values can be obtained
+    * 
     */
     @SerializedName("LocalBgp")
     @Expose
     private Boolean LocalBgp;
+
+    /**
+    * Dedicated layer-7 tag.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ClusterTag")
+    @Expose
+    private String ClusterTag;
+
+    /**
+    * If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with an IPv4 and an IPv6 CVM instance simultaneously.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MixIpTarget")
+    @Expose
+    private Boolean MixIpTarget;
 
     /**
      * Get CLB instance ID. 
@@ -1148,9 +1163,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to enable SnatPro
+     * Get Whether to enable SnatPro.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SnatPro Whether to enable SnatPro
+     * @return SnatPro Whether to enable SnatPro.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getSnatPro() {
@@ -1158,9 +1173,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether to enable SnatPro
+     * Set Whether to enable SnatPro.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SnatPro Whether to enable SnatPro
+     * @param SnatPro Whether to enable SnatPro.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setSnatPro(Boolean SnatPro) {
@@ -1168,9 +1183,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get SnatIp list after SnatPro load balancing is enabled
+     * Get `SnatIp` list after SnatPro load balancing is enabled.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SnatIps SnatIp list after SnatPro load balancing is enabled
+     * @return SnatIps `SnatIp` list after SnatPro load balancing is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public SnatIp [] getSnatIps() {
@@ -1178,9 +1193,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set SnatIp list after SnatPro load balancing is enabled
+     * Set `SnatIp` list after SnatPro load balancing is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SnatIps SnatIp list after SnatPro load balancing is enabled
+     * @param SnatIps `SnatIp` list after SnatPro load balancing is enabled.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setSnatIps(SnatIp [] SnatIps) {
@@ -1248,23 +1263,59 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether the IP type is the local BGP
-Note: this field may return null, indicating that no valid values can be obtained 
-     * @return LocalBgp Whether the IP type is the local BGP
-Note: this field may return null, indicating that no valid values can be obtained
+     * Get  
+     * @return LocalBgp 
      */
     public Boolean getLocalBgp() {
         return this.LocalBgp;
     }
 
     /**
-     * Set Whether the IP type is the local BGP
-Note: this field may return null, indicating that no valid values can be obtained
-     * @param LocalBgp Whether the IP type is the local BGP
-Note: this field may return null, indicating that no valid values can be obtained
+     * Set 
+     * @param LocalBgp 
      */
     public void setLocalBgp(Boolean LocalBgp) {
         this.LocalBgp = LocalBgp;
+    }
+
+    /**
+     * Get Dedicated layer-7 tag.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return ClusterTag Dedicated layer-7 tag.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getClusterTag() {
+        return this.ClusterTag;
+    }
+
+    /**
+     * Set Dedicated layer-7 tag.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param ClusterTag Dedicated layer-7 tag.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setClusterTag(String ClusterTag) {
+        this.ClusterTag = ClusterTag;
+    }
+
+    /**
+     * Get If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with an IPv4 and an IPv6 CVM instance simultaneously.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return MixIpTarget If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with an IPv4 and an IPv6 CVM instance simultaneously.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Boolean getMixIpTarget() {
+        return this.MixIpTarget;
+    }
+
+    /**
+     * Set If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with an IPv4 and an IPv6 CVM instance simultaneously.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param MixIpTarget If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with an IPv4 and an IPv6 CVM instance simultaneously.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMixIpTarget(Boolean MixIpTarget) {
+        this.MixIpTarget = MixIpTarget;
     }
 
     /**
@@ -1316,6 +1367,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "IsBlock", this.IsBlock);
         this.setParamSimple(map, prefix + "IsBlockTime", this.IsBlockTime);
         this.setParamSimple(map, prefix + "LocalBgp", this.LocalBgp);
+        this.setParamSimple(map, prefix + "ClusterTag", this.ClusterTag);
+        this.setParamSimple(map, prefix + "MixIpTarget", this.MixIpTarget);
 
     }
 }

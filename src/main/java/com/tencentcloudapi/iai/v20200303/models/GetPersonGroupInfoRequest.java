@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class GetPersonGroupInfoRequest extends AbstractModel{
 
     /**
-    * Person ID
+    * Person ID, which is the `PersonId` in the `CreatePerson` API
     */
     @SerializedName("PersonId")
     @Expose
@@ -44,16 +44,16 @@ public class GetPersonGroupInfoRequest extends AbstractModel{
     private Long Limit;
 
     /**
-     * Get Person ID 
-     * @return PersonId Person ID
+     * Get Person ID, which is the `PersonId` in the `CreatePerson` API 
+     * @return PersonId Person ID, which is the `PersonId` in the `CreatePerson` API
      */
     public String getPersonId() {
         return this.PersonId;
     }
 
     /**
-     * Set Person ID
-     * @param PersonId Person ID
+     * Set Person ID, which is the `PersonId` in the `CreatePerson` API
+     * @param PersonId Person ID, which is the `PersonId` in the `CreatePerson` API
      */
     public void setPersonId(String PersonId) {
         this.PersonId = PersonId;

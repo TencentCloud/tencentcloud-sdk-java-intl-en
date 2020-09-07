@@ -59,7 +59,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
     * File compression algorithm
 gzip: specifies Gzip compression
-brotli: this can be enabled when the Gzip compression is specified
+brotli: specifies Brotli compression
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Algorithms")
@@ -157,11 +157,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Get File compression algorithm
 gzip: specifies Gzip compression
-brotli: this can be enabled when the Gzip compression is specified
+brotli: specifies Brotli compression
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return Algorithms File compression algorithm
 gzip: specifies Gzip compression
-brotli: this can be enabled when the Gzip compression is specified
+brotli: specifies Brotli compression
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String [] getAlgorithms() {
@@ -171,11 +171,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Set File compression algorithm
 gzip: specifies Gzip compression
-brotli: this can be enabled when the Gzip compression is specified
+brotli: specifies Brotli compression
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param Algorithms File compression algorithm
 gzip: specifies Gzip compression
-brotli: this can be enabled when the Gzip compression is specified
+brotli: specifies Brotli compression
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setAlgorithms(String [] Algorithms) {

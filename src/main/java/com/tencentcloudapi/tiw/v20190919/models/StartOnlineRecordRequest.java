@@ -52,7 +52,7 @@ The ID must be an unused ID in the SDK. The real-time recording service uses the
     private String RecordUserSig;
 
     /**
-    * IM group ID of the whiteboard. By default, it is the same as the room ID.
+    * (Disused) IM group ID of the whiteboard. By default, it is the same as the room ID.
     */
     @SerializedName("GroupId")
     @Expose
@@ -97,6 +97,13 @@ MIX_STREAM - Stream mixing feature
     @SerializedName("AudioFileNeeded")
     @Expose
     private Boolean AudioFileNeeded;
+
+    /**
+    * A group of real-time recording parameters. It specifies the streams to be recorded, whether to disable the audio recording, and whether to record only low-resolution videos, etc.
+    */
+    @SerializedName("RecordControl")
+    @Expose
+    private RecordControl RecordControl;
 
     /**
      * Get SdkAppId of the customer 
@@ -167,16 +174,16 @@ The ID must be an unused ID in the SDK. The real-time recording service uses the
     }
 
     /**
-     * Get IM group ID of the whiteboard. By default, it is the same as the room ID. 
-     * @return GroupId IM group ID of the whiteboard. By default, it is the same as the room ID.
+     * Get (Disused) IM group ID of the whiteboard. By default, it is the same as the room ID. 
+     * @return GroupId (Disused) IM group ID of the whiteboard. By default, it is the same as the room ID.
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set IM group ID of the whiteboard. By default, it is the same as the room ID.
-     * @param GroupId IM group ID of the whiteboard. By default, it is the same as the room ID.
+     * Set (Disused) IM group ID of the whiteboard. By default, it is the same as the room ID.
+     * @param GroupId (Disused) IM group ID of the whiteboard. By default, it is the same as the room ID.
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
@@ -283,6 +290,22 @@ MIX_STREAM - Stream mixing feature
     }
 
     /**
+     * Get A group of real-time recording parameters. It specifies the streams to be recorded, whether to disable the audio recording, and whether to record only low-resolution videos, etc. 
+     * @return RecordControl A group of real-time recording parameters. It specifies the streams to be recorded, whether to disable the audio recording, and whether to record only low-resolution videos, etc.
+     */
+    public RecordControl getRecordControl() {
+        return this.RecordControl;
+    }
+
+    /**
+     * Set A group of real-time recording parameters. It specifies the streams to be recorded, whether to disable the audio recording, and whether to record only low-resolution videos, etc.
+     * @param RecordControl A group of real-time recording parameters. It specifies the streams to be recorded, whether to disable the audio recording, and whether to record only low-resolution videos, etc.
+     */
+    public void setRecordControl(RecordControl RecordControl) {
+        this.RecordControl = RecordControl;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -296,6 +319,7 @@ MIX_STREAM - Stream mixing feature
         this.setParamObj(map, prefix + "MixStream.", this.MixStream);
         this.setParamArraySimple(map, prefix + "Extras.", this.Extras);
         this.setParamSimple(map, prefix + "AudioFileNeeded", this.AudioFileNeeded);
+        this.setParamObj(map, prefix + "RecordControl.", this.RecordControl);
 
     }
 }

@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreatePersonRequest extends AbstractModel{
 
     /**
-    * ID of the group to add to.
+    * ID of the group to join, which is the `GroupId` in the `CreateGroup` API
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * Person name, which can contain 1–60 characters and is modifiable and repeatable.
+    * Person name, which can contain 1-60 characters and is modifiable and repeatable.
     */
     @SerializedName("PersonName")
     @Expose
@@ -51,7 +51,7 @@ public class CreatePersonRequest extends AbstractModel{
     private Long Gender;
 
     /**
-    * Content of person description field, which is a `key-value` pair, can contain 0–60 characters, and is modifiable and repeatable.
+    * Content of person description field, which is a `key-value` pair, can contain 0-60 characters, and is modifiable and repeatable.
     */
     @SerializedName("PersonExDescriptionInfos")
     @Expose
@@ -59,6 +59,7 @@ public class CreatePersonRequest extends AbstractModel{
 
     /**
     * Base64-encoded image data, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
     */
     @SerializedName("Image")
@@ -67,6 +68,7 @@ public class CreatePersonRequest extends AbstractModel{
 
     /**
     * Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
 You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
@@ -114,32 +116,32 @@ If the image quality does not meet the requirement, the returned result will pro
     private Long NeedRotateDetection;
 
     /**
-     * Get ID of the group to add to. 
-     * @return GroupId ID of the group to add to.
+     * Get ID of the group to join, which is the `GroupId` in the `CreateGroup` API 
+     * @return GroupId ID of the group to join, which is the `GroupId` in the `CreateGroup` API
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set ID of the group to add to.
-     * @param GroupId ID of the group to add to.
+     * Set ID of the group to join, which is the `GroupId` in the `CreateGroup` API
+     * @param GroupId ID of the group to join, which is the `GroupId` in the `CreateGroup` API
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get Person name, which can contain 1–60 characters and is modifiable and repeatable. 
-     * @return PersonName Person name, which can contain 1–60 characters and is modifiable and repeatable.
+     * Get Person name, which can contain 1-60 characters and is modifiable and repeatable. 
+     * @return PersonName Person name, which can contain 1-60 characters and is modifiable and repeatable.
      */
     public String getPersonName() {
         return this.PersonName;
     }
 
     /**
-     * Set Person name, which can contain 1–60 characters and is modifiable and repeatable.
-     * @param PersonName Person name, which can contain 1–60 characters and is modifiable and repeatable.
+     * Set Person name, which can contain 1-60 characters and is modifiable and repeatable.
+     * @param PersonName Person name, which can contain 1-60 characters and is modifiable and repeatable.
      */
     public void setPersonName(String PersonName) {
         this.PersonName = PersonName;
@@ -178,16 +180,16 @@ If the image quality does not meet the requirement, the returned result will pro
     }
 
     /**
-     * Get Content of person description field, which is a `key-value` pair, can contain 0–60 characters, and is modifiable and repeatable. 
-     * @return PersonExDescriptionInfos Content of person description field, which is a `key-value` pair, can contain 0–60 characters, and is modifiable and repeatable.
+     * Get Content of person description field, which is a `key-value` pair, can contain 0-60 characters, and is modifiable and repeatable. 
+     * @return PersonExDescriptionInfos Content of person description field, which is a `key-value` pair, can contain 0-60 characters, and is modifiable and repeatable.
      */
     public PersonExDescriptionInfo [] getPersonExDescriptionInfos() {
         return this.PersonExDescriptionInfos;
     }
 
     /**
-     * Set Content of person description field, which is a `key-value` pair, can contain 0–60 characters, and is modifiable and repeatable.
-     * @param PersonExDescriptionInfos Content of person description field, which is a `key-value` pair, can contain 0–60 characters, and is modifiable and repeatable.
+     * Set Content of person description field, which is a `key-value` pair, can contain 0-60 characters, and is modifiable and repeatable.
+     * @param PersonExDescriptionInfos Content of person description field, which is a `key-value` pair, can contain 0-60 characters, and is modifiable and repeatable.
      */
     public void setPersonExDescriptionInfos(PersonExDescriptionInfo [] PersonExDescriptionInfos) {
         this.PersonExDescriptionInfos = PersonExDescriptionInfos;
@@ -195,8 +197,10 @@ If the image quality does not meet the requirement, the returned result will pro
 
     /**
      * Get Base64-encoded image data, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not. 
      * @return Image Base64-encoded image data, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
      */
     public String getImage() {
@@ -205,8 +209,10 @@ If the image quality does not meet the requirement, the returned result will pro
 
     /**
      * Set Base64-encoded image data, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
      * @param Image Base64-encoded image data, which cannot exceed 5 MB.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
      */
     public void setImage(String Image) {
@@ -215,11 +221,13 @@ If the image quality does not meet the requirement, the returned result will pro
 
     /**
      * Get Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
 You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not. 
      * @return Url Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
 You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
@@ -231,11 +239,13 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
 
     /**
      * Set Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
 You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
 .png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
      * @param Url Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
+The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
 You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.

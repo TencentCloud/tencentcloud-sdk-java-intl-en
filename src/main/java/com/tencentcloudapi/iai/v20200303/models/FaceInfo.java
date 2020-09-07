@@ -23,163 +23,158 @@ import java.util.HashMap;
 public class FaceInfo extends AbstractModel{
 
     /**
-    * 人脸框左上角横坐标。
-人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
+    * Horizontal coordinate of the top-left corner of face frame.
+The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
+If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
     */
     @SerializedName("X")
     @Expose
     private Long X;
 
     /**
-    * 人脸框左上角纵坐标。 
-人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
+    * Vertical coordinate of the top-left corner of face frame. 
+The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
+If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
     */
     @SerializedName("Y")
     @Expose
     private Long Y;
 
     /**
-    * 人脸框宽度。
+    * Face frame width. 
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 人脸框高度。
+    * Face frame height.
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * 人脸属性信息，包含性别( gender )、年龄( age )、表情( expression )、 
-魅力( beauty )、眼镜( glass )、口罩（mask）、头发（hair）和姿态 (pitch，roll，yaw )。只有当 NeedFaceAttributes 设为 1 时才返回有效信息。
+    * Face attributes, including gender, age, expression, beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will be returned only if `NeedFaceAttributes` is set to 1. 
     */
     @SerializedName("FaceAttributesInfo")
     @Expose
     private FaceAttributesInfo FaceAttributesInfo;
 
     /**
-    * 人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。
+    * Face quality information, including score, sharpness, brightness, and completeness. Valid information will be returned only if `NeedFaceDetection` is set to 1. Note: this field may return null, indicating that no valid values can be obtained. 
     */
     @SerializedName("FaceQualityInfo")
     @Expose
     private FaceQualityInfo FaceQualityInfo;
 
     /**
-     * Get 人脸框左上角横坐标。
-人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。 
-     * @return X 人脸框左上角横坐标。
-人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
+     * Get Horizontal coordinate of the top-left corner of face frame.
+The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
+If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement. 
+     * @return X Horizontal coordinate of the top-left corner of face frame.
+The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
+If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
      */
     public Long getX() {
         return this.X;
     }
 
     /**
-     * Set 人脸框左上角横坐标。
-人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
-     * @param X 人脸框左上角横坐标。
-人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
+     * Set Horizontal coordinate of the top-left corner of face frame.
+The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
+If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
+     * @param X Horizontal coordinate of the top-left corner of face frame.
+The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
+If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
      */
     public void setX(Long X) {
         this.X = X;
     }
 
     /**
-     * Get 人脸框左上角纵坐标。 
-人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。 
-     * @return Y 人脸框左上角纵坐标。 
-人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
+     * Get Vertical coordinate of the top-left corner of face frame. 
+The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
+If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement. 
+     * @return Y Vertical coordinate of the top-left corner of face frame. 
+The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
+If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
      */
     public Long getY() {
         return this.Y;
     }
 
     /**
-     * Set 人脸框左上角纵坐标。 
-人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
-     * @param Y 人脸框左上角纵坐标。 
-人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
+     * Set Vertical coordinate of the top-left corner of face frame. 
+The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
+If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
+     * @param Y Vertical coordinate of the top-left corner of face frame. 
+The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
+If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
      */
     public void setY(Long Y) {
         this.Y = Y;
     }
 
     /**
-     * Get 人脸框宽度。 
-     * @return Width 人脸框宽度。
+     * Get Face frame width.  
+     * @return Width Face frame width. 
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 人脸框宽度。
-     * @param Width 人脸框宽度。
+     * Set Face frame width. 
+     * @param Width Face frame width. 
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 人脸框高度。 
-     * @return Height 人脸框高度。
+     * Get Face frame height. 
+     * @return Height Face frame height.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 人脸框高度。
-     * @param Height 人脸框高度。
+     * Set Face frame height.
+     * @param Height Face frame height.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get 人脸属性信息，包含性别( gender )、年龄( age )、表情( expression )、 
-魅力( beauty )、眼镜( glass )、口罩（mask）、头发（hair）和姿态 (pitch，roll，yaw )。只有当 NeedFaceAttributes 设为 1 时才返回有效信息。 
-     * @return FaceAttributesInfo 人脸属性信息，包含性别( gender )、年龄( age )、表情( expression )、 
-魅力( beauty )、眼镜( glass )、口罩（mask）、头发（hair）和姿态 (pitch，roll，yaw )。只有当 NeedFaceAttributes 设为 1 时才返回有效信息。
+     * Get Face attributes, including gender, age, expression, beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will be returned only if `NeedFaceAttributes` is set to 1.  
+     * @return FaceAttributesInfo Face attributes, including gender, age, expression, beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will be returned only if `NeedFaceAttributes` is set to 1. 
      */
     public FaceAttributesInfo getFaceAttributesInfo() {
         return this.FaceAttributesInfo;
     }
 
     /**
-     * Set 人脸属性信息，包含性别( gender )、年龄( age )、表情( expression )、 
-魅力( beauty )、眼镜( glass )、口罩（mask）、头发（hair）和姿态 (pitch，roll，yaw )。只有当 NeedFaceAttributes 设为 1 时才返回有效信息。
-     * @param FaceAttributesInfo 人脸属性信息，包含性别( gender )、年龄( age )、表情( expression )、 
-魅力( beauty )、眼镜( glass )、口罩（mask）、头发（hair）和姿态 (pitch，roll，yaw )。只有当 NeedFaceAttributes 设为 1 时才返回有效信息。
+     * Set Face attributes, including gender, age, expression, beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will be returned only if `NeedFaceAttributes` is set to 1. 
+     * @param FaceAttributesInfo Face attributes, including gender, age, expression, beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will be returned only if `NeedFaceAttributes` is set to 1. 
      */
     public void setFaceAttributesInfo(FaceAttributesInfo FaceAttributesInfo) {
         this.FaceAttributesInfo = FaceAttributesInfo;
     }
 
     /**
-     * Get 人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。 
-     * @return FaceQualityInfo 人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。
+     * Get Face quality information, including score, sharpness, brightness, and completeness. Valid information will be returned only if `NeedFaceDetection` is set to 1. Note: this field may return null, indicating that no valid values can be obtained.  
+     * @return FaceQualityInfo Face quality information, including score, sharpness, brightness, and completeness. Valid information will be returned only if `NeedFaceDetection` is set to 1. Note: this field may return null, indicating that no valid values can be obtained. 
      */
     public FaceQualityInfo getFaceQualityInfo() {
         return this.FaceQualityInfo;
     }
 
     /**
-     * Set 人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。
-     * @param FaceQualityInfo 人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。
+     * Set Face quality information, including score, sharpness, brightness, and completeness. Valid information will be returned only if `NeedFaceDetection` is set to 1. Note: this field may return null, indicating that no valid values can be obtained. 
+     * @param FaceQualityInfo Face quality information, including score, sharpness, brightness, and completeness. Valid information will be returned only if `NeedFaceDetection` is set to 1. Note: this field may return null, indicating that no valid values can be obtained. 
      */
     public void setFaceQualityInfo(FaceQualityInfo FaceQualityInfo) {
         this.FaceQualityInfo = FaceQualityInfo;

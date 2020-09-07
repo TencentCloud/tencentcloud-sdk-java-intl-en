@@ -44,7 +44,7 @@ public class RuleInput extends AbstractModel{
     private Long SessionExpireTime;
 
     /**
-    * Health check information
+    * Health check information. For more information, please see [Health Check](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1)
     */
     @SerializedName("HealthCheck")
     @Expose
@@ -163,16 +163,16 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     }
 
     /**
-     * Get Health check information 
-     * @return HealthCheck Health check information
+     * Get Health check information. For more information, please see [Health Check](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1) 
+     * @return HealthCheck Health check information. For more information, please see [Health Check](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1)
      */
     public HealthCheck getHealthCheck() {
         return this.HealthCheck;
     }
 
     /**
-     * Set Health check information
-     * @param HealthCheck Health check information
+     * Set Health check information. For more information, please see [Health Check](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1)
+     * @param HealthCheck Health check information. For more information, please see [Health Check](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1)
      */
     public void setHealthCheck(HealthCheck HealthCheck) {
         this.HealthCheck = HealthCheck;

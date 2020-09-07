@@ -13,48 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iai.v20200303.models;
+package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EstimateCheckSimilarPersonCostTimeRequest extends AbstractModel{
+public class DisassociateDirectConnectGatewayNatGatewayResponse extends AbstractModel{
 
     /**
-    * List of groups to be checked. 
-There can be up to 2 million persons in one group and up to 10 groups.
+    * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
-    @SerializedName("GroupIds")
+    @SerializedName("RequestId")
     @Expose
-    private String [] GroupIds;
+    private String RequestId;
 
     /**
-     * Get List of groups to be checked. 
-There can be up to 2 million persons in one group and up to 10 groups. 
-     * @return GroupIds List of groups to be checked. 
-There can be up to 2 million persons in one group and up to 10 groups.
+     * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
+     * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public String [] getGroupIds() {
-        return this.GroupIds;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set List of groups to be checked. 
-There can be up to 2 million persons in one group and up to 10 groups.
-     * @param GroupIds List of groups to be checked. 
-There can be up to 2 million persons in one group and up to 10 groups.
+     * Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @param RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public void setGroupIds(String [] GroupIds) {
-        this.GroupIds = GroupIds;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

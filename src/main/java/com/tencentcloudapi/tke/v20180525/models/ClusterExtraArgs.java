@@ -23,8 +23,8 @@ import java.util.HashMap;
 public class ClusterExtraArgs extends AbstractModel{
 
     /**
-    * kube-apiserver custom parameter
-Note: this field may return null, indicating that no valid value is obtained.
+    * kube-apiserver custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
+Note: this field may return `null`, indicating that no valid value is obtained.
     */
     @SerializedName("KubeAPIServer")
     @Expose
@@ -47,20 +47,20 @@ Note: this field may return null, indicating that no valid value is obtained.
     private String [] KubeScheduler;
 
     /**
-     * Get kube-apiserver custom parameter
-Note: this field may return null, indicating that no valid value is obtained. 
-     * @return KubeAPIServer kube-apiserver custom parameter
-Note: this field may return null, indicating that no valid value is obtained.
+     * Get kube-apiserver custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return KubeAPIServer kube-apiserver custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public String [] getKubeAPIServer() {
         return this.KubeAPIServer;
     }
 
     /**
-     * Set kube-apiserver custom parameter
-Note: this field may return null, indicating that no valid value is obtained.
-     * @param KubeAPIServer kube-apiserver custom parameter
-Note: this field may return null, indicating that no valid value is obtained.
+     * Set kube-apiserver custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param KubeAPIServer kube-apiserver custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public void setKubeAPIServer(String [] KubeAPIServer) {
         this.KubeAPIServer = KubeAPIServer;

@@ -78,7 +78,7 @@ Use case: for important live streams, you can set delayed playback in advance to
     }
 
     /**
-     *After a watermark is added and a watermark ID is successfully returned, you need to call the [CreateLiveWatermarkRule](/document/product/267/32629) API and bind the watermark ID to the stream.
+     *After a watermark is added and a watermark ID is successfully returned, you need to call the [CreateLiveWatermarkRule](https://intl.cloud.tencent.com/document/product/267/32629?from_cn_redirect=1) API and bind the watermark ID to the stream.
      * @param req AddLiveWatermarkRequest
      * @return AddLiveWatermarkResponse
      * @throws TencentCloudSDKException
@@ -135,7 +135,7 @@ Note: you need to call the `CreateLiveCert` API first to add a certificate. Afte
     /**
      *This API is used to create a general stream mix. It can be used basically in the same way as the legacy `mix_streamv2.start_mix_stream_advanced` API.
 Note: currently, up to 16 streams can be mixed.
-Best practice: https://cloud.tencent.com/document/product/267/45566
+Best practice: https://intl.cloud.tencent.com/document/product/267/45566?from_cn_redirect=1
      * @param req CreateCommonMixStreamRequest
      * @return CreateCommonMixStreamResponse
      * @throws TencentCloudSDKException
@@ -153,8 +153,8 @@ Best practice: https://cloud.tencent.com/document/product/267/45566
     }
 
     /**
-     *To create a callback rule, you need to first call the [CreateLiveCallbackTemplate](/document/product/267/32637) API to create a callback template and bind the returned template ID to the domain name/path.
-<br>Callback protocol-related document: [Event Message Notification](/document/product/267/32744).
+     *To create a callback rule, you need to first call the [CreateLiveCallbackTemplate](https://intl.cloud.tencent.com/document/product/267/32637?from_cn_redirect=1) API to create a callback template and bind the returned template ID to the domain name/path.
+<br>Callback protocol-related document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
      * @param req CreateLiveCallbackRuleRequest
      * @return CreateLiveCallbackRuleResponse
      * @throws TencentCloudSDKException
@@ -172,8 +172,9 @@ Best practice: https://cloud.tencent.com/document/product/267/45566
     }
 
     /**
-     *This API is used to create a callback template. After a template ID is successfully returned, you need to call the [CreateLiveCallbackRule](/document/product/267/32638) API to bind the template ID to the domain name/path.
-<br>Callback protocol document: [Event Message Notification](/document/product/267/32744).
+     *After a callback template is created and a template ID is successfully returned, you need to call the [CreateLiveCallbackRule](https://intl.cloud.tencent.com/document/product/267/32638?from_cn_redirect=1) API and bind the template ID to the domain name/path.
+<br>Callback protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
+Note: at least enter one callback URL.
      * @param req CreateLiveCallbackTemplateRequest
      * @return CreateLiveCallbackTemplateResponse
      * @throws TencentCloudSDKException
@@ -211,7 +212,7 @@ Best practice: https://cloud.tencent.com/document/product/267/45566
     /**
      *- Prerequisites
   1. Recording files are stored on the VOD platform, so if you need to use the recording feature, you must first activate the VOD service.
-  2. After the recording files are stored, applicable fees (including storage fees and downstream playback traffic fees) will be charged according to the VOD billing mode. For more information, please see the [corresponding document](https://cloud.tencent.com/document/product/266/2838).
+  2. After the recording files are stored, applicable fees (including storage fees and downstream playback traffic fees) will be charged according to the VOD billing mode. For more information, please see the [corresponding document](https://intl.cloud.tencent.com/document/product/266/2838?from_cn_redirect=1).
 
 - Mode description
   This API supports two recording modes:
@@ -242,8 +243,8 @@ Best practice: https://cloud.tencent.com/document/product/267/45566
     }
 
     /**
-     *To create a recording rule, you need to first call the [CreateLiveRecordTemplate](/document/product/267/32614) API to create a recording template and bind the returned template ID to the stream.
-<br>Recording-related document: [LVB Recording](/document/product/267/32739).
+     *To create a recording rule, you need to first call the [CreateLiveRecordTemplate](https://intl.cloud.tencent.com/document/product/267/32614?from_cn_redirect=1) API to create a recording template and bind the returned template ID to the stream.
+<br>Recording-related document: [LVB Recording](https://intl.cloud.tencent.com/document/product/267/32739?from_cn_redirect=1).
      * @param req CreateLiveRecordRuleRequest
      * @return CreateLiveRecordRuleResponse
      * @throws TencentCloudSDKException
@@ -261,8 +262,8 @@ Best practice: https://cloud.tencent.com/document/product/267/45566
     }
 
     /**
-     *After a recording template is created and a template ID is successfully returned, you need to call the [CreateLiveRecordRule](/document/product/267/32615) API and bind the template ID to the stream.
-<br>Recording-related document: [LVB Recording](/document/product/267/32739).
+     *After a recording template is created and a template ID is successfully returned, you need to call the [CreateLiveRecordRule](https://intl.cloud.tencent.com/document/product/267/32615?from_cn_redirect=1) API and bind the template ID to the stream.
+<br>Recording-related document: [LVB Recording](https://intl.cloud.tencent.com/document/product/267/32739?from_cn_redirect=1).
      * @param req CreateLiveRecordTemplateRequest
      * @return CreateLiveRecordTemplateResponse
      * @throws TencentCloudSDKException
@@ -280,8 +281,8 @@ Best practice: https://cloud.tencent.com/document/product/267/45566
     }
 
     /**
-     *This API is used to create a screencapturing rule. You need to first call the [CreateLiveSnapshotTemplate](/document/product/267/32624) API to create a screencapturing template to bind the returned template ID to the stream.
-<br>Screencapturing document: [LVB Screencapturing](/document/product/267/32737).
+     *This API is used to create a screencapturing rule. You need to first call the [CreateLiveSnapshotTemplate](https://intl.cloud.tencent.com/document/product/267/32624?from_cn_redirect=1) API to create a screencapturing template to bind the returned template ID to the stream.
+<br>Screencapturing document: [LVB Screencapturing](https://intl.cloud.tencent.com/document/product/267/32737?from_cn_redirect=1).
 Note: only one screencapturing template can be associated with one domain name.
      * @param req CreateLiveSnapshotRuleRequest
      * @return CreateLiveSnapshotRuleResponse
@@ -300,8 +301,8 @@ Note: only one screencapturing template can be associated with one domain name.
     }
 
     /**
-     *After a screencapturing template is created and a template ID is successfully returned, you need to call the [CreateLiveSnapshotRule](/document/product/267/32625) API and bind the template ID to the stream.
-<br>Screencapturing-related document: [LVB Screencapturing](/document/product/267/32737).
+     *After a screencapturing template is created and a template ID is successfully returned, you need to call the [CreateLiveSnapshotRule](https://intl.cloud.tencent.com/document/product/267/32625?from_cn_redirect=1) API and bind the template ID to the stream.
+<br>Screencapturing-related document: [LVB Screencapturing](https://intl.cloud.tencent.com/document/product/267/32737?from_cn_redirect=1).
      * @param req CreateLiveSnapshotTemplateRequest
      * @return CreateLiveSnapshotTemplateResponse
      * @throws TencentCloudSDKException
@@ -319,8 +320,8 @@ Note: only one screencapturing template can be associated with one domain name.
     }
 
     /**
-     *To create a transcoding rule, you need to first call the [CreateLiveTranscodeTemplate](/document/product/267/32646) API to create a transcoding template and bind the returned template ID to the stream.
-<br>Transcoding-related document: [LVB Remuxing and Transcoding](/document/product/267/32736).
+     *To create a transcoding rule, you need to first call the [CreateLiveTranscodeTemplate](https://intl.cloud.tencent.com/document/product/267/32646?from_cn_redirect=1) API to create a transcoding template and bind the returned template ID to the stream.
+<br>Transcoding-related document: [LVB Remuxing and Transcoding](https://intl.cloud.tencent.com/document/product/267/32736?from_cn_redirect=1).
      * @param req CreateLiveTranscodeRuleRequest
      * @return CreateLiveTranscodeRuleResponse
      * @throws TencentCloudSDKException
@@ -338,8 +339,8 @@ Note: only one screencapturing template can be associated with one domain name.
     }
 
     /**
-     *After a transcoding template is created and a template ID is successfully returned, you need to call the [CreateLiveTranscodeRule](/document/product/267/32647) API and bind the returned template ID to the stream.
-<br>Transcoding-related document: [LVB Remuxing and Transcoding](/document/product/267/32736).
+     *After a transcoding template is created and a template ID is successfully returned, you need to call the [CreateLiveTranscodeRule](https://intl.cloud.tencent.com/document/product/267/32647?from_cn_redirect=1) API and bind the returned template ID to the stream.
+<br>Transcoding-related document: [LVB Remuxing and Transcoding](https://intl.cloud.tencent.com/document/product/267/32736?from_cn_redirect=1).
      * @param req CreateLiveTranscodeTemplateRequest
      * @return CreateLiveTranscodeTemplateResponse
      * @throws TencentCloudSDKException
@@ -357,7 +358,7 @@ Note: only one screencapturing template can be associated with one domain name.
     }
 
     /**
-     *To create a watermarking rule, you need to first call the [AddLiveWatermark](/document/product/267/30154) API to add a watermark and bind the returned watermark ID to the stream.
+     *To create a watermarking rule, you need to first call the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API to add a watermark and bind the returned watermark ID to the stream.
      * @param req CreateLiveWatermarkRuleRequest
      * @return CreateLiveWatermarkRuleResponse
      * @throws TencentCloudSDKException
@@ -473,7 +474,7 @@ Note: only one screencapturing template can be associated with one domain name.
     }
 
     /**
-     *Note: The `DeleteLiveRecord` API is only used to delete the record of recording tasks but not stop recording or deleting an ongoing recording task. If you need to stop a recording task, please use the [StopLiveRecord](/document/product/267/30146) API.
+     *Note: The `DeleteLiveRecord` API is only used to delete the record of recording tasks but not stop recording or deleting an ongoing recording task. If you need to stop a recording task, please use the [StopLiveRecord](https://intl.cloud.tencent.com/document/product/267/30146?from_cn_redirect=1) API.
      * @param req DeleteLiveRecordRequest
      * @return DeleteLiveRecordResponse
      * @throws TencentCloudSDKException
@@ -1435,8 +1436,8 @@ Note: Up to 10,000 entries can be queried per page. More data can be obtained by
     }
 
     /**
-     *This API is used to query the playback data and supports querying playback details by stream name and aggregated data by playback domain name. The data has a delay of about 4 minutes.
-Note: to query by `AppName`, you need to submit a ticket for application.
+     *This API is used to query the playback data. It supports querying the playback details by stream name and aggregated data by playback domain name. Data in the last 4 minutes or so cannot be queried due to delay.
+Note: to query by `AppName`, you need to submit a ticket first. After your application succeeds, it will take about 5 business days (subject to the time in the reply) for the configuration to take effect.
      * @param req DescribeStreamPlayInfoListRequest
      * @return DescribeStreamPlayInfoListResponse
      * @throws TencentCloudSDKException

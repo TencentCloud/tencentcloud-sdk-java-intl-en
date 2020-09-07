@@ -94,7 +94,7 @@ You can set it to true to return the details for each Domain (the statusCode met
 
     /**
     * Specifies an ISP when you query the CDN data within Mainland China. If this is left blank, all ISPs will be queried.
-To view ISP codes, see [ISP Code Mappings](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
+To view ISP codes, see [ISP Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 If you have specified an ISP, you cannot specify a province or an IP protocol for the same query.
     */
     @SerializedName("Isp")
@@ -104,7 +104,7 @@ If you have specified an ISP, you cannot specify a province or an IP protocol fo
     /**
     * Specifies a province when you query the CDN data within Mainland China. If this is left blank, all provinces will be queried.
 Specifies a country/region when you query the CDN data outside Mainland China. If this is left blank, all countries/regions will be queried.
-To view codes of provinces or countries/regions, see [Province Code Mappings](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
+To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 If you have specified a province for your query on CDN data within mainland China, you cannot specify an ISP or an IP protocol for the same query.
     */
     @SerializedName("District")
@@ -356,10 +356,10 @@ You can set it to true to return the details for each Domain (the statusCode met
 
     /**
      * Get Specifies an ISP when you query the CDN data within Mainland China. If this is left blank, all ISPs will be queried.
-To view ISP codes, see [ISP Code Mappings](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
+To view ISP codes, see [ISP Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 If you have specified an ISP, you cannot specify a province or an IP protocol for the same query. 
      * @return Isp Specifies an ISP when you query the CDN data within Mainland China. If this is left blank, all ISPs will be queried.
-To view ISP codes, see [ISP Code Mappings](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
+To view ISP codes, see [ISP Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 If you have specified an ISP, you cannot specify a province or an IP protocol for the same query.
      */
     public Long getIsp() {
@@ -368,10 +368,10 @@ If you have specified an ISP, you cannot specify a province or an IP protocol fo
 
     /**
      * Set Specifies an ISP when you query the CDN data within Mainland China. If this is left blank, all ISPs will be queried.
-To view ISP codes, see [ISP Code Mappings](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
+To view ISP codes, see [ISP Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 If you have specified an ISP, you cannot specify a province or an IP protocol for the same query.
      * @param Isp Specifies an ISP when you query the CDN data within Mainland China. If this is left blank, all ISPs will be queried.
-To view ISP codes, see [ISP Code Mappings](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
+To view ISP codes, see [ISP Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 If you have specified an ISP, you cannot specify a province or an IP protocol for the same query.
      */
     public void setIsp(Long Isp) {
@@ -381,11 +381,11 @@ If you have specified an ISP, you cannot specify a province or an IP protocol fo
     /**
      * Get Specifies a province when you query the CDN data within Mainland China. If this is left blank, all provinces will be queried.
 Specifies a country/region when you query the CDN data outside Mainland China. If this is left blank, all countries/regions will be queried.
-To view codes of provinces or countries/regions, see [Province Code Mappings](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
+To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 If you have specified a province for your query on CDN data within mainland China, you cannot specify an ISP or an IP protocol for the same query. 
      * @return District Specifies a province when you query the CDN data within Mainland China. If this is left blank, all provinces will be queried.
 Specifies a country/region when you query the CDN data outside Mainland China. If this is left blank, all countries/regions will be queried.
-To view codes of provinces or countries/regions, see [Province Code Mappings](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
+To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 If you have specified a province for your query on CDN data within mainland China, you cannot specify an ISP or an IP protocol for the same query.
      */
     public Long getDistrict() {
@@ -395,11 +395,11 @@ If you have specified a province for your query on CDN data within mainland Chin
     /**
      * Set Specifies a province when you query the CDN data within Mainland China. If this is left blank, all provinces will be queried.
 Specifies a country/region when you query the CDN data outside Mainland China. If this is left blank, all countries/regions will be queried.
-To view codes of provinces or countries/regions, see [Province Code Mappings](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
+To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 If you have specified a province for your query on CDN data within mainland China, you cannot specify an ISP or an IP protocol for the same query.
      * @param District Specifies a province when you query the CDN data within Mainland China. If this is left blank, all provinces will be queried.
 Specifies a country/region when you query the CDN data outside Mainland China. If this is left blank, all countries/regions will be queried.
-To view codes of provinces or countries/regions, see [Province Code Mappings](https://cloud.tencent.com/document/product/228/6316#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
+To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
 If you have specified a province for your query on CDN data within mainland China, you cannot specify an ISP or an IP protocol for the same query.
      */
     public void setDistrict(Long District) {

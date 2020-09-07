@@ -247,6 +247,27 @@ global: global acceleration
     private UserAgentFilter UserAgentFilter;
 
     /**
+    * Access control
+    */
+    @SerializedName("AccessControl")
+    @Expose
+    private AccessControl AccessControl;
+
+    /**
+    * URL redirect configuration
+    */
+    @SerializedName("UrlRedirect")
+    @Expose
+    private UrlRedirect UrlRedirect;
+
+    /**
+    * Access port configuration
+    */
+    @SerializedName("AccessPort")
+    @Expose
+    private Long [] AccessPort;
+
+    /**
      * Get Domain name 
      * @return Domain Domain name
      */
@@ -771,6 +792,54 @@ global: global acceleration
     }
 
     /**
+     * Get Access control 
+     * @return AccessControl Access control
+     */
+    public AccessControl getAccessControl() {
+        return this.AccessControl;
+    }
+
+    /**
+     * Set Access control
+     * @param AccessControl Access control
+     */
+    public void setAccessControl(AccessControl AccessControl) {
+        this.AccessControl = AccessControl;
+    }
+
+    /**
+     * Get URL redirect configuration 
+     * @return UrlRedirect URL redirect configuration
+     */
+    public UrlRedirect getUrlRedirect() {
+        return this.UrlRedirect;
+    }
+
+    /**
+     * Set URL redirect configuration
+     * @param UrlRedirect URL redirect configuration
+     */
+    public void setUrlRedirect(UrlRedirect UrlRedirect) {
+        this.UrlRedirect = UrlRedirect;
+    }
+
+    /**
+     * Get Access port configuration 
+     * @return AccessPort Access port configuration
+     */
+    public Long [] getAccessPort() {
+        return this.AccessPort;
+    }
+
+    /**
+     * Set Access port configuration
+     * @param AccessPort Access port configuration
+     */
+    public void setAccessPort(Long [] AccessPort) {
+        this.AccessPort = AccessPort;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -805,6 +874,9 @@ global: global acceleration
         this.setParamObj(map, prefix + "OriginPullTimeout.", this.OriginPullTimeout);
         this.setParamObj(map, prefix + "AwsPrivateAccess.", this.AwsPrivateAccess);
         this.setParamObj(map, prefix + "UserAgentFilter.", this.UserAgentFilter);
+        this.setParamObj(map, prefix + "AccessControl.", this.AccessControl);
+        this.setParamObj(map, prefix + "UrlRedirect.", this.UrlRedirect);
+        this.setParamArraySimple(map, prefix + "AccessPort.", this.AccessPort);
 
     }
 }

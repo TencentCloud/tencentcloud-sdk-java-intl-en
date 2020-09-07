@@ -30,11 +30,18 @@ public class AvailableType extends AbstractModel{
     private AvailableProtoStatus [] Protocols;
 
     /**
-    * Storage class. Valid values: SD (standard), HP (high-performance)
+    * Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage)
     */
     @SerializedName("Type")
     @Expose
     private String Type;
+
+    /**
+    * Indicates whether prepaid is supported. `true`: yes; `false`: no
+    */
+    @SerializedName("Prepayment")
+    @Expose
+    private Boolean Prepayment;
 
     /**
      * Get Protocol and sale details 
@@ -53,19 +60,35 @@ public class AvailableType extends AbstractModel{
     }
 
     /**
-     * Get Storage class. Valid values: SD (standard), HP (high-performance) 
-     * @return Type Storage class. Valid values: SD (standard), HP (high-performance)
+     * Get Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage) 
+     * @return Type Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage)
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Storage class. Valid values: SD (standard), HP (high-performance)
-     * @param Type Storage class. Valid values: SD (standard), HP (high-performance)
+     * Set Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage)
+     * @param Type Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage)
      */
     public void setType(String Type) {
         this.Type = Type;
+    }
+
+    /**
+     * Get Indicates whether prepaid is supported. `true`: yes; `false`: no 
+     * @return Prepayment Indicates whether prepaid is supported. `true`: yes; `false`: no
+     */
+    public Boolean getPrepayment() {
+        return this.Prepayment;
+    }
+
+    /**
+     * Set Indicates whether prepaid is supported. `true`: yes; `false`: no
+     * @param Prepayment Indicates whether prepaid is supported. `true`: yes; `false`: no
+     */
+    public void setPrepayment(Boolean Prepayment) {
+        this.Prepayment = Prepayment;
     }
 
     /**
@@ -74,6 +97,7 @@ public class AvailableType extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Protocols.", this.Protocols);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Prepayment", this.Prepayment);
 
     }
 }

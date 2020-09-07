@@ -30,7 +30,7 @@ public class DBInstanceNetInfo extends AbstractModel{
     private String Address;
 
     /**
-    * IP address
+    * Ip
     */
     @SerializedName("Ip")
     @Expose
@@ -44,7 +44,7 @@ public class DBInstanceNetInfo extends AbstractModel{
     private Long Port;
 
     /**
-    * Network type. Valid values: inner (private address of classic network), private (private address of VPC), public (public address of classic network/VPC)
+    * Network type. 1: inner (private network address), 2: public (public network address)
     */
     @SerializedName("NetType")
     @Expose
@@ -74,16 +74,16 @@ public class DBInstanceNetInfo extends AbstractModel{
     }
 
     /**
-     * Get IP address 
-     * @return Ip IP address
+     * Get Ip 
+     * @return Ip Ip
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set IP address
-     * @param Ip IP address
+     * Set Ip
+     * @param Ip Ip
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
@@ -106,16 +106,16 @@ public class DBInstanceNetInfo extends AbstractModel{
     }
 
     /**
-     * Get Network type. Valid values: inner (private address of classic network), private (private address of VPC), public (public address of classic network/VPC) 
-     * @return NetType Network type. Valid values: inner (private address of classic network), private (private address of VPC), public (public address of classic network/VPC)
+     * Get Network type. 1: inner (private network address), 2: public (public network address) 
+     * @return NetType Network type. 1: inner (private network address), 2: public (public network address)
      */
     public String getNetType() {
         return this.NetType;
     }
 
     /**
-     * Set Network type. Valid values: inner (private address of classic network), private (private address of VPC), public (public address of classic network/VPC)
-     * @param NetType Network type. Valid values: inner (private address of classic network), private (private address of VPC), public (public address of classic network/VPC)
+     * Set Network type. 1: inner (private network address), 2: public (public network address)
+     * @param NetType Network type. 1: inner (private network address), 2: public (public network address)
      */
     public void setNetType(String NetType) {
         this.NetType = NetType;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeDBInstancesRequest extends AbstractModel{
 
     /**
-    * Filter. Valid values: db-instance-id, db-instance-name
+    * Filter condition. Valid values: db-instance-id, db-instance-name, db-project-id, db-pay-mode, db-tag-key.
     */
     @SerializedName("Filters")
     @Expose
@@ -58,16 +58,16 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     private String OrderByType;
 
     /**
-     * Get Filter. Valid values: db-instance-id, db-instance-name 
-     * @return Filters Filter. Valid values: db-instance-id, db-instance-name
+     * Get Filter condition. Valid values: db-instance-id, db-instance-name, db-project-id, db-pay-mode, db-tag-key. 
+     * @return Filters Filter condition. Valid values: db-instance-id, db-instance-name, db-project-id, db-pay-mode, db-tag-key.
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter. Valid values: db-instance-id, db-instance-name
-     * @param Filters Filter. Valid values: db-instance-id, db-instance-name
+     * Set Filter condition. Valid values: db-instance-id, db-instance-name, db-project-id, db-pay-mode, db-tag-key.
+     * @param Filters Filter condition. Valid values: db-instance-id, db-instance-name, db-project-id, db-pay-mode, db-tag-key.
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

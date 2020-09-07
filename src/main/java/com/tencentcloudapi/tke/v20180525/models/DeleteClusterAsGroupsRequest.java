@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DeleteClusterAsGroupsRequest extends AbstractModel{
 
     /**
-    * The cluster ID, obtained through the [DescribeClusters](https://cloud.tencent.com/document/api/457/31862) API.
+    * The cluster ID, obtained through the [DescribeClusters](https://intl.cloud.tencent.com/document/api/457/31862?from_cn_redirect=1) API.
     */
     @SerializedName("ClusterId")
     @Expose
@@ -44,16 +44,16 @@ public class DeleteClusterAsGroupsRequest extends AbstractModel{
     private Boolean KeepInstance;
 
     /**
-     * Get The cluster ID, obtained through the [DescribeClusters](https://cloud.tencent.com/document/api/457/31862) API. 
-     * @return ClusterId The cluster ID, obtained through the [DescribeClusters](https://cloud.tencent.com/document/api/457/31862) API.
+     * Get The cluster ID, obtained through the [DescribeClusters](https://intl.cloud.tencent.com/document/api/457/31862?from_cn_redirect=1) API. 
+     * @return ClusterId The cluster ID, obtained through the [DescribeClusters](https://intl.cloud.tencent.com/document/api/457/31862?from_cn_redirect=1) API.
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set The cluster ID, obtained through the [DescribeClusters](https://cloud.tencent.com/document/api/457/31862) API.
-     * @param ClusterId The cluster ID, obtained through the [DescribeClusters](https://cloud.tencent.com/document/api/457/31862) API.
+     * Set The cluster ID, obtained through the [DescribeClusters](https://intl.cloud.tencent.com/document/api/457/31862?from_cn_redirect=1) API.
+     * @param ClusterId The cluster ID, obtained through the [DescribeClusters](https://intl.cloud.tencent.com/document/api/457/31862?from_cn_redirect=1) API.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;

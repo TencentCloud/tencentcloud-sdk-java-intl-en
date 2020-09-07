@@ -47,7 +47,7 @@ Default value: 20.
     private String TopIndex;
 
     /**
-    * Sorting metric. Valid values: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
+    * Sorting metric. Valid values: AvgFluxPerSecond (sort by average traffic per second), TotalRequest (sort by total requests), TotalFlux (sort by total traffic). Default value: TotalRequest.
     */
     @SerializedName("OrderParam")
     @Expose
@@ -142,16 +142,16 @@ Default value: 20.
     }
 
     /**
-     * Get Sorting metric. Valid values: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux". 
-     * @return OrderParam Sorting metric. Valid values: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
+     * Get Sorting metric. Valid values: AvgFluxPerSecond (sort by average traffic per second), TotalRequest (sort by total requests), TotalFlux (sort by total traffic). Default value: TotalRequest. 
+     * @return OrderParam Sorting metric. Valid values: AvgFluxPerSecond (sort by average traffic per second), TotalRequest (sort by total requests), TotalFlux (sort by total traffic). Default value: TotalRequest.
      */
     public String getOrderParam() {
         return this.OrderParam;
     }
 
     /**
-     * Set Sorting metric. Valid values: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
-     * @param OrderParam Sorting metric. Valid values: "AvgFluxPerSecond", "TotalRequest" (default), "TotalFlux".
+     * Set Sorting metric. Valid values: AvgFluxPerSecond (sort by average traffic per second), TotalRequest (sort by total requests), TotalFlux (sort by total traffic). Default value: TotalRequest.
+     * @param OrderParam Sorting metric. Valid values: AvgFluxPerSecond (sort by average traffic per second), TotalRequest (sort by total requests), TotalFlux (sort by total traffic). Default value: TotalRequest.
      */
     public void setOrderParam(String OrderParam) {
         this.OrderParam = OrderParam;

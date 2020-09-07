@@ -24,7 +24,7 @@ public class DescribeLiveSnapshotTemplateRequest extends AbstractModel{
 
     /**
     * Template ID.
-Template ID returned by the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
+Template ID returned by the [CreateLiveSnapshotTemplate](https://intl.cloud.tencent.com/document/product/267/32624?from_cn_redirect=1) API call.
     */
     @SerializedName("TemplateId")
     @Expose
@@ -32,9 +32,9 @@ Template ID returned by the [CreateLiveSnapshotTemplate](/document/product/267/3
 
     /**
      * Get Template ID.
-Template ID returned by the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call. 
+Template ID returned by the [CreateLiveSnapshotTemplate](https://intl.cloud.tencent.com/document/product/267/32624?from_cn_redirect=1) API call. 
      * @return TemplateId Template ID.
-Template ID returned by the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
+Template ID returned by the [CreateLiveSnapshotTemplate](https://intl.cloud.tencent.com/document/product/267/32624?from_cn_redirect=1) API call.
      */
     public Long getTemplateId() {
         return this.TemplateId;
@@ -42,9 +42,9 @@ Template ID returned by the [CreateLiveSnapshotTemplate](/document/product/267/3
 
     /**
      * Set Template ID.
-Template ID returned by the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
+Template ID returned by the [CreateLiveSnapshotTemplate](https://intl.cloud.tencent.com/document/product/267/32624?from_cn_redirect=1) API call.
      * @param TemplateId Template ID.
-Template ID returned by the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
+Template ID returned by the [CreateLiveSnapshotTemplate](https://intl.cloud.tencent.com/document/product/267/32624?from_cn_redirect=1) API call.
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;

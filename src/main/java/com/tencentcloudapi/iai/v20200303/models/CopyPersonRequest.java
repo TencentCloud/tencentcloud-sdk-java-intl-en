@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class CopyPersonRequest extends AbstractModel{
 
     /**
-    * Person ID
+    * Person ID, which is the `PersonId` in the `CreatePerson` API
     */
     @SerializedName("PersonId")
     @Expose
     private String PersonId;
 
     /**
-    * List of the groups to add to.
+    * List of groups to join. The array element value is the `GroupId` in the `CreateGroup` API.
     */
     @SerializedName("GroupIds")
     @Expose
     private String [] GroupIds;
 
     /**
-     * Get Person ID 
-     * @return PersonId Person ID
+     * Get Person ID, which is the `PersonId` in the `CreatePerson` API 
+     * @return PersonId Person ID, which is the `PersonId` in the `CreatePerson` API
      */
     public String getPersonId() {
         return this.PersonId;
     }
 
     /**
-     * Set Person ID
-     * @param PersonId Person ID
+     * Set Person ID, which is the `PersonId` in the `CreatePerson` API
+     * @param PersonId Person ID, which is the `PersonId` in the `CreatePerson` API
      */
     public void setPersonId(String PersonId) {
         this.PersonId = PersonId;
     }
 
     /**
-     * Get List of the groups to add to. 
-     * @return GroupIds List of the groups to add to.
+     * Get List of groups to join. The array element value is the `GroupId` in the `CreateGroup` API. 
+     * @return GroupIds List of groups to join. The array element value is the `GroupId` in the `CreateGroup` API.
      */
     public String [] getGroupIds() {
         return this.GroupIds;
     }
 
     /**
-     * Set List of the groups to add to.
-     * @param GroupIds List of the groups to add to.
+     * Set List of groups to join. The array element value is the `GroupId` in the `CreateGroup` API.
+     * @param GroupIds List of groups to join. The array element value is the `GroupId` in the `CreateGroup` API.
      */
     public void setGroupIds(String [] GroupIds) {
         this.GroupIds = GroupIds;

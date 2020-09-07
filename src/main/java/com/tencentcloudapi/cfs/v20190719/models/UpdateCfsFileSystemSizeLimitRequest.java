@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class UpdateCfsFileSystemSizeLimitRequest extends AbstractModel{
 
     /**
-    * File system capacity limit in GB. Value range: 0–1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
+    * File system capacity limit in GB. Value range: 0-1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
     */
     @SerializedName("FsLimit")
     @Expose
@@ -37,16 +37,16 @@ public class UpdateCfsFileSystemSizeLimitRequest extends AbstractModel{
     private String FileSystemId;
 
     /**
-     * Get File system capacity limit in GB. Value range: 0–1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity. 
-     * @return FsLimit File system capacity limit in GB. Value range: 0–1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
+     * Get File system capacity limit in GB. Value range: 0-1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity. 
+     * @return FsLimit File system capacity limit in GB. Value range: 0-1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
      */
     public Long getFsLimit() {
         return this.FsLimit;
     }
 
     /**
-     * Set File system capacity limit in GB. Value range: 0–1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
-     * @param FsLimit File system capacity limit in GB. Value range: 0–1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
+     * Set File system capacity limit in GB. Value range: 0-1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
+     * @param FsLimit File system capacity limit in GB. Value range: 0-1,073,741,824. If 0 is entered, no limit will be imposed on the file system capacity.
      */
     public void setFsLimit(Long FsLimit) {
         this.FsLimit = FsLimit;

@@ -49,6 +49,13 @@ Default value: `mainland`. You can prefetch a URL to nodes in a region provided 
     private String Area;
 
     /**
+    * If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node
+    */
+    @SerializedName("Layer")
+    @Expose
+    private String Layer;
+
+    /**
      * Get List of URLs. The protocol header such as "http://" or "https://" needs to be included. 
      * @return Urls List of URLs. The protocol header such as "http://" or "https://" needs to be included.
      */
@@ -117,12 +124,29 @@ Default value: `mainland`. You can prefetch a URL to nodes in a region provided 
     }
 
     /**
+     * Get If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node 
+     * @return Layer If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node
+     */
+    public String getLayer() {
+        return this.Layer;
+    }
+
+    /**
+     * Set If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node
+     * @param Layer If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node
+     */
+    public void setLayer(String Layer) {
+        this.Layer = Layer;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Urls.", this.Urls);
         this.setParamSimple(map, prefix + "UserAgent", this.UserAgent);
         this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamSimple(map, prefix + "Layer", this.Layer);
 
     }
 }

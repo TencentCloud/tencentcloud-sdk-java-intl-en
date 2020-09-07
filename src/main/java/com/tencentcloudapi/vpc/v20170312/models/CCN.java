@@ -95,6 +95,13 @@ Note: This field may return null, indicating no valid value.
     private Tag [] TagSet;
 
     /**
+    * Whether the CCN route priority feature is supported. Valid values: False: do not support; True: support.
+    */
+    @SerializedName("RoutePriorityFlag")
+    @Expose
+    private Boolean RoutePriorityFlag;
+
+    /**
      * Get The unique ID of the CCN 
      * @return CcnId The unique ID of the CCN
      */
@@ -263,6 +270,22 @@ Note: This field may return null, indicating no valid value.
     }
 
     /**
+     * Get Whether the CCN route priority feature is supported. Valid values: False: do not support; True: support. 
+     * @return RoutePriorityFlag Whether the CCN route priority feature is supported. Valid values: False: do not support; True: support.
+     */
+    public Boolean getRoutePriorityFlag() {
+        return this.RoutePriorityFlag;
+    }
+
+    /**
+     * Set Whether the CCN route priority feature is supported. Valid values: False: do not support; True: support.
+     * @param RoutePriorityFlag Whether the CCN route priority feature is supported. Valid values: False: do not support; True: support.
+     */
+    public void setRoutePriorityFlag(Boolean RoutePriorityFlag) {
+        this.RoutePriorityFlag = RoutePriorityFlag;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -276,6 +299,7 @@ Note: This field may return null, indicating no valid value.
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamSimple(map, prefix + "BandwidthLimitType", this.BandwidthLimitType);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+        this.setParamSimple(map, prefix + "RoutePriorityFlag", this.RoutePriorityFlag);
 
     }
 }

@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iai.v20200303.models;
+package com.tencentcloudapi.cfs.v20190719.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetCheckSimilarPersonJobIdListResponse extends AbstractModel{
+public class DescribeCfsFileSystemClientsResponse extends AbstractModel{
 
     /**
-    * List of duplicate person check task information.
+    * Client list
     */
-    @SerializedName("JobIdInfos")
+    @SerializedName("ClientList")
     @Expose
-    private JobIdInfo [] JobIdInfos;
-
-    /**
-    * Total number of duplicate check tasks.
-    */
-    @SerializedName("JobIdNum")
-    @Expose
-    private Long JobIdNum;
+    private FileSystemClient [] ClientList;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -44,35 +37,19 @@ public class GetCheckSimilarPersonJobIdListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get List of duplicate person check task information. 
-     * @return JobIdInfos List of duplicate person check task information.
+     * Get Client list 
+     * @return ClientList Client list
      */
-    public JobIdInfo [] getJobIdInfos() {
-        return this.JobIdInfos;
+    public FileSystemClient [] getClientList() {
+        return this.ClientList;
     }
 
     /**
-     * Set List of duplicate person check task information.
-     * @param JobIdInfos List of duplicate person check task information.
+     * Set Client list
+     * @param ClientList Client list
      */
-    public void setJobIdInfos(JobIdInfo [] JobIdInfos) {
-        this.JobIdInfos = JobIdInfos;
-    }
-
-    /**
-     * Get Total number of duplicate check tasks. 
-     * @return JobIdNum Total number of duplicate check tasks.
-     */
-    public Long getJobIdNum() {
-        return this.JobIdNum;
-    }
-
-    /**
-     * Set Total number of duplicate check tasks.
-     * @param JobIdNum Total number of duplicate check tasks.
-     */
-    public void setJobIdNum(Long JobIdNum) {
-        this.JobIdNum = JobIdNum;
+    public void setClientList(FileSystemClient [] ClientList) {
+        this.ClientList = ClientList;
     }
 
     /**
@@ -95,8 +72,7 @@ public class GetCheckSimilarPersonJobIdListResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "JobIdInfos.", this.JobIdInfos);
-        this.setParamSimple(map, prefix + "JobIdNum", this.JobIdNum);
+        this.setParamArrayObj(map, prefix + "ClientList.", this.ClientList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

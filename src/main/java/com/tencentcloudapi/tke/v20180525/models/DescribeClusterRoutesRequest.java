@@ -30,6 +30,13 @@ public class DescribeClusterRoutesRequest extends AbstractModel{
     private String RouteTableName;
 
     /**
+    * Filtering conditions, which are optional. Currently, only filtering by GatewayIP is supported.
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
      * Get Route table name. 
      * @return RouteTableName Route table name.
      */
@@ -46,10 +53,27 @@ public class DescribeClusterRoutesRequest extends AbstractModel{
     }
 
     /**
+     * Get Filtering conditions, which are optional. Currently, only filtering by GatewayIP is supported. 
+     * @return Filters Filtering conditions, which are optional. Currently, only filtering by GatewayIP is supported.
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set Filtering conditions, which are optional. Currently, only filtering by GatewayIP is supported.
+     * @param Filters Filtering conditions, which are optional. Currently, only filtering by GatewayIP is supported.
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RouteTableName", this.RouteTableName);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

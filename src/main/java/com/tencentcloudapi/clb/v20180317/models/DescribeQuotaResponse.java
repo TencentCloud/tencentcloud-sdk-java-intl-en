@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iai.v20200303.models;
+package com.tencentcloudapi.clb.v20180317.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EstimateCheckSimilarPersonCostTimeResponse extends AbstractModel{
+public class DescribeQuotaResponse extends AbstractModel{
 
     /**
-    * Estimated duration of duplicate person check task in minutes.
+    * Quota list
     */
-    @SerializedName("EstimatedTimeCost")
+    @SerializedName("QuotaSet")
     @Expose
-    private Long EstimatedTimeCost;
+    private Quota [] QuotaSet;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +37,19 @@ public class EstimateCheckSimilarPersonCostTimeResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Estimated duration of duplicate person check task in minutes. 
-     * @return EstimatedTimeCost Estimated duration of duplicate person check task in minutes.
+     * Get Quota list 
+     * @return QuotaSet Quota list
      */
-    public Long getEstimatedTimeCost() {
-        return this.EstimatedTimeCost;
+    public Quota [] getQuotaSet() {
+        return this.QuotaSet;
     }
 
     /**
-     * Set Estimated duration of duplicate person check task in minutes.
-     * @param EstimatedTimeCost Estimated duration of duplicate person check task in minutes.
+     * Set Quota list
+     * @param QuotaSet Quota list
      */
-    public void setEstimatedTimeCost(Long EstimatedTimeCost) {
-        this.EstimatedTimeCost = EstimatedTimeCost;
+    public void setQuotaSet(Quota [] QuotaSet) {
+        this.QuotaSet = QuotaSet;
     }
 
     /**
@@ -72,7 +72,7 @@ public class EstimateCheckSimilarPersonCostTimeResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "EstimatedTimeCost", this.EstimatedTimeCost);
+        this.setParamArrayObj(map, prefix + "QuotaSet.", this.QuotaSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

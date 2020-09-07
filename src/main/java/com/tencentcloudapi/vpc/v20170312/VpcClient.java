@@ -203,6 +203,24 @@ This API is completed asynchronously. If you need to query the async execution r
     }
 
     /**
+     *This API is used to bind a direct connect gateway with a NAT gateway,  and direct its default route to the NAT Gateway.
+     * @param req AssociateDirectConnectGatewayNatGatewayRequest
+     * @return AssociateDirectConnectGatewayNatGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssociateDirectConnectGatewayNatGatewayResponse AssociateDirectConnectGatewayNatGateway(AssociateDirectConnectGatewayNatGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AssociateDirectConnectGatewayNatGatewayResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AssociateDirectConnectGatewayNatGatewayResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AssociateDirectConnectGatewayNatGateway"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to bind an EIP to NAT Gateway.
      * @param req AssociateNatGatewayAddressRequest
      * @return AssociateNatGatewayAddressResponse
@@ -2336,6 +2354,24 @@ After unbinding the network instance, the corresponding routing policy will also
                 Type type = new TypeToken<JsonResponseModel<DisassociateAddressResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DisassociateAddress"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to unbind a direct connect gateway from a NAT Gateway. After unbinding, the direct connect gateway cannot access internet through the NAT Gateway.
+     * @param req DisassociateDirectConnectGatewayNatGatewayRequest
+     * @return DisassociateDirectConnectGatewayNatGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisassociateDirectConnectGatewayNatGatewayResponse DisassociateDirectConnectGatewayNatGateway(DisassociateDirectConnectGatewayNatGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisassociateDirectConnectGatewayNatGatewayResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisassociateDirectConnectGatewayNatGatewayResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DisassociateDirectConnectGatewayNatGateway"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

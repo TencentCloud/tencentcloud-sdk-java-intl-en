@@ -80,7 +80,7 @@ public class ModifyLiveCallbackTemplateRequest extends AbstractModel{
 
     /**
     * Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
-[Event Message Notification](/document/product/267/32744).
+[Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
     */
     @SerializedName("CallbackKey")
     @Expose
@@ -216,9 +216,9 @@ public class ModifyLiveCallbackTemplateRequest extends AbstractModel{
 
     /**
      * Get Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
-[Event Message Notification](/document/product/267/32744). 
+[Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1). 
      * @return CallbackKey Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
-[Event Message Notification](/document/product/267/32744).
+[Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
      */
     public String getCallbackKey() {
         return this.CallbackKey;
@@ -226,9 +226,9 @@ public class ModifyLiveCallbackTemplateRequest extends AbstractModel{
 
     /**
      * Set Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
-[Event Message Notification](/document/product/267/32744).
+[Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
      * @param CallbackKey Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
-[Event Message Notification](/document/product/267/32744).
+[Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
      */
     public void setCallbackKey(String CallbackKey) {
         this.CallbackKey = CallbackKey;

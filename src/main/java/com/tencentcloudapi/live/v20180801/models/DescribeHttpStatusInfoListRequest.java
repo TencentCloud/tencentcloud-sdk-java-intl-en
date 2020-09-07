@@ -23,18 +23,17 @@ import java.util.HashMap;
 public class DescribeHttpStatusInfoListRequest extends AbstractModel{
 
     /**
-    * Start time (Beijing time),
-In the format of `yyyy-mm-dd HH:MM:SS`.
-`StartTime` cannot be more than 3 months ago.
+    * Start time (Beijing time).
+Format: yyyy-mm-dd HH:MM:SS.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time (Beijing time),
-In the format of `yyyy-mm-dd HH:MM:SS`.
-Note: `EndTime` and `StartTime` only support querying data for the last day.
+    * End time (Beijing time).
+Format: yyyy-mm-dd HH:MM:SS.
+Note: data in the last 3 months can be queried and the query period is up to 1 day.
     */
     @SerializedName("EndTime")
     @Expose
@@ -48,48 +47,44 @@ Note: `EndTime` and `StartTime` only support querying data for the last day.
     private String [] PlayDomains;
 
     /**
-     * Get Start time (Beijing time),
-In the format of `yyyy-mm-dd HH:MM:SS`.
-`StartTime` cannot be more than 3 months ago. 
-     * @return StartTime Start time (Beijing time),
-In the format of `yyyy-mm-dd HH:MM:SS`.
-`StartTime` cannot be more than 3 months ago.
+     * Get Start time (Beijing time).
+Format: yyyy-mm-dd HH:MM:SS. 
+     * @return StartTime Start time (Beijing time).
+Format: yyyy-mm-dd HH:MM:SS.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time (Beijing time),
-In the format of `yyyy-mm-dd HH:MM:SS`.
-`StartTime` cannot be more than 3 months ago.
-     * @param StartTime Start time (Beijing time),
-In the format of `yyyy-mm-dd HH:MM:SS`.
-`StartTime` cannot be more than 3 months ago.
+     * Set Start time (Beijing time).
+Format: yyyy-mm-dd HH:MM:SS.
+     * @param StartTime Start time (Beijing time).
+Format: yyyy-mm-dd HH:MM:SS.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time (Beijing time),
-In the format of `yyyy-mm-dd HH:MM:SS`.
-Note: `EndTime` and `StartTime` only support querying data for the last day. 
-     * @return EndTime End time (Beijing time),
-In the format of `yyyy-mm-dd HH:MM:SS`.
-Note: `EndTime` and `StartTime` only support querying data for the last day.
+     * Get End time (Beijing time).
+Format: yyyy-mm-dd HH:MM:SS.
+Note: data in the last 3 months can be queried and the query period is up to 1 day. 
+     * @return EndTime End time (Beijing time).
+Format: yyyy-mm-dd HH:MM:SS.
+Note: data in the last 3 months can be queried and the query period is up to 1 day.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time (Beijing time),
-In the format of `yyyy-mm-dd HH:MM:SS`.
-Note: `EndTime` and `StartTime` only support querying data for the last day.
-     * @param EndTime End time (Beijing time),
-In the format of `yyyy-mm-dd HH:MM:SS`.
-Note: `EndTime` and `StartTime` only support querying data for the last day.
+     * Set End time (Beijing time).
+Format: yyyy-mm-dd HH:MM:SS.
+Note: data in the last 3 months can be queried and the query period is up to 1 day.
+     * @param EndTime End time (Beijing time).
+Format: yyyy-mm-dd HH:MM:SS.
+Note: data in the last 3 months can be queried and the query period is up to 1 day.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

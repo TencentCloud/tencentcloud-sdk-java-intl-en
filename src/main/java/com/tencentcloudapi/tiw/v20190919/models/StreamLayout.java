@@ -23,97 +23,110 @@ import java.util.HashMap;
 public class StreamLayout extends AbstractModel{
 
     /**
-    * Stream layout configuration
+    * 
     */
     @SerializedName("LayoutParams")
     @Expose
     private LayoutParams LayoutParams;
 
     /**
-    * Video stream ID
-Description of possible stream ID values:
-1. tic_record_user: the current picture is used to display the whiteboard video stream.
-2. tic_substream: the current picture is used to display the auxiliary video stream.
-3. Specific user ID: the current picture is used to display the video stream of a specific user.
-4. Left empty: the current picture is vacant for new video stream.
+    * 
     */
     @SerializedName("InputStreamId")
     @Expose
     private String InputStreamId;
 
     /**
-    * Background color, which is black by default. Its format is RGB, for example, "#FF0000" for the red color.
+    * 
     */
     @SerializedName("BackgroundColor")
     @Expose
     private String BackgroundColor;
 
     /**
-     * Get Stream layout configuration 
-     * @return LayoutParams Stream layout configuration
+    * Video filling mode.
+
+0: self-adaption mode. Scales the video proportionally to completely display it in the specified area. In this mode, there may be black bars.
+1: full-screen mode. Scales the video to make it fill the entire specified area. In this mode, no black bars will appear, but the video may not be displayed fully.
+    */
+    @SerializedName("FillMode")
+    @Expose
+    private Long FillMode;
+
+    /**
+     * Get  
+     * @return LayoutParams 
      */
     public LayoutParams getLayoutParams() {
         return this.LayoutParams;
     }
 
     /**
-     * Set Stream layout configuration
-     * @param LayoutParams Stream layout configuration
+     * Set 
+     * @param LayoutParams 
      */
     public void setLayoutParams(LayoutParams LayoutParams) {
         this.LayoutParams = LayoutParams;
     }
 
     /**
-     * Get Video stream ID
-Description of possible stream ID values:
-1. tic_record_user: the current picture is used to display the whiteboard video stream.
-2. tic_substream: the current picture is used to display the auxiliary video stream.
-3. Specific user ID: the current picture is used to display the video stream of a specific user.
-4. Left empty: the current picture is vacant for new video stream. 
-     * @return InputStreamId Video stream ID
-Description of possible stream ID values:
-1. tic_record_user: the current picture is used to display the whiteboard video stream.
-2. tic_substream: the current picture is used to display the auxiliary video stream.
-3. Specific user ID: the current picture is used to display the video stream of a specific user.
-4. Left empty: the current picture is vacant for new video stream.
+     * Get  
+     * @return InputStreamId 
      */
     public String getInputStreamId() {
         return this.InputStreamId;
     }
 
     /**
-     * Set Video stream ID
-Description of possible stream ID values:
-1. tic_record_user: the current picture is used to display the whiteboard video stream.
-2. tic_substream: the current picture is used to display the auxiliary video stream.
-3. Specific user ID: the current picture is used to display the video stream of a specific user.
-4. Left empty: the current picture is vacant for new video stream.
-     * @param InputStreamId Video stream ID
-Description of possible stream ID values:
-1. tic_record_user: the current picture is used to display the whiteboard video stream.
-2. tic_substream: the current picture is used to display the auxiliary video stream.
-3. Specific user ID: the current picture is used to display the video stream of a specific user.
-4. Left empty: the current picture is vacant for new video stream.
+     * Set 
+     * @param InputStreamId 
      */
     public void setInputStreamId(String InputStreamId) {
         this.InputStreamId = InputStreamId;
     }
 
     /**
-     * Get Background color, which is black by default. Its format is RGB, for example, "#FF0000" for the red color. 
-     * @return BackgroundColor Background color, which is black by default. Its format is RGB, for example, "#FF0000" for the red color.
+     * Get  
+     * @return BackgroundColor 
      */
     public String getBackgroundColor() {
         return this.BackgroundColor;
     }
 
     /**
-     * Set Background color, which is black by default. Its format is RGB, for example, "#FF0000" for the red color.
-     * @param BackgroundColor Background color, which is black by default. Its format is RGB, for example, "#FF0000" for the red color.
+     * Set 
+     * @param BackgroundColor 
      */
     public void setBackgroundColor(String BackgroundColor) {
         this.BackgroundColor = BackgroundColor;
+    }
+
+    /**
+     * Get Video filling mode.
+
+0: self-adaption mode. Scales the video proportionally to completely display it in the specified area. In this mode, there may be black bars.
+1: full-screen mode. Scales the video to make it fill the entire specified area. In this mode, no black bars will appear, but the video may not be displayed fully. 
+     * @return FillMode Video filling mode.
+
+0: self-adaption mode. Scales the video proportionally to completely display it in the specified area. In this mode, there may be black bars.
+1: full-screen mode. Scales the video to make it fill the entire specified area. In this mode, no black bars will appear, but the video may not be displayed fully.
+     */
+    public Long getFillMode() {
+        return this.FillMode;
+    }
+
+    /**
+     * Set Video filling mode.
+
+0: self-adaption mode. Scales the video proportionally to completely display it in the specified area. In this mode, there may be black bars.
+1: full-screen mode. Scales the video to make it fill the entire specified area. In this mode, no black bars will appear, but the video may not be displayed fully.
+     * @param FillMode Video filling mode.
+
+0: self-adaption mode. Scales the video proportionally to completely display it in the specified area. In this mode, there may be black bars.
+1: full-screen mode. Scales the video to make it fill the entire specified area. In this mode, no black bars will appear, but the video may not be displayed fully.
+     */
+    public void setFillMode(Long FillMode) {
+        this.FillMode = FillMode;
     }
 
     /**
@@ -123,6 +136,7 @@ Description of possible stream ID values:
         this.setParamObj(map, prefix + "LayoutParams.", this.LayoutParams);
         this.setParamSimple(map, prefix + "InputStreamId", this.InputStreamId);
         this.setParamSimple(map, prefix + "BackgroundColor", this.BackgroundColor);
+        this.setParamSimple(map, prefix + "FillMode", this.FillMode);
 
     }
 }

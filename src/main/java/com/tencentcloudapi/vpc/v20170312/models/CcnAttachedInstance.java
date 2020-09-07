@@ -105,6 +105,13 @@ public class CcnAttachedInstance extends AbstractModel{
     private String CcnUin;
 
     /**
+    * General location of the associated instance, such as CHINA_MAINLAND.
+    */
+    @SerializedName("InstanceArea")
+    @Expose
+    private String InstanceArea;
+
+    /**
      * Get The ID of a CCN instance. 
      * @return CcnId The ID of a CCN instance.
      */
@@ -313,6 +320,22 @@ public class CcnAttachedInstance extends AbstractModel{
     }
 
     /**
+     * Get General location of the associated instance, such as CHINA_MAINLAND. 
+     * @return InstanceArea General location of the associated instance, such as CHINA_MAINLAND.
+     */
+    public String getInstanceArea() {
+        return this.InstanceArea;
+    }
+
+    /**
+     * Set General location of the associated instance, such as CHINA_MAINLAND.
+     * @param InstanceArea General location of the associated instance, such as CHINA_MAINLAND.
+     */
+    public void setInstanceArea(String InstanceArea) {
+        this.InstanceArea = InstanceArea;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -326,6 +349,7 @@ public class CcnAttachedInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "State", this.State);
         this.setParamSimple(map, prefix + "AttachedTime", this.AttachedTime);
         this.setParamSimple(map, prefix + "CcnUin", this.CcnUin);
+        this.setParamSimple(map, prefix + "InstanceArea", this.InstanceArea);
 
     }
 }

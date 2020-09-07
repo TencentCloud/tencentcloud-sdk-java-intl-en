@@ -40,14 +40,14 @@ Note: `EndTime` and `StartTime` only support querying data for the last day.
     private String EndTime;
 
     /**
-    * Statistics type. Valid values: Province, Isp, CountryOrArea.
+    * Statistics type. Valid values: Province (district), Isp (ISP), CountryOrArea (country or region).
     */
     @SerializedName("StatType")
     @Expose
     private String StatType;
 
     /**
-    * If this parameter is left empty, full data will be queried.
+    * Playback domain name list. If it is left empty, it refers to all playback domain names.
     */
     @SerializedName("PlayDomains")
     @Expose
@@ -126,32 +126,32 @@ Note: `EndTime` and `StartTime` only support querying data for the last day.
     }
 
     /**
-     * Get Statistics type. Valid values: Province, Isp, CountryOrArea. 
-     * @return StatType Statistics type. Valid values: Province, Isp, CountryOrArea.
+     * Get Statistics type. Valid values: Province (district), Isp (ISP), CountryOrArea (country or region). 
+     * @return StatType Statistics type. Valid values: Province (district), Isp (ISP), CountryOrArea (country or region).
      */
     public String getStatType() {
         return this.StatType;
     }
 
     /**
-     * Set Statistics type. Valid values: Province, Isp, CountryOrArea.
-     * @param StatType Statistics type. Valid values: Province, Isp, CountryOrArea.
+     * Set Statistics type. Valid values: Province (district), Isp (ISP), CountryOrArea (country or region).
+     * @param StatType Statistics type. Valid values: Province (district), Isp (ISP), CountryOrArea (country or region).
      */
     public void setStatType(String StatType) {
         this.StatType = StatType;
     }
 
     /**
-     * Get If this parameter is left empty, full data will be queried. 
-     * @return PlayDomains If this parameter is left empty, full data will be queried.
+     * Get Playback domain name list. If it is left empty, it refers to all playback domain names. 
+     * @return PlayDomains Playback domain name list. If it is left empty, it refers to all playback domain names.
      */
     public String [] getPlayDomains() {
         return this.PlayDomains;
     }
 
     /**
-     * Set If this parameter is left empty, full data will be queried.
-     * @param PlayDomains If this parameter is left empty, full data will be queried.
+     * Set Playback domain name list. If it is left empty, it refers to all playback domain names.
+     * @param PlayDomains Playback domain name list. If it is left empty, it refers to all playback domain names.
      */
     public void setPlayDomains(String [] PlayDomains) {
         this.PlayDomains = PlayDomains;

@@ -51,7 +51,20 @@ public class Instance extends AbstractModel{
     private String LaunchConfigurationName;
 
     /**
-    * Lifecycle status. Value range: IN_SERVICE, CREATING, TERMINATING, ATTACHING, DETACHING, ATTACHING_LB, DETACHING_LB
+    * Lifecycle status. Valid values:<br>
+<li>IN_SERVICE: the instance is running.
+<li>CREATING: the instance is being created.
+<li>CREATION_FAILED: the instance fails to be created.
+<li>TERMINATING: the instance is being terminated.
+<li>TERMINATION_FAILED: the instance fails to be terminated.
+<li>ATTACHING: the instance is being bound.
+<li>DETACHING: the instance is being unbound.
+<li>ATTACHING_LB: the instance is being bound to an LB.<li>DETACHING_LB: the instance is being unbound from an LB.
+<li>STARTING: the instance is being started.
+<li>START_FAILED: the instance fails to be started.
+<li>STOPPING: the instance is being stopped.
+<li>STOP_FAILED: the instance fails to be stopped.
+<li>STOPPED: the instance is stopped.
     */
     @SerializedName("LifeCycleState")
     @Expose
@@ -178,16 +191,68 @@ public class Instance extends AbstractModel{
     }
 
     /**
-     * Get Lifecycle status. Value range: IN_SERVICE, CREATING, TERMINATING, ATTACHING, DETACHING, ATTACHING_LB, DETACHING_LB 
-     * @return LifeCycleState Lifecycle status. Value range: IN_SERVICE, CREATING, TERMINATING, ATTACHING, DETACHING, ATTACHING_LB, DETACHING_LB
+     * Get Lifecycle status. Valid values:<br>
+<li>IN_SERVICE: the instance is running.
+<li>CREATING: the instance is being created.
+<li>CREATION_FAILED: the instance fails to be created.
+<li>TERMINATING: the instance is being terminated.
+<li>TERMINATION_FAILED: the instance fails to be terminated.
+<li>ATTACHING: the instance is being bound.
+<li>DETACHING: the instance is being unbound.
+<li>ATTACHING_LB: the instance is being bound to an LB.<li>DETACHING_LB: the instance is being unbound from an LB.
+<li>STARTING: the instance is being started.
+<li>START_FAILED: the instance fails to be started.
+<li>STOPPING: the instance is being stopped.
+<li>STOP_FAILED: the instance fails to be stopped.
+<li>STOPPED: the instance is stopped. 
+     * @return LifeCycleState Lifecycle status. Valid values:<br>
+<li>IN_SERVICE: the instance is running.
+<li>CREATING: the instance is being created.
+<li>CREATION_FAILED: the instance fails to be created.
+<li>TERMINATING: the instance is being terminated.
+<li>TERMINATION_FAILED: the instance fails to be terminated.
+<li>ATTACHING: the instance is being bound.
+<li>DETACHING: the instance is being unbound.
+<li>ATTACHING_LB: the instance is being bound to an LB.<li>DETACHING_LB: the instance is being unbound from an LB.
+<li>STARTING: the instance is being started.
+<li>START_FAILED: the instance fails to be started.
+<li>STOPPING: the instance is being stopped.
+<li>STOP_FAILED: the instance fails to be stopped.
+<li>STOPPED: the instance is stopped.
      */
     public String getLifeCycleState() {
         return this.LifeCycleState;
     }
 
     /**
-     * Set Lifecycle status. Value range: IN_SERVICE, CREATING, TERMINATING, ATTACHING, DETACHING, ATTACHING_LB, DETACHING_LB
-     * @param LifeCycleState Lifecycle status. Value range: IN_SERVICE, CREATING, TERMINATING, ATTACHING, DETACHING, ATTACHING_LB, DETACHING_LB
+     * Set Lifecycle status. Valid values:<br>
+<li>IN_SERVICE: the instance is running.
+<li>CREATING: the instance is being created.
+<li>CREATION_FAILED: the instance fails to be created.
+<li>TERMINATING: the instance is being terminated.
+<li>TERMINATION_FAILED: the instance fails to be terminated.
+<li>ATTACHING: the instance is being bound.
+<li>DETACHING: the instance is being unbound.
+<li>ATTACHING_LB: the instance is being bound to an LB.<li>DETACHING_LB: the instance is being unbound from an LB.
+<li>STARTING: the instance is being started.
+<li>START_FAILED: the instance fails to be started.
+<li>STOPPING: the instance is being stopped.
+<li>STOP_FAILED: the instance fails to be stopped.
+<li>STOPPED: the instance is stopped.
+     * @param LifeCycleState Lifecycle status. Valid values:<br>
+<li>IN_SERVICE: the instance is running.
+<li>CREATING: the instance is being created.
+<li>CREATION_FAILED: the instance fails to be created.
+<li>TERMINATING: the instance is being terminated.
+<li>TERMINATION_FAILED: the instance fails to be terminated.
+<li>ATTACHING: the instance is being bound.
+<li>DETACHING: the instance is being unbound.
+<li>ATTACHING_LB: the instance is being bound to an LB.<li>DETACHING_LB: the instance is being unbound from an LB.
+<li>STARTING: the instance is being started.
+<li>START_FAILED: the instance fails to be started.
+<li>STOPPING: the instance is being stopped.
+<li>STOP_FAILED: the instance fails to be stopped.
+<li>STOPPED: the instance is stopped.
      */
     public void setLifeCycleState(String LifeCycleState) {
         this.LifeCycleState = LifeCycleState;

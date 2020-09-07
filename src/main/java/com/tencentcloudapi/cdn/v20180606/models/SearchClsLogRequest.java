@@ -65,7 +65,7 @@ public class SearchClsLogRequest extends AbstractModel{
     private String Channel;
 
     /**
-    * Content to be queried. For more information, please visit https://cloud.tencent.com/document/product/614/16982
+    * Content to be queried. For more information, please visit https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1
     */
     @SerializedName("Query")
     @Expose
@@ -182,16 +182,16 @@ public class SearchClsLogRequest extends AbstractModel{
     }
 
     /**
-     * Get Content to be queried. For more information, please visit https://cloud.tencent.com/document/product/614/16982 
-     * @return Query Content to be queried. For more information, please visit https://cloud.tencent.com/document/product/614/16982
+     * Get Content to be queried. For more information, please visit https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1 
+     * @return Query Content to be queried. For more information, please visit https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set Content to be queried. For more information, please visit https://cloud.tencent.com/document/product/614/16982
-     * @param Query Content to be queried. For more information, please visit https://cloud.tencent.com/document/product/614/16982
+     * Set Content to be queried. For more information, please visit https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1
+     * @param Query Content to be queried. For more information, please visit https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1
      */
     public void setQuery(String Query) {
         this.Query = Query;

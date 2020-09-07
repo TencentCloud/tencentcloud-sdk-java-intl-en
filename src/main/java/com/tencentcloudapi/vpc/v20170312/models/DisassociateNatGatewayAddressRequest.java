@@ -30,7 +30,7 @@ public class DisassociateNatGatewayAddressRequest extends AbstractModel{
     private String NatGatewayId;
 
     /**
-    * The array of EIPs bound to the NAT gateway.
+    * Array of the EIPs to be unbound from the NAT gateway.
     */
     @SerializedName("PublicIpAddresses")
     @Expose
@@ -53,16 +53,16 @@ public class DisassociateNatGatewayAddressRequest extends AbstractModel{
     }
 
     /**
-     * Get The array of EIPs bound to the NAT gateway. 
-     * @return PublicIpAddresses The array of EIPs bound to the NAT gateway.
+     * Get Array of the EIPs to be unbound from the NAT gateway. 
+     * @return PublicIpAddresses Array of the EIPs to be unbound from the NAT gateway.
      */
     public String [] getPublicIpAddresses() {
         return this.PublicIpAddresses;
     }
 
     /**
-     * Set The array of EIPs bound to the NAT gateway.
-     * @param PublicIpAddresses The array of EIPs bound to the NAT gateway.
+     * Set Array of the EIPs to be unbound from the NAT gateway.
+     * @param PublicIpAddresses Array of the EIPs to be unbound from the NAT gateway.
      */
     public void setPublicIpAddresses(String [] PublicIpAddresses) {
         this.PublicIpAddresses = PublicIpAddresses;

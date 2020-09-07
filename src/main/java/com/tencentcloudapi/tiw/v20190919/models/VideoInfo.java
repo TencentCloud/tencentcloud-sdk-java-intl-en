@@ -65,12 +65,7 @@ public class VideoInfo extends AbstractModel{
     private String VideoId;
 
     /**
-    * Video stream type 
-- 0: camera video 
-- 1: screen-sharing video
-- 2: whiteboard video 
-- 3: mixed stream video
-- 4: audio-only (mp3)
+    * Video stream type - 0: camera video - 1: screen-sharing video - 2: whiteboard video - 3: mixed stream video - 4: audio-only (mp3)
     */
     @SerializedName("VideoType")
     @Expose
@@ -82,6 +77,20 @@ public class VideoInfo extends AbstractModel{
     @SerializedName("UserId")
     @Expose
     private String UserId;
+
+    /**
+    * Width of the video resolution.
+    */
+    @SerializedName("Width")
+    @Expose
+    private Long Width;
+
+    /**
+    * Height of the video resolution.
+    */
+    @SerializedName("Height")
+    @Expose
+    private Long Height;
 
     /**
      * Get Video playback start time, in milliseconds 
@@ -180,36 +189,16 @@ public class VideoInfo extends AbstractModel{
     }
 
     /**
-     * Get Video stream type 
-- 0: camera video 
-- 1: screen-sharing video
-- 2: whiteboard video 
-- 3: mixed stream video
-- 4: audio-only (mp3) 
-     * @return VideoType Video stream type 
-- 0: camera video 
-- 1: screen-sharing video
-- 2: whiteboard video 
-- 3: mixed stream video
-- 4: audio-only (mp3)
+     * Get Video stream type - 0: camera video - 1: screen-sharing video - 2: whiteboard video - 3: mixed stream video - 4: audio-only (mp3) 
+     * @return VideoType Video stream type - 0: camera video - 1: screen-sharing video - 2: whiteboard video - 3: mixed stream video - 4: audio-only (mp3)
      */
     public Long getVideoType() {
         return this.VideoType;
     }
 
     /**
-     * Set Video stream type 
-- 0: camera video 
-- 1: screen-sharing video
-- 2: whiteboard video 
-- 3: mixed stream video
-- 4: audio-only (mp3)
-     * @param VideoType Video stream type 
-- 0: camera video 
-- 1: screen-sharing video
-- 2: whiteboard video 
-- 3: mixed stream video
-- 4: audio-only (mp3)
+     * Set Video stream type - 0: camera video - 1: screen-sharing video - 2: whiteboard video - 3: mixed stream video - 4: audio-only (mp3)
+     * @param VideoType Video stream type - 0: camera video - 1: screen-sharing video - 2: whiteboard video - 3: mixed stream video - 4: audio-only (mp3)
      */
     public void setVideoType(Long VideoType) {
         this.VideoType = VideoType;
@@ -232,6 +221,38 @@ public class VideoInfo extends AbstractModel{
     }
 
     /**
+     * Get Width of the video resolution. 
+     * @return Width Width of the video resolution.
+     */
+    public Long getWidth() {
+        return this.Width;
+    }
+
+    /**
+     * Set Width of the video resolution.
+     * @param Width Width of the video resolution.
+     */
+    public void setWidth(Long Width) {
+        this.Width = Width;
+    }
+
+    /**
+     * Get Height of the video resolution. 
+     * @return Height Height of the video resolution.
+     */
+    public Long getHeight() {
+        return this.Height;
+    }
+
+    /**
+     * Set Height of the video resolution.
+     * @param Height Height of the video resolution.
+     */
+    public void setHeight(Long Height) {
+        this.Height = Height;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -243,6 +264,8 @@ public class VideoInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "VideoId", this.VideoId);
         this.setParamSimple(map, prefix + "VideoType", this.VideoType);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamSimple(map, prefix + "Width", this.Width);
+        this.setParamSimple(map, prefix + "Height", this.Height);
 
     }
 }

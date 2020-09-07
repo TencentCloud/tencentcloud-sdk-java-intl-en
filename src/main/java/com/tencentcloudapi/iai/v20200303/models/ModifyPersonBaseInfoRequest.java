@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyPersonBaseInfoRequest extends AbstractModel{
 
     /**
-    * Person ID
+    * Person ID, which is the `PersonId` in the `CreatePerson` API
     */
     @SerializedName("PersonId")
     @Expose
@@ -37,23 +37,23 @@ public class ModifyPersonBaseInfoRequest extends AbstractModel{
     private String PersonName;
 
     /**
-    * Gender of the person to be modified
+    * Gender of the person to be modified. 1: male; 2: female
     */
     @SerializedName("Gender")
     @Expose
     private Long Gender;
 
     /**
-     * Get Person ID 
-     * @return PersonId Person ID
+     * Get Person ID, which is the `PersonId` in the `CreatePerson` API 
+     * @return PersonId Person ID, which is the `PersonId` in the `CreatePerson` API
      */
     public String getPersonId() {
         return this.PersonId;
     }
 
     /**
-     * Set Person ID
-     * @param PersonId Person ID
+     * Set Person ID, which is the `PersonId` in the `CreatePerson` API
+     * @param PersonId Person ID, which is the `PersonId` in the `CreatePerson` API
      */
     public void setPersonId(String PersonId) {
         this.PersonId = PersonId;
@@ -76,16 +76,16 @@ public class ModifyPersonBaseInfoRequest extends AbstractModel{
     }
 
     /**
-     * Get Gender of the person to be modified 
-     * @return Gender Gender of the person to be modified
+     * Get Gender of the person to be modified. 1: male; 2: female 
+     * @return Gender Gender of the person to be modified. 1: male; 2: female
      */
     public Long getGender() {
         return this.Gender;
     }
 
     /**
-     * Set Gender of the person to be modified
-     * @param Gender Gender of the person to be modified
+     * Set Gender of the person to be modified. 1: male; 2: female
+     * @param Gender Gender of the person to be modified. 1: male; 2: female
      */
     public void setGender(Long Gender) {
         this.Gender = Gender;

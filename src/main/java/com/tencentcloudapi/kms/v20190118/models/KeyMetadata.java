@@ -51,7 +51,7 @@ public class KeyMetadata extends AbstractModel{
     private String Description;
 
     /**
-    * CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport.
+    * CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived.
     */
     @SerializedName("KeyState")
     @Expose
@@ -194,16 +194,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport. 
-     * @return KeyState CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport.
+     * Get CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived. 
+     * @return KeyState CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived.
      */
     public String getKeyState() {
         return this.KeyState;
     }
 
     /**
-     * Set CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport.
-     * @param KeyState CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport.
+     * Set CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived.
+     * @param KeyState CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived.
      */
     public void setKeyState(String KeyState) {
         this.KeyState = KeyState;

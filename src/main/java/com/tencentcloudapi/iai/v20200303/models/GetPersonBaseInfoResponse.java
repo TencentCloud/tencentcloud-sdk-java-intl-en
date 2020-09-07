@@ -30,7 +30,7 @@ public class GetPersonBaseInfoResponse extends AbstractModel{
     private String PersonName;
 
     /**
-    * Person gender
+    * Person gender. 0: empty; 1: male; 2: female
     */
     @SerializedName("Gender")
     @Expose
@@ -67,16 +67,16 @@ public class GetPersonBaseInfoResponse extends AbstractModel{
     }
 
     /**
-     * Get Person gender 
-     * @return Gender Person gender
+     * Get Person gender. 0: empty; 1: male; 2: female 
+     * @return Gender Person gender. 0: empty; 1: male; 2: female
      */
     public Long getGender() {
         return this.Gender;
     }
 
     /**
-     * Set Person gender
-     * @param Gender Person gender
+     * Set Person gender. 0: empty; 1: male; 2: female
+     * @param Gender Person gender. 0: empty; 1: male; 2: female
      */
     public void setGender(Long Gender) {
         this.Gender = Gender;

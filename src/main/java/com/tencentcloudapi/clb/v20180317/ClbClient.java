@@ -555,7 +555,7 @@ This is an async API. After it is returned successfully, you can call the Descri
     }
 
     /**
-     *This API is used to obtain the CLB exclusive logset of a user.
+     *This API is used to get the CLB dedicated logset.
      * @param req DescribeClsLogSetRequest
      * @return DescribeClsLogSetResponse
      * @throws TencentCloudSDKException
@@ -621,6 +621,42 @@ This is an async API. After it is returned successfully, you can call the Descri
                 Type type = new TypeToken<JsonResponseModel<DescribeLoadBalancersResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeLoadBalancers"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query CLB instance details, including listener, rules, and target real servers.
+     * @param req DescribeLoadBalancersDetailRequest
+     * @return DescribeLoadBalancersDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLoadBalancersDetailResponse DescribeLoadBalancersDetail(DescribeLoadBalancersDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLoadBalancersDetailResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLoadBalancersDetailResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeLoadBalancersDetail"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query various quotas in the current region.
+     * @param req DescribeQuotaRequest
+     * @return DescribeQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeQuotaResponse DescribeQuota(DescribeQuotaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeQuotaResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeQuotaResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeQuota"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

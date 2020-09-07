@@ -132,6 +132,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private BasicTargetGroupInfo TargetGroup;
 
     /**
+    * Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SessionType")
+    @Expose
+    private String SessionType;
+
+    /**
+    * Whether a persistent connection is enabled (This parameter can only be configured in HTTP/HTTPS listeners)
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("KeepaliveEnable")
+    @Expose
+    private Long KeepaliveEnable;
+
+    /**
      * Get CLB listener ID 
      * @return ListenerId CLB listener ID
      */
@@ -400,6 +416,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return SessionType Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getSessionType() {
+        return this.SessionType;
+    }
+
+    /**
+     * Set Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param SessionType Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSessionType(String SessionType) {
+        this.SessionType = SessionType;
+    }
+
+    /**
+     * Get Whether a persistent connection is enabled (This parameter can only be configured in HTTP/HTTPS listeners)
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return KeepaliveEnable Whether a persistent connection is enabled (This parameter can only be configured in HTTP/HTTPS listeners)
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getKeepaliveEnable() {
+        return this.KeepaliveEnable;
+    }
+
+    /**
+     * Set Whether a persistent connection is enabled (This parameter can only be configured in HTTP/HTTPS listeners)
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param KeepaliveEnable Whether a persistent connection is enabled (This parameter can only be configured in HTTP/HTTPS listeners)
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setKeepaliveEnable(Long KeepaliveEnable) {
+        this.KeepaliveEnable = KeepaliveEnable;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -417,6 +473,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "EndPort", this.EndPort);
         this.setParamSimple(map, prefix + "TargetType", this.TargetType);
         this.setParamObj(map, prefix + "TargetGroup.", this.TargetGroup);
+        this.setParamSimple(map, prefix + "SessionType", this.SessionType);
+        this.setParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
 
     }
 }

@@ -24,7 +24,7 @@ public class UpdateLiveWatermarkRequest extends AbstractModel{
 
     /**
     * Watermark ID.
-Get the watermark ID in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Get the watermark ID in the returned value of the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API call.
     */
     @SerializedName("WatermarkId")
     @Expose
@@ -75,9 +75,9 @@ Up to 16 bytes.
 
     /**
      * Get Watermark ID.
-Get the watermark ID in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call. 
+Get the watermark ID in the returned value of the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API call. 
      * @return WatermarkId Watermark ID.
-Get the watermark ID in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Get the watermark ID in the returned value of the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API call.
      */
     public Long getWatermarkId() {
         return this.WatermarkId;
@@ -85,9 +85,9 @@ Get the watermark ID in the returned value of the [AddLiveWatermark](/document/p
 
     /**
      * Set Watermark ID.
-Get the watermark ID in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Get the watermark ID in the returned value of the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API call.
      * @param WatermarkId Watermark ID.
-Get the watermark ID in the returned value of the [AddLiveWatermark](/document/product/267/30154) API call.
+Get the watermark ID in the returned value of the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API call.
      */
     public void setWatermarkId(Long WatermarkId) {
         this.WatermarkId = WatermarkId;

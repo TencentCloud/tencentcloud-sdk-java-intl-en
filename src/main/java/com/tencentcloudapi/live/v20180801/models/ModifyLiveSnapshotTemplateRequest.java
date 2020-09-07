@@ -47,7 +47,7 @@ Maximum length: 1,024 bytes.
 
     /**
     * Screencapturing interval in seconds. Default value: 10s.
-Value range: 5-600s.
+Value range: 5-300s.
     */
     @SerializedName("SnapshotInterval")
     @Expose
@@ -85,6 +85,7 @@ Value range: 5-600s.
 
     /**
     * COS bucket name.
+Note: the value of `CosBucket` cannot contain `-[appid]`.
     */
     @SerializedName("CosBucket")
     @Expose
@@ -169,9 +170,9 @@ Maximum length: 1,024 bytes.
 
     /**
      * Get Screencapturing interval in seconds. Default value: 10s.
-Value range: 5-600s. 
+Value range: 5-300s. 
      * @return SnapshotInterval Screencapturing interval in seconds. Default value: 10s.
-Value range: 5-600s.
+Value range: 5-300s.
      */
     public Long getSnapshotInterval() {
         return this.SnapshotInterval;
@@ -179,9 +180,9 @@ Value range: 5-600s.
 
     /**
      * Set Screencapturing interval in seconds. Default value: 10s.
-Value range: 5-600s.
+Value range: 5-300s.
      * @param SnapshotInterval Screencapturing interval in seconds. Default value: 10s.
-Value range: 5-600s.
+Value range: 5-300s.
      */
     public void setSnapshotInterval(Long SnapshotInterval) {
         this.SnapshotInterval = SnapshotInterval;
@@ -260,8 +261,10 @@ Value range: 5-600s.
     }
 
     /**
-     * Get COS bucket name. 
+     * Get COS bucket name.
+Note: the value of `CosBucket` cannot contain `-[appid]`. 
      * @return CosBucket COS bucket name.
+Note: the value of `CosBucket` cannot contain `-[appid]`.
      */
     public String getCosBucket() {
         return this.CosBucket;
@@ -269,7 +272,9 @@ Value range: 5-600s.
 
     /**
      * Set COS bucket name.
+Note: the value of `CosBucket` cannot contain `-[appid]`.
      * @param CosBucket COS bucket name.
+Note: the value of `CosBucket` cannot contain `-[appid]`.
      */
     public void setCosBucket(String CosBucket) {
         this.CosBucket = CosBucket;

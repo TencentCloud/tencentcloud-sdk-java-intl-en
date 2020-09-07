@@ -37,14 +37,14 @@ public class CreateAutoScalingGroupFromInstanceRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * The minimum number of instances. Value range: 0 - 2000.
+    * The maximum number of instances. Value range: 0 - 2000.
     */
     @SerializedName("MinSize")
     @Expose
     private Long MinSize;
 
     /**
-    * The maximum number of instances. Value range: 0 - 2000.
+    * The minimum number of instances. Value range: 0 - 2000.
     */
     @SerializedName("MaxSize")
     @Expose
@@ -97,32 +97,32 @@ public class CreateAutoScalingGroupFromInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get The minimum number of instances. Value range: 0 - 2000. 
-     * @return MinSize The minimum number of instances. Value range: 0 - 2000.
+     * Get The maximum number of instances. Value range: 0 - 2000. 
+     * @return MinSize The maximum number of instances. Value range: 0 - 2000.
      */
     public Long getMinSize() {
         return this.MinSize;
     }
 
     /**
-     * Set The minimum number of instances. Value range: 0 - 2000.
-     * @param MinSize The minimum number of instances. Value range: 0 - 2000.
+     * Set The maximum number of instances. Value range: 0 - 2000.
+     * @param MinSize The maximum number of instances. Value range: 0 - 2000.
      */
     public void setMinSize(Long MinSize) {
         this.MinSize = MinSize;
     }
 
     /**
-     * Get The maximum number of instances. Value range: 0 - 2000. 
-     * @return MaxSize The maximum number of instances. Value range: 0 - 2000.
+     * Get The minimum number of instances. Value range: 0 - 2000. 
+     * @return MaxSize The minimum number of instances. Value range: 0 - 2000.
      */
     public Long getMaxSize() {
         return this.MaxSize;
     }
 
     /**
-     * Set The maximum number of instances. Value range: 0 - 2000.
-     * @param MaxSize The maximum number of instances. Value range: 0 - 2000.
+     * Set The minimum number of instances. Value range: 0 - 2000.
+     * @param MaxSize The minimum number of instances. Value range: 0 - 2000.
      */
     public void setMaxSize(Long MaxSize) {
         this.MaxSize = MaxSize;

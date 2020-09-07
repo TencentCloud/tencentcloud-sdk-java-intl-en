@@ -37,7 +37,7 @@ public class PaiInstance extends AbstractModel{
     private String DomainName;
 
     /**
-    * 
+    * URL of the PAI management page
     */
     @SerializedName("PaiMateUrl")
     @Expose
@@ -76,16 +76,16 @@ public class PaiInstance extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return PaiMateUrl 
+     * Get URL of the PAI management page 
+     * @return PaiMateUrl URL of the PAI management page
      */
     public String getPaiMateUrl() {
         return this.PaiMateUrl;
     }
 
     /**
-     * Set 
-     * @param PaiMateUrl 
+     * Set URL of the PAI management page
+     * @param PaiMateUrl URL of the PAI management page
      */
     public void setPaiMateUrl(String PaiMateUrl) {
         this.PaiMateUrl = PaiMateUrl;

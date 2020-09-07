@@ -101,7 +101,7 @@ media: streaming VOD acceleration
     private Origin Origin;
 
     /**
-    * IP blocklist/allowlist configuration
+    * IP blacklist/whitelist configuration
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IpFilter")
@@ -377,12 +377,37 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private UserAgentFilter UserAgentFilter;
 
     /**
-    * Access control
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 
     */
     @SerializedName("AccessControl")
     @Expose
     private AccessControl AccessControl;
+
+    /**
+    * Whether to support advanced configuration items
+on: supported
+off: not supported
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Advance")
+    @Expose
+    private String Advance;
+
+    /**
+    * URL redirect configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("UrlRedirect")
+    @Expose
+    private UrlRedirect UrlRedirect;
+
+    /**
+    * Access port configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AccessPort")
+    @Expose
+    private Long [] AccessPort;
 
     /**
      * Get Domain name ID 
@@ -577,9 +602,9 @@ media: streaming VOD acceleration
     }
 
     /**
-     * Get IP blocklist/allowlist configuration
+     * Get IP blacklist/whitelist configuration
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return IpFilter IP blocklist/allowlist configuration
+     * @return IpFilter IP blacklist/whitelist configuration
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public IpFilter getIpFilter() {
@@ -587,9 +612,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set IP blocklist/allowlist configuration
+     * Set IP blacklist/whitelist configuration
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param IpFilter IP blocklist/allowlist configuration
+     * @param IpFilter IP blacklist/whitelist configuration
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setIpFilter(IpFilter IpFilter) {
@@ -1285,23 +1310,87 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Access control
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AccessControl Access control
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get  
+     * @return AccessControl 
      */
     public AccessControl getAccessControl() {
         return this.AccessControl;
     }
 
     /**
-     * Set Access control
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AccessControl Access control
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 
+     * @param AccessControl 
      */
     public void setAccessControl(AccessControl AccessControl) {
         this.AccessControl = AccessControl;
+    }
+
+    /**
+     * Get Whether to support advanced configuration items
+on: supported
+off: not supported
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Advance Whether to support advanced configuration items
+on: supported
+off: not supported
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getAdvance() {
+        return this.Advance;
+    }
+
+    /**
+     * Set Whether to support advanced configuration items
+on: supported
+off: not supported
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Advance Whether to support advanced configuration items
+on: supported
+off: not supported
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAdvance(String Advance) {
+        this.Advance = Advance;
+    }
+
+    /**
+     * Get URL redirect configuration
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return UrlRedirect URL redirect configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public UrlRedirect getUrlRedirect() {
+        return this.UrlRedirect;
+    }
+
+    /**
+     * Set URL redirect configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param UrlRedirect URL redirect configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setUrlRedirect(UrlRedirect UrlRedirect) {
+        this.UrlRedirect = UrlRedirect;
+    }
+
+    /**
+     * Get Access port configuration
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return AccessPort Access port configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long [] getAccessPort() {
+        return this.AccessPort;
+    }
+
+    /**
+     * Set Access port configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AccessPort Access port configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAccessPort(Long [] AccessPort) {
+        this.AccessPort = AccessPort;
     }
 
     /**
@@ -1352,6 +1441,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "ImageOptimization.", this.ImageOptimization);
         this.setParamObj(map, prefix + "UserAgentFilter.", this.UserAgentFilter);
         this.setParamObj(map, prefix + "AccessControl.", this.AccessControl);
+        this.setParamSimple(map, prefix + "Advance", this.Advance);
+        this.setParamObj(map, prefix + "UrlRedirect.", this.UrlRedirect);
+        this.setParamArraySimple(map, prefix + "AccessPort.", this.AccessPort);
 
     }
 }

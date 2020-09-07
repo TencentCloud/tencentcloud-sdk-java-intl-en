@@ -182,6 +182,24 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query clients on which this file system is mounted. To do so, the client needs to have the CFS monitoring plugin installed.
+     * @param req DescribeCfsFileSystemClientsRequest
+     * @return DescribeCfsFileSystemClientsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCfsFileSystemClientsResponse DescribeCfsFileSystemClients(DescribeCfsFileSystemClientsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCfsFileSystemClientsResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCfsFileSystemClientsResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCfsFileSystemClients"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query file systems.
      * @param req DescribeCfsFileSystemsRequest
      * @return DescribeCfsFileSystemsResponse

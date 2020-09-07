@@ -93,7 +93,7 @@ public class FileSystemInfo extends AbstractModel{
     private String StorageType;
 
     /**
-    * Prepaid storage pack bound to a file system (not supported currently)
+    * Prepaid storage pack bound with the file system
     */
     @SerializedName("StorageResourcePkg")
     @Expose
@@ -140,6 +140,13 @@ public class FileSystemInfo extends AbstractModel{
     @SerializedName("AppId")
     @Expose
     private Long AppId;
+
+    /**
+    * The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
+    */
+    @SerializedName("BandwidthLimit")
+    @Expose
+    private Float BandwidthLimit;
 
     /**
      * Get Creation time 
@@ -302,16 +309,16 @@ public class FileSystemInfo extends AbstractModel{
     }
 
     /**
-     * Get Prepaid storage pack bound to a file system (not supported currently) 
-     * @return StorageResourcePkg Prepaid storage pack bound to a file system (not supported currently)
+     * Get Prepaid storage pack bound with the file system 
+     * @return StorageResourcePkg Prepaid storage pack bound with the file system
      */
     public String getStorageResourcePkg() {
         return this.StorageResourcePkg;
     }
 
     /**
-     * Set Prepaid storage pack bound to a file system (not supported currently)
-     * @param StorageResourcePkg Prepaid storage pack bound to a file system (not supported currently)
+     * Set Prepaid storage pack bound with the file system
+     * @param StorageResourcePkg Prepaid storage pack bound with the file system
      */
     public void setStorageResourcePkg(String StorageResourcePkg) {
         this.StorageResourcePkg = StorageResourcePkg;
@@ -414,6 +421,22 @@ public class FileSystemInfo extends AbstractModel{
     }
 
     /**
+     * Get The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput 
+     * @return BandwidthLimit The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
+     */
+    public Float getBandwidthLimit() {
+        return this.BandwidthLimit;
+    }
+
+    /**
+     * Set The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
+     * @param BandwidthLimit The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
+     */
+    public void setBandwidthLimit(Float BandwidthLimit) {
+        this.BandwidthLimit = BandwidthLimit;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -434,6 +457,7 @@ public class FileSystemInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Encrypted", this.Encrypted);
         this.setParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamSimple(map, prefix + "BandwidthLimit", this.BandwidthLimit);
 
     }
 }

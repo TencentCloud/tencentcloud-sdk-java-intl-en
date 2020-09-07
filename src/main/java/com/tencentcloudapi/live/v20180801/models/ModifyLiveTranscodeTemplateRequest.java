@@ -148,7 +148,10 @@ baseline/main/high.
     private Long FpsToOrig;
 
     /**
-    * `VideoBitrate` minus top speed codec bitrate. Value range: 0.1-0.5.
+    * Bitrate compression ratio of top speed codec video.
+Target bitrate of top speed code = VideoBitrate * (1-AdaptBitratePercent)
+
+Value range: 0.0-0.5.
     */
     @SerializedName("AdaptBitratePercent")
     @Expose
@@ -451,16 +454,28 @@ baseline/main/high.
     }
 
     /**
-     * Get `VideoBitrate` minus top speed codec bitrate. Value range: 0.1-0.5. 
-     * @return AdaptBitratePercent `VideoBitrate` minus top speed codec bitrate. Value range: 0.1-0.5.
+     * Get Bitrate compression ratio of top speed codec video.
+Target bitrate of top speed code = VideoBitrate * (1-AdaptBitratePercent)
+
+Value range: 0.0-0.5. 
+     * @return AdaptBitratePercent Bitrate compression ratio of top speed codec video.
+Target bitrate of top speed code = VideoBitrate * (1-AdaptBitratePercent)
+
+Value range: 0.0-0.5.
      */
     public Float getAdaptBitratePercent() {
         return this.AdaptBitratePercent;
     }
 
     /**
-     * Set `VideoBitrate` minus top speed codec bitrate. Value range: 0.1-0.5.
-     * @param AdaptBitratePercent `VideoBitrate` minus top speed codec bitrate. Value range: 0.1-0.5.
+     * Set Bitrate compression ratio of top speed codec video.
+Target bitrate of top speed code = VideoBitrate * (1-AdaptBitratePercent)
+
+Value range: 0.0-0.5.
+     * @param AdaptBitratePercent Bitrate compression ratio of top speed codec video.
+Target bitrate of top speed code = VideoBitrate * (1-AdaptBitratePercent)
+
+Value range: 0.0-0.5.
      */
     public void setAdaptBitratePercent(Float AdaptBitratePercent) {
         this.AdaptBitratePercent = AdaptBitratePercent;

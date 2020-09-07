@@ -13,43 +13,67 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iai.v20200303.models;
+package com.tencentcloudapi.kms.v20190118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetSimilarPersonResultRequest extends AbstractModel{
+public class TagFilter extends AbstractModel{
 
     /**
-    * Duplicate check task ID, which is used to query and get the progress and result of the task.
+    * Tag key
     */
-    @SerializedName("JobId")
+    @SerializedName("TagKey")
     @Expose
-    private String JobId;
+    private String TagKey;
 
     /**
-     * Get Duplicate check task ID, which is used to query and get the progress and result of the task. 
-     * @return JobId Duplicate check task ID, which is used to query and get the progress and result of the task.
+    * Tag value
+    */
+    @SerializedName("TagValue")
+    @Expose
+    private String [] TagValue;
+
+    /**
+     * Get Tag key 
+     * @return TagKey Tag key
      */
-    public String getJobId() {
-        return this.JobId;
+    public String getTagKey() {
+        return this.TagKey;
     }
 
     /**
-     * Set Duplicate check task ID, which is used to query and get the progress and result of the task.
-     * @param JobId Duplicate check task ID, which is used to query and get the progress and result of the task.
+     * Set Tag key
+     * @param TagKey Tag key
      */
-    public void setJobId(String JobId) {
-        this.JobId = JobId;
+    public void setTagKey(String TagKey) {
+        this.TagKey = TagKey;
+    }
+
+    /**
+     * Get Tag value 
+     * @return TagValue Tag value
+     */
+    public String [] getTagValue() {
+        return this.TagValue;
+    }
+
+    /**
+     * Set Tag value
+     * @param TagValue Tag value
+     */
+    public void setTagValue(String [] TagValue) {
+        this.TagValue = TagValue;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "JobId", this.JobId);
+        this.setParamSimple(map, prefix + "TagKey", this.TagKey);
+        this.setParamArraySimple(map, prefix + "TagValue.", this.TagValue);
 
     }
 }

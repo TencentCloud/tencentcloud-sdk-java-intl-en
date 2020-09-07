@@ -42,7 +42,7 @@ Only letters, digits, underscores, and hyphens can be contained.
 
     /**
     * Stream starting callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
     */
     @SerializedName("StreamBeginNotifyUrl")
     @Expose
@@ -50,7 +50,7 @@ Protocol document: [Event Message Notification](/document/product/267/32744).
 
     /**
     * Interruption callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
     */
     @SerializedName("StreamEndNotifyUrl")
     @Expose
@@ -58,7 +58,7 @@ Protocol document: [Event Message Notification](/document/product/267/32744).
 
     /**
     * Recording callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
     */
     @SerializedName("RecordNotifyUrl")
     @Expose
@@ -66,7 +66,7 @@ Protocol document: [Event Message Notification](/document/product/267/32744).
 
     /**
     * Screencapturing callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
     */
     @SerializedName("SnapshotNotifyUrl")
     @Expose
@@ -74,7 +74,7 @@ Protocol document: [Event Message Notification](/document/product/267/32744).
 
     /**
     * Porn detection callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32741).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32741?from_cn_redirect=1).
     */
     @SerializedName("PornCensorshipNotifyUrl")
     @Expose
@@ -82,11 +82,19 @@ Protocol document: [Event Message Notification](/document/product/267/32741).
 
     /**
     * Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
-[Event Message Notification](/document/product/267/32744).
+[Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
     */
     @SerializedName("CallbackKey")
     @Expose
     private String CallbackKey;
+
+    /**
+    * Stream mixing callback URL,
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
+    */
+    @SerializedName("StreamMixNotifyUrl")
+    @Expose
+    private String StreamMixNotifyUrl;
 
     /**
      * Get Template name.
@@ -138,9 +146,9 @@ Only letters, digits, underscores, and hyphens can be contained.
 
     /**
      * Get Stream starting callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744). 
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1). 
      * @return StreamBeginNotifyUrl Stream starting callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
      */
     public String getStreamBeginNotifyUrl() {
         return this.StreamBeginNotifyUrl;
@@ -148,9 +156,9 @@ Protocol document: [Event Message Notification](/document/product/267/32744).
 
     /**
      * Set Stream starting callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
      * @param StreamBeginNotifyUrl Stream starting callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
      */
     public void setStreamBeginNotifyUrl(String StreamBeginNotifyUrl) {
         this.StreamBeginNotifyUrl = StreamBeginNotifyUrl;
@@ -158,9 +166,9 @@ Protocol document: [Event Message Notification](/document/product/267/32744).
 
     /**
      * Get Interruption callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744). 
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1). 
      * @return StreamEndNotifyUrl Interruption callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
      */
     public String getStreamEndNotifyUrl() {
         return this.StreamEndNotifyUrl;
@@ -168,9 +176,9 @@ Protocol document: [Event Message Notification](/document/product/267/32744).
 
     /**
      * Set Interruption callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
      * @param StreamEndNotifyUrl Interruption callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
      */
     public void setStreamEndNotifyUrl(String StreamEndNotifyUrl) {
         this.StreamEndNotifyUrl = StreamEndNotifyUrl;
@@ -178,9 +186,9 @@ Protocol document: [Event Message Notification](/document/product/267/32744).
 
     /**
      * Get Recording callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744). 
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1). 
      * @return RecordNotifyUrl Recording callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
      */
     public String getRecordNotifyUrl() {
         return this.RecordNotifyUrl;
@@ -188,9 +196,9 @@ Protocol document: [Event Message Notification](/document/product/267/32744).
 
     /**
      * Set Recording callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
      * @param RecordNotifyUrl Recording callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
      */
     public void setRecordNotifyUrl(String RecordNotifyUrl) {
         this.RecordNotifyUrl = RecordNotifyUrl;
@@ -198,9 +206,9 @@ Protocol document: [Event Message Notification](/document/product/267/32744).
 
     /**
      * Get Screencapturing callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744). 
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1). 
      * @return SnapshotNotifyUrl Screencapturing callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
      */
     public String getSnapshotNotifyUrl() {
         return this.SnapshotNotifyUrl;
@@ -208,9 +216,9 @@ Protocol document: [Event Message Notification](/document/product/267/32744).
 
     /**
      * Set Screencapturing callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
      * @param SnapshotNotifyUrl Screencapturing callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32744).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
      */
     public void setSnapshotNotifyUrl(String SnapshotNotifyUrl) {
         this.SnapshotNotifyUrl = SnapshotNotifyUrl;
@@ -218,9 +226,9 @@ Protocol document: [Event Message Notification](/document/product/267/32744).
 
     /**
      * Get Porn detection callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32741). 
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32741?from_cn_redirect=1). 
      * @return PornCensorshipNotifyUrl Porn detection callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32741).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32741?from_cn_redirect=1).
      */
     public String getPornCensorshipNotifyUrl() {
         return this.PornCensorshipNotifyUrl;
@@ -228,9 +236,9 @@ Protocol document: [Event Message Notification](/document/product/267/32741).
 
     /**
      * Set Porn detection callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32741).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32741?from_cn_redirect=1).
      * @param PornCensorshipNotifyUrl Porn detection callback URL,
-Protocol document: [Event Message Notification](/document/product/267/32741).
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32741?from_cn_redirect=1).
      */
     public void setPornCensorshipNotifyUrl(String PornCensorshipNotifyUrl) {
         this.PornCensorshipNotifyUrl = PornCensorshipNotifyUrl;
@@ -238,9 +246,9 @@ Protocol document: [Event Message Notification](/document/product/267/32741).
 
     /**
      * Get Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
-[Event Message Notification](/document/product/267/32744). 
+[Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1). 
      * @return CallbackKey Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
-[Event Message Notification](/document/product/267/32744).
+[Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
      */
     public String getCallbackKey() {
         return this.CallbackKey;
@@ -248,12 +256,32 @@ Protocol document: [Event Message Notification](/document/product/267/32741).
 
     /**
      * Set Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
-[Event Message Notification](/document/product/267/32744).
+[Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
      * @param CallbackKey Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
-[Event Message Notification](/document/product/267/32744).
+[Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
      */
     public void setCallbackKey(String CallbackKey) {
         this.CallbackKey = CallbackKey;
+    }
+
+    /**
+     * Get Stream mixing callback URL,
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1). 
+     * @return StreamMixNotifyUrl Stream mixing callback URL,
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
+     */
+    public String getStreamMixNotifyUrl() {
+        return this.StreamMixNotifyUrl;
+    }
+
+    /**
+     * Set Stream mixing callback URL,
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
+     * @param StreamMixNotifyUrl Stream mixing callback URL,
+Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
+     */
+    public void setStreamMixNotifyUrl(String StreamMixNotifyUrl) {
+        this.StreamMixNotifyUrl = StreamMixNotifyUrl;
     }
 
     /**
@@ -268,6 +296,7 @@ Protocol document: [Event Message Notification](/document/product/267/32741).
         this.setParamSimple(map, prefix + "SnapshotNotifyUrl", this.SnapshotNotifyUrl);
         this.setParamSimple(map, prefix + "PornCensorshipNotifyUrl", this.PornCensorshipNotifyUrl);
         this.setParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
+        this.setParamSimple(map, prefix + "StreamMixNotifyUrl", this.StreamMixNotifyUrl);
 
     }
 }

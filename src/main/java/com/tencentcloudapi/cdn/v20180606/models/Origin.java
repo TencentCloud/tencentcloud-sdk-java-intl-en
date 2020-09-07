@@ -32,7 +32,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String [] Origins;
 
     /**
-    * Primary origin server type
+    * Master origin server type
 The following types are supported for input parameters:
 domain: domain name type
 cos: COS origin
@@ -43,7 +43,7 @@ The following types of output parameters are added:
 image: Cloud Infinite origin
 ftp: legacy FTP origin, which is no longer maintained.
 When modifying `Origins`, you need to enter the corresponding OriginType.
-The IPv6 feature is not generally available yet. Please send in a allowlist application to use this feature.
+The IPv6 feature is not generally available yet. Please send in a whitelist application to use this feature.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OriginType")
@@ -51,7 +51,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String OriginType;
 
     /**
-    * Host header used when accessing the primary origin server. If left empty, the acceleration domain name will be used by default.
+    * Host header used when accessing the master origin server. If left empty, the acceleration domain name will be used by default.
 If a wildcard domain name is accessed, then the sub-domain name during the access will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
@@ -100,20 +100,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String BackupOriginType;
 
     /**
-    * Host header used when accessing the backup origin server. If left empty, the ServerName of primary origin server will be used by default.
+    * Host header used when accessing the backup origin server. If left empty, the ServerName of master origin server will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BackupServerName")
     @Expose
     private String BackupServerName;
-
-    /**
-    * Origin-pull path
-Note: this field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("BasePath")
-    @Expose
-    private String BasePath;
 
     /**
      * Get Master origin server list
@@ -140,7 +132,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Primary origin server type
+     * Get Master origin server type
 The following types are supported for input parameters:
 domain: domain name type
 cos: COS origin
@@ -151,9 +143,9 @@ The following types of output parameters are added:
 image: Cloud Infinite origin
 ftp: legacy FTP origin, which is no longer maintained.
 When modifying `Origins`, you need to enter the corresponding OriginType.
-The IPv6 feature is not generally available yet. Please send in a allowlist application to use this feature.
+The IPv6 feature is not generally available yet. Please send in a whitelist application to use this feature.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return OriginType Primary origin server type
+     * @return OriginType Master origin server type
 The following types are supported for input parameters:
 domain: domain name type
 cos: COS origin
@@ -164,7 +156,7 @@ The following types of output parameters are added:
 image: Cloud Infinite origin
 ftp: legacy FTP origin, which is no longer maintained.
 When modifying `Origins`, you need to enter the corresponding OriginType.
-The IPv6 feature is not generally available yet. Please send in a allowlist application to use this feature.
+The IPv6 feature is not generally available yet. Please send in a whitelist application to use this feature.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getOriginType() {
@@ -172,7 +164,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Primary origin server type
+     * Set Master origin server type
 The following types are supported for input parameters:
 domain: domain name type
 cos: COS origin
@@ -183,9 +175,9 @@ The following types of output parameters are added:
 image: Cloud Infinite origin
 ftp: legacy FTP origin, which is no longer maintained.
 When modifying `Origins`, you need to enter the corresponding OriginType.
-The IPv6 feature is not generally available yet. Please send in a allowlist application to use this feature.
+The IPv6 feature is not generally available yet. Please send in a whitelist application to use this feature.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param OriginType Primary origin server type
+     * @param OriginType Master origin server type
 The following types are supported for input parameters:
 domain: domain name type
 cos: COS origin
@@ -196,7 +188,7 @@ The following types of output parameters are added:
 image: Cloud Infinite origin
 ftp: legacy FTP origin, which is no longer maintained.
 When modifying `Origins`, you need to enter the corresponding OriginType.
-The IPv6 feature is not generally available yet. Please send in a allowlist application to use this feature.
+The IPv6 feature is not generally available yet. Please send in a whitelist application to use this feature.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setOriginType(String OriginType) {
@@ -204,10 +196,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Host header used when accessing the primary origin server. If left empty, the acceleration domain name will be used by default.
+     * Get Host header used when accessing the master origin server. If left empty, the acceleration domain name will be used by default.
 If a wildcard domain name is accessed, then the sub-domain name during the access will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ServerName Host header used when accessing the primary origin server. If left empty, the acceleration domain name will be used by default.
+     * @return ServerName Host header used when accessing the master origin server. If left empty, the acceleration domain name will be used by default.
 If a wildcard domain name is accessed, then the sub-domain name during the access will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
@@ -216,10 +208,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Host header used when accessing the primary origin server. If left empty, the acceleration domain name will be used by default.
+     * Set Host header used when accessing the master origin server. If left empty, the acceleration domain name will be used by default.
 If a wildcard domain name is accessed, then the sub-domain name during the access will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ServerName Host header used when accessing the primary origin server. If left empty, the acceleration domain name will be used by default.
+     * @param ServerName Host header used when accessing the master origin server. If left empty, the acceleration domain name will be used by default.
 If a wildcard domain name is accessed, then the sub-domain name during the access will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
@@ -340,9 +332,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Host header used when accessing the backup origin server. If left empty, the ServerName of primary origin server will be used by default.
+     * Get Host header used when accessing the backup origin server. If left empty, the ServerName of master origin server will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return BackupServerName Host header used when accessing the backup origin server. If left empty, the ServerName of primary origin server will be used by default.
+     * @return BackupServerName Host header used when accessing the backup origin server. If left empty, the ServerName of master origin server will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getBackupServerName() {
@@ -350,33 +342,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Host header used when accessing the backup origin server. If left empty, the ServerName of primary origin server will be used by default.
+     * Set Host header used when accessing the backup origin server. If left empty, the ServerName of master origin server will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param BackupServerName Host header used when accessing the backup origin server. If left empty, the ServerName of primary origin server will be used by default.
+     * @param BackupServerName Host header used when accessing the backup origin server. If left empty, the ServerName of master origin server will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setBackupServerName(String BackupServerName) {
         this.BackupServerName = BackupServerName;
-    }
-
-    /**
-     * Get Origin-pull path
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return BasePath Origin-pull path
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public String getBasePath() {
-        return this.BasePath;
-    }
-
-    /**
-     * Set Origin-pull path
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param BasePath Origin-pull path
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public void setBasePath(String BasePath) {
-        this.BasePath = BasePath;
     }
 
     /**
@@ -391,7 +363,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamArraySimple(map, prefix + "BackupOrigins.", this.BackupOrigins);
         this.setParamSimple(map, prefix + "BackupOriginType", this.BackupOriginType);
         this.setParamSimple(map, prefix + "BackupServerName", this.BackupServerName);
-        this.setParamSimple(map, prefix + "BasePath", this.BasePath);
 
     }
 }

@@ -37,6 +37,13 @@ public class CreateCustomerGatewayRequest extends AbstractModel{
     private String IpAddress;
 
     /**
+    * Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get Customer gateway can be named freely, but the maximum length is 60 characters. 
      * @return CustomerGatewayName Customer gateway can be named freely, but the maximum length is 60 characters.
      */
@@ -69,11 +76,28 @@ public class CreateCustomerGatewayRequest extends AbstractModel{
     }
 
     /**
+     * Get Bound tags, such as [{"Key": "city", "Value": "shanghai"}]. 
+     * @return Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     * @param Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CustomerGatewayName", this.CustomerGatewayName);
         this.setParamSimple(map, prefix + "IpAddress", this.IpAddress);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

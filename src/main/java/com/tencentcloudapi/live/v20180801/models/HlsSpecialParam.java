@@ -23,23 +23,28 @@ import java.util.HashMap;
 public class HlsSpecialParam extends AbstractModel{
 
     /**
-    * HLS timeout period.
+    * Timeout period for restarting an interrupted HLS push.
+Value range: [0, 1,800].
     */
     @SerializedName("FlowContinueDuration")
     @Expose
     private Long FlowContinueDuration;
 
     /**
-     * Get HLS timeout period. 
-     * @return FlowContinueDuration HLS timeout period.
+     * Get Timeout period for restarting an interrupted HLS push.
+Value range: [0, 1,800]. 
+     * @return FlowContinueDuration Timeout period for restarting an interrupted HLS push.
+Value range: [0, 1,800].
      */
     public Long getFlowContinueDuration() {
         return this.FlowContinueDuration;
     }
 
     /**
-     * Set HLS timeout period.
-     * @param FlowContinueDuration HLS timeout period.
+     * Set Timeout period for restarting an interrupted HLS push.
+Value range: [0, 1,800].
+     * @param FlowContinueDuration Timeout period for restarting an interrupted HLS push.
+Value range: [0, 1,800].
      */
     public void setFlowContinueDuration(Long FlowContinueDuration) {
         this.FlowContinueDuration = FlowContinueDuration;

@@ -44,7 +44,7 @@ public class CreateLiveWatermarkRuleRequest extends AbstractModel{
     private String StreamName;
 
     /**
-    * Watermark ID, which is the `WatermarkId` returned by the [AddLiveWatermark](/document/product/267/30154) API.
+    * Watermark ID, which is the `WatermarkId` returned by the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API.
     */
     @SerializedName("TemplateId")
     @Expose
@@ -99,16 +99,16 @@ public class CreateLiveWatermarkRuleRequest extends AbstractModel{
     }
 
     /**
-     * Get Watermark ID, which is the `WatermarkId` returned by the [AddLiveWatermark](/document/product/267/30154) API. 
-     * @return TemplateId Watermark ID, which is the `WatermarkId` returned by the [AddLiveWatermark](/document/product/267/30154) API.
+     * Get Watermark ID, which is the `WatermarkId` returned by the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API. 
+     * @return TemplateId Watermark ID, which is the `WatermarkId` returned by the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API.
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set Watermark ID, which is the `WatermarkId` returned by the [AddLiveWatermark](/document/product/267/30154) API.
-     * @param TemplateId Watermark ID, which is the `WatermarkId` returned by the [AddLiveWatermark](/document/product/267/30154) API.
+     * Set Watermark ID, which is the `WatermarkId` returned by the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API.
+     * @param TemplateId Watermark ID, which is the `WatermarkId` returned by the [AddLiveWatermark](https://intl.cloud.tencent.com/document/product/267/30154?from_cn_redirect=1) API.
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;

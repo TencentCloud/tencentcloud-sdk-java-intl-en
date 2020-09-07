@@ -24,8 +24,8 @@ public class DeleteLiveSnapshotTemplateRequest extends AbstractModel{
 
     /**
     * Template ID.
-1. Get from the returned value of the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
-2. You can query the list of created screencapturing templates through the [DescribeLiveSnapshotTemplates](/document/product/267/32619) API.
+1. Get from the returned value of the [CreateLiveSnapshotTemplate](https://intl.cloud.tencent.com/document/product/267/32624?from_cn_redirect=1) API call.
+2. You can query the list of created screencapturing templates through the [DescribeLiveSnapshotTemplates](https://intl.cloud.tencent.com/document/product/267/32619?from_cn_redirect=1) API.
     */
     @SerializedName("TemplateId")
     @Expose
@@ -33,11 +33,11 @@ public class DeleteLiveSnapshotTemplateRequest extends AbstractModel{
 
     /**
      * Get Template ID.
-1. Get from the returned value of the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
-2. You can query the list of created screencapturing templates through the [DescribeLiveSnapshotTemplates](/document/product/267/32619) API. 
+1. Get from the returned value of the [CreateLiveSnapshotTemplate](https://intl.cloud.tencent.com/document/product/267/32624?from_cn_redirect=1) API call.
+2. You can query the list of created screencapturing templates through the [DescribeLiveSnapshotTemplates](https://intl.cloud.tencent.com/document/product/267/32619?from_cn_redirect=1) API. 
      * @return TemplateId Template ID.
-1. Get from the returned value of the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
-2. You can query the list of created screencapturing templates through the [DescribeLiveSnapshotTemplates](/document/product/267/32619) API.
+1. Get from the returned value of the [CreateLiveSnapshotTemplate](https://intl.cloud.tencent.com/document/product/267/32624?from_cn_redirect=1) API call.
+2. You can query the list of created screencapturing templates through the [DescribeLiveSnapshotTemplates](https://intl.cloud.tencent.com/document/product/267/32619?from_cn_redirect=1) API.
      */
     public Long getTemplateId() {
         return this.TemplateId;
@@ -45,11 +45,11 @@ public class DeleteLiveSnapshotTemplateRequest extends AbstractModel{
 
     /**
      * Set Template ID.
-1. Get from the returned value of the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
-2. You can query the list of created screencapturing templates through the [DescribeLiveSnapshotTemplates](/document/product/267/32619) API.
+1. Get from the returned value of the [CreateLiveSnapshotTemplate](https://intl.cloud.tencent.com/document/product/267/32624?from_cn_redirect=1) API call.
+2. You can query the list of created screencapturing templates through the [DescribeLiveSnapshotTemplates](https://intl.cloud.tencent.com/document/product/267/32619?from_cn_redirect=1) API.
      * @param TemplateId Template ID.
-1. Get from the returned value of the [CreateLiveSnapshotTemplate](/document/product/267/32624) API call.
-2. You can query the list of created screencapturing templates through the [DescribeLiveSnapshotTemplates](/document/product/267/32619) API.
+1. Get from the returned value of the [CreateLiveSnapshotTemplate](https://intl.cloud.tencent.com/document/product/267/32624?from_cn_redirect=1) API call.
+2. You can query the list of created screencapturing templates through the [DescribeLiveSnapshotTemplates](https://intl.cloud.tencent.com/document/product/267/32619?from_cn_redirect=1) API.
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;

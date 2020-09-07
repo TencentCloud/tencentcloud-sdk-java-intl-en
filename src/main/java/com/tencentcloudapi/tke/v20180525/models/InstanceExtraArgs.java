@@ -23,28 +23,28 @@ import java.util.HashMap;
 public class InstanceExtraArgs extends AbstractModel{
 
     /**
-    * Kubelet custom parameter
-Note: this field may return null, indicating that no valid value is obtained.
+    * Kubelet custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["root-dir=/var/lib/kubelet","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
+Note: this field may return `null`, indicating that no valid value is obtained.
     */
     @SerializedName("Kubelet")
     @Expose
     private String [] Kubelet;
 
     /**
-     * Get Kubelet custom parameter
-Note: this field may return null, indicating that no valid value is obtained. 
-     * @return Kubelet Kubelet custom parameter
-Note: this field may return null, indicating that no valid value is obtained.
+     * Get Kubelet custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["root-dir=/var/lib/kubelet","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return Kubelet Kubelet custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["root-dir=/var/lib/kubelet","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public String [] getKubelet() {
         return this.Kubelet;
     }
 
     /**
-     * Set Kubelet custom parameter
-Note: this field may return null, indicating that no valid value is obtained.
-     * @param Kubelet Kubelet custom parameter
-Note: this field may return null, indicating that no valid value is obtained.
+     * Set Kubelet custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["root-dir=/var/lib/kubelet","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param Kubelet Kubelet custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["root-dir=/var/lib/kubelet","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public void setKubelet(String [] Kubelet) {
         this.Kubelet = Kubelet;

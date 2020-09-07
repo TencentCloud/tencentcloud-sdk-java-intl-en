@@ -79,11 +79,32 @@ public class ClusterAdvancedSettings extends AbstractModel{
     private Boolean DeletionProtection;
 
     /**
-    * Cluster network proxy model
+    * 
     */
     @SerializedName("KubeProxyMode")
     @Expose
     private String KubeProxyMode;
+
+    /**
+    * Indicates whether to enable auditing
+    */
+    @SerializedName("AuditEnabled")
+    @Expose
+    private Boolean AuditEnabled;
+
+    /**
+    * Specifies the ID of logset to which the audit logs are uploaded.
+    */
+    @SerializedName("AuditLogsetId")
+    @Expose
+    private String AuditLogsetId;
+
+    /**
+    * Specifies the ID of topic to which the audit logs are uploaded.
+    */
+    @SerializedName("AuditLogTopicId")
+    @Expose
+    private String AuditLogTopicId;
 
     /**
      * Get Whether IPVS is enabled 
@@ -214,19 +235,67 @@ public class ClusterAdvancedSettings extends AbstractModel{
     }
 
     /**
-     * Get Cluster network proxy model 
-     * @return KubeProxyMode Cluster network proxy model
+     * Get  
+     * @return KubeProxyMode 
      */
     public String getKubeProxyMode() {
         return this.KubeProxyMode;
     }
 
     /**
-     * Set Cluster network proxy model
-     * @param KubeProxyMode Cluster network proxy model
+     * Set 
+     * @param KubeProxyMode 
      */
     public void setKubeProxyMode(String KubeProxyMode) {
         this.KubeProxyMode = KubeProxyMode;
+    }
+
+    /**
+     * Get Indicates whether to enable auditing 
+     * @return AuditEnabled Indicates whether to enable auditing
+     */
+    public Boolean getAuditEnabled() {
+        return this.AuditEnabled;
+    }
+
+    /**
+     * Set Indicates whether to enable auditing
+     * @param AuditEnabled Indicates whether to enable auditing
+     */
+    public void setAuditEnabled(Boolean AuditEnabled) {
+        this.AuditEnabled = AuditEnabled;
+    }
+
+    /**
+     * Get Specifies the ID of logset to which the audit logs are uploaded. 
+     * @return AuditLogsetId Specifies the ID of logset to which the audit logs are uploaded.
+     */
+    public String getAuditLogsetId() {
+        return this.AuditLogsetId;
+    }
+
+    /**
+     * Set Specifies the ID of logset to which the audit logs are uploaded.
+     * @param AuditLogsetId Specifies the ID of logset to which the audit logs are uploaded.
+     */
+    public void setAuditLogsetId(String AuditLogsetId) {
+        this.AuditLogsetId = AuditLogsetId;
+    }
+
+    /**
+     * Get Specifies the ID of topic to which the audit logs are uploaded. 
+     * @return AuditLogTopicId Specifies the ID of topic to which the audit logs are uploaded.
+     */
+    public String getAuditLogTopicId() {
+        return this.AuditLogTopicId;
+    }
+
+    /**
+     * Set Specifies the ID of topic to which the audit logs are uploaded.
+     * @param AuditLogTopicId Specifies the ID of topic to which the audit logs are uploaded.
+     */
+    public void setAuditLogTopicId(String AuditLogTopicId) {
+        this.AuditLogTopicId = AuditLogTopicId;
     }
 
     /**
@@ -242,6 +311,9 @@ public class ClusterAdvancedSettings extends AbstractModel{
         this.setParamSimple(map, prefix + "IsNonStaticIpMode", this.IsNonStaticIpMode);
         this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
         this.setParamSimple(map, prefix + "KubeProxyMode", this.KubeProxyMode);
+        this.setParamSimple(map, prefix + "AuditEnabled", this.AuditEnabled);
+        this.setParamSimple(map, prefix + "AuditLogsetId", this.AuditLogsetId);
+        this.setParamSimple(map, prefix + "AuditLogTopicId", this.AuditLogTopicId);
 
     }
 }

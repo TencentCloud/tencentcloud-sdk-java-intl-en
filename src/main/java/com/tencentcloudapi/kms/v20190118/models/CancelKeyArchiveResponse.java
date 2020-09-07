@@ -13,21 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iai.v20200303.models;
+package com.tencentcloudapi.kms.v20190118.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CheckSimilarPersonResponse extends AbstractModel{
-
-    /**
-    * Duplicate check task ID, which is used to query and get the progress and result of the task.
-    */
-    @SerializedName("JobId")
-    @Expose
-    private String JobId;
+public class CancelKeyArchiveResponse extends AbstractModel{
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -35,22 +28,6 @@ public class CheckSimilarPersonResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get Duplicate check task ID, which is used to query and get the progress and result of the task. 
-     * @return JobId Duplicate check task ID, which is used to query and get the progress and result of the task.
-     */
-    public String getJobId() {
-        return this.JobId;
-    }
-
-    /**
-     * Set Duplicate check task ID, which is used to query and get the progress and result of the task.
-     * @param JobId Duplicate check task ID, which is used to query and get the progress and result of the task.
-     */
-    public void setJobId(String JobId) {
-        this.JobId = JobId;
-    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -72,7 +49,6 @@ public class CheckSimilarPersonResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
