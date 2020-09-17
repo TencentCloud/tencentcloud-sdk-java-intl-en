@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CheckAssistantCidrResponse extends AbstractModel{
 
     /**
-    * 
+    * Array of conflict resources.
     */
     @SerializedName("ConflictSourceSet")
     @Expose
@@ -37,16 +37,16 @@ public class CheckAssistantCidrResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get  
-     * @return ConflictSourceSet 
+     * Get Array of conflict resources. 
+     * @return ConflictSourceSet Array of conflict resources.
      */
     public ConflictSource [] getConflictSourceSet() {
         return this.ConflictSourceSet;
     }
 
     /**
-     * Set 
-     * @param ConflictSourceSet 
+     * Set Array of conflict resources.
+     * @param ConflictSourceSet Array of conflict resources.
      */
     public void setConflictSourceSet(ConflictSource [] ConflictSourceSet) {
         this.ConflictSourceSet = ConflictSourceSet;

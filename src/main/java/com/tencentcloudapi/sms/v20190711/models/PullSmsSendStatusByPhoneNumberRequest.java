@@ -59,7 +59,7 @@ Note: this parameter is currently fixed at 0.
     private String SmsSdkAppid;
 
     /**
-    * 
+    * Pull end time in UNIX timestamp accurate to seconds.
     */
     @SerializedName("EndDateTime")
     @Expose
@@ -150,16 +150,16 @@ Note: this parameter is currently fixed at 0.
     }
 
     /**
-     * Get  
-     * @return EndDateTime 
+     * Get Pull end time in UNIX timestamp accurate to seconds. 
+     * @return EndDateTime Pull end time in UNIX timestamp accurate to seconds.
      */
     public Long getEndDateTime() {
         return this.EndDateTime;
     }
 
     /**
-     * Set 
-     * @param EndDateTime 
+     * Set Pull end time in UNIX timestamp accurate to seconds.
+     * @param EndDateTime Pull end time in UNIX timestamp accurate to seconds.
      */
     public void setEndDateTime(Long EndDateTime) {
         this.EndDateTime = EndDateTime;

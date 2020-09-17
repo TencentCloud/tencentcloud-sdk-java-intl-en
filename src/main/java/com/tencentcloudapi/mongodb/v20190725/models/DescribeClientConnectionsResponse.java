@@ -30,7 +30,7 @@ public class DescribeClientConnectionsResponse extends AbstractModel{
     private ClientConnection [] Clients;
 
     /**
-    * 
+    * The total number of records that meet the query condition, which can be used for paginated queries.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeClientConnectionsResponse extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return TotalCount 
+     * Get The total number of records that meet the query condition, which can be used for paginated queries. 
+     * @return TotalCount The total number of records that meet the query condition, which can be used for paginated queries.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 
-     * @param TotalCount 
+     * Set The total number of records that meet the query condition, which can be used for paginated queries.
+     * @param TotalCount The total number of records that meet the query condition, which can be used for paginated queries.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

@@ -79,7 +79,7 @@ public class CvmInstance extends AbstractModel{
     private String CreatedTime;
 
     /**
-    * 
+    * Instance type.
     */
     @SerializedName("InstanceType")
     @Expose
@@ -235,16 +235,16 @@ public class CvmInstance extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return InstanceType 
+     * Get Instance type. 
+     * @return InstanceType Instance type.
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 
-     * @param InstanceType 
+     * Set Instance type.
+     * @param InstanceType Instance type.
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;

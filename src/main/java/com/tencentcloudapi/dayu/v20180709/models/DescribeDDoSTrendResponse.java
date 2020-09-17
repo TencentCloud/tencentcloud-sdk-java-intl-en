@@ -73,7 +73,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String EndTime;
 
     /**
-    * Value array
+    * Value array. The unit for attack traffic bandwidth is Mbps, and that for the packet rate is pps.
     */
     @SerializedName("Data")
     @Expose
@@ -210,16 +210,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Value array 
-     * @return Data Value array
+     * Get Value array. The unit for attack traffic bandwidth is Mbps, and that for the packet rate is pps. 
+     * @return Data Value array. The unit for attack traffic bandwidth is Mbps, and that for the packet rate is pps.
      */
     public Long [] getData() {
         return this.Data;
     }
 
     /**
-     * Set Value array
-     * @param Data Value array
+     * Set Value array. The unit for attack traffic bandwidth is Mbps, and that for the packet rate is pps.
+     * @param Data Value array. The unit for attack traffic bandwidth is Mbps, and that for the packet rate is pps.
      */
     public void setData(Long [] Data) {
         this.Data = Data;

@@ -96,6 +96,13 @@ IKAD: Malaysia Temporary Employment Visit Pass
     private String Type;
 
     /**
+    * Date of birth (currently, this field is only supported for IKAD)
+    */
+    @SerializedName("Birthday")
+    @Expose
+    private String Birthday;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -299,6 +306,22 @@ IKAD: Malaysia Temporary Employment Visit Pass
     }
 
     /**
+     * Get Date of birth (currently, this field is only supported for IKAD) 
+     * @return Birthday Date of birth (currently, this field is only supported for IKAD)
+     */
+    public String getBirthday() {
+        return this.Birthday;
+    }
+
+    /**
+     * Set Date of birth (currently, this field is only supported for IKAD)
+     * @param Birthday Date of birth (currently, this field is only supported for IKAD)
+     */
+    public void setBirthday(String Birthday) {
+        this.Birthday = Birthday;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -326,6 +349,7 @@ IKAD: Malaysia Temporary Employment Visit Pass
         this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Birthday", this.Birthday);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

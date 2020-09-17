@@ -334,6 +334,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RemainBandwidthDuration;
 
     /**
+    * Disk size of the Tendis instance
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DiskSize")
+    @Expose
+    private Long DiskSize;
+
+    /**
+    * Monitoring granularity type. Valid values: 1m (monitoring at 1-minute granularity), 5s (monitoring at 5-second granularity)
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MonitorVersion")
+    @Expose
+    private String MonitorVersion;
+
+    /**
      * Get Instance name 
      * @return InstanceName Instance name
      */
@@ -1062,6 +1078,46 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Disk size of the Tendis instance
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return DiskSize Disk size of the Tendis instance
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getDiskSize() {
+        return this.DiskSize;
+    }
+
+    /**
+     * Set Disk size of the Tendis instance
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param DiskSize Disk size of the Tendis instance
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDiskSize(Long DiskSize) {
+        this.DiskSize = DiskSize;
+    }
+
+    /**
+     * Get Monitoring granularity type. Valid values: 1m (monitoring at 1-minute granularity), 5s (monitoring at 5-second granularity)
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return MonitorVersion Monitoring granularity type. Valid values: 1m (monitoring at 1-minute granularity), 5s (monitoring at 5-second granularity)
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getMonitorVersion() {
+        return this.MonitorVersion;
+    }
+
+    /**
+     * Set Monitoring granularity type. Valid values: 1m (monitoring at 1-minute granularity), 5s (monitoring at 5-second granularity)
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param MonitorVersion Monitoring granularity type. Valid values: 1m (monitoring at 1-minute granularity), 5s (monitoring at 5-second granularity)
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMonitorVersion(String MonitorVersion) {
+        this.MonitorVersion = MonitorVersion;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1108,6 +1164,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
         this.setParamSimple(map, prefix + "Vip6", this.Vip6);
         this.setParamSimple(map, prefix + "RemainBandwidthDuration", this.RemainBandwidthDuration);
+        this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
+        this.setParamSimple(map, prefix + "MonitorVersion", this.MonitorVersion);
 
     }
 }

@@ -230,7 +230,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String VpcName;
 
     /**
-    * 
+    * Backup IP address on the Tencent side.
     */
     @SerializedName("TencentBackupAddress")
     @Expose
@@ -749,16 +749,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return TencentBackupAddress 
+     * Get Backup IP address on the Tencent side. 
+     * @return TencentBackupAddress Backup IP address on the Tencent side.
      */
     public String getTencentBackupAddress() {
         return this.TencentBackupAddress;
     }
 
     /**
-     * Set 
-     * @param TencentBackupAddress 
+     * Set Backup IP address on the Tencent side.
+     * @param TencentBackupAddress Backup IP address on the Tencent side.
      */
     public void setTencentBackupAddress(String TencentBackupAddress) {
         this.TencentBackupAddress = TencentBackupAddress;

@@ -44,7 +44,7 @@ public class CreateTableGroupRequest extends AbstractModel{
     private String TableGroupId;
 
     /**
-    * 
+    * Table group tag list
     */
     @SerializedName("ResourceTags")
     @Expose
@@ -99,16 +99,16 @@ public class CreateTableGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return ResourceTags 
+     * Get Table group tag list 
+     * @return ResourceTags Table group tag list
      */
     public TagInfoUnit [] getResourceTags() {
         return this.ResourceTags;
     }
 
     /**
-     * Set 
-     * @param ResourceTags 
+     * Set Table group tag list
+     * @param ResourceTags Table group tag list
      */
     public void setResourceTags(TagInfoUnit [] ResourceTags) {
         this.ResourceTags = ResourceTags;

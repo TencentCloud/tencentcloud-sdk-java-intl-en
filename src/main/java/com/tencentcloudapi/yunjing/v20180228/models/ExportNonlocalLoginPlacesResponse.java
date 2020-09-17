@@ -30,6 +30,13 @@ public class ExportNonlocalLoginPlacesResponse extends AbstractModel{
     private String DownloadUrl;
 
     /**
+    * Export task ID
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private String TaskId;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -53,6 +60,22 @@ public class ExportNonlocalLoginPlacesResponse extends AbstractModel{
     }
 
     /**
+     * Get Export task ID 
+     * @return TaskId Export task ID
+     */
+    public String getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set Export task ID
+     * @param TaskId Export task ID
+     */
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -73,6 +96,7 @@ public class ExportNonlocalLoginPlacesResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

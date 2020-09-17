@@ -23,42 +23,42 @@ import java.util.HashMap;
 public class AccessPoint extends AbstractModel{
 
     /**
-    * 
+    * Access point name.
     */
     @SerializedName("AccessPointName")
     @Expose
     private String AccessPointName;
 
     /**
-    * 
+    * Unique ID of access point.
     */
     @SerializedName("AccessPointId")
     @Expose
     private String AccessPointId;
 
     /**
-    * 
+    * Access point status. Valid values: available, unavailable.
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * 
+    * Access point location.
     */
     @SerializedName("Location")
     @Expose
     private String Location;
 
     /**
-    * 
+    * Supported ISP list of access pint.
     */
     @SerializedName("LineOperator")
     @Expose
     private String [] LineOperator;
 
     /**
-    * 
+    * Region ID where the access point resides.
     */
     @SerializedName("RegionId")
     @Expose
@@ -73,96 +73,96 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     private String [] AvailablePortType;
 
     /**
-     * Get  
-     * @return AccessPointName 
+     * Get Access point name. 
+     * @return AccessPointName Access point name.
      */
     public String getAccessPointName() {
         return this.AccessPointName;
     }
 
     /**
-     * Set 
-     * @param AccessPointName 
+     * Set Access point name.
+     * @param AccessPointName Access point name.
      */
     public void setAccessPointName(String AccessPointName) {
         this.AccessPointName = AccessPointName;
     }
 
     /**
-     * Get  
-     * @return AccessPointId 
+     * Get Unique ID of access point. 
+     * @return AccessPointId Unique ID of access point.
      */
     public String getAccessPointId() {
         return this.AccessPointId;
     }
 
     /**
-     * Set 
-     * @param AccessPointId 
+     * Set Unique ID of access point.
+     * @param AccessPointId Unique ID of access point.
      */
     public void setAccessPointId(String AccessPointId) {
         this.AccessPointId = AccessPointId;
     }
 
     /**
-     * Get  
-     * @return State 
+     * Get Access point status. Valid values: available, unavailable. 
+     * @return State Access point status. Valid values: available, unavailable.
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set 
-     * @param State 
+     * Set Access point status. Valid values: available, unavailable.
+     * @param State Access point status. Valid values: available, unavailable.
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get  
-     * @return Location 
+     * Get Access point location. 
+     * @return Location Access point location.
      */
     public String getLocation() {
         return this.Location;
     }
 
     /**
-     * Set 
-     * @param Location 
+     * Set Access point location.
+     * @param Location Access point location.
      */
     public void setLocation(String Location) {
         this.Location = Location;
     }
 
     /**
-     * Get  
-     * @return LineOperator 
+     * Get Supported ISP list of access pint. 
+     * @return LineOperator Supported ISP list of access pint.
      */
     public String [] getLineOperator() {
         return this.LineOperator;
     }
 
     /**
-     * Set 
-     * @param LineOperator 
+     * Set Supported ISP list of access pint.
+     * @param LineOperator Supported ISP list of access pint.
      */
     public void setLineOperator(String [] LineOperator) {
         this.LineOperator = LineOperator;
     }
 
     /**
-     * Get  
-     * @return RegionId 
+     * Get Region ID where the access point resides. 
+     * @return RegionId Region ID where the access point resides.
      */
     public String getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 
-     * @param RegionId 
+     * Set Region ID where the access point resides.
+     * @param RegionId Region ID where the access point resides.
      */
     public void setRegionId(String RegionId) {
         this.RegionId = RegionId;

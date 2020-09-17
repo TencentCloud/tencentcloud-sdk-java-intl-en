@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class Hsts extends AbstractModel{
 
     /**
-    * 
+    * Whether to enable. Valid values: on, off.
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * `MaxAge` value.
     */
     @SerializedName("MaxAge")
     @Expose
     private Long MaxAge;
 
     /**
-    * 
+    * Whether to include subdomain names. Valid values: on, off.
     */
     @SerializedName("IncludeSubDomains")
     @Expose
     private String IncludeSubDomains;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Whether to enable. Valid values: on, off. 
+     * @return Switch Whether to enable. Valid values: on, off.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Whether to enable. Valid values: on, off.
+     * @param Switch Whether to enable. Valid values: on, off.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return MaxAge 
+     * Get `MaxAge` value. 
+     * @return MaxAge `MaxAge` value.
      */
     public Long getMaxAge() {
         return this.MaxAge;
     }
 
     /**
-     * Set 
-     * @param MaxAge 
+     * Set `MaxAge` value.
+     * @param MaxAge `MaxAge` value.
      */
     public void setMaxAge(Long MaxAge) {
         this.MaxAge = MaxAge;
     }
 
     /**
-     * Get  
-     * @return IncludeSubDomains 
+     * Get Whether to include subdomain names. Valid values: on, off. 
+     * @return IncludeSubDomains Whether to include subdomain names. Valid values: on, off.
      */
     public String getIncludeSubDomains() {
         return this.IncludeSubDomains;
     }
 
     /**
-     * Set 
-     * @param IncludeSubDomains 
+     * Set Whether to include subdomain names. Valid values: on, off.
+     * @param IncludeSubDomains Whether to include subdomain names. Valid values: on, off.
      */
     public void setIncludeSubDomains(String IncludeSubDomains) {
         this.IncludeSubDomains = IncludeSubDomains;

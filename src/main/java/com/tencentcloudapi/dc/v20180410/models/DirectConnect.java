@@ -227,7 +227,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ChargeState;
 
     /**
-    * 
+    * Connection activation time.
     */
     @SerializedName("StartTime")
     @Expose
@@ -746,16 +746,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return StartTime 
+     * Get Connection activation time. 
+     * @return StartTime Connection activation time.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 
-     * @param StartTime 
+     * Set Connection activation time.
+     * @param StartTime Connection activation time.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;

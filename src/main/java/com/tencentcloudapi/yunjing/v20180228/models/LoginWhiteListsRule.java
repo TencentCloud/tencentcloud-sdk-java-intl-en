@@ -65,14 +65,14 @@ public class LoginWhiteListsRule extends AbstractModel{
     private Long Id;
 
     /**
-    * 
+    * Start time
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 
+    * End time
     */
     @SerializedName("EndTime")
     @Expose
@@ -175,32 +175,32 @@ public class LoginWhiteListsRule extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return StartTime 
+     * Get Start time 
+     * @return StartTime Start time
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 
-     * @param StartTime 
+     * Set Start time
+     * @param StartTime Start time
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get  
-     * @return EndTime 
+     * Get End time 
+     * @return EndTime End time
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 
-     * @param EndTime 
+     * Set End time
+     * @param EndTime End time
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

@@ -109,7 +109,7 @@ NAT type supports network address switch configuration. After the type is confir
     private Boolean EnableBGP;
 
     /**
-    * 
+    * Whether to enable BGP's `community` attribute. Valid values: enable, disable
     */
     @SerializedName("EnableBGPCommunity")
     @Expose
@@ -336,16 +336,16 @@ NAT type supports network address switch configuration. After the type is confir
     }
 
     /**
-     * Get  
-     * @return EnableBGPCommunity 
+     * Get Whether to enable BGP's `community` attribute. Valid values: enable, disable 
+     * @return EnableBGPCommunity Whether to enable BGP's `community` attribute. Valid values: enable, disable
      */
     public Boolean getEnableBGPCommunity() {
         return this.EnableBGPCommunity;
     }
 
     /**
-     * Set 
-     * @param EnableBGPCommunity 
+     * Set Whether to enable BGP's `community` attribute. Valid values: enable, disable
+     * @param EnableBGPCommunity Whether to enable BGP's `community` attribute. Valid values: enable, disable
      */
     public void setEnableBGPCommunity(Boolean EnableBGPCommunity) {
         this.EnableBGPCommunity = EnableBGPCommunity;

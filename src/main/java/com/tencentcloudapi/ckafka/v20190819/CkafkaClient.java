@@ -454,6 +454,60 @@ This API is used to get the list of topics in a CKafka instance of a user.
     }
 
     /**
+     *This API is used to query messages based on a specified offset position.
+     * @param req FetchMessageByOffsetRequest
+     * @return FetchMessageByOffsetResponse
+     * @throws TencentCloudSDKException
+     */
+    public FetchMessageByOffsetResponse FetchMessageByOffset(FetchMessageByOffsetRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<FetchMessageByOffsetResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<FetchMessageByOffsetResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "FetchMessageByOffset"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the message list based on an offset.
+     * @param req FetchMessageListByOffsetRequest
+     * @return FetchMessageListByOffsetResponse
+     * @throws TencentCloudSDKException
+     */
+    public FetchMessageListByOffsetResponse FetchMessageListByOffset(FetchMessageListByOffsetRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<FetchMessageListByOffsetResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<FetchMessageListByOffsetResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "FetchMessageListByOffset"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the message list based on a timestamp.
+     * @param req FetchMessageListByTimestampRequest
+     * @return FetchMessageListByTimestampResponse
+     * @throws TencentCloudSDKException
+     */
+    public FetchMessageListByTimestampResponse FetchMessageListByTimestamp(FetchMessageListByTimestampRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<FetchMessageListByTimestampResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<FetchMessageListByTimestampResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "FetchMessageListByTimestamp"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to set the consumer group (Groups) offset.
      * @param req ModifyGroupOffsetsRequest
      * @return ModifyGroupOffsetsResponse

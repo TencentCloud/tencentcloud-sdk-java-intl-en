@@ -56,7 +56,11 @@ public class SecurityDynamic extends AbstractModel{
     private String Message;
 
     /**
-    * 
+    * Security event level.
+<li>RISK: severe</li>
+<li>HIGH: high</li>
+<li>NORMAL: medium</li>
+<li>LOW: low</li>
     */
     @SerializedName("SecurityLevel")
     @Expose
@@ -147,16 +151,32 @@ public class SecurityDynamic extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return SecurityLevel 
+     * Get Security event level.
+<li>RISK: severe</li>
+<li>HIGH: high</li>
+<li>NORMAL: medium</li>
+<li>LOW: low</li> 
+     * @return SecurityLevel Security event level.
+<li>RISK: severe</li>
+<li>HIGH: high</li>
+<li>NORMAL: medium</li>
+<li>LOW: low</li>
      */
     public String getSecurityLevel() {
         return this.SecurityLevel;
     }
 
     /**
-     * Set 
-     * @param SecurityLevel 
+     * Set Security event level.
+<li>RISK: severe</li>
+<li>HIGH: high</li>
+<li>NORMAL: medium</li>
+<li>LOW: low</li>
+     * @param SecurityLevel Security event level.
+<li>RISK: severe</li>
+<li>HIGH: high</li>
+<li>NORMAL: medium</li>
+<li>LOW: low</li>
      */
     public void setSecurityLevel(String SecurityLevel) {
         this.SecurityLevel = SecurityLevel;

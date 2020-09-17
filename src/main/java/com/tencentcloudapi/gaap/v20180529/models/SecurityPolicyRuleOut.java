@@ -67,7 +67,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Protocol;
 
     /**
-    * 
+    * Security policy ID
     */
     @SerializedName("PolicyId")
     @Expose
@@ -178,16 +178,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return PolicyId 
+     * Get Security policy ID 
+     * @return PolicyId Security policy ID
      */
     public String getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set 
-     * @param PolicyId 
+     * Set Security policy ID
+     * @param PolicyId Security policy ID
      */
     public void setPolicyId(String PolicyId) {
         this.PolicyId = PolicyId;

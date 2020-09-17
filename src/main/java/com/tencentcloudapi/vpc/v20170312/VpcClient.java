@@ -336,6 +336,26 @@ The number of network instances that each CCN can be associated with is limited.
     }
 
     /**
+     *This API is used by the service provider to perform a compliance audit.
+* To call this API, the service provider needs to prove identity and provide `APPID` to audit the compliance review forms received.
+* The review form can be changed between the `APPROVED` and `DENY` status.
+     * @param req AuditCrossBorderComplianceRequest
+     * @return AuditCrossBorderComplianceResponse
+     * @throws TencentCloudSDKException
+     */
+    public AuditCrossBorderComplianceResponse AuditCrossBorderCompliance(AuditCrossBorderComplianceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AuditCrossBorderComplianceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<AuditCrossBorderComplianceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "AuditCrossBorderCompliance"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (CheckAssistantCidr) is used to check overlapping of a secondary CIDR block with inventory routing, peering connection (opposite VPC CIDR block), and any other resources. If an overlap is present, the overlapped resources are returned. (To use this API that is in Beta, please submit a ticket.)
 * Check whether the secondary CIDR block overlaps with a primary or secondary CIDR block of the current VPC.
 * Check whether the secondary CIDR block overlaps with the routing destination of the current VPC.
@@ -1643,6 +1663,25 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
                 Type type = new TypeToken<JsonResponseModel<DescribeClassicLinkInstancesResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeClassicLinkInstances"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the compliance review form created.
+The service provider can query all review forms created by any `APPID` under the service. Other users can only query their own review forms.
+     * @param req DescribeCrossBorderComplianceRequest
+     * @return DescribeCrossBorderComplianceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCrossBorderComplianceResponse DescribeCrossBorderCompliance(DescribeCrossBorderComplianceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCrossBorderComplianceResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCrossBorderComplianceResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeCrossBorderCompliance"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

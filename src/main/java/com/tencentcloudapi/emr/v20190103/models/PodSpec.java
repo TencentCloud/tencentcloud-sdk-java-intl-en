@@ -58,11 +58,25 @@ public class PodSpec extends AbstractModel{
     private Long Memory;
 
     /**
-    * Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod.
+    * Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
     */
     @SerializedName("DataVolumes")
     @Expose
     private String [] DataVolumes;
+
+    /**
+    * EKS cluster - CPU type. Valid values: "intel", "amd"
+    */
+    @SerializedName("CpuType")
+    @Expose
+    private String CpuType;
+
+    /**
+    * Pod node data directory mounting information.
+    */
+    @SerializedName("PodVolumes")
+    @Expose
+    private PodVolume [] PodVolumes;
 
     /**
      * Get Identifier of external resource provider, such as "cls-a1cd23fa". 
@@ -145,19 +159,51 @@ public class PodSpec extends AbstractModel{
     }
 
     /**
-     * Get Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod. 
-     * @return DataVolumes Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod.
+     * Get Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused) 
+     * @return DataVolumes Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
      */
     public String [] getDataVolumes() {
         return this.DataVolumes;
     }
 
     /**
-     * Set Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod.
-     * @param DataVolumes Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod.
+     * Set Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
+     * @param DataVolumes Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
      */
     public void setDataVolumes(String [] DataVolumes) {
         this.DataVolumes = DataVolumes;
+    }
+
+    /**
+     * Get EKS cluster - CPU type. Valid values: "intel", "amd" 
+     * @return CpuType EKS cluster - CPU type. Valid values: "intel", "amd"
+     */
+    public String getCpuType() {
+        return this.CpuType;
+    }
+
+    /**
+     * Set EKS cluster - CPU type. Valid values: "intel", "amd"
+     * @param CpuType EKS cluster - CPU type. Valid values: "intel", "amd"
+     */
+    public void setCpuType(String CpuType) {
+        this.CpuType = CpuType;
+    }
+
+    /**
+     * Get Pod node data directory mounting information. 
+     * @return PodVolumes Pod node data directory mounting information.
+     */
+    public PodVolume [] getPodVolumes() {
+        return this.PodVolumes;
+    }
+
+    /**
+     * Set Pod node data directory mounting information.
+     * @param PodVolumes Pod node data directory mounting information.
+     */
+    public void setPodVolumes(PodVolume [] PodVolumes) {
+        this.PodVolumes = PodVolumes;
     }
 
     /**
@@ -170,6 +216,8 @@ public class PodSpec extends AbstractModel{
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamArraySimple(map, prefix + "DataVolumes.", this.DataVolumes);
+        this.setParamSimple(map, prefix + "CpuType", this.CpuType);
+        this.setParamArrayObj(map, prefix + "PodVolumes.", this.PodVolumes);
 
     }
 }

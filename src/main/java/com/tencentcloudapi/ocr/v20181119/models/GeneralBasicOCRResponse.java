@@ -37,11 +37,18 @@ public class GeneralBasicOCRResponse extends AbstractModel{
     private String Language;
 
     /**
-    * Image rotation angle in degrees. 0° indicates horizontal text, a positive value indicates clockwise rotation, and a negative value indicates anticlockwise rotation. For more information, please see <a href="https://cloud.tencent.com/document/product/866/45139">How to Correct Tilted Text</a>
+    * Image rotation angle in degrees. 0° indicates horizontal text, a positive value indicates clockwise rotation, and a negative value indicates anticlockwise rotation. For more information, please see <a href="https://intl.cloud.tencent.com/document/product/866/45139?from_cn_redirect=1">How to Correct Tilted Text</a>
     */
     @SerializedName("Angel")
     @Expose
     private Float Angel;
+
+    /**
+    * Total number of PDF pages to be returned if the image is a PDF. Default value: 0
+    */
+    @SerializedName("PdfPageSize")
+    @Expose
+    private Long PdfPageSize;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -83,19 +90,35 @@ public class GeneralBasicOCRResponse extends AbstractModel{
     }
 
     /**
-     * Get Image rotation angle in degrees. 0° indicates horizontal text, a positive value indicates clockwise rotation, and a negative value indicates anticlockwise rotation. For more information, please see <a href="https://cloud.tencent.com/document/product/866/45139">How to Correct Tilted Text</a> 
-     * @return Angel Image rotation angle in degrees. 0° indicates horizontal text, a positive value indicates clockwise rotation, and a negative value indicates anticlockwise rotation. For more information, please see <a href="https://cloud.tencent.com/document/product/866/45139">How to Correct Tilted Text</a>
+     * Get Image rotation angle in degrees. 0° indicates horizontal text, a positive value indicates clockwise rotation, and a negative value indicates anticlockwise rotation. For more information, please see <a href="https://intl.cloud.tencent.com/document/product/866/45139?from_cn_redirect=1">How to Correct Tilted Text</a> 
+     * @return Angel Image rotation angle in degrees. 0° indicates horizontal text, a positive value indicates clockwise rotation, and a negative value indicates anticlockwise rotation. For more information, please see <a href="https://intl.cloud.tencent.com/document/product/866/45139?from_cn_redirect=1">How to Correct Tilted Text</a>
      */
     public Float getAngel() {
         return this.Angel;
     }
 
     /**
-     * Set Image rotation angle in degrees. 0° indicates horizontal text, a positive value indicates clockwise rotation, and a negative value indicates anticlockwise rotation. For more information, please see <a href="https://cloud.tencent.com/document/product/866/45139">How to Correct Tilted Text</a>
-     * @param Angel Image rotation angle in degrees. 0° indicates horizontal text, a positive value indicates clockwise rotation, and a negative value indicates anticlockwise rotation. For more information, please see <a href="https://cloud.tencent.com/document/product/866/45139">How to Correct Tilted Text</a>
+     * Set Image rotation angle in degrees. 0° indicates horizontal text, a positive value indicates clockwise rotation, and a negative value indicates anticlockwise rotation. For more information, please see <a href="https://intl.cloud.tencent.com/document/product/866/45139?from_cn_redirect=1">How to Correct Tilted Text</a>
+     * @param Angel Image rotation angle in degrees. 0° indicates horizontal text, a positive value indicates clockwise rotation, and a negative value indicates anticlockwise rotation. For more information, please see <a href="https://intl.cloud.tencent.com/document/product/866/45139?from_cn_redirect=1">How to Correct Tilted Text</a>
      */
     public void setAngel(Float Angel) {
         this.Angel = Angel;
+    }
+
+    /**
+     * Get Total number of PDF pages to be returned if the image is a PDF. Default value: 0 
+     * @return PdfPageSize Total number of PDF pages to be returned if the image is a PDF. Default value: 0
+     */
+    public Long getPdfPageSize() {
+        return this.PdfPageSize;
+    }
+
+    /**
+     * Set Total number of PDF pages to be returned if the image is a PDF. Default value: 0
+     * @param PdfPageSize Total number of PDF pages to be returned if the image is a PDF. Default value: 0
+     */
+    public void setPdfPageSize(Long PdfPageSize) {
+        this.PdfPageSize = PdfPageSize;
     }
 
     /**
@@ -121,6 +144,7 @@ public class GeneralBasicOCRResponse extends AbstractModel{
         this.setParamArrayObj(map, prefix + "TextDetections.", this.TextDetections);
         this.setParamSimple(map, prefix + "Language", this.Language);
         this.setParamSimple(map, prefix + "Angel", this.Angel);
+        this.setParamSimple(map, prefix + "PdfPageSize", this.PdfPageSize);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

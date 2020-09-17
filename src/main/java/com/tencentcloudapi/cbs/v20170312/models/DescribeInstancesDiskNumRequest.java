@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeInstancesDiskNumRequest extends AbstractModel{
 
     /**
-    * ID of the CVM instance can be queried via the API [DescribeInstances](/document/product/213/15728).
+    * ID of the CVM instance can be queried via the API [DescribeInstances](https://intl.cloud.tencent.com/document/product/213/15728?from_cn_redirect=1).
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-     * Get ID of the CVM instance can be queried via the API [DescribeInstances](/document/product/213/15728). 
-     * @return InstanceIds ID of the CVM instance can be queried via the API [DescribeInstances](/document/product/213/15728).
+     * Get ID of the CVM instance can be queried via the API [DescribeInstances](https://intl.cloud.tencent.com/document/product/213/15728?from_cn_redirect=1). 
+     * @return InstanceIds ID of the CVM instance can be queried via the API [DescribeInstances](https://intl.cloud.tencent.com/document/product/213/15728?from_cn_redirect=1).
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set ID of the CVM instance can be queried via the API [DescribeInstances](/document/product/213/15728).
-     * @param InstanceIds ID of the CVM instance can be queried via the API [DescribeInstances](/document/product/213/15728).
+     * Set ID of the CVM instance can be queried via the API [DescribeInstances](https://intl.cloud.tencent.com/document/product/213/15728?from_cn_redirect=1).
+     * @param InstanceIds ID of the CVM instance can be queried via the API [DescribeInstances](https://intl.cloud.tencent.com/document/product/213/15728?from_cn_redirect=1).
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

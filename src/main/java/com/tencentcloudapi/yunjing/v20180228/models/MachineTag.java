@@ -37,7 +37,7 @@ public class MachineTag extends AbstractModel{
     private String Name;
 
     /**
-    * 
+    * Tag ID
     */
     @SerializedName("TagId")
     @Expose
@@ -76,16 +76,16 @@ public class MachineTag extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return TagId 
+     * Get Tag ID 
+     * @return TagId Tag ID
      */
     public Long getTagId() {
         return this.TagId;
     }
 
     /**
-     * Set 
-     * @param TagId 
+     * Set Tag ID
+     * @param TagId Tag ID
      */
     public void setTagId(Long TagId) {
         this.TagId = TagId;

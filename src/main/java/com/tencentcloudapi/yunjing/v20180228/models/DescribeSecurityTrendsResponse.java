@@ -58,35 +58,35 @@ public class DescribeSecurityTrendsResponse extends AbstractModel{
     private SecurityTrend [] BaseLines;
 
     /**
-    * 
+    * Statistics array of malicious requests.
     */
     @SerializedName("MaliciousRequests")
     @Expose
     private SecurityTrend [] MaliciousRequests;
 
     /**
-    * 
+    * Statistics array of high-risk commands.
     */
     @SerializedName("HighRiskBashs")
     @Expose
     private SecurityTrend [] HighRiskBashs;
 
     /**
-    * 
+    * Statistics array of reverse shells.
     */
     @SerializedName("ReverseShells")
     @Expose
     private SecurityTrend [] ReverseShells;
 
     /**
-    * 
+    * Statistics array of local privilege escalations.
     */
     @SerializedName("PrivilegeEscalations")
     @Expose
     private SecurityTrend [] PrivilegeEscalations;
 
     /**
-    * 
+    * Statistics array of network attacks.
     */
     @SerializedName("CyberAttacks")
     @Expose
@@ -180,80 +180,80 @@ public class DescribeSecurityTrendsResponse extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return MaliciousRequests 
+     * Get Statistics array of malicious requests. 
+     * @return MaliciousRequests Statistics array of malicious requests.
      */
     public SecurityTrend [] getMaliciousRequests() {
         return this.MaliciousRequests;
     }
 
     /**
-     * Set 
-     * @param MaliciousRequests 
+     * Set Statistics array of malicious requests.
+     * @param MaliciousRequests Statistics array of malicious requests.
      */
     public void setMaliciousRequests(SecurityTrend [] MaliciousRequests) {
         this.MaliciousRequests = MaliciousRequests;
     }
 
     /**
-     * Get  
-     * @return HighRiskBashs 
+     * Get Statistics array of high-risk commands. 
+     * @return HighRiskBashs Statistics array of high-risk commands.
      */
     public SecurityTrend [] getHighRiskBashs() {
         return this.HighRiskBashs;
     }
 
     /**
-     * Set 
-     * @param HighRiskBashs 
+     * Set Statistics array of high-risk commands.
+     * @param HighRiskBashs Statistics array of high-risk commands.
      */
     public void setHighRiskBashs(SecurityTrend [] HighRiskBashs) {
         this.HighRiskBashs = HighRiskBashs;
     }
 
     /**
-     * Get  
-     * @return ReverseShells 
+     * Get Statistics array of reverse shells. 
+     * @return ReverseShells Statistics array of reverse shells.
      */
     public SecurityTrend [] getReverseShells() {
         return this.ReverseShells;
     }
 
     /**
-     * Set 
-     * @param ReverseShells 
+     * Set Statistics array of reverse shells.
+     * @param ReverseShells Statistics array of reverse shells.
      */
     public void setReverseShells(SecurityTrend [] ReverseShells) {
         this.ReverseShells = ReverseShells;
     }
 
     /**
-     * Get  
-     * @return PrivilegeEscalations 
+     * Get Statistics array of local privilege escalations. 
+     * @return PrivilegeEscalations Statistics array of local privilege escalations.
      */
     public SecurityTrend [] getPrivilegeEscalations() {
         return this.PrivilegeEscalations;
     }
 
     /**
-     * Set 
-     * @param PrivilegeEscalations 
+     * Set Statistics array of local privilege escalations.
+     * @param PrivilegeEscalations Statistics array of local privilege escalations.
      */
     public void setPrivilegeEscalations(SecurityTrend [] PrivilegeEscalations) {
         this.PrivilegeEscalations = PrivilegeEscalations;
     }
 
     /**
-     * Get  
-     * @return CyberAttacks 
+     * Get Statistics array of network attacks. 
+     * @return CyberAttacks Statistics array of network attacks.
      */
     public SecurityTrend [] getCyberAttacks() {
         return this.CyberAttacks;
     }
 
     /**
-     * Set 
-     * @param CyberAttacks 
+     * Set Statistics array of network attacks.
+     * @param CyberAttacks Statistics array of network attacks.
      */
     public void setCyberAttacks(SecurityTrend [] CyberAttacks) {
         this.CyberAttacks = CyberAttacks;

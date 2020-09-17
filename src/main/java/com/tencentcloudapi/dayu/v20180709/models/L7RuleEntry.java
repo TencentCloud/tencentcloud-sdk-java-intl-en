@@ -149,7 +149,7 @@ public class L7RuleEntry extends AbstractModel{
     private String CCLevel;
 
     /**
-    * 
+    * Whether to enable **Forward HTTPS requests via HTTP**. Valid values: `0` (disabled) and `1` (enabled). The default value is disabled.
     */
     @SerializedName("HttpsToHttpEnable")
     @Expose
@@ -452,16 +452,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return HttpsToHttpEnable 
+     * Get Whether to enable **Forward HTTPS requests via HTTP**. Valid values: `0` (disabled) and `1` (enabled). The default value is disabled. 
+     * @return HttpsToHttpEnable Whether to enable **Forward HTTPS requests via HTTP**. Valid values: `0` (disabled) and `1` (enabled). The default value is disabled.
      */
     public Long getHttpsToHttpEnable() {
         return this.HttpsToHttpEnable;
     }
 
     /**
-     * Set 
-     * @param HttpsToHttpEnable 
+     * Set Whether to enable **Forward HTTPS requests via HTTP**. Valid values: `0` (disabled) and `1` (enabled). The default value is disabled.
+     * @param HttpsToHttpEnable Whether to enable **Forward HTTPS requests via HTTP**. Valid values: `0` (disabled) and `1` (enabled). The default value is disabled.
      */
     public void setHttpsToHttpEnable(Long HttpsToHttpEnable) {
         this.HttpsToHttpEnable = HttpsToHttpEnable;

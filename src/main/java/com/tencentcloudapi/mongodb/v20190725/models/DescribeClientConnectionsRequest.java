@@ -30,14 +30,14 @@ public class DescribeClientConnectionsRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * 
+    * The number of records that will be returned. Default value: 10,000.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 
+    * Offset. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
@@ -60,32 +60,32 @@ public class DescribeClientConnectionsRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return Limit 
+     * Get The number of records that will be returned. Default value: 10,000. 
+     * @return Limit The number of records that will be returned. Default value: 10,000.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 
-     * @param Limit 
+     * Set The number of records that will be returned. Default value: 10,000.
+     * @param Limit The number of records that will be returned. Default value: 10,000.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get  
-     * @return Offset 
+     * Get Offset. Default value: 0. 
+     * @return Offset Offset. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 
-     * @param Offset 
+     * Set Offset. Default value: 0.
+     * @param Offset Offset. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

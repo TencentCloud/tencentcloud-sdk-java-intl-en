@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifySnapshotAttributeRequest extends AbstractModel{
 
     /**
-    * Snapshot ID, which can be queried via [DescribeSnapshots](/document/product/362/15647).
+    * Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
     */
     @SerializedName("SnapshotId")
     @Expose
@@ -44,16 +44,16 @@ public class ModifySnapshotAttributeRequest extends AbstractModel{
     private Boolean IsPermanent;
 
     /**
-     * Get Snapshot ID, which can be queried via [DescribeSnapshots](/document/product/362/15647). 
-     * @return SnapshotId Snapshot ID, which can be queried via [DescribeSnapshots](/document/product/362/15647).
+     * Get Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1). 
+     * @return SnapshotId Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
      */
     public String getSnapshotId() {
         return this.SnapshotId;
     }
 
     /**
-     * Set Snapshot ID, which can be queried via [DescribeSnapshots](/document/product/362/15647).
-     * @param SnapshotId Snapshot ID, which can be queried via [DescribeSnapshots](/document/product/362/15647).
+     * Set Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+     * @param SnapshotId Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
      */
     public void setSnapshotId(String SnapshotId) {
         this.SnapshotId = SnapshotId;

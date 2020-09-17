@@ -111,7 +111,7 @@ Required if `Protocol` is `https`;
     private Long BasicIspCode;
 
     /**
-    * 
+    * This optional field must be specified when HTTPS protocol is used.
     */
     @SerializedName("Domain")
     @Expose
@@ -338,16 +338,16 @@ Required if `Protocol` is `https`;
     }
 
     /**
-     * Get  
-     * @return Domain 
+     * Get This optional field must be specified when HTTPS protocol is used. 
+     * @return Domain This optional field must be specified when HTTPS protocol is used.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 
-     * @param Domain 
+     * Set This optional field must be specified when HTTPS protocol is used.
+     * @param Domain This optional field must be specified when HTTPS protocol is used.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;

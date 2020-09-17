@@ -23,46 +23,56 @@ import java.util.HashMap;
 public class DescribeTagsRequest extends AbstractModel{
 
     /**
-    * 
+    * CVM instance type.
+<li>CVM: CVM</li>
+<li>BM: CPM</li>
     */
     @SerializedName("MachineType")
     @Expose
     private String MachineType;
 
     /**
-    * 
+    * Server region, such as `ap-guangzhou` and `ap-shanghai`
     */
     @SerializedName("MachineRegion")
     @Expose
     private String MachineRegion;
 
     /**
-     * Get  
-     * @return MachineType 
+     * Get CVM instance type.
+<li>CVM: CVM</li>
+<li>BM: CPM</li> 
+     * @return MachineType CVM instance type.
+<li>CVM: CVM</li>
+<li>BM: CPM</li>
      */
     public String getMachineType() {
         return this.MachineType;
     }
 
     /**
-     * Set 
-     * @param MachineType 
+     * Set CVM instance type.
+<li>CVM: CVM</li>
+<li>BM: CPM</li>
+     * @param MachineType CVM instance type.
+<li>CVM: CVM</li>
+<li>BM: CPM</li>
      */
     public void setMachineType(String MachineType) {
         this.MachineType = MachineType;
     }
 
     /**
-     * Get  
-     * @return MachineRegion 
+     * Get Server region, such as `ap-guangzhou` and `ap-shanghai` 
+     * @return MachineRegion Server region, such as `ap-guangzhou` and `ap-shanghai`
      */
     public String getMachineRegion() {
         return this.MachineRegion;
     }
 
     /**
-     * Set 
-     * @param MachineRegion 
+     * Set Server region, such as `ap-guangzhou` and `ap-shanghai`
+     * @param MachineRegion Server region, such as `ap-guangzhou` and `ap-shanghai`
      */
     public void setMachineRegion(String MachineRegion) {
         this.MachineRegion = MachineRegion;

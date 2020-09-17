@@ -170,6 +170,13 @@ public class DescribeInstancesRequest extends AbstractModel{
     private Long [] TypeList;
 
     /**
+    * Internal parameter, which can be ignored
+    */
+    @SerializedName("MonitorVersion")
+    @Expose
+    private String MonitorVersion;
+
+    /**
      * Get Instance list size. Default value: 20 
      * @return Limit Instance list size. Default value: 20
      */
@@ -506,6 +513,22 @@ public class DescribeInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get Internal parameter, which can be ignored 
+     * @return MonitorVersion Internal parameter, which can be ignored
+     */
+    public String getMonitorVersion() {
+        return this.MonitorVersion;
+    }
+
+    /**
+     * Set Internal parameter, which can be ignored
+     * @param MonitorVersion Internal parameter, which can be ignored
+     */
+    public void setMonitorVersion(String MonitorVersion) {
+        this.MonitorVersion = MonitorVersion;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -530,6 +553,7 @@ public class DescribeInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamArraySimple(map, prefix + "SearchKeys.", this.SearchKeys);
         this.setParamArraySimple(map, prefix + "TypeList.", this.TypeList);
+        this.setParamSimple(map, prefix + "MonitorVersion", this.MonitorVersion);
 
     }
 }

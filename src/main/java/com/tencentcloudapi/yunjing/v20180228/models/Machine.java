@@ -113,32 +113,42 @@ public class Machine extends AbstractModel{
     private MachineTag [] Tag;
 
     /**
-    * 
+    * Number of baseline risks.
     */
     @SerializedName("BaselineNum")
     @Expose
     private Long BaselineNum;
 
     /**
-    * 
+    * Number of network risks.
     */
     @SerializedName("CyberAttackNum")
     @Expose
     private Long CyberAttackNum;
 
     /**
-    * 
+    * Risk status.
+<li>SAFE: safe</li>
+<li>RISK: at risk</li>
+<li>UNKNOWN: unknown</li>
     */
     @SerializedName("SecurityStatus")
     @Expose
     private String SecurityStatus;
 
     /**
-    * 
+    * Number of intrusions
     */
     @SerializedName("InvasionNum")
     @Expose
     private Long InvasionNum;
+
+    /**
+    * Region information
+    */
+    @SerializedName("RegionInfo")
+    @Expose
+    private RegionInfo RegionInfo;
 
     /**
      * Get Server name. 
@@ -357,67 +367,95 @@ public class Machine extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return BaselineNum 
+     * Get Number of baseline risks. 
+     * @return BaselineNum Number of baseline risks.
      */
     public Long getBaselineNum() {
         return this.BaselineNum;
     }
 
     /**
-     * Set 
-     * @param BaselineNum 
+     * Set Number of baseline risks.
+     * @param BaselineNum Number of baseline risks.
      */
     public void setBaselineNum(Long BaselineNum) {
         this.BaselineNum = BaselineNum;
     }
 
     /**
-     * Get  
-     * @return CyberAttackNum 
+     * Get Number of network risks. 
+     * @return CyberAttackNum Number of network risks.
      */
     public Long getCyberAttackNum() {
         return this.CyberAttackNum;
     }
 
     /**
-     * Set 
-     * @param CyberAttackNum 
+     * Set Number of network risks.
+     * @param CyberAttackNum Number of network risks.
      */
     public void setCyberAttackNum(Long CyberAttackNum) {
         this.CyberAttackNum = CyberAttackNum;
     }
 
     /**
-     * Get  
-     * @return SecurityStatus 
+     * Get Risk status.
+<li>SAFE: safe</li>
+<li>RISK: at risk</li>
+<li>UNKNOWN: unknown</li> 
+     * @return SecurityStatus Risk status.
+<li>SAFE: safe</li>
+<li>RISK: at risk</li>
+<li>UNKNOWN: unknown</li>
      */
     public String getSecurityStatus() {
         return this.SecurityStatus;
     }
 
     /**
-     * Set 
-     * @param SecurityStatus 
+     * Set Risk status.
+<li>SAFE: safe</li>
+<li>RISK: at risk</li>
+<li>UNKNOWN: unknown</li>
+     * @param SecurityStatus Risk status.
+<li>SAFE: safe</li>
+<li>RISK: at risk</li>
+<li>UNKNOWN: unknown</li>
      */
     public void setSecurityStatus(String SecurityStatus) {
         this.SecurityStatus = SecurityStatus;
     }
 
     /**
-     * Get  
-     * @return InvasionNum 
+     * Get Number of intrusions 
+     * @return InvasionNum Number of intrusions
      */
     public Long getInvasionNum() {
         return this.InvasionNum;
     }
 
     /**
-     * Set 
-     * @param InvasionNum 
+     * Set Number of intrusions
+     * @param InvasionNum Number of intrusions
      */
     public void setInvasionNum(Long InvasionNum) {
         this.InvasionNum = InvasionNum;
+    }
+
+    /**
+     * Get Region information 
+     * @return RegionInfo Region information
+     */
+    public RegionInfo getRegionInfo() {
+        return this.RegionInfo;
+    }
+
+    /**
+     * Set Region information
+     * @param RegionInfo Region information
+     */
+    public void setRegionInfo(RegionInfo RegionInfo) {
+        this.RegionInfo = RegionInfo;
     }
 
     /**
@@ -440,6 +478,7 @@ public class Machine extends AbstractModel{
         this.setParamSimple(map, prefix + "CyberAttackNum", this.CyberAttackNum);
         this.setParamSimple(map, prefix + "SecurityStatus", this.SecurityStatus);
         this.setParamSimple(map, prefix + "InvasionNum", this.InvasionNum);
+        this.setParamObj(map, prefix + "RegionInfo.", this.RegionInfo);
 
     }
 }

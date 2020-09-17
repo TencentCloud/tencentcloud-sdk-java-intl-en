@@ -58,7 +58,7 @@ public class CreateClusterRequest extends AbstractModel{
     private String Password;
 
     /**
-    * 
+    * Cluster tag list
     */
     @SerializedName("ResourceTags")
     @Expose
@@ -152,16 +152,16 @@ public class CreateClusterRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return ResourceTags 
+     * Get Cluster tag list 
+     * @return ResourceTags Cluster tag list
      */
     public TagInfoUnit [] getResourceTags() {
         return this.ResourceTags;
     }
 
     /**
-     * Set 
-     * @param ResourceTags 
+     * Set Cluster tag list
+     * @param ResourceTags Cluster tag list
      */
     public void setResourceTags(TagInfoUnit [] ResourceTags) {
         this.ResourceTags = ResourceTags;

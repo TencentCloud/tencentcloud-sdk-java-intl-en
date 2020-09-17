@@ -23,8 +23,8 @@ import java.util.HashMap;
 public class GeneralBasicOCRRequest extends AbstractModel{
 
     /**
-    * Base64-encoded value of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
+    * Base64-encoded value of image/PDF.
+The image/PDF cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
 Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
     */
     @SerializedName("ImageBase64")
@@ -32,9 +32,9 @@ Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are pr
     private String ImageBase64;
 
     /**
-    * URL address of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+    * URL address of image/PDF.
+The image/PDF cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
     */
     @SerializedName("ImageUrl")
     @Expose
@@ -51,24 +51,43 @@ You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL 
     * Language to be recognized.
 The language can be automatically recognized or manually specified. Chinese-English mix (`zh`) is selected by default. Mixed characters in English and each supported language can be recognized together.
 Valid values:
-zh\auto\jap\kor\nspa\fre\ger\por\nvie\may\rus\ita\nhol\swe\fin\dan\nnor\hun\tha\lat
+zh\auto\jap\kor\
+spa\fre\ger\por\
+vie\may\rus\ita\
+hol\swe\fin\dan\
+nor\hun\tha\lat\ara
 Value meanings:
 Chinese-English mix, automatic recognition, Japanese, Korean,
 Spanish, French, German, Portuguese,
 Vietnamese, Malay, Russian, Italian,
 Dutch, Swedish, Finnish, Danish,
-Norwegian, Hungarian, Thai, Latin.
+Norwegian, Hungarian, Thai, Latin,
+Arabic.
     */
     @SerializedName("LanguageType")
     @Expose
     private String LanguageType;
 
     /**
-     * Get Base64-encoded value of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
+    * Whether to enable PDF recognition. Default value: false. After this feature is enabled, both images and PDF files can be recognized at the same time.
+    */
+    @SerializedName("IsPdf")
+    @Expose
+    private Boolean IsPdf;
+
+    /**
+    * Page number of the PDF page that needs to be recognized. Only one single PDF page can be recognized. This parameter is valid if the uploaded file is a PDF and the value of the `IsPdf` parameter is `true`. Default value: 1.
+    */
+    @SerializedName("PdfPageNumber")
+    @Expose
+    private Long PdfPageNumber;
+
+    /**
+     * Get Base64-encoded value of image/PDF.
+The image/PDF cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
 Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used. 
-     * @return ImageBase64 Base64-encoded value of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
+     * @return ImageBase64 Base64-encoded value of image/PDF.
+The image/PDF cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
 Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
      */
     public String getImageBase64() {
@@ -76,11 +95,11 @@ Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are pr
     }
 
     /**
-     * Set Base64-encoded value of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
+     * Set Base64-encoded value of image/PDF.
+The image/PDF cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
 Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
-     * @param ImageBase64 Base64-encoded value of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
+     * @param ImageBase64 Base64-encoded value of image/PDF.
+The image/PDF cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
 Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
      */
     public void setImageBase64(String ImageBase64) {
@@ -88,24 +107,24 @@ Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are pr
     }
 
     /**
-     * Get URL address of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low. 
-     * @return ImageUrl URL address of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+     * Get URL address of image/PDF.
+The image/PDF cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low. 
+     * @return ImageUrl URL address of image/PDF.
+The image/PDF cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
      */
     public String getImageUrl() {
         return this.ImageUrl;
     }
 
     /**
-     * Set URL address of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
-     * @param ImageUrl URL address of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+     * Set URL address of image/PDF.
+The image/PDF cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+     * @param ImageUrl URL address of image/PDF.
+The image/PDF cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
      */
     public void setImageUrl(String ImageUrl) {
         this.ImageUrl = ImageUrl;
@@ -131,23 +150,33 @@ You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL 
      * Get Language to be recognized.
 The language can be automatically recognized or manually specified. Chinese-English mix (`zh`) is selected by default. Mixed characters in English and each supported language can be recognized together.
 Valid values:
-zh\auto\jap\kor\nspa\fre\ger\por\nvie\may\rus\ita\nhol\swe\fin\dan\nnor\hun\tha\lat
+zh\auto\jap\kor\
+spa\fre\ger\por\
+vie\may\rus\ita\
+hol\swe\fin\dan\
+nor\hun\tha\lat\ara
 Value meanings:
 Chinese-English mix, automatic recognition, Japanese, Korean,
 Spanish, French, German, Portuguese,
 Vietnamese, Malay, Russian, Italian,
 Dutch, Swedish, Finnish, Danish,
-Norwegian, Hungarian, Thai, Latin. 
+Norwegian, Hungarian, Thai, Latin,
+Arabic. 
      * @return LanguageType Language to be recognized.
 The language can be automatically recognized or manually specified. Chinese-English mix (`zh`) is selected by default. Mixed characters in English and each supported language can be recognized together.
 Valid values:
-zh\auto\jap\kor\nspa\fre\ger\por\nvie\may\rus\ita\nhol\swe\fin\dan\nnor\hun\tha\lat
+zh\auto\jap\kor\
+spa\fre\ger\por\
+vie\may\rus\ita\
+hol\swe\fin\dan\
+nor\hun\tha\lat\ara
 Value meanings:
 Chinese-English mix, automatic recognition, Japanese, Korean,
 Spanish, French, German, Portuguese,
 Vietnamese, Malay, Russian, Italian,
 Dutch, Swedish, Finnish, Danish,
-Norwegian, Hungarian, Thai, Latin.
+Norwegian, Hungarian, Thai, Latin,
+Arabic.
      */
     public String getLanguageType() {
         return this.LanguageType;
@@ -157,26 +186,68 @@ Norwegian, Hungarian, Thai, Latin.
      * Set Language to be recognized.
 The language can be automatically recognized or manually specified. Chinese-English mix (`zh`) is selected by default. Mixed characters in English and each supported language can be recognized together.
 Valid values:
-zh\auto\jap\kor\nspa\fre\ger\por\nvie\may\rus\ita\nhol\swe\fin\dan\nnor\hun\tha\lat
+zh\auto\jap\kor\
+spa\fre\ger\por\
+vie\may\rus\ita\
+hol\swe\fin\dan\
+nor\hun\tha\lat\ara
 Value meanings:
 Chinese-English mix, automatic recognition, Japanese, Korean,
 Spanish, French, German, Portuguese,
 Vietnamese, Malay, Russian, Italian,
 Dutch, Swedish, Finnish, Danish,
-Norwegian, Hungarian, Thai, Latin.
+Norwegian, Hungarian, Thai, Latin,
+Arabic.
      * @param LanguageType Language to be recognized.
 The language can be automatically recognized or manually specified. Chinese-English mix (`zh`) is selected by default. Mixed characters in English and each supported language can be recognized together.
 Valid values:
-zh\auto\jap\kor\nspa\fre\ger\por\nvie\may\rus\ita\nhol\swe\fin\dan\nnor\hun\tha\lat
+zh\auto\jap\kor\
+spa\fre\ger\por\
+vie\may\rus\ita\
+hol\swe\fin\dan\
+nor\hun\tha\lat\ara
 Value meanings:
 Chinese-English mix, automatic recognition, Japanese, Korean,
 Spanish, French, German, Portuguese,
 Vietnamese, Malay, Russian, Italian,
 Dutch, Swedish, Finnish, Danish,
-Norwegian, Hungarian, Thai, Latin.
+Norwegian, Hungarian, Thai, Latin,
+Arabic.
      */
     public void setLanguageType(String LanguageType) {
         this.LanguageType = LanguageType;
+    }
+
+    /**
+     * Get Whether to enable PDF recognition. Default value: false. After this feature is enabled, both images and PDF files can be recognized at the same time. 
+     * @return IsPdf Whether to enable PDF recognition. Default value: false. After this feature is enabled, both images and PDF files can be recognized at the same time.
+     */
+    public Boolean getIsPdf() {
+        return this.IsPdf;
+    }
+
+    /**
+     * Set Whether to enable PDF recognition. Default value: false. After this feature is enabled, both images and PDF files can be recognized at the same time.
+     * @param IsPdf Whether to enable PDF recognition. Default value: false. After this feature is enabled, both images and PDF files can be recognized at the same time.
+     */
+    public void setIsPdf(Boolean IsPdf) {
+        this.IsPdf = IsPdf;
+    }
+
+    /**
+     * Get Page number of the PDF page that needs to be recognized. Only one single PDF page can be recognized. This parameter is valid if the uploaded file is a PDF and the value of the `IsPdf` parameter is `true`. Default value: 1. 
+     * @return PdfPageNumber Page number of the PDF page that needs to be recognized. Only one single PDF page can be recognized. This parameter is valid if the uploaded file is a PDF and the value of the `IsPdf` parameter is `true`. Default value: 1.
+     */
+    public Long getPdfPageNumber() {
+        return this.PdfPageNumber;
+    }
+
+    /**
+     * Set Page number of the PDF page that needs to be recognized. Only one single PDF page can be recognized. This parameter is valid if the uploaded file is a PDF and the value of the `IsPdf` parameter is `true`. Default value: 1.
+     * @param PdfPageNumber Page number of the PDF page that needs to be recognized. Only one single PDF page can be recognized. This parameter is valid if the uploaded file is a PDF and the value of the `IsPdf` parameter is `true`. Default value: 1.
+     */
+    public void setPdfPageNumber(Long PdfPageNumber) {
+        this.PdfPageNumber = PdfPageNumber;
     }
 
     /**
@@ -187,6 +258,8 @@ Norwegian, Hungarian, Thai, Latin.
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamSimple(map, prefix + "Scene", this.Scene);
         this.setParamSimple(map, prefix + "LanguageType", this.LanguageType);
+        this.setParamSimple(map, prefix + "IsPdf", this.IsPdf);
+        this.setParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
 
     }
 }

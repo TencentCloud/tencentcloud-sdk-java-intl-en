@@ -231,7 +231,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long SortRule;
 
     /**
-    * 
+    * Distributed index information of table
     */
     @SerializedName("DbClusterInfoStruct")
     @Expose
@@ -758,16 +758,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return DbClusterInfoStruct 
+     * Get Distributed index information of table 
+     * @return DbClusterInfoStruct Distributed index information of table
      */
     public String getDbClusterInfoStruct() {
         return this.DbClusterInfoStruct;
     }
 
     /**
-     * Set 
-     * @param DbClusterInfoStruct 
+     * Set Distributed index information of table
+     * @param DbClusterInfoStruct Distributed index information of table
      */
     public void setDbClusterInfoStruct(String DbClusterInfoStruct) {
         this.DbClusterInfoStruct = DbClusterInfoStruct;

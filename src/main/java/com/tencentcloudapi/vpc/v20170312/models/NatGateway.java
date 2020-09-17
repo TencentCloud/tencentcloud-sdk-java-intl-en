@@ -102,14 +102,14 @@ public class NatGateway extends AbstractModel{
     private String Zone;
 
     /**
-    * 
+    * IDs of direct connect gateway associated.
     */
     @SerializedName("DirectConnectGatewayIds")
     @Expose
     private String [] DirectConnectGatewayIds;
 
     /**
-    * 
+    * Subnet ID.
     */
     @SerializedName("SubnetId")
     @Expose
@@ -307,32 +307,32 @@ public class NatGateway extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return DirectConnectGatewayIds 
+     * Get IDs of direct connect gateway associated. 
+     * @return DirectConnectGatewayIds IDs of direct connect gateway associated.
      */
     public String [] getDirectConnectGatewayIds() {
         return this.DirectConnectGatewayIds;
     }
 
     /**
-     * Set 
-     * @param DirectConnectGatewayIds 
+     * Set IDs of direct connect gateway associated.
+     * @param DirectConnectGatewayIds IDs of direct connect gateway associated.
      */
     public void setDirectConnectGatewayIds(String [] DirectConnectGatewayIds) {
         this.DirectConnectGatewayIds = DirectConnectGatewayIds;
     }
 
     /**
-     * Get  
-     * @return SubnetId 
+     * Get Subnet ID. 
+     * @return SubnetId Subnet ID.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 
-     * @param SubnetId 
+     * Set Subnet ID.
+     * @param SubnetId Subnet ID.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;

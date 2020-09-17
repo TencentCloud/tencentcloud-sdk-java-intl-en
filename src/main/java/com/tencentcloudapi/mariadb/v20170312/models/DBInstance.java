@@ -198,7 +198,7 @@ public class DBInstance extends AbstractModel{
     private String OriginSerialId;
 
     /**
-    * Number of nodes. 2: one primary and one secondary, 3: one primary and two secondaries
+    * Number of nodes. 2: one master and one slave, 3: one master and two slaves
     */
     @SerializedName("NodeCount")
     @Expose
@@ -699,16 +699,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Number of nodes. 2: one primary and one secondary, 3: one primary and two secondaries 
-     * @return NodeCount Number of nodes. 2: one primary and one secondary, 3: one primary and two secondaries
+     * Get Number of nodes. 2: one master and one slave, 3: one master and two slaves 
+     * @return NodeCount Number of nodes. 2: one master and one slave, 3: one master and two slaves
      */
     public Long getNodeCount() {
         return this.NodeCount;
     }
 
     /**
-     * Set Number of nodes. 2: one primary and one secondary, 3: one primary and two secondaries
-     * @param NodeCount Number of nodes. 2: one primary and one secondary, 3: one primary and two secondaries
+     * Set Number of nodes. 2: one master and one slave, 3: one master and two slaves
+     * @param NodeCount Number of nodes. 2: one master and one slave, 3: one master and two slaves
      */
     public void setNodeCount(Long NodeCount) {
         this.NodeCount = NodeCount;

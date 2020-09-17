@@ -30,7 +30,7 @@ public class DescribeDiskConfigQuotaRequest extends AbstractModel{
     private String InquiryType;
 
     /**
-    * Query configuration under one or more [availability zone](/document/product/213/15753#ZoneInfo).
+    * Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).
     */
     @SerializedName("Zones")
     @Expose
@@ -58,7 +58,7 @@ public class DescribeDiskConfigQuotaRequest extends AbstractModel{
     private String DiskUsage;
 
     /**
-    * Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://cloud.tencent.com/document/product/213/11518)
+    * Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
     */
     @SerializedName("InstanceFamilies")
     @Expose
@@ -95,16 +95,16 @@ public class DescribeDiskConfigQuotaRequest extends AbstractModel{
     }
 
     /**
-     * Get Query configuration under one or more [availability zone](/document/product/213/15753#ZoneInfo). 
-     * @return Zones Query configuration under one or more [availability zone](/document/product/213/15753#ZoneInfo).
+     * Get Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo). 
+     * @return Zones Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).
      */
     public String [] getZones() {
         return this.Zones;
     }
 
     /**
-     * Set Query configuration under one or more [availability zone](/document/product/213/15753#ZoneInfo).
-     * @param Zones Query configuration under one or more [availability zone](/document/product/213/15753#ZoneInfo).
+     * Set Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).
+     * @param Zones Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).
      */
     public void setZones(String [] Zones) {
         this.Zones = Zones;
@@ -159,16 +159,16 @@ public class DescribeDiskConfigQuotaRequest extends AbstractModel{
     }
 
     /**
-     * Get Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://cloud.tencent.com/document/product/213/11518) 
-     * @return InstanceFamilies Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://cloud.tencent.com/document/product/213/11518)
+     * Get Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1) 
+     * @return InstanceFamilies Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
      */
     public String [] getInstanceFamilies() {
         return this.InstanceFamilies;
     }
 
     /**
-     * Set Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://cloud.tencent.com/document/product/213/11518)
-     * @param InstanceFamilies Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://cloud.tencent.com/document/product/213/11518)
+     * Set Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
+     * @param InstanceFamilies Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
      */
     public void setInstanceFamilies(String [] InstanceFamilies) {
         this.InstanceFamilies = InstanceFamilies;

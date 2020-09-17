@@ -31,7 +31,7 @@ public class SearchMediaResponse extends AbstractModel{
     private Long TotalCount;
 
     /**
-    * List of media file information, only including the basic information (BasicInfo).
+    * Media file information list.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MediaInfoSet")
@@ -66,9 +66,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of media file information, only including the basic information (BasicInfo).
+     * Get Media file information list.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MediaInfoSet List of media file information, only including the basic information (BasicInfo).
+     * @return MediaInfoSet Media file information list.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public MediaInfo [] getMediaInfoSet() {
@@ -76,9 +76,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set List of media file information, only including the basic information (BasicInfo).
+     * Set Media file information list.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MediaInfoSet List of media file information, only including the basic information (BasicInfo).
+     * @param MediaInfoSet Media file information list.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setMediaInfoSet(MediaInfo [] MediaInfoSet) {

@@ -44,7 +44,7 @@ public class CreateTablesRequest extends AbstractModel{
     private SelectedTableInfoNew [] SelectedTables;
 
     /**
-    * 
+    * Table tag list
     */
     @SerializedName("ResourceTags")
     @Expose
@@ -99,16 +99,16 @@ public class CreateTablesRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return ResourceTags 
+     * Get Table tag list 
+     * @return ResourceTags Table tag list
      */
     public TagInfoUnit [] getResourceTags() {
         return this.ResourceTags;
     }
 
     /**
-     * Set 
-     * @param ResourceTags 
+     * Set Table tag list
+     * @param ResourceTags Table tag list
      */
     public void setResourceTags(TagInfoUnit [] ResourceTags) {
         this.ResourceTags = ResourceTags;

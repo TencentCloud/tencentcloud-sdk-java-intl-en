@@ -372,7 +372,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String IsBlockTime;
 
     /**
-    * 
+    * Whether the IP type is the local BGP
     */
     @SerializedName("LocalBgp")
     @Expose
@@ -1263,16 +1263,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return LocalBgp 
+     * Get Whether the IP type is the local BGP 
+     * @return LocalBgp Whether the IP type is the local BGP
      */
     public Boolean getLocalBgp() {
         return this.LocalBgp;
     }
 
     /**
-     * Set 
-     * @param LocalBgp 
+     * Set Whether the IP type is the local BGP
+     * @param LocalBgp Whether the IP type is the local BGP
      */
     public void setLocalBgp(Boolean LocalBgp) {
         this.LocalBgp = LocalBgp;

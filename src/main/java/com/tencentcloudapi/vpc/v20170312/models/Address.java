@@ -128,6 +128,29 @@ public class Address extends AbstractModel{
     private String InternetServiceProvider;
 
     /**
+    * Whether the EIP is in a local BGP.
+    */
+    @SerializedName("LocalBgp")
+    @Expose
+    private Boolean LocalBgp;
+
+    /**
+    * Bandwidth value of EIP. The EIP for the bill-by-CVM account will return `null`.
+Note: this field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("Bandwidth")
+    @Expose
+    private Long Bandwidth;
+
+    /**
+    * Network billing mode of EIP. The EIP for the bill-by-CVM account will return `null`.
+Note: this field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("InternetChargeType")
+    @Expose
+    private String InternetChargeType;
+
+    /**
      * Get `EIP` `ID`, the unique ID of the `EIP`. 
      * @return AddressId `EIP` `ID`, the unique ID of the `EIP`.
      */
@@ -368,6 +391,62 @@ public class Address extends AbstractModel{
     }
 
     /**
+     * Get Whether the EIP is in a local BGP. 
+     * @return LocalBgp Whether the EIP is in a local BGP.
+     */
+    public Boolean getLocalBgp() {
+        return this.LocalBgp;
+    }
+
+    /**
+     * Set Whether the EIP is in a local BGP.
+     * @param LocalBgp Whether the EIP is in a local BGP.
+     */
+    public void setLocalBgp(Boolean LocalBgp) {
+        this.LocalBgp = LocalBgp;
+    }
+
+    /**
+     * Get Bandwidth value of EIP. The EIP for the bill-by-CVM account will return `null`.
+Note: this field may return `null`, indicating that no valid value was found. 
+     * @return Bandwidth Bandwidth value of EIP. The EIP for the bill-by-CVM account will return `null`.
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public Long getBandwidth() {
+        return this.Bandwidth;
+    }
+
+    /**
+     * Set Bandwidth value of EIP. The EIP for the bill-by-CVM account will return `null`.
+Note: this field may return `null`, indicating that no valid value was found.
+     * @param Bandwidth Bandwidth value of EIP. The EIP for the bill-by-CVM account will return `null`.
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public void setBandwidth(Long Bandwidth) {
+        this.Bandwidth = Bandwidth;
+    }
+
+    /**
+     * Get Network billing mode of EIP. The EIP for the bill-by-CVM account will return `null`.
+Note: this field may return `null`, indicating that no valid value was found. 
+     * @return InternetChargeType Network billing mode of EIP. The EIP for the bill-by-CVM account will return `null`.
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public String getInternetChargeType() {
+        return this.InternetChargeType;
+    }
+
+    /**
+     * Set Network billing mode of EIP. The EIP for the bill-by-CVM account will return `null`.
+Note: this field may return `null`, indicating that no valid value was found.
+     * @param InternetChargeType Network billing mode of EIP. The EIP for the bill-by-CVM account will return `null`.
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public void setInternetChargeType(String InternetChargeType) {
+        this.InternetChargeType = InternetChargeType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -386,6 +465,9 @@ public class Address extends AbstractModel{
         this.setParamSimple(map, prefix + "CascadeRelease", this.CascadeRelease);
         this.setParamObj(map, prefix + "EipAlgType.", this.EipAlgType);
         this.setParamSimple(map, prefix + "InternetServiceProvider", this.InternetServiceProvider);
+        this.setParamSimple(map, prefix + "LocalBgp", this.LocalBgp);
+        this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+        this.setParamSimple(map, prefix + "InternetChargeType", this.InternetChargeType);
 
     }
 }

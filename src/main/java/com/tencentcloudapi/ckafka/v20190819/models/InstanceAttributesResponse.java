@@ -211,6 +211,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long Cvm;
 
     /**
+    * Type.
+Note: this field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
+    * 
+    */
+    @SerializedName("Features")
+    @Expose
+    private String [] Features;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -651,6 +666,42 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Type.
+Note: this field may return `null`, indicating that no valid value was found. 
+     * @return InstanceType Type.
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set Type.
+Note: this field may return `null`, indicating that no valid value was found.
+     * @param InstanceType Type.
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
+     * Get  
+     * @return Features 
+     */
+    public String [] getFeatures() {
+        return this.Features;
+    }
+
+    /**
+     * Set 
+     * @param Features 
+     */
+    public void setFeatures(String [] Features) {
+        this.Features = Features;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -680,6 +731,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "MaxGroupNum", this.MaxGroupNum);
         this.setParamSimple(map, prefix + "Cvm", this.Cvm);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamArraySimple(map, prefix + "Features.", this.Features);
 
     }
 }

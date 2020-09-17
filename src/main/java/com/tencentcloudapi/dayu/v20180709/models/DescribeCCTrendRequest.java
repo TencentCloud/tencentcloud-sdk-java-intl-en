@@ -72,6 +72,13 @@ public class DescribeCCTrendRequest extends AbstractModel{
     private String Id;
 
     /**
+    * (Optional) Domain name
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
      * Get Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `bgp`: Anti-DDoS Pro (Single IP); `bgp-multip`: Anti-DDoS Pro (Multi-IP); `net`: Anti-DDoS Ultimate; `basic`: Anti-DDoS Basic 
      * @return Business Anti-DDoS service type. `bgpip`: Anti-DDoS Advanced; `bgp`: Anti-DDoS Pro (Single IP); `bgp-multip`: Anti-DDoS Pro (Multi-IP); `net`: Anti-DDoS Ultimate; `basic`: Anti-DDoS Basic
      */
@@ -184,6 +191,22 @@ public class DescribeCCTrendRequest extends AbstractModel{
     }
 
     /**
+     * Get (Optional) Domain name 
+     * @return Domain (Optional) Domain name
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set (Optional) Domain name
+     * @param Domain (Optional) Domain name
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class DescribeCCTrendRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
 
     }
 }

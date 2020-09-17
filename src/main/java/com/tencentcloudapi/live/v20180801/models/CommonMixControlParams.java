@@ -23,7 +23,8 @@ import java.util.HashMap;
 public class CommonMixControlParams extends AbstractModel{
 
     /**
-    * 
+    * Value range: [0,1]. 
+If 1 is entered, when the layer resolution in the parameter is different from the actual video resolution, the video will be automatically cropped according to the resolution set by the layer.
     */
     @SerializedName("UseMixCropCenter")
     @Expose
@@ -38,16 +39,20 @@ If this parameter is set to 1, when both `InputStreamList` and `OutputParams.Out
     private Long AllowCopy;
 
     /**
-     * Get  
-     * @return UseMixCropCenter 
+     * Get Value range: [0,1]. 
+If 1 is entered, when the layer resolution in the parameter is different from the actual video resolution, the video will be automatically cropped according to the resolution set by the layer. 
+     * @return UseMixCropCenter Value range: [0,1]. 
+If 1 is entered, when the layer resolution in the parameter is different from the actual video resolution, the video will be automatically cropped according to the resolution set by the layer.
      */
     public Long getUseMixCropCenter() {
         return this.UseMixCropCenter;
     }
 
     /**
-     * Set 
-     * @param UseMixCropCenter 
+     * Set Value range: [0,1]. 
+If 1 is entered, when the layer resolution in the parameter is different from the actual video resolution, the video will be automatically cropped according to the resolution set by the layer.
+     * @param UseMixCropCenter Value range: [0,1]. 
+If 1 is entered, when the layer resolution in the parameter is different from the actual video resolution, the video will be automatically cropped according to the resolution set by the layer.
      */
     public void setUseMixCropCenter(Long UseMixCropCenter) {
         this.UseMixCropCenter = UseMixCropCenter;

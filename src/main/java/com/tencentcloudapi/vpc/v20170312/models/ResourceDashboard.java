@@ -240,7 +240,7 @@ public class ResourceDashboard extends AbstractModel{
     private Long Oracle;
 
     /**
-    * 
+    * ElasticSearch Service.
     */
     @SerializedName("ElasticSearch")
     @Expose
@@ -813,16 +813,16 @@ public class ResourceDashboard extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return ElasticSearch 
+     * Get ElasticSearch Service. 
+     * @return ElasticSearch ElasticSearch Service.
      */
     public Long getElasticSearch() {
         return this.ElasticSearch;
     }
 
     /**
-     * Set 
-     * @param ElasticSearch 
+     * Set ElasticSearch Service.
+     * @param ElasticSearch ElasticSearch Service.
      */
     public void setElasticSearch(Long ElasticSearch) {
         this.ElasticSearch = ElasticSearch;

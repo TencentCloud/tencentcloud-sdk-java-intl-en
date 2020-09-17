@@ -65,7 +65,7 @@ public class DiskConfig extends AbstractModel{
     private Long MinDiskSize;
 
     /**
-    * The [Availability Region](/document/product/213/15753#ZoneInfo) of the cloud drive.
+    * The [Availability Region](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) of the cloud drive.
     */
     @SerializedName("Zone")
     @Expose
@@ -80,7 +80,7 @@ Note: This field may return null, indicating that no valid value was found.
     private String DeviceClass;
 
     /**
-    * Instance model series. For more information, please see [Instance Models](https://cloud.tencent.com/document/product/213/11518)
+    * Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
 Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("InstanceFamily")
@@ -184,16 +184,16 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get The [Availability Region](/document/product/213/15753#ZoneInfo) of the cloud drive. 
-     * @return Zone The [Availability Region](/document/product/213/15753#ZoneInfo) of the cloud drive.
+     * Get The [Availability Region](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) of the cloud drive. 
+     * @return Zone The [Availability Region](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) of the cloud drive.
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set The [Availability Region](/document/product/213/15753#ZoneInfo) of the cloud drive.
-     * @param Zone The [Availability Region](/document/product/213/15753#ZoneInfo) of the cloud drive.
+     * Set The [Availability Region](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) of the cloud drive.
+     * @param Zone The [Availability Region](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) of the cloud drive.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
@@ -220,9 +220,9 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Instance model series. For more information, please see [Instance Models](https://cloud.tencent.com/document/product/213/11518)
+     * Get Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
 Note: This field may return null, indicating that no valid value was found. 
-     * @return InstanceFamily Instance model series. For more information, please see [Instance Models](https://cloud.tencent.com/document/product/213/11518)
+     * @return InstanceFamily Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
 Note: This field may return null, indicating that no valid value was found.
      */
     public String getInstanceFamily() {
@@ -230,9 +230,9 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Set Instance model series. For more information, please see [Instance Models](https://cloud.tencent.com/document/product/213/11518)
+     * Set Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
 Note: This field may return null, indicating that no valid value was found.
-     * @param InstanceFamily Instance model series. For more information, please see [Instance Models](https://cloud.tencent.com/document/product/213/11518)
+     * @param InstanceFamily Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
 Note: This field may return null, indicating that no valid value was found.
      */
     public void setInstanceFamily(String InstanceFamily) {

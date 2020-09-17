@@ -55,7 +55,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String WanIp;
 
     /**
-    * Node type
+    * Node type. 0: common node; 1: master node;
+2: core node; 3: task node
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Flag")
@@ -303,7 +304,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Tag [] Tags;
 
     /**
-    * 
+    * Wether the node is auto-scaling. 0 means common node. 1 means auto-scaling node.
     */
     @SerializedName("AutoFlag")
     @Expose
@@ -398,9 +399,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Node type
+     * Get Node type. 0: common node; 1: master node;
+2: core node; 3: task node
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Flag Node type
+     * @return Flag Node type. 0: common node; 1: master node;
+2: core node; 3: task node
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getFlag() {
@@ -408,9 +411,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Node type
+     * Set Node type. 0: common node; 1: master node;
+2: core node; 3: task node
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Flag Node type
+     * @param Flag Node type. 0: common node; 1: master node;
+2: core node; 3: task node
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setFlag(Long Flag) {
@@ -1018,16 +1023,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return AutoFlag 
+     * Get Wether the node is auto-scaling. 0 means common node. 1 means auto-scaling node. 
+     * @return AutoFlag Wether the node is auto-scaling. 0 means common node. 1 means auto-scaling node.
      */
     public Long getAutoFlag() {
         return this.AutoFlag;
     }
 
     /**
-     * Set 
-     * @param AutoFlag 
+     * Set Wether the node is auto-scaling. 0 means common node. 1 means auto-scaling node.
+     * @param AutoFlag Wether the node is auto-scaling. 0 means common node. 1 means auto-scaling node.
      */
     public void setAutoFlag(Long AutoFlag) {
         this.AutoFlag = AutoFlag;
