@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class OutputGroupsInfo extends AbstractModel{
 
     /**
-    * 
+    * Channel output group name, which can contain 1–32 letters, digits, and underscores and must be unique at the channel level.
     */
     @SerializedName("Name")
     @Expose
@@ -38,35 +38,36 @@ Valid values: HLS, DASH, HLS_ARCHIVE, HLS_MEDIA_PACKAGE, DASH_MEDIA_PACKAGE.
     private String Type;
 
     /**
-    * 
+    * Output information.
+Quantity limit: [1,1] for RTMP/RTP; [1,10] for HLS/DASH.
     */
     @SerializedName("Outputs")
     @Expose
     private OutputInfo [] Outputs;
 
     /**
-    * 
+    * Relay destination address. Quantity limit: [1,2].
     */
     @SerializedName("Destinations")
     @Expose
     private DestinationInfo [] Destinations;
 
     /**
-    * 
+    * HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE.
     */
     @SerializedName("HlsRemuxSettings")
     @Expose
     private HlsRemuxSettingsInfo HlsRemuxSettings;
 
     /**
-    * 
+    * DASH protocol configuration information, which takes effect only for DASH/DSAH_ARCHIVE.
     */
     @SerializedName("DashRemuxSettings")
     @Expose
     private DashRemuxSettingsInfo DashRemuxSettings;
 
     /**
-    * 
+    * DRM configuration information.
     */
     @SerializedName("DrmSettings")
     @Expose
@@ -81,16 +82,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private MediaPackageSettingsInfo MediaPackageSettings;
 
     /**
-     * Get  
-     * @return Name 
+     * Get Channel output group name, which can contain 1–32 letters, digits, and underscores and must be unique at the channel level. 
+     * @return Name Channel output group name, which can contain 1–32 letters, digits, and underscores and must be unique at the channel level.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Channel output group name, which can contain 1–32 letters, digits, and underscores and must be unique at the channel level.
+     * @param Name Channel output group name, which can contain 1–32 letters, digits, and underscores and must be unique at the channel level.
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -117,80 +118,84 @@ Valid values: HLS, DASH, HLS_ARCHIVE, HLS_MEDIA_PACKAGE, DASH_MEDIA_PACKAGE.
     }
 
     /**
-     * Get  
-     * @return Outputs 
+     * Get Output information.
+Quantity limit: [1,1] for RTMP/RTP; [1,10] for HLS/DASH. 
+     * @return Outputs Output information.
+Quantity limit: [1,1] for RTMP/RTP; [1,10] for HLS/DASH.
      */
     public OutputInfo [] getOutputs() {
         return this.Outputs;
     }
 
     /**
-     * Set 
-     * @param Outputs 
+     * Set Output information.
+Quantity limit: [1,1] for RTMP/RTP; [1,10] for HLS/DASH.
+     * @param Outputs Output information.
+Quantity limit: [1,1] for RTMP/RTP; [1,10] for HLS/DASH.
      */
     public void setOutputs(OutputInfo [] Outputs) {
         this.Outputs = Outputs;
     }
 
     /**
-     * Get  
-     * @return Destinations 
+     * Get Relay destination address. Quantity limit: [1,2]. 
+     * @return Destinations Relay destination address. Quantity limit: [1,2].
      */
     public DestinationInfo [] getDestinations() {
         return this.Destinations;
     }
 
     /**
-     * Set 
-     * @param Destinations 
+     * Set Relay destination address. Quantity limit: [1,2].
+     * @param Destinations Relay destination address. Quantity limit: [1,2].
      */
     public void setDestinations(DestinationInfo [] Destinations) {
         this.Destinations = Destinations;
     }
 
     /**
-     * Get  
-     * @return HlsRemuxSettings 
+     * Get HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE. 
+     * @return HlsRemuxSettings HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE.
      */
     public HlsRemuxSettingsInfo getHlsRemuxSettings() {
         return this.HlsRemuxSettings;
     }
 
     /**
-     * Set 
-     * @param HlsRemuxSettings 
+     * Set HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE.
+     * @param HlsRemuxSettings HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE.
      */
     public void setHlsRemuxSettings(HlsRemuxSettingsInfo HlsRemuxSettings) {
         this.HlsRemuxSettings = HlsRemuxSettings;
     }
 
     /**
-     * Get  
-     * @return DashRemuxSettings 
+     * Get DASH protocol configuration information, which takes effect only for DASH/DSAH_ARCHIVE. 
+     * @return DashRemuxSettings DASH protocol configuration information, which takes effect only for DASH/DSAH_ARCHIVE.
      */
     public DashRemuxSettingsInfo getDashRemuxSettings() {
         return this.DashRemuxSettings;
     }
 
     /**
-     * Set 
-     * @param DashRemuxSettings 
+     * Set DASH protocol configuration information, which takes effect only for DASH/DSAH_ARCHIVE.
+     * @param DashRemuxSettings DASH protocol configuration information, which takes effect only for DASH/DSAH_ARCHIVE.
      */
     public void setDashRemuxSettings(DashRemuxSettingsInfo DashRemuxSettings) {
         this.DashRemuxSettings = DashRemuxSettings;
     }
 
     /**
-     * Get  
-     * @return DrmSettings 
+     * Get DRM configuration information. 
+     * @return DrmSettings DRM configuration information.
      */
     public DrmSettingsInfo getDrmSettings() {
         return this.DrmSettings;
     }
 
     /**
-     * Set 
-     * @param DrmSettings 
+     * Set DRM configuration information.
+     * @param DrmSettings DRM configuration information.
      */
     public void setDrmSettings(DrmSettingsInfo DrmSettings) {
         this.DrmSettings = DrmSettings;

@@ -23,46 +23,69 @@ import java.util.HashMap;
 public class MediaAiAnalysisFrameTagItem extends AbstractModel{
 
     /**
-    * Frame-specific tag name.
+    * 
     */
     @SerializedName("Tag")
     @Expose
     private String Tag;
 
     /**
-    * Confidence of intelligently generated frame-specific tag between 0 and 100.
+    * 
+    */
+    @SerializedName("CategorySet")
+    @Expose
+    private String [] CategorySet;
+
+    /**
+    * 
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-     * Get Frame-specific tag name. 
-     * @return Tag Frame-specific tag name.
+     * Get  
+     * @return Tag 
      */
     public String getTag() {
         return this.Tag;
     }
 
     /**
-     * Set Frame-specific tag name.
-     * @param Tag Frame-specific tag name.
+     * Set 
+     * @param Tag 
      */
     public void setTag(String Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get Confidence of intelligently generated frame-specific tag between 0 and 100. 
-     * @return Confidence Confidence of intelligently generated frame-specific tag between 0 and 100.
+     * Get  
+     * @return CategorySet 
+     */
+    public String [] getCategorySet() {
+        return this.CategorySet;
+    }
+
+    /**
+     * Set 
+     * @param CategorySet 
+     */
+    public void setCategorySet(String [] CategorySet) {
+        this.CategorySet = CategorySet;
+    }
+
+    /**
+     * Get  
+     * @return Confidence 
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Confidence of intelligently generated frame-specific tag between 0 and 100.
-     * @param Confidence Confidence of intelligently generated frame-specific tag between 0 and 100.
+     * Set 
+     * @param Confidence 
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
@@ -73,6 +96,7 @@ public class MediaAiAnalysisFrameTagItem extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Tag", this.Tag);
+        this.setParamArraySimple(map, prefix + "CategorySet.", this.CategorySet);
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);
 
     }

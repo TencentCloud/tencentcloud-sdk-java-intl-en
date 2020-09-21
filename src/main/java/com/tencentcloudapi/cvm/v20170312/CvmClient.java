@@ -555,6 +555,24 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
+     *This API is used to describe reserved instance (RI) offerings. Currently, RIs are only offered to beta users.
+     * @param req DescribeReservedInstancesConfigInfosRequest
+     * @return DescribeReservedInstancesConfigInfosResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReservedInstancesConfigInfosResponse DescribeReservedInstancesConfigInfos(DescribeReservedInstancesConfigInfosRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeReservedInstancesConfigInfosResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeReservedInstancesConfigInfosResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeReservedInstancesConfigInfos"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to describe Reserved Instance offerings that are available for purchase.
      * @param req DescribeReservedInstancesOfferingsRequest
      * @return DescribeReservedInstancesOfferingsResponse
@@ -566,6 +584,24 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 Type type = new TypeToken<JsonResponseModel<DescribeReservedInstancesOfferingsResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "DescribeReservedInstancesOfferings"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query spot instances that are available for purchase.
+     * @param req DescribeSpotTypeConfigRequest
+     * @return DescribeSpotTypeConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSpotTypeConfigResponse DescribeSpotTypeConfig(DescribeSpotTypeConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSpotTypeConfigResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSpotTypeConfigResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSpotTypeConfig"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }
@@ -683,6 +719,24 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 Type type = new TypeToken<JsonResponseModel<ImportKeyPairResponse>>() {
                 }.getType();
                 rsp  = gson.fromJson(this.internalRequest(req, "ImportKeyPair"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the price of reserved instances. It only supports querying purchasable reserved instance offerings. Currently, RIs are only offered to beta users.
+     * @param req InquirePricePurchaseReservedInstancesOfferingRequest
+     * @return InquirePricePurchaseReservedInstancesOfferingResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquirePricePurchaseReservedInstancesOfferingResponse InquirePricePurchaseReservedInstancesOffering(InquirePricePurchaseReservedInstancesOfferingRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquirePricePurchaseReservedInstancesOfferingResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquirePricePurchaseReservedInstancesOfferingResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "InquirePricePurchaseReservedInstancesOffering"), type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException(e.getMessage());
         }

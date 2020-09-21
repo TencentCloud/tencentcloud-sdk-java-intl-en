@@ -30,7 +30,7 @@ public class DescribeCrossBorderComplianceRequest extends AbstractModel{
     private String ServiceProvider;
 
     /**
-    * (Exact match) ID of compliance review form.
+    * (Exact match) ID of compliance review request.
     */
     @SerializedName("ComplianceId")
     @Expose
@@ -151,16 +151,16 @@ public class DescribeCrossBorderComplianceRequest extends AbstractModel{
     }
 
     /**
-     * Get (Exact match) ID of compliance review form. 
-     * @return ComplianceId (Exact match) ID of compliance review form.
+     * Get (Exact match) ID of compliance review request. 
+     * @return ComplianceId (Exact match) ID of compliance review request.
      */
     public Long getComplianceId() {
         return this.ComplianceId;
     }
 
     /**
-     * Set (Exact match) ID of compliance review form.
-     * @param ComplianceId (Exact match) ID of compliance review form.
+     * Set (Exact match) ID of compliance review request.
+     * @param ComplianceId (Exact match) ID of compliance review request.
      */
     public void setComplianceId(Long ComplianceId) {
         this.ComplianceId = ComplianceId;

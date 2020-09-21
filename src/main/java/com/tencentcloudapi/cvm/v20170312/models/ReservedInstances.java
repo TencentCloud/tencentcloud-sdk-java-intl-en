@@ -30,8 +30,8 @@ public class ReservedInstances extends AbstractModel{
     private String ReservedInstancesId;
 
     /**
-    * The type of the reserved instance. For example, S3.MEDIUM4.
-Returned value: <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">list of reserved instance types</a>
+    * Reserved instance specification, such as `S3.MEDIUM4`.
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">Reserved Instance Specifications</a>
     */
     @SerializedName("InstanceType")
     @Expose
@@ -107,6 +107,14 @@ Returned value: All Upfront.
     private String OfferingType;
 
     /**
+    * Reserved instance type, such as `S3`.
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">Reserved Instance Types</a>
+    */
+    @SerializedName("InstanceFamily")
+    @Expose
+    private String InstanceFamily;
+
+    /**
      * Get The ID of the purchased reserved instance, taking the form 650c138f-ae7e-4750-952a-96841d6e9fc1. 
      * @return ReservedInstancesId The ID of the purchased reserved instance, taking the form 650c138f-ae7e-4750-952a-96841d6e9fc1.
      */
@@ -123,20 +131,20 @@ Returned value: All Upfront.
     }
 
     /**
-     * Get The type of the reserved instance. For example, S3.MEDIUM4.
-Returned value: <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">list of reserved instance types</a> 
-     * @return InstanceType The type of the reserved instance. For example, S3.MEDIUM4.
-Returned value: <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">list of reserved instance types</a>
+     * Get Reserved instance specification, such as `S3.MEDIUM4`.
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">Reserved Instance Specifications</a> 
+     * @return InstanceType Reserved instance specification, such as `S3.MEDIUM4`.
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">Reserved Instance Specifications</a>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set The type of the reserved instance. For example, S3.MEDIUM4.
-Returned value: <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">list of reserved instance types</a>
-     * @param InstanceType The type of the reserved instance. For example, S3.MEDIUM4.
-Returned value: <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">list of reserved instance types</a>
+     * Set Reserved instance specification, such as `S3.MEDIUM4`.
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">Reserved Instance Specifications</a>
+     * @param InstanceType Reserved instance specification, such as `S3.MEDIUM4`.
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">Reserved Instance Specifications</a>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
@@ -311,6 +319,26 @@ Returned value: All Upfront.
     }
 
     /**
+     * Get Reserved instance type, such as `S3`.
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">Reserved Instance Types</a> 
+     * @return InstanceFamily Reserved instance type, such as `S3`.
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">Reserved Instance Types</a>
+     */
+    public String getInstanceFamily() {
+        return this.InstanceFamily;
+    }
+
+    /**
+     * Set Reserved instance type, such as `S3`.
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">Reserved Instance Types</a>
+     * @param InstanceFamily Reserved instance type, such as `S3`.
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1">Reserved Instance Types</a>
+     */
+    public void setInstanceFamily(String InstanceFamily) {
+        this.InstanceFamily = InstanceFamily;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -325,6 +353,7 @@ Returned value: All Upfront.
         this.setParamSimple(map, prefix + "State", this.State);
         this.setParamSimple(map, prefix + "CurrencyCode", this.CurrencyCode);
         this.setParamSimple(map, prefix + "OfferingType", this.OfferingType);
+        this.setParamSimple(map, prefix + "InstanceFamily", this.InstanceFamily);
 
     }
 }

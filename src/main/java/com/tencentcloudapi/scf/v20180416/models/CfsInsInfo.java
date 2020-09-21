@@ -65,7 +65,7 @@ public class CfsInsInfo extends AbstractModel{
     private String RemoteMountDir;
 
     /**
-    * File system IP
+    * File system IP, which is not required when you configure CFS.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IpAddress")
@@ -73,7 +73,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String IpAddress;
 
     /**
-    * VPC ID of file system
+    * VPC ID of file system, which is not required when you configure CFS.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MountVpcId")
@@ -81,7 +81,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String MountVpcId;
 
     /**
-    * VPC subnet ID of file system
+    * VPC subnet ID of file system, which is not required when you configure CFS.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MountSubnetId")
@@ -185,9 +185,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get File system IP
+     * Get File system IP, which is not required when you configure CFS.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return IpAddress File system IP
+     * @return IpAddress File system IP, which is not required when you configure CFS.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getIpAddress() {
@@ -195,9 +195,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set File system IP
+     * Set File system IP, which is not required when you configure CFS.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param IpAddress File system IP
+     * @param IpAddress File system IP, which is not required when you configure CFS.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setIpAddress(String IpAddress) {
@@ -205,9 +205,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get VPC ID of file system
+     * Get VPC ID of file system, which is not required when you configure CFS.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MountVpcId VPC ID of file system
+     * @return MountVpcId VPC ID of file system, which is not required when you configure CFS.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getMountVpcId() {
@@ -215,9 +215,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set VPC ID of file system
+     * Set VPC ID of file system, which is not required when you configure CFS.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MountVpcId VPC ID of file system
+     * @param MountVpcId VPC ID of file system, which is not required when you configure CFS.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setMountVpcId(String MountVpcId) {
@@ -225,9 +225,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get VPC subnet ID of file system
+     * Get VPC subnet ID of file system, which is not required when you configure CFS.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MountSubnetId VPC subnet ID of file system
+     * @return MountSubnetId VPC subnet ID of file system, which is not required when you configure CFS.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getMountSubnetId() {
@@ -235,9 +235,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set VPC subnet ID of file system
+     * Set VPC subnet ID of file system, which is not required when you configure CFS.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MountSubnetId VPC subnet ID of file system
+     * @param MountSubnetId VPC subnet ID of file system, which is not required when you configure CFS.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setMountSubnetId(String MountSubnetId) {

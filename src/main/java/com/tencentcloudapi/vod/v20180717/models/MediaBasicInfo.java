@@ -142,7 +142,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Vid;
 
     /**
-    * 
+    * File type:
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li>
     */
     @SerializedName("Category")
     @Expose
@@ -454,16 +457,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return Category 
+     * Get File type:
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li> 
+     * @return Category File type:
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li>
      */
     public String getCategory() {
         return this.Category;
     }
 
     /**
-     * Set 
-     * @param Category 
+     * Set File type:
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li>
+     * @param Category File type:
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li>
      */
     public void setCategory(String Category) {
         this.Category = Category;

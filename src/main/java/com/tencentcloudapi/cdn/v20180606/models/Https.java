@@ -105,7 +105,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String SslStatus;
 
     /**
-    * 
+    * HSTS configuration
     */
     @SerializedName("Hsts")
     @Expose
@@ -344,16 +344,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return Hsts 
+     * Get HSTS configuration 
+     * @return Hsts HSTS configuration
      */
     public Hsts getHsts() {
         return this.Hsts;
     }
 
     /**
-     * Set 
-     * @param Hsts 
+     * Set HSTS configuration
+     * @param Hsts HSTS configuration
      */
     public void setHsts(Hsts Hsts) {
         this.Hsts = Hsts;

@@ -30,7 +30,7 @@ public class MLIDPassportOCRRequest extends AbstractModel{
     private String ImageBase64;
 
     /**
-    * Whether to return an image. Default value: false
+    * Whether to return an image. Default value: false.
     */
     @SerializedName("RetImage")
     @Expose
@@ -53,16 +53,16 @@ public class MLIDPassportOCRRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to return an image. Default value: false 
-     * @return RetImage Whether to return an image. Default value: false
+     * Get Whether to return an image. Default value: false. 
+     * @return RetImage Whether to return an image. Default value: false.
      */
     public Boolean getRetImage() {
         return this.RetImage;
     }
 
     /**
-     * Set Whether to return an image. Default value: false
-     * @param RetImage Whether to return an image. Default value: false
+     * Set Whether to return an image. Default value: false.
+     * @param RetImage Whether to return an image. Default value: false.
      */
     public void setRetImage(Boolean RetImage) {
         this.RetImage = RetImage;

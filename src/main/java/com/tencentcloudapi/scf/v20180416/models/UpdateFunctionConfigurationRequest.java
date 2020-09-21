@@ -142,6 +142,13 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     private CfsConfig CfsConfig;
 
     /**
+    * Timeout period for function initialization. Default value: 15 seconds
+    */
+    @SerializedName("InitTimeout")
+    @Expose
+    private Long InitTimeout;
+
+    /**
      * Get Name of the function to be modified 
      * @return FunctionName Name of the function to be modified
      */
@@ -414,6 +421,22 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     }
 
     /**
+     * Get Timeout period for function initialization. Default value: 15 seconds 
+     * @return InitTimeout Timeout period for function initialization. Default value: 15 seconds
+     */
+    public Long getInitTimeout() {
+        return this.InitTimeout;
+    }
+
+    /**
+     * Set Timeout period for function initialization. Default value: 15 seconds
+     * @param InitTimeout Timeout period for function initialization. Default value: 15 seconds
+     */
+    public void setInitTimeout(Long InitTimeout) {
+        this.InitTimeout = InitTimeout;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -434,6 +457,7 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
         this.setParamObj(map, prefix + "DeadLetterConfig.", this.DeadLetterConfig);
         this.setParamObj(map, prefix + "PublicNetConfig.", this.PublicNetConfig);
         this.setParamObj(map, prefix + "CfsConfig.", this.CfsConfig);
+        this.setParamSimple(map, prefix + "InitTimeout", this.InitTimeout);
 
     }
 }

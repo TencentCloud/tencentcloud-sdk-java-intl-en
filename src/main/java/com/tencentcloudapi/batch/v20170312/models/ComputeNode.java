@@ -93,14 +93,15 @@ public class ComputeNode extends AbstractModel{
     private String [] PublicIpAddresses;
 
     /**
-    * 
+    * Compute environment resource type. Valid values: `CVM`, `CPM` (Bare Metal)
     */
     @SerializedName("ResourceType")
     @Expose
     private String ResourceType;
 
     /**
-    * 
+    * Source of compute environment resources. <br>BATCH_CREATED: instance resources created by BatchCompute.<br>
+USER_ATTACHED: instance resources added by users to the compute environment.
     */
     @SerializedName("ResourceOrigin")
     @Expose
@@ -267,32 +268,36 @@ public class ComputeNode extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return ResourceType 
+     * Get Compute environment resource type. Valid values: `CVM`, `CPM` (Bare Metal) 
+     * @return ResourceType Compute environment resource type. Valid values: `CVM`, `CPM` (Bare Metal)
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 
-     * @param ResourceType 
+     * Set Compute environment resource type. Valid values: `CVM`, `CPM` (Bare Metal)
+     * @param ResourceType Compute environment resource type. Valid values: `CVM`, `CPM` (Bare Metal)
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get  
-     * @return ResourceOrigin 
+     * Get Source of compute environment resources. <br>BATCH_CREATED: instance resources created by BatchCompute.<br>
+USER_ATTACHED: instance resources added by users to the compute environment. 
+     * @return ResourceOrigin Source of compute environment resources. <br>BATCH_CREATED: instance resources created by BatchCompute.<br>
+USER_ATTACHED: instance resources added by users to the compute environment.
      */
     public String getResourceOrigin() {
         return this.ResourceOrigin;
     }
 
     /**
-     * Set 
-     * @param ResourceOrigin 
+     * Set Source of compute environment resources. <br>BATCH_CREATED: instance resources created by BatchCompute.<br>
+USER_ATTACHED: instance resources added by users to the compute environment.
+     * @param ResourceOrigin Source of compute environment resources. <br>BATCH_CREATED: instance resources created by BatchCompute.<br>
+USER_ATTACHED: instance resources added by users to the compute environment.
      */
     public void setResourceOrigin(String ResourceOrigin) {
         this.ResourceOrigin = ResourceOrigin;

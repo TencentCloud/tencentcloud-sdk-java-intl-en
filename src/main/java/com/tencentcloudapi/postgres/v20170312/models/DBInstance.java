@@ -191,21 +191,21 @@ public class DBInstance extends AbstractModel{
     private String Type;
 
     /**
-    * 
+    * User `AppId`
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * 
+    * Instance `Uid`
     */
     @SerializedName("Uid")
     @Expose
     private Long Uid;
 
     /**
-    * 
+    * Whether the instance supports IPv6 address access. Valid values: 1 (yes), 0 (no)
     */
     @SerializedName("SupportIpv6")
     @Expose
@@ -604,48 +604,48 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return AppId 
+     * Get User `AppId` 
+     * @return AppId User `AppId`
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set 
-     * @param AppId 
+     * Set User `AppId`
+     * @param AppId User `AppId`
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get  
-     * @return Uid 
+     * Get Instance `Uid` 
+     * @return Uid Instance `Uid`
      */
     public Long getUid() {
         return this.Uid;
     }
 
     /**
-     * Set 
-     * @param Uid 
+     * Set Instance `Uid`
+     * @param Uid Instance `Uid`
      */
     public void setUid(Long Uid) {
         this.Uid = Uid;
     }
 
     /**
-     * Get  
-     * @return SupportIpv6 
+     * Get Whether the instance supports IPv6 address access. Valid values: 1 (yes), 0 (no) 
+     * @return SupportIpv6 Whether the instance supports IPv6 address access. Valid values: 1 (yes), 0 (no)
      */
     public Long getSupportIpv6() {
         return this.SupportIpv6;
     }
 
     /**
-     * Set 
-     * @param SupportIpv6 
+     * Set Whether the instance supports IPv6 address access. Valid values: 1 (yes), 0 (no)
+     * @param SupportIpv6 Whether the instance supports IPv6 address access. Valid values: 1 (yes), 0 (no)
      */
     public void setSupportIpv6(Long SupportIpv6) {
         this.SupportIpv6 = SupportIpv6;

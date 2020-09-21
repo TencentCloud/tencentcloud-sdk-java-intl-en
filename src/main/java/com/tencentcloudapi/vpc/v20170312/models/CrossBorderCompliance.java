@@ -30,7 +30,7 @@ public class CrossBorderCompliance extends AbstractModel{
     private String ServiceProvider;
 
     /**
-    * ID of compliance review form.
+    * ID of compliance review request.
     */
     @SerializedName("ComplianceId")
     @Expose
@@ -65,7 +65,7 @@ public class CrossBorderCompliance extends AbstractModel{
     private String IssuingAuthority;
 
     /**
-    * Business License.
+    * Business license.
     */
     @SerializedName("BusinessLicense")
     @Expose
@@ -193,16 +193,16 @@ public class CrossBorderCompliance extends AbstractModel{
     }
 
     /**
-     * Get ID of compliance review form. 
-     * @return ComplianceId ID of compliance review form.
+     * Get ID of compliance review request. 
+     * @return ComplianceId ID of compliance review request.
      */
     public Long getComplianceId() {
         return this.ComplianceId;
     }
 
     /**
-     * Set ID of compliance review form.
-     * @param ComplianceId ID of compliance review form.
+     * Set ID of compliance review request.
+     * @param ComplianceId ID of compliance review request.
      */
     public void setComplianceId(Long ComplianceId) {
         this.ComplianceId = ComplianceId;
@@ -273,16 +273,16 @@ public class CrossBorderCompliance extends AbstractModel{
     }
 
     /**
-     * Get Business License. 
-     * @return BusinessLicense Business License.
+     * Get Business license. 
+     * @return BusinessLicense Business license.
      */
     public String getBusinessLicense() {
         return this.BusinessLicense;
     }
 
     /**
-     * Set Business License.
-     * @param BusinessLicense Business License.
+     * Set Business license.
+     * @param BusinessLicense Business license.
      */
     public void setBusinessLicense(String BusinessLicense) {
         this.BusinessLicense = BusinessLicense;

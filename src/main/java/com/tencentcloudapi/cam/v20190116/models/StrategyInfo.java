@@ -82,7 +82,7 @@ Note: This field may return null, indicating that no valid value was found.
     private String ServiceType;
 
     /**
-    * 
+    * This value should not be null when querying whether a marked entity has been associated with a policy. 0 indicates that no policy has been associated, while 1 indicates that a policy has been associated
     */
     @SerializedName("IsAttached")
     @Expose
@@ -253,16 +253,16 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get  
-     * @return IsAttached 
+     * Get This value should not be null when querying whether a marked entity has been associated with a policy. 0 indicates that no policy has been associated, while 1 indicates that a policy has been associated 
+     * @return IsAttached This value should not be null when querying whether a marked entity has been associated with a policy. 0 indicates that no policy has been associated, while 1 indicates that a policy has been associated
      */
     public Long getIsAttached() {
         return this.IsAttached;
     }
 
     /**
-     * Set 
-     * @param IsAttached 
+     * Set This value should not be null when querying whether a marked entity has been associated with a policy. 0 indicates that no policy has been associated, while 1 indicates that a policy has been associated
+     * @param IsAttached This value should not be null when querying whether a marked entity has been associated with a policy. 0 indicates that no policy has been associated, while 1 indicates that a policy has been associated
      */
     public void setIsAttached(Long IsAttached) {
         this.IsAttached = IsAttached;

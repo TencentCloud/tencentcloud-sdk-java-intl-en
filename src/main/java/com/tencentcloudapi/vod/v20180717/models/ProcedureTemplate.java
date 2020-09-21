@@ -39,7 +39,7 @@ public class ProcedureTemplate extends AbstractModel{
     private String Type;
 
     /**
-    * 
+    * Template description. Length limit: 256 characters.
     */
     @SerializedName("Comment")
     @Expose
@@ -140,16 +140,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return Comment 
+     * Get Template description. Length limit: 256 characters. 
+     * @return Comment Template description. Length limit: 256 characters.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 
-     * @param Comment 
+     * Set Template description. Length limit: 256 characters.
+     * @param Comment Template description. Length limit: 256 characters.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;

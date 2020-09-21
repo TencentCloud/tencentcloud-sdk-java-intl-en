@@ -356,28 +356,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private AwsPrivateAccess AwsPrivateAccess;
 
     /**
-    * 
+    * SCDN configuration
     */
     @SerializedName("SecurityConfig")
     @Expose
     private SecurityConfig SecurityConfig;
 
     /**
-    * 
+    * Image Optimization configuration
     */
     @SerializedName("ImageOptimization")
     @Expose
     private ImageOptimization ImageOptimization;
 
     /**
-    * 
+    * `UA` blocklist/allowlist configuration
     */
     @SerializedName("UserAgentFilter")
     @Expose
     private UserAgentFilter UserAgentFilter;
 
     /**
-    * 
+    * Access control
     */
     @SerializedName("AccessControl")
     @Expose
@@ -408,6 +408,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     @SerializedName("AccessPort")
     @Expose
     private Long [] AccessPort;
+
+    /**
+    * 
+    */
+    @SerializedName("Tag")
+    @Expose
+    private Tag [] Tag;
 
     /**
      * Get Domain name ID 
@@ -1262,64 +1269,64 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return SecurityConfig 
+     * Get SCDN configuration 
+     * @return SecurityConfig SCDN configuration
      */
     public SecurityConfig getSecurityConfig() {
         return this.SecurityConfig;
     }
 
     /**
-     * Set 
-     * @param SecurityConfig 
+     * Set SCDN configuration
+     * @param SecurityConfig SCDN configuration
      */
     public void setSecurityConfig(SecurityConfig SecurityConfig) {
         this.SecurityConfig = SecurityConfig;
     }
 
     /**
-     * Get  
-     * @return ImageOptimization 
+     * Get Image Optimization configuration 
+     * @return ImageOptimization Image Optimization configuration
      */
     public ImageOptimization getImageOptimization() {
         return this.ImageOptimization;
     }
 
     /**
-     * Set 
-     * @param ImageOptimization 
+     * Set Image Optimization configuration
+     * @param ImageOptimization Image Optimization configuration
      */
     public void setImageOptimization(ImageOptimization ImageOptimization) {
         this.ImageOptimization = ImageOptimization;
     }
 
     /**
-     * Get  
-     * @return UserAgentFilter 
+     * Get `UA` blocklist/allowlist configuration 
+     * @return UserAgentFilter `UA` blocklist/allowlist configuration
      */
     public UserAgentFilter getUserAgentFilter() {
         return this.UserAgentFilter;
     }
 
     /**
-     * Set 
-     * @param UserAgentFilter 
+     * Set `UA` blocklist/allowlist configuration
+     * @param UserAgentFilter `UA` blocklist/allowlist configuration
      */
     public void setUserAgentFilter(UserAgentFilter UserAgentFilter) {
         this.UserAgentFilter = UserAgentFilter;
     }
 
     /**
-     * Get  
-     * @return AccessControl 
+     * Get Access control 
+     * @return AccessControl Access control
      */
     public AccessControl getAccessControl() {
         return this.AccessControl;
     }
 
     /**
-     * Set 
-     * @param AccessControl 
+     * Set Access control
+     * @param AccessControl Access control
      */
     public void setAccessControl(AccessControl AccessControl) {
         this.AccessControl = AccessControl;
@@ -1394,6 +1401,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get  
+     * @return Tag 
+     */
+    public Tag [] getTag() {
+        return this.Tag;
+    }
+
+    /**
+     * Set 
+     * @param Tag 
+     */
+    public void setTag(Tag [] Tag) {
+        this.Tag = Tag;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1444,6 +1467,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Advance", this.Advance);
         this.setParamObj(map, prefix + "UrlRedirect.", this.UrlRedirect);
         this.setParamArraySimple(map, prefix + "AccessPort.", this.AccessPort);
+        this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
 
     }
 }

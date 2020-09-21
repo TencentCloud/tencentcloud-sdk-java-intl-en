@@ -51,6 +51,13 @@ public class PurchaseReservedInstancesOfferingRequest extends AbstractModel{
     private String ClientToken;
 
     /**
+    * Reserved instance name.<br><li>The RI name defaults to “unnamed” if this parameter is left empty.</li><li>You can enter any name within 60 characters (including the pattern string).</li>
+    */
+    @SerializedName("ReservedInstanceName")
+    @Expose
+    private String ReservedInstanceName;
+
+    /**
      * Get The number of the Reserved Instance you are purchasing. 
      * @return InstanceCount The number of the Reserved Instance you are purchasing.
      */
@@ -115,6 +122,22 @@ public class PurchaseReservedInstancesOfferingRequest extends AbstractModel{
     }
 
     /**
+     * Get Reserved instance name.<br><li>The RI name defaults to “unnamed” if this parameter is left empty.</li><li>You can enter any name within 60 characters (including the pattern string).</li> 
+     * @return ReservedInstanceName Reserved instance name.<br><li>The RI name defaults to “unnamed” if this parameter is left empty.</li><li>You can enter any name within 60 characters (including the pattern string).</li>
+     */
+    public String getReservedInstanceName() {
+        return this.ReservedInstanceName;
+    }
+
+    /**
+     * Set Reserved instance name.<br><li>The RI name defaults to “unnamed” if this parameter is left empty.</li><li>You can enter any name within 60 characters (including the pattern string).</li>
+     * @param ReservedInstanceName Reserved instance name.<br><li>The RI name defaults to “unnamed” if this parameter is left empty.</li><li>You can enter any name within 60 characters (including the pattern string).</li>
+     */
+    public void setReservedInstanceName(String ReservedInstanceName) {
+        this.ReservedInstanceName = ReservedInstanceName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class PurchaseReservedInstancesOfferingRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ReservedInstancesOfferingId", this.ReservedInstancesOfferingId);
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
+        this.setParamSimple(map, prefix + "ReservedInstanceName", this.ReservedInstanceName);
 
     }
 }

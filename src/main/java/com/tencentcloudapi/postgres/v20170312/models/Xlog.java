@@ -58,7 +58,7 @@ public class Xlog extends AbstractModel{
     private String ExternalAddr;
 
     /**
-    * 
+    * Backup file size
     */
     @SerializedName("Size")
     @Expose
@@ -145,16 +145,16 @@ public class Xlog extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return Size 
+     * Get Backup file size 
+     * @return Size Backup file size
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set 
-     * @param Size 
+     * Set Backup file size
+     * @param Size Backup file size
      */
     public void setSize(Long Size) {
         this.Size = Size;

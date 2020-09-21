@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class VirtualPrivateCloud extends AbstractModel{
 
     /**
-    * 
+    * VPC ID in the format of `vpc-xxx`. To obtain valid VPC IDs, you can log in to the [console](https://console.cloud.tencent.com/vpc/vpc?rid=1) or call the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API and look for the `unVpcId` fields in the response. If you specify `DEFAULT` for both `VpcId` and `SubnetId` when creating an instance, the default VPC will be used.
     */
     @SerializedName("VpcId")
     @Expose
@@ -51,23 +51,23 @@ public class VirtualPrivateCloud extends AbstractModel{
     private String [] PrivateIpAddresses;
 
     /**
-    * 
+    * Number of IPv6 addresses randomly generated for the ENI.
     */
     @SerializedName("Ipv6AddressCount")
     @Expose
     private Long Ipv6AddressCount;
 
     /**
-     * Get  
-     * @return VpcId 
+     * Get VPC ID in the format of `vpc-xxx`. To obtain valid VPC IDs, you can log in to the [console](https://console.cloud.tencent.com/vpc/vpc?rid=1) or call the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API and look for the `unVpcId` fields in the response. If you specify `DEFAULT` for both `VpcId` and `SubnetId` when creating an instance, the default VPC will be used. 
+     * @return VpcId VPC ID in the format of `vpc-xxx`. To obtain valid VPC IDs, you can log in to the [console](https://console.cloud.tencent.com/vpc/vpc?rid=1) or call the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API and look for the `unVpcId` fields in the response. If you specify `DEFAULT` for both `VpcId` and `SubnetId` when creating an instance, the default VPC will be used.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 
-     * @param VpcId 
+     * Set VPC ID in the format of `vpc-xxx`. To obtain valid VPC IDs, you can log in to the [console](https://console.cloud.tencent.com/vpc/vpc?rid=1) or call the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API and look for the `unVpcId` fields in the response. If you specify `DEFAULT` for both `VpcId` and `SubnetId` when creating an instance, the default VPC will be used.
+     * @param VpcId VPC ID in the format of `vpc-xxx`. To obtain valid VPC IDs, you can log in to the [console](https://console.cloud.tencent.com/vpc/vpc?rid=1) or call the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API and look for the `unVpcId` fields in the response. If you specify `DEFAULT` for both `VpcId` and `SubnetId` when creating an instance, the default VPC will be used.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -122,16 +122,16 @@ public class VirtualPrivateCloud extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return Ipv6AddressCount 
+     * Get Number of IPv6 addresses randomly generated for the ENI. 
+     * @return Ipv6AddressCount Number of IPv6 addresses randomly generated for the ENI.
      */
     public Long getIpv6AddressCount() {
         return this.Ipv6AddressCount;
     }
 
     /**
-     * Set 
-     * @param Ipv6AddressCount 
+     * Set Number of IPv6 addresses randomly generated for the ENI.
+     * @param Ipv6AddressCount Number of IPv6 addresses randomly generated for the ENI.
      */
     public void setIpv6AddressCount(Long Ipv6AddressCount) {
         this.Ipv6AddressCount = Ipv6AddressCount;

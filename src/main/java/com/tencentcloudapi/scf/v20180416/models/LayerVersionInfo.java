@@ -68,11 +68,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String LayerName;
 
     /**
-    * The status of the layer version. Values can be: 
-`Active`: normal
-`Publishing`: publishing
-`PublishFailed`: failed to publish
-`Deleted`: deleted
+    * Current status of specific layer version. For valid values, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
     */
     @SerializedName("Status")
     @Expose
@@ -187,32 +183,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The status of the layer version. Values can be: 
-`Active`: normal
-`Publishing`: publishing
-`PublishFailed`: failed to publish
-`Deleted`: deleted 
-     * @return Status The status of the layer version. Values can be: 
-`Active`: normal
-`Publishing`: publishing
-`PublishFailed`: failed to publish
-`Deleted`: deleted
+     * Get Current status of specific layer version. For valid values, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81) 
+     * @return Status Current status of specific layer version. For valid values, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set The status of the layer version. Values can be: 
-`Active`: normal
-`Publishing`: publishing
-`PublishFailed`: failed to publish
-`Deleted`: deleted
-     * @param Status The status of the layer version. Values can be: 
-`Active`: normal
-`Publishing`: publishing
-`PublishFailed`: failed to publish
-`Deleted`: deleted
+     * Set Current status of specific layer version. For valid values, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
+     * @param Status Current status of specific layer version. For valid values, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
      */
     public void setStatus(String Status) {
         this.Status = Status;

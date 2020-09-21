@@ -156,6 +156,13 @@ public class CreateFunctionRequest extends AbstractModel{
     private CfsConfig CfsConfig;
 
     /**
+    * Timeout period for function initialization
+    */
+    @SerializedName("InitTimeout")
+    @Expose
+    private Long InitTimeout;
+
+    /**
      * Get Name of the new function. The name can contain 2 to 60 characters, including English letters, digits, hyphens (-), and underscores (_). The name must start with a letter and cannot end with a hyphen or underscore. 
      * @return FunctionName Name of the new function. The name can contain 2 to 60 characters, including English letters, digits, hyphens (-), and underscores (_). The name must start with a letter and cannot end with a hyphen or underscore.
      */
@@ -460,6 +467,22 @@ public class CreateFunctionRequest extends AbstractModel{
     }
 
     /**
+     * Get Timeout period for function initialization 
+     * @return InitTimeout Timeout period for function initialization
+     */
+    public Long getInitTimeout() {
+        return this.InitTimeout;
+    }
+
+    /**
+     * Set Timeout period for function initialization
+     * @param InitTimeout Timeout period for function initialization
+     */
+    public void setInitTimeout(Long InitTimeout) {
+        this.InitTimeout = InitTimeout;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -482,6 +505,7 @@ public class CreateFunctionRequest extends AbstractModel{
         this.setParamObj(map, prefix + "DeadLetterConfig.", this.DeadLetterConfig);
         this.setParamObj(map, prefix + "PublicNetConfig.", this.PublicNetConfig);
         this.setParamObj(map, prefix + "CfsConfig.", this.CfsConfig);
+        this.setParamSimple(map, prefix + "InitTimeout", this.InitTimeout);
 
     }
 }

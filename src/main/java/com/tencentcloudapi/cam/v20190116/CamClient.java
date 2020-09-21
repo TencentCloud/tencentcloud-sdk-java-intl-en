@@ -434,6 +434,24 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the security settings.
+     * @param req DescribeSafeAuthFlagRequest
+     * @return DescribeSafeAuthFlagResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSafeAuthFlagResponse DescribeSafeAuthFlag(DescribeSafeAuthFlagRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSafeAuthFlagResponse> rsp = null;
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSafeAuthFlagResponse>>() {
+                }.getType();
+                rsp  = gson.fromJson(this.internalRequest(req, "DescribeSafeAuthFlag"), type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException(e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (DetachGroupPolicy) is used to unassociate a policy and a user group.
      * @param req DetachGroupPolicyRequest
      * @return DetachGroupPolicyResponse

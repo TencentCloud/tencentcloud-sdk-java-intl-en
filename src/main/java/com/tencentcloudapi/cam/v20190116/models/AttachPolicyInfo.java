@@ -62,7 +62,7 @@ Note: This field may return null, indicating that no valid value was found.
     private String PolicyType;
 
     /**
-    * 
+    * Policy remarks
     */
     @SerializedName("Remark")
     @Expose
@@ -77,14 +77,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String OperateOwnerUin;
 
     /**
-    * 
+    * The ID of the account associating the policy. If `UinType` is 0, this indicates that this is a sub-account `UIN`. If `UinType` is 1, this indicates this is a role ID
     */
     @SerializedName("OperateUin")
     @Expose
     private String OperateUin;
 
     /**
-    * 
+    * If `UinType` is 0, `OperateUin` indicates that this is a sub-account `UIN`. If `UinType` is 1, `OperateUin` indicates that this is a role ID
     */
     @SerializedName("OperateUinType")
     @Expose
@@ -203,16 +203,16 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get  
-     * @return Remark 
+     * Get Policy remarks 
+     * @return Remark Policy remarks
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 
-     * @param Remark 
+     * Set Policy remarks
+     * @param Remark Policy remarks
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
@@ -239,32 +239,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return OperateUin 
+     * Get The ID of the account associating the policy. If `UinType` is 0, this indicates that this is a sub-account `UIN`. If `UinType` is 1, this indicates this is a role ID 
+     * @return OperateUin The ID of the account associating the policy. If `UinType` is 0, this indicates that this is a sub-account `UIN`. If `UinType` is 1, this indicates this is a role ID
      */
     public String getOperateUin() {
         return this.OperateUin;
     }
 
     /**
-     * Set 
-     * @param OperateUin 
+     * Set The ID of the account associating the policy. If `UinType` is 0, this indicates that this is a sub-account `UIN`. If `UinType` is 1, this indicates this is a role ID
+     * @param OperateUin The ID of the account associating the policy. If `UinType` is 0, this indicates that this is a sub-account `UIN`. If `UinType` is 1, this indicates this is a role ID
      */
     public void setOperateUin(String OperateUin) {
         this.OperateUin = OperateUin;
     }
 
     /**
-     * Get  
-     * @return OperateUinType 
+     * Get If `UinType` is 0, `OperateUin` indicates that this is a sub-account `UIN`. If `UinType` is 1, `OperateUin` indicates that this is a role ID 
+     * @return OperateUinType If `UinType` is 0, `OperateUin` indicates that this is a sub-account `UIN`. If `UinType` is 1, `OperateUin` indicates that this is a role ID
      */
     public Long getOperateUinType() {
         return this.OperateUinType;
     }
 
     /**
-     * Set 
-     * @param OperateUinType 
+     * Set If `UinType` is 0, `OperateUin` indicates that this is a sub-account `UIN`. If `UinType` is 1, `OperateUin` indicates that this is a role ID
+     * @param OperateUinType If `UinType` is 0, `OperateUin` indicates that this is a sub-account `UIN`. If `UinType` is 1, `OperateUin` indicates that this is a role ID
      */
     public void setOperateUinType(Long OperateUinType) {
         this.OperateUinType = OperateUinType;

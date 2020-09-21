@@ -132,7 +132,7 @@ Default value: black.
     private String FillType;
 
     /**
-    * 
+    * Template description.
     */
     @SerializedName("Comment")
     @Expose
@@ -419,16 +419,16 @@ Default value: black.
     }
 
     /**
-     * Get  
-     * @return Comment 
+     * Get Template description. 
+     * @return Comment Template description.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 
-     * @param Comment 
+     * Set Template description.
+     * @param Comment Template description.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;

@@ -79,21 +79,21 @@ public class DescribeComputeEnvResponse extends AbstractModel{
     private String EnvType;
 
     /**
-    * 
+    * Compute environment resource type. Valid values: CVM, CPM (Bare Metal)
     */
     @SerializedName("ResourceType")
     @Expose
     private String ResourceType;
 
     /**
-    * 
+    * Next action
     */
     @SerializedName("NextAction")
     @Expose
     private String NextAction;
 
     /**
-    * 
+    * Number of compute nodes added to the compute environment by the user
     */
     @SerializedName("AttachedComputeNodeCount")
     @Expose
@@ -235,48 +235,48 @@ public class DescribeComputeEnvResponse extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return ResourceType 
+     * Get Compute environment resource type. Valid values: CVM, CPM (Bare Metal) 
+     * @return ResourceType Compute environment resource type. Valid values: CVM, CPM (Bare Metal)
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 
-     * @param ResourceType 
+     * Set Compute environment resource type. Valid values: CVM, CPM (Bare Metal)
+     * @param ResourceType Compute environment resource type. Valid values: CVM, CPM (Bare Metal)
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get  
-     * @return NextAction 
+     * Get Next action 
+     * @return NextAction Next action
      */
     public String getNextAction() {
         return this.NextAction;
     }
 
     /**
-     * Set 
-     * @param NextAction 
+     * Set Next action
+     * @param NextAction Next action
      */
     public void setNextAction(String NextAction) {
         this.NextAction = NextAction;
     }
 
     /**
-     * Get  
-     * @return AttachedComputeNodeCount 
+     * Get Number of compute nodes added to the compute environment by the user 
+     * @return AttachedComputeNodeCount Number of compute nodes added to the compute environment by the user
      */
     public Long getAttachedComputeNodeCount() {
         return this.AttachedComputeNodeCount;
     }
 
     /**
-     * Set 
-     * @param AttachedComputeNodeCount 
+     * Set Number of compute nodes added to the compute environment by the user
+     * @param AttachedComputeNodeCount Number of compute nodes added to the compute environment by the user
      */
     public void setAttachedComputeNodeCount(Long AttachedComputeNodeCount) {
         this.AttachedComputeNodeCount = AttachedComputeNodeCount;

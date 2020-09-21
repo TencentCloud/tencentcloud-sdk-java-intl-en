@@ -30,7 +30,7 @@ public class UpgradeDBInstanceResponse extends AbstractModel{
     private String DealName;
 
     /**
-    * 
+    * Bill ID of frozen fees
     */
     @SerializedName("BillId")
     @Expose
@@ -60,16 +60,16 @@ public class UpgradeDBInstanceResponse extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return BillId 
+     * Get Bill ID of frozen fees 
+     * @return BillId Bill ID of frozen fees
      */
     public String getBillId() {
         return this.BillId;
     }
 
     /**
-     * Set 
-     * @param BillId 
+     * Set Bill ID of frozen fees
+     * @param BillId Bill ID of frozen fees
      */
     public void setBillId(String BillId) {
         this.BillId = BillId;

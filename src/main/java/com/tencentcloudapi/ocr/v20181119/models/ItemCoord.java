@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class ItemCoord extends AbstractModel{
 
     /**
-    * X-coordinate of top-left point
+    * X-coordinate of top-left point.
     */
     @SerializedName("X")
     @Expose
     private Long X;
 
     /**
-    * Y-coordinate of top-left point
+    * Y-coordinate of top-left point.
     */
     @SerializedName("Y")
     @Expose
@@ -51,32 +51,32 @@ public class ItemCoord extends AbstractModel{
     private Long Height;
 
     /**
-     * Get X-coordinate of top-left point 
-     * @return X X-coordinate of top-left point
+     * Get X-coordinate of top-left point. 
+     * @return X X-coordinate of top-left point.
      */
     public Long getX() {
         return this.X;
     }
 
     /**
-     * Set X-coordinate of top-left point
-     * @param X X-coordinate of top-left point
+     * Set X-coordinate of top-left point.
+     * @param X X-coordinate of top-left point.
      */
     public void setX(Long X) {
         this.X = X;
     }
 
     /**
-     * Get Y-coordinate of top-left point 
-     * @return Y Y-coordinate of top-left point
+     * Get Y-coordinate of top-left point. 
+     * @return Y Y-coordinate of top-left point.
      */
     public Long getY() {
         return this.Y;
     }
 
     /**
-     * Set Y-coordinate of top-left point
-     * @param Y Y-coordinate of top-left point
+     * Set Y-coordinate of top-left point.
+     * @param Y Y-coordinate of top-left point.
      */
     public void setY(Long Y) {
         this.Y = Y;

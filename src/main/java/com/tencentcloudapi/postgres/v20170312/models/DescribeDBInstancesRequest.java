@@ -44,14 +44,14 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * 
+    * Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * 
+    * In ascending or descending order
     */
     @SerializedName("OrderByType")
     @Expose
@@ -106,32 +106,32 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return OrderBy 
+     * Get Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime 
+     * @return OrderBy Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 
-     * @param OrderBy 
+     * Set Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
+     * @param OrderBy Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get  
-     * @return OrderByType 
+     * Get In ascending or descending order 
+     * @return OrderByType In ascending or descending order
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set 
-     * @param OrderByType 
+     * Set In ascending or descending order
+     * @param OrderByType In ascending or descending order
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;

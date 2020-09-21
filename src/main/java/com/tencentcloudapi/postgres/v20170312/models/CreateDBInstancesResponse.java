@@ -30,14 +30,14 @@ public class CreateDBInstancesResponse extends AbstractModel{
     private String [] DealNames;
 
     /**
-    * 
+    * Bill ID of frozen fees
     */
     @SerializedName("BillId")
     @Expose
     private String BillId;
 
     /**
-    * 
+    * ID set of instances which have been created successfully. The parameter value will be returned only when the billing mode is postpaid.
     */
     @SerializedName("DBInstanceIdSet")
     @Expose
@@ -67,32 +67,32 @@ public class CreateDBInstancesResponse extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return BillId 
+     * Get Bill ID of frozen fees 
+     * @return BillId Bill ID of frozen fees
      */
     public String getBillId() {
         return this.BillId;
     }
 
     /**
-     * Set 
-     * @param BillId 
+     * Set Bill ID of frozen fees
+     * @param BillId Bill ID of frozen fees
      */
     public void setBillId(String BillId) {
         this.BillId = BillId;
     }
 
     /**
-     * Get  
-     * @return DBInstanceIdSet 
+     * Get ID set of instances which have been created successfully. The parameter value will be returned only when the billing mode is postpaid. 
+     * @return DBInstanceIdSet ID set of instances which have been created successfully. The parameter value will be returned only when the billing mode is postpaid.
      */
     public String [] getDBInstanceIdSet() {
         return this.DBInstanceIdSet;
     }
 
     /**
-     * Set 
-     * @param DBInstanceIdSet 
+     * Set ID set of instances which have been created successfully. The parameter value will be returned only when the billing mode is postpaid.
+     * @param DBInstanceIdSet ID set of instances which have been created successfully. The parameter value will be returned only when the billing mode is postpaid.
      */
     public void setDBInstanceIdSet(String [] DBInstanceIdSet) {
         this.DBInstanceIdSet = DBInstanceIdSet;

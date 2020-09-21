@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeCrossBorderComplianceResponse extends AbstractModel{
 
     /**
-    * List of compliance review forms.
+    * List of compliance review requests.
     */
     @SerializedName("CrossBorderComplianceSet")
     @Expose
     private CrossBorderCompliance [] CrossBorderComplianceSet;
 
     /**
-    * Total number of compliance review forms.
+    * Total number of compliance review requests.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeCrossBorderComplianceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get List of compliance review forms. 
-     * @return CrossBorderComplianceSet List of compliance review forms.
+     * Get List of compliance review requests. 
+     * @return CrossBorderComplianceSet List of compliance review requests.
      */
     public CrossBorderCompliance [] getCrossBorderComplianceSet() {
         return this.CrossBorderComplianceSet;
     }
 
     /**
-     * Set List of compliance review forms.
-     * @param CrossBorderComplianceSet List of compliance review forms.
+     * Set List of compliance review requests.
+     * @param CrossBorderComplianceSet List of compliance review requests.
      */
     public void setCrossBorderComplianceSet(CrossBorderCompliance [] CrossBorderComplianceSet) {
         this.CrossBorderComplianceSet = CrossBorderComplianceSet;
     }
 
     /**
-     * Get Total number of compliance review forms. 
-     * @return TotalCount Total number of compliance review forms.
+     * Get Total number of compliance review requests. 
+     * @return TotalCount Total number of compliance review requests.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of compliance review forms.
-     * @param TotalCount Total number of compliance review forms.
+     * Set Total number of compliance review requests.
+     * @param TotalCount Total number of compliance review requests.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

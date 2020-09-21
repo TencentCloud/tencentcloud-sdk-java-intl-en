@@ -30,7 +30,7 @@ public class AuditCrossBorderComplianceRequest extends AbstractModel{
     private String ServiceProvider;
 
     /**
-    * Unique ID of compliance review form.
+    * Unique ID of compliance review request.
     */
     @SerializedName("ComplianceId")
     @Expose
@@ -60,16 +60,16 @@ public class AuditCrossBorderComplianceRequest extends AbstractModel{
     }
 
     /**
-     * Get Unique ID of compliance review form. 
-     * @return ComplianceId Unique ID of compliance review form.
+     * Get Unique ID of compliance review request. 
+     * @return ComplianceId Unique ID of compliance review request.
      */
     public Long getComplianceId() {
         return this.ComplianceId;
     }
 
     /**
-     * Set Unique ID of compliance review form.
-     * @param ComplianceId Unique ID of compliance review form.
+     * Set Unique ID of compliance review request.
+     * @param ComplianceId Unique ID of compliance review request.
      */
     public void setComplianceId(Long ComplianceId) {
         this.ComplianceId = ComplianceId;

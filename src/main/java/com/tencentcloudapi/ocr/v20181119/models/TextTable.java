@@ -23,28 +23,28 @@ import java.util.HashMap;
 public class TextTable extends AbstractModel{
 
     /**
-    * Column index of the top-left corner of the cell
+    * Column index of the top-left corner of the cell.
     */
     @SerializedName("ColTl")
     @Expose
     private Long ColTl;
 
     /**
-    * Row index of the top-left corner of the cell
+    * Row index of the top-left corner of the cell.
     */
     @SerializedName("RowTl")
     @Expose
     private Long RowTl;
 
     /**
-    * Column index of the bottom-right corner of the cell
+    * Column index of the bottom-right corner of the cell.
     */
     @SerializedName("ColBr")
     @Expose
     private Long ColBr;
 
     /**
-    * Row index of the bottom-right corner of the cell
+    * Row index of the bottom-right corner of the cell.
     */
     @SerializedName("RowBr")
     @Expose
@@ -72,7 +72,7 @@ public class TextTable extends AbstractModel{
     private Long Confidence;
 
     /**
-    * Text line coordinates, which are represented as 4 vertex coordinates
+    * Text line coordinates, which are represented as 4 vertex coordinates.
     */
     @SerializedName("Polygon")
     @Expose
@@ -86,64 +86,64 @@ public class TextTable extends AbstractModel{
     private String AdvancedInfo;
 
     /**
-     * Get Column index of the top-left corner of the cell 
-     * @return ColTl Column index of the top-left corner of the cell
+     * Get Column index of the top-left corner of the cell. 
+     * @return ColTl Column index of the top-left corner of the cell.
      */
     public Long getColTl() {
         return this.ColTl;
     }
 
     /**
-     * Set Column index of the top-left corner of the cell
-     * @param ColTl Column index of the top-left corner of the cell
+     * Set Column index of the top-left corner of the cell.
+     * @param ColTl Column index of the top-left corner of the cell.
      */
     public void setColTl(Long ColTl) {
         this.ColTl = ColTl;
     }
 
     /**
-     * Get Row index of the top-left corner of the cell 
-     * @return RowTl Row index of the top-left corner of the cell
+     * Get Row index of the top-left corner of the cell. 
+     * @return RowTl Row index of the top-left corner of the cell.
      */
     public Long getRowTl() {
         return this.RowTl;
     }
 
     /**
-     * Set Row index of the top-left corner of the cell
-     * @param RowTl Row index of the top-left corner of the cell
+     * Set Row index of the top-left corner of the cell.
+     * @param RowTl Row index of the top-left corner of the cell.
      */
     public void setRowTl(Long RowTl) {
         this.RowTl = RowTl;
     }
 
     /**
-     * Get Column index of the bottom-right corner of the cell 
-     * @return ColBr Column index of the bottom-right corner of the cell
+     * Get Column index of the bottom-right corner of the cell. 
+     * @return ColBr Column index of the bottom-right corner of the cell.
      */
     public Long getColBr() {
         return this.ColBr;
     }
 
     /**
-     * Set Column index of the bottom-right corner of the cell
-     * @param ColBr Column index of the bottom-right corner of the cell
+     * Set Column index of the bottom-right corner of the cell.
+     * @param ColBr Column index of the bottom-right corner of the cell.
      */
     public void setColBr(Long ColBr) {
         this.ColBr = ColBr;
     }
 
     /**
-     * Get Row index of the bottom-right corner of the cell 
-     * @return RowBr Row index of the bottom-right corner of the cell
+     * Get Row index of the bottom-right corner of the cell. 
+     * @return RowBr Row index of the bottom-right corner of the cell.
      */
     public Long getRowBr() {
         return this.RowBr;
     }
 
     /**
-     * Set Row index of the bottom-right corner of the cell
-     * @param RowBr Row index of the bottom-right corner of the cell
+     * Set Row index of the bottom-right corner of the cell.
+     * @param RowBr Row index of the bottom-right corner of the cell.
      */
     public void setRowBr(Long RowBr) {
         this.RowBr = RowBr;
@@ -198,16 +198,16 @@ public class TextTable extends AbstractModel{
     }
 
     /**
-     * Get Text line coordinates, which are represented as 4 vertex coordinates 
-     * @return Polygon Text line coordinates, which are represented as 4 vertex coordinates
+     * Get Text line coordinates, which are represented as 4 vertex coordinates. 
+     * @return Polygon Text line coordinates, which are represented as 4 vertex coordinates.
      */
     public Coord [] getPolygon() {
         return this.Polygon;
     }
 
     /**
-     * Set Text line coordinates, which are represented as 4 vertex coordinates
-     * @param Polygon Text line coordinates, which are represented as 4 vertex coordinates
+     * Set Text line coordinates, which are represented as 4 vertex coordinates.
+     * @param Polygon Text line coordinates, which are represented as 4 vertex coordinates.
      */
     public void setPolygon(Coord [] Polygon) {
         this.Polygon = Polygon;

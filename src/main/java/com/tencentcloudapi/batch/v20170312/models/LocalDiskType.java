@@ -51,7 +51,7 @@ public class LocalDiskType extends AbstractModel{
     private Long MaxSize;
 
     /**
-    * 
+    * Whether a local disk is required during purchase. Valid values:<br><li>REQUIRED: required<br><li>OPTIONAL: optional
     */
     @SerializedName("Required")
     @Expose
@@ -122,16 +122,16 @@ public class LocalDiskType extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return Required 
+     * Get Whether a local disk is required during purchase. Valid values:<br><li>REQUIRED: required<br><li>OPTIONAL: optional 
+     * @return Required Whether a local disk is required during purchase. Valid values:<br><li>REQUIRED: required<br><li>OPTIONAL: optional
      */
     public String getRequired() {
         return this.Required;
     }
 
     /**
-     * Set 
-     * @param Required 
+     * Set Whether a local disk is required during purchase. Valid values:<br><li>REQUIRED: required<br><li>OPTIONAL: optional
+     * @param Required Whether a local disk is required during purchase. Valid values:<br><li>REQUIRED: required<br><li>OPTIONAL: optional
      */
     public void setRequired(String Required) {
         this.Required = Required;

@@ -36,7 +36,7 @@ Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are pr
     * URL address of image.
 Supported image formats: PNG, JPG, JPEG. GIF is not supported at present.
 Supported image size: the downloaded image cannot exceed 3 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
     */
     @SerializedName("ImageUrl")
@@ -75,12 +75,12 @@ Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are pr
      * Get URL address of image.
 Supported image formats: PNG, JPG, JPEG. GIF is not supported at present.
 Supported image size: the downloaded image cannot exceed 3 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low. 
      * @return ImageUrl URL address of image.
 Supported image formats: PNG, JPG, JPEG. GIF is not supported at present.
 Supported image size: the downloaded image cannot exceed 3 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
      */
     public String getImageUrl() {
@@ -91,12 +91,12 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
      * Set URL address of image.
 Supported image formats: PNG, JPG, JPEG. GIF is not supported at present.
 Supported image size: the downloaded image cannot exceed 3 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
      * @param ImageUrl URL address of image.
 Supported image formats: PNG, JPG, JPEG. GIF is not supported at present.
 Supported image size: the downloaded image cannot exceed 3 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
      */
     public void setImageUrl(String ImageUrl) {

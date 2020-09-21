@@ -51,7 +51,7 @@ public class Placement extends AbstractModel{
     private String [] HostIps;
 
     /**
-    * 
+    * The ID of the CDH to which the instance belongs, only used as an output parameter.
     */
     @SerializedName("HostId")
     @Expose
@@ -122,16 +122,16 @@ public class Placement extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return HostId 
+     * Get The ID of the CDH to which the instance belongs, only used as an output parameter. 
+     * @return HostId The ID of the CDH to which the instance belongs, only used as an output parameter.
      */
     public String getHostId() {
         return this.HostId;
     }
 
     /**
-     * Set 
-     * @param HostId 
+     * Set The ID of the CDH to which the instance belongs, only used as an output parameter.
+     * @param HostId The ID of the CDH to which the instance belongs, only used as an output parameter.
      */
     public void setHostId(String HostId) {
         this.HostId = HostId;

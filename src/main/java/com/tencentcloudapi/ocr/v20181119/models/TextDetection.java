@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class TextDetection extends AbstractModel{
 
     /**
-    * Recognized text line content
+    * Recognized text line content.
     */
     @SerializedName("DetectedText")
     @Expose
     private String DetectedText;
 
     /**
-    * Confidence. Value range: 0-100
+    * Confidence. Value range: 0–100.
     */
     @SerializedName("Confidence")
     @Expose
     private Long Confidence;
 
     /**
-    * Text line coordinates, which are represented as 4 vertex coordinates
+    * Text line coordinates, which are represented as 4 vertex coordinates.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Polygon")
@@ -53,48 +53,48 @@ The paragraph information `Parag` returned by the `GeneralBasicOcr` API contains
     private String AdvancedInfo;
 
     /**
-    * Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`
+    * Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`.
     */
     @SerializedName("ItemPolygon")
     @Expose
     private ItemCoord ItemPolygon;
 
     /**
-     * Get Recognized text line content 
-     * @return DetectedText Recognized text line content
+     * Get Recognized text line content. 
+     * @return DetectedText Recognized text line content.
      */
     public String getDetectedText() {
         return this.DetectedText;
     }
 
     /**
-     * Set Recognized text line content
-     * @param DetectedText Recognized text line content
+     * Set Recognized text line content.
+     * @param DetectedText Recognized text line content.
      */
     public void setDetectedText(String DetectedText) {
         this.DetectedText = DetectedText;
     }
 
     /**
-     * Get Confidence. Value range: 0-100 
-     * @return Confidence Confidence. Value range: 0-100
+     * Get Confidence. Value range: 0–100. 
+     * @return Confidence Confidence. Value range: 0–100.
      */
     public Long getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Confidence. Value range: 0-100
-     * @param Confidence Confidence. Value range: 0-100
+     * Set Confidence. Value range: 0–100.
+     * @param Confidence Confidence. Value range: 0–100.
      */
     public void setConfidence(Long Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Text line coordinates, which are represented as 4 vertex coordinates
+     * Get Text line coordinates, which are represented as 4 vertex coordinates.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Polygon Text line coordinates, which are represented as 4 vertex coordinates
+     * @return Polygon Text line coordinates, which are represented as 4 vertex coordinates.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Coord [] getPolygon() {
@@ -102,9 +102,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Text line coordinates, which are represented as 4 vertex coordinates
+     * Set Text line coordinates, which are represented as 4 vertex coordinates.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Polygon Text line coordinates, which are represented as 4 vertex coordinates
+     * @param Polygon Text line coordinates, which are represented as 4 vertex coordinates.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setPolygon(Coord [] Polygon) {
@@ -132,16 +132,16 @@ The paragraph information `Parag` returned by the `GeneralBasicOcr` API contains
     }
 
     /**
-     * Get Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)` 
-     * @return ItemPolygon Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`
+     * Get Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`. 
+     * @return ItemPolygon Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`.
      */
     public ItemCoord getItemPolygon() {
         return this.ItemPolygon;
     }
 
     /**
-     * Set Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`
-     * @param ItemPolygon Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`
+     * Set Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`.
+     * @param ItemPolygon Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`.
      */
     public void setItemPolygon(ItemCoord ItemPolygon) {
         this.ItemPolygon = ItemPolygon;

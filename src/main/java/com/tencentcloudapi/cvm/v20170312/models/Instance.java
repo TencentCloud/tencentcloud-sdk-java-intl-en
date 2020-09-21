@@ -194,28 +194,28 @@ Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>ST
     private String StopChargingMode;
 
     /**
-    * 
+    * Globally unique ID of the instance.
     */
     @SerializedName("Uuid")
     @Expose
     private String Uuid;
 
     /**
-    * 
+    * Last operation of the instance, such as StopInstances or ResetInstance.
     */
     @SerializedName("LatestOperation")
     @Expose
     private String LatestOperation;
 
     /**
-    * 
+    * The latest operation status of the instance. Valid values:<br><li>SUCCESS: operation succeeded<br><li>OPERATING: operation in progress<br><li>FAILED: operation failed
     */
     @SerializedName("LatestOperationState")
     @Expose
     private String LatestOperationState;
 
     /**
-    * 
+    * Unique request ID for the last operation of the instance.
     */
     @SerializedName("LatestOperationRequestId")
     @Expose
@@ -658,64 +658,64 @@ Valid values: <br><li>KEEP_CHARGING: billing continues after shutdown <br><li>ST
     }
 
     /**
-     * Get  
-     * @return Uuid 
+     * Get Globally unique ID of the instance. 
+     * @return Uuid Globally unique ID of the instance.
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set 
-     * @param Uuid 
+     * Set Globally unique ID of the instance.
+     * @param Uuid Globally unique ID of the instance.
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get  
-     * @return LatestOperation 
+     * Get Last operation of the instance, such as StopInstances or ResetInstance. 
+     * @return LatestOperation Last operation of the instance, such as StopInstances or ResetInstance.
      */
     public String getLatestOperation() {
         return this.LatestOperation;
     }
 
     /**
-     * Set 
-     * @param LatestOperation 
+     * Set Last operation of the instance, such as StopInstances or ResetInstance.
+     * @param LatestOperation Last operation of the instance, such as StopInstances or ResetInstance.
      */
     public void setLatestOperation(String LatestOperation) {
         this.LatestOperation = LatestOperation;
     }
 
     /**
-     * Get  
-     * @return LatestOperationState 
+     * Get The latest operation status of the instance. Valid values:<br><li>SUCCESS: operation succeeded<br><li>OPERATING: operation in progress<br><li>FAILED: operation failed 
+     * @return LatestOperationState The latest operation status of the instance. Valid values:<br><li>SUCCESS: operation succeeded<br><li>OPERATING: operation in progress<br><li>FAILED: operation failed
      */
     public String getLatestOperationState() {
         return this.LatestOperationState;
     }
 
     /**
-     * Set 
-     * @param LatestOperationState 
+     * Set The latest operation status of the instance. Valid values:<br><li>SUCCESS: operation succeeded<br><li>OPERATING: operation in progress<br><li>FAILED: operation failed
+     * @param LatestOperationState The latest operation status of the instance. Valid values:<br><li>SUCCESS: operation succeeded<br><li>OPERATING: operation in progress<br><li>FAILED: operation failed
      */
     public void setLatestOperationState(String LatestOperationState) {
         this.LatestOperationState = LatestOperationState;
     }
 
     /**
-     * Get  
-     * @return LatestOperationRequestId 
+     * Get Unique request ID for the last operation of the instance. 
+     * @return LatestOperationRequestId Unique request ID for the last operation of the instance.
      */
     public String getLatestOperationRequestId() {
         return this.LatestOperationRequestId;
     }
 
     /**
-     * Set 
-     * @param LatestOperationRequestId 
+     * Set Unique request ID for the last operation of the instance.
+     * @param LatestOperationRequestId Unique request ID for the last operation of the instance.
      */
     public void setLatestOperationRequestId(String LatestOperationRequestId) {
         this.LatestOperationRequestId = LatestOperationRequestId;

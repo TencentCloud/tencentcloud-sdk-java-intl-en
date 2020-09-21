@@ -62,7 +62,7 @@ public class CreateImageSpriteTemplateRequest extends AbstractModel{
     private String Name;
 
     /**
-    * 
+    * Template description. Length limit: 256 characters.
     */
     @SerializedName("Comment")
     @Expose
@@ -216,16 +216,16 @@ Default value: open.
     }
 
     /**
-     * Get  
-     * @return Comment 
+     * Get Template description. Length limit: 256 characters. 
+     * @return Comment Template description. Length limit: 256 characters.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 
-     * @param Comment 
+     * Set Template description. Length limit: 256 characters.
+     * @param Comment Template description. Length limit: 256 characters.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;

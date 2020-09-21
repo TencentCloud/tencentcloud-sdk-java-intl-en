@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ChargePrepaid extends AbstractModel{
 
     /**
-    * 
+    * Purchased usage period, in month. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36
     */
     @SerializedName("Period")
     @Expose
@@ -37,16 +37,16 @@ public class ChargePrepaid extends AbstractModel{
     private String RenewFlag;
 
     /**
-     * Get  
-     * @return Period 
+     * Get Purchased usage period, in month. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36 
+     * @return Period Purchased usage period, in month. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 
-     * @param Period 
+     * Set Purchased usage period, in month. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36
+     * @param Period Purchased usage period, in month. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36
      */
     public void setPeriod(Long Period) {
         this.Period = Period;

@@ -116,28 +116,28 @@ Note: this field may return null, indicating that no valid value is obtained.
     private String SoldOutReason;
 
     /**
-    * 
+    * Private network bandwidth, in Gbps.
     */
     @SerializedName("InstanceBandwidth")
     @Expose
     private Float InstanceBandwidth;
 
     /**
-    * 
+    * The max packet sending and receiving capability (in 10k PPS).
     */
     @SerializedName("InstancePps")
     @Expose
     private Long InstancePps;
 
     /**
-    * 
+    * Number of local storage blocks.
     */
     @SerializedName("StorageBlockAmount")
     @Expose
     private Long StorageBlockAmount;
 
     /**
-    * 
+    * CPU type.
     */
     @SerializedName("CpuType")
     @Expose
@@ -381,64 +381,64 @@ Note: this field may return null, indicating that no valid value is obtained.
     }
 
     /**
-     * Get  
-     * @return InstanceBandwidth 
+     * Get Private network bandwidth, in Gbps. 
+     * @return InstanceBandwidth Private network bandwidth, in Gbps.
      */
     public Float getInstanceBandwidth() {
         return this.InstanceBandwidth;
     }
 
     /**
-     * Set 
-     * @param InstanceBandwidth 
+     * Set Private network bandwidth, in Gbps.
+     * @param InstanceBandwidth Private network bandwidth, in Gbps.
      */
     public void setInstanceBandwidth(Float InstanceBandwidth) {
         this.InstanceBandwidth = InstanceBandwidth;
     }
 
     /**
-     * Get  
-     * @return InstancePps 
+     * Get The max packet sending and receiving capability (in 10k PPS). 
+     * @return InstancePps The max packet sending and receiving capability (in 10k PPS).
      */
     public Long getInstancePps() {
         return this.InstancePps;
     }
 
     /**
-     * Set 
-     * @param InstancePps 
+     * Set The max packet sending and receiving capability (in 10k PPS).
+     * @param InstancePps The max packet sending and receiving capability (in 10k PPS).
      */
     public void setInstancePps(Long InstancePps) {
         this.InstancePps = InstancePps;
     }
 
     /**
-     * Get  
-     * @return StorageBlockAmount 
+     * Get Number of local storage blocks. 
+     * @return StorageBlockAmount Number of local storage blocks.
      */
     public Long getStorageBlockAmount() {
         return this.StorageBlockAmount;
     }
 
     /**
-     * Set 
-     * @param StorageBlockAmount 
+     * Set Number of local storage blocks.
+     * @param StorageBlockAmount Number of local storage blocks.
      */
     public void setStorageBlockAmount(Long StorageBlockAmount) {
         this.StorageBlockAmount = StorageBlockAmount;
     }
 
     /**
-     * Get  
-     * @return CpuType 
+     * Get CPU type. 
+     * @return CpuType CPU type.
      */
     public String getCpuType() {
         return this.CpuType;
     }
 
     /**
-     * Set 
-     * @param CpuType 
+     * Set CPU type.
+     * @param CpuType CPU type.
      */
     public void setCpuType(String CpuType) {
         this.CpuType = CpuType;

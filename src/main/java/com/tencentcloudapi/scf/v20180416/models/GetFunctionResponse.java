@@ -163,7 +163,7 @@ public class GetFunctionResponse extends AbstractModel{
     private String InstallDependency;
 
     /**
-    * Function status
+    * Function status. For valid values and status change process, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1)
     */
     @SerializedName("Status")
     @Expose
@@ -278,7 +278,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private CfsConfig CfsConfig;
 
     /**
-    * Function billing status
+    * Function billing status. For valid values, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E8.AE.A1.E8.B4.B9.E7.8A.B6.E6.80.81)
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AvailableStatus")
@@ -292,6 +292,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     @SerializedName("Qualifier")
     @Expose
     private String Qualifier;
+
+    /**
+    * Timeout period for function initialization
+    */
+    @SerializedName("InitTimeout")
+    @Expose
+    private Long InitTimeout;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -621,16 +628,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Function status 
-     * @return Status Function status
+     * Get Function status. For valid values and status change process, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1) 
+     * @return Status Function status. For valid values and status change process, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1)
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Function status
-     * @param Status Function status
+     * Set Function status. For valid values and status change process, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1)
+     * @param Status Function status. For valid values and status change process, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1)
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -889,9 +896,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Function billing status
+     * Get Function billing status. For valid values, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E8.AE.A1.E8.B4.B9.E7.8A.B6.E6.80.81)
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AvailableStatus Function billing status
+     * @return AvailableStatus Function billing status. For valid values, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E8.AE.A1.E8.B4.B9.E7.8A.B6.E6.80.81)
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getAvailableStatus() {
@@ -899,9 +906,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Function billing status
+     * Set Function billing status. For valid values, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E8.AE.A1.E8.B4.B9.E7.8A.B6.E6.80.81)
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AvailableStatus Function billing status
+     * @param AvailableStatus Function billing status. For valid values, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E8.AE.A1.E8.B4.B9.E7.8A.B6.E6.80.81)
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setAvailableStatus(String AvailableStatus) {
@@ -926,6 +933,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
      */
     public void setQualifier(String Qualifier) {
         this.Qualifier = Qualifier;
+    }
+
+    /**
+     * Get Timeout period for function initialization 
+     * @return InitTimeout Timeout period for function initialization
+     */
+    public Long getInitTimeout() {
+        return this.InitTimeout;
+    }
+
+    /**
+     * Set Timeout period for function initialization
+     * @param InitTimeout Timeout period for function initialization
+     */
+    public void setInitTimeout(Long InitTimeout) {
+        this.InitTimeout = InitTimeout;
     }
 
     /**
@@ -986,6 +1009,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "CfsConfig.", this.CfsConfig);
         this.setParamSimple(map, prefix + "AvailableStatus", this.AvailableStatus);
         this.setParamSimple(map, prefix + "Qualifier", this.Qualifier);
+        this.setParamSimple(map, prefix + "InitTimeout", this.InitTimeout);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

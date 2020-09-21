@@ -44,7 +44,7 @@ public class CreateTriggerRequest extends AbstractModel{
     private String Type;
 
     /**
-    * For parameters of triggers, see [Trigger Description](https://cloud.tencent.com/document/product/583/39901)
+    * For parameters of triggers, see [Trigger Description](https://intl.cloud.tencent.com/document/product/583/39901?from_cn_redirect=1)
     */
     @SerializedName("TriggerDesc")
     @Expose
@@ -120,16 +120,16 @@ public class CreateTriggerRequest extends AbstractModel{
     }
 
     /**
-     * Get For parameters of triggers, see [Trigger Description](https://cloud.tencent.com/document/product/583/39901) 
-     * @return TriggerDesc For parameters of triggers, see [Trigger Description](https://cloud.tencent.com/document/product/583/39901)
+     * Get For parameters of triggers, see [Trigger Description](https://intl.cloud.tencent.com/document/product/583/39901?from_cn_redirect=1) 
+     * @return TriggerDesc For parameters of triggers, see [Trigger Description](https://intl.cloud.tencent.com/document/product/583/39901?from_cn_redirect=1)
      */
     public String getTriggerDesc() {
         return this.TriggerDesc;
     }
 
     /**
-     * Set For parameters of triggers, see [Trigger Description](https://cloud.tencent.com/document/product/583/39901)
-     * @param TriggerDesc For parameters of triggers, see [Trigger Description](https://cloud.tencent.com/document/product/583/39901)
+     * Set For parameters of triggers, see [Trigger Description](https://intl.cloud.tencent.com/document/product/583/39901?from_cn_redirect=1)
+     * @param TriggerDesc For parameters of triggers, see [Trigger Description](https://intl.cloud.tencent.com/document/product/583/39901?from_cn_redirect=1)
      */
     public void setTriggerDesc(String TriggerDesc) {
         this.TriggerDesc = TriggerDesc;

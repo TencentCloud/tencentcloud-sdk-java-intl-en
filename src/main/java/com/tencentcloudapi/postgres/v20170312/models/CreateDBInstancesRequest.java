@@ -114,7 +114,7 @@ public class CreateDBInstancesRequest extends AbstractModel{
     private Long AutoRenewFlag;
 
     /**
-    * 
+    * Activity ID
     */
     @SerializedName("ActivityId")
     @Expose
@@ -350,16 +350,16 @@ public class CreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return ActivityId 
+     * Get Activity ID 
+     * @return ActivityId Activity ID
      */
     public Long getActivityId() {
         return this.ActivityId;
     }
 
     /**
-     * Set 
-     * @param ActivityId 
+     * Set Activity ID
+     * @param ActivityId Activity ID
      */
     public void setActivityId(Long ActivityId) {
         this.ActivityId = ActivityId;

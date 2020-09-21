@@ -96,7 +96,7 @@ IKAD: Malaysia Temporary Employment Visit Pass
     private String Type;
 
     /**
-    * Date of birth (currently, this field is only supported for IKAD)
+    * Date of birth (currently, this field is only supported for IKAD).
     */
     @SerializedName("Birthday")
     @Expose
@@ -306,16 +306,16 @@ IKAD: Malaysia Temporary Employment Visit Pass
     }
 
     /**
-     * Get Date of birth (currently, this field is only supported for IKAD) 
-     * @return Birthday Date of birth (currently, this field is only supported for IKAD)
+     * Get Date of birth (currently, this field is only supported for IKAD). 
+     * @return Birthday Date of birth (currently, this field is only supported for IKAD).
      */
     public String getBirthday() {
         return this.Birthday;
     }
 
     /**
-     * Set Date of birth (currently, this field is only supported for IKAD)
-     * @param Birthday Date of birth (currently, this field is only supported for IKAD)
+     * Set Date of birth (currently, this field is only supported for IKAD).
+     * @param Birthday Date of birth (currently, this field is only supported for IKAD).
      */
     public void setBirthday(String Birthday) {
         this.Birthday = Birthday;

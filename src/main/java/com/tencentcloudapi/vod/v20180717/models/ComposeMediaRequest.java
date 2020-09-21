@@ -44,14 +44,14 @@ public class ComposeMediaRequest extends AbstractModel{
     private Canvas Canvas;
 
     /**
-    * 
+    * This parameter is used to pass through user request information. `ComposeMediaComplete` callback will return the value of this field. It contains up to 1,000 characters.
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * 
+    * This parameter is used to identify duplicate requests. After you send a request, if any request with the same `SessionId` has already been sent in the last three days (72 hours), an error message will be returned. `SessionId` contains up to 50 characters. If this parameter is null or an empty string, the above operation will not be performed.
     */
     @SerializedName("SessionId")
     @Expose
@@ -113,32 +113,32 @@ public class ComposeMediaRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return SessionContext 
+     * Get This parameter is used to pass through user request information. `ComposeMediaComplete` callback will return the value of this field. It contains up to 1,000 characters. 
+     * @return SessionContext This parameter is used to pass through user request information. `ComposeMediaComplete` callback will return the value of this field. It contains up to 1,000 characters.
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set 
-     * @param SessionContext 
+     * Set This parameter is used to pass through user request information. `ComposeMediaComplete` callback will return the value of this field. It contains up to 1,000 characters.
+     * @param SessionContext This parameter is used to pass through user request information. `ComposeMediaComplete` callback will return the value of this field. It contains up to 1,000 characters.
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get  
-     * @return SessionId 
+     * Get This parameter is used to identify duplicate requests. After you send a request, if any request with the same `SessionId` has already been sent in the last three days (72 hours), an error message will be returned. `SessionId` contains up to 50 characters. If this parameter is null or an empty string, the above operation will not be performed. 
+     * @return SessionId This parameter is used to identify duplicate requests. After you send a request, if any request with the same `SessionId` has already been sent in the last three days (72 hours), an error message will be returned. `SessionId` contains up to 50 characters. If this parameter is null or an empty string, the above operation will not be performed.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 
-     * @param SessionId 
+     * Set This parameter is used to identify duplicate requests. After you send a request, if any request with the same `SessionId` has already been sent in the last three days (72 hours), an error message will be returned. `SessionId` contains up to 50 characters. If this parameter is null or an empty string, the above operation will not be performed.
+     * @param SessionId This parameter is used to identify duplicate requests. After you send a request, if any request with the same `SessionId` has already been sent in the last three days (72 hours), an error message will be returned. `SessionId` contains up to 50 characters. If this parameter is null or an empty string, the above operation will not be performed.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;

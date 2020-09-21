@@ -65,7 +65,7 @@ public class HostResource extends AbstractModel{
     private Long DiskAvailable;
 
     /**
-    * 
+    * CDH instance disk type.
     */
     @SerializedName("DiskType")
     @Expose
@@ -168,16 +168,16 @@ public class HostResource extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return DiskType 
+     * Get CDH instance disk type. 
+     * @return DiskType CDH instance disk type.
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set 
-     * @param DiskType 
+     * Set CDH instance disk type.
+     * @param DiskType CDH instance disk type.
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;

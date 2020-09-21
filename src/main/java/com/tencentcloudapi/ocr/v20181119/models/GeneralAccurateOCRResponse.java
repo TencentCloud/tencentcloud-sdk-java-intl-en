@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class GeneralAccurateOCRResponse extends AbstractModel{
 
     /**
-    * Information of recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
+    * Information on recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
     */
     @SerializedName("TextDetections")
     @Expose
@@ -44,16 +44,16 @@ public class GeneralAccurateOCRResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Information of recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left. 
-     * @return TextDetections Information of recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
+     * Get Information on recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left. 
+     * @return TextDetections Information on recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
      */
     public TextDetection [] getTextDetections() {
         return this.TextDetections;
     }
 
     /**
-     * Set Information of recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
-     * @param TextDetections Information of recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
+     * Set Information on recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
+     * @param TextDetections Information on recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
      */
     public void setTextDetections(TextDetection [] TextDetections) {
         this.TextDetections = TextDetections;
