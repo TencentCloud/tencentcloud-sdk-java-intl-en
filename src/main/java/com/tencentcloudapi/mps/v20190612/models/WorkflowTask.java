@@ -83,7 +83,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private AiContentReviewResult [] AiContentReviewResultSet;
 
     /**
-    * 
+    * Execution status and result of video content analysis task.
     */
     @SerializedName("AiAnalysisResultSet")
     @Expose
@@ -241,16 +241,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return AiAnalysisResultSet 
+     * Get Execution status and result of video content analysis task. 
+     * @return AiAnalysisResultSet Execution status and result of video content analysis task.
      */
     public AiAnalysisResult [] getAiAnalysisResultSet() {
         return this.AiAnalysisResultSet;
     }
 
     /**
-     * Set 
-     * @param AiAnalysisResultSet 
+     * Set Execution status and result of video content analysis task.
+     * @param AiAnalysisResultSet Execution status and result of video content analysis task.
      */
     public void setAiAnalysisResultSet(AiAnalysisResult [] AiAnalysisResultSet) {
         this.AiAnalysisResultSet = AiAnalysisResultSet;

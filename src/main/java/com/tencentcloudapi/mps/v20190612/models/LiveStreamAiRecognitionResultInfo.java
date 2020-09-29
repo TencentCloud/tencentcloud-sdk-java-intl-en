@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class LiveStreamAiRecognitionResultInfo extends AbstractModel{
 
     /**
-    * 
+    * Content recognition result list.
     */
     @SerializedName("ResultSet")
     @Expose
     private LiveStreamAiRecognitionResultItem [] ResultSet;
 
     /**
-     * Get  
-     * @return ResultSet 
+     * Get Content recognition result list. 
+     * @return ResultSet Content recognition result list.
      */
     public LiveStreamAiRecognitionResultItem [] getResultSet() {
         return this.ResultSet;
     }
 
     /**
-     * Set 
-     * @param ResultSet 
+     * Set Content recognition result list.
+     * @param ResultSet Content recognition result list.
      */
     public void setResultSet(LiveStreamAiRecognitionResultItem [] ResultSet) {
         this.ResultSet = ResultSet;

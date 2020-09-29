@@ -58,7 +58,7 @@ public class PodSpec extends AbstractModel{
     private Long Memory;
 
     /**
-    * Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
+    * Mount point of resources for the host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
     */
     @SerializedName("DataVolumes")
     @Expose
@@ -159,16 +159,16 @@ public class PodSpec extends AbstractModel{
     }
 
     /**
-     * Get Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused) 
-     * @return DataVolumes Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
+     * Get Mount point of resources for the host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused) 
+     * @return DataVolumes Mount point of resources for the host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
      */
     public String [] getDataVolumes() {
         return this.DataVolumes;
     }
 
     /**
-     * Set Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
-     * @param DataVolumes Mount point of resource for host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
+     * Set Mount point of resources for the host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
+     * @param DataVolumes Mount point of resources for the host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
      */
     public void setDataVolumes(String [] DataVolumes) {
         this.DataVolumes = DataVolumes;

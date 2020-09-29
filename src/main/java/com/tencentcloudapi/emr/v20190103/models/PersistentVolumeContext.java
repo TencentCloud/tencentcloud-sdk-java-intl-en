@@ -39,6 +39,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String DiskType;
 
     /**
+    * 
+    */
+    @SerializedName("DiskNum")
+    @Expose
+    private Long DiskNum;
+
+    /**
      * Get Disk size in GB
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return DiskSize Disk size in GB
@@ -79,11 +86,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get  
+     * @return DiskNum 
+     */
+    public Long getDiskNum() {
+        return this.DiskNum;
+    }
+
+    /**
+     * Set 
+     * @param DiskNum 
+     */
+    public void setDiskNum(Long DiskNum) {
+        this.DiskNum = DiskNum;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
+        this.setParamSimple(map, prefix + "DiskNum", this.DiskNum);
 
     }
 }

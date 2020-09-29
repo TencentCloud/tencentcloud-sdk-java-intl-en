@@ -54,7 +54,10 @@ Default value: 0.
     private Long Height;
 
     /**
-    * 
+    * Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open.
     */
     @SerializedName("ResolutionAdaptive")
     @Expose
@@ -177,16 +180,28 @@ Default value: 0.
     }
 
     /**
-     * Get  
-     * @return ResolutionAdaptive 
+     * Get Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open. 
+     * @return ResolutionAdaptive Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open.
      */
     public String getResolutionAdaptive() {
         return this.ResolutionAdaptive;
     }
 
     /**
-     * Set 
-     * @param ResolutionAdaptive 
+     * Set Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open.
+     * @param ResolutionAdaptive Resolution adaption. Valid values:
+<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
+<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+Default value: open.
      */
     public void setResolutionAdaptive(String ResolutionAdaptive) {
         this.ResolutionAdaptive = ResolutionAdaptive;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateRecordTaskResponse extends AbstractModel{
 
     /**
-    * Task ID, which uniquely identifies the recording task globally.
+    * `TaskId`, which is a globally unique task ID. If the `TaskId` is returned, that means the recording task has been successfully created.
     */
     @SerializedName("TaskId")
     @Expose
@@ -37,16 +37,16 @@ public class CreateRecordTaskResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Task ID, which uniquely identifies the recording task globally. 
-     * @return TaskId Task ID, which uniquely identifies the recording task globally.
+     * Get `TaskId`, which is a globally unique task ID. If the `TaskId` is returned, that means the recording task has been successfully created. 
+     * @return TaskId `TaskId`, which is a globally unique task ID. If the `TaskId` is returned, that means the recording task has been successfully created.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID, which uniquely identifies the recording task globally.
-     * @param TaskId Task ID, which uniquely identifies the recording task globally.
+     * Set `TaskId`, which is a globally unique task ID. If the `TaskId` is returned, that means the recording task has been successfully created.
+     * @param TaskId `TaskId`, which is a globally unique task ID. If the `TaskId` is returned, that means the recording task has been successfully created.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

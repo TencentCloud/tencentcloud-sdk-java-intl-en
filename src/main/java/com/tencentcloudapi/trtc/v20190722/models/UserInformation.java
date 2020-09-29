@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class UserInformation extends AbstractModel{
 
     /**
-    * 
+    * Room ID
     */
     @SerializedName("RoomStr")
     @Expose
     private String RoomStr;
 
     /**
-    * 
+    * User ID
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * 
+    * The time when the user enters the room
     */
     @SerializedName("JoinTs")
     @Expose
@@ -51,76 +51,76 @@ public class UserInformation extends AbstractModel{
     private Long LeaveTs;
 
     /**
-    * 
+    * Device type
     */
     @SerializedName("DeviceType")
     @Expose
     private String DeviceType;
 
     /**
-    * 
+    * SDK version number
     */
     @SerializedName("SdkVersion")
     @Expose
     private String SdkVersion;
 
     /**
-    * 
+    * Client IP
     */
     @SerializedName("ClientIp")
     @Expose
     private String ClientIp;
 
     /**
-    * 
+    * Determine whether a user has left the room
     */
     @SerializedName("Finished")
     @Expose
     private Boolean Finished;
 
     /**
-     * Get  
-     * @return RoomStr 
+     * Get Room ID 
+     * @return RoomStr Room ID
      */
     public String getRoomStr() {
         return this.RoomStr;
     }
 
     /**
-     * Set 
-     * @param RoomStr 
+     * Set Room ID
+     * @param RoomStr Room ID
      */
     public void setRoomStr(String RoomStr) {
         this.RoomStr = RoomStr;
     }
 
     /**
-     * Get  
-     * @return UserId 
+     * Get User ID 
+     * @return UserId User ID
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 
-     * @param UserId 
+     * Set User ID
+     * @param UserId User ID
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get  
-     * @return JoinTs 
+     * Get The time when the user enters the room 
+     * @return JoinTs The time when the user enters the room
      */
     public Long getJoinTs() {
         return this.JoinTs;
     }
 
     /**
-     * Set 
-     * @param JoinTs 
+     * Set The time when the user enters the room
+     * @param JoinTs The time when the user enters the room
      */
     public void setJoinTs(Long JoinTs) {
         this.JoinTs = JoinTs;
@@ -143,64 +143,64 @@ public class UserInformation extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return DeviceType 
+     * Get Device type 
+     * @return DeviceType Device type
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set 
-     * @param DeviceType 
+     * Set Device type
+     * @param DeviceType Device type
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
     }
 
     /**
-     * Get  
-     * @return SdkVersion 
+     * Get SDK version number 
+     * @return SdkVersion SDK version number
      */
     public String getSdkVersion() {
         return this.SdkVersion;
     }
 
     /**
-     * Set 
-     * @param SdkVersion 
+     * Set SDK version number
+     * @param SdkVersion SDK version number
      */
     public void setSdkVersion(String SdkVersion) {
         this.SdkVersion = SdkVersion;
     }
 
     /**
-     * Get  
-     * @return ClientIp 
+     * Get Client IP 
+     * @return ClientIp Client IP
      */
     public String getClientIp() {
         return this.ClientIp;
     }
 
     /**
-     * Set 
-     * @param ClientIp 
+     * Set Client IP
+     * @param ClientIp Client IP
      */
     public void setClientIp(String ClientIp) {
         this.ClientIp = ClientIp;
     }
 
     /**
-     * Get  
-     * @return Finished 
+     * Get Determine whether a user has left the room 
+     * @return Finished Determine whether a user has left the room
      */
     public Boolean getFinished() {
         return this.Finished;
     }
 
     /**
-     * Set 
-     * @param Finished 
+     * Set Determine whether a user has left the room
+     * @param Finished Determine whether a user has left the room
      */
     public void setFinished(Boolean Finished) {
         this.Finished = Finished;

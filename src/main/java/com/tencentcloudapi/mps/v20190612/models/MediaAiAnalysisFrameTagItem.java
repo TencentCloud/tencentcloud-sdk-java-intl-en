@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class MediaAiAnalysisFrameTagItem extends AbstractModel{
 
     /**
-    * 
+    * Frame-specific tag name.
     */
     @SerializedName("Tag")
     @Expose
@@ -37,23 +37,23 @@ public class MediaAiAnalysisFrameTagItem extends AbstractModel{
     private String [] CategorySet;
 
     /**
-    * 
+    * Confidence of intelligently generated frame-specific tag between 0 and 100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-     * Get  
-     * @return Tag 
+     * Get Frame-specific tag name. 
+     * @return Tag Frame-specific tag name.
      */
     public String getTag() {
         return this.Tag;
     }
 
     /**
-     * Set 
-     * @param Tag 
+     * Set Frame-specific tag name.
+     * @param Tag Frame-specific tag name.
      */
     public void setTag(String Tag) {
         this.Tag = Tag;
@@ -76,16 +76,16 @@ public class MediaAiAnalysisFrameTagItem extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return Confidence 
+     * Get Confidence of intelligently generated frame-specific tag between 0 and 100. 
+     * @return Confidence Confidence of intelligently generated frame-specific tag between 0 and 100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 
-     * @param Confidence 
+     * Set Confidence of intelligently generated frame-specific tag between 0 and 100.
+     * @param Confidence Confidence of intelligently generated frame-specific tag between 0 and 100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;

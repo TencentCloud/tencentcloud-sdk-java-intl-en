@@ -94,6 +94,13 @@ public class DescribeBillDetailRequest extends AbstractModel{
     private String ResourceId;
 
     /**
+    * 
+    */
+    @SerializedName("ActionType")
+    @Expose
+    private String ActionType;
+
+    /**
      * Get Offset 
      * @return Offset Offset
      */
@@ -258,6 +265,22 @@ public class DescribeBillDetailRequest extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return ActionType 
+     */
+    public String getActionType() {
+        return this.ActionType;
+    }
+
+    /**
+     * Set 
+     * @param ActionType 
+     */
+    public void setActionType(String ActionType) {
+        this.ActionType = ActionType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -271,6 +294,7 @@ public class DescribeBillDetailRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ProductCode", this.ProductCode);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
+        this.setParamSimple(map, prefix + "ActionType", this.ActionType);
 
     }
 }

@@ -30,7 +30,8 @@ public class WatermarkInput extends AbstractModel{
     private Long Definition;
 
     /**
-    * 
+    * Custom watermark parameter, which is valid if `Definition` is 0.
+This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the watermark parameter preferably.
     */
     @SerializedName("RawParameter")
     @Expose
@@ -87,16 +88,20 @@ public class WatermarkInput extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return RawParameter 
+     * Get Custom watermark parameter, which is valid if `Definition` is 0.
+This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the watermark parameter preferably. 
+     * @return RawParameter Custom watermark parameter, which is valid if `Definition` is 0.
+This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the watermark parameter preferably.
      */
     public RawWatermarkParameter getRawParameter() {
         return this.RawParameter;
     }
 
     /**
-     * Set 
-     * @param RawParameter 
+     * Set Custom watermark parameter, which is valid if `Definition` is 0.
+This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the watermark parameter preferably.
+     * @param RawParameter Custom watermark parameter, which is valid if `Definition` is 0.
+This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the watermark parameter preferably.
      */
     public void setRawParameter(RawWatermarkParameter RawParameter) {
         this.RawParameter = RawParameter;

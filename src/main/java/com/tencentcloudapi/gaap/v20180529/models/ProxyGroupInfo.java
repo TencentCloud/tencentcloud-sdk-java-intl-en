@@ -95,6 +95,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long CreateTime;
 
     /**
+    * Whether the connection group contains a Microsoft connection
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ProxyType")
+    @Expose
+    private Long ProxyType;
+
+    /**
      * Get Connection group ID 
      * @return GroupId Connection group ID
      */
@@ -275,6 +283,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Whether the connection group contains a Microsoft connection
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return ProxyType Whether the connection group contains a Microsoft connection
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getProxyType() {
+        return this.ProxyType;
+    }
+
+    /**
+     * Set Whether the connection group contains a Microsoft connection
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param ProxyType Whether the connection group contains a Microsoft connection
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setProxyType(Long ProxyType) {
+        this.ProxyType = ProxyType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -287,6 +315,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "ProxyType", this.ProxyType);
 
     }
 }

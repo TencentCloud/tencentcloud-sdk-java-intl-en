@@ -23,9 +23,57 @@ import java.util.HashMap;
 public class DescribeLiveTranscodeRulesRequest extends AbstractModel{
 
     /**
+    * 
+    */
+    @SerializedName("TemplateIds")
+    @Expose
+    private Long [] TemplateIds;
+
+    /**
+    * 
+    */
+    @SerializedName("DomainNames")
+    @Expose
+    private String [] DomainNames;
+
+    /**
+     * Get  
+     * @return TemplateIds 
+     */
+    public Long [] getTemplateIds() {
+        return this.TemplateIds;
+    }
+
+    /**
+     * Set 
+     * @param TemplateIds 
+     */
+    public void setTemplateIds(Long [] TemplateIds) {
+        this.TemplateIds = TemplateIds;
+    }
+
+    /**
+     * Get  
+     * @return DomainNames 
+     */
+    public String [] getDomainNames() {
+        return this.DomainNames;
+    }
+
+    /**
+     * Set 
+     * @param DomainNames 
+     */
+    public void setDomainNames(String [] DomainNames) {
+        this.DomainNames = DomainNames;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "TemplateIds.", this.TemplateIds);
+        this.setParamArraySimple(map, prefix + "DomainNames.", this.DomainNames);
 
     }
 }

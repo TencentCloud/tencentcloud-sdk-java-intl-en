@@ -23,11 +23,18 @@ import java.util.HashMap;
 public class DescribeRealServerStatisticsResponse extends AbstractModel{
 
     /**
-    * Origin server status statistics
+    * Origin server status statistics of specified listener
     */
     @SerializedName("StatisticsData")
     @Expose
     private StatisticsDataInfo [] StatisticsData;
+
+    /**
+    * Status statistics of multiple origin servers
+    */
+    @SerializedName("RsStatisticsData")
+    @Expose
+    private MetricStatisticsInfo [] RsStatisticsData;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +44,35 @@ public class DescribeRealServerStatisticsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Origin server status statistics 
-     * @return StatisticsData Origin server status statistics
+     * Get Origin server status statistics of specified listener 
+     * @return StatisticsData Origin server status statistics of specified listener
      */
     public StatisticsDataInfo [] getStatisticsData() {
         return this.StatisticsData;
     }
 
     /**
-     * Set Origin server status statistics
-     * @param StatisticsData Origin server status statistics
+     * Set Origin server status statistics of specified listener
+     * @param StatisticsData Origin server status statistics of specified listener
      */
     public void setStatisticsData(StatisticsDataInfo [] StatisticsData) {
         this.StatisticsData = StatisticsData;
+    }
+
+    /**
+     * Get Status statistics of multiple origin servers 
+     * @return RsStatisticsData Status statistics of multiple origin servers
+     */
+    public MetricStatisticsInfo [] getRsStatisticsData() {
+        return this.RsStatisticsData;
+    }
+
+    /**
+     * Set Status statistics of multiple origin servers
+     * @param RsStatisticsData Status statistics of multiple origin servers
+     */
+    public void setRsStatisticsData(MetricStatisticsInfo [] RsStatisticsData) {
+        this.RsStatisticsData = RsStatisticsData;
     }
 
     /**
@@ -73,6 +96,7 @@ public class DescribeRealServerStatisticsResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "StatisticsData.", this.StatisticsData);
+        this.setParamArrayObj(map, prefix + "RsStatisticsData.", this.RsStatisticsData);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -53,6 +53,14 @@ Note: This field may return null, indicating that no valid value was found.
     private Long RelatedType;
 
     /**
+    * Policy association time
+Note: this field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("AttachmentTime")
+    @Expose
+    private String AttachmentTime;
+
+    /**
      * Get Entity ID 
      * @return Id Entity ID
      */
@@ -125,6 +133,26 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
+     * Get Policy association time
+Note: this field may return `null`, indicating that no valid value was found. 
+     * @return AttachmentTime Policy association time
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public String getAttachmentTime() {
+        return this.AttachmentTime;
+    }
+
+    /**
+     * Set Policy association time
+Note: this field may return `null`, indicating that no valid value was found.
+     * @param AttachmentTime Policy association time
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public void setAttachmentTime(String AttachmentTime) {
+        this.AttachmentTime = AttachmentTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -132,6 +160,7 @@ Note: This field may return null, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Uin", this.Uin);
         this.setParamSimple(map, prefix + "RelatedType", this.RelatedType);
+        this.setParamSimple(map, prefix + "AttachmentTime", this.AttachmentTime);
 
     }
 }

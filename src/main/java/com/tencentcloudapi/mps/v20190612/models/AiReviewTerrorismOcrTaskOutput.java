@@ -23,69 +23,84 @@ import java.util.HashMap;
 public class AiReviewTerrorismOcrTaskOutput extends AbstractModel{
 
     /**
-    * 
+    * Score of OCR-detected terrorism information in text between 0 and 100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * 
+    * Suggestion for OCR-detected terrorism information in text. Valid values:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * 
+    * List of video segments that contain OCR-detected terrorism information in text.
     */
     @SerializedName("SegmentSet")
     @Expose
     private MediaContentReviewOcrTextSegmentItem [] SegmentSet;
 
     /**
-     * Get  
-     * @return Confidence 
+     * Get Score of OCR-detected terrorism information in text between 0 and 100. 
+     * @return Confidence Score of OCR-detected terrorism information in text between 0 and 100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 
-     * @param Confidence 
+     * Set Score of OCR-detected terrorism information in text between 0 and 100.
+     * @param Confidence Score of OCR-detected terrorism information in text between 0 and 100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get  
-     * @return Suggestion 
+     * Get Suggestion for OCR-detected terrorism information in text. Valid values:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li> 
+     * @return Suggestion Suggestion for OCR-detected terrorism information in text. Valid values:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set 
-     * @param Suggestion 
+     * Set Suggestion for OCR-detected terrorism information in text. Valid values:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+     * @param Suggestion Suggestion for OCR-detected terrorism information in text. Valid values:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get  
-     * @return SegmentSet 
+     * Get List of video segments that contain OCR-detected terrorism information in text. 
+     * @return SegmentSet List of video segments that contain OCR-detected terrorism information in text.
      */
     public MediaContentReviewOcrTextSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set 
-     * @param SegmentSet 
+     * Set List of video segments that contain OCR-detected terrorism information in text.
+     * @param SegmentSet List of video segments that contain OCR-detected terrorism information in text.
      */
     public void setSegmentSet(MediaContentReviewOcrTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

@@ -23,69 +23,84 @@ import java.util.HashMap;
 public class AiReviewProhibitedAsrTaskOutput extends AbstractModel{
 
     /**
-    * 
+    * Score of ASR-detected prohibited information in speech between 0 and 100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * 
+    * Suggestion for ASR-detected prohibited information in speech. Valid values:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * 
+    * List of video segments that contain the ASR-detected prohibited information in speech.
     */
     @SerializedName("SegmentSet")
     @Expose
     private MediaContentReviewAsrTextSegmentItem [] SegmentSet;
 
     /**
-     * Get  
-     * @return Confidence 
+     * Get Score of ASR-detected prohibited information in speech between 0 and 100. 
+     * @return Confidence Score of ASR-detected prohibited information in speech between 0 and 100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 
-     * @param Confidence 
+     * Set Score of ASR-detected prohibited information in speech between 0 and 100.
+     * @param Confidence Score of ASR-detected prohibited information in speech between 0 and 100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get  
-     * @return Suggestion 
+     * Get Suggestion for ASR-detected prohibited information in speech. Valid values:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li> 
+     * @return Suggestion Suggestion for ASR-detected prohibited information in speech. Valid values:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set 
-     * @param Suggestion 
+     * Set Suggestion for ASR-detected prohibited information in speech. Valid values:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+     * @param Suggestion Suggestion for ASR-detected prohibited information in speech. Valid values:
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get  
-     * @return SegmentSet 
+     * Get List of video segments that contain the ASR-detected prohibited information in speech. 
+     * @return SegmentSet List of video segments that contain the ASR-detected prohibited information in speech.
      */
     public MediaContentReviewAsrTextSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set 
-     * @param SegmentSet 
+     * Set List of video segments that contain the ASR-detected prohibited information in speech.
+     * @param SegmentSet List of video segments that contain the ASR-detected prohibited information in speech.
      */
     public void setSegmentSet(MediaContentReviewAsrTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

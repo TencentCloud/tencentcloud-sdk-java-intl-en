@@ -23,138 +23,158 @@ import java.util.HashMap;
 public class EditMediaTask extends AbstractModel{
 
     /**
-    * 
+    * Task ID.
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 
+    * Task status. Valid values:
+<li>PROCESSING: processing;</li>
+<li>FINISH: completed.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 
+    * Error code
+<li>0: success;</li>
+<li>Other values: failure.</li>
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * 
+    * Error message.
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * 
+    * Input of video editing task.
     */
     @SerializedName("Input")
     @Expose
     private EditMediaTaskInput Input;
 
     /**
-    * 
+    * Output of video editing task.
     */
     @SerializedName("Output")
     @Expose
     private EditMediaTaskOutput Output;
 
     /**
-     * Get  
-     * @return TaskId 
+     * Get Task ID. 
+     * @return TaskId Task ID.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 
-     * @param TaskId 
+     * Set Task ID.
+     * @param TaskId Task ID.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get Task status. Valid values:
+<li>PROCESSING: processing;</li>
+<li>FINISH: completed.</li> 
+     * @return Status Task status. Valid values:
+<li>PROCESSING: processing;</li>
+<li>FINISH: completed.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Task status. Valid values:
+<li>PROCESSING: processing;</li>
+<li>FINISH: completed.</li>
+     * @param Status Task status. Valid values:
+<li>PROCESSING: processing;</li>
+<li>FINISH: completed.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return ErrCode 
+     * Get Error code
+<li>0: success;</li>
+<li>Other values: failure.</li> 
+     * @return ErrCode Error code
+<li>0: success;</li>
+<li>Other values: failure.</li>
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set 
-     * @param ErrCode 
+     * Set Error code
+<li>0: success;</li>
+<li>Other values: failure.</li>
+     * @param ErrCode Error code
+<li>0: success;</li>
+<li>Other values: failure.</li>
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get  
-     * @return Message 
+     * Get Error message. 
+     * @return Message Error message.
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 
-     * @param Message 
+     * Set Error message.
+     * @param Message Error message.
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get  
-     * @return Input 
+     * Get Input of video editing task. 
+     * @return Input Input of video editing task.
      */
     public EditMediaTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set 
-     * @param Input 
+     * Set Input of video editing task.
+     * @param Input Input of video editing task.
      */
     public void setInput(EditMediaTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Output of video editing task. 
+     * @return Output Output of video editing task.
      */
     public EditMediaTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Output of video editing task.
+     * @param Output Output of video editing task.
      */
     public void setOutput(EditMediaTaskOutput Output) {
         this.Output = Output;

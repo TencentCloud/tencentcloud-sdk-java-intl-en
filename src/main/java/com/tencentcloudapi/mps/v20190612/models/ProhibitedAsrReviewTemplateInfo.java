@@ -23,69 +23,79 @@ import java.util.HashMap;
 public class ProhibitedAsrReviewTemplateInfo extends AbstractModel{
 
     /**
-    * 
+    * Switch of prohibited information detection in speech task. Valid values:
+<li>ON: enables prohibited information detection in speech task;</li>
+<li>OFF: disables prohibited information detection in speech task.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 100 will be used by default. Value range: 0–100.
     */
     @SerializedName("BlockConfidence")
     @Expose
     private Long BlockConfidence;
 
     /**
-    * 
+    * Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 75 will be used by default. Value range: 0–100.
     */
     @SerializedName("ReviewConfidence")
     @Expose
     private Long ReviewConfidence;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Switch of prohibited information detection in speech task. Valid values:
+<li>ON: enables prohibited information detection in speech task;</li>
+<li>OFF: disables prohibited information detection in speech task.</li> 
+     * @return Switch Switch of prohibited information detection in speech task. Valid values:
+<li>ON: enables prohibited information detection in speech task;</li>
+<li>OFF: disables prohibited information detection in speech task.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Switch of prohibited information detection in speech task. Valid values:
+<li>ON: enables prohibited information detection in speech task;</li>
+<li>OFF: disables prohibited information detection in speech task.</li>
+     * @param Switch Switch of prohibited information detection in speech task. Valid values:
+<li>ON: enables prohibited information detection in speech task;</li>
+<li>OFF: disables prohibited information detection in speech task.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return BlockConfidence 
+     * Get Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 100 will be used by default. Value range: 0–100. 
+     * @return BlockConfidence Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 100 will be used by default. Value range: 0–100.
      */
     public Long getBlockConfidence() {
         return this.BlockConfidence;
     }
 
     /**
-     * Set 
-     * @param BlockConfidence 
+     * Set Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 100 will be used by default. Value range: 0–100.
+     * @param BlockConfidence Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 100 will be used by default. Value range: 0–100.
      */
     public void setBlockConfidence(Long BlockConfidence) {
         this.BlockConfidence = BlockConfidence;
     }
 
     /**
-     * Get  
-     * @return ReviewConfidence 
+     * Get Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 75 will be used by default. Value range: 0–100. 
+     * @return ReviewConfidence Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 75 will be used by default. Value range: 0–100.
      */
     public Long getReviewConfidence() {
         return this.ReviewConfidence;
     }
 
     /**
-     * Set 
-     * @param ReviewConfidence 
+     * Set Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 75 will be used by default. Value range: 0–100.
+     * @param ReviewConfidence Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 75 will be used by default. Value range: 0–100.
      */
     public void setReviewConfidence(Long ReviewConfidence) {
         this.ReviewConfidence = ReviewConfidence;

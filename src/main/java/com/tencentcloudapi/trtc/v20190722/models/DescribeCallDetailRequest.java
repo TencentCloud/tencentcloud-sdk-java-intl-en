@@ -78,6 +78,20 @@ bigvHeight: upstream/downstream resolution in height.
     private String [] DataType;
 
     /**
+    * Page index starting from 0. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default.
+    */
+    @SerializedName("PageNumber")
+    @Expose
+    private String PageNumber;
+
+    /**
+    * Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. When `DataType` and all `UserId`s are not null, `PageSize` is up to 6. When `DataType` and all `UserId`s are null, `PageSize` is up to 100.
+    */
+    @SerializedName("PageSize")
+    @Expose
+    private String PageSize;
+
+    /**
      * Get Unique ID of a call: sdkappid_roomgString_createTime. The `roomgString` refers to the room ID, and `createTime` refers to the creation time of a room in the format of UNIX timestamp in seconds, such as 1400353843_218695_1590065777. Its value can be obtained from the `DescribeRoomInformation` API (related document: https://intl.cloud.tencent.com/document/product/647/44050?from_cn_redirect=1). 
      * @return CommId Unique ID of a call: sdkappid_roomgString_createTime. The `roomgString` refers to the room ID, and `createTime` refers to the creation time of a room in the format of UNIX timestamp in seconds, such as 1400353843_218695_1590065777. Its value can be obtained from the `DescribeRoomInformation` API (related document: https://intl.cloud.tencent.com/document/product/647/44050?from_cn_redirect=1).
      */
@@ -226,6 +240,38 @@ bigvHeight: upstream/downstream resolution in height.
     }
 
     /**
+     * Get Page index starting from 0. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. 
+     * @return PageNumber Page index starting from 0. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default.
+     */
+    public String getPageNumber() {
+        return this.PageNumber;
+    }
+
+    /**
+     * Set Page index starting from 0. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default.
+     * @param PageNumber Page index starting from 0. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default.
+     */
+    public void setPageNumber(String PageNumber) {
+        this.PageNumber = PageNumber;
+    }
+
+    /**
+     * Get Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. When `DataType` and all `UserId`s are not null, `PageSize` is up to 6. When `DataType` and all `UserId`s are null, `PageSize` is up to 100. 
+     * @return PageSize Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. When `DataType` and all `UserId`s are not null, `PageSize` is up to 6. When `DataType` and all `UserId`s are null, `PageSize` is up to 100.
+     */
+    public String getPageSize() {
+        return this.PageSize;
+    }
+
+    /**
+     * Set Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. When `DataType` and all `UserId`s are not null, `PageSize` is up to 6. When `DataType` and all `UserId`s are null, `PageSize` is up to 100.
+     * @param PageSize Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. When `DataType` and all `UserId`s are not null, `PageSize` is up to 6. When `DataType` and all `UserId`s are null, `PageSize` is up to 100.
+     */
+    public void setPageSize(String PageSize) {
+        this.PageSize = PageSize;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -235,6 +281,8 @@ bigvHeight: upstream/downstream resolution in height.
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         this.setParamArraySimple(map, prefix + "UserIds.", this.UserIds);
         this.setParamArraySimple(map, prefix + "DataType.", this.DataType);
+        this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
+        this.setParamSimple(map, prefix + "PageSize", this.PageSize);
 
     }
 }

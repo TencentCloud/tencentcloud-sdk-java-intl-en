@@ -31,7 +31,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private TerrorismImgReviewTemplateInfo ImgReviewInfo;
 
     /**
-    * 
+    * Control parameter of terrorism information detection in text task.
     */
     @SerializedName("OcrReviewInfo")
     @Expose
@@ -58,16 +58,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return OcrReviewInfo 
+     * Get Control parameter of terrorism information detection in text task. 
+     * @return OcrReviewInfo Control parameter of terrorism information detection in text task.
      */
     public TerrorismOcrReviewTemplateInfo getOcrReviewInfo() {
         return this.OcrReviewInfo;
     }
 
     /**
-     * Set 
-     * @param OcrReviewInfo 
+     * Set Control parameter of terrorism information detection in text task.
+     * @param OcrReviewInfo Control parameter of terrorism information detection in text task.
      */
     public void setOcrReviewInfo(TerrorismOcrReviewTemplateInfo OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

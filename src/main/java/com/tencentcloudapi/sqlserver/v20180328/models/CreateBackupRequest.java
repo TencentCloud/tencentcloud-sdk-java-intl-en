@@ -44,6 +44,13 @@ public class CreateBackupRequest extends AbstractModel{
     private String InstanceId;
 
     /**
+    * Backup name. If this parameter is left empty, a backup name in the format of "Instance ID_Backup start timestamp" will be automatically generated.
+    */
+    @SerializedName("BackupName")
+    @Expose
+    private String BackupName;
+
+    /**
      * Get Backup policy (0: instance backup, 1: multi-database backup) 
      * @return Strategy Backup policy (0: instance backup, 1: multi-database backup)
      */
@@ -92,12 +99,29 @@ public class CreateBackupRequest extends AbstractModel{
     }
 
     /**
+     * Get Backup name. If this parameter is left empty, a backup name in the format of "Instance ID_Backup start timestamp" will be automatically generated. 
+     * @return BackupName Backup name. If this parameter is left empty, a backup name in the format of "Instance ID_Backup start timestamp" will be automatically generated.
+     */
+    public String getBackupName() {
+        return this.BackupName;
+    }
+
+    /**
+     * Set Backup name. If this parameter is left empty, a backup name in the format of "Instance ID_Backup start timestamp" will be automatically generated.
+     * @param BackupName Backup name. If this parameter is left empty, a backup name in the format of "Instance ID_Backup start timestamp" will be automatically generated.
+     */
+    public void setBackupName(String BackupName) {
+        this.BackupName = BackupName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Strategy", this.Strategy);
         this.setParamArraySimple(map, prefix + "DBNames.", this.DBNames);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "BackupName", this.BackupName);
 
     }
 }

@@ -39,6 +39,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private AdvancedCache AdvancedCache;
 
     /**
+    * Advanced path cache configuration
+Note: this field may return null, indicating that no valid value is obtained.
+    */
+    @SerializedName("RuleCache")
+    @Expose
+    private RuleCache [] RuleCache;
+
+    /**
      * Get Basic cache expiration time configuration
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return SimpleCache Basic cache expiration time configuration
@@ -79,11 +87,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Advanced path cache configuration
+Note: this field may return null, indicating that no valid value is obtained. 
+     * @return RuleCache Advanced path cache configuration
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public RuleCache [] getRuleCache() {
+        return this.RuleCache;
+    }
+
+    /**
+     * Set Advanced path cache configuration
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param RuleCache Advanced path cache configuration
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public void setRuleCache(RuleCache [] RuleCache) {
+        this.RuleCache = RuleCache;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "SimpleCache.", this.SimpleCache);
         this.setParamObj(map, prefix + "AdvancedCache.", this.AdvancedCache);
+        this.setParamArrayObj(map, prefix + "RuleCache.", this.RuleCache);
 
     }
 }

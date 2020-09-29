@@ -51,6 +51,20 @@ public class RollbackInstanceRequest extends AbstractModel{
     private String Time;
 
     /**
+    * ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used.
+    */
+    @SerializedName("TargetInstanceId")
+    @Expose
+    private String TargetInstanceId;
+
+    /**
+    * Rename the databases listed in `ReNameRestoreDatabase`. This parameter takes effect only when `Type = 1` which indicates that backup rollback supports renaming databases. If it is left empty, databases will be renamed in the default format and the `DBs` parameter specifies the databases to be restored.
+    */
+    @SerializedName("RenameRestore")
+    @Expose
+    private RenameRestoreDatabase [] RenameRestore;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -115,6 +129,38 @@ public class RollbackInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used. 
+     * @return TargetInstanceId ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used.
+     */
+    public String getTargetInstanceId() {
+        return this.TargetInstanceId;
+    }
+
+    /**
+     * Set ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used.
+     * @param TargetInstanceId ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used.
+     */
+    public void setTargetInstanceId(String TargetInstanceId) {
+        this.TargetInstanceId = TargetInstanceId;
+    }
+
+    /**
+     * Get Rename the databases listed in `ReNameRestoreDatabase`. This parameter takes effect only when `Type = 1` which indicates that backup rollback supports renaming databases. If it is left empty, databases will be renamed in the default format and the `DBs` parameter specifies the databases to be restored. 
+     * @return RenameRestore Rename the databases listed in `ReNameRestoreDatabase`. This parameter takes effect only when `Type = 1` which indicates that backup rollback supports renaming databases. If it is left empty, databases will be renamed in the default format and the `DBs` parameter specifies the databases to be restored.
+     */
+    public RenameRestoreDatabase [] getRenameRestore() {
+        return this.RenameRestore;
+    }
+
+    /**
+     * Set Rename the databases listed in `ReNameRestoreDatabase`. This parameter takes effect only when `Type = 1` which indicates that backup rollback supports renaming databases. If it is left empty, databases will be renamed in the default format and the `DBs` parameter specifies the databases to be restored.
+     * @param RenameRestore Rename the databases listed in `ReNameRestoreDatabase`. This parameter takes effect only when `Type = 1` which indicates that backup rollback supports renaming databases. If it is left empty, databases will be renamed in the default format and the `DBs` parameter specifies the databases to be restored.
+     */
+    public void setRenameRestore(RenameRestoreDatabase [] RenameRestore) {
+        this.RenameRestore = RenameRestore;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +168,8 @@ public class RollbackInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamArraySimple(map, prefix + "DBs.", this.DBs);
         this.setParamSimple(map, prefix + "Time", this.Time);
+        this.setParamSimple(map, prefix + "TargetInstanceId", this.TargetInstanceId);
+        this.setParamArrayObj(map, prefix + "RenameRestore.", this.RenameRestore);
 
     }
 }

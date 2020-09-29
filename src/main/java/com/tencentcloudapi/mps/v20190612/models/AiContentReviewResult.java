@@ -38,14 +38,14 @@ public class AiContentReviewResult extends AbstractModel{
     private String Type;
 
     /**
-    * 
+    * Sample rate, which indicates the number of video frames captured per second for audit
     */
     @SerializedName("SampleRate")
     @Expose
     private Float SampleRate;
 
     /**
-    * 
+    * Audited video duration in seconds.
     */
     @SerializedName("Duration")
     @Expose
@@ -108,21 +108,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private AiReviewTaskPoliticalOcrResult PoliticalOcrTask;
 
     /**
-    * 
+    * Query result of OCR-based terrorism information detection in text task in video content audit, which is valid if task type is `Terrorism.Ocr`.
     */
     @SerializedName("TerrorismOcrTask")
     @Expose
     private AiReviewTaskTerrorismOcrResult TerrorismOcrTask;
 
     /**
-    * 
+    * Query result of ASR-based prohibited information detection in speech task in video content audit, which is valid if task type is `Prohibited.Asr`.
     */
     @SerializedName("ProhibitedAsrTask")
     @Expose
     private AiReviewTaskProhibitedAsrResult ProhibitedAsrTask;
 
     /**
-    * 
+    * Query result of OCR-based prohibited information detection in text task in video content audit, which is valid if task type is `Prohibited.Ocr`.
     */
     @SerializedName("ProhibitedOcrTask")
     @Expose
@@ -177,32 +177,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return SampleRate 
+     * Get Sample rate, which indicates the number of video frames captured per second for audit 
+     * @return SampleRate Sample rate, which indicates the number of video frames captured per second for audit
      */
     public Float getSampleRate() {
         return this.SampleRate;
     }
 
     /**
-     * Set 
-     * @param SampleRate 
+     * Set Sample rate, which indicates the number of video frames captured per second for audit
+     * @param SampleRate Sample rate, which indicates the number of video frames captured per second for audit
      */
     public void setSampleRate(Float SampleRate) {
         this.SampleRate = SampleRate;
     }
 
     /**
-     * Get  
-     * @return Duration 
+     * Get Audited video duration in seconds. 
+     * @return Duration Audited video duration in seconds.
      */
     public Float getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set 
-     * @param Duration 
+     * Set Audited video duration in seconds.
+     * @param Duration Audited video duration in seconds.
      */
     public void setDuration(Float Duration) {
         this.Duration = Duration;
@@ -349,48 +349,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return TerrorismOcrTask 
+     * Get Query result of OCR-based terrorism information detection in text task in video content audit, which is valid if task type is `Terrorism.Ocr`. 
+     * @return TerrorismOcrTask Query result of OCR-based terrorism information detection in text task in video content audit, which is valid if task type is `Terrorism.Ocr`.
      */
     public AiReviewTaskTerrorismOcrResult getTerrorismOcrTask() {
         return this.TerrorismOcrTask;
     }
 
     /**
-     * Set 
-     * @param TerrorismOcrTask 
+     * Set Query result of OCR-based terrorism information detection in text task in video content audit, which is valid if task type is `Terrorism.Ocr`.
+     * @param TerrorismOcrTask Query result of OCR-based terrorism information detection in text task in video content audit, which is valid if task type is `Terrorism.Ocr`.
      */
     public void setTerrorismOcrTask(AiReviewTaskTerrorismOcrResult TerrorismOcrTask) {
         this.TerrorismOcrTask = TerrorismOcrTask;
     }
 
     /**
-     * Get  
-     * @return ProhibitedAsrTask 
+     * Get Query result of ASR-based prohibited information detection in speech task in video content audit, which is valid if task type is `Prohibited.Asr`. 
+     * @return ProhibitedAsrTask Query result of ASR-based prohibited information detection in speech task in video content audit, which is valid if task type is `Prohibited.Asr`.
      */
     public AiReviewTaskProhibitedAsrResult getProhibitedAsrTask() {
         return this.ProhibitedAsrTask;
     }
 
     /**
-     * Set 
-     * @param ProhibitedAsrTask 
+     * Set Query result of ASR-based prohibited information detection in speech task in video content audit, which is valid if task type is `Prohibited.Asr`.
+     * @param ProhibitedAsrTask Query result of ASR-based prohibited information detection in speech task in video content audit, which is valid if task type is `Prohibited.Asr`.
      */
     public void setProhibitedAsrTask(AiReviewTaskProhibitedAsrResult ProhibitedAsrTask) {
         this.ProhibitedAsrTask = ProhibitedAsrTask;
     }
 
     /**
-     * Get  
-     * @return ProhibitedOcrTask 
+     * Get Query result of OCR-based prohibited information detection in text task in video content audit, which is valid if task type is `Prohibited.Ocr`. 
+     * @return ProhibitedOcrTask Query result of OCR-based prohibited information detection in text task in video content audit, which is valid if task type is `Prohibited.Ocr`.
      */
     public AiReviewTaskProhibitedOcrResult getProhibitedOcrTask() {
         return this.ProhibitedOcrTask;
     }
 
     /**
-     * Set 
-     * @param ProhibitedOcrTask 
+     * Set Query result of OCR-based prohibited information detection in text task in video content audit, which is valid if task type is `Prohibited.Ocr`.
+     * @param ProhibitedOcrTask Query result of OCR-based prohibited information detection in text task in video content audit, which is valid if task type is `Prohibited.Ocr`.
      */
     public void setProhibitedOcrTask(AiReviewTaskProhibitedOcrResult ProhibitedOcrTask) {
         this.ProhibitedOcrTask = ProhibitedOcrTask;

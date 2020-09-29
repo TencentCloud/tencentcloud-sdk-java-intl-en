@@ -410,7 +410,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long [] AccessPort;
 
     /**
-    * 
+    * Tag configuration
+Note: this field may return null, indicating that no valid value is obtained.
     */
     @SerializedName("Tag")
     @Expose
@@ -1401,16 +1402,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return Tag 
+     * Get Tag configuration
+Note: this field may return null, indicating that no valid value is obtained. 
+     * @return Tag Tag configuration
+Note: this field may return null, indicating that no valid value is obtained.
      */
     public Tag [] getTag() {
         return this.Tag;
     }
 
     /**
-     * Set 
-     * @param Tag 
+     * Set Tag configuration
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param Tag Tag configuration
+Note: this field may return null, indicating that no valid value is obtained.
      */
     public void setTag(Tag [] Tag) {
         this.Tag = Tag;

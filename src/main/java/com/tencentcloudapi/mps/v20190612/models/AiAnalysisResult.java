@@ -23,115 +23,140 @@ import java.util.HashMap;
 public class AiAnalysisResult extends AbstractModel{
 
     /**
-    * 
+    * Task type. Valid values:
+<li>Classification: intelligent categorization</li>
+<li>Cover: intelligent cover generating</li>
+<li>Tag: intelligent tagging</li>
+<li>FrameTag: intelligent frame-specific tagging</li>
+<li>Highlight: intelligent highlight generating</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`.
     */
     @SerializedName("ClassificationTask")
     @Expose
     private AiAnalysisTaskClassificationResult ClassificationTask;
 
     /**
-    * 
+    * Query result of intelligent cover generating task in video content analysis, which is valid if task type is `Cover`.
     */
     @SerializedName("CoverTask")
     @Expose
     private AiAnalysisTaskCoverResult CoverTask;
 
     /**
-    * 
+    * Query result of intelligent tagging task in video content analysis, which is valid if task type is `Tag`.
     */
     @SerializedName("TagTask")
     @Expose
     private AiAnalysisTaskTagResult TagTask;
 
     /**
-    * 
+    * Query result of intelligent frame-specific tagging task in video content analysis, which is valid if task type is `FrameTag`.
     */
     @SerializedName("FrameTagTask")
     @Expose
     private AiAnalysisTaskFrameTagResult FrameTagTask;
 
     /**
-     * Get  
-     * @return Type 
+     * Get Task type. Valid values:
+<li>Classification: intelligent categorization</li>
+<li>Cover: intelligent cover generating</li>
+<li>Tag: intelligent tagging</li>
+<li>FrameTag: intelligent frame-specific tagging</li>
+<li>Highlight: intelligent highlight generating</li> 
+     * @return Type Task type. Valid values:
+<li>Classification: intelligent categorization</li>
+<li>Cover: intelligent cover generating</li>
+<li>Tag: intelligent tagging</li>
+<li>FrameTag: intelligent frame-specific tagging</li>
+<li>Highlight: intelligent highlight generating</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Task type. Valid values:
+<li>Classification: intelligent categorization</li>
+<li>Cover: intelligent cover generating</li>
+<li>Tag: intelligent tagging</li>
+<li>FrameTag: intelligent frame-specific tagging</li>
+<li>Highlight: intelligent highlight generating</li>
+     * @param Type Task type. Valid values:
+<li>Classification: intelligent categorization</li>
+<li>Cover: intelligent cover generating</li>
+<li>Tag: intelligent tagging</li>
+<li>FrameTag: intelligent frame-specific tagging</li>
+<li>Highlight: intelligent highlight generating</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return ClassificationTask 
+     * Get Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`. 
+     * @return ClassificationTask Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`.
      */
     public AiAnalysisTaskClassificationResult getClassificationTask() {
         return this.ClassificationTask;
     }
 
     /**
-     * Set 
-     * @param ClassificationTask 
+     * Set Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`.
+     * @param ClassificationTask Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`.
      */
     public void setClassificationTask(AiAnalysisTaskClassificationResult ClassificationTask) {
         this.ClassificationTask = ClassificationTask;
     }
 
     /**
-     * Get  
-     * @return CoverTask 
+     * Get Query result of intelligent cover generating task in video content analysis, which is valid if task type is `Cover`. 
+     * @return CoverTask Query result of intelligent cover generating task in video content analysis, which is valid if task type is `Cover`.
      */
     public AiAnalysisTaskCoverResult getCoverTask() {
         return this.CoverTask;
     }
 
     /**
-     * Set 
-     * @param CoverTask 
+     * Set Query result of intelligent cover generating task in video content analysis, which is valid if task type is `Cover`.
+     * @param CoverTask Query result of intelligent cover generating task in video content analysis, which is valid if task type is `Cover`.
      */
     public void setCoverTask(AiAnalysisTaskCoverResult CoverTask) {
         this.CoverTask = CoverTask;
     }
 
     /**
-     * Get  
-     * @return TagTask 
+     * Get Query result of intelligent tagging task in video content analysis, which is valid if task type is `Tag`. 
+     * @return TagTask Query result of intelligent tagging task in video content analysis, which is valid if task type is `Tag`.
      */
     public AiAnalysisTaskTagResult getTagTask() {
         return this.TagTask;
     }
 
     /**
-     * Set 
-     * @param TagTask 
+     * Set Query result of intelligent tagging task in video content analysis, which is valid if task type is `Tag`.
+     * @param TagTask Query result of intelligent tagging task in video content analysis, which is valid if task type is `Tag`.
      */
     public void setTagTask(AiAnalysisTaskTagResult TagTask) {
         this.TagTask = TagTask;
     }
 
     /**
-     * Get  
-     * @return FrameTagTask 
+     * Get Query result of intelligent frame-specific tagging task in video content analysis, which is valid if task type is `FrameTag`. 
+     * @return FrameTagTask Query result of intelligent frame-specific tagging task in video content analysis, which is valid if task type is `FrameTag`.
      */
     public AiAnalysisTaskFrameTagResult getFrameTagTask() {
         return this.FrameTagTask;
     }
 
     /**
-     * Set 
-     * @param FrameTagTask 
+     * Set Query result of intelligent frame-specific tagging task in video content analysis, which is valid if task type is `FrameTag`.
+     * @param FrameTagTask Query result of intelligent frame-specific tagging task in video content analysis, which is valid if task type is `FrameTag`.
      */
     public void setFrameTagTask(AiAnalysisTaskFrameTagResult FrameTagTask) {
         this.FrameTagTask = FrameTagTask;

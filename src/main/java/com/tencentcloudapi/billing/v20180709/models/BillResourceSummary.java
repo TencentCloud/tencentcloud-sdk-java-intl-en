@@ -30,7 +30,7 @@ public class BillResourceSummary extends AbstractModel{
     private String BusinessCodeName;
 
     /**
-    * Sub-product name: sub-categories of Tencent Cloud services, such as CVM-Standard S1; if no subproduct name is obtained, “-” is returned.
+    * Sub-product name: sub-categories of Tencent Cloud services, such as CVM-Standard S1; if no subproduct name is obtained, '-' is returned.
     */
     @SerializedName("ProductCodeName")
     @Expose
@@ -220,18 +220,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String PayerUin;
 
     /**
-    * Resource owner UIN; “-” is returned if no value is obtained
+    * Resource owner UIN; '-' is returned if no value is obtained
     */
     @SerializedName("OwnerUin")
     @Expose
     private String OwnerUin;
 
     /**
-    * Operator UIN; “-” is returned if no value is obtained
+    * Operator UIN; '-' is returned if no value is obtained
     */
     @SerializedName("OperateUin")
     @Expose
     private String OperateUin;
+
+    /**
+    * 
+    */
+    @SerializedName("BusinessCode")
+    @Expose
+    private String BusinessCode;
+
+    /**
+    * 
+    */
+    @SerializedName("ProductCode")
+    @Expose
+    private String ProductCode;
+
+    /**
+    * 
+    */
+    @SerializedName("RegionId")
+    @Expose
+    private Long RegionId;
 
     /**
      * Get Product name: major categories of Tencent Cloud services, e.g. CVM and TencentDB for MySQL 
@@ -250,16 +271,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Sub-product name: sub-categories of Tencent Cloud services, such as CVM-Standard S1; if no subproduct name is obtained, “-” is returned. 
-     * @return ProductCodeName Sub-product name: sub-categories of Tencent Cloud services, such as CVM-Standard S1; if no subproduct name is obtained, “-” is returned.
+     * Get Sub-product name: sub-categories of Tencent Cloud services, such as CVM-Standard S1; if no subproduct name is obtained, '-' is returned. 
+     * @return ProductCodeName Sub-product name: sub-categories of Tencent Cloud services, such as CVM-Standard S1; if no subproduct name is obtained, '-' is returned.
      */
     public String getProductCodeName() {
         return this.ProductCodeName;
     }
 
     /**
-     * Set Sub-product name: sub-categories of Tencent Cloud services, such as CVM-Standard S1; if no subproduct name is obtained, “-” is returned.
-     * @param ProductCodeName Sub-product name: sub-categories of Tencent Cloud services, such as CVM-Standard S1; if no subproduct name is obtained, “-” is returned.
+     * Set Sub-product name: sub-categories of Tencent Cloud services, such as CVM-Standard S1; if no subproduct name is obtained, '-' is returned.
+     * @param ProductCodeName Sub-product name: sub-categories of Tencent Cloud services, such as CVM-Standard S1; if no subproduct name is obtained, '-' is returned.
      */
     public void setProductCodeName(String ProductCodeName) {
         this.ProductCodeName = ProductCodeName;
@@ -686,35 +707,83 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Resource owner UIN; “-” is returned if no value is obtained 
-     * @return OwnerUin Resource owner UIN; “-” is returned if no value is obtained
+     * Get Resource owner UIN; '-' is returned if no value is obtained 
+     * @return OwnerUin Resource owner UIN; '-' is returned if no value is obtained
      */
     public String getOwnerUin() {
         return this.OwnerUin;
     }
 
     /**
-     * Set Resource owner UIN; “-” is returned if no value is obtained
-     * @param OwnerUin Resource owner UIN; “-” is returned if no value is obtained
+     * Set Resource owner UIN; '-' is returned if no value is obtained
+     * @param OwnerUin Resource owner UIN; '-' is returned if no value is obtained
      */
     public void setOwnerUin(String OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get Operator UIN; “-” is returned if no value is obtained 
-     * @return OperateUin Operator UIN; “-” is returned if no value is obtained
+     * Get Operator UIN; '-' is returned if no value is obtained 
+     * @return OperateUin Operator UIN; '-' is returned if no value is obtained
      */
     public String getOperateUin() {
         return this.OperateUin;
     }
 
     /**
-     * Set Operator UIN; “-” is returned if no value is obtained
-     * @param OperateUin Operator UIN; “-” is returned if no value is obtained
+     * Set Operator UIN; '-' is returned if no value is obtained
+     * @param OperateUin Operator UIN; '-' is returned if no value is obtained
      */
     public void setOperateUin(String OperateUin) {
         this.OperateUin = OperateUin;
+    }
+
+    /**
+     * Get  
+     * @return BusinessCode 
+     */
+    public String getBusinessCode() {
+        return this.BusinessCode;
+    }
+
+    /**
+     * Set 
+     * @param BusinessCode 
+     */
+    public void setBusinessCode(String BusinessCode) {
+        this.BusinessCode = BusinessCode;
+    }
+
+    /**
+     * Get  
+     * @return ProductCode 
+     */
+    public String getProductCode() {
+        return this.ProductCode;
+    }
+
+    /**
+     * Set 
+     * @param ProductCode 
+     */
+    public void setProductCode(String ProductCode) {
+        this.ProductCode = ProductCode;
+    }
+
+    /**
+     * Get  
+     * @return RegionId 
+     */
+    public Long getRegionId() {
+        return this.RegionId;
+    }
+
+    /**
+     * Set 
+     * @param RegionId 
+     */
+    public void setRegionId(Long RegionId) {
+        this.RegionId = RegionId;
     }
 
     /**
@@ -751,6 +820,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "PayerUin", this.PayerUin);
         this.setParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
         this.setParamSimple(map, prefix + "OperateUin", this.OperateUin);
+        this.setParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
+        this.setParamSimple(map, prefix + "ProductCode", this.ProductCode);
+        this.setParamSimple(map, prefix + "RegionId", this.RegionId);
 
     }
 }

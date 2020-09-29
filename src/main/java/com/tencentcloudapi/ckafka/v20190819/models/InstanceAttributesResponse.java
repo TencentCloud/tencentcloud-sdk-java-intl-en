@@ -219,7 +219,8 @@ Note: this field may return `null`, indicating that no valid value was found.
     private String InstanceType;
 
     /**
-    * 
+    * Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Features")
     @Expose
@@ -686,16 +687,20 @@ Note: this field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get  
-     * @return Features 
+     * Get Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Features Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String [] getFeatures() {
         return this.Features;
     }
 
     /**
-     * Set 
-     * @param Features 
+     * Set Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Features Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setFeatures(String [] Features) {
         this.Features = Features;

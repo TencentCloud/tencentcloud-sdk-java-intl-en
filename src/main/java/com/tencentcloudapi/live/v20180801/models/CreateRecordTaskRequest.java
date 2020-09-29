@@ -44,14 +44,14 @@ public class CreateRecordTaskRequest extends AbstractModel{
     private String AppName;
 
     /**
-    * Recording task end time in UNIX timestamp, which must be after `StartTime` and within 24 hours from the current time.
+    * The recording end time in UNIX timestamp format. The “EndTime” should be later than “StartTime”. Normally the duration between “EndTime” and “StartTime” is up to 24 hours.
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * Recording task start time in UNIX timestamp. If this parameter is left empty, it indicates to start recording immediately. It must be within 24 hours from the current time.
+    * The recording start time in UNIX timestamp format. If the “StartTime” is not entered, recording will start immediately after the API is successfully called. Normally the “StartTime” should be within 6 days from current time.
     */
     @SerializedName("StartTime")
     @Expose
@@ -74,7 +74,7 @@ public class CreateRecordTaskRequest extends AbstractModel{
     private Long TemplateId;
 
     /**
-    * Extended field, which is empty by default.
+    * Extension field which is not defined now. It is empty by default.
     */
     @SerializedName("Extension")
     @Expose
@@ -129,32 +129,32 @@ public class CreateRecordTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get Recording task end time in UNIX timestamp, which must be after `StartTime` and within 24 hours from the current time. 
-     * @return EndTime Recording task end time in UNIX timestamp, which must be after `StartTime` and within 24 hours from the current time.
+     * Get The recording end time in UNIX timestamp format. The “EndTime” should be later than “StartTime”. Normally the duration between “EndTime” and “StartTime” is up to 24 hours. 
+     * @return EndTime The recording end time in UNIX timestamp format. The “EndTime” should be later than “StartTime”. Normally the duration between “EndTime” and “StartTime” is up to 24 hours.
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Recording task end time in UNIX timestamp, which must be after `StartTime` and within 24 hours from the current time.
-     * @param EndTime Recording task end time in UNIX timestamp, which must be after `StartTime` and within 24 hours from the current time.
+     * Set The recording end time in UNIX timestamp format. The “EndTime” should be later than “StartTime”. Normally the duration between “EndTime” and “StartTime” is up to 24 hours.
+     * @param EndTime The recording end time in UNIX timestamp format. The “EndTime” should be later than “StartTime”. Normally the duration between “EndTime” and “StartTime” is up to 24 hours.
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Recording task start time in UNIX timestamp. If this parameter is left empty, it indicates to start recording immediately. It must be within 24 hours from the current time. 
-     * @return StartTime Recording task start time in UNIX timestamp. If this parameter is left empty, it indicates to start recording immediately. It must be within 24 hours from the current time.
+     * Get The recording start time in UNIX timestamp format. If the “StartTime” is not entered, recording will start immediately after the API is successfully called. Normally the “StartTime” should be within 6 days from current time. 
+     * @return StartTime The recording start time in UNIX timestamp format. If the “StartTime” is not entered, recording will start immediately after the API is successfully called. Normally the “StartTime” should be within 6 days from current time.
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Recording task start time in UNIX timestamp. If this parameter is left empty, it indicates to start recording immediately. It must be within 24 hours from the current time.
-     * @param StartTime Recording task start time in UNIX timestamp. If this parameter is left empty, it indicates to start recording immediately. It must be within 24 hours from the current time.
+     * Set The recording start time in UNIX timestamp format. If the “StartTime” is not entered, recording will start immediately after the API is successfully called. Normally the “StartTime” should be within 6 days from current time.
+     * @param StartTime The recording start time in UNIX timestamp format. If the “StartTime” is not entered, recording will start immediately after the API is successfully called. Normally the “StartTime” should be within 6 days from current time.
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
@@ -201,16 +201,16 @@ public class CreateRecordTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get Extended field, which is empty by default. 
-     * @return Extension Extended field, which is empty by default.
+     * Get Extension field which is not defined now. It is empty by default. 
+     * @return Extension Extension field which is not defined now. It is empty by default.
      */
     public String getExtension() {
         return this.Extension;
     }
 
     /**
-     * Set Extended field, which is empty by default.
-     * @param Extension Extended field, which is empty by default.
+     * Set Extension field which is not defined now. It is empty by default.
+     * @param Extension Extension field which is not defined now. It is empty by default.
      */
     public void setExtension(String Extension) {
         this.Extension = Extension;

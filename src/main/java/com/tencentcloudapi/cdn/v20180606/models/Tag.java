@@ -23,46 +23,56 @@ import java.util.HashMap;
 public class Tag extends AbstractModel{
 
     /**
-    * 
+    * Tag key
+Note: this field may return null, indicating that no valid value is obtained.
     */
     @SerializedName("TagKey")
     @Expose
     private String TagKey;
 
     /**
-    * 
+    * Tag value.
+Note: this field may return null, indicating that no valid value is obtained.
     */
     @SerializedName("TagValue")
     @Expose
     private String TagValue;
 
     /**
-     * Get  
-     * @return TagKey 
+     * Get Tag key
+Note: this field may return null, indicating that no valid value is obtained. 
+     * @return TagKey Tag key
+Note: this field may return null, indicating that no valid value is obtained.
      */
     public String getTagKey() {
         return this.TagKey;
     }
 
     /**
-     * Set 
-     * @param TagKey 
+     * Set Tag key
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param TagKey Tag key
+Note: this field may return null, indicating that no valid value is obtained.
      */
     public void setTagKey(String TagKey) {
         this.TagKey = TagKey;
     }
 
     /**
-     * Get  
-     * @return TagValue 
+     * Get Tag value.
+Note: this field may return null, indicating that no valid value is obtained. 
+     * @return TagValue Tag value.
+Note: this field may return null, indicating that no valid value is obtained.
      */
     public String getTagValue() {
         return this.TagValue;
     }
 
     /**
-     * Set 
-     * @param TagValue 
+     * Set Tag value.
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param TagValue Tag value.
+Note: this field may return null, indicating that no valid value is obtained.
      */
     public void setTagValue(String TagValue) {
         this.TagValue = TagValue;

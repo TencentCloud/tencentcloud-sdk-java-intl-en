@@ -58,6 +58,13 @@ public class LayoutParams extends AbstractModel{
     private Long MainVideoRightAlign;
 
     /**
+    * 
+    */
+    @SerializedName("MixVideoUids")
+    @Expose
+    private String [] MixVideoUids;
+
+    /**
      * Get On-cloud stream mix layout template ID. 0: floating template (default value); 1: grid template; 2: screen sharing template; 3: picture-in-picture template. 
      * @return Template On-cloud stream mix layout template ID. 0: floating template (default value); 1: grid template; 2: screen sharing template; 3: picture-in-picture template.
      */
@@ -138,6 +145,22 @@ public class LayoutParams extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return MixVideoUids 
+     */
+    public String [] getMixVideoUids() {
+        return this.MixVideoUids;
+    }
+
+    /**
+     * Set 
+     * @param MixVideoUids 
+     */
+    public void setMixVideoUids(String [] MixVideoUids) {
+        this.MixVideoUids = MixVideoUids;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class LayoutParams extends AbstractModel{
         this.setParamSimple(map, prefix + "MainVideoStreamType", this.MainVideoStreamType);
         this.setParamObj(map, prefix + "SmallVideoLayoutParams.", this.SmallVideoLayoutParams);
         this.setParamSimple(map, prefix + "MainVideoRightAlign", this.MainVideoRightAlign);
+        this.setParamArraySimple(map, prefix + "MixVideoUids.", this.MixVideoUids);
 
     }
 }

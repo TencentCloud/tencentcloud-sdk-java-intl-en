@@ -55,7 +55,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private LiveStreamAiReviewResultInfo AiReviewResultInfo;
 
     /**
-    * 
+    * Content recognition result, which is valid if `NotificationType` is `AiRecognitionResult`.
     */
     @SerializedName("AiRecognitionResultInfo")
     @Expose
@@ -163,16 +163,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return AiRecognitionResultInfo 
+     * Get Content recognition result, which is valid if `NotificationType` is `AiRecognitionResult`. 
+     * @return AiRecognitionResultInfo Content recognition result, which is valid if `NotificationType` is `AiRecognitionResult`.
      */
     public LiveStreamAiRecognitionResultInfo getAiRecognitionResultInfo() {
         return this.AiRecognitionResultInfo;
     }
 
     /**
-     * Set 
-     * @param AiRecognitionResultInfo 
+     * Set Content recognition result, which is valid if `NotificationType` is `AiRecognitionResult`.
+     * @param AiRecognitionResultInfo Content recognition result, which is valid if `NotificationType` is `AiRecognitionResult`.
      */
     public void setAiRecognitionResultInfo(LiveStreamAiRecognitionResultInfo AiRecognitionResultInfo) {
         this.AiRecognitionResultInfo = AiRecognitionResultInfo;

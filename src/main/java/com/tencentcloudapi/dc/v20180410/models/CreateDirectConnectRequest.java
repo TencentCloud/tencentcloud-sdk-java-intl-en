@@ -52,7 +52,7 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
     private String PortType;
 
     /**
-    * Circuit code of connection, which is provided by the ISP or connection provider.
+    * Circuit code of a connection, which is provided by the ISP or connection provider.
     */
     @SerializedName("CircuitCode")
     @Expose
@@ -211,16 +211,16 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
     }
 
     /**
-     * Get Circuit code of connection, which is provided by the ISP or connection provider. 
-     * @return CircuitCode Circuit code of connection, which is provided by the ISP or connection provider.
+     * Get Circuit code of a connection, which is provided by the ISP or connection provider. 
+     * @return CircuitCode Circuit code of a connection, which is provided by the ISP or connection provider.
      */
     public String getCircuitCode() {
         return this.CircuitCode;
     }
 
     /**
-     * Set Circuit code of connection, which is provided by the ISP or connection provider.
-     * @param CircuitCode Circuit code of connection, which is provided by the ISP or connection provider.
+     * Set Circuit code of a connection, which is provided by the ISP or connection provider.
+     * @param CircuitCode Circuit code of a connection, which is provided by the ISP or connection provider.
      */
     public void setCircuitCode(String CircuitCode) {
         this.CircuitCode = CircuitCode;

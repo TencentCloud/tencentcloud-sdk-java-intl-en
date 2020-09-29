@@ -30,7 +30,7 @@ public class TerrorismConfigureInfoForUpdate extends AbstractModel{
     private TerrorismImgReviewTemplateInfoForUpdate ImgReviewInfo;
 
     /**
-    * 
+    * Control parameter of terrorism information detection in text task.
     */
     @SerializedName("OcrReviewInfo")
     @Expose
@@ -53,16 +53,16 @@ public class TerrorismConfigureInfoForUpdate extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return OcrReviewInfo 
+     * Get Control parameter of terrorism information detection in text task. 
+     * @return OcrReviewInfo Control parameter of terrorism information detection in text task.
      */
     public TerrorismOcrReviewTemplateInfoForUpdate getOcrReviewInfo() {
         return this.OcrReviewInfo;
     }
 
     /**
-     * Set 
-     * @param OcrReviewInfo 
+     * Set Control parameter of terrorism information detection in text task.
+     * @param OcrReviewInfo Control parameter of terrorism information detection in text task.
      */
     public void setOcrReviewInfo(TerrorismOcrReviewTemplateInfoForUpdate OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

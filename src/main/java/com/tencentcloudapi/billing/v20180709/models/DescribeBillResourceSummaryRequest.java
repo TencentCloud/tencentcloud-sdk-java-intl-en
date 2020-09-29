@@ -59,6 +59,13 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
     private Long NeedRecordNum;
 
     /**
+    * 
+    */
+    @SerializedName("ActionType")
+    @Expose
+    private String ActionType;
+
+    /**
      * Get Offset 
      * @return Offset Offset
      */
@@ -143,6 +150,22 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return ActionType 
+     */
+    public String getActionType() {
+        return this.ActionType;
+    }
+
+    /**
+     * Set 
+     * @param ActionType 
+     */
+    public void setActionType(String ActionType) {
+        this.ActionType = ActionType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -151,6 +174,7 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PeriodType", this.PeriodType);
         this.setParamSimple(map, prefix + "Month", this.Month);
         this.setParamSimple(map, prefix + "NeedRecordNum", this.NeedRecordNum);
+        this.setParamSimple(map, prefix + "ActionType", this.ActionType);
 
     }
 }

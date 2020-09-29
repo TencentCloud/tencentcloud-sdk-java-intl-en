@@ -30,7 +30,7 @@ public class AccessPoint extends AbstractModel{
     private String AccessPointName;
 
     /**
-    * Unique ID of access point.
+    * Unique access point ID.
     */
     @SerializedName("AccessPointId")
     @Expose
@@ -51,14 +51,14 @@ public class AccessPoint extends AbstractModel{
     private String Location;
 
     /**
-    * Supported ISP list of access pint.
+    * List of ISPs supported by access point.
     */
     @SerializedName("LineOperator")
     @Expose
     private String [] LineOperator;
 
     /**
-    * Region ID where the access point resides.
+    * ID of the region that manages the access point.
     */
     @SerializedName("RegionId")
     @Expose
@@ -89,16 +89,16 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     }
 
     /**
-     * Get Unique ID of access point. 
-     * @return AccessPointId Unique ID of access point.
+     * Get Unique access point ID. 
+     * @return AccessPointId Unique access point ID.
      */
     public String getAccessPointId() {
         return this.AccessPointId;
     }
 
     /**
-     * Set Unique ID of access point.
-     * @param AccessPointId Unique ID of access point.
+     * Set Unique access point ID.
+     * @param AccessPointId Unique access point ID.
      */
     public void setAccessPointId(String AccessPointId) {
         this.AccessPointId = AccessPointId;
@@ -137,32 +137,32 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     }
 
     /**
-     * Get Supported ISP list of access pint. 
-     * @return LineOperator Supported ISP list of access pint.
+     * Get List of ISPs supported by access point. 
+     * @return LineOperator List of ISPs supported by access point.
      */
     public String [] getLineOperator() {
         return this.LineOperator;
     }
 
     /**
-     * Set Supported ISP list of access pint.
-     * @param LineOperator Supported ISP list of access pint.
+     * Set List of ISPs supported by access point.
+     * @param LineOperator List of ISPs supported by access point.
      */
     public void setLineOperator(String [] LineOperator) {
         this.LineOperator = LineOperator;
     }
 
     /**
-     * Get Region ID where the access point resides. 
-     * @return RegionId Region ID where the access point resides.
+     * Get ID of the region that manages the access point. 
+     * @return RegionId ID of the region that manages the access point.
      */
     public String getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set Region ID where the access point resides.
-     * @param RegionId Region ID where the access point resides.
+     * Set ID of the region that manages the access point.
+     * @param RegionId ID of the region that manages the access point.
      */
     public void setRegionId(String RegionId) {
         this.RegionId = RegionId;

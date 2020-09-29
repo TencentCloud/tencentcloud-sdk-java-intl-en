@@ -58,7 +58,7 @@ public class ProcessLiveStreamRequest extends AbstractModel{
     private AiContentReviewTaskInput AiContentReviewTask;
 
     /**
-    * 
+    * Type parameter of video content recognition task.
     */
     @SerializedName("AiRecognitionTask")
     @Expose
@@ -159,16 +159,16 @@ public class ProcessLiveStreamRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return AiRecognitionTask 
+     * Get Type parameter of video content recognition task. 
+     * @return AiRecognitionTask Type parameter of video content recognition task.
      */
     public AiRecognitionTaskInput getAiRecognitionTask() {
         return this.AiRecognitionTask;
     }
 
     /**
-     * Set 
-     * @param AiRecognitionTask 
+     * Set Type parameter of video content recognition task.
+     * @param AiRecognitionTask Type parameter of video content recognition task.
      */
     public void setAiRecognitionTask(AiRecognitionTaskInput AiRecognitionTask) {
         this.AiRecognitionTask = AiRecognitionTask;

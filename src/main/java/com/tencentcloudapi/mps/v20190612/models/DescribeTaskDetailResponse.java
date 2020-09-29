@@ -71,7 +71,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private WorkflowTask WorkflowTask;
 
     /**
-    * 
+    * Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
     */
     @SerializedName("EditMediaTask")
     @Expose
@@ -249,16 +249,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return EditMediaTask 
+     * Get Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`. 
+     * @return EditMediaTask Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
      */
     public EditMediaTask getEditMediaTask() {
         return this.EditMediaTask;
     }
 
     /**
-     * Set 
-     * @param EditMediaTask 
+     * Set Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
+     * @param EditMediaTask Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
      */
     public void setEditMediaTask(EditMediaTask EditMediaTask) {
         this.EditMediaTask = EditMediaTask;

@@ -219,6 +219,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long ModifyConfigTime;
 
     /**
+    * Connection type
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ProxyType")
+    @Expose
+    private Long ProxyType;
+
+    /**
      * Get Connection instance ID; It's an old parameter, please switch to ProxyId.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return InstanceId Connection instance ID; It's an old parameter, please switch to ProxyId.
@@ -703,6 +711,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Connection type
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return ProxyType Connection type
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getProxyType() {
+        return this.ProxyType;
+    }
+
+    /**
+     * Set Connection type
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param ProxyType Connection type
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setProxyType(Long ProxyType) {
+        this.ProxyType = ProxyType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -731,6 +759,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "BillingType", this.BillingType);
         this.setParamArraySimple(map, prefix + "RelatedGlobalDomains.", this.RelatedGlobalDomains);
         this.setParamSimple(map, prefix + "ModifyConfigTime", this.ModifyConfigTime);
+        this.setParamSimple(map, prefix + "ProxyType", this.ProxyType);
 
     }
 }

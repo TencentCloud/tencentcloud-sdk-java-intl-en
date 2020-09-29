@@ -23,41 +23,47 @@ import java.util.HashMap;
 public class CreateLiveTranscodeTemplateRequest extends AbstractModel{
 
     /**
-    * Template name, such as 900 900p. This can be only a combination of letters and digits.
+    * Template name, such as “900p”. This can be only a combination of letters and digits.
+Length limit:
+  Standard transcoding: 1-10 characters
+  Top speed codec transcoding: 3-10 characters
     */
     @SerializedName("TemplateName")
     @Expose
     private String TemplateName;
 
     /**
-    * Video bitrate. Value range: 100-8,000.
-Note: The bitrate must be a multiple of 100.
+    * Video bitrate in Kbps. Value range: 100-8,000.
+Note: the transcoding template requires that bitrate should be unique, yet the final saved bitrate may be different from the input bitrate.
     */
     @SerializedName("VideoBitrate")
     @Expose
     private Long VideoBitrate;
 
     /**
-    * Video encoding format. Valid values: h264, h265. Default value: h264.
-    */
-    @SerializedName("Vcodec")
-    @Expose
-    private String Vcodec;
-
-    /**
-    * Audio encoding in ACC format. Default value: original audio format.
-Note: This parameter will take effect later.
+    * Audio codec: acc by default.
+Note: this parameter is unsupported now.
     */
     @SerializedName("Acodec")
     @Expose
     private String Acodec;
 
     /**
-    * Audio bitrate. Value range: 0-500. Default value: 0.
+    * Audio bitrate. Default value: 0.
+Value range: 0-500.
     */
     @SerializedName("AudioBitrate")
     @Expose
     private Long AudioBitrate;
+
+    /**
+    * Video codec: `h264/h265/origin`. Default value: `h264`.
+
+origin: original codec as the output codec
+    */
+    @SerializedName("Vcodec")
+    @Expose
+    private String Vcodec;
 
     /**
     * Template description.
@@ -68,7 +74,8 @@ Note: This parameter will take effect later.
 
     /**
     * Width. Default value: 0.
-Value range: [0-3000].
+Value range: 0-3,000
+It must be a multiple of 2. The original width is 0
     */
     @SerializedName("Width")
     @Expose
@@ -90,7 +97,8 @@ Value range: [0-3000].
 
     /**
     * Height. Default value: 0.
-Value range: [0-3000].
+Value range: 0-3,000
+It must be a multiple of 2. The original height is 0
     */
     @SerializedName("Height")
     @Expose
@@ -98,20 +106,23 @@ Value range: [0-3000].
 
     /**
     * Frame rate. Default value: 0.
+Value range: 0-60
     */
     @SerializedName("Fps")
     @Expose
     private Long Fps;
 
     /**
-    * Keyframe interval in seconds. Original interval by default
+    * Keyframe interval in seconds. Default value: original interval
+Value range: 2-6
     */
     @SerializedName("Gop")
     @Expose
     private Long Gop;
 
     /**
-    * Whether to rotate. 0: no; 1: yes. Default value: 0.
+    * Rotation angle. Default value: 0.
+Valid values: 0, 90, 180, 270
     */
     @SerializedName("Rotate")
     @Expose
@@ -164,91 +175,122 @@ Value range: 0.0-0.5.
     private Float AdaptBitratePercent;
 
     /**
-     * Get Template name, such as 900 900p. This can be only a combination of letters and digits. 
-     * @return TemplateName Template name, such as 900 900p. This can be only a combination of letters and digits.
+    * This parameter is used to define whether the short side is the video height. 0: no, 1: yes. The default value is 0.
+    */
+    @SerializedName("ShortEdgeAsHeight")
+    @Expose
+    private Long ShortEdgeAsHeight;
+
+    /**
+     * Get Template name, such as “900p”. This can be only a combination of letters and digits.
+Length limit:
+  Standard transcoding: 1-10 characters
+  Top speed codec transcoding: 3-10 characters 
+     * @return TemplateName Template name, such as “900p”. This can be only a combination of letters and digits.
+Length limit:
+  Standard transcoding: 1-10 characters
+  Top speed codec transcoding: 3-10 characters
      */
     public String getTemplateName() {
         return this.TemplateName;
     }
 
     /**
-     * Set Template name, such as 900 900p. This can be only a combination of letters and digits.
-     * @param TemplateName Template name, such as 900 900p. This can be only a combination of letters and digits.
+     * Set Template name, such as “900p”. This can be only a combination of letters and digits.
+Length limit:
+  Standard transcoding: 1-10 characters
+  Top speed codec transcoding: 3-10 characters
+     * @param TemplateName Template name, such as “900p”. This can be only a combination of letters and digits.
+Length limit:
+  Standard transcoding: 1-10 characters
+  Top speed codec transcoding: 3-10 characters
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
     }
 
     /**
-     * Get Video bitrate. Value range: 100-8,000.
-Note: The bitrate must be a multiple of 100. 
-     * @return VideoBitrate Video bitrate. Value range: 100-8,000.
-Note: The bitrate must be a multiple of 100.
+     * Get Video bitrate in Kbps. Value range: 100-8,000.
+Note: the transcoding template requires that bitrate should be unique, yet the final saved bitrate may be different from the input bitrate. 
+     * @return VideoBitrate Video bitrate in Kbps. Value range: 100-8,000.
+Note: the transcoding template requires that bitrate should be unique, yet the final saved bitrate may be different from the input bitrate.
      */
     public Long getVideoBitrate() {
         return this.VideoBitrate;
     }
 
     /**
-     * Set Video bitrate. Value range: 100-8,000.
-Note: The bitrate must be a multiple of 100.
-     * @param VideoBitrate Video bitrate. Value range: 100-8,000.
-Note: The bitrate must be a multiple of 100.
+     * Set Video bitrate in Kbps. Value range: 100-8,000.
+Note: the transcoding template requires that bitrate should be unique, yet the final saved bitrate may be different from the input bitrate.
+     * @param VideoBitrate Video bitrate in Kbps. Value range: 100-8,000.
+Note: the transcoding template requires that bitrate should be unique, yet the final saved bitrate may be different from the input bitrate.
      */
     public void setVideoBitrate(Long VideoBitrate) {
         this.VideoBitrate = VideoBitrate;
     }
 
     /**
-     * Get Video encoding format. Valid values: h264, h265. Default value: h264. 
-     * @return Vcodec Video encoding format. Valid values: h264, h265. Default value: h264.
-     */
-    public String getVcodec() {
-        return this.Vcodec;
-    }
-
-    /**
-     * Set Video encoding format. Valid values: h264, h265. Default value: h264.
-     * @param Vcodec Video encoding format. Valid values: h264, h265. Default value: h264.
-     */
-    public void setVcodec(String Vcodec) {
-        this.Vcodec = Vcodec;
-    }
-
-    /**
-     * Get Audio encoding in ACC format. Default value: original audio format.
-Note: This parameter will take effect later. 
-     * @return Acodec Audio encoding in ACC format. Default value: original audio format.
-Note: This parameter will take effect later.
+     * Get Audio codec: acc by default.
+Note: this parameter is unsupported now. 
+     * @return Acodec Audio codec: acc by default.
+Note: this parameter is unsupported now.
      */
     public String getAcodec() {
         return this.Acodec;
     }
 
     /**
-     * Set Audio encoding in ACC format. Default value: original audio format.
-Note: This parameter will take effect later.
-     * @param Acodec Audio encoding in ACC format. Default value: original audio format.
-Note: This parameter will take effect later.
+     * Set Audio codec: acc by default.
+Note: this parameter is unsupported now.
+     * @param Acodec Audio codec: acc by default.
+Note: this parameter is unsupported now.
      */
     public void setAcodec(String Acodec) {
         this.Acodec = Acodec;
     }
 
     /**
-     * Get Audio bitrate. Value range: 0-500. Default value: 0. 
-     * @return AudioBitrate Audio bitrate. Value range: 0-500. Default value: 0.
+     * Get Audio bitrate. Default value: 0.
+Value range: 0-500. 
+     * @return AudioBitrate Audio bitrate. Default value: 0.
+Value range: 0-500.
      */
     public Long getAudioBitrate() {
         return this.AudioBitrate;
     }
 
     /**
-     * Set Audio bitrate. Value range: 0-500. Default value: 0.
-     * @param AudioBitrate Audio bitrate. Value range: 0-500. Default value: 0.
+     * Set Audio bitrate. Default value: 0.
+Value range: 0-500.
+     * @param AudioBitrate Audio bitrate. Default value: 0.
+Value range: 0-500.
      */
     public void setAudioBitrate(Long AudioBitrate) {
         this.AudioBitrate = AudioBitrate;
+    }
+
+    /**
+     * Get Video codec: `h264/h265/origin`. Default value: `h264`.
+
+origin: original codec as the output codec 
+     * @return Vcodec Video codec: `h264/h265/origin`. Default value: `h264`.
+
+origin: original codec as the output codec
+     */
+    public String getVcodec() {
+        return this.Vcodec;
+    }
+
+    /**
+     * Set Video codec: `h264/h265/origin`. Default value: `h264`.
+
+origin: original codec as the output codec
+     * @param Vcodec Video codec: `h264/h265/origin`. Default value: `h264`.
+
+origin: original codec as the output codec
+     */
+    public void setVcodec(String Vcodec) {
+        this.Vcodec = Vcodec;
     }
 
     /**
@@ -269,9 +311,11 @@ Note: This parameter will take effect later.
 
     /**
      * Get Width. Default value: 0.
-Value range: [0-3000]. 
+Value range: 0-3,000
+It must be a multiple of 2. The original width is 0 
      * @return Width Width. Default value: 0.
-Value range: [0-3000].
+Value range: 0-3,000
+It must be a multiple of 2. The original width is 0
      */
     public Long getWidth() {
         return this.Width;
@@ -279,9 +323,11 @@ Value range: [0-3000].
 
     /**
      * Set Width. Default value: 0.
-Value range: [0-3000].
+Value range: 0-3,000
+It must be a multiple of 2. The original width is 0
      * @param Width Width. Default value: 0.
-Value range: [0-3000].
+Value range: 0-3,000
+It must be a multiple of 2. The original width is 0
      */
     public void setWidth(Long Width) {
         this.Width = Width;
@@ -321,9 +367,11 @@ Value range: [0-3000].
 
     /**
      * Get Height. Default value: 0.
-Value range: [0-3000]. 
+Value range: 0-3,000
+It must be a multiple of 2. The original height is 0 
      * @return Height Height. Default value: 0.
-Value range: [0-3000].
+Value range: 0-3,000
+It must be a multiple of 2. The original height is 0
      */
     public Long getHeight() {
         return this.Height;
@@ -331,17 +379,21 @@ Value range: [0-3000].
 
     /**
      * Set Height. Default value: 0.
-Value range: [0-3000].
+Value range: 0-3,000
+It must be a multiple of 2. The original height is 0
      * @param Height Height. Default value: 0.
-Value range: [0-3000].
+Value range: 0-3,000
+It must be a multiple of 2. The original height is 0
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get Frame rate. Default value: 0. 
+     * Get Frame rate. Default value: 0.
+Value range: 0-60 
      * @return Fps Frame rate. Default value: 0.
+Value range: 0-60
      */
     public Long getFps() {
         return this.Fps;
@@ -349,39 +401,49 @@ Value range: [0-3000].
 
     /**
      * Set Frame rate. Default value: 0.
+Value range: 0-60
      * @param Fps Frame rate. Default value: 0.
+Value range: 0-60
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;
     }
 
     /**
-     * Get Keyframe interval in seconds. Original interval by default 
-     * @return Gop Keyframe interval in seconds. Original interval by default
+     * Get Keyframe interval in seconds. Default value: original interval
+Value range: 2-6 
+     * @return Gop Keyframe interval in seconds. Default value: original interval
+Value range: 2-6
      */
     public Long getGop() {
         return this.Gop;
     }
 
     /**
-     * Set Keyframe interval in seconds. Original interval by default
-     * @param Gop Keyframe interval in seconds. Original interval by default
+     * Set Keyframe interval in seconds. Default value: original interval
+Value range: 2-6
+     * @param Gop Keyframe interval in seconds. Default value: original interval
+Value range: 2-6
      */
     public void setGop(Long Gop) {
         this.Gop = Gop;
     }
 
     /**
-     * Get Whether to rotate. 0: no; 1: yes. Default value: 0. 
-     * @return Rotate Whether to rotate. 0: no; 1: yes. Default value: 0.
+     * Get Rotation angle. Default value: 0.
+Valid values: 0, 90, 180, 270 
+     * @return Rotate Rotation angle. Default value: 0.
+Valid values: 0, 90, 180, 270
      */
     public Long getRotate() {
         return this.Rotate;
     }
 
     /**
-     * Set Whether to rotate. 0: no; 1: yes. Default value: 0.
-     * @param Rotate Whether to rotate. 0: no; 1: yes. Default value: 0.
+     * Set Rotation angle. Default value: 0.
+Valid values: 0, 90, 180, 270
+     * @param Rotate Rotation angle. Default value: 0.
+Valid values: 0, 90, 180, 270
      */
     public void setRotate(Long Rotate) {
         this.Rotate = Rotate;
@@ -500,14 +562,30 @@ Value range: 0.0-0.5.
     }
 
     /**
+     * Get This parameter is used to define whether the short side is the video height. 0: no, 1: yes. The default value is 0. 
+     * @return ShortEdgeAsHeight This parameter is used to define whether the short side is the video height. 0: no, 1: yes. The default value is 0.
+     */
+    public Long getShortEdgeAsHeight() {
+        return this.ShortEdgeAsHeight;
+    }
+
+    /**
+     * Set This parameter is used to define whether the short side is the video height. 0: no, 1: yes. The default value is 0.
+     * @param ShortEdgeAsHeight This parameter is used to define whether the short side is the video height. 0: no, 1: yes. The default value is 0.
+     */
+    public void setShortEdgeAsHeight(Long ShortEdgeAsHeight) {
+        this.ShortEdgeAsHeight = ShortEdgeAsHeight;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TemplateName", this.TemplateName);
         this.setParamSimple(map, prefix + "VideoBitrate", this.VideoBitrate);
-        this.setParamSimple(map, prefix + "Vcodec", this.Vcodec);
         this.setParamSimple(map, prefix + "Acodec", this.Acodec);
         this.setParamSimple(map, prefix + "AudioBitrate", this.AudioBitrate);
+        this.setParamSimple(map, prefix + "Vcodec", this.Vcodec);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "NeedVideo", this.NeedVideo);
@@ -522,6 +600,7 @@ Value range: 0.0-0.5.
         this.setParamSimple(map, prefix + "FpsToOrig", this.FpsToOrig);
         this.setParamSimple(map, prefix + "AiTransCode", this.AiTransCode);
         this.setParamSimple(map, prefix + "AdaptBitratePercent", this.AdaptBitratePercent);
+        this.setParamSimple(map, prefix + "ShortEdgeAsHeight", this.ShortEdgeAsHeight);
 
     }
 }

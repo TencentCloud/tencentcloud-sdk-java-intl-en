@@ -80,6 +80,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private SchemeKey Scheme;
 
     /**
+    * Path-based cache key configuration
+Note: this field may return null, indicating that no valid value is obtained.
+    */
+    @SerializedName("KeyRules")
+    @Expose
+    private KeyRule [] KeyRules;
+
+    /**
      * Get Whether to enable full-path cache
 on: enable full-path cache (i.e., disable parameter filter)
 off: disable full-path cache (i.e., enable parameter filter) 
@@ -224,6 +232,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Path-based cache key configuration
+Note: this field may return null, indicating that no valid value is obtained. 
+     * @return KeyRules Path-based cache key configuration
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public KeyRule [] getKeyRules() {
+        return this.KeyRules;
+    }
+
+    /**
+     * Set Path-based cache key configuration
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param KeyRules Path-based cache key configuration
+Note: this field may return null, indicating that no valid value is obtained.
+     */
+    public void setKeyRules(KeyRule [] KeyRules) {
+        this.KeyRules = KeyRules;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -234,6 +262,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "Header.", this.Header);
         this.setParamObj(map, prefix + "CacheTag.", this.CacheTag);
         this.setParamObj(map, prefix + "Scheme.", this.Scheme);
+        this.setParamArrayObj(map, prefix + "KeyRules.", this.KeyRules);
 
     }
 }

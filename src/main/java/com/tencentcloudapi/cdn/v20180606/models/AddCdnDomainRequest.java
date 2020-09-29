@@ -241,6 +241,13 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
     private OriginPullTimeout OriginPullTimeout;
 
     /**
+    * Tag configuration
+    */
+    @SerializedName("Tag")
+    @Expose
+    private Tag [] Tag;
+
+    /**
      * Get Domain name 
      * @return Domain Domain name
      */
@@ -753,6 +760,22 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
     }
 
     /**
+     * Get Tag configuration 
+     * @return Tag Tag configuration
+     */
+    public Tag [] getTag() {
+        return this.Tag;
+    }
+
+    /**
+     * Set Tag configuration
+     * @param Tag Tag configuration
+     */
+    public void setTag(Tag [] Tag) {
+        this.Tag = Tag;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -786,6 +809,7 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
         this.setParamObj(map, prefix + "SpecificConfig.", this.SpecificConfig);
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamObj(map, prefix + "OriginPullTimeout.", this.OriginPullTimeout);
+        this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
 
     }
 }

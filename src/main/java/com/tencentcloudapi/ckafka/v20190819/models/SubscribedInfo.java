@@ -46,6 +46,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private PartitionOffset [] PartitionOffset;
 
     /**
+    * ID of the subscribed topic. 
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TopicId")
+    @Expose
+    private String TopicId;
+
+    /**
      * Get Subscribed topic name 
      * @return TopicName Subscribed topic name
      */
@@ -102,12 +110,33 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get ID of the subscribed topic. 
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return TopicId ID of the subscribed topic. 
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getTopicId() {
+        return this.TopicId;
+    }
+
+    /**
+     * Set ID of the subscribed topic. 
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param TopicId ID of the subscribed topic. 
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTopicId(String TopicId) {
+        this.TopicId = TopicId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
         this.setParamArraySimple(map, prefix + "Partition.", this.Partition);
         this.setParamArrayObj(map, prefix + "PartitionOffset.", this.PartitionOffset);
+        this.setParamSimple(map, prefix + "TopicId", this.TopicId);
 
     }
 }

@@ -79,7 +79,7 @@ public class MigrateTask extends AbstractModel{
     private String EndTime;
 
     /**
-    * Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded)
+    * Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded, 7: suspended, 8: deleted, 9: suspending, 10: completing, 11: suspension failed, 12: completion failed)
     */
     @SerializedName("Status")
     @Expose
@@ -242,16 +242,16 @@ public class MigrateTask extends AbstractModel{
     }
 
     /**
-     * Get Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded) 
-     * @return Status Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded)
+     * Get Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded, 7: suspended, 8: deleted, 9: suspending, 10: completing, 11: suspension failed, 12: completion failed) 
+     * @return Status Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded, 7: suspended, 8: deleted, 9: suspending, 10: completing, 11: suspension failed, 12: completion failed)
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded)
-     * @param Status Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded)
+     * Set Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded, 7: suspended, 8: deleted, 9: suspending, 10: completing, 11: suspension failed, 12: completion failed)
+     * @param Status Migration task status (1: initializing, 4: migrating, 5: migration failed, 6: migration succeeded, 7: suspended, 8: deleted, 9: suspending, 10: completing, 11: suspension failed, 12: completion failed)
      */
     public void setStatus(Long Status) {
         this.Status = Status;

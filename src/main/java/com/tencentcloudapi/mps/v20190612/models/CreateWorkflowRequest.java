@@ -65,7 +65,7 @@ public class CreateWorkflowRequest extends AbstractModel{
     private AiContentReviewTaskInput AiContentReviewTask;
 
     /**
-    * 
+    * Video content analysis task parameter.
     */
     @SerializedName("AiAnalysisTask")
     @Expose
@@ -189,16 +189,16 @@ public class CreateWorkflowRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return AiAnalysisTask 
+     * Get Video content analysis task parameter. 
+     * @return AiAnalysisTask Video content analysis task parameter.
      */
     public AiAnalysisTaskInput getAiAnalysisTask() {
         return this.AiAnalysisTask;
     }
 
     /**
-     * Set 
-     * @param AiAnalysisTask 
+     * Set Video content analysis task parameter.
+     * @param AiAnalysisTask Video content analysis task parameter.
      */
     public void setAiAnalysisTask(AiAnalysisTaskInput AiAnalysisTask) {
         this.AiAnalysisTask = AiAnalysisTask;

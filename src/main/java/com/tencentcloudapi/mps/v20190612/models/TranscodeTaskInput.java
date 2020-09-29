@@ -30,7 +30,8 @@ public class TranscodeTaskInput extends AbstractModel{
     private Long Definition;
 
     /**
-    * 
+    * Custom video transcoding parameter, which is valid if `Definition` is 0.
+This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the transcoding parameter preferably.
     */
     @SerializedName("RawParameter")
     @Expose
@@ -45,7 +46,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private WatermarkInput [] WatermarkSet;
 
     /**
-    * 
+    * List of blurs. Up to 10 ones can be supported.
     */
     @SerializedName("MosaicSet")
     @Expose
@@ -98,16 +99,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return RawParameter 
+     * Get Custom video transcoding parameter, which is valid if `Definition` is 0.
+This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the transcoding parameter preferably. 
+     * @return RawParameter Custom video transcoding parameter, which is valid if `Definition` is 0.
+This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the transcoding parameter preferably.
      */
     public RawTranscodeParameter getRawParameter() {
         return this.RawParameter;
     }
 
     /**
-     * Set 
-     * @param RawParameter 
+     * Set Custom video transcoding parameter, which is valid if `Definition` is 0.
+This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the transcoding parameter preferably.
+     * @param RawParameter Custom video transcoding parameter, which is valid if `Definition` is 0.
+This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the transcoding parameter preferably.
      */
     public void setRawParameter(RawTranscodeParameter RawParameter) {
         this.RawParameter = RawParameter;
@@ -134,16 +139,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return MosaicSet 
+     * Get List of blurs. Up to 10 ones can be supported. 
+     * @return MosaicSet List of blurs. Up to 10 ones can be supported.
      */
     public MosaicInput [] getMosaicSet() {
         return this.MosaicSet;
     }
 
     /**
-     * Set 
-     * @param MosaicSet 
+     * Set List of blurs. Up to 10 ones can be supported.
+     * @param MosaicSet List of blurs. Up to 10 ones can be supported.
      */
     public void setMosaicSet(MosaicInput [] MosaicSet) {
         this.MosaicSet = MosaicSet;

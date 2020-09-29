@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class EncodeParams extends AbstractModel{
 
     /**
-    * Output stream audio sample rate for stream mix. Valid values: 48000, 44100, 32000,24000, 22050, 16000, 12000, 11025, 8000.
+    * Output stream audio sample rate for stream mix in Hz. Valid values: 48000, 44100, 32000, 24000, 16000, 12000, 8000.
     */
     @SerializedName("AudioSampleRate")
     @Expose
@@ -93,16 +93,16 @@ public class EncodeParams extends AbstractModel{
     private Long BackgroundImageId;
 
     /**
-     * Get Output stream audio sample rate for stream mix. Valid values: 48000, 44100, 32000,24000, 22050, 16000, 12000, 11025, 8000. 
-     * @return AudioSampleRate Output stream audio sample rate for stream mix. Valid values: 48000, 44100, 32000,24000, 22050, 16000, 12000, 11025, 8000.
+     * Get Output stream audio sample rate for stream mix in Hz. Valid values: 48000, 44100, 32000, 24000, 16000, 12000, 8000. 
+     * @return AudioSampleRate Output stream audio sample rate for stream mix in Hz. Valid values: 48000, 44100, 32000, 24000, 16000, 12000, 8000.
      */
     public Long getAudioSampleRate() {
         return this.AudioSampleRate;
     }
 
     /**
-     * Set Output stream audio sample rate for stream mix. Valid values: 48000, 44100, 32000,24000, 22050, 16000, 12000, 11025, 8000.
-     * @param AudioSampleRate Output stream audio sample rate for stream mix. Valid values: 48000, 44100, 32000,24000, 22050, 16000, 12000, 11025, 8000.
+     * Set Output stream audio sample rate for stream mix in Hz. Valid values: 48000, 44100, 32000, 24000, 16000, 12000, 8000.
+     * @param AudioSampleRate Output stream audio sample rate for stream mix in Hz. Valid values: 48000, 44100, 32000, 24000, 16000, 12000, 8000.
      */
     public void setAudioSampleRate(Long AudioSampleRate) {
         this.AudioSampleRate = AudioSampleRate;

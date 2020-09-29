@@ -83,7 +83,8 @@ Default value: 0.
     private Long Height;
 
     /**
-    * 
+    * Frame interval between I keyframes. Value range: 0 and [1,100000].
+If this parameter is 0 or left empty, the system will automatically set the GOP length.
     */
     @SerializedName("Gop")
     @Expose
@@ -268,16 +269,20 @@ Default value: 0.
     }
 
     /**
-     * Get  
-     * @return Gop 
+     * Get Frame interval between I keyframes. Value range: 0 and [1,100000].
+If this parameter is 0 or left empty, the system will automatically set the GOP length. 
+     * @return Gop Frame interval between I keyframes. Value range: 0 and [1,100000].
+If this parameter is 0 or left empty, the system will automatically set the GOP length.
      */
     public Long getGop() {
         return this.Gop;
     }
 
     /**
-     * Set 
-     * @param Gop 
+     * Set Frame interval between I keyframes. Value range: 0 and [1,100000].
+If this parameter is 0 or left empty, the system will automatically set the GOP length.
+     * @param Gop Frame interval between I keyframes. Value range: 0 and [1,100000].
+If this parameter is 0 or left empty, the system will automatically set the GOP length.
      */
     public void setGop(Long Gop) {
         this.Gop = Gop;

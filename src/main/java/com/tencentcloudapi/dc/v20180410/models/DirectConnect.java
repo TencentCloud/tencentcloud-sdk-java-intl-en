@@ -228,6 +228,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Connection activation time.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StartTime")
     @Expose
@@ -746,8 +747,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Connection activation time. 
+     * Get Connection activation time.
+Note: this field may return null, indicating that no valid values can be obtained. 
      * @return StartTime Connection activation time.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getStartTime() {
         return this.StartTime;
@@ -755,7 +758,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Connection activation time.
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param StartTime Connection activation time.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;

@@ -37,6 +37,20 @@ public class RestoreInstanceRequest extends AbstractModel{
     private Long BackupId;
 
     /**
+    * ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used.
+    */
+    @SerializedName("TargetInstanceId")
+    @Expose
+    private String TargetInstanceId;
+
+    /**
+    * Restore the databases listed in `ReNameRestoreDatabase` and rename them after restoration. If this parameter is left empty, all databases will be restored and renamed in the default format.
+    */
+    @SerializedName("RenameRestore")
+    @Expose
+    private RenameRestoreDatabase [] RenameRestore;
+
+    /**
      * Get Instance ID in the format of mssql-j8kv137v 
      * @return InstanceId Instance ID in the format of mssql-j8kv137v
      */
@@ -69,11 +83,45 @@ public class RestoreInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used. 
+     * @return TargetInstanceId ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used.
+     */
+    public String getTargetInstanceId() {
+        return this.TargetInstanceId;
+    }
+
+    /**
+     * Set ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used.
+     * @param TargetInstanceId ID of the target instance to which the backup is restored. The target instance should be under the same `APPID`. If this parameter is left empty, ID of the source instance will be used.
+     */
+    public void setTargetInstanceId(String TargetInstanceId) {
+        this.TargetInstanceId = TargetInstanceId;
+    }
+
+    /**
+     * Get Restore the databases listed in `ReNameRestoreDatabase` and rename them after restoration. If this parameter is left empty, all databases will be restored and renamed in the default format. 
+     * @return RenameRestore Restore the databases listed in `ReNameRestoreDatabase` and rename them after restoration. If this parameter is left empty, all databases will be restored and renamed in the default format.
+     */
+    public RenameRestoreDatabase [] getRenameRestore() {
+        return this.RenameRestore;
+    }
+
+    /**
+     * Set Restore the databases listed in `ReNameRestoreDatabase` and rename them after restoration. If this parameter is left empty, all databases will be restored and renamed in the default format.
+     * @param RenameRestore Restore the databases listed in `ReNameRestoreDatabase` and rename them after restoration. If this parameter is left empty, all databases will be restored and renamed in the default format.
+     */
+    public void setRenameRestore(RenameRestoreDatabase [] RenameRestore) {
+        this.RenameRestore = RenameRestore;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "BackupId", this.BackupId);
+        this.setParamSimple(map, prefix + "TargetInstanceId", this.TargetInstanceId);
+        this.setParamArrayObj(map, prefix + "RenameRestore.", this.RenameRestore);
 
     }
 }

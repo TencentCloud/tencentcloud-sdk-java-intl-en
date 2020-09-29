@@ -128,14 +128,14 @@ public class BillDetail extends AbstractModel{
     private BillDetailComponent [] ComponentSet;
 
     /**
-    * Payer’s UIN
+    * Payer's UIN
     */
     @SerializedName("PayerUin")
     @Expose
     private String PayerUin;
 
     /**
-    * User’s UIN
+    * User's UIN
     */
     @SerializedName("OwnerUin")
     @Expose
@@ -157,25 +157,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private BillTagInfo [] Tags;
 
     /**
-    * 
+    * Product name/code (optional)
     */
     @SerializedName("BusinessCode")
     @Expose
     private String BusinessCode;
 
     /**
-    * 
+    * Subproduct name/code (optional)
     */
     @SerializedName("ProductCode")
     @Expose
     private String ProductCode;
 
     /**
-    * 
+    * Transaction type/code (optional)
     */
     @SerializedName("ActionType")
     @Expose
     private String ActionType;
+
+    /**
+    * 
+    */
+    @SerializedName("RegionId")
+    @Expose
+    private String RegionId;
 
     /**
      * Get Product name: major categories of Tencent Cloud services, e.g. CVM and TencentDB for MySQL 
@@ -418,32 +425,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Payer’s UIN 
-     * @return PayerUin Payer’s UIN
+     * Get Payer's UIN 
+     * @return PayerUin Payer's UIN
      */
     public String getPayerUin() {
         return this.PayerUin;
     }
 
     /**
-     * Set Payer’s UIN
-     * @param PayerUin Payer’s UIN
+     * Set Payer's UIN
+     * @param PayerUin Payer's UIN
      */
     public void setPayerUin(String PayerUin) {
         this.PayerUin = PayerUin;
     }
 
     /**
-     * Get User’s UIN 
-     * @return OwnerUin User’s UIN
+     * Get User's UIN 
+     * @return OwnerUin User's UIN
      */
     public String getOwnerUin() {
         return this.OwnerUin;
     }
 
     /**
-     * Set User’s UIN
-     * @param OwnerUin User’s UIN
+     * Set User's UIN
+     * @param OwnerUin User's UIN
      */
     public void setOwnerUin(String OwnerUin) {
         this.OwnerUin = OwnerUin;
@@ -486,51 +493,67 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return BusinessCode 
+     * Get Product name/code (optional) 
+     * @return BusinessCode Product name/code (optional)
      */
     public String getBusinessCode() {
         return this.BusinessCode;
     }
 
     /**
-     * Set 
-     * @param BusinessCode 
+     * Set Product name/code (optional)
+     * @param BusinessCode Product name/code (optional)
      */
     public void setBusinessCode(String BusinessCode) {
         this.BusinessCode = BusinessCode;
     }
 
     /**
-     * Get  
-     * @return ProductCode 
+     * Get Subproduct name/code (optional) 
+     * @return ProductCode Subproduct name/code (optional)
      */
     public String getProductCode() {
         return this.ProductCode;
     }
 
     /**
-     * Set 
-     * @param ProductCode 
+     * Set Subproduct name/code (optional)
+     * @param ProductCode Subproduct name/code (optional)
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
     }
 
     /**
-     * Get  
-     * @return ActionType 
+     * Get Transaction type/code (optional) 
+     * @return ActionType Transaction type/code (optional)
      */
     public String getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set 
-     * @param ActionType 
+     * Set Transaction type/code (optional)
+     * @param ActionType Transaction type/code (optional)
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
+    }
+
+    /**
+     * Get  
+     * @return RegionId 
+     */
+    public String getRegionId() {
+        return this.RegionId;
+    }
+
+    /**
+     * Set 
+     * @param RegionId 
+     */
+    public void setRegionId(String RegionId) {
+        this.RegionId = RegionId;
     }
 
     /**
@@ -559,6 +582,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
         this.setParamSimple(map, prefix + "ProductCode", this.ProductCode);
         this.setParamSimple(map, prefix + "ActionType", this.ActionType);
+        this.setParamSimple(map, prefix + "RegionId", this.RegionId);
 
     }
 }

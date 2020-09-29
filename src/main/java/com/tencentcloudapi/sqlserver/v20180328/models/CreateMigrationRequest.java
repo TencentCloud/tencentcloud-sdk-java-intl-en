@@ -65,6 +65,13 @@ public class CreateMigrationRequest extends AbstractModel{
     private MigrateDB [] MigrateDBSet;
 
     /**
+    * Restore the databases listed in `ReNameRestoreDatabase` and rename them after restoration. If this parameter is left empty, all databases will be restored and renamed in the default format. This parameter takes effect only when `SourceType=5`.
+    */
+    @SerializedName("RenameRestore")
+    @Expose
+    private RenameRestoreDatabase [] RenameRestore;
+
+    /**
      * Get Migration task name 
      * @return MigrateName Migration task name
      */
@@ -161,6 +168,22 @@ public class CreateMigrationRequest extends AbstractModel{
     }
 
     /**
+     * Get Restore the databases listed in `ReNameRestoreDatabase` and rename them after restoration. If this parameter is left empty, all databases will be restored and renamed in the default format. This parameter takes effect only when `SourceType=5`. 
+     * @return RenameRestore Restore the databases listed in `ReNameRestoreDatabase` and rename them after restoration. If this parameter is left empty, all databases will be restored and renamed in the default format. This parameter takes effect only when `SourceType=5`.
+     */
+    public RenameRestoreDatabase [] getRenameRestore() {
+        return this.RenameRestore;
+    }
+
+    /**
+     * Set Restore the databases listed in `ReNameRestoreDatabase` and rename them after restoration. If this parameter is left empty, all databases will be restored and renamed in the default format. This parameter takes effect only when `SourceType=5`.
+     * @param RenameRestore Restore the databases listed in `ReNameRestoreDatabase` and rename them after restoration. If this parameter is left empty, all databases will be restored and renamed in the default format. This parameter takes effect only when `SourceType=5`.
+     */
+    public void setRenameRestore(RenameRestoreDatabase [] RenameRestore) {
+        this.RenameRestore = RenameRestore;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class CreateMigrationRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Source.", this.Source);
         this.setParamObj(map, prefix + "Target.", this.Target);
         this.setParamArrayObj(map, prefix + "MigrateDBSet.", this.MigrateDBSet);
+        this.setParamArrayObj(map, prefix + "RenameRestore.", this.RenameRestore);
 
     }
 }

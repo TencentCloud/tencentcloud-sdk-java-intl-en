@@ -37,7 +37,7 @@ public class DescribeSafeAuthFlagResponse extends AbstractModel{
     private LoginActionFlag ActionFlag;
 
     /**
-    * Unusual login location protection settings
+    * Suspicious login location protection settings
     */
     @SerializedName("OffsiteFlag")
     @Expose
@@ -83,16 +83,16 @@ public class DescribeSafeAuthFlagResponse extends AbstractModel{
     }
 
     /**
-     * Get Unusual login location protection settings 
-     * @return OffsiteFlag Unusual login location protection settings
+     * Get Suspicious login location protection settings 
+     * @return OffsiteFlag Suspicious login location protection settings
      */
     public OffsiteFlag getOffsiteFlag() {
         return this.OffsiteFlag;
     }
 
     /**
-     * Set Unusual login location protection settings
-     * @param OffsiteFlag Unusual login location protection settings
+     * Set Suspicious login location protection settings
+     * @param OffsiteFlag Suspicious login location protection settings
      */
     public void setOffsiteFlag(OffsiteFlag OffsiteFlag) {
         this.OffsiteFlag = OffsiteFlag;

@@ -37,6 +37,13 @@ public class BandwidthPriceGradient extends AbstractModel{
     private Float BandwidthUnitPrice;
 
     /**
+    * Discounted bandwidth price in CNY/Mbps/day.
+    */
+    @SerializedName("DiscountBandwidthUnitPrice")
+    @Expose
+    private Float DiscountBandwidthUnitPrice;
+
+    /**
      * Get Bandwidth range. 
      * @return BandwidthRange Bandwidth range.
      */
@@ -69,11 +76,28 @@ public class BandwidthPriceGradient extends AbstractModel{
     }
 
     /**
+     * Get Discounted bandwidth price in CNY/Mbps/day. 
+     * @return DiscountBandwidthUnitPrice Discounted bandwidth price in CNY/Mbps/day.
+     */
+    public Float getDiscountBandwidthUnitPrice() {
+        return this.DiscountBandwidthUnitPrice;
+    }
+
+    /**
+     * Set Discounted bandwidth price in CNY/Mbps/day.
+     * @param DiscountBandwidthUnitPrice Discounted bandwidth price in CNY/Mbps/day.
+     */
+    public void setDiscountBandwidthUnitPrice(Float DiscountBandwidthUnitPrice) {
+        this.DiscountBandwidthUnitPrice = DiscountBandwidthUnitPrice;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "BandwidthRange.", this.BandwidthRange);
         this.setParamSimple(map, prefix + "BandwidthUnitPrice", this.BandwidthUnitPrice);
+        this.setParamSimple(map, prefix + "DiscountBandwidthUnitPrice", this.DiscountBandwidthUnitPrice);
 
     }
 }

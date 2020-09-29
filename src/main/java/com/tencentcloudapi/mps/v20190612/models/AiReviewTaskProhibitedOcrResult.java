@@ -23,115 +23,130 @@ import java.util.HashMap;
 public class AiReviewTaskProhibitedOcrResult extends AbstractModel{
 
     /**
-    * 
+    * Task status. Valid values: PROCESSING, SUCCESS, FAIL.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 
+    * Error code. 0: success; other values: failure.
+<li>40000: invalid input parameter. Please check it;</li>
+<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
+<li>70000: internal service error. Please try again.</li>
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * 
+    * Error message.
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * 
+    * Input of OCR-based prohibited information detection in text task in content audit
     */
     @SerializedName("Input")
     @Expose
     private AiReviewProhibitedOcrTaskInput Input;
 
     /**
-    * 
+    * Output of OCR-based prohibited information detection in text task in content audit
     */
     @SerializedName("Output")
     @Expose
     private AiReviewProhibitedOcrTaskOutput Output;
 
     /**
-     * Get  
-     * @return Status 
+     * Get Task status. Valid values: PROCESSING, SUCCESS, FAIL. 
+     * @return Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+     * @param Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return ErrCode 
+     * Get Error code. 0: success; other values: failure.
+<li>40000: invalid input parameter. Please check it;</li>
+<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
+<li>70000: internal service error. Please try again.</li> 
+     * @return ErrCode Error code. 0: success; other values: failure.
+<li>40000: invalid input parameter. Please check it;</li>
+<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
+<li>70000: internal service error. Please try again.</li>
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set 
-     * @param ErrCode 
+     * Set Error code. 0: success; other values: failure.
+<li>40000: invalid input parameter. Please check it;</li>
+<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
+<li>70000: internal service error. Please try again.</li>
+     * @param ErrCode Error code. 0: success; other values: failure.
+<li>40000: invalid input parameter. Please check it;</li>
+<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
+<li>70000: internal service error. Please try again.</li>
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get  
-     * @return Message 
+     * Get Error message. 
+     * @return Message Error message.
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 
-     * @param Message 
+     * Set Error message.
+     * @param Message Error message.
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get  
-     * @return Input 
+     * Get Input of OCR-based prohibited information detection in text task in content audit 
+     * @return Input Input of OCR-based prohibited information detection in text task in content audit
      */
     public AiReviewProhibitedOcrTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set 
-     * @param Input 
+     * Set Input of OCR-based prohibited information detection in text task in content audit
+     * @param Input Input of OCR-based prohibited information detection in text task in content audit
      */
     public void setInput(AiReviewProhibitedOcrTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Output of OCR-based prohibited information detection in text task in content audit 
+     * @return Output Output of OCR-based prohibited information detection in text task in content audit
      */
     public AiReviewProhibitedOcrTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Output of OCR-based prohibited information detection in text task in content audit
+     * @param Output Output of OCR-based prohibited information detection in text task in content audit
      */
     public void setOutput(AiReviewProhibitedOcrTaskOutput Output) {
         this.Output = Output;

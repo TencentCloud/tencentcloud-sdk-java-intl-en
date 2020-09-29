@@ -135,21 +135,21 @@ public class BillDetailComponent extends AbstractModel{
     private String IncentivePayAmount;
 
     /**
-    * 
+    * Component type/code (optional)
     */
     @SerializedName("ItemCode")
     @Expose
     private String ItemCode;
 
     /**
-    * 
+    * Component name/code (optional)
     */
     @SerializedName("ComponentCode")
     @Expose
     private String ComponentCode;
 
     /**
-    * 
+    * Contract price
     */
     @SerializedName("ContractPrice")
     @Expose
@@ -412,48 +412,48 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return ItemCode 
+     * Get Component type/code (optional) 
+     * @return ItemCode Component type/code (optional)
      */
     public String getItemCode() {
         return this.ItemCode;
     }
 
     /**
-     * Set 
-     * @param ItemCode 
+     * Set Component type/code (optional)
+     * @param ItemCode Component type/code (optional)
      */
     public void setItemCode(String ItemCode) {
         this.ItemCode = ItemCode;
     }
 
     /**
-     * Get  
-     * @return ComponentCode 
+     * Get Component name/code (optional) 
+     * @return ComponentCode Component name/code (optional)
      */
     public String getComponentCode() {
         return this.ComponentCode;
     }
 
     /**
-     * Set 
-     * @param ComponentCode 
+     * Set Component name/code (optional)
+     * @param ComponentCode Component name/code (optional)
      */
     public void setComponentCode(String ComponentCode) {
         this.ComponentCode = ComponentCode;
     }
 
     /**
-     * Get  
-     * @return ContractPrice 
+     * Get Contract price 
+     * @return ContractPrice Contract price
      */
     public String getContractPrice() {
         return this.ContractPrice;
     }
 
     /**
-     * Set 
-     * @param ContractPrice 
+     * Set Contract price
+     * @param ContractPrice Contract price
      */
     public void setContractPrice(String ContractPrice) {
         this.ContractPrice = ContractPrice;

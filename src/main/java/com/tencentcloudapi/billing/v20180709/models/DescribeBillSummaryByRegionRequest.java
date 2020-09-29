@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeBillSummaryByRegionRequest extends AbstractModel{
 
     /**
-    * Queries bill data user’s UIN
+    * Queries bill data user's UIN
     */
     @SerializedName("PayerUin")
     @Expose
@@ -44,16 +44,16 @@ public class DescribeBillSummaryByRegionRequest extends AbstractModel{
     private String EndTime;
 
     /**
-     * Get Queries bill data user’s UIN 
-     * @return PayerUin Queries bill data user’s UIN
+     * Get Queries bill data user's UIN 
+     * @return PayerUin Queries bill data user's UIN
      */
     public String getPayerUin() {
         return this.PayerUin;
     }
 
     /**
-     * Set Queries bill data user’s UIN
-     * @param PayerUin Queries bill data user’s UIN
+     * Set Queries bill data user's UIN
+     * @param PayerUin Queries bill data user's UIN
      */
     public void setPayerUin(String PayerUin) {
         this.PayerUin = PayerUin;

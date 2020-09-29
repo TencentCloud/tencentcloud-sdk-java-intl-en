@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class EditMediaTaskOutput extends AbstractModel{
 
     /**
-    * 
+    * Target storage of edited file.
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-    * 
+    * Path of edited video file.
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-     * Get  
-     * @return OutputStorage 
+     * Get Target storage of edited file. 
+     * @return OutputStorage Target storage of edited file.
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set 
-     * @param OutputStorage 
+     * Set Target storage of edited file.
+     * @param OutputStorage Target storage of edited file.
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
     }
 
     /**
-     * Get  
-     * @return Path 
+     * Get Path of edited video file. 
+     * @return Path Path of edited video file.
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set 
-     * @param Path 
+     * Set Path of edited video file.
+     * @param Path Path of edited video file.
      */
     public void setPath(String Path) {
         this.Path = Path;

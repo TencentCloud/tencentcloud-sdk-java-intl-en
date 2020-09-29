@@ -37,7 +37,7 @@ public class ModifyDirectConnectAttributeRequest extends AbstractModel{
     private String DirectConnectName;
 
     /**
-    * Circuit code of connection, which is provided by the ISP or connection provider.
+    * Circuit code of a connection, which is provided by the ISP or connection provider.
     */
     @SerializedName("CircuitCode")
     @Expose
@@ -139,16 +139,16 @@ public class ModifyDirectConnectAttributeRequest extends AbstractModel{
     }
 
     /**
-     * Get Circuit code of connection, which is provided by the ISP or connection provider. 
-     * @return CircuitCode Circuit code of connection, which is provided by the ISP or connection provider.
+     * Get Circuit code of a connection, which is provided by the ISP or connection provider. 
+     * @return CircuitCode Circuit code of a connection, which is provided by the ISP or connection provider.
      */
     public String getCircuitCode() {
         return this.CircuitCode;
     }
 
     /**
-     * Set Circuit code of connection, which is provided by the ISP or connection provider.
-     * @param CircuitCode Circuit code of connection, which is provided by the ISP or connection provider.
+     * Set Circuit code of a connection, which is provided by the ISP or connection provider.
+     * @param CircuitCode Circuit code of a connection, which is provided by the ISP or connection provider.
      */
     public void setCircuitCode(String CircuitCode) {
         this.CircuitCode = CircuitCode;

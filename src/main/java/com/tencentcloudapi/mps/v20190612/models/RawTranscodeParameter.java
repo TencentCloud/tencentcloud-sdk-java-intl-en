@@ -23,138 +23,168 @@ import java.util.HashMap;
 public class RawTranscodeParameter extends AbstractModel{
 
     /**
-    * 
+    * Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
     */
     @SerializedName("Container")
     @Expose
     private String Container;
 
     /**
-    * 
+    * Whether to remove video data. Valid values:
+<li>0: retain;</li>
+<li>1: remove.</li>
+Default value: 0.
     */
     @SerializedName("RemoveVideo")
     @Expose
     private Long RemoveVideo;
 
     /**
-    * 
+    * Whether to remove audio data. Valid values:
+<li>0: retain;</li>
+<li>1: remove.</li>
+Default value: 0.
     */
     @SerializedName("RemoveAudio")
     @Expose
     private Long RemoveAudio;
 
     /**
-    * 
+    * Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
     */
     @SerializedName("VideoTemplate")
     @Expose
     private VideoTemplateInfo VideoTemplate;
 
     /**
-    * 
+    * Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
     */
     @SerializedName("AudioTemplate")
     @Expose
     private AudioTemplateInfo AudioTemplate;
 
     /**
-    * 
+    * TESHD transcoding parameter.
     */
     @SerializedName("TEHDConfig")
     @Expose
     private TEHDConfig TEHDConfig;
 
     /**
-     * Get  
-     * @return Container 
+     * Get Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files. 
+     * @return Container Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
      */
     public String getContainer() {
         return this.Container;
     }
 
     /**
-     * Set 
-     * @param Container 
+     * Set Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
+     * @param Container Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
      */
     public void setContainer(String Container) {
         this.Container = Container;
     }
 
     /**
-     * Get  
-     * @return RemoveVideo 
+     * Get Whether to remove video data. Valid values:
+<li>0: retain;</li>
+<li>1: remove.</li>
+Default value: 0. 
+     * @return RemoveVideo Whether to remove video data. Valid values:
+<li>0: retain;</li>
+<li>1: remove.</li>
+Default value: 0.
      */
     public Long getRemoveVideo() {
         return this.RemoveVideo;
     }
 
     /**
-     * Set 
-     * @param RemoveVideo 
+     * Set Whether to remove video data. Valid values:
+<li>0: retain;</li>
+<li>1: remove.</li>
+Default value: 0.
+     * @param RemoveVideo Whether to remove video data. Valid values:
+<li>0: retain;</li>
+<li>1: remove.</li>
+Default value: 0.
      */
     public void setRemoveVideo(Long RemoveVideo) {
         this.RemoveVideo = RemoveVideo;
     }
 
     /**
-     * Get  
-     * @return RemoveAudio 
+     * Get Whether to remove audio data. Valid values:
+<li>0: retain;</li>
+<li>1: remove.</li>
+Default value: 0. 
+     * @return RemoveAudio Whether to remove audio data. Valid values:
+<li>0: retain;</li>
+<li>1: remove.</li>
+Default value: 0.
      */
     public Long getRemoveAudio() {
         return this.RemoveAudio;
     }
 
     /**
-     * Set 
-     * @param RemoveAudio 
+     * Set Whether to remove audio data. Valid values:
+<li>0: retain;</li>
+<li>1: remove.</li>
+Default value: 0.
+     * @param RemoveAudio Whether to remove audio data. Valid values:
+<li>0: retain;</li>
+<li>1: remove.</li>
+Default value: 0.
      */
     public void setRemoveAudio(Long RemoveAudio) {
         this.RemoveAudio = RemoveAudio;
     }
 
     /**
-     * Get  
-     * @return VideoTemplate 
+     * Get Video stream configuration parameter. This field is required when `RemoveVideo` is 0. 
+     * @return VideoTemplate Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
      */
     public VideoTemplateInfo getVideoTemplate() {
         return this.VideoTemplate;
     }
 
     /**
-     * Set 
-     * @param VideoTemplate 
+     * Set Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
+     * @param VideoTemplate Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
      */
     public void setVideoTemplate(VideoTemplateInfo VideoTemplate) {
         this.VideoTemplate = VideoTemplate;
     }
 
     /**
-     * Get  
-     * @return AudioTemplate 
+     * Get Audio stream configuration parameter. This field is required when `RemoveAudio` is 0. 
+     * @return AudioTemplate Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
      */
     public AudioTemplateInfo getAudioTemplate() {
         return this.AudioTemplate;
     }
 
     /**
-     * Set 
-     * @param AudioTemplate 
+     * Set Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
+     * @param AudioTemplate Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
      */
     public void setAudioTemplate(AudioTemplateInfo AudioTemplate) {
         this.AudioTemplate = AudioTemplate;
     }
 
     /**
-     * Get  
-     * @return TEHDConfig 
+     * Get TESHD transcoding parameter. 
+     * @return TEHDConfig TESHD transcoding parameter.
      */
     public TEHDConfig getTEHDConfig() {
         return this.TEHDConfig;
     }
 
     /**
-     * Set 
-     * @param TEHDConfig 
+     * Set TESHD transcoding parameter.
+     * @param TEHDConfig TESHD transcoding parameter.
      */
     public void setTEHDConfig(TEHDConfig TEHDConfig) {
         this.TEHDConfig = TEHDConfig;

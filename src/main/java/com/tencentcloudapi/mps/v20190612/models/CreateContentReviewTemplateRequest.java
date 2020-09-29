@@ -58,7 +58,10 @@ public class CreateContentReviewTemplateRequest extends AbstractModel{
     private PoliticalConfigureInfo PoliticalConfigure;
 
     /**
-    * 
+    * Control parameter of prohibited information detection. Prohibited information includes:
+<li>Abusive;</li>
+<li>Drug-related.</li>
+Note: this parameter is not supported yet.
     */
     @SerializedName("ProhibitedConfigure")
     @Expose
@@ -152,16 +155,28 @@ public class CreateContentReviewTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return ProhibitedConfigure 
+     * Get Control parameter of prohibited information detection. Prohibited information includes:
+<li>Abusive;</li>
+<li>Drug-related.</li>
+Note: this parameter is not supported yet. 
+     * @return ProhibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
+<li>Abusive;</li>
+<li>Drug-related.</li>
+Note: this parameter is not supported yet.
      */
     public ProhibitedConfigureInfo getProhibitedConfigure() {
         return this.ProhibitedConfigure;
     }
 
     /**
-     * Set 
-     * @param ProhibitedConfigure 
+     * Set Control parameter of prohibited information detection. Prohibited information includes:
+<li>Abusive;</li>
+<li>Drug-related.</li>
+Note: this parameter is not supported yet.
+     * @param ProhibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
+<li>Abusive;</li>
+<li>Drug-related.</li>
+Note: this parameter is not supported yet.
      */
     public void setProhibitedConfigure(ProhibitedConfigureInfo ProhibitedConfigure) {
         this.ProhibitedConfigure = ProhibitedConfigure;

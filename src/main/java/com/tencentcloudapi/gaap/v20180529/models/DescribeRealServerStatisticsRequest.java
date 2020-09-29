@@ -37,6 +37,13 @@ public class DescribeRealServerStatisticsRequest extends AbstractModel{
     private String ListenerId;
 
     /**
+    * Layer-7 rule ID
+    */
+    @SerializedName("RuleId")
+    @Expose
+    private String RuleId;
+
+    /**
     * Statistics duration. Unit: hours. It only supports querying statistics for the past 1, 3, 6, 12, and 24 hours.
     */
     @SerializedName("WithinTime")
@@ -44,11 +51,25 @@ public class DescribeRealServerStatisticsRequest extends AbstractModel{
     private Long WithinTime;
 
     /**
-    * Rule ID
+    * Statistics start time, such as 2020-08-19 00:00:00
     */
-    @SerializedName("RuleId")
+    @SerializedName("StartTime")
     @Expose
-    private String RuleId;
+    private String StartTime;
+
+    /**
+    * Statistics end time, such as 2020-08-19 23:59:59
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
+    * Statistics granularity in seconds. Only 1-minute (60-second) and 5-minute (300-second) granularities are supported
+    */
+    @SerializedName("Granularity")
+    @Expose
+    private Long Granularity;
 
     /**
      * Get Origin server ID 
@@ -83,6 +104,22 @@ public class DescribeRealServerStatisticsRequest extends AbstractModel{
     }
 
     /**
+     * Get Layer-7 rule ID 
+     * @return RuleId Layer-7 rule ID
+     */
+    public String getRuleId() {
+        return this.RuleId;
+    }
+
+    /**
+     * Set Layer-7 rule ID
+     * @param RuleId Layer-7 rule ID
+     */
+    public void setRuleId(String RuleId) {
+        this.RuleId = RuleId;
+    }
+
+    /**
      * Get Statistics duration. Unit: hours. It only supports querying statistics for the past 1, 3, 6, 12, and 24 hours. 
      * @return WithinTime Statistics duration. Unit: hours. It only supports querying statistics for the past 1, 3, 6, 12, and 24 hours.
      */
@@ -99,19 +136,51 @@ public class DescribeRealServerStatisticsRequest extends AbstractModel{
     }
 
     /**
-     * Get Rule ID 
-     * @return RuleId Rule ID
+     * Get Statistics start time, such as 2020-08-19 00:00:00 
+     * @return StartTime Statistics start time, such as 2020-08-19 00:00:00
      */
-    public String getRuleId() {
-        return this.RuleId;
+    public String getStartTime() {
+        return this.StartTime;
     }
 
     /**
-     * Set Rule ID
-     * @param RuleId Rule ID
+     * Set Statistics start time, such as 2020-08-19 00:00:00
+     * @param StartTime Statistics start time, such as 2020-08-19 00:00:00
      */
-    public void setRuleId(String RuleId) {
-        this.RuleId = RuleId;
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get Statistics end time, such as 2020-08-19 23:59:59 
+     * @return EndTime Statistics end time, such as 2020-08-19 23:59:59
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set Statistics end time, such as 2020-08-19 23:59:59
+     * @param EndTime Statistics end time, such as 2020-08-19 23:59:59
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
+
+    /**
+     * Get Statistics granularity in seconds. Only 1-minute (60-second) and 5-minute (300-second) granularities are supported 
+     * @return Granularity Statistics granularity in seconds. Only 1-minute (60-second) and 5-minute (300-second) granularities are supported
+     */
+    public Long getGranularity() {
+        return this.Granularity;
+    }
+
+    /**
+     * Set Statistics granularity in seconds. Only 1-minute (60-second) and 5-minute (300-second) granularities are supported
+     * @param Granularity Statistics granularity in seconds. Only 1-minute (60-second) and 5-minute (300-second) granularities are supported
+     */
+    public void setGranularity(Long Granularity) {
+        this.Granularity = Granularity;
     }
 
     /**
@@ -120,8 +189,11 @@ public class DescribeRealServerStatisticsRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RealServerId", this.RealServerId);
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);
-        this.setParamSimple(map, prefix + "WithinTime", this.WithinTime);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
+        this.setParamSimple(map, prefix + "WithinTime", this.WithinTime);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "Granularity", this.Granularity);
 
     }
 }

@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class AiReviewProhibitedOcrTaskInput extends AbstractModel{
 
     /**
-    * 
+    * Prohibited information detection template ID.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Prohibited information detection template ID. 
+     * @return Definition Prohibited information detection template ID.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Prohibited information detection template ID.
+     * @param Definition Prohibited information detection template ID.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
