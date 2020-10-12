@@ -45,12 +45,14 @@ public class MdlClient extends AbstractClient{
      */
     public CreateMediaLiveChannelResponse CreateMediaLiveChannel(CreateMediaLiveChannelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateMediaLiveChannelResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateMediaLiveChannelResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "CreateMediaLiveChannel"), type);
+                rspStr = this.internalRequest(req, "CreateMediaLiveChannel");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -63,12 +65,14 @@ public class MdlClient extends AbstractClient{
      */
     public CreateMediaLiveInputResponse CreateMediaLiveInput(CreateMediaLiveInputRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateMediaLiveInputResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateMediaLiveInputResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "CreateMediaLiveInput"), type);
+                rspStr = this.internalRequest(req, "CreateMediaLiveInput");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -81,12 +85,14 @@ public class MdlClient extends AbstractClient{
      */
     public CreateMediaLiveInputSecurityGroupResponse CreateMediaLiveInputSecurityGroup(CreateMediaLiveInputSecurityGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<CreateMediaLiveInputSecurityGroupResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<CreateMediaLiveInputSecurityGroupResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "CreateMediaLiveInputSecurityGroup"), type);
+                rspStr = this.internalRequest(req, "CreateMediaLiveInputSecurityGroup");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -99,12 +105,14 @@ public class MdlClient extends AbstractClient{
      */
     public DeleteMediaLiveChannelResponse DeleteMediaLiveChannel(DeleteMediaLiveChannelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteMediaLiveChannelResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteMediaLiveChannelResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DeleteMediaLiveChannel"), type);
+                rspStr = this.internalRequest(req, "DeleteMediaLiveChannel");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -117,12 +125,14 @@ public class MdlClient extends AbstractClient{
      */
     public DeleteMediaLiveInputResponse DeleteMediaLiveInput(DeleteMediaLiveInputRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteMediaLiveInputResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteMediaLiveInputResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DeleteMediaLiveInput"), type);
+                rspStr = this.internalRequest(req, "DeleteMediaLiveInput");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -135,12 +145,14 @@ public class MdlClient extends AbstractClient{
      */
     public DeleteMediaLiveInputSecurityGroupResponse DeleteMediaLiveInputSecurityGroup(DeleteMediaLiveInputSecurityGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DeleteMediaLiveInputSecurityGroupResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DeleteMediaLiveInputSecurityGroupResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DeleteMediaLiveInputSecurityGroup"), type);
+                rspStr = this.internalRequest(req, "DeleteMediaLiveInputSecurityGroup");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -153,12 +165,14 @@ public class MdlClient extends AbstractClient{
      */
     public DescribeMediaLiveChannelResponse DescribeMediaLiveChannel(DescribeMediaLiveChannelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMediaLiveChannelResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMediaLiveChannelResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeMediaLiveChannel"), type);
+                rspStr = this.internalRequest(req, "DescribeMediaLiveChannel");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -171,12 +185,14 @@ public class MdlClient extends AbstractClient{
      */
     public DescribeMediaLiveChannelAlertsResponse DescribeMediaLiveChannelAlerts(DescribeMediaLiveChannelAlertsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMediaLiveChannelAlertsResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMediaLiveChannelAlertsResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeMediaLiveChannelAlerts"), type);
+                rspStr = this.internalRequest(req, "DescribeMediaLiveChannelAlerts");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -189,12 +205,14 @@ public class MdlClient extends AbstractClient{
      */
     public DescribeMediaLiveChannelInputStatisticsResponse DescribeMediaLiveChannelInputStatistics(DescribeMediaLiveChannelInputStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMediaLiveChannelInputStatisticsResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMediaLiveChannelInputStatisticsResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeMediaLiveChannelInputStatistics"), type);
+                rspStr = this.internalRequest(req, "DescribeMediaLiveChannelInputStatistics");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -207,12 +225,14 @@ public class MdlClient extends AbstractClient{
      */
     public DescribeMediaLiveChannelLogsResponse DescribeMediaLiveChannelLogs(DescribeMediaLiveChannelLogsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMediaLiveChannelLogsResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMediaLiveChannelLogsResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeMediaLiveChannelLogs"), type);
+                rspStr = this.internalRequest(req, "DescribeMediaLiveChannelLogs");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -225,12 +245,14 @@ public class MdlClient extends AbstractClient{
      */
     public DescribeMediaLiveChannelOutputStatisticsResponse DescribeMediaLiveChannelOutputStatistics(DescribeMediaLiveChannelOutputStatisticsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMediaLiveChannelOutputStatisticsResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMediaLiveChannelOutputStatisticsResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeMediaLiveChannelOutputStatistics"), type);
+                rspStr = this.internalRequest(req, "DescribeMediaLiveChannelOutputStatistics");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -243,12 +265,14 @@ public class MdlClient extends AbstractClient{
      */
     public DescribeMediaLiveChannelsResponse DescribeMediaLiveChannels(DescribeMediaLiveChannelsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMediaLiveChannelsResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMediaLiveChannelsResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeMediaLiveChannels"), type);
+                rspStr = this.internalRequest(req, "DescribeMediaLiveChannels");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -261,12 +285,14 @@ public class MdlClient extends AbstractClient{
      */
     public DescribeMediaLiveInputResponse DescribeMediaLiveInput(DescribeMediaLiveInputRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMediaLiveInputResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMediaLiveInputResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeMediaLiveInput"), type);
+                rspStr = this.internalRequest(req, "DescribeMediaLiveInput");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -279,12 +305,14 @@ public class MdlClient extends AbstractClient{
      */
     public DescribeMediaLiveInputSecurityGroupResponse DescribeMediaLiveInputSecurityGroup(DescribeMediaLiveInputSecurityGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMediaLiveInputSecurityGroupResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMediaLiveInputSecurityGroupResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeMediaLiveInputSecurityGroup"), type);
+                rspStr = this.internalRequest(req, "DescribeMediaLiveInputSecurityGroup");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -297,12 +325,14 @@ public class MdlClient extends AbstractClient{
      */
     public DescribeMediaLiveInputSecurityGroupsResponse DescribeMediaLiveInputSecurityGroups(DescribeMediaLiveInputSecurityGroupsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMediaLiveInputSecurityGroupsResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMediaLiveInputSecurityGroupsResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeMediaLiveInputSecurityGroups"), type);
+                rspStr = this.internalRequest(req, "DescribeMediaLiveInputSecurityGroups");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -315,12 +345,14 @@ public class MdlClient extends AbstractClient{
      */
     public DescribeMediaLiveInputsResponse DescribeMediaLiveInputs(DescribeMediaLiveInputsRequest req) throws TencentCloudSDKException{
         JsonResponseModel<DescribeMediaLiveInputsResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<DescribeMediaLiveInputsResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "DescribeMediaLiveInputs"), type);
+                rspStr = this.internalRequest(req, "DescribeMediaLiveInputs");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -333,12 +365,14 @@ public class MdlClient extends AbstractClient{
      */
     public ModifyMediaLiveChannelResponse ModifyMediaLiveChannel(ModifyMediaLiveChannelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyMediaLiveChannelResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyMediaLiveChannelResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "ModifyMediaLiveChannel"), type);
+                rspStr = this.internalRequest(req, "ModifyMediaLiveChannel");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -351,12 +385,14 @@ public class MdlClient extends AbstractClient{
      */
     public ModifyMediaLiveInputResponse ModifyMediaLiveInput(ModifyMediaLiveInputRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyMediaLiveInputResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyMediaLiveInputResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "ModifyMediaLiveInput"), type);
+                rspStr = this.internalRequest(req, "ModifyMediaLiveInput");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -369,12 +405,14 @@ public class MdlClient extends AbstractClient{
      */
     public ModifyMediaLiveInputSecurityGroupResponse ModifyMediaLiveInputSecurityGroup(ModifyMediaLiveInputSecurityGroupRequest req) throws TencentCloudSDKException{
         JsonResponseModel<ModifyMediaLiveInputSecurityGroupResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<ModifyMediaLiveInputSecurityGroupResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "ModifyMediaLiveInputSecurityGroup"), type);
+                rspStr = this.internalRequest(req, "ModifyMediaLiveInputSecurityGroup");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -387,12 +425,14 @@ public class MdlClient extends AbstractClient{
      */
     public StartMediaLiveChannelResponse StartMediaLiveChannel(StartMediaLiveChannelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StartMediaLiveChannelResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<StartMediaLiveChannelResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "StartMediaLiveChannel"), type);
+                rspStr = this.internalRequest(req, "StartMediaLiveChannel");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
@@ -405,12 +445,14 @@ public class MdlClient extends AbstractClient{
      */
     public StopMediaLiveChannelResponse StopMediaLiveChannel(StopMediaLiveChannelRequest req) throws TencentCloudSDKException{
         JsonResponseModel<StopMediaLiveChannelResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<StopMediaLiveChannelResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "StopMediaLiveChannel"), type);
+                rspStr = this.internalRequest(req, "StopMediaLiveChannel");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }

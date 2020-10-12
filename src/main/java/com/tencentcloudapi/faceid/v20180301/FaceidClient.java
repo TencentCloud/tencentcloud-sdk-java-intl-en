@@ -45,12 +45,14 @@ public class FaceidClient extends AbstractClient{
      */
     public LivenessCompareResponse LivenessCompare(LivenessCompareRequest req) throws TencentCloudSDKException{
         JsonResponseModel<LivenessCompareResponse> rsp = null;
+        String rspStr = "";
         try {
                 Type type = new TypeToken<JsonResponseModel<LivenessCompareResponse>>() {
                 }.getType();
-                rsp  = gson.fromJson(this.internalRequest(req, "LivenessCompare"), type);
+                rspStr = this.internalRequest(req, "LivenessCompare");
+                rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException(e.getMessage());
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
         }
         return rsp.response;
     }
