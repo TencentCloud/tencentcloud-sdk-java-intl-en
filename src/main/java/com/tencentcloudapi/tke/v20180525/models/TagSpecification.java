@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class TagSpecification extends AbstractModel{
 
     /**
-    * 
+    * The type of resource that the tag is bound to. The type currently supported is `cluster`.
     */
     @SerializedName("ResourceType")
     @Expose
     private String ResourceType;
 
     /**
-    * 
+    * List of tag pairs
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-     * Get  
-     * @return ResourceType 
+     * Get The type of resource that the tag is bound to. The type currently supported is `cluster`. 
+     * @return ResourceType The type of resource that the tag is bound to. The type currently supported is `cluster`.
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 
-     * @param ResourceType 
+     * Set The type of resource that the tag is bound to. The type currently supported is `cluster`.
+     * @param ResourceType The type of resource that the tag is bound to. The type currently supported is `cluster`.
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get  
-     * @return Tags 
+     * Get List of tag pairs 
+     * @return Tags List of tag pairs
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 
-     * @param Tags 
+     * Set List of tag pairs
+     * @param Tags List of tag pairs
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

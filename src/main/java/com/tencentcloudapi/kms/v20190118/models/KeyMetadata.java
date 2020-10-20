@@ -23,28 +23,28 @@ import java.util.HashMap;
 public class KeyMetadata extends AbstractModel{
 
     /**
-    * 
+    * Globally unique CMK ID
     */
     @SerializedName("KeyId")
     @Expose
     private String KeyId;
 
     /**
-    * 
+    * Alias that makes a key more recognizable and understandable
     */
     @SerializedName("Alias")
     @Expose
     private String Alias;
 
     /**
-    * 
+    * Key creation time
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * 
+    * CMK description
     */
     @SerializedName("Description")
     @Expose
@@ -72,35 +72,35 @@ public class KeyMetadata extends AbstractModel{
     private Long Type;
 
     /**
-    * 
+    * Creator
     */
     @SerializedName("CreatorUin")
     @Expose
     private Long CreatorUin;
 
     /**
-    * 
+    * Whether key rotation is enabled
     */
     @SerializedName("KeyRotationEnabled")
     @Expose
     private Boolean KeyRotationEnabled;
 
     /**
-    * 
+    * CMK creator. The value of this parameter is `user` if the CMK is created by the user, or the corresponding service name if it is created automatically by an authorized Tencent Cloud service.
     */
     @SerializedName("Owner")
     @Expose
     private String Owner;
 
     /**
-    * 
+    * Time of next rotation if key rotation is enabled
     */
     @SerializedName("NextRotateTime")
     @Expose
     private Long NextRotateTime;
 
     /**
-    * 
+    * Scheduled deletion time
     */
     @SerializedName("DeletionDate")
     @Expose
@@ -130,64 +130,64 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ResourceId;
 
     /**
-     * Get  
-     * @return KeyId 
+     * Get Globally unique CMK ID 
+     * @return KeyId Globally unique CMK ID
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * Set 
-     * @param KeyId 
+     * Set Globally unique CMK ID
+     * @param KeyId Globally unique CMK ID
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;
     }
 
     /**
-     * Get  
-     * @return Alias 
+     * Get Alias that makes a key more recognizable and understandable 
+     * @return Alias Alias that makes a key more recognizable and understandable
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * Set 
-     * @param Alias 
+     * Set Alias that makes a key more recognizable and understandable
+     * @param Alias Alias that makes a key more recognizable and understandable
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;
     }
 
     /**
-     * Get  
-     * @return CreateTime 
+     * Get Key creation time 
+     * @return CreateTime Key creation time
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 
-     * @param CreateTime 
+     * Set Key creation time
+     * @param CreateTime Key creation time
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get  
-     * @return Description 
+     * Get CMK description 
+     * @return Description CMK description
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 
-     * @param Description 
+     * Set CMK description
+     * @param Description CMK description
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -242,80 +242,80 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return CreatorUin 
+     * Get Creator 
+     * @return CreatorUin Creator
      */
     public Long getCreatorUin() {
         return this.CreatorUin;
     }
 
     /**
-     * Set 
-     * @param CreatorUin 
+     * Set Creator
+     * @param CreatorUin Creator
      */
     public void setCreatorUin(Long CreatorUin) {
         this.CreatorUin = CreatorUin;
     }
 
     /**
-     * Get  
-     * @return KeyRotationEnabled 
+     * Get Whether key rotation is enabled 
+     * @return KeyRotationEnabled Whether key rotation is enabled
      */
     public Boolean getKeyRotationEnabled() {
         return this.KeyRotationEnabled;
     }
 
     /**
-     * Set 
-     * @param KeyRotationEnabled 
+     * Set Whether key rotation is enabled
+     * @param KeyRotationEnabled Whether key rotation is enabled
      */
     public void setKeyRotationEnabled(Boolean KeyRotationEnabled) {
         this.KeyRotationEnabled = KeyRotationEnabled;
     }
 
     /**
-     * Get  
-     * @return Owner 
+     * Get CMK creator. The value of this parameter is `user` if the CMK is created by the user, or the corresponding service name if it is created automatically by an authorized Tencent Cloud service. 
+     * @return Owner CMK creator. The value of this parameter is `user` if the CMK is created by the user, or the corresponding service name if it is created automatically by an authorized Tencent Cloud service.
      */
     public String getOwner() {
         return this.Owner;
     }
 
     /**
-     * Set 
-     * @param Owner 
+     * Set CMK creator. The value of this parameter is `user` if the CMK is created by the user, or the corresponding service name if it is created automatically by an authorized Tencent Cloud service.
+     * @param Owner CMK creator. The value of this parameter is `user` if the CMK is created by the user, or the corresponding service name if it is created automatically by an authorized Tencent Cloud service.
      */
     public void setOwner(String Owner) {
         this.Owner = Owner;
     }
 
     /**
-     * Get  
-     * @return NextRotateTime 
+     * Get Time of next rotation if key rotation is enabled 
+     * @return NextRotateTime Time of next rotation if key rotation is enabled
      */
     public Long getNextRotateTime() {
         return this.NextRotateTime;
     }
 
     /**
-     * Set 
-     * @param NextRotateTime 
+     * Set Time of next rotation if key rotation is enabled
+     * @param NextRotateTime Time of next rotation if key rotation is enabled
      */
     public void setNextRotateTime(Long NextRotateTime) {
         this.NextRotateTime = NextRotateTime;
     }
 
     /**
-     * Get  
-     * @return DeletionDate 
+     * Get Scheduled deletion time 
+     * @return DeletionDate Scheduled deletion time
      */
     public Long getDeletionDate() {
         return this.DeletionDate;
     }
 
     /**
-     * Set 
-     * @param DeletionDate 
+     * Set Scheduled deletion time
+     * @param DeletionDate Scheduled deletion time
      */
     public void setDeletionDate(Long DeletionDate) {
         this.DeletionDate = DeletionDate;

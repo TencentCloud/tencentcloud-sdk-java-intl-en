@@ -58,7 +58,7 @@ public class LayoutParams extends AbstractModel{
     private Long MainVideoRightAlign;
 
     /**
-    * 
+    * A user list, which takes effect for floating, grid, or screen sharing templates. When the user list has been set, the stream mix output for users in this user list will include both audio and video; the stream mix output for users not in the list will only include audio. Up to 16 users can be set.
     */
     @SerializedName("MixVideoUids")
     @Expose
@@ -145,16 +145,16 @@ public class LayoutParams extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return MixVideoUids 
+     * Get A user list, which takes effect for floating, grid, or screen sharing templates. When the user list has been set, the stream mix output for users in this user list will include both audio and video; the stream mix output for users not in the list will only include audio. Up to 16 users can be set. 
+     * @return MixVideoUids A user list, which takes effect for floating, grid, or screen sharing templates. When the user list has been set, the stream mix output for users in this user list will include both audio and video; the stream mix output for users not in the list will only include audio. Up to 16 users can be set.
      */
     public String [] getMixVideoUids() {
         return this.MixVideoUids;
     }
 
     /**
-     * Set 
-     * @param MixVideoUids 
+     * Set A user list, which takes effect for floating, grid, or screen sharing templates. When the user list has been set, the stream mix output for users in this user list will include both audio and video; the stream mix output for users not in the list will only include audio. Up to 16 users can be set.
+     * @param MixVideoUids A user list, which takes effect for floating, grid, or screen sharing templates. When the user list has been set, the stream mix output for users in this user list will include both audio and video; the stream mix output for users not in the list will only include audio. Up to 16 users can be set.
      */
     public void setMixVideoUids(String [] MixVideoUids) {
         this.MixVideoUids = MixVideoUids;

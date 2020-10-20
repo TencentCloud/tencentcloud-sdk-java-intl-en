@@ -40,6 +40,16 @@ If this parameter is left empty, edge server information will be returned by def
     private String Layer;
 
     /**
+    * Region to be queried.
+mainland: domestic nodes
+overseas: overseas nodes
+global: global nodes
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
      * Get Acceleration domain name 
      * @return Domain Acceleration domain name
      */
@@ -84,11 +94,40 @@ If this parameter is left empty, edge server information will be returned by def
     }
 
     /**
+     * Get Region to be queried.
+mainland: domestic nodes
+overseas: overseas nodes
+global: global nodes 
+     * @return Area Region to be queried.
+mainland: domestic nodes
+overseas: overseas nodes
+global: global nodes
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set Region to be queried.
+mainland: domestic nodes
+overseas: overseas nodes
+global: global nodes
+     * @param Area Region to be queried.
+mainland: domestic nodes
+overseas: overseas nodes
+global: global nodes
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "Layer", this.Layer);
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }

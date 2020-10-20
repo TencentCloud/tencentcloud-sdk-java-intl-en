@@ -44,7 +44,7 @@ public class DescribeCallDetailRequest extends AbstractModel{
     private Long EndTime;
 
     /**
-    * User `sdkappid`, such as 1400188366.
+    * User `SDKAppID`, such as 1400188366.
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -85,7 +85,7 @@ bigvHeight: upstream/downstream resolution in height.
     private String PageNumber;
 
     /**
-    * Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. When `DataType` and all `UserId`s are not null, `PageSize` is up to 6. When `DataType` and all `UserId`s are null, `PageSize` is up to 100.
+    * Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. When either `DataType` or `UserId` is not null, `PageSize` is up to 6. When `DataType` and `UserId` are null, `PageSize` is up to 100.
     */
     @SerializedName("PageSize")
     @Expose
@@ -140,16 +140,16 @@ bigvHeight: upstream/downstream resolution in height.
     }
 
     /**
-     * Get User `sdkappid`, such as 1400188366. 
-     * @return SdkAppId User `sdkappid`, such as 1400188366.
+     * Get User `SDKAppID`, such as 1400188366. 
+     * @return SdkAppId User `SDKAppID`, such as 1400188366.
      */
     public String getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set User `sdkappid`, such as 1400188366.
-     * @param SdkAppId User `sdkappid`, such as 1400188366.
+     * Set User `SDKAppID`, such as 1400188366.
+     * @param SdkAppId User `SDKAppID`, such as 1400188366.
      */
     public void setSdkAppId(String SdkAppId) {
         this.SdkAppId = SdkAppId;
@@ -256,16 +256,16 @@ bigvHeight: upstream/downstream resolution in height.
     }
 
     /**
-     * Get Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. When `DataType` and all `UserId`s are not null, `PageSize` is up to 6. When `DataType` and all `UserId`s are null, `PageSize` is up to 100. 
-     * @return PageSize Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. When `DataType` and all `UserId`s are not null, `PageSize` is up to 6. When `DataType` and all `UserId`s are null, `PageSize` is up to 100.
+     * Get Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. When either `DataType` or `UserId` is not null, `PageSize` is up to 6. When `DataType` and `UserId` are null, `PageSize` is up to 100. 
+     * @return PageSize Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. When either `DataType` or `UserId` is not null, `PageSize` is up to 6. When `DataType` and `UserId` are null, `PageSize` is up to 100.
      */
     public String getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. When `DataType` and all `UserId`s are not null, `PageSize` is up to 6. When `DataType` and all `UserId`s are null, `PageSize` is up to 100.
-     * @param PageSize Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. When `DataType` and all `UserId`s are not null, `PageSize` is up to 6. When `DataType` and all `UserId`s are null, `PageSize` is up to 100.
+     * Set Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. When either `DataType` or `UserId` is not null, `PageSize` is up to 6. When `DataType` and `UserId` are null, `PageSize` is up to 100.
+     * @param PageSize Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned by default. When either `DataType` or `UserId` is not null, `PageSize` is up to 6. When `DataType` and `UserId` are null, `PageSize` is up to 100.
      */
     public void setPageSize(String PageSize) {
         this.PageSize = PageSize;

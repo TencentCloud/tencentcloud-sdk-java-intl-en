@@ -24,7 +24,7 @@ public class Mouth extends AbstractModel{
 
     /**
     * Whether the mouth is open.
-The `Type` values of the `AttributeItem` include: 0: open; 1: closed.
+The `Type` values of the `AttributeItem` include: 0: closed; 1: open.
     */
     @SerializedName("MouthOpen")
     @Expose
@@ -32,9 +32,9 @@ The `Type` values of the `AttributeItem` include: 0: open; 1: closed.
 
     /**
      * Get Whether the mouth is open.
-The `Type` values of the `AttributeItem` include: 0: open; 1: closed. 
+The `Type` values of the `AttributeItem` include: 0: closed; 1: open. 
      * @return MouthOpen Whether the mouth is open.
-The `Type` values of the `AttributeItem` include: 0: open; 1: closed.
+The `Type` values of the `AttributeItem` include: 0: closed; 1: open.
      */
     public AttributeItem getMouthOpen() {
         return this.MouthOpen;
@@ -42,9 +42,9 @@ The `Type` values of the `AttributeItem` include: 0: open; 1: closed.
 
     /**
      * Set Whether the mouth is open.
-The `Type` values of the `AttributeItem` include: 0: open; 1: closed.
+The `Type` values of the `AttributeItem` include: 0: closed; 1: open.
      * @param MouthOpen Whether the mouth is open.
-The `Type` values of the `AttributeItem` include: 0: open; 1: closed.
+The `Type` values of the `AttributeItem` include: 0: closed; 1: open.
      */
     public void setMouthOpen(AttributeItem MouthOpen) {
         this.MouthOpen = MouthOpen;

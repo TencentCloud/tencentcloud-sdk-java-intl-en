@@ -65,21 +65,21 @@ public class ClusterBasicSettings extends AbstractModel{
     private Long ProjectId;
 
     /**
-    * 
+    * Tag description list. This parameter is used to bind a tag to a resource instance. Currently, a tag can only be bound to cluster instances.
     */
     @SerializedName("TagSpecification")
     @Expose
     private TagSpecification [] TagSpecification;
 
     /**
-    * 
+    * Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
     */
     @SerializedName("OsCustomizeType")
     @Expose
     private String OsCustomizeType;
 
     /**
-    * 
+    * Whether to enable the node’s default security group (default: `No`, Aphla feature)
     */
     @SerializedName("NeedWorkSecurityGroup")
     @Expose
@@ -182,48 +182,48 @@ public class ClusterBasicSettings extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return TagSpecification 
+     * Get Tag description list. This parameter is used to bind a tag to a resource instance. Currently, a tag can only be bound to cluster instances. 
+     * @return TagSpecification Tag description list. This parameter is used to bind a tag to a resource instance. Currently, a tag can only be bound to cluster instances.
      */
     public TagSpecification [] getTagSpecification() {
         return this.TagSpecification;
     }
 
     /**
-     * Set 
-     * @param TagSpecification 
+     * Set Tag description list. This parameter is used to bind a tag to a resource instance. Currently, a tag can only be bound to cluster instances.
+     * @param TagSpecification Tag description list. This parameter is used to bind a tag to a resource instance. Currently, a tag can only be bound to cluster instances.
      */
     public void setTagSpecification(TagSpecification [] TagSpecification) {
         this.TagSpecification = TagSpecification;
     }
 
     /**
-     * Get  
-     * @return OsCustomizeType 
+     * Get Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value) 
+     * @return OsCustomizeType Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
      */
     public String getOsCustomizeType() {
         return this.OsCustomizeType;
     }
 
     /**
-     * Set 
-     * @param OsCustomizeType 
+     * Set Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+     * @param OsCustomizeType Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
      */
     public void setOsCustomizeType(String OsCustomizeType) {
         this.OsCustomizeType = OsCustomizeType;
     }
 
     /**
-     * Get  
-     * @return NeedWorkSecurityGroup 
+     * Get Whether to enable the node’s default security group (default: `No`, Aphla feature) 
+     * @return NeedWorkSecurityGroup Whether to enable the node’s default security group (default: `No`, Aphla feature)
      */
     public Boolean getNeedWorkSecurityGroup() {
         return this.NeedWorkSecurityGroup;
     }
 
     /**
-     * Set 
-     * @param NeedWorkSecurityGroup 
+     * Set Whether to enable the node’s default security group (default: `No`, Aphla feature)
+     * @param NeedWorkSecurityGroup Whether to enable the node’s default security group (default: `No`, Aphla feature)
      */
     public void setNeedWorkSecurityGroup(Boolean NeedWorkSecurityGroup) {
         this.NeedWorkSecurityGroup = NeedWorkSecurityGroup;

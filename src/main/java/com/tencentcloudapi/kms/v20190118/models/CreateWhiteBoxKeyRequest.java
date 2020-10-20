@@ -44,7 +44,7 @@ public class CreateWhiteBoxKeyRequest extends AbstractModel{
     private String Description;
 
     /**
-    * 
+    * Tag list
     */
     @SerializedName("Tags")
     @Expose
@@ -99,16 +99,16 @@ public class CreateWhiteBoxKeyRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return Tags 
+     * Get Tag list 
+     * @return Tags Tag list
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 
-     * @param Tags 
+     * Set Tag list
+     * @param Tags Tag list
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

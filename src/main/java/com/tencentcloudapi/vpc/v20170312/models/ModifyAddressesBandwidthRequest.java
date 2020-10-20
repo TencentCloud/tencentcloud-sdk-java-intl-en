@@ -37,14 +37,14 @@ public class ModifyAddressesBandwidthRequest extends AbstractModel{
     private Long InternetMaxBandwidthOut;
 
     /**
-    * The monthly bandwidth start time
+    * (Disused) The start time of the monthly bandwidth subscription
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * The monthly bandwidth end time
+    * (Disused) The end time of the monthly bandwidth subscription
     */
     @SerializedName("EndTime")
     @Expose
@@ -83,32 +83,32 @@ public class ModifyAddressesBandwidthRequest extends AbstractModel{
     }
 
     /**
-     * Get The monthly bandwidth start time 
-     * @return StartTime The monthly bandwidth start time
+     * Get (Disused) The start time of the monthly bandwidth subscription 
+     * @return StartTime (Disused) The start time of the monthly bandwidth subscription
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set The monthly bandwidth start time
-     * @param StartTime The monthly bandwidth start time
+     * Set (Disused) The start time of the monthly bandwidth subscription
+     * @param StartTime (Disused) The start time of the monthly bandwidth subscription
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get The monthly bandwidth end time 
-     * @return EndTime The monthly bandwidth end time
+     * Get (Disused) The end time of the monthly bandwidth subscription 
+     * @return EndTime (Disused) The end time of the monthly bandwidth subscription
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set The monthly bandwidth end time
-     * @param EndTime The monthly bandwidth end time
+     * Set (Disused) The end time of the monthly bandwidth subscription
+     * @param EndTime (Disused) The end time of the monthly bandwidth subscription
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

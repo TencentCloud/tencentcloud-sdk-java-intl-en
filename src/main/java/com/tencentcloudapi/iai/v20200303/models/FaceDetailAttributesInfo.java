@@ -40,7 +40,7 @@ If `FaceAttributesType` does not include `Beauty` or more than 5 faces are detec
 
     /**
     * Emotion, including relaxed, happy, surprised, angry, sad, disgusted, and scared. 
-The `Type` values of the `AttributeItem` include: 0: relaxed; 1: happy; 2: surprised; 3: angry; 4: sad; 5: disgusted; 6: scared
+The `Type` values of the `AttributeItem` include: 0: relaxed; 1: happy; 2: surprised; 3: angry; 4: sad; 5: disgusted; 6: scared.
 If `FaceAttributesType` does not include `Emotion` or more than 5 faces are detected, this parameter will still be returned but meaningless.
     */
     @SerializedName("Emotion")
@@ -124,7 +124,7 @@ If `FaceAttributesType` does not include `Moustache` or more than 5 faces are de
 
     /**
     * Nose information. 
-The `Type` values of the `AttributeItem` include: 0: upturned nose; 1: aquiline nose; 2: general nose; 3: bulbous nose
+The `Type` values of the `AttributeItem` include: 0: upturned nose; 1: aquiline nose; 2: general nose; 3: bulbous nose.
 If `FaceAttributesType` does not include `Nose` or more than 5 faces are detected, this parameter will still be returned but meaningless.
     */
     @SerializedName("Nose")
@@ -199,10 +199,10 @@ If `FaceAttributesType` does not include `Beauty` or more than 5 faces are detec
 
     /**
      * Get Emotion, including relaxed, happy, surprised, angry, sad, disgusted, and scared. 
-The `Type` values of the `AttributeItem` include: 0: relaxed; 1: happy; 2: surprised; 3: angry; 4: sad; 5: disgusted; 6: scared
+The `Type` values of the `AttributeItem` include: 0: relaxed; 1: happy; 2: surprised; 3: angry; 4: sad; 5: disgusted; 6: scared.
 If `FaceAttributesType` does not include `Emotion` or more than 5 faces are detected, this parameter will still be returned but meaningless. 
      * @return Emotion Emotion, including relaxed, happy, surprised, angry, sad, disgusted, and scared. 
-The `Type` values of the `AttributeItem` include: 0: relaxed; 1: happy; 2: surprised; 3: angry; 4: sad; 5: disgusted; 6: scared
+The `Type` values of the `AttributeItem` include: 0: relaxed; 1: happy; 2: surprised; 3: angry; 4: sad; 5: disgusted; 6: scared.
 If `FaceAttributesType` does not include `Emotion` or more than 5 faces are detected, this parameter will still be returned but meaningless.
      */
     public AttributeItem getEmotion() {
@@ -211,10 +211,10 @@ If `FaceAttributesType` does not include `Emotion` or more than 5 faces are dete
 
     /**
      * Set Emotion, including relaxed, happy, surprised, angry, sad, disgusted, and scared. 
-The `Type` values of the `AttributeItem` include: 0: relaxed; 1: happy; 2: surprised; 3: angry; 4: sad; 5: disgusted; 6: scared
+The `Type` values of the `AttributeItem` include: 0: relaxed; 1: happy; 2: surprised; 3: angry; 4: sad; 5: disgusted; 6: scared.
 If `FaceAttributesType` does not include `Emotion` or more than 5 faces are detected, this parameter will still be returned but meaningless.
      * @param Emotion Emotion, including relaxed, happy, surprised, angry, sad, disgusted, and scared. 
-The `Type` values of the `AttributeItem` include: 0: relaxed; 1: happy; 2: surprised; 3: angry; 4: sad; 5: disgusted; 6: scared
+The `Type` values of the `AttributeItem` include: 0: relaxed; 1: happy; 2: surprised; 3: angry; 4: sad; 5: disgusted; 6: scared.
 If `FaceAttributesType` does not include `Emotion` or more than 5 faces are detected, this parameter will still be returned but meaningless.
      */
     public void setEmotion(AttributeItem Emotion) {
@@ -415,10 +415,10 @@ If `FaceAttributesType` does not include `Moustache` or more than 5 faces are de
 
     /**
      * Get Nose information. 
-The `Type` values of the `AttributeItem` include: 0: upturned nose; 1: aquiline nose; 2: general nose; 3: bulbous nose
+The `Type` values of the `AttributeItem` include: 0: upturned nose; 1: aquiline nose; 2: general nose; 3: bulbous nose.
 If `FaceAttributesType` does not include `Nose` or more than 5 faces are detected, this parameter will still be returned but meaningless. 
      * @return Nose Nose information. 
-The `Type` values of the `AttributeItem` include: 0: upturned nose; 1: aquiline nose; 2: general nose; 3: bulbous nose
+The `Type` values of the `AttributeItem` include: 0: upturned nose; 1: aquiline nose; 2: general nose; 3: bulbous nose.
 If `FaceAttributesType` does not include `Nose` or more than 5 faces are detected, this parameter will still be returned but meaningless.
      */
     public AttributeItem getNose() {
@@ -427,10 +427,10 @@ If `FaceAttributesType` does not include `Nose` or more than 5 faces are detecte
 
     /**
      * Set Nose information. 
-The `Type` values of the `AttributeItem` include: 0: upturned nose; 1: aquiline nose; 2: general nose; 3: bulbous nose
+The `Type` values of the `AttributeItem` include: 0: upturned nose; 1: aquiline nose; 2: general nose; 3: bulbous nose.
 If `FaceAttributesType` does not include `Nose` or more than 5 faces are detected, this parameter will still be returned but meaningless.
      * @param Nose Nose information. 
-The `Type` values of the `AttributeItem` include: 0: upturned nose; 1: aquiline nose; 2: general nose; 3: bulbous nose
+The `Type` values of the `AttributeItem` include: 0: upturned nose; 1: aquiline nose; 2: general nose; 3: bulbous nose.
 If `FaceAttributesType` does not include `Nose` or more than 5 faces are detected, this parameter will still be returned but meaningless.
      */
     public void setNose(AttributeItem Nose) {

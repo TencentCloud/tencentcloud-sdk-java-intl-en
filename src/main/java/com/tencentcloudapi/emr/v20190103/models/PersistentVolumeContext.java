@@ -39,7 +39,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String DiskType;
 
     /**
-    * 
+    * Number of disks
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DiskNum")
     @Expose
@@ -86,16 +87,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return DiskNum 
+     * Get Number of disks
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return DiskNum Number of disks
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getDiskNum() {
         return this.DiskNum;
     }
 
     /**
-     * Set 
-     * @param DiskNum 
+     * Set Number of disks
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param DiskNum Number of disks
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDiskNum(Long DiskNum) {
         this.DiskNum = DiskNum;

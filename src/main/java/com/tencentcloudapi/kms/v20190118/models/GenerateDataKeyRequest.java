@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class GenerateDataKeyRequest extends AbstractModel{
 
     /**
-    * 
+    * Globally unique CMK ID
     */
     @SerializedName("KeyId")
     @Expose
@@ -44,23 +44,23 @@ public class GenerateDataKeyRequest extends AbstractModel{
     private Long NumberOfBytes;
 
     /**
-    * 
+    * JSON string of key-value pair. If this field is used, the same string should be entered when the returned `DataKey` is decrypted.
     */
     @SerializedName("EncryptionContext")
     @Expose
     private String EncryptionContext;
 
     /**
-     * Get  
-     * @return KeyId 
+     * Get Globally unique CMK ID 
+     * @return KeyId Globally unique CMK ID
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * Set 
-     * @param KeyId 
+     * Set Globally unique CMK ID
+     * @param KeyId Globally unique CMK ID
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;
@@ -99,16 +99,16 @@ public class GenerateDataKeyRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return EncryptionContext 
+     * Get JSON string of key-value pair. If this field is used, the same string should be entered when the returned `DataKey` is decrypted. 
+     * @return EncryptionContext JSON string of key-value pair. If this field is used, the same string should be entered when the returned `DataKey` is decrypted.
      */
     public String getEncryptionContext() {
         return this.EncryptionContext;
     }
 
     /**
-     * Set 
-     * @param EncryptionContext 
+     * Set JSON string of key-value pair. If this field is used, the same string should be entered when the returned `DataKey` is decrypted.
+     * @param EncryptionContext JSON string of key-value pair. If this field is used, the same string should be entered when the returned `DataKey` is decrypted.
      */
     public void setEncryptionContext(String EncryptionContext) {
         this.EncryptionContext = EncryptionContext;

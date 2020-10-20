@@ -56,6 +56,16 @@ blacklist: indicates that only the file types in the FileExtensions list are aut
     private String FilterType;
 
     /**
+    * Timestamp settings
+dec: decimal
+hex: hexadecimal
+Note: this field may return `null`, indicating that no valid value is obtained.
+    */
+    @SerializedName("TimeFormat")
+    @Expose
+    private String TimeFormat;
+
+    /**
      * Get The key for signature calculation
 Only digits, upper and lower-case letters are allowed. Length limit: 6-32 characters.
 Note: this field may return null, indicating that no valid values can be obtained. 
@@ -140,6 +150,34 @@ blacklist: indicates that only the file types in the FileExtensions list are aut
     }
 
     /**
+     * Get Timestamp settings
+dec: decimal
+hex: hexadecimal
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return TimeFormat Timestamp settings
+dec: decimal
+hex: hexadecimal
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public String getTimeFormat() {
+        return this.TimeFormat;
+    }
+
+    /**
+     * Set Timestamp settings
+dec: decimal
+hex: hexadecimal
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param TimeFormat Timestamp settings
+dec: decimal
+hex: hexadecimal
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public void setTimeFormat(String TimeFormat) {
+        this.TimeFormat = TimeFormat;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -147,6 +185,7 @@ blacklist: indicates that only the file types in the FileExtensions list are aut
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamArraySimple(map, prefix + "FileExtensions.", this.FileExtensions);
         this.setParamSimple(map, prefix + "FilterType", this.FilterType);
+        this.setParamSimple(map, prefix + "TimeFormat", this.TimeFormat);
 
     }
 }

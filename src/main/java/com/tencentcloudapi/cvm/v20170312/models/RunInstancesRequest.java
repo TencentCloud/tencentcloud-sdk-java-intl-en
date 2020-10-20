@@ -182,6 +182,13 @@ false (default value): send a normal request and create instance(s) if all the r
     private Boolean DryRun;
 
     /**
+    * CAM role name, which can be obtained from the `roleName` field in the response of the [`DescribeRoleList`](https://intl.cloud.tencent.com/document/product/598/13887?from_cn_redirect=1) API.
+    */
+    @SerializedName("CamRoleName")
+    @Expose
+    private String CamRoleName;
+
+    /**
     * HPC cluster ID. The HPC cluster must and can only be specified for a high-performance computing instance.
     */
     @SerializedName("HpcClusterId")
@@ -561,6 +568,22 @@ false (default value): send a normal request and create instance(s) if all the r
     }
 
     /**
+     * Get CAM role name, which can be obtained from the `roleName` field in the response of the [`DescribeRoleList`](https://intl.cloud.tencent.com/document/product/598/13887?from_cn_redirect=1) API. 
+     * @return CamRoleName CAM role name, which can be obtained from the `roleName` field in the response of the [`DescribeRoleList`](https://intl.cloud.tencent.com/document/product/598/13887?from_cn_redirect=1) API.
+     */
+    public String getCamRoleName() {
+        return this.CamRoleName;
+    }
+
+    /**
+     * Set CAM role name, which can be obtained from the `roleName` field in the response of the [`DescribeRoleList`](https://intl.cloud.tencent.com/document/product/598/13887?from_cn_redirect=1) API.
+     * @param CamRoleName CAM role name, which can be obtained from the `roleName` field in the response of the [`DescribeRoleList`](https://intl.cloud.tencent.com/document/product/598/13887?from_cn_redirect=1) API.
+     */
+    public void setCamRoleName(String CamRoleName) {
+        this.CamRoleName = CamRoleName;
+    }
+
+    /**
      * Get HPC cluster ID. The HPC cluster must and can only be specified for a high-performance computing instance. 
      * @return HpcClusterId HPC cluster ID. The HPC cluster must and can only be specified for a high-performance computing instance.
      */
@@ -602,6 +625,7 @@ false (default value): send a normal request and create instance(s) if all the r
         this.setParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
         this.setParamSimple(map, prefix + "UserData", this.UserData);
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
+        this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
         this.setParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
 
     }

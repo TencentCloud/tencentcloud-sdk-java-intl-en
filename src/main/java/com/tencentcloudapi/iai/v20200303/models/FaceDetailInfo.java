@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class FaceDetailInfo extends AbstractModel{
 
     /**
-    * Position of detected face frame.
+    * Position of the detected face frame.
     */
     @SerializedName("FaceRect")
     @Expose
@@ -33,24 +33,24 @@ public class FaceDetailInfo extends AbstractModel{
     * Face attribute information. According to the types specified in `FaceAttributesType`, the following face attributes will be returned: age (Age), beauty score (Beauty), 
 emotion (Emotion), eye information (Eye), eyebrow information (Eyebrow), gender (Gender), 
 hair information (Hair), hat information (Hat), pose (Headpose), mask information (Mask), mouth information (Mouse), beard information (Moustache), 
-nose information (Nose), face shape (Shape), skin color (Skin), and smile information (Smile).  
-If no types are specified in `FaceAttributesType`, the detailed items returned by `FaceDetailAttributesInfo` will be meaningless.
+nose information (Nose), face shape (Shape), skin color (Skin), and smile information (Smile), etc.  
+If no types are specified in `FaceAttributesType`, the detailed items returned by `FaceDetaiAttributesInfo` will be meaningless.
     */
     @SerializedName("FaceDetailAttributesInfo")
     @Expose
     private FaceDetailAttributesInfo FaceDetailAttributesInfo;
 
     /**
-     * Get Position of detected face frame. 
-     * @return FaceRect Position of detected face frame.
+     * Get Position of the detected face frame. 
+     * @return FaceRect Position of the detected face frame.
      */
     public FaceRect getFaceRect() {
         return this.FaceRect;
     }
 
     /**
-     * Set Position of detected face frame.
-     * @param FaceRect Position of detected face frame.
+     * Set Position of the detected face frame.
+     * @param FaceRect Position of the detected face frame.
      */
     public void setFaceRect(FaceRect FaceRect) {
         this.FaceRect = FaceRect;
@@ -60,13 +60,13 @@ If no types are specified in `FaceAttributesType`, the detailed items returned b
      * Get Face attribute information. According to the types specified in `FaceAttributesType`, the following face attributes will be returned: age (Age), beauty score (Beauty), 
 emotion (Emotion), eye information (Eye), eyebrow information (Eyebrow), gender (Gender), 
 hair information (Hair), hat information (Hat), pose (Headpose), mask information (Mask), mouth information (Mouse), beard information (Moustache), 
-nose information (Nose), face shape (Shape), skin color (Skin), and smile information (Smile).  
-If no types are specified in `FaceAttributesType`, the detailed items returned by `FaceDetailAttributesInfo` will be meaningless. 
+nose information (Nose), face shape (Shape), skin color (Skin), and smile information (Smile), etc.  
+If no types are specified in `FaceAttributesType`, the detailed items returned by `FaceDetaiAttributesInfo` will be meaningless. 
      * @return FaceDetailAttributesInfo Face attribute information. According to the types specified in `FaceAttributesType`, the following face attributes will be returned: age (Age), beauty score (Beauty), 
 emotion (Emotion), eye information (Eye), eyebrow information (Eyebrow), gender (Gender), 
 hair information (Hair), hat information (Hat), pose (Headpose), mask information (Mask), mouth information (Mouse), beard information (Moustache), 
-nose information (Nose), face shape (Shape), skin color (Skin), and smile information (Smile).  
-If no types are specified in `FaceAttributesType`, the detailed items returned by `FaceDetailAttributesInfo` will be meaningless.
+nose information (Nose), face shape (Shape), skin color (Skin), and smile information (Smile), etc.  
+If no types are specified in `FaceAttributesType`, the detailed items returned by `FaceDetaiAttributesInfo` will be meaningless.
      */
     public FaceDetailAttributesInfo getFaceDetailAttributesInfo() {
         return this.FaceDetailAttributesInfo;
@@ -76,13 +76,13 @@ If no types are specified in `FaceAttributesType`, the detailed items returned b
      * Set Face attribute information. According to the types specified in `FaceAttributesType`, the following face attributes will be returned: age (Age), beauty score (Beauty), 
 emotion (Emotion), eye information (Eye), eyebrow information (Eyebrow), gender (Gender), 
 hair information (Hair), hat information (Hat), pose (Headpose), mask information (Mask), mouth information (Mouse), beard information (Moustache), 
-nose information (Nose), face shape (Shape), skin color (Skin), and smile information (Smile).  
-If no types are specified in `FaceAttributesType`, the detailed items returned by `FaceDetailAttributesInfo` will be meaningless.
+nose information (Nose), face shape (Shape), skin color (Skin), and smile information (Smile), etc.  
+If no types are specified in `FaceAttributesType`, the detailed items returned by `FaceDetaiAttributesInfo` will be meaningless.
      * @param FaceDetailAttributesInfo Face attribute information. According to the types specified in `FaceAttributesType`, the following face attributes will be returned: age (Age), beauty score (Beauty), 
 emotion (Emotion), eye information (Eye), eyebrow information (Eyebrow), gender (Gender), 
 hair information (Hair), hat information (Hat), pose (Headpose), mask information (Mask), mouth information (Mouse), beard information (Moustache), 
-nose information (Nose), face shape (Shape), skin color (Skin), and smile information (Smile).  
-If no types are specified in `FaceAttributesType`, the detailed items returned by `FaceDetailAttributesInfo` will be meaningless.
+nose information (Nose), face shape (Shape), skin color (Skin), and smile information (Smile), etc.  
+If no types are specified in `FaceAttributesType`, the detailed items returned by `FaceDetaiAttributesInfo` will be meaningless.
      */
     public void setFaceDetailAttributesInfo(FaceDetailAttributesInfo FaceDetailAttributesInfo) {
         this.FaceDetailAttributesInfo = FaceDetailAttributesInfo;

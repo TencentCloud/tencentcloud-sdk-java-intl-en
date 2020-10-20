@@ -30,7 +30,7 @@ public class DecryptRequest extends AbstractModel{
     private String CiphertextBlob;
 
     /**
-    * 
+    * JSON string of key-value pair. If this parameter is specified for `Encrypt`, the same parameter needs to be provided when the `Decrypt` API is called. The maximum length is 1,024 bytes.
     */
     @SerializedName("EncryptionContext")
     @Expose
@@ -53,16 +53,16 @@ public class DecryptRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return EncryptionContext 
+     * Get JSON string of key-value pair. If this parameter is specified for `Encrypt`, the same parameter needs to be provided when the `Decrypt` API is called. The maximum length is 1,024 bytes. 
+     * @return EncryptionContext JSON string of key-value pair. If this parameter is specified for `Encrypt`, the same parameter needs to be provided when the `Decrypt` API is called. The maximum length is 1,024 bytes.
      */
     public String getEncryptionContext() {
         return this.EncryptionContext;
     }
 
     /**
-     * Set 
-     * @param EncryptionContext 
+     * Set JSON string of key-value pair. If this parameter is specified for `Encrypt`, the same parameter needs to be provided when the `Decrypt` API is called. The maximum length is 1,024 bytes.
+     * @param EncryptionContext JSON string of key-value pair. If this parameter is specified for `Encrypt`, the same parameter needs to be provided when the `Decrypt` API is called. The maximum length is 1,024 bytes.
      */
     public void setEncryptionContext(String EncryptionContext) {
         this.EncryptionContext = EncryptionContext;

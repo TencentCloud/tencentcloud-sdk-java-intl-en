@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DescribeLiveTranscodeRulesRequest extends AbstractModel{
 
     /**
-    * 
+    * An array of template IDs to be filtered.
     */
     @SerializedName("TemplateIds")
     @Expose
     private Long [] TemplateIds;
 
     /**
-    * 
+    * An array of domain names to be filtered.
     */
     @SerializedName("DomainNames")
     @Expose
     private String [] DomainNames;
 
     /**
-     * Get  
-     * @return TemplateIds 
+     * Get An array of template IDs to be filtered. 
+     * @return TemplateIds An array of template IDs to be filtered.
      */
     public Long [] getTemplateIds() {
         return this.TemplateIds;
     }
 
     /**
-     * Set 
-     * @param TemplateIds 
+     * Set An array of template IDs to be filtered.
+     * @param TemplateIds An array of template IDs to be filtered.
      */
     public void setTemplateIds(Long [] TemplateIds) {
         this.TemplateIds = TemplateIds;
     }
 
     /**
-     * Get  
-     * @return DomainNames 
+     * Get An array of domain names to be filtered. 
+     * @return DomainNames An array of domain names to be filtered.
      */
     public String [] getDomainNames() {
         return this.DomainNames;
     }
 
     /**
-     * Set 
-     * @param DomainNames 
+     * Set An array of domain names to be filtered.
+     * @param DomainNames An array of domain names to be filtered.
      */
     public void setDomainNames(String [] DomainNames) {
         this.DomainNames = DomainNames;

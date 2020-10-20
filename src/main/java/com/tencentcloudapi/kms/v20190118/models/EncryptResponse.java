@@ -30,7 +30,7 @@ public class EncryptResponse extends AbstractModel{
     private String CiphertextBlob;
 
     /**
-    * 
+    * Globally unique ID of the CMK used for encryption
     */
     @SerializedName("KeyId")
     @Expose
@@ -60,16 +60,16 @@ public class EncryptResponse extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return KeyId 
+     * Get Globally unique ID of the CMK used for encryption 
+     * @return KeyId Globally unique ID of the CMK used for encryption
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * Set 
-     * @param KeyId 
+     * Set Globally unique ID of the CMK used for encryption
+     * @param KeyId Globally unique ID of the CMK used for encryption
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;

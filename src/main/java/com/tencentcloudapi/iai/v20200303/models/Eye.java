@@ -24,7 +24,7 @@ public class Eye extends AbstractModel{
 
     /**
     * Whether glasses are worn.
-The `Type` values of the `AttributeItem` include: 0: no glasses; 1: general glasses; 2: sunglasses
+The `Type` values of the `AttributeItem` include: 0: no glasses; 1: general glasses; 2: sunglasses.
     */
     @SerializedName("Glass")
     @Expose
@@ -32,7 +32,7 @@ The `Type` values of the `AttributeItem` include: 0: no glasses; 1: general glas
 
     /**
     * Whether the eyes are open.
-The `Type` values of the `AttributeItem` include: 0: open; 1: closed
+The `Type` values of the `AttributeItem` include: 0: open; 1: closed.
     */
     @SerializedName("EyeOpen")
     @Expose
@@ -56,9 +56,9 @@ The `Type` values of the `AttributeItem` include: 0: small eyes; 1: general eyes
 
     /**
      * Get Whether glasses are worn.
-The `Type` values of the `AttributeItem` include: 0: no glasses; 1: general glasses; 2: sunglasses 
+The `Type` values of the `AttributeItem` include: 0: no glasses; 1: general glasses; 2: sunglasses. 
      * @return Glass Whether glasses are worn.
-The `Type` values of the `AttributeItem` include: 0: no glasses; 1: general glasses; 2: sunglasses
+The `Type` values of the `AttributeItem` include: 0: no glasses; 1: general glasses; 2: sunglasses.
      */
     public AttributeItem getGlass() {
         return this.Glass;
@@ -66,9 +66,9 @@ The `Type` values of the `AttributeItem` include: 0: no glasses; 1: general glas
 
     /**
      * Set Whether glasses are worn.
-The `Type` values of the `AttributeItem` include: 0: no glasses; 1: general glasses; 2: sunglasses
+The `Type` values of the `AttributeItem` include: 0: no glasses; 1: general glasses; 2: sunglasses.
      * @param Glass Whether glasses are worn.
-The `Type` values of the `AttributeItem` include: 0: no glasses; 1: general glasses; 2: sunglasses
+The `Type` values of the `AttributeItem` include: 0: no glasses; 1: general glasses; 2: sunglasses.
      */
     public void setGlass(AttributeItem Glass) {
         this.Glass = Glass;
@@ -76,9 +76,9 @@ The `Type` values of the `AttributeItem` include: 0: no glasses; 1: general glas
 
     /**
      * Get Whether the eyes are open.
-The `Type` values of the `AttributeItem` include: 0: open; 1: closed 
+The `Type` values of the `AttributeItem` include: 0: open; 1: closed. 
      * @return EyeOpen Whether the eyes are open.
-The `Type` values of the `AttributeItem` include: 0: open; 1: closed
+The `Type` values of the `AttributeItem` include: 0: open; 1: closed.
      */
     public AttributeItem getEyeOpen() {
         return this.EyeOpen;
@@ -86,9 +86,9 @@ The `Type` values of the `AttributeItem` include: 0: open; 1: closed
 
     /**
      * Set Whether the eyes are open.
-The `Type` values of the `AttributeItem` include: 0: open; 1: closed
+The `Type` values of the `AttributeItem` include: 0: open; 1: closed.
      * @param EyeOpen Whether the eyes are open.
-The `Type` values of the `AttributeItem` include: 0: open; 1: closed
+The `Type` values of the `AttributeItem` include: 0: open; 1: closed.
      */
     public void setEyeOpen(AttributeItem EyeOpen) {
         this.EyeOpen = EyeOpen;

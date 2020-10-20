@@ -24,7 +24,8 @@ public class InstanceAdvancedSettings extends AbstractModel{
 
     /**
     * Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
-Note: This field may return null, indicating that no valid value was found.
+Note: in multi-disk scenarios, use the DataDisks data structure below to set the corresponding information, such as cloud disk type, cloud disk size, mount path, and whether to perform formatting.
+Note: this field may return `null`, indicating that no valid value is obtained.
     */
     @SerializedName("MountTarget")
     @Expose
@@ -62,8 +63,8 @@ Note: This field may return null, indicating that no valid value was found.
     private Label [] Labels;
 
     /**
-    * Data disk information
-Note: This field may return null, indicating that no valid value was found.
+    * Mounting information of multiple data disks. Ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks. If the purchase of multiple data disks is also set in DataDisks under RunInstancesPara of the CreateClusterInstances API for adding nodes, you can refer to the example of adding cluster nodes (multiple data disks) for the CreateClusterInstances API.
+Note: this field may return `null`, indicating that no valid value is obtained.
     */
     @SerializedName("DataDisks")
     @Expose
@@ -79,9 +80,11 @@ Note: This field may return null, indicating that no valid value was found.
 
     /**
      * Get Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
-Note: This field may return null, indicating that no valid value was found. 
+Note: in multi-disk scenarios, use the DataDisks data structure below to set the corresponding information, such as cloud disk type, cloud disk size, mount path, and whether to perform formatting.
+Note: this field may return `null`, indicating that no valid value is obtained. 
      * @return MountTarget Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
-Note: This field may return null, indicating that no valid value was found.
+Note: in multi-disk scenarios, use the DataDisks data structure below to set the corresponding information, such as cloud disk type, cloud disk size, mount path, and whether to perform formatting.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public String getMountTarget() {
         return this.MountTarget;
@@ -89,9 +92,11 @@ Note: This field may return null, indicating that no valid value was found.
 
     /**
      * Set Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
-Note: This field may return null, indicating that no valid value was found.
+Note: in multi-disk scenarios, use the DataDisks data structure below to set the corresponding information, such as cloud disk type, cloud disk size, mount path, and whether to perform formatting.
+Note: this field may return `null`, indicating that no valid value is obtained.
      * @param MountTarget Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
-Note: This field may return null, indicating that no valid value was found.
+Note: in multi-disk scenarios, use the DataDisks data structure below to set the corresponding information, such as cloud disk type, cloud disk size, mount path, and whether to perform formatting.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public void setMountTarget(String MountTarget) {
         this.MountTarget = MountTarget;
@@ -174,20 +179,20 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Data disk information
-Note: This field may return null, indicating that no valid value was found. 
-     * @return DataDisks Data disk information
-Note: This field may return null, indicating that no valid value was found.
+     * Get Mounting information of multiple data disks. Ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks. If the purchase of multiple data disks is also set in DataDisks under RunInstancesPara of the CreateClusterInstances API for adding nodes, you can refer to the example of adding cluster nodes (multiple data disks) for the CreateClusterInstances API.
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return DataDisks Mounting information of multiple data disks. Ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks. If the purchase of multiple data disks is also set in DataDisks under RunInstancesPara of the CreateClusterInstances API for adding nodes, you can refer to the example of adding cluster nodes (multiple data disks) for the CreateClusterInstances API.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public DataDisk [] getDataDisks() {
         return this.DataDisks;
     }
 
     /**
-     * Set Data disk information
-Note: This field may return null, indicating that no valid value was found.
-     * @param DataDisks Data disk information
-Note: This field may return null, indicating that no valid value was found.
+     * Set Mounting information of multiple data disks. Ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks. If the purchase of multiple data disks is also set in DataDisks under RunInstancesPara of the CreateClusterInstances API for adding nodes, you can refer to the example of adding cluster nodes (multiple data disks) for the CreateClusterInstances API.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param DataDisks Mounting information of multiple data disks. Ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks. If the purchase of multiple data disks is also set in DataDisks under RunInstancesPara of the CreateClusterInstances API for adding nodes, you can refer to the example of adding cluster nodes (multiple data disks) for the CreateClusterInstances API.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public void setDataDisks(DataDisk [] DataDisks) {
         this.DataDisks = DataDisks;

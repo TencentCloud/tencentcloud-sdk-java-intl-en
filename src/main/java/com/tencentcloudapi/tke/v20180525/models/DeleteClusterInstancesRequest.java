@@ -44,7 +44,7 @@ public class DeleteClusterInstancesRequest extends AbstractModel{
     private String InstanceDeleteMode;
 
     /**
-    * 
+    * Whether or not there is forced deletion (when a node is initialized, the parameters can be specified as TRUE)
     */
     @SerializedName("ForceDelete")
     @Expose
@@ -99,16 +99,16 @@ public class DeleteClusterInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return ForceDelete 
+     * Get Whether or not there is forced deletion (when a node is initialized, the parameters can be specified as TRUE) 
+     * @return ForceDelete Whether or not there is forced deletion (when a node is initialized, the parameters can be specified as TRUE)
      */
     public Boolean getForceDelete() {
         return this.ForceDelete;
     }
 
     /**
-     * Set 
-     * @param ForceDelete 
+     * Set Whether or not there is forced deletion (when a node is initialized, the parameters can be specified as TRUE)
+     * @param ForceDelete Whether or not there is forced deletion (when a node is initialized, the parameters can be specified as TRUE)
      */
     public void setForceDelete(Boolean ForceDelete) {
         this.ForceDelete = ForceDelete;

@@ -418,6 +418,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to obtain the cluster kubeconfig file. Different sub-accounts have their own kubeconfig files. The kubeconfig file contains the kube-apiserver client certificate of the corresponding sub-account. By default, the client certificate is created when this API is called for the first time, and the certificate is valid for 20 years with no permissions granted. For the cluster owner or primary account, the cluster-admin permission is granted by default.
+     * @param req DescribeClusterKubeconfigRequest
+     * @return DescribeClusterKubeconfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterKubeconfigResponse DescribeClusterKubeconfig(DescribeClusterKubeconfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterKubeconfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterKubeconfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClusterKubeconfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query one or more cluster route tables.
      * @param req DescribeClusterRouteTablesRequest
      * @return DescribeClusterRouteTablesResponse

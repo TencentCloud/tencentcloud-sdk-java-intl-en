@@ -45,7 +45,7 @@ Number of nodes (2-50)
     private Long NodeNum;
 
     /**
-    * Configuration item (JSON string). Only the following items are supported currently: <li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
+    * Configuration item (JSON string)
     */
     @SerializedName("EsConfig")
     @Expose
@@ -176,6 +176,20 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
     private Long ScaleType;
 
     /**
+    * Multi-AZ deployment
+    */
+    @SerializedName("MultiZoneInfo")
+    @Expose
+    private ZoneDetail [] MultiZoneInfo;
+
+    /**
+    * Scenario template type. -1: not enabled; 1: general; 2: log; 3: search
+    */
+    @SerializedName("SceneType")
+    @Expose
+    private Long SceneType;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -228,16 +242,16 @@ Number of nodes (2-50)
     }
 
     /**
-     * Get Configuration item (JSON string). Only the following items are supported currently: <li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li> 
-     * @return EsConfig Configuration item (JSON string). Only the following items are supported currently: <li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
+     * Get Configuration item (JSON string) 
+     * @return EsConfig Configuration item (JSON string)
      */
     public String getEsConfig() {
         return this.EsConfig;
     }
 
     /**
-     * Set Configuration item (JSON string). Only the following items are supported currently: <li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
-     * @param EsConfig Configuration item (JSON string). Only the following items are supported currently: <li>action.destructive_requires_name</li><li>indices.fielddata.cache.size</li><li>indices.query.bool.max_clause_count</li>
+     * Set Configuration item (JSON string)
+     * @param EsConfig Configuration item (JSON string)
      */
     public void setEsConfig(String EsConfig) {
         this.EsConfig = EsConfig;
@@ -536,6 +550,38 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
     }
 
     /**
+     * Get Multi-AZ deployment 
+     * @return MultiZoneInfo Multi-AZ deployment
+     */
+    public ZoneDetail [] getMultiZoneInfo() {
+        return this.MultiZoneInfo;
+    }
+
+    /**
+     * Set Multi-AZ deployment
+     * @param MultiZoneInfo Multi-AZ deployment
+     */
+    public void setMultiZoneInfo(ZoneDetail [] MultiZoneInfo) {
+        this.MultiZoneInfo = MultiZoneInfo;
+    }
+
+    /**
+     * Get Scenario template type. -1: not enabled; 1: general; 2: log; 3: search 
+     * @return SceneType Scenario template type. -1: not enabled; 1: general; 2: log; 3: search
+     */
+    public Long getSceneType() {
+        return this.SceneType;
+    }
+
+    /**
+     * Set Scenario template type. -1: not enabled; 1: general; 2: log; 3: search
+     * @param SceneType Scenario template type. -1: not enabled; 1: general; 2: log; 3: search
+     */
+    public void setSceneType(Long SceneType) {
+        this.SceneType = SceneType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -560,6 +606,8 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
         this.setParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
         this.setParamSimple(map, prefix + "KibanaPrivatePort", this.KibanaPrivatePort);
         this.setParamSimple(map, prefix + "ScaleType", this.ScaleType);
+        this.setParamArrayObj(map, prefix + "MultiZoneInfo.", this.MultiZoneInfo);
+        this.setParamSimple(map, prefix + "SceneType", this.SceneType);
 
     }
 }

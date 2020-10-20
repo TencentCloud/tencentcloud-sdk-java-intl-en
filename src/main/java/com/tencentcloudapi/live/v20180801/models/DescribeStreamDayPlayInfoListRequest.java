@@ -23,8 +23,8 @@ import java.util.HashMap;
 public class DescribeStreamDayPlayInfoListRequest extends AbstractModel{
 
     /**
-    * Date in the format of `YYYY-mm-dd`.
-Data is available at 3 AM the next day. You are recommended to query the latest data after this time point.
+    * Date in the format of YYYY-mm-dd
+Data is available at 3am Beijing Time the next day. You are recommended to query the latest data after this time point. Data in the last 3 months can be queried.
     */
     @SerializedName("DayTime")
     @Expose
@@ -52,20 +52,20 @@ Data is available at 3 AM the next day. You are recommended to query the latest 
     private Long PageSize;
 
     /**
-     * Get Date in the format of `YYYY-mm-dd`.
-Data is available at 3 AM the next day. You are recommended to query the latest data after this time point. 
-     * @return DayTime Date in the format of `YYYY-mm-dd`.
-Data is available at 3 AM the next day. You are recommended to query the latest data after this time point.
+     * Get Date in the format of YYYY-mm-dd
+Data is available at 3am Beijing Time the next day. You are recommended to query the latest data after this time point. Data in the last 3 months can be queried. 
+     * @return DayTime Date in the format of YYYY-mm-dd
+Data is available at 3am Beijing Time the next day. You are recommended to query the latest data after this time point. Data in the last 3 months can be queried.
      */
     public String getDayTime() {
         return this.DayTime;
     }
 
     /**
-     * Set Date in the format of `YYYY-mm-dd`.
-Data is available at 3 AM the next day. You are recommended to query the latest data after this time point.
-     * @param DayTime Date in the format of `YYYY-mm-dd`.
-Data is available at 3 AM the next day. You are recommended to query the latest data after this time point.
+     * Set Date in the format of YYYY-mm-dd
+Data is available at 3am Beijing Time the next day. You are recommended to query the latest data after this time point. Data in the last 3 months can be queried.
+     * @param DayTime Date in the format of YYYY-mm-dd
+Data is available at 3am Beijing Time the next day. You are recommended to query the latest data after this time point. Data in the last 3 months can be queried.
      */
     public void setDayTime(String DayTime) {
         this.DayTime = DayTime;

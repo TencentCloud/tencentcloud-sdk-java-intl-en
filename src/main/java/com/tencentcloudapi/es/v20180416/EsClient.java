@@ -158,6 +158,26 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to restart cluster nodes.
+     * @param req RestartNodesRequest
+     * @return RestartNodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestartNodesResponse RestartNodes(RestartNodesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RestartNodesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RestartNodesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RestartNodes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used for operations such as modifying node specification, renaming an instance, modifying configuration, resetting password, and setting Kibana blocklist/allowlist. `InstanceId` is required, while `ForceRestart` is optional. Other parameters or parameter combinations and their meanings are as follows:
 - InstanceName: renames an instance (only for instance identification)
 - NodeInfoList: modifies node configuration (horizontally scaling nodes, vertically scaling nodes, adding primary nodes, adding cold nodes, etc.)

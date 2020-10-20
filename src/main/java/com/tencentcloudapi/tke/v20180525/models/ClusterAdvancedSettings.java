@@ -44,7 +44,7 @@ public class ClusterAdvancedSettings extends AbstractModel{
     private String ContainerRuntime;
 
     /**
-    * 
+    * NodeName type for a node in a cluster (This includes the two forms of **hostname** and **lan-ip**, with the default as **lan-ip**. If **hostname** is used, you need to set the HostName parameter when creating a node, and the InstanceName needs to be the same as the HostName.)
     */
     @SerializedName("NodeNameType")
     @Expose
@@ -72,14 +72,14 @@ public class ClusterAdvancedSettings extends AbstractModel{
     private Boolean IsNonStaticIpMode;
 
     /**
-    * 
+    * Indicates whether to enable cluster deletion protection.
     */
     @SerializedName("DeletionProtection")
     @Expose
     private Boolean DeletionProtection;
 
     /**
-    * 
+    * Cluster network proxy model
     */
     @SerializedName("KubeProxyMode")
     @Expose
@@ -155,16 +155,16 @@ public class ClusterAdvancedSettings extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return NodeNameType 
+     * Get NodeName type for a node in a cluster (This includes the two forms of **hostname** and **lan-ip**, with the default as **lan-ip**. If **hostname** is used, you need to set the HostName parameter when creating a node, and the InstanceName needs to be the same as the HostName.) 
+     * @return NodeNameType NodeName type for a node in a cluster (This includes the two forms of **hostname** and **lan-ip**, with the default as **lan-ip**. If **hostname** is used, you need to set the HostName parameter when creating a node, and the InstanceName needs to be the same as the HostName.)
      */
     public String getNodeNameType() {
         return this.NodeNameType;
     }
 
     /**
-     * Set 
-     * @param NodeNameType 
+     * Set NodeName type for a node in a cluster (This includes the two forms of **hostname** and **lan-ip**, with the default as **lan-ip**. If **hostname** is used, you need to set the HostName parameter when creating a node, and the InstanceName needs to be the same as the HostName.)
+     * @param NodeNameType NodeName type for a node in a cluster (This includes the two forms of **hostname** and **lan-ip**, with the default as **lan-ip**. If **hostname** is used, you need to set the HostName parameter when creating a node, and the InstanceName needs to be the same as the HostName.)
      */
     public void setNodeNameType(String NodeNameType) {
         this.NodeNameType = NodeNameType;
@@ -219,32 +219,32 @@ public class ClusterAdvancedSettings extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return DeletionProtection 
+     * Get Indicates whether to enable cluster deletion protection. 
+     * @return DeletionProtection Indicates whether to enable cluster deletion protection.
      */
     public Boolean getDeletionProtection() {
         return this.DeletionProtection;
     }
 
     /**
-     * Set 
-     * @param DeletionProtection 
+     * Set Indicates whether to enable cluster deletion protection.
+     * @param DeletionProtection Indicates whether to enable cluster deletion protection.
      */
     public void setDeletionProtection(Boolean DeletionProtection) {
         this.DeletionProtection = DeletionProtection;
     }
 
     /**
-     * Get  
-     * @return KubeProxyMode 
+     * Get Cluster network proxy model 
+     * @return KubeProxyMode Cluster network proxy model
      */
     public String getKubeProxyMode() {
         return this.KubeProxyMode;
     }
 
     /**
-     * Set 
-     * @param KubeProxyMode 
+     * Set Cluster network proxy model
+     * @param KubeProxyMode Cluster network proxy model
      */
     public void setKubeProxyMode(String KubeProxyMode) {
         this.KubeProxyMode = KubeProxyMode;

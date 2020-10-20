@@ -24,7 +24,7 @@ public class Hair extends AbstractModel{
 
     /**
     * Hair length information.
-The `Type` values of the `AttributeItem` include: 0: shaved head, 1: short hair, 2: medium hair, 3: long hair, 4: braid.
+The `Type` values of the `AttributeItem` include: 0: bald, 1: short hair, 2: medium hair, 3: long hair, 4: braid.
     */
     @SerializedName("Length")
     @Expose
@@ -48,9 +48,9 @@ The `Type` values of the `AttributeItem` include: 0: black; 1: golden; 2: brown;
 
     /**
      * Get Hair length information.
-The `Type` values of the `AttributeItem` include: 0: shaved head, 1: short hair, 2: medium hair, 3: long hair, 4: braid. 
+The `Type` values of the `AttributeItem` include: 0: bald, 1: short hair, 2: medium hair, 3: long hair, 4: braid. 
      * @return Length Hair length information.
-The `Type` values of the `AttributeItem` include: 0: shaved head, 1: short hair, 2: medium hair, 3: long hair, 4: braid.
+The `Type` values of the `AttributeItem` include: 0: bald, 1: short hair, 2: medium hair, 3: long hair, 4: braid.
      */
     public AttributeItem getLength() {
         return this.Length;
@@ -58,9 +58,9 @@ The `Type` values of the `AttributeItem` include: 0: shaved head, 1: short hair,
 
     /**
      * Set Hair length information.
-The `Type` values of the `AttributeItem` include: 0: shaved head, 1: short hair, 2: medium hair, 3: long hair, 4: braid.
+The `Type` values of the `AttributeItem` include: 0: bald, 1: short hair, 2: medium hair, 3: long hair, 4: braid.
      * @param Length Hair length information.
-The `Type` values of the `AttributeItem` include: 0: shaved head, 1: short hair, 2: medium hair, 3: long hair, 4: braid.
+The `Type` values of the `AttributeItem` include: 0: bald, 1: short hair, 2: medium hair, 3: long hair, 4: braid.
      */
     public void setLength(AttributeItem Length) {
         this.Length = Length;

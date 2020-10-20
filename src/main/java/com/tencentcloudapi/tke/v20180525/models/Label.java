@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class Label extends AbstractModel{
 
     /**
-    * 
+    * Name in map list
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * Value in map list
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get  
-     * @return Name 
+     * Get Name in map list 
+     * @return Name Name in map list
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Name in map list
+     * @param Name Name in map list
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Value 
+     * Get Value in map list 
+     * @return Value Value in map list
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set 
-     * @param Value 
+     * Set Value in map list
+     * @param Value Value in map list
      */
     public void setValue(String Value) {
         this.Value = Value;

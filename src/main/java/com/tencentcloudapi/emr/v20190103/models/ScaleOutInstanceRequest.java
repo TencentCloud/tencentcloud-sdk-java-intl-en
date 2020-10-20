@@ -140,6 +140,27 @@ public class ScaleOutInstanceRequest extends AbstractModel{
     private PodSpec PodSpec;
 
     /**
+    * Machine group name selected for ClickHouse cluster scaling-out
+    */
+    @SerializedName("ClickHouseClusterName")
+    @Expose
+    private String ClickHouseClusterName;
+
+    /**
+    * Machine group type selected for ClickHouse cluster scaling-out. new: creates a group; old: selects an existing group
+    */
+    @SerializedName("ClickHouseClusterType")
+    @Expose
+    private String ClickHouseClusterType;
+
+    /**
+    * YARN node label specified for rule-based scaling-out
+    */
+    @SerializedName("YarnNodeLabel")
+    @Expose
+    private String YarnNodeLabel;
+
+    /**
      * Get Time unit of scale-out. Valid values:
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
 <li>m: month. When `PayMode` is 1, `TimeUnit` can only be `m`.</li> 
@@ -416,6 +437,54 @@ public class ScaleOutInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get Machine group name selected for ClickHouse cluster scaling-out 
+     * @return ClickHouseClusterName Machine group name selected for ClickHouse cluster scaling-out
+     */
+    public String getClickHouseClusterName() {
+        return this.ClickHouseClusterName;
+    }
+
+    /**
+     * Set Machine group name selected for ClickHouse cluster scaling-out
+     * @param ClickHouseClusterName Machine group name selected for ClickHouse cluster scaling-out
+     */
+    public void setClickHouseClusterName(String ClickHouseClusterName) {
+        this.ClickHouseClusterName = ClickHouseClusterName;
+    }
+
+    /**
+     * Get Machine group type selected for ClickHouse cluster scaling-out. new: creates a group; old: selects an existing group 
+     * @return ClickHouseClusterType Machine group type selected for ClickHouse cluster scaling-out. new: creates a group; old: selects an existing group
+     */
+    public String getClickHouseClusterType() {
+        return this.ClickHouseClusterType;
+    }
+
+    /**
+     * Set Machine group type selected for ClickHouse cluster scaling-out. new: creates a group; old: selects an existing group
+     * @param ClickHouseClusterType Machine group type selected for ClickHouse cluster scaling-out. new: creates a group; old: selects an existing group
+     */
+    public void setClickHouseClusterType(String ClickHouseClusterType) {
+        this.ClickHouseClusterType = ClickHouseClusterType;
+    }
+
+    /**
+     * Get YARN node label specified for rule-based scaling-out 
+     * @return YarnNodeLabel YARN node label specified for rule-based scaling-out
+     */
+    public String getYarnNodeLabel() {
+        return this.YarnNodeLabel;
+    }
+
+    /**
+     * Set YARN node label specified for rule-based scaling-out
+     * @param YarnNodeLabel YARN node label specified for rule-based scaling-out
+     */
+    public void setYarnNodeLabel(String YarnNodeLabel) {
+        this.YarnNodeLabel = YarnNodeLabel;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -435,6 +504,9 @@ public class ScaleOutInstanceRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "HardwareResourceType", this.HardwareResourceType);
         this.setParamObj(map, prefix + "PodSpec.", this.PodSpec);
+        this.setParamSimple(map, prefix + "ClickHouseClusterName", this.ClickHouseClusterName);
+        this.setParamSimple(map, prefix + "ClickHouseClusterType", this.ClickHouseClusterType);
+        this.setParamSimple(map, prefix + "YarnNodeLabel", this.YarnNodeLabel);
 
     }
 }

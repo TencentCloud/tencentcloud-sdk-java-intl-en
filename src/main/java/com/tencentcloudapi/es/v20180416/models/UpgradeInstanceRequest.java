@@ -58,6 +58,13 @@ public class UpgradeInstanceRequest extends AbstractModel{
     private Long BasicSecurityType;
 
     /**
+    * Upgrade mode. <li>scale: blue/green deployment</li><li>restart: rolling restart</li>Default value: scale
+    */
+    @SerializedName("UpgradeMode")
+    @Expose
+    private String UpgradeMode;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -138,6 +145,22 @@ public class UpgradeInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get Upgrade mode. <li>scale: blue/green deployment</li><li>restart: rolling restart</li>Default value: scale 
+     * @return UpgradeMode Upgrade mode. <li>scale: blue/green deployment</li><li>restart: rolling restart</li>Default value: scale
+     */
+    public String getUpgradeMode() {
+        return this.UpgradeMode;
+    }
+
+    /**
+     * Set Upgrade mode. <li>scale: blue/green deployment</li><li>restart: rolling restart</li>Default value: scale
+     * @param UpgradeMode Upgrade mode. <li>scale: blue/green deployment</li><li>restart: rolling restart</li>Default value: scale
+     */
+    public void setUpgradeMode(String UpgradeMode) {
+        this.UpgradeMode = UpgradeMode;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class UpgradeInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CheckOnly", this.CheckOnly);
         this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
         this.setParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
+        this.setParamSimple(map, prefix + "UpgradeMode", this.UpgradeMode);
 
     }
 }

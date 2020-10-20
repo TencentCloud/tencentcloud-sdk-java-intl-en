@@ -44,14 +44,14 @@ public class CreateWhiteBoxKeyResponse extends AbstractModel{
     private String KeyId;
 
     /**
-    * 
+    * Tag operation return code. 0: success; 1: internal error; 2: business processing error
     */
     @SerializedName("TagCode")
     @Expose
     private Long TagCode;
 
     /**
-    * 
+    * Tag operation return message
     */
     @SerializedName("TagMsg")
     @Expose
@@ -113,32 +113,32 @@ public class CreateWhiteBoxKeyResponse extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return TagCode 
+     * Get Tag operation return code. 0: success; 1: internal error; 2: business processing error 
+     * @return TagCode Tag operation return code. 0: success; 1: internal error; 2: business processing error
      */
     public Long getTagCode() {
         return this.TagCode;
     }
 
     /**
-     * Set 
-     * @param TagCode 
+     * Set Tag operation return code. 0: success; 1: internal error; 2: business processing error
+     * @param TagCode Tag operation return code. 0: success; 1: internal error; 2: business processing error
      */
     public void setTagCode(Long TagCode) {
         this.TagCode = TagCode;
     }
 
     /**
-     * Get  
-     * @return TagMsg 
+     * Get Tag operation return message 
+     * @return TagMsg Tag operation return message
      */
     public String getTagMsg() {
         return this.TagMsg;
     }
 
     /**
-     * Set 
-     * @param TagMsg 
+     * Set Tag operation return message
+     * @param TagMsg Tag operation return message
      */
     public void setTagMsg(String TagMsg) {
         this.TagMsg = TagMsg;

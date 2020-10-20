@@ -86,21 +86,21 @@ public class Cluster extends AbstractModel{
     private Long ProjectId;
 
     /**
-    * 
+    * Tag description list.
     */
     @SerializedName("TagSpecification")
     @Expose
     private TagSpecification [] TagSpecification;
 
     /**
-    * 
+    * Cluster status (Running, Creating, or Abnormal)
     */
     @SerializedName("ClusterStatus")
     @Expose
     private String ClusterStatus;
 
     /**
-    * 
+    * Cluster attributes (including a map of different cluster attributes, with attribute fields including NodeNameType (lan-ip mode and hostname mode, with lan-ip mode as default))
     */
     @SerializedName("Property")
     @Expose
@@ -298,48 +298,48 @@ Note: this field may return null, indicating that no valid value is obtained.
     }
 
     /**
-     * Get  
-     * @return TagSpecification 
+     * Get Tag description list. 
+     * @return TagSpecification Tag description list.
      */
     public TagSpecification [] getTagSpecification() {
         return this.TagSpecification;
     }
 
     /**
-     * Set 
-     * @param TagSpecification 
+     * Set Tag description list.
+     * @param TagSpecification Tag description list.
      */
     public void setTagSpecification(TagSpecification [] TagSpecification) {
         this.TagSpecification = TagSpecification;
     }
 
     /**
-     * Get  
-     * @return ClusterStatus 
+     * Get Cluster status (Running, Creating, or Abnormal) 
+     * @return ClusterStatus Cluster status (Running, Creating, or Abnormal)
      */
     public String getClusterStatus() {
         return this.ClusterStatus;
     }
 
     /**
-     * Set 
-     * @param ClusterStatus 
+     * Set Cluster status (Running, Creating, or Abnormal)
+     * @param ClusterStatus Cluster status (Running, Creating, or Abnormal)
      */
     public void setClusterStatus(String ClusterStatus) {
         this.ClusterStatus = ClusterStatus;
     }
 
     /**
-     * Get  
-     * @return Property 
+     * Get Cluster attributes (including a map of different cluster attributes, with attribute fields including NodeNameType (lan-ip mode and hostname mode, with lan-ip mode as default)) 
+     * @return Property Cluster attributes (including a map of different cluster attributes, with attribute fields including NodeNameType (lan-ip mode and hostname mode, with lan-ip mode as default))
      */
     public String getProperty() {
         return this.Property;
     }
 
     /**
-     * Set 
-     * @param Property 
+     * Set Cluster attributes (including a map of different cluster attributes, with attribute fields including NodeNameType (lan-ip mode and hostname mode, with lan-ip mode as default))
+     * @param Property Cluster attributes (including a map of different cluster attributes, with attribute fields including NodeNameType (lan-ip mode and hostname mode, with lan-ip mode as default))
      */
     public void setProperty(String Property) {
         this.Property = Property;

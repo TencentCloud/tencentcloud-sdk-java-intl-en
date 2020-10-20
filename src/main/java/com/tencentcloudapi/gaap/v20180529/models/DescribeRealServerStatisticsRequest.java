@@ -51,21 +51,21 @@ public class DescribeRealServerStatisticsRequest extends AbstractModel{
     private Long WithinTime;
 
     /**
-    * Statistics start time, such as 2020-08-19 00:00:00
+    * Statistics start time, such as `2020-08-19 00:00:00`
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Statistics end time, such as 2020-08-19 23:59:59
+    * Statistics end time, such as `2020-08-19 23:59:59`
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Statistics granularity in seconds. Only 1-minute (60-second) and 5-minute (300-second) granularities are supported
+    * Statistics granularity in seconds. Only 1-minute (60-second) and 5-minute (300-second) granularities are supported.
     */
     @SerializedName("Granularity")
     @Expose
@@ -136,48 +136,48 @@ public class DescribeRealServerStatisticsRequest extends AbstractModel{
     }
 
     /**
-     * Get Statistics start time, such as 2020-08-19 00:00:00 
-     * @return StartTime Statistics start time, such as 2020-08-19 00:00:00
+     * Get Statistics start time, such as `2020-08-19 00:00:00` 
+     * @return StartTime Statistics start time, such as `2020-08-19 00:00:00`
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Statistics start time, such as 2020-08-19 00:00:00
-     * @param StartTime Statistics start time, such as 2020-08-19 00:00:00
+     * Set Statistics start time, such as `2020-08-19 00:00:00`
+     * @param StartTime Statistics start time, such as `2020-08-19 00:00:00`
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Statistics end time, such as 2020-08-19 23:59:59 
-     * @return EndTime Statistics end time, such as 2020-08-19 23:59:59
+     * Get Statistics end time, such as `2020-08-19 23:59:59` 
+     * @return EndTime Statistics end time, such as `2020-08-19 23:59:59`
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Statistics end time, such as 2020-08-19 23:59:59
-     * @param EndTime Statistics end time, such as 2020-08-19 23:59:59
+     * Set Statistics end time, such as `2020-08-19 23:59:59`
+     * @param EndTime Statistics end time, such as `2020-08-19 23:59:59`
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Statistics granularity in seconds. Only 1-minute (60-second) and 5-minute (300-second) granularities are supported 
-     * @return Granularity Statistics granularity in seconds. Only 1-minute (60-second) and 5-minute (300-second) granularities are supported
+     * Get Statistics granularity in seconds. Only 1-minute (60-second) and 5-minute (300-second) granularities are supported. 
+     * @return Granularity Statistics granularity in seconds. Only 1-minute (60-second) and 5-minute (300-second) granularities are supported.
      */
     public Long getGranularity() {
         return this.Granularity;
     }
 
     /**
-     * Set Statistics granularity in seconds. Only 1-minute (60-second) and 5-minute (300-second) granularities are supported
-     * @param Granularity Statistics granularity in seconds. Only 1-minute (60-second) and 5-minute (300-second) granularities are supported
+     * Set Statistics granularity in seconds. Only 1-minute (60-second) and 5-minute (300-second) granularities are supported.
+     * @param Granularity Statistics granularity in seconds. Only 1-minute (60-second) and 5-minute (300-second) granularities are supported.
      */
     public void setGranularity(Long Granularity) {
         this.Granularity = Granularity;

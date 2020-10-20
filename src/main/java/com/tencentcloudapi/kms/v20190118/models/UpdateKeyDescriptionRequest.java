@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class UpdateKeyDescriptionRequest extends AbstractModel{
 
     /**
-    * 
+    * New description of up to 1,024 bytes in length
     */
     @SerializedName("Description")
     @Expose
@@ -37,16 +37,16 @@ public class UpdateKeyDescriptionRequest extends AbstractModel{
     private String KeyId;
 
     /**
-     * Get  
-     * @return Description 
+     * Get New description of up to 1,024 bytes in length 
+     * @return Description New description of up to 1,024 bytes in length
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 
-     * @param Description 
+     * Set New description of up to 1,024 bytes in length
+     * @param Description New description of up to 1,024 bytes in length
      */
     public void setDescription(String Description) {
         this.Description = Description;

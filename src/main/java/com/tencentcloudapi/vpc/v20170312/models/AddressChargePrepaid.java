@@ -23,49 +23,49 @@ import java.util.HashMap;
 public class AddressChargePrepaid extends AbstractModel{
 
     /**
-    * Purchase duration of instance
+    * Purchased usage period, in month. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * Whether auto-renewal is enabled
+    * Setting of renewal. Valid values: 0: manual renewal; 1: auto-renewal; 2: no renewal after expiration. Default value: 0
     */
-    @SerializedName("RenewFlag")
+    @SerializedName("AutoRenewFlag")
     @Expose
-    private String RenewFlag;
+    private Long AutoRenewFlag;
 
     /**
-     * Get Purchase duration of instance 
-     * @return Period Purchase duration of instance
+     * Get Purchased usage period, in month. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36 
+     * @return Period Purchased usage period, in month. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set Purchase duration of instance
-     * @param Period Purchase duration of instance
+     * Set Purchased usage period, in month. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36
+     * @param Period Purchased usage period, in month. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get Whether auto-renewal is enabled 
-     * @return RenewFlag Whether auto-renewal is enabled
+     * Get Setting of renewal. Valid values: 0: manual renewal; 1: auto-renewal; 2: no renewal after expiration. Default value: 0 
+     * @return AutoRenewFlag Setting of renewal. Valid values: 0: manual renewal; 1: auto-renewal; 2: no renewal after expiration. Default value: 0
      */
-    public String getRenewFlag() {
-        return this.RenewFlag;
+    public Long getAutoRenewFlag() {
+        return this.AutoRenewFlag;
     }
 
     /**
-     * Set Whether auto-renewal is enabled
-     * @param RenewFlag Whether auto-renewal is enabled
+     * Set Setting of renewal. Valid values: 0: manual renewal; 1: auto-renewal; 2: no renewal after expiration. Default value: 0
+     * @param AutoRenewFlag Setting of renewal. Valid values: 0: manual renewal; 1: auto-renewal; 2: no renewal after expiration. Default value: 0
      */
-    public void setRenewFlag(String RenewFlag) {
-        this.RenewFlag = RenewFlag;
+    public void setAutoRenewFlag(Long AutoRenewFlag) {
+        this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
@@ -73,7 +73,7 @@ public class AddressChargePrepaid extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Period", this.Period);
-        this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+        this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
 
     }
 }

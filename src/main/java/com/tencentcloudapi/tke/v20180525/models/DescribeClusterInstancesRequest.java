@@ -51,7 +51,7 @@ public class DescribeClusterInstancesRequest extends AbstractModel{
     private String [] InstanceIds;
 
     /**
-    * 
+    * Node role. Valid values are MASTER, WORKER, ETCD, MASTER_ETCD, and ALL. Default value: WORKER.
     */
     @SerializedName("InstanceRole")
     @Expose
@@ -122,16 +122,16 @@ public class DescribeClusterInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return InstanceRole 
+     * Get Node role. Valid values are MASTER, WORKER, ETCD, MASTER_ETCD, and ALL. Default value: WORKER. 
+     * @return InstanceRole Node role. Valid values are MASTER, WORKER, ETCD, MASTER_ETCD, and ALL. Default value: WORKER.
      */
     public String getInstanceRole() {
         return this.InstanceRole;
     }
 
     /**
-     * Set 
-     * @param InstanceRole 
+     * Set Node role. Valid values are MASTER, WORKER, ETCD, MASTER_ETCD, and ALL. Default value: WORKER.
+     * @param InstanceRole Node role. Valid values are MASTER, WORKER, ETCD, MASTER_ETCD, and ALL. Default value: WORKER.
      */
     public void setInstanceRole(String InstanceRole) {
         this.InstanceRole = InstanceRole;

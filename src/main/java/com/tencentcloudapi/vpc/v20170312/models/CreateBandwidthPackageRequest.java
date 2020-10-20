@@ -44,7 +44,7 @@ public class CreateBandwidthPackageRequest extends AbstractModel{
     private String BandwidthPackageName;
 
     /**
-    * The number of bandwidth packages (enter 1 for bill-by-CVM accounts).
+    * The number of bandwidth packages (It can only be “1” for bill-by-CVM accounts)
     */
     @SerializedName("BandwidthPackageCount")
     @Expose
@@ -120,16 +120,16 @@ public class CreateBandwidthPackageRequest extends AbstractModel{
     }
 
     /**
-     * Get The number of bandwidth packages (enter 1 for bill-by-CVM accounts). 
-     * @return BandwidthPackageCount The number of bandwidth packages (enter 1 for bill-by-CVM accounts).
+     * Get The number of bandwidth packages (It can only be “1” for bill-by-CVM accounts) 
+     * @return BandwidthPackageCount The number of bandwidth packages (It can only be “1” for bill-by-CVM accounts)
      */
     public Long getBandwidthPackageCount() {
         return this.BandwidthPackageCount;
     }
 
     /**
-     * Set The number of bandwidth packages (enter 1 for bill-by-CVM accounts).
-     * @param BandwidthPackageCount The number of bandwidth packages (enter 1 for bill-by-CVM accounts).
+     * Set The number of bandwidth packages (It can only be “1” for bill-by-CVM accounts)
+     * @param BandwidthPackageCount The number of bandwidth packages (It can only be “1” for bill-by-CVM accounts)
      */
     public void setBandwidthPackageCount(Long BandwidthPackageCount) {
         this.BandwidthPackageCount = BandwidthPackageCount;

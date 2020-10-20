@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class GenerateDataKeyResponse extends AbstractModel{
 
     /**
-    * 
+    * Globally unique CMK ID
     */
     @SerializedName("KeyId")
     @Expose
@@ -51,16 +51,16 @@ public class GenerateDataKeyResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get  
-     * @return KeyId 
+     * Get Globally unique CMK ID 
+     * @return KeyId Globally unique CMK ID
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * Set 
-     * @param KeyId 
+     * Set Globally unique CMK ID
+     * @param KeyId Globally unique CMK ID
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;

@@ -30,7 +30,7 @@ public class CreateKeyRequest extends AbstractModel{
     private String Alias;
 
     /**
-    * 
+    * CMK description of up to 1,024 bytes in length
     */
     @SerializedName("Description")
     @Expose
@@ -51,7 +51,7 @@ public class CreateKeyRequest extends AbstractModel{
     private Long Type;
 
     /**
-    * 
+    * Tag list
     */
     @SerializedName("Tags")
     @Expose
@@ -74,16 +74,16 @@ public class CreateKeyRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return Description 
+     * Get CMK description of up to 1,024 bytes in length 
+     * @return Description CMK description of up to 1,024 bytes in length
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 
-     * @param Description 
+     * Set CMK description of up to 1,024 bytes in length
+     * @param Description CMK description of up to 1,024 bytes in length
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -122,16 +122,16 @@ public class CreateKeyRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return Tags 
+     * Get Tag list 
+     * @return Tags Tag list
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 
-     * @param Tags 
+     * Set Tag list
+     * @param Tags Tag list
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

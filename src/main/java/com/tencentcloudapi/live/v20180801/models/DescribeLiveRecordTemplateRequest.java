@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeLiveRecordTemplateRequest extends AbstractModel{
 
     /**
-    * Template ID obtained through the `DescribeRecordTemplates` API.
+    * Template ID obtained by [DescribeLiveRecordTemplates](https://intl.cloud.tencent.com/document/product/267/32609?from_cn_redirect=1).
     */
     @SerializedName("TemplateId")
     @Expose
     private Long TemplateId;
 
     /**
-     * Get Template ID obtained through the `DescribeRecordTemplates` API. 
-     * @return TemplateId Template ID obtained through the `DescribeRecordTemplates` API.
+     * Get Template ID obtained by [DescribeLiveRecordTemplates](https://intl.cloud.tencent.com/document/product/267/32609?from_cn_redirect=1). 
+     * @return TemplateId Template ID obtained by [DescribeLiveRecordTemplates](https://intl.cloud.tencent.com/document/product/267/32609?from_cn_redirect=1).
      */
     public Long getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set Template ID obtained through the `DescribeRecordTemplates` API.
-     * @param TemplateId Template ID obtained through the `DescribeRecordTemplates` API.
+     * Set Template ID obtained by [DescribeLiveRecordTemplates](https://intl.cloud.tencent.com/document/product/267/32609?from_cn_redirect=1).
+     * @param TemplateId Template ID obtained by [DescribeLiveRecordTemplates](https://intl.cloud.tencent.com/document/product/267/32609?from_cn_redirect=1).
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;

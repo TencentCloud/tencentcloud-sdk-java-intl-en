@@ -1738,6 +1738,27 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
+     *This API is used to query resources in a bandwidth package based on the unique package ID. You can filter the result by specifying conditions and paginate the query results.
+
+     * @param req DescribeBandwidthPackageResourcesRequest
+     * @return DescribeBandwidthPackageResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBandwidthPackageResourcesResponse DescribeBandwidthPackageResources(DescribeBandwidthPackageResourcesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBandwidthPackageResourcesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBandwidthPackageResourcesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBandwidthPackageResources");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query bandwidth package information, including the unique ID of the bandwidth package, the type, the billing mode, the name, and the resource information.
      * @param req DescribeBandwidthPackagesRequest
      * @return DescribeBandwidthPackagesResponse
@@ -3036,7 +3057,7 @@ This API is completed asynchronously. If you need to query the async job executi
     }
 
     /**
-     *This API (ModifyAddressesBandwidth) is used to adjust [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1) bandwidth, including the postpaid EIP, prepaid EIP and bandwidth package EIP.
+     *This API is used to adjust the bandwidth of [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1), including EIP billed on a pay-as-you-go, monthly subscription, and bandwidth package basis.
      * @param req ModifyAddressesBandwidthRequest
      * @return ModifyAddressesBandwidthResponse
      * @throws TencentCloudSDKException

@@ -24,6 +24,7 @@ public class DescribeLiveDomainResponse extends AbstractModel{
 
     /**
     * Domain name information.
+Note: this field may return `null`, indicating that no valid value is obtained.
     */
     @SerializedName("DomainInfo")
     @Expose
@@ -37,8 +38,10 @@ public class DescribeLiveDomainResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Domain name information. 
+     * Get Domain name information.
+Note: this field may return `null`, indicating that no valid value is obtained. 
      * @return DomainInfo Domain name information.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public DomainInfo getDomainInfo() {
         return this.DomainInfo;
@@ -46,7 +49,9 @@ public class DescribeLiveDomainResponse extends AbstractModel{
 
     /**
      * Set Domain name information.
+Note: this field may return `null`, indicating that no valid value is obtained.
      * @param DomainInfo Domain name information.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public void setDomainInfo(DomainInfo DomainInfo) {
         this.DomainInfo = DomainInfo;

@@ -301,6 +301,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long InitTimeout;
 
     /**
+    * Cause of function failure
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("StatusReasons")
+    @Expose
+    private StatusReason [] StatusReasons;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -952,6 +960,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Cause of function failure
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return StatusReasons Cause of function failure
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public StatusReason [] getStatusReasons() {
+        return this.StatusReasons;
+    }
+
+    /**
+     * Set Cause of function failure
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param StatusReasons Cause of function failure
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setStatusReasons(StatusReason [] StatusReasons) {
+        this.StatusReasons = StatusReasons;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -1010,6 +1038,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "AvailableStatus", this.AvailableStatus);
         this.setParamSimple(map, prefix + "Qualifier", this.Qualifier);
         this.setParamSimple(map, prefix + "InitTimeout", this.InitTimeout);
+        this.setParamArrayObj(map, prefix + "StatusReasons.", this.StatusReasons);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -80,6 +80,13 @@ They represent weighted round robin and least connections, respectively. Default
     private Long SniSwitch;
 
     /**
+    * Whether to enable a persistent connection (This parameter can only be configured in HTTP/HTTPS listeners). Valid values: 0: no; 1: yes. Default value: 0
+    */
+    @SerializedName("KeepaliveEnable")
+    @Expose
+    private Long KeepaliveEnable;
+
+    /**
      * Get CLB instance ID 
      * @return LoadBalancerId CLB instance ID
      */
@@ -212,6 +219,22 @@ They represent weighted round robin and least connections, respectively. Default
     }
 
     /**
+     * Get Whether to enable a persistent connection (This parameter can only be configured in HTTP/HTTPS listeners). Valid values: 0: no; 1: yes. Default value: 0 
+     * @return KeepaliveEnable Whether to enable a persistent connection (This parameter can only be configured in HTTP/HTTPS listeners). Valid values: 0: no; 1: yes. Default value: 0
+     */
+    public Long getKeepaliveEnable() {
+        return this.KeepaliveEnable;
+    }
+
+    /**
+     * Set Whether to enable a persistent connection (This parameter can only be configured in HTTP/HTTPS listeners). Valid values: 0: no; 1: yes. Default value: 0
+     * @param KeepaliveEnable Whether to enable a persistent connection (This parameter can only be configured in HTTP/HTTPS listeners). Valid values: 0: no; 1: yes. Default value: 0
+     */
+    public void setKeepaliveEnable(Long KeepaliveEnable) {
+        this.KeepaliveEnable = KeepaliveEnable;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -223,6 +246,7 @@ They represent weighted round robin and least connections, respectively. Default
         this.setParamObj(map, prefix + "Certificate.", this.Certificate);
         this.setParamSimple(map, prefix + "Scheduler", this.Scheduler);
         this.setParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
+        this.setParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
 
     }
 }

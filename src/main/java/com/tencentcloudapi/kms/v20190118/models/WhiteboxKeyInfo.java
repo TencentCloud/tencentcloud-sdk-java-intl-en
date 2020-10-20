@@ -23,77 +23,77 @@ import java.util.HashMap;
 public class WhiteboxKeyInfo extends AbstractModel{
 
     /**
-    * 
+    * Globally unique white-box key ID
     */
     @SerializedName("KeyId")
     @Expose
     private String KeyId;
 
     /**
-    * 
+    * Unique alias that makes a key more recognizable and understandable. This parameter cannot be empty, can contain 1 to 60 letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit.
     */
     @SerializedName("Alias")
     @Expose
     private String Alias;
 
     /**
-    * 
+    * Creator
     */
     @SerializedName("CreatorUin")
     @Expose
     private Long CreatorUin;
 
     /**
-    * 
+    * Key description information
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 
+    * Key creation time in Unix timestamp
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * 
+    * White-box key status. Valid values: Enabled, Disabled
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 
+    * Creator
     */
     @SerializedName("OwnerUin")
     @Expose
     private Long OwnerUin;
 
     /**
-    * 
+    * Key algorithm type
     */
     @SerializedName("Algorithm")
     @Expose
     private String Algorithm;
 
     /**
-    * 
+    * Base64-encoded white-box encryption key
     */
     @SerializedName("EncryptKey")
     @Expose
     private String EncryptKey;
 
     /**
-    * 
+    * Base64-encoded white-box decryption key
     */
     @SerializedName("DecryptKey")
     @Expose
     private String DecryptKey;
 
     /**
-    * 
+    * Resource ID in the format of `creatorUin/$creatorUin/$keyId`
     */
     @SerializedName("ResourceId")
     @Expose
@@ -108,176 +108,176 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Boolean DeviceFingerprintBind;
 
     /**
-     * Get  
-     * @return KeyId 
+     * Get Globally unique white-box key ID 
+     * @return KeyId Globally unique white-box key ID
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * Set 
-     * @param KeyId 
+     * Set Globally unique white-box key ID
+     * @param KeyId Globally unique white-box key ID
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;
     }
 
     /**
-     * Get  
-     * @return Alias 
+     * Get Unique alias that makes a key more recognizable and understandable. This parameter cannot be empty, can contain 1 to 60 letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit. 
+     * @return Alias Unique alias that makes a key more recognizable and understandable. This parameter cannot be empty, can contain 1 to 60 letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit.
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * Set 
-     * @param Alias 
+     * Set Unique alias that makes a key more recognizable and understandable. This parameter cannot be empty, can contain 1 to 60 letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit.
+     * @param Alias Unique alias that makes a key more recognizable and understandable. This parameter cannot be empty, can contain 1 to 60 letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit.
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;
     }
 
     /**
-     * Get  
-     * @return CreatorUin 
+     * Get Creator 
+     * @return CreatorUin Creator
      */
     public Long getCreatorUin() {
         return this.CreatorUin;
     }
 
     /**
-     * Set 
-     * @param CreatorUin 
+     * Set Creator
+     * @param CreatorUin Creator
      */
     public void setCreatorUin(Long CreatorUin) {
         this.CreatorUin = CreatorUin;
     }
 
     /**
-     * Get  
-     * @return Description 
+     * Get Key description information 
+     * @return Description Key description information
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 
-     * @param Description 
+     * Set Key description information
+     * @param Description Key description information
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get  
-     * @return CreateTime 
+     * Get Key creation time in Unix timestamp 
+     * @return CreateTime Key creation time in Unix timestamp
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 
-     * @param CreateTime 
+     * Set Key creation time in Unix timestamp
+     * @param CreateTime Key creation time in Unix timestamp
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get White-box key status. Valid values: Enabled, Disabled 
+     * @return Status White-box key status. Valid values: Enabled, Disabled
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set White-box key status. Valid values: Enabled, Disabled
+     * @param Status White-box key status. Valid values: Enabled, Disabled
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return OwnerUin 
+     * Get Creator 
+     * @return OwnerUin Creator
      */
     public Long getOwnerUin() {
         return this.OwnerUin;
     }
 
     /**
-     * Set 
-     * @param OwnerUin 
+     * Set Creator
+     * @param OwnerUin Creator
      */
     public void setOwnerUin(Long OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get  
-     * @return Algorithm 
+     * Get Key algorithm type 
+     * @return Algorithm Key algorithm type
      */
     public String getAlgorithm() {
         return this.Algorithm;
     }
 
     /**
-     * Set 
-     * @param Algorithm 
+     * Set Key algorithm type
+     * @param Algorithm Key algorithm type
      */
     public void setAlgorithm(String Algorithm) {
         this.Algorithm = Algorithm;
     }
 
     /**
-     * Get  
-     * @return EncryptKey 
+     * Get Base64-encoded white-box encryption key 
+     * @return EncryptKey Base64-encoded white-box encryption key
      */
     public String getEncryptKey() {
         return this.EncryptKey;
     }
 
     /**
-     * Set 
-     * @param EncryptKey 
+     * Set Base64-encoded white-box encryption key
+     * @param EncryptKey Base64-encoded white-box encryption key
      */
     public void setEncryptKey(String EncryptKey) {
         this.EncryptKey = EncryptKey;
     }
 
     /**
-     * Get  
-     * @return DecryptKey 
+     * Get Base64-encoded white-box decryption key 
+     * @return DecryptKey Base64-encoded white-box decryption key
      */
     public String getDecryptKey() {
         return this.DecryptKey;
     }
 
     /**
-     * Set 
-     * @param DecryptKey 
+     * Set Base64-encoded white-box decryption key
+     * @param DecryptKey Base64-encoded white-box decryption key
      */
     public void setDecryptKey(String DecryptKey) {
         this.DecryptKey = DecryptKey;
     }
 
     /**
-     * Get  
-     * @return ResourceId 
+     * Get Resource ID in the format of `creatorUin/$creatorUin/$keyId` 
+     * @return ResourceId Resource ID in the format of `creatorUin/$creatorUin/$keyId`
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 
-     * @param ResourceId 
+     * Set Resource ID in the format of `creatorUin/$creatorUin/$keyId`
+     * @param ResourceId Resource ID in the format of `creatorUin/$creatorUin/$keyId`
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;

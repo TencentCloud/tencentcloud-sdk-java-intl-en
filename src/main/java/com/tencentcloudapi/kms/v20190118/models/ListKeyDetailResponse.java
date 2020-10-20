@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ListKeyDetailResponse extends AbstractModel{
 
     /**
-    * 
+    * Total number of CMKs
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,16 +45,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get  
-     * @return TotalCount 
+     * Get Total number of CMKs 
+     * @return TotalCount Total number of CMKs
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 
-     * @param TotalCount 
+     * Set Total number of CMKs
+     * @param TotalCount Total number of CMKs
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

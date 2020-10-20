@@ -403,6 +403,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long SecurityType;
 
     /**
+    * Scenario template type. 0: not enabled; 1: general scenario; 2: log scenario; 3: search scenario
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SceneType")
+    @Expose
+    private Long SceneType;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -1299,6 +1307,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Scenario template type. 0: not enabled; 1: general scenario; 2: log scenario; 3: search scenario
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return SceneType Scenario template type. 0: not enabled; 1: general scenario; 2: log scenario; 3: search scenario
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getSceneType() {
+        return this.SceneType;
+    }
+
+    /**
+     * Set Scenario template type. 0: not enabled; 1: general scenario; 2: log scenario; 3: search scenario
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param SceneType Scenario template type. 0: not enabled; 1: general scenario; 2: log scenario; 3: search scenario
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSceneType(Long SceneType) {
+        this.SceneType = SceneType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1354,6 +1382,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "KibanaPublicAccess", this.KibanaPublicAccess);
         this.setParamSimple(map, prefix + "KibanaPrivateAccess", this.KibanaPrivateAccess);
         this.setParamSimple(map, prefix + "SecurityType", this.SecurityType);
+        this.setParamSimple(map, prefix + "SceneType", this.SceneType);
 
     }
 }

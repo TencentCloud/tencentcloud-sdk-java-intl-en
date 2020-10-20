@@ -37,6 +37,13 @@ public class CreateSnapshotRequest extends AbstractModel{
     private String SnapshotName;
 
     /**
+    * Expiration time of the snapshot. The snapshot will be automatically deleted upon expiration.
+    */
+    @SerializedName("Deadline")
+    @Expose
+    private String Deadline;
+
+    /**
      * Get ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1). 
      * @return DiskId ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
      */
@@ -69,11 +76,28 @@ public class CreateSnapshotRequest extends AbstractModel{
     }
 
     /**
+     * Get Expiration time of the snapshot. The snapshot will be automatically deleted upon expiration. 
+     * @return Deadline Expiration time of the snapshot. The snapshot will be automatically deleted upon expiration.
+     */
+    public String getDeadline() {
+        return this.Deadline;
+    }
+
+    /**
+     * Set Expiration time of the snapshot. The snapshot will be automatically deleted upon expiration.
+     * @param Deadline Expiration time of the snapshot. The snapshot will be automatically deleted upon expiration.
+     */
+    public void setDeadline(String Deadline) {
+        this.Deadline = Deadline;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DiskId", this.DiskId);
         this.setParamSimple(map, prefix + "SnapshotName", this.SnapshotName);
+        this.setParamSimple(map, prefix + "Deadline", this.Deadline);
 
     }
 }

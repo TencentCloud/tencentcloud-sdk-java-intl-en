@@ -62,8 +62,9 @@ Value range: 0-500.
     private String Description;
 
     /**
-    * Video bitrate in Kbps. Value range: 100-8,000.
-Note: the transcoding template requires that the bitrate should be unique, yet the final saved bitrate may be different from the input bitrate.
+    * Video bitrate. Value range: 0–8,000 Kbps.
+If the value is 0, the original bitrate will be retained.
+Note: transcoding templates require a unique bitrate. The final saved bitrate may differ from the input bitrate.
     */
     @SerializedName("VideoBitrate")
     @Expose
@@ -132,21 +133,27 @@ baseline/main/high.
     private String Profile;
 
     /**
-    * Whether to not exceed the original bitrate. 0: no; 1: yes. Default value: 0.
+    * Whether to use the original bitrate when the set bitrate is larger than the original bitrate.
+0: no, 1: yes
+Default value: 0.
     */
     @SerializedName("BitrateToOrig")
     @Expose
     private Long BitrateToOrig;
 
     /**
-    * Whether to not exceed the original height. 0: no; 1: yes. Default value: 0.
+    * Whether to use the original height when the set height is higher than the original height.
+0: no, 1: yes
+Default value: 0.
     */
     @SerializedName("HeightToOrig")
     @Expose
     private Long HeightToOrig;
 
     /**
-    * Whether to not exceed the original frame rate. 0: no; 1: yes. Default value: 0.
+    * Whether to use the original frame rate when the set frame rate is larger than the original frame rate.
+0: no, 1: yes
+Default value: 0.
     */
     @SerializedName("FpsToOrig")
     @Expose
@@ -266,20 +273,24 @@ Value range: 0-500.
     }
 
     /**
-     * Get Video bitrate in Kbps. Value range: 100-8,000.
-Note: the transcoding template requires that the bitrate should be unique, yet the final saved bitrate may be different from the input bitrate. 
-     * @return VideoBitrate Video bitrate in Kbps. Value range: 100-8,000.
-Note: the transcoding template requires that the bitrate should be unique, yet the final saved bitrate may be different from the input bitrate.
+     * Get Video bitrate. Value range: 0–8,000 Kbps.
+If the value is 0, the original bitrate will be retained.
+Note: transcoding templates require a unique bitrate. The final saved bitrate may differ from the input bitrate. 
+     * @return VideoBitrate Video bitrate. Value range: 0–8,000 Kbps.
+If the value is 0, the original bitrate will be retained.
+Note: transcoding templates require a unique bitrate. The final saved bitrate may differ from the input bitrate.
      */
     public Long getVideoBitrate() {
         return this.VideoBitrate;
     }
 
     /**
-     * Set Video bitrate in Kbps. Value range: 100-8,000.
-Note: the transcoding template requires that the bitrate should be unique, yet the final saved bitrate may be different from the input bitrate.
-     * @param VideoBitrate Video bitrate in Kbps. Value range: 100-8,000.
-Note: the transcoding template requires that the bitrate should be unique, yet the final saved bitrate may be different from the input bitrate.
+     * Set Video bitrate. Value range: 0–8,000 Kbps.
+If the value is 0, the original bitrate will be retained.
+Note: transcoding templates require a unique bitrate. The final saved bitrate may differ from the input bitrate.
+     * @param VideoBitrate Video bitrate. Value range: 0–8,000 Kbps.
+If the value is 0, the original bitrate will be retained.
+Note: transcoding templates require a unique bitrate. The final saved bitrate may differ from the input bitrate.
      */
     public void setVideoBitrate(Long VideoBitrate) {
         this.VideoBitrate = VideoBitrate;
@@ -438,48 +449,72 @@ baseline/main/high.
     }
 
     /**
-     * Get Whether to not exceed the original bitrate. 0: no; 1: yes. Default value: 0. 
-     * @return BitrateToOrig Whether to not exceed the original bitrate. 0: no; 1: yes. Default value: 0.
+     * Get Whether to use the original bitrate when the set bitrate is larger than the original bitrate.
+0: no, 1: yes
+Default value: 0. 
+     * @return BitrateToOrig Whether to use the original bitrate when the set bitrate is larger than the original bitrate.
+0: no, 1: yes
+Default value: 0.
      */
     public Long getBitrateToOrig() {
         return this.BitrateToOrig;
     }
 
     /**
-     * Set Whether to not exceed the original bitrate. 0: no; 1: yes. Default value: 0.
-     * @param BitrateToOrig Whether to not exceed the original bitrate. 0: no; 1: yes. Default value: 0.
+     * Set Whether to use the original bitrate when the set bitrate is larger than the original bitrate.
+0: no, 1: yes
+Default value: 0.
+     * @param BitrateToOrig Whether to use the original bitrate when the set bitrate is larger than the original bitrate.
+0: no, 1: yes
+Default value: 0.
      */
     public void setBitrateToOrig(Long BitrateToOrig) {
         this.BitrateToOrig = BitrateToOrig;
     }
 
     /**
-     * Get Whether to not exceed the original height. 0: no; 1: yes. Default value: 0. 
-     * @return HeightToOrig Whether to not exceed the original height. 0: no; 1: yes. Default value: 0.
+     * Get Whether to use the original height when the set height is higher than the original height.
+0: no, 1: yes
+Default value: 0. 
+     * @return HeightToOrig Whether to use the original height when the set height is higher than the original height.
+0: no, 1: yes
+Default value: 0.
      */
     public Long getHeightToOrig() {
         return this.HeightToOrig;
     }
 
     /**
-     * Set Whether to not exceed the original height. 0: no; 1: yes. Default value: 0.
-     * @param HeightToOrig Whether to not exceed the original height. 0: no; 1: yes. Default value: 0.
+     * Set Whether to use the original height when the set height is higher than the original height.
+0: no, 1: yes
+Default value: 0.
+     * @param HeightToOrig Whether to use the original height when the set height is higher than the original height.
+0: no, 1: yes
+Default value: 0.
      */
     public void setHeightToOrig(Long HeightToOrig) {
         this.HeightToOrig = HeightToOrig;
     }
 
     /**
-     * Get Whether to not exceed the original frame rate. 0: no; 1: yes. Default value: 0. 
-     * @return FpsToOrig Whether to not exceed the original frame rate. 0: no; 1: yes. Default value: 0.
+     * Get Whether to use the original frame rate when the set frame rate is larger than the original frame rate.
+0: no, 1: yes
+Default value: 0. 
+     * @return FpsToOrig Whether to use the original frame rate when the set frame rate is larger than the original frame rate.
+0: no, 1: yes
+Default value: 0.
      */
     public Long getFpsToOrig() {
         return this.FpsToOrig;
     }
 
     /**
-     * Set Whether to not exceed the original frame rate. 0: no; 1: yes. Default value: 0.
-     * @param FpsToOrig Whether to not exceed the original frame rate. 0: no; 1: yes. Default value: 0.
+     * Set Whether to use the original frame rate when the set frame rate is larger than the original frame rate.
+0: no, 1: yes
+Default value: 0.
+     * @param FpsToOrig Whether to use the original frame rate when the set frame rate is larger than the original frame rate.
+0: no, 1: yes
+Default value: 0.
      */
     public void setFpsToOrig(Long FpsToOrig) {
         this.FpsToOrig = FpsToOrig;

@@ -220,6 +220,13 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
     private Long BasicSecurityType;
 
     /**
+    * Scenario template type. 0: not enabled; 1: general; 2: log; 3: search
+    */
+    @SerializedName("SceneType")
+    @Expose
+    private Long SceneType;
+
+    /**
      * Get Availability Zone 
      * @return Zone Availability Zone
      */
@@ -684,6 +691,22 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
     }
 
     /**
+     * Get Scenario template type. 0: not enabled; 1: general; 2: log; 3: search 
+     * @return SceneType Scenario template type. 0: not enabled; 1: general; 2: log; 3: search
+     */
+    public Long getSceneType() {
+        return this.SceneType;
+    }
+
+    /**
+     * Set Scenario template type. 0: not enabled; 1: general; 2: log; 3: search
+     * @param SceneType Scenario template type. 0: not enabled; 1: general; 2: log; 3: search
+     */
+    public void setSceneType(Long SceneType) {
+        this.SceneType = SceneType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -714,6 +737,7 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
         this.setParamArrayObj(map, prefix + "NodeInfoList.", this.NodeInfoList);
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
         this.setParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
+        this.setParamSimple(map, prefix + "SceneType", this.SceneType);
 
     }
 }

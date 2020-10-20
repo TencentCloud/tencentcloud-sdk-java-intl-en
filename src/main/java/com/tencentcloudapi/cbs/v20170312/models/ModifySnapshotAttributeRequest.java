@@ -37,11 +37,18 @@ public class ModifySnapshotAttributeRequest extends AbstractModel{
     private String SnapshotName;
 
     /**
-    * The retention time of the snapshot. FALSE: non-permanent retention; TRUE: permanent retention. You can only modify non-permanent snapshots to permanent snapshots.
+    * Snapshot retention mode. Valid values: `FALSE`: non-permanent retention; `TRUE`: permanent retention.
     */
     @SerializedName("IsPermanent")
     @Expose
     private Boolean IsPermanent;
+
+    /**
+    * Expiration time of the snapshot. Setting this parameter will set the snapshot retention mode to `FALSE` (non-permanent retention) and the snapshot will be automatically deleted upon expiration.
+    */
+    @SerializedName("Deadline")
+    @Expose
+    private String Deadline;
 
     /**
      * Get Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1). 
@@ -76,19 +83,35 @@ public class ModifySnapshotAttributeRequest extends AbstractModel{
     }
 
     /**
-     * Get The retention time of the snapshot. FALSE: non-permanent retention; TRUE: permanent retention. You can only modify non-permanent snapshots to permanent snapshots. 
-     * @return IsPermanent The retention time of the snapshot. FALSE: non-permanent retention; TRUE: permanent retention. You can only modify non-permanent snapshots to permanent snapshots.
+     * Get Snapshot retention mode. Valid values: `FALSE`: non-permanent retention; `TRUE`: permanent retention. 
+     * @return IsPermanent Snapshot retention mode. Valid values: `FALSE`: non-permanent retention; `TRUE`: permanent retention.
      */
     public Boolean getIsPermanent() {
         return this.IsPermanent;
     }
 
     /**
-     * Set The retention time of the snapshot. FALSE: non-permanent retention; TRUE: permanent retention. You can only modify non-permanent snapshots to permanent snapshots.
-     * @param IsPermanent The retention time of the snapshot. FALSE: non-permanent retention; TRUE: permanent retention. You can only modify non-permanent snapshots to permanent snapshots.
+     * Set Snapshot retention mode. Valid values: `FALSE`: non-permanent retention; `TRUE`: permanent retention.
+     * @param IsPermanent Snapshot retention mode. Valid values: `FALSE`: non-permanent retention; `TRUE`: permanent retention.
      */
     public void setIsPermanent(Boolean IsPermanent) {
         this.IsPermanent = IsPermanent;
+    }
+
+    /**
+     * Get Expiration time of the snapshot. Setting this parameter will set the snapshot retention mode to `FALSE` (non-permanent retention) and the snapshot will be automatically deleted upon expiration. 
+     * @return Deadline Expiration time of the snapshot. Setting this parameter will set the snapshot retention mode to `FALSE` (non-permanent retention) and the snapshot will be automatically deleted upon expiration.
+     */
+    public String getDeadline() {
+        return this.Deadline;
+    }
+
+    /**
+     * Set Expiration time of the snapshot. Setting this parameter will set the snapshot retention mode to `FALSE` (non-permanent retention) and the snapshot will be automatically deleted upon expiration.
+     * @param Deadline Expiration time of the snapshot. Setting this parameter will set the snapshot retention mode to `FALSE` (non-permanent retention) and the snapshot will be automatically deleted upon expiration.
+     */
+    public void setDeadline(String Deadline) {
+        this.Deadline = Deadline;
     }
 
     /**
@@ -98,6 +121,7 @@ public class ModifySnapshotAttributeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
         this.setParamSimple(map, prefix + "SnapshotName", this.SnapshotName);
         this.setParamSimple(map, prefix + "IsPermanent", this.IsPermanent);
+        this.setParamSimple(map, prefix + "Deadline", this.Deadline);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ListKeyDetailRequest extends AbstractModel{
 
     /**
-    * 
+    * This parameter has the same meaning of the `Offset` in an SQL query, indicating that this acquisition starts from the "No. Offset value" element of the array arranged in a certain order. The default value is 0.
     */
     @SerializedName("Offset")
     @Expose
@@ -37,14 +37,14 @@ public class ListKeyDetailRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * 
+    * Filters by creator role. 0 (default value): the CMK is created by the user; 1: the CMK is created automatically by an authorized Tencent Cloud service.
     */
     @SerializedName("Role")
     @Expose
     private Long Role;
 
     /**
-    * 
+    * Sorts by CMK creation time. 0: descending; 1: ascending
     */
     @SerializedName("OrderType")
     @Expose
@@ -58,7 +58,7 @@ public class ListKeyDetailRequest extends AbstractModel{
     private Long KeyState;
 
     /**
-    * 
+    * Performs a fuzzy query by `KeyId` or `Alias`
     */
     @SerializedName("SearchKeyAlias")
     @Expose
@@ -86,16 +86,16 @@ public class ListKeyDetailRequest extends AbstractModel{
     private TagFilter [] TagFilters;
 
     /**
-     * Get  
-     * @return Offset 
+     * Get This parameter has the same meaning of the `Offset` in an SQL query, indicating that this acquisition starts from the "No. Offset value" element of the array arranged in a certain order. The default value is 0. 
+     * @return Offset This parameter has the same meaning of the `Offset` in an SQL query, indicating that this acquisition starts from the "No. Offset value" element of the array arranged in a certain order. The default value is 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 
-     * @param Offset 
+     * Set This parameter has the same meaning of the `Offset` in an SQL query, indicating that this acquisition starts from the "No. Offset value" element of the array arranged in a certain order. The default value is 0.
+     * @param Offset This parameter has the same meaning of the `Offset` in an SQL query, indicating that this acquisition starts from the "No. Offset value" element of the array arranged in a certain order. The default value is 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -118,32 +118,32 @@ public class ListKeyDetailRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return Role 
+     * Get Filters by creator role. 0 (default value): the CMK is created by the user; 1: the CMK is created automatically by an authorized Tencent Cloud service. 
+     * @return Role Filters by creator role. 0 (default value): the CMK is created by the user; 1: the CMK is created automatically by an authorized Tencent Cloud service.
      */
     public Long getRole() {
         return this.Role;
     }
 
     /**
-     * Set 
-     * @param Role 
+     * Set Filters by creator role. 0 (default value): the CMK is created by the user; 1: the CMK is created automatically by an authorized Tencent Cloud service.
+     * @param Role Filters by creator role. 0 (default value): the CMK is created by the user; 1: the CMK is created automatically by an authorized Tencent Cloud service.
      */
     public void setRole(Long Role) {
         this.Role = Role;
     }
 
     /**
-     * Get  
-     * @return OrderType 
+     * Get Sorts by CMK creation time. 0: descending; 1: ascending 
+     * @return OrderType Sorts by CMK creation time. 0: descending; 1: ascending
      */
     public Long getOrderType() {
         return this.OrderType;
     }
 
     /**
-     * Set 
-     * @param OrderType 
+     * Set Sorts by CMK creation time. 0: descending; 1: ascending
+     * @param OrderType Sorts by CMK creation time. 0: descending; 1: ascending
      */
     public void setOrderType(Long OrderType) {
         this.OrderType = OrderType;
@@ -166,16 +166,16 @@ public class ListKeyDetailRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return SearchKeyAlias 
+     * Get Performs a fuzzy query by `KeyId` or `Alias` 
+     * @return SearchKeyAlias Performs a fuzzy query by `KeyId` or `Alias`
      */
     public String getSearchKeyAlias() {
         return this.SearchKeyAlias;
     }
 
     /**
-     * Set 
-     * @param SearchKeyAlias 
+     * Set Performs a fuzzy query by `KeyId` or `Alias`
+     * @param SearchKeyAlias Performs a fuzzy query by `KeyId` or `Alias`
      */
     public void setSearchKeyAlias(String SearchKeyAlias) {
         this.SearchKeyAlias = SearchKeyAlias;

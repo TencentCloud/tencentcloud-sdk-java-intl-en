@@ -33,7 +33,7 @@ Currently, a resolution within 640*480p must be specified for H.265.
     private String Codec;
 
     /**
-    * Video frame rate in Hz. Value range: [0, 60].
+    * Video frame rate in Hz. Value range: [0, 100].
 If the value is 0, the frame rate will be the same as that of the source video.
     */
     @SerializedName("Fps")
@@ -129,9 +129,9 @@ Currently, a resolution within 640*480p must be specified for H.265.
     }
 
     /**
-     * Get Video frame rate in Hz. Value range: [0, 60].
+     * Get Video frame rate in Hz. Value range: [0, 100].
 If the value is 0, the frame rate will be the same as that of the source video. 
-     * @return Fps Video frame rate in Hz. Value range: [0, 60].
+     * @return Fps Video frame rate in Hz. Value range: [0, 100].
 If the value is 0, the frame rate will be the same as that of the source video.
      */
     public Long getFps() {
@@ -139,9 +139,9 @@ If the value is 0, the frame rate will be the same as that of the source video.
     }
 
     /**
-     * Set Video frame rate in Hz. Value range: [0, 60].
+     * Set Video frame rate in Hz. Value range: [0, 100].
 If the value is 0, the frame rate will be the same as that of the source video.
-     * @param Fps Video frame rate in Hz. Value range: [0, 60].
+     * @param Fps Video frame rate in Hz. Value range: [0, 100].
 If the value is 0, the frame rate will be the same as that of the source video.
      */
     public void setFps(Long Fps) {

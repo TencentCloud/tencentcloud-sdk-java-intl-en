@@ -956,6 +956,26 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
+     *This API is only used in unique custom development scenarios. Unless requested by Media Processing Service customer service, please do not call it.
+     * @param req ExecuteFunctionRequest
+     * @return ExecuteFunctionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExecuteFunctionResponse ExecuteFunction(ExecuteFunctionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ExecuteFunctionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ExecuteFunctionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ExecuteFunction");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to manage an initiated task.
 > Note: currently, you can only terminate an ongoing live stream processing task.
      * @param req ManageTaskRequest

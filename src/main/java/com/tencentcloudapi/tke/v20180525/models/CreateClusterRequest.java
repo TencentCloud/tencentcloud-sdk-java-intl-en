@@ -79,6 +79,13 @@ public class CreateClusterRequest extends AbstractModel{
     private InstanceDataDiskMountSetting [] InstanceDataDiskMountSettings;
 
     /**
+    * Information of the add-on to be installed
+    */
+    @SerializedName("ExtensionAddons")
+    @Expose
+    private ExtensionAddon [] ExtensionAddons;
+
+    /**
      * Get Container networking configuration information for the cluster 
      * @return ClusterCIDRSettings Container networking configuration information for the cluster
      */
@@ -207,6 +214,22 @@ public class CreateClusterRequest extends AbstractModel{
     }
 
     /**
+     * Get Information of the add-on to be installed 
+     * @return ExtensionAddons Information of the add-on to be installed
+     */
+    public ExtensionAddon [] getExtensionAddons() {
+        return this.ExtensionAddons;
+    }
+
+    /**
+     * Set Information of the add-on to be installed
+     * @param ExtensionAddons Information of the add-on to be installed
+     */
+    public void setExtensionAddons(ExtensionAddon [] ExtensionAddons) {
+        this.ExtensionAddons = ExtensionAddons;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +241,7 @@ public class CreateClusterRequest extends AbstractModel{
         this.setParamObj(map, prefix + "InstanceAdvancedSettings.", this.InstanceAdvancedSettings);
         this.setParamArrayObj(map, prefix + "ExistedInstancesForNode.", this.ExistedInstancesForNode);
         this.setParamArrayObj(map, prefix + "InstanceDataDiskMountSettings.", this.InstanceDataDiskMountSettings);
+        this.setParamArrayObj(map, prefix + "ExtensionAddons.", this.ExtensionAddons);
 
     }
 }
