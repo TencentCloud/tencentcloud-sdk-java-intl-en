@@ -30,8 +30,12 @@ public class DescribeTaskTemplatesRequest extends AbstractModel{
     private String [] TaskTemplateIds;
 
     /**
-    * Filter
-<li> task-template-name - String - Required: No - (Filter) Filter by task template name.</li>
+    * Filter.
+<li> `task-template-name` - String - Optional - Filter by task template name.</li>
+<li> `tag-key` - String - Optional - Filter by tag key.</li>
+<li> `tag-value` - String - Optional - Filter by tag value.</li>
+<li> `tag:tag-key` - String - Optional - Filter by tag key-value pair. The tag-key should be replaced by a specified tag key.</li>
+It cannot be specified together with the `TaskTemplateIds` parameter.
     */
     @SerializedName("Filters")
     @Expose
@@ -68,20 +72,36 @@ public class DescribeTaskTemplatesRequest extends AbstractModel{
     }
 
     /**
-     * Get Filter
-<li> task-template-name - String - Required: No - (Filter) Filter by task template name.</li> 
-     * @return Filters Filter
-<li> task-template-name - String - Required: No - (Filter) Filter by task template name.</li>
+     * Get Filter.
+<li> `task-template-name` - String - Optional - Filter by task template name.</li>
+<li> `tag-key` - String - Optional - Filter by tag key.</li>
+<li> `tag-value` - String - Optional - Filter by tag value.</li>
+<li> `tag:tag-key` - String - Optional - Filter by tag key-value pair. The tag-key should be replaced by a specified tag key.</li>
+It cannot be specified together with the `TaskTemplateIds` parameter. 
+     * @return Filters Filter.
+<li> `task-template-name` - String - Optional - Filter by task template name.</li>
+<li> `tag-key` - String - Optional - Filter by tag key.</li>
+<li> `tag-value` - String - Optional - Filter by tag value.</li>
+<li> `tag:tag-key` - String - Optional - Filter by tag key-value pair. The tag-key should be replaced by a specified tag key.</li>
+It cannot be specified together with the `TaskTemplateIds` parameter.
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter
-<li> task-template-name - String - Required: No - (Filter) Filter by task template name.</li>
-     * @param Filters Filter
-<li> task-template-name - String - Required: No - (Filter) Filter by task template name.</li>
+     * Set Filter.
+<li> `task-template-name` - String - Optional - Filter by task template name.</li>
+<li> `tag-key` - String - Optional - Filter by tag key.</li>
+<li> `tag-value` - String - Optional - Filter by tag value.</li>
+<li> `tag:tag-key` - String - Optional - Filter by tag key-value pair. The tag-key should be replaced by a specified tag key.</li>
+It cannot be specified together with the `TaskTemplateIds` parameter.
+     * @param Filters Filter.
+<li> `task-template-name` - String - Optional - Filter by task template name.</li>
+<li> `tag-key` - String - Optional - Filter by tag key.</li>
+<li> `tag-value` - String - Optional - Filter by tag value.</li>
+<li> `tag:tag-key` - String - Optional - Filter by tag key-value pair. The tag-key should be replaced by a specified tag key.</li>
+It cannot be specified together with the `TaskTemplateIds` parameter.
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

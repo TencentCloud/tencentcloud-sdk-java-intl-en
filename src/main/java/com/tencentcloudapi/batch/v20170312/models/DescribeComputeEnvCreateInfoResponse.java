@@ -94,6 +94,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long DesiredComputeNodeCount;
 
     /**
+    * Tag list bound to the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -265,6 +273,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Tag list bound to the compute environment.
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return Tags Tag list bound to the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag list bound to the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param Tags Tag list bound to the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -294,6 +322,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "Authentications.", this.Authentications);
         this.setParamArrayObj(map, prefix + "Notifications.", this.Notifications);
         this.setParamSimple(map, prefix + "DesiredComputeNodeCount", this.DesiredComputeNodeCount);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

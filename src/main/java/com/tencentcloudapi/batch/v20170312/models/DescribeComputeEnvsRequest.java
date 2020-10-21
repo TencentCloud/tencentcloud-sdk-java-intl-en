@@ -30,10 +30,15 @@ public class DescribeComputeEnvsRequest extends AbstractModel{
     private String [] EnvIds;
 
     /**
-    * Filter
-<li> zone - String - Required: No - (Filter) Filter by availability zone.</li>
-<li> env-id - String - Required: No - (Filter) Filter by compute environment ID.</li>
-<li> env-name - String - Required: No - (Filter) Filter by compute environment name.</li>
+    * Filter.
+<li> `zone` - String - Optional - Filter by availability zone.</li>
+<li> `env-id` - String - Optional - Filter by compute environment ID.</li>
+<li> `env-name` - String - Optional - Filter by compute environment name.</li>
+<li> `resource-type` - String - Optional - Filter by compute resource type, which can be CVM or CPM (BM).</li>
+<li> `tag-key` - String - Optional - Filter by tag key.</li>
+</li>`tag-value` - String - Optional - Filter by tag value.</li>
+<li> `tag:tag-key` - String - Optional - Filter by tag key-value pair. The tag-key should be replaced by a specified tag key.</li>
+It cannot be specified together with the `EnvIds` parameter.
     */
     @SerializedName("Filters")
     @Expose
@@ -70,28 +75,48 @@ public class DescribeComputeEnvsRequest extends AbstractModel{
     }
 
     /**
-     * Get Filter
-<li> zone - String - Required: No - (Filter) Filter by availability zone.</li>
-<li> env-id - String - Required: No - (Filter) Filter by compute environment ID.</li>
-<li> env-name - String - Required: No - (Filter) Filter by compute environment name.</li> 
-     * @return Filters Filter
-<li> zone - String - Required: No - (Filter) Filter by availability zone.</li>
-<li> env-id - String - Required: No - (Filter) Filter by compute environment ID.</li>
-<li> env-name - String - Required: No - (Filter) Filter by compute environment name.</li>
+     * Get Filter.
+<li> `zone` - String - Optional - Filter by availability zone.</li>
+<li> `env-id` - String - Optional - Filter by compute environment ID.</li>
+<li> `env-name` - String - Optional - Filter by compute environment name.</li>
+<li> `resource-type` - String - Optional - Filter by compute resource type, which can be CVM or CPM (BM).</li>
+<li> `tag-key` - String - Optional - Filter by tag key.</li>
+</li>`tag-value` - String - Optional - Filter by tag value.</li>
+<li> `tag:tag-key` - String - Optional - Filter by tag key-value pair. The tag-key should be replaced by a specified tag key.</li>
+It cannot be specified together with the `EnvIds` parameter. 
+     * @return Filters Filter.
+<li> `zone` - String - Optional - Filter by availability zone.</li>
+<li> `env-id` - String - Optional - Filter by compute environment ID.</li>
+<li> `env-name` - String - Optional - Filter by compute environment name.</li>
+<li> `resource-type` - String - Optional - Filter by compute resource type, which can be CVM or CPM (BM).</li>
+<li> `tag-key` - String - Optional - Filter by tag key.</li>
+</li>`tag-value` - String - Optional - Filter by tag value.</li>
+<li> `tag:tag-key` - String - Optional - Filter by tag key-value pair. The tag-key should be replaced by a specified tag key.</li>
+It cannot be specified together with the `EnvIds` parameter.
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter
-<li> zone - String - Required: No - (Filter) Filter by availability zone.</li>
-<li> env-id - String - Required: No - (Filter) Filter by compute environment ID.</li>
-<li> env-name - String - Required: No - (Filter) Filter by compute environment name.</li>
-     * @param Filters Filter
-<li> zone - String - Required: No - (Filter) Filter by availability zone.</li>
-<li> env-id - String - Required: No - (Filter) Filter by compute environment ID.</li>
-<li> env-name - String - Required: No - (Filter) Filter by compute environment name.</li>
+     * Set Filter.
+<li> `zone` - String - Optional - Filter by availability zone.</li>
+<li> `env-id` - String - Optional - Filter by compute environment ID.</li>
+<li> `env-name` - String - Optional - Filter by compute environment name.</li>
+<li> `resource-type` - String - Optional - Filter by compute resource type, which can be CVM or CPM (BM).</li>
+<li> `tag-key` - String - Optional - Filter by tag key.</li>
+</li>`tag-value` - String - Optional - Filter by tag value.</li>
+<li> `tag:tag-key` - String - Optional - Filter by tag key-value pair. The tag-key should be replaced by a specified tag key.</li>
+It cannot be specified together with the `EnvIds` parameter.
+     * @param Filters Filter.
+<li> `zone` - String - Optional - Filter by availability zone.</li>
+<li> `env-id` - String - Optional - Filter by compute environment ID.</li>
+<li> `env-name` - String - Optional - Filter by compute environment name.</li>
+<li> `resource-type` - String - Optional - Filter by compute resource type, which can be CVM or CPM (BM).</li>
+<li> `tag-key` - String - Optional - Filter by tag key.</li>
+</li>`tag-value` - String - Optional - Filter by tag value.</li>
+<li> `tag:tag-key` - String - Optional - Filter by tag key-value pair. The tag-key should be replaced by a specified tag key.</li>
+It cannot be specified together with the `EnvIds` parameter.
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

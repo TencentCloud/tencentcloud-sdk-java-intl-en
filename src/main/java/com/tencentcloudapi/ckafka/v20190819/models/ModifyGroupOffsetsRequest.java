@@ -72,6 +72,13 @@ public class ModifyGroupOffsetsRequest extends AbstractModel{
     private Long Offset;
 
     /**
+    * List of partitions that need to be reset. If the topics parameter is not specified, reset partitions in the corresponding partition list of all topics. If the topics parameter is specified, reset partitions of the corresponding partition list of the specified topic list.
+    */
+    @SerializedName("Partitions")
+    @Expose
+    private Long [] Partitions;
+
+    /**
      * Get Kafka instance ID 
      * @return InstanceId Kafka instance ID
      */
@@ -184,6 +191,22 @@ public class ModifyGroupOffsetsRequest extends AbstractModel{
     }
 
     /**
+     * Get List of partitions that need to be reset. If the topics parameter is not specified, reset partitions in the corresponding partition list of all topics. If the topics parameter is specified, reset partitions of the corresponding partition list of the specified topic list. 
+     * @return Partitions List of partitions that need to be reset. If the topics parameter is not specified, reset partitions in the corresponding partition list of all topics. If the topics parameter is specified, reset partitions of the corresponding partition list of the specified topic list.
+     */
+    public Long [] getPartitions() {
+        return this.Partitions;
+    }
+
+    /**
+     * Set List of partitions that need to be reset. If the topics parameter is not specified, reset partitions in the corresponding partition list of all topics. If the topics parameter is specified, reset partitions of the corresponding partition list of the specified topic list.
+     * @param Partitions List of partitions that need to be reset. If the topics parameter is not specified, reset partitions in the corresponding partition list of all topics. If the topics parameter is specified, reset partitions of the corresponding partition list of the specified topic list.
+     */
+    public void setPartitions(Long [] Partitions) {
+        this.Partitions = Partitions;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class ModifyGroupOffsetsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Shift", this.Shift);
         this.setParamSimple(map, prefix + "ShiftTimestamp", this.ShiftTimestamp);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamArraySimple(map, prefix + "Partitions.", this.Partitions);
 
     }
 }

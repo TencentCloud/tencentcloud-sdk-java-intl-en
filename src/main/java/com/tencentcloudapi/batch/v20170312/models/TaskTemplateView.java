@@ -58,6 +58,14 @@ public class TaskTemplateView extends AbstractModel{
     private String CreateTime;
 
     /**
+    * Tag list bound to the task template.
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get Task template ID 
      * @return TaskTemplateId Task template ID
      */
@@ -138,6 +146,26 @@ public class TaskTemplateView extends AbstractModel{
     }
 
     /**
+     * Get Tag list bound to the task template.
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return Tags Tag list bound to the task template.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag list bound to the task template.
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param Tags Tag list bound to the task template.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +174,7 @@ public class TaskTemplateView extends AbstractModel{
         this.setParamSimple(map, prefix + "TaskTemplateDescription", this.TaskTemplateDescription);
         this.setParamObj(map, prefix + "TaskTemplateInfo.", this.TaskTemplateInfo);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

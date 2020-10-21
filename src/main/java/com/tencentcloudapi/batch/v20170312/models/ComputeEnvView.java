@@ -93,6 +93,14 @@ public class ComputeEnvView extends AbstractModel{
     private Long AttachedComputeNodeCount;
 
     /**
+    * Tag list bound to the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get Compute environment ID 
      * @return EnvId Compute environment ID
      */
@@ -253,6 +261,26 @@ public class ComputeEnvView extends AbstractModel{
     }
 
     /**
+     * Get Tag list bound to the compute environment.
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return Tags Tag list bound to the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag list bound to the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param Tags Tag list bound to the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -266,6 +294,7 @@ public class ComputeEnvView extends AbstractModel{
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
         this.setParamSimple(map, prefix + "NextAction", this.NextAction);
         this.setParamSimple(map, prefix + "AttachedComputeNodeCount", this.AttachedComputeNodeCount);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

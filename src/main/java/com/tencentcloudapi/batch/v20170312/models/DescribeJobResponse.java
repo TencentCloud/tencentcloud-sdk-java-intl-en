@@ -97,7 +97,7 @@ public class DescribeJobResponse extends AbstractModel{
     */
     @SerializedName("TaskInstanceMetrics")
     @Expose
-    private TaskInstanceView TaskInstanceMetrics;
+    private TaskInstanceMetrics TaskInstanceMetrics;
 
     /**
     * Instance failure reason
@@ -105,6 +105,21 @@ public class DescribeJobResponse extends AbstractModel{
     @SerializedName("StateReason")
     @Expose
     private String StateReason;
+
+    /**
+    * Tag list bound to the job.
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+    * 
+    */
+    @SerializedName("NextAction")
+    @Expose
+    private String NextAction;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -277,7 +292,7 @@ public class DescribeJobResponse extends AbstractModel{
      * Get Task instance statistical metrics 
      * @return TaskInstanceMetrics Task instance statistical metrics
      */
-    public TaskInstanceView getTaskInstanceMetrics() {
+    public TaskInstanceMetrics getTaskInstanceMetrics() {
         return this.TaskInstanceMetrics;
     }
 
@@ -285,7 +300,7 @@ public class DescribeJobResponse extends AbstractModel{
      * Set Task instance statistical metrics
      * @param TaskInstanceMetrics Task instance statistical metrics
      */
-    public void setTaskInstanceMetrics(TaskInstanceView TaskInstanceMetrics) {
+    public void setTaskInstanceMetrics(TaskInstanceMetrics TaskInstanceMetrics) {
         this.TaskInstanceMetrics = TaskInstanceMetrics;
     }
 
@@ -303,6 +318,42 @@ public class DescribeJobResponse extends AbstractModel{
      */
     public void setStateReason(String StateReason) {
         this.StateReason = StateReason;
+    }
+
+    /**
+     * Get Tag list bound to the job.
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return Tags Tag list bound to the job.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag list bound to the job.
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param Tags Tag list bound to the job.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get  
+     * @return NextAction 
+     */
+    public String getNextAction() {
+        return this.NextAction;
+    }
+
+    /**
+     * Set 
+     * @param NextAction 
+     */
+    public void setNextAction(String NextAction) {
+        this.NextAction = NextAction;
     }
 
     /**
@@ -337,6 +388,8 @@ public class DescribeJobResponse extends AbstractModel{
         this.setParamObj(map, prefix + "TaskMetrics.", this.TaskMetrics);
         this.setParamObj(map, prefix + "TaskInstanceMetrics.", this.TaskInstanceMetrics);
         this.setParamSimple(map, prefix + "StateReason", this.StateReason);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "NextAction", this.NextAction);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

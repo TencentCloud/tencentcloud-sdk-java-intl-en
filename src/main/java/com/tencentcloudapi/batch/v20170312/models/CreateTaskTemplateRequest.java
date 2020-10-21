@@ -44,6 +44,13 @@ public class CreateTaskTemplateRequest extends AbstractModel{
     private String TaskTemplateDescription;
 
     /**
+    * Tag list. By setting this parameter, you can bind tags to a task template. Each task template supports up to 10 tags.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get Task template name 
      * @return TaskTemplateName Task template name
      */
@@ -92,12 +99,29 @@ public class CreateTaskTemplateRequest extends AbstractModel{
     }
 
     /**
+     * Get Tag list. By setting this parameter, you can bind tags to a task template. Each task template supports up to 10 tags. 
+     * @return Tags Tag list. By setting this parameter, you can bind tags to a task template. Each task template supports up to 10 tags.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag list. By setting this parameter, you can bind tags to a task template. Each task template supports up to 10 tags.
+     * @param Tags Tag list. By setting this parameter, you can bind tags to a task template. Each task template supports up to 10 tags.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskTemplateName", this.TaskTemplateName);
         this.setParamObj(map, prefix + "TaskTemplateInfo.", this.TaskTemplateInfo);
         this.setParamSimple(map, prefix + "TaskTemplateDescription", this.TaskTemplateDescription);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

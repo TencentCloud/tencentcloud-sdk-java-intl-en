@@ -99,6 +99,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long DesiredComputeNodeCount;
 
     /**
+    * Tag list of the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get Compute environment ID 
      * @return EnvId Compute environment ID
      */
@@ -283,6 +291,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Tag list of the compute environment.
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return Tags Tag list of the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag list of the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param Tags Tag list of the compute environment.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -296,6 +324,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "Authentications.", this.Authentications);
         this.setParamArrayObj(map, prefix + "Notifications.", this.Notifications);
         this.setParamSimple(map, prefix + "DesiredComputeNodeCount", this.DesiredComputeNodeCount);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

@@ -81,6 +81,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private TaskMetrics TaskMetrics;
 
     /**
+    * Tag list bound to the job.
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get Instance ID 
      * @return JobId Instance ID
      */
@@ -217,6 +225,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Tag list bound to the job.
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return Tags Tag list bound to the job.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag list bound to the job.
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param Tags Tag list bound to the job.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -228,6 +256,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamObj(map, prefix + "TaskMetrics.", this.TaskMetrics);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

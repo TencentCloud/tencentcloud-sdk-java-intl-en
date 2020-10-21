@@ -107,6 +107,13 @@ public class NamedComputeEnv extends AbstractModel{
     private Long ResourceMaxRetryCount;
 
     /**
+    * Tag list. By setting this parameter, you can bind tags to a compute environment. Each compute environment supports up to 10 tags.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get Compute environment name 
      * @return EnvName Compute environment name
      */
@@ -299,6 +306,22 @@ public class NamedComputeEnv extends AbstractModel{
     }
 
     /**
+     * Get Tag list. By setting this parameter, you can bind tags to a compute environment. Each compute environment supports up to 10 tags. 
+     * @return Tags Tag list. By setting this parameter, you can bind tags to a compute environment. Each compute environment supports up to 10 tags.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag list. By setting this parameter, you can bind tags to a compute environment. Each compute environment supports up to 10 tags.
+     * @param Tags Tag list. By setting this parameter, you can bind tags to a compute environment. Each compute environment supports up to 10 tags.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -314,6 +337,7 @@ public class NamedComputeEnv extends AbstractModel{
         this.setParamObj(map, prefix + "Notifications.", this.Notifications);
         this.setParamSimple(map, prefix + "ActionIfComputeNodeInactive", this.ActionIfComputeNodeInactive);
         this.setParamSimple(map, prefix + "ResourceMaxRetryCount", this.ResourceMaxRetryCount);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

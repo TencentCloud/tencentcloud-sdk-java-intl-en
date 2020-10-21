@@ -79,6 +79,13 @@ public class Job extends AbstractModel{
     private String StateIfCreateCvmFailed;
 
     /**
+    * Tag list. By setting this parameter, you can bind tags to a job. Each job supports up to 10 tags.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get Job information 
      * @return Tasks Job information
      */
@@ -207,6 +214,22 @@ public class Job extends AbstractModel{
     }
 
     /**
+     * Get Tag list. By setting this parameter, you can bind tags to a job. Each job supports up to 10 tags. 
+     * @return Tags Tag list. By setting this parameter, you can bind tags to a job. Each job supports up to 10 tags.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag list. By setting this parameter, you can bind tags to a job. Each job supports up to 10 tags.
+     * @param Tags Tag list. By setting this parameter, you can bind tags to a job. Each job supports up to 10 tags.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +241,7 @@ public class Job extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Notifications.", this.Notifications);
         this.setParamSimple(map, prefix + "TaskExecutionDependOn", this.TaskExecutionDependOn);
         this.setParamSimple(map, prefix + "StateIfCreateCvmFailed", this.StateIfCreateCvmFailed);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

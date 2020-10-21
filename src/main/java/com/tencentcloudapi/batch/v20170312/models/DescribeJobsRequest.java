@@ -30,11 +30,15 @@ public class DescribeJobsRequest extends AbstractModel{
     private String [] JobIds;
 
     /**
-    * Filter
-<li> job-id - String - Required: No - (Filter) Filter by job ID.</li>
-<li> job-name - String - Required: No - (Filter) Filter by job name.</li>
-<li> job-state - String - Required: No - (Filter) Filter by job state.</li>
-<li> zone - String - Required: No - (Filter) Filter by availability zone.</li>
+    * Filter.
+<li> `job-id` - String - Optional - Filter by job ID.</li>
+<li> `job-name` - String - Optional - Filter by job name.</li>
+<li> `job-state` - String - Optional - Filter by job state.</li>
+<li> `zone` - String - Optional - Filter by availability zone.</li>
+<li> `tag-key` - String - Optional - Filter by tag key.</li>
+<li> `tag-value` - String - Optional - Filter by tag value.</li>
+<li> `tag:tag-key` - String - Optional - Filter by tag key-value pair. The tag-key should be replaced by a specified tag key.</li>
+It cannot be specified together with the `JobIds` parameter.
     */
     @SerializedName("Filters")
     @Expose
@@ -71,32 +75,48 @@ public class DescribeJobsRequest extends AbstractModel{
     }
 
     /**
-     * Get Filter
-<li> job-id - String - Required: No - (Filter) Filter by job ID.</li>
-<li> job-name - String - Required: No - (Filter) Filter by job name.</li>
-<li> job-state - String - Required: No - (Filter) Filter by job state.</li>
-<li> zone - String - Required: No - (Filter) Filter by availability zone.</li> 
-     * @return Filters Filter
-<li> job-id - String - Required: No - (Filter) Filter by job ID.</li>
-<li> job-name - String - Required: No - (Filter) Filter by job name.</li>
-<li> job-state - String - Required: No - (Filter) Filter by job state.</li>
-<li> zone - String - Required: No - (Filter) Filter by availability zone.</li>
+     * Get Filter.
+<li> `job-id` - String - Optional - Filter by job ID.</li>
+<li> `job-name` - String - Optional - Filter by job name.</li>
+<li> `job-state` - String - Optional - Filter by job state.</li>
+<li> `zone` - String - Optional - Filter by availability zone.</li>
+<li> `tag-key` - String - Optional - Filter by tag key.</li>
+<li> `tag-value` - String - Optional - Filter by tag value.</li>
+<li> `tag:tag-key` - String - Optional - Filter by tag key-value pair. The tag-key should be replaced by a specified tag key.</li>
+It cannot be specified together with the `JobIds` parameter. 
+     * @return Filters Filter.
+<li> `job-id` - String - Optional - Filter by job ID.</li>
+<li> `job-name` - String - Optional - Filter by job name.</li>
+<li> `job-state` - String - Optional - Filter by job state.</li>
+<li> `zone` - String - Optional - Filter by availability zone.</li>
+<li> `tag-key` - String - Optional - Filter by tag key.</li>
+<li> `tag-value` - String - Optional - Filter by tag value.</li>
+<li> `tag:tag-key` - String - Optional - Filter by tag key-value pair. The tag-key should be replaced by a specified tag key.</li>
+It cannot be specified together with the `JobIds` parameter.
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter
-<li> job-id - String - Required: No - (Filter) Filter by job ID.</li>
-<li> job-name - String - Required: No - (Filter) Filter by job name.</li>
-<li> job-state - String - Required: No - (Filter) Filter by job state.</li>
-<li> zone - String - Required: No - (Filter) Filter by availability zone.</li>
-     * @param Filters Filter
-<li> job-id - String - Required: No - (Filter) Filter by job ID.</li>
-<li> job-name - String - Required: No - (Filter) Filter by job name.</li>
-<li> job-state - String - Required: No - (Filter) Filter by job state.</li>
-<li> zone - String - Required: No - (Filter) Filter by availability zone.</li>
+     * Set Filter.
+<li> `job-id` - String - Optional - Filter by job ID.</li>
+<li> `job-name` - String - Optional - Filter by job name.</li>
+<li> `job-state` - String - Optional - Filter by job state.</li>
+<li> `zone` - String - Optional - Filter by availability zone.</li>
+<li> `tag-key` - String - Optional - Filter by tag key.</li>
+<li> `tag-value` - String - Optional - Filter by tag value.</li>
+<li> `tag:tag-key` - String - Optional - Filter by tag key-value pair. The tag-key should be replaced by a specified tag key.</li>
+It cannot be specified together with the `JobIds` parameter.
+     * @param Filters Filter.
+<li> `job-id` - String - Optional - Filter by job ID.</li>
+<li> `job-name` - String - Optional - Filter by job name.</li>
+<li> `job-state` - String - Optional - Filter by job state.</li>
+<li> `zone` - String - Optional - Filter by availability zone.</li>
+<li> `tag-key` - String - Optional - Filter by tag key.</li>
+<li> `tag-value` - String - Optional - Filter by tag value.</li>
+<li> `tag:tag-key` - String - Optional - Filter by tag key-value pair. The tag-key should be replaced by a specified tag key.</li>
+It cannot be specified together with the `JobIds` parameter.
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
