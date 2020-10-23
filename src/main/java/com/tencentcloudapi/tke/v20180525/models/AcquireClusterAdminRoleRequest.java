@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cloudaudit.v20190319.models;
+package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListCmqEnableRegionRequest extends AbstractModel{
+public class AcquireClusterAdminRoleRequest extends AbstractModel{
 
     /**
-    * Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
+    * Cluster ID
     */
-    @SerializedName("WebsiteType")
+    @SerializedName("ClusterId")
     @Expose
-    private String WebsiteType;
+    private String ClusterId;
 
     /**
-     * Get Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh 
-     * @return WebsiteType Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
+     * Get Cluster ID 
+     * @return ClusterId Cluster ID
      */
-    public String getWebsiteType() {
-        return this.WebsiteType;
+    public String getClusterId() {
+        return this.ClusterId;
     }
 
     /**
-     * Set Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
-     * @param WebsiteType Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
+     * Set Cluster ID
+     * @param ClusterId Cluster ID
      */
-    public void setWebsiteType(String WebsiteType) {
-        this.WebsiteType = WebsiteType;
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "WebsiteType", this.WebsiteType);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
 
     }
 }

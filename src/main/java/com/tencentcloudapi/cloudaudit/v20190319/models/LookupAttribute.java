@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class LookupAttribute extends AbstractModel{
 
     /**
-    * AttributeKey value range: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, EventId
+    * Valid values of `AttributeKey`: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, EventId
     */
     @SerializedName("AttributeKey")
     @Expose
@@ -37,16 +37,16 @@ public class LookupAttribute extends AbstractModel{
     private String AttributeValue;
 
     /**
-     * Get AttributeKey value range: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, EventId 
-     * @return AttributeKey AttributeKey value range: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, EventId
+     * Get Valid values of `AttributeKey`: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, EventId 
+     * @return AttributeKey Valid values of `AttributeKey`: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, EventId
      */
     public String getAttributeKey() {
         return this.AttributeKey;
     }
 
     /**
-     * Set AttributeKey value range: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, EventId
-     * @param AttributeKey AttributeKey value range: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, EventId
+     * Set Valid values of `AttributeKey`: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, EventId
+     * @param AttributeKey Valid values of `AttributeKey`: RequestId, EventName, ReadOnly, Username, ResourceType, ResourceName, AccessKeyId, EventId
      */
     public void setAttributeKey(String AttributeKey) {
         this.AttributeKey = AttributeKey;

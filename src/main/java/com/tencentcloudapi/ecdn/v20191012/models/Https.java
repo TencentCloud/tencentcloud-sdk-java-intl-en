@@ -87,7 +87,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String SslStatus;
 
     /**
-    * Hsts configuration.
+    * HSTS configuration
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Hsts")
     @Expose
@@ -254,16 +255,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Hsts configuration. 
-     * @return Hsts Hsts configuration.
+     * Get HSTS configuration
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Hsts HSTS configuration
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Hsts getHsts() {
         return this.Hsts;
     }
 
     /**
-     * Set Hsts configuration.
-     * @param Hsts Hsts configuration.
+     * Set HSTS configuration
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Hsts HSTS configuration
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setHsts(Hsts Hsts) {
         this.Hsts = Hsts;

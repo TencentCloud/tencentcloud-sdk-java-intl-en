@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class ListCosEnableRegionRequest extends AbstractModel{
 
     /**
-    * Website type. zh: Mainland China (default); en: outside Mainland China.
+    * Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
     */
     @SerializedName("WebsiteType")
     @Expose
     private String WebsiteType;
 
     /**
-     * Get Website type. zh: Mainland China (default); en: outside Mainland China. 
-     * @return WebsiteType Website type. zh: Mainland China (default); en: outside Mainland China.
+     * Get Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh 
+     * @return WebsiteType Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
      */
     public String getWebsiteType() {
         return this.WebsiteType;
     }
 
     /**
-     * Set Website type. zh: Mainland China (default); en: outside Mainland China.
-     * @param WebsiteType Website type. zh: Mainland China (default); en: outside Mainland China.
+     * Set Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
+     * @param WebsiteType Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
      */
     public void setWebsiteType(String WebsiteType) {
         this.WebsiteType = WebsiteType;

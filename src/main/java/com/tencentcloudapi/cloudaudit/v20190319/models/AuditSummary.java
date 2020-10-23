@@ -30,7 +30,7 @@ public class AuditSummary extends AbstractModel{
     private String AuditName;
 
     /**
-    * Tracking set status. Value range: 1 (enabled), 0 (disabled)
+    * Tracking set status. Valid values: 1: enabled, 0: disabled
     */
     @SerializedName("AuditStatus")
     @Expose
@@ -67,16 +67,16 @@ public class AuditSummary extends AbstractModel{
     }
 
     /**
-     * Get Tracking set status. Value range: 1 (enabled), 0 (disabled) 
-     * @return AuditStatus Tracking set status. Value range: 1 (enabled), 0 (disabled)
+     * Get Tracking set status. Valid values: 1: enabled, 0: disabled 
+     * @return AuditStatus Tracking set status. Valid values: 1: enabled, 0: disabled
      */
     public Long getAuditStatus() {
         return this.AuditStatus;
     }
 
     /**
-     * Set Tracking set status. Value range: 1 (enabled), 0 (disabled)
-     * @param AuditStatus Tracking set status. Value range: 1 (enabled), 0 (disabled)
+     * Set Tracking set status. Valid values: 1: enabled, 0: disabled
+     * @param AuditStatus Tracking set status. Valid values: 1: enabled, 0: disabled
      */
     public void setAuditStatus(Long AuditStatus) {
         this.AuditStatus = AuditStatus;

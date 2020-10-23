@@ -65,7 +65,7 @@ public class Event extends AbstractModel{
     private String EventName;
 
     /**
-    * Description of event name
+    * Chinese description of event name (please use this field as required; if you are using other languages, ignore this field)
     */
     @SerializedName("EventNameCn")
     @Expose
@@ -100,7 +100,14 @@ public class Event extends AbstractModel{
     private String RequestID;
 
     /**
-    * Description of resource type
+    * Resource region
+    */
+    @SerializedName("ResourceRegion")
+    @Expose
+    private String ResourceRegion;
+
+    /**
+    * Chinese description of resource type (please use this field as required; if you are using other languages, ignore this field)
     */
     @SerializedName("ResourceTypeCn")
     @Expose
@@ -224,16 +231,16 @@ public class Event extends AbstractModel{
     }
 
     /**
-     * Get Description of event name 
-     * @return EventNameCn Description of event name
+     * Get Chinese description of event name (please use this field as required; if you are using other languages, ignore this field) 
+     * @return EventNameCn Chinese description of event name (please use this field as required; if you are using other languages, ignore this field)
      */
     public String getEventNameCn() {
         return this.EventNameCn;
     }
 
     /**
-     * Set Description of event name
-     * @param EventNameCn Description of event name
+     * Set Chinese description of event name (please use this field as required; if you are using other languages, ignore this field)
+     * @param EventNameCn Chinese description of event name (please use this field as required; if you are using other languages, ignore this field)
      */
     public void setEventNameCn(String EventNameCn) {
         this.EventNameCn = EventNameCn;
@@ -304,16 +311,32 @@ public class Event extends AbstractModel{
     }
 
     /**
-     * Get Description of resource type 
-     * @return ResourceTypeCn Description of resource type
+     * Get Resource region 
+     * @return ResourceRegion Resource region
+     */
+    public String getResourceRegion() {
+        return this.ResourceRegion;
+    }
+
+    /**
+     * Set Resource region
+     * @param ResourceRegion Resource region
+     */
+    public void setResourceRegion(String ResourceRegion) {
+        this.ResourceRegion = ResourceRegion;
+    }
+
+    /**
+     * Get Chinese description of resource type (please use this field as required; if you are using other languages, ignore this field) 
+     * @return ResourceTypeCn Chinese description of resource type (please use this field as required; if you are using other languages, ignore this field)
      */
     public String getResourceTypeCn() {
         return this.ResourceTypeCn;
     }
 
     /**
-     * Set Description of resource type
-     * @param ResourceTypeCn Description of resource type
+     * Set Chinese description of resource type (please use this field as required; if you are using other languages, ignore this field)
+     * @param ResourceTypeCn Chinese description of resource type (please use this field as required; if you are using other languages, ignore this field)
      */
     public void setResourceTypeCn(String ResourceTypeCn) {
         this.ResourceTypeCn = ResourceTypeCn;
@@ -382,6 +405,7 @@ public class Event extends AbstractModel{
         this.setParamSimple(map, prefix + "EventSource", this.EventSource);
         this.setParamSimple(map, prefix + "EventTime", this.EventTime);
         this.setParamSimple(map, prefix + "RequestID", this.RequestID);
+        this.setParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
         this.setParamSimple(map, prefix + "ResourceTypeCn", this.ResourceTypeCn);
         this.setParamSimple(map, prefix + "SecretId", this.SecretId);
         this.setParamSimple(map, prefix + "SourceIPAddress", this.SourceIPAddress);

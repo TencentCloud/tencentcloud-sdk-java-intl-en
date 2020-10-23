@@ -38,7 +38,11 @@ public class CloudauditClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a tracking set.
+     *Parameter requirements:
+1. If the value of `IsCreateNewBucket` exists, `cosRegion` and `cosBucketName` are required.
+2. If the value of `IsEnableCmqNotify` is 1, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` are required.
+3. If the value of `IsEnableCmqNotify` is 0, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` cannot be passed in.
+4. If the value of `IsEnableKmsEncry` is 1, `KmsRegion` and `KeyId` are required.
      * @param req CreateAuditRequest
      * @return CreateAuditResponse
      * @throws TencentCloudSDKException
@@ -98,7 +102,7 @@ public class CloudauditClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the value range of AttributeKey.
+     *This API is used to query the valid values range of `AttributeKey`.
      * @param req GetAttributeKeyRequest
      * @return GetAttributeKeyResponse
      * @throws TencentCloudSDKException
@@ -118,7 +122,7 @@ public class CloudauditClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the maximum number of tracking sets that can be created.
+     *This API is used to query the number of tracking sets that can be created.
      * @param req InquireAuditCreditRequest
      * @return InquireAuditCreditResponse
      * @throws TencentCloudSDKException
@@ -158,7 +162,7 @@ public class CloudauditClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the CloudAudit-enabled CMQ AZs.
+     *This API is used to query CloudAudit-enabled CMQ AZs.
      * @param req ListCmqEnableRegionRequest
      * @return ListCmqEnableRegionResponse
      * @throws TencentCloudSDKException
@@ -178,7 +182,7 @@ public class CloudauditClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the CloudAudit-enabled COS AZs.
+     *This API is used to query CloudAudit-enabled COS AZs.
      * @param req ListCosEnableRegionRequest
      * @return ListCosEnableRegionResponse
      * @throws TencentCloudSDKException
@@ -259,9 +263,10 @@ public class CloudauditClient extends AbstractClient{
 
     /**
      *Parameter requirements:
-1. If the value of IsCreateNewBucket exists, cosRegion and cosBucketName are required.
-2. If the value of IsEnableCmqNotify is 1, IsCreateNewQueue, CmqRegion, and CmqQueueName are required.
-3. If the value of IsEnableCmqNotify is 0, IsCreateNewQueue, CmqRegion, and CmqQueueName cannot be passed in.
+1. If the value of `IsCreateNewBucket` exists, `cosRegion` and `cosBucketName` are required.
+2. If the value of `IsEnableCmqNotify` is 1, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` are required.
+3. If the value of `IsEnableCmqNotify` is 0, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` cannot be passed in.
+4. If the value of `IsEnableKmsEncry` is 1, `KmsRegion` and `KeyId` are required.
      * @param req UpdateAuditRequest
      * @return UpdateAuditResponse
      * @throws TencentCloudSDKException

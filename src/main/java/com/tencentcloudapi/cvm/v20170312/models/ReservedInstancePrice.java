@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class ReservedInstancePrice extends AbstractModel{
 
     /**
-    * Original upfront price, in USD.
+    * Original upfront payment, in USD.
     */
     @SerializedName("OriginalFixedPrice")
     @Expose
     private Float OriginalFixedPrice;
 
     /**
-    * Discounted upfront price, in USD.
+    * Discounted upfront payment, in USD.
     */
     @SerializedName("DiscountFixedPrice")
     @Expose
     private Float DiscountFixedPrice;
 
     /**
-    * Original usage price, in USD/hr.
+    * Original subsequent unit price, in USD/hr.
     */
     @SerializedName("OriginalUsagePrice")
     @Expose
     private Float OriginalUsagePrice;
 
     /**
-    * Discounted usage price, in USD/hr.
+    * Discounted subsequent unit price, in USD/hr.
     */
     @SerializedName("DiscountUsagePrice")
     @Expose
     private Float DiscountUsagePrice;
 
     /**
-     * Get Original upfront price, in USD. 
-     * @return OriginalFixedPrice Original upfront price, in USD.
+     * Get Original upfront payment, in USD. 
+     * @return OriginalFixedPrice Original upfront payment, in USD.
      */
     public Float getOriginalFixedPrice() {
         return this.OriginalFixedPrice;
     }
 
     /**
-     * Set Original upfront price, in USD.
-     * @param OriginalFixedPrice Original upfront price, in USD.
+     * Set Original upfront payment, in USD.
+     * @param OriginalFixedPrice Original upfront payment, in USD.
      */
     public void setOriginalFixedPrice(Float OriginalFixedPrice) {
         this.OriginalFixedPrice = OriginalFixedPrice;
     }
 
     /**
-     * Get Discounted upfront price, in USD. 
-     * @return DiscountFixedPrice Discounted upfront price, in USD.
+     * Get Discounted upfront payment, in USD. 
+     * @return DiscountFixedPrice Discounted upfront payment, in USD.
      */
     public Float getDiscountFixedPrice() {
         return this.DiscountFixedPrice;
     }
 
     /**
-     * Set Discounted upfront price, in USD.
-     * @param DiscountFixedPrice Discounted upfront price, in USD.
+     * Set Discounted upfront payment, in USD.
+     * @param DiscountFixedPrice Discounted upfront payment, in USD.
      */
     public void setDiscountFixedPrice(Float DiscountFixedPrice) {
         this.DiscountFixedPrice = DiscountFixedPrice;
     }
 
     /**
-     * Get Original usage price, in USD/hr. 
-     * @return OriginalUsagePrice Original usage price, in USD/hr.
+     * Get Original subsequent unit price, in USD/hr. 
+     * @return OriginalUsagePrice Original subsequent unit price, in USD/hr.
      */
     public Float getOriginalUsagePrice() {
         return this.OriginalUsagePrice;
     }
 
     /**
-     * Set Original usage price, in USD/hr.
-     * @param OriginalUsagePrice Original usage price, in USD/hr.
+     * Set Original subsequent unit price, in USD/hr.
+     * @param OriginalUsagePrice Original subsequent unit price, in USD/hr.
      */
     public void setOriginalUsagePrice(Float OriginalUsagePrice) {
         this.OriginalUsagePrice = OriginalUsagePrice;
     }
 
     /**
-     * Get Discounted usage price, in USD/hr. 
-     * @return DiscountUsagePrice Discounted usage price, in USD/hr.
+     * Get Discounted subsequent unit price, in USD/hr. 
+     * @return DiscountUsagePrice Discounted subsequent unit price, in USD/hr.
      */
     public Float getDiscountUsagePrice() {
         return this.DiscountUsagePrice;
     }
 
     /**
-     * Set Discounted usage price, in USD/hr.
-     * @param DiscountUsagePrice Discounted usage price, in USD/hr.
+     * Set Discounted subsequent unit price, in USD/hr.
+     * @param DiscountUsagePrice Discounted subsequent unit price, in USD/hr.
      */
     public void setDiscountUsagePrice(Float DiscountUsagePrice) {
         this.DiscountUsagePrice = DiscountUsagePrice;

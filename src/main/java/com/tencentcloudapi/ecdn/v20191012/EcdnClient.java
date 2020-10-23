@@ -187,6 +187,26 @@ public class EcdnClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the detailed node information of the acceleration platform to which the domain name is connected.
+     * @param req DescribeIpStatusRequest
+     * @return DescribeIpStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIpStatusResponse DescribeIpStatus(DescribeIpStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeIpStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeIpStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeIpStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the usage quota of the purge API.
      * @param req DescribePurgeQuotaRequest
      * @return DescribePurgeQuotaResponse
@@ -227,7 +247,7 @@ public class EcdnClient extends AbstractClient{
     }
 
     /**
-     *This API is used to batch purge cache directories. One purge task ID will be returned for each submission.
+     *This API is used to purge cache directories in batches. One purge task ID will be returned for each submission.
      * @param req PurgePathCacheRequest
      * @return PurgePathCacheResponse
      * @throws TencentCloudSDKException

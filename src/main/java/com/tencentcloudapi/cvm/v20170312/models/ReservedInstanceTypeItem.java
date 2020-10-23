@@ -65,7 +65,7 @@ public class ReservedInstanceTypeItem extends AbstractModel{
     private Long StorageBlock;
 
     /**
-    * Number of ENIs.
+    * Number of NICs.
     */
     @SerializedName("NetworkCard")
     @Expose
@@ -217,16 +217,16 @@ public class ReservedInstanceTypeItem extends AbstractModel{
     }
 
     /**
-     * Get Number of ENIs. 
-     * @return NetworkCard Number of ENIs.
+     * Get Number of NICs. 
+     * @return NetworkCard Number of NICs.
      */
     public Long getNetworkCard() {
         return this.NetworkCard;
     }
 
     /**
-     * Set Number of ENIs.
-     * @param NetworkCard Number of ENIs.
+     * Set Number of NICs.
+     * @param NetworkCard Number of NICs.
      */
     public void setNetworkCard(Long NetworkCard) {
         this.NetworkCard = NetworkCard;

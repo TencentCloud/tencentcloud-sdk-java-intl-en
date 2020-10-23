@@ -13,35 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.scf.v20180416.models;
+package com.tencentcloudapi.ecdn.v20191012.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetFunctionLogsResponse extends AbstractModel{
+public class DescribeIpStatusResponse extends AbstractModel{
 
     /**
-    * Total number of function logs
+    * Node list
+    */
+    @SerializedName("Ips")
+    @Expose
+    private IpStatus [] Ips;
+
+    /**
+    * Total number of nodes
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
-
-    /**
-    * Function log information
-    */
-    @SerializedName("Data")
-    @Expose
-    private FunctionLog [] Data;
-
-    /**
-    * This field is disused.
-    */
-    @SerializedName("SearchContext")
-    @Expose
-    private LogSearchContext SearchContext;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -51,51 +44,35 @@ public class GetFunctionLogsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Total number of function logs 
-     * @return TotalCount Total number of function logs
+     * Get Node list 
+     * @return Ips Node list
+     */
+    public IpStatus [] getIps() {
+        return this.Ips;
+    }
+
+    /**
+     * Set Node list
+     * @param Ips Node list
+     */
+    public void setIps(IpStatus [] Ips) {
+        this.Ips = Ips;
+    }
+
+    /**
+     * Get Total number of nodes 
+     * @return TotalCount Total number of nodes
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of function logs
-     * @param TotalCount Total number of function logs
+     * Set Total number of nodes
+     * @param TotalCount Total number of nodes
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get Function log information 
-     * @return Data Function log information
-     */
-    public FunctionLog [] getData() {
-        return this.Data;
-    }
-
-    /**
-     * Set Function log information
-     * @param Data Function log information
-     */
-    public void setData(FunctionLog [] Data) {
-        this.Data = Data;
-    }
-
-    /**
-     * Get This field is disused. 
-     * @return SearchContext This field is disused.
-     */
-    public LogSearchContext getSearchContext() {
-        return this.SearchContext;
-    }
-
-    /**
-     * Set This field is disused.
-     * @param SearchContext This field is disused.
-     */
-    public void setSearchContext(LogSearchContext SearchContext) {
-        this.SearchContext = SearchContext;
     }
 
     /**
@@ -118,9 +95,8 @@ public class GetFunctionLogsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Ips.", this.Ips);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "Data.", this.Data);
-        this.setParamObj(map, prefix + "SearchContext.", this.SearchContext);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AttributeKeyDetail extends AbstractModel{
 
     /**
-    * Chinese label
+    * Tag
     */
     @SerializedName("Label")
     @Expose
@@ -51,23 +51,23 @@ public class AttributeKeyDetail extends AbstractModel{
     private String Starter;
 
     /**
-    * AttributeKey value
+    * `AttributeKey` value
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get Chinese label 
-     * @return Label Chinese label
+     * Get Tag 
+     * @return Label Tag
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set Chinese label
-     * @param Label Chinese label
+     * Set Tag
+     * @param Label Tag
      */
     public void setLabel(String Label) {
         this.Label = Label;
@@ -122,16 +122,16 @@ public class AttributeKeyDetail extends AbstractModel{
     }
 
     /**
-     * Get AttributeKey value 
-     * @return Value AttributeKey value
+     * Get `AttributeKey` value 
+     * @return Value `AttributeKey` value
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set AttributeKey value
-     * @param Value AttributeKey value
+     * Set `AttributeKey` value
+     * @param Value `AttributeKey` value
      */
     public void setValue(String Value) {
         this.Value = Value;

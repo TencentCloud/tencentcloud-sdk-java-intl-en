@@ -30,7 +30,7 @@ public class ListCosEnableRegionResponse extends AbstractModel{
     private CosRegionInfo [] EnableRegions;
 
     /**
-    * Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
+    * Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
     */
     @SerializedName("RequestId")
     @Expose
@@ -53,16 +53,16 @@ public class ListCosEnableRegionResponse extends AbstractModel{
     }
 
     /**
-     * Get Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues. 
-     * @return RequestId Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
+     * Get Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting. 
+     * @return RequestId Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
      */
     public String getRequestId() {
         return this.RequestId;
     }
 
     /**
-     * Set Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
-     * @param RequestId Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
+     * Set Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
+     * @param RequestId Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
      */
     public void setRequestId(String RequestId) {
         this.RequestId = RequestId;

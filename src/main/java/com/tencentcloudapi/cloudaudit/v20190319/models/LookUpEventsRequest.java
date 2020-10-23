@@ -44,11 +44,18 @@ public class LookUpEventsRequest extends AbstractModel{
     private LookupAttribute [] LookupAttributes;
 
     /**
-    * Maximum number of logs that can be returned
+    * Maximum number of logs to be returned
     */
     @SerializedName("MaxResults")
     @Expose
     private Long MaxResults;
+
+    /**
+    * CloudAudit mode. Valid values: standard, quick. Default value: standard
+    */
+    @SerializedName("Mode")
+    @Expose
+    private String Mode;
 
     /**
     * Credential for viewing more logs
@@ -106,19 +113,35 @@ public class LookUpEventsRequest extends AbstractModel{
     }
 
     /**
-     * Get Maximum number of logs that can be returned 
-     * @return MaxResults Maximum number of logs that can be returned
+     * Get Maximum number of logs to be returned 
+     * @return MaxResults Maximum number of logs to be returned
      */
     public Long getMaxResults() {
         return this.MaxResults;
     }
 
     /**
-     * Set Maximum number of logs that can be returned
-     * @param MaxResults Maximum number of logs that can be returned
+     * Set Maximum number of logs to be returned
+     * @param MaxResults Maximum number of logs to be returned
      */
     public void setMaxResults(Long MaxResults) {
         this.MaxResults = MaxResults;
+    }
+
+    /**
+     * Get CloudAudit mode. Valid values: standard, quick. Default value: standard 
+     * @return Mode CloudAudit mode. Valid values: standard, quick. Default value: standard
+     */
+    public String getMode() {
+        return this.Mode;
+    }
+
+    /**
+     * Set CloudAudit mode. Valid values: standard, quick. Default value: standard
+     * @param Mode CloudAudit mode. Valid values: standard, quick. Default value: standard
+     */
+    public void setMode(String Mode) {
+        this.Mode = Mode;
     }
 
     /**
@@ -145,6 +168,7 @@ public class LookUpEventsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamArrayObj(map, prefix + "LookupAttributes.", this.LookupAttributes);
         this.setParamSimple(map, prefix + "MaxResults", this.MaxResults);
+        this.setParamSimple(map, prefix + "Mode", this.Mode);
         this.setParamSimple(map, prefix + "NextToken", this.NextToken);
 
     }

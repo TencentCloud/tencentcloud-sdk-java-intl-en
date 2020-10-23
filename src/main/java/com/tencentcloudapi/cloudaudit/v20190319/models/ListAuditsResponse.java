@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class ListAuditsResponse extends AbstractModel{
 
     /**
-    * Queries the summary set of tracking sets
+    * Set of queried tracking set summaries
     */
     @SerializedName("AuditSummarys")
     @Expose
     private AuditSummary [] AuditSummarys;
 
     /**
-    * Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
+    * Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
 
     /**
-     * Get Queries the summary set of tracking sets 
-     * @return AuditSummarys Queries the summary set of tracking sets
+     * Get Set of queried tracking set summaries 
+     * @return AuditSummarys Set of queried tracking set summaries
      */
     public AuditSummary [] getAuditSummarys() {
         return this.AuditSummarys;
     }
 
     /**
-     * Set Queries the summary set of tracking sets
-     * @param AuditSummarys Queries the summary set of tracking sets
+     * Set Set of queried tracking set summaries
+     * @param AuditSummarys Set of queried tracking set summaries
      */
     public void setAuditSummarys(AuditSummary [] AuditSummarys) {
         this.AuditSummarys = AuditSummarys;
     }
 
     /**
-     * Get Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues. 
-     * @return RequestId Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
+     * Get Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting. 
+     * @return RequestId Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
      */
     public String getRequestId() {
         return this.RequestId;
     }
 
     /**
-     * Set Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
-     * @param RequestId Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
+     * Set Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
+     * @param RequestId Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
      */
     public void setRequestId(String RequestId) {
         this.RequestId = RequestId;

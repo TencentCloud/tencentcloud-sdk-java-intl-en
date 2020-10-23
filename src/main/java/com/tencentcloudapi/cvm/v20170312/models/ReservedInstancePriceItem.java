@@ -30,14 +30,14 @@ public class ReservedInstancePriceItem extends AbstractModel{
     private String OfferingType;
 
     /**
-    * Total upfront price, in USD.
+    * Upfront payment, in USD.
     */
     @SerializedName("FixedPrice")
     @Expose
     private Float FixedPrice;
 
     /**
-    * Total usage price, in USD/hr.
+    * Subsequent unit price, in USD/hr.
     */
     @SerializedName("UsagePrice")
     @Expose
@@ -90,32 +90,32 @@ Valid value: linux.
     }
 
     /**
-     * Get Total upfront price, in USD. 
-     * @return FixedPrice Total upfront price, in USD.
+     * Get Upfront payment, in USD. 
+     * @return FixedPrice Upfront payment, in USD.
      */
     public Float getFixedPrice() {
         return this.FixedPrice;
     }
 
     /**
-     * Set Total upfront price, in USD.
-     * @param FixedPrice Total upfront price, in USD.
+     * Set Upfront payment, in USD.
+     * @param FixedPrice Upfront payment, in USD.
      */
     public void setFixedPrice(Float FixedPrice) {
         this.FixedPrice = FixedPrice;
     }
 
     /**
-     * Get Total usage price, in USD/hr. 
-     * @return UsagePrice Total usage price, in USD/hr.
+     * Get Subsequent unit price, in USD/hr. 
+     * @return UsagePrice Subsequent unit price, in USD/hr.
      */
     public Float getUsagePrice() {
         return this.UsagePrice;
     }
 
     /**
-     * Set Total usage price, in USD/hr.
-     * @param UsagePrice Total usage price, in USD/hr.
+     * Set Subsequent unit price, in USD/hr.
+     * @param UsagePrice Subsequent unit price, in USD/hr.
      */
     public void setUsagePrice(Float UsagePrice) {
         this.UsagePrice = UsagePrice;

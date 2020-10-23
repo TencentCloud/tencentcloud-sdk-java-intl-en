@@ -38,6 +38,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API can be called to acquire the ClusterRole tke:admin. By setting a CAM policy, you can grant permission of this API to a sub-account that has higher permission in CAM. In this way, this sub-account can call this API directly to acquire the admin role of a Kubernetes cluster.
+     * @param req AcquireClusterAdminRoleRequest
+     * @return AcquireClusterAdminRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public AcquireClusterAdminRoleResponse AcquireClusterAdminRole(AcquireClusterAdminRoleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AcquireClusterAdminRoleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AcquireClusterAdminRoleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AcquireClusterAdminRole");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to add one or more existing instances to a cluster.
      * @param req AddExistedInstancesRequest
      * @return AddExistedInstancesResponse

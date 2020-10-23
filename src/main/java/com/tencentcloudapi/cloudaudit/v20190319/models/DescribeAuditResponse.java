@@ -30,7 +30,7 @@ public class DescribeAuditResponse extends AbstractModel{
     private String AuditName;
 
     /**
-    * Tracking set status. Value range: 1 (enabled), 0 (disabled).
+    * Tracking set status. Valid values: 1: enabled, 0: disabled.
     */
     @SerializedName("AuditStatus")
     @Expose
@@ -44,7 +44,7 @@ public class DescribeAuditResponse extends AbstractModel{
     private String CmqQueueName;
 
     /**
-    * Region where the queue is located.
+    * Queue region.
     */
     @SerializedName("CmqRegion")
     @Expose
@@ -58,18 +58,46 @@ public class DescribeAuditResponse extends AbstractModel{
     private String CosBucketName;
 
     /**
-    * Region where the COS bucket is located.
+    * COS bucket region.
     */
     @SerializedName("CosRegion")
     @Expose
     private String CosRegion;
 
     /**
-    * Whether to enable CMQ message notification. 1: yes; 0: no.
+    * Whether to enable CMQ message notification. Valid values: 1: yes; 0: no.
     */
     @SerializedName("IsEnableCmqNotify")
     @Expose
     private Long IsEnableCmqNotify;
+
+    /**
+    * Whether to enable KMS encryption. Valid values: 1: yes, 0: no. If KMS encryption is enabled, the data will be encrypted when delivered to COS.
+    */
+    @SerializedName("IsEnableKmsEncry")
+    @Expose
+    private Long IsEnableKmsEncry;
+
+    /**
+    * Globally unique CMK ID.
+    */
+    @SerializedName("KeyId")
+    @Expose
+    private String KeyId;
+
+    /**
+    * CMK alias.
+    */
+    @SerializedName("KmsAlias")
+    @Expose
+    private String KmsAlias;
+
+    /**
+    * KMS region.
+    */
+    @SerializedName("KmsRegion")
+    @Expose
+    private String KmsRegion;
 
     /**
     * Log prefix.
@@ -79,14 +107,14 @@ public class DescribeAuditResponse extends AbstractModel{
     private String LogFilePrefix;
 
     /**
-    * Manages the read/write attribute of an event. Value range: 1 (read-only), 2 (write-only), 3 (read/write)
+    * Manages the read/write attribute of event. Valid values: 1 (read-only), 2 (write-only), 3 (read/write)
     */
     @SerializedName("ReadWriteAttribute")
     @Expose
     private Long ReadWriteAttribute;
 
     /**
-    * Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
+    * Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
     */
     @SerializedName("RequestId")
     @Expose
@@ -109,16 +137,16 @@ public class DescribeAuditResponse extends AbstractModel{
     }
 
     /**
-     * Get Tracking set status. Value range: 1 (enabled), 0 (disabled). 
-     * @return AuditStatus Tracking set status. Value range: 1 (enabled), 0 (disabled).
+     * Get Tracking set status. Valid values: 1: enabled, 0: disabled. 
+     * @return AuditStatus Tracking set status. Valid values: 1: enabled, 0: disabled.
      */
     public Long getAuditStatus() {
         return this.AuditStatus;
     }
 
     /**
-     * Set Tracking set status. Value range: 1 (enabled), 0 (disabled).
-     * @param AuditStatus Tracking set status. Value range: 1 (enabled), 0 (disabled).
+     * Set Tracking set status. Valid values: 1: enabled, 0: disabled.
+     * @param AuditStatus Tracking set status. Valid values: 1: enabled, 0: disabled.
      */
     public void setAuditStatus(Long AuditStatus) {
         this.AuditStatus = AuditStatus;
@@ -141,16 +169,16 @@ public class DescribeAuditResponse extends AbstractModel{
     }
 
     /**
-     * Get Region where the queue is located. 
-     * @return CmqRegion Region where the queue is located.
+     * Get Queue region. 
+     * @return CmqRegion Queue region.
      */
     public String getCmqRegion() {
         return this.CmqRegion;
     }
 
     /**
-     * Set Region where the queue is located.
-     * @param CmqRegion Region where the queue is located.
+     * Set Queue region.
+     * @param CmqRegion Queue region.
      */
     public void setCmqRegion(String CmqRegion) {
         this.CmqRegion = CmqRegion;
@@ -173,35 +201,99 @@ public class DescribeAuditResponse extends AbstractModel{
     }
 
     /**
-     * Get Region where the COS bucket is located. 
-     * @return CosRegion Region where the COS bucket is located.
+     * Get COS bucket region. 
+     * @return CosRegion COS bucket region.
      */
     public String getCosRegion() {
         return this.CosRegion;
     }
 
     /**
-     * Set Region where the COS bucket is located.
-     * @param CosRegion Region where the COS bucket is located.
+     * Set COS bucket region.
+     * @param CosRegion COS bucket region.
      */
     public void setCosRegion(String CosRegion) {
         this.CosRegion = CosRegion;
     }
 
     /**
-     * Get Whether to enable CMQ message notification. 1: yes; 0: no. 
-     * @return IsEnableCmqNotify Whether to enable CMQ message notification. 1: yes; 0: no.
+     * Get Whether to enable CMQ message notification. Valid values: 1: yes; 0: no. 
+     * @return IsEnableCmqNotify Whether to enable CMQ message notification. Valid values: 1: yes; 0: no.
      */
     public Long getIsEnableCmqNotify() {
         return this.IsEnableCmqNotify;
     }
 
     /**
-     * Set Whether to enable CMQ message notification. 1: yes; 0: no.
-     * @param IsEnableCmqNotify Whether to enable CMQ message notification. 1: yes; 0: no.
+     * Set Whether to enable CMQ message notification. Valid values: 1: yes; 0: no.
+     * @param IsEnableCmqNotify Whether to enable CMQ message notification. Valid values: 1: yes; 0: no.
      */
     public void setIsEnableCmqNotify(Long IsEnableCmqNotify) {
         this.IsEnableCmqNotify = IsEnableCmqNotify;
+    }
+
+    /**
+     * Get Whether to enable KMS encryption. Valid values: 1: yes, 0: no. If KMS encryption is enabled, the data will be encrypted when delivered to COS. 
+     * @return IsEnableKmsEncry Whether to enable KMS encryption. Valid values: 1: yes, 0: no. If KMS encryption is enabled, the data will be encrypted when delivered to COS.
+     */
+    public Long getIsEnableKmsEncry() {
+        return this.IsEnableKmsEncry;
+    }
+
+    /**
+     * Set Whether to enable KMS encryption. Valid values: 1: yes, 0: no. If KMS encryption is enabled, the data will be encrypted when delivered to COS.
+     * @param IsEnableKmsEncry Whether to enable KMS encryption. Valid values: 1: yes, 0: no. If KMS encryption is enabled, the data will be encrypted when delivered to COS.
+     */
+    public void setIsEnableKmsEncry(Long IsEnableKmsEncry) {
+        this.IsEnableKmsEncry = IsEnableKmsEncry;
+    }
+
+    /**
+     * Get Globally unique CMK ID. 
+     * @return KeyId Globally unique CMK ID.
+     */
+    public String getKeyId() {
+        return this.KeyId;
+    }
+
+    /**
+     * Set Globally unique CMK ID.
+     * @param KeyId Globally unique CMK ID.
+     */
+    public void setKeyId(String KeyId) {
+        this.KeyId = KeyId;
+    }
+
+    /**
+     * Get CMK alias. 
+     * @return KmsAlias CMK alias.
+     */
+    public String getKmsAlias() {
+        return this.KmsAlias;
+    }
+
+    /**
+     * Set CMK alias.
+     * @param KmsAlias CMK alias.
+     */
+    public void setKmsAlias(String KmsAlias) {
+        this.KmsAlias = KmsAlias;
+    }
+
+    /**
+     * Get KMS region. 
+     * @return KmsRegion KMS region.
+     */
+    public String getKmsRegion() {
+        return this.KmsRegion;
+    }
+
+    /**
+     * Set KMS region.
+     * @param KmsRegion KMS region.
+     */
+    public void setKmsRegion(String KmsRegion) {
+        this.KmsRegion = KmsRegion;
     }
 
     /**
@@ -221,32 +313,32 @@ public class DescribeAuditResponse extends AbstractModel{
     }
 
     /**
-     * Get Manages the read/write attribute of an event. Value range: 1 (read-only), 2 (write-only), 3 (read/write) 
-     * @return ReadWriteAttribute Manages the read/write attribute of an event. Value range: 1 (read-only), 2 (write-only), 3 (read/write)
+     * Get Manages the read/write attribute of event. Valid values: 1 (read-only), 2 (write-only), 3 (read/write) 
+     * @return ReadWriteAttribute Manages the read/write attribute of event. Valid values: 1 (read-only), 2 (write-only), 3 (read/write)
      */
     public Long getReadWriteAttribute() {
         return this.ReadWriteAttribute;
     }
 
     /**
-     * Set Manages the read/write attribute of an event. Value range: 1 (read-only), 2 (write-only), 3 (read/write)
-     * @param ReadWriteAttribute Manages the read/write attribute of an event. Value range: 1 (read-only), 2 (write-only), 3 (read/write)
+     * Set Manages the read/write attribute of event. Valid values: 1 (read-only), 2 (write-only), 3 (read/write)
+     * @param ReadWriteAttribute Manages the read/write attribute of event. Valid values: 1 (read-only), 2 (write-only), 3 (read/write)
      */
     public void setReadWriteAttribute(Long ReadWriteAttribute) {
         this.ReadWriteAttribute = ReadWriteAttribute;
     }
 
     /**
-     * Get Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues. 
-     * @return RequestId Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
+     * Get Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting. 
+     * @return RequestId Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
      */
     public String getRequestId() {
         return this.RequestId;
     }
 
     /**
-     * Set Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
-     * @param RequestId Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
+     * Set Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
+     * @param RequestId Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
      */
     public void setRequestId(String RequestId) {
         this.RequestId = RequestId;
@@ -263,6 +355,10 @@ public class DescribeAuditResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "CosBucketName", this.CosBucketName);
         this.setParamSimple(map, prefix + "CosRegion", this.CosRegion);
         this.setParamSimple(map, prefix + "IsEnableCmqNotify", this.IsEnableCmqNotify);
+        this.setParamSimple(map, prefix + "IsEnableKmsEncry", this.IsEnableKmsEncry);
+        this.setParamSimple(map, prefix + "KeyId", this.KeyId);
+        this.setParamSimple(map, prefix + "KmsAlias", this.KmsAlias);
+        this.setParamSimple(map, prefix + "KmsRegion", this.KmsRegion);
         this.setParamSimple(map, prefix + "LogFilePrefix", this.LogFilePrefix);
         this.setParamSimple(map, prefix + "ReadWriteAttribute", this.ReadWriteAttribute);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);

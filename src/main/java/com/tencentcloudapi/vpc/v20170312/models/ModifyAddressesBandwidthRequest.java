@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyAddressesBandwidthRequest extends AbstractModel{
 
     /**
-    * The unique ID of the EIP, such as 'eip-xxxx'.
+    * List of EIP IDs, such as “eip-xxxx”.
     */
     @SerializedName("AddressIds")
     @Expose
@@ -51,16 +51,16 @@ public class ModifyAddressesBandwidthRequest extends AbstractModel{
     private String EndTime;
 
     /**
-     * Get The unique ID of the EIP, such as 'eip-xxxx'. 
-     * @return AddressIds The unique ID of the EIP, such as 'eip-xxxx'.
+     * Get List of EIP IDs, such as “eip-xxxx”. 
+     * @return AddressIds List of EIP IDs, such as “eip-xxxx”.
      */
     public String [] getAddressIds() {
         return this.AddressIds;
     }
 
     /**
-     * Set The unique ID of the EIP, such as 'eip-xxxx'.
-     * @param AddressIds The unique ID of the EIP, such as 'eip-xxxx'.
+     * Set List of EIP IDs, such as “eip-xxxx”.
+     * @param AddressIds List of EIP IDs, such as “eip-xxxx”.
      */
     public void setAddressIds(String [] AddressIds) {
         this.AddressIds = AddressIds;

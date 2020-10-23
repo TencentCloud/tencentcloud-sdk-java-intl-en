@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class GetAttributeKeyRequest extends AbstractModel{
 
     /**
-    * Website type. Value range: zh, en. Default value: zh
+    * Website type. Valid values: zh, en. If this parameter is left empty, `zh` will be used by default
     */
     @SerializedName("WebsiteType")
     @Expose
     private String WebsiteType;
 
     /**
-     * Get Website type. Value range: zh, en. Default value: zh 
-     * @return WebsiteType Website type. Value range: zh, en. Default value: zh
+     * Get Website type. Valid values: zh, en. If this parameter is left empty, `zh` will be used by default 
+     * @return WebsiteType Website type. Valid values: zh, en. If this parameter is left empty, `zh` will be used by default
      */
     public String getWebsiteType() {
         return this.WebsiteType;
     }
 
     /**
-     * Set Website type. Value range: zh, en. Default value: zh
-     * @param WebsiteType Website type. Value range: zh, en. Default value: zh
+     * Set Website type. Valid values: zh, en. If this parameter is left empty, `zh` will be used by default
+     * @param WebsiteType Website type. Valid values: zh, en. If this parameter is left empty, `zh` will be used by default
      */
     public void setWebsiteType(String WebsiteType) {
         this.WebsiteType = WebsiteType;

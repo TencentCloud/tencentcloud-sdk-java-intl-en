@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class GetAttributeKeyResponse extends AbstractModel{
 
     /**
-    * AttributeKey value range
+    * Valid values range of `AttributeKey`
     */
     @SerializedName("AttributeKeyDetails")
     @Expose
     private AttributeKeyDetail [] AttributeKeyDetails;
 
     /**
-    * Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
+    * Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
 
     /**
-     * Get AttributeKey value range 
-     * @return AttributeKeyDetails AttributeKey value range
+     * Get Valid values range of `AttributeKey` 
+     * @return AttributeKeyDetails Valid values range of `AttributeKey`
      */
     public AttributeKeyDetail [] getAttributeKeyDetails() {
         return this.AttributeKeyDetails;
     }
 
     /**
-     * Set AttributeKey value range
-     * @param AttributeKeyDetails AttributeKey value range
+     * Set Valid values range of `AttributeKey`
+     * @param AttributeKeyDetails Valid values range of `AttributeKey`
      */
     public void setAttributeKeyDetails(AttributeKeyDetail [] AttributeKeyDetails) {
         this.AttributeKeyDetails = AttributeKeyDetails;
     }
 
     /**
-     * Get Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues. 
-     * @return RequestId Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
+     * Get Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting. 
+     * @return RequestId Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
      */
     public String getRequestId() {
         return this.RequestId;
     }
 
     /**
-     * Set Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
-     * @param RequestId Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
+     * Set Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
+     * @param RequestId Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
      */
     public void setRequestId(String RequestId) {
         this.RequestId = RequestId;

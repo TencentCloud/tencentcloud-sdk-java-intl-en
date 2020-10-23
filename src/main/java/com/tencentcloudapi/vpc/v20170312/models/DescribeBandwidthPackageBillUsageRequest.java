@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cloudaudit.v20190319.models;
+package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListCmqEnableRegionRequest extends AbstractModel{
+public class DescribeBandwidthPackageBillUsageRequest extends AbstractModel{
 
     /**
-    * Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
+    * Unique ID of the pay-as-you-go bandwidth package.
     */
-    @SerializedName("WebsiteType")
+    @SerializedName("BandwidthPackageId")
     @Expose
-    private String WebsiteType;
+    private String BandwidthPackageId;
 
     /**
-     * Get Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh 
-     * @return WebsiteType Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
+     * Get Unique ID of the pay-as-you-go bandwidth package. 
+     * @return BandwidthPackageId Unique ID of the pay-as-you-go bandwidth package.
      */
-    public String getWebsiteType() {
-        return this.WebsiteType;
+    public String getBandwidthPackageId() {
+        return this.BandwidthPackageId;
     }
 
     /**
-     * Set Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
-     * @param WebsiteType Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
+     * Set Unique ID of the pay-as-you-go bandwidth package.
+     * @param BandwidthPackageId Unique ID of the pay-as-you-go bandwidth package.
      */
-    public void setWebsiteType(String WebsiteType) {
-        this.WebsiteType = WebsiteType;
+    public void setBandwidthPackageId(String BandwidthPackageId) {
+        this.BandwidthPackageId = BandwidthPackageId;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "WebsiteType", this.WebsiteType);
+        this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
 
     }
 }

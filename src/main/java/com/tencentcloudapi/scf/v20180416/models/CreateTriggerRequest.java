@@ -72,6 +72,13 @@ public class CreateTriggerRequest extends AbstractModel{
     private String Enable;
 
     /**
+    * Custom argument, supporting only the timer trigger.
+    */
+    @SerializedName("CustomArgument")
+    @Expose
+    private String CustomArgument;
+
+    /**
      * Get Name of the function bound to the new trigger 
      * @return FunctionName Name of the function bound to the new trigger
      */
@@ -184,6 +191,22 @@ public class CreateTriggerRequest extends AbstractModel{
     }
 
     /**
+     * Get Custom argument, supporting only the timer trigger. 
+     * @return CustomArgument Custom argument, supporting only the timer trigger.
+     */
+    public String getCustomArgument() {
+        return this.CustomArgument;
+    }
+
+    /**
+     * Set Custom argument, supporting only the timer trigger.
+     * @param CustomArgument Custom argument, supporting only the timer trigger.
+     */
+    public void setCustomArgument(String CustomArgument) {
+        this.CustomArgument = CustomArgument;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class CreateTriggerRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "Qualifier", this.Qualifier);
         this.setParamSimple(map, prefix + "Enable", this.Enable);
+        this.setParamSimple(map, prefix + "CustomArgument", this.CustomArgument);
 
     }
 }

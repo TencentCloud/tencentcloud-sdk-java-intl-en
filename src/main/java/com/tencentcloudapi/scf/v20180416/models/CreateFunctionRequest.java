@@ -163,6 +163,13 @@ public class CreateFunctionRequest extends AbstractModel{
     private Long InitTimeout;
 
     /**
+    * Tag parameter of the function. It is an array of key-value pairs.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get Name of the new function. The name can contain 2 to 60 characters, including English letters, digits, hyphens (-), and underscores (_). The name must start with a letter and cannot end with a hyphen or underscore. 
      * @return FunctionName Name of the new function. The name can contain 2 to 60 characters, including English letters, digits, hyphens (-), and underscores (_). The name must start with a letter and cannot end with a hyphen or underscore.
      */
@@ -483,6 +490,22 @@ public class CreateFunctionRequest extends AbstractModel{
     }
 
     /**
+     * Get Tag parameter of the function. It is an array of key-value pairs. 
+     * @return Tags Tag parameter of the function. It is an array of key-value pairs.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag parameter of the function. It is an array of key-value pairs.
+     * @param Tags Tag parameter of the function. It is an array of key-value pairs.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -506,6 +529,7 @@ public class CreateFunctionRequest extends AbstractModel{
         this.setParamObj(map, prefix + "PublicNetConfig.", this.PublicNetConfig);
         this.setParamObj(map, prefix + "CfsConfig.", this.CfsConfig);
         this.setParamSimple(map, prefix + "InitTimeout", this.InitTimeout);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cloudaudit.v20190319.models;
+package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ListCmqEnableRegionRequest extends AbstractModel{
+public class AcquireClusterAdminRoleResponse extends AbstractModel{
 
     /**
-    * Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
+    * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
-    @SerializedName("WebsiteType")
+    @SerializedName("RequestId")
     @Expose
-    private String WebsiteType;
+    private String RequestId;
 
     /**
-     * Get Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh 
-     * @return WebsiteType Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
+     * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
+     * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public String getWebsiteType() {
-        return this.WebsiteType;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
-     * @param WebsiteType Website type. Valid values: zh (Chinese mainland); en (outside Chinese mainland). Default value: zh
+     * Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @param RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public void setWebsiteType(String WebsiteType) {
-        this.WebsiteType = WebsiteType;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "WebsiteType", this.WebsiteType);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

@@ -100,7 +100,7 @@ public class GetFunctionLogsRequest extends AbstractModel{
     private String EndTime;
 
     /**
-    * Service log related parameter. `Offset` on the first page is a null string. Enter other pages based on SearchContext in the response field.
+    * This field is disused.
     */
     @SerializedName("SearchContext")
     @Expose
@@ -283,16 +283,16 @@ public class GetFunctionLogsRequest extends AbstractModel{
     }
 
     /**
-     * Get Service log related parameter. `Offset` on the first page is a null string. Enter other pages based on SearchContext in the response field. 
-     * @return SearchContext Service log related parameter. `Offset` on the first page is a null string. Enter other pages based on SearchContext in the response field.
+     * Get This field is disused. 
+     * @return SearchContext This field is disused.
      */
     public LogSearchContext getSearchContext() {
         return this.SearchContext;
     }
 
     /**
-     * Set Service log related parameter. `Offset` on the first page is a null string. Enter other pages based on SearchContext in the response field.
-     * @param SearchContext Service log related parameter. `Offset` on the first page is a null string. Enter other pages based on SearchContext in the response field.
+     * Set This field is disused.
+     * @param SearchContext This field is disused.
      */
     public void setSearchContext(LogSearchContext SearchContext) {
         this.SearchContext = SearchContext;

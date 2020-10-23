@@ -31,6 +31,7 @@ public class Hsts extends AbstractModel{
 
     /**
     * `MaxAge` value.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MaxAge")
     @Expose
@@ -38,6 +39,7 @@ public class Hsts extends AbstractModel{
 
     /**
     * Whether to include subdomain names. Valid values: on, off.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IncludeSubDomains")
     @Expose
@@ -60,8 +62,10 @@ public class Hsts extends AbstractModel{
     }
 
     /**
-     * Get `MaxAge` value. 
+     * Get `MaxAge` value.
+Note: this field may return null, indicating that no valid values can be obtained. 
      * @return MaxAge `MaxAge` value.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getMaxAge() {
         return this.MaxAge;
@@ -69,15 +73,19 @@ public class Hsts extends AbstractModel{
 
     /**
      * Set `MaxAge` value.
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param MaxAge `MaxAge` value.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setMaxAge(Long MaxAge) {
         this.MaxAge = MaxAge;
     }
 
     /**
-     * Get Whether to include subdomain names. Valid values: on, off. 
+     * Get Whether to include subdomain names. Valid values: on, off.
+Note: this field may return null, indicating that no valid values can be obtained. 
      * @return IncludeSubDomains Whether to include subdomain names. Valid values: on, off.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getIncludeSubDomains() {
         return this.IncludeSubDomains;
@@ -85,7 +93,9 @@ public class Hsts extends AbstractModel{
 
     /**
      * Set Whether to include subdomain names. Valid values: on, off.
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param IncludeSubDomains Whether to include subdomain names. Valid values: on, off.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setIncludeSubDomains(String IncludeSubDomains) {
         this.IncludeSubDomains = IncludeSubDomains;

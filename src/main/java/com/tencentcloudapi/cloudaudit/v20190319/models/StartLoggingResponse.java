@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class StartLoggingResponse extends AbstractModel{
 
     /**
-    * Whether it is successfully enabled
+    * Indicates if the tracking set was enabled successfully
     */
     @SerializedName("IsSuccess")
     @Expose
     private Long IsSuccess;
 
     /**
-    * Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
+    * Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
 
     /**
-     * Get Whether it is successfully enabled 
-     * @return IsSuccess Whether it is successfully enabled
+     * Get Indicates if the tracking set was enabled successfully 
+     * @return IsSuccess Indicates if the tracking set was enabled successfully
      */
     public Long getIsSuccess() {
         return this.IsSuccess;
     }
 
     /**
-     * Set Whether it is successfully enabled
-     * @param IsSuccess Whether it is successfully enabled
+     * Set Indicates if the tracking set was enabled successfully
+     * @param IsSuccess Indicates if the tracking set was enabled successfully
      */
     public void setIsSuccess(Long IsSuccess) {
         this.IsSuccess = IsSuccess;
     }
 
     /**
-     * Get Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues. 
-     * @return RequestId Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
+     * Get Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting. 
+     * @return RequestId Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
      */
     public String getRequestId() {
         return this.RequestId;
     }
 
     /**
-     * Set Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
-     * @param RequestId Unique ID of the request. Each request returns a unique ID. The RequestId is required to troubleshoot issues.
+     * Set Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
+     * @param RequestId Unique ID of request. Each request returns a unique ID. The `RequestId` is required for troubleshooting.
      */
     public void setRequestId(String RequestId) {
         this.RequestId = RequestId;
