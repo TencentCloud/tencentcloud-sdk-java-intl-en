@@ -117,11 +117,32 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
     private TagInfo [] Tags;
 
     /**
+    * 
+    */
+    @SerializedName("Vip")
+    @Expose
+    private String Vip;
+
+    /**
+    * Exclusive cluster information.
+    */
+    @SerializedName("ExclusiveCluster")
+    @Expose
+    private ExclusiveCluster ExclusiveCluster;
+
+    /**
     * A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.
     */
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
+
+    /**
+    * Tag for the STGW exclusive cluster.
+    */
+    @SerializedName("ClusterTag")
+    @Expose
+    private String ClusterTag;
 
     /**
      * Get CLB instance network type:
@@ -344,6 +365,38 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
     }
 
     /**
+     * Get  
+     * @return Vip 
+     */
+    public String getVip() {
+        return this.Vip;
+    }
+
+    /**
+     * Set 
+     * @param Vip 
+     */
+    public void setVip(String Vip) {
+        this.Vip = Vip;
+    }
+
+    /**
+     * Get Exclusive cluster information. 
+     * @return ExclusiveCluster Exclusive cluster information.
+     */
+    public ExclusiveCluster getExclusiveCluster() {
+        return this.ExclusiveCluster;
+    }
+
+    /**
+     * Set Exclusive cluster information.
+     * @param ExclusiveCluster Exclusive cluster information.
+     */
+    public void setExclusiveCluster(ExclusiveCluster ExclusiveCluster) {
+        this.ExclusiveCluster = ExclusiveCluster;
+    }
+
+    /**
      * Get A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed. 
      * @return ClientToken A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.
      */
@@ -357,6 +410,22 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
+    }
+
+    /**
+     * Get Tag for the STGW exclusive cluster. 
+     * @return ClusterTag Tag for the STGW exclusive cluster.
+     */
+    public String getClusterTag() {
+        return this.ClusterTag;
+    }
+
+    /**
+     * Set Tag for the STGW exclusive cluster.
+     * @param ClusterTag Tag for the STGW exclusive cluster.
+     */
+    public void setClusterTag(String ClusterTag) {
+        this.ClusterTag = ClusterTag;
     }
 
     /**
@@ -376,7 +445,10 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
         this.setParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
         this.setParamSimple(map, prefix + "VipIsp", this.VipIsp);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "Vip", this.Vip);
+        this.setParamObj(map, prefix + "ExclusiveCluster.", this.ExclusiveCluster);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
+        this.setParamSimple(map, prefix + "ClusterTag", this.ClusterTag);
 
     }
 }
