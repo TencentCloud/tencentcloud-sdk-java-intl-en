@@ -299,6 +299,86 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long Cpu;
 
     /**
+    * IPv6 flag for an instance
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Ipv6Flag")
+    @Expose
+    private Long Ipv6Flag;
+
+    /**
+    * Private network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Vipv6")
+    @Expose
+    private String Vipv6;
+
+    /**
+    * Public network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("WanVipv6")
+    @Expose
+    private String WanVipv6;
+
+    /**
+    * Public network IPv6 port
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("WanPortIpv6")
+    @Expose
+    private Long WanPortIpv6;
+
+    /**
+    * Public network IPv6 status
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("WanStatusIpv6")
+    @Expose
+    private Long WanStatusIpv6;
+
+    /**
+    * Database engine
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DbEngine")
+    @Expose
+    private String DbEngine;
+
+    /**
+    * Database version
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DbVersion")
+    @Expose
+    private String DbVersion;
+
+    /**
+    * DCN flag. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DcnFlag")
+    @Expose
+    private Long DcnFlag;
+
+    /**
+    * DCN status. Valid values: 0 (null), 1 (creating), 2 (syncing), 3 (disconnected)
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DcnStatus")
+    @Expose
+    private Long DcnStatus;
+
+    /**
+    * The number of DCN disaster recovery instances
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DcnDstNum")
+    @Expose
+    private Long DcnDstNum;
+
+    /**
      * Get Instance ID, which uniquely identifies a TDSQL instance 
      * @return InstanceId Instance ID, which uniquely identifies a TDSQL instance
      */
@@ -935,6 +1015,206 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get IPv6 flag for an instance
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Ipv6Flag IPv6 flag for an instance
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getIpv6Flag() {
+        return this.Ipv6Flag;
+    }
+
+    /**
+     * Set IPv6 flag for an instance
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Ipv6Flag IPv6 flag for an instance
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIpv6Flag(Long Ipv6Flag) {
+        this.Ipv6Flag = Ipv6Flag;
+    }
+
+    /**
+     * Get Private network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Vipv6 Private network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getVipv6() {
+        return this.Vipv6;
+    }
+
+    /**
+     * Set Private network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Vipv6 Private network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setVipv6(String Vipv6) {
+        this.Vipv6 = Vipv6;
+    }
+
+    /**
+     * Get Public network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return WanVipv6 Public network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getWanVipv6() {
+        return this.WanVipv6;
+    }
+
+    /**
+     * Set Public network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param WanVipv6 Public network IPv6 address
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setWanVipv6(String WanVipv6) {
+        this.WanVipv6 = WanVipv6;
+    }
+
+    /**
+     * Get Public network IPv6 port
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return WanPortIpv6 Public network IPv6 port
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getWanPortIpv6() {
+        return this.WanPortIpv6;
+    }
+
+    /**
+     * Set Public network IPv6 port
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param WanPortIpv6 Public network IPv6 port
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setWanPortIpv6(Long WanPortIpv6) {
+        this.WanPortIpv6 = WanPortIpv6;
+    }
+
+    /**
+     * Get Public network IPv6 status
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return WanStatusIpv6 Public network IPv6 status
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getWanStatusIpv6() {
+        return this.WanStatusIpv6;
+    }
+
+    /**
+     * Set Public network IPv6 status
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param WanStatusIpv6 Public network IPv6 status
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setWanStatusIpv6(Long WanStatusIpv6) {
+        this.WanStatusIpv6 = WanStatusIpv6;
+    }
+
+    /**
+     * Get Database engine
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return DbEngine Database engine
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getDbEngine() {
+        return this.DbEngine;
+    }
+
+    /**
+     * Set Database engine
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param DbEngine Database engine
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDbEngine(String DbEngine) {
+        this.DbEngine = DbEngine;
+    }
+
+    /**
+     * Get Database version
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return DbVersion Database version
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getDbVersion() {
+        return this.DbVersion;
+    }
+
+    /**
+     * Set Database version
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param DbVersion Database version
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDbVersion(String DbVersion) {
+        this.DbVersion = DbVersion;
+    }
+
+    /**
+     * Get DCN flag. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return DcnFlag DCN flag. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getDcnFlag() {
+        return this.DcnFlag;
+    }
+
+    /**
+     * Set DCN flag. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param DcnFlag DCN flag. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDcnFlag(Long DcnFlag) {
+        this.DcnFlag = DcnFlag;
+    }
+
+    /**
+     * Get DCN status. Valid values: 0 (null), 1 (creating), 2 (syncing), 3 (disconnected)
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return DcnStatus DCN status. Valid values: 0 (null), 1 (creating), 2 (syncing), 3 (disconnected)
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getDcnStatus() {
+        return this.DcnStatus;
+    }
+
+    /**
+     * Set DCN status. Valid values: 0 (null), 1 (creating), 2 (syncing), 3 (disconnected)
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param DcnStatus DCN status. Valid values: 0 (null), 1 (creating), 2 (syncing), 3 (disconnected)
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDcnStatus(Long DcnStatus) {
+        this.DcnStatus = DcnStatus;
+    }
+
+    /**
+     * Get The number of DCN disaster recovery instances
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return DcnDstNum The number of DCN disaster recovery instances
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getDcnDstNum() {
+        return this.DcnDstNum;
+    }
+
+    /**
+     * Set The number of DCN disaster recovery instances
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param DcnDstNum The number of DCN disaster recovery instances
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDcnDstNum(Long DcnDstNum) {
+        this.DcnDstNum = DcnDstNum;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -977,6 +1257,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Machine", this.Machine);
         this.setParamSimple(map, prefix + "IsEncryptSupported", this.IsEncryptSupported);
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
+        this.setParamSimple(map, prefix + "Ipv6Flag", this.Ipv6Flag);
+        this.setParamSimple(map, prefix + "Vipv6", this.Vipv6);
+        this.setParamSimple(map, prefix + "WanVipv6", this.WanVipv6);
+        this.setParamSimple(map, prefix + "WanPortIpv6", this.WanPortIpv6);
+        this.setParamSimple(map, prefix + "WanStatusIpv6", this.WanStatusIpv6);
+        this.setParamSimple(map, prefix + "DbEngine", this.DbEngine);
+        this.setParamSimple(map, prefix + "DbVersion", this.DbVersion);
+        this.setParamSimple(map, prefix + "DcnFlag", this.DcnFlag);
+        this.setParamSimple(map, prefix + "DcnStatus", this.DcnStatus);
+        this.setParamSimple(map, prefix + "DcnDstNum", this.DcnDstNum);
 
     }
 }

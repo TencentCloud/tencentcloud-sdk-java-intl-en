@@ -52,6 +52,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String [] Filters;
 
     /**
+    * IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
+Note: this field may return `null`, indicating that no valid value is obtained.
+    */
+    @SerializedName("FilterRules")
+    @Expose
+    private IpFilterPathRule [] FilterRules;
+
+    /**
      * Get IP blocklist/allowlist configuration switch
 on: enabled
 off: disabled 
@@ -132,12 +140,33 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return FilterRules IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public IpFilterPathRule [] getFilterRules() {
+        return this.FilterRules;
+    }
+
+    /**
+     * Set IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param FilterRules IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public void setFilterRules(IpFilterPathRule [] FilterRules) {
+        this.FilterRules = FilterRules;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamSimple(map, prefix + "FilterType", this.FilterType);
         this.setParamArraySimple(map, prefix + "Filters.", this.Filters);
+        this.setParamArrayObj(map, prefix + "FilterRules.", this.FilterRules);
 
     }
 }

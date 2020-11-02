@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class UpgradeInstanceVersionRequest extends AbstractModel{
 
     /**
-    * Target instance type. Its value is the same as the `Type` parameter of the `CreateInstances` API.
+    * The target instance type to which the instance will change. It is the same as the `TypeId` parameter in the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
     */
     @SerializedName("TargetInstanceType")
     @Expose
@@ -44,16 +44,16 @@ public class UpgradeInstanceVersionRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-     * Get Target instance type. Its value is the same as the `Type` parameter of the `CreateInstances` API. 
-     * @return TargetInstanceType Target instance type. Its value is the same as the `Type` parameter of the `CreateInstances` API.
+     * Get The target instance type to which the instance will change. It is the same as the `TypeId` parameter in the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API. 
+     * @return TargetInstanceType The target instance type to which the instance will change. It is the same as the `TypeId` parameter in the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
      */
     public String getTargetInstanceType() {
         return this.TargetInstanceType;
     }
 
     /**
-     * Set Target instance type. Its value is the same as the `Type` parameter of the `CreateInstances` API.
-     * @param TargetInstanceType Target instance type. Its value is the same as the `Type` parameter of the `CreateInstances` API.
+     * Set The target instance type to which the instance will change. It is the same as the `TypeId` parameter in the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+     * @param TargetInstanceType The target instance type to which the instance will change. It is the same as the `TypeId` parameter in the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
      */
     public void setTargetInstanceType(String TargetInstanceType) {
         this.TargetInstanceType = TargetInstanceType;

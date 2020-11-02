@@ -108,6 +108,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String BackupServerName;
 
     /**
+    * 
+    */
+    @SerializedName("BasePath")
+    @Expose
+    private String BasePath;
+
+    /**
+    * Path-based origin-pull configuration rules
+Note: this field may return `null`, indicating that no valid value is obtained.
+    */
+    @SerializedName("PathRules")
+    @Expose
+    private PathRule [] PathRules;
+
+    /**
      * Get Master origin server list
 When modifying the origin server, you need to enter the corresponding OriginType.
 Note: this field may return null, indicating that no valid values can be obtained. 
@@ -352,6 +367,42 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get  
+     * @return BasePath 
+     */
+    public String getBasePath() {
+        return this.BasePath;
+    }
+
+    /**
+     * Set 
+     * @param BasePath 
+     */
+    public void setBasePath(String BasePath) {
+        this.BasePath = BasePath;
+    }
+
+    /**
+     * Get Path-based origin-pull configuration rules
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return PathRules Path-based origin-pull configuration rules
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public PathRule [] getPathRules() {
+        return this.PathRules;
+    }
+
+    /**
+     * Set Path-based origin-pull configuration rules
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param PathRules Path-based origin-pull configuration rules
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public void setPathRules(PathRule [] PathRules) {
+        this.PathRules = PathRules;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -363,6 +414,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamArraySimple(map, prefix + "BackupOrigins.", this.BackupOrigins);
         this.setParamSimple(map, prefix + "BackupOriginType", this.BackupOriginType);
         this.setParamSimple(map, prefix + "BackupServerName", this.BackupServerName);
+        this.setParamSimple(map, prefix + "BasePath", this.BasePath);
+        this.setParamArrayObj(map, prefix + "PathRules.", this.PathRules);
 
     }
 }

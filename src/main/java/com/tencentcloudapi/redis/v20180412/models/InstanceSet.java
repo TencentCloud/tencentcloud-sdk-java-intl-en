@@ -121,7 +121,7 @@ public class InstanceSet extends AbstractModel{
     private Float SizeUsed;
 
     /**
-    * Instance type. 1: Redis 2.8 cluster edition; 2: Redis 2.8 primary-secondary edition; 3: CKV primary-secondary edition (Redis 3.2); 4: CKV cluster edition (Redis 3.2); 5: Redis 2.8 standalone edition; 6: Redis 4.0 primary-secondary edition; 7: Redis 4.0 cluster edition
+    * Instance type. Valid values: 1 (Redis 2.8 Memory Edition in cluster architecture), 2 (Redis 2.8 Memory Edition in standard architecture), 3 (CKV 3.2 Memory Edition in standard architecture), 4 (CKV 3.2 Memory Edition in cluster architecture), 5 (Redis 2.8 Memory Edition in standalone architecture), 6 (Redis 4.0 Memory Edition in standard architecture), 7 (Redis 4.0 Memory Edition in cluster architecture), 8 (Redis 5.0 Memory Edition in standard architecture), 9 (Redis 5.0 Memory Edition in cluster architecture).
     */
     @SerializedName("Type")
     @Expose
@@ -149,7 +149,7 @@ public class InstanceSet extends AbstractModel{
     private String Engine;
 
     /**
-    * Product type: Redis 2.8 cluster edition, Redis 2.8 primary-secondary edition, Redis 3.2 primary-secondary edition (CKV primary-secondary edition), Redis 3.2 cluster edition (CKV cluster edition), Redis 2.8 standalone edition, Redis 4.0 cluster edition
+    * Instance type. Valid values: standalone (standard edition), cluster (cluster edition)
     */
     @SerializedName("ProductType")
     @Expose
@@ -574,16 +574,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Instance type. 1: Redis 2.8 cluster edition; 2: Redis 2.8 primary-secondary edition; 3: CKV primary-secondary edition (Redis 3.2); 4: CKV cluster edition (Redis 3.2); 5: Redis 2.8 standalone edition; 6: Redis 4.0 primary-secondary edition; 7: Redis 4.0 cluster edition 
-     * @return Type Instance type. 1: Redis 2.8 cluster edition; 2: Redis 2.8 primary-secondary edition; 3: CKV primary-secondary edition (Redis 3.2); 4: CKV cluster edition (Redis 3.2); 5: Redis 2.8 standalone edition; 6: Redis 4.0 primary-secondary edition; 7: Redis 4.0 cluster edition
+     * Get Instance type. Valid values: 1 (Redis 2.8 Memory Edition in cluster architecture), 2 (Redis 2.8 Memory Edition in standard architecture), 3 (CKV 3.2 Memory Edition in standard architecture), 4 (CKV 3.2 Memory Edition in cluster architecture), 5 (Redis 2.8 Memory Edition in standalone architecture), 6 (Redis 4.0 Memory Edition in standard architecture), 7 (Redis 4.0 Memory Edition in cluster architecture), 8 (Redis 5.0 Memory Edition in standard architecture), 9 (Redis 5.0 Memory Edition in cluster architecture). 
+     * @return Type Instance type. Valid values: 1 (Redis 2.8 Memory Edition in cluster architecture), 2 (Redis 2.8 Memory Edition in standard architecture), 3 (CKV 3.2 Memory Edition in standard architecture), 4 (CKV 3.2 Memory Edition in cluster architecture), 5 (Redis 2.8 Memory Edition in standalone architecture), 6 (Redis 4.0 Memory Edition in standard architecture), 7 (Redis 4.0 Memory Edition in cluster architecture), 8 (Redis 5.0 Memory Edition in standard architecture), 9 (Redis 5.0 Memory Edition in cluster architecture).
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set Instance type. 1: Redis 2.8 cluster edition; 2: Redis 2.8 primary-secondary edition; 3: CKV primary-secondary edition (Redis 3.2); 4: CKV cluster edition (Redis 3.2); 5: Redis 2.8 standalone edition; 6: Redis 4.0 primary-secondary edition; 7: Redis 4.0 cluster edition
-     * @param Type Instance type. 1: Redis 2.8 cluster edition; 2: Redis 2.8 primary-secondary edition; 3: CKV primary-secondary edition (Redis 3.2); 4: CKV cluster edition (Redis 3.2); 5: Redis 2.8 standalone edition; 6: Redis 4.0 primary-secondary edition; 7: Redis 4.0 cluster edition
+     * Set Instance type. Valid values: 1 (Redis 2.8 Memory Edition in cluster architecture), 2 (Redis 2.8 Memory Edition in standard architecture), 3 (CKV 3.2 Memory Edition in standard architecture), 4 (CKV 3.2 Memory Edition in cluster architecture), 5 (Redis 2.8 Memory Edition in standalone architecture), 6 (Redis 4.0 Memory Edition in standard architecture), 7 (Redis 4.0 Memory Edition in cluster architecture), 8 (Redis 5.0 Memory Edition in standard architecture), 9 (Redis 5.0 Memory Edition in cluster architecture).
+     * @param Type Instance type. Valid values: 1 (Redis 2.8 Memory Edition in cluster architecture), 2 (Redis 2.8 Memory Edition in standard architecture), 3 (CKV 3.2 Memory Edition in standard architecture), 4 (CKV 3.2 Memory Edition in cluster architecture), 5 (Redis 2.8 Memory Edition in standalone architecture), 6 (Redis 4.0 Memory Edition in standard architecture), 7 (Redis 4.0 Memory Edition in cluster architecture), 8 (Redis 5.0 Memory Edition in standard architecture), 9 (Redis 5.0 Memory Edition in cluster architecture).
      */
     public void setType(Long Type) {
         this.Type = Type;
@@ -638,16 +638,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Product type: Redis 2.8 cluster edition, Redis 2.8 primary-secondary edition, Redis 3.2 primary-secondary edition (CKV primary-secondary edition), Redis 3.2 cluster edition (CKV cluster edition), Redis 2.8 standalone edition, Redis 4.0 cluster edition 
-     * @return ProductType Product type: Redis 2.8 cluster edition, Redis 2.8 primary-secondary edition, Redis 3.2 primary-secondary edition (CKV primary-secondary edition), Redis 3.2 cluster edition (CKV cluster edition), Redis 2.8 standalone edition, Redis 4.0 cluster edition
+     * Get Instance type. Valid values: standalone (standard edition), cluster (cluster edition) 
+     * @return ProductType Instance type. Valid values: standalone (standard edition), cluster (cluster edition)
      */
     public String getProductType() {
         return this.ProductType;
     }
 
     /**
-     * Set Product type: Redis 2.8 cluster edition, Redis 2.8 primary-secondary edition, Redis 3.2 primary-secondary edition (CKV primary-secondary edition), Redis 3.2 cluster edition (CKV cluster edition), Redis 2.8 standalone edition, Redis 4.0 cluster edition
-     * @param ProductType Product type: Redis 2.8 cluster edition, Redis 2.8 primary-secondary edition, Redis 3.2 primary-secondary edition (CKV primary-secondary edition), Redis 3.2 cluster edition (CKV cluster edition), Redis 2.8 standalone edition, Redis 4.0 cluster edition
+     * Set Instance type. Valid values: standalone (standard edition), cluster (cluster edition)
+     * @param ProductType Instance type. Valid values: standalone (standard edition), cluster (cluster edition)
      */
     public void setProductType(String ProductType) {
         this.ProductType = ProductType;

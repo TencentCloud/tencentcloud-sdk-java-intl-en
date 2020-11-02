@@ -38,7 +38,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to associate security groups with specified instances.
+     *This API is used to associate a security group with instances in batches.
      * @param req AssociateSecurityGroupsRequest
      * @return AssociateSecurityGroupsResponse
      * @throws TencentCloudSDKException
@@ -118,7 +118,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a Redis instance.
+     *This API is used to create Redis instances.
      * @param req CreateInstancesRequest
      * @return CreateInstancesResponse
      * @throws TencentCloudSDKException
@@ -458,6 +458,26 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query instance node information.
+     * @param req DescribeInstanceNodeInfoRequest
+     * @return DescribeInstanceNodeInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceNodeInfoResponse DescribeInstanceNodeInfo(DescribeInstanceNodeInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceNodeInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceNodeInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstanceNodeInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the list of parameter modifications.
      * @param req DescribeInstanceParamRecordsRequest
      * @return DescribeInstanceParamRecordsResponse
@@ -630,6 +650,26 @@ public class RedisClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeProjectSecurityGroupsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeProjectSecurityGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query proxy slow logs.
+     * @param req DescribeProxySlowLogRequest
+     * @return DescribeProxySlowLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProxySlowLogResponse DescribeProxySlowLog(DescribeProxySlowLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProxySlowLogResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProxySlowLogResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeProxySlowLog");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

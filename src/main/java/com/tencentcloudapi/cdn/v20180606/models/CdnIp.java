@@ -64,6 +64,14 @@ unknown: service region unknown
     private String Area;
 
     /**
+    * City where the node resides
+Note: this field may return `null`, indicating that no valid value is obtained.
+    */
+    @SerializedName("City")
+    @Expose
+    private String City;
+
+    /**
      * Get IP to be queried 
      * @return Ip IP to be queried
      */
@@ -168,6 +176,26 @@ unknown: service region unknown
     }
 
     /**
+     * Get City where the node resides
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return City City where the node resides
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public String getCity() {
+        return this.City;
+    }
+
+    /**
+     * Set City where the node resides
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param City City where the node resides
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public void setCity(String City) {
+        this.City = City;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -176,6 +204,7 @@ unknown: service region unknown
         this.setParamSimple(map, prefix + "Location", this.Location);
         this.setParamArrayObj(map, prefix + "History.", this.History);
         this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamSimple(map, prefix + "City", this.City);
 
     }
 }

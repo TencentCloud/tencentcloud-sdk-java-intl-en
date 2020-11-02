@@ -13,36 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dcdb.v20180411.models;
+package com.tencentcloudapi.redis.v20180412.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDCDBShardsResponse extends AbstractModel{
+public class DescribeProxySlowLogResponse extends AbstractModel{
 
     /**
-    * Number of eligible shards
+    * Total number of slow queries
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Shard information list
+    * Slow query details
     */
-    @SerializedName("Shards")
+    @SerializedName("InstanceProxySlowLogDetail")
     @Expose
-    private DCDBShardInfo [] Shards;
-
-    /**
-    * Disaster recovery flag. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
-Note: this field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("DcnFlag")
-    @Expose
-    private Long DcnFlag;
+    private InstanceProxySlowlogDetail [] InstanceProxySlowLogDetail;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -52,55 +44,35 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Number of eligible shards 
-     * @return TotalCount Number of eligible shards
+     * Get Total number of slow queries 
+     * @return TotalCount Total number of slow queries
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of eligible shards
-     * @param TotalCount Number of eligible shards
+     * Set Total number of slow queries
+     * @param TotalCount Total number of slow queries
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Shard information list 
-     * @return Shards Shard information list
+     * Get Slow query details 
+     * @return InstanceProxySlowLogDetail Slow query details
      */
-    public DCDBShardInfo [] getShards() {
-        return this.Shards;
+    public InstanceProxySlowlogDetail [] getInstanceProxySlowLogDetail() {
+        return this.InstanceProxySlowLogDetail;
     }
 
     /**
-     * Set Shard information list
-     * @param Shards Shard information list
+     * Set Slow query details
+     * @param InstanceProxySlowLogDetail Slow query details
      */
-    public void setShards(DCDBShardInfo [] Shards) {
-        this.Shards = Shards;
-    }
-
-    /**
-     * Get Disaster recovery flag. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DcnFlag Disaster recovery flag. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public Long getDcnFlag() {
-        return this.DcnFlag;
-    }
-
-    /**
-     * Set Disaster recovery flag. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DcnFlag Disaster recovery flag. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public void setDcnFlag(Long DcnFlag) {
-        this.DcnFlag = DcnFlag;
+    public void setInstanceProxySlowLogDetail(InstanceProxySlowlogDetail [] InstanceProxySlowLogDetail) {
+        this.InstanceProxySlowLogDetail = InstanceProxySlowLogDetail;
     }
 
     /**
@@ -124,8 +96,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "Shards.", this.Shards);
-        this.setParamSimple(map, prefix + "DcnFlag", this.DcnFlag);
+        this.setParamArrayObj(map, prefix + "InstanceProxySlowLogDetail.", this.InstanceProxySlowLogDetail);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

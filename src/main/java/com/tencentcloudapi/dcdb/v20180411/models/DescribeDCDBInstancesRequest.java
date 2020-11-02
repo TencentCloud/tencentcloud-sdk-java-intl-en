@@ -121,6 +121,20 @@ public class DescribeDCDBInstancesRequest extends AbstractModel{
     private String [] ExclusterIds;
 
     /**
+    * Tag key used in queries
+    */
+    @SerializedName("TagKeys")
+    @Expose
+    private String [] TagKeys;
+
+    /**
+    * Instance types used in filtering. Valid values: 1 (dedicated instance), 2 (primary instance), 3 (disaster recovery instance). Multiple values should be separated by commas.
+    */
+    @SerializedName("FilterInstanceType")
+    @Expose
+    private String FilterInstanceType;
+
+    /**
      * Get Query by instance ID or IDs. Instance ID is in the format of dcdbt-2t4cf98d 
      * @return InstanceIds Query by instance ID or IDs. Instance ID is in the format of dcdbt-2t4cf98d
      */
@@ -345,6 +359,38 @@ public class DescribeDCDBInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get Tag key used in queries 
+     * @return TagKeys Tag key used in queries
+     */
+    public String [] getTagKeys() {
+        return this.TagKeys;
+    }
+
+    /**
+     * Set Tag key used in queries
+     * @param TagKeys Tag key used in queries
+     */
+    public void setTagKeys(String [] TagKeys) {
+        this.TagKeys = TagKeys;
+    }
+
+    /**
+     * Get Instance types used in filtering. Valid values: 1 (dedicated instance), 2 (primary instance), 3 (disaster recovery instance). Multiple values should be separated by commas. 
+     * @return FilterInstanceType Instance types used in filtering. Valid values: 1 (dedicated instance), 2 (primary instance), 3 (disaster recovery instance). Multiple values should be separated by commas.
+     */
+    public String getFilterInstanceType() {
+        return this.FilterInstanceType;
+    }
+
+    /**
+     * Set Instance types used in filtering. Valid values: 1 (dedicated instance), 2 (primary instance), 3 (disaster recovery instance). Multiple values should be separated by commas.
+     * @param FilterInstanceType Instance types used in filtering. Valid values: 1 (dedicated instance), 2 (primary instance), 3 (disaster recovery instance). Multiple values should be separated by commas.
+     */
+    public void setFilterInstanceType(String FilterInstanceType) {
+        this.FilterInstanceType = FilterInstanceType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -362,6 +408,8 @@ public class DescribeDCDBInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ExclusterType", this.ExclusterType);
         this.setParamSimple(map, prefix + "IsFilterExcluster", this.IsFilterExcluster);
         this.setParamArraySimple(map, prefix + "ExclusterIds.", this.ExclusterIds);
+        this.setParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
+        this.setParamSimple(map, prefix + "FilterInstanceType", this.FilterInstanceType);
 
     }
 }

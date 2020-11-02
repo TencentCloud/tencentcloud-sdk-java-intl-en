@@ -23,35 +23,35 @@ import java.util.HashMap;
 public class CreateInstancesRequest extends AbstractModel{
 
     /**
-    * AZ ID of instance
+    * Availability zone ID of the instance. For more information, please see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * Instance type. Valid values: 2 (Redis 2.8 memory edition in standard architecture), 3 (Redis 3.2 memory edition in standard architecture), 4 (CKV 3.2 memory edition in standard architecture), 6 (Redis 4.0 memory edition in standard architecture), 7 (Redis 4.0 memory edition in cluster architecture), 8 (Redis 5.0 memory edition in standard architecture), 9 (Redis 5.0 memory edition in cluster architecture).
+    * Instance type. Valid values: 2 (Redis 2.8 Memory Edition in standard architecture), 3 (CKV 3.2 Memory Edition in standard architecture), 4 (CKV 3.2 Memory Edition in cluster architecture), 6 (Redis 4.0 Memory Edition in standard architecture), 7 (Redis 4.0 Memory Edition in cluster architecture), 8 (Redis 5.0 Memory Edition in standard architecture), 9 (Redis 5.0 Memory Edition in cluster architecture).
     */
     @SerializedName("TypeId")
     @Expose
     private Long TypeId;
 
     /**
-    * Instance capacity in MB. The actual value is subject to the specifications returned by the purchasable specification querying API |
+    * Instance capacity in MB. The value should be a multiple of 1,024 and is subject to the specifications returned by the [DescribeProductInfo](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1) API.
     */
     @SerializedName("MemSize")
     @Expose
     private Long MemSize;
 
     /**
-    * Number of instances. The actual quantity purchasable at a time is subject to the specifications returned by the purchasable specification querying API
+    * Number of instances. The actual quantity purchasable at a time is subject to the specifications returned by the [DescribeProductInfo](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1) API.
     */
     @SerializedName("GoodsNum")
     @Expose
     private Long GoodsNum;
 
     /**
-    * Length of purchase in months, which is required when creating a monthly subscribed instances. Value range: [1,2,3,4,5,6,7,8,9,10,11,12,24,36]. For pay-as-you-go instances, enter 1
+    * Purchased usage period in months. which is required when creating an instance. For pay-as-you-go instances, the valid value is 1; for monthly subscription instances, the value range is [1,2,3,4,5,6,7,8,9,10,11,12,24,36].
     */
     @SerializedName("Period")
     @Expose
@@ -72,28 +72,28 @@ public class CreateInstancesRequest extends AbstractModel{
     private String Password;
 
     /**
-    * VPC ID such as vpc-sad23jfdfk. If this parameter is not passed in, the basic network will be selected by default. Please use the VPC list querying API to query.
+    * VPC ID, such as "vpc-sad23jfdfk". If this parameter is not passed in, the classic network will be selected by default. The parameter value can be queried by the `DescribeVpcs` API.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * In a basic network, subnetId is invalid. In a VPC subnet, the value is the subnet ID, such as subnet-fdj24n34j2
+    * In a classic network, `subnetId` is invalid. In a VPC subnet, the value can be queried by the `DescribeSubnets` API, such as "subnet-fdj24n34j2".
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * Project ID. The value is subject to the projectId returned by user account > user account-related querying APIs > project list
+    * Project ID. The value is subject to the `projectId` returned by the `DescribeProject` API.
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
+    * Auto-renewal flag. Valid values: 0 (default status, indicating manual renewal), 1 (auto-renewal enabled), 2 (auto-renewal disabled)
     */
     @SerializedName("AutoRenew")
     @Expose
@@ -107,14 +107,14 @@ public class CreateInstancesRequest extends AbstractModel{
     private String [] SecurityGroupIdList;
 
     /**
-    * User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024,65535]
+    * User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024, 65535].
     */
     @SerializedName("VPort")
     @Expose
     private Long VPort;
 
     /**
-    * Number of shards in an instance. This parameter is required for cluster edition instances. Valid values: 3, 5, 8, 12, 16, 24, 32, 64, 96, 128.
+    * Number of shards in an instance. This parameter is required for instances in cluster architecture. Value range: [3,5,8,12,16,24,32,64,96,128].
     */
     @SerializedName("RedisShardNum")
     @Expose
@@ -128,14 +128,14 @@ public class CreateInstancesRequest extends AbstractModel{
     private Long RedisReplicasNum;
 
     /**
-    * Whether to support read-only replicas. Neither Redis 2.8 standard edition nor CKV standard edition supports read-only replicas. Read/write separation will be automatically enabled for an instance after it enables read-only replicas. Write requests will be directed to the primary node and read requests will be distributed on secondary nodes. To enable read-only replicas, we recommend you create 2 or more replicas.
+    * Whether to support read-only replicas. Neither Redis 2.8 in standard architecture nor CKV in standard architecture supports read-only replicas. Read/write separation will be automatically enabled for an instance after it enables read-only replicas. Write requests will be directed to the master node and read requests will be distributed on the replica nodes. To enable read-only replicas, we recommend that you create 2 or more replicas.
     */
     @SerializedName("ReplicasReadonly")
     @Expose
     private Boolean ReplicasReadonly;
 
     /**
-    * Instance name. It contains only letters, digits, underscores, and dashes with a length of up to 60 characters.
+    * Instance name. It contains only letters, digits, and symbols (-_) with a length of up to 60 characters.
     */
     @SerializedName("InstanceName")
     @Expose
@@ -149,80 +149,80 @@ public class CreateInstancesRequest extends AbstractModel{
     private Boolean NoAuth;
 
     /**
-     * Get AZ ID of instance 
-     * @return ZoneId AZ ID of instance
+     * Get Availability zone ID of the instance. For more information, please see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1). 
+     * @return ZoneId Availability zone ID of the instance. For more information, please see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set AZ ID of instance
-     * @param ZoneId AZ ID of instance
+     * Set Availability zone ID of the instance. For more information, please see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+     * @param ZoneId Availability zone ID of the instance. For more information, please see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Instance type. Valid values: 2 (Redis 2.8 memory edition in standard architecture), 3 (Redis 3.2 memory edition in standard architecture), 4 (CKV 3.2 memory edition in standard architecture), 6 (Redis 4.0 memory edition in standard architecture), 7 (Redis 4.0 memory edition in cluster architecture), 8 (Redis 5.0 memory edition in standard architecture), 9 (Redis 5.0 memory edition in cluster architecture). 
-     * @return TypeId Instance type. Valid values: 2 (Redis 2.8 memory edition in standard architecture), 3 (Redis 3.2 memory edition in standard architecture), 4 (CKV 3.2 memory edition in standard architecture), 6 (Redis 4.0 memory edition in standard architecture), 7 (Redis 4.0 memory edition in cluster architecture), 8 (Redis 5.0 memory edition in standard architecture), 9 (Redis 5.0 memory edition in cluster architecture).
+     * Get Instance type. Valid values: 2 (Redis 2.8 Memory Edition in standard architecture), 3 (CKV 3.2 Memory Edition in standard architecture), 4 (CKV 3.2 Memory Edition in cluster architecture), 6 (Redis 4.0 Memory Edition in standard architecture), 7 (Redis 4.0 Memory Edition in cluster architecture), 8 (Redis 5.0 Memory Edition in standard architecture), 9 (Redis 5.0 Memory Edition in cluster architecture). 
+     * @return TypeId Instance type. Valid values: 2 (Redis 2.8 Memory Edition in standard architecture), 3 (CKV 3.2 Memory Edition in standard architecture), 4 (CKV 3.2 Memory Edition in cluster architecture), 6 (Redis 4.0 Memory Edition in standard architecture), 7 (Redis 4.0 Memory Edition in cluster architecture), 8 (Redis 5.0 Memory Edition in standard architecture), 9 (Redis 5.0 Memory Edition in cluster architecture).
      */
     public Long getTypeId() {
         return this.TypeId;
     }
 
     /**
-     * Set Instance type. Valid values: 2 (Redis 2.8 memory edition in standard architecture), 3 (Redis 3.2 memory edition in standard architecture), 4 (CKV 3.2 memory edition in standard architecture), 6 (Redis 4.0 memory edition in standard architecture), 7 (Redis 4.0 memory edition in cluster architecture), 8 (Redis 5.0 memory edition in standard architecture), 9 (Redis 5.0 memory edition in cluster architecture).
-     * @param TypeId Instance type. Valid values: 2 (Redis 2.8 memory edition in standard architecture), 3 (Redis 3.2 memory edition in standard architecture), 4 (CKV 3.2 memory edition in standard architecture), 6 (Redis 4.0 memory edition in standard architecture), 7 (Redis 4.0 memory edition in cluster architecture), 8 (Redis 5.0 memory edition in standard architecture), 9 (Redis 5.0 memory edition in cluster architecture).
+     * Set Instance type. Valid values: 2 (Redis 2.8 Memory Edition in standard architecture), 3 (CKV 3.2 Memory Edition in standard architecture), 4 (CKV 3.2 Memory Edition in cluster architecture), 6 (Redis 4.0 Memory Edition in standard architecture), 7 (Redis 4.0 Memory Edition in cluster architecture), 8 (Redis 5.0 Memory Edition in standard architecture), 9 (Redis 5.0 Memory Edition in cluster architecture).
+     * @param TypeId Instance type. Valid values: 2 (Redis 2.8 Memory Edition in standard architecture), 3 (CKV 3.2 Memory Edition in standard architecture), 4 (CKV 3.2 Memory Edition in cluster architecture), 6 (Redis 4.0 Memory Edition in standard architecture), 7 (Redis 4.0 Memory Edition in cluster architecture), 8 (Redis 5.0 Memory Edition in standard architecture), 9 (Redis 5.0 Memory Edition in cluster architecture).
      */
     public void setTypeId(Long TypeId) {
         this.TypeId = TypeId;
     }
 
     /**
-     * Get Instance capacity in MB. The actual value is subject to the specifications returned by the purchasable specification querying API | 
-     * @return MemSize Instance capacity in MB. The actual value is subject to the specifications returned by the purchasable specification querying API |
+     * Get Instance capacity in MB. The value should be a multiple of 1,024 and is subject to the specifications returned by the [DescribeProductInfo](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1) API. 
+     * @return MemSize Instance capacity in MB. The value should be a multiple of 1,024 and is subject to the specifications returned by the [DescribeProductInfo](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1) API.
      */
     public Long getMemSize() {
         return this.MemSize;
     }
 
     /**
-     * Set Instance capacity in MB. The actual value is subject to the specifications returned by the purchasable specification querying API |
-     * @param MemSize Instance capacity in MB. The actual value is subject to the specifications returned by the purchasable specification querying API |
+     * Set Instance capacity in MB. The value should be a multiple of 1,024 and is subject to the specifications returned by the [DescribeProductInfo](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1) API.
+     * @param MemSize Instance capacity in MB. The value should be a multiple of 1,024 and is subject to the specifications returned by the [DescribeProductInfo](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1) API.
      */
     public void setMemSize(Long MemSize) {
         this.MemSize = MemSize;
     }
 
     /**
-     * Get Number of instances. The actual quantity purchasable at a time is subject to the specifications returned by the purchasable specification querying API 
-     * @return GoodsNum Number of instances. The actual quantity purchasable at a time is subject to the specifications returned by the purchasable specification querying API
+     * Get Number of instances. The actual quantity purchasable at a time is subject to the specifications returned by the [DescribeProductInfo](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1) API. 
+     * @return GoodsNum Number of instances. The actual quantity purchasable at a time is subject to the specifications returned by the [DescribeProductInfo](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1) API.
      */
     public Long getGoodsNum() {
         return this.GoodsNum;
     }
 
     /**
-     * Set Number of instances. The actual quantity purchasable at a time is subject to the specifications returned by the purchasable specification querying API
-     * @param GoodsNum Number of instances. The actual quantity purchasable at a time is subject to the specifications returned by the purchasable specification querying API
+     * Set Number of instances. The actual quantity purchasable at a time is subject to the specifications returned by the [DescribeProductInfo](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1) API.
+     * @param GoodsNum Number of instances. The actual quantity purchasable at a time is subject to the specifications returned by the [DescribeProductInfo](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1) API.
      */
     public void setGoodsNum(Long GoodsNum) {
         this.GoodsNum = GoodsNum;
     }
 
     /**
-     * Get Length of purchase in months, which is required when creating a monthly subscribed instances. Value range: [1,2,3,4,5,6,7,8,9,10,11,12,24,36]. For pay-as-you-go instances, enter 1 
-     * @return Period Length of purchase in months, which is required when creating a monthly subscribed instances. Value range: [1,2,3,4,5,6,7,8,9,10,11,12,24,36]. For pay-as-you-go instances, enter 1
+     * Get Purchased usage period in months. which is required when creating an instance. For pay-as-you-go instances, the valid value is 1; for monthly subscription instances, the value range is [1,2,3,4,5,6,7,8,9,10,11,12,24,36]. 
+     * @return Period Purchased usage period in months. which is required when creating an instance. For pay-as-you-go instances, the valid value is 1; for monthly subscription instances, the value range is [1,2,3,4,5,6,7,8,9,10,11,12,24,36].
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set Length of purchase in months, which is required when creating a monthly subscribed instances. Value range: [1,2,3,4,5,6,7,8,9,10,11,12,24,36]. For pay-as-you-go instances, enter 1
-     * @param Period Length of purchase in months, which is required when creating a monthly subscribed instances. Value range: [1,2,3,4,5,6,7,8,9,10,11,12,24,36]. For pay-as-you-go instances, enter 1
+     * Set Purchased usage period in months. which is required when creating an instance. For pay-as-you-go instances, the valid value is 1; for monthly subscription instances, the value range is [1,2,3,4,5,6,7,8,9,10,11,12,24,36].
+     * @param Period Purchased usage period in months. which is required when creating an instance. For pay-as-you-go instances, the valid value is 1; for monthly subscription instances, the value range is [1,2,3,4,5,6,7,8,9,10,11,12,24,36].
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
@@ -261,64 +261,64 @@ public class CreateInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get VPC ID such as vpc-sad23jfdfk. If this parameter is not passed in, the basic network will be selected by default. Please use the VPC list querying API to query. 
-     * @return VpcId VPC ID such as vpc-sad23jfdfk. If this parameter is not passed in, the basic network will be selected by default. Please use the VPC list querying API to query.
+     * Get VPC ID, such as "vpc-sad23jfdfk". If this parameter is not passed in, the classic network will be selected by default. The parameter value can be queried by the `DescribeVpcs` API. 
+     * @return VpcId VPC ID, such as "vpc-sad23jfdfk". If this parameter is not passed in, the classic network will be selected by default. The parameter value can be queried by the `DescribeVpcs` API.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID such as vpc-sad23jfdfk. If this parameter is not passed in, the basic network will be selected by default. Please use the VPC list querying API to query.
-     * @param VpcId VPC ID such as vpc-sad23jfdfk. If this parameter is not passed in, the basic network will be selected by default. Please use the VPC list querying API to query.
+     * Set VPC ID, such as "vpc-sad23jfdfk". If this parameter is not passed in, the classic network will be selected by default. The parameter value can be queried by the `DescribeVpcs` API.
+     * @param VpcId VPC ID, such as "vpc-sad23jfdfk". If this parameter is not passed in, the classic network will be selected by default. The parameter value can be queried by the `DescribeVpcs` API.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get In a basic network, subnetId is invalid. In a VPC subnet, the value is the subnet ID, such as subnet-fdj24n34j2 
-     * @return SubnetId In a basic network, subnetId is invalid. In a VPC subnet, the value is the subnet ID, such as subnet-fdj24n34j2
+     * Get In a classic network, `subnetId` is invalid. In a VPC subnet, the value can be queried by the `DescribeSubnets` API, such as "subnet-fdj24n34j2". 
+     * @return SubnetId In a classic network, `subnetId` is invalid. In a VPC subnet, the value can be queried by the `DescribeSubnets` API, such as "subnet-fdj24n34j2".
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set In a basic network, subnetId is invalid. In a VPC subnet, the value is the subnet ID, such as subnet-fdj24n34j2
-     * @param SubnetId In a basic network, subnetId is invalid. In a VPC subnet, the value is the subnet ID, such as subnet-fdj24n34j2
+     * Set In a classic network, `subnetId` is invalid. In a VPC subnet, the value can be queried by the `DescribeSubnets` API, such as "subnet-fdj24n34j2".
+     * @param SubnetId In a classic network, `subnetId` is invalid. In a VPC subnet, the value can be queried by the `DescribeSubnets` API, such as "subnet-fdj24n34j2".
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get Project ID. The value is subject to the projectId returned by user account > user account-related querying APIs > project list 
-     * @return ProjectId Project ID. The value is subject to the projectId returned by user account > user account-related querying APIs > project list
+     * Get Project ID. The value is subject to the `projectId` returned by the `DescribeProject` API. 
+     * @return ProjectId Project ID. The value is subject to the `projectId` returned by the `DescribeProject` API.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID. The value is subject to the projectId returned by user account > user account-related querying APIs > project list
-     * @param ProjectId Project ID. The value is subject to the projectId returned by user account > user account-related querying APIs > project list
+     * Set Project ID. The value is subject to the `projectId` returned by the `DescribeProject` API.
+     * @param ProjectId Project ID. The value is subject to the `projectId` returned by the `DescribeProject` API.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled 
-     * @return AutoRenew Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
+     * Get Auto-renewal flag. Valid values: 0 (default status, indicating manual renewal), 1 (auto-renewal enabled), 2 (auto-renewal disabled) 
+     * @return AutoRenew Auto-renewal flag. Valid values: 0 (default status, indicating manual renewal), 1 (auto-renewal enabled), 2 (auto-renewal disabled)
      */
     public Long getAutoRenew() {
         return this.AutoRenew;
     }
 
     /**
-     * Set Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
-     * @param AutoRenew Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
+     * Set Auto-renewal flag. Valid values: 0 (default status, indicating manual renewal), 1 (auto-renewal enabled), 2 (auto-renewal disabled)
+     * @param AutoRenew Auto-renewal flag. Valid values: 0 (default status, indicating manual renewal), 1 (auto-renewal enabled), 2 (auto-renewal disabled)
      */
     public void setAutoRenew(Long AutoRenew) {
         this.AutoRenew = AutoRenew;
@@ -341,32 +341,32 @@ public class CreateInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024,65535] 
-     * @return VPort User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024,65535]
+     * Get User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024, 65535]. 
+     * @return VPort User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024, 65535].
      */
     public Long getVPort() {
         return this.VPort;
     }
 
     /**
-     * Set User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024,65535]
-     * @param VPort User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024,65535]
+     * Set User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024, 65535].
+     * @param VPort User-defined port. If this parameter is left empty, 6379 will be used by default. Value range: [1024, 65535].
      */
     public void setVPort(Long VPort) {
         this.VPort = VPort;
     }
 
     /**
-     * Get Number of shards in an instance. This parameter is required for cluster edition instances. Valid values: 3, 5, 8, 12, 16, 24, 32, 64, 96, 128. 
-     * @return RedisShardNum Number of shards in an instance. This parameter is required for cluster edition instances. Valid values: 3, 5, 8, 12, 16, 24, 32, 64, 96, 128.
+     * Get Number of shards in an instance. This parameter is required for instances in cluster architecture. Value range: [3,5,8,12,16,24,32,64,96,128]. 
+     * @return RedisShardNum Number of shards in an instance. This parameter is required for instances in cluster architecture. Value range: [3,5,8,12,16,24,32,64,96,128].
      */
     public Long getRedisShardNum() {
         return this.RedisShardNum;
     }
 
     /**
-     * Set Number of shards in an instance. This parameter is required for cluster edition instances. Valid values: 3, 5, 8, 12, 16, 24, 32, 64, 96, 128.
-     * @param RedisShardNum Number of shards in an instance. This parameter is required for cluster edition instances. Valid values: 3, 5, 8, 12, 16, 24, 32, 64, 96, 128.
+     * Set Number of shards in an instance. This parameter is required for instances in cluster architecture. Value range: [3,5,8,12,16,24,32,64,96,128].
+     * @param RedisShardNum Number of shards in an instance. This parameter is required for instances in cluster architecture. Value range: [3,5,8,12,16,24,32,64,96,128].
      */
     public void setRedisShardNum(Long RedisShardNum) {
         this.RedisShardNum = RedisShardNum;
@@ -389,32 +389,32 @@ public class CreateInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to support read-only replicas. Neither Redis 2.8 standard edition nor CKV standard edition supports read-only replicas. Read/write separation will be automatically enabled for an instance after it enables read-only replicas. Write requests will be directed to the primary node and read requests will be distributed on secondary nodes. To enable read-only replicas, we recommend you create 2 or more replicas. 
-     * @return ReplicasReadonly Whether to support read-only replicas. Neither Redis 2.8 standard edition nor CKV standard edition supports read-only replicas. Read/write separation will be automatically enabled for an instance after it enables read-only replicas. Write requests will be directed to the primary node and read requests will be distributed on secondary nodes. To enable read-only replicas, we recommend you create 2 or more replicas.
+     * Get Whether to support read-only replicas. Neither Redis 2.8 in standard architecture nor CKV in standard architecture supports read-only replicas. Read/write separation will be automatically enabled for an instance after it enables read-only replicas. Write requests will be directed to the master node and read requests will be distributed on the replica nodes. To enable read-only replicas, we recommend that you create 2 or more replicas. 
+     * @return ReplicasReadonly Whether to support read-only replicas. Neither Redis 2.8 in standard architecture nor CKV in standard architecture supports read-only replicas. Read/write separation will be automatically enabled for an instance after it enables read-only replicas. Write requests will be directed to the master node and read requests will be distributed on the replica nodes. To enable read-only replicas, we recommend that you create 2 or more replicas.
      */
     public Boolean getReplicasReadonly() {
         return this.ReplicasReadonly;
     }
 
     /**
-     * Set Whether to support read-only replicas. Neither Redis 2.8 standard edition nor CKV standard edition supports read-only replicas. Read/write separation will be automatically enabled for an instance after it enables read-only replicas. Write requests will be directed to the primary node and read requests will be distributed on secondary nodes. To enable read-only replicas, we recommend you create 2 or more replicas.
-     * @param ReplicasReadonly Whether to support read-only replicas. Neither Redis 2.8 standard edition nor CKV standard edition supports read-only replicas. Read/write separation will be automatically enabled for an instance after it enables read-only replicas. Write requests will be directed to the primary node and read requests will be distributed on secondary nodes. To enable read-only replicas, we recommend you create 2 or more replicas.
+     * Set Whether to support read-only replicas. Neither Redis 2.8 in standard architecture nor CKV in standard architecture supports read-only replicas. Read/write separation will be automatically enabled for an instance after it enables read-only replicas. Write requests will be directed to the master node and read requests will be distributed on the replica nodes. To enable read-only replicas, we recommend that you create 2 or more replicas.
+     * @param ReplicasReadonly Whether to support read-only replicas. Neither Redis 2.8 in standard architecture nor CKV in standard architecture supports read-only replicas. Read/write separation will be automatically enabled for an instance after it enables read-only replicas. Write requests will be directed to the master node and read requests will be distributed on the replica nodes. To enable read-only replicas, we recommend that you create 2 or more replicas.
      */
     public void setReplicasReadonly(Boolean ReplicasReadonly) {
         this.ReplicasReadonly = ReplicasReadonly;
     }
 
     /**
-     * Get Instance name. It contains only letters, digits, underscores, and dashes with a length of up to 60 characters. 
-     * @return InstanceName Instance name. It contains only letters, digits, underscores, and dashes with a length of up to 60 characters.
+     * Get Instance name. It contains only letters, digits, and symbols (-_) with a length of up to 60 characters. 
+     * @return InstanceName Instance name. It contains only letters, digits, and symbols (-_) with a length of up to 60 characters.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name. It contains only letters, digits, underscores, and dashes with a length of up to 60 characters.
-     * @param InstanceName Instance name. It contains only letters, digits, underscores, and dashes with a length of up to 60 characters.
+     * Set Instance name. It contains only letters, digits, and symbols (-_) with a length of up to 60 characters.
+     * @param InstanceName Instance name. It contains only letters, digits, and symbols (-_) with a length of up to 60 characters.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
