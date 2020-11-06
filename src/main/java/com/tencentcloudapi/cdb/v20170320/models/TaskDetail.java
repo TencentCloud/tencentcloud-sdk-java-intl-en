@@ -60,6 +60,7 @@ public class TaskDetail extends AbstractModel{
 "KILLED" - terminated;
 "REMOVED" - deleted;
 "PAUSED" - paused.
+"WAITING" - waiting (which can be canceled)
     */
     @SerializedName("TaskStatus")
     @Expose
@@ -186,7 +187,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 "FAILED" - failed;
 "KILLED" - terminated;
 "REMOVED" - deleted;
-"PAUSED" - paused. 
+"PAUSED" - paused.
+"WAITING" - waiting (which can be canceled) 
      * @return TaskStatus Instance task status. Valid values:
 "UNDEFINED" - undefined;
 "INITIAL" - initializing;
@@ -196,6 +198,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 "KILLED" - terminated;
 "REMOVED" - deleted;
 "PAUSED" - paused.
+"WAITING" - waiting (which can be canceled)
      */
     public String getTaskStatus() {
         return this.TaskStatus;
@@ -211,6 +214,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 "KILLED" - terminated;
 "REMOVED" - deleted;
 "PAUSED" - paused.
+"WAITING" - waiting (which can be canceled)
      * @param TaskStatus Instance task status. Valid values:
 "UNDEFINED" - undefined;
 "INITIAL" - initializing;
@@ -220,6 +224,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 "KILLED" - terminated;
 "REMOVED" - deleted;
 "PAUSED" - paused.
+"WAITING" - waiting (which can be canceled)
      */
     public void setTaskStatus(String TaskStatus) {
         this.TaskStatus = TaskStatus;

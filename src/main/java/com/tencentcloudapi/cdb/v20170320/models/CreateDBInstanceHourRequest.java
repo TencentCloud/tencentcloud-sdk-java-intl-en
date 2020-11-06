@@ -205,6 +205,20 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     private String DeviceType;
 
     /**
+    * Parameter template ID.
+    */
+    @SerializedName("ParamTemplateId")
+    @Expose
+    private Long ParamTemplateId;
+
+    /**
+    * The array of alarm policy IDs.
+    */
+    @SerializedName("AlarmPolicyList")
+    @Expose
+    private Long [] AlarmPolicyList;
+
+    /**
      * Get Number of instances. Value range: 1-100. Default value: 1. 
      * @return GoodsNum Number of instances. Value range: 1-100. Default value: 1.
      */
@@ -621,6 +635,38 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     }
 
     /**
+     * Get Parameter template ID. 
+     * @return ParamTemplateId Parameter template ID.
+     */
+    public Long getParamTemplateId() {
+        return this.ParamTemplateId;
+    }
+
+    /**
+     * Set Parameter template ID.
+     * @param ParamTemplateId Parameter template ID.
+     */
+    public void setParamTemplateId(Long ParamTemplateId) {
+        this.ParamTemplateId = ParamTemplateId;
+    }
+
+    /**
+     * Get The array of alarm policy IDs. 
+     * @return AlarmPolicyList The array of alarm policy IDs.
+     */
+    public Long [] getAlarmPolicyList() {
+        return this.AlarmPolicyList;
+    }
+
+    /**
+     * Set The array of alarm policy IDs.
+     * @param AlarmPolicyList The array of alarm policy IDs.
+     */
+    public void setAlarmPolicyList(Long [] AlarmPolicyList) {
+        this.AlarmPolicyList = AlarmPolicyList;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -650,6 +696,8 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
+        this.setParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
+        this.setParamArraySimple(map, prefix + "AlarmPolicyList.", this.AlarmPolicyList);
 
     }
 }

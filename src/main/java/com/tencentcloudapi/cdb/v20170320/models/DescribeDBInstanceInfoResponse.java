@@ -60,6 +60,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String KeyRegion;
 
     /**
+    * The default region of the KMS service currently used by the TencentDB backend service.
+Note: this field may return `null`, indicating that no valid value can be found.
+    */
+    @SerializedName("DefaultKmsRegion")
+    @Expose
+    private String DefaultKmsRegion;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -155,6 +163,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get The default region of the KMS service currently used by the TencentDB backend service.
+Note: this field may return `null`, indicating that no valid value can be found. 
+     * @return DefaultKmsRegion The default region of the KMS service currently used by the TencentDB backend service.
+Note: this field may return `null`, indicating that no valid value can be found.
+     */
+    public String getDefaultKmsRegion() {
+        return this.DefaultKmsRegion;
+    }
+
+    /**
+     * Set The default region of the KMS service currently used by the TencentDB backend service.
+Note: this field may return `null`, indicating that no valid value can be found.
+     * @param DefaultKmsRegion The default region of the KMS service currently used by the TencentDB backend service.
+Note: this field may return `null`, indicating that no valid value can be found.
+     */
+    public void setDefaultKmsRegion(String DefaultKmsRegion) {
+        this.DefaultKmsRegion = DefaultKmsRegion;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -179,6 +207,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Encryption", this.Encryption);
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);
         this.setParamSimple(map, prefix + "KeyRegion", this.KeyRegion);
+        this.setParamSimple(map, prefix + "DefaultKmsRegion", this.DefaultKmsRegion);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

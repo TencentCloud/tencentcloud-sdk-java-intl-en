@@ -51,6 +51,13 @@ public class DeviceDiskInfo extends AbstractModel{
     private Long [] Write;
 
     /**
+    * Disk capacity. Each value is comprised of two data, with the first data representing the used capacity and the second one representing the total disk capacity.
+    */
+    @SerializedName("CapacityRatio")
+    @Expose
+    private Long [] CapacityRatio;
+
+    /**
      * Get Time percentage of IO operations per second 
      * @return IoRatioPerSec Time percentage of IO operations per second
      */
@@ -115,6 +122,22 @@ public class DeviceDiskInfo extends AbstractModel{
     }
 
     /**
+     * Get Disk capacity. Each value is comprised of two data, with the first data representing the used capacity and the second one representing the total disk capacity. 
+     * @return CapacityRatio Disk capacity. Each value is comprised of two data, with the first data representing the used capacity and the second one representing the total disk capacity.
+     */
+    public Long [] getCapacityRatio() {
+        return this.CapacityRatio;
+    }
+
+    /**
+     * Set Disk capacity. Each value is comprised of two data, with the first data representing the used capacity and the second one representing the total disk capacity.
+     * @param CapacityRatio Disk capacity. Each value is comprised of two data, with the first data representing the used capacity and the second one representing the total disk capacity.
+     */
+    public void setCapacityRatio(Long [] CapacityRatio) {
+        this.CapacityRatio = CapacityRatio;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class DeviceDiskInfo extends AbstractModel{
         this.setParamArraySimple(map, prefix + "IoWaitTime.", this.IoWaitTime);
         this.setParamArraySimple(map, prefix + "Read.", this.Read);
         this.setParamArraySimple(map, prefix + "Write.", this.Write);
+        this.setParamArraySimple(map, prefix + "CapacityRatio.", this.CapacityRatio);
 
     }
 }
