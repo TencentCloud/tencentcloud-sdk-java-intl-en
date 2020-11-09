@@ -27,6 +27,7 @@ import com.tencentcloudapi.monitor.v20180724.models.*;
 
 public class MonitorClient extends AbstractClient{
     private static String endpoint = "monitor.tencentcloudapi.com";
+    private static String service = "monitor";
     private static String version = "2018-07-24";
 
     public MonitorClient(Credential credential, String region) {
