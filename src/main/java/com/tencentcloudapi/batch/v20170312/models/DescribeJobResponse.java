@@ -115,7 +115,8 @@ Note: This field may return `null`, indicating that no valid value was found.
     private Tag [] Tags;
 
     /**
-    * 
+    * Next action
+Note: This field may return `null`, indicating that no valid value was found.
     */
     @SerializedName("NextAction")
     @Expose
@@ -341,16 +342,20 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get  
-     * @return NextAction 
+     * Get Next action
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return NextAction Next action
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public String getNextAction() {
         return this.NextAction;
     }
 
     /**
-     * Set 
-     * @param NextAction 
+     * Set Next action
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param NextAction Next action
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public void setNextAction(String NextAction) {
         this.NextAction = NextAction;
