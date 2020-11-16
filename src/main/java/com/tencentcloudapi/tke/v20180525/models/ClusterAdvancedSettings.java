@@ -107,6 +107,13 @@ public class ClusterAdvancedSettings extends AbstractModel{
     private String AuditLogTopicId;
 
     /**
+    * Specifies whether the VPC CNI type is multi-IP ENI or or independent ENI.
+    */
+    @SerializedName("VpcCniType")
+    @Expose
+    private String VpcCniType;
+
+    /**
      * Get Whether IPVS is enabled 
      * @return IPVS Whether IPVS is enabled
      */
@@ -299,6 +306,22 @@ public class ClusterAdvancedSettings extends AbstractModel{
     }
 
     /**
+     * Get Specifies whether the VPC CNI type is multi-IP ENI or or independent ENI. 
+     * @return VpcCniType Specifies whether the VPC CNI type is multi-IP ENI or or independent ENI.
+     */
+    public String getVpcCniType() {
+        return this.VpcCniType;
+    }
+
+    /**
+     * Set Specifies whether the VPC CNI type is multi-IP ENI or or independent ENI.
+     * @param VpcCniType Specifies whether the VPC CNI type is multi-IP ENI or or independent ENI.
+     */
+    public void setVpcCniType(String VpcCniType) {
+        this.VpcCniType = VpcCniType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -314,6 +337,7 @@ public class ClusterAdvancedSettings extends AbstractModel{
         this.setParamSimple(map, prefix + "AuditEnabled", this.AuditEnabled);
         this.setParamSimple(map, prefix + "AuditLogsetId", this.AuditLogsetId);
         this.setParamSimple(map, prefix + "AuditLogTopicId", this.AuditLogTopicId);
+        this.setParamSimple(map, prefix + "VpcCniType", this.VpcCniType);
 
     }
 }

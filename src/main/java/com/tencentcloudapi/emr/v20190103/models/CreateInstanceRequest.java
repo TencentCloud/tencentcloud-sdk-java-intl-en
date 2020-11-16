@@ -231,6 +231,13 @@ public class CreateInstanceRequest extends AbstractModel{
     private CustomMetaInfo MetaDBInfo;
 
     /**
+    * Custom application role.
+    */
+    @SerializedName("ApplicationRole")
+    @Expose
+    private String ApplicationRole;
+
+    /**
      * Get Product ID. Different product IDs represent different EMR product versions. Valid values:
 <li>1: EMR v1.3.1.</li>
 <li>2: EMR v2.0.1.</li>
@@ -751,6 +758,22 @@ public class CreateInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get Custom application role. 
+     * @return ApplicationRole Custom application role.
+     */
+    public String getApplicationRole() {
+        return this.ApplicationRole;
+    }
+
+    /**
+     * Set Custom application role.
+     * @param ApplicationRole Custom application role.
+     */
+    public void setApplicationRole(String ApplicationRole) {
+        this.ApplicationRole = ApplicationRole;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -780,6 +803,7 @@ public class CreateInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MetaType", this.MetaType);
         this.setParamSimple(map, prefix + "UnifyMetaInstanceId", this.UnifyMetaInstanceId);
         this.setParamObj(map, prefix + "MetaDBInfo.", this.MetaDBInfo);
+        this.setParamSimple(map, prefix + "ApplicationRole", this.ApplicationRole);
 
     }
 }

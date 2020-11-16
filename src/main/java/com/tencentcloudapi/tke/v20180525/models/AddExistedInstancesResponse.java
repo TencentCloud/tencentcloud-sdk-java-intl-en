@@ -47,6 +47,14 @@ Note: This field may return null, indicating that no valid value was found.
     private String [] TimeoutInstanceIds;
 
     /**
+    * Causes of the failure to add a node to a cluster
+Note: this field may return `null`, indicating that no valid value is obtained.
+    */
+    @SerializedName("FailedReasons")
+    @Expose
+    private String [] FailedReasons;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -114,6 +122,26 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
+     * Get Causes of the failure to add a node to a cluster
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return FailedReasons Causes of the failure to add a node to a cluster
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public String [] getFailedReasons() {
+        return this.FailedReasons;
+    }
+
+    /**
+     * Set Causes of the failure to add a node to a cluster
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param FailedReasons Causes of the failure to add a node to a cluster
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public void setFailedReasons(String [] FailedReasons) {
+        this.FailedReasons = FailedReasons;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -136,6 +164,7 @@ Note: This field may return null, indicating that no valid value was found.
         this.setParamArraySimple(map, prefix + "FailedInstanceIds.", this.FailedInstanceIds);
         this.setParamArraySimple(map, prefix + "SuccInstanceIds.", this.SuccInstanceIds);
         this.setParamArraySimple(map, prefix + "TimeoutInstanceIds.", this.TimeoutInstanceIds);
+        this.setParamArraySimple(map, prefix + "FailedReasons.", this.FailedReasons);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
