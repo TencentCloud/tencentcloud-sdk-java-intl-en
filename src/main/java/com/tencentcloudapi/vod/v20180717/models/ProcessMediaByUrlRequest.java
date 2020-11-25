@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ProcessMediaByUrlRequest extends AbstractModel{
 
     /**
-    * Information of input video, including video's URL, name, and custom ID.
+    * This API is<font color='red'>disused</font>. We recommend using an alternative API. For more information, see API overview.
     */
     @SerializedName("InputInfo")
     @Expose
@@ -79,7 +79,7 @@ public class ProcessMediaByUrlRequest extends AbstractModel{
     private String SessionContext;
 
     /**
-    * The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
+    * The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
     */
     @SerializedName("SessionId")
     @Expose
@@ -93,16 +93,16 @@ public class ProcessMediaByUrlRequest extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * Get Information of input video, including video's URL, name, and custom ID. 
-     * @return InputInfo Information of input video, including video's URL, name, and custom ID.
+     * Get This API is<font color='red'>disused</font>. We recommend using an alternative API. For more information, see API overview. 
+     * @return InputInfo This API is<font color='red'>disused</font>. We recommend using an alternative API. For more information, see API overview.
      */
     public MediaInputInfo getInputInfo() {
         return this.InputInfo;
     }
 
     /**
-     * Set Information of input video, including video's URL, name, and custom ID.
-     * @param InputInfo Information of input video, including video's URL, name, and custom ID.
+     * Set This API is<font color='red'>disused</font>. We recommend using an alternative API. For more information, see API overview.
+     * @param InputInfo This API is<font color='red'>disused</font>. We recommend using an alternative API. For more information, see API overview.
      */
     public void setInputInfo(MediaInputInfo InputInfo) {
         this.InputInfo = InputInfo;
@@ -221,16 +221,16 @@ public class ProcessMediaByUrlRequest extends AbstractModel{
     }
 
     /**
-     * Get The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed. 
-     * @return SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
+     * Get The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed. 
+     * @return SessionId The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
-     * @param SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
+     * Set The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
+     * @param SessionId The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;

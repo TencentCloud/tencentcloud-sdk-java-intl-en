@@ -659,6 +659,26 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to manually repossess a deactivated SQL Server instance.
+     * @param req RecycleDBInstanceRequest
+     * @return RecycleDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecycleDBInstanceResponse RecycleDBInstance(RecycleDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RecycleDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RecycleDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RecycleDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to reset the account password of an instance.
      * @param req ResetAccountPasswordRequest
      * @return ResetAccountPasswordResponse

@@ -20,36 +20,60 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSubAppIdsRequest extends AbstractModel{
+public class ResourceTag extends AbstractModel{
 
     /**
-    * Tag information. You can query the list of subapplications with specified tags.
+    * Tag key.
     */
-    @SerializedName("Tags")
+    @SerializedName("TagKey")
     @Expose
-    private ResourceTag [] Tags;
+    private String TagKey;
 
     /**
-     * Get Tag information. You can query the list of subapplications with specified tags. 
-     * @return Tags Tag information. You can query the list of subapplications with specified tags.
+    * Tag value.
+    */
+    @SerializedName("TagValue")
+    @Expose
+    private String TagValue;
+
+    /**
+     * Get Tag key. 
+     * @return TagKey Tag key.
      */
-    public ResourceTag [] getTags() {
-        return this.Tags;
+    public String getTagKey() {
+        return this.TagKey;
     }
 
     /**
-     * Set Tag information. You can query the list of subapplications with specified tags.
-     * @param Tags Tag information. You can query the list of subapplications with specified tags.
+     * Set Tag key.
+     * @param TagKey Tag key.
      */
-    public void setTags(ResourceTag [] Tags) {
-        this.Tags = Tags;
+    public void setTagKey(String TagKey) {
+        this.TagKey = TagKey;
+    }
+
+    /**
+     * Get Tag value. 
+     * @return TagValue Tag value.
+     */
+    public String getTagValue() {
+        return this.TagValue;
+    }
+
+    /**
+     * Set Tag value.
+     * @param TagValue Tag value.
+     */
+    public void setTagValue(String TagValue) {
+        this.TagValue = TagValue;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "TagKey", this.TagKey);
+        this.setParamSimple(map, prefix + "TagValue", this.TagValue);
 
     }
 }

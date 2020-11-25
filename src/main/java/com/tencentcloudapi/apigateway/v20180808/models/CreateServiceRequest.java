@@ -79,6 +79,13 @@ public class CreateServiceRequest extends AbstractModel{
     private String AppIdType;
 
     /**
+    * Tag information.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get Custom service name. If this parameter is left empty, the system will automatically generate a unique name. 
      * @return ServiceName Custom service name. If this parameter is left empty, the system will automatically generate a unique name.
      */
@@ -207,6 +214,22 @@ public class CreateServiceRequest extends AbstractModel{
     }
 
     /**
+     * Get Tag information. 
+     * @return Tags Tag information.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag information.
+     * @param Tags Tag information.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +241,7 @@ public class CreateServiceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "IpVersion", this.IpVersion);
         this.setParamSimple(map, prefix + "SetServerName", this.SetServerName);
         this.setParamSimple(map, prefix + "AppIdType", this.AppIdType);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

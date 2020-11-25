@@ -37,11 +37,18 @@ public class DescribeDBDiagHistoryRequest extends AbstractModel{
     private String StartTime;
 
     /**
-    * End time, such as "2019-09-11 12:13:14".
+    * End time, such as "2019-09-11 12:13:14". The interval between the end time and the start time can be up to 2 days.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
+
+    /**
+    * 
+    */
+    @SerializedName("Product")
+    @Expose
+    private String Product;
 
     /**
      * Get Instance ID. 
@@ -76,19 +83,35 @@ public class DescribeDBDiagHistoryRequest extends AbstractModel{
     }
 
     /**
-     * Get End time, such as "2019-09-11 12:13:14". 
-     * @return EndTime End time, such as "2019-09-11 12:13:14".
+     * Get End time, such as "2019-09-11 12:13:14". The interval between the end time and the start time can be up to 2 days. 
+     * @return EndTime End time, such as "2019-09-11 12:13:14". The interval between the end time and the start time can be up to 2 days.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time, such as "2019-09-11 12:13:14".
-     * @param EndTime End time, such as "2019-09-11 12:13:14".
+     * Set End time, such as "2019-09-11 12:13:14". The interval between the end time and the start time can be up to 2 days.
+     * @param EndTime End time, such as "2019-09-11 12:13:14". The interval between the end time and the start time can be up to 2 days.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
+    }
+
+    /**
+     * Get  
+     * @return Product 
+     */
+    public String getProduct() {
+        return this.Product;
+    }
+
+    /**
+     * Set 
+     * @param Product 
+     */
+    public void setProduct(String Product) {
+        this.Product = Product;
     }
 
     /**
@@ -98,6 +121,7 @@ public class DescribeDBDiagHistoryRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "Product", this.Product);
 
     }
 }

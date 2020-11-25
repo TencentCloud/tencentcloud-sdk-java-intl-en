@@ -30,16 +30,16 @@ public class WatermarkInput extends AbstractModel{
     private Long Definition;
 
     /**
-    * Text content of up to 100 characters. This needs to be entered only when the watermark type is text.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Text content, which contains up to 100 characters. This field is required only when the watermark type is text.
+VOD does not support adding text watermarks on screenshots.
     */
     @SerializedName("TextContent")
     @Expose
     private String TextContent;
 
     /**
-    * SVG content of up to 2,000,000 characters. This needs to be entered only when the watermark type is `SVG`.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * SVG content, which contains up to 2,000,000 characters. This field is required only when the watermark type is SVG.
+VOD does not support adding SVG watermarks on screenshots.
     */
     @SerializedName("SvgContent")
     @Expose
@@ -82,40 +82,40 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Text content of up to 100 characters. This needs to be entered only when the watermark type is text.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TextContent Text content of up to 100 characters. This needs to be entered only when the watermark type is text.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Text content, which contains up to 100 characters. This field is required only when the watermark type is text.
+VOD does not support adding text watermarks on screenshots. 
+     * @return TextContent Text content, which contains up to 100 characters. This field is required only when the watermark type is text.
+VOD does not support adding text watermarks on screenshots.
      */
     public String getTextContent() {
         return this.TextContent;
     }
 
     /**
-     * Set Text content of up to 100 characters. This needs to be entered only when the watermark type is text.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TextContent Text content of up to 100 characters. This needs to be entered only when the watermark type is text.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Text content, which contains up to 100 characters. This field is required only when the watermark type is text.
+VOD does not support adding text watermarks on screenshots.
+     * @param TextContent Text content, which contains up to 100 characters. This field is required only when the watermark type is text.
+VOD does not support adding text watermarks on screenshots.
      */
     public void setTextContent(String TextContent) {
         this.TextContent = TextContent;
     }
 
     /**
-     * Get SVG content of up to 2,000,000 characters. This needs to be entered only when the watermark type is `SVG`.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SvgContent SVG content of up to 2,000,000 characters. This needs to be entered only when the watermark type is `SVG`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get SVG content, which contains up to 2,000,000 characters. This field is required only when the watermark type is SVG.
+VOD does not support adding SVG watermarks on screenshots. 
+     * @return SvgContent SVG content, which contains up to 2,000,000 characters. This field is required only when the watermark type is SVG.
+VOD does not support adding SVG watermarks on screenshots.
      */
     public String getSvgContent() {
         return this.SvgContent;
     }
 
     /**
-     * Set SVG content of up to 2,000,000 characters. This needs to be entered only when the watermark type is `SVG`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SvgContent SVG content of up to 2,000,000 characters. This needs to be entered only when the watermark type is `SVG`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set SVG content, which contains up to 2,000,000 characters. This field is required only when the watermark type is SVG.
+VOD does not support adding SVG watermarks on screenshots.
+     * @param SvgContent SVG content, which contains up to 2,000,000 characters. This field is required only when the watermark type is SVG.
+VOD does not support adding SVG watermarks on screenshots.
      */
     public void setSvgContent(String SvgContent) {
         this.SvgContent = SvgContent;

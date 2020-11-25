@@ -163,7 +163,7 @@ public class DBInstance extends AbstractModel{
     private Long RenewFlag;
 
     /**
-    * Instance high availability status. 1: dual-server high-availability, 2: single-server
+    * High-availability instance type. Valid values: 1 (dual-server high-availability), 2 (standalone), 3 (multi-AZ), 4 (multi-AZ cluster), 5 (cluster), 9 (used for Tencent’s business)
     */
     @SerializedName("Model")
     @Expose
@@ -599,16 +599,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Instance high availability status. 1: dual-server high-availability, 2: single-server 
-     * @return Model Instance high availability status. 1: dual-server high-availability, 2: single-server
+     * Get High-availability instance type. Valid values: 1 (dual-server high-availability), 2 (standalone), 3 (multi-AZ), 4 (multi-AZ cluster), 5 (cluster), 9 (used for Tencent’s business) 
+     * @return Model High-availability instance type. Valid values: 1 (dual-server high-availability), 2 (standalone), 3 (multi-AZ), 4 (multi-AZ cluster), 5 (cluster), 9 (used for Tencent’s business)
      */
     public Long getModel() {
         return this.Model;
     }
 
     /**
-     * Set Instance high availability status. 1: dual-server high-availability, 2: single-server
-     * @param Model Instance high availability status. 1: dual-server high-availability, 2: single-server
+     * Set High-availability instance type. Valid values: 1 (dual-server high-availability), 2 (standalone), 3 (multi-AZ), 4 (multi-AZ cluster), 5 (cluster), 9 (used for Tencent’s business)
+     * @param Model High-availability instance type. Valid values: 1 (dual-server high-availability), 2 (standalone), 3 (multi-AZ), 4 (multi-AZ cluster), 5 (cluster), 9 (used for Tencent’s business)
      */
     public void setModel(Long Model) {
         this.Model = Model;

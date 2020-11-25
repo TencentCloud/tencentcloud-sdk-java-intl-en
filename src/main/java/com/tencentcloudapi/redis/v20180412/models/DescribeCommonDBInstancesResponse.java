@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dbbrain.v20191016.models;
+package com.tencentcloudapi.redis.v20180412.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTopSpaceTablesResponse extends AbstractModel{
+public class DescribeCommonDBInstancesResponse extends AbstractModel{
 
     /**
-    * List of the returned space statistics of top tables.
+    * Instance quantity
     */
-    @SerializedName("TopSpaceTables")
+    @SerializedName("TotalCount")
     @Expose
-    private TableSpaceData [] TopSpaceTables;
+    private Long TotalCount;
 
     /**
-    * Timestamp (in seconds) identifying when the tablespace data is collected.
+    * Instance information
     */
-    @SerializedName("Timestamp")
+    @SerializedName("InstanceDetails")
     @Expose
-    private Long Timestamp;
+    private RedisCommonInstanceList [] InstanceDetails;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -44,35 +44,35 @@ public class DescribeTopSpaceTablesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get List of the returned space statistics of top tables. 
-     * @return TopSpaceTables List of the returned space statistics of top tables.
+     * Get Instance quantity 
+     * @return TotalCount Instance quantity
      */
-    public TableSpaceData [] getTopSpaceTables() {
-        return this.TopSpaceTables;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set List of the returned space statistics of top tables.
-     * @param TopSpaceTables List of the returned space statistics of top tables.
+     * Set Instance quantity
+     * @param TotalCount Instance quantity
      */
-    public void setTopSpaceTables(TableSpaceData [] TopSpaceTables) {
-        this.TopSpaceTables = TopSpaceTables;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Timestamp (in seconds) identifying when the tablespace data is collected. 
-     * @return Timestamp Timestamp (in seconds) identifying when the tablespace data is collected.
+     * Get Instance information 
+     * @return InstanceDetails Instance information
      */
-    public Long getTimestamp() {
-        return this.Timestamp;
+    public RedisCommonInstanceList [] getInstanceDetails() {
+        return this.InstanceDetails;
     }
 
     /**
-     * Set Timestamp (in seconds) identifying when the tablespace data is collected.
-     * @param Timestamp Timestamp (in seconds) identifying when the tablespace data is collected.
+     * Set Instance information
+     * @param InstanceDetails Instance information
      */
-    public void setTimestamp(Long Timestamp) {
-        this.Timestamp = Timestamp;
+    public void setInstanceDetails(RedisCommonInstanceList [] InstanceDetails) {
+        this.InstanceDetails = InstanceDetails;
     }
 
     /**
@@ -95,8 +95,8 @@ public class DescribeTopSpaceTablesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "TopSpaceTables.", this.TopSpaceTables);
-        this.setParamSimple(map, prefix + "Timestamp", this.Timestamp);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "InstanceDetails.", this.InstanceDetails);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

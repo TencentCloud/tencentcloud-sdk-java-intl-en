@@ -30,18 +30,25 @@ public class DescribeSlowLogTimeSeriesStatsRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Start time.
+    * Start time, such as "2019-09-10 12:13:14".
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time.
+    * End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
+
+    /**
+    * 
+    */
+    @SerializedName("Product")
+    @Expose
+    private String Product;
 
     /**
      * Get Instance ID. 
@@ -60,35 +67,51 @@ public class DescribeSlowLogTimeSeriesStatsRequest extends AbstractModel{
     }
 
     /**
-     * Get Start time. 
-     * @return StartTime Start time.
+     * Get Start time, such as "2019-09-10 12:13:14". 
+     * @return StartTime Start time, such as "2019-09-10 12:13:14".
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time.
-     * @param StartTime Start time.
+     * Set Start time, such as "2019-09-10 12:13:14".
+     * @param StartTime Start time, such as "2019-09-10 12:13:14".
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time. 
-     * @return EndTime End time.
+     * Get End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days. 
+     * @return EndTime End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time.
-     * @param EndTime End time.
+     * Set End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days.
+     * @param EndTime End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
+    }
+
+    /**
+     * Get  
+     * @return Product 
+     */
+    public String getProduct() {
+        return this.Product;
+    }
+
+    /**
+     * Set 
+     * @param Product 
+     */
+    public void setProduct(String Product) {
+        this.Product = Product;
     }
 
     /**
@@ -98,6 +121,7 @@ public class DescribeSlowLogTimeSeriesStatsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "Product", this.Product);
 
     }
 }

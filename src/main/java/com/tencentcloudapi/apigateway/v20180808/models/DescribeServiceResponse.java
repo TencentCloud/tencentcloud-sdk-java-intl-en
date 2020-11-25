@@ -169,7 +169,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long SetId;
 
     /**
-    * 
+    * Tags bound to a service.
+Note: this field may return null, indicating that no valid values found.
     */
     @SerializedName("Tags")
     @Expose
@@ -527,16 +528,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return Tags 
+     * Get Tags bound to a service.
+Note: this field may return null, indicating that no valid values found. 
+     * @return Tags Tags bound to a service.
+Note: this field may return null, indicating that no valid values found.
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 
-     * @param Tags 
+     * Set Tags bound to a service.
+Note: this field may return null, indicating that no valid values found.
+     * @param Tags Tags bound to a service.
+Note: this field may return null, indicating that no valid values found.
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

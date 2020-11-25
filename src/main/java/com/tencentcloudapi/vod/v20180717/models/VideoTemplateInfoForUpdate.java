@@ -34,7 +34,7 @@ Currently, a resolution within 640x480 must be specified for H.265. and the `av1
     private String Codec;
 
     /**
-    * Video frame rate in Hz. Value range: [0, 60].
+    * Video frame rate in Hz. Value range: [0,100].
 If the value is 0, the frame rate will be the same as that of the source video.
     */
     @SerializedName("Fps")
@@ -78,13 +78,22 @@ If the value is 0, the bitrate of the video will be the same as that of the sour
 
     /**
     * Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black.
+<li> stretch: stretch video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding;</li>
+<li>black: keep the image's aspect ratio unchanged and fill the uncovered area with black color.</li>
+<li>white: keep the image's aspect ratio unchanged and fill the uncovered area with white color.</li>
+<li>gauss: keep the image's aspect ratio unchanged and apply Gaussian blur to the uncovered area.</li>
     */
     @SerializedName("FillType")
     @Expose
     private String FillType;
+
+    /**
+    * Video Constant Rate Factor (CRF). Value range: 1-51. This parameter will be disabled if you enter 0.
+We don’t recommend specifying this parameter if you have no special requirements.
+    */
+    @SerializedName("Vcrf")
+    @Expose
+    private Long Vcrf;
 
     /**
      * Get Video stream encoder. Valid values:
@@ -119,9 +128,9 @@ Currently, a resolution within 640x480 must be specified for H.265. and the `av1
     }
 
     /**
-     * Get Video frame rate in Hz. Value range: [0, 60].
+     * Get Video frame rate in Hz. Value range: [0,100].
 If the value is 0, the frame rate will be the same as that of the source video. 
-     * @return Fps Video frame rate in Hz. Value range: [0, 60].
+     * @return Fps Video frame rate in Hz. Value range: [0,100].
 If the value is 0, the frame rate will be the same as that of the source video.
      */
     public Long getFps() {
@@ -129,9 +138,9 @@ If the value is 0, the frame rate will be the same as that of the source video.
     }
 
     /**
-     * Set Video frame rate in Hz. Value range: [0, 60].
+     * Set Video frame rate in Hz. Value range: [0,100].
 If the value is 0, the frame rate will be the same as that of the source video.
-     * @param Fps Video frame rate in Hz. Value range: [0, 60].
+     * @param Fps Video frame rate in Hz. Value range: [0,100].
 If the value is 0, the frame rate will be the same as that of the source video.
      */
     public void setFps(Long Fps) {
@@ -232,13 +241,15 @@ If the value is 0, the bitrate of the video will be the same as that of the sour
 
     /**
      * Get Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black. 
+<li> stretch: stretch video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding;</li>
+<li>black: keep the image's aspect ratio unchanged and fill the uncovered area with black color.</li>
+<li>white: keep the image's aspect ratio unchanged and fill the uncovered area with white color.</li>
+<li>gauss: keep the image's aspect ratio unchanged and apply Gaussian blur to the uncovered area.</li> 
      * @return FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black.
+<li> stretch: stretch video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding;</li>
+<li>black: keep the image's aspect ratio unchanged and fill the uncovered area with black color.</li>
+<li>white: keep the image's aspect ratio unchanged and fill the uncovered area with white color.</li>
+<li>gauss: keep the image's aspect ratio unchanged and apply Gaussian blur to the uncovered area.</li>
      */
     public String getFillType() {
         return this.FillType;
@@ -246,16 +257,38 @@ Default value: black.
 
     /**
      * Set Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black.
+<li> stretch: stretch video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding;</li>
+<li>black: keep the image's aspect ratio unchanged and fill the uncovered area with black color.</li>
+<li>white: keep the image's aspect ratio unchanged and fill the uncovered area with white color.</li>
+<li>gauss: keep the image's aspect ratio unchanged and apply Gaussian blur to the uncovered area.</li>
      * @param FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black.
+<li> stretch: stretch video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding;</li>
+<li>black: keep the image's aspect ratio unchanged and fill the uncovered area with black color.</li>
+<li>white: keep the image's aspect ratio unchanged and fill the uncovered area with white color.</li>
+<li>gauss: keep the image's aspect ratio unchanged and apply Gaussian blur to the uncovered area.</li>
      */
     public void setFillType(String FillType) {
         this.FillType = FillType;
+    }
+
+    /**
+     * Get Video Constant Rate Factor (CRF). Value range: 1-51. This parameter will be disabled if you enter 0.
+We don’t recommend specifying this parameter if you have no special requirements. 
+     * @return Vcrf Video Constant Rate Factor (CRF). Value range: 1-51. This parameter will be disabled if you enter 0.
+We don’t recommend specifying this parameter if you have no special requirements.
+     */
+    public Long getVcrf() {
+        return this.Vcrf;
+    }
+
+    /**
+     * Set Video Constant Rate Factor (CRF). Value range: 1-51. This parameter will be disabled if you enter 0.
+We don’t recommend specifying this parameter if you have no special requirements.
+     * @param Vcrf Video Constant Rate Factor (CRF). Value range: 1-51. This parameter will be disabled if you enter 0.
+We don’t recommend specifying this parameter if you have no special requirements.
+     */
+    public void setVcrf(Long Vcrf) {
+        this.Vcrf = Vcrf;
     }
 
     /**
@@ -269,6 +302,7 @@ Default value: black.
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
         this.setParamSimple(map, prefix + "FillType", this.FillType);
+        this.setParamSimple(map, prefix + "Vcrf", this.Vcrf);
 
     }
 }

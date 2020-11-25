@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vod.v20180717.models;
+package com.tencentcloudapi.dbbrain.v20191016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSubAppIdsRequest extends AbstractModel{
+public class SchemaItem extends AbstractModel{
 
     /**
-    * Tag information. You can query the list of subapplications with specified tags.
+    * Database name
     */
-    @SerializedName("Tags")
+    @SerializedName("Schema")
     @Expose
-    private ResourceTag [] Tags;
+    private String Schema;
 
     /**
-     * Get Tag information. You can query the list of subapplications with specified tags. 
-     * @return Tags Tag information. You can query the list of subapplications with specified tags.
+     * Get Database name 
+     * @return Schema Database name
      */
-    public ResourceTag [] getTags() {
-        return this.Tags;
+    public String getSchema() {
+        return this.Schema;
     }
 
     /**
-     * Set Tag information. You can query the list of subapplications with specified tags.
-     * @param Tags Tag information. You can query the list of subapplications with specified tags.
+     * Set Database name
+     * @param Schema Database name
      */
-    public void setTags(ResourceTag [] Tags) {
-        this.Tags = Tags;
+    public void setSchema(String Schema) {
+        this.Schema = Schema;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "Schema", this.Schema);
 
     }
 }

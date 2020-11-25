@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vod.v20180717.models;
+package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSubAppIdsRequest extends AbstractModel{
+public class RecycleDBInstanceRequest extends AbstractModel{
 
     /**
-    * Tag information. You can query the list of subapplications with specified tags.
+    * Instance ID
     */
-    @SerializedName("Tags")
+    @SerializedName("InstanceId")
     @Expose
-    private ResourceTag [] Tags;
+    private String InstanceId;
 
     /**
-     * Get Tag information. You can query the list of subapplications with specified tags. 
-     * @return Tags Tag information. You can query the list of subapplications with specified tags.
+     * Get Instance ID 
+     * @return InstanceId Instance ID
      */
-    public ResourceTag [] getTags() {
-        return this.Tags;
+    public String getInstanceId() {
+        return this.InstanceId;
     }
 
     /**
-     * Set Tag information. You can query the list of subapplications with specified tags.
-     * @param Tags Tag information. You can query the list of subapplications with specified tags.
+     * Set Instance ID
+     * @param InstanceId Instance ID
      */
-    public void setTags(ResourceTag [] Tags) {
-        this.Tags = Tags;
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

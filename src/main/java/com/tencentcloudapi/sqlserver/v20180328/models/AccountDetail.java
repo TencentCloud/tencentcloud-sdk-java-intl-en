@@ -79,6 +79,13 @@ public class AccountDetail extends AbstractModel{
     private DBPrivilege [] Dbs;
 
     /**
+    * Whether it is an admin account
+    */
+    @SerializedName("IsAdmin")
+    @Expose
+    private Boolean IsAdmin;
+
+    /**
      * Get Account name 
      * @return Name Account name
      */
@@ -207,6 +214,22 @@ public class AccountDetail extends AbstractModel{
     }
 
     /**
+     * Get Whether it is an admin account 
+     * @return IsAdmin Whether it is an admin account
+     */
+    public Boolean getIsAdmin() {
+        return this.IsAdmin;
+    }
+
+    /**
+     * Set Whether it is an admin account
+     * @param IsAdmin Whether it is an admin account
+     */
+    public void setIsAdmin(Boolean IsAdmin) {
+        this.IsAdmin = IsAdmin;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +241,7 @@ public class AccountDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "PassTime", this.PassTime);
         this.setParamSimple(map, prefix + "InternalStatus", this.InternalStatus);
         this.setParamArrayObj(map, prefix + "Dbs.", this.Dbs);
+        this.setParamSimple(map, prefix + "IsAdmin", this.IsAdmin);
 
     }
 }

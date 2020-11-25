@@ -44,18 +44,25 @@ public class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel{
     private String SortBy;
 
     /**
-    * Start date. It can be as early as 6 days before the current date, and defaults to 6 days before the end date.
+    * Start date. It can be as early as 29 days before the current date, and defaults to 6 days before the end date.
     */
     @SerializedName("StartDate")
     @Expose
     private String StartDate;
 
     /**
-    * End date. It can be as early as 6 days before the current date, and defaults to the current date.
+    * End date. It can be as early as 29 days before the current date, and defaults to the current date.
     */
     @SerializedName("EndDate")
     @Expose
     private String EndDate;
+
+    /**
+    * 
+    */
+    @SerializedName("Product")
+    @Expose
+    private String Product;
 
     /**
      * Get Instance ID. 
@@ -106,35 +113,51 @@ public class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel{
     }
 
     /**
-     * Get Start date. It can be as early as 6 days before the current date, and defaults to 6 days before the end date. 
-     * @return StartDate Start date. It can be as early as 6 days before the current date, and defaults to 6 days before the end date.
+     * Get Start date. It can be as early as 29 days before the current date, and defaults to 6 days before the end date. 
+     * @return StartDate Start date. It can be as early as 29 days before the current date, and defaults to 6 days before the end date.
      */
     public String getStartDate() {
         return this.StartDate;
     }
 
     /**
-     * Set Start date. It can be as early as 6 days before the current date, and defaults to 6 days before the end date.
-     * @param StartDate Start date. It can be as early as 6 days before the current date, and defaults to 6 days before the end date.
+     * Set Start date. It can be as early as 29 days before the current date, and defaults to 6 days before the end date.
+     * @param StartDate Start date. It can be as early as 29 days before the current date, and defaults to 6 days before the end date.
      */
     public void setStartDate(String StartDate) {
         this.StartDate = StartDate;
     }
 
     /**
-     * Get End date. It can be as early as 6 days before the current date, and defaults to the current date. 
-     * @return EndDate End date. It can be as early as 6 days before the current date, and defaults to the current date.
+     * Get End date. It can be as early as 29 days before the current date, and defaults to the current date. 
+     * @return EndDate End date. It can be as early as 29 days before the current date, and defaults to the current date.
      */
     public String getEndDate() {
         return this.EndDate;
     }
 
     /**
-     * Set End date. It can be as early as 6 days before the current date, and defaults to the current date.
-     * @param EndDate End date. It can be as early as 6 days before the current date, and defaults to the current date.
+     * Set End date. It can be as early as 29 days before the current date, and defaults to the current date.
+     * @param EndDate End date. It can be as early as 29 days before the current date, and defaults to the current date.
      */
     public void setEndDate(String EndDate) {
         this.EndDate = EndDate;
+    }
+
+    /**
+     * Get  
+     * @return Product 
+     */
+    public String getProduct() {
+        return this.Product;
+    }
+
+    /**
+     * Set 
+     * @param Product 
+     */
+    public void setProduct(String Product) {
+        this.Product = Product;
     }
 
     /**
@@ -146,6 +169,7 @@ public class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SortBy", this.SortBy);
         this.setParamSimple(map, prefix + "StartDate", this.StartDate);
         this.setParamSimple(map, prefix + "EndDate", this.EndDate);
+        this.setParamSimple(map, prefix + "Product", this.Product);
 
     }
 }

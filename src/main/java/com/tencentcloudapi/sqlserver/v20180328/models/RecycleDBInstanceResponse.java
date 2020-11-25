@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dbbrain.v20191016.models;
+package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTopSpaceTablesResponse extends AbstractModel{
+public class RecycleDBInstanceResponse extends AbstractModel{
 
     /**
-    * List of the returned space statistics of top tables.
+    * Task ID
     */
-    @SerializedName("TopSpaceTables")
+    @SerializedName("FlowId")
     @Expose
-    private TableSpaceData [] TopSpaceTables;
-
-    /**
-    * Timestamp (in seconds) identifying when the tablespace data is collected.
-    */
-    @SerializedName("Timestamp")
-    @Expose
-    private Long Timestamp;
+    private Long FlowId;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -44,35 +37,19 @@ public class DescribeTopSpaceTablesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get List of the returned space statistics of top tables. 
-     * @return TopSpaceTables List of the returned space statistics of top tables.
+     * Get Task ID 
+     * @return FlowId Task ID
      */
-    public TableSpaceData [] getTopSpaceTables() {
-        return this.TopSpaceTables;
+    public Long getFlowId() {
+        return this.FlowId;
     }
 
     /**
-     * Set List of the returned space statistics of top tables.
-     * @param TopSpaceTables List of the returned space statistics of top tables.
+     * Set Task ID
+     * @param FlowId Task ID
      */
-    public void setTopSpaceTables(TableSpaceData [] TopSpaceTables) {
-        this.TopSpaceTables = TopSpaceTables;
-    }
-
-    /**
-     * Get Timestamp (in seconds) identifying when the tablespace data is collected. 
-     * @return Timestamp Timestamp (in seconds) identifying when the tablespace data is collected.
-     */
-    public Long getTimestamp() {
-        return this.Timestamp;
-    }
-
-    /**
-     * Set Timestamp (in seconds) identifying when the tablespace data is collected.
-     * @param Timestamp Timestamp (in seconds) identifying when the tablespace data is collected.
-     */
-    public void setTimestamp(Long Timestamp) {
-        this.Timestamp = Timestamp;
+    public void setFlowId(Long FlowId) {
+        this.FlowId = FlowId;
     }
 
     /**
@@ -95,8 +72,7 @@ public class DescribeTopSpaceTablesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "TopSpaceTables.", this.TopSpaceTables);
-        this.setParamSimple(map, prefix + "Timestamp", this.Timestamp);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

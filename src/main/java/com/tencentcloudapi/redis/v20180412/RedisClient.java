@@ -199,6 +199,26 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query information of the Redis instance list.
+     * @param req DescribeCommonDBInstancesRequest
+     * @return DescribeCommonDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCommonDBInstancesResponse DescribeCommonDBInstances(DescribeCommonDBInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCommonDBInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCommonDBInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCommonDBInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the security group details of an instance.
      * @param req DescribeDBSecurityGroupsRequest
      * @return DescribeDBSecurityGroupsResponse

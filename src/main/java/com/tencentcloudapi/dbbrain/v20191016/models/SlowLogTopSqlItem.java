@@ -128,7 +128,7 @@ public class SlowLogTopSqlItem extends AbstractModel{
     private String SqlText;
 
     /**
-    * Schema
+    * Database name
     */
     @SerializedName("Schema")
     @Expose
@@ -403,16 +403,16 @@ public class SlowLogTopSqlItem extends AbstractModel{
     }
 
     /**
-     * Get Schema 
-     * @return Schema Schema
+     * Get Database name 
+     * @return Schema Database name
      */
     public String getSchema() {
         return this.Schema;
     }
 
     /**
-     * Set Schema
-     * @param Schema Schema
+     * Set Database name
+     * @param Schema Database name
      */
     public void setSchema(String Schema) {
         this.Schema = Schema;

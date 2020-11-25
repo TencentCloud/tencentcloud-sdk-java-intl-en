@@ -30,14 +30,14 @@ public class DescribeSlowLogTopSqlsRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Start time.
+    * Start time, such as "2019-09-10 12:13:14".
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time.
+    * End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days.
     */
     @SerializedName("EndTime")
     @Expose
@@ -72,6 +72,20 @@ public class DescribeSlowLogTopSqlsRequest extends AbstractModel{
     private Long Offset;
 
     /**
+    * Database name array.
+    */
+    @SerializedName("SchemaList")
+    @Expose
+    private SchemaItem [] SchemaList;
+
+    /**
+    * 
+    */
+    @SerializedName("Product")
+    @Expose
+    private String Product;
+
+    /**
      * Get Instance ID. 
      * @return InstanceId Instance ID.
      */
@@ -88,32 +102,32 @@ public class DescribeSlowLogTopSqlsRequest extends AbstractModel{
     }
 
     /**
-     * Get Start time. 
-     * @return StartTime Start time.
+     * Get Start time, such as "2019-09-10 12:13:14". 
+     * @return StartTime Start time, such as "2019-09-10 12:13:14".
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time.
-     * @param StartTime Start time.
+     * Set Start time, such as "2019-09-10 12:13:14".
+     * @param StartTime Start time, such as "2019-09-10 12:13:14".
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time. 
-     * @return EndTime End time.
+     * Get End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days. 
+     * @return EndTime End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time.
-     * @param EndTime End time.
+     * Set End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days.
+     * @param EndTime End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -184,6 +198,38 @@ public class DescribeSlowLogTopSqlsRequest extends AbstractModel{
     }
 
     /**
+     * Get Database name array. 
+     * @return SchemaList Database name array.
+     */
+    public SchemaItem [] getSchemaList() {
+        return this.SchemaList;
+    }
+
+    /**
+     * Set Database name array.
+     * @param SchemaList Database name array.
+     */
+    public void setSchemaList(SchemaItem [] SchemaList) {
+        this.SchemaList = SchemaList;
+    }
+
+    /**
+     * Get  
+     * @return Product 
+     */
+    public String getProduct() {
+        return this.Product;
+    }
+
+    /**
+     * Set 
+     * @param Product 
+     */
+    public void setProduct(String Product) {
+        this.Product = Product;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +240,8 @@ public class DescribeSlowLogTopSqlsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamArrayObj(map, prefix + "SchemaList.", this.SchemaList);
+        this.setParamSimple(map, prefix + "Product", this.Product);
 
     }
 }

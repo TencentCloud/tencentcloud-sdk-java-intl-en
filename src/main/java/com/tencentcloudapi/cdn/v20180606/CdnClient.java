@@ -59,7 +59,7 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a log topic. Note: up to 10 log topics can be created under one logset.
+     *This API is used to create a log topic. Up to 10 log topics can be created under one logset.
      * @param req CreateClsLogTopicRequest
      * @return CreateClsLogTopicResponse
      * @throws TencentCloudSDKException

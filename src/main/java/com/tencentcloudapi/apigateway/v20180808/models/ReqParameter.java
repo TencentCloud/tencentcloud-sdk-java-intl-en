@@ -30,7 +30,7 @@ public class ReqParameter extends AbstractModel{
     private String Name;
 
     /**
-    * API frontend parameter position, such as `head`. Valid values: head, query, path.
+    * Position of the API frontend parameter, such as the header. Supported values: `header`, `query`, and `path`.
     */
     @SerializedName("Position")
     @Expose
@@ -81,16 +81,16 @@ public class ReqParameter extends AbstractModel{
     }
 
     /**
-     * Get API frontend parameter position, such as `head`. Valid values: head, query, path. 
-     * @return Position API frontend parameter position, such as `head`. Valid values: head, query, path.
+     * Get Position of the API frontend parameter, such as the header. Supported values: `header`, `query`, and `path`. 
+     * @return Position Position of the API frontend parameter, such as the header. Supported values: `header`, `query`, and `path`.
      */
     public String getPosition() {
         return this.Position;
     }
 
     /**
-     * Set API frontend parameter position, such as `head`. Valid values: head, query, path.
-     * @param Position API frontend parameter position, such as `head`. Valid values: head, query, path.
+     * Set Position of the API frontend parameter, such as the header. Supported values: `header`, `query`, and `path`.
+     * @param Position Position of the API frontend parameter, such as the header. Supported values: `header`, `query`, and `path`.
      */
     public void setPosition(String Position) {
         this.Position = Position;

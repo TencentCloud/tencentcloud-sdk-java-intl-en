@@ -167,6 +167,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Readonly;
 
     /**
+    * Domain name tag.
+Note: this field may return `null`, indicating that no valid value is obtained.
+    */
+    @SerializedName("Tag")
+    @Expose
+    private Tag [] Tag;
+
+    /**
+    * 
+    */
+    @SerializedName("WebSocket")
+    @Expose
+    private WebSocket WebSocket;
+
+    /**
      * Get Domain name ID. 
      * @return ResourceId Domain name ID.
      */
@@ -515,6 +530,42 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Domain name tag.
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return Tag Domain name tag.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public Tag [] getTag() {
+        return this.Tag;
+    }
+
+    /**
+     * Set Domain name tag.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param Tag Domain name tag.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public void setTag(Tag [] Tag) {
+        this.Tag = Tag;
+    }
+
+    /**
+     * Get  
+     * @return WebSocket 
+     */
+    public WebSocket getWebSocket() {
+        return this.WebSocket;
+    }
+
+    /**
+     * Set 
+     * @param WebSocket 
+     */
+    public void setWebSocket(WebSocket WebSocket) {
+        this.WebSocket = WebSocket;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -537,6 +588,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "ForceRedirect.", this.ForceRedirect);
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamSimple(map, prefix + "Readonly", this.Readonly);
+        this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
+        this.setParamObj(map, prefix + "WebSocket.", this.WebSocket);
 
     }
 }

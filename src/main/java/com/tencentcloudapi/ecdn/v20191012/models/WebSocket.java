@@ -13,43 +13,67 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vod.v20180717.models;
+package com.tencentcloudapi.ecdn.v20191012.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSubAppIdsRequest extends AbstractModel{
+public class WebSocket extends AbstractModel{
 
     /**
-    * Tag information. You can query the list of subapplications with specified tags.
+    * 
     */
-    @SerializedName("Tags")
+    @SerializedName("Switch")
     @Expose
-    private ResourceTag [] Tags;
+    private String Switch;
 
     /**
-     * Get Tag information. You can query the list of subapplications with specified tags. 
-     * @return Tags Tag information. You can query the list of subapplications with specified tags.
+    * 
+    */
+    @SerializedName("Timeout")
+    @Expose
+    private Long Timeout;
+
+    /**
+     * Get  
+     * @return Switch 
      */
-    public ResourceTag [] getTags() {
-        return this.Tags;
+    public String getSwitch() {
+        return this.Switch;
     }
 
     /**
-     * Set Tag information. You can query the list of subapplications with specified tags.
-     * @param Tags Tag information. You can query the list of subapplications with specified tags.
+     * Set 
+     * @param Switch 
      */
-    public void setTags(ResourceTag [] Tags) {
-        this.Tags = Tags;
+    public void setSwitch(String Switch) {
+        this.Switch = Switch;
+    }
+
+    /**
+     * Get  
+     * @return Timeout 
+     */
+    public Long getTimeout() {
+        return this.Timeout;
+    }
+
+    /**
+     * Set 
+     * @param Timeout 
+     */
+    public void setTimeout(Long Timeout) {
+        this.Timeout = Timeout;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "Switch", this.Switch);
+        this.setParamSimple(map, prefix + "Timeout", this.Timeout);
 
     }
 }

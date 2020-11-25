@@ -37,8 +37,13 @@ public class DescribeMediaProcessUsageDataRequest extends AbstractModel{
     private String EndTime;
 
     /**
-    * Type of video processing task to be queried. Valid value: Transcode. Default value: Transcode.
-<li>Transcode: transcoding</li>
+    * This API is used to query video processing task types. The following types are supported now:
+<li> Transcoding: Basic transcoding</li>
+<li> Transcoding-TESHD: TESHD transcoding</li>
+<li> Editing: Video editing</li>
+<li> AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
+<li> ContentAudit: content audit</li>
+<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing (not recommended)</li>
     */
     @SerializedName("Type")
     @Expose
@@ -84,20 +89,40 @@ public class DescribeMediaProcessUsageDataRequest extends AbstractModel{
     }
 
     /**
-     * Get Type of video processing task to be queried. Valid value: Transcode. Default value: Transcode.
-<li>Transcode: transcoding</li> 
-     * @return Type Type of video processing task to be queried. Valid value: Transcode. Default value: Transcode.
-<li>Transcode: transcoding</li>
+     * Get This API is used to query video processing task types. The following types are supported now:
+<li> Transcoding: Basic transcoding</li>
+<li> Transcoding-TESHD: TESHD transcoding</li>
+<li> Editing: Video editing</li>
+<li> AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
+<li> ContentAudit: content audit</li>
+<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing (not recommended)</li> 
+     * @return Type This API is used to query video processing task types. The following types are supported now:
+<li> Transcoding: Basic transcoding</li>
+<li> Transcoding-TESHD: TESHD transcoding</li>
+<li> Editing: Video editing</li>
+<li> AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
+<li> ContentAudit: content audit</li>
+<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing (not recommended)</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Type of video processing task to be queried. Valid value: Transcode. Default value: Transcode.
-<li>Transcode: transcoding</li>
-     * @param Type Type of video processing task to be queried. Valid value: Transcode. Default value: Transcode.
-<li>Transcode: transcoding</li>
+     * Set This API is used to query video processing task types. The following types are supported now:
+<li> Transcoding: Basic transcoding</li>
+<li> Transcoding-TESHD: TESHD transcoding</li>
+<li> Editing: Video editing</li>
+<li> AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
+<li> ContentAudit: content audit</li>
+<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing (not recommended)</li>
+     * @param Type This API is used to query video processing task types. The following types are supported now:
+<li> Transcoding: Basic transcoding</li>
+<li> Transcoding-TESHD: TESHD transcoding</li>
+<li> Editing: Video editing</li>
+<li> AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
+<li> ContentAudit: content audit</li>
+<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing (not recommended)</li>
      */
     public void setType(String Type) {
         this.Type = Type;

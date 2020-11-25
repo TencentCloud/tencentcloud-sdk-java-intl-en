@@ -100,6 +100,20 @@ public class AddEcdnDomainRequest extends AbstractModel{
     private ForceRedirect ForceRedirect;
 
     /**
+    * Tag bound to a domain name.
+    */
+    @SerializedName("Tag")
+    @Expose
+    private Tag [] Tag;
+
+    /**
+    * 
+    */
+    @SerializedName("WebSocket")
+    @Expose
+    private WebSocket WebSocket;
+
+    /**
      * Get Domain name. 
      * @return Domain Domain name.
      */
@@ -276,6 +290,38 @@ public class AddEcdnDomainRequest extends AbstractModel{
     }
 
     /**
+     * Get Tag bound to a domain name. 
+     * @return Tag Tag bound to a domain name.
+     */
+    public Tag [] getTag() {
+        return this.Tag;
+    }
+
+    /**
+     * Set Tag bound to a domain name.
+     * @param Tag Tag bound to a domain name.
+     */
+    public void setTag(Tag [] Tag) {
+        this.Tag = Tag;
+    }
+
+    /**
+     * Get  
+     * @return WebSocket 
+     */
+    public WebSocket getWebSocket() {
+        return this.WebSocket;
+    }
+
+    /**
+     * Set 
+     * @param WebSocket 
+     */
+    public void setWebSocket(WebSocket WebSocket) {
+        this.WebSocket = WebSocket;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -290,6 +336,8 @@ public class AddEcdnDomainRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Cache.", this.Cache);
         this.setParamObj(map, prefix + "Https.", this.Https);
         this.setParamObj(map, prefix + "ForceRedirect.", this.ForceRedirect);
+        this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
+        this.setParamObj(map, prefix + "WebSocket.", this.WebSocket);
 
     }
 }

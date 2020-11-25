@@ -23,17 +23,20 @@ import java.util.HashMap;
 public class TaskStatData extends AbstractModel{
 
     /**
-    * Task type
-<li>Transcode: transcoding</li>
-<li>Snapshot: screencapturing</li>
+    * Task type.
+<li> Transcoding: basic transcoding</li>
+<li> Transcoding-TESHD: TESHD transcoding</li>
+<li> Editing: Video editing</li>
+<li> AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
+<li> ContentAudit: content audit</li>
+<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing (not recommended)</li>
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * Task statistics overview.
-<li>Transcode: usage in seconds</li>
+    * Task statistics overview (usage unit: second).
     */
     @SerializedName("Summary")
     @Expose
@@ -81,44 +84,56 @@ Transcoding specification:
     private SpecificationDataItem [] Details;
 
     /**
-     * Get Task type
-<li>Transcode: transcoding</li>
-<li>Snapshot: screencapturing</li> 
-     * @return TaskType Task type
-<li>Transcode: transcoding</li>
-<li>Snapshot: screencapturing</li>
+     * Get Task type.
+<li> Transcoding: basic transcoding</li>
+<li> Transcoding-TESHD: TESHD transcoding</li>
+<li> Editing: Video editing</li>
+<li> AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
+<li> ContentAudit: content audit</li>
+<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing (not recommended)</li> 
+     * @return TaskType Task type.
+<li> Transcoding: basic transcoding</li>
+<li> Transcoding-TESHD: TESHD transcoding</li>
+<li> Editing: Video editing</li>
+<li> AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
+<li> ContentAudit: content audit</li>
+<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing (not recommended)</li>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set Task type
-<li>Transcode: transcoding</li>
-<li>Snapshot: screencapturing</li>
-     * @param TaskType Task type
-<li>Transcode: transcoding</li>
-<li>Snapshot: screencapturing</li>
+     * Set Task type.
+<li> Transcoding: basic transcoding</li>
+<li> Transcoding-TESHD: TESHD transcoding</li>
+<li> Editing: Video editing</li>
+<li> AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
+<li> ContentAudit: content audit</li>
+<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing (not recommended)</li>
+     * @param TaskType Task type.
+<li> Transcoding: basic transcoding</li>
+<li> Transcoding-TESHD: TESHD transcoding</li>
+<li> Editing: Video editing</li>
+<li> AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
+<li> ContentAudit: content audit</li>
+<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing (not recommended)</li>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get Task statistics overview.
-<li>Transcode: usage in seconds</li> 
-     * @return Summary Task statistics overview.
-<li>Transcode: usage in seconds</li>
+     * Get Task statistics overview (usage unit: second). 
+     * @return Summary Task statistics overview (usage unit: second).
      */
     public TaskStatDataItem [] getSummary() {
         return this.Summary;
     }
 
     /**
-     * Set Task statistics overview.
-<li>Transcode: usage in seconds</li>
-     * @param Summary Task statistics overview.
-<li>Transcode: usage in seconds</li>
+     * Set Task statistics overview (usage unit: second).
+     * @param Summary Task statistics overview (usage unit: second).
      */
     public void setSummary(TaskStatDataItem [] Summary) {
         this.Summary = Summary;

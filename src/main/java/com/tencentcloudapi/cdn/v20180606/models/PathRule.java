@@ -31,7 +31,7 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     private Boolean Regex;
 
     /**
-    * URL path
+    * The matched URL path
 Note: this field may return `null`, indicating that no valid value is obtained.
     */
     @SerializedName("Path")
@@ -39,7 +39,7 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     private String Path;
 
     /**
-    * Origin-pull server when the path matches.
+    * Origin-pull server when the path matches. COS source with private read/write is not supported.
 Note: this field may return `null`, indicating that no valid value is obtained.
     */
     @SerializedName("Origin")
@@ -99,9 +99,9 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     }
 
     /**
-     * Get URL path
+     * Get The matched URL path
 Note: this field may return `null`, indicating that no valid value is obtained. 
-     * @return Path URL path
+     * @return Path The matched URL path
 Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public String getPath() {
@@ -109,9 +109,9 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     }
 
     /**
-     * Set URL path
+     * Set The matched URL path
 Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param Path URL path
+     * @param Path The matched URL path
 Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public void setPath(String Path) {
@@ -119,9 +119,9 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     }
 
     /**
-     * Get Origin-pull server when the path matches.
+     * Get Origin-pull server when the path matches. COS source with private read/write is not supported.
 Note: this field may return `null`, indicating that no valid value is obtained. 
-     * @return Origin Origin-pull server when the path matches.
+     * @return Origin Origin-pull server when the path matches. COS source with private read/write is not supported.
 Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public String getOrigin() {
@@ -129,9 +129,9 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     }
 
     /**
-     * Set Origin-pull server when the path matches.
+     * Set Origin-pull server when the path matches. COS source with private read/write is not supported.
 Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param Origin Origin-pull server when the path matches.
+     * @param Origin Origin-pull server when the path matches. COS source with private read/write is not supported.
 Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public void setOrigin(String Origin) {
