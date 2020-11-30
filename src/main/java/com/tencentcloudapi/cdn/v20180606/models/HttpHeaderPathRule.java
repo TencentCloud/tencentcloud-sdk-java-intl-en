@@ -23,11 +23,10 @@ import java.util.HashMap;
 public class HttpHeaderPathRule extends AbstractModel{
 
     /**
-    * HTTP header setting method
-add: add header. If a header exists, then there will be a duplicated header.
-set: only supports origin-pull header configuration. If a header exists, it will be overwritten. If one does not exist, then the header will be added.
-del: delete header
-Note: this field may return null, indicating that no valid values can be obtained.
+    * HTTP header setting methods
+`add`: add header. If a header already exists, then there will be a duplicated header.
+`del`: delete header.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("HeaderMode")
     @Expose
@@ -76,32 +75,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String [] RulePaths;
 
     /**
-     * Get HTTP header setting method
-add: add header. If a header exists, then there will be a duplicated header.
-set: only supports origin-pull header configuration. If a header exists, it will be overwritten. If one does not exist, then the header will be added.
-del: delete header
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return HeaderMode HTTP header setting method
-add: add header. If a header exists, then there will be a duplicated header.
-set: only supports origin-pull header configuration. If a header exists, it will be overwritten. If one does not exist, then the header will be added.
-del: delete header
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get HTTP header setting methods
+`add`: add header. If a header already exists, then there will be a duplicated header.
+`del`: delete header.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return HeaderMode HTTP header setting methods
+`add`: add header. If a header already exists, then there will be a duplicated header.
+`del`: delete header.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getHeaderMode() {
         return this.HeaderMode;
     }
 
     /**
-     * Set HTTP header setting method
-add: add header. If a header exists, then there will be a duplicated header.
-set: only supports origin-pull header configuration. If a header exists, it will be overwritten. If one does not exist, then the header will be added.
-del: delete header
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param HeaderMode HTTP header setting method
-add: add header. If a header exists, then there will be a duplicated header.
-set: only supports origin-pull header configuration. If a header exists, it will be overwritten. If one does not exist, then the header will be added.
-del: delete header
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set HTTP header setting methods
+`add`: add header. If a header already exists, then there will be a duplicated header.
+`del`: delete header.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param HeaderMode HTTP header setting methods
+`add`: add header. If a header already exists, then there will be a duplicated header.
+`del`: delete header.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setHeaderMode(String HeaderMode) {
         this.HeaderMode = HeaderMode;

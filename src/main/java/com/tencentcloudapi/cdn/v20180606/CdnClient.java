@@ -736,8 +736,7 @@ By default, a maximum of 10,000 URLs can be purged per day for acceleration regi
 
     /**
      *This API is used to cache specified URL resources to CDN nodes. You can specify acceleration regions for the prefetch.
-By default, a maximum of 1,000 URLs can be prefetched per day either within or outside Mainland China, and up to 20 tasks can be submitted at a time.
-This API is in beta test and not fully available yet. Please stay tuned.
+By default, a maximum of 1000 URLs can be prefetched per day either within or outside Chinese mainland, and up to 20 tasks can be submitted at a time.
      * @param req PushUrlsCacheRequest
      * @return PushUrlsCacheResponse
      * @throws TencentCloudSDKException

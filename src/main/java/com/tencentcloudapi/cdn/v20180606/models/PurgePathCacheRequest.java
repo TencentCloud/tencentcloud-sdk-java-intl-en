@@ -39,6 +39,13 @@ public class PurgePathCacheRequest extends AbstractModel{
     private String FlushType;
 
     /**
+    * Whether to encode Chinese characters before purge.
+    */
+    @SerializedName("UrlEncode")
+    @Expose
+    private Boolean UrlEncode;
+
+    /**
      * Get List of directories. The protocol header such as "http://" or "https://" needs to be included. 
      * @return Paths List of directories. The protocol header such as "http://" or "https://" needs to be included.
      */
@@ -79,11 +86,28 @@ public class PurgePathCacheRequest extends AbstractModel{
     }
 
     /**
+     * Get Whether to encode Chinese characters before purge. 
+     * @return UrlEncode Whether to encode Chinese characters before purge.
+     */
+    public Boolean getUrlEncode() {
+        return this.UrlEncode;
+    }
+
+    /**
+     * Set Whether to encode Chinese characters before purge.
+     * @param UrlEncode Whether to encode Chinese characters before purge.
+     */
+    public void setUrlEncode(Boolean UrlEncode) {
+        this.UrlEncode = UrlEncode;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Paths.", this.Paths);
         this.setParamSimple(map, prefix + "FlushType", this.FlushType);
+        this.setParamSimple(map, prefix + "UrlEncode", this.UrlEncode);
 
     }
 }

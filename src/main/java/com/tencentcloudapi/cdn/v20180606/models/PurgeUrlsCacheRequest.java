@@ -41,6 +41,13 @@ The specified purging region should match the domain name acceleration region
     private String Area;
 
     /**
+    * Whether to encode Chinese characters before purge.
+    */
+    @SerializedName("UrlEncode")
+    @Expose
+    private Boolean UrlEncode;
+
+    /**
      * Get List of URLs. The protocol header such as "http://" or "https://" needs to be included. 
      * @return Urls List of URLs. The protocol header such as "http://" or "https://" needs to be included.
      */
@@ -89,11 +96,28 @@ The specified purging region should match the domain name acceleration region
     }
 
     /**
+     * Get Whether to encode Chinese characters before purge. 
+     * @return UrlEncode Whether to encode Chinese characters before purge.
+     */
+    public Boolean getUrlEncode() {
+        return this.UrlEncode;
+    }
+
+    /**
+     * Set Whether to encode Chinese characters before purge.
+     * @param UrlEncode Whether to encode Chinese characters before purge.
+     */
+    public void setUrlEncode(Boolean UrlEncode) {
+        this.UrlEncode = UrlEncode;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Urls.", this.Urls);
         this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamSimple(map, prefix + "UrlEncode", this.UrlEncode);
 
     }
 }
