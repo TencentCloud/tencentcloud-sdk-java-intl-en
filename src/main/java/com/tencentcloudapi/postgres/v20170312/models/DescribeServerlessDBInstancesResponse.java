@@ -13,36 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dcdb.v20180411.models;
+package com.tencentcloudapi.postgres.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDCDBShardsResponse extends AbstractModel{
+public class DescribeServerlessDBInstancesResponse extends AbstractModel{
 
     /**
-    * Number of eligible shards
+    * The number of query results
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Shard information list
+    * Query results
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
-    @SerializedName("Shards")
+    @SerializedName("DBInstanceSet")
     @Expose
-    private DCDBShardInfo [] Shards;
-
-    /**
-    * DCN type. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
-Note: this field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("DcnFlag")
-    @Expose
-    private Long DcnFlag;
+    private ServerlessDBInstance [] DBInstanceSet;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -52,55 +45,39 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Number of eligible shards 
-     * @return TotalCount Number of eligible shards
+     * Get The number of query results 
+     * @return TotalCount The number of query results
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of eligible shards
-     * @param TotalCount Number of eligible shards
+     * Set The number of query results
+     * @param TotalCount The number of query results
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Shard information list 
-     * @return Shards Shard information list
+     * Get Query results
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return DBInstanceSet Query results
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
-    public DCDBShardInfo [] getShards() {
-        return this.Shards;
+    public ServerlessDBInstance [] getDBInstanceSet() {
+        return this.DBInstanceSet;
     }
 
     /**
-     * Set Shard information list
-     * @param Shards Shard information list
+     * Set Query results
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param DBInstanceSet Query results
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
-    public void setShards(DCDBShardInfo [] Shards) {
-        this.Shards = Shards;
-    }
-
-    /**
-     * Get DCN type. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DcnFlag DCN type. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public Long getDcnFlag() {
-        return this.DcnFlag;
-    }
-
-    /**
-     * Set DCN type. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DcnFlag DCN type. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public void setDcnFlag(Long DcnFlag) {
-        this.DcnFlag = DcnFlag;
+    public void setDBInstanceSet(ServerlessDBInstance [] DBInstanceSet) {
+        this.DBInstanceSet = DBInstanceSet;
     }
 
     /**
@@ -124,8 +101,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "Shards.", this.Shards);
-        this.setParamSimple(map, prefix + "DcnFlag", this.DcnFlag);
+        this.setParamArrayObj(map, prefix + "DBInstanceSet.", this.DBInstanceSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

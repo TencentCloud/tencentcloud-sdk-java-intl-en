@@ -79,6 +79,46 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a PostgreSQL for Serverless instance. If the creation succeeds, the instance ID will be returned.
+     * @param req CreateServerlessDBInstanceRequest
+     * @return CreateServerlessDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateServerlessDBInstanceResponse CreateServerlessDBInstance(CreateServerlessDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateServerlessDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateServerlessDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateServerlessDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a PostgreSQL for Serverless instance.
+     * @param req DeleteServerlessDBInstanceRequest
+     * @return DeleteServerlessDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteServerlessDBInstanceResponse DeleteServerlessDBInstance(DeleteServerlessDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteServerlessDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteServerlessDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteServerlessDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the instance user list.
      * @param req DescribeAccountsRequest
      * @return DescribeAccountsResponse
@@ -291,6 +331,26 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeRegionsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeRegions");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the details of one or more PostgreSQL for Serverless instances.
+     * @param req DescribeServerlessDBInstancesRequest
+     * @return DescribeServerlessDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeServerlessDBInstancesResponse DescribeServerlessDBInstances(DescribeServerlessDBInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeServerlessDBInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeServerlessDBInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeServerlessDBInstances");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

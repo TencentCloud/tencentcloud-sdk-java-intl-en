@@ -220,6 +220,30 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Tag [] TagList;
 
     /**
+    * Primary instance information, which is returned only when the instance is read-only
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MasterDBInstanceId")
+    @Expose
+    private String MasterDBInstanceId;
+
+    /**
+    * Number of read-only instances
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ReadOnlyInstanceNum")
+    @Expose
+    private Long ReadOnlyInstanceNum;
+
+    /**
+    * The status of a instance in a read-only group
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("StatusInReadonlyGroup")
+    @Expose
+    private String StatusInReadonlyGroup;
+
+    /**
      * Get Instance region such as ap-guangzhou, which corresponds to the `Region` field of `RegionSet` 
      * @return Region Instance region such as ap-guangzhou, which corresponds to the `Region` field of `RegionSet`
      */
@@ -672,6 +696,66 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Primary instance information, which is returned only when the instance is read-only
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return MasterDBInstanceId Primary instance information, which is returned only when the instance is read-only
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getMasterDBInstanceId() {
+        return this.MasterDBInstanceId;
+    }
+
+    /**
+     * Set Primary instance information, which is returned only when the instance is read-only
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param MasterDBInstanceId Primary instance information, which is returned only when the instance is read-only
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMasterDBInstanceId(String MasterDBInstanceId) {
+        this.MasterDBInstanceId = MasterDBInstanceId;
+    }
+
+    /**
+     * Get Number of read-only instances
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return ReadOnlyInstanceNum Number of read-only instances
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getReadOnlyInstanceNum() {
+        return this.ReadOnlyInstanceNum;
+    }
+
+    /**
+     * Set Number of read-only instances
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param ReadOnlyInstanceNum Number of read-only instances
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setReadOnlyInstanceNum(Long ReadOnlyInstanceNum) {
+        this.ReadOnlyInstanceNum = ReadOnlyInstanceNum;
+    }
+
+    /**
+     * Get The status of a instance in a read-only group
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return StatusInReadonlyGroup The status of a instance in a read-only group
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getStatusInReadonlyGroup() {
+        return this.StatusInReadonlyGroup;
+    }
+
+    /**
+     * Set The status of a instance in a read-only group
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param StatusInReadonlyGroup The status of a instance in a read-only group
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setStatusInReadonlyGroup(String StatusInReadonlyGroup) {
+        this.StatusInReadonlyGroup = StatusInReadonlyGroup;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -703,6 +787,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Uid", this.Uid);
         this.setParamSimple(map, prefix + "SupportIpv6", this.SupportIpv6);
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
+        this.setParamSimple(map, prefix + "MasterDBInstanceId", this.MasterDBInstanceId);
+        this.setParamSimple(map, prefix + "ReadOnlyInstanceNum", this.ReadOnlyInstanceNum);
+        this.setParamSimple(map, prefix + "StatusInReadonlyGroup", this.StatusInReadonlyGroup);
 
     }
 }

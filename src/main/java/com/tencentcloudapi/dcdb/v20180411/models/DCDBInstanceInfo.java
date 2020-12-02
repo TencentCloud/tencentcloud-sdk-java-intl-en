@@ -297,7 +297,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long Cpu;
 
     /**
-    * IPv6 flag for an instance
+    * Indicates whether the instance uses IPv6
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Ipv6Flag")
@@ -337,7 +337,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long WanStatusIpv6;
 
     /**
-    * DCN flag. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
+    * DCN type. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DcnFlag")
@@ -989,9 +989,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get IPv6 flag for an instance
+     * Get Indicates whether the instance uses IPv6
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Ipv6Flag IPv6 flag for an instance
+     * @return Ipv6Flag Indicates whether the instance uses IPv6
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getIpv6Flag() {
@@ -999,9 +999,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set IPv6 flag for an instance
+     * Set Indicates whether the instance uses IPv6
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Ipv6Flag IPv6 flag for an instance
+     * @param Ipv6Flag Indicates whether the instance uses IPv6
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setIpv6Flag(Long Ipv6Flag) {
@@ -1089,9 +1089,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get DCN flag. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
+     * Get DCN type. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DcnFlag DCN flag. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
+     * @return DcnFlag DCN type. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getDcnFlag() {
@@ -1099,9 +1099,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set DCN flag. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
+     * Set DCN type. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DcnFlag DCN flag. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
+     * @param DcnFlag DCN type. Valid values: 0 (null), 1 (primary instance), 2 (disaster recovery instance)
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDcnFlag(Long DcnFlag) {
