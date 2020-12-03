@@ -44,7 +44,7 @@ public class ModifyOutput extends AbstractModel{
     private String Description;
 
     /**
-    * Output push protocol. Valid values: SRT|RTMP.
+    * Output push protocol. Valid values: SRT, RTMP.
     */
     @SerializedName("Protocol")
     @Expose
@@ -120,16 +120,16 @@ public class ModifyOutput extends AbstractModel{
     }
 
     /**
-     * Get Output push protocol. Valid values: SRT|RTMP. 
-     * @return Protocol Output push protocol. Valid values: SRT|RTMP.
+     * Get Output push protocol. Valid values: SRT, RTMP. 
+     * @return Protocol Output push protocol. Valid values: SRT, RTMP.
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Output push protocol. Valid values: SRT|RTMP.
-     * @param Protocol Output push protocol. Valid values: SRT|RTMP.
+     * Set Output push protocol. Valid values: SRT, RTMP.
+     * @param Protocol Output push protocol. Valid values: SRT, RTMP.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

@@ -37,6 +37,37 @@ public class GetServiceStatusResponse extends AbstractModel{
     private Long InvalidType;
 
     /**
+    * 0: Basic Edition, 1: Ultimate Edition
+    */
+    @SerializedName("UserLevel")
+    @Expose
+    private Long UserLevel;
+
+    /**
+    * Ultimate Edition expiration time
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ProExpireTime")
+    @Expose
+    private Long ProExpireTime;
+
+    /**
+    * Whether to automatically renew Ultimate Edition. 0: no, 1: yes
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ProRenewFlag")
+    @Expose
+    private Long ProRenewFlag;
+
+    /**
+    * Unique ID of the Ultimate Edition purchase record. If the Ultimate Edition is not activated, the returned value will be null.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ProResourceId")
+    @Expose
+    private String ProResourceId;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -76,6 +107,82 @@ public class GetServiceStatusResponse extends AbstractModel{
     }
 
     /**
+     * Get 0: Basic Edition, 1: Ultimate Edition 
+     * @return UserLevel 0: Basic Edition, 1: Ultimate Edition
+     */
+    public Long getUserLevel() {
+        return this.UserLevel;
+    }
+
+    /**
+     * Set 0: Basic Edition, 1: Ultimate Edition
+     * @param UserLevel 0: Basic Edition, 1: Ultimate Edition
+     */
+    public void setUserLevel(Long UserLevel) {
+        this.UserLevel = UserLevel;
+    }
+
+    /**
+     * Get Ultimate Edition expiration time
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return ProExpireTime Ultimate Edition expiration time
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getProExpireTime() {
+        return this.ProExpireTime;
+    }
+
+    /**
+     * Set Ultimate Edition expiration time
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param ProExpireTime Ultimate Edition expiration time
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setProExpireTime(Long ProExpireTime) {
+        this.ProExpireTime = ProExpireTime;
+    }
+
+    /**
+     * Get Whether to automatically renew Ultimate Edition. 0: no, 1: yes
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return ProRenewFlag Whether to automatically renew Ultimate Edition. 0: no, 1: yes
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getProRenewFlag() {
+        return this.ProRenewFlag;
+    }
+
+    /**
+     * Set Whether to automatically renew Ultimate Edition. 0: no, 1: yes
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param ProRenewFlag Whether to automatically renew Ultimate Edition. 0: no, 1: yes
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setProRenewFlag(Long ProRenewFlag) {
+        this.ProRenewFlag = ProRenewFlag;
+    }
+
+    /**
+     * Get Unique ID of the Ultimate Edition purchase record. If the Ultimate Edition is not activated, the returned value will be null.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return ProResourceId Unique ID of the Ultimate Edition purchase record. If the Ultimate Edition is not activated, the returned value will be null.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getProResourceId() {
+        return this.ProResourceId;
+    }
+
+    /**
+     * Set Unique ID of the Ultimate Edition purchase record. If the Ultimate Edition is not activated, the returned value will be null.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param ProResourceId Unique ID of the Ultimate Edition purchase record. If the Ultimate Edition is not activated, the returned value will be null.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setProResourceId(String ProResourceId) {
+        this.ProResourceId = ProResourceId;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -97,6 +204,10 @@ public class GetServiceStatusResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ServiceEnabled", this.ServiceEnabled);
         this.setParamSimple(map, prefix + "InvalidType", this.InvalidType);
+        this.setParamSimple(map, prefix + "UserLevel", this.UserLevel);
+        this.setParamSimple(map, prefix + "ProExpireTime", this.ProExpireTime);
+        this.setParamSimple(map, prefix + "ProRenewFlag", this.ProRenewFlag);
+        this.setParamSimple(map, prefix + "ProResourceId", this.ProResourceId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

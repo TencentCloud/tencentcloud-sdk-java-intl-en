@@ -58,7 +58,7 @@ public class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel{
     private String EndDate;
 
     /**
-    * 
+    * Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
     */
     @SerializedName("Product")
     @Expose
@@ -145,16 +145,16 @@ public class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return Product 
+     * Get Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`. 
+     * @return Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 
-     * @param Product 
+     * Set Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
+     * @param Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
      */
     public void setProduct(String Product) {
         this.Product = Product;

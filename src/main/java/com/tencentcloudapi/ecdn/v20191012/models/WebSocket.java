@@ -23,46 +23,51 @@ import java.util.HashMap;
 public class WebSocket extends AbstractModel{
 
     /**
-    * 
+    * WebSocket configuration switch, which can be `on` or `off`.
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Sets timeout period in seconds. Maximum value: 65
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Timeout")
     @Expose
     private Long Timeout;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get WebSocket configuration switch, which can be `on` or `off`. 
+     * @return Switch WebSocket configuration switch, which can be `on` or `off`.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set WebSocket configuration switch, which can be `on` or `off`.
+     * @param Switch WebSocket configuration switch, which can be `on` or `off`.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return Timeout 
+     * Get Sets timeout period in seconds. Maximum value: 65
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Timeout Sets timeout period in seconds. Maximum value: 65
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set 
-     * @param Timeout 
+     * Set Sets timeout period in seconds. Maximum value: 65
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Timeout Sets timeout period in seconds. Maximum value: 65
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;

@@ -167,15 +167,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Readonly;
 
     /**
-    * Domain name tag.
-Note: this field may return `null`, indicating that no valid value is obtained.
+    * Domain name tag
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Tag")
     @Expose
     private Tag [] Tag;
 
     /**
-    * 
+    * WebSocket configuration.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("WebSocket")
     @Expose
@@ -530,36 +531,40 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Domain name tag.
-Note: this field may return `null`, indicating that no valid value is obtained. 
-     * @return Tag Domain name tag.
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * Get Domain name tag
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return Tag Domain name tag
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public Tag [] getTag() {
         return this.Tag;
     }
 
     /**
-     * Set Domain name tag.
-Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param Tag Domain name tag.
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * Set Domain name tag
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param Tag Domain name tag
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setTag(Tag [] Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get  
-     * @return WebSocket 
+     * Get WebSocket configuration.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return WebSocket WebSocket configuration.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public WebSocket getWebSocket() {
         return this.WebSocket;
     }
 
     /**
-     * Set 
-     * @param WebSocket 
+     * Set WebSocket configuration.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param WebSocket WebSocket configuration.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setWebSocket(WebSocket WebSocket) {
         this.WebSocket = WebSocket;

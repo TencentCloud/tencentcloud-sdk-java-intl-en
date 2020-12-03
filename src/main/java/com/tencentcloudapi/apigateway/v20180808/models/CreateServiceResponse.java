@@ -44,14 +44,14 @@ public class CreateServiceResponse extends AbstractModel{
     private String ServiceDesc;
 
     /**
-    * Default public network domain name.
+    * Default public domain name.
     */
     @SerializedName("OuterSubDomain")
     @Expose
     private String OuterSubDomain;
 
     /**
-    * Default private network domain name of VPC
+    * Default VPC domain name.
     */
     @SerializedName("InnerSubDomain")
     @Expose
@@ -135,32 +135,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Default public network domain name. 
-     * @return OuterSubDomain Default public network domain name.
+     * Get Default public domain name. 
+     * @return OuterSubDomain Default public domain name.
      */
     public String getOuterSubDomain() {
         return this.OuterSubDomain;
     }
 
     /**
-     * Set Default public network domain name.
-     * @param OuterSubDomain Default public network domain name.
+     * Set Default public domain name.
+     * @param OuterSubDomain Default public domain name.
      */
     public void setOuterSubDomain(String OuterSubDomain) {
         this.OuterSubDomain = OuterSubDomain;
     }
 
     /**
-     * Get Default private network domain name of VPC 
-     * @return InnerSubDomain Default private network domain name of VPC
+     * Get Default VPC domain name. 
+     * @return InnerSubDomain Default VPC domain name.
      */
     public String getInnerSubDomain() {
         return this.InnerSubDomain;
     }
 
     /**
-     * Set Default private network domain name of VPC
-     * @param InnerSubDomain Default private network domain name of VPC
+     * Set Default VPC domain name.
+     * @param InnerSubDomain Default VPC domain name.
      */
     public void setInnerSubDomain(String InnerSubDomain) {
         this.InnerSubDomain = InnerSubDomain;

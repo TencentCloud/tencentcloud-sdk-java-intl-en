@@ -30,7 +30,7 @@ public class CreateMediaConnectOutputRequest extends AbstractModel{
     private String FlowId;
 
     /**
-    * Output configuration of flow.
+    * Output configuration of a flow.
     */
     @SerializedName("Output")
     @Expose
@@ -53,16 +53,16 @@ public class CreateMediaConnectOutputRequest extends AbstractModel{
     }
 
     /**
-     * Get Output configuration of flow. 
-     * @return Output Output configuration of flow.
+     * Get Output configuration of a flow. 
+     * @return Output Output configuration of a flow.
      */
     public CreateOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output configuration of flow.
-     * @param Output Output configuration of flow.
+     * Set Output configuration of a flow.
+     * @param Output Output configuration of a flow.
      */
     public void setOutput(CreateOutput Output) {
         this.Output = Output;

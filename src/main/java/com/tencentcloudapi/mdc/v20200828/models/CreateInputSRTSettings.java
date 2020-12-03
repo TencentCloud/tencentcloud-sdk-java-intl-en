@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateInputSRTSettings extends AbstractModel{
 
     /**
-    * Stream ID, which can contain 0–512 letters, digits, and special symbols (.#!:&,=_-).
+    * Stream ID, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
     */
     @SerializedName("StreamId")
     @Expose
@@ -37,7 +37,7 @@ public class CreateInputSRTSettings extends AbstractModel{
     private Long Latency;
 
     /**
-    * Receipt latency in ms. Default value: 120. Value range: [0, 3000].
+    * Receive latency in ms. Default value: 120. Value range: [0, 3000].
     */
     @SerializedName("RecvLatency")
     @Expose
@@ -65,23 +65,23 @@ public class CreateInputSRTSettings extends AbstractModel{
     private String Passphrase;
 
     /**
-    * Key length. Default value: 0. Valid values: [0|16|24|32].
+    * Key length. Default value: 0. Valid values: 0, 16, 24, 32.
     */
     @SerializedName("PbKeyLen")
     @Expose
     private Long PbKeyLen;
 
     /**
-     * Get Stream ID, which can contain 0–512 letters, digits, and special symbols (.#!:&,=_-). 
-     * @return StreamId Stream ID, which can contain 0–512 letters, digits, and special symbols (.#!:&,=_-).
+     * Get Stream ID, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-). 
+     * @return StreamId Stream ID, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
      */
     public String getStreamId() {
         return this.StreamId;
     }
 
     /**
-     * Set Stream ID, which can contain 0–512 letters, digits, and special symbols (.#!:&,=_-).
-     * @param StreamId Stream ID, which can contain 0–512 letters, digits, and special symbols (.#!:&,=_-).
+     * Set Stream ID, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
+     * @param StreamId Stream ID, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
      */
     public void setStreamId(String StreamId) {
         this.StreamId = StreamId;
@@ -104,16 +104,16 @@ public class CreateInputSRTSettings extends AbstractModel{
     }
 
     /**
-     * Get Receipt latency in ms. Default value: 120. Value range: [0, 3000]. 
-     * @return RecvLatency Receipt latency in ms. Default value: 120. Value range: [0, 3000].
+     * Get Receive latency in ms. Default value: 120. Value range: [0, 3000]. 
+     * @return RecvLatency Receive latency in ms. Default value: 120. Value range: [0, 3000].
      */
     public Long getRecvLatency() {
         return this.RecvLatency;
     }
 
     /**
-     * Set Receipt latency in ms. Default value: 120. Value range: [0, 3000].
-     * @param RecvLatency Receipt latency in ms. Default value: 120. Value range: [0, 3000].
+     * Set Receive latency in ms. Default value: 120. Value range: [0, 3000].
+     * @param RecvLatency Receive latency in ms. Default value: 120. Value range: [0, 3000].
      */
     public void setRecvLatency(Long RecvLatency) {
         this.RecvLatency = RecvLatency;
@@ -168,16 +168,16 @@ public class CreateInputSRTSettings extends AbstractModel{
     }
 
     /**
-     * Get Key length. Default value: 0. Valid values: [0|16|24|32]. 
-     * @return PbKeyLen Key length. Default value: 0. Valid values: [0|16|24|32].
+     * Get Key length. Default value: 0. Valid values: 0, 16, 24, 32. 
+     * @return PbKeyLen Key length. Default value: 0. Valid values: 0, 16, 24, 32.
      */
     public Long getPbKeyLen() {
         return this.PbKeyLen;
     }
 
     /**
-     * Set Key length. Default value: 0. Valid values: [0|16|24|32].
-     * @param PbKeyLen Key length. Default value: 0. Valid values: [0|16|24|32].
+     * Set Key length. Default value: 0. Valid values: 0, 16, 24, 32.
+     * @param PbKeyLen Key length. Default value: 0. Valid values: 0, 16, 24, 32.
      */
     public void setPbKeyLen(Long PbKeyLen) {
         this.PbKeyLen = PbKeyLen;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateOutputRTMPSettings extends AbstractModel{
 
     /**
-    * Push destination address. 1–2 addresses can be entered.
+    * Push destination address. You can enter one or two addresses.
     */
     @SerializedName("Destinations")
     @Expose
@@ -37,16 +37,16 @@ public class CreateOutputRTMPSettings extends AbstractModel{
     private Long ChunkSize;
 
     /**
-     * Get Push destination address. 1–2 addresses can be entered. 
-     * @return Destinations Push destination address. 1–2 addresses can be entered.
+     * Get Push destination address. You can enter one or two addresses. 
+     * @return Destinations Push destination address. You can enter one or two addresses.
      */
     public CreateOutputRtmpSettingsDestinations [] getDestinations() {
         return this.Destinations;
     }
 
     /**
-     * Set Push destination address. 1–2 addresses can be entered.
-     * @param Destinations Push destination address. 1–2 addresses can be entered.
+     * Set Push destination address. You can enter one or two addresses.
+     * @param Destinations Push destination address. You can enter one or two addresses.
      */
     public void setDestinations(CreateOutputRtmpSettingsDestinations [] Destinations) {
         this.Destinations = Destinations;

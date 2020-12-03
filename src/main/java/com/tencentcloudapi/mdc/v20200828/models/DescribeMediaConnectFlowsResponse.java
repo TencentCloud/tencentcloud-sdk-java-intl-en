@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeMediaConnectFlowsResponse extends AbstractModel{
 
     /**
-    * Configuration information list of flow.
+    * Configuration information list of a flow.
     */
     @SerializedName("Infos")
     @Expose
@@ -65,16 +65,16 @@ public class DescribeMediaConnectFlowsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Configuration information list of flow. 
-     * @return Infos Configuration information list of flow.
+     * Get Configuration information list of a flow. 
+     * @return Infos Configuration information list of a flow.
      */
     public DescribeFlow [] getInfos() {
         return this.Infos;
     }
 
     /**
-     * Set Configuration information list of flow.
-     * @param Infos Configuration information list of flow.
+     * Set Configuration information list of a flow.
+     * @param Infos Configuration information list of a flow.
      */
     public void setInfos(DescribeFlow [] Infos) {
         this.Infos = Infos;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateOutputSrtSettings extends AbstractModel{
 
     /**
-    * Push destination address. Please configure 1–2 addresses.
+    * Push destination address. Please configure one or two addresses.
     */
     @SerializedName("Destinations")
     @Expose
@@ -44,7 +44,7 @@ public class CreateOutputSrtSettings extends AbstractModel{
     private Long Latency;
 
     /**
-    * Receipt latency of SRT push.
+    * Receive latency of SRT push.
     */
     @SerializedName("RecvLatency")
     @Expose
@@ -79,16 +79,16 @@ public class CreateOutputSrtSettings extends AbstractModel{
     private Long PbKeyLen;
 
     /**
-     * Get Push destination address. Please configure 1–2 addresses. 
-     * @return Destinations Push destination address. Please configure 1–2 addresses.
+     * Get Push destination address. Please configure one or two addresses. 
+     * @return Destinations Push destination address. Please configure one or two addresses.
      */
     public CreateOutputSrtSettingsDestinations [] getDestinations() {
         return this.Destinations;
     }
 
     /**
-     * Set Push destination address. Please configure 1–2 addresses.
-     * @param Destinations Push destination address. Please configure 1–2 addresses.
+     * Set Push destination address. Please configure one or two addresses.
+     * @param Destinations Push destination address. Please configure one or two addresses.
      */
     public void setDestinations(CreateOutputSrtSettingsDestinations [] Destinations) {
         this.Destinations = Destinations;
@@ -127,16 +127,16 @@ public class CreateOutputSrtSettings extends AbstractModel{
     }
 
     /**
-     * Get Receipt latency of SRT push. 
-     * @return RecvLatency Receipt latency of SRT push.
+     * Get Receive latency of SRT push. 
+     * @return RecvLatency Receive latency of SRT push.
      */
     public Long getRecvLatency() {
         return this.RecvLatency;
     }
 
     /**
-     * Set Receipt latency of SRT push.
-     * @param RecvLatency Receipt latency of SRT push.
+     * Set Receive latency of SRT push.
+     * @param RecvLatency Receive latency of SRT push.
      */
     public void setRecvLatency(Long RecvLatency) {
         this.RecvLatency = RecvLatency;

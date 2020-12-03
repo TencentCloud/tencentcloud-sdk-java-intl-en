@@ -79,7 +79,13 @@ public class ClusterAdvancedSettings extends AbstractModel{
     private Boolean DeletionProtection;
 
     /**
-    * Cluster network proxy model
+    * Cluster network proxy model, which is only used when ipvs-bpf mode is used. At present, TKE cluster supports three network proxy modes including `iptables`, `ipvs` and `ipvs-bpf` and their parameter setting relationships are as follows:
+`iptables`: do not set IPVS and KubeProxyMode.
+`ipvs` mode: set IPVS to `true` and do not set KubeProxyMode.
+`ipvs-bpf`: set KubeProxyMode to `kube-proxy-bpf`.
+The following conditions are required to use ipvs-bpf network mode:
+1. The cluster version must be v1.14 or later.
+2. The system image must be a TKE custom image such as Ubuntu TKE Optimized or Centos TKE Optimized.
     */
     @SerializedName("KubeProxyMode")
     @Expose
@@ -112,6 +118,13 @@ public class ClusterAdvancedSettings extends AbstractModel{
     @SerializedName("VpcCniType")
     @Expose
     private String VpcCniType;
+
+    /**
+    * Runtime version
+    */
+    @SerializedName("RuntimeVersion")
+    @Expose
+    private String RuntimeVersion;
 
     /**
      * Get Whether IPVS is enabled 
@@ -242,16 +255,40 @@ public class ClusterAdvancedSettings extends AbstractModel{
     }
 
     /**
-     * Get Cluster network proxy model 
-     * @return KubeProxyMode Cluster network proxy model
+     * Get Cluster network proxy model, which is only used when ipvs-bpf mode is used. At present, TKE cluster supports three network proxy modes including `iptables`, `ipvs` and `ipvs-bpf` and their parameter setting relationships are as follows:
+`iptables`: do not set IPVS and KubeProxyMode.
+`ipvs` mode: set IPVS to `true` and do not set KubeProxyMode.
+`ipvs-bpf`: set KubeProxyMode to `kube-proxy-bpf`.
+The following conditions are required to use ipvs-bpf network mode:
+1. The cluster version must be v1.14 or later.
+2. The system image must be a TKE custom image such as Ubuntu TKE Optimized or Centos TKE Optimized. 
+     * @return KubeProxyMode Cluster network proxy model, which is only used when ipvs-bpf mode is used. At present, TKE cluster supports three network proxy modes including `iptables`, `ipvs` and `ipvs-bpf` and their parameter setting relationships are as follows:
+`iptables`: do not set IPVS and KubeProxyMode.
+`ipvs` mode: set IPVS to `true` and do not set KubeProxyMode.
+`ipvs-bpf`: set KubeProxyMode to `kube-proxy-bpf`.
+The following conditions are required to use ipvs-bpf network mode:
+1. The cluster version must be v1.14 or later.
+2. The system image must be a TKE custom image such as Ubuntu TKE Optimized or Centos TKE Optimized.
      */
     public String getKubeProxyMode() {
         return this.KubeProxyMode;
     }
 
     /**
-     * Set Cluster network proxy model
-     * @param KubeProxyMode Cluster network proxy model
+     * Set Cluster network proxy model, which is only used when ipvs-bpf mode is used. At present, TKE cluster supports three network proxy modes including `iptables`, `ipvs` and `ipvs-bpf` and their parameter setting relationships are as follows:
+`iptables`: do not set IPVS and KubeProxyMode.
+`ipvs` mode: set IPVS to `true` and do not set KubeProxyMode.
+`ipvs-bpf`: set KubeProxyMode to `kube-proxy-bpf`.
+The following conditions are required to use ipvs-bpf network mode:
+1. The cluster version must be v1.14 or later.
+2. The system image must be a TKE custom image such as Ubuntu TKE Optimized or Centos TKE Optimized.
+     * @param KubeProxyMode Cluster network proxy model, which is only used when ipvs-bpf mode is used. At present, TKE cluster supports three network proxy modes including `iptables`, `ipvs` and `ipvs-bpf` and their parameter setting relationships are as follows:
+`iptables`: do not set IPVS and KubeProxyMode.
+`ipvs` mode: set IPVS to `true` and do not set KubeProxyMode.
+`ipvs-bpf`: set KubeProxyMode to `kube-proxy-bpf`.
+The following conditions are required to use ipvs-bpf network mode:
+1. The cluster version must be v1.14 or later.
+2. The system image must be a TKE custom image such as Ubuntu TKE Optimized or Centos TKE Optimized.
      */
     public void setKubeProxyMode(String KubeProxyMode) {
         this.KubeProxyMode = KubeProxyMode;
@@ -322,6 +359,22 @@ public class ClusterAdvancedSettings extends AbstractModel{
     }
 
     /**
+     * Get Runtime version 
+     * @return RuntimeVersion Runtime version
+     */
+    public String getRuntimeVersion() {
+        return this.RuntimeVersion;
+    }
+
+    /**
+     * Set Runtime version
+     * @param RuntimeVersion Runtime version
+     */
+    public void setRuntimeVersion(String RuntimeVersion) {
+        this.RuntimeVersion = RuntimeVersion;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -338,6 +391,7 @@ public class ClusterAdvancedSettings extends AbstractModel{
         this.setParamSimple(map, prefix + "AuditLogsetId", this.AuditLogsetId);
         this.setParamSimple(map, prefix + "AuditLogTopicId", this.AuditLogTopicId);
         this.setParamSimple(map, prefix + "VpcCniType", this.VpcCniType);
+        this.setParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
 
     }
 }

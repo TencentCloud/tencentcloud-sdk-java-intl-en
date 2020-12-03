@@ -30,7 +30,7 @@ public class CreateMediaConnectFlowRequest extends AbstractModel{
     private String FlowName;
 
     /**
-    * Maximum bandwidth in bps. Valid values: [10000000, 20000000, 50000000].
+    * Maximum bandwidth in bps. Valid values: 10000000, 20000000, 50000000.
     */
     @SerializedName("MaxBandwidth")
     @Expose
@@ -60,16 +60,16 @@ public class CreateMediaConnectFlowRequest extends AbstractModel{
     }
 
     /**
-     * Get Maximum bandwidth in bps. Valid values: [10000000, 20000000, 50000000]. 
-     * @return MaxBandwidth Maximum bandwidth in bps. Valid values: [10000000, 20000000, 50000000].
+     * Get Maximum bandwidth in bps. Valid values: 10000000, 20000000, 50000000. 
+     * @return MaxBandwidth Maximum bandwidth in bps. Valid values: 10000000, 20000000, 50000000.
      */
     public Long getMaxBandwidth() {
         return this.MaxBandwidth;
     }
 
     /**
-     * Set Maximum bandwidth in bps. Valid values: [10000000, 20000000, 50000000].
-     * @param MaxBandwidth Maximum bandwidth in bps. Valid values: [10000000, 20000000, 50000000].
+     * Set Maximum bandwidth in bps. Valid values: 10000000, 20000000, 50000000.
+     * @param MaxBandwidth Maximum bandwidth in bps. Valid values: 10000000, 20000000, 50000000.
      */
     public void setMaxBandwidth(Long MaxBandwidth) {
         this.MaxBandwidth = MaxBandwidth;

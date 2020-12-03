@@ -47,7 +47,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long Latency;
 
     /**
-    * Receipt latency.
+    * Receive latency.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RecvLatency")
@@ -147,9 +147,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Receipt latency.
+     * Get Receive latency.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RecvLatency Receipt latency.
+     * @return RecvLatency Receive latency.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getRecvLatency() {
@@ -157,9 +157,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Receipt latency.
+     * Set Receive latency.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RecvLatency Receipt latency.
+     * @param RecvLatency Receive latency.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setRecvLatency(Long RecvLatency) {

@@ -30,7 +30,7 @@ public class DescribeTopSpaceTablesResponse extends AbstractModel{
     private TableSpaceData [] TopSpaceTables;
 
     /**
-    * Timestamp (in seconds) identifying when the tablespace data is collected.
+    * Timestamp (in seconds) of tablespace data collect points
     */
     @SerializedName("Timestamp")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeTopSpaceTablesResponse extends AbstractModel{
     }
 
     /**
-     * Get Timestamp (in seconds) identifying when the tablespace data is collected. 
-     * @return Timestamp Timestamp (in seconds) identifying when the tablespace data is collected.
+     * Get Timestamp (in seconds) of tablespace data collect points 
+     * @return Timestamp Timestamp (in seconds) of tablespace data collect points
      */
     public Long getTimestamp() {
         return this.Timestamp;
     }
 
     /**
-     * Set Timestamp (in seconds) identifying when the tablespace data is collected.
-     * @param Timestamp Timestamp (in seconds) identifying when the tablespace data is collected.
+     * Set Timestamp (in seconds) of tablespace data collect points
+     * @param Timestamp Timestamp (in seconds) of tablespace data collect points
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;

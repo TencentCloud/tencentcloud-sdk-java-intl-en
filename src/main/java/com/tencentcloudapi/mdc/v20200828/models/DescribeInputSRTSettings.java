@@ -37,7 +37,7 @@ public class DescribeInputSRTSettings extends AbstractModel{
     private Long Latency;
 
     /**
-    * Receipt latency.
+    * Receive latency.
     */
     @SerializedName("RecvLatency")
     @Expose
@@ -104,16 +104,16 @@ public class DescribeInputSRTSettings extends AbstractModel{
     }
 
     /**
-     * Get Receipt latency. 
-     * @return RecvLatency Receipt latency.
+     * Get Receive latency. 
+     * @return RecvLatency Receive latency.
      */
     public Long getRecvLatency() {
         return this.RecvLatency;
     }
 
     /**
-     * Set Receipt latency.
-     * @param RecvLatency Receipt latency.
+     * Set Receive latency.
+     * @param RecvLatency Receive latency.
      */
     public void setRecvLatency(Long RecvLatency) {
         this.RecvLatency = RecvLatency;

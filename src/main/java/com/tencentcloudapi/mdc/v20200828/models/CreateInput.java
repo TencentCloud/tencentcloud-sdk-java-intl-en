@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreateInput extends AbstractModel{
 
     /**
-    * Input name, which can contain 1–32 letters, digits, and underscores.
+    * Input name, which can contain 1 to 32 letters, digits, and underscores.
     */
     @SerializedName("InputName")
     @Expose
     private String InputName;
 
     /**
-    * Input protocol. Valid values: [SRT|RTP].
+    * Input protocol. Valid values: SRT, RTP.
     */
     @SerializedName("Protocol")
     @Expose
@@ -65,32 +65,32 @@ public class CreateInput extends AbstractModel{
     private CreateInputRTPSettings RTPSettings;
 
     /**
-     * Get Input name, which can contain 1–32 letters, digits, and underscores. 
-     * @return InputName Input name, which can contain 1–32 letters, digits, and underscores.
+     * Get Input name, which can contain 1 to 32 letters, digits, and underscores. 
+     * @return InputName Input name, which can contain 1 to 32 letters, digits, and underscores.
      */
     public String getInputName() {
         return this.InputName;
     }
 
     /**
-     * Set Input name, which can contain 1–32 letters, digits, and underscores.
-     * @param InputName Input name, which can contain 1–32 letters, digits, and underscores.
+     * Set Input name, which can contain 1 to 32 letters, digits, and underscores.
+     * @param InputName Input name, which can contain 1 to 32 letters, digits, and underscores.
      */
     public void setInputName(String InputName) {
         this.InputName = InputName;
     }
 
     /**
-     * Get Input protocol. Valid values: [SRT|RTP]. 
-     * @return Protocol Input protocol. Valid values: [SRT|RTP].
+     * Get Input protocol. Valid values: SRT, RTP. 
+     * @return Protocol Input protocol. Valid values: SRT, RTP.
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Input protocol. Valid values: [SRT|RTP].
-     * @param Protocol Input protocol. Valid values: [SRT|RTP].
+     * Set Input protocol. Valid values: SRT, RTP.
+     * @param Protocol Input protocol. Valid values: SRT, RTP.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

@@ -107,7 +107,7 @@ public class AddEcdnDomainRequest extends AbstractModel{
     private Tag [] Tag;
 
     /**
-    * 
+    * WebSocket configuration.
     */
     @SerializedName("WebSocket")
     @Expose
@@ -306,16 +306,16 @@ public class AddEcdnDomainRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return WebSocket 
+     * Get WebSocket configuration. 
+     * @return WebSocket WebSocket configuration.
      */
     public WebSocket getWebSocket() {
         return this.WebSocket;
     }
 
     /**
-     * Set 
-     * @param WebSocket 
+     * Set WebSocket configuration.
+     * @param WebSocket WebSocket configuration.
      */
     public void setWebSocket(WebSocket WebSocket) {
         this.WebSocket = WebSocket;
