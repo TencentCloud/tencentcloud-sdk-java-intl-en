@@ -44,7 +44,7 @@ public class CreateAndAttachNetworkInterfaceRequest extends AbstractModel{
     private String SubnetId;
 
     /**
-    * The CVM instance ID.
+    * CVM instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -134,16 +134,16 @@ public class CreateAndAttachNetworkInterfaceRequest extends AbstractModel{
     }
 
     /**
-     * Get The CVM instance ID. 
-     * @return InstanceId The CVM instance ID.
+     * Get CVM instance ID. 
+     * @return InstanceId CVM instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set The CVM instance ID.
-     * @param InstanceId The CVM instance ID.
+     * Set CVM instance ID.
+     * @param InstanceId CVM instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

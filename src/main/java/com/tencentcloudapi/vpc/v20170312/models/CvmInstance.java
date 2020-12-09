@@ -65,7 +65,7 @@ public class CvmInstance extends AbstractModel{
     private Long CPU;
 
     /**
-    * Instance's memory capacity. Unit: GB.
+    * Instance’s memory capacity. Unit: GB.
     */
     @SerializedName("Memory")
     @Expose
@@ -203,16 +203,16 @@ public class CvmInstance extends AbstractModel{
     }
 
     /**
-     * Get Instance's memory capacity. Unit: GB. 
-     * @return Memory Instance's memory capacity. Unit: GB.
+     * Get Instance’s memory capacity. Unit: GB. 
+     * @return Memory Instance’s memory capacity. Unit: GB.
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Instance's memory capacity. Unit: GB.
-     * @param Memory Instance's memory capacity. Unit: GB.
+     * Set Instance’s memory capacity. Unit: GB.
+     * @param Memory Instance’s memory capacity. Unit: GB.
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;

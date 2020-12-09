@@ -44,14 +44,14 @@ public class GatewayFlowMonitorDetail extends AbstractModel{
     private Long OutPkg;
 
     /**
-    * Inbound bandwidth, unit: `Byte`.
+    * Inbound traffic, in Byte.
     */
     @SerializedName("InTraffic")
     @Expose
     private Long InTraffic;
 
     /**
-    * Outbound bandwidth, unit: `Byte`.
+    * Outbound traffic, in Byte.
     */
     @SerializedName("OutTraffic")
     @Expose
@@ -106,32 +106,32 @@ public class GatewayFlowMonitorDetail extends AbstractModel{
     }
 
     /**
-     * Get Inbound bandwidth, unit: `Byte`. 
-     * @return InTraffic Inbound bandwidth, unit: `Byte`.
+     * Get Inbound traffic, in Byte. 
+     * @return InTraffic Inbound traffic, in Byte.
      */
     public Long getInTraffic() {
         return this.InTraffic;
     }
 
     /**
-     * Set Inbound bandwidth, unit: `Byte`.
-     * @param InTraffic Inbound bandwidth, unit: `Byte`.
+     * Set Inbound traffic, in Byte.
+     * @param InTraffic Inbound traffic, in Byte.
      */
     public void setInTraffic(Long InTraffic) {
         this.InTraffic = InTraffic;
     }
 
     /**
-     * Get Outbound bandwidth, unit: `Byte`. 
-     * @return OutTraffic Outbound bandwidth, unit: `Byte`.
+     * Get Outbound traffic, in Byte. 
+     * @return OutTraffic Outbound traffic, in Byte.
      */
     public Long getOutTraffic() {
         return this.OutTraffic;
     }
 
     /**
-     * Set Outbound bandwidth, unit: `Byte`.
-     * @param OutTraffic Outbound bandwidth, unit: `Byte`.
+     * Set Outbound traffic, in Byte.
+     * @param OutTraffic Outbound traffic, in Byte.
      */
     public void setOutTraffic(Long OutTraffic) {
         this.OutTraffic = OutTraffic;

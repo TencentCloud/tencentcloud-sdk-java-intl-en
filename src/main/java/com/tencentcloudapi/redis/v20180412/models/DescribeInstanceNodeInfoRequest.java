@@ -37,7 +37,7 @@ public class DescribeInstanceNodeInfoRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * The offset
+    * The offset value
     */
     @SerializedName("Offset")
     @Expose
@@ -76,16 +76,16 @@ public class DescribeInstanceNodeInfoRequest extends AbstractModel{
     }
 
     /**
-     * Get The offset 
-     * @return Offset The offset
+     * Get The offset value 
+     * @return Offset The offset value
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set The offset
-     * @param Offset The offset
+     * Set The offset value
+     * @param Offset The offset value
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

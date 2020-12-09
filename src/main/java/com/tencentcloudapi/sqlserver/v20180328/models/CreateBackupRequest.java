@@ -44,7 +44,7 @@ public class CreateBackupRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Backup name. If this parameter is left empty, a backup name in the format of "Instance ID_Backup start timestamp" will be automatically generated.
+    * Backup name. If this parameter is left empty, a backup name in the format of "[Instance ID]_[Backup start timestamp]" will be automatically generated.
     */
     @SerializedName("BackupName")
     @Expose
@@ -99,16 +99,16 @@ public class CreateBackupRequest extends AbstractModel{
     }
 
     /**
-     * Get Backup name. If this parameter is left empty, a backup name in the format of "Instance ID_Backup start timestamp" will be automatically generated. 
-     * @return BackupName Backup name. If this parameter is left empty, a backup name in the format of "Instance ID_Backup start timestamp" will be automatically generated.
+     * Get Backup name. If this parameter is left empty, a backup name in the format of "[Instance ID]_[Backup start timestamp]" will be automatically generated. 
+     * @return BackupName Backup name. If this parameter is left empty, a backup name in the format of "[Instance ID]_[Backup start timestamp]" will be automatically generated.
      */
     public String getBackupName() {
         return this.BackupName;
     }
 
     /**
-     * Set Backup name. If this parameter is left empty, a backup name in the format of "Instance ID_Backup start timestamp" will be automatically generated.
-     * @param BackupName Backup name. If this parameter is left empty, a backup name in the format of "Instance ID_Backup start timestamp" will be automatically generated.
+     * Set Backup name. If this parameter is left empty, a backup name in the format of "[Instance ID]_[Backup start timestamp]" will be automatically generated.
+     * @param BackupName Backup name. If this parameter is left empty, a backup name in the format of "[Instance ID]_[Backup start timestamp]" will be automatically generated.
      */
     public void setBackupName(String BackupName) {
         this.BackupName = BackupName;

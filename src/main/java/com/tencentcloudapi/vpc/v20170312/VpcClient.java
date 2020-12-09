@@ -344,10 +344,10 @@ The number of network instances that each CCN can be associated with is limited.
 
     /**
      *This API is used to bind an ENI to a CVM.
-* One CVM can be bound to multiple ENIs, but only one primary ENI. For more information on the limits, see <a href="https://intl.cloud.tencent.com/document/product/576/18527?from_cn_redirect=1">ENI Use Limits</a>.
+* One CVM can be bound with multiple ENIs, but only one primary ENI. For more information about the limits, please see <a href="https://intl.cloud.tencent.com/document/product/576/18527?from_cn_redirect=1">ENI Use Limits</a>.
 * An ENI can only be bound to one CVM at a time.
-* Only CVMs in the running or shutdown state can be bound to an ENI. For more information on CVM states, see <a href="https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#InstanceStatus">Tencent CVM Information</a>.
-* An ENI can only be bound to a CVM in a VPC instance, and the CVM must reside in the same availability zone as the subnet of the ENI.
+* Only the running or shutdown CVMs can be bound with ENIs. For more information about the CVM status, see <a href="https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#InstanceStatus">InstanceStatus</a> in the Data Types.
+* An ENI can only be bound to a VPC-based CVM under the same availability zone as the ENI subnet.
      * @param req AttachNetworkInterfaceRequest
      * @return AttachNetworkInterfaceResponse
      * @throws TencentCloudSDKException
@@ -474,8 +474,8 @@ The number of network instances that each CCN can be associated with is limited.
     /**
      *This API is used to create an ENI and bind it to a CVM.
 * You can specify private IP addresses and a primary IP when creating an ENI. The specified private IP must be idle and in the same subnet as the ENI.
-* When creating an ENI, you can specify the number of private IP addresses that you want to apply for. The system will randomly generate private IP addresses.
-* An ENI can only be bound to a limited number of IP addresses. For more information about resource limits, see <a href="/document/product/576/18527">ENI Use Limits</a>.
+* When creating an ENI, you can specify the number of private IPs that you want to apply for. The system will randomly generate private IP addresses.
+* The number of IPs bound with an ENI is limited. For more information, see <a href="/document/product/576/18527">ENI Use Limits</a>.
 * You can bind an existing security group when creating an ENI.
 * You can bind a tag when creating an ENI. The tag list in the response indicates the tags that have been successfully added.
      * @param req CreateAndAttachNetworkInterfaceRequest
@@ -903,9 +903,9 @@ Description:
 * `CidrBlock`:  A CIDR block in the correct format. In a basic network, if a CidrBlock contains private IPs on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.
 * `Ipv6CidrBlock`: An IPv6 CIDR block in the correct format. In a basic network, if an Ipv6CidrBlock contains private IPv6 addresses on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.
 * `SecurityGroupId`: ID of the security group. It can be in the same project as the security group to be modified, including the ID of the security group itself, to represent private IP addresses of all CVMs under the security group. If this field is used, the policy will change without manual modification according to the CVM associated with the policy ID while being used to match network messages.
-* `Port`: A single port number, or a port range in the format of '8000-8010'. The Port field is accepted only if the value of the `Protocol` field is `TCP` or `UDP`. Otherwise Protocol and Port are mutually exclusive. 
+* `Port`: A single port number, or a port range in the format of “8000-8010”. The Port field is accepted only if the value of the `Protocol` field is `TCP` or `UDP`. Otherwise Protocol and Port are mutually exclusive. 
 * `Action`: Values can be `ACCEPT` or `DROP`.
-* CidrBlock, Ipv6CidrBlock, SecurityGroupId, and AddressTemplate are exclusive and cannot be entered at the same time. 'Protocol + Port' and ServiceTemplate are mutually exclusive and cannot be entered at the same time.
+* CidrBlock, Ipv6CidrBlock, SecurityGroupId, and AddressTemplate are exclusive and cannot be entered at the same time. “Protocol + Port” and ServiceTemplate are mutually exclusive and cannot be entered at the same time.
 * Only policies in one direction can be created in each request. If you need to specify the `PolicyIndex` parameter, the indexes of policies must be consistent.
      * @param req CreateSecurityGroupWithPoliciesRequest
      * @return CreateSecurityGroupWithPoliciesResponse
@@ -2083,6 +2083,26 @@ A service provider can query all review requests created by any `APPID` under it
     }
 
     /**
+     *This API is used to obtain the download link of an IP location database.
+     * @param req DescribeIpGeolocationDatabaseUrlRequest
+     * @return DescribeIpGeolocationDatabaseUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIpGeolocationDatabaseUrlResponse DescribeIpGeolocationDatabaseUrl(DescribeIpGeolocationDatabaseUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeIpGeolocationDatabaseUrlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeIpGeolocationDatabaseUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeIpGeolocationDatabaseUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (DescribeNatGatewayDestinationIpPortTranslationNatRules) is used to query the array of objects of the port forwarding rules for a NAT gateway.
      * @param req DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest
      * @return DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse
@@ -2465,7 +2485,7 @@ This API is used to query only the information of IP addresses that are already 
     }
 
     /**
-     *This API is used to query the VPC resource information.
+     *View VPC resources.
      * @param req DescribeVpcResourceDashboardRequest
      * @return DescribeVpcResourceDashboardResponse
      * @throws TencentCloudSDKException
@@ -2606,7 +2626,7 @@ After unbinding the network instance, the corresponding routing policy will also
     }
 
     /**
-     *This API (DetachNetworkInterface) is used to unbind an ENI from a CVM.
+     *This API is used to unbind an ENI from a CVM.
      * @param req DetachNetworkInterfaceRequest
      * @return DetachNetworkInterfaceResponse
      * @throws TencentCloudSDKException

@@ -37,6 +37,13 @@ public class ReplaceSecurityGroupPolicyRequest extends AbstractModel{
     private SecurityGroupPolicySet SecurityGroupPolicySet;
 
     /**
+    * (Optional) The old policy set of the security group, which is used for log records.
+    */
+    @SerializedName("OriginalSecurityGroupPolicySet")
+    @Expose
+    private SecurityGroupPolicySet OriginalSecurityGroupPolicySet;
+
+    /**
      * Get The security group instance ID, such as `sg-33ocnj9n`. This can be obtained through DescribeSecurityGroups. 
      * @return SecurityGroupId The security group instance ID, such as `sg-33ocnj9n`. This can be obtained through DescribeSecurityGroups.
      */
@@ -69,11 +76,28 @@ public class ReplaceSecurityGroupPolicyRequest extends AbstractModel{
     }
 
     /**
+     * Get (Optional) The old policy set of the security group, which is used for log records. 
+     * @return OriginalSecurityGroupPolicySet (Optional) The old policy set of the security group, which is used for log records.
+     */
+    public SecurityGroupPolicySet getOriginalSecurityGroupPolicySet() {
+        return this.OriginalSecurityGroupPolicySet;
+    }
+
+    /**
+     * Set (Optional) The old policy set of the security group, which is used for log records.
+     * @param OriginalSecurityGroupPolicySet (Optional) The old policy set of the security group, which is used for log records.
+     */
+    public void setOriginalSecurityGroupPolicySet(SecurityGroupPolicySet OriginalSecurityGroupPolicySet) {
+        this.OriginalSecurityGroupPolicySet = OriginalSecurityGroupPolicySet;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
         this.setParamObj(map, prefix + "SecurityGroupPolicySet.", this.SecurityGroupPolicySet);
+        this.setParamObj(map, prefix + "OriginalSecurityGroupPolicySet.", this.OriginalSecurityGroupPolicySet);
 
     }
 }

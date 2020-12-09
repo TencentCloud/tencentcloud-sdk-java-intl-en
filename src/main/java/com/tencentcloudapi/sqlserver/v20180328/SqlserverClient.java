@@ -659,7 +659,7 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
-     *This API is used to manually repossess a deactivated SQL Server instance.
+     *This API is used to return a deactivated SQL Server instance.
      * @param req RecycleDBInstanceRequest
      * @return RecycleDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -779,7 +779,7 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
-     *This API is used to manually terminate a pay-as-you-go instance.
+     *This API is used to isolate an instance to move it into a recycle bin.
      * @param req TerminateDBInstanceRequest
      * @return TerminateDBInstanceResponse
      * @throws TencentCloudSDKException
