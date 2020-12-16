@@ -399,6 +399,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Tag [] Tags;
 
     /**
+    * Environment information published for API.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Environments")
+    @Expose
+    private String [] Environments;
+
+    /**
      * Get Unique service ID of API.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return ServiceId Unique service ID of API.
@@ -1339,6 +1347,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Environment information published for API.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Environments Environment information published for API.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String [] getEnvironments() {
+        return this.Environments;
+    }
+
+    /**
+     * Set Environment information published for API.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Environments Environment information published for API.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setEnvironments(String [] Environments) {
+        this.Environments = Environments;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1389,6 +1417,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "ServiceTsfHealthCheckConf.", this.ServiceTsfHealthCheckConf);
         this.setParamSimple(map, prefix + "EnableCORS", this.EnableCORS);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamArraySimple(map, prefix + "Environments.", this.Environments);
 
     }
 }

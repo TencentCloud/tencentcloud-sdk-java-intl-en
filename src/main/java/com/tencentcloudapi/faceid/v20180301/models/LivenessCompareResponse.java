@@ -51,6 +51,13 @@ public class LivenessCompareResponse extends AbstractModel{
     private String Description;
 
     /**
+    * 
+    */
+    @SerializedName("BestFrameList")
+    @Expose
+    private String [] BestFrameList;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -122,6 +129,22 @@ public class LivenessCompareResponse extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return BestFrameList 
+     */
+    public String [] getBestFrameList() {
+        return this.BestFrameList;
+    }
+
+    /**
+     * Set 
+     * @param BestFrameList 
+     */
+    public void setBestFrameList(String [] BestFrameList) {
+        this.BestFrameList = BestFrameList;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -145,6 +168,7 @@ public class LivenessCompareResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Sim", this.Sim);
         this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamArraySimple(map, prefix + "BestFrameList.", this.BestFrameList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

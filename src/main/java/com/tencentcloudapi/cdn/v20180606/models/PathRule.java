@@ -31,40 +31,40 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     private Boolean Regex;
 
     /**
-    * The matched URL path
-Note: this field may return `null`, indicating that no valid value is obtained.
+    * Matched URL. Only URLs are supported, while parameters are not. The exact match is used by default. In regex match, up to 5 wildcards `*` are supported. The URL can contain up to 1,024 characters.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * Origin-pull server when the path matches. COS source with private read/write is not supported.
-Note: this field may return `null`, indicating that no valid value is obtained.
+    * Origin server when the path matches. COS origin with private read/write is not supported. The default origin server will be used by default when this field is left empty.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Origin")
     @Expose
     private String Origin;
 
     /**
-    * Origin-pull host when the path matches.
-Note: this field may return `null`, indicating that no valid value is obtained.
+    * Origin server host header when the path matches. The default `ServerName` will be used by default when this field is left empty.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("ServerName")
     @Expose
     private String ServerName;
 
     /**
-    * The region of origin server. Valid values: `CN` (mainland China), `OV` (outside mainland China)
-Note: this field may return `null`, indicating that no valid value is obtained.
+    * Origin server region. Valid values: CN (the Chinese mainland), OV (outside the Chinese mainland).
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("OriginArea")
     @Expose
     private String OriginArea;
 
     /**
-    * Origin-pull URI path when the path matches.
-Note: this field may return `null`, indicating that no valid value is obtained.
+    * Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the matching path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("ForwardUri")
     @Expose
@@ -99,100 +99,100 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     }
 
     /**
-     * Get The matched URL path
-Note: this field may return `null`, indicating that no valid value is obtained. 
-     * @return Path The matched URL path
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * Get Matched URL. Only URLs are supported, while parameters are not. The exact match is used by default. In regex match, up to 5 wildcards `*` are supported. The URL can contain up to 1,024 characters.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Path Matched URL. Only URLs are supported, while parameters are not. The exact match is used by default. In regex match, up to 5 wildcards `*` are supported. The URL can contain up to 1,024 characters.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set The matched URL path
-Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param Path The matched URL path
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * Set Matched URL. Only URLs are supported, while parameters are not. The exact match is used by default. In regex match, up to 5 wildcards `*` are supported. The URL can contain up to 1,024 characters.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Path Matched URL. Only URLs are supported, while parameters are not. The exact match is used by default. In regex match, up to 5 wildcards `*` are supported. The URL can contain up to 1,024 characters.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get Origin-pull server when the path matches. COS source with private read/write is not supported.
-Note: this field may return `null`, indicating that no valid value is obtained. 
-     * @return Origin Origin-pull server when the path matches. COS source with private read/write is not supported.
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * Get Origin server when the path matches. COS origin with private read/write is not supported. The default origin server will be used by default when this field is left empty.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Origin Origin server when the path matches. COS origin with private read/write is not supported. The default origin server will be used by default when this field is left empty.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getOrigin() {
         return this.Origin;
     }
 
     /**
-     * Set Origin-pull server when the path matches. COS source with private read/write is not supported.
-Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param Origin Origin-pull server when the path matches. COS source with private read/write is not supported.
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * Set Origin server when the path matches. COS origin with private read/write is not supported. The default origin server will be used by default when this field is left empty.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Origin Origin server when the path matches. COS origin with private read/write is not supported. The default origin server will be used by default when this field is left empty.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setOrigin(String Origin) {
         this.Origin = Origin;
     }
 
     /**
-     * Get Origin-pull host when the path matches.
-Note: this field may return `null`, indicating that no valid value is obtained. 
-     * @return ServerName Origin-pull host when the path matches.
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * Get Origin server host header when the path matches. The default `ServerName` will be used by default when this field is left empty.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ServerName Origin server host header when the path matches. The default `ServerName` will be used by default when this field is left empty.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getServerName() {
         return this.ServerName;
     }
 
     /**
-     * Set Origin-pull host when the path matches.
-Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param ServerName Origin-pull host when the path matches.
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * Set Origin server host header when the path matches. The default `ServerName` will be used by default when this field is left empty.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ServerName Origin server host header when the path matches. The default `ServerName` will be used by default when this field is left empty.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setServerName(String ServerName) {
         this.ServerName = ServerName;
     }
 
     /**
-     * Get The region of origin server. Valid values: `CN` (mainland China), `OV` (outside mainland China)
-Note: this field may return `null`, indicating that no valid value is obtained. 
-     * @return OriginArea The region of origin server. Valid values: `CN` (mainland China), `OV` (outside mainland China)
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * Get Origin server region. Valid values: CN (the Chinese mainland), OV (outside the Chinese mainland).
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return OriginArea Origin server region. Valid values: CN (the Chinese mainland), OV (outside the Chinese mainland).
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getOriginArea() {
         return this.OriginArea;
     }
 
     /**
-     * Set The region of origin server. Valid values: `CN` (mainland China), `OV` (outside mainland China)
-Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param OriginArea The region of origin server. Valid values: `CN` (mainland China), `OV` (outside mainland China)
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * Set Origin server region. Valid values: CN (the Chinese mainland), OV (outside the Chinese mainland).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param OriginArea Origin server region. Valid values: CN (the Chinese mainland), OV (outside the Chinese mainland).
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setOriginArea(String OriginArea) {
         this.OriginArea = OriginArea;
     }
 
     /**
-     * Get Origin-pull URI path when the path matches.
-Note: this field may return `null`, indicating that no valid value is obtained. 
-     * @return ForwardUri Origin-pull URI path when the path matches.
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * Get Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the matching path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ForwardUri Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the matching path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getForwardUri() {
         return this.ForwardUri;
     }
 
     /**
-     * Set Origin-pull URI path when the path matches.
-Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param ForwardUri Origin-pull URI path when the path matches.
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * Set Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the matching path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ForwardUri Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the matching path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setForwardUri(String ForwardUri) {
         this.ForwardUri = ForwardUri;

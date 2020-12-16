@@ -86,7 +86,7 @@ public class DescribeSlowLogDataRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * Number of results to be returned at a time. Maximum value: 400.
+    * The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
     */
     @SerializedName("Limit")
     @Expose
@@ -237,16 +237,16 @@ public class DescribeSlowLogDataRequest extends AbstractModel{
     }
 
     /**
-     * Get Number of results to be returned at a time. Maximum value: 400. 
-     * @return Limit Number of results to be returned at a time. Maximum value: 400.
+     * Get The number of results per page in paginated queries. Default value: 100. Maximum value: 400. 
+     * @return Limit The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results to be returned at a time. Maximum value: 400.
-     * @param Limit Number of results to be returned at a time. Maximum value: 400.
+     * Set The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
+     * @param Limit The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

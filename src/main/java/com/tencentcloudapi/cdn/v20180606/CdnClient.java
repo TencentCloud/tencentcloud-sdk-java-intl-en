@@ -209,6 +209,26 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the IP information of CDN intermediate nodes. Note: the relevant allowlist needs to be enabled for this API.
+     * @param req DescribeCdnOriginIpRequest
+     * @return DescribeCdnOriginIpResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCdnOriginIpResponse DescribeCdnOriginIp(DescribeCdnOriginIpRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCdnOriginIpResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCdnOriginIpResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCdnOriginIp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to verify an SSL certificate and extract the domain names. It will then return the list of domain names connected to CDN and the list of domain names with the certificate configured.
      * @param req DescribeCertDomainsRequest
      * @return DescribeCertDomainsResponse

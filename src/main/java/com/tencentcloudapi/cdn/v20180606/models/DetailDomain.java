@@ -293,8 +293,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private MaxAge MaxAge;
 
     /**
-    * IPv6 configuration (in beta)
-Note: this field may return null, indicating that no valid values can be obtained.
+    * IPv6 origin-pull configuration (in beta)
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Ipv6")
     @Expose
@@ -416,6 +416,22 @@ Note: this field may return null, indicating that no valid value is obtained.
     @SerializedName("Tag")
     @Expose
     private Tag [] Tag;
+
+    /**
+    * Timestamp hotlink protection advanced configuration (allowlist feature)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AdvancedAuthentication")
+    @Expose
+    private AdvancedAuthentication AdvancedAuthentication;
+
+    /**
+    * Origin-pull authentication advanced configuration (allowlist feature)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("OriginAuthentication")
+    @Expose
+    private OriginAuthentication OriginAuthentication;
 
     /**
      * Get Domain name ID 
@@ -1102,20 +1118,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get IPv6 configuration (in beta)
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Ipv6 IPv6 configuration (in beta)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get IPv6 origin-pull configuration (in beta)
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Ipv6 IPv6 origin-pull configuration (in beta)
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Ipv6 getIpv6() {
         return this.Ipv6;
     }
 
     /**
-     * Set IPv6 configuration (in beta)
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Ipv6 IPv6 configuration (in beta)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set IPv6 origin-pull configuration (in beta)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Ipv6 IPv6 origin-pull configuration (in beta)
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setIpv6(Ipv6 Ipv6) {
         this.Ipv6 = Ipv6;
@@ -1422,6 +1438,46 @@ Note: this field may return null, indicating that no valid value is obtained.
     }
 
     /**
+     * Get Timestamp hotlink protection advanced configuration (allowlist feature)
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return AdvancedAuthentication Timestamp hotlink protection advanced configuration (allowlist feature)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public AdvancedAuthentication getAdvancedAuthentication() {
+        return this.AdvancedAuthentication;
+    }
+
+    /**
+     * Set Timestamp hotlink protection advanced configuration (allowlist feature)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param AdvancedAuthentication Timestamp hotlink protection advanced configuration (allowlist feature)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setAdvancedAuthentication(AdvancedAuthentication AdvancedAuthentication) {
+        this.AdvancedAuthentication = AdvancedAuthentication;
+    }
+
+    /**
+     * Get Origin-pull authentication advanced configuration (allowlist feature)
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return OriginAuthentication Origin-pull authentication advanced configuration (allowlist feature)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public OriginAuthentication getOriginAuthentication() {
+        return this.OriginAuthentication;
+    }
+
+    /**
+     * Set Origin-pull authentication advanced configuration (allowlist feature)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param OriginAuthentication Origin-pull authentication advanced configuration (allowlist feature)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setOriginAuthentication(OriginAuthentication OriginAuthentication) {
+        this.OriginAuthentication = OriginAuthentication;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1473,6 +1529,8 @@ Note: this field may return null, indicating that no valid value is obtained.
         this.setParamObj(map, prefix + "UrlRedirect.", this.UrlRedirect);
         this.setParamArraySimple(map, prefix + "AccessPort.", this.AccessPort);
         this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
+        this.setParamObj(map, prefix + "AdvancedAuthentication.", this.AdvancedAuthentication);
+        this.setParamObj(map, prefix + "OriginAuthentication.", this.OriginAuthentication);
 
     }
 }

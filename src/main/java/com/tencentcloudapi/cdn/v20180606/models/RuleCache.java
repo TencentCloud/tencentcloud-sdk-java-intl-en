@@ -23,13 +23,14 @@ import java.util.HashMap;
 public class RuleCache extends AbstractModel{
 
     /**
-    * Content for each CacheType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-For `index`, enter a backslash (/).
-Note: this field may return null, indicating that no valid value is obtained.
+    * Content for each `CacheType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter the suffix, e.g., `jpg` or `txt`.
+For `directory`, enter the path, e.g., `/xxx/test/`.
+For `path`, enter the absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
+For `default`, enter `no max-age`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("RulePaths")
     @Expose
@@ -37,12 +38,13 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
     * Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
-`index`: home page
-Note: this field may return null, indicating that no valid value is obtained.
+`all`: effective for all files.
+`file`: effective for specified file suffixes.
+`directory`: effective for specified paths.
+`path`: effective for specified absolute paths.
+`index`: homepage.
+`default`: effective when the origin server does not have the `max-age` value.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("RuleType")
     @Expose
@@ -57,40 +59,44 @@ Note: this field may return null, indicating that no valid value is obtained.
     private RuleCacheConfig CacheConfig;
 
     /**
-     * Get Content for each CacheType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-For `index`, enter a backslash (/).
-Note: this field may return null, indicating that no valid value is obtained. 
-     * @return RulePaths Content for each CacheType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-For `index`, enter a backslash (/).
-Note: this field may return null, indicating that no valid value is obtained.
+     * Get Content for each `CacheType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter the suffix, e.g., `jpg` or `txt`.
+For `directory`, enter the path, e.g., `/xxx/test/`.
+For `path`, enter the absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
+For `default`, enter `no max-age`.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return RulePaths Content for each `CacheType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter the suffix, e.g., `jpg` or `txt`.
+For `directory`, enter the path, e.g., `/xxx/test/`.
+For `path`, enter the absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
+For `default`, enter `no max-age`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String [] getRulePaths() {
         return this.RulePaths;
     }
 
     /**
-     * Set Content for each CacheType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-For `index`, enter a backslash (/).
-Note: this field may return null, indicating that no valid value is obtained.
-     * @param RulePaths Content for each CacheType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-For `index`, enter a backslash (/).
-Note: this field may return null, indicating that no valid value is obtained.
+     * Set Content for each `CacheType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter the suffix, e.g., `jpg` or `txt`.
+For `directory`, enter the path, e.g., `/xxx/test/`.
+For `path`, enter the absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
+For `default`, enter `no max-age`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param RulePaths Content for each `CacheType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter the suffix, e.g., `jpg` or `txt`.
+For `directory`, enter the path, e.g., `/xxx/test/`.
+For `path`, enter the absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
+For `default`, enter `no max-age`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setRulePaths(String [] RulePaths) {
         this.RulePaths = RulePaths;
@@ -98,19 +104,21 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
      * Get Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
-`index`: home page
-Note: this field may return null, indicating that no valid value is obtained. 
+`all`: effective for all files.
+`file`: effective for specified file suffixes.
+`directory`: effective for specified paths.
+`path`: effective for specified absolute paths.
+`index`: homepage.
+`default`: effective when the origin server does not have the `max-age` value.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
      * @return RuleType Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
-`index`: home page
-Note: this field may return null, indicating that no valid value is obtained.
+`all`: effective for all files.
+`file`: effective for specified file suffixes.
+`directory`: effective for specified paths.
+`path`: effective for specified absolute paths.
+`index`: homepage.
+`default`: effective when the origin server does not have the `max-age` value.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getRuleType() {
         return this.RuleType;
@@ -118,19 +126,21 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
      * Set Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
-`index`: home page
-Note: this field may return null, indicating that no valid value is obtained.
+`all`: effective for all files.
+`file`: effective for specified file suffixes.
+`directory`: effective for specified paths.
+`path`: effective for specified absolute paths.
+`index`: homepage.
+`default`: effective when the origin server does not have the `max-age` value.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param RuleType Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
-`index`: home page
-Note: this field may return null, indicating that no valid value is obtained.
+`all`: effective for all files.
+`file`: effective for specified file suffixes.
+`directory`: effective for specified paths.
+`path`: effective for specified absolute paths.
+`index`: homepage.
+`default`: effective when the origin server does not have the `max-age` value.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setRuleType(String RuleType) {
         this.RuleType = RuleType;

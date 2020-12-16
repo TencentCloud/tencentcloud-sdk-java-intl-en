@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateServiceRequest extends AbstractModel{
 
     /**
-    * Custom service name. If this parameter is left empty, the system will automatically generate a unique name.
+    * Custom service name.
     */
     @SerializedName("ServiceName")
     @Expose
@@ -86,16 +86,16 @@ public class CreateServiceRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
-     * Get Custom service name. If this parameter is left empty, the system will automatically generate a unique name. 
-     * @return ServiceName Custom service name. If this parameter is left empty, the system will automatically generate a unique name.
+     * Get Custom service name. 
+     * @return ServiceName Custom service name.
      */
     public String getServiceName() {
         return this.ServiceName;
     }
 
     /**
-     * Set Custom service name. If this parameter is left empty, the system will automatically generate a unique name.
-     * @param ServiceName Custom service name. If this parameter is left empty, the system will automatically generate a unique name.
+     * Set Custom service name.
+     * @param ServiceName Custom service name.
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;

@@ -30,49 +30,49 @@ public class AddTimeWindowRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Time period available for maintenance on Monday in the format of 10:00-12:00. Each period lasts from half an hour to three hours, with the start time and end time aligned by half-hour. Up to two time periods can be set. The same rule applies below.
+    * Maintenance window on Monday. The format should be 10:00-12:00. You can set multiple time windows on a day. Each time window lasts from half an hour to three hours, and must start and end on the hour or half hour. At least one time window is required in a week. The same rule applies to the following parameters.
     */
     @SerializedName("Monday")
     @Expose
     private String [] Monday;
 
     /**
-    * Maintenance time window on Tuesday
+    * Maintenance window on Tuesday. At least one time window is required in a week.
     */
     @SerializedName("Tuesday")
     @Expose
     private String [] Tuesday;
 
     /**
-    * Maintenance time window on Wednesday
+    * Maintenance window on Wednesday. At least one time window is required in a week.
     */
     @SerializedName("Wednesday")
     @Expose
     private String [] Wednesday;
 
     /**
-    * Maintenance time window on Thursday
+    * Maintenance window on Thursday. At least one time window is required in a week.
     */
     @SerializedName("Thursday")
     @Expose
     private String [] Thursday;
 
     /**
-    * Maintenance time window on Friday
+    * Maintenance window on Friday. At least one time window is required in a week.
     */
     @SerializedName("Friday")
     @Expose
     private String [] Friday;
 
     /**
-    * Maintenance time window on Saturday
+    * Maintenance window on Saturday. At least one time window is required in a week.
     */
     @SerializedName("Saturday")
     @Expose
     private String [] Saturday;
 
     /**
-    * Maintenance time window on Sunday
+    * Maintenance window on Sunday. At least one time window is required in a week.
     */
     @SerializedName("Sunday")
     @Expose
@@ -95,112 +95,112 @@ public class AddTimeWindowRequest extends AbstractModel{
     }
 
     /**
-     * Get Time period available for maintenance on Monday in the format of 10:00-12:00. Each period lasts from half an hour to three hours, with the start time and end time aligned by half-hour. Up to two time periods can be set. The same rule applies below. 
-     * @return Monday Time period available for maintenance on Monday in the format of 10:00-12:00. Each period lasts from half an hour to three hours, with the start time and end time aligned by half-hour. Up to two time periods can be set. The same rule applies below.
+     * Get Maintenance window on Monday. The format should be 10:00-12:00. You can set multiple time windows on a day. Each time window lasts from half an hour to three hours, and must start and end on the hour or half hour. At least one time window is required in a week. The same rule applies to the following parameters. 
+     * @return Monday Maintenance window on Monday. The format should be 10:00-12:00. You can set multiple time windows on a day. Each time window lasts from half an hour to three hours, and must start and end on the hour or half hour. At least one time window is required in a week. The same rule applies to the following parameters.
      */
     public String [] getMonday() {
         return this.Monday;
     }
 
     /**
-     * Set Time period available for maintenance on Monday in the format of 10:00-12:00. Each period lasts from half an hour to three hours, with the start time and end time aligned by half-hour. Up to two time periods can be set. The same rule applies below.
-     * @param Monday Time period available for maintenance on Monday in the format of 10:00-12:00. Each period lasts from half an hour to three hours, with the start time and end time aligned by half-hour. Up to two time periods can be set. The same rule applies below.
+     * Set Maintenance window on Monday. The format should be 10:00-12:00. You can set multiple time windows on a day. Each time window lasts from half an hour to three hours, and must start and end on the hour or half hour. At least one time window is required in a week. The same rule applies to the following parameters.
+     * @param Monday Maintenance window on Monday. The format should be 10:00-12:00. You can set multiple time windows on a day. Each time window lasts from half an hour to three hours, and must start and end on the hour or half hour. At least one time window is required in a week. The same rule applies to the following parameters.
      */
     public void setMonday(String [] Monday) {
         this.Monday = Monday;
     }
 
     /**
-     * Get Maintenance time window on Tuesday 
-     * @return Tuesday Maintenance time window on Tuesday
+     * Get Maintenance window on Tuesday. At least one time window is required in a week. 
+     * @return Tuesday Maintenance window on Tuesday. At least one time window is required in a week.
      */
     public String [] getTuesday() {
         return this.Tuesday;
     }
 
     /**
-     * Set Maintenance time window on Tuesday
-     * @param Tuesday Maintenance time window on Tuesday
+     * Set Maintenance window on Tuesday. At least one time window is required in a week.
+     * @param Tuesday Maintenance window on Tuesday. At least one time window is required in a week.
      */
     public void setTuesday(String [] Tuesday) {
         this.Tuesday = Tuesday;
     }
 
     /**
-     * Get Maintenance time window on Wednesday 
-     * @return Wednesday Maintenance time window on Wednesday
+     * Get Maintenance window on Wednesday. At least one time window is required in a week. 
+     * @return Wednesday Maintenance window on Wednesday. At least one time window is required in a week.
      */
     public String [] getWednesday() {
         return this.Wednesday;
     }
 
     /**
-     * Set Maintenance time window on Wednesday
-     * @param Wednesday Maintenance time window on Wednesday
+     * Set Maintenance window on Wednesday. At least one time window is required in a week.
+     * @param Wednesday Maintenance window on Wednesday. At least one time window is required in a week.
      */
     public void setWednesday(String [] Wednesday) {
         this.Wednesday = Wednesday;
     }
 
     /**
-     * Get Maintenance time window on Thursday 
-     * @return Thursday Maintenance time window on Thursday
+     * Get Maintenance window on Thursday. At least one time window is required in a week. 
+     * @return Thursday Maintenance window on Thursday. At least one time window is required in a week.
      */
     public String [] getThursday() {
         return this.Thursday;
     }
 
     /**
-     * Set Maintenance time window on Thursday
-     * @param Thursday Maintenance time window on Thursday
+     * Set Maintenance window on Thursday. At least one time window is required in a week.
+     * @param Thursday Maintenance window on Thursday. At least one time window is required in a week.
      */
     public void setThursday(String [] Thursday) {
         this.Thursday = Thursday;
     }
 
     /**
-     * Get Maintenance time window on Friday 
-     * @return Friday Maintenance time window on Friday
+     * Get Maintenance window on Friday. At least one time window is required in a week. 
+     * @return Friday Maintenance window on Friday. At least one time window is required in a week.
      */
     public String [] getFriday() {
         return this.Friday;
     }
 
     /**
-     * Set Maintenance time window on Friday
-     * @param Friday Maintenance time window on Friday
+     * Set Maintenance window on Friday. At least one time window is required in a week.
+     * @param Friday Maintenance window on Friday. At least one time window is required in a week.
      */
     public void setFriday(String [] Friday) {
         this.Friday = Friday;
     }
 
     /**
-     * Get Maintenance time window on Saturday 
-     * @return Saturday Maintenance time window on Saturday
+     * Get Maintenance window on Saturday. At least one time window is required in a week. 
+     * @return Saturday Maintenance window on Saturday. At least one time window is required in a week.
      */
     public String [] getSaturday() {
         return this.Saturday;
     }
 
     /**
-     * Set Maintenance time window on Saturday
-     * @param Saturday Maintenance time window on Saturday
+     * Set Maintenance window on Saturday. At least one time window is required in a week.
+     * @param Saturday Maintenance window on Saturday. At least one time window is required in a week.
      */
     public void setSaturday(String [] Saturday) {
         this.Saturday = Saturday;
     }
 
     /**
-     * Get Maintenance time window on Sunday 
-     * @return Sunday Maintenance time window on Sunday
+     * Get Maintenance window on Sunday. At least one time window is required in a week. 
+     * @return Sunday Maintenance window on Sunday. At least one time window is required in a week.
      */
     public String [] getSunday() {
         return this.Sunday;
     }
 
     /**
-     * Set Maintenance time window on Sunday
-     * @param Sunday Maintenance time window on Sunday
+     * Set Maintenance window on Sunday. At least one time window is required in a week.
+     * @param Sunday Maintenance window on Sunday. At least one time window is required in a week.
      */
     public void setSunday(String [] Sunday) {
         this.Sunday = Sunday;

@@ -159,6 +159,26 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to restart Kibana. 
+     * @param req RestartKibanaRequest
+     * @return RestartKibanaResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestartKibanaResponse RestartKibana(RestartKibanaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RestartKibanaResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RestartKibanaResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RestartKibana");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to restart cluster nodes.
      * @param req RestartNodesRequest
      * @return RestartNodesResponse

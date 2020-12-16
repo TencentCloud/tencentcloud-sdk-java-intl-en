@@ -23,16 +23,18 @@ import java.util.HashMap;
 public class LivenessCompareRequest extends AbstractModel{
 
     /**
-    * Base64 value of a photo for face comparison;
-Base64-encoded image data is up to 3 MB. Only JPG and PNG formats are supported.
+    * Base64 string of the image for face comparison.
+The size of the Base64-encoded image data can be up to 3 MB. JPG and PNG formats are supported.
+Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
     */
     @SerializedName("ImageBase64")
     @Expose
     private String ImageBase64;
 
     /**
-    * Base64 value of a video for liveness detection;
-The size after Base64-encoding cannot exceed 5 MB. MP4, AVI, and FLV formats are supported.
+    * Base64 string of the video for liveness detection.
+The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV formats are supported.
+Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
     */
     @SerializedName("VideoBase64")
     @Expose
@@ -63,40 +65,48 @@ Input parameter for silent mode: empty.
     private String Optional;
 
     /**
-     * Get Base64 value of a photo for face comparison;
-Base64-encoded image data is up to 3 MB. Only JPG and PNG formats are supported. 
-     * @return ImageBase64 Base64 value of a photo for face comparison;
-Base64-encoded image data is up to 3 MB. Only JPG and PNG formats are supported.
+     * Get Base64 string of the image for face comparison.
+The size of the Base64-encoded image data can be up to 3 MB. JPG and PNG formats are supported.
+Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648. 
+     * @return ImageBase64 Base64 string of the image for face comparison.
+The size of the Base64-encoded image data can be up to 3 MB. JPG and PNG formats are supported.
+Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
      */
     public String getImageBase64() {
         return this.ImageBase64;
     }
 
     /**
-     * Set Base64 value of a photo for face comparison;
-Base64-encoded image data is up to 3 MB. Only JPG and PNG formats are supported.
-     * @param ImageBase64 Base64 value of a photo for face comparison;
-Base64-encoded image data is up to 3 MB. Only JPG and PNG formats are supported.
+     * Set Base64 string of the image for face comparison.
+The size of the Base64-encoded image data can be up to 3 MB. JPG and PNG formats are supported.
+Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
+     * @param ImageBase64 Base64 string of the image for face comparison.
+The size of the Base64-encoded image data can be up to 3 MB. JPG and PNG formats are supported.
+Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
      */
     public void setImageBase64(String ImageBase64) {
         this.ImageBase64 = ImageBase64;
     }
 
     /**
-     * Get Base64 value of a video for liveness detection;
-The size after Base64-encoding cannot exceed 5 MB. MP4, AVI, and FLV formats are supported. 
-     * @return VideoBase64 Base64 value of a video for liveness detection;
-The size after Base64-encoding cannot exceed 5 MB. MP4, AVI, and FLV formats are supported.
+     * Get Base64 string of the video for liveness detection.
+The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV formats are supported.
+Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648. 
+     * @return VideoBase64 Base64 string of the video for liveness detection.
+The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV formats are supported.
+Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
      */
     public String getVideoBase64() {
         return this.VideoBase64;
     }
 
     /**
-     * Set Base64 value of a video for liveness detection;
-The size after Base64-encoding cannot exceed 5 MB. MP4, AVI, and FLV formats are supported.
-     * @param VideoBase64 Base64 value of a video for liveness detection;
-The size after Base64-encoding cannot exceed 5 MB. MP4, AVI, and FLV formats are supported.
+     * Set Base64 string of the video for liveness detection.
+The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV formats are supported.
+Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
+     * @param VideoBase64 Base64 string of the video for liveness detection.
+The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV formats are supported.
+Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
      */
     public void setVideoBase64(String VideoBase64) {
         this.VideoBase64 = VideoBase64;

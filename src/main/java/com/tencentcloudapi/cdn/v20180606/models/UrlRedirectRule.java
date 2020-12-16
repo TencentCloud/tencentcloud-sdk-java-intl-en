@@ -30,18 +30,25 @@ public class UrlRedirectRule extends AbstractModel{
     private Long RedirectStatusCode;
 
     /**
-    * Pattern of the URL to be matched, which can contain up to 1,024 characters. Full-path match and regex match are supported.
+    * URL to be matched. Only URLs are supported, while parameters are not. The exact match is used by default. In regex match, up to 5 wildcards `*` are supported. The URL can contain up to 1,024 characters.
     */
     @SerializedName("Pattern")
     @Expose
     private String Pattern;
 
     /**
-    * Target URL, which must begin with `/` and can contain up to 1,024 characters.
+    * Target URL, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the matching path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
     */
     @SerializedName("RedirectUrl")
     @Expose
     private String RedirectUrl;
+
+    /**
+    * 
+    */
+    @SerializedName("RedirectHost")
+    @Expose
+    private String RedirectHost;
 
     /**
      * Get Redirect status code. Valid values: 301, 302 
@@ -60,35 +67,51 @@ public class UrlRedirectRule extends AbstractModel{
     }
 
     /**
-     * Get Pattern of the URL to be matched, which can contain up to 1,024 characters. Full-path match and regex match are supported. 
-     * @return Pattern Pattern of the URL to be matched, which can contain up to 1,024 characters. Full-path match and regex match are supported.
+     * Get URL to be matched. Only URLs are supported, while parameters are not. The exact match is used by default. In regex match, up to 5 wildcards `*` are supported. The URL can contain up to 1,024 characters. 
+     * @return Pattern URL to be matched. Only URLs are supported, while parameters are not. The exact match is used by default. In regex match, up to 5 wildcards `*` are supported. The URL can contain up to 1,024 characters.
      */
     public String getPattern() {
         return this.Pattern;
     }
 
     /**
-     * Set Pattern of the URL to be matched, which can contain up to 1,024 characters. Full-path match and regex match are supported.
-     * @param Pattern Pattern of the URL to be matched, which can contain up to 1,024 characters. Full-path match and regex match are supported.
+     * Set URL to be matched. Only URLs are supported, while parameters are not. The exact match is used by default. In regex match, up to 5 wildcards `*` are supported. The URL can contain up to 1,024 characters.
+     * @param Pattern URL to be matched. Only URLs are supported, while parameters are not. The exact match is used by default. In regex match, up to 5 wildcards `*` are supported. The URL can contain up to 1,024 characters.
      */
     public void setPattern(String Pattern) {
         this.Pattern = Pattern;
     }
 
     /**
-     * Get Target URL, which must begin with `/` and can contain up to 1,024 characters. 
-     * @return RedirectUrl Target URL, which must begin with `/` and can contain up to 1,024 characters.
+     * Get Target URL, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the matching path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured. 
+     * @return RedirectUrl Target URL, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the matching path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
      */
     public String getRedirectUrl() {
         return this.RedirectUrl;
     }
 
     /**
-     * Set Target URL, which must begin with `/` and can contain up to 1,024 characters.
-     * @param RedirectUrl Target URL, which must begin with `/` and can contain up to 1,024 characters.
+     * Set Target URL, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the matching path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
+     * @param RedirectUrl Target URL, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the matching path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
      */
     public void setRedirectUrl(String RedirectUrl) {
         this.RedirectUrl = RedirectUrl;
+    }
+
+    /**
+     * Get  
+     * @return RedirectHost 
+     */
+    public String getRedirectHost() {
+        return this.RedirectHost;
+    }
+
+    /**
+     * Set 
+     * @param RedirectHost 
+     */
+    public void setRedirectHost(String RedirectHost) {
+        this.RedirectHost = RedirectHost;
     }
 
     /**
@@ -98,6 +121,7 @@ public class UrlRedirectRule extends AbstractModel{
         this.setParamSimple(map, prefix + "RedirectStatusCode", this.RedirectStatusCode);
         this.setParamSimple(map, prefix + "Pattern", this.Pattern);
         this.setParamSimple(map, prefix + "RedirectUrl", this.RedirectUrl);
+        this.setParamSimple(map, prefix + "RedirectHost", this.RedirectHost);
 
     }
 }

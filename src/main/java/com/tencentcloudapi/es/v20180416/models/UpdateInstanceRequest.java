@@ -45,7 +45,7 @@ Number of nodes (2-50)
     private Long NodeNum;
 
     /**
-    * Configuration item (JSON string)
+    * ES configuration item (JSON string)
     */
     @SerializedName("EsConfig")
     @Expose
@@ -190,6 +190,13 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
     private Long SceneType;
 
     /**
+    * Kibana configuration item (JSON string)
+    */
+    @SerializedName("KibanaConfig")
+    @Expose
+    private String KibanaConfig;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -242,16 +249,16 @@ Number of nodes (2-50)
     }
 
     /**
-     * Get Configuration item (JSON string) 
-     * @return EsConfig Configuration item (JSON string)
+     * Get ES configuration item (JSON string) 
+     * @return EsConfig ES configuration item (JSON string)
      */
     public String getEsConfig() {
         return this.EsConfig;
     }
 
     /**
-     * Set Configuration item (JSON string)
-     * @param EsConfig Configuration item (JSON string)
+     * Set ES configuration item (JSON string)
+     * @param EsConfig ES configuration item (JSON string)
      */
     public void setEsConfig(String EsConfig) {
         this.EsConfig = EsConfig;
@@ -582,6 +589,22 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
     }
 
     /**
+     * Get Kibana configuration item (JSON string) 
+     * @return KibanaConfig Kibana configuration item (JSON string)
+     */
+    public String getKibanaConfig() {
+        return this.KibanaConfig;
+    }
+
+    /**
+     * Set Kibana configuration item (JSON string)
+     * @param KibanaConfig Kibana configuration item (JSON string)
+     */
+    public void setKibanaConfig(String KibanaConfig) {
+        this.KibanaConfig = KibanaConfig;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -608,6 +631,7 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
         this.setParamSimple(map, prefix + "ScaleType", this.ScaleType);
         this.setParamArrayObj(map, prefix + "MultiZoneInfo.", this.MultiZoneInfo);
         this.setParamSimple(map, prefix + "SceneType", this.SceneType);
+        this.setParamSimple(map, prefix + "KibanaConfig", this.KibanaConfig);
 
     }
 }

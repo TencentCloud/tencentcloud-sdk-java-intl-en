@@ -268,6 +268,20 @@ global: global acceleration
     private Long [] AccessPort;
 
     /**
+    * Timestamp hotlink protection advanced configuration (allowlist feature)
+    */
+    @SerializedName("AdvancedAuthentication")
+    @Expose
+    private AdvancedAuthentication AdvancedAuthentication;
+
+    /**
+    * Origin-pull authentication advanced configuration (allowlist feature)
+    */
+    @SerializedName("OriginAuthentication")
+    @Expose
+    private OriginAuthentication OriginAuthentication;
+
+    /**
      * Get Domain name 
      * @return Domain Domain name
      */
@@ -840,6 +854,38 @@ global: global acceleration
     }
 
     /**
+     * Get Timestamp hotlink protection advanced configuration (allowlist feature) 
+     * @return AdvancedAuthentication Timestamp hotlink protection advanced configuration (allowlist feature)
+     */
+    public AdvancedAuthentication getAdvancedAuthentication() {
+        return this.AdvancedAuthentication;
+    }
+
+    /**
+     * Set Timestamp hotlink protection advanced configuration (allowlist feature)
+     * @param AdvancedAuthentication Timestamp hotlink protection advanced configuration (allowlist feature)
+     */
+    public void setAdvancedAuthentication(AdvancedAuthentication AdvancedAuthentication) {
+        this.AdvancedAuthentication = AdvancedAuthentication;
+    }
+
+    /**
+     * Get Origin-pull authentication advanced configuration (allowlist feature) 
+     * @return OriginAuthentication Origin-pull authentication advanced configuration (allowlist feature)
+     */
+    public OriginAuthentication getOriginAuthentication() {
+        return this.OriginAuthentication;
+    }
+
+    /**
+     * Set Origin-pull authentication advanced configuration (allowlist feature)
+     * @param OriginAuthentication Origin-pull authentication advanced configuration (allowlist feature)
+     */
+    public void setOriginAuthentication(OriginAuthentication OriginAuthentication) {
+        this.OriginAuthentication = OriginAuthentication;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -877,6 +923,8 @@ global: global acceleration
         this.setParamObj(map, prefix + "AccessControl.", this.AccessControl);
         this.setParamObj(map, prefix + "UrlRedirect.", this.UrlRedirect);
         this.setParamArraySimple(map, prefix + "AccessPort.", this.AccessPort);
+        this.setParamObj(map, prefix + "AdvancedAuthentication.", this.AdvancedAuthentication);
+        this.setParamObj(map, prefix + "OriginAuthentication.", this.OriginAuthentication);
 
     }
 }

@@ -30,7 +30,7 @@ public class CreateApiRequest extends AbstractModel{
     private String ServiceId;
 
     /**
-    * API backend service type. Valid values: HTTP, MOCK, TSF, CLB, SCF, WEBSOCKET, TARGET (in beta test).
+    * API backend service type. Valid values: HTTP, MOCK, TSF, SCF, WEBSOCKET, TARGET (in beta test).
     */
     @SerializedName("ServiceType")
     @Expose
@@ -44,7 +44,7 @@ public class CreateApiRequest extends AbstractModel{
     private Long ServiceTimeout;
 
     /**
-    * API frontend request type, such as HTTP, HTTPS, or HTTP and HTTPS.
+    * API frontend request protocol. Valid values: HTTPS, WEBSOCKET.
     */
     @SerializedName("Protocol")
     @Expose
@@ -354,16 +354,16 @@ public class CreateApiRequest extends AbstractModel{
     }
 
     /**
-     * Get API backend service type. Valid values: HTTP, MOCK, TSF, CLB, SCF, WEBSOCKET, TARGET (in beta test). 
-     * @return ServiceType API backend service type. Valid values: HTTP, MOCK, TSF, CLB, SCF, WEBSOCKET, TARGET (in beta test).
+     * Get API backend service type. Valid values: HTTP, MOCK, TSF, SCF, WEBSOCKET, TARGET (in beta test). 
+     * @return ServiceType API backend service type. Valid values: HTTP, MOCK, TSF, SCF, WEBSOCKET, TARGET (in beta test).
      */
     public String getServiceType() {
         return this.ServiceType;
     }
 
     /**
-     * Set API backend service type. Valid values: HTTP, MOCK, TSF, CLB, SCF, WEBSOCKET, TARGET (in beta test).
-     * @param ServiceType API backend service type. Valid values: HTTP, MOCK, TSF, CLB, SCF, WEBSOCKET, TARGET (in beta test).
+     * Set API backend service type. Valid values: HTTP, MOCK, TSF, SCF, WEBSOCKET, TARGET (in beta test).
+     * @param ServiceType API backend service type. Valid values: HTTP, MOCK, TSF, SCF, WEBSOCKET, TARGET (in beta test).
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;
@@ -386,16 +386,16 @@ public class CreateApiRequest extends AbstractModel{
     }
 
     /**
-     * Get API frontend request type, such as HTTP, HTTPS, or HTTP and HTTPS. 
-     * @return Protocol API frontend request type, such as HTTP, HTTPS, or HTTP and HTTPS.
+     * Get API frontend request protocol. Valid values: HTTPS, WEBSOCKET. 
+     * @return Protocol API frontend request protocol. Valid values: HTTPS, WEBSOCKET.
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set API frontend request type, such as HTTP, HTTPS, or HTTP and HTTPS.
-     * @param Protocol API frontend request type, such as HTTP, HTTPS, or HTTP and HTTPS.
+     * Set API frontend request protocol. Valid values: HTTPS, WEBSOCKET.
+     * @param Protocol API frontend request protocol. Valid values: HTTPS, WEBSOCKET.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

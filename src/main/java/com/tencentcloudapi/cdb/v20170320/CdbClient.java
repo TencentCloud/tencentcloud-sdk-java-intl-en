@@ -159,6 +159,26 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a clone of a specific instance, and roll back the clone by using a physical backup file of the instance or roll back the clone to a point in time.
+     * @param req CreateCloneInstanceRequest
+     * @return CreateCloneInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloneInstanceResponse CreateCloneInstance(CreateCloneInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCloneInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCloneInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCloneInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (CreateDBImportJob) is used to create a data import task for a TencentDB instance.
 
 Note that the files for a data import task must be uploaded to Tencent Cloud in advance. You need to do so in the console.
@@ -585,6 +605,26 @@ The new API (CreateBackup) can specify the table to be backed up when a logical 
                 Type type = new TypeToken<JsonResponseModel<DescribeBinlogsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeBinlogs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the clone task list of an instance.
+     * @param req DescribeCloneListRequest
+     * @return DescribeCloneListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloneListResponse DescribeCloneList(DescribeCloneListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCloneListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCloneListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCloneList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1758,6 +1798,26 @@ Note:
                 Type type = new TypeToken<JsonResponseModel<StopDBImportJobResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "StopDBImportJob");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to cancel a rollback task in progress, and returns an async task ID. You can use the `DescribeAsyncRequestInfo` API to query the result of cancellation.
+     * @param req StopRollbackRequest
+     * @return StopRollbackResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopRollbackResponse StopRollback(StopRollbackRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopRollbackResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopRollbackResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StopRollback");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
