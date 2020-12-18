@@ -44,7 +44,8 @@ public class UrlRedirectRule extends AbstractModel{
     private String RedirectUrl;
 
     /**
-    * 
+    * Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, “http://[current domain name]” will be used by default.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("RedirectHost")
     @Expose
@@ -99,16 +100,20 @@ public class UrlRedirectRule extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return RedirectHost 
+     * Get Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, “http://[current domain name]” will be used by default.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return RedirectHost Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, “http://[current domain name]” will be used by default.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getRedirectHost() {
         return this.RedirectHost;
     }
 
     /**
-     * Set 
-     * @param RedirectHost 
+     * Set Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, “http://[current domain name]” will be used by default.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param RedirectHost Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, “http://[current domain name]” will be used by default.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setRedirectHost(String RedirectHost) {
         this.RedirectHost = RedirectHost;

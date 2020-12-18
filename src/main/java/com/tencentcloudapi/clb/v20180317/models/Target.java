@@ -24,7 +24,8 @@ public class Target extends AbstractModel{
 
     /**
     * Listening port of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this parameter is required when binding a CVM or ENI.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Port")
     @Expose
@@ -39,9 +40,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Type;
 
     /**
-    * Unique ID of a CVM instance, which needs to be passed in when binding a CVM instance and can be obtained from the InstanceId field in the return of the DescribeInstances API.
-Note: Either InstanceId or EniIp must be passed in.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API.
+Note: either `InstanceId` or `EniIp` must be passed in.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -55,8 +56,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Weight;
 
     /**
-    * This parameter must be passed in when you bind an ENI, which represents the IP address of the ENI. The ENI has to be bound to a CVM instance first before it can be bound to a CLB instance. Note: Either InstanceId or EniIp must be passed in. To bind an ENI, you need to submit a ticket for application first.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * IP of an ENI, which is required when binding an ENI. To bind an ENI with a CLB, you must bind it with a CVM first.
+Note: either `InstanceId` or `EniIp` must be passed in. Binding ENI is now only available to beta users. Please submit a ticket to apply for it if necessary. 
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("EniIp")
     @Expose
@@ -64,9 +66,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Listening port of a real server
-Note: This field may return null, indicating that no valid values can be obtained. 
+Note: this parameter is required when binding a CVM or ENI.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
      * @return Port Listening port of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this parameter is required when binding a CVM or ENI.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getPort() {
         return this.Port;
@@ -74,9 +78,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Listening port of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this parameter is required when binding a CVM or ENI.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param Port Listening port of a real server
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this parameter is required when binding a CVM or ENI.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setPort(Long Port) {
         this.Port = Port;
@@ -103,24 +109,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Unique ID of a CVM instance, which needs to be passed in when binding a CVM instance and can be obtained from the InstanceId field in the return of the DescribeInstances API.
-Note: Either InstanceId or EniIp must be passed in.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceId Unique ID of a CVM instance, which needs to be passed in when binding a CVM instance and can be obtained from the InstanceId field in the return of the DescribeInstances API.
-Note: Either InstanceId or EniIp must be passed in.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API.
+Note: either `InstanceId` or `EniIp` must be passed in.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return InstanceId Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API.
+Note: either `InstanceId` or `EniIp` must be passed in.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Unique ID of a CVM instance, which needs to be passed in when binding a CVM instance and can be obtained from the InstanceId field in the return of the DescribeInstances API.
-Note: Either InstanceId or EniIp must be passed in.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceId Unique ID of a CVM instance, which needs to be passed in when binding a CVM instance and can be obtained from the InstanceId field in the return of the DescribeInstances API.
-Note: Either InstanceId or EniIp must be passed in.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API.
+Note: either `InstanceId` or `EniIp` must be passed in.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param InstanceId Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API.
+Note: either `InstanceId` or `EniIp` must be passed in.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -143,20 +149,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get This parameter must be passed in when you bind an ENI, which represents the IP address of the ENI. The ENI has to be bound to a CVM instance first before it can be bound to a CLB instance. Note: Either InstanceId or EniIp must be passed in. To bind an ENI, you need to submit a ticket for application first.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EniIp This parameter must be passed in when you bind an ENI, which represents the IP address of the ENI. The ENI has to be bound to a CVM instance first before it can be bound to a CLB instance. Note: Either InstanceId or EniIp must be passed in. To bind an ENI, you need to submit a ticket for application first.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get IP of an ENI, which is required when binding an ENI. To bind an ENI with a CLB, you must bind it with a CVM first.
+Note: either `InstanceId` or `EniIp` must be passed in. Binding ENI is now only available to beta users. Please submit a ticket to apply for it if necessary. 
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return EniIp IP of an ENI, which is required when binding an ENI. To bind an ENI with a CLB, you must bind it with a CVM first.
+Note: either `InstanceId` or `EniIp` must be passed in. Binding ENI is now only available to beta users. Please submit a ticket to apply for it if necessary. 
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getEniIp() {
         return this.EniIp;
     }
 
     /**
-     * Set This parameter must be passed in when you bind an ENI, which represents the IP address of the ENI. The ENI has to be bound to a CVM instance first before it can be bound to a CLB instance. Note: Either InstanceId or EniIp must be passed in. To bind an ENI, you need to submit a ticket for application first.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EniIp This parameter must be passed in when you bind an ENI, which represents the IP address of the ENI. The ENI has to be bound to a CVM instance first before it can be bound to a CLB instance. Note: Either InstanceId or EniIp must be passed in. To bind an ENI, you need to submit a ticket for application first.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set IP of an ENI, which is required when binding an ENI. To bind an ENI with a CLB, you must bind it with a CVM first.
+Note: either `InstanceId` or `EniIp` must be passed in. Binding ENI is now only available to beta users. Please submit a ticket to apply for it if necessary. 
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param EniIp IP of an ENI, which is required when binding an ENI. To bind an ENI with a CLB, you must bind it with a CVM first.
+Note: either `InstanceId` or `EniIp` must be passed in. Binding ENI is now only available to beta users. Please submit a ticket to apply for it if necessary. 
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setEniIp(String EniIp) {
         this.EniIp = EniIp;

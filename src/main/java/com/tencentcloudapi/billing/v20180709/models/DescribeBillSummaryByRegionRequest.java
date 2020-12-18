@@ -23,6 +23,20 @@ import java.util.HashMap;
 public class DescribeBillSummaryByRegionRequest extends AbstractModel{
 
     /**
+    * The value must be of the same month as `EndTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
+    */
+    @SerializedName("BeginTime")
+    @Expose
+    private String BeginTime;
+
+    /**
+    * The value must be of the same month as `BeginTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
     * Queries bill data user's UIN
     */
     @SerializedName("PayerUin")
@@ -30,18 +44,36 @@ public class DescribeBillSummaryByRegionRequest extends AbstractModel{
     private String PayerUin;
 
     /**
-    * Only beginning in the current month is supported, and it must be the same month as the EndTime. For example, 2018-09-01 00:00:00.
-    */
-    @SerializedName("BeginTime")
-    @Expose
-    private String BeginTime;
+     * Get The value must be of the same month as `EndTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018. 
+     * @return BeginTime The value must be of the same month as `EndTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
+     */
+    public String getBeginTime() {
+        return this.BeginTime;
+    }
 
     /**
-    * Only ending in the current month is supported, and it must be the same month as the BeginTime. For example, 2018-09-30 23:59:59.
-    */
-    @SerializedName("EndTime")
-    @Expose
-    private String EndTime;
+     * Set The value must be of the same month as `EndTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
+     * @param BeginTime The value must be of the same month as `EndTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
+     */
+    public void setBeginTime(String BeginTime) {
+        this.BeginTime = BeginTime;
+    }
+
+    /**
+     * Get The value must be of the same month as `BeginTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018. 
+     * @return EndTime The value must be of the same month as `BeginTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set The value must be of the same month as `BeginTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
+     * @param EndTime The value must be of the same month as `BeginTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
 
     /**
      * Get Queries bill data user's UIN 
@@ -60,44 +92,12 @@ public class DescribeBillSummaryByRegionRequest extends AbstractModel{
     }
 
     /**
-     * Get Only beginning in the current month is supported, and it must be the same month as the EndTime. For example, 2018-09-01 00:00:00. 
-     * @return BeginTime Only beginning in the current month is supported, and it must be the same month as the EndTime. For example, 2018-09-01 00:00:00.
-     */
-    public String getBeginTime() {
-        return this.BeginTime;
-    }
-
-    /**
-     * Set Only beginning in the current month is supported, and it must be the same month as the EndTime. For example, 2018-09-01 00:00:00.
-     * @param BeginTime Only beginning in the current month is supported, and it must be the same month as the EndTime. For example, 2018-09-01 00:00:00.
-     */
-    public void setBeginTime(String BeginTime) {
-        this.BeginTime = BeginTime;
-    }
-
-    /**
-     * Get Only ending in the current month is supported, and it must be the same month as the BeginTime. For example, 2018-09-30 23:59:59. 
-     * @return EndTime Only ending in the current month is supported, and it must be the same month as the BeginTime. For example, 2018-09-30 23:59:59.
-     */
-    public String getEndTime() {
-        return this.EndTime;
-    }
-
-    /**
-     * Set Only ending in the current month is supported, and it must be the same month as the BeginTime. For example, 2018-09-30 23:59:59.
-     * @param EndTime Only ending in the current month is supported, and it must be the same month as the BeginTime. For example, 2018-09-30 23:59:59.
-     */
-    public void setEndTime(String EndTime) {
-        this.EndTime = EndTime;
-    }
-
-    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "PayerUin", this.PayerUin);
         this.setParamSimple(map, prefix + "BeginTime", this.BeginTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "PayerUin", this.PayerUin);
 
     }
 }

@@ -39,22 +39,18 @@ public class CloudauditClient extends AbstractClient{
     }
 
     /**
-     *Parameter requirements:
-1. If the value of `IsCreateNewBucket` exists, `cosRegion` and `cosBucketName` are required.
-2. If the value of `IsEnableCmqNotify` is 1, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` are required.
-3. If the value of `IsEnableCmqNotify` is 0, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` cannot be passed in.
-4. If the value of `IsEnableKmsEncry` is 1, `KmsRegion` and `KeyId` are required.
-     * @param req CreateAuditRequest
-     * @return CreateAuditResponse
+     *This API is used to create resource recorders to detect and record resource configuration changes.
+     * @param req CreateRecorderRequest
+     * @return CreateRecorderResponse
      * @throws TencentCloudSDKException
      */
-    public CreateAuditResponse CreateAudit(CreateAuditRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateAuditResponse> rsp = null;
+    public CreateRecorderResponse CreateRecorder(CreateRecorderRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateRecorderResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateAuditResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<CreateRecorderResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "CreateAudit");
+                rspStr = this.internalRequest(req, "CreateRecorder");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -63,18 +59,18 @@ public class CloudauditClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete a tracking set.
-     * @param req DeleteAuditRequest
-     * @return DeleteAuditResponse
+     *This API is used to delete resource recorders. After deletion, resource configuration changes will not be recorded.
+     * @param req DeleteRecorderRequest
+     * @return DeleteRecorderResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteAuditResponse DeleteAudit(DeleteAuditRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteAuditResponse> rsp = null;
+    public DeleteRecorderResponse DeleteRecorder(DeleteRecorderRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRecorderResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteAuditResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DeleteRecorderResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "DeleteAudit");
+                rspStr = this.internalRequest(req, "DeleteRecorder");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -83,18 +79,18 @@ public class CloudauditClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the details of a tracking set.
-     * @param req DescribeAuditRequest
-     * @return DescribeAuditResponse
+     *This API is used to view the basic information of discovered resources.
+     * @param req DescribeDiscoveredResourceRequest
+     * @return DescribeDiscoveredResourceResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeAuditResponse DescribeAudit(DescribeAuditRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAuditResponse> rsp = null;
+    public DescribeDiscoveredResourceResponse DescribeDiscoveredResource(DescribeDiscoveredResourceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDiscoveredResourceResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAuditResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DescribeDiscoveredResourceResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "DescribeAudit");
+                rspStr = this.internalRequest(req, "DescribeDiscoveredResource");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -103,18 +99,18 @@ public class CloudauditClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the valid values range of `AttributeKey`.
-     * @param req GetAttributeKeyRequest
-     * @return GetAttributeKeyResponse
+     *This API is used to display current configurations and status of a recorder.
+     * @param req DescribeRecorderRequest
+     * @return DescribeRecorderResponse
      * @throws TencentCloudSDKException
      */
-    public GetAttributeKeyResponse GetAttributeKey(GetAttributeKeyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetAttributeKeyResponse> rsp = null;
+    public DescribeRecorderResponse DescribeRecorder(DescribeRecorderRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRecorderResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<GetAttributeKeyResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DescribeRecorderResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "GetAttributeKey");
+                rspStr = this.internalRequest(req, "DescribeRecorder");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -123,18 +119,18 @@ public class CloudauditClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the number of tracking sets that can be created.
-     * @param req InquireAuditCreditRequest
-     * @return InquireAuditCreditResponse
+     *This API is used to get the list of resource configuration items and display resource configuration changes in chronological order.
+     * @param req GetConfigurationItemsRequest
+     * @return GetConfigurationItemsResponse
      * @throws TencentCloudSDKException
      */
-    public InquireAuditCreditResponse InquireAuditCredit(InquireAuditCreditRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<InquireAuditCreditResponse> rsp = null;
+    public GetConfigurationItemsResponse GetConfigurationItems(GetConfigurationItemsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetConfigurationItemsResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<InquireAuditCreditResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<GetConfigurationItemsResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "InquireAuditCredit");
+                rspStr = this.internalRequest(req, "GetConfigurationItems");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -143,18 +139,18 @@ public class CloudauditClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the summary of tracking sets.
-     * @param req ListAuditsRequest
-     * @return ListAuditsResponse
+     *This API is used to view the list of discovered resources.
+     * @param req ListDiscoveredResourcesRequest
+     * @return ListDiscoveredResourcesResponse
      * @throws TencentCloudSDKException
      */
-    public ListAuditsResponse ListAudits(ListAuditsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListAuditsResponse> rsp = null;
+    public ListDiscoveredResourcesResponse ListDiscoveredResources(ListDiscoveredResourcesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListDiscoveredResourcesResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<ListAuditsResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<ListDiscoveredResourcesResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "ListAudits");
+                rspStr = this.internalRequest(req, "ListDiscoveredResources");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -163,18 +159,18 @@ public class CloudauditClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query CloudAudit-enabled CMQ AZs.
-     * @param req ListCmqEnableRegionRequest
-     * @return ListCmqEnableRegionResponse
+     *This API is used to query the list of all CFA supported resource types.
+     * @param req ListSupportResourceTypesRequest
+     * @return ListSupportResourceTypesResponse
      * @throws TencentCloudSDKException
      */
-    public ListCmqEnableRegionResponse ListCmqEnableRegion(ListCmqEnableRegionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListCmqEnableRegionResponse> rsp = null;
+    public ListSupportResourceTypesResponse ListSupportResourceTypes(ListSupportResourceTypesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListSupportResourceTypesResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<ListCmqEnableRegionResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<ListSupportResourceTypesResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "ListCmqEnableRegion");
+                rspStr = this.internalRequest(req, "ListSupportResourceTypes");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -183,102 +179,18 @@ public class CloudauditClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query CloudAudit-enabled COS AZs.
-     * @param req ListCosEnableRegionRequest
-     * @return ListCosEnableRegionResponse
+     *This API is used to modify the resources to monitor, recorder name, and other recorder configurations.
+     * @param req UpdateRecorderRequest
+     * @return UpdateRecorderResponse
      * @throws TencentCloudSDKException
      */
-    public ListCosEnableRegionResponse ListCosEnableRegion(ListCosEnableRegionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListCosEnableRegionResponse> rsp = null;
+    public UpdateRecorderResponse UpdateRecorder(UpdateRecorderRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateRecorderResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<ListCosEnableRegionResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<UpdateRecorderResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "ListCosEnableRegion");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to search for operation logs to help query relevant operation information.
-     * @param req LookUpEventsRequest
-     * @return LookUpEventsResponse
-     * @throws TencentCloudSDKException
-     */
-    public LookUpEventsResponse LookUpEvents(LookUpEventsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<LookUpEventsResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<LookUpEventsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "LookUpEvents");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to enable a tracking set.
-     * @param req StartLoggingRequest
-     * @return StartLoggingResponse
-     * @throws TencentCloudSDKException
-     */
-    public StartLoggingResponse StartLogging(StartLoggingRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StartLoggingResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<StartLoggingResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StartLogging");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to disable a tracking set.
-     * @param req StopLoggingRequest
-     * @return StopLoggingResponse
-     * @throws TencentCloudSDKException
-     */
-    public StopLoggingResponse StopLogging(StopLoggingRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StopLoggingResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<StopLoggingResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StopLogging");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *Parameter requirements:
-1. If the value of `IsCreateNewBucket` exists, `cosRegion` and `cosBucketName` are required.
-2. If the value of `IsEnableCmqNotify` is 1, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` are required.
-3. If the value of `IsEnableCmqNotify` is 0, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` cannot be passed in.
-4. If the value of `IsEnableKmsEncry` is 1, `KmsRegion` and `KeyId` are required.
-     * @param req UpdateAuditRequest
-     * @return UpdateAuditResponse
-     * @throws TencentCloudSDKException
-     */
-    public UpdateAuditResponse UpdateAudit(UpdateAuditRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateAuditResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<UpdateAuditResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateAudit");
+                rspStr = this.internalRequest(req, "UpdateRecorder");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

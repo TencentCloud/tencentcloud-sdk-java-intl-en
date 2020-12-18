@@ -236,8 +236,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ExpireTime;
 
     /**
-    * CLB instance billing mode
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Billing mode of CLB instance. Valid values: PREPAID (monthly subscription), POSTPAID_BY_HOUR (pay as you go).
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("ChargeType")
     @Expose
@@ -393,6 +393,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     @SerializedName("MixIpTarget")
     @Expose
     private Boolean MixIpTarget;
+
+    /**
+    * Availability zone of a VPC-based private network CLB instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Zones")
+    @Expose
+    private String [] Zones;
 
     /**
      * Get CLB instance ID. 
@@ -923,20 +931,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get CLB instance billing mode
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ChargeType CLB instance billing mode
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Billing mode of CLB instance. Valid values: PREPAID (monthly subscription), POSTPAID_BY_HOUR (pay as you go).
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ChargeType Billing mode of CLB instance. Valid values: PREPAID (monthly subscription), POSTPAID_BY_HOUR (pay as you go).
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set CLB instance billing mode
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ChargeType CLB instance billing mode
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Billing mode of CLB instance. Valid values: PREPAID (monthly subscription), POSTPAID_BY_HOUR (pay as you go).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ChargeType Billing mode of CLB instance. Valid values: PREPAID (monthly subscription), POSTPAID_BY_HOUR (pay as you go).
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setChargeType(String ChargeType) {
         this.ChargeType = ChargeType;
@@ -1319,6 +1327,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Availability zone of a VPC-based private network CLB instance
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Zones Availability zone of a VPC-based private network CLB instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String [] getZones() {
+        return this.Zones;
+    }
+
+    /**
+     * Set Availability zone of a VPC-based private network CLB instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Zones Availability zone of a VPC-based private network CLB instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setZones(String [] Zones) {
+        this.Zones = Zones;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1369,6 +1397,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "LocalBgp", this.LocalBgp);
         this.setParamSimple(map, prefix + "ClusterTag", this.ClusterTag);
         this.setParamSimple(map, prefix + "MixIpTarget", this.MixIpTarget);
+        this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
 
     }
 }

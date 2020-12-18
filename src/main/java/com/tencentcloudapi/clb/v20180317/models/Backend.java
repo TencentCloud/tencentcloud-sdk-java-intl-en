@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Backend extends AbstractModel{
 
     /**
-    * Real server type. Value range: CVM, ENI (coming soon)
+    * Real server type. Valid values: CVM, ENI.
     */
     @SerializedName("Type")
     @Expose
@@ -91,16 +91,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String EniId;
 
     /**
-     * Get Real server type. Value range: CVM, ENI (coming soon) 
-     * @return Type Real server type. Value range: CVM, ENI (coming soon)
+     * Get Real server type. Valid values: CVM, ENI. 
+     * @return Type Real server type. Valid values: CVM, ENI.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Real server type. Value range: CVM, ENI (coming soon)
-     * @param Type Real server type. Value range: CVM, ENI (coming soon)
+     * Set Real server type. Valid values: CVM, ENI.
+     * @param Type Real server type. Valid values: CVM, ENI.
      */
     public void setType(String Type) {
         this.Type = Type;

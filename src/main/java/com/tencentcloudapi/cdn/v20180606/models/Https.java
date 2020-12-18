@@ -112,6 +112,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Hsts Hsts;
 
     /**
+    * TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TlsVersion")
+    @Expose
+    private String [] TlsVersion;
+
+    /**
      * Get HTTPS configuration switch
 on: enabled
 off: disabled
@@ -360,6 +368,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return TlsVersion TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String [] getTlsVersion() {
+        return this.TlsVersion;
+    }
+
+    /**
+     * Set TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param TlsVersion TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setTlsVersion(String [] TlsVersion) {
+        this.TlsVersion = TlsVersion;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -372,6 +400,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Spdy", this.Spdy);
         this.setParamSimple(map, prefix + "SslStatus", this.SslStatus);
         this.setParamObj(map, prefix + "Hsts.", this.Hsts);
+        this.setParamArraySimple(map, prefix + "TlsVersion.", this.TlsVersion);
 
     }
 }

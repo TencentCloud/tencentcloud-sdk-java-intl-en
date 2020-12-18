@@ -1636,6 +1636,46 @@ Note that when modifying account permissions, you need to pass in the full permi
     }
 
     /**
+     *This API is used to modify the replication delay of a delayed RO replica.
+     * @param req ModifyRoReplicationDelayRequest
+     * @return ModifyRoReplicationDelayResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRoReplicationDelayResponse ModifyRoReplicationDelay(ModifyRoReplicationDelayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRoReplicationDelayResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRoReplicationDelayResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyRoReplicationDelay");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to change a general RO replica to delayed RO replica.
+     * @param req ModifyRoTypeRequest
+     * @return ModifyRoTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRoTypeResponse ModifyRoType(ModifyRoTypeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRoTypeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRoTypeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyRoType");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (ModifyTimeWindow) is used to update the maintenance time window of a TencentDB instance.
      * @param req ModifyTimeWindowRequest
      * @return ModifyTimeWindowResponse
@@ -1786,6 +1826,26 @@ Note:
     }
 
     /**
+     *This API is used to start delayed replication on a delayed RO replica.
+     * @param req StartDelayReplicationRequest
+     * @return StartDelayReplicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartDelayReplicationResponse StartDelayReplication(StartDelayReplicationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartDelayReplicationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartDelayReplicationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StartDelayReplication");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (StopDBImportJob) is used to stop a data import task.
      * @param req StopDBImportJobRequest
      * @return StopDBImportJobResponse
@@ -1798,6 +1858,26 @@ Note:
                 Type type = new TypeToken<JsonResponseModel<StopDBImportJobResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "StopDBImportJob");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to stop delayed replication on a delayed RO replica.
+     * @param req StopDelayReplicationRequest
+     * @return StopDelayReplicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopDelayReplicationResponse StopDelayReplication(StopDelayReplicationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopDelayReplicationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopDelayReplicationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StopDelayReplication");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

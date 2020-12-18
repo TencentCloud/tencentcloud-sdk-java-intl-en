@@ -117,11 +117,18 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
     private TagInfo [] Tags;
 
     /**
-    * 
+    * Applies for CLB instances for a specified VIP
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
+
+    /**
+    * 
+    */
+    @SerializedName("BandwidthPackageId")
+    @Expose
+    private String BandwidthPackageId;
 
     /**
     * Exclusive cluster information.
@@ -136,6 +143,20 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
     @SerializedName("ClientToken")
     @Expose
     private String ClientToken;
+
+    /**
+    * Whether Binding IPs of other VPCs feature switch
+    */
+    @SerializedName("SnatPro")
+    @Expose
+    private Boolean SnatPro;
+
+    /**
+    * Creates `SnatIp` when the binding IPs of other VPCs feature is enabled
+    */
+    @SerializedName("SnatIps")
+    @Expose
+    private SnatIp [] SnatIps;
 
     /**
     * Tag for the STGW exclusive cluster.
@@ -365,19 +386,35 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
     }
 
     /**
-     * Get  
-     * @return Vip 
+     * Get Applies for CLB instances for a specified VIP 
+     * @return Vip Applies for CLB instances for a specified VIP
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set 
-     * @param Vip 
+     * Set Applies for CLB instances for a specified VIP
+     * @param Vip Applies for CLB instances for a specified VIP
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
+    }
+
+    /**
+     * Get  
+     * @return BandwidthPackageId 
+     */
+    public String getBandwidthPackageId() {
+        return this.BandwidthPackageId;
+    }
+
+    /**
+     * Set 
+     * @param BandwidthPackageId 
+     */
+    public void setBandwidthPackageId(String BandwidthPackageId) {
+        this.BandwidthPackageId = BandwidthPackageId;
     }
 
     /**
@@ -410,6 +447,38 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
      */
     public void setClientToken(String ClientToken) {
         this.ClientToken = ClientToken;
+    }
+
+    /**
+     * Get Whether Binding IPs of other VPCs feature switch 
+     * @return SnatPro Whether Binding IPs of other VPCs feature switch
+     */
+    public Boolean getSnatPro() {
+        return this.SnatPro;
+    }
+
+    /**
+     * Set Whether Binding IPs of other VPCs feature switch
+     * @param SnatPro Whether Binding IPs of other VPCs feature switch
+     */
+    public void setSnatPro(Boolean SnatPro) {
+        this.SnatPro = SnatPro;
+    }
+
+    /**
+     * Get Creates `SnatIp` when the binding IPs of other VPCs feature is enabled 
+     * @return SnatIps Creates `SnatIp` when the binding IPs of other VPCs feature is enabled
+     */
+    public SnatIp [] getSnatIps() {
+        return this.SnatIps;
+    }
+
+    /**
+     * Set Creates `SnatIp` when the binding IPs of other VPCs feature is enabled
+     * @param SnatIps Creates `SnatIp` when the binding IPs of other VPCs feature is enabled
+     */
+    public void setSnatIps(SnatIp [] SnatIps) {
+        this.SnatIps = SnatIps;
     }
 
     /**
@@ -446,8 +515,11 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
         this.setParamSimple(map, prefix + "VipIsp", this.VipIsp);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Vip", this.Vip);
+        this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
         this.setParamObj(map, prefix + "ExclusiveCluster.", this.ExclusiveCluster);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
+        this.setParamSimple(map, prefix + "SnatPro", this.SnatPro);
+        this.setParamArrayObj(map, prefix + "SnatIps.", this.SnatIps);
         this.setParamSimple(map, prefix + "ClusterTag", this.ClusterTag);
 
     }

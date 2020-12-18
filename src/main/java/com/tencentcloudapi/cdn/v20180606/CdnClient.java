@@ -877,4 +877,24 @@ Note: if you need to update complex configuration items, you must pass all the a
         return rsp.response;
     }
 
+    /**
+     *This API is used to modify security configurations of SCDN acceleration domain names.
+     * @param req UpdateScdnDomainRequest
+     * @return UpdateScdnDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateScdnDomainResponse UpdateScdnDomain(UpdateScdnDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateScdnDomainResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateScdnDomainResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateScdnDomain");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

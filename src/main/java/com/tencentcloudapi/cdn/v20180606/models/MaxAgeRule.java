@@ -37,10 +37,11 @@ public class MaxAgeRule extends AbstractModel{
     /**
     * Content for each `MaxAgeType`:
 For `all`, enter a wildcard `*`.
-For `file`, enter the suffix, e.g., `jpg` or `txt`.
-For `directory`, enter the path, e.g., `/xxx/test/`.
-For `path`, enter the absolute path, e.g., `/xxx/test.html`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a forward slash `/`.
+Note: the rule `all` cannot be deleted. It follows origin by default and can be modified.
     */
     @SerializedName("MaxAgeContents")
     @Expose
@@ -48,13 +49,15 @@ For `index`, enter a forward slash `/`.
 
     /**
     * MaxAge time (in seconds)
+Note: the value `0` means not to cache.
     */
     @SerializedName("MaxAgeTime")
     @Expose
     private Long MaxAgeTime;
 
     /**
-    * 
+    * Whether to follow the origin server. Valid values: `on` and `off`. If it's on, `MaxAgeTime` is ignored.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("FollowOrigin")
     @Expose
@@ -99,16 +102,18 @@ For `index`, enter a forward slash `/`.
     /**
      * Get Content for each `MaxAgeType`:
 For `all`, enter a wildcard `*`.
-For `file`, enter the suffix, e.g., `jpg` or `txt`.
-For `directory`, enter the path, e.g., `/xxx/test/`.
-For `path`, enter the absolute path, e.g., `/xxx/test.html`.
-For `index`, enter a forward slash `/`. 
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
+Note: the rule `all` cannot be deleted. It follows origin by default and can be modified. 
      * @return MaxAgeContents Content for each `MaxAgeType`:
 For `all`, enter a wildcard `*`.
-For `file`, enter the suffix, e.g., `jpg` or `txt`.
-For `directory`, enter the path, e.g., `/xxx/test/`.
-For `path`, enter the absolute path, e.g., `/xxx/test.html`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a forward slash `/`.
+Note: the rule `all` cannot be deleted. It follows origin by default and can be modified.
      */
     public String [] getMaxAgeContents() {
         return this.MaxAgeContents;
@@ -117,24 +122,28 @@ For `index`, enter a forward slash `/`.
     /**
      * Set Content for each `MaxAgeType`:
 For `all`, enter a wildcard `*`.
-For `file`, enter the suffix, e.g., `jpg` or `txt`.
-For `directory`, enter the path, e.g., `/xxx/test/`.
-For `path`, enter the absolute path, e.g., `/xxx/test.html`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a forward slash `/`.
+Note: the rule `all` cannot be deleted. It follows origin by default and can be modified.
      * @param MaxAgeContents Content for each `MaxAgeType`:
 For `all`, enter a wildcard `*`.
-For `file`, enter the suffix, e.g., `jpg` or `txt`.
-For `directory`, enter the path, e.g., `/xxx/test/`.
-For `path`, enter the absolute path, e.g., `/xxx/test.html`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a forward slash `/`.
+Note: the rule `all` cannot be deleted. It follows origin by default and can be modified.
      */
     public void setMaxAgeContents(String [] MaxAgeContents) {
         this.MaxAgeContents = MaxAgeContents;
     }
 
     /**
-     * Get MaxAge time (in seconds) 
+     * Get MaxAge time (in seconds)
+Note: the value `0` means not to cache. 
      * @return MaxAgeTime MaxAge time (in seconds)
+Note: the value `0` means not to cache.
      */
     public Long getMaxAgeTime() {
         return this.MaxAgeTime;
@@ -142,23 +151,29 @@ For `index`, enter a forward slash `/`.
 
     /**
      * Set MaxAge time (in seconds)
+Note: the value `0` means not to cache.
      * @param MaxAgeTime MaxAge time (in seconds)
+Note: the value `0` means not to cache.
      */
     public void setMaxAgeTime(Long MaxAgeTime) {
         this.MaxAgeTime = MaxAgeTime;
     }
 
     /**
-     * Get  
-     * @return FollowOrigin 
+     * Get Whether to follow the origin server. Valid values: `on` and `off`. If it's on, `MaxAgeTime` is ignored.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return FollowOrigin Whether to follow the origin server. Valid values: `on` and `off`. If it's on, `MaxAgeTime` is ignored.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getFollowOrigin() {
         return this.FollowOrigin;
     }
 
     /**
-     * Set 
-     * @param FollowOrigin 
+     * Set Whether to follow the origin server. Valid values: `on` and `off`. If it's on, `MaxAgeTime` is ignored.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param FollowOrigin Whether to follow the origin server. Valid values: `on` and `off`. If it's on, `MaxAgeTime` is ignored.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setFollowOrigin(String FollowOrigin) {
         this.FollowOrigin = FollowOrigin;

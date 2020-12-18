@@ -23,15 +23,17 @@ import java.util.HashMap;
 public class PathRule extends AbstractModel{
 
     /**
-    * Whether regex match is used.
-Note: this field may return `null`, indicating that no valid value is obtained.
+    * Whether to enable wildcard match (`*`).
+false: disable
+true: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Regex")
     @Expose
     private Boolean Regex;
 
     /**
-    * Matched URL. Only URLs are supported, while parameters are not. The exact match is used by default. In regex match, up to 5 wildcards `*` are supported. The URL can contain up to 1,024 characters.
+    * Matched URL. Only URLs are supported, while parameters are not. The exact match is used by default. If wildcard match is enabled, up to 5 wildcards are supported. The URL can contain up to 1,024 characters.
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Path")
@@ -55,7 +57,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String ServerName;
 
     /**
-    * Origin server region. Valid values: CN (the Chinese mainland), OV (outside the Chinese mainland).
+    * Origin server region. Valid values: `CN` and `OV`.
+CN: the Chinese mainland
+OV: outside the Chinese mainland
+Default value: `CN`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("OriginArea")
@@ -63,7 +68,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String OriginArea;
 
     /**
-    * Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the matching path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
+    * Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the match path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("ForwardUri")
@@ -79,29 +84,37 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     private HttpHeaderRule [] RequestHeaders;
 
     /**
-     * Get Whether regex match is used.
-Note: this field may return `null`, indicating that no valid value is obtained. 
-     * @return Regex Whether regex match is used.
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * Get Whether to enable wildcard match (`*`).
+false: disable
+true: enable
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Regex Whether to enable wildcard match (`*`).
+false: disable
+true: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Boolean getRegex() {
         return this.Regex;
     }
 
     /**
-     * Set Whether regex match is used.
-Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param Regex Whether regex match is used.
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * Set Whether to enable wildcard match (`*`).
+false: disable
+true: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Regex Whether to enable wildcard match (`*`).
+false: disable
+true: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setRegex(Boolean Regex) {
         this.Regex = Regex;
     }
 
     /**
-     * Get Matched URL. Only URLs are supported, while parameters are not. The exact match is used by default. In regex match, up to 5 wildcards `*` are supported. The URL can contain up to 1,024 characters.
+     * Get Matched URL. Only URLs are supported, while parameters are not. The exact match is used by default. If wildcard match is enabled, up to 5 wildcards are supported. The URL can contain up to 1,024 characters.
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Path Matched URL. Only URLs are supported, while parameters are not. The exact match is used by default. In regex match, up to 5 wildcards `*` are supported. The URL can contain up to 1,024 characters.
+     * @return Path Matched URL. Only URLs are supported, while parameters are not. The exact match is used by default. If wildcard match is enabled, up to 5 wildcards are supported. The URL can contain up to 1,024 characters.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getPath() {
@@ -109,9 +122,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set Matched URL. Only URLs are supported, while parameters are not. The exact match is used by default. In regex match, up to 5 wildcards `*` are supported. The URL can contain up to 1,024 characters.
+     * Set Matched URL. Only URLs are supported, while parameters are not. The exact match is used by default. If wildcard match is enabled, up to 5 wildcards are supported. The URL can contain up to 1,024 characters.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Path Matched URL. Only URLs are supported, while parameters are not. The exact match is used by default. In regex match, up to 5 wildcards `*` are supported. The URL can contain up to 1,024 characters.
+     * @param Path Matched URL. Only URLs are supported, while parameters are not. The exact match is used by default. If wildcard match is enabled, up to 5 wildcards are supported. The URL can contain up to 1,024 characters.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setPath(String Path) {
@@ -159,9 +172,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Origin server region. Valid values: CN (the Chinese mainland), OV (outside the Chinese mainland).
+     * Get Origin server region. Valid values: `CN` and `OV`.
+CN: the Chinese mainland
+OV: outside the Chinese mainland
+Default value: `CN`.
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return OriginArea Origin server region. Valid values: CN (the Chinese mainland), OV (outside the Chinese mainland).
+     * @return OriginArea Origin server region. Valid values: `CN` and `OV`.
+CN: the Chinese mainland
+OV: outside the Chinese mainland
+Default value: `CN`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getOriginArea() {
@@ -169,9 +188,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set Origin server region. Valid values: CN (the Chinese mainland), OV (outside the Chinese mainland).
+     * Set Origin server region. Valid values: `CN` and `OV`.
+CN: the Chinese mainland
+OV: outside the Chinese mainland
+Default value: `CN`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param OriginArea Origin server region. Valid values: CN (the Chinese mainland), OV (outside the Chinese mainland).
+     * @param OriginArea Origin server region. Valid values: `CN` and `OV`.
+CN: the Chinese mainland
+OV: outside the Chinese mainland
+Default value: `CN`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setOriginArea(String OriginArea) {
@@ -179,9 +204,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the matching path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
+     * Get Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the match path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ForwardUri Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the matching path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
+     * @return ForwardUri Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the match path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getForwardUri() {
@@ -189,9 +214,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the matching path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
+     * Set Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the match path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ForwardUri Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the matching path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
+     * @param ForwardUri Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the match path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setForwardUri(String ForwardUri) {
