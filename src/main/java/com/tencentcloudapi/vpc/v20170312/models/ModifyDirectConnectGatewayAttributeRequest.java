@@ -44,6 +44,13 @@ public class ModifyDirectConnectGatewayAttributeRequest extends AbstractModel{
     private String CcnRouteType;
 
     /**
+    * CCN route publishing method. Valid values: `standard` and `exquisite`. You can only modify `ModeType` for a CCN direct connect gateway.
+    */
+    @SerializedName("ModeType")
+    @Expose
+    private String ModeType;
+
+    /**
      * Get The unique ID of the direct connect gateway, such as `dcg-9o233uri`. 
      * @return DirectConnectGatewayId The unique ID of the direct connect gateway, such as `dcg-9o233uri`.
      */
@@ -92,12 +99,29 @@ public class ModifyDirectConnectGatewayAttributeRequest extends AbstractModel{
     }
 
     /**
+     * Get CCN route publishing method. Valid values: `standard` and `exquisite`. You can only modify `ModeType` for a CCN direct connect gateway. 
+     * @return ModeType CCN route publishing method. Valid values: `standard` and `exquisite`. You can only modify `ModeType` for a CCN direct connect gateway.
+     */
+    public String getModeType() {
+        return this.ModeType;
+    }
+
+    /**
+     * Set CCN route publishing method. Valid values: `standard` and `exquisite`. You can only modify `ModeType` for a CCN direct connect gateway.
+     * @param ModeType CCN route publishing method. Valid values: `standard` and `exquisite`. You can only modify `ModeType` for a CCN direct connect gateway.
+     */
+    public void setModeType(String ModeType) {
+        this.ModeType = ModeType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DirectConnectGatewayId", this.DirectConnectGatewayId);
         this.setParamSimple(map, prefix + "DirectConnectGatewayName", this.DirectConnectGatewayName);
         this.setParamSimple(map, prefix + "CcnRouteType", this.CcnRouteType);
+        this.setParamSimple(map, prefix + "ModeType", this.ModeType);
 
     }
 }

@@ -23,14 +23,20 @@ import java.util.HashMap;
 public class DelayDistribution extends AbstractModel{
 
     /**
-    * Distribution ladder
+    * Delay distribution. The mapping between delay range and `Ladder` value is as follows:
+[0ms,1ms]: 1;
+[1ms,5ms]: 5;
+[5ms,10ms]: 10;
+[10ms,50ms]: 50;
+[50ms,200ms]: 200;
+[200ms,∞]: -1.
     */
     @SerializedName("Ladder")
     @Expose
     private Long Ladder;
 
     /**
-    * Size
+    * The number of commands whose delay falls within the current delay range
     */
     @SerializedName("Size")
     @Expose
@@ -44,32 +50,56 @@ public class DelayDistribution extends AbstractModel{
     private Long Updatetime;
 
     /**
-     * Get Distribution ladder 
-     * @return Ladder Distribution ladder
+     * Get Delay distribution. The mapping between delay range and `Ladder` value is as follows:
+[0ms,1ms]: 1;
+[1ms,5ms]: 5;
+[5ms,10ms]: 10;
+[10ms,50ms]: 50;
+[50ms,200ms]: 200;
+[200ms,∞]: -1. 
+     * @return Ladder Delay distribution. The mapping between delay range and `Ladder` value is as follows:
+[0ms,1ms]: 1;
+[1ms,5ms]: 5;
+[5ms,10ms]: 10;
+[10ms,50ms]: 50;
+[50ms,200ms]: 200;
+[200ms,∞]: -1.
      */
     public Long getLadder() {
         return this.Ladder;
     }
 
     /**
-     * Set Distribution ladder
-     * @param Ladder Distribution ladder
+     * Set Delay distribution. The mapping between delay range and `Ladder` value is as follows:
+[0ms,1ms]: 1;
+[1ms,5ms]: 5;
+[5ms,10ms]: 10;
+[10ms,50ms]: 50;
+[50ms,200ms]: 200;
+[200ms,∞]: -1.
+     * @param Ladder Delay distribution. The mapping between delay range and `Ladder` value is as follows:
+[0ms,1ms]: 1;
+[1ms,5ms]: 5;
+[5ms,10ms]: 10;
+[10ms,50ms]: 50;
+[50ms,200ms]: 200;
+[200ms,∞]: -1.
      */
     public void setLadder(Long Ladder) {
         this.Ladder = Ladder;
     }
 
     /**
-     * Get Size 
-     * @return Size Size
+     * Get The number of commands whose delay falls within the current delay range 
+     * @return Size The number of commands whose delay falls within the current delay range
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set Size
-     * @param Size Size
+     * Set The number of commands whose delay falls within the current delay range
+     * @param Size The number of commands whose delay falls within the current delay range
      */
     public void setSize(Long Size) {
         this.Size = Size;

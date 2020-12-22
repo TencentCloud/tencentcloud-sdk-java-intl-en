@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class ProductConf extends AbstractModel{
 
     /**
-    * Product type. 2: Redis primary-secondary edition; 3: CKV primary-secondary edition; 4: CKV cluster edition; 5: Redis standalone edition; 7: Redis cluster edition
+    * Product type. Valid values: `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture), `10` (Redis 4.0 Hybrid Storage Edition (Tendis)).
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * Product name: Redis primary-secondary edition, CKV primary-secondary edition, CKV cluster edition, Redis standalone edition, or Redis cluster edition
+    * Product name: Redis Master-Replica Edition, CKV Master-Replica Edition, CKV Cluster Edition, Redis Standalone Edition, Redis Cluster Edition, Tendis Hybrid Storage Edition
     */
     @SerializedName("TypeName")
     @Expose
@@ -114,32 +114,32 @@ public class ProductConf extends AbstractModel{
     private Boolean EnableRepicaReadOnly;
 
     /**
-     * Get Product type. 2: Redis primary-secondary edition; 3: CKV primary-secondary edition; 4: CKV cluster edition; 5: Redis standalone edition; 7: Redis cluster edition 
-     * @return Type Product type. 2: Redis primary-secondary edition; 3: CKV primary-secondary edition; 4: CKV cluster edition; 5: Redis standalone edition; 7: Redis cluster edition
+     * Get Product type. Valid values: `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture), `10` (Redis 4.0 Hybrid Storage Edition (Tendis)). 
+     * @return Type Product type. Valid values: `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture), `10` (Redis 4.0 Hybrid Storage Edition (Tendis)).
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set Product type. 2: Redis primary-secondary edition; 3: CKV primary-secondary edition; 4: CKV cluster edition; 5: Redis standalone edition; 7: Redis cluster edition
-     * @param Type Product type. 2: Redis primary-secondary edition; 3: CKV primary-secondary edition; 4: CKV cluster edition; 5: Redis standalone edition; 7: Redis cluster edition
+     * Set Product type. Valid values: `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture), `10` (Redis 4.0 Hybrid Storage Edition (Tendis)).
+     * @param Type Product type. Valid values: `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture), `10` (Redis 4.0 Hybrid Storage Edition (Tendis)).
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Product name: Redis primary-secondary edition, CKV primary-secondary edition, CKV cluster edition, Redis standalone edition, or Redis cluster edition 
-     * @return TypeName Product name: Redis primary-secondary edition, CKV primary-secondary edition, CKV cluster edition, Redis standalone edition, or Redis cluster edition
+     * Get Product name: Redis Master-Replica Edition, CKV Master-Replica Edition, CKV Cluster Edition, Redis Standalone Edition, Redis Cluster Edition, Tendis Hybrid Storage Edition 
+     * @return TypeName Product name: Redis Master-Replica Edition, CKV Master-Replica Edition, CKV Cluster Edition, Redis Standalone Edition, Redis Cluster Edition, Tendis Hybrid Storage Edition
      */
     public String getTypeName() {
         return this.TypeName;
     }
 
     /**
-     * Set Product name: Redis primary-secondary edition, CKV primary-secondary edition, CKV cluster edition, Redis standalone edition, or Redis cluster edition
-     * @param TypeName Product name: Redis primary-secondary edition, CKV primary-secondary edition, CKV cluster edition, Redis standalone edition, or Redis cluster edition
+     * Set Product name: Redis Master-Replica Edition, CKV Master-Replica Edition, CKV Cluster Edition, Redis Standalone Edition, Redis Cluster Edition, Tendis Hybrid Storage Edition
+     * @param TypeName Product name: Redis Master-Replica Edition, CKV Master-Replica Edition, CKV Cluster Edition, Redis Standalone Edition, Redis Cluster Edition, Tendis Hybrid Storage Edition
      */
     public void setTypeName(String TypeName) {
         this.TypeName = TypeName;

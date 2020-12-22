@@ -30,14 +30,14 @@ public class CreateFunctionRequest extends AbstractModel{
     private String FunctionName;
 
     /**
-    * Function code. Note: You cannot specify `Cos` and `ZipFile` at the same time.
+    * Function code. Note: `COS`, `ZipFile`, and `DemoId` cannot be specified at the same time.
     */
     @SerializedName("Code")
     @Expose
     private Code Code;
 
     /**
-    * Name of the handler, which is in the 'file name.handler name' form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_).
+    * Function handler name. It supports the format of "file name.handler name" where the file name and handler name are separated with a "." (for Java, it is in the format of "package name.class name::handler name"). File and handler names can contain 2–60 letters, digits, underscores, and dashes and must start and end with letters
     */
     @SerializedName("Handler")
     @Expose
@@ -72,7 +72,7 @@ public class CreateFunctionRequest extends AbstractModel{
     private Environment Environment;
 
     /**
-    * Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8. Default value: Python2.7
+    * Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime. Default value: Python2.7
     */
     @SerializedName("Runtime")
     @Expose
@@ -121,7 +121,7 @@ public class CreateFunctionRequest extends AbstractModel{
     private String Type;
 
     /**
-    * Code source, including ZipFile, Cos, Demo, TempCos, and Git. This field is required if the source is Git.
+    * Code source. Valid values: ZipFile, Cos, Demo
     */
     @SerializedName("CodeSource")
     @Expose
@@ -186,32 +186,32 @@ public class CreateFunctionRequest extends AbstractModel{
     }
 
     /**
-     * Get Function code. Note: You cannot specify `Cos` and `ZipFile` at the same time. 
-     * @return Code Function code. Note: You cannot specify `Cos` and `ZipFile` at the same time.
+     * Get Function code. Note: `COS`, `ZipFile`, and `DemoId` cannot be specified at the same time. 
+     * @return Code Function code. Note: `COS`, `ZipFile`, and `DemoId` cannot be specified at the same time.
      */
     public Code getCode() {
         return this.Code;
     }
 
     /**
-     * Set Function code. Note: You cannot specify `Cos` and `ZipFile` at the same time.
-     * @param Code Function code. Note: You cannot specify `Cos` and `ZipFile` at the same time.
+     * Set Function code. Note: `COS`, `ZipFile`, and `DemoId` cannot be specified at the same time.
+     * @param Code Function code. Note: `COS`, `ZipFile`, and `DemoId` cannot be specified at the same time.
      */
     public void setCode(Code Code) {
         this.Code = Code;
     }
 
     /**
-     * Get Name of the handler, which is in the 'file name.handler name' form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_). 
-     * @return Handler Name of the handler, which is in the 'file name.handler name' form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_).
+     * Get Function handler name. It supports the format of "file name.handler name" where the file name and handler name are separated with a "." (for Java, it is in the format of "package name.class name::handler name"). File and handler names can contain 2–60 letters, digits, underscores, and dashes and must start and end with letters 
+     * @return Handler Function handler name. It supports the format of "file name.handler name" where the file name and handler name are separated with a "." (for Java, it is in the format of "package name.class name::handler name"). File and handler names can contain 2–60 letters, digits, underscores, and dashes and must start and end with letters
      */
     public String getHandler() {
         return this.Handler;
     }
 
     /**
-     * Set Name of the handler, which is in the 'file name.handler name' form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_).
-     * @param Handler Name of the handler, which is in the 'file name.handler name' form. Use periods (.) to separate a file name and function name. The file name and function name must start and end with a letter and can contain 2 to 60 characters, including letters, digits, hyphens (-), and underscores (_).
+     * Set Function handler name. It supports the format of "file name.handler name" where the file name and handler name are separated with a "." (for Java, it is in the format of "package name.class name::handler name"). File and handler names can contain 2–60 letters, digits, underscores, and dashes and must start and end with letters
+     * @param Handler Function handler name. It supports the format of "file name.handler name" where the file name and handler name are separated with a "." (for Java, it is in the format of "package name.class name::handler name"). File and handler names can contain 2–60 letters, digits, underscores, and dashes and must start and end with letters
      */
     public void setHandler(String Handler) {
         this.Handler = Handler;
@@ -282,16 +282,16 @@ public class CreateFunctionRequest extends AbstractModel{
     }
 
     /**
-     * Get Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8. Default value: Python2.7 
-     * @return Runtime Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8. Default value: Python2.7
+     * Get Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime. Default value: Python2.7 
+     * @return Runtime Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime. Default value: Python2.7
      */
     public String getRuntime() {
         return this.Runtime;
     }
 
     /**
-     * Set Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8. Default value: Python2.7
-     * @param Runtime Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8. Default value: Python2.7
+     * Set Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime. Default value: Python2.7
+     * @param Runtime Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime. Default value: Python2.7
      */
     public void setRuntime(String Runtime) {
         this.Runtime = Runtime;
@@ -394,16 +394,16 @@ public class CreateFunctionRequest extends AbstractModel{
     }
 
     /**
-     * Get Code source, including ZipFile, Cos, Demo, TempCos, and Git. This field is required if the source is Git. 
-     * @return CodeSource Code source, including ZipFile, Cos, Demo, TempCos, and Git. This field is required if the source is Git.
+     * Get Code source. Valid values: ZipFile, Cos, Demo 
+     * @return CodeSource Code source. Valid values: ZipFile, Cos, Demo
      */
     public String getCodeSource() {
         return this.CodeSource;
     }
 
     /**
-     * Set Code source, including ZipFile, Cos, Demo, TempCos, and Git. This field is required if the source is Git.
-     * @param CodeSource Code source, including ZipFile, Cos, Demo, TempCos, and Git. This field is required if the source is Git.
+     * Set Code source. Valid values: ZipFile, Cos, Demo
+     * @param CodeSource Code source. Valid values: ZipFile, Cos, Demo
      */
     public void setCodeSource(String CodeSource) {
         this.CodeSource = CodeSource;

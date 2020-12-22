@@ -124,6 +124,22 @@ Note: this field may return `null`, indicating that no valid value was found.
     private String NatGatewayId;
 
     /**
+    * Whether the direct connect gateway supports the VXLAN architecture.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("VXLANSupport")
+    @Expose
+    private Boolean [] VXLANSupport;
+
+    /**
+    * CCN route publishing mode. Valid values: `standard` and `exquisite`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ModeType")
+    @Expose
+    private String ModeType;
+
+    /**
      * Get Direct Connect `ID`. 
      * @return DirectConnectGatewayId Direct Connect `ID`.
      */
@@ -372,6 +388,46 @@ Note: this field may return `null`, indicating that no valid value was found.
     }
 
     /**
+     * Get Whether the direct connect gateway supports the VXLAN architecture.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return VXLANSupport Whether the direct connect gateway supports the VXLAN architecture.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Boolean [] getVXLANSupport() {
+        return this.VXLANSupport;
+    }
+
+    /**
+     * Set Whether the direct connect gateway supports the VXLAN architecture.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param VXLANSupport Whether the direct connect gateway supports the VXLAN architecture.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setVXLANSupport(Boolean [] VXLANSupport) {
+        this.VXLANSupport = VXLANSupport;
+    }
+
+    /**
+     * Get CCN route publishing mode. Valid values: `standard` and `exquisite`.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ModeType CCN route publishing mode. Valid values: `standard` and `exquisite`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getModeType() {
+        return this.ModeType;
+    }
+
+    /**
+     * Set CCN route publishing mode. Valid values: `standard` and `exquisite`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ModeType CCN route publishing mode. Valid values: `standard` and `exquisite`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setModeType(String ModeType) {
+        this.ModeType = ModeType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -388,6 +444,8 @@ Note: this field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "EnableBGP", this.EnableBGP);
         this.setParamSimple(map, prefix + "EnableBGPCommunity", this.EnableBGPCommunity);
         this.setParamSimple(map, prefix + "NatGatewayId", this.NatGatewayId);
+        this.setParamArraySimple(map, prefix + "VXLANSupport.", this.VXLANSupport);
+        this.setParamSimple(map, prefix + "ModeType", this.ModeType);
 
     }
 }

@@ -65,7 +65,7 @@ public class Function extends AbstractModel{
     private String Namespace;
 
     /**
-    * Function status
+    * Function status. For valid values and status change process, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1)
     */
     @SerializedName("Status")
     @Expose
@@ -98,6 +98,29 @@ public class Function extends AbstractModel{
     @SerializedName("Type")
     @Expose
     private String Type;
+
+    /**
+    * Cause of function failure
+    */
+    @SerializedName("StatusReasons")
+    @Expose
+    private StatusReason [] StatusReasons;
+
+    /**
+    * Sum of provisioned concurrence memory for all function versions
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TotalProvisionedConcurrencyMem")
+    @Expose
+    private Long TotalProvisionedConcurrencyMem;
+
+    /**
+    * Reserved memory for function concurrence
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ReservedConcurrencyMem")
+    @Expose
+    private Long ReservedConcurrencyMem;
 
     /**
      * Get Modification time 
@@ -196,16 +219,16 @@ public class Function extends AbstractModel{
     }
 
     /**
-     * Get Function status 
-     * @return Status Function status
+     * Get Function status. For valid values and status change process, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1) 
+     * @return Status Function status. For valid values and status change process, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1)
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Function status
-     * @param Status Function status
+     * Set Function status. For valid values and status change process, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1)
+     * @param Status Function status. For valid values and status change process, please see [here](https://intl.cloud.tencent.com/document/product/583/47175?from_cn_redirect=1)
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -276,6 +299,62 @@ public class Function extends AbstractModel{
     }
 
     /**
+     * Get Cause of function failure 
+     * @return StatusReasons Cause of function failure
+     */
+    public StatusReason [] getStatusReasons() {
+        return this.StatusReasons;
+    }
+
+    /**
+     * Set Cause of function failure
+     * @param StatusReasons Cause of function failure
+     */
+    public void setStatusReasons(StatusReason [] StatusReasons) {
+        this.StatusReasons = StatusReasons;
+    }
+
+    /**
+     * Get Sum of provisioned concurrence memory for all function versions
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return TotalProvisionedConcurrencyMem Sum of provisioned concurrence memory for all function versions
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getTotalProvisionedConcurrencyMem() {
+        return this.TotalProvisionedConcurrencyMem;
+    }
+
+    /**
+     * Set Sum of provisioned concurrence memory for all function versions
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param TotalProvisionedConcurrencyMem Sum of provisioned concurrence memory for all function versions
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTotalProvisionedConcurrencyMem(Long TotalProvisionedConcurrencyMem) {
+        this.TotalProvisionedConcurrencyMem = TotalProvisionedConcurrencyMem;
+    }
+
+    /**
+     * Get Reserved memory for function concurrence
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return ReservedConcurrencyMem Reserved memory for function concurrence
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getReservedConcurrencyMem() {
+        return this.ReservedConcurrencyMem;
+    }
+
+    /**
+     * Set Reserved memory for function concurrence
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param ReservedConcurrencyMem Reserved memory for function concurrence
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setReservedConcurrencyMem(Long ReservedConcurrencyMem) {
+        this.ReservedConcurrencyMem = ReservedConcurrencyMem;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -290,6 +369,9 @@ public class Function extends AbstractModel{
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamArrayObj(map, prefix + "StatusReasons.", this.StatusReasons);
+        this.setParamSimple(map, prefix + "TotalProvisionedConcurrencyMem", this.TotalProvisionedConcurrencyMem);
+        this.setParamSimple(map, prefix + "ReservedConcurrencyMem", this.ReservedConcurrencyMem);
 
     }
 }

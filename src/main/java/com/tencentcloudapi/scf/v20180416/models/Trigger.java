@@ -79,6 +79,27 @@ public class Trigger extends AbstractModel{
     private String AvailableStatus;
 
     /**
+    * Minimum resource ID of trigger
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
+
+    /**
+    * Trigger-Function binding status
+    */
+    @SerializedName("BindStatus")
+    @Expose
+    private String BindStatus;
+
+    /**
+    * Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
+    */
+    @SerializedName("TriggerAttribute")
+    @Expose
+    private String TriggerAttribute;
+
+    /**
      * Get Latest modification time of the trigger 
      * @return ModTime Latest modification time of the trigger
      */
@@ -207,6 +228,54 @@ public class Trigger extends AbstractModel{
     }
 
     /**
+     * Get Minimum resource ID of trigger 
+     * @return ResourceId Minimum resource ID of trigger
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set Minimum resource ID of trigger
+     * @param ResourceId Minimum resource ID of trigger
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
+    }
+
+    /**
+     * Get Trigger-Function binding status 
+     * @return BindStatus Trigger-Function binding status
+     */
+    public String getBindStatus() {
+        return this.BindStatus;
+    }
+
+    /**
+     * Set Trigger-Function binding status
+     * @param BindStatus Trigger-Function binding status
+     */
+    public void setBindStatus(String BindStatus) {
+        this.BindStatus = BindStatus;
+    }
+
+    /**
+     * Get Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console 
+     * @return TriggerAttribute Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
+     */
+    public String getTriggerAttribute() {
+        return this.TriggerAttribute;
+    }
+
+    /**
+     * Set Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
+     * @param TriggerAttribute Trigger type. Two-way means that the trigger can be manipulated in both consoles, while one-way means that the trigger can be created only in the SCF Console
+     */
+    public void setTriggerAttribute(String TriggerAttribute) {
+        this.TriggerAttribute = TriggerAttribute;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +287,9 @@ public class Trigger extends AbstractModel{
         this.setParamSimple(map, prefix + "Enable", this.Enable);
         this.setParamSimple(map, prefix + "CustomArgument", this.CustomArgument);
         this.setParamSimple(map, prefix + "AvailableStatus", this.AvailableStatus);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
+        this.setParamSimple(map, prefix + "BindStatus", this.BindStatus);
+        this.setParamSimple(map, prefix + "TriggerAttribute", this.TriggerAttribute);
 
     }
 }

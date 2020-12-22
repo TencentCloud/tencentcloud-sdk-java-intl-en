@@ -151,11 +151,18 @@ If the instance type parameter `TypeId` indicates CKV 3.2, the password contains
     private Boolean NoAuth;
 
     /**
-    * 
+    * Node information of an instance. Currently, information about the node type (master or replica) and node availability zone can be passed in. This parameter is not required for instances deployed in a single availability zone.
     */
     @SerializedName("NodeSet")
     @Expose
     private RedisNodeInfo [] NodeSet;
+
+    /**
+    * The tag bound with the instance to be purchased
+    */
+    @SerializedName("ResourceTags")
+    @Expose
+    private ResourceTag [] ResourceTags;
 
     /**
      * Get Availability zone ID of the instance. For more information, please see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1). 
@@ -454,19 +461,35 @@ If the instance type parameter `TypeId` indicates CKV 3.2, the password contains
     }
 
     /**
-     * Get  
-     * @return NodeSet 
+     * Get Node information of an instance. Currently, information about the node type (master or replica) and node availability zone can be passed in. This parameter is not required for instances deployed in a single availability zone. 
+     * @return NodeSet Node information of an instance. Currently, information about the node type (master or replica) and node availability zone can be passed in. This parameter is not required for instances deployed in a single availability zone.
      */
     public RedisNodeInfo [] getNodeSet() {
         return this.NodeSet;
     }
 
     /**
-     * Set 
-     * @param NodeSet 
+     * Set Node information of an instance. Currently, information about the node type (master or replica) and node availability zone can be passed in. This parameter is not required for instances deployed in a single availability zone.
+     * @param NodeSet Node information of an instance. Currently, information about the node type (master or replica) and node availability zone can be passed in. This parameter is not required for instances deployed in a single availability zone.
      */
     public void setNodeSet(RedisNodeInfo [] NodeSet) {
         this.NodeSet = NodeSet;
+    }
+
+    /**
+     * Get The tag bound with the instance to be purchased 
+     * @return ResourceTags The tag bound with the instance to be purchased
+     */
+    public ResourceTag [] getResourceTags() {
+        return this.ResourceTags;
+    }
+
+    /**
+     * Set The tag bound with the instance to be purchased
+     * @param ResourceTags The tag bound with the instance to be purchased
+     */
+    public void setResourceTags(ResourceTag [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
     }
 
     /**
@@ -492,6 +515,7 @@ If the instance type parameter `TypeId` indicates CKV 3.2, the password contains
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "NoAuth", this.NoAuth);
         this.setParamArrayObj(map, prefix + "NodeSet.", this.NodeSet);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
 
     }
 }

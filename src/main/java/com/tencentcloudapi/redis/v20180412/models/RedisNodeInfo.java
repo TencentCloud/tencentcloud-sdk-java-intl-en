@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class RedisNodeInfo extends AbstractModel{
 
     /**
-    * 
+    * Node type. Valid values: `0` (master node), `1` (replica node)
     */
     @SerializedName("NodeType")
     @Expose
     private Long NodeType;
 
     /**
-    * 
+    * ID of the availability zone of the master or replica node
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * 
+    * ID of the master or replica node, which is not required when creating an instance
     */
     @SerializedName("NodeId")
     @Expose
     private Long NodeId;
 
     /**
-     * Get  
-     * @return NodeType 
+     * Get Node type. Valid values: `0` (master node), `1` (replica node) 
+     * @return NodeType Node type. Valid values: `0` (master node), `1` (replica node)
      */
     public Long getNodeType() {
         return this.NodeType;
     }
 
     /**
-     * Set 
-     * @param NodeType 
+     * Set Node type. Valid values: `0` (master node), `1` (replica node)
+     * @param NodeType Node type. Valid values: `0` (master node), `1` (replica node)
      */
     public void setNodeType(Long NodeType) {
         this.NodeType = NodeType;
     }
 
     /**
-     * Get  
-     * @return ZoneId 
+     * Get ID of the availability zone of the master or replica node 
+     * @return ZoneId ID of the availability zone of the master or replica node
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 
-     * @param ZoneId 
+     * Set ID of the availability zone of the master or replica node
+     * @param ZoneId ID of the availability zone of the master or replica node
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get  
-     * @return NodeId 
+     * Get ID of the master or replica node, which is not required when creating an instance 
+     * @return NodeId ID of the master or replica node, which is not required when creating an instance
      */
     public Long getNodeId() {
         return this.NodeId;
     }
 
     /**
-     * Set 
-     * @param NodeId 
+     * Set ID of the master or replica node, which is not required when creating an instance
+     * @param NodeId ID of the master or replica node, which is not required when creating an instance
      */
     public void setNodeId(Long NodeId) {
         this.NodeId = NodeId;

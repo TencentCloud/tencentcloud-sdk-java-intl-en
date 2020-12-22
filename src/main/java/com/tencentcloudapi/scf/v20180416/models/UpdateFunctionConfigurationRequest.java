@@ -51,7 +51,7 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     private Long Timeout;
 
     /**
-    * Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8
+    * Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime
     */
     @SerializedName("Runtime")
     @Expose
@@ -100,7 +100,7 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     private String ClsTopicId;
 
     /**
-    * It specifies whether to synchronously release a new version during the update. The default value is `FALSE`, indicating not to release a new version.
+    * It specifies whether to synchronously publish a new version during the update. The default value is `FALSE`, indicating not to publish a new version
     */
     @SerializedName("Publish")
     @Expose
@@ -135,7 +135,7 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     private PublicNetConfigIn PublicNetConfig;
 
     /**
-    * File system configuration input parameter, which is used for the function to bind the file system
+    * File system configuration input parameter, which is used for the function to bind the CFS file system
     */
     @SerializedName("CfsConfig")
     @Expose
@@ -213,16 +213,16 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     }
 
     /**
-     * Get Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8 
-     * @return Runtime Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8
+     * Get Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime 
+     * @return Runtime Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime
      */
     public String getRuntime() {
         return this.Runtime;
     }
 
     /**
-     * Set Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8
-     * @param Runtime Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Golang1 and Java8
+     * Set Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime
+     * @param Runtime Function runtime environment. Valid values: Python2.7, Python3.6, Nodejs6.10, Nodejs8.9, Nodejs10.15, Nodejs12.16, PHP5, PHP7, Go1, Java8, CustomRuntime
      */
     public void setRuntime(String Runtime) {
         this.Runtime = Runtime;
@@ -325,16 +325,16 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     }
 
     /**
-     * Get It specifies whether to synchronously release a new version during the update. The default value is `FALSE`, indicating not to release a new version. 
-     * @return Publish It specifies whether to synchronously release a new version during the update. The default value is `FALSE`, indicating not to release a new version.
+     * Get It specifies whether to synchronously publish a new version during the update. The default value is `FALSE`, indicating not to publish a new version 
+     * @return Publish It specifies whether to synchronously publish a new version during the update. The default value is `FALSE`, indicating not to publish a new version
      */
     public String getPublish() {
         return this.Publish;
     }
 
     /**
-     * Set It specifies whether to synchronously release a new version during the update. The default value is `FALSE`, indicating not to release a new version.
-     * @param Publish It specifies whether to synchronously release a new version during the update. The default value is `FALSE`, indicating not to release a new version.
+     * Set It specifies whether to synchronously publish a new version during the update. The default value is `FALSE`, indicating not to publish a new version
+     * @param Publish It specifies whether to synchronously publish a new version during the update. The default value is `FALSE`, indicating not to publish a new version
      */
     public void setPublish(String Publish) {
         this.Publish = Publish;
@@ -405,16 +405,16 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     }
 
     /**
-     * Get File system configuration input parameter, which is used for the function to bind the file system 
-     * @return CfsConfig File system configuration input parameter, which is used for the function to bind the file system
+     * Get File system configuration input parameter, which is used for the function to bind the CFS file system 
+     * @return CfsConfig File system configuration input parameter, which is used for the function to bind the CFS file system
      */
     public CfsConfig getCfsConfig() {
         return this.CfsConfig;
     }
 
     /**
-     * Set File system configuration input parameter, which is used for the function to bind the file system
-     * @param CfsConfig File system configuration input parameter, which is used for the function to bind the file system
+     * Set File system configuration input parameter, which is used for the function to bind the CFS file system
+     * @param CfsConfig File system configuration input parameter, which is used for the function to bind the CFS file system
      */
     public void setCfsConfig(CfsConfig CfsConfig) {
         this.CfsConfig = CfsConfig;

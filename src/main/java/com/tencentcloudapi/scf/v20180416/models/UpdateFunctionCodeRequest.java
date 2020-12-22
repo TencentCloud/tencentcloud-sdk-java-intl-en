@@ -93,7 +93,7 @@ public class UpdateFunctionCodeRequest extends AbstractModel{
     private Code Code;
 
     /**
-    * Source mode of code. Valid values: `ZipFile`, `Cos`, `Inline`, `TempCos` and `Git`. This field must be specified if the source is Git
+    * Code source. Valid values: ZipFile, Cos, Inline
     */
     @SerializedName("CodeSource")
     @Expose
@@ -260,16 +260,16 @@ public class UpdateFunctionCodeRequest extends AbstractModel{
     }
 
     /**
-     * Get Source mode of code. Valid values: `ZipFile`, `Cos`, `Inline`, `TempCos` and `Git`. This field must be specified if the source is Git 
-     * @return CodeSource Source mode of code. Valid values: `ZipFile`, `Cos`, `Inline`, `TempCos` and `Git`. This field must be specified if the source is Git
+     * Get Code source. Valid values: ZipFile, Cos, Inline 
+     * @return CodeSource Code source. Valid values: ZipFile, Cos, Inline
      */
     public String getCodeSource() {
         return this.CodeSource;
     }
 
     /**
-     * Set Source mode of code. Valid values: `ZipFile`, `Cos`, `Inline`, `TempCos` and `Git`. This field must be specified if the source is Git
-     * @param CodeSource Source mode of code. Valid values: `ZipFile`, `Cos`, `Inline`, `TempCos` and `Git`. This field must be specified if the source is Git
+     * Set Code source. Valid values: ZipFile, Cos, Inline
+     * @param CodeSource Code source. Valid values: ZipFile, Cos, Inline
      */
     public void setCodeSource(String CodeSource) {
         this.CodeSource = CodeSource;

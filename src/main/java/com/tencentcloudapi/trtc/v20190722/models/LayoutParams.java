@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class LayoutParams extends AbstractModel{
 
     /**
-    * On-cloud stream mix layout template ID. 0: floating template (default value); 1: grid template; 2: screen sharing template; 3: picture-in-picture template.
+    * On-cloud stream mix layout template ID. 0: floating template (default value); 1: grid template; 2: screen sharing template; 3: picture-in-picture template; 4: custom template.
     */
     @SerializedName("Template")
     @Expose
@@ -65,16 +65,23 @@ public class LayoutParams extends AbstractModel{
     private String [] MixVideoUids;
 
     /**
-     * Get On-cloud stream mix layout template ID. 0: floating template (default value); 1: grid template; 2: screen sharing template; 3: picture-in-picture template. 
-     * @return Template On-cloud stream mix layout template ID. 0: floating template (default value); 1: grid template; 2: screen sharing template; 3: picture-in-picture template.
+    * Valid in custom template, used to specify the video image position of a user in mixed streams.
+    */
+    @SerializedName("PresetLayoutConfig")
+    @Expose
+    private PresetLayoutConfig [] PresetLayoutConfig;
+
+    /**
+     * Get On-cloud stream mix layout template ID. 0: floating template (default value); 1: grid template; 2: screen sharing template; 3: picture-in-picture template; 4: custom template. 
+     * @return Template On-cloud stream mix layout template ID. 0: floating template (default value); 1: grid template; 2: screen sharing template; 3: picture-in-picture template; 4: custom template.
      */
     public Long getTemplate() {
         return this.Template;
     }
 
     /**
-     * Set On-cloud stream mix layout template ID. 0: floating template (default value); 1: grid template; 2: screen sharing template; 3: picture-in-picture template.
-     * @param Template On-cloud stream mix layout template ID. 0: floating template (default value); 1: grid template; 2: screen sharing template; 3: picture-in-picture template.
+     * Set On-cloud stream mix layout template ID. 0: floating template (default value); 1: grid template; 2: screen sharing template; 3: picture-in-picture template; 4: custom template.
+     * @param Template On-cloud stream mix layout template ID. 0: floating template (default value); 1: grid template; 2: screen sharing template; 3: picture-in-picture template; 4: custom template.
      */
     public void setTemplate(Long Template) {
         this.Template = Template;
@@ -161,6 +168,22 @@ public class LayoutParams extends AbstractModel{
     }
 
     /**
+     * Get Valid in custom template, used to specify the video image position of a user in mixed streams. 
+     * @return PresetLayoutConfig Valid in custom template, used to specify the video image position of a user in mixed streams.
+     */
+    public PresetLayoutConfig [] getPresetLayoutConfig() {
+        return this.PresetLayoutConfig;
+    }
+
+    /**
+     * Set Valid in custom template, used to specify the video image position of a user in mixed streams.
+     * @param PresetLayoutConfig Valid in custom template, used to specify the video image position of a user in mixed streams.
+     */
+    public void setPresetLayoutConfig(PresetLayoutConfig [] PresetLayoutConfig) {
+        this.PresetLayoutConfig = PresetLayoutConfig;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class LayoutParams extends AbstractModel{
         this.setParamObj(map, prefix + "SmallVideoLayoutParams.", this.SmallVideoLayoutParams);
         this.setParamSimple(map, prefix + "MainVideoRightAlign", this.MainVideoRightAlign);
         this.setParamArraySimple(map, prefix + "MixVideoUids.", this.MixVideoUids);
+        this.setParamArrayObj(map, prefix + "PresetLayoutConfig.", this.PresetLayoutConfig);
 
     }
 }

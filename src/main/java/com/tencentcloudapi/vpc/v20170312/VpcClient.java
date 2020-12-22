@@ -2103,6 +2103,26 @@ A service provider can query all review requests created by any `APPID` under it
     }
 
     /**
+     *This API is used to query the IP addresses, including their geographical locations and networks.
+     * @param req DescribeIpGeolocationInfosRequest
+     * @return DescribeIpGeolocationInfosResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIpGeolocationInfosResponse DescribeIpGeolocationInfos(DescribeIpGeolocationInfosRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeIpGeolocationInfosResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeIpGeolocationInfosResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeIpGeolocationInfos");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (DescribeNatGatewayDestinationIpPortTranslationNatRules) is used to query the array of objects of the port forwarding rules for a NAT gateway.
      * @param req DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest
      * @return DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse
@@ -2905,6 +2925,26 @@ This API is completed asynchronously. If you need to query the async job executi
                 Type type = new TypeToken<JsonResponseModel<HaVipDisassociateAddressIpResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "HaVipDisassociateAddressIp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the price of creating a direct connect gateway.
+     * @param req InquirePriceCreateDirectConnectGatewayRequest
+     * @return InquirePriceCreateDirectConnectGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquirePriceCreateDirectConnectGatewayResponse InquirePriceCreateDirectConnectGateway(InquirePriceCreateDirectConnectGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquirePriceCreateDirectConnectGatewayResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquirePriceCreateDirectConnectGatewayResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "InquirePriceCreateDirectConnectGateway");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
