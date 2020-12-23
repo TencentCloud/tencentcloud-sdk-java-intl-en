@@ -1,0 +1,200 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.dbbrain.v20191016.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class CreateDBDiagReportTaskRequest extends AbstractModel{
+
+    /**
+    * Instance ID.
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * Start time, such as `2020-11-08T14:00:00+08:00`.
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * End time, such as `2020-11-09T14:00:00+08:00`.
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
+    * Whether to send an email. Valid values: 0 - Yes, 1 - No.
+    */
+    @SerializedName("SendMailFlag")
+    @Expose
+    private Long SendMailFlag;
+
+    /**
+    * An array of contact IDs to receive the email.
+    */
+    @SerializedName("ContactPerson")
+    @Expose
+    private Long [] ContactPerson;
+
+    /**
+    * An array of contact group IDs to receive the email.
+    */
+    @SerializedName("ContactGroup")
+    @Expose
+    private Long [] ContactGroup;
+
+    /**
+    * Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
+    */
+    @SerializedName("Product")
+    @Expose
+    private String Product;
+
+    /**
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get Start time, such as `2020-11-08T14:00:00+08:00`. 
+     * @return StartTime Start time, such as `2020-11-08T14:00:00+08:00`.
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set Start time, such as `2020-11-08T14:00:00+08:00`.
+     * @param StartTime Start time, such as `2020-11-08T14:00:00+08:00`.
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get End time, such as `2020-11-09T14:00:00+08:00`. 
+     * @return EndTime End time, such as `2020-11-09T14:00:00+08:00`.
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set End time, such as `2020-11-09T14:00:00+08:00`.
+     * @param EndTime End time, such as `2020-11-09T14:00:00+08:00`.
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
+
+    /**
+     * Get Whether to send an email. Valid values: 0 - Yes, 1 - No. 
+     * @return SendMailFlag Whether to send an email. Valid values: 0 - Yes, 1 - No.
+     */
+    public Long getSendMailFlag() {
+        return this.SendMailFlag;
+    }
+
+    /**
+     * Set Whether to send an email. Valid values: 0 - Yes, 1 - No.
+     * @param SendMailFlag Whether to send an email. Valid values: 0 - Yes, 1 - No.
+     */
+    public void setSendMailFlag(Long SendMailFlag) {
+        this.SendMailFlag = SendMailFlag;
+    }
+
+    /**
+     * Get An array of contact IDs to receive the email. 
+     * @return ContactPerson An array of contact IDs to receive the email.
+     */
+    public Long [] getContactPerson() {
+        return this.ContactPerson;
+    }
+
+    /**
+     * Set An array of contact IDs to receive the email.
+     * @param ContactPerson An array of contact IDs to receive the email.
+     */
+    public void setContactPerson(Long [] ContactPerson) {
+        this.ContactPerson = ContactPerson;
+    }
+
+    /**
+     * Get An array of contact group IDs to receive the email. 
+     * @return ContactGroup An array of contact group IDs to receive the email.
+     */
+    public Long [] getContactGroup() {
+        return this.ContactGroup;
+    }
+
+    /**
+     * Set An array of contact group IDs to receive the email.
+     * @param ContactGroup An array of contact group IDs to receive the email.
+     */
+    public void setContactGroup(Long [] ContactGroup) {
+        this.ContactGroup = ContactGroup;
+    }
+
+    /**
+     * Get Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`. 
+     * @return Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
+     */
+    public String getProduct() {
+        return this.Product;
+    }
+
+    /**
+     * Set Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
+     * @param Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
+     */
+    public void setProduct(String Product) {
+        this.Product = Product;
+    }
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "SendMailFlag", this.SendMailFlag);
+        this.setParamArraySimple(map, prefix + "ContactPerson.", this.ContactPerson);
+        this.setParamArraySimple(map, prefix + "ContactGroup.", this.ContactGroup);
+        this.setParamSimple(map, prefix + "Product", this.Product);
+
+    }
+}
+

@@ -39,6 +39,86 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a health report and select whether to send an email.
+     * @param req CreateDBDiagReportTaskRequest
+     * @return CreateDBDiagReportTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDBDiagReportTaskResponse CreateDBDiagReportTask(CreateDBDiagReportTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDBDiagReportTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDBDiagReportTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateDBDiagReportTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create the email configuration. The input parameter “ProfileType” represents the type of the email configuration. Valid values: “dbScan_mail_configuration” (email configuration of database inspection report) and “scheduler_mail_configuration” (email configuration of scheduled task report).
+     * @param req CreateMailProfileRequest
+     * @return CreateMailProfileResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMailProfileResponse CreateMailProfile(CreateMailProfileRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateMailProfileResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateMailProfileResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateMailProfile");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to obtain the information of the contact in the email.
+     * @param req DescribeAllUserContactRequest
+     * @return DescribeAllUserContactResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllUserContactResponse DescribeAllUserContact(DescribeAllUserContactRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAllUserContactResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAllUserContactResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAllUserContact");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to obtain the information of the contact group in the email.
+     * @param req DescribeAllUserGroupRequest
+     * @return DescribeAllUserGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllUserGroupResponse DescribeAllUserGroup(DescribeAllUserGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAllUserGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAllUserGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAllUserGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the details of an instance exception diagnosis event.
      * @param req DescribeDBDiagEventRequest
      * @return DescribeDBDiagEventResponse
@@ -171,6 +251,26 @@ public class DbbrainClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeTopSpaceTablesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeTopSpaceTables");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify instance inspection switch.
+     * @param req ModifyDiagDBInstanceConfRequest
+     * @return ModifyDiagDBInstanceConfResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDiagDBInstanceConfResponse ModifyDiagDBInstanceConf(ModifyDiagDBInstanceConfRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDiagDBInstanceConfResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDiagDBInstanceConfResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDiagDBInstanceConf");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

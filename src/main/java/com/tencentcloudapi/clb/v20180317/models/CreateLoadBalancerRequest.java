@@ -38,8 +38,8 @@ OPEN: public network; INTERNAL: private network.
     private Long Forward;
 
     /**
-    * CLB instance name, which takes effect only when an instance is created. Rule: 1-50 letters, digits, dashes (-), or underscores (_).
-Note: If this name is the same as the name of an existing CLB instance in the system, the system will automatically generate a name for this newly created instance.
+    * CLB instance name, which takes effect only when an instance is created. It consists of 1 to 60 letters, digits, hyphens (-), or underscores (_).
+Note: If the name of the new CLB instance already exists in the system, the system will automatically generate a name for the new CLB instance.
     */
     @SerializedName("LoadBalancerName")
     @Expose
@@ -124,7 +124,7 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
     private String Vip;
 
     /**
-    * 
+    * Bandwidth package ID. If this parameter is specified, the network billing mode (`InternetAccessible.InternetChargeType`) will only support bill-by-bandwidth package (`BANDWIDTH_PACKAGE`).
     */
     @SerializedName("BandwidthPackageId")
     @Expose
@@ -202,20 +202,20 @@ OPEN: public network; INTERNAL: private network.
     }
 
     /**
-     * Get CLB instance name, which takes effect only when an instance is created. Rule: 1-50 letters, digits, dashes (-), or underscores (_).
-Note: If this name is the same as the name of an existing CLB instance in the system, the system will automatically generate a name for this newly created instance. 
-     * @return LoadBalancerName CLB instance name, which takes effect only when an instance is created. Rule: 1-50 letters, digits, dashes (-), or underscores (_).
-Note: If this name is the same as the name of an existing CLB instance in the system, the system will automatically generate a name for this newly created instance.
+     * Get CLB instance name, which takes effect only when an instance is created. It consists of 1 to 60 letters, digits, hyphens (-), or underscores (_).
+Note: If the name of the new CLB instance already exists in the system, the system will automatically generate a name for the new CLB instance. 
+     * @return LoadBalancerName CLB instance name, which takes effect only when an instance is created. It consists of 1 to 60 letters, digits, hyphens (-), or underscores (_).
+Note: If the name of the new CLB instance already exists in the system, the system will automatically generate a name for the new CLB instance.
      */
     public String getLoadBalancerName() {
         return this.LoadBalancerName;
     }
 
     /**
-     * Set CLB instance name, which takes effect only when an instance is created. Rule: 1-50 letters, digits, dashes (-), or underscores (_).
-Note: If this name is the same as the name of an existing CLB instance in the system, the system will automatically generate a name for this newly created instance.
-     * @param LoadBalancerName CLB instance name, which takes effect only when an instance is created. Rule: 1-50 letters, digits, dashes (-), or underscores (_).
-Note: If this name is the same as the name of an existing CLB instance in the system, the system will automatically generate a name for this newly created instance.
+     * Set CLB instance name, which takes effect only when an instance is created. It consists of 1 to 60 letters, digits, hyphens (-), or underscores (_).
+Note: If the name of the new CLB instance already exists in the system, the system will automatically generate a name for the new CLB instance.
+     * @param LoadBalancerName CLB instance name, which takes effect only when an instance is created. It consists of 1 to 60 letters, digits, hyphens (-), or underscores (_).
+Note: If the name of the new CLB instance already exists in the system, the system will automatically generate a name for the new CLB instance.
      */
     public void setLoadBalancerName(String LoadBalancerName) {
         this.LoadBalancerName = LoadBalancerName;
@@ -402,16 +402,16 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
     }
 
     /**
-     * Get  
-     * @return BandwidthPackageId 
+     * Get Bandwidth package ID. If this parameter is specified, the network billing mode (`InternetAccessible.InternetChargeType`) will only support bill-by-bandwidth package (`BANDWIDTH_PACKAGE`). 
+     * @return BandwidthPackageId Bandwidth package ID. If this parameter is specified, the network billing mode (`InternetAccessible.InternetChargeType`) will only support bill-by-bandwidth package (`BANDWIDTH_PACKAGE`).
      */
     public String getBandwidthPackageId() {
         return this.BandwidthPackageId;
     }
 
     /**
-     * Set 
-     * @param BandwidthPackageId 
+     * Set Bandwidth package ID. If this parameter is specified, the network billing mode (`InternetAccessible.InternetChargeType`) will only support bill-by-bandwidth package (`BANDWIDTH_PACKAGE`).
+     * @param BandwidthPackageId Bandwidth package ID. If this parameter is specified, the network billing mode (`InternetAccessible.InternetChargeType`) will only support bill-by-bandwidth package (`BANDWIDTH_PACKAGE`).
      */
     public void setBandwidthPackageId(String BandwidthPackageId) {
         this.BandwidthPackageId = BandwidthPackageId;

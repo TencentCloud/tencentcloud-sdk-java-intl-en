@@ -37,7 +37,7 @@ public class RedisNodeInfo extends AbstractModel{
     private Long ZoneId;
 
     /**
-    * ID of the master or replica node, which is not required when creating an instance
+    * ID of the master or replica node, which is not required upon creation of the instance
     */
     @SerializedName("NodeId")
     @Expose
@@ -76,16 +76,16 @@ public class RedisNodeInfo extends AbstractModel{
     }
 
     /**
-     * Get ID of the master or replica node, which is not required when creating an instance 
-     * @return NodeId ID of the master or replica node, which is not required when creating an instance
+     * Get ID of the master or replica node, which is not required upon creation of the instance 
+     * @return NodeId ID of the master or replica node, which is not required upon creation of the instance
      */
     public Long getNodeId() {
         return this.NodeId;
     }
 
     /**
-     * Set ID of the master or replica node, which is not required when creating an instance
-     * @param NodeId ID of the master or replica node, which is not required when creating an instance
+     * Set ID of the master or replica node, which is not required upon creation of the instance
+     * @param NodeId ID of the master or replica node, which is not required upon creation of the instance
      */
     public void setNodeId(Long NodeId) {
         this.NodeId = NodeId;

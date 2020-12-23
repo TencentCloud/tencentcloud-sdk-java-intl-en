@@ -46,8 +46,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Url;
 
     /**
-    * Health check status of the real server bound to this rule
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Health status of the real server bound to this rule
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Targets")
     @Expose
@@ -110,20 +110,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Health check status of the real server bound to this rule
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Targets Health check status of the real server bound to this rule
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Health status of the real server bound to this rule
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Targets Health status of the real server bound to this rule
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public TargetHealth [] getTargets() {
         return this.Targets;
     }
 
     /**
-     * Set Health check status of the real server bound to this rule
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Targets Health check status of the real server bound to this rule
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Health status of the real server bound to this rule
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Targets Health status of the real server bound to this rule
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setTargets(TargetHealth [] Targets) {
         this.Targets = Targets;

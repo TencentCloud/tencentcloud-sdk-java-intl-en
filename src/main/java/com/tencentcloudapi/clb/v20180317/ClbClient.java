@@ -672,6 +672,26 @@ This is an async API. After it is returned successfully, you can call the Descri
     }
 
     /**
+     *This API is used to query CLB instances with high traffic and return the top 10 results. For queries using a sub-account, only the result CLB instances authorized to the sub-account will be returned.
+     * @param req DescribeLoadBalancerTrafficRequest
+     * @return DescribeLoadBalancerTrafficResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLoadBalancerTrafficResponse DescribeLoadBalancerTraffic(DescribeLoadBalancerTrafficRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLoadBalancerTrafficResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLoadBalancerTrafficResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLoadBalancerTraffic");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the list of CLB instances in a region.
 
      * @param req DescribeLoadBalancersRequest
