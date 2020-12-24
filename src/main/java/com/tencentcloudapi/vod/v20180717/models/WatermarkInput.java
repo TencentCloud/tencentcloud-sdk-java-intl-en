@@ -30,7 +30,7 @@ public class WatermarkInput extends AbstractModel{
     private Long Definition;
 
     /**
-    * Text content, which contains up to 100 characters. This field is required only when the watermark type is text.
+    * Text content, which contains up to 100 characters. Set this parameter only when the watermark type is text.
 VOD does not support adding text watermarks on screenshots.
     */
     @SerializedName("TextContent")
@@ -38,7 +38,7 @@ VOD does not support adding text watermarks on screenshots.
     private String TextContent;
 
     /**
-    * SVG content, which contains up to 2,000,000 characters. This field is required only when the watermark type is SVG.
+    * SVG content, which contains up to 2,000,000 characters. Set this parameter only when the watermark type is SVG.
 VOD does not support adding SVG watermarks on screenshots.
     */
     @SerializedName("SvgContent")
@@ -82,9 +82,9 @@ VOD does not support adding SVG watermarks on screenshots.
     }
 
     /**
-     * Get Text content, which contains up to 100 characters. This field is required only when the watermark type is text.
+     * Get Text content, which contains up to 100 characters. Set this parameter only when the watermark type is text.
 VOD does not support adding text watermarks on screenshots. 
-     * @return TextContent Text content, which contains up to 100 characters. This field is required only when the watermark type is text.
+     * @return TextContent Text content, which contains up to 100 characters. Set this parameter only when the watermark type is text.
 VOD does not support adding text watermarks on screenshots.
      */
     public String getTextContent() {
@@ -92,9 +92,9 @@ VOD does not support adding text watermarks on screenshots.
     }
 
     /**
-     * Set Text content, which contains up to 100 characters. This field is required only when the watermark type is text.
+     * Set Text content, which contains up to 100 characters. Set this parameter only when the watermark type is text.
 VOD does not support adding text watermarks on screenshots.
-     * @param TextContent Text content, which contains up to 100 characters. This field is required only when the watermark type is text.
+     * @param TextContent Text content, which contains up to 100 characters. Set this parameter only when the watermark type is text.
 VOD does not support adding text watermarks on screenshots.
      */
     public void setTextContent(String TextContent) {
@@ -102,9 +102,9 @@ VOD does not support adding text watermarks on screenshots.
     }
 
     /**
-     * Get SVG content, which contains up to 2,000,000 characters. This field is required only when the watermark type is SVG.
+     * Get SVG content, which contains up to 2,000,000 characters. Set this parameter only when the watermark type is SVG.
 VOD does not support adding SVG watermarks on screenshots. 
-     * @return SvgContent SVG content, which contains up to 2,000,000 characters. This field is required only when the watermark type is SVG.
+     * @return SvgContent SVG content, which contains up to 2,000,000 characters. Set this parameter only when the watermark type is SVG.
 VOD does not support adding SVG watermarks on screenshots.
      */
     public String getSvgContent() {
@@ -112,9 +112,9 @@ VOD does not support adding SVG watermarks on screenshots.
     }
 
     /**
-     * Set SVG content, which contains up to 2,000,000 characters. This field is required only when the watermark type is SVG.
+     * Set SVG content, which contains up to 2,000,000 characters. Set this parameter only when the watermark type is SVG.
 VOD does not support adding SVG watermarks on screenshots.
-     * @param SvgContent SVG content, which contains up to 2,000,000 characters. This field is required only when the watermark type is SVG.
+     * @param SvgContent SVG content, which contains up to 2,000,000 characters. Set this parameter only when the watermark type is SVG.
 VOD does not support adding SVG watermarks on screenshots.
      */
     public void setSvgContent(String SvgContent) {

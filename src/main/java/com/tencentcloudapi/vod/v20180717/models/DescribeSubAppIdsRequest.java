@@ -23,11 +23,57 @@ import java.util.HashMap;
 public class DescribeSubAppIdsRequest extends AbstractModel{
 
     /**
+    * 
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * 
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
     * Tag information. You can query the list of subapplications with specified tags.
     */
     @SerializedName("Tags")
     @Expose
     private ResourceTag [] Tags;
+
+    /**
+     * Get  
+     * @return Limit 
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 
+     * @param Limit 
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get  
+     * @return Offset 
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 
+     * @param Offset 
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
 
     /**
      * Get Tag information. You can query the list of subapplications with specified tags. 
@@ -49,6 +95,8 @@ public class DescribeSubAppIdsRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }

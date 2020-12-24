@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeLoadBalancerTrafficResponse extends AbstractModel{
 
     /**
-    * Information of CLB instances descendingly sorted by outbound bandwidth
+    * Information of CLB instances sorted by outbound bandwidth from highest to lowest
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("LoadBalancerTraffic")
@@ -38,9 +38,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String RequestId;
 
     /**
-     * Get Information of CLB instances descendingly sorted by outbound bandwidth
+     * Get Information of CLB instances sorted by outbound bandwidth from highest to lowest
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return LoadBalancerTraffic Information of CLB instances descendingly sorted by outbound bandwidth
+     * @return LoadBalancerTraffic Information of CLB instances sorted by outbound bandwidth from highest to lowest
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public LoadBalancerTraffic [] getLoadBalancerTraffic() {
@@ -48,9 +48,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set Information of CLB instances descendingly sorted by outbound bandwidth
+     * Set Information of CLB instances sorted by outbound bandwidth from highest to lowest
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param LoadBalancerTraffic Information of CLB instances descendingly sorted by outbound bandwidth
+     * @param LoadBalancerTraffic Information of CLB instances sorted by outbound bandwidth from highest to lowest
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setLoadBalancerTraffic(LoadBalancerTraffic [] LoadBalancerTraffic) {

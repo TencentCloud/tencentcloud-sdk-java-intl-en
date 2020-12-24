@@ -38,8 +38,8 @@ OPEN: public network; INTERNAL: private network.
     private Long Forward;
 
     /**
-    * CLB instance name, which takes effect only when an instance is created. It consists of 1 to 60 letters, digits, hyphens (-), or underscores (_).
-Note: If the name of the new CLB instance already exists in the system, the system will automatically generate a name for the new CLB instance.
+    * CLB instance name, which takes effect only when only one instance is to be created in the request. It can consist 1 to 60 letters, digits, hyphens (-), or underscores (_).
+Note: if the name of the new CLB instance already exists, a default name will be generated automatically.
     */
     @SerializedName("LoadBalancerName")
     @Expose
@@ -202,20 +202,20 @@ OPEN: public network; INTERNAL: private network.
     }
 
     /**
-     * Get CLB instance name, which takes effect only when an instance is created. It consists of 1 to 60 letters, digits, hyphens (-), or underscores (_).
-Note: If the name of the new CLB instance already exists in the system, the system will automatically generate a name for the new CLB instance. 
-     * @return LoadBalancerName CLB instance name, which takes effect only when an instance is created. It consists of 1 to 60 letters, digits, hyphens (-), or underscores (_).
-Note: If the name of the new CLB instance already exists in the system, the system will automatically generate a name for the new CLB instance.
+     * Get CLB instance name, which takes effect only when only one instance is to be created in the request. It can consist 1 to 60 letters, digits, hyphens (-), or underscores (_).
+Note: if the name of the new CLB instance already exists, a default name will be generated automatically. 
+     * @return LoadBalancerName CLB instance name, which takes effect only when only one instance is to be created in the request. It can consist 1 to 60 letters, digits, hyphens (-), or underscores (_).
+Note: if the name of the new CLB instance already exists, a default name will be generated automatically.
      */
     public String getLoadBalancerName() {
         return this.LoadBalancerName;
     }
 
     /**
-     * Set CLB instance name, which takes effect only when an instance is created. It consists of 1 to 60 letters, digits, hyphens (-), or underscores (_).
-Note: If the name of the new CLB instance already exists in the system, the system will automatically generate a name for the new CLB instance.
-     * @param LoadBalancerName CLB instance name, which takes effect only when an instance is created. It consists of 1 to 60 letters, digits, hyphens (-), or underscores (_).
-Note: If the name of the new CLB instance already exists in the system, the system will automatically generate a name for the new CLB instance.
+     * Set CLB instance name, which takes effect only when only one instance is to be created in the request. It can consist 1 to 60 letters, digits, hyphens (-), or underscores (_).
+Note: if the name of the new CLB instance already exists, a default name will be generated automatically.
+     * @param LoadBalancerName CLB instance name, which takes effect only when only one instance is to be created in the request. It can consist 1 to 60 letters, digits, hyphens (-), or underscores (_).
+Note: if the name of the new CLB instance already exists, a default name will be generated automatically.
      */
     public void setLoadBalancerName(String LoadBalancerName) {
         this.LoadBalancerName = LoadBalancerName;

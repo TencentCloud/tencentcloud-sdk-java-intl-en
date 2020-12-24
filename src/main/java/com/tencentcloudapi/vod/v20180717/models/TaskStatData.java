@@ -24,12 +24,12 @@ public class TaskStatData extends AbstractModel{
 
     /**
     * Task type.
-<li> Transcoding: basic transcoding</li>
-<li> Transcoding-TESHD: TESHD transcoding</li>
-<li> Editing: Video editing</li>
-<li> AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
-<li> ContentAudit: content audit</li>
-<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing (not recommended)</li>
+<li>Transcoding: basic transcoding</li>
+<li>Transcoding-TESHD: TESHD transcoding</li>
+<li>Editing: video editing</li>
+<li>AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
+<li>ContentAudit: content moderation</li>
+<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing. This value is not recommended.</li>
     */
     @SerializedName("TaskType")
     @Expose
@@ -85,19 +85,19 @@ Transcoding specification:
 
     /**
      * Get Task type.
-<li> Transcoding: basic transcoding</li>
-<li> Transcoding-TESHD: TESHD transcoding</li>
-<li> Editing: Video editing</li>
-<li> AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
-<li> ContentAudit: content audit</li>
-<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing (not recommended)</li> 
+<li>Transcoding: basic transcoding</li>
+<li>Transcoding-TESHD: TESHD transcoding</li>
+<li>Editing: video editing</li>
+<li>AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
+<li>ContentAudit: content moderation</li>
+<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing. This value is not recommended.</li> 
      * @return TaskType Task type.
-<li> Transcoding: basic transcoding</li>
-<li> Transcoding-TESHD: TESHD transcoding</li>
-<li> Editing: Video editing</li>
-<li> AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
-<li> ContentAudit: content audit</li>
-<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing (not recommended)</li>
+<li>Transcoding: basic transcoding</li>
+<li>Transcoding-TESHD: TESHD transcoding</li>
+<li>Editing: video editing</li>
+<li>AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
+<li>ContentAudit: content moderation</li>
+<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing. This value is not recommended.</li>
      */
     public String getTaskType() {
         return this.TaskType;
@@ -105,19 +105,19 @@ Transcoding specification:
 
     /**
      * Set Task type.
-<li> Transcoding: basic transcoding</li>
-<li> Transcoding-TESHD: TESHD transcoding</li>
-<li> Editing: Video editing</li>
-<li> AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
-<li> ContentAudit: content audit</li>
-<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing (not recommended)</li>
+<li>Transcoding: basic transcoding</li>
+<li>Transcoding-TESHD: TESHD transcoding</li>
+<li>Editing: video editing</li>
+<li>AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
+<li>ContentAudit: content moderation</li>
+<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing. This value is not recommended.</li>
      * @param TaskType Task type.
-<li> Transcoding: basic transcoding</li>
-<li> Transcoding-TESHD: TESHD transcoding</li>
-<li> Editing: Video editing</li>
-<li> AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
-<li> ContentAudit: content audit</li>
-<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing (not recommended)</li>
+<li>Transcoding: basic transcoding</li>
+<li>Transcoding-TESHD: TESHD transcoding</li>
+<li>Editing: video editing</li>
+<li>AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
+<li>ContentAudit: content moderation</li>
+<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing. This value is not recommended.</li>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;

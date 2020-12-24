@@ -1053,11 +1053,11 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
-     *<b>This API is disused and replaced by [DescribeMediaProcessUsageData](https://intl.cloud.tencent.com/document/product/266/41464?from_cn_redirect=1).</b>
+     *<b>This API is replaced by [DescribeMediaProcessUsageData](https://intl.cloud.tencent.com/document/product/266/41464?from_cn_redirect=1) and not recommended for use.</b>
 
-This API will return the duration of audited video content in seconds per day within the queried period.
+This API returns the duration of reviewed video content in seconds per day within the queried period.
 
-1. The API is used to query statistics on the duration of audited video content for the last 365 days.
+1. The API is used to query statistics on the duration of reviewed video content for the last 365 days.
 2. The queried period is up to 90 days.
      * @param req DescribeReviewDetailsRequest
      * @return DescribeReviewDetailsResponse
@@ -1834,7 +1834,7 @@ There are two ways to create a task flow template:
     }
 
     /**
-     *This API is <font color='red'>disused</font>, please use [ProcessMedia](https://intl.cloud.tencent.com/document/product/862/37578?from_cn_redirect=1) API of MPS, and enter a video URL in the input parameter `InputInfo.UrlInputInfo.Url`.
+     *This API is <font color='red'>disused</font>, please use [ProcessMedia](https://intl.cloud.tencent.com/document/product/862/37578?from_cn_redirect=1) API of MPS, with the input parameter `InputInfo.UrlInputInfo.Url` set to a video URL.
      * @param req ProcessMediaByUrlRequest
      * @return ProcessMediaByUrlResponse
      * @throws TencentCloudSDKException

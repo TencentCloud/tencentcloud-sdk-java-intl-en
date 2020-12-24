@@ -65,11 +65,11 @@ In Hz.
 
     /**
     * Audio channel system. Valid values:
-<li>1: Mono-channel</li>
-<li>2: Dual-channel</li>
-<li>6: Stereo</li>
+<li>1: mono-channel</li>
+<li>2: dual-channel</li>
+<li>6: stereo</li>
 You cannot set the sound channel as stereo for media files in container formats for audios (FLAC, OGG, MP3, M4A).
-Default value: 2.
+Default value: 2
     */
     @SerializedName("AudioChannel")
     @Expose
@@ -205,17 +205,17 @@ In Hz.
 
     /**
      * Get Audio channel system. Valid values:
-<li>1: Mono-channel</li>
-<li>2: Dual-channel</li>
-<li>6: Stereo</li>
+<li>1: mono-channel</li>
+<li>2: dual-channel</li>
+<li>6: stereo</li>
 You cannot set the sound channel as stereo for media files in container formats for audios (FLAC, OGG, MP3, M4A).
-Default value: 2. 
+Default value: 2 
      * @return AudioChannel Audio channel system. Valid values:
-<li>1: Mono-channel</li>
-<li>2: Dual-channel</li>
-<li>6: Stereo</li>
+<li>1: mono-channel</li>
+<li>2: dual-channel</li>
+<li>6: stereo</li>
 You cannot set the sound channel as stereo for media files in container formats for audios (FLAC, OGG, MP3, M4A).
-Default value: 2.
+Default value: 2
      */
     public Long getAudioChannel() {
         return this.AudioChannel;
@@ -223,17 +223,17 @@ Default value: 2.
 
     /**
      * Set Audio channel system. Valid values:
-<li>1: Mono-channel</li>
-<li>2: Dual-channel</li>
-<li>6: Stereo</li>
+<li>1: mono-channel</li>
+<li>2: dual-channel</li>
+<li>6: stereo</li>
 You cannot set the sound channel as stereo for media files in container formats for audios (FLAC, OGG, MP3, M4A).
-Default value: 2.
+Default value: 2
      * @param AudioChannel Audio channel system. Valid values:
-<li>1: Mono-channel</li>
-<li>2: Dual-channel</li>
-<li>6: Stereo</li>
+<li>1: mono-channel</li>
+<li>2: dual-channel</li>
+<li>6: stereo</li>
 You cannot set the sound channel as stereo for media files in container formats for audios (FLAC, OGG, MP3, M4A).
-Default value: 2.
+Default value: 2
      */
     public void setAudioChannel(Long AudioChannel) {
         this.AudioChannel = AudioChannel;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ProcessMediaByUrlRequest extends AbstractModel{
 
     /**
-    * This API is<font color='red'>disused</font>. We recommend using an alternative API. For more information, see API overview.
+    * This API is<font color='red'>disused</font>. You are advised to use an alternative API. For more information, see API overview.
     */
     @SerializedName("InputInfo")
     @Expose
@@ -93,16 +93,16 @@ public class ProcessMediaByUrlRequest extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * Get This API is<font color='red'>disused</font>. We recommend using an alternative API. For more information, see API overview. 
-     * @return InputInfo This API is<font color='red'>disused</font>. We recommend using an alternative API. For more information, see API overview.
+     * Get This API is<font color='red'>disused</font>. You are advised to use an alternative API. For more information, see API overview. 
+     * @return InputInfo This API is<font color='red'>disused</font>. You are advised to use an alternative API. For more information, see API overview.
      */
     public MediaInputInfo getInputInfo() {
         return this.InputInfo;
     }
 
     /**
-     * Set This API is<font color='red'>disused</font>. We recommend using an alternative API. For more information, see API overview.
-     * @param InputInfo This API is<font color='red'>disused</font>. We recommend using an alternative API. For more information, see API overview.
+     * Set This API is<font color='red'>disused</font>. You are advised to use an alternative API. For more information, see API overview.
+     * @param InputInfo This API is<font color='red'>disused</font>. You are advised to use an alternative API. For more information, see API overview.
      */
     public void setInputInfo(MediaInputInfo InputInfo) {
         this.InputInfo = InputInfo;

@@ -77,11 +77,11 @@ If the value is 0, the bitrate of the video will be the same as that of the sour
     private Long Height;
 
     /**
-    * Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding;</li>
-<li>black: keep the image's aspect ratio unchanged and fill the uncovered area with black color.</li>
-<li>white: keep the image's aspect ratio unchanged and fill the uncovered area with white color.</li>
-<li>gauss: keep the image's aspect ratio unchanged and apply Gaussian blur to the uncovered area.</li>
+    * Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. Valid values:
+<li>stretch: stretches video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding.</li>
+<li>black: fills the uncovered area with black color, without changing the image's aspect ratio.</li>
+<li>white: fills the uncovered area with white color, without changing the image's aspect ratio.</li>
+<li>gauss: applies Gaussian blur to the uncovered area, without changing the image's aspect ratio.</li>
     */
     @SerializedName("FillType")
     @Expose
@@ -89,11 +89,18 @@ If the value is 0, the bitrate of the video will be the same as that of the sour
 
     /**
     * Video Constant Rate Factor (CRF). Value range: 1-51. This parameter will be disabled if you enter 0.
-We don’t recommend specifying this parameter if you have no special requirements.
+We don’t recommend specifying this parameter unless you have special requirements.
     */
     @SerializedName("Vcrf")
     @Expose
     private Long Vcrf;
+
+    /**
+    * 
+    */
+    @SerializedName("Gop")
+    @Expose
+    private Long Gop;
 
     /**
      * Get Video stream encoder. Valid values:
@@ -240,32 +247,32 @@ If the value is 0, the bitrate of the video will be the same as that of the sour
     }
 
     /**
-     * Get Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding;</li>
-<li>black: keep the image's aspect ratio unchanged and fill the uncovered area with black color.</li>
-<li>white: keep the image's aspect ratio unchanged and fill the uncovered area with white color.</li>
-<li>gauss: keep the image's aspect ratio unchanged and apply Gaussian blur to the uncovered area.</li> 
-     * @return FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding;</li>
-<li>black: keep the image's aspect ratio unchanged and fill the uncovered area with black color.</li>
-<li>white: keep the image's aspect ratio unchanged and fill the uncovered area with white color.</li>
-<li>gauss: keep the image's aspect ratio unchanged and apply Gaussian blur to the uncovered area.</li>
+     * Get Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. Valid values:
+<li>stretch: stretches video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding.</li>
+<li>black: fills the uncovered area with black color, without changing the image's aspect ratio.</li>
+<li>white: fills the uncovered area with white color, without changing the image's aspect ratio.</li>
+<li>gauss: applies Gaussian blur to the uncovered area, without changing the image's aspect ratio.</li> 
+     * @return FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. Valid values:
+<li>stretch: stretches video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding.</li>
+<li>black: fills the uncovered area with black color, without changing the image's aspect ratio.</li>
+<li>white: fills the uncovered area with white color, without changing the image's aspect ratio.</li>
+<li>gauss: applies Gaussian blur to the uncovered area, without changing the image's aspect ratio.</li>
      */
     public String getFillType() {
         return this.FillType;
     }
 
     /**
-     * Set Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding;</li>
-<li>black: keep the image's aspect ratio unchanged and fill the uncovered area with black color.</li>
-<li>white: keep the image's aspect ratio unchanged and fill the uncovered area with white color.</li>
-<li>gauss: keep the image's aspect ratio unchanged and apply Gaussian blur to the uncovered area.</li>
-     * @param FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding;</li>
-<li>black: keep the image's aspect ratio unchanged and fill the uncovered area with black color.</li>
-<li>white: keep the image's aspect ratio unchanged and fill the uncovered area with white color.</li>
-<li>gauss: keep the image's aspect ratio unchanged and apply Gaussian blur to the uncovered area.</li>
+     * Set Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. Valid values:
+<li>stretch: stretches video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding.</li>
+<li>black: fills the uncovered area with black color, without changing the image's aspect ratio.</li>
+<li>white: fills the uncovered area with white color, without changing the image's aspect ratio.</li>
+<li>gauss: applies Gaussian blur to the uncovered area, without changing the image's aspect ratio.</li>
+     * @param FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. Valid values:
+<li>stretch: stretches video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding.</li>
+<li>black: fills the uncovered area with black color, without changing the image's aspect ratio.</li>
+<li>white: fills the uncovered area with white color, without changing the image's aspect ratio.</li>
+<li>gauss: applies Gaussian blur to the uncovered area, without changing the image's aspect ratio.</li>
      */
     public void setFillType(String FillType) {
         this.FillType = FillType;
@@ -273,9 +280,9 @@ If the value is 0, the bitrate of the video will be the same as that of the sour
 
     /**
      * Get Video Constant Rate Factor (CRF). Value range: 1-51. This parameter will be disabled if you enter 0.
-We don’t recommend specifying this parameter if you have no special requirements. 
+We don’t recommend specifying this parameter unless you have special requirements. 
      * @return Vcrf Video Constant Rate Factor (CRF). Value range: 1-51. This parameter will be disabled if you enter 0.
-We don’t recommend specifying this parameter if you have no special requirements.
+We don’t recommend specifying this parameter unless you have special requirements.
      */
     public Long getVcrf() {
         return this.Vcrf;
@@ -283,12 +290,28 @@ We don’t recommend specifying this parameter if you have no special requiremen
 
     /**
      * Set Video Constant Rate Factor (CRF). Value range: 1-51. This parameter will be disabled if you enter 0.
-We don’t recommend specifying this parameter if you have no special requirements.
+We don’t recommend specifying this parameter unless you have special requirements.
      * @param Vcrf Video Constant Rate Factor (CRF). Value range: 1-51. This parameter will be disabled if you enter 0.
-We don’t recommend specifying this parameter if you have no special requirements.
+We don’t recommend specifying this parameter unless you have special requirements.
      */
     public void setVcrf(Long Vcrf) {
         this.Vcrf = Vcrf;
+    }
+
+    /**
+     * Get  
+     * @return Gop 
+     */
+    public Long getGop() {
+        return this.Gop;
+    }
+
+    /**
+     * Set 
+     * @param Gop 
+     */
+    public void setGop(Long Gop) {
+        this.Gop = Gop;
     }
 
     /**
@@ -303,6 +326,7 @@ We don’t recommend specifying this parameter if you have no special requiremen
         this.setParamSimple(map, prefix + "Height", this.Height);
         this.setParamSimple(map, prefix + "FillType", this.FillType);
         this.setParamSimple(map, prefix + "Vcrf", this.Vcrf);
+        this.setParamSimple(map, prefix + "Gop", this.Gop);
 
     }
 }

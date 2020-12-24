@@ -47,8 +47,8 @@ public class AdaptiveStreamTemplate extends AbstractModel{
 
     /**
     * Whether to remove a video stream. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
+<li>0: no</li>
+<li>1: yes</li>
     */
     @SerializedName("RemoveVideo")
     @Expose
@@ -112,11 +112,11 @@ public class AdaptiveStreamTemplate extends AbstractModel{
 
     /**
      * Get Whether to remove a video stream. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li> 
+<li>0: no</li>
+<li>1: yes</li> 
      * @return RemoveVideo Whether to remove a video stream. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
+<li>0: no</li>
+<li>1: yes</li>
      */
     public Long getRemoveVideo() {
         return this.RemoveVideo;
@@ -124,11 +124,11 @@ public class AdaptiveStreamTemplate extends AbstractModel{
 
     /**
      * Set Whether to remove a video stream. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
+<li>0: no</li>
+<li>1: yes</li>
      * @param RemoveVideo Whether to remove a video stream. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
+<li>0: no</li>
+<li>1: yes</li>
      */
     public void setRemoveVideo(Long RemoveVideo) {
         this.RemoveVideo = RemoveVideo;

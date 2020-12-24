@@ -30,11 +30,11 @@ public class ModifySubAppIdStatusRequest extends AbstractModel{
     private Long SubAppId;
 
     /**
-    * Subapplication status. Valid strings include:
-<li>On: to enable the subapplication.</li>
-<li>Off: to disable the subapplication.</li>
-<li>Destroyed: to terminate the subapplication. </li>
-You cannot enable a subapplication when its status is “Destroying”. You can enable it after it was terminated.
+    * Subapplication status. Valid values:
+<li>On: enabled</li>
+<li>Off: disabled</li>
+<li>Destroyed: terminated</li>
+You cannot enable a subapplication whose status is “Destroying”. You can enable it after it was terminated.
     */
     @SerializedName("Status")
     @Expose
@@ -57,32 +57,32 @@ You cannot enable a subapplication when its status is “Destroying”. You can 
     }
 
     /**
-     * Get Subapplication status. Valid strings include:
-<li>On: to enable the subapplication.</li>
-<li>Off: to disable the subapplication.</li>
-<li>Destroyed: to terminate the subapplication. </li>
-You cannot enable a subapplication when its status is “Destroying”. You can enable it after it was terminated. 
-     * @return Status Subapplication status. Valid strings include:
-<li>On: to enable the subapplication.</li>
-<li>Off: to disable the subapplication.</li>
-<li>Destroyed: to terminate the subapplication. </li>
-You cannot enable a subapplication when its status is “Destroying”. You can enable it after it was terminated.
+     * Get Subapplication status. Valid values:
+<li>On: enabled</li>
+<li>Off: disabled</li>
+<li>Destroyed: terminated</li>
+You cannot enable a subapplication whose status is “Destroying”. You can enable it after it was terminated. 
+     * @return Status Subapplication status. Valid values:
+<li>On: enabled</li>
+<li>Off: disabled</li>
+<li>Destroyed: terminated</li>
+You cannot enable a subapplication whose status is “Destroying”. You can enable it after it was terminated.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Subapplication status. Valid strings include:
-<li>On: to enable the subapplication.</li>
-<li>Off: to disable the subapplication.</li>
-<li>Destroyed: to terminate the subapplication. </li>
-You cannot enable a subapplication when its status is “Destroying”. You can enable it after it was terminated.
-     * @param Status Subapplication status. Valid strings include:
-<li>On: to enable the subapplication.</li>
-<li>Off: to disable the subapplication.</li>
-<li>Destroyed: to terminate the subapplication. </li>
-You cannot enable a subapplication when its status is “Destroying”. You can enable it after it was terminated.
+     * Set Subapplication status. Valid values:
+<li>On: enabled</li>
+<li>Off: disabled</li>
+<li>Destroyed: terminated</li>
+You cannot enable a subapplication whose status is “Destroying”. You can enable it after it was terminated.
+     * @param Status Subapplication status. Valid values:
+<li>On: enabled</li>
+<li>Off: disabled</li>
+<li>Destroyed: terminated</li>
+You cannot enable a subapplication whose status is “Destroying”. You can enable it after it was terminated.
      */
     public void setStatus(String Status) {
         this.Status = Status;

@@ -51,11 +51,11 @@ public class SubAppIdInfo extends AbstractModel{
     private String CreateTime;
 
     /**
-    * Subapplication status. Valid strings include:
-<li>On: enabled;</li>
-<li>Off: disabled.</li>
-<li>Destroying: terminating. </li>
-<li>Destroyed: terminated. </li>
+    * Subapplication status. Valid values:
+<li>On: enabled</li>
+<li>Off: disabled</li>
+<li>Destroying: terminating</li>
+<li>Destroyed: terminated</li>
     */
     @SerializedName("Status")
     @Expose
@@ -126,32 +126,32 @@ public class SubAppIdInfo extends AbstractModel{
     }
 
     /**
-     * Get Subapplication status. Valid strings include:
-<li>On: enabled;</li>
-<li>Off: disabled.</li>
-<li>Destroying: terminating. </li>
-<li>Destroyed: terminated. </li> 
-     * @return Status Subapplication status. Valid strings include:
-<li>On: enabled;</li>
-<li>Off: disabled.</li>
-<li>Destroying: terminating. </li>
-<li>Destroyed: terminated. </li>
+     * Get Subapplication status. Valid values:
+<li>On: enabled</li>
+<li>Off: disabled</li>
+<li>Destroying: terminating</li>
+<li>Destroyed: terminated</li> 
+     * @return Status Subapplication status. Valid values:
+<li>On: enabled</li>
+<li>Off: disabled</li>
+<li>Destroying: terminating</li>
+<li>Destroyed: terminated</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Subapplication status. Valid strings include:
-<li>On: enabled;</li>
-<li>Off: disabled.</li>
-<li>Destroying: terminating. </li>
-<li>Destroyed: terminated. </li>
-     * @param Status Subapplication status. Valid strings include:
-<li>On: enabled;</li>
-<li>Off: disabled.</li>
-<li>Destroying: terminating. </li>
-<li>Destroyed: terminated. </li>
+     * Set Subapplication status. Valid values:
+<li>On: enabled</li>
+<li>Off: disabled</li>
+<li>Destroying: terminating</li>
+<li>Destroyed: terminated</li>
+     * @param Status Subapplication status. Valid values:
+<li>On: enabled</li>
+<li>Off: disabled</li>
+<li>Destroying: terminating</li>
+<li>Destroyed: terminated</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
