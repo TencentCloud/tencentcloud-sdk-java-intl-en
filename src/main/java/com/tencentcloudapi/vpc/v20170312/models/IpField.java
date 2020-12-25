@@ -23,28 +23,28 @@ import java.util.HashMap;
 public class IpField extends AbstractModel{
 
     /**
-    * Country/region field
+    * Country/region of the IP
     */
     @SerializedName("Country")
     @Expose
     private Boolean Country;
 
     /**
-    * Province/municipality field
+    * Province/municipality/state of the IP
     */
     @SerializedName("Province")
     @Expose
     private Boolean Province;
 
     /**
-    * City field
+    * City of the IP
     */
     @SerializedName("City")
     @Expose
     private Boolean City;
 
     /**
-    * Urban area field
+    * City district of the IP
     */
     @SerializedName("Region")
     @Expose
@@ -65,7 +65,7 @@ public class IpField extends AbstractModel{
     private Boolean AsName;
 
     /**
-    * AS ID
+    * Backbone AS ID
     */
     @SerializedName("AsId")
     @Expose
@@ -79,64 +79,64 @@ public class IpField extends AbstractModel{
     private Boolean Comment;
 
     /**
-     * Get Country/region field 
-     * @return Country Country/region field
+     * Get Country/region of the IP 
+     * @return Country Country/region of the IP
      */
     public Boolean getCountry() {
         return this.Country;
     }
 
     /**
-     * Set Country/region field
-     * @param Country Country/region field
+     * Set Country/region of the IP
+     * @param Country Country/region of the IP
      */
     public void setCountry(Boolean Country) {
         this.Country = Country;
     }
 
     /**
-     * Get Province/municipality field 
-     * @return Province Province/municipality field
+     * Get Province/municipality/state of the IP 
+     * @return Province Province/municipality/state of the IP
      */
     public Boolean getProvince() {
         return this.Province;
     }
 
     /**
-     * Set Province/municipality field
-     * @param Province Province/municipality field
+     * Set Province/municipality/state of the IP
+     * @param Province Province/municipality/state of the IP
      */
     public void setProvince(Boolean Province) {
         this.Province = Province;
     }
 
     /**
-     * Get City field 
-     * @return City City field
+     * Get City of the IP 
+     * @return City City of the IP
      */
     public Boolean getCity() {
         return this.City;
     }
 
     /**
-     * Set City field
-     * @param City City field
+     * Set City of the IP
+     * @param City City of the IP
      */
     public void setCity(Boolean City) {
         this.City = City;
     }
 
     /**
-     * Get Urban area field 
-     * @return Region Urban area field
+     * Get City district of the IP 
+     * @return Region City district of the IP
      */
     public Boolean getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Urban area field
-     * @param Region Urban area field
+     * Set City district of the IP
+     * @param Region City district of the IP
      */
     public void setRegion(Boolean Region) {
         this.Region = Region;
@@ -175,16 +175,16 @@ public class IpField extends AbstractModel{
     }
 
     /**
-     * Get AS ID 
-     * @return AsId AS ID
+     * Get Backbone AS ID 
+     * @return AsId Backbone AS ID
      */
     public Boolean getAsId() {
         return this.AsId;
     }
 
     /**
-     * Set AS ID
-     * @param AsId AS ID
+     * Set Backbone AS ID
+     * @param AsId Backbone AS ID
      */
     public void setAsId(Boolean AsId) {
         this.AsId = AsId;

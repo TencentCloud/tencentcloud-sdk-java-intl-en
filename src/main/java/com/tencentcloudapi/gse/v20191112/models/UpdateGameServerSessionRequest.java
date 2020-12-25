@@ -23,115 +23,115 @@ import java.util.HashMap;
 public class UpdateGameServerSessionRequest extends AbstractModel{
 
     /**
-    * Game server session ID
+    * Game server session ID. It should contain 1 to 256 ASCII characters.
     */
     @SerializedName("GameServerSessionId")
     @Expose
     private String GameServerSessionId;
 
     /**
-    * Maximum number of players
+    * The maximum number of players, which cannot be less than 0.
     */
     @SerializedName("MaximumPlayerSessionCount")
     @Expose
     private Long MaximumPlayerSessionCount;
 
     /**
-    * Game server session name
+    * Name of the game server session. It should contain 1 to 1024 ASCII characters.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Player session creation policy. Valid values: ACCEPT_ALL, DENY_ALL
+    * Player session creation policy, which includes `ACCEPT_ALL` (allow all players) and `DENY_ALL` (reject all players).
     */
     @SerializedName("PlayerSessionCreationPolicy")
     @Expose
     private String PlayerSessionCreationPolicy;
 
     /**
-    * Protection policy. Valid values: NoProtection, TimeLimitProtection, FullProtection
+    * Protection policy, which includes `NoProtection`·(no protection), `TimeLimitProtection` (time-limited protection) and `FullProtection` (full protection)
     */
     @SerializedName("ProtectionPolicy")
     @Expose
     private String ProtectionPolicy;
 
     /**
-     * Get Game server session ID 
-     * @return GameServerSessionId Game server session ID
+     * Get Game server session ID. It should contain 1 to 256 ASCII characters. 
+     * @return GameServerSessionId Game server session ID. It should contain 1 to 256 ASCII characters.
      */
     public String getGameServerSessionId() {
         return this.GameServerSessionId;
     }
 
     /**
-     * Set Game server session ID
-     * @param GameServerSessionId Game server session ID
+     * Set Game server session ID. It should contain 1 to 256 ASCII characters.
+     * @param GameServerSessionId Game server session ID. It should contain 1 to 256 ASCII characters.
      */
     public void setGameServerSessionId(String GameServerSessionId) {
         this.GameServerSessionId = GameServerSessionId;
     }
 
     /**
-     * Get Maximum number of players 
-     * @return MaximumPlayerSessionCount Maximum number of players
+     * Get The maximum number of players, which cannot be less than 0. 
+     * @return MaximumPlayerSessionCount The maximum number of players, which cannot be less than 0.
      */
     public Long getMaximumPlayerSessionCount() {
         return this.MaximumPlayerSessionCount;
     }
 
     /**
-     * Set Maximum number of players
-     * @param MaximumPlayerSessionCount Maximum number of players
+     * Set The maximum number of players, which cannot be less than 0.
+     * @param MaximumPlayerSessionCount The maximum number of players, which cannot be less than 0.
      */
     public void setMaximumPlayerSessionCount(Long MaximumPlayerSessionCount) {
         this.MaximumPlayerSessionCount = MaximumPlayerSessionCount;
     }
 
     /**
-     * Get Game server session name 
-     * @return Name Game server session name
+     * Get Name of the game server session. It should contain 1 to 1024 ASCII characters. 
+     * @return Name Name of the game server session. It should contain 1 to 1024 ASCII characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Game server session name
-     * @param Name Game server session name
+     * Set Name of the game server session. It should contain 1 to 1024 ASCII characters.
+     * @param Name Name of the game server session. It should contain 1 to 1024 ASCII characters.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Player session creation policy. Valid values: ACCEPT_ALL, DENY_ALL 
-     * @return PlayerSessionCreationPolicy Player session creation policy. Valid values: ACCEPT_ALL, DENY_ALL
+     * Get Player session creation policy, which includes `ACCEPT_ALL` (allow all players) and `DENY_ALL` (reject all players). 
+     * @return PlayerSessionCreationPolicy Player session creation policy, which includes `ACCEPT_ALL` (allow all players) and `DENY_ALL` (reject all players).
      */
     public String getPlayerSessionCreationPolicy() {
         return this.PlayerSessionCreationPolicy;
     }
 
     /**
-     * Set Player session creation policy. Valid values: ACCEPT_ALL, DENY_ALL
-     * @param PlayerSessionCreationPolicy Player session creation policy. Valid values: ACCEPT_ALL, DENY_ALL
+     * Set Player session creation policy, which includes `ACCEPT_ALL` (allow all players) and `DENY_ALL` (reject all players).
+     * @param PlayerSessionCreationPolicy Player session creation policy, which includes `ACCEPT_ALL` (allow all players) and `DENY_ALL` (reject all players).
      */
     public void setPlayerSessionCreationPolicy(String PlayerSessionCreationPolicy) {
         this.PlayerSessionCreationPolicy = PlayerSessionCreationPolicy;
     }
 
     /**
-     * Get Protection policy. Valid values: NoProtection, TimeLimitProtection, FullProtection 
-     * @return ProtectionPolicy Protection policy. Valid values: NoProtection, TimeLimitProtection, FullProtection
+     * Get Protection policy, which includes `NoProtection`·(no protection), `TimeLimitProtection` (time-limited protection) and `FullProtection` (full protection) 
+     * @return ProtectionPolicy Protection policy, which includes `NoProtection`·(no protection), `TimeLimitProtection` (time-limited protection) and `FullProtection` (full protection)
      */
     public String getProtectionPolicy() {
         return this.ProtectionPolicy;
     }
 
     /**
-     * Set Protection policy. Valid values: NoProtection, TimeLimitProtection, FullProtection
-     * @param ProtectionPolicy Protection policy. Valid values: NoProtection, TimeLimitProtection, FullProtection
+     * Set Protection policy, which includes `NoProtection`·(no protection), `TimeLimitProtection` (time-limited protection) and `FullProtection` (full protection)
+     * @param ProtectionPolicy Protection policy, which includes `NoProtection`·(no protection), `TimeLimitProtection` (time-limited protection) and `FullProtection` (full protection)
      */
     public void setProtectionPolicy(String ProtectionPolicy) {
         this.ProtectionPolicy = ProtectionPolicy;

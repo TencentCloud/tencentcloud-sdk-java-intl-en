@@ -38,6 +38,16 @@ This parameter is used in highly customized scenarios. We recommend you use `Def
     private RawTranscodeParameter RawParameter;
 
     /**
+    * Video transcoding custom parameter, which is valid when `Definition` is not 0.
+When any parameters in this structure are entered, they will be used to override corresponding parameters in templates.
+This parameter is used in highly customized scenarios. We recommend you only use `Definition` to specify the transcoding parameter.
+Note: this field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("OverrideParameter")
+    @Expose
+    private OverrideTranscodeParameter OverrideParameter;
+
+    /**
     * List of up to 10 image or text watermarks.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -116,6 +126,34 @@ This parameter is used in highly customized scenarios. We recommend you use `Def
      */
     public void setRawParameter(RawTranscodeParameter RawParameter) {
         this.RawParameter = RawParameter;
+    }
+
+    /**
+     * Get Video transcoding custom parameter, which is valid when `Definition` is not 0.
+When any parameters in this structure are entered, they will be used to override corresponding parameters in templates.
+This parameter is used in highly customized scenarios. We recommend you only use `Definition` to specify the transcoding parameter.
+Note: this field may return `null`, indicating that no valid value was found. 
+     * @return OverrideParameter Video transcoding custom parameter, which is valid when `Definition` is not 0.
+When any parameters in this structure are entered, they will be used to override corresponding parameters in templates.
+This parameter is used in highly customized scenarios. We recommend you only use `Definition` to specify the transcoding parameter.
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public OverrideTranscodeParameter getOverrideParameter() {
+        return this.OverrideParameter;
+    }
+
+    /**
+     * Set Video transcoding custom parameter, which is valid when `Definition` is not 0.
+When any parameters in this structure are entered, they will be used to override corresponding parameters in templates.
+This parameter is used in highly customized scenarios. We recommend you only use `Definition` to specify the transcoding parameter.
+Note: this field may return `null`, indicating that no valid value was found.
+     * @param OverrideParameter Video transcoding custom parameter, which is valid when `Definition` is not 0.
+When any parameters in this structure are entered, they will be used to override corresponding parameters in templates.
+This parameter is used in highly customized scenarios. We recommend you only use `Definition` to specify the transcoding parameter.
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public void setOverrideParameter(OverrideTranscodeParameter OverrideParameter) {
+        this.OverrideParameter = OverrideParameter;
     }
 
     /**
@@ -232,6 +270,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamObj(map, prefix + "RawParameter.", this.RawParameter);
+        this.setParamObj(map, prefix + "OverrideParameter.", this.OverrideParameter);
         this.setParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
         this.setParamArrayObj(map, prefix + "MosaicSet.", this.MosaicSet);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);

@@ -92,7 +92,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private GameProperty [] GameProperties;
 
     /**
-    * Maximum number of players
+    * The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions.
     */
     @SerializedName("MaximumPlayerSessionCount")
     @Expose
@@ -322,16 +322,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Maximum number of players 
-     * @return MaximumPlayerSessionCount Maximum number of players
+     * Get The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions. 
+     * @return MaximumPlayerSessionCount The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions.
      */
     public Long getMaximumPlayerSessionCount() {
         return this.MaximumPlayerSessionCount;
     }
 
     /**
-     * Set Maximum number of players
-     * @param MaximumPlayerSessionCount Maximum number of players
+     * Set The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions.
+     * @param MaximumPlayerSessionCount The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions.
      */
     public void setMaximumPlayerSessionCount(Long MaximumPlayerSessionCount) {
         this.MaximumPlayerSessionCount = MaximumPlayerSessionCount;

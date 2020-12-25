@@ -20,49 +20,49 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GameProperty extends AbstractModel{
+public class PlayerDataMap extends AbstractModel{
 
     /**
-    * Attribute name. Up to 32 ASCII characters are allowed.
+    * The key of player custom data. It should contain 1 to 1024 ASCII characters.
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * Attribute value. Up to 96 ASCII characters are allowed.
+    * The value of player custom data. It should contain 1 to 2048 ASCII characters.
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get Attribute name. Up to 32 ASCII characters are allowed. 
-     * @return Key Attribute name. Up to 32 ASCII characters are allowed.
+     * Get The key of player custom data. It should contain 1 to 1024 ASCII characters. 
+     * @return Key The key of player custom data. It should contain 1 to 1024 ASCII characters.
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set Attribute name. Up to 32 ASCII characters are allowed.
-     * @param Key Attribute name. Up to 32 ASCII characters are allowed.
+     * Set The key of player custom data. It should contain 1 to 1024 ASCII characters.
+     * @param Key The key of player custom data. It should contain 1 to 1024 ASCII characters.
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get Attribute value. Up to 96 ASCII characters are allowed. 
-     * @return Value Attribute value. Up to 96 ASCII characters are allowed.
+     * Get The value of player custom data. It should contain 1 to 2048 ASCII characters. 
+     * @return Value The value of player custom data. It should contain 1 to 2048 ASCII characters.
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set Attribute value. Up to 96 ASCII characters are allowed.
-     * @param Value Attribute value. Up to 96 ASCII characters are allowed.
+     * Set The value of player custom data. It should contain 1 to 2048 ASCII characters.
+     * @param Value The value of player custom data. It should contain 1 to 2048 ASCII characters.
      */
     public void setValue(String Value) {
         this.Value = Value;

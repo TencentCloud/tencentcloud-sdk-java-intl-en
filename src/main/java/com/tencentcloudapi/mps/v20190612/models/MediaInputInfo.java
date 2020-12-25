@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class MediaInputInfo extends AbstractModel{
 
     /**
-    * Video processing object type. Only COS is supported currently.
+    * The type of video processing input object. COS and URL objects are supported.
     */
     @SerializedName("Type")
     @Expose
@@ -37,16 +37,24 @@ public class MediaInputInfo extends AbstractModel{
     private CosInputInfo CosInputInfo;
 
     /**
-     * Get Video processing object type. Only COS is supported currently. 
-     * @return Type Video processing object type. Only COS is supported currently.
+    * This parameter is required and valid when `Type` is `URL`, indicating the information of a URL object for video processing.
+Note: this field may return `null`, indicating that no valid value is obtained.
+    */
+    @SerializedName("UrlInputInfo")
+    @Expose
+    private UrlInputInfo UrlInputInfo;
+
+    /**
+     * Get The type of video processing input object. COS and URL objects are supported. 
+     * @return Type The type of video processing input object. COS and URL objects are supported.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Video processing object type. Only COS is supported currently.
-     * @param Type Video processing object type. Only COS is supported currently.
+     * Set The type of video processing input object. COS and URL objects are supported.
+     * @param Type The type of video processing input object. COS and URL objects are supported.
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -69,11 +77,32 @@ public class MediaInputInfo extends AbstractModel{
     }
 
     /**
+     * Get This parameter is required and valid when `Type` is `URL`, indicating the information of a URL object for video processing.
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return UrlInputInfo This parameter is required and valid when `Type` is `URL`, indicating the information of a URL object for video processing.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public UrlInputInfo getUrlInputInfo() {
+        return this.UrlInputInfo;
+    }
+
+    /**
+     * Set This parameter is required and valid when `Type` is `URL`, indicating the information of a URL object for video processing.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param UrlInputInfo This parameter is required and valid when `Type` is `URL`, indicating the information of a URL object for video processing.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public void setUrlInputInfo(UrlInputInfo UrlInputInfo) {
+        this.UrlInputInfo = UrlInputInfo;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "CosInputInfo.", this.CosInputInfo);
+        this.setParamObj(map, prefix + "UrlInputInfo.", this.UrlInputInfo);
 
     }
 }

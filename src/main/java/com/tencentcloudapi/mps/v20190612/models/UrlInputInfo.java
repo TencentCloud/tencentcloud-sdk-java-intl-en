@@ -13,67 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gse.v20191112.models;
+package com.tencentcloudapi.mps.v20190612.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetInstanceAccessRequest extends AbstractModel{
+public class UrlInputInfo extends AbstractModel{
 
     /**
-    * Server fleet ID
+    * URL of a video.
     */
-    @SerializedName("FleetId")
+    @SerializedName("Url")
     @Expose
-    private String FleetId;
+    private String Url;
 
     /**
-    * Instance ID
-    */
-    @SerializedName("InstanceId")
-    @Expose
-    private String InstanceId;
-
-    /**
-     * Get Server fleet ID 
-     * @return FleetId Server fleet ID
+     * Get URL of a video. 
+     * @return Url URL of a video.
      */
-    public String getFleetId() {
-        return this.FleetId;
+    public String getUrl() {
+        return this.Url;
     }
 
     /**
-     * Set Server fleet ID
-     * @param FleetId Server fleet ID
+     * Set URL of a video.
+     * @param Url URL of a video.
      */
-    public void setFleetId(String FleetId) {
-        this.FleetId = FleetId;
-    }
-
-    /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
-     */
-    public String getInstanceId() {
-        return this.InstanceId;
-    }
-
-    /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
-     */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
+    public void setUrl(String Url) {
+        this.Url = Url;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "FleetId", this.FleetId);
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Url", this.Url);
 
     }
 }

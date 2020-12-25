@@ -30,15 +30,15 @@ public class GameServerSession extends AbstractModel{
     private String CreationTime;
 
     /**
-    * Creator ID
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Creator ID. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
     */
     @SerializedName("CreatorId")
     @Expose
     private String CreatorId;
 
     /**
-    * Current number of players
+    * The current number of players, which cannot be less than 0.
     */
     @SerializedName("CurrentPlayerSessionCount")
     @Expose
@@ -60,23 +60,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String FleetId;
 
     /**
-    * Game attributes
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Game attributes. Up to 16 groups of attributes are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
     */
     @SerializedName("GameProperties")
     @Expose
     private GameProperty [] GameProperties;
 
     /**
-    * Game server session attribute details
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The attribute details of game server session. Up to 4096 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
     */
     @SerializedName("GameServerSessionData")
     @Expose
     private String GameServerSessionData;
 
     /**
-    * Game server session ID
+    * Game server session ID. It should contain 1 to 48 ASCII characters.
     */
     @SerializedName("GameServerSessionId")
     @Expose
@@ -90,45 +90,45 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String IpAddress;
 
     /**
-    * Battle progress details
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Battle progress details. Up to 400,000 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
     */
     @SerializedName("MatchmakerData")
     @Expose
     private String MatchmakerData;
 
     /**
-    * Maximum number of players
+    * The maximum number of players, which cannot be less than 0.
     */
     @SerializedName("MaximumPlayerSessionCount")
     @Expose
     private Long MaximumPlayerSessionCount;
 
     /**
-    * Game server session name
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The name of game server session. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Player session creation policy
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Player session creation policy. Valid values: ACCEPT_ALL, DENY_ALL
+Note: this field may return `null`, indicating that no valid value is obtained.
     */
     @SerializedName("PlayerSessionCreationPolicy")
     @Expose
     private String PlayerSessionCreationPolicy;
 
     /**
-    * Port number
+    * Port number. It should be a value between 1 to 60000.
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * Game server session status
+    * Game server session status. Valid values: ACTIVE, ACTIVATING, TERMINATED, TERMINATING, ERROR
     */
     @SerializedName("Status")
     @Expose
@@ -151,8 +151,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String TerminationTime;
 
     /**
-    * Instance type
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Instance type. Up to 128 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
     */
     @SerializedName("InstanceType")
     @Expose
@@ -183,8 +183,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long Weight;
 
     /**
-    * Session availability status, i.e., whether it is blocked
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Session availability status, i.e., whether it is blocked. Valid value: Enable, Disable
+Note: this field may return `null`, indicating that no valid value is obtained.
     */
     @SerializedName("AvailabilityStatus")
     @Expose
@@ -207,36 +207,36 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Creator ID
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CreatorId Creator ID
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Creator ID. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return CreatorId Creator ID. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public String getCreatorId() {
         return this.CreatorId;
     }
 
     /**
-     * Set Creator ID
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CreatorId Creator ID
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Creator ID. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param CreatorId Creator ID. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public void setCreatorId(String CreatorId) {
         this.CreatorId = CreatorId;
     }
 
     /**
-     * Get Current number of players 
-     * @return CurrentPlayerSessionCount Current number of players
+     * Get The current number of players, which cannot be less than 0. 
+     * @return CurrentPlayerSessionCount The current number of players, which cannot be less than 0.
      */
     public Long getCurrentPlayerSessionCount() {
         return this.CurrentPlayerSessionCount;
     }
 
     /**
-     * Set Current number of players
-     * @param CurrentPlayerSessionCount Current number of players
+     * Set The current number of players, which cannot be less than 0.
+     * @param CurrentPlayerSessionCount The current number of players, which cannot be less than 0.
      */
     public void setCurrentPlayerSessionCount(Long CurrentPlayerSessionCount) {
         this.CurrentPlayerSessionCount = CurrentPlayerSessionCount;
@@ -279,56 +279,56 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Game attributes
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return GameProperties Game attributes
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Game attributes. Up to 16 groups of attributes are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return GameProperties Game attributes. Up to 16 groups of attributes are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public GameProperty [] getGameProperties() {
         return this.GameProperties;
     }
 
     /**
-     * Set Game attributes
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param GameProperties Game attributes
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Game attributes. Up to 16 groups of attributes are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param GameProperties Game attributes. Up to 16 groups of attributes are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public void setGameProperties(GameProperty [] GameProperties) {
         this.GameProperties = GameProperties;
     }
 
     /**
-     * Get Game server session attribute details
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return GameServerSessionData Game server session attribute details
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The attribute details of game server session. Up to 4096 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return GameServerSessionData The attribute details of game server session. Up to 4096 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public String getGameServerSessionData() {
         return this.GameServerSessionData;
     }
 
     /**
-     * Set Game server session attribute details
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param GameServerSessionData Game server session attribute details
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The attribute details of game server session. Up to 4096 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param GameServerSessionData The attribute details of game server session. Up to 4096 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public void setGameServerSessionData(String GameServerSessionData) {
         this.GameServerSessionData = GameServerSessionData;
     }
 
     /**
-     * Get Game server session ID 
-     * @return GameServerSessionId Game server session ID
+     * Get Game server session ID. It should contain 1 to 48 ASCII characters. 
+     * @return GameServerSessionId Game server session ID. It should contain 1 to 48 ASCII characters.
      */
     public String getGameServerSessionId() {
         return this.GameServerSessionId;
     }
 
     /**
-     * Set Game server session ID
-     * @param GameServerSessionId Game server session ID
+     * Set Game server session ID. It should contain 1 to 48 ASCII characters.
+     * @param GameServerSessionId Game server session ID. It should contain 1 to 48 ASCII characters.
      */
     public void setGameServerSessionId(String GameServerSessionId) {
         this.GameServerSessionId = GameServerSessionId;
@@ -351,108 +351,108 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Battle progress details
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MatchmakerData Battle progress details
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Battle progress details. Up to 400,000 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return MatchmakerData Battle progress details. Up to 400,000 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public String getMatchmakerData() {
         return this.MatchmakerData;
     }
 
     /**
-     * Set Battle progress details
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MatchmakerData Battle progress details
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Battle progress details. Up to 400,000 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param MatchmakerData Battle progress details. Up to 400,000 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public void setMatchmakerData(String MatchmakerData) {
         this.MatchmakerData = MatchmakerData;
     }
 
     /**
-     * Get Maximum number of players 
-     * @return MaximumPlayerSessionCount Maximum number of players
+     * Get The maximum number of players, which cannot be less than 0. 
+     * @return MaximumPlayerSessionCount The maximum number of players, which cannot be less than 0.
      */
     public Long getMaximumPlayerSessionCount() {
         return this.MaximumPlayerSessionCount;
     }
 
     /**
-     * Set Maximum number of players
-     * @param MaximumPlayerSessionCount Maximum number of players
+     * Set The maximum number of players, which cannot be less than 0.
+     * @param MaximumPlayerSessionCount The maximum number of players, which cannot be less than 0.
      */
     public void setMaximumPlayerSessionCount(Long MaximumPlayerSessionCount) {
         this.MaximumPlayerSessionCount = MaximumPlayerSessionCount;
     }
 
     /**
-     * Get Game server session name
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Name Game server session name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The name of game server session. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return Name The name of game server session. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Game server session name
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Name Game server session name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The name of game server session. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param Name The name of game server session. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Player session creation policy
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return PlayerSessionCreationPolicy Player session creation policy
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Player session creation policy. Valid values: ACCEPT_ALL, DENY_ALL
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return PlayerSessionCreationPolicy Player session creation policy. Valid values: ACCEPT_ALL, DENY_ALL
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public String getPlayerSessionCreationPolicy() {
         return this.PlayerSessionCreationPolicy;
     }
 
     /**
-     * Set Player session creation policy
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PlayerSessionCreationPolicy Player session creation policy
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Player session creation policy. Valid values: ACCEPT_ALL, DENY_ALL
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param PlayerSessionCreationPolicy Player session creation policy. Valid values: ACCEPT_ALL, DENY_ALL
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public void setPlayerSessionCreationPolicy(String PlayerSessionCreationPolicy) {
         this.PlayerSessionCreationPolicy = PlayerSessionCreationPolicy;
     }
 
     /**
-     * Get Port number 
-     * @return Port Port number
+     * Get Port number. It should be a value between 1 to 60000. 
+     * @return Port Port number. It should be a value between 1 to 60000.
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set Port number
-     * @param Port Port number
+     * Set Port number. It should be a value between 1 to 60000.
+     * @param Port Port number. It should be a value between 1 to 60000.
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get Game server session status 
-     * @return Status Game server session status
+     * Get Game server session status. Valid values: ACTIVE, ACTIVATING, TERMINATED, TERMINATING, ERROR 
+     * @return Status Game server session status. Valid values: ACTIVE, ACTIVATING, TERMINATED, TERMINATING, ERROR
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Game server session status
-     * @param Status Game server session status
+     * Set Game server session status. Valid values: ACTIVE, ACTIVATING, TERMINATED, TERMINATING, ERROR
+     * @param Status Game server session status. Valid values: ACTIVE, ACTIVATING, TERMINATED, TERMINATING, ERROR
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -499,20 +499,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Instance type
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceType Instance type
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Instance type. Up to 128 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return InstanceType Instance type. Up to 128 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Instance type
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param InstanceType Instance type
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Instance type. Up to 128 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param InstanceType Instance type. Up to 128 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
@@ -579,20 +579,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Session availability status, i.e., whether it is blocked
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AvailabilityStatus Session availability status, i.e., whether it is blocked
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Session availability status, i.e., whether it is blocked. Valid value: Enable, Disable
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return AvailabilityStatus Session availability status, i.e., whether it is blocked. Valid value: Enable, Disable
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public String getAvailabilityStatus() {
         return this.AvailabilityStatus;
     }
 
     /**
-     * Set Session availability status, i.e., whether it is blocked
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AvailabilityStatus Session availability status, i.e., whether it is blocked
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Session availability status, i.e., whether it is blocked. Valid value: Enable, Disable
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param AvailabilityStatus Session availability status, i.e., whether it is blocked. Valid value: Enable, Disable
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public void setAvailabilityStatus(String AvailabilityStatus) {
         this.AvailabilityStatus = AvailabilityStatus;

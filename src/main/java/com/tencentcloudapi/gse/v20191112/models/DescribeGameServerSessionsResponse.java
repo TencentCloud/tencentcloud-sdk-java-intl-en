@@ -31,8 +31,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private GameServerSession [] GameServerSessions;
 
     /**
-    * Pagination offset, which is used for querying the next page
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+Note: this field may return `null`, indicating that no valid value is obtained.
     */
     @SerializedName("NextToken")
     @Expose
@@ -66,20 +66,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Pagination offset, which is used for querying the next page
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return NextToken Pagination offset, which is used for querying the next page
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return NextToken Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public String getNextToken() {
         return this.NextToken;
     }
 
     /**
-     * Set Pagination offset, which is used for querying the next page
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param NextToken Pagination offset, which is used for querying the next page
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param NextToken Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public void setNextToken(String NextToken) {
         this.NextToken = NextToken;

@@ -37,7 +37,7 @@ public class DescribeGameServerSessionsRequest extends AbstractModel{
     private String FleetId;
 
     /**
-    * Game server session ID
+    * Game server session ID. It should contain 1 to 48 ASCII characters.
     */
     @SerializedName("GameServerSessionId")
     @Expose
@@ -51,7 +51,7 @@ public class DescribeGameServerSessionsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * Pagination offset, which is used for querying the next page
+    * Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
     */
     @SerializedName("NextToken")
     @Expose
@@ -97,16 +97,16 @@ public class DescribeGameServerSessionsRequest extends AbstractModel{
     }
 
     /**
-     * Get Game server session ID 
-     * @return GameServerSessionId Game server session ID
+     * Get Game server session ID. It should contain 1 to 48 ASCII characters. 
+     * @return GameServerSessionId Game server session ID. It should contain 1 to 48 ASCII characters.
      */
     public String getGameServerSessionId() {
         return this.GameServerSessionId;
     }
 
     /**
-     * Set Game server session ID
-     * @param GameServerSessionId Game server session ID
+     * Set Game server session ID. It should contain 1 to 48 ASCII characters.
+     * @param GameServerSessionId Game server session ID. It should contain 1 to 48 ASCII characters.
      */
     public void setGameServerSessionId(String GameServerSessionId) {
         this.GameServerSessionId = GameServerSessionId;
@@ -129,16 +129,16 @@ public class DescribeGameServerSessionsRequest extends AbstractModel{
     }
 
     /**
-     * Get Pagination offset, which is used for querying the next page 
-     * @return NextToken Pagination offset, which is used for querying the next page
+     * Get Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters. 
+     * @return NextToken Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
      */
     public String getNextToken() {
         return this.NextToken;
     }
 
     /**
-     * Set Pagination offset, which is used for querying the next page
-     * @param NextToken Pagination offset, which is used for querying the next page
+     * Set Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+     * @param NextToken Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
      */
     public void setNextToken(String NextToken) {
         this.NextToken = NextToken;

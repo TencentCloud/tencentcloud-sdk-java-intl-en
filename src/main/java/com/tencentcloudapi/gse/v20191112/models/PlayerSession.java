@@ -45,7 +45,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String FleetId;
 
     /**
-    * Game server session ID
+    * Game server session ID. It should contain 1 to 256 ASCII characters.
     */
     @SerializedName("GameServerSessionId")
     @Expose
@@ -59,16 +59,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String IpAddress;
 
     /**
-    * Player information
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Player custom data. Up to 2048 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
     */
     @SerializedName("PlayerData")
     @Expose
     private String PlayerData;
 
     /**
-    * Player ID
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Player ID. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
     */
     @SerializedName("PlayerId")
     @Expose
@@ -82,14 +82,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String PlayerSessionId;
 
     /**
-    * Port number
+    * Port number. It should be a value between 1 to 60000.
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * Player session status
+    * Player session status. Valid values: RESERVED = 1, ACTIVE = 2, COMPLETED =3, TIMEDOUT = 4
     */
     @SerializedName("Status")
     @Expose
@@ -156,16 +156,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Game server session ID 
-     * @return GameServerSessionId Game server session ID
+     * Get Game server session ID. It should contain 1 to 256 ASCII characters. 
+     * @return GameServerSessionId Game server session ID. It should contain 1 to 256 ASCII characters.
      */
     public String getGameServerSessionId() {
         return this.GameServerSessionId;
     }
 
     /**
-     * Set Game server session ID
-     * @param GameServerSessionId Game server session ID
+     * Set Game server session ID. It should contain 1 to 256 ASCII characters.
+     * @param GameServerSessionId Game server session ID. It should contain 1 to 256 ASCII characters.
      */
     public void setGameServerSessionId(String GameServerSessionId) {
         this.GameServerSessionId = GameServerSessionId;
@@ -188,40 +188,40 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Player information
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return PlayerData Player information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Player custom data. Up to 2048 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return PlayerData Player custom data. Up to 2048 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public String getPlayerData() {
         return this.PlayerData;
     }
 
     /**
-     * Set Player information
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PlayerData Player information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Player custom data. Up to 2048 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param PlayerData Player custom data. Up to 2048 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public void setPlayerData(String PlayerData) {
         this.PlayerData = PlayerData;
     }
 
     /**
-     * Get Player ID
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return PlayerId Player ID
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Player ID. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return PlayerId Player ID. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public String getPlayerId() {
         return this.PlayerId;
     }
 
     /**
-     * Set Player ID
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PlayerId Player ID
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Player ID. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param PlayerId Player ID. Up to 1024 ASCII characters are allowed.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public void setPlayerId(String PlayerId) {
         this.PlayerId = PlayerId;
@@ -244,32 +244,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Port number 
-     * @return Port Port number
+     * Get Port number. It should be a value between 1 to 60000. 
+     * @return Port Port number. It should be a value between 1 to 60000.
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set Port number
-     * @param Port Port number
+     * Set Port number. It should be a value between 1 to 60000.
+     * @param Port Port number. It should be a value between 1 to 60000.
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get Player session status 
-     * @return Status Player session status
+     * Get Player session status. Valid values: RESERVED = 1, ACTIVE = 2, COMPLETED =3, TIMEDOUT = 4 
+     * @return Status Player session status. Valid values: RESERVED = 1, ACTIVE = 2, COMPLETED =3, TIMEDOUT = 4
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Player session status
-     * @param Status Player session status
+     * Set Player session status. Valid values: RESERVED = 1, ACTIVE = 2, COMPLETED =3, TIMEDOUT = 4
+     * @param Status Player session status. Valid values: RESERVED = 1, ACTIVE = 2, COMPLETED =3, TIMEDOUT = 4
      */
     public void setStatus(String Status) {
         this.Status = Status;

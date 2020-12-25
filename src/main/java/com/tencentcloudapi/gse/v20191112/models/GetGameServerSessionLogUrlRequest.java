@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class GetGameServerSessionLogUrlRequest extends AbstractModel{
 
     /**
-    * Game server session ID
+    * Game server session ID. It should contain 1 to 48 ASCII characters.
     */
     @SerializedName("GameServerSessionId")
     @Expose
     private String GameServerSessionId;
 
     /**
-     * Get Game server session ID 
-     * @return GameServerSessionId Game server session ID
+     * Get Game server session ID. It should contain 1 to 48 ASCII characters. 
+     * @return GameServerSessionId Game server session ID. It should contain 1 to 48 ASCII characters.
      */
     public String getGameServerSessionId() {
         return this.GameServerSessionId;
     }
 
     /**
-     * Set Game server session ID
-     * @param GameServerSessionId Game server session ID
+     * Set Game server session ID. It should contain 1 to 48 ASCII characters.
+     * @param GameServerSessionId Game server session ID. It should contain 1 to 48 ASCII characters.
      */
     public void setGameServerSessionId(String GameServerSessionId) {
         this.GameServerSessionId = GameServerSessionId;

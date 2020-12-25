@@ -23,207 +23,207 @@ import java.util.HashMap;
 public class CreateGameServerSessionRequest extends AbstractModel{
 
     /**
-    * Maximum number of players
+    * The maximum number of players, which cannot be less than 0.
     */
     @SerializedName("MaximumPlayerSessionCount")
     @Expose
     private Long MaximumPlayerSessionCount;
 
     /**
-    * Alias ID
+    * Alias ID. You need to specify an alias ID or fleet ID for each request. If both of them are specified, the fleet ID shall prevail.
     */
     @SerializedName("AliasId")
     @Expose
     private String AliasId;
 
     /**
-    * Creator ID
+    * Creator ID. Up to 1024 ASCII characters are allowed.
     */
     @SerializedName("CreatorId")
     @Expose
     private String CreatorId;
 
     /**
-    * Fleet ID
+    * Fleet ID. You need to specify an alias ID or fleet ID for each request. If both of them are specified, the fleet ID shall prevail.
     */
     @SerializedName("FleetId")
     @Expose
     private String FleetId;
 
     /**
-    * Game attributes
+    * Game attributes. Up to 16 groups of attributes are allowed.
     */
     @SerializedName("GameProperties")
     @Expose
     private GameProperty [] GameProperties;
 
     /**
-    * Game server session attribute details
+    * The attribute details of game server session. Up to 4096 ASCII characters are allowed.
     */
     @SerializedName("GameServerSessionData")
     @Expose
     private String GameServerSessionData;
 
     /**
-    * Custom ID of game server session
+    * The custom ID of game server session. Up to 4096 ASCII characters are allowed.
     */
     @SerializedName("GameServerSessionId")
     @Expose
     private String GameServerSessionId;
 
     /**
-    * Idempotency token
+    * Idempotency token. Up to 48 ASCII characters are allowed.
     */
     @SerializedName("IdempotencyToken")
     @Expose
     private String IdempotencyToken;
 
     /**
-    * Game server session name
+    * The name of game server session. Up to 1024 ASCII characters are allowed.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get Maximum number of players 
-     * @return MaximumPlayerSessionCount Maximum number of players
+     * Get The maximum number of players, which cannot be less than 0. 
+     * @return MaximumPlayerSessionCount The maximum number of players, which cannot be less than 0.
      */
     public Long getMaximumPlayerSessionCount() {
         return this.MaximumPlayerSessionCount;
     }
 
     /**
-     * Set Maximum number of players
-     * @param MaximumPlayerSessionCount Maximum number of players
+     * Set The maximum number of players, which cannot be less than 0.
+     * @param MaximumPlayerSessionCount The maximum number of players, which cannot be less than 0.
      */
     public void setMaximumPlayerSessionCount(Long MaximumPlayerSessionCount) {
         this.MaximumPlayerSessionCount = MaximumPlayerSessionCount;
     }
 
     /**
-     * Get Alias ID 
-     * @return AliasId Alias ID
+     * Get Alias ID. You need to specify an alias ID or fleet ID for each request. If both of them are specified, the fleet ID shall prevail. 
+     * @return AliasId Alias ID. You need to specify an alias ID or fleet ID for each request. If both of them are specified, the fleet ID shall prevail.
      */
     public String getAliasId() {
         return this.AliasId;
     }
 
     /**
-     * Set Alias ID
-     * @param AliasId Alias ID
+     * Set Alias ID. You need to specify an alias ID or fleet ID for each request. If both of them are specified, the fleet ID shall prevail.
+     * @param AliasId Alias ID. You need to specify an alias ID or fleet ID for each request. If both of them are specified, the fleet ID shall prevail.
      */
     public void setAliasId(String AliasId) {
         this.AliasId = AliasId;
     }
 
     /**
-     * Get Creator ID 
-     * @return CreatorId Creator ID
+     * Get Creator ID. Up to 1024 ASCII characters are allowed. 
+     * @return CreatorId Creator ID. Up to 1024 ASCII characters are allowed.
      */
     public String getCreatorId() {
         return this.CreatorId;
     }
 
     /**
-     * Set Creator ID
-     * @param CreatorId Creator ID
+     * Set Creator ID. Up to 1024 ASCII characters are allowed.
+     * @param CreatorId Creator ID. Up to 1024 ASCII characters are allowed.
      */
     public void setCreatorId(String CreatorId) {
         this.CreatorId = CreatorId;
     }
 
     /**
-     * Get Fleet ID 
-     * @return FleetId Fleet ID
+     * Get Fleet ID. You need to specify an alias ID or fleet ID for each request. If both of them are specified, the fleet ID shall prevail. 
+     * @return FleetId Fleet ID. You need to specify an alias ID or fleet ID for each request. If both of them are specified, the fleet ID shall prevail.
      */
     public String getFleetId() {
         return this.FleetId;
     }
 
     /**
-     * Set Fleet ID
-     * @param FleetId Fleet ID
+     * Set Fleet ID. You need to specify an alias ID or fleet ID for each request. If both of them are specified, the fleet ID shall prevail.
+     * @param FleetId Fleet ID. You need to specify an alias ID or fleet ID for each request. If both of them are specified, the fleet ID shall prevail.
      */
     public void setFleetId(String FleetId) {
         this.FleetId = FleetId;
     }
 
     /**
-     * Get Game attributes 
-     * @return GameProperties Game attributes
+     * Get Game attributes. Up to 16 groups of attributes are allowed. 
+     * @return GameProperties Game attributes. Up to 16 groups of attributes are allowed.
      */
     public GameProperty [] getGameProperties() {
         return this.GameProperties;
     }
 
     /**
-     * Set Game attributes
-     * @param GameProperties Game attributes
+     * Set Game attributes. Up to 16 groups of attributes are allowed.
+     * @param GameProperties Game attributes. Up to 16 groups of attributes are allowed.
      */
     public void setGameProperties(GameProperty [] GameProperties) {
         this.GameProperties = GameProperties;
     }
 
     /**
-     * Get Game server session attribute details 
-     * @return GameServerSessionData Game server session attribute details
+     * Get The attribute details of game server session. Up to 4096 ASCII characters are allowed. 
+     * @return GameServerSessionData The attribute details of game server session. Up to 4096 ASCII characters are allowed.
      */
     public String getGameServerSessionData() {
         return this.GameServerSessionData;
     }
 
     /**
-     * Set Game server session attribute details
-     * @param GameServerSessionData Game server session attribute details
+     * Set The attribute details of game server session. Up to 4096 ASCII characters are allowed.
+     * @param GameServerSessionData The attribute details of game server session. Up to 4096 ASCII characters are allowed.
      */
     public void setGameServerSessionData(String GameServerSessionData) {
         this.GameServerSessionData = GameServerSessionData;
     }
 
     /**
-     * Get Custom ID of game server session 
-     * @return GameServerSessionId Custom ID of game server session
+     * Get The custom ID of game server session. Up to 4096 ASCII characters are allowed. 
+     * @return GameServerSessionId The custom ID of game server session. Up to 4096 ASCII characters are allowed.
      */
     public String getGameServerSessionId() {
         return this.GameServerSessionId;
     }
 
     /**
-     * Set Custom ID of game server session
-     * @param GameServerSessionId Custom ID of game server session
+     * Set The custom ID of game server session. Up to 4096 ASCII characters are allowed.
+     * @param GameServerSessionId The custom ID of game server session. Up to 4096 ASCII characters are allowed.
      */
     public void setGameServerSessionId(String GameServerSessionId) {
         this.GameServerSessionId = GameServerSessionId;
     }
 
     /**
-     * Get Idempotency token 
-     * @return IdempotencyToken Idempotency token
+     * Get Idempotency token. Up to 48 ASCII characters are allowed. 
+     * @return IdempotencyToken Idempotency token. Up to 48 ASCII characters are allowed.
      */
     public String getIdempotencyToken() {
         return this.IdempotencyToken;
     }
 
     /**
-     * Set Idempotency token
-     * @param IdempotencyToken Idempotency token
+     * Set Idempotency token. Up to 48 ASCII characters are allowed.
+     * @param IdempotencyToken Idempotency token. Up to 48 ASCII characters are allowed.
      */
     public void setIdempotencyToken(String IdempotencyToken) {
         this.IdempotencyToken = IdempotencyToken;
     }
 
     /**
-     * Get Game server session name 
-     * @return Name Game server session name
+     * Get The name of game server session. Up to 1024 ASCII characters are allowed. 
+     * @return Name The name of game server session. Up to 1024 ASCII characters are allowed.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Game server session name
-     * @param Name Game server session name
+     * Set The name of game server session. Up to 1024 ASCII characters are allowed.
+     * @param Name The name of game server session. Up to 1024 ASCII characters are allowed.
      */
     public void setName(String Name) {
         this.Name = Name;

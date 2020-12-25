@@ -20,23 +20,15 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeGameServerSessionDetailsResponse extends AbstractModel{
+public class JoinGameServerSessionBatchResponse extends AbstractModel{
 
     /**
-    * List of game server session details
-Note: this field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("GameServerSessionDetails")
-    @Expose
-    private GameServerSessionDetail [] GameServerSessionDetails;
-
-    /**
-    * Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+    * Player session list. Up to 25 sessions.
 Note: this field may return `null`, indicating that no valid value is obtained.
     */
-    @SerializedName("NextToken")
+    @SerializedName("PlayerSessions")
     @Expose
-    private String NextToken;
+    private PlayerSession [] PlayerSessions;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,43 +38,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     private String RequestId;
 
     /**
-     * Get List of game server session details
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return GameServerSessionDetails List of game server session details
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public GameServerSessionDetail [] getGameServerSessionDetails() {
-        return this.GameServerSessionDetails;
-    }
-
-    /**
-     * Set List of game server session details
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param GameServerSessionDetails List of game server session details
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public void setGameServerSessionDetails(GameServerSessionDetail [] GameServerSessionDetails) {
-        this.GameServerSessionDetails = GameServerSessionDetails;
-    }
-
-    /**
-     * Get Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+     * Get Player session list. Up to 25 sessions.
 Note: this field may return `null`, indicating that no valid value is obtained. 
-     * @return NextToken Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+     * @return PlayerSessions Player session list. Up to 25 sessions.
 Note: this field may return `null`, indicating that no valid value is obtained.
      */
-    public String getNextToken() {
-        return this.NextToken;
+    public PlayerSession [] getPlayerSessions() {
+        return this.PlayerSessions;
     }
 
     /**
-     * Set Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+     * Set Player session list. Up to 25 sessions.
 Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param NextToken Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+     * @param PlayerSessions Player session list. Up to 25 sessions.
 Note: this field may return `null`, indicating that no valid value is obtained.
      */
-    public void setNextToken(String NextToken) {
-        this.NextToken = NextToken;
+    public void setPlayerSessions(PlayerSession [] PlayerSessions) {
+        this.PlayerSessions = PlayerSessions;
     }
 
     /**
@@ -105,8 +77,7 @@ Note: this field may return `null`, indicating that no valid value is obtained.
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "GameServerSessionDetails.", this.GameServerSessionDetails);
-        this.setParamSimple(map, prefix + "NextToken", this.NextToken);
+        this.setParamArrayObj(map, prefix + "PlayerSessions.", this.PlayerSessions);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

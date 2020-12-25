@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribePlayerSessionsRequest extends AbstractModel{
 
     /**
-    * Game server session ID
+    * Game server session ID. It should contain 1 to 48 ASCII characters.
     */
     @SerializedName("GameServerSessionId")
     @Expose
@@ -37,21 +37,21 @@ public class DescribePlayerSessionsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * Pagination offset, which is used for querying the next page
+    * Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
     */
     @SerializedName("NextToken")
     @Expose
     private String NextToken;
 
     /**
-    * Player ID
+    * Player ID. It should contain 1 to 1024 ASCII characters.
     */
     @SerializedName("PlayerId")
     @Expose
     private String PlayerId;
 
     /**
-    * Player session ID
+    * Player session ID. It should contain 1 to 1024 ASCII characters.
     */
     @SerializedName("PlayerSessionId")
     @Expose
@@ -65,16 +65,16 @@ public class DescribePlayerSessionsRequest extends AbstractModel{
     private String PlayerSessionStatusFilter;
 
     /**
-     * Get Game server session ID 
-     * @return GameServerSessionId Game server session ID
+     * Get Game server session ID. It should contain 1 to 48 ASCII characters. 
+     * @return GameServerSessionId Game server session ID. It should contain 1 to 48 ASCII characters.
      */
     public String getGameServerSessionId() {
         return this.GameServerSessionId;
     }
 
     /**
-     * Set Game server session ID
-     * @param GameServerSessionId Game server session ID
+     * Set Game server session ID. It should contain 1 to 48 ASCII characters.
+     * @param GameServerSessionId Game server session ID. It should contain 1 to 48 ASCII characters.
      */
     public void setGameServerSessionId(String GameServerSessionId) {
         this.GameServerSessionId = GameServerSessionId;
@@ -97,48 +97,48 @@ public class DescribePlayerSessionsRequest extends AbstractModel{
     }
 
     /**
-     * Get Pagination offset, which is used for querying the next page 
-     * @return NextToken Pagination offset, which is used for querying the next page
+     * Get Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters. 
+     * @return NextToken Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
      */
     public String getNextToken() {
         return this.NextToken;
     }
 
     /**
-     * Set Pagination offset, which is used for querying the next page
-     * @param NextToken Pagination offset, which is used for querying the next page
+     * Set Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+     * @param NextToken Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
      */
     public void setNextToken(String NextToken) {
         this.NextToken = NextToken;
     }
 
     /**
-     * Get Player ID 
-     * @return PlayerId Player ID
+     * Get Player ID. It should contain 1 to 1024 ASCII characters. 
+     * @return PlayerId Player ID. It should contain 1 to 1024 ASCII characters.
      */
     public String getPlayerId() {
         return this.PlayerId;
     }
 
     /**
-     * Set Player ID
-     * @param PlayerId Player ID
+     * Set Player ID. It should contain 1 to 1024 ASCII characters.
+     * @param PlayerId Player ID. It should contain 1 to 1024 ASCII characters.
      */
     public void setPlayerId(String PlayerId) {
         this.PlayerId = PlayerId;
     }
 
     /**
-     * Get Player session ID 
-     * @return PlayerSessionId Player session ID
+     * Get Player session ID. It should contain 1 to 1024 ASCII characters. 
+     * @return PlayerSessionId Player session ID. It should contain 1 to 1024 ASCII characters.
      */
     public String getPlayerSessionId() {
         return this.PlayerSessionId;
     }
 
     /**
-     * Set Player session ID
-     * @param PlayerSessionId Player session ID
+     * Set Player session ID. It should contain 1 to 1024 ASCII characters.
+     * @param PlayerSessionId Player session ID. It should contain 1 to 1024 ASCII characters.
      */
     public void setPlayerSessionId(String PlayerSessionId) {
         this.PlayerSessionId = PlayerSessionId;

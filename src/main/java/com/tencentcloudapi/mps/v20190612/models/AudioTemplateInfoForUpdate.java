@@ -67,6 +67,7 @@ In Hz.
 <li>1: Mono</li>
 <li>2: Dual</li>
 <li>6: Stereo</li>
+When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound channel cannot be set to stereo.
     */
     @SerializedName("AudioChannel")
     @Expose
@@ -200,11 +201,13 @@ In Hz.
      * Get Audio channel system. Valid values:
 <li>1: Mono</li>
 <li>2: Dual</li>
-<li>6: Stereo</li> 
+<li>6: Stereo</li>
+When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound channel cannot be set to stereo. 
      * @return AudioChannel Audio channel system. Valid values:
 <li>1: Mono</li>
 <li>2: Dual</li>
 <li>6: Stereo</li>
+When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound channel cannot be set to stereo.
      */
     public Long getAudioChannel() {
         return this.AudioChannel;
@@ -215,10 +218,12 @@ In Hz.
 <li>1: Mono</li>
 <li>2: Dual</li>
 <li>6: Stereo</li>
+When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound channel cannot be set to stereo.
      * @param AudioChannel Audio channel system. Valid values:
 <li>1: Mono</li>
 <li>2: Dual</li>
 <li>6: Stereo</li>
+When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound channel cannot be set to stereo.
      */
     public void setAudioChannel(Long AudioChannel) {
         this.AudioChannel = AudioChannel;

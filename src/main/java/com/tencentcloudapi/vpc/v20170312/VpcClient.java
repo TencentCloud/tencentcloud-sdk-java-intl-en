@@ -2103,7 +2103,7 @@ A service provider can query all review requests created by any `APPID` under it
     }
 
     /**
-     *This API is used to query the IP addresses, including their geographical locations and networks.
+     *This API is used to query the information of IP addresses, including their geographical locations and networks.
      * @param req DescribeIpGeolocationInfosRequest
      * @return DescribeIpGeolocationInfosResponse
      * @throws TencentCloudSDKException

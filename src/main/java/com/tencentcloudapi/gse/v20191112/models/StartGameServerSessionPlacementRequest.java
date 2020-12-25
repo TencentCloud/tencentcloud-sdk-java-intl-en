@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class StartGameServerSessionPlacementRequest extends AbstractModel{
 
     /**
-    * Unique ID of starting game server session placement
+    * The unique ID of the game server session placement. It should contain up to 48 ASCII characters, supporting [a-zA-Z0-9-]+.
     */
     @SerializedName("PlacementId")
     @Expose
@@ -37,7 +37,7 @@ public class StartGameServerSessionPlacementRequest extends AbstractModel{
     private String GameServerSessionQueueName;
 
     /**
-    * Maximum number of concurrent players allowed by the game server to connect to the game session
+    * The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions.
     */
     @SerializedName("MaximumPlayerSessionCount")
     @Expose
@@ -58,14 +58,14 @@ public class StartGameServerSessionPlacementRequest extends AbstractModel{
     private GameProperty [] GameProperties;
 
     /**
-    * Game server session data
+    * Data of game server sessions. Up to 4096 ASCII characters are allowed.
     */
     @SerializedName("GameServerSessionData")
     @Expose
     private String GameServerSessionData;
 
     /**
-    * Game server session name
+    * Name of game server sessions. Up to 4096 ASCII characters are allowed.
     */
     @SerializedName("GameServerSessionName")
     @Expose
@@ -79,16 +79,16 @@ public class StartGameServerSessionPlacementRequest extends AbstractModel{
     private PlayerLatency [] PlayerLatencies;
 
     /**
-     * Get Unique ID of starting game server session placement 
-     * @return PlacementId Unique ID of starting game server session placement
+     * Get The unique ID of the game server session placement. It should contain up to 48 ASCII characters, supporting [a-zA-Z0-9-]+. 
+     * @return PlacementId The unique ID of the game server session placement. It should contain up to 48 ASCII characters, supporting [a-zA-Z0-9-]+.
      */
     public String getPlacementId() {
         return this.PlacementId;
     }
 
     /**
-     * Set Unique ID of starting game server session placement
-     * @param PlacementId Unique ID of starting game server session placement
+     * Set The unique ID of the game server session placement. It should contain up to 48 ASCII characters, supporting [a-zA-Z0-9-]+.
+     * @param PlacementId The unique ID of the game server session placement. It should contain up to 48 ASCII characters, supporting [a-zA-Z0-9-]+.
      */
     public void setPlacementId(String PlacementId) {
         this.PlacementId = PlacementId;
@@ -111,16 +111,16 @@ public class StartGameServerSessionPlacementRequest extends AbstractModel{
     }
 
     /**
-     * Get Maximum number of concurrent players allowed by the game server to connect to the game session 
-     * @return MaximumPlayerSessionCount Maximum number of concurrent players allowed by the game server to connect to the game session
+     * Get The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions. 
+     * @return MaximumPlayerSessionCount The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions.
      */
     public Long getMaximumPlayerSessionCount() {
         return this.MaximumPlayerSessionCount;
     }
 
     /**
-     * Set Maximum number of concurrent players allowed by the game server to connect to the game session
-     * @param MaximumPlayerSessionCount Maximum number of concurrent players allowed by the game server to connect to the game session
+     * Set The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions.
+     * @param MaximumPlayerSessionCount The maximum number of players that can be connected simultaneously to the game session. It should a value between 1 to the maximum number of player sessions.
      */
     public void setMaximumPlayerSessionCount(Long MaximumPlayerSessionCount) {
         this.MaximumPlayerSessionCount = MaximumPlayerSessionCount;
@@ -159,32 +159,32 @@ public class StartGameServerSessionPlacementRequest extends AbstractModel{
     }
 
     /**
-     * Get Game server session data 
-     * @return GameServerSessionData Game server session data
+     * Get Data of game server sessions. Up to 4096 ASCII characters are allowed. 
+     * @return GameServerSessionData Data of game server sessions. Up to 4096 ASCII characters are allowed.
      */
     public String getGameServerSessionData() {
         return this.GameServerSessionData;
     }
 
     /**
-     * Set Game server session data
-     * @param GameServerSessionData Game server session data
+     * Set Data of game server sessions. Up to 4096 ASCII characters are allowed.
+     * @param GameServerSessionData Data of game server sessions. Up to 4096 ASCII characters are allowed.
      */
     public void setGameServerSessionData(String GameServerSessionData) {
         this.GameServerSessionData = GameServerSessionData;
     }
 
     /**
-     * Get Game server session name 
-     * @return GameServerSessionName Game server session name
+     * Get Name of game server sessions. Up to 4096 ASCII characters are allowed. 
+     * @return GameServerSessionName Name of game server sessions. Up to 4096 ASCII characters are allowed.
      */
     public String getGameServerSessionName() {
         return this.GameServerSessionName;
     }
 
     /**
-     * Set Game server session name
-     * @param GameServerSessionName Game server session name
+     * Set Name of game server sessions. Up to 4096 ASCII characters are allowed.
+     * @param GameServerSessionName Name of game server sessions. Up to 4096 ASCII characters are allowed.
      */
     public void setGameServerSessionName(String GameServerSessionName) {
         this.GameServerSessionName = GameServerSessionName;

@@ -44,7 +44,7 @@ public class SearchGameServerSessionsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * Pagination offset, which is used for querying the next page
+    * Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
     */
     @SerializedName("NextToken")
     @Expose
@@ -62,6 +62,32 @@ gameServerSessionProperties: game session attributes in `String` type
 
 Expressions in `String` type support = and <> for judgment
 Expressions in `Number` type support =, <>, >, >=, <, and <= for judgment
+
+Example:
+If FilterExpression takes the value:
+playerSessionCount>=2 AND hasAvailablePlayerSessions=true"
+It means searching for game sessions that have at least two players and have player sessions available.
+If FilterExpression takes the value:
+gameServerSessionProperties.K1 = 'V1' AND gameServerSessionProperties.K2 = 'V2' OR gameServerSessionProperties.K3 = 'V3'
+
+it means
+searching for game sessions that meets the following game server session attributes
+{
+    "GameProperties":[
+        {
+            "Key":"K1",
+            "Value":"V1"
+        },
+        {
+            "Key":"K2",
+            "Value":"V2"
+        },
+        {
+            "Key":"K3",
+            "Value":"V3"
+        }
+    ]
+}
     */
     @SerializedName("FilterExpression")
     @Expose
@@ -129,16 +155,16 @@ playerSessionCount: current number of player sessions in `Number` type
     }
 
     /**
-     * Get Pagination offset, which is used for querying the next page 
-     * @return NextToken Pagination offset, which is used for querying the next page
+     * Get Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters. 
+     * @return NextToken Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
      */
     public String getNextToken() {
         return this.NextToken;
     }
 
     /**
-     * Set Pagination offset, which is used for querying the next page
-     * @param NextToken Pagination offset, which is used for querying the next page
+     * Set Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
+     * @param NextToken Pagination offset, which is used for querying the next page. It should contain 1 to 1024 ASCII characters.
      */
     public void setNextToken(String NextToken) {
         this.NextToken = NextToken;
@@ -155,7 +181,33 @@ hasAvailablePlayerSessions: whether there is available player session in `String
 gameServerSessionProperties: game session attributes in `String` type
 
 Expressions in `String` type support = and <> for judgment
-Expressions in `Number` type support =, <>, >, >=, <, and <= for judgment 
+Expressions in `Number` type support =, <>, >, >=, <, and <= for judgment
+
+Example:
+If FilterExpression takes the value:
+playerSessionCount>=2 AND hasAvailablePlayerSessions=true"
+It means searching for game sessions that have at least two players and have player sessions available.
+If FilterExpression takes the value:
+gameServerSessionProperties.K1 = 'V1' AND gameServerSessionProperties.K2 = 'V2' OR gameServerSessionProperties.K3 = 'V3'
+
+it means
+searching for game sessions that meets the following game server session attributes
+{
+    "GameProperties":[
+        {
+            "Key":"K1",
+            "Value":"V1"
+        },
+        {
+            "Key":"K2",
+            "Value":"V2"
+        },
+        {
+            "Key":"K3",
+            "Value":"V3"
+        }
+    ]
+} 
      * @return FilterExpression Search filter expression. Valid values:
 gameServerSessionName: game session name in `String` type
 gameServerSessionId: game session ID in `String` type
@@ -167,6 +219,32 @@ gameServerSessionProperties: game session attributes in `String` type
 
 Expressions in `String` type support = and <> for judgment
 Expressions in `Number` type support =, <>, >, >=, <, and <= for judgment
+
+Example:
+If FilterExpression takes the value:
+playerSessionCount>=2 AND hasAvailablePlayerSessions=true"
+It means searching for game sessions that have at least two players and have player sessions available.
+If FilterExpression takes the value:
+gameServerSessionProperties.K1 = 'V1' AND gameServerSessionProperties.K2 = 'V2' OR gameServerSessionProperties.K3 = 'V3'
+
+it means
+searching for game sessions that meets the following game server session attributes
+{
+    "GameProperties":[
+        {
+            "Key":"K1",
+            "Value":"V1"
+        },
+        {
+            "Key":"K2",
+            "Value":"V2"
+        },
+        {
+            "Key":"K3",
+            "Value":"V3"
+        }
+    ]
+}
      */
     public String getFilterExpression() {
         return this.FilterExpression;
@@ -184,6 +262,32 @@ gameServerSessionProperties: game session attributes in `String` type
 
 Expressions in `String` type support = and <> for judgment
 Expressions in `Number` type support =, <>, >, >=, <, and <= for judgment
+
+Example:
+If FilterExpression takes the value:
+playerSessionCount>=2 AND hasAvailablePlayerSessions=true"
+It means searching for game sessions that have at least two players and have player sessions available.
+If FilterExpression takes the value:
+gameServerSessionProperties.K1 = 'V1' AND gameServerSessionProperties.K2 = 'V2' OR gameServerSessionProperties.K3 = 'V3'
+
+it means
+searching for game sessions that meets the following game server session attributes
+{
+    "GameProperties":[
+        {
+            "Key":"K1",
+            "Value":"V1"
+        },
+        {
+            "Key":"K2",
+            "Value":"V2"
+        },
+        {
+            "Key":"K3",
+            "Value":"V3"
+        }
+    ]
+}
      * @param FilterExpression Search filter expression. Valid values:
 gameServerSessionName: game session name in `String` type
 gameServerSessionId: game session ID in `String` type
@@ -195,6 +299,32 @@ gameServerSessionProperties: game session attributes in `String` type
 
 Expressions in `String` type support = and <> for judgment
 Expressions in `Number` type support =, <>, >, >=, <, and <= for judgment
+
+Example:
+If FilterExpression takes the value:
+playerSessionCount>=2 AND hasAvailablePlayerSessions=true"
+It means searching for game sessions that have at least two players and have player sessions available.
+If FilterExpression takes the value:
+gameServerSessionProperties.K1 = 'V1' AND gameServerSessionProperties.K2 = 'V2' OR gameServerSessionProperties.K3 = 'V3'
+
+it means
+searching for game sessions that meets the following game server session attributes
+{
+    "GameProperties":[
+        {
+            "Key":"K1",
+            "Value":"V1"
+        },
+        {
+            "Key":"K2",
+            "Value":"V2"
+        },
+        {
+            "Key":"K3",
+            "Value":"V3"
+        }
+    ]
+}
      */
     public void setFilterExpression(String FilterExpression) {
         this.FilterExpression = FilterExpression;

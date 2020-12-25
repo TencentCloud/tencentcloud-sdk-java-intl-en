@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class JoinGameServerSessionRequest extends AbstractModel{
+public class JoinGameServerSessionBatchRequest extends AbstractModel{
 
     /**
     * Game server session ID. It should contain 1 to 256 ASCII characters.
@@ -30,18 +30,18 @@ public class JoinGameServerSessionRequest extends AbstractModel{
     private String GameServerSessionId;
 
     /**
-    * Player ID. Up to 1024 ASCII characters are allowed.
+    * Player ID list. At least 1 ID and up to 25 IDs.
     */
-    @SerializedName("PlayerId")
+    @SerializedName("PlayerIds")
     @Expose
-    private String PlayerId;
+    private String [] PlayerIds;
 
     /**
-    * Player custom data. Up to 2048 ASCII characters are allowed.
+    * Player custom data
     */
-    @SerializedName("PlayerData")
+    @SerializedName("PlayerDataMap")
     @Expose
-    private String PlayerData;
+    private PlayerDataMap PlayerDataMap;
 
     /**
      * Get Game server session ID. It should contain 1 to 256 ASCII characters. 
@@ -60,35 +60,35 @@ public class JoinGameServerSessionRequest extends AbstractModel{
     }
 
     /**
-     * Get Player ID. Up to 1024 ASCII characters are allowed. 
-     * @return PlayerId Player ID. Up to 1024 ASCII characters are allowed.
+     * Get Player ID list. At least 1 ID and up to 25 IDs. 
+     * @return PlayerIds Player ID list. At least 1 ID and up to 25 IDs.
      */
-    public String getPlayerId() {
-        return this.PlayerId;
+    public String [] getPlayerIds() {
+        return this.PlayerIds;
     }
 
     /**
-     * Set Player ID. Up to 1024 ASCII characters are allowed.
-     * @param PlayerId Player ID. Up to 1024 ASCII characters are allowed.
+     * Set Player ID list. At least 1 ID and up to 25 IDs.
+     * @param PlayerIds Player ID list. At least 1 ID and up to 25 IDs.
      */
-    public void setPlayerId(String PlayerId) {
-        this.PlayerId = PlayerId;
+    public void setPlayerIds(String [] PlayerIds) {
+        this.PlayerIds = PlayerIds;
     }
 
     /**
-     * Get Player custom data. Up to 2048 ASCII characters are allowed. 
-     * @return PlayerData Player custom data. Up to 2048 ASCII characters are allowed.
+     * Get Player custom data 
+     * @return PlayerDataMap Player custom data
      */
-    public String getPlayerData() {
-        return this.PlayerData;
+    public PlayerDataMap getPlayerDataMap() {
+        return this.PlayerDataMap;
     }
 
     /**
-     * Set Player custom data. Up to 2048 ASCII characters are allowed.
-     * @param PlayerData Player custom data. Up to 2048 ASCII characters are allowed.
+     * Set Player custom data
+     * @param PlayerDataMap Player custom data
      */
-    public void setPlayerData(String PlayerData) {
-        this.PlayerData = PlayerData;
+    public void setPlayerDataMap(PlayerDataMap PlayerDataMap) {
+        this.PlayerDataMap = PlayerDataMap;
     }
 
     /**
@@ -96,8 +96,8 @@ public class JoinGameServerSessionRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GameServerSessionId", this.GameServerSessionId);
-        this.setParamSimple(map, prefix + "PlayerId", this.PlayerId);
-        this.setParamSimple(map, prefix + "PlayerData", this.PlayerData);
+        this.setParamArraySimple(map, prefix + "PlayerIds.", this.PlayerIds);
+        this.setParamObj(map, prefix + "PlayerDataMap.", this.PlayerDataMap);
 
     }
 }

@@ -23,8 +23,8 @@ import java.util.HashMap;
 public class GetGameServerSessionLogUrlResponse extends AbstractModel{
 
     /**
-    * Log download URL
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Log download URL. It should contain 1 to 1024 ASCII characters.
+Note: this field may return `null`, indicating that no valid value is obtained.
     */
     @SerializedName("PreSignedUrl")
     @Expose
@@ -38,20 +38,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Log download URL
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return PreSignedUrl Log download URL
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Log download URL. It should contain 1 to 1024 ASCII characters.
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return PreSignedUrl Log download URL. It should contain 1 to 1024 ASCII characters.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public String getPreSignedUrl() {
         return this.PreSignedUrl;
     }
 
     /**
-     * Set Log download URL
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PreSignedUrl Log download URL
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Log download URL. It should contain 1 to 1024 ASCII characters.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param PreSignedUrl Log download URL. It should contain 1 to 1024 ASCII characters.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public void setPreSignedUrl(String PreSignedUrl) {
         this.PreSignedUrl = PreSignedUrl;

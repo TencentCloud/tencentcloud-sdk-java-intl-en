@@ -32,6 +32,7 @@ public class WatermarkInput extends AbstractModel{
     /**
     * Custom watermark parameter, which is valid if `Definition` is 0.
 This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the watermark parameter preferably.
+Custom watermark parameter is not available for screenshot.
     */
     @SerializedName("RawParameter")
     @Expose
@@ -39,6 +40,7 @@ This parameter is used in highly customized scenarios. We recommend you use `Def
 
     /**
     * Text content of up to 100 characters. This field is required only when the watermark type is text.
+Text watermark is not available for screenshot.
     */
     @SerializedName("TextContent")
     @Expose
@@ -46,6 +48,7 @@ This parameter is used in highly customized scenarios. We recommend you use `Def
 
     /**
     * SVG content of up to 2,000,000 characters. This field is required only when the watermark type is `SVG`.
+SVG watermark is not available for screenshot.
     */
     @SerializedName("SvgContent")
     @Expose
@@ -89,9 +92,11 @@ This parameter is used in highly customized scenarios. We recommend you use `Def
 
     /**
      * Get Custom watermark parameter, which is valid if `Definition` is 0.
-This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the watermark parameter preferably. 
+This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the watermark parameter preferably.
+Custom watermark parameter is not available for screenshot. 
      * @return RawParameter Custom watermark parameter, which is valid if `Definition` is 0.
 This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the watermark parameter preferably.
+Custom watermark parameter is not available for screenshot.
      */
     public RawWatermarkParameter getRawParameter() {
         return this.RawParameter;
@@ -100,16 +105,20 @@ This parameter is used in highly customized scenarios. We recommend you use `Def
     /**
      * Set Custom watermark parameter, which is valid if `Definition` is 0.
 This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the watermark parameter preferably.
+Custom watermark parameter is not available for screenshot.
      * @param RawParameter Custom watermark parameter, which is valid if `Definition` is 0.
 This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the watermark parameter preferably.
+Custom watermark parameter is not available for screenshot.
      */
     public void setRawParameter(RawWatermarkParameter RawParameter) {
         this.RawParameter = RawParameter;
     }
 
     /**
-     * Get Text content of up to 100 characters. This field is required only when the watermark type is text. 
+     * Get Text content of up to 100 characters. This field is required only when the watermark type is text.
+Text watermark is not available for screenshot. 
      * @return TextContent Text content of up to 100 characters. This field is required only when the watermark type is text.
+Text watermark is not available for screenshot.
      */
     public String getTextContent() {
         return this.TextContent;
@@ -117,15 +126,19 @@ This parameter is used in highly customized scenarios. We recommend you use `Def
 
     /**
      * Set Text content of up to 100 characters. This field is required only when the watermark type is text.
+Text watermark is not available for screenshot.
      * @param TextContent Text content of up to 100 characters. This field is required only when the watermark type is text.
+Text watermark is not available for screenshot.
      */
     public void setTextContent(String TextContent) {
         this.TextContent = TextContent;
     }
 
     /**
-     * Get SVG content of up to 2,000,000 characters. This field is required only when the watermark type is `SVG`. 
+     * Get SVG content of up to 2,000,000 characters. This field is required only when the watermark type is `SVG`.
+SVG watermark is not available for screenshot. 
      * @return SvgContent SVG content of up to 2,000,000 characters. This field is required only when the watermark type is `SVG`.
+SVG watermark is not available for screenshot.
      */
     public String getSvgContent() {
         return this.SvgContent;
@@ -133,7 +146,9 @@ This parameter is used in highly customized scenarios. We recommend you use `Def
 
     /**
      * Set SVG content of up to 2,000,000 characters. This field is required only when the watermark type is `SVG`.
+SVG watermark is not available for screenshot.
      * @param SvgContent SVG content of up to 2,000,000 characters. This field is required only when the watermark type is `SVG`.
+SVG watermark is not available for screenshot.
      */
     public void setSvgContent(String SvgContent) {
         this.SvgContent = SvgContent;
