@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class ModifyDiagDBInstanceConfRequest extends AbstractModel{
 
     /**
-    * Inspection switch.
+    * Whether to enable inspection
     */
     @SerializedName("InstanceConfs")
     @Expose
     private InstanceConfs InstanceConfs;
 
     /**
-    * The effective instance region. If the value is "All", it means it is effective for the whole region.
+    * Target regions of the request. If the value is `All`, it is applied to all regions.
     */
     @SerializedName("Regions")
     @Expose
@@ -44,39 +44,39 @@ public class ModifyDiagDBInstanceConfRequest extends AbstractModel{
     private String Product;
 
     /**
-    * Specify the instance ID that needs to modify the inspection status.
+    * ID of the instance to modify.
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-     * Get Inspection switch. 
-     * @return InstanceConfs Inspection switch.
+     * Get Whether to enable inspection 
+     * @return InstanceConfs Whether to enable inspection
      */
     public InstanceConfs getInstanceConfs() {
         return this.InstanceConfs;
     }
 
     /**
-     * Set Inspection switch.
-     * @param InstanceConfs Inspection switch.
+     * Set Whether to enable inspection
+     * @param InstanceConfs Whether to enable inspection
      */
     public void setInstanceConfs(InstanceConfs InstanceConfs) {
         this.InstanceConfs = InstanceConfs;
     }
 
     /**
-     * Get The effective instance region. If the value is "All", it means it is effective for the whole region. 
-     * @return Regions The effective instance region. If the value is "All", it means it is effective for the whole region.
+     * Get Target regions of the request. If the value is `All`, it is applied to all regions. 
+     * @return Regions Target regions of the request. If the value is `All`, it is applied to all regions.
      */
     public String getRegions() {
         return this.Regions;
     }
 
     /**
-     * Set The effective instance region. If the value is "All", it means it is effective for the whole region.
-     * @param Regions The effective instance region. If the value is "All", it means it is effective for the whole region.
+     * Set Target regions of the request. If the value is `All`, it is applied to all regions.
+     * @param Regions Target regions of the request. If the value is `All`, it is applied to all regions.
      */
     public void setRegions(String Regions) {
         this.Regions = Regions;
@@ -99,16 +99,16 @@ public class ModifyDiagDBInstanceConfRequest extends AbstractModel{
     }
 
     /**
-     * Get Specify the instance ID that needs to modify the inspection status. 
-     * @return InstanceIds Specify the instance ID that needs to modify the inspection status.
+     * Get ID of the instance to modify. 
+     * @return InstanceIds ID of the instance to modify.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set Specify the instance ID that needs to modify the inspection status.
-     * @param InstanceIds Specify the instance ID that needs to modify the inspection status.
+     * Set ID of the instance to modify.
+     * @param InstanceIds ID of the instance to modify.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

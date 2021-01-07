@@ -44,14 +44,14 @@ public class MailConfiguration extends AbstractModel{
     private String [] HealthStatus;
 
     /**
-    * Contact ID. The contact/contact group cannot be empty.
+    * Contact ID. Either `ContactGroup` or `ContactID` should be passed in.
     */
     @SerializedName("ContactPerson")
     @Expose
     private Long [] ContactPerson;
 
     /**
-    * Contact group ID. The contact/contact group cannot be empty.
+    * Contact group ID. Either `ContactGroup` or `ContactID` should be passed in.
     */
     @SerializedName("ContactGroup")
     @Expose
@@ -106,32 +106,32 @@ public class MailConfiguration extends AbstractModel{
     }
 
     /**
-     * Get Contact ID. The contact/contact group cannot be empty. 
-     * @return ContactPerson Contact ID. The contact/contact group cannot be empty.
+     * Get Contact ID. Either `ContactGroup` or `ContactID` should be passed in. 
+     * @return ContactPerson Contact ID. Either `ContactGroup` or `ContactID` should be passed in.
      */
     public Long [] getContactPerson() {
         return this.ContactPerson;
     }
 
     /**
-     * Set Contact ID. The contact/contact group cannot be empty.
-     * @param ContactPerson Contact ID. The contact/contact group cannot be empty.
+     * Set Contact ID. Either `ContactGroup` or `ContactID` should be passed in.
+     * @param ContactPerson Contact ID. Either `ContactGroup` or `ContactID` should be passed in.
      */
     public void setContactPerson(Long [] ContactPerson) {
         this.ContactPerson = ContactPerson;
     }
 
     /**
-     * Get Contact group ID. The contact/contact group cannot be empty. 
-     * @return ContactGroup Contact group ID. The contact/contact group cannot be empty.
+     * Get Contact group ID. Either `ContactGroup` or `ContactID` should be passed in. 
+     * @return ContactGroup Contact group ID. Either `ContactGroup` or `ContactID` should be passed in.
      */
     public Long [] getContactGroup() {
         return this.ContactGroup;
     }
 
     /**
-     * Set Contact group ID. The contact/contact group cannot be empty.
-     * @param ContactGroup Contact group ID. The contact/contact group cannot be empty.
+     * Set Contact group ID. Either `ContactGroup` or `ContactID` should be passed in.
+     * @param ContactGroup Contact group ID. Either `ContactGroup` or `ContactID` should be passed in.
      */
     public void setContactGroup(Long [] ContactGroup) {
         this.ContactGroup = ContactGroup;

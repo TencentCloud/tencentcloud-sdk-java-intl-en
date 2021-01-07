@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class CreateMailProfileRequest extends AbstractModel{
 
     /**
-    * The content of email configuration.
+    * Email configurations
     */
     @SerializedName("ProfileInfo")
     @Expose
     private ProfileInfo ProfileInfo;
 
     /**
-    * Configuration level. Valid values: "User" (user-level), "Instance" (instance-level). The email of database inspection report is configured as the user level, and the email of scheduled task report is configured as the instance level.
+    * Configuration level. Valid values: "User" (user-level), "Instance" (instance-level). For database inspection report, it should be `User`; and for scheduled task reports, it should be `Instance`.
     */
     @SerializedName("ProfileLevel")
     @Expose
     private String ProfileLevel;
 
     /**
-    * Name configuration, which needs to be unique. The email configuration name of database inspection report can be customize; the email configuration name of scheduled task report should in the format of "scheduler_" + {instanceId}, such as "schduler_cdb-test".
+    * Configuration name, which needs to be unique. For database inspection reports, this name can be customize as needed. For scheduled task reports, the name should be in the format of "scheduler_" + {instanceId}, such as "schduler_cdb-test".
     */
     @SerializedName("ProfileName")
     @Expose
@@ -58,55 +58,55 @@ public class CreateMailProfileRequest extends AbstractModel{
     private String Product;
 
     /**
-    * Instance ID bound to the configuration, which is set when the configuration level is "Instance".
+    * Instance ID bound to the configuration, which is required when the configuration level is `Instance`.
     */
     @SerializedName("BindInstanceIds")
     @Expose
     private String [] BindInstanceIds;
 
     /**
-     * Get The content of email configuration. 
-     * @return ProfileInfo The content of email configuration.
+     * Get Email configurations 
+     * @return ProfileInfo Email configurations
      */
     public ProfileInfo getProfileInfo() {
         return this.ProfileInfo;
     }
 
     /**
-     * Set The content of email configuration.
-     * @param ProfileInfo The content of email configuration.
+     * Set Email configurations
+     * @param ProfileInfo Email configurations
      */
     public void setProfileInfo(ProfileInfo ProfileInfo) {
         this.ProfileInfo = ProfileInfo;
     }
 
     /**
-     * Get Configuration level. Valid values: "User" (user-level), "Instance" (instance-level). The email of database inspection report is configured as the user level, and the email of scheduled task report is configured as the instance level. 
-     * @return ProfileLevel Configuration level. Valid values: "User" (user-level), "Instance" (instance-level). The email of database inspection report is configured as the user level, and the email of scheduled task report is configured as the instance level.
+     * Get Configuration level. Valid values: "User" (user-level), "Instance" (instance-level). For database inspection report, it should be `User`; and for scheduled task reports, it should be `Instance`. 
+     * @return ProfileLevel Configuration level. Valid values: "User" (user-level), "Instance" (instance-level). For database inspection report, it should be `User`; and for scheduled task reports, it should be `Instance`.
      */
     public String getProfileLevel() {
         return this.ProfileLevel;
     }
 
     /**
-     * Set Configuration level. Valid values: "User" (user-level), "Instance" (instance-level). The email of database inspection report is configured as the user level, and the email of scheduled task report is configured as the instance level.
-     * @param ProfileLevel Configuration level. Valid values: "User" (user-level), "Instance" (instance-level). The email of database inspection report is configured as the user level, and the email of scheduled task report is configured as the instance level.
+     * Set Configuration level. Valid values: "User" (user-level), "Instance" (instance-level). For database inspection report, it should be `User`; and for scheduled task reports, it should be `Instance`.
+     * @param ProfileLevel Configuration level. Valid values: "User" (user-level), "Instance" (instance-level). For database inspection report, it should be `User`; and for scheduled task reports, it should be `Instance`.
      */
     public void setProfileLevel(String ProfileLevel) {
         this.ProfileLevel = ProfileLevel;
     }
 
     /**
-     * Get Name configuration, which needs to be unique. The email configuration name of database inspection report can be customize; the email configuration name of scheduled task report should in the format of "scheduler_" + {instanceId}, such as "schduler_cdb-test". 
-     * @return ProfileName Name configuration, which needs to be unique. The email configuration name of database inspection report can be customize; the email configuration name of scheduled task report should in the format of "scheduler_" + {instanceId}, such as "schduler_cdb-test".
+     * Get Configuration name, which needs to be unique. For database inspection reports, this name can be customize as needed. For scheduled task reports, the name should be in the format of "scheduler_" + {instanceId}, such as "schduler_cdb-test". 
+     * @return ProfileName Configuration name, which needs to be unique. For database inspection reports, this name can be customize as needed. For scheduled task reports, the name should be in the format of "scheduler_" + {instanceId}, such as "schduler_cdb-test".
      */
     public String getProfileName() {
         return this.ProfileName;
     }
 
     /**
-     * Set Name configuration, which needs to be unique. The email configuration name of database inspection report can be customize; the email configuration name of scheduled task report should in the format of "scheduler_" + {instanceId}, such as "schduler_cdb-test".
-     * @param ProfileName Name configuration, which needs to be unique. The email configuration name of database inspection report can be customize; the email configuration name of scheduled task report should in the format of "scheduler_" + {instanceId}, such as "schduler_cdb-test".
+     * Set Configuration name, which needs to be unique. For database inspection reports, this name can be customize as needed. For scheduled task reports, the name should be in the format of "scheduler_" + {instanceId}, such as "schduler_cdb-test".
+     * @param ProfileName Configuration name, which needs to be unique. For database inspection reports, this name can be customize as needed. For scheduled task reports, the name should be in the format of "scheduler_" + {instanceId}, such as "schduler_cdb-test".
      */
     public void setProfileName(String ProfileName) {
         this.ProfileName = ProfileName;
@@ -145,16 +145,16 @@ public class CreateMailProfileRequest extends AbstractModel{
     }
 
     /**
-     * Get Instance ID bound to the configuration, which is set when the configuration level is "Instance". 
-     * @return BindInstanceIds Instance ID bound to the configuration, which is set when the configuration level is "Instance".
+     * Get Instance ID bound to the configuration, which is required when the configuration level is `Instance`. 
+     * @return BindInstanceIds Instance ID bound to the configuration, which is required when the configuration level is `Instance`.
      */
     public String [] getBindInstanceIds() {
         return this.BindInstanceIds;
     }
 
     /**
-     * Set Instance ID bound to the configuration, which is set when the configuration level is "Instance".
-     * @param BindInstanceIds Instance ID bound to the configuration, which is set when the configuration level is "Instance".
+     * Set Instance ID bound to the configuration, which is required when the configuration level is `Instance`.
+     * @param BindInstanceIds Instance ID bound to the configuration, which is required when the configuration level is `Instance`.
      */
     public void setBindInstanceIds(String [] BindInstanceIds) {
         this.BindInstanceIds = BindInstanceIds;

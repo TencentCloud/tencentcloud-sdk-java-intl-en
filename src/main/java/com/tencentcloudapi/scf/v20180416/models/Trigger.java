@@ -100,6 +100,13 @@ public class Trigger extends AbstractModel{
     private String TriggerAttribute;
 
     /**
+    * The alias or version bound with the trigger
+    */
+    @SerializedName("Qualifier")
+    @Expose
+    private String Qualifier;
+
+    /**
      * Get Latest modification time of the trigger 
      * @return ModTime Latest modification time of the trigger
      */
@@ -276,6 +283,22 @@ public class Trigger extends AbstractModel{
     }
 
     /**
+     * Get The alias or version bound with the trigger 
+     * @return Qualifier The alias or version bound with the trigger
+     */
+    public String getQualifier() {
+        return this.Qualifier;
+    }
+
+    /**
+     * Set The alias or version bound with the trigger
+     * @param Qualifier The alias or version bound with the trigger
+     */
+    public void setQualifier(String Qualifier) {
+        this.Qualifier = Qualifier;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -290,6 +313,7 @@ public class Trigger extends AbstractModel{
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "BindStatus", this.BindStatus);
         this.setParamSimple(map, prefix + "TriggerAttribute", this.TriggerAttribute);
+        this.setParamSimple(map, prefix + "Qualifier", this.Qualifier);
 
     }
 }

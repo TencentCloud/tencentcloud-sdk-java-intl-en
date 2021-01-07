@@ -37,7 +37,7 @@ public class ContactItem extends AbstractModel{
     private String Name;
 
     /**
-    * The mailbox bound to the contact.
+    * The email address of the contact.
     */
     @SerializedName("Mail")
     @Expose
@@ -76,16 +76,16 @@ public class ContactItem extends AbstractModel{
     }
 
     /**
-     * Get The mailbox bound to the contact. 
-     * @return Mail The mailbox bound to the contact.
+     * Get The email address of the contact. 
+     * @return Mail The email address of the contact.
      */
     public String getMail() {
         return this.Mail;
     }
 
     /**
-     * Set The mailbox bound to the contact.
-     * @param Mail The mailbox bound to the contact.
+     * Set The email address of the contact.
+     * @param Mail The email address of the contact.
      */
     public void setMail(String Mail) {
         this.Mail = Mail;

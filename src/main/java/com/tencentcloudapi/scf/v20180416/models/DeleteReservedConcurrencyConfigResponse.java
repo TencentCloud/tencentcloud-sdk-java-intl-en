@@ -13,43 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dbbrain.v20191016.models;
+package com.tencentcloudapi.scf.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InstanceConfs extends AbstractModel{
+public class DeleteReservedConcurrencyConfigResponse extends AbstractModel{
 
     /**
-    * Whether to enable database inspection. Valid values: Yes/No.
+    * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
-    @SerializedName("DailyInspection")
+    @SerializedName("RequestId")
     @Expose
-    private String DailyInspection;
+    private String RequestId;
 
     /**
-     * Get Whether to enable database inspection. Valid values: Yes/No. 
-     * @return DailyInspection Whether to enable database inspection. Valid values: Yes/No.
+     * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
+     * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public String getDailyInspection() {
-        return this.DailyInspection;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set Whether to enable database inspection. Valid values: Yes/No.
-     * @param DailyInspection Whether to enable database inspection. Valid values: Yes/No.
+     * Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @param RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public void setDailyInspection(String DailyInspection) {
-        this.DailyInspection = DailyInspection;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DailyInspection", this.DailyInspection);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

@@ -30,7 +30,7 @@ public class AddExistedInstancesRequest extends AbstractModel{
     private String ClusterId;
 
     /**
-    * Instance list
+    * Instance list. Spot instance is not supported.
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -72,6 +72,13 @@ public class AddExistedInstancesRequest extends AbstractModel{
     private String HostName;
 
     /**
+    * Node pool options
+    */
+    @SerializedName("NodePool")
+    @Expose
+    private NodePoolOption NodePool;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -88,16 +95,16 @@ public class AddExistedInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Instance list 
-     * @return InstanceIds Instance list
+     * Get Instance list. Spot instance is not supported. 
+     * @return InstanceIds Instance list. Spot instance is not supported.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set Instance list
-     * @param InstanceIds Instance list
+     * Set Instance list. Spot instance is not supported.
+     * @param InstanceIds Instance list. Spot instance is not supported.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
@@ -184,6 +191,22 @@ public class AddExistedInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get Node pool options 
+     * @return NodePool Node pool options
+     */
+    public NodePoolOption getNodePool() {
+        return this.NodePool;
+    }
+
+    /**
+     * Set Node pool options
+     * @param NodePool Node pool options
+     */
+    public void setNodePool(NodePoolOption NodePool) {
+        this.NodePool = NodePool;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class AddExistedInstancesRequest extends AbstractModel{
         this.setParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamSimple(map, prefix + "HostName", this.HostName);
+        this.setParamObj(map, prefix + "NodePool.", this.NodePool);
 
     }
 }

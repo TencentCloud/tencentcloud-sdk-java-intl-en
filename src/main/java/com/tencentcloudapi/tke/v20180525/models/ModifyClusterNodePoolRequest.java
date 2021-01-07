@@ -79,6 +79,20 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
     private Boolean EnableAutoscale;
 
     /**
+    * Operating system name
+    */
+    @SerializedName("OsName")
+    @Expose
+    private String OsName;
+
+    /**
+    * Image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+    */
+    @SerializedName("OsCustomizeType")
+    @Expose
+    private String OsCustomizeType;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -207,6 +221,38 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
     }
 
     /**
+     * Get Operating system name 
+     * @return OsName Operating system name
+     */
+    public String getOsName() {
+        return this.OsName;
+    }
+
+    /**
+     * Set Operating system name
+     * @param OsName Operating system name
+     */
+    public void setOsName(String OsName) {
+        this.OsName = OsName;
+    }
+
+    /**
+     * Get Image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value) 
+     * @return OsCustomizeType Image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+     */
+    public String getOsCustomizeType() {
+        return this.OsCustomizeType;
+    }
+
+    /**
+     * Set Image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+     * @param OsCustomizeType Image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+     */
+    public void setOsCustomizeType(String OsCustomizeType) {
+        this.OsCustomizeType = OsCustomizeType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +264,8 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
         this.setParamArrayObj(map, prefix + "Taints.", this.Taints);
         this.setParamSimple(map, prefix + "EnableAutoscale", this.EnableAutoscale);
+        this.setParamSimple(map, prefix + "OsName", this.OsName);
+        this.setParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
 
     }
 }

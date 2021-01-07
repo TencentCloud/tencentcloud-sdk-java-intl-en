@@ -226,6 +226,46 @@ An alias must point to a master version and can point to an additional version a
     }
 
     /**
+     *This API is used to delete the provisioned concurrency configuration of a function version.
+     * @param req DeleteProvisionedConcurrencyConfigRequest
+     * @return DeleteProvisionedConcurrencyConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteProvisionedConcurrencyConfigResponse DeleteProvisionedConcurrencyConfig(DeleteProvisionedConcurrencyConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteProvisionedConcurrencyConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteProvisionedConcurrencyConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteProvisionedConcurrencyConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete the reserved concurrency configuration of a function.
+     * @param req DeleteReservedConcurrencyConfigRequest
+     * @return DeleteReservedConcurrencyConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteReservedConcurrencyConfigResponse DeleteReservedConcurrencyConfig(DeleteReservedConcurrencyConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteReservedConcurrencyConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteReservedConcurrencyConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteReservedConcurrencyConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete an existing trigger based on the input parameters.
      * @param req DeleteTriggerRequest
      * @return DeleteTriggerResponse
@@ -338,6 +378,46 @@ An alias must point to a master version and can point to an additional version a
                 Type type = new TypeToken<JsonResponseModel<GetLayerVersionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "GetLayerVersion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the provisioned concurrency details of a function or its specified version.
+     * @param req GetProvisionedConcurrencyConfigRequest
+     * @return GetProvisionedConcurrencyConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetProvisionedConcurrencyConfigResponse GetProvisionedConcurrencyConfig(GetProvisionedConcurrencyConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetProvisionedConcurrencyConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetProvisionedConcurrencyConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetProvisionedConcurrencyConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the reserved concurrency details of a function.
+     * @param req GetReservedConcurrencyConfigRequest
+     * @return GetReservedConcurrencyConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetReservedConcurrencyConfigResponse GetReservedConcurrencyConfig(GetReservedConcurrencyConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetReservedConcurrencyConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetReservedConcurrencyConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetReservedConcurrencyConfig");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -538,6 +618,66 @@ An alias must point to a master version and can point to an additional version a
                 Type type = new TypeToken<JsonResponseModel<PublishVersionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "PublishVersion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to set the provisioned concurrency of a non-$LATEST version of a function.
+     * @param req PutProvisionedConcurrencyConfigRequest
+     * @return PutProvisionedConcurrencyConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public PutProvisionedConcurrencyConfigResponse PutProvisionedConcurrencyConfig(PutProvisionedConcurrencyConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PutProvisionedConcurrencyConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<PutProvisionedConcurrencyConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "PutProvisionedConcurrencyConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to set the reserved concurrency of a function.
+     * @param req PutReservedConcurrencyConfigRequest
+     * @return PutReservedConcurrencyConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public PutReservedConcurrencyConfigResponse PutReservedConcurrencyConfig(PutReservedConcurrencyConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PutReservedConcurrencyConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<PutReservedConcurrencyConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "PutReservedConcurrencyConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the account concurrency limit quota.
+     * @param req PutTotalConcurrencyConfigRequest
+     * @return PutTotalConcurrencyConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public PutTotalConcurrencyConfigResponse PutTotalConcurrencyConfig(PutTotalConcurrencyConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PutTotalConcurrencyConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<PutTotalConcurrencyConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "PutTotalConcurrencyConfig");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

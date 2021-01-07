@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ProfileInfo extends AbstractModel{
 
     /**
-    * Language, such as “zh”.
+    * Language of the email, such as `en`.
     */
     @SerializedName("Language")
     @Expose
@@ -37,16 +37,16 @@ public class ProfileInfo extends AbstractModel{
     private MailConfiguration MailConfiguration;
 
     /**
-     * Get Language, such as “zh”. 
-     * @return Language Language, such as “zh”.
+     * Get Language of the email, such as `en`. 
+     * @return Language Language of the email, such as `en`.
      */
     public String getLanguage() {
         return this.Language;
     }
 
     /**
-     * Set Language, such as “zh”.
-     * @param Language Language, such as “zh”.
+     * Set Language of the email, such as `en`.
+     * @param Language Language of the email, such as `en`.
      */
     public void setLanguage(String Language) {
         this.Language = Language;
