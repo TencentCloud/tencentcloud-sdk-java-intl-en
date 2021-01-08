@@ -32,6 +32,8 @@ Get the watermark ID in the returned value of the [AddLiveWatermark](https://int
 
     /**
     * Watermark image URL.
+Unallowed characters in the URL:
+ ;(){}$>`#"\'|
     */
     @SerializedName("PictureUrl")
     @Expose
@@ -94,8 +96,12 @@ Get the watermark ID in the returned value of the [AddLiveWatermark](https://int
     }
 
     /**
-     * Get Watermark image URL. 
+     * Get Watermark image URL.
+Unallowed characters in the URL:
+ ;(){}$>`#"\'| 
      * @return PictureUrl Watermark image URL.
+Unallowed characters in the URL:
+ ;(){}$>`#"\'|
      */
     public String getPictureUrl() {
         return this.PictureUrl;
@@ -103,7 +109,11 @@ Get the watermark ID in the returned value of the [AddLiveWatermark](https://int
 
     /**
      * Set Watermark image URL.
+Unallowed characters in the URL:
+ ;(){}$>`#"\'|
      * @param PictureUrl Watermark image URL.
+Unallowed characters in the URL:
+ ;(){}$>`#"\'|
      */
     public void setPictureUrl(String PictureUrl) {
         this.PictureUrl = PictureUrl;

@@ -130,6 +130,62 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ApiAccessIpv6;
 
     /**
+    * Cluster type
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private Long ClusterType;
+
+    /**
+    * Cluster status
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ClusterStatus")
+    @Expose
+    private Long ClusterStatus;
+
+    /**
+    * Read CU
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ReadCapacityUnit")
+    @Expose
+    private Long ReadCapacityUnit;
+
+    /**
+    * Write CU
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("WriteCapacityUnit")
+    @Expose
+    private Long WriteCapacityUnit;
+
+    /**
+    * Disk capacity
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DiskVolume")
+    @Expose
+    private Long DiskVolume;
+
+    /**
+    * Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ServerList")
+    @Expose
+    private ServerDetailInfo [] ServerList;
+
+    /**
+    * Information of the machine at the access layer (tcaproxy) in a dedicated cluster
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ProxyList")
+    @Expose
+    private ProxyDetailInfo [] ProxyList;
+
+    /**
      * Get Cluster name 
      * @return ClusterName Cluster name
      */
@@ -378,6 +434,146 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Cluster type
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ClusterType Cluster type
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set Cluster type
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ClusterType Cluster type
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setClusterType(Long ClusterType) {
+        this.ClusterType = ClusterType;
+    }
+
+    /**
+     * Get Cluster status
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ClusterStatus Cluster status
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getClusterStatus() {
+        return this.ClusterStatus;
+    }
+
+    /**
+     * Set Cluster status
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ClusterStatus Cluster status
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setClusterStatus(Long ClusterStatus) {
+        this.ClusterStatus = ClusterStatus;
+    }
+
+    /**
+     * Get Read CU
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ReadCapacityUnit Read CU
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getReadCapacityUnit() {
+        return this.ReadCapacityUnit;
+    }
+
+    /**
+     * Set Read CU
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ReadCapacityUnit Read CU
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setReadCapacityUnit(Long ReadCapacityUnit) {
+        this.ReadCapacityUnit = ReadCapacityUnit;
+    }
+
+    /**
+     * Get Write CU
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return WriteCapacityUnit Write CU
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getWriteCapacityUnit() {
+        return this.WriteCapacityUnit;
+    }
+
+    /**
+     * Set Write CU
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param WriteCapacityUnit Write CU
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setWriteCapacityUnit(Long WriteCapacityUnit) {
+        this.WriteCapacityUnit = WriteCapacityUnit;
+    }
+
+    /**
+     * Get Disk capacity
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return DiskVolume Disk capacity
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getDiskVolume() {
+        return this.DiskVolume;
+    }
+
+    /**
+     * Set Disk capacity
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param DiskVolume Disk capacity
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setDiskVolume(Long DiskVolume) {
+        this.DiskVolume = DiskVolume;
+    }
+
+    /**
+     * Get Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ServerList Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public ServerDetailInfo [] getServerList() {
+        return this.ServerList;
+    }
+
+    /**
+     * Set Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ServerList Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setServerList(ServerDetailInfo [] ServerList) {
+        this.ServerList = ServerList;
+    }
+
+    /**
+     * Get Information of the machine at the access layer (tcaproxy) in a dedicated cluster
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ProxyList Information of the machine at the access layer (tcaproxy) in a dedicated cluster
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public ProxyDetailInfo [] getProxyList() {
+        return this.ProxyList;
+    }
+
+    /**
+     * Set Information of the machine at the access layer (tcaproxy) in a dedicated cluster
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ProxyList Information of the machine at the access layer (tcaproxy) in a dedicated cluster
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setProxyList(ProxyDetailInfo [] ProxyList) {
+        this.ProxyList = ProxyList;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -396,6 +592,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ApiAccessPort", this.ApiAccessPort);
         this.setParamSimple(map, prefix + "OldPasswordExpireTime", this.OldPasswordExpireTime);
         this.setParamSimple(map, prefix + "ApiAccessIpv6", this.ApiAccessIpv6);
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
+        this.setParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
+        this.setParamSimple(map, prefix + "ReadCapacityUnit", this.ReadCapacityUnit);
+        this.setParamSimple(map, prefix + "WriteCapacityUnit", this.WriteCapacityUnit);
+        this.setParamSimple(map, prefix + "DiskVolume", this.DiskVolume);
+        this.setParamArrayObj(map, prefix + "ServerList.", this.ServerList);
+        this.setParamArrayObj(map, prefix + "ProxyList.", this.ProxyList);
 
     }
 }

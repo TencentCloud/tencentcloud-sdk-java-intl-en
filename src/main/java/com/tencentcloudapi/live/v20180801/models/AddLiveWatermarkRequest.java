@@ -24,6 +24,8 @@ public class AddLiveWatermarkRequest extends AbstractModel{
 
     /**
     * Watermark image URL.
+Unallowed characters in the URL:
+ ;(){}$>`#"\'|
     */
     @SerializedName("PictureUrl")
     @Expose
@@ -59,15 +61,19 @@ Up to 16 bytes.
     private Long Width;
 
     /**
-    * Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original height is used by default.
+    * Watermark height, which is set by entering a percentage of the live stream image’s original height. You are advised to set either the height or width as the other will be scaled proportionally to avoid distortions. Default value: original height.
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-     * Get Watermark image URL. 
+     * Get Watermark image URL.
+Unallowed characters in the URL:
+ ;(){}$>`#"\'| 
      * @return PictureUrl Watermark image URL.
+Unallowed characters in the URL:
+ ;(){}$>`#"\'|
      */
     public String getPictureUrl() {
         return this.PictureUrl;
@@ -75,7 +81,11 @@ Up to 16 bytes.
 
     /**
      * Set Watermark image URL.
+Unallowed characters in the URL:
+ ;(){}$>`#"\'|
      * @param PictureUrl Watermark image URL.
+Unallowed characters in the URL:
+ ;(){}$>`#"\'|
      */
     public void setPictureUrl(String PictureUrl) {
         this.PictureUrl = PictureUrl;
@@ -150,16 +160,16 @@ Up to 16 bytes.
     }
 
     /**
-     * Get Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original height is used by default. 
-     * @return Height Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original height is used by default.
+     * Get Watermark height, which is set by entering a percentage of the live stream image’s original height. You are advised to set either the height or width as the other will be scaled proportionally to avoid distortions. Default value: original height. 
+     * @return Height Watermark height, which is set by entering a percentage of the live stream image’s original height. You are advised to set either the height or width as the other will be scaled proportionally to avoid distortions. Default value: original height.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original height is used by default.
-     * @param Height Watermark height or its percentage of the live streaming video width. It is recommended to just specify either height or width as the other will be scaled proportionally to avoid distortions. The original height is used by default.
+     * Set Watermark height, which is set by entering a percentage of the live stream image’s original height. You are advised to set either the height or width as the other will be scaled proportionally to avoid distortions. Default value: original height.
+     * @param Height Watermark height, which is set by entering a percentage of the live stream image’s original height. You are advised to set either the height or width as the other will be scaled proportionally to avoid distortions. Default value: original height.
      */
     public void setHeight(Long Height) {
         this.Height = Height;

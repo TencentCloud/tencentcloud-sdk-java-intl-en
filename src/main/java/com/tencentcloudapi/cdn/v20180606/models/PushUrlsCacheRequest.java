@@ -56,6 +56,17 @@ Default value: `mainland`. You can prefetch a URL to nodes in a region provided 
     private String Layer;
 
     /**
+    * Whether to recursively resolve the M3U8 index file and prefetch the TS shards in it.
+Notes:
+1. This feature requires that the M3U8 index file can be directly requested and obtained.
+2. In the M3U8 index file, currently only the TS shards at the first to the third level can be recursively resolved.
+3. Prefetching the TS shards obtained through recursive resolution consumes the daily prefetch quota. If the usage exceeds the quota, the feature will be disabled and TS shards will not be prefetched.
+    */
+    @SerializedName("ParseM3U8")
+    @Expose
+    private Boolean ParseM3U8;
+
+    /**
      * Get List of URLs. The protocol header such as "http://" or "https://" needs to be included. 
      * @return Urls List of URLs. The protocol header such as "http://" or "https://" needs to be included.
      */
@@ -140,6 +151,38 @@ Default value: `mainland`. You can prefetch a URL to nodes in a region provided 
     }
 
     /**
+     * Get Whether to recursively resolve the M3U8 index file and prefetch the TS shards in it.
+Notes:
+1. This feature requires that the M3U8 index file can be directly requested and obtained.
+2. In the M3U8 index file, currently only the TS shards at the first to the third level can be recursively resolved.
+3. Prefetching the TS shards obtained through recursive resolution consumes the daily prefetch quota. If the usage exceeds the quota, the feature will be disabled and TS shards will not be prefetched. 
+     * @return ParseM3U8 Whether to recursively resolve the M3U8 index file and prefetch the TS shards in it.
+Notes:
+1. This feature requires that the M3U8 index file can be directly requested and obtained.
+2. In the M3U8 index file, currently only the TS shards at the first to the third level can be recursively resolved.
+3. Prefetching the TS shards obtained through recursive resolution consumes the daily prefetch quota. If the usage exceeds the quota, the feature will be disabled and TS shards will not be prefetched.
+     */
+    public Boolean getParseM3U8() {
+        return this.ParseM3U8;
+    }
+
+    /**
+     * Set Whether to recursively resolve the M3U8 index file and prefetch the TS shards in it.
+Notes:
+1. This feature requires that the M3U8 index file can be directly requested and obtained.
+2. In the M3U8 index file, currently only the TS shards at the first to the third level can be recursively resolved.
+3. Prefetching the TS shards obtained through recursive resolution consumes the daily prefetch quota. If the usage exceeds the quota, the feature will be disabled and TS shards will not be prefetched.
+     * @param ParseM3U8 Whether to recursively resolve the M3U8 index file and prefetch the TS shards in it.
+Notes:
+1. This feature requires that the M3U8 index file can be directly requested and obtained.
+2. In the M3U8 index file, currently only the TS shards at the first to the third level can be recursively resolved.
+3. Prefetching the TS shards obtained through recursive resolution consumes the daily prefetch quota. If the usage exceeds the quota, the feature will be disabled and TS shards will not be prefetched.
+     */
+    public void setParseM3U8(Boolean ParseM3U8) {
+        this.ParseM3U8 = ParseM3U8;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -147,6 +190,7 @@ Default value: `mainland`. You can prefetch a URL to nodes in a region provided 
         this.setParamSimple(map, prefix + "UserAgent", this.UserAgent);
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamSimple(map, prefix + "Layer", this.Layer);
+        this.setParamSimple(map, prefix + "ParseM3U8", this.ParseM3U8);
 
     }
 }

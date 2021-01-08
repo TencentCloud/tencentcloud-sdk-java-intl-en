@@ -434,6 +434,36 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private OriginAuthentication OriginAuthentication;
 
     /**
+    * IPv6 access configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Ipv6Access")
+    @Expose
+    private Ipv6Access Ipv6Access;
+
+    /**
+    * Advanced configuration set
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AdvanceSet")
+    @Expose
+    private AdvanceConfig [] AdvanceSet;
+
+    /**
+    * 
+    */
+    @SerializedName("OfflineCache")
+    @Expose
+    private OfflineCache OfflineCache;
+
+    /**
+    * 
+    */
+    @SerializedName("OriginCombine")
+    @Expose
+    private OriginCombine OriginCombine;
+
+    /**
      * Get Domain name ID 
      * @return ResourceId Domain name ID
      */
@@ -1478,6 +1508,78 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
+     * Get IPv6 access configuration
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Ipv6Access IPv6 access configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Ipv6Access getIpv6Access() {
+        return this.Ipv6Access;
+    }
+
+    /**
+     * Set IPv6 access configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Ipv6Access IPv6 access configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setIpv6Access(Ipv6Access Ipv6Access) {
+        this.Ipv6Access = Ipv6Access;
+    }
+
+    /**
+     * Get Advanced configuration set
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return AdvanceSet Advanced configuration set
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public AdvanceConfig [] getAdvanceSet() {
+        return this.AdvanceSet;
+    }
+
+    /**
+     * Set Advanced configuration set
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param AdvanceSet Advanced configuration set
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setAdvanceSet(AdvanceConfig [] AdvanceSet) {
+        this.AdvanceSet = AdvanceSet;
+    }
+
+    /**
+     * Get  
+     * @return OfflineCache 
+     */
+    public OfflineCache getOfflineCache() {
+        return this.OfflineCache;
+    }
+
+    /**
+     * Set 
+     * @param OfflineCache 
+     */
+    public void setOfflineCache(OfflineCache OfflineCache) {
+        this.OfflineCache = OfflineCache;
+    }
+
+    /**
+     * Get  
+     * @return OriginCombine 
+     */
+    public OriginCombine getOriginCombine() {
+        return this.OriginCombine;
+    }
+
+    /**
+     * Set 
+     * @param OriginCombine 
+     */
+    public void setOriginCombine(OriginCombine OriginCombine) {
+        this.OriginCombine = OriginCombine;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1531,6 +1633,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
         this.setParamObj(map, prefix + "AdvancedAuthentication.", this.AdvancedAuthentication);
         this.setParamObj(map, prefix + "OriginAuthentication.", this.OriginAuthentication);
+        this.setParamObj(map, prefix + "Ipv6Access.", this.Ipv6Access);
+        this.setParamArrayObj(map, prefix + "AdvanceSet.", this.AdvanceSet);
+        this.setParamObj(map, prefix + "OfflineCache.", this.OfflineCache);
+        this.setParamObj(map, prefix + "OriginCombine.", this.OriginCombine);
 
     }
 }

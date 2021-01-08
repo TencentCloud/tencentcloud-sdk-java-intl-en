@@ -72,6 +72,27 @@ public class CreateClusterRequest extends AbstractModel{
     private Long Ipv6Enable;
 
     /**
+    * Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
+    */
+    @SerializedName("ServerList")
+    @Expose
+    private MachineInfo [] ServerList;
+
+    /**
+    * Information of the machine at the access layer (tcaproxy) in a dedicated cluster
+    */
+    @SerializedName("ProxyList")
+    @Expose
+    private MachineInfo [] ProxyList;
+
+    /**
+    * Cluster type. Valid values: `1` (standard), `2` (dedicated)
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private Long ClusterType;
+
+    /**
      * Get Cluster data description language type, such as `PROTO`, `TDR`, or `MIX` 
      * @return IdlType Cluster data description language type, such as `PROTO`, `TDR`, or `MIX`
      */
@@ -184,6 +205,54 @@ public class CreateClusterRequest extends AbstractModel{
     }
 
     /**
+     * Get Information of the machine at the storage layer (tcapsvr) in a dedicated cluster 
+     * @return ServerList Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
+     */
+    public MachineInfo [] getServerList() {
+        return this.ServerList;
+    }
+
+    /**
+     * Set Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
+     * @param ServerList Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
+     */
+    public void setServerList(MachineInfo [] ServerList) {
+        this.ServerList = ServerList;
+    }
+
+    /**
+     * Get Information of the machine at the access layer (tcaproxy) in a dedicated cluster 
+     * @return ProxyList Information of the machine at the access layer (tcaproxy) in a dedicated cluster
+     */
+    public MachineInfo [] getProxyList() {
+        return this.ProxyList;
+    }
+
+    /**
+     * Set Information of the machine at the access layer (tcaproxy) in a dedicated cluster
+     * @param ProxyList Information of the machine at the access layer (tcaproxy) in a dedicated cluster
+     */
+    public void setProxyList(MachineInfo [] ProxyList) {
+        this.ProxyList = ProxyList;
+    }
+
+    /**
+     * Get Cluster type. Valid values: `1` (standard), `2` (dedicated) 
+     * @return ClusterType Cluster type. Valid values: `1` (standard), `2` (dedicated)
+     */
+    public Long getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set Cluster type. Valid values: `1` (standard), `2` (dedicated)
+     * @param ClusterType Cluster type. Valid values: `1` (standard), `2` (dedicated)
+     */
+    public void setClusterType(Long ClusterType) {
+        this.ClusterType = ClusterType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +263,9 @@ public class CreateClusterRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "Ipv6Enable", this.Ipv6Enable);
+        this.setParamArrayObj(map, prefix + "ServerList.", this.ServerList);
+        this.setParamArrayObj(map, prefix + "ProxyList.", this.ProxyList);
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
 
     }
 }

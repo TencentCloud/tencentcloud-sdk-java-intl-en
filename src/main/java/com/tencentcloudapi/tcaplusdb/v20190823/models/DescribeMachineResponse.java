@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.tcaplusdb.v20190823.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateRecordTaskResponse extends AbstractModel{
+public class DescribeMachineResponse extends AbstractModel{
 
     /**
-    * A globally unique task ID. If `TaskId` is returned, the recording task has been successfully created.
+    * The list of dedicated machine resources
     */
-    @SerializedName("TaskId")
+    @SerializedName("PoolList")
     @Expose
-    private String TaskId;
+    private PoolInfo [] PoolList;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +37,19 @@ public class CreateRecordTaskResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get A globally unique task ID. If `TaskId` is returned, the recording task has been successfully created. 
-     * @return TaskId A globally unique task ID. If `TaskId` is returned, the recording task has been successfully created.
+     * Get The list of dedicated machine resources 
+     * @return PoolList The list of dedicated machine resources
      */
-    public String getTaskId() {
-        return this.TaskId;
+    public PoolInfo [] getPoolList() {
+        return this.PoolList;
     }
 
     /**
-     * Set A globally unique task ID. If `TaskId` is returned, the recording task has been successfully created.
-     * @param TaskId A globally unique task ID. If `TaskId` is returned, the recording task has been successfully created.
+     * Set The list of dedicated machine resources
+     * @param PoolList The list of dedicated machine resources
      */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
+    public void setPoolList(PoolInfo [] PoolList) {
+        this.PoolList = PoolList;
     }
 
     /**
@@ -72,7 +72,7 @@ public class CreateRecordTaskResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamArrayObj(map, prefix + "PoolList.", this.PoolList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

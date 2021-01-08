@@ -282,6 +282,27 @@ global: global acceleration
     private OriginAuthentication OriginAuthentication;
 
     /**
+    * IPv6 access configuration
+    */
+    @SerializedName("Ipv6Access")
+    @Expose
+    private Ipv6Access Ipv6Access;
+
+    /**
+    * 
+    */
+    @SerializedName("OfflineCache")
+    @Expose
+    private OfflineCache OfflineCache;
+
+    /**
+    * 
+    */
+    @SerializedName("OriginCombine")
+    @Expose
+    private OriginCombine OriginCombine;
+
+    /**
      * Get Domain name 
      * @return Domain Domain name
      */
@@ -886,6 +907,54 @@ global: global acceleration
     }
 
     /**
+     * Get IPv6 access configuration 
+     * @return Ipv6Access IPv6 access configuration
+     */
+    public Ipv6Access getIpv6Access() {
+        return this.Ipv6Access;
+    }
+
+    /**
+     * Set IPv6 access configuration
+     * @param Ipv6Access IPv6 access configuration
+     */
+    public void setIpv6Access(Ipv6Access Ipv6Access) {
+        this.Ipv6Access = Ipv6Access;
+    }
+
+    /**
+     * Get  
+     * @return OfflineCache 
+     */
+    public OfflineCache getOfflineCache() {
+        return this.OfflineCache;
+    }
+
+    /**
+     * Set 
+     * @param OfflineCache 
+     */
+    public void setOfflineCache(OfflineCache OfflineCache) {
+        this.OfflineCache = OfflineCache;
+    }
+
+    /**
+     * Get  
+     * @return OriginCombine 
+     */
+    public OriginCombine getOriginCombine() {
+        return this.OriginCombine;
+    }
+
+    /**
+     * Set 
+     * @param OriginCombine 
+     */
+    public void setOriginCombine(OriginCombine OriginCombine) {
+        this.OriginCombine = OriginCombine;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -925,6 +994,9 @@ global: global acceleration
         this.setParamArraySimple(map, prefix + "AccessPort.", this.AccessPort);
         this.setParamObj(map, prefix + "AdvancedAuthentication.", this.AdvancedAuthentication);
         this.setParamObj(map, prefix + "OriginAuthentication.", this.OriginAuthentication);
+        this.setParamObj(map, prefix + "Ipv6Access.", this.Ipv6Access);
+        this.setParamObj(map, prefix + "OfflineCache.", this.OfflineCache);
+        this.setParamObj(map, prefix + "OriginCombine.", this.OriginCombine);
 
     }
 }

@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.tcaplusdb.v20190823.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateRecordTaskResponse extends AbstractModel{
+public class ModifyClusterMachineResponse extends AbstractModel{
 
     /**
-    * A globally unique task ID. If `TaskId` is returned, the recording task has been successfully created.
+    * Cluster ID
     */
-    @SerializedName("TaskId")
+    @SerializedName("ClusterId")
     @Expose
-    private String TaskId;
+    private String ClusterId;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +37,19 @@ public class CreateRecordTaskResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get A globally unique task ID. If `TaskId` is returned, the recording task has been successfully created. 
-     * @return TaskId A globally unique task ID. If `TaskId` is returned, the recording task has been successfully created.
+     * Get Cluster ID 
+     * @return ClusterId Cluster ID
      */
-    public String getTaskId() {
-        return this.TaskId;
+    public String getClusterId() {
+        return this.ClusterId;
     }
 
     /**
-     * Set A globally unique task ID. If `TaskId` is returned, the recording task has been successfully created.
-     * @param TaskId A globally unique task ID. If `TaskId` is returned, the recording task has been successfully created.
+     * Set Cluster ID
+     * @param ClusterId Cluster ID
      */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
     }
 
     /**
@@ -72,7 +72,7 @@ public class CreateRecordTaskResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

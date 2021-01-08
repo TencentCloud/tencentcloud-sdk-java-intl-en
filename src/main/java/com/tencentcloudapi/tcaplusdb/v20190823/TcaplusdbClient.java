@@ -219,6 +219,26 @@ public class TcaplusdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete the global index from a table.
+     * @param req DeleteTableIndexRequest
+     * @return DeleteTableIndexResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTableIndexResponse DeleteTableIndex(DeleteTableIndexRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteTableIndexResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteTableIndexResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteTableIndex");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to drop a specified table. Calling this API for the first time means to move the table to the recycle bin, while calling it again means to drop the table completely from the recycle bin.
      * @param req DeleteTablesRequest
      * @return DeleteTablesResponse
@@ -291,6 +311,26 @@ public class TcaplusdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeIdlFileInfosResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeIdlFileInfos");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the available machines in a dedicated cluster.
+     * @param req DescribeMachineRequest
+     * @return DescribeMachineResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMachineResponse DescribeMachine(DescribeMachineRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMachineResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMachineResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeMachine");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -451,6 +491,26 @@ public class TcaplusdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeUinInWhitelistResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeUinInWhitelist");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the machines of a dedicated cluster.
+     * @param req ModifyClusterMachineRequest
+     * @return ModifyClusterMachineResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterMachineResponse ModifyClusterMachine(ModifyClusterMachineRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyClusterMachineResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyClusterMachineResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyClusterMachine");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -671,6 +731,26 @@ public class TcaplusdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RollbackTablesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RollbackTables");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a global index for a table.
+     * @param req SetTableIndexRequest
+     * @return SetTableIndexResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetTableIndexResponse SetTableIndex(SetTableIndexRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetTableIndexResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetTableIndexResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SetTableIndex");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

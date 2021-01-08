@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.tcaplusdb.v20190823.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateRecordTaskResponse extends AbstractModel{
+public class DeleteTableIndexResponse extends AbstractModel{
 
     /**
-    * A globally unique task ID. If `TaskId` is returned, the recording task has been successfully created.
+    * The number of tables whose global indexes are deleted
     */
-    @SerializedName("TaskId")
+    @SerializedName("TotalCount")
     @Expose
-    private String TaskId;
+    private Long TotalCount;
+
+    /**
+    * The list of global index deletion results
+    */
+    @SerializedName("TableResults")
+    @Expose
+    private TableResultNew [] TableResults;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +44,35 @@ public class CreateRecordTaskResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get A globally unique task ID. If `TaskId` is returned, the recording task has been successfully created. 
-     * @return TaskId A globally unique task ID. If `TaskId` is returned, the recording task has been successfully created.
+     * Get The number of tables whose global indexes are deleted 
+     * @return TotalCount The number of tables whose global indexes are deleted
      */
-    public String getTaskId() {
-        return this.TaskId;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set A globally unique task ID. If `TaskId` is returned, the recording task has been successfully created.
-     * @param TaskId A globally unique task ID. If `TaskId` is returned, the recording task has been successfully created.
+     * Set The number of tables whose global indexes are deleted
+     * @param TotalCount The number of tables whose global indexes are deleted
      */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get The list of global index deletion results 
+     * @return TableResults The list of global index deletion results
+     */
+    public TableResultNew [] getTableResults() {
+        return this.TableResults;
+    }
+
+    /**
+     * Set The list of global index deletion results
+     * @param TableResults The list of global index deletion results
+     */
+    public void setTableResults(TableResultNew [] TableResults) {
+        this.TableResults = TableResults;
     }
 
     /**
@@ -72,7 +95,8 @@ public class CreateRecordTaskResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "TableResults.", this.TableResults);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

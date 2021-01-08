@@ -248,6 +248,20 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
     private Tag [] Tag;
 
     /**
+    * IPv6 access configuration
+    */
+    @SerializedName("Ipv6Access")
+    @Expose
+    private Ipv6Access Ipv6Access;
+
+    /**
+    * 
+    */
+    @SerializedName("OfflineCache")
+    @Expose
+    private OfflineCache OfflineCache;
+
+    /**
      * Get Domain name 
      * @return Domain Domain name
      */
@@ -776,6 +790,38 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
     }
 
     /**
+     * Get IPv6 access configuration 
+     * @return Ipv6Access IPv6 access configuration
+     */
+    public Ipv6Access getIpv6Access() {
+        return this.Ipv6Access;
+    }
+
+    /**
+     * Set IPv6 access configuration
+     * @param Ipv6Access IPv6 access configuration
+     */
+    public void setIpv6Access(Ipv6Access Ipv6Access) {
+        this.Ipv6Access = Ipv6Access;
+    }
+
+    /**
+     * Get  
+     * @return OfflineCache 
+     */
+    public OfflineCache getOfflineCache() {
+        return this.OfflineCache;
+    }
+
+    /**
+     * Set 
+     * @param OfflineCache 
+     */
+    public void setOfflineCache(OfflineCache OfflineCache) {
+        this.OfflineCache = OfflineCache;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -810,6 +856,8 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamObj(map, prefix + "OriginPullTimeout.", this.OriginPullTimeout);
         this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
+        this.setParamObj(map, prefix + "Ipv6Access.", this.Ipv6Access);
+        this.setParamObj(map, prefix + "OfflineCache.", this.OfflineCache);
 
     }
 }

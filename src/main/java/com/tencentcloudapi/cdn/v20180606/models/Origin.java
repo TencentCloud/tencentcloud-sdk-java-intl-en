@@ -115,12 +115,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String BasePath;
 
     /**
-    * Path-based origin-pull configuration rules
-Note: this field may return `null`, indicating that no valid value is obtained.
+    * Origin URL rewrite rule configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("PathRules")
     @Expose
     private PathRule [] PathRules;
+
+    /**
+    * 
+    */
+    @SerializedName("PathBasedOrigin")
+    @Expose
+    private PathBasedOriginRule [] PathBasedOrigin;
 
     /**
      * Get Master origin server list
@@ -383,23 +390,39 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Path-based origin-pull configuration rules
-Note: this field may return `null`, indicating that no valid value is obtained. 
-     * @return PathRules Path-based origin-pull configuration rules
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * Get Origin URL rewrite rule configuration
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return PathRules Origin URL rewrite rule configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public PathRule [] getPathRules() {
         return this.PathRules;
     }
 
     /**
-     * Set Path-based origin-pull configuration rules
-Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param PathRules Path-based origin-pull configuration rules
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * Set Origin URL rewrite rule configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param PathRules Origin URL rewrite rule configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setPathRules(PathRule [] PathRules) {
         this.PathRules = PathRules;
+    }
+
+    /**
+     * Get  
+     * @return PathBasedOrigin 
+     */
+    public PathBasedOriginRule [] getPathBasedOrigin() {
+        return this.PathBasedOrigin;
+    }
+
+    /**
+     * Set 
+     * @param PathBasedOrigin 
+     */
+    public void setPathBasedOrigin(PathBasedOriginRule [] PathBasedOrigin) {
+        this.PathBasedOrigin = PathBasedOrigin;
     }
 
     /**
@@ -416,6 +439,7 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         this.setParamSimple(map, prefix + "BackupServerName", this.BackupServerName);
         this.setParamSimple(map, prefix + "BasePath", this.BasePath);
         this.setParamArrayObj(map, prefix + "PathRules.", this.PathRules);
+        this.setParamArrayObj(map, prefix + "PathBasedOrigin.", this.PathBasedOrigin);
 
     }
 }

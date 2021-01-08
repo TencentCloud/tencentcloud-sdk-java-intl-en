@@ -88,6 +88,23 @@ public class DomainCertInfo extends AbstractModel{
     private Long Status;
 
     /**
+    * List of domain names in the certificate.
+["*.x.com"] for example.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CertDomains")
+    @Expose
+    private String [] CertDomains;
+
+    /**
+    * Tencent Cloud SSL certificate ID.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CloudCertId")
+    @Expose
+    private String CloudCertId;
+
+    /**
      * Get Certificate ID. 
      * @return CertId Certificate ID.
      */
@@ -240,6 +257,50 @@ public class DomainCertInfo extends AbstractModel{
     }
 
     /**
+     * Get List of domain names in the certificate.
+["*.x.com"] for example.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return CertDomains List of domain names in the certificate.
+["*.x.com"] for example.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String [] getCertDomains() {
+        return this.CertDomains;
+    }
+
+    /**
+     * Set List of domain names in the certificate.
+["*.x.com"] for example.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param CertDomains List of domain names in the certificate.
+["*.x.com"] for example.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setCertDomains(String [] CertDomains) {
+        this.CertDomains = CertDomains;
+    }
+
+    /**
+     * Get Tencent Cloud SSL certificate ID.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return CloudCertId Tencent Cloud SSL certificate ID.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getCloudCertId() {
+        return this.CloudCertId;
+    }
+
+    /**
+     * Set Tencent Cloud SSL certificate ID.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param CloudCertId Tencent Cloud SSL certificate ID.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setCloudCertId(String CloudCertId) {
+        this.CloudCertId = CloudCertId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -252,6 +313,8 @@ public class DomainCertInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CertExpireTime", this.CertExpireTime);
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArraySimple(map, prefix + "CertDomains.", this.CertDomains);
+        this.setParamSimple(map, prefix + "CloudCertId", this.CloudCertId);
 
     }
 }

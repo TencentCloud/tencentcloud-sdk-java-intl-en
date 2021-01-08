@@ -66,7 +66,7 @@ Default value: 5.
     private Long Granularity;
 
     /**
-    * Service name. Valid values: LVB, LEB. Default value: LVB.
+    * Service name. Valid values: LVB, LEB. The sum of LVB and LEB usage will be returned if this parameter is left empty.
     */
     @SerializedName("ServiceName")
     @Expose
@@ -185,16 +185,16 @@ Default value: 5.
     }
 
     /**
-     * Get Service name. Valid values: LVB, LEB. Default value: LVB. 
-     * @return ServiceName Service name. Valid values: LVB, LEB. Default value: LVB.
+     * Get Service name. Valid values: LVB, LEB. The sum of LVB and LEB usage will be returned if this parameter is left empty. 
+     * @return ServiceName Service name. Valid values: LVB, LEB. The sum of LVB and LEB usage will be returned if this parameter is left empty.
      */
     public String getServiceName() {
         return this.ServiceName;
     }
 
     /**
-     * Set Service name. Valid values: LVB, LEB. Default value: LVB.
-     * @param ServiceName Service name. Valid values: LVB, LEB. Default value: LVB.
+     * Set Service name. Valid values: LVB, LEB. The sum of LVB and LEB usage will be returned if this parameter is left empty.
+     * @param ServiceName Service name. Valid values: LVB, LEB. The sum of LVB and LEB usage will be returned if this parameter is left empty.
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;

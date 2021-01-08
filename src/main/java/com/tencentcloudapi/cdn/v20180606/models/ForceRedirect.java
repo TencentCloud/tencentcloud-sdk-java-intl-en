@@ -52,6 +52,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long RedirectStatusCode;
 
     /**
+    * Whether to return the added header in forced redirection.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CarryHeaders")
+    @Expose
+    private String CarryHeaders;
+
+    /**
      * Get Access forced redirect configuration switch
 on: enabled
 off: disabled
@@ -132,12 +140,33 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Whether to return the added header in forced redirection.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return CarryHeaders Whether to return the added header in forced redirection.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getCarryHeaders() {
+        return this.CarryHeaders;
+    }
+
+    /**
+     * Set Whether to return the added header in forced redirection.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param CarryHeaders Whether to return the added header in forced redirection.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setCarryHeaders(String CarryHeaders) {
+        this.CarryHeaders = CarryHeaders;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamSimple(map, prefix + "RedirectType", this.RedirectType);
         this.setParamSimple(map, prefix + "RedirectStatusCode", this.RedirectStatusCode);
+        this.setParamSimple(map, prefix + "CarryHeaders", this.CarryHeaders);
 
     }
 }

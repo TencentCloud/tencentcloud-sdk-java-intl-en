@@ -117,6 +117,30 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     private Long DesiredNodesNum;
 
     /**
+    * The operating system of the node pool
+Note: this field may return `null`, indicating that no valid value is obtained.
+    */
+    @SerializedName("NodePoolOs")
+    @Expose
+    private String NodePoolOs;
+
+    /**
+    * Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+Note: this field may return `null`, indicating that no valid value is obtained.
+    */
+    @SerializedName("OsCustomizeType")
+    @Expose
+    private String OsCustomizeType;
+
+    /**
+    * Image ID
+Note: this field may return `null`, indicating that no valid value is obtained.
+    */
+    @SerializedName("ImageId")
+    @Expose
+    private String ImageId;
+
+    /**
      * Get Node pool ID 
      * @return NodePoolId Node pool ID
      */
@@ -337,6 +361,66 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     }
 
     /**
+     * Get The operating system of the node pool
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return NodePoolOs The operating system of the node pool
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public String getNodePoolOs() {
+        return this.NodePoolOs;
+    }
+
+    /**
+     * Set The operating system of the node pool
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param NodePoolOs The operating system of the node pool
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public void setNodePoolOs(String NodePoolOs) {
+        this.NodePoolOs = NodePoolOs;
+    }
+
+    /**
+     * Get Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return OsCustomizeType Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public String getOsCustomizeType() {
+        return this.OsCustomizeType;
+    }
+
+    /**
+     * Set Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param OsCustomizeType Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public void setOsCustomizeType(String OsCustomizeType) {
+        this.OsCustomizeType = OsCustomizeType;
+    }
+
+    /**
+     * Get Image ID
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return ImageId Image ID
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public String getImageId() {
+        return this.ImageId;
+    }
+
+    /**
+     * Set Image ID
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param ImageId Image ID
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public void setImageId(String ImageId) {
+        this.ImageId = ImageId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -353,6 +437,9 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         this.setParamSimple(map, prefix + "MaxNodesNum", this.MaxNodesNum);
         this.setParamSimple(map, prefix + "MinNodesNum", this.MinNodesNum);
         this.setParamSimple(map, prefix + "DesiredNodesNum", this.DesiredNodesNum);
+        this.setParamSimple(map, prefix + "NodePoolOs", this.NodePoolOs);
+        this.setParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
+        this.setParamSimple(map, prefix + "ImageId", this.ImageId);
 
     }
 }

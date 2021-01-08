@@ -30,7 +30,7 @@ public class ModifyLiveTranscodeTemplateRequest extends AbstractModel{
     private Long TemplateId;
 
     /**
-    * Video codec: `h264/h265/origin`. Default value: `h264`.
+    * Video codec. Valid values: h264 (default), h265, origin
 
 origin: original codec as the output codec
     */
@@ -39,7 +39,7 @@ origin: original codec as the output codec
     private String Vcodec;
 
     /**
-    * Audio codec: acc by default.
+    * Audio codec. Defaut value: aac.
 Note: this parameter is unsupported now.
     */
     @SerializedName("Acodec")
@@ -62,17 +62,16 @@ Value range: 0-500.
     private String Description;
 
     /**
-    * Video bitrate. Value range: 0–8,000 Kbps.
-If the value is 0, the original bitrate will be retained.
-Note: transcoding templates require a unique bitrate. The final saved bitrate may differ from the input bitrate.
+    * Video bitrate in Kbps. Value range: 100-8000.
+Note: the transcoding template requires that the bitrate be unique. Therefore, the final saved bitrate may be different from the input bitrate.
     */
     @SerializedName("VideoBitrate")
     @Expose
     private Long VideoBitrate;
 
     /**
-    * Width in pixels. Value range: 0-3,000.
-It must be a multiple of 2. The original width is 0
+    * Width in pixels. Value range: 0-3000.
+It must be a multiple of 2. The original width is 0.
     */
     @SerializedName("Width")
     @Expose
@@ -93,8 +92,8 @@ It must be a multiple of 2. The original width is 0
     private Long NeedAudio;
 
     /**
-    * Height in pixels. Value range: 0-3,000.
-It must be a multiple of 2. The original height is 0
+    * Height in pixels. Value range: 0-3000.
+It must be a multiple of 2. The original height is 0.
     */
     @SerializedName("Height")
     @Expose
@@ -170,7 +169,7 @@ Value range: 0.0-0.5.
     private Float AdaptBitratePercent;
 
     /**
-    * This parameter is used to define whether the short side is the video height. 0: no, 1: yes. The default value is 0.
+    * Whether to use the short side as the video height. 0: no, 1: yes. Default value: 0.
     */
     @SerializedName("ShortEdgeAsHeight")
     @Expose
@@ -193,10 +192,10 @@ Value range: 0.0-0.5.
     }
 
     /**
-     * Get Video codec: `h264/h265/origin`. Default value: `h264`.
+     * Get Video codec. Valid values: h264 (default), h265, origin
 
 origin: original codec as the output codec 
-     * @return Vcodec Video codec: `h264/h265/origin`. Default value: `h264`.
+     * @return Vcodec Video codec. Valid values: h264 (default), h265, origin
 
 origin: original codec as the output codec
      */
@@ -205,10 +204,10 @@ origin: original codec as the output codec
     }
 
     /**
-     * Set Video codec: `h264/h265/origin`. Default value: `h264`.
+     * Set Video codec. Valid values: h264 (default), h265, origin
 
 origin: original codec as the output codec
-     * @param Vcodec Video codec: `h264/h265/origin`. Default value: `h264`.
+     * @param Vcodec Video codec. Valid values: h264 (default), h265, origin
 
 origin: original codec as the output codec
      */
@@ -217,9 +216,9 @@ origin: original codec as the output codec
     }
 
     /**
-     * Get Audio codec: acc by default.
+     * Get Audio codec. Defaut value: aac.
 Note: this parameter is unsupported now. 
-     * @return Acodec Audio codec: acc by default.
+     * @return Acodec Audio codec. Defaut value: aac.
 Note: this parameter is unsupported now.
      */
     public String getAcodec() {
@@ -227,9 +226,9 @@ Note: this parameter is unsupported now.
     }
 
     /**
-     * Set Audio codec: acc by default.
+     * Set Audio codec. Defaut value: aac.
 Note: this parameter is unsupported now.
-     * @param Acodec Audio codec: acc by default.
+     * @param Acodec Audio codec. Defaut value: aac.
 Note: this parameter is unsupported now.
      */
     public void setAcodec(String Acodec) {
@@ -273,44 +272,40 @@ Value range: 0-500.
     }
 
     /**
-     * Get Video bitrate. Value range: 0–8,000 Kbps.
-If the value is 0, the original bitrate will be retained.
-Note: transcoding templates require a unique bitrate. The final saved bitrate may differ from the input bitrate. 
-     * @return VideoBitrate Video bitrate. Value range: 0–8,000 Kbps.
-If the value is 0, the original bitrate will be retained.
-Note: transcoding templates require a unique bitrate. The final saved bitrate may differ from the input bitrate.
+     * Get Video bitrate in Kbps. Value range: 100-8000.
+Note: the transcoding template requires that the bitrate be unique. Therefore, the final saved bitrate may be different from the input bitrate. 
+     * @return VideoBitrate Video bitrate in Kbps. Value range: 100-8000.
+Note: the transcoding template requires that the bitrate be unique. Therefore, the final saved bitrate may be different from the input bitrate.
      */
     public Long getVideoBitrate() {
         return this.VideoBitrate;
     }
 
     /**
-     * Set Video bitrate. Value range: 0–8,000 Kbps.
-If the value is 0, the original bitrate will be retained.
-Note: transcoding templates require a unique bitrate. The final saved bitrate may differ from the input bitrate.
-     * @param VideoBitrate Video bitrate. Value range: 0–8,000 Kbps.
-If the value is 0, the original bitrate will be retained.
-Note: transcoding templates require a unique bitrate. The final saved bitrate may differ from the input bitrate.
+     * Set Video bitrate in Kbps. Value range: 100-8000.
+Note: the transcoding template requires that the bitrate be unique. Therefore, the final saved bitrate may be different from the input bitrate.
+     * @param VideoBitrate Video bitrate in Kbps. Value range: 100-8000.
+Note: the transcoding template requires that the bitrate be unique. Therefore, the final saved bitrate may be different from the input bitrate.
      */
     public void setVideoBitrate(Long VideoBitrate) {
         this.VideoBitrate = VideoBitrate;
     }
 
     /**
-     * Get Width in pixels. Value range: 0-3,000.
-It must be a multiple of 2. The original width is 0 
-     * @return Width Width in pixels. Value range: 0-3,000.
-It must be a multiple of 2. The original width is 0
+     * Get Width in pixels. Value range: 0-3000.
+It must be a multiple of 2. The original width is 0. 
+     * @return Width Width in pixels. Value range: 0-3000.
+It must be a multiple of 2. The original width is 0.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Width in pixels. Value range: 0-3,000.
-It must be a multiple of 2. The original width is 0
-     * @param Width Width in pixels. Value range: 0-3,000.
-It must be a multiple of 2. The original width is 0
+     * Set Width in pixels. Value range: 0-3000.
+It must be a multiple of 2. The original width is 0.
+     * @param Width Width in pixels. Value range: 0-3000.
+It must be a multiple of 2. The original width is 0.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
@@ -349,20 +344,20 @@ It must be a multiple of 2. The original width is 0
     }
 
     /**
-     * Get Height in pixels. Value range: 0-3,000.
-It must be a multiple of 2. The original height is 0 
-     * @return Height Height in pixels. Value range: 0-3,000.
-It must be a multiple of 2. The original height is 0
+     * Get Height in pixels. Value range: 0-3000.
+It must be a multiple of 2. The original height is 0. 
+     * @return Height Height in pixels. Value range: 0-3000.
+It must be a multiple of 2. The original height is 0.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Height in pixels. Value range: 0-3,000.
-It must be a multiple of 2. The original height is 0
-     * @param Height Height in pixels. Value range: 0-3,000.
-It must be a multiple of 2. The original height is 0
+     * Set Height in pixels. Value range: 0-3000.
+It must be a multiple of 2. The original height is 0.
+     * @param Height Height in pixels. Value range: 0-3000.
+It must be a multiple of 2. The original height is 0.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
@@ -549,16 +544,16 @@ Value range: 0.0-0.5.
     }
 
     /**
-     * Get This parameter is used to define whether the short side is the video height. 0: no, 1: yes. The default value is 0. 
-     * @return ShortEdgeAsHeight This parameter is used to define whether the short side is the video height. 0: no, 1: yes. The default value is 0.
+     * Get Whether to use the short side as the video height. 0: no, 1: yes. Default value: 0. 
+     * @return ShortEdgeAsHeight Whether to use the short side as the video height. 0: no, 1: yes. Default value: 0.
      */
     public Long getShortEdgeAsHeight() {
         return this.ShortEdgeAsHeight;
     }
 
     /**
-     * Set This parameter is used to define whether the short side is the video height. 0: no, 1: yes. The default value is 0.
-     * @param ShortEdgeAsHeight This parameter is used to define whether the short side is the video height. 0: no, 1: yes. The default value is 0.
+     * Set Whether to use the short side as the video height. 0: no, 1: yes. Default value: 0.
+     * @param ShortEdgeAsHeight Whether to use the short side as the video height. 0: no, 1: yes. Default value: 0.
      */
     public void setShortEdgeAsHeight(Long ShortEdgeAsHeight) {
         this.ShortEdgeAsHeight = ShortEdgeAsHeight;
