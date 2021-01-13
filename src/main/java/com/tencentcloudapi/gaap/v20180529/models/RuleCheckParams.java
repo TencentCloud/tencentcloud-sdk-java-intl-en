@@ -66,6 +66,30 @@ You cannot modify this parameter when calling ModifyRuleAttribute API.
     private String Domain;
 
     /**
+    * Origin server failure check frequency
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("FailedCountInter")
+    @Expose
+    private Long FailedCountInter;
+
+    /**
+    * Origin server health check threshold. The service will be blocked once the threshold is exceeded.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("FailedThreshold")
+    @Expose
+    private Long FailedThreshold;
+
+    /**
+    * Time of a request is blocked after the origin server health check threshold is exceeded.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BlockInter")
+    @Expose
+    private Long BlockInter;
+
+    /**
      * Get Time interval of health check 
      * @return DelayLoop Time interval of health check
      */
@@ -166,6 +190,66 @@ You cannot modify this parameter when calling ModifyRuleAttribute API.
     }
 
     /**
+     * Get Origin server failure check frequency
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return FailedCountInter Origin server failure check frequency
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getFailedCountInter() {
+        return this.FailedCountInter;
+    }
+
+    /**
+     * Set Origin server failure check frequency
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param FailedCountInter Origin server failure check frequency
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setFailedCountInter(Long FailedCountInter) {
+        this.FailedCountInter = FailedCountInter;
+    }
+
+    /**
+     * Get Origin server health check threshold. The service will be blocked once the threshold is exceeded.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return FailedThreshold Origin server health check threshold. The service will be blocked once the threshold is exceeded.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getFailedThreshold() {
+        return this.FailedThreshold;
+    }
+
+    /**
+     * Set Origin server health check threshold. The service will be blocked once the threshold is exceeded.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param FailedThreshold Origin server health check threshold. The service will be blocked once the threshold is exceeded.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setFailedThreshold(Long FailedThreshold) {
+        this.FailedThreshold = FailedThreshold;
+    }
+
+    /**
+     * Get Time of a request is blocked after the origin server health check threshold is exceeded.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return BlockInter Time of a request is blocked after the origin server health check threshold is exceeded.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getBlockInter() {
+        return this.BlockInter;
+    }
+
+    /**
+     * Set Time of a request is blocked after the origin server health check threshold is exceeded.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param BlockInter Time of a request is blocked after the origin server health check threshold is exceeded.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setBlockInter(Long BlockInter) {
+        this.BlockInter = BlockInter;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -175,6 +259,9 @@ You cannot modify this parameter when calling ModifyRuleAttribute API.
         this.setParamSimple(map, prefix + "Method", this.Method);
         this.setParamArraySimple(map, prefix + "StatusCode.", this.StatusCode);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "FailedCountInter", this.FailedCountInter);
+        this.setParamSimple(map, prefix + "FailedThreshold", this.FailedThreshold);
+        this.setParamSimple(map, prefix + "BlockInter", this.BlockInter);
 
     }
 }

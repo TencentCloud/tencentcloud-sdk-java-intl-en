@@ -59,6 +59,46 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a notification template.
+     * @param req CreateAlarmNoticeRequest
+     * @return CreateAlarmNoticeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAlarmNoticeResponse CreateAlarmNotice(CreateAlarmNoticeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAlarmNoticeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAlarmNoticeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAlarmNotice");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create an alarm policy.
+     * @param req CreateAlarmPolicyRequest
+     * @return CreateAlarmPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAlarmPolicyResponse CreateAlarmPolicy(CreateAlarmPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAlarmPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAlarmPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAlarmPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to add a policy group.
      * @param req CreatePolicyGroupRequest
      * @return CreatePolicyGroupResponse
@@ -71,6 +111,46 @@ public class MonitorClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreatePolicyGroupResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreatePolicyGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete alarm notification templates.
+     * @param req DeleteAlarmNoticesRequest
+     * @return DeleteAlarmNoticesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAlarmNoticesResponse DeleteAlarmNotices(DeleteAlarmNoticesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAlarmNoticesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAlarmNoticesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteAlarmNotices");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete an alarm policy.
+     * @param req DeleteAlarmPolicyRequest
+     * @return DeleteAlarmPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAlarmPolicyResponse DeleteAlarmPolicy(DeleteAlarmPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAlarmPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAlarmPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteAlarmPolicy");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -111,6 +191,186 @@ public class MonitorClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeAccidentEventListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeAccidentEventList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of alarm events.
+     * @param req DescribeAlarmEventsRequest
+     * @return DescribeAlarmEventsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAlarmEventsResponse DescribeAlarmEvents(DescribeAlarmEventsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAlarmEventsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAlarmEventsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAlarmEvents");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the alarm records.
+     * @param req DescribeAlarmHistoriesRequest
+     * @return DescribeAlarmHistoriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAlarmHistoriesResponse DescribeAlarmHistories(DescribeAlarmHistoriesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAlarmHistoriesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAlarmHistoriesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAlarmHistories");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of alarm metrics.
+     * @param req DescribeAlarmMetricsRequest
+     * @return DescribeAlarmMetricsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAlarmMetricsResponse DescribeAlarmMetrics(DescribeAlarmMetricsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAlarmMetricsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAlarmMetricsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAlarmMetrics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the details of a single notification template.
+     * @param req DescribeAlarmNoticeRequest
+     * @return DescribeAlarmNoticeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAlarmNoticeResponse DescribeAlarmNotice(DescribeAlarmNoticeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAlarmNoticeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAlarmNoticeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAlarmNotice");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get all the callback URLs of an alarm notification template.
+     * @param req DescribeAlarmNoticeCallbacksRequest
+     * @return DescribeAlarmNoticeCallbacksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAlarmNoticeCallbacksResponse DescribeAlarmNoticeCallbacks(DescribeAlarmNoticeCallbacksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAlarmNoticeCallbacksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAlarmNoticeCallbacksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAlarmNoticeCallbacks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of notification templates.
+     * @param req DescribeAlarmNoticesRequest
+     * @return DescribeAlarmNoticesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAlarmNoticesResponse DescribeAlarmNotices(DescribeAlarmNoticesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAlarmNoticesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAlarmNoticesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAlarmNotices");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of alarm policies.
+     * @param req DescribeAlarmPoliciesRequest
+     * @return DescribeAlarmPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAlarmPoliciesResponse DescribeAlarmPolicies(DescribeAlarmPoliciesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAlarmPoliciesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAlarmPoliciesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAlarmPolicies");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the details of a single alarm policy.
+     * @param req DescribeAlarmPolicyRequest
+     * @return DescribeAlarmPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAlarmPolicyResponse DescribeAlarmPolicy(DescribeAlarmPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAlarmPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAlarmPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAlarmPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query all namespaces.
+     * @param req DescribeAllNamespacesRequest
+     * @return DescribeAllNamespacesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllNamespacesResponse DescribeAllNamespaces(DescribeAllNamespacesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAllNamespacesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAllNamespacesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAllNamespaces");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -171,6 +431,26 @@ public class MonitorClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeBindingPolicyObjectListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeBindingPolicyObjectList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to list all the monitor types supported by CM.
+     * @param req DescribeMonitorTypesRequest
+     * @return DescribeMonitorTypesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMonitorTypesResponse DescribeMonitorTypes(DescribeMonitorTypesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMonitorTypesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMonitorTypesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeMonitorTypes");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -281,6 +561,126 @@ This API may fail due to the rate limit if you need to call a lot of metrics and
     }
 
     /**
+     *This API is used to edit an alarm notification template.
+     * @param req ModifyAlarmNoticeRequest
+     * @return ModifyAlarmNoticeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAlarmNoticeResponse ModifyAlarmNotice(ModifyAlarmNoticeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAlarmNoticeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAlarmNoticeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAlarmNotice");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to edit the trigger condition of an alarm policy.
+     * @param req ModifyAlarmPolicyConditionRequest
+     * @return ModifyAlarmPolicyConditionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAlarmPolicyConditionResponse ModifyAlarmPolicyCondition(ModifyAlarmPolicyConditionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAlarmPolicyConditionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAlarmPolicyConditionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAlarmPolicyCondition");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to edit the basic information of a v2.0 alarm policy, including policy name and remarks.
+     * @param req ModifyAlarmPolicyInfoRequest
+     * @return ModifyAlarmPolicyInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAlarmPolicyInfoResponse ModifyAlarmPolicyInfo(ModifyAlarmPolicyInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAlarmPolicyInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAlarmPolicyInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAlarmPolicyInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the alarm notification template bound to an alarm policy.
+     * @param req ModifyAlarmPolicyNoticeRequest
+     * @return ModifyAlarmPolicyNoticeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAlarmPolicyNoticeResponse ModifyAlarmPolicyNotice(ModifyAlarmPolicyNoticeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAlarmPolicyNoticeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAlarmPolicyNoticeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAlarmPolicyNotice");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to enable/disable an alarm policy.
+     * @param req ModifyAlarmPolicyStatusRequest
+     * @return ModifyAlarmPolicyStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAlarmPolicyStatusResponse ModifyAlarmPolicyStatus(ModifyAlarmPolicyStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAlarmPolicyStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAlarmPolicyStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAlarmPolicyStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the task triggered by an alarm policy. The `TriggerTasks` field contains the list of triggered tasks. If an empty array is passed in for `TriggerTasks`, it indicates to unbind all the triggered tasks from this policy.
+     * @param req ModifyAlarmPolicyTasksRequest
+     * @return ModifyAlarmPolicyTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAlarmPolicyTasksResponse ModifyAlarmPolicyTasks(ModifyAlarmPolicyTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAlarmPolicyTasksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAlarmPolicyTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAlarmPolicyTasks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify alarm recipients.
      * @param req ModifyAlarmReceiversRequest
      * @return ModifyAlarmReceiversResponse
@@ -359,6 +759,27 @@ The data of the same IP metric/value pair must be reported by minute in chronolo
                 Type type = new TypeToken<JsonResponseModel<SendCustomAlarmMsgResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SendCustomAlarmMsg");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to set an alarm policy as the default policy in the current policy type under the current project.
+Alarm policies in the same type under the project will be set as non-default.
+     * @param req SetDefaultAlarmPolicyRequest
+     * @return SetDefaultAlarmPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetDefaultAlarmPolicyResponse SetDefaultAlarmPolicy(SetDefaultAlarmPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetDefaultAlarmPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetDefaultAlarmPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SetDefaultAlarmPolicy");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

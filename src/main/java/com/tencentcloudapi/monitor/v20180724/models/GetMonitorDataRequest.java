@@ -23,28 +23,28 @@ import java.util.HashMap;
 public class GetMonitorDataRequest extends AbstractModel{
 
     /**
-    * Namespace. For detailed namespace descriptions of each Tencent Cloud service, see the corresponding [Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1) documentation
+    * Namespace, such as QCE/CVM. For more information on the namespaces of each Tencent Cloud service, please see [Tencent Cloud Service Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1)
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-    * Metric name. For detailed metric descriptions of each Tencent Cloud service, see the corresponding [Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1) documentation
+    * Metric name, such as `CPUUsage`. For more information on the metrics of each Tencent Cloud service, please see [Tencent Cloud Service Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1). The corresponding metric name is the `MetricName`
     */
     @SerializedName("MetricName")
     @Expose
     private String MetricName;
 
     /**
-    * Combination of instance object dimensions
+    * Dimension combination of instance object in the format of `key-value` pair, such as [{"Name":"InstanceId","Value":"ins-j0hk02zo"}]. For more information on the dimensions of each Tencent Cloud service, please see [Tencent Cloud Service Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1). The value in the dimension column is the `key` in the dimension combination, and the value corresponding to the `key` is the `value` in the combination
     */
     @SerializedName("Instances")
     @Expose
     private Instance [] Instances;
 
     /**
-    * Monitoring statistical period. The default value is 300, and the unit is s
+    * Monitoring statistical period in seconds, such as 60. Default value: 300. The statistical period varies by metric. For more information on the statistical periods supported by each Tencent Cloud service, please see [Tencent Cloud Service Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1). The values in the statistical period column are the supported statistical periods
     */
     @SerializedName("Period")
     @Expose
@@ -58,71 +58,71 @@ public class GetMonitorDataRequest extends AbstractModel{
     private String StartTime;
 
     /**
-    * End time. Uses the current time by default and cannot be earlier than StartTime
+    * End time, which is the current time by default, such as 2018-09-22T20:51:23+08:00. `EndTime` cannot be earlier than `StartTime`
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get Namespace. For detailed namespace descriptions of each Tencent Cloud service, see the corresponding [Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1) documentation 
-     * @return Namespace Namespace. For detailed namespace descriptions of each Tencent Cloud service, see the corresponding [Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1) documentation
+     * Get Namespace, such as QCE/CVM. For more information on the namespaces of each Tencent Cloud service, please see [Tencent Cloud Service Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1) 
+     * @return Namespace Namespace, such as QCE/CVM. For more information on the namespaces of each Tencent Cloud service, please see [Tencent Cloud Service Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1)
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set Namespace. For detailed namespace descriptions of each Tencent Cloud service, see the corresponding [Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1) documentation
-     * @param Namespace Namespace. For detailed namespace descriptions of each Tencent Cloud service, see the corresponding [Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1) documentation
+     * Set Namespace, such as QCE/CVM. For more information on the namespaces of each Tencent Cloud service, please see [Tencent Cloud Service Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1)
+     * @param Namespace Namespace, such as QCE/CVM. For more information on the namespaces of each Tencent Cloud service, please see [Tencent Cloud Service Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1)
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get Metric name. For detailed metric descriptions of each Tencent Cloud service, see the corresponding [Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1) documentation 
-     * @return MetricName Metric name. For detailed metric descriptions of each Tencent Cloud service, see the corresponding [Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1) documentation
+     * Get Metric name, such as `CPUUsage`. For more information on the metrics of each Tencent Cloud service, please see [Tencent Cloud Service Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1). The corresponding metric name is the `MetricName` 
+     * @return MetricName Metric name, such as `CPUUsage`. For more information on the metrics of each Tencent Cloud service, please see [Tencent Cloud Service Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1). The corresponding metric name is the `MetricName`
      */
     public String getMetricName() {
         return this.MetricName;
     }
 
     /**
-     * Set Metric name. For detailed metric descriptions of each Tencent Cloud service, see the corresponding [Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1) documentation
-     * @param MetricName Metric name. For detailed metric descriptions of each Tencent Cloud service, see the corresponding [Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1) documentation
+     * Set Metric name, such as `CPUUsage`. For more information on the metrics of each Tencent Cloud service, please see [Tencent Cloud Service Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1). The corresponding metric name is the `MetricName`
+     * @param MetricName Metric name, such as `CPUUsage`. For more information on the metrics of each Tencent Cloud service, please see [Tencent Cloud Service Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1). The corresponding metric name is the `MetricName`
      */
     public void setMetricName(String MetricName) {
         this.MetricName = MetricName;
     }
 
     /**
-     * Get Combination of instance object dimensions 
-     * @return Instances Combination of instance object dimensions
+     * Get Dimension combination of instance object in the format of `key-value` pair, such as [{"Name":"InstanceId","Value":"ins-j0hk02zo"}]. For more information on the dimensions of each Tencent Cloud service, please see [Tencent Cloud Service Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1). The value in the dimension column is the `key` in the dimension combination, and the value corresponding to the `key` is the `value` in the combination 
+     * @return Instances Dimension combination of instance object in the format of `key-value` pair, such as [{"Name":"InstanceId","Value":"ins-j0hk02zo"}]. For more information on the dimensions of each Tencent Cloud service, please see [Tencent Cloud Service Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1). The value in the dimension column is the `key` in the dimension combination, and the value corresponding to the `key` is the `value` in the combination
      */
     public Instance [] getInstances() {
         return this.Instances;
     }
 
     /**
-     * Set Combination of instance object dimensions
-     * @param Instances Combination of instance object dimensions
+     * Set Dimension combination of instance object in the format of `key-value` pair, such as [{"Name":"InstanceId","Value":"ins-j0hk02zo"}]. For more information on the dimensions of each Tencent Cloud service, please see [Tencent Cloud Service Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1). The value in the dimension column is the `key` in the dimension combination, and the value corresponding to the `key` is the `value` in the combination
+     * @param Instances Dimension combination of instance object in the format of `key-value` pair, such as [{"Name":"InstanceId","Value":"ins-j0hk02zo"}]. For more information on the dimensions of each Tencent Cloud service, please see [Tencent Cloud Service Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1). The value in the dimension column is the `key` in the dimension combination, and the value corresponding to the `key` is the `value` in the combination
      */
     public void setInstances(Instance [] Instances) {
         this.Instances = Instances;
     }
 
     /**
-     * Get Monitoring statistical period. The default value is 300, and the unit is s 
-     * @return Period Monitoring statistical period. The default value is 300, and the unit is s
+     * Get Monitoring statistical period in seconds, such as 60. Default value: 300. The statistical period varies by metric. For more information on the statistical periods supported by each Tencent Cloud service, please see [Tencent Cloud Service Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1). The values in the statistical period column are the supported statistical periods 
+     * @return Period Monitoring statistical period in seconds, such as 60. Default value: 300. The statistical period varies by metric. For more information on the statistical periods supported by each Tencent Cloud service, please see [Tencent Cloud Service Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1). The values in the statistical period column are the supported statistical periods
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set Monitoring statistical period. The default value is 300, and the unit is s
-     * @param Period Monitoring statistical period. The default value is 300, and the unit is s
+     * Set Monitoring statistical period in seconds, such as 60. Default value: 300. The statistical period varies by metric. For more information on the statistical periods supported by each Tencent Cloud service, please see [Tencent Cloud Service Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1). The values in the statistical period column are the supported statistical periods
+     * @param Period Monitoring statistical period in seconds, such as 60. Default value: 300. The statistical period varies by metric. For more information on the statistical periods supported by each Tencent Cloud service, please see [Tencent Cloud Service Metrics](https://intl.cloud.tencent.com/document/product/248/6140?from_cn_redirect=1). The values in the statistical period column are the supported statistical periods
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
@@ -145,16 +145,16 @@ public class GetMonitorDataRequest extends AbstractModel{
     }
 
     /**
-     * Get End time. Uses the current time by default and cannot be earlier than StartTime 
-     * @return EndTime End time. Uses the current time by default and cannot be earlier than StartTime
+     * Get End time, which is the current time by default, such as 2018-09-22T20:51:23+08:00. `EndTime` cannot be earlier than `StartTime` 
+     * @return EndTime End time, which is the current time by default, such as 2018-09-22T20:51:23+08:00. `EndTime` cannot be earlier than `StartTime`
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time. Uses the current time by default and cannot be earlier than StartTime
-     * @param EndTime End time. Uses the current time by default and cannot be earlier than StartTime
+     * Set End time, which is the current time by default, such as 2018-09-22T20:51:23+08:00. `EndTime` cannot be earlier than `StartTime`
+     * @param EndTime End time, which is the current time by default, such as 2018-09-22T20:51:23+08:00. `EndTime` cannot be earlier than `StartTime`
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

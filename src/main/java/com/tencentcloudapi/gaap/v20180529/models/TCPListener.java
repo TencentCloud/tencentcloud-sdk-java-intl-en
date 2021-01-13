@@ -135,6 +135,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long CreateTime;
 
     /**
+    * Describes how the listener obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ClientIPMethod")
+    @Expose
+    private Long ClientIPMethod;
+
+    /**
      * Get Listener ID 
      * @return ListenerId Listener ID
      */
@@ -415,6 +423,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Describes how the listener obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ClientIPMethod Describes how the listener obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getClientIPMethod() {
+        return this.ClientIPMethod;
+    }
+
+    /**
+     * Set Describes how the listener obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ClientIPMethod Describes how the listener obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setClientIPMethod(Long ClientIPMethod) {
+        this.ClientIPMethod = ClientIPMethod;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -432,6 +460,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "BindStatus", this.BindStatus);
         this.setParamArrayObj(map, prefix + "RealServerSet.", this.RealServerSet);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "ClientIPMethod", this.ClientIPMethod);
 
     }
 }

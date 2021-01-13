@@ -1061,7 +1061,7 @@ This API only supports connections of version 3.0.
     }
 
     /**
-     *This API (DescribeRealServers) is used to query origin server information. It can query all origin server information by project names, and supports fuzzy query by specified IPs or domain names.
+     *This API is used to query origin server information. It can query all origin servers under the specified project name, and supports fuzzy query by specified IPs or domain names.
      * @param req DescribeRealServersRequest
      * @return DescribeRealServersResponse
      * @throws TencentCloudSDKException
@@ -1341,7 +1341,7 @@ This API only supports connections of version 3.0.
     }
 
     /**
-     *This API (ModifyCertificateAttributes) is used to modify certificates, including identification name and certificate content.
+     *This API is used to modify certificate name and content.
      * @param req ModifyCertificateAttributesRequest
      * @return ModifyCertificateAttributesResponse
      * @throws TencentCloudSDKException

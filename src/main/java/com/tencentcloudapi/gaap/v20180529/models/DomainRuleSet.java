@@ -171,6 +171,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private CertificateAliasInfo [] PolyRealServerCertificateAliasInfo;
 
     /**
+    * Domain name status.
+0: running;
+1: changing;
+2: deleting.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DomainStatus")
+    @Expose
+    private Long DomainStatus;
+
+    /**
      * Get Forwarding rule domain name. 
      * @return Domain Forwarding rule domain name.
      */
@@ -547,6 +558,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Domain name status.
+0: running;
+1: changing;
+2: deleting.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return DomainStatus Domain name status.
+0: running;
+1: changing;
+2: deleting.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getDomainStatus() {
+        return this.DomainStatus;
+    }
+
+    /**
+     * Set Domain name status.
+0: running;
+1: changing;
+2: deleting.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param DomainStatus Domain name status.
+0: running;
+1: changing;
+2: deleting.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setDomainStatus(Long DomainStatus) {
+        this.DomainStatus = DomainStatus;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -568,6 +611,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "RealServerCertificateDomain", this.RealServerCertificateDomain);
         this.setParamArrayObj(map, prefix + "PolyClientCertificateAliasInfo.", this.PolyClientCertificateAliasInfo);
         this.setParamArrayObj(map, prefix + "PolyRealServerCertificateAliasInfo.", this.PolyRealServerCertificateAliasInfo);
+        this.setParamSimple(map, prefix + "DomainStatus", this.DomainStatus);
 
     }
 }

@@ -450,7 +450,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private AdvanceConfig [] AdvanceSet;
 
     /**
-    * 
+    * Offline cache
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("OfflineCache")
     @Expose
@@ -1548,16 +1549,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get  
-     * @return OfflineCache 
+     * Get Offline cache
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return OfflineCache Offline cache
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public OfflineCache getOfflineCache() {
         return this.OfflineCache;
     }
 
     /**
-     * Set 
-     * @param OfflineCache 
+     * Set Offline cache
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param OfflineCache Offline cache
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setOfflineCache(OfflineCache OfflineCache) {
         this.OfflineCache = OfflineCache;

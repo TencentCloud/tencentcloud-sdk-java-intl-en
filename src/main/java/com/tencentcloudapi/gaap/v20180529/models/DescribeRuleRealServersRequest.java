@@ -30,6 +30,20 @@ public class DescribeRuleRealServersRequest extends AbstractModel{
     private String RuleId;
 
     /**
+    * Offset. Default value: 0.
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * Number of values to be returned. The default value is 20. Maximum is 1000.
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
      * Get Forwarding rule ID 
      * @return RuleId Forwarding rule ID
      */
@@ -46,10 +60,44 @@ public class DescribeRuleRealServersRequest extends AbstractModel{
     }
 
     /**
+     * Get Offset. Default value: 0. 
+     * @return Offset Offset. Default value: 0.
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set Offset. Default value: 0.
+     * @param Offset Offset. Default value: 0.
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get Number of values to be returned. The default value is 20. Maximum is 1000. 
+     * @return Limit Number of values to be returned. The default value is 20. Maximum is 1000.
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set Number of values to be returned. The default value is 20. Maximum is 1000.
+     * @param Limit Number of values to be returned. The default value is 20. Maximum is 1000.
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
 
     }
 }

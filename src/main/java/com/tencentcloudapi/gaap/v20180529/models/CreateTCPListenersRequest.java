@@ -93,6 +93,13 @@ public class CreateTCPListenersRequest extends AbstractModel{
     private Long [] RealServerPorts;
 
     /**
+    * Listener methods of getting client IPs. 0: TOA; 1: Proxy Protocol.
+    */
+    @SerializedName("ClientIPMethod")
+    @Expose
+    private Long ClientIPMethod;
+
+    /**
      * Get Listener name. 
      * @return ListenerName Listener name.
      */
@@ -253,6 +260,22 @@ public class CreateTCPListenersRequest extends AbstractModel{
     }
 
     /**
+     * Get Listener methods of getting client IPs. 0: TOA; 1: Proxy Protocol. 
+     * @return ClientIPMethod Listener methods of getting client IPs. 0: TOA; 1: Proxy Protocol.
+     */
+    public Long getClientIPMethod() {
+        return this.ClientIPMethod;
+    }
+
+    /**
+     * Set Listener methods of getting client IPs. 0: TOA; 1: Proxy Protocol.
+     * @param ClientIPMethod Listener methods of getting client IPs. 0: TOA; 1: Proxy Protocol.
+     */
+    public void setClientIPMethod(Long ClientIPMethod) {
+        this.ClientIPMethod = ClientIPMethod;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -266,6 +289,7 @@ public class CreateTCPListenersRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DelayLoop", this.DelayLoop);
         this.setParamSimple(map, prefix + "ConnectTimeout", this.ConnectTimeout);
         this.setParamArraySimple(map, prefix + "RealServerPorts.", this.RealServerPorts);
+        this.setParamSimple(map, prefix + "ClientIPMethod", this.ClientIPMethod);
 
     }
 }

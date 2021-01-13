@@ -219,12 +219,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long ModifyConfigTime;
 
     /**
-    * Connection type
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Connection type. 104: SILVER connection.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("ProxyType")
     @Expose
     private Long ProxyType;
+
+    /**
+    * Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ClientIPMethod")
+    @Expose
+    private Long [] ClientIPMethod;
 
     /**
      * Get Connection instance ID; It's an old parameter, please switch to ProxyId.
@@ -711,23 +719,43 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Connection type
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ProxyType Connection type
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Connection type. 104: SILVER connection.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ProxyType Connection type. 104: SILVER connection.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getProxyType() {
         return this.ProxyType;
     }
 
     /**
-     * Set Connection type
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ProxyType Connection type
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Connection type. 104: SILVER connection.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ProxyType Connection type. 104: SILVER connection.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setProxyType(Long ProxyType) {
         this.ProxyType = ProxyType;
+    }
+
+    /**
+     * Get Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ClientIPMethod Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long [] getClientIPMethod() {
+        return this.ClientIPMethod;
+    }
+
+    /**
+     * Set Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ClientIPMethod Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setClientIPMethod(Long [] ClientIPMethod) {
+        this.ClientIPMethod = ClientIPMethod;
     }
 
     /**
@@ -760,6 +788,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamArraySimple(map, prefix + "RelatedGlobalDomains.", this.RelatedGlobalDomains);
         this.setParamSimple(map, prefix + "ModifyConfigTime", this.ModifyConfigTime);
         this.setParamSimple(map, prefix + "ProxyType", this.ProxyType);
+        this.setParamArraySimple(map, prefix + "ClientIPMethod.", this.ClientIPMethod);
 
     }
 }

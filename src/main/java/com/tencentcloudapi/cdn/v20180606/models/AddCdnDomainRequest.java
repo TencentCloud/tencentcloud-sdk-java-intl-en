@@ -255,7 +255,7 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
     private Ipv6Access Ipv6Access;
 
     /**
-    * 
+    * Offline cache
     */
     @SerializedName("OfflineCache")
     @Expose
@@ -806,16 +806,16 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
     }
 
     /**
-     * Get  
-     * @return OfflineCache 
+     * Get Offline cache 
+     * @return OfflineCache Offline cache
      */
     public OfflineCache getOfflineCache() {
         return this.OfflineCache;
     }
 
     /**
-     * Set 
-     * @param OfflineCache 
+     * Set Offline cache
+     * @param OfflineCache Offline cache
      */
     public void setOfflineCache(OfflineCache OfflineCache) {
         this.OfflineCache = OfflineCache;

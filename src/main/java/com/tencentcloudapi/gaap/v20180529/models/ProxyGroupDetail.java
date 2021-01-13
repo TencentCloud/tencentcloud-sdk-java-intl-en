@@ -120,6 +120,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private TagPair [] TagSet;
 
     /**
+    * Security policy ID. This field exists if security policies are set.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PolicyId")
+    @Expose
+    private String PolicyId;
+
+    /**
+    * Connection group version
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Version")
+    @Expose
+    private String Version;
+
+    /**
+    * Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ClientIPMethod")
+    @Expose
+    private Long [] ClientIPMethod;
+
+    /**
      * Get Creation time 
      * @return CreateTime Creation time
      */
@@ -352,6 +376,66 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Security policy ID. This field exists if security policies are set.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return PolicyId Security policy ID. This field exists if security policies are set.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getPolicyId() {
+        return this.PolicyId;
+    }
+
+    /**
+     * Set Security policy ID. This field exists if security policies are set.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param PolicyId Security policy ID. This field exists if security policies are set.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setPolicyId(String PolicyId) {
+        this.PolicyId = PolicyId;
+    }
+
+    /**
+     * Get Connection group version
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Version Connection group version
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getVersion() {
+        return this.Version;
+    }
+
+    /**
+     * Set Connection group version
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Version Connection group version
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setVersion(String Version) {
+        this.Version = Version;
+    }
+
+    /**
+     * Get Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ClientIPMethod Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long [] getClientIPMethod() {
+        return this.ClientIPMethod;
+    }
+
+    /**
+     * Set Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ClientIPMethod Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setClientIPMethod(Long [] ClientIPMethod) {
+        this.ClientIPMethod = ClientIPMethod;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -368,6 +452,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "IsOldGroup", this.IsOldGroup);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+        this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
+        this.setParamSimple(map, prefix + "Version", this.Version);
+        this.setParamArraySimple(map, prefix + "ClientIPMethod.", this.ClientIPMethod);
 
     }
 }

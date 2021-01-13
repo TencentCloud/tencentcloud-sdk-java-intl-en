@@ -123,7 +123,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private PathRule [] PathRules;
 
     /**
-    * 
+    * Path-based origin-pull configurations
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("PathBasedOrigin")
     @Expose
@@ -410,16 +411,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get  
-     * @return PathBasedOrigin 
+     * Get Path-based origin-pull configurations
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return PathBasedOrigin Path-based origin-pull configurations
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public PathBasedOriginRule [] getPathBasedOrigin() {
         return this.PathBasedOrigin;
     }
 
     /**
-     * Set 
-     * @param PathBasedOrigin 
+     * Set Path-based origin-pull configurations
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param PathBasedOrigin Path-based origin-pull configurations
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setPathBasedOrigin(PathBasedOriginRule [] PathBasedOrigin) {
         this.PathBasedOrigin = PathBasedOrigin;

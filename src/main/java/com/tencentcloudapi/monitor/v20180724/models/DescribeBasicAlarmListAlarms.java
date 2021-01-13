@@ -46,16 +46,16 @@ Note: This field may return null, indicating that no valid value was found.
     private String ProjectName;
 
     /**
-    * Alarm status ID.
-Note: This field may return null, indicating that no valid value was found.
+    * Alarm status ID. Valid values: 0 (not resolved), 1 (resolved), 2/3/5 (insufficient data), 4 (expired)
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Alarm status.
-Note: This field may return null, indicating that no valid value was found.
+    * Alarm status. Valid values: ALARM (not resolved), OK (resolved), NO_DATA (insufficient data), NO_CONF (expired)
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AlarmStatus")
     @Expose
@@ -254,40 +254,40 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Alarm status ID.
-Note: This field may return null, indicating that no valid value was found. 
-     * @return Status Alarm status ID.
-Note: This field may return null, indicating that no valid value was found.
+     * Get Alarm status ID. Valid values: 0 (not resolved), 1 (resolved), 2/3/5 (insufficient data), 4 (expired)
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Status Alarm status ID. Valid values: 0 (not resolved), 1 (resolved), 2/3/5 (insufficient data), 4 (expired)
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Alarm status ID.
-Note: This field may return null, indicating that no valid value was found.
-     * @param Status Alarm status ID.
-Note: This field may return null, indicating that no valid value was found.
+     * Set Alarm status ID. Valid values: 0 (not resolved), 1 (resolved), 2/3/5 (insufficient data), 4 (expired)
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Status Alarm status ID. Valid values: 0 (not resolved), 1 (resolved), 2/3/5 (insufficient data), 4 (expired)
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Alarm status.
-Note: This field may return null, indicating that no valid value was found. 
-     * @return AlarmStatus Alarm status.
-Note: This field may return null, indicating that no valid value was found.
+     * Get Alarm status. Valid values: ALARM (not resolved), OK (resolved), NO_DATA (insufficient data), NO_CONF (expired)
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return AlarmStatus Alarm status. Valid values: ALARM (not resolved), OK (resolved), NO_DATA (insufficient data), NO_CONF (expired)
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getAlarmStatus() {
         return this.AlarmStatus;
     }
 
     /**
-     * Set Alarm status.
-Note: This field may return null, indicating that no valid value was found.
-     * @param AlarmStatus Alarm status.
-Note: This field may return null, indicating that no valid value was found.
+     * Set Alarm status. Valid values: ALARM (not resolved), OK (resolved), NO_DATA (insufficient data), NO_CONF (expired)
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AlarmStatus Alarm status. Valid values: ALARM (not resolved), OK (resolved), NO_DATA (insufficient data), NO_CONF (expired)
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setAlarmStatus(String AlarmStatus) {
         this.AlarmStatus = AlarmStatus;

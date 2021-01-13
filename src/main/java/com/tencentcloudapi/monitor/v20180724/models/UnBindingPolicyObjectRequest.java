@@ -37,7 +37,7 @@ public class UnBindingPolicyObjectRequest extends AbstractModel{
     private Long GroupId;
 
     /**
-    * List of unique IDs of object instances to be deleted.
+    * List of unique IDs of the object instances to be deleted. `UniqueId` can be obtained from the output parameter `List` of the [DescribeBindingPolicyObjectList](https://intl.cloud.tencent.com/document/api/248/40570?from_cn_redirect=1) API
     */
     @SerializedName("UniqueId")
     @Expose
@@ -83,16 +83,16 @@ public class UnBindingPolicyObjectRequest extends AbstractModel{
     }
 
     /**
-     * Get List of unique IDs of object instances to be deleted. 
-     * @return UniqueId List of unique IDs of object instances to be deleted.
+     * Get List of unique IDs of the object instances to be deleted. `UniqueId` can be obtained from the output parameter `List` of the [DescribeBindingPolicyObjectList](https://intl.cloud.tencent.com/document/api/248/40570?from_cn_redirect=1) API 
+     * @return UniqueId List of unique IDs of the object instances to be deleted. `UniqueId` can be obtained from the output parameter `List` of the [DescribeBindingPolicyObjectList](https://intl.cloud.tencent.com/document/api/248/40570?from_cn_redirect=1) API
      */
     public String [] getUniqueId() {
         return this.UniqueId;
     }
 
     /**
-     * Set List of unique IDs of object instances to be deleted.
-     * @param UniqueId List of unique IDs of object instances to be deleted.
+     * Set List of unique IDs of the object instances to be deleted. `UniqueId` can be obtained from the output parameter `List` of the [DescribeBindingPolicyObjectList](https://intl.cloud.tencent.com/document/api/248/40570?from_cn_redirect=1) API
+     * @param UniqueId List of unique IDs of the object instances to be deleted. `UniqueId` can be obtained from the output parameter `List` of the [DescribeBindingPolicyObjectList](https://intl.cloud.tencent.com/document/api/248/40570?from_cn_redirect=1) API
      */
     public void setUniqueId(String [] UniqueId) {
         this.UniqueId = UniqueId;

@@ -289,7 +289,7 @@ global: global acceleration
     private Ipv6Access Ipv6Access;
 
     /**
-    * 
+    * Offline cache
     */
     @SerializedName("OfflineCache")
     @Expose
@@ -923,16 +923,16 @@ global: global acceleration
     }
 
     /**
-     * Get  
-     * @return OfflineCache 
+     * Get Offline cache 
+     * @return OfflineCache Offline cache
      */
     public OfflineCache getOfflineCache() {
         return this.OfflineCache;
     }
 
     /**
-     * Set 
-     * @param OfflineCache 
+     * Set Offline cache
+     * @param OfflineCache Offline cache
      */
     public void setOfflineCache(OfflineCache OfflineCache) {
         this.OfflineCache = OfflineCache;
