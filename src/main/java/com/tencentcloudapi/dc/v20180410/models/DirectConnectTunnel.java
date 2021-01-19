@@ -245,6 +245,14 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     private Boolean SignLaw;
 
     /**
+    * Cloud Attached Connection Service ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CloudAttachId")
+    @Expose
+    private String CloudAttachId;
+
+    /**
      * Get Dedicated tunnel ID. 
      * @return DirectConnectTunnelId Dedicated tunnel ID.
      */
@@ -785,6 +793,26 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     }
 
     /**
+     * Get Cloud Attached Connection Service ID
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return CloudAttachId Cloud Attached Connection Service ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getCloudAttachId() {
+        return this.CloudAttachId;
+    }
+
+    /**
+     * Set Cloud Attached Connection Service ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param CloudAttachId Cloud Attached Connection Service ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setCloudAttachId(String CloudAttachId) {
+        this.CloudAttachId = CloudAttachId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -817,6 +845,7 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         this.setParamSimple(map, prefix + "VpcName", this.VpcName);
         this.setParamSimple(map, prefix + "TencentBackupAddress", this.TencentBackupAddress);
         this.setParamSimple(map, prefix + "SignLaw", this.SignLaw);
+        this.setParamSimple(map, prefix + "CloudAttachId", this.CloudAttachId);
 
     }
 }

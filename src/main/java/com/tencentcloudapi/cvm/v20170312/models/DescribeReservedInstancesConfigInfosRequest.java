@@ -40,7 +40,7 @@ Filters by the **validity** of the reserved instance, which is the purchased usa
 Type: Integer
 Unit: second
 Required: no
-Valid values: 31536000 (1 year), 94608000 (3 years)
+Valid value: 31536000 (1 year)
     */
     @SerializedName("Filters")
     @Expose
@@ -64,7 +64,7 @@ Filters by the **validity** of the reserved instance, which is the purchased usa
 Type: Integer
 Unit: second
 Required: no
-Valid values: 31536000 (1 year), 94608000 (3 years) 
+Valid value: 31536000 (1 year) 
      * @return Filters zone
 Filters by the availability zones in which the reserved instance can be purchased, such as `ap-guangzhou-1`.
 Type: String
@@ -82,7 +82,7 @@ Filters by the **validity** of the reserved instance, which is the purchased usa
 Type: Integer
 Unit: second
 Required: no
-Valid values: 31536000 (1 year), 94608000 (3 years)
+Valid value: 31536000 (1 year)
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -106,7 +106,7 @@ Filters by the **validity** of the reserved instance, which is the purchased usa
 Type: Integer
 Unit: second
 Required: no
-Valid values: 31536000 (1 year), 94608000 (3 years)
+Valid value: 31536000 (1 year)
      * @param Filters zone
 Filters by the availability zones in which the reserved instance can be purchased, such as `ap-guangzhou-1`.
 Type: String
@@ -124,7 +124,7 @@ Filters by the **validity** of the reserved instance, which is the purchased usa
 Type: Integer
 Unit: second
 Required: no
-Valid values: 31536000 (1 year), 94608000 (3 years)
+Valid value: 31536000 (1 year)
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

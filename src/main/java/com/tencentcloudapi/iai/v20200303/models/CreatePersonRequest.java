@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class CreatePersonRequest extends AbstractModel{
 
     /**
-    * ID of the group to join, which is the `GroupId` in the `CreateGroup` API
+    * ID of the group to join, which is the `GroupId` in the `CreateGroup` API.
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * Person name, which can contain 1-60 characters and is modifiable and repeatable.
+    * Person name, which can contain 1 to 60 characters and is modifiable and repeatable.
     */
     @SerializedName("PersonName")
     @Expose
     private String PersonName;
 
     /**
-    * Person ID, which is unmodifiable, must be unique under a Tencent Cloud account, and can contain letters, digits, and special symbols (-%@#&_) of up to 64B.
+    * Person ID, which is unmodifiable, must be unique under a Tencent Cloud account, and can contain letters, digits, and special symbols (-%@#&_) of up to 64 B.
     */
     @SerializedName("PersonId")
     @Expose
@@ -51,7 +51,7 @@ public class CreatePersonRequest extends AbstractModel{
     private Long Gender;
 
     /**
-    * Content of person description field, which is a `key-value` pair, can contain 0-60 characters, and is modifiable and repeatable.
+    * Content of person description field, which is a `key-value` pair, can contain 0 to 60 characters, and is modifiable and repeatable.
     */
     @SerializedName("PersonExDescriptionInfos")
     @Expose
@@ -59,8 +59,8 @@ public class CreatePersonRequest extends AbstractModel{
 
     /**
     * Base64-encoded image data, which cannot exceed 5 MB.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
     */
     @SerializedName("Image")
     @Expose
@@ -68,11 +68,11 @@ The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for i
 
     /**
     * Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
     */
     @SerializedName("Url")
     @Expose
@@ -98,9 +98,9 @@ Note: the higher the requirement, the lower the probability of duplicate person.
     * Image quality control. 
 0: no control. 
 1: low quality requirement. The image has one or more of the following problems: extreme blurriness, covered eyes, covered nose, and covered mouth. 
-2: average quality requirement. The image has at least three of following problems: extreme brightness, extreme dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-3: high quality requirement. The image has one to two of following problems: extreme brightness, extreme dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-4: very high quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
+2: average quality requirement. The image has at least three of the following problems: excessive brightness, excessive dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+3: high-quality requirement. The image has one to two of the following problems: excessive brightness, excessive dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
 Default value: 0. 
 If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory.
     */
@@ -116,48 +116,48 @@ If the image quality does not meet the requirement, the returned result will pro
     private Long NeedRotateDetection;
 
     /**
-     * Get ID of the group to join, which is the `GroupId` in the `CreateGroup` API 
-     * @return GroupId ID of the group to join, which is the `GroupId` in the `CreateGroup` API
+     * Get ID of the group to join, which is the `GroupId` in the `CreateGroup` API. 
+     * @return GroupId ID of the group to join, which is the `GroupId` in the `CreateGroup` API.
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set ID of the group to join, which is the `GroupId` in the `CreateGroup` API
-     * @param GroupId ID of the group to join, which is the `GroupId` in the `CreateGroup` API
+     * Set ID of the group to join, which is the `GroupId` in the `CreateGroup` API.
+     * @param GroupId ID of the group to join, which is the `GroupId` in the `CreateGroup` API.
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get Person name, which can contain 1-60 characters and is modifiable and repeatable. 
-     * @return PersonName Person name, which can contain 1-60 characters and is modifiable and repeatable.
+     * Get Person name, which can contain 1 to 60 characters and is modifiable and repeatable. 
+     * @return PersonName Person name, which can contain 1 to 60 characters and is modifiable and repeatable.
      */
     public String getPersonName() {
         return this.PersonName;
     }
 
     /**
-     * Set Person name, which can contain 1-60 characters and is modifiable and repeatable.
-     * @param PersonName Person name, which can contain 1-60 characters and is modifiable and repeatable.
+     * Set Person name, which can contain 1 to 60 characters and is modifiable and repeatable.
+     * @param PersonName Person name, which can contain 1 to 60 characters and is modifiable and repeatable.
      */
     public void setPersonName(String PersonName) {
         this.PersonName = PersonName;
     }
 
     /**
-     * Get Person ID, which is unmodifiable, must be unique under a Tencent Cloud account, and can contain letters, digits, and special symbols (-%@#&_) of up to 64B. 
-     * @return PersonId Person ID, which is unmodifiable, must be unique under a Tencent Cloud account, and can contain letters, digits, and special symbols (-%@#&_) of up to 64B.
+     * Get Person ID, which is unmodifiable, must be unique under a Tencent Cloud account, and can contain letters, digits, and special symbols (-%@#&_) of up to 64 B. 
+     * @return PersonId Person ID, which is unmodifiable, must be unique under a Tencent Cloud account, and can contain letters, digits, and special symbols (-%@#&_) of up to 64 B.
      */
     public String getPersonId() {
         return this.PersonId;
     }
 
     /**
-     * Set Person ID, which is unmodifiable, must be unique under a Tencent Cloud account, and can contain letters, digits, and special symbols (-%@#&_) of up to 64B.
-     * @param PersonId Person ID, which is unmodifiable, must be unique under a Tencent Cloud account, and can contain letters, digits, and special symbols (-%@#&_) of up to 64B.
+     * Set Person ID, which is unmodifiable, must be unique under a Tencent Cloud account, and can contain letters, digits, and special symbols (-%@#&_) of up to 64 B.
+     * @param PersonId Person ID, which is unmodifiable, must be unique under a Tencent Cloud account, and can contain letters, digits, and special symbols (-%@#&_) of up to 64 B.
      */
     public void setPersonId(String PersonId) {
         this.PersonId = PersonId;
@@ -180,16 +180,16 @@ If the image quality does not meet the requirement, the returned result will pro
     }
 
     /**
-     * Get Content of person description field, which is a `key-value` pair, can contain 0-60 characters, and is modifiable and repeatable. 
-     * @return PersonExDescriptionInfos Content of person description field, which is a `key-value` pair, can contain 0-60 characters, and is modifiable and repeatable.
+     * Get Content of person description field, which is a `key-value` pair, can contain 0 to 60 characters, and is modifiable and repeatable. 
+     * @return PersonExDescriptionInfos Content of person description field, which is a `key-value` pair, can contain 0 to 60 characters, and is modifiable and repeatable.
      */
     public PersonExDescriptionInfo [] getPersonExDescriptionInfos() {
         return this.PersonExDescriptionInfos;
     }
 
     /**
-     * Set Content of person description field, which is a `key-value` pair, can contain 0-60 characters, and is modifiable and repeatable.
-     * @param PersonExDescriptionInfos Content of person description field, which is a `key-value` pair, can contain 0-60 characters, and is modifiable and repeatable.
+     * Set Content of person description field, which is a `key-value` pair, can contain 0 to 60 characters, and is modifiable and repeatable.
+     * @param PersonExDescriptionInfos Content of person description field, which is a `key-value` pair, can contain 0 to 60 characters, and is modifiable and repeatable.
      */
     public void setPersonExDescriptionInfos(PersonExDescriptionInfo [] PersonExDescriptionInfos) {
         this.PersonExDescriptionInfos = PersonExDescriptionInfos;
@@ -197,11 +197,11 @@ If the image quality does not meet the requirement, the returned result will pro
 
     /**
      * Get Base64-encoded image data, which cannot exceed 5 MB.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not. 
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not. 
      * @return Image Base64-encoded image data, which cannot exceed 5 MB.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
      */
     public String getImage() {
         return this.Image;
@@ -209,11 +209,11 @@ The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for i
 
     /**
      * Set Base64-encoded image data, which cannot exceed 5 MB.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
      * @param Image Base64-encoded image data, which cannot exceed 5 MB.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
      */
     public void setImage(String Image) {
         this.Image = Image;
@@ -221,17 +221,17 @@ The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for i
 
     /**
      * Get Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not. 
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not. 
      * @return Url Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
      */
     public String getUrl() {
         return this.Url;
@@ -239,17 +239,17 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
 
     /**
      * Set Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
      * @param Url Image URL. The image cannot exceed 5 MB in size after being Base64-encoded.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used.  
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
      */
     public void setUrl(String Url) {
         this.Url = Url;
@@ -311,17 +311,17 @@ Note: the higher the requirement, the lower the probability of duplicate person.
      * Get Image quality control. 
 0: no control. 
 1: low quality requirement. The image has one or more of the following problems: extreme blurriness, covered eyes, covered nose, and covered mouth. 
-2: average quality requirement. The image has at least three of following problems: extreme brightness, extreme dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-3: high quality requirement. The image has one to two of following problems: extreme brightness, extreme dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-4: very high quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
+2: average quality requirement. The image has at least three of the following problems: excessive brightness, excessive dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+3: high-quality requirement. The image has one to two of the following problems: excessive brightness, excessive dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
 Default value: 0. 
 If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory. 
      * @return QualityControl Image quality control. 
 0: no control. 
 1: low quality requirement. The image has one or more of the following problems: extreme blurriness, covered eyes, covered nose, and covered mouth. 
-2: average quality requirement. The image has at least three of following problems: extreme brightness, extreme dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-3: high quality requirement. The image has one to two of following problems: extreme brightness, extreme dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-4: very high quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
+2: average quality requirement. The image has at least three of the following problems: excessive brightness, excessive dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+3: high-quality requirement. The image has one to two of the following problems: excessive brightness, excessive dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
 Default value: 0. 
 If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory.
      */
@@ -333,17 +333,17 @@ If the image quality does not meet the requirement, the returned result will pro
      * Set Image quality control. 
 0: no control. 
 1: low quality requirement. The image has one or more of the following problems: extreme blurriness, covered eyes, covered nose, and covered mouth. 
-2: average quality requirement. The image has at least three of following problems: extreme brightness, extreme dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-3: high quality requirement. The image has one to two of following problems: extreme brightness, extreme dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-4: very high quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
+2: average quality requirement. The image has at least three of the following problems: excessive brightness, excessive dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+3: high-quality requirement. The image has one to two of the following problems: excessive brightness, excessive dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
 Default value: 0. 
 If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory.
      * @param QualityControl Image quality control. 
 0: no control. 
 1: low quality requirement. The image has one or more of the following problems: extreme blurriness, covered eyes, covered nose, and covered mouth. 
-2: average quality requirement. The image has at least three of following problems: extreme brightness, extreme dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-3: high quality requirement. The image has one to two of following problems: extreme brightness, extreme dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-4: very high quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
+2: average quality requirement. The image has at least three of the following problems: excessive brightness, excessive dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+3: high-quality requirement. The image has one to two of the following problems: excessive brightness, excessive dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
 Default value: 0. 
 If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory.
      */

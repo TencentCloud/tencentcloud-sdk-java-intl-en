@@ -23,29 +23,6 @@ import java.util.HashMap;
 public class VerifyPersonRequest extends AbstractModel{
 
     /**
-    * Base64-encoded data of image.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
-If there are multiple faces in the image, only the face with the largest size will be selected.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
-    */
-    @SerializedName("Image")
-    @Expose
-    private String Image;
-
-    /**
-    * Image URL 
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
- Either `Url` or `Image` of the image must be provided; if both are provided, only `Url` will be used. 
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
-The download speed and stability of non-Tencent Cloud URLs may be low.
-If there are multiple faces in the image, only the face with the largest size will be selected.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
-    */
-    @SerializedName("Url")
-    @Expose
-    private String Url;
-
-    /**
     * ID of the person to be verified. For more information on `PersonId`, please see the group management APIs.
     */
     @SerializedName("PersonId")
@@ -53,12 +30,35 @@ If there are multiple faces in the image, only the face with the largest size wi
     private String PersonId;
 
     /**
+    * Base64-encoded data of the image.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+If there are multiple faces in the image, only the face with the largest size will be selected.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
+    */
+    @SerializedName("Image")
+    @Expose
+    private String Image;
+
+    /**
+    * Image URL 
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+ Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+The download speed and stability of non-Tencent Cloud URLs may be low.
+If there are multiple faces in the image, only the face with the largest size will be selected.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
+    */
+    @SerializedName("Url")
+    @Expose
+    private String Url;
+
+    /**
     * Image quality control. 
 0: no control. 
 1: low quality requirement. The image has one or more of the following problems: extreme blurriness, covered eyes, covered nose, and covered mouth. 
-2: average quality requirement. The image has at least three of following problems: extreme brightness, extreme dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-3: high quality requirement. The image has one to two of following problems: extreme brightness, extreme dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-4: very high quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
+2: average quality requirement. The image has at least three of the following problems: excessive brightness, excessive dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+3: high-quality requirement. The image has one to two of the following problems: excessive brightness, excessive dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
 Default value: 0. 
 If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory.
     */
@@ -72,74 +72,6 @@ If the image quality does not meet the requirement, the returned result will pro
     @SerializedName("NeedRotateDetection")
     @Expose
     private Long NeedRotateDetection;
-
-    /**
-     * Get Base64-encoded data of image.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
-If there are multiple faces in the image, only the face with the largest size will be selected.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not. 
-     * @return Image Base64-encoded data of image.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
-If there are multiple faces in the image, only the face with the largest size will be selected.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
-     */
-    public String getImage() {
-        return this.Image;
-    }
-
-    /**
-     * Set Base64-encoded data of image.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
-If there are multiple faces in the image, only the face with the largest size will be selected.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
-     * @param Image Base64-encoded data of image.
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
-If there are multiple faces in the image, only the face with the largest size will be selected.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
-     */
-    public void setImage(String Image) {
-        this.Image = Image;
-    }
-
-    /**
-     * Get Image URL 
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
- Either `Url` or `Image` of the image must be provided; if both are provided, only `Url` will be used. 
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
-The download speed and stability of non-Tencent Cloud URLs may be low.
-If there are multiple faces in the image, only the face with the largest size will be selected.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not. 
-     * @return Url Image URL 
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
- Either `Url` or `Image` of the image must be provided; if both are provided, only `Url` will be used. 
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
-The download speed and stability of non-Tencent Cloud URLs may be low.
-If there are multiple faces in the image, only the face with the largest size will be selected.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
-     */
-    public String getUrl() {
-        return this.Url;
-    }
-
-    /**
-     * Set Image URL 
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
- Either `Url` or `Image` of the image must be provided; if both are provided, only `Url` will be used. 
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
-The download speed and stability of non-Tencent Cloud URLs may be low.
-If there are multiple faces in the image, only the face with the largest size will be selected.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
-     * @param Url Image URL 
-The long side cannot exceed 4,000 px for images in .jpg format or 2,000 px for images in other formats.
- Either `Url` or `Image` of the image must be provided; if both are provided, only `Url` will be used. 
-You are recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
-The download speed and stability of non-Tencent Cloud URLs may be low.
-If there are multiple faces in the image, only the face with the largest size will be selected.
-.png, .jpg, .jpeg, and .bmp images are supported, while .gif images are not.
-     */
-    public void setUrl(String Url) {
-        this.Url = Url;
-    }
 
     /**
      * Get ID of the person to be verified. For more information on `PersonId`, please see the group management APIs. 
@@ -158,20 +90,88 @@ If there are multiple faces in the image, only the face with the largest size wi
     }
 
     /**
+     * Get Base64-encoded data of the image.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+If there are multiple faces in the image, only the face with the largest size will be selected.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not. 
+     * @return Image Base64-encoded data of the image.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+If there are multiple faces in the image, only the face with the largest size will be selected.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
+     */
+    public String getImage() {
+        return this.Image;
+    }
+
+    /**
+     * Set Base64-encoded data of the image.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+If there are multiple faces in the image, only the face with the largest size will be selected.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
+     * @param Image Base64-encoded data of the image.
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+If there are multiple faces in the image, only the face with the largest size will be selected.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
+     */
+    public void setImage(String Image) {
+        this.Image = Image;
+    }
+
+    /**
+     * Get Image URL 
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+ Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+The download speed and stability of non-Tencent Cloud URLs may be low.
+If there are multiple faces in the image, only the face with the largest size will be selected.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not. 
+     * @return Url Image URL 
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+ Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+The download speed and stability of non-Tencent Cloud URLs may be low.
+If there are multiple faces in the image, only the face with the largest size will be selected.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
+     */
+    public String getUrl() {
+        return this.Url;
+    }
+
+    /**
+     * Set Image URL 
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+ Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+The download speed and stability of non-Tencent Cloud URLs may be low.
+If there are multiple faces in the image, only the face with the largest size will be selected.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
+     * @param Url Image URL 
+The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
+ Either `Url` or `Image` must be provided; if both are provided, only `Url` will be used. 
+We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
+The download speed and stability of non-Tencent Cloud URLs may be low.
+If there are multiple faces in the image, only the face with the largest size will be selected.
+PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
+     */
+    public void setUrl(String Url) {
+        this.Url = Url;
+    }
+
+    /**
      * Get Image quality control. 
 0: no control. 
 1: low quality requirement. The image has one or more of the following problems: extreme blurriness, covered eyes, covered nose, and covered mouth. 
-2: average quality requirement. The image has at least three of following problems: extreme brightness, extreme dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-3: high quality requirement. The image has one to two of following problems: extreme brightness, extreme dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-4: very high quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
+2: average quality requirement. The image has at least three of the following problems: excessive brightness, excessive dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+3: high-quality requirement. The image has one to two of the following problems: excessive brightness, excessive dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
 Default value: 0. 
 If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory. 
      * @return QualityControl Image quality control. 
 0: no control. 
 1: low quality requirement. The image has one or more of the following problems: extreme blurriness, covered eyes, covered nose, and covered mouth. 
-2: average quality requirement. The image has at least three of following problems: extreme brightness, extreme dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-3: high quality requirement. The image has one to two of following problems: extreme brightness, extreme dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-4: very high quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
+2: average quality requirement. The image has at least three of the following problems: excessive brightness, excessive dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+3: high-quality requirement. The image has one to two of the following problems: excessive brightness, excessive dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
 Default value: 0. 
 If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory.
      */
@@ -183,17 +183,17 @@ If the image quality does not meet the requirement, the returned result will pro
      * Set Image quality control. 
 0: no control. 
 1: low quality requirement. The image has one or more of the following problems: extreme blurriness, covered eyes, covered nose, and covered mouth. 
-2: average quality requirement. The image has at least three of following problems: extreme brightness, extreme dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-3: high quality requirement. The image has one to two of following problems: extreme brightness, extreme dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-4: very high quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
+2: average quality requirement. The image has at least three of the following problems: excessive brightness, excessive dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+3: high-quality requirement. The image has one to two of the following problems: excessive brightness, excessive dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
 Default value: 0. 
 If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory.
      * @param QualityControl Image quality control. 
 0: no control. 
 1: low quality requirement. The image has one or more of the following problems: extreme blurriness, covered eyes, covered nose, and covered mouth. 
-2: average quality requirement. The image has at least three of following problems: extreme brightness, extreme dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-3: high quality requirement. The image has one to two of following problems: extreme brightness, extreme dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
-4: very high quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
+2: average quality requirement. The image has at least three of the following problems: excessive brightness, excessive dimness, blurriness or average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+3: high-quality requirement. The image has one to two of the following problems: excessive brightness, excessive dimness, average blurriness, covered eyebrows, covered cheeks, and covered chin. 
+4: very high-quality requirement. The image is optimal in all dimensions or only has a slight problem in one dimension. 
 Default value: 0. 
 If the image quality does not meet the requirement, the returned result will prompt that the detected image quality is unsatisfactory.
      */
@@ -221,9 +221,9 @@ If the image quality does not meet the requirement, the returned result will pro
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "PersonId", this.PersonId);
         this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "Url", this.Url);
-        this.setParamSimple(map, prefix + "PersonId", this.PersonId);
         this.setParamSimple(map, prefix + "QualityControl", this.QualityControl);
         this.setParamSimple(map, prefix + "NeedRotateDetection", this.NeedRotateDetection);
 

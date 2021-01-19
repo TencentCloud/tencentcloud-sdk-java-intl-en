@@ -411,6 +411,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long SceneType;
 
     /**
+    * Kibana configuration item.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("KibanaConfig")
+    @Expose
+    private String KibanaConfig;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -1327,6 +1335,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Kibana configuration item.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return KibanaConfig Kibana configuration item.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getKibanaConfig() {
+        return this.KibanaConfig;
+    }
+
+    /**
+     * Set Kibana configuration item.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param KibanaConfig Kibana configuration item.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setKibanaConfig(String KibanaConfig) {
+        this.KibanaConfig = KibanaConfig;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1383,6 +1411,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "KibanaPrivateAccess", this.KibanaPrivateAccess);
         this.setParamSimple(map, prefix + "SecurityType", this.SecurityType);
         this.setParamSimple(map, prefix + "SceneType", this.SceneType);
+        this.setParamSimple(map, prefix + "KibanaConfig", this.KibanaConfig);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TableOCRResponse extends AbstractModel{
 
     /**
-    * Recognized text. For more information, please click the link on the left.
+    * Recognized text. For more information, please click the link on the left
     */
     @SerializedName("TextDetections")
     @Expose
@@ -44,16 +44,16 @@ public class TableOCRResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Recognized text. For more information, please click the link on the left. 
-     * @return TextDetections Recognized text. For more information, please click the link on the left.
+     * Get Recognized text. For more information, please click the link on the left 
+     * @return TextDetections Recognized text. For more information, please click the link on the left
      */
     public TextTable [] getTextDetections() {
         return this.TextDetections;
     }
 
     /**
-     * Set Recognized text. For more information, please click the link on the left.
-     * @param TextDetections Recognized text. For more information, please click the link on the left.
+     * Set Recognized text. For more information, please click the link on the left
+     * @param TextDetections Recognized text. For more information, please click the link on the left
      */
     public void setTextDetections(TextTable [] TextDetections) {
         this.TextDetections = TextDetections;

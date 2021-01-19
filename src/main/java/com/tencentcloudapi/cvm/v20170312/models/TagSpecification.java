@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TagSpecification extends AbstractModel{
 
     /**
-    * Type of the resources associated with the tags. Currently only "instance" and "host" are supported.
+    * The type of resource that bound with the tag. Valid values: `instance` (for CVM) and `host` (for CDH).
     */
     @SerializedName("ResourceType")
     @Expose
@@ -37,16 +37,16 @@ public class TagSpecification extends AbstractModel{
     private Tag [] Tags;
 
     /**
-     * Get Type of the resources associated with the tags. Currently only "instance" and "host" are supported. 
-     * @return ResourceType Type of the resources associated with the tags. Currently only "instance" and "host" are supported.
+     * Get The type of resource that bound with the tag. Valid values: `instance` (for CVM) and `host` (for CDH). 
+     * @return ResourceType The type of resource that bound with the tag. Valid values: `instance` (for CVM) and `host` (for CDH).
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set Type of the resources associated with the tags. Currently only "instance" and "host" are supported.
-     * @param ResourceType Type of the resources associated with the tags. Currently only "instance" and "host" are supported.
+     * Set The type of resource that bound with the tag. Valid values: `instance` (for CVM) and `host` (for CDH).
+     * @param ResourceType The type of resource that bound with the tag. Valid values: `instance` (for CVM) and `host` (for CDH).
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;

@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class GetPersonGroupInfoRequest extends AbstractModel{
 
     /**
-    * Person ID, which is the `PersonId` in the `CreatePerson` API
+    * Person ID, which is the `PersonId` in the `CreatePerson` API.
     */
     @SerializedName("PersonId")
     @Expose
     private String PersonId;
 
     /**
-    * Starting number. Default value: 0
+    * Starting number. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of returned results. Default value: 10. Maximum value: 100
+    * Number of returned results. Default value: 10. Maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get Person ID, which is the `PersonId` in the `CreatePerson` API 
-     * @return PersonId Person ID, which is the `PersonId` in the `CreatePerson` API
+     * Get Person ID, which is the `PersonId` in the `CreatePerson` API. 
+     * @return PersonId Person ID, which is the `PersonId` in the `CreatePerson` API.
      */
     public String getPersonId() {
         return this.PersonId;
     }
 
     /**
-     * Set Person ID, which is the `PersonId` in the `CreatePerson` API
-     * @param PersonId Person ID, which is the `PersonId` in the `CreatePerson` API
+     * Set Person ID, which is the `PersonId` in the `CreatePerson` API.
+     * @param PersonId Person ID, which is the `PersonId` in the `CreatePerson` API.
      */
     public void setPersonId(String PersonId) {
         this.PersonId = PersonId;
     }
 
     /**
-     * Get Starting number. Default value: 0 
-     * @return Offset Starting number. Default value: 0
+     * Get Starting number. Default value: 0. 
+     * @return Offset Starting number. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Starting number. Default value: 0
-     * @param Offset Starting number. Default value: 0
+     * Set Starting number. Default value: 0.
+     * @param Offset Starting number. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of returned results. Default value: 10. Maximum value: 100 
-     * @return Limit Number of returned results. Default value: 10. Maximum value: 100
+     * Get Number of returned results. Default value: 10. Maximum value: 100. 
+     * @return Limit Number of returned results. Default value: 10. Maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned results. Default value: 10. Maximum value: 100
-     * @param Limit Number of returned results. Default value: 10. Maximum value: 100
+     * Set Number of returned results. Default value: 10. Maximum value: 100.
+     * @param Limit Number of returned results. Default value: 10. Maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

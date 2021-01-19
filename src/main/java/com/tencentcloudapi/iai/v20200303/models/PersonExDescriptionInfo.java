@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class PersonExDescriptionInfo extends AbstractModel{
 
     /**
-    * Person description field index, whose value starts from 0
+    * Person description field index, whose value starts from 0.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PersonExDescriptionIndex")
@@ -38,9 +38,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String PersonExDescription;
 
     /**
-     * Get Person description field index, whose value starts from 0
+     * Get Person description field index, whose value starts from 0.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return PersonExDescriptionIndex Person description field index, whose value starts from 0
+     * @return PersonExDescriptionIndex Person description field index, whose value starts from 0.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getPersonExDescriptionIndex() {
@@ -48,9 +48,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Person description field index, whose value starts from 0
+     * Set Person description field index, whose value starts from 0.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PersonExDescriptionIndex Person description field index, whose value starts from 0
+     * @param PersonExDescriptionIndex Person description field index, whose value starts from 0.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setPersonExDescriptionIndex(Long PersonExDescriptionIndex) {

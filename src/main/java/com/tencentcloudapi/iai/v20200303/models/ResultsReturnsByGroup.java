@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ResultsReturnsByGroup extends AbstractModel{
 
     /**
-    * Position of detected face frame.
+    * Position of detected face frame
     */
     @SerializedName("FaceRect")
     @Expose
@@ -45,16 +45,16 @@ public class ResultsReturnsByGroup extends AbstractModel{
     private Long RetCode;
 
     /**
-     * Get Position of detected face frame. 
-     * @return FaceRect Position of detected face frame.
+     * Get Position of detected face frame 
+     * @return FaceRect Position of detected face frame
      */
     public FaceRect getFaceRect() {
         return this.FaceRect;
     }
 
     /**
-     * Set Position of detected face frame.
-     * @param FaceRect Position of detected face frame.
+     * Set Position of detected face frame
+     * @param FaceRect Position of detected face frame
      */
     public void setFaceRect(FaceRect FaceRect) {
         this.FaceRect = FaceRect;

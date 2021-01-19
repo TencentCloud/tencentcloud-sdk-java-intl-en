@@ -13,14 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cvm.v20170312.models;
+package com.tencentcloudapi.ses.v20201002.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSpotTypeConfigResponse extends AbstractModel{
+public class ListBlackEmailAddressResponse extends AbstractModel{
+
+    /**
+    * List of blocklisted addresses.
+    */
+    @SerializedName("BlackList")
+    @Expose
+    private BlackEmailAddress [] BlackList;
+
+    /**
+    * Total number of blocklisted addresses.
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -28,6 +42,38 @@ public class DescribeSpotTypeConfigResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get List of blocklisted addresses. 
+     * @return BlackList List of blocklisted addresses.
+     */
+    public BlackEmailAddress [] getBlackList() {
+        return this.BlackList;
+    }
+
+    /**
+     * Set List of blocklisted addresses.
+     * @param BlackList List of blocklisted addresses.
+     */
+    public void setBlackList(BlackEmailAddress [] BlackList) {
+        this.BlackList = BlackList;
+    }
+
+    /**
+     * Get Total number of blocklisted addresses. 
+     * @return TotalCount Total number of blocklisted addresses.
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set Total number of blocklisted addresses.
+     * @param TotalCount Total number of blocklisted addresses.
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -49,6 +95,8 @@ public class DescribeSpotTypeConfigResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "BlackList.", this.BlackList);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

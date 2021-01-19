@@ -13,28 +13,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iai.v20200303.models;
+package com.tencentcloudapi.ses.v20201002.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DetectLiveFaceAccurateResponse extends AbstractModel{
+public class GetEmailIdentityResponse extends AbstractModel{
 
     /**
-    * Liveness score. Value range: [0, 100]. You can set several thresholds such as 5, 10, 40, 70 and 90 to determine whether the image is photographed. We recommend using the threshold 40.
+    * Verification type. The value is fixed to `DOMAIN`.
     */
-    @SerializedName("Score")
+    @SerializedName("IdentityType")
     @Expose
-    private Float Score;
+    private String IdentityType;
 
     /**
-    * Algorithm model version used for face recognition.
+    * Verification passed or not.
     */
-    @SerializedName("FaceModelVersion")
+    @SerializedName("VerifiedForSendingStatus")
     @Expose
-    private String FaceModelVersion;
+    private Boolean VerifiedForSendingStatus;
+
+    /**
+    * DNS configuration details.
+    */
+    @SerializedName("Attributes")
+    @Expose
+    private DNSAttributes [] Attributes;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -44,35 +51,51 @@ public class DetectLiveFaceAccurateResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Liveness score. Value range: [0, 100]. You can set several thresholds such as 5, 10, 40, 70 and 90 to determine whether the image is photographed. We recommend using the threshold 40. 
-     * @return Score Liveness score. Value range: [0, 100]. You can set several thresholds such as 5, 10, 40, 70 and 90 to determine whether the image is photographed. We recommend using the threshold 40.
+     * Get Verification type. The value is fixed to `DOMAIN`. 
+     * @return IdentityType Verification type. The value is fixed to `DOMAIN`.
      */
-    public Float getScore() {
-        return this.Score;
+    public String getIdentityType() {
+        return this.IdentityType;
     }
 
     /**
-     * Set Liveness score. Value range: [0, 100]. You can set several thresholds such as 5, 10, 40, 70 and 90 to determine whether the image is photographed. We recommend using the threshold 40.
-     * @param Score Liveness score. Value range: [0, 100]. You can set several thresholds such as 5, 10, 40, 70 and 90 to determine whether the image is photographed. We recommend using the threshold 40.
+     * Set Verification type. The value is fixed to `DOMAIN`.
+     * @param IdentityType Verification type. The value is fixed to `DOMAIN`.
      */
-    public void setScore(Float Score) {
-        this.Score = Score;
+    public void setIdentityType(String IdentityType) {
+        this.IdentityType = IdentityType;
     }
 
     /**
-     * Get Algorithm model version used for face recognition. 
-     * @return FaceModelVersion Algorithm model version used for face recognition.
+     * Get Verification passed or not. 
+     * @return VerifiedForSendingStatus Verification passed or not.
      */
-    public String getFaceModelVersion() {
-        return this.FaceModelVersion;
+    public Boolean getVerifiedForSendingStatus() {
+        return this.VerifiedForSendingStatus;
     }
 
     /**
-     * Set Algorithm model version used for face recognition.
-     * @param FaceModelVersion Algorithm model version used for face recognition.
+     * Set Verification passed or not.
+     * @param VerifiedForSendingStatus Verification passed or not.
      */
-    public void setFaceModelVersion(String FaceModelVersion) {
-        this.FaceModelVersion = FaceModelVersion;
+    public void setVerifiedForSendingStatus(Boolean VerifiedForSendingStatus) {
+        this.VerifiedForSendingStatus = VerifiedForSendingStatus;
+    }
+
+    /**
+     * Get DNS configuration details. 
+     * @return Attributes DNS configuration details.
+     */
+    public DNSAttributes [] getAttributes() {
+        return this.Attributes;
+    }
+
+    /**
+     * Set DNS configuration details.
+     * @param Attributes DNS configuration details.
+     */
+    public void setAttributes(DNSAttributes [] Attributes) {
+        this.Attributes = Attributes;
     }
 
     /**
@@ -95,8 +118,9 @@ public class DetectLiveFaceAccurateResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Score", this.Score);
-        this.setParamSimple(map, prefix + "FaceModelVersion", this.FaceModelVersion);
+        this.setParamSimple(map, prefix + "IdentityType", this.IdentityType);
+        this.setParamSimple(map, prefix + "VerifiedForSendingStatus", this.VerifiedForSendingStatus);
+        this.setParamArrayObj(map, prefix + "Attributes.", this.Attributes);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

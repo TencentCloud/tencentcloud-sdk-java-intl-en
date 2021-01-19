@@ -37,14 +37,14 @@ public class FaceAttributesInfo extends AbstractModel{
     private Long Age;
 
     /**
-    * Expression. Value range: [0 (normal)-50 (smile)-100 (laugh)]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+    * Expression. Value range: [0 (normal)–50 (smile)–100 (laugh)]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
     */
     @SerializedName("Expression")
     @Expose
     private Long Expression;
 
     /**
-    * Whether glasses are present. Valid values: [true,false]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+    * Whether glasses are present. Valid values: true, false. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
     */
     @SerializedName("Glass")
     @Expose
@@ -52,7 +52,7 @@ public class FaceAttributesInfo extends AbstractModel{
 
     /**
     * Vertical offset in degrees. Value range: [-30,30]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless. 
-You are recommended to select images in the [-10,10] range for adding faces.
+We recommend selecting images in the [-10,10] range for adding faces.
     */
     @SerializedName("Pitch")
     @Expose
@@ -60,7 +60,7 @@ You are recommended to select images in the [-10,10] range for adding faces.
 
     /**
     * Horizontal offset in degrees. Value range: [-30,30]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless. 
-You are recommended to select images in the [-10,10] range for adding faces.
+We recommend selecting images in the [-10,10] range for adding faces.
     */
     @SerializedName("Yaw")
     @Expose
@@ -68,21 +68,21 @@ You are recommended to select images in the [-10,10] range for adding faces.
 
     /**
     * Horizontal rotation in degrees. Value range: [-180,180]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.  
-You are recommended to select images in the [-20,20] range for adding faces.
+We recommend selecting images in the [-20,20] range for adding faces.
     */
     @SerializedName("Roll")
     @Expose
     private Long Roll;
 
     /**
-    * Beauty. Value range: [0-100]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+    * Beauty. Value range: [0,100]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
     */
     @SerializedName("Beauty")
     @Expose
     private Long Beauty;
 
     /**
-    * Whether hat is present. Valid values: [true,false]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+    * Whether hat is present. Valid values: true, false. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Hat")
@@ -90,7 +90,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Boolean Hat;
 
     /**
-    * Whether mask is present. Valid values: [true,false]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+    * Whether mask is present. Valid values: true, false. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Mask")
@@ -106,7 +106,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private FaceHairAttributesInfo Hair;
 
     /**
-    * Whether the eyes are open. Valid values: [true,false]. As long as there is more than one eye closed, `false` will be returned. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+    * Whether the eyes are open. Valid values: true, false. As long as there is more than one eye closed, `false` will be returned. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EyeOpen")
@@ -146,32 +146,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Expression. Value range: [0 (normal)-50 (smile)-100 (laugh)]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless. 
-     * @return Expression Expression. Value range: [0 (normal)-50 (smile)-100 (laugh)]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+     * Get Expression. Value range: [0 (normal)–50 (smile)–100 (laugh)]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless. 
+     * @return Expression Expression. Value range: [0 (normal)–50 (smile)–100 (laugh)]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
      */
     public Long getExpression() {
         return this.Expression;
     }
 
     /**
-     * Set Expression. Value range: [0 (normal)-50 (smile)-100 (laugh)]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
-     * @param Expression Expression. Value range: [0 (normal)-50 (smile)-100 (laugh)]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+     * Set Expression. Value range: [0 (normal)–50 (smile)–100 (laugh)]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+     * @param Expression Expression. Value range: [0 (normal)–50 (smile)–100 (laugh)]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
      */
     public void setExpression(Long Expression) {
         this.Expression = Expression;
     }
 
     /**
-     * Get Whether glasses are present. Valid values: [true,false]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless. 
-     * @return Glass Whether glasses are present. Valid values: [true,false]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+     * Get Whether glasses are present. Valid values: true, false. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless. 
+     * @return Glass Whether glasses are present. Valid values: true, false. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
      */
     public Boolean getGlass() {
         return this.Glass;
     }
 
     /**
-     * Set Whether glasses are present. Valid values: [true,false]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
-     * @param Glass Whether glasses are present. Valid values: [true,false]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+     * Set Whether glasses are present. Valid values: true, false. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+     * @param Glass Whether glasses are present. Valid values: true, false. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
      */
     public void setGlass(Boolean Glass) {
         this.Glass = Glass;
@@ -179,9 +179,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Vertical offset in degrees. Value range: [-30,30]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless. 
-You are recommended to select images in the [-10,10] range for adding faces. 
+We recommend selecting images in the [-10,10] range for adding faces. 
      * @return Pitch Vertical offset in degrees. Value range: [-30,30]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless. 
-You are recommended to select images in the [-10,10] range for adding faces.
+We recommend selecting images in the [-10,10] range for adding faces.
      */
     public Long getPitch() {
         return this.Pitch;
@@ -189,9 +189,9 @@ You are recommended to select images in the [-10,10] range for adding faces.
 
     /**
      * Set Vertical offset in degrees. Value range: [-30,30]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless. 
-You are recommended to select images in the [-10,10] range for adding faces.
+We recommend selecting images in the [-10,10] range for adding faces.
      * @param Pitch Vertical offset in degrees. Value range: [-30,30]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless. 
-You are recommended to select images in the [-10,10] range for adding faces.
+We recommend selecting images in the [-10,10] range for adding faces.
      */
     public void setPitch(Long Pitch) {
         this.Pitch = Pitch;
@@ -199,9 +199,9 @@ You are recommended to select images in the [-10,10] range for adding faces.
 
     /**
      * Get Horizontal offset in degrees. Value range: [-30,30]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless. 
-You are recommended to select images in the [-10,10] range for adding faces. 
+We recommend selecting images in the [-10,10] range for adding faces. 
      * @return Yaw Horizontal offset in degrees. Value range: [-30,30]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless. 
-You are recommended to select images in the [-10,10] range for adding faces.
+We recommend selecting images in the [-10,10] range for adding faces.
      */
     public Long getYaw() {
         return this.Yaw;
@@ -209,9 +209,9 @@ You are recommended to select images in the [-10,10] range for adding faces.
 
     /**
      * Set Horizontal offset in degrees. Value range: [-30,30]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless. 
-You are recommended to select images in the [-10,10] range for adding faces.
+We recommend selecting images in the [-10,10] range for adding faces.
      * @param Yaw Horizontal offset in degrees. Value range: [-30,30]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless. 
-You are recommended to select images in the [-10,10] range for adding faces.
+We recommend selecting images in the [-10,10] range for adding faces.
      */
     public void setYaw(Long Yaw) {
         this.Yaw = Yaw;
@@ -219,9 +219,9 @@ You are recommended to select images in the [-10,10] range for adding faces.
 
     /**
      * Get Horizontal rotation in degrees. Value range: [-180,180]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.  
-You are recommended to select images in the [-20,20] range for adding faces. 
+We recommend selecting images in the [-20,20] range for adding faces. 
      * @return Roll Horizontal rotation in degrees. Value range: [-180,180]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.  
-You are recommended to select images in the [-20,20] range for adding faces.
+We recommend selecting images in the [-20,20] range for adding faces.
      */
     public Long getRoll() {
         return this.Roll;
@@ -229,34 +229,34 @@ You are recommended to select images in the [-20,20] range for adding faces.
 
     /**
      * Set Horizontal rotation in degrees. Value range: [-180,180]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.  
-You are recommended to select images in the [-20,20] range for adding faces.
+We recommend selecting images in the [-20,20] range for adding faces.
      * @param Roll Horizontal rotation in degrees. Value range: [-180,180]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.  
-You are recommended to select images in the [-20,20] range for adding faces.
+We recommend selecting images in the [-20,20] range for adding faces.
      */
     public void setRoll(Long Roll) {
         this.Roll = Roll;
     }
 
     /**
-     * Get Beauty. Value range: [0-100]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless. 
-     * @return Beauty Beauty. Value range: [0-100]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+     * Get Beauty. Value range: [0,100]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless. 
+     * @return Beauty Beauty. Value range: [0,100]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
      */
     public Long getBeauty() {
         return this.Beauty;
     }
 
     /**
-     * Set Beauty. Value range: [0-100]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
-     * @param Beauty Beauty. Value range: [0-100]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+     * Set Beauty. Value range: [0,100]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+     * @param Beauty Beauty. Value range: [0,100]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
      */
     public void setBeauty(Long Beauty) {
         this.Beauty = Beauty;
     }
 
     /**
-     * Get Whether hat is present. Valid values: [true,false]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+     * Get Whether hat is present. Valid values: true, false. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Hat Whether hat is present. Valid values: [true,false]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+     * @return Hat Whether hat is present. Valid values: true, false. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getHat() {
@@ -264,9 +264,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether hat is present. Valid values: [true,false]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+     * Set Whether hat is present. Valid values: true, false. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Hat Whether hat is present. Valid values: [true,false]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+     * @param Hat Whether hat is present. Valid values: true, false. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setHat(Boolean Hat) {
@@ -274,9 +274,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether mask is present. Valid values: [true,false]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+     * Get Whether mask is present. Valid values: true, false. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Mask Whether mask is present. Valid values: [true,false]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+     * @return Mask Whether mask is present. Valid values: true, false. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getMask() {
@@ -284,9 +284,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether mask is present. Valid values: [true,false]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+     * Set Whether mask is present. Valid values: true, false. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Mask Whether mask is present. Valid values: [true,false]. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+     * @param Mask Whether mask is present. Valid values: true, false. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setMask(Boolean Mask) {
@@ -314,9 +314,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether the eyes are open. Valid values: [true,false]. As long as there is more than one eye closed, `false` will be returned. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+     * Get Whether the eyes are open. Valid values: true, false. As long as there is more than one eye closed, `false` will be returned. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return EyeOpen Whether the eyes are open. Valid values: [true,false]. As long as there is more than one eye closed, `false` will be returned. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+     * @return EyeOpen Whether the eyes are open. Valid values: true, false. As long as there is more than one eye closed, `false` will be returned. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getEyeOpen() {
@@ -324,9 +324,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether the eyes are open. Valid values: [true,false]. As long as there is more than one eye closed, `false` will be returned. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+     * Set Whether the eyes are open. Valid values: true, false. As long as there is more than one eye closed, `false` will be returned. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param EyeOpen Whether the eyes are open. Valid values: [true,false]. As long as there is more than one eye closed, `false` will be returned. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
+     * @param EyeOpen Whether the eyes are open. Valid values: true, false. As long as there is more than one eye closed, `false` will be returned. If `NeedFaceAttributes` is not 1 or more than 5 faces are detected, this parameter will still be returned but meaningless.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setEyeOpen(Boolean EyeOpen) {

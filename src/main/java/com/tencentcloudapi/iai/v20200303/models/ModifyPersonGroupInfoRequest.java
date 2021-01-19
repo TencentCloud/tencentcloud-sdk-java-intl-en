@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class ModifyPersonGroupInfoRequest extends AbstractModel{
 
     /**
-    * Group ID, which is the `GroupId` in the `CreateGroup` API
+    * Group ID, which is the `GroupId` in the `CreateGroup` API.
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * Person ID, which is the `PersonId` in the `CreatePerson` API
+    * Person ID, which is the `PersonId` in the `CreatePerson` API.
     */
     @SerializedName("PersonId")
     @Expose
     private String PersonId;
 
     /**
-    * Custom description field of the person to be modified, which is a `key-value`
+    * Custom description field of the person to be modified, which is a `key-value` pair.
     */
     @SerializedName("PersonExDescriptionInfos")
     @Expose
     private PersonExDescriptionInfo [] PersonExDescriptionInfos;
 
     /**
-     * Get Group ID, which is the `GroupId` in the `CreateGroup` API 
-     * @return GroupId Group ID, which is the `GroupId` in the `CreateGroup` API
+     * Get Group ID, which is the `GroupId` in the `CreateGroup` API. 
+     * @return GroupId Group ID, which is the `GroupId` in the `CreateGroup` API.
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set Group ID, which is the `GroupId` in the `CreateGroup` API
-     * @param GroupId Group ID, which is the `GroupId` in the `CreateGroup` API
+     * Set Group ID, which is the `GroupId` in the `CreateGroup` API.
+     * @param GroupId Group ID, which is the `GroupId` in the `CreateGroup` API.
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get Person ID, which is the `PersonId` in the `CreatePerson` API 
-     * @return PersonId Person ID, which is the `PersonId` in the `CreatePerson` API
+     * Get Person ID, which is the `PersonId` in the `CreatePerson` API. 
+     * @return PersonId Person ID, which is the `PersonId` in the `CreatePerson` API.
      */
     public String getPersonId() {
         return this.PersonId;
     }
 
     /**
-     * Set Person ID, which is the `PersonId` in the `CreatePerson` API
-     * @param PersonId Person ID, which is the `PersonId` in the `CreatePerson` API
+     * Set Person ID, which is the `PersonId` in the `CreatePerson` API.
+     * @param PersonId Person ID, which is the `PersonId` in the `CreatePerson` API.
      */
     public void setPersonId(String PersonId) {
         this.PersonId = PersonId;
     }
 
     /**
-     * Get Custom description field of the person to be modified, which is a `key-value` 
-     * @return PersonExDescriptionInfos Custom description field of the person to be modified, which is a `key-value`
+     * Get Custom description field of the person to be modified, which is a `key-value` pair. 
+     * @return PersonExDescriptionInfos Custom description field of the person to be modified, which is a `key-value` pair.
      */
     public PersonExDescriptionInfo [] getPersonExDescriptionInfos() {
         return this.PersonExDescriptionInfos;
     }
 
     /**
-     * Set Custom description field of the person to be modified, which is a `key-value`
-     * @param PersonExDescriptionInfos Custom description field of the person to be modified, which is a `key-value`
+     * Set Custom description field of the person to be modified, which is a `key-value` pair.
+     * @param PersonExDescriptionInfos Custom description field of the person to be modified, which is a `key-value` pair.
      */
     public void setPersonExDescriptionInfos(PersonExDescriptionInfo [] PersonExDescriptionInfos) {
         this.PersonExDescriptionInfos = PersonExDescriptionInfos;

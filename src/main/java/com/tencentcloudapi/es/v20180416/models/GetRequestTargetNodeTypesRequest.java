@@ -13,48 +13,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.iai.v20200303.models;
+package com.tencentcloudapi.es.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Mouth extends AbstractModel{
+public class GetRequestTargetNodeTypesRequest extends AbstractModel{
 
     /**
-    * Whether the mouth is open.
-The `Type` values of the `AttributeItem` include: 0: closed; 1: open.
+    * Instance ID.
     */
-    @SerializedName("MouthOpen")
+    @SerializedName("InstanceId")
     @Expose
-    private AttributeItem MouthOpen;
+    private String InstanceId;
 
     /**
-     * Get Whether the mouth is open.
-The `Type` values of the `AttributeItem` include: 0: closed; 1: open. 
-     * @return MouthOpen Whether the mouth is open.
-The `Type` values of the `AttributeItem` include: 0: closed; 1: open.
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
-    public AttributeItem getMouthOpen() {
-        return this.MouthOpen;
+    public String getInstanceId() {
+        return this.InstanceId;
     }
 
     /**
-     * Set Whether the mouth is open.
-The `Type` values of the `AttributeItem` include: 0: closed; 1: open.
-     * @param MouthOpen Whether the mouth is open.
-The `Type` values of the `AttributeItem` include: 0: closed; 1: open.
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
-    public void setMouthOpen(AttributeItem MouthOpen) {
-        this.MouthOpen = MouthOpen;
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "MouthOpen.", this.MouthOpen);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

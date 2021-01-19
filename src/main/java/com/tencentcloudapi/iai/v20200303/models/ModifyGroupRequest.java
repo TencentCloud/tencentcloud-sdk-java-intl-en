@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyGroupRequest extends AbstractModel{
 
     /**
-    * Group ID, which is the `GroupId` in the `CreateGroup` API
+    * Group ID, which is the `GroupId` in the `CreateGroup` API.
     */
     @SerializedName("GroupId")
     @Expose
@@ -37,7 +37,7 @@ public class ModifyGroupRequest extends AbstractModel{
     private String GroupName;
 
     /**
-    * Custom description field of the group to be modified, which is a `key-value`
+    * Custom description field of the group to be modified, which is a `key-value` pair.
     */
     @SerializedName("GroupExDescriptionInfos")
     @Expose
@@ -51,16 +51,16 @@ public class ModifyGroupRequest extends AbstractModel{
     private String Tag;
 
     /**
-     * Get Group ID, which is the `GroupId` in the `CreateGroup` API 
-     * @return GroupId Group ID, which is the `GroupId` in the `CreateGroup` API
+     * Get Group ID, which is the `GroupId` in the `CreateGroup` API. 
+     * @return GroupId Group ID, which is the `GroupId` in the `CreateGroup` API.
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set Group ID, which is the `GroupId` in the `CreateGroup` API
-     * @param GroupId Group ID, which is the `GroupId` in the `CreateGroup` API
+     * Set Group ID, which is the `GroupId` in the `CreateGroup` API.
+     * @param GroupId Group ID, which is the `GroupId` in the `CreateGroup` API.
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
@@ -83,16 +83,16 @@ public class ModifyGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get Custom description field of the group to be modified, which is a `key-value` 
-     * @return GroupExDescriptionInfos Custom description field of the group to be modified, which is a `key-value`
+     * Get Custom description field of the group to be modified, which is a `key-value` pair. 
+     * @return GroupExDescriptionInfos Custom description field of the group to be modified, which is a `key-value` pair.
      */
     public GroupExDescriptionInfo [] getGroupExDescriptionInfos() {
         return this.GroupExDescriptionInfos;
     }
 
     /**
-     * Set Custom description field of the group to be modified, which is a `key-value`
-     * @param GroupExDescriptionInfos Custom description field of the group to be modified, which is a `key-value`
+     * Set Custom description field of the group to be modified, which is a `key-value` pair.
+     * @param GroupExDescriptionInfos Custom description field of the group to be modified, which is a `key-value` pair.
      */
     public void setGroupExDescriptionInfos(GroupExDescriptionInfo [] GroupExDescriptionInfos) {
         this.GroupExDescriptionInfos = GroupExDescriptionInfos;

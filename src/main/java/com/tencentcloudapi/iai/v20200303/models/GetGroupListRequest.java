@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class GetGroupListRequest extends AbstractModel{
 
     /**
-    * Starting number. Default value: 0
+    * Starting number. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of returned results. Default value: 10. Maximum value: 1000
+    * Number of returned results. Default value: 10. Maximum value: 1000.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get Starting number. Default value: 0 
-     * @return Offset Starting number. Default value: 0
+     * Get Starting number. Default value: 0. 
+     * @return Offset Starting number. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Starting number. Default value: 0
-     * @param Offset Starting number. Default value: 0
+     * Set Starting number. Default value: 0.
+     * @param Offset Starting number. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of returned results. Default value: 10. Maximum value: 1000 
-     * @return Limit Number of returned results. Default value: 10. Maximum value: 1000
+     * Get Number of returned results. Default value: 10. Maximum value: 1000. 
+     * @return Limit Number of returned results. Default value: 10. Maximum value: 1000.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned results. Default value: 10. Maximum value: 1000
-     * @param Limit Number of returned results. Default value: 10. Maximum value: 1000
+     * Set Number of returned results. Default value: 10. Maximum value: 1000.
+     * @param Limit Number of returned results. Default value: 10. Maximum value: 1000.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class FaceInfo extends AbstractModel{
 
     /**
-    * Horizontal coordinate of the top-left corner of face frame.
+    * Horizontal coordinate of the top-left vertex of the face frame.
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
 If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
     */
@@ -32,7 +32,7 @@ If you want to capture a complete face, you can set the negative coordinates to 
     private Long X;
 
     /**
-    * Vertical coordinate of the top-left corner of face frame. 
+    * Vertical coordinate of the top-left vertex of the face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
 If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
     */
@@ -41,7 +41,7 @@ If you want to capture a complete face, you can set the negative coordinates to 
     private Long Y;
 
     /**
-    * Face frame width. 
+    * Face frame width.
     */
     @SerializedName("Width")
     @Expose
@@ -55,24 +55,26 @@ If you want to capture a complete face, you can set the negative coordinates to 
     private Long Height;
 
     /**
-    * Face attributes, including gender, age, expression, beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will be returned only if `NeedFaceAttributes` is set to 1. 
+    * Face attributes, including gender, age, expression, 
+beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will be returned only if `NeedFaceAttributes` is set to 1.
     */
     @SerializedName("FaceAttributesInfo")
     @Expose
     private FaceAttributesInfo FaceAttributesInfo;
 
     /**
-    * Face quality information, including score, sharpness, brightness, and completeness. Valid information will be returned only if `NeedFaceDetection` is set to 1. Note: this field may return null, indicating that no valid values can be obtained. 
+    * Face quality information, including score, sharpness, brightness, and completeness. Valid information will be returned only if `NeedFaceDetection` is set to 1.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FaceQualityInfo")
     @Expose
     private FaceQualityInfo FaceQualityInfo;
 
     /**
-     * Get Horizontal coordinate of the top-left corner of face frame.
+     * Get Horizontal coordinate of the top-left vertex of the face frame.
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
 If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement. 
-     * @return X Horizontal coordinate of the top-left corner of face frame.
+     * @return X Horizontal coordinate of the top-left vertex of the face frame.
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
 If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
      */
@@ -81,10 +83,10 @@ If you want to capture a complete face, you can set the negative coordinates to 
     }
 
     /**
-     * Set Horizontal coordinate of the top-left corner of face frame.
+     * Set Horizontal coordinate of the top-left vertex of the face frame.
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
 If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
-     * @param X Horizontal coordinate of the top-left corner of face frame.
+     * @param X Horizontal coordinate of the top-left vertex of the face frame.
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
 If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
      */
@@ -93,10 +95,10 @@ If you want to capture a complete face, you can set the negative coordinates to 
     }
 
     /**
-     * Get Vertical coordinate of the top-left corner of face frame. 
+     * Get Vertical coordinate of the top-left vertex of the face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
 If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement. 
-     * @return Y Vertical coordinate of the top-left corner of face frame. 
+     * @return Y Vertical coordinate of the top-left vertex of the face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
 If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
      */
@@ -105,10 +107,10 @@ If you want to capture a complete face, you can set the negative coordinates to 
     }
 
     /**
-     * Set Vertical coordinate of the top-left corner of face frame. 
+     * Set Vertical coordinate of the top-left vertex of the face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
 If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
-     * @param Y Vertical coordinate of the top-left corner of face frame. 
+     * @param Y Vertical coordinate of the top-left vertex of the face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
 If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
      */
@@ -117,16 +119,16 @@ If you want to capture a complete face, you can set the negative coordinates to 
     }
 
     /**
-     * Get Face frame width.  
-     * @return Width Face frame width. 
+     * Get Face frame width. 
+     * @return Width Face frame width.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Face frame width. 
-     * @param Width Face frame width. 
+     * Set Face frame width.
+     * @param Width Face frame width.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
@@ -149,32 +151,40 @@ If you want to capture a complete face, you can set the negative coordinates to 
     }
 
     /**
-     * Get Face attributes, including gender, age, expression, beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will be returned only if `NeedFaceAttributes` is set to 1.  
-     * @return FaceAttributesInfo Face attributes, including gender, age, expression, beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will be returned only if `NeedFaceAttributes` is set to 1. 
+     * Get Face attributes, including gender, age, expression, 
+beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will be returned only if `NeedFaceAttributes` is set to 1. 
+     * @return FaceAttributesInfo Face attributes, including gender, age, expression, 
+beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will be returned only if `NeedFaceAttributes` is set to 1.
      */
     public FaceAttributesInfo getFaceAttributesInfo() {
         return this.FaceAttributesInfo;
     }
 
     /**
-     * Set Face attributes, including gender, age, expression, beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will be returned only if `NeedFaceAttributes` is set to 1. 
-     * @param FaceAttributesInfo Face attributes, including gender, age, expression, beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will be returned only if `NeedFaceAttributes` is set to 1. 
+     * Set Face attributes, including gender, age, expression, 
+beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will be returned only if `NeedFaceAttributes` is set to 1.
+     * @param FaceAttributesInfo Face attributes, including gender, age, expression, 
+beauty, glass, mask, hair, and pose (pitch, roll, yaw). Valid information will be returned only if `NeedFaceAttributes` is set to 1.
      */
     public void setFaceAttributesInfo(FaceAttributesInfo FaceAttributesInfo) {
         this.FaceAttributesInfo = FaceAttributesInfo;
     }
 
     /**
-     * Get Face quality information, including score, sharpness, brightness, and completeness. Valid information will be returned only if `NeedFaceDetection` is set to 1. Note: this field may return null, indicating that no valid values can be obtained.  
-     * @return FaceQualityInfo Face quality information, including score, sharpness, brightness, and completeness. Valid information will be returned only if `NeedFaceDetection` is set to 1. Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Face quality information, including score, sharpness, brightness, and completeness. Valid information will be returned only if `NeedFaceDetection` is set to 1.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return FaceQualityInfo Face quality information, including score, sharpness, brightness, and completeness. Valid information will be returned only if `NeedFaceDetection` is set to 1.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public FaceQualityInfo getFaceQualityInfo() {
         return this.FaceQualityInfo;
     }
 
     /**
-     * Set Face quality information, including score, sharpness, brightness, and completeness. Valid information will be returned only if `NeedFaceDetection` is set to 1. Note: this field may return null, indicating that no valid values can be obtained. 
-     * @param FaceQualityInfo Face quality information, including score, sharpness, brightness, and completeness. Valid information will be returned only if `NeedFaceDetection` is set to 1. Note: this field may return null, indicating that no valid values can be obtained. 
+     * Set Face quality information, including score, sharpness, brightness, and completeness. Valid information will be returned only if `NeedFaceDetection` is set to 1.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param FaceQualityInfo Face quality information, including score, sharpness, brightness, and completeness. Valid information will be returned only if `NeedFaceDetection` is set to 1.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setFaceQualityInfo(FaceQualityInfo FaceQualityInfo) {
         this.FaceQualityInfo = FaceQualityInfo;

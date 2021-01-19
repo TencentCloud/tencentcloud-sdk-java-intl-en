@@ -458,7 +458,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private OfflineCache OfflineCache;
 
     /**
-    * 
+    * Merging pull requests
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("OriginCombine")
     @Expose
@@ -1569,16 +1570,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get  
-     * @return OriginCombine 
+     * Get Merging pull requests
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return OriginCombine Merging pull requests
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public OriginCombine getOriginCombine() {
         return this.OriginCombine;
     }
 
     /**
-     * Set 
-     * @param OriginCombine 
+     * Set Merging pull requests
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param OriginCombine Merging pull requests
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setOriginCombine(OriginCombine OriginCombine) {
         this.OriginCombine = OriginCombine;

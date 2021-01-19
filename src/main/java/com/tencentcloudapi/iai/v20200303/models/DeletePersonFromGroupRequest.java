@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DeletePersonFromGroupRequest extends AbstractModel{
 
     /**
-    * Person ID, which is the `PersonId` in the `CreatePerson` API
+    * Person ID, which is the `PersonId` in the `CreatePerson` API.
     */
     @SerializedName("PersonId")
     @Expose
     private String PersonId;
 
     /**
-    * Group ID, which is the `GroupId` in the `CreateGroup` API
+    * Group ID, which is the `GroupId` in the `CreateGroup` API.
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-     * Get Person ID, which is the `PersonId` in the `CreatePerson` API 
-     * @return PersonId Person ID, which is the `PersonId` in the `CreatePerson` API
+     * Get Person ID, which is the `PersonId` in the `CreatePerson` API. 
+     * @return PersonId Person ID, which is the `PersonId` in the `CreatePerson` API.
      */
     public String getPersonId() {
         return this.PersonId;
     }
 
     /**
-     * Set Person ID, which is the `PersonId` in the `CreatePerson` API
-     * @param PersonId Person ID, which is the `PersonId` in the `CreatePerson` API
+     * Set Person ID, which is the `PersonId` in the `CreatePerson` API.
+     * @param PersonId Person ID, which is the `PersonId` in the `CreatePerson` API.
      */
     public void setPersonId(String PersonId) {
         this.PersonId = PersonId;
     }
 
     /**
-     * Get Group ID, which is the `GroupId` in the `CreateGroup` API 
-     * @return GroupId Group ID, which is the `GroupId` in the `CreateGroup` API
+     * Get Group ID, which is the `GroupId` in the `CreateGroup` API. 
+     * @return GroupId Group ID, which is the `GroupId` in the `CreateGroup` API.
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set Group ID, which is the `GroupId` in the `CreateGroup` API
-     * @param GroupId Group ID, which is the `GroupId` in the `CreateGroup` API
+     * Set Group ID, which is the `GroupId` in the `CreateGroup` API.
+     * @param GroupId Group ID, which is the `GroupId` in the `CreateGroup` API.
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;

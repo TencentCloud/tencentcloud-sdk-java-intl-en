@@ -137,6 +137,13 @@ Default value: Non-zero.
     private String TencentBackupAddress;
 
     /**
+    * Cloud Attached Connection Service ID
+    */
+    @SerializedName("CloudAttachId")
+    @Expose
+    private String CloudAttachId;
+
+    /**
      * Get Direct Connect ID, such as `dc-kd7d06of`. 
      * @return DirectConnectId Direct Connect ID, such as `dc-kd7d06of`.
      */
@@ -413,6 +420,22 @@ Default value: Non-zero.
     }
 
     /**
+     * Get Cloud Attached Connection Service ID 
+     * @return CloudAttachId Cloud Attached Connection Service ID
+     */
+    public String getCloudAttachId() {
+        return this.CloudAttachId;
+    }
+
+    /**
+     * Set Cloud Attached Connection Service ID
+     * @param CloudAttachId Cloud Attached Connection Service ID
+     */
+    public void setCloudAttachId(String CloudAttachId) {
+        this.CloudAttachId = CloudAttachId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -431,6 +454,7 @@ Default value: Non-zero.
         this.setParamSimple(map, prefix + "TencentAddress", this.TencentAddress);
         this.setParamSimple(map, prefix + "CustomerAddress", this.CustomerAddress);
         this.setParamSimple(map, prefix + "TencentBackupAddress", this.TencentBackupAddress);
+        this.setParamSimple(map, prefix + "CloudAttachId", this.CloudAttachId);
 
     }
 }

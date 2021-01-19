@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class GroupExDescriptionInfo extends AbstractModel{
 
     /**
-    * Custom group description field index, whose value starts from 0
+    * Custom group description field index, whose value starts from 0.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("GroupExDescriptionIndex")
@@ -38,9 +38,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String GroupExDescription;
 
     /**
-     * Get Custom group description field index, whose value starts from 0
+     * Get Custom group description field index, whose value starts from 0.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return GroupExDescriptionIndex Custom group description field index, whose value starts from 0
+     * @return GroupExDescriptionIndex Custom group description field index, whose value starts from 0.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getGroupExDescriptionIndex() {
@@ -48,9 +48,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Custom group description field index, whose value starts from 0
+     * Set Custom group description field index, whose value starts from 0.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param GroupExDescriptionIndex Custom group description field index, whose value starts from 0
+     * @param GroupExDescriptionIndex Custom group description field index, whose value starts from 0.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setGroupExDescriptionIndex(Long GroupExDescriptionIndex) {

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateImageResponse extends AbstractModel{
 
     /**
-    * Image ID
+    * Image ID.
 Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("ImageId")
@@ -38,9 +38,9 @@ Note: This field may return null, indicating that no valid value was found.
     private String RequestId;
 
     /**
-     * Get Image ID
+     * Get Image ID.
 Note: This field may return null, indicating that no valid value was found. 
-     * @return ImageId Image ID
+     * @return ImageId Image ID.
 Note: This field may return null, indicating that no valid value was found.
      */
     public String getImageId() {
@@ -48,9 +48,9 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Set Image ID
+     * Set Image ID.
 Note: This field may return null, indicating that no valid value was found.
-     * @param ImageId Image ID
+     * @param ImageId Image ID.
 Note: This field may return null, indicating that no valid value was found.
      */
     public void setImageId(String ImageId) {

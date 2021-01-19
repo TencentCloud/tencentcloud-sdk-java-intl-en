@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class OriginCombine extends AbstractModel{
 
     /**
-    * 
+    * Whether to enable the merging pull requests feature. Valid values: `on` and `off`.
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Whether to enable the merging pull requests feature. Valid values: `on` and `off`. 
+     * @return Switch Whether to enable the merging pull requests feature. Valid values: `on` and `off`.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Whether to enable the merging pull requests feature. Valid values: `on` and `off`.
+     * @param Switch Whether to enable the merging pull requests feature. Valid values: `on` and `off`.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

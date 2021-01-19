@@ -139,6 +139,26 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to get the node types used to receive client requests.
+     * @param req GetRequestTargetNodeTypesRequest
+     * @return GetRequestTargetNodeTypesResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetRequestTargetNodeTypesResponse GetRequestTargetNodeTypes(GetRequestTargetNodeTypesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetRequestTargetNodeTypesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetRequestTargetNodeTypesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetRequestTargetNodeTypes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to restart an ES cluster instance (for operations such as system update). 
      * @param req RestartInstanceRequest
      * @return RestartInstanceResponse
@@ -238,6 +258,26 @@ Only one of the parameters or parameter combinations above can be passed in at a
                 Type type = new TypeToken<JsonResponseModel<UpdatePluginsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpdatePlugins");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to update the node types used to receive client requests.
+     * @param req UpdateRequestTargetNodeTypesRequest
+     * @return UpdateRequestTargetNodeTypesResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateRequestTargetNodeTypesResponse UpdateRequestTargetNodeTypes(UpdateRequestTargetNodeTypesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateRequestTargetNodeTypesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateRequestTargetNodeTypesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateRequestTargetNodeTypes");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

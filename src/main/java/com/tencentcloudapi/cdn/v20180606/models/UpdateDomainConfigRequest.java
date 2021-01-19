@@ -296,7 +296,7 @@ global: global acceleration
     private OfflineCache OfflineCache;
 
     /**
-    * 
+    * Merging pull requests
     */
     @SerializedName("OriginCombine")
     @Expose
@@ -939,16 +939,16 @@ global: global acceleration
     }
 
     /**
-     * Get  
-     * @return OriginCombine 
+     * Get Merging pull requests 
+     * @return OriginCombine Merging pull requests
      */
     public OriginCombine getOriginCombine() {
         return this.OriginCombine;
     }
 
     /**
-     * Set 
-     * @param OriginCombine 
+     * Set Merging pull requests
+     * @param OriginCombine Merging pull requests
      */
     public void setOriginCombine(OriginCombine OriginCombine) {
         this.OriginCombine = OriginCombine;

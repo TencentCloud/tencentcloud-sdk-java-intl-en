@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeletePersonRequest extends AbstractModel{
 
     /**
-    * Person ID, which is the `PersonId` in the `CreatePerson` API
+    * Person ID, which is the `PersonId` in the `CreatePerson` API.
     */
     @SerializedName("PersonId")
     @Expose
     private String PersonId;
 
     /**
-     * Get Person ID, which is the `PersonId` in the `CreatePerson` API 
-     * @return PersonId Person ID, which is the `PersonId` in the `CreatePerson` API
+     * Get Person ID, which is the `PersonId` in the `CreatePerson` API. 
+     * @return PersonId Person ID, which is the `PersonId` in the `CreatePerson` API.
      */
     public String getPersonId() {
         return this.PersonId;
     }
 
     /**
-     * Set Person ID, which is the `PersonId` in the `CreatePerson` API
-     * @param PersonId Person ID, which is the `PersonId` in the `CreatePerson` API
+     * Set Person ID, which is the `PersonId` in the `CreatePerson` API.
+     * @param PersonId Person ID, which is the `PersonId` in the `CreatePerson` API.
      */
     public void setPersonId(String PersonId) {
         this.PersonId = PersonId;

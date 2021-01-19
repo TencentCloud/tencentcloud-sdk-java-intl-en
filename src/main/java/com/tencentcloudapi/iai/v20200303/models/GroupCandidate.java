@@ -30,7 +30,7 @@ public class GroupCandidate extends AbstractModel{
     private String GroupId;
 
     /**
-    * Most matching candidates recognized.
+    * Most matching candidate recognized
     */
     @SerializedName("Candidates")
     @Expose
@@ -53,16 +53,16 @@ public class GroupCandidate extends AbstractModel{
     }
 
     /**
-     * Get Most matching candidates recognized. 
-     * @return Candidates Most matching candidates recognized.
+     * Get Most matching candidate recognized 
+     * @return Candidates Most matching candidate recognized
      */
     public Candidate [] getCandidates() {
         return this.Candidates;
     }
 
     /**
-     * Set Most matching candidates recognized.
-     * @param Candidates Most matching candidates recognized.
+     * Set Most matching candidate recognized
+     * @param Candidates Most matching candidate recognized
      */
     public void setCandidates(Candidate [] Candidates) {
         this.Candidates = Candidates;

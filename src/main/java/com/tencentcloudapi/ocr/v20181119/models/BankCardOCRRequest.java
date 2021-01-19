@@ -33,15 +33,50 @@ Either the `ImageUrl` or `ImageBase64` of the image must be provided; if both ar
     private String ImageBase64;
 
     /**
-    * URL address of the image.
+    * URL address of image. (This field is not supported outside Chinese mainland)
 Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
-Supported image size: the downloaded image cannot exceed 7 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-It is recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
     */
     @SerializedName("ImageUrl")
     @Expose
     private String ImageUrl;
+
+    /**
+    * 
+    */
+    @SerializedName("RetBorderCutImage")
+    @Expose
+    private Boolean RetBorderCutImage;
+
+    /**
+    * 
+    */
+    @SerializedName("RetCardNoImage")
+    @Expose
+    private Boolean RetCardNoImage;
+
+    /**
+    * 
+    */
+    @SerializedName("EnableCopyCheck")
+    @Expose
+    private Boolean EnableCopyCheck;
+
+    /**
+    * 
+    */
+    @SerializedName("EnableReshootCheck")
+    @Expose
+    private Boolean EnableReshootCheck;
+
+    /**
+    * 
+    */
+    @SerializedName("EnableBorderCheck")
+    @Expose
+    private Boolean EnableBorderCheck;
 
     /**
      * Get Base64-encoded value of image.
@@ -72,15 +107,15 @@ Either the `ImageUrl` or `ImageBase64` of the image must be provided; if both ar
     }
 
     /**
-     * Get URL address of the image.
+     * Get URL address of image. (This field is not supported outside Chinese mainland)
 Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
-Supported image size: the downloaded image cannot exceed 7 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-It is recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low. 
-     * @return ImageUrl URL address of the image.
+     * @return ImageUrl URL address of image. (This field is not supported outside Chinese mainland)
 Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
-Supported image size: the downloaded image cannot exceed 7 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-It is recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
      */
     public String getImageUrl() {
@@ -88,19 +123,99 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
     }
 
     /**
-     * Set URL address of the image.
+     * Set URL address of image. (This field is not supported outside Chinese mainland)
 Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
-Supported image size: the downloaded image cannot exceed 7 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-It is recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
-     * @param ImageUrl URL address of the image.
+     * @param ImageUrl URL address of image. (This field is not supported outside Chinese mainland)
 Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
-Supported image size: the downloaded image cannot exceed 7 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-It is recommended to store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
+Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
      */
     public void setImageUrl(String ImageUrl) {
         this.ImageUrl = ImageUrl;
+    }
+
+    /**
+     * Get  
+     * @return RetBorderCutImage 
+     */
+    public Boolean getRetBorderCutImage() {
+        return this.RetBorderCutImage;
+    }
+
+    /**
+     * Set 
+     * @param RetBorderCutImage 
+     */
+    public void setRetBorderCutImage(Boolean RetBorderCutImage) {
+        this.RetBorderCutImage = RetBorderCutImage;
+    }
+
+    /**
+     * Get  
+     * @return RetCardNoImage 
+     */
+    public Boolean getRetCardNoImage() {
+        return this.RetCardNoImage;
+    }
+
+    /**
+     * Set 
+     * @param RetCardNoImage 
+     */
+    public void setRetCardNoImage(Boolean RetCardNoImage) {
+        this.RetCardNoImage = RetCardNoImage;
+    }
+
+    /**
+     * Get  
+     * @return EnableCopyCheck 
+     */
+    public Boolean getEnableCopyCheck() {
+        return this.EnableCopyCheck;
+    }
+
+    /**
+     * Set 
+     * @param EnableCopyCheck 
+     */
+    public void setEnableCopyCheck(Boolean EnableCopyCheck) {
+        this.EnableCopyCheck = EnableCopyCheck;
+    }
+
+    /**
+     * Get  
+     * @return EnableReshootCheck 
+     */
+    public Boolean getEnableReshootCheck() {
+        return this.EnableReshootCheck;
+    }
+
+    /**
+     * Set 
+     * @param EnableReshootCheck 
+     */
+    public void setEnableReshootCheck(Boolean EnableReshootCheck) {
+        this.EnableReshootCheck = EnableReshootCheck;
+    }
+
+    /**
+     * Get  
+     * @return EnableBorderCheck 
+     */
+    public Boolean getEnableBorderCheck() {
+        return this.EnableBorderCheck;
+    }
+
+    /**
+     * Set 
+     * @param EnableBorderCheck 
+     */
+    public void setEnableBorderCheck(Boolean EnableBorderCheck) {
+        this.EnableBorderCheck = EnableBorderCheck;
     }
 
     /**
@@ -109,6 +224,11 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+        this.setParamSimple(map, prefix + "RetBorderCutImage", this.RetBorderCutImage);
+        this.setParamSimple(map, prefix + "RetCardNoImage", this.RetCardNoImage);
+        this.setParamSimple(map, prefix + "EnableCopyCheck", this.EnableCopyCheck);
+        this.setParamSimple(map, prefix + "EnableReshootCheck", this.EnableReshootCheck);
+        this.setParamSimple(map, prefix + "EnableBorderCheck", this.EnableBorderCheck);
 
     }
 }

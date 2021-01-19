@@ -51,7 +51,7 @@ public class CreateImageRequest extends AbstractModel{
     private String ForcePoweroff;
 
     /**
-    * Whether to enable Sysprep when creating a Windows image
+    * Whether to enable Sysprep when creating a Windows image. Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_redirect=1) to learn more about Sysprep.
     */
     @SerializedName("Sysprep")
     @Expose
@@ -143,16 +143,16 @@ public class CreateImageRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to enable Sysprep when creating a Windows image 
-     * @return Sysprep Whether to enable Sysprep when creating a Windows image
+     * Get Whether to enable Sysprep when creating a Windows image. Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_redirect=1) to learn more about Sysprep. 
+     * @return Sysprep Whether to enable Sysprep when creating a Windows image. Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_redirect=1) to learn more about Sysprep.
      */
     public String getSysprep() {
         return this.Sysprep;
     }
 
     /**
-     * Set Whether to enable Sysprep when creating a Windows image
-     * @param Sysprep Whether to enable Sysprep when creating a Windows image
+     * Set Whether to enable Sysprep when creating a Windows image. Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_redirect=1) to learn more about Sysprep.
+     * @param Sysprep Whether to enable Sysprep when creating a Windows image. Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_redirect=1) to learn more about Sysprep.
      */
     public void setSysprep(String Sysprep) {
         this.Sysprep = Sysprep;

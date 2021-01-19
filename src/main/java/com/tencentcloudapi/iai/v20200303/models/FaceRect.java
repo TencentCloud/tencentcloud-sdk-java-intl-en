@@ -23,18 +23,18 @@ import java.util.HashMap;
 public class FaceRect extends AbstractModel{
 
     /**
-    * Horizontal coordinate of the top-left corner of face frame. 
+    * Horizontal coordinate of the top-left vertex of face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
+If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
     */
     @SerializedName("X")
     @Expose
     private Long X;
 
     /**
-    * Vertical coordinate of the top-left corner of face frame. 
+    * Vertical coordinate of the top-left vertex of face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
+If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
     */
     @SerializedName("Y")
     @Expose
@@ -55,48 +55,48 @@ If you want to capture a complete face, you can set the negative coordinates to 
     private Long Height;
 
     /**
-     * Get Horizontal coordinate of the top-left corner of face frame. 
+     * Get Horizontal coordinate of the top-left vertex of face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement. 
-     * @return X Horizontal coordinate of the top-left corner of face frame. 
+If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement. 
+     * @return X Horizontal coordinate of the top-left vertex of face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
+If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
      */
     public Long getX() {
         return this.X;
     }
 
     /**
-     * Set Horizontal coordinate of the top-left corner of face frame. 
+     * Set Horizontal coordinate of the top-left vertex of face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
-     * @param X Horizontal coordinate of the top-left corner of face frame. 
+If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
+     * @param X Horizontal coordinate of the top-left vertex of face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
+If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
      */
     public void setX(Long X) {
         this.X = X;
     }
 
     /**
-     * Get Vertical coordinate of the top-left corner of face frame. 
+     * Get Vertical coordinate of the top-left vertex of face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement. 
-     * @return Y Vertical coordinate of the top-left corner of face frame. 
+If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement. 
+     * @return Y Vertical coordinate of the top-left vertex of face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
+If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
      */
     public Long getY() {
         return this.Y;
     }
 
     /**
-     * Set Vertical coordinate of the top-left corner of face frame. 
+     * Set Vertical coordinate of the top-left vertex of face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
-     * @param Y Vertical coordinate of the top-left corner of face frame. 
+If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
+     * @param Y Vertical coordinate of the top-left vertex of face frame. 
 The face frame encompasses the facial features and is extended accordingly. If it is larger than the image, the coordinates will be negative. 
-If you want to capture a complete face, you can set the negative coordinates to 0 if the `completeness` score meets the requirement.
+If you want to capture a complete face, you can set the negative coordinates to 0 if the completeness score meets the requirement.
      */
     public void setY(Long Y) {
         this.Y = Y;

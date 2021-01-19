@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreateGroupRequest extends AbstractModel{
 
     /**
-    * Group name, which is modifiable, must be unique, and can contain 1-60 characters.
+    * Group name, which is modifiable, must be unique, and can contain 1 to 60 characters.
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * Group ID, which is unmodifiable, must be unique, and can contain letters, digits, and special symbols (-%@#&_) of up to 64B.
+    * Group ID, which is unmodifiable, must be unique, and can contain letters, digits, and special symbols (-%@#&_) of up to 64 B.
     */
     @SerializedName("GroupId")
     @Expose
@@ -39,7 +39,7 @@ public class CreateGroupRequest extends AbstractModel{
     /**
     * Custom group description field that describes the person attributes in the group, which will be applied to all persons in the group. 
 Up to 5 ones can be created. 
-Each custom description field can contain 1-30 characters. 
+Each custom description field can contain 1 to 30 characters. 
 The custom description field must be unique in the group. 
 Example: if you set the "custom description field" of a group to ["student ID","employee ID","mobile number"], 
 then all the persons in the group will have description fields named "student ID", "employee ID", and "mobile number". 
@@ -50,7 +50,7 @@ You can enter content in the corresponding field to register a person's student 
     private String [] GroupExDescriptions;
 
     /**
-    * Group remarks, which can contain 0-40 characters.
+    * Group remarks, which can contain 0 to 40 characters.
     */
     @SerializedName("Tag")
     @Expose
@@ -66,32 +66,32 @@ Different algorithm model versions correspond to different face recognition algo
     private String FaceModelVersion;
 
     /**
-     * Get Group name, which is modifiable, must be unique, and can contain 1-60 characters. 
-     * @return GroupName Group name, which is modifiable, must be unique, and can contain 1-60 characters.
+     * Get Group name, which is modifiable, must be unique, and can contain 1 to 60 characters. 
+     * @return GroupName Group name, which is modifiable, must be unique, and can contain 1 to 60 characters.
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set Group name, which is modifiable, must be unique, and can contain 1-60 characters.
-     * @param GroupName Group name, which is modifiable, must be unique, and can contain 1-60 characters.
+     * Set Group name, which is modifiable, must be unique, and can contain 1 to 60 characters.
+     * @param GroupName Group name, which is modifiable, must be unique, and can contain 1 to 60 characters.
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get Group ID, which is unmodifiable, must be unique, and can contain letters, digits, and special symbols (-%@#&_) of up to 64B. 
-     * @return GroupId Group ID, which is unmodifiable, must be unique, and can contain letters, digits, and special symbols (-%@#&_) of up to 64B.
+     * Get Group ID, which is unmodifiable, must be unique, and can contain letters, digits, and special symbols (-%@#&_) of up to 64 B. 
+     * @return GroupId Group ID, which is unmodifiable, must be unique, and can contain letters, digits, and special symbols (-%@#&_) of up to 64 B.
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set Group ID, which is unmodifiable, must be unique, and can contain letters, digits, and special symbols (-%@#&_) of up to 64B.
-     * @param GroupId Group ID, which is unmodifiable, must be unique, and can contain letters, digits, and special symbols (-%@#&_) of up to 64B.
+     * Set Group ID, which is unmodifiable, must be unique, and can contain letters, digits, and special symbols (-%@#&_) of up to 64 B.
+     * @param GroupId Group ID, which is unmodifiable, must be unique, and can contain letters, digits, and special symbols (-%@#&_) of up to 64 B.
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
@@ -100,14 +100,14 @@ Different algorithm model versions correspond to different face recognition algo
     /**
      * Get Custom group description field that describes the person attributes in the group, which will be applied to all persons in the group. 
 Up to 5 ones can be created. 
-Each custom description field can contain 1-30 characters. 
+Each custom description field can contain 1 to 30 characters. 
 The custom description field must be unique in the group. 
 Example: if you set the "custom description field" of a group to ["student ID","employee ID","mobile number"], 
 then all the persons in the group will have description fields named "student ID", "employee ID", and "mobile number". 
 You can enter content in the corresponding field to register a person's student ID, employee ID, and mobile number. 
      * @return GroupExDescriptions Custom group description field that describes the person attributes in the group, which will be applied to all persons in the group. 
 Up to 5 ones can be created. 
-Each custom description field can contain 1-30 characters. 
+Each custom description field can contain 1 to 30 characters. 
 The custom description field must be unique in the group. 
 Example: if you set the "custom description field" of a group to ["student ID","employee ID","mobile number"], 
 then all the persons in the group will have description fields named "student ID", "employee ID", and "mobile number". 
@@ -120,14 +120,14 @@ You can enter content in the corresponding field to register a person's student 
     /**
      * Set Custom group description field that describes the person attributes in the group, which will be applied to all persons in the group. 
 Up to 5 ones can be created. 
-Each custom description field can contain 1-30 characters. 
+Each custom description field can contain 1 to 30 characters. 
 The custom description field must be unique in the group. 
 Example: if you set the "custom description field" of a group to ["student ID","employee ID","mobile number"], 
 then all the persons in the group will have description fields named "student ID", "employee ID", and "mobile number". 
 You can enter content in the corresponding field to register a person's student ID, employee ID, and mobile number.
      * @param GroupExDescriptions Custom group description field that describes the person attributes in the group, which will be applied to all persons in the group. 
 Up to 5 ones can be created. 
-Each custom description field can contain 1-30 characters. 
+Each custom description field can contain 1 to 30 characters. 
 The custom description field must be unique in the group. 
 Example: if you set the "custom description field" of a group to ["student ID","employee ID","mobile number"], 
 then all the persons in the group will have description fields named "student ID", "employee ID", and "mobile number". 
@@ -138,16 +138,16 @@ You can enter content in the corresponding field to register a person's student 
     }
 
     /**
-     * Get Group remarks, which can contain 0-40 characters. 
-     * @return Tag Group remarks, which can contain 0-40 characters.
+     * Get Group remarks, which can contain 0 to 40 characters. 
+     * @return Tag Group remarks, which can contain 0 to 40 characters.
      */
     public String getTag() {
         return this.Tag;
     }
 
     /**
-     * Set Group remarks, which can contain 0-40 characters.
-     * @param Tag Group remarks, which can contain 0-40 characters.
+     * Set Group remarks, which can contain 0 to 40 characters.
+     * @param Tag Group remarks, which can contain 0 to 40 characters.
      */
     public void setTag(String Tag) {
         this.Tag = Tag;

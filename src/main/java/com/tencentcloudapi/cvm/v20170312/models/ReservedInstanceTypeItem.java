@@ -44,21 +44,21 @@ public class ReservedInstanceTypeItem extends AbstractModel{
     private Long Memory;
 
     /**
-    * Number of GPU cores.
+    * Number of GPUs.
     */
     @SerializedName("Gpu")
     @Expose
     private Long Gpu;
 
     /**
-    * Number of FPGA cores.
+    * Number of FPGAs.
     */
     @SerializedName("Fpga")
     @Expose
     private Long Fpga;
 
     /**
-    * Number of storage blocks.
+    * Number of local storage blocks.
     */
     @SerializedName("StorageBlock")
     @Expose
@@ -169,48 +169,48 @@ public class ReservedInstanceTypeItem extends AbstractModel{
     }
 
     /**
-     * Get Number of GPU cores. 
-     * @return Gpu Number of GPU cores.
+     * Get Number of GPUs. 
+     * @return Gpu Number of GPUs.
      */
     public Long getGpu() {
         return this.Gpu;
     }
 
     /**
-     * Set Number of GPU cores.
-     * @param Gpu Number of GPU cores.
+     * Set Number of GPUs.
+     * @param Gpu Number of GPUs.
      */
     public void setGpu(Long Gpu) {
         this.Gpu = Gpu;
     }
 
     /**
-     * Get Number of FPGA cores. 
-     * @return Fpga Number of FPGA cores.
+     * Get Number of FPGAs. 
+     * @return Fpga Number of FPGAs.
      */
     public Long getFpga() {
         return this.Fpga;
     }
 
     /**
-     * Set Number of FPGA cores.
-     * @param Fpga Number of FPGA cores.
+     * Set Number of FPGAs.
+     * @param Fpga Number of FPGAs.
      */
     public void setFpga(Long Fpga) {
         this.Fpga = Fpga;
     }
 
     /**
-     * Get Number of storage blocks. 
-     * @return StorageBlock Number of storage blocks.
+     * Get Number of local storage blocks. 
+     * @return StorageBlock Number of local storage blocks.
      */
     public Long getStorageBlock() {
         return this.StorageBlock;
     }
 
     /**
-     * Set Number of storage blocks.
-     * @param StorageBlock Number of storage blocks.
+     * Set Number of local storage blocks.
+     * @param StorageBlock Number of local storage blocks.
      */
     public void setStorageBlock(Long StorageBlock) {
         this.StorageBlock = StorageBlock;

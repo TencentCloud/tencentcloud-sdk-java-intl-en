@@ -648,26 +648,6 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
-     *This API is used to query spot instances that are available for purchase.
-     * @param req DescribeSpotTypeConfigRequest
-     * @return DescribeSpotTypeConfigResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeSpotTypeConfigResponse DescribeSpotTypeConfig(DescribeSpotTypeConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSpotTypeConfigResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeSpotTypeConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeSpotTypeConfig");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to query the configurations of models in an availability zone.
      * @param req DescribeZoneInstanceConfigInfosRequest
      * @return DescribeZoneInstanceConfigInfosResponse
