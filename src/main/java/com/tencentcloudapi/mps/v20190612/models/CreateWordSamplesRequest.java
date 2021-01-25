@@ -26,12 +26,12 @@ public class CreateWordSamplesRequest extends AbstractModel{
     * <b>Keyword use case. Valid values:</b>
 1. Recognition.Ocr: OCR-based content recognition;
 2. Recognition.Asr: ASR-based content recognition;
-3. Review.Ocr: OCR-based content audit;
-4. Review.Asr: ASR-based content audit;
+3. Review.Ocr: OCR-based detection of inappropriate content;
+4. Review.Asr：ASR-based detection of inappropriate content;
 <b>These values can be merged as follows:</b>
-5. Recognition: ASR-based and OCR-based content recognition, which is equivalent to 1+2 above;
-6. Review: ASR-based and OCR-based content audit, which is equivalent to 3+4 above;
-7. All: ASR-based and OCR-based content recognition and audit, which is equivalent to 1+2+3+4 above;
+5. Recognition: ASR- and OCR-based content recognition, equivalent to 1+2 above;
+6. Review: ASR- and OCR-based detection of inappropriate content, equivalent to 3+4 above;
+7. All: ASR- and OCR-based content recognition and detection of inappropriate content, equivalent to 1+2+3+4 above;
     */
     @SerializedName("Usages")
     @Expose
@@ -48,21 +48,21 @@ public class CreateWordSamplesRequest extends AbstractModel{
      * Get <b>Keyword use case. Valid values:</b>
 1. Recognition.Ocr: OCR-based content recognition;
 2. Recognition.Asr: ASR-based content recognition;
-3. Review.Ocr: OCR-based content audit;
-4. Review.Asr: ASR-based content audit;
+3. Review.Ocr: OCR-based detection of inappropriate content;
+4. Review.Asr：ASR-based detection of inappropriate content;
 <b>These values can be merged as follows:</b>
-5. Recognition: ASR-based and OCR-based content recognition, which is equivalent to 1+2 above;
-6. Review: ASR-based and OCR-based content audit, which is equivalent to 3+4 above;
-7. All: ASR-based and OCR-based content recognition and audit, which is equivalent to 1+2+3+4 above; 
+5. Recognition: ASR- and OCR-based content recognition, equivalent to 1+2 above;
+6. Review: ASR- and OCR-based detection of inappropriate content, equivalent to 3+4 above;
+7. All: ASR- and OCR-based content recognition and detection of inappropriate content, equivalent to 1+2+3+4 above; 
      * @return Usages <b>Keyword use case. Valid values:</b>
 1. Recognition.Ocr: OCR-based content recognition;
 2. Recognition.Asr: ASR-based content recognition;
-3. Review.Ocr: OCR-based content audit;
-4. Review.Asr: ASR-based content audit;
+3. Review.Ocr: OCR-based detection of inappropriate content;
+4. Review.Asr：ASR-based detection of inappropriate content;
 <b>These values can be merged as follows:</b>
-5. Recognition: ASR-based and OCR-based content recognition, which is equivalent to 1+2 above;
-6. Review: ASR-based and OCR-based content audit, which is equivalent to 3+4 above;
-7. All: ASR-based and OCR-based content recognition and audit, which is equivalent to 1+2+3+4 above;
+5. Recognition: ASR- and OCR-based content recognition, equivalent to 1+2 above;
+6. Review: ASR- and OCR-based detection of inappropriate content, equivalent to 3+4 above;
+7. All: ASR- and OCR-based content recognition and detection of inappropriate content, equivalent to 1+2+3+4 above;
      */
     public String [] getUsages() {
         return this.Usages;
@@ -72,21 +72,21 @@ public class CreateWordSamplesRequest extends AbstractModel{
      * Set <b>Keyword use case. Valid values:</b>
 1. Recognition.Ocr: OCR-based content recognition;
 2. Recognition.Asr: ASR-based content recognition;
-3. Review.Ocr: OCR-based content audit;
-4. Review.Asr: ASR-based content audit;
+3. Review.Ocr: OCR-based detection of inappropriate content;
+4. Review.Asr：ASR-based detection of inappropriate content;
 <b>These values can be merged as follows:</b>
-5. Recognition: ASR-based and OCR-based content recognition, which is equivalent to 1+2 above;
-6. Review: ASR-based and OCR-based content audit, which is equivalent to 3+4 above;
-7. All: ASR-based and OCR-based content recognition and audit, which is equivalent to 1+2+3+4 above;
+5. Recognition: ASR- and OCR-based content recognition, equivalent to 1+2 above;
+6. Review: ASR- and OCR-based detection of inappropriate content, equivalent to 3+4 above;
+7. All: ASR- and OCR-based content recognition and detection of inappropriate content, equivalent to 1+2+3+4 above;
      * @param Usages <b>Keyword use case. Valid values:</b>
 1. Recognition.Ocr: OCR-based content recognition;
 2. Recognition.Asr: ASR-based content recognition;
-3. Review.Ocr: OCR-based content audit;
-4. Review.Asr: ASR-based content audit;
+3. Review.Ocr: OCR-based detection of inappropriate content;
+4. Review.Asr：ASR-based detection of inappropriate content;
 <b>These values can be merged as follows:</b>
-5. Recognition: ASR-based and OCR-based content recognition, which is equivalent to 1+2 above;
-6. Review: ASR-based and OCR-based content audit, which is equivalent to 3+4 above;
-7. All: ASR-based and OCR-based content recognition and audit, which is equivalent to 1+2+3+4 above;
+5. Recognition: ASR- and OCR-based content recognition, equivalent to 1+2 above;
+6. Review: ASR- and OCR-based detection of inappropriate content, equivalent to 3+4 above;
+7. All: ASR- and OCR-based content recognition and detection of inappropriate content, equivalent to 1+2+3+4 above;
      */
     public void setUsages(String [] Usages) {
         this.Usages = Usages;

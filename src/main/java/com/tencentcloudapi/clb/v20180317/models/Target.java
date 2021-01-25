@@ -40,7 +40,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Type;
 
     /**
-    * Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API.
+    * Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
 Note: either `InstanceId` or `EniIp` must be passed in.
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
@@ -56,8 +56,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long Weight;
 
     /**
-    * IP of an ENI, which is required when binding an ENI. To bind an ENI with a CLB, you must bind it with a CVM first.
-Note: either `InstanceId` or `EniIp` must be passed in. Binding ENI is now only available to beta users. Please submit a ticket to apply for it if necessary. 
+    * It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
+Note: either `InstanceId` or `EniIp` must be passed in. It is required when binding a dual-stack IPv6 CVM instance.
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("EniIp")
@@ -109,10 +109,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API.
+     * Get Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
 Note: either `InstanceId` or `EniIp` must be passed in.
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return InstanceId Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API.
+     * @return InstanceId Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
 Note: either `InstanceId` or `EniIp` must be passed in.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
@@ -121,10 +121,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API.
+     * Set Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
 Note: either `InstanceId` or `EniIp` must be passed in.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param InstanceId Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API.
+     * @param InstanceId Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
 Note: either `InstanceId` or `EniIp` must be passed in.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
@@ -149,11 +149,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get IP of an ENI, which is required when binding an ENI. To bind an ENI with a CLB, you must bind it with a CVM first.
-Note: either `InstanceId` or `EniIp` must be passed in. Binding ENI is now only available to beta users. Please submit a ticket to apply for it if necessary. 
+     * Get It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
+Note: either `InstanceId` or `EniIp` must be passed in. It is required when binding a dual-stack IPv6 CVM instance.
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return EniIp IP of an ENI, which is required when binding an ENI. To bind an ENI with a CLB, you must bind it with a CVM first.
-Note: either `InstanceId` or `EniIp` must be passed in. Binding ENI is now only available to beta users. Please submit a ticket to apply for it if necessary. 
+     * @return EniIp It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
+Note: either `InstanceId` or `EniIp` must be passed in. It is required when binding a dual-stack IPv6 CVM instance.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getEniIp() {
@@ -161,11 +161,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set IP of an ENI, which is required when binding an ENI. To bind an ENI with a CLB, you must bind it with a CVM first.
-Note: either `InstanceId` or `EniIp` must be passed in. Binding ENI is now only available to beta users. Please submit a ticket to apply for it if necessary. 
+     * Set It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
+Note: either `InstanceId` or `EniIp` must be passed in. It is required when binding a dual-stack IPv6 CVM instance.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param EniIp IP of an ENI, which is required when binding an ENI. To bind an ENI with a CLB, you must bind it with a CVM first.
-Note: either `InstanceId` or `EniIp` must be passed in. Binding ENI is now only available to beta users. Please submit a ticket to apply for it if necessary. 
+     * @param EniIp It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
+Note: either `InstanceId` or `EniIp` must be passed in. It is required when binding a dual-stack IPv6 CVM instance.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setEniIp(String EniIp) {

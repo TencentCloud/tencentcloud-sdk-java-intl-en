@@ -39,6 +39,26 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to associate security groups with Tencent Cloud resources in batches.
+     * @param req AssociateSecurityGroupsRequest
+     * @return AssociateSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssociateSecurityGroupsResponse AssociateSecurityGroups(AssociateSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AssociateSecurityGroupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AssociateSecurityGroupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AssociateSecurityGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to clone an instance account.
      * @param req CloneAccountRequest
      * @return CloneAccountResponse
@@ -221,6 +241,26 @@ Note: accounts with the same username but different hosts are different accounts
     }
 
     /**
+     *This API is used to query the security group details of an instance.
+     * @param req DescribeDBSecurityGroupsRequest
+     * @return DescribeDBSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(DescribeDBSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBSecurityGroupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBSecurityGroupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDBSecurityGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the sync mode of a TencentDB instance.
      * @param req DescribeDBSyncModeRequest
      * @return DescribeDBSyncModeResponse
@@ -342,6 +382,46 @@ If no filter is specified, 10 instances will be returned by default. Up to 100 i
     }
 
     /**
+     *This API is used to query the security group details of a project.
+     * @param req DescribeProjectSecurityGroupsRequest
+     * @return DescribeProjectSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProjectSecurityGroupsResponse DescribeProjectSecurityGroups(DescribeProjectSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProjectSecurityGroupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProjectSecurityGroupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeProjectSecurityGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to unassociate security groups from instances in batches.
+     * @param req DisassociateSecurityGroupsRequest
+     * @return DisassociateSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisassociateSecurityGroupsResponse DisassociateSecurityGroups(DisassociateSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisassociateSecurityGroupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisassociateSecurityGroupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisassociateSecurityGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to grant permissions to a TencentDB account.
 Note: accounts with the same username but different hosts are different accounts.
      * @param req GrantAccountPrivilegesRequest
@@ -396,6 +476,26 @@ Note: accounts with the same username but different hosts are different accounts
                 Type type = new TypeToken<JsonResponseModel<ModifyAccountDescriptionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyAccountDescription");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the security groups associated with TencentDB.
+     * @param req ModifyDBInstanceSecurityGroupsRequest
+     * @return ModifyDBInstanceSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(ModifyDBInstanceSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDBInstanceSecurityGroups");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

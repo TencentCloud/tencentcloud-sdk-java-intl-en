@@ -101,6 +101,13 @@ public class DescribeBillDetailRequest extends AbstractModel{
     private String ActionType;
 
     /**
+    * Project ID: ID of the project to which the resource belongs
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private Long ProjectId;
+
+    /**
      * Get Offset 
      * @return Offset Offset
      */
@@ -281,6 +288,22 @@ public class DescribeBillDetailRequest extends AbstractModel{
     }
 
     /**
+     * Get Project ID: ID of the project to which the resource belongs 
+     * @return ProjectId Project ID: ID of the project to which the resource belongs
+     */
+    public Long getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set Project ID: ID of the project to which the resource belongs
+     * @param ProjectId Project ID: ID of the project to which the resource belongs
+     */
+    public void setProjectId(Long ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -295,6 +318,7 @@ public class DescribeBillDetailRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "ActionType", this.ActionType);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
 
     }
 }

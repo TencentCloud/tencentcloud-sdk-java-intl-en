@@ -407,6 +407,27 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String [] Environments;
 
     /**
+    * 
+    */
+    @SerializedName("IsBase64Encoded")
+    @Expose
+    private Boolean IsBase64Encoded;
+
+    /**
+    * 
+    */
+    @SerializedName("IsBase64Trigger")
+    @Expose
+    private Boolean IsBase64Trigger;
+
+    /**
+    * 
+    */
+    @SerializedName("Base64EncodedTriggerRules")
+    @Expose
+    private Base64EncodedTriggerRule [] Base64EncodedTriggerRules;
+
+    /**
      * Get Unique service ID of API.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return ServiceId Unique service ID of API.
@@ -1367,6 +1388,54 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get  
+     * @return IsBase64Encoded 
+     */
+    public Boolean getIsBase64Encoded() {
+        return this.IsBase64Encoded;
+    }
+
+    /**
+     * Set 
+     * @param IsBase64Encoded 
+     */
+    public void setIsBase64Encoded(Boolean IsBase64Encoded) {
+        this.IsBase64Encoded = IsBase64Encoded;
+    }
+
+    /**
+     * Get  
+     * @return IsBase64Trigger 
+     */
+    public Boolean getIsBase64Trigger() {
+        return this.IsBase64Trigger;
+    }
+
+    /**
+     * Set 
+     * @param IsBase64Trigger 
+     */
+    public void setIsBase64Trigger(Boolean IsBase64Trigger) {
+        this.IsBase64Trigger = IsBase64Trigger;
+    }
+
+    /**
+     * Get  
+     * @return Base64EncodedTriggerRules 
+     */
+    public Base64EncodedTriggerRule [] getBase64EncodedTriggerRules() {
+        return this.Base64EncodedTriggerRules;
+    }
+
+    /**
+     * Set 
+     * @param Base64EncodedTriggerRules 
+     */
+    public void setBase64EncodedTriggerRules(Base64EncodedTriggerRule [] Base64EncodedTriggerRules) {
+        this.Base64EncodedTriggerRules = Base64EncodedTriggerRules;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1418,6 +1487,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "EnableCORS", this.EnableCORS);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamArraySimple(map, prefix + "Environments.", this.Environments);
+        this.setParamSimple(map, prefix + "IsBase64Encoded", this.IsBase64Encoded);
+        this.setParamSimple(map, prefix + "IsBase64Trigger", this.IsBase64Trigger);
+        this.setParamArrayObj(map, prefix + "Base64EncodedTriggerRules.", this.Base64EncodedTriggerRules);
 
     }
 }

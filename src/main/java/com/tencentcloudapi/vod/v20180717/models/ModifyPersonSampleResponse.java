@@ -23,14 +23,15 @@ import java.util.HashMap;
 public class ModifyPersonSampleResponse extends AbstractModel{
 
     /**
-    * Figure information.
+    * Information of a sample.
     */
     @SerializedName("Person")
     @Expose
     private AiSamplePerson Person;
 
     /**
-    * Face information failed to be processed.
+    * Information of samples that failed the verification by facial feature positioning.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("FailFaceInfoSet")
     @Expose
@@ -44,32 +45,36 @@ public class ModifyPersonSampleResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Figure information. 
-     * @return Person Figure information.
+     * Get Information of a sample. 
+     * @return Person Information of a sample.
      */
     public AiSamplePerson getPerson() {
         return this.Person;
     }
 
     /**
-     * Set Figure information.
-     * @param Person Figure information.
+     * Set Information of a sample.
+     * @param Person Information of a sample.
      */
     public void setPerson(AiSamplePerson Person) {
         this.Person = Person;
     }
 
     /**
-     * Get Face information failed to be processed. 
-     * @return FailFaceInfoSet Face information failed to be processed.
+     * Get Information of samples that failed the verification by facial feature positioning.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return FailFaceInfoSet Information of samples that failed the verification by facial feature positioning.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public AiSampleFailFaceInfo [] getFailFaceInfoSet() {
         return this.FailFaceInfoSet;
     }
 
     /**
-     * Set Face information failed to be processed.
-     * @param FailFaceInfoSet Face information failed to be processed.
+     * Set Information of samples that failed the verification by facial feature positioning.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param FailFaceInfoSet Information of samples that failed the verification by facial feature positioning.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setFailFaceInfoSet(AiSampleFailFaceInfo [] FailFaceInfoSet) {
         this.FailFaceInfoSet = FailFaceInfoSet;

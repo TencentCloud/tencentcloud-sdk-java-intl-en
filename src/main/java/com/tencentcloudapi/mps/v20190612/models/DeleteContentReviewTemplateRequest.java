@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeleteContentReviewTemplateRequest extends AbstractModel{
 
     /**
-    * Unique ID of a content audit template.
+    * Unique ID of an intelligent content recognition template
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get Unique ID of a content audit template. 
-     * @return Definition Unique ID of a content audit template.
+     * Get Unique ID of an intelligent content recognition template 
+     * @return Definition Unique ID of an intelligent content recognition template
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique ID of a content audit template.
-     * @param Definition Unique ID of a content audit template.
+     * Set Unique ID of an intelligent content recognition template
+     * @param Definition Unique ID of an intelligent content recognition template
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

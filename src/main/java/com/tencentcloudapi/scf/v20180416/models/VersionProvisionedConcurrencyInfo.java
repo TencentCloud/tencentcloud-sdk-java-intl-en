@@ -37,7 +37,7 @@ public class VersionProvisionedConcurrencyInfo extends AbstractModel{
     private Long AvailableProvisionedConcurrencyNum;
 
     /**
-    * Provisioned concurrency setting task status. Done: completed; InProgress: in progress; Failed: partially or completely failed.
+    * Provisioned concurrency setting task status. `Done`: completed; `InProgress`: in progress; `Failed`: partially or completely failed.
     */
     @SerializedName("Status")
     @Expose
@@ -90,16 +90,16 @@ public class VersionProvisionedConcurrencyInfo extends AbstractModel{
     }
 
     /**
-     * Get Provisioned concurrency setting task status. Done: completed; InProgress: in progress; Failed: partially or completely failed. 
-     * @return Status Provisioned concurrency setting task status. Done: completed; InProgress: in progress; Failed: partially or completely failed.
+     * Get Provisioned concurrency setting task status. `Done`: completed; `InProgress`: in progress; `Failed`: partially or completely failed. 
+     * @return Status Provisioned concurrency setting task status. `Done`: completed; `InProgress`: in progress; `Failed`: partially or completely failed.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Provisioned concurrency setting task status. Done: completed; InProgress: in progress; Failed: partially or completely failed.
-     * @param Status Provisioned concurrency setting task status. Done: completed; InProgress: in progress; Failed: partially or completely failed.
+     * Set Provisioned concurrency setting task status. `Done`: completed; `InProgress`: in progress; `Failed`: partially or completely failed.
+     * @param Status Provisioned concurrency setting task status. `Done`: completed; `InProgress`: in progress; `Failed`: partially or completely failed.
      */
     public void setStatus(String Status) {
         this.Status = Status;

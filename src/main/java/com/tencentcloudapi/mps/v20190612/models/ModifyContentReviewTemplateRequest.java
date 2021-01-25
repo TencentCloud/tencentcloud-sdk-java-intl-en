@@ -23,42 +23,42 @@ import java.util.HashMap;
 public class ModifyContentReviewTemplateRequest extends AbstractModel{
 
     /**
-    * Unique ID of a content audit template.
+    * Unique ID of an intelligent content recognition template
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * Name of a content audit template. Length limit: 64 characters.
+    * Name of an intelligent content recognition template. Length limit: 64 characters.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Description of a content audit template. Length limit: 256 characters.
+    * Description of an intelligent content recognition template. Length limit: 256 characters.
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * Porn information detection control parameter.
+    * Control parameter for offensive content
     */
     @SerializedName("PornConfigure")
     @Expose
     private PornConfigureInfoForUpdate PornConfigure;
 
     /**
-    * Terrorism information detection control parameter.
+    * Control parameter for insecure content
     */
     @SerializedName("TerrorismConfigure")
     @Expose
     private TerrorismConfigureInfoForUpdate TerrorismConfigure;
 
     /**
-    * Politically sensitive information detection control parameter.
+    * Control parameter for inappropriate content
     */
     @SerializedName("PoliticalConfigure")
     @Expose
@@ -75,103 +75,103 @@ Note: this parameter is not supported yet.
     private ProhibitedConfigureInfoForUpdate ProhibitedConfigure;
 
     /**
-    * Custom content audit control parameter.
+    * Control parameter for custom intelligent content recognition
     */
     @SerializedName("UserDefineConfigure")
     @Expose
     private UserDefineConfigureInfoForUpdate UserDefineConfigure;
 
     /**
-     * Get Unique ID of a content audit template. 
-     * @return Definition Unique ID of a content audit template.
+     * Get Unique ID of an intelligent content recognition template 
+     * @return Definition Unique ID of an intelligent content recognition template
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique ID of a content audit template.
-     * @param Definition Unique ID of a content audit template.
+     * Set Unique ID of an intelligent content recognition template
+     * @param Definition Unique ID of an intelligent content recognition template
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get Name of a content audit template. Length limit: 64 characters. 
-     * @return Name Name of a content audit template. Length limit: 64 characters.
+     * Get Name of an intelligent content recognition template. Length limit: 64 characters. 
+     * @return Name Name of an intelligent content recognition template. Length limit: 64 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name of a content audit template. Length limit: 64 characters.
-     * @param Name Name of a content audit template. Length limit: 64 characters.
+     * Set Name of an intelligent content recognition template. Length limit: 64 characters.
+     * @param Name Name of an intelligent content recognition template. Length limit: 64 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Description of a content audit template. Length limit: 256 characters. 
-     * @return Comment Description of a content audit template. Length limit: 256 characters.
+     * Get Description of an intelligent content recognition template. Length limit: 256 characters. 
+     * @return Comment Description of an intelligent content recognition template. Length limit: 256 characters.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Description of a content audit template. Length limit: 256 characters.
-     * @param Comment Description of a content audit template. Length limit: 256 characters.
+     * Set Description of an intelligent content recognition template. Length limit: 256 characters.
+     * @param Comment Description of an intelligent content recognition template. Length limit: 256 characters.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get Porn information detection control parameter. 
-     * @return PornConfigure Porn information detection control parameter.
+     * Get Control parameter for offensive content 
+     * @return PornConfigure Control parameter for offensive content
      */
     public PornConfigureInfoForUpdate getPornConfigure() {
         return this.PornConfigure;
     }
 
     /**
-     * Set Porn information detection control parameter.
-     * @param PornConfigure Porn information detection control parameter.
+     * Set Control parameter for offensive content
+     * @param PornConfigure Control parameter for offensive content
      */
     public void setPornConfigure(PornConfigureInfoForUpdate PornConfigure) {
         this.PornConfigure = PornConfigure;
     }
 
     /**
-     * Get Terrorism information detection control parameter. 
-     * @return TerrorismConfigure Terrorism information detection control parameter.
+     * Get Control parameter for insecure content 
+     * @return TerrorismConfigure Control parameter for insecure content
      */
     public TerrorismConfigureInfoForUpdate getTerrorismConfigure() {
         return this.TerrorismConfigure;
     }
 
     /**
-     * Set Terrorism information detection control parameter.
-     * @param TerrorismConfigure Terrorism information detection control parameter.
+     * Set Control parameter for insecure content
+     * @param TerrorismConfigure Control parameter for insecure content
      */
     public void setTerrorismConfigure(TerrorismConfigureInfoForUpdate TerrorismConfigure) {
         this.TerrorismConfigure = TerrorismConfigure;
     }
 
     /**
-     * Get Politically sensitive information detection control parameter. 
-     * @return PoliticalConfigure Politically sensitive information detection control parameter.
+     * Get Control parameter for inappropriate content 
+     * @return PoliticalConfigure Control parameter for inappropriate content
      */
     public PoliticalConfigureInfoForUpdate getPoliticalConfigure() {
         return this.PoliticalConfigure;
     }
 
     /**
-     * Set Politically sensitive information detection control parameter.
-     * @param PoliticalConfigure Politically sensitive information detection control parameter.
+     * Set Control parameter for inappropriate content
+     * @param PoliticalConfigure Control parameter for inappropriate content
      */
     public void setPoliticalConfigure(PoliticalConfigureInfoForUpdate PoliticalConfigure) {
         this.PoliticalConfigure = PoliticalConfigure;
@@ -206,16 +206,16 @@ Note: this parameter is not supported yet.
     }
 
     /**
-     * Get Custom content audit control parameter. 
-     * @return UserDefineConfigure Custom content audit control parameter.
+     * Get Control parameter for custom intelligent content recognition 
+     * @return UserDefineConfigure Control parameter for custom intelligent content recognition
      */
     public UserDefineConfigureInfoForUpdate getUserDefineConfigure() {
         return this.UserDefineConfigure;
     }
 
     /**
-     * Set Custom content audit control parameter.
-     * @param UserDefineConfigure Custom content audit control parameter.
+     * Set Control parameter for custom intelligent content recognition
+     * @param UserDefineConfigure Control parameter for custom intelligent content recognition
      */
     public void setUserDefineConfigure(UserDefineConfigureInfoForUpdate UserDefineConfigure) {
         this.UserDefineConfigure = UserDefineConfigure;

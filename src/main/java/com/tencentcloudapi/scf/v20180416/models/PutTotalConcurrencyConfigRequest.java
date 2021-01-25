@@ -30,7 +30,7 @@ public class PutTotalConcurrencyConfigRequest extends AbstractModel{
     private Long TotalConcurrencyMem;
 
     /**
-    * Namespace. Default value: default
+    * Namespace. Default value: `default`
     */
     @SerializedName("Namespace")
     @Expose
@@ -53,16 +53,16 @@ public class PutTotalConcurrencyConfigRequest extends AbstractModel{
     }
 
     /**
-     * Get Namespace. Default value: default 
-     * @return Namespace Namespace. Default value: default
+     * Get Namespace. Default value: `default` 
+     * @return Namespace Namespace. Default value: `default`
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set Namespace. Default value: default
-     * @param Namespace Namespace. Default value: default
+     * Set Namespace. Default value: `default`
+     * @param Namespace Namespace. Default value: `default`
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;

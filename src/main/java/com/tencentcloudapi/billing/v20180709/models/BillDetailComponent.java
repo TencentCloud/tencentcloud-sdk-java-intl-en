@@ -135,14 +135,16 @@ public class BillDetailComponent extends AbstractModel{
     private String IncentivePayAmount;
 
     /**
-    * Component type/code (optional)
+    * Component type code
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("ItemCode")
     @Expose
     private String ItemCode;
 
     /**
-    * Component name/code (optional)
+    * Component code
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("ComponentCode")
     @Expose
@@ -412,32 +414,40 @@ public class BillDetailComponent extends AbstractModel{
     }
 
     /**
-     * Get Component type/code (optional) 
-     * @return ItemCode Component type/code (optional)
+     * Get Component type code
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ItemCode Component type code
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getItemCode() {
         return this.ItemCode;
     }
 
     /**
-     * Set Component type/code (optional)
-     * @param ItemCode Component type/code (optional)
+     * Set Component type code
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ItemCode Component type code
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setItemCode(String ItemCode) {
         this.ItemCode = ItemCode;
     }
 
     /**
-     * Get Component name/code (optional) 
-     * @return ComponentCode Component name/code (optional)
+     * Get Component code
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ComponentCode Component code
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getComponentCode() {
         return this.ComponentCode;
     }
 
     /**
-     * Set Component name/code (optional)
-     * @param ComponentCode Component name/code (optional)
+     * Set Component code
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ComponentCode Component code
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setComponentCode(String ComponentCode) {
         this.ComponentCode = ComponentCode;

@@ -44,6 +44,13 @@ public class SimpleHlsClipRequest extends AbstractModel{
     private Float EndTimeOffset;
 
     /**
+    * Whether to store the video clip persistently. 0: no (default), 1: yes.
+    */
+    @SerializedName("IsPersistence")
+    @Expose
+    private Long IsPersistence;
+
+    /**
     * [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
     */
     @SerializedName("SubAppId")
@@ -99,6 +106,22 @@ public class SimpleHlsClipRequest extends AbstractModel{
     }
 
     /**
+     * Get Whether to store the video clip persistently. 0: no (default), 1: yes. 
+     * @return IsPersistence Whether to store the video clip persistently. 0: no (default), 1: yes.
+     */
+    public Long getIsPersistence() {
+        return this.IsPersistence;
+    }
+
+    /**
+     * Set Whether to store the video clip persistently. 0: no (default), 1: yes.
+     * @param IsPersistence Whether to store the video clip persistently. 0: no (default), 1: yes.
+     */
+    public void setIsPersistence(Long IsPersistence) {
+        this.IsPersistence = IsPersistence;
+    }
+
+    /**
      * Get [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty. 
      * @return SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
@@ -121,6 +144,7 @@ public class SimpleHlsClipRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
         this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
+        this.setParamSimple(map, prefix + "IsPersistence", this.IsPersistence);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }

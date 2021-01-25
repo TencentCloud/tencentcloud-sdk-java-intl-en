@@ -49,6 +49,16 @@ public class ImageWatermarkTemplate extends AbstractModel{
     private String Height;
 
     /**
+    * Repeat type of an animated watermark. Valid values:
+<li>once: no longer appears after watermark playback ends.</li>
+<li>repeat_last_frame: stays on the last frame after watermark playback ends.</li>
+<li>repeat (default): repeats the playback until the video ends.</li>
+    */
+    @SerializedName("RepeatType")
+    @Expose
+    private String RepeatType;
+
+    /**
      * Get Watermark image address. 
      * @return ImageUrl Watermark image address.
      */
@@ -117,12 +127,41 @@ public class ImageWatermarkTemplate extends AbstractModel{
     }
 
     /**
+     * Get Repeat type of an animated watermark. Valid values:
+<li>once: no longer appears after watermark playback ends.</li>
+<li>repeat_last_frame: stays on the last frame after watermark playback ends.</li>
+<li>repeat (default): repeats the playback until the video ends.</li> 
+     * @return RepeatType Repeat type of an animated watermark. Valid values:
+<li>once: no longer appears after watermark playback ends.</li>
+<li>repeat_last_frame: stays on the last frame after watermark playback ends.</li>
+<li>repeat (default): repeats the playback until the video ends.</li>
+     */
+    public String getRepeatType() {
+        return this.RepeatType;
+    }
+
+    /**
+     * Set Repeat type of an animated watermark. Valid values:
+<li>once: no longer appears after watermark playback ends.</li>
+<li>repeat_last_frame: stays on the last frame after watermark playback ends.</li>
+<li>repeat (default): repeats the playback until the video ends.</li>
+     * @param RepeatType Repeat type of an animated watermark. Valid values:
+<li>once: no longer appears after watermark playback ends.</li>
+<li>repeat_last_frame: stays on the last frame after watermark playback ends.</li>
+<li>repeat (default): repeats the playback until the video ends.</li>
+     */
+    public void setRepeatType(String RepeatType) {
+        this.RepeatType = RepeatType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
+        this.setParamSimple(map, prefix + "RepeatType", this.RepeatType);
 
     }
 }

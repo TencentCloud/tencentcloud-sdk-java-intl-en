@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeIpGeolocationDatabaseUrlResponse extends AbstractModel{
 
     /**
-    * Download link of the IP location database.
+    * Download link of an IP location database
     */
     @SerializedName("DownLoadUrl")
     @Expose
@@ -44,16 +44,16 @@ public class DescribeIpGeolocationDatabaseUrlResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Download link of the IP location database. 
-     * @return DownLoadUrl Download link of the IP location database.
+     * Get Download link of an IP location database 
+     * @return DownLoadUrl Download link of an IP location database
      */
     public String getDownLoadUrl() {
         return this.DownLoadUrl;
     }
 
     /**
-     * Set Download link of the IP location database.
-     * @param DownLoadUrl Download link of the IP location database.
+     * Set Download link of an IP location database
+     * @param DownLoadUrl Download link of an IP location database
      */
     public void setDownLoadUrl(String DownLoadUrl) {
         this.DownLoadUrl = DownLoadUrl;

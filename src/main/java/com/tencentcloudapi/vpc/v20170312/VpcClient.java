@@ -432,6 +432,26 @@ The number of network instances that each CCN can be associated with is limited.
     }
 
     /**
+     *This API is used to create a security group with the same rule configurations as an existing security group. The cloning only copies the security group and its rules, but not the security group tags.
+     * @param req CloneSecurityGroupRequest
+     * @return CloneSecurityGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloneSecurityGroupResponse CloneSecurityGroup(CloneSecurityGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CloneSecurityGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CloneSecurityGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CloneSecurityGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (CreateAddressTemplate) is used to create an IP address template.
      * @param req CreateAddressTemplateRequest
      * @return CreateAddressTemplateResponse
@@ -1019,9 +1039,9 @@ Description:
 
     /**
      *This API is used to create a VPC instance.
-* The subnet mask of the smallest IP address range that can be created is 28 (16 IP addresses), and that of the largest IP address range is 16 (65,536 IP addresses). For more information, see the corresponding documents about VPC IP address ranges.
-* The number of VPC instances that can be created in a region is limited. For more information, see <a href="https://intl.cloud.tencent.com/doc/product/215/537" title="VPC Use Limits">VPC Use Limits</a>. To request more resources, contact the online customer service.
-* You can bind a tag when creating a VPC instance. The tag list in the response indicates the tags that have been successfully added.
+* The subnet mask of the smallest IP address range that can be created is 28 (16 IP addresses), and that of the largest IP address range is 16 (65,536 IP addresses). For more information on how to plan VPC IP ranges, see [Network Planning](https://intl.cloud.tencent.com/document/product/215/30313?from_cn_redirect=1).
+* The number of VPC instances that can be created in a region is limited. For more information, see <a href="https://intl.cloud.tencent.com/doc/product/215/537?from_cn_redirect=1" title="VPC Use Limits">VPC Use Limits</a>. To request more resources, please [submit a ticket](https://console.cloud.tencent.com/workorder/category).
+* You can bind tags when creating a VPC instance. The tag list in the response indicates the tags that have been successfully added.
      * @param req CreateVpcRequest
      * @return CreateVpcResponse
      * @throws TencentCloudSDKException
@@ -2021,8 +2041,8 @@ A service provider can query all review requests created by any `APPID` under it
     }
 
     /**
-     *This API (DescribeGatewayFlowMonitorDetail) is used to query the monitoring details of the gateway traffic.
-* Only querying of a single gateway instance is supported. That is, only one of the `VpnId`, `DirectConnectGatewayId`, `PeeringConnectionId`, or `NatId` input parameters is supported, and one must be used.
+     *This API is used to query the traffic monitoring details of the gateway.
+* You can only use this API to query a single gateway instance, which means you must pass in only one of `VpnId`, `DirectConnectGatewayId`, `PeeringConnectionId`, or `NatId`.
 * If the gateway has traffic, but no data is returned when this API is called, please check whether gateway traffic monitoring has been enabled in the corresponding gateway details page in the console.
      * @param req DescribeGatewayFlowMonitorDetailRequest
      * @return DescribeGatewayFlowMonitorDetailResponse

@@ -44,7 +44,7 @@ public class PutProvisionedConcurrencyConfigRequest extends AbstractModel{
     private Long VersionProvisionedConcurrencyNum;
 
     /**
-    * Function namespace. Default value: default
+    * Function namespace. Default value: `default`
     */
     @SerializedName("Namespace")
     @Expose
@@ -99,16 +99,16 @@ public class PutProvisionedConcurrencyConfigRequest extends AbstractModel{
     }
 
     /**
-     * Get Function namespace. Default value: default 
-     * @return Namespace Function namespace. Default value: default
+     * Get Function namespace. Default value: `default` 
+     * @return Namespace Function namespace. Default value: `default`
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set Function namespace. Default value: default
-     * @param Namespace Function namespace. Default value: default
+     * Set Function namespace. Default value: `default`
+     * @param Namespace Function namespace. Default value: `default`
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;

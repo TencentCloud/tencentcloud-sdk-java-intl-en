@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyPersonSampleRequest extends AbstractModel{
 
     /**
-    * Figure ID.
+    * Material ID
     */
     @SerializedName("PersonId")
     @Expose
@@ -44,17 +44,17 @@ public class ModifyPersonSampleRequest extends AbstractModel{
     private String Description;
 
     /**
-    * Figure sample use case. Valid values:
-1. Recognition: It is used for content recognition, equivalent to `Recognition.Face`.
-2. Review: It is used for content audit, equivalent to `Review.Face`.
-3. All: It is used for content recognition and content audit, equivalent to 1+2 above.
+    * Material use case. Valid values:
+1. Recognition: used for content recognition, equivalent to `Recognition.Face`.
+2. Review: used for detection of inappropriate content, equivalent to `Review.Face`.
+3. All: used for content recognition and detection of inappropriate content, equivalent to 1 and 2 combined.
     */
     @SerializedName("Usages")
     @Expose
     private String [] Usages;
 
     /**
-    * Face operation information.
+    * Facial feature operation information
     */
     @SerializedName("FaceOperationInfo")
     @Expose
@@ -68,16 +68,16 @@ public class ModifyPersonSampleRequest extends AbstractModel{
     private AiSampleTagOperation TagOperationInfo;
 
     /**
-     * Get Figure ID. 
-     * @return PersonId Figure ID.
+     * Get Material ID 
+     * @return PersonId Material ID
      */
     public String getPersonId() {
         return this.PersonId;
     }
 
     /**
-     * Set Figure ID.
-     * @param PersonId Figure ID.
+     * Set Material ID
+     * @param PersonId Material ID
      */
     public void setPersonId(String PersonId) {
         this.PersonId = PersonId;
@@ -116,44 +116,44 @@ public class ModifyPersonSampleRequest extends AbstractModel{
     }
 
     /**
-     * Get Figure sample use case. Valid values:
-1. Recognition: It is used for content recognition, equivalent to `Recognition.Face`.
-2. Review: It is used for content audit, equivalent to `Review.Face`.
-3. All: It is used for content recognition and content audit, equivalent to 1+2 above. 
-     * @return Usages Figure sample use case. Valid values:
-1. Recognition: It is used for content recognition, equivalent to `Recognition.Face`.
-2. Review: It is used for content audit, equivalent to `Review.Face`.
-3. All: It is used for content recognition and content audit, equivalent to 1+2 above.
+     * Get Material use case. Valid values:
+1. Recognition: used for content recognition, equivalent to `Recognition.Face`.
+2. Review: used for detection of inappropriate content, equivalent to `Review.Face`.
+3. All: used for content recognition and detection of inappropriate content, equivalent to 1 and 2 combined. 
+     * @return Usages Material use case. Valid values:
+1. Recognition: used for content recognition, equivalent to `Recognition.Face`.
+2. Review: used for detection of inappropriate content, equivalent to `Review.Face`.
+3. All: used for content recognition and detection of inappropriate content, equivalent to 1 and 2 combined.
      */
     public String [] getUsages() {
         return this.Usages;
     }
 
     /**
-     * Set Figure sample use case. Valid values:
-1. Recognition: It is used for content recognition, equivalent to `Recognition.Face`.
-2. Review: It is used for content audit, equivalent to `Review.Face`.
-3. All: It is used for content recognition and content audit, equivalent to 1+2 above.
-     * @param Usages Figure sample use case. Valid values:
-1. Recognition: It is used for content recognition, equivalent to `Recognition.Face`.
-2. Review: It is used for content audit, equivalent to `Review.Face`.
-3. All: It is used for content recognition and content audit, equivalent to 1+2 above.
+     * Set Material use case. Valid values:
+1. Recognition: used for content recognition, equivalent to `Recognition.Face`.
+2. Review: used for detection of inappropriate content, equivalent to `Review.Face`.
+3. All: used for content recognition and detection of inappropriate content, equivalent to 1 and 2 combined.
+     * @param Usages Material use case. Valid values:
+1. Recognition: used for content recognition, equivalent to `Recognition.Face`.
+2. Review: used for detection of inappropriate content, equivalent to `Review.Face`.
+3. All: used for content recognition and detection of inappropriate content, equivalent to 1 and 2 combined.
      */
     public void setUsages(String [] Usages) {
         this.Usages = Usages;
     }
 
     /**
-     * Get Face operation information. 
-     * @return FaceOperationInfo Face operation information.
+     * Get Facial feature operation information 
+     * @return FaceOperationInfo Facial feature operation information
      */
     public AiSampleFaceOperation getFaceOperationInfo() {
         return this.FaceOperationInfo;
     }
 
     /**
-     * Set Face operation information.
-     * @param FaceOperationInfo Face operation information.
+     * Set Facial feature operation information
+     * @param FaceOperationInfo Facial feature operation information
      */
     public void setFaceOperationInfo(AiSampleFaceOperation FaceOperationInfo) {
         this.FaceOperationInfo = FaceOperationInfo;

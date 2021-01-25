@@ -30,21 +30,22 @@ public class EventContent extends AbstractModel{
     private String EventHandle;
 
     /**
-    * <b>Supported event type:</b>
-<li>NewFileUpload: video upload completion;</li>
-<li>ProcedureStateChanged: task flow status change;</li>
-<li>FileDeleted: video deletion completion;</li>
-<li>PullComplete: video pull for upload completion;</li>
-<li>EditMediaComplete: video editing completion;</li>
-<li>WechatPublishComplete: release on WeChat completion;</li>
-<li>ComposeMediaComplete: media file composing completion;</li>
-<li>WechatMiniProgramPublishComplete: release on WeChat Mini Program completion.</li>
-<b>Event types compatible with v2017:</b>
-<li>TranscodeComplete: video transcoding completion;</li>
-<li>ConcatComplete: video splicing completion;</li>
-<li>ClipComplete: video clipping completion;</li>
-<li>CreateImageSpriteComplete: image sprite generating completion;</li>
-<li>CreateSnapshotByTimeOffsetComplete: time point screencapturing completion.</li>
+    * <b>Supported event types:</b>
+<li>NewFileUpload: finished video upload</li>
+<li>ProcedureStateChanged: task flow status changed</li>
+<li>FileDeleted: finished video deletion</li>
+<li>PullComplete: finished pulling for upload</li>
+<li>EditMediaComplete: finished video editing</li>
+<li>SplitMediaComplete: finished video splitting</li>
+<li>WechatPublishComplete: finished publishing on WeChat</li>
+<li>ComposeMediaComplete: finished producing the media file</li>
+<li>WechatMiniProgramPublishComplete: finished publishing on WeChat Mini Program</li>
+<b>Support v2017 task types:</b>
+<li>TranscodeComplete: finished video transcoding</li>
+<li>ConcatComplete: finished video splicing</li>
+<li>ClipComplete: finished video clipping</li>
+<li>CreateImageSpriteComplete: finished image sprite generation</li>
+<li>CreateSnapshotByTimeOffsetComplete: finished point-in-time screencapturing</li>
     */
     @SerializedName("EventType")
     @Expose
@@ -91,28 +92,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private EditMediaTask EditMediaCompleteEvent;
 
     /**
-    * Release on WeChat completion event, which is valid if the event type is `WechatPublishComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Video splitting completion event, which is valid if the event type is `EditMediaComplete`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
-    @SerializedName("WechatPublishCompleteEvent")
+    @SerializedName("SplitMediaCompleteEvent")
     @Expose
-    private WechatPublishTask WechatPublishCompleteEvent;
+    private SplitMediaTask SplitMediaCompleteEvent;
 
     /**
-    * Video transcoding completion event, which is valid if the event type is `TranscodeComplete`.
+    * Media file composing task completion event, which is valid when the event type is `ComposeMediaComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("TranscodeCompleteEvent")
+    @SerializedName("ComposeMediaCompleteEvent")
     @Expose
-    private TranscodeTask2017 TranscodeCompleteEvent;
-
-    /**
-    * Video splicing completion event, which is valid if the event type is `ConcatComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("ConcatCompleteEvent")
-    @Expose
-    private ConcatTask2017 ConcatCompleteEvent;
+    private ComposeMediaTask ComposeMediaCompleteEvent;
 
     /**
     * Video clipping completion event, which is valid if the event type is `ClipComplete`.
@@ -123,12 +116,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private ClipTask2017 ClipCompleteEvent;
 
     /**
+    * Video transcoding completion event, which is valid if the event type is `TranscodeComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TranscodeCompleteEvent")
+    @Expose
+    private TranscodeTask2017 TranscodeCompleteEvent;
+
+    /**
     * Image sprite generating completion event, which is valid if the event type is `CreateImageSpriteComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateImageSpriteCompleteEvent")
     @Expose
     private CreateImageSpriteTask2017 CreateImageSpriteCompleteEvent;
+
+    /**
+    * Video splicing completion event, which is valid if the event type is `ConcatComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ConcatCompleteEvent")
+    @Expose
+    private ConcatTask2017 ConcatCompleteEvent;
 
     /**
     * Time point screencapturing completion event, which is valid when the event type is `CreateSnapshotByTimeOffsetComplete`.
@@ -139,12 +148,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private SnapshotByTimeOffsetTask2017 SnapshotByTimeOffsetCompleteEvent;
 
     /**
-    * Media file composing task completion event, which is valid when the event type is `ComposeMediaComplete`.
+    * Release on WeChat completion event, which is valid if the event type is `WechatPublishComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("ComposeMediaCompleteEvent")
+    @SerializedName("WechatPublishCompleteEvent")
     @Expose
-    private ComposeMediaTask ComposeMediaCompleteEvent;
+    private WechatPublishTask WechatPublishCompleteEvent;
 
     /**
     * Release on WeChat Mini Program task completion event, which is valid if the event type is `WechatMiniProgramPublishComplete`.
@@ -171,72 +180,76 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <b>Supported event type:</b>
-<li>NewFileUpload: video upload completion;</li>
-<li>ProcedureStateChanged: task flow status change;</li>
-<li>FileDeleted: video deletion completion;</li>
-<li>PullComplete: video pull for upload completion;</li>
-<li>EditMediaComplete: video editing completion;</li>
-<li>WechatPublishComplete: release on WeChat completion;</li>
-<li>ComposeMediaComplete: media file composing completion;</li>
-<li>WechatMiniProgramPublishComplete: release on WeChat Mini Program completion.</li>
-<b>Event types compatible with v2017:</b>
-<li>TranscodeComplete: video transcoding completion;</li>
-<li>ConcatComplete: video splicing completion;</li>
-<li>ClipComplete: video clipping completion;</li>
-<li>CreateImageSpriteComplete: image sprite generating completion;</li>
-<li>CreateSnapshotByTimeOffsetComplete: time point screencapturing completion.</li> 
-     * @return EventType <b>Supported event type:</b>
-<li>NewFileUpload: video upload completion;</li>
-<li>ProcedureStateChanged: task flow status change;</li>
-<li>FileDeleted: video deletion completion;</li>
-<li>PullComplete: video pull for upload completion;</li>
-<li>EditMediaComplete: video editing completion;</li>
-<li>WechatPublishComplete: release on WeChat completion;</li>
-<li>ComposeMediaComplete: media file composing completion;</li>
-<li>WechatMiniProgramPublishComplete: release on WeChat Mini Program completion.</li>
-<b>Event types compatible with v2017:</b>
-<li>TranscodeComplete: video transcoding completion;</li>
-<li>ConcatComplete: video splicing completion;</li>
-<li>ClipComplete: video clipping completion;</li>
-<li>CreateImageSpriteComplete: image sprite generating completion;</li>
-<li>CreateSnapshotByTimeOffsetComplete: time point screencapturing completion.</li>
+     * Get <b>Supported event types:</b>
+<li>NewFileUpload: finished video upload</li>
+<li>ProcedureStateChanged: task flow status changed</li>
+<li>FileDeleted: finished video deletion</li>
+<li>PullComplete: finished pulling for upload</li>
+<li>EditMediaComplete: finished video editing</li>
+<li>SplitMediaComplete: finished video splitting</li>
+<li>WechatPublishComplete: finished publishing on WeChat</li>
+<li>ComposeMediaComplete: finished producing the media file</li>
+<li>WechatMiniProgramPublishComplete: finished publishing on WeChat Mini Program</li>
+<b>Support v2017 task types:</b>
+<li>TranscodeComplete: finished video transcoding</li>
+<li>ConcatComplete: finished video splicing</li>
+<li>ClipComplete: finished video clipping</li>
+<li>CreateImageSpriteComplete: finished image sprite generation</li>
+<li>CreateSnapshotByTimeOffsetComplete: finished point-in-time screencapturing</li> 
+     * @return EventType <b>Supported event types:</b>
+<li>NewFileUpload: finished video upload</li>
+<li>ProcedureStateChanged: task flow status changed</li>
+<li>FileDeleted: finished video deletion</li>
+<li>PullComplete: finished pulling for upload</li>
+<li>EditMediaComplete: finished video editing</li>
+<li>SplitMediaComplete: finished video splitting</li>
+<li>WechatPublishComplete: finished publishing on WeChat</li>
+<li>ComposeMediaComplete: finished producing the media file</li>
+<li>WechatMiniProgramPublishComplete: finished publishing on WeChat Mini Program</li>
+<b>Support v2017 task types:</b>
+<li>TranscodeComplete: finished video transcoding</li>
+<li>ConcatComplete: finished video splicing</li>
+<li>ClipComplete: finished video clipping</li>
+<li>CreateImageSpriteComplete: finished image sprite generation</li>
+<li>CreateSnapshotByTimeOffsetComplete: finished point-in-time screencapturing</li>
      */
     public String getEventType() {
         return this.EventType;
     }
 
     /**
-     * Set <b>Supported event type:</b>
-<li>NewFileUpload: video upload completion;</li>
-<li>ProcedureStateChanged: task flow status change;</li>
-<li>FileDeleted: video deletion completion;</li>
-<li>PullComplete: video pull for upload completion;</li>
-<li>EditMediaComplete: video editing completion;</li>
-<li>WechatPublishComplete: release on WeChat completion;</li>
-<li>ComposeMediaComplete: media file composing completion;</li>
-<li>WechatMiniProgramPublishComplete: release on WeChat Mini Program completion.</li>
-<b>Event types compatible with v2017:</b>
-<li>TranscodeComplete: video transcoding completion;</li>
-<li>ConcatComplete: video splicing completion;</li>
-<li>ClipComplete: video clipping completion;</li>
-<li>CreateImageSpriteComplete: image sprite generating completion;</li>
-<li>CreateSnapshotByTimeOffsetComplete: time point screencapturing completion.</li>
-     * @param EventType <b>Supported event type:</b>
-<li>NewFileUpload: video upload completion;</li>
-<li>ProcedureStateChanged: task flow status change;</li>
-<li>FileDeleted: video deletion completion;</li>
-<li>PullComplete: video pull for upload completion;</li>
-<li>EditMediaComplete: video editing completion;</li>
-<li>WechatPublishComplete: release on WeChat completion;</li>
-<li>ComposeMediaComplete: media file composing completion;</li>
-<li>WechatMiniProgramPublishComplete: release on WeChat Mini Program completion.</li>
-<b>Event types compatible with v2017:</b>
-<li>TranscodeComplete: video transcoding completion;</li>
-<li>ConcatComplete: video splicing completion;</li>
-<li>ClipComplete: video clipping completion;</li>
-<li>CreateImageSpriteComplete: image sprite generating completion;</li>
-<li>CreateSnapshotByTimeOffsetComplete: time point screencapturing completion.</li>
+     * Set <b>Supported event types:</b>
+<li>NewFileUpload: finished video upload</li>
+<li>ProcedureStateChanged: task flow status changed</li>
+<li>FileDeleted: finished video deletion</li>
+<li>PullComplete: finished pulling for upload</li>
+<li>EditMediaComplete: finished video editing</li>
+<li>SplitMediaComplete: finished video splitting</li>
+<li>WechatPublishComplete: finished publishing on WeChat</li>
+<li>ComposeMediaComplete: finished producing the media file</li>
+<li>WechatMiniProgramPublishComplete: finished publishing on WeChat Mini Program</li>
+<b>Support v2017 task types:</b>
+<li>TranscodeComplete: finished video transcoding</li>
+<li>ConcatComplete: finished video splicing</li>
+<li>ClipComplete: finished video clipping</li>
+<li>CreateImageSpriteComplete: finished image sprite generation</li>
+<li>CreateSnapshotByTimeOffsetComplete: finished point-in-time screencapturing</li>
+     * @param EventType <b>Supported event types:</b>
+<li>NewFileUpload: finished video upload</li>
+<li>ProcedureStateChanged: task flow status changed</li>
+<li>FileDeleted: finished video deletion</li>
+<li>PullComplete: finished pulling for upload</li>
+<li>EditMediaComplete: finished video editing</li>
+<li>SplitMediaComplete: finished video splitting</li>
+<li>WechatPublishComplete: finished publishing on WeChat</li>
+<li>ComposeMediaComplete: finished producing the media file</li>
+<li>WechatMiniProgramPublishComplete: finished publishing on WeChat Mini Program</li>
+<b>Support v2017 task types:</b>
+<li>TranscodeComplete: finished video transcoding</li>
+<li>ConcatComplete: finished video splicing</li>
+<li>ClipComplete: finished video clipping</li>
+<li>CreateImageSpriteComplete: finished image sprite generation</li>
+<li>CreateSnapshotByTimeOffsetComplete: finished point-in-time screencapturing</li>
      */
     public void setEventType(String EventType) {
         this.EventType = EventType;
@@ -343,63 +356,43 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Release on WeChat completion event, which is valid if the event type is `WechatPublishComplete`.
+     * Get Video splitting completion event, which is valid if the event type is `EditMediaComplete`.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return SplitMediaCompleteEvent Video splitting completion event, which is valid if the event type is `EditMediaComplete`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public SplitMediaTask getSplitMediaCompleteEvent() {
+        return this.SplitMediaCompleteEvent;
+    }
+
+    /**
+     * Set Video splitting completion event, which is valid if the event type is `EditMediaComplete`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param SplitMediaCompleteEvent Video splitting completion event, which is valid if the event type is `EditMediaComplete`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setSplitMediaCompleteEvent(SplitMediaTask SplitMediaCompleteEvent) {
+        this.SplitMediaCompleteEvent = SplitMediaCompleteEvent;
+    }
+
+    /**
+     * Get Media file composing task completion event, which is valid when the event type is `ComposeMediaComplete`.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return WechatPublishCompleteEvent Release on WeChat completion event, which is valid if the event type is `WechatPublishComplete`.
+     * @return ComposeMediaCompleteEvent Media file composing task completion event, which is valid when the event type is `ComposeMediaComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
-    public WechatPublishTask getWechatPublishCompleteEvent() {
-        return this.WechatPublishCompleteEvent;
+    public ComposeMediaTask getComposeMediaCompleteEvent() {
+        return this.ComposeMediaCompleteEvent;
     }
 
     /**
-     * Set Release on WeChat completion event, which is valid if the event type is `WechatPublishComplete`.
+     * Set Media file composing task completion event, which is valid when the event type is `ComposeMediaComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param WechatPublishCompleteEvent Release on WeChat completion event, which is valid if the event type is `WechatPublishComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public void setWechatPublishCompleteEvent(WechatPublishTask WechatPublishCompleteEvent) {
-        this.WechatPublishCompleteEvent = WechatPublishCompleteEvent;
-    }
-
-    /**
-     * Get Video transcoding completion event, which is valid if the event type is `TranscodeComplete`.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TranscodeCompleteEvent Video transcoding completion event, which is valid if the event type is `TranscodeComplete`.
+     * @param ComposeMediaCompleteEvent Media file composing task completion event, which is valid when the event type is `ComposeMediaComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
-    public TranscodeTask2017 getTranscodeCompleteEvent() {
-        return this.TranscodeCompleteEvent;
-    }
-
-    /**
-     * Set Video transcoding completion event, which is valid if the event type is `TranscodeComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TranscodeCompleteEvent Video transcoding completion event, which is valid if the event type is `TranscodeComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public void setTranscodeCompleteEvent(TranscodeTask2017 TranscodeCompleteEvent) {
-        this.TranscodeCompleteEvent = TranscodeCompleteEvent;
-    }
-
-    /**
-     * Get Video splicing completion event, which is valid if the event type is `ConcatComplete`.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ConcatCompleteEvent Video splicing completion event, which is valid if the event type is `ConcatComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public ConcatTask2017 getConcatCompleteEvent() {
-        return this.ConcatCompleteEvent;
-    }
-
-    /**
-     * Set Video splicing completion event, which is valid if the event type is `ConcatComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ConcatCompleteEvent Video splicing completion event, which is valid if the event type is `ConcatComplete`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public void setConcatCompleteEvent(ConcatTask2017 ConcatCompleteEvent) {
-        this.ConcatCompleteEvent = ConcatCompleteEvent;
+    public void setComposeMediaCompleteEvent(ComposeMediaTask ComposeMediaCompleteEvent) {
+        this.ComposeMediaCompleteEvent = ComposeMediaCompleteEvent;
     }
 
     /**
@@ -423,6 +416,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Video transcoding completion event, which is valid if the event type is `TranscodeComplete`.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return TranscodeCompleteEvent Video transcoding completion event, which is valid if the event type is `TranscodeComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public TranscodeTask2017 getTranscodeCompleteEvent() {
+        return this.TranscodeCompleteEvent;
+    }
+
+    /**
+     * Set Video transcoding completion event, which is valid if the event type is `TranscodeComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param TranscodeCompleteEvent Video transcoding completion event, which is valid if the event type is `TranscodeComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTranscodeCompleteEvent(TranscodeTask2017 TranscodeCompleteEvent) {
+        this.TranscodeCompleteEvent = TranscodeCompleteEvent;
+    }
+
+    /**
      * Get Image sprite generating completion event, which is valid if the event type is `CreateImageSpriteComplete`.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return CreateImageSpriteCompleteEvent Image sprite generating completion event, which is valid if the event type is `CreateImageSpriteComplete`.
@@ -440,6 +453,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
      */
     public void setCreateImageSpriteCompleteEvent(CreateImageSpriteTask2017 CreateImageSpriteCompleteEvent) {
         this.CreateImageSpriteCompleteEvent = CreateImageSpriteCompleteEvent;
+    }
+
+    /**
+     * Get Video splicing completion event, which is valid if the event type is `ConcatComplete`.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return ConcatCompleteEvent Video splicing completion event, which is valid if the event type is `ConcatComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public ConcatTask2017 getConcatCompleteEvent() {
+        return this.ConcatCompleteEvent;
+    }
+
+    /**
+     * Set Video splicing completion event, which is valid if the event type is `ConcatComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param ConcatCompleteEvent Video splicing completion event, which is valid if the event type is `ConcatComplete`.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setConcatCompleteEvent(ConcatTask2017 ConcatCompleteEvent) {
+        this.ConcatCompleteEvent = ConcatCompleteEvent;
     }
 
     /**
@@ -463,23 +496,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Media file composing task completion event, which is valid when the event type is `ComposeMediaComplete`.
+     * Get Release on WeChat completion event, which is valid if the event type is `WechatPublishComplete`.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ComposeMediaCompleteEvent Media file composing task completion event, which is valid when the event type is `ComposeMediaComplete`.
+     * @return WechatPublishCompleteEvent Release on WeChat completion event, which is valid if the event type is `WechatPublishComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
-    public ComposeMediaTask getComposeMediaCompleteEvent() {
-        return this.ComposeMediaCompleteEvent;
+    public WechatPublishTask getWechatPublishCompleteEvent() {
+        return this.WechatPublishCompleteEvent;
     }
 
     /**
-     * Set Media file composing task completion event, which is valid when the event type is `ComposeMediaComplete`.
+     * Set Release on WeChat completion event, which is valid if the event type is `WechatPublishComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ComposeMediaCompleteEvent Media file composing task completion event, which is valid when the event type is `ComposeMediaComplete`.
+     * @param WechatPublishCompleteEvent Release on WeChat completion event, which is valid if the event type is `WechatPublishComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
-    public void setComposeMediaCompleteEvent(ComposeMediaTask ComposeMediaCompleteEvent) {
-        this.ComposeMediaCompleteEvent = ComposeMediaCompleteEvent;
+    public void setWechatPublishCompleteEvent(WechatPublishTask WechatPublishCompleteEvent) {
+        this.WechatPublishCompleteEvent = WechatPublishCompleteEvent;
     }
 
     /**
@@ -513,13 +546,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "FileDeleteEvent.", this.FileDeleteEvent);
         this.setParamObj(map, prefix + "PullCompleteEvent.", this.PullCompleteEvent);
         this.setParamObj(map, prefix + "EditMediaCompleteEvent.", this.EditMediaCompleteEvent);
-        this.setParamObj(map, prefix + "WechatPublishCompleteEvent.", this.WechatPublishCompleteEvent);
-        this.setParamObj(map, prefix + "TranscodeCompleteEvent.", this.TranscodeCompleteEvent);
-        this.setParamObj(map, prefix + "ConcatCompleteEvent.", this.ConcatCompleteEvent);
-        this.setParamObj(map, prefix + "ClipCompleteEvent.", this.ClipCompleteEvent);
-        this.setParamObj(map, prefix + "CreateImageSpriteCompleteEvent.", this.CreateImageSpriteCompleteEvent);
-        this.setParamObj(map, prefix + "SnapshotByTimeOffsetCompleteEvent.", this.SnapshotByTimeOffsetCompleteEvent);
+        this.setParamObj(map, prefix + "SplitMediaCompleteEvent.", this.SplitMediaCompleteEvent);
         this.setParamObj(map, prefix + "ComposeMediaCompleteEvent.", this.ComposeMediaCompleteEvent);
+        this.setParamObj(map, prefix + "ClipCompleteEvent.", this.ClipCompleteEvent);
+        this.setParamObj(map, prefix + "TranscodeCompleteEvent.", this.TranscodeCompleteEvent);
+        this.setParamObj(map, prefix + "CreateImageSpriteCompleteEvent.", this.CreateImageSpriteCompleteEvent);
+        this.setParamObj(map, prefix + "ConcatCompleteEvent.", this.ConcatCompleteEvent);
+        this.setParamObj(map, prefix + "SnapshotByTimeOffsetCompleteEvent.", this.SnapshotByTimeOffsetCompleteEvent);
+        this.setParamObj(map, prefix + "WechatPublishCompleteEvent.", this.WechatPublishCompleteEvent);
         this.setParamObj(map, prefix + "WechatMiniProgramPublishCompleteEvent.", this.WechatMiniProgramPublishCompleteEvent);
 
     }

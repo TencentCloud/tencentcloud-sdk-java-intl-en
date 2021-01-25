@@ -55,8 +55,8 @@ Note: this field may return null, indicating that no valid value is obtained.
     private Float DiscountPrice;
 
     /**
-    * Discount. For example, 20.0 indicates 80% off.
-Note: this field may return `null`, indicating that no valid value was found.
+    * Percentage of the original price. For example, if you enter "20.0", the discounted price will be 20% of the original price.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Discount")
     @Expose
@@ -264,20 +264,20 @@ Note: this field may return null, indicating that no valid value is obtained.
     }
 
     /**
-     * Get Discount. For example, 20.0 indicates 80% off.
-Note: this field may return `null`, indicating that no valid value was found. 
-     * @return Discount Discount. For example, 20.0 indicates 80% off.
-Note: this field may return `null`, indicating that no valid value was found.
+     * Get Percentage of the original price. For example, if you enter "20.0", the discounted price will be 20% of the original price.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Discount Percentage of the original price. For example, if you enter "20.0", the discounted price will be 20% of the original price.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Float getDiscount() {
         return this.Discount;
     }
 
     /**
-     * Set Discount. For example, 20.0 indicates 80% off.
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param Discount Discount. For example, 20.0 indicates 80% off.
-Note: this field may return `null`, indicating that no valid value was found.
+     * Set Percentage of the original price. For example, if you enter "20.0", the discounted price will be 20% of the original price.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Discount Percentage of the original price. For example, if you enter "20.0", the discounted price will be 20% of the original price.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDiscount(Float Discount) {
         this.Discount = Discount;

@@ -24,7 +24,11 @@ public class ManageTaskRequest extends AbstractModel{
 
     /**
     * Operation type. Valid values:
-<li>Abort: terminates task.</li>
+<ul>
+<li>Abort: task termination. Description:
+<ul><li>If the [task type](https://intl.cloud.tencent.com/document/product/862/37614?from_cn_redirect=1#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0) is live stream processing (`LiveStreamProcessTask`), tasks whose [task status](https://intl.cloud.tencent.com/document/product/862/37614?from_cn_redirect=1#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0) is waiting (`WAITING`) or processing (`PROCESSING`) can be terminated;</li>
+<li>For other [task types](https://intl.cloud.tencent.com/document/product/862/37614?from_cn_redirect=1#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0), only tasks whose [task status](https://intl.cloud.tencent.com/document/product/862/37614?from_cn_redirect=1#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0) is waiting can be terminated.</li></ul>
+</li></ul>
     */
     @SerializedName("OperationType")
     @Expose
@@ -39,9 +43,17 @@ public class ManageTaskRequest extends AbstractModel{
 
     /**
      * Get Operation type. Valid values:
-<li>Abort: terminates task.</li> 
+<ul>
+<li>Abort: task termination. Description:
+<ul><li>If the [task type](https://intl.cloud.tencent.com/document/product/862/37614?from_cn_redirect=1#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0) is live stream processing (`LiveStreamProcessTask`), tasks whose [task status](https://intl.cloud.tencent.com/document/product/862/37614?from_cn_redirect=1#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0) is waiting (`WAITING`) or processing (`PROCESSING`) can be terminated;</li>
+<li>For other [task types](https://intl.cloud.tencent.com/document/product/862/37614?from_cn_redirect=1#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0), only tasks whose [task status](https://intl.cloud.tencent.com/document/product/862/37614?from_cn_redirect=1#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0) is waiting can be terminated.</li></ul>
+</li></ul> 
      * @return OperationType Operation type. Valid values:
-<li>Abort: terminates task.</li>
+<ul>
+<li>Abort: task termination. Description:
+<ul><li>If the [task type](https://intl.cloud.tencent.com/document/product/862/37614?from_cn_redirect=1#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0) is live stream processing (`LiveStreamProcessTask`), tasks whose [task status](https://intl.cloud.tencent.com/document/product/862/37614?from_cn_redirect=1#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0) is waiting (`WAITING`) or processing (`PROCESSING`) can be terminated;</li>
+<li>For other [task types](https://intl.cloud.tencent.com/document/product/862/37614?from_cn_redirect=1#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0), only tasks whose [task status](https://intl.cloud.tencent.com/document/product/862/37614?from_cn_redirect=1#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0) is waiting can be terminated.</li></ul>
+</li></ul>
      */
     public String getOperationType() {
         return this.OperationType;
@@ -49,9 +61,17 @@ public class ManageTaskRequest extends AbstractModel{
 
     /**
      * Set Operation type. Valid values:
-<li>Abort: terminates task.</li>
+<ul>
+<li>Abort: task termination. Description:
+<ul><li>If the [task type](https://intl.cloud.tencent.com/document/product/862/37614?from_cn_redirect=1#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0) is live stream processing (`LiveStreamProcessTask`), tasks whose [task status](https://intl.cloud.tencent.com/document/product/862/37614?from_cn_redirect=1#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0) is waiting (`WAITING`) or processing (`PROCESSING`) can be terminated;</li>
+<li>For other [task types](https://intl.cloud.tencent.com/document/product/862/37614?from_cn_redirect=1#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0), only tasks whose [task status](https://intl.cloud.tencent.com/document/product/862/37614?from_cn_redirect=1#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0) is waiting can be terminated.</li></ul>
+</li></ul>
      * @param OperationType Operation type. Valid values:
-<li>Abort: terminates task.</li>
+<ul>
+<li>Abort: task termination. Description:
+<ul><li>If the [task type](https://intl.cloud.tencent.com/document/product/862/37614?from_cn_redirect=1#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0) is live stream processing (`LiveStreamProcessTask`), tasks whose [task status](https://intl.cloud.tencent.com/document/product/862/37614?from_cn_redirect=1#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0) is waiting (`WAITING`) or processing (`PROCESSING`) can be terminated;</li>
+<li>For other [task types](https://intl.cloud.tencent.com/document/product/862/37614?from_cn_redirect=1#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0), only tasks whose [task status](https://intl.cloud.tencent.com/document/product/862/37614?from_cn_redirect=1#3.-.E8.BE.93.E5.87.BA.E5.8F.82.E6.95.B0) is waiting can be terminated.</li></ul>
+</li></ul>
      */
     public void setOperationType(String OperationType) {
         this.OperationType = OperationType;

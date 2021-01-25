@@ -30,7 +30,7 @@ public class DescribePersonSamplesResponse extends AbstractModel{
     private Long TotalCount;
 
     /**
-    * Figure information.
+    * Material information
     */
     @SerializedName("PersonSet")
     @Expose
@@ -60,16 +60,16 @@ public class DescribePersonSamplesResponse extends AbstractModel{
     }
 
     /**
-     * Get Figure information. 
-     * @return PersonSet Figure information.
+     * Get Material information 
+     * @return PersonSet Material information
      */
     public AiSamplePerson [] getPersonSet() {
         return this.PersonSet;
     }
 
     /**
-     * Set Figure information.
-     * @param PersonSet Figure information.
+     * Set Material information
+     * @param PersonSet Material information
      */
     public void setPersonSet(AiSamplePerson [] PersonSet) {
         this.PersonSet = PersonSet;

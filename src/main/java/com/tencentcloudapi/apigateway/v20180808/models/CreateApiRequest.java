@@ -338,6 +338,13 @@ public class CreateApiRequest extends AbstractModel{
     private String UserType;
 
     /**
+    * 
+    */
+    @SerializedName("IsBase64Encoded")
+    @Expose
+    private Boolean IsBase64Encoded;
+
+    /**
      * Get Unique service ID of API. 
      * @return ServiceId Unique service ID of API.
      */
@@ -1058,6 +1065,22 @@ public class CreateApiRequest extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return IsBase64Encoded 
+     */
+    public Boolean getIsBase64Encoded() {
+        return this.IsBase64Encoded;
+    }
+
+    /**
+     * Set 
+     * @param IsBase64Encoded 
+     */
+    public void setIsBase64Encoded(Boolean IsBase64Encoded) {
+        this.IsBase64Encoded = IsBase64Encoded;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1106,6 +1129,7 @@ public class CreateApiRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "ResponseErrorCodes.", this.ResponseErrorCodes);
         this.setParamSimple(map, prefix + "TargetNamespaceId", this.TargetNamespaceId);
         this.setParamSimple(map, prefix + "UserType", this.UserType);
+        this.setParamSimple(map, prefix + "IsBase64Encoded", this.IsBase64Encoded);
 
     }
 }

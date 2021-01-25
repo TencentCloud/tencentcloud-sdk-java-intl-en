@@ -23,15 +23,15 @@ import java.util.HashMap;
 public class ModifyPersonSampleResponse extends AbstractModel{
 
     /**
-    * Figure information.
+    * Material information
     */
     @SerializedName("Person")
     @Expose
     private AiSamplePerson Person;
 
     /**
-    * Face information failing to be processed.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Information of facial features processed unsuccessfully
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("FailFaceInfoSet")
     @Expose
@@ -45,36 +45,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Figure information. 
-     * @return Person Figure information.
+     * Get Material information 
+     * @return Person Material information
      */
     public AiSamplePerson getPerson() {
         return this.Person;
     }
 
     /**
-     * Set Figure information.
-     * @param Person Figure information.
+     * Set Material information
+     * @param Person Material information
      */
     public void setPerson(AiSamplePerson Person) {
         this.Person = Person;
     }
 
     /**
-     * Get Face information failing to be processed.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FailFaceInfoSet Face information failing to be processed.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Information of facial features processed unsuccessfully
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return FailFaceInfoSet Information of facial features processed unsuccessfully
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public AiSampleFailFaceInfo [] getFailFaceInfoSet() {
         return this.FailFaceInfoSet;
     }
 
     /**
-     * Set Face information failing to be processed.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FailFaceInfoSet Face information failing to be processed.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Information of facial features processed unsuccessfully
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param FailFaceInfoSet Information of facial features processed unsuccessfully
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setFailFaceInfoSet(AiSampleFailFaceInfo [] FailFaceInfoSet) {
         this.FailFaceInfoSet = FailFaceInfoSet;

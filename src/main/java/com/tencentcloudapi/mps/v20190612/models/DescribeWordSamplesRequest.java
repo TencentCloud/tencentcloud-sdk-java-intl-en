@@ -23,26 +23,26 @@ import java.util.HashMap;
 public class DescribeWordSamplesRequest extends AbstractModel{
 
     /**
-    * <b>Keyword use case filter. Valid values:</b>
-1. Recognition.Ocr: OCR-based content recognition;
-2. Recognition.Asr: ASR-based content recognition;
-3. Review.Ocr: OCR-based content audit;
-4. Review.Asr: ASR-based content audit;
-<b>These values can be merged as follows:</b>
-5. Recognition: ASR-based and OCR-based content recognition, which is equivalent to 1+2 above;
-6. Review: ASR-based and OCR-based content audit, which is equivalent to 3+4 above;
-Multiple elements can be selected, and the relationship between them is "or", i.e., any keyword use case that contains any element in this field set will be deemed eligible.
-    */
-    @SerializedName("Usages")
-    @Expose
-    private String [] Usages;
-
-    /**
     * Keyword filter. Array length limit: 100 words.
     */
     @SerializedName("Keywords")
     @Expose
     private String [] Keywords;
+
+    /**
+    * <b>Keyword use case filter. Valid values:</b>
+1. Recognition.Ocr: OCR-based content recognition;
+2. Recognition.Asr: ASR-based content recognition;
+3. Review.Ocr: OCR-based detection of inappropriate content;
+4. Review.Asr：ASR-based detection of inappropriate content;
+<b>These values can be merged as follows:</b>
+5. Recognition: ASR- and OCR-based content recognition, equivalent to 1 and 2 combined;
+6. Review: ASR- and OCR-based detection of inappropriate content, equivalent to 3+4 above;
+Multiple elements can be selected, and the relationship between them is "or", i.e., any keyword use case that contains any element in this field set will be deemed eligible.
+    */
+    @SerializedName("Usages")
+    @Expose
+    private String [] Usages;
 
     /**
     * Tag filter. Array length limit: 20 words.
@@ -66,54 +66,6 @@ Multiple elements can be selected, and the relationship between them is "or", i.
     private Long Limit;
 
     /**
-     * Get <b>Keyword use case filter. Valid values:</b>
-1. Recognition.Ocr: OCR-based content recognition;
-2. Recognition.Asr: ASR-based content recognition;
-3. Review.Ocr: OCR-based content audit;
-4. Review.Asr: ASR-based content audit;
-<b>These values can be merged as follows:</b>
-5. Recognition: ASR-based and OCR-based content recognition, which is equivalent to 1+2 above;
-6. Review: ASR-based and OCR-based content audit, which is equivalent to 3+4 above;
-Multiple elements can be selected, and the relationship between them is "or", i.e., any keyword use case that contains any element in this field set will be deemed eligible. 
-     * @return Usages <b>Keyword use case filter. Valid values:</b>
-1. Recognition.Ocr: OCR-based content recognition;
-2. Recognition.Asr: ASR-based content recognition;
-3. Review.Ocr: OCR-based content audit;
-4. Review.Asr: ASR-based content audit;
-<b>These values can be merged as follows:</b>
-5. Recognition: ASR-based and OCR-based content recognition, which is equivalent to 1+2 above;
-6. Review: ASR-based and OCR-based content audit, which is equivalent to 3+4 above;
-Multiple elements can be selected, and the relationship between them is "or", i.e., any keyword use case that contains any element in this field set will be deemed eligible.
-     */
-    public String [] getUsages() {
-        return this.Usages;
-    }
-
-    /**
-     * Set <b>Keyword use case filter. Valid values:</b>
-1. Recognition.Ocr: OCR-based content recognition;
-2. Recognition.Asr: ASR-based content recognition;
-3. Review.Ocr: OCR-based content audit;
-4. Review.Asr: ASR-based content audit;
-<b>These values can be merged as follows:</b>
-5. Recognition: ASR-based and OCR-based content recognition, which is equivalent to 1+2 above;
-6. Review: ASR-based and OCR-based content audit, which is equivalent to 3+4 above;
-Multiple elements can be selected, and the relationship between them is "or", i.e., any keyword use case that contains any element in this field set will be deemed eligible.
-     * @param Usages <b>Keyword use case filter. Valid values:</b>
-1. Recognition.Ocr: OCR-based content recognition;
-2. Recognition.Asr: ASR-based content recognition;
-3. Review.Ocr: OCR-based content audit;
-4. Review.Asr: ASR-based content audit;
-<b>These values can be merged as follows:</b>
-5. Recognition: ASR-based and OCR-based content recognition, which is equivalent to 1+2 above;
-6. Review: ASR-based and OCR-based content audit, which is equivalent to 3+4 above;
-Multiple elements can be selected, and the relationship between them is "or", i.e., any keyword use case that contains any element in this field set will be deemed eligible.
-     */
-    public void setUsages(String [] Usages) {
-        this.Usages = Usages;
-    }
-
-    /**
      * Get Keyword filter. Array length limit: 100 words. 
      * @return Keywords Keyword filter. Array length limit: 100 words.
      */
@@ -127,6 +79,54 @@ Multiple elements can be selected, and the relationship between them is "or", i.
      */
     public void setKeywords(String [] Keywords) {
         this.Keywords = Keywords;
+    }
+
+    /**
+     * Get <b>Keyword use case filter. Valid values:</b>
+1. Recognition.Ocr: OCR-based content recognition;
+2. Recognition.Asr: ASR-based content recognition;
+3. Review.Ocr: OCR-based detection of inappropriate content;
+4. Review.Asr：ASR-based detection of inappropriate content;
+<b>These values can be merged as follows:</b>
+5. Recognition: ASR- and OCR-based content recognition, equivalent to 1 and 2 combined;
+6. Review: ASR- and OCR-based detection of inappropriate content, equivalent to 3+4 above;
+Multiple elements can be selected, and the relationship between them is "or", i.e., any keyword use case that contains any element in this field set will be deemed eligible. 
+     * @return Usages <b>Keyword use case filter. Valid values:</b>
+1. Recognition.Ocr: OCR-based content recognition;
+2. Recognition.Asr: ASR-based content recognition;
+3. Review.Ocr: OCR-based detection of inappropriate content;
+4. Review.Asr：ASR-based detection of inappropriate content;
+<b>These values can be merged as follows:</b>
+5. Recognition: ASR- and OCR-based content recognition, equivalent to 1 and 2 combined;
+6. Review: ASR- and OCR-based detection of inappropriate content, equivalent to 3+4 above;
+Multiple elements can be selected, and the relationship between them is "or", i.e., any keyword use case that contains any element in this field set will be deemed eligible.
+     */
+    public String [] getUsages() {
+        return this.Usages;
+    }
+
+    /**
+     * Set <b>Keyword use case filter. Valid values:</b>
+1. Recognition.Ocr: OCR-based content recognition;
+2. Recognition.Asr: ASR-based content recognition;
+3. Review.Ocr: OCR-based detection of inappropriate content;
+4. Review.Asr：ASR-based detection of inappropriate content;
+<b>These values can be merged as follows:</b>
+5. Recognition: ASR- and OCR-based content recognition, equivalent to 1 and 2 combined;
+6. Review: ASR- and OCR-based detection of inappropriate content, equivalent to 3+4 above;
+Multiple elements can be selected, and the relationship between them is "or", i.e., any keyword use case that contains any element in this field set will be deemed eligible.
+     * @param Usages <b>Keyword use case filter. Valid values:</b>
+1. Recognition.Ocr: OCR-based content recognition;
+2. Recognition.Asr: ASR-based content recognition;
+3. Review.Ocr: OCR-based detection of inappropriate content;
+4. Review.Asr：ASR-based detection of inappropriate content;
+<b>These values can be merged as follows:</b>
+5. Recognition: ASR- and OCR-based content recognition, equivalent to 1 and 2 combined;
+6. Review: ASR- and OCR-based detection of inappropriate content, equivalent to 3+4 above;
+Multiple elements can be selected, and the relationship between them is "or", i.e., any keyword use case that contains any element in this field set will be deemed eligible.
+     */
+    public void setUsages(String [] Usages) {
+        this.Usages = Usages;
     }
 
     /**
@@ -181,8 +181,8 @@ Multiple elements can be selected, and the relationship between them is "or", i.
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "Usages.", this.Usages);
         this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);
+        this.setParamArraySimple(map, prefix + "Usages.", this.Usages);
         this.setParamArraySimple(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);

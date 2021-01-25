@@ -23,33 +23,33 @@ import java.util.HashMap;
 public class DescribePersonSamplesRequest extends AbstractModel{
 
     /**
-    * Pulled figure type. Valid values:
-<li>UserDefine: custom figure library;</li>
-<li>Default: default figure library.</li>
+    * Type of samples to pull. Valid values:
+<li>UserDefine: custom sample library</li>
+<li>Default: default sample library</li>
 
-Default value: UserDefine (the custom figure library will be pulled.)
-Note: the default figure library can be pulled only through "figure name" or "figure ID + figure name", and only one face image will be returned.
+Default value: UserDefine. Samples in the custom sample library will be pulled.
+Note: samples from the default library can only be pulled by providing the name or both the ID and name of a sample. Only one face image will be returned.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Figure ID. Array length limit: 100.
+    * IDs of samples. Array length limit: 100.
     */
     @SerializedName("PersonIds")
     @Expose
     private String [] PersonIds;
 
     /**
-    * Figure name. Array length limit: 20.
+    * Names of samples. Array length limit: 20.
     */
     @SerializedName("Names")
     @Expose
     private String [] Names;
 
     /**
-    * Figure tag. Array length limit: 20.
+    * Tags of a sample. Array length limit: 20.
     */
     @SerializedName("Tags")
     @Expose
@@ -77,84 +77,84 @@ Note: the default figure library can be pulled only through "figure name" or "fi
     private Long SubAppId;
 
     /**
-     * Get Pulled figure type. Valid values:
-<li>UserDefine: custom figure library;</li>
-<li>Default: default figure library.</li>
+     * Get Type of samples to pull. Valid values:
+<li>UserDefine: custom sample library</li>
+<li>Default: default sample library</li>
 
-Default value: UserDefine (the custom figure library will be pulled.)
-Note: the default figure library can be pulled only through "figure name" or "figure ID + figure name", and only one face image will be returned. 
-     * @return Type Pulled figure type. Valid values:
-<li>UserDefine: custom figure library;</li>
-<li>Default: default figure library.</li>
+Default value: UserDefine. Samples in the custom sample library will be pulled.
+Note: samples from the default library can only be pulled by providing the name or both the ID and name of a sample. Only one face image will be returned. 
+     * @return Type Type of samples to pull. Valid values:
+<li>UserDefine: custom sample library</li>
+<li>Default: default sample library</li>
 
-Default value: UserDefine (the custom figure library will be pulled.)
-Note: the default figure library can be pulled only through "figure name" or "figure ID + figure name", and only one face image will be returned.
+Default value: UserDefine. Samples in the custom sample library will be pulled.
+Note: samples from the default library can only be pulled by providing the name or both the ID and name of a sample. Only one face image will be returned.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Pulled figure type. Valid values:
-<li>UserDefine: custom figure library;</li>
-<li>Default: default figure library.</li>
+     * Set Type of samples to pull. Valid values:
+<li>UserDefine: custom sample library</li>
+<li>Default: default sample library</li>
 
-Default value: UserDefine (the custom figure library will be pulled.)
-Note: the default figure library can be pulled only through "figure name" or "figure ID + figure name", and only one face image will be returned.
-     * @param Type Pulled figure type. Valid values:
-<li>UserDefine: custom figure library;</li>
-<li>Default: default figure library.</li>
+Default value: UserDefine. Samples in the custom sample library will be pulled.
+Note: samples from the default library can only be pulled by providing the name or both the ID and name of a sample. Only one face image will be returned.
+     * @param Type Type of samples to pull. Valid values:
+<li>UserDefine: custom sample library</li>
+<li>Default: default sample library</li>
 
-Default value: UserDefine (the custom figure library will be pulled.)
-Note: the default figure library can be pulled only through "figure name" or "figure ID + figure name", and only one face image will be returned.
+Default value: UserDefine. Samples in the custom sample library will be pulled.
+Note: samples from the default library can only be pulled by providing the name or both the ID and name of a sample. Only one face image will be returned.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Figure ID. Array length limit: 100. 
-     * @return PersonIds Figure ID. Array length limit: 100.
+     * Get IDs of samples. Array length limit: 100. 
+     * @return PersonIds IDs of samples. Array length limit: 100.
      */
     public String [] getPersonIds() {
         return this.PersonIds;
     }
 
     /**
-     * Set Figure ID. Array length limit: 100.
-     * @param PersonIds Figure ID. Array length limit: 100.
+     * Set IDs of samples. Array length limit: 100.
+     * @param PersonIds IDs of samples. Array length limit: 100.
      */
     public void setPersonIds(String [] PersonIds) {
         this.PersonIds = PersonIds;
     }
 
     /**
-     * Get Figure name. Array length limit: 20. 
-     * @return Names Figure name. Array length limit: 20.
+     * Get Names of samples. Array length limit: 20. 
+     * @return Names Names of samples. Array length limit: 20.
      */
     public String [] getNames() {
         return this.Names;
     }
 
     /**
-     * Set Figure name. Array length limit: 20.
-     * @param Names Figure name. Array length limit: 20.
+     * Set Names of samples. Array length limit: 20.
+     * @param Names Names of samples. Array length limit: 20.
      */
     public void setNames(String [] Names) {
         this.Names = Names;
     }
 
     /**
-     * Get Figure tag. Array length limit: 20. 
-     * @return Tags Figure tag. Array length limit: 20.
+     * Get Tags of a sample. Array length limit: 20. 
+     * @return Tags Tags of a sample. Array length limit: 20.
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Figure tag. Array length limit: 20.
-     * @param Tags Figure tag. Array length limit: 20.
+     * Set Tags of a sample. Array length limit: 20.
+     * @param Tags Tags of a sample. Array length limit: 20.
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;

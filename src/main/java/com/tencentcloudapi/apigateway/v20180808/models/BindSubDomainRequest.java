@@ -79,6 +79,13 @@ public class BindSubDomainRequest extends AbstractModel{
     private PathMapping [] PathMappingSet;
 
     /**
+    * Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
+    */
+    @SerializedName("IsForcedHttps")
+    @Expose
+    private Boolean IsForcedHttps;
+
+    /**
      * Get Unique service ID. 
      * @return ServiceId Unique service ID.
      */
@@ -207,6 +214,22 @@ public class BindSubDomainRequest extends AbstractModel{
     }
 
     /**
+     * Get Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding. 
+     * @return IsForcedHttps Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
+     */
+    public Boolean getIsForcedHttps() {
+        return this.IsForcedHttps;
+    }
+
+    /**
+     * Set Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
+     * @param IsForcedHttps Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
+     */
+    public void setIsForcedHttps(Boolean IsForcedHttps) {
+        this.IsForcedHttps = IsForcedHttps;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +241,7 @@ public class BindSubDomainRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NetSubDomain", this.NetSubDomain);
         this.setParamSimple(map, prefix + "CertificateId", this.CertificateId);
         this.setParamArrayObj(map, prefix + "PathMappingSet.", this.PathMappingSet);
+        this.setParamSimple(map, prefix + "IsForcedHttps", this.IsForcedHttps);
 
     }
 }

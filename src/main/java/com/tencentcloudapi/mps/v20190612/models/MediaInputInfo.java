@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class MediaInputInfo extends AbstractModel{
 
     /**
-    * The type of video processing input object. COS and URL objects are supported.
+    * The type of video processing input object, which supports COS and URL.
     */
     @SerializedName("Type")
     @Expose
@@ -45,16 +45,16 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     private UrlInputInfo UrlInputInfo;
 
     /**
-     * Get The type of video processing input object. COS and URL objects are supported. 
-     * @return Type The type of video processing input object. COS and URL objects are supported.
+     * Get The type of video processing input object, which supports COS and URL. 
+     * @return Type The type of video processing input object, which supports COS and URL.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The type of video processing input object. COS and URL objects are supported.
-     * @param Type The type of video processing input object. COS and URL objects are supported.
+     * Set The type of video processing input object, which supports COS and URL.
+     * @param Type The type of video processing input object, which supports COS and URL.
      */
     public void setType(String Type) {
         this.Type = Type;

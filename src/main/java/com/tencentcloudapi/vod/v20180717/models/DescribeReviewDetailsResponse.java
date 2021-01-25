@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class DescribeReviewDetailsResponse extends AbstractModel{
 
     /**
-    * Number of initiated content audits.
+    * Times of initiating intelligent content recognition tasks.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Total content audit duration.
+    * Duration of intelligent recognition content.
     */
     @SerializedName("TotalDuration")
     @Expose
     private Long TotalDuration;
 
     /**
-    * Data of content audit duration, which is collected once per day.
+    * Data of intelligent recognition content duration. One piece of data is collected every day.
     */
     @SerializedName("Data")
     @Expose
@@ -51,48 +51,48 @@ public class DescribeReviewDetailsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Number of initiated content audits. 
-     * @return TotalCount Number of initiated content audits.
+     * Get Times of initiating intelligent content recognition tasks. 
+     * @return TotalCount Times of initiating intelligent content recognition tasks.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of initiated content audits.
-     * @param TotalCount Number of initiated content audits.
+     * Set Times of initiating intelligent content recognition tasks.
+     * @param TotalCount Times of initiating intelligent content recognition tasks.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Total content audit duration. 
-     * @return TotalDuration Total content audit duration.
+     * Get Duration of intelligent recognition content. 
+     * @return TotalDuration Duration of intelligent recognition content.
      */
     public Long getTotalDuration() {
         return this.TotalDuration;
     }
 
     /**
-     * Set Total content audit duration.
-     * @param TotalDuration Total content audit duration.
+     * Set Duration of intelligent recognition content.
+     * @param TotalDuration Duration of intelligent recognition content.
      */
     public void setTotalDuration(Long TotalDuration) {
         this.TotalDuration = TotalDuration;
     }
 
     /**
-     * Get Data of content audit duration, which is collected once per day. 
-     * @return Data Data of content audit duration, which is collected once per day.
+     * Get Data of intelligent recognition content duration. One piece of data is collected every day. 
+     * @return Data Data of intelligent recognition content duration. One piece of data is collected every day.
      */
     public StatDataItem [] getData() {
         return this.Data;
     }
 
     /**
-     * Set Data of content audit duration, which is collected once per day.
-     * @param Data Data of content audit duration, which is collected once per day.
+     * Set Data of intelligent recognition content duration. One piece of data is collected every day.
+     * @param Data Data of intelligent recognition content duration. One piece of data is collected every day.
      */
     public void setData(StatDataItem [] Data) {
         this.Data = Data;

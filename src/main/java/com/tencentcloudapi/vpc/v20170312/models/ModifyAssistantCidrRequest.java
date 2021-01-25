@@ -30,14 +30,14 @@ public class ModifyAssistantCidrRequest extends AbstractModel{
     private String VpcId;
 
     /**
-    * Load CIDR blocks to add. CIDR block set; format: e.g. ["10.0.0.0/16", "172.16.0.0/16"]
+    * Array of the secondary CIDR blocks to be added, such as ["10.0.0.0/16", "172.16.0.0/16"]. Either or both of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
     */
     @SerializedName("NewCidrBlocks")
     @Expose
     private String [] NewCidrBlocks;
 
     /**
-    * Load CIDR blocks to delete. CIDR block set; Format: e.g. ["10.0.0.0/16", "172.16.0.0/16"]
+    * Array of the secondary CIDR blocks to be deleted, such as ["10.0.0.0/16", "172.16.0.0/16"]. Either or both of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
     */
     @SerializedName("OldCidrBlocks")
     @Expose
@@ -60,32 +60,32 @@ public class ModifyAssistantCidrRequest extends AbstractModel{
     }
 
     /**
-     * Get Load CIDR blocks to add. CIDR block set; format: e.g. ["10.0.0.0/16", "172.16.0.0/16"] 
-     * @return NewCidrBlocks Load CIDR blocks to add. CIDR block set; format: e.g. ["10.0.0.0/16", "172.16.0.0/16"]
+     * Get Array of the secondary CIDR blocks to be added, such as ["10.0.0.0/16", "172.16.0.0/16"]. Either or both of `NewCidrBlocks` and `OldCidrBlocks` must be specified. 
+     * @return NewCidrBlocks Array of the secondary CIDR blocks to be added, such as ["10.0.0.0/16", "172.16.0.0/16"]. Either or both of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
      */
     public String [] getNewCidrBlocks() {
         return this.NewCidrBlocks;
     }
 
     /**
-     * Set Load CIDR blocks to add. CIDR block set; format: e.g. ["10.0.0.0/16", "172.16.0.0/16"]
-     * @param NewCidrBlocks Load CIDR blocks to add. CIDR block set; format: e.g. ["10.0.0.0/16", "172.16.0.0/16"]
+     * Set Array of the secondary CIDR blocks to be added, such as ["10.0.0.0/16", "172.16.0.0/16"]. Either or both of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
+     * @param NewCidrBlocks Array of the secondary CIDR blocks to be added, such as ["10.0.0.0/16", "172.16.0.0/16"]. Either or both of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
      */
     public void setNewCidrBlocks(String [] NewCidrBlocks) {
         this.NewCidrBlocks = NewCidrBlocks;
     }
 
     /**
-     * Get Load CIDR blocks to delete. CIDR block set; Format: e.g. ["10.0.0.0/16", "172.16.0.0/16"] 
-     * @return OldCidrBlocks Load CIDR blocks to delete. CIDR block set; Format: e.g. ["10.0.0.0/16", "172.16.0.0/16"]
+     * Get Array of the secondary CIDR blocks to be deleted, such as ["10.0.0.0/16", "172.16.0.0/16"]. Either or both of `NewCidrBlocks` and `OldCidrBlocks` must be specified. 
+     * @return OldCidrBlocks Array of the secondary CIDR blocks to be deleted, such as ["10.0.0.0/16", "172.16.0.0/16"]. Either or both of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
      */
     public String [] getOldCidrBlocks() {
         return this.OldCidrBlocks;
     }
 
     /**
-     * Set Load CIDR blocks to delete. CIDR block set; Format: e.g. ["10.0.0.0/16", "172.16.0.0/16"]
-     * @param OldCidrBlocks Load CIDR blocks to delete. CIDR block set; Format: e.g. ["10.0.0.0/16", "172.16.0.0/16"]
+     * Set Array of the secondary CIDR blocks to be deleted, such as ["10.0.0.0/16", "172.16.0.0/16"]. Either or both of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
+     * @param OldCidrBlocks Array of the secondary CIDR blocks to be deleted, such as ["10.0.0.0/16", "172.16.0.0/16"]. Either or both of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
      */
     public void setOldCidrBlocks(String [] OldCidrBlocks) {
         this.OldCidrBlocks = OldCidrBlocks;

@@ -108,7 +108,8 @@ We don’t recommend specifying this parameter unless you have special requireme
     private Long Vcrf;
 
     /**
-    * 
+    * I-frame interval in frames. Valid values: 0 and 1-100000.
+When this parameter is set to 0 or left empty, `Gop` will be automatically set.
     */
     @SerializedName("Gop")
     @Expose
@@ -359,16 +360,20 @@ We don’t recommend specifying this parameter unless you have special requireme
     }
 
     /**
-     * Get  
-     * @return Gop 
+     * Get I-frame interval in frames. Valid values: 0 and 1-100000.
+When this parameter is set to 0 or left empty, `Gop` will be automatically set. 
+     * @return Gop I-frame interval in frames. Valid values: 0 and 1-100000.
+When this parameter is set to 0 or left empty, `Gop` will be automatically set.
      */
     public Long getGop() {
         return this.Gop;
     }
 
     /**
-     * Set 
-     * @param Gop 
+     * Set I-frame interval in frames. Valid values: 0 and 1-100000.
+When this parameter is set to 0 or left empty, `Gop` will be automatically set.
+     * @param Gop I-frame interval in frames. Valid values: 0 and 1-100000.
+When this parameter is set to 0 or left empty, `Gop` will be automatically set.
      */
     public void setGop(Long Gop) {
         this.Gop = Gop;

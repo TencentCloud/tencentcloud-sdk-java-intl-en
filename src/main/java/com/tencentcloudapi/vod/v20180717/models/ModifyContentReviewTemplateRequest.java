@@ -23,42 +23,42 @@ import java.util.HashMap;
 public class ModifyContentReviewTemplateRequest extends AbstractModel{
 
     /**
-    * Unique ID of content audit template.
+    * Unique ID of an intelligent content recognition template.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * Content audit template name. Length limit: 64 characters.
+    * Name of an intelligent content recognition template. Length limit: 64 characters.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Description of content audit template. Length limit: 256 characters.
+    * Description of an intelligent content recognition template. Length limit: 256 characters.
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * Control parameter of porn detection.
-    */
-    @SerializedName("PornConfigure")
-    @Expose
-    private PornConfigureInfoForUpdate PornConfigure;
-
-    /**
-    * Control parameter of terrorism information detection.
+    * Control parameter for terrorism information.
     */
     @SerializedName("TerrorismConfigure")
     @Expose
     private TerrorismConfigureInfoForUpdate TerrorismConfigure;
 
     /**
-    * Control parameter of politically sensitive information detection.
+    * Control parameter for porn information.
+    */
+    @SerializedName("PornConfigure")
+    @Expose
+    private PornConfigureInfoForUpdate PornConfigure;
+
+    /**
+    * Control parameter for politically sensitive information.
     */
     @SerializedName("PoliticalConfigure")
     @Expose
@@ -74,7 +74,7 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel{
     private ProhibitedConfigureInfoForUpdate ProhibitedConfigure;
 
     /**
-    * Control parameter of custom content audit.
+    * Control parameter for custom intelligent content recognition tasks.
     */
     @SerializedName("UserDefineConfigure")
     @Expose
@@ -88,9 +88,9 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel{
     private Float ScreenshotInterval;
 
     /**
-    * Switch controlling whether to add audit result to review list (for human review).
-<li>ON: yes;</li>
-<li>OFF: no.</li>
+    * Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
+<li>ON: yes</li>
+<li>OFF: no</li>
     */
     @SerializedName("ReviewWallSwitch")
     @Expose
@@ -104,96 +104,96 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * Get Unique ID of content audit template. 
-     * @return Definition Unique ID of content audit template.
+     * Get Unique ID of an intelligent content recognition template. 
+     * @return Definition Unique ID of an intelligent content recognition template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique ID of content audit template.
-     * @param Definition Unique ID of content audit template.
+     * Set Unique ID of an intelligent content recognition template.
+     * @param Definition Unique ID of an intelligent content recognition template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get Content audit template name. Length limit: 64 characters. 
-     * @return Name Content audit template name. Length limit: 64 characters.
+     * Get Name of an intelligent content recognition template. Length limit: 64 characters. 
+     * @return Name Name of an intelligent content recognition template. Length limit: 64 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Content audit template name. Length limit: 64 characters.
-     * @param Name Content audit template name. Length limit: 64 characters.
+     * Set Name of an intelligent content recognition template. Length limit: 64 characters.
+     * @param Name Name of an intelligent content recognition template. Length limit: 64 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Description of content audit template. Length limit: 256 characters. 
-     * @return Comment Description of content audit template. Length limit: 256 characters.
+     * Get Description of an intelligent content recognition template. Length limit: 256 characters. 
+     * @return Comment Description of an intelligent content recognition template. Length limit: 256 characters.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Description of content audit template. Length limit: 256 characters.
-     * @param Comment Description of content audit template. Length limit: 256 characters.
+     * Set Description of an intelligent content recognition template. Length limit: 256 characters.
+     * @param Comment Description of an intelligent content recognition template. Length limit: 256 characters.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get Control parameter of porn detection. 
-     * @return PornConfigure Control parameter of porn detection.
-     */
-    public PornConfigureInfoForUpdate getPornConfigure() {
-        return this.PornConfigure;
-    }
-
-    /**
-     * Set Control parameter of porn detection.
-     * @param PornConfigure Control parameter of porn detection.
-     */
-    public void setPornConfigure(PornConfigureInfoForUpdate PornConfigure) {
-        this.PornConfigure = PornConfigure;
-    }
-
-    /**
-     * Get Control parameter of terrorism information detection. 
-     * @return TerrorismConfigure Control parameter of terrorism information detection.
+     * Get Control parameter for terrorism information. 
+     * @return TerrorismConfigure Control parameter for terrorism information.
      */
     public TerrorismConfigureInfoForUpdate getTerrorismConfigure() {
         return this.TerrorismConfigure;
     }
 
     /**
-     * Set Control parameter of terrorism information detection.
-     * @param TerrorismConfigure Control parameter of terrorism information detection.
+     * Set Control parameter for terrorism information.
+     * @param TerrorismConfigure Control parameter for terrorism information.
      */
     public void setTerrorismConfigure(TerrorismConfigureInfoForUpdate TerrorismConfigure) {
         this.TerrorismConfigure = TerrorismConfigure;
     }
 
     /**
-     * Get Control parameter of politically sensitive information detection. 
-     * @return PoliticalConfigure Control parameter of politically sensitive information detection.
+     * Get Control parameter for porn information. 
+     * @return PornConfigure Control parameter for porn information.
+     */
+    public PornConfigureInfoForUpdate getPornConfigure() {
+        return this.PornConfigure;
+    }
+
+    /**
+     * Set Control parameter for porn information.
+     * @param PornConfigure Control parameter for porn information.
+     */
+    public void setPornConfigure(PornConfigureInfoForUpdate PornConfigure) {
+        this.PornConfigure = PornConfigure;
+    }
+
+    /**
+     * Get Control parameter for politically sensitive information. 
+     * @return PoliticalConfigure Control parameter for politically sensitive information.
      */
     public PoliticalConfigureInfoForUpdate getPoliticalConfigure() {
         return this.PoliticalConfigure;
     }
 
     /**
-     * Set Control parameter of politically sensitive information detection.
-     * @param PoliticalConfigure Control parameter of politically sensitive information detection.
+     * Set Control parameter for politically sensitive information.
+     * @param PoliticalConfigure Control parameter for politically sensitive information.
      */
     public void setPoliticalConfigure(PoliticalConfigureInfoForUpdate PoliticalConfigure) {
         this.PoliticalConfigure = PoliticalConfigure;
@@ -224,16 +224,16 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get Control parameter of custom content audit. 
-     * @return UserDefineConfigure Control parameter of custom content audit.
+     * Get Control parameter for custom intelligent content recognition tasks. 
+     * @return UserDefineConfigure Control parameter for custom intelligent content recognition tasks.
      */
     public UserDefineConfigureInfoForUpdate getUserDefineConfigure() {
         return this.UserDefineConfigure;
     }
 
     /**
-     * Set Control parameter of custom content audit.
-     * @param UserDefineConfigure Control parameter of custom content audit.
+     * Set Control parameter for custom intelligent content recognition tasks.
+     * @param UserDefineConfigure Control parameter for custom intelligent content recognition tasks.
      */
     public void setUserDefineConfigure(UserDefineConfigureInfoForUpdate UserDefineConfigure) {
         this.UserDefineConfigure = UserDefineConfigure;
@@ -256,24 +256,24 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get Switch controlling whether to add audit result to review list (for human review).
-<li>ON: yes;</li>
-<li>OFF: no.</li> 
-     * @return ReviewWallSwitch Switch controlling whether to add audit result to review list (for human review).
-<li>ON: yes;</li>
-<li>OFF: no.</li>
+     * Get Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
+<li>ON: yes</li>
+<li>OFF: no</li> 
+     * @return ReviewWallSwitch Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
+<li>ON: yes</li>
+<li>OFF: no</li>
      */
     public String getReviewWallSwitch() {
         return this.ReviewWallSwitch;
     }
 
     /**
-     * Set Switch controlling whether to add audit result to review list (for human review).
-<li>ON: yes;</li>
-<li>OFF: no.</li>
-     * @param ReviewWallSwitch Switch controlling whether to add audit result to review list (for human review).
-<li>ON: yes;</li>
-<li>OFF: no.</li>
+     * Set Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
+<li>ON: yes</li>
+<li>OFF: no</li>
+     * @param ReviewWallSwitch Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
+<li>ON: yes</li>
+<li>OFF: no</li>
      */
     public void setReviewWallSwitch(String ReviewWallSwitch) {
         this.ReviewWallSwitch = ReviewWallSwitch;
@@ -302,8 +302,8 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
-        this.setParamObj(map, prefix + "PornConfigure.", this.PornConfigure);
         this.setParamObj(map, prefix + "TerrorismConfigure.", this.TerrorismConfigure);
+        this.setParamObj(map, prefix + "PornConfigure.", this.PornConfigure);
         this.setParamObj(map, prefix + "PoliticalConfigure.", this.PoliticalConfigure);
         this.setParamObj(map, prefix + "ProhibitedConfigure.", this.ProhibitedConfigure);
         this.setParamObj(map, prefix + "UserDefineConfigure.", this.UserDefineConfigure);

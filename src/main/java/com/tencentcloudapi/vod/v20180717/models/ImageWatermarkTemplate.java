@@ -49,6 +49,13 @@ public class ImageWatermarkTemplate extends AbstractModel{
     private String Height;
 
     /**
+    * 
+    */
+    @SerializedName("RepeatType")
+    @Expose
+    private String RepeatType;
+
+    /**
      * Get Watermark image address. 
      * @return ImageUrl Watermark image address.
      */
@@ -117,12 +124,29 @@ public class ImageWatermarkTemplate extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return RepeatType 
+     */
+    public String getRepeatType() {
+        return this.RepeatType;
+    }
+
+    /**
+     * Set 
+     * @param RepeatType 
+     */
+    public void setRepeatType(String RepeatType) {
+        this.RepeatType = RepeatType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
+        this.setParamSimple(map, prefix + "RepeatType", this.RepeatType);
 
     }
 }

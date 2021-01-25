@@ -63,6 +63,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private MosaicInput [] MosaicSet;
 
     /**
+    * Start time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+    */
+    @SerializedName("StartTimeOffset")
+    @Expose
+    private Float StartTimeOffset;
+
+    /**
+    * End time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+    */
+    @SerializedName("EndTimeOffset")
+    @Expose
+    private Float EndTimeOffset;
+
+    /**
     * Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -193,6 +213,62 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Start time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li> 
+     * @return StartTimeOffset Start time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+     */
+    public Float getStartTimeOffset() {
+        return this.StartTimeOffset;
+    }
+
+    /**
+     * Set Start time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+     * @param StartTimeOffset Start time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+     */
+    public void setStartTimeOffset(Float StartTimeOffset) {
+        this.StartTimeOffset = StartTimeOffset;
+    }
+
+    /**
+     * Get End time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li> 
+     * @return EndTimeOffset End time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+     */
+    public Float getEndTimeOffset() {
+        return this.EndTimeOffset;
+    }
+
+    /**
+     * Set End time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+     * @param EndTimeOffset End time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+     */
+    public void setEndTimeOffset(Float EndTimeOffset) {
+        this.EndTimeOffset = EndTimeOffset;
+    }
+
+    /**
      * Get Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return OutputStorage Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
@@ -273,6 +349,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "OverrideParameter.", this.OverrideParameter);
         this.setParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
         this.setParamArrayObj(map, prefix + "MosaicSet.", this.MosaicSet);
+        this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
+        this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         this.setParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
         this.setParamSimple(map, prefix + "SegmentObjectName", this.SegmentObjectName);

@@ -37,7 +37,7 @@ public class OutputParams extends AbstractModel{
     private Long PureAudioStream;
 
     /**
-    * Custom recording file name
+    * Custom recording file name. Please enable the recording feature in the TRTC console first. https://intl.cloud.tencent.com/document/product/647/50768?from_cn_redirect=1
     */
     @SerializedName("RecordId")
     @Expose
@@ -83,16 +83,16 @@ public class OutputParams extends AbstractModel{
     }
 
     /**
-     * Get Custom recording file name 
-     * @return RecordId Custom recording file name
+     * Get Custom recording file name. Please enable the recording feature in the TRTC console first. https://intl.cloud.tencent.com/document/product/647/50768?from_cn_redirect=1 
+     * @return RecordId Custom recording file name. Please enable the recording feature in the TRTC console first. https://intl.cloud.tencent.com/document/product/647/50768?from_cn_redirect=1
      */
     public String getRecordId() {
         return this.RecordId;
     }
 
     /**
-     * Set Custom recording file name
-     * @param RecordId Custom recording file name
+     * Set Custom recording file name. Please enable the recording feature in the TRTC console first. https://intl.cloud.tencent.com/document/product/647/50768?from_cn_redirect=1
+     * @param RecordId Custom recording file name. Please enable the recording feature in the TRTC console first. https://intl.cloud.tencent.com/document/product/647/50768?from_cn_redirect=1
      */
     public void setRecordId(String RecordId) {
         this.RecordId = RecordId;

@@ -23,11 +23,39 @@ import java.util.HashMap;
 public class BindSubDomainResponse extends AbstractModel{
 
     /**
+    * Whether binding succeeded.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Result")
+    @Expose
+    private Boolean Result;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get Whether binding succeeded.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Result Whether binding succeeded.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Boolean getResult() {
+        return this.Result;
+    }
+
+    /**
+     * Set Whether binding succeeded.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Result Whether binding succeeded.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setResult(Boolean Result) {
+        this.Result = Result;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -49,6 +77,7 @@ public class BindSubDomainResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

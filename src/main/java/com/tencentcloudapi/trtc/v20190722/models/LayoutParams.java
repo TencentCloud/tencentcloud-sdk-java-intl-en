@@ -72,6 +72,13 @@ public class LayoutParams extends AbstractModel{
     private PresetLayoutConfig [] PresetLayoutConfig;
 
     /**
+    * Valid in custom templates. 1: the placeholding feature is enabled; 0 (default): the feature is disabled. When the feature is enabled, but a user for whom a position is reserved is not sending video data, the position will show the corresponding placeholder image.
+    */
+    @SerializedName("PlaceHolderMode")
+    @Expose
+    private Long PlaceHolderMode;
+
+    /**
      * Get On-cloud stream mix layout template ID. 0: floating template (default value); 1: grid template; 2: screen sharing template; 3: picture-in-picture template; 4: custom template. 
      * @return Template On-cloud stream mix layout template ID. 0: floating template (default value); 1: grid template; 2: screen sharing template; 3: picture-in-picture template; 4: custom template.
      */
@@ -184,6 +191,22 @@ public class LayoutParams extends AbstractModel{
     }
 
     /**
+     * Get Valid in custom templates. 1: the placeholding feature is enabled; 0 (default): the feature is disabled. When the feature is enabled, but a user for whom a position is reserved is not sending video data, the position will show the corresponding placeholder image. 
+     * @return PlaceHolderMode Valid in custom templates. 1: the placeholding feature is enabled; 0 (default): the feature is disabled. When the feature is enabled, but a user for whom a position is reserved is not sending video data, the position will show the corresponding placeholder image.
+     */
+    public Long getPlaceHolderMode() {
+        return this.PlaceHolderMode;
+    }
+
+    /**
+     * Set Valid in custom templates. 1: the placeholding feature is enabled; 0 (default): the feature is disabled. When the feature is enabled, but a user for whom a position is reserved is not sending video data, the position will show the corresponding placeholder image.
+     * @param PlaceHolderMode Valid in custom templates. 1: the placeholding feature is enabled; 0 (default): the feature is disabled. When the feature is enabled, but a user for whom a position is reserved is not sending video data, the position will show the corresponding placeholder image.
+     */
+    public void setPlaceHolderMode(Long PlaceHolderMode) {
+        this.PlaceHolderMode = PlaceHolderMode;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -194,6 +217,7 @@ public class LayoutParams extends AbstractModel{
         this.setParamSimple(map, prefix + "MainVideoRightAlign", this.MainVideoRightAlign);
         this.setParamArraySimple(map, prefix + "MixVideoUids.", this.MixVideoUids);
         this.setParamArrayObj(map, prefix + "PresetLayoutConfig.", this.PresetLayoutConfig);
+        this.setParamSimple(map, prefix + "PlaceHolderMode", this.PlaceHolderMode);
 
     }
 }

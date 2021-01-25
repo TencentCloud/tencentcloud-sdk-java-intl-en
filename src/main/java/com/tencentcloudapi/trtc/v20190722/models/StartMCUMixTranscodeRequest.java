@@ -58,6 +58,13 @@ public class StartMCUMixTranscodeRequest extends AbstractModel{
     private LayoutParams LayoutParams;
 
     /**
+    * Relayed push parameters of a non-Tencent Cloud CDN
+    */
+    @SerializedName("PublishCdnParams")
+    @Expose
+    private PublishCdnParams PublishCdnParams;
+
+    /**
      * Get `SDKAppId` of TRTC. 
      * @return SdkAppId `SDKAppId` of TRTC.
      */
@@ -138,6 +145,22 @@ public class StartMCUMixTranscodeRequest extends AbstractModel{
     }
 
     /**
+     * Get Relayed push parameters of a non-Tencent Cloud CDN 
+     * @return PublishCdnParams Relayed push parameters of a non-Tencent Cloud CDN
+     */
+    public PublishCdnParams getPublishCdnParams() {
+        return this.PublishCdnParams;
+    }
+
+    /**
+     * Set Relayed push parameters of a non-Tencent Cloud CDN
+     * @param PublishCdnParams Relayed push parameters of a non-Tencent Cloud CDN
+     */
+    public void setPublishCdnParams(PublishCdnParams PublishCdnParams) {
+        this.PublishCdnParams = PublishCdnParams;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class StartMCUMixTranscodeRequest extends AbstractModel{
         this.setParamObj(map, prefix + "OutputParams.", this.OutputParams);
         this.setParamObj(map, prefix + "EncodeParams.", this.EncodeParams);
         this.setParamObj(map, prefix + "LayoutParams.", this.LayoutParams);
+        this.setParamObj(map, prefix + "PublishCdnParams.", this.PublishCdnParams);
 
     }
 }

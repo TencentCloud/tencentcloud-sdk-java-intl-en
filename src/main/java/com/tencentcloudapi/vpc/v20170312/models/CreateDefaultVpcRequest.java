@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateDefaultVpcRequest extends AbstractModel{
 
     /**
-    * The ID of the availability zone in which the subnet resides. The availability zone will be randomly selected if not specified.
+    * The ID of the availability zone in which the subnet resides. This parameter can be obtained through the [`DescribeZones`](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API, such as `ap-guangzhou-1`. If it’s not specified, a random availability zone will be used.
     */
     @SerializedName("Zone")
     @Expose
@@ -37,16 +37,16 @@ public class CreateDefaultVpcRequest extends AbstractModel{
     private Boolean Force;
 
     /**
-     * Get The ID of the availability zone in which the subnet resides. The availability zone will be randomly selected if not specified. 
-     * @return Zone The ID of the availability zone in which the subnet resides. The availability zone will be randomly selected if not specified.
+     * Get The ID of the availability zone in which the subnet resides. This parameter can be obtained through the [`DescribeZones`](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API, such as `ap-guangzhou-1`. If it’s not specified, a random availability zone will be used. 
+     * @return Zone The ID of the availability zone in which the subnet resides. This parameter can be obtained through the [`DescribeZones`](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API, such as `ap-guangzhou-1`. If it’s not specified, a random availability zone will be used.
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set The ID of the availability zone in which the subnet resides. The availability zone will be randomly selected if not specified.
-     * @param Zone The ID of the availability zone in which the subnet resides. The availability zone will be randomly selected if not specified.
+     * Set The ID of the availability zone in which the subnet resides. This parameter can be obtained through the [`DescribeZones`](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API, such as `ap-guangzhou-1`. If it’s not specified, a random availability zone will be used.
+     * @param Zone The ID of the availability zone in which the subnet resides. This parameter can be obtained through the [`DescribeZones`](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API, such as `ap-guangzhou-1`. If it’s not specified, a random availability zone will be used.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

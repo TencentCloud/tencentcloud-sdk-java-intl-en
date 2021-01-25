@@ -30,11 +30,14 @@ public class MediaProcessTaskTranscodeResult extends AbstractModel{
     private String Status;
 
     /**
-    * Error code. 0: success; other values: failure.
-<li>40000: invalid input parameter. Please check it;</li>
-<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
-<li>70000: internal service error. Please try again.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+    */
+    @SerializedName("ErrCodeExt")
+    @Expose
+    private String ErrCodeExt;
+
+    /**
+    * Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
     */
     @SerializedName("ErrCode")
     @Expose
@@ -64,6 +67,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private MediaTranscodeItem Output;
 
     /**
+    * Transcoding progress. Value range: 0-100.
+    */
+    @SerializedName("Progress")
+    @Expose
+    private Long Progress;
+
+    /**
      * Get Task status. Valid values: PROCESSING, SUCCESS, FAIL. 
      * @return Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
      */
@@ -80,32 +90,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Error code. 0: success; other values: failure.
-<li>40000: invalid input parameter. Please check it;</li>
-<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
-<li>70000: internal service error. Please try again.</li>
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ErrCode Error code. 0: success; other values: failure.
-<li>40000: invalid input parameter. Please check it;</li>
-<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
-<li>70000: internal service error. Please try again.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145). 
+     * @return ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+     */
+    public String getErrCodeExt() {
+        return this.ErrCodeExt;
+    }
+
+    /**
+     * Set Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+     * @param ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+     */
+    public void setErrCodeExt(String ErrCodeExt) {
+        this.ErrCodeExt = ErrCodeExt;
+    }
+
+    /**
+     * Get Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`. 
+     * @return ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set Error code. 0: success; other values: failure.
-<li>40000: invalid input parameter. Please check it;</li>
-<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
-<li>70000: internal service error. Please try again.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ErrCode Error code. 0: success; other values: failure.
-<li>40000: invalid input parameter. Please check it;</li>
-<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
-<li>70000: internal service error. Please try again.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
+     * @param ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
@@ -168,14 +178,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Transcoding progress. Value range: 0-100. 
+     * @return Progress Transcoding progress. Value range: 0-100.
+     */
+    public Long getProgress() {
+        return this.Progress;
+    }
+
+    /**
+     * Set Transcoding progress. Value range: 0-100.
+     * @param Progress Transcoding progress. Value range: 0-100.
+     */
+    public void setProgress(Long Progress) {
+        this.Progress = Progress;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ErrCodeExt", this.ErrCodeExt);
         this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamObj(map, prefix + "Output.", this.Output);
+        this.setParamSimple(map, prefix + "Progress", this.Progress);
 
     }
 }

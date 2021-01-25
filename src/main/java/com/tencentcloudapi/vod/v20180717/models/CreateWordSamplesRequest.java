@@ -23,15 +23,15 @@ import java.util.HashMap;
 public class CreateWordSamplesRequest extends AbstractModel{
 
     /**
-    * <b>Keyword use case. Valid values:</b>
-1. Recognition.Ocr: OCR-based content recognition;
-2. Recognition.Asr: ASR-based content recognition;
-3. Review.Ocr: OCR-based content audit;
-4. Review.Asr: ASR-based content audit;
-<b>These values can be merged as follows:</b>
-5. Recognition: ASR-based and OCR-based content recognition, which is equivalent to 1+2 above;
-6. Review: ASR-based and OCR-based content audit, which is equivalent to 3+4 above;
-7. All: ASR-based and OCR-based content recognition and audit, which is equivalent to 1+2+3+4 above;
+    * <b>Keyword usage. Valid values:</b>
+1. Recognition.Ocr: OCR-based content recognition
+2. Recognition.Asr: ASR-based content recognition
+3. Review.Ocr: OCR-based inappropriate information recognition
+4. Review.Asr: ASR-based inappropriate information recognition
+<b>Valid values can also be:</b>
+5. Recognition: ASR- and OCR-based content recognition; equivalent to 1+2
+6. Review: ASR- and OCR-based inappropriate information recognition; equivalent to 3+4
+7. All: ASR- and OCR-based content recognition and inappropriate information recognition; equivalent to 1+2+3+4
     */
     @SerializedName("Usages")
     @Expose
@@ -52,48 +52,48 @@ public class CreateWordSamplesRequest extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * Get <b>Keyword use case. Valid values:</b>
-1. Recognition.Ocr: OCR-based content recognition;
-2. Recognition.Asr: ASR-based content recognition;
-3. Review.Ocr: OCR-based content audit;
-4. Review.Asr: ASR-based content audit;
-<b>These values can be merged as follows:</b>
-5. Recognition: ASR-based and OCR-based content recognition, which is equivalent to 1+2 above;
-6. Review: ASR-based and OCR-based content audit, which is equivalent to 3+4 above;
-7. All: ASR-based and OCR-based content recognition and audit, which is equivalent to 1+2+3+4 above; 
-     * @return Usages <b>Keyword use case. Valid values:</b>
-1. Recognition.Ocr: OCR-based content recognition;
-2. Recognition.Asr: ASR-based content recognition;
-3. Review.Ocr: OCR-based content audit;
-4. Review.Asr: ASR-based content audit;
-<b>These values can be merged as follows:</b>
-5. Recognition: ASR-based and OCR-based content recognition, which is equivalent to 1+2 above;
-6. Review: ASR-based and OCR-based content audit, which is equivalent to 3+4 above;
-7. All: ASR-based and OCR-based content recognition and audit, which is equivalent to 1+2+3+4 above;
+     * Get <b>Keyword usage. Valid values:</b>
+1. Recognition.Ocr: OCR-based content recognition
+2. Recognition.Asr: ASR-based content recognition
+3. Review.Ocr: OCR-based inappropriate information recognition
+4. Review.Asr: ASR-based inappropriate information recognition
+<b>Valid values can also be:</b>
+5. Recognition: ASR- and OCR-based content recognition; equivalent to 1+2
+6. Review: ASR- and OCR-based inappropriate information recognition; equivalent to 3+4
+7. All: ASR- and OCR-based content recognition and inappropriate information recognition; equivalent to 1+2+3+4 
+     * @return Usages <b>Keyword usage. Valid values:</b>
+1. Recognition.Ocr: OCR-based content recognition
+2. Recognition.Asr: ASR-based content recognition
+3. Review.Ocr: OCR-based inappropriate information recognition
+4. Review.Asr: ASR-based inappropriate information recognition
+<b>Valid values can also be:</b>
+5. Recognition: ASR- and OCR-based content recognition; equivalent to 1+2
+6. Review: ASR- and OCR-based inappropriate information recognition; equivalent to 3+4
+7. All: ASR- and OCR-based content recognition and inappropriate information recognition; equivalent to 1+2+3+4
      */
     public String [] getUsages() {
         return this.Usages;
     }
 
     /**
-     * Set <b>Keyword use case. Valid values:</b>
-1. Recognition.Ocr: OCR-based content recognition;
-2. Recognition.Asr: ASR-based content recognition;
-3. Review.Ocr: OCR-based content audit;
-4. Review.Asr: ASR-based content audit;
-<b>These values can be merged as follows:</b>
-5. Recognition: ASR-based and OCR-based content recognition, which is equivalent to 1+2 above;
-6. Review: ASR-based and OCR-based content audit, which is equivalent to 3+4 above;
-7. All: ASR-based and OCR-based content recognition and audit, which is equivalent to 1+2+3+4 above;
-     * @param Usages <b>Keyword use case. Valid values:</b>
-1. Recognition.Ocr: OCR-based content recognition;
-2. Recognition.Asr: ASR-based content recognition;
-3. Review.Ocr: OCR-based content audit;
-4. Review.Asr: ASR-based content audit;
-<b>These values can be merged as follows:</b>
-5. Recognition: ASR-based and OCR-based content recognition, which is equivalent to 1+2 above;
-6. Review: ASR-based and OCR-based content audit, which is equivalent to 3+4 above;
-7. All: ASR-based and OCR-based content recognition and audit, which is equivalent to 1+2+3+4 above;
+     * Set <b>Keyword usage. Valid values:</b>
+1. Recognition.Ocr: OCR-based content recognition
+2. Recognition.Asr: ASR-based content recognition
+3. Review.Ocr: OCR-based inappropriate information recognition
+4. Review.Asr: ASR-based inappropriate information recognition
+<b>Valid values can also be:</b>
+5. Recognition: ASR- and OCR-based content recognition; equivalent to 1+2
+6. Review: ASR- and OCR-based inappropriate information recognition; equivalent to 3+4
+7. All: ASR- and OCR-based content recognition and inappropriate information recognition; equivalent to 1+2+3+4
+     * @param Usages <b>Keyword usage. Valid values:</b>
+1. Recognition.Ocr: OCR-based content recognition
+2. Recognition.Asr: ASR-based content recognition
+3. Review.Ocr: OCR-based inappropriate information recognition
+4. Review.Asr: ASR-based inappropriate information recognition
+<b>Valid values can also be:</b>
+5. Recognition: ASR- and OCR-based content recognition; equivalent to 1+2
+6. Review: ASR- and OCR-based inappropriate information recognition; equivalent to 3+4
+7. All: ASR- and OCR-based content recognition and inappropriate information recognition; equivalent to 1+2+3+4
      */
     public void setUsages(String [] Usages) {
         this.Usages = Usages;

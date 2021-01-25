@@ -157,14 +157,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private BillTagInfo [] Tags;
 
     /**
-    * Product name/code (optional)
+    * Product code
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("BusinessCode")
     @Expose
     private String BusinessCode;
 
     /**
-    * Subproduct name/code (optional)
+    * Subproduct code
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("ProductCode")
     @Expose
@@ -183,6 +185,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("RegionId")
     @Expose
     private String RegionId;
+
+    /**
+    * Project ID: ID of the project to which the resource belongs
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private Long ProjectId;
 
     /**
      * Get Product name: major categories of Tencent Cloud services, e.g. CVM and TencentDB for MySQL 
@@ -493,32 +502,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Product name/code (optional) 
-     * @return BusinessCode Product name/code (optional)
+     * Get Product code
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return BusinessCode Product code
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getBusinessCode() {
         return this.BusinessCode;
     }
 
     /**
-     * Set Product name/code (optional)
-     * @param BusinessCode Product name/code (optional)
+     * Set Product code
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param BusinessCode Product code
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setBusinessCode(String BusinessCode) {
         this.BusinessCode = BusinessCode;
     }
 
     /**
-     * Get Subproduct name/code (optional) 
-     * @return ProductCode Subproduct name/code (optional)
+     * Get Subproduct code
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ProductCode Subproduct code
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getProductCode() {
         return this.ProductCode;
     }
 
     /**
-     * Set Subproduct name/code (optional)
-     * @param ProductCode Subproduct name/code (optional)
+     * Set Subproduct code
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ProductCode Subproduct code
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
@@ -557,6 +574,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Project ID: ID of the project to which the resource belongs 
+     * @return ProjectId Project ID: ID of the project to which the resource belongs
+     */
+    public Long getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set Project ID: ID of the project to which the resource belongs
+     * @param ProjectId Project ID: ID of the project to which the resource belongs
+     */
+    public void setProjectId(Long ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -583,6 +616,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ProductCode", this.ProductCode);
         this.setParamSimple(map, prefix + "ActionType", this.ActionType);
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
 
     }
 }

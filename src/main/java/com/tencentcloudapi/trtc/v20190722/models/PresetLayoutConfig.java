@@ -72,11 +72,25 @@ public class PresetLayoutConfig extends AbstractModel{
     private Long ZOrder;
 
     /**
-    * Render mode of the output image. 0: cropping; 1: scaling. If this parameter is not set, 0 is used by default.
+    * Render mode of the output image. 0: cropping; 1: scaling; 2: scaling on a black background. If this parameter is not set, 0 is used by default.
     */
     @SerializedName("RenderMode")
     @Expose
     private Long RenderMode;
+
+    /**
+    * Media type of the mixed stream of the user occupying the current position. 0 (default): audio and video; 1: audio; 2: video. You are advised to specify a user ID when using this parameter.
+    */
+    @SerializedName("MixInputType")
+    @Expose
+    private Long MixInputType;
+
+    /**
+    * Reservation image ID. If the reservation feature is enabled, and a user for whom a image position is reserved is not generating upstream video data, the position will show the reservation image. Reservation images are uploaded and generated in the TRTC console. https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1
+    */
+    @SerializedName("PlaceImageId")
+    @Expose
+    private Long PlaceImageId;
 
     /**
      * Get Used to assign users to preset positions; if not assigned, users will occupy the positions set in `PresetLayoutConfig` in room entry sequence. 
@@ -191,19 +205,51 @@ public class PresetLayoutConfig extends AbstractModel{
     }
 
     /**
-     * Get Render mode of the output image. 0: cropping; 1: scaling. If this parameter is not set, 0 is used by default. 
-     * @return RenderMode Render mode of the output image. 0: cropping; 1: scaling. If this parameter is not set, 0 is used by default.
+     * Get Render mode of the output image. 0: cropping; 1: scaling; 2: scaling on a black background. If this parameter is not set, 0 is used by default. 
+     * @return RenderMode Render mode of the output image. 0: cropping; 1: scaling; 2: scaling on a black background. If this parameter is not set, 0 is used by default.
      */
     public Long getRenderMode() {
         return this.RenderMode;
     }
 
     /**
-     * Set Render mode of the output image. 0: cropping; 1: scaling. If this parameter is not set, 0 is used by default.
-     * @param RenderMode Render mode of the output image. 0: cropping; 1: scaling. If this parameter is not set, 0 is used by default.
+     * Set Render mode of the output image. 0: cropping; 1: scaling; 2: scaling on a black background. If this parameter is not set, 0 is used by default.
+     * @param RenderMode Render mode of the output image. 0: cropping; 1: scaling; 2: scaling on a black background. If this parameter is not set, 0 is used by default.
      */
     public void setRenderMode(Long RenderMode) {
         this.RenderMode = RenderMode;
+    }
+
+    /**
+     * Get Media type of the mixed stream of the user occupying the current position. 0 (default): audio and video; 1: audio; 2: video. You are advised to specify a user ID when using this parameter. 
+     * @return MixInputType Media type of the mixed stream of the user occupying the current position. 0 (default): audio and video; 1: audio; 2: video. You are advised to specify a user ID when using this parameter.
+     */
+    public Long getMixInputType() {
+        return this.MixInputType;
+    }
+
+    /**
+     * Set Media type of the mixed stream of the user occupying the current position. 0 (default): audio and video; 1: audio; 2: video. You are advised to specify a user ID when using this parameter.
+     * @param MixInputType Media type of the mixed stream of the user occupying the current position. 0 (default): audio and video; 1: audio; 2: video. You are advised to specify a user ID when using this parameter.
+     */
+    public void setMixInputType(Long MixInputType) {
+        this.MixInputType = MixInputType;
+    }
+
+    /**
+     * Get Reservation image ID. If the reservation feature is enabled, and a user for whom a image position is reserved is not generating upstream video data, the position will show the reservation image. Reservation images are uploaded and generated in the TRTC console. https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1 
+     * @return PlaceImageId Reservation image ID. If the reservation feature is enabled, and a user for whom a image position is reserved is not generating upstream video data, the position will show the reservation image. Reservation images are uploaded and generated in the TRTC console. https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1
+     */
+    public Long getPlaceImageId() {
+        return this.PlaceImageId;
+    }
+
+    /**
+     * Set Reservation image ID. If the reservation feature is enabled, and a user for whom a image position is reserved is not generating upstream video data, the position will show the reservation image. Reservation images are uploaded and generated in the TRTC console. https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1
+     * @param PlaceImageId Reservation image ID. If the reservation feature is enabled, and a user for whom a image position is reserved is not generating upstream video data, the position will show the reservation image. Reservation images are uploaded and generated in the TRTC console. https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1
+     */
+    public void setPlaceImageId(Long PlaceImageId) {
+        this.PlaceImageId = PlaceImageId;
     }
 
     /**
@@ -218,6 +264,8 @@ public class PresetLayoutConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "LocationY", this.LocationY);
         this.setParamSimple(map, prefix + "ZOrder", this.ZOrder);
         this.setParamSimple(map, prefix + "RenderMode", this.RenderMode);
+        this.setParamSimple(map, prefix + "MixInputType", this.MixInputType);
+        this.setParamSimple(map, prefix + "PlaceImageId", this.PlaceImageId);
 
     }
 }

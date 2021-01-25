@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeRoomInformationResponse extends AbstractModel{
 
     /**
-    * Total number of returned data entries.
+    * Total number of data entries displayed on the current page
     */
     @SerializedName("Total")
     @Expose
@@ -44,16 +44,16 @@ public class DescribeRoomInformationResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Total number of returned data entries. 
-     * @return Total Total number of returned data entries.
+     * Get Total number of data entries displayed on the current page 
+     * @return Total Total number of data entries displayed on the current page
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set Total number of returned data entries.
-     * @param Total Total number of returned data entries.
+     * Set Total number of data entries displayed on the current page
+     * @param Total Total number of data entries displayed on the current page
      */
     public void setTotal(Long Total) {
         this.Total = Total;

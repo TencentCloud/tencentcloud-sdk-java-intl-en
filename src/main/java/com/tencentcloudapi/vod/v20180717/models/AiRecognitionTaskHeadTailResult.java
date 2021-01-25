@@ -30,7 +30,14 @@ public class AiRecognitionTaskHeadTailResult extends AbstractModel{
     private String Status;
 
     /**
-    * Error code. 0: success; other values: failure.
+    * Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+    */
+    @SerializedName("ErrCodeExt")
+    @Expose
+    private String ErrCodeExt;
+
+    /**
+    * Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
     */
     @SerializedName("ErrCode")
     @Expose
@@ -75,16 +82,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Error code. 0: success; other values: failure. 
-     * @return ErrCode Error code. 0: success; other values: failure.
+     * Get Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145). 
+     * @return ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+     */
+    public String getErrCodeExt() {
+        return this.ErrCodeExt;
+    }
+
+    /**
+     * Set Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+     * @param ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+     */
+    public void setErrCodeExt(String ErrCodeExt) {
+        this.ErrCodeExt = ErrCodeExt;
+    }
+
+    /**
+     * Get Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`. 
+     * @return ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set Error code. 0: success; other values: failure.
-     * @param ErrCode Error code. 0: success; other values: failure.
+     * Set Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
+     * @param ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
@@ -147,6 +170,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ErrCodeExt", this.ErrCodeExt);
         this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamObj(map, prefix + "Input.", this.Input);

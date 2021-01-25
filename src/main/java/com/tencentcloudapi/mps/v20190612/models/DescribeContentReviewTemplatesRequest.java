@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeContentReviewTemplatesRequest extends AbstractModel{
 
     /**
-    * Unique ID filter of content audit templates. Array length limit: 50.
+    * Unique ID of intelligent content recognition templates as the filter. Array length limit: 50.
     */
     @SerializedName("Definitions")
     @Expose
@@ -44,16 +44,16 @@ public class DescribeContentReviewTemplatesRequest extends AbstractModel{
     private Long Limit;
 
     /**
-     * Get Unique ID filter of content audit templates. Array length limit: 50. 
-     * @return Definitions Unique ID filter of content audit templates. Array length limit: 50.
+     * Get Unique ID of intelligent content recognition templates as the filter. Array length limit: 50. 
+     * @return Definitions Unique ID of intelligent content recognition templates as the filter. Array length limit: 50.
      */
     public Long [] getDefinitions() {
         return this.Definitions;
     }
 
     /**
-     * Set Unique ID filter of content audit templates. Array length limit: 50.
-     * @param Definitions Unique ID filter of content audit templates. Array length limit: 50.
+     * Set Unique ID of intelligent content recognition templates as the filter. Array length limit: 50.
+     * @param Definitions Unique ID of intelligent content recognition templates as the filter. Array length limit: 50.
      */
     public void setDefinitions(Long [] Definitions) {
         this.Definitions = Definitions;

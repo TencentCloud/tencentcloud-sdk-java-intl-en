@@ -30,7 +30,7 @@ public class CreateVpcRequest extends AbstractModel{
     private String VpcName;
 
     /**
-    * VPC CIDR, which must fall within the following private network IP ranges: 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16.
+    * VPC CIDR blocks, which must fall within the following three private network IP ranges: 10.0.0.0/16, 172.16.0.0/16 and 192.168.0.0/16.
     */
     @SerializedName("CidrBlock")
     @Expose
@@ -44,21 +44,21 @@ public class CreateVpcRequest extends AbstractModel{
     private String EnableMulticast;
 
     /**
-    * The DNS address. A maximum of 4 addresses is supported.
+    * DNS address. A maximum of 4 addresses is supported.
     */
     @SerializedName("DnsServers")
     @Expose
     private String [] DnsServers;
 
     /**
-    * Domain name
+    * Domain name of DHCP
     */
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
 
     /**
-    * Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+    * Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
     */
     @SerializedName("Tags")
     @Expose
@@ -81,16 +81,16 @@ public class CreateVpcRequest extends AbstractModel{
     }
 
     /**
-     * Get VPC CIDR, which must fall within the following private network IP ranges: 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16. 
-     * @return CidrBlock VPC CIDR, which must fall within the following private network IP ranges: 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16.
+     * Get VPC CIDR blocks, which must fall within the following three private network IP ranges: 10.0.0.0/16, 172.16.0.0/16 and 192.168.0.0/16. 
+     * @return CidrBlock VPC CIDR blocks, which must fall within the following three private network IP ranges: 10.0.0.0/16, 172.16.0.0/16 and 192.168.0.0/16.
      */
     public String getCidrBlock() {
         return this.CidrBlock;
     }
 
     /**
-     * Set VPC CIDR, which must fall within the following private network IP ranges: 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16.
-     * @param CidrBlock VPC CIDR, which must fall within the following private network IP ranges: 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16.
+     * Set VPC CIDR blocks, which must fall within the following three private network IP ranges: 10.0.0.0/16, 172.16.0.0/16 and 192.168.0.0/16.
+     * @param CidrBlock VPC CIDR blocks, which must fall within the following three private network IP ranges: 10.0.0.0/16, 172.16.0.0/16 and 192.168.0.0/16.
      */
     public void setCidrBlock(String CidrBlock) {
         this.CidrBlock = CidrBlock;
@@ -113,48 +113,48 @@ public class CreateVpcRequest extends AbstractModel{
     }
 
     /**
-     * Get The DNS address. A maximum of 4 addresses is supported. 
-     * @return DnsServers The DNS address. A maximum of 4 addresses is supported.
+     * Get DNS address. A maximum of 4 addresses is supported. 
+     * @return DnsServers DNS address. A maximum of 4 addresses is supported.
      */
     public String [] getDnsServers() {
         return this.DnsServers;
     }
 
     /**
-     * Set The DNS address. A maximum of 4 addresses is supported.
-     * @param DnsServers The DNS address. A maximum of 4 addresses is supported.
+     * Set DNS address. A maximum of 4 addresses is supported.
+     * @param DnsServers DNS address. A maximum of 4 addresses is supported.
      */
     public void setDnsServers(String [] DnsServers) {
         this.DnsServers = DnsServers;
     }
 
     /**
-     * Get Domain name 
-     * @return DomainName Domain name
+     * Get Domain name of DHCP 
+     * @return DomainName Domain name of DHCP
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * Set Domain name
-     * @param DomainName Domain name
+     * Set Domain name of DHCP
+     * @param DomainName Domain name of DHCP
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
     }
 
     /**
-     * Get Bound tags, such as [{"Key": "city", "Value": "shanghai"}]. 
-     * @return Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     * Get Bound tags, such as [{"Key": "city", "Value": "shanghai"}] 
+     * @return Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
-     * @param Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     * Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
+     * @param Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

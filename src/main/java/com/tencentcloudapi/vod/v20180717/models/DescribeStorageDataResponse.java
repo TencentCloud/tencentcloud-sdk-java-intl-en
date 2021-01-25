@@ -51,6 +51,13 @@ public class DescribeStorageDataResponse extends AbstractModel{
     private Long StandardStorage;
 
     /**
+    * Storage usage by billing region.
+    */
+    @SerializedName("StorageStat")
+    @Expose
+    private StorageStatData [] StorageStat;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -122,6 +129,22 @@ public class DescribeStorageDataResponse extends AbstractModel{
     }
 
     /**
+     * Get Storage usage by billing region. 
+     * @return StorageStat Storage usage by billing region.
+     */
+    public StorageStatData [] getStorageStat() {
+        return this.StorageStat;
+    }
+
+    /**
+     * Set Storage usage by billing region.
+     * @param StorageStat Storage usage by billing region.
+     */
+    public void setStorageStat(StorageStatData [] StorageStat) {
+        this.StorageStat = StorageStat;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -145,6 +168,7 @@ public class DescribeStorageDataResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "TotalStorage", this.TotalStorage);
         this.setParamSimple(map, prefix + "InfrequentStorage", this.InfrequentStorage);
         this.setParamSimple(map, prefix + "StandardStorage", this.StandardStorage);
+        this.setParamArrayObj(map, prefix + "StorageStat.", this.StorageStat);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

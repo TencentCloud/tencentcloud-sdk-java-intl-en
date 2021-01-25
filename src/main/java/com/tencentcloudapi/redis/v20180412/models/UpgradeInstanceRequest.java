@@ -51,6 +51,13 @@ public class UpgradeInstanceRequest extends AbstractModel{
     private Long RedisReplicasNum;
 
     /**
+    * The information of the replica to be added to a multi-AZ instance, such as replica availability zone and replica type (`NodeType` should be `1`). This parameter is required only when multi-AZ instances add replicas.
+    */
+    @SerializedName("NodeSet")
+    @Expose
+    private RedisNodeInfo [] NodeSet;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -115,6 +122,22 @@ public class UpgradeInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get The information of the replica to be added to a multi-AZ instance, such as replica availability zone and replica type (`NodeType` should be `1`). This parameter is required only when multi-AZ instances add replicas. 
+     * @return NodeSet The information of the replica to be added to a multi-AZ instance, such as replica availability zone and replica type (`NodeType` should be `1`). This parameter is required only when multi-AZ instances add replicas.
+     */
+    public RedisNodeInfo [] getNodeSet() {
+        return this.NodeSet;
+    }
+
+    /**
+     * Set The information of the replica to be added to a multi-AZ instance, such as replica availability zone and replica type (`NodeType` should be `1`). This parameter is required only when multi-AZ instances add replicas.
+     * @param NodeSet The information of the replica to be added to a multi-AZ instance, such as replica availability zone and replica type (`NodeType` should be `1`). This parameter is required only when multi-AZ instances add replicas.
+     */
+    public void setNodeSet(RedisNodeInfo [] NodeSet) {
+        this.NodeSet = NodeSet;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class UpgradeInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MemSize", this.MemSize);
         this.setParamSimple(map, prefix + "RedisShardNum", this.RedisShardNum);
         this.setParamSimple(map, prefix + "RedisReplicasNum", this.RedisReplicasNum);
+        this.setParamArrayObj(map, prefix + "NodeSet.", this.NodeSet);
 
     }
 }

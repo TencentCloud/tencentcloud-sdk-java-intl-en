@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DeletePersonSampleRequest extends AbstractModel{
 
     /**
-    * Figure ID.
+    * ID of a sample.
     */
     @SerializedName("PersonId")
     @Expose
@@ -37,16 +37,16 @@ public class DeletePersonSampleRequest extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * Get Figure ID. 
-     * @return PersonId Figure ID.
+     * Get ID of a sample. 
+     * @return PersonId ID of a sample.
      */
     public String getPersonId() {
         return this.PersonId;
     }
 
     /**
-     * Set Figure ID.
-     * @param PersonId Figure ID.
+     * Set ID of a sample.
+     * @param PersonId ID of a sample.
      */
     public void setPersonId(String PersonId) {
         this.PersonId = PersonId;

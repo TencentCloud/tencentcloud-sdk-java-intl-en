@@ -63,6 +63,38 @@ Note: This field may return null, indicating that no valid value was found.
     private Float UnitPriceDiscount;
 
     /**
+    * Highly-precise published unit price of a monthly-subscribed cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("OriginalPriceHigh")
+    @Expose
+    private String OriginalPriceHigh;
+
+    /**
+    * Highly-precise discounted unit price of a monthly-subscribed cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DiscountPriceHigh")
+    @Expose
+    private String DiscountPriceHigh;
+
+    /**
+    * Highly-precise published unit price of a pay-as-you-go cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("UnitPriceHigh")
+    @Expose
+    private String UnitPriceHigh;
+
+    /**
+    * Highly-precise discounted unit price of a pay-as-you-go cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("UnitPriceDiscountHigh")
+    @Expose
+    private String UnitPriceDiscountHigh;
+
+    /**
      * Get Original price of the advanced payment for a prepaid cloud disk (in CNY).
 Note: This field may return null, indicating that no valid value was found. 
      * @return OriginalPrice Original price of the advanced payment for a prepaid cloud disk (in CNY).
@@ -163,6 +195,86 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
+     * Get Highly-precise published unit price of a monthly-subscribed cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return OriginalPriceHigh Highly-precise published unit price of a monthly-subscribed cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getOriginalPriceHigh() {
+        return this.OriginalPriceHigh;
+    }
+
+    /**
+     * Set Highly-precise published unit price of a monthly-subscribed cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param OriginalPriceHigh Highly-precise published unit price of a monthly-subscribed cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setOriginalPriceHigh(String OriginalPriceHigh) {
+        this.OriginalPriceHigh = OriginalPriceHigh;
+    }
+
+    /**
+     * Get Highly-precise discounted unit price of a monthly-subscribed cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return DiscountPriceHigh Highly-precise discounted unit price of a monthly-subscribed cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getDiscountPriceHigh() {
+        return this.DiscountPriceHigh;
+    }
+
+    /**
+     * Set Highly-precise discounted unit price of a monthly-subscribed cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param DiscountPriceHigh Highly-precise discounted unit price of a monthly-subscribed cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setDiscountPriceHigh(String DiscountPriceHigh) {
+        this.DiscountPriceHigh = DiscountPriceHigh;
+    }
+
+    /**
+     * Get Highly-precise published unit price of a pay-as-you-go cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return UnitPriceHigh Highly-precise published unit price of a pay-as-you-go cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getUnitPriceHigh() {
+        return this.UnitPriceHigh;
+    }
+
+    /**
+     * Set Highly-precise published unit price of a pay-as-you-go cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param UnitPriceHigh Highly-precise published unit price of a pay-as-you-go cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setUnitPriceHigh(String UnitPriceHigh) {
+        this.UnitPriceHigh = UnitPriceHigh;
+    }
+
+    /**
+     * Get Highly-precise discounted unit price of a pay-as-you-go cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return UnitPriceDiscountHigh Highly-precise discounted unit price of a pay-as-you-go cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getUnitPriceDiscountHigh() {
+        return this.UnitPriceDiscountHigh;
+    }
+
+    /**
+     * Set Highly-precise discounted unit price of a pay-as-you-go cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param UnitPriceDiscountHigh Highly-precise discounted unit price of a pay-as-you-go cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setUnitPriceDiscountHigh(String UnitPriceDiscountHigh) {
+        this.UnitPriceDiscountHigh = UnitPriceDiscountHigh;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -171,6 +283,10 @@ Note: This field may return null, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "UnitPrice", this.UnitPrice);
         this.setParamSimple(map, prefix + "ChargeUnit", this.ChargeUnit);
         this.setParamSimple(map, prefix + "UnitPriceDiscount", this.UnitPriceDiscount);
+        this.setParamSimple(map, prefix + "OriginalPriceHigh", this.OriginalPriceHigh);
+        this.setParamSimple(map, prefix + "DiscountPriceHigh", this.DiscountPriceHigh);
+        this.setParamSimple(map, prefix + "UnitPriceHigh", this.UnitPriceHigh);
+        this.setParamSimple(map, prefix + "UnitPriceDiscountHigh", this.UnitPriceDiscountHigh);
 
     }
 }

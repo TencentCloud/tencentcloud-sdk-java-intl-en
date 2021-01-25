@@ -23,25 +23,24 @@ import java.util.HashMap;
 public class DescribeStorageDetailsRequest extends AbstractModel{
 
     /**
-    * Start time in ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+    * Start time in ISO 8601 format. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time in ISO 8601 format, which must be after the start time. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+    * End time in ISO 8601 format, which should be larger than the start time. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Query time interval. Valid values:
-<li>Minute: once per minute.</li>
-<li>Hour: once per hour.</li>
-<li>Day: once per day.</li>
-The default value is determined by the time span. `Minute` will be used if the time span is less than 1 hour, `Hour` if less than or equal to 7 days, and `Day` if more than 7 days.
+    * Time granularity. Valid values:
+<li>Minute: 5-minute granularity</li>
+<li>Day: 1-day granularity</li>
+The value is set according to query period length by default. 5-minute granularity is set for periods no longer than 1 day, and 1-day granularity is set for periods longer than 1 day.
     */
     @SerializedName("Interval")
     @Expose
@@ -67,64 +66,70 @@ When the value of this field is 1, the total usage of all subapplications (inclu
     private Long SubAppId;
 
     /**
-     * Get Start time in ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). 
-     * @return StartTime Start time in ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+    * Storage region to query. Valid values:
+<li>Chinese Mainland</li>
+<li>Outside Chinese Mainland</li>
+Default value: Chinese Mainland
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
+     * Get Start time in ISO 8601 format. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=). 
+     * @return StartTime Start time in ISO 8601 format. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time in ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-     * @param StartTime Start time in ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * Set Start time in ISO 8601 format. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+     * @param StartTime Start time in ISO 8601 format. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time in ISO 8601 format, which must be after the start time. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). 
-     * @return EndTime End time in ISO 8601 format, which must be after the start time. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * Get End time in ISO 8601 format, which should be larger than the start time. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=). 
+     * @return EndTime End time in ISO 8601 format, which should be larger than the start time. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time in ISO 8601 format, which must be after the start time. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-     * @param EndTime End time in ISO 8601 format, which must be after the start time. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * Set End time in ISO 8601 format, which should be larger than the start time. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+     * @param EndTime End time in ISO 8601 format, which should be larger than the start time. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Query time interval. Valid values:
-<li>Minute: once per minute.</li>
-<li>Hour: once per hour.</li>
-<li>Day: once per day.</li>
-The default value is determined by the time span. `Minute` will be used if the time span is less than 1 hour, `Hour` if less than or equal to 7 days, and `Day` if more than 7 days. 
-     * @return Interval Query time interval. Valid values:
-<li>Minute: once per minute.</li>
-<li>Hour: once per hour.</li>
-<li>Day: once per day.</li>
-The default value is determined by the time span. `Minute` will be used if the time span is less than 1 hour, `Hour` if less than or equal to 7 days, and `Day` if more than 7 days.
+     * Get Time granularity. Valid values:
+<li>Minute: 5-minute granularity</li>
+<li>Day: 1-day granularity</li>
+The value is set according to query period length by default. 5-minute granularity is set for periods no longer than 1 day, and 1-day granularity is set for periods longer than 1 day. 
+     * @return Interval Time granularity. Valid values:
+<li>Minute: 5-minute granularity</li>
+<li>Day: 1-day granularity</li>
+The value is set according to query period length by default. 5-minute granularity is set for periods no longer than 1 day, and 1-day granularity is set for periods longer than 1 day.
      */
     public String getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set Query time interval. Valid values:
-<li>Minute: once per minute.</li>
-<li>Hour: once per hour.</li>
-<li>Day: once per day.</li>
-The default value is determined by the time span. `Minute` will be used if the time span is less than 1 hour, `Hour` if less than or equal to 7 days, and `Day` if more than 7 days.
-     * @param Interval Query time interval. Valid values:
-<li>Minute: once per minute.</li>
-<li>Hour: once per hour.</li>
-<li>Day: once per day.</li>
-The default value is determined by the time span. `Minute` will be used if the time span is less than 1 hour, `Hour` if less than or equal to 7 days, and `Day` if more than 7 days.
+     * Set Time granularity. Valid values:
+<li>Minute: 5-minute granularity</li>
+<li>Day: 1-day granularity</li>
+The value is set according to query period length by default. 5-minute granularity is set for periods no longer than 1 day, and 1-day granularity is set for periods longer than 1 day.
+     * @param Interval Time granularity. Valid values:
+<li>Minute: 5-minute granularity</li>
+<li>Day: 1-day granularity</li>
+The value is set according to query period length by default. 5-minute granularity is set for periods no longer than 1 day, and 1-day granularity is set for periods longer than 1 day.
      */
     public void setInterval(String Interval) {
         this.Interval = Interval;
@@ -183,6 +188,34 @@ When the value of this field is 1, the total usage of all subapplications (inclu
     }
 
     /**
+     * Get Storage region to query. Valid values:
+<li>Chinese Mainland</li>
+<li>Outside Chinese Mainland</li>
+Default value: Chinese Mainland 
+     * @return Area Storage region to query. Valid values:
+<li>Chinese Mainland</li>
+<li>Outside Chinese Mainland</li>
+Default value: Chinese Mainland
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set Storage region to query. Valid values:
+<li>Chinese Mainland</li>
+<li>Outside Chinese Mainland</li>
+Default value: Chinese Mainland
+     * @param Area Storage region to query. Valid values:
+<li>Chinese Mainland</li>
+<li>Outside Chinese Mainland</li>
+Default value: Chinese Mainland
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -191,6 +224,7 @@ When the value of this field is 1, the total usage of all subapplications (inclu
         this.setParamSimple(map, prefix + "Interval", this.Interval);
         this.setParamSimple(map, prefix + "StorageType", this.StorageType);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }

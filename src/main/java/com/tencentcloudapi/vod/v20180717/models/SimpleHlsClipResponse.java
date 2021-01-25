@@ -37,6 +37,13 @@ public class SimpleHlsClipResponse extends AbstractModel{
     private MediaMetaData MetaData;
 
     /**
+    * Unique ID of a video clip for persistent storage.
+    */
+    @SerializedName("FileId")
+    @Expose
+    private String FileId;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -76,6 +83,22 @@ public class SimpleHlsClipResponse extends AbstractModel{
     }
 
     /**
+     * Get Unique ID of a video clip for persistent storage. 
+     * @return FileId Unique ID of a video clip for persistent storage.
+     */
+    public String getFileId() {
+        return this.FileId;
+    }
+
+    /**
+     * Set Unique ID of a video clip for persistent storage.
+     * @param FileId Unique ID of a video clip for persistent storage.
+     */
+    public void setFileId(String FileId) {
+        this.FileId = FileId;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -97,6 +120,7 @@ public class SimpleHlsClipResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamObj(map, prefix + "MetaData.", this.MetaData);
+        this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

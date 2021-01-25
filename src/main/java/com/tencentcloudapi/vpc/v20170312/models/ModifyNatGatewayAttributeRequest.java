@@ -44,6 +44,20 @@ public class ModifyNatGatewayAttributeRequest extends AbstractModel{
     private Long InternetMaxBandwidthOut;
 
     /**
+    * Whether to modify the security group bound to the NAT Gateway
+    */
+    @SerializedName("ModifySecurityGroup")
+    @Expose
+    private Boolean ModifySecurityGroup;
+
+    /**
+    * The final security groups bound to the NAT Gateway, such as `['sg-1n232323', 'sg-o4242424']`. An empty list indicates that all the security groups have been deleted.
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
      * Get The ID of the NAT gateway, such as `nat-df45454`. 
      * @return NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
      */
@@ -92,12 +106,46 @@ public class ModifyNatGatewayAttributeRequest extends AbstractModel{
     }
 
     /**
+     * Get Whether to modify the security group bound to the NAT Gateway 
+     * @return ModifySecurityGroup Whether to modify the security group bound to the NAT Gateway
+     */
+    public Boolean getModifySecurityGroup() {
+        return this.ModifySecurityGroup;
+    }
+
+    /**
+     * Set Whether to modify the security group bound to the NAT Gateway
+     * @param ModifySecurityGroup Whether to modify the security group bound to the NAT Gateway
+     */
+    public void setModifySecurityGroup(Boolean ModifySecurityGroup) {
+        this.ModifySecurityGroup = ModifySecurityGroup;
+    }
+
+    /**
+     * Get The final security groups bound to the NAT Gateway, such as `['sg-1n232323', 'sg-o4242424']`. An empty list indicates that all the security groups have been deleted. 
+     * @return SecurityGroupIds The final security groups bound to the NAT Gateway, such as `['sg-1n232323', 'sg-o4242424']`. An empty list indicates that all the security groups have been deleted.
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set The final security groups bound to the NAT Gateway, such as `['sg-1n232323', 'sg-o4242424']`. An empty list indicates that all the security groups have been deleted.
+     * @param SecurityGroupIds The final security groups bound to the NAT Gateway, such as `['sg-1n232323', 'sg-o4242424']`. An empty list indicates that all the security groups have been deleted.
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NatGatewayId", this.NatGatewayId);
         this.setParamSimple(map, prefix + "NatGatewayName", this.NatGatewayName);
         this.setParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
+        this.setParamSimple(map, prefix + "ModifySecurityGroup", this.ModifySecurityGroup);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
 
     }
 }

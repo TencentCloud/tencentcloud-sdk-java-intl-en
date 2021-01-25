@@ -58,7 +58,7 @@ public class Snapshot extends AbstractModel{
     private Long DiskSize;
 
     /**
-    * Status of the snapshot. Value range: <br><li>NORMAL: Normal <br><li>CREATING: Creating <br><li>ROLLBACKING: Rolling backing <br><li>COPYING_FROM_REMOTE: Copying snapshot across regions.
+    * Snapshot status. Valid values: <br><li>NORMAL: normal <br><li>CREATING: creating<br><li>ROLLBACKING: rolling back<br><li>COPYING_FROM_REMOTE: cross-region replicating<li>CHECKING_COPIED: verifying the cross-region replicated data<br><li>TORECYCLE: to be repossessed.
     */
     @SerializedName("SnapshotState")
     @Expose
@@ -149,6 +149,13 @@ public class Snapshot extends AbstractModel{
     private Long ShareReference;
 
     /**
+    * 
+    */
+    @SerializedName("TimeStartShare")
+    @Expose
+    private String TimeStartShare;
+
+    /**
      * Get Snapshot ID. 
      * @return SnapshotId Snapshot ID.
      */
@@ -229,16 +236,16 @@ public class Snapshot extends AbstractModel{
     }
 
     /**
-     * Get Status of the snapshot. Value range: <br><li>NORMAL: Normal <br><li>CREATING: Creating <br><li>ROLLBACKING: Rolling backing <br><li>COPYING_FROM_REMOTE: Copying snapshot across regions. 
-     * @return SnapshotState Status of the snapshot. Value range: <br><li>NORMAL: Normal <br><li>CREATING: Creating <br><li>ROLLBACKING: Rolling backing <br><li>COPYING_FROM_REMOTE: Copying snapshot across regions.
+     * Get Snapshot status. Valid values: <br><li>NORMAL: normal <br><li>CREATING: creating<br><li>ROLLBACKING: rolling back<br><li>COPYING_FROM_REMOTE: cross-region replicating<li>CHECKING_COPIED: verifying the cross-region replicated data<br><li>TORECYCLE: to be repossessed. 
+     * @return SnapshotState Snapshot status. Valid values: <br><li>NORMAL: normal <br><li>CREATING: creating<br><li>ROLLBACKING: rolling back<br><li>COPYING_FROM_REMOTE: cross-region replicating<li>CHECKING_COPIED: verifying the cross-region replicated data<br><li>TORECYCLE: to be repossessed.
      */
     public String getSnapshotState() {
         return this.SnapshotState;
     }
 
     /**
-     * Set Status of the snapshot. Value range: <br><li>NORMAL: Normal <br><li>CREATING: Creating <br><li>ROLLBACKING: Rolling backing <br><li>COPYING_FROM_REMOTE: Copying snapshot across regions.
-     * @param SnapshotState Status of the snapshot. Value range: <br><li>NORMAL: Normal <br><li>CREATING: Creating <br><li>ROLLBACKING: Rolling backing <br><li>COPYING_FROM_REMOTE: Copying snapshot across regions.
+     * Set Snapshot status. Valid values: <br><li>NORMAL: normal <br><li>CREATING: creating<br><li>ROLLBACKING: rolling back<br><li>COPYING_FROM_REMOTE: cross-region replicating<li>CHECKING_COPIED: verifying the cross-region replicated data<br><li>TORECYCLE: to be repossessed.
+     * @param SnapshotState Snapshot status. Valid values: <br><li>NORMAL: normal <br><li>CREATING: creating<br><li>ROLLBACKING: rolling back<br><li>COPYING_FROM_REMOTE: cross-region replicating<li>CHECKING_COPIED: verifying the cross-region replicated data<br><li>TORECYCLE: to be repossessed.
      */
     public void setSnapshotState(String SnapshotState) {
         this.SnapshotState = SnapshotState;
@@ -437,6 +444,22 @@ public class Snapshot extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return TimeStartShare 
+     */
+    public String getTimeStartShare() {
+        return this.TimeStartShare;
+    }
+
+    /**
+     * Set 
+     * @param TimeStartShare 
+     */
+    public void setTimeStartShare(String TimeStartShare) {
+        this.TimeStartShare = TimeStartShare;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -458,6 +481,7 @@ public class Snapshot extends AbstractModel{
         this.setParamSimple(map, prefix + "ImageCount", this.ImageCount);
         this.setParamSimple(map, prefix + "SnapshotType", this.SnapshotType);
         this.setParamSimple(map, prefix + "ShareReference", this.ShareReference);
+        this.setParamSimple(map, prefix + "TimeStartShare", this.TimeStartShare);
 
     }
 }

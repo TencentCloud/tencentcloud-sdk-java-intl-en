@@ -23,18 +23,11 @@ import java.util.HashMap;
 public class DescribeSubAppIdsRequest extends AbstractModel{
 
     /**
-    * 
+    * Subapplication name.
     */
-    @SerializedName("Limit")
+    @SerializedName("Name")
     @Expose
-    private Long Limit;
-
-    /**
-    * 
-    */
-    @SerializedName("Offset")
-    @Expose
-    private Long Offset;
+    private String Name;
 
     /**
     * Tag information. You can query the list of subapplications with specified tags.
@@ -44,35 +37,33 @@ public class DescribeSubAppIdsRequest extends AbstractModel{
     private ResourceTag [] Tags;
 
     /**
-     * Get  
-     * @return Limit 
+    * Page number offset from the beginning of paginated queries. Default value: 0.
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * Maximum return results of pulling paginated queries. Default: 200; maximum: 200.
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+     * Get Subapplication name. 
+     * @return Name Subapplication name.
      */
-    public Long getLimit() {
-        return this.Limit;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set 
-     * @param Limit 
+     * Set Subapplication name.
+     * @param Name Subapplication name.
      */
-    public void setLimit(Long Limit) {
-        this.Limit = Limit;
-    }
-
-    /**
-     * Get  
-     * @return Offset 
-     */
-    public Long getOffset() {
-        return this.Offset;
-    }
-
-    /**
-     * Set 
-     * @param Offset 
-     */
-    public void setOffset(Long Offset) {
-        this.Offset = Offset;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     /**
@@ -92,12 +83,45 @@ public class DescribeSubAppIdsRequest extends AbstractModel{
     }
 
     /**
+     * Get Page number offset from the beginning of paginated queries. Default value: 0. 
+     * @return Offset Page number offset from the beginning of paginated queries. Default value: 0.
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set Page number offset from the beginning of paginated queries. Default value: 0.
+     * @param Offset Page number offset from the beginning of paginated queries. Default value: 0.
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get Maximum return results of pulling paginated queries. Default: 200; maximum: 200. 
+     * @return Limit Maximum return results of pulling paginated queries. Default: 200; maximum: 200.
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set Maximum return results of pulling paginated queries. Default: 200; maximum: 200.
+     * @param Limit Maximum return results of pulling paginated queries. Default: 200; maximum: 200.
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
 
     }
 }

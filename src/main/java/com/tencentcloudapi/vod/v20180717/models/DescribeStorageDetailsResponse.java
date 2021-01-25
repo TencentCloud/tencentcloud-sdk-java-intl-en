@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeStorageDetailsResponse extends AbstractModel{
 
     /**
-    * Storage statistics. One data entry per minute/hour/day.
+    * Storage statistics with one piece of data for every 5 minutes or 1 day.
     */
     @SerializedName("Data")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeStorageDetailsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Storage statistics. One data entry per minute/hour/day. 
-     * @return Data Storage statistics. One data entry per minute/hour/day.
+     * Get Storage statistics with one piece of data for every 5 minutes or 1 day. 
+     * @return Data Storage statistics with one piece of data for every 5 minutes or 1 day.
      */
     public StatDataItem [] getData() {
         return this.Data;
     }
 
     /**
-     * Set Storage statistics. One data entry per minute/hour/day.
-     * @param Data Storage statistics. One data entry per minute/hour/day.
+     * Set Storage statistics with one piece of data for every 5 minutes or 1 day.
+     * @param Data Storage statistics with one piece of data for every 5 minutes or 1 day.
      */
     public void setData(StatDataItem [] Data) {
         this.Data = Data;

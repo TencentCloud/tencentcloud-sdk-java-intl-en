@@ -30,7 +30,7 @@ public class DescribeUserInformationRequest extends AbstractModel{
     private String CommId;
 
     /**
-    * Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 14 days.
+    * Query start time in the format of UNIX timestamp (e.g. 1588031999s) in the last 5 days.
     */
     @SerializedName("StartTime")
     @Expose
@@ -88,16 +88,16 @@ public class DescribeUserInformationRequest extends AbstractModel{
     }
 
     /**
-     * Get Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 14 days. 
-     * @return StartTime Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 14 days.
+     * Get Query start time in the format of UNIX timestamp (e.g. 1588031999s) in the last 5 days. 
+     * @return StartTime Query start time in the format of UNIX timestamp (e.g. 1588031999s) in the last 5 days.
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 14 days.
-     * @param StartTime Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 14 days.
+     * Set Query start time in the format of UNIX timestamp (e.g. 1588031999s) in the last 5 days.
+     * @param StartTime Query start time in the format of UNIX timestamp (e.g. 1588031999s) in the last 5 days.
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;

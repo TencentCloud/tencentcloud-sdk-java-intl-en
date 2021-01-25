@@ -379,6 +379,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long DcnDstNum;
 
     /**
+    * Instance type. Valid values: `1` (dedicated primary instance), `2` (primary instance), `3` (disaster recovery instance), and `4` (dedicated disaster recovery instance).
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private Long InstanceType;
+
+    /**
      * Get Instance ID, which uniquely identifies a TDSQL instance 
      * @return InstanceId Instance ID, which uniquely identifies a TDSQL instance
      */
@@ -1215,6 +1223,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Instance type. Valid values: `1` (dedicated primary instance), `2` (primary instance), `3` (disaster recovery instance), and `4` (dedicated disaster recovery instance).
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return InstanceType Instance type. Valid values: `1` (dedicated primary instance), `2` (primary instance), `3` (disaster recovery instance), and `4` (dedicated disaster recovery instance).
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set Instance type. Valid values: `1` (dedicated primary instance), `2` (primary instance), `3` (disaster recovery instance), and `4` (dedicated disaster recovery instance).
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param InstanceType Instance type. Valid values: `1` (dedicated primary instance), `2` (primary instance), `3` (disaster recovery instance), and `4` (dedicated disaster recovery instance).
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setInstanceType(Long InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1267,6 +1295,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "DcnFlag", this.DcnFlag);
         this.setParamSimple(map, prefix + "DcnStatus", this.DcnStatus);
         this.setParamSimple(map, prefix + "DcnDstNum", this.DcnDstNum);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
 
     }
 }

@@ -166,6 +166,13 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
     private String ClusterTag;
 
     /**
+    * Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance. E.g., `eip-11112222`.
+    */
+    @SerializedName("EipAddressId")
+    @Expose
+    private String EipAddressId;
+
+    /**
      * Get CLB instance network type:
 OPEN: public network; INTERNAL: private network. 
      * @return LoadBalancerType CLB instance network type:
@@ -498,6 +505,22 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
     }
 
     /**
+     * Get Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance. E.g., `eip-11112222`. 
+     * @return EipAddressId Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance. E.g., `eip-11112222`.
+     */
+    public String getEipAddressId() {
+        return this.EipAddressId;
+    }
+
+    /**
+     * Set Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance. E.g., `eip-11112222`.
+     * @param EipAddressId Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance. E.g., `eip-11112222`.
+     */
+    public void setEipAddressId(String EipAddressId) {
+        this.EipAddressId = EipAddressId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -521,6 +544,7 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
         this.setParamSimple(map, prefix + "SnatPro", this.SnatPro);
         this.setParamArrayObj(map, prefix + "SnatIps.", this.SnatIps);
         this.setParamSimple(map, prefix + "ClusterTag", this.ClusterTag);
+        this.setParamSimple(map, prefix + "EipAddressId", this.EipAddressId);
 
     }
 }

@@ -123,6 +123,14 @@ public class NatGateway extends AbstractModel{
     private Tag [] TagSet;
 
     /**
+    * The list of the security groups bound to the NAT Gateway
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SecurityGroupSet")
+    @Expose
+    private String [] SecurityGroupSet;
+
+    /**
      * Get NAT gateway ID. 
      * @return NatGatewayId NAT gateway ID.
      */
@@ -355,6 +363,26 @@ public class NatGateway extends AbstractModel{
     }
 
     /**
+     * Get The list of the security groups bound to the NAT Gateway
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return SecurityGroupSet The list of the security groups bound to the NAT Gateway
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String [] getSecurityGroupSet() {
+        return this.SecurityGroupSet;
+    }
+
+    /**
+     * Set The list of the security groups bound to the NAT Gateway
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param SecurityGroupSet The list of the security groups bound to the NAT Gateway
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setSecurityGroupSet(String [] SecurityGroupSet) {
+        this.SecurityGroupSet = SecurityGroupSet;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -372,6 +400,7 @@ public class NatGateway extends AbstractModel{
         this.setParamArraySimple(map, prefix + "DirectConnectGatewayIds.", this.DirectConnectGatewayIds);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+        this.setParamArraySimple(map, prefix + "SecurityGroupSet.", this.SecurityGroupSet);
 
     }
 }

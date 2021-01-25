@@ -44,7 +44,7 @@ public class DescribeRoomInformationRequest extends AbstractModel{
     private Long EndTime;
 
     /**
-    * Room ID of uint type
+    * Room ID in string type
     */
     @SerializedName("RoomId")
     @Expose
@@ -113,16 +113,16 @@ public class DescribeRoomInformationRequest extends AbstractModel{
     }
 
     /**
-     * Get Room ID of uint type 
-     * @return RoomId Room ID of uint type
+     * Get Room ID in string type 
+     * @return RoomId Room ID in string type
      */
     public String getRoomId() {
         return this.RoomId;
     }
 
     /**
-     * Set Room ID of uint type
-     * @param RoomId Room ID of uint type
+     * Set Room ID in string type
+     * @param RoomId Room ID in string type
      */
     public void setRoomId(String RoomId) {
         this.RoomId = RoomId;

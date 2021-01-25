@@ -30,7 +30,7 @@ public class DescribeContentReviewTemplatesResponse extends AbstractModel{
     private Long TotalCount;
 
     /**
-    * List of content audit template details.
+    * List of intelligent content recognition template details.
     */
     @SerializedName("ContentReviewTemplateSet")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeContentReviewTemplatesResponse extends AbstractModel{
     }
 
     /**
-     * Get List of content audit template details. 
-     * @return ContentReviewTemplateSet List of content audit template details.
+     * Get List of intelligent content recognition template details. 
+     * @return ContentReviewTemplateSet List of intelligent content recognition template details.
      */
     public ContentReviewTemplateItem [] getContentReviewTemplateSet() {
         return this.ContentReviewTemplateSet;
     }
 
     /**
-     * Set List of content audit template details.
-     * @param ContentReviewTemplateSet List of content audit template details.
+     * Set List of intelligent content recognition template details.
+     * @param ContentReviewTemplateSet List of intelligent content recognition template details.
      */
     public void setContentReviewTemplateSet(ContentReviewTemplateItem [] ContentReviewTemplateSet) {
         this.ContentReviewTemplateSet = ContentReviewTemplateSet;

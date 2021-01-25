@@ -86,7 +86,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String KmsKeyId;
 
     /**
-    * 
+    * Cloud disk performance, in MB/s
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("ThroughputPerformance")
     @Expose
@@ -261,16 +262,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return ThroughputPerformance 
+     * Get Cloud disk performance, in MB/s
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ThroughputPerformance Cloud disk performance, in MB/s
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getThroughputPerformance() {
         return this.ThroughputPerformance;
     }
 
     /**
-     * Set 
-     * @param ThroughputPerformance 
+     * Set Cloud disk performance, in MB/s
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ThroughputPerformance Cloud disk performance, in MB/s
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setThroughputPerformance(Long ThroughputPerformance) {
         this.ThroughputPerformance = ThroughputPerformance;

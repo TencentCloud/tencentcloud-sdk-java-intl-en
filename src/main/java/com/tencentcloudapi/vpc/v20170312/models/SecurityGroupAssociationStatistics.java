@@ -37,7 +37,7 @@ public class SecurityGroupAssociationStatistics extends AbstractModel{
     private Long CVM;
 
     /**
-    * Number of database instances.
+    * Number of TencentDB for MySQL instances
     */
     @SerializedName("CDB")
     @Expose
@@ -111,16 +111,16 @@ public class SecurityGroupAssociationStatistics extends AbstractModel{
     }
 
     /**
-     * Get Number of database instances. 
-     * @return CDB Number of database instances.
+     * Get Number of TencentDB for MySQL instances 
+     * @return CDB Number of TencentDB for MySQL instances
      */
     public Long getCDB() {
         return this.CDB;
     }
 
     /**
-     * Set Number of database instances.
-     * @param CDB Number of database instances.
+     * Set Number of TencentDB for MySQL instances
+     * @param CDB Number of TencentDB for MySQL instances
      */
     public void setCDB(Long CDB) {
         this.CDB = CDB;
