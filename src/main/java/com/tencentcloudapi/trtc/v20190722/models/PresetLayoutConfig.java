@@ -86,7 +86,7 @@ public class PresetLayoutConfig extends AbstractModel{
     private Long MixInputType;
 
     /**
-    * Reservation image ID. If the reservation feature is enabled, and a user for whom a image position is reserved is not generating upstream video data, the position will show the reservation image. Reservation images are uploaded and generated in the TRTC console. https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1
+    * ID of the placeholder image. If the placeholding feature is enabled, and a user for whom an image position is reserved is not sending video data, the position will show the placeholder image. The ID is generated after the placeholder image is uploaded in the TRTC console. https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1
     */
     @SerializedName("PlaceImageId")
     @Expose
@@ -237,16 +237,16 @@ public class PresetLayoutConfig extends AbstractModel{
     }
 
     /**
-     * Get Reservation image ID. If the reservation feature is enabled, and a user for whom a image position is reserved is not generating upstream video data, the position will show the reservation image. Reservation images are uploaded and generated in the TRTC console. https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1 
-     * @return PlaceImageId Reservation image ID. If the reservation feature is enabled, and a user for whom a image position is reserved is not generating upstream video data, the position will show the reservation image. Reservation images are uploaded and generated in the TRTC console. https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1
+     * Get ID of the placeholder image. If the placeholding feature is enabled, and a user for whom an image position is reserved is not sending video data, the position will show the placeholder image. The ID is generated after the placeholder image is uploaded in the TRTC console. https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1 
+     * @return PlaceImageId ID of the placeholder image. If the placeholding feature is enabled, and a user for whom an image position is reserved is not sending video data, the position will show the placeholder image. The ID is generated after the placeholder image is uploaded in the TRTC console. https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1
      */
     public Long getPlaceImageId() {
         return this.PlaceImageId;
     }
 
     /**
-     * Set Reservation image ID. If the reservation feature is enabled, and a user for whom a image position is reserved is not generating upstream video data, the position will show the reservation image. Reservation images are uploaded and generated in the TRTC console. https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1
-     * @param PlaceImageId Reservation image ID. If the reservation feature is enabled, and a user for whom a image position is reserved is not generating upstream video data, the position will show the reservation image. Reservation images are uploaded and generated in the TRTC console. https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1
+     * Set ID of the placeholder image. If the placeholding feature is enabled, and a user for whom an image position is reserved is not sending video data, the position will show the placeholder image. The ID is generated after the placeholder image is uploaded in the TRTC console. https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1
+     * @param PlaceImageId ID of the placeholder image. If the placeholding feature is enabled, and a user for whom an image position is reserved is not sending video data, the position will show the placeholder image. The ID is generated after the placeholder image is uploaded in the TRTC console. https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1
      */
     public void setPlaceImageId(Long PlaceImageId) {
         this.PlaceImageId = PlaceImageId;

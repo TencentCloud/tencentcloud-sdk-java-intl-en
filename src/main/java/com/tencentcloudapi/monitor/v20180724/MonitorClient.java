@@ -539,6 +539,26 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query monitoring data by dimension conditions.
+     * @param req DescribeStatisticDataRequest
+     * @return DescribeStatisticDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStatisticDataResponse DescribeStatisticData(DescribeStatisticDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStatisticDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStatisticDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeStatisticData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the monitoring data of a Tencent Cloud service by passing in its namespace, object dimension description, and monitoring metrics.
 API call rate limit: 20 calls/second (1,200 calls/minute). A single request can obtain the data of up to 10 instances and up to 1,440 data points.
 This API may fail due to the rate limit if you need to call a lot of metrics and objects. We recommended that you spread the call requests over time.

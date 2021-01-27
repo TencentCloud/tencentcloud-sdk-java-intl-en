@@ -30,11 +30,18 @@ public class UnBindingAllPolicyObjectRequest extends AbstractModel{
     private String Module;
 
     /**
-    * Policy group ID.
+    * Policy group ID. If `PolicyId` is specified, you can pass any value to this field.
     */
     @SerializedName("GroupId")
     @Expose
     private Long GroupId;
+
+    /**
+    * Alarm policy ID. If this field is used, you can pass any value to `GroupId`.
+    */
+    @SerializedName("PolicyId")
+    @Expose
+    private String PolicyId;
 
     /**
      * Get The value is fixed to monitor. 
@@ -53,19 +60,35 @@ public class UnBindingAllPolicyObjectRequest extends AbstractModel{
     }
 
     /**
-     * Get Policy group ID. 
-     * @return GroupId Policy group ID.
+     * Get Policy group ID. If `PolicyId` is specified, you can pass any value to this field. 
+     * @return GroupId Policy group ID. If `PolicyId` is specified, you can pass any value to this field.
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set Policy group ID.
-     * @param GroupId Policy group ID.
+     * Set Policy group ID. If `PolicyId` is specified, you can pass any value to this field.
+     * @param GroupId Policy group ID. If `PolicyId` is specified, you can pass any value to this field.
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
+    }
+
+    /**
+     * Get Alarm policy ID. If this field is used, you can pass any value to `GroupId`. 
+     * @return PolicyId Alarm policy ID. If this field is used, you can pass any value to `GroupId`.
+     */
+    public String getPolicyId() {
+        return this.PolicyId;
+    }
+
+    /**
+     * Set Alarm policy ID. If this field is used, you can pass any value to `GroupId`.
+     * @param PolicyId Alarm policy ID. If this field is used, you can pass any value to `GroupId`.
+     */
+    public void setPolicyId(String PolicyId) {
+        this.PolicyId = PolicyId;
     }
 
     /**
@@ -74,6 +97,7 @@ public class UnBindingAllPolicyObjectRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
 
     }
 }

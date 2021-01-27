@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class BindingPolicyObjectRequest extends AbstractModel{
 
     /**
-    * Policy group ID.
+    * Policy group ID. If `PolicyId` is specified, you can pass any value to this field.
     */
     @SerializedName("GroupId")
     @Expose
@@ -51,16 +51,23 @@ public class BindingPolicyObjectRequest extends AbstractModel{
     private BindingPolicyObjectDimension [] Dimensions;
 
     /**
-     * Get Policy group ID. 
-     * @return GroupId Policy group ID.
+    * Alarm policy ID. If this field is used, you can pass any value to `GroupId`.
+    */
+    @SerializedName("PolicyId")
+    @Expose
+    private String PolicyId;
+
+    /**
+     * Get Policy group ID. If `PolicyId` is specified, you can pass any value to this field. 
+     * @return GroupId Policy group ID. If `PolicyId` is specified, you can pass any value to this field.
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set Policy group ID.
-     * @param GroupId Policy group ID.
+     * Set Policy group ID. If `PolicyId` is specified, you can pass any value to this field.
+     * @param GroupId Policy group ID. If `PolicyId` is specified, you can pass any value to this field.
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
@@ -115,6 +122,22 @@ public class BindingPolicyObjectRequest extends AbstractModel{
     }
 
     /**
+     * Get Alarm policy ID. If this field is used, you can pass any value to `GroupId`. 
+     * @return PolicyId Alarm policy ID. If this field is used, you can pass any value to `GroupId`.
+     */
+    public String getPolicyId() {
+        return this.PolicyId;
+    }
+
+    /**
+     * Set Alarm policy ID. If this field is used, you can pass any value to `GroupId`.
+     * @param PolicyId Alarm policy ID. If this field is used, you can pass any value to `GroupId`.
+     */
+    public void setPolicyId(String PolicyId) {
+        this.PolicyId = PolicyId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class BindingPolicyObjectRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Module", this.Module);
         this.setParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
         this.setParamArrayObj(map, prefix + "Dimensions.", this.Dimensions);
+        this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
 
     }
 }

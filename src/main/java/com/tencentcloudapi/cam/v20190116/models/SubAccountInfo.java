@@ -79,6 +79,14 @@ public class SubAccountInfo extends AbstractModel{
     private String Email;
 
     /**
+    * Creation time
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
      * Get Sub-user user ID 
      * @return Uin Sub-user user ID
      */
@@ -207,6 +215,26 @@ public class SubAccountInfo extends AbstractModel{
     }
 
     /**
+     * Get Creation time
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return CreateTime Creation time
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set Creation time
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param CreateTime Creation time
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +246,7 @@ public class SubAccountInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "PhoneNum", this.PhoneNum);
         this.setParamSimple(map, prefix + "CountryCode", this.CountryCode);
         this.setParamSimple(map, prefix + "Email", this.Email);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }
