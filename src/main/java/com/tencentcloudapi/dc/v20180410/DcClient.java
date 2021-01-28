@@ -59,6 +59,26 @@ public class DcClient extends AbstractClient{
     }
 
     /**
+     *This API is used to apply for an internet tunnel’s CIDR block.
+     * @param req ApplyInternetAddressRequest
+     * @return ApplyInternetAddressResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApplyInternetAddressResponse ApplyInternetAddress(ApplyInternetAddressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ApplyInternetAddressResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ApplyInternetAddressResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ApplyInternetAddress");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to apply for a connection.
 When calling this API, please note that:
 You need to complete identity verification for your account; otherwise, you cannot apply for a connection;
@@ -204,6 +224,106 @@ Only connected connections can be deleted.
     }
 
     /**
+     *This API is used to obtain the public IP address of an internet tunnel.
+     * @param req DescribeInternetAddressRequest
+     * @return DescribeInternetAddressResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInternetAddressResponse DescribeInternetAddress(DescribeInternetAddressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInternetAddressResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInternetAddressResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInternetAddress");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to obtain the public IP quota of internet tunnels.
+     * @param req DescribeInternetAddressQuotaRequest
+     * @return DescribeInternetAddressQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInternetAddressQuotaResponse DescribeInternetAddressQuota(DescribeInternetAddressQuotaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInternetAddressQuotaResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInternetAddressQuotaResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInternetAddressQuota");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to obtain the public IP address assignment statistics of internet tunnels.
+     * @param req DescribeInternetAddressStatisticsRequest
+     * @return DescribeInternetAddressStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInternetAddressStatisticsResponse DescribeInternetAddressStatistics(DescribeInternetAddressStatisticsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInternetAddressStatisticsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInternetAddressStatisticsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInternetAddressStatistics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to disable a public IP address of internet tunnels.
+     * @param req DisableInternetAddressRequest
+     * @return DisableInternetAddressResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableInternetAddressResponse DisableInternetAddress(DisableInternetAddressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableInternetAddressResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableInternetAddressResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisableInternetAddress");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to enable a public IP address for internet tunnels.
+     * @param req EnableInternetAddressRequest
+     * @return EnableInternetAddressResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableInternetAddressResponse EnableInternetAddress(EnableInternetAddressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableInternetAddressResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableInternetAddressResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EnableInternetAddress");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify connection attributes.
      * @param req ModifyDirectConnectAttributeRequest
      * @return ModifyDirectConnectAttributeResponse
@@ -256,6 +376,26 @@ Only connected connections can be deleted.
                 Type type = new TypeToken<JsonResponseModel<RejectDirectConnectTunnelResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RejectDirectConnectTunnel");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to release an IP address of internet tunnels.
+     * @param req ReleaseInternetAddressRequest
+     * @return ReleaseInternetAddressResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReleaseInternetAddressResponse ReleaseInternetAddress(ReleaseInternetAddressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReleaseInternetAddressResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReleaseInternetAddressResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ReleaseInternetAddress");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

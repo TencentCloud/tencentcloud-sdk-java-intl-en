@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel{
 
     /**
-    * Information of 4xx or 5xx error codes by district and ISP.
+    * Information of error codes starting with 2, 3, 4, or 5 by district and ISP.
     */
     @SerializedName("ProIspInfoList")
     @Expose
@@ -107,16 +107,16 @@ public class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Information of 4xx or 5xx error codes by district and ISP. 
-     * @return ProIspInfoList Information of 4xx or 5xx error codes by district and ISP.
+     * Get Information of error codes starting with 2, 3, 4, or 5 by district and ISP. 
+     * @return ProIspInfoList Information of error codes starting with 2, 3, 4, or 5 by district and ISP.
      */
     public ProIspPlayCodeDataInfo [] getProIspInfoList() {
         return this.ProIspInfoList;
     }
 
     /**
-     * Set Information of 4xx or 5xx error codes by district and ISP.
-     * @param ProIspInfoList Information of 4xx or 5xx error codes by district and ISP.
+     * Set Information of error codes starting with 2, 3, 4, or 5 by district and ISP.
+     * @param ProIspInfoList Information of error codes starting with 2, 3, 4, or 5 by district and ISP.
      */
     public void setProIspInfoList(ProIspPlayCodeDataInfo [] ProIspInfoList) {
         this.ProIspInfoList = ProIspInfoList;

@@ -58,9 +58,9 @@ public class CertInfo extends AbstractModel{
     private String HttpsCrt;
 
     /**
-    * Certificate type:
-0: Tencent Cloud-hosted certificate.
-1: user-added certificate.
+    * Certificate type.
+0: User-added certificate.
+1: Tencent Cloud-hosted certificate.
     */
     @SerializedName("CertType")
     @Expose
@@ -161,24 +161,24 @@ public class CertInfo extends AbstractModel{
     }
 
     /**
-     * Get Certificate type:
-0: Tencent Cloud-hosted certificate.
-1: user-added certificate. 
-     * @return CertType Certificate type:
-0: Tencent Cloud-hosted certificate.
-1: user-added certificate.
+     * Get Certificate type.
+0: User-added certificate.
+1: Tencent Cloud-hosted certificate. 
+     * @return CertType Certificate type.
+0: User-added certificate.
+1: Tencent Cloud-hosted certificate.
      */
     public Long getCertType() {
         return this.CertType;
     }
 
     /**
-     * Set Certificate type:
-0: Tencent Cloud-hosted certificate.
-1: user-added certificate.
-     * @param CertType Certificate type:
-0: Tencent Cloud-hosted certificate.
-1: user-added certificate.
+     * Set Certificate type.
+0: User-added certificate.
+1: Tencent Cloud-hosted certificate.
+     * @param CertType Certificate type.
+0: User-added certificate.
+1: Tencent Cloud-hosted certificate.
      */
     public void setCertType(Long CertType) {
         this.CertType = CertType;

@@ -88,6 +88,15 @@ Note: `EndTime` and `StartTime` only support querying data for the last day.
     private String MainlandOrOversea;
 
     /**
+    * IP type:
+"Ipv6": IPv6 data
+Data of all IPs will be returned if this parameter is left empty.
+    */
+    @SerializedName("IpType")
+    @Expose
+    private String IpType;
+
+    /**
      * Get Start point in time (Beijing time).
 Example: 2019-02-21 10:00:00. 
      * @return StartTime Start point in time (Beijing time).
@@ -252,6 +261,30 @@ Note: `EndTime` and `StartTime` only support querying data for the last day.
     }
 
     /**
+     * Get IP type:
+"Ipv6": IPv6 data
+Data of all IPs will be returned if this parameter is left empty. 
+     * @return IpType IP type:
+"Ipv6": IPv6 data
+Data of all IPs will be returned if this parameter is left empty.
+     */
+    public String getIpType() {
+        return this.IpType;
+    }
+
+    /**
+     * Set IP type:
+"Ipv6": IPv6 data
+Data of all IPs will be returned if this parameter is left empty.
+     * @param IpType IP type:
+"Ipv6": IPv6 data
+Data of all IPs will be returned if this parameter is left empty.
+     */
+    public void setIpType(String IpType) {
+        this.IpType = IpType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -263,6 +296,7 @@ Note: `EndTime` and `StartTime` only support querying data for the last day.
         this.setParamArraySimple(map, prefix + "ProvinceNames.", this.ProvinceNames);
         this.setParamArraySimple(map, prefix + "IspNames.", this.IspNames);
         this.setParamSimple(map, prefix + "MainlandOrOversea", this.MainlandOrOversea);
+        this.setParamSimple(map, prefix + "IpType", this.IpType);
 
     }
 }

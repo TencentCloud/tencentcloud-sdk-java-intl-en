@@ -66,7 +66,7 @@ Default value: 1.
     /**
     * Number of entries per page.
 Maximum value: 100.
-Value range: any integer between 1 and 100.
+Valid values: integers between 10 and 100.
 Default value: 10.
     */
     @SerializedName("PageSize")
@@ -187,11 +187,11 @@ Default value: 1.
     /**
      * Get Number of entries per page.
 Maximum value: 100.
-Value range: any integer between 1 and 100.
+Valid values: integers between 10 and 100.
 Default value: 10. 
      * @return PageSize Number of entries per page.
 Maximum value: 100.
-Value range: any integer between 1 and 100.
+Valid values: integers between 10 and 100.
 Default value: 10.
      */
     public Long getPageSize() {
@@ -201,11 +201,11 @@ Default value: 10.
     /**
      * Set Number of entries per page.
 Maximum value: 100.
-Value range: any integer between 1 and 100.
+Valid values: integers between 10 and 100.
 Default value: 10.
      * @param PageSize Number of entries per page.
 Maximum value: 100.
-Value range: any integer between 1 and 100.
+Valid values: integers between 10 and 100.
 Default value: 10.
      */
     public void setPageSize(Long PageSize) {

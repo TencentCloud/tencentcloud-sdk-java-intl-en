@@ -30,8 +30,8 @@ public class DescribeStreamPlayInfoListRequest extends AbstractModel{
     private String StartTime;
 
     /**
-    * End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
-The end time and start time must be on the same day. Data in the last 3 days can be queried.
+    * End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
+The difference between the start time and end time cannot be greater than 24 hours. Data in the last 30 days can be queried.
     */
     @SerializedName("EndTime")
     @Expose
@@ -79,20 +79,20 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
     }
 
     /**
-     * Get End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
-The end time and start time must be on the same day. Data in the last 3 days can be queried. 
-     * @return EndTime End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
-The end time and start time must be on the same day. Data in the last 3 days can be queried.
+     * Get End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
+The difference between the start time and end time cannot be greater than 24 hours. Data in the last 30 days can be queried. 
+     * @return EndTime End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
+The difference between the start time and end time cannot be greater than 24 hours. Data in the last 30 days can be queried.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
-The end time and start time must be on the same day. Data in the last 3 days can be queried.
-     * @param EndTime End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
-The end time and start time must be on the same day. Data in the last 3 days can be queried.
+     * Set End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
+The difference between the start time and end time cannot be greater than 24 hours. Data in the last 30 days can be queried.
+     * @param EndTime End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
+The difference between the start time and end time cannot be greater than 24 hours. Data in the last 30 days can be queried.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

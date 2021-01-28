@@ -32,7 +32,7 @@ Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
     private String FromEmailAddress;
 
     /**
-    * Recipient address.
+    * Recipient email addresses. You can send an email to up to 50 recipients at a time.
     */
     @SerializedName("Destination")
     @Expose
@@ -98,16 +98,16 @@ Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
     }
 
     /**
-     * Get Recipient address. 
-     * @return Destination Recipient address.
+     * Get Recipient email addresses. You can send an email to up to 50 recipients at a time. 
+     * @return Destination Recipient email addresses. You can send an email to up to 50 recipients at a time.
      */
     public String [] getDestination() {
         return this.Destination;
     }
 
     /**
-     * Set Recipient address.
-     * @param Destination Recipient address.
+     * Set Recipient email addresses. You can send an email to up to 50 recipients at a time.
+     * @param Destination Recipient email addresses. You can send an email to up to 50 recipients at a time.
      */
     public void setDestination(String [] Destination) {
         this.Destination = Destination;

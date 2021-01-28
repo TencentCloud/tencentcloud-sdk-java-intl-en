@@ -37,11 +37,55 @@ public class BankCardOCRResponse extends AbstractModel{
     private String BankInfo;
 
     /**
-    * Expiration date
+    * Expiration date. Format: 07/2023
     */
     @SerializedName("ValidDate")
     @Expose
     private String ValidDate;
+
+    /**
+    * Card type
+    */
+    @SerializedName("CardType")
+    @Expose
+    private String CardType;
+
+    /**
+    * Card name
+    */
+    @SerializedName("CardName")
+    @Expose
+    private String CardName;
+
+    /**
+    * Sliced image data
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BorderCutImage")
+    @Expose
+    private String BorderCutImage;
+
+    /**
+    * Card number image data
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CardNoImage")
+    @Expose
+    private String CardNoImage;
+
+    /**
+    * Warning code:
+-9110: the bank card date is invalid. 
+-9111: the bank card border is incomplete. 
+-9112: the bank card image is reflective.
+-9113: the bank card image is a photocopy.
+-9114: the bank card image is a photograph.
+Multiple warning codes may be returned at a time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("WarningCode")
+    @Expose
+    private Long [] WarningCode;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -83,19 +127,135 @@ public class BankCardOCRResponse extends AbstractModel{
     }
 
     /**
-     * Get Expiration date 
-     * @return ValidDate Expiration date
+     * Get Expiration date. Format: 07/2023 
+     * @return ValidDate Expiration date. Format: 07/2023
      */
     public String getValidDate() {
         return this.ValidDate;
     }
 
     /**
-     * Set Expiration date
-     * @param ValidDate Expiration date
+     * Set Expiration date. Format: 07/2023
+     * @param ValidDate Expiration date. Format: 07/2023
      */
     public void setValidDate(String ValidDate) {
         this.ValidDate = ValidDate;
+    }
+
+    /**
+     * Get Card type 
+     * @return CardType Card type
+     */
+    public String getCardType() {
+        return this.CardType;
+    }
+
+    /**
+     * Set Card type
+     * @param CardType Card type
+     */
+    public void setCardType(String CardType) {
+        this.CardType = CardType;
+    }
+
+    /**
+     * Get Card name 
+     * @return CardName Card name
+     */
+    public String getCardName() {
+        return this.CardName;
+    }
+
+    /**
+     * Set Card name
+     * @param CardName Card name
+     */
+    public void setCardName(String CardName) {
+        this.CardName = CardName;
+    }
+
+    /**
+     * Get Sliced image data
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return BorderCutImage Sliced image data
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getBorderCutImage() {
+        return this.BorderCutImage;
+    }
+
+    /**
+     * Set Sliced image data
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param BorderCutImage Sliced image data
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setBorderCutImage(String BorderCutImage) {
+        this.BorderCutImage = BorderCutImage;
+    }
+
+    /**
+     * Get Card number image data
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return CardNoImage Card number image data
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getCardNoImage() {
+        return this.CardNoImage;
+    }
+
+    /**
+     * Set Card number image data
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param CardNoImage Card number image data
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setCardNoImage(String CardNoImage) {
+        this.CardNoImage = CardNoImage;
+    }
+
+    /**
+     * Get Warning code:
+-9110: the bank card date is invalid. 
+-9111: the bank card border is incomplete. 
+-9112: the bank card image is reflective.
+-9113: the bank card image is a photocopy.
+-9114: the bank card image is a photograph.
+Multiple warning codes may be returned at a time.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return WarningCode Warning code:
+-9110: the bank card date is invalid. 
+-9111: the bank card border is incomplete. 
+-9112: the bank card image is reflective.
+-9113: the bank card image is a photocopy.
+-9114: the bank card image is a photograph.
+Multiple warning codes may be returned at a time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long [] getWarningCode() {
+        return this.WarningCode;
+    }
+
+    /**
+     * Set Warning code:
+-9110: the bank card date is invalid. 
+-9111: the bank card border is incomplete. 
+-9112: the bank card image is reflective.
+-9113: the bank card image is a photocopy.
+-9114: the bank card image is a photograph.
+Multiple warning codes may be returned at a time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param WarningCode Warning code:
+-9110: the bank card date is invalid. 
+-9111: the bank card border is incomplete. 
+-9112: the bank card image is reflective.
+-9113: the bank card image is a photocopy.
+-9114: the bank card image is a photograph.
+Multiple warning codes may be returned at a time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setWarningCode(Long [] WarningCode) {
+        this.WarningCode = WarningCode;
     }
 
     /**
@@ -121,6 +281,11 @@ public class BankCardOCRResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "CardNo", this.CardNo);
         this.setParamSimple(map, prefix + "BankInfo", this.BankInfo);
         this.setParamSimple(map, prefix + "ValidDate", this.ValidDate);
+        this.setParamSimple(map, prefix + "CardType", this.CardType);
+        this.setParamSimple(map, prefix + "CardName", this.CardName);
+        this.setParamSimple(map, prefix + "BorderCutImage", this.BorderCutImage);
+        this.setParamSimple(map, prefix + "CardNoImage", this.CardNoImage);
+        this.setParamArraySimple(map, prefix + "WarningCode.", this.WarningCode);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

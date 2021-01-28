@@ -23,10 +23,8 @@ import java.util.HashMap;
 public class BankCardOCRRequest extends AbstractModel{
 
     /**
-    * Base64-encoded value of image.
-Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
-Supported image size: the downloaded image cannot exceed 7 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-Either the `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
+    * Base64-encoded value of the image. The image cannot exceed 7 MB after being Base64-encoded. A resolution above 500 x 800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupy more than 2/3 area of the image.
+Either the `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageUrl` will be used.
     */
     @SerializedName("ImageBase64")
     @Expose
@@ -44,63 +42,55 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
     private String ImageUrl;
 
     /**
-    * 
+    * Whether to return the bank card image data after preprocessing (precise cropping and alignment). Default value: `false`
     */
     @SerializedName("RetBorderCutImage")
     @Expose
     private Boolean RetBorderCutImage;
 
     /**
-    * 
+    * Whether to return the card number image data after slicing. Default value: `false`
     */
     @SerializedName("RetCardNoImage")
     @Expose
     private Boolean RetCardNoImage;
 
     /**
-    * 
+    * Whether to enable photocopy check. If the input image is a bank card photocopy, an alarm will be returned. Default value: `false`
     */
     @SerializedName("EnableCopyCheck")
     @Expose
     private Boolean EnableCopyCheck;
 
     /**
-    * 
+    * Whether to enable photograph check. If the input image is a bank card photograph, an alarm will be returned. Default value: `false`
     */
     @SerializedName("EnableReshootCheck")
     @Expose
     private Boolean EnableReshootCheck;
 
     /**
-    * 
+    * Whether to enable obscured border check. If the input image is a bank card with obscured border, an alarm will be returned. Default value: `false`
     */
     @SerializedName("EnableBorderCheck")
     @Expose
     private Boolean EnableBorderCheck;
 
     /**
-     * Get Base64-encoded value of image.
-Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
-Supported image size: the downloaded image cannot exceed 7 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-Either the `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used. 
-     * @return ImageBase64 Base64-encoded value of image.
-Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
-Supported image size: the downloaded image cannot exceed 7 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-Either the `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
+     * Get Base64-encoded value of the image. The image cannot exceed 7 MB after being Base64-encoded. A resolution above 500 x 800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupy more than 2/3 area of the image.
+Either the `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageUrl` will be used. 
+     * @return ImageBase64 Base64-encoded value of the image. The image cannot exceed 7 MB after being Base64-encoded. A resolution above 500 x 800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupy more than 2/3 area of the image.
+Either the `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageUrl` will be used.
      */
     public String getImageBase64() {
         return this.ImageBase64;
     }
 
     /**
-     * Set Base64-encoded value of image.
-Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
-Supported image size: the downloaded image cannot exceed 7 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-Either the `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
-     * @param ImageBase64 Base64-encoded value of image.
-Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
-Supported image size: the downloaded image cannot exceed 7 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-Either the `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
+     * Set Base64-encoded value of the image. The image cannot exceed 7 MB after being Base64-encoded. A resolution above 500 x 800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupy more than 2/3 area of the image.
+Either the `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageUrl` will be used.
+     * @param ImageBase64 Base64-encoded value of the image. The image cannot exceed 7 MB after being Base64-encoded. A resolution above 500 x 800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupy more than 2/3 area of the image.
+Either the `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageUrl` will be used.
      */
     public void setImageBase64(String ImageBase64) {
         this.ImageBase64 = ImageBase64;
@@ -139,80 +129,80 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
     }
 
     /**
-     * Get  
-     * @return RetBorderCutImage 
+     * Get Whether to return the bank card image data after preprocessing (precise cropping and alignment). Default value: `false` 
+     * @return RetBorderCutImage Whether to return the bank card image data after preprocessing (precise cropping and alignment). Default value: `false`
      */
     public Boolean getRetBorderCutImage() {
         return this.RetBorderCutImage;
     }
 
     /**
-     * Set 
-     * @param RetBorderCutImage 
+     * Set Whether to return the bank card image data after preprocessing (precise cropping and alignment). Default value: `false`
+     * @param RetBorderCutImage Whether to return the bank card image data after preprocessing (precise cropping and alignment). Default value: `false`
      */
     public void setRetBorderCutImage(Boolean RetBorderCutImage) {
         this.RetBorderCutImage = RetBorderCutImage;
     }
 
     /**
-     * Get  
-     * @return RetCardNoImage 
+     * Get Whether to return the card number image data after slicing. Default value: `false` 
+     * @return RetCardNoImage Whether to return the card number image data after slicing. Default value: `false`
      */
     public Boolean getRetCardNoImage() {
         return this.RetCardNoImage;
     }
 
     /**
-     * Set 
-     * @param RetCardNoImage 
+     * Set Whether to return the card number image data after slicing. Default value: `false`
+     * @param RetCardNoImage Whether to return the card number image data after slicing. Default value: `false`
      */
     public void setRetCardNoImage(Boolean RetCardNoImage) {
         this.RetCardNoImage = RetCardNoImage;
     }
 
     /**
-     * Get  
-     * @return EnableCopyCheck 
+     * Get Whether to enable photocopy check. If the input image is a bank card photocopy, an alarm will be returned. Default value: `false` 
+     * @return EnableCopyCheck Whether to enable photocopy check. If the input image is a bank card photocopy, an alarm will be returned. Default value: `false`
      */
     public Boolean getEnableCopyCheck() {
         return this.EnableCopyCheck;
     }
 
     /**
-     * Set 
-     * @param EnableCopyCheck 
+     * Set Whether to enable photocopy check. If the input image is a bank card photocopy, an alarm will be returned. Default value: `false`
+     * @param EnableCopyCheck Whether to enable photocopy check. If the input image is a bank card photocopy, an alarm will be returned. Default value: `false`
      */
     public void setEnableCopyCheck(Boolean EnableCopyCheck) {
         this.EnableCopyCheck = EnableCopyCheck;
     }
 
     /**
-     * Get  
-     * @return EnableReshootCheck 
+     * Get Whether to enable photograph check. If the input image is a bank card photograph, an alarm will be returned. Default value: `false` 
+     * @return EnableReshootCheck Whether to enable photograph check. If the input image is a bank card photograph, an alarm will be returned. Default value: `false`
      */
     public Boolean getEnableReshootCheck() {
         return this.EnableReshootCheck;
     }
 
     /**
-     * Set 
-     * @param EnableReshootCheck 
+     * Set Whether to enable photograph check. If the input image is a bank card photograph, an alarm will be returned. Default value: `false`
+     * @param EnableReshootCheck Whether to enable photograph check. If the input image is a bank card photograph, an alarm will be returned. Default value: `false`
      */
     public void setEnableReshootCheck(Boolean EnableReshootCheck) {
         this.EnableReshootCheck = EnableReshootCheck;
     }
 
     /**
-     * Get  
-     * @return EnableBorderCheck 
+     * Get Whether to enable obscured border check. If the input image is a bank card with obscured border, an alarm will be returned. Default value: `false` 
+     * @return EnableBorderCheck Whether to enable obscured border check. If the input image is a bank card with obscured border, an alarm will be returned. Default value: `false`
      */
     public Boolean getEnableBorderCheck() {
         return this.EnableBorderCheck;
     }
 
     /**
-     * Set 
-     * @param EnableBorderCheck 
+     * Set Whether to enable obscured border check. If the input image is a bank card with obscured border, an alarm will be returned. Default value: `false`
+     * @param EnableBorderCheck Whether to enable obscured border check. If the input image is a bank card with obscured border, an alarm will be returned. Default value: `false`
      */
     public void setEnableBorderCheck(Boolean EnableBorderCheck) {
         this.EnableBorderCheck = EnableBorderCheck;

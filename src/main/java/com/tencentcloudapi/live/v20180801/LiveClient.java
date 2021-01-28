@@ -1669,6 +1669,26 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
     }
 
     /**
+     *This API is used to query the number of LVB upstream channels.
+     * @param req DescribeUploadStreamNumsRequest
+     * @return DescribeUploadStreamNumsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUploadStreamNumsResponse DescribeUploadStreamNums(DescribeUploadStreamNumsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUploadStreamNumsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUploadStreamNumsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUploadStreamNums");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the information of the top n domain names or stream IDs in a certain period of time (top 1,000 is supported currently).
      * @param req DescribeVisitTopSumInfoListRequest
      * @return DescribeVisitTopSumInfoListResponse

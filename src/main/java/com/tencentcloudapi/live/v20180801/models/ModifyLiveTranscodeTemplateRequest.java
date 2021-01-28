@@ -30,9 +30,9 @@ public class ModifyLiveTranscodeTemplateRequest extends AbstractModel{
     private Long TemplateId;
 
     /**
-    * Video codec. Valid values: h264 (default), h265, origin
+    * Video codec. Valid values: h264, h265, origin (default).
 
-origin: original codec as the output codec
+origin: original codec as the output codec.
     */
     @SerializedName("Vcodec")
     @Expose
@@ -192,24 +192,24 @@ Value range: 0.0-0.5.
     }
 
     /**
-     * Get Video codec. Valid values: h264 (default), h265, origin
+     * Get Video codec. Valid values: h264, h265, origin (default).
 
-origin: original codec as the output codec 
-     * @return Vcodec Video codec. Valid values: h264 (default), h265, origin
+origin: original codec as the output codec. 
+     * @return Vcodec Video codec. Valid values: h264, h265, origin (default).
 
-origin: original codec as the output codec
+origin: original codec as the output codec.
      */
     public String getVcodec() {
         return this.Vcodec;
     }
 
     /**
-     * Set Video codec. Valid values: h264 (default), h265, origin
+     * Set Video codec. Valid values: h264, h265, origin (default).
 
-origin: original codec as the output codec
-     * @param Vcodec Video codec. Valid values: h264 (default), h265, origin
+origin: original codec as the output codec.
+     * @param Vcodec Video codec. Valid values: h264, h265, origin (default).
 
-origin: original codec as the output codec
+origin: original codec as the output codec.
      */
     public void setVcodec(String Vcodec) {
         this.Vcodec = Vcodec;
