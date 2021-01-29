@@ -920,6 +920,27 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
     }
 
     /**
+     *This API is used to generate a signature with an asymmetric key.
+Note: only the keys with `KeyUsage= ASYMMETRIC_SIGN_VERIFY_SM2` can be used for signature generation.
+     * @param req SignByAsymmetricKeyRequest
+     * @return SignByAsymmetricKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public SignByAsymmetricKeyResponse SignByAsymmetricKey(SignByAsymmetricKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SignByAsymmetricKeyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SignByAsymmetricKeyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SignByAsymmetricKey");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to unbind a key with a Tencent Cloud resource, indicating that the Tencent Cloud resource will not use the key any longer.
      * @param req UnbindCloudResourceRequest
      * @return UnbindCloudResourceResponse
@@ -972,6 +993,26 @@ Key material can only be imported into CMKs in `Enabled` and `PendingImport` sta
                 Type type = new TypeToken<JsonResponseModel<UpdateKeyDescriptionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpdateKeyDescription");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to verify a signature with an asymmetric key.
+     * @param req VerifyByAsymmetricKeyRequest
+     * @return VerifyByAsymmetricKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public VerifyByAsymmetricKeyResponse VerifyByAsymmetricKey(VerifyByAsymmetricKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<VerifyByAsymmetricKeyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<VerifyByAsymmetricKeyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "VerifyByAsymmetricKey");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

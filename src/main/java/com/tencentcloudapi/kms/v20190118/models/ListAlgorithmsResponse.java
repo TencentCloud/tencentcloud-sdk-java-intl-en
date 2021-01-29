@@ -37,6 +37,13 @@ public class ListAlgorithmsResponse extends AbstractModel{
     private AlgorithmInfo [] AsymmetricAlgorithms;
 
     /**
+    * Asymmetric signature verification algorithms supported in the current region
+    */
+    @SerializedName("AsymmetricSignVerifyAlgorithms")
+    @Expose
+    private AlgorithmInfo [] AsymmetricSignVerifyAlgorithms;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -76,6 +83,22 @@ public class ListAlgorithmsResponse extends AbstractModel{
     }
 
     /**
+     * Get Asymmetric signature verification algorithms supported in the current region 
+     * @return AsymmetricSignVerifyAlgorithms Asymmetric signature verification algorithms supported in the current region
+     */
+    public AlgorithmInfo [] getAsymmetricSignVerifyAlgorithms() {
+        return this.AsymmetricSignVerifyAlgorithms;
+    }
+
+    /**
+     * Set Asymmetric signature verification algorithms supported in the current region
+     * @param AsymmetricSignVerifyAlgorithms Asymmetric signature verification algorithms supported in the current region
+     */
+    public void setAsymmetricSignVerifyAlgorithms(AlgorithmInfo [] AsymmetricSignVerifyAlgorithms) {
+        this.AsymmetricSignVerifyAlgorithms = AsymmetricSignVerifyAlgorithms;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -97,6 +120,7 @@ public class ListAlgorithmsResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "SymmetricAlgorithms.", this.SymmetricAlgorithms);
         this.setParamArrayObj(map, prefix + "AsymmetricAlgorithms.", this.AsymmetricAlgorithms);
+        this.setParamArrayObj(map, prefix + "AsymmetricSignVerifyAlgorithms.", this.AsymmetricSignVerifyAlgorithms);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
