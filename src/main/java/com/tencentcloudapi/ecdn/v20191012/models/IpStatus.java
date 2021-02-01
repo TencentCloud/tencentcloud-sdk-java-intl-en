@@ -60,6 +60,13 @@ offline: the node is offline
     private String Status;
 
     /**
+    * Node IP creation time
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
      * Get Node IP 
      * @return Ip Node IP
      */
@@ -148,6 +155,22 @@ offline: the node is offline
     }
 
     /**
+     * Get Node IP creation time 
+     * @return CreateTime Node IP creation time
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set Node IP creation time
+     * @param CreateTime Node IP creation time
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -156,6 +179,7 @@ offline: the node is offline
         this.setParamSimple(map, prefix + "Isp", this.Isp);
         this.setParamSimple(map, prefix + "City", this.City);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }
