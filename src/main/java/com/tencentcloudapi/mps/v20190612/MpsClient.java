@@ -159,7 +159,7 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create material samples for video processing operations such as content recognition and detection of inappropriate information with the help of technologies such as facial feature positioning.
+     *This API is used to create image samples for video processing operations such as content recognition and inappropriate information detection with the help of technologies such as facial feature positioning.
      * @param req CreatePersonSampleRequest
      * @return CreatePersonSampleResponse
      * @throws TencentCloudSDKException
@@ -259,7 +259,7 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create keyword samples in batches for video processing operations such as content recognition and detection of inappropriate information with the help of the OCR and ASR technologies.
+     *This API is used to create keyword samples in batches for video processing operations such as content recognition and inappropriate information detection with the help of the OCR and ASR technologies.
      * @param req CreateWordSamplesRequest
      * @return CreateWordSamplesResponse
      * @throws TencentCloudSDKException
@@ -431,7 +431,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
-     *This API is used to delete the material samples that belong to a material ID.
+     *This API is used to delete image samples by image ID.
      * @param req DeletePersonSampleRequest
      * @return DeletePersonSampleResponse
      * @throws TencentCloudSDKException
@@ -651,7 +651,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
-     *This API is used to get the list of content recognition templates using their unique ID. The returned result includes all custom templates that meet the conditions as well as preset content recognition templates.
+     *This API is used to get the list of intelligent content recognition templates using their unique ID. The returned result includes all custom templates that meet the conditions as well as preset intelligent content recognition templates.
      * @param req DescribeContentReviewTemplatesRequest
      * @return DescribeContentReviewTemplatesResponse
      * @throws TencentCloudSDKException
@@ -711,7 +711,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
-     *This API is used to query the information of material samples. It supports paginated queries by material ID, name, and tag.
+     *This API is used to query the information of image samples. It supports paginated queries by image ID, name, and tag.
      * @param req DescribePersonSamplesRequest
      * @return DescribePersonSamplesResponse
      * @throws TencentCloudSDKException
@@ -1119,7 +1119,7 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     }
 
     /**
-     *This API is used to modify material samples by material ID. You can use it to modify the name and description of a material sample and add/delete/reset facial features or tags. There must be at least one image left after the deletion of facial features; otherwise, please reset instead of delete the facial features.
+     *This API is used to modify image samples by image ID. You can use it to modify the name and description of an image sample and add/delete/reset facial features or tags. There must be at least one image left after the deletion of facial features; otherwise, please reset instead of delete the facial features.
      * @param req ModifyPersonSampleRequest
      * @return ModifyPersonSampleResponse
      * @throws TencentCloudSDKException

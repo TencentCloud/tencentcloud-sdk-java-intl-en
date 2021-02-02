@@ -23,33 +23,33 @@ import java.util.HashMap;
 public class DescribePersonSamplesRequest extends AbstractModel{
 
     /**
-    * Type of the material pulled. Valid values:
-<li>UserDefine: custom material library;</li>
-<li>Default: default material library.</li>
+    * Type of images to pull. Valid values:
+<li>UserDefine: custom image library</li>
+<li>Default: default image library</li>
 
-Default value: UserDefine (the materials of the custom material library are pulled.)
-Note: you can pull the default material library only using the material name or a combination of the material name and ID, and only one face image is returned.
+Default value: UserDefine. Samples in the custom image library will be pulled.
+Note: you can pull the default image library only using the image name or a combination of the image name and ID, and only one face image is returned.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Material ID. Array length limit: 100.
+    * Image ID. Array length limit: 100
     */
     @SerializedName("PersonIds")
     @Expose
     private String [] PersonIds;
 
     /**
-    * Material name. Array length limit: 20.
+    * Image name. Array length limit: 20
     */
     @SerializedName("Names")
     @Expose
     private String [] Names;
 
     /**
-    * Material tag. Array length limit: 20.
+    * Image tag. Array length limit: 20
     */
     @SerializedName("Tags")
     @Expose
@@ -70,84 +70,84 @@ Note: you can pull the default material library only using the material name or 
     private Long Limit;
 
     /**
-     * Get Type of the material pulled. Valid values:
-<li>UserDefine: custom material library;</li>
-<li>Default: default material library.</li>
+     * Get Type of images to pull. Valid values:
+<li>UserDefine: custom image library</li>
+<li>Default: default image library</li>
 
-Default value: UserDefine (the materials of the custom material library are pulled.)
-Note: you can pull the default material library only using the material name or a combination of the material name and ID, and only one face image is returned. 
-     * @return Type Type of the material pulled. Valid values:
-<li>UserDefine: custom material library;</li>
-<li>Default: default material library.</li>
+Default value: UserDefine. Samples in the custom image library will be pulled.
+Note: you can pull the default image library only using the image name or a combination of the image name and ID, and only one face image is returned. 
+     * @return Type Type of images to pull. Valid values:
+<li>UserDefine: custom image library</li>
+<li>Default: default image library</li>
 
-Default value: UserDefine (the materials of the custom material library are pulled.)
-Note: you can pull the default material library only using the material name or a combination of the material name and ID, and only one face image is returned.
+Default value: UserDefine. Samples in the custom image library will be pulled.
+Note: you can pull the default image library only using the image name or a combination of the image name and ID, and only one face image is returned.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Type of the material pulled. Valid values:
-<li>UserDefine: custom material library;</li>
-<li>Default: default material library.</li>
+     * Set Type of images to pull. Valid values:
+<li>UserDefine: custom image library</li>
+<li>Default: default image library</li>
 
-Default value: UserDefine (the materials of the custom material library are pulled.)
-Note: you can pull the default material library only using the material name or a combination of the material name and ID, and only one face image is returned.
-     * @param Type Type of the material pulled. Valid values:
-<li>UserDefine: custom material library;</li>
-<li>Default: default material library.</li>
+Default value: UserDefine. Samples in the custom image library will be pulled.
+Note: you can pull the default image library only using the image name or a combination of the image name and ID, and only one face image is returned.
+     * @param Type Type of images to pull. Valid values:
+<li>UserDefine: custom image library</li>
+<li>Default: default image library</li>
 
-Default value: UserDefine (the materials of the custom material library are pulled.)
-Note: you can pull the default material library only using the material name or a combination of the material name and ID, and only one face image is returned.
+Default value: UserDefine. Samples in the custom image library will be pulled.
+Note: you can pull the default image library only using the image name or a combination of the image name and ID, and only one face image is returned.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Material ID. Array length limit: 100. 
-     * @return PersonIds Material ID. Array length limit: 100.
+     * Get Image ID. Array length limit: 100 
+     * @return PersonIds Image ID. Array length limit: 100
      */
     public String [] getPersonIds() {
         return this.PersonIds;
     }
 
     /**
-     * Set Material ID. Array length limit: 100.
-     * @param PersonIds Material ID. Array length limit: 100.
+     * Set Image ID. Array length limit: 100
+     * @param PersonIds Image ID. Array length limit: 100
      */
     public void setPersonIds(String [] PersonIds) {
         this.PersonIds = PersonIds;
     }
 
     /**
-     * Get Material name. Array length limit: 20. 
-     * @return Names Material name. Array length limit: 20.
+     * Get Image name. Array length limit: 20 
+     * @return Names Image name. Array length limit: 20
      */
     public String [] getNames() {
         return this.Names;
     }
 
     /**
-     * Set Material name. Array length limit: 20.
-     * @param Names Material name. Array length limit: 20.
+     * Set Image name. Array length limit: 20
+     * @param Names Image name. Array length limit: 20
      */
     public void setNames(String [] Names) {
         this.Names = Names;
     }
 
     /**
-     * Get Material tag. Array length limit: 20. 
-     * @return Tags Material tag. Array length limit: 20.
+     * Get Image tag. Array length limit: 20 
+     * @return Tags Image tag. Array length limit: 20
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Material tag. Array length limit: 20.
-     * @param Tags Material tag. Array length limit: 20.
+     * Set Image tag. Array length limit: 20
+     * @param Tags Image tag. Array length limit: 20
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;

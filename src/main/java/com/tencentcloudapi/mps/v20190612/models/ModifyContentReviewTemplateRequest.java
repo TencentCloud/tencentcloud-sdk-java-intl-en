@@ -30,35 +30,35 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel{
     private Long Definition;
 
     /**
-    * Name of an intelligent content recognition template. Length limit: 64 characters.
+    * Name of an intelligent content recognition template. Length limit: 64 characters
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Description of an intelligent content recognition template. Length limit: 256 characters.
+    * Description of an intelligent content recognition template. Length limit: 256 characters
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * Control parameter for offensive content
+    * Control parameter for porn information
     */
     @SerializedName("PornConfigure")
     @Expose
     private PornConfigureInfoForUpdate PornConfigure;
 
     /**
-    * Control parameter for insecure content
+    * Control parameter for terrorism information
     */
     @SerializedName("TerrorismConfigure")
     @Expose
     private TerrorismConfigureInfoForUpdate TerrorismConfigure;
 
     /**
-    * Control parameter for inappropriate content
+    * Control parameter for politically sensitive information
     */
     @SerializedName("PoliticalConfigure")
     @Expose
@@ -75,7 +75,7 @@ Note: this parameter is not supported yet.
     private ProhibitedConfigureInfoForUpdate ProhibitedConfigure;
 
     /**
-    * Control parameter for custom intelligent content recognition
+    * Control parameter for custom intelligent content recognition tasks
     */
     @SerializedName("UserDefineConfigure")
     @Expose
@@ -98,80 +98,80 @@ Note: this parameter is not supported yet.
     }
 
     /**
-     * Get Name of an intelligent content recognition template. Length limit: 64 characters. 
-     * @return Name Name of an intelligent content recognition template. Length limit: 64 characters.
+     * Get Name of an intelligent content recognition template. Length limit: 64 characters 
+     * @return Name Name of an intelligent content recognition template. Length limit: 64 characters
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name of an intelligent content recognition template. Length limit: 64 characters.
-     * @param Name Name of an intelligent content recognition template. Length limit: 64 characters.
+     * Set Name of an intelligent content recognition template. Length limit: 64 characters
+     * @param Name Name of an intelligent content recognition template. Length limit: 64 characters
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Description of an intelligent content recognition template. Length limit: 256 characters. 
-     * @return Comment Description of an intelligent content recognition template. Length limit: 256 characters.
+     * Get Description of an intelligent content recognition template. Length limit: 256 characters 
+     * @return Comment Description of an intelligent content recognition template. Length limit: 256 characters
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Description of an intelligent content recognition template. Length limit: 256 characters.
-     * @param Comment Description of an intelligent content recognition template. Length limit: 256 characters.
+     * Set Description of an intelligent content recognition template. Length limit: 256 characters
+     * @param Comment Description of an intelligent content recognition template. Length limit: 256 characters
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get Control parameter for offensive content 
-     * @return PornConfigure Control parameter for offensive content
+     * Get Control parameter for porn information 
+     * @return PornConfigure Control parameter for porn information
      */
     public PornConfigureInfoForUpdate getPornConfigure() {
         return this.PornConfigure;
     }
 
     /**
-     * Set Control parameter for offensive content
-     * @param PornConfigure Control parameter for offensive content
+     * Set Control parameter for porn information
+     * @param PornConfigure Control parameter for porn information
      */
     public void setPornConfigure(PornConfigureInfoForUpdate PornConfigure) {
         this.PornConfigure = PornConfigure;
     }
 
     /**
-     * Get Control parameter for insecure content 
-     * @return TerrorismConfigure Control parameter for insecure content
+     * Get Control parameter for terrorism information 
+     * @return TerrorismConfigure Control parameter for terrorism information
      */
     public TerrorismConfigureInfoForUpdate getTerrorismConfigure() {
         return this.TerrorismConfigure;
     }
 
     /**
-     * Set Control parameter for insecure content
-     * @param TerrorismConfigure Control parameter for insecure content
+     * Set Control parameter for terrorism information
+     * @param TerrorismConfigure Control parameter for terrorism information
      */
     public void setTerrorismConfigure(TerrorismConfigureInfoForUpdate TerrorismConfigure) {
         this.TerrorismConfigure = TerrorismConfigure;
     }
 
     /**
-     * Get Control parameter for inappropriate content 
-     * @return PoliticalConfigure Control parameter for inappropriate content
+     * Get Control parameter for politically sensitive information 
+     * @return PoliticalConfigure Control parameter for politically sensitive information
      */
     public PoliticalConfigureInfoForUpdate getPoliticalConfigure() {
         return this.PoliticalConfigure;
     }
 
     /**
-     * Set Control parameter for inappropriate content
-     * @param PoliticalConfigure Control parameter for inappropriate content
+     * Set Control parameter for politically sensitive information
+     * @param PoliticalConfigure Control parameter for politically sensitive information
      */
     public void setPoliticalConfigure(PoliticalConfigureInfoForUpdate PoliticalConfigure) {
         this.PoliticalConfigure = PoliticalConfigure;
@@ -206,16 +206,16 @@ Note: this parameter is not supported yet.
     }
 
     /**
-     * Get Control parameter for custom intelligent content recognition 
-     * @return UserDefineConfigure Control parameter for custom intelligent content recognition
+     * Get Control parameter for custom intelligent content recognition tasks 
+     * @return UserDefineConfigure Control parameter for custom intelligent content recognition tasks
      */
     public UserDefineConfigureInfoForUpdate getUserDefineConfigure() {
         return this.UserDefineConfigure;
     }
 
     /**
-     * Set Control parameter for custom intelligent content recognition
-     * @param UserDefineConfigure Control parameter for custom intelligent content recognition
+     * Set Control parameter for custom intelligent content recognition tasks
+     * @param UserDefineConfigure Control parameter for custom intelligent content recognition tasks
      */
     public void setUserDefineConfigure(UserDefineConfigureInfoForUpdate UserDefineConfigure) {
         this.UserDefineConfigure = UserDefineConfigure;

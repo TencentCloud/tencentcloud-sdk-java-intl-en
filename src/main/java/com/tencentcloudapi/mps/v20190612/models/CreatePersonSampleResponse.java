@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreatePersonSampleResponse extends AbstractModel{
 
     /**
-    * Material information
+    * Image information
     */
     @SerializedName("Person")
     @Expose
     private AiSamplePerson Person;
 
     /**
-    * Positioning information of facial features processed unsuccessfully
+    * Information of images that failed the verification by facial feature positioning
     */
     @SerializedName("FailFaceInfoSet")
     @Expose
@@ -44,32 +44,32 @@ public class CreatePersonSampleResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Material information 
-     * @return Person Material information
+     * Get Image information 
+     * @return Person Image information
      */
     public AiSamplePerson getPerson() {
         return this.Person;
     }
 
     /**
-     * Set Material information
-     * @param Person Material information
+     * Set Image information
+     * @param Person Image information
      */
     public void setPerson(AiSamplePerson Person) {
         this.Person = Person;
     }
 
     /**
-     * Get Positioning information of facial features processed unsuccessfully 
-     * @return FailFaceInfoSet Positioning information of facial features processed unsuccessfully
+     * Get Information of images that failed the verification by facial feature positioning 
+     * @return FailFaceInfoSet Information of images that failed the verification by facial feature positioning
      */
     public AiSampleFailFaceInfo [] getFailFaceInfoSet() {
         return this.FailFaceInfoSet;
     }
 
     /**
-     * Set Positioning information of facial features processed unsuccessfully
-     * @param FailFaceInfoSet Positioning information of facial features processed unsuccessfully
+     * Set Information of images that failed the verification by facial feature positioning
+     * @param FailFaceInfoSet Information of images that failed the verification by facial feature positioning
      */
     public void setFailFaceInfoSet(AiSampleFailFaceInfo [] FailFaceInfoSet) {
         this.FailFaceInfoSet = FailFaceInfoSet;

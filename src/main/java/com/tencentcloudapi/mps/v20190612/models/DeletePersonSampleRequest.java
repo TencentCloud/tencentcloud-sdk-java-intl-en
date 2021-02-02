@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeletePersonSampleRequest extends AbstractModel{
 
     /**
-    * Material ID
+    * Image ID
     */
     @SerializedName("PersonId")
     @Expose
     private String PersonId;
 
     /**
-     * Get Material ID 
-     * @return PersonId Material ID
+     * Get Image ID 
+     * @return PersonId Image ID
      */
     public String getPersonId() {
         return this.PersonId;
     }
 
     /**
-     * Set Material ID
-     * @param PersonId Material ID
+     * Set Image ID
+     * @param PersonId Image ID
      */
     public void setPersonId(String PersonId) {
         this.PersonId = PersonId;

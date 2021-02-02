@@ -23,31 +23,31 @@ import java.util.HashMap;
 public class CreatePersonSampleRequest extends AbstractModel{
 
     /**
-    * Name of a material. Length limit: 20 characters.
+    * Name of an image. Length limit: 20 characters
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Material use case. Valid values:
-1. Recognition: used for content recognition, equivalent to `Recognition.Face`
-2. Review: used for detection of inappropriate content, equivalent to `Review.Face`
-3. All: all of the above, equivalent to 1 and 2 combined
+    * Image usage. Valid values:
+1. Recognition: used for content recognition; equivalent to `Recognition.Face`
+2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
+3. All: equivalent to 1+2
     */
     @SerializedName("Usages")
     @Expose
     private String [] Usages;
 
     /**
-    * Material description. Length limit: 1,024 characters.
+    * Image description. Length limit: 1,024 characters
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * [Base64](https://tools.ietf.org/html/rfc4648) string converted from an image. Only JPEG and PNG images are supported. Array length limit: 5 images.
+    * [Base64](https://tools.ietf.org/html/rfc4648) string converted from an image. Only JPEG and PNG images are supported. Array length limit: 5 images
 Note: the image must be a relatively clear facial feature photo of one person with a size of at least 200 x 200 pixels.
     */
     @SerializedName("FaceContents")
@@ -55,78 +55,78 @@ Note: the image must be a relatively clear facial feature photo of one person wi
     private String [] FaceContents;
 
     /**
-    * Material tag
-<li>Array length limit: 20 tags;</li>
-<li>Tag length limit: 128 characters.</li>
+    * Image tag
+<li>Array length limit: 20 tags</li>
+<li>Tag length limit: 128 characters</li>
     */
     @SerializedName("Tags")
     @Expose
     private String [] Tags;
 
     /**
-     * Get Name of a material. Length limit: 20 characters. 
-     * @return Name Name of a material. Length limit: 20 characters.
+     * Get Name of an image. Length limit: 20 characters 
+     * @return Name Name of an image. Length limit: 20 characters
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name of a material. Length limit: 20 characters.
-     * @param Name Name of a material. Length limit: 20 characters.
+     * Set Name of an image. Length limit: 20 characters
+     * @param Name Name of an image. Length limit: 20 characters
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Material use case. Valid values:
-1. Recognition: used for content recognition, equivalent to `Recognition.Face`
-2. Review: used for detection of inappropriate content, equivalent to `Review.Face`
-3. All: all of the above, equivalent to 1 and 2 combined 
-     * @return Usages Material use case. Valid values:
-1. Recognition: used for content recognition, equivalent to `Recognition.Face`
-2. Review: used for detection of inappropriate content, equivalent to `Review.Face`
-3. All: all of the above, equivalent to 1 and 2 combined
+     * Get Image usage. Valid values:
+1. Recognition: used for content recognition; equivalent to `Recognition.Face`
+2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
+3. All: equivalent to 1+2 
+     * @return Usages Image usage. Valid values:
+1. Recognition: used for content recognition; equivalent to `Recognition.Face`
+2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
+3. All: equivalent to 1+2
      */
     public String [] getUsages() {
         return this.Usages;
     }
 
     /**
-     * Set Material use case. Valid values:
-1. Recognition: used for content recognition, equivalent to `Recognition.Face`
-2. Review: used for detection of inappropriate content, equivalent to `Review.Face`
-3. All: all of the above, equivalent to 1 and 2 combined
-     * @param Usages Material use case. Valid values:
-1. Recognition: used for content recognition, equivalent to `Recognition.Face`
-2. Review: used for detection of inappropriate content, equivalent to `Review.Face`
-3. All: all of the above, equivalent to 1 and 2 combined
+     * Set Image usage. Valid values:
+1. Recognition: used for content recognition; equivalent to `Recognition.Face`
+2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
+3. All: equivalent to 1+2
+     * @param Usages Image usage. Valid values:
+1. Recognition: used for content recognition; equivalent to `Recognition.Face`
+2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
+3. All: equivalent to 1+2
      */
     public void setUsages(String [] Usages) {
         this.Usages = Usages;
     }
 
     /**
-     * Get Material description. Length limit: 1,024 characters. 
-     * @return Description Material description. Length limit: 1,024 characters.
+     * Get Image description. Length limit: 1,024 characters 
+     * @return Description Image description. Length limit: 1,024 characters
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Material description. Length limit: 1,024 characters.
-     * @param Description Material description. Length limit: 1,024 characters.
+     * Set Image description. Length limit: 1,024 characters
+     * @param Description Image description. Length limit: 1,024 characters
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get [Base64](https://tools.ietf.org/html/rfc4648) string converted from an image. Only JPEG and PNG images are supported. Array length limit: 5 images.
+     * Get [Base64](https://tools.ietf.org/html/rfc4648) string converted from an image. Only JPEG and PNG images are supported. Array length limit: 5 images
 Note: the image must be a relatively clear facial feature photo of one person with a size of at least 200 x 200 pixels. 
-     * @return FaceContents [Base64](https://tools.ietf.org/html/rfc4648) string converted from an image. Only JPEG and PNG images are supported. Array length limit: 5 images.
+     * @return FaceContents [Base64](https://tools.ietf.org/html/rfc4648) string converted from an image. Only JPEG and PNG images are supported. Array length limit: 5 images
 Note: the image must be a relatively clear facial feature photo of one person with a size of at least 200 x 200 pixels.
      */
     public String [] getFaceContents() {
@@ -134,9 +134,9 @@ Note: the image must be a relatively clear facial feature photo of one person wi
     }
 
     /**
-     * Set [Base64](https://tools.ietf.org/html/rfc4648) string converted from an image. Only JPEG and PNG images are supported. Array length limit: 5 images.
+     * Set [Base64](https://tools.ietf.org/html/rfc4648) string converted from an image. Only JPEG and PNG images are supported. Array length limit: 5 images
 Note: the image must be a relatively clear facial feature photo of one person with a size of at least 200 x 200 pixels.
-     * @param FaceContents [Base64](https://tools.ietf.org/html/rfc4648) string converted from an image. Only JPEG and PNG images are supported. Array length limit: 5 images.
+     * @param FaceContents [Base64](https://tools.ietf.org/html/rfc4648) string converted from an image. Only JPEG and PNG images are supported. Array length limit: 5 images
 Note: the image must be a relatively clear facial feature photo of one person with a size of at least 200 x 200 pixels.
      */
     public void setFaceContents(String [] FaceContents) {
@@ -144,24 +144,24 @@ Note: the image must be a relatively clear facial feature photo of one person wi
     }
 
     /**
-     * Get Material tag
-<li>Array length limit: 20 tags;</li>
-<li>Tag length limit: 128 characters.</li> 
-     * @return Tags Material tag
-<li>Array length limit: 20 tags;</li>
-<li>Tag length limit: 128 characters.</li>
+     * Get Image tag
+<li>Array length limit: 20 tags</li>
+<li>Tag length limit: 128 characters</li> 
+     * @return Tags Image tag
+<li>Array length limit: 20 tags</li>
+<li>Tag length limit: 128 characters</li>
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Material tag
-<li>Array length limit: 20 tags;</li>
-<li>Tag length limit: 128 characters.</li>
-     * @param Tags Material tag
-<li>Array length limit: 20 tags;</li>
-<li>Tag length limit: 128 characters.</li>
+     * Set Image tag
+<li>Array length limit: 20 tags</li>
+<li>Tag length limit: 128 characters</li>
+     * @param Tags Image tag
+<li>Array length limit: 20 tags</li>
+<li>Tag length limit: 128 characters</li>
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;

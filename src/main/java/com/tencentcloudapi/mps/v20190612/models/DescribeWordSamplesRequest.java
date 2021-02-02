@@ -30,15 +30,15 @@ public class DescribeWordSamplesRequest extends AbstractModel{
     private String [] Keywords;
 
     /**
-    * <b>Keyword use case filter. Valid values:</b>
-1. Recognition.Ocr: OCR-based content recognition;
-2. Recognition.Asr: ASR-based content recognition;
-3. Review.Ocr: OCR-based detection of inappropriate content;
-4. Review.Asr：ASR-based detection of inappropriate content;
-<b>These values can be merged as follows:</b>
-5. Recognition: ASR- and OCR-based content recognition, equivalent to 1 and 2 combined;
-6. Review: ASR- and OCR-based detection of inappropriate content, equivalent to 3+4 above;
-Multiple elements can be selected, and the relationship between them is "or", i.e., any keyword use case that contains any element in this field set will be deemed eligible.
+    * <b>Keyword usage. Valid values:</b>
+1. Recognition.Ocr: OCR-based content recognition
+2. Recognition.Asr: ASR-based content recognition
+3. Review.Ocr: OCR-based inappropriate information recognition
+4. Review.Asr: ASR-based inappropriate information recognition
+<b>Valid values can also be:</b>
+5. Recognition: ASR- and OCR-based content recognition; equivalent to 1+2
+6. Review: ASR- and OCR-based inappropriate information recognition; equivalent to 3+4
+You can select multiple elements, which are connected by OR logic. If a usage contains any element in this parameter, the keyword sample will be used.
     */
     @SerializedName("Usages")
     @Expose
@@ -82,48 +82,48 @@ Multiple elements can be selected, and the relationship between them is "or", i.
     }
 
     /**
-     * Get <b>Keyword use case filter. Valid values:</b>
-1. Recognition.Ocr: OCR-based content recognition;
-2. Recognition.Asr: ASR-based content recognition;
-3. Review.Ocr: OCR-based detection of inappropriate content;
-4. Review.Asr：ASR-based detection of inappropriate content;
-<b>These values can be merged as follows:</b>
-5. Recognition: ASR- and OCR-based content recognition, equivalent to 1 and 2 combined;
-6. Review: ASR- and OCR-based detection of inappropriate content, equivalent to 3+4 above;
-Multiple elements can be selected, and the relationship between them is "or", i.e., any keyword use case that contains any element in this field set will be deemed eligible. 
-     * @return Usages <b>Keyword use case filter. Valid values:</b>
-1. Recognition.Ocr: OCR-based content recognition;
-2. Recognition.Asr: ASR-based content recognition;
-3. Review.Ocr: OCR-based detection of inappropriate content;
-4. Review.Asr：ASR-based detection of inappropriate content;
-<b>These values can be merged as follows:</b>
-5. Recognition: ASR- and OCR-based content recognition, equivalent to 1 and 2 combined;
-6. Review: ASR- and OCR-based detection of inappropriate content, equivalent to 3+4 above;
-Multiple elements can be selected, and the relationship between them is "or", i.e., any keyword use case that contains any element in this field set will be deemed eligible.
+     * Get <b>Keyword usage. Valid values:</b>
+1. Recognition.Ocr: OCR-based content recognition
+2. Recognition.Asr: ASR-based content recognition
+3. Review.Ocr: OCR-based inappropriate information recognition
+4. Review.Asr: ASR-based inappropriate information recognition
+<b>Valid values can also be:</b>
+5. Recognition: ASR- and OCR-based content recognition; equivalent to 1+2
+6. Review: ASR- and OCR-based inappropriate information recognition; equivalent to 3+4
+You can select multiple elements, which are connected by OR logic. If a usage contains any element in this parameter, the keyword sample will be used. 
+     * @return Usages <b>Keyword usage. Valid values:</b>
+1. Recognition.Ocr: OCR-based content recognition
+2. Recognition.Asr: ASR-based content recognition
+3. Review.Ocr: OCR-based inappropriate information recognition
+4. Review.Asr: ASR-based inappropriate information recognition
+<b>Valid values can also be:</b>
+5. Recognition: ASR- and OCR-based content recognition; equivalent to 1+2
+6. Review: ASR- and OCR-based inappropriate information recognition; equivalent to 3+4
+You can select multiple elements, which are connected by OR logic. If a usage contains any element in this parameter, the keyword sample will be used.
      */
     public String [] getUsages() {
         return this.Usages;
     }
 
     /**
-     * Set <b>Keyword use case filter. Valid values:</b>
-1. Recognition.Ocr: OCR-based content recognition;
-2. Recognition.Asr: ASR-based content recognition;
-3. Review.Ocr: OCR-based detection of inappropriate content;
-4. Review.Asr：ASR-based detection of inappropriate content;
-<b>These values can be merged as follows:</b>
-5. Recognition: ASR- and OCR-based content recognition, equivalent to 1 and 2 combined;
-6. Review: ASR- and OCR-based detection of inappropriate content, equivalent to 3+4 above;
-Multiple elements can be selected, and the relationship between them is "or", i.e., any keyword use case that contains any element in this field set will be deemed eligible.
-     * @param Usages <b>Keyword use case filter. Valid values:</b>
-1. Recognition.Ocr: OCR-based content recognition;
-2. Recognition.Asr: ASR-based content recognition;
-3. Review.Ocr: OCR-based detection of inappropriate content;
-4. Review.Asr：ASR-based detection of inappropriate content;
-<b>These values can be merged as follows:</b>
-5. Recognition: ASR- and OCR-based content recognition, equivalent to 1 and 2 combined;
-6. Review: ASR- and OCR-based detection of inappropriate content, equivalent to 3+4 above;
-Multiple elements can be selected, and the relationship between them is "or", i.e., any keyword use case that contains any element in this field set will be deemed eligible.
+     * Set <b>Keyword usage. Valid values:</b>
+1. Recognition.Ocr: OCR-based content recognition
+2. Recognition.Asr: ASR-based content recognition
+3. Review.Ocr: OCR-based inappropriate information recognition
+4. Review.Asr: ASR-based inappropriate information recognition
+<b>Valid values can also be:</b>
+5. Recognition: ASR- and OCR-based content recognition; equivalent to 1+2
+6. Review: ASR- and OCR-based inappropriate information recognition; equivalent to 3+4
+You can select multiple elements, which are connected by OR logic. If a usage contains any element in this parameter, the keyword sample will be used.
+     * @param Usages <b>Keyword usage. Valid values:</b>
+1. Recognition.Ocr: OCR-based content recognition
+2. Recognition.Asr: ASR-based content recognition
+3. Review.Ocr: OCR-based inappropriate information recognition
+4. Review.Asr: ASR-based inappropriate information recognition
+<b>Valid values can also be:</b>
+5. Recognition: ASR- and OCR-based content recognition; equivalent to 1+2
+6. Review: ASR- and OCR-based inappropriate information recognition; equivalent to 3+4
+You can select multiple elements, which are connected by OR logic. If a usage contains any element in this parameter, the keyword sample will be used.
      */
     public void setUsages(String [] Usages) {
         this.Usages = Usages;
