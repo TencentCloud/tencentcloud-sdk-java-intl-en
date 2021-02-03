@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class ListBlackEmailAddressRequest extends AbstractModel{
 
     /**
-    * Start date.
+    * Start date in the format of `YYYY-MM-DD`
     */
     @SerializedName("StartDate")
     @Expose
     private String StartDate;
 
     /**
-    * End date.
+    * End date in the format of `YYYY-MM-DD`
     */
     @SerializedName("EndDate")
     @Expose
@@ -44,7 +44,7 @@ public class ListBlackEmailAddressRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * Common parameter. It must be used with `Limit`.
+    * Common parameter. It must be used with `Limit`. Maximum value of `Limit`: `100`.
     */
     @SerializedName("Offset")
     @Expose
@@ -65,32 +65,32 @@ public class ListBlackEmailAddressRequest extends AbstractModel{
     private String TaskID;
 
     /**
-     * Get Start date. 
-     * @return StartDate Start date.
+     * Get Start date in the format of `YYYY-MM-DD` 
+     * @return StartDate Start date in the format of `YYYY-MM-DD`
      */
     public String getStartDate() {
         return this.StartDate;
     }
 
     /**
-     * Set Start date.
-     * @param StartDate Start date.
+     * Set Start date in the format of `YYYY-MM-DD`
+     * @param StartDate Start date in the format of `YYYY-MM-DD`
      */
     public void setStartDate(String StartDate) {
         this.StartDate = StartDate;
     }
 
     /**
-     * Get End date. 
-     * @return EndDate End date.
+     * Get End date in the format of `YYYY-MM-DD` 
+     * @return EndDate End date in the format of `YYYY-MM-DD`
      */
     public String getEndDate() {
         return this.EndDate;
     }
 
     /**
-     * Set End date.
-     * @param EndDate End date.
+     * Set End date in the format of `YYYY-MM-DD`
+     * @param EndDate End date in the format of `YYYY-MM-DD`
      */
     public void setEndDate(String EndDate) {
         this.EndDate = EndDate;
@@ -113,16 +113,16 @@ public class ListBlackEmailAddressRequest extends AbstractModel{
     }
 
     /**
-     * Get Common parameter. It must be used with `Limit`. 
-     * @return Offset Common parameter. It must be used with `Limit`.
+     * Get Common parameter. It must be used with `Limit`. Maximum value of `Limit`: `100`. 
+     * @return Offset Common parameter. It must be used with `Limit`. Maximum value of `Limit`: `100`.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Common parameter. It must be used with `Limit`.
-     * @param Offset Common parameter. It must be used with `Limit`.
+     * Set Common parameter. It must be used with `Limit`. Maximum value of `Limit`: `100`.
+     * @param Offset Common parameter. It must be used with `Limit`. Maximum value of `Limit`: `100`.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

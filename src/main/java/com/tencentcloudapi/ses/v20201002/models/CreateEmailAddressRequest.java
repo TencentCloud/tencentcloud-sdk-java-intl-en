@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateEmailAddressRequest extends AbstractModel{
 
     /**
-    * Your sender address. You can create up to 10 sender addresses for each domain.
+    * Your sender address. (You can create up to 10 sender addresses for each domain.)
     */
     @SerializedName("EmailAddress")
     @Expose
@@ -37,16 +37,16 @@ public class CreateEmailAddressRequest extends AbstractModel{
     private String EmailSenderName;
 
     /**
-     * Get Your sender address. You can create up to 10 sender addresses for each domain. 
-     * @return EmailAddress Your sender address. You can create up to 10 sender addresses for each domain.
+     * Get Your sender address. (You can create up to 10 sender addresses for each domain.) 
+     * @return EmailAddress Your sender address. (You can create up to 10 sender addresses for each domain.)
      */
     public String getEmailAddress() {
         return this.EmailAddress;
     }
 
     /**
-     * Set Your sender address. You can create up to 10 sender addresses for each domain.
-     * @param EmailAddress Your sender address. You can create up to 10 sender addresses for each domain.
+     * Set Your sender address. (You can create up to 10 sender addresses for each domain.)
+     * @param EmailAddress Your sender address. (You can create up to 10 sender addresses for each domain.)
      */
     public void setEmailAddress(String EmailAddress) {
         this.EmailAddress = EmailAddress;

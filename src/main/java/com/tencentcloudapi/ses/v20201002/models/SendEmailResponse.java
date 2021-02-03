@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SendEmailResponse extends AbstractModel{
 
     /**
-    * Unique ID generated when receiving the message.
+    * Unique ID generated when receiving the message
     */
     @SerializedName("MessageId")
     @Expose
@@ -37,16 +37,16 @@ public class SendEmailResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Unique ID generated when receiving the message. 
-     * @return MessageId Unique ID generated when receiving the message.
+     * Get Unique ID generated when receiving the message 
+     * @return MessageId Unique ID generated when receiving the message
      */
     public String getMessageId() {
         return this.MessageId;
     }
 
     /**
-     * Set Unique ID generated when receiving the message.
-     * @param MessageId Unique ID generated when receiving the message.
+     * Set Unique ID generated when receiving the message
+     * @param MessageId Unique ID generated when receiving the message
      */
     public void setMessageId(String MessageId) {
         this.MessageId = MessageId;

@@ -32,7 +32,7 @@ Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
     private String FromEmailAddress;
 
     /**
-    * Recipient email addresses. You can send an email to up to 50 recipients at a time.
+    * Recipient email addresses. You can send an email to up to 50 recipients at a time. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
     */
     @SerializedName("Destination")
     @Expose
@@ -46,7 +46,7 @@ Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
     private String Subject;
 
     /**
-    * Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
+    * Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud.
     */
     @SerializedName("ReplyToAddresses")
     @Expose
@@ -67,7 +67,7 @@ Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
     private Simple Simple;
 
     /**
-    * 
+    * Email attachments
     */
     @SerializedName("Attachments")
     @Expose
@@ -98,16 +98,16 @@ Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
     }
 
     /**
-     * Get Recipient email addresses. You can send an email to up to 50 recipients at a time. 
-     * @return Destination Recipient email addresses. You can send an email to up to 50 recipients at a time.
+     * Get Recipient email addresses. You can send an email to up to 50 recipients at a time. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails. 
+     * @return Destination Recipient email addresses. You can send an email to up to 50 recipients at a time. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
      */
     public String [] getDestination() {
         return this.Destination;
     }
 
     /**
-     * Set Recipient email addresses. You can send an email to up to 50 recipients at a time.
-     * @param Destination Recipient email addresses. You can send an email to up to 50 recipients at a time.
+     * Set Recipient email addresses. You can send an email to up to 50 recipients at a time. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
+     * @param Destination Recipient email addresses. You can send an email to up to 50 recipients at a time. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
      */
     public void setDestination(String [] Destination) {
         this.Destination = Destination;
@@ -130,16 +130,16 @@ Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
     }
 
     /**
-     * Get Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails. 
-     * @return ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
+     * Get Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud. 
+     * @return ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud.
      */
     public String getReplyToAddresses() {
         return this.ReplyToAddresses;
     }
 
     /**
-     * Set Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
-     * @param ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
+     * Set Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud.
+     * @param ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud.
      */
     public void setReplyToAddresses(String ReplyToAddresses) {
         this.ReplyToAddresses = ReplyToAddresses;
@@ -178,16 +178,16 @@ Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
     }
 
     /**
-     * Get  
-     * @return Attachments 
+     * Get Email attachments 
+     * @return Attachments Email attachments
      */
     public Attachment [] getAttachments() {
         return this.Attachments;
     }
 
     /**
-     * Set 
-     * @param Attachments 
+     * Set Email attachments
+     * @param Attachments Email attachments
      */
     public void setAttachments(Attachment [] Attachments) {
         this.Attachments = Attachments;
