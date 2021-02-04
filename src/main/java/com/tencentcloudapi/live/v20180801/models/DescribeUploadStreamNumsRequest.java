@@ -45,9 +45,9 @@ public class DescribeUploadStreamNumsRequest extends AbstractModel{
 
     /**
     * Time granularity of the data. Valid values:
-5: 5-minute granularity (the query period is up to 1 day).
-1440: 1-day granularity (the query period is up to 1 month).
-Default value: 5.
+5: 5-minute granularity (the query period is up to 1 day)
+1440: 1-day granularity (the query period is up to 1 month)
+Default value: 5
     */
     @SerializedName("Granularity")
     @Expose
@@ -103,13 +103,13 @@ Default value: 5.
 
     /**
      * Get Time granularity of the data. Valid values:
-5: 5-minute granularity (the query period is up to 1 day).
-1440: 1-day granularity (the query period is up to 1 month).
-Default value: 5. 
+5: 5-minute granularity (the query period is up to 1 day)
+1440: 1-day granularity (the query period is up to 1 month)
+Default value: 5 
      * @return Granularity Time granularity of the data. Valid values:
-5: 5-minute granularity (the query period is up to 1 day).
-1440: 1-day granularity (the query period is up to 1 month).
-Default value: 5.
+5: 5-minute granularity (the query period is up to 1 day)
+1440: 1-day granularity (the query period is up to 1 month)
+Default value: 5
      */
     public Long getGranularity() {
         return this.Granularity;
@@ -117,13 +117,13 @@ Default value: 5.
 
     /**
      * Set Time granularity of the data. Valid values:
-5: 5-minute granularity (the query period is up to 1 day).
-1440: 1-day granularity (the query period is up to 1 month).
-Default value: 5.
+5: 5-minute granularity (the query period is up to 1 day)
+1440: 1-day granularity (the query period is up to 1 month)
+Default value: 5
      * @param Granularity Time granularity of the data. Valid values:
-5: 5-minute granularity (the query period is up to 1 day).
-1440: 1-day granularity (the query period is up to 1 month).
-Default value: 5.
+5: 5-minute granularity (the query period is up to 1 day)
+1440: 1-day granularity (the query period is up to 1 month)
+Default value: 5
      */
     public void setGranularity(Long Granularity) {
         this.Granularity = Granularity;

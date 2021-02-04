@@ -338,7 +338,7 @@ public class CreateApiRequest extends AbstractModel{
     private String UserType;
 
     /**
-    * 
+    * Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
     */
     @SerializedName("IsBase64Encoded")
     @Expose
@@ -1065,16 +1065,16 @@ public class CreateApiRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return IsBase64Encoded 
+     * Get Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF. 
+     * @return IsBase64Encoded Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
      */
     public Boolean getIsBase64Encoded() {
         return this.IsBase64Encoded;
     }
 
     /**
-     * Set 
-     * @param IsBase64Encoded 
+     * Set Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+     * @param IsBase64Encoded Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
      */
     public void setIsBase64Encoded(Boolean IsBase64Encoded) {
         this.IsBase64Encoded = IsBase64Encoded;

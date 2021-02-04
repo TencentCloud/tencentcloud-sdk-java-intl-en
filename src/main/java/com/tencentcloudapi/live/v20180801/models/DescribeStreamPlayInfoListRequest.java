@@ -63,6 +63,13 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
     private String AppName;
 
     /**
+    * 
+    */
+    @SerializedName("ServiceName")
+    @Expose
+    private String ServiceName;
+
+    /**
      * Get Start time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS 
      * @return StartTime Start time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
      */
@@ -163,6 +170,22 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
     }
 
     /**
+     * Get  
+     * @return ServiceName 
+     */
+    public String getServiceName() {
+        return this.ServiceName;
+    }
+
+    /**
+     * Set 
+     * @param ServiceName 
+     */
+    public void setServiceName(String ServiceName) {
+        this.ServiceName = ServiceName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -171,6 +194,7 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
         this.setParamSimple(map, prefix + "PlayDomain", this.PlayDomain);
         this.setParamSimple(map, prefix + "StreamName", this.StreamName);
         this.setParamSimple(map, prefix + "AppName", this.AppName);
+        this.setParamSimple(map, prefix + "ServiceName", this.ServiceName);
 
     }
 }

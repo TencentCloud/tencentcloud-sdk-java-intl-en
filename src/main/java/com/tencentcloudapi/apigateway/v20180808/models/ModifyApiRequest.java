@@ -338,6 +338,27 @@ public class ModifyApiRequest extends AbstractModel{
     private ResponseErrorCodeReq [] ResponseErrorCodes;
 
     /**
+    * Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+    */
+    @SerializedName("IsBase64Encoded")
+    @Expose
+    private Boolean IsBase64Encoded;
+
+    /**
+    * Whether to trigger Base64 encoding by header. This parameter takes effect only when the backend is SCF.
+    */
+    @SerializedName("IsBase64Trigger")
+    @Expose
+    private Boolean IsBase64Trigger;
+
+    /**
+    * Header trigger rules. The number of rules cannot exceed 10.
+    */
+    @SerializedName("Base64EncodedTriggerRules")
+    @Expose
+    private Base64EncodedTriggerRule [] Base64EncodedTriggerRules;
+
+    /**
      * Get Unique service ID of API. 
      * @return ServiceId Unique service ID of API.
      */
@@ -1058,6 +1079,54 @@ public class ModifyApiRequest extends AbstractModel{
     }
 
     /**
+     * Get Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF. 
+     * @return IsBase64Encoded Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+     */
+    public Boolean getIsBase64Encoded() {
+        return this.IsBase64Encoded;
+    }
+
+    /**
+     * Set Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+     * @param IsBase64Encoded Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+     */
+    public void setIsBase64Encoded(Boolean IsBase64Encoded) {
+        this.IsBase64Encoded = IsBase64Encoded;
+    }
+
+    /**
+     * Get Whether to trigger Base64 encoding by header. This parameter takes effect only when the backend is SCF. 
+     * @return IsBase64Trigger Whether to trigger Base64 encoding by header. This parameter takes effect only when the backend is SCF.
+     */
+    public Boolean getIsBase64Trigger() {
+        return this.IsBase64Trigger;
+    }
+
+    /**
+     * Set Whether to trigger Base64 encoding by header. This parameter takes effect only when the backend is SCF.
+     * @param IsBase64Trigger Whether to trigger Base64 encoding by header. This parameter takes effect only when the backend is SCF.
+     */
+    public void setIsBase64Trigger(Boolean IsBase64Trigger) {
+        this.IsBase64Trigger = IsBase64Trigger;
+    }
+
+    /**
+     * Get Header trigger rules. The number of rules cannot exceed 10. 
+     * @return Base64EncodedTriggerRules Header trigger rules. The number of rules cannot exceed 10.
+     */
+    public Base64EncodedTriggerRule [] getBase64EncodedTriggerRules() {
+        return this.Base64EncodedTriggerRules;
+    }
+
+    /**
+     * Set Header trigger rules. The number of rules cannot exceed 10.
+     * @param Base64EncodedTriggerRules Header trigger rules. The number of rules cannot exceed 10.
+     */
+    public void setBase64EncodedTriggerRules(Base64EncodedTriggerRule [] Base64EncodedTriggerRules) {
+        this.Base64EncodedTriggerRules = Base64EncodedTriggerRules;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1106,6 +1175,9 @@ public class ModifyApiRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "ServiceParameters.", this.ServiceParameters);
         this.setParamObj(map, prefix + "OauthConfig.", this.OauthConfig);
         this.setParamArrayObj(map, prefix + "ResponseErrorCodes.", this.ResponseErrorCodes);
+        this.setParamSimple(map, prefix + "IsBase64Encoded", this.IsBase64Encoded);
+        this.setParamSimple(map, prefix + "IsBase64Trigger", this.IsBase64Trigger);
+        this.setParamArrayObj(map, prefix + "Base64EncodedTriggerRules.", this.Base64EncodedTriggerRules);
 
     }
 }

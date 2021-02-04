@@ -57,9 +57,9 @@ Value range: 0-500.
     private Long AudioBitrate;
 
     /**
-    * Video codec. Valid values: h264, h265, origin (default).
+    * Video codec. Valid values: h264, h265, origin (default)
 
-origin: original codec as the output codec.
+origin: original codec as the output codec
     */
     @SerializedName("Vcodec")
     @Expose
@@ -276,24 +276,24 @@ Value range: 0-500.
     }
 
     /**
-     * Get Video codec. Valid values: h264, h265, origin (default).
+     * Get Video codec. Valid values: h264, h265, origin (default)
 
-origin: original codec as the output codec. 
-     * @return Vcodec Video codec. Valid values: h264, h265, origin (default).
+origin: original codec as the output codec 
+     * @return Vcodec Video codec. Valid values: h264, h265, origin (default)
 
-origin: original codec as the output codec.
+origin: original codec as the output codec
      */
     public String getVcodec() {
         return this.Vcodec;
     }
 
     /**
-     * Set Video codec. Valid values: h264, h265, origin (default).
+     * Set Video codec. Valid values: h264, h265, origin (default)
 
-origin: original codec as the output codec.
-     * @param Vcodec Video codec. Valid values: h264, h265, origin (default).
+origin: original codec as the output codec
+     * @param Vcodec Video codec. Valid values: h264, h265, origin (default)
 
-origin: original codec as the output codec.
+origin: original codec as the output codec
      */
     public void setVcodec(String Vcodec) {
         this.Vcodec = Vcodec;

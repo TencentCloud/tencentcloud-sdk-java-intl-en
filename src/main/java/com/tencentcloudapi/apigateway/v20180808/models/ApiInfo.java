@@ -407,21 +407,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String [] Environments;
 
     /**
-    * 
+    * Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("IsBase64Encoded")
     @Expose
     private Boolean IsBase64Encoded;
 
     /**
-    * 
+    * Whether to trigger Base64 encoding by header. This parameter takes effect only when the backend is SCF.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("IsBase64Trigger")
     @Expose
     private Boolean IsBase64Trigger;
 
     /**
-    * 
+    * Header trigger rules. The number of rules cannot exceed 10.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Base64EncodedTriggerRules")
     @Expose
@@ -1388,48 +1391,60 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return IsBase64Encoded 
+     * Get Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return IsBase64Encoded Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public Boolean getIsBase64Encoded() {
         return this.IsBase64Encoded;
     }
 
     /**
-     * Set 
-     * @param IsBase64Encoded 
+     * Set Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param IsBase64Encoded Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setIsBase64Encoded(Boolean IsBase64Encoded) {
         this.IsBase64Encoded = IsBase64Encoded;
     }
 
     /**
-     * Get  
-     * @return IsBase64Trigger 
+     * Get Whether to trigger Base64 encoding by header. This parameter takes effect only when the backend is SCF.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return IsBase64Trigger Whether to trigger Base64 encoding by header. This parameter takes effect only when the backend is SCF.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public Boolean getIsBase64Trigger() {
         return this.IsBase64Trigger;
     }
 
     /**
-     * Set 
-     * @param IsBase64Trigger 
+     * Set Whether to trigger Base64 encoding by header. This parameter takes effect only when the backend is SCF.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param IsBase64Trigger Whether to trigger Base64 encoding by header. This parameter takes effect only when the backend is SCF.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setIsBase64Trigger(Boolean IsBase64Trigger) {
         this.IsBase64Trigger = IsBase64Trigger;
     }
 
     /**
-     * Get  
-     * @return Base64EncodedTriggerRules 
+     * Get Header trigger rules. The number of rules cannot exceed 10.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Base64EncodedTriggerRules Header trigger rules. The number of rules cannot exceed 10.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public Base64EncodedTriggerRule [] getBase64EncodedTriggerRules() {
         return this.Base64EncodedTriggerRules;
     }
 
     /**
-     * Set 
-     * @param Base64EncodedTriggerRules 
+     * Set Header trigger rules. The number of rules cannot exceed 10.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Base64EncodedTriggerRules Header trigger rules. The number of rules cannot exceed 10.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setBase64EncodedTriggerRules(Base64EncodedTriggerRule [] Base64EncodedTriggerRules) {
         this.Base64EncodedTriggerRules = Base64EncodedTriggerRules;

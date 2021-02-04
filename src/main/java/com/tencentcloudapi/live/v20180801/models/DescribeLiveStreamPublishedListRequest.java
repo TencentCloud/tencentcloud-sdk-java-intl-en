@@ -65,9 +65,9 @@ Default value: 1.
 
     /**
     * Number of entries per page.
-Maximum value: 100.
-Valid values: integers between 10 and 100.
-Default value: 10.
+Maximum value: 100
+Valid values: integers between 10 and 100
+Default value: 10
     */
     @SerializedName("PageSize")
     @Expose
@@ -186,13 +186,13 @@ Default value: 1.
 
     /**
      * Get Number of entries per page.
-Maximum value: 100.
-Valid values: integers between 10 and 100.
-Default value: 10. 
+Maximum value: 100
+Valid values: integers between 10 and 100
+Default value: 10 
      * @return PageSize Number of entries per page.
-Maximum value: 100.
-Valid values: integers between 10 and 100.
-Default value: 10.
+Maximum value: 100
+Valid values: integers between 10 and 100
+Default value: 10
      */
     public Long getPageSize() {
         return this.PageSize;
@@ -200,13 +200,13 @@ Default value: 10.
 
     /**
      * Set Number of entries per page.
-Maximum value: 100.
-Valid values: integers between 10 and 100.
-Default value: 10.
+Maximum value: 100
+Valid values: integers between 10 and 100
+Default value: 10
      * @param PageSize Number of entries per page.
-Maximum value: 100.
-Valid values: integers between 10 and 100.
-Default value: 10.
+Maximum value: 100
+Valid values: integers between 10 and 100
+Default value: 10
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
