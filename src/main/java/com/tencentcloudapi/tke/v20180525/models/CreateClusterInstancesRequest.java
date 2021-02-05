@@ -44,6 +44,13 @@ public class CreateClusterInstancesRequest extends AbstractModel{
     private InstanceAdvancedSettings InstanceAdvancedSettings;
 
     /**
+    * Skips the specified verification. Valid values: GlobalRouteCIDRCheck, VpcCniCIDRCheck
+    */
+    @SerializedName("SkipValidateOptions")
+    @Expose
+    private String [] SkipValidateOptions;
+
+    /**
      * Get Cluster ID. Enter the ClusterId field returned by the DescribeClusters API 
      * @return ClusterId Cluster ID. Enter the ClusterId field returned by the DescribeClusters API
      */
@@ -92,12 +99,29 @@ public class CreateClusterInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get Skips the specified verification. Valid values: GlobalRouteCIDRCheck, VpcCniCIDRCheck 
+     * @return SkipValidateOptions Skips the specified verification. Valid values: GlobalRouteCIDRCheck, VpcCniCIDRCheck
+     */
+    public String [] getSkipValidateOptions() {
+        return this.SkipValidateOptions;
+    }
+
+    /**
+     * Set Skips the specified verification. Valid values: GlobalRouteCIDRCheck, VpcCniCIDRCheck
+     * @param SkipValidateOptions Skips the specified verification. Valid values: GlobalRouteCIDRCheck, VpcCniCIDRCheck
+     */
+    public void setSkipValidateOptions(String [] SkipValidateOptions) {
+        this.SkipValidateOptions = SkipValidateOptions;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "RunInstancePara", this.RunInstancePara);
         this.setParamObj(map, prefix + "InstanceAdvancedSettings.", this.InstanceAdvancedSettings);
+        this.setParamArraySimple(map, prefix + "SkipValidateOptions.", this.SkipValidateOptions);
 
     }
 }

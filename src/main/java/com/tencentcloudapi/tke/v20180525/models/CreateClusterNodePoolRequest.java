@@ -79,6 +79,20 @@ public class CreateClusterNodePoolRequest extends AbstractModel{
     private Taint [] Taints;
 
     /**
+    * Operating system of the node pool
+    */
+    @SerializedName("NodePoolOs")
+    @Expose
+    private String NodePoolOs;
+
+    /**
+    * Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+    */
+    @SerializedName("OsCustomizeType")
+    @Expose
+    private String OsCustomizeType;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -207,6 +221,38 @@ public class CreateClusterNodePoolRequest extends AbstractModel{
     }
 
     /**
+     * Get Operating system of the node pool 
+     * @return NodePoolOs Operating system of the node pool
+     */
+    public String getNodePoolOs() {
+        return this.NodePoolOs;
+    }
+
+    /**
+     * Set Operating system of the node pool
+     * @param NodePoolOs Operating system of the node pool
+     */
+    public void setNodePoolOs(String NodePoolOs) {
+        this.NodePoolOs = NodePoolOs;
+    }
+
+    /**
+     * Get Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value) 
+     * @return OsCustomizeType Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+     */
+    public String getOsCustomizeType() {
+        return this.OsCustomizeType;
+    }
+
+    /**
+     * Set Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+     * @param OsCustomizeType Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+     */
+    public void setOsCustomizeType(String OsCustomizeType) {
+        this.OsCustomizeType = OsCustomizeType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +264,8 @@ public class CreateClusterNodePoolRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
         this.setParamArrayObj(map, prefix + "Taints.", this.Taints);
+        this.setParamSimple(map, prefix + "NodePoolOs", this.NodePoolOs);
+        this.setParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
 
     }
 }

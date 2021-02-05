@@ -439,6 +439,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to obtain all versions that the cluster can upgrade to.
+     * @param req DescribeAvailableClusterVersionRequest
+     * @return DescribeAvailableClusterVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAvailableClusterVersionResponse DescribeAvailableClusterVersion(DescribeAvailableClusterVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAvailableClusterVersionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAvailableClusterVersionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAvailableClusterVersion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *Cluster auto scaling configuration
      * @param req DescribeClusterAsGroupOptionRequest
      * @return DescribeClusterAsGroupOptionResponse
@@ -759,6 +779,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to obtain the current progress of the node upgrade. 
+     * @param req GetUpgradeInstanceProgressRequest
+     * @return GetUpgradeInstanceProgressResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetUpgradeInstanceProgressResponse GetUpgradeInstanceProgress(GetUpgradeInstanceProgressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetUpgradeInstanceProgressResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetUpgradeInstanceProgressResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetUpgradeInstanceProgress");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *Modify cluster scaling group attributes
      * @param req ModifyClusterAsGroupAttributeRequest
      * @return ModifyClusterAsGroupAttributeResponse
@@ -871,6 +911,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RemoveNodeFromNodePoolResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RemoveNodeFromNodePool");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to upgrade the master component of the cluster to the specified version.
+     * @param req UpdateClusterVersionRequest
+     * @return UpdateClusterVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateClusterVersionResponse UpdateClusterVersion(UpdateClusterVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateClusterVersionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateClusterVersionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateClusterVersion");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

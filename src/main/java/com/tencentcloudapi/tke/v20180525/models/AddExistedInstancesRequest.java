@@ -58,13 +58,6 @@ public class AddExistedInstancesRequest extends AbstractModel{
     private LoginSettings LoginSettings;
 
     /**
-    * Security group to which the instance belongs. This parameter can be obtained from the `sgId` field returned by DescribeSecurityGroups. If this parameter is not specified, the default security group is bound. (Currently, you can only set a single sgId)
-    */
-    @SerializedName("SecurityGroupIds")
-    @Expose
-    private String [] SecurityGroupIds;
-
-    /**
     * When reinstalling the system, you can specify the HostName of the modified instance (when the cluster is in HostName mode, this parameter is required, and the rule name is the same as the [Create CVM Instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API HostName except for uppercase letters not being supported.
     */
     @SerializedName("HostName")
@@ -72,11 +65,25 @@ public class AddExistedInstancesRequest extends AbstractModel{
     private String HostName;
 
     /**
+    * Security group to which the instance belongs. This parameter can be obtained from the `sgId` field returned by DescribeSecurityGroups. If this parameter is not specified, the default security group is bound. (Currently, you can only set a single sgId)
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
     * Node pool options
     */
     @SerializedName("NodePool")
     @Expose
     private NodePoolOption NodePool;
+
+    /**
+    * Skips the specified verification. Valid values: GlobalRouteCIDRCheck, VpcCniCIDRCheck
+    */
+    @SerializedName("SkipValidateOptions")
+    @Expose
+    private String [] SkipValidateOptions;
 
     /**
      * Get Cluster ID 
@@ -159,22 +166,6 @@ public class AddExistedInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Security group to which the instance belongs. This parameter can be obtained from the `sgId` field returned by DescribeSecurityGroups. If this parameter is not specified, the default security group is bound. (Currently, you can only set a single sgId) 
-     * @return SecurityGroupIds Security group to which the instance belongs. This parameter can be obtained from the `sgId` field returned by DescribeSecurityGroups. If this parameter is not specified, the default security group is bound. (Currently, you can only set a single sgId)
-     */
-    public String [] getSecurityGroupIds() {
-        return this.SecurityGroupIds;
-    }
-
-    /**
-     * Set Security group to which the instance belongs. This parameter can be obtained from the `sgId` field returned by DescribeSecurityGroups. If this parameter is not specified, the default security group is bound. (Currently, you can only set a single sgId)
-     * @param SecurityGroupIds Security group to which the instance belongs. This parameter can be obtained from the `sgId` field returned by DescribeSecurityGroups. If this parameter is not specified, the default security group is bound. (Currently, you can only set a single sgId)
-     */
-    public void setSecurityGroupIds(String [] SecurityGroupIds) {
-        this.SecurityGroupIds = SecurityGroupIds;
-    }
-
-    /**
      * Get When reinstalling the system, you can specify the HostName of the modified instance (when the cluster is in HostName mode, this parameter is required, and the rule name is the same as the [Create CVM Instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API HostName except for uppercase letters not being supported. 
      * @return HostName When reinstalling the system, you can specify the HostName of the modified instance (when the cluster is in HostName mode, this parameter is required, and the rule name is the same as the [Create CVM Instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API HostName except for uppercase letters not being supported.
      */
@@ -188,6 +179,22 @@ public class AddExistedInstancesRequest extends AbstractModel{
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
+    }
+
+    /**
+     * Get Security group to which the instance belongs. This parameter can be obtained from the `sgId` field returned by DescribeSecurityGroups. If this parameter is not specified, the default security group is bound. (Currently, you can only set a single sgId) 
+     * @return SecurityGroupIds Security group to which the instance belongs. This parameter can be obtained from the `sgId` field returned by DescribeSecurityGroups. If this parameter is not specified, the default security group is bound. (Currently, you can only set a single sgId)
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set Security group to which the instance belongs. This parameter can be obtained from the `sgId` field returned by DescribeSecurityGroups. If this parameter is not specified, the default security group is bound. (Currently, you can only set a single sgId)
+     * @param SecurityGroupIds Security group to which the instance belongs. This parameter can be obtained from the `sgId` field returned by DescribeSecurityGroups. If this parameter is not specified, the default security group is bound. (Currently, you can only set a single sgId)
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
@@ -207,6 +214,22 @@ public class AddExistedInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get Skips the specified verification. Valid values: GlobalRouteCIDRCheck, VpcCniCIDRCheck 
+     * @return SkipValidateOptions Skips the specified verification. Valid values: GlobalRouteCIDRCheck, VpcCniCIDRCheck
+     */
+    public String [] getSkipValidateOptions() {
+        return this.SkipValidateOptions;
+    }
+
+    /**
+     * Set Skips the specified verification. Valid values: GlobalRouteCIDRCheck, VpcCniCIDRCheck
+     * @param SkipValidateOptions Skips the specified verification. Valid values: GlobalRouteCIDRCheck, VpcCniCIDRCheck
+     */
+    public void setSkipValidateOptions(String [] SkipValidateOptions) {
+        this.SkipValidateOptions = SkipValidateOptions;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -215,9 +238,10 @@ public class AddExistedInstancesRequest extends AbstractModel{
         this.setParamObj(map, prefix + "InstanceAdvancedSettings.", this.InstanceAdvancedSettings);
         this.setParamObj(map, prefix + "EnhancedService.", this.EnhancedService);
         this.setParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
-        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamSimple(map, prefix + "HostName", this.HostName);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamObj(map, prefix + "NodePool.", this.NodePool);
+        this.setParamArraySimple(map, prefix + "SkipValidateOptions.", this.SkipValidateOptions);
 
     }
 }
