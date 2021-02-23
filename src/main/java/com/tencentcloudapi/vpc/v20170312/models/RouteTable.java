@@ -79,6 +79,14 @@ public class RouteTable extends AbstractModel{
     private Tag [] TagSet;
 
     /**
+    * Whether the local route is published to CCN.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("LocalCidrForCcn")
+    @Expose
+    private CidrForCcn [] LocalCidrForCcn;
+
+    /**
      * Get VPC instance ID. 
      * @return VpcId VPC instance ID.
      */
@@ -207,6 +215,26 @@ public class RouteTable extends AbstractModel{
     }
 
     /**
+     * Get Whether the local route is published to CCN.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return LocalCidrForCcn Whether the local route is published to CCN.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public CidrForCcn [] getLocalCidrForCcn() {
+        return this.LocalCidrForCcn;
+    }
+
+    /**
+     * Set Whether the local route is published to CCN.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param LocalCidrForCcn Whether the local route is published to CCN.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setLocalCidrForCcn(CidrForCcn [] LocalCidrForCcn) {
+        this.LocalCidrForCcn = LocalCidrForCcn;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +246,7 @@ public class RouteTable extends AbstractModel{
         this.setParamSimple(map, prefix + "Main", this.Main);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+        this.setParamArrayObj(map, prefix + "LocalCidrForCcn.", this.LocalCidrForCcn);
 
     }
 }

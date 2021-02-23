@@ -86,6 +86,13 @@ public class DescribeBackupsRequest extends AbstractModel{
     private Long BackupId;
 
     /**
+    * Filter backups by the database name. If the parameter is left empty, this filter criteria will not take effect.
+    */
+    @SerializedName("DatabaseName")
+    @Expose
+    private String DatabaseName;
+
+    /**
      * Get Start name (yyyy-MM-dd HH:mm:ss) 
      * @return StartTime Start name (yyyy-MM-dd HH:mm:ss)
      */
@@ -230,6 +237,22 @@ public class DescribeBackupsRequest extends AbstractModel{
     }
 
     /**
+     * Get Filter backups by the database name. If the parameter is left empty, this filter criteria will not take effect. 
+     * @return DatabaseName Filter backups by the database name. If the parameter is left empty, this filter criteria will not take effect.
+     */
+    public String getDatabaseName() {
+        return this.DatabaseName;
+    }
+
+    /**
+     * Set Filter backups by the database name. If the parameter is left empty, this filter criteria will not take effect.
+     * @param DatabaseName Filter backups by the database name. If the parameter is left empty, this filter criteria will not take effect.
+     */
+    public void setDatabaseName(String DatabaseName) {
+        this.DatabaseName = DatabaseName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +265,7 @@ public class DescribeBackupsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Strategy", this.Strategy);
         this.setParamSimple(map, prefix + "BackupWay", this.BackupWay);
         this.setParamSimple(map, prefix + "BackupId", this.BackupId);
+        this.setParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
 
     }
 }

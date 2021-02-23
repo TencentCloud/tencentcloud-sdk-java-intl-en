@@ -65,6 +65,27 @@ public class ModifyVpnConnectionAttributeRequest extends AbstractModel{
     private IPSECOptionsSpecification IPSECOptionsSpecification;
 
     /**
+    * Whether to enable the tunnel health check.
+    */
+    @SerializedName("EnableHealthCheck")
+    @Expose
+    private Boolean EnableHealthCheck;
+
+    /**
+    * Local IP address for the tunnel health check
+    */
+    @SerializedName("HealthCheckLocalIp")
+    @Expose
+    private String HealthCheckLocalIp;
+
+    /**
+    * Peer IP address for the tunnel health check
+    */
+    @SerializedName("HealthCheckRemoteIp")
+    @Expose
+    private String HealthCheckRemoteIp;
+
+    /**
      * Get The ID of the VPN tunnel instance, such as `vpnx-f49l6u0z`. 
      * @return VpnConnectionId The ID of the VPN tunnel instance, such as `vpnx-f49l6u0z`.
      */
@@ -161,6 +182,54 @@ public class ModifyVpnConnectionAttributeRequest extends AbstractModel{
     }
 
     /**
+     * Get Whether to enable the tunnel health check. 
+     * @return EnableHealthCheck Whether to enable the tunnel health check.
+     */
+    public Boolean getEnableHealthCheck() {
+        return this.EnableHealthCheck;
+    }
+
+    /**
+     * Set Whether to enable the tunnel health check.
+     * @param EnableHealthCheck Whether to enable the tunnel health check.
+     */
+    public void setEnableHealthCheck(Boolean EnableHealthCheck) {
+        this.EnableHealthCheck = EnableHealthCheck;
+    }
+
+    /**
+     * Get Local IP address for the tunnel health check 
+     * @return HealthCheckLocalIp Local IP address for the tunnel health check
+     */
+    public String getHealthCheckLocalIp() {
+        return this.HealthCheckLocalIp;
+    }
+
+    /**
+     * Set Local IP address for the tunnel health check
+     * @param HealthCheckLocalIp Local IP address for the tunnel health check
+     */
+    public void setHealthCheckLocalIp(String HealthCheckLocalIp) {
+        this.HealthCheckLocalIp = HealthCheckLocalIp;
+    }
+
+    /**
+     * Get Peer IP address for the tunnel health check 
+     * @return HealthCheckRemoteIp Peer IP address for the tunnel health check
+     */
+    public String getHealthCheckRemoteIp() {
+        return this.HealthCheckRemoteIp;
+    }
+
+    /**
+     * Set Peer IP address for the tunnel health check
+     * @param HealthCheckRemoteIp Peer IP address for the tunnel health check
+     */
+    public void setHealthCheckRemoteIp(String HealthCheckRemoteIp) {
+        this.HealthCheckRemoteIp = HealthCheckRemoteIp;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +239,9 @@ public class ModifyVpnConnectionAttributeRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "SecurityPolicyDatabases.", this.SecurityPolicyDatabases);
         this.setParamObj(map, prefix + "IKEOptionsSpecification.", this.IKEOptionsSpecification);
         this.setParamObj(map, prefix + "IPSECOptionsSpecification.", this.IPSECOptionsSpecification);
+        this.setParamSimple(map, prefix + "EnableHealthCheck", this.EnableHealthCheck);
+        this.setParamSimple(map, prefix + "HealthCheckLocalIp", this.HealthCheckLocalIp);
+        this.setParamSimple(map, prefix + "HealthCheckRemoteIp", this.HealthCheckRemoteIp);
 
     }
 }

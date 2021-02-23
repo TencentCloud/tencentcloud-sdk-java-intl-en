@@ -250,6 +250,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String OriginId;
 
     /**
+    * Tag
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TagInstances")
+    @Expose
+    private TagInstance [] TagInstances;
+
+    /**
      * Get Alarm policy ID
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return PolicyId Alarm policy ID
@@ -822,6 +830,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Tag
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return TagInstances Tag
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public TagInstance [] getTagInstances() {
+        return this.TagInstances;
+    }
+
+    /**
+     * Set Tag
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param TagInstances Tag
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setTagInstances(TagInstance [] TagInstances) {
+        this.TagInstances = TagInstances;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -853,6 +881,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "InstanceGroupName", this.InstanceGroupName);
         this.setParamSimple(map, prefix + "RuleType", this.RuleType);
         this.setParamSimple(map, prefix + "OriginId", this.OriginId);
+        this.setParamArrayObj(map, prefix + "TagInstances.", this.TagInstances);
 
     }
 }

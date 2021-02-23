@@ -73,6 +73,22 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     private String [] AvailablePortType;
 
     /**
+    * Latitude and longitude of the access point
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Coordinate")
+    @Expose
+    private Coordinate Coordinate;
+
+    /**
+    * City where the access point is located
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("City")
+    @Expose
+    private String City;
+
+    /**
      * Get Access point name. 
      * @return AccessPointName Access point name.
      */
@@ -189,6 +205,46 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     }
 
     /**
+     * Get Latitude and longitude of the access point
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Coordinate Latitude and longitude of the access point
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Coordinate getCoordinate() {
+        return this.Coordinate;
+    }
+
+    /**
+     * Set Latitude and longitude of the access point
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Coordinate Latitude and longitude of the access point
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setCoordinate(Coordinate Coordinate) {
+        this.Coordinate = Coordinate;
+    }
+
+    /**
+     * Get City where the access point is located
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return City City where the access point is located
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getCity() {
+        return this.City;
+    }
+
+    /**
+     * Set City where the access point is located
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param City City where the access point is located
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setCity(String City) {
+        this.City = City;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -199,6 +255,8 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         this.setParamArraySimple(map, prefix + "LineOperator.", this.LineOperator);
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
         this.setParamArraySimple(map, prefix + "AvailablePortType.", this.AvailablePortType);
+        this.setParamObj(map, prefix + "Coordinate.", this.Coordinate);
+        this.setParamSimple(map, prefix + "City", this.City);
 
     }
 }

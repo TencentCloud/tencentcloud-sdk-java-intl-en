@@ -63,8 +63,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String PackageType;
 
     /**
-    * Name of the certificate issuer.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Name of the certificate issuer
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("ProductZhName")
     @Expose
@@ -271,6 +271,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Boolean Deployable;
 
     /**
+    * List of tags
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tags [] Tags;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -378,20 +386,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Name of the certificate issuer.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ProductZhName Name of the certificate issuer.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Name of the certificate issuer
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ProductZhName Name of the certificate issuer
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getProductZhName() {
         return this.ProductZhName;
     }
 
     /**
-     * Set Name of the certificate issuer.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ProductZhName Name of the certificate issuer.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Name of the certificate issuer
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ProductZhName Name of the certificate issuer
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setProductZhName(String ProductZhName) {
         this.ProductZhName = ProductZhName;
@@ -898,6 +906,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get List of tags
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Tags List of tags
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Tags [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set List of tags
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Tags List of tags
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setTags(Tags [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -948,6 +976,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "RenewAble", this.RenewAble);
         this.setParamObj(map, prefix + "SubmittedData.", this.SubmittedData);
         this.setParamSimple(map, prefix + "Deployable", this.Deployable);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

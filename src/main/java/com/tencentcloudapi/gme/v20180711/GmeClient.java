@@ -79,6 +79,26 @@ public class GmeClient extends AbstractClient{
     }
 
     /**
+     *This API (DescribeApplicationData) is used to query usage data details within 90 days.
+     * @param req DescribeApplicationDataRequest
+     * @return DescribeApplicationDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApplicationDataResponse DescribeApplicationData(DescribeApplicationDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeApplicationDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeApplicationDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeApplicationData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the speech detection result. Up to 100 tasks can be added in the task query list.
 <p style="color:red">If the `Callback` field is not set when a speech detection task is submitted, this API will be needed to get the detection result.</p>
      * @param req DescribeScanResultListRequest

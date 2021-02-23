@@ -194,6 +194,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long Cpu;
 
     /**
+    * The value range of shardkey, which includes 64 hash values, such as 0-31, 32-63.
+    */
+    @SerializedName("Range")
+    @Expose
+    private String Range;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -590,6 +597,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get The value range of shardkey, which includes 64 hash values, such as 0-31, 32-63. 
+     * @return Range The value range of shardkey, which includes 64 hash values, such as 0-31, 32-63.
+     */
+    public String getRange() {
+        return this.Range;
+    }
+
+    /**
+     * Set The value range of shardkey, which includes 64 hash values, such as 0-31, 32-63.
+     * @param Range The value range of shardkey, which includes 64 hash values, such as 0-31, 32-63.
+     */
+    public void setRange(String Range) {
+        this.Range = Range;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -617,6 +640,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ShardMasterZone", this.ShardMasterZone);
         this.setParamArraySimple(map, prefix + "ShardSlaveZones.", this.ShardSlaveZones);
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
+        this.setParamSimple(map, prefix + "Range", this.Range);
 
     }
 }

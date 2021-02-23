@@ -30,7 +30,7 @@ public class DeleteRoutesRequest extends AbstractModel{
     private String RouteTableId;
 
     /**
-    * Routing policy object.
+    * Routing policy object. Only the `RouteId` field is required when deleting a routing policy.
     */
     @SerializedName("Routes")
     @Expose
@@ -53,16 +53,16 @@ public class DeleteRoutesRequest extends AbstractModel{
     }
 
     /**
-     * Get Routing policy object. 
-     * @return Routes Routing policy object.
+     * Get Routing policy object. Only the `RouteId` field is required when deleting a routing policy. 
+     * @return Routes Routing policy object. Only the `RouteId` field is required when deleting a routing policy.
      */
     public Route [] getRoutes() {
         return this.Routes;
     }
 
     /**
-     * Set Routing policy object.
-     * @param Routes Routing policy object.
+     * Set Routing policy object. Only the `RouteId` field is required when deleting a routing policy.
+     * @param Routes Routing policy object. Only the `RouteId` field is required when deleting a routing policy.
      */
     public void setRoutes(Route [] Routes) {
         this.Routes = Routes;

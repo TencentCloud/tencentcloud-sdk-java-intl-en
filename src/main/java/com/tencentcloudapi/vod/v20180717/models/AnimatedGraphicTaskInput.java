@@ -30,14 +30,20 @@ public class AnimatedGraphicTaskInput extends AbstractModel{
     private Long Definition;
 
     /**
-    * Start time of animated image in video in seconds.
+    * Start time offset of an animated image in the video, in seconds.
+<li>If this parameter is left empty or set to 0, the animated image will start at the same time as the video.</li>
+<li>If this parameter is set to a positive number (n for example), the animated image will start at the nth second of the video.</li>
+<li>If this parameter is set to a negative number (-n for example), the animated image will start at the nth second before the end of the video.</li>
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * End time of animated image in video in seconds.
+    * End time offset of an animated image in the video, in seconds.
+<li>If this parameter is left empty or set to 0, the animated image will end at the same time as the video.</li>
+<li>If this parameter is set to a positive number (n for example), the animated image will end at the nth second of the video.</li>
+<li>If this parameter is set to a negative number (-n for example), the animated image will end at the nth second before the end of the video.</li>
     */
     @SerializedName("EndTimeOffset")
     @Expose
@@ -60,32 +66,56 @@ public class AnimatedGraphicTaskInput extends AbstractModel{
     }
 
     /**
-     * Get Start time of animated image in video in seconds. 
-     * @return StartTimeOffset Start time of animated image in video in seconds.
+     * Get Start time offset of an animated image in the video, in seconds.
+<li>If this parameter is left empty or set to 0, the animated image will start at the same time as the video.</li>
+<li>If this parameter is set to a positive number (n for example), the animated image will start at the nth second of the video.</li>
+<li>If this parameter is set to a negative number (-n for example), the animated image will start at the nth second before the end of the video.</li> 
+     * @return StartTimeOffset Start time offset of an animated image in the video, in seconds.
+<li>If this parameter is left empty or set to 0, the animated image will start at the same time as the video.</li>
+<li>If this parameter is set to a positive number (n for example), the animated image will start at the nth second of the video.</li>
+<li>If this parameter is set to a negative number (-n for example), the animated image will start at the nth second before the end of the video.</li>
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set Start time of animated image in video in seconds.
-     * @param StartTimeOffset Start time of animated image in video in seconds.
+     * Set Start time offset of an animated image in the video, in seconds.
+<li>If this parameter is left empty or set to 0, the animated image will start at the same time as the video.</li>
+<li>If this parameter is set to a positive number (n for example), the animated image will start at the nth second of the video.</li>
+<li>If this parameter is set to a negative number (-n for example), the animated image will start at the nth second before the end of the video.</li>
+     * @param StartTimeOffset Start time offset of an animated image in the video, in seconds.
+<li>If this parameter is left empty or set to 0, the animated image will start at the same time as the video.</li>
+<li>If this parameter is set to a positive number (n for example), the animated image will start at the nth second of the video.</li>
+<li>If this parameter is set to a negative number (-n for example), the animated image will start at the nth second before the end of the video.</li>
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get End time of animated image in video in seconds. 
-     * @return EndTimeOffset End time of animated image in video in seconds.
+     * Get End time offset of an animated image in the video, in seconds.
+<li>If this parameter is left empty or set to 0, the animated image will end at the same time as the video.</li>
+<li>If this parameter is set to a positive number (n for example), the animated image will end at the nth second of the video.</li>
+<li>If this parameter is set to a negative number (-n for example), the animated image will end at the nth second before the end of the video.</li> 
+     * @return EndTimeOffset End time offset of an animated image in the video, in seconds.
+<li>If this parameter is left empty or set to 0, the animated image will end at the same time as the video.</li>
+<li>If this parameter is set to a positive number (n for example), the animated image will end at the nth second of the video.</li>
+<li>If this parameter is set to a negative number (-n for example), the animated image will end at the nth second before the end of the video.</li>
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set End time of animated image in video in seconds.
-     * @param EndTimeOffset End time of animated image in video in seconds.
+     * Set End time offset of an animated image in the video, in seconds.
+<li>If this parameter is left empty or set to 0, the animated image will end at the same time as the video.</li>
+<li>If this parameter is set to a positive number (n for example), the animated image will end at the nth second of the video.</li>
+<li>If this parameter is set to a negative number (-n for example), the animated image will end at the nth second before the end of the video.</li>
+     * @param EndTimeOffset End time offset of an animated image in the video, in seconds.
+<li>If this parameter is left empty or set to 0, the animated image will end at the same time as the video.</li>
+<li>If this parameter is set to a positive number (n for example), the animated image will end at the nth second of the video.</li>
+<li>If this parameter is set to a negative number (-n for example), the animated image will end at the nth second before the end of the video.</li>
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;

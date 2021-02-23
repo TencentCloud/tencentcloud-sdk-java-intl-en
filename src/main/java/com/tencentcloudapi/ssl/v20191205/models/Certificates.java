@@ -255,6 +255,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Boolean Deployable;
 
     /**
+    * List of tags
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tags [] Tags;
+
+    /**
      * Get User UIN.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return OwnerUin User UIN.
@@ -835,6 +843,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get List of tags
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Tags List of tags
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Tags [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set List of tags
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Tags List of tags
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setTags(Tags [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -867,6 +895,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "ProjectInfo.", this.ProjectInfo);
         this.setParamArraySimple(map, prefix + "BoundResource.", this.BoundResource);
         this.setParamSimple(map, prefix + "Deployable", this.Deployable);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

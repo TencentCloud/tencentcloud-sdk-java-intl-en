@@ -279,7 +279,7 @@ public class SslClient extends AbstractClient{
     }
 
     /**
-     *This API is used to submit certificate information.
+     *This API is used to submit certificate information. You can call this API to submit the information of a certificate for several times. However, please make sure the submitted information is complete.
      * @param req SubmitCertificateInformationRequest
      * @return SubmitCertificateInformationResponse
      * @throws TencentCloudSDKException

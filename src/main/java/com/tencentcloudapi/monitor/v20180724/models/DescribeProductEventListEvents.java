@@ -183,6 +183,14 @@ Note: This field may return null, indicating that no valid value was found.
     private DescribeProductEventListEventsGroupInfo [] GroupInfo;
 
     /**
+    * Display name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ViewName")
+    @Expose
+    private String ViewName;
+
+    /**
      * Get Event ID.
 Note: This field may return null, indicating that no valid value was found. 
      * @return EventId Event ID.
@@ -583,6 +591,26 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
+     * Get Display name
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return ViewName Display name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getViewName() {
+        return this.ViewName;
+    }
+
+    /**
+     * Set Display name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param ViewName Display name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setViewName(String ViewName) {
+        this.ViewName = ViewName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -606,6 +634,7 @@ Note: This field may return null, indicating that no valid value was found.
         this.setParamArrayObj(map, prefix + "AdditionMsg.", this.AdditionMsg);
         this.setParamSimple(map, prefix + "IsAlarmConfig", this.IsAlarmConfig);
         this.setParamArrayObj(map, prefix + "GroupInfo.", this.GroupInfo);
+        this.setParamSimple(map, prefix + "ViewName", this.ViewName);
 
     }
 }

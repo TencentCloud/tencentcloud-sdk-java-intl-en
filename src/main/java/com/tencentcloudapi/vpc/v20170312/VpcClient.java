@@ -747,6 +747,26 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
+     *This API is used to create a SNAT rule for the NAT Gateway.
+     * @param req CreateNatGatewaySourceIpTranslationNatRuleRequest
+     * @return CreateNatGatewaySourceIpTranslationNatRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNatGatewaySourceIpTranslationNatRuleResponse CreateNatGatewaySourceIpTranslationNatRule(CreateNatGatewaySourceIpTranslationNatRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateNatGatewaySourceIpTranslationNatRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateNatGatewaySourceIpTranslationNatRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateNatGatewaySourceIpTranslationNatRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a network detection instance.
      * @param req CreateNetDetectRequest
      * @return CreateNetDetectResponse
@@ -1341,6 +1361,26 @@ After the deletion of a NAT gateway, the system will automatically delete the ro
                 Type type = new TypeToken<JsonResponseModel<DeleteNatGatewayDestinationIpPortTranslationNatRuleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteNatGatewayDestinationIpPortTranslationNatRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a SNAT forwarding rule of the NAT Gateway.
+     * @param req DeleteNatGatewaySourceIpTranslationNatRuleRequest
+     * @return DeleteNatGatewaySourceIpTranslationNatRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteNatGatewaySourceIpTranslationNatRuleResponse DeleteNatGatewaySourceIpTranslationNatRule(DeleteNatGatewaySourceIpTranslationNatRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteNatGatewaySourceIpTranslationNatRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteNatGatewaySourceIpTranslationNatRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteNatGatewaySourceIpTranslationNatRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2155,6 +2195,26 @@ A service provider can query all review requests created by any `APPID` under it
                 Type type = new TypeToken<JsonResponseModel<DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeNatGatewayDestinationIpPortTranslationNatRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the object arrays of SNAT forwarding rules of the NAT Gateway.
+     * @param req DescribeNatGatewaySourceIpTranslationNatRulesRequest
+     * @return DescribeNatGatewaySourceIpTranslationNatRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNatGatewaySourceIpTranslationNatRulesResponse DescribeNatGatewaySourceIpTranslationNatRules(DescribeNatGatewaySourceIpTranslationNatRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNatGatewaySourceIpTranslationNatRulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNatGatewaySourceIpTranslationNatRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeNatGatewaySourceIpTranslationNatRules");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -3419,6 +3479,26 @@ This API is completed asynchronously. If you need to query the async job executi
     }
 
     /**
+     *This API is used to modify a SNAT forwarding rule of the NAT Gateway.
+     * @param req ModifyNatGatewaySourceIpTranslationNatRuleRequest
+     * @return ModifyNatGatewaySourceIpTranslationNatRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNatGatewaySourceIpTranslationNatRuleResponse ModifyNatGatewaySourceIpTranslationNatRule(ModifyNatGatewaySourceIpTranslationNatRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyNatGatewaySourceIpTranslationNatRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyNatGatewaySourceIpTranslationNatRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyNatGatewaySourceIpTranslationNatRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (ModifyNetDetect) is used to modify network detection parameters.
      * @param req ModifyNetDetectRequest
      * @return ModifyNetDetectResponse
@@ -3726,6 +3806,26 @@ This API is completed asynchronously. If you need to query the async job executi
                 Type type = new TypeToken<JsonResponseModel<ModifyVpnGatewayCcnRoutesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyVpnGatewayCcnRoutes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to publish a route to CCN. This can also be done by clicking the **Publish to CCN** button on the route table page.
+     * @param req NotifyRoutesRequest
+     * @return NotifyRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public NotifyRoutesResponse NotifyRoutes(NotifyRoutesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<NotifyRoutesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<NotifyRoutesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "NotifyRoutes");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -4117,6 +4217,26 @@ If the subnet IP range still has occupied IPs that are not yet repossessed, the 
                 Type type = new TypeToken<JsonResponseModel<UnassignPrivateIpAddressesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UnassignPrivateIpAddresses");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to withdraw a route from CCN. This can also be done by clicking the **Withdraw from CCN** button on the route table page.
+     * @param req WithdrawNotifyRoutesRequest
+     * @return WithdrawNotifyRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public WithdrawNotifyRoutesResponse WithdrawNotifyRoutes(WithdrawNotifyRoutesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<WithdrawNotifyRoutesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<WithdrawNotifyRoutesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "WithdrawNotifyRoutes");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

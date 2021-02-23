@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateBandwidthPackageRequest extends AbstractModel{
 
     /**
-    * The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'.
+    * The type of the bandwidth package. Valid values: `HIGH_QUALITY_BGP`, `BGP`, `SINGLEISP`, and `ANYCAST`.
     */
     @SerializedName("NetworkType")
     @Expose
@@ -51,7 +51,7 @@ public class CreateBandwidthPackageRequest extends AbstractModel{
     private Long BandwidthPackageCount;
 
     /**
-    * The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
+    * The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit. This feature is currently in beta.
     */
     @SerializedName("InternetMaxBandwidth")
     @Expose
@@ -72,16 +72,16 @@ public class CreateBandwidthPackageRequest extends AbstractModel{
     private String Protocol;
 
     /**
-     * Get The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'. 
-     * @return NetworkType The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'.
+     * Get The type of the bandwidth package. Valid values: `HIGH_QUALITY_BGP`, `BGP`, `SINGLEISP`, and `ANYCAST`. 
+     * @return NetworkType The type of the bandwidth package. Valid values: `HIGH_QUALITY_BGP`, `BGP`, `SINGLEISP`, and `ANYCAST`.
      */
     public String getNetworkType() {
         return this.NetworkType;
     }
 
     /**
-     * Set The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'.
-     * @param NetworkType The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'.
+     * Set The type of the bandwidth package. Valid values: `HIGH_QUALITY_BGP`, `BGP`, `SINGLEISP`, and `ANYCAST`.
+     * @param NetworkType The type of the bandwidth package. Valid values: `HIGH_QUALITY_BGP`, `BGP`, `SINGLEISP`, and `ANYCAST`.
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;
@@ -136,16 +136,16 @@ public class CreateBandwidthPackageRequest extends AbstractModel{
     }
 
     /**
-     * Get The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit. 
-     * @return InternetMaxBandwidth The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
+     * Get The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit. This feature is currently in beta. 
+     * @return InternetMaxBandwidth The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit. This feature is currently in beta.
      */
     public Long getInternetMaxBandwidth() {
         return this.InternetMaxBandwidth;
     }
 
     /**
-     * Set The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
-     * @param InternetMaxBandwidth The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
+     * Set The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit. This feature is currently in beta.
+     * @param InternetMaxBandwidth The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit. This feature is currently in beta.
      */
     public void setInternetMaxBandwidth(Long InternetMaxBandwidth) {
         this.InternetMaxBandwidth = InternetMaxBandwidth;

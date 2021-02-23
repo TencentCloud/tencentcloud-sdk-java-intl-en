@@ -107,6 +107,14 @@ Users can only add and operate USER-type routes.
     private String RouteItemId;
 
     /**
+    * Whether the routing policy is published to CCN.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PublishedToVbc")
+    @Expose
+    private Boolean PublishedToVbc;
+
+    /**
      * Get Destination IP range, such as 112.20.51.0/24. Values cannot be in the VPC IP range. 
      * @return DestinationCidrBlock Destination IP range, such as 112.20.51.0/24. Values cannot be in the VPC IP range.
      */
@@ -323,6 +331,26 @@ Users can only add and operate USER-type routes.
     }
 
     /**
+     * Get Whether the routing policy is published to CCN.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return PublishedToVbc Whether the routing policy is published to CCN.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Boolean getPublishedToVbc() {
+        return this.PublishedToVbc;
+    }
+
+    /**
+     * Set Whether the routing policy is published to CCN.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param PublishedToVbc Whether the routing policy is published to CCN.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setPublishedToVbc(Boolean PublishedToVbc) {
+        this.PublishedToVbc = PublishedToVbc;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -336,6 +364,7 @@ Users can only add and operate USER-type routes.
         this.setParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
         this.setParamSimple(map, prefix + "DestinationIpv6CidrBlock", this.DestinationIpv6CidrBlock);
         this.setParamSimple(map, prefix + "RouteItemId", this.RouteItemId);
+        this.setParamSimple(map, prefix + "PublishedToVbc", this.PublishedToVbc);
 
     }
 }

@@ -58,7 +58,7 @@ public class SubmitCertificateInformationRequest extends AbstractModel{
     private String [] DomainList;
 
     /**
-    * Password of the private key.
+    * Private key password (optional)
     */
     @SerializedName("KeyPassword")
     @Expose
@@ -128,21 +128,21 @@ public class SubmitCertificateInformationRequest extends AbstractModel{
     private String PhoneNumber;
 
     /**
-    * Certificate verification method.
+    * Validation type. `DNS_AUTO`: automatic DNS validation (only available for domains hosted in Tencent Cloud and when the DNS status is OK); `DNS`: manual DNS validation; `FILE`: file validation.
     */
     @SerializedName("VerifyType")
     @Expose
     private String VerifyType;
 
     /**
-    * Last name of the admin.
+    * First name of the administrator
     */
     @SerializedName("AdminFirstName")
     @Expose
     private String AdminFirstName;
 
     /**
-    * First name of the admin.
+    * Last name of the administrator
     */
     @SerializedName("AdminLastName")
     @Expose
@@ -170,14 +170,14 @@ public class SubmitCertificateInformationRequest extends AbstractModel{
     private String AdminPosition;
 
     /**
-    * Last name of the contact.
+    * First name of the contact
     */
     @SerializedName("ContactFirstName")
     @Expose
     private String ContactFirstName;
 
     /**
-    * First name of the contact.
+    * Last name of the contact
     */
     @SerializedName("ContactLastName")
     @Expose
@@ -285,16 +285,16 @@ public class SubmitCertificateInformationRequest extends AbstractModel{
     }
 
     /**
-     * Get Password of the private key. 
-     * @return KeyPassword Password of the private key.
+     * Get Private key password (optional) 
+     * @return KeyPassword Private key password (optional)
      */
     public String getKeyPassword() {
         return this.KeyPassword;
     }
 
     /**
-     * Set Password of the private key.
-     * @param KeyPassword Password of the private key.
+     * Set Private key password (optional)
+     * @param KeyPassword Private key password (optional)
      */
     public void setKeyPassword(String KeyPassword) {
         this.KeyPassword = KeyPassword;
@@ -445,48 +445,48 @@ public class SubmitCertificateInformationRequest extends AbstractModel{
     }
 
     /**
-     * Get Certificate verification method. 
-     * @return VerifyType Certificate verification method.
+     * Get Validation type. `DNS_AUTO`: automatic DNS validation (only available for domains hosted in Tencent Cloud and when the DNS status is OK); `DNS`: manual DNS validation; `FILE`: file validation. 
+     * @return VerifyType Validation type. `DNS_AUTO`: automatic DNS validation (only available for domains hosted in Tencent Cloud and when the DNS status is OK); `DNS`: manual DNS validation; `FILE`: file validation.
      */
     public String getVerifyType() {
         return this.VerifyType;
     }
 
     /**
-     * Set Certificate verification method.
-     * @param VerifyType Certificate verification method.
+     * Set Validation type. `DNS_AUTO`: automatic DNS validation (only available for domains hosted in Tencent Cloud and when the DNS status is OK); `DNS`: manual DNS validation; `FILE`: file validation.
+     * @param VerifyType Validation type. `DNS_AUTO`: automatic DNS validation (only available for domains hosted in Tencent Cloud and when the DNS status is OK); `DNS`: manual DNS validation; `FILE`: file validation.
      */
     public void setVerifyType(String VerifyType) {
         this.VerifyType = VerifyType;
     }
 
     /**
-     * Get Last name of the admin. 
-     * @return AdminFirstName Last name of the admin.
+     * Get First name of the administrator 
+     * @return AdminFirstName First name of the administrator
      */
     public String getAdminFirstName() {
         return this.AdminFirstName;
     }
 
     /**
-     * Set Last name of the admin.
-     * @param AdminFirstName Last name of the admin.
+     * Set First name of the administrator
+     * @param AdminFirstName First name of the administrator
      */
     public void setAdminFirstName(String AdminFirstName) {
         this.AdminFirstName = AdminFirstName;
     }
 
     /**
-     * Get First name of the admin. 
-     * @return AdminLastName First name of the admin.
+     * Get Last name of the administrator 
+     * @return AdminLastName Last name of the administrator
      */
     public String getAdminLastName() {
         return this.AdminLastName;
     }
 
     /**
-     * Set First name of the admin.
-     * @param AdminLastName First name of the admin.
+     * Set Last name of the administrator
+     * @param AdminLastName Last name of the administrator
      */
     public void setAdminLastName(String AdminLastName) {
         this.AdminLastName = AdminLastName;
@@ -541,32 +541,32 @@ public class SubmitCertificateInformationRequest extends AbstractModel{
     }
 
     /**
-     * Get Last name of the contact. 
-     * @return ContactFirstName Last name of the contact.
+     * Get First name of the contact 
+     * @return ContactFirstName First name of the contact
      */
     public String getContactFirstName() {
         return this.ContactFirstName;
     }
 
     /**
-     * Set Last name of the contact.
-     * @param ContactFirstName Last name of the contact.
+     * Set First name of the contact
+     * @param ContactFirstName First name of the contact
      */
     public void setContactFirstName(String ContactFirstName) {
         this.ContactFirstName = ContactFirstName;
     }
 
     /**
-     * Get First name of the contact. 
-     * @return ContactLastName First name of the contact.
+     * Get Last name of the contact 
+     * @return ContactLastName Last name of the contact
      */
     public String getContactLastName() {
         return this.ContactLastName;
     }
 
     /**
-     * Set First name of the contact.
-     * @param ContactLastName First name of the contact.
+     * Set Last name of the contact
+     * @param ContactLastName Last name of the contact
      */
     public void setContactLastName(String ContactLastName) {
         this.ContactLastName = ContactLastName;

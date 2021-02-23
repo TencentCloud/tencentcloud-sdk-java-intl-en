@@ -79,6 +79,13 @@ public class LayoutParams extends AbstractModel{
     private Long PlaceHolderMode;
 
     /**
+    * Whether an audio-only stream occupies an image spot, which takes effect in a floating, grid, or screen sharing template. Valid values: 0 (default): when a floating or grid template is used, users sending audio only occupy image spots; when a screen sharing template is used, users (except the user whose screen is shared) sending audio only do not occupy image spots; 1: users sending audio only occupy image spots; 2: users sending audio only do not occupy image spots.
+    */
+    @SerializedName("PureAudioHoldPlaceMode")
+    @Expose
+    private Long PureAudioHoldPlaceMode;
+
+    /**
      * Get On-cloud stream mix layout template ID. 0: floating template (default value); 1: grid template; 2: screen sharing template; 3: picture-in-picture template; 4: custom template. 
      * @return Template On-cloud stream mix layout template ID. 0: floating template (default value); 1: grid template; 2: screen sharing template; 3: picture-in-picture template; 4: custom template.
      */
@@ -207,6 +214,22 @@ public class LayoutParams extends AbstractModel{
     }
 
     /**
+     * Get Whether an audio-only stream occupies an image spot, which takes effect in a floating, grid, or screen sharing template. Valid values: 0 (default): when a floating or grid template is used, users sending audio only occupy image spots; when a screen sharing template is used, users (except the user whose screen is shared) sending audio only do not occupy image spots; 1: users sending audio only occupy image spots; 2: users sending audio only do not occupy image spots. 
+     * @return PureAudioHoldPlaceMode Whether an audio-only stream occupies an image spot, which takes effect in a floating, grid, or screen sharing template. Valid values: 0 (default): when a floating or grid template is used, users sending audio only occupy image spots; when a screen sharing template is used, users (except the user whose screen is shared) sending audio only do not occupy image spots; 1: users sending audio only occupy image spots; 2: users sending audio only do not occupy image spots.
+     */
+    public Long getPureAudioHoldPlaceMode() {
+        return this.PureAudioHoldPlaceMode;
+    }
+
+    /**
+     * Set Whether an audio-only stream occupies an image spot, which takes effect in a floating, grid, or screen sharing template. Valid values: 0 (default): when a floating or grid template is used, users sending audio only occupy image spots; when a screen sharing template is used, users (except the user whose screen is shared) sending audio only do not occupy image spots; 1: users sending audio only occupy image spots; 2: users sending audio only do not occupy image spots.
+     * @param PureAudioHoldPlaceMode Whether an audio-only stream occupies an image spot, which takes effect in a floating, grid, or screen sharing template. Valid values: 0 (default): when a floating or grid template is used, users sending audio only occupy image spots; when a screen sharing template is used, users (except the user whose screen is shared) sending audio only do not occupy image spots; 1: users sending audio only occupy image spots; 2: users sending audio only do not occupy image spots.
+     */
+    public void setPureAudioHoldPlaceMode(Long PureAudioHoldPlaceMode) {
+        this.PureAudioHoldPlaceMode = PureAudioHoldPlaceMode;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +241,7 @@ public class LayoutParams extends AbstractModel{
         this.setParamArraySimple(map, prefix + "MixVideoUids.", this.MixVideoUids);
         this.setParamArrayObj(map, prefix + "PresetLayoutConfig.", this.PresetLayoutConfig);
         this.setParamSimple(map, prefix + "PlaceHolderMode", this.PlaceHolderMode);
+        this.setParamSimple(map, prefix + "PureAudioHoldPlaceMode", this.PureAudioHoldPlaceMode);
 
     }
 }

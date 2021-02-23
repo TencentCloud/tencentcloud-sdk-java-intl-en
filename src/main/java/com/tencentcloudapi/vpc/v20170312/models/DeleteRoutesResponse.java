@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class DeleteRoutesResponse extends AbstractModel{
 
     /**
+    * Details of the routing policy that has been deleted.
+    */
+    @SerializedName("RouteSet")
+    @Expose
+    private Route [] RouteSet;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get Details of the routing policy that has been deleted. 
+     * @return RouteSet Details of the routing policy that has been deleted.
+     */
+    public Route [] getRouteSet() {
+        return this.RouteSet;
+    }
+
+    /**
+     * Set Details of the routing policy that has been deleted.
+     * @param RouteSet Details of the routing policy that has been deleted.
+     */
+    public void setRouteSet(Route [] RouteSet) {
+        this.RouteSet = RouteSet;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -49,6 +72,7 @@ public class DeleteRoutesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "RouteSet.", this.RouteSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

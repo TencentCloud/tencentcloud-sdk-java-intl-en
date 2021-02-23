@@ -279,6 +279,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String HAFlag;
 
     /**
+    * The list of tags associated with the instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ResourceTags")
+    @Expose
+    private ResourceTag [] ResourceTags;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -871,6 +879,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get The list of tags associated with the instance
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ResourceTags The list of tags associated with the instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public ResourceTag [] getResourceTags() {
+        return this.ResourceTags;
+    }
+
+    /**
+     * Set The list of tags associated with the instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ResourceTags The list of tags associated with the instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setResourceTags(ResourceTag [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -910,6 +938,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "SubFlag", this.SubFlag);
         this.setParamSimple(map, prefix + "ROFlag", this.ROFlag);
         this.setParamSimple(map, prefix + "HAFlag", this.HAFlag);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
 
     }
 }

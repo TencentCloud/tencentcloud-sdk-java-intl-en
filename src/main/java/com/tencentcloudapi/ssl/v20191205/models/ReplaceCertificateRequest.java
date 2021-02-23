@@ -30,7 +30,7 @@ public class ReplaceCertificateRequest extends AbstractModel{
     private String CertificateId;
 
     /**
-    * Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file.
+    * Validation type. `DNS_AUTO`: automatic DNS validation (only available for domains hosted in Tencent Cloud and when the DNS status is OK); `DNS`: manual DNS validation; `FILE`: file validation.
     */
     @SerializedName("ValidType")
     @Expose
@@ -58,6 +58,13 @@ public class ReplaceCertificateRequest extends AbstractModel{
     private String CsrkeyPassword;
 
     /**
+    * Reissue reason
+    */
+    @SerializedName("Reason")
+    @Expose
+    private String Reason;
+
+    /**
      * Get Certificate ID. 
      * @return CertificateId Certificate ID.
      */
@@ -74,16 +81,16 @@ public class ReplaceCertificateRequest extends AbstractModel{
     }
 
     /**
-     * Get Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file. 
-     * @return ValidType Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file.
+     * Get Validation type. `DNS_AUTO`: automatic DNS validation (only available for domains hosted in Tencent Cloud and when the DNS status is OK); `DNS`: manual DNS validation; `FILE`: file validation. 
+     * @return ValidType Validation type. `DNS_AUTO`: automatic DNS validation (only available for domains hosted in Tencent Cloud and when the DNS status is OK); `DNS`: manual DNS validation; `FILE`: file validation.
      */
     public String getValidType() {
         return this.ValidType;
     }
 
     /**
-     * Set Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file.
-     * @param ValidType Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file.
+     * Set Validation type. `DNS_AUTO`: automatic DNS validation (only available for domains hosted in Tencent Cloud and when the DNS status is OK); `DNS`: manual DNS validation; `FILE`: file validation.
+     * @param ValidType Validation type. `DNS_AUTO`: automatic DNS validation (only available for domains hosted in Tencent Cloud and when the DNS status is OK); `DNS`: manual DNS validation; `FILE`: file validation.
      */
     public void setValidType(String ValidType) {
         this.ValidType = ValidType;
@@ -138,6 +145,22 @@ public class ReplaceCertificateRequest extends AbstractModel{
     }
 
     /**
+     * Get Reissue reason 
+     * @return Reason Reissue reason
+     */
+    public String getReason() {
+        return this.Reason;
+    }
+
+    /**
+     * Set Reissue reason
+     * @param Reason Reissue reason
+     */
+    public void setReason(String Reason) {
+        this.Reason = Reason;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class ReplaceCertificateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CsrType", this.CsrType);
         this.setParamSimple(map, prefix + "CsrContent", this.CsrContent);
         this.setParamSimple(map, prefix + "CsrkeyPassword", this.CsrkeyPassword);
+        this.setParamSimple(map, prefix + "Reason", this.Reason);
 
     }
 }

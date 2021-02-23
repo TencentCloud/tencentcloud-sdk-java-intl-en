@@ -141,6 +141,14 @@ Note: This field may return null, indicating no valid value.
     private Long EniType;
 
     /**
+    * Type of the resource bound with an ENI. Valid values: cvm, eks.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Business")
+    @Expose
+    private String Business;
+
+    /**
      * Get The ID of the ENI instance, such as `eni-f1xjkw1b`. 
      * @return NetworkInterfaceId The ID of the ENI instance, such as `eni-f1xjkw1b`.
      */
@@ -421,6 +429,26 @@ Note: This field may return null, indicating no valid value.
     }
 
     /**
+     * Get Type of the resource bound with an ENI. Valid values: cvm, eks.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Business Type of the resource bound with an ENI. Valid values: cvm, eks.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getBusiness() {
+        return this.Business;
+    }
+
+    /**
+     * Set Type of the resource bound with an ENI. Valid values: cvm, eks.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Business Type of the resource bound with an ENI. Valid values: cvm, eks.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setBusiness(String Business) {
+        this.Business = Business;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -440,6 +468,7 @@ Note: This field may return null, indicating no valid value.
         this.setParamArrayObj(map, prefix + "Ipv6AddressSet.", this.Ipv6AddressSet);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "EniType", this.EniType);
+        this.setParamSimple(map, prefix + "Business", this.Business);
 
     }
 }

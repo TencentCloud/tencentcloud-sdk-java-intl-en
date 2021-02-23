@@ -93,6 +93,13 @@ public class DescribeSlowLogDataRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * This parameter is valid only for source or disaster recovery instances. Valid value: `slave`, which indicates pulling logs from the replica.
+    */
+    @SerializedName("InstType")
+    @Expose
+    private String InstType;
+
+    /**
      * Get Instance ID. 
      * @return InstanceId Instance ID.
      */
@@ -253,6 +260,22 @@ public class DescribeSlowLogDataRequest extends AbstractModel{
     }
 
     /**
+     * Get This parameter is valid only for source or disaster recovery instances. Valid value: `slave`, which indicates pulling logs from the replica. 
+     * @return InstType This parameter is valid only for source or disaster recovery instances. Valid value: `slave`, which indicates pulling logs from the replica.
+     */
+    public String getInstType() {
+        return this.InstType;
+    }
+
+    /**
+     * Set This parameter is valid only for source or disaster recovery instances. Valid value: `slave`, which indicates pulling logs from the replica.
+     * @param InstType This parameter is valid only for source or disaster recovery instances. Valid value: `slave`, which indicates pulling logs from the replica.
+     */
+    public void setInstType(String InstType) {
+        this.InstType = InstType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -266,6 +289,7 @@ public class DescribeSlowLogDataRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "InstType", this.InstType);
 
     }
 }

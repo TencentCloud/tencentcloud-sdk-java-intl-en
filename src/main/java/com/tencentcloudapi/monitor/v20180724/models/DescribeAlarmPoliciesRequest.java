@@ -135,6 +135,13 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
     private Long [] Enable;
 
     /**
+    * Indicates whether the notification rule is configured. 1: not configured; 0: configured
+    */
+    @SerializedName("NotBindingNoticeRule")
+    @Expose
+    private Long NotBindingNoticeRule;
+
+    /**
      * Get Value fixed at "monitor" 
      * @return Module Value fixed at "monitor"
      */
@@ -391,6 +398,22 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
     }
 
     /**
+     * Get Indicates whether the notification rule is configured. 1: not configured; 0: configured 
+     * @return NotBindingNoticeRule Indicates whether the notification rule is configured. 1: not configured; 0: configured
+     */
+    public Long getNotBindingNoticeRule() {
+        return this.NotBindingNoticeRule;
+    }
+
+    /**
+     * Set Indicates whether the notification rule is configured. 1: not configured; 0: configured
+     * @param NotBindingNoticeRule Indicates whether the notification rule is configured. 1: not configured; 0: configured
+     */
+    public void setNotBindingNoticeRule(Long NotBindingNoticeRule) {
+        this.NotBindingNoticeRule = NotBindingNoticeRule;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -410,6 +433,7 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "NoticeIds.", this.NoticeIds);
         this.setParamArraySimple(map, prefix + "RuleTypes.", this.RuleTypes);
         this.setParamArraySimple(map, prefix + "Enable.", this.Enable);
+        this.setParamSimple(map, prefix + "NotBindingNoticeRule", this.NotBindingNoticeRule);
 
     }
 }

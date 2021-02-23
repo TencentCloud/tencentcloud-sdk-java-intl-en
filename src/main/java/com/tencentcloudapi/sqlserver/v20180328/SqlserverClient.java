@@ -39,6 +39,26 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to clone and rename databases of an instance. The clones are still in the instance from which they are cloned.
+     * @param req CloneDBRequest
+     * @return CloneDBResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloneDBResponse CloneDB(CloneDBRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CloneDBResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CloneDBResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CloneDB");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create an instance account.
      * @param req CreateAccountRequest
      * @return CreateAccountResponse
@@ -571,6 +591,26 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceNameResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyDBInstanceName");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to switch a running instance from a VPC to another.
+     * @param req ModifyDBInstanceNetworkRequest
+     * @return ModifyDBInstanceNetworkResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceNetworkResponse ModifyDBInstanceNetwork(ModifyDBInstanceNetworkRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDBInstanceNetworkResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceNetworkResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDBInstanceNetwork");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -39,6 +39,26 @@ public class GseClient extends AbstractClient{
     }
 
     /**
+     *This API is used to replicate server fleet.
+     * @param req CopyFleetRequest
+     * @return CopyFleetResponse
+     * @throws TencentCloudSDKException
+     */
+    public CopyFleetResponse CopyFleet(CopyFleetRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CopyFleetResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CopyFleetResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CopyFleet");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a game server session.
      * @param req CreateGameServerSessionRequest
      * @return CreateGameServerSessionResponse
@@ -271,6 +291,46 @@ public class GseClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<StopGameServerSessionPlacementResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "StopGameServerSessionPlacement");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API (UpdateBucketAccelerateOpt) is used to enable COS global acceleration.
+     * @param req UpdateBucketAccelerateOptRequest
+     * @return UpdateBucketAccelerateOptResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateBucketAccelerateOptResponse UpdateBucketAccelerateOpt(UpdateBucketAccelerateOptRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateBucketAccelerateOptResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateBucketAccelerateOptResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateBucketAccelerateOpt");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API (UpdateBucketCORSOpt) is used to configure CORS for COS.
+     * @param req UpdateBucketCORSOptRequest
+     * @return UpdateBucketCORSOptResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateBucketCORSOptResponse UpdateBucketCORSOpt(UpdateBucketCORSOptRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateBucketCORSOptResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateBucketCORSOptResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateBucketCORSOpt");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

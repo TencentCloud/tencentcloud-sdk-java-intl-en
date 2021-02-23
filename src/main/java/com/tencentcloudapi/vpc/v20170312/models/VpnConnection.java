@@ -128,6 +128,34 @@ public class VpnConnection extends AbstractModel{
     private IPSECOptionsSpecification IPSECOptionsSpecification;
 
     /**
+    * Whether the health check is supported.
+    */
+    @SerializedName("EnableHealthCheck")
+    @Expose
+    private Boolean EnableHealthCheck;
+
+    /**
+    * Local IP address for the health check
+    */
+    @SerializedName("HealthCheckLocalIp")
+    @Expose
+    private String HealthCheckLocalIp;
+
+    /**
+    * Peer IP address for the health check
+    */
+    @SerializedName("HealthCheckRemoteIp")
+    @Expose
+    private String HealthCheckRemoteIp;
+
+    /**
+    * Tunnel health check status. Valid values: AVAILABLE: healthy; UNAVAILABLE: unhealthy. This parameter will be returned only after health check is enabled.
+    */
+    @SerializedName("HealthCheckStatus")
+    @Expose
+    private String HealthCheckStatus;
+
+    /**
      * Get Tunnel instance ID. 
      * @return VpnConnectionId Tunnel instance ID.
      */
@@ -368,6 +396,70 @@ public class VpnConnection extends AbstractModel{
     }
 
     /**
+     * Get Whether the health check is supported. 
+     * @return EnableHealthCheck Whether the health check is supported.
+     */
+    public Boolean getEnableHealthCheck() {
+        return this.EnableHealthCheck;
+    }
+
+    /**
+     * Set Whether the health check is supported.
+     * @param EnableHealthCheck Whether the health check is supported.
+     */
+    public void setEnableHealthCheck(Boolean EnableHealthCheck) {
+        this.EnableHealthCheck = EnableHealthCheck;
+    }
+
+    /**
+     * Get Local IP address for the health check 
+     * @return HealthCheckLocalIp Local IP address for the health check
+     */
+    public String getHealthCheckLocalIp() {
+        return this.HealthCheckLocalIp;
+    }
+
+    /**
+     * Set Local IP address for the health check
+     * @param HealthCheckLocalIp Local IP address for the health check
+     */
+    public void setHealthCheckLocalIp(String HealthCheckLocalIp) {
+        this.HealthCheckLocalIp = HealthCheckLocalIp;
+    }
+
+    /**
+     * Get Peer IP address for the health check 
+     * @return HealthCheckRemoteIp Peer IP address for the health check
+     */
+    public String getHealthCheckRemoteIp() {
+        return this.HealthCheckRemoteIp;
+    }
+
+    /**
+     * Set Peer IP address for the health check
+     * @param HealthCheckRemoteIp Peer IP address for the health check
+     */
+    public void setHealthCheckRemoteIp(String HealthCheckRemoteIp) {
+        this.HealthCheckRemoteIp = HealthCheckRemoteIp;
+    }
+
+    /**
+     * Get Tunnel health check status. Valid values: AVAILABLE: healthy; UNAVAILABLE: unhealthy. This parameter will be returned only after health check is enabled. 
+     * @return HealthCheckStatus Tunnel health check status. Valid values: AVAILABLE: healthy; UNAVAILABLE: unhealthy. This parameter will be returned only after health check is enabled.
+     */
+    public String getHealthCheckStatus() {
+        return this.HealthCheckStatus;
+    }
+
+    /**
+     * Set Tunnel health check status. Valid values: AVAILABLE: healthy; UNAVAILABLE: unhealthy. This parameter will be returned only after health check is enabled.
+     * @param HealthCheckStatus Tunnel health check status. Valid values: AVAILABLE: healthy; UNAVAILABLE: unhealthy. This parameter will be returned only after health check is enabled.
+     */
+    public void setHealthCheckStatus(String HealthCheckStatus) {
+        this.HealthCheckStatus = HealthCheckStatus;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -386,6 +478,10 @@ public class VpnConnection extends AbstractModel{
         this.setParamArrayObj(map, prefix + "SecurityPolicyDatabaseSet.", this.SecurityPolicyDatabaseSet);
         this.setParamObj(map, prefix + "IKEOptionsSpecification.", this.IKEOptionsSpecification);
         this.setParamObj(map, prefix + "IPSECOptionsSpecification.", this.IPSECOptionsSpecification);
+        this.setParamSimple(map, prefix + "EnableHealthCheck", this.EnableHealthCheck);
+        this.setParamSimple(map, prefix + "HealthCheckLocalIp", this.HealthCheckLocalIp);
+        this.setParamSimple(map, prefix + "HealthCheckRemoteIp", this.HealthCheckRemoteIp);
+        this.setParamSimple(map, prefix + "HealthCheckStatus", this.HealthCheckStatus);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class UploadCertificateRequest extends AbstractModel{
 
     /**
-    * Public key of the certificate.
+    * Certificate content
     */
     @SerializedName("CertificatePublicKey")
     @Expose
@@ -58,16 +58,23 @@ public class UploadCertificateRequest extends AbstractModel{
     private Long ProjectId;
 
     /**
-     * Get Public key of the certificate. 
-     * @return CertificatePublicKey Public key of the certificate.
+    * 
+    */
+    @SerializedName("CertificateUse")
+    @Expose
+    private String CertificateUse;
+
+    /**
+     * Get Certificate content 
+     * @return CertificatePublicKey Certificate content
      */
     public String getCertificatePublicKey() {
         return this.CertificatePublicKey;
     }
 
     /**
-     * Set Public key of the certificate.
-     * @param CertificatePublicKey Public key of the certificate.
+     * Set Certificate content
+     * @param CertificatePublicKey Certificate content
      */
     public void setCertificatePublicKey(String CertificatePublicKey) {
         this.CertificatePublicKey = CertificatePublicKey;
@@ -138,6 +145,22 @@ public class UploadCertificateRequest extends AbstractModel{
     }
 
     /**
+     * Get  
+     * @return CertificateUse 
+     */
+    public String getCertificateUse() {
+        return this.CertificateUse;
+    }
+
+    /**
+     * Set 
+     * @param CertificateUse 
+     */
+    public void setCertificateUse(String CertificateUse) {
+        this.CertificateUse = CertificateUse;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class UploadCertificateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CertificateType", this.CertificateType);
         this.setParamSimple(map, prefix + "Alias", this.Alias);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "CertificateUse", this.CertificateUse);
 
     }
 }

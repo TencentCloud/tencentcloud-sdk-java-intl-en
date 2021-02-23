@@ -91,6 +91,48 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     private String SubnetId;
 
     /**
+    * The list of instance private IPs, such as 172.1.0.12
+    */
+    @SerializedName("VipSet")
+    @Expose
+    private String [] VipSet;
+
+    /**
+    * The list of instance names used for fuzzy match
+    */
+    @SerializedName("InstanceNameSet")
+    @Expose
+    private String [] InstanceNameSet;
+
+    /**
+    * The list of instance version numbers, such as 2008R2, 2012SP3
+    */
+    @SerializedName("VersionSet")
+    @Expose
+    private String [] VersionSet;
+
+    /**
+    * Instance availability zone, such as ap-guangzhou-2
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
+    * The list of instance tags
+    */
+    @SerializedName("TagKeys")
+    @Expose
+    private String [] TagKeys;
+
+    /**
+    * Keyword used for fuzzy match, including instance ID, instance name, and instance private IP
+    */
+    @SerializedName("SearchKey")
+    @Expose
+    private String SearchKey;
+
+    /**
      * Get Project ID 
      * @return ProjectId Project ID
      */
@@ -267,6 +309,102 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get The list of instance private IPs, such as 172.1.0.12 
+     * @return VipSet The list of instance private IPs, such as 172.1.0.12
+     */
+    public String [] getVipSet() {
+        return this.VipSet;
+    }
+
+    /**
+     * Set The list of instance private IPs, such as 172.1.0.12
+     * @param VipSet The list of instance private IPs, such as 172.1.0.12
+     */
+    public void setVipSet(String [] VipSet) {
+        this.VipSet = VipSet;
+    }
+
+    /**
+     * Get The list of instance names used for fuzzy match 
+     * @return InstanceNameSet The list of instance names used for fuzzy match
+     */
+    public String [] getInstanceNameSet() {
+        return this.InstanceNameSet;
+    }
+
+    /**
+     * Set The list of instance names used for fuzzy match
+     * @param InstanceNameSet The list of instance names used for fuzzy match
+     */
+    public void setInstanceNameSet(String [] InstanceNameSet) {
+        this.InstanceNameSet = InstanceNameSet;
+    }
+
+    /**
+     * Get The list of instance version numbers, such as 2008R2, 2012SP3 
+     * @return VersionSet The list of instance version numbers, such as 2008R2, 2012SP3
+     */
+    public String [] getVersionSet() {
+        return this.VersionSet;
+    }
+
+    /**
+     * Set The list of instance version numbers, such as 2008R2, 2012SP3
+     * @param VersionSet The list of instance version numbers, such as 2008R2, 2012SP3
+     */
+    public void setVersionSet(String [] VersionSet) {
+        this.VersionSet = VersionSet;
+    }
+
+    /**
+     * Get Instance availability zone, such as ap-guangzhou-2 
+     * @return Zone Instance availability zone, such as ap-guangzhou-2
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set Instance availability zone, such as ap-guangzhou-2
+     * @param Zone Instance availability zone, such as ap-guangzhou-2
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
+    /**
+     * Get The list of instance tags 
+     * @return TagKeys The list of instance tags
+     */
+    public String [] getTagKeys() {
+        return this.TagKeys;
+    }
+
+    /**
+     * Set The list of instance tags
+     * @param TagKeys The list of instance tags
+     */
+    public void setTagKeys(String [] TagKeys) {
+        this.TagKeys = TagKeys;
+    }
+
+    /**
+     * Get Keyword used for fuzzy match, including instance ID, instance name, and instance private IP 
+     * @return SearchKey Keyword used for fuzzy match, including instance ID, instance name, and instance private IP
+     */
+    public String getSearchKey() {
+        return this.SearchKey;
+    }
+
+    /**
+     * Set Keyword used for fuzzy match, including instance ID, instance name, and instance private IP
+     * @param SearchKey Keyword used for fuzzy match, including instance ID, instance name, and instance private IP
+     */
+    public void setSearchKey(String SearchKey) {
+        this.SearchKey = SearchKey;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -278,6 +416,12 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamArraySimple(map, prefix + "VipSet.", this.VipSet);
+        this.setParamArraySimple(map, prefix + "InstanceNameSet.", this.InstanceNameSet);
+        this.setParamArraySimple(map, prefix + "VersionSet.", this.VersionSet);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
+        this.setParamSimple(map, prefix + "SearchKey", this.SearchKey);
 
     }
 }

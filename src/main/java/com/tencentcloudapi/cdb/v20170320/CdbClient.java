@@ -853,7 +853,7 @@ The new API (CreateBackup) can specify the table to be backed up when a logical 
     }
 
     /**
-     *This API (DescribeDatabases) is used to query the information of databases of a TencentDB instance.
+     *This API is used to query the information of databases in a TencentDB instance which must be a source or disaster recovery instance.
      * @param req DescribeDatabasesRequest
      * @return DescribeDatabasesResponse
      * @throws TencentCloudSDKException
@@ -1193,7 +1193,7 @@ The new API (CreateBackup) can specify the table to be backed up when a logical 
     }
 
     /**
-     *This API (DescribeTables) is used to query the database tables of a TencentDB instance.
+     *This API is used to query the information of database tables in a TencentDB instance. It only supports source or disaster recovery instances.
      * @param req DescribeTablesRequest
      * @return DescribeTablesResponse
      * @throws TencentCloudSDKException
@@ -1898,6 +1898,46 @@ Note:
                 Type type = new TypeToken<JsonResponseModel<StopRollbackResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "StopRollback");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used for source-to-replica switch.
+     * @param req SwitchDBInstanceMasterSlaveRequest
+     * @return SwitchDBInstanceMasterSlaveResponse
+     * @throws TencentCloudSDKException
+     */
+    public SwitchDBInstanceMasterSlaveResponse SwitchDBInstanceMasterSlave(SwitchDBInstanceMasterSlaveRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SwitchDBInstanceMasterSlaveResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SwitchDBInstanceMasterSlaveResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SwitchDBInstanceMasterSlave");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to promote a disaster recovery instance to source instance. The request parameter `Region` must be the region of the disaster recovery instance.
+     * @param req SwitchDrInstanceToMasterRequest
+     * @return SwitchDrInstanceToMasterResponse
+     * @throws TencentCloudSDKException
+     */
+    public SwitchDrInstanceToMasterResponse SwitchDrInstanceToMaster(SwitchDrInstanceToMasterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SwitchDrInstanceToMasterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SwitchDrInstanceToMasterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SwitchDrInstanceToMaster");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

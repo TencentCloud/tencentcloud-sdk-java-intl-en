@@ -93,6 +93,13 @@ public class FlowLog extends AbstractModel{
     private String CreatedTime;
 
     /**
+    * Tag list, such as [{"Key": "city", "Value": "shanghai"}]
+    */
+    @SerializedName("TagSet")
+    @Expose
+    private Tag [] TagSet;
+
+    /**
      * Get ID of the VPC instance 
      * @return VpcId ID of the VPC instance
      */
@@ -253,6 +260,22 @@ public class FlowLog extends AbstractModel{
     }
 
     /**
+     * Get Tag list, such as [{"Key": "city", "Value": "shanghai"}] 
+     * @return TagSet Tag list, such as [{"Key": "city", "Value": "shanghai"}]
+     */
+    public Tag [] getTagSet() {
+        return this.TagSet;
+    }
+
+    /**
+     * Set Tag list, such as [{"Key": "city", "Value": "shanghai"}]
+     * @param TagSet Tag list, such as [{"Key": "city", "Value": "shanghai"}]
+     */
+    public void setTagSet(Tag [] TagSet) {
+        this.TagSet = TagSet;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -266,6 +289,7 @@ public class FlowLog extends AbstractModel{
         this.setParamSimple(map, prefix + "CloudLogState", this.CloudLogState);
         this.setParamSimple(map, prefix + "FlowLogDescription", this.FlowLogDescription);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
 
     }
 }

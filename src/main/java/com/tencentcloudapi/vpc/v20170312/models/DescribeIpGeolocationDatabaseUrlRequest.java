@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeIpGeolocationDatabaseUrlRequest extends AbstractModel{
 
     /**
-    * Protocol type of the IP location database. Valid values: `ipv4` and `ipv6`.
+    * Protocol type for an IP location database. Valid value: `ipv4`.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get Protocol type of the IP location database. Valid values: `ipv4` and `ipv6`. 
-     * @return Type Protocol type of the IP location database. Valid values: `ipv4` and `ipv6`.
+     * Get Protocol type for an IP location database. Valid value: `ipv4`. 
+     * @return Type Protocol type for an IP location database. Valid value: `ipv4`.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Protocol type of the IP location database. Valid values: `ipv4` and `ipv6`.
-     * @param Type Protocol type of the IP location database. Valid values: `ipv4` and `ipv6`.
+     * Set Protocol type for an IP location database. Valid value: `ipv4`.
+     * @param Type Protocol type for an IP location database. Valid value: `ipv4`.
      */
     public void setType(String Type) {
         this.Type = Type;
