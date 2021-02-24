@@ -23,35 +23,35 @@ import java.util.HashMap;
 public class ReplaceCertificateRequest extends AbstractModel{
 
     /**
-    * Certificate ID.
+    * Certificate ID
     */
     @SerializedName("CertificateId")
     @Expose
     private String CertificateId;
 
     /**
-    * Validation type. `DNS_AUTO`: automatic DNS validation (only available for domains hosted in Tencent Cloud and when the DNS status is OK); `DNS`: manual DNS validation; `FILE`: file validation.
+    * Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
     */
     @SerializedName("ValidType")
     @Expose
     private String ValidType;
 
     /**
-    * Type. Original: original certificate CSR; upload: uploaded manually; online: generated online. The default value is original.
+    * Type. `original`: original certificate CSR; `upload`: uploaded manually; `online`: generated online. The default value is original.
     */
     @SerializedName("CsrType")
     @Expose
     private String CsrType;
 
     /**
-    * CSR content.
+    * CSR content
     */
     @SerializedName("CsrContent")
     @Expose
     private String CsrContent;
 
     /**
-    * Password of the key.
+    * Password of the key
     */
     @SerializedName("CsrkeyPassword")
     @Expose
@@ -65,80 +65,80 @@ public class ReplaceCertificateRequest extends AbstractModel{
     private String Reason;
 
     /**
-     * Get Certificate ID. 
-     * @return CertificateId Certificate ID.
+     * Get Certificate ID 
+     * @return CertificateId Certificate ID
      */
     public String getCertificateId() {
         return this.CertificateId;
     }
 
     /**
-     * Set Certificate ID.
-     * @param CertificateId Certificate ID.
+     * Set Certificate ID
+     * @param CertificateId Certificate ID
      */
     public void setCertificateId(String CertificateId) {
         this.CertificateId = CertificateId;
     }
 
     /**
-     * Get Validation type. `DNS_AUTO`: automatic DNS validation (only available for domains hosted in Tencent Cloud and when the DNS status is OK); `DNS`: manual DNS validation; `FILE`: file validation. 
-     * @return ValidType Validation type. `DNS_AUTO`: automatic DNS validation (only available for domains hosted in Tencent Cloud and when the DNS status is OK); `DNS`: manual DNS validation; `FILE`: file validation.
+     * Get Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation 
+     * @return ValidType Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
      */
     public String getValidType() {
         return this.ValidType;
     }
 
     /**
-     * Set Validation type. `DNS_AUTO`: automatic DNS validation (only available for domains hosted in Tencent Cloud and when the DNS status is OK); `DNS`: manual DNS validation; `FILE`: file validation.
-     * @param ValidType Validation type. `DNS_AUTO`: automatic DNS validation (only available for domains hosted in Tencent Cloud and when the DNS status is OK); `DNS`: manual DNS validation; `FILE`: file validation.
+     * Set Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
+     * @param ValidType Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
      */
     public void setValidType(String ValidType) {
         this.ValidType = ValidType;
     }
 
     /**
-     * Get Type. Original: original certificate CSR; upload: uploaded manually; online: generated online. The default value is original. 
-     * @return CsrType Type. Original: original certificate CSR; upload: uploaded manually; online: generated online. The default value is original.
+     * Get Type. `original`: original certificate CSR; `upload`: uploaded manually; `online`: generated online. The default value is original. 
+     * @return CsrType Type. `original`: original certificate CSR; `upload`: uploaded manually; `online`: generated online. The default value is original.
      */
     public String getCsrType() {
         return this.CsrType;
     }
 
     /**
-     * Set Type. Original: original certificate CSR; upload: uploaded manually; online: generated online. The default value is original.
-     * @param CsrType Type. Original: original certificate CSR; upload: uploaded manually; online: generated online. The default value is original.
+     * Set Type. `original`: original certificate CSR; `upload`: uploaded manually; `online`: generated online. The default value is original.
+     * @param CsrType Type. `original`: original certificate CSR; `upload`: uploaded manually; `online`: generated online. The default value is original.
      */
     public void setCsrType(String CsrType) {
         this.CsrType = CsrType;
     }
 
     /**
-     * Get CSR content. 
-     * @return CsrContent CSR content.
+     * Get CSR content 
+     * @return CsrContent CSR content
      */
     public String getCsrContent() {
         return this.CsrContent;
     }
 
     /**
-     * Set CSR content.
-     * @param CsrContent CSR content.
+     * Set CSR content
+     * @param CsrContent CSR content
      */
     public void setCsrContent(String CsrContent) {
         this.CsrContent = CsrContent;
     }
 
     /**
-     * Get Password of the key. 
-     * @return CsrkeyPassword Password of the key.
+     * Get Password of the key 
+     * @return CsrkeyPassword Password of the key
      */
     public String getCsrkeyPassword() {
         return this.CsrkeyPassword;
     }
 
     /**
-     * Set Password of the key.
-     * @param CsrkeyPassword Password of the key.
+     * Set Password of the key
+     * @param CsrkeyPassword Password of the key
      */
     public void setCsrkeyPassword(String CsrkeyPassword) {
         this.CsrkeyPassword = CsrkeyPassword;

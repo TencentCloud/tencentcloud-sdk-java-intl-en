@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyCertificateAliasResponse extends AbstractModel{
 
     /**
-    * ID of the successfully modified certificate.
+    * ID of the successfully modified certificate
     */
     @SerializedName("CertificateId")
     @Expose
@@ -37,16 +37,16 @@ public class ModifyCertificateAliasResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get ID of the successfully modified certificate. 
-     * @return CertificateId ID of the successfully modified certificate.
+     * Get ID of the successfully modified certificate 
+     * @return CertificateId ID of the successfully modified certificate
      */
     public String getCertificateId() {
         return this.CertificateId;
     }
 
     /**
-     * Set ID of the successfully modified certificate.
-     * @param CertificateId ID of the successfully modified certificate.
+     * Set ID of the successfully modified certificate
+     * @param CertificateId ID of the successfully modified certificate
      */
     public void setCertificateId(String CertificateId) {
         this.CertificateId = CertificateId;

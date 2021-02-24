@@ -31,7 +31,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Content;
 
     /**
-    * MIME type. application/zip: ZIP file.
+    * MIME type. `application/zip`: ZIP file
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ContentType")
@@ -66,9 +66,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get MIME type. application/zip: ZIP file.
+     * Get MIME type. `application/zip`: ZIP file
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ContentType MIME type. application/zip: ZIP file.
+     * @return ContentType MIME type. `application/zip`: ZIP file
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getContentType() {
@@ -76,9 +76,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set MIME type. application/zip: ZIP file.
+     * Set MIME type. `application/zip`: ZIP file
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ContentType MIME type. application/zip: ZIP file.
+     * @param ContentType MIME type. `application/zip`: ZIP file
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setContentType(String ContentType) {

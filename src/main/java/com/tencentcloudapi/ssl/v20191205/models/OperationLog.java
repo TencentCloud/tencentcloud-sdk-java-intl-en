@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class OperationLog extends AbstractModel{
 
     /**
-    * Action performed on logs.
+    * Action performed on logs
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * Time when the action is performed.
+    * Time when the action is performed
     */
     @SerializedName("CreatedOn")
     @Expose
     private String CreatedOn;
 
     /**
-     * Get Action performed on logs. 
-     * @return Action Action performed on logs.
+     * Get Action performed on logs 
+     * @return Action Action performed on logs
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set Action performed on logs.
-     * @param Action Action performed on logs.
+     * Set Action performed on logs
+     * @param Action Action performed on logs
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get Time when the action is performed. 
-     * @return CreatedOn Time when the action is performed.
+     * Get Time when the action is performed 
+     * @return CreatedOn Time when the action is performed
      */
     public String getCreatedOn() {
         return this.CreatedOn;
     }
 
     /**
-     * Set Time when the action is performed.
-     * @param CreatedOn Time when the action is performed.
+     * Set Time when the action is performed
+     * @param CreatedOn Time when the action is performed
      */
     public void setCreatedOn(String CreatedOn) {
         this.CreatedOn = CreatedOn;

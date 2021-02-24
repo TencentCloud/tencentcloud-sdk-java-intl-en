@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CertificateExtra extends AbstractModel{
 
     /**
-    * Number of domain names which can be associated with the certificate.
+    * Number of domain names which can be associated with the certificate
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DomainNumber")
@@ -31,7 +31,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String DomainNumber;
 
     /**
-    * Original certificate ID.
+    * Original certificate ID
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OriginCertificateId")
@@ -39,7 +39,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String OriginCertificateId;
 
     /**
-    * Original ID of the new certificate.
+    * Original ID of the new certificate
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ReplacedBy")
@@ -47,7 +47,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ReplacedBy;
 
     /**
-    * New ID of the new certificate.
+    * New ID of the new certificate
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ReplacedFor")
@@ -55,7 +55,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ReplacedFor;
 
     /**
-    * Certificate ID of the new order.
+    * Certificate ID of the new order
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RenewOrder")
@@ -63,9 +63,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RenewOrder;
 
     /**
-     * Get Number of domain names which can be associated with the certificate.
+     * Get Number of domain names which can be associated with the certificate
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DomainNumber Number of domain names which can be associated with the certificate.
+     * @return DomainNumber Number of domain names which can be associated with the certificate
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getDomainNumber() {
@@ -73,9 +73,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Number of domain names which can be associated with the certificate.
+     * Set Number of domain names which can be associated with the certificate
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DomainNumber Number of domain names which can be associated with the certificate.
+     * @param DomainNumber Number of domain names which can be associated with the certificate
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDomainNumber(String DomainNumber) {
@@ -83,9 +83,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Original certificate ID.
+     * Get Original certificate ID
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return OriginCertificateId Original certificate ID.
+     * @return OriginCertificateId Original certificate ID
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getOriginCertificateId() {
@@ -93,9 +93,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Original certificate ID.
+     * Set Original certificate ID
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param OriginCertificateId Original certificate ID.
+     * @param OriginCertificateId Original certificate ID
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setOriginCertificateId(String OriginCertificateId) {
@@ -103,9 +103,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Original ID of the new certificate.
+     * Get Original ID of the new certificate
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ReplacedBy Original ID of the new certificate.
+     * @return ReplacedBy Original ID of the new certificate
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getReplacedBy() {
@@ -113,9 +113,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Original ID of the new certificate.
+     * Set Original ID of the new certificate
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ReplacedBy Original ID of the new certificate.
+     * @param ReplacedBy Original ID of the new certificate
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setReplacedBy(String ReplacedBy) {
@@ -123,9 +123,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get New ID of the new certificate.
+     * Get New ID of the new certificate
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ReplacedFor New ID of the new certificate.
+     * @return ReplacedFor New ID of the new certificate
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getReplacedFor() {
@@ -133,9 +133,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set New ID of the new certificate.
+     * Set New ID of the new certificate
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ReplacedFor New ID of the new certificate.
+     * @param ReplacedFor New ID of the new certificate
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setReplacedFor(String ReplacedFor) {
@@ -143,9 +143,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Certificate ID of the new order.
+     * Get Certificate ID of the new order
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RenewOrder Certificate ID of the new order.
+     * @return RenewOrder Certificate ID of the new order
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getRenewOrder() {
@@ -153,9 +153,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Certificate ID of the new order.
+     * Set Certificate ID of the new order
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RenewOrder Certificate ID of the new order.
+     * @param RenewOrder Certificate ID of the new order
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setRenewOrder(String RenewOrder) {

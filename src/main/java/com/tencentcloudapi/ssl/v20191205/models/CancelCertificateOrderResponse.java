@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CancelCertificateOrderResponse extends AbstractModel{
 
     /**
-    * ID of the certificate whose order has been successfully cancelled.
+    * ID of the certificate whose order has been successfully cancelled
     */
     @SerializedName("CertificateId")
     @Expose
@@ -37,16 +37,16 @@ public class CancelCertificateOrderResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get ID of the certificate whose order has been successfully cancelled. 
-     * @return CertificateId ID of the certificate whose order has been successfully cancelled.
+     * Get ID of the certificate whose order has been successfully cancelled 
+     * @return CertificateId ID of the certificate whose order has been successfully cancelled
      */
     public String getCertificateId() {
         return this.CertificateId;
     }
 
     /**
-     * Set ID of the certificate whose order has been successfully cancelled.
-     * @param CertificateId ID of the certificate whose order has been successfully cancelled.
+     * Set ID of the certificate whose order has been successfully cancelled
+     * @param CertificateId ID of the certificate whose order has been successfully cancelled
      */
     public void setCertificateId(String CertificateId) {
         this.CertificateId = CertificateId;

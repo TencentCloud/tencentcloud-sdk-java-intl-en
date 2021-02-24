@@ -403,6 +403,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String [] Zones;
 
     /**
+    * Whether it is an NFV CLB instance. No returned information: no; l7nfv: yes.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("NfvInfo")
+    @Expose
+    private String NfvInfo;
+
+    /**
      * Get CLB instance ID. 
      * @return LoadBalancerId CLB instance ID.
      */
@@ -1347,6 +1355,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
+     * Get Whether it is an NFV CLB instance. No returned information: no; l7nfv: yes.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return NfvInfo Whether it is an NFV CLB instance. No returned information: no; l7nfv: yes.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getNfvInfo() {
+        return this.NfvInfo;
+    }
+
+    /**
+     * Set Whether it is an NFV CLB instance. No returned information: no; l7nfv: yes.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param NfvInfo Whether it is an NFV CLB instance. No returned information: no; l7nfv: yes.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setNfvInfo(String NfvInfo) {
+        this.NfvInfo = NfvInfo;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1398,6 +1426,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "ClusterTag", this.ClusterTag);
         this.setParamSimple(map, prefix + "MixIpTarget", this.MixIpTarget);
         this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
+        this.setParamSimple(map, prefix + "NfvInfo", this.NfvInfo);
 
     }
 }

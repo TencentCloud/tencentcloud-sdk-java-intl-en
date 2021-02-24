@@ -37,6 +37,27 @@ public class RewriteLocationMap extends AbstractModel{
     private String TargetLocationId;
 
     /**
+    * Redirection status code. Valid values: 301, 302, and 307.
+    */
+    @SerializedName("RewriteCode")
+    @Expose
+    private Long RewriteCode;
+
+    /**
+    * Whether the matched URL is carried in redirection. It is required when configuring `RewriteCode`.
+    */
+    @SerializedName("TakeUrl")
+    @Expose
+    private Boolean TakeUrl;
+
+    /**
+    * Original domain name of redirection, which must be the corresponding domain name of `SourceLocationId`. It is required when configuring `RewriteCode`.
+    */
+    @SerializedName("SourceDomain")
+    @Expose
+    private String SourceDomain;
+
+    /**
      * Get Source forwarding rule ID 
      * @return SourceLocationId Source forwarding rule ID
      */
@@ -69,11 +90,62 @@ public class RewriteLocationMap extends AbstractModel{
     }
 
     /**
+     * Get Redirection status code. Valid values: 301, 302, and 307. 
+     * @return RewriteCode Redirection status code. Valid values: 301, 302, and 307.
+     */
+    public Long getRewriteCode() {
+        return this.RewriteCode;
+    }
+
+    /**
+     * Set Redirection status code. Valid values: 301, 302, and 307.
+     * @param RewriteCode Redirection status code. Valid values: 301, 302, and 307.
+     */
+    public void setRewriteCode(Long RewriteCode) {
+        this.RewriteCode = RewriteCode;
+    }
+
+    /**
+     * Get Whether the matched URL is carried in redirection. It is required when configuring `RewriteCode`. 
+     * @return TakeUrl Whether the matched URL is carried in redirection. It is required when configuring `RewriteCode`.
+     */
+    public Boolean getTakeUrl() {
+        return this.TakeUrl;
+    }
+
+    /**
+     * Set Whether the matched URL is carried in redirection. It is required when configuring `RewriteCode`.
+     * @param TakeUrl Whether the matched URL is carried in redirection. It is required when configuring `RewriteCode`.
+     */
+    public void setTakeUrl(Boolean TakeUrl) {
+        this.TakeUrl = TakeUrl;
+    }
+
+    /**
+     * Get Original domain name of redirection, which must be the corresponding domain name of `SourceLocationId`. It is required when configuring `RewriteCode`. 
+     * @return SourceDomain Original domain name of redirection, which must be the corresponding domain name of `SourceLocationId`. It is required when configuring `RewriteCode`.
+     */
+    public String getSourceDomain() {
+        return this.SourceDomain;
+    }
+
+    /**
+     * Set Original domain name of redirection, which must be the corresponding domain name of `SourceLocationId`. It is required when configuring `RewriteCode`.
+     * @param SourceDomain Original domain name of redirection, which must be the corresponding domain name of `SourceLocationId`. It is required when configuring `RewriteCode`.
+     */
+    public void setSourceDomain(String SourceDomain) {
+        this.SourceDomain = SourceDomain;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SourceLocationId", this.SourceLocationId);
         this.setParamSimple(map, prefix + "TargetLocationId", this.TargetLocationId);
+        this.setParamSimple(map, prefix + "RewriteCode", this.RewriteCode);
+        this.setParamSimple(map, prefix + "TakeUrl", this.TakeUrl);
+        this.setParamSimple(map, prefix + "SourceDomain", this.SourceDomain);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeCertificatesRequest extends AbstractModel{
 
     /**
-    * Pagination offset, starting from 0.
+    * Pagination offset, starting from 0
     */
     @SerializedName("Offset")
     @Expose
@@ -37,58 +37,58 @@ public class DescribeCertificatesRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * Keyword for search, which can be a certificate ID, alias, or domain name. For example, a8xHcaIs.
+    * Keyword for search, which can be a certificate ID, alias, or domain name, for example, a8xHcaIs
     */
     @SerializedName("SearchKey")
     @Expose
     private String SearchKey;
 
     /**
-    * Certificate type. CA: client certificate; SVR: server certificate.
+    * Certificate type. `CA`: client certificate; `SVR`: server certificate
     */
     @SerializedName("CertificateType")
     @Expose
     private String CertificateType;
 
     /**
-    * Project ID.
+    * Project ID
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * Sorting by expiration time. DESC: descending; ASC: ascending.
+    * Sorting by expiration time. `DESC`: descending; `ASC`: ascending
     */
     @SerializedName("ExpirationSort")
     @Expose
     private String ExpirationSort;
 
     /**
-    * Certificate status.
+    * Certificate status
     */
     @SerializedName("CertificateStatus")
     @Expose
     private Long [] CertificateStatus;
 
     /**
-    * Whether the certificate can be deployed. 1: yes; 0: no.
+    * Whether the certificate can be deployed. `1`: yes; `0`: no
     */
     @SerializedName("Deployable")
     @Expose
     private Long Deployable;
 
     /**
-     * Get Pagination offset, starting from 0. 
-     * @return Offset Pagination offset, starting from 0.
+     * Get Pagination offset, starting from 0 
+     * @return Offset Pagination offset, starting from 0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Pagination offset, starting from 0.
-     * @param Offset Pagination offset, starting from 0.
+     * Set Pagination offset, starting from 0
+     * @param Offset Pagination offset, starting from 0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -111,96 +111,96 @@ public class DescribeCertificatesRequest extends AbstractModel{
     }
 
     /**
-     * Get Keyword for search, which can be a certificate ID, alias, or domain name. For example, a8xHcaIs. 
-     * @return SearchKey Keyword for search, which can be a certificate ID, alias, or domain name. For example, a8xHcaIs.
+     * Get Keyword for search, which can be a certificate ID, alias, or domain name, for example, a8xHcaIs 
+     * @return SearchKey Keyword for search, which can be a certificate ID, alias, or domain name, for example, a8xHcaIs
      */
     public String getSearchKey() {
         return this.SearchKey;
     }
 
     /**
-     * Set Keyword for search, which can be a certificate ID, alias, or domain name. For example, a8xHcaIs.
-     * @param SearchKey Keyword for search, which can be a certificate ID, alias, or domain name. For example, a8xHcaIs.
+     * Set Keyword for search, which can be a certificate ID, alias, or domain name, for example, a8xHcaIs
+     * @param SearchKey Keyword for search, which can be a certificate ID, alias, or domain name, for example, a8xHcaIs
      */
     public void setSearchKey(String SearchKey) {
         this.SearchKey = SearchKey;
     }
 
     /**
-     * Get Certificate type. CA: client certificate; SVR: server certificate. 
-     * @return CertificateType Certificate type. CA: client certificate; SVR: server certificate.
+     * Get Certificate type. `CA`: client certificate; `SVR`: server certificate 
+     * @return CertificateType Certificate type. `CA`: client certificate; `SVR`: server certificate
      */
     public String getCertificateType() {
         return this.CertificateType;
     }
 
     /**
-     * Set Certificate type. CA: client certificate; SVR: server certificate.
-     * @param CertificateType Certificate type. CA: client certificate; SVR: server certificate.
+     * Set Certificate type. `CA`: client certificate; `SVR`: server certificate
+     * @param CertificateType Certificate type. `CA`: client certificate; `SVR`: server certificate
      */
     public void setCertificateType(String CertificateType) {
         this.CertificateType = CertificateType;
     }
 
     /**
-     * Get Project ID. 
-     * @return ProjectId Project ID.
+     * Get Project ID 
+     * @return ProjectId Project ID
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID.
-     * @param ProjectId Project ID.
+     * Set Project ID
+     * @param ProjectId Project ID
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get Sorting by expiration time. DESC: descending; ASC: ascending. 
-     * @return ExpirationSort Sorting by expiration time. DESC: descending; ASC: ascending.
+     * Get Sorting by expiration time. `DESC`: descending; `ASC`: ascending 
+     * @return ExpirationSort Sorting by expiration time. `DESC`: descending; `ASC`: ascending
      */
     public String getExpirationSort() {
         return this.ExpirationSort;
     }
 
     /**
-     * Set Sorting by expiration time. DESC: descending; ASC: ascending.
-     * @param ExpirationSort Sorting by expiration time. DESC: descending; ASC: ascending.
+     * Set Sorting by expiration time. `DESC`: descending; `ASC`: ascending
+     * @param ExpirationSort Sorting by expiration time. `DESC`: descending; `ASC`: ascending
      */
     public void setExpirationSort(String ExpirationSort) {
         this.ExpirationSort = ExpirationSort;
     }
 
     /**
-     * Get Certificate status. 
-     * @return CertificateStatus Certificate status.
+     * Get Certificate status 
+     * @return CertificateStatus Certificate status
      */
     public Long [] getCertificateStatus() {
         return this.CertificateStatus;
     }
 
     /**
-     * Set Certificate status.
-     * @param CertificateStatus Certificate status.
+     * Set Certificate status
+     * @param CertificateStatus Certificate status
      */
     public void setCertificateStatus(Long [] CertificateStatus) {
         this.CertificateStatus = CertificateStatus;
     }
 
     /**
-     * Get Whether the certificate can be deployed. 1: yes; 0: no. 
-     * @return Deployable Whether the certificate can be deployed. 1: yes; 0: no.
+     * Get Whether the certificate can be deployed. `1`: yes; `0`: no 
+     * @return Deployable Whether the certificate can be deployed. `1`: yes; `0`: no
      */
     public Long getDeployable() {
         return this.Deployable;
     }
 
     /**
-     * Set Whether the certificate can be deployed. 1: yes; 0: no.
-     * @param Deployable Whether the certificate can be deployed. 1: yes; 0: no.
+     * Set Whether the certificate can be deployed. `1`: yes; `0`: no
+     * @param Deployable Whether the certificate can be deployed. `1`: yes; `0`: no
      */
     public void setDeployable(Long Deployable) {
         this.Deployable = Deployable;

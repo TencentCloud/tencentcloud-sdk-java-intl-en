@@ -44,6 +44,20 @@ public class AutoRewriteRequest extends AbstractModel{
     private String [] Domains;
 
     /**
+    * Redirection status code. Valid values: 301, 302, and 307.
+    */
+    @SerializedName("RewriteCodes")
+    @Expose
+    private Long [] RewriteCodes;
+
+    /**
+    * Whether the matched URL is carried in redirection.
+    */
+    @SerializedName("TakeUrls")
+    @Expose
+    private Boolean [] TakeUrls;
+
+    /**
      * Get CLB instance ID 
      * @return LoadBalancerId CLB instance ID
      */
@@ -92,12 +106,46 @@ public class AutoRewriteRequest extends AbstractModel{
     }
 
     /**
+     * Get Redirection status code. Valid values: 301, 302, and 307. 
+     * @return RewriteCodes Redirection status code. Valid values: 301, 302, and 307.
+     */
+    public Long [] getRewriteCodes() {
+        return this.RewriteCodes;
+    }
+
+    /**
+     * Set Redirection status code. Valid values: 301, 302, and 307.
+     * @param RewriteCodes Redirection status code. Valid values: 301, 302, and 307.
+     */
+    public void setRewriteCodes(Long [] RewriteCodes) {
+        this.RewriteCodes = RewriteCodes;
+    }
+
+    /**
+     * Get Whether the matched URL is carried in redirection. 
+     * @return TakeUrls Whether the matched URL is carried in redirection.
+     */
+    public Boolean [] getTakeUrls() {
+        return this.TakeUrls;
+    }
+
+    /**
+     * Set Whether the matched URL is carried in redirection.
+     * @param TakeUrls Whether the matched URL is carried in redirection.
+     */
+    public void setTakeUrls(Boolean [] TakeUrls) {
+        this.TakeUrls = TakeUrls;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);
         this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
+        this.setParamArraySimple(map, prefix + "RewriteCodes.", this.RewriteCodes);
+        this.setParamArraySimple(map, prefix + "TakeUrls.", this.TakeUrls);
 
     }
 }

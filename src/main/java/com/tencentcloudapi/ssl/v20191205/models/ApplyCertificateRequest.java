@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class ApplyCertificateRequest extends AbstractModel{
 
     /**
-    * Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file.
+    * Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
     */
     @SerializedName("DvAuthMethod")
     @Expose
     private String DvAuthMethod;
 
     /**
-    * Domain name.
+    * Domain name
     */
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
 
     /**
-    * Project ID.
+    * Project ID
     */
     @SerializedName("ProjectId")
     @Expose
@@ -51,14 +51,14 @@ public class ApplyCertificateRequest extends AbstractModel{
     private String PackageType;
 
     /**
-    * Email address.
+    * Email address
     */
     @SerializedName("ContactEmail")
     @Expose
     private String ContactEmail;
 
     /**
-    * Mobile number.
+    * Mobile number
     */
     @SerializedName("ContactPhone")
     @Expose
@@ -86,14 +86,14 @@ public class ApplyCertificateRequest extends AbstractModel{
     private String CsrKeyParameter;
 
     /**
-    * CSR encryption password.
+    * CSR encryption password
     */
     @SerializedName("CsrKeyPassword")
     @Expose
     private String CsrKeyPassword;
 
     /**
-    * Alias.
+    * Alias
     */
     @SerializedName("Alias")
     @Expose
@@ -107,48 +107,48 @@ public class ApplyCertificateRequest extends AbstractModel{
     private String OldCertificateId;
 
     /**
-     * Get Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file. 
-     * @return DvAuthMethod Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file.
+     * Get Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation 
+     * @return DvAuthMethod Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
      */
     public String getDvAuthMethod() {
         return this.DvAuthMethod;
     }
 
     /**
-     * Set Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file.
-     * @param DvAuthMethod Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file.
+     * Set Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
+     * @param DvAuthMethod Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
      */
     public void setDvAuthMethod(String DvAuthMethod) {
         this.DvAuthMethod = DvAuthMethod;
     }
 
     /**
-     * Get Domain name. 
-     * @return DomainName Domain name.
+     * Get Domain name 
+     * @return DomainName Domain name
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * Set Domain name.
-     * @param DomainName Domain name.
+     * Set Domain name
+     * @param DomainName Domain name
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
     }
 
     /**
-     * Get Project ID. 
-     * @return ProjectId Project ID.
+     * Get Project ID 
+     * @return ProjectId Project ID
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID.
-     * @param ProjectId Project ID.
+     * Set Project ID
+     * @param ProjectId Project ID
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
@@ -171,32 +171,32 @@ public class ApplyCertificateRequest extends AbstractModel{
     }
 
     /**
-     * Get Email address. 
-     * @return ContactEmail Email address.
+     * Get Email address 
+     * @return ContactEmail Email address
      */
     public String getContactEmail() {
         return this.ContactEmail;
     }
 
     /**
-     * Set Email address.
-     * @param ContactEmail Email address.
+     * Set Email address
+     * @param ContactEmail Email address
      */
     public void setContactEmail(String ContactEmail) {
         this.ContactEmail = ContactEmail;
     }
 
     /**
-     * Get Mobile number. 
-     * @return ContactPhone Mobile number.
+     * Get Mobile number 
+     * @return ContactPhone Mobile number
      */
     public String getContactPhone() {
         return this.ContactPhone;
     }
 
     /**
-     * Set Mobile number.
-     * @param ContactPhone Mobile number.
+     * Set Mobile number
+     * @param ContactPhone Mobile number
      */
     public void setContactPhone(String ContactPhone) {
         this.ContactPhone = ContactPhone;
@@ -251,32 +251,32 @@ public class ApplyCertificateRequest extends AbstractModel{
     }
 
     /**
-     * Get CSR encryption password. 
-     * @return CsrKeyPassword CSR encryption password.
+     * Get CSR encryption password 
+     * @return CsrKeyPassword CSR encryption password
      */
     public String getCsrKeyPassword() {
         return this.CsrKeyPassword;
     }
 
     /**
-     * Set CSR encryption password.
-     * @param CsrKeyPassword CSR encryption password.
+     * Set CSR encryption password
+     * @param CsrKeyPassword CSR encryption password
      */
     public void setCsrKeyPassword(String CsrKeyPassword) {
         this.CsrKeyPassword = CsrKeyPassword;
     }
 
     /**
-     * Get Alias. 
-     * @return Alias Alias.
+     * Get Alias 
+     * @return Alias Alias
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * Set Alias.
-     * @param Alias Alias.
+     * Set Alias
+     * @param Alias Alias
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;

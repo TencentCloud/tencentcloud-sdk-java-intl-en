@@ -140,12 +140,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String SessionType;
 
     /**
-    * Whether a persistent connection is enabled (This parameter can only be configured in HTTP/HTTPS listeners)
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Whether a persistent connection is enabled (1: enabled; 0: disabled). This parameter can only be configured in HTTP/HTTPS listeners.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("KeepaliveEnable")
     @Expose
     private Long KeepaliveEnable;
+
+    /**
+    * Only the NAT64 CLB TCP listeners are supported.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Toa")
+    @Expose
+    private Boolean Toa;
 
     /**
      * Get CLB listener ID 
@@ -436,23 +444,43 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether a persistent connection is enabled (This parameter can only be configured in HTTP/HTTPS listeners)
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return KeepaliveEnable Whether a persistent connection is enabled (This parameter can only be configured in HTTP/HTTPS listeners)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Whether a persistent connection is enabled (1: enabled; 0: disabled). This parameter can only be configured in HTTP/HTTPS listeners.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return KeepaliveEnable Whether a persistent connection is enabled (1: enabled; 0: disabled). This parameter can only be configured in HTTP/HTTPS listeners.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getKeepaliveEnable() {
         return this.KeepaliveEnable;
     }
 
     /**
-     * Set Whether a persistent connection is enabled (This parameter can only be configured in HTTP/HTTPS listeners)
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param KeepaliveEnable Whether a persistent connection is enabled (This parameter can only be configured in HTTP/HTTPS listeners)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Whether a persistent connection is enabled (1: enabled; 0: disabled). This parameter can only be configured in HTTP/HTTPS listeners.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param KeepaliveEnable Whether a persistent connection is enabled (1: enabled; 0: disabled). This parameter can only be configured in HTTP/HTTPS listeners.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setKeepaliveEnable(Long KeepaliveEnable) {
         this.KeepaliveEnable = KeepaliveEnable;
+    }
+
+    /**
+     * Get Only the NAT64 CLB TCP listeners are supported.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Toa Only the NAT64 CLB TCP listeners are supported.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Boolean getToa() {
+        return this.Toa;
+    }
+
+    /**
+     * Set Only the NAT64 CLB TCP listeners are supported.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Toa Only the NAT64 CLB TCP listeners are supported.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setToa(Boolean Toa) {
+        this.Toa = Toa;
     }
 
     /**
@@ -475,6 +503,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "TargetGroup.", this.TargetGroup);
         this.setParamSimple(map, prefix + "SessionType", this.SessionType);
         this.setParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
+        this.setParamSimple(map, prefix + "Toa", this.Toa);
 
     }
 }

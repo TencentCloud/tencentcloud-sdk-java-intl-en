@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class ModifyCertificateProjectRequest extends AbstractModel{
 
     /**
-    * ID list of certificates whose projects need to be modified. A maximum 100 certificate IDs are supported.
+    * ID list of certificates whose projects need to be modified. A maximum of 100 certificate IDs are supported.
     */
     @SerializedName("CertificateIdList")
     @Expose
     private String [] CertificateIdList;
 
     /**
-    * Project ID.
+    * Project ID
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-     * Get ID list of certificates whose projects need to be modified. A maximum 100 certificate IDs are supported. 
-     * @return CertificateIdList ID list of certificates whose projects need to be modified. A maximum 100 certificate IDs are supported.
+     * Get ID list of certificates whose projects need to be modified. A maximum of 100 certificate IDs are supported. 
+     * @return CertificateIdList ID list of certificates whose projects need to be modified. A maximum of 100 certificate IDs are supported.
      */
     public String [] getCertificateIdList() {
         return this.CertificateIdList;
     }
 
     /**
-     * Set ID list of certificates whose projects need to be modified. A maximum 100 certificate IDs are supported.
-     * @param CertificateIdList ID list of certificates whose projects need to be modified. A maximum 100 certificate IDs are supported.
+     * Set ID list of certificates whose projects need to be modified. A maximum of 100 certificate IDs are supported.
+     * @param CertificateIdList ID list of certificates whose projects need to be modified. A maximum of 100 certificate IDs are supported.
      */
     public void setCertificateIdList(String [] CertificateIdList) {
         this.CertificateIdList = CertificateIdList;
     }
 
     /**
-     * Get Project ID. 
-     * @return ProjectId Project ID.
+     * Get Project ID 
+     * @return ProjectId Project ID
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID.
-     * @param ProjectId Project ID.
+     * Set Project ID
+     * @param ProjectId Project ID
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;

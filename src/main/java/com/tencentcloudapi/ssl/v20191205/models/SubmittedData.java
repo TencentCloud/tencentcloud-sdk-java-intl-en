@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SubmittedData extends AbstractModel{
 
     /**
-    * CSR type. Online: CSR generated online; parse: CSR pasted.
+    * CSR type. `online`: CSR generated online; `parse`: CSR pasted
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CsrType")
@@ -31,7 +31,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String CsrType;
 
     /**
-    * CSR content.
+    * CSR content
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CsrContent")
@@ -39,7 +39,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String CsrContent;
 
     /**
-    * Domain name information.
+    * Domain name information
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CertificateDomain")
@@ -47,7 +47,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String CertificateDomain;
 
     /**
-    * DNS information.
+    * DNS information
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DomainList")
@@ -55,7 +55,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String [] DomainList;
 
     /**
-    * Password of the private key.
+    * Password of the private key
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("KeyPassword")
@@ -63,7 +63,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String KeyPassword;
 
     /**
-    * Enterprise or unit name.
+    * Enterprise or unit name
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OrganizationName")
@@ -71,7 +71,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String OrganizationName;
 
     /**
-    * Division.
+    * Division
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OrganizationDivision")
@@ -79,7 +79,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String OrganizationDivision;
 
     /**
-    * Address.
+    * Address
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OrganizationAddress")
@@ -87,7 +87,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String OrganizationAddress;
 
     /**
-    * Country.
+    * Country
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OrganizationCountry")
@@ -95,7 +95,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String OrganizationCountry;
 
     /**
-    * City.
+    * City
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OrganizationCity")
@@ -103,7 +103,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String OrganizationCity;
 
     /**
-    * Province.
+    * Province
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OrganizationRegion")
@@ -111,7 +111,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String OrganizationRegion;
 
     /**
-    * Postal code.
+    * Postal code
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PostalCode")
@@ -119,7 +119,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String PostalCode;
 
     /**
-    * Area code of the fixed-line phone number.
+    * Area code of the fixed-line phone number
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PhoneAreaCode")
@@ -127,7 +127,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String PhoneAreaCode;
 
     /**
-    * Fixed-line phone number.
+    * Fixed-line phone number
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PhoneNumber")
@@ -135,7 +135,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String PhoneNumber;
 
     /**
-    * First name of the admin.
+    * First name of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AdminFirstName")
@@ -143,7 +143,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String AdminFirstName;
 
     /**
-    * Last name of the admin.
+    * Last name of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AdminLastName")
@@ -151,7 +151,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String AdminLastName;
 
     /**
-    * Phone number of the admin.
+    * Phone number of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AdminPhoneNum")
@@ -159,7 +159,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String AdminPhoneNum;
 
     /**
-    * Email of the admin.
+    * Email of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AdminEmail")
@@ -167,7 +167,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String AdminEmail;
 
     /**
-    * Position of the admin.
+    * Position of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AdminPosition")
@@ -175,7 +175,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String AdminPosition;
 
     /**
-    * First name of the contact.
+    * First name of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ContactFirstName")
@@ -183,7 +183,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ContactFirstName;
 
     /**
-    * Last name of the contact.
+    * Last name of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ContactLastName")
@@ -191,7 +191,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ContactLastName;
 
     /**
-    * Phone number of the contact.
+    * Phone number of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ContactNumber")
@@ -199,7 +199,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ContactNumber;
 
     /**
-    * Email of the contact.
+    * Email of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ContactEmail")
@@ -207,7 +207,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ContactEmail;
 
     /**
-    * Position of the contact.
+    * Position of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ContactPosition")
@@ -215,7 +215,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ContactPosition;
 
     /**
-    * Verification type.
+    * Validation type
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VerifyType")
@@ -223,9 +223,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String VerifyType;
 
     /**
-     * Get CSR type. Online: CSR generated online; parse: CSR pasted.
+     * Get CSR type. `online`: CSR generated online; `parse`: CSR pasted
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CsrType CSR type. Online: CSR generated online; parse: CSR pasted.
+     * @return CsrType CSR type. `online`: CSR generated online; `parse`: CSR pasted
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getCsrType() {
@@ -233,9 +233,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set CSR type. Online: CSR generated online; parse: CSR pasted.
+     * Set CSR type. `online`: CSR generated online; `parse`: CSR pasted
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CsrType CSR type. Online: CSR generated online; parse: CSR pasted.
+     * @param CsrType CSR type. `online`: CSR generated online; `parse`: CSR pasted
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setCsrType(String CsrType) {
@@ -243,9 +243,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get CSR content.
+     * Get CSR content
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CsrContent CSR content.
+     * @return CsrContent CSR content
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getCsrContent() {
@@ -253,9 +253,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set CSR content.
+     * Set CSR content
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CsrContent CSR content.
+     * @param CsrContent CSR content
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setCsrContent(String CsrContent) {
@@ -263,9 +263,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Domain name information.
+     * Get Domain name information
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CertificateDomain Domain name information.
+     * @return CertificateDomain Domain name information
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getCertificateDomain() {
@@ -273,9 +273,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Domain name information.
+     * Set Domain name information
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CertificateDomain Domain name information.
+     * @param CertificateDomain Domain name information
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setCertificateDomain(String CertificateDomain) {
@@ -283,9 +283,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get DNS information.
+     * Get DNS information
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DomainList DNS information.
+     * @return DomainList DNS information
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String [] getDomainList() {
@@ -293,9 +293,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set DNS information.
+     * Set DNS information
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DomainList DNS information.
+     * @param DomainList DNS information
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDomainList(String [] DomainList) {
@@ -303,9 +303,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Password of the private key.
+     * Get Password of the private key
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return KeyPassword Password of the private key.
+     * @return KeyPassword Password of the private key
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getKeyPassword() {
@@ -313,9 +313,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Password of the private key.
+     * Set Password of the private key
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param KeyPassword Password of the private key.
+     * @param KeyPassword Password of the private key
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setKeyPassword(String KeyPassword) {
@@ -323,9 +323,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Enterprise or unit name.
+     * Get Enterprise or unit name
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return OrganizationName Enterprise or unit name.
+     * @return OrganizationName Enterprise or unit name
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getOrganizationName() {
@@ -333,9 +333,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Enterprise or unit name.
+     * Set Enterprise or unit name
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param OrganizationName Enterprise or unit name.
+     * @param OrganizationName Enterprise or unit name
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setOrganizationName(String OrganizationName) {
@@ -343,9 +343,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Division.
+     * Get Division
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return OrganizationDivision Division.
+     * @return OrganizationDivision Division
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getOrganizationDivision() {
@@ -353,9 +353,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Division.
+     * Set Division
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param OrganizationDivision Division.
+     * @param OrganizationDivision Division
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setOrganizationDivision(String OrganizationDivision) {
@@ -363,9 +363,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Address.
+     * Get Address
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return OrganizationAddress Address.
+     * @return OrganizationAddress Address
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getOrganizationAddress() {
@@ -373,9 +373,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Address.
+     * Set Address
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param OrganizationAddress Address.
+     * @param OrganizationAddress Address
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setOrganizationAddress(String OrganizationAddress) {
@@ -383,9 +383,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Country.
+     * Get Country
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return OrganizationCountry Country.
+     * @return OrganizationCountry Country
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getOrganizationCountry() {
@@ -393,9 +393,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Country.
+     * Set Country
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param OrganizationCountry Country.
+     * @param OrganizationCountry Country
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setOrganizationCountry(String OrganizationCountry) {
@@ -403,9 +403,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get City.
+     * Get City
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return OrganizationCity City.
+     * @return OrganizationCity City
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getOrganizationCity() {
@@ -413,9 +413,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set City.
+     * Set City
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param OrganizationCity City.
+     * @param OrganizationCity City
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setOrganizationCity(String OrganizationCity) {
@@ -423,9 +423,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Province.
+     * Get Province
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return OrganizationRegion Province.
+     * @return OrganizationRegion Province
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getOrganizationRegion() {
@@ -433,9 +433,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Province.
+     * Set Province
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param OrganizationRegion Province.
+     * @param OrganizationRegion Province
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setOrganizationRegion(String OrganizationRegion) {
@@ -443,9 +443,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Postal code.
+     * Get Postal code
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return PostalCode Postal code.
+     * @return PostalCode Postal code
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getPostalCode() {
@@ -453,9 +453,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Postal code.
+     * Set Postal code
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PostalCode Postal code.
+     * @param PostalCode Postal code
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setPostalCode(String PostalCode) {
@@ -463,9 +463,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Area code of the fixed-line phone number.
+     * Get Area code of the fixed-line phone number
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return PhoneAreaCode Area code of the fixed-line phone number.
+     * @return PhoneAreaCode Area code of the fixed-line phone number
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getPhoneAreaCode() {
@@ -473,9 +473,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Area code of the fixed-line phone number.
+     * Set Area code of the fixed-line phone number
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PhoneAreaCode Area code of the fixed-line phone number.
+     * @param PhoneAreaCode Area code of the fixed-line phone number
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setPhoneAreaCode(String PhoneAreaCode) {
@@ -483,9 +483,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Fixed-line phone number.
+     * Get Fixed-line phone number
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return PhoneNumber Fixed-line phone number.
+     * @return PhoneNumber Fixed-line phone number
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getPhoneNumber() {
@@ -493,9 +493,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Fixed-line phone number.
+     * Set Fixed-line phone number
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PhoneNumber Fixed-line phone number.
+     * @param PhoneNumber Fixed-line phone number
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setPhoneNumber(String PhoneNumber) {
@@ -503,9 +503,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get First name of the admin.
+     * Get First name of the administrator
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AdminFirstName First name of the admin.
+     * @return AdminFirstName First name of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getAdminFirstName() {
@@ -513,9 +513,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set First name of the admin.
+     * Set First name of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AdminFirstName First name of the admin.
+     * @param AdminFirstName First name of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setAdminFirstName(String AdminFirstName) {
@@ -523,9 +523,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Last name of the admin.
+     * Get Last name of the administrator
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AdminLastName Last name of the admin.
+     * @return AdminLastName Last name of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getAdminLastName() {
@@ -533,9 +533,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Last name of the admin.
+     * Set Last name of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AdminLastName Last name of the admin.
+     * @param AdminLastName Last name of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setAdminLastName(String AdminLastName) {
@@ -543,9 +543,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Phone number of the admin.
+     * Get Phone number of the administrator
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AdminPhoneNum Phone number of the admin.
+     * @return AdminPhoneNum Phone number of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getAdminPhoneNum() {
@@ -553,9 +553,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Phone number of the admin.
+     * Set Phone number of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AdminPhoneNum Phone number of the admin.
+     * @param AdminPhoneNum Phone number of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setAdminPhoneNum(String AdminPhoneNum) {
@@ -563,9 +563,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Email of the admin.
+     * Get Email of the administrator
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AdminEmail Email of the admin.
+     * @return AdminEmail Email of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getAdminEmail() {
@@ -573,9 +573,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Email of the admin.
+     * Set Email of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AdminEmail Email of the admin.
+     * @param AdminEmail Email of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setAdminEmail(String AdminEmail) {
@@ -583,9 +583,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Position of the admin.
+     * Get Position of the administrator
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AdminPosition Position of the admin.
+     * @return AdminPosition Position of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getAdminPosition() {
@@ -593,9 +593,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Position of the admin.
+     * Set Position of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AdminPosition Position of the admin.
+     * @param AdminPosition Position of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setAdminPosition(String AdminPosition) {
@@ -603,9 +603,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get First name of the contact.
+     * Get First name of the contact
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ContactFirstName First name of the contact.
+     * @return ContactFirstName First name of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getContactFirstName() {
@@ -613,9 +613,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set First name of the contact.
+     * Set First name of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ContactFirstName First name of the contact.
+     * @param ContactFirstName First name of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setContactFirstName(String ContactFirstName) {
@@ -623,9 +623,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Last name of the contact.
+     * Get Last name of the contact
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ContactLastName Last name of the contact.
+     * @return ContactLastName Last name of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getContactLastName() {
@@ -633,9 +633,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Last name of the contact.
+     * Set Last name of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ContactLastName Last name of the contact.
+     * @param ContactLastName Last name of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setContactLastName(String ContactLastName) {
@@ -643,9 +643,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Phone number of the contact.
+     * Get Phone number of the contact
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ContactNumber Phone number of the contact.
+     * @return ContactNumber Phone number of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getContactNumber() {
@@ -653,9 +653,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Phone number of the contact.
+     * Set Phone number of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ContactNumber Phone number of the contact.
+     * @param ContactNumber Phone number of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setContactNumber(String ContactNumber) {
@@ -663,9 +663,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Email of the contact.
+     * Get Email of the contact
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ContactEmail Email of the contact.
+     * @return ContactEmail Email of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getContactEmail() {
@@ -673,9 +673,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Email of the contact.
+     * Set Email of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ContactEmail Email of the contact.
+     * @param ContactEmail Email of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setContactEmail(String ContactEmail) {
@@ -683,9 +683,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Position of the contact.
+     * Get Position of the contact
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ContactPosition Position of the contact.
+     * @return ContactPosition Position of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getContactPosition() {
@@ -693,9 +693,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Position of the contact.
+     * Set Position of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ContactPosition Position of the contact.
+     * @param ContactPosition Position of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setContactPosition(String ContactPosition) {
@@ -703,9 +703,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Verification type.
+     * Get Validation type
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return VerifyType Verification type.
+     * @return VerifyType Validation type
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getVerifyType() {
@@ -713,9 +713,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Verification type.
+     * Set Validation type
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param VerifyType Verification type.
+     * @param VerifyType Validation type
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setVerifyType(String VerifyType) {

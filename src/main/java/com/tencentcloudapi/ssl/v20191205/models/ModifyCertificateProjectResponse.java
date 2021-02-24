@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyCertificateProjectResponse extends AbstractModel{
 
     /**
-    * List of certificates whose projects were modified successfully.
+    * List of certificates whose projects were modified successfully
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SuccessCertificates")
@@ -31,7 +31,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String [] SuccessCertificates;
 
     /**
-    * List of certificates whose projects failed to be modified.
+    * List of certificates whose projects failed to be modified
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FailCertificates")
@@ -46,9 +46,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get List of certificates whose projects were modified successfully.
+     * Get List of certificates whose projects were modified successfully
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SuccessCertificates List of certificates whose projects were modified successfully.
+     * @return SuccessCertificates List of certificates whose projects were modified successfully
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String [] getSuccessCertificates() {
@@ -56,9 +56,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set List of certificates whose projects were modified successfully.
+     * Set List of certificates whose projects were modified successfully
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SuccessCertificates List of certificates whose projects were modified successfully.
+     * @param SuccessCertificates List of certificates whose projects were modified successfully
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setSuccessCertificates(String [] SuccessCertificates) {
@@ -66,9 +66,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of certificates whose projects failed to be modified.
+     * Get List of certificates whose projects failed to be modified
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return FailCertificates List of certificates whose projects failed to be modified.
+     * @return FailCertificates List of certificates whose projects failed to be modified
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String [] getFailCertificates() {
@@ -76,9 +76,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set List of certificates whose projects failed to be modified.
+     * Set List of certificates whose projects failed to be modified
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param FailCertificates List of certificates whose projects failed to be modified.
+     * @param FailCertificates List of certificates whose projects failed to be modified
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setFailCertificates(String [] FailCertificates) {

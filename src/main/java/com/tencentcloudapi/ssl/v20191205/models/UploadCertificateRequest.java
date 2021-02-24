@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class UploadCertificateRequest extends AbstractModel{
 
     /**
-    * Certificate content
+    * Public key of the certificate
     */
     @SerializedName("CertificatePublicKey")
     @Expose
@@ -37,21 +37,21 @@ public class UploadCertificateRequest extends AbstractModel{
     private String CertificatePrivateKey;
 
     /**
-    * Certificate type. CA: client certificate; SVR: server certificate. The default value is SVR.
+    * Certificate type. `CA`: client certificate; `SVR`: server certificate. The default value is SVR.
     */
     @SerializedName("CertificateType")
     @Expose
     private String CertificateType;
 
     /**
-    * Alias.
+    * Alias
     */
     @SerializedName("Alias")
     @Expose
     private String Alias;
 
     /**
-    * Project ID.
+    * Project ID
     */
     @SerializedName("ProjectId")
     @Expose
@@ -65,16 +65,16 @@ public class UploadCertificateRequest extends AbstractModel{
     private String CertificateUse;
 
     /**
-     * Get Certificate content 
-     * @return CertificatePublicKey Certificate content
+     * Get Public key of the certificate 
+     * @return CertificatePublicKey Public key of the certificate
      */
     public String getCertificatePublicKey() {
         return this.CertificatePublicKey;
     }
 
     /**
-     * Set Certificate content
-     * @param CertificatePublicKey Certificate content
+     * Set Public key of the certificate
+     * @param CertificatePublicKey Public key of the certificate
      */
     public void setCertificatePublicKey(String CertificatePublicKey) {
         this.CertificatePublicKey = CertificatePublicKey;
@@ -97,48 +97,48 @@ public class UploadCertificateRequest extends AbstractModel{
     }
 
     /**
-     * Get Certificate type. CA: client certificate; SVR: server certificate. The default value is SVR. 
-     * @return CertificateType Certificate type. CA: client certificate; SVR: server certificate. The default value is SVR.
+     * Get Certificate type. `CA`: client certificate; `SVR`: server certificate. The default value is SVR. 
+     * @return CertificateType Certificate type. `CA`: client certificate; `SVR`: server certificate. The default value is SVR.
      */
     public String getCertificateType() {
         return this.CertificateType;
     }
 
     /**
-     * Set Certificate type. CA: client certificate; SVR: server certificate. The default value is SVR.
-     * @param CertificateType Certificate type. CA: client certificate; SVR: server certificate. The default value is SVR.
+     * Set Certificate type. `CA`: client certificate; `SVR`: server certificate. The default value is SVR.
+     * @param CertificateType Certificate type. `CA`: client certificate; `SVR`: server certificate. The default value is SVR.
      */
     public void setCertificateType(String CertificateType) {
         this.CertificateType = CertificateType;
     }
 
     /**
-     * Get Alias. 
-     * @return Alias Alias.
+     * Get Alias 
+     * @return Alias Alias
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * Set Alias.
-     * @param Alias Alias.
+     * Set Alias
+     * @param Alias Alias
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;
     }
 
     /**
-     * Get Project ID. 
-     * @return ProjectId Project ID.
+     * Get Project ID 
+     * @return ProjectId Project ID
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID.
-     * @param ProjectId Project ID.
+     * Set Project ID
+     * @param ProjectId Project ID
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;

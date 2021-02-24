@@ -37,21 +37,21 @@ public class BatchTarget extends AbstractModel{
     private Long Port;
 
     /**
-    * CVM instance ID
+    * CVM instance ID. Indicating binding the primary IP of the primary ENI.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * ENI IP
+    * ENI IP or other private IP. This parameter is required for binding a dual-stack IPv6 CVM instance.
     */
     @SerializedName("EniIp")
     @Expose
     private String EniIp;
 
     /**
-    * Weight of a CVM instance. Value range: [0, 100]. If it is not specified when binding the instance, 10 will be used by default.
+    * CVM instance weight. Value range: [0, 100]. If it is not specified when binding the instance, 10 will be used by default.
     */
     @SerializedName("Weight")
     @Expose
@@ -97,48 +97,48 @@ public class BatchTarget extends AbstractModel{
     }
 
     /**
-     * Get CVM instance ID 
-     * @return InstanceId CVM instance ID
+     * Get CVM instance ID. Indicating binding the primary IP of the primary ENI. 
+     * @return InstanceId CVM instance ID. Indicating binding the primary IP of the primary ENI.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set CVM instance ID
-     * @param InstanceId CVM instance ID
+     * Set CVM instance ID. Indicating binding the primary IP of the primary ENI.
+     * @param InstanceId CVM instance ID. Indicating binding the primary IP of the primary ENI.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get ENI IP 
-     * @return EniIp ENI IP
+     * Get ENI IP or other private IP. This parameter is required for binding a dual-stack IPv6 CVM instance. 
+     * @return EniIp ENI IP or other private IP. This parameter is required for binding a dual-stack IPv6 CVM instance.
      */
     public String getEniIp() {
         return this.EniIp;
     }
 
     /**
-     * Set ENI IP
-     * @param EniIp ENI IP
+     * Set ENI IP or other private IP. This parameter is required for binding a dual-stack IPv6 CVM instance.
+     * @param EniIp ENI IP or other private IP. This parameter is required for binding a dual-stack IPv6 CVM instance.
      */
     public void setEniIp(String EniIp) {
         this.EniIp = EniIp;
     }
 
     /**
-     * Get Weight of a CVM instance. Value range: [0, 100]. If it is not specified when binding the instance, 10 will be used by default. 
-     * @return Weight Weight of a CVM instance. Value range: [0, 100]. If it is not specified when binding the instance, 10 will be used by default.
+     * Get CVM instance weight. Value range: [0, 100]. If it is not specified when binding the instance, 10 will be used by default. 
+     * @return Weight CVM instance weight. Value range: [0, 100]. If it is not specified when binding the instance, 10 will be used by default.
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set Weight of a CVM instance. Value range: [0, 100]. If it is not specified when binding the instance, 10 will be used by default.
-     * @param Weight Weight of a CVM instance. Value range: [0, 100]. If it is not specified when binding the instance, 10 will be used by default.
+     * Set CVM instance weight. Value range: [0, 100]. If it is not specified when binding the instance, 10 will be used by default.
+     * @param Weight CVM instance weight. Value range: [0, 100]. If it is not specified when binding the instance, 10 will be used by default.
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;

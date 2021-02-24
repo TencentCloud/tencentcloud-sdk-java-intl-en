@@ -24,8 +24,8 @@ public class StickerTrackItem extends AbstractModel{
 
     /**
     * Source of media material for sticker segment, which can be:
-<li>VOD media file ID;</li>
-<li>Download URL of other media files.</li>
+<li>ID of VOD media files</li>
+<li>Download URL of other media files</li>
 Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
     */
     @SerializedName("SourceMedia")
@@ -108,12 +108,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Source of media material for sticker segment, which can be:
-<li>VOD media file ID;</li>
-<li>Download URL of other media files.</li>
+<li>ID of VOD media files</li>
+<li>Download URL of other media files</li>
 Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature). 
      * @return SourceMedia Source of media material for sticker segment, which can be:
-<li>VOD media file ID;</li>
-<li>Download URL of other media files.</li>
+<li>ID of VOD media files</li>
+<li>Download URL of other media files</li>
 Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
      */
     public String getSourceMedia() {
@@ -122,12 +122,12 @@ Note: when a download URL of other media files is used as the material source an
 
     /**
      * Set Source of media material for sticker segment, which can be:
-<li>VOD media file ID;</li>
-<li>Download URL of other media files.</li>
+<li>ID of VOD media files</li>
+<li>Download URL of other media files</li>
 Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
      * @param SourceMedia Source of media material for sticker segment, which can be:
-<li>VOD media file ID;</li>
-<li>Download URL of other media files.</li>
+<li>ID of VOD media files</li>
+<li>Download URL of other media files</li>
 Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
      */
     public void setSourceMedia(String SourceMedia) {

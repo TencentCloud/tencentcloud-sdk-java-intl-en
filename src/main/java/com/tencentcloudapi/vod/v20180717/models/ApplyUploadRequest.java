@@ -87,7 +87,7 @@ public class ApplyUploadRequest extends AbstractModel{
     private String SessionContext;
 
     /**
-    * Reserved field for special purposes.
+    * Reserved parameter for special purposes.
     */
     @SerializedName("ExtInfo")
     @Expose
@@ -249,16 +249,16 @@ public class ApplyUploadRequest extends AbstractModel{
     }
 
     /**
-     * Get Reserved field for special purposes. 
-     * @return ExtInfo Reserved field for special purposes.
+     * Get Reserved parameter for special purposes. 
+     * @return ExtInfo Reserved parameter for special purposes.
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set Reserved field for special purposes.
-     * @param ExtInfo Reserved field for special purposes.
+     * Set Reserved parameter for special purposes.
+     * @param ExtInfo Reserved parameter for special purposes.
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;

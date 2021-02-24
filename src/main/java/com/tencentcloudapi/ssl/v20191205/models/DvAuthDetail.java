@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DvAuthDetail extends AbstractModel{
 
     /**
-    * DV authentication key.
+    * DV authentication key
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DvAuthKey")
@@ -31,7 +31,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String DvAuthKey;
 
     /**
-    * DV authentication value.
+    * DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DvAuthValue")
@@ -39,7 +39,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String DvAuthValue;
 
     /**
-    * Domain name of the DV authentication value.
+    * Domain name of the DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DvAuthDomain")
@@ -47,7 +47,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String DvAuthDomain;
 
     /**
-    * Path of the DV authentication value.
+    * Path of the DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DvAuthPath")
@@ -55,7 +55,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String DvAuthPath;
 
     /**
-    * DV authentication sub-domain name.
+    * DV authentication sub-domain name
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DvAuthKeySubDomain")
@@ -63,7 +63,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String DvAuthKeySubDomain;
 
     /**
-    * DV authentication information.
+    * DV authentication information
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DvAuths")
@@ -71,9 +71,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private DvAuths [] DvAuths;
 
     /**
-     * Get DV authentication key.
+     * Get DV authentication key
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DvAuthKey DV authentication key.
+     * @return DvAuthKey DV authentication key
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getDvAuthKey() {
@@ -81,9 +81,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set DV authentication key.
+     * Set DV authentication key
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DvAuthKey DV authentication key.
+     * @param DvAuthKey DV authentication key
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDvAuthKey(String DvAuthKey) {
@@ -91,9 +91,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get DV authentication value.
+     * Get DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DvAuthValue DV authentication value.
+     * @return DvAuthValue DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getDvAuthValue() {
@@ -101,9 +101,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set DV authentication value.
+     * Set DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DvAuthValue DV authentication value.
+     * @param DvAuthValue DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDvAuthValue(String DvAuthValue) {
@@ -111,9 +111,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Domain name of the DV authentication value.
+     * Get Domain name of the DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DvAuthDomain Domain name of the DV authentication value.
+     * @return DvAuthDomain Domain name of the DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getDvAuthDomain() {
@@ -121,9 +121,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Domain name of the DV authentication value.
+     * Set Domain name of the DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DvAuthDomain Domain name of the DV authentication value.
+     * @param DvAuthDomain Domain name of the DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDvAuthDomain(String DvAuthDomain) {
@@ -131,9 +131,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Path of the DV authentication value.
+     * Get Path of the DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DvAuthPath Path of the DV authentication value.
+     * @return DvAuthPath Path of the DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getDvAuthPath() {
@@ -141,9 +141,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Path of the DV authentication value.
+     * Set Path of the DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DvAuthPath Path of the DV authentication value.
+     * @param DvAuthPath Path of the DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDvAuthPath(String DvAuthPath) {
@@ -151,9 +151,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get DV authentication sub-domain name.
+     * Get DV authentication sub-domain name
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DvAuthKeySubDomain DV authentication sub-domain name.
+     * @return DvAuthKeySubDomain DV authentication sub-domain name
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getDvAuthKeySubDomain() {
@@ -161,9 +161,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set DV authentication sub-domain name.
+     * Set DV authentication sub-domain name
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DvAuthKeySubDomain DV authentication sub-domain name.
+     * @param DvAuthKeySubDomain DV authentication sub-domain name
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDvAuthKeySubDomain(String DvAuthKeySubDomain) {
@@ -171,9 +171,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get DV authentication information.
+     * Get DV authentication information
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DvAuths DV authentication information.
+     * @return DvAuths DV authentication information
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public DvAuths [] getDvAuths() {
@@ -181,9 +181,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set DV authentication information.
+     * Set DV authentication information
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DvAuths DV authentication information.
+     * @param DvAuths DV authentication information
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDvAuths(DvAuths [] DvAuths) {

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ProjectInfo extends AbstractModel{
 
     /**
-    * Project name.
+    * Project name
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProjectName")
@@ -31,7 +31,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ProjectName;
 
     /**
-    * UIN of the project creator.
+    * UIN of the project creator
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProjectCreatorUin")
@@ -39,7 +39,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long ProjectCreatorUin;
 
     /**
-    * Project creation time.
+    * Project creation time
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProjectCreateTime")
@@ -47,7 +47,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ProjectCreateTime;
 
     /**
-    * Brief project information.
+    * Brief project information
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProjectResume")
@@ -55,7 +55,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ProjectResume;
 
     /**
-    * User UIN.
+    * User UIN
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OwnerUin")
@@ -63,7 +63,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long OwnerUin;
 
     /**
-    * Project ID.
+    * Project ID
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProjectId")
@@ -71,9 +71,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ProjectId;
 
     /**
-     * Get Project name.
+     * Get Project name
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ProjectName Project name.
+     * @return ProjectName Project name
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getProjectName() {
@@ -81,9 +81,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Project name.
+     * Set Project name
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ProjectName Project name.
+     * @param ProjectName Project name
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setProjectName(String ProjectName) {
@@ -91,9 +91,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get UIN of the project creator.
+     * Get UIN of the project creator
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ProjectCreatorUin UIN of the project creator.
+     * @return ProjectCreatorUin UIN of the project creator
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getProjectCreatorUin() {
@@ -101,9 +101,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set UIN of the project creator.
+     * Set UIN of the project creator
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ProjectCreatorUin UIN of the project creator.
+     * @param ProjectCreatorUin UIN of the project creator
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setProjectCreatorUin(Long ProjectCreatorUin) {
@@ -111,9 +111,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Project creation time.
+     * Get Project creation time
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ProjectCreateTime Project creation time.
+     * @return ProjectCreateTime Project creation time
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getProjectCreateTime() {
@@ -121,9 +121,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Project creation time.
+     * Set Project creation time
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ProjectCreateTime Project creation time.
+     * @param ProjectCreateTime Project creation time
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setProjectCreateTime(String ProjectCreateTime) {
@@ -131,9 +131,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Brief project information.
+     * Get Brief project information
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ProjectResume Brief project information.
+     * @return ProjectResume Brief project information
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getProjectResume() {
@@ -141,9 +141,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Brief project information.
+     * Set Brief project information
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ProjectResume Brief project information.
+     * @param ProjectResume Brief project information
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setProjectResume(String ProjectResume) {
@@ -151,9 +151,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get User UIN.
+     * Get User UIN
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return OwnerUin User UIN.
+     * @return OwnerUin User UIN
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getOwnerUin() {
@@ -161,9 +161,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set User UIN.
+     * Set User UIN
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param OwnerUin User UIN.
+     * @param OwnerUin User UIN
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setOwnerUin(Long OwnerUin) {
@@ -171,9 +171,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Project ID.
+     * Get Project ID
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ProjectId Project ID.
+     * @return ProjectId Project ID
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getProjectId() {
@@ -181,9 +181,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Project ID.
+     * Set Project ID
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ProjectId Project ID.
+     * @param ProjectId Project ID
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setProjectId(String ProjectId) {

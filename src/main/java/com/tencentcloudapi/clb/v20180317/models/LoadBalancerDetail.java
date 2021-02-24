@@ -263,6 +263,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long Isolation;
 
     /**
+    * List of the security groups bound to the CLB instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SecurityGroup")
+    @Expose
+    private String [] SecurityGroup;
+
+    /**
+    * Whether the CLB instance is billed by IP.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("LoadBalancerPassToTarget")
+    @Expose
+    private Long LoadBalancerPassToTarget;
+
+    /**
      * Get CLB instance ID. 
      * @return LoadBalancerId CLB instance ID.
      */
@@ -863,6 +879,46 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get List of the security groups bound to the CLB instance.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return SecurityGroup List of the security groups bound to the CLB instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String [] getSecurityGroup() {
+        return this.SecurityGroup;
+    }
+
+    /**
+     * Set List of the security groups bound to the CLB instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param SecurityGroup List of the security groups bound to the CLB instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setSecurityGroup(String [] SecurityGroup) {
+        this.SecurityGroup = SecurityGroup;
+    }
+
+    /**
+     * Get Whether the CLB instance is billed by IP.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return LoadBalancerPassToTarget Whether the CLB instance is billed by IP.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getLoadBalancerPassToTarget() {
+        return this.LoadBalancerPassToTarget;
+    }
+
+    /**
+     * Set Whether the CLB instance is billed by IP.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param LoadBalancerPassToTarget Whether the CLB instance is billed by IP.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setLoadBalancerPassToTarget(Long LoadBalancerPassToTarget) {
+        this.LoadBalancerPassToTarget = LoadBalancerPassToTarget;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -896,6 +952,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "TargetPort", this.TargetPort);
         this.setParamSimple(map, prefix + "TargetWeight", this.TargetWeight);
         this.setParamSimple(map, prefix + "Isolation", this.Isolation);
+        this.setParamArraySimple(map, prefix + "SecurityGroup.", this.SecurityGroup);
+        this.setParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
 
     }
 }

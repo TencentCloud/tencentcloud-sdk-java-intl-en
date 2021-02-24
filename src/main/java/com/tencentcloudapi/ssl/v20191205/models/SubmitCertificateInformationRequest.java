@@ -23,598 +23,598 @@ import java.util.HashMap;
 public class SubmitCertificateInformationRequest extends AbstractModel{
 
     /**
-    * Certificate ID.
+    * Certificate ID
     */
     @SerializedName("CertificateId")
     @Expose
     private String CertificateId;
 
     /**
-    * CSR generation mode. Online: generated online; parse: uploaded manually.
+    * CSR generation mode. `online`: generated online; `parse`: uploaded manually
     */
     @SerializedName("CsrType")
     @Expose
     private String CsrType;
 
     /**
-    * Uploaded CSR content.
+    * Uploaded CSR content
     */
     @SerializedName("CsrContent")
     @Expose
     private String CsrContent;
 
     /**
-    * Domain name bound with the certificate.
+    * Domain name bound with the certificate
     */
     @SerializedName("CertificateDomain")
     @Expose
     private String CertificateDomain;
 
     /**
-    * Uploaded domain name array (can be uploaded for a multi-domain certificate).
+    * Uploaded domain name array (can be uploaded for a multi-domain certificate)
     */
     @SerializedName("DomainList")
     @Expose
     private String [] DomainList;
 
     /**
-    * Private key password (optional)
+    * Password of the private key
     */
     @SerializedName("KeyPassword")
     @Expose
     private String KeyPassword;
 
     /**
-    * Organization name.
+    * Organization name
     */
     @SerializedName("OrganizationName")
     @Expose
     private String OrganizationName;
 
     /**
-    * Division name.
+    * Division name
     */
     @SerializedName("OrganizationDivision")
     @Expose
     private String OrganizationDivision;
 
     /**
-    * Detailed address of the organization.
+    * Detailed address of the organization
     */
     @SerializedName("OrganizationAddress")
     @Expose
     private String OrganizationAddress;
 
     /**
-    * Country where the organization is located. For example, CN (China).
+    * Country where the organization is located, for example, CN (China)
     */
     @SerializedName("OrganizationCountry")
     @Expose
     private String OrganizationCountry;
 
     /**
-    * City where the organization is located.
+    * City where the organization is located
     */
     @SerializedName("OrganizationCity")
     @Expose
     private String OrganizationCity;
 
     /**
-    * Province where the organization is located.
+    * Province where the organization is located
     */
     @SerializedName("OrganizationRegion")
     @Expose
     private String OrganizationRegion;
 
     /**
-    * Postal code of the organization.
+    * Postal code of the organization
     */
     @SerializedName("PostalCode")
     @Expose
     private String PostalCode;
 
     /**
-    * Area code of the fixed-line phone number of the organization.
+    * Area code of the fixed-line phone number of the organization
     */
     @SerializedName("PhoneAreaCode")
     @Expose
     private String PhoneAreaCode;
 
     /**
-    * Fixed-line phone number of the organization.
+    * Fixed-line phone number of the organization
     */
     @SerializedName("PhoneNumber")
     @Expose
     private String PhoneNumber;
 
     /**
-    * Validation type. `DNS_AUTO`: automatic DNS validation (only available for domains hosted in Tencent Cloud and when the DNS status is OK); `DNS`: manual DNS validation; `FILE`: file validation.
+    * Certificate validation method
     */
     @SerializedName("VerifyType")
     @Expose
     private String VerifyType;
 
     /**
-    * First name of the administrator
+    * Last name of the administrator
     */
     @SerializedName("AdminFirstName")
     @Expose
     private String AdminFirstName;
 
     /**
-    * Last name of the administrator
+    * First name of the administrator
     */
     @SerializedName("AdminLastName")
     @Expose
     private String AdminLastName;
 
     /**
-    * Mobile number of the admin.
+    * Mobile number of the administrator
     */
     @SerializedName("AdminPhoneNum")
     @Expose
     private String AdminPhoneNum;
 
     /**
-    * Email of the admin.
+    * Email of the administrator
     */
     @SerializedName("AdminEmail")
     @Expose
     private String AdminEmail;
 
     /**
-    * Position of the admin.
+    * Position of the administrator
     */
     @SerializedName("AdminPosition")
     @Expose
     private String AdminPosition;
 
     /**
-    * First name of the contact
+    * Last name of the contact
     */
     @SerializedName("ContactFirstName")
     @Expose
     private String ContactFirstName;
 
     /**
-    * Last name of the contact
+    * First name of the contact
     */
     @SerializedName("ContactLastName")
     @Expose
     private String ContactLastName;
 
     /**
-    * Email of the contact.
+    * Email of the contact
     */
     @SerializedName("ContactEmail")
     @Expose
     private String ContactEmail;
 
     /**
-    * Mobile number of the contact.
+    * Mobile number of the contact
     */
     @SerializedName("ContactNumber")
     @Expose
     private String ContactNumber;
 
     /**
-    * Position of the contact.
+    * Position of the contact
     */
     @SerializedName("ContactPosition")
     @Expose
     private String ContactPosition;
 
     /**
-     * Get Certificate ID. 
-     * @return CertificateId Certificate ID.
+     * Get Certificate ID 
+     * @return CertificateId Certificate ID
      */
     public String getCertificateId() {
         return this.CertificateId;
     }
 
     /**
-     * Set Certificate ID.
-     * @param CertificateId Certificate ID.
+     * Set Certificate ID
+     * @param CertificateId Certificate ID
      */
     public void setCertificateId(String CertificateId) {
         this.CertificateId = CertificateId;
     }
 
     /**
-     * Get CSR generation mode. Online: generated online; parse: uploaded manually. 
-     * @return CsrType CSR generation mode. Online: generated online; parse: uploaded manually.
+     * Get CSR generation mode. `online`: generated online; `parse`: uploaded manually 
+     * @return CsrType CSR generation mode. `online`: generated online; `parse`: uploaded manually
      */
     public String getCsrType() {
         return this.CsrType;
     }
 
     /**
-     * Set CSR generation mode. Online: generated online; parse: uploaded manually.
-     * @param CsrType CSR generation mode. Online: generated online; parse: uploaded manually.
+     * Set CSR generation mode. `online`: generated online; `parse`: uploaded manually
+     * @param CsrType CSR generation mode. `online`: generated online; `parse`: uploaded manually
      */
     public void setCsrType(String CsrType) {
         this.CsrType = CsrType;
     }
 
     /**
-     * Get Uploaded CSR content. 
-     * @return CsrContent Uploaded CSR content.
+     * Get Uploaded CSR content 
+     * @return CsrContent Uploaded CSR content
      */
     public String getCsrContent() {
         return this.CsrContent;
     }
 
     /**
-     * Set Uploaded CSR content.
-     * @param CsrContent Uploaded CSR content.
+     * Set Uploaded CSR content
+     * @param CsrContent Uploaded CSR content
      */
     public void setCsrContent(String CsrContent) {
         this.CsrContent = CsrContent;
     }
 
     /**
-     * Get Domain name bound with the certificate. 
-     * @return CertificateDomain Domain name bound with the certificate.
+     * Get Domain name bound with the certificate 
+     * @return CertificateDomain Domain name bound with the certificate
      */
     public String getCertificateDomain() {
         return this.CertificateDomain;
     }
 
     /**
-     * Set Domain name bound with the certificate.
-     * @param CertificateDomain Domain name bound with the certificate.
+     * Set Domain name bound with the certificate
+     * @param CertificateDomain Domain name bound with the certificate
      */
     public void setCertificateDomain(String CertificateDomain) {
         this.CertificateDomain = CertificateDomain;
     }
 
     /**
-     * Get Uploaded domain name array (can be uploaded for a multi-domain certificate). 
-     * @return DomainList Uploaded domain name array (can be uploaded for a multi-domain certificate).
+     * Get Uploaded domain name array (can be uploaded for a multi-domain certificate) 
+     * @return DomainList Uploaded domain name array (can be uploaded for a multi-domain certificate)
      */
     public String [] getDomainList() {
         return this.DomainList;
     }
 
     /**
-     * Set Uploaded domain name array (can be uploaded for a multi-domain certificate).
-     * @param DomainList Uploaded domain name array (can be uploaded for a multi-domain certificate).
+     * Set Uploaded domain name array (can be uploaded for a multi-domain certificate)
+     * @param DomainList Uploaded domain name array (can be uploaded for a multi-domain certificate)
      */
     public void setDomainList(String [] DomainList) {
         this.DomainList = DomainList;
     }
 
     /**
-     * Get Private key password (optional) 
-     * @return KeyPassword Private key password (optional)
+     * Get Password of the private key 
+     * @return KeyPassword Password of the private key
      */
     public String getKeyPassword() {
         return this.KeyPassword;
     }
 
     /**
-     * Set Private key password (optional)
-     * @param KeyPassword Private key password (optional)
+     * Set Password of the private key
+     * @param KeyPassword Password of the private key
      */
     public void setKeyPassword(String KeyPassword) {
         this.KeyPassword = KeyPassword;
     }
 
     /**
-     * Get Organization name. 
-     * @return OrganizationName Organization name.
+     * Get Organization name 
+     * @return OrganizationName Organization name
      */
     public String getOrganizationName() {
         return this.OrganizationName;
     }
 
     /**
-     * Set Organization name.
-     * @param OrganizationName Organization name.
+     * Set Organization name
+     * @param OrganizationName Organization name
      */
     public void setOrganizationName(String OrganizationName) {
         this.OrganizationName = OrganizationName;
     }
 
     /**
-     * Get Division name. 
-     * @return OrganizationDivision Division name.
+     * Get Division name 
+     * @return OrganizationDivision Division name
      */
     public String getOrganizationDivision() {
         return this.OrganizationDivision;
     }
 
     /**
-     * Set Division name.
-     * @param OrganizationDivision Division name.
+     * Set Division name
+     * @param OrganizationDivision Division name
      */
     public void setOrganizationDivision(String OrganizationDivision) {
         this.OrganizationDivision = OrganizationDivision;
     }
 
     /**
-     * Get Detailed address of the organization. 
-     * @return OrganizationAddress Detailed address of the organization.
+     * Get Detailed address of the organization 
+     * @return OrganizationAddress Detailed address of the organization
      */
     public String getOrganizationAddress() {
         return this.OrganizationAddress;
     }
 
     /**
-     * Set Detailed address of the organization.
-     * @param OrganizationAddress Detailed address of the organization.
+     * Set Detailed address of the organization
+     * @param OrganizationAddress Detailed address of the organization
      */
     public void setOrganizationAddress(String OrganizationAddress) {
         this.OrganizationAddress = OrganizationAddress;
     }
 
     /**
-     * Get Country where the organization is located. For example, CN (China). 
-     * @return OrganizationCountry Country where the organization is located. For example, CN (China).
+     * Get Country where the organization is located, for example, CN (China) 
+     * @return OrganizationCountry Country where the organization is located, for example, CN (China)
      */
     public String getOrganizationCountry() {
         return this.OrganizationCountry;
     }
 
     /**
-     * Set Country where the organization is located. For example, CN (China).
-     * @param OrganizationCountry Country where the organization is located. For example, CN (China).
+     * Set Country where the organization is located, for example, CN (China)
+     * @param OrganizationCountry Country where the organization is located, for example, CN (China)
      */
     public void setOrganizationCountry(String OrganizationCountry) {
         this.OrganizationCountry = OrganizationCountry;
     }
 
     /**
-     * Get City where the organization is located. 
-     * @return OrganizationCity City where the organization is located.
+     * Get City where the organization is located 
+     * @return OrganizationCity City where the organization is located
      */
     public String getOrganizationCity() {
         return this.OrganizationCity;
     }
 
     /**
-     * Set City where the organization is located.
-     * @param OrganizationCity City where the organization is located.
+     * Set City where the organization is located
+     * @param OrganizationCity City where the organization is located
      */
     public void setOrganizationCity(String OrganizationCity) {
         this.OrganizationCity = OrganizationCity;
     }
 
     /**
-     * Get Province where the organization is located. 
-     * @return OrganizationRegion Province where the organization is located.
+     * Get Province where the organization is located 
+     * @return OrganizationRegion Province where the organization is located
      */
     public String getOrganizationRegion() {
         return this.OrganizationRegion;
     }
 
     /**
-     * Set Province where the organization is located.
-     * @param OrganizationRegion Province where the organization is located.
+     * Set Province where the organization is located
+     * @param OrganizationRegion Province where the organization is located
      */
     public void setOrganizationRegion(String OrganizationRegion) {
         this.OrganizationRegion = OrganizationRegion;
     }
 
     /**
-     * Get Postal code of the organization. 
-     * @return PostalCode Postal code of the organization.
+     * Get Postal code of the organization 
+     * @return PostalCode Postal code of the organization
      */
     public String getPostalCode() {
         return this.PostalCode;
     }
 
     /**
-     * Set Postal code of the organization.
-     * @param PostalCode Postal code of the organization.
+     * Set Postal code of the organization
+     * @param PostalCode Postal code of the organization
      */
     public void setPostalCode(String PostalCode) {
         this.PostalCode = PostalCode;
     }
 
     /**
-     * Get Area code of the fixed-line phone number of the organization. 
-     * @return PhoneAreaCode Area code of the fixed-line phone number of the organization.
+     * Get Area code of the fixed-line phone number of the organization 
+     * @return PhoneAreaCode Area code of the fixed-line phone number of the organization
      */
     public String getPhoneAreaCode() {
         return this.PhoneAreaCode;
     }
 
     /**
-     * Set Area code of the fixed-line phone number of the organization.
-     * @param PhoneAreaCode Area code of the fixed-line phone number of the organization.
+     * Set Area code of the fixed-line phone number of the organization
+     * @param PhoneAreaCode Area code of the fixed-line phone number of the organization
      */
     public void setPhoneAreaCode(String PhoneAreaCode) {
         this.PhoneAreaCode = PhoneAreaCode;
     }
 
     /**
-     * Get Fixed-line phone number of the organization. 
-     * @return PhoneNumber Fixed-line phone number of the organization.
+     * Get Fixed-line phone number of the organization 
+     * @return PhoneNumber Fixed-line phone number of the organization
      */
     public String getPhoneNumber() {
         return this.PhoneNumber;
     }
 
     /**
-     * Set Fixed-line phone number of the organization.
-     * @param PhoneNumber Fixed-line phone number of the organization.
+     * Set Fixed-line phone number of the organization
+     * @param PhoneNumber Fixed-line phone number of the organization
      */
     public void setPhoneNumber(String PhoneNumber) {
         this.PhoneNumber = PhoneNumber;
     }
 
     /**
-     * Get Validation type. `DNS_AUTO`: automatic DNS validation (only available for domains hosted in Tencent Cloud and when the DNS status is OK); `DNS`: manual DNS validation; `FILE`: file validation. 
-     * @return VerifyType Validation type. `DNS_AUTO`: automatic DNS validation (only available for domains hosted in Tencent Cloud and when the DNS status is OK); `DNS`: manual DNS validation; `FILE`: file validation.
+     * Get Certificate validation method 
+     * @return VerifyType Certificate validation method
      */
     public String getVerifyType() {
         return this.VerifyType;
     }
 
     /**
-     * Set Validation type. `DNS_AUTO`: automatic DNS validation (only available for domains hosted in Tencent Cloud and when the DNS status is OK); `DNS`: manual DNS validation; `FILE`: file validation.
-     * @param VerifyType Validation type. `DNS_AUTO`: automatic DNS validation (only available for domains hosted in Tencent Cloud and when the DNS status is OK); `DNS`: manual DNS validation; `FILE`: file validation.
+     * Set Certificate validation method
+     * @param VerifyType Certificate validation method
      */
     public void setVerifyType(String VerifyType) {
         this.VerifyType = VerifyType;
     }
 
     /**
-     * Get First name of the administrator 
-     * @return AdminFirstName First name of the administrator
+     * Get Last name of the administrator 
+     * @return AdminFirstName Last name of the administrator
      */
     public String getAdminFirstName() {
         return this.AdminFirstName;
     }
 
     /**
-     * Set First name of the administrator
-     * @param AdminFirstName First name of the administrator
+     * Set Last name of the administrator
+     * @param AdminFirstName Last name of the administrator
      */
     public void setAdminFirstName(String AdminFirstName) {
         this.AdminFirstName = AdminFirstName;
     }
 
     /**
-     * Get Last name of the administrator 
-     * @return AdminLastName Last name of the administrator
+     * Get First name of the administrator 
+     * @return AdminLastName First name of the administrator
      */
     public String getAdminLastName() {
         return this.AdminLastName;
     }
 
     /**
-     * Set Last name of the administrator
-     * @param AdminLastName Last name of the administrator
+     * Set First name of the administrator
+     * @param AdminLastName First name of the administrator
      */
     public void setAdminLastName(String AdminLastName) {
         this.AdminLastName = AdminLastName;
     }
 
     /**
-     * Get Mobile number of the admin. 
-     * @return AdminPhoneNum Mobile number of the admin.
+     * Get Mobile number of the administrator 
+     * @return AdminPhoneNum Mobile number of the administrator
      */
     public String getAdminPhoneNum() {
         return this.AdminPhoneNum;
     }
 
     /**
-     * Set Mobile number of the admin.
-     * @param AdminPhoneNum Mobile number of the admin.
+     * Set Mobile number of the administrator
+     * @param AdminPhoneNum Mobile number of the administrator
      */
     public void setAdminPhoneNum(String AdminPhoneNum) {
         this.AdminPhoneNum = AdminPhoneNum;
     }
 
     /**
-     * Get Email of the admin. 
-     * @return AdminEmail Email of the admin.
+     * Get Email of the administrator 
+     * @return AdminEmail Email of the administrator
      */
     public String getAdminEmail() {
         return this.AdminEmail;
     }
 
     /**
-     * Set Email of the admin.
-     * @param AdminEmail Email of the admin.
+     * Set Email of the administrator
+     * @param AdminEmail Email of the administrator
      */
     public void setAdminEmail(String AdminEmail) {
         this.AdminEmail = AdminEmail;
     }
 
     /**
-     * Get Position of the admin. 
-     * @return AdminPosition Position of the admin.
+     * Get Position of the administrator 
+     * @return AdminPosition Position of the administrator
      */
     public String getAdminPosition() {
         return this.AdminPosition;
     }
 
     /**
-     * Set Position of the admin.
-     * @param AdminPosition Position of the admin.
+     * Set Position of the administrator
+     * @param AdminPosition Position of the administrator
      */
     public void setAdminPosition(String AdminPosition) {
         this.AdminPosition = AdminPosition;
     }
 
     /**
-     * Get First name of the contact 
-     * @return ContactFirstName First name of the contact
+     * Get Last name of the contact 
+     * @return ContactFirstName Last name of the contact
      */
     public String getContactFirstName() {
         return this.ContactFirstName;
     }
 
     /**
-     * Set First name of the contact
-     * @param ContactFirstName First name of the contact
+     * Set Last name of the contact
+     * @param ContactFirstName Last name of the contact
      */
     public void setContactFirstName(String ContactFirstName) {
         this.ContactFirstName = ContactFirstName;
     }
 
     /**
-     * Get Last name of the contact 
-     * @return ContactLastName Last name of the contact
+     * Get First name of the contact 
+     * @return ContactLastName First name of the contact
      */
     public String getContactLastName() {
         return this.ContactLastName;
     }
 
     /**
-     * Set Last name of the contact
-     * @param ContactLastName Last name of the contact
+     * Set First name of the contact
+     * @param ContactLastName First name of the contact
      */
     public void setContactLastName(String ContactLastName) {
         this.ContactLastName = ContactLastName;
     }
 
     /**
-     * Get Email of the contact. 
-     * @return ContactEmail Email of the contact.
+     * Get Email of the contact 
+     * @return ContactEmail Email of the contact
      */
     public String getContactEmail() {
         return this.ContactEmail;
     }
 
     /**
-     * Set Email of the contact.
-     * @param ContactEmail Email of the contact.
+     * Set Email of the contact
+     * @param ContactEmail Email of the contact
      */
     public void setContactEmail(String ContactEmail) {
         this.ContactEmail = ContactEmail;
     }
 
     /**
-     * Get Mobile number of the contact. 
-     * @return ContactNumber Mobile number of the contact.
+     * Get Mobile number of the contact 
+     * @return ContactNumber Mobile number of the contact
      */
     public String getContactNumber() {
         return this.ContactNumber;
     }
 
     /**
-     * Set Mobile number of the contact.
-     * @param ContactNumber Mobile number of the contact.
+     * Set Mobile number of the contact
+     * @param ContactNumber Mobile number of the contact
      */
     public void setContactNumber(String ContactNumber) {
         this.ContactNumber = ContactNumber;
     }
 
     /**
-     * Get Position of the contact. 
-     * @return ContactPosition Position of the contact.
+     * Get Position of the contact 
+     * @return ContactPosition Position of the contact
      */
     public String getContactPosition() {
         return this.ContactPosition;
     }
 
     /**
-     * Set Position of the contact.
-     * @param ContactPosition Position of the contact.
+     * Set Position of the contact
+     * @param ContactPosition Position of the contact
      */
     public void setContactPosition(String ContactPosition) {
         this.ContactPosition = ContactPosition;

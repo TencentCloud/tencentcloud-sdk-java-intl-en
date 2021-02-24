@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class DescribeCertificateOperateLogsResponse extends AbstractModel{
 
     /**
-    * Total number of logs that meet query conditions.
+    * Total number of logs that meet query conditions
     */
     @SerializedName("AllTotal")
     @Expose
     private Long AllTotal;
 
     /**
-    * Number of logs returned for this request.
+    * Number of logs returned for this request
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Certificate operation log list.
+    * Certificate operation log list
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OperateLogs")
@@ -52,41 +52,41 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Total number of logs that meet query conditions. 
-     * @return AllTotal Total number of logs that meet query conditions.
+     * Get Total number of logs that meet query conditions 
+     * @return AllTotal Total number of logs that meet query conditions
      */
     public Long getAllTotal() {
         return this.AllTotal;
     }
 
     /**
-     * Set Total number of logs that meet query conditions.
-     * @param AllTotal Total number of logs that meet query conditions.
+     * Set Total number of logs that meet query conditions
+     * @param AllTotal Total number of logs that meet query conditions
      */
     public void setAllTotal(Long AllTotal) {
         this.AllTotal = AllTotal;
     }
 
     /**
-     * Get Number of logs returned for this request. 
-     * @return TotalCount Number of logs returned for this request.
+     * Get Number of logs returned for this request 
+     * @return TotalCount Number of logs returned for this request
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of logs returned for this request.
-     * @param TotalCount Number of logs returned for this request.
+     * Set Number of logs returned for this request
+     * @param TotalCount Number of logs returned for this request
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Certificate operation log list.
+     * Get Certificate operation log list
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return OperateLogs Certificate operation log list.
+     * @return OperateLogs Certificate operation log list
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public OperationLog [] getOperateLogs() {
@@ -94,9 +94,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Certificate operation log list.
+     * Set Certificate operation log list
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param OperateLogs Certificate operation log list.
+     * @param OperateLogs Certificate operation log list
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setOperateLogs(OperationLog [] OperateLogs) {

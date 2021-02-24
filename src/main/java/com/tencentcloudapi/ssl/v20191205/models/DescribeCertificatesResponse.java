@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeCertificatesResponse extends AbstractModel{
 
     /**
-    * Total number.
+    * Total number
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TotalCount")
@@ -31,7 +31,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long TotalCount;
 
     /**
-    * List.
+    * List
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Certificates")
@@ -46,9 +46,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Total number.
+     * Get Total number
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCount Total number.
+     * @return TotalCount Total number
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getTotalCount() {
@@ -56,9 +56,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Total number.
+     * Set Total number
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TotalCount Total number.
+     * @param TotalCount Total number
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setTotalCount(Long TotalCount) {
@@ -66,9 +66,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List.
+     * Get List
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Certificates List.
+     * @return Certificates List
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Certificates [] getCertificates() {
@@ -76,9 +76,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set List.
+     * Set List
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Certificates List.
+     * @param Certificates List
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setCertificates(Certificates [] Certificates) {

@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class ModifyCertificateAliasRequest extends AbstractModel{
 
     /**
-    * Certificate ID.
+    * Certificate ID
     */
     @SerializedName("CertificateId")
     @Expose
     private String CertificateId;
 
     /**
-    * Alias.
+    * Alias
     */
     @SerializedName("Alias")
     @Expose
     private String Alias;
 
     /**
-     * Get Certificate ID. 
-     * @return CertificateId Certificate ID.
+     * Get Certificate ID 
+     * @return CertificateId Certificate ID
      */
     public String getCertificateId() {
         return this.CertificateId;
     }
 
     /**
-     * Set Certificate ID.
-     * @param CertificateId Certificate ID.
+     * Set Certificate ID
+     * @param CertificateId Certificate ID
      */
     public void setCertificateId(String CertificateId) {
         this.CertificateId = CertificateId;
     }
 
     /**
-     * Get Alias. 
-     * @return Alias Alias.
+     * Get Alias 
+     * @return Alias Alias
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * Set Alias.
-     * @param Alias Alias.
+     * Set Alias
+     * @param Alias Alias
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;

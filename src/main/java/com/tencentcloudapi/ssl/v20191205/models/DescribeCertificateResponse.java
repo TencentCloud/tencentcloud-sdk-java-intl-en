@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeCertificateResponse extends AbstractModel{
 
     /**
-    * User UIN.
+    * User UIN
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OwnerUin")
@@ -31,7 +31,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String OwnerUin;
 
     /**
-    * Project ID.
+    * Project ID
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProjectId")
@@ -39,7 +39,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ProjectId;
 
     /**
-    * Certificate source. trustasia: TrustAsia; upload: certificate uploaded by users.
+    * Certificate source. `trustasia`: TrustAsia; `upload`: certificate uploaded by users
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("From")
@@ -47,7 +47,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String From;
 
     /**
-    * Certificate type. CA: client certificate; SVR: server certificate.
+    * Certificate type. `CA`: client certificate; `SVR`: server certificate
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CertificateType")
@@ -55,7 +55,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String CertificateType;
 
     /**
-    * Certificate package type. 1: GeoTrust DV SSL CA - G3; 2: TrustAsia TLS RSA CA; 3: Secure Site EV Pro; 4: Secure Site EV; 5: Secure Site OV Pro; 6: Secure Site OV; 7: Secure Site OV wildcard SSL certificate; 8: GeoTrust EV; 9: GeoTrust OV; 10: GeoTrust OV wildcard SSL certificate; 11: TrustAsia DV multi-domain SSL certificate; 12: TrustAsia DV wildcard SSL certificate; 13: TrustAsia OV wildcard SSL certificate (D3); 14: TrustAsia OV SSL certificate (D3); 15: TrustAsia OV multi-domain SSL certificate (D3); 16: TrustAsia EV SSL certificate (D3); 17: TrustAsia EV multi-domain SSL certificate (D3); 18: GlobalSign OV SSL certificate; 19: GlobalSign OV wildcard SSL certificate; 20: GlobalSign EV SSL certificate; 21: TrustAsia OV multi-domain wildcard SSL certificate (D3); 22: GlobalSign OV multi-domain SSL certificate; 23: GlobalSign OV multi-domain wildcard SSL certificate; 24: GlobalSign EV multi-domain SSL certificate.
+    * Certificate plan type. `1`: GeoTrust DV SSL CA - G3; `2`: TrustAsia TLS RSA CA; `3`: SecureSite EV Pro; `4`: SecureSite EV; `5`: SecureSite OV Pro; `6`: SecureSite OV; `7`: SecureSite OV wildcard; `8`: GeoTrust EV; `9`: GeoTrust OV; `10`: GeoTrust OV wildcard; `11`: TrustAsia DV multi-domain; `12`: TrustAsia DV wildcard; `13`: TrustAsia OV wildcard D3; `14`: TrustAsia OV D3; `15`: TrustAsia OV multi-domain D3; `16`: TrustAsia EV D3; `17`: TrustAsia EV multi-domain D3; `18`: GlobalSign OV; `19`: GlobalSign OV wildcard; `20`: GlobalSign EV; `21`: TrustAsia OV wildcard multi-domain D3; `22`: GlobalSign OV multi-domain; `23`: GlobalSign OV wildcard multi-domain; `24`: GlobalSign EV multi-domain
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PackageType")
@@ -64,14 +64,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Name of the certificate issuer
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProductZhName")
     @Expose
     private String ProductZhName;
 
     /**
-    * Domain name.
+    * Domain name
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Domain")
@@ -79,7 +79,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Domain;
 
     /**
-    * Alias.
+    * Alias
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Alias")
@@ -87,7 +87,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Alias;
 
     /**
-    * Certificate status. 0: being reviewed; 1: approved; 2: not approved; 3: expired; 4: DNS record added; 5: OV certificate, to be submitted; 6: order being canceled; 7: cancelled; 8: information submitted, confirmation letter to be uploaded; 9: certificate being revoked; 10: revoked; 11: reissuing; 12: revocation confirmation letter to be uploaded.
+    * Certificate status. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: enterprise-grade certificate, pending submission; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload; `9`: revoking certificate; `10`: revoked; `11`: reissuing; `12`: pending revocation confirmation letter upload
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Status")
@@ -95,7 +95,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long Status;
 
     /**
-    * Status information.
+    * Status information
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StatusMsg")
@@ -103,7 +103,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String StatusMsg;
 
     /**
-    * Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file; EMAIL: verification by email.
+    * Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation; `EMAIL`: email validation
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VerifyType")
@@ -111,7 +111,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String VerifyType;
 
     /**
-    * Vulnerability scanning status.
+    * Vulnerability scanning status
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VulnerabilityStatus")
@@ -119,7 +119,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String VulnerabilityStatus;
 
     /**
-    * Time when the certificate takes effect.
+    * Time when the certificate takes effect
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CertBeginTime")
@@ -127,7 +127,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String CertBeginTime;
 
     /**
-    * Time when the certificate expires.
+    * Time when the certificate expires
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CertEndTime")
@@ -135,7 +135,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String CertEndTime;
 
     /**
-    * Validity period of the certificate (unit: month).
+    * Validity period of the certificate, in months
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ValidityPeriod")
@@ -143,7 +143,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ValidityPeriod;
 
     /**
-    * Application time.
+    * Application time
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InsertTime")
@@ -151,7 +151,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String InsertTime;
 
     /**
-    * Order ID.
+    * Order ID
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OrderId")
@@ -159,7 +159,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String OrderId;
 
     /**
-    * Extended information of the certificate.
+    * Extended information of the certificate
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CertificateExtra")
@@ -167,7 +167,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private CertificateExtra CertificateExtra;
 
     /**
-    * DV authentication information.
+    * DV authentication information
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DvAuthDetail")
@@ -175,7 +175,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private DvAuthDetail DvAuthDetail;
 
     /**
-    * Vulnerability scanning assessment report.
+    * Vulnerability scanning assessment report
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VulnerabilityReport")
@@ -183,7 +183,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String VulnerabilityReport;
 
     /**
-    * Certificate ID.
+    * Certificate ID
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CertificateId")
@@ -191,7 +191,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String CertificateId;
 
     /**
-    * Certificate type name.
+    * Certificate type name
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PackageTypeName")
@@ -199,7 +199,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String PackageTypeName;
 
     /**
-    * Status description.
+    * Status description
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StatusName")
@@ -207,7 +207,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String StatusName;
 
     /**
-    * Domain names associated with the certificate (including the primary domain name).
+    * Domain names associated with the certificate (including the primary domain name)
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SubjectAltName")
@@ -215,7 +215,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String [] SubjectAltName;
 
     /**
-    * Whether the customer is a VIP customer.
+    * Whether the customer is a VIP customer
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsVip")
@@ -223,7 +223,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Boolean IsVip;
 
     /**
-    * Whether the certificate is a wildcard certificate.
+    * Whether the certificate is a wildcard certificate
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsWildcard")
@@ -231,7 +231,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Boolean IsWildcard;
 
     /**
-    * Whether the certificate is a DV certificate.
+    * Whether the certificate is a DV certificate
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsDv")
@@ -239,7 +239,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Boolean IsDv;
 
     /**
-    * Whether the vulnerability scanning feature is enabled.
+    * Whether the vulnerability scanning feature is enabled
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsVulnerability")
@@ -247,7 +247,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Boolean IsVulnerability;
 
     /**
-    * Whether the certificate can be reissued.
+    * Whether the certificate can be reissued
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RenewAble")
@@ -255,7 +255,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Boolean RenewAble;
 
     /**
-    * Submitted data.
+    * Submitted data
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SubmittedData")
@@ -263,7 +263,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private SubmittedData SubmittedData;
 
     /**
-    * Whether the certificate can be deployed.
+    * Whether the certificate can be deployed
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Deployable")
@@ -286,9 +286,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String RequestId;
 
     /**
-     * Get User UIN.
+     * Get User UIN
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return OwnerUin User UIN.
+     * @return OwnerUin User UIN
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getOwnerUin() {
@@ -296,9 +296,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set User UIN.
+     * Set User UIN
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param OwnerUin User UIN.
+     * @param OwnerUin User UIN
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setOwnerUin(String OwnerUin) {
@@ -306,9 +306,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Project ID.
+     * Get Project ID
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ProjectId Project ID.
+     * @return ProjectId Project ID
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getProjectId() {
@@ -316,9 +316,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Project ID.
+     * Set Project ID
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ProjectId Project ID.
+     * @param ProjectId Project ID
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setProjectId(String ProjectId) {
@@ -326,9 +326,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Certificate source. trustasia: TrustAsia; upload: certificate uploaded by users.
+     * Get Certificate source. `trustasia`: TrustAsia; `upload`: certificate uploaded by users
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return From Certificate source. trustasia: TrustAsia; upload: certificate uploaded by users.
+     * @return From Certificate source. `trustasia`: TrustAsia; `upload`: certificate uploaded by users
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getFrom() {
@@ -336,9 +336,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Certificate source. trustasia: TrustAsia; upload: certificate uploaded by users.
+     * Set Certificate source. `trustasia`: TrustAsia; `upload`: certificate uploaded by users
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param From Certificate source. trustasia: TrustAsia; upload: certificate uploaded by users.
+     * @param From Certificate source. `trustasia`: TrustAsia; `upload`: certificate uploaded by users
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setFrom(String From) {
@@ -346,9 +346,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Certificate type. CA: client certificate; SVR: server certificate.
+     * Get Certificate type. `CA`: client certificate; `SVR`: server certificate
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CertificateType Certificate type. CA: client certificate; SVR: server certificate.
+     * @return CertificateType Certificate type. `CA`: client certificate; `SVR`: server certificate
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getCertificateType() {
@@ -356,9 +356,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Certificate type. CA: client certificate; SVR: server certificate.
+     * Set Certificate type. `CA`: client certificate; `SVR`: server certificate
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CertificateType Certificate type. CA: client certificate; SVR: server certificate.
+     * @param CertificateType Certificate type. `CA`: client certificate; `SVR`: server certificate
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setCertificateType(String CertificateType) {
@@ -366,9 +366,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Certificate package type. 1: GeoTrust DV SSL CA - G3; 2: TrustAsia TLS RSA CA; 3: Secure Site EV Pro; 4: Secure Site EV; 5: Secure Site OV Pro; 6: Secure Site OV; 7: Secure Site OV wildcard SSL certificate; 8: GeoTrust EV; 9: GeoTrust OV; 10: GeoTrust OV wildcard SSL certificate; 11: TrustAsia DV multi-domain SSL certificate; 12: TrustAsia DV wildcard SSL certificate; 13: TrustAsia OV wildcard SSL certificate (D3); 14: TrustAsia OV SSL certificate (D3); 15: TrustAsia OV multi-domain SSL certificate (D3); 16: TrustAsia EV SSL certificate (D3); 17: TrustAsia EV multi-domain SSL certificate (D3); 18: GlobalSign OV SSL certificate; 19: GlobalSign OV wildcard SSL certificate; 20: GlobalSign EV SSL certificate; 21: TrustAsia OV multi-domain wildcard SSL certificate (D3); 22: GlobalSign OV multi-domain SSL certificate; 23: GlobalSign OV multi-domain wildcard SSL certificate; 24: GlobalSign EV multi-domain SSL certificate.
+     * Get Certificate plan type. `1`: GeoTrust DV SSL CA - G3; `2`: TrustAsia TLS RSA CA; `3`: SecureSite EV Pro; `4`: SecureSite EV; `5`: SecureSite OV Pro; `6`: SecureSite OV; `7`: SecureSite OV wildcard; `8`: GeoTrust EV; `9`: GeoTrust OV; `10`: GeoTrust OV wildcard; `11`: TrustAsia DV multi-domain; `12`: TrustAsia DV wildcard; `13`: TrustAsia OV wildcard D3; `14`: TrustAsia OV D3; `15`: TrustAsia OV multi-domain D3; `16`: TrustAsia EV D3; `17`: TrustAsia EV multi-domain D3; `18`: GlobalSign OV; `19`: GlobalSign OV wildcard; `20`: GlobalSign EV; `21`: TrustAsia OV wildcard multi-domain D3; `22`: GlobalSign OV multi-domain; `23`: GlobalSign OV wildcard multi-domain; `24`: GlobalSign EV multi-domain
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return PackageType Certificate package type. 1: GeoTrust DV SSL CA - G3; 2: TrustAsia TLS RSA CA; 3: Secure Site EV Pro; 4: Secure Site EV; 5: Secure Site OV Pro; 6: Secure Site OV; 7: Secure Site OV wildcard SSL certificate; 8: GeoTrust EV; 9: GeoTrust OV; 10: GeoTrust OV wildcard SSL certificate; 11: TrustAsia DV multi-domain SSL certificate; 12: TrustAsia DV wildcard SSL certificate; 13: TrustAsia OV wildcard SSL certificate (D3); 14: TrustAsia OV SSL certificate (D3); 15: TrustAsia OV multi-domain SSL certificate (D3); 16: TrustAsia EV SSL certificate (D3); 17: TrustAsia EV multi-domain SSL certificate (D3); 18: GlobalSign OV SSL certificate; 19: GlobalSign OV wildcard SSL certificate; 20: GlobalSign EV SSL certificate; 21: TrustAsia OV multi-domain wildcard SSL certificate (D3); 22: GlobalSign OV multi-domain SSL certificate; 23: GlobalSign OV multi-domain wildcard SSL certificate; 24: GlobalSign EV multi-domain SSL certificate.
+     * @return PackageType Certificate plan type. `1`: GeoTrust DV SSL CA - G3; `2`: TrustAsia TLS RSA CA; `3`: SecureSite EV Pro; `4`: SecureSite EV; `5`: SecureSite OV Pro; `6`: SecureSite OV; `7`: SecureSite OV wildcard; `8`: GeoTrust EV; `9`: GeoTrust OV; `10`: GeoTrust OV wildcard; `11`: TrustAsia DV multi-domain; `12`: TrustAsia DV wildcard; `13`: TrustAsia OV wildcard D3; `14`: TrustAsia OV D3; `15`: TrustAsia OV multi-domain D3; `16`: TrustAsia EV D3; `17`: TrustAsia EV multi-domain D3; `18`: GlobalSign OV; `19`: GlobalSign OV wildcard; `20`: GlobalSign EV; `21`: TrustAsia OV wildcard multi-domain D3; `22`: GlobalSign OV multi-domain; `23`: GlobalSign OV wildcard multi-domain; `24`: GlobalSign EV multi-domain
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getPackageType() {
@@ -376,9 +376,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Certificate package type. 1: GeoTrust DV SSL CA - G3; 2: TrustAsia TLS RSA CA; 3: Secure Site EV Pro; 4: Secure Site EV; 5: Secure Site OV Pro; 6: Secure Site OV; 7: Secure Site OV wildcard SSL certificate; 8: GeoTrust EV; 9: GeoTrust OV; 10: GeoTrust OV wildcard SSL certificate; 11: TrustAsia DV multi-domain SSL certificate; 12: TrustAsia DV wildcard SSL certificate; 13: TrustAsia OV wildcard SSL certificate (D3); 14: TrustAsia OV SSL certificate (D3); 15: TrustAsia OV multi-domain SSL certificate (D3); 16: TrustAsia EV SSL certificate (D3); 17: TrustAsia EV multi-domain SSL certificate (D3); 18: GlobalSign OV SSL certificate; 19: GlobalSign OV wildcard SSL certificate; 20: GlobalSign EV SSL certificate; 21: TrustAsia OV multi-domain wildcard SSL certificate (D3); 22: GlobalSign OV multi-domain SSL certificate; 23: GlobalSign OV multi-domain wildcard SSL certificate; 24: GlobalSign EV multi-domain SSL certificate.
+     * Set Certificate plan type. `1`: GeoTrust DV SSL CA - G3; `2`: TrustAsia TLS RSA CA; `3`: SecureSite EV Pro; `4`: SecureSite EV; `5`: SecureSite OV Pro; `6`: SecureSite OV; `7`: SecureSite OV wildcard; `8`: GeoTrust EV; `9`: GeoTrust OV; `10`: GeoTrust OV wildcard; `11`: TrustAsia DV multi-domain; `12`: TrustAsia DV wildcard; `13`: TrustAsia OV wildcard D3; `14`: TrustAsia OV D3; `15`: TrustAsia OV multi-domain D3; `16`: TrustAsia EV D3; `17`: TrustAsia EV multi-domain D3; `18`: GlobalSign OV; `19`: GlobalSign OV wildcard; `20`: GlobalSign EV; `21`: TrustAsia OV wildcard multi-domain D3; `22`: GlobalSign OV multi-domain; `23`: GlobalSign OV wildcard multi-domain; `24`: GlobalSign EV multi-domain
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PackageType Certificate package type. 1: GeoTrust DV SSL CA - G3; 2: TrustAsia TLS RSA CA; 3: Secure Site EV Pro; 4: Secure Site EV; 5: Secure Site OV Pro; 6: Secure Site OV; 7: Secure Site OV wildcard SSL certificate; 8: GeoTrust EV; 9: GeoTrust OV; 10: GeoTrust OV wildcard SSL certificate; 11: TrustAsia DV multi-domain SSL certificate; 12: TrustAsia DV wildcard SSL certificate; 13: TrustAsia OV wildcard SSL certificate (D3); 14: TrustAsia OV SSL certificate (D3); 15: TrustAsia OV multi-domain SSL certificate (D3); 16: TrustAsia EV SSL certificate (D3); 17: TrustAsia EV multi-domain SSL certificate (D3); 18: GlobalSign OV SSL certificate; 19: GlobalSign OV wildcard SSL certificate; 20: GlobalSign EV SSL certificate; 21: TrustAsia OV multi-domain wildcard SSL certificate (D3); 22: GlobalSign OV multi-domain SSL certificate; 23: GlobalSign OV multi-domain wildcard SSL certificate; 24: GlobalSign EV multi-domain SSL certificate.
+     * @param PackageType Certificate plan type. `1`: GeoTrust DV SSL CA - G3; `2`: TrustAsia TLS RSA CA; `3`: SecureSite EV Pro; `4`: SecureSite EV; `5`: SecureSite OV Pro; `6`: SecureSite OV; `7`: SecureSite OV wildcard; `8`: GeoTrust EV; `9`: GeoTrust OV; `10`: GeoTrust OV wildcard; `11`: TrustAsia DV multi-domain; `12`: TrustAsia DV wildcard; `13`: TrustAsia OV wildcard D3; `14`: TrustAsia OV D3; `15`: TrustAsia OV multi-domain D3; `16`: TrustAsia EV D3; `17`: TrustAsia EV multi-domain D3; `18`: GlobalSign OV; `19`: GlobalSign OV wildcard; `20`: GlobalSign EV; `21`: TrustAsia OV wildcard multi-domain D3; `22`: GlobalSign OV multi-domain; `23`: GlobalSign OV wildcard multi-domain; `24`: GlobalSign EV multi-domain
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setPackageType(String PackageType) {
@@ -387,9 +387,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Name of the certificate issuer
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: this field may return null, indicating that no valid values can be obtained. 
      * @return ProductZhName Name of the certificate issuer
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getProductZhName() {
         return this.ProductZhName;
@@ -397,18 +397,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Name of the certificate issuer
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param ProductZhName Name of the certificate issuer
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setProductZhName(String ProductZhName) {
         this.ProductZhName = ProductZhName;
     }
 
     /**
-     * Get Domain name.
+     * Get Domain name
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Domain Domain name.
+     * @return Domain Domain name
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getDomain() {
@@ -416,9 +416,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Domain name.
+     * Set Domain name
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Domain Domain name.
+     * @param Domain Domain name
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDomain(String Domain) {
@@ -426,9 +426,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Alias.
+     * Get Alias
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Alias Alias.
+     * @return Alias Alias
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getAlias() {
@@ -436,9 +436,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Alias.
+     * Set Alias
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Alias Alias.
+     * @param Alias Alias
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setAlias(String Alias) {
@@ -446,9 +446,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Certificate status. 0: being reviewed; 1: approved; 2: not approved; 3: expired; 4: DNS record added; 5: OV certificate, to be submitted; 6: order being canceled; 7: cancelled; 8: information submitted, confirmation letter to be uploaded; 9: certificate being revoked; 10: revoked; 11: reissuing; 12: revocation confirmation letter to be uploaded.
+     * Get Certificate status. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: enterprise-grade certificate, pending submission; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload; `9`: revoking certificate; `10`: revoked; `11`: reissuing; `12`: pending revocation confirmation letter upload
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Status Certificate status. 0: being reviewed; 1: approved; 2: not approved; 3: expired; 4: DNS record added; 5: OV certificate, to be submitted; 6: order being canceled; 7: cancelled; 8: information submitted, confirmation letter to be uploaded; 9: certificate being revoked; 10: revoked; 11: reissuing; 12: revocation confirmation letter to be uploaded.
+     * @return Status Certificate status. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: enterprise-grade certificate, pending submission; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload; `9`: revoking certificate; `10`: revoked; `11`: reissuing; `12`: pending revocation confirmation letter upload
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getStatus() {
@@ -456,9 +456,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Certificate status. 0: being reviewed; 1: approved; 2: not approved; 3: expired; 4: DNS record added; 5: OV certificate, to be submitted; 6: order being canceled; 7: cancelled; 8: information submitted, confirmation letter to be uploaded; 9: certificate being revoked; 10: revoked; 11: reissuing; 12: revocation confirmation letter to be uploaded.
+     * Set Certificate status. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: enterprise-grade certificate, pending submission; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload; `9`: revoking certificate; `10`: revoked; `11`: reissuing; `12`: pending revocation confirmation letter upload
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Status Certificate status. 0: being reviewed; 1: approved; 2: not approved; 3: expired; 4: DNS record added; 5: OV certificate, to be submitted; 6: order being canceled; 7: cancelled; 8: information submitted, confirmation letter to be uploaded; 9: certificate being revoked; 10: revoked; 11: reissuing; 12: revocation confirmation letter to be uploaded.
+     * @param Status Certificate status. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: enterprise-grade certificate, pending submission; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload; `9`: revoking certificate; `10`: revoked; `11`: reissuing; `12`: pending revocation confirmation letter upload
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setStatus(Long Status) {
@@ -466,9 +466,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Status information.
+     * Get Status information
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return StatusMsg Status information.
+     * @return StatusMsg Status information
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getStatusMsg() {
@@ -476,9 +476,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Status information.
+     * Set Status information
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param StatusMsg Status information.
+     * @param StatusMsg Status information
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setStatusMsg(String StatusMsg) {
@@ -486,9 +486,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file; EMAIL: verification by email.
+     * Get Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation; `EMAIL`: email validation
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return VerifyType Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file; EMAIL: verification by email.
+     * @return VerifyType Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation; `EMAIL`: email validation
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getVerifyType() {
@@ -496,9 +496,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file; EMAIL: verification by email.
+     * Set Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation; `EMAIL`: email validation
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param VerifyType Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file; EMAIL: verification by email.
+     * @param VerifyType Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation; `EMAIL`: email validation
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setVerifyType(String VerifyType) {
@@ -506,9 +506,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Vulnerability scanning status.
+     * Get Vulnerability scanning status
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return VulnerabilityStatus Vulnerability scanning status.
+     * @return VulnerabilityStatus Vulnerability scanning status
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getVulnerabilityStatus() {
@@ -516,9 +516,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Vulnerability scanning status.
+     * Set Vulnerability scanning status
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param VulnerabilityStatus Vulnerability scanning status.
+     * @param VulnerabilityStatus Vulnerability scanning status
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setVulnerabilityStatus(String VulnerabilityStatus) {
@@ -526,9 +526,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Time when the certificate takes effect.
+     * Get Time when the certificate takes effect
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CertBeginTime Time when the certificate takes effect.
+     * @return CertBeginTime Time when the certificate takes effect
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getCertBeginTime() {
@@ -536,9 +536,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Time when the certificate takes effect.
+     * Set Time when the certificate takes effect
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CertBeginTime Time when the certificate takes effect.
+     * @param CertBeginTime Time when the certificate takes effect
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setCertBeginTime(String CertBeginTime) {
@@ -546,9 +546,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Time when the certificate expires.
+     * Get Time when the certificate expires
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CertEndTime Time when the certificate expires.
+     * @return CertEndTime Time when the certificate expires
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getCertEndTime() {
@@ -556,9 +556,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Time when the certificate expires.
+     * Set Time when the certificate expires
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CertEndTime Time when the certificate expires.
+     * @param CertEndTime Time when the certificate expires
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setCertEndTime(String CertEndTime) {
@@ -566,9 +566,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Validity period of the certificate (unit: month).
+     * Get Validity period of the certificate, in months
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ValidityPeriod Validity period of the certificate (unit: month).
+     * @return ValidityPeriod Validity period of the certificate, in months
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getValidityPeriod() {
@@ -576,9 +576,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Validity period of the certificate (unit: month).
+     * Set Validity period of the certificate, in months
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ValidityPeriod Validity period of the certificate (unit: month).
+     * @param ValidityPeriod Validity period of the certificate, in months
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setValidityPeriod(String ValidityPeriod) {
@@ -586,9 +586,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Application time.
+     * Get Application time
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return InsertTime Application time.
+     * @return InsertTime Application time
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getInsertTime() {
@@ -596,9 +596,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Application time.
+     * Set Application time
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param InsertTime Application time.
+     * @param InsertTime Application time
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setInsertTime(String InsertTime) {
@@ -606,9 +606,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Order ID.
+     * Get Order ID
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return OrderId Order ID.
+     * @return OrderId Order ID
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getOrderId() {
@@ -616,9 +616,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Order ID.
+     * Set Order ID
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param OrderId Order ID.
+     * @param OrderId Order ID
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setOrderId(String OrderId) {
@@ -626,9 +626,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Extended information of the certificate.
+     * Get Extended information of the certificate
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CertificateExtra Extended information of the certificate.
+     * @return CertificateExtra Extended information of the certificate
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public CertificateExtra getCertificateExtra() {
@@ -636,9 +636,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Extended information of the certificate.
+     * Set Extended information of the certificate
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CertificateExtra Extended information of the certificate.
+     * @param CertificateExtra Extended information of the certificate
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setCertificateExtra(CertificateExtra CertificateExtra) {
@@ -646,9 +646,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get DV authentication information.
+     * Get DV authentication information
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DvAuthDetail DV authentication information.
+     * @return DvAuthDetail DV authentication information
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public DvAuthDetail getDvAuthDetail() {
@@ -656,9 +656,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set DV authentication information.
+     * Set DV authentication information
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DvAuthDetail DV authentication information.
+     * @param DvAuthDetail DV authentication information
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDvAuthDetail(DvAuthDetail DvAuthDetail) {
@@ -666,9 +666,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Vulnerability scanning assessment report.
+     * Get Vulnerability scanning assessment report
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return VulnerabilityReport Vulnerability scanning assessment report.
+     * @return VulnerabilityReport Vulnerability scanning assessment report
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getVulnerabilityReport() {
@@ -676,9 +676,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Vulnerability scanning assessment report.
+     * Set Vulnerability scanning assessment report
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param VulnerabilityReport Vulnerability scanning assessment report.
+     * @param VulnerabilityReport Vulnerability scanning assessment report
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setVulnerabilityReport(String VulnerabilityReport) {
@@ -686,9 +686,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Certificate ID.
+     * Get Certificate ID
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CertificateId Certificate ID.
+     * @return CertificateId Certificate ID
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getCertificateId() {
@@ -696,9 +696,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Certificate ID.
+     * Set Certificate ID
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CertificateId Certificate ID.
+     * @param CertificateId Certificate ID
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setCertificateId(String CertificateId) {
@@ -706,9 +706,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Certificate type name.
+     * Get Certificate type name
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return PackageTypeName Certificate type name.
+     * @return PackageTypeName Certificate type name
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getPackageTypeName() {
@@ -716,9 +716,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Certificate type name.
+     * Set Certificate type name
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PackageTypeName Certificate type name.
+     * @param PackageTypeName Certificate type name
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setPackageTypeName(String PackageTypeName) {
@@ -726,9 +726,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Status description.
+     * Get Status description
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return StatusName Status description.
+     * @return StatusName Status description
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getStatusName() {
@@ -736,9 +736,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Status description.
+     * Set Status description
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param StatusName Status description.
+     * @param StatusName Status description
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setStatusName(String StatusName) {
@@ -746,9 +746,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Domain names associated with the certificate (including the primary domain name).
+     * Get Domain names associated with the certificate (including the primary domain name)
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SubjectAltName Domain names associated with the certificate (including the primary domain name).
+     * @return SubjectAltName Domain names associated with the certificate (including the primary domain name)
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String [] getSubjectAltName() {
@@ -756,9 +756,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Domain names associated with the certificate (including the primary domain name).
+     * Set Domain names associated with the certificate (including the primary domain name)
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SubjectAltName Domain names associated with the certificate (including the primary domain name).
+     * @param SubjectAltName Domain names associated with the certificate (including the primary domain name)
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setSubjectAltName(String [] SubjectAltName) {
@@ -766,9 +766,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether the customer is a VIP customer.
+     * Get Whether the customer is a VIP customer
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return IsVip Whether the customer is a VIP customer.
+     * @return IsVip Whether the customer is a VIP customer
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getIsVip() {
@@ -776,9 +776,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether the customer is a VIP customer.
+     * Set Whether the customer is a VIP customer
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param IsVip Whether the customer is a VIP customer.
+     * @param IsVip Whether the customer is a VIP customer
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setIsVip(Boolean IsVip) {
@@ -786,9 +786,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether the certificate is a wildcard certificate.
+     * Get Whether the certificate is a wildcard certificate
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return IsWildcard Whether the certificate is a wildcard certificate.
+     * @return IsWildcard Whether the certificate is a wildcard certificate
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getIsWildcard() {
@@ -796,9 +796,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether the certificate is a wildcard certificate.
+     * Set Whether the certificate is a wildcard certificate
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param IsWildcard Whether the certificate is a wildcard certificate.
+     * @param IsWildcard Whether the certificate is a wildcard certificate
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setIsWildcard(Boolean IsWildcard) {
@@ -806,9 +806,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether the certificate is a DV certificate.
+     * Get Whether the certificate is a DV certificate
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return IsDv Whether the certificate is a DV certificate.
+     * @return IsDv Whether the certificate is a DV certificate
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getIsDv() {
@@ -816,9 +816,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether the certificate is a DV certificate.
+     * Set Whether the certificate is a DV certificate
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param IsDv Whether the certificate is a DV certificate.
+     * @param IsDv Whether the certificate is a DV certificate
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setIsDv(Boolean IsDv) {
@@ -826,9 +826,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether the vulnerability scanning feature is enabled.
+     * Get Whether the vulnerability scanning feature is enabled
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return IsVulnerability Whether the vulnerability scanning feature is enabled.
+     * @return IsVulnerability Whether the vulnerability scanning feature is enabled
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getIsVulnerability() {
@@ -836,9 +836,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether the vulnerability scanning feature is enabled.
+     * Set Whether the vulnerability scanning feature is enabled
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param IsVulnerability Whether the vulnerability scanning feature is enabled.
+     * @param IsVulnerability Whether the vulnerability scanning feature is enabled
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setIsVulnerability(Boolean IsVulnerability) {
@@ -846,9 +846,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether the certificate can be reissued.
+     * Get Whether the certificate can be reissued
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RenewAble Whether the certificate can be reissued.
+     * @return RenewAble Whether the certificate can be reissued
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getRenewAble() {
@@ -856,9 +856,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether the certificate can be reissued.
+     * Set Whether the certificate can be reissued
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RenewAble Whether the certificate can be reissued.
+     * @param RenewAble Whether the certificate can be reissued
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setRenewAble(Boolean RenewAble) {
@@ -866,9 +866,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Submitted data.
+     * Get Submitted data
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SubmittedData Submitted data.
+     * @return SubmittedData Submitted data
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public SubmittedData getSubmittedData() {
@@ -876,9 +876,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Submitted data.
+     * Set Submitted data
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SubmittedData Submitted data.
+     * @param SubmittedData Submitted data
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setSubmittedData(SubmittedData SubmittedData) {
@@ -886,9 +886,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether the certificate can be deployed.
+     * Get Whether the certificate can be deployed
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Deployable Whether the certificate can be deployed.
+     * @return Deployable Whether the certificate can be deployed
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getDeployable() {
@@ -896,9 +896,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether the certificate can be deployed.
+     * Set Whether the certificate can be deployed
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Deployable Whether the certificate can be deployed.
+     * @param Deployable Whether the certificate can be deployed
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setDeployable(Boolean Deployable) {

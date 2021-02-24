@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DeleteCertificateResponse extends AbstractModel{
 
     /**
-    * Deletion result (`true`: deleted successfully; `false`: failed to delete)
+    * Deletion result
     */
     @SerializedName("DeleteResult")
     @Expose
@@ -37,16 +37,16 @@ public class DeleteCertificateResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Deletion result (`true`: deleted successfully; `false`: failed to delete) 
-     * @return DeleteResult Deletion result (`true`: deleted successfully; `false`: failed to delete)
+     * Get Deletion result 
+     * @return DeleteResult Deletion result
      */
     public Boolean getDeleteResult() {
         return this.DeleteResult;
     }
 
     /**
-     * Set Deletion result (`true`: deleted successfully; `false`: failed to delete)
-     * @param DeleteResult Deletion result (`true`: deleted successfully; `false`: failed to delete)
+     * Set Deletion result
+     * @param DeleteResult Deletion result
      */
     public void setDeleteResult(Boolean DeleteResult) {
         this.DeleteResult = DeleteResult;

@@ -41,6 +41,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String TargetLocationId;
 
     /**
+    * Redirection status code
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RewriteCode")
+    @Expose
+    private Long RewriteCode;
+
+    /**
+    * Whether the matched URL is carried in redirection.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TakeUrl")
+    @Expose
+    private Boolean TakeUrl;
+
+    /**
+    * Redirection type. Manual: manual redirection; Auto: automatic redirection.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RewriteType")
+    @Expose
+    private String RewriteType;
+
+    /**
      * Get Listener ID of a redirect target
 Note: This field may return null, indicating that there is no redirection.
 Note: This field may return null, indicating that no valid values can be obtained. 
@@ -89,11 +113,74 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Redirection status code
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return RewriteCode Redirection status code
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getRewriteCode() {
+        return this.RewriteCode;
+    }
+
+    /**
+     * Set Redirection status code
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param RewriteCode Redirection status code
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setRewriteCode(Long RewriteCode) {
+        this.RewriteCode = RewriteCode;
+    }
+
+    /**
+     * Get Whether the matched URL is carried in redirection.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return TakeUrl Whether the matched URL is carried in redirection.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Boolean getTakeUrl() {
+        return this.TakeUrl;
+    }
+
+    /**
+     * Set Whether the matched URL is carried in redirection.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param TakeUrl Whether the matched URL is carried in redirection.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setTakeUrl(Boolean TakeUrl) {
+        this.TakeUrl = TakeUrl;
+    }
+
+    /**
+     * Get Redirection type. Manual: manual redirection; Auto: automatic redirection.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return RewriteType Redirection type. Manual: manual redirection; Auto: automatic redirection.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getRewriteType() {
+        return this.RewriteType;
+    }
+
+    /**
+     * Set Redirection type. Manual: manual redirection; Auto: automatic redirection.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param RewriteType Redirection type. Manual: manual redirection; Auto: automatic redirection.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setRewriteType(String RewriteType) {
+        this.RewriteType = RewriteType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TargetListenerId", this.TargetListenerId);
         this.setParamSimple(map, prefix + "TargetLocationId", this.TargetLocationId);
+        this.setParamSimple(map, prefix + "RewriteCode", this.RewriteCode);
+        this.setParamSimple(map, prefix + "TakeUrl", this.TakeUrl);
+        this.setParamSimple(map, prefix + "RewriteType", this.RewriteType);
 
     }
 }
