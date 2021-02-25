@@ -58,7 +58,7 @@ public class UpgradeLifecycleHookRequest extends AbstractModel{
     private Long HeartbeatTimeout;
 
     /**
-    * Additional information sent by AS to the notification target. The default value is ''
+    * Additional information of a notification that Auto Scaling sends to targets. This parameter is left empty by default.
     */
     @SerializedName("NotificationMetadata")
     @Expose
@@ -159,16 +159,16 @@ public class UpgradeLifecycleHookRequest extends AbstractModel{
     }
 
     /**
-     * Get Additional information sent by AS to the notification target. The default value is '' 
-     * @return NotificationMetadata Additional information sent by AS to the notification target. The default value is ''
+     * Get Additional information of a notification that Auto Scaling sends to targets. This parameter is left empty by default. 
+     * @return NotificationMetadata Additional information of a notification that Auto Scaling sends to targets. This parameter is left empty by default.
      */
     public String getNotificationMetadata() {
         return this.NotificationMetadata;
     }
 
     /**
-     * Set Additional information sent by AS to the notification target. The default value is ''
-     * @param NotificationMetadata Additional information sent by AS to the notification target. The default value is ''
+     * Set Additional information of a notification that Auto Scaling sends to targets. This parameter is left empty by default.
+     * @param NotificationMetadata Additional information of a notification that Auto Scaling sends to targets. This parameter is left empty by default.
      */
     public void setNotificationMetadata(String NotificationMetadata) {
         this.NotificationMetadata = NotificationMetadata;

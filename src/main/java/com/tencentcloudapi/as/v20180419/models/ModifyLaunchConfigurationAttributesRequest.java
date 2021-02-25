@@ -37,8 +37,8 @@ public class ModifyLaunchConfigurationAttributesRequest extends AbstractModel{
     private String ImageId;
 
     /**
-    * List of instance types. Different instance models specify different resource specifications. Up to 5 instance models can be supported.
-The launch configuration uses InstanceType to indicate one single instance type and InstanceTypes to indicate multiple instance types. After InstanceTypes is successfully specified for the launch configuration, the original InstanceType will be automatically invalidated.
+    * List of instance types. Each type specifies different resource specifications. This list contains up to 10 instance types.
+The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. After `InstanceTypes` is successfully specified for the launch configuration, the original `InstanceType` will be automatically invalidated.
     */
     @SerializedName("InstanceTypes")
     @Expose
@@ -69,6 +69,47 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
     @SerializedName("UserData")
     @Expose
     private String UserData;
+
+    /**
+    * Security group to which the instance belongs. This parameter can be obtained from the `SecurityGroupId` field in the response of the [`DescribeSecurityGroups`](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API.
+At least one security group is required for this parameter. The security group specified is sequential.
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
+    * Information of the public network bandwidth configuration.
+To modify it or even its subfield, you should specify all the subfields again.
+    */
+    @SerializedName("InternetAccessible")
+    @Expose
+    private InternetAccessible InternetAccessible;
+
+    /**
+    * Instance billing mode. Valid values:
+<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
+<br><li>SPOTPAID: spot instance
+    */
+    @SerializedName("InstanceChargeType")
+    @Expose
+    private String InstanceChargeType;
+
+    /**
+    * 
+    */
+    @SerializedName("InstanceChargePrepaid")
+    @Expose
+    private InstanceChargePrepaid InstanceChargePrepaid;
+
+    /**
+    * Market-related options for instances, such as parameters related to spot instances.
+This parameter is required when changing the instance billing mode to spot instance. It will be automatically discarded after the spot instance is changed to another instance billing mode.
+To modify it or even its subfield, you should specify all the subfields again.
+    */
+    @SerializedName("InstanceMarketOptions")
+    @Expose
+    private InstanceMarketOptionsRequest InstanceMarketOptions;
 
     /**
      * Get Launch configuration ID 
@@ -103,20 +144,20 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
     }
 
     /**
-     * Get List of instance types. Different instance models specify different resource specifications. Up to 5 instance models can be supported.
-The launch configuration uses InstanceType to indicate one single instance type and InstanceTypes to indicate multiple instance types. After InstanceTypes is successfully specified for the launch configuration, the original InstanceType will be automatically invalidated. 
-     * @return InstanceTypes List of instance types. Different instance models specify different resource specifications. Up to 5 instance models can be supported.
-The launch configuration uses InstanceType to indicate one single instance type and InstanceTypes to indicate multiple instance types. After InstanceTypes is successfully specified for the launch configuration, the original InstanceType will be automatically invalidated.
+     * Get List of instance types. Each type specifies different resource specifications. This list contains up to 10 instance types.
+The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. After `InstanceTypes` is successfully specified for the launch configuration, the original `InstanceType` will be automatically invalidated. 
+     * @return InstanceTypes List of instance types. Each type specifies different resource specifications. This list contains up to 10 instance types.
+The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. After `InstanceTypes` is successfully specified for the launch configuration, the original `InstanceType` will be automatically invalidated.
      */
     public String [] getInstanceTypes() {
         return this.InstanceTypes;
     }
 
     /**
-     * Set List of instance types. Different instance models specify different resource specifications. Up to 5 instance models can be supported.
-The launch configuration uses InstanceType to indicate one single instance type and InstanceTypes to indicate multiple instance types. After InstanceTypes is successfully specified for the launch configuration, the original InstanceType will be automatically invalidated.
-     * @param InstanceTypes List of instance types. Different instance models specify different resource specifications. Up to 5 instance models can be supported.
-The launch configuration uses InstanceType to indicate one single instance type and InstanceTypes to indicate multiple instance types. After InstanceTypes is successfully specified for the launch configuration, the original InstanceType will be automatically invalidated.
+     * Set List of instance types. Each type specifies different resource specifications. This list contains up to 10 instance types.
+The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. After `InstanceTypes` is successfully specified for the launch configuration, the original `InstanceType` will be automatically invalidated.
+     * @param InstanceTypes List of instance types. Each type specifies different resource specifications. This list contains up to 10 instance types.
+The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. After `InstanceTypes` is successfully specified for the launch configuration, the original `InstanceType` will be automatically invalidated.
      */
     public void setInstanceTypes(String [] InstanceTypes) {
         this.InstanceTypes = InstanceTypes;
@@ -191,6 +232,110 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
     }
 
     /**
+     * Get Security group to which the instance belongs. This parameter can be obtained from the `SecurityGroupId` field in the response of the [`DescribeSecurityGroups`](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API.
+At least one security group is required for this parameter. The security group specified is sequential. 
+     * @return SecurityGroupIds Security group to which the instance belongs. This parameter can be obtained from the `SecurityGroupId` field in the response of the [`DescribeSecurityGroups`](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API.
+At least one security group is required for this parameter. The security group specified is sequential.
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set Security group to which the instance belongs. This parameter can be obtained from the `SecurityGroupId` field in the response of the [`DescribeSecurityGroups`](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API.
+At least one security group is required for this parameter. The security group specified is sequential.
+     * @param SecurityGroupIds Security group to which the instance belongs. This parameter can be obtained from the `SecurityGroupId` field in the response of the [`DescribeSecurityGroups`](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API.
+At least one security group is required for this parameter. The security group specified is sequential.
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
+    /**
+     * Get Information of the public network bandwidth configuration.
+To modify it or even its subfield, you should specify all the subfields again. 
+     * @return InternetAccessible Information of the public network bandwidth configuration.
+To modify it or even its subfield, you should specify all the subfields again.
+     */
+    public InternetAccessible getInternetAccessible() {
+        return this.InternetAccessible;
+    }
+
+    /**
+     * Set Information of the public network bandwidth configuration.
+To modify it or even its subfield, you should specify all the subfields again.
+     * @param InternetAccessible Information of the public network bandwidth configuration.
+To modify it or even its subfield, you should specify all the subfields again.
+     */
+    public void setInternetAccessible(InternetAccessible InternetAccessible) {
+        this.InternetAccessible = InternetAccessible;
+    }
+
+    /**
+     * Get Instance billing mode. Valid values:
+<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
+<br><li>SPOTPAID: spot instance 
+     * @return InstanceChargeType Instance billing mode. Valid values:
+<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
+<br><li>SPOTPAID: spot instance
+     */
+    public String getInstanceChargeType() {
+        return this.InstanceChargeType;
+    }
+
+    /**
+     * Set Instance billing mode. Valid values:
+<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
+<br><li>SPOTPAID: spot instance
+     * @param InstanceChargeType Instance billing mode. Valid values:
+<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
+<br><li>SPOTPAID: spot instance
+     */
+    public void setInstanceChargeType(String InstanceChargeType) {
+        this.InstanceChargeType = InstanceChargeType;
+    }
+
+    /**
+     * Get  
+     * @return InstanceChargePrepaid 
+     */
+    public InstanceChargePrepaid getInstanceChargePrepaid() {
+        return this.InstanceChargePrepaid;
+    }
+
+    /**
+     * Set 
+     * @param InstanceChargePrepaid 
+     */
+    public void setInstanceChargePrepaid(InstanceChargePrepaid InstanceChargePrepaid) {
+        this.InstanceChargePrepaid = InstanceChargePrepaid;
+    }
+
+    /**
+     * Get Market-related options for instances, such as parameters related to spot instances.
+This parameter is required when changing the instance billing mode to spot instance. It will be automatically discarded after the spot instance is changed to another instance billing mode.
+To modify it or even its subfield, you should specify all the subfields again. 
+     * @return InstanceMarketOptions Market-related options for instances, such as parameters related to spot instances.
+This parameter is required when changing the instance billing mode to spot instance. It will be automatically discarded after the spot instance is changed to another instance billing mode.
+To modify it or even its subfield, you should specify all the subfields again.
+     */
+    public InstanceMarketOptionsRequest getInstanceMarketOptions() {
+        return this.InstanceMarketOptions;
+    }
+
+    /**
+     * Set Market-related options for instances, such as parameters related to spot instances.
+This parameter is required when changing the instance billing mode to spot instance. It will be automatically discarded after the spot instance is changed to another instance billing mode.
+To modify it or even its subfield, you should specify all the subfields again.
+     * @param InstanceMarketOptions Market-related options for instances, such as parameters related to spot instances.
+This parameter is required when changing the instance billing mode to spot instance. It will be automatically discarded after the spot instance is changed to another instance billing mode.
+To modify it or even its subfield, you should specify all the subfields again.
+     */
+    public void setInstanceMarketOptions(InstanceMarketOptionsRequest InstanceMarketOptions) {
+        this.InstanceMarketOptions = InstanceMarketOptions;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -200,6 +345,11 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
         this.setParamSimple(map, prefix + "InstanceTypesCheckPolicy", this.InstanceTypesCheckPolicy);
         this.setParamSimple(map, prefix + "LaunchConfigurationName", this.LaunchConfigurationName);
         this.setParamSimple(map, prefix + "UserData", this.UserData);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
+        this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+        this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
+        this.setParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
 
     }
 }

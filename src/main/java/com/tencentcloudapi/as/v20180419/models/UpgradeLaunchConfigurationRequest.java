@@ -65,9 +65,9 @@ public class UpgradeLaunchConfigurationRequest extends AbstractModel{
     private EnhancedService EnhancedService;
 
     /**
-    * Instance billing type. CVM instances are POSTPAID_BY_HOUR by default.
-<br><li>POSTPAID_BY_HOUR: Pay-as-you-go on an hourly basis
-<br><li>SPOTPAID: Bidding
+    * Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
+<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
+<br><li>SPOTPAID: spot instance
     */
     @SerializedName("InstanceChargeType")
     @Expose
@@ -266,24 +266,24 @@ If a model in InstanceTypes does not exist or has been deactivated, a verificati
     }
 
     /**
-     * Get Instance billing type. CVM instances are POSTPAID_BY_HOUR by default.
-<br><li>POSTPAID_BY_HOUR: Pay-as-you-go on an hourly basis
-<br><li>SPOTPAID: Bidding 
-     * @return InstanceChargeType Instance billing type. CVM instances are POSTPAID_BY_HOUR by default.
-<br><li>POSTPAID_BY_HOUR: Pay-as-you-go on an hourly basis
-<br><li>SPOTPAID: Bidding
+     * Get Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
+<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
+<br><li>SPOTPAID: spot instance 
+     * @return InstanceChargeType Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
+<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
+<br><li>SPOTPAID: spot instance
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set Instance billing type. CVM instances are POSTPAID_BY_HOUR by default.
-<br><li>POSTPAID_BY_HOUR: Pay-as-you-go on an hourly basis
-<br><li>SPOTPAID: Bidding
-     * @param InstanceChargeType Instance billing type. CVM instances are POSTPAID_BY_HOUR by default.
-<br><li>POSTPAID_BY_HOUR: Pay-as-you-go on an hourly basis
-<br><li>SPOTPAID: Bidding
+     * Set Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
+<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
+<br><li>SPOTPAID: spot instance
+     * @param InstanceChargeType Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
+<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
+<br><li>SPOTPAID: spot instance
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
