@@ -368,7 +368,7 @@ This operation will also be denied if the current environment has not been publi
     }
 
     /**
-     *This API is used to query the details of an API deployed in API Gateway.
+     *This API (`DescribeApi`) is used to query the details of the APIs users manage via Tencent Cloud API Gateway.
      * @param req DescribeApiRequest
      * @return DescribeApiResponse
      * @throws TencentCloudSDKException
