@@ -59,6 +59,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *This API is used to disable public network access for a PostgreSQL for Serverless instance.
+     * @param req CloseServerlessDBExtranetAccessRequest
+     * @return CloseServerlessDBExtranetAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloseServerlessDBExtranetAccessResponse CloseServerlessDBExtranetAccess(CloseServerlessDBExtranetAccessRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CloseServerlessDBExtranetAccessResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CloseServerlessDBExtranetAccessResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CloseServerlessDBExtranetAccess");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create one or more TencentDB for PostgreSQL instances.
      * @param req CreateDBInstancesRequest
      * @return CreateDBInstancesResponse
@@ -551,6 +571,26 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<OpenDBExtranetAccessResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "OpenDBExtranetAccess");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to enable public network access for a PostgreSQL for Serverless instance.
+     * @param req OpenServerlessDBExtranetAccessRequest
+     * @return OpenServerlessDBExtranetAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenServerlessDBExtranetAccessResponse OpenServerlessDBExtranetAccess(OpenServerlessDBExtranetAccessRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<OpenServerlessDBExtranetAccessResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<OpenServerlessDBExtranetAccessResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "OpenServerlessDBExtranetAccess");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
