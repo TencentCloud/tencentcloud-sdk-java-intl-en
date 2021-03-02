@@ -39,6 +39,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *This API is used to add a read-only replica to an RO group.
+     * @param req AddDBInstanceToReadOnlyGroupRequest
+     * @return AddDBInstanceToReadOnlyGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddDBInstanceToReadOnlyGroupResponse AddDBInstanceToReadOnlyGroup(AddDBInstanceToReadOnlyGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddDBInstanceToReadOnlyGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddDBInstanceToReadOnlyGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddDBInstanceToReadOnlyGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to disable the public network link to an instance.
      * @param req CloseDBExtranetAccessRequest
      * @return CloseDBExtranetAccessResponse
@@ -99,6 +119,46 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create read-only replicas.
+     * @param req CreateReadOnlyDBInstanceRequest
+     * @return CreateReadOnlyDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateReadOnlyDBInstanceResponse CreateReadOnlyDBInstance(CreateReadOnlyDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateReadOnlyDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateReadOnlyDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateReadOnlyDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create an RO group.
+     * @param req CreateReadOnlyGroupRequest
+     * @return CreateReadOnlyGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateReadOnlyGroupResponse CreateReadOnlyGroup(CreateReadOnlyGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateReadOnlyGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateReadOnlyGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateReadOnlyGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a PostgreSQL for Serverless instance. If the creation succeeds, the instance ID will be returned.
      * @param req CreateServerlessDBInstanceRequest
      * @return CreateServerlessDBInstanceResponse
@@ -111,6 +171,26 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateServerlessDBInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateServerlessDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete an RO group.
+     * @param req DeleteReadOnlyGroupRequest
+     * @return DeleteReadOnlyGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteReadOnlyGroupResponse DeleteReadOnlyGroup(DeleteReadOnlyGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteReadOnlyGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteReadOnlyGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteReadOnlyGroup");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -339,6 +419,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query RO group information by specifying the primary instance IDs.
+     * @param req DescribeReadOnlyGroupsRequest
+     * @return DescribeReadOnlyGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReadOnlyGroupsResponse DescribeReadOnlyGroups(DescribeReadOnlyGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeReadOnlyGroupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeReadOnlyGroupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeReadOnlyGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the purchasable regions.
      * @param req DescribeRegionsRequest
      * @return DescribeRegionsResponse
@@ -399,7 +499,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *This API is used to terminate the instance corresponding to a specified `DBInstanceId`.
+     *This API is used to terminate a pay-as-you-go instance by specifying the `DBInstanceId` parameter.
      * @param req DestroyDBInstanceRequest
      * @return DestroyDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -539,6 +639,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify the RO group of an instance.
+     * @param req ModifyDBInstanceReadOnlyGroupRequest
+     * @return ModifyDBInstanceReadOnlyGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceReadOnlyGroupResponse ModifyDBInstanceReadOnlyGroup(ModifyDBInstanceReadOnlyGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDBInstanceReadOnlyGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceReadOnlyGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDBInstanceReadOnlyGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to transfer an instance to another project.
      * @param req ModifyDBInstancesProjectRequest
      * @return ModifyDBInstancesProjectResponse
@@ -551,6 +671,26 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyDBInstancesProjectResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyDBInstancesProject");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify RO group configuration.
+     * @param req ModifyReadOnlyGroupConfigRequest
+     * @return ModifyReadOnlyGroupConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyReadOnlyGroupConfigResponse ModifyReadOnlyGroupConfig(ModifyReadOnlyGroupConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyReadOnlyGroupConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyReadOnlyGroupConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyReadOnlyGroupConfig");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -591,6 +731,46 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<OpenServerlessDBExtranetAccessResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "OpenServerlessDBExtranetAccess");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to rebalance the loads of read-only replicas in an RO group. Please note that connections to those read-only replicas will be interrupted transiently; therefore, you should ensure that your application can reconnect to the databases. This operation should be performed with caution.
+     * @param req RebalanceReadOnlyGroupRequest
+     * @return RebalanceReadOnlyGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public RebalanceReadOnlyGroupResponse RebalanceReadOnlyGroup(RebalanceReadOnlyGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RebalanceReadOnlyGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RebalanceReadOnlyGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RebalanceReadOnlyGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to remove a read-only replica from an RO group.
+     * @param req RemoveDBInstanceFromReadOnlyGroupRequest
+     * @return RemoveDBInstanceFromReadOnlyGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveDBInstanceFromReadOnlyGroupResponse RemoveDBInstanceFromReadOnlyGroup(RemoveDBInstanceFromReadOnlyGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RemoveDBInstanceFromReadOnlyGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RemoveDBInstanceFromReadOnlyGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RemoveDBInstanceFromReadOnlyGroup");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

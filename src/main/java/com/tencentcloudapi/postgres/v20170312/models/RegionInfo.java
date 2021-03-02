@@ -51,6 +51,14 @@ public class RegionInfo extends AbstractModel{
     private String RegionState;
 
     /**
+    * Whether the resource can be purchased in this region. Valid values: `0` (no), `1` (yes).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SupportInternational")
+    @Expose
+    private Long SupportInternational;
+
+    /**
      * Get Region abbreviation 
      * @return Region Region abbreviation
      */
@@ -115,6 +123,26 @@ public class RegionInfo extends AbstractModel{
     }
 
     /**
+     * Get Whether the resource can be purchased in this region. Valid values: `0` (no), `1` (yes).
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return SupportInternational Whether the resource can be purchased in this region. Valid values: `0` (no), `1` (yes).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getSupportInternational() {
+        return this.SupportInternational;
+    }
+
+    /**
+     * Set Whether the resource can be purchased in this region. Valid values: `0` (no), `1` (yes).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param SupportInternational Whether the resource can be purchased in this region. Valid values: `0` (no), `1` (yes).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setSupportInternational(Long SupportInternational) {
+        this.SupportInternational = SupportInternational;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +150,7 @@ public class RegionInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "RegionName", this.RegionName);
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
         this.setParamSimple(map, prefix + "RegionState", this.RegionState);
+        this.setParamSimple(map, prefix + "SupportInternational", this.SupportInternational);
 
     }
 }

@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.redis.v20180412.models;
+package com.tencentcloudapi.postgres.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateInstancesResponse extends AbstractModel{
+public class DescribeReadOnlyGroupsResponse extends AbstractModel{
 
     /**
-    * Transaction ID
+    * RO group list
     */
-    @SerializedName("DealId")
+    @SerializedName("ReadOnlyGroupList")
     @Expose
-    private String DealId;
-
-    /**
-    * Instance ID
-    */
-    @SerializedName("InstanceIds")
-    @Expose
-    private String [] InstanceIds;
+    private ReadOnlyGroup [] ReadOnlyGroupList;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -44,35 +37,19 @@ public class CreateInstancesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Transaction ID 
-     * @return DealId Transaction ID
+     * Get RO group list 
+     * @return ReadOnlyGroupList RO group list
      */
-    public String getDealId() {
-        return this.DealId;
+    public ReadOnlyGroup [] getReadOnlyGroupList() {
+        return this.ReadOnlyGroupList;
     }
 
     /**
-     * Set Transaction ID
-     * @param DealId Transaction ID
+     * Set RO group list
+     * @param ReadOnlyGroupList RO group list
      */
-    public void setDealId(String DealId) {
-        this.DealId = DealId;
-    }
-
-    /**
-     * Get Instance ID 
-     * @return InstanceIds Instance ID
-     */
-    public String [] getInstanceIds() {
-        return this.InstanceIds;
-    }
-
-    /**
-     * Set Instance ID
-     * @param InstanceIds Instance ID
-     */
-    public void setInstanceIds(String [] InstanceIds) {
-        this.InstanceIds = InstanceIds;
+    public void setReadOnlyGroupList(ReadOnlyGroup [] ReadOnlyGroupList) {
+        this.ReadOnlyGroupList = ReadOnlyGroupList;
     }
 
     /**
@@ -95,8 +72,7 @@ public class CreateInstancesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DealId", this.DealId);
-        this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+        this.setParamArrayObj(map, prefix + "ReadOnlyGroupList.", this.ReadOnlyGroupList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

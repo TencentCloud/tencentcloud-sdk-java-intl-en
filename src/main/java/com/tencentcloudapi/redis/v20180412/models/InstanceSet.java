@@ -350,6 +350,38 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String MonitorVersion;
 
     /**
+    * The minimum value of the range of maximum connections to the client
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ClientLimitMin")
+    @Expose
+    private Long ClientLimitMin;
+
+    /**
+    * The maximum value of the range of maximum connections to the client
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ClientLimitMax")
+    @Expose
+    private Long ClientLimitMax;
+
+    /**
+    * Instance node details
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("NodeSet")
+    @Expose
+    private RedisNodeInfo [] NodeSet;
+
+    /**
+    * Region where the instance is deployed
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
      * Get Instance name 
      * @return InstanceName Instance name
      */
@@ -1118,6 +1150,86 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get The minimum value of the range of maximum connections to the client
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ClientLimitMin The minimum value of the range of maximum connections to the client
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getClientLimitMin() {
+        return this.ClientLimitMin;
+    }
+
+    /**
+     * Set The minimum value of the range of maximum connections to the client
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ClientLimitMin The minimum value of the range of maximum connections to the client
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setClientLimitMin(Long ClientLimitMin) {
+        this.ClientLimitMin = ClientLimitMin;
+    }
+
+    /**
+     * Get The maximum value of the range of maximum connections to the client
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ClientLimitMax The maximum value of the range of maximum connections to the client
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getClientLimitMax() {
+        return this.ClientLimitMax;
+    }
+
+    /**
+     * Set The maximum value of the range of maximum connections to the client
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ClientLimitMax The maximum value of the range of maximum connections to the client
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setClientLimitMax(Long ClientLimitMax) {
+        this.ClientLimitMax = ClientLimitMax;
+    }
+
+    /**
+     * Get Instance node details
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return NodeSet Instance node details
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public RedisNodeInfo [] getNodeSet() {
+        return this.NodeSet;
+    }
+
+    /**
+     * Set Instance node details
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param NodeSet Instance node details
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setNodeSet(RedisNodeInfo [] NodeSet) {
+        this.NodeSet = NodeSet;
+    }
+
+    /**
+     * Get Region where the instance is deployed
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Region Region where the instance is deployed
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set Region where the instance is deployed
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Region Region where the instance is deployed
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1166,6 +1278,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "RemainBandwidthDuration", this.RemainBandwidthDuration);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
         this.setParamSimple(map, prefix + "MonitorVersion", this.MonitorVersion);
+        this.setParamSimple(map, prefix + "ClientLimitMin", this.ClientLimitMin);
+        this.setParamSimple(map, prefix + "ClientLimitMax", this.ClientLimitMax);
+        this.setParamArrayObj(map, prefix + "NodeSet.", this.NodeSet);
+        this.setParamSimple(map, prefix + "Region", this.Region);
 
     }
 }

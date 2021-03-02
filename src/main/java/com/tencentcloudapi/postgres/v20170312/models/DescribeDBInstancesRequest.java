@@ -37,7 +37,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * Page number, starting from 0.
+    * Data offset which starts from 0
     */
     @SerializedName("Offset")
     @Expose
@@ -90,16 +90,16 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Page number, starting from 0. 
-     * @return Offset Page number, starting from 0.
+     * Get Data offset which starts from 0 
+     * @return Offset Data offset which starts from 0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Page number, starting from 0.
-     * @param Offset Page number, starting from 0.
+     * Set Data offset which starts from 0
+     * @param Offset Data offset which starts from 0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
