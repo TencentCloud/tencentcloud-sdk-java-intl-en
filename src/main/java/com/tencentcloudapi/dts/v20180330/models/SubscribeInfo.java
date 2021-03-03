@@ -170,6 +170,30 @@ public class SubscribeInfo extends AbstractModel{
     private String SdkConsumedTime;
 
     /**
+    * Tag
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private TagItem [] Tags;
+
+    /**
+    * Whether auto-renewal is enabled. 0: do not enable; 1: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AutoRenewFlag")
+    @Expose
+    private Long AutoRenewFlag;
+
+    /**
+    * Subscription instance edition. ·`txdts`: legacy data subscription; `kafka`: data subscription in Kafka edition
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SubscribeVersion")
+    @Expose
+    private String SubscribeVersion;
+
+    /**
      * Get Data subscription instance ID 
      * @return SubscribeId Data subscription instance ID
      */
@@ -506,6 +530,66 @@ public class SubscribeInfo extends AbstractModel{
     }
 
     /**
+     * Get Tag
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Tags Tag
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public TagItem [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Tags Tag
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setTags(TagItem [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get Whether auto-renewal is enabled. 0: do not enable; 1: enable
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return AutoRenewFlag Whether auto-renewal is enabled. 0: do not enable; 1: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getAutoRenewFlag() {
+        return this.AutoRenewFlag;
+    }
+
+    /**
+     * Set Whether auto-renewal is enabled. 0: do not enable; 1: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param AutoRenewFlag Whether auto-renewal is enabled. 0: do not enable; 1: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setAutoRenewFlag(Long AutoRenewFlag) {
+        this.AutoRenewFlag = AutoRenewFlag;
+    }
+
+    /**
+     * Get Subscription instance edition. ·`txdts`: legacy data subscription; `kafka`: data subscription in Kafka edition
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return SubscribeVersion Subscription instance edition. ·`txdts`: legacy data subscription; `kafka`: data subscription in Kafka edition
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getSubscribeVersion() {
+        return this.SubscribeVersion;
+    }
+
+    /**
+     * Set Subscription instance edition. ·`txdts`: legacy data subscription; `kafka`: data subscription in Kafka edition
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param SubscribeVersion Subscription instance edition. ·`txdts`: legacy data subscription; `kafka`: data subscription in Kafka edition
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setSubscribeVersion(String SubscribeVersion) {
+        this.SubscribeVersion = SubscribeVersion;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -530,6 +614,9 @@ public class SubscribeInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "SdkConsumedTime", this.SdkConsumedTime);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+        this.setParamSimple(map, prefix + "SubscribeVersion", this.SubscribeVersion);
 
     }
 }

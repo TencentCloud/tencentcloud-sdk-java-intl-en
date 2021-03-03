@@ -51,7 +51,7 @@ public class ListTriggersRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * Indicates by which field to sort the returned results. Valid values: AddTime, ModTime. Default value: ModTime
+    * Indicates by which field to sort the returned results. Valid values: add_time, mod_time. Default value: mod_time
     */
     @SerializedName("OrderBy")
     @Expose
@@ -137,16 +137,16 @@ Function version, alias
     }
 
     /**
-     * Get Indicates by which field to sort the returned results. Valid values: AddTime, ModTime. Default value: ModTime 
-     * @return OrderBy Indicates by which field to sort the returned results. Valid values: AddTime, ModTime. Default value: ModTime
+     * Get Indicates by which field to sort the returned results. Valid values: add_time, mod_time. Default value: mod_time 
+     * @return OrderBy Indicates by which field to sort the returned results. Valid values: add_time, mod_time. Default value: mod_time
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Indicates by which field to sort the returned results. Valid values: AddTime, ModTime. Default value: ModTime
-     * @param OrderBy Indicates by which field to sort the returned results. Valid values: AddTime, ModTime. Default value: ModTime
+     * Set Indicates by which field to sort the returned results. Valid values: add_time, mod_time. Default value: mod_time
+     * @param OrderBy Indicates by which field to sort the returned results. Valid values: add_time, mod_time. Default value: mod_time
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;

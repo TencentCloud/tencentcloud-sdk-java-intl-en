@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Code extends AbstractModel{
 
     /**
-    * COS bucket name
+    * Object bucket name (enter the custom part of the bucket name without `-appid`)
     */
     @SerializedName("CosBucketName")
     @Expose
@@ -121,16 +121,16 @@ public class Code extends AbstractModel{
     private String GitUserNameSecret;
 
     /**
-     * Get COS bucket name 
-     * @return CosBucketName COS bucket name
+     * Get Object bucket name (enter the custom part of the bucket name without `-appid`) 
+     * @return CosBucketName Object bucket name (enter the custom part of the bucket name without `-appid`)
      */
     public String getCosBucketName() {
         return this.CosBucketName;
     }
 
     /**
-     * Set COS bucket name
-     * @param CosBucketName COS bucket name
+     * Set Object bucket name (enter the custom part of the bucket name without `-appid`)
+     * @param CosBucketName Object bucket name (enter the custom part of the bucket name without `-appid`)
      */
     public void setCosBucketName(String CosBucketName) {
         this.CosBucketName = CosBucketName;

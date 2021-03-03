@@ -100,6 +100,20 @@ public class DescribeSubscribesRequest extends AbstractModel{
     private String OrderDirection;
 
     /**
+    * Tag filtering condition
+    */
+    @SerializedName("TagFilters")
+    @Expose
+    private TagFilter [] TagFilters;
+
+    /**
+    * Subscription instance edition. `txdts`: legacy data subscription; `kafka`: data subscription in Kafka edition
+    */
+    @SerializedName("SubscribeVersion")
+    @Expose
+    private String SubscribeVersion;
+
+    /**
      * Get Data subscription instance ID 
      * @return SubscribeId Data subscription instance ID
      */
@@ -276,6 +290,38 @@ public class DescribeSubscribesRequest extends AbstractModel{
     }
 
     /**
+     * Get Tag filtering condition 
+     * @return TagFilters Tag filtering condition
+     */
+    public TagFilter [] getTagFilters() {
+        return this.TagFilters;
+    }
+
+    /**
+     * Set Tag filtering condition
+     * @param TagFilters Tag filtering condition
+     */
+    public void setTagFilters(TagFilter [] TagFilters) {
+        this.TagFilters = TagFilters;
+    }
+
+    /**
+     * Get Subscription instance edition. `txdts`: legacy data subscription; `kafka`: data subscription in Kafka edition 
+     * @return SubscribeVersion Subscription instance edition. `txdts`: legacy data subscription; `kafka`: data subscription in Kafka edition
+     */
+    public String getSubscribeVersion() {
+        return this.SubscribeVersion;
+    }
+
+    /**
+     * Set Subscription instance edition. `txdts`: legacy data subscription; `kafka`: data subscription in Kafka edition
+     * @param SubscribeVersion Subscription instance edition. `txdts`: legacy data subscription; `kafka`: data subscription in Kafka edition
+     */
+    public void setSubscribeVersion(String SubscribeVersion) {
+        this.SubscribeVersion = SubscribeVersion;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -290,6 +336,8 @@ public class DescribeSubscribesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
+        this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
+        this.setParamSimple(map, prefix + "SubscribeVersion", this.SubscribeVersion);
 
     }
 }

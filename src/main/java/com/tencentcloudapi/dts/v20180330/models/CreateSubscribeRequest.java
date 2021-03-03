@@ -58,6 +58,13 @@ public class CreateSubscribeRequest extends AbstractModel{
     private Long AutoRenew;
 
     /**
+    * Instance resource tags
+    */
+    @SerializedName("Tags")
+    @Expose
+    private TagItem [] Tags;
+
+    /**
      * Get Subscribed database type. Currently, MySQL is supported 
      * @return Product Subscribed database type. Currently, MySQL is supported
      */
@@ -138,6 +145,22 @@ public class CreateSubscribeRequest extends AbstractModel{
     }
 
     /**
+     * Get Instance resource tags 
+     * @return Tags Instance resource tags
+     */
+    public TagItem [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Instance resource tags
+     * @param Tags Instance resource tags
+     */
+    public void setTags(TagItem [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class CreateSubscribeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Duration", this.Duration);
         this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

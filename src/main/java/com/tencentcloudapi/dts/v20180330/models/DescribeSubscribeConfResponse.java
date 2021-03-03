@@ -191,6 +191,22 @@ public class DescribeSubscribeConfResponse extends AbstractModel{
     private String Region;
 
     /**
+    * Tags of the subscription
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private TagItem [] Tags;
+
+    /**
+    * Whether auto-renewal is enabled. 0: do not enable, 1: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AutoRenewFlag")
+    @Expose
+    private Long AutoRenewFlag;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -582,6 +598,46 @@ public class DescribeSubscribeConfResponse extends AbstractModel{
     }
 
     /**
+     * Get Tags of the subscription
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Tags Tags of the subscription
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public TagItem [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tags of the subscription
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Tags Tags of the subscription
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setTags(TagItem [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get Whether auto-renewal is enabled. 0: do not enable, 1: enable
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return AutoRenewFlag Whether auto-renewal is enabled. 0: do not enable, 1: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getAutoRenewFlag() {
+        return this.AutoRenewFlag;
+    }
+
+    /**
+     * Set Whether auto-renewal is enabled. 0: do not enable, 1: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param AutoRenewFlag Whether auto-renewal is enabled. 0: do not enable, 1: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setAutoRenewFlag(Long AutoRenewFlag) {
+        this.AutoRenewFlag = AutoRenewFlag;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -625,6 +681,8 @@ public class DescribeSubscribeConfResponse extends AbstractModel{
         this.setParamArrayObj(map, prefix + "SubscribeObjects.", this.SubscribeObjects);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
