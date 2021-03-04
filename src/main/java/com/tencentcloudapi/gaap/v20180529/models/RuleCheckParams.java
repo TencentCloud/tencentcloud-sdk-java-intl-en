@@ -74,7 +74,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long FailedCountInter;
 
     /**
-    * Origin server health check threshold. The service will be blocked once the threshold is exceeded.
+    * Origin server health check threshold. All requests to the origin server will be blocked once the threshold is exceeded.
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("FailedThreshold")
@@ -82,7 +82,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long FailedThreshold;
 
     /**
-    * Time of a request is blocked after the origin server health check threshold is exceeded.
+    * Duration to block requests targeting the origin server after a failed health check
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("BlockInter")
@@ -210,9 +210,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Origin server health check threshold. The service will be blocked once the threshold is exceeded.
+     * Get Origin server health check threshold. All requests to the origin server will be blocked once the threshold is exceeded.
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return FailedThreshold Origin server health check threshold. The service will be blocked once the threshold is exceeded.
+     * @return FailedThreshold Origin server health check threshold. All requests to the origin server will be blocked once the threshold is exceeded.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getFailedThreshold() {
@@ -220,9 +220,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set Origin server health check threshold. The service will be blocked once the threshold is exceeded.
+     * Set Origin server health check threshold. All requests to the origin server will be blocked once the threshold is exceeded.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param FailedThreshold Origin server health check threshold. The service will be blocked once the threshold is exceeded.
+     * @param FailedThreshold Origin server health check threshold. All requests to the origin server will be blocked once the threshold is exceeded.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setFailedThreshold(Long FailedThreshold) {
@@ -230,9 +230,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Time of a request is blocked after the origin server health check threshold is exceeded.
+     * Get Duration to block requests targeting the origin server after a failed health check
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return BlockInter Time of a request is blocked after the origin server health check threshold is exceeded.
+     * @return BlockInter Duration to block requests targeting the origin server after a failed health check
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getBlockInter() {
@@ -240,9 +240,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set Time of a request is blocked after the origin server health check threshold is exceeded.
+     * Set Duration to block requests targeting the origin server after a failed health check
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param BlockInter Time of a request is blocked after the origin server health check threshold is exceeded.
+     * @param BlockInter Duration to block requests targeting the origin server after a failed health check
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setBlockInter(Long BlockInter) {

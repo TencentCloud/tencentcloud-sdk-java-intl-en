@@ -44,6 +44,38 @@ public class ModifySecurityRuleRequest extends AbstractModel{
     private String PolicyId;
 
     /**
+    * Security rule action
+    */
+    @SerializedName("RuleAction")
+    @Expose
+    private String RuleAction;
+
+    /**
+    * A CIDR IP address associated with the rule
+    */
+    @SerializedName("SourceCidr")
+    @Expose
+    private String SourceCidr;
+
+    /**
+    * Protocol type
+    */
+    @SerializedName("Protocol")
+    @Expose
+    private String Protocol;
+
+    /**
+    * Port range. Valid values:
+A single port: 80
+Multiple ports: 80 and 443
+Consecutive ports: 3306-20000
+All ports: ALL
+    */
+    @SerializedName("DestPortRange")
+    @Expose
+    private String DestPortRange;
+
+    /**
      * Get Rule ID 
      * @return RuleId Rule ID
      */
@@ -92,12 +124,96 @@ public class ModifySecurityRuleRequest extends AbstractModel{
     }
 
     /**
+     * Get Security rule action 
+     * @return RuleAction Security rule action
+     */
+    public String getRuleAction() {
+        return this.RuleAction;
+    }
+
+    /**
+     * Set Security rule action
+     * @param RuleAction Security rule action
+     */
+    public void setRuleAction(String RuleAction) {
+        this.RuleAction = RuleAction;
+    }
+
+    /**
+     * Get A CIDR IP address associated with the rule 
+     * @return SourceCidr A CIDR IP address associated with the rule
+     */
+    public String getSourceCidr() {
+        return this.SourceCidr;
+    }
+
+    /**
+     * Set A CIDR IP address associated with the rule
+     * @param SourceCidr A CIDR IP address associated with the rule
+     */
+    public void setSourceCidr(String SourceCidr) {
+        this.SourceCidr = SourceCidr;
+    }
+
+    /**
+     * Get Protocol type 
+     * @return Protocol Protocol type
+     */
+    public String getProtocol() {
+        return this.Protocol;
+    }
+
+    /**
+     * Set Protocol type
+     * @param Protocol Protocol type
+     */
+    public void setProtocol(String Protocol) {
+        this.Protocol = Protocol;
+    }
+
+    /**
+     * Get Port range. Valid values:
+A single port: 80
+Multiple ports: 80 and 443
+Consecutive ports: 3306-20000
+All ports: ALL 
+     * @return DestPortRange Port range. Valid values:
+A single port: 80
+Multiple ports: 80 and 443
+Consecutive ports: 3306-20000
+All ports: ALL
+     */
+    public String getDestPortRange() {
+        return this.DestPortRange;
+    }
+
+    /**
+     * Set Port range. Valid values:
+A single port: 80
+Multiple ports: 80 and 443
+Consecutive ports: 3306-20000
+All ports: ALL
+     * @param DestPortRange Port range. Valid values:
+A single port: 80
+Multiple ports: 80 and 443
+Consecutive ports: 3306-20000
+All ports: ALL
+     */
+    public void setDestPortRange(String DestPortRange) {
+        this.DestPortRange = DestPortRange;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamSimple(map, prefix + "AliasName", this.AliasName);
         this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
+        this.setParamSimple(map, prefix + "RuleAction", this.RuleAction);
+        this.setParamSimple(map, prefix + "SourceCidr", this.SourceCidr);
+        this.setParamSimple(map, prefix + "Protocol", this.Protocol);
+        this.setParamSimple(map, prefix + "DestPortRange", this.DestPortRange);
 
     }
 }

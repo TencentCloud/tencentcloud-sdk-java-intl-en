@@ -89,6 +89,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String City;
 
     /**
+    * Access point region
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
      * Get Access point name. 
      * @return AccessPointName Access point name.
      */
@@ -245,6 +253,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
+     * Get Access point region
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Area Access point region
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set Access point region
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Area Access point region
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -257,6 +285,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamArraySimple(map, prefix + "AvailablePortType.", this.AvailablePortType);
         this.setParamObj(map, prefix + "Coordinate.", this.Coordinate);
         this.setParamSimple(map, prefix + "City", this.City);
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }
