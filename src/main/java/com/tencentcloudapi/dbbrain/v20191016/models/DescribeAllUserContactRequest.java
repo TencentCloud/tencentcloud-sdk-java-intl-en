@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeAllUserContactRequest extends AbstractModel{
 
     /**
-    * Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)).
+    * Service type, which is fixed to “mysql”.
     */
     @SerializedName("Product")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeAllUserContactRequest extends AbstractModel{
     private String [] Names;
 
     /**
-     * Get Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). 
-     * @return Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)).
+     * Get Service type, which is fixed to “mysql”. 
+     * @return Product Service type, which is fixed to “mysql”.
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)).
-     * @param Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)).
+     * Set Service type, which is fixed to “mysql”.
+     * @param Product Service type, which is fixed to “mysql”.
      */
     public void setProduct(String Product) {
         this.Product = Product;

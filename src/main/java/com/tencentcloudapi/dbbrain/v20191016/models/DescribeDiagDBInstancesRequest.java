@@ -1,0 +1,200 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.dbbrain.v20191016.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class DescribeDiagDBInstancesRequest extends AbstractModel{
+
+    /**
+    * Whether it is an instance supported by DBbrain. It is fixed to “true”.
+    */
+    @SerializedName("IsSupported")
+    @Expose
+    private Boolean IsSupported;
+
+    /**
+    * Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL). Default value: `mysql`.
+    */
+    @SerializedName("Product")
+    @Expose
+    private String Product;
+
+    /**
+    * Pagination parameter indicating the offset.
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * Pagination parameter indicating the number of entries for each page.
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * Query by instance name.
+    */
+    @SerializedName("InstanceNames")
+    @Expose
+    private String [] InstanceNames;
+
+    /**
+    * Query by instance ID.
+    */
+    @SerializedName("InstanceIds")
+    @Expose
+    private String [] InstanceIds;
+
+    /**
+    * Query by region.
+    */
+    @SerializedName("Regions")
+    @Expose
+    private String [] Regions;
+
+    /**
+     * Get Whether it is an instance supported by DBbrain. It is fixed to “true”. 
+     * @return IsSupported Whether it is an instance supported by DBbrain. It is fixed to “true”.
+     */
+    public Boolean getIsSupported() {
+        return this.IsSupported;
+    }
+
+    /**
+     * Set Whether it is an instance supported by DBbrain. It is fixed to “true”.
+     * @param IsSupported Whether it is an instance supported by DBbrain. It is fixed to “true”.
+     */
+    public void setIsSupported(Boolean IsSupported) {
+        this.IsSupported = IsSupported;
+    }
+
+    /**
+     * Get Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL). Default value: `mysql`. 
+     * @return Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL). Default value: `mysql`.
+     */
+    public String getProduct() {
+        return this.Product;
+    }
+
+    /**
+     * Set Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL). Default value: `mysql`.
+     * @param Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL). Default value: `mysql`.
+     */
+    public void setProduct(String Product) {
+        this.Product = Product;
+    }
+
+    /**
+     * Get Pagination parameter indicating the offset. 
+     * @return Offset Pagination parameter indicating the offset.
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set Pagination parameter indicating the offset.
+     * @param Offset Pagination parameter indicating the offset.
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get Pagination parameter indicating the number of entries for each page. 
+     * @return Limit Pagination parameter indicating the number of entries for each page.
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set Pagination parameter indicating the number of entries for each page.
+     * @param Limit Pagination parameter indicating the number of entries for each page.
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get Query by instance name. 
+     * @return InstanceNames Query by instance name.
+     */
+    public String [] getInstanceNames() {
+        return this.InstanceNames;
+    }
+
+    /**
+     * Set Query by instance name.
+     * @param InstanceNames Query by instance name.
+     */
+    public void setInstanceNames(String [] InstanceNames) {
+        this.InstanceNames = InstanceNames;
+    }
+
+    /**
+     * Get Query by instance ID. 
+     * @return InstanceIds Query by instance ID.
+     */
+    public String [] getInstanceIds() {
+        return this.InstanceIds;
+    }
+
+    /**
+     * Set Query by instance ID.
+     * @param InstanceIds Query by instance ID.
+     */
+    public void setInstanceIds(String [] InstanceIds) {
+        this.InstanceIds = InstanceIds;
+    }
+
+    /**
+     * Get Query by region. 
+     * @return Regions Query by region.
+     */
+    public String [] getRegions() {
+        return this.Regions;
+    }
+
+    /**
+     * Set Query by region.
+     * @param Regions Query by region.
+     */
+    public void setRegions(String [] Regions) {
+        this.Regions = Regions;
+    }
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "IsSupported", this.IsSupported);
+        this.setParamSimple(map, prefix + "Product", this.Product);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArraySimple(map, prefix + "InstanceNames.", this.InstanceNames);
+        this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+        this.setParamArraySimple(map, prefix + "Regions.", this.Regions);
+
+    }
+}
+

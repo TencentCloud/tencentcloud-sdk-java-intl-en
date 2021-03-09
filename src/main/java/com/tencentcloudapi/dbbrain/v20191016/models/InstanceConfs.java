@@ -30,6 +30,13 @@ public class InstanceConfs extends AbstractModel{
     private String DailyInspection;
 
     /**
+    * Whether to enable instance overview. Valid values: Yes/No.
+    */
+    @SerializedName("OverviewDisplay")
+    @Expose
+    private String OverviewDisplay;
+
+    /**
      * Get Whether to enable database inspection. Valid values: Yes/No. 
      * @return DailyInspection Whether to enable database inspection. Valid values: Yes/No.
      */
@@ -46,10 +53,27 @@ public class InstanceConfs extends AbstractModel{
     }
 
     /**
+     * Get Whether to enable instance overview. Valid values: Yes/No. 
+     * @return OverviewDisplay Whether to enable instance overview. Valid values: Yes/No.
+     */
+    public String getOverviewDisplay() {
+        return this.OverviewDisplay;
+    }
+
+    /**
+     * Set Whether to enable instance overview. Valid values: Yes/No.
+     * @param OverviewDisplay Whether to enable instance overview. Valid values: Yes/No.
+     */
+    public void setOverviewDisplay(String OverviewDisplay) {
+        this.OverviewDisplay = OverviewDisplay;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DailyInspection", this.DailyInspection);
+        this.setParamSimple(map, prefix + "OverviewDisplay", this.OverviewDisplay);
 
     }
 }

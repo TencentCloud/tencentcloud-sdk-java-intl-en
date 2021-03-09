@@ -39,6 +39,26 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *This API is used to add the contact name and email.. The return value is the successfully added contact ID. Select Guangzhou for Region.
+     * @param req AddUserContactRequest
+     * @return AddUserContactResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddUserContactResponse AddUserContact(AddUserContactRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddUserContactResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddUserContactResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddUserContact");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a health report and send it via email as configured.
      * @param req CreateDBDiagReportTaskRequest
      * @return CreateDBDiagReportTaskResponse
@@ -59,7 +79,7 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create the email configuration. The input parameter `ProfileType` represents the type of the email configuration. Valid values: `dbScan_mail_configuration` (email configuration of database inspection report) and `scheduler_mail_configuration` (email configuration of scheduled task report).
+     *This API is used to create the email configuration. The input parameter `ProfileType` represents the type of the email configuration. Valid values: `dbScan_mail_configuration` (email configuration of database inspection report) and `scheduler_mail_configuration` (email sending configuration of regularly generated health report). Select Guangzhou for Region, regardless of the region where the instance belongs.
      * @param req CreateMailProfileRequest
      * @return CreateMailProfileResponse
      * @throws TencentCloudSDKException
@@ -71,6 +91,26 @@ public class DbbrainClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateMailProfileResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateMailProfile");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create the regular generation time of the health reports and the regular email sending configuration. Pass in the regular generation time of the health reports as a parameter (Monday to Sunday) to set the regular generation time of the health reports, and save the corresponding regular email sending configuration.
+     * @param req CreateSchedulerMailProfileRequest
+     * @return CreateSchedulerMailProfileResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSchedulerMailProfileResponse CreateSchedulerMailProfile(CreateSchedulerMailProfileRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSchedulerMailProfileResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSchedulerMailProfileResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateSchedulerMailProfile");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -171,6 +211,66 @@ public class DbbrainClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDBSpaceStatusResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDBSpaceStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to obtain the instance information list. Select Guangzhou for Region.
+     * @param req DescribeDiagDBInstancesRequest
+     * @return DescribeDiagDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDiagDBInstancesResponse DescribeDiagDBInstances(DescribeDiagDBInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDiagDBInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDiagDBInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDiagDBInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to obtain the health score and deduction for exceptions in the specified time period (30 minutes) based on the instance ID.
+     * @param req DescribeHealthScoreRequest
+     * @return DescribeHealthScoreResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHealthScoreResponse DescribeHealthScore(DescribeHealthScoreRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHealthScoreResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHealthScoreResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeHealthScore");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to obtain the email sending configurations, including the email configuration for database inspection and the email sending configuration for regularly generated health reports. Select Guangzhou for Region.
+     * @param req DescribeMailProfileRequest
+     * @return DescribeMailProfileResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMailProfileResponse DescribeMailProfile(DescribeMailProfileRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMailProfileResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMailProfileResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeMailProfile");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

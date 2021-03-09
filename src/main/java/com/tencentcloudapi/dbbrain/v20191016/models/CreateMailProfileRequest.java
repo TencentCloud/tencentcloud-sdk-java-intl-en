@@ -58,7 +58,7 @@ public class CreateMailProfileRequest extends AbstractModel{
     private String Product;
 
     /**
-    * Instance ID bound to the configuration, which is required when the configuration level is `Instance`.
+    * Instance ID bound to the configuration, which is set when the configuration level is "Instance". Only one instance can be bound at a time.
     */
     @SerializedName("BindInstanceIds")
     @Expose
@@ -145,16 +145,16 @@ public class CreateMailProfileRequest extends AbstractModel{
     }
 
     /**
-     * Get Instance ID bound to the configuration, which is required when the configuration level is `Instance`. 
-     * @return BindInstanceIds Instance ID bound to the configuration, which is required when the configuration level is `Instance`.
+     * Get Instance ID bound to the configuration, which is set when the configuration level is "Instance". Only one instance can be bound at a time. 
+     * @return BindInstanceIds Instance ID bound to the configuration, which is set when the configuration level is "Instance". Only one instance can be bound at a time.
      */
     public String [] getBindInstanceIds() {
         return this.BindInstanceIds;
     }
 
     /**
-     * Set Instance ID bound to the configuration, which is required when the configuration level is `Instance`.
-     * @param BindInstanceIds Instance ID bound to the configuration, which is required when the configuration level is `Instance`.
+     * Set Instance ID bound to the configuration, which is set when the configuration level is "Instance". Only one instance can be bound at a time.
+     * @param BindInstanceIds Instance ID bound to the configuration, which is set when the configuration level is "Instance". Only one instance can be bound at a time.
      */
     public void setBindInstanceIds(String [] BindInstanceIds) {
         this.BindInstanceIds = BindInstanceIds;

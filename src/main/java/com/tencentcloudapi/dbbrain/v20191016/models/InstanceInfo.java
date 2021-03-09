@@ -1,0 +1,704 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.dbbrain.v20191016.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class InstanceInfo extends AbstractModel{
+
+    /**
+    * Instance ID
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * Instance name
+    */
+    @SerializedName("InstanceName")
+    @Expose
+    private String InstanceName;
+
+    /**
+    * The region where the instance belongs
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
+    * Health score
+    */
+    @SerializedName("HealthScore")
+    @Expose
+    private Long HealthScore;
+
+    /**
+    * Service
+    */
+    @SerializedName("Product")
+    @Expose
+    private String Product;
+
+    /**
+    * Number of exceptions
+    */
+    @SerializedName("EventCount")
+    @Expose
+    private Long EventCount;
+
+    /**
+    * Instance type. Valid values: 1: MASTER, 2: DR, 3: RO, 4: SDR
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private Long InstanceType;
+
+    /**
+    * Number of cores
+    */
+    @SerializedName("Cpu")
+    @Expose
+    private Long Cpu;
+
+    /**
+    * Memory in MB
+    */
+    @SerializedName("Memory")
+    @Expose
+    private Long Memory;
+
+    /**
+    * Disk storage in GB
+    */
+    @SerializedName("Volume")
+    @Expose
+    private Long Volume;
+
+    /**
+    * Database version
+    */
+    @SerializedName("EngineVersion")
+    @Expose
+    private String EngineVersion;
+
+    /**
+    * Private network address
+    */
+    @SerializedName("Vip")
+    @Expose
+    private String Vip;
+
+    /**
+    * Private network port
+    */
+    @SerializedName("Vport")
+    @Expose
+    private Long Vport;
+
+    /**
+    * Access source
+    */
+    @SerializedName("Source")
+    @Expose
+    private String Source;
+
+    /**
+    * Group ID
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
+
+    /**
+    * Group name
+    */
+    @SerializedName("GroupName")
+    @Expose
+    private String GroupName;
+
+    /**
+    * Instance status. Valid values: 0: Delivering, 1: Running, 4: Terminating, 5: Isolated
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+    * Subnet unified ID
+    */
+    @SerializedName("UniqSubnetId")
+    @Expose
+    private String UniqSubnetId;
+
+    /**
+    * cdb (TencentDB instance) type
+    */
+    @SerializedName("DeployMode")
+    @Expose
+    private String DeployMode;
+
+    /**
+    * cdb (TencentDB instance) initialization flag. Valid values: 0: not initialized, 1: initialized
+    */
+    @SerializedName("InitFlag")
+    @Expose
+    private Long InitFlag;
+
+    /**
+    * Task status
+    */
+    @SerializedName("TaskStatus")
+    @Expose
+    private Long TaskStatus;
+
+    /**
+    * Unified VPC ID
+    */
+    @SerializedName("UniqVpcId")
+    @Expose
+    private String UniqVpcId;
+
+    /**
+    * Instance inspection/overview status
+    */
+    @SerializedName("InstanceConf")
+    @Expose
+    private InstanceConfs InstanceConf;
+
+    /**
+    * Resource expiration time
+    */
+    @SerializedName("DeadlineTime")
+    @Expose
+    private String DeadlineTime;
+
+    /**
+    * Whether it is an instance supported by DBbrain.
+    */
+    @SerializedName("IsSupported")
+    @Expose
+    private Boolean IsSupported;
+
+    /**
+    * The status of instance security audit log. ON: enabled, OFF: disabled.
+    */
+    @SerializedName("SecAuditStatus")
+    @Expose
+    private String SecAuditStatus;
+
+    /**
+    * The status of instance audit log. ALL_AUDIT: full audit is enabled, RULE_AUDIT: rule audit is enabled, UNBOUND: audit is disabled.
+    */
+    @SerializedName("AuditPolicyStatus")
+    @Expose
+    private String AuditPolicyStatus;
+
+    /**
+    * The running status of instance audit log. normal: running, paused: suspension due to arrears
+    */
+    @SerializedName("AuditRunningStatus")
+    @Expose
+    private String AuditRunningStatus;
+
+    /**
+     * Get Instance ID 
+     * @return InstanceId Instance ID
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set Instance ID
+     * @param InstanceId Instance ID
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get Instance name 
+     * @return InstanceName Instance name
+     */
+    public String getInstanceName() {
+        return this.InstanceName;
+    }
+
+    /**
+     * Set Instance name
+     * @param InstanceName Instance name
+     */
+    public void setInstanceName(String InstanceName) {
+        this.InstanceName = InstanceName;
+    }
+
+    /**
+     * Get The region where the instance belongs 
+     * @return Region The region where the instance belongs
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set The region where the instance belongs
+     * @param Region The region where the instance belongs
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
+    /**
+     * Get Health score 
+     * @return HealthScore Health score
+     */
+    public Long getHealthScore() {
+        return this.HealthScore;
+    }
+
+    /**
+     * Set Health score
+     * @param HealthScore Health score
+     */
+    public void setHealthScore(Long HealthScore) {
+        this.HealthScore = HealthScore;
+    }
+
+    /**
+     * Get Service 
+     * @return Product Service
+     */
+    public String getProduct() {
+        return this.Product;
+    }
+
+    /**
+     * Set Service
+     * @param Product Service
+     */
+    public void setProduct(String Product) {
+        this.Product = Product;
+    }
+
+    /**
+     * Get Number of exceptions 
+     * @return EventCount Number of exceptions
+     */
+    public Long getEventCount() {
+        return this.EventCount;
+    }
+
+    /**
+     * Set Number of exceptions
+     * @param EventCount Number of exceptions
+     */
+    public void setEventCount(Long EventCount) {
+        this.EventCount = EventCount;
+    }
+
+    /**
+     * Get Instance type. Valid values: 1: MASTER, 2: DR, 3: RO, 4: SDR 
+     * @return InstanceType Instance type. Valid values: 1: MASTER, 2: DR, 3: RO, 4: SDR
+     */
+    public Long getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set Instance type. Valid values: 1: MASTER, 2: DR, 3: RO, 4: SDR
+     * @param InstanceType Instance type. Valid values: 1: MASTER, 2: DR, 3: RO, 4: SDR
+     */
+    public void setInstanceType(Long InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
+     * Get Number of cores 
+     * @return Cpu Number of cores
+     */
+    public Long getCpu() {
+        return this.Cpu;
+    }
+
+    /**
+     * Set Number of cores
+     * @param Cpu Number of cores
+     */
+    public void setCpu(Long Cpu) {
+        this.Cpu = Cpu;
+    }
+
+    /**
+     * Get Memory in MB 
+     * @return Memory Memory in MB
+     */
+    public Long getMemory() {
+        return this.Memory;
+    }
+
+    /**
+     * Set Memory in MB
+     * @param Memory Memory in MB
+     */
+    public void setMemory(Long Memory) {
+        this.Memory = Memory;
+    }
+
+    /**
+     * Get Disk storage in GB 
+     * @return Volume Disk storage in GB
+     */
+    public Long getVolume() {
+        return this.Volume;
+    }
+
+    /**
+     * Set Disk storage in GB
+     * @param Volume Disk storage in GB
+     */
+    public void setVolume(Long Volume) {
+        this.Volume = Volume;
+    }
+
+    /**
+     * Get Database version 
+     * @return EngineVersion Database version
+     */
+    public String getEngineVersion() {
+        return this.EngineVersion;
+    }
+
+    /**
+     * Set Database version
+     * @param EngineVersion Database version
+     */
+    public void setEngineVersion(String EngineVersion) {
+        this.EngineVersion = EngineVersion;
+    }
+
+    /**
+     * Get Private network address 
+     * @return Vip Private network address
+     */
+    public String getVip() {
+        return this.Vip;
+    }
+
+    /**
+     * Set Private network address
+     * @param Vip Private network address
+     */
+    public void setVip(String Vip) {
+        this.Vip = Vip;
+    }
+
+    /**
+     * Get Private network port 
+     * @return Vport Private network port
+     */
+    public Long getVport() {
+        return this.Vport;
+    }
+
+    /**
+     * Set Private network port
+     * @param Vport Private network port
+     */
+    public void setVport(Long Vport) {
+        this.Vport = Vport;
+    }
+
+    /**
+     * Get Access source 
+     * @return Source Access source
+     */
+    public String getSource() {
+        return this.Source;
+    }
+
+    /**
+     * Set Access source
+     * @param Source Access source
+     */
+    public void setSource(String Source) {
+        this.Source = Source;
+    }
+
+    /**
+     * Get Group ID 
+     * @return GroupId Group ID
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set Group ID
+     * @param GroupId Group ID
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
+    }
+
+    /**
+     * Get Group name 
+     * @return GroupName Group name
+     */
+    public String getGroupName() {
+        return this.GroupName;
+    }
+
+    /**
+     * Set Group name
+     * @param GroupName Group name
+     */
+    public void setGroupName(String GroupName) {
+        this.GroupName = GroupName;
+    }
+
+    /**
+     * Get Instance status. Valid values: 0: Delivering, 1: Running, 4: Terminating, 5: Isolated 
+     * @return Status Instance status. Valid values: 0: Delivering, 1: Running, 4: Terminating, 5: Isolated
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set Instance status. Valid values: 0: Delivering, 1: Running, 4: Terminating, 5: Isolated
+     * @param Status Instance status. Valid values: 0: Delivering, 1: Running, 4: Terminating, 5: Isolated
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get Subnet unified ID 
+     * @return UniqSubnetId Subnet unified ID
+     */
+    public String getUniqSubnetId() {
+        return this.UniqSubnetId;
+    }
+
+    /**
+     * Set Subnet unified ID
+     * @param UniqSubnetId Subnet unified ID
+     */
+    public void setUniqSubnetId(String UniqSubnetId) {
+        this.UniqSubnetId = UniqSubnetId;
+    }
+
+    /**
+     * Get cdb (TencentDB instance) type 
+     * @return DeployMode cdb (TencentDB instance) type
+     */
+    public String getDeployMode() {
+        return this.DeployMode;
+    }
+
+    /**
+     * Set cdb (TencentDB instance) type
+     * @param DeployMode cdb (TencentDB instance) type
+     */
+    public void setDeployMode(String DeployMode) {
+        this.DeployMode = DeployMode;
+    }
+
+    /**
+     * Get cdb (TencentDB instance) initialization flag. Valid values: 0: not initialized, 1: initialized 
+     * @return InitFlag cdb (TencentDB instance) initialization flag. Valid values: 0: not initialized, 1: initialized
+     */
+    public Long getInitFlag() {
+        return this.InitFlag;
+    }
+
+    /**
+     * Set cdb (TencentDB instance) initialization flag. Valid values: 0: not initialized, 1: initialized
+     * @param InitFlag cdb (TencentDB instance) initialization flag. Valid values: 0: not initialized, 1: initialized
+     */
+    public void setInitFlag(Long InitFlag) {
+        this.InitFlag = InitFlag;
+    }
+
+    /**
+     * Get Task status 
+     * @return TaskStatus Task status
+     */
+    public Long getTaskStatus() {
+        return this.TaskStatus;
+    }
+
+    /**
+     * Set Task status
+     * @param TaskStatus Task status
+     */
+    public void setTaskStatus(Long TaskStatus) {
+        this.TaskStatus = TaskStatus;
+    }
+
+    /**
+     * Get Unified VPC ID 
+     * @return UniqVpcId Unified VPC ID
+     */
+    public String getUniqVpcId() {
+        return this.UniqVpcId;
+    }
+
+    /**
+     * Set Unified VPC ID
+     * @param UniqVpcId Unified VPC ID
+     */
+    public void setUniqVpcId(String UniqVpcId) {
+        this.UniqVpcId = UniqVpcId;
+    }
+
+    /**
+     * Get Instance inspection/overview status 
+     * @return InstanceConf Instance inspection/overview status
+     */
+    public InstanceConfs getInstanceConf() {
+        return this.InstanceConf;
+    }
+
+    /**
+     * Set Instance inspection/overview status
+     * @param InstanceConf Instance inspection/overview status
+     */
+    public void setInstanceConf(InstanceConfs InstanceConf) {
+        this.InstanceConf = InstanceConf;
+    }
+
+    /**
+     * Get Resource expiration time 
+     * @return DeadlineTime Resource expiration time
+     */
+    public String getDeadlineTime() {
+        return this.DeadlineTime;
+    }
+
+    /**
+     * Set Resource expiration time
+     * @param DeadlineTime Resource expiration time
+     */
+    public void setDeadlineTime(String DeadlineTime) {
+        this.DeadlineTime = DeadlineTime;
+    }
+
+    /**
+     * Get Whether it is an instance supported by DBbrain. 
+     * @return IsSupported Whether it is an instance supported by DBbrain.
+     */
+    public Boolean getIsSupported() {
+        return this.IsSupported;
+    }
+
+    /**
+     * Set Whether it is an instance supported by DBbrain.
+     * @param IsSupported Whether it is an instance supported by DBbrain.
+     */
+    public void setIsSupported(Boolean IsSupported) {
+        this.IsSupported = IsSupported;
+    }
+
+    /**
+     * Get The status of instance security audit log. ON: enabled, OFF: disabled. 
+     * @return SecAuditStatus The status of instance security audit log. ON: enabled, OFF: disabled.
+     */
+    public String getSecAuditStatus() {
+        return this.SecAuditStatus;
+    }
+
+    /**
+     * Set The status of instance security audit log. ON: enabled, OFF: disabled.
+     * @param SecAuditStatus The status of instance security audit log. ON: enabled, OFF: disabled.
+     */
+    public void setSecAuditStatus(String SecAuditStatus) {
+        this.SecAuditStatus = SecAuditStatus;
+    }
+
+    /**
+     * Get The status of instance audit log. ALL_AUDIT: full audit is enabled, RULE_AUDIT: rule audit is enabled, UNBOUND: audit is disabled. 
+     * @return AuditPolicyStatus The status of instance audit log. ALL_AUDIT: full audit is enabled, RULE_AUDIT: rule audit is enabled, UNBOUND: audit is disabled.
+     */
+    public String getAuditPolicyStatus() {
+        return this.AuditPolicyStatus;
+    }
+
+    /**
+     * Set The status of instance audit log. ALL_AUDIT: full audit is enabled, RULE_AUDIT: rule audit is enabled, UNBOUND: audit is disabled.
+     * @param AuditPolicyStatus The status of instance audit log. ALL_AUDIT: full audit is enabled, RULE_AUDIT: rule audit is enabled, UNBOUND: audit is disabled.
+     */
+    public void setAuditPolicyStatus(String AuditPolicyStatus) {
+        this.AuditPolicyStatus = AuditPolicyStatus;
+    }
+
+    /**
+     * Get The running status of instance audit log. normal: running, paused: suspension due to arrears 
+     * @return AuditRunningStatus The running status of instance audit log. normal: running, paused: suspension due to arrears
+     */
+    public String getAuditRunningStatus() {
+        return this.AuditRunningStatus;
+    }
+
+    /**
+     * Set The running status of instance audit log. normal: running, paused: suspension due to arrears
+     * @param AuditRunningStatus The running status of instance audit log. normal: running, paused: suspension due to arrears
+     */
+    public void setAuditRunningStatus(String AuditRunningStatus) {
+        this.AuditRunningStatus = AuditRunningStatus;
+    }
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
+        this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "HealthScore", this.HealthScore);
+        this.setParamSimple(map, prefix + "Product", this.Product);
+        this.setParamSimple(map, prefix + "EventCount", this.EventCount);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "Cpu", this.Cpu);
+        this.setParamSimple(map, prefix + "Memory", this.Memory);
+        this.setParamSimple(map, prefix + "Volume", this.Volume);
+        this.setParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
+        this.setParamSimple(map, prefix + "Vip", this.Vip);
+        this.setParamSimple(map, prefix + "Vport", this.Vport);
+        this.setParamSimple(map, prefix + "Source", this.Source);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "GroupName", this.GroupName);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
+        this.setParamSimple(map, prefix + "DeployMode", this.DeployMode);
+        this.setParamSimple(map, prefix + "InitFlag", this.InitFlag);
+        this.setParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
+        this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
+        this.setParamObj(map, prefix + "InstanceConf.", this.InstanceConf);
+        this.setParamSimple(map, prefix + "DeadlineTime", this.DeadlineTime);
+        this.setParamSimple(map, prefix + "IsSupported", this.IsSupported);
+        this.setParamSimple(map, prefix + "SecAuditStatus", this.SecAuditStatus);
+        this.setParamSimple(map, prefix + "AuditPolicyStatus", this.AuditPolicyStatus);
+        this.setParamSimple(map, prefix + "AuditRunningStatus", this.AuditRunningStatus);
+
+    }
+}
+

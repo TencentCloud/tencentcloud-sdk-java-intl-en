@@ -30,7 +30,7 @@ public class MailConfiguration extends AbstractModel{
     private Long SendMail;
 
     /**
-    * Region configuration, such as "ap-guangzhou", "ap-shanghai".
+    * Region configuration, such as "ap-guangzhou", "ap-shanghai". For the inspection email sending template, configure the region where you need to send the inspection email. For the subscription email sending template, configure the region to which the current subscribed instance belongs.
     */
     @SerializedName("Region")
     @Expose
@@ -74,16 +74,16 @@ public class MailConfiguration extends AbstractModel{
     }
 
     /**
-     * Get Region configuration, such as "ap-guangzhou", "ap-shanghai". 
-     * @return Region Region configuration, such as "ap-guangzhou", "ap-shanghai".
+     * Get Region configuration, such as "ap-guangzhou", "ap-shanghai". For the inspection email sending template, configure the region where you need to send the inspection email. For the subscription email sending template, configure the region to which the current subscribed instance belongs. 
+     * @return Region Region configuration, such as "ap-guangzhou", "ap-shanghai". For the inspection email sending template, configure the region where you need to send the inspection email. For the subscription email sending template, configure the region to which the current subscribed instance belongs.
      */
     public String [] getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Region configuration, such as "ap-guangzhou", "ap-shanghai".
-     * @param Region Region configuration, such as "ap-guangzhou", "ap-shanghai".
+     * Set Region configuration, such as "ap-guangzhou", "ap-shanghai". For the inspection email sending template, configure the region where you need to send the inspection email. For the subscription email sending template, configure the region to which the current subscribed instance belongs.
+     * @param Region Region configuration, such as "ap-guangzhou", "ap-shanghai". For the inspection email sending template, configure the region where you need to send the inspection email. For the subscription email sending template, configure the region to which the current subscribed instance belongs.
      */
     public void setRegion(String [] Region) {
         this.Region = Region;
