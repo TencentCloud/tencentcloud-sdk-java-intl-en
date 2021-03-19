@@ -99,6 +99,26 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a backup import task.
+     * @param req CreateBackupMigrationRequest
+     * @return CreateBackupMigrationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBackupMigrationResponse CreateBackupMigration(CreateBackupMigrationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateBackupMigrationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateBackupMigrationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateBackupMigration");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a database.
      * @param req CreateDBRequest
      * @return CreateDBResponse
@@ -131,6 +151,26 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateDBInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateDBInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create an incremental backup import task.
+     * @param req CreateIncrementalMigrationRequest
+     * @return CreateIncrementalMigrationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateIncrementalMigrationResponse CreateIncrementalMigration(CreateIncrementalMigrationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateIncrementalMigrationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateIncrementalMigrationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateIncrementalMigration");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -179,6 +219,26 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete a backup import task.
+     * @param req DeleteBackupMigrationRequest
+     * @return DeleteBackupMigrationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBackupMigrationResponse DeleteBackupMigration(DeleteBackupMigrationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteBackupMigrationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteBackupMigrationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteBackupMigration");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to drop a database.
      * @param req DeleteDBRequest
      * @return DeleteDBResponse
@@ -191,6 +251,26 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteDBResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteDB");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete an incremental backup import task.
+     * @param req DeleteIncrementalMigrationRequest
+     * @return DeleteIncrementalMigrationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteIncrementalMigrationResponse DeleteIncrementalMigration(DeleteIncrementalMigrationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteIncrementalMigrationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteIncrementalMigrationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteIncrementalMigration");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -239,6 +319,66 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the commands of creating backups canonically.
+     * @param req DescribeBackupCommandRequest
+     * @return DescribeBackupCommandResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupCommandResponse DescribeBackupCommand(DescribeBackupCommandRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupCommandResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupCommandResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackupCommand");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create an incremental backup import task.
+     * @param req DescribeBackupMigrationRequest
+     * @return DescribeBackupMigrationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupMigrationResponse DescribeBackupMigration(DescribeBackupMigrationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupMigrationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupMigrationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackupMigration");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the size of uploaded backup files. It is valid if the backup file type is `COS_UPLOAD` (the file is stored in COS).
+     * @param req DescribeBackupUploadSizeRequest
+     * @return DescribeBackupUploadSizeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupUploadSizeResponse DescribeBackupUploadSize(DescribeBackupUploadSizeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupUploadSizeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupUploadSizeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackupUploadSize");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the list of backups.
      * @param req DescribeBackupsRequest
      * @return DescribeBackupsResponse
@@ -251,6 +391,26 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeBackups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the database character sets supported by an instance.
+     * @param req DescribeDBCharsetsRequest
+     * @return DescribeDBCharsetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBCharsetsResponse DescribeDBCharsets(DescribeDBCharsetsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBCharsetsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBCharsetsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDBCharsets");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -311,6 +471,26 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeFlowStatusResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeFlowStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query an incremental backup import task.
+     * @param req DescribeIncrementalMigrationRequest
+     * @return DescribeIncrementalMigrationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIncrementalMigrationResponse DescribeIncrementalMigration(DescribeIncrementalMigrationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeIncrementalMigrationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeIncrementalMigrationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeIncrementalMigration");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -459,6 +639,26 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query a backup upload permission.
+     * @param req DescribeUploadBackupInfoRequest
+     * @return DescribeUploadBackupInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUploadBackupInfoResponse DescribeUploadBackupInfo(DescribeUploadBackupInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUploadBackupInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUploadBackupInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUploadBackupInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query currently purchasable AZs.
      * @param req DescribeZonesRequest
      * @return DescribeZonesResponse
@@ -551,6 +751,26 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyAccountRemarkResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyAccountRemark");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify a backup import task.
+     * @param req ModifyBackupMigrationRequest
+     * @return ModifyBackupMigrationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBackupMigrationResponse ModifyBackupMigration(ModifyBackupMigrationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyBackupMigrationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyBackupMigrationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyBackupMigration");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -671,6 +891,26 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyDBRemarkResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyDBRemark");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify an incremental backup import task.
+     * @param req ModifyIncrementalMigrationRequest
+     * @return ModifyIncrementalMigrationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyIncrementalMigrationResponse ModifyIncrementalMigration(ModifyIncrementalMigrationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyIncrementalMigrationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyIncrementalMigrationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyIncrementalMigration");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -811,6 +1051,46 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RunMigrationResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RunMigration");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to start a backup import task.
+     * @param req StartBackupMigrationRequest
+     * @return StartBackupMigrationResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartBackupMigrationResponse StartBackupMigration(StartBackupMigrationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartBackupMigrationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartBackupMigrationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StartBackupMigration");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to start an incremental backup import task.
+     * @param req StartIncrementalMigrationRequest
+     * @return StartIncrementalMigrationResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartIncrementalMigrationResponse StartIncrementalMigration(StartIncrementalMigrationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartIncrementalMigrationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartIncrementalMigrationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StartIncrementalMigration");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

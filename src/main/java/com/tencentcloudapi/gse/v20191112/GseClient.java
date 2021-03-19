@@ -79,6 +79,27 @@ public class GseClient extends AbstractClient{
     }
 
     /**
+     *This API (DeleteTimerScalingPolicy) is used to delete a scheduled scaling policy of a fleet.
+
+     * @param req DeleteTimerScalingPolicyRequest
+     * @return DeleteTimerScalingPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTimerScalingPolicyResponse DeleteTimerScalingPolicy(DeleteTimerScalingPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteTimerScalingPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteTimerScalingPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteTimerScalingPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the list of game server session details.
      * @param req DescribeGameServerSessionDetailsRequest
      * @return DescribeGameServerSessionDetailsResponse
@@ -151,6 +172,27 @@ public class GseClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribePlayerSessionsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribePlayerSessions");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API (DescribeTimerScalingPolicies) is used to query the scheduled scaling policies of a fleet. You can query the policies by `fleetID` or the fleet name. The returned results are paged. 
+
+     * @param req DescribeTimerScalingPoliciesRequest
+     * @return DescribeTimerScalingPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTimerScalingPoliciesResponse DescribeTimerScalingPolicies(DescribeTimerScalingPoliciesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTimerScalingPoliciesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTimerScalingPoliciesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTimerScalingPolicies");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -239,6 +281,29 @@ public class GseClient extends AbstractClient{
     }
 
     /**
+     *This API (PutTimerScalingPolicy) is used to create or update a scheduled scaling policy for a fleet.
+
+If the field `timerID` is filled in, the specified policy will be updated, and if `timerID` is left empty, a new policy will be created.
+
+     * @param req PutTimerScalingPolicyRequest
+     * @return PutTimerScalingPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public PutTimerScalingPolicyResponse PutTimerScalingPolicy(PutTimerScalingPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PutTimerScalingPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<PutTimerScalingPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "PutTimerScalingPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to search in the list of game server sessions.
      * @param req SearchGameServerSessionsRequest
      * @return SearchGameServerSessionsResponse
@@ -251,6 +316,29 @@ public class GseClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SearchGameServerSessionsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SearchGameServerSessions");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API (SetServerReserved) is used to mark the exceptional instances as retained for troubleshooting.
+
+`ReserveValue`: specifies whether to retain the instance. Valid values: `0` (do not retain), `1` (retain). Default value: `0`.
+
+     * @param req SetServerReservedRequest
+     * @return SetServerReservedResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetServerReservedResponse SetServerReserved(SetServerReservedRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetServerReservedResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetServerReservedResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SetServerReserved");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
