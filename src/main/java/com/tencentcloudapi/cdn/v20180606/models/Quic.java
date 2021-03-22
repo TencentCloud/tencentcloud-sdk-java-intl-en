@@ -20,41 +20,36 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DisableCachesRequest extends AbstractModel{
+public class Quic extends AbstractModel{
 
     /**
-    * List of URLs to be blocked (URLs must contain `http://` or `https://`).
-Up to 100 entries can be submitted at a time and 3,000 entries per day.
+    * Whether to enable QUIC
     */
-    @SerializedName("Urls")
+    @SerializedName("Switch")
     @Expose
-    private String [] Urls;
+    private String Switch;
 
     /**
-     * Get List of URLs to be blocked (URLs must contain `http://` or `https://`).
-Up to 100 entries can be submitted at a time and 3,000 entries per day. 
-     * @return Urls List of URLs to be blocked (URLs must contain `http://` or `https://`).
-Up to 100 entries can be submitted at a time and 3,000 entries per day.
+     * Get Whether to enable QUIC 
+     * @return Switch Whether to enable QUIC
      */
-    public String [] getUrls() {
-        return this.Urls;
+    public String getSwitch() {
+        return this.Switch;
     }
 
     /**
-     * Set List of URLs to be blocked (URLs must contain `http://` or `https://`).
-Up to 100 entries can be submitted at a time and 3,000 entries per day.
-     * @param Urls List of URLs to be blocked (URLs must contain `http://` or `https://`).
-Up to 100 entries can be submitted at a time and 3,000 entries per day.
+     * Set Whether to enable QUIC
+     * @param Switch Whether to enable QUIC
      */
-    public void setUrls(String [] Urls) {
-        this.Urls = Urls;
+    public void setSwitch(String Switch) {
+        this.Switch = Switch;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "Urls.", this.Urls);
+        this.setParamSimple(map, prefix + "Switch", this.Switch);
 
     }
 }

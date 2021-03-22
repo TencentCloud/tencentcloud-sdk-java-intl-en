@@ -44,7 +44,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     private Long Volume;
 
     /**
-    * MySQL version. Valid values: 5.5, 5.6, 5.7. Please use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported instance versions.
+    * MySQL version. Valid values: `5.5`, `5.6`, `5.7`, `8.0`. You can use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported versions.
     */
     @SerializedName("EngineVersion")
     @Expose
@@ -198,7 +198,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     private String ClientToken;
 
     /**
-    * Instance type. Valid values: HA (High-Availability Edition), BASIC (Basic Edition). If this parameter is not specified, High-Availability Edition will be used by default.
+    * Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance). Default value: `UNIVERSAL`.
     */
     @SerializedName("DeviceType")
     @Expose
@@ -217,6 +217,27 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     @SerializedName("AlarmPolicyList")
     @Expose
     private Long [] AlarmPolicyList;
+
+    /**
+    * The number of nodes of the instance. To purchase a read-only replica or a basic instance, set this parameter to `1` or leave it empty. To purchase a three-node instance, set this parameter to `3` or specify the `BackupZone` parameter. If the instance to be purchased is a source instance and both `BackupZone` and this parameter are left empty, the value `2` will be used, which indicates the source instance will have two nodes.
+    */
+    @SerializedName("InstanceNodes")
+    @Expose
+    private Long InstanceNodes;
+
+    /**
+    * The number of CPU cores of the instance. If this parameter is left empty, the number of CPU cores depends on the `Memory` value.
+    */
+    @SerializedName("Cpu")
+    @Expose
+    private Long Cpu;
+
+    /**
+    * Whether to automatically start disaster recovery synchronization. This parameter takes effect only for disaster recovery instances. Valid values: `0` (no), `1` (yes).
+    */
+    @SerializedName("AutoSyncFlag")
+    @Expose
+    private Long AutoSyncFlag;
 
     /**
      * Get Number of instances. Value range: 1-100. Default value: 1. 
@@ -267,16 +288,16 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     }
 
     /**
-     * Get MySQL version. Valid values: 5.5, 5.6, 5.7. Please use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported instance versions. 
-     * @return EngineVersion MySQL version. Valid values: 5.5, 5.6, 5.7. Please use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported instance versions.
+     * Get MySQL version. Valid values: `5.5`, `5.6`, `5.7`, `8.0`. You can use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported versions. 
+     * @return EngineVersion MySQL version. Valid values: `5.5`, `5.6`, `5.7`, `8.0`. You can use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported versions.
      */
     public String getEngineVersion() {
         return this.EngineVersion;
     }
 
     /**
-     * Set MySQL version. Valid values: 5.5, 5.6, 5.7. Please use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported instance versions.
-     * @param EngineVersion MySQL version. Valid values: 5.5, 5.6, 5.7. Please use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported instance versions.
+     * Set MySQL version. Valid values: `5.5`, `5.6`, `5.7`, `8.0`. You can use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported versions.
+     * @param EngineVersion MySQL version. Valid values: `5.5`, `5.6`, `5.7`, `8.0`. You can use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported versions.
      */
     public void setEngineVersion(String EngineVersion) {
         this.EngineVersion = EngineVersion;
@@ -619,16 +640,16 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     }
 
     /**
-     * Get Instance type. Valid values: HA (High-Availability Edition), BASIC (Basic Edition). If this parameter is not specified, High-Availability Edition will be used by default. 
-     * @return DeviceType Instance type. Valid values: HA (High-Availability Edition), BASIC (Basic Edition). If this parameter is not specified, High-Availability Edition will be used by default.
+     * Get Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance). Default value: `UNIVERSAL`. 
+     * @return DeviceType Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance). Default value: `UNIVERSAL`.
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set Instance type. Valid values: HA (High-Availability Edition), BASIC (Basic Edition). If this parameter is not specified, High-Availability Edition will be used by default.
-     * @param DeviceType Instance type. Valid values: HA (High-Availability Edition), BASIC (Basic Edition). If this parameter is not specified, High-Availability Edition will be used by default.
+     * Set Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance). Default value: `UNIVERSAL`.
+     * @param DeviceType Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance). Default value: `UNIVERSAL`.
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
@@ -667,6 +688,54 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     }
 
     /**
+     * Get The number of nodes of the instance. To purchase a read-only replica or a basic instance, set this parameter to `1` or leave it empty. To purchase a three-node instance, set this parameter to `3` or specify the `BackupZone` parameter. If the instance to be purchased is a source instance and both `BackupZone` and this parameter are left empty, the value `2` will be used, which indicates the source instance will have two nodes. 
+     * @return InstanceNodes The number of nodes of the instance. To purchase a read-only replica or a basic instance, set this parameter to `1` or leave it empty. To purchase a three-node instance, set this parameter to `3` or specify the `BackupZone` parameter. If the instance to be purchased is a source instance and both `BackupZone` and this parameter are left empty, the value `2` will be used, which indicates the source instance will have two nodes.
+     */
+    public Long getInstanceNodes() {
+        return this.InstanceNodes;
+    }
+
+    /**
+     * Set The number of nodes of the instance. To purchase a read-only replica or a basic instance, set this parameter to `1` or leave it empty. To purchase a three-node instance, set this parameter to `3` or specify the `BackupZone` parameter. If the instance to be purchased is a source instance and both `BackupZone` and this parameter are left empty, the value `2` will be used, which indicates the source instance will have two nodes.
+     * @param InstanceNodes The number of nodes of the instance. To purchase a read-only replica or a basic instance, set this parameter to `1` or leave it empty. To purchase a three-node instance, set this parameter to `3` or specify the `BackupZone` parameter. If the instance to be purchased is a source instance and both `BackupZone` and this parameter are left empty, the value `2` will be used, which indicates the source instance will have two nodes.
+     */
+    public void setInstanceNodes(Long InstanceNodes) {
+        this.InstanceNodes = InstanceNodes;
+    }
+
+    /**
+     * Get The number of CPU cores of the instance. If this parameter is left empty, the number of CPU cores depends on the `Memory` value. 
+     * @return Cpu The number of CPU cores of the instance. If this parameter is left empty, the number of CPU cores depends on the `Memory` value.
+     */
+    public Long getCpu() {
+        return this.Cpu;
+    }
+
+    /**
+     * Set The number of CPU cores of the instance. If this parameter is left empty, the number of CPU cores depends on the `Memory` value.
+     * @param Cpu The number of CPU cores of the instance. If this parameter is left empty, the number of CPU cores depends on the `Memory` value.
+     */
+    public void setCpu(Long Cpu) {
+        this.Cpu = Cpu;
+    }
+
+    /**
+     * Get Whether to automatically start disaster recovery synchronization. This parameter takes effect only for disaster recovery instances. Valid values: `0` (no), `1` (yes). 
+     * @return AutoSyncFlag Whether to automatically start disaster recovery synchronization. This parameter takes effect only for disaster recovery instances. Valid values: `0` (no), `1` (yes).
+     */
+    public Long getAutoSyncFlag() {
+        return this.AutoSyncFlag;
+    }
+
+    /**
+     * Set Whether to automatically start disaster recovery synchronization. This parameter takes effect only for disaster recovery instances. Valid values: `0` (no), `1` (yes).
+     * @param AutoSyncFlag Whether to automatically start disaster recovery synchronization. This parameter takes effect only for disaster recovery instances. Valid values: `0` (no), `1` (yes).
+     */
+    public void setAutoSyncFlag(Long AutoSyncFlag) {
+        this.AutoSyncFlag = AutoSyncFlag;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -698,6 +767,9 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
         this.setParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
         this.setParamArraySimple(map, prefix + "AlarmPolicyList.", this.AlarmPolicyList);
+        this.setParamSimple(map, prefix + "InstanceNodes", this.InstanceNodes);
+        this.setParamSimple(map, prefix + "Cpu", this.Cpu);
+        this.setParamSimple(map, prefix + "AutoSyncFlag", this.AutoSyncFlag);
 
     }
 }

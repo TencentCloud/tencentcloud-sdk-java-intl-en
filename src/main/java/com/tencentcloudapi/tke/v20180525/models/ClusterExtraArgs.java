@@ -47,6 +47,14 @@ Note: this field may return null, indicating that no valid value is obtained.
     private String [] KubeScheduler;
 
     /**
+    * etcd custom parameter, which is only effective for self-deployed cluster.
+Note: this field may return `null`, indicating that no valid value is obtained.
+    */
+    @SerializedName("Etcd")
+    @Expose
+    private String [] Etcd;
+
+    /**
      * Get kube-apiserver custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
 Note: this field may return `null`, indicating that no valid value is obtained. 
      * @return KubeAPIServer kube-apiserver custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
@@ -107,12 +115,33 @@ Note: this field may return null, indicating that no valid value is obtained.
     }
 
     /**
+     * Get etcd custom parameter, which is only effective for self-deployed cluster.
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return Etcd etcd custom parameter, which is only effective for self-deployed cluster.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public String [] getEtcd() {
+        return this.Etcd;
+    }
+
+    /**
+     * Set etcd custom parameter, which is only effective for self-deployed cluster.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param Etcd etcd custom parameter, which is only effective for self-deployed cluster.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public void setEtcd(String [] Etcd) {
+        this.Etcd = Etcd;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "KubeAPIServer.", this.KubeAPIServer);
         this.setParamArraySimple(map, prefix + "KubeControllerManager.", this.KubeControllerManager);
         this.setParamArraySimple(map, prefix + "KubeScheduler.", this.KubeScheduler);
+        this.setParamArraySimple(map, prefix + "Etcd.", this.Etcd);
 
     }
 }

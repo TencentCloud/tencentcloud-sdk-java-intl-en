@@ -56,7 +56,7 @@ Unit: this field uses the currency code specified in `currencyCode`, and only su
 
     /**
     * The instance model of the Reserved Instance, such as S3.MEDIUM4.
-Valid value: <a href="https://intl.cloud.tencent.com/product/cvm/instances?from_cn_redirect=1">Instance Models</a>
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518">Reserved Instance Types</a>
     */
     @SerializedName("InstanceType")
     @Expose
@@ -176,9 +176,9 @@ Unit: this field uses the currency code specified in `currencyCode`, and only su
 
     /**
      * Get The instance model of the Reserved Instance, such as S3.MEDIUM4.
-Valid value: <a href="https://intl.cloud.tencent.com/product/cvm/instances?from_cn_redirect=1">Instance Models</a> 
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518">Reserved Instance Types</a> 
      * @return InstanceType The instance model of the Reserved Instance, such as S3.MEDIUM4.
-Valid value: <a href="https://intl.cloud.tencent.com/product/cvm/instances?from_cn_redirect=1">Instance Models</a>
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518">Reserved Instance Types</a>
      */
     public String getInstanceType() {
         return this.InstanceType;
@@ -186,9 +186,9 @@ Valid value: <a href="https://intl.cloud.tencent.com/product/cvm/instances?from_
 
     /**
      * Set The instance model of the Reserved Instance, such as S3.MEDIUM4.
-Valid value: <a href="https://intl.cloud.tencent.com/product/cvm/instances?from_cn_redirect=1">Instance Models</a>
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518">Reserved Instance Types</a>
      * @param InstanceType The instance model of the Reserved Instance, such as S3.MEDIUM4.
-Valid value: <a href="https://intl.cloud.tencent.com/product/cvm/instances?from_cn_redirect=1">Instance Models</a>
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518">Reserved Instance Types</a>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;

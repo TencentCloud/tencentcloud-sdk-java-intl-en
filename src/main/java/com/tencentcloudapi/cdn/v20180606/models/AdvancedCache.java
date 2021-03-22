@@ -43,11 +43,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String IgnoreCacheControl;
 
     /**
-    * Ignore the Set-Cookie header of an origin server
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Whether to cache the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
+on: Enable; do not cache the header and body.
+off: Disable; follow the custom cache rules of cache nodes.
+It is disabled by default.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("IgnoreSetCookie")
     @Expose
@@ -110,32 +110,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Ignore the Set-Cookie header of an origin server
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return IgnoreSetCookie Ignore the Set-Cookie header of an origin server
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Whether to cache the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
+on: Enable; do not cache the header and body.
+off: Disable; follow the custom cache rules of cache nodes.
+It is disabled by default.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return IgnoreSetCookie Whether to cache the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
+on: Enable; do not cache the header and body.
+off: Disable; follow the custom cache rules of cache nodes.
+It is disabled by default.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getIgnoreSetCookie() {
         return this.IgnoreSetCookie;
     }
 
     /**
-     * Set Ignore the Set-Cookie header of an origin server
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param IgnoreSetCookie Ignore the Set-Cookie header of an origin server
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Whether to cache the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
+on: Enable; do not cache the header and body.
+off: Disable; follow the custom cache rules of cache nodes.
+It is disabled by default.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param IgnoreSetCookie Whether to cache the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
+on: Enable; do not cache the header and body.
+off: Disable; follow the custom cache rules of cache nodes.
+It is disabled by default.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setIgnoreSetCookie(String IgnoreSetCookie) {
         this.IgnoreSetCookie = IgnoreSetCookie;

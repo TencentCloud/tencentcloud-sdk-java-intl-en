@@ -1880,6 +1880,26 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
+     *This API is used to query the outbound bandwidth caps of all regions connected with a CCN instance. The API only returns regions included in the associated network instances.
+     * @param req DescribeCcnRegionBandwidthLimitsRequest
+     * @return DescribeCcnRegionBandwidthLimitsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCcnRegionBandwidthLimitsResponse DescribeCcnRegionBandwidthLimits(DescribeCcnRegionBandwidthLimitsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCcnRegionBandwidthLimitsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCcnRegionBandwidthLimitsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCcnRegionBandwidthLimits");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (DescribeCcnRoutes) is used to query routes that have been added to a CCN.
      * @param req DescribeCcnRoutesRequest
      * @return DescribeCcnRoutesResponse

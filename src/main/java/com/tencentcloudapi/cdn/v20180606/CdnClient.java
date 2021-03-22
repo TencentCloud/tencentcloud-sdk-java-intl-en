@@ -79,6 +79,26 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *This API is used to recreate a failed event log task.
+     * @param req CreateScdnFailedLogTaskRequest
+     * @return CreateScdnFailedLogTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateScdnFailedLogTaskResponse CreateScdnFailedLogTask(CreateScdnFailedLogTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateScdnFailedLogTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateScdnFailedLogTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateScdnFailedLogTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete a specified acceleration domain name.
      * @param req DeleteCdnDomainRequest
      * @return DeleteCdnDomainResponse
@@ -209,7 +229,7 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the IP information of CDN intermediate nodes. Note: the relevant allowlist needs to be enabled for this API.
+     *This API is used to query the IP information of CDN intermediate nodes. Note: this API will be deactivated soon. Please call `DescribeIpStatus` instead.
      * @param req DescribeCdnOriginIpRequest
      * @return DescribeCdnOriginIpResponse
      * @throws TencentCloudSDKException
@@ -524,7 +544,7 @@ It corresponds to the **Pornography Detection** page on the CDN Console.
     }
 
     /**
-     *This API (DisableCaches) is used to block access to a specific URL on CDN. After a URL is blocked, error 403 will be returned for all access requests to it. (This API is during beta test and not fully available now.)
+     *This API is used to block access to a specific URL on CDN. After a URL is blocked, a 403 error will be returned for the arrived access requests initiated from the Chinese mainland. This API is in beta and not fully available now.
      * @param req DisableCachesRequest
      * @return DisableCachesResponse
      * @throws TencentCloudSDKException

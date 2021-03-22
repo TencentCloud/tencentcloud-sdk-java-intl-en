@@ -13,29 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vpc.v20170312.models;
+package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSecurityGroupsResponse extends AbstractModel{
+public class CreateScdnFailedLogTaskResponse extends AbstractModel{
 
     /**
-    * Security group object.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Creation result. 
+0: Creation succeeded
     */
-    @SerializedName("SecurityGroupSet")
+    @SerializedName("Result")
     @Expose
-    private SecurityGroup [] SecurityGroupSet;
-
-    /**
-    * The number of instances meeting the filter condition.
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
+    private String Result;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,39 +38,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String RequestId;
 
     /**
-     * Get Security group object.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return SecurityGroupSet Security group object.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Creation result. 
+0: Creation succeeded 
+     * @return Result Creation result. 
+0: Creation succeeded
      */
-    public SecurityGroup [] getSecurityGroupSet() {
-        return this.SecurityGroupSet;
+    public String getResult() {
+        return this.Result;
     }
 
     /**
-     * Set Security group object.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param SecurityGroupSet Security group object.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Creation result. 
+0: Creation succeeded
+     * @param Result Creation result. 
+0: Creation succeeded
      */
-    public void setSecurityGroupSet(SecurityGroup [] SecurityGroupSet) {
-        this.SecurityGroupSet = SecurityGroupSet;
-    }
-
-    /**
-     * Get The number of instances meeting the filter condition. 
-     * @return TotalCount The number of instances meeting the filter condition.
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set The number of instances meeting the filter condition.
-     * @param TotalCount The number of instances meeting the filter condition.
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setResult(String Result) {
+        this.Result = Result;
     }
 
     /**
@@ -100,8 +77,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "SecurityGroupSet.", this.SecurityGroupSet);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

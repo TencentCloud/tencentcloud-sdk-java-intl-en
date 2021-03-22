@@ -127,6 +127,20 @@ The following conditions are required to use ipvs-bpf network mode:
     private String RuntimeVersion;
 
     /**
+    * Indicates whether to enable the custom mode for the node’s pod CIDR range
+    */
+    @SerializedName("EnableCustomizedPodCIDR")
+    @Expose
+    private Boolean EnableCustomizedPodCIDR;
+
+    /**
+    * The basic number of Pods in custom mode
+    */
+    @SerializedName("BasePodNumber")
+    @Expose
+    private Long BasePodNumber;
+
+    /**
      * Get Whether IPVS is enabled 
      * @return IPVS Whether IPVS is enabled
      */
@@ -375,6 +389,38 @@ The following conditions are required to use ipvs-bpf network mode:
     }
 
     /**
+     * Get Indicates whether to enable the custom mode for the node’s pod CIDR range 
+     * @return EnableCustomizedPodCIDR Indicates whether to enable the custom mode for the node’s pod CIDR range
+     */
+    public Boolean getEnableCustomizedPodCIDR() {
+        return this.EnableCustomizedPodCIDR;
+    }
+
+    /**
+     * Set Indicates whether to enable the custom mode for the node’s pod CIDR range
+     * @param EnableCustomizedPodCIDR Indicates whether to enable the custom mode for the node’s pod CIDR range
+     */
+    public void setEnableCustomizedPodCIDR(Boolean EnableCustomizedPodCIDR) {
+        this.EnableCustomizedPodCIDR = EnableCustomizedPodCIDR;
+    }
+
+    /**
+     * Get The basic number of Pods in custom mode 
+     * @return BasePodNumber The basic number of Pods in custom mode
+     */
+    public Long getBasePodNumber() {
+        return this.BasePodNumber;
+    }
+
+    /**
+     * Set The basic number of Pods in custom mode
+     * @param BasePodNumber The basic number of Pods in custom mode
+     */
+    public void setBasePodNumber(Long BasePodNumber) {
+        this.BasePodNumber = BasePodNumber;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -392,6 +438,8 @@ The following conditions are required to use ipvs-bpf network mode:
         this.setParamSimple(map, prefix + "AuditLogTopicId", this.AuditLogTopicId);
         this.setParamSimple(map, prefix + "VpcCniType", this.VpcCniType);
         this.setParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
+        this.setParamSimple(map, prefix + "EnableCustomizedPodCIDR", this.EnableCustomizedPodCIDR);
+        this.setParamSimple(map, prefix + "BasePodNumber", this.BasePodNumber);
 
     }
 }

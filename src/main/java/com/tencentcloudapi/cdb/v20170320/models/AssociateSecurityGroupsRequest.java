@@ -37,6 +37,13 @@ public class AssociateSecurityGroupsRequest extends AbstractModel{
     private String [] InstanceIds;
 
     /**
+    * This parameter takes effect only when the IDs of read-only replicas are passed in. If this parameter is set to `False` or left empty, the security group will be bound to the RO groups of these read-only replicas. If this parameter is set to `True`, the security group will be bound to the read-only replicas themselves.
+    */
+    @SerializedName("ForReadonlyInstance")
+    @Expose
+    private Boolean ForReadonlyInstance;
+
+    /**
      * Get Security group ID. 
      * @return SecurityGroupId Security group ID.
      */
@@ -69,11 +76,28 @@ public class AssociateSecurityGroupsRequest extends AbstractModel{
     }
 
     /**
+     * Get This parameter takes effect only when the IDs of read-only replicas are passed in. If this parameter is set to `False` or left empty, the security group will be bound to the RO groups of these read-only replicas. If this parameter is set to `True`, the security group will be bound to the read-only replicas themselves. 
+     * @return ForReadonlyInstance This parameter takes effect only when the IDs of read-only replicas are passed in. If this parameter is set to `False` or left empty, the security group will be bound to the RO groups of these read-only replicas. If this parameter is set to `True`, the security group will be bound to the read-only replicas themselves.
+     */
+    public Boolean getForReadonlyInstance() {
+        return this.ForReadonlyInstance;
+    }
+
+    /**
+     * Set This parameter takes effect only when the IDs of read-only replicas are passed in. If this parameter is set to `False` or left empty, the security group will be bound to the RO groups of these read-only replicas. If this parameter is set to `True`, the security group will be bound to the read-only replicas themselves.
+     * @param ForReadonlyInstance This parameter takes effect only when the IDs of read-only replicas are passed in. If this parameter is set to `False` or left empty, the security group will be bound to the RO groups of these read-only replicas. If this parameter is set to `True`, the security group will be bound to the read-only replicas themselves.
+     */
+    public void setForReadonlyInstance(Boolean ForReadonlyInstance) {
+        this.ForReadonlyInstance = ForReadonlyInstance;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+        this.setParamSimple(map, prefix + "ForReadonlyInstance", this.ForReadonlyInstance);
 
     }
 }

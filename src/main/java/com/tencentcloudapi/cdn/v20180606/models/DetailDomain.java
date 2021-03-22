@@ -466,6 +466,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private OriginCombine OriginCombine;
 
     /**
+    * POST request configuration item
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PostMaxSize")
+    @Expose
+    private PostSize PostMaxSize;
+
+    /**
+    * QUIC configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Quic")
+    @Expose
+    private Quic Quic;
+
+    /**
      * Get Domain name ID 
      * @return ResourceId Domain name ID
      */
@@ -1590,6 +1606,46 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
+     * Get POST request configuration item
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return PostMaxSize POST request configuration item
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public PostSize getPostMaxSize() {
+        return this.PostMaxSize;
+    }
+
+    /**
+     * Set POST request configuration item
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param PostMaxSize POST request configuration item
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setPostMaxSize(PostSize PostMaxSize) {
+        this.PostMaxSize = PostMaxSize;
+    }
+
+    /**
+     * Get QUIC configuration
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Quic QUIC configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Quic getQuic() {
+        return this.Quic;
+    }
+
+    /**
+     * Set QUIC configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Quic QUIC configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setQuic(Quic Quic) {
+        this.Quic = Quic;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1647,6 +1703,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamArrayObj(map, prefix + "AdvanceSet.", this.AdvanceSet);
         this.setParamObj(map, prefix + "OfflineCache.", this.OfflineCache);
         this.setParamObj(map, prefix + "OriginCombine.", this.OriginCombine);
+        this.setParamObj(map, prefix + "PostMaxSize.", this.PostMaxSize);
+        this.setParamObj(map, prefix + "Quic.", this.Quic);
 
     }
 }

@@ -262,6 +262,13 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
     private OfflineCache OfflineCache;
 
     /**
+    * QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+    */
+    @SerializedName("Quic")
+    @Expose
+    private Quic Quic;
+
+    /**
      * Get Domain name 
      * @return Domain Domain name
      */
@@ -822,6 +829,22 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
     }
 
     /**
+     * Get QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents. 
+     * @return Quic QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+     */
+    public Quic getQuic() {
+        return this.Quic;
+    }
+
+    /**
+     * Set QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+     * @param Quic QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+     */
+    public void setQuic(Quic Quic) {
+        this.Quic = Quic;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -858,6 +881,7 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
         this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
         this.setParamObj(map, prefix + "Ipv6Access.", this.Ipv6Access);
         this.setParamObj(map, prefix + "OfflineCache.", this.OfflineCache);
+        this.setParamObj(map, prefix + "Quic.", this.Quic);
 
     }
 }

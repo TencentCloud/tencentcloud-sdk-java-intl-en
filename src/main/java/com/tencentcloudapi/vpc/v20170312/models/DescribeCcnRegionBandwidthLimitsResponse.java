@@ -20,22 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSecurityGroupsResponse extends AbstractModel{
+public class DescribeCcnRegionBandwidthLimitsResponse extends AbstractModel{
 
     /**
-    * Security group object.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * The outbound bandwidth caps of all regions connected with the specified CCN instance
     */
-    @SerializedName("SecurityGroupSet")
+    @SerializedName("CcnRegionBandwidthLimitSet")
     @Expose
-    private SecurityGroup [] SecurityGroupSet;
-
-    /**
-    * The number of instances meeting the filter condition.
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
+    private CcnRegionBandwidthLimit [] CcnRegionBandwidthLimitSet;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,39 +37,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String RequestId;
 
     /**
-     * Get Security group object.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return SecurityGroupSet Security group object.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get The outbound bandwidth caps of all regions connected with the specified CCN instance 
+     * @return CcnRegionBandwidthLimitSet The outbound bandwidth caps of all regions connected with the specified CCN instance
      */
-    public SecurityGroup [] getSecurityGroupSet() {
-        return this.SecurityGroupSet;
+    public CcnRegionBandwidthLimit [] getCcnRegionBandwidthLimitSet() {
+        return this.CcnRegionBandwidthLimitSet;
     }
 
     /**
-     * Set Security group object.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param SecurityGroupSet Security group object.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set The outbound bandwidth caps of all regions connected with the specified CCN instance
+     * @param CcnRegionBandwidthLimitSet The outbound bandwidth caps of all regions connected with the specified CCN instance
      */
-    public void setSecurityGroupSet(SecurityGroup [] SecurityGroupSet) {
-        this.SecurityGroupSet = SecurityGroupSet;
-    }
-
-    /**
-     * Get The number of instances meeting the filter condition. 
-     * @return TotalCount The number of instances meeting the filter condition.
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set The number of instances meeting the filter condition.
-     * @param TotalCount The number of instances meeting the filter condition.
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setCcnRegionBandwidthLimitSet(CcnRegionBandwidthLimit [] CcnRegionBandwidthLimitSet) {
+        this.CcnRegionBandwidthLimitSet = CcnRegionBandwidthLimitSet;
     }
 
     /**
@@ -100,8 +72,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "SecurityGroupSet.", this.SecurityGroupSet);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "CcnRegionBandwidthLimitSet.", this.CcnRegionBandwidthLimitSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

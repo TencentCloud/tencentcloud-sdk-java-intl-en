@@ -303,6 +303,13 @@ global: global acceleration
     private OriginCombine OriginCombine;
 
     /**
+    * QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+    */
+    @SerializedName("Quic")
+    @Expose
+    private Quic Quic;
+
+    /**
      * Get Domain name 
      * @return Domain Domain name
      */
@@ -955,6 +962,22 @@ global: global acceleration
     }
 
     /**
+     * Get QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents. 
+     * @return Quic QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+     */
+    public Quic getQuic() {
+        return this.Quic;
+    }
+
+    /**
+     * Set QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+     * @param Quic QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+     */
+    public void setQuic(Quic Quic) {
+        this.Quic = Quic;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -997,6 +1020,7 @@ global: global acceleration
         this.setParamObj(map, prefix + "Ipv6Access.", this.Ipv6Access);
         this.setParamObj(map, prefix + "OfflineCache.", this.OfflineCache);
         this.setParamObj(map, prefix + "OriginCombine.", this.OriginCombine);
+        this.setParamObj(map, prefix + "Quic.", this.Quic);
 
     }
 }

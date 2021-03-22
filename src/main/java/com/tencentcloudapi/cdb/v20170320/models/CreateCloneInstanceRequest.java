@@ -129,11 +129,18 @@ which is left empty by default. Specify this parameter when cloning a strong syn
     private String BackupZone;
 
     /**
-    * Type of the cloned instance. Valid values: `HA` (High-Availability Edition), `EXCLUSIVE` (dedicated). Default value: `HA`.
+    * Resource isolation type of the clone. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance). Default value: `UNIVERSAL`.
     */
     @SerializedName("DeviceType")
     @Expose
     private String DeviceType;
+
+    /**
+    * The number of nodes of the clone. If this parameter is set to `3` or the `BackupZone` parameter is specified, the clone will have three nodes. If this parameter is set to `2` or left empty, the clone will have two nodes.
+    */
+    @SerializedName("InstanceNodes")
+    @Expose
+    private Long InstanceNodes;
 
     /**
      * Get ID of the instance to be cloned from 
@@ -380,19 +387,35 @@ which is left empty by default. Specify this parameter when cloning a strong syn
     }
 
     /**
-     * Get Type of the cloned instance. Valid values: `HA` (High-Availability Edition), `EXCLUSIVE` (dedicated). Default value: `HA`. 
-     * @return DeviceType Type of the cloned instance. Valid values: `HA` (High-Availability Edition), `EXCLUSIVE` (dedicated). Default value: `HA`.
+     * Get Resource isolation type of the clone. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance). Default value: `UNIVERSAL`. 
+     * @return DeviceType Resource isolation type of the clone. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance). Default value: `UNIVERSAL`.
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set Type of the cloned instance. Valid values: `HA` (High-Availability Edition), `EXCLUSIVE` (dedicated). Default value: `HA`.
-     * @param DeviceType Type of the cloned instance. Valid values: `HA` (High-Availability Edition), `EXCLUSIVE` (dedicated). Default value: `HA`.
+     * Set Resource isolation type of the clone. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance). Default value: `UNIVERSAL`.
+     * @param DeviceType Resource isolation type of the clone. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance). Default value: `UNIVERSAL`.
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
+    }
+
+    /**
+     * Get The number of nodes of the clone. If this parameter is set to `3` or the `BackupZone` parameter is specified, the clone will have three nodes. If this parameter is set to `2` or left empty, the clone will have two nodes. 
+     * @return InstanceNodes The number of nodes of the clone. If this parameter is set to `3` or the `BackupZone` parameter is specified, the clone will have three nodes. If this parameter is set to `2` or left empty, the clone will have two nodes.
+     */
+    public Long getInstanceNodes() {
+        return this.InstanceNodes;
+    }
+
+    /**
+     * Set The number of nodes of the clone. If this parameter is set to `3` or the `BackupZone` parameter is specified, the clone will have three nodes. If this parameter is set to `2` or left empty, the clone will have two nodes.
+     * @param InstanceNodes The number of nodes of the clone. If this parameter is set to `3` or the `BackupZone` parameter is specified, the clone will have three nodes. If this parameter is set to `2` or left empty, the clone will have two nodes.
+     */
+    public void setInstanceNodes(Long InstanceNodes) {
+        this.InstanceNodes = InstanceNodes;
     }
 
     /**
@@ -415,6 +438,7 @@ which is left empty by default. Specify this parameter when cloning a strong syn
         this.setParamSimple(map, prefix + "SlaveZone", this.SlaveZone);
         this.setParamSimple(map, prefix + "BackupZone", this.BackupZone);
         this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
+        this.setParamSimple(map, prefix + "InstanceNodes", this.InstanceNodes);
 
     }
 }

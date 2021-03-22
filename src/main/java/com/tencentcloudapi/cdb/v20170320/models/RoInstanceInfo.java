@@ -163,7 +163,7 @@ public class RoInstanceInfo extends AbstractModel{
     private String DeviceType;
 
     /**
-    * Database engine version of the RO instance. Value range: 5.1, 5.5, 5.6, 5.7
+    * Database engine version of the read-only replica. Valid values: `5.1`, `5.5`, `5.6`, `5.7`, `8.0`
     */
     @SerializedName("EngineVersion")
     @Expose
@@ -504,16 +504,16 @@ public class RoInstanceInfo extends AbstractModel{
     }
 
     /**
-     * Get Database engine version of the RO instance. Value range: 5.1, 5.5, 5.6, 5.7 
-     * @return EngineVersion Database engine version of the RO instance. Value range: 5.1, 5.5, 5.6, 5.7
+     * Get Database engine version of the read-only replica. Valid values: `5.1`, `5.5`, `5.6`, `5.7`, `8.0` 
+     * @return EngineVersion Database engine version of the read-only replica. Valid values: `5.1`, `5.5`, `5.6`, `5.7`, `8.0`
      */
     public String getEngineVersion() {
         return this.EngineVersion;
     }
 
     /**
-     * Set Database engine version of the RO instance. Value range: 5.1, 5.5, 5.6, 5.7
-     * @param EngineVersion Database engine version of the RO instance. Value range: 5.1, 5.5, 5.6, 5.7
+     * Set Database engine version of the read-only replica. Valid values: `5.1`, `5.5`, `5.6`, `5.7`, `8.0`
+     * @param EngineVersion Database engine version of the read-only replica. Valid values: `5.1`, `5.5`, `5.6`, `5.7`, `8.0`
      */
     public void setEngineVersion(String EngineVersion) {
         this.EngineVersion = EngineVersion;

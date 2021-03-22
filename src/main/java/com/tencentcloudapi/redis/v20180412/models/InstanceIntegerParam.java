@@ -86,6 +86,14 @@ public class InstanceIntegerParam extends AbstractModel{
     private Long Status;
 
     /**
+    * Parameter unit
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Unit")
+    @Expose
+    private String Unit;
+
+    /**
      * Get Parameter name 
      * @return ParamName Parameter name
      */
@@ -230,6 +238,26 @@ public class InstanceIntegerParam extends AbstractModel{
     }
 
     /**
+     * Get Parameter unit
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Unit Parameter unit
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getUnit() {
+        return this.Unit;
+    }
+
+    /**
+     * Set Parameter unit
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Unit Parameter unit
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setUnit(String Unit) {
+        this.Unit = Unit;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +270,7 @@ public class InstanceIntegerParam extends AbstractModel{
         this.setParamSimple(map, prefix + "Min", this.Min);
         this.setParamSimple(map, prefix + "Max", this.Max);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Unit", this.Unit);
 
     }
 }

@@ -318,6 +318,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long ZoneId;
 
     /**
+    * The number of nodes
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("InstanceNodes")
+    @Expose
+    private Long InstanceNodes;
+
+    /**
      * Get Public network access status. Value range: 0 (not enabled), 1 (enabled), 2 (disabled) 
      * @return WanStatus Public network access status. Value range: 0 (not enabled), 1 (enabled), 2 (disabled)
      */
@@ -1006,6 +1014,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get The number of nodes
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return InstanceNodes The number of nodes
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getInstanceNodes() {
+        return this.InstanceNodes;
+    }
+
+    /**
+     * Set The number of nodes
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param InstanceNodes The number of nodes
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setInstanceNodes(Long InstanceNodes) {
+        this.InstanceNodes = InstanceNodes;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1050,6 +1078,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "DeviceClass", this.DeviceClass);
         this.setParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamSimple(map, prefix + "InstanceNodes", this.InstanceNodes);
 
     }
 }

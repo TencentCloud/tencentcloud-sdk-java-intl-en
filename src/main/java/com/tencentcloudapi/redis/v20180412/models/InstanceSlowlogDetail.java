@@ -58,6 +58,13 @@ public class InstanceSlowlogDetail extends AbstractModel{
     private String ExecuteTime;
 
     /**
+    * Node ID
+    */
+    @SerializedName("Node")
+    @Expose
+    private String Node;
+
+    /**
      * Get Slow log duration 
      * @return Duration Slow log duration
      */
@@ -138,6 +145,22 @@ public class InstanceSlowlogDetail extends AbstractModel{
     }
 
     /**
+     * Get Node ID 
+     * @return Node Node ID
+     */
+    public String getNode() {
+        return this.Node;
+    }
+
+    /**
+     * Set Node ID
+     * @param Node Node ID
+     */
+    public void setNode(String Node) {
+        this.Node = Node;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class InstanceSlowlogDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "Command", this.Command);
         this.setParamSimple(map, prefix + "CommandLine", this.CommandLine);
         this.setParamSimple(map, prefix + "ExecuteTime", this.ExecuteTime);
+        this.setParamSimple(map, prefix + "Node", this.Node);
 
     }
 }

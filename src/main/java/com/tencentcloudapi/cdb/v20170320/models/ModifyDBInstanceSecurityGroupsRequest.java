@@ -37,6 +37,13 @@ public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel{
     private String [] SecurityGroupIds;
 
     /**
+    * This parameter takes effect only when the ID of read-only replica is passed in. If this parameter is set to `False` or left empty, the security groups bound with the RO group of the read-only replicas will be modified. If this parameter is set to `True`, the security groups bound with the read-only replica itself will be modified.
+    */
+    @SerializedName("ForReadonlyInstance")
+    @Expose
+    private Boolean ForReadonlyInstance;
+
+    /**
      * Get Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. 
      * @return InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      */
@@ -69,11 +76,28 @@ public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel{
     }
 
     /**
+     * Get This parameter takes effect only when the ID of read-only replica is passed in. If this parameter is set to `False` or left empty, the security groups bound with the RO group of the read-only replicas will be modified. If this parameter is set to `True`, the security groups bound with the read-only replica itself will be modified. 
+     * @return ForReadonlyInstance This parameter takes effect only when the ID of read-only replica is passed in. If this parameter is set to `False` or left empty, the security groups bound with the RO group of the read-only replicas will be modified. If this parameter is set to `True`, the security groups bound with the read-only replica itself will be modified.
+     */
+    public Boolean getForReadonlyInstance() {
+        return this.ForReadonlyInstance;
+    }
+
+    /**
+     * Set This parameter takes effect only when the ID of read-only replica is passed in. If this parameter is set to `False` or left empty, the security groups bound with the RO group of the read-only replicas will be modified. If this parameter is set to `True`, the security groups bound with the read-only replica itself will be modified.
+     * @param ForReadonlyInstance This parameter takes effect only when the ID of read-only replica is passed in. If this parameter is set to `False` or left empty, the security groups bound with the RO group of the read-only replicas will be modified. If this parameter is set to `True`, the security groups bound with the read-only replica itself will be modified.
+     */
+    public void setForReadonlyInstance(Boolean ForReadonlyInstance) {
+        this.ForReadonlyInstance = ForReadonlyInstance;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamSimple(map, prefix + "ForReadonlyInstance", this.ForReadonlyInstance);
 
     }
 }

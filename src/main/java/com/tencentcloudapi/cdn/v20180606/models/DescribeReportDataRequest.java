@@ -23,14 +23,20 @@ import java.util.HashMap;
 public class DescribeReportDataRequest extends AbstractModel{
 
     /**
-    * Query start time in the format of `yyyy-MM-dd`
+    * Query the start time in the format of `yyyy-MM-dd`
+If the report type is `daily`, the start time and end time must be the same day.
+If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
+If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Query end time in the format of `yyyy-MM-dd`
+    * Query the end time in the format of `yyyy-MM-dd`
+If the report type is `daily`, the start time and end time must be of the same day.
+If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
+If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
     */
     @SerializedName("EndTime")
     @Expose
@@ -77,32 +83,56 @@ overseas: outside Mainland China
     private Long Project;
 
     /**
-     * Get Query start time in the format of `yyyy-MM-dd` 
-     * @return StartTime Query start time in the format of `yyyy-MM-dd`
+     * Get Query the start time in the format of `yyyy-MM-dd`
+If the report type is `daily`, the start time and end time must be the same day.
+If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
+If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month. 
+     * @return StartTime Query the start time in the format of `yyyy-MM-dd`
+If the report type is `daily`, the start time and end time must be the same day.
+If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
+If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Query start time in the format of `yyyy-MM-dd`
-     * @param StartTime Query start time in the format of `yyyy-MM-dd`
+     * Set Query the start time in the format of `yyyy-MM-dd`
+If the report type is `daily`, the start time and end time must be the same day.
+If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
+If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
+     * @param StartTime Query the start time in the format of `yyyy-MM-dd`
+If the report type is `daily`, the start time and end time must be the same day.
+If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
+If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Query end time in the format of `yyyy-MM-dd` 
-     * @return EndTime Query end time in the format of `yyyy-MM-dd`
+     * Get Query the end time in the format of `yyyy-MM-dd`
+If the report type is `daily`, the start time and end time must be of the same day.
+If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
+If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month. 
+     * @return EndTime Query the end time in the format of `yyyy-MM-dd`
+If the report type is `daily`, the start time and end time must be of the same day.
+If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
+If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Query end time in the format of `yyyy-MM-dd`
-     * @param EndTime Query end time in the format of `yyyy-MM-dd`
+     * Set Query the end time in the format of `yyyy-MM-dd`
+If the report type is `daily`, the start time and end time must be of the same day.
+If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
+If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
+     * @param EndTime Query the end time in the format of `yyyy-MM-dd`
+If the report type is `daily`, the start time and end time must be of the same day.
+If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
+If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

@@ -62,6 +62,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private ScdnWafRule [] Rules;
 
     /**
+    * WAF rule level. Valid values: 100, 200, and 300.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Level")
+    @Expose
+    private Long Level;
+
+    /**
+    * WAF sub-rule switch
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SubRuleSwitch")
+    @Expose
+    private WafSubRuleStatus [] SubRuleSwitch;
+
+    /**
      * Get Whether to enable WAF. Valid values: `on` and `off`. 
      * @return Switch Whether to enable WAF. Valid values: `on` and `off`.
      */
@@ -158,6 +174,46 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
+     * Get WAF rule level. Valid values: 100, 200, and 300.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Level WAF rule level. Valid values: 100, 200, and 300.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getLevel() {
+        return this.Level;
+    }
+
+    /**
+     * Set WAF rule level. Valid values: 100, 200, and 300.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Level WAF rule level. Valid values: 100, 200, and 300.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setLevel(Long Level) {
+        this.Level = Level;
+    }
+
+    /**
+     * Get WAF sub-rule switch
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return SubRuleSwitch WAF sub-rule switch
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public WafSubRuleStatus [] getSubRuleSwitch() {
+        return this.SubRuleSwitch;
+    }
+
+    /**
+     * Set WAF sub-rule switch
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param SubRuleSwitch WAF sub-rule switch
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setSubRuleSwitch(WafSubRuleStatus [] SubRuleSwitch) {
+        this.SubRuleSwitch = SubRuleSwitch;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -166,6 +222,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamObj(map, prefix + "ErrorPage.", this.ErrorPage);
         this.setParamSimple(map, prefix + "WebShellSwitch", this.WebShellSwitch);
         this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
+        this.setParamSimple(map, prefix + "Level", this.Level);
+        this.setParamArrayObj(map, prefix + "SubRuleSwitch.", this.SubRuleSwitch);
 
     }
 }
