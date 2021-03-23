@@ -23,7 +23,8 @@ import java.util.HashMap;
 public class InstanceChargePrepaid extends AbstractModel{
 
     /**
-    * Purchased usage period (in month). Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36. Default value: 1.
+    * Purchased usage period (in month). Valid values: `1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36`. Default value: `1`.
+(This parameter is required in `InquirePriceRenewDBInstances` and `RenewDBInstances` APIs.)
     */
     @SerializedName("Period")
     @Expose
@@ -31,27 +32,32 @@ public class InstanceChargePrepaid extends AbstractModel{
 
     /**
     * Auto-renewal flag. Valid values:
-NOTIFY_AND_AUTO_RENEW: notify expiration and renew automatically
-NOTIFY_AND_MANUAL_RENEW: notify expiration but not renew automatically
-DISABLE_NOTIFY_AND_MANUAL_RENEW: neither notify expiration nor renew automatically
+`NOTIFY_AND_AUTO_RENEW`: notify expiration and renew automatically
+`NOTIFY_AND_MANUAL_RENEW`: notify expiration but not renew automatically
+`DISABLE_NOTIFY_AND_MANUAL_RENEW`: neither notify expiration nor renew automatically
 
-Default value: NOTIFY_AND_MANUAL_RENEW. If this parameter is specified as NOTIFY_AND_AUTO_RENEW, the instance will be automatically renewed on a monthly basis when the account balance is sufficient.
+Default value: `NOTIFY_AND_MANUAL_RENEW`. If this parameter is specified as `NOTIFY_AND_AUTO_RENEW`, the instance will be automatically renewed on a monthly basis when the account balance is sufficient.
+(This parameter is required in `InquirePriceRenewDBInstances` and `RenewDBInstances` APIs.)
     */
     @SerializedName("RenewFlag")
     @Expose
     private String RenewFlag;
 
     /**
-     * Get Purchased usage period (in month). Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36. Default value: 1. 
-     * @return Period Purchased usage period (in month). Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36. Default value: 1.
+     * Get Purchased usage period (in month). Valid values: `1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36`. Default value: `1`.
+(This parameter is required in `InquirePriceRenewDBInstances` and `RenewDBInstances` APIs.) 
+     * @return Period Purchased usage period (in month). Valid values: `1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36`. Default value: `1`.
+(This parameter is required in `InquirePriceRenewDBInstances` and `RenewDBInstances` APIs.)
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set Purchased usage period (in month). Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36. Default value: 1.
-     * @param Period Purchased usage period (in month). Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36. Default value: 1.
+     * Set Purchased usage period (in month). Valid values: `1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36`. Default value: `1`.
+(This parameter is required in `InquirePriceRenewDBInstances` and `RenewDBInstances` APIs.)
+     * @param Period Purchased usage period (in month). Valid values: `1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36`. Default value: `1`.
+(This parameter is required in `InquirePriceRenewDBInstances` and `RenewDBInstances` APIs.)
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
@@ -59,17 +65,19 @@ Default value: NOTIFY_AND_MANUAL_RENEW. If this parameter is specified as NOTIFY
 
     /**
      * Get Auto-renewal flag. Valid values:
-NOTIFY_AND_AUTO_RENEW: notify expiration and renew automatically
-NOTIFY_AND_MANUAL_RENEW: notify expiration but not renew automatically
-DISABLE_NOTIFY_AND_MANUAL_RENEW: neither notify expiration nor renew automatically
+`NOTIFY_AND_AUTO_RENEW`: notify expiration and renew automatically
+`NOTIFY_AND_MANUAL_RENEW`: notify expiration but not renew automatically
+`DISABLE_NOTIFY_AND_MANUAL_RENEW`: neither notify expiration nor renew automatically
 
-Default value: NOTIFY_AND_MANUAL_RENEW. If this parameter is specified as NOTIFY_AND_AUTO_RENEW, the instance will be automatically renewed on a monthly basis when the account balance is sufficient. 
+Default value: `NOTIFY_AND_MANUAL_RENEW`. If this parameter is specified as `NOTIFY_AND_AUTO_RENEW`, the instance will be automatically renewed on a monthly basis when the account balance is sufficient.
+(This parameter is required in `InquirePriceRenewDBInstances` and `RenewDBInstances` APIs.) 
      * @return RenewFlag Auto-renewal flag. Valid values:
-NOTIFY_AND_AUTO_RENEW: notify expiration and renew automatically
-NOTIFY_AND_MANUAL_RENEW: notify expiration but not renew automatically
-DISABLE_NOTIFY_AND_MANUAL_RENEW: neither notify expiration nor renew automatically
+`NOTIFY_AND_AUTO_RENEW`: notify expiration and renew automatically
+`NOTIFY_AND_MANUAL_RENEW`: notify expiration but not renew automatically
+`DISABLE_NOTIFY_AND_MANUAL_RENEW`: neither notify expiration nor renew automatically
 
-Default value: NOTIFY_AND_MANUAL_RENEW. If this parameter is specified as NOTIFY_AND_AUTO_RENEW, the instance will be automatically renewed on a monthly basis when the account balance is sufficient.
+Default value: `NOTIFY_AND_MANUAL_RENEW`. If this parameter is specified as `NOTIFY_AND_AUTO_RENEW`, the instance will be automatically renewed on a monthly basis when the account balance is sufficient.
+(This parameter is required in `InquirePriceRenewDBInstances` and `RenewDBInstances` APIs.)
      */
     public String getRenewFlag() {
         return this.RenewFlag;
@@ -77,17 +85,19 @@ Default value: NOTIFY_AND_MANUAL_RENEW. If this parameter is specified as NOTIFY
 
     /**
      * Set Auto-renewal flag. Valid values:
-NOTIFY_AND_AUTO_RENEW: notify expiration and renew automatically
-NOTIFY_AND_MANUAL_RENEW: notify expiration but not renew automatically
-DISABLE_NOTIFY_AND_MANUAL_RENEW: neither notify expiration nor renew automatically
+`NOTIFY_AND_AUTO_RENEW`: notify expiration and renew automatically
+`NOTIFY_AND_MANUAL_RENEW`: notify expiration but not renew automatically
+`DISABLE_NOTIFY_AND_MANUAL_RENEW`: neither notify expiration nor renew automatically
 
-Default value: NOTIFY_AND_MANUAL_RENEW. If this parameter is specified as NOTIFY_AND_AUTO_RENEW, the instance will be automatically renewed on a monthly basis when the account balance is sufficient.
+Default value: `NOTIFY_AND_MANUAL_RENEW`. If this parameter is specified as `NOTIFY_AND_AUTO_RENEW`, the instance will be automatically renewed on a monthly basis when the account balance is sufficient.
+(This parameter is required in `InquirePriceRenewDBInstances` and `RenewDBInstances` APIs.)
      * @param RenewFlag Auto-renewal flag. Valid values:
-NOTIFY_AND_AUTO_RENEW: notify expiration and renew automatically
-NOTIFY_AND_MANUAL_RENEW: notify expiration but not renew automatically
-DISABLE_NOTIFY_AND_MANUAL_RENEW: neither notify expiration nor renew automatically
+`NOTIFY_AND_AUTO_RENEW`: notify expiration and renew automatically
+`NOTIFY_AND_MANUAL_RENEW`: notify expiration but not renew automatically
+`DISABLE_NOTIFY_AND_MANUAL_RENEW`: neither notify expiration nor renew automatically
 
-Default value: NOTIFY_AND_MANUAL_RENEW. If this parameter is specified as NOTIFY_AND_AUTO_RENEW, the instance will be automatically renewed on a monthly basis when the account balance is sufficient.
+Default value: `NOTIFY_AND_MANUAL_RENEW`. If this parameter is specified as `NOTIFY_AND_AUTO_RENEW`, the instance will be automatically renewed on a monthly basis when the account balance is sufficient.
+(This parameter is required in `InquirePriceRenewDBInstances` and `RenewDBInstances` APIs.)
      */
     public void setRenewFlag(String RenewFlag) {
         this.RenewFlag = RenewFlag;

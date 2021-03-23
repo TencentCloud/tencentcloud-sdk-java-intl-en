@@ -80,7 +80,7 @@ Note: this field may return ‘null’, indicating that no valid values can be o
     private String [] BackupFiles;
 
     /**
-    * Migration task status,
+    * Migration task status. Valid values: `2` (Creation completed), `7` (Importing full backups), `8` (Waiting for incremental backups), `9` (Import success), `10` (Import failure), `12` (Importing incremental backups).
     */
     @SerializedName("Status")
     @Expose
@@ -269,16 +269,16 @@ Note: this field may return ‘null’, indicating that no valid values can be o
     }
 
     /**
-     * Get Migration task status, 
-     * @return Status Migration task status,
+     * Get Migration task status. Valid values: `2` (Creation completed), `7` (Importing full backups), `8` (Waiting for incremental backups), `9` (Import success), `10` (Import failure), `12` (Importing incremental backups). 
+     * @return Status Migration task status. Valid values: `2` (Creation completed), `7` (Importing full backups), `8` (Waiting for incremental backups), `9` (Import success), `10` (Import failure), `12` (Importing incremental backups).
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Migration task status,
-     * @param Status Migration task status,
+     * Set Migration task status. Valid values: `2` (Creation completed), `7` (Importing full backups), `8` (Waiting for incremental backups), `9` (Import success), `10` (Import failure), `12` (Importing incremental backups).
+     * @param Status Migration task status. Valid values: `2` (Creation completed), `7` (Importing full backups), `8` (Waiting for incremental backups), `9` (Import success), `10` (Import failure), `12` (Importing incremental backups).
      */
     public void setStatus(Long Status) {
         this.Status = Status;

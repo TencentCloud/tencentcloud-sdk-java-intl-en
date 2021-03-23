@@ -23,24 +23,24 @@ import java.util.HashMap;
 public class Price extends AbstractModel{
 
     /**
-    * Original price of the advanced payment for a prepaid cloud disk (in CNY).
-Note: This field may return null, indicating that no valid value was found.
+    * Original price of a monthly-subscribed cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("OriginalPrice")
     @Expose
     private Float OriginalPrice;
 
     /**
-    * Discount price of the advanced payment for a prepaid cloud disk (in CNY).
-Note: This field may return null, indicating that no valid value was found.
+    * Discounted price of a monthly-subscribed cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("DiscountPrice")
     @Expose
     private Float DiscountPrice;
 
     /**
-    * Original unit price of a postpaid cloud disk (in CNY).
-Note: This field may return null, indicating that no valid value was found.
+    * Original unit price of a pay-as-you-go cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("UnitPrice")
     @Expose
@@ -55,15 +55,15 @@ Note: This field may return null, indicating that no valid value was found.
     private String ChargeUnit;
 
     /**
-    * Postpaid cloud disk discount price. Unit: CNY.
-Note: This field may return null, indicating that no valid value was found.
+    * Discount unit price of a pay-as-you-go cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("UnitPriceDiscount")
     @Expose
     private Float UnitPriceDiscount;
 
     /**
-    * Highly-precise published unit price of a monthly-subscribed cloud disk, in USD.
+    * Original payment of a monthly-subscribed cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("OriginalPriceHigh")
@@ -71,7 +71,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String OriginalPriceHigh;
 
     /**
-    * Highly-precise discounted unit price of a monthly-subscribed cloud disk, in USD.
+    * Discounted payment price of a monthly-subscribed cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("DiscountPriceHigh")
@@ -79,7 +79,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String DiscountPriceHigh;
 
     /**
-    * Highly-precise published unit price of a pay-as-you-go cloud disk, in USD.
+    * Original unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("UnitPriceHigh")
@@ -87,7 +87,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String UnitPriceHigh;
 
     /**
-    * Highly-precise discounted unit price of a pay-as-you-go cloud disk, in USD.
+    * Discounted unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("UnitPriceDiscountHigh")
@@ -95,60 +95,60 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String UnitPriceDiscountHigh;
 
     /**
-     * Get Original price of the advanced payment for a prepaid cloud disk (in CNY).
-Note: This field may return null, indicating that no valid value was found. 
-     * @return OriginalPrice Original price of the advanced payment for a prepaid cloud disk (in CNY).
-Note: This field may return null, indicating that no valid value was found.
+     * Get Original price of a monthly-subscribed cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return OriginalPrice Original price of a monthly-subscribed cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Float getOriginalPrice() {
         return this.OriginalPrice;
     }
 
     /**
-     * Set Original price of the advanced payment for a prepaid cloud disk (in CNY).
-Note: This field may return null, indicating that no valid value was found.
-     * @param OriginalPrice Original price of the advanced payment for a prepaid cloud disk (in CNY).
-Note: This field may return null, indicating that no valid value was found.
+     * Set Original price of a monthly-subscribed cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param OriginalPrice Original price of a monthly-subscribed cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setOriginalPrice(Float OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 
     /**
-     * Get Discount price of the advanced payment for a prepaid cloud disk (in CNY).
-Note: This field may return null, indicating that no valid value was found. 
-     * @return DiscountPrice Discount price of the advanced payment for a prepaid cloud disk (in CNY).
-Note: This field may return null, indicating that no valid value was found.
+     * Get Discounted price of a monthly-subscribed cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return DiscountPrice Discounted price of a monthly-subscribed cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Float getDiscountPrice() {
         return this.DiscountPrice;
     }
 
     /**
-     * Set Discount price of the advanced payment for a prepaid cloud disk (in CNY).
-Note: This field may return null, indicating that no valid value was found.
-     * @param DiscountPrice Discount price of the advanced payment for a prepaid cloud disk (in CNY).
-Note: This field may return null, indicating that no valid value was found.
+     * Set Discounted price of a monthly-subscribed cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param DiscountPrice Discounted price of a monthly-subscribed cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setDiscountPrice(Float DiscountPrice) {
         this.DiscountPrice = DiscountPrice;
     }
 
     /**
-     * Get Original unit price of a postpaid cloud disk (in CNY).
-Note: This field may return null, indicating that no valid value was found. 
-     * @return UnitPrice Original unit price of a postpaid cloud disk (in CNY).
-Note: This field may return null, indicating that no valid value was found.
+     * Get Original unit price of a pay-as-you-go cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return UnitPrice Original unit price of a pay-as-you-go cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Float getUnitPrice() {
         return this.UnitPrice;
     }
 
     /**
-     * Set Original unit price of a postpaid cloud disk (in CNY).
-Note: This field may return null, indicating that no valid value was found.
-     * @param UnitPrice Original unit price of a postpaid cloud disk (in CNY).
-Note: This field may return null, indicating that no valid value was found.
+     * Set Original unit price of a pay-as-you-go cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param UnitPrice Original unit price of a pay-as-you-go cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setUnitPrice(Float UnitPrice) {
         this.UnitPrice = UnitPrice;
@@ -175,29 +175,29 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Postpaid cloud disk discount price. Unit: CNY.
-Note: This field may return null, indicating that no valid value was found. 
-     * @return UnitPriceDiscount Postpaid cloud disk discount price. Unit: CNY.
-Note: This field may return null, indicating that no valid value was found.
+     * Get Discount unit price of a pay-as-you-go cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return UnitPriceDiscount Discount unit price of a pay-as-you-go cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Float getUnitPriceDiscount() {
         return this.UnitPriceDiscount;
     }
 
     /**
-     * Set Postpaid cloud disk discount price. Unit: CNY.
-Note: This field may return null, indicating that no valid value was found.
-     * @param UnitPriceDiscount Postpaid cloud disk discount price. Unit: CNY.
-Note: This field may return null, indicating that no valid value was found.
+     * Set Discount unit price of a pay-as-you-go cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param UnitPriceDiscount Discount unit price of a pay-as-you-go cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setUnitPriceDiscount(Float UnitPriceDiscount) {
         this.UnitPriceDiscount = UnitPriceDiscount;
     }
 
     /**
-     * Get Highly-precise published unit price of a monthly-subscribed cloud disk, in USD.
+     * Get Original payment of a monthly-subscribed cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return OriginalPriceHigh Highly-precise published unit price of a monthly-subscribed cloud disk, in USD.
+     * @return OriginalPriceHigh Original payment of a monthly-subscribed cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getOriginalPriceHigh() {
@@ -205,9 +205,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set Highly-precise published unit price of a monthly-subscribed cloud disk, in USD.
+     * Set Original payment of a monthly-subscribed cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param OriginalPriceHigh Highly-precise published unit price of a monthly-subscribed cloud disk, in USD.
+     * @param OriginalPriceHigh Original payment of a monthly-subscribed cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setOriginalPriceHigh(String OriginalPriceHigh) {
@@ -215,9 +215,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Highly-precise discounted unit price of a monthly-subscribed cloud disk, in USD.
+     * Get Discounted payment price of a monthly-subscribed cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return DiscountPriceHigh Highly-precise discounted unit price of a monthly-subscribed cloud disk, in USD.
+     * @return DiscountPriceHigh Discounted payment price of a monthly-subscribed cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getDiscountPriceHigh() {
@@ -225,9 +225,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set Highly-precise discounted unit price of a monthly-subscribed cloud disk, in USD.
+     * Set Discounted payment price of a monthly-subscribed cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param DiscountPriceHigh Highly-precise discounted unit price of a monthly-subscribed cloud disk, in USD.
+     * @param DiscountPriceHigh Discounted payment price of a monthly-subscribed cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setDiscountPriceHigh(String DiscountPriceHigh) {
@@ -235,9 +235,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Highly-precise published unit price of a pay-as-you-go cloud disk, in USD.
+     * Get Original unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return UnitPriceHigh Highly-precise published unit price of a pay-as-you-go cloud disk, in USD.
+     * @return UnitPriceHigh Original unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getUnitPriceHigh() {
@@ -245,9 +245,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set Highly-precise published unit price of a pay-as-you-go cloud disk, in USD.
+     * Set Original unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param UnitPriceHigh Highly-precise published unit price of a pay-as-you-go cloud disk, in USD.
+     * @param UnitPriceHigh Original unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setUnitPriceHigh(String UnitPriceHigh) {
@@ -255,9 +255,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Highly-precise discounted unit price of a pay-as-you-go cloud disk, in USD.
+     * Get Discounted unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return UnitPriceDiscountHigh Highly-precise discounted unit price of a pay-as-you-go cloud disk, in USD.
+     * @return UnitPriceDiscountHigh Discounted unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getUnitPriceDiscountHigh() {
@@ -265,9 +265,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set Highly-precise discounted unit price of a pay-as-you-go cloud disk, in USD.
+     * Set Discounted unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param UnitPriceDiscountHigh Highly-precise discounted unit price of a pay-as-you-go cloud disk, in USD.
+     * @param UnitPriceDiscountHigh Discounted unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setUnitPriceDiscountHigh(String UnitPriceDiscountHigh) {

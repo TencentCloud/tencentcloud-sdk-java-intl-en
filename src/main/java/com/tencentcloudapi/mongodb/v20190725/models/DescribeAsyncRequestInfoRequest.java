@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeAsyncRequestInfoRequest extends AbstractModel{
 
     /**
-    * Async request ID
+    * Async task ID, which is returned by APIs related to async tasks, such as `CreateBackupDBInstance`.
     */
     @SerializedName("AsyncRequestId")
     @Expose
     private String AsyncRequestId;
 
     /**
-     * Get Async request ID 
-     * @return AsyncRequestId Async request ID
+     * Get Async task ID, which is returned by APIs related to async tasks, such as `CreateBackupDBInstance`. 
+     * @return AsyncRequestId Async task ID, which is returned by APIs related to async tasks, such as `CreateBackupDBInstance`.
      */
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
     }
 
     /**
-     * Set Async request ID
-     * @param AsyncRequestId Async request ID
+     * Set Async task ID, which is returned by APIs related to async tasks, such as `CreateBackupDBInstance`.
+     * @param AsyncRequestId Async task ID, which is returned by APIs related to async tasks, such as `CreateBackupDBInstance`.
      */
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

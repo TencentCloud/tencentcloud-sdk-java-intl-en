@@ -65,6 +65,13 @@ public class DescribeSlowLogsRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * Slow log format, which can be JSON. If this parameter is left empty, the slow log will be returned in its native format.
+    */
+    @SerializedName("Format")
+    @Expose
+    private String Format;
+
+    /**
      * Get Instance ID in the format of `cmgo-p8vnipr5`, which is the same as the instance ID displayed on the TencentDB Console page 
      * @return InstanceId Instance ID in the format of `cmgo-p8vnipr5`, which is the same as the instance ID displayed on the TencentDB Console page
      */
@@ -161,6 +168,22 @@ public class DescribeSlowLogsRequest extends AbstractModel{
     }
 
     /**
+     * Get Slow log format, which can be JSON. If this parameter is left empty, the slow log will be returned in its native format. 
+     * @return Format Slow log format, which can be JSON. If this parameter is left empty, the slow log will be returned in its native format.
+     */
+    public String getFormat() {
+        return this.Format;
+    }
+
+    /**
+     * Set Slow log format, which can be JSON. If this parameter is left empty, the slow log will be returned in its native format.
+     * @param Format Slow log format, which can be JSON. If this parameter is left empty, the slow log will be returned in its native format.
+     */
+    public void setFormat(String Format) {
+        this.Format = Format;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -170,6 +193,7 @@ public class DescribeSlowLogsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SlowMS", this.SlowMS);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Format", this.Format);
 
     }
 }

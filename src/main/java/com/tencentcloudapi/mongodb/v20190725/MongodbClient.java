@@ -180,7 +180,7 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the list of instance backups. Currently, only backups in the last 7 days can be queried.
+     *This API is used to query the list of instance backups. Currently, only backups created in the last seven days can be queried.
      * @param req DescribeDBBackupsRequest
      * @return DescribeDBBackupsResponse
      * @throws TencentCloudSDKException

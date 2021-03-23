@@ -86,7 +86,7 @@ public class Disk extends AbstractModel{
     private String DiskState;
 
     /**
-    * Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
+    * Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
     */
     @SerializedName("DiskType")
     @Expose
@@ -265,6 +265,14 @@ Note: This field may return null, indicating that no valid value was found.
     private Boolean BackupDisk;
 
     /**
+    * Extra performance for a cloud disk, in MB/sec.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ThroughputPerformance")
+    @Expose
+    private Long ThroughputPerformance;
+
+    /**
      * Get Cloud disk ID. 
      * @return DiskId Cloud disk ID.
      */
@@ -409,16 +417,16 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk. 
-     * @return DiskType Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
+     * Get Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD 
+     * @return DiskType Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
-     * @param DiskType Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
+     * Set Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
+     * @param DiskType Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
@@ -837,6 +845,26 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
+     * Get Extra performance for a cloud disk, in MB/sec.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ThroughputPerformance Extra performance for a cloud disk, in MB/sec.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getThroughputPerformance() {
+        return this.ThroughputPerformance;
+    }
+
+    /**
+     * Set Extra performance for a cloud disk, in MB/sec.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ThroughputPerformance Extra performance for a cloud disk, in MB/sec.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setThroughputPerformance(Long ThroughputPerformance) {
+        this.ThroughputPerformance = ThroughputPerformance;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -873,6 +901,7 @@ Note: This field may return null, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "SnapshotCount", this.SnapshotCount);
         this.setParamSimple(map, prefix + "SnapshotSize", this.SnapshotSize);
         this.setParamSimple(map, prefix + "BackupDisk", this.BackupDisk);
+        this.setParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
 
     }
 }

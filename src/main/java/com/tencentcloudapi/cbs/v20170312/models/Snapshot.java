@@ -149,7 +149,7 @@ public class Snapshot extends AbstractModel{
     private Long ShareReference;
 
     /**
-    * 
+    * The time when the snapshot sharing starts
     */
     @SerializedName("TimeStartShare")
     @Expose
@@ -444,16 +444,16 @@ public class Snapshot extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return TimeStartShare 
+     * Get The time when the snapshot sharing starts 
+     * @return TimeStartShare The time when the snapshot sharing starts
      */
     public String getTimeStartShare() {
         return this.TimeStartShare;
     }
 
     /**
-     * Set 
-     * @param TimeStartShare 
+     * Set The time when the snapshot sharing starts
+     * @param TimeStartShare The time when the snapshot sharing starts
      */
     public void setTimeStartShare(String TimeStartShare) {
         this.TimeStartShare = TimeStartShare;

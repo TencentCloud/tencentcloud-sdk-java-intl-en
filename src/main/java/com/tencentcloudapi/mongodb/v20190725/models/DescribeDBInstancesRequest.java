@@ -44,7 +44,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     private Long ClusterType;
 
     /**
-    * Instance status. Valid values: 0 (to be initialized), 1 (in process), 2 (valid), -2 (expired)
+    * Instance status. Valid values: `0` (to be initialized), `1` (executing task), `2` (running), `-2` (isolated monthly-subscribed instance), `-3` (isolated pay-as-you-go instance)
     */
     @SerializedName("Status")
     @Expose
@@ -114,6 +114,13 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     private String SearchKey;
 
     /**
+    * Tag information
+    */
+    @SerializedName("Tags")
+    @Expose
+    private TagInfo Tags;
+
+    /**
      * Get List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page 
      * @return InstanceIds List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
      */
@@ -162,16 +169,16 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Instance status. Valid values: 0 (to be initialized), 1 (in process), 2 (valid), -2 (expired) 
-     * @return Status Instance status. Valid values: 0 (to be initialized), 1 (in process), 2 (valid), -2 (expired)
+     * Get Instance status. Valid values: `0` (to be initialized), `1` (executing task), `2` (running), `-2` (isolated monthly-subscribed instance), `-3` (isolated pay-as-you-go instance) 
+     * @return Status Instance status. Valid values: `0` (to be initialized), `1` (executing task), `2` (running), `-2` (isolated monthly-subscribed instance), `-3` (isolated pay-as-you-go instance)
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Instance status. Valid values: 0 (to be initialized), 1 (in process), 2 (valid), -2 (expired)
-     * @param Status Instance status. Valid values: 0 (to be initialized), 1 (in process), 2 (valid), -2 (expired)
+     * Set Instance status. Valid values: `0` (to be initialized), `1` (executing task), `2` (running), `-2` (isolated monthly-subscribed instance), `-3` (isolated pay-as-you-go instance)
+     * @param Status Instance status. Valid values: `0` (to be initialized), `1` (executing task), `2` (running), `-2` (isolated monthly-subscribed instance), `-3` (isolated pay-as-you-go instance)
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;
@@ -322,6 +329,22 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get Tag information 
+     * @return Tags Tag information
+     */
+    public TagInfo getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag information
+     * @param Tags Tag information
+     */
+    public void setTags(TagInfo Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -338,6 +361,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "OrderByType", this.OrderByType);
         this.setParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
         this.setParamSimple(map, prefix + "SearchKey", this.SearchKey);
+        this.setParamObj(map, prefix + "Tags.", this.Tags);
 
     }
 }
