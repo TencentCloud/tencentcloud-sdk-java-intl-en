@@ -23,65 +23,6 @@ import java.util.HashMap;
 public class SearchMediaRequest extends AbstractModel{
 
     /**
-    * Tag set, which matches any element in the set.
-<li>Tag length limit: 8 characters.</li>
-<li>Array length limit: 10.</li>
-    */
-    @SerializedName("Tags")
-    @Expose
-    private String [] Tags;
-
-    /**
-    * Category ID set. The categories of the specified IDs and all subcategories in the set are matched.
-<li>Array length limit: 10.</li>
-    */
-    @SerializedName("ClassIds")
-    @Expose
-    private Long [] ClassIds;
-
-    /**
-    * [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
-    */
-    @SerializedName("StreamIds")
-    @Expose
-    private String [] StreamIds;
-
-    /**
-    * Unique ID of LVB recording file. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
-    */
-    @SerializedName("Vids")
-    @Expose
-    private String [] Vids;
-
-    /**
-    * Media file source set. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
-<li>Array length limit: 10.</li>
-    */
-    @SerializedName("SourceTypes")
-    @Expose
-    private String [] SourceTypes;
-
-    /**
-    * File type. Any element in the set can be matched.
-<li>Video: video file</li>
-<li>Audio: audio file</li>
-<li>Image: image file</li>
-    */
-    @SerializedName("Categories")
-    @Expose
-    private String [] Categories;
-
-    /**
-    * Matches files created within the time period.
-<li>Includes specified start and end points in time.</li>
-    */
-    @SerializedName("CreateTime")
-    @Expose
-    private TimeRange CreateTime;
-
-    /**
     * File ID set. Any element in the set can be matched.
 <li>Array length limit: 10.</li>
 <li>ID length limit: 40 characters.</li>
@@ -109,13 +50,72 @@ public class SearchMediaRequest extends AbstractModel{
     private String [] NamePrefixes;
 
     /**
-    * File description set. Any element in the set can be matched.
-<li>Description length limit: 100 characters.</li>
-<li>Array length limit: 10.</li>
+    * File description set. Media file descriptions are fuzzily matched. The higher the match rate, the higher-ranked the result.
+<li>Length limit for a single description: 100 characters</li>
+<li>Array length limit: 10</li>
     */
     @SerializedName("Descriptions")
     @Expose
     private String [] Descriptions;
+
+    /**
+    * Category ID set. The categories of the specified IDs and all subcategories in the set are matched.
+<li>Array length limit: 10.</li>
+    */
+    @SerializedName("ClassIds")
+    @Expose
+    private Long [] ClassIds;
+
+    /**
+    * Tag set, which matches any element in the set.
+<li>Tag length limit: 8 characters.</li>
+<li>Array length limit: 10.</li>
+    */
+    @SerializedName("Tags")
+    @Expose
+    private String [] Tags;
+
+    /**
+    * File type. Any element in the set can be matched.
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li>
+    */
+    @SerializedName("Categories")
+    @Expose
+    private String [] Categories;
+
+    /**
+    * Media file source set. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
+<li>Array length limit: 10.</li>
+    */
+    @SerializedName("SourceTypes")
+    @Expose
+    private String [] SourceTypes;
+
+    /**
+    * [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
+<li>Array length limit: 10.</li>
+    */
+    @SerializedName("StreamIds")
+    @Expose
+    private String [] StreamIds;
+
+    /**
+    * Unique ID of LVB recording file. Any element in the set can be matched.
+<li>Array length limit: 10.</li>
+    */
+    @SerializedName("Vids")
+    @Expose
+    private String [] Vids;
+
+    /**
+    * Matches files created within the time period.
+<li>Includes specified start and end points in time.</li>
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private TimeRange CreateTime;
 
     /**
     * Sorting order.
@@ -167,6 +167,22 @@ public class SearchMediaRequest extends AbstractModel{
     private Long SubAppId;
 
     /**
+    * (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
+Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
+    */
+    @SerializedName("Text")
+    @Expose
+    private String Text;
+
+    /**
+    * (This is not recommended. `SourceTypes` should be used instead)
+Media file source. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
+    */
+    @SerializedName("SourceType")
+    @Expose
+    private String SourceType;
+
+    /**
     * (This is not recommended. `StreamIds` should be used instead)
 [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1).
     */
@@ -181,14 +197,6 @@ Unique ID of LVB recording file.
     @SerializedName("Vid")
     @Expose
     private String Vid;
-
-    /**
-    * (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
-Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
-    */
-    @SerializedName("Text")
-    @Expose
-    private String Text;
 
     /**
     * (This is not recommended. `CreateTime` should be used instead)
@@ -211,166 +219,6 @@ End time in the creation time range.
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
-
-    /**
-    * (This is not recommended. `SourceTypes` should be used instead)
-Media file source. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
-    */
-    @SerializedName("SourceType")
-    @Expose
-    private String SourceType;
-
-    /**
-     * Get Tag set, which matches any element in the set.
-<li>Tag length limit: 8 characters.</li>
-<li>Array length limit: 10.</li> 
-     * @return Tags Tag set, which matches any element in the set.
-<li>Tag length limit: 8 characters.</li>
-<li>Array length limit: 10.</li>
-     */
-    public String [] getTags() {
-        return this.Tags;
-    }
-
-    /**
-     * Set Tag set, which matches any element in the set.
-<li>Tag length limit: 8 characters.</li>
-<li>Array length limit: 10.</li>
-     * @param Tags Tag set, which matches any element in the set.
-<li>Tag length limit: 8 characters.</li>
-<li>Array length limit: 10.</li>
-     */
-    public void setTags(String [] Tags) {
-        this.Tags = Tags;
-    }
-
-    /**
-     * Get Category ID set. The categories of the specified IDs and all subcategories in the set are matched.
-<li>Array length limit: 10.</li> 
-     * @return ClassIds Category ID set. The categories of the specified IDs and all subcategories in the set are matched.
-<li>Array length limit: 10.</li>
-     */
-    public Long [] getClassIds() {
-        return this.ClassIds;
-    }
-
-    /**
-     * Set Category ID set. The categories of the specified IDs and all subcategories in the set are matched.
-<li>Array length limit: 10.</li>
-     * @param ClassIds Category ID set. The categories of the specified IDs and all subcategories in the set are matched.
-<li>Array length limit: 10.</li>
-     */
-    public void setClassIds(Long [] ClassIds) {
-        this.ClassIds = ClassIds;
-    }
-
-    /**
-     * Get [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
-<li>Array length limit: 10.</li> 
-     * @return StreamIds [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
-     */
-    public String [] getStreamIds() {
-        return this.StreamIds;
-    }
-
-    /**
-     * Set [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
-     * @param StreamIds [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
-     */
-    public void setStreamIds(String [] StreamIds) {
-        this.StreamIds = StreamIds;
-    }
-
-    /**
-     * Get Unique ID of LVB recording file. Any element in the set can be matched.
-<li>Array length limit: 10.</li> 
-     * @return Vids Unique ID of LVB recording file. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
-     */
-    public String [] getVids() {
-        return this.Vids;
-    }
-
-    /**
-     * Set Unique ID of LVB recording file. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
-     * @param Vids Unique ID of LVB recording file. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
-     */
-    public void setVids(String [] Vids) {
-        this.Vids = Vids;
-    }
-
-    /**
-     * Get Media file source set. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
-<li>Array length limit: 10.</li> 
-     * @return SourceTypes Media file source set. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
-<li>Array length limit: 10.</li>
-     */
-    public String [] getSourceTypes() {
-        return this.SourceTypes;
-    }
-
-    /**
-     * Set Media file source set. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
-<li>Array length limit: 10.</li>
-     * @param SourceTypes Media file source set. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
-<li>Array length limit: 10.</li>
-     */
-    public void setSourceTypes(String [] SourceTypes) {
-        this.SourceTypes = SourceTypes;
-    }
-
-    /**
-     * Get File type. Any element in the set can be matched.
-<li>Video: video file</li>
-<li>Audio: audio file</li>
-<li>Image: image file</li> 
-     * @return Categories File type. Any element in the set can be matched.
-<li>Video: video file</li>
-<li>Audio: audio file</li>
-<li>Image: image file</li>
-     */
-    public String [] getCategories() {
-        return this.Categories;
-    }
-
-    /**
-     * Set File type. Any element in the set can be matched.
-<li>Video: video file</li>
-<li>Audio: audio file</li>
-<li>Image: image file</li>
-     * @param Categories File type. Any element in the set can be matched.
-<li>Video: video file</li>
-<li>Audio: audio file</li>
-<li>Image: image file</li>
-     */
-    public void setCategories(String [] Categories) {
-        this.Categories = Categories;
-    }
-
-    /**
-     * Get Matches files created within the time period.
-<li>Includes specified start and end points in time.</li> 
-     * @return CreateTime Matches files created within the time period.
-<li>Includes specified start and end points in time.</li>
-     */
-    public TimeRange getCreateTime() {
-        return this.CreateTime;
-    }
-
-    /**
-     * Set Matches files created within the time period.
-<li>Includes specified start and end points in time.</li>
-     * @param CreateTime Matches files created within the time period.
-<li>Includes specified start and end points in time.</li>
-     */
-    public void setCreateTime(TimeRange CreateTime) {
-        this.CreateTime = CreateTime;
-    }
 
     /**
      * Get File ID set. Any element in the set can be matched.
@@ -445,27 +293,179 @@ Media file source. For valid values, please see [SourceType](https://intl.cloud.
     }
 
     /**
-     * Get File description set. Any element in the set can be matched.
-<li>Description length limit: 100 characters.</li>
-<li>Array length limit: 10.</li> 
-     * @return Descriptions File description set. Any element in the set can be matched.
-<li>Description length limit: 100 characters.</li>
-<li>Array length limit: 10.</li>
+     * Get File description set. Media file descriptions are fuzzily matched. The higher the match rate, the higher-ranked the result.
+<li>Length limit for a single description: 100 characters</li>
+<li>Array length limit: 10</li> 
+     * @return Descriptions File description set. Media file descriptions are fuzzily matched. The higher the match rate, the higher-ranked the result.
+<li>Length limit for a single description: 100 characters</li>
+<li>Array length limit: 10</li>
      */
     public String [] getDescriptions() {
         return this.Descriptions;
     }
 
     /**
-     * Set File description set. Any element in the set can be matched.
-<li>Description length limit: 100 characters.</li>
-<li>Array length limit: 10.</li>
-     * @param Descriptions File description set. Any element in the set can be matched.
-<li>Description length limit: 100 characters.</li>
-<li>Array length limit: 10.</li>
+     * Set File description set. Media file descriptions are fuzzily matched. The higher the match rate, the higher-ranked the result.
+<li>Length limit for a single description: 100 characters</li>
+<li>Array length limit: 10</li>
+     * @param Descriptions File description set. Media file descriptions are fuzzily matched. The higher the match rate, the higher-ranked the result.
+<li>Length limit for a single description: 100 characters</li>
+<li>Array length limit: 10</li>
      */
     public void setDescriptions(String [] Descriptions) {
         this.Descriptions = Descriptions;
+    }
+
+    /**
+     * Get Category ID set. The categories of the specified IDs and all subcategories in the set are matched.
+<li>Array length limit: 10.</li> 
+     * @return ClassIds Category ID set. The categories of the specified IDs and all subcategories in the set are matched.
+<li>Array length limit: 10.</li>
+     */
+    public Long [] getClassIds() {
+        return this.ClassIds;
+    }
+
+    /**
+     * Set Category ID set. The categories of the specified IDs and all subcategories in the set are matched.
+<li>Array length limit: 10.</li>
+     * @param ClassIds Category ID set. The categories of the specified IDs and all subcategories in the set are matched.
+<li>Array length limit: 10.</li>
+     */
+    public void setClassIds(Long [] ClassIds) {
+        this.ClassIds = ClassIds;
+    }
+
+    /**
+     * Get Tag set, which matches any element in the set.
+<li>Tag length limit: 8 characters.</li>
+<li>Array length limit: 10.</li> 
+     * @return Tags Tag set, which matches any element in the set.
+<li>Tag length limit: 8 characters.</li>
+<li>Array length limit: 10.</li>
+     */
+    public String [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag set, which matches any element in the set.
+<li>Tag length limit: 8 characters.</li>
+<li>Array length limit: 10.</li>
+     * @param Tags Tag set, which matches any element in the set.
+<li>Tag length limit: 8 characters.</li>
+<li>Array length limit: 10.</li>
+     */
+    public void setTags(String [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get File type. Any element in the set can be matched.
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li> 
+     * @return Categories File type. Any element in the set can be matched.
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li>
+     */
+    public String [] getCategories() {
+        return this.Categories;
+    }
+
+    /**
+     * Set File type. Any element in the set can be matched.
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li>
+     * @param Categories File type. Any element in the set can be matched.
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li>
+     */
+    public void setCategories(String [] Categories) {
+        this.Categories = Categories;
+    }
+
+    /**
+     * Get Media file source set. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
+<li>Array length limit: 10.</li> 
+     * @return SourceTypes Media file source set. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
+<li>Array length limit: 10.</li>
+     */
+    public String [] getSourceTypes() {
+        return this.SourceTypes;
+    }
+
+    /**
+     * Set Media file source set. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
+<li>Array length limit: 10.</li>
+     * @param SourceTypes Media file source set. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
+<li>Array length limit: 10.</li>
+     */
+    public void setSourceTypes(String [] SourceTypes) {
+        this.SourceTypes = SourceTypes;
+    }
+
+    /**
+     * Get [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
+<li>Array length limit: 10.</li> 
+     * @return StreamIds [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
+<li>Array length limit: 10.</li>
+     */
+    public String [] getStreamIds() {
+        return this.StreamIds;
+    }
+
+    /**
+     * Set [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
+<li>Array length limit: 10.</li>
+     * @param StreamIds [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
+<li>Array length limit: 10.</li>
+     */
+    public void setStreamIds(String [] StreamIds) {
+        this.StreamIds = StreamIds;
+    }
+
+    /**
+     * Get Unique ID of LVB recording file. Any element in the set can be matched.
+<li>Array length limit: 10.</li> 
+     * @return Vids Unique ID of LVB recording file. Any element in the set can be matched.
+<li>Array length limit: 10.</li>
+     */
+    public String [] getVids() {
+        return this.Vids;
+    }
+
+    /**
+     * Set Unique ID of LVB recording file. Any element in the set can be matched.
+<li>Array length limit: 10.</li>
+     * @param Vids Unique ID of LVB recording file. Any element in the set can be matched.
+<li>Array length limit: 10.</li>
+     */
+    public void setVids(String [] Vids) {
+        this.Vids = Vids;
+    }
+
+    /**
+     * Get Matches files created within the time period.
+<li>Includes specified start and end points in time.</li> 
+     * @return CreateTime Matches files created within the time period.
+<li>Includes specified start and end points in time.</li>
+     */
+    public TimeRange getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set Matches files created within the time period.
+<li>Includes specified start and end points in time.</li>
+     * @param CreateTime Matches files created within the time period.
+<li>Includes specified start and end points in time.</li>
+     */
+    public void setCreateTime(TimeRange CreateTime) {
+        this.CreateTime = CreateTime;
     }
 
     /**
@@ -605,6 +605,46 @@ Media file source. For valid values, please see [SourceType](https://intl.cloud.
     }
 
     /**
+     * Get (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
+Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters. 
+     * @return Text (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
+Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
+     */
+    public String getText() {
+        return this.Text;
+    }
+
+    /**
+     * Set (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
+Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
+     * @param Text (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
+Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
+     */
+    public void setText(String Text) {
+        this.Text = Text;
+    }
+
+    /**
+     * Get (This is not recommended. `SourceTypes` should be used instead)
+Media file source. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData). 
+     * @return SourceType (This is not recommended. `SourceTypes` should be used instead)
+Media file source. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
+     */
+    public String getSourceType() {
+        return this.SourceType;
+    }
+
+    /**
+     * Set (This is not recommended. `SourceTypes` should be used instead)
+Media file source. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
+     * @param SourceType (This is not recommended. `SourceTypes` should be used instead)
+Media file source. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
+     */
+    public void setSourceType(String SourceType) {
+        this.SourceType = SourceType;
+    }
+
+    /**
      * Get (This is not recommended. `StreamIds` should be used instead)
 [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1). 
      * @return StreamId (This is not recommended. `StreamIds` should be used instead)
@@ -642,26 +682,6 @@ Unique ID of LVB recording file.
      */
     public void setVid(String Vid) {
         this.Vid = Vid;
-    }
-
-    /**
-     * Get (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
-Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters. 
-     * @return Text (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
-Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
-     */
-    public String getText() {
-        return this.Text;
-    }
-
-    /**
-     * Set (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
-Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
-     * @param Text (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
-Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
-     */
-    public void setText(String Text) {
-        this.Text = Text;
     }
 
     /**
@@ -729,51 +749,31 @@ End time in the creation time range.
     }
 
     /**
-     * Get (This is not recommended. `SourceTypes` should be used instead)
-Media file source. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData). 
-     * @return SourceType (This is not recommended. `SourceTypes` should be used instead)
-Media file source. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
-     */
-    public String getSourceType() {
-        return this.SourceType;
-    }
-
-    /**
-     * Set (This is not recommended. `SourceTypes` should be used instead)
-Media file source. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
-     * @param SourceType (This is not recommended. `SourceTypes` should be used instead)
-Media file source. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
-     */
-    public void setSourceType(String SourceType) {
-        this.SourceType = SourceType;
-    }
-
-    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "Tags.", this.Tags);
-        this.setParamArraySimple(map, prefix + "ClassIds.", this.ClassIds);
-        this.setParamArraySimple(map, prefix + "StreamIds.", this.StreamIds);
-        this.setParamArraySimple(map, prefix + "Vids.", this.Vids);
-        this.setParamArraySimple(map, prefix + "SourceTypes.", this.SourceTypes);
-        this.setParamArraySimple(map, prefix + "Categories.", this.Categories);
-        this.setParamObj(map, prefix + "CreateTime.", this.CreateTime);
         this.setParamArraySimple(map, prefix + "FileIds.", this.FileIds);
         this.setParamArraySimple(map, prefix + "Names.", this.Names);
         this.setParamArraySimple(map, prefix + "NamePrefixes.", this.NamePrefixes);
         this.setParamArraySimple(map, prefix + "Descriptions.", this.Descriptions);
+        this.setParamArraySimple(map, prefix + "ClassIds.", this.ClassIds);
+        this.setParamArraySimple(map, prefix + "Tags.", this.Tags);
+        this.setParamArraySimple(map, prefix + "Categories.", this.Categories);
+        this.setParamArraySimple(map, prefix + "SourceTypes.", this.SourceTypes);
+        this.setParamArraySimple(map, prefix + "StreamIds.", this.StreamIds);
+        this.setParamArraySimple(map, prefix + "Vids.", this.Vids);
+        this.setParamObj(map, prefix + "CreateTime.", this.CreateTime);
         this.setParamObj(map, prefix + "Sort.", this.Sort);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArraySimple(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
+        this.setParamSimple(map, prefix + "Text", this.Text);
+        this.setParamSimple(map, prefix + "SourceType", this.SourceType);
         this.setParamSimple(map, prefix + "StreamId", this.StreamId);
         this.setParamSimple(map, prefix + "Vid", this.Vid);
-        this.setParamSimple(map, prefix + "Text", this.Text);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
-        this.setParamSimple(map, prefix + "SourceType", this.SourceType);
 
     }
 }

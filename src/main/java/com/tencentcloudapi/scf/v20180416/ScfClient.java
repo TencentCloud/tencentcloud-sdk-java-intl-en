@@ -286,6 +286,26 @@ An alias must point to a master version and can point to an additional version a
     }
 
     /**
+     *This API is used to get the account information.
+     * @param req GetAccountRequest
+     * @return GetAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetAccountResponse GetAccount(GetAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetAccountResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetAccountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetAccount");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the alias details such as the name, description, version, and routing information.
      * @param req GetAliasRequest
      * @return GetAliasResponse

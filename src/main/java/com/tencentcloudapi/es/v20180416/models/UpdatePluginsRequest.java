@@ -51,6 +51,13 @@ public class UpdatePluginsRequest extends AbstractModel{
     private Boolean ForceRestart;
 
     /**
+    * Whether to reinstall
+    */
+    @SerializedName("ForceUpdate")
+    @Expose
+    private Boolean ForceUpdate;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -115,6 +122,22 @@ public class UpdatePluginsRequest extends AbstractModel{
     }
 
     /**
+     * Get Whether to reinstall 
+     * @return ForceUpdate Whether to reinstall
+     */
+    public Boolean getForceUpdate() {
+        return this.ForceUpdate;
+    }
+
+    /**
+     * Set Whether to reinstall
+     * @param ForceUpdate Whether to reinstall
+     */
+    public void setForceUpdate(Boolean ForceUpdate) {
+        this.ForceUpdate = ForceUpdate;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class UpdatePluginsRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "InstallPluginList.", this.InstallPluginList);
         this.setParamArraySimple(map, prefix + "RemovePluginList.", this.RemovePluginList);
         this.setParamSimple(map, prefix + "ForceRestart", this.ForceRestart);
+        this.setParamSimple(map, prefix + "ForceUpdate", this.ForceUpdate);
 
     }
 }

@@ -99,6 +99,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String SessionId;
 
     /**
+    * Metadata of a source video
+    */
+    @SerializedName("MetaData")
+    @Expose
+    private MediaMetaData MetaData;
+
+    /**
      * Get Task ID. 
      * @return TaskId Task ID.
      */
@@ -295,6 +302,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Metadata of a source video 
+     * @return MetaData Metadata of a source video
+     */
+    public MediaMetaData getMetaData() {
+        return this.MetaData;
+    }
+
+    /**
+     * Set Metadata of a source video
+     * @param MetaData Metadata of a source video
+     */
+    public void setMetaData(MediaMetaData MetaData) {
+        this.MetaData = MetaData;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -307,6 +330,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ProcedureTaskId", this.ProcedureTaskId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamObj(map, prefix + "MetaData.", this.MetaData);
 
     }
 }

@@ -31,8 +31,8 @@ public class TimeRange extends AbstractModel{
     private String After;
 
     /**
-    * <li>Before or at this time (end time).</li>
-<li>In ISO 8601 format. For more information, please see [ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+    * <li>Earlier than this time (end time).</li>
+<li>In ISO 8601 format. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
     */
     @SerializedName("Before")
     @Expose
@@ -59,20 +59,20 @@ public class TimeRange extends AbstractModel{
     }
 
     /**
-     * Get <li>Before or at this time (end time).</li>
-<li>In ISO 8601 format. For more information, please see [ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li> 
-     * @return Before <li>Before or at this time (end time).</li>
-<li>In ISO 8601 format. For more information, please see [ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+     * Get <li>Earlier than this time (end time).</li>
+<li>In ISO 8601 format. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li> 
+     * @return Before <li>Earlier than this time (end time).</li>
+<li>In ISO 8601 format. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
      */
     public String getBefore() {
         return this.Before;
     }
 
     /**
-     * Set <li>Before or at this time (end time).</li>
-<li>In ISO 8601 format. For more information, please see [ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
-     * @param Before <li>Before or at this time (end time).</li>
-<li>In ISO 8601 format. For more information, please see [ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+     * Set <li>Earlier than this time (end time).</li>
+<li>In ISO 8601 format. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+     * @param Before <li>Earlier than this time (end time).</li>
+<li>In ISO 8601 format. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
      */
     public void setBefore(String Before) {
         this.Before = Before;

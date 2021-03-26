@@ -13,29 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.vod.v20180717.models;
+package com.tencentcloudapi.scf.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SearchMediaResponse extends AbstractModel{
+public class GetAccountResponse extends AbstractModel{
 
     /**
-    * Number of eligible entries.
-<li>Maximum value: 5000. If the number of eligible entries is greater than 5,000, this field will return 5,000 instead of the actual number.</li>
+    * Namespace usage information
     */
-    @SerializedName("TotalCount")
+    @SerializedName("AccountUsage")
     @Expose
-    private Long TotalCount;
+    private UsageInfo AccountUsage;
 
     /**
-    * Media file information list
+    * Namespace limit information
     */
-    @SerializedName("MediaInfoSet")
+    @SerializedName("AccountLimit")
     @Expose
-    private MediaInfo [] MediaInfoSet;
+    private LimitsInfo AccountLimit;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,39 +44,35 @@ public class SearchMediaResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Number of eligible entries.
-<li>Maximum value: 5000. If the number of eligible entries is greater than 5,000, this field will return 5,000 instead of the actual number.</li> 
-     * @return TotalCount Number of eligible entries.
-<li>Maximum value: 5000. If the number of eligible entries is greater than 5,000, this field will return 5,000 instead of the actual number.</li>
+     * Get Namespace usage information 
+     * @return AccountUsage Namespace usage information
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public UsageInfo getAccountUsage() {
+        return this.AccountUsage;
     }
 
     /**
-     * Set Number of eligible entries.
-<li>Maximum value: 5000. If the number of eligible entries is greater than 5,000, this field will return 5,000 instead of the actual number.</li>
-     * @param TotalCount Number of eligible entries.
-<li>Maximum value: 5000. If the number of eligible entries is greater than 5,000, this field will return 5,000 instead of the actual number.</li>
+     * Set Namespace usage information
+     * @param AccountUsage Namespace usage information
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setAccountUsage(UsageInfo AccountUsage) {
+        this.AccountUsage = AccountUsage;
     }
 
     /**
-     * Get Media file information list 
-     * @return MediaInfoSet Media file information list
+     * Get Namespace limit information 
+     * @return AccountLimit Namespace limit information
      */
-    public MediaInfo [] getMediaInfoSet() {
-        return this.MediaInfoSet;
+    public LimitsInfo getAccountLimit() {
+        return this.AccountLimit;
     }
 
     /**
-     * Set Media file information list
-     * @param MediaInfoSet Media file information list
+     * Set Namespace limit information
+     * @param AccountLimit Namespace limit information
      */
-    public void setMediaInfoSet(MediaInfo [] MediaInfoSet) {
-        this.MediaInfoSet = MediaInfoSet;
+    public void setAccountLimit(LimitsInfo AccountLimit) {
+        this.AccountLimit = AccountLimit;
     }
 
     /**
@@ -100,8 +95,8 @@ public class SearchMediaResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "MediaInfoSet.", this.MediaInfoSet);
+        this.setParamObj(map, prefix + "AccountUsage.", this.AccountUsage);
+        this.setParamObj(map, prefix + "AccountLimit.", this.AccountLimit);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

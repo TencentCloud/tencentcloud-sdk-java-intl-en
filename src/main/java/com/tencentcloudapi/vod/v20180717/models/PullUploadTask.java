@@ -71,6 +71,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private MediaBasicInfo MediaBasicInfo;
 
     /**
+    * Metadata of a source video
+    */
+    @SerializedName("MetaData")
+    @Expose
+    private MediaMetaData MetaData;
+
+    /**
     * Playback address generated after pull for upload is completed.
     */
     @SerializedName("FileUrl")
@@ -219,6 +226,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Metadata of a source video 
+     * @return MetaData Metadata of a source video
+     */
+    public MediaMetaData getMetaData() {
+        return this.MetaData;
+    }
+
+    /**
+     * Set Metadata of a source video
+     * @param MetaData Metadata of a source video
+     */
+    public void setMetaData(MediaMetaData MetaData) {
+        this.MetaData = MetaData;
+    }
+
+    /**
      * Get Playback address generated after pull for upload is completed. 
      * @return FileUrl Playback address generated after pull for upload is completed.
      */
@@ -292,6 +315,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamObj(map, prefix + "MediaBasicInfo.", this.MediaBasicInfo);
+        this.setParamObj(map, prefix + "MetaData.", this.MetaData);
         this.setParamSimple(map, prefix + "FileUrl", this.FileUrl);
         this.setParamSimple(map, prefix + "ProcedureTaskId", this.ProcedureTaskId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);

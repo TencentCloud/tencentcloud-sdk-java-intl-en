@@ -42,16 +42,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Suggestion;
 
     /**
-    * Tag of detected terrorism information in a video. Valid values:
-<li>guns: weapons and guns.</li>
-<li>crowd: crowd.</li>
-<li>police: police force.</li>
-<li>bloody: bloody scenes.</li>
-<li>banners: terrorism flags.</li>
-<li>militant: militants.</li>
-<li>explosion: explosions and fires.</li>
-<li>terrorists: terrorists.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Tag of the detected terrorism information in a video. Valid values:
+<li>`guns`: weapons and guns</li>
+<li>`crowd`: crowds</li>
+<li>`police`: police forces</li>
+<li>`bloody`: bloody images</li>
+<li>`banners`: terrorism flags</li>
+<li>`militant`: militants</li>
+<li>`explosion`: explosions and fires</li>
+<li>`terrorists`: terrorists</li>
+<li>`scenario`: terrorism images</li>
     */
     @SerializedName("Label")
     @Expose
@@ -118,52 +118,52 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Tag of detected terrorism information in a video. Valid values:
-<li>guns: weapons and guns.</li>
-<li>crowd: crowd.</li>
-<li>police: police force.</li>
-<li>bloody: bloody scenes.</li>
-<li>banners: terrorism flags.</li>
-<li>militant: militants.</li>
-<li>explosion: explosions and fires.</li>
-<li>terrorists: terrorists.</li>
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Label Tag of detected terrorism information in a video. Valid values:
-<li>guns: weapons and guns.</li>
-<li>crowd: crowd.</li>
-<li>police: police force.</li>
-<li>bloody: bloody scenes.</li>
-<li>banners: terrorism flags.</li>
-<li>militant: militants.</li>
-<li>explosion: explosions and fires.</li>
-<li>terrorists: terrorists.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Tag of the detected terrorism information in a video. Valid values:
+<li>`guns`: weapons and guns</li>
+<li>`crowd`: crowds</li>
+<li>`police`: police forces</li>
+<li>`bloody`: bloody images</li>
+<li>`banners`: terrorism flags</li>
+<li>`militant`: militants</li>
+<li>`explosion`: explosions and fires</li>
+<li>`terrorists`: terrorists</li>
+<li>`scenario`: terrorism images</li> 
+     * @return Label Tag of the detected terrorism information in a video. Valid values:
+<li>`guns`: weapons and guns</li>
+<li>`crowd`: crowds</li>
+<li>`police`: police forces</li>
+<li>`bloody`: bloody images</li>
+<li>`banners`: terrorism flags</li>
+<li>`militant`: militants</li>
+<li>`explosion`: explosions and fires</li>
+<li>`terrorists`: terrorists</li>
+<li>`scenario`: terrorism images</li>
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set Tag of detected terrorism information in a video. Valid values:
-<li>guns: weapons and guns.</li>
-<li>crowd: crowd.</li>
-<li>police: police force.</li>
-<li>bloody: bloody scenes.</li>
-<li>banners: terrorism flags.</li>
-<li>militant: militants.</li>
-<li>explosion: explosions and fires.</li>
-<li>terrorists: terrorists.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Label Tag of detected terrorism information in a video. Valid values:
-<li>guns: weapons and guns.</li>
-<li>crowd: crowd.</li>
-<li>police: police force.</li>
-<li>bloody: bloody scenes.</li>
-<li>banners: terrorism flags.</li>
-<li>militant: militants.</li>
-<li>explosion: explosions and fires.</li>
-<li>terrorists: terrorists.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Tag of the detected terrorism information in a video. Valid values:
+<li>`guns`: weapons and guns</li>
+<li>`crowd`: crowds</li>
+<li>`police`: police forces</li>
+<li>`bloody`: bloody images</li>
+<li>`banners`: terrorism flags</li>
+<li>`militant`: militants</li>
+<li>`explosion`: explosions and fires</li>
+<li>`terrorists`: terrorists</li>
+<li>`scenario`: terrorism images</li>
+     * @param Label Tag of the detected terrorism information in a video. Valid values:
+<li>`guns`: weapons and guns</li>
+<li>`crowd`: crowds</li>
+<li>`police`: police forces</li>
+<li>`bloody`: bloody images</li>
+<li>`banners`: terrorism flags</li>
+<li>`militant`: militants</li>
+<li>`explosion`: explosions and fires</li>
+<li>`terrorists`: terrorists</li>
+<li>`scenario`: terrorism images</li>
      */
     public void setLabel(String Label) {
         this.Label = Label;

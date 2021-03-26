@@ -74,6 +74,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private ComposeMediaTaskOutput Output;
 
     /**
+    * Metadata of a source video.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MetaData")
+    @Expose
+    private MediaMetaData MetaData;
+
+    /**
+    * 
+    */
+    @SerializedName("SessionContext")
+    @Expose
+    private String SessionContext;
+
+    /**
+    * 
+    */
+    @SerializedName("SessionId")
+    @Expose
+    private String SessionId;
+
+    /**
      * Get Task ID. 
      * @return TaskId Task ID.
      */
@@ -206,6 +228,58 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Metadata of a source video.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return MetaData Metadata of a source video.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public MediaMetaData getMetaData() {
+        return this.MetaData;
+    }
+
+    /**
+     * Set Metadata of a source video.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param MetaData Metadata of a source video.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setMetaData(MediaMetaData MetaData) {
+        this.MetaData = MetaData;
+    }
+
+    /**
+     * Get  
+     * @return SessionContext 
+     */
+    public String getSessionContext() {
+        return this.SessionContext;
+    }
+
+    /**
+     * Set 
+     * @param SessionContext 
+     */
+    public void setSessionContext(String SessionContext) {
+        this.SessionContext = SessionContext;
+    }
+
+    /**
+     * Get  
+     * @return SessionId 
+     */
+    public String getSessionId() {
+        return this.SessionId;
+    }
+
+    /**
+     * Set 
+     * @param SessionId 
+     */
+    public void setSessionId(String SessionId) {
+        this.SessionId = SessionId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -215,6 +289,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamObj(map, prefix + "Output.", this.Output);
+        this.setParamObj(map, prefix + "MetaData.", this.MetaData);
+        this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
+        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
 
     }
 }
