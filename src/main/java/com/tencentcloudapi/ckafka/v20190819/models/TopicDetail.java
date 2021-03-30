@@ -110,6 +110,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Config Config;
 
     /**
+    * Message retention time configuration (for recording the latest retention time)
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RetentionTimeConfig")
+    @Expose
+    private TopicRetentionTimeConfigRsp RetentionTimeConfig;
+
+    /**
      * Get Topic name 
      * @return TopicName Topic name
      */
@@ -314,6 +322,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Message retention time configuration (for recording the latest retention time)
+Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
+     * @return RetentionTimeConfig Message retention time configuration (for recording the latest retention time)
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public TopicRetentionTimeConfigRsp getRetentionTimeConfig() {
+        return this.RetentionTimeConfig;
+    }
+
+    /**
+     * Set Message retention time configuration (for recording the latest retention time)
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param RetentionTimeConfig Message retention time configuration (for recording the latest retention time)
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public void setRetentionTimeConfig(TopicRetentionTimeConfigRsp RetentionTimeConfig) {
+        this.RetentionTimeConfig = RetentionTimeConfig;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -329,6 +357,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ForwardStatus", this.ForwardStatus);
         this.setParamSimple(map, prefix + "ForwardInterval", this.ForwardInterval);
         this.setParamObj(map, prefix + "Config.", this.Config);
+        this.setParamObj(map, prefix + "RetentionTimeConfig.", this.RetentionTimeConfig);
 
     }
 }

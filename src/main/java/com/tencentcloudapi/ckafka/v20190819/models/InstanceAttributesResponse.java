@@ -203,8 +203,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long MaxGroupNum;
 
     /**
-    * Sale type
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Offering type. `0`: Standard Edition; `1`: Professional Edition
+Note: this field may return `null`, indicating that no valid value was found.
     */
     @SerializedName("Cvm")
     @Expose
@@ -225,6 +225,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     @SerializedName("Features")
     @Expose
     private String [] Features;
+
+    /**
+    * Dynamic message retention policy
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RetentionTimeConfig")
+    @Expose
+    private DynamicRetentionTime RetentionTimeConfig;
 
     /**
      * Get Instance ID 
@@ -647,20 +655,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Sale type
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Cvm Sale type
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Offering type. `0`: Standard Edition; `1`: Professional Edition
+Note: this field may return `null`, indicating that no valid value was found. 
+     * @return Cvm Offering type. `0`: Standard Edition; `1`: Professional Edition
+Note: this field may return `null`, indicating that no valid value was found.
      */
     public Long getCvm() {
         return this.Cvm;
     }
 
     /**
-     * Set Sale type
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Cvm Sale type
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Offering type. `0`: Standard Edition; `1`: Professional Edition
+Note: this field may return `null`, indicating that no valid value was found.
+     * @param Cvm Offering type. `0`: Standard Edition; `1`: Professional Edition
+Note: this field may return `null`, indicating that no valid value was found.
      */
     public void setCvm(Long Cvm) {
         this.Cvm = Cvm;
@@ -707,6 +715,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Dynamic message retention policy
+Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
+     * @return RetentionTimeConfig Dynamic message retention policy
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public DynamicRetentionTime getRetentionTimeConfig() {
+        return this.RetentionTimeConfig;
+    }
+
+    /**
+     * Set Dynamic message retention policy
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param RetentionTimeConfig Dynamic message retention policy
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public void setRetentionTimeConfig(DynamicRetentionTime RetentionTimeConfig) {
+        this.RetentionTimeConfig = RetentionTimeConfig;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -738,6 +766,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Cvm", this.Cvm);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamArraySimple(map, prefix + "Features.", this.Features);
+        this.setParamObj(map, prefix + "RetentionTimeConfig.", this.RetentionTimeConfig);
 
     }
 }

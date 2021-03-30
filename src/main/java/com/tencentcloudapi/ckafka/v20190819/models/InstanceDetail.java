@@ -180,6 +180,46 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long Cvm;
 
     /**
+    * CKafka instance type
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
+    * Disk type
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DiskType")
+    @Expose
+    private String DiskType;
+
+    /**
+    * Maximum number of topics for the current instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MaxTopicNumber")
+    @Expose
+    private Long MaxTopicNumber;
+
+    /**
+    * Maximum number of partitions for the current instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MaxPartitionNumber")
+    @Expose
+    private Long MaxPartitionNumber;
+
+    /**
+    * Time of scheduled upgrade
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RebalanceTime")
+    @Expose
+    private String RebalanceTime;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -544,6 +584,106 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get CKafka instance type
+Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
+     * @return InstanceType CKafka instance type
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set CKafka instance type
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param InstanceType CKafka instance type
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
+     * Get Disk type
+Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
+     * @return DiskType Disk type
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public String getDiskType() {
+        return this.DiskType;
+    }
+
+    /**
+     * Set Disk type
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param DiskType Disk type
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public void setDiskType(String DiskType) {
+        this.DiskType = DiskType;
+    }
+
+    /**
+     * Get Maximum number of topics for the current instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
+     * @return MaxTopicNumber Maximum number of topics for the current instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public Long getMaxTopicNumber() {
+        return this.MaxTopicNumber;
+    }
+
+    /**
+     * Set Maximum number of topics for the current instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param MaxTopicNumber Maximum number of topics for the current instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public void setMaxTopicNumber(Long MaxTopicNumber) {
+        this.MaxTopicNumber = MaxTopicNumber;
+    }
+
+    /**
+     * Get Maximum number of partitions for the current instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
+     * @return MaxPartitionNumber Maximum number of partitions for the current instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public Long getMaxPartitionNumber() {
+        return this.MaxPartitionNumber;
+    }
+
+    /**
+     * Set Maximum number of partitions for the current instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param MaxPartitionNumber Maximum number of partitions for the current instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public void setMaxPartitionNumber(Long MaxPartitionNumber) {
+        this.MaxPartitionNumber = MaxPartitionNumber;
+    }
+
+    /**
+     * Get Time of scheduled upgrade
+Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
+     * @return RebalanceTime Time of scheduled upgrade
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public String getRebalanceTime() {
+        return this.RebalanceTime;
+    }
+
+    /**
+     * Set Time of scheduled upgrade
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param RebalanceTime Time of scheduled upgrade
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public void setRebalanceTime(String RebalanceTime) {
+        this.RebalanceTime = RebalanceTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -569,6 +709,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
         this.setParamSimple(map, prefix + "Cvm", this.Cvm);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "DiskType", this.DiskType);
+        this.setParamSimple(map, prefix + "MaxTopicNumber", this.MaxTopicNumber);
+        this.setParamSimple(map, prefix + "MaxPartitionNumber", this.MaxPartitionNumber);
+        this.setParamSimple(map, prefix + "RebalanceTime", this.RebalanceTime);
 
     }
 }

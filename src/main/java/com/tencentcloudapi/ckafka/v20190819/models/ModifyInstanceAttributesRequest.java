@@ -51,6 +51,20 @@ public class ModifyInstanceAttributesRequest extends AbstractModel{
     private ModifyInstanceAttributesConfig Config;
 
     /**
+    * Dynamic message retention policy configuration
+    */
+    @SerializedName("DynamicRetentionConfig")
+    @Expose
+    private DynamicRetentionTime DynamicRetentionConfig;
+
+    /**
+    * Modification of the rebalancing time after upgrade
+    */
+    @SerializedName("RebalanceTime")
+    @Expose
+    private Long RebalanceTime;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -115,6 +129,38 @@ public class ModifyInstanceAttributesRequest extends AbstractModel{
     }
 
     /**
+     * Get Dynamic message retention policy configuration 
+     * @return DynamicRetentionConfig Dynamic message retention policy configuration
+     */
+    public DynamicRetentionTime getDynamicRetentionConfig() {
+        return this.DynamicRetentionConfig;
+    }
+
+    /**
+     * Set Dynamic message retention policy configuration
+     * @param DynamicRetentionConfig Dynamic message retention policy configuration
+     */
+    public void setDynamicRetentionConfig(DynamicRetentionTime DynamicRetentionConfig) {
+        this.DynamicRetentionConfig = DynamicRetentionConfig;
+    }
+
+    /**
+     * Get Modification of the rebalancing time after upgrade 
+     * @return RebalanceTime Modification of the rebalancing time after upgrade
+     */
+    public Long getRebalanceTime() {
+        return this.RebalanceTime;
+    }
+
+    /**
+     * Set Modification of the rebalancing time after upgrade
+     * @param RebalanceTime Modification of the rebalancing time after upgrade
+     */
+    public void setRebalanceTime(Long RebalanceTime) {
+        this.RebalanceTime = RebalanceTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +168,8 @@ public class ModifyInstanceAttributesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MsgRetentionTime", this.MsgRetentionTime);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamObj(map, prefix + "Config.", this.Config);
+        this.setParamObj(map, prefix + "DynamicRetentionConfig.", this.DynamicRetentionConfig);
+        this.setParamSimple(map, prefix + "RebalanceTime", this.RebalanceTime);
 
     }
 }
