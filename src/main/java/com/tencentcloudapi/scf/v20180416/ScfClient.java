@@ -366,6 +366,26 @@ An alias must point to a master version and can point to an additional version a
     }
 
     /**
+     *This API is used to get the async retry configuration of a function, including the number of retry attempts and message retention period.
+     * @param req GetFunctionEventInvokeConfigRequest
+     * @return GetFunctionEventInvokeConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetFunctionEventInvokeConfigResponse GetFunctionEventInvokeConfig(GetFunctionEventInvokeConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetFunctionEventInvokeConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetFunctionEventInvokeConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetFunctionEventInvokeConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to return function running logs according to the specified log query criteria.
      * @param req GetFunctionLogsRequest
      * @return GetFunctionLogsResponse
@@ -798,6 +818,26 @@ An alias must point to a master version and can point to an additional version a
                 Type type = new TypeToken<JsonResponseModel<UpdateFunctionConfigurationResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpdateFunctionConfiguration");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to update the async retry configuration of a function, including the number of retry attempts and message retention period.
+     * @param req UpdateFunctionEventInvokeConfigRequest
+     * @return UpdateFunctionEventInvokeConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateFunctionEventInvokeConfigResponse UpdateFunctionEventInvokeConfig(UpdateFunctionEventInvokeConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateFunctionEventInvokeConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateFunctionEventInvokeConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateFunctionEventInvokeConfig");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

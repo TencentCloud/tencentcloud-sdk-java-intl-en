@@ -39,16 +39,10 @@ The time span cannot exceed 90 days.
     private String EndTime;
 
     /**
-    * Statistical metric name. flux: traffic in bytes
-bandwidth: bandwidth in bps
+    * Statistical metric names:
+flux: traffic (in bytes)
+bandwidth: bandwidth (in bps)
 request: number of requests
-delay: response time in ms
-static_request: number of static requests
-static_flux: static traffic in bytes
-static_bandwidth: static bandwidth in bps
-dynamic_request: number of dynamic requests
-dynamic_flux: dynamic traffic in bytes
-dynamic_bandwidth: dynamic bandwidth in bps
     */
     @SerializedName("Metrics")
     @Expose
@@ -82,6 +76,17 @@ If no domain name is entered, the specified project will be queried; otherwise, 
     @SerializedName("Limit")
     @Expose
     private Long Limit;
+
+    /**
+    * Statistical areas:
+mainland: Chinese mainland
+oversea: outside the Chinese mainland
+global: global
+Default value: global
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
 
     /**
      * Get Query start time, such as 2019-12-13 00:00:00.
@@ -124,52 +129,28 @@ The time span cannot exceed 90 days.
     }
 
     /**
-     * Get Statistical metric name. flux: traffic in bytes
-bandwidth: bandwidth in bps
+     * Get Statistical metric names:
+flux: traffic (in bytes)
+bandwidth: bandwidth (in bps)
+request: number of requests 
+     * @return Metrics Statistical metric names:
+flux: traffic (in bytes)
+bandwidth: bandwidth (in bps)
 request: number of requests
-delay: response time in ms
-static_request: number of static requests
-static_flux: static traffic in bytes
-static_bandwidth: static bandwidth in bps
-dynamic_request: number of dynamic requests
-dynamic_flux: dynamic traffic in bytes
-dynamic_bandwidth: dynamic bandwidth in bps 
-     * @return Metrics Statistical metric name. flux: traffic in bytes
-bandwidth: bandwidth in bps
-request: number of requests
-delay: response time in ms
-static_request: number of static requests
-static_flux: static traffic in bytes
-static_bandwidth: static bandwidth in bps
-dynamic_request: number of dynamic requests
-dynamic_flux: dynamic traffic in bytes
-dynamic_bandwidth: dynamic bandwidth in bps
      */
     public String [] getMetrics() {
         return this.Metrics;
     }
 
     /**
-     * Set Statistical metric name. flux: traffic in bytes
-bandwidth: bandwidth in bps
+     * Set Statistical metric names:
+flux: traffic (in bytes)
+bandwidth: bandwidth (in bps)
 request: number of requests
-delay: response time in ms
-static_request: number of static requests
-static_flux: static traffic in bytes
-static_bandwidth: static bandwidth in bps
-dynamic_request: number of dynamic requests
-dynamic_flux: dynamic traffic in bytes
-dynamic_bandwidth: dynamic bandwidth in bps
-     * @param Metrics Statistical metric name. flux: traffic in bytes
-bandwidth: bandwidth in bps
+     * @param Metrics Statistical metric names:
+flux: traffic (in bytes)
+bandwidth: bandwidth (in bps)
 request: number of requests
-delay: response time in ms
-static_request: number of static requests
-static_flux: static traffic in bytes
-static_bandwidth: static bandwidth in bps
-dynamic_request: number of dynamic requests
-dynamic_flux: dynamic traffic in bytes
-dynamic_bandwidth: dynamic bandwidth in bps
      */
     public void setMetrics(String [] Metrics) {
         this.Metrics = Metrics;
@@ -244,6 +225,38 @@ If no domain name is entered, the specified project will be queried; otherwise, 
     }
 
     /**
+     * Get Statistical areas:
+mainland: Chinese mainland
+oversea: outside the Chinese mainland
+global: global
+Default value: global 
+     * @return Area Statistical areas:
+mainland: Chinese mainland
+oversea: outside the Chinese mainland
+global: global
+Default value: global
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set Statistical areas:
+mainland: Chinese mainland
+oversea: outside the Chinese mainland
+global: global
+Default value: global
+     * @param Area Statistical areas:
+mainland: Chinese mainland
+oversea: outside the Chinese mainland
+global: global
+Default value: global
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -254,6 +267,7 @@ If no domain name is entered, the specified project will be queried; otherwise, 
         this.setParamArraySimple(map, prefix + "Projects.", this.Projects);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }

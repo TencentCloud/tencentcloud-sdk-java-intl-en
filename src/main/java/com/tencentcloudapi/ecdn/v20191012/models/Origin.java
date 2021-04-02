@@ -23,8 +23,7 @@ import java.util.HashMap;
 public class Origin extends AbstractModel{
 
     /**
-    * Primary origin server list. The default format is ["ip1:port1", "ip2:port2"].
-Weights can be configured in the origin server list. The weight format of IP origin servers is ["ip1:port1:weight1", "ip2:port2:weight2"].
+    * Primary origin server list. IP and the domain name of the origin server cannot be entered at the same time. Configure origin server port in the format of ["origin1:port1", "origin2:port2"]. Configure origin-pull weight in the format of ["origin1::weight1", "origin2::weight2"]. Configure both port and weight in the format of ["origin1:port1:weight1", "origin2:port2:weight2"]. Valid range of weight value: 0 - 100.
     */
     @SerializedName("Origins")
     @Expose
@@ -49,7 +48,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Origin-pull protocol type. Valid values: http (forced HTTP origin-pull), follow (protocol follow), https (HTTPS origin-pull).
-Note: this field may return null, indicating that no valid values can be obtained.
+If this parameter is left empty, HTTP origin-pull will be used by default.
+Note: this field may return `null`, indicating that no valid value is obtained.
     */
     @SerializedName("OriginPullProtocol")
     @Expose
@@ -72,20 +72,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String BackupOriginType;
 
     /**
-     * Get Primary origin server list. The default format is ["ip1:port1", "ip2:port2"].
-Weights can be configured in the origin server list. The weight format of IP origin servers is ["ip1:port1:weight1", "ip2:port2:weight2"]. 
-     * @return Origins Primary origin server list. The default format is ["ip1:port1", "ip2:port2"].
-Weights can be configured in the origin server list. The weight format of IP origin servers is ["ip1:port1:weight1", "ip2:port2:weight2"].
+     * Get Primary origin server list. IP and the domain name of the origin server cannot be entered at the same time. Configure origin server port in the format of ["origin1:port1", "origin2:port2"]. Configure origin-pull weight in the format of ["origin1::weight1", "origin2::weight2"]. Configure both port and weight in the format of ["origin1:port1:weight1", "origin2:port2:weight2"]. Valid range of weight value: 0 - 100. 
+     * @return Origins Primary origin server list. IP and the domain name of the origin server cannot be entered at the same time. Configure origin server port in the format of ["origin1:port1", "origin2:port2"]. Configure origin-pull weight in the format of ["origin1::weight1", "origin2::weight2"]. Configure both port and weight in the format of ["origin1:port1:weight1", "origin2:port2:weight2"]. Valid range of weight value: 0 - 100.
      */
     public String [] getOrigins() {
         return this.Origins;
     }
 
     /**
-     * Set Primary origin server list. The default format is ["ip1:port1", "ip2:port2"].
-Weights can be configured in the origin server list. The weight format of IP origin servers is ["ip1:port1:weight1", "ip2:port2:weight2"].
-     * @param Origins Primary origin server list. The default format is ["ip1:port1", "ip2:port2"].
-Weights can be configured in the origin server list. The weight format of IP origin servers is ["ip1:port1:weight1", "ip2:port2:weight2"].
+     * Set Primary origin server list. IP and the domain name of the origin server cannot be entered at the same time. Configure origin server port in the format of ["origin1:port1", "origin2:port2"]. Configure origin-pull weight in the format of ["origin1::weight1", "origin2::weight2"]. Configure both port and weight in the format of ["origin1:port1:weight1", "origin2:port2:weight2"]. Valid range of weight value: 0 - 100.
+     * @param Origins Primary origin server list. IP and the domain name of the origin server cannot be entered at the same time. Configure origin server port in the format of ["origin1:port1", "origin2:port2"]. Configure origin-pull weight in the format of ["origin1::weight1", "origin2::weight2"]. Configure both port and weight in the format of ["origin1:port1:weight1", "origin2:port2:weight2"]. Valid range of weight value: 0 - 100.
      */
     public void setOrigins(String [] Origins) {
         this.Origins = Origins;
@@ -137,9 +133,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Origin-pull protocol type. Valid values: http (forced HTTP origin-pull), follow (protocol follow), https (HTTPS origin-pull).
-Note: this field may return null, indicating that no valid values can be obtained. 
+If this parameter is left empty, HTTP origin-pull will be used by default.
+Note: this field may return `null`, indicating that no valid value is obtained. 
      * @return OriginPullProtocol Origin-pull protocol type. Valid values: http (forced HTTP origin-pull), follow (protocol follow), https (HTTPS origin-pull).
-Note: this field may return null, indicating that no valid values can be obtained.
+If this parameter is left empty, HTTP origin-pull will be used by default.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public String getOriginPullProtocol() {
         return this.OriginPullProtocol;
@@ -147,9 +145,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Origin-pull protocol type. Valid values: http (forced HTTP origin-pull), follow (protocol follow), https (HTTPS origin-pull).
-Note: this field may return null, indicating that no valid values can be obtained.
+If this parameter is left empty, HTTP origin-pull will be used by default.
+Note: this field may return `null`, indicating that no valid value is obtained.
      * @param OriginPullProtocol Origin-pull protocol type. Valid values: http (forced HTTP origin-pull), follow (protocol follow), https (HTTPS origin-pull).
-Note: this field may return null, indicating that no valid values can be obtained.
+If this parameter is left empty, HTTP origin-pull will be used by default.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public void setOriginPullProtocol(String OriginPullProtocol) {
         this.OriginPullProtocol = OriginPullProtocol;

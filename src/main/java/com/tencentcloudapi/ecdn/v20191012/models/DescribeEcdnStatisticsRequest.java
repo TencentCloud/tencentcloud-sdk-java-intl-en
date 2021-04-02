@@ -38,20 +38,13 @@ public class DescribeEcdnStatisticsRequest extends AbstractModel{
 
     /**
     * Specifies the query metric, which can be:
-flux: traffic in bytes
-bandwidth: bandwidth in bps
+flux: traffic (in bytes)
+bandwidth: bandwidth (in bps)
 request: number of requests
-delay: response time in ms
 2xx: returns the number of 2xx status codes or details of status codes starting with 2
 3xx: returns the number of 3xx status codes or details of status codes starting with 3
 4xx: returns the number of 4xx status codes or details of status codes starting with 4
 5xx: returns the number of 5xx status codes or details of status codes starting with 5
-static_request: number of static requests
-static_flux: static traffic in bytes
-static_bandwidth: static bandwidth in bps
-dynamic_request: number of dynamic requests
-dynamic_flux: dynamic traffic in bytes
-dynamic_bandwidth: dynamic bandwidth in bps
     */
     @SerializedName("Metrics")
     @Expose
@@ -84,6 +77,17 @@ If no domain name is entered, the specified project will be queried; otherwise, 
     @SerializedName("Projects")
     @Expose
     private Long [] Projects;
+
+    /**
+    * Statistical areas:
+mainland: Chinese mainland
+oversea: outside the Chinese mainland
+global: global
+Default value: global
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
 
     /**
      * Get Query start time, such as 2019-12-13 00:00:00 
@@ -119,35 +123,21 @@ If no domain name is entered, the specified project will be queried; otherwise, 
 
     /**
      * Get Specifies the query metric, which can be:
-flux: traffic in bytes
-bandwidth: bandwidth in bps
+flux: traffic (in bytes)
+bandwidth: bandwidth (in bps)
 request: number of requests
-delay: response time in ms
 2xx: returns the number of 2xx status codes or details of status codes starting with 2
 3xx: returns the number of 3xx status codes or details of status codes starting with 3
 4xx: returns the number of 4xx status codes or details of status codes starting with 4
-5xx: returns the number of 5xx status codes or details of status codes starting with 5
-static_request: number of static requests
-static_flux: static traffic in bytes
-static_bandwidth: static bandwidth in bps
-dynamic_request: number of dynamic requests
-dynamic_flux: dynamic traffic in bytes
-dynamic_bandwidth: dynamic bandwidth in bps 
+5xx: returns the number of 5xx status codes or details of status codes starting with 5 
      * @return Metrics Specifies the query metric, which can be:
-flux: traffic in bytes
-bandwidth: bandwidth in bps
+flux: traffic (in bytes)
+bandwidth: bandwidth (in bps)
 request: number of requests
-delay: response time in ms
 2xx: returns the number of 2xx status codes or details of status codes starting with 2
 3xx: returns the number of 3xx status codes or details of status codes starting with 3
 4xx: returns the number of 4xx status codes or details of status codes starting with 4
 5xx: returns the number of 5xx status codes or details of status codes starting with 5
-static_request: number of static requests
-static_flux: static traffic in bytes
-static_bandwidth: static bandwidth in bps
-dynamic_request: number of dynamic requests
-dynamic_flux: dynamic traffic in bytes
-dynamic_bandwidth: dynamic bandwidth in bps
      */
     public String [] getMetrics() {
         return this.Metrics;
@@ -155,35 +145,21 @@ dynamic_bandwidth: dynamic bandwidth in bps
 
     /**
      * Set Specifies the query metric, which can be:
-flux: traffic in bytes
-bandwidth: bandwidth in bps
+flux: traffic (in bytes)
+bandwidth: bandwidth (in bps)
 request: number of requests
-delay: response time in ms
 2xx: returns the number of 2xx status codes or details of status codes starting with 2
 3xx: returns the number of 3xx status codes or details of status codes starting with 3
 4xx: returns the number of 4xx status codes or details of status codes starting with 4
 5xx: returns the number of 5xx status codes or details of status codes starting with 5
-static_request: number of static requests
-static_flux: static traffic in bytes
-static_bandwidth: static bandwidth in bps
-dynamic_request: number of dynamic requests
-dynamic_flux: dynamic traffic in bytes
-dynamic_bandwidth: dynamic bandwidth in bps
      * @param Metrics Specifies the query metric, which can be:
-flux: traffic in bytes
-bandwidth: bandwidth in bps
+flux: traffic (in bytes)
+bandwidth: bandwidth (in bps)
 request: number of requests
-delay: response time in ms
 2xx: returns the number of 2xx status codes or details of status codes starting with 2
 3xx: returns the number of 3xx status codes or details of status codes starting with 3
 4xx: returns the number of 4xx status codes or details of status codes starting with 4
 5xx: returns the number of 5xx status codes or details of status codes starting with 5
-static_request: number of static requests
-static_flux: static traffic in bytes
-static_bandwidth: static bandwidth in bps
-dynamic_request: number of dynamic requests
-dynamic_flux: dynamic traffic in bytes
-dynamic_bandwidth: dynamic bandwidth in bps
      */
     public void setMetrics(String [] Metrics) {
         this.Metrics = Metrics;
@@ -266,6 +242,38 @@ If no domain name is entered, the specified project will be queried; otherwise, 
     }
 
     /**
+     * Get Statistical areas:
+mainland: Chinese mainland
+oversea: outside the Chinese mainland
+global: global
+Default value: global 
+     * @return Area Statistical areas:
+mainland: Chinese mainland
+oversea: outside the Chinese mainland
+global: global
+Default value: global
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set Statistical areas:
+mainland: Chinese mainland
+oversea: outside the Chinese mainland
+global: global
+Default value: global
+     * @param Area Statistical areas:
+mainland: Chinese mainland
+oversea: outside the Chinese mainland
+global: global
+Default value: global
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -275,6 +283,7 @@ If no domain name is entered, the specified project will be queried; otherwise, 
         this.setParamSimple(map, prefix + "Interval", this.Interval);
         this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
         this.setParamArraySimple(map, prefix + "Projects.", this.Projects);
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }
