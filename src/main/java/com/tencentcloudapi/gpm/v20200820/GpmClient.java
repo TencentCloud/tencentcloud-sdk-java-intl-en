@@ -59,6 +59,166 @@ public class GpmClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a match.
+     * @param req CreateMatchRequest
+     * @return CreateMatchResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMatchResponse CreateMatch(CreateMatchRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateMatchResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateMatchResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateMatch");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a rule.
+     * @param req CreateRuleRequest
+     * @return CreateRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRuleResponse CreateRule(CreateRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a match.
+     * @param req DeleteMatchRequest
+     * @return DeleteMatchResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteMatchResponse DeleteMatch(DeleteMatchRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteMatchResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteMatchResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteMatch");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a rule.
+     * @param req DeleteRuleRequest
+     * @return DeleteRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRuleResponse DeleteRule(DeleteRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to view statistics.
+     * @param req DescribeDataRequest
+     * @return DescribeDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataResponse DescribeData(DescribeDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the matchmaking details.
+     * @param req DescribeMatchRequest
+     * @return DescribeMatchResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMatchResponse DescribeMatch(DescribeMatchRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMatchResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMatchResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeMatch");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the created MatchCodes and paginate the query result.
+     * @param req DescribeMatchCodesRequest
+     * @return DescribeMatchCodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMatchCodesResponse DescribeMatchCodes(DescribeMatchCodesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMatchCodesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMatchCodesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeMatchCodes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the matchmaking list and paginate the query result.
+     * @param req DescribeMatchesRequest
+     * @return DescribeMatchesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMatchesResponse DescribeMatches(DescribeMatchesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMatchesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMatchesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeMatches");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the matching progress.
      * @param req DescribeMatchingProgressRequest
      * @return DescribeMatchingProgressResponse
@@ -79,6 +239,46 @@ public class GpmClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the rule details.
+     * @param req DescribeRuleRequest
+     * @return DescribeRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRuleResponse DescribeRule(DescribeRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the rule set list and paginate the query result.
+     * @param req DescribeRulesRequest
+     * @return DescribeRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRulesResponse DescribeRules(DescribeRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the token of a Matchcode, which is used for verified the pushed message.
      * @param req DescribeTokenRequest
      * @return DescribeTokenResponse
@@ -91,6 +291,46 @@ public class GpmClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeTokenResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeToken");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify a match.
+     * @param req ModifyMatchRequest
+     * @return ModifyMatchResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMatchResponse ModifyMatch(ModifyMatchRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyMatchResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyMatchResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyMatch");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify a rule (including description and tag).
+     * @param req ModifyRuleRequest
+     * @return ModifyRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRuleResponse ModifyRule(ModifyRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

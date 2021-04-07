@@ -23,24 +23,25 @@ import java.util.HashMap;
 public class DescribeRouteTablesRequest extends AbstractModel{
 
     /**
+    * Filter condition. `RouteTableIds` and `Filters` cannot be specified at the same time.
+<li>route-table-id - String - (Filter condition) Route table instance ID.</li>
+<li>route-table-name - String - (Filter condition) Route table name.</li>
+<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
+<li>association.main - String - (Filter condition) Whether it is the main route table.</li>
+<li>tag-key - String - Required: no - (Filter condition) Filter by tag key.</li>
+<li>tag:tag-key - String - Required: no - (Filter condition) Filter by tag key pair. Use a specific tag key to replace `tag-key`. See Example 2 for the detailed usage.</li>
+<li>is-need-router-info - String - (Filter condition) Whether to obtain routing policies. It defaults to `false`. To obtain routing policies, change the parameter value to `true`.</li>
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
     * The route table instance ID, such as `rtb-azd4dt1c`.
     */
     @SerializedName("RouteTableIds")
     @Expose
     private String [] RouteTableIds;
-
-    /**
-    * Filter condition. `RouteTableIds` and `Filters` cannot be speified at the same time.
-<li>route-table-id - String - (Filter condition) Route table instance ID.</li>
-<li>route-table-name - String - (Filter condition) Route table name.</li>
-<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
-<li>association.main - String - (Filter condition) Whether it is the main route table.</li>
-<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key is replaced with the specific tag key. For usage, refer to case 2.</li>
-    */
-    @SerializedName("Filters")
-    @Expose
-    private Filter [] Filters;
 
     /**
     * Offset.
@@ -57,6 +58,50 @@ public class DescribeRouteTablesRequest extends AbstractModel{
     private String Limit;
 
     /**
+     * Get Filter condition. `RouteTableIds` and `Filters` cannot be specified at the same time.
+<li>route-table-id - String - (Filter condition) Route table instance ID.</li>
+<li>route-table-name - String - (Filter condition) Route table name.</li>
+<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
+<li>association.main - String - (Filter condition) Whether it is the main route table.</li>
+<li>tag-key - String - Required: no - (Filter condition) Filter by tag key.</li>
+<li>tag:tag-key - String - Required: no - (Filter condition) Filter by tag key pair. Use a specific tag key to replace `tag-key`. See Example 2 for the detailed usage.</li>
+<li>is-need-router-info - String - (Filter condition) Whether to obtain routing policies. It defaults to `false`. To obtain routing policies, change the parameter value to `true`.</li> 
+     * @return Filters Filter condition. `RouteTableIds` and `Filters` cannot be specified at the same time.
+<li>route-table-id - String - (Filter condition) Route table instance ID.</li>
+<li>route-table-name - String - (Filter condition) Route table name.</li>
+<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
+<li>association.main - String - (Filter condition) Whether it is the main route table.</li>
+<li>tag-key - String - Required: no - (Filter condition) Filter by tag key.</li>
+<li>tag:tag-key - String - Required: no - (Filter condition) Filter by tag key pair. Use a specific tag key to replace `tag-key`. See Example 2 for the detailed usage.</li>
+<li>is-need-router-info - String - (Filter condition) Whether to obtain routing policies. It defaults to `false`. To obtain routing policies, change the parameter value to `true`.</li>
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set Filter condition. `RouteTableIds` and `Filters` cannot be specified at the same time.
+<li>route-table-id - String - (Filter condition) Route table instance ID.</li>
+<li>route-table-name - String - (Filter condition) Route table name.</li>
+<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
+<li>association.main - String - (Filter condition) Whether it is the main route table.</li>
+<li>tag-key - String - Required: no - (Filter condition) Filter by tag key.</li>
+<li>tag:tag-key - String - Required: no - (Filter condition) Filter by tag key pair. Use a specific tag key to replace `tag-key`. See Example 2 for the detailed usage.</li>
+<li>is-need-router-info - String - (Filter condition) Whether to obtain routing policies. It defaults to `false`. To obtain routing policies, change the parameter value to `true`.</li>
+     * @param Filters Filter condition. `RouteTableIds` and `Filters` cannot be specified at the same time.
+<li>route-table-id - String - (Filter condition) Route table instance ID.</li>
+<li>route-table-name - String - (Filter condition) Route table name.</li>
+<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
+<li>association.main - String - (Filter condition) Whether it is the main route table.</li>
+<li>tag-key - String - Required: no - (Filter condition) Filter by tag key.</li>
+<li>tag:tag-key - String - Required: no - (Filter condition) Filter by tag key pair. Use a specific tag key to replace `tag-key`. See Example 2 for the detailed usage.</li>
+<li>is-need-router-info - String - (Filter condition) Whether to obtain routing policies. It defaults to `false`. To obtain routing policies, change the parameter value to `true`.</li>
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
      * Get The route table instance ID, such as `rtb-azd4dt1c`. 
      * @return RouteTableIds The route table instance ID, such as `rtb-azd4dt1c`.
      */
@@ -70,46 +115,6 @@ public class DescribeRouteTablesRequest extends AbstractModel{
      */
     public void setRouteTableIds(String [] RouteTableIds) {
         this.RouteTableIds = RouteTableIds;
-    }
-
-    /**
-     * Get Filter condition. `RouteTableIds` and `Filters` cannot be speified at the same time.
-<li>route-table-id - String - (Filter condition) Route table instance ID.</li>
-<li>route-table-name - String - (Filter condition) Route table name.</li>
-<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
-<li>association.main - String - (Filter condition) Whether it is the main route table.</li>
-<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key is replaced with the specific tag key. For usage, refer to case 2.</li> 
-     * @return Filters Filter condition. `RouteTableIds` and `Filters` cannot be speified at the same time.
-<li>route-table-id - String - (Filter condition) Route table instance ID.</li>
-<li>route-table-name - String - (Filter condition) Route table name.</li>
-<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
-<li>association.main - String - (Filter condition) Whether it is the main route table.</li>
-<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key is replaced with the specific tag key. For usage, refer to case 2.</li>
-     */
-    public Filter [] getFilters() {
-        return this.Filters;
-    }
-
-    /**
-     * Set Filter condition. `RouteTableIds` and `Filters` cannot be speified at the same time.
-<li>route-table-id - String - (Filter condition) Route table instance ID.</li>
-<li>route-table-name - String - (Filter condition) Route table name.</li>
-<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
-<li>association.main - String - (Filter condition) Whether it is the main route table.</li>
-<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key is replaced with the specific tag key. For usage, refer to case 2.</li>
-     * @param Filters Filter condition. `RouteTableIds` and `Filters` cannot be speified at the same time.
-<li>route-table-id - String - (Filter condition) Route table instance ID.</li>
-<li>route-table-name - String - (Filter condition) Route table name.</li>
-<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
-<li>association.main - String - (Filter condition) Whether it is the main route table.</li>
-<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key is replaced with the specific tag key. For usage, refer to case 2.</li>
-     */
-    public void setFilters(Filter [] Filters) {
-        this.Filters = Filters;
     }
 
     /**
@@ -148,8 +153,8 @@ public class DescribeRouteTablesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "RouteTableIds.", this.RouteTableIds);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamArraySimple(map, prefix + "RouteTableIds.", this.RouteTableIds);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
 

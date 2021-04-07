@@ -115,6 +115,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Boolean PublishedToVbc;
 
     /**
+    * Creation time of the routing policy
+    */
+    @SerializedName("CreatedTime")
+    @Expose
+    private String CreatedTime;
+
+    /**
      * Get Destination IP range, such as 112.20.51.0/24. Values cannot be in the VPC IP range. 
      * @return DestinationCidrBlock Destination IP range, such as 112.20.51.0/24. Values cannot be in the VPC IP range.
      */
@@ -351,6 +358,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
+     * Get Creation time of the routing policy 
+     * @return CreatedTime Creation time of the routing policy
+     */
+    public String getCreatedTime() {
+        return this.CreatedTime;
+    }
+
+    /**
+     * Set Creation time of the routing policy
+     * @param CreatedTime Creation time of the routing policy
+     */
+    public void setCreatedTime(String CreatedTime) {
+        this.CreatedTime = CreatedTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -365,6 +388,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "DestinationIpv6CidrBlock", this.DestinationIpv6CidrBlock);
         this.setParamSimple(map, prefix + "RouteItemId", this.RouteItemId);
         this.setParamSimple(map, prefix + "PublishedToVbc", this.PublishedToVbc);
+        this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
 
     }
 }
