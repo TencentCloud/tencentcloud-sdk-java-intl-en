@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeClassicalLBByInstanceIdRequest extends AbstractModel{
 
     /**
-    * List of real server IDs.
+    * List of real server IDs
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-     * Get List of real server IDs. 
-     * @return InstanceIds List of real server IDs.
+     * Get List of real server IDs 
+     * @return InstanceIds List of real server IDs
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set List of real server IDs.
-     * @param InstanceIds List of real server IDs.
+     * Set List of real server IDs
+     * @param InstanceIds List of real server IDs
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

@@ -31,7 +31,7 @@ OPEN: public network; INTERNAL: private network.
     private String LoadBalancerType;
 
     /**
-    * CLB instance type. 1: generic CLB instance. Currently, only 1 can be passed in
+    * CLB instance type. Valid value: 1 (generic CLB instance).
     */
     @SerializedName("Forward")
     @Expose
@@ -89,7 +89,7 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
     private String MasterZoneId;
 
     /**
-    * Specifies an AZ ID for creating a CLB instance, such as ap-guangzhou-1, which is applicable only to public network CLB.
+    * Specifies an AZ ID for creating a CLB instance, such as `ap-guangzhou-1`, which is applicable only to public network CLB instances.
     */
     @SerializedName("ZoneId")
     @Expose
@@ -131,7 +131,7 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
     private String BandwidthPackageId;
 
     /**
-    * Exclusive cluster information.
+    * Dedicated cluster information
     */
     @SerializedName("ExclusiveCluster")
     @Expose
@@ -166,6 +166,14 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
     private String ClusterTag;
 
     /**
+    * Sets the secondary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB instances.
+Note: A secondary AZ will load traffic if the primary AZ has failures. The API `DescribeMasterZones` is used to query the primary and secondary AZ list of a region.
+    */
+    @SerializedName("SlaveZoneId")
+    @Expose
+    private String SlaveZoneId;
+
+    /**
     * Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance. E.g., `eip-11112222`.
     */
     @SerializedName("EipAddressId")
@@ -193,16 +201,16 @@ OPEN: public network; INTERNAL: private network.
     }
 
     /**
-     * Get CLB instance type. 1: generic CLB instance. Currently, only 1 can be passed in 
-     * @return Forward CLB instance type. 1: generic CLB instance. Currently, only 1 can be passed in
+     * Get CLB instance type. Valid value: 1 (generic CLB instance). 
+     * @return Forward CLB instance type. Valid value: 1 (generic CLB instance).
      */
     public Long getForward() {
         return this.Forward;
     }
 
     /**
-     * Set CLB instance type. 1: generic CLB instance. Currently, only 1 can be passed in
-     * @param Forward CLB instance type. 1: generic CLB instance. Currently, only 1 can be passed in
+     * Set CLB instance type. Valid value: 1 (generic CLB instance).
+     * @param Forward CLB instance type. Valid value: 1 (generic CLB instance).
      */
     public void setForward(Long Forward) {
         this.Forward = Forward;
@@ -329,16 +337,16 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
     }
 
     /**
-     * Get Specifies an AZ ID for creating a CLB instance, such as ap-guangzhou-1, which is applicable only to public network CLB. 
-     * @return ZoneId Specifies an AZ ID for creating a CLB instance, such as ap-guangzhou-1, which is applicable only to public network CLB.
+     * Get Specifies an AZ ID for creating a CLB instance, such as `ap-guangzhou-1`, which is applicable only to public network CLB instances. 
+     * @return ZoneId Specifies an AZ ID for creating a CLB instance, such as `ap-guangzhou-1`, which is applicable only to public network CLB instances.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Specifies an AZ ID for creating a CLB instance, such as ap-guangzhou-1, which is applicable only to public network CLB.
-     * @param ZoneId Specifies an AZ ID for creating a CLB instance, such as ap-guangzhou-1, which is applicable only to public network CLB.
+     * Set Specifies an AZ ID for creating a CLB instance, such as `ap-guangzhou-1`, which is applicable only to public network CLB instances.
+     * @param ZoneId Specifies an AZ ID for creating a CLB instance, such as `ap-guangzhou-1`, which is applicable only to public network CLB instances.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
@@ -425,16 +433,16 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
     }
 
     /**
-     * Get Exclusive cluster information. 
-     * @return ExclusiveCluster Exclusive cluster information.
+     * Get Dedicated cluster information 
+     * @return ExclusiveCluster Dedicated cluster information
      */
     public ExclusiveCluster getExclusiveCluster() {
         return this.ExclusiveCluster;
     }
 
     /**
-     * Set Exclusive cluster information.
-     * @param ExclusiveCluster Exclusive cluster information.
+     * Set Dedicated cluster information
+     * @param ExclusiveCluster Dedicated cluster information
      */
     public void setExclusiveCluster(ExclusiveCluster ExclusiveCluster) {
         this.ExclusiveCluster = ExclusiveCluster;
@@ -505,6 +513,26 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
     }
 
     /**
+     * Get Sets the secondary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB instances.
+Note: A secondary AZ will load traffic if the primary AZ has failures. The API `DescribeMasterZones` is used to query the primary and secondary AZ list of a region. 
+     * @return SlaveZoneId Sets the secondary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB instances.
+Note: A secondary AZ will load traffic if the primary AZ has failures. The API `DescribeMasterZones` is used to query the primary and secondary AZ list of a region.
+     */
+    public String getSlaveZoneId() {
+        return this.SlaveZoneId;
+    }
+
+    /**
+     * Set Sets the secondary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB instances.
+Note: A secondary AZ will load traffic if the primary AZ has failures. The API `DescribeMasterZones` is used to query the primary and secondary AZ list of a region.
+     * @param SlaveZoneId Sets the secondary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB instances.
+Note: A secondary AZ will load traffic if the primary AZ has failures. The API `DescribeMasterZones` is used to query the primary and secondary AZ list of a region.
+     */
+    public void setSlaveZoneId(String SlaveZoneId) {
+        this.SlaveZoneId = SlaveZoneId;
+    }
+
+    /**
      * Get Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance. E.g., `eip-11112222`. 
      * @return EipAddressId Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance. E.g., `eip-11112222`.
      */
@@ -544,6 +572,7 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
         this.setParamSimple(map, prefix + "SnatPro", this.SnatPro);
         this.setParamArrayObj(map, prefix + "SnatIps.", this.SnatIps);
         this.setParamSimple(map, prefix + "ClusterTag", this.ClusterTag);
+        this.setParamSimple(map, prefix + "SlaveZoneId", this.SlaveZoneId);
         this.setParamSimple(map, prefix + "EipAddressId", this.EipAddressId);
 
     }

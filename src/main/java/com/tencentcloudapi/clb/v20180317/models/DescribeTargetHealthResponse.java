@@ -23,8 +23,8 @@ import java.util.HashMap;
 public class DescribeTargetHealthResponse extends AbstractModel{
 
     /**
-    * List of CLB instances
-Note: This field may return null, indicating that no valid values can be obtained.
+    * CLB instance list
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("LoadBalancers")
     @Expose
@@ -38,20 +38,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get List of CLB instances
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LoadBalancers List of CLB instances
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get CLB instance list
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return LoadBalancers CLB instance list
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public LoadBalancerHealth [] getLoadBalancers() {
         return this.LoadBalancers;
     }
 
     /**
-     * Set List of CLB instances
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LoadBalancers List of CLB instances
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set CLB instance list
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param LoadBalancers CLB instance list
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setLoadBalancers(LoadBalancerHealth [] LoadBalancers) {
         this.LoadBalancers = LoadBalancers;

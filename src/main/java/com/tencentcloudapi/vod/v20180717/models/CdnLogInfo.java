@@ -45,6 +45,20 @@ such as 2018120101-test.vod2.mqcloud.com.
     private String Url;
 
     /**
+    * Log start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=)
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * Log end time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=)
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
      * Get Log date in the format of `yyyy-MM-dd`, such as 2018-03-01. 
      * @return Date Log date in the format of `yyyy-MM-dd`, such as 2018-03-01.
      */
@@ -97,12 +111,46 @@ such as 2018120101-test.vod2.mqcloud.com.
     }
 
     /**
+     * Get Log start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=) 
+     * @return StartTime Log start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=)
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set Log start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=)
+     * @param StartTime Log start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=)
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get Log end time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=) 
+     * @return EndTime Log end time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=)
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set Log end time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=)
+     * @param EndTime Log end time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=)
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Date", this.Date);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
 
     }
 }

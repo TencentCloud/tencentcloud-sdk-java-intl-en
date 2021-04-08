@@ -37,28 +37,28 @@ public class RegisterTargetsRequest extends AbstractModel{
     private String ListenerId;
 
     /**
-    * List of real servers to be bound. Array length limit: 20
+    * List of real servers to be bound. Array length limit: 20.
     */
     @SerializedName("Targets")
     @Expose
     private Target [] Targets;
 
     /**
-    * Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url
+    * Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
     */
     @SerializedName("LocationId")
     @Expose
     private String LocationId;
 
     /**
-    * Target forwarding rule domain name. This parameter does not take effect if LocationId is specified
+    * Target forwarding rule domain name. This parameter does not take effect if LocationId is specified.
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * Target forwarding rule URL. This parameter does not take effect if LocationId is specified
+    * Target forwarding rule URL. This parameter does not take effect if LocationId is specified.
     */
     @SerializedName("Url")
     @Expose
@@ -97,64 +97,64 @@ public class RegisterTargetsRequest extends AbstractModel{
     }
 
     /**
-     * Get List of real servers to be bound. Array length limit: 20 
-     * @return Targets List of real servers to be bound. Array length limit: 20
+     * Get List of real servers to be bound. Array length limit: 20. 
+     * @return Targets List of real servers to be bound. Array length limit: 20.
      */
     public Target [] getTargets() {
         return this.Targets;
     }
 
     /**
-     * Set List of real servers to be bound. Array length limit: 20
-     * @param Targets List of real servers to be bound. Array length limit: 20
+     * Set List of real servers to be bound. Array length limit: 20.
+     * @param Targets List of real servers to be bound. Array length limit: 20.
      */
     public void setTargets(Target [] Targets) {
         this.Targets = Targets;
     }
 
     /**
-     * Get Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url 
-     * @return LocationId Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url
+     * Get Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url. 
+     * @return LocationId Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
      */
     public String getLocationId() {
         return this.LocationId;
     }
 
     /**
-     * Set Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url
-     * @param LocationId Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url
+     * Set Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
+     * @param LocationId Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
      */
     public void setLocationId(String LocationId) {
         this.LocationId = LocationId;
     }
 
     /**
-     * Get Target forwarding rule domain name. This parameter does not take effect if LocationId is specified 
-     * @return Domain Target forwarding rule domain name. This parameter does not take effect if LocationId is specified
+     * Get Target forwarding rule domain name. This parameter does not take effect if LocationId is specified. 
+     * @return Domain Target forwarding rule domain name. This parameter does not take effect if LocationId is specified.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Target forwarding rule domain name. This parameter does not take effect if LocationId is specified
-     * @param Domain Target forwarding rule domain name. This parameter does not take effect if LocationId is specified
+     * Set Target forwarding rule domain name. This parameter does not take effect if LocationId is specified.
+     * @param Domain Target forwarding rule domain name. This parameter does not take effect if LocationId is specified.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get Target forwarding rule URL. This parameter does not take effect if LocationId is specified 
-     * @return Url Target forwarding rule URL. This parameter does not take effect if LocationId is specified
+     * Get Target forwarding rule URL. This parameter does not take effect if LocationId is specified. 
+     * @return Url Target forwarding rule URL. This parameter does not take effect if LocationId is specified.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Target forwarding rule URL. This parameter does not take effect if LocationId is specified
-     * @param Url Target forwarding rule URL. This parameter does not take effect if LocationId is specified
+     * Set Target forwarding rule URL. This parameter does not take effect if LocationId is specified.
+     * @param Url Target forwarding rule URL. This parameter does not take effect if LocationId is specified.
      */
     public void setUrl(String Url) {
         this.Url = Url;

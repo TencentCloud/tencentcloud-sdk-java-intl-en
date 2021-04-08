@@ -30,7 +30,7 @@ public class ModifyTargetGroupInstancesPortRequest extends AbstractModel{
     private String TargetGroupId;
 
     /**
-    * Array of servers for which to modify port
+    * Array of servers for which to modify ports
     */
     @SerializedName("TargetGroupInstances")
     @Expose
@@ -53,16 +53,16 @@ public class ModifyTargetGroupInstancesPortRequest extends AbstractModel{
     }
 
     /**
-     * Get Array of servers for which to modify port 
-     * @return TargetGroupInstances Array of servers for which to modify port
+     * Get Array of servers for which to modify ports 
+     * @return TargetGroupInstances Array of servers for which to modify ports
      */
     public TargetGroupInstance [] getTargetGroupInstances() {
         return this.TargetGroupInstances;
     }
 
     /**
-     * Set Array of servers for which to modify port
-     * @param TargetGroupInstances Array of servers for which to modify port
+     * Set Array of servers for which to modify ports
+     * @param TargetGroupInstances Array of servers for which to modify ports
      */
     public void setTargetGroupInstances(TargetGroupInstance [] TargetGroupInstances) {
         this.TargetGroupInstances = TargetGroupInstances;

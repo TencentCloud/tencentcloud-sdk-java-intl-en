@@ -47,6 +47,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ZoneName;
 
     /**
+    * AZ region, e.g., ap-guangzhou.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ZoneRegion")
+    @Expose
+    private String ZoneRegion;
+
+    /**
+    * Whether the AZ is the `LocalZone`, e.g., false.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("LocalZone")
+    @Expose
+    private Boolean LocalZone;
+
+    /**
      * Get Unique AZ ID in a numeric form, such as 100001
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ZoneId Unique AZ ID in a numeric form, such as 100001
@@ -107,12 +123,54 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get AZ region, e.g., ap-guangzhou.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return ZoneRegion AZ region, e.g., ap-guangzhou.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getZoneRegion() {
+        return this.ZoneRegion;
+    }
+
+    /**
+     * Set AZ region, e.g., ap-guangzhou.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param ZoneRegion AZ region, e.g., ap-guangzhou.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setZoneRegion(String ZoneRegion) {
+        this.ZoneRegion = ZoneRegion;
+    }
+
+    /**
+     * Get Whether the AZ is the `LocalZone`, e.g., false.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return LocalZone Whether the AZ is the `LocalZone`, e.g., false.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Boolean getLocalZone() {
+        return this.LocalZone;
+    }
+
+    /**
+     * Set Whether the AZ is the `LocalZone`, e.g., false.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param LocalZone Whether the AZ is the `LocalZone`, e.g., false.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setLocalZone(Boolean LocalZone) {
+        this.LocalZone = LocalZone;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
+        this.setParamSimple(map, prefix + "ZoneRegion", this.ZoneRegion);
+        this.setParamSimple(map, prefix + "LocalZone", this.LocalZone);
 
     }
 }

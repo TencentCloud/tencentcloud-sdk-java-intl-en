@@ -23,138 +23,138 @@ import java.util.HashMap;
 public class DeregisterTargetsRequest extends AbstractModel{
 
     /**
-    * CLB instance ID in the format of lb-12345678
+    * CLB instance ID in the format of "lb-12345678"
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * Listener ID in the format of lbl-12345678
+    * Listener ID in the format of "lbl-12345678"
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * List of real servers to be unbound. Array length limit: 20
+    * List of real servers to be unbound. Array length limit: 20.
     */
     @SerializedName("Targets")
     @Expose
     private Target [] Targets;
 
     /**
-    * Forwarding rule ID in the format of loc-12345678. When unbinding a server from a layer-7 forwarding rule, you must provide either this parameter or Domain+Url
+    * Forwarding rule ID in the format of "loc-12345678". When unbinding a server from a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
     */
     @SerializedName("LocationId")
     @Expose
     private String LocationId;
 
     /**
-    * Target rule domain name. This parameter does not take effect if LocationId is specified
+    * Target rule domain name. This parameter does not take effect if LocationId is specified.
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * Target rule URL. This parameter does not take effect if LocationId is specified
+    * Target rule URL. This parameter does not take effect if LocationId is specified.
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-     * Get CLB instance ID in the format of lb-12345678 
-     * @return LoadBalancerId CLB instance ID in the format of lb-12345678
+     * Get CLB instance ID in the format of "lb-12345678" 
+     * @return LoadBalancerId CLB instance ID in the format of "lb-12345678"
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set CLB instance ID in the format of lb-12345678
-     * @param LoadBalancerId CLB instance ID in the format of lb-12345678
+     * Set CLB instance ID in the format of "lb-12345678"
+     * @param LoadBalancerId CLB instance ID in the format of "lb-12345678"
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get Listener ID in the format of lbl-12345678 
-     * @return ListenerId Listener ID in the format of lbl-12345678
+     * Get Listener ID in the format of "lbl-12345678" 
+     * @return ListenerId Listener ID in the format of "lbl-12345678"
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set Listener ID in the format of lbl-12345678
-     * @param ListenerId Listener ID in the format of lbl-12345678
+     * Set Listener ID in the format of "lbl-12345678"
+     * @param ListenerId Listener ID in the format of "lbl-12345678"
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get List of real servers to be unbound. Array length limit: 20 
-     * @return Targets List of real servers to be unbound. Array length limit: 20
+     * Get List of real servers to be unbound. Array length limit: 20. 
+     * @return Targets List of real servers to be unbound. Array length limit: 20.
      */
     public Target [] getTargets() {
         return this.Targets;
     }
 
     /**
-     * Set List of real servers to be unbound. Array length limit: 20
-     * @param Targets List of real servers to be unbound. Array length limit: 20
+     * Set List of real servers to be unbound. Array length limit: 20.
+     * @param Targets List of real servers to be unbound. Array length limit: 20.
      */
     public void setTargets(Target [] Targets) {
         this.Targets = Targets;
     }
 
     /**
-     * Get Forwarding rule ID in the format of loc-12345678. When unbinding a server from a layer-7 forwarding rule, you must provide either this parameter or Domain+Url 
-     * @return LocationId Forwarding rule ID in the format of loc-12345678. When unbinding a server from a layer-7 forwarding rule, you must provide either this parameter or Domain+Url
+     * Get Forwarding rule ID in the format of "loc-12345678". When unbinding a server from a layer-7 forwarding rule, you must provide either this parameter or Domain+Url. 
+     * @return LocationId Forwarding rule ID in the format of "loc-12345678". When unbinding a server from a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
      */
     public String getLocationId() {
         return this.LocationId;
     }
 
     /**
-     * Set Forwarding rule ID in the format of loc-12345678. When unbinding a server from a layer-7 forwarding rule, you must provide either this parameter or Domain+Url
-     * @param LocationId Forwarding rule ID in the format of loc-12345678. When unbinding a server from a layer-7 forwarding rule, you must provide either this parameter or Domain+Url
+     * Set Forwarding rule ID in the format of "loc-12345678". When unbinding a server from a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
+     * @param LocationId Forwarding rule ID in the format of "loc-12345678". When unbinding a server from a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
      */
     public void setLocationId(String LocationId) {
         this.LocationId = LocationId;
     }
 
     /**
-     * Get Target rule domain name. This parameter does not take effect if LocationId is specified 
-     * @return Domain Target rule domain name. This parameter does not take effect if LocationId is specified
+     * Get Target rule domain name. This parameter does not take effect if LocationId is specified. 
+     * @return Domain Target rule domain name. This parameter does not take effect if LocationId is specified.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Target rule domain name. This parameter does not take effect if LocationId is specified
-     * @param Domain Target rule domain name. This parameter does not take effect if LocationId is specified
+     * Set Target rule domain name. This parameter does not take effect if LocationId is specified.
+     * @param Domain Target rule domain name. This parameter does not take effect if LocationId is specified.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get Target rule URL. This parameter does not take effect if LocationId is specified 
-     * @return Url Target rule URL. This parameter does not take effect if LocationId is specified
+     * Get Target rule URL. This parameter does not take effect if LocationId is specified. 
+     * @return Url Target rule URL. This parameter does not take effect if LocationId is specified.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Target rule URL. This parameter does not take effect if LocationId is specified
-     * @param Url Target rule URL. This parameter does not take effect if LocationId is specified
+     * Set Target rule URL. This parameter does not take effect if LocationId is specified.
+     * @param Url Target rule URL. This parameter does not take effect if LocationId is specified.
      */
     public void setUrl(String Url) {
         this.Url = Url;

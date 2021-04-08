@@ -30,7 +30,7 @@ public class BatchDeregisterTargetsRequest extends AbstractModel{
     private String LoadBalancerId;
 
     /**
-    * Unbound targets
+    * Unbinding targets
     */
     @SerializedName("Targets")
     @Expose
@@ -53,16 +53,16 @@ public class BatchDeregisterTargetsRequest extends AbstractModel{
     }
 
     /**
-     * Get Unbound targets 
-     * @return Targets Unbound targets
+     * Get Unbinding targets 
+     * @return Targets Unbinding targets
      */
     public BatchTarget [] getTargets() {
         return this.Targets;
     }
 
     /**
-     * Set Unbound targets
-     * @param Targets Unbound targets
+     * Set Unbinding targets
+     * @param Targets Unbinding targets
      */
     public void setTargets(BatchTarget [] Targets) {
         this.Targets = Targets;

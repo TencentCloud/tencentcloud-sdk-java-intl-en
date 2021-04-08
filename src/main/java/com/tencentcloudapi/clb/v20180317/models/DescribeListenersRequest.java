@@ -37,14 +37,14 @@ public class DescribeListenersRequest extends AbstractModel{
     private String [] ListenerIds;
 
     /**
-    * Type of the listener protocol to be queried. Value range: TCP, UDP, HTTP, HTTPS, TCP_SSL
+    * Type of the listener protocols to be queried. Valid values: TCP, UDP, HTTP, HTTPS, and TCP_SSL.
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * Port of the listener to be queried
+    * Port of the listeners to be queried
     */
     @SerializedName("Port")
     @Expose
@@ -83,32 +83,32 @@ public class DescribeListenersRequest extends AbstractModel{
     }
 
     /**
-     * Get Type of the listener protocol to be queried. Value range: TCP, UDP, HTTP, HTTPS, TCP_SSL 
-     * @return Protocol Type of the listener protocol to be queried. Value range: TCP, UDP, HTTP, HTTPS, TCP_SSL
+     * Get Type of the listener protocols to be queried. Valid values: TCP, UDP, HTTP, HTTPS, and TCP_SSL. 
+     * @return Protocol Type of the listener protocols to be queried. Valid values: TCP, UDP, HTTP, HTTPS, and TCP_SSL.
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Type of the listener protocol to be queried. Value range: TCP, UDP, HTTP, HTTPS, TCP_SSL
-     * @param Protocol Type of the listener protocol to be queried. Value range: TCP, UDP, HTTP, HTTPS, TCP_SSL
+     * Set Type of the listener protocols to be queried. Valid values: TCP, UDP, HTTP, HTTPS, and TCP_SSL.
+     * @param Protocol Type of the listener protocols to be queried. Valid values: TCP, UDP, HTTP, HTTPS, and TCP_SSL.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get Port of the listener to be queried 
-     * @return Port Port of the listener to be queried
+     * Get Port of the listeners to be queried 
+     * @return Port Port of the listeners to be queried
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set Port of the listener to be queried
-     * @param Port Port of the listener to be queried
+     * Set Port of the listeners to be queried
+     * @param Port Port of the listeners to be queried
      */
     public void setPort(Long Port) {
         this.Port = Port;

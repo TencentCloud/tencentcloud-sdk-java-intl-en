@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeTaskStatusRequest extends AbstractModel{
 
     /**
-    * Request ID, i.e., the RequestId parameter returned by the API
+    * Request ID, i.e., the RequestId parameter returned by the API.
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * Get Request ID, i.e., the RequestId parameter returned by the API 
-     * @return TaskId Request ID, i.e., the RequestId parameter returned by the API
+     * Get Request ID, i.e., the RequestId parameter returned by the API. 
+     * @return TaskId Request ID, i.e., the RequestId parameter returned by the API.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Request ID, i.e., the RequestId parameter returned by the API
-     * @param TaskId Request ID, i.e., the RequestId parameter returned by the API
+     * Set Request ID, i.e., the RequestId parameter returned by the API.
+     * @param TaskId Request ID, i.e., the RequestId parameter returned by the API.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

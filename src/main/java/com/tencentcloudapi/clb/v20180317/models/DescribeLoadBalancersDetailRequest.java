@@ -30,7 +30,7 @@ public class DescribeLoadBalancersDetailRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * Starting offset of the CLB instance list returned. Default value: 0
+    * Starting offset of the CLB instance list returned. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
@@ -84,16 +84,16 @@ public class DescribeLoadBalancersDetailRequest extends AbstractModel{
     }
 
     /**
-     * Get Starting offset of the CLB instance list returned. Default value: 0 
-     * @return Offset Starting offset of the CLB instance list returned. Default value: 0
+     * Get Starting offset of the CLB instance list returned. Default value: 0. 
+     * @return Offset Starting offset of the CLB instance list returned. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Starting offset of the CLB instance list returned. Default value: 0
-     * @param Offset Starting offset of the CLB instance list returned. Default value: 0
+     * Set Starting offset of the CLB instance list returned. Default value: 0.
+     * @param Offset Starting offset of the CLB instance list returned. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

@@ -98,6 +98,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String EniId;
 
     /**
+    * AZ ID of the real server
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private Long ZoneId;
+
+    /**
      * Get Target group ID 
      * @return TargetGroupId Target group ID
      */
@@ -278,6 +286,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get AZ ID of the real server
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return ZoneId AZ ID of the real server
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * Set AZ ID of the real server
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param ZoneId AZ ID of the real server
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setZoneId(Long ZoneId) {
+        this.ZoneId = ZoneId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -291,6 +319,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "RegisteredTime", this.RegisteredTime);
         this.setParamSimple(map, prefix + "EniId", this.EniId);
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
 
     }
 }

@@ -37,7 +37,7 @@ public class DescribeRewriteRequest extends AbstractModel{
     private String [] SourceListenerIds;
 
     /**
-    * Array of CLB forwarding rules
+    * Array of CLB forwarding rule IDs
     */
     @SerializedName("SourceLocationIds")
     @Expose
@@ -76,16 +76,16 @@ public class DescribeRewriteRequest extends AbstractModel{
     }
 
     /**
-     * Get Array of CLB forwarding rules 
-     * @return SourceLocationIds Array of CLB forwarding rules
+     * Get Array of CLB forwarding rule IDs 
+     * @return SourceLocationIds Array of CLB forwarding rule IDs
      */
     public String [] getSourceLocationIds() {
         return this.SourceLocationIds;
     }
 
     /**
-     * Set Array of CLB forwarding rules
-     * @param SourceLocationIds Array of CLB forwarding rules
+     * Set Array of CLB forwarding rule IDs
+     * @param SourceLocationIds Array of CLB forwarding rule IDs
      */
     public void setSourceLocationIds(String [] SourceLocationIds) {
         this.SourceLocationIds = SourceLocationIds;

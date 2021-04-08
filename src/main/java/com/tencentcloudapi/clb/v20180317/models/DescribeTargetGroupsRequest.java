@@ -30,7 +30,7 @@ public class DescribeTargetGroupsRequest extends AbstractModel{
     private String [] TargetGroupIds;
 
     /**
-    * Limit of the number of displayed results. Default value: 20
+    * Limit of the number of displayed results. Default value: 20.
     */
     @SerializedName("Limit")
     @Expose
@@ -44,7 +44,7 @@ public class DescribeTargetGroupsRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * Filter array, which is exclusive of `TargetGroupIds`. Valid values: TargetGroupVpcId, TargetGroupName
+    * Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`.
     */
     @SerializedName("Filters")
     @Expose
@@ -67,16 +67,16 @@ public class DescribeTargetGroupsRequest extends AbstractModel{
     }
 
     /**
-     * Get Limit of the number of displayed results. Default value: 20 
-     * @return Limit Limit of the number of displayed results. Default value: 20
+     * Get Limit of the number of displayed results. Default value: 20. 
+     * @return Limit Limit of the number of displayed results. Default value: 20.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit of the number of displayed results. Default value: 20
-     * @param Limit Limit of the number of displayed results. Default value: 20
+     * Set Limit of the number of displayed results. Default value: 20.
+     * @param Limit Limit of the number of displayed results. Default value: 20.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -99,16 +99,16 @@ public class DescribeTargetGroupsRequest extends AbstractModel{
     }
 
     /**
-     * Get Filter array, which is exclusive of `TargetGroupIds`. Valid values: TargetGroupVpcId, TargetGroupName 
-     * @return Filters Filter array, which is exclusive of `TargetGroupIds`. Valid values: TargetGroupVpcId, TargetGroupName
+     * Get Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`. 
+     * @return Filters Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`.
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter array, which is exclusive of `TargetGroupIds`. Valid values: TargetGroupVpcId, TargetGroupName
-     * @param Filters Filter array, which is exclusive of `TargetGroupIds`. Valid values: TargetGroupVpcId, TargetGroupName
+     * Set Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`.
+     * @param Filters Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`.
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

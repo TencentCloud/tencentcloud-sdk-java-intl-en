@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class EncodeParams extends AbstractModel{
 
     /**
-    * Output stream audio sample rate for On-Cloud MixTranscoding in Hz. Valid values: 48000, 44100, 32000, 24000, 16000, 12000, 8000.
+    * Output audio sample rate (Hz) for On-Cloud MixTranscoding. Valid values: 48000, 44100, 32000, 24000, 16000, 8000
     */
     @SerializedName("AudioSampleRate")
     @Expose
     private Long AudioSampleRate;
 
     /**
-    * Output stream audio bitrate in Kbps for On-Cloud MixTranscoding. Value range: [8, 500].
+    * Output audio bitrate (Kbps) for On-Cloud MixTranscoding. Value range: 8-500
     */
     @SerializedName("AudioBitrate")
     @Expose
@@ -58,7 +58,7 @@ public class EncodeParams extends AbstractModel{
     private Long VideoHeight;
 
     /**
-    * Output stream bitrate in Kbps for On-Cloud MixTranscoding, which is required for audio/video output. Value range: [1, 10000].
+    * Output bitrate (Kbps) for On-Cloud MixTranscoding, which is required for audio-video output. Value range: 1-10000
     */
     @SerializedName("VideoBitrate")
     @Expose
@@ -79,7 +79,14 @@ public class EncodeParams extends AbstractModel{
     private Long VideoGop;
 
     /**
-    * Output stream background color for On-Cloud MixTranscoding.
+    * Output background color for On-Cloud MixTranscoding. Valid values: decimal integers. Commonly used colors include:
+Red: 0xff0000, whose decimal number is 16724736
+Yellow: 0xffff00, whose decimal number is 16776960
+Green: 0x33cc00, whose decimal number is 3394560
+Blue: 0x0066ff, whose decimal number is 26367
+Black: 0x000000, whose decimal number is 0
+White: 0xFFFFFF, whose decimal number is 16777215
+Grey: 0x999999, whose decimal number is 10066329
     */
     @SerializedName("BackgroundColor")
     @Expose
@@ -93,32 +100,39 @@ public class EncodeParams extends AbstractModel{
     private Long BackgroundImageId;
 
     /**
-     * Get Output stream audio sample rate for On-Cloud MixTranscoding in Hz. Valid values: 48000, 44100, 32000, 24000, 16000, 12000, 8000. 
-     * @return AudioSampleRate Output stream audio sample rate for On-Cloud MixTranscoding in Hz. Valid values: 48000, 44100, 32000, 24000, 16000, 12000, 8000.
+    * Output audio codec for On-Cloud MixTranscoding. Valid values: 0, 1, 2. 0 (default): LC-AAC; 1: HE-AAC; 2: HE-AACv2. If this parameter is set to 2 (HE-AACv2), On-Cloud MixTranscoding can produce only dual-channel streams. If it is set to 1 (HE-AAC) or 2 (HE-AACv2), the valid values for the audio sample rate of output streams are 48000, 44100, 32000, 24000, and 16000.
+    */
+    @SerializedName("AudioCodec")
+    @Expose
+    private Long AudioCodec;
+
+    /**
+     * Get Output audio sample rate (Hz) for On-Cloud MixTranscoding. Valid values: 48000, 44100, 32000, 24000, 16000, 8000 
+     * @return AudioSampleRate Output audio sample rate (Hz) for On-Cloud MixTranscoding. Valid values: 48000, 44100, 32000, 24000, 16000, 8000
      */
     public Long getAudioSampleRate() {
         return this.AudioSampleRate;
     }
 
     /**
-     * Set Output stream audio sample rate for On-Cloud MixTranscoding in Hz. Valid values: 48000, 44100, 32000, 24000, 16000, 12000, 8000.
-     * @param AudioSampleRate Output stream audio sample rate for On-Cloud MixTranscoding in Hz. Valid values: 48000, 44100, 32000, 24000, 16000, 12000, 8000.
+     * Set Output audio sample rate (Hz) for On-Cloud MixTranscoding. Valid values: 48000, 44100, 32000, 24000, 16000, 8000
+     * @param AudioSampleRate Output audio sample rate (Hz) for On-Cloud MixTranscoding. Valid values: 48000, 44100, 32000, 24000, 16000, 8000
      */
     public void setAudioSampleRate(Long AudioSampleRate) {
         this.AudioSampleRate = AudioSampleRate;
     }
 
     /**
-     * Get Output stream audio bitrate in Kbps for On-Cloud MixTranscoding. Value range: [8, 500]. 
-     * @return AudioBitrate Output stream audio bitrate in Kbps for On-Cloud MixTranscoding. Value range: [8, 500].
+     * Get Output audio bitrate (Kbps) for On-Cloud MixTranscoding. Value range: 8-500 
+     * @return AudioBitrate Output audio bitrate (Kbps) for On-Cloud MixTranscoding. Value range: 8-500
      */
     public Long getAudioBitrate() {
         return this.AudioBitrate;
     }
 
     /**
-     * Set Output stream audio bitrate in Kbps for On-Cloud MixTranscoding. Value range: [8, 500].
-     * @param AudioBitrate Output stream audio bitrate in Kbps for On-Cloud MixTranscoding. Value range: [8, 500].
+     * Set Output audio bitrate (Kbps) for On-Cloud MixTranscoding. Value range: 8-500
+     * @param AudioBitrate Output audio bitrate (Kbps) for On-Cloud MixTranscoding. Value range: 8-500
      */
     public void setAudioBitrate(Long AudioBitrate) {
         this.AudioBitrate = AudioBitrate;
@@ -173,16 +187,16 @@ public class EncodeParams extends AbstractModel{
     }
 
     /**
-     * Get Output stream bitrate in Kbps for On-Cloud MixTranscoding, which is required for audio/video output. Value range: [1, 10000]. 
-     * @return VideoBitrate Output stream bitrate in Kbps for On-Cloud MixTranscoding, which is required for audio/video output. Value range: [1, 10000].
+     * Get Output bitrate (Kbps) for On-Cloud MixTranscoding, which is required for audio-video output. Value range: 1-10000 
+     * @return VideoBitrate Output bitrate (Kbps) for On-Cloud MixTranscoding, which is required for audio-video output. Value range: 1-10000
      */
     public Long getVideoBitrate() {
         return this.VideoBitrate;
     }
 
     /**
-     * Set Output stream bitrate in Kbps for On-Cloud MixTranscoding, which is required for audio/video output. Value range: [1, 10000].
-     * @param VideoBitrate Output stream bitrate in Kbps for On-Cloud MixTranscoding, which is required for audio/video output. Value range: [1, 10000].
+     * Set Output bitrate (Kbps) for On-Cloud MixTranscoding, which is required for audio-video output. Value range: 1-10000
+     * @param VideoBitrate Output bitrate (Kbps) for On-Cloud MixTranscoding, which is required for audio-video output. Value range: 1-10000
      */
     public void setVideoBitrate(Long VideoBitrate) {
         this.VideoBitrate = VideoBitrate;
@@ -221,16 +235,44 @@ public class EncodeParams extends AbstractModel{
     }
 
     /**
-     * Get Output stream background color for On-Cloud MixTranscoding. 
-     * @return BackgroundColor Output stream background color for On-Cloud MixTranscoding.
+     * Get Output background color for On-Cloud MixTranscoding. Valid values: decimal integers. Commonly used colors include:
+Red: 0xff0000, whose decimal number is 16724736
+Yellow: 0xffff00, whose decimal number is 16776960
+Green: 0x33cc00, whose decimal number is 3394560
+Blue: 0x0066ff, whose decimal number is 26367
+Black: 0x000000, whose decimal number is 0
+White: 0xFFFFFF, whose decimal number is 16777215
+Grey: 0x999999, whose decimal number is 10066329 
+     * @return BackgroundColor Output background color for On-Cloud MixTranscoding. Valid values: decimal integers. Commonly used colors include:
+Red: 0xff0000, whose decimal number is 16724736
+Yellow: 0xffff00, whose decimal number is 16776960
+Green: 0x33cc00, whose decimal number is 3394560
+Blue: 0x0066ff, whose decimal number is 26367
+Black: 0x000000, whose decimal number is 0
+White: 0xFFFFFF, whose decimal number is 16777215
+Grey: 0x999999, whose decimal number is 10066329
      */
     public Long getBackgroundColor() {
         return this.BackgroundColor;
     }
 
     /**
-     * Set Output stream background color for On-Cloud MixTranscoding.
-     * @param BackgroundColor Output stream background color for On-Cloud MixTranscoding.
+     * Set Output background color for On-Cloud MixTranscoding. Valid values: decimal integers. Commonly used colors include:
+Red: 0xff0000, whose decimal number is 16724736
+Yellow: 0xffff00, whose decimal number is 16776960
+Green: 0x33cc00, whose decimal number is 3394560
+Blue: 0x0066ff, whose decimal number is 26367
+Black: 0x000000, whose decimal number is 0
+White: 0xFFFFFF, whose decimal number is 16777215
+Grey: 0x999999, whose decimal number is 10066329
+     * @param BackgroundColor Output background color for On-Cloud MixTranscoding. Valid values: decimal integers. Commonly used colors include:
+Red: 0xff0000, whose decimal number is 16724736
+Yellow: 0xffff00, whose decimal number is 16776960
+Green: 0x33cc00, whose decimal number is 3394560
+Blue: 0x0066ff, whose decimal number is 26367
+Black: 0x000000, whose decimal number is 0
+White: 0xFFFFFF, whose decimal number is 16777215
+Grey: 0x999999, whose decimal number is 10066329
      */
     public void setBackgroundColor(Long BackgroundColor) {
         this.BackgroundColor = BackgroundColor;
@@ -253,6 +295,22 @@ public class EncodeParams extends AbstractModel{
     }
 
     /**
+     * Get Output audio codec for On-Cloud MixTranscoding. Valid values: 0, 1, 2. 0 (default): LC-AAC; 1: HE-AAC; 2: HE-AACv2. If this parameter is set to 2 (HE-AACv2), On-Cloud MixTranscoding can produce only dual-channel streams. If it is set to 1 (HE-AAC) or 2 (HE-AACv2), the valid values for the audio sample rate of output streams are 48000, 44100, 32000, 24000, and 16000. 
+     * @return AudioCodec Output audio codec for On-Cloud MixTranscoding. Valid values: 0, 1, 2. 0 (default): LC-AAC; 1: HE-AAC; 2: HE-AACv2. If this parameter is set to 2 (HE-AACv2), On-Cloud MixTranscoding can produce only dual-channel streams. If it is set to 1 (HE-AAC) or 2 (HE-AACv2), the valid values for the audio sample rate of output streams are 48000, 44100, 32000, 24000, and 16000.
+     */
+    public Long getAudioCodec() {
+        return this.AudioCodec;
+    }
+
+    /**
+     * Set Output audio codec for On-Cloud MixTranscoding. Valid values: 0, 1, 2. 0 (default): LC-AAC; 1: HE-AAC; 2: HE-AACv2. If this parameter is set to 2 (HE-AACv2), On-Cloud MixTranscoding can produce only dual-channel streams. If it is set to 1 (HE-AAC) or 2 (HE-AACv2), the valid values for the audio sample rate of output streams are 48000, 44100, 32000, 24000, and 16000.
+     * @param AudioCodec Output audio codec for On-Cloud MixTranscoding. Valid values: 0, 1, 2. 0 (default): LC-AAC; 1: HE-AAC; 2: HE-AACv2. If this parameter is set to 2 (HE-AACv2), On-Cloud MixTranscoding can produce only dual-channel streams. If it is set to 1 (HE-AAC) or 2 (HE-AACv2), the valid values for the audio sample rate of output streams are 48000, 44100, 32000, 24000, and 16000.
+     */
+    public void setAudioCodec(Long AudioCodec) {
+        this.AudioCodec = AudioCodec;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -266,6 +324,7 @@ public class EncodeParams extends AbstractModel{
         this.setParamSimple(map, prefix + "VideoGop", this.VideoGop);
         this.setParamSimple(map, prefix + "BackgroundColor", this.BackgroundColor);
         this.setParamSimple(map, prefix + "BackgroundImageId", this.BackgroundImageId);
+        this.setParamSimple(map, prefix + "AudioCodec", this.AudioCodec);
 
     }
 }

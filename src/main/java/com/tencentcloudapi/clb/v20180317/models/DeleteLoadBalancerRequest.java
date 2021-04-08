@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeleteLoadBalancerRequest extends AbstractModel{
 
     /**
-    * Array of IDs of the CLB instances to be deleted. Array length limit: 20
+    * Array of IDs of the CLB instances to be deleted. Array length limit: 20.
     */
     @SerializedName("LoadBalancerIds")
     @Expose
     private String [] LoadBalancerIds;
 
     /**
-     * Get Array of IDs of the CLB instances to be deleted. Array length limit: 20 
-     * @return LoadBalancerIds Array of IDs of the CLB instances to be deleted. Array length limit: 20
+     * Get Array of IDs of the CLB instances to be deleted. Array length limit: 20. 
+     * @return LoadBalancerIds Array of IDs of the CLB instances to be deleted. Array length limit: 20.
      */
     public String [] getLoadBalancerIds() {
         return this.LoadBalancerIds;
     }
 
     /**
-     * Set Array of IDs of the CLB instances to be deleted. Array length limit: 20
-     * @param LoadBalancerIds Array of IDs of the CLB instances to be deleted. Array length limit: 20
+     * Set Array of IDs of the CLB instances to be deleted. Array length limit: 20.
+     * @param LoadBalancerIds Array of IDs of the CLB instances to be deleted. Array length limit: 20.
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {
         this.LoadBalancerIds = LoadBalancerIds;

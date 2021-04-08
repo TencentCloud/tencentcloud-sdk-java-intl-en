@@ -23,12 +23,12 @@ import java.util.HashMap;
 public class DescribeCdnLogsResponse extends AbstractModel{
 
     /**
-    * Log download list for CDN nodes in Mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Total number of log download links
+Note: this field may return `null`, indicating that no valid value is obtained.
     */
-    @SerializedName("DomesticCdnLogs")
+    @SerializedName("TotalCount")
     @Expose
-    private CdnLogInfo [] DomesticCdnLogs;
+    private Long TotalCount;
 
     /**
     * Log download list for CDN nodes outside Mainland China. If global acceleration is not enabled for the domain name, ignore this parameter.
@@ -39,6 +39,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private CdnLogInfo [] OverseaCdnLogs;
 
     /**
+    * Log download list for CDN nodes in Mainland China.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DomesticCdnLogs")
+    @Expose
+    private CdnLogInfo [] DomesticCdnLogs;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -46,23 +54,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Log download list for CDN nodes in Mainland China.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DomesticCdnLogs Log download list for CDN nodes in Mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Total number of log download links
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return TotalCount Total number of log download links
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
-    public CdnLogInfo [] getDomesticCdnLogs() {
-        return this.DomesticCdnLogs;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set Log download list for CDN nodes in Mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DomesticCdnLogs Log download list for CDN nodes in Mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Total number of log download links
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param TotalCount Total number of log download links
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
-    public void setDomesticCdnLogs(CdnLogInfo [] DomesticCdnLogs) {
-        this.DomesticCdnLogs = DomesticCdnLogs;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -86,6 +94,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Log download list for CDN nodes in Mainland China.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return DomesticCdnLogs Log download list for CDN nodes in Mainland China.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public CdnLogInfo [] getDomesticCdnLogs() {
+        return this.DomesticCdnLogs;
+    }
+
+    /**
+     * Set Log download list for CDN nodes in Mainland China.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param DomesticCdnLogs Log download list for CDN nodes in Mainland China.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDomesticCdnLogs(CdnLogInfo [] DomesticCdnLogs) {
+        this.DomesticCdnLogs = DomesticCdnLogs;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -105,8 +133,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "DomesticCdnLogs.", this.DomesticCdnLogs);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "OverseaCdnLogs.", this.OverseaCdnLogs);
+        this.setParamArrayObj(map, prefix + "DomesticCdnLogs.", this.DomesticCdnLogs);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

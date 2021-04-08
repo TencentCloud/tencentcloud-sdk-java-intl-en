@@ -44,6 +44,20 @@ public class DescribeCdnLogsRequest extends AbstractModel{
     private String EndTime;
 
     /**
+    * Maximum return results of pulling paginated queries. Default value: 100; maximum value: 1000
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * Page number offset from the beginning of paginated queries. Default value: 0
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
     * [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
     */
     @SerializedName("SubAppId")
@@ -99,6 +113,38 @@ public class DescribeCdnLogsRequest extends AbstractModel{
     }
 
     /**
+     * Get Maximum return results of pulling paginated queries. Default value: 100; maximum value: 1000 
+     * @return Limit Maximum return results of pulling paginated queries. Default value: 100; maximum value: 1000
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set Maximum return results of pulling paginated queries. Default value: 100; maximum value: 1000
+     * @param Limit Maximum return results of pulling paginated queries. Default value: 100; maximum value: 1000
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get Page number offset from the beginning of paginated queries. Default value: 0 
+     * @return Offset Page number offset from the beginning of paginated queries. Default value: 0
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set Page number offset from the beginning of paginated queries. Default value: 0
+     * @param Offset Page number offset from the beginning of paginated queries. Default value: 0
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
      * Get [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty. 
      * @return SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
@@ -121,6 +167,8 @@ public class DescribeCdnLogsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }

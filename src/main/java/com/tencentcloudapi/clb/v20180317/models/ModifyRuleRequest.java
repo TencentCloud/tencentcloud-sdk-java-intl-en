@@ -44,7 +44,7 @@ public class ModifyRuleRequest extends AbstractModel{
     private String LocationId;
 
     /**
-    * New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified
+    * New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified.
     */
     @SerializedName("Url")
     @Expose
@@ -73,21 +73,21 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     private Long SessionExpireTime;
 
     /**
-    * Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, TRPC.
+    * Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, and TRPC.
     */
     @SerializedName("ForwardType")
     @Expose
     private String ForwardType;
 
     /**
-    * TRPC callee server route, which is required when `ForwardType` is `TRPC`.
+    * TRPC callee server route, which is required when `ForwardType` is "TRPC".
     */
     @SerializedName("TrpcCallee")
     @Expose
     private String TrpcCallee;
 
     /**
-    * TRPC calling service API, which is required when `ForwardType` is `TRPC`.
+    * TRPC calling service API, which is required when `ForwardType` is "TRPC".
     */
     @SerializedName("TrpcFunc")
     @Expose
@@ -142,16 +142,16 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     }
 
     /**
-     * Get New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified 
-     * @return Url New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified
+     * Get New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified. 
+     * @return Url New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified
-     * @param Url New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified
+     * Set New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified.
+     * @param Url New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified.
      */
     public void setUrl(String Url) {
         this.Url = Url;
@@ -210,48 +210,48 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     }
 
     /**
-     * Get Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, TRPC. 
-     * @return ForwardType Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, TRPC.
+     * Get Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, and TRPC. 
+     * @return ForwardType Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, and TRPC.
      */
     public String getForwardType() {
         return this.ForwardType;
     }
 
     /**
-     * Set Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, TRPC.
-     * @param ForwardType Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, TRPC.
+     * Set Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, and TRPC.
+     * @param ForwardType Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, and TRPC.
      */
     public void setForwardType(String ForwardType) {
         this.ForwardType = ForwardType;
     }
 
     /**
-     * Get TRPC callee server route, which is required when `ForwardType` is `TRPC`. 
-     * @return TrpcCallee TRPC callee server route, which is required when `ForwardType` is `TRPC`.
+     * Get TRPC callee server route, which is required when `ForwardType` is "TRPC". 
+     * @return TrpcCallee TRPC callee server route, which is required when `ForwardType` is "TRPC".
      */
     public String getTrpcCallee() {
         return this.TrpcCallee;
     }
 
     /**
-     * Set TRPC callee server route, which is required when `ForwardType` is `TRPC`.
-     * @param TrpcCallee TRPC callee server route, which is required when `ForwardType` is `TRPC`.
+     * Set TRPC callee server route, which is required when `ForwardType` is "TRPC".
+     * @param TrpcCallee TRPC callee server route, which is required when `ForwardType` is "TRPC".
      */
     public void setTrpcCallee(String TrpcCallee) {
         this.TrpcCallee = TrpcCallee;
     }
 
     /**
-     * Get TRPC calling service API, which is required when `ForwardType` is `TRPC`. 
-     * @return TrpcFunc TRPC calling service API, which is required when `ForwardType` is `TRPC`.
+     * Get TRPC calling service API, which is required when `ForwardType` is "TRPC". 
+     * @return TrpcFunc TRPC calling service API, which is required when `ForwardType` is "TRPC".
      */
     public String getTrpcFunc() {
         return this.TrpcFunc;
     }
 
     /**
-     * Set TRPC calling service API, which is required when `ForwardType` is `TRPC`.
-     * @param TrpcFunc TRPC calling service API, which is required when `ForwardType` is `TRPC`.
+     * Set TRPC calling service API, which is required when `ForwardType` is "TRPC".
+     * @param TrpcFunc TRPC calling service API, which is required when `ForwardType` is "TRPC".
      */
     public void setTrpcFunc(String TrpcFunc) {
         this.TrpcFunc = TrpcFunc;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeRewriteResponse extends AbstractModel{
 
     /**
-    * Array of redirection forwarding rules. If there are no redirection rules, an empty array will be returned
+    * Array of redirection forwarding rules. If there are no redirection rules, an empty array will be returned.
     */
     @SerializedName("RewriteSet")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeRewriteResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Array of redirection forwarding rules. If there are no redirection rules, an empty array will be returned 
-     * @return RewriteSet Array of redirection forwarding rules. If there are no redirection rules, an empty array will be returned
+     * Get Array of redirection forwarding rules. If there are no redirection rules, an empty array will be returned. 
+     * @return RewriteSet Array of redirection forwarding rules. If there are no redirection rules, an empty array will be returned.
      */
     public RuleOutput [] getRewriteSet() {
         return this.RewriteSet;
     }
 
     /**
-     * Set Array of redirection forwarding rules. If there are no redirection rules, an empty array will be returned
-     * @param RewriteSet Array of redirection forwarding rules. If there are no redirection rules, an empty array will be returned
+     * Set Array of redirection forwarding rules. If there are no redirection rules, an empty array will be returned.
+     * @param RewriteSet Array of redirection forwarding rules. If there are no redirection rules, an empty array will be returned.
      */
     public void setRewriteSet(RuleOutput [] RewriteSet) {
         this.RewriteSet = RewriteSet;

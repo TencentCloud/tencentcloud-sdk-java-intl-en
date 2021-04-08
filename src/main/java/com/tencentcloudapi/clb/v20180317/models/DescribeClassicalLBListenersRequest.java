@@ -37,21 +37,21 @@ public class DescribeClassicalLBListenersRequest extends AbstractModel{
     private String [] ListenerIds;
 
     /**
-    * CLB listening protocol. Value range: TCP, UDP, HTTP, HTTPS
+    * CLB listening protocol. Valid values: TCP, UDP, HTTP, and HTTPS.
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * CLB listening port. Value range: [1-65535]
+    * CLB listening port. Value range: 1 - 65535.
     */
     @SerializedName("ListenerPort")
     @Expose
     private Long ListenerPort;
 
     /**
-    * Listener status. Value range: 0 (creating), 1 (running)
+    * Listener status. Valid values: 0 (creating) and 1 (running).
     */
     @SerializedName("Status")
     @Expose
@@ -90,48 +90,48 @@ public class DescribeClassicalLBListenersRequest extends AbstractModel{
     }
 
     /**
-     * Get CLB listening protocol. Value range: TCP, UDP, HTTP, HTTPS 
-     * @return Protocol CLB listening protocol. Value range: TCP, UDP, HTTP, HTTPS
+     * Get CLB listening protocol. Valid values: TCP, UDP, HTTP, and HTTPS. 
+     * @return Protocol CLB listening protocol. Valid values: TCP, UDP, HTTP, and HTTPS.
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set CLB listening protocol. Value range: TCP, UDP, HTTP, HTTPS
-     * @param Protocol CLB listening protocol. Value range: TCP, UDP, HTTP, HTTPS
+     * Set CLB listening protocol. Valid values: TCP, UDP, HTTP, and HTTPS.
+     * @param Protocol CLB listening protocol. Valid values: TCP, UDP, HTTP, and HTTPS.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get CLB listening port. Value range: [1-65535] 
-     * @return ListenerPort CLB listening port. Value range: [1-65535]
+     * Get CLB listening port. Value range: 1 - 65535. 
+     * @return ListenerPort CLB listening port. Value range: 1 - 65535.
      */
     public Long getListenerPort() {
         return this.ListenerPort;
     }
 
     /**
-     * Set CLB listening port. Value range: [1-65535]
-     * @param ListenerPort CLB listening port. Value range: [1-65535]
+     * Set CLB listening port. Value range: 1 - 65535.
+     * @param ListenerPort CLB listening port. Value range: 1 - 65535.
      */
     public void setListenerPort(Long ListenerPort) {
         this.ListenerPort = ListenerPort;
     }
 
     /**
-     * Get Listener status. Value range: 0 (creating), 1 (running) 
-     * @return Status Listener status. Value range: 0 (creating), 1 (running)
+     * Get Listener status. Valid values: 0 (creating) and 1 (running). 
+     * @return Status Listener status. Valid values: 0 (creating) and 1 (running).
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Listener status. Value range: 0 (creating), 1 (running)
-     * @param Status Listener status. Value range: 0 (creating), 1 (running)
+     * Set Listener status. Valid values: 0 (creating) and 1 (running).
+     * @param Status Listener status. Valid values: 0 (creating) and 1 (running).
      */
     public void setStatus(Long Status) {
         this.Status = Status;

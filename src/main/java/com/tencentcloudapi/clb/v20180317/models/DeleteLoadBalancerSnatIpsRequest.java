@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DeleteLoadBalancerSnatIpsRequest extends AbstractModel{
 
     /**
-    * Unique CLB instance ID, such as lb-12345678
+    * Unique ID of a CLB instance, e.g., lb-12345678.
     */
     @SerializedName("LoadBalancerId")
     @Expose
@@ -37,16 +37,16 @@ public class DeleteLoadBalancerSnatIpsRequest extends AbstractModel{
     private String [] Ips;
 
     /**
-     * Get Unique CLB instance ID, such as lb-12345678 
-     * @return LoadBalancerId Unique CLB instance ID, such as lb-12345678
+     * Get Unique ID of a CLB instance, e.g., lb-12345678. 
+     * @return LoadBalancerId Unique ID of a CLB instance, e.g., lb-12345678.
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set Unique CLB instance ID, such as lb-12345678
-     * @param LoadBalancerId Unique CLB instance ID, such as lb-12345678
+     * Set Unique ID of a CLB instance, e.g., lb-12345678.
+     * @param LoadBalancerId Unique ID of a CLB instance, e.g., lb-12345678.
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;

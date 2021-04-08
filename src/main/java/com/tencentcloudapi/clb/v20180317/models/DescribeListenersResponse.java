@@ -23,15 +23,15 @@ import java.util.HashMap;
 public class DescribeListenersResponse extends AbstractModel{
 
     /**
-    * List of listeners
+    * Listener list
     */
     @SerializedName("Listeners")
     @Expose
     private Listener [] Listeners;
 
     /**
-    * Total number of listeners
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Total number of listeners (with filters of port, protocol, and listener ID applied).
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,36 +45,36 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get List of listeners 
-     * @return Listeners List of listeners
+     * Get Listener list 
+     * @return Listeners Listener list
      */
     public Listener [] getListeners() {
         return this.Listeners;
     }
 
     /**
-     * Set List of listeners
-     * @param Listeners List of listeners
+     * Set Listener list
+     * @param Listeners Listener list
      */
     public void setListeners(Listener [] Listeners) {
         this.Listeners = Listeners;
     }
 
     /**
-     * Get Total number of listeners
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCount Total number of listeners
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Total number of listeners (with filters of port, protocol, and listener ID applied).
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return TotalCount Total number of listeners (with filters of port, protocol, and listener ID applied).
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of listeners
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TotalCount Total number of listeners
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Total number of listeners (with filters of port, protocol, and listener ID applied).
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param TotalCount Total number of listeners (with filters of port, protocol, and listener ID applied).
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

@@ -37,28 +37,28 @@ public class ModifyTargetWeightRequest extends AbstractModel{
     private String ListenerId;
 
     /**
-    * Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url
+    * Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
     */
     @SerializedName("LocationId")
     @Expose
     private String LocationId;
 
     /**
-    * Target rule domain name. This parameter does not take effect if LocationId is specified
+    * Target rule domain name. This parameter does not take effect if LocationId is specified.
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * Target rule URL. This parameter does not take effect if LocationId is specified
+    * Target rule URL. This parameter does not take effect if LocationId is specified.
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * List of real servers for which to modify the weight
+    * List of real servers for which to modify the weights
     */
     @SerializedName("Targets")
     @Expose
@@ -104,64 +104,64 @@ public class ModifyTargetWeightRequest extends AbstractModel{
     }
 
     /**
-     * Get Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url 
-     * @return LocationId Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url
+     * Get Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url. 
+     * @return LocationId Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
      */
     public String getLocationId() {
         return this.LocationId;
     }
 
     /**
-     * Set Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url
-     * @param LocationId Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url
+     * Set Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
+     * @param LocationId Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
      */
     public void setLocationId(String LocationId) {
         this.LocationId = LocationId;
     }
 
     /**
-     * Get Target rule domain name. This parameter does not take effect if LocationId is specified 
-     * @return Domain Target rule domain name. This parameter does not take effect if LocationId is specified
+     * Get Target rule domain name. This parameter does not take effect if LocationId is specified. 
+     * @return Domain Target rule domain name. This parameter does not take effect if LocationId is specified.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Target rule domain name. This parameter does not take effect if LocationId is specified
-     * @param Domain Target rule domain name. This parameter does not take effect if LocationId is specified
+     * Set Target rule domain name. This parameter does not take effect if LocationId is specified.
+     * @param Domain Target rule domain name. This parameter does not take effect if LocationId is specified.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get Target rule URL. This parameter does not take effect if LocationId is specified 
-     * @return Url Target rule URL. This parameter does not take effect if LocationId is specified
+     * Get Target rule URL. This parameter does not take effect if LocationId is specified. 
+     * @return Url Target rule URL. This parameter does not take effect if LocationId is specified.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Target rule URL. This parameter does not take effect if LocationId is specified
-     * @param Url Target rule URL. This parameter does not take effect if LocationId is specified
+     * Set Target rule URL. This parameter does not take effect if LocationId is specified.
+     * @param Url Target rule URL. This parameter does not take effect if LocationId is specified.
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get List of real servers for which to modify the weight 
-     * @return Targets List of real servers for which to modify the weight
+     * Get List of real servers for which to modify the weights 
+     * @return Targets List of real servers for which to modify the weights
      */
     public Target [] getTargets() {
         return this.Targets;
     }
 
     /**
-     * Set List of real servers for which to modify the weight
-     * @param Targets List of real servers for which to modify the weight
+     * Set List of real servers for which to modify the weights
+     * @param Targets List of real servers for which to modify the weights
      */
     public void setTargets(Target [] Targets) {
         this.Targets = Targets;

@@ -30,7 +30,7 @@ public class DescribeTargetsRequest extends AbstractModel{
     private String LoadBalancerId;
 
     /**
-    * List of listener IDs
+    * Listener ID list
     */
     @SerializedName("ListenerIds")
     @Expose
@@ -67,16 +67,16 @@ public class DescribeTargetsRequest extends AbstractModel{
     }
 
     /**
-     * Get List of listener IDs 
-     * @return ListenerIds List of listener IDs
+     * Get Listener ID list 
+     * @return ListenerIds Listener ID list
      */
     public String [] getListenerIds() {
         return this.ListenerIds;
     }
 
     /**
-     * Set List of listener IDs
-     * @param ListenerIds List of listener IDs
+     * Set Listener ID list
+     * @param ListenerIds Listener ID list
      */
     public void setListenerIds(String [] ListenerIds) {
         this.ListenerIds = ListenerIds;

@@ -30,14 +30,14 @@ public class CreateListenerRequest extends AbstractModel{
     private String LoadBalancerId;
 
     /**
-    * Specifies for which ports to create listeners. Each port corresponds to a new listener
+    * Specifies for which ports to create listeners. Each port corresponds to a new listener.
     */
     @SerializedName("Ports")
     @Expose
     private Long [] Ports;
 
     /**
-    * Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application)
+    * Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application).
     */
     @SerializedName("Protocol")
     @Expose
@@ -51,7 +51,7 @@ public class CreateListenerRequest extends AbstractModel{
     private String [] ListenerNames;
 
     /**
-    * Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners
+    * Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
     */
     @SerializedName("HealthCheck")
     @Expose
@@ -101,7 +101,7 @@ They represent weighted round robin and least connections, respectively. Default
     private String SessionType;
 
     /**
-    * Whether to enable a persistent connection (This parameter can only be configured in HTTP/HTTPS listeners). Valid values: 0: no; 1: yes. Default value: 0
+    * Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners. Valid values: 0 (disable; default value) and 1 (enable).
     */
     @SerializedName("KeepaliveEnable")
     @Expose
@@ -131,32 +131,32 @@ They represent weighted round robin and least connections, respectively. Default
     }
 
     /**
-     * Get Specifies for which ports to create listeners. Each port corresponds to a new listener 
-     * @return Ports Specifies for which ports to create listeners. Each port corresponds to a new listener
+     * Get Specifies for which ports to create listeners. Each port corresponds to a new listener. 
+     * @return Ports Specifies for which ports to create listeners. Each port corresponds to a new listener.
      */
     public Long [] getPorts() {
         return this.Ports;
     }
 
     /**
-     * Set Specifies for which ports to create listeners. Each port corresponds to a new listener
-     * @param Ports Specifies for which ports to create listeners. Each port corresponds to a new listener
+     * Set Specifies for which ports to create listeners. Each port corresponds to a new listener.
+     * @param Ports Specifies for which ports to create listeners. Each port corresponds to a new listener.
      */
     public void setPorts(Long [] Ports) {
         this.Ports = Ports;
     }
 
     /**
-     * Get Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application) 
-     * @return Protocol Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application)
+     * Get Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application). 
+     * @return Protocol Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application).
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application)
-     * @param Protocol Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application)
+     * Set Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application).
+     * @param Protocol Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application).
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
@@ -179,16 +179,16 @@ They represent weighted round robin and least connections, respectively. Default
     }
 
     /**
-     * Get Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners 
-     * @return HealthCheck Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners
+     * Get Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners. 
+     * @return HealthCheck Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
      */
     public HealthCheck getHealthCheck() {
         return this.HealthCheck;
     }
 
     /**
-     * Set Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners
-     * @param HealthCheck Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners
+     * Set Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
+     * @param HealthCheck Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
      */
     public void setHealthCheck(HealthCheck HealthCheck) {
         this.HealthCheck = HealthCheck;
@@ -295,16 +295,16 @@ They represent weighted round robin and least connections, respectively. Default
     }
 
     /**
-     * Get Whether to enable a persistent connection (This parameter can only be configured in HTTP/HTTPS listeners). Valid values: 0: no; 1: yes. Default value: 0 
-     * @return KeepaliveEnable Whether to enable a persistent connection (This parameter can only be configured in HTTP/HTTPS listeners). Valid values: 0: no; 1: yes. Default value: 0
+     * Get Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners. Valid values: 0 (disable; default value) and 1 (enable). 
+     * @return KeepaliveEnable Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners. Valid values: 0 (disable; default value) and 1 (enable).
      */
     public Long getKeepaliveEnable() {
         return this.KeepaliveEnable;
     }
 
     /**
-     * Set Whether to enable a persistent connection (This parameter can only be configured in HTTP/HTTPS listeners). Valid values: 0: no; 1: yes. Default value: 0
-     * @param KeepaliveEnable Whether to enable a persistent connection (This parameter can only be configured in HTTP/HTTPS listeners). Valid values: 0: no; 1: yes. Default value: 0
+     * Set Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners. Valid values: 0 (disable; default value) and 1 (enable).
+     * @param KeepaliveEnable Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners. Valid values: 0 (disable; default value) and 1 (enable).
      */
     public void setKeepaliveEnable(Long KeepaliveEnable) {
         this.KeepaliveEnable = KeepaliveEnable;

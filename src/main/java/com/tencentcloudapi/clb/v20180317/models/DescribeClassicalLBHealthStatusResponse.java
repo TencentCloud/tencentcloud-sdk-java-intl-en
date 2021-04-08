@@ -24,7 +24,7 @@ public class DescribeClassicalLBHealthStatusResponse extends AbstractModel{
 
     /**
     * List of real server health statuses
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("HealthList")
     @Expose
@@ -39,9 +39,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get List of real server health statuses
-Note: This field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return HealthList List of real server health statuses
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public ClassicalHealth [] getHealthList() {
         return this.HealthList;
@@ -49,9 +49,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List of real server health statuses
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param HealthList List of real server health statuses
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setHealthList(ClassicalHealth [] HealthList) {
         this.HealthList = HealthList;

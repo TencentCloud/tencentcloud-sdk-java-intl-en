@@ -44,14 +44,14 @@ public class DeleteRuleRequest extends AbstractModel{
     private String [] LocationIds;
 
     /**
-    * Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified
+    * Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified
+    * Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
     */
     @SerializedName("Url")
     @Expose
@@ -113,32 +113,32 @@ public class DeleteRuleRequest extends AbstractModel{
     }
 
     /**
-     * Get Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified 
-     * @return Domain Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified
+     * Get Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified. 
+     * @return Domain Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified
-     * @param Domain Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified
+     * Set Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
+     * @param Domain Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified 
-     * @return Url Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified
+     * Get Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified. 
+     * @return Url Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified
-     * @param Url Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified
+     * Set Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
+     * @param Url Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
      */
     public void setUrl(String Url) {
         this.Url = Url;

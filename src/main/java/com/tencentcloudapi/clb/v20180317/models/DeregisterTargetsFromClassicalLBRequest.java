@@ -30,7 +30,7 @@ public class DeregisterTargetsFromClassicalLBRequest extends AbstractModel{
     private String LoadBalancerId;
 
     /**
-    * List of real server instance IDs
+    * List of real server IDs
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -53,16 +53,16 @@ public class DeregisterTargetsFromClassicalLBRequest extends AbstractModel{
     }
 
     /**
-     * Get List of real server instance IDs 
-     * @return InstanceIds List of real server instance IDs
+     * Get List of real server IDs 
+     * @return InstanceIds List of real server IDs
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set List of real server instance IDs
-     * @param InstanceIds List of real server instance IDs
+     * Set List of real server IDs
+     * @param InstanceIds List of real server IDs
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
