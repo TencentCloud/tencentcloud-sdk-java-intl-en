@@ -172,6 +172,14 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     private DiskInfo SystemDiskInfo;
 
     /**
+    * CCN information
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RelatedCcnInfos")
+    @Expose
+    private RelatedCcnInfo [] RelatedCcnInfos;
+
+    /**
      * Get Asset package ID 
      * @return AssetId Asset package ID
      */
@@ -540,6 +548,26 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     }
 
     /**
+     * Get CCN information
+Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
+     * @return RelatedCcnInfos CCN information
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public RelatedCcnInfo [] getRelatedCcnInfos() {
+        return this.RelatedCcnInfos;
+    }
+
+    /**
+     * Set CCN information
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param RelatedCcnInfos CCN information
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public void setRelatedCcnInfos(RelatedCcnInfo [] RelatedCcnInfos) {
+        this.RelatedCcnInfos = RelatedCcnInfos;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -562,6 +590,7 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamArrayObj(map, prefix + "DataDiskInfo.", this.DataDiskInfo);
         this.setParamObj(map, prefix + "SystemDiskInfo.", this.SystemDiskInfo);
+        this.setParamArrayObj(map, prefix + "RelatedCcnInfos.", this.RelatedCcnInfos);
 
     }
 }

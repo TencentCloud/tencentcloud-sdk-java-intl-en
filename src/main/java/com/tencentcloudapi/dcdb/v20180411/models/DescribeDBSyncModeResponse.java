@@ -37,6 +37,13 @@ public class DescribeDBSyncModeResponse extends AbstractModel{
     private Long IsModifying;
 
     /**
+    * Current sync mode. Valid values: `0` (async), `1` (sync).
+    */
+    @SerializedName("CurrentSyncMode")
+    @Expose
+    private Long CurrentSyncMode;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -76,6 +83,22 @@ public class DescribeDBSyncModeResponse extends AbstractModel{
     }
 
     /**
+     * Get Current sync mode. Valid values: `0` (async), `1` (sync). 
+     * @return CurrentSyncMode Current sync mode. Valid values: `0` (async), `1` (sync).
+     */
+    public Long getCurrentSyncMode() {
+        return this.CurrentSyncMode;
+    }
+
+    /**
+     * Set Current sync mode. Valid values: `0` (async), `1` (sync).
+     * @param CurrentSyncMode Current sync mode. Valid values: `0` (async), `1` (sync).
+     */
+    public void setCurrentSyncMode(Long CurrentSyncMode) {
+        this.CurrentSyncMode = CurrentSyncMode;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -97,6 +120,7 @@ public class DescribeDBSyncModeResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SyncMode", this.SyncMode);
         this.setParamSimple(map, prefix + "IsModifying", this.IsModifying);
+        this.setParamSimple(map, prefix + "CurrentSyncMode", this.CurrentSyncMode);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

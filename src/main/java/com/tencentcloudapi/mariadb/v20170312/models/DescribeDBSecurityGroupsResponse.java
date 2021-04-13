@@ -30,6 +30,22 @@ public class DescribeDBSecurityGroupsResponse extends AbstractModel{
     private SecurityGroup [] Groups;
 
     /**
+    * Instance VIP
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("VIP")
+    @Expose
+    private String VIP;
+
+    /**
+    * Instance port
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("VPort")
+    @Expose
+    private Long VPort;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -53,6 +69,46 @@ public class DescribeDBSecurityGroupsResponse extends AbstractModel{
     }
 
     /**
+     * Get Instance VIP
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return VIP Instance VIP
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getVIP() {
+        return this.VIP;
+    }
+
+    /**
+     * Set Instance VIP
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param VIP Instance VIP
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setVIP(String VIP) {
+        this.VIP = VIP;
+    }
+
+    /**
+     * Get Instance port
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return VPort Instance port
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getVPort() {
+        return this.VPort;
+    }
+
+    /**
+     * Set Instance port
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param VPort Instance port
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setVPort(Long VPort) {
+        this.VPort = VPort;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -73,6 +129,8 @@ public class DescribeDBSecurityGroupsResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Groups.", this.Groups);
+        this.setParamSimple(map, prefix + "VIP", this.VIP);
+        this.setParamSimple(map, prefix + "VPort", this.VPort);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

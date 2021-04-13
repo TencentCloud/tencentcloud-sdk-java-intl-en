@@ -114,7 +114,7 @@ public class CopyFleetRequest extends AbstractModel{
     private String SelectedScalingType;
 
     /**
-    * Whether to select CCN. Valid values: CCN_SELECTED, CCN_UNSELECTED. Default value: CCN_UNSELECTED.
+    * Whether to select CCN: CCN_SELECTED_BEFORE_CREATE (associated before creation), CCN_SELECTED_AFTER_CREATE (associated after creation), or CCN_UNSELECTED (not associated); CCN_UNSELECTED by default
     */
     @SerializedName("SelectedCcnType")
     @Expose
@@ -147,6 +147,13 @@ public class CopyFleetRequest extends AbstractModel{
     @SerializedName("SelectedTimerType")
     @Expose
     private String SelectedTimerType;
+
+    /**
+    * CCN information, including the corresponding CCN account and ID.
+    */
+    @SerializedName("CcnInfos")
+    @Expose
+    private CcnInfo [] CcnInfos;
 
     /**
      * Get Server fleet ID 
@@ -357,16 +364,16 @@ public class CopyFleetRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to select CCN. Valid values: CCN_SELECTED, CCN_UNSELECTED. Default value: CCN_UNSELECTED. 
-     * @return SelectedCcnType Whether to select CCN. Valid values: CCN_SELECTED, CCN_UNSELECTED. Default value: CCN_UNSELECTED.
+     * Get Whether to select CCN: CCN_SELECTED_BEFORE_CREATE (associated before creation), CCN_SELECTED_AFTER_CREATE (associated after creation), or CCN_UNSELECTED (not associated); CCN_UNSELECTED by default 
+     * @return SelectedCcnType Whether to select CCN: CCN_SELECTED_BEFORE_CREATE (associated before creation), CCN_SELECTED_AFTER_CREATE (associated after creation), or CCN_UNSELECTED (not associated); CCN_UNSELECTED by default
      */
     public String getSelectedCcnType() {
         return this.SelectedCcnType;
     }
 
     /**
-     * Set Whether to select CCN. Valid values: CCN_SELECTED, CCN_UNSELECTED. Default value: CCN_UNSELECTED.
-     * @param SelectedCcnType Whether to select CCN. Valid values: CCN_SELECTED, CCN_UNSELECTED. Default value: CCN_UNSELECTED.
+     * Set Whether to select CCN: CCN_SELECTED_BEFORE_CREATE (associated before creation), CCN_SELECTED_AFTER_CREATE (associated after creation), or CCN_UNSELECTED (not associated); CCN_UNSELECTED by default
+     * @param SelectedCcnType Whether to select CCN: CCN_SELECTED_BEFORE_CREATE (associated before creation), CCN_SELECTED_AFTER_CREATE (associated after creation), or CCN_UNSELECTED (not associated); CCN_UNSELECTED by default
      */
     public void setSelectedCcnType(String SelectedCcnType) {
         this.SelectedCcnType = SelectedCcnType;
@@ -437,6 +444,22 @@ public class CopyFleetRequest extends AbstractModel{
     }
 
     /**
+     * Get CCN information, including the corresponding CCN account and ID. 
+     * @return CcnInfos CCN information, including the corresponding CCN account and ID.
+     */
+    public CcnInfo [] getCcnInfos() {
+        return this.CcnInfos;
+    }
+
+    /**
+     * Set CCN information, including the corresponding CCN account and ID.
+     * @param CcnInfos CCN information, including the corresponding CCN account and ID.
+     */
+    public void setCcnInfos(CcnInfo [] CcnInfos) {
+        this.CcnInfos = CcnInfos;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -458,6 +481,7 @@ public class CopyFleetRequest extends AbstractModel{
         this.setParamObj(map, prefix + "SystemDiskInfo.", this.SystemDiskInfo);
         this.setParamArrayObj(map, prefix + "DataDiskInfo.", this.DataDiskInfo);
         this.setParamSimple(map, prefix + "SelectedTimerType", this.SelectedTimerType);
+        this.setParamArrayObj(map, prefix + "CcnInfos.", this.CcnInfos);
 
     }
 }

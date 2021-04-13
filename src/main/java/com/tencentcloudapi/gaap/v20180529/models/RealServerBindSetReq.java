@@ -51,6 +51,13 @@ public class RealServerBindSetReq extends AbstractModel{
     private Long RealServerWeight;
 
     /**
+    * Origin server role: master (primary origin server); slave (secondary origin server). This parameter is applicable when the primary/secondary origin server mode is enabled for a TCP listener.
+    */
+    @SerializedName("RealServerFailoverRole")
+    @Expose
+    private String RealServerFailoverRole;
+
+    /**
      * Get Origin server ID 
      * @return RealServerId Origin server ID
      */
@@ -115,6 +122,22 @@ public class RealServerBindSetReq extends AbstractModel{
     }
 
     /**
+     * Get Origin server role: master (primary origin server); slave (secondary origin server). This parameter is applicable when the primary/secondary origin server mode is enabled for a TCP listener. 
+     * @return RealServerFailoverRole Origin server role: master (primary origin server); slave (secondary origin server). This parameter is applicable when the primary/secondary origin server mode is enabled for a TCP listener.
+     */
+    public String getRealServerFailoverRole() {
+        return this.RealServerFailoverRole;
+    }
+
+    /**
+     * Set Origin server role: master (primary origin server); slave (secondary origin server). This parameter is applicable when the primary/secondary origin server mode is enabled for a TCP listener.
+     * @param RealServerFailoverRole Origin server role: master (primary origin server); slave (secondary origin server). This parameter is applicable when the primary/secondary origin server mode is enabled for a TCP listener.
+     */
+    public void setRealServerFailoverRole(String RealServerFailoverRole) {
+        this.RealServerFailoverRole = RealServerFailoverRole;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -122,6 +145,7 @@ public class RealServerBindSetReq extends AbstractModel{
         this.setParamSimple(map, prefix + "RealServerPort", this.RealServerPort);
         this.setParamSimple(map, prefix + "RealServerIP", this.RealServerIP);
         this.setParamSimple(map, prefix + "RealServerWeight", this.RealServerWeight);
+        this.setParamSimple(map, prefix + "RealServerFailoverRole", this.RealServerFailoverRole);
 
     }
 }

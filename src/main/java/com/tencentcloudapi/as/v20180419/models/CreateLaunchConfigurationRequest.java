@@ -172,6 +172,15 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
+    * Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
+<br><li>ORIGINAL: uses the configured cloud disk type
+<br><li>AUTOMATIC: automatically chooses an available cloud disk type
+    */
+    @SerializedName("DiskTypePolicy")
+    @Expose
+    private String DiskTypePolicy;
+
+    /**
      * Get Display name of the launch configuration, which can contain Chinese characters, letters, numbers, underscores, separators ("-"), and decimal points with a maximum length of 60 bytes. 
      * @return LaunchConfigurationName Display name of the launch configuration, which can contain Chinese characters, letters, numbers, underscores, separators ("-"), and decimal points with a maximum length of 60 bytes.
      */
@@ -528,6 +537,30 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
     }
 
     /**
+     * Get Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
+<br><li>ORIGINAL: uses the configured cloud disk type
+<br><li>AUTOMATIC: automatically chooses an available cloud disk type 
+     * @return DiskTypePolicy Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
+<br><li>ORIGINAL: uses the configured cloud disk type
+<br><li>AUTOMATIC: automatically chooses an available cloud disk type
+     */
+    public String getDiskTypePolicy() {
+        return this.DiskTypePolicy;
+    }
+
+    /**
+     * Set Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
+<br><li>ORIGINAL: uses the configured cloud disk type
+<br><li>AUTOMATIC: automatically chooses an available cloud disk type
+     * @param DiskTypePolicy Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
+<br><li>ORIGINAL: uses the configured cloud disk type
+<br><li>AUTOMATIC: automatically chooses an available cloud disk type
+     */
+    public void setDiskTypePolicy(String DiskTypePolicy) {
+        this.DiskTypePolicy = DiskTypePolicy;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -551,6 +584,7 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
         this.setParamObj(map, prefix + "HostNameSettings.", this.HostNameSettings);
         this.setParamObj(map, prefix + "InstanceNameSettings.", this.InstanceNameSettings);
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
+        this.setParamSimple(map, prefix + "DiskTypePolicy", this.DiskTypePolicy);
 
     }
 }

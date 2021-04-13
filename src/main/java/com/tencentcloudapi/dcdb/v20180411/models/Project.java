@@ -30,7 +30,7 @@ public class Project extends AbstractModel{
     private Long ProjectId;
 
     /**
-    * The `uin` of the resource owner (root account)
+    * The UIN of the resource owner (root account)
     */
     @SerializedName("OwnerUin")
     @Expose
@@ -51,7 +51,7 @@ public class Project extends AbstractModel{
     private String Name;
 
     /**
-    * Creator `uin`
+    * Creator UIN
     */
     @SerializedName("CreatorUin")
     @Expose
@@ -65,14 +65,14 @@ public class Project extends AbstractModel{
     private String SrcPlat;
 
     /**
-    * Source `AppId`
+    * Source APPID
     */
     @SerializedName("SrcAppId")
     @Expose
     private Long SrcAppId;
 
     /**
-    * Project status. 0: normal; -1: disabled; 3: default project.
+    * Project status. Valid values: `0` (normal), `-1` (disabled), `3` (default project).
     */
     @SerializedName("Status")
     @Expose
@@ -86,7 +86,7 @@ public class Project extends AbstractModel{
     private String CreateTime;
 
     /**
-    * Whether it is the default project. 1: yes; 0: no.
+    * Whether it is the default project. Valid values: `1` (yes), `0` (no).
     */
     @SerializedName("IsDefault")
     @Expose
@@ -116,16 +116,16 @@ public class Project extends AbstractModel{
     }
 
     /**
-     * Get The `uin` of the resource owner (root account) 
-     * @return OwnerUin The `uin` of the resource owner (root account)
+     * Get The UIN of the resource owner (root account) 
+     * @return OwnerUin The UIN of the resource owner (root account)
      */
     public Long getOwnerUin() {
         return this.OwnerUin;
     }
 
     /**
-     * Set The `uin` of the resource owner (root account)
-     * @param OwnerUin The `uin` of the resource owner (root account)
+     * Set The UIN of the resource owner (root account)
+     * @param OwnerUin The UIN of the resource owner (root account)
      */
     public void setOwnerUin(Long OwnerUin) {
         this.OwnerUin = OwnerUin;
@@ -164,16 +164,16 @@ public class Project extends AbstractModel{
     }
 
     /**
-     * Get Creator `uin` 
-     * @return CreatorUin Creator `uin`
+     * Get Creator UIN 
+     * @return CreatorUin Creator UIN
      */
     public Long getCreatorUin() {
         return this.CreatorUin;
     }
 
     /**
-     * Set Creator `uin`
-     * @param CreatorUin Creator `uin`
+     * Set Creator UIN
+     * @param CreatorUin Creator UIN
      */
     public void setCreatorUin(Long CreatorUin) {
         this.CreatorUin = CreatorUin;
@@ -196,32 +196,32 @@ public class Project extends AbstractModel{
     }
 
     /**
-     * Get Source `AppId` 
-     * @return SrcAppId Source `AppId`
+     * Get Source APPID 
+     * @return SrcAppId Source APPID
      */
     public Long getSrcAppId() {
         return this.SrcAppId;
     }
 
     /**
-     * Set Source `AppId`
-     * @param SrcAppId Source `AppId`
+     * Set Source APPID
+     * @param SrcAppId Source APPID
      */
     public void setSrcAppId(Long SrcAppId) {
         this.SrcAppId = SrcAppId;
     }
 
     /**
-     * Get Project status. 0: normal; -1: disabled; 3: default project. 
-     * @return Status Project status. 0: normal; -1: disabled; 3: default project.
+     * Get Project status. Valid values: `0` (normal), `-1` (disabled), `3` (default project). 
+     * @return Status Project status. Valid values: `0` (normal), `-1` (disabled), `3` (default project).
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Project status. 0: normal; -1: disabled; 3: default project.
-     * @param Status Project status. 0: normal; -1: disabled; 3: default project.
+     * Set Project status. Valid values: `0` (normal), `-1` (disabled), `3` (default project).
+     * @param Status Project status. Valid values: `0` (normal), `-1` (disabled), `3` (default project).
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -244,16 +244,16 @@ public class Project extends AbstractModel{
     }
 
     /**
-     * Get Whether it is the default project. 1: yes; 0: no. 
-     * @return IsDefault Whether it is the default project. 1: yes; 0: no.
+     * Get Whether it is the default project. Valid values: `1` (yes), `0` (no). 
+     * @return IsDefault Whether it is the default project. Valid values: `1` (yes), `0` (no).
      */
     public Long getIsDefault() {
         return this.IsDefault;
     }
 
     /**
-     * Set Whether it is the default project. 1: yes; 0: no.
-     * @param IsDefault Whether it is the default project. 1: yes; 0: no.
+     * Set Whether it is the default project. Valid values: `1` (yes), `0` (no).
+     * @param IsDefault Whether it is the default project. Valid values: `1` (yes), `0` (no).
      */
     public void setIsDefault(Long IsDefault) {
         this.IsDefault = IsDefault;

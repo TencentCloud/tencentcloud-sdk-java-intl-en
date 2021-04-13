@@ -112,6 +112,29 @@ To modify it or even its subfield, you should specify all the subfields again.
     private InstanceMarketOptionsRequest InstanceMarketOptions;
 
     /**
+    * Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
+<br><li>ORIGINAL: uses the configured cloud disk type
+<br><li>AUTOMATIC: automatically chooses an available cloud disk type
+    */
+    @SerializedName("DiskTypePolicy")
+    @Expose
+    private String DiskTypePolicy;
+
+    /**
+    * 
+    */
+    @SerializedName("SystemDisk")
+    @Expose
+    private SystemDisk SystemDisk;
+
+    /**
+    * 
+    */
+    @SerializedName("DataDisks")
+    @Expose
+    private DataDisk [] DataDisks;
+
+    /**
      * Get Launch configuration ID 
      * @return LaunchConfigurationId Launch configuration ID
      */
@@ -336,6 +359,62 @@ To modify it or even its subfield, you should specify all the subfields again.
     }
 
     /**
+     * Get Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
+<br><li>ORIGINAL: uses the configured cloud disk type
+<br><li>AUTOMATIC: automatically chooses an available cloud disk type 
+     * @return DiskTypePolicy Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
+<br><li>ORIGINAL: uses the configured cloud disk type
+<br><li>AUTOMATIC: automatically chooses an available cloud disk type
+     */
+    public String getDiskTypePolicy() {
+        return this.DiskTypePolicy;
+    }
+
+    /**
+     * Set Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
+<br><li>ORIGINAL: uses the configured cloud disk type
+<br><li>AUTOMATIC: automatically chooses an available cloud disk type
+     * @param DiskTypePolicy Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
+<br><li>ORIGINAL: uses the configured cloud disk type
+<br><li>AUTOMATIC: automatically chooses an available cloud disk type
+     */
+    public void setDiskTypePolicy(String DiskTypePolicy) {
+        this.DiskTypePolicy = DiskTypePolicy;
+    }
+
+    /**
+     * Get  
+     * @return SystemDisk 
+     */
+    public SystemDisk getSystemDisk() {
+        return this.SystemDisk;
+    }
+
+    /**
+     * Set 
+     * @param SystemDisk 
+     */
+    public void setSystemDisk(SystemDisk SystemDisk) {
+        this.SystemDisk = SystemDisk;
+    }
+
+    /**
+     * Get  
+     * @return DataDisks 
+     */
+    public DataDisk [] getDataDisks() {
+        return this.DataDisks;
+    }
+
+    /**
+     * Set 
+     * @param DataDisks 
+     */
+    public void setDataDisks(DataDisk [] DataDisks) {
+        this.DataDisks = DataDisks;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -350,6 +429,9 @@ To modify it or even its subfield, you should specify all the subfields again.
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
         this.setParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
+        this.setParamSimple(map, prefix + "DiskTypePolicy", this.DiskTypePolicy);
+        this.setParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
+        this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
 
     }
 }

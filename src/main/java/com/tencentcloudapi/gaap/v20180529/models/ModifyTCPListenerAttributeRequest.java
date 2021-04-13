@@ -79,6 +79,13 @@ public class ModifyTCPListenerAttributeRequest extends AbstractModel{
     private Long HealthCheck;
 
     /**
+    * Whether to enable the primary/secondary origin server mode. Valid values: 1 (enable) and 0 (disable). It cannot be enabled for domain name origin servers.
+    */
+    @SerializedName("FailoverSwitch")
+    @Expose
+    private Long FailoverSwitch;
+
+    /**
      * Get Listener ID 
      * @return ListenerId Listener ID
      */
@@ -207,6 +214,22 @@ public class ModifyTCPListenerAttributeRequest extends AbstractModel{
     }
 
     /**
+     * Get Whether to enable the primary/secondary origin server mode. Valid values: 1 (enable) and 0 (disable). It cannot be enabled for domain name origin servers. 
+     * @return FailoverSwitch Whether to enable the primary/secondary origin server mode. Valid values: 1 (enable) and 0 (disable). It cannot be enabled for domain name origin servers.
+     */
+    public Long getFailoverSwitch() {
+        return this.FailoverSwitch;
+    }
+
+    /**
+     * Set Whether to enable the primary/secondary origin server mode. Valid values: 1 (enable) and 0 (disable). It cannot be enabled for domain name origin servers.
+     * @param FailoverSwitch Whether to enable the primary/secondary origin server mode. Valid values: 1 (enable) and 0 (disable). It cannot be enabled for domain name origin servers.
+     */
+    public void setFailoverSwitch(Long FailoverSwitch) {
+        this.FailoverSwitch = FailoverSwitch;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +241,7 @@ public class ModifyTCPListenerAttributeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DelayLoop", this.DelayLoop);
         this.setParamSimple(map, prefix + "ConnectTimeout", this.ConnectTimeout);
         this.setParamSimple(map, prefix + "HealthCheck", this.HealthCheck);
+        this.setParamSimple(map, prefix + "FailoverSwitch", this.FailoverSwitch);
 
     }
 }
