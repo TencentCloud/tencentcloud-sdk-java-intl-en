@@ -30,6 +30,13 @@ public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
     private SecurityGroup [] Groups;
 
     /**
+    * Number of security group rules
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -53,6 +60,22 @@ public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
     }
 
     /**
+     * Get Number of security group rules 
+     * @return TotalCount Number of security group rules
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set Number of security group rules
+     * @param TotalCount Number of security group rules
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -73,6 +96,7 @@ public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Groups.", this.Groups);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

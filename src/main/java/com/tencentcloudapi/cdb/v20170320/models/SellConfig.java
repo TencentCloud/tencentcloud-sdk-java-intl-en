@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class SellConfig extends AbstractModel{
 
     /**
-    * Device type
+    * (Disused) Device type
     */
     @SerializedName("Device")
     @Expose
     private String Device;
 
     /**
-    * Purchasable specification description
+    * (Disused) Purchasable specification description 
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Instance type
+    * (Disused) Instance type 
     */
     @SerializedName("CdbType")
     @Expose
@@ -107,62 +107,78 @@ public class SellConfig extends AbstractModel{
     private String Info;
 
     /**
-    * Status value
+    * Status. Value `0` indicates that this specification is purchasable.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Tag value
+    * (Disused) Tag value
     */
     @SerializedName("Tag")
     @Expose
     private Long Tag;
 
     /**
-     * Get Device type 
-     * @return Device Device type
+    * Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DeviceType")
+    @Expose
+    private String DeviceType;
+
+    /**
+    * Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DeviceTypeName")
+    @Expose
+    private String DeviceTypeName;
+
+    /**
+     * Get (Disused) Device type 
+     * @return Device (Disused) Device type
      */
     public String getDevice() {
         return this.Device;
     }
 
     /**
-     * Set Device type
-     * @param Device Device type
+     * Set (Disused) Device type
+     * @param Device (Disused) Device type
      */
     public void setDevice(String Device) {
         this.Device = Device;
     }
 
     /**
-     * Get Purchasable specification description 
-     * @return Type Purchasable specification description
+     * Get (Disused) Purchasable specification description  
+     * @return Type (Disused) Purchasable specification description 
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Purchasable specification description
-     * @param Type Purchasable specification description
+     * Set (Disused) Purchasable specification description 
+     * @param Type (Disused) Purchasable specification description 
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Instance type 
-     * @return CdbType Instance type
+     * Get (Disused) Instance type  
+     * @return CdbType (Disused) Instance type 
      */
     public String getCdbType() {
         return this.CdbType;
     }
 
     /**
-     * Set Instance type
-     * @param CdbType Instance type
+     * Set (Disused) Instance type 
+     * @param CdbType (Disused) Instance type 
      */
     public void setCdbType(String CdbType) {
         this.CdbType = CdbType;
@@ -313,35 +329,75 @@ public class SellConfig extends AbstractModel{
     }
 
     /**
-     * Get Status value 
-     * @return Status Status value
+     * Get Status. Value `0` indicates that this specification is purchasable. 
+     * @return Status Status. Value `0` indicates that this specification is purchasable.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status value
-     * @param Status Status value
+     * Set Status. Value `0` indicates that this specification is purchasable.
+     * @param Status Status. Value `0` indicates that this specification is purchasable.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Tag value 
-     * @return Tag Tag value
+     * Get (Disused) Tag value 
+     * @return Tag (Disused) Tag value
      */
     public Long getTag() {
         return this.Tag;
     }
 
     /**
-     * Set Tag value
-     * @param Tag Tag value
+     * Set (Disused) Tag value
+     * @param Tag (Disused) Tag value
      */
     public void setTag(Long Tag) {
         this.Tag = Tag;
+    }
+
+    /**
+     * Get Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
+Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
+     * @return DeviceType Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public String getDeviceType() {
+        return this.DeviceType;
+    }
+
+    /**
+     * Set Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param DeviceType Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public void setDeviceType(String DeviceType) {
+        this.DeviceType = DeviceType;
+    }
+
+    /**
+     * Get Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
+Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
+     * @return DeviceTypeName Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public String getDeviceTypeName() {
+        return this.DeviceTypeName;
+    }
+
+    /**
+     * Set Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param DeviceTypeName Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public void setDeviceTypeName(String DeviceTypeName) {
+        this.DeviceTypeName = DeviceTypeName;
     }
 
     /**
@@ -362,6 +418,8 @@ public class SellConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "Info", this.Info);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Tag", this.Tag);
+        this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
+        this.setParamSimple(map, prefix + "DeviceTypeName", this.DeviceTypeName);
 
     }
 }

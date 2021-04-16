@@ -37,7 +37,7 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel{
     private String Name;
 
     /**
-    * Parameter template description
+    * Database engine version specified in the parameter template
     */
     @SerializedName("EngineVersion")
     @Expose
@@ -56,6 +56,13 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel{
     @SerializedName("Items")
     @Expose
     private ParameterDetail [] Items;
+
+    /**
+    * Parameter template description
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -97,16 +104,16 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel{
     }
 
     /**
-     * Get Parameter template description 
-     * @return EngineVersion Parameter template description
+     * Get Database engine version specified in the parameter template 
+     * @return EngineVersion Database engine version specified in the parameter template
      */
     public String getEngineVersion() {
         return this.EngineVersion;
     }
 
     /**
-     * Set Parameter template description
-     * @param EngineVersion Parameter template description
+     * Set Database engine version specified in the parameter template
+     * @param EngineVersion Database engine version specified in the parameter template
      */
     public void setEngineVersion(String EngineVersion) {
         this.EngineVersion = EngineVersion;
@@ -145,6 +152,22 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel{
     }
 
     /**
+     * Get Parameter template description 
+     * @return Description Parameter template description
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set Parameter template description
+     * @param Description Parameter template description
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -169,6 +192,7 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "Items.", this.Items);
+        this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -44,18 +44,27 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel{
     private String Zone;
 
     /**
-    * Configuration information of the secondary database.
+    * Configurations of the replica node
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
     */
     @SerializedName("SlaveConfig")
     @Expose
     private SlaveConfig SlaveConfig;
 
     /**
-    * Configuration information of secondary database 2 of a strong sync instance.
+    * Configurations of the second replica node of a strong-sync instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
     */
     @SerializedName("BackupConfig")
     @Expose
     private BackupConfig BackupConfig;
+
+    /**
+    * This parameter is only available for multi-AZ instances. It indicates whether the source AZ is the same as the one specified upon purchase. `true`: not the same, `false`: the same.
+    */
+    @SerializedName("Switched")
+    @Expose
+    private Boolean Switched;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -113,35 +122,59 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel{
     }
 
     /**
-     * Get Configuration information of the secondary database. 
-     * @return SlaveConfig Configuration information of the secondary database.
+     * Get Configurations of the replica node
+Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
+     * @return SlaveConfig Configurations of the replica node
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     public SlaveConfig getSlaveConfig() {
         return this.SlaveConfig;
     }
 
     /**
-     * Set Configuration information of the secondary database.
-     * @param SlaveConfig Configuration information of the secondary database.
+     * Set Configurations of the replica node
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param SlaveConfig Configurations of the replica node
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     public void setSlaveConfig(SlaveConfig SlaveConfig) {
         this.SlaveConfig = SlaveConfig;
     }
 
     /**
-     * Get Configuration information of secondary database 2 of a strong sync instance. 
-     * @return BackupConfig Configuration information of secondary database 2 of a strong sync instance.
+     * Get Configurations of the second replica node of a strong-sync instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
+     * @return BackupConfig Configurations of the second replica node of a strong-sync instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     public BackupConfig getBackupConfig() {
         return this.BackupConfig;
     }
 
     /**
-     * Set Configuration information of secondary database 2 of a strong sync instance.
-     * @param BackupConfig Configuration information of secondary database 2 of a strong sync instance.
+     * Set Configurations of the second replica node of a strong-sync instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param BackupConfig Configurations of the second replica node of a strong-sync instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     public void setBackupConfig(BackupConfig BackupConfig) {
         this.BackupConfig = BackupConfig;
+    }
+
+    /**
+     * Get This parameter is only available for multi-AZ instances. It indicates whether the source AZ is the same as the one specified upon purchase. `true`: not the same, `false`: the same. 
+     * @return Switched This parameter is only available for multi-AZ instances. It indicates whether the source AZ is the same as the one specified upon purchase. `true`: not the same, `false`: the same.
+     */
+    public Boolean getSwitched() {
+        return this.Switched;
+    }
+
+    /**
+     * Set This parameter is only available for multi-AZ instances. It indicates whether the source AZ is the same as the one specified upon purchase. `true`: not the same, `false`: the same.
+     * @param Switched This parameter is only available for multi-AZ instances. It indicates whether the source AZ is the same as the one specified upon purchase. `true`: not the same, `false`: the same.
+     */
+    public void setSwitched(Boolean Switched) {
+        this.Switched = Switched;
     }
 
     /**
@@ -169,6 +202,7 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamObj(map, prefix + "SlaveConfig.", this.SlaveConfig);
         this.setParamObj(map, prefix + "BackupConfig.", this.BackupConfig);
+        this.setParamSimple(map, prefix + "Switched", this.Switched);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

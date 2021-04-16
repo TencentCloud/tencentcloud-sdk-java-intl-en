@@ -318,8 +318,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long ZoneId;
 
     /**
-    * The number of nodes
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Number of nodes
     */
     @SerializedName("InstanceNodes")
     @Expose
@@ -1014,20 +1013,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The number of nodes
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return InstanceNodes The number of nodes
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Number of nodes 
+     * @return InstanceNodes Number of nodes
      */
     public Long getInstanceNodes() {
         return this.InstanceNodes;
     }
 
     /**
-     * Set The number of nodes
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param InstanceNodes The number of nodes
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Number of nodes
+     * @param InstanceNodes Number of nodes
      */
     public void setInstanceNodes(Long InstanceNodes) {
         this.InstanceNodes = InstanceNodes;

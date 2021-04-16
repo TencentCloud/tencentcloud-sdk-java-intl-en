@@ -161,6 +161,20 @@ public class ScaleOutInstanceRequest extends AbstractModel{
     private String YarnNodeLabel;
 
     /**
+    * Custom pod permission and parameter
+    */
+    @SerializedName("PodParameter")
+    @Expose
+    private PodParameter PodParameter;
+
+    /**
+    * Number of master nodes to be added
+    */
+    @SerializedName("MasterCount")
+    @Expose
+    private Long MasterCount;
+
+    /**
      * Get Time unit of scale-out. Valid values:
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
 <li>m: month. When `PayMode` is 1, `TimeUnit` can only be `m`.</li> 
@@ -485,6 +499,38 @@ public class ScaleOutInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get Custom pod permission and parameter 
+     * @return PodParameter Custom pod permission and parameter
+     */
+    public PodParameter getPodParameter() {
+        return this.PodParameter;
+    }
+
+    /**
+     * Set Custom pod permission and parameter
+     * @param PodParameter Custom pod permission and parameter
+     */
+    public void setPodParameter(PodParameter PodParameter) {
+        this.PodParameter = PodParameter;
+    }
+
+    /**
+     * Get Number of master nodes to be added 
+     * @return MasterCount Number of master nodes to be added
+     */
+    public Long getMasterCount() {
+        return this.MasterCount;
+    }
+
+    /**
+     * Set Number of master nodes to be added
+     * @param MasterCount Number of master nodes to be added
+     */
+    public void setMasterCount(Long MasterCount) {
+        this.MasterCount = MasterCount;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -507,6 +553,8 @@ public class ScaleOutInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ClickHouseClusterName", this.ClickHouseClusterName);
         this.setParamSimple(map, prefix + "ClickHouseClusterType", this.ClickHouseClusterType);
         this.setParamSimple(map, prefix + "YarnNodeLabel", this.YarnNodeLabel);
+        this.setParamObj(map, prefix + "PodParameter.", this.PodParameter);
+        this.setParamSimple(map, prefix + "MasterCount", this.MasterCount);
 
     }
 }

@@ -79,6 +79,21 @@ public class PodSpec extends AbstractModel{
     private PodVolume [] PodVolumes;
 
     /**
+    * Whether floating specification is used. `1`: yes; `0`: no
+    */
+    @SerializedName("IsDynamicSpec")
+    @Expose
+    private Long IsDynamicSpec;
+
+    /**
+    * Floating specification
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DynamicPodSpec")
+    @Expose
+    private DynamicPodSpec DynamicPodSpec;
+
+    /**
      * Get Identifier of external resource provider, such as "cls-a1cd23fa". 
      * @return ResourceProviderIdentifier Identifier of external resource provider, such as "cls-a1cd23fa".
      */
@@ -207,6 +222,42 @@ public class PodSpec extends AbstractModel{
     }
 
     /**
+     * Get Whether floating specification is used. `1`: yes; `0`: no 
+     * @return IsDynamicSpec Whether floating specification is used. `1`: yes; `0`: no
+     */
+    public Long getIsDynamicSpec() {
+        return this.IsDynamicSpec;
+    }
+
+    /**
+     * Set Whether floating specification is used. `1`: yes; `0`: no
+     * @param IsDynamicSpec Whether floating specification is used. `1`: yes; `0`: no
+     */
+    public void setIsDynamicSpec(Long IsDynamicSpec) {
+        this.IsDynamicSpec = IsDynamicSpec;
+    }
+
+    /**
+     * Get Floating specification
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return DynamicPodSpec Floating specification
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public DynamicPodSpec getDynamicPodSpec() {
+        return this.DynamicPodSpec;
+    }
+
+    /**
+     * Set Floating specification
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param DynamicPodSpec Floating specification
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setDynamicPodSpec(DynamicPodSpec DynamicPodSpec) {
+        this.DynamicPodSpec = DynamicPodSpec;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -218,6 +269,8 @@ public class PodSpec extends AbstractModel{
         this.setParamArraySimple(map, prefix + "DataVolumes.", this.DataVolumes);
         this.setParamSimple(map, prefix + "CpuType", this.CpuType);
         this.setParamArrayObj(map, prefix + "PodVolumes.", this.PodVolumes);
+        this.setParamSimple(map, prefix + "IsDynamicSpec", this.IsDynamicSpec);
+        this.setParamObj(map, prefix + "DynamicPodSpec.", this.DynamicPodSpec);
 
     }
 }

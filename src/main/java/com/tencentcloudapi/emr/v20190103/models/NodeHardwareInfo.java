@@ -319,6 +319,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String HardwareResourceType;
 
     /**
+    * Whether floating specification is used. `1`: yes; `0`: no
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IsDynamicSpec")
+    @Expose
+    private Long IsDynamicSpec;
+
+    /**
+    * Floating specification in JSON string
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DynamicPodSpec")
+    @Expose
+    private String DynamicPodSpec;
+
+    /**
      * Get User `APPID`
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return AppId User `APPID`
@@ -1059,6 +1075,46 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Whether floating specification is used. `1`: yes; `0`: no
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return IsDynamicSpec Whether floating specification is used. `1`: yes; `0`: no
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getIsDynamicSpec() {
+        return this.IsDynamicSpec;
+    }
+
+    /**
+     * Set Whether floating specification is used. `1`: yes; `0`: no
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param IsDynamicSpec Whether floating specification is used. `1`: yes; `0`: no
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setIsDynamicSpec(Long IsDynamicSpec) {
+        this.IsDynamicSpec = IsDynamicSpec;
+    }
+
+    /**
+     * Get Floating specification in JSON string
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return DynamicPodSpec Floating specification in JSON string
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getDynamicPodSpec() {
+        return this.DynamicPodSpec;
+    }
+
+    /**
+     * Set Floating specification in JSON string
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param DynamicPodSpec Floating specification in JSON string
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setDynamicPodSpec(String DynamicPodSpec) {
+        this.DynamicPodSpec = DynamicPodSpec;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1099,6 +1155,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "AutoFlag", this.AutoFlag);
         this.setParamSimple(map, prefix + "HardwareResourceType", this.HardwareResourceType);
+        this.setParamSimple(map, prefix + "IsDynamicSpec", this.IsDynamicSpec);
+        this.setParamSimple(map, prefix + "DynamicPodSpec", this.DynamicPodSpec);
 
     }
 }

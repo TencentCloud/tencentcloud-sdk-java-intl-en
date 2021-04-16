@@ -37,7 +37,7 @@ public class CreateRoInstanceIpRequest extends AbstractModel{
     private String UniqSubnetId;
 
     /**
-    * VPC descriptor, such as "vpc-xxx". If this field is passed in, `UniqSubnetId` will be required.
+    * VPC descriptor, such as "vpc-a23yt67j". If this field is passed in, `UniqSubnetId` will be required.
     */
     @SerializedName("UniqVpcId")
     @Expose
@@ -76,16 +76,16 @@ public class CreateRoInstanceIpRequest extends AbstractModel{
     }
 
     /**
-     * Get VPC descriptor, such as "vpc-xxx". If this field is passed in, `UniqSubnetId` will be required. 
-     * @return UniqVpcId VPC descriptor, such as "vpc-xxx". If this field is passed in, `UniqSubnetId` will be required.
+     * Get VPC descriptor, such as "vpc-a23yt67j". If this field is passed in, `UniqSubnetId` will be required. 
+     * @return UniqVpcId VPC descriptor, such as "vpc-a23yt67j". If this field is passed in, `UniqSubnetId` will be required.
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set VPC descriptor, such as "vpc-xxx". If this field is passed in, `UniqSubnetId` will be required.
-     * @param UniqVpcId VPC descriptor, such as "vpc-xxx". If this field is passed in, `UniqSubnetId` will be required.
+     * Set VPC descriptor, such as "vpc-a23yt67j". If this field is passed in, `UniqSubnetId` will be required.
+     * @param UniqVpcId VPC descriptor, such as "vpc-a23yt67j". If this field is passed in, `UniqSubnetId` will be required.
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;

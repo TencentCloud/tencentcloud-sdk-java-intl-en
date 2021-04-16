@@ -93,7 +93,7 @@ public class CreateCloneInstanceRequest extends AbstractModel{
     private TagInfo [] ResourceTags;
 
     /**
-    * CPU core quantity of the cloned instance, which is equal to or larger than that of the original instance
+    * The number of CPU cores of the cloned instance. It should be equal to (by default) or larger than that of the original instance.
     */
     @SerializedName("Cpu")
     @Expose
@@ -303,16 +303,16 @@ which is left empty by default. Specify this parameter when cloning a strong syn
     }
 
     /**
-     * Get CPU core quantity of the cloned instance, which is equal to or larger than that of the original instance 
-     * @return Cpu CPU core quantity of the cloned instance, which is equal to or larger than that of the original instance
+     * Get The number of CPU cores of the cloned instance. It should be equal to (by default) or larger than that of the original instance. 
+     * @return Cpu The number of CPU cores of the cloned instance. It should be equal to (by default) or larger than that of the original instance.
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set CPU core quantity of the cloned instance, which is equal to or larger than that of the original instance
-     * @param Cpu CPU core quantity of the cloned instance, which is equal to or larger than that of the original instance
+     * Set The number of CPU cores of the cloned instance. It should be equal to (by default) or larger than that of the original instance.
+     * @param Cpu The number of CPU cores of the cloned instance. It should be equal to (by default) or larger than that of the original instance.
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;

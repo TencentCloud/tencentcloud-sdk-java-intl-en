@@ -37,6 +37,13 @@ public class DescribeDatabasesResponse extends AbstractModel{
     private String [] Items;
 
     /**
+    * Database name and character set
+    */
+    @SerializedName("DatabaseList")
+    @Expose
+    private DatabasesWithCharacterLists [] DatabaseList;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -76,6 +83,22 @@ public class DescribeDatabasesResponse extends AbstractModel{
     }
 
     /**
+     * Get Database name and character set 
+     * @return DatabaseList Database name and character set
+     */
+    public DatabasesWithCharacterLists [] getDatabaseList() {
+        return this.DatabaseList;
+    }
+
+    /**
+     * Set Database name and character set
+     * @param DatabaseList Database name and character set
+     */
+    public void setDatabaseList(DatabasesWithCharacterLists [] DatabaseList) {
+        this.DatabaseList = DatabaseList;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -97,6 +120,7 @@ public class DescribeDatabasesResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArraySimple(map, prefix + "Items.", this.Items);
+        this.setParamArrayObj(map, prefix + "DatabaseList.", this.DatabaseList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

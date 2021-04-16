@@ -156,6 +156,13 @@ public class PushQualityData extends AbstractModel{
     private Long MateFps;
 
     /**
+    * Push parameter
+    */
+    @SerializedName("StreamParam")
+    @Expose
+    private String StreamParam;
+
+    /**
      * Get Data time in the format of `%Y-%m-%d %H:%M:%S.%ms` and accurate down to the millisecond level. 
      * @return Time Data time in the format of `%Y-%m-%d %H:%M:%S.%ms` and accurate down to the millisecond level.
      */
@@ -460,6 +467,22 @@ public class PushQualityData extends AbstractModel{
     }
 
     /**
+     * Get Push parameter 
+     * @return StreamParam Push parameter
+     */
+    public String getStreamParam() {
+        return this.StreamParam;
+    }
+
+    /**
+     * Set Push parameter
+     * @param StreamParam Push parameter
+     */
+    public void setStreamParam(String StreamParam) {
+        this.StreamParam = StreamParam;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -482,6 +505,7 @@ public class PushQualityData extends AbstractModel{
         this.setParamSimple(map, prefix + "MetaVideoRate", this.MetaVideoRate);
         this.setParamSimple(map, prefix + "MetaAudioRate", this.MetaAudioRate);
         this.setParamSimple(map, prefix + "MateFps", this.MateFps);
+        this.setParamSimple(map, prefix + "StreamParam", this.StreamParam);
 
     }
 }

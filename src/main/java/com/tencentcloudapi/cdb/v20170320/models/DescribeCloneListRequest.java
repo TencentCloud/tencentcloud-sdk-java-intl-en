@@ -30,14 +30,14 @@ public class DescribeCloneListRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Paginated query offset
+    * Paginated query offset. Default value: `0`.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * The number of results per page in paginated queries
+    * Number of results per page. Default value: `20`.
     */
     @SerializedName("Limit")
     @Expose
@@ -60,32 +60,32 @@ public class DescribeCloneListRequest extends AbstractModel{
     }
 
     /**
-     * Get Paginated query offset 
-     * @return Offset Paginated query offset
+     * Get Paginated query offset. Default value: `0`. 
+     * @return Offset Paginated query offset. Default value: `0`.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Paginated query offset
-     * @param Offset Paginated query offset
+     * Set Paginated query offset. Default value: `0`.
+     * @param Offset Paginated query offset. Default value: `0`.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get The number of results per page in paginated queries 
-     * @return Limit The number of results per page in paginated queries
+     * Get Number of results per page. Default value: `20`. 
+     * @return Limit Number of results per page. Default value: `20`.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The number of results per page in paginated queries
-     * @param Limit The number of results per page in paginated queries
+     * Set Number of results per page. Default value: `20`.
+     * @param Limit Number of results per page. Default value: `20`.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
