@@ -121,14 +121,14 @@ To modify it or even its subfield, you should specify all the subfields again.
     private String DiskTypePolicy;
 
     /**
-    * 
+    * Instance system disk configurations
     */
     @SerializedName("SystemDisk")
     @Expose
     private SystemDisk SystemDisk;
 
     /**
-    * 
+    * Instance data disk configurations. Up to 11 data disks can be specified and will be collectively modified. Please provide all the new values for the modification.
     */
     @SerializedName("DataDisks")
     @Expose
@@ -383,32 +383,32 @@ To modify it or even its subfield, you should specify all the subfields again.
     }
 
     /**
-     * Get  
-     * @return SystemDisk 
+     * Get Instance system disk configurations 
+     * @return SystemDisk Instance system disk configurations
      */
     public SystemDisk getSystemDisk() {
         return this.SystemDisk;
     }
 
     /**
-     * Set 
-     * @param SystemDisk 
+     * Set Instance system disk configurations
+     * @param SystemDisk Instance system disk configurations
      */
     public void setSystemDisk(SystemDisk SystemDisk) {
         this.SystemDisk = SystemDisk;
     }
 
     /**
-     * Get  
-     * @return DataDisks 
+     * Get Instance data disk configurations. Up to 11 data disks can be specified and will be collectively modified. Please provide all the new values for the modification. 
+     * @return DataDisks Instance data disk configurations. Up to 11 data disks can be specified and will be collectively modified. Please provide all the new values for the modification.
      */
     public DataDisk [] getDataDisks() {
         return this.DataDisks;
     }
 
     /**
-     * Set 
-     * @param DataDisks 
+     * Set Instance data disk configurations. Up to 11 data disks can be specified and will be collectively modified. Please provide all the new values for the modification.
+     * @param DataDisks Instance data disk configurations. Up to 11 data disks can be specified and will be collectively modified. Please provide all the new values for the modification.
      */
     public void setDataDisks(DataDisk [] DataDisks) {
         this.DataDisks = DataDisks;

@@ -58,28 +58,39 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
     private String [] MonitorTypes;
 
     /**
-    * Filter by namespace
+    * Filter by namespace. For the values of different policy types, please see:
+[Policy Type List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
     */
     @SerializedName("Namespaces")
     @Expose
     private String [] Namespaces;
 
     /**
-    * Alarm object list
+    * Alarm object list. The outer array corresponds to multiple instances.
+Each inner array corresponds to one instance, where `object` corresponds to the dimension information of the instance. The format is as follows:
+[
+	[{"name":"unInstanceId","value":"ins-qr888845g"}],
+	[{"name":"unInstanceId","value":"ins-qr8d555g"}]
+	...
+]
+For the samples for different Tencent Cloud services, please see:
+[Dimension List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
     */
     @SerializedName("Dimensions")
     @Expose
     private String Dimensions;
 
     /**
-    * Search by recipient
+    * Search by recipient `uid`, which should be queried by calling the CAM API. For more information, please see:
+[ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1)
     */
     @SerializedName("ReceiverUids")
     @Expose
     private Long [] ReceiverUids;
 
     /**
-    * Search by recipient group
+    * Search by recipient group `uid`, which should be queried by calling the CAM API. For more information, please see:
+[ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1)
     */
     @SerializedName("ReceiverGroups")
     @Expose
@@ -93,7 +104,7 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
     private String [] PolicyType;
 
     /**
-    * Sort by field
+    * Sort by field. For example, to sort by the last modification time, use Field: "UpdateTime".
     */
     @SerializedName("Field")
     @Expose
@@ -107,14 +118,16 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
     private String Order;
 
     /**
-    * Project ID array
+    * ID array of the policy project, which can be viewed on the following page:
+[Project Management](https://console.cloud.tencent.com/project)
     */
     @SerializedName("ProjectIds")
     @Expose
     private Long [] ProjectIds;
 
     /**
-    * Alarm notification ID list
+    * ID list of the notification template, which can be obtained by querying the notification template list.
+[DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1)
     */
     @SerializedName("NoticeIds")
     @Expose
@@ -128,14 +141,14 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
     private String [] RuleTypes;
 
     /**
-    * Status. Valid values: 1 (enabled), 0 (disabled)
+    * Filter by alarm status. Valid values: [1]: enabled; [0]: disabled; [0, 1]: all
     */
     @SerializedName("Enable")
     @Expose
     private Long [] Enable;
 
     /**
-    * Indicates whether the notification rule is configured. 1: not configured; 0: configured
+    * If `1` is passed in, alarm policies with no notification rules configured are queried. If it is left empty or other values are passed in, all alarm policies are queried.
     */
     @SerializedName("NotBindingNoticeRule")
     @Expose
@@ -222,64 +235,108 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
     }
 
     /**
-     * Get Filter by namespace 
-     * @return Namespaces Filter by namespace
+     * Get Filter by namespace. For the values of different policy types, please see:
+[Policy Type List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1) 
+     * @return Namespaces Filter by namespace. For the values of different policy types, please see:
+[Policy Type List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
      */
     public String [] getNamespaces() {
         return this.Namespaces;
     }
 
     /**
-     * Set Filter by namespace
-     * @param Namespaces Filter by namespace
+     * Set Filter by namespace. For the values of different policy types, please see:
+[Policy Type List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
+     * @param Namespaces Filter by namespace. For the values of different policy types, please see:
+[Policy Type List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
      */
     public void setNamespaces(String [] Namespaces) {
         this.Namespaces = Namespaces;
     }
 
     /**
-     * Get Alarm object list 
-     * @return Dimensions Alarm object list
+     * Get Alarm object list. The outer array corresponds to multiple instances.
+Each inner array corresponds to one instance, where `object` corresponds to the dimension information of the instance. The format is as follows:
+[
+	[{"name":"unInstanceId","value":"ins-qr888845g"}],
+	[{"name":"unInstanceId","value":"ins-qr8d555g"}]
+	...
+]
+For the samples for different Tencent Cloud services, please see:
+[Dimension List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1) 
+     * @return Dimensions Alarm object list. The outer array corresponds to multiple instances.
+Each inner array corresponds to one instance, where `object` corresponds to the dimension information of the instance. The format is as follows:
+[
+	[{"name":"unInstanceId","value":"ins-qr888845g"}],
+	[{"name":"unInstanceId","value":"ins-qr8d555g"}]
+	...
+]
+For the samples for different Tencent Cloud services, please see:
+[Dimension List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
      */
     public String getDimensions() {
         return this.Dimensions;
     }
 
     /**
-     * Set Alarm object list
-     * @param Dimensions Alarm object list
+     * Set Alarm object list. The outer array corresponds to multiple instances.
+Each inner array corresponds to one instance, where `object` corresponds to the dimension information of the instance. The format is as follows:
+[
+	[{"name":"unInstanceId","value":"ins-qr888845g"}],
+	[{"name":"unInstanceId","value":"ins-qr8d555g"}]
+	...
+]
+For the samples for different Tencent Cloud services, please see:
+[Dimension List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
+     * @param Dimensions Alarm object list. The outer array corresponds to multiple instances.
+Each inner array corresponds to one instance, where `object` corresponds to the dimension information of the instance. The format is as follows:
+[
+	[{"name":"unInstanceId","value":"ins-qr888845g"}],
+	[{"name":"unInstanceId","value":"ins-qr8d555g"}]
+	...
+]
+For the samples for different Tencent Cloud services, please see:
+[Dimension List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
      */
     public void setDimensions(String Dimensions) {
         this.Dimensions = Dimensions;
     }
 
     /**
-     * Get Search by recipient 
-     * @return ReceiverUids Search by recipient
+     * Get Search by recipient `uid`, which should be queried by calling the CAM API. For more information, please see:
+[ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1) 
+     * @return ReceiverUids Search by recipient `uid`, which should be queried by calling the CAM API. For more information, please see:
+[ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1)
      */
     public Long [] getReceiverUids() {
         return this.ReceiverUids;
     }
 
     /**
-     * Set Search by recipient
-     * @param ReceiverUids Search by recipient
+     * Set Search by recipient `uid`, which should be queried by calling the CAM API. For more information, please see:
+[ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1)
+     * @param ReceiverUids Search by recipient `uid`, which should be queried by calling the CAM API. For more information, please see:
+[ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1)
      */
     public void setReceiverUids(Long [] ReceiverUids) {
         this.ReceiverUids = ReceiverUids;
     }
 
     /**
-     * Get Search by recipient group 
-     * @return ReceiverGroups Search by recipient group
+     * Get Search by recipient group `uid`, which should be queried by calling the CAM API. For more information, please see:
+[ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) 
+     * @return ReceiverGroups Search by recipient group `uid`, which should be queried by calling the CAM API. For more information, please see:
+[ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1)
      */
     public Long [] getReceiverGroups() {
         return this.ReceiverGroups;
     }
 
     /**
-     * Set Search by recipient group
-     * @param ReceiverGroups Search by recipient group
+     * Set Search by recipient group `uid`, which should be queried by calling the CAM API. For more information, please see:
+[ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1)
+     * @param ReceiverGroups Search by recipient group `uid`, which should be queried by calling the CAM API. For more information, please see:
+[ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1)
      */
     public void setReceiverGroups(Long [] ReceiverGroups) {
         this.ReceiverGroups = ReceiverGroups;
@@ -302,16 +359,16 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
     }
 
     /**
-     * Get Sort by field 
-     * @return Field Sort by field
+     * Get Sort by field. For example, to sort by the last modification time, use Field: "UpdateTime". 
+     * @return Field Sort by field. For example, to sort by the last modification time, use Field: "UpdateTime".
      */
     public String getField() {
         return this.Field;
     }
 
     /**
-     * Set Sort by field
-     * @param Field Sort by field
+     * Set Sort by field. For example, to sort by the last modification time, use Field: "UpdateTime".
+     * @param Field Sort by field. For example, to sort by the last modification time, use Field: "UpdateTime".
      */
     public void setField(String Field) {
         this.Field = Field;
@@ -334,32 +391,40 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
     }
 
     /**
-     * Get Project ID array 
-     * @return ProjectIds Project ID array
+     * Get ID array of the policy project, which can be viewed on the following page:
+[Project Management](https://console.cloud.tencent.com/project) 
+     * @return ProjectIds ID array of the policy project, which can be viewed on the following page:
+[Project Management](https://console.cloud.tencent.com/project)
      */
     public Long [] getProjectIds() {
         return this.ProjectIds;
     }
 
     /**
-     * Set Project ID array
-     * @param ProjectIds Project ID array
+     * Set ID array of the policy project, which can be viewed on the following page:
+[Project Management](https://console.cloud.tencent.com/project)
+     * @param ProjectIds ID array of the policy project, which can be viewed on the following page:
+[Project Management](https://console.cloud.tencent.com/project)
      */
     public void setProjectIds(Long [] ProjectIds) {
         this.ProjectIds = ProjectIds;
     }
 
     /**
-     * Get Alarm notification ID list 
-     * @return NoticeIds Alarm notification ID list
+     * Get ID list of the notification template, which can be obtained by querying the notification template list.
+[DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1) 
+     * @return NoticeIds ID list of the notification template, which can be obtained by querying the notification template list.
+[DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1)
      */
     public String [] getNoticeIds() {
         return this.NoticeIds;
     }
 
     /**
-     * Set Alarm notification ID list
-     * @param NoticeIds Alarm notification ID list
+     * Set ID list of the notification template, which can be obtained by querying the notification template list.
+[DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1)
+     * @param NoticeIds ID list of the notification template, which can be obtained by querying the notification template list.
+[DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1)
      */
     public void setNoticeIds(String [] NoticeIds) {
         this.NoticeIds = NoticeIds;
@@ -382,32 +447,32 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
     }
 
     /**
-     * Get Status. Valid values: 1 (enabled), 0 (disabled) 
-     * @return Enable Status. Valid values: 1 (enabled), 0 (disabled)
+     * Get Filter by alarm status. Valid values: [1]: enabled; [0]: disabled; [0, 1]: all 
+     * @return Enable Filter by alarm status. Valid values: [1]: enabled; [0]: disabled; [0, 1]: all
      */
     public Long [] getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set Status. Valid values: 1 (enabled), 0 (disabled)
-     * @param Enable Status. Valid values: 1 (enabled), 0 (disabled)
+     * Set Filter by alarm status. Valid values: [1]: enabled; [0]: disabled; [0, 1]: all
+     * @param Enable Filter by alarm status. Valid values: [1]: enabled; [0]: disabled; [0, 1]: all
      */
     public void setEnable(Long [] Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get Indicates whether the notification rule is configured. 1: not configured; 0: configured 
-     * @return NotBindingNoticeRule Indicates whether the notification rule is configured. 1: not configured; 0: configured
+     * Get If `1` is passed in, alarm policies with no notification rules configured are queried. If it is left empty or other values are passed in, all alarm policies are queried. 
+     * @return NotBindingNoticeRule If `1` is passed in, alarm policies with no notification rules configured are queried. If it is left empty or other values are passed in, all alarm policies are queried.
      */
     public Long getNotBindingNoticeRule() {
         return this.NotBindingNoticeRule;
     }
 
     /**
-     * Set Indicates whether the notification rule is configured. 1: not configured; 0: configured
-     * @param NotBindingNoticeRule Indicates whether the notification rule is configured. 1: not configured; 0: configured
+     * Set If `1` is passed in, alarm policies with no notification rules configured are queried. If it is left empty or other values are passed in, all alarm policies are queried.
+     * @param NotBindingNoticeRule If `1` is passed in, alarm policies with no notification rules configured are queried. If it is left empty or other values are passed in, all alarm policies are queried.
      */
     public void setNotBindingNoticeRule(Long NotBindingNoticeRule) {
         this.NotBindingNoticeRule = NotBindingNoticeRule;

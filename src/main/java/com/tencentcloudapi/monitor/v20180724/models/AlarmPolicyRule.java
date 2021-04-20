@@ -23,16 +23,16 @@ import java.util.HashMap;
 public class AlarmPolicyRule extends AbstractModel{
 
     /**
-    * Metric name
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Metric name or event name. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1) and the supported events via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
     */
     @SerializedName("MetricName")
     @Expose
     private String MetricName;
 
     /**
-    * Statistical period in seconds
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Statistical period in seconds. The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
     */
     @SerializedName("Period")
     @Expose
@@ -47,33 +47,34 @@ gt = greater than
 le = less than or equal to
 lt = less than
 ne = not equal to
-day_increase = daily increase
-day_decrease = daily decrease
-day_wave = daily fluctuation
-week_increase = weekly increase
-week_decrease = weekly decrease
-week_wave = weekly fluctuation
-cycle_increase = periodical increase
-cycle_decrease = periodical decrease
-cycle_wave = periodical fluctuation
+day_increase = day-on-day increase
+day_decrease = day-on-day decrease
+day_wave = day-on-day fluctuation
+week_increase = week-on-week increase
+week_decrease = week-on-week decrease
+week_wave = week-on-week fluctuation
+cycle_increase = cyclical increase
+cycle_decrease = cyclical decrease
+cycle_wave = cyclical fluctuation
 re = regex match
-Note: this field may return null, indicating that no valid values can be obtained.
+The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-    * Threshold
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Threshold. The valid value range can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-    * Number of cycles for continuous notification. Valid values: 1 (1 cycle), 2 (2 cycles), and so on.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Number of periods. `1`: continue for one period; `2`: continue for two periods; and so on. The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
     */
     @SerializedName("ContinuePeriod")
     @Expose
@@ -120,48 +121,48 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Unit;
 
     /**
-    * Trigger condition type. Valid values: STATIC (static threshold), DYNAMIC (dynamic threshold)
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Trigger condition type. `STATIC`: static threshold; `dynamic`: dynamic threshold. If you do not specify this parameter when creating or editing a policy, `STATIC` is used by default.
+Note: this field may return `null`, indicating that no valid value is obtained.
     */
     @SerializedName("RuleType")
     @Expose
     private String RuleType;
 
     /**
-     * Get Metric name
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MetricName Metric name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Metric name or event name. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1) and the supported events via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return MetricName Metric name or event name. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1) and the supported events via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public String getMetricName() {
         return this.MetricName;
     }
 
     /**
-     * Set Metric name
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MetricName Metric name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Metric name or event name. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1) and the supported events via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param MetricName Metric name or event name. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1) and the supported events via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public void setMetricName(String MetricName) {
         this.MetricName = MetricName;
     }
 
     /**
-     * Get Statistical period in seconds
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Period Statistical period in seconds
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Statistical period in seconds. The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return Period Statistical period in seconds. The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set Statistical period in seconds
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Period Statistical period in seconds
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Statistical period in seconds. The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param Period Statistical period in seconds. The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
@@ -176,17 +177,18 @@ gt = greater than
 le = less than or equal to
 lt = less than
 ne = not equal to
-day_increase = daily increase
-day_decrease = daily decrease
-day_wave = daily fluctuation
-week_increase = weekly increase
-week_decrease = weekly decrease
-week_wave = weekly fluctuation
-cycle_increase = periodical increase
-cycle_decrease = periodical decrease
-cycle_wave = periodical fluctuation
+day_increase = day-on-day increase
+day_decrease = day-on-day decrease
+day_wave = day-on-day fluctuation
+week_increase = week-on-week increase
+week_decrease = week-on-week decrease
+week_wave = week-on-week fluctuation
+cycle_increase = cyclical increase
+cycle_decrease = cyclical decrease
+cycle_wave = cyclical fluctuation
 re = regex match
-Note: this field may return null, indicating that no valid values can be obtained. 
+The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained. 
      * @return Operator Operator
 intelligent = intelligent detection without threshold
 eq = equal to
@@ -195,17 +197,18 @@ gt = greater than
 le = less than or equal to
 lt = less than
 ne = not equal to
-day_increase = daily increase
-day_decrease = daily decrease
-day_wave = daily fluctuation
-week_increase = weekly increase
-week_decrease = weekly decrease
-week_wave = weekly fluctuation
-cycle_increase = periodical increase
-cycle_decrease = periodical decrease
-cycle_wave = periodical fluctuation
+day_increase = day-on-day increase
+day_decrease = day-on-day decrease
+day_wave = day-on-day fluctuation
+week_increase = week-on-week increase
+week_decrease = week-on-week decrease
+week_wave = week-on-week fluctuation
+cycle_increase = cyclical increase
+cycle_decrease = cyclical decrease
+cycle_wave = cyclical fluctuation
 re = regex match
-Note: this field may return null, indicating that no valid values can be obtained.
+The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public String getOperator() {
         return this.Operator;
@@ -220,17 +223,18 @@ gt = greater than
 le = less than or equal to
 lt = less than
 ne = not equal to
-day_increase = daily increase
-day_decrease = daily decrease
-day_wave = daily fluctuation
-week_increase = weekly increase
-week_decrease = weekly decrease
-week_wave = weekly fluctuation
-cycle_increase = periodical increase
-cycle_decrease = periodical decrease
-cycle_wave = periodical fluctuation
+day_increase = day-on-day increase
+day_decrease = day-on-day decrease
+day_wave = day-on-day fluctuation
+week_increase = week-on-week increase
+week_decrease = week-on-week decrease
+week_wave = week-on-week fluctuation
+cycle_increase = cyclical increase
+cycle_decrease = cyclical decrease
+cycle_wave = cyclical fluctuation
 re = regex match
-Note: this field may return null, indicating that no valid values can be obtained.
+The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
      * @param Operator Operator
 intelligent = intelligent detection without threshold
 eq = equal to
@@ -239,57 +243,58 @@ gt = greater than
 le = less than or equal to
 lt = less than
 ne = not equal to
-day_increase = daily increase
-day_decrease = daily decrease
-day_wave = daily fluctuation
-week_increase = weekly increase
-week_decrease = weekly decrease
-week_wave = weekly fluctuation
-cycle_increase = periodical increase
-cycle_decrease = periodical decrease
-cycle_wave = periodical fluctuation
+day_increase = day-on-day increase
+day_decrease = day-on-day decrease
+day_wave = day-on-day fluctuation
+week_increase = week-on-week increase
+week_decrease = week-on-week decrease
+week_wave = week-on-week fluctuation
+cycle_increase = cyclical increase
+cycle_decrease = cyclical decrease
+cycle_wave = cyclical fluctuation
 re = regex match
-Note: this field may return null, indicating that no valid values can be obtained.
+The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get Threshold
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Value Threshold
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Threshold. The valid value range can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return Value Threshold. The valid value range can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set Threshold
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Value Threshold
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Threshold. The valid value range can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param Value Threshold. The valid value range can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get Number of cycles for continuous notification. Valid values: 1 (1 cycle), 2 (2 cycles), and so on.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ContinuePeriod Number of cycles for continuous notification. Valid values: 1 (1 cycle), 2 (2 cycles), and so on.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Number of periods. `1`: continue for one period; `2`: continue for two periods; and so on. The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return ContinuePeriod Number of periods. `1`: continue for one period; `2`: continue for two periods; and so on. The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public Long getContinuePeriod() {
         return this.ContinuePeriod;
     }
 
     /**
-     * Set Number of cycles for continuous notification. Valid values: 1 (1 cycle), 2 (2 cycles), and so on.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ContinuePeriod Number of cycles for continuous notification. Valid values: 1 (1 cycle), 2 (2 cycles), and so on.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Number of periods. `1`: continue for one period; `2`: continue for two periods; and so on. The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param ContinuePeriod Number of periods. `1`: continue for one period; `2`: continue for two periods; and so on. The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public void setContinuePeriod(Long ContinuePeriod) {
         this.ContinuePeriod = ContinuePeriod;
@@ -396,20 +401,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Trigger condition type. Valid values: STATIC (static threshold), DYNAMIC (dynamic threshold)
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RuleType Trigger condition type. Valid values: STATIC (static threshold), DYNAMIC (dynamic threshold)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Trigger condition type. `STATIC`: static threshold; `dynamic`: dynamic threshold. If you do not specify this parameter when creating or editing a policy, `STATIC` is used by default.
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return RuleType Trigger condition type. `STATIC`: static threshold; `dynamic`: dynamic threshold. If you do not specify this parameter when creating or editing a policy, `STATIC` is used by default.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public String getRuleType() {
         return this.RuleType;
     }
 
     /**
-     * Set Trigger condition type. Valid values: STATIC (static threshold), DYNAMIC (dynamic threshold)
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RuleType Trigger condition type. Valid values: STATIC (static threshold), DYNAMIC (dynamic threshold)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Trigger condition type. `STATIC`: static threshold; `dynamic`: dynamic threshold. If you do not specify this parameter when creating or editing a policy, `STATIC` is used by default.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param RuleType Trigger condition type. `STATIC`: static threshold; `dynamic`: dynamic threshold. If you do not specify this parameter when creating or editing a policy, `STATIC` is used by default.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public void setRuleType(String RuleType) {
         this.RuleType = RuleType;

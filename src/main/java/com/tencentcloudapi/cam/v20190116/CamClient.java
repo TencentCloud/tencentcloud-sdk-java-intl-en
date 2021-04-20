@@ -519,6 +519,26 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query sub-users through the sub-user UIN list.
+     * @param req DescribeSubAccountsRequest
+     * @return DescribeSubAccountsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSubAccountsResponse DescribeSubAccounts(DescribeSubAccountsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSubAccountsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSubAccountsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSubAccounts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (DetachGroupPolicy) is used to unassociate a policy and a user group.
      * @param req DetachGroupPolicyRequest
      * @return DetachGroupPolicyResponse

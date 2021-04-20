@@ -379,7 +379,7 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
-     *This API is used to get the details of basic metrics.
+     *This API is used to get the attributes of basic metrics.
      * @param req DescribeBaseMetricsRequest
      * @return DescribeBaseMetricsResponse
      * @throws TencentCloudSDKException
@@ -601,7 +601,7 @@ This API may fail due to the rate limit if you need to call a lot of metrics and
     }
 
     /**
-     *This API is used to edit the trigger condition of an alarm policy.
+     *This API is used to modify the trigger condition of an alarm policy.
      * @param req ModifyAlarmPolicyConditionRequest
      * @return ModifyAlarmPolicyConditionResponse
      * @throws TencentCloudSDKException

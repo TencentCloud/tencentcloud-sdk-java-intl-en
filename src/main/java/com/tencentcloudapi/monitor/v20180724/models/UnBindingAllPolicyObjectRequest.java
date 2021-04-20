@@ -30,14 +30,14 @@ public class UnBindingAllPolicyObjectRequest extends AbstractModel{
     private String Module;
 
     /**
-    * Policy group ID. If `PolicyId` is specified, you can pass any value to this field.
+    * Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., `0`, can be passed in.
     */
     @SerializedName("GroupId")
     @Expose
     private Long GroupId;
 
     /**
-    * Alarm policy ID. If this field is used, you can pass any value to `GroupId`.
+    * Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
     */
     @SerializedName("PolicyId")
     @Expose
@@ -60,32 +60,32 @@ public class UnBindingAllPolicyObjectRequest extends AbstractModel{
     }
 
     /**
-     * Get Policy group ID. If `PolicyId` is specified, you can pass any value to this field. 
-     * @return GroupId Policy group ID. If `PolicyId` is specified, you can pass any value to this field.
+     * Get Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., `0`, can be passed in. 
+     * @return GroupId Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., `0`, can be passed in.
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set Policy group ID. If `PolicyId` is specified, you can pass any value to this field.
-     * @param GroupId Policy group ID. If `PolicyId` is specified, you can pass any value to this field.
+     * Set Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., `0`, can be passed in.
+     * @param GroupId Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., `0`, can be passed in.
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get Alarm policy ID. If this field is used, you can pass any value to `GroupId`. 
-     * @return PolicyId Alarm policy ID. If this field is used, you can pass any value to `GroupId`.
+     * Get Alarm policy ID. If this parameter is used, `GroupId` will be ignored. 
+     * @return PolicyId Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
      */
     public String getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set Alarm policy ID. If this field is used, you can pass any value to `GroupId`.
-     * @param PolicyId Alarm policy ID. If this field is used, you can pass any value to `GroupId`.
+     * Set Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
+     * @param PolicyId Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
      */
     public void setPolicyId(String PolicyId) {
         this.PolicyId = PolicyId;

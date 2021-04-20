@@ -37,6 +37,13 @@ public class ModifyAlarmPolicyConditionRequest extends AbstractModel{
     private String PolicyId;
 
     /**
+    * ID of trigger condition template. This parameter can be left empty.
+    */
+    @SerializedName("ConditionTemplateId")
+    @Expose
+    private Long ConditionTemplateId;
+
+    /**
     * Metric trigger condition
     */
     @SerializedName("Condition")
@@ -83,6 +90,22 @@ public class ModifyAlarmPolicyConditionRequest extends AbstractModel{
     }
 
     /**
+     * Get ID of trigger condition template. This parameter can be left empty. 
+     * @return ConditionTemplateId ID of trigger condition template. This parameter can be left empty.
+     */
+    public Long getConditionTemplateId() {
+        return this.ConditionTemplateId;
+    }
+
+    /**
+     * Set ID of trigger condition template. This parameter can be left empty.
+     * @param ConditionTemplateId ID of trigger condition template. This parameter can be left empty.
+     */
+    public void setConditionTemplateId(Long ConditionTemplateId) {
+        this.ConditionTemplateId = ConditionTemplateId;
+    }
+
+    /**
      * Get Metric trigger condition 
      * @return Condition Metric trigger condition
      */
@@ -120,6 +143,7 @@ public class ModifyAlarmPolicyConditionRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);
         this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
+        this.setParamSimple(map, prefix + "ConditionTemplateId", this.ConditionTemplateId);
         this.setParamObj(map, prefix + "Condition.", this.Condition);
         this.setParamObj(map, prefix + "EventCondition.", this.EventCondition);
 

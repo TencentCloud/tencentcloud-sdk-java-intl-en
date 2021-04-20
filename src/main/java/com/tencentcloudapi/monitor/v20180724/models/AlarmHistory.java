@@ -142,7 +142,7 @@ public class AlarmHistory extends AbstractModel{
     private String [] NoticeWays;
 
     /**
-    * Compatible Alarm 1.0 policy group ID
+    * Alarm policy ID, which can be used when you call APIs ([BindingPolicyObject](https://intl.cloud.tencent.com/document/product/248/40421?from_cn_redirect=1), [UnBindingAllPolicyObject](https://intl.cloud.tencent.com/document/product/248/40568?from_cn_redirect=1), [UnBindingPolicyObject](https://intl.cloud.tencent.com/document/product/248/40567?from_cn_redirect=1)) to bind/unbind instances or instance groups to/from an alarm policy
     */
     @SerializedName("OriginId")
     @Expose
@@ -175,6 +175,14 @@ public class AlarmHistory extends AbstractModel{
     @SerializedName("PolicyExists")
     @Expose
     private Long PolicyExists;
+
+    /**
+    * Metric information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MetricsInfo")
+    @Expose
+    private AlarmHistoryMetric [] MetricsInfo;
 
     /**
      * Get Alarm record ID 
@@ -449,16 +457,16 @@ public class AlarmHistory extends AbstractModel{
     }
 
     /**
-     * Get Compatible Alarm 1.0 policy group ID 
-     * @return OriginId Compatible Alarm 1.0 policy group ID
+     * Get Alarm policy ID, which can be used when you call APIs ([BindingPolicyObject](https://intl.cloud.tencent.com/document/product/248/40421?from_cn_redirect=1), [UnBindingAllPolicyObject](https://intl.cloud.tencent.com/document/product/248/40568?from_cn_redirect=1), [UnBindingPolicyObject](https://intl.cloud.tencent.com/document/product/248/40567?from_cn_redirect=1)) to bind/unbind instances or instance groups to/from an alarm policy 
+     * @return OriginId Alarm policy ID, which can be used when you call APIs ([BindingPolicyObject](https://intl.cloud.tencent.com/document/product/248/40421?from_cn_redirect=1), [UnBindingAllPolicyObject](https://intl.cloud.tencent.com/document/product/248/40568?from_cn_redirect=1), [UnBindingPolicyObject](https://intl.cloud.tencent.com/document/product/248/40567?from_cn_redirect=1)) to bind/unbind instances or instance groups to/from an alarm policy
      */
     public String getOriginId() {
         return this.OriginId;
     }
 
     /**
-     * Set Compatible Alarm 1.0 policy group ID
-     * @param OriginId Compatible Alarm 1.0 policy group ID
+     * Set Alarm policy ID, which can be used when you call APIs ([BindingPolicyObject](https://intl.cloud.tencent.com/document/product/248/40421?from_cn_redirect=1), [UnBindingAllPolicyObject](https://intl.cloud.tencent.com/document/product/248/40568?from_cn_redirect=1), [UnBindingPolicyObject](https://intl.cloud.tencent.com/document/product/248/40567?from_cn_redirect=1)) to bind/unbind instances or instance groups to/from an alarm policy
+     * @param OriginId Alarm policy ID, which can be used when you call APIs ([BindingPolicyObject](https://intl.cloud.tencent.com/document/product/248/40421?from_cn_redirect=1), [UnBindingAllPolicyObject](https://intl.cloud.tencent.com/document/product/248/40568?from_cn_redirect=1), [UnBindingPolicyObject](https://intl.cloud.tencent.com/document/product/248/40567?from_cn_redirect=1)) to bind/unbind instances or instance groups to/from an alarm policy
      */
     public void setOriginId(String OriginId) {
         this.OriginId = OriginId;
@@ -529,6 +537,26 @@ public class AlarmHistory extends AbstractModel{
     }
 
     /**
+     * Get Metric information
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return MetricsInfo Metric information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public AlarmHistoryMetric [] getMetricsInfo() {
+        return this.MetricsInfo;
+    }
+
+    /**
+     * Set Metric information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param MetricsInfo Metric information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setMetricsInfo(AlarmHistoryMetric [] MetricsInfo) {
+        this.MetricsInfo = MetricsInfo;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -554,6 +582,7 @@ public class AlarmHistory extends AbstractModel{
         this.setParamSimple(map, prefix + "EventId", this.EventId);
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "PolicyExists", this.PolicyExists);
+        this.setParamArrayObj(map, prefix + "MetricsInfo.", this.MetricsInfo);
 
     }
 }

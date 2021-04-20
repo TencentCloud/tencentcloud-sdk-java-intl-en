@@ -60,6 +60,26 @@ public class AsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to clear specific attributes of the launch configuration.
+     * @param req ClearLaunchConfigurationAttributesRequest
+     * @return ClearLaunchConfigurationAttributesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ClearLaunchConfigurationAttributesResponse ClearLaunchConfigurationAttributes(ClearLaunchConfigurationAttributesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ClearLaunchConfigurationAttributesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ClearLaunchConfigurationAttributesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ClearLaunchConfigurationAttributes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (CompleteLifecycleAction) is used to complete a lifecycle action.
 
 * The result ("CONTINUE" or "ABANDON") of a specific lifecycle hook can be specified by calling this API. If this API is not called at all, the lifecycle hook will be processed based on the "DefaultResult" after timeout.

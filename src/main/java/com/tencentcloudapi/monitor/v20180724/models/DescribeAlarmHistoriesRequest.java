@@ -51,14 +51,14 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel{
     private String Order;
 
     /**
-    * Start time, which is the timestamp exactly one day ago
+    * Start time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the timestamp of a day earlier.
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * End time, which is the current timestamp by default
+    * End time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the current timestamp.
     */
     @SerializedName("EndTime")
     @Expose
@@ -213,32 +213,32 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel{
     }
 
     /**
-     * Get Start time, which is the timestamp exactly one day ago 
-     * @return StartTime Start time, which is the timestamp exactly one day ago
+     * Get Start time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the timestamp of a day earlier. 
+     * @return StartTime Start time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the timestamp of a day earlier.
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time, which is the timestamp exactly one day ago
-     * @param StartTime Start time, which is the timestamp exactly one day ago
+     * Set Start time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the timestamp of a day earlier.
+     * @param StartTime Start time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the timestamp of a day earlier.
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time, which is the current timestamp by default 
-     * @return EndTime End time, which is the current timestamp by default
+     * Get End time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the current timestamp. 
+     * @return EndTime End time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the current timestamp.
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time, which is the current timestamp by default
-     * @param EndTime End time, which is the current timestamp by default
+     * Set End time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the current timestamp.
+     * @param EndTime End time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the current timestamp.
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

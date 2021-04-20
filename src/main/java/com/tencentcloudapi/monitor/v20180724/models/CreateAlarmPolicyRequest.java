@@ -44,7 +44,7 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
     private String MonitorType;
 
     /**
-    * Alarm policy type such as cvm_device, which is obtained through the `DescribeAllNamespaces` API
+    * Type of alarm policy, which can be obtained via [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1). An example value is `cvm_device`.
     */
     @SerializedName("Namespace")
     @Expose
@@ -65,28 +65,35 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
     private Long Enable;
 
     /**
-    * Project ID. Valid values: -1 (no project), 0 (default project). Default value: -1. This parameter can be left empty
+    * Project ID. For products with different projects, a value other than `-1` must be passed in. `-1`: no project; `0`: default project. If no value is passed in, `-1` will be used. The supported project IDs can be viewed on the [**Account Center** > **Project Management**](https://console.cloud.tencent.com/project) page of the console.
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * Metric trigger condition
+    * ID of trigger condition template. This parameter can be left empty.
+    */
+    @SerializedName("ConditionTemplateId")
+    @Expose
+    private Long ConditionTemplateId;
+
+    /**
+    * Metric trigger condition. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
     */
     @SerializedName("Condition")
     @Expose
     private AlarmPolicyCondition Condition;
 
     /**
-    * Event trigger condition
+    * Event trigger condition. The supported events can be queried via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
     */
     @SerializedName("EventCondition")
     @Expose
     private AlarmPolicyEventCondition EventCondition;
 
     /**
-    * List of notification rule IDs, which is obtained through the `DescribeAlarmNotices` API
+    * List of notification rule IDs, which can be obtained via [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1)
     */
     @SerializedName("NoticeIds")
     @Expose
@@ -148,16 +155,16 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get Alarm policy type such as cvm_device, which is obtained through the `DescribeAllNamespaces` API 
-     * @return Namespace Alarm policy type such as cvm_device, which is obtained through the `DescribeAllNamespaces` API
+     * Get Type of alarm policy, which can be obtained via [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1). An example value is `cvm_device`. 
+     * @return Namespace Type of alarm policy, which can be obtained via [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1). An example value is `cvm_device`.
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set Alarm policy type such as cvm_device, which is obtained through the `DescribeAllNamespaces` API
-     * @param Namespace Alarm policy type such as cvm_device, which is obtained through the `DescribeAllNamespaces` API
+     * Set Type of alarm policy, which can be obtained via [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1). An example value is `cvm_device`.
+     * @param Namespace Type of alarm policy, which can be obtained via [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1). An example value is `cvm_device`.
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
@@ -196,64 +203,80 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get Project ID. Valid values: -1 (no project), 0 (default project). Default value: -1. This parameter can be left empty 
-     * @return ProjectId Project ID. Valid values: -1 (no project), 0 (default project). Default value: -1. This parameter can be left empty
+     * Get Project ID. For products with different projects, a value other than `-1` must be passed in. `-1`: no project; `0`: default project. If no value is passed in, `-1` will be used. The supported project IDs can be viewed on the [**Account Center** > **Project Management**](https://console.cloud.tencent.com/project) page of the console. 
+     * @return ProjectId Project ID. For products with different projects, a value other than `-1` must be passed in. `-1`: no project; `0`: default project. If no value is passed in, `-1` will be used. The supported project IDs can be viewed on the [**Account Center** > **Project Management**](https://console.cloud.tencent.com/project) page of the console.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID. Valid values: -1 (no project), 0 (default project). Default value: -1. This parameter can be left empty
-     * @param ProjectId Project ID. Valid values: -1 (no project), 0 (default project). Default value: -1. This parameter can be left empty
+     * Set Project ID. For products with different projects, a value other than `-1` must be passed in. `-1`: no project; `0`: default project. If no value is passed in, `-1` will be used. The supported project IDs can be viewed on the [**Account Center** > **Project Management**](https://console.cloud.tencent.com/project) page of the console.
+     * @param ProjectId Project ID. For products with different projects, a value other than `-1` must be passed in. `-1`: no project; `0`: default project. If no value is passed in, `-1` will be used. The supported project IDs can be viewed on the [**Account Center** > **Project Management**](https://console.cloud.tencent.com/project) page of the console.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get Metric trigger condition 
-     * @return Condition Metric trigger condition
+     * Get ID of trigger condition template. This parameter can be left empty. 
+     * @return ConditionTemplateId ID of trigger condition template. This parameter can be left empty.
+     */
+    public Long getConditionTemplateId() {
+        return this.ConditionTemplateId;
+    }
+
+    /**
+     * Set ID of trigger condition template. This parameter can be left empty.
+     * @param ConditionTemplateId ID of trigger condition template. This parameter can be left empty.
+     */
+    public void setConditionTemplateId(Long ConditionTemplateId) {
+        this.ConditionTemplateId = ConditionTemplateId;
+    }
+
+    /**
+     * Get Metric trigger condition. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1). 
+     * @return Condition Metric trigger condition. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
      */
     public AlarmPolicyCondition getCondition() {
         return this.Condition;
     }
 
     /**
-     * Set Metric trigger condition
-     * @param Condition Metric trigger condition
+     * Set Metric trigger condition. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+     * @param Condition Metric trigger condition. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
      */
     public void setCondition(AlarmPolicyCondition Condition) {
         this.Condition = Condition;
     }
 
     /**
-     * Get Event trigger condition 
-     * @return EventCondition Event trigger condition
+     * Get Event trigger condition. The supported events can be queried via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1). 
+     * @return EventCondition Event trigger condition. The supported events can be queried via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
      */
     public AlarmPolicyEventCondition getEventCondition() {
         return this.EventCondition;
     }
 
     /**
-     * Set Event trigger condition
-     * @param EventCondition Event trigger condition
+     * Set Event trigger condition. The supported events can be queried via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
+     * @param EventCondition Event trigger condition. The supported events can be queried via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
      */
     public void setEventCondition(AlarmPolicyEventCondition EventCondition) {
         this.EventCondition = EventCondition;
     }
 
     /**
-     * Get List of notification rule IDs, which is obtained through the `DescribeAlarmNotices` API 
-     * @return NoticeIds List of notification rule IDs, which is obtained through the `DescribeAlarmNotices` API
+     * Get List of notification rule IDs, which can be obtained via [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1) 
+     * @return NoticeIds List of notification rule IDs, which can be obtained via [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1)
      */
     public String [] getNoticeIds() {
         return this.NoticeIds;
     }
 
     /**
-     * Set List of notification rule IDs, which is obtained through the `DescribeAlarmNotices` API
-     * @param NoticeIds List of notification rule IDs, which is obtained through the `DescribeAlarmNotices` API
+     * Set List of notification rule IDs, which can be obtained via [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1)
+     * @param NoticeIds List of notification rule IDs, which can be obtained via [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1)
      */
     public void setNoticeIds(String [] NoticeIds) {
         this.NoticeIds = NoticeIds;
@@ -286,6 +309,7 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "Enable", this.Enable);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "ConditionTemplateId", this.ConditionTemplateId);
         this.setParamObj(map, prefix + "Condition.", this.Condition);
         this.setParamObj(map, prefix + "EventCondition.", this.EventCondition);
         this.setParamArraySimple(map, prefix + "NoticeIds.", this.NoticeIds);

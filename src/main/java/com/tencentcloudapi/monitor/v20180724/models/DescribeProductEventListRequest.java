@@ -44,7 +44,7 @@ public class DescribeProductEventListRequest extends AbstractModel{
     private String [] EventName;
 
     /**
-    * Affected object, such as ins-19708ino.
+    * Affected object, such as "ins-19708ino"
     */
     @SerializedName("InstanceId")
     @Expose
@@ -58,7 +58,7 @@ public class DescribeProductEventListRequest extends AbstractModel{
     private DescribeProductEventListDimensions [] Dimensions;
 
     /**
-    * Filter by region, such as by gz.
+    * Region filter parameter for service events, such as `gz`. For region abbreviations, please see [Region List](https://intl.cloud.tencent.com/document/product/248/50863?from_cn_redirect=1)
     */
     @SerializedName("RegionList")
     @Expose
@@ -176,16 +176,16 @@ public class DescribeProductEventListRequest extends AbstractModel{
     }
 
     /**
-     * Get Affected object, such as ins-19708ino. 
-     * @return InstanceId Affected object, such as ins-19708ino.
+     * Get Affected object, such as "ins-19708ino" 
+     * @return InstanceId Affected object, such as "ins-19708ino"
      */
     public String [] getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Affected object, such as ins-19708ino.
-     * @param InstanceId Affected object, such as ins-19708ino.
+     * Set Affected object, such as "ins-19708ino"
+     * @param InstanceId Affected object, such as "ins-19708ino"
      */
     public void setInstanceId(String [] InstanceId) {
         this.InstanceId = InstanceId;
@@ -208,16 +208,16 @@ public class DescribeProductEventListRequest extends AbstractModel{
     }
 
     /**
-     * Get Filter by region, such as by gz. 
-     * @return RegionList Filter by region, such as by gz.
+     * Get Region filter parameter for service events, such as `gz`. For region abbreviations, please see [Region List](https://intl.cloud.tencent.com/document/product/248/50863?from_cn_redirect=1) 
+     * @return RegionList Region filter parameter for service events, such as `gz`. For region abbreviations, please see [Region List](https://intl.cloud.tencent.com/document/product/248/50863?from_cn_redirect=1)
      */
     public String [] getRegionList() {
         return this.RegionList;
     }
 
     /**
-     * Set Filter by region, such as by gz.
-     * @param RegionList Filter by region, such as by gz.
+     * Set Region filter parameter for service events, such as `gz`. For region abbreviations, please see [Region List](https://intl.cloud.tencent.com/document/product/248/50863?from_cn_redirect=1)
+     * @param RegionList Region filter parameter for service events, such as `gz`. For region abbreviations, please see [Region List](https://intl.cloud.tencent.com/document/product/248/50863?from_cn_redirect=1)
      */
     public void setRegionList(String [] RegionList) {
         this.RegionList = RegionList;
