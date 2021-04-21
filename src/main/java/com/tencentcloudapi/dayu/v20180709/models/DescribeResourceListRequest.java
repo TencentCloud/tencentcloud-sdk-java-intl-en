@@ -58,7 +58,7 @@ public class DescribeResourceListRequest extends AbstractModel{
     private String Name;
 
     /**
-    * IP search list, which is optional. If this field is not empty, it means to search for resources by IP;
+    * IP query list, which is optional. Resources will be queried by IP if the list is not empty.
     */
     @SerializedName("IpList")
     @Expose
@@ -194,16 +194,16 @@ public class DescribeResourceListRequest extends AbstractModel{
     }
 
     /**
-     * Get IP search list, which is optional. If this field is not empty, it means to search for resources by IP; 
-     * @return IpList IP search list, which is optional. If this field is not empty, it means to search for resources by IP;
+     * Get IP query list, which is optional. Resources will be queried by IP if the list is not empty. 
+     * @return IpList IP query list, which is optional. Resources will be queried by IP if the list is not empty.
      */
     public String [] getIpList() {
         return this.IpList;
     }
 
     /**
-     * Set IP search list, which is optional. If this field is not empty, it means to search for resources by IP;
-     * @param IpList IP search list, which is optional. If this field is not empty, it means to search for resources by IP;
+     * Set IP query list, which is optional. Resources will be queried by IP if the list is not empty.
+     * @param IpList IP query list, which is optional. Resources will be queried by IP if the list is not empty.
      */
     public void setIpList(String [] IpList) {
         this.IpList = IpList;

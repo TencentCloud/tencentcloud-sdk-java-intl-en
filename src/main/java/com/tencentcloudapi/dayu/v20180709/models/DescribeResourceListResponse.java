@@ -30,34 +30,37 @@ public class DescribeResourceListResponse extends AbstractModel{
     private Long Total;
 
     /**
-    * Resource record list. Valid values of `key`:
-"Key": "CreateTime" - resource instance purchase time
-"Key": "Region" - resource instance region
-"Key": "BoundIP" - IP bound to single IP instance
-"Key": "Id" - resource instance ID
-"Key": "CCEnabled" - CC protection status of resource instance
-"Key": "DDoSThreshold" - DDoS cleansing threshold of resource instance	
-"Key": "BoundStatus" - IP binding status of single IP instance or multi-IP instance (binding or bound)
-"Key": "Type" - this field has been disused
-"Key": "ElasticLimit" - elastic protection value of resource instance
-"Key": "DDoSAI" - DDoS AI protection status of resource instance
-"Key": "Bandwidth" - base protection value of resource instance
-"Key": "OverloadCount" - number of attacks to the resource instance that exceed the elastic protection value
-"Key": "Status" - resource instance status (idle: running, attacking: attacking, blocking: blocking, isolate: isolating)
-"Key": "Lbid" - this field has been disused
-"Key": "ShowFlag" - this field has been disused
-"Key": "Expire" - resource instance expiration time
-"Key": "CCThreshold" - CC protection triggering threshold of resource instance
-"Key": "AutoRenewFlag" - auto-renewal flag of resource instance
-"Key": "IspCode" - line of single IP instance or multi-IP instance (0: China Telecom, 1: China Unicom, 2: China Mobile, 5: BGP)
-"Key": "PackType" - package type
-"Key": "PackId" - package ID
-"Key": "Name" - resource instance name
-"Key": "Locked" - this field has been disused
-"Key": "IpDDoSLevel" - protection level of resource instance (low: loose, middle: normal, high: strict)
-"Key": "DefendStatus" - DDoS protection status of resource (enabled or temporarily disabled)
-"Key": "UndefendExpire" - end time of temporary disablement of DDoS protection for resource instance
-"Key": "Tgw" - whether the resource instance is a new resource
+    * Resource record list. The description of key values is as follows:
+"Key": "CreateTime" (Instance purchase time)
+"Key": "Region" (Instance region)
+"Key": "BoundIP" (IP bound to the single-IP instance)
+"Key": "Id" (Instance ID)
+"Key": "CCEnabled" (CC protection switch status of the instance)
+"Key": "DDoSThreshold" (Anti-DDoS cleansing threshold of the instance)	
+"Key": "BoundStatus" (IP binding status of the single-IP/multi-IP instance; binding or bound)
+"Key": "Type" (Disused field)
+"Key": "ElasticLimit" (Elastic protection value of the instance)
+"Key": "DDoSAI" (Anti-DDoS AI protection switch of the instance)
+"Key": "OverloadCount" (The number of attacks exceeding the elastic protection value to the instance)
+"Key": "Status" (Instance status; idle: running; attacking: under attacks; blocking: being blocked; isolate: being isolated)
+"Key": "Lbid" (Disused field)
+"Key": "ShowFlag" (Disused field)
+"Key": "Expire" (Instance expiry time)
+"Key": "CCThreshold" (CC protection trigger value of the instance)
+"Key": "AutoRenewFlag" (Whether the instance is on auto-renewal)
+"Key": "IspCode" (Line of the single-IP/multi-IP instance; 0: China Telecom; 1: China Unicom; 2: China Mobile; 5: BGP)
+"Key": "PackType" (Package type)
+"Key": "PackId" (Package ID)
+"Key": "Name" (Instance name)
+"Key": "Locked" (Disused field)
+"Key": "IpDDoSLevel" (Protection level of the instance; low: loose; middle: normal; high: strict)
+"Key": "DefendStatus" (DDoS protection status of the instance; enabled or temporarily disabled)
+"Key": "UndefendExpire" (End time of the temporary disabling on DDoS protection for the instance)
+"Key": "Tgw" (Whether it is a new instance)
+"Key": "Bandwidth" (Base protection value of the Anti-DDoS Pro/Advanced instance)
+"Key": "DdosMax" (Base protection value of the Anti-DDoS Ultimate instance)
+"Key": "GFBandwidth" (Base business application bandwidth of the Anti-DDoS Advanced instance)
+"Key": "ServiceBandwidth" (Base business application bandwidth of the Anti-DDoS Ultimate instance)
     */
     @SerializedName("ServicePacks")
     @Expose
@@ -94,124 +97,136 @@ public class DescribeResourceListResponse extends AbstractModel{
     }
 
     /**
-     * Get Resource record list. Valid values of `key`:
-"Key": "CreateTime" - resource instance purchase time
-"Key": "Region" - resource instance region
-"Key": "BoundIP" - IP bound to single IP instance
-"Key": "Id" - resource instance ID
-"Key": "CCEnabled" - CC protection status of resource instance
-"Key": "DDoSThreshold" - DDoS cleansing threshold of resource instance	
-"Key": "BoundStatus" - IP binding status of single IP instance or multi-IP instance (binding or bound)
-"Key": "Type" - this field has been disused
-"Key": "ElasticLimit" - elastic protection value of resource instance
-"Key": "DDoSAI" - DDoS AI protection status of resource instance
-"Key": "Bandwidth" - base protection value of resource instance
-"Key": "OverloadCount" - number of attacks to the resource instance that exceed the elastic protection value
-"Key": "Status" - resource instance status (idle: running, attacking: attacking, blocking: blocking, isolate: isolating)
-"Key": "Lbid" - this field has been disused
-"Key": "ShowFlag" - this field has been disused
-"Key": "Expire" - resource instance expiration time
-"Key": "CCThreshold" - CC protection triggering threshold of resource instance
-"Key": "AutoRenewFlag" - auto-renewal flag of resource instance
-"Key": "IspCode" - line of single IP instance or multi-IP instance (0: China Telecom, 1: China Unicom, 2: China Mobile, 5: BGP)
-"Key": "PackType" - package type
-"Key": "PackId" - package ID
-"Key": "Name" - resource instance name
-"Key": "Locked" - this field has been disused
-"Key": "IpDDoSLevel" - protection level of resource instance (low: loose, middle: normal, high: strict)
-"Key": "DefendStatus" - DDoS protection status of resource (enabled or temporarily disabled)
-"Key": "UndefendExpire" - end time of temporary disablement of DDoS protection for resource instance
-"Key": "Tgw" - whether the resource instance is a new resource 
-     * @return ServicePacks Resource record list. Valid values of `key`:
-"Key": "CreateTime" - resource instance purchase time
-"Key": "Region" - resource instance region
-"Key": "BoundIP" - IP bound to single IP instance
-"Key": "Id" - resource instance ID
-"Key": "CCEnabled" - CC protection status of resource instance
-"Key": "DDoSThreshold" - DDoS cleansing threshold of resource instance	
-"Key": "BoundStatus" - IP binding status of single IP instance or multi-IP instance (binding or bound)
-"Key": "Type" - this field has been disused
-"Key": "ElasticLimit" - elastic protection value of resource instance
-"Key": "DDoSAI" - DDoS AI protection status of resource instance
-"Key": "Bandwidth" - base protection value of resource instance
-"Key": "OverloadCount" - number of attacks to the resource instance that exceed the elastic protection value
-"Key": "Status" - resource instance status (idle: running, attacking: attacking, blocking: blocking, isolate: isolating)
-"Key": "Lbid" - this field has been disused
-"Key": "ShowFlag" - this field has been disused
-"Key": "Expire" - resource instance expiration time
-"Key": "CCThreshold" - CC protection triggering threshold of resource instance
-"Key": "AutoRenewFlag" - auto-renewal flag of resource instance
-"Key": "IspCode" - line of single IP instance or multi-IP instance (0: China Telecom, 1: China Unicom, 2: China Mobile, 5: BGP)
-"Key": "PackType" - package type
-"Key": "PackId" - package ID
-"Key": "Name" - resource instance name
-"Key": "Locked" - this field has been disused
-"Key": "IpDDoSLevel" - protection level of resource instance (low: loose, middle: normal, high: strict)
-"Key": "DefendStatus" - DDoS protection status of resource (enabled or temporarily disabled)
-"Key": "UndefendExpire" - end time of temporary disablement of DDoS protection for resource instance
-"Key": "Tgw" - whether the resource instance is a new resource
+     * Get Resource record list. The description of key values is as follows:
+"Key": "CreateTime" (Instance purchase time)
+"Key": "Region" (Instance region)
+"Key": "BoundIP" (IP bound to the single-IP instance)
+"Key": "Id" (Instance ID)
+"Key": "CCEnabled" (CC protection switch status of the instance)
+"Key": "DDoSThreshold" (Anti-DDoS cleansing threshold of the instance)	
+"Key": "BoundStatus" (IP binding status of the single-IP/multi-IP instance; binding or bound)
+"Key": "Type" (Disused field)
+"Key": "ElasticLimit" (Elastic protection value of the instance)
+"Key": "DDoSAI" (Anti-DDoS AI protection switch of the instance)
+"Key": "OverloadCount" (The number of attacks exceeding the elastic protection value to the instance)
+"Key": "Status" (Instance status; idle: running; attacking: under attacks; blocking: being blocked; isolate: being isolated)
+"Key": "Lbid" (Disused field)
+"Key": "ShowFlag" (Disused field)
+"Key": "Expire" (Instance expiry time)
+"Key": "CCThreshold" (CC protection trigger value of the instance)
+"Key": "AutoRenewFlag" (Whether the instance is on auto-renewal)
+"Key": "IspCode" (Line of the single-IP/multi-IP instance; 0: China Telecom; 1: China Unicom; 2: China Mobile; 5: BGP)
+"Key": "PackType" (Package type)
+"Key": "PackId" (Package ID)
+"Key": "Name" (Instance name)
+"Key": "Locked" (Disused field)
+"Key": "IpDDoSLevel" (Protection level of the instance; low: loose; middle: normal; high: strict)
+"Key": "DefendStatus" (DDoS protection status of the instance; enabled or temporarily disabled)
+"Key": "UndefendExpire" (End time of the temporary disabling on DDoS protection for the instance)
+"Key": "Tgw" (Whether it is a new instance)
+"Key": "Bandwidth" (Base protection value of the Anti-DDoS Pro/Advanced instance)
+"Key": "DdosMax" (Base protection value of the Anti-DDoS Ultimate instance)
+"Key": "GFBandwidth" (Base business application bandwidth of the Anti-DDoS Advanced instance)
+"Key": "ServiceBandwidth" (Base business application bandwidth of the Anti-DDoS Ultimate instance) 
+     * @return ServicePacks Resource record list. The description of key values is as follows:
+"Key": "CreateTime" (Instance purchase time)
+"Key": "Region" (Instance region)
+"Key": "BoundIP" (IP bound to the single-IP instance)
+"Key": "Id" (Instance ID)
+"Key": "CCEnabled" (CC protection switch status of the instance)
+"Key": "DDoSThreshold" (Anti-DDoS cleansing threshold of the instance)	
+"Key": "BoundStatus" (IP binding status of the single-IP/multi-IP instance; binding or bound)
+"Key": "Type" (Disused field)
+"Key": "ElasticLimit" (Elastic protection value of the instance)
+"Key": "DDoSAI" (Anti-DDoS AI protection switch of the instance)
+"Key": "OverloadCount" (The number of attacks exceeding the elastic protection value to the instance)
+"Key": "Status" (Instance status; idle: running; attacking: under attacks; blocking: being blocked; isolate: being isolated)
+"Key": "Lbid" (Disused field)
+"Key": "ShowFlag" (Disused field)
+"Key": "Expire" (Instance expiry time)
+"Key": "CCThreshold" (CC protection trigger value of the instance)
+"Key": "AutoRenewFlag" (Whether the instance is on auto-renewal)
+"Key": "IspCode" (Line of the single-IP/multi-IP instance; 0: China Telecom; 1: China Unicom; 2: China Mobile; 5: BGP)
+"Key": "PackType" (Package type)
+"Key": "PackId" (Package ID)
+"Key": "Name" (Instance name)
+"Key": "Locked" (Disused field)
+"Key": "IpDDoSLevel" (Protection level of the instance; low: loose; middle: normal; high: strict)
+"Key": "DefendStatus" (DDoS protection status of the instance; enabled or temporarily disabled)
+"Key": "UndefendExpire" (End time of the temporary disabling on DDoS protection for the instance)
+"Key": "Tgw" (Whether it is a new instance)
+"Key": "Bandwidth" (Base protection value of the Anti-DDoS Pro/Advanced instance)
+"Key": "DdosMax" (Base protection value of the Anti-DDoS Ultimate instance)
+"Key": "GFBandwidth" (Base business application bandwidth of the Anti-DDoS Advanced instance)
+"Key": "ServiceBandwidth" (Base business application bandwidth of the Anti-DDoS Ultimate instance)
      */
     public KeyValueRecord [] getServicePacks() {
         return this.ServicePacks;
     }
 
     /**
-     * Set Resource record list. Valid values of `key`:
-"Key": "CreateTime" - resource instance purchase time
-"Key": "Region" - resource instance region
-"Key": "BoundIP" - IP bound to single IP instance
-"Key": "Id" - resource instance ID
-"Key": "CCEnabled" - CC protection status of resource instance
-"Key": "DDoSThreshold" - DDoS cleansing threshold of resource instance	
-"Key": "BoundStatus" - IP binding status of single IP instance or multi-IP instance (binding or bound)
-"Key": "Type" - this field has been disused
-"Key": "ElasticLimit" - elastic protection value of resource instance
-"Key": "DDoSAI" - DDoS AI protection status of resource instance
-"Key": "Bandwidth" - base protection value of resource instance
-"Key": "OverloadCount" - number of attacks to the resource instance that exceed the elastic protection value
-"Key": "Status" - resource instance status (idle: running, attacking: attacking, blocking: blocking, isolate: isolating)
-"Key": "Lbid" - this field has been disused
-"Key": "ShowFlag" - this field has been disused
-"Key": "Expire" - resource instance expiration time
-"Key": "CCThreshold" - CC protection triggering threshold of resource instance
-"Key": "AutoRenewFlag" - auto-renewal flag of resource instance
-"Key": "IspCode" - line of single IP instance or multi-IP instance (0: China Telecom, 1: China Unicom, 2: China Mobile, 5: BGP)
-"Key": "PackType" - package type
-"Key": "PackId" - package ID
-"Key": "Name" - resource instance name
-"Key": "Locked" - this field has been disused
-"Key": "IpDDoSLevel" - protection level of resource instance (low: loose, middle: normal, high: strict)
-"Key": "DefendStatus" - DDoS protection status of resource (enabled or temporarily disabled)
-"Key": "UndefendExpire" - end time of temporary disablement of DDoS protection for resource instance
-"Key": "Tgw" - whether the resource instance is a new resource
-     * @param ServicePacks Resource record list. Valid values of `key`:
-"Key": "CreateTime" - resource instance purchase time
-"Key": "Region" - resource instance region
-"Key": "BoundIP" - IP bound to single IP instance
-"Key": "Id" - resource instance ID
-"Key": "CCEnabled" - CC protection status of resource instance
-"Key": "DDoSThreshold" - DDoS cleansing threshold of resource instance	
-"Key": "BoundStatus" - IP binding status of single IP instance or multi-IP instance (binding or bound)
-"Key": "Type" - this field has been disused
-"Key": "ElasticLimit" - elastic protection value of resource instance
-"Key": "DDoSAI" - DDoS AI protection status of resource instance
-"Key": "Bandwidth" - base protection value of resource instance
-"Key": "OverloadCount" - number of attacks to the resource instance that exceed the elastic protection value
-"Key": "Status" - resource instance status (idle: running, attacking: attacking, blocking: blocking, isolate: isolating)
-"Key": "Lbid" - this field has been disused
-"Key": "ShowFlag" - this field has been disused
-"Key": "Expire" - resource instance expiration time
-"Key": "CCThreshold" - CC protection triggering threshold of resource instance
-"Key": "AutoRenewFlag" - auto-renewal flag of resource instance
-"Key": "IspCode" - line of single IP instance or multi-IP instance (0: China Telecom, 1: China Unicom, 2: China Mobile, 5: BGP)
-"Key": "PackType" - package type
-"Key": "PackId" - package ID
-"Key": "Name" - resource instance name
-"Key": "Locked" - this field has been disused
-"Key": "IpDDoSLevel" - protection level of resource instance (low: loose, middle: normal, high: strict)
-"Key": "DefendStatus" - DDoS protection status of resource (enabled or temporarily disabled)
-"Key": "UndefendExpire" - end time of temporary disablement of DDoS protection for resource instance
-"Key": "Tgw" - whether the resource instance is a new resource
+     * Set Resource record list. The description of key values is as follows:
+"Key": "CreateTime" (Instance purchase time)
+"Key": "Region" (Instance region)
+"Key": "BoundIP" (IP bound to the single-IP instance)
+"Key": "Id" (Instance ID)
+"Key": "CCEnabled" (CC protection switch status of the instance)
+"Key": "DDoSThreshold" (Anti-DDoS cleansing threshold of the instance)	
+"Key": "BoundStatus" (IP binding status of the single-IP/multi-IP instance; binding or bound)
+"Key": "Type" (Disused field)
+"Key": "ElasticLimit" (Elastic protection value of the instance)
+"Key": "DDoSAI" (Anti-DDoS AI protection switch of the instance)
+"Key": "OverloadCount" (The number of attacks exceeding the elastic protection value to the instance)
+"Key": "Status" (Instance status; idle: running; attacking: under attacks; blocking: being blocked; isolate: being isolated)
+"Key": "Lbid" (Disused field)
+"Key": "ShowFlag" (Disused field)
+"Key": "Expire" (Instance expiry time)
+"Key": "CCThreshold" (CC protection trigger value of the instance)
+"Key": "AutoRenewFlag" (Whether the instance is on auto-renewal)
+"Key": "IspCode" (Line of the single-IP/multi-IP instance; 0: China Telecom; 1: China Unicom; 2: China Mobile; 5: BGP)
+"Key": "PackType" (Package type)
+"Key": "PackId" (Package ID)
+"Key": "Name" (Instance name)
+"Key": "Locked" (Disused field)
+"Key": "IpDDoSLevel" (Protection level of the instance; low: loose; middle: normal; high: strict)
+"Key": "DefendStatus" (DDoS protection status of the instance; enabled or temporarily disabled)
+"Key": "UndefendExpire" (End time of the temporary disabling on DDoS protection for the instance)
+"Key": "Tgw" (Whether it is a new instance)
+"Key": "Bandwidth" (Base protection value of the Anti-DDoS Pro/Advanced instance)
+"Key": "DdosMax" (Base protection value of the Anti-DDoS Ultimate instance)
+"Key": "GFBandwidth" (Base business application bandwidth of the Anti-DDoS Advanced instance)
+"Key": "ServiceBandwidth" (Base business application bandwidth of the Anti-DDoS Ultimate instance)
+     * @param ServicePacks Resource record list. The description of key values is as follows:
+"Key": "CreateTime" (Instance purchase time)
+"Key": "Region" (Instance region)
+"Key": "BoundIP" (IP bound to the single-IP instance)
+"Key": "Id" (Instance ID)
+"Key": "CCEnabled" (CC protection switch status of the instance)
+"Key": "DDoSThreshold" (Anti-DDoS cleansing threshold of the instance)	
+"Key": "BoundStatus" (IP binding status of the single-IP/multi-IP instance; binding or bound)
+"Key": "Type" (Disused field)
+"Key": "ElasticLimit" (Elastic protection value of the instance)
+"Key": "DDoSAI" (Anti-DDoS AI protection switch of the instance)
+"Key": "OverloadCount" (The number of attacks exceeding the elastic protection value to the instance)
+"Key": "Status" (Instance status; idle: running; attacking: under attacks; blocking: being blocked; isolate: being isolated)
+"Key": "Lbid" (Disused field)
+"Key": "ShowFlag" (Disused field)
+"Key": "Expire" (Instance expiry time)
+"Key": "CCThreshold" (CC protection trigger value of the instance)
+"Key": "AutoRenewFlag" (Whether the instance is on auto-renewal)
+"Key": "IspCode" (Line of the single-IP/multi-IP instance; 0: China Telecom; 1: China Unicom; 2: China Mobile; 5: BGP)
+"Key": "PackType" (Package type)
+"Key": "PackId" (Package ID)
+"Key": "Name" (Instance name)
+"Key": "Locked" (Disused field)
+"Key": "IpDDoSLevel" (Protection level of the instance; low: loose; middle: normal; high: strict)
+"Key": "DefendStatus" (DDoS protection status of the instance; enabled or temporarily disabled)
+"Key": "UndefendExpire" (End time of the temporary disabling on DDoS protection for the instance)
+"Key": "Tgw" (Whether it is a new instance)
+"Key": "Bandwidth" (Base protection value of the Anti-DDoS Pro/Advanced instance)
+"Key": "DdosMax" (Base protection value of the Anti-DDoS Ultimate instance)
+"Key": "GFBandwidth" (Base business application bandwidth of the Anti-DDoS Advanced instance)
+"Key": "ServiceBandwidth" (Base business application bandwidth of the Anti-DDoS Ultimate instance)
      */
     public void setServicePacks(KeyValueRecord [] ServicePacks) {
         this.ServicePacks = ServicePacks;

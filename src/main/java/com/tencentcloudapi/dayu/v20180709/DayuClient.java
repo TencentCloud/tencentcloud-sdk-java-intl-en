@@ -600,6 +600,26 @@ public class DayuClient extends AbstractClient{
     }
 
     /**
+     *This API is used to get the statistics on the status codes of business traffic.
+     * @param req DescribeBizHttpStatusRequest
+     * @return DescribeBizHttpStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBizHttpStatusResponse DescribeBizHttpStatus(DescribeBizHttpStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBizHttpStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBizHttpStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBizHttpStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the alarm notification threshold set for CC attacks in Anti-DDoS Pro, Anti-DDoS Advanced, Anti-DDoS Ultimate, and Chess Shield.
      * @param req DescribeCCAlarmThresholdRequest
      * @return DescribeCCAlarmThresholdResponse
