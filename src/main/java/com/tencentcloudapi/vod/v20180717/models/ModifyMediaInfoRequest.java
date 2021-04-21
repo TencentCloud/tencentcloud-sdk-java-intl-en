@@ -109,6 +109,28 @@ In the same request, `ClearTags` and `AddTags` cannot be present at the same tim
     private Long ClearTags;
 
     /**
+    * Information of multiple subtitles to be added. A single media file can have up to 16 subtitles. In the same request, the subtitle IDs specified in `AddSubtitles` must be different from those in `DeleteSubtitleIds`.
+    */
+    @SerializedName("AddSubtitles")
+    @Expose
+    private MediaSubtitleInput [] AddSubtitles;
+
+    /**
+    * Unique IDs of the subtitles to be deleted. In the same request, the subtitle IDs specified in `AddSubtitles` must be different from those in `DeleteSubtitleIds`.
+    */
+    @SerializedName("DeleteSubtitleIds")
+    @Expose
+    private String [] DeleteSubtitleIds;
+
+    /**
+    * The value `1` indicates to delete all subtitle information of the media file. Other values are meaningless.
+`ClearSubtitles` and `AddSubtitles` cannot co-exist in the same request.
+    */
+    @SerializedName("ClearSubtitles")
+    @Expose
+    private Long ClearSubtitles;
+
+    /**
     * [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
     */
     @SerializedName("SubAppId")
@@ -316,6 +338,58 @@ In the same request, `ClearTags` and `AddTags` cannot be present at the same tim
     }
 
     /**
+     * Get Information of multiple subtitles to be added. A single media file can have up to 16 subtitles. In the same request, the subtitle IDs specified in `AddSubtitles` must be different from those in `DeleteSubtitleIds`. 
+     * @return AddSubtitles Information of multiple subtitles to be added. A single media file can have up to 16 subtitles. In the same request, the subtitle IDs specified in `AddSubtitles` must be different from those in `DeleteSubtitleIds`.
+     */
+    public MediaSubtitleInput [] getAddSubtitles() {
+        return this.AddSubtitles;
+    }
+
+    /**
+     * Set Information of multiple subtitles to be added. A single media file can have up to 16 subtitles. In the same request, the subtitle IDs specified in `AddSubtitles` must be different from those in `DeleteSubtitleIds`.
+     * @param AddSubtitles Information of multiple subtitles to be added. A single media file can have up to 16 subtitles. In the same request, the subtitle IDs specified in `AddSubtitles` must be different from those in `DeleteSubtitleIds`.
+     */
+    public void setAddSubtitles(MediaSubtitleInput [] AddSubtitles) {
+        this.AddSubtitles = AddSubtitles;
+    }
+
+    /**
+     * Get Unique IDs of the subtitles to be deleted. In the same request, the subtitle IDs specified in `AddSubtitles` must be different from those in `DeleteSubtitleIds`. 
+     * @return DeleteSubtitleIds Unique IDs of the subtitles to be deleted. In the same request, the subtitle IDs specified in `AddSubtitles` must be different from those in `DeleteSubtitleIds`.
+     */
+    public String [] getDeleteSubtitleIds() {
+        return this.DeleteSubtitleIds;
+    }
+
+    /**
+     * Set Unique IDs of the subtitles to be deleted. In the same request, the subtitle IDs specified in `AddSubtitles` must be different from those in `DeleteSubtitleIds`.
+     * @param DeleteSubtitleIds Unique IDs of the subtitles to be deleted. In the same request, the subtitle IDs specified in `AddSubtitles` must be different from those in `DeleteSubtitleIds`.
+     */
+    public void setDeleteSubtitleIds(String [] DeleteSubtitleIds) {
+        this.DeleteSubtitleIds = DeleteSubtitleIds;
+    }
+
+    /**
+     * Get The value `1` indicates to delete all subtitle information of the media file. Other values are meaningless.
+`ClearSubtitles` and `AddSubtitles` cannot co-exist in the same request. 
+     * @return ClearSubtitles The value `1` indicates to delete all subtitle information of the media file. Other values are meaningless.
+`ClearSubtitles` and `AddSubtitles` cannot co-exist in the same request.
+     */
+    public Long getClearSubtitles() {
+        return this.ClearSubtitles;
+    }
+
+    /**
+     * Set The value `1` indicates to delete all subtitle information of the media file. Other values are meaningless.
+`ClearSubtitles` and `AddSubtitles` cannot co-exist in the same request.
+     * @param ClearSubtitles The value `1` indicates to delete all subtitle information of the media file. Other values are meaningless.
+`ClearSubtitles` and `AddSubtitles` cannot co-exist in the same request.
+     */
+    public void setClearSubtitles(Long ClearSubtitles) {
+        this.ClearSubtitles = ClearSubtitles;
+    }
+
+    /**
      * Get [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty. 
      * @return SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
@@ -347,6 +421,9 @@ In the same request, `ClearTags` and `AddTags` cannot be present at the same tim
         this.setParamArraySimple(map, prefix + "AddTags.", this.AddTags);
         this.setParamArraySimple(map, prefix + "DeleteTags.", this.DeleteTags);
         this.setParamSimple(map, prefix + "ClearTags", this.ClearTags);
+        this.setParamArrayObj(map, prefix + "AddSubtitles.", this.AddSubtitles);
+        this.setParamArraySimple(map, prefix + "DeleteSubtitleIds.", this.DeleteSubtitleIds);
+        this.setParamSimple(map, prefix + "ClearSubtitles", this.ClearSubtitles);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }

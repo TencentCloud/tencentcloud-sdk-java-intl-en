@@ -244,6 +244,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String StatusInReadonlyGroup;
 
     /**
+    * Elimination time
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("OfflineTime")
+    @Expose
+    private String OfflineTime;
+
+    /**
      * Get Instance region such as ap-guangzhou, which corresponds to the `Region` field of `RegionSet` 
      * @return Region Instance region such as ap-guangzhou, which corresponds to the `Region` field of `RegionSet`
      */
@@ -756,6 +764,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Elimination time
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return OfflineTime Elimination time
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getOfflineTime() {
+        return this.OfflineTime;
+    }
+
+    /**
+     * Set Elimination time
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param OfflineTime Elimination time
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setOfflineTime(String OfflineTime) {
+        this.OfflineTime = OfflineTime;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -790,6 +818,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "MasterDBInstanceId", this.MasterDBInstanceId);
         this.setParamSimple(map, prefix + "ReadOnlyInstanceNum", this.ReadOnlyInstanceNum);
         this.setParamSimple(map, prefix + "StatusInReadonlyGroup", this.StatusInReadonlyGroup);
+        this.setParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
 
     }
 }

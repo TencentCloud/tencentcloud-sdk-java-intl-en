@@ -60,6 +60,26 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *This API is used to associate/disassociate subtitles with/from a media file of a specific adaptive bitrate streaming template ID.
+     * @param req AttachMediaSubtitlesRequest
+     * @return AttachMediaSubtitlesResponse
+     * @throws TencentCloudSDKException
+     */
+    public AttachMediaSubtitlesResponse AttachMediaSubtitles(AttachMediaSubtitlesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AttachMediaSubtitlesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AttachMediaSubtitlesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AttachMediaSubtitles");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to confirm the result of uploading a media file (and cover file) to VOD, store the media information, and return the playback address and ID of the file.
      * @param req CommitUploadRequest
      * @return CommitUploadResponse
@@ -1630,7 +1650,7 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     }
 
     /**
-     *This API is used to modify the attributes of a media file, including category, name, description, tag, expiration time, timestamp information, and video cover.
+     *This API is used to modify the attributes of a media file, including category, name, description, tag, expiration time, timestamp information, video thumbnail, and subtitle information.
      * @param req ModifyMediaInfoRequest
      * @return ModifyMediaInfoResponse
      * @throws TencentCloudSDKException

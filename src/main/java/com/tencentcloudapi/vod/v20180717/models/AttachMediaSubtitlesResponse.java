@@ -20,22 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyMediaInfoResponse extends AbstractModel{
-
-    /**
-    * URL of new video cover.
-* Note: this returned value is valid only if the request carries `CoverData`.*
-    */
-    @SerializedName("CoverUrl")
-    @Expose
-    private String CoverUrl;
-
-    /**
-    * Added subtitle information
-    */
-    @SerializedName("AddedSubtitleSet")
-    @Expose
-    private MediaSubtitleItem [] AddedSubtitleSet;
+public class AttachMediaSubtitlesResponse extends AbstractModel{
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -43,42 +28,6 @@ public class ModifyMediaInfoResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get URL of new video cover.
-* Note: this returned value is valid only if the request carries `CoverData`.* 
-     * @return CoverUrl URL of new video cover.
-* Note: this returned value is valid only if the request carries `CoverData`.*
-     */
-    public String getCoverUrl() {
-        return this.CoverUrl;
-    }
-
-    /**
-     * Set URL of new video cover.
-* Note: this returned value is valid only if the request carries `CoverData`.*
-     * @param CoverUrl URL of new video cover.
-* Note: this returned value is valid only if the request carries `CoverData`.*
-     */
-    public void setCoverUrl(String CoverUrl) {
-        this.CoverUrl = CoverUrl;
-    }
-
-    /**
-     * Get Added subtitle information 
-     * @return AddedSubtitleSet Added subtitle information
-     */
-    public MediaSubtitleItem [] getAddedSubtitleSet() {
-        return this.AddedSubtitleSet;
-    }
-
-    /**
-     * Set Added subtitle information
-     * @param AddedSubtitleSet Added subtitle information
-     */
-    public void setAddedSubtitleSet(MediaSubtitleItem [] AddedSubtitleSet) {
-        this.AddedSubtitleSet = AddedSubtitleSet;
-    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -100,8 +49,6 @@ public class ModifyMediaInfoResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "CoverUrl", this.CoverUrl);
-        this.setParamArrayObj(map, prefix + "AddedSubtitleSet.", this.AddedSubtitleSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
