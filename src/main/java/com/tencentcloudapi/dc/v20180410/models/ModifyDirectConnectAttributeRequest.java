@@ -107,6 +107,13 @@ public class ModifyDirectConnectAttributeRequest extends AbstractModel{
     private Boolean SignLaw;
 
     /**
+    * Connection’s bandwidth
+    */
+    @SerializedName("Bandwidth")
+    @Expose
+    private Long Bandwidth;
+
+    /**
      * Get Connection ID. 
      * @return DirectConnectId Connection ID.
      */
@@ -299,6 +306,22 @@ public class ModifyDirectConnectAttributeRequest extends AbstractModel{
     }
 
     /**
+     * Get Connection’s bandwidth 
+     * @return Bandwidth Connection’s bandwidth
+     */
+    public Long getBandwidth() {
+        return this.Bandwidth;
+    }
+
+    /**
+     * Set Connection’s bandwidth
+     * @param Bandwidth Connection’s bandwidth
+     */
+    public void setBandwidth(Long Bandwidth) {
+        this.Bandwidth = Bandwidth;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -314,6 +337,7 @@ public class ModifyDirectConnectAttributeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FaultReportContactPerson", this.FaultReportContactPerson);
         this.setParamSimple(map, prefix + "FaultReportContactNumber", this.FaultReportContactNumber);
         this.setParamSimple(map, prefix + "SignLaw", this.SignLaw);
+        this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
 
     }
 }

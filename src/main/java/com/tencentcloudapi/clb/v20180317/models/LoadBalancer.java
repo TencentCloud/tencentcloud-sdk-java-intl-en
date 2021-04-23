@@ -411,6 +411,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String NfvInfo;
 
     /**
+    * Health check logset ID of CLB CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("HealthLogSetId")
+    @Expose
+    private String HealthLogSetId;
+
+    /**
+    * Health check log topic ID of CLB CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("HealthLogTopicId")
+    @Expose
+    private String HealthLogTopicId;
+
+    /**
      * Get CLB instance ID. 
      * @return LoadBalancerId CLB instance ID.
      */
@@ -1375,6 +1391,46 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
+     * Get Health check logset ID of CLB CLS
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return HealthLogSetId Health check logset ID of CLB CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getHealthLogSetId() {
+        return this.HealthLogSetId;
+    }
+
+    /**
+     * Set Health check logset ID of CLB CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param HealthLogSetId Health check logset ID of CLB CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setHealthLogSetId(String HealthLogSetId) {
+        this.HealthLogSetId = HealthLogSetId;
+    }
+
+    /**
+     * Get Health check log topic ID of CLB CLS
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return HealthLogTopicId Health check log topic ID of CLB CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getHealthLogTopicId() {
+        return this.HealthLogTopicId;
+    }
+
+    /**
+     * Set Health check log topic ID of CLB CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param HealthLogTopicId Health check log topic ID of CLB CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setHealthLogTopicId(String HealthLogTopicId) {
+        this.HealthLogTopicId = HealthLogTopicId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -1427,6 +1483,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "MixIpTarget", this.MixIpTarget);
         this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
         this.setParamSimple(map, prefix + "NfvInfo", this.NfvInfo);
+        this.setParamSimple(map, prefix + "HealthLogSetId", this.HealthLogSetId);
+        this.setParamSimple(map, prefix + "HealthLogTopicId", this.HealthLogTopicId);
 
     }
 }

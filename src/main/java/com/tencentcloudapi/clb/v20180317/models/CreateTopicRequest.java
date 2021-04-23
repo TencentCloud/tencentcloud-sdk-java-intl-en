@@ -37,6 +37,13 @@ public class CreateTopicRequest extends AbstractModel{
     private Long PartitionCount;
 
     /**
+    * Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
+    */
+    @SerializedName("TopicType")
+    @Expose
+    private String TopicType;
+
+    /**
      * Get Log topic name 
      * @return TopicName Log topic name
      */
@@ -69,11 +76,28 @@ public class CreateTopicRequest extends AbstractModel{
     }
 
     /**
+     * Get Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs). 
+     * @return TopicType Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
+     */
+    public String getTopicType() {
+        return this.TopicType;
+    }
+
+    /**
+     * Set Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
+     * @param TopicType Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
+     */
+    public void setTopicType(String TopicType) {
+        this.TopicType = TopicType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
         this.setParamSimple(map, prefix + "PartitionCount", this.PartitionCount);
+        this.setParamSimple(map, prefix + "TopicType", this.TopicType);
 
     }
 }

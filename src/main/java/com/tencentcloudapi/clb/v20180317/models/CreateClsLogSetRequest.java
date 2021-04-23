@@ -37,6 +37,13 @@ public class CreateClsLogSetRequest extends AbstractModel{
     private String LogsetName;
 
     /**
+    * Logset type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
+    */
+    @SerializedName("LogsetType")
+    @Expose
+    private String LogsetType;
+
+    /**
      * Get Logset retention period in days; max value: 90 
      * @return Period Logset retention period in days; max value: 90
      */
@@ -69,11 +76,28 @@ public class CreateClsLogSetRequest extends AbstractModel{
     }
 
     /**
+     * Get Logset type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs). 
+     * @return LogsetType Logset type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
+     */
+    public String getLogsetType() {
+        return this.LogsetType;
+    }
+
+    /**
+     * Set Logset type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
+     * @param LogsetType Logset type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
+     */
+    public void setLogsetType(String LogsetType) {
+        this.LogsetType = LogsetType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "LogsetName", this.LogsetName);
+        this.setParamSimple(map, prefix + "LogsetType", this.LogsetType);
 
     }
 }

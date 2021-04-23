@@ -37,6 +37,13 @@ public class UpdateClusterVersionRequest extends AbstractModel{
     private String DstVersion;
 
     /**
+    * Cluster custom parameter
+    */
+    @SerializedName("ExtraArgs")
+    @Expose
+    private ClusterExtraArgs ExtraArgs;
+
+    /**
     * The maximum tolerable number of unavailable pods
     */
     @SerializedName("MaxNotReadyPercent")
@@ -83,6 +90,22 @@ public class UpdateClusterVersionRequest extends AbstractModel{
     }
 
     /**
+     * Get Cluster custom parameter 
+     * @return ExtraArgs Cluster custom parameter
+     */
+    public ClusterExtraArgs getExtraArgs() {
+        return this.ExtraArgs;
+    }
+
+    /**
+     * Set Cluster custom parameter
+     * @param ExtraArgs Cluster custom parameter
+     */
+    public void setExtraArgs(ClusterExtraArgs ExtraArgs) {
+        this.ExtraArgs = ExtraArgs;
+    }
+
+    /**
      * Get The maximum tolerable number of unavailable pods 
      * @return MaxNotReadyPercent The maximum tolerable number of unavailable pods
      */
@@ -120,6 +143,7 @@ public class UpdateClusterVersionRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "DstVersion", this.DstVersion);
+        this.setParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
         this.setParamSimple(map, prefix + "MaxNotReadyPercent", this.MaxNotReadyPercent);
         this.setParamSimple(map, prefix + "SkipPreCheck", this.SkipPreCheck);
 

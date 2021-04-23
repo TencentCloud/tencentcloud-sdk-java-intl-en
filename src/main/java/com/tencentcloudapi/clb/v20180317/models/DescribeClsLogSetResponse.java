@@ -30,6 +30,13 @@ public class DescribeClsLogSetResponse extends AbstractModel{
     private String LogsetId;
 
     /**
+    * Health check logset ID
+    */
+    @SerializedName("HealthLogsetId")
+    @Expose
+    private String HealthLogsetId;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -53,6 +60,22 @@ public class DescribeClsLogSetResponse extends AbstractModel{
     }
 
     /**
+     * Get Health check logset ID 
+     * @return HealthLogsetId Health check logset ID
+     */
+    public String getHealthLogsetId() {
+        return this.HealthLogsetId;
+    }
+
+    /**
+     * Set Health check logset ID
+     * @param HealthLogsetId Health check logset ID
+     */
+    public void setHealthLogsetId(String HealthLogsetId) {
+        this.HealthLogsetId = HealthLogsetId;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -73,6 +96,7 @@ public class DescribeClsLogSetResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LogsetId", this.LogsetId);
+        this.setParamSimple(map, prefix + "HealthLogsetId", this.HealthLogsetId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -141,6 +141,22 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     private String ImageId;
 
     /**
+    * This parameter is required when the custom PodCIDR mode is enabled for the cluster.
+Note: this field may return `null`, indicating that no valid value is obtained.
+    */
+    @SerializedName("DesiredPodNum")
+    @Expose
+    private Long DesiredPodNum;
+
+    /**
+    * Custom script
+Note: this field may return `null`, indicating that no valid value is obtained.
+    */
+    @SerializedName("UserScript")
+    @Expose
+    private String UserScript;
+
+    /**
      * Get Node pool ID 
      * @return NodePoolId Node pool ID
      */
@@ -421,6 +437,46 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     }
 
     /**
+     * Get This parameter is required when the custom PodCIDR mode is enabled for the cluster.
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return DesiredPodNum This parameter is required when the custom PodCIDR mode is enabled for the cluster.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public Long getDesiredPodNum() {
+        return this.DesiredPodNum;
+    }
+
+    /**
+     * Set This parameter is required when the custom PodCIDR mode is enabled for the cluster.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param DesiredPodNum This parameter is required when the custom PodCIDR mode is enabled for the cluster.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public void setDesiredPodNum(Long DesiredPodNum) {
+        this.DesiredPodNum = DesiredPodNum;
+    }
+
+    /**
+     * Get Custom script
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return UserScript Custom script
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public String getUserScript() {
+        return this.UserScript;
+    }
+
+    /**
+     * Set Custom script
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param UserScript Custom script
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public void setUserScript(String UserScript) {
+        this.UserScript = UserScript;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -440,6 +496,8 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         this.setParamSimple(map, prefix + "NodePoolOs", this.NodePoolOs);
         this.setParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
         this.setParamSimple(map, prefix + "ImageId", this.ImageId);
+        this.setParamSimple(map, prefix + "DesiredPodNum", this.DesiredPodNum);
+        this.setParamSimple(map, prefix + "UserScript", this.UserScript);
 
     }
 }

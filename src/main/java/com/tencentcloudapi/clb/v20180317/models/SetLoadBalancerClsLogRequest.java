@@ -44,6 +44,13 @@ public class SetLoadBalancerClsLogRequest extends AbstractModel{
     private String LogTopicId;
 
     /**
+    * Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
+    */
+    @SerializedName("LogType")
+    @Expose
+    private String LogType;
+
+    /**
      * Get CLB instance ID 
      * @return LoadBalancerId CLB instance ID
      */
@@ -92,12 +99,29 @@ public class SetLoadBalancerClsLogRequest extends AbstractModel{
     }
 
     /**
+     * Get Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs). 
+     * @return LogType Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
+     */
+    public String getLogType() {
+        return this.LogType;
+    }
+
+    /**
+     * Set Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
+     * @param LogType Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
+     */
+    public void setLogType(String LogType) {
+        this.LogType = LogType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
         this.setParamSimple(map, prefix + "LogSetId", this.LogSetId);
         this.setParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
+        this.setParamSimple(map, prefix + "LogType", this.LogType);
 
     }
 }
