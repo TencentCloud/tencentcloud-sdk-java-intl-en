@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeMachineRequest extends AbstractModel{
 
     /**
-    * Whether to filter the resources supporting IPv6 access
+    * If this parameter is not `0`, machines supporting IPv6 will be queried.
     */
     @SerializedName("Ipv6Enable")
     @Expose
     private Long Ipv6Enable;
 
     /**
-     * Get Whether to filter the resources supporting IPv6 access 
-     * @return Ipv6Enable Whether to filter the resources supporting IPv6 access
+     * Get If this parameter is not `0`, machines supporting IPv6 will be queried. 
+     * @return Ipv6Enable If this parameter is not `0`, machines supporting IPv6 will be queried.
      */
     public Long getIpv6Enable() {
         return this.Ipv6Enable;
     }
 
     /**
-     * Set Whether to filter the resources supporting IPv6 access
-     * @param Ipv6Enable Whether to filter the resources supporting IPv6 access
+     * Set If this parameter is not `0`, machines supporting IPv6 will be queried.
+     * @param Ipv6Enable If this parameter is not `0`, machines supporting IPv6 will be queried.
      */
     public void setIpv6Enable(Long Ipv6Enable) {
         this.Ipv6Enable = Ipv6Enable;

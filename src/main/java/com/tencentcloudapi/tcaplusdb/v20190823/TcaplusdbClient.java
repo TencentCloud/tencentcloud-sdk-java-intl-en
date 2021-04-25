@@ -119,6 +119,26 @@ public class TcaplusdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create one or more table snapshots at specific points in time in the past.
+     * @param req CreateSnapshotsRequest
+     * @return CreateSnapshotsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSnapshotsResponse CreateSnapshots(CreateSnapshotsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSnapshotsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSnapshotsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateSnapshots");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a table group in a TcaplusDB cluster.
      * @param req CreateTableGroupRequest
      * @return CreateTableGroupResponse
@@ -191,6 +211,26 @@ public class TcaplusdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteIdlFilesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteIdlFiles");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete one or more table snapshots.
+     * @param req DeleteSnapshotsRequest
+     * @return DeleteSnapshotsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSnapshotsResponse DeleteSnapshots(DeleteSnapshotsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteSnapshotsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteSnapshotsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteSnapshots");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -351,6 +391,26 @@ public class TcaplusdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeRegionsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeRegions");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of table snapshots.
+     * @param req DescribeSnapshotsRequest
+     * @return DescribeSnapshotsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSnapshotsResponse DescribeSnapshots(DescribeSnapshotsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSnapshotsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSnapshotsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSnapshots");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -539,6 +599,26 @@ public class TcaplusdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to import a snapshot into a new table or the original table from which the snapshot was created.
+     * @param req ImportSnapshotsRequest
+     * @return ImportSnapshotsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImportSnapshotsResponse ImportSnapshots(ImportSnapshotsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ImportSnapshotsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ImportSnapshotsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ImportSnapshots");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify the machines of a dedicated cluster.
      * @param req ModifyClusterMachineRequest
      * @return ModifyClusterMachineResponse
@@ -611,6 +691,26 @@ public class TcaplusdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyClusterTagsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyClusterTags");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the expiration time of one or more table snapshots.
+     * @param req ModifySnapshotsRequest
+     * @return ModifySnapshotsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySnapshotsResponse ModifySnapshots(ModifySnapshotsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySnapshotsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySnapshotsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifySnapshots");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
