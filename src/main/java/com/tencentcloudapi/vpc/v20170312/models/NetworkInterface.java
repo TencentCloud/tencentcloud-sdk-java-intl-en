@@ -149,6 +149,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String Business;
 
     /**
+    * ID of the CDC instance associated with the ENI
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CdcId")
+    @Expose
+    private String CdcId;
+
+    /**
      * Get The ID of the ENI instance, such as `eni-f1xjkw1b`. 
      * @return NetworkInterfaceId The ID of the ENI instance, such as `eni-f1xjkw1b`.
      */
@@ -449,6 +457,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
+     * Get ID of the CDC instance associated with the ENI
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return CdcId ID of the CDC instance associated with the ENI
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getCdcId() {
+        return this.CdcId;
+    }
+
+    /**
+     * Set ID of the CDC instance associated with the ENI
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param CdcId ID of the CDC instance associated with the ENI
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setCdcId(String CdcId) {
+        this.CdcId = CdcId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -469,6 +497,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "EniType", this.EniType);
         this.setParamSimple(map, prefix + "Business", this.Business);
+        this.setParamSimple(map, prefix + "CdcId", this.CdcId);
 
     }
 }

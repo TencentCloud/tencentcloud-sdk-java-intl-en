@@ -128,6 +128,22 @@ public class Subnet extends AbstractModel{
     private Tag [] TagSet;
 
     /**
+    * CDC instance ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CdcId")
+    @Expose
+    private String CdcId;
+
+    /**
+    * Whether it is a CDC subnet. Valid values: 0: no; 1: yes
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IsCdcSubnet")
+    @Expose
+    private Long IsCdcSubnet;
+
+    /**
      * Get The `ID` of the `VPC` instance. 
      * @return VpcId The `ID` of the `VPC` instance.
      */
@@ -368,6 +384,46 @@ public class Subnet extends AbstractModel{
     }
 
     /**
+     * Get CDC instance ID
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return CdcId CDC instance ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getCdcId() {
+        return this.CdcId;
+    }
+
+    /**
+     * Set CDC instance ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param CdcId CDC instance ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setCdcId(String CdcId) {
+        this.CdcId = CdcId;
+    }
+
+    /**
+     * Get Whether it is a CDC subnet. Valid values: 0: no; 1: yes
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return IsCdcSubnet Whether it is a CDC subnet. Valid values: 0: no; 1: yes
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getIsCdcSubnet() {
+        return this.IsCdcSubnet;
+    }
+
+    /**
+     * Set Whether it is a CDC subnet. Valid values: 0: no; 1: yes
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param IsCdcSubnet Whether it is a CDC subnet. Valid values: 0: no; 1: yes
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setIsCdcSubnet(Long IsCdcSubnet) {
+        this.IsCdcSubnet = IsCdcSubnet;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -386,6 +442,8 @@ public class Subnet extends AbstractModel{
         this.setParamSimple(map, prefix + "IsRemoteVpcSnat", this.IsRemoteVpcSnat);
         this.setParamSimple(map, prefix + "TotalIpAddressCount", this.TotalIpAddressCount);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+        this.setParamSimple(map, prefix + "CdcId", this.CdcId);
+        this.setParamSimple(map, prefix + "IsCdcSubnet", this.IsCdcSubnet);
 
     }
 }

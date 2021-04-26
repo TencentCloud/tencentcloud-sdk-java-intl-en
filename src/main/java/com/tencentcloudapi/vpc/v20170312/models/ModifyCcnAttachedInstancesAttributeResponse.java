@@ -20,21 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReplaceRoutesResponse extends AbstractModel{
-
-    /**
-    * Old routing policy
-    */
-    @SerializedName("OldRouteSet")
-    @Expose
-    private Route [] OldRouteSet;
-
-    /**
-    * New routing policy
-    */
-    @SerializedName("NewRouteSet")
-    @Expose
-    private Route [] NewRouteSet;
+public class ModifyCcnAttachedInstancesAttributeResponse extends AbstractModel{
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -42,38 +28,6 @@ public class ReplaceRoutesResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get Old routing policy 
-     * @return OldRouteSet Old routing policy
-     */
-    public Route [] getOldRouteSet() {
-        return this.OldRouteSet;
-    }
-
-    /**
-     * Set Old routing policy
-     * @param OldRouteSet Old routing policy
-     */
-    public void setOldRouteSet(Route [] OldRouteSet) {
-        this.OldRouteSet = OldRouteSet;
-    }
-
-    /**
-     * Get New routing policy 
-     * @return NewRouteSet New routing policy
-     */
-    public Route [] getNewRouteSet() {
-        return this.NewRouteSet;
-    }
-
-    /**
-     * Set New routing policy
-     * @param NewRouteSet New routing policy
-     */
-    public void setNewRouteSet(Route [] NewRouteSet) {
-        this.NewRouteSet = NewRouteSet;
-    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -95,8 +49,6 @@ public class ReplaceRoutesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "OldRouteSet.", this.OldRouteSet);
-        this.setParamArrayObj(map, prefix + "NewRouteSet.", this.NewRouteSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

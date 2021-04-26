@@ -47,6 +47,13 @@ public class CcnInstance extends AbstractModel{
     private String InstanceType;
 
     /**
+    * Description
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
      * Get The ID of the associated instance. 
      * @return InstanceId The ID of the associated instance.
      */
@@ -107,12 +114,29 @@ public class CcnInstance extends AbstractModel{
     }
 
     /**
+     * Get Description 
+     * @return Description Description
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set Description
+     * @param Description Description
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "InstanceRegion", this.InstanceRegion);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

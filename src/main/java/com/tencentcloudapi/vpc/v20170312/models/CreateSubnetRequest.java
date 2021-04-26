@@ -58,6 +58,13 @@ public class CreateSubnetRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * CDC instance ID
+    */
+    @SerializedName("CdcId")
+    @Expose
+    private String CdcId;
+
+    /**
      * Get The ID of the VPC instance to be operated on. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API. 
      * @return VpcId The ID of the VPC instance to be operated on. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
      */
@@ -138,6 +145,22 @@ public class CreateSubnetRequest extends AbstractModel{
     }
 
     /**
+     * Get CDC instance ID 
+     * @return CdcId CDC instance ID
+     */
+    public String getCdcId() {
+        return this.CdcId;
+    }
+
+    /**
+     * Set CDC instance ID
+     * @param CdcId CDC instance ID
+     */
+    public void setCdcId(String CdcId) {
+        this.CdcId = CdcId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -146,6 +169,7 @@ public class CreateSubnetRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CidrBlock", this.CidrBlock);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "CdcId", this.CdcId);
 
     }
 }

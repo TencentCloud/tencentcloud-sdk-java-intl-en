@@ -30,16 +30,17 @@ public class Route extends AbstractModel{
     private String DestinationCidrBlock;
 
     /**
-    * Type of the next hop. Currently supported types are:
-CVM: CVM of the public gateway type;
+    * Type of the next hop. Valid values:
+CVM: public gateway CVM;
 VPN: VPN gateway;
 DIRECTCONNECT: direct connect gateway;
 PEERCONNECTION: peering connection;
-SSLVPN: sslvpn gateway;
-NAT: NAT gateway; 
+SSLVPN: SSL VPN gateway;
+NAT: NAT Gateway; 
 NORMAL_CVM: normal CVM;
 EIP: public IP address of the CVM;
-CCN: Cloud Connect Network.
+CCN: Cloud Connect Network;
+LOCAL_GATEWAY: local gateway.
     */
     @SerializedName("GatewayType")
     @Expose
@@ -138,52 +139,56 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Type of the next hop. Currently supported types are:
-CVM: CVM of the public gateway type;
+     * Get Type of the next hop. Valid values:
+CVM: public gateway CVM;
 VPN: VPN gateway;
 DIRECTCONNECT: direct connect gateway;
 PEERCONNECTION: peering connection;
-SSLVPN: sslvpn gateway;
-NAT: NAT gateway; 
+SSLVPN: SSL VPN gateway;
+NAT: NAT Gateway; 
 NORMAL_CVM: normal CVM;
 EIP: public IP address of the CVM;
-CCN: Cloud Connect Network. 
-     * @return GatewayType Type of the next hop. Currently supported types are:
-CVM: CVM of the public gateway type;
+CCN: Cloud Connect Network;
+LOCAL_GATEWAY: local gateway. 
+     * @return GatewayType Type of the next hop. Valid values:
+CVM: public gateway CVM;
 VPN: VPN gateway;
 DIRECTCONNECT: direct connect gateway;
 PEERCONNECTION: peering connection;
-SSLVPN: sslvpn gateway;
-NAT: NAT gateway; 
+SSLVPN: SSL VPN gateway;
+NAT: NAT Gateway; 
 NORMAL_CVM: normal CVM;
 EIP: public IP address of the CVM;
-CCN: Cloud Connect Network.
+CCN: Cloud Connect Network;
+LOCAL_GATEWAY: local gateway.
      */
     public String getGatewayType() {
         return this.GatewayType;
     }
 
     /**
-     * Set Type of the next hop. Currently supported types are:
-CVM: CVM of the public gateway type;
+     * Set Type of the next hop. Valid values:
+CVM: public gateway CVM;
 VPN: VPN gateway;
 DIRECTCONNECT: direct connect gateway;
 PEERCONNECTION: peering connection;
-SSLVPN: sslvpn gateway;
-NAT: NAT gateway; 
+SSLVPN: SSL VPN gateway;
+NAT: NAT Gateway; 
 NORMAL_CVM: normal CVM;
 EIP: public IP address of the CVM;
-CCN: Cloud Connect Network.
-     * @param GatewayType Type of the next hop. Currently supported types are:
-CVM: CVM of the public gateway type;
+CCN: Cloud Connect Network;
+LOCAL_GATEWAY: local gateway.
+     * @param GatewayType Type of the next hop. Valid values:
+CVM: public gateway CVM;
 VPN: VPN gateway;
 DIRECTCONNECT: direct connect gateway;
 PEERCONNECTION: peering connection;
-SSLVPN: sslvpn gateway;
-NAT: NAT gateway; 
+SSLVPN: SSL VPN gateway;
+NAT: NAT Gateway; 
 NORMAL_CVM: normal CVM;
 EIP: public IP address of the CVM;
-CCN: Cloud Connect Network.
+CCN: Cloud Connect Network;
+LOCAL_GATEWAY: local gateway.
      */
     public void setGatewayType(String GatewayType) {
         this.GatewayType = GatewayType;

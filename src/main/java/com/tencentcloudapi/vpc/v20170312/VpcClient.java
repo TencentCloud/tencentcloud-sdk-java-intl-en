@@ -3298,6 +3298,26 @@ This API is completed asynchronously. If you need to query the async job executi
     }
 
     /**
+     *This API is used to modify CCN-associated instance attributes. Currently, only the `description` can be modified.
+     * @param req ModifyCcnAttachedInstancesAttributeRequest
+     * @return ModifyCcnAttachedInstancesAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCcnAttachedInstancesAttributeResponse ModifyCcnAttachedInstancesAttribute(ModifyCcnAttachedInstancesAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCcnAttachedInstancesAttributeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCcnAttachedInstancesAttributeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyCcnAttachedInstancesAttribute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (ModifyCcnAttribute) is used to modify CCN attributes.
      * @param req ModifyCcnAttributeRequest
      * @return ModifyCcnAttributeResponse
