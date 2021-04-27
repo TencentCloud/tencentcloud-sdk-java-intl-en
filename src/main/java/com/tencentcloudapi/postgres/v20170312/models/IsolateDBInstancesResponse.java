@@ -20,36 +20,36 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DestroyDBInstanceRequest extends AbstractModel{
+public class IsolateDBInstancesResponse extends AbstractModel{
 
     /**
-    * The ID of the instance to be eliminated
+    * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
-    @SerializedName("DBInstanceId")
+    @SerializedName("RequestId")
     @Expose
-    private String DBInstanceId;
+    private String RequestId;
 
     /**
-     * Get The ID of the instance to be eliminated 
-     * @return DBInstanceId The ID of the instance to be eliminated
+     * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
+     * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set The ID of the instance to be eliminated
-     * @param DBInstanceId The ID of the instance to be eliminated
+     * Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @param RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public void setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

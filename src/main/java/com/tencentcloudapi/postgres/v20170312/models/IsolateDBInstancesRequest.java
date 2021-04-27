@@ -20,36 +20,36 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DestroyDBInstanceRequest extends AbstractModel{
+public class IsolateDBInstancesRequest extends AbstractModel{
 
     /**
-    * The ID of the instance to be eliminated
+    * Instance ID set
     */
-    @SerializedName("DBInstanceId")
+    @SerializedName("DBInstanceIdSet")
     @Expose
-    private String DBInstanceId;
+    private String [] DBInstanceIdSet;
 
     /**
-     * Get The ID of the instance to be eliminated 
-     * @return DBInstanceId The ID of the instance to be eliminated
+     * Get Instance ID set 
+     * @return DBInstanceIdSet Instance ID set
      */
-    public String getDBInstanceId() {
-        return this.DBInstanceId;
+    public String [] getDBInstanceIdSet() {
+        return this.DBInstanceIdSet;
     }
 
     /**
-     * Set The ID of the instance to be eliminated
-     * @param DBInstanceId The ID of the instance to be eliminated
+     * Set Instance ID set
+     * @param DBInstanceIdSet Instance ID set
      */
-    public void setDBInstanceId(String DBInstanceId) {
-        this.DBInstanceId = DBInstanceId;
+    public void setDBInstanceIdSet(String [] DBInstanceIdSet) {
+        this.DBInstanceIdSet = DBInstanceIdSet;
     }
 
     /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);
+        this.setParamArraySimple(map, prefix + "DBInstanceIdSet.", this.DBInstanceIdSet);
 
     }
 }
