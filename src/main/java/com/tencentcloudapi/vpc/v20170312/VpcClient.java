@@ -707,6 +707,26 @@ You can also use the Force parameter to forcibly return a default VPC.
     }
 
     /**
+     *This API is used to create a local gateway for a CDC instance.
+     * @param req CreateLocalGatewayRequest
+     * @return CreateLocalGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLocalGatewayResponse CreateLocalGateway(CreateLocalGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLocalGatewayResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLocalGatewayResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateLocalGateway");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (CreateNatGateway) is used to create a NAT gateway.
      * @param req CreateNatGatewayRequest
      * @return CreateNatGatewayResponse
@@ -1081,6 +1101,66 @@ Description:
     }
 
     /**
+     *This API is used to create an endpoint.
+     * @param req CreateVpcEndPointRequest
+     * @return CreateVpcEndPointResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVpcEndPointResponse CreateVpcEndPoint(CreateVpcEndPointRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateVpcEndPointResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateVpcEndPointResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateVpcEndPoint");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create an endpoint service.
+     * @param req CreateVpcEndPointServiceRequest
+     * @return CreateVpcEndPointServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVpcEndPointServiceResponse CreateVpcEndPointService(CreateVpcEndPointServiceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateVpcEndPointServiceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateVpcEndPointServiceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateVpcEndPointService");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create the endpoint service allowlist.
+     * @param req CreateVpcEndPointServiceWhiteListRequest
+     * @return CreateVpcEndPointServiceWhiteListResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVpcEndPointServiceWhiteListResponse CreateVpcEndPointServiceWhiteList(CreateVpcEndPointServiceWhiteListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateVpcEndPointServiceWhiteListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateVpcEndPointServiceWhiteListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateVpcEndPointServiceWhiteList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (CreateVpnConnection) is used to create VPN tunnel.
      * @param req CreateVpnConnectionRequest
      * @return CreateVpnConnectionResponse
@@ -1320,6 +1400,26 @@ This API is completed asynchronously. If you need to query the async job executi
                 Type type = new TypeToken<JsonResponseModel<DeleteHaVipResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteHaVip");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete the local gateway of a CDC instance.
+     * @param req DeleteLocalGatewayRequest
+     * @return DeleteLocalGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLocalGatewayResponse DeleteLocalGateway(DeleteLocalGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLocalGatewayResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLocalGatewayResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteLocalGateway");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1610,6 +1710,68 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
                 Type type = new TypeToken<JsonResponseModel<DeleteVpcResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteVpc");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete an endpoint.
+     * @param req DeleteVpcEndPointRequest
+     * @return DeleteVpcEndPointResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVpcEndPointResponse DeleteVpcEndPoint(DeleteVpcEndPointRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteVpcEndPointResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteVpcEndPointResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteVpcEndPoint");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete an endpoint service.
+
+
+     * @param req DeleteVpcEndPointServiceRequest
+     * @return DeleteVpcEndPointServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVpcEndPointServiceResponse DeleteVpcEndPointService(DeleteVpcEndPointServiceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteVpcEndPointServiceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteVpcEndPointServiceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteVpcEndPointService");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete the endpoint service allowlist.
+     * @param req DeleteVpcEndPointServiceWhiteListRequest
+     * @return DeleteVpcEndPointServiceWhiteListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVpcEndPointServiceWhiteListResponse DeleteVpcEndPointServiceWhiteList(DeleteVpcEndPointServiceWhiteListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteVpcEndPointServiceWhiteListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteVpcEndPointServiceWhiteListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteVpcEndPointServiceWhiteList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2203,6 +2365,26 @@ A service provider can query all review requests created by any `APPID` under it
     }
 
     /**
+     *This API is used to query local gateways of a CDC instance.
+     * @param req DescribeLocalGatewayRequest
+     * @return DescribeLocalGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLocalGatewayResponse DescribeLocalGateway(DescribeLocalGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLocalGatewayResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLocalGatewayResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLocalGateway");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (DescribeNatGatewayDestinationIpPortTranslationNatRules) is used to query the array of objects of the port forwarding rules for a NAT gateway.
      * @param req DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest
      * @return DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse
@@ -2535,6 +2717,66 @@ A service provider can query all review requests created by any `APPID` under it
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskResultResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeTaskResult");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the endpoint list.
+     * @param req DescribeVpcEndPointRequest
+     * @return DescribeVpcEndPointResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVpcEndPointResponse DescribeVpcEndPoint(DescribeVpcEndPointRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVpcEndPointResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVpcEndPointResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeVpcEndPoint");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the endpoint service list.
+     * @param req DescribeVpcEndPointServiceRequest
+     * @return DescribeVpcEndPointServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVpcEndPointServiceResponse DescribeVpcEndPointService(DescribeVpcEndPointServiceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVpcEndPointServiceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVpcEndPointServiceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeVpcEndPointService");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the endpoint service allowlist.
+     * @param req DescribeVpcEndPointServiceWhiteListRequest
+     * @return DescribeVpcEndPointServiceWhiteListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVpcEndPointServiceWhiteListResponse DescribeVpcEndPointServiceWhiteList(DescribeVpcEndPointServiceWhiteListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVpcEndPointServiceWhiteListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVpcEndPointServiceWhiteListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeVpcEndPointServiceWhiteList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2910,6 +3152,26 @@ After unbinding the network instance, the corresponding routing policy will also
     }
 
     /**
+     *This API is used to unbind an endpoint from a security group.
+     * @param req DisassociateVpcEndPointSecurityGroupsRequest
+     * @return DisassociateVpcEndPointSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisassociateVpcEndPointSecurityGroupsResponse DisassociateVpcEndPointSecurityGroups(DisassociateVpcEndPointSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisassociateVpcEndPointSecurityGroupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisassociateVpcEndPointSecurityGroupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisassociateVpcEndPointSecurityGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (DownloadCustomerGatewayConfiguration) is used to download a VPN tunnel configuration.
      * @param req DownloadCustomerGatewayConfigurationRequest
      * @return DownloadCustomerGatewayConfigurationResponse
@@ -2963,6 +3225,26 @@ This API is used to verify whether there will be conflict with an existing route
                 Type type = new TypeToken<JsonResponseModel<EnableGatewayFlowMonitorResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "EnableGatewayFlowMonitor");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to determine whether to accept the request of connecting with an endpoint.
+     * @param req EnableVpcEndPointConnectRequest
+     * @return EnableVpcEndPointConnectResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableVpcEndPointConnectResponse EnableVpcEndPointConnect(EnableVpcEndPointConnectRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableVpcEndPointConnectResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableVpcEndPointConnectResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EnableVpcEndPointConnect");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -3479,6 +3761,26 @@ This API is completed asynchronously. If you need to query the async job executi
     }
 
     /**
+     *This API is used to modify the local gateway of a CDC instance.
+     * @param req ModifyLocalGatewayRequest
+     * @return ModifyLocalGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLocalGatewayResponse ModifyLocalGateway(ModifyLocalGatewayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLocalGatewayResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLocalGatewayResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyLocalGateway");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (ModifyNatGatewayAttribute) is used to modify the attributes of a NAT gateway.
      * @param req ModifyNatGatewayAttributeRequest
      * @return ModifyNatGatewayAttributeResponse
@@ -3786,6 +4088,68 @@ This API is completed asynchronously. If you need to query the async job executi
                 Type type = new TypeToken<JsonResponseModel<ModifyVpcAttributeResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyVpcAttribute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify endpoint attributes.
+     * @param req ModifyVpcEndPointAttributeRequest
+     * @return ModifyVpcEndPointAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVpcEndPointAttributeResponse ModifyVpcEndPointAttribute(ModifyVpcEndPointAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyVpcEndPointAttributeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyVpcEndPointAttributeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyVpcEndPointAttribute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify endpoint service attributes.
+
+
+     * @param req ModifyVpcEndPointServiceAttributeRequest
+     * @return ModifyVpcEndPointServiceAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVpcEndPointServiceAttributeResponse ModifyVpcEndPointServiceAttribute(ModifyVpcEndPointServiceAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyVpcEndPointServiceAttributeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyVpcEndPointServiceAttributeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyVpcEndPointServiceAttribute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the attributes of the endpoint service allowlist.
+     * @param req ModifyVpcEndPointServiceWhiteListRequest
+     * @return ModifyVpcEndPointServiceWhiteListResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVpcEndPointServiceWhiteListResponse ModifyVpcEndPointServiceWhiteList(ModifyVpcEndPointServiceWhiteListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyVpcEndPointServiceWhiteListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyVpcEndPointServiceWhiteListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyVpcEndPointServiceWhiteList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -44,7 +44,7 @@ public class NodePool extends AbstractModel{
     private String ClusterInstanceId;
 
     /**
-    * Status
+    * The lifecycle state of the current node pool. Valid values: `creating`, `normal`, `updating`, `deleting`, and `deleted`.
     */
     @SerializedName("LifeState")
     @Expose
@@ -205,16 +205,16 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     }
 
     /**
-     * Get Status 
-     * @return LifeState Status
+     * Get The lifecycle state of the current node pool. Valid values: `creating`, `normal`, `updating`, `deleting`, and `deleted`. 
+     * @return LifeState The lifecycle state of the current node pool. Valid values: `creating`, `normal`, `updating`, `deleting`, and `deleted`.
      */
     public String getLifeState() {
         return this.LifeState;
     }
 
     /**
-     * Set Status
-     * @param LifeState Status
+     * Set The lifecycle state of the current node pool. Valid values: `creating`, `normal`, `updating`, `deleting`, and `deleted`.
+     * @param LifeState The lifecycle state of the current node pool. Valid values: `creating`, `normal`, `updating`, `deleting`, and `deleted`.
      */
     public void setLifeState(String LifeState) {
         this.LifeState = LifeState;

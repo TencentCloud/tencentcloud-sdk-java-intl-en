@@ -44,7 +44,7 @@ public class OutputParams extends AbstractModel{
     private String RecordId;
 
     /**
-    * Value range: [0, 1]. If it is 0, the recording template configured in the console will be used; if it is 1, streams are recorded as .mp3 files.
+    * Whether to record audio only. Valid values: 0, 1. `0`: no meaning; `1`: records into MP3 files. This parameter is not recommended. Instead, you are advised to create an audio-only recording template in the TRTC console.
     */
     @SerializedName("RecordAudioOnly")
     @Expose
@@ -99,16 +99,16 @@ public class OutputParams extends AbstractModel{
     }
 
     /**
-     * Get Value range: [0, 1]. If it is 0, the recording template configured in the console will be used; if it is 1, streams are recorded as .mp3 files. 
-     * @return RecordAudioOnly Value range: [0, 1]. If it is 0, the recording template configured in the console will be used; if it is 1, streams are recorded as .mp3 files.
+     * Get Whether to record audio only. Valid values: 0, 1. `0`: no meaning; `1`: records into MP3 files. This parameter is not recommended. Instead, you are advised to create an audio-only recording template in the TRTC console. 
+     * @return RecordAudioOnly Whether to record audio only. Valid values: 0, 1. `0`: no meaning; `1`: records into MP3 files. This parameter is not recommended. Instead, you are advised to create an audio-only recording template in the TRTC console.
      */
     public Long getRecordAudioOnly() {
         return this.RecordAudioOnly;
     }
 
     /**
-     * Set Value range: [0, 1]. If it is 0, the recording template configured in the console will be used; if it is 1, streams are recorded as .mp3 files.
-     * @param RecordAudioOnly Value range: [0, 1]. If it is 0, the recording template configured in the console will be used; if it is 1, streams are recorded as .mp3 files.
+     * Set Whether to record audio only. Valid values: 0, 1. `0`: no meaning; `1`: records into MP3 files. This parameter is not recommended. Instead, you are advised to create an audio-only recording template in the TRTC console.
+     * @param RecordAudioOnly Whether to record audio only. Valid values: 0, 1. `0`: no meaning; `1`: records into MP3 files. This parameter is not recommended. Instead, you are advised to create an audio-only recording template in the TRTC console.
      */
     public void setRecordAudioOnly(Long RecordAudioOnly) {
         this.RecordAudioOnly = RecordAudioOnly;
