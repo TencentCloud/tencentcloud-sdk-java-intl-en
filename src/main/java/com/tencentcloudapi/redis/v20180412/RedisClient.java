@@ -199,7 +199,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query information of the Redis instance list.
+     *(Disused) Queries the list of instances
      * @param req DescribeCommonDBInstancesRequest
      * @return DescribeCommonDBInstancesResponse
      * @throws TencentCloudSDKException
@@ -1191,6 +1191,26 @@ public class RedisClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpgradeInstanceVersionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpgradeInstanceVersion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to upgrade an instance to support multi-AZ deployment.
+     * @param req UpgradeVersionToMultiAvailabilityZonesRequest
+     * @return UpgradeVersionToMultiAvailabilityZonesResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeVersionToMultiAvailabilityZonesResponse UpgradeVersionToMultiAvailabilityZones(UpgradeVersionToMultiAvailabilityZonesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpgradeVersionToMultiAvailabilityZonesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpgradeVersionToMultiAvailabilityZonesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpgradeVersionToMultiAvailabilityZones");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
