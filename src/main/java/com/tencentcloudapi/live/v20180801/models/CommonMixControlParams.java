@@ -39,6 +39,14 @@ If this parameter is set to 1, when both `InputStreamList` and `OutputParams.Out
     private Long AllowCopy;
 
     /**
+    * Valid values: 0, 1
+If you set this parameter to 1, SEI (Supplemental Enhanced Information) of the input streams will be passed through.
+    */
+    @SerializedName("PassInputSei")
+    @Expose
+    private Long PassInputSei;
+
+    /**
      * Get Value range: [0,1]. 
 If 1 is entered, when the layer resolution in the parameter is different from the actual video resolution, the video will be automatically cropped according to the resolution set by the layer. 
      * @return UseMixCropCenter Value range: [0,1]. 
@@ -79,11 +87,32 @@ If this parameter is set to 1, when both `InputStreamList` and `OutputParams.Out
     }
 
     /**
+     * Get Valid values: 0, 1
+If you set this parameter to 1, SEI (Supplemental Enhanced Information) of the input streams will be passed through. 
+     * @return PassInputSei Valid values: 0, 1
+If you set this parameter to 1, SEI (Supplemental Enhanced Information) of the input streams will be passed through.
+     */
+    public Long getPassInputSei() {
+        return this.PassInputSei;
+    }
+
+    /**
+     * Set Valid values: 0, 1
+If you set this parameter to 1, SEI (Supplemental Enhanced Information) of the input streams will be passed through.
+     * @param PassInputSei Valid values: 0, 1
+If you set this parameter to 1, SEI (Supplemental Enhanced Information) of the input streams will be passed through.
+     */
+    public void setPassInputSei(Long PassInputSei) {
+        this.PassInputSei = PassInputSei;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "UseMixCropCenter", this.UseMixCropCenter);
         this.setParamSimple(map, prefix + "AllowCopy", this.AllowCopy);
+        this.setParamSimple(map, prefix + "PassInputSei", this.PassInputSei);
 
     }
 }

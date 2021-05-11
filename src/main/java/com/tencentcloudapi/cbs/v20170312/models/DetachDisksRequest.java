@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DetachDisksRequest extends AbstractModel{
 
     /**
-    * ID of the cloud disk to be unmounted, which can be queried through the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1). A maximum of 10 elastic cloud disks can be unmounted in a single request.
+    * IDs of the cloud disks to be unmounted, which can be queried via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API. Up to 10 elastic cloud disks can be unmounted in a single request.
     */
     @SerializedName("DiskIds")
     @Expose
     private String [] DiskIds;
 
     /**
-    * For a cloud disk that is not shared, this parameter is ignored. For a shared cloud disk, this parameter indicates which CVM instance the cloud disk is to be unmounted from.
+    * Indicates the CVM from which you want to unmount the disks. This parameter is only available for shared cloud disks.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get ID of the cloud disk to be unmounted, which can be queried through the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1). A maximum of 10 elastic cloud disks can be unmounted in a single request. 
-     * @return DiskIds ID of the cloud disk to be unmounted, which can be queried through the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1). A maximum of 10 elastic cloud disks can be unmounted in a single request.
+     * Get IDs of the cloud disks to be unmounted, which can be queried via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API. Up to 10 elastic cloud disks can be unmounted in a single request. 
+     * @return DiskIds IDs of the cloud disks to be unmounted, which can be queried via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API. Up to 10 elastic cloud disks can be unmounted in a single request.
      */
     public String [] getDiskIds() {
         return this.DiskIds;
     }
 
     /**
-     * Set ID of the cloud disk to be unmounted, which can be queried through the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1). A maximum of 10 elastic cloud disks can be unmounted in a single request.
-     * @param DiskIds ID of the cloud disk to be unmounted, which can be queried through the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1). A maximum of 10 elastic cloud disks can be unmounted in a single request.
+     * Set IDs of the cloud disks to be unmounted, which can be queried via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API. Up to 10 elastic cloud disks can be unmounted in a single request.
+     * @param DiskIds IDs of the cloud disks to be unmounted, which can be queried via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API. Up to 10 elastic cloud disks can be unmounted in a single request.
      */
     public void setDiskIds(String [] DiskIds) {
         this.DiskIds = DiskIds;
     }
 
     /**
-     * Get For a cloud disk that is not shared, this parameter is ignored. For a shared cloud disk, this parameter indicates which CVM instance the cloud disk is to be unmounted from. 
-     * @return InstanceId For a cloud disk that is not shared, this parameter is ignored. For a shared cloud disk, this parameter indicates which CVM instance the cloud disk is to be unmounted from.
+     * Get Indicates the CVM from which you want to unmount the disks. This parameter is only available for shared cloud disks. 
+     * @return InstanceId Indicates the CVM from which you want to unmount the disks. This parameter is only available for shared cloud disks.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set For a cloud disk that is not shared, this parameter is ignored. For a shared cloud disk, this parameter indicates which CVM instance the cloud disk is to be unmounted from.
-     * @param InstanceId For a cloud disk that is not shared, this parameter is ignored. For a shared cloud disk, this parameter indicates which CVM instance the cloud disk is to be unmounted from.
+     * Set Indicates the CVM from which you want to unmount the disks. This parameter is only available for shared cloud disks.
+     * @param InstanceId Indicates the CVM from which you want to unmount the disks. This parameter is only available for shared cloud disks.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

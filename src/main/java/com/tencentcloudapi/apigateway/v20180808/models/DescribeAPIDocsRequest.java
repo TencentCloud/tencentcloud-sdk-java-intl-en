@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeServicesStatusRequest extends AbstractModel{
+public class DescribeAPIDocsRequest extends AbstractModel{
 
     /**
     * Number of results to be returned. Default value: 20. Maximum value: 100.
@@ -35,13 +35,6 @@ public class DescribeServicesStatusRequest extends AbstractModel{
     @SerializedName("Offset")
     @Expose
     private Long Offset;
-
-    /**
-    * Filter. Valid values: ServiceId, ServiceName, NotUsagePlanId, Environment, IpVersion, InstanceId
-    */
-    @SerializedName("Filters")
-    @Expose
-    private Filter [] Filters;
 
     /**
      * Get Number of results to be returned. Default value: 20. Maximum value: 100. 
@@ -76,28 +69,11 @@ public class DescribeServicesStatusRequest extends AbstractModel{
     }
 
     /**
-     * Get Filter. Valid values: ServiceId, ServiceName, NotUsagePlanId, Environment, IpVersion, InstanceId 
-     * @return Filters Filter. Valid values: ServiceId, ServiceName, NotUsagePlanId, Environment, IpVersion, InstanceId
-     */
-    public Filter [] getFilters() {
-        return this.Filters;
-    }
-
-    /**
-     * Set Filter. Valid values: ServiceId, ServiceName, NotUsagePlanId, Environment, IpVersion, InstanceId
-     * @param Filters Filter. Valid values: ServiceId, ServiceName, NotUsagePlanId, Environment, IpVersion, InstanceId
-     */
-    public void setFilters(Filter [] Filters) {
-        this.Filters = Filters;
-    }
-
-    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
-        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

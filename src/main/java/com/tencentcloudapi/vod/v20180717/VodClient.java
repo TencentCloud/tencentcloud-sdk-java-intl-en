@@ -1334,6 +1334,26 @@ This API returns the video content duration for intelligent recognition in secon
     }
 
     /**
+     *This API is used to query the list of VOD domain names.
+     * @param req DescribeVodDomainsRequest
+     * @return DescribeVodDomainsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVodDomainsResponse DescribeVodDomains(DescribeVodDomainsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVodDomainsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVodDomainsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeVodDomains");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query custom watermarking templates and supports paged queries by filters.
      * @param req DescribeWatermarkTemplatesRequest
      * @return DescribeWatermarkTemplatesResponse

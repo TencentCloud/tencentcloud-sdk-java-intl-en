@@ -44,7 +44,7 @@ public class CreateIPStrategyRequest extends AbstractModel{
     private String StrategyType;
 
     /**
-    * Policy details.
+    * Policy details. Multiple IPs are separated with \n.
     */
     @SerializedName("StrategyData")
     @Expose
@@ -99,16 +99,16 @@ public class CreateIPStrategyRequest extends AbstractModel{
     }
 
     /**
-     * Get Policy details. 
-     * @return StrategyData Policy details.
+     * Get Policy details. Multiple IPs are separated with \n. 
+     * @return StrategyData Policy details. Multiple IPs are separated with \n.
      */
     public String getStrategyData() {
         return this.StrategyData;
     }
 
     /**
-     * Set Policy details.
-     * @param StrategyData Policy details.
+     * Set Policy details. Multiple IPs are separated with \n.
+     * @param StrategyData Policy details. Multiple IPs are separated with \n.
      */
     public void setStrategyData(String StrategyData) {
         this.StrategyData = StrategyData;

@@ -243,6 +243,38 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     private Boolean SignLaw;
 
     /**
+    * Whether the connection is an edge zone.
+Note: this field may return `null`, indicating that no valid value is obtained.
+    */
+    @SerializedName("LocalZone")
+    @Expose
+    private Boolean LocalZone;
+
+    /**
+    * Number of dedicated tunnels with disabled VLAN in the connection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("VlanZeroDirectConnectTunnelCount")
+    @Expose
+    private Long VlanZeroDirectConnectTunnelCount;
+
+    /**
+    * Number of dedicated tunnels with enabled VLAN in the connection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("OtherVlanDirectConnectTunnelCount")
+    @Expose
+    private Long OtherVlanDirectConnectTunnelCount;
+
+    /**
+    * Minimum bandwidth of the connection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MinBandwidth")
+    @Expose
+    private Long MinBandwidth;
+
+    /**
      * Get Connection ID. 
      * @return DirectConnectId Connection ID.
      */
@@ -787,6 +819,86 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     }
 
     /**
+     * Get Whether the connection is an edge zone.
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return LocalZone Whether the connection is an edge zone.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public Boolean getLocalZone() {
+        return this.LocalZone;
+    }
+
+    /**
+     * Set Whether the connection is an edge zone.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param LocalZone Whether the connection is an edge zone.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public void setLocalZone(Boolean LocalZone) {
+        this.LocalZone = LocalZone;
+    }
+
+    /**
+     * Get Number of dedicated tunnels with disabled VLAN in the connection
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return VlanZeroDirectConnectTunnelCount Number of dedicated tunnels with disabled VLAN in the connection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getVlanZeroDirectConnectTunnelCount() {
+        return this.VlanZeroDirectConnectTunnelCount;
+    }
+
+    /**
+     * Set Number of dedicated tunnels with disabled VLAN in the connection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param VlanZeroDirectConnectTunnelCount Number of dedicated tunnels with disabled VLAN in the connection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setVlanZeroDirectConnectTunnelCount(Long VlanZeroDirectConnectTunnelCount) {
+        this.VlanZeroDirectConnectTunnelCount = VlanZeroDirectConnectTunnelCount;
+    }
+
+    /**
+     * Get Number of dedicated tunnels with enabled VLAN in the connection
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return OtherVlanDirectConnectTunnelCount Number of dedicated tunnels with enabled VLAN in the connection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getOtherVlanDirectConnectTunnelCount() {
+        return this.OtherVlanDirectConnectTunnelCount;
+    }
+
+    /**
+     * Set Number of dedicated tunnels with enabled VLAN in the connection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param OtherVlanDirectConnectTunnelCount Number of dedicated tunnels with enabled VLAN in the connection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setOtherVlanDirectConnectTunnelCount(Long OtherVlanDirectConnectTunnelCount) {
+        this.OtherVlanDirectConnectTunnelCount = OtherVlanDirectConnectTunnelCount;
+    }
+
+    /**
+     * Get Minimum bandwidth of the connection
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return MinBandwidth Minimum bandwidth of the connection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getMinBandwidth() {
+        return this.MinBandwidth;
+    }
+
+    /**
+     * Set Minimum bandwidth of the connection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param MinBandwidth Minimum bandwidth of the connection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setMinBandwidth(Long MinBandwidth) {
+        this.MinBandwidth = MinBandwidth;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -818,6 +930,10 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         this.setParamSimple(map, prefix + "ChargeState", this.ChargeState);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "SignLaw", this.SignLaw);
+        this.setParamSimple(map, prefix + "LocalZone", this.LocalZone);
+        this.setParamSimple(map, prefix + "VlanZeroDirectConnectTunnelCount", this.VlanZeroDirectConnectTunnelCount);
+        this.setParamSimple(map, prefix + "OtherVlanDirectConnectTunnelCount", this.OtherVlanDirectConnectTunnelCount);
+        this.setParamSimple(map, prefix + "MinBandwidth", this.MinBandwidth);
 
     }
 }

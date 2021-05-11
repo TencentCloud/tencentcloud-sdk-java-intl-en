@@ -82,14 +82,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private MediaMetaData MetaData;
 
     /**
-    * 
+    * The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * 
+    * ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
     */
     @SerializedName("SessionId")
     @Expose
@@ -248,32 +248,32 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get  
-     * @return SessionContext 
+     * Get The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters. 
+     * @return SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set 
-     * @param SessionContext 
+     * Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
+     * @param SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get  
-     * @return SessionId 
+     * Get ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed. 
+     * @return SessionId ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 
-     * @param SessionId 
+     * Set ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
+     * @param SessionId ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;

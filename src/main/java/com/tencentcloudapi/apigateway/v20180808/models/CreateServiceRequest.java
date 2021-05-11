@@ -86,6 +86,13 @@ public class CreateServiceRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * Dedicated instance ID
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
      * Get Custom service name. 
      * @return ServiceName Custom service name.
      */
@@ -230,6 +237,22 @@ public class CreateServiceRequest extends AbstractModel{
     }
 
     /**
+     * Get Dedicated instance ID 
+     * @return InstanceId Dedicated instance ID
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set Dedicated instance ID
+     * @param InstanceId Dedicated instance ID
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -242,6 +265,7 @@ public class CreateServiceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SetServerName", this.SetServerName);
         this.setParamSimple(map, prefix + "AppIdType", this.AppIdType);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

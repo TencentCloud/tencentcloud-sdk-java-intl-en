@@ -23,115 +23,140 @@ import java.util.HashMap;
 public class MediaSubtitleItem extends AbstractModel{
 
     /**
-    * 
+    * Unique subtitle ID
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 
+    * Subtitle name
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * Subtitle language. Common values:
+<li>`cn`: Chinese</li>
+<li>`ja`: Japanese</li>
+<li>`en-US`: English</li>
+For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
     */
     @SerializedName("Language")
     @Expose
     private String Language;
 
     /**
-    * 
+    * Subtitle format. Valid value:
+<li>vtt</li>
     */
     @SerializedName("Format")
     @Expose
     private String Format;
 
     /**
-    * 
+    * Subtitle URL
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-     * Get  
-     * @return Id 
+     * Get Unique subtitle ID 
+     * @return Id Unique subtitle ID
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 
-     * @param Id 
+     * Set Unique subtitle ID
+     * @param Id Unique subtitle ID
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get Subtitle name 
+     * @return Name Subtitle name
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Subtitle name
+     * @param Name Subtitle name
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Language 
+     * Get Subtitle language. Common values:
+<li>`cn`: Chinese</li>
+<li>`ja`: Japanese</li>
+<li>`en-US`: English</li>
+For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646). 
+     * @return Language Subtitle language. Common values:
+<li>`cn`: Chinese</li>
+<li>`ja`: Japanese</li>
+<li>`en-US`: English</li>
+For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
      */
     public String getLanguage() {
         return this.Language;
     }
 
     /**
-     * Set 
-     * @param Language 
+     * Set Subtitle language. Common values:
+<li>`cn`: Chinese</li>
+<li>`ja`: Japanese</li>
+<li>`en-US`: English</li>
+For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
+     * @param Language Subtitle language. Common values:
+<li>`cn`: Chinese</li>
+<li>`ja`: Japanese</li>
+<li>`en-US`: English</li>
+For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
      */
     public void setLanguage(String Language) {
         this.Language = Language;
     }
 
     /**
-     * Get  
-     * @return Format 
+     * Get Subtitle format. Valid value:
+<li>vtt</li> 
+     * @return Format Subtitle format. Valid value:
+<li>vtt</li>
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set 
-     * @param Format 
+     * Set Subtitle format. Valid value:
+<li>vtt</li>
+     * @param Format Subtitle format. Valid value:
+<li>vtt</li>
      */
     public void setFormat(String Format) {
         this.Format = Format;
     }
 
     /**
-     * Get  
-     * @return Url 
+     * Get Subtitle URL 
+     * @return Url Subtitle URL
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 
-     * @param Url 
+     * Set Subtitle URL
+     * @param Url Subtitle URL
      */
     public void setUrl(String Url) {
         this.Url = Url;

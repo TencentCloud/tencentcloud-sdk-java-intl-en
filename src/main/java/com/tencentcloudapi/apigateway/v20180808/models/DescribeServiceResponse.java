@@ -177,6 +177,30 @@ Note: this field may return null, indicating that no valid values found.
     private Tag [] Tags;
 
     /**
+    * Dedicated instance ID
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * Dedicated instance name
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("InstanceName")
+    @Expose
+    private String InstanceName;
+
+    /**
+    * Cluster type
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SetType")
+    @Expose
+    private String SetType;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -548,6 +572,66 @@ Note: this field may return null, indicating that no valid values found.
     }
 
     /**
+     * Get Dedicated instance ID
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return InstanceId Dedicated instance ID
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set Dedicated instance ID
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param InstanceId Dedicated instance ID
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get Dedicated instance name
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return InstanceName Dedicated instance name
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getInstanceName() {
+        return this.InstanceName;
+    }
+
+    /**
+     * Set Dedicated instance name
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param InstanceName Dedicated instance name
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setInstanceName(String InstanceName) {
+        this.InstanceName = InstanceName;
+    }
+
+    /**
+     * Get Cluster type
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return SetType Cluster type
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getSetType() {
+        return this.SetType;
+    }
+
+    /**
+     * Set Cluster type
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param SetType Cluster type
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSetType(String SetType) {
+        this.SetType = SetType;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -588,6 +672,9 @@ Note: this field may return null, indicating that no valid values found.
         this.setParamSimple(map, prefix + "UserType", this.UserType);
         this.setParamSimple(map, prefix + "SetId", this.SetId);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
+        this.setParamSimple(map, prefix + "SetType", this.SetType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

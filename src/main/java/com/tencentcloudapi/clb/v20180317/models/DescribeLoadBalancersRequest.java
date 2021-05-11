@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeLoadBalancersRequest extends AbstractModel{
 
     /**
-    * CLB instance ID.
+    * CLB instance ID
     */
     @SerializedName("LoadBalancerIds")
     @Expose
@@ -137,14 +137,14 @@ Basic network does not support queries by VpcId.
     private String VpcId;
 
     /**
-    * Security group ID, such as sg-m1cc9123
+    * Security group ID, e.g., `sg-m1cc****`.
     */
     @SerializedName("SecurityGroup")
     @Expose
     private String SecurityGroup;
 
     /**
-    * Master AZ, such as "100001" (Guangzhou Zone 1)
+    * Primary AZ ID, e.g., `100001` (Guangzhou Zone 1).
     */
     @SerializedName("MasterZone")
     @Expose
@@ -159,16 +159,16 @@ Basic network does not support queries by VpcId.
     private Filter [] Filters;
 
     /**
-     * Get CLB instance ID. 
-     * @return LoadBalancerIds CLB instance ID.
+     * Get CLB instance ID 
+     * @return LoadBalancerIds CLB instance ID
      */
     public String [] getLoadBalancerIds() {
         return this.LoadBalancerIds;
     }
 
     /**
-     * Set CLB instance ID.
-     * @param LoadBalancerIds CLB instance ID.
+     * Set CLB instance ID
+     * @param LoadBalancerIds CLB instance ID
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {
         this.LoadBalancerIds = LoadBalancerIds;
@@ -423,32 +423,32 @@ Basic network does not support queries by VpcId.
     }
 
     /**
-     * Get Security group ID, such as sg-m1cc9123 
-     * @return SecurityGroup Security group ID, such as sg-m1cc9123
+     * Get Security group ID, e.g., `sg-m1cc****`. 
+     * @return SecurityGroup Security group ID, e.g., `sg-m1cc****`.
      */
     public String getSecurityGroup() {
         return this.SecurityGroup;
     }
 
     /**
-     * Set Security group ID, such as sg-m1cc9123
-     * @param SecurityGroup Security group ID, such as sg-m1cc9123
+     * Set Security group ID, e.g., `sg-m1cc****`.
+     * @param SecurityGroup Security group ID, e.g., `sg-m1cc****`.
      */
     public void setSecurityGroup(String SecurityGroup) {
         this.SecurityGroup = SecurityGroup;
     }
 
     /**
-     * Get Master AZ, such as "100001" (Guangzhou Zone 1) 
-     * @return MasterZone Master AZ, such as "100001" (Guangzhou Zone 1)
+     * Get Primary AZ ID, e.g., `100001` (Guangzhou Zone 1). 
+     * @return MasterZone Primary AZ ID, e.g., `100001` (Guangzhou Zone 1).
      */
     public String getMasterZone() {
         return this.MasterZone;
     }
 
     /**
-     * Set Master AZ, such as "100001" (Guangzhou Zone 1)
-     * @param MasterZone Master AZ, such as "100001" (Guangzhou Zone 1)
+     * Set Primary AZ ID, e.g., `100001` (Guangzhou Zone 1).
+     * @param MasterZone Primary AZ ID, e.g., `100001` (Guangzhou Zone 1).
      */
     public void setMasterZone(String MasterZone) {
         this.MasterZone = MasterZone;

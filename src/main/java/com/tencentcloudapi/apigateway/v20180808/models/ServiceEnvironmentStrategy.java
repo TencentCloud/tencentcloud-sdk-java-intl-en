@@ -59,6 +59,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long Strategy;
 
     /**
+    * Maximum quota value
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MaxStrategy")
+    @Expose
+    private Long MaxStrategy;
+
+    /**
      * Get Environment name. 
      * @return EnvironmentName Environment name.
      */
@@ -143,6 +151,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Maximum quota value
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return MaxStrategy Maximum quota value
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getMaxStrategy() {
+        return this.MaxStrategy;
+    }
+
+    /**
+     * Set Maximum quota value
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param MaxStrategy Maximum quota value
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMaxStrategy(Long MaxStrategy) {
+        this.MaxStrategy = MaxStrategy;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -151,6 +179,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "VersionName", this.VersionName);
         this.setParamSimple(map, prefix + "Strategy", this.Strategy);
+        this.setParamSimple(map, prefix + "MaxStrategy", this.MaxStrategy);
 
     }
 }

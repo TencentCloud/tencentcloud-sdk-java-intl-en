@@ -39,6 +39,13 @@ Default value: 10.
     private Long PageSize;
 
     /**
+    * The stream name to search for
+    */
+    @SerializedName("StreamName")
+    @Expose
+    private String StreamName;
+
+    /**
      * Get Page number to get. Default value: 1. 
      * @return PageNum Page number to get. Default value: 1.
      */
@@ -79,11 +86,28 @@ Default value: 10.
     }
 
     /**
+     * Get The stream name to search for 
+     * @return StreamName The stream name to search for
+     */
+    public String getStreamName() {
+        return this.StreamName;
+    }
+
+    /**
+     * Set The stream name to search for
+     * @param StreamName The stream name to search for
+     */
+    public void setStreamName(String StreamName) {
+        this.StreamName = StreamName;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PageNum", this.PageNum);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamSimple(map, prefix + "StreamName", this.StreamName);
 
     }
 }

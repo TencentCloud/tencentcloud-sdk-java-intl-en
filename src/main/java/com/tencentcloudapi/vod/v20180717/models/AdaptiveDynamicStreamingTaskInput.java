@@ -38,6 +38,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private WatermarkInput [] WatermarkSet;
 
     /**
+    * List of subtitle IDs (maximum: 10)
+    */
+    @SerializedName("SubtitleSet")
+    @Expose
+    private String [] SubtitleSet;
+
+    /**
      * Get Adaptive bitrate streaming template ID. 
      * @return Definition Adaptive bitrate streaming template ID.
      */
@@ -74,11 +81,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get List of subtitle IDs (maximum: 10) 
+     * @return SubtitleSet List of subtitle IDs (maximum: 10)
+     */
+    public String [] getSubtitleSet() {
+        return this.SubtitleSet;
+    }
+
+    /**
+     * Set List of subtitle IDs (maximum: 10)
+     * @param SubtitleSet List of subtitle IDs (maximum: 10)
+     */
+    public void setSubtitleSet(String [] SubtitleSet) {
+        this.SubtitleSet = SubtitleSet;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
+        this.setParamArraySimple(map, prefix + "SubtitleSet.", this.SubtitleSet);
 
     }
 }

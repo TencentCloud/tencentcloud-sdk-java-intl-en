@@ -119,8 +119,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private MediaSourceData SourceInfo;
 
     /**
-    * Storage region of media file, such as ap-guangzhou. For more information, please see [Region List](https://intl.cloud.tencent.com/document/api/213/15692?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Region](https://intl.cloud.tencent.com/document/product/266/9760).
     */
     @SerializedName("StorageRegion")
     @Expose
@@ -159,6 +158,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     @SerializedName("Status")
     @Expose
     private String Status;
+
+    /**
+    * 
+    */
+    @SerializedName("StorageClass")
+    @Expose
+    private String StorageClass;
 
     /**
      * Get Media filename.
@@ -401,20 +407,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Storage region of media file, such as ap-guangzhou. For more information, please see [Region List](https://intl.cloud.tencent.com/document/api/213/15692?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return StorageRegion Storage region of media file, such as ap-guangzhou. For more information, please see [Region List](https://intl.cloud.tencent.com/document/api/213/15692?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Region](https://intl.cloud.tencent.com/document/product/266/9760). 
+     * @return StorageRegion Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Region](https://intl.cloud.tencent.com/document/product/266/9760).
      */
     public String getStorageRegion() {
         return this.StorageRegion;
     }
 
     /**
-     * Set Storage region of media file, such as ap-guangzhou. For more information, please see [Region List](https://intl.cloud.tencent.com/document/api/213/15692?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param StorageRegion Storage region of media file, such as ap-guangzhou. For more information, please see [Region List](https://intl.cloud.tencent.com/document/api/213/15692?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Region](https://intl.cloud.tencent.com/document/product/266/9760).
+     * @param StorageRegion Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Region](https://intl.cloud.tencent.com/document/product/266/9760).
      */
     public void setStorageRegion(String StorageRegion) {
         this.StorageRegion = StorageRegion;
@@ -509,6 +511,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get  
+     * @return StorageClass 
+     */
+    public String getStorageClass() {
+        return this.StorageClass;
+    }
+
+    /**
+     * Set 
+     * @param StorageClass 
+     */
+    public void setStorageClass(String StorageClass) {
+        this.StorageClass = StorageClass;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -529,6 +547,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Vid", this.Vid);
         this.setParamSimple(map, prefix + "Category", this.Category);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "StorageClass", this.StorageClass);
 
     }
 }

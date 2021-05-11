@@ -123,6 +123,46 @@ Each service in API Gateway provides a default domain name for users to call. If
     }
 
     /**
+     *This API is used to build an API document.
+     * @param req BuildAPIDocRequest
+     * @return BuildAPIDocResponse
+     * @throws TencentCloudSDKException
+     */
+    public BuildAPIDocResponse BuildAPIDoc(BuildAPIDocRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BuildAPIDocResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BuildAPIDocResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BuildAPIDoc");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create an API document.
+     * @param req CreateAPIDocRequest
+     * @return CreateAPIDocResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAPIDocResponse CreateAPIDoc(CreateAPIDocRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAPIDocResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAPIDocResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAPIDoc");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create an API. Before creating an API, you need to create a service, as each API belongs to a certain service.
      * @param req CreateApiRequest
      * @return CreateApiResponse
@@ -217,6 +257,26 @@ To use API Gateway, you need to create a usage plan and bind it to a service env
                 Type type = new TypeToken<JsonResponseModel<CreateUsagePlanResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateUsagePlan");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete an API document.
+     * @param req DeleteAPIDocRequest
+     * @return DeleteAPIDocResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAPIDocResponse DeleteAPIDoc(DeleteAPIDocRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAPIDocResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAPIDocResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteAPIDoc");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -360,6 +420,46 @@ This operation will also be denied if the current environment has not been publi
                 Type type = new TypeToken<JsonResponseModel<DemoteServiceUsagePlanResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DemoteServiceUsagePlan");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the details of an API document.
+     * @param req DescribeAPIDocDetailRequest
+     * @return DescribeAPIDocDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAPIDocDetailResponse DescribeAPIDocDetail(DescribeAPIDocDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAPIDocDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAPIDocDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAPIDocDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of API documents.
+     * @param req DescribeAPIDocsRequest
+     * @return DescribeAPIDocsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAPIDocsResponse DescribeAPIDocs(DescribeAPIDocsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAPIDocsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAPIDocsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAPIDocs");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -898,6 +998,26 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
     }
 
     /**
+     *This API is used to modify an API document.
+     * @param req ModifyAPIDocRequest
+     * @return ModifyAPIDocResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAPIDocResponse ModifyAPIDoc(ModifyAPIDocRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAPIDocResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAPIDocResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAPIDoc");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify an API. You can call this API to edit/modify a configured API. The modified API takes effect only after its service is published to the corresponding environment again.
      * @param req ModifyApiRequest
      * @return ModifyApiResponse
@@ -1071,6 +1191,26 @@ An API Gateway service can only be called when it is published to an environment
                 Type type = new TypeToken<JsonResponseModel<ReleaseServiceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ReleaseService");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to reset the password of an API document.
+     * @param req ResetAPIDocPasswordRequest
+     * @return ResetAPIDocPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetAPIDocPasswordResponse ResetAPIDocPassword(ResetAPIDocPasswordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ResetAPIDocPasswordResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ResetAPIDocPasswordResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ResetAPIDocPassword");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

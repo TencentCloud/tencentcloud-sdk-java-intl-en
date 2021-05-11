@@ -103,6 +103,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private MediaMiniProgramReviewInfo MiniProgramReviewInfo;
 
     /**
+    * Subtitle information
+Note: this field may return `null`, indicating that no valid value is obtained.
+    */
+    @SerializedName("SubtitleInfo")
+    @Expose
+    private MediaSubtitleInfo SubtitleInfo;
+
+    /**
     * Unique ID of media file.
     */
     @SerializedName("FileId")
@@ -310,6 +318,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Subtitle information
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return SubtitleInfo Subtitle information
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public MediaSubtitleInfo getSubtitleInfo() {
+        return this.SubtitleInfo;
+    }
+
+    /**
+     * Set Subtitle information
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param SubtitleInfo Subtitle information
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public void setSubtitleInfo(MediaSubtitleInfo SubtitleInfo) {
+        this.SubtitleInfo = SubtitleInfo;
+    }
+
+    /**
      * Get Unique ID of media file. 
      * @return FileId Unique ID of media file.
      */
@@ -339,6 +367,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "KeyFrameDescInfo.", this.KeyFrameDescInfo);
         this.setParamObj(map, prefix + "AdaptiveDynamicStreamingInfo.", this.AdaptiveDynamicStreamingInfo);
         this.setParamObj(map, prefix + "MiniProgramReviewInfo.", this.MiniProgramReviewInfo);
+        this.setParamObj(map, prefix + "SubtitleInfo.", this.SubtitleInfo);
         this.setParamSimple(map, prefix + "FileId", this.FileId);
 
     }

@@ -72,7 +72,7 @@ public class ModifyApiRequest extends AbstractModel{
     private String ApiType;
 
     /**
-    * API authentication type. Valid values: SECRET, NONE, OAUTH. Default value: NONE.
+    * API authentication type. Valid values: SECRET, NONE, OAUTH, APP. Default value: NONE.
     */
     @SerializedName("AuthType")
     @Expose
@@ -471,16 +471,16 @@ public class ModifyApiRequest extends AbstractModel{
     }
 
     /**
-     * Get API authentication type. Valid values: SECRET, NONE, OAUTH. Default value: NONE. 
-     * @return AuthType API authentication type. Valid values: SECRET, NONE, OAUTH. Default value: NONE.
+     * Get API authentication type. Valid values: SECRET, NONE, OAUTH, APP. Default value: NONE. 
+     * @return AuthType API authentication type. Valid values: SECRET, NONE, OAUTH, APP. Default value: NONE.
      */
     public String getAuthType() {
         return this.AuthType;
     }
 
     /**
-     * Set API authentication type. Valid values: SECRET, NONE, OAUTH. Default value: NONE.
-     * @param AuthType API authentication type. Valid values: SECRET, NONE, OAUTH. Default value: NONE.
+     * Set API authentication type. Valid values: SECRET, NONE, OAUTH, APP. Default value: NONE.
+     * @param AuthType API authentication type. Valid values: SECRET, NONE, OAUTH, APP. Default value: NONE.
      */
     public void setAuthType(String AuthType) {
         this.AuthType = AuthType;

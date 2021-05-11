@@ -30,6 +30,14 @@ public class DescribeClusterEndpointStatusResponse extends AbstractModel{
     private String Status;
 
     /**
+    * Details of the error occurred while opening the access port
+Note: this field may return `null`, indicating that no valid value is obtained.
+    */
+    @SerializedName("ErrorMsg")
+    @Expose
+    private String ErrorMsg;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -53,6 +61,26 @@ public class DescribeClusterEndpointStatusResponse extends AbstractModel{
     }
 
     /**
+     * Get Details of the error occurred while opening the access port
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return ErrorMsg Details of the error occurred while opening the access port
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public String getErrorMsg() {
+        return this.ErrorMsg;
+    }
+
+    /**
+     * Set Details of the error occurred while opening the access port
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param ErrorMsg Details of the error occurred while opening the access port
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public void setErrorMsg(String ErrorMsg) {
+        this.ErrorMsg = ErrorMsg;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -73,6 +101,7 @@ public class DescribeClusterEndpointStatusResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

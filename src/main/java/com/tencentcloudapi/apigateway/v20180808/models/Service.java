@@ -151,6 +151,22 @@ Note: this field may return null, indicating that no valid values found.
     private Tag [] Tags;
 
     /**
+    * Dedicated instance
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * Cluster type
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SetType")
+    @Expose
+    private String SetType;
+
+    /**
      * Get Port for HTTPS access over private network.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return InnerHttpsPort Port for HTTPS access over private network.
@@ -471,6 +487,46 @@ Note: this field may return null, indicating that no valid values found.
     }
 
     /**
+     * Get Dedicated instance
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return InstanceId Dedicated instance
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set Dedicated instance
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param InstanceId Dedicated instance
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get Cluster type
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return SetType Cluster type
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getSetType() {
+        return this.SetType;
+    }
+
+    /**
+     * Set Cluster type
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param SetType Cluster type
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSetType(String SetType) {
+        this.SetType = SetType;
+    }
+
+    /**
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
@@ -490,6 +546,8 @@ Note: this field may return null, indicating that no valid values found.
         this.setParamSimple(map, prefix + "InnerSubDomain", this.InnerSubDomain);
         this.setParamSimple(map, prefix + "TradeIsolateStatus", this.TradeIsolateStatus);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "SetType", this.SetType);
 
     }
 }
