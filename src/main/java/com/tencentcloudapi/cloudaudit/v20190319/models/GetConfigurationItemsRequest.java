@@ -183,6 +183,38 @@ public class GetConfigurationItemsRequest extends AbstractModel{
         this.EndTime = EndTime;
     }
 
+    public GetConfigurationItemsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetConfigurationItemsRequest(GetConfigurationItemsRequest source) {
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+        if (source.ChronologicalOrder != null) {
+            this.ChronologicalOrder = new String(source.ChronologicalOrder);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.DiffMode != null) {
+            this.DiffMode = new Boolean(source.DiffMode);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

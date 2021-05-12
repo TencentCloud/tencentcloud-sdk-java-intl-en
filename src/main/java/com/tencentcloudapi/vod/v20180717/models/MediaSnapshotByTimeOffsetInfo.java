@@ -50,6 +50,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.SnapshotByTimeOffsetSet = SnapshotByTimeOffsetSet;
     }
 
+    public MediaSnapshotByTimeOffsetInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaSnapshotByTimeOffsetInfo(MediaSnapshotByTimeOffsetInfo source) {
+        if (source.SnapshotByTimeOffsetSet != null) {
+            this.SnapshotByTimeOffsetSet = new MediaSnapshotByTimeOffsetItem[source.SnapshotByTimeOffsetSet.length];
+            for (int i = 0; i < source.SnapshotByTimeOffsetSet.length; i++) {
+                this.SnapshotByTimeOffsetSet[i] = new MediaSnapshotByTimeOffsetItem(source.SnapshotByTimeOffsetSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

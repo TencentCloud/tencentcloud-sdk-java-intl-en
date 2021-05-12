@@ -159,6 +159,29 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.Iv = Iv;
     }
 
+    public DrmKey() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DrmKey(DrmKey source) {
+        if (source.Key != null) {
+            this.Key = new String(source.Key);
+        }
+        if (source.Track != null) {
+            this.Track = new String(source.Track);
+        }
+        if (source.KeyId != null) {
+            this.KeyId = new String(source.KeyId);
+        }
+        if (source.Iv != null) {
+            this.Iv = new String(source.Iv);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

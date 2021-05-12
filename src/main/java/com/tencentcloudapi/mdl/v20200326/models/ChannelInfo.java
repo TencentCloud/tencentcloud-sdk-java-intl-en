@@ -193,6 +193,50 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.VideoTemplates = VideoTemplates;
     }
 
+    public ChannelInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ChannelInfo(ChannelInfo source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.AttachedInputs != null) {
+            this.AttachedInputs = new AttachedInputInfo[source.AttachedInputs.length];
+            for (int i = 0; i < source.AttachedInputs.length; i++) {
+                this.AttachedInputs[i] = new AttachedInputInfo(source.AttachedInputs[i]);
+            }
+        }
+        if (source.OutputGroups != null) {
+            this.OutputGroups = new OutputGroupsInfo[source.OutputGroups.length];
+            for (int i = 0; i < source.OutputGroups.length; i++) {
+                this.OutputGroups[i] = new OutputGroupsInfo(source.OutputGroups[i]);
+            }
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.AudioTemplates != null) {
+            this.AudioTemplates = new AudioTemplateInfo[source.AudioTemplates.length];
+            for (int i = 0; i < source.AudioTemplates.length; i++) {
+                this.AudioTemplates[i] = new AudioTemplateInfo(source.AudioTemplates[i]);
+            }
+        }
+        if (source.VideoTemplates != null) {
+            this.VideoTemplates = new VideoTemplateInfo[source.VideoTemplates.length];
+            for (int i = 0; i < source.VideoTemplates.length; i++) {
+                this.VideoTemplates[i] = new VideoTemplateInfo(source.VideoTemplates[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

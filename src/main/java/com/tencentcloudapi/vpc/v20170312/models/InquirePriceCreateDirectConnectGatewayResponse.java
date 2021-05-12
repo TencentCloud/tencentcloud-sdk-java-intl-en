@@ -101,6 +101,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.RequestId = RequestId;
     }
 
+    public InquirePriceCreateDirectConnectGatewayResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InquirePriceCreateDirectConnectGatewayResponse(InquirePriceCreateDirectConnectGatewayResponse source) {
+        if (source.TotalCost != null) {
+            this.TotalCost = new Long(source.TotalCost);
+        }
+        if (source.RealTotalCost != null) {
+            this.RealTotalCost = new Long(source.RealTotalCost);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

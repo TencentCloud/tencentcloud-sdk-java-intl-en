@@ -303,6 +303,56 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.RequestId = RequestId;
     }
 
+    public DescribeRecorderResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRecorderResponse(DescribeRecorderResponse source) {
+        if (source.Enable != null) {
+            this.Enable = new Boolean(source.Enable);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.LastErrorMessage != null) {
+            this.LastErrorMessage = new String(source.LastErrorMessage);
+        }
+        if (source.LastStatus != null) {
+            this.LastStatus = new String(source.LastStatus);
+        }
+        if (source.ResourceTypes != null) {
+            this.ResourceTypes = new RecordResourceType[source.ResourceTypes.length];
+            for (int i = 0; i < source.ResourceTypes.length; i++) {
+                this.ResourceTypes[i] = new RecordResourceType(source.ResourceTypes[i]);
+            }
+        }
+        if (source.LastStartTime != null) {
+            this.LastStartTime = new String(source.LastStartTime);
+        }
+        if (source.LastErrorCode != null) {
+            this.LastErrorCode = new String(source.LastErrorCode);
+        }
+        if (source.LastStopTime != null) {
+            this.LastStopTime = new String(source.LastStopTime);
+        }
+        if (source.AllSupported != null) {
+            this.AllSupported = new Boolean(source.AllSupported);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.Role != null) {
+            this.Role = new String(source.Role);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

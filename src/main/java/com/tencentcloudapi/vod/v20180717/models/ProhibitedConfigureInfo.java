@@ -78,6 +78,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.OcrReviewInfo = OcrReviewInfo;
     }
 
+    public ProhibitedConfigureInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ProhibitedConfigureInfo(ProhibitedConfigureInfo source) {
+        if (source.AsrReviewInfo != null) {
+            this.AsrReviewInfo = new ProhibitedAsrReviewTemplateInfo(source.AsrReviewInfo);
+        }
+        if (source.OcrReviewInfo != null) {
+            this.OcrReviewInfo = new ProhibitedOcrReviewTemplateInfo(source.OcrReviewInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

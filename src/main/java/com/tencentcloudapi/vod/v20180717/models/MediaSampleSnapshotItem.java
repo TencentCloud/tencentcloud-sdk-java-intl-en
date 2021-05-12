@@ -182,6 +182,38 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.WaterMarkDefinition = WaterMarkDefinition;
     }
 
+    public MediaSampleSnapshotItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaSampleSnapshotItem(MediaSampleSnapshotItem source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.SampleType != null) {
+            this.SampleType = new String(source.SampleType);
+        }
+        if (source.Interval != null) {
+            this.Interval = new Long(source.Interval);
+        }
+        if (source.ImageUrlSet != null) {
+            this.ImageUrlSet = new String[source.ImageUrlSet.length];
+            for (int i = 0; i < source.ImageUrlSet.length; i++) {
+                this.ImageUrlSet[i] = new String(source.ImageUrlSet[i]);
+            }
+        }
+        if (source.WaterMarkDefinition != null) {
+            this.WaterMarkDefinition = new Long[source.WaterMarkDefinition.length];
+            for (int i = 0; i < source.WaterMarkDefinition.length; i++) {
+                this.WaterMarkDefinition[i] = new Long(source.WaterMarkDefinition[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

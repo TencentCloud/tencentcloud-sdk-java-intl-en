@@ -68,6 +68,23 @@ public class AudioSelectorInfo extends AbstractModel{
         this.AudioPidSelection = AudioPidSelection;
     }
 
+    public AudioSelectorInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AudioSelectorInfo(AudioSelectorInfo source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.AudioPidSelection != null) {
+            this.AudioPidSelection = new AudioPidSelectionInfo(source.AudioPidSelection);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

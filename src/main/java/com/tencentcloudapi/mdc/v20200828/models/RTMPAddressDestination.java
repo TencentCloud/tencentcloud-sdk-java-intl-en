@@ -68,6 +68,23 @@ public class RTMPAddressDestination extends AbstractModel{
         this.StreamKey = StreamKey;
     }
 
+    public RTMPAddressDestination() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RTMPAddressDestination(RTMPAddressDestination source) {
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.StreamKey != null) {
+            this.StreamKey = new String(source.StreamKey);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

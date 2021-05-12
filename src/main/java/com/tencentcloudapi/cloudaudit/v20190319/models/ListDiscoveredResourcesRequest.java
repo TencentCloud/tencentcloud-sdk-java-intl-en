@@ -160,6 +160,35 @@ public class ListDiscoveredResourcesRequest extends AbstractModel{
         this.IsDeleted = IsDeleted;
     }
 
+    public ListDiscoveredResourcesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListDiscoveredResourcesRequest(ListDiscoveredResourcesRequest source) {
+        if (source.ResourceType != null) {
+            this.ResourceType = new String(source.ResourceType);
+        }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.ResourceRegion != null) {
+            this.ResourceRegion = new String(source.ResourceRegion);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.IsDeleted != null) {
+            this.IsDeleted = new Boolean(source.IsDeleted);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -73,6 +73,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.OcrReviewInfo = OcrReviewInfo;
     }
 
+    public TerrorismConfigureInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TerrorismConfigureInfo(TerrorismConfigureInfo source) {
+        if (source.ImgReviewInfo != null) {
+            this.ImgReviewInfo = new TerrorismImgReviewTemplateInfo(source.ImgReviewInfo);
+        }
+        if (source.OcrReviewInfo != null) {
+            this.OcrReviewInfo = new TerrorismOcrReviewTemplateInfo(source.OcrReviewInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -50,6 +50,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.ImageSpriteSet = ImageSpriteSet;
     }
 
+    public MediaImageSpriteInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaImageSpriteInfo(MediaImageSpriteInfo source) {
+        if (source.ImageSpriteSet != null) {
+            this.ImageSpriteSet = new MediaImageSpriteItem[source.ImageSpriteSet.length];
+            for (int i = 0; i < source.ImageSpriteSet.length; i++) {
+                this.ImageSpriteSet[i] = new MediaImageSpriteItem(source.ImageSpriteSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -139,6 +139,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.Keys = Keys;
     }
 
+    public DrmSettingsInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DrmSettingsInfo(DrmSettingsInfo source) {
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.ContentId != null) {
+            this.ContentId = new String(source.ContentId);
+        }
+        if (source.Scheme != null) {
+            this.Scheme = new String(source.Scheme);
+        }
+        if (source.Keys != null) {
+            this.Keys = new DrmKey[source.Keys.length];
+            for (int i = 0; i < source.Keys.length; i++) {
+                this.Keys[i] = new DrmKey(source.Keys[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

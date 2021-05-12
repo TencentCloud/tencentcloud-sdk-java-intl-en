@@ -337,6 +337,47 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.WechatUrl = WechatUrl;
     }
 
+    public WechatPublishTask() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WechatPublishTask(WechatPublishTask source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.ErrCode != null) {
+            this.ErrCode = new Long(source.ErrCode);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.SourceDefinition != null) {
+            this.SourceDefinition = new Long(source.SourceDefinition);
+        }
+        if (source.WechatStatus != null) {
+            this.WechatStatus = new String(source.WechatStatus);
+        }
+        if (source.WechatVid != null) {
+            this.WechatVid = new String(source.WechatVid);
+        }
+        if (source.WechatUrl != null) {
+            this.WechatUrl = new String(source.WechatUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -45,6 +45,20 @@ public class DescribeMediaLiveChannelAlertsRequest extends AbstractModel{
         this.ChannelId = ChannelId;
     }
 
+    public DescribeMediaLiveChannelAlertsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeMediaLiveChannelAlertsRequest(DescribeMediaLiveChannelAlertsRequest source) {
+        if (source.ChannelId != null) {
+            this.ChannelId = new String(source.ChannelId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

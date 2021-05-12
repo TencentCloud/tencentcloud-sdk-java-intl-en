@@ -162,6 +162,32 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.BackupSecretKey = BackupSecretKey;
     }
 
+    public AdvancedAuthenticationTypeF() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AdvancedAuthenticationTypeF(AdvancedAuthenticationTypeF source) {
+        if (source.SignParam != null) {
+            this.SignParam = new String(source.SignParam);
+        }
+        if (source.TimeParam != null) {
+            this.TimeParam = new String(source.TimeParam);
+        }
+        if (source.TransactionParam != null) {
+            this.TransactionParam = new String(source.TransactionParam);
+        }
+        if (source.SecretKey != null) {
+            this.SecretKey = new String(source.SecretKey);
+        }
+        if (source.BackupSecretKey != null) {
+            this.BackupSecretKey = new String(source.BackupSecretKey);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

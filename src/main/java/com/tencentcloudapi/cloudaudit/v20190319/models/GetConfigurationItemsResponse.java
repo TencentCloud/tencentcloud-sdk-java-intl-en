@@ -96,6 +96,29 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.RequestId = RequestId;
     }
 
+    public GetConfigurationItemsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetConfigurationItemsResponse(GetConfigurationItemsResponse source) {
+        if (source.ConfigurationItems != null) {
+            this.ConfigurationItems = new ConfigurationItems[source.ConfigurationItems.length];
+            for (int i = 0; i < source.ConfigurationItems.length; i++) {
+                this.ConfigurationItems[i] = new ConfigurationItems(source.ConfigurationItems[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

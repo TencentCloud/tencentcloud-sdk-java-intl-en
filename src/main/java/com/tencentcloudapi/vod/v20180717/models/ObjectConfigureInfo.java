@@ -98,6 +98,23 @@ Default value: All, i.e., both default and custom object libraries will be used.
         this.ObjectLibrary = ObjectLibrary;
     }
 
+    public ObjectConfigureInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ObjectConfigureInfo(ObjectConfigureInfo source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.ObjectLibrary != null) {
+            this.ObjectLibrary = new String(source.ObjectLibrary);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

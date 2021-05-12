@@ -114,6 +114,29 @@ public class HlsRemuxSettingsInfo extends AbstractModel{
         this.PdtDuration = PdtDuration;
     }
 
+    public HlsRemuxSettingsInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HlsRemuxSettingsInfo(HlsRemuxSettingsInfo source) {
+        if (source.SegmentDuration != null) {
+            this.SegmentDuration = new Long(source.SegmentDuration);
+        }
+        if (source.SegmentNumber != null) {
+            this.SegmentNumber = new Long(source.SegmentNumber);
+        }
+        if (source.PdtInsertion != null) {
+            this.PdtInsertion = new String(source.PdtInsertion);
+        }
+        if (source.PdtDuration != null) {
+            this.PdtDuration = new Long(source.PdtDuration);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

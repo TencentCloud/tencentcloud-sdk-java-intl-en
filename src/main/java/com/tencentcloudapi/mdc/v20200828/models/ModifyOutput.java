@@ -183,6 +183,38 @@ public class ModifyOutput extends AbstractModel{
         this.RTMPSettings = RTMPSettings;
     }
 
+    public ModifyOutput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyOutput(ModifyOutput source) {
+        if (source.OutputId != null) {
+            this.OutputId = new String(source.OutputId);
+        }
+        if (source.OutputName != null) {
+            this.OutputName = new String(source.OutputName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.SRTSettings != null) {
+            this.SRTSettings = new CreateOutputSrtSettings(source.SRTSettings);
+        }
+        if (source.RTPSettings != null) {
+            this.RTPSettings = new CreateOutputRTPSettings(source.RTPSettings);
+        }
+        if (source.RTMPSettings != null) {
+            this.RTMPSettings = new CreateOutputRTMPSettings(source.RTMPSettings);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

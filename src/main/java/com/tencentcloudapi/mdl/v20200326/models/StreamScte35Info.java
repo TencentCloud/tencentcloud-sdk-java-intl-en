@@ -50,6 +50,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.Pid = Pid;
     }
 
+    public StreamScte35Info() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StreamScte35Info(StreamScte35Info source) {
+        if (source.Pid != null) {
+            this.Pid = new Long(source.Pid);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

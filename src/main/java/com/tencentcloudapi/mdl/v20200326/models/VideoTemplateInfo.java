@@ -206,6 +206,41 @@ public class VideoTemplateInfo extends AbstractModel{
         this.BitrateCompressionRatio = BitrateCompressionRatio;
     }
 
+    public VideoTemplateInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VideoTemplateInfo(VideoTemplateInfo source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Vcodec != null) {
+            this.Vcodec = new String(source.Vcodec);
+        }
+        if (source.VideoBitrate != null) {
+            this.VideoBitrate = new Long(source.VideoBitrate);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.Fps != null) {
+            this.Fps = new Long(source.Fps);
+        }
+        if (source.TopSpeed != null) {
+            this.TopSpeed = new String(source.TopSpeed);
+        }
+        if (source.BitrateCompressionRatio != null) {
+            this.BitrateCompressionRatio = new Long(source.BitrateCompressionRatio);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

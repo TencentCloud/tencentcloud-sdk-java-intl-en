@@ -129,6 +129,29 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.Password = Password;
     }
 
+    public DestinationInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DestinationInfo(DestinationInfo source) {
+        if (source.OutputUrl != null) {
+            this.OutputUrl = new String(source.OutputUrl);
+        }
+        if (source.AuthKey != null) {
+            this.AuthKey = new String(source.AuthKey);
+        }
+        if (source.Username != null) {
+            this.Username = new String(source.Username);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

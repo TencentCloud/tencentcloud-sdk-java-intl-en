@@ -106,6 +106,26 @@ Note: `null` may be returned for this field, indicating that no valid values can
         this.ModTimeStamp = ModTimeStamp;
     }
 
+    public TopicRetentionTimeConfigRsp() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public TopicRetentionTimeConfigRsp(TopicRetentionTimeConfigRsp source) {
+        if (source.Expect != null) {
+            this.Expect = new Long(source.Expect);
+        }
+        if (source.Current != null) {
+            this.Current = new Long(source.Current);
+        }
+        if (source.ModTimeStamp != null) {
+            this.ModTimeStamp = new Long(source.ModTimeStamp);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

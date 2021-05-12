@@ -45,6 +45,20 @@ public class DescribeAllStreamPlayInfoListRequest extends AbstractModel{
         this.QueryTime = QueryTime;
     }
 
+    public DescribeAllStreamPlayInfoListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeAllStreamPlayInfoListRequest(DescribeAllStreamPlayInfoListRequest source) {
+        if (source.QueryTime != null) {
+            this.QueryTime = new String(source.QueryTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

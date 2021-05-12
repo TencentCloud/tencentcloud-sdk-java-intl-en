@@ -91,6 +91,26 @@ public class ModifyMediaPackageChannelRequest extends AbstractModel{
         this.Protocol = Protocol;
     }
 
+    public ModifyMediaPackageChannelRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyMediaPackageChannelRequest(ModifyMediaPackageChannelRequest source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

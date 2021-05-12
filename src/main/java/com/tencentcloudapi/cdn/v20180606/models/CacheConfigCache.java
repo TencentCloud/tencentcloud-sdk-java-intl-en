@@ -222,6 +222,32 @@ Note: this field may return null, indicating that no valid value is obtained.
         this.IgnoreSetCookie = IgnoreSetCookie;
     }
 
+    public CacheConfigCache() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CacheConfigCache(CacheConfigCache source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.CacheTime != null) {
+            this.CacheTime = new Long(source.CacheTime);
+        }
+        if (source.CompareMaxAge != null) {
+            this.CompareMaxAge = new String(source.CompareMaxAge);
+        }
+        if (source.IgnoreCacheControl != null) {
+            this.IgnoreCacheControl = new String(source.IgnoreCacheControl);
+        }
+        if (source.IgnoreSetCookie != null) {
+            this.IgnoreSetCookie = new String(source.IgnoreSetCookie);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -111,6 +111,26 @@ If you need to verify whether the faces in the two images are the same person, w
         this.RequestId = RequestId;
     }
 
+    public CompareFaceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CompareFaceResponse(CompareFaceResponse source) {
+        if (source.Score != null) {
+            this.Score = new Float(source.Score);
+        }
+        if (source.FaceModelVersion != null) {
+            this.FaceModelVersion = new String(source.FaceModelVersion);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

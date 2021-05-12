@@ -194,6 +194,35 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         this.RulePaths = RulePaths;
     }
 
+    public IpFilterPathRule() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public IpFilterPathRule(IpFilterPathRule source) {
+        if (source.FilterType != null) {
+            this.FilterType = new String(source.FilterType);
+        }
+        if (source.Filters != null) {
+            this.Filters = new String[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new String(source.Filters[i]);
+            }
+        }
+        if (source.RuleType != null) {
+            this.RuleType = new String(source.RuleType);
+        }
+        if (source.RulePaths != null) {
+            this.RulePaths = new String[source.RulePaths.length];
+            for (int i = 0; i < source.RulePaths.length; i++) {
+                this.RulePaths[i] = new String(source.RulePaths[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

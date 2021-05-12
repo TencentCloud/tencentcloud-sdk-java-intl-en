@@ -50,6 +50,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.StreamInfo = StreamInfo;
     }
 
+    public LogMessageInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public LogMessageInfo(LogMessageInfo source) {
+        if (source.StreamInfo != null) {
+            this.StreamInfo = new StreamInfo(source.StreamInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

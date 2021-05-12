@@ -23,73 +23,93 @@ import java.util.HashMap;
 public class RelatedCcnInfo extends AbstractModel{
 
     /**
-    * CCN account
+    * Account of the CCN instance owner
     */
     @SerializedName("AccountId")
     @Expose
     private String AccountId;
 
     /**
-    * CCN ID
+    * CCN instance ID
     */
     @SerializedName("CcnId")
     @Expose
     private String CcnId;
 
     /**
-    * Status of associated CCN
+    * Status of associated CCN instance
     */
     @SerializedName("AttachType")
     @Expose
     private String AttachType;
 
     /**
-     * Get CCN account 
-     * @return AccountId CCN account
+     * Get Account of the CCN instance owner 
+     * @return AccountId Account of the CCN instance owner
      */
     public String getAccountId() {
         return this.AccountId;
     }
 
     /**
-     * Set CCN account
-     * @param AccountId CCN account
+     * Set Account of the CCN instance owner
+     * @param AccountId Account of the CCN instance owner
      */
     public void setAccountId(String AccountId) {
         this.AccountId = AccountId;
     }
 
     /**
-     * Get CCN ID 
-     * @return CcnId CCN ID
+     * Get CCN instance ID 
+     * @return CcnId CCN instance ID
      */
     public String getCcnId() {
         return this.CcnId;
     }
 
     /**
-     * Set CCN ID
-     * @param CcnId CCN ID
+     * Set CCN instance ID
+     * @param CcnId CCN instance ID
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;
     }
 
     /**
-     * Get Status of associated CCN 
-     * @return AttachType Status of associated CCN
+     * Get Status of associated CCN instance 
+     * @return AttachType Status of associated CCN instance
      */
     public String getAttachType() {
         return this.AttachType;
     }
 
     /**
-     * Set Status of associated CCN
-     * @param AttachType Status of associated CCN
+     * Set Status of associated CCN instance
+     * @param AttachType Status of associated CCN instance
      */
     public void setAttachType(String AttachType) {
         this.AttachType = AttachType;
     }
+
+    public RelatedCcnInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RelatedCcnInfo(RelatedCcnInfo source) {
+        if (source.AccountId != null) {
+            this.AccountId = new String(source.AccountId);
+        }
+        if (source.CcnId != null) {
+            this.CcnId = new String(source.CcnId);
+        }
+        if (source.AttachType != null) {
+            this.AttachType = new String(source.AttachType);
+        }
+    }
+
 
     /**
      * Internal implementation, normal users should not use it.

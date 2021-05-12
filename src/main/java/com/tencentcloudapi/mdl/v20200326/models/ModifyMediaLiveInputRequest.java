@@ -129,6 +129,35 @@ Note: if it is left empty or the array is empty, the original `InputSettings` va
         this.InputSettings = InputSettings;
     }
 
+    public ModifyMediaLiveInputRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyMediaLiveInputRequest(ModifyMediaLiveInputRequest source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
+        if (source.InputSettings != null) {
+            this.InputSettings = new InputSettingInfo[source.InputSettings.length];
+            for (int i = 0; i < source.InputSettings.length; i++) {
+                this.InputSettings[i] = new InputSettingInfo(source.InputSettings[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

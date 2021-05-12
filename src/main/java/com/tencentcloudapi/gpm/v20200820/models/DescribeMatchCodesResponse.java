@@ -101,6 +101,29 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         this.RequestId = RequestId;
     }
 
+    public DescribeMatchCodesResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeMatchCodesResponse(DescribeMatchCodesResponse source) {
+        if (source.MatchCodes != null) {
+            this.MatchCodes = new MatchCodeAttr[source.MatchCodes.length];
+            for (int i = 0; i < source.MatchCodes.length; i++) {
+                this.MatchCodes[i] = new MatchCodeAttr(source.MatchCodes[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,26 @@ public class CreateOutputRTMPSettings extends AbstractModel{
         this.ChunkSize = ChunkSize;
     }
 
+    public CreateOutputRTMPSettings() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateOutputRTMPSettings(CreateOutputRTMPSettings source) {
+        if (source.Destinations != null) {
+            this.Destinations = new CreateOutputRtmpSettingsDestinations[source.Destinations.length];
+            for (int i = 0; i < source.Destinations.length; i++) {
+                this.Destinations[i] = new CreateOutputRtmpSettingsDestinations(source.Destinations[i]);
+            }
+        }
+        if (source.ChunkSize != null) {
+            this.ChunkSize = new Long(source.ChunkSize);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

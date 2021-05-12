@@ -165,6 +165,41 @@ The UNIX epoch time is 00:00:00, Thursday, January 1, 1970, Coordinated Universa
         this.CreationTimestamp = CreationTimestamp;
     }
 
+    public PersonInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PersonInfo(PersonInfo source) {
+        if (source.PersonName != null) {
+            this.PersonName = new String(source.PersonName);
+        }
+        if (source.PersonId != null) {
+            this.PersonId = new String(source.PersonId);
+        }
+        if (source.Gender != null) {
+            this.Gender = new Long(source.Gender);
+        }
+        if (source.PersonExDescriptions != null) {
+            this.PersonExDescriptions = new String[source.PersonExDescriptions.length];
+            for (int i = 0; i < source.PersonExDescriptions.length; i++) {
+                this.PersonExDescriptions[i] = new String(source.PersonExDescriptions[i]);
+            }
+        }
+        if (source.FaceIds != null) {
+            this.FaceIds = new String[source.FaceIds.length];
+            for (int i = 0; i < source.FaceIds.length; i++) {
+                this.FaceIds[i] = new String(source.FaceIds[i]);
+            }
+        }
+        if (source.CreationTimestamp != null) {
+            this.CreationTimestamp = new Long(source.CreationTimestamp);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

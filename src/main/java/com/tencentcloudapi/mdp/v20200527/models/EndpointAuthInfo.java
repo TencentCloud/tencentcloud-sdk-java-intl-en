@@ -106,6 +106,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.AuthKey = AuthKey;
     }
 
+    public EndpointAuthInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EndpointAuthInfo(EndpointAuthInfo source) {
+        if (source.WhiteIpList != null) {
+            this.WhiteIpList = new String[source.WhiteIpList.length];
+            for (int i = 0; i < source.WhiteIpList.length; i++) {
+                this.WhiteIpList[i] = new String(source.WhiteIpList[i]);
+            }
+        }
+        if (source.BlackIpList != null) {
+            this.BlackIpList = new String[source.BlackIpList.length];
+            for (int i = 0; i < source.BlackIpList.length; i++) {
+                this.BlackIpList[i] = new String(source.BlackIpList[i]);
+            }
+        }
+        if (source.AuthKey != null) {
+            this.AuthKey = new String(source.AuthKey);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -160,6 +160,35 @@ public class Resources extends AbstractModel{
         this.IsDeleted = IsDeleted;
     }
 
+    public Resources() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Resources(Resources source) {
+        if (source.ResourceType != null) {
+            this.ResourceType = new String(source.ResourceType);
+        }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.ResourceRegion != null) {
+            this.ResourceRegion = new String(source.ResourceRegion);
+        }
+        if (source.ResourceAlias != null) {
+            this.ResourceAlias = new String(source.ResourceAlias);
+        }
+        if (source.IsDeleted != null) {
+            this.IsDeleted = new Boolean(source.IsDeleted);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

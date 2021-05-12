@@ -96,6 +96,29 @@ Note: This field may return null, indicating that no valid value was found.
         this.RequestId = RequestId;
     }
 
+    public DescribeBillSummaryByProjectResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeBillSummaryByProjectResponse(DescribeBillSummaryByProjectResponse source) {
+        if (source.Ready != null) {
+            this.Ready = new Long(source.Ready);
+        }
+        if (source.SummaryOverview != null) {
+            this.SummaryOverview = new ProjectSummaryOverviewItem[source.SummaryOverview.length];
+            for (int i = 0; i < source.SummaryOverview.length; i++) {
+                this.SummaryOverview[i] = new ProjectSummaryOverviewItem(source.SummaryOverview[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

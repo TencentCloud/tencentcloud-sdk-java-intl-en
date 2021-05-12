@@ -78,6 +78,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.Path = Path;
     }
 
+    public Revalidate() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Revalidate(Revalidate source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

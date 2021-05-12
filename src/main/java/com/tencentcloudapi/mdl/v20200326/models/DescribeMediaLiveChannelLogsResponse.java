@@ -68,6 +68,23 @@ public class DescribeMediaLiveChannelLogsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeMediaLiveChannelLogsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeMediaLiveChannelLogsResponse(DescribeMediaLiveChannelLogsResponse source) {
+        if (source.Infos != null) {
+            this.Infos = new PipelineLogInfo(source.Infos);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

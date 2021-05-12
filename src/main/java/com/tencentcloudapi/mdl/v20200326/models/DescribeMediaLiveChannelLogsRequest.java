@@ -101,6 +101,26 @@ UTC time, such as `2020-01-01T12:00:00Z`.
         this.EndTime = EndTime;
     }
 
+    public DescribeMediaLiveChannelLogsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeMediaLiveChannelLogsRequest(DescribeMediaLiveChannelLogsRequest source) {
+        if (source.ChannelId != null) {
+            this.ChannelId = new String(source.ChannelId);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

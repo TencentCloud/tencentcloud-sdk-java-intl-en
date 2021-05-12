@@ -91,6 +91,26 @@ public class CreateOutputRTPSettings extends AbstractModel{
         this.IdleTimeout = IdleTimeout;
     }
 
+    public CreateOutputRTPSettings() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateOutputRTPSettings(CreateOutputRTPSettings source) {
+        if (source.Destinations != null) {
+            this.Destinations = new CreateOutputRTPSettingsDestinations(source.Destinations);
+        }
+        if (source.FEC != null) {
+            this.FEC = new String(source.FEC);
+        }
+        if (source.IdleTimeout != null) {
+            this.IdleTimeout = new Long(source.IdleTimeout);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -172,6 +172,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.TypeD = TypeD;
     }
 
+    public Authentication() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Authentication(Authentication source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.TypeA != null) {
+            this.TypeA = new AuthenticationTypeA(source.TypeA);
+        }
+        if (source.TypeB != null) {
+            this.TypeB = new AuthenticationTypeB(source.TypeB);
+        }
+        if (source.TypeC != null) {
+            this.TypeC = new AuthenticationTypeC(source.TypeC);
+        }
+        if (source.TypeD != null) {
+            this.TypeD = new AuthenticationTypeD(source.TypeD);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

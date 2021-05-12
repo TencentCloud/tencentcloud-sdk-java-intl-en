@@ -73,6 +73,23 @@ Setting it to `true` will clear data disks, which means that CVM newly created o
         this.ClearDataDisks = ClearDataDisks;
     }
 
+    public ClearLaunchConfigurationAttributesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ClearLaunchConfigurationAttributesRequest(ClearLaunchConfigurationAttributesRequest source) {
+        if (source.LaunchConfigurationId != null) {
+            this.LaunchConfigurationId = new String(source.LaunchConfigurationId);
+        }
+        if (source.ClearDataDisks != null) {
+            this.ClearDataDisks = new Boolean(source.ClearDataDisks);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

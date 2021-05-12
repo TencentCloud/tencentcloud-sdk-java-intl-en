@@ -195,6 +195,35 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.ExpireTime = ExpireTime;
     }
 
+    public EditMediaTaskOutput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EditMediaTaskOutput(EditMediaTaskOutput source) {
+        if (source.FileType != null) {
+            this.FileType = new String(source.FileType);
+        }
+        if (source.FileUrl != null) {
+            this.FileUrl = new String(source.FileUrl);
+        }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
+        if (source.MediaName != null) {
+            this.MediaName = new String(source.MediaName);
+        }
+        if (source.ClassId != null) {
+            this.ClassId = new Long(source.ClassId);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

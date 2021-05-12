@@ -73,6 +73,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.TotalCount = TotalCount;
     }
 
+    public UserResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UserResponse(UserResponse source) {
+        if (source.Users != null) {
+            this.Users = new User[source.Users.length];
+            for (int i = 0; i < source.Users.length; i++) {
+                this.Users[i] = new User(source.Users[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

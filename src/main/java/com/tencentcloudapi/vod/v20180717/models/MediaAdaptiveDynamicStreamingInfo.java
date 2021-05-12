@@ -50,6 +50,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.AdaptiveDynamicStreamingSet = AdaptiveDynamicStreamingSet;
     }
 
+    public MediaAdaptiveDynamicStreamingInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaAdaptiveDynamicStreamingInfo(MediaAdaptiveDynamicStreamingInfo source) {
+        if (source.AdaptiveDynamicStreamingSet != null) {
+            this.AdaptiveDynamicStreamingSet = new AdaptiveDynamicStreamingInfoItem[source.AdaptiveDynamicStreamingSet.length];
+            for (int i = 0; i < source.AdaptiveDynamicStreamingSet.length; i++) {
+                this.AdaptiveDynamicStreamingSet[i] = new AdaptiveDynamicStreamingInfoItem(source.AdaptiveDynamicStreamingSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -137,6 +137,44 @@ public class CreateMediaLiveChannelRequest extends AbstractModel{
         this.VideoTemplates = VideoTemplates;
     }
 
+    public CreateMediaLiveChannelRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateMediaLiveChannelRequest(CreateMediaLiveChannelRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.AttachedInputs != null) {
+            this.AttachedInputs = new AttachedInputInfo[source.AttachedInputs.length];
+            for (int i = 0; i < source.AttachedInputs.length; i++) {
+                this.AttachedInputs[i] = new AttachedInputInfo(source.AttachedInputs[i]);
+            }
+        }
+        if (source.OutputGroups != null) {
+            this.OutputGroups = new OutputGroupsInfo[source.OutputGroups.length];
+            for (int i = 0; i < source.OutputGroups.length; i++) {
+                this.OutputGroups[i] = new OutputGroupsInfo(source.OutputGroups[i]);
+            }
+        }
+        if (source.AudioTemplates != null) {
+            this.AudioTemplates = new AudioTemplateInfo[source.AudioTemplates.length];
+            for (int i = 0; i < source.AudioTemplates.length; i++) {
+                this.AudioTemplates[i] = new AudioTemplateInfo(source.AudioTemplates[i]);
+            }
+        }
+        if (source.VideoTemplates != null) {
+            this.VideoTemplates = new VideoTemplateInfo[source.VideoTemplates.length];
+            for (int i = 0; i < source.VideoTemplates.length; i++) {
+                this.VideoTemplates[i] = new VideoTemplateInfo(source.VideoTemplates[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

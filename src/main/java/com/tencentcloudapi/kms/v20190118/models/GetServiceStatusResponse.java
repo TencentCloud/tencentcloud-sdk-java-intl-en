@@ -198,6 +198,38 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
+    public GetServiceStatusResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetServiceStatusResponse(GetServiceStatusResponse source) {
+        if (source.ServiceEnabled != null) {
+            this.ServiceEnabled = new Boolean(source.ServiceEnabled);
+        }
+        if (source.InvalidType != null) {
+            this.InvalidType = new Long(source.InvalidType);
+        }
+        if (source.UserLevel != null) {
+            this.UserLevel = new Long(source.UserLevel);
+        }
+        if (source.ProExpireTime != null) {
+            this.ProExpireTime = new Long(source.ProExpireTime);
+        }
+        if (source.ProRenewFlag != null) {
+            this.ProRenewFlag = new Long(source.ProRenewFlag);
+        }
+        if (source.ProResourceId != null) {
+            this.ProResourceId = new String(source.ProResourceId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

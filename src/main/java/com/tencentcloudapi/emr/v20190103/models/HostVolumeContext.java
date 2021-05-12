@@ -50,6 +50,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.VolumePath = VolumePath;
     }
 
+    public HostVolumeContext() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public HostVolumeContext(HostVolumeContext source) {
+        if (source.VolumePath != null) {
+            this.VolumePath = new String(source.VolumePath);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

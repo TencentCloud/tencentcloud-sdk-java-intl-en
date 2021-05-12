@@ -114,6 +114,29 @@ public class BoundIpInfo extends AbstractModel{
         this.InstanceId = InstanceId;
     }
 
+    public BoundIpInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BoundIpInfo(BoundIpInfo source) {
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+        if (source.BizType != null) {
+            this.BizType = new String(source.BizType);
+        }
+        if (source.DeviceType != null) {
+            this.DeviceType = new String(source.DeviceType);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

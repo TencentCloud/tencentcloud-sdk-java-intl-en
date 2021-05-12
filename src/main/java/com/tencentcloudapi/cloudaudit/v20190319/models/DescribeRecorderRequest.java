@@ -22,6 +22,17 @@ import java.util.HashMap;
 
 public class DescribeRecorderRequest extends AbstractModel{
 
+    public DescribeRecorderRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRecorderRequest(DescribeRecorderRequest source) {
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

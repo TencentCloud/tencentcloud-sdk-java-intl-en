@@ -73,6 +73,23 @@ In seconds, indicating data time.
         this.NetworkOut = NetworkOut;
     }
 
+    public PipelineOutputStatistics() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PipelineOutputStatistics(PipelineOutputStatistics source) {
+        if (source.Timestamp != null) {
+            this.Timestamp = new Long(source.Timestamp);
+        }
+        if (source.NetworkOut != null) {
+            this.NetworkOut = new Long(source.NetworkOut);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

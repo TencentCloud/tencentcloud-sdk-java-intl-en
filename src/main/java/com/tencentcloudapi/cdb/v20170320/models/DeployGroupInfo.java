@@ -221,6 +221,41 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.DevClass = DevClass;
     }
 
+    public DeployGroupInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeployGroupInfo(DeployGroupInfo source) {
+        if (source.DeployGroupId != null) {
+            this.DeployGroupId = new String(source.DeployGroupId);
+        }
+        if (source.DeployGroupName != null) {
+            this.DeployGroupName = new String(source.DeployGroupName);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.Quota != null) {
+            this.Quota = new Long(source.Quota);
+        }
+        if (source.Affinity != null) {
+            this.Affinity = new String(source.Affinity);
+        }
+        if (source.LimitNum != null) {
+            this.LimitNum = new Long(source.LimitNum);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.DevClass != null) {
+            this.DevClass = new String(source.DevClass);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

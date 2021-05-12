@@ -200,6 +200,35 @@ For static transcoding, this parameter does not work.
         this.CompressFileType = CompressFileType;
     }
 
+    public CreateTranscodeRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateTranscodeRequest(CreateTranscodeRequest source) {
+        if (source.SdkAppId != null) {
+            this.SdkAppId = new Long(source.SdkAppId);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.IsStaticPPT != null) {
+            this.IsStaticPPT = new Boolean(source.IsStaticPPT);
+        }
+        if (source.MinResolution != null) {
+            this.MinResolution = new String(source.MinResolution);
+        }
+        if (source.ThumbnailResolution != null) {
+            this.ThumbnailResolution = new String(source.ThumbnailResolution);
+        }
+        if (source.CompressFileType != null) {
+            this.CompressFileType = new String(source.CompressFileType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

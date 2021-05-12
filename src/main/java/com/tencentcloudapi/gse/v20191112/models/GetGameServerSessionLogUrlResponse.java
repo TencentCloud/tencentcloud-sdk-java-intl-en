@@ -73,6 +73,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         this.RequestId = RequestId;
     }
 
+    public GetGameServerSessionLogUrlResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GetGameServerSessionLogUrlResponse(GetGameServerSessionLogUrlResponse source) {
+        if (source.PreSignedUrl != null) {
+            this.PreSignedUrl = new String(source.PreSignedUrl);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

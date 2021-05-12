@@ -244,6 +244,50 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.InputRegion = InputRegion;
     }
 
+    public DescribeInput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInput(DescribeInput source) {
+        if (source.InputId != null) {
+            this.InputId = new String(source.InputId);
+        }
+        if (source.InputName != null) {
+            this.InputName = new String(source.InputName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.InputAddressList != null) {
+            this.InputAddressList = new InputAddress[source.InputAddressList.length];
+            for (int i = 0; i < source.InputAddressList.length; i++) {
+                this.InputAddressList[i] = new InputAddress(source.InputAddressList[i]);
+            }
+        }
+        if (source.AllowIpList != null) {
+            this.AllowIpList = new String[source.AllowIpList.length];
+            for (int i = 0; i < source.AllowIpList.length; i++) {
+                this.AllowIpList[i] = new String(source.AllowIpList[i]);
+            }
+        }
+        if (source.SRTSettings != null) {
+            this.SRTSettings = new DescribeInputSRTSettings(source.SRTSettings);
+        }
+        if (source.RTPSettings != null) {
+            this.RTPSettings = new DescribeInputRTPSettings(source.RTPSettings);
+        }
+        if (source.InputRegion != null) {
+            this.InputRegion = new String(source.InputRegion);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

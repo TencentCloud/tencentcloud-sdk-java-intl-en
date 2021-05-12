@@ -96,6 +96,29 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
+    public DescribeSubscriptionDetailResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSubscriptionDetailResponse(DescribeSubscriptionDetailResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.SubscriptionSet != null) {
+            this.SubscriptionSet = new Subscription[source.SubscriptionSet.length];
+            for (int i = 0; i < source.SubscriptionSet.length; i++) {
+                this.SubscriptionSet[i] = new Subscription(source.SubscriptionSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

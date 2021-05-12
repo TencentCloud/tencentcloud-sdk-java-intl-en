@@ -101,6 +101,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.EndTime = EndTime;
     }
 
+    public EditMediaStreamInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EditMediaStreamInfo(EditMediaStreamInfo source) {
+        if (source.StreamId != null) {
+            this.StreamId = new String(source.StreamId);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

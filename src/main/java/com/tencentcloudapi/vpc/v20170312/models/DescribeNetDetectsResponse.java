@@ -101,6 +101,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
+    public DescribeNetDetectsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeNetDetectsResponse(DescribeNetDetectsResponse source) {
+        if (source.NetDetectSet != null) {
+            this.NetDetectSet = new NetDetect[source.NetDetectSet.length];
+            for (int i = 0; i < source.NetDetectSet.length; i++) {
+                this.NetDetectSet[i] = new NetDetect(source.NetDetectSet[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

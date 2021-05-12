@@ -346,6 +346,59 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.ConfigurationItemStatus = ConfigurationItemStatus;
     }
 
+    public ConfigurationItems() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ConfigurationItems(ConfigurationItems source) {
+        if (source.ConfigurationItemCaptureTime != null) {
+            this.ConfigurationItemCaptureTime = new String(source.ConfigurationItemCaptureTime);
+        }
+        if (source.Relationships != null) {
+            this.Relationships = new String(source.Relationships);
+        }
+        if (source.LastItemInfo != null) {
+            this.LastItemInfo = new String(source.LastItemInfo);
+        }
+        if (source.RelatedEvents != null) {
+            this.RelatedEvents = new RelatedEvent[source.RelatedEvents.length];
+            for (int i = 0; i < source.RelatedEvents.length; i++) {
+                this.RelatedEvents[i] = new RelatedEvent(source.RelatedEvents[i]);
+            }
+        }
+        if (source.ResourceType != null) {
+            this.ResourceType = new String(source.ResourceType);
+        }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+        if (source.ConfigurationStateId != null) {
+            this.ConfigurationStateId = new String(source.ConfigurationStateId);
+        }
+        if (source.ResourceCreateTime != null) {
+            this.ResourceCreateTime = new String(source.ResourceCreateTime);
+        }
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
+        if (source.ResourceRegion != null) {
+            this.ResourceRegion = new String(source.ResourceRegion);
+        }
+        if (source.Configuration != null) {
+            this.Configuration = new String(source.Configuration);
+        }
+        if (source.ResourceAlias != null) {
+            this.ResourceAlias = new String(source.ResourceAlias);
+        }
+        if (source.ConfigurationItemStatus != null) {
+            this.ConfigurationItemStatus = new String(source.ConfigurationItemStatus);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,29 @@ public class ChannelInfo extends AbstractModel{
         this.Points = Points;
     }
 
+    public ChannelInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ChannelInfo(ChannelInfo source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.Points != null) {
+            this.Points = new PointInfo(source.Points);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

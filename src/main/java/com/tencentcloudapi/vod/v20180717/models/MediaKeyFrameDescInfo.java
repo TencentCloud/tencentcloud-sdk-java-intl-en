@@ -50,6 +50,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.KeyFrameDescSet = KeyFrameDescSet;
     }
 
+    public MediaKeyFrameDescInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaKeyFrameDescInfo(MediaKeyFrameDescInfo source) {
+        if (source.KeyFrameDescSet != null) {
+            this.KeyFrameDescSet = new MediaKeyFrameDescItem[source.KeyFrameDescSet.length];
+            for (int i = 0; i < source.KeyFrameDescSet.length; i++) {
+                this.KeyFrameDescSet[i] = new MediaKeyFrameDescItem(source.KeyFrameDescSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

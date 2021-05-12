@@ -96,6 +96,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.RequestId = RequestId;
     }
 
+    public CreateReadOnlyGroupResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateReadOnlyGroupResponse(CreateReadOnlyGroupResponse source) {
+        if (source.ReadOnlyGroupId != null) {
+            this.ReadOnlyGroupId = new String(source.ReadOnlyGroupId);
+        }
+        if (source.FlowId != null) {
+            this.FlowId = new Long(source.FlowId);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

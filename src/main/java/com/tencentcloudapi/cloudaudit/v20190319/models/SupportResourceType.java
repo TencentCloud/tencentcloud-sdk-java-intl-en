@@ -137,6 +137,32 @@ public class SupportResourceType extends AbstractModel{
         this.Service = Service;
     }
 
+    public SupportResourceType() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SupportResourceType(SupportResourceType source) {
+        if (source.ResourceType != null) {
+            this.ResourceType = new String(source.ResourceType);
+        }
+        if (source.PolicyName != null) {
+            this.PolicyName = new String(source.PolicyName);
+        }
+        if (source.ServiceName != null) {
+            this.ServiceName = new String(source.ServiceName);
+        }
+        if (source.ResourceTypeName != null) {
+            this.ResourceTypeName = new String(source.ResourceTypeName);
+        }
+        if (source.Service != null) {
+            this.Service = new String(source.Service);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

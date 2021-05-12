@@ -73,6 +73,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         this.RequestId = RequestId;
     }
 
+    public DescribeLiveDomainResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLiveDomainResponse(DescribeLiveDomainResponse source) {
+        if (source.DomainInfo != null) {
+            this.DomainInfo = new DomainInfo(source.DomainInfo);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

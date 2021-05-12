@@ -88,6 +88,23 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
         this.ImageUrl = ImageUrl;
     }
 
+    public GeneralAccurateOCRRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GeneralAccurateOCRRequest(GeneralAccurateOCRRequest source) {
+        if (source.ImageBase64 != null) {
+            this.ImageBase64 = new String(source.ImageBase64);
+        }
+        if (source.ImageUrl != null) {
+            this.ImageUrl = new String(source.ImageUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

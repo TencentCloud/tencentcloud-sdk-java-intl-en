@@ -73,6 +73,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.AclList = AclList;
     }
 
+    public AclResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AclResponse(AclResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.AclList != null) {
+            this.AclList = new Acl[source.AclList.length];
+            for (int i = 0; i < source.AclList.length; i++) {
+                this.AclList[i] = new Acl(source.AclList[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

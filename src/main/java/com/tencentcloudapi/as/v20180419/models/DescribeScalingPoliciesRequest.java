@@ -134,6 +134,35 @@ The maximum number of `Filters` per request is 10. The upper limit for `Filter.V
         this.Offset = Offset;
     }
 
+    public DescribeScalingPoliciesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeScalingPoliciesRequest(DescribeScalingPoliciesRequest source) {
+        if (source.AutoScalingPolicyIds != null) {
+            this.AutoScalingPolicyIds = new String[source.AutoScalingPolicyIds.length];
+            for (int i = 0; i < source.AutoScalingPolicyIds.length; i++) {
+                this.AutoScalingPolicyIds[i] = new String(source.AutoScalingPolicyIds[i]);
+            }
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

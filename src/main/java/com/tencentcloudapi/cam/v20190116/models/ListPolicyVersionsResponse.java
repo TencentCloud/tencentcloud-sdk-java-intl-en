@@ -73,6 +73,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
+    public ListPolicyVersionsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ListPolicyVersionsResponse(ListPolicyVersionsResponse source) {
+        if (source.Versions != null) {
+            this.Versions = new PolicyVersionItem[source.Versions.length];
+            for (int i = 0; i < source.Versions.length; i++) {
+                this.Versions[i] = new PolicyVersionItem(source.Versions[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

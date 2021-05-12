@@ -106,6 +106,29 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.IdleTimeout = IdleTimeout;
     }
 
+    public DescribeOutputRTPSettings() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeOutputRTPSettings(DescribeOutputRTPSettings source) {
+        if (source.Destinations != null) {
+            this.Destinations = new RTPAddressDestination[source.Destinations.length];
+            for (int i = 0; i < source.Destinations.length; i++) {
+                this.Destinations[i] = new RTPAddressDestination(source.Destinations[i]);
+            }
+        }
+        if (source.FEC != null) {
+            this.FEC = new String(source.FEC);
+        }
+        if (source.IdleTimeout != null) {
+            this.IdleTimeout = new Long(source.IdleTimeout);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

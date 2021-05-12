@@ -83,6 +83,23 @@ Default value: 0, which means that the value is the same as the video frame rate
         this.Fps = Fps;
     }
 
+    public OutputVideoStream() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OutputVideoStream(OutputVideoStream source) {
+        if (source.Codec != null) {
+            this.Codec = new String(source.Codec);
+        }
+        if (source.Fps != null) {
+            this.Fps = new Long(source.Fps);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

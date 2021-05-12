@@ -160,6 +160,35 @@ public class SendTemplatedEmailRequest extends AbstractModel{
         this.ReplyAddress = ReplyAddress;
     }
 
+    public SendTemplatedEmailRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SendTemplatedEmailRequest(SendTemplatedEmailRequest source) {
+        if (source.FromAddress != null) {
+            this.FromAddress = new String(source.FromAddress);
+        }
+        if (source.ToAddress != null) {
+            this.ToAddress = new String(source.ToAddress);
+        }
+        if (source.TemplateName != null) {
+            this.TemplateName = new String(source.TemplateName);
+        }
+        if (source.TemplateValue != null) {
+            this.TemplateValue = new String(source.TemplateValue);
+        }
+        if (source.FromName != null) {
+            this.FromName = new String(source.FromName);
+        }
+        if (source.ReplyAddress != null) {
+            this.ReplyAddress = new String(source.ReplyAddress);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

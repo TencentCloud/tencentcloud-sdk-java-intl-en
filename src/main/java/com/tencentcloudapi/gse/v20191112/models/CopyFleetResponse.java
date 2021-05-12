@@ -96,6 +96,29 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         this.RequestId = RequestId;
     }
 
+    public CopyFleetResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CopyFleetResponse(CopyFleetResponse source) {
+        if (source.FleetAttributes != null) {
+            this.FleetAttributes = new FleetAttributes[source.FleetAttributes.length];
+            for (int i = 0; i < source.FleetAttributes.length; i++) {
+                this.FleetAttributes[i] = new FleetAttributes(source.FleetAttributes[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

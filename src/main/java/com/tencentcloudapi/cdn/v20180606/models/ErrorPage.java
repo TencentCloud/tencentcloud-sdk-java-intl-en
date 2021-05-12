@@ -88,6 +88,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.PageRules = PageRules;
     }
 
+    public ErrorPage() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ErrorPage(ErrorPage source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.PageRules != null) {
+            this.PageRules = new ErrorPageRule[source.PageRules.length];
+            for (int i = 0; i < source.PageRules.length; i++) {
+                this.PageRules[i] = new ErrorPageRule(source.PageRules[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -124,6 +124,29 @@ UTC time, such as `2020-01-01T12:00:00Z`.
         this.Period = Period;
     }
 
+    public DescribeMediaLiveChannelOutputStatisticsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeMediaLiveChannelOutputStatisticsRequest(DescribeMediaLiveChannelOutputStatisticsRequest source) {
+        if (source.ChannelId != null) {
+            this.ChannelId = new String(source.ChannelId);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.Period != null) {
+            this.Period = new String(source.Period);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

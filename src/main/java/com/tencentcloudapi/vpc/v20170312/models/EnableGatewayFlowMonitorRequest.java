@@ -60,6 +60,20 @@ ID of VPN gateway instance, e.g. `vpn-ltjahce6`.
         this.GatewayId = GatewayId;
     }
 
+    public EnableGatewayFlowMonitorRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EnableGatewayFlowMonitorRequest(EnableGatewayFlowMonitorRequest source) {
+        if (source.GatewayId != null) {
+            this.GatewayId = new String(source.GatewayId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

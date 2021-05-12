@@ -78,6 +78,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.TaskConfig = TaskConfig;
     }
 
+    public AlarmPolicyTriggerTask() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AlarmPolicyTriggerTask(AlarmPolicyTriggerTask source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.TaskConfig != null) {
+            this.TaskConfig = new String(source.TaskConfig);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

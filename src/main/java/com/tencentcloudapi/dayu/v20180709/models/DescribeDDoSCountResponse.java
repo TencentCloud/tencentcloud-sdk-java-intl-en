@@ -276,6 +276,44 @@ The value of `key` indicates the attack event type. When the `key` is `UNKNOWNFL
         this.RequestId = RequestId;
     }
 
+    public DescribeDDoSCountResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDDoSCountResponse(DescribeDDoSCountResponse source) {
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.MetricName != null) {
+            this.MetricName = new String(source.MetricName);
+        }
+        if (source.Data != null) {
+            this.Data = new KeyValue[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new KeyValue(source.Data[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

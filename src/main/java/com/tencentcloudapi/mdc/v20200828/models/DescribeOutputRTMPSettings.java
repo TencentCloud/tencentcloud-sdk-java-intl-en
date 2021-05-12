@@ -106,6 +106,29 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.Destinations = Destinations;
     }
 
+    public DescribeOutputRTMPSettings() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeOutputRTMPSettings(DescribeOutputRTMPSettings source) {
+        if (source.IdleTimeout != null) {
+            this.IdleTimeout = new Long(source.IdleTimeout);
+        }
+        if (source.ChunkSize != null) {
+            this.ChunkSize = new Long(source.ChunkSize);
+        }
+        if (source.Destinations != null) {
+            this.Destinations = new RTMPAddressDestination[source.Destinations.length];
+            for (int i = 0; i < source.Destinations.length; i++) {
+                this.Destinations[i] = new RTMPAddressDestination(source.Destinations[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

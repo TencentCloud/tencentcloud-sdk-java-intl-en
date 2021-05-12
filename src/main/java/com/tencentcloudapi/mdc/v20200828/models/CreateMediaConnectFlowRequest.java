@@ -91,6 +91,29 @@ public class CreateMediaConnectFlowRequest extends AbstractModel{
         this.InputGroup = InputGroup;
     }
 
+    public CreateMediaConnectFlowRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateMediaConnectFlowRequest(CreateMediaConnectFlowRequest source) {
+        if (source.FlowName != null) {
+            this.FlowName = new String(source.FlowName);
+        }
+        if (source.MaxBandwidth != null) {
+            this.MaxBandwidth = new Long(source.MaxBandwidth);
+        }
+        if (source.InputGroup != null) {
+            this.InputGroup = new CreateInput[source.InputGroup.length];
+            for (int i = 0; i < source.InputGroup.length; i++) {
+                this.InputGroup[i] = new CreateInput(source.InputGroup[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

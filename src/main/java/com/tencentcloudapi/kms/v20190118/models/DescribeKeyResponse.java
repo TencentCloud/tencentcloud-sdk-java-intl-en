@@ -73,6 +73,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
+    public DescribeKeyResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeKeyResponse(DescribeKeyResponse source) {
+        if (source.KeyMetadata != null) {
+            this.KeyMetadata = new KeyMetadata(source.KeyMetadata);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

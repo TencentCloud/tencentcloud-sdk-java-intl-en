@@ -73,6 +73,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Data = Data;
     }
 
+    public StatisticsDataInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StatisticsDataInfo(StatisticsDataInfo source) {
+        if (source.Time != null) {
+            this.Time = new Long(source.Time);
+        }
+        if (source.Data != null) {
+            this.Data = new Float(source.Data);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

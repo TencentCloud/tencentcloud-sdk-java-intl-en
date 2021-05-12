@@ -190,6 +190,35 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.Remark = Remark;
     }
 
+    public RegionInstance() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RegionInstance(RegionInstance source) {
+        if (source.RegionName != null) {
+            this.RegionName = new String(source.RegionName);
+        }
+        if (source.RegionId != null) {
+            this.RegionId = new Long(source.RegionId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.FeatureGates != null) {
+            this.FeatureGates = new String(source.FeatureGates);
+        }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

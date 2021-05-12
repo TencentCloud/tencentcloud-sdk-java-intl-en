@@ -188,6 +188,47 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.InputSettings = InputSettings;
     }
 
+    public InputInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InputInfo(InputInfo source) {
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
+        if (source.AttachedChannels != null) {
+            this.AttachedChannels = new String[source.AttachedChannels.length];
+            for (int i = 0; i < source.AttachedChannels.length; i++) {
+                this.AttachedChannels[i] = new String(source.AttachedChannels[i]);
+            }
+        }
+        if (source.InputSettings != null) {
+            this.InputSettings = new InputSettingInfo[source.InputSettings.length];
+            for (int i = 0; i < source.InputSettings.length; i++) {
+                this.InputSettings[i] = new InputSettingInfo(source.InputSettings[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

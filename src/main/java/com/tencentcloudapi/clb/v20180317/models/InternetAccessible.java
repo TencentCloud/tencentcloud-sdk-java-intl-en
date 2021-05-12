@@ -101,6 +101,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.BandwidthpkgSubType = BandwidthpkgSubType;
     }
 
+    public InternetAccessible() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InternetAccessible(InternetAccessible source) {
+        if (source.InternetChargeType != null) {
+            this.InternetChargeType = new String(source.InternetChargeType);
+        }
+        if (source.InternetMaxBandwidthOut != null) {
+            this.InternetMaxBandwidthOut = new Long(source.InternetMaxBandwidthOut);
+        }
+        if (source.BandwidthpkgSubType != null) {
+            this.BandwidthpkgSubType = new String(source.BandwidthpkgSubType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

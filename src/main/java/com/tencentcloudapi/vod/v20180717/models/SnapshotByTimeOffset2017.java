@@ -116,6 +116,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.Url = Url;
     }
 
+    public SnapshotByTimeOffset2017() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SnapshotByTimeOffset2017(SnapshotByTimeOffset2017 source) {
+        if (source.ErrCode != null) {
+            this.ErrCode = new Long(source.ErrCode);
+        }
+        if (source.TimeOffset != null) {
+            this.TimeOffset = new Long(source.TimeOffset);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

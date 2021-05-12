@@ -101,6 +101,29 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         this.RequestId = RequestId;
     }
 
+    public DescribeMatchingProgressResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeMatchingProgressResponse(DescribeMatchingProgressResponse source) {
+        if (source.MatchTickets != null) {
+            this.MatchTickets = new MatchTicket[source.MatchTickets.length];
+            for (int i = 0; i < source.MatchTickets.length; i++) {
+                this.MatchTickets[i] = new MatchTicket(source.MatchTickets[i]);
+            }
+        }
+        if (source.ErrCode != null) {
+            this.ErrCode = new Long(source.ErrCode);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

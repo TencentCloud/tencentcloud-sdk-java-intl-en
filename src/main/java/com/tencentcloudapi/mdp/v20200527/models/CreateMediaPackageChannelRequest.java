@@ -68,6 +68,23 @@ public class CreateMediaPackageChannelRequest extends AbstractModel{
         this.Protocol = Protocol;
     }
 
+    public CreateMediaPackageChannelRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateMediaPackageChannelRequest(CreateMediaPackageChannelRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

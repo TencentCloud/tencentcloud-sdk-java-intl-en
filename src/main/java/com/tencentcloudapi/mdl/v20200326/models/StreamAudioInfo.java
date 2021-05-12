@@ -162,6 +162,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.SampleRate = SampleRate;
     }
 
+    public StreamAudioInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StreamAudioInfo(StreamAudioInfo source) {
+        if (source.Pid != null) {
+            this.Pid = new Long(source.Pid);
+        }
+        if (source.Codec != null) {
+            this.Codec = new String(source.Codec);
+        }
+        if (source.Fps != null) {
+            this.Fps = new Long(source.Fps);
+        }
+        if (source.Rate != null) {
+            this.Rate = new Long(source.Rate);
+        }
+        if (source.SampleRate != null) {
+            this.SampleRate = new Long(source.SampleRate);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

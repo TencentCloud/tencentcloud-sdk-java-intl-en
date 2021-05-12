@@ -101,6 +101,29 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.ReturnCode = ReturnCode;
     }
 
+    public AccessControl() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AccessControl(AccessControl source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+        if (source.AccessControlRules != null) {
+            this.AccessControlRules = new AccessControlRule[source.AccessControlRules.length];
+            for (int i = 0; i < source.AccessControlRules.length; i++) {
+                this.AccessControlRules[i] = new AccessControlRule(source.AccessControlRules[i]);
+            }
+        }
+        if (source.ReturnCode != null) {
+            this.ReturnCode = new Long(source.ReturnCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

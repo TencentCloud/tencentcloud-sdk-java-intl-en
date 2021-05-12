@@ -114,6 +114,38 @@ public class StreamInfo extends AbstractModel{
         this.Scte35 = Scte35;
     }
 
+    public StreamInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public StreamInfo(StreamInfo source) {
+        if (source.ClientIp != null) {
+            this.ClientIp = new String(source.ClientIp);
+        }
+        if (source.Video != null) {
+            this.Video = new StreamVideoInfo[source.Video.length];
+            for (int i = 0; i < source.Video.length; i++) {
+                this.Video[i] = new StreamVideoInfo(source.Video[i]);
+            }
+        }
+        if (source.Audio != null) {
+            this.Audio = new StreamAudioInfo[source.Audio.length];
+            for (int i = 0; i < source.Audio.length; i++) {
+                this.Audio[i] = new StreamAudioInfo(source.Audio[i]);
+            }
+        }
+        if (source.Scte35 != null) {
+            this.Scte35 = new StreamScte35Info[source.Scte35.length];
+            for (int i = 0; i < source.Scte35.length; i++) {
+                this.Scte35[i] = new StreamScte35Info(source.Scte35[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

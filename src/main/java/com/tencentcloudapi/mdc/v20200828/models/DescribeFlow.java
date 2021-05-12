@@ -165,6 +165,41 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.OutputGroup = OutputGroup;
     }
 
+    public DescribeFlow() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeFlow(DescribeFlow source) {
+        if (source.FlowId != null) {
+            this.FlowId = new String(source.FlowId);
+        }
+        if (source.FlowName != null) {
+            this.FlowName = new String(source.FlowName);
+        }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.MaxBandwidth != null) {
+            this.MaxBandwidth = new Long(source.MaxBandwidth);
+        }
+        if (source.InputGroup != null) {
+            this.InputGroup = new DescribeInput[source.InputGroup.length];
+            for (int i = 0; i < source.InputGroup.length; i++) {
+                this.InputGroup[i] = new DescribeInput(source.InputGroup[i]);
+            }
+        }
+        if (source.OutputGroup != null) {
+            this.OutputGroup = new DescribeOutput[source.OutputGroup.length];
+            for (int i = 0; i < source.OutputGroup.length; i++) {
+                this.OutputGroup[i] = new DescribeOutput(source.OutputGroup[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

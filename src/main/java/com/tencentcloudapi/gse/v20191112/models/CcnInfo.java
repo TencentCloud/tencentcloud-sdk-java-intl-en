@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CcnInfo extends AbstractModel{
 
     /**
-    * CCN account
+    * Account of the CCN instance owner
     */
     @SerializedName("AccountId")
     @Expose
@@ -37,16 +37,16 @@ public class CcnInfo extends AbstractModel{
     private String CcnId;
 
     /**
-     * Get CCN account 
-     * @return AccountId CCN account
+     * Get Account of the CCN instance owner 
+     * @return AccountId Account of the CCN instance owner
      */
     public String getAccountId() {
         return this.AccountId;
     }
 
     /**
-     * Set CCN account
-     * @param AccountId CCN account
+     * Set Account of the CCN instance owner
+     * @param AccountId Account of the CCN instance owner
      */
     public void setAccountId(String AccountId) {
         this.AccountId = AccountId;
@@ -67,6 +67,23 @@ public class CcnInfo extends AbstractModel{
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;
     }
+
+    public CcnInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CcnInfo(CcnInfo source) {
+        if (source.AccountId != null) {
+            this.AccountId = new String(source.AccountId);
+        }
+        if (source.CcnId != null) {
+            this.CcnId = new String(source.CcnId);
+        }
+    }
+
 
     /**
      * Internal implementation, normal users should not use it.

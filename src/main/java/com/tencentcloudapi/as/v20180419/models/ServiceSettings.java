@@ -83,6 +83,23 @@ Default value: CLASSIC_SCALING
         this.ScalingMode = ScalingMode;
     }
 
+    public ServiceSettings() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ServiceSettings(ServiceSettings source) {
+        if (source.ReplaceMonitorUnhealthy != null) {
+            this.ReplaceMonitorUnhealthy = new Boolean(source.ReplaceMonitorUnhealthy);
+        }
+        if (source.ScalingMode != null) {
+            this.ScalingMode = new String(source.ScalingMode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

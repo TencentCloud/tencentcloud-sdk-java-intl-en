@@ -101,6 +101,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.CreatedTimestamp = CreatedTimestamp;
     }
 
+    public EmailSender() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EmailSender(EmailSender source) {
+        if (source.EmailAddress != null) {
+            this.EmailAddress = new String(source.EmailAddress);
+        }
+        if (source.EmailSenderName != null) {
+            this.EmailSenderName = new String(source.EmailSenderName);
+        }
+        if (source.CreatedTimestamp != null) {
+            this.CreatedTimestamp = new Long(source.CreatedTimestamp);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

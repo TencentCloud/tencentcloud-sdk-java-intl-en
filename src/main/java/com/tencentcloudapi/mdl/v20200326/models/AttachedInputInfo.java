@@ -73,6 +73,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.AudioSelectors = AudioSelectors;
     }
 
+    public AttachedInputInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AttachedInputInfo(AttachedInputInfo source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.AudioSelectors != null) {
+            this.AudioSelectors = new AudioSelectorInfo[source.AudioSelectors.length];
+            for (int i = 0; i < source.AudioSelectors.length; i++) {
+                this.AudioSelectors[i] = new AudioSelectorInfo(source.AudioSelectors[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

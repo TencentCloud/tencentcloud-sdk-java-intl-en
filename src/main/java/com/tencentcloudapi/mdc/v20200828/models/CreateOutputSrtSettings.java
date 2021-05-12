@@ -206,6 +206,44 @@ public class CreateOutputSrtSettings extends AbstractModel{
         this.PbKeyLen = PbKeyLen;
     }
 
+    public CreateOutputSrtSettings() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateOutputSrtSettings(CreateOutputSrtSettings source) {
+        if (source.Destinations != null) {
+            this.Destinations = new CreateOutputSrtSettingsDestinations[source.Destinations.length];
+            for (int i = 0; i < source.Destinations.length; i++) {
+                this.Destinations[i] = new CreateOutputSrtSettingsDestinations(source.Destinations[i]);
+            }
+        }
+        if (source.StreamId != null) {
+            this.StreamId = new String(source.StreamId);
+        }
+        if (source.Latency != null) {
+            this.Latency = new Long(source.Latency);
+        }
+        if (source.RecvLatency != null) {
+            this.RecvLatency = new Long(source.RecvLatency);
+        }
+        if (source.PeerLatency != null) {
+            this.PeerLatency = new Long(source.PeerLatency);
+        }
+        if (source.PeerIdleTimeout != null) {
+            this.PeerIdleTimeout = new Long(source.PeerIdleTimeout);
+        }
+        if (source.Passphrase != null) {
+            this.Passphrase = new String(source.Passphrase);
+        }
+        if (source.PbKeyLen != null) {
+            this.PbKeyLen = new Long(source.PbKeyLen);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,23 @@ public class SRTAddressDestination extends AbstractModel{
         this.Port = Port;
     }
 
+    public SRTAddressDestination() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SRTAddressDestination(SRTAddressDestination source) {
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -68,6 +68,29 @@ public class OutputsStatistics extends AbstractModel{
         this.Pipeline1 = Pipeline1;
     }
 
+    public OutputsStatistics() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OutputsStatistics(OutputsStatistics source) {
+        if (source.Pipeline0 != null) {
+            this.Pipeline0 = new PipelineOutputStatistics[source.Pipeline0.length];
+            for (int i = 0; i < source.Pipeline0.length; i++) {
+                this.Pipeline0[i] = new PipelineOutputStatistics(source.Pipeline0[i]);
+            }
+        }
+        if (source.Pipeline1 != null) {
+            this.Pipeline1 = new PipelineOutputStatistics[source.Pipeline1.length];
+            for (int i = 0; i < source.Pipeline1.length; i++) {
+                this.Pipeline1[i] = new PipelineOutputStatistics(source.Pipeline1[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

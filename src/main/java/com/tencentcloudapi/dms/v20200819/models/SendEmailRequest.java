@@ -183,6 +183,38 @@ public class SendEmailRequest extends AbstractModel{
         this.TextContent = TextContent;
     }
 
+    public SendEmailRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SendEmailRequest(SendEmailRequest source) {
+        if (source.FromAddress != null) {
+            this.FromAddress = new String(source.FromAddress);
+        }
+        if (source.ToAddress != null) {
+            this.ToAddress = new String(source.ToAddress);
+        }
+        if (source.Subject != null) {
+            this.Subject = new String(source.Subject);
+        }
+        if (source.FromName != null) {
+            this.FromName = new String(source.FromName);
+        }
+        if (source.ReplyAddress != null) {
+            this.ReplyAddress = new String(source.ReplyAddress);
+        }
+        if (source.HtmlContent != null) {
+            this.HtmlContent = new String(source.HtmlContent);
+        }
+        if (source.TextContent != null) {
+            this.TextContent = new String(source.TextContent);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

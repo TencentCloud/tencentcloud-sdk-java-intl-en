@@ -119,6 +119,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.SubnetSet = SubnetSet;
     }
 
+    public AssistantCidr() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AssistantCidr(AssistantCidr source) {
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.CidrBlock != null) {
+            this.CidrBlock = new String(source.CidrBlock);
+        }
+        if (source.AssistantType != null) {
+            this.AssistantType = new Long(source.AssistantType);
+        }
+        if (source.SubnetSet != null) {
+            this.SubnetSet = new Subnet[source.SubnetSet.length];
+            for (int i = 0; i < source.SubnetSet.length; i++) {
+                this.SubnetSet[i] = new Subnet(source.SubnetSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

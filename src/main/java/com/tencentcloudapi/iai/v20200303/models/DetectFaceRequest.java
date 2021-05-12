@@ -296,6 +296,41 @@ Different algorithm model versions correspond to different face recognition algo
         this.NeedRotateDetection = NeedRotateDetection;
     }
 
+    public DetectFaceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DetectFaceRequest(DetectFaceRequest source) {
+        if (source.MaxFaceNum != null) {
+            this.MaxFaceNum = new Long(source.MaxFaceNum);
+        }
+        if (source.MinFaceSize != null) {
+            this.MinFaceSize = new Long(source.MinFaceSize);
+        }
+        if (source.Image != null) {
+            this.Image = new String(source.Image);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.NeedFaceAttributes != null) {
+            this.NeedFaceAttributes = new Long(source.NeedFaceAttributes);
+        }
+        if (source.NeedQualityDetection != null) {
+            this.NeedQualityDetection = new Long(source.NeedQualityDetection);
+        }
+        if (source.FaceModelVersion != null) {
+            this.FaceModelVersion = new String(source.FaceModelVersion);
+        }
+        if (source.NeedRotateDetection != null) {
+            this.NeedRotateDetection = new Long(source.NeedRotateDetection);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -78,6 +78,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.Password = Password;
     }
 
+    public InputAuthInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InputAuthInfo(InputAuthInfo source) {
+        if (source.Username != null) {
+            this.Username = new String(source.Username);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -183,6 +183,38 @@ public class DescribeInputSRTSettings extends AbstractModel{
         this.PbKeyLen = PbKeyLen;
     }
 
+    public DescribeInputSRTSettings() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeInputSRTSettings(DescribeInputSRTSettings source) {
+        if (source.StreamId != null) {
+            this.StreamId = new String(source.StreamId);
+        }
+        if (source.Latency != null) {
+            this.Latency = new Long(source.Latency);
+        }
+        if (source.RecvLatency != null) {
+            this.RecvLatency = new Long(source.RecvLatency);
+        }
+        if (source.PeerLatency != null) {
+            this.PeerLatency = new Long(source.PeerLatency);
+        }
+        if (source.PeerIdleTimeout != null) {
+            this.PeerIdleTimeout = new Long(source.PeerIdleTimeout);
+        }
+        if (source.Passphrase != null) {
+            this.Passphrase = new String(source.Passphrase);
+        }
+        if (source.PbKeyLen != null) {
+            this.PbKeyLen = new Long(source.PbKeyLen);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

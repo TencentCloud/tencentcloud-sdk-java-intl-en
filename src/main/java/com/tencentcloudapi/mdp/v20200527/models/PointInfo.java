@@ -73,6 +73,29 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.Endpoints = Endpoints;
     }
 
+    public PointInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PointInfo(PointInfo source) {
+        if (source.Inputs != null) {
+            this.Inputs = new InputInfo[source.Inputs.length];
+            for (int i = 0; i < source.Inputs.length; i++) {
+                this.Inputs[i] = new InputInfo(source.Inputs[i]);
+            }
+        }
+        if (source.Endpoints != null) {
+            this.Endpoints = new EndpointInfo[source.Endpoints.length];
+            for (int i = 0; i < source.Endpoints.length; i++) {
+                this.Endpoints[i] = new EndpointInfo(source.Endpoints[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

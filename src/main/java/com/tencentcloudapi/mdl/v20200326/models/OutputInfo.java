@@ -129,6 +129,35 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.Scte35Settings = Scte35Settings;
     }
 
+    public OutputInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OutputInfo(OutputInfo source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.AudioTemplateNames != null) {
+            this.AudioTemplateNames = new String[source.AudioTemplateNames.length];
+            for (int i = 0; i < source.AudioTemplateNames.length; i++) {
+                this.AudioTemplateNames[i] = new String(source.AudioTemplateNames[i]);
+            }
+        }
+        if (source.VideoTemplateNames != null) {
+            this.VideoTemplateNames = new String[source.VideoTemplateNames.length];
+            for (int i = 0; i < source.VideoTemplateNames.length; i++) {
+                this.VideoTemplateNames[i] = new String(source.VideoTemplateNames[i]);
+            }
+        }
+        if (source.Scte35Settings != null) {
+            this.Scte35Settings = new Scte35SettingsInfo(source.Scte35Settings);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

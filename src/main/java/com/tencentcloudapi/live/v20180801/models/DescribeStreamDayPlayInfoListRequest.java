@@ -119,6 +119,29 @@ Data is available at 3am Beijing Time the next day. You are recommended to query
         this.PageSize = PageSize;
     }
 
+    public DescribeStreamDayPlayInfoListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeStreamDayPlayInfoListRequest(DescribeStreamDayPlayInfoListRequest source) {
+        if (source.DayTime != null) {
+            this.DayTime = new String(source.DayTime);
+        }
+        if (source.PlayDomain != null) {
+            this.PlayDomain = new String(source.PlayDomain);
+        }
+        if (source.PageNum != null) {
+            this.PageNum = new Long(source.PageNum);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

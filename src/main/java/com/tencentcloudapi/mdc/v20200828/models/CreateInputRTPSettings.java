@@ -68,6 +68,23 @@ public class CreateInputRTPSettings extends AbstractModel{
         this.IdleTimeout = IdleTimeout;
     }
 
+    public CreateInputRTPSettings() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateInputRTPSettings(CreateInputRTPSettings source) {
+        if (source.FEC != null) {
+            this.FEC = new String(source.FEC);
+        }
+        if (source.IdleTimeout != null) {
+            this.IdleTimeout = new Long(source.IdleTimeout);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

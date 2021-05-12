@@ -170,6 +170,35 @@ If the certificate type is 1, the certificate corresponding to `CloudCertId` wil
         this.CloudCertId = CloudCertId;
     }
 
+    public CreateLiveCertRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateLiveCertRequest(CreateLiveCertRequest source) {
+        if (source.CertType != null) {
+            this.CertType = new Long(source.CertType);
+        }
+        if (source.CertName != null) {
+            this.CertName = new String(source.CertName);
+        }
+        if (source.HttpsCrt != null) {
+            this.HttpsCrt = new String(source.HttpsCrt);
+        }
+        if (source.HttpsKey != null) {
+            this.HttpsKey = new String(source.HttpsKey);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.CloudCertId != null) {
+            this.CloudCertId = new String(source.CloudCertId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

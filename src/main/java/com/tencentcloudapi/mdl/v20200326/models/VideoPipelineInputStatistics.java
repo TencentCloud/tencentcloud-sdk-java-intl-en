@@ -91,6 +91,26 @@ public class VideoPipelineInputStatistics extends AbstractModel{
         this.Pid = Pid;
     }
 
+    public VideoPipelineInputStatistics() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public VideoPipelineInputStatistics(VideoPipelineInputStatistics source) {
+        if (source.Fps != null) {
+            this.Fps = new Long(source.Fps);
+        }
+        if (source.Rate != null) {
+            this.Rate = new Long(source.Rate);
+        }
+        if (source.Pid != null) {
+            this.Pid = new Long(source.Pid);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

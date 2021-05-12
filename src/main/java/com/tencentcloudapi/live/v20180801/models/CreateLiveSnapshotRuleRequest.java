@@ -119,6 +119,29 @@ Note: if this parameter is a non-empty string, the rule will take effect only fo
         this.StreamName = StreamName;
     }
 
+    public CreateLiveSnapshotRuleRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateLiveSnapshotRuleRequest(CreateLiveSnapshotRuleRequest source) {
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
+        if (source.TemplateId != null) {
+            this.TemplateId = new Long(source.TemplateId);
+        }
+        if (source.AppName != null) {
+            this.AppName = new String(source.AppName);
+        }
+        if (source.StreamName != null) {
+            this.StreamName = new String(source.StreamName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class UpdateRecorderRequest extends AbstractModel{
         this.Name = Name;
     }
 
+    public UpdateRecorderRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateRecorderRequest(UpdateRecorderRequest source) {
+        if (source.AllSupported != null) {
+            this.AllSupported = new Boolean(source.AllSupported);
+        }
+        if (source.Enable != null) {
+            this.Enable = new Boolean(source.Enable);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

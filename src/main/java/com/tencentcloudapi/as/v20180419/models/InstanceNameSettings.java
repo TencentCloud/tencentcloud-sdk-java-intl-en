@@ -118,6 +118,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.InstanceNameStyle = InstanceNameStyle;
     }
 
+    public InstanceNameSettings() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceNameSettings(InstanceNameSettings source) {
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.InstanceNameStyle != null) {
+            this.InstanceNameStyle = new String(source.InstanceNameStyle);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

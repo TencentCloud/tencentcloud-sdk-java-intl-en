@@ -142,6 +142,32 @@ Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000,
         this.LanguageCode = LanguageCode;
     }
 
+    public AudioTemplateInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AudioTemplateInfo(AudioTemplateInfo source) {
+        if (source.AudioSelectorName != null) {
+            this.AudioSelectorName = new String(source.AudioSelectorName);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Acodec != null) {
+            this.Acodec = new String(source.Acodec);
+        }
+        if (source.AudioBitrate != null) {
+            this.AudioBitrate = new Long(source.AudioBitrate);
+        }
+        if (source.LanguageCode != null) {
+            this.LanguageCode = new String(source.LanguageCode);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

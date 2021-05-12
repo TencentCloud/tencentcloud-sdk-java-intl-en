@@ -50,6 +50,20 @@ Template ID returned by the [CreateLiveSnapshotTemplate](https://intl.cloud.tenc
         this.TemplateId = TemplateId;
     }
 
+    public DescribeLiveSnapshotTemplateRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLiveSnapshotTemplateRequest(DescribeLiveSnapshotTemplateRequest source) {
+        if (source.TemplateId != null) {
+            this.TemplateId = new Long(source.TemplateId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

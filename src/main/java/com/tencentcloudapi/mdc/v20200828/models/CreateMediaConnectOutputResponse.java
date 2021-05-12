@@ -68,6 +68,23 @@ public class CreateMediaConnectOutputResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public CreateMediaConnectOutputResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateMediaConnectOutputResponse(CreateMediaConnectOutputResponse source) {
+        if (source.Info != null) {
+            this.Info = new DescribeOutput(source.Info);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -160,6 +160,38 @@ public class ModifyInput extends AbstractModel{
         this.RTPSettings = RTPSettings;
     }
 
+    public ModifyInput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyInput(ModifyInput source) {
+        if (source.InputId != null) {
+            this.InputId = new String(source.InputId);
+        }
+        if (source.InputName != null) {
+            this.InputName = new String(source.InputName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.AllowIpList != null) {
+            this.AllowIpList = new String[source.AllowIpList.length];
+            for (int i = 0; i < source.AllowIpList.length; i++) {
+                this.AllowIpList[i] = new String(source.AllowIpList[i]);
+            }
+        }
+        if (source.SRTSettings != null) {
+            this.SRTSettings = new CreateInputSRTSettings(source.SRTSettings);
+        }
+        if (source.RTPSettings != null) {
+            this.RTPSettings = new CreateInputRTPSettings(source.RTPSettings);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

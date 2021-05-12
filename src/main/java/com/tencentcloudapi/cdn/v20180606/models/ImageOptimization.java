@@ -106,6 +106,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.GuetzliAdapter = GuetzliAdapter;
     }
 
+    public ImageOptimization() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageOptimization(ImageOptimization source) {
+        if (source.WebpAdapter != null) {
+            this.WebpAdapter = new WebpAdapter(source.WebpAdapter);
+        }
+        if (source.TpgAdapter != null) {
+            this.TpgAdapter = new TpgAdapter(source.TpgAdapter);
+        }
+        if (source.GuetzliAdapter != null) {
+            this.GuetzliAdapter = new GuetzliAdapter(source.GuetzliAdapter);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

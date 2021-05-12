@@ -45,6 +45,20 @@ public class Scte35SettingsInfo extends AbstractModel{
         this.Behavior = Behavior;
     }
 
+    public Scte35SettingsInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Scte35SettingsInfo(Scte35SettingsInfo source) {
+        if (source.Behavior != null) {
+            this.Behavior = new String(source.Behavior);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

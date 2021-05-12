@@ -172,12 +172,19 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     private DiskInfo SystemDiskInfo;
 
     /**
-    * CCN information
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * CCN instance information
+Note: this field may return `null`, indicating that no valid value is obtained.
     */
     @SerializedName("RelatedCcnInfos")
     @Expose
     private RelatedCcnInfo [] RelatedCcnInfos;
+
+    /**
+    * 
+    */
+    @SerializedName("InternetMaxBandwidthOut")
+    @Expose
+    private Long InternetMaxBandwidthOut;
 
     /**
      * Get Asset package ID 
@@ -548,24 +555,126 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     }
 
     /**
-     * Get CCN information
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return RelatedCcnInfos CCN information
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get CCN instance information
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return RelatedCcnInfos CCN instance information
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public RelatedCcnInfo [] getRelatedCcnInfos() {
         return this.RelatedCcnInfos;
     }
 
     /**
-     * Set CCN information
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param RelatedCcnInfos CCN information
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set CCN instance information
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param RelatedCcnInfos CCN instance information
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public void setRelatedCcnInfos(RelatedCcnInfo [] RelatedCcnInfos) {
         this.RelatedCcnInfos = RelatedCcnInfos;
     }
+
+    /**
+     * Get  
+     * @return InternetMaxBandwidthOut 
+     */
+    public Long getInternetMaxBandwidthOut() {
+        return this.InternetMaxBandwidthOut;
+    }
+
+    /**
+     * Set 
+     * @param InternetMaxBandwidthOut 
+     */
+    public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
+        this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
+    }
+
+    public FleetAttributes() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public FleetAttributes(FleetAttributes source) {
+        if (source.AssetId != null) {
+            this.AssetId = new String(source.AssetId);
+        }
+        if (source.CreationTime != null) {
+            this.CreationTime = new String(source.CreationTime);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.FleetArn != null) {
+            this.FleetArn = new String(source.FleetArn);
+        }
+        if (source.FleetId != null) {
+            this.FleetId = new String(source.FleetId);
+        }
+        if (source.FleetType != null) {
+            this.FleetType = new String(source.FleetType);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.NewGameServerSessionProtectionPolicy != null) {
+            this.NewGameServerSessionProtectionPolicy = new String(source.NewGameServerSessionProtectionPolicy);
+        }
+        if (source.OperatingSystem != null) {
+            this.OperatingSystem = new String(source.OperatingSystem);
+        }
+        if (source.ResourceCreationLimitPolicy != null) {
+            this.ResourceCreationLimitPolicy = new ResourceCreationLimitPolicy(source.ResourceCreationLimitPolicy);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.StoppedActions != null) {
+            this.StoppedActions = new String[source.StoppedActions.length];
+            for (int i = 0; i < source.StoppedActions.length; i++) {
+                this.StoppedActions[i] = new String(source.StoppedActions[i]);
+            }
+        }
+        if (source.TerminationTime != null) {
+            this.TerminationTime = new String(source.TerminationTime);
+        }
+        if (source.GameServerSessionProtectionTimeLimit != null) {
+            this.GameServerSessionProtectionTimeLimit = new Long(source.GameServerSessionProtectionTimeLimit);
+        }
+        if (source.BillingStatus != null) {
+            this.BillingStatus = new String(source.BillingStatus);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.DataDiskInfo != null) {
+            this.DataDiskInfo = new DiskInfo[source.DataDiskInfo.length];
+            for (int i = 0; i < source.DataDiskInfo.length; i++) {
+                this.DataDiskInfo[i] = new DiskInfo(source.DataDiskInfo[i]);
+            }
+        }
+        if (source.SystemDiskInfo != null) {
+            this.SystemDiskInfo = new DiskInfo(source.SystemDiskInfo);
+        }
+        if (source.RelatedCcnInfos != null) {
+            this.RelatedCcnInfos = new RelatedCcnInfo[source.RelatedCcnInfos.length];
+            for (int i = 0; i < source.RelatedCcnInfos.length; i++) {
+                this.RelatedCcnInfos[i] = new RelatedCcnInfo(source.RelatedCcnInfos[i]);
+            }
+        }
+        if (source.InternetMaxBandwidthOut != null) {
+            this.InternetMaxBandwidthOut = new Long(source.InternetMaxBandwidthOut);
+        }
+    }
+
 
     /**
      * Internal implementation, normal users should not use it.
@@ -591,6 +700,7 @@ Note: `null` may be returned for this field, indicating that no valid values can
         this.setParamArrayObj(map, prefix + "DataDiskInfo.", this.DataDiskInfo);
         this.setParamObj(map, prefix + "SystemDiskInfo.", this.SystemDiskInfo);
         this.setParamArrayObj(map, prefix + "RelatedCcnInfos.", this.RelatedCcnInfos);
+        this.setParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
 
     }
 }

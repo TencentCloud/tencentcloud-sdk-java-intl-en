@@ -142,6 +142,38 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.Region = Region;
     }
 
+    public InputSecurityGroupInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InputSecurityGroupInfo(InputSecurityGroupInfo source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Whitelist != null) {
+            this.Whitelist = new String[source.Whitelist.length];
+            for (int i = 0; i < source.Whitelist.length; i++) {
+                this.Whitelist[i] = new String(source.Whitelist[i]);
+            }
+        }
+        if (source.OccupiedInputs != null) {
+            this.OccupiedInputs = new String[source.OccupiedInputs.length];
+            for (int i = 0; i < source.OccupiedInputs.length; i++) {
+                this.OccupiedInputs[i] = new String(source.OccupiedInputs[i]);
+            }
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -337,6 +337,50 @@ If the image quality does not meet the requirement, the returned result will pro
         this.NeedRotateDetection = NeedRotateDetection;
     }
 
+    public SearchPersonsReturnsByGroupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public SearchPersonsReturnsByGroupRequest(SearchPersonsReturnsByGroupRequest source) {
+        if (source.GroupIds != null) {
+            this.GroupIds = new String[source.GroupIds.length];
+            for (int i = 0; i < source.GroupIds.length; i++) {
+                this.GroupIds[i] = new String(source.GroupIds[i]);
+            }
+        }
+        if (source.Image != null) {
+            this.Image = new String(source.Image);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.MaxFaceNum != null) {
+            this.MaxFaceNum = new Long(source.MaxFaceNum);
+        }
+        if (source.MinFaceSize != null) {
+            this.MinFaceSize = new Long(source.MinFaceSize);
+        }
+        if (source.MaxPersonNumPerGroup != null) {
+            this.MaxPersonNumPerGroup = new Long(source.MaxPersonNumPerGroup);
+        }
+        if (source.QualityControl != null) {
+            this.QualityControl = new Long(source.QualityControl);
+        }
+        if (source.FaceMatchThreshold != null) {
+            this.FaceMatchThreshold = new Float(source.FaceMatchThreshold);
+        }
+        if (source.NeedPersonInfo != null) {
+            this.NeedPersonInfo = new Long(source.NeedPersonInfo);
+        }
+        if (source.NeedRotateDetection != null) {
+            this.NeedRotateDetection = new Long(source.NeedRotateDetection);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

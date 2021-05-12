@@ -141,6 +141,29 @@ Alternatively, you can specify a status code for querying.
         this.SummarizedData = SummarizedData;
     }
 
+    public CdnData() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CdnData(CdnData source) {
+        if (source.Metric != null) {
+            this.Metric = new String(source.Metric);
+        }
+        if (source.DetailData != null) {
+            this.DetailData = new TimestampData[source.DetailData.length];
+            for (int i = 0; i < source.DetailData.length; i++) {
+                this.DetailData[i] = new TimestampData(source.DetailData[i]);
+            }
+        }
+        if (source.SummarizedData != null) {
+            this.SummarizedData = new SummarizedData(source.SummarizedData);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

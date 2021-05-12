@@ -281,6 +281,41 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.ThroughputPerformance = ThroughputPerformance;
     }
 
+    public DataDisk() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DataDisk(DataDisk source) {
+        if (source.DiskSize != null) {
+            this.DiskSize = new Long(source.DiskSize);
+        }
+        if (source.DiskType != null) {
+            this.DiskType = new String(source.DiskType);
+        }
+        if (source.DiskId != null) {
+            this.DiskId = new String(source.DiskId);
+        }
+        if (source.DeleteWithInstance != null) {
+            this.DeleteWithInstance = new Boolean(source.DeleteWithInstance);
+        }
+        if (source.SnapshotId != null) {
+            this.SnapshotId = new String(source.SnapshotId);
+        }
+        if (source.Encrypt != null) {
+            this.Encrypt = new Boolean(source.Encrypt);
+        }
+        if (source.KmsKeyId != null) {
+            this.KmsKeyId = new String(source.KmsKeyId);
+        }
+        if (source.ThroughputPerformance != null) {
+            this.ThroughputPerformance = new Long(source.ThroughputPerformance);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -91,6 +91,26 @@ public class DashRemuxSettingsInfo extends AbstractModel{
         this.PeriodTriggers = PeriodTriggers;
     }
 
+    public DashRemuxSettingsInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DashRemuxSettingsInfo(DashRemuxSettingsInfo source) {
+        if (source.SegmentDuration != null) {
+            this.SegmentDuration = new Long(source.SegmentDuration);
+        }
+        if (source.SegmentNumber != null) {
+            this.SegmentNumber = new Long(source.SegmentNumber);
+        }
+        if (source.PeriodTriggers != null) {
+            this.PeriodTriggers = new String(source.PeriodTriggers);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

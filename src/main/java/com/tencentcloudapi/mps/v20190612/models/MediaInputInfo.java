@@ -96,6 +96,26 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         this.UrlInputInfo = UrlInputInfo;
     }
 
+    public MediaInputInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaInputInfo(MediaInputInfo source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.CosInputInfo != null) {
+            this.CosInputInfo = new CosInputInfo(source.CosInputInfo);
+        }
+        if (source.UrlInputInfo != null) {
+            this.UrlInputInfo = new UrlInputInfo(source.UrlInputInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

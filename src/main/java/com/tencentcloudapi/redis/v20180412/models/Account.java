@@ -190,6 +190,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Status = Status;
     }
 
+    public Account() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public Account(Account source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.AccountName != null) {
+            this.AccountName = new String(source.AccountName);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.Privilege != null) {
+            this.Privilege = new String(source.Privilege);
+        }
+        if (source.ReadonlyPolicy != null) {
+            this.ReadonlyPolicy = new String[source.ReadonlyPolicy.length];
+            for (int i = 0; i < source.ReadonlyPolicy.length; i++) {
+                this.ReadonlyPolicy[i] = new String(source.ReadonlyPolicy[i]);
+            }
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

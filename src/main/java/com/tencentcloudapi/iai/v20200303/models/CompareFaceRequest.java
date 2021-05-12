@@ -318,6 +318,38 @@ If the image quality does not meet the requirement, the returned result will pro
         this.NeedRotateDetection = NeedRotateDetection;
     }
 
+    public CompareFaceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CompareFaceRequest(CompareFaceRequest source) {
+        if (source.ImageA != null) {
+            this.ImageA = new String(source.ImageA);
+        }
+        if (source.ImageB != null) {
+            this.ImageB = new String(source.ImageB);
+        }
+        if (source.UrlA != null) {
+            this.UrlA = new String(source.UrlA);
+        }
+        if (source.UrlB != null) {
+            this.UrlB = new String(source.UrlB);
+        }
+        if (source.FaceModelVersion != null) {
+            this.FaceModelVersion = new String(source.FaceModelVersion);
+        }
+        if (source.QualityControl != null) {
+            this.QualityControl = new Long(source.QualityControl);
+        }
+        if (source.NeedRotateDetection != null) {
+            this.NeedRotateDetection = new Long(source.NeedRotateDetection);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

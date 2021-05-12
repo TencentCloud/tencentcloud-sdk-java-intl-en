@@ -68,6 +68,23 @@ public class ModifyMediaConnectFlowRequest extends AbstractModel{
         this.FlowName = FlowName;
     }
 
+    public ModifyMediaConnectFlowRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyMediaConnectFlowRequest(ModifyMediaConnectFlowRequest source) {
+        if (source.FlowId != null) {
+            this.FlowId = new String(source.FlowId);
+        }
+        if (source.FlowName != null) {
+            this.FlowName = new String(source.FlowName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

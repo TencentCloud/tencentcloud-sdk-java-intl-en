@@ -101,6 +101,26 @@ UPDATE: update authentication.
         this.ActionType = ActionType;
     }
 
+    public ModifyMediaPackageChannelInputAuthInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyMediaPackageChannelInputAuthInfoRequest(ModifyMediaPackageChannelInputAuthInfoRequest source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.ActionType != null) {
+            this.ActionType = new String(source.ActionType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -114,6 +114,29 @@ public class RelatedEvent extends AbstractModel{
         this.EventReqId = EventReqId;
     }
 
+    public RelatedEvent() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RelatedEvent(RelatedEvent source) {
+        if (source.EventName != null) {
+            this.EventName = new String(source.EventName);
+        }
+        if (source.EventTime != null) {
+            this.EventTime = new String(source.EventTime);
+        }
+        if (source.OperateUin != null) {
+            this.OperateUin = new Long(source.OperateUin);
+        }
+        if (source.EventReqId != null) {
+            this.EventReqId = new String(source.EventReqId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

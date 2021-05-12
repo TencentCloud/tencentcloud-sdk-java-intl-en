@@ -159,6 +159,29 @@ Default value: 0 px, which means that `Height` will be proportionally scaled acc
         this.RepeatType = RepeatType;
     }
 
+    public ImageWatermarkInput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ImageWatermarkInput(ImageWatermarkInput source) {
+        if (source.ImageContent != null) {
+            this.ImageContent = new String(source.ImageContent);
+        }
+        if (source.Width != null) {
+            this.Width = new String(source.Width);
+        }
+        if (source.Height != null) {
+            this.Height = new String(source.Height);
+        }
+        if (source.RepeatType != null) {
+            this.RepeatType = new String(source.RepeatType);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

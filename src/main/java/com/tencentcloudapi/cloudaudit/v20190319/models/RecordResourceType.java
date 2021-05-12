@@ -160,6 +160,35 @@ public class RecordResourceType extends AbstractModel{
         this.ResourceTypeName = ResourceTypeName;
     }
 
+    public RecordResourceType() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public RecordResourceType(RecordResourceType source) {
+        if (source.PolicyName != null) {
+            this.PolicyName = new String(source.PolicyName);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.Service != null) {
+            this.Service = new String(source.Service);
+        }
+        if (source.ResourceType != null) {
+            this.ResourceType = new String(source.ResourceType);
+        }
+        if (source.ServiceName != null) {
+            this.ServiceName = new String(source.ServiceName);
+        }
+        if (source.ResourceTypeName != null) {
+            this.ResourceTypeName = new String(source.ResourceTypeName);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

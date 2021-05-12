@@ -68,6 +68,23 @@ public class DeleteMediaConnectOutputRequest extends AbstractModel{
         this.OutputId = OutputId;
     }
 
+    public DeleteMediaConnectOutputRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteMediaConnectOutputRequest(DeleteMediaConnectOutputRequest source) {
+        if (source.FlowId != null) {
+            this.FlowId = new String(source.FlowId);
+        }
+        if (source.OutputId != null) {
+            this.OutputId = new String(source.OutputId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

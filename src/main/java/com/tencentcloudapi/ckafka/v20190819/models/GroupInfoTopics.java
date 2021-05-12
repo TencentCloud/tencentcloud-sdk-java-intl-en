@@ -73,6 +73,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.Partitions = Partitions;
     }
 
+    public GroupInfoTopics() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public GroupInfoTopics(GroupInfoTopics source) {
+        if (source.Topic != null) {
+            this.Topic = new String(source.Topic);
+        }
+        if (source.Partitions != null) {
+            this.Partitions = new Long[source.Partitions.length];
+            for (int i = 0; i < source.Partitions.length; i++) {
+                this.Partitions[i] = new Long(source.Partitions[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

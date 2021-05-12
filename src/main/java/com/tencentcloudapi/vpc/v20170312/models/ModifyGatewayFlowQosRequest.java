@@ -106,6 +106,29 @@ ID of VPN gateway instance, e.g. `vpn-ltjahce6`.
         this.IpAddresses = IpAddresses;
     }
 
+    public ModifyGatewayFlowQosRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyGatewayFlowQosRequest(ModifyGatewayFlowQosRequest source) {
+        if (source.GatewayId != null) {
+            this.GatewayId = new String(source.GatewayId);
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
+        if (source.IpAddresses != null) {
+            this.IpAddresses = new String[source.IpAddresses.length];
+            for (int i = 0; i < source.IpAddresses.length; i++) {
+                this.IpAddresses[i] = new String(source.IpAddresses[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

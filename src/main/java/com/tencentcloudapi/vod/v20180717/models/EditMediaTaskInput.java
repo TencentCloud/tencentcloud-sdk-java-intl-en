@@ -101,6 +101,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.StreamInfoSet = StreamInfoSet;
     }
 
+    public EditMediaTaskInput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EditMediaTaskInput(EditMediaTaskInput source) {
+        if (source.InputType != null) {
+            this.InputType = new String(source.InputType);
+        }
+        if (source.FileInfoSet != null) {
+            this.FileInfoSet = new EditMediaFileInfo[source.FileInfoSet.length];
+            for (int i = 0; i < source.FileInfoSet.length; i++) {
+                this.FileInfoSet[i] = new EditMediaFileInfo(source.FileInfoSet[i]);
+            }
+        }
+        if (source.StreamInfoSet != null) {
+            this.StreamInfoSet = new EditMediaStreamInfo[source.StreamInfoSet.length];
+            for (int i = 0; i < source.StreamInfoSet.length; i++) {
+                this.StreamInfoSet[i] = new EditMediaStreamInfo(source.StreamInfoSet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

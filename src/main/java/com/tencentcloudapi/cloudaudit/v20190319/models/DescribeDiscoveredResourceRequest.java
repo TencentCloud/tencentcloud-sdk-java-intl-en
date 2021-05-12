@@ -45,6 +45,20 @@ public class DescribeDiscoveredResourceRequest extends AbstractModel{
         this.ResourceId = ResourceId;
     }
 
+    public DescribeDiscoveredResourceRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDiscoveredResourceRequest(DescribeDiscoveredResourceRequest source) {
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

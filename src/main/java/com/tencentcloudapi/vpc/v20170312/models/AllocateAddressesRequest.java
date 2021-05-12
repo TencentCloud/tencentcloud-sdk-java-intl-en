@@ -342,6 +342,50 @@ Whether the Anycast EIP can be bound to CLB instances.
         this.BandwidthPackageId = BandwidthPackageId;
     }
 
+    public AllocateAddressesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AllocateAddressesRequest(AllocateAddressesRequest source) {
+        if (source.AddressCount != null) {
+            this.AddressCount = new Long(source.AddressCount);
+        }
+        if (source.InternetServiceProvider != null) {
+            this.InternetServiceProvider = new String(source.InternetServiceProvider);
+        }
+        if (source.InternetChargeType != null) {
+            this.InternetChargeType = new String(source.InternetChargeType);
+        }
+        if (source.InternetMaxBandwidthOut != null) {
+            this.InternetMaxBandwidthOut = new Long(source.InternetMaxBandwidthOut);
+        }
+        if (source.AddressChargePrepaid != null) {
+            this.AddressChargePrepaid = new AddressChargePrepaid(source.AddressChargePrepaid);
+        }
+        if (source.AddressType != null) {
+            this.AddressType = new String(source.AddressType);
+        }
+        if (source.AnycastZone != null) {
+            this.AnycastZone = new String(source.AnycastZone);
+        }
+        if (source.ApplicableForCLB != null) {
+            this.ApplicableForCLB = new Boolean(source.ApplicableForCLB);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.BandwidthPackageId != null) {
+            this.BandwidthPackageId = new String(source.BandwidthPackageId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

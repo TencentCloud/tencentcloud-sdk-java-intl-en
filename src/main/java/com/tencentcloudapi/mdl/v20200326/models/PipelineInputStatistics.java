@@ -134,6 +134,35 @@ For other inputs, the quantity is 1.
         this.Audio = Audio;
     }
 
+    public PipelineInputStatistics() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PipelineInputStatistics(PipelineInputStatistics source) {
+        if (source.Timestamp != null) {
+            this.Timestamp = new Long(source.Timestamp);
+        }
+        if (source.NetworkIn != null) {
+            this.NetworkIn = new Long(source.NetworkIn);
+        }
+        if (source.Video != null) {
+            this.Video = new VideoPipelineInputStatistics[source.Video.length];
+            for (int i = 0; i < source.Video.length; i++) {
+                this.Video[i] = new VideoPipelineInputStatistics(source.Video[i]);
+            }
+        }
+        if (source.Audio != null) {
+            this.Audio = new AudioPipelineInputStatistics[source.Audio.length];
+            for (int i = 0; i < source.Audio.length; i++) {
+                this.Audio[i] = new AudioPipelineInputStatistics(source.Audio[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

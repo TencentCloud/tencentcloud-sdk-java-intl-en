@@ -342,6 +342,47 @@ Note: This parameter takes effect when StreamName is used.
         this.IsAsc = IsAsc;
     }
 
+    public DescribeLiveStreamEventListRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeLiveStreamEventListRequest(DescribeLiveStreamEventListRequest source) {
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.AppName != null) {
+            this.AppName = new String(source.AppName);
+        }
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
+        if (source.StreamName != null) {
+            this.StreamName = new String(source.StreamName);
+        }
+        if (source.PageNum != null) {
+            this.PageNum = new Long(source.PageNum);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+        if (source.IsFilter != null) {
+            this.IsFilter = new Long(source.IsFilter);
+        }
+        if (source.IsStrict != null) {
+            this.IsStrict = new Long(source.IsStrict);
+        }
+        if (source.IsAsc != null) {
+            this.IsAsc = new Long(source.IsAsc);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

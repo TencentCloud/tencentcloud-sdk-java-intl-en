@@ -78,6 +78,29 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.Pipeline1 = Pipeline1;
     }
 
+    public PipelineLogInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PipelineLogInfo(PipelineLogInfo source) {
+        if (source.Pipeline0 != null) {
+            this.Pipeline0 = new LogInfo[source.Pipeline0.length];
+            for (int i = 0; i < source.Pipeline0.length; i++) {
+                this.Pipeline0[i] = new LogInfo(source.Pipeline0[i]);
+            }
+        }
+        if (source.Pipeline1 != null) {
+            this.Pipeline1 = new LogInfo[source.Pipeline1.length];
+            for (int i = 0; i < source.Pipeline1.length; i++) {
+                this.Pipeline1[i] = new LogInfo(source.Pipeline1[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

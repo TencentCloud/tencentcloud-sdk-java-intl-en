@@ -68,6 +68,26 @@ public class DescribeMediaLiveInputSecurityGroupsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DescribeMediaLiveInputSecurityGroupsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeMediaLiveInputSecurityGroupsResponse(DescribeMediaLiveInputSecurityGroupsResponse source) {
+        if (source.Infos != null) {
+            this.Infos = new InputSecurityGroupInfo[source.Infos.length];
+            for (int i = 0; i < source.Infos.length; i++) {
+                this.Infos[i] = new InputSecurityGroupInfo(source.Infos[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

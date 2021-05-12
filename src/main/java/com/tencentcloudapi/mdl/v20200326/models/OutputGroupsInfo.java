@@ -221,6 +221,47 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.MediaPackageSettings = MediaPackageSettings;
     }
 
+    public OutputGroupsInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public OutputGroupsInfo(OutputGroupsInfo source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Outputs != null) {
+            this.Outputs = new OutputInfo[source.Outputs.length];
+            for (int i = 0; i < source.Outputs.length; i++) {
+                this.Outputs[i] = new OutputInfo(source.Outputs[i]);
+            }
+        }
+        if (source.Destinations != null) {
+            this.Destinations = new DestinationInfo[source.Destinations.length];
+            for (int i = 0; i < source.Destinations.length; i++) {
+                this.Destinations[i] = new DestinationInfo(source.Destinations[i]);
+            }
+        }
+        if (source.HlsRemuxSettings != null) {
+            this.HlsRemuxSettings = new HlsRemuxSettingsInfo(source.HlsRemuxSettings);
+        }
+        if (source.DashRemuxSettings != null) {
+            this.DashRemuxSettings = new DashRemuxSettingsInfo(source.DashRemuxSettings);
+        }
+        if (source.DrmSettings != null) {
+            this.DrmSettings = new DrmSettingsInfo(source.DrmSettings);
+        }
+        if (source.MediaPackageSettings != null) {
+            this.MediaPackageSettings = new MediaPackageSettingsInfo(source.MediaPackageSettings);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

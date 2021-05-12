@@ -129,6 +129,29 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.RoomNumbers = RoomNumbers;
     }
 
+    public ScaleInfomation() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ScaleInfomation(ScaleInfomation source) {
+        if (source.Time != null) {
+            this.Time = new Long(source.Time);
+        }
+        if (source.UserNumber != null) {
+            this.UserNumber = new Long(source.UserNumber);
+        }
+        if (source.UserCount != null) {
+            this.UserCount = new Long(source.UserCount);
+        }
+        if (source.RoomNumbers != null) {
+            this.RoomNumbers = new Long(source.RoomNumbers);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

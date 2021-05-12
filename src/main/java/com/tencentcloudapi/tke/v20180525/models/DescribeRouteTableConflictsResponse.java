@@ -96,6 +96,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
+    public DescribeRouteTableConflictsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeRouteTableConflictsResponse(DescribeRouteTableConflictsResponse source) {
+        if (source.HasConflict != null) {
+            this.HasConflict = new Boolean(source.HasConflict);
+        }
+        if (source.RouteTableConflictSet != null) {
+            this.RouteTableConflictSet = new RouteTableConflict[source.RouteTableConflictSet.length];
+            for (int i = 0; i < source.RouteTableConflictSet.length; i++) {
+                this.RouteTableConflictSet[i] = new RouteTableConflict(source.RouteTableConflictSet[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

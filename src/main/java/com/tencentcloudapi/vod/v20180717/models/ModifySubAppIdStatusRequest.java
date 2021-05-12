@@ -88,6 +88,23 @@ You cannot enable a subapplication whose status is “Destroying”. You can ena
         this.Status = Status;
     }
 
+    public ModifySubAppIdStatusRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifySubAppIdStatusRequest(ModifySubAppIdStatusRequest source) {
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

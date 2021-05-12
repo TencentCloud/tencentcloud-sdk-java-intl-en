@@ -50,6 +50,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         this.Kubelet = Kubelet;
     }
 
+    public InstanceExtraArgs() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public InstanceExtraArgs(InstanceExtraArgs source) {
+        if (source.Kubelet != null) {
+            this.Kubelet = new String[source.Kubelet.length];
+            for (int i = 0; i < source.Kubelet.length; i++) {
+                this.Kubelet[i] = new String(source.Kubelet[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

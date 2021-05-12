@@ -68,6 +68,23 @@ public class ChannelInputStatistics extends AbstractModel{
         this.Statistics = Statistics;
     }
 
+    public ChannelInputStatistics() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ChannelInputStatistics(ChannelInputStatistics source) {
+        if (source.InputId != null) {
+            this.InputId = new String(source.InputId);
+        }
+        if (source.Statistics != null) {
+            this.Statistics = new InputStatistics(source.Statistics);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

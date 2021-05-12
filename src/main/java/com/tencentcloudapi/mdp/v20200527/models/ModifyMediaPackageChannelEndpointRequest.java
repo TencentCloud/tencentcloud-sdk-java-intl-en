@@ -114,6 +114,29 @@ public class ModifyMediaPackageChannelEndpointRequest extends AbstractModel{
         this.AuthInfo = AuthInfo;
     }
 
+    public ModifyMediaPackageChannelEndpointRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyMediaPackageChannelEndpointRequest(ModifyMediaPackageChannelEndpointRequest source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.AuthInfo != null) {
+            this.AuthInfo = new EndpointAuthInfo(source.AuthInfo);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

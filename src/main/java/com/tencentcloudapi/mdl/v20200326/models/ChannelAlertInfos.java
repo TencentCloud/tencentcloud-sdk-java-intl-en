@@ -68,6 +68,29 @@ public class ChannelAlertInfos extends AbstractModel{
         this.Pipeline1 = Pipeline1;
     }
 
+    public ChannelAlertInfos() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ChannelAlertInfos(ChannelAlertInfos source) {
+        if (source.Pipeline0 != null) {
+            this.Pipeline0 = new ChannelPipelineAlerts[source.Pipeline0.length];
+            for (int i = 0; i < source.Pipeline0.length; i++) {
+                this.Pipeline0[i] = new ChannelPipelineAlerts(source.Pipeline0[i]);
+            }
+        }
+        if (source.Pipeline1 != null) {
+            this.Pipeline1 = new ChannelPipelineAlerts[source.Pipeline1.length];
+            for (int i = 0; i < source.Pipeline1.length; i++) {
+                this.Pipeline1[i] = new ChannelPipelineAlerts(source.Pipeline1[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

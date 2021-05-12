@@ -114,7 +114,7 @@ public class CopyFleetRequest extends AbstractModel{
     private String SelectedScalingType;
 
     /**
-    * Whether to select CCN: CCN_SELECTED_BEFORE_CREATE (associated before creation), CCN_SELECTED_AFTER_CREATE (associated after creation), or CCN_UNSELECTED (not associated); CCN_UNSELECTED by default
+    * Whether to associate the fleet with a CCN instance: CCN_SELECTED_BEFORE_CREATE (associate before creation), CCN_SELECTED_AFTER_CREATE (associated after creation), or CCN_UNSELECTED (do not associate); CCN_UNSELECTED by default
     */
     @SerializedName("SelectedCcnType")
     @Expose
@@ -149,11 +149,18 @@ public class CopyFleetRequest extends AbstractModel{
     private String SelectedTimerType;
 
     /**
-    * CCN information, including the corresponding CCN account and ID.
+    * Information of the CCN instance, including the owner account and the instance ID.
     */
     @SerializedName("CcnInfos")
     @Expose
     private CcnInfo [] CcnInfos;
+
+    /**
+    * 
+    */
+    @SerializedName("InternetMaxBandwidthOut")
+    @Expose
+    private Long InternetMaxBandwidthOut;
 
     /**
      * Get Server fleet ID 
@@ -364,16 +371,16 @@ public class CopyFleetRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to select CCN: CCN_SELECTED_BEFORE_CREATE (associated before creation), CCN_SELECTED_AFTER_CREATE (associated after creation), or CCN_UNSELECTED (not associated); CCN_UNSELECTED by default 
-     * @return SelectedCcnType Whether to select CCN: CCN_SELECTED_BEFORE_CREATE (associated before creation), CCN_SELECTED_AFTER_CREATE (associated after creation), or CCN_UNSELECTED (not associated); CCN_UNSELECTED by default
+     * Get Whether to associate the fleet with a CCN instance: CCN_SELECTED_BEFORE_CREATE (associate before creation), CCN_SELECTED_AFTER_CREATE (associated after creation), or CCN_UNSELECTED (do not associate); CCN_UNSELECTED by default 
+     * @return SelectedCcnType Whether to associate the fleet with a CCN instance: CCN_SELECTED_BEFORE_CREATE (associate before creation), CCN_SELECTED_AFTER_CREATE (associated after creation), or CCN_UNSELECTED (do not associate); CCN_UNSELECTED by default
      */
     public String getSelectedCcnType() {
         return this.SelectedCcnType;
     }
 
     /**
-     * Set Whether to select CCN: CCN_SELECTED_BEFORE_CREATE (associated before creation), CCN_SELECTED_AFTER_CREATE (associated after creation), or CCN_UNSELECTED (not associated); CCN_UNSELECTED by default
-     * @param SelectedCcnType Whether to select CCN: CCN_SELECTED_BEFORE_CREATE (associated before creation), CCN_SELECTED_AFTER_CREATE (associated after creation), or CCN_UNSELECTED (not associated); CCN_UNSELECTED by default
+     * Set Whether to associate the fleet with a CCN instance: CCN_SELECTED_BEFORE_CREATE (associate before creation), CCN_SELECTED_AFTER_CREATE (associated after creation), or CCN_UNSELECTED (do not associate); CCN_UNSELECTED by default
+     * @param SelectedCcnType Whether to associate the fleet with a CCN instance: CCN_SELECTED_BEFORE_CREATE (associate before creation), CCN_SELECTED_AFTER_CREATE (associated after creation), or CCN_UNSELECTED (do not associate); CCN_UNSELECTED by default
      */
     public void setSelectedCcnType(String SelectedCcnType) {
         this.SelectedCcnType = SelectedCcnType;
@@ -444,20 +451,119 @@ public class CopyFleetRequest extends AbstractModel{
     }
 
     /**
-     * Get CCN information, including the corresponding CCN account and ID. 
-     * @return CcnInfos CCN information, including the corresponding CCN account and ID.
+     * Get Information of the CCN instance, including the owner account and the instance ID. 
+     * @return CcnInfos Information of the CCN instance, including the owner account and the instance ID.
      */
     public CcnInfo [] getCcnInfos() {
         return this.CcnInfos;
     }
 
     /**
-     * Set CCN information, including the corresponding CCN account and ID.
-     * @param CcnInfos CCN information, including the corresponding CCN account and ID.
+     * Set Information of the CCN instance, including the owner account and the instance ID.
+     * @param CcnInfos Information of the CCN instance, including the owner account and the instance ID.
      */
     public void setCcnInfos(CcnInfo [] CcnInfos) {
         this.CcnInfos = CcnInfos;
     }
+
+    /**
+     * Get  
+     * @return InternetMaxBandwidthOut 
+     */
+    public Long getInternetMaxBandwidthOut() {
+        return this.InternetMaxBandwidthOut;
+    }
+
+    /**
+     * Set 
+     * @param InternetMaxBandwidthOut 
+     */
+    public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
+        this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
+    }
+
+    public CopyFleetRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CopyFleetRequest(CopyFleetRequest source) {
+        if (source.FleetId != null) {
+            this.FleetId = new String(source.FleetId);
+        }
+        if (source.CopyNumber != null) {
+            this.CopyNumber = new Long(source.CopyNumber);
+        }
+        if (source.AssetId != null) {
+            this.AssetId = new String(source.AssetId);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.InboundPermissions != null) {
+            this.InboundPermissions = new InboundPermission[source.InboundPermissions.length];
+            for (int i = 0; i < source.InboundPermissions.length; i++) {
+                this.InboundPermissions[i] = new InboundPermission(source.InboundPermissions[i]);
+            }
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.FleetType != null) {
+            this.FleetType = new String(source.FleetType);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.NewGameServerSessionProtectionPolicy != null) {
+            this.NewGameServerSessionProtectionPolicy = new String(source.NewGameServerSessionProtectionPolicy);
+        }
+        if (source.ResourceCreationLimitPolicy != null) {
+            this.ResourceCreationLimitPolicy = new ResourceCreationLimitPolicy(source.ResourceCreationLimitPolicy);
+        }
+        if (source.RuntimeConfiguration != null) {
+            this.RuntimeConfiguration = new RuntimeConfiguration(source.RuntimeConfiguration);
+        }
+        if (source.GameServerSessionProtectionTimeLimit != null) {
+            this.GameServerSessionProtectionTimeLimit = new Long(source.GameServerSessionProtectionTimeLimit);
+        }
+        if (source.SelectedScalingType != null) {
+            this.SelectedScalingType = new String(source.SelectedScalingType);
+        }
+        if (source.SelectedCcnType != null) {
+            this.SelectedCcnType = new String(source.SelectedCcnType);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.SystemDiskInfo != null) {
+            this.SystemDiskInfo = new DiskInfo(source.SystemDiskInfo);
+        }
+        if (source.DataDiskInfo != null) {
+            this.DataDiskInfo = new DiskInfo[source.DataDiskInfo.length];
+            for (int i = 0; i < source.DataDiskInfo.length; i++) {
+                this.DataDiskInfo[i] = new DiskInfo(source.DataDiskInfo[i]);
+            }
+        }
+        if (source.SelectedTimerType != null) {
+            this.SelectedTimerType = new String(source.SelectedTimerType);
+        }
+        if (source.CcnInfos != null) {
+            this.CcnInfos = new CcnInfo[source.CcnInfos.length];
+            for (int i = 0; i < source.CcnInfos.length; i++) {
+                this.CcnInfos[i] = new CcnInfo(source.CcnInfos[i]);
+            }
+        }
+        if (source.InternetMaxBandwidthOut != null) {
+            this.InternetMaxBandwidthOut = new Long(source.InternetMaxBandwidthOut);
+        }
+    }
+
 
     /**
      * Internal implementation, normal users should not use it.
@@ -482,6 +588,7 @@ public class CopyFleetRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "DataDiskInfo.", this.DataDiskInfo);
         this.setParamSimple(map, prefix + "SelectedTimerType", this.SelectedTimerType);
         this.setParamArrayObj(map, prefix + "CcnInfos.", this.CcnInfos);
+        this.setParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
 
     }
 }

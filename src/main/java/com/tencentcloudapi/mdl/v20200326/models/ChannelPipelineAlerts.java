@@ -119,6 +119,29 @@ This time is available only after the alarm ends.
         this.Message = Message;
     }
 
+    public ChannelPipelineAlerts() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ChannelPipelineAlerts(ChannelPipelineAlerts source) {
+        if (source.SetTime != null) {
+            this.SetTime = new String(source.SetTime);
+        }
+        if (source.ClearTime != null) {
+            this.ClearTime = new String(source.ClearTime);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

@@ -50,6 +50,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.Switch = Switch;
     }
 
+    public WebpAdapter() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public WebpAdapter(WebpAdapter source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

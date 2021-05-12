@@ -124,6 +124,32 @@ public class AttachMediaSubtitlesRequest extends AbstractModel{
         this.SubtitleIds = SubtitleIds;
     }
 
+    public AttachMediaSubtitlesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AttachMediaSubtitlesRequest(AttachMediaSubtitlesRequest source) {
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
+        }
+        if (source.AdaptiveDynamicStreamingDefinition != null) {
+            this.AdaptiveDynamicStreamingDefinition = new Long(source.AdaptiveDynamicStreamingDefinition);
+        }
+        if (source.SubtitleIds != null) {
+            this.SubtitleIds = new String[source.SubtitleIds.length];
+            for (int i = 0; i < source.SubtitleIds.length; i++) {
+                this.SubtitleIds[i] = new String(source.SubtitleIds[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

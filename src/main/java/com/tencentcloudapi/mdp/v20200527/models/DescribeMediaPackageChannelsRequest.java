@@ -68,6 +68,23 @@ public class DescribeMediaPackageChannelsRequest extends AbstractModel{
         this.PageSize = PageSize;
     }
 
+    public DescribeMediaPackageChannelsRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeMediaPackageChannelsRequest(DescribeMediaPackageChannelsRequest source) {
+        if (source.PageNum != null) {
+            this.PageNum = new Long(source.PageNum);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

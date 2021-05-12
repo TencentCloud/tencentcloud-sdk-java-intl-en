@@ -277,6 +277,50 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.RTMPSettings = RTMPSettings;
     }
 
+    public DescribeOutput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeOutput(DescribeOutput source) {
+        if (source.OutputId != null) {
+            this.OutputId = new String(source.OutputId);
+        }
+        if (source.OutputName != null) {
+            this.OutputName = new String(source.OutputName);
+        }
+        if (source.OutputType != null) {
+            this.OutputType = new String(source.OutputType);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.OutputAddressList != null) {
+            this.OutputAddressList = new OutputAddress[source.OutputAddressList.length];
+            for (int i = 0; i < source.OutputAddressList.length; i++) {
+                this.OutputAddressList[i] = new OutputAddress(source.OutputAddressList[i]);
+            }
+        }
+        if (source.OutputRegion != null) {
+            this.OutputRegion = new String(source.OutputRegion);
+        }
+        if (source.SRTSettings != null) {
+            this.SRTSettings = new DescribeOutputSRTSettings(source.SRTSettings);
+        }
+        if (source.RTPSettings != null) {
+            this.RTPSettings = new DescribeOutputRTPSettings(source.RTPSettings);
+        }
+        if (source.RTMPSettings != null) {
+            this.RTMPSettings = new DescribeOutputRTMPSettings(source.RTMPSettings);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

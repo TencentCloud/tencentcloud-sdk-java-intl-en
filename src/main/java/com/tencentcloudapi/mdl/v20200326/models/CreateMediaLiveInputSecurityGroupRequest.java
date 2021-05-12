@@ -68,6 +68,26 @@ public class CreateMediaLiveInputSecurityGroupRequest extends AbstractModel{
         this.Whitelist = Whitelist;
     }
 
+    public CreateMediaLiveInputSecurityGroupRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateMediaLiveInputSecurityGroupRequest(CreateMediaLiveInputSecurityGroupRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Whitelist != null) {
+            this.Whitelist = new String[source.Whitelist.length];
+            for (int i = 0; i < source.Whitelist.length; i++) {
+                this.Whitelist[i] = new String(source.Whitelist[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

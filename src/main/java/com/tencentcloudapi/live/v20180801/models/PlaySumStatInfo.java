@@ -124,6 +124,29 @@ Calculation formula: average download speed per minute.
         this.TotalRequest = TotalRequest;
     }
 
+    public PlaySumStatInfo() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public PlaySumStatInfo(PlaySumStatInfo source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.AvgFluxPerSecond != null) {
+            this.AvgFluxPerSecond = new Float(source.AvgFluxPerSecond);
+        }
+        if (source.TotalFlux != null) {
+            this.TotalFlux = new Float(source.TotalFlux);
+        }
+        if (source.TotalRequest != null) {
+            this.TotalRequest = new Long(source.TotalRequest);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

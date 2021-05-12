@@ -91,6 +91,32 @@ public class DeleteMediaPackageChannelsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
+    public DeleteMediaPackageChannelsResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DeleteMediaPackageChannelsResponse(DeleteMediaPackageChannelsResponse source) {
+        if (source.SuccessInfos != null) {
+            this.SuccessInfos = new ChannelInfo[source.SuccessInfos.length];
+            for (int i = 0; i < source.SuccessInfos.length; i++) {
+                this.SuccessInfos[i] = new ChannelInfo(source.SuccessInfos[i]);
+            }
+        }
+        if (source.FailInfos != null) {
+            this.FailInfos = new ChannelInfo[source.FailInfos.length];
+            for (int i = 0; i < source.FailInfos.length; i++) {
+                this.FailInfos[i] = new ChannelInfo(source.FailInfos[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

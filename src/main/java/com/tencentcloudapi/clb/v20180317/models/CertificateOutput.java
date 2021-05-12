@@ -96,6 +96,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.CertCaId = CertCaId;
     }
 
+    public CertificateOutput() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CertificateOutput(CertificateOutput source) {
+        if (source.SSLMode != null) {
+            this.SSLMode = new String(source.SSLMode);
+        }
+        if (source.CertId != null) {
+            this.CertId = new String(source.CertId);
+        }
+        if (source.CertCaId != null) {
+            this.CertCaId = new String(source.CertCaId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

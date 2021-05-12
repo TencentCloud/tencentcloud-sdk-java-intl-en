@@ -124,6 +124,35 @@ Only one security group can be associated.
         this.InputSettings = InputSettings;
     }
 
+    public CreateMediaLiveInputRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CreateMediaLiveInputRequest(CreateMediaLiveInputRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
+        if (source.InputSettings != null) {
+            this.InputSettings = new InputSettingInfo[source.InputSettings.length];
+            for (int i = 0; i < source.InputSettings.length; i++) {
+                this.InputSettings[i] = new InputSettingInfo(source.InputSettings[i]);
+            }
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

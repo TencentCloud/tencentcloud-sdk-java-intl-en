@@ -249,6 +249,44 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.RequestId = RequestId;
     }
 
+    public DescribeDiscoveredResourceResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeDiscoveredResourceResponse(DescribeDiscoveredResourceResponse source) {
+        if (source.LastUpdateTime != null) {
+            this.LastUpdateTime = new String(source.LastUpdateTime);
+        }
+        if (source.ResourceType != null) {
+            this.ResourceType = new String(source.ResourceType);
+        }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.Tag != null) {
+            this.Tag = new String(source.Tag);
+        }
+        if (source.ResourceInfo != null) {
+            this.ResourceInfo = new String(source.ResourceInfo);
+        }
+        if (source.ResourceRegion != null) {
+            this.ResourceRegion = new String(source.ResourceRegion);
+        }
+        if (source.ResourceAlias != null) {
+            this.ResourceAlias = new String(source.ResourceAlias);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */

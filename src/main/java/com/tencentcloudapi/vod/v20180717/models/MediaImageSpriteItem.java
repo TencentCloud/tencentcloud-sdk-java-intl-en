@@ -190,6 +190,38 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.WebVttUrl = WebVttUrl;
     }
 
+    public MediaImageSpriteItem() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public MediaImageSpriteItem(MediaImageSpriteItem source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
+        if (source.Height != null) {
+            this.Height = new Long(source.Height);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.ImageUrlSet != null) {
+            this.ImageUrlSet = new String[source.ImageUrlSet.length];
+            for (int i = 0; i < source.ImageUrlSet.length; i++) {
+                this.ImageUrlSet[i] = new String(source.ImageUrlSet[i]);
+            }
+        }
+        if (source.WebVttUrl != null) {
+            this.WebVttUrl = new String(source.WebVttUrl);
+        }
+    }
+
+
     /**
      * Internal implementation, normal users should not use it.
      */
