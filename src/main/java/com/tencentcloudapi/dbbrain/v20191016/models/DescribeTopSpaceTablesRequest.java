@@ -30,14 +30,14 @@ public class DescribeTopSpaceTablesRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Number of returned top tables. Default value: 20. Maximum value: 20.
+    * Number of returned top tables. Maximum value: 100. Default value: 20.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Field used to sort top tables. Valid values: DataLength, IndexLength, TotalLength, DataFree, FragRatio, TableRows, PhysicalFileSize. Default value: PhysicalFileSize.
+    * Field used to sort top tables. Valid values: `DataLength`, `IndexLength`, `TotalLength`, `DataFree`, `FragRatio`, `TableRows`, and `PhysicalFileSize` (only supported by TencentDB for MySQL instances). For TencentDB for MySQL instances, the default value is PhysicalFileSize; for other database instances, the default value is `TotalLength`.
     */
     @SerializedName("SortBy")
     @Expose
@@ -67,32 +67,32 @@ public class DescribeTopSpaceTablesRequest extends AbstractModel{
     }
 
     /**
-     * Get Number of returned top tables. Default value: 20. Maximum value: 20. 
-     * @return Limit Number of returned top tables. Default value: 20. Maximum value: 20.
+     * Get Number of returned top tables. Maximum value: 100. Default value: 20. 
+     * @return Limit Number of returned top tables. Maximum value: 100. Default value: 20.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned top tables. Default value: 20. Maximum value: 20.
-     * @param Limit Number of returned top tables. Default value: 20. Maximum value: 20.
+     * Set Number of returned top tables. Maximum value: 100. Default value: 20.
+     * @param Limit Number of returned top tables. Maximum value: 100. Default value: 20.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Field used to sort top tables. Valid values: DataLength, IndexLength, TotalLength, DataFree, FragRatio, TableRows, PhysicalFileSize. Default value: PhysicalFileSize. 
-     * @return SortBy Field used to sort top tables. Valid values: DataLength, IndexLength, TotalLength, DataFree, FragRatio, TableRows, PhysicalFileSize. Default value: PhysicalFileSize.
+     * Get Field used to sort top tables. Valid values: `DataLength`, `IndexLength`, `TotalLength`, `DataFree`, `FragRatio`, `TableRows`, and `PhysicalFileSize` (only supported by TencentDB for MySQL instances). For TencentDB for MySQL instances, the default value is PhysicalFileSize; for other database instances, the default value is `TotalLength`. 
+     * @return SortBy Field used to sort top tables. Valid values: `DataLength`, `IndexLength`, `TotalLength`, `DataFree`, `FragRatio`, `TableRows`, and `PhysicalFileSize` (only supported by TencentDB for MySQL instances). For TencentDB for MySQL instances, the default value is PhysicalFileSize; for other database instances, the default value is `TotalLength`.
      */
     public String getSortBy() {
         return this.SortBy;
     }
 
     /**
-     * Set Field used to sort top tables. Valid values: DataLength, IndexLength, TotalLength, DataFree, FragRatio, TableRows, PhysicalFileSize. Default value: PhysicalFileSize.
-     * @param SortBy Field used to sort top tables. Valid values: DataLength, IndexLength, TotalLength, DataFree, FragRatio, TableRows, PhysicalFileSize. Default value: PhysicalFileSize.
+     * Set Field used to sort top tables. Valid values: `DataLength`, `IndexLength`, `TotalLength`, `DataFree`, `FragRatio`, `TableRows`, and `PhysicalFileSize` (only supported by TencentDB for MySQL instances). For TencentDB for MySQL instances, the default value is PhysicalFileSize; for other database instances, the default value is `TotalLength`.
+     * @param SortBy Field used to sort top tables. Valid values: `DataLength`, `IndexLength`, `TotalLength`, `DataFree`, `FragRatio`, `TableRows`, and `PhysicalFileSize` (only supported by TencentDB for MySQL instances). For TencentDB for MySQL instances, the default value is PhysicalFileSize; for other database instances, the default value is `TotalLength`.
      */
     public void setSortBy(String SortBy) {
         this.SortBy = SortBy;

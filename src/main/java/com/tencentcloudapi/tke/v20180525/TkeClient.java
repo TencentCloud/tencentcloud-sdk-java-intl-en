@@ -919,6 +919,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to enable removal protection for the nodes automatically created by the scaling group in a node pool.
+     * @param req SetNodePoolNodeProtectionRequest
+     * @return SetNodePoolNodeProtectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetNodePoolNodeProtectionResponse SetNodePoolNodeProtection(SetNodePoolNodeProtectionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetNodePoolNodeProtectionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetNodePoolNodeProtectionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SetNodePoolNodeProtection");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to upgrade the master component of the cluster to the specified version.
      * @param req UpdateClusterVersionRequest
      * @return UpdateClusterVersionResponse

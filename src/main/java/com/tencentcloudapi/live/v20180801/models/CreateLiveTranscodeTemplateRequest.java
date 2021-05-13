@@ -73,6 +73,13 @@ origin: original codec as the output codec
     private String Description;
 
     /**
+    * Whether to keep the video. 0: no; 1: yes. Default value: 1.
+    */
+    @SerializedName("NeedVideo")
+    @Expose
+    private Long NeedVideo;
+
+    /**
     * Width. Default value: 0.
 Value range: 0-3000
 It must be a multiple of 2. The original width is 0.
@@ -80,13 +87,6 @@ It must be a multiple of 2. The original width is 0.
     @SerializedName("Width")
     @Expose
     private Long Width;
-
-    /**
-    * Whether to keep the video. 0: no; 1: yes. Default value: 1.
-    */
-    @SerializedName("NeedVideo")
-    @Expose
-    private Long NeedVideo;
 
     /**
     * Whether to keep the audio. 0: no; 1: yes. Default value: 1.
@@ -97,8 +97,8 @@ It must be a multiple of 2. The original width is 0.
 
     /**
     * Height. Default value: 0.
-Value range: 0-3000
-It must be a multiple of 2. The original height is 0.
+Value range: [0,3000]
+The value must be a multiple of 2, and 0 is the original height.
     */
     @SerializedName("Height")
     @Expose
@@ -316,6 +316,22 @@ origin: original codec as the output codec
     }
 
     /**
+     * Get Whether to keep the video. 0: no; 1: yes. Default value: 1. 
+     * @return NeedVideo Whether to keep the video. 0: no; 1: yes. Default value: 1.
+     */
+    public Long getNeedVideo() {
+        return this.NeedVideo;
+    }
+
+    /**
+     * Set Whether to keep the video. 0: no; 1: yes. Default value: 1.
+     * @param NeedVideo Whether to keep the video. 0: no; 1: yes. Default value: 1.
+     */
+    public void setNeedVideo(Long NeedVideo) {
+        this.NeedVideo = NeedVideo;
+    }
+
+    /**
      * Get Width. Default value: 0.
 Value range: 0-3000
 It must be a multiple of 2. The original width is 0. 
@@ -340,22 +356,6 @@ It must be a multiple of 2. The original width is 0.
     }
 
     /**
-     * Get Whether to keep the video. 0: no; 1: yes. Default value: 1. 
-     * @return NeedVideo Whether to keep the video. 0: no; 1: yes. Default value: 1.
-     */
-    public Long getNeedVideo() {
-        return this.NeedVideo;
-    }
-
-    /**
-     * Set Whether to keep the video. 0: no; 1: yes. Default value: 1.
-     * @param NeedVideo Whether to keep the video. 0: no; 1: yes. Default value: 1.
-     */
-    public void setNeedVideo(Long NeedVideo) {
-        this.NeedVideo = NeedVideo;
-    }
-
-    /**
      * Get Whether to keep the audio. 0: no; 1: yes. Default value: 1. 
      * @return NeedAudio Whether to keep the audio. 0: no; 1: yes. Default value: 1.
      */
@@ -373,11 +373,11 @@ It must be a multiple of 2. The original width is 0.
 
     /**
      * Get Height. Default value: 0.
-Value range: 0-3000
-It must be a multiple of 2. The original height is 0. 
+Value range: [0,3000]
+The value must be a multiple of 2, and 0 is the original height. 
      * @return Height Height. Default value: 0.
-Value range: 0-3000
-It must be a multiple of 2. The original height is 0.
+Value range: [0,3000]
+The value must be a multiple of 2, and 0 is the original height.
      */
     public Long getHeight() {
         return this.Height;
@@ -385,11 +385,11 @@ It must be a multiple of 2. The original height is 0.
 
     /**
      * Set Height. Default value: 0.
-Value range: 0-3000
-It must be a multiple of 2. The original height is 0.
+Value range: [0,3000]
+The value must be a multiple of 2, and 0 is the original height.
      * @param Height Height. Default value: 0.
-Value range: 0-3000
-It must be a multiple of 2. The original height is 0.
+Value range: [0,3000]
+The value must be a multiple of 2, and 0 is the original height.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
@@ -633,11 +633,11 @@ Value range: 0.0-0.5.
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
-        if (source.Width != null) {
-            this.Width = new Long(source.Width);
-        }
         if (source.NeedVideo != null) {
             this.NeedVideo = new Long(source.NeedVideo);
+        }
+        if (source.Width != null) {
+            this.Width = new Long(source.Width);
         }
         if (source.NeedAudio != null) {
             this.NeedAudio = new Long(source.NeedAudio);
@@ -688,8 +688,8 @@ Value range: 0.0-0.5.
         this.setParamSimple(map, prefix + "AudioBitrate", this.AudioBitrate);
         this.setParamSimple(map, prefix + "Vcodec", this.Vcodec);
         this.setParamSimple(map, prefix + "Description", this.Description);
-        this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "NeedVideo", this.NeedVideo);
+        this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "NeedAudio", this.NeedAudio);
         this.setParamSimple(map, prefix + "Height", this.Height);
         this.setParamSimple(map, prefix + "Fps", this.Fps);

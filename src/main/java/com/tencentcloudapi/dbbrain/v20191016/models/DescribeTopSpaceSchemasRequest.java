@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel{
+public class DescribeTopSpaceSchemasRequest extends AbstractModel{
 
     /**
     * Instance ID.
@@ -30,32 +30,18 @@ public class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Number of returned top tables. Maximum value: 100. Default value: 20.
+    * Number of returned top databases. Maximum value: 100. Default value: 20.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Field used to sort top tables. Valid values: DataLength, IndexLength, TotalLength, DataFree, FragRatio, TableRows, PhysicalFileSize. Default value: PhysicalFileSize.
+    * Field used to sort top tables. Valid values: `DataLength`, `IndexLength`, `TotalLength`, `DataFree`, `FragRatio`, `TableRows`, and `PhysicalFileSize` (supported only by TencentDB for MySQL instances). For TencentDB for MySQL instances, the default value is `PhysicalFileSize`; for other database instances, the default value is `TotalLength`.
     */
     @SerializedName("SortBy")
     @Expose
     private String SortBy;
-
-    /**
-    * Start date. It can be as early as 29 days before the current date, and defaults to 6 days before the end date.
-    */
-    @SerializedName("StartDate")
-    @Expose
-    private String StartDate;
-
-    /**
-    * End date. It can be as early as 29 days before the current date, and defaults to the current date.
-    */
-    @SerializedName("EndDate")
-    @Expose
-    private String EndDate;
 
     /**
     * Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
@@ -81,67 +67,35 @@ public class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel{
     }
 
     /**
-     * Get Number of returned top tables. Maximum value: 100. Default value: 20. 
-     * @return Limit Number of returned top tables. Maximum value: 100. Default value: 20.
+     * Get Number of returned top databases. Maximum value: 100. Default value: 20. 
+     * @return Limit Number of returned top databases. Maximum value: 100. Default value: 20.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned top tables. Maximum value: 100. Default value: 20.
-     * @param Limit Number of returned top tables. Maximum value: 100. Default value: 20.
+     * Set Number of returned top databases. Maximum value: 100. Default value: 20.
+     * @param Limit Number of returned top databases. Maximum value: 100. Default value: 20.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Field used to sort top tables. Valid values: DataLength, IndexLength, TotalLength, DataFree, FragRatio, TableRows, PhysicalFileSize. Default value: PhysicalFileSize. 
-     * @return SortBy Field used to sort top tables. Valid values: DataLength, IndexLength, TotalLength, DataFree, FragRatio, TableRows, PhysicalFileSize. Default value: PhysicalFileSize.
+     * Get Field used to sort top tables. Valid values: `DataLength`, `IndexLength`, `TotalLength`, `DataFree`, `FragRatio`, `TableRows`, and `PhysicalFileSize` (supported only by TencentDB for MySQL instances). For TencentDB for MySQL instances, the default value is `PhysicalFileSize`; for other database instances, the default value is `TotalLength`. 
+     * @return SortBy Field used to sort top tables. Valid values: `DataLength`, `IndexLength`, `TotalLength`, `DataFree`, `FragRatio`, `TableRows`, and `PhysicalFileSize` (supported only by TencentDB for MySQL instances). For TencentDB for MySQL instances, the default value is `PhysicalFileSize`; for other database instances, the default value is `TotalLength`.
      */
     public String getSortBy() {
         return this.SortBy;
     }
 
     /**
-     * Set Field used to sort top tables. Valid values: DataLength, IndexLength, TotalLength, DataFree, FragRatio, TableRows, PhysicalFileSize. Default value: PhysicalFileSize.
-     * @param SortBy Field used to sort top tables. Valid values: DataLength, IndexLength, TotalLength, DataFree, FragRatio, TableRows, PhysicalFileSize. Default value: PhysicalFileSize.
+     * Set Field used to sort top tables. Valid values: `DataLength`, `IndexLength`, `TotalLength`, `DataFree`, `FragRatio`, `TableRows`, and `PhysicalFileSize` (supported only by TencentDB for MySQL instances). For TencentDB for MySQL instances, the default value is `PhysicalFileSize`; for other database instances, the default value is `TotalLength`.
+     * @param SortBy Field used to sort top tables. Valid values: `DataLength`, `IndexLength`, `TotalLength`, `DataFree`, `FragRatio`, `TableRows`, and `PhysicalFileSize` (supported only by TencentDB for MySQL instances). For TencentDB for MySQL instances, the default value is `PhysicalFileSize`; for other database instances, the default value is `TotalLength`.
      */
     public void setSortBy(String SortBy) {
         this.SortBy = SortBy;
-    }
-
-    /**
-     * Get Start date. It can be as early as 29 days before the current date, and defaults to 6 days before the end date. 
-     * @return StartDate Start date. It can be as early as 29 days before the current date, and defaults to 6 days before the end date.
-     */
-    public String getStartDate() {
-        return this.StartDate;
-    }
-
-    /**
-     * Set Start date. It can be as early as 29 days before the current date, and defaults to 6 days before the end date.
-     * @param StartDate Start date. It can be as early as 29 days before the current date, and defaults to 6 days before the end date.
-     */
-    public void setStartDate(String StartDate) {
-        this.StartDate = StartDate;
-    }
-
-    /**
-     * Get End date. It can be as early as 29 days before the current date, and defaults to the current date. 
-     * @return EndDate End date. It can be as early as 29 days before the current date, and defaults to the current date.
-     */
-    public String getEndDate() {
-        return this.EndDate;
-    }
-
-    /**
-     * Set End date. It can be as early as 29 days before the current date, and defaults to the current date.
-     * @param EndDate End date. It can be as early as 29 days before the current date, and defaults to the current date.
-     */
-    public void setEndDate(String EndDate) {
-        this.EndDate = EndDate;
     }
 
     /**
@@ -160,14 +114,14 @@ public class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel{
         this.Product = Product;
     }
 
-    public DescribeTopSpaceTableTimeSeriesRequest() {
+    public DescribeTopSpaceSchemasRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTopSpaceTableTimeSeriesRequest(DescribeTopSpaceTableTimeSeriesRequest source) {
+    public DescribeTopSpaceSchemasRequest(DescribeTopSpaceSchemasRequest source) {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
@@ -176,12 +130,6 @@ public class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel{
         }
         if (source.SortBy != null) {
             this.SortBy = new String(source.SortBy);
-        }
-        if (source.StartDate != null) {
-            this.StartDate = new String(source.StartDate);
-        }
-        if (source.EndDate != null) {
-            this.EndDate = new String(source.EndDate);
         }
         if (source.Product != null) {
             this.Product = new String(source.Product);
@@ -196,8 +144,6 @@ public class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "SortBy", this.SortBy);
-        this.setParamSimple(map, prefix + "StartDate", this.StartDate);
-        this.setParamSimple(map, prefix + "EndDate", this.EndDate);
         this.setParamSimple(map, prefix + "Product", this.Product);
 
     }

@@ -71,8 +71,9 @@ public class AllocateAddressesRequest extends AbstractModel{
     private AddressChargePrepaid AddressChargePrepaid;
 
     /**
-    * The EIP type. Default: EIP.
-<ul style="margin:0"><li>For a user who has activated the AIA allowlist, possible values are:<ul><li>AnycastEIP: an Anycast EIP address. For more information, see [Anycast Internet Acceleration](https://intl.cloud.tencent.com/document/product/644?from_cn_redirect=1).</li></ul>Note: Only certain regions support Anycast EIPs.</li></ul>
+    * The EIP type. Default: `EIP`.
+<ul style="margin:0"><li>For AIA beta users, the value should be:<ul><li>`AnycastEIP`: an AIA IP address. For more information, see [Anycast Internet Acceleration](https://intl.cloud.tencent.com/document/product/644?from_cn_redirect=1).</li></ul>Note: Anycast EIPs are only supported in some of the regions.</li></ul>
+<ul style="margin:0"><li>For high-quality IP beta users, the value should be: <ul><li>`HighQualityEIP`: high-quality IP</li></ul>Note: High-quality IPs are only supported in some of the regions.</li></ul>
     */
     @SerializedName("AddressType")
     @Expose
@@ -109,6 +110,13 @@ Whether the Anycast EIP can be bound to CLB instances.
     @SerializedName("BandwidthPackageId")
     @Expose
     private String BandwidthPackageId;
+
+    /**
+    * EIP name, which is the custom EIP name given by the user when applying for the EIP. Default: not named
+    */
+    @SerializedName("AddressName")
+    @Expose
+    private String AddressName;
 
     /**
      * Get The number of EIPs. Default: 1. 
@@ -243,20 +251,24 @@ Whether the Anycast EIP can be bound to CLB instances.
     }
 
     /**
-     * Get The EIP type. Default: EIP.
-<ul style="margin:0"><li>For a user who has activated the AIA allowlist, possible values are:<ul><li>AnycastEIP: an Anycast EIP address. For more information, see [Anycast Internet Acceleration](https://intl.cloud.tencent.com/document/product/644?from_cn_redirect=1).</li></ul>Note: Only certain regions support Anycast EIPs.</li></ul> 
-     * @return AddressType The EIP type. Default: EIP.
-<ul style="margin:0"><li>For a user who has activated the AIA allowlist, possible values are:<ul><li>AnycastEIP: an Anycast EIP address. For more information, see [Anycast Internet Acceleration](https://intl.cloud.tencent.com/document/product/644?from_cn_redirect=1).</li></ul>Note: Only certain regions support Anycast EIPs.</li></ul>
+     * Get The EIP type. Default: `EIP`.
+<ul style="margin:0"><li>For AIA beta users, the value should be:<ul><li>`AnycastEIP`: an AIA IP address. For more information, see [Anycast Internet Acceleration](https://intl.cloud.tencent.com/document/product/644?from_cn_redirect=1).</li></ul>Note: Anycast EIPs are only supported in some of the regions.</li></ul>
+<ul style="margin:0"><li>For high-quality IP beta users, the value should be: <ul><li>`HighQualityEIP`: high-quality IP</li></ul>Note: High-quality IPs are only supported in some of the regions.</li></ul> 
+     * @return AddressType The EIP type. Default: `EIP`.
+<ul style="margin:0"><li>For AIA beta users, the value should be:<ul><li>`AnycastEIP`: an AIA IP address. For more information, see [Anycast Internet Acceleration](https://intl.cloud.tencent.com/document/product/644?from_cn_redirect=1).</li></ul>Note: Anycast EIPs are only supported in some of the regions.</li></ul>
+<ul style="margin:0"><li>For high-quality IP beta users, the value should be: <ul><li>`HighQualityEIP`: high-quality IP</li></ul>Note: High-quality IPs are only supported in some of the regions.</li></ul>
      */
     public String getAddressType() {
         return this.AddressType;
     }
 
     /**
-     * Set The EIP type. Default: EIP.
-<ul style="margin:0"><li>For a user who has activated the AIA allowlist, possible values are:<ul><li>AnycastEIP: an Anycast EIP address. For more information, see [Anycast Internet Acceleration](https://intl.cloud.tencent.com/document/product/644?from_cn_redirect=1).</li></ul>Note: Only certain regions support Anycast EIPs.</li></ul>
-     * @param AddressType The EIP type. Default: EIP.
-<ul style="margin:0"><li>For a user who has activated the AIA allowlist, possible values are:<ul><li>AnycastEIP: an Anycast EIP address. For more information, see [Anycast Internet Acceleration](https://intl.cloud.tencent.com/document/product/644?from_cn_redirect=1).</li></ul>Note: Only certain regions support Anycast EIPs.</li></ul>
+     * Set The EIP type. Default: `EIP`.
+<ul style="margin:0"><li>For AIA beta users, the value should be:<ul><li>`AnycastEIP`: an AIA IP address. For more information, see [Anycast Internet Acceleration](https://intl.cloud.tencent.com/document/product/644?from_cn_redirect=1).</li></ul>Note: Anycast EIPs are only supported in some of the regions.</li></ul>
+<ul style="margin:0"><li>For high-quality IP beta users, the value should be: <ul><li>`HighQualityEIP`: high-quality IP</li></ul>Note: High-quality IPs are only supported in some of the regions.</li></ul>
+     * @param AddressType The EIP type. Default: `EIP`.
+<ul style="margin:0"><li>For AIA beta users, the value should be:<ul><li>`AnycastEIP`: an AIA IP address. For more information, see [Anycast Internet Acceleration](https://intl.cloud.tencent.com/document/product/644?from_cn_redirect=1).</li></ul>Note: Anycast EIPs are only supported in some of the regions.</li></ul>
+<ul style="margin:0"><li>For high-quality IP beta users, the value should be: <ul><li>`HighQualityEIP`: high-quality IP</li></ul>Note: High-quality IPs are only supported in some of the regions.</li></ul>
      */
     public void setAddressType(String AddressType) {
         this.AddressType = AddressType;
@@ -342,6 +354,22 @@ Whether the Anycast EIP can be bound to CLB instances.
         this.BandwidthPackageId = BandwidthPackageId;
     }
 
+    /**
+     * Get EIP name, which is the custom EIP name given by the user when applying for the EIP. Default: not named 
+     * @return AddressName EIP name, which is the custom EIP name given by the user when applying for the EIP. Default: not named
+     */
+    public String getAddressName() {
+        return this.AddressName;
+    }
+
+    /**
+     * Set EIP name, which is the custom EIP name given by the user when applying for the EIP. Default: not named
+     * @param AddressName EIP name, which is the custom EIP name given by the user when applying for the EIP. Default: not named
+     */
+    public void setAddressName(String AddressName) {
+        this.AddressName = AddressName;
+    }
+
     public AllocateAddressesRequest() {
     }
 
@@ -383,6 +411,9 @@ Whether the Anycast EIP can be bound to CLB instances.
         if (source.BandwidthPackageId != null) {
             this.BandwidthPackageId = new String(source.BandwidthPackageId);
         }
+        if (source.AddressName != null) {
+            this.AddressName = new String(source.AddressName);
+        }
     }
 
 
@@ -400,6 +431,7 @@ Whether the Anycast EIP can be bound to CLB instances.
         this.setParamSimple(map, prefix + "ApplicableForCLB", this.ApplicableForCLB);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
+        this.setParamSimple(map, prefix + "AddressName", this.AddressName);
 
     }
 }

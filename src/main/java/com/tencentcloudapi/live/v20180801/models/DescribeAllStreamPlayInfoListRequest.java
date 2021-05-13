@@ -30,6 +30,13 @@ public class DescribeAllStreamPlayInfoListRequest extends AbstractModel{
     private String QueryTime;
 
     /**
+    * Playback domain name list. If this parameter is left empty, full data will be queried.
+    */
+    @SerializedName("PlayDomains")
+    @Expose
+    private String [] PlayDomains;
+
+    /**
      * Get Query time point accurate to the minute. You can query data within the last month. As there is a 5-minute delay in the data, you're advised to pass in a time point 5 minutes earlier than needed. Format: yyyy-mm-dd HH:MM:00. As the accuracy is to the minute, please set the value of second to `00`. 
      * @return QueryTime Query time point accurate to the minute. You can query data within the last month. As there is a 5-minute delay in the data, you're advised to pass in a time point 5 minutes earlier than needed. Format: yyyy-mm-dd HH:MM:00. As the accuracy is to the minute, please set the value of second to `00`.
      */
@@ -45,6 +52,22 @@ public class DescribeAllStreamPlayInfoListRequest extends AbstractModel{
         this.QueryTime = QueryTime;
     }
 
+    /**
+     * Get Playback domain name list. If this parameter is left empty, full data will be queried. 
+     * @return PlayDomains Playback domain name list. If this parameter is left empty, full data will be queried.
+     */
+    public String [] getPlayDomains() {
+        return this.PlayDomains;
+    }
+
+    /**
+     * Set Playback domain name list. If this parameter is left empty, full data will be queried.
+     * @param PlayDomains Playback domain name list. If this parameter is left empty, full data will be queried.
+     */
+    public void setPlayDomains(String [] PlayDomains) {
+        this.PlayDomains = PlayDomains;
+    }
+
     public DescribeAllStreamPlayInfoListRequest() {
     }
 
@@ -56,6 +79,12 @@ public class DescribeAllStreamPlayInfoListRequest extends AbstractModel{
         if (source.QueryTime != null) {
             this.QueryTime = new String(source.QueryTime);
         }
+        if (source.PlayDomains != null) {
+            this.PlayDomains = new String[source.PlayDomains.length];
+            for (int i = 0; i < source.PlayDomains.length; i++) {
+                this.PlayDomains[i] = new String(source.PlayDomains[i]);
+            }
+        }
     }
 
 
@@ -64,6 +93,7 @@ public class DescribeAllStreamPlayInfoListRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "QueryTime", this.QueryTime);
+        this.setParamArraySimple(map, prefix + "PlayDomains.", this.PlayDomains);
 
     }
 }

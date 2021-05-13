@@ -79,6 +79,26 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a URL for a health report.
+     * @param req CreateDBDiagReportUrlRequest
+     * @return CreateDBDiagReportUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDBDiagReportUrlResponse CreateDBDiagReportUrl(CreateDBDiagReportUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDBDiagReportUrlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDBDiagReportUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateDBDiagReportUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create the email configuration. The input parameter `ProfileType` represents the type of the email configuration. Valid values: `dbScan_mail_configuration` (email configuration of database inspection report) and `scheduler_mail_configuration` (email sending configuration of regularly generated health report). Select Guangzhou for Region, regardless of the region where the instance belongs.
      * @param req CreateMailProfileRequest
      * @return CreateMailProfileResponse
@@ -191,6 +211,26 @@ public class DbbrainClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDBDiagHistoryResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDBDiagHistory");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of health report generation tasks.
+     * @param req DescribeDBDiagReportTasksRequest
+     * @return DescribeDBDiagReportTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBDiagReportTasksResponse DescribeDBDiagReportTasks(DescribeDBDiagReportTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBDiagReportTasksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBDiagReportTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDBDiagReportTasks");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -319,6 +359,66 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *This API is used to obtain the statistical distribution chart of slow log source addresses.
+     * @param req DescribeSlowLogUserHostStatsRequest
+     * @return DescribeSlowLogUserHostStatsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSlowLogUserHostStatsResponse DescribeSlowLogUserHostStats(DescribeSlowLogUserHostStatsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSlowLogUserHostStatsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSlowLogUserHostStatsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSlowLogUserHostStats");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the daily space data of top databases consuming the most instance space. The data is daily collected by DBbrain during a specified time period. The return results are sorted by size by default.
+     * @param req DescribeTopSpaceSchemaTimeSeriesRequest
+     * @return DescribeTopSpaceSchemaTimeSeriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopSpaceSchemaTimeSeriesResponse DescribeTopSpaceSchemaTimeSeries(DescribeTopSpaceSchemaTimeSeriesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTopSpaceSchemaTimeSeriesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTopSpaceSchemaTimeSeriesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTopSpaceSchemaTimeSeries");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query real-time space statistics of top databases. The return results are sorted by size by default.
+     * @param req DescribeTopSpaceSchemasRequest
+     * @return DescribeTopSpaceSchemasResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopSpaceSchemasResponse DescribeTopSpaceSchemas(DescribeTopSpaceSchemasRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTopSpaceSchemasResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTopSpaceSchemasResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTopSpaceSchemas");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the daily space data of top tables consuming the most instance space. The data is daily collected by DBbrain during a specified time period. The return results are sorted by size by default.
      * @param req DescribeTopSpaceTableTimeSeriesRequest
      * @return DescribeTopSpaceTableTimeSeriesResponse
@@ -351,6 +451,26 @@ public class DbbrainClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeTopSpaceTablesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeTopSpaceTables");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to obtain SQL statement optimization suggestions.
+     * @param req DescribeUserSqlAdviceRequest
+     * @return DescribeUserSqlAdviceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserSqlAdviceResponse DescribeUserSqlAdvice(DescribeUserSqlAdviceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUserSqlAdviceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUserSqlAdviceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUserSqlAdvice");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

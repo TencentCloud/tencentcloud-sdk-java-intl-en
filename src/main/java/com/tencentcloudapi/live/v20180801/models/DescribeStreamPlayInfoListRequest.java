@@ -63,7 +63,7 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
     private String AppName;
 
     /**
-    * 
+    * Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
     */
     @SerializedName("ServiceName")
     @Expose
@@ -170,16 +170,16 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
     }
 
     /**
-     * Get  
-     * @return ServiceName 
+     * Get Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried. 
+     * @return ServiceName Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
      */
     public String getServiceName() {
         return this.ServiceName;
     }
 
     /**
-     * Set 
-     * @param ServiceName 
+     * Set Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
+     * @param ServiceName Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;

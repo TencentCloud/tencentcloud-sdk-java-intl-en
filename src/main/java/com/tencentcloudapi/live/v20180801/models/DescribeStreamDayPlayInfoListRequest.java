@@ -52,6 +52,23 @@ Data is available at 3am Beijing Time the next day. You are recommended to query
     private Long PageSize;
 
     /**
+    * Valid values:
+Mainland: query data for Mainland China,
+Oversea: query data for regions outside Mainland China,
+Default: query data for all regions.
+    */
+    @SerializedName("MainlandOrOversea")
+    @Expose
+    private String MainlandOrOversea;
+
+    /**
+    * Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
+    */
+    @SerializedName("ServiceName")
+    @Expose
+    private String ServiceName;
+
+    /**
      * Get Date in the format of YYYY-mm-dd
 Data is available at 3am Beijing Time the next day. You are recommended to query the latest data after this time point. Data in the last 3 months can be queried. 
      * @return DayTime Date in the format of YYYY-mm-dd
@@ -119,6 +136,50 @@ Data is available at 3am Beijing Time the next day. You are recommended to query
         this.PageSize = PageSize;
     }
 
+    /**
+     * Get Valid values:
+Mainland: query data for Mainland China,
+Oversea: query data for regions outside Mainland China,
+Default: query data for all regions. 
+     * @return MainlandOrOversea Valid values:
+Mainland: query data for Mainland China,
+Oversea: query data for regions outside Mainland China,
+Default: query data for all regions.
+     */
+    public String getMainlandOrOversea() {
+        return this.MainlandOrOversea;
+    }
+
+    /**
+     * Set Valid values:
+Mainland: query data for Mainland China,
+Oversea: query data for regions outside Mainland China,
+Default: query data for all regions.
+     * @param MainlandOrOversea Valid values:
+Mainland: query data for Mainland China,
+Oversea: query data for regions outside Mainland China,
+Default: query data for all regions.
+     */
+    public void setMainlandOrOversea(String MainlandOrOversea) {
+        this.MainlandOrOversea = MainlandOrOversea;
+    }
+
+    /**
+     * Get Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried. 
+     * @return ServiceName Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
+     */
+    public String getServiceName() {
+        return this.ServiceName;
+    }
+
+    /**
+     * Set Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
+     * @param ServiceName Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
+     */
+    public void setServiceName(String ServiceName) {
+        this.ServiceName = ServiceName;
+    }
+
     public DescribeStreamDayPlayInfoListRequest() {
     }
 
@@ -139,6 +200,12 @@ Data is available at 3am Beijing Time the next day. You are recommended to query
         if (source.PageSize != null) {
             this.PageSize = new Long(source.PageSize);
         }
+        if (source.MainlandOrOversea != null) {
+            this.MainlandOrOversea = new String(source.MainlandOrOversea);
+        }
+        if (source.ServiceName != null) {
+            this.ServiceName = new String(source.ServiceName);
+        }
     }
 
 
@@ -150,6 +217,8 @@ Data is available at 3am Beijing Time the next day. You are recommended to query
         this.setParamSimple(map, prefix + "PlayDomain", this.PlayDomain);
         this.setParamSimple(map, prefix + "PageNum", this.PageNum);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamSimple(map, prefix + "MainlandOrOversea", this.MainlandOrOversea);
+        this.setParamSimple(map, prefix + "ServiceName", this.ServiceName);
 
     }
 }

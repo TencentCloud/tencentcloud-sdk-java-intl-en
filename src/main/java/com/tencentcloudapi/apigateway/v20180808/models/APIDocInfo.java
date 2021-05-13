@@ -44,7 +44,7 @@ public class APIDocInfo extends AbstractModel{
     private String ApiDocStatus;
 
     /**
-    * Number of API documents
+    * Number of APIs with API documents
     */
     @SerializedName("ApiCount")
     @Expose
@@ -169,16 +169,16 @@ public class APIDocInfo extends AbstractModel{
     }
 
     /**
-     * Get Number of API documents 
-     * @return ApiCount Number of API documents
+     * Get Number of APIs with API documents 
+     * @return ApiCount Number of APIs with API documents
      */
     public Long getApiCount() {
         return this.ApiCount;
     }
 
     /**
-     * Set Number of API documents
-     * @param ApiCount Number of API documents
+     * Set Number of APIs with API documents
+     * @param ApiCount Number of APIs with API documents
      */
     public void setApiCount(Long ApiCount) {
         this.ApiCount = ApiCount;

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel{
+public class DescribeTopSpaceSchemaTimeSeriesRequest extends AbstractModel{
 
     /**
     * Instance ID.
@@ -30,14 +30,14 @@ public class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Number of returned top tables. Maximum value: 100. Default value: 20.
+    * Number of returned top databases. Maximum value: 100. Default value: 20.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Field used to sort top tables. Valid values: DataLength, IndexLength, TotalLength, DataFree, FragRatio, TableRows, PhysicalFileSize. Default value: PhysicalFileSize.
+    * Field used to sort top tables. Valid values: `DataLength`, `IndexLength`, `TotalLength`, `DataFree`, `FragRatio`, `TableRows`, and `PhysicalFileSize` (supported only by TencentDB for MySQL instances). For TencentDB for MySQL instances, the default value is `PhysicalFileSize`; for other database instances, the default value is `TotalLength`.
     */
     @SerializedName("SortBy")
     @Expose
@@ -81,32 +81,32 @@ public class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel{
     }
 
     /**
-     * Get Number of returned top tables. Maximum value: 100. Default value: 20. 
-     * @return Limit Number of returned top tables. Maximum value: 100. Default value: 20.
+     * Get Number of returned top databases. Maximum value: 100. Default value: 20. 
+     * @return Limit Number of returned top databases. Maximum value: 100. Default value: 20.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned top tables. Maximum value: 100. Default value: 20.
-     * @param Limit Number of returned top tables. Maximum value: 100. Default value: 20.
+     * Set Number of returned top databases. Maximum value: 100. Default value: 20.
+     * @param Limit Number of returned top databases. Maximum value: 100. Default value: 20.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Field used to sort top tables. Valid values: DataLength, IndexLength, TotalLength, DataFree, FragRatio, TableRows, PhysicalFileSize. Default value: PhysicalFileSize. 
-     * @return SortBy Field used to sort top tables. Valid values: DataLength, IndexLength, TotalLength, DataFree, FragRatio, TableRows, PhysicalFileSize. Default value: PhysicalFileSize.
+     * Get Field used to sort top tables. Valid values: `DataLength`, `IndexLength`, `TotalLength`, `DataFree`, `FragRatio`, `TableRows`, and `PhysicalFileSize` (supported only by TencentDB for MySQL instances). For TencentDB for MySQL instances, the default value is `PhysicalFileSize`; for other database instances, the default value is `TotalLength`. 
+     * @return SortBy Field used to sort top tables. Valid values: `DataLength`, `IndexLength`, `TotalLength`, `DataFree`, `FragRatio`, `TableRows`, and `PhysicalFileSize` (supported only by TencentDB for MySQL instances). For TencentDB for MySQL instances, the default value is `PhysicalFileSize`; for other database instances, the default value is `TotalLength`.
      */
     public String getSortBy() {
         return this.SortBy;
     }
 
     /**
-     * Set Field used to sort top tables. Valid values: DataLength, IndexLength, TotalLength, DataFree, FragRatio, TableRows, PhysicalFileSize. Default value: PhysicalFileSize.
-     * @param SortBy Field used to sort top tables. Valid values: DataLength, IndexLength, TotalLength, DataFree, FragRatio, TableRows, PhysicalFileSize. Default value: PhysicalFileSize.
+     * Set Field used to sort top tables. Valid values: `DataLength`, `IndexLength`, `TotalLength`, `DataFree`, `FragRatio`, `TableRows`, and `PhysicalFileSize` (supported only by TencentDB for MySQL instances). For TencentDB for MySQL instances, the default value is `PhysicalFileSize`; for other database instances, the default value is `TotalLength`.
+     * @param SortBy Field used to sort top tables. Valid values: `DataLength`, `IndexLength`, `TotalLength`, `DataFree`, `FragRatio`, `TableRows`, and `PhysicalFileSize` (supported only by TencentDB for MySQL instances). For TencentDB for MySQL instances, the default value is `PhysicalFileSize`; for other database instances, the default value is `TotalLength`.
      */
     public void setSortBy(String SortBy) {
         this.SortBy = SortBy;
@@ -160,14 +160,14 @@ public class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel{
         this.Product = Product;
     }
 
-    public DescribeTopSpaceTableTimeSeriesRequest() {
+    public DescribeTopSpaceSchemaTimeSeriesRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTopSpaceTableTimeSeriesRequest(DescribeTopSpaceTableTimeSeriesRequest source) {
+    public DescribeTopSpaceSchemaTimeSeriesRequest(DescribeTopSpaceSchemaTimeSeriesRequest source) {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }

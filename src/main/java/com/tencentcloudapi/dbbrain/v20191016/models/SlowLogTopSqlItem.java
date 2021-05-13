@@ -163,6 +163,34 @@ public class SlowLogTopSqlItem extends AbstractModel{
     private Float RowsSentRatio;
 
     /**
+    * Average execution time
+    */
+    @SerializedName("QueryTimeAvg")
+    @Expose
+    private Float QueryTimeAvg;
+
+    /**
+    * Average number of rows returned
+    */
+    @SerializedName("RowsSentAvg")
+    @Expose
+    private Float RowsSentAvg;
+
+    /**
+    * Average lock wait time
+    */
+    @SerializedName("LockTimeAvg")
+    @Expose
+    private Float LockTimeAvg;
+
+    /**
+    * Average number of rows scanned
+    */
+    @SerializedName("RowsExaminedAvg")
+    @Expose
+    private Float RowsExaminedAvg;
+
+    /**
      * Get Total SQL lock wait time 
      * @return LockTime Total SQL lock wait time
      */
@@ -482,6 +510,70 @@ public class SlowLogTopSqlItem extends AbstractModel{
         this.RowsSentRatio = RowsSentRatio;
     }
 
+    /**
+     * Get Average execution time 
+     * @return QueryTimeAvg Average execution time
+     */
+    public Float getQueryTimeAvg() {
+        return this.QueryTimeAvg;
+    }
+
+    /**
+     * Set Average execution time
+     * @param QueryTimeAvg Average execution time
+     */
+    public void setQueryTimeAvg(Float QueryTimeAvg) {
+        this.QueryTimeAvg = QueryTimeAvg;
+    }
+
+    /**
+     * Get Average number of rows returned 
+     * @return RowsSentAvg Average number of rows returned
+     */
+    public Float getRowsSentAvg() {
+        return this.RowsSentAvg;
+    }
+
+    /**
+     * Set Average number of rows returned
+     * @param RowsSentAvg Average number of rows returned
+     */
+    public void setRowsSentAvg(Float RowsSentAvg) {
+        this.RowsSentAvg = RowsSentAvg;
+    }
+
+    /**
+     * Get Average lock wait time 
+     * @return LockTimeAvg Average lock wait time
+     */
+    public Float getLockTimeAvg() {
+        return this.LockTimeAvg;
+    }
+
+    /**
+     * Set Average lock wait time
+     * @param LockTimeAvg Average lock wait time
+     */
+    public void setLockTimeAvg(Float LockTimeAvg) {
+        this.LockTimeAvg = LockTimeAvg;
+    }
+
+    /**
+     * Get Average number of rows scanned 
+     * @return RowsExaminedAvg Average number of rows scanned
+     */
+    public Float getRowsExaminedAvg() {
+        return this.RowsExaminedAvg;
+    }
+
+    /**
+     * Set Average number of rows scanned
+     * @param RowsExaminedAvg Average number of rows scanned
+     */
+    public void setRowsExaminedAvg(Float RowsExaminedAvg) {
+        this.RowsExaminedAvg = RowsExaminedAvg;
+    }
+
     public SlowLogTopSqlItem() {
     }
 
@@ -550,6 +642,18 @@ public class SlowLogTopSqlItem extends AbstractModel{
         if (source.RowsSentRatio != null) {
             this.RowsSentRatio = new Float(source.RowsSentRatio);
         }
+        if (source.QueryTimeAvg != null) {
+            this.QueryTimeAvg = new Float(source.QueryTimeAvg);
+        }
+        if (source.RowsSentAvg != null) {
+            this.RowsSentAvg = new Float(source.RowsSentAvg);
+        }
+        if (source.LockTimeAvg != null) {
+            this.LockTimeAvg = new Float(source.LockTimeAvg);
+        }
+        if (source.RowsExaminedAvg != null) {
+            this.RowsExaminedAvg = new Float(source.RowsExaminedAvg);
+        }
     }
 
 
@@ -577,6 +681,10 @@ public class SlowLogTopSqlItem extends AbstractModel{
         this.setParamSimple(map, prefix + "LockTimeRatio", this.LockTimeRatio);
         this.setParamSimple(map, prefix + "RowsExaminedRatio", this.RowsExaminedRatio);
         this.setParamSimple(map, prefix + "RowsSentRatio", this.RowsSentRatio);
+        this.setParamSimple(map, prefix + "QueryTimeAvg", this.QueryTimeAvg);
+        this.setParamSimple(map, prefix + "RowsSentAvg", this.RowsSentAvg);
+        this.setParamSimple(map, prefix + "LockTimeAvg", this.LockTimeAvg);
+        this.setParamSimple(map, prefix + "RowsExaminedAvg", this.RowsExaminedAvg);
 
     }
 }

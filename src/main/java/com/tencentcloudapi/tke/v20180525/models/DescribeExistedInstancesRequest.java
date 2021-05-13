@@ -72,6 +72,13 @@ public class DescribeExistedInstancesRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * Filter by multiple instance IPs
+    */
+    @SerializedName("IpAddresses")
+    @Expose
+    private String [] IpAddresses;
+
+    /**
      * Get Cluster ID. Enter the `ClusterId` field returned when you call the DescribeClusters API (Only VPC ID obtained through `ClusterId` need filtering conditions. When comparing statuses, the nodes on all clusters in this region will be used for comparison. You cannot specify `InstanceIds` and `ClusterId` at the same time.) 
      * @return ClusterId Cluster ID. Enter the `ClusterId` field returned when you call the DescribeClusters API (Only VPC ID obtained through `ClusterId` need filtering conditions. When comparing statuses, the nodes on all clusters in this region will be used for comparison. You cannot specify `InstanceIds` and `ClusterId` at the same time.)
      */
@@ -183,6 +190,22 @@ public class DescribeExistedInstancesRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    /**
+     * Get Filter by multiple instance IPs 
+     * @return IpAddresses Filter by multiple instance IPs
+     */
+    public String [] getIpAddresses() {
+        return this.IpAddresses;
+    }
+
+    /**
+     * Set Filter by multiple instance IPs
+     * @param IpAddresses Filter by multiple instance IPs
+     */
+    public void setIpAddresses(String [] IpAddresses) {
+        this.IpAddresses = IpAddresses;
+    }
+
     public DescribeExistedInstancesRequest() {
     }
 
@@ -218,6 +241,12 @@ public class DescribeExistedInstancesRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.IpAddresses != null) {
+            this.IpAddresses = new String[source.IpAddresses.length];
+            for (int i = 0; i < source.IpAddresses.length; i++) {
+                this.IpAddresses[i] = new String(source.IpAddresses[i]);
+            }
+        }
     }
 
 
@@ -232,6 +261,7 @@ public class DescribeExistedInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "VagueInstanceName", this.VagueInstanceName);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArraySimple(map, prefix + "IpAddresses.", this.IpAddresses);
 
     }
 }

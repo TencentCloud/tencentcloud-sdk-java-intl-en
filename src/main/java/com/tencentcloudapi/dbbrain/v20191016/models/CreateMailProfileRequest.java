@@ -58,7 +58,7 @@ public class CreateMailProfileRequest extends AbstractModel{
     private String Product;
 
     /**
-    * Instance ID bound to the configuration, which is set when the configuration level is "Instance". Only one instance can be bound at a time.
+    * Instance ID bound with the configuration, which is set when the configuration level is "Instance". Only one instance can be bound at a time. When the configuration level is “User”, leave this parameter empty.
     */
     @SerializedName("BindInstanceIds")
     @Expose
@@ -145,16 +145,16 @@ public class CreateMailProfileRequest extends AbstractModel{
     }
 
     /**
-     * Get Instance ID bound to the configuration, which is set when the configuration level is "Instance". Only one instance can be bound at a time. 
-     * @return BindInstanceIds Instance ID bound to the configuration, which is set when the configuration level is "Instance". Only one instance can be bound at a time.
+     * Get Instance ID bound with the configuration, which is set when the configuration level is "Instance". Only one instance can be bound at a time. When the configuration level is “User”, leave this parameter empty. 
+     * @return BindInstanceIds Instance ID bound with the configuration, which is set when the configuration level is "Instance". Only one instance can be bound at a time. When the configuration level is “User”, leave this parameter empty.
      */
     public String [] getBindInstanceIds() {
         return this.BindInstanceIds;
     }
 
     /**
-     * Set Instance ID bound to the configuration, which is set when the configuration level is "Instance". Only one instance can be bound at a time.
-     * @param BindInstanceIds Instance ID bound to the configuration, which is set when the configuration level is "Instance". Only one instance can be bound at a time.
+     * Set Instance ID bound with the configuration, which is set when the configuration level is "Instance". Only one instance can be bound at a time. When the configuration level is “User”, leave this parameter empty.
+     * @param BindInstanceIds Instance ID bound with the configuration, which is set when the configuration level is "Instance". Only one instance can be bound at a time. When the configuration level is “User”, leave this parameter empty.
      */
     public void setBindInstanceIds(String [] BindInstanceIds) {
         this.BindInstanceIds = BindInstanceIds;
