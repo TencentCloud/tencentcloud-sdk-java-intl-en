@@ -156,7 +156,7 @@ public class CopyFleetRequest extends AbstractModel{
     private CcnInfo [] CcnInfos;
 
     /**
-    * 
+    * Maximum outbound public network bandwidth of the server fleet. Value range: 1 - 200 Mbps. Default value: 100 Mbps.
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
@@ -467,16 +467,16 @@ public class CopyFleetRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return InternetMaxBandwidthOut 
+     * Get Maximum outbound public network bandwidth of the server fleet. Value range: 1 - 200 Mbps. Default value: 100 Mbps. 
+     * @return InternetMaxBandwidthOut Maximum outbound public network bandwidth of the server fleet. Value range: 1 - 200 Mbps. Default value: 100 Mbps.
      */
     public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
     /**
-     * Set 
-     * @param InternetMaxBandwidthOut 
+     * Set Maximum outbound public network bandwidth of the server fleet. Value range: 1 - 200 Mbps. Default value: 100 Mbps.
+     * @param InternetMaxBandwidthOut Maximum outbound public network bandwidth of the server fleet. Value range: 1 - 200 Mbps. Default value: 100 Mbps.
      */
     public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;

@@ -180,7 +180,8 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     private RelatedCcnInfo [] RelatedCcnInfos;
 
     /**
-    * 
+    * Maximum outbound public network bandwidth of the server fleet. Value range: 1 - 200 Mbps. Default value: 100 Mbps.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
@@ -575,16 +576,20 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     }
 
     /**
-     * Get  
-     * @return InternetMaxBandwidthOut 
+     * Get Maximum outbound public network bandwidth of the server fleet. Value range: 1 - 200 Mbps. Default value: 100 Mbps.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return InternetMaxBandwidthOut Maximum outbound public network bandwidth of the server fleet. Value range: 1 - 200 Mbps. Default value: 100 Mbps.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
     /**
-     * Set 
-     * @param InternetMaxBandwidthOut 
+     * Set Maximum outbound public network bandwidth of the server fleet. Value range: 1 - 200 Mbps. Default value: 100 Mbps.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param InternetMaxBandwidthOut Maximum outbound public network bandwidth of the server fleet. Value range: 1 - 200 Mbps. Default value: 100 Mbps.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
