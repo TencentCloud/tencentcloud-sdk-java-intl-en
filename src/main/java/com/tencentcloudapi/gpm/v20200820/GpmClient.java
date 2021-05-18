@@ -378,4 +378,24 @@ public class GpmClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *This API is used to send a match backfill request, for which a MatchTicket will be searched to start a new match.
+     * @param req StartMatchingBackfillRequest
+     * @return StartMatchingBackfillResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartMatchingBackfillResponse StartMatchingBackfill(StartMatchingBackfillRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartMatchingBackfillResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartMatchingBackfillResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StartMatchingBackfill");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

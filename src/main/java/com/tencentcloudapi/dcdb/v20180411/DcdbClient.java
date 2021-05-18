@@ -281,6 +281,26 @@ Note: accounts with the same username but different hosts are different accounts
     }
 
     /**
+     *This API is used to query the information of instance nodes.
+     * @param req DescribeDCDBInstanceNodeInfoRequest
+     * @return DescribeDCDBInstanceNodeInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDCDBInstanceNodeInfoResponse DescribeDCDBInstanceNodeInfo(DescribeDCDBInstanceNodeInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDCDBInstanceNodeInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDCDBInstanceNodeInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDCDBInstanceNodeInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the list of TencentDB instances. It supports filtering instances by project ID, instance ID, private network address, and instance name.
 If no filter is specified, 10 instances will be returned by default. Up to 100 instances can be returned for a single request.
      * @param req DescribeDCDBInstancesRequest
