@@ -23,204 +23,204 @@ import java.util.HashMap;
 public class CreateAccountRequest extends AbstractModel{
 
     /**
-    * The account type identification of the newly created customer. The value of this interface is: business
+    * Account type of a new customer. Valid value: `business`.
     */
     @SerializedName("AccountType")
     @Expose
     private String AccountType;
 
     /**
-    * Registered email address. The caller needs to ensure the validity and correctness of the email address.
-The email format must be met. For example: account@qq.com
+    * Registered email address, which should be valid and correct.
+For example, account@qq.com.
     */
     @SerializedName("Mail")
     @Expose
     private String Mail;
 
     /**
-    * Account password.
-Length limit: [8,20].
-It must also contain numbers, letters and special symbols (!@#$%^&*() and other non-spaces)
+    * Account password
+Length limit: 8-20 characters
+A password must contain numbers, letters, and special symbols [!@#$%^&*()]. Spaces are not allowed.
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * Reconfirm the password. It must be the same as the Password value
+    * Confirm the password. It must be the same as the `Password` field.
     */
     @SerializedName("ConfirmPassword")
     @Expose
     private String ConfirmPassword;
 
     /**
-    * Customer's mobile phone number. The caller is required to ensure the validity and correctness of the mobile phone number.
-Length limit: [1,32]. Global mobile phone numbers are supported. For example, 18888888888
+    * Customer mobile number, which should be valid and correct.
+A global mobile number within 1-32 digits is allowed, such as 18888888888.
     */
     @SerializedName("PhoneNum")
     @Expose
     private String PhoneNum;
 
     /**
-    * The country code of the customer. For the value, please refer to the GetCountryCodes interface GetCountryCodes. Such as 86
+    * Country code, which can be obtained via the `GetCountryCodes` API, such as `86`.
     */
     @SerializedName("CountryCode")
     @Expose
     private String CountryCode;
 
     /**
-    * Customer's IOS2 standard country code. Refer to the GetCountryCodes interface for obtaining country codes. It needs to correspond to the CountryCode value. Such as CN
+    * ISO2 standard country code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field.
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * Extension field, default is empty
+    * Expanded field, which is left empty by default.
     */
     @SerializedName("Extended")
     @Expose
     private String Extended;
 
     /**
-     * Get The account type identification of the newly created customer. The value of this interface is: business 
-     * @return AccountType The account type identification of the newly created customer. The value of this interface is: business
+     * Get Account type of a new customer. Valid value: `business`. 
+     * @return AccountType Account type of a new customer. Valid value: `business`.
      */
     public String getAccountType() {
         return this.AccountType;
     }
 
     /**
-     * Set The account type identification of the newly created customer. The value of this interface is: business
-     * @param AccountType The account type identification of the newly created customer. The value of this interface is: business
+     * Set Account type of a new customer. Valid value: `business`.
+     * @param AccountType Account type of a new customer. Valid value: `business`.
      */
     public void setAccountType(String AccountType) {
         this.AccountType = AccountType;
     }
 
     /**
-     * Get Registered email address. The caller needs to ensure the validity and correctness of the email address.
-The email format must be met. For example: account@qq.com 
-     * @return Mail Registered email address. The caller needs to ensure the validity and correctness of the email address.
-The email format must be met. For example: account@qq.com
+     * Get Registered email address, which should be valid and correct.
+For example, account@qq.com. 
+     * @return Mail Registered email address, which should be valid and correct.
+For example, account@qq.com.
      */
     public String getMail() {
         return this.Mail;
     }
 
     /**
-     * Set Registered email address. The caller needs to ensure the validity and correctness of the email address.
-The email format must be met. For example: account@qq.com
-     * @param Mail Registered email address. The caller needs to ensure the validity and correctness of the email address.
-The email format must be met. For example: account@qq.com
+     * Set Registered email address, which should be valid and correct.
+For example, account@qq.com.
+     * @param Mail Registered email address, which should be valid and correct.
+For example, account@qq.com.
      */
     public void setMail(String Mail) {
         this.Mail = Mail;
     }
 
     /**
-     * Get Account password.
-Length limit: [8,20].
-It must also contain numbers, letters and special symbols (!@#$%^&*() and other non-spaces) 
-     * @return Password Account password.
-Length limit: [8,20].
-It must also contain numbers, letters and special symbols (!@#$%^&*() and other non-spaces)
+     * Get Account password
+Length limit: 8-20 characters
+A password must contain numbers, letters, and special symbols [!@#$%^&*()]. Spaces are not allowed. 
+     * @return Password Account password
+Length limit: 8-20 characters
+A password must contain numbers, letters, and special symbols [!@#$%^&*()]. Spaces are not allowed.
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Account password.
-Length limit: [8,20].
-It must also contain numbers, letters and special symbols (!@#$%^&*() and other non-spaces)
-     * @param Password Account password.
-Length limit: [8,20].
-It must also contain numbers, letters and special symbols (!@#$%^&*() and other non-spaces)
+     * Set Account password
+Length limit: 8-20 characters
+A password must contain numbers, letters, and special symbols [!@#$%^&*()]. Spaces are not allowed.
+     * @param Password Account password
+Length limit: 8-20 characters
+A password must contain numbers, letters, and special symbols [!@#$%^&*()]. Spaces are not allowed.
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get Reconfirm the password. It must be the same as the Password value 
-     * @return ConfirmPassword Reconfirm the password. It must be the same as the Password value
+     * Get Confirm the password. It must be the same as the `Password` field. 
+     * @return ConfirmPassword Confirm the password. It must be the same as the `Password` field.
      */
     public String getConfirmPassword() {
         return this.ConfirmPassword;
     }
 
     /**
-     * Set Reconfirm the password. It must be the same as the Password value
-     * @param ConfirmPassword Reconfirm the password. It must be the same as the Password value
+     * Set Confirm the password. It must be the same as the `Password` field.
+     * @param ConfirmPassword Confirm the password. It must be the same as the `Password` field.
      */
     public void setConfirmPassword(String ConfirmPassword) {
         this.ConfirmPassword = ConfirmPassword;
     }
 
     /**
-     * Get Customer's mobile phone number. The caller is required to ensure the validity and correctness of the mobile phone number.
-Length limit: [1,32]. Global mobile phone numbers are supported. For example, 18888888888 
-     * @return PhoneNum Customer's mobile phone number. The caller is required to ensure the validity and correctness of the mobile phone number.
-Length limit: [1,32]. Global mobile phone numbers are supported. For example, 18888888888
+     * Get Customer mobile number, which should be valid and correct.
+A global mobile number within 1-32 digits is allowed, such as 18888888888. 
+     * @return PhoneNum Customer mobile number, which should be valid and correct.
+A global mobile number within 1-32 digits is allowed, such as 18888888888.
      */
     public String getPhoneNum() {
         return this.PhoneNum;
     }
 
     /**
-     * Set Customer's mobile phone number. The caller is required to ensure the validity and correctness of the mobile phone number.
-Length limit: [1,32]. Global mobile phone numbers are supported. For example, 18888888888
-     * @param PhoneNum Customer's mobile phone number. The caller is required to ensure the validity and correctness of the mobile phone number.
-Length limit: [1,32]. Global mobile phone numbers are supported. For example, 18888888888
+     * Set Customer mobile number, which should be valid and correct.
+A global mobile number within 1-32 digits is allowed, such as 18888888888.
+     * @param PhoneNum Customer mobile number, which should be valid and correct.
+A global mobile number within 1-32 digits is allowed, such as 18888888888.
      */
     public void setPhoneNum(String PhoneNum) {
         this.PhoneNum = PhoneNum;
     }
 
     /**
-     * Get The country code of the customer. For the value, please refer to the GetCountryCodes interface GetCountryCodes. Such as 86 
-     * @return CountryCode The country code of the customer. For the value, please refer to the GetCountryCodes interface GetCountryCodes. Such as 86
+     * Get Country code, which can be obtained via the `GetCountryCodes` API, such as `86`. 
+     * @return CountryCode Country code, which can be obtained via the `GetCountryCodes` API, such as `86`.
      */
     public String getCountryCode() {
         return this.CountryCode;
     }
 
     /**
-     * Set The country code of the customer. For the value, please refer to the GetCountryCodes interface GetCountryCodes. Such as 86
-     * @param CountryCode The country code of the customer. For the value, please refer to the GetCountryCodes interface GetCountryCodes. Such as 86
+     * Set Country code, which can be obtained via the `GetCountryCodes` API, such as `86`.
+     * @param CountryCode Country code, which can be obtained via the `GetCountryCodes` API, such as `86`.
      */
     public void setCountryCode(String CountryCode) {
         this.CountryCode = CountryCode;
     }
 
     /**
-     * Get Customer's IOS2 standard country code. Refer to the GetCountryCodes interface for obtaining country codes. It needs to correspond to the CountryCode value. Such as CN 
-     * @return Area Customer's IOS2 standard country code. Refer to the GetCountryCodes interface for obtaining country codes. It needs to correspond to the CountryCode value. Such as CN
+     * Get ISO2 standard country code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field. 
+     * @return Area ISO2 standard country code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field.
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Customer's IOS2 standard country code. Refer to the GetCountryCodes interface for obtaining country codes. It needs to correspond to the CountryCode value. Such as CN
-     * @param Area Customer's IOS2 standard country code. Refer to the GetCountryCodes interface for obtaining country codes. It needs to correspond to the CountryCode value. Such as CN
+     * Set ISO2 standard country code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field.
+     * @param Area ISO2 standard country code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field.
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get Extension field, default is empty 
-     * @return Extended Extension field, default is empty
+     * Get Expanded field, which is left empty by default. 
+     * @return Extended Expanded field, which is left empty by default.
      */
     public String getExtended() {
         return this.Extended;
     }
 
     /**
-     * Set Extension field, default is empty
-     * @param Extended Extension field, default is empty
+     * Set Expanded field, which is left empty by default.
+     * @param Extended Expanded field, which is left empty by default.
      */
     public void setExtended(String Extended) {
         this.Extended = Extended;

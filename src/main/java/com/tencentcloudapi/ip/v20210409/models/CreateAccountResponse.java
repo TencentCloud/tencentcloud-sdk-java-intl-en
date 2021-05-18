@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateAccountResponse extends AbstractModel{
 
     /**
-    * The uin of the account
+    * Account UIN
     */
     @SerializedName("Uin")
     @Expose
@@ -37,16 +37,16 @@ public class CreateAccountResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get The uin of the account 
-     * @return Uin The uin of the account
+     * Get Account UIN 
+     * @return Uin Account UIN
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set The uin of the account
-     * @param Uin The uin of the account
+     * Set Account UIN
+     * @param Uin Account UIN
      */
     public void setUin(String Uin) {
         this.Uin = Uin;

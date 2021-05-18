@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CountryCodeItem extends AbstractModel{
 
     /**
-    * Country English Name
+    * Country/region name in English
     */
     @SerializedName("EnName")
     @Expose
     private String EnName;
 
     /**
-    * Country Chinese Name
+    * Country/region name in Chinese
     */
     @SerializedName("Name")
     @Expose
@@ -51,39 +51,39 @@ public class CountryCodeItem extends AbstractModel{
     private String IOS3;
 
     /**
-    * Phone Code
+    * Phone code
     */
     @SerializedName("Code")
     @Expose
     private String Code;
 
     /**
-     * Get Country English Name 
-     * @return EnName Country English Name
+     * Get Country/region name in English 
+     * @return EnName Country/region name in English
      */
     public String getEnName() {
         return this.EnName;
     }
 
     /**
-     * Set Country English Name
-     * @param EnName Country English Name
+     * Set Country/region name in English
+     * @param EnName Country/region name in English
      */
     public void setEnName(String EnName) {
         this.EnName = EnName;
     }
 
     /**
-     * Get Country Chinese Name 
-     * @return Name Country Chinese Name
+     * Get Country/region name in Chinese 
+     * @return Name Country/region name in Chinese
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Country Chinese Name
-     * @param Name Country Chinese Name
+     * Set Country/region name in Chinese
+     * @param Name Country/region name in Chinese
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -122,16 +122,16 @@ public class CountryCodeItem extends AbstractModel{
     }
 
     /**
-     * Get Phone Code 
-     * @return Code Phone Code
+     * Get Phone code 
+     * @return Code Phone code
      */
     public String getCode() {
         return this.Code;
     }
 
     /**
-     * Set Phone Code
-     * @param Code Phone Code
+     * Set Phone code
+     * @param Code Phone code
      */
     public void setCode(String Code) {
         this.Code = Code;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class GetCountryCodesResponse extends AbstractModel{
 
     /**
-    * List of Country Codes
+    * List of country/region codes
     */
     @SerializedName("Data")
     @Expose
@@ -37,16 +37,16 @@ public class GetCountryCodesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get List of Country Codes 
-     * @return Data List of Country Codes
+     * Get List of country/region codes 
+     * @return Data List of country/region codes
      */
     public CountryCodeItem [] getData() {
         return this.Data;
     }
 
     /**
-     * Set List of Country Codes
-     * @param Data List of Country Codes
+     * Set List of country/region codes
+     * @param Data List of country/region codes
      */
     public void setData(CountryCodeItem [] Data) {
         this.Data = Data;
