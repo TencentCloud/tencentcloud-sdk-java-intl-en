@@ -30,6 +30,13 @@ public class DeleteServiceRequest extends AbstractModel{
     private String ServiceId;
 
     /**
+    * A parameter which is specified to skip the deletion precondition verification (only supported for services on dedicated instances).
+    */
+    @SerializedName("SkipVerification")
+    @Expose
+    private Long SkipVerification;
+
+    /**
      * Get Unique ID of the service to be deleted. 
      * @return ServiceId Unique ID of the service to be deleted.
      */
@@ -45,6 +52,22 @@ public class DeleteServiceRequest extends AbstractModel{
         this.ServiceId = ServiceId;
     }
 
+    /**
+     * Get A parameter which is specified to skip the deletion precondition verification (only supported for services on dedicated instances). 
+     * @return SkipVerification A parameter which is specified to skip the deletion precondition verification (only supported for services on dedicated instances).
+     */
+    public Long getSkipVerification() {
+        return this.SkipVerification;
+    }
+
+    /**
+     * Set A parameter which is specified to skip the deletion precondition verification (only supported for services on dedicated instances).
+     * @param SkipVerification A parameter which is specified to skip the deletion precondition verification (only supported for services on dedicated instances).
+     */
+    public void setSkipVerification(Long SkipVerification) {
+        this.SkipVerification = SkipVerification;
+    }
+
     public DeleteServiceRequest() {
     }
 
@@ -56,6 +79,9 @@ public class DeleteServiceRequest extends AbstractModel{
         if (source.ServiceId != null) {
             this.ServiceId = new String(source.ServiceId);
         }
+        if (source.SkipVerification != null) {
+            this.SkipVerification = new Long(source.SkipVerification);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class DeleteServiceRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
+        this.setParamSimple(map, prefix + "SkipVerification", this.SkipVerification);
 
     }
 }

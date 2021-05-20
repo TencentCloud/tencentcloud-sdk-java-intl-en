@@ -119,7 +119,7 @@ public class TcaplusdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create one or more table snapshots at specific points in time in the past.
+     *This API is used to create one or more table snapshots at a specified past time point.
      * @param req CreateSnapshotsRequest
      * @return CreateSnapshotsResponse
      * @throws TencentCloudSDKException

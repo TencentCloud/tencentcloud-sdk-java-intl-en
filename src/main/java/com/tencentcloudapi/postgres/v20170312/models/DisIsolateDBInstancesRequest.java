@@ -30,7 +30,7 @@ public class DisIsolateDBInstancesRequest extends AbstractModel{
     private String [] DBInstanceIdSet;
 
     /**
-    * Specify the valid period (in months) of the monthly-subscribed instance when removing it from isolation
+    * The valid period (in months) of the monthly-subscribed instance when removing it from isolation
     */
     @SerializedName("Period")
     @Expose
@@ -67,16 +67,16 @@ public class DisIsolateDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Specify the valid period (in months) of the monthly-subscribed instance when removing it from isolation 
-     * @return Period Specify the valid period (in months) of the monthly-subscribed instance when removing it from isolation
+     * Get The valid period (in months) of the monthly-subscribed instance when removing it from isolation 
+     * @return Period The valid period (in months) of the monthly-subscribed instance when removing it from isolation
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set Specify the valid period (in months) of the monthly-subscribed instance when removing it from isolation
-     * @param Period Specify the valid period (in months) of the monthly-subscribed instance when removing it from isolation
+     * Set The valid period (in months) of the monthly-subscribed instance when removing it from isolation
+     * @param Period The valid period (in months) of the monthly-subscribed instance when removing it from isolation
      */
     public void setPeriod(Long Period) {
         this.Period = Period;

@@ -30,7 +30,7 @@ public class DescribeDCDBInstanceNodeInfoRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * The maximum number of results returned at a time. Value range: `(0-100]`. Default value: `100`.
+    * The maximum number of results returned at a time. Value range: (0-100]. Default value: `100`.
     */
     @SerializedName("Limit")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeDCDBInstanceNodeInfoRequest extends AbstractModel{
     }
 
     /**
-     * Get The maximum number of results returned at a time. Value range: `(0-100]`. Default value: `100`. 
-     * @return Limit The maximum number of results returned at a time. Value range: `(0-100]`. Default value: `100`.
+     * Get The maximum number of results returned at a time. Value range: (0-100]. Default value: `100`. 
+     * @return Limit The maximum number of results returned at a time. Value range: (0-100]. Default value: `100`.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The maximum number of results returned at a time. Value range: `(0-100]`. Default value: `100`.
-     * @param Limit The maximum number of results returned at a time. Value range: `(0-100]`. Default value: `100`.
+     * Set The maximum number of results returned at a time. Value range: (0-100]. Default value: `100`.
+     * @param Limit The maximum number of results returned at a time. Value range: (0-100]. Default value: `100`.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
