@@ -37,6 +37,29 @@ public class DescribeTasksRequest extends AbstractModel{
     private String FileId;
 
     /**
+    * Filter: task creation time.
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private TimeRange CreateTime;
+
+    /**
+    * Filter: task end time.
+    */
+    @SerializedName("FinishTime")
+    @Expose
+    private TimeRange FinishTime;
+
+    /**
+    * Sort field. Valid values:
+<li> CreateTime: task creation time</li>
+<li>FinishTime: task end time</li>
+    */
+    @SerializedName("Sort")
+    @Expose
+    private SortBy Sort;
+
+    /**
     * Number of entries to be returned. Default value: 10. Maximum value: 100.
     */
     @SerializedName("Limit")
@@ -87,6 +110,62 @@ public class DescribeTasksRequest extends AbstractModel{
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
+    }
+
+    /**
+     * Get Filter: task creation time. 
+     * @return CreateTime Filter: task creation time.
+     */
+    public TimeRange getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set Filter: task creation time.
+     * @param CreateTime Filter: task creation time.
+     */
+    public void setCreateTime(TimeRange CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get Filter: task end time. 
+     * @return FinishTime Filter: task end time.
+     */
+    public TimeRange getFinishTime() {
+        return this.FinishTime;
+    }
+
+    /**
+     * Set Filter: task end time.
+     * @param FinishTime Filter: task end time.
+     */
+    public void setFinishTime(TimeRange FinishTime) {
+        this.FinishTime = FinishTime;
+    }
+
+    /**
+     * Get Sort field. Valid values:
+<li> CreateTime: task creation time</li>
+<li>FinishTime: task end time</li> 
+     * @return Sort Sort field. Valid values:
+<li> CreateTime: task creation time</li>
+<li>FinishTime: task end time</li>
+     */
+    public SortBy getSort() {
+        return this.Sort;
+    }
+
+    /**
+     * Set Sort field. Valid values:
+<li> CreateTime: task creation time</li>
+<li>FinishTime: task end time</li>
+     * @param Sort Sort field. Valid values:
+<li> CreateTime: task creation time</li>
+<li>FinishTime: task end time</li>
+     */
+    public void setSort(SortBy Sort) {
+        this.Sort = Sort;
     }
 
     /**
@@ -151,6 +230,15 @@ public class DescribeTasksRequest extends AbstractModel{
         if (source.FileId != null) {
             this.FileId = new String(source.FileId);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new TimeRange(source.CreateTime);
+        }
+        if (source.FinishTime != null) {
+            this.FinishTime = new TimeRange(source.FinishTime);
+        }
+        if (source.Sort != null) {
+            this.Sort = new SortBy(source.Sort);
+        }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
@@ -169,6 +257,9 @@ public class DescribeTasksRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "FileId", this.FileId);
+        this.setParamObj(map, prefix + "CreateTime.", this.CreateTime);
+        this.setParamObj(map, prefix + "FinishTime.", this.FinishTime);
+        this.setParamObj(map, prefix + "Sort.", this.Sort);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "ScrollToken", this.ScrollToken);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);

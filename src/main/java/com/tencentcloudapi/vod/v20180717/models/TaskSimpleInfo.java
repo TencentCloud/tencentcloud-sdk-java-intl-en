@@ -30,6 +30,20 @@ public class TaskSimpleInfo extends AbstractModel{
     private String TaskId;
 
     /**
+    * Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed)
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+    * Video ID
+    */
+    @SerializedName("FileId")
+    @Expose
+    private String FileId;
+
+    /**
     * Task type. Valid values:
 <li>Procedure: video processing task;</li>
 <li>EditMedia: video editing task</li>
@@ -94,6 +108,38 @@ Task types compatible with v2017:
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
+    }
+
+    /**
+     * Get Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed) 
+     * @return Status Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed)
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed)
+     * @param Status Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed)
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get Video ID 
+     * @return FileId Video ID
+     */
+    public String getFileId() {
+        return this.FileId;
+    }
+
+    /**
+     * Set Video ID
+     * @param FileId Video ID
+     */
+    public void setFileId(String FileId) {
+        this.FileId = FileId;
     }
 
     /**
@@ -239,6 +285,12 @@ Task types compatible with v2017:
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
         }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
         if (source.TaskType != null) {
             this.TaskType = new String(source.TaskType);
         }
@@ -265,6 +317,8 @@ Task types compatible with v2017:
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "TaskType", this.TaskType);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "BeginProcessTime", this.BeginProcessTime);

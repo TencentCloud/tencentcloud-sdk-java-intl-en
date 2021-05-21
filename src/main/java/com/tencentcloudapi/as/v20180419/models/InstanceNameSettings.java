@@ -23,12 +23,12 @@ import java.util.HashMap;
 public class InstanceNameSettings extends AbstractModel{
 
     /**
-    * CVM instance name.
+    * CVM instance name
 
-The InstanceName cannot start or end with a period (.) or hyphen (-), and cannot contain consecutive periods and hyphens.
+The `InstanceName` cannot start or end with a period (.) or hyphen (-), and cannot contain consecutive periods and hyphens.
 
-Other types (such as Linux) of instances: The name should be a combination of 2 to 40 characters, supporting multiple periods (.). The piece between two periods is composed of letters (case insensitive), numbers, and hyphens (-).
-Note: this field may return null, indicating that no valid values can be obtained.
+Other types of instances (such as Linux): the name contains 2 to 40 characters, and supports multiple periods (.). The string between two periods can consist of letters (case insensitive), numbers, and hyphens (-), and cannot be all numbers.
+Note: this field may return `null`, indicating that no valid value is obtained.
     */
     @SerializedName("InstanceName")
     @Expose
@@ -47,36 +47,36 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String InstanceNameStyle;
 
     /**
-     * Get CVM instance name.
+     * Get CVM instance name
 
-The InstanceName cannot start or end with a period (.) or hyphen (-), and cannot contain consecutive periods and hyphens.
+The `InstanceName` cannot start or end with a period (.) or hyphen (-), and cannot contain consecutive periods and hyphens.
 
-Other types (such as Linux) of instances: The name should be a combination of 2 to 40 characters, supporting multiple periods (.). The piece between two periods is composed of letters (case insensitive), numbers, and hyphens (-).
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceName CVM instance name.
+Other types of instances (such as Linux): the name contains 2 to 40 characters, and supports multiple periods (.). The string between two periods can consist of letters (case insensitive), numbers, and hyphens (-), and cannot be all numbers.
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return InstanceName CVM instance name
 
-The InstanceName cannot start or end with a period (.) or hyphen (-), and cannot contain consecutive periods and hyphens.
+The `InstanceName` cannot start or end with a period (.) or hyphen (-), and cannot contain consecutive periods and hyphens.
 
-Other types (such as Linux) of instances: The name should be a combination of 2 to 40 characters, supporting multiple periods (.). The piece between two periods is composed of letters (case insensitive), numbers, and hyphens (-).
-Note: this field may return null, indicating that no valid values can be obtained.
+Other types of instances (such as Linux): the name contains 2 to 40 characters, and supports multiple periods (.). The string between two periods can consist of letters (case insensitive), numbers, and hyphens (-), and cannot be all numbers.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set CVM instance name.
+     * Set CVM instance name
 
-The InstanceName cannot start or end with a period (.) or hyphen (-), and cannot contain consecutive periods and hyphens.
+The `InstanceName` cannot start or end with a period (.) or hyphen (-), and cannot contain consecutive periods and hyphens.
 
-Other types (such as Linux) of instances: The name should be a combination of 2 to 40 characters, supporting multiple periods (.). The piece between two periods is composed of letters (case insensitive), numbers, and hyphens (-).
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param InstanceName CVM instance name.
+Other types of instances (such as Linux): the name contains 2 to 40 characters, and supports multiple periods (.). The string between two periods can consist of letters (case insensitive), numbers, and hyphens (-), and cannot be all numbers.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param InstanceName CVM instance name
 
-The InstanceName cannot start or end with a period (.) or hyphen (-), and cannot contain consecutive periods and hyphens.
+The `InstanceName` cannot start or end with a period (.) or hyphen (-), and cannot contain consecutive periods and hyphens.
 
-Other types (such as Linux) of instances: The name should be a combination of 2 to 40 characters, supporting multiple periods (.). The piece between two periods is composed of letters (case insensitive), numbers, and hyphens (-).
-Note: this field may return null, indicating that no valid values can be obtained.
+Other types of instances (such as Linux): the name contains 2 to 40 characters, and supports multiple periods (.). The string between two periods can consist of letters (case insensitive), numbers, and hyphens (-), and cannot be all numbers.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;

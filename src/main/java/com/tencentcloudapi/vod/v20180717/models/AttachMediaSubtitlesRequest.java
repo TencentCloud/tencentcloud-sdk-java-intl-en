@@ -53,6 +53,13 @@ public class AttachMediaSubtitlesRequest extends AbstractModel{
     private String [] SubtitleIds;
 
     /**
+    * VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access the resources in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
+
+    /**
      * Get Unique ID of the media file 
      * @return FileId Unique ID of the media file
      */
@@ -124,6 +131,22 @@ public class AttachMediaSubtitlesRequest extends AbstractModel{
         this.SubtitleIds = SubtitleIds;
     }
 
+    /**
+     * Get VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access the resources in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty. 
+     * @return SubAppId VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access the resources in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access the resources in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+     * @param SubAppId VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access the resources in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
+    }
+
     public AttachMediaSubtitlesRequest() {
     }
 
@@ -147,6 +170,9 @@ public class AttachMediaSubtitlesRequest extends AbstractModel{
                 this.SubtitleIds[i] = new String(source.SubtitleIds[i]);
             }
         }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
     }
 
 
@@ -158,6 +184,7 @@ public class AttachMediaSubtitlesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Operation", this.Operation);
         this.setParamSimple(map, prefix + "AdaptiveDynamicStreamingDefinition", this.AdaptiveDynamicStreamingDefinition);
         this.setParamArraySimple(map, prefix + "SubtitleIds.", this.SubtitleIds);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }
 }

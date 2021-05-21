@@ -38,7 +38,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private WatermarkInput [] WatermarkSet;
 
     /**
-    * List of subtitle IDs (maximum: 10)
+    * List of subtitle IDs (maximum: 16)
     */
     @SerializedName("SubtitleSet")
     @Expose
@@ -81,16 +81,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of subtitle IDs (maximum: 10) 
-     * @return SubtitleSet List of subtitle IDs (maximum: 10)
+     * Get List of subtitle IDs (maximum: 16) 
+     * @return SubtitleSet List of subtitle IDs (maximum: 16)
      */
     public String [] getSubtitleSet() {
         return this.SubtitleSet;
     }
 
     /**
-     * Set List of subtitle IDs (maximum: 10)
-     * @param SubtitleSet List of subtitle IDs (maximum: 10)
+     * Set List of subtitle IDs (maximum: 16)
+     * @param SubtitleSet List of subtitle IDs (maximum: 16)
      */
     public void setSubtitleSet(String [] SubtitleSet) {
         this.SubtitleSet = SubtitleSet;

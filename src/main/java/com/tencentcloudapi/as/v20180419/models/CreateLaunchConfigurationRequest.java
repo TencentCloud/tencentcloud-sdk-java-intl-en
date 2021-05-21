@@ -158,7 +158,8 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
     private HostNameSettings HostNameSettings;
 
     /**
-    * Settings of CVM instance names.
+    * Settings of CVM instance names
+If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
     */
     @SerializedName("InstanceNameSettings")
     @Expose
@@ -505,16 +506,20 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
     }
 
     /**
-     * Get Settings of CVM instance names. 
-     * @return InstanceNameSettings Settings of CVM instance names.
+     * Get Settings of CVM instance names
+If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format. 
+     * @return InstanceNameSettings Settings of CVM instance names
+If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
      */
     public InstanceNameSettings getInstanceNameSettings() {
         return this.InstanceNameSettings;
     }
 
     /**
-     * Set Settings of CVM instance names.
-     * @param InstanceNameSettings Settings of CVM instance names.
+     * Set Settings of CVM instance names
+If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
+     * @param InstanceNameSettings Settings of CVM instance names
+If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
      */
     public void setInstanceNameSettings(InstanceNameSettings InstanceNameSettings) {
         this.InstanceNameSettings = InstanceNameSettings;

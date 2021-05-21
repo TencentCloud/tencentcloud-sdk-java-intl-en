@@ -209,6 +209,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
+    * Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
+<br><li>ORIGINAL: uses the configured cloud disk type
+<br><li>AUTOMATIC: automatically chooses an available cloud disk type in the current availability zone
+    */
+    @SerializedName("DiskTypePolicy")
+    @Expose
+    private String DiskTypePolicy;
+
+    /**
      * Get Project ID of the instance. 
      * @return ProjectId Project ID of the instance.
      */
@@ -640,6 +649,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.InstanceChargePrepaid = InstanceChargePrepaid;
     }
 
+    /**
+     * Get Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
+<br><li>ORIGINAL: uses the configured cloud disk type
+<br><li>AUTOMATIC: automatically chooses an available cloud disk type in the current availability zone 
+     * @return DiskTypePolicy Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
+<br><li>ORIGINAL: uses the configured cloud disk type
+<br><li>AUTOMATIC: automatically chooses an available cloud disk type in the current availability zone
+     */
+    public String getDiskTypePolicy() {
+        return this.DiskTypePolicy;
+    }
+
+    /**
+     * Set Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
+<br><li>ORIGINAL: uses the configured cloud disk type
+<br><li>AUTOMATIC: automatically chooses an available cloud disk type in the current availability zone
+     * @param DiskTypePolicy Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
+<br><li>ORIGINAL: uses the configured cloud disk type
+<br><li>AUTOMATIC: automatically chooses an available cloud disk type in the current availability zone
+     */
+    public void setDiskTypePolicy(String DiskTypePolicy) {
+        this.DiskTypePolicy = DiskTypePolicy;
+    }
+
     public LaunchConfiguration() {
     }
 
@@ -741,6 +774,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.InstanceChargePrepaid != null) {
             this.InstanceChargePrepaid = new InstanceChargePrepaid(source.InstanceChargePrepaid);
         }
+        if (source.DiskTypePolicy != null) {
+            this.DiskTypePolicy = new String(source.DiskTypePolicy);
+        }
     }
 
 
@@ -774,6 +810,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "HostNameSettings.", this.HostNameSettings);
         this.setParamObj(map, prefix + "InstanceNameSettings.", this.InstanceNameSettings);
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
+        this.setParamSimple(map, prefix + "DiskTypePolicy", this.DiskTypePolicy);
 
     }
 }

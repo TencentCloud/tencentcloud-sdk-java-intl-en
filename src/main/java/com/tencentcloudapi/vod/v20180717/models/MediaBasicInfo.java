@@ -160,7 +160,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Status;
 
     /**
-    * 
+    * Storage class of a media file:
+<li>STANDARD</li>
+<li>STANDARD_IA</li>
     */
     @SerializedName("StorageClass")
     @Expose
@@ -511,16 +513,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return StorageClass 
+     * Get Storage class of a media file:
+<li>STANDARD</li>
+<li>STANDARD_IA</li> 
+     * @return StorageClass Storage class of a media file:
+<li>STANDARD</li>
+<li>STANDARD_IA</li>
      */
     public String getStorageClass() {
         return this.StorageClass;
     }
 
     /**
-     * Set 
-     * @param StorageClass 
+     * Set Storage class of a media file:
+<li>STANDARD</li>
+<li>STANDARD_IA</li>
+     * @param StorageClass Storage class of a media file:
+<li>STANDARD</li>
+<li>STANDARD_IA</li>
      */
     public void setStorageClass(String StorageClass) {
         this.StorageClass = StorageClass;
