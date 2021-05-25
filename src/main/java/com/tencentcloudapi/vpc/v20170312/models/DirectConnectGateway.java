@@ -140,6 +140,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String ModeType;
 
     /**
+    * Whether the direct connect gateway is for an edge zone.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("LocalZone")
+    @Expose
+    private Boolean LocalZone;
+
+    /**
+    * Availability zone where the direct connect gateway resides.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
      * Get Direct Connect `ID`. 
      * @return DirectConnectGatewayId Direct Connect `ID`.
      */
@@ -427,6 +443,46 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.ModeType = ModeType;
     }
 
+    /**
+     * Get Whether the direct connect gateway is for an edge zone.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return LocalZone Whether the direct connect gateway is for an edge zone.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Boolean getLocalZone() {
+        return this.LocalZone;
+    }
+
+    /**
+     * Set Whether the direct connect gateway is for an edge zone.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param LocalZone Whether the direct connect gateway is for an edge zone.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setLocalZone(Boolean LocalZone) {
+        this.LocalZone = LocalZone;
+    }
+
+    /**
+     * Get Availability zone where the direct connect gateway resides.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Zone Availability zone where the direct connect gateway resides.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set Availability zone where the direct connect gateway resides.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Zone Availability zone where the direct connect gateway resides.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
     public DirectConnectGateway() {
     }
 
@@ -483,6 +539,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.ModeType != null) {
             this.ModeType = new String(source.ModeType);
         }
+        if (source.LocalZone != null) {
+            this.LocalZone = new Boolean(source.LocalZone);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
     }
 
 
@@ -505,6 +567,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "NatGatewayId", this.NatGatewayId);
         this.setParamArraySimple(map, prefix + "VXLANSupport.", this.VXLANSupport);
         this.setParamSimple(map, prefix + "ModeType", this.ModeType);
+        this.setParamSimple(map, prefix + "LocalZone", this.LocalZone);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
 
     }
 }

@@ -63,6 +63,13 @@ public class CreateDirectConnectGatewayRequest extends AbstractModel{
     private String ModeType;
 
     /**
+    * Availability zone where the direct connect gateway resides.
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
      * Get The name of the direct connect gateway. 
      * @return DirectConnectGatewayName The name of the direct connect gateway.
      */
@@ -162,6 +169,22 @@ public class CreateDirectConnectGatewayRequest extends AbstractModel{
         this.ModeType = ModeType;
     }
 
+    /**
+     * Get Availability zone where the direct connect gateway resides. 
+     * @return Zone Availability zone where the direct connect gateway resides.
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set Availability zone where the direct connect gateway resides.
+     * @param Zone Availability zone where the direct connect gateway resides.
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
     public CreateDirectConnectGatewayRequest() {
     }
 
@@ -185,6 +208,9 @@ public class CreateDirectConnectGatewayRequest extends AbstractModel{
         if (source.ModeType != null) {
             this.ModeType = new String(source.ModeType);
         }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
     }
 
 
@@ -197,6 +223,7 @@ public class CreateDirectConnectGatewayRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NetworkInstanceId", this.NetworkInstanceId);
         this.setParamSimple(map, prefix + "GatewayType", this.GatewayType);
         this.setParamSimple(map, prefix + "ModeType", this.ModeType);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
 
     }
 }

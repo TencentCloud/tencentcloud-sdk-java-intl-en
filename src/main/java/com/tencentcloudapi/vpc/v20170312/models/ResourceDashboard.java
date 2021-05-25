@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ResourceDashboard extends AbstractModel{
 
     /**
-    * Vpc instance ID, e.g. vpc-f1xjkw1b.
+    * VPC instance ID, such as `vpc-bq4bzxpj`.
     */
     @SerializedName("VpcId")
     @Expose
@@ -58,7 +58,7 @@ public class ResourceDashboard extends AbstractModel{
     private Long Pcx;
 
     /**
-    * The total number of used IP addresses.
+    * Total number of used IPs except for CVM IP, EIP and network probe IP. The three IP types will be independently counted.
     */
     @SerializedName("Ip")
     @Expose
@@ -317,16 +317,16 @@ public class ResourceDashboard extends AbstractModel{
     private Long RouteTable;
 
     /**
-     * Get Vpc instance ID, e.g. vpc-f1xjkw1b. 
-     * @return VpcId Vpc instance ID, e.g. vpc-f1xjkw1b.
+     * Get VPC instance ID, such as `vpc-bq4bzxpj`. 
+     * @return VpcId VPC instance ID, such as `vpc-bq4bzxpj`.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set Vpc instance ID, e.g. vpc-f1xjkw1b.
-     * @param VpcId Vpc instance ID, e.g. vpc-f1xjkw1b.
+     * Set VPC instance ID, such as `vpc-bq4bzxpj`.
+     * @param VpcId VPC instance ID, such as `vpc-bq4bzxpj`.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -397,16 +397,16 @@ public class ResourceDashboard extends AbstractModel{
     }
 
     /**
-     * Get The total number of used IP addresses. 
-     * @return Ip The total number of used IP addresses.
+     * Get Total number of used IPs except for CVM IP, EIP and network probe IP. The three IP types will be independently counted. 
+     * @return Ip Total number of used IPs except for CVM IP, EIP and network probe IP. The three IP types will be independently counted.
      */
     public Long getIp() {
         return this.Ip;
     }
 
     /**
-     * Set The total number of used IP addresses.
-     * @param Ip The total number of used IP addresses.
+     * Set Total number of used IPs except for CVM IP, EIP and network probe IP. The three IP types will be independently counted.
+     * @param Ip Total number of used IPs except for CVM IP, EIP and network probe IP. The three IP types will be independently counted.
      */
     public void setIp(Long Ip) {
         this.Ip = Ip;

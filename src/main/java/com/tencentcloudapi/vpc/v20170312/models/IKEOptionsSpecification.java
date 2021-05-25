@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class IKEOptionsSpecification extends AbstractModel{
 
     /**
-    * Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', and 'DES-CBC'. Default is 3DES-CBC.
+    * Encryption algorithm. Valid values: `3DES-CBC`, `AES-CBC-128`, `AES-CBS-192`, `AES-CBC-256`, `DES-CBC`, and `SM4`; default value: `3DES-CBC`.
     */
     @SerializedName("PropoEncryAlgorithm")
     @Expose
     private String PropoEncryAlgorithm;
 
     /**
-    * Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is MD5.
+    * Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `MD5`.
     */
     @SerializedName("PropoAuthenAlgorithm")
     @Expose
@@ -107,32 +107,32 @@ public class IKEOptionsSpecification extends AbstractModel{
     private String IKEVersion;
 
     /**
-     * Get Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', and 'DES-CBC'. Default is 3DES-CBC. 
-     * @return PropoEncryAlgorithm Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', and 'DES-CBC'. Default is 3DES-CBC.
+     * Get Encryption algorithm. Valid values: `3DES-CBC`, `AES-CBC-128`, `AES-CBS-192`, `AES-CBC-256`, `DES-CBC`, and `SM4`; default value: `3DES-CBC`. 
+     * @return PropoEncryAlgorithm Encryption algorithm. Valid values: `3DES-CBC`, `AES-CBC-128`, `AES-CBS-192`, `AES-CBC-256`, `DES-CBC`, and `SM4`; default value: `3DES-CBC`.
      */
     public String getPropoEncryAlgorithm() {
         return this.PropoEncryAlgorithm;
     }
 
     /**
-     * Set Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', and 'DES-CBC'. Default is 3DES-CBC.
-     * @param PropoEncryAlgorithm Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', and 'DES-CBC'. Default is 3DES-CBC.
+     * Set Encryption algorithm. Valid values: `3DES-CBC`, `AES-CBC-128`, `AES-CBS-192`, `AES-CBC-256`, `DES-CBC`, and `SM4`; default value: `3DES-CBC`.
+     * @param PropoEncryAlgorithm Encryption algorithm. Valid values: `3DES-CBC`, `AES-CBC-128`, `AES-CBS-192`, `AES-CBC-256`, `DES-CBC`, and `SM4`; default value: `3DES-CBC`.
      */
     public void setPropoEncryAlgorithm(String PropoEncryAlgorithm) {
         this.PropoEncryAlgorithm = PropoEncryAlgorithm;
     }
 
     /**
-     * Get Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is MD5. 
-     * @return PropoAuthenAlgorithm Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is MD5.
+     * Get Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `MD5`. 
+     * @return PropoAuthenAlgorithm Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `MD5`.
      */
     public String getPropoAuthenAlgorithm() {
         return this.PropoAuthenAlgorithm;
     }
 
     /**
-     * Set Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is MD5.
-     * @param PropoAuthenAlgorithm Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is MD5.
+     * Set Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `MD5`.
+     * @param PropoAuthenAlgorithm Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `MD5`.
      */
     public void setPropoAuthenAlgorithm(String PropoAuthenAlgorithm) {
         this.PropoAuthenAlgorithm = PropoAuthenAlgorithm;
