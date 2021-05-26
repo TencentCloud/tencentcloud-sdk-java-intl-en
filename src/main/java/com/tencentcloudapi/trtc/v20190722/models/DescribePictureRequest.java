@@ -30,21 +30,21 @@ public class DescribePictureRequest extends AbstractModel{
     private Long SdkAppId;
 
     /**
-    * Image ID. If it is not passed in, the IDs of all images under the application are returned.
+    * Image ID. If it is left empty, the IDs of all images under the application are returned.
     */
     @SerializedName("PictureId")
     @Expose
     private Long PictureId;
 
     /**
-    * Number of records per page
+    * Number of records per page. `10` is used if it is left empty.
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * Page number
+    * Page number. `1` is used if it is left empty.
     */
     @SerializedName("PageNo")
     @Expose
@@ -67,48 +67,48 @@ public class DescribePictureRequest extends AbstractModel{
     }
 
     /**
-     * Get Image ID. If it is not passed in, the IDs of all images under the application are returned. 
-     * @return PictureId Image ID. If it is not passed in, the IDs of all images under the application are returned.
+     * Get Image ID. If it is left empty, the IDs of all images under the application are returned. 
+     * @return PictureId Image ID. If it is left empty, the IDs of all images under the application are returned.
      */
     public Long getPictureId() {
         return this.PictureId;
     }
 
     /**
-     * Set Image ID. If it is not passed in, the IDs of all images under the application are returned.
-     * @param PictureId Image ID. If it is not passed in, the IDs of all images under the application are returned.
+     * Set Image ID. If it is left empty, the IDs of all images under the application are returned.
+     * @param PictureId Image ID. If it is left empty, the IDs of all images under the application are returned.
      */
     public void setPictureId(Long PictureId) {
         this.PictureId = PictureId;
     }
 
     /**
-     * Get Number of records per page 
-     * @return PageSize Number of records per page
+     * Get Number of records per page. `10` is used if it is left empty. 
+     * @return PageSize Number of records per page. `10` is used if it is left empty.
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set Number of records per page
-     * @param PageSize Number of records per page
+     * Set Number of records per page. `10` is used if it is left empty.
+     * @param PageSize Number of records per page. `10` is used if it is left empty.
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get Page number 
-     * @return PageNo Page number
+     * Get Page number. `1` is used if it is left empty. 
+     * @return PageNo Page number. `1` is used if it is left empty.
      */
     public Long getPageNo() {
         return this.PageNo;
     }
 
     /**
-     * Set Page number
-     * @param PageNo Page number
+     * Set Page number. `1` is used if it is left empty.
+     * @param PageNo Page number. `1` is used if it is left empty.
      */
     public void setPageNo(Long PageNo) {
         this.PageNo = PageNo;

@@ -89,6 +89,13 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel{
     private Long RouterCount;
 
     /**
+    * Number of master nodes to add
+    */
+    @SerializedName("MasterCount")
+    @Expose
+    private Long MasterCount;
+
+    /**
      * Get Time unit of scale-out. Valid values:
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li> 
      * @return TimeUnit Time unit of scale-out. Valid values:
@@ -244,6 +251,22 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel{
         this.RouterCount = RouterCount;
     }
 
+    /**
+     * Get Number of master nodes to add 
+     * @return MasterCount Number of master nodes to add
+     */
+    public Long getMasterCount() {
+        return this.MasterCount;
+    }
+
+    /**
+     * Set Number of master nodes to add
+     * @param MasterCount Number of master nodes to add
+     */
+    public void setMasterCount(Long MasterCount) {
+        this.MasterCount = MasterCount;
+    }
+
     public InquiryPriceScaleOutInstanceRequest() {
     }
 
@@ -279,6 +302,9 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel{
         if (source.RouterCount != null) {
             this.RouterCount = new Long(source.RouterCount);
         }
+        if (source.MasterCount != null) {
+            this.MasterCount = new Long(source.MasterCount);
+        }
     }
 
 
@@ -295,6 +321,7 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TaskCount", this.TaskCount);
         this.setParamSimple(map, prefix + "Currency", this.Currency);
         this.setParamSimple(map, prefix + "RouterCount", this.RouterCount);
+        this.setParamSimple(map, prefix + "MasterCount", this.MasterCount);
 
     }
 }

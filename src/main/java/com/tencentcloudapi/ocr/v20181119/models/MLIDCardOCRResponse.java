@@ -83,13 +83,14 @@ public class MLIDCardOCRResponse extends AbstractModel{
     private String AdvancedInfo;
 
     /**
-    * Certificate types
-MyKad: Malaysian Identity Card
-MyPR: Malaysia Permanent Resident Identity Card
-MyTentera: Malaysian Armed Forces Identity Card
-MyKAS: Malaysian Temporary Resident Identity Card
-POLIS: Royal Malaysia Police Identity Card
-IKAD: Malaysia Temporary Employment Visit Pass
+    * Certificate type
+MyKad  ID card
+MyPR    Permanent resident card
+MyTentera   Military identity card
+MyKAS    Temporary ID card
+POLIS  Police card
+IKAD   Work permit
+MyKid   Kid card
     */
     @SerializedName("Type")
     @Expose
@@ -266,40 +267,44 @@ IKAD: Malaysia Temporary Employment Visit Pass
     }
 
     /**
-     * Get Certificate types
-MyKad: Malaysian Identity Card
-MyPR: Malaysia Permanent Resident Identity Card
-MyTentera: Malaysian Armed Forces Identity Card
-MyKAS: Malaysian Temporary Resident Identity Card
-POLIS: Royal Malaysia Police Identity Card
-IKAD: Malaysia Temporary Employment Visit Pass 
-     * @return Type Certificate types
-MyKad: Malaysian Identity Card
-MyPR: Malaysia Permanent Resident Identity Card
-MyTentera: Malaysian Armed Forces Identity Card
-MyKAS: Malaysian Temporary Resident Identity Card
-POLIS: Royal Malaysia Police Identity Card
-IKAD: Malaysia Temporary Employment Visit Pass
+     * Get Certificate type
+MyKad  ID card
+MyPR    Permanent resident card
+MyTentera   Military identity card
+MyKAS    Temporary ID card
+POLIS  Police card
+IKAD   Work permit
+MyKid   Kid card 
+     * @return Type Certificate type
+MyKad  ID card
+MyPR    Permanent resident card
+MyTentera   Military identity card
+MyKAS    Temporary ID card
+POLIS  Police card
+IKAD   Work permit
+MyKid   Kid card
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Certificate types
-MyKad: Malaysian Identity Card
-MyPR: Malaysia Permanent Resident Identity Card
-MyTentera: Malaysian Armed Forces Identity Card
-MyKAS: Malaysian Temporary Resident Identity Card
-POLIS: Royal Malaysia Police Identity Card
-IKAD: Malaysia Temporary Employment Visit Pass
-     * @param Type Certificate types
-MyKad: Malaysian Identity Card
-MyPR: Malaysia Permanent Resident Identity Card
-MyTentera: Malaysian Armed Forces Identity Card
-MyKAS: Malaysian Temporary Resident Identity Card
-POLIS: Royal Malaysia Police Identity Card
-IKAD: Malaysia Temporary Employment Visit Pass
+     * Set Certificate type
+MyKad  ID card
+MyPR    Permanent resident card
+MyTentera   Military identity card
+MyKAS    Temporary ID card
+POLIS  Police card
+IKAD   Work permit
+MyKid   Kid card
+     * @param Type Certificate type
+MyKad  ID card
+MyPR    Permanent resident card
+MyTentera   Military identity card
+MyKAS    Temporary ID card
+POLIS  Police card
+IKAD   Work permit
+MyKid   Kid card
      */
     public void setType(String Type) {
         this.Type = Type;

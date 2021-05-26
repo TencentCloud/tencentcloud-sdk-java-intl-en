@@ -170,6 +170,20 @@ public class CreateFunctionRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * Whether to enable the async attribute. TRUE: yes; FALSE: no
+    */
+    @SerializedName("AsyncRunEnable")
+    @Expose
+    private String AsyncRunEnable;
+
+    /**
+    * Whether to enable event tracking. TRUE: yes; FALSE: no
+    */
+    @SerializedName("TraceEnable")
+    @Expose
+    private String TraceEnable;
+
+    /**
      * Get Name of the new function. The name can contain 2 to 60 characters, including English letters, digits, hyphens (-), and underscores (_). The name must start with a letter and cannot end with a hyphen or underscore. 
      * @return FunctionName Name of the new function. The name can contain 2 to 60 characters, including English letters, digits, hyphens (-), and underscores (_). The name must start with a letter and cannot end with a hyphen or underscore.
      */
@@ -505,6 +519,38 @@ public class CreateFunctionRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get Whether to enable the async attribute. TRUE: yes; FALSE: no 
+     * @return AsyncRunEnable Whether to enable the async attribute. TRUE: yes; FALSE: no
+     */
+    public String getAsyncRunEnable() {
+        return this.AsyncRunEnable;
+    }
+
+    /**
+     * Set Whether to enable the async attribute. TRUE: yes; FALSE: no
+     * @param AsyncRunEnable Whether to enable the async attribute. TRUE: yes; FALSE: no
+     */
+    public void setAsyncRunEnable(String AsyncRunEnable) {
+        this.AsyncRunEnable = AsyncRunEnable;
+    }
+
+    /**
+     * Get Whether to enable event tracking. TRUE: yes; FALSE: no 
+     * @return TraceEnable Whether to enable event tracking. TRUE: yes; FALSE: no
+     */
+    public String getTraceEnable() {
+        return this.TraceEnable;
+    }
+
+    /**
+     * Set Whether to enable event tracking. TRUE: yes; FALSE: no
+     * @param TraceEnable Whether to enable event tracking. TRUE: yes; FALSE: no
+     */
+    public void setTraceEnable(String TraceEnable) {
+        this.TraceEnable = TraceEnable;
+    }
+
     public CreateFunctionRequest() {
     }
 
@@ -582,6 +628,12 @@ public class CreateFunctionRequest extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.AsyncRunEnable != null) {
+            this.AsyncRunEnable = new String(source.AsyncRunEnable);
+        }
+        if (source.TraceEnable != null) {
+            this.TraceEnable = new String(source.TraceEnable);
+        }
     }
 
 
@@ -610,6 +662,8 @@ public class CreateFunctionRequest extends AbstractModel{
         this.setParamObj(map, prefix + "CfsConfig.", this.CfsConfig);
         this.setParamSimple(map, prefix + "InitTimeout", this.InitTimeout);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "AsyncRunEnable", this.AsyncRunEnable);
+        this.setParamSimple(map, prefix + "TraceEnable", this.TraceEnable);
 
     }
 }

@@ -37,7 +37,7 @@ public class InvokeRequest extends AbstractModel{
     private String InvocationType;
 
     /**
-    * Version number of the triggered function
+    * Version number or name of the triggered function
     */
     @SerializedName("Qualifier")
     @Expose
@@ -51,7 +51,7 @@ public class InvokeRequest extends AbstractModel{
     private String ClientContext;
 
     /**
-    * If this field is specified for a synchronous invocation, the return value will contain a 4-KB log. The value is `None` (default) or `Tail`. If the value is `Tail`, `logMsg` in the return parameter will contain the corresponding function execution log.
+    * If this field is specified during sync invocation, the returned value will contain 4 KB of logs. Valid values: None, Tail. Default value: None. If the value is `Tail`, the `Log` field in the returned parameter will contain the corresponding function execution log
     */
     @SerializedName("LogType")
     @Expose
@@ -104,16 +104,16 @@ public class InvokeRequest extends AbstractModel{
     }
 
     /**
-     * Get Version number of the triggered function 
-     * @return Qualifier Version number of the triggered function
+     * Get Version number or name of the triggered function 
+     * @return Qualifier Version number or name of the triggered function
      */
     public String getQualifier() {
         return this.Qualifier;
     }
 
     /**
-     * Set Version number of the triggered function
-     * @param Qualifier Version number of the triggered function
+     * Set Version number or name of the triggered function
+     * @param Qualifier Version number or name of the triggered function
      */
     public void setQualifier(String Qualifier) {
         this.Qualifier = Qualifier;
@@ -136,16 +136,16 @@ public class InvokeRequest extends AbstractModel{
     }
 
     /**
-     * Get If this field is specified for a synchronous invocation, the return value will contain a 4-KB log. The value is `None` (default) or `Tail`. If the value is `Tail`, `logMsg` in the return parameter will contain the corresponding function execution log. 
-     * @return LogType If this field is specified for a synchronous invocation, the return value will contain a 4-KB log. The value is `None` (default) or `Tail`. If the value is `Tail`, `logMsg` in the return parameter will contain the corresponding function execution log.
+     * Get If this field is specified during sync invocation, the returned value will contain 4 KB of logs. Valid values: None, Tail. Default value: None. If the value is `Tail`, the `Log` field in the returned parameter will contain the corresponding function execution log 
+     * @return LogType If this field is specified during sync invocation, the returned value will contain 4 KB of logs. Valid values: None, Tail. Default value: None. If the value is `Tail`, the `Log` field in the returned parameter will contain the corresponding function execution log
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set If this field is specified for a synchronous invocation, the return value will contain a 4-KB log. The value is `None` (default) or `Tail`. If the value is `Tail`, `logMsg` in the return parameter will contain the corresponding function execution log.
-     * @param LogType If this field is specified for a synchronous invocation, the return value will contain a 4-KB log. The value is `None` (default) or `Tail`. If the value is `Tail`, `logMsg` in the return parameter will contain the corresponding function execution log.
+     * Set If this field is specified during sync invocation, the returned value will contain 4 KB of logs. Valid values: None, Tail. Default value: None. If the value is `Tail`, the `Log` field in the returned parameter will contain the corresponding function execution log
+     * @param LogType If this field is specified during sync invocation, the returned value will contain 4 KB of logs. Valid values: None, Tail. Default value: None. If the value is `Tail`, the `Log` field in the returned parameter will contain the corresponding function execution log
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;

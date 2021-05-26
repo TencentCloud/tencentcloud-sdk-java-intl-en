@@ -37,7 +37,7 @@ public class SpecItem extends AbstractModel{
     private Long Status;
 
     /**
-    * Specification purchasable flag. Valid values: 0 (not purchasable), 1 (purchasable)
+    * Computing resource specification in terms of CPU core
     */
     @SerializedName("Cpu")
     @Expose
@@ -202,16 +202,16 @@ public class SpecItem extends AbstractModel{
     }
 
     /**
-     * Get Specification purchasable flag. Valid values: 0 (not purchasable), 1 (purchasable) 
-     * @return Cpu Specification purchasable flag. Valid values: 0 (not purchasable), 1 (purchasable)
+     * Get Computing resource specification in terms of CPU core 
+     * @return Cpu Computing resource specification in terms of CPU core
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set Specification purchasable flag. Valid values: 0 (not purchasable), 1 (purchasable)
-     * @param Cpu Specification purchasable flag. Valid values: 0 (not purchasable), 1 (purchasable)
+     * Set Computing resource specification in terms of CPU core
+     * @param Cpu Computing resource specification in terms of CPU core
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;

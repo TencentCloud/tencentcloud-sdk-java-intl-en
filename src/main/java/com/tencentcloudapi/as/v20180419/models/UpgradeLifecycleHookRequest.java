@@ -51,7 +51,7 @@ public class UpgradeLifecycleHookRequest extends AbstractModel{
     private String DefaultResult;
 
     /**
-    * The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7,200. Default value: 300
+    * The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7200. Default value: 300
     */
     @SerializedName("HeartbeatTimeout")
     @Expose
@@ -143,16 +143,16 @@ public class UpgradeLifecycleHookRequest extends AbstractModel{
     }
 
     /**
-     * Get The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7,200. Default value: 300 
-     * @return HeartbeatTimeout The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7,200. Default value: 300
+     * Get The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7200. Default value: 300 
+     * @return HeartbeatTimeout The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7200. Default value: 300
      */
     public Long getHeartbeatTimeout() {
         return this.HeartbeatTimeout;
     }
 
     /**
-     * Set The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7,200. Default value: 300
-     * @param HeartbeatTimeout The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7,200. Default value: 300
+     * Set The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7200. Default value: 300
+     * @param HeartbeatTimeout The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7200. Default value: 300
      */
     public void setHeartbeatTimeout(Long HeartbeatTimeout) {
         this.HeartbeatTimeout = HeartbeatTimeout;

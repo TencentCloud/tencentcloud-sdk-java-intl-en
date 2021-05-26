@@ -206,7 +206,7 @@ An alias must point to a master version and can point to an additional version a
     }
 
     /**
-     *This API is used to create a namespace based on the input parameters.
+     *This API is used to delete the specific namespace according to the parameters passed in.
      * @param req DeleteNamespaceRequest
      * @return DeleteNamespaceResponse
      * @throws TencentCloudSDKException

@@ -209,7 +209,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
-    * Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
+    * Specifies how to select the cloud disk type. 
 <br><li>ORIGINAL: uses the configured cloud disk type
 <br><li>AUTOMATIC: automatically chooses an available cloud disk type in the current availability zone
     */
@@ -650,10 +650,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
+     * Get Specifies how to select the cloud disk type. 
 <br><li>ORIGINAL: uses the configured cloud disk type
 <br><li>AUTOMATIC: automatically chooses an available cloud disk type in the current availability zone 
-     * @return DiskTypePolicy Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
+     * @return DiskTypePolicy Specifies how to select the cloud disk type. 
 <br><li>ORIGINAL: uses the configured cloud disk type
 <br><li>AUTOMATIC: automatically chooses an available cloud disk type in the current availability zone
      */
@@ -662,10 +662,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
+     * Set Specifies how to select the cloud disk type. 
 <br><li>ORIGINAL: uses the configured cloud disk type
 <br><li>AUTOMATIC: automatically chooses an available cloud disk type in the current availability zone
-     * @param DiskTypePolicy Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
+     * @param DiskTypePolicy Specifies how to select the cloud disk type. 
 <br><li>ORIGINAL: uses the configured cloud disk type
 <br><li>AUTOMATIC: automatically chooses an available cloud disk type in the current availability zone
      */

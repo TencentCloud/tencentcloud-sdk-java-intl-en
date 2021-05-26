@@ -65,7 +65,7 @@ public class PresetLayoutConfig extends AbstractModel{
     private Long LocationY;
 
     /**
-    * Z-order of the image in pixels. If this parameter is not set, 0 is used by default.
+    * Output order of the image. `0` is used if it is left empty.
     */
     @SerializedName("ZOrder")
     @Expose
@@ -189,16 +189,16 @@ public class PresetLayoutConfig extends AbstractModel{
     }
 
     /**
-     * Get Z-order of the image in pixels. If this parameter is not set, 0 is used by default. 
-     * @return ZOrder Z-order of the image in pixels. If this parameter is not set, 0 is used by default.
+     * Get Output order of the image. `0` is used if it is left empty. 
+     * @return ZOrder Output order of the image. `0` is used if it is left empty.
      */
     public Long getZOrder() {
         return this.ZOrder;
     }
 
     /**
-     * Set Z-order of the image in pixels. If this parameter is not set, 0 is used by default.
-     * @param ZOrder Z-order of the image in pixels. If this parameter is not set, 0 is used by default.
+     * Set Output order of the image. `0` is used if it is left empty.
+     * @param ZOrder Output order of the image. `0` is used if it is left empty.
      */
     public void setZOrder(Long ZOrder) {
         this.ZOrder = ZOrder;

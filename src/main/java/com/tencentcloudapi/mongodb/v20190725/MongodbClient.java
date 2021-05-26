@@ -80,6 +80,26 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a backup download task.
+     * @param req CreateBackupDownloadTaskRequest
+     * @return CreateBackupDownloadTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBackupDownloadTaskResponse CreateBackupDownloadTask(CreateBackupDownloadTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateBackupDownloadTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateBackupDownloadTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateBackupDownloadTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a monthly subscription TencentDB for MongoDB instance. The purchasable specifications supported by this API can be obtained through the `DescribeSpecInfo` API.
      * @param req CreateDBInstanceRequest
      * @return CreateDBInstanceResponse
@@ -140,7 +160,11 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to get the permission to download a backup file. The specific backup file information can be obtained through the DescribeDBBackups API.
+     *备份下载功能已调整，此接口即将下线
+
+TencentDB will soon stop supporting this API, as the backup download feature has been modified.
+
+This API is used to get the permission to download a backup file. The detailed backup file information can be obtained through the `DescribeDBBackups` API.
      * @param req DescribeBackupAccessRequest
      * @return DescribeBackupAccessResponse
      * @throws TencentCloudSDKException
@@ -152,6 +176,26 @@ public class MongodbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupAccessResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeBackupAccess");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query backup download task information.
+     * @param req DescribeBackupDownloadTaskRequest
+     * @return DescribeBackupDownloadTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupDownloadTaskResponse DescribeBackupDownloadTask(DescribeBackupDownloadTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupDownloadTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupDownloadTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackupDownloadTask");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -232,6 +276,26 @@ public class MongodbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDBInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDBInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the security groups associated with an instance.
+     * @param req DescribeSecurityGroupRequest
+     * @return DescribeSecurityGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSecurityGroupResponse DescribeSecurityGroup(DescribeSecurityGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSecurityGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSecurityGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSecurityGroup");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

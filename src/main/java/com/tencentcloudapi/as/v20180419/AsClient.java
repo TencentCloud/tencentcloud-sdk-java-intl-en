@@ -656,7 +656,7 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
 * If the number of remaining `IN_SERVICE` instances in the scaling group is less than the minimum capacity, this API will return an error.
 * However, if the scaling group is in `DISABLED` status, the removal will not verify the relationship between the number of `IN_SERVICE` instances and the minimum capacity.
 
-This removal will unassociate the CVM from the CLB instance that has been configured for the scaling group.
+The CVM will be associated from the CLB instance (if any).
  
      * @param req DetachInstancesRequest
      * @return DetachInstancesResponse
@@ -908,7 +908,7 @@ This removal will unassociate the CVM from the CLB instance that has been config
     }
 
     /**
-     *This API is used to remove CVM instances from a scaling group. Instances that are automatically created through AS will be terminated, while those manually added to the scaling group will be removed and retained.
+     *This API is used to delete CVM instances from a scaling group. Instances that are automatically created through AS will be terminated, while those manually added to the scaling group will be removed and retained.
 * If the number of remaining `IN_SERVICE` instances in the scaling group is less than the minimum capacity, this API will return an error.
 * However, if the scaling group is in `DISABLED` status, the removal will not verify the relationship between the number of `IN_SERVICE` instances and the minimum capacity.
 
