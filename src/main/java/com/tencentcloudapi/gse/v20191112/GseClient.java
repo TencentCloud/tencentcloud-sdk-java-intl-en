@@ -160,6 +160,26 @@ public class GseClient extends AbstractClient{
     }
 
     /**
+     *This API is used to obtain the list of CVM types in the specified region.
+     * @param req DescribeInstanceTypesRequest
+     * @return DescribeInstanceTypesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceTypesResponse DescribeInstanceTypes(DescribeInstanceTypesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceTypesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceTypesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstanceTypes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the list of player sessions.
      * @param req DescribePlayerSessionsRequest
      * @return DescribePlayerSessionsResponse
