@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SecurityGroupBound extends AbstractModel{
 
     /**
-    * Policy. Valid values: `ACCEPT`, `DROP`
+    * Execution rule. Valid values: `ACCEPT`, `DROP`
     */
     @SerializedName("Action")
     @Expose
@@ -51,16 +51,44 @@ public class SecurityGroupBound extends AbstractModel{
     private String IpProtocol;
 
     /**
-     * Get Policy. Valid values: `ACCEPT`, `DROP` 
-     * @return Action Policy. Valid values: `ACCEPT`, `DROP`
+    * 
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
+    * 
+    */
+    @SerializedName("AddressModule")
+    @Expose
+    private String AddressModule;
+
+    /**
+    * 
+    */
+    @SerializedName("ServiceModule")
+    @Expose
+    private String ServiceModule;
+
+    /**
+    * 
+    */
+    @SerializedName("Desc")
+    @Expose
+    private String Desc;
+
+    /**
+     * Get Execution rule. Valid values: `ACCEPT`, `DROP` 
+     * @return Action Execution rule. Valid values: `ACCEPT`, `DROP`
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set Policy. Valid values: `ACCEPT`, `DROP`
-     * @param Action Policy. Valid values: `ACCEPT`, `DROP`
+     * Set Execution rule. Valid values: `ACCEPT`, `DROP`
+     * @param Action Execution rule. Valid values: `ACCEPT`, `DROP`
      */
     public void setAction(String Action) {
         this.Action = Action;
@@ -114,6 +142,70 @@ public class SecurityGroupBound extends AbstractModel{
         this.IpProtocol = IpProtocol;
     }
 
+    /**
+     * Get  
+     * @return Id 
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set 
+     * @param Id 
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
+
+    /**
+     * Get  
+     * @return AddressModule 
+     */
+    public String getAddressModule() {
+        return this.AddressModule;
+    }
+
+    /**
+     * Set 
+     * @param AddressModule 
+     */
+    public void setAddressModule(String AddressModule) {
+        this.AddressModule = AddressModule;
+    }
+
+    /**
+     * Get  
+     * @return ServiceModule 
+     */
+    public String getServiceModule() {
+        return this.ServiceModule;
+    }
+
+    /**
+     * Set 
+     * @param ServiceModule 
+     */
+    public void setServiceModule(String ServiceModule) {
+        this.ServiceModule = ServiceModule;
+    }
+
+    /**
+     * Get  
+     * @return Desc 
+     */
+    public String getDesc() {
+        return this.Desc;
+    }
+
+    /**
+     * Set 
+     * @param Desc 
+     */
+    public void setDesc(String Desc) {
+        this.Desc = Desc;
+    }
+
     public SecurityGroupBound() {
     }
 
@@ -134,6 +226,18 @@ public class SecurityGroupBound extends AbstractModel{
         if (source.IpProtocol != null) {
             this.IpProtocol = new String(source.IpProtocol);
         }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.AddressModule != null) {
+            this.AddressModule = new String(source.AddressModule);
+        }
+        if (source.ServiceModule != null) {
+            this.ServiceModule = new String(source.ServiceModule);
+        }
+        if (source.Desc != null) {
+            this.Desc = new String(source.Desc);
+        }
     }
 
 
@@ -145,6 +249,10 @@ public class SecurityGroupBound extends AbstractModel{
         this.setParamSimple(map, prefix + "CidrIp", this.CidrIp);
         this.setParamSimple(map, prefix + "PortRange", this.PortRange);
         this.setParamSimple(map, prefix + "IpProtocol", this.IpProtocol);
+        this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "AddressModule", this.AddressModule);
+        this.setParamSimple(map, prefix + "ServiceModule", this.ServiceModule);
+        this.setParamSimple(map, prefix + "Desc", this.Desc);
 
     }
 }

@@ -52,7 +52,7 @@ Note: `null` may be returned for this field, indicating that no valid values can
     private String RegionCode;
 
     /**
-    * Region code (V3)
+    * Region code (v3)
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
     */
     @SerializedName("RegionCodeV3")
@@ -68,7 +68,7 @@ Note: `null` may be returned for this field, indicating that no valid values can
     private String Support;
 
     /**
-    * Whether ipv6 is supported. `0` indicates no, and `1` indicates yes.
+    * Whether IPv6 is supported. `0` indicates no, and `1` indicates yes.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
     */
     @SerializedName("Ipv6")
@@ -76,7 +76,7 @@ Note: `null` may be returned for this field, indicating that no valid values can
     private Long Ipv6;
 
     /**
-    * Whether multi-zone clusters are supported.`0` indicates no, and `1` indicates yes.
+    * Whether cross-AZ clusters are supported.`0` indicates no, and `1` indicates yes.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
     */
     @SerializedName("MultiZone")
@@ -152,9 +152,9 @@ Note: `null` may be returned for this field, indicating that no valid values can
     }
 
     /**
-     * Get Region code (V3)
+     * Get Region code (v3)
 Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return RegionCodeV3 Region code (V3)
+     * @return RegionCodeV3 Region code (v3)
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     public String getRegionCodeV3() {
@@ -162,9 +162,9 @@ Note: `null` may be returned for this field, indicating that no valid values can
     }
 
     /**
-     * Set Region code (V3)
+     * Set Region code (v3)
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param RegionCodeV3 Region code (V3)
+     * @param RegionCodeV3 Region code (v3)
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     public void setRegionCodeV3(String RegionCodeV3) {
@@ -192,9 +192,9 @@ Note: `null` may be returned for this field, indicating that no valid values can
     }
 
     /**
-     * Get Whether ipv6 is supported. `0` indicates no, and `1` indicates yes.
+     * Get Whether IPv6 is supported. `0` indicates no, and `1` indicates yes.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return Ipv6 Whether ipv6 is supported. `0` indicates no, and `1` indicates yes.
+     * @return Ipv6 Whether IPv6 is supported. `0` indicates no, and `1` indicates yes.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     public Long getIpv6() {
@@ -202,9 +202,9 @@ Note: `null` may be returned for this field, indicating that no valid values can
     }
 
     /**
-     * Set Whether ipv6 is supported. `0` indicates no, and `1` indicates yes.
+     * Set Whether IPv6 is supported. `0` indicates no, and `1` indicates yes.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param Ipv6 Whether ipv6 is supported. `0` indicates no, and `1` indicates yes.
+     * @param Ipv6 Whether IPv6 is supported. `0` indicates no, and `1` indicates yes.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     public void setIpv6(Long Ipv6) {
@@ -212,9 +212,9 @@ Note: `null` may be returned for this field, indicating that no valid values can
     }
 
     /**
-     * Get Whether multi-zone clusters are supported.`0` indicates no, and `1` indicates yes.
+     * Get Whether cross-AZ clusters are supported.`0` indicates no, and `1` indicates yes.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return MultiZone Whether multi-zone clusters are supported.`0` indicates no, and `1` indicates yes.
+     * @return MultiZone Whether cross-AZ clusters are supported.`0` indicates no, and `1` indicates yes.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     public Long getMultiZone() {
@@ -222,9 +222,9 @@ Note: `null` may be returned for this field, indicating that no valid values can
     }
 
     /**
-     * Set Whether multi-zone clusters are supported.`0` indicates no, and `1` indicates yes.
+     * Set Whether cross-AZ clusters are supported.`0` indicates no, and `1` indicates yes.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param MultiZone Whether multi-zone clusters are supported.`0` indicates no, and `1` indicates yes.
+     * @param MultiZone Whether cross-AZ clusters are supported.`0` indicates no, and `1` indicates yes.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     public void setMultiZone(Long MultiZone) {

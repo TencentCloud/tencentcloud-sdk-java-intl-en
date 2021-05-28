@@ -30,7 +30,7 @@ public class DescribeBackupDownloadTaskRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * The name of a backup file whose download tasks will be queried
+    * The name of a backup file with download tasks to be queried
     */
     @SerializedName("BackupName")
     @Expose
@@ -102,16 +102,16 @@ public class DescribeBackupDownloadTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get The name of a backup file whose download tasks will be queried 
-     * @return BackupName The name of a backup file whose download tasks will be queried
+     * Get The name of a backup file with download tasks to be queried 
+     * @return BackupName The name of a backup file with download tasks to be queried
      */
     public String getBackupName() {
         return this.BackupName;
     }
 
     /**
-     * Set The name of a backup file whose download tasks will be queried
-     * @param BackupName The name of a backup file whose download tasks will be queried
+     * Set The name of a backup file with download tasks to be queried
+     * @param BackupName The name of a backup file with download tasks to be queried
      */
     public void setBackupName(String BackupName) {
         this.BackupName = BackupName;

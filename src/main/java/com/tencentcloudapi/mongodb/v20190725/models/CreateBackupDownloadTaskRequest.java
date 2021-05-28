@@ -37,7 +37,7 @@ public class CreateBackupDownloadTaskRequest extends AbstractModel{
     private String BackupName;
 
     /**
-    * The list of shards whose backups will be downloaded
+    * The list of shards with backups to be downloaded
     */
     @SerializedName("BackupSets")
     @Expose
@@ -76,16 +76,16 @@ public class CreateBackupDownloadTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get The list of shards whose backups will be downloaded 
-     * @return BackupSets The list of shards whose backups will be downloaded
+     * Get The list of shards with backups to be downloaded 
+     * @return BackupSets The list of shards with backups to be downloaded
      */
     public ReplicaSetInfo [] getBackupSets() {
         return this.BackupSets;
     }
 
     /**
-     * Set The list of shards whose backups will be downloaded
-     * @param BackupSets The list of shards whose backups will be downloaded
+     * Set The list of shards with backups to be downloaded
+     * @param BackupSets The list of shards with backups to be downloaded
      */
     public void setBackupSets(ReplicaSetInfo [] BackupSets) {
         this.BackupSets = BackupSets;

@@ -58,7 +58,7 @@ public class BackupDownloadTask extends AbstractModel{
     private Long Status;
 
     /**
-    * Task progress in terms of percentage
+    * Task progress in percentage
     */
     @SerializedName("Percent")
     @Expose
@@ -159,16 +159,16 @@ public class BackupDownloadTask extends AbstractModel{
     }
 
     /**
-     * Get Task progress in terms of percentage 
-     * @return Percent Task progress in terms of percentage
+     * Get Task progress in percentage 
+     * @return Percent Task progress in percentage
      */
     public Long getPercent() {
         return this.Percent;
     }
 
     /**
-     * Set Task progress in terms of percentage
-     * @param Percent Task progress in terms of percentage
+     * Set Task progress in percentage
+     * @param Percent Task progress in percentage
      */
     public void setPercent(Long Percent) {
         this.Percent = Percent;

@@ -30,21 +30,21 @@ public class ZoneInfo extends AbstractModel{
     private String ZoneId;
 
     /**
-    * Whether it is an internal App.
+    * Whether it is an internal application.
     */
     @SerializedName("IsInternalApp")
     @Expose
     private Long IsInternalApp;
 
     /**
-    * app id
+    * Application ID
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * Identifier
+    * Flag
     */
     @SerializedName("Flag")
     @Expose
@@ -65,7 +65,7 @@ public class ZoneInfo extends AbstractModel{
     private Long ZoneStatus;
 
     /**
-    * Extra identifier
+    * Extra flag
     */
     @SerializedName("Exflag")
     @Expose
@@ -95,48 +95,48 @@ public class ZoneInfo extends AbstractModel{
     }
 
     /**
-     * Get Whether it is an internal App. 
-     * @return IsInternalApp Whether it is an internal App.
+     * Get Whether it is an internal application. 
+     * @return IsInternalApp Whether it is an internal application.
      */
     public Long getIsInternalApp() {
         return this.IsInternalApp;
     }
 
     /**
-     * Set Whether it is an internal App.
-     * @param IsInternalApp Whether it is an internal App.
+     * Set Whether it is an internal application.
+     * @param IsInternalApp Whether it is an internal application.
      */
     public void setIsInternalApp(Long IsInternalApp) {
         this.IsInternalApp = IsInternalApp;
     }
 
     /**
-     * Get app id 
-     * @return AppId app id
+     * Get Application ID 
+     * @return AppId Application ID
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set app id
-     * @param AppId app id
+     * Set Application ID
+     * @param AppId Application ID
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get Identifier 
-     * @return Flag Identifier
+     * Get Flag 
+     * @return Flag Flag
      */
     public Boolean getFlag() {
         return this.Flag;
     }
 
     /**
-     * Set Identifier
-     * @param Flag Identifier
+     * Set Flag
+     * @param Flag Flag
      */
     public void setFlag(Boolean Flag) {
         this.Flag = Flag;
@@ -175,16 +175,16 @@ public class ZoneInfo extends AbstractModel{
     }
 
     /**
-     * Get Extra identifier 
-     * @return Exflag Extra identifier
+     * Get Extra flag 
+     * @return Exflag Extra flag
      */
     public String getExflag() {
         return this.Exflag;
     }
 
     /**
-     * Set Extra identifier
-     * @param Exflag Extra identifier
+     * Set Extra flag
+     * @param Exflag Extra flag
      */
     public void setExflag(String Exflag) {
         this.Exflag = Exflag;

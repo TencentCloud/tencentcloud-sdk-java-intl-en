@@ -69,7 +69,7 @@ Note: `null` may be returned for this field, indicating that no valid values can
     private Long AvailableBandWidth;
 
     /**
-    * The AZ which the cluster belongs to
+    * The AZ where the cluster resides
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
     */
     @SerializedName("ZoneId")
@@ -77,7 +77,7 @@ Note: `null` may be returned for this field, indicating that no valid values can
     private Long ZoneId;
 
     /**
-    * The AZ which the cluster nodes belong to. If the cluster is a multi-AZ cluster, this field means multiple AZs which the cluster nodes belong to.
+    * The AZ where the cluster nodes reside. If the cluster is a multi-AZ cluster, this field means multiple AZs where the cluster nodes reside.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
     */
     @SerializedName("ZoneIds")
@@ -197,9 +197,9 @@ Note: `null` may be returned for this field, indicating that no valid values can
     }
 
     /**
-     * Get The AZ which the cluster belongs to
+     * Get The AZ where the cluster resides
 Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return ZoneId The AZ which the cluster belongs to
+     * @return ZoneId The AZ where the cluster resides
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     public Long getZoneId() {
@@ -207,9 +207,9 @@ Note: `null` may be returned for this field, indicating that no valid values can
     }
 
     /**
-     * Set The AZ which the cluster belongs to
+     * Set The AZ where the cluster resides
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param ZoneId The AZ which the cluster belongs to
+     * @param ZoneId The AZ where the cluster resides
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     public void setZoneId(Long ZoneId) {
@@ -217,9 +217,9 @@ Note: `null` may be returned for this field, indicating that no valid values can
     }
 
     /**
-     * Get The AZ which the cluster nodes belong to. If the cluster is a multi-AZ cluster, this field means multiple AZs which the cluster nodes belong to.
+     * Get The AZ where the cluster nodes reside. If the cluster is a multi-AZ cluster, this field means multiple AZs where the cluster nodes reside.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return ZoneIds The AZ which the cluster nodes belong to. If the cluster is a multi-AZ cluster, this field means multiple AZs which the cluster nodes belong to.
+     * @return ZoneIds The AZ where the cluster nodes reside. If the cluster is a multi-AZ cluster, this field means multiple AZs where the cluster nodes reside.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     public Long [] getZoneIds() {
@@ -227,9 +227,9 @@ Note: `null` may be returned for this field, indicating that no valid values can
     }
 
     /**
-     * Set The AZ which the cluster nodes belong to. If the cluster is a multi-AZ cluster, this field means multiple AZs which the cluster nodes belong to.
+     * Set The AZ where the cluster nodes reside. If the cluster is a multi-AZ cluster, this field means multiple AZs where the cluster nodes reside.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param ZoneIds The AZ which the cluster nodes belong to. If the cluster is a multi-AZ cluster, this field means multiple AZs which the cluster nodes belong to.
+     * @param ZoneIds The AZ where the cluster nodes reside. If the cluster is a multi-AZ cluster, this field means multiple AZs where the cluster nodes reside.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     public void setZoneIds(Long [] ZoneIds) {

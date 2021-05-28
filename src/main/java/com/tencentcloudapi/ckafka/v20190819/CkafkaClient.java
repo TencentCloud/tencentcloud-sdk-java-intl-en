@@ -259,7 +259,7 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *This API is used to view the availability zone (AZ) list of Ckafka.
+     *This API is used to view the AZ list of Ckafka.
      * @param req DescribeCkafkaZoneRequest
      * @return DescribeCkafkaZoneResponse
      * @throws TencentCloudSDKException
@@ -419,7 +419,7 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *This API is used to enumerate regions, only including Guangzhou.
+     *This API is used to enumerate regions, and can be called only in Guangzhou.
      * @param req DescribeRegionRequest
      * @return DescribeRegionResponse
      * @throws TencentCloudSDKException

@@ -30,7 +30,7 @@ public class DeleteServiceRequest extends AbstractModel{
     private String ServiceId;
 
     /**
-    * A parameter which is specified to skip the deletion precondition verification (only supported for services on dedicated instances).
+    * A parameter used to set to skip the deletion precondition verification (only supported for services on dedicated instances).
     */
     @SerializedName("SkipVerification")
     @Expose
@@ -53,16 +53,16 @@ public class DeleteServiceRequest extends AbstractModel{
     }
 
     /**
-     * Get A parameter which is specified to skip the deletion precondition verification (only supported for services on dedicated instances). 
-     * @return SkipVerification A parameter which is specified to skip the deletion precondition verification (only supported for services on dedicated instances).
+     * Get A parameter used to set to skip the deletion precondition verification (only supported for services on dedicated instances). 
+     * @return SkipVerification A parameter used to set to skip the deletion precondition verification (only supported for services on dedicated instances).
      */
     public Long getSkipVerification() {
         return this.SkipVerification;
     }
 
     /**
-     * Set A parameter which is specified to skip the deletion precondition verification (only supported for services on dedicated instances).
-     * @param SkipVerification A parameter which is specified to skip the deletion precondition verification (only supported for services on dedicated instances).
+     * Set A parameter used to set to skip the deletion precondition verification (only supported for services on dedicated instances).
+     * @param SkipVerification A parameter used to set to skip the deletion precondition verification (only supported for services on dedicated instances).
      */
     public void setSkipVerification(Long SkipVerification) {
         this.SkipVerification = SkipVerification;

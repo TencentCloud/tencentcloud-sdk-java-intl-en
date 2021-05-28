@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeCkafkaZoneResponse extends AbstractModel{
 
     /**
-    * The entity of query result complex objects
+    * Returned results for the query
     */
     @SerializedName("Result")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeCkafkaZoneResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get The entity of query result complex objects 
-     * @return Result The entity of query result complex objects
+     * Get Returned results for the query 
+     * @return Result Returned results for the query
      */
     public ZoneResponse getResult() {
         return this.Result;
     }
 
     /**
-     * Set The entity of query result complex objects
-     * @param Result The entity of query result complex objects
+     * Set Returned results for the query
+     * @param Result Returned results for the query
      */
     public void setResult(ZoneResponse Result) {
         this.Result = Result;
