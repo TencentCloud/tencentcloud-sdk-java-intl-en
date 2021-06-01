@@ -156,6 +156,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Boolean Toa;
 
     /**
+    * Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DeregisterTargetRst")
+    @Expose
+    private Boolean DeregisterTargetRst;
+
+    /**
      * Get CLB listener ID 
      * @return ListenerId CLB listener ID
      */
@@ -483,6 +491,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.Toa = Toa;
     }
 
+    /**
+     * Get Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return DeregisterTargetRst Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Boolean getDeregisterTargetRst() {
+        return this.DeregisterTargetRst;
+    }
+
+    /**
+     * Set Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param DeregisterTargetRst Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setDeregisterTargetRst(Boolean DeregisterTargetRst) {
+        this.DeregisterTargetRst = DeregisterTargetRst;
+    }
+
     public Listener() {
     }
 
@@ -545,6 +573,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.Toa != null) {
             this.Toa = new Boolean(source.Toa);
         }
+        if (source.DeregisterTargetRst != null) {
+            this.DeregisterTargetRst = new Boolean(source.DeregisterTargetRst);
+        }
     }
 
 
@@ -569,6 +600,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "SessionType", this.SessionType);
         this.setParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
         this.setParamSimple(map, prefix + "Toa", this.Toa);
+        this.setParamSimple(map, prefix + "DeregisterTargetRst", this.DeregisterTargetRst);
 
     }
 }
