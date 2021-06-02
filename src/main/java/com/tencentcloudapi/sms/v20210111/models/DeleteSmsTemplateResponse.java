@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SmsPackagesStatisticsResponse extends AbstractModel{
+public class DeleteSmsTemplateResponse extends AbstractModel{
 
     /**
-    * Delivery statistics response packet body.
+    * Template deletion response
     */
-    @SerializedName("SmsPackagesStatisticsSet")
+    @SerializedName("DeleteTemplateStatus")
     @Expose
-    private SmsPackagesStatistics [] SmsPackagesStatisticsSet;
+    private DeleteTemplateStatus DeleteTemplateStatus;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +37,19 @@ public class SmsPackagesStatisticsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Delivery statistics response packet body. 
-     * @return SmsPackagesStatisticsSet Delivery statistics response packet body.
+     * Get Template deletion response 
+     * @return DeleteTemplateStatus Template deletion response
      */
-    public SmsPackagesStatistics [] getSmsPackagesStatisticsSet() {
-        return this.SmsPackagesStatisticsSet;
+    public DeleteTemplateStatus getDeleteTemplateStatus() {
+        return this.DeleteTemplateStatus;
     }
 
     /**
-     * Set Delivery statistics response packet body.
-     * @param SmsPackagesStatisticsSet Delivery statistics response packet body.
+     * Set Template deletion response
+     * @param DeleteTemplateStatus Template deletion response
      */
-    public void setSmsPackagesStatisticsSet(SmsPackagesStatistics [] SmsPackagesStatisticsSet) {
-        this.SmsPackagesStatisticsSet = SmsPackagesStatisticsSet;
+    public void setDeleteTemplateStatus(DeleteTemplateStatus DeleteTemplateStatus) {
+        this.DeleteTemplateStatus = DeleteTemplateStatus;
     }
 
     /**
@@ -68,19 +68,16 @@ public class SmsPackagesStatisticsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public SmsPackagesStatisticsResponse() {
+    public DeleteSmsTemplateResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public SmsPackagesStatisticsResponse(SmsPackagesStatisticsResponse source) {
-        if (source.SmsPackagesStatisticsSet != null) {
-            this.SmsPackagesStatisticsSet = new SmsPackagesStatistics[source.SmsPackagesStatisticsSet.length];
-            for (int i = 0; i < source.SmsPackagesStatisticsSet.length; i++) {
-                this.SmsPackagesStatisticsSet[i] = new SmsPackagesStatistics(source.SmsPackagesStatisticsSet[i]);
-            }
+    public DeleteSmsTemplateResponse(DeleteSmsTemplateResponse source) {
+        if (source.DeleteTemplateStatus != null) {
+            this.DeleteTemplateStatus = new DeleteTemplateStatus(source.DeleteTemplateStatus);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -92,7 +89,7 @@ public class SmsPackagesStatisticsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "SmsPackagesStatisticsSet.", this.SmsPackagesStatisticsSet);
+        this.setParamObj(map, prefix + "DeleteTemplateStatus.", this.DeleteTemplateStatus);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
