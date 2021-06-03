@@ -99,7 +99,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create one or more TencentDB for PostgreSQL instances.
+     *This API is used to create (but not initialize) one or more TencentDB for PostgreSQL instances.
      * @param req CreateDBInstancesRequest
      * @return CreateDBInstancesResponse
      * @throws TencentCloudSDKException
@@ -111,6 +111,26 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateDBInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateDBInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create and initialize one or more TencentDB for PostgreSQL instances.
+     * @param req CreateInstancesRequest
+     * @return CreateInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInstancesResponse CreateInstances(CreateInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateInstances");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

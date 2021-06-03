@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDBInstancesRequest extends AbstractModel{
+public class CreateInstancesRequest extends AbstractModel{
 
     /**
     * Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
@@ -37,98 +37,119 @@ public class CreateDBInstancesRequest extends AbstractModel{
     private String DBVersion;
 
     /**
-    * Instance capacity size in GB.
+    * Instance storage capacity in GB
     */
     @SerializedName("Storage")
     @Expose
     private Long Storage;
 
     /**
-    * Number of instances purchased at a time. Value range: 1-100.
+    * The number of instances purchased at a time. Value range: 1-10.
     */
     @SerializedName("InstanceCount")
     @Expose
     private Long InstanceCount;
 
     /**
-    * Length of purchase in months. Currently, only 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36 are supported.
+    * Valid period in months of purchased instances. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`. This parameter is set to `1` when the pay-as-you-go billing mode is used.
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * AZ ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
+    * Availability zone ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * Project ID.
+    * Instance character set. Valid values: `UTF8`, `LATIN1`.
+    */
+    @SerializedName("Charset")
+    @Expose
+    private String Charset;
+
+    /**
+    * Instance root account name
+    */
+    @SerializedName("AdminName")
+    @Expose
+    private String AdminName;
+
+    /**
+    * Instance root account password
+    */
+    @SerializedName("AdminPassword")
+    @Expose
+    private String AdminPassword;
+
+    /**
+    * Project ID
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * Instance billing type.
+    * Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
     */
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
 
     /**
-    * Whether to automatically use vouchers. 1: yes, 0: no. Default value: no.
+    * Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
     */
     @SerializedName("AutoVoucher")
     @Expose
     private Long AutoVoucher;
 
     /**
-    * Voucher ID list (only one voucher can be specified currently).
+    * Voucher ID list. Currently, you can specify only one voucher.
     */
     @SerializedName("VoucherIds")
     @Expose
     private String [] VoucherIds;
 
     /**
-    * VPC ID.
+    * VPC ID
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * VPC subnet ID.
+    * ID of a subnet in the VPC specified by `VpcId`
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * Renewal flag. 0: normal renewal (default), 1: auto-renewal.
+    * Renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal). Default value: `0`.
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * Activity ID
+    * Campaign ID
     */
     @SerializedName("ActivityId")
     @Expose
     private Long ActivityId;
 
     /**
-    * Instance name (which will be supported in the future)
+    * Instance name
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Whether to support IPv6 address access. Valid values: 1 (yes), 0 (no)
+    * Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no).
     */
     @SerializedName("NeedSupportIpv6")
     @Expose
@@ -142,7 +163,7 @@ public class CreateDBInstancesRequest extends AbstractModel{
     private Tag [] TagList;
 
     /**
-    * Security group ID
+    * Security group IDs
     */
     @SerializedName("SecurityGroupIds")
     @Expose
@@ -181,224 +202,272 @@ public class CreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Instance capacity size in GB. 
-     * @return Storage Instance capacity size in GB.
+     * Get Instance storage capacity in GB 
+     * @return Storage Instance storage capacity in GB
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set Instance capacity size in GB.
-     * @param Storage Instance capacity size in GB.
+     * Set Instance storage capacity in GB
+     * @param Storage Instance storage capacity in GB
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get Number of instances purchased at a time. Value range: 1-100. 
-     * @return InstanceCount Number of instances purchased at a time. Value range: 1-100.
+     * Get The number of instances purchased at a time. Value range: 1-10. 
+     * @return InstanceCount The number of instances purchased at a time. Value range: 1-10.
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
     /**
-     * Set Number of instances purchased at a time. Value range: 1-100.
-     * @param InstanceCount Number of instances purchased at a time. Value range: 1-100.
+     * Set The number of instances purchased at a time. Value range: 1-10.
+     * @param InstanceCount The number of instances purchased at a time. Value range: 1-10.
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
     }
 
     /**
-     * Get Length of purchase in months. Currently, only 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36 are supported. 
-     * @return Period Length of purchase in months. Currently, only 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36 are supported.
+     * Get Valid period in months of purchased instances. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`. This parameter is set to `1` when the pay-as-you-go billing mode is used. 
+     * @return Period Valid period in months of purchased instances. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`. This parameter is set to `1` when the pay-as-you-go billing mode is used.
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set Length of purchase in months. Currently, only 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36 are supported.
-     * @param Period Length of purchase in months. Currently, only 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36 are supported.
+     * Set Valid period in months of purchased instances. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`. This parameter is set to `1` when the pay-as-you-go billing mode is used.
+     * @param Period Valid period in months of purchased instances. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`. This parameter is set to `1` when the pay-as-you-go billing mode is used.
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get AZ ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API. 
-     * @return Zone AZ ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
+     * Get Availability zone ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API. 
+     * @return Zone Availability zone ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set AZ ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
-     * @param Zone AZ ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
+     * Set Availability zone ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
+     * @param Zone Availability zone ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get Project ID. 
-     * @return ProjectId Project ID.
+     * Get Instance character set. Valid values: `UTF8`, `LATIN1`. 
+     * @return Charset Instance character set. Valid values: `UTF8`, `LATIN1`.
+     */
+    public String getCharset() {
+        return this.Charset;
+    }
+
+    /**
+     * Set Instance character set. Valid values: `UTF8`, `LATIN1`.
+     * @param Charset Instance character set. Valid values: `UTF8`, `LATIN1`.
+     */
+    public void setCharset(String Charset) {
+        this.Charset = Charset;
+    }
+
+    /**
+     * Get Instance root account name 
+     * @return AdminName Instance root account name
+     */
+    public String getAdminName() {
+        return this.AdminName;
+    }
+
+    /**
+     * Set Instance root account name
+     * @param AdminName Instance root account name
+     */
+    public void setAdminName(String AdminName) {
+        this.AdminName = AdminName;
+    }
+
+    /**
+     * Get Instance root account password 
+     * @return AdminPassword Instance root account password
+     */
+    public String getAdminPassword() {
+        return this.AdminPassword;
+    }
+
+    /**
+     * Set Instance root account password
+     * @param AdminPassword Instance root account password
+     */
+    public void setAdminPassword(String AdminPassword) {
+        this.AdminPassword = AdminPassword;
+    }
+
+    /**
+     * Get Project ID 
+     * @return ProjectId Project ID
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID.
-     * @param ProjectId Project ID.
+     * Set Project ID
+     * @param ProjectId Project ID
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get Instance billing type. 
-     * @return InstanceChargeType Instance billing type.
+     * Get Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go). 
+     * @return InstanceChargeType Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set Instance billing type.
-     * @param InstanceChargeType Instance billing type.
+     * Set Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
+     * @param InstanceChargeType Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
     }
 
     /**
-     * Get Whether to automatically use vouchers. 1: yes, 0: no. Default value: no. 
-     * @return AutoVoucher Whether to automatically use vouchers. 1: yes, 0: no. Default value: no.
+     * Get Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`. 
+     * @return AutoVoucher Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
      */
     public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set Whether to automatically use vouchers. 1: yes, 0: no. Default value: no.
-     * @param AutoVoucher Whether to automatically use vouchers. 1: yes, 0: no. Default value: no.
+     * Set Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
+     * @param AutoVoucher Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
     }
 
     /**
-     * Get Voucher ID list (only one voucher can be specified currently). 
-     * @return VoucherIds Voucher ID list (only one voucher can be specified currently).
+     * Get Voucher ID list. Currently, you can specify only one voucher. 
+     * @return VoucherIds Voucher ID list. Currently, you can specify only one voucher.
      */
     public String [] getVoucherIds() {
         return this.VoucherIds;
     }
 
     /**
-     * Set Voucher ID list (only one voucher can be specified currently).
-     * @param VoucherIds Voucher ID list (only one voucher can be specified currently).
+     * Set Voucher ID list. Currently, you can specify only one voucher.
+     * @param VoucherIds Voucher ID list. Currently, you can specify only one voucher.
      */
     public void setVoucherIds(String [] VoucherIds) {
         this.VoucherIds = VoucherIds;
     }
 
     /**
-     * Get VPC ID. 
-     * @return VpcId VPC ID.
+     * Get VPC ID 
+     * @return VpcId VPC ID
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID.
-     * @param VpcId VPC ID.
+     * Set VPC ID
+     * @param VpcId VPC ID
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get VPC subnet ID. 
-     * @return SubnetId VPC subnet ID.
+     * Get ID of a subnet in the VPC specified by `VpcId` 
+     * @return SubnetId ID of a subnet in the VPC specified by `VpcId`
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set VPC subnet ID.
-     * @param SubnetId VPC subnet ID.
+     * Set ID of a subnet in the VPC specified by `VpcId`
+     * @param SubnetId ID of a subnet in the VPC specified by `VpcId`
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get Renewal flag. 0: normal renewal (default), 1: auto-renewal. 
-     * @return AutoRenewFlag Renewal flag. 0: normal renewal (default), 1: auto-renewal.
+     * Get Renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal). Default value: `0`. 
+     * @return AutoRenewFlag Renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal). Default value: `0`.
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set Renewal flag. 0: normal renewal (default), 1: auto-renewal.
-     * @param AutoRenewFlag Renewal flag. 0: normal renewal (default), 1: auto-renewal.
+     * Set Renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal). Default value: `0`.
+     * @param AutoRenewFlag Renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal). Default value: `0`.
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get Activity ID 
-     * @return ActivityId Activity ID
+     * Get Campaign ID 
+     * @return ActivityId Campaign ID
      */
     public Long getActivityId() {
         return this.ActivityId;
     }
 
     /**
-     * Set Activity ID
-     * @param ActivityId Activity ID
+     * Set Campaign ID
+     * @param ActivityId Campaign ID
      */
     public void setActivityId(Long ActivityId) {
         this.ActivityId = ActivityId;
     }
 
     /**
-     * Get Instance name (which will be supported in the future) 
-     * @return Name Instance name (which will be supported in the future)
+     * Get Instance name 
+     * @return Name Instance name
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Instance name (which will be supported in the future)
-     * @param Name Instance name (which will be supported in the future)
+     * Set Instance name
+     * @param Name Instance name
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Whether to support IPv6 address access. Valid values: 1 (yes), 0 (no) 
-     * @return NeedSupportIpv6 Whether to support IPv6 address access. Valid values: 1 (yes), 0 (no)
+     * Get Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no). 
+     * @return NeedSupportIpv6 Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no).
      */
     public Long getNeedSupportIpv6() {
         return this.NeedSupportIpv6;
     }
 
     /**
-     * Set Whether to support IPv6 address access. Valid values: 1 (yes), 0 (no)
-     * @param NeedSupportIpv6 Whether to support IPv6 address access. Valid values: 1 (yes), 0 (no)
+     * Set Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no).
+     * @param NeedSupportIpv6 Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no).
      */
     public void setNeedSupportIpv6(Long NeedSupportIpv6) {
         this.NeedSupportIpv6 = NeedSupportIpv6;
@@ -421,29 +490,29 @@ public class CreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Security group ID 
-     * @return SecurityGroupIds Security group ID
+     * Get Security group IDs 
+     * @return SecurityGroupIds Security group IDs
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set Security group ID
-     * @param SecurityGroupIds Security group ID
+     * Set Security group IDs
+     * @param SecurityGroupIds Security group IDs
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
-    public CreateDBInstancesRequest() {
+    public CreateInstancesRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateDBInstancesRequest(CreateDBInstancesRequest source) {
+    public CreateInstancesRequest(CreateInstancesRequest source) {
         if (source.SpecCode != null) {
             this.SpecCode = new String(source.SpecCode);
         }
@@ -461,6 +530,15 @@ public class CreateDBInstancesRequest extends AbstractModel{
         }
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
+        }
+        if (source.Charset != null) {
+            this.Charset = new String(source.Charset);
+        }
+        if (source.AdminName != null) {
+            this.AdminName = new String(source.AdminName);
+        }
+        if (source.AdminPassword != null) {
+            this.AdminPassword = new String(source.AdminPassword);
         }
         if (source.ProjectId != null) {
             this.ProjectId = new Long(source.ProjectId);
@@ -520,6 +598,9 @@ public class CreateDBInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "Charset", this.Charset);
+        this.setParamSimple(map, prefix + "AdminName", this.AdminName);
+        this.setParamSimple(map, prefix + "AdminPassword", this.AdminPassword);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);

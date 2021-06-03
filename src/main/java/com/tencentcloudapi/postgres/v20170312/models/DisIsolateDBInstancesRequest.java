@@ -37,7 +37,7 @@ public class DisIsolateDBInstancesRequest extends AbstractModel{
     private Long Period;
 
     /**
-    * Whether to use vouchers
+    * Whether to use vouchers. Valid values: `true` (yes), `false` (no). Default value: `false`.
     */
     @SerializedName("AutoVoucher")
     @Expose
@@ -83,16 +83,16 @@ public class DisIsolateDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to use vouchers 
-     * @return AutoVoucher Whether to use vouchers
+     * Get Whether to use vouchers. Valid values: `true` (yes), `false` (no). Default value: `false`. 
+     * @return AutoVoucher Whether to use vouchers. Valid values: `true` (yes), `false` (no). Default value: `false`.
      */
     public Boolean getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set Whether to use vouchers
-     * @param AutoVoucher Whether to use vouchers
+     * Set Whether to use vouchers. Valid values: `true` (yes), `false` (no). Default value: `false`.
+     * @param AutoVoucher Whether to use vouchers. Valid values: `true` (yes), `false` (no). Default value: `false`.
      */
     public void setAutoVoucher(Boolean AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
