@@ -252,7 +252,7 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 
     /**
     * Number of dedicated tunnels with disabled VLAN in the connection
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid value can be found.
     */
     @SerializedName("VlanZeroDirectConnectTunnelCount")
     @Expose
@@ -840,9 +840,9 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 
     /**
      * Get Number of dedicated tunnels with disabled VLAN in the connection
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: this field may return `null`, indicating that no valid value can be found. 
      * @return VlanZeroDirectConnectTunnelCount Number of dedicated tunnels with disabled VLAN in the connection
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid value can be found.
      */
     public Long getVlanZeroDirectConnectTunnelCount() {
         return this.VlanZeroDirectConnectTunnelCount;
@@ -850,9 +850,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Number of dedicated tunnels with disabled VLAN in the connection
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid value can be found.
      * @param VlanZeroDirectConnectTunnelCount Number of dedicated tunnels with disabled VLAN in the connection
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid value can be found.
      */
     public void setVlanZeroDirectConnectTunnelCount(Long VlanZeroDirectConnectTunnelCount) {
         this.VlanZeroDirectConnectTunnelCount = VlanZeroDirectConnectTunnelCount;

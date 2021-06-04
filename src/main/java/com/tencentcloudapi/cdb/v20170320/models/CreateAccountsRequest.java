@@ -51,6 +51,13 @@ public class CreateAccountsRequest extends AbstractModel{
     private String Description;
 
     /**
+    * The maximum number of instance connections supported by the new account
+    */
+    @SerializedName("MaxUserConnections")
+    @Expose
+    private Long MaxUserConnections;
+
+    /**
      * Get Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. 
      * @return InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      */
@@ -114,6 +121,22 @@ public class CreateAccountsRequest extends AbstractModel{
         this.Description = Description;
     }
 
+    /**
+     * Get The maximum number of instance connections supported by the new account 
+     * @return MaxUserConnections The maximum number of instance connections supported by the new account
+     */
+    public Long getMaxUserConnections() {
+        return this.MaxUserConnections;
+    }
+
+    /**
+     * Set The maximum number of instance connections supported by the new account
+     * @param MaxUserConnections The maximum number of instance connections supported by the new account
+     */
+    public void setMaxUserConnections(Long MaxUserConnections) {
+        this.MaxUserConnections = MaxUserConnections;
+    }
+
     public CreateAccountsRequest() {
     }
 
@@ -137,6 +160,9 @@ public class CreateAccountsRequest extends AbstractModel{
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.MaxUserConnections != null) {
+            this.MaxUserConnections = new Long(source.MaxUserConnections);
+        }
     }
 
 
@@ -148,6 +174,7 @@ public class CreateAccountsRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Accounts.", this.Accounts);
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
 
     }
 }

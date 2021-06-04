@@ -51,21 +51,21 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel{
     private String Order;
 
     /**
-    * Start time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the timestamp of a day earlier.
+    * Start time, which is the timestamp one day ago by default and the time when the alarm `FirstOccurTime` first occurs. An alarm record can be searched only if its `FirstOccurTime` is later than the `StartTime`.
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * End time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the current timestamp.
+    * End time, which is the current timestamp and the time when the alarm `FirstOccurTime` first occurs. An alarm record can be searched only if its `FirstOccurTime` is earlier than the `EndTime`.
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * Filter by monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring). If this parameter is left empty, all will be queried by default
+    * Filter by monitoring type. Valid value: `MT_QCE` (Tencent Cloud service monitoring). If this parameter is left empty, all types will be queried by default.
     */
     @SerializedName("MonitorTypes")
     @Expose
@@ -86,7 +86,8 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel{
     private String [] AlarmStatus;
 
     /**
-    * Filter by project ID. Valid values: -1 (no project), 0 (default project)
+    * Filter by project ID. Valid values: `-1` (no project), `0` (default project)
+You can query [Project Management](https://console.cloud.tencent.com/project) on this page.
     */
     @SerializedName("ProjectIds")
     @Expose
@@ -100,7 +101,8 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel{
     private Long [] InstanceGroupIds;
 
     /**
-    * Filter by policy type
+    * Filter by policy type. Monitoring type and policy type are first-level and second-level filters respectively and both need to be passed in. For example, `[{"MonitorType": "MT_QCE", "Namespace": "cvm_device"}]`
+This parameter can be queried with the API [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1).
     */
     @SerializedName("Namespaces")
     @Expose
@@ -128,14 +130,14 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel{
     private String Content;
 
     /**
-    * Search by recipient
+    * Search by recipient. You can get the user list with the API [ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1) in “Cloud Access Management” or query the sub-user information with the API [GetUser](https://intl.cloud.tencent.com/document/product/598/34590?from_cn_redirect=1). The `Uid` field in the returned result should be entered here.
     */
     @SerializedName("ReceiverUids")
     @Expose
     private Long [] ReceiverUids;
 
     /**
-    * Search by recipient group
+    * Search by recipient group. You can get the user group list with the API [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) in “Cloud Access Management” or query the user group list where a sub-user is in with the API [ListGroupsForUser](https://intl.cloud.tencent.com/document/product/598/34588?from_cn_redirect=1). The `GroupId` field in the returned result should be entered here.
     */
     @SerializedName("ReceiverGroups")
     @Expose
@@ -213,48 +215,48 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel{
     }
 
     /**
-     * Get Start time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the timestamp of a day earlier. 
-     * @return StartTime Start time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the timestamp of a day earlier.
+     * Get Start time, which is the timestamp one day ago by default and the time when the alarm `FirstOccurTime` first occurs. An alarm record can be searched only if its `FirstOccurTime` is later than the `StartTime`. 
+     * @return StartTime Start time, which is the timestamp one day ago by default and the time when the alarm `FirstOccurTime` first occurs. An alarm record can be searched only if its `FirstOccurTime` is later than the `StartTime`.
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the timestamp of a day earlier.
-     * @param StartTime Start time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the timestamp of a day earlier.
+     * Set Start time, which is the timestamp one day ago by default and the time when the alarm `FirstOccurTime` first occurs. An alarm record can be searched only if its `FirstOccurTime` is later than the `StartTime`.
+     * @param StartTime Start time, which is the timestamp one day ago by default and the time when the alarm `FirstOccurTime` first occurs. An alarm record can be searched only if its `FirstOccurTime` is later than the `StartTime`.
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the current timestamp. 
-     * @return EndTime End time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the current timestamp.
+     * Get End time, which is the current timestamp and the time when the alarm `FirstOccurTime` first occurs. An alarm record can be searched only if its `FirstOccurTime` is earlier than the `EndTime`. 
+     * @return EndTime End time, which is the current timestamp and the time when the alarm `FirstOccurTime` first occurs. An alarm record can be searched only if its `FirstOccurTime` is earlier than the `EndTime`.
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the current timestamp.
-     * @param EndTime End time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the current timestamp.
+     * Set End time, which is the current timestamp and the time when the alarm `FirstOccurTime` first occurs. An alarm record can be searched only if its `FirstOccurTime` is earlier than the `EndTime`.
+     * @param EndTime End time, which is the current timestamp and the time when the alarm `FirstOccurTime` first occurs. An alarm record can be searched only if its `FirstOccurTime` is earlier than the `EndTime`.
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Filter by monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring). If this parameter is left empty, all will be queried by default 
-     * @return MonitorTypes Filter by monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring). If this parameter is left empty, all will be queried by default
+     * Get Filter by monitoring type. Valid value: `MT_QCE` (Tencent Cloud service monitoring). If this parameter is left empty, all types will be queried by default. 
+     * @return MonitorTypes Filter by monitoring type. Valid value: `MT_QCE` (Tencent Cloud service monitoring). If this parameter is left empty, all types will be queried by default.
      */
     public String [] getMonitorTypes() {
         return this.MonitorTypes;
     }
 
     /**
-     * Set Filter by monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring). If this parameter is left empty, all will be queried by default
-     * @param MonitorTypes Filter by monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring). If this parameter is left empty, all will be queried by default
+     * Set Filter by monitoring type. Valid value: `MT_QCE` (Tencent Cloud service monitoring). If this parameter is left empty, all types will be queried by default.
+     * @param MonitorTypes Filter by monitoring type. Valid value: `MT_QCE` (Tencent Cloud service monitoring). If this parameter is left empty, all types will be queried by default.
      */
     public void setMonitorTypes(String [] MonitorTypes) {
         this.MonitorTypes = MonitorTypes;
@@ -293,16 +295,20 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel{
     }
 
     /**
-     * Get Filter by project ID. Valid values: -1 (no project), 0 (default project) 
-     * @return ProjectIds Filter by project ID. Valid values: -1 (no project), 0 (default project)
+     * Get Filter by project ID. Valid values: `-1` (no project), `0` (default project)
+You can query [Project Management](https://console.cloud.tencent.com/project) on this page. 
+     * @return ProjectIds Filter by project ID. Valid values: `-1` (no project), `0` (default project)
+You can query [Project Management](https://console.cloud.tencent.com/project) on this page.
      */
     public Long [] getProjectIds() {
         return this.ProjectIds;
     }
 
     /**
-     * Set Filter by project ID. Valid values: -1 (no project), 0 (default project)
-     * @param ProjectIds Filter by project ID. Valid values: -1 (no project), 0 (default project)
+     * Set Filter by project ID. Valid values: `-1` (no project), `0` (default project)
+You can query [Project Management](https://console.cloud.tencent.com/project) on this page.
+     * @param ProjectIds Filter by project ID. Valid values: `-1` (no project), `0` (default project)
+You can query [Project Management](https://console.cloud.tencent.com/project) on this page.
      */
     public void setProjectIds(Long [] ProjectIds) {
         this.ProjectIds = ProjectIds;
@@ -325,16 +331,20 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel{
     }
 
     /**
-     * Get Filter by policy type 
-     * @return Namespaces Filter by policy type
+     * Get Filter by policy type. Monitoring type and policy type are first-level and second-level filters respectively and both need to be passed in. For example, `[{"MonitorType": "MT_QCE", "Namespace": "cvm_device"}]`
+This parameter can be queried with the API [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1). 
+     * @return Namespaces Filter by policy type. Monitoring type and policy type are first-level and second-level filters respectively and both need to be passed in. For example, `[{"MonitorType": "MT_QCE", "Namespace": "cvm_device"}]`
+This parameter can be queried with the API [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1).
      */
     public MonitorTypeNamespace [] getNamespaces() {
         return this.Namespaces;
     }
 
     /**
-     * Set Filter by policy type
-     * @param Namespaces Filter by policy type
+     * Set Filter by policy type. Monitoring type and policy type are first-level and second-level filters respectively and both need to be passed in. For example, `[{"MonitorType": "MT_QCE", "Namespace": "cvm_device"}]`
+This parameter can be queried with the API [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1).
+     * @param Namespaces Filter by policy type. Monitoring type and policy type are first-level and second-level filters respectively and both need to be passed in. For example, `[{"MonitorType": "MT_QCE", "Namespace": "cvm_device"}]`
+This parameter can be queried with the API [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1).
      */
     public void setNamespaces(MonitorTypeNamespace [] Namespaces) {
         this.Namespaces = Namespaces;
@@ -389,32 +399,32 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel{
     }
 
     /**
-     * Get Search by recipient 
-     * @return ReceiverUids Search by recipient
+     * Get Search by recipient. You can get the user list with the API [ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1) in “Cloud Access Management” or query the sub-user information with the API [GetUser](https://intl.cloud.tencent.com/document/product/598/34590?from_cn_redirect=1). The `Uid` field in the returned result should be entered here. 
+     * @return ReceiverUids Search by recipient. You can get the user list with the API [ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1) in “Cloud Access Management” or query the sub-user information with the API [GetUser](https://intl.cloud.tencent.com/document/product/598/34590?from_cn_redirect=1). The `Uid` field in the returned result should be entered here.
      */
     public Long [] getReceiverUids() {
         return this.ReceiverUids;
     }
 
     /**
-     * Set Search by recipient
-     * @param ReceiverUids Search by recipient
+     * Set Search by recipient. You can get the user list with the API [ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1) in “Cloud Access Management” or query the sub-user information with the API [GetUser](https://intl.cloud.tencent.com/document/product/598/34590?from_cn_redirect=1). The `Uid` field in the returned result should be entered here.
+     * @param ReceiverUids Search by recipient. You can get the user list with the API [ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1) in “Cloud Access Management” or query the sub-user information with the API [GetUser](https://intl.cloud.tencent.com/document/product/598/34590?from_cn_redirect=1). The `Uid` field in the returned result should be entered here.
      */
     public void setReceiverUids(Long [] ReceiverUids) {
         this.ReceiverUids = ReceiverUids;
     }
 
     /**
-     * Get Search by recipient group 
-     * @return ReceiverGroups Search by recipient group
+     * Get Search by recipient group. You can get the user group list with the API [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) in “Cloud Access Management” or query the user group list where a sub-user is in with the API [ListGroupsForUser](https://intl.cloud.tencent.com/document/product/598/34588?from_cn_redirect=1). The `GroupId` field in the returned result should be entered here. 
+     * @return ReceiverGroups Search by recipient group. You can get the user group list with the API [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) in “Cloud Access Management” or query the user group list where a sub-user is in with the API [ListGroupsForUser](https://intl.cloud.tencent.com/document/product/598/34588?from_cn_redirect=1). The `GroupId` field in the returned result should be entered here.
      */
     public Long [] getReceiverGroups() {
         return this.ReceiverGroups;
     }
 
     /**
-     * Set Search by recipient group
-     * @param ReceiverGroups Search by recipient group
+     * Set Search by recipient group. You can get the user group list with the API [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) in “Cloud Access Management” or query the user group list where a sub-user is in with the API [ListGroupsForUser](https://intl.cloud.tencent.com/document/product/598/34588?from_cn_redirect=1). The `GroupId` field in the returned result should be entered here.
+     * @param ReceiverGroups Search by recipient group. You can get the user group list with the API [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) in “Cloud Access Management” or query the user group list where a sub-user is in with the API [ListGroupsForUser](https://intl.cloud.tencent.com/document/product/598/34588?from_cn_redirect=1). The `GroupId` field in the returned result should be entered here.
      */
     public void setReceiverGroups(Long [] ReceiverGroups) {
         this.ReceiverGroups = ReceiverGroups;

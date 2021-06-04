@@ -69,6 +69,13 @@ Note: if this parameter is not passed in, it means to clear the permission.
     private ColumnPrivilege [] ColumnPrivileges;
 
     /**
+    * If this parameter is specified, permissions are modified in batches. Valid values: `grant`, `revoke`.
+    */
+    @SerializedName("ModifyAction")
+    @Expose
+    private String ModifyAction;
+
+    /**
      * Get Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. 
      * @return InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      */
@@ -180,6 +187,22 @@ Note: if this parameter is not passed in, it means to clear the permission.
         this.ColumnPrivileges = ColumnPrivileges;
     }
 
+    /**
+     * Get If this parameter is specified, permissions are modified in batches. Valid values: `grant`, `revoke`. 
+     * @return ModifyAction If this parameter is specified, permissions are modified in batches. Valid values: `grant`, `revoke`.
+     */
+    public String getModifyAction() {
+        return this.ModifyAction;
+    }
+
+    /**
+     * Set If this parameter is specified, permissions are modified in batches. Valid values: `grant`, `revoke`.
+     * @param ModifyAction If this parameter is specified, permissions are modified in batches. Valid values: `grant`, `revoke`.
+     */
+    public void setModifyAction(String ModifyAction) {
+        this.ModifyAction = ModifyAction;
+    }
+
     public ModifyAccountPrivilegesRequest() {
     }
 
@@ -221,6 +244,9 @@ Note: if this parameter is not passed in, it means to clear the permission.
                 this.ColumnPrivileges[i] = new ColumnPrivilege(source.ColumnPrivileges[i]);
             }
         }
+        if (source.ModifyAction != null) {
+            this.ModifyAction = new String(source.ModifyAction);
+        }
     }
 
 
@@ -234,6 +260,7 @@ Note: if this parameter is not passed in, it means to clear the permission.
         this.setParamArrayObj(map, prefix + "DatabasePrivileges.", this.DatabasePrivileges);
         this.setParamArrayObj(map, prefix + "TablePrivileges.", this.TablePrivileges);
         this.setParamArrayObj(map, prefix + "ColumnPrivileges.", this.ColumnPrivileges);
+        this.setParamSimple(map, prefix + "ModifyAction", this.ModifyAction);
 
     }
 }

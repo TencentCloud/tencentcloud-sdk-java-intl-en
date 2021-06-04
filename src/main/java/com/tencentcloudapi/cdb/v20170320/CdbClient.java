@@ -119,7 +119,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *This API (CreateAccounts) is used to create TencentDB accounts. The new account names, domain names, and passwords need to be specified, and account remarks can also be added.
+     *This API is used to create one or more TencentDB instance accounts. The account names, host addresses, and passwords are required, and account remarks and the maximum connections are optional.
      * @param req CreateAccountsRequest
      * @return CreateAccountsResponse
      * @throws TencentCloudSDKException
@@ -1365,6 +1365,26 @@ The new API (CreateBackup) can specify the table to be backed up when a logical 
                 Type type = new TypeToken<JsonResponseModel<ModifyAccountDescriptionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyAccountDescription");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the maximum connections of one or more TencentDB instance accounts.
+     * @param req ModifyAccountMaxUserConnectionsRequest
+     * @return ModifyAccountMaxUserConnectionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAccountMaxUserConnectionsResponse ModifyAccountMaxUserConnections(ModifyAccountMaxUserConnectionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAccountMaxUserConnectionsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAccountMaxUserConnectionsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAccountMaxUserConnections");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

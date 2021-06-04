@@ -58,11 +58,18 @@ public class AccountInfo extends AbstractModel{
     private String ModifyPasswordTime;
 
     /**
-    * Account creation time
+    * This parameter is no longer supported.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
+
+    /**
+    * The maximum number of instance connections supported by an account
+    */
+    @SerializedName("MaxUserConnections")
+    @Expose
+    private Long MaxUserConnections;
 
     /**
      * Get Account remarks 
@@ -145,19 +152,35 @@ public class AccountInfo extends AbstractModel{
     }
 
     /**
-     * Get Account creation time 
-     * @return CreateTime Account creation time
+     * Get This parameter is no longer supported. 
+     * @return CreateTime This parameter is no longer supported.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Account creation time
-     * @param CreateTime Account creation time
+     * Set This parameter is no longer supported.
+     * @param CreateTime This parameter is no longer supported.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get The maximum number of instance connections supported by an account 
+     * @return MaxUserConnections The maximum number of instance connections supported by an account
+     */
+    public Long getMaxUserConnections() {
+        return this.MaxUserConnections;
+    }
+
+    /**
+     * Set The maximum number of instance connections supported by an account
+     * @param MaxUserConnections The maximum number of instance connections supported by an account
+     */
+    public void setMaxUserConnections(Long MaxUserConnections) {
+        this.MaxUserConnections = MaxUserConnections;
     }
 
     public AccountInfo() {
@@ -186,6 +209,9 @@ public class AccountInfo extends AbstractModel{
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.MaxUserConnections != null) {
+            this.MaxUserConnections = new Long(source.MaxUserConnections);
+        }
     }
 
 
@@ -199,6 +225,7 @@ public class AccountInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamSimple(map, prefix + "ModifyPasswordTime", this.ModifyPasswordTime);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
 
     }
 }

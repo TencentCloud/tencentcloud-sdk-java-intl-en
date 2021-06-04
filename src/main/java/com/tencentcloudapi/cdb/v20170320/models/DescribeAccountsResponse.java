@@ -37,6 +37,13 @@ public class DescribeAccountsResponse extends AbstractModel{
     private AccountInfo [] Items;
 
     /**
+    * The maximum number of instance connections (set by the MySQL parameter `max_connections`)
+    */
+    @SerializedName("MaxUserConnections")
+    @Expose
+    private Long MaxUserConnections;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -76,6 +83,22 @@ public class DescribeAccountsResponse extends AbstractModel{
     }
 
     /**
+     * Get The maximum number of instance connections (set by the MySQL parameter `max_connections`) 
+     * @return MaxUserConnections The maximum number of instance connections (set by the MySQL parameter `max_connections`)
+     */
+    public Long getMaxUserConnections() {
+        return this.MaxUserConnections;
+    }
+
+    /**
+     * Set The maximum number of instance connections (set by the MySQL parameter `max_connections`)
+     * @param MaxUserConnections The maximum number of instance connections (set by the MySQL parameter `max_connections`)
+     */
+    public void setMaxUserConnections(Long MaxUserConnections) {
+        this.MaxUserConnections = MaxUserConnections;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -108,6 +131,9 @@ public class DescribeAccountsResponse extends AbstractModel{
                 this.Items[i] = new AccountInfo(source.Items[i]);
             }
         }
+        if (source.MaxUserConnections != null) {
+            this.MaxUserConnections = new Long(source.MaxUserConnections);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -120,6 +146,7 @@ public class DescribeAccountsResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "Items.", this.Items);
+        this.setParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

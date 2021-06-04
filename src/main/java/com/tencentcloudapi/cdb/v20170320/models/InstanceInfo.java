@@ -325,6 +325,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long InstanceNodes;
 
     /**
+    * List of tags
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TagList")
+    @Expose
+    private TagInfoItem [] TagList;
+
+    /**
      * Get Public network access status. Value range: 0 (not enabled), 1 (enabled), 2 (disabled) 
      * @return WanStatus Public network access status. Value range: 0 (not enabled), 1 (enabled), 2 (disabled)
      */
@@ -1028,6 +1036,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.InstanceNodes = InstanceNodes;
     }
 
+    /**
+     * Get List of tags
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return TagList List of tags
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public TagInfoItem [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set List of tags
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param TagList List of tags
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setTagList(TagInfoItem [] TagList) {
+        this.TagList = TagList;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1168,6 +1196,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.InstanceNodes != null) {
             this.InstanceNodes = new Long(source.InstanceNodes);
         }
+        if (source.TagList != null) {
+            this.TagList = new TagInfoItem[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new TagInfoItem(source.TagList[i]);
+            }
+        }
     }
 
 
@@ -1217,6 +1251,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "InstanceNodes", this.InstanceNodes);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
 
     }
 }

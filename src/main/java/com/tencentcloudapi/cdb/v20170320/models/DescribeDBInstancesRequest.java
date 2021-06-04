@@ -205,6 +205,13 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     private String [] DeployGroupIds;
 
     /**
+    * Whether to use the tag key as a filter condition
+    */
+    @SerializedName("TagKeysForSearch")
+    @Expose
+    private String [] TagKeysForSearch;
+
+    /**
      * Get Project ID. You can use the [project list querying API](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) to query the project ID. 
      * @return ProjectId Project ID. You can use the [project list querying API](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) to query the project ID.
      */
@@ -620,6 +627,22 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.DeployGroupIds = DeployGroupIds;
     }
 
+    /**
+     * Get Whether to use the tag key as a filter condition 
+     * @return TagKeysForSearch Whether to use the tag key as a filter condition
+     */
+    public String [] getTagKeysForSearch() {
+        return this.TagKeysForSearch;
+    }
+
+    /**
+     * Set Whether to use the tag key as a filter condition
+     * @param TagKeysForSearch Whether to use the tag key as a filter condition
+     */
+    public void setTagKeysForSearch(String [] TagKeysForSearch) {
+        this.TagKeysForSearch = TagKeysForSearch;
+    }
+
     public DescribeDBInstancesRequest() {
     }
 
@@ -745,6 +768,12 @@ public class DescribeDBInstancesRequest extends AbstractModel{
                 this.DeployGroupIds[i] = new String(source.DeployGroupIds[i]);
             }
         }
+        if (source.TagKeysForSearch != null) {
+            this.TagKeysForSearch = new String[source.TagKeysForSearch.length];
+            for (int i = 0; i < source.TagKeysForSearch.length; i++) {
+                this.TagKeysForSearch[i] = new String(source.TagKeysForSearch[i]);
+            }
+        }
     }
 
 
@@ -778,6 +807,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "WithRo", this.WithRo);
         this.setParamSimple(map, prefix + "WithMaster", this.WithMaster);
         this.setParamArraySimple(map, prefix + "DeployGroupIds.", this.DeployGroupIds);
+        this.setParamArraySimple(map, prefix + "TagKeysForSearch.", this.TagKeysForSearch);
 
     }
 }
