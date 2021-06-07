@@ -51,9 +51,10 @@ public class DescribeTasksRequest extends AbstractModel{
     private TimeRange FinishTime;
 
     /**
-    * Sort field. Valid values:
-<li> CreateTime: task creation time</li>
-<li>FinishTime: task end time</li>
+    * (Not supported now)
+Sort field. Valid values:
+<li>`CreateTime`: task creation time</li>
+<li>`FinishTime`: task end time</li>
     */
     @SerializedName("Sort")
     @Expose
@@ -145,24 +146,28 @@ public class DescribeTasksRequest extends AbstractModel{
     }
 
     /**
-     * Get Sort field. Valid values:
-<li> CreateTime: task creation time</li>
-<li>FinishTime: task end time</li> 
-     * @return Sort Sort field. Valid values:
-<li> CreateTime: task creation time</li>
-<li>FinishTime: task end time</li>
+     * Get (Not supported now)
+Sort field. Valid values:
+<li>`CreateTime`: task creation time</li>
+<li>`FinishTime`: task end time</li> 
+     * @return Sort (Not supported now)
+Sort field. Valid values:
+<li>`CreateTime`: task creation time</li>
+<li>`FinishTime`: task end time</li>
      */
     public SortBy getSort() {
         return this.Sort;
     }
 
     /**
-     * Set Sort field. Valid values:
-<li> CreateTime: task creation time</li>
-<li>FinishTime: task end time</li>
-     * @param Sort Sort field. Valid values:
-<li> CreateTime: task creation time</li>
-<li>FinishTime: task end time</li>
+     * Set (Not supported now)
+Sort field. Valid values:
+<li>`CreateTime`: task creation time</li>
+<li>`FinishTime`: task end time</li>
+     * @param Sort (Not supported now)
+Sort field. Valid values:
+<li>`CreateTime`: task creation time</li>
+<li>`FinishTime`: task end time</li>
      */
     public void setSort(SortBy Sort) {
         this.Sort = Sort;

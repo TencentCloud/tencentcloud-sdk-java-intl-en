@@ -20,23 +20,29 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateBackupResponse extends AbstractModel{
+public class ModifyCensorshipResponse extends AbstractModel{
 
     /**
-    * List of backup creation task IDs
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Cluster ID
     */
-    @SerializedName("TaskIds")
+    @SerializedName("ClusterId")
     @Expose
-    private String [] TaskIds;
+    private String ClusterId;
 
     /**
-    * List of backup creation application IDs
+    * Approver UIN list
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
     */
-    @SerializedName("ApplicationIds")
+    @SerializedName("Uins")
     @Expose
-    private String [] ApplicationIds;
+    private String [] Uins;
+
+    /**
+    * Whether the operation approval feature is enabled for this cluster. Valid values: `0` (disabled), `1` (enabled)
+    */
+    @SerializedName("Censorship")
+    @Expose
+    private Long Censorship;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,43 +52,55 @@ Note: `null` may be returned for this field, indicating that no valid values can
     private String RequestId;
 
     /**
-     * Get List of backup creation task IDs
+     * Get Cluster ID 
+     * @return ClusterId Cluster ID
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set Cluster ID
+     * @param ClusterId Cluster ID
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get Approver UIN list
 Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return TaskIds List of backup creation task IDs
+     * @return Uins Approver UIN list
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
-    public String [] getTaskIds() {
-        return this.TaskIds;
+    public String [] getUins() {
+        return this.Uins;
     }
 
     /**
-     * Set List of backup creation task IDs
+     * Set Approver UIN list
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param TaskIds List of backup creation task IDs
+     * @param Uins Approver UIN list
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
-    public void setTaskIds(String [] TaskIds) {
-        this.TaskIds = TaskIds;
+    public void setUins(String [] Uins) {
+        this.Uins = Uins;
     }
 
     /**
-     * Get List of backup creation application IDs
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return ApplicationIds List of backup creation application IDs
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Whether the operation approval feature is enabled for this cluster. Valid values: `0` (disabled), `1` (enabled) 
+     * @return Censorship Whether the operation approval feature is enabled for this cluster. Valid values: `0` (disabled), `1` (enabled)
      */
-    public String [] getApplicationIds() {
-        return this.ApplicationIds;
+    public Long getCensorship() {
+        return this.Censorship;
     }
 
     /**
-     * Set List of backup creation application IDs
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param ApplicationIds List of backup creation application IDs
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Whether the operation approval feature is enabled for this cluster. Valid values: `0` (disabled), `1` (enabled)
+     * @param Censorship Whether the operation approval feature is enabled for this cluster. Valid values: `0` (disabled), `1` (enabled)
      */
-    public void setApplicationIds(String [] ApplicationIds) {
-        this.ApplicationIds = ApplicationIds;
+    public void setCensorship(Long Censorship) {
+        this.Censorship = Censorship;
     }
 
     /**
@@ -101,25 +119,25 @@ Note: `null` may be returned for this field, indicating that no valid values can
         this.RequestId = RequestId;
     }
 
-    public CreateBackupResponse() {
+    public ModifyCensorshipResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateBackupResponse(CreateBackupResponse source) {
-        if (source.TaskIds != null) {
-            this.TaskIds = new String[source.TaskIds.length];
-            for (int i = 0; i < source.TaskIds.length; i++) {
-                this.TaskIds[i] = new String(source.TaskIds[i]);
+    public ModifyCensorshipResponse(ModifyCensorshipResponse source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.Uins != null) {
+            this.Uins = new String[source.Uins.length];
+            for (int i = 0; i < source.Uins.length; i++) {
+                this.Uins[i] = new String(source.Uins[i]);
             }
         }
-        if (source.ApplicationIds != null) {
-            this.ApplicationIds = new String[source.ApplicationIds.length];
-            for (int i = 0; i < source.ApplicationIds.length; i++) {
-                this.ApplicationIds[i] = new String(source.ApplicationIds[i]);
-            }
+        if (source.Censorship != null) {
+            this.Censorship = new Long(source.Censorship);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -131,8 +149,9 @@ Note: `null` may be returned for this field, indicating that no valid values can
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "TaskIds.", this.TaskIds);
-        this.setParamArraySimple(map, prefix + "ApplicationIds.", this.ApplicationIds);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamArraySimple(map, prefix + "Uins.", this.Uins);
+        this.setParamSimple(map, prefix + "Censorship", this.Censorship);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

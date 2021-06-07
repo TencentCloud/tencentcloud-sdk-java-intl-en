@@ -1043,6 +1043,27 @@ Note: data can be queried one hour after it is generated. For example, data betw
     }
 
     /**
+     *This API is used to query referer allowlist/blocklist configuration of a live streaming domain name.
+Referer information is included in HTTP requests. After you enable referer configuration, live streams using RTMP or WebRTC for playback will not authenticate the referer and can be played back normally. To make the referer configuration effective, the HTTP-FLV or HLS protocol is recommended for playback.
+     * @param req DescribeLiveDomainRefererRequest
+     * @return DescribeLiveDomainRefererResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveDomainRefererResponse DescribeLiveDomainReferer(DescribeLiveDomainRefererRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveDomainRefererResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveDomainRefererResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLiveDomainReferer");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query domain names by domain name status and type.
      * @param req DescribeLiveDomainsRequest
      * @return DescribeLiveDomainsResponse
@@ -1842,6 +1863,27 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
                 Type type = new TypeToken<JsonResponseModel<ModifyLiveDomainCertResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyLiveDomainCert");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to configure referer allowlist/blocklist of a live streaming domain name.
+Referer information is included in HTTP requests. After you enable referer configuration, live streams using RTMP or WebRTC for playback will not authenticate the referer and can be played back normally. To make the referer configuration effective, the HTTP-FLV or HLS protocol is recommended for playback.
+     * @param req ModifyLiveDomainRefererRequest
+     * @return ModifyLiveDomainRefererResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLiveDomainRefererResponse ModifyLiveDomainReferer(ModifyLiveDomainRefererRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLiveDomainRefererResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLiveDomainRefererResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyLiveDomainReferer");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

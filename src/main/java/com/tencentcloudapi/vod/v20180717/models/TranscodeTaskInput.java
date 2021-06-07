@@ -45,6 +45,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private MosaicInput [] MosaicSet;
 
     /**
+    * List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
+    */
+    @SerializedName("HeadTailSet")
+    @Expose
+    private HeadTailTaskInput [] HeadTailSet;
+
+    /**
     * Start time offset of a transcoded video, in seconds.
 <li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
 <li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
@@ -114,6 +121,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
      */
     public void setMosaicSet(MosaicInput [] MosaicSet) {
         this.MosaicSet = MosaicSet;
+    }
+
+    /**
+     * Get List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs. 
+     * @return HeadTailSet List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
+     */
+    public HeadTailTaskInput [] getHeadTailSet() {
+        return this.HeadTailSet;
+    }
+
+    /**
+     * Set List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
+     * @param HeadTailSet List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
+     */
+    public void setHeadTailSet(HeadTailTaskInput [] HeadTailSet) {
+        this.HeadTailSet = HeadTailSet;
     }
 
     /**
@@ -195,6 +218,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 this.MosaicSet[i] = new MosaicInput(source.MosaicSet[i]);
             }
         }
+        if (source.HeadTailSet != null) {
+            this.HeadTailSet = new HeadTailTaskInput[source.HeadTailSet.length];
+            for (int i = 0; i < source.HeadTailSet.length; i++) {
+                this.HeadTailSet[i] = new HeadTailTaskInput(source.HeadTailSet[i]);
+            }
+        }
         if (source.StartTimeOffset != null) {
             this.StartTimeOffset = new Float(source.StartTimeOffset);
         }
@@ -211,6 +240,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
         this.setParamArrayObj(map, prefix + "MosaicSet.", this.MosaicSet);
+        this.setParamArrayObj(map, prefix + "HeadTailSet.", this.HeadTailSet);
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
         this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
 

@@ -186,6 +186,21 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private ProxyDetailInfo [] ProxyList;
 
     /**
+    * Whether the cluster operation approval feature is enabled. Valid values: `0` (disabled), `1` (enabled)
+    */
+    @SerializedName("Censorship")
+    @Expose
+    private Long Censorship;
+
+    /**
+    * Approver UIN list
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DbaUins")
+    @Expose
+    private String [] DbaUins;
+
+    /**
      * Get Cluster name 
      * @return ClusterName Cluster name
      */
@@ -573,6 +588,42 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.ProxyList = ProxyList;
     }
 
+    /**
+     * Get Whether the cluster operation approval feature is enabled. Valid values: `0` (disabled), `1` (enabled) 
+     * @return Censorship Whether the cluster operation approval feature is enabled. Valid values: `0` (disabled), `1` (enabled)
+     */
+    public Long getCensorship() {
+        return this.Censorship;
+    }
+
+    /**
+     * Set Whether the cluster operation approval feature is enabled. Valid values: `0` (disabled), `1` (enabled)
+     * @param Censorship Whether the cluster operation approval feature is enabled. Valid values: `0` (disabled), `1` (enabled)
+     */
+    public void setCensorship(Long Censorship) {
+        this.Censorship = Censorship;
+    }
+
+    /**
+     * Get Approver UIN list
+Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
+     * @return DbaUins Approver UIN list
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public String [] getDbaUins() {
+        return this.DbaUins;
+    }
+
+    /**
+     * Set Approver UIN list
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param DbaUins Approver UIN list
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public void setDbaUins(String [] DbaUins) {
+        this.DbaUins = DbaUins;
+    }
+
     public ClusterInfo() {
     }
 
@@ -653,6 +704,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 this.ProxyList[i] = new ProxyDetailInfo(source.ProxyList[i]);
             }
         }
+        if (source.Censorship != null) {
+            this.Censorship = new Long(source.Censorship);
+        }
+        if (source.DbaUins != null) {
+            this.DbaUins = new String[source.DbaUins.length];
+            for (int i = 0; i < source.DbaUins.length; i++) {
+                this.DbaUins[i] = new String(source.DbaUins[i]);
+            }
+        }
     }
 
 
@@ -682,6 +742,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "DiskVolume", this.DiskVolume);
         this.setParamArrayObj(map, prefix + "ServerList.", this.ServerList);
         this.setParamArrayObj(map, prefix + "ProxyList.", this.ProxyList);
+        this.setParamSimple(map, prefix + "Censorship", this.Censorship);
+        this.setParamArraySimple(map, prefix + "DbaUins.", this.DbaUins);
 
     }
 }

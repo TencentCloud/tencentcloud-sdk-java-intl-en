@@ -20,23 +20,22 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateBackupResponse extends AbstractModel{
+public class UpdateApplyResponse extends AbstractModel{
 
     /**
-    * List of backup creation task IDs
+    * List of updated applications
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
     */
-    @SerializedName("TaskIds")
+    @SerializedName("ApplyResults")
     @Expose
-    private String [] TaskIds;
+    private ApplyResult [] ApplyResults;
 
     /**
-    * List of backup creation application IDs
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    * Total number of updated applications
     */
-    @SerializedName("ApplicationIds")
+    @SerializedName("TotalCount")
     @Expose
-    private String [] ApplicationIds;
+    private Long TotalCount;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,43 +45,39 @@ Note: `null` may be returned for this field, indicating that no valid values can
     private String RequestId;
 
     /**
-     * Get List of backup creation task IDs
+     * Get List of updated applications
 Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return TaskIds List of backup creation task IDs
+     * @return ApplyResults List of updated applications
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
-    public String [] getTaskIds() {
-        return this.TaskIds;
+    public ApplyResult [] getApplyResults() {
+        return this.ApplyResults;
     }
 
     /**
-     * Set List of backup creation task IDs
+     * Set List of updated applications
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param TaskIds List of backup creation task IDs
+     * @param ApplyResults List of updated applications
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
-    public void setTaskIds(String [] TaskIds) {
-        this.TaskIds = TaskIds;
+    public void setApplyResults(ApplyResult [] ApplyResults) {
+        this.ApplyResults = ApplyResults;
     }
 
     /**
-     * Get List of backup creation application IDs
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
-     * @return ApplicationIds List of backup creation application IDs
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Get Total number of updated applications 
+     * @return TotalCount Total number of updated applications
      */
-    public String [] getApplicationIds() {
-        return this.ApplicationIds;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set List of backup creation application IDs
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param ApplicationIds List of backup creation application IDs
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * Set Total number of updated applications
+     * @param TotalCount Total number of updated applications
      */
-    public void setApplicationIds(String [] ApplicationIds) {
-        this.ApplicationIds = ApplicationIds;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -101,25 +96,22 @@ Note: `null` may be returned for this field, indicating that no valid values can
         this.RequestId = RequestId;
     }
 
-    public CreateBackupResponse() {
+    public UpdateApplyResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateBackupResponse(CreateBackupResponse source) {
-        if (source.TaskIds != null) {
-            this.TaskIds = new String[source.TaskIds.length];
-            for (int i = 0; i < source.TaskIds.length; i++) {
-                this.TaskIds[i] = new String(source.TaskIds[i]);
+    public UpdateApplyResponse(UpdateApplyResponse source) {
+        if (source.ApplyResults != null) {
+            this.ApplyResults = new ApplyResult[source.ApplyResults.length];
+            for (int i = 0; i < source.ApplyResults.length; i++) {
+                this.ApplyResults[i] = new ApplyResult(source.ApplyResults[i]);
             }
         }
-        if (source.ApplicationIds != null) {
-            this.ApplicationIds = new String[source.ApplicationIds.length];
-            for (int i = 0; i < source.ApplicationIds.length; i++) {
-                this.ApplicationIds[i] = new String(source.ApplicationIds[i]);
-            }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -131,8 +123,8 @@ Note: `null` may be returned for this field, indicating that no valid values can
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "TaskIds.", this.TaskIds);
-        this.setParamArraySimple(map, prefix + "ApplicationIds.", this.ApplicationIds);
+        this.setParamArrayObj(map, prefix + "ApplyResults.", this.ApplyResults);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

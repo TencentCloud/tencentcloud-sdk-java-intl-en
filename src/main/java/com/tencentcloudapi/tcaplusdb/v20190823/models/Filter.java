@@ -37,6 +37,13 @@ public class Filter extends AbstractModel{
     private String Value;
 
     /**
+    * Filter field value
+    */
+    @SerializedName("Values")
+    @Expose
+    private String [] Values;
+
+    /**
      * Get Filter field name 
      * @return Name Filter field name
      */
@@ -68,6 +75,22 @@ public class Filter extends AbstractModel{
         this.Value = Value;
     }
 
+    /**
+     * Get Filter field value 
+     * @return Values Filter field value
+     */
+    public String [] getValues() {
+        return this.Values;
+    }
+
+    /**
+     * Set Filter field value
+     * @param Values Filter field value
+     */
+    public void setValues(String [] Values) {
+        this.Values = Values;
+    }
+
     public Filter() {
     }
 
@@ -82,6 +105,12 @@ public class Filter extends AbstractModel{
         if (source.Value != null) {
             this.Value = new String(source.Value);
         }
+        if (source.Values != null) {
+            this.Values = new String[source.Values.length];
+            for (int i = 0; i < source.Values.length; i++) {
+                this.Values[i] = new String(source.Values[i]);
+            }
+        }
     }
 
 
@@ -91,6 +120,7 @@ public class Filter extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamArraySimple(map, prefix + "Values.", this.Values);
 
     }
 }

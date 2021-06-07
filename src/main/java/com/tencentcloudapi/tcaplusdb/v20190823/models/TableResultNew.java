@@ -87,6 +87,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String [] TaskIds;
 
     /**
+    * Cluster operation application ID
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ApplicationId")
+    @Expose
+    private String ApplicationId;
+
+    /**
      * Get Table instance ID in the format of `tcaplus-3be64cbb`
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return TableInstanceId Table instance ID in the format of `tcaplus-3be64cbb`
@@ -246,6 +254,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.TaskIds = TaskIds;
     }
 
+    /**
+     * Get Cluster operation application ID
+Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
+     * @return ApplicationId Cluster operation application ID
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public String getApplicationId() {
+        return this.ApplicationId;
+    }
+
+    /**
+     * Set Cluster operation application ID
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param ApplicationId Cluster operation application ID
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public void setApplicationId(String ApplicationId) {
+        this.ApplicationId = ApplicationId;
+    }
+
     public TableResultNew() {
     }
 
@@ -281,6 +309,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 this.TaskIds[i] = new String(source.TaskIds[i]);
             }
         }
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
     }
 
 
@@ -296,6 +327,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "TableGroupId", this.TableGroupId);
         this.setParamObj(map, prefix + "Error.", this.Error);
         this.setParamArraySimple(map, prefix + "TaskIds.", this.TaskIds);
+        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
 
     }
 }
