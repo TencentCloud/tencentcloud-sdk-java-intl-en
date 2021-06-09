@@ -86,6 +86,13 @@ public class CreateAndAttachNetworkInterfaceRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * ENI mounting type. Valid values: `0` (standard); `1` (extension); default value: `0`
+    */
+    @SerializedName("AttachType")
+    @Expose
+    private Long AttachType;
+
+    /**
      * Get The ID of the VPC instance. You can obtain the parameter value from the `VpcId` field in the returned result of the `DescribeVpcs` API. 
      * @return VpcId The ID of the VPC instance. You can obtain the parameter value from the `VpcId` field in the returned result of the `DescribeVpcs` API.
      */
@@ -229,6 +236,22 @@ public class CreateAndAttachNetworkInterfaceRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get ENI mounting type. Valid values: `0` (standard); `1` (extension); default value: `0` 
+     * @return AttachType ENI mounting type. Valid values: `0` (standard); `1` (extension); default value: `0`
+     */
+    public Long getAttachType() {
+        return this.AttachType;
+    }
+
+    /**
+     * Set ENI mounting type. Valid values: `0` (standard); `1` (extension); default value: `0`
+     * @param AttachType ENI mounting type. Valid values: `0` (standard); `1` (extension); default value: `0`
+     */
+    public void setAttachType(Long AttachType) {
+        this.AttachType = AttachType;
+    }
+
     public CreateAndAttachNetworkInterfaceRequest() {
     }
 
@@ -273,6 +296,9 @@ public class CreateAndAttachNetworkInterfaceRequest extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.AttachType != null) {
+            this.AttachType = new Long(source.AttachType);
+        }
     }
 
 
@@ -289,6 +315,7 @@ public class CreateAndAttachNetworkInterfaceRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamSimple(map, prefix + "NetworkInterfaceDescription", this.NetworkInterfaceDescription);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "AttachType", this.AttachType);
 
     }
 }

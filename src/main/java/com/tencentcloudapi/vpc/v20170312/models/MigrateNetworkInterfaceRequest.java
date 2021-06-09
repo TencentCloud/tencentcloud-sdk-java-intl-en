@@ -44,6 +44,13 @@ public class MigrateNetworkInterfaceRequest extends AbstractModel{
     private String DestinationInstanceId;
 
     /**
+    * ENI mount method. Valid values: 0: standard; 1: extension; default value: 0
+    */
+    @SerializedName("AttachType")
+    @Expose
+    private Long AttachType;
+
+    /**
      * Get The ID of the ENI instance, such as `eni-m6dyj72l`. 
      * @return NetworkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
      */
@@ -91,6 +98,22 @@ public class MigrateNetworkInterfaceRequest extends AbstractModel{
         this.DestinationInstanceId = DestinationInstanceId;
     }
 
+    /**
+     * Get ENI mount method. Valid values: 0: standard; 1: extension; default value: 0 
+     * @return AttachType ENI mount method. Valid values: 0: standard; 1: extension; default value: 0
+     */
+    public Long getAttachType() {
+        return this.AttachType;
+    }
+
+    /**
+     * Set ENI mount method. Valid values: 0: standard; 1: extension; default value: 0
+     * @param AttachType ENI mount method. Valid values: 0: standard; 1: extension; default value: 0
+     */
+    public void setAttachType(Long AttachType) {
+        this.AttachType = AttachType;
+    }
+
     public MigrateNetworkInterfaceRequest() {
     }
 
@@ -108,6 +131,9 @@ public class MigrateNetworkInterfaceRequest extends AbstractModel{
         if (source.DestinationInstanceId != null) {
             this.DestinationInstanceId = new String(source.DestinationInstanceId);
         }
+        if (source.AttachType != null) {
+            this.AttachType = new Long(source.AttachType);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class MigrateNetworkInterfaceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);
         this.setParamSimple(map, prefix + "SourceInstanceId", this.SourceInstanceId);
         this.setParamSimple(map, prefix + "DestinationInstanceId", this.DestinationInstanceId);
+        this.setParamSimple(map, prefix + "AttachType", this.AttachType);
 
     }
 }

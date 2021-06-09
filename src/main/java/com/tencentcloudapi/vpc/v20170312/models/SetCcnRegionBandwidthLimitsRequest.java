@@ -37,6 +37,13 @@ public class SetCcnRegionBandwidthLimitsRequest extends AbstractModel{
     private CcnRegionBandwidthLimit [] CcnRegionBandwidthLimits;
 
     /**
+    * Whether to restore the region outbound bandwidth limit or inter-region bandwidth limit to default 1Gbps. Valid values: `false` (no); `true` (yes). Default value: `false`. When the parameter is set to `true`, the CCN instance created will not be displayed in the console.
+    */
+    @SerializedName("SetDefaultLimitFlag")
+    @Expose
+    private Boolean SetDefaultLimitFlag;
+
+    /**
      * Get The CCN instance ID, such as `ccn-f49l6u0z`. 
      * @return CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
      */
@@ -68,6 +75,22 @@ public class SetCcnRegionBandwidthLimitsRequest extends AbstractModel{
         this.CcnRegionBandwidthLimits = CcnRegionBandwidthLimits;
     }
 
+    /**
+     * Get Whether to restore the region outbound bandwidth limit or inter-region bandwidth limit to default 1Gbps. Valid values: `false` (no); `true` (yes). Default value: `false`. When the parameter is set to `true`, the CCN instance created will not be displayed in the console. 
+     * @return SetDefaultLimitFlag Whether to restore the region outbound bandwidth limit or inter-region bandwidth limit to default 1Gbps. Valid values: `false` (no); `true` (yes). Default value: `false`. When the parameter is set to `true`, the CCN instance created will not be displayed in the console.
+     */
+    public Boolean getSetDefaultLimitFlag() {
+        return this.SetDefaultLimitFlag;
+    }
+
+    /**
+     * Set Whether to restore the region outbound bandwidth limit or inter-region bandwidth limit to default 1Gbps. Valid values: `false` (no); `true` (yes). Default value: `false`. When the parameter is set to `true`, the CCN instance created will not be displayed in the console.
+     * @param SetDefaultLimitFlag Whether to restore the region outbound bandwidth limit or inter-region bandwidth limit to default 1Gbps. Valid values: `false` (no); `true` (yes). Default value: `false`. When the parameter is set to `true`, the CCN instance created will not be displayed in the console.
+     */
+    public void setSetDefaultLimitFlag(Boolean SetDefaultLimitFlag) {
+        this.SetDefaultLimitFlag = SetDefaultLimitFlag;
+    }
+
     public SetCcnRegionBandwidthLimitsRequest() {
     }
 
@@ -85,6 +108,9 @@ public class SetCcnRegionBandwidthLimitsRequest extends AbstractModel{
                 this.CcnRegionBandwidthLimits[i] = new CcnRegionBandwidthLimit(source.CcnRegionBandwidthLimits[i]);
             }
         }
+        if (source.SetDefaultLimitFlag != null) {
+            this.SetDefaultLimitFlag = new Boolean(source.SetDefaultLimitFlag);
+        }
     }
 
 
@@ -94,6 +120,7 @@ public class SetCcnRegionBandwidthLimitsRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CcnId", this.CcnId);
         this.setParamArrayObj(map, prefix + "CcnRegionBandwidthLimits.", this.CcnRegionBandwidthLimits);
+        this.setParamSimple(map, prefix + "SetDefaultLimitFlag", this.SetDefaultLimitFlag);
 
     }
 }

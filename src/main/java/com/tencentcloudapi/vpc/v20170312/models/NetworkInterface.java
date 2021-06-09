@@ -157,6 +157,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String CdcId;
 
     /**
+    * ENI type. Valid values: `0` (standard); `1` (extension). Default value: `0`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AttachType")
+    @Expose
+    private Long AttachType;
+
+    /**
      * Get The ID of the ENI instance, such as `eni-f1xjkw1b`. 
      * @return NetworkInterfaceId The ID of the ENI instance, such as `eni-f1xjkw1b`.
      */
@@ -476,6 +484,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.CdcId = CdcId;
     }
 
+    /**
+     * Get ENI type. Valid values: `0` (standard); `1` (extension). Default value: `0`.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return AttachType ENI type. Valid values: `0` (standard); `1` (extension). Default value: `0`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getAttachType() {
+        return this.AttachType;
+    }
+
+    /**
+     * Set ENI type. Valid values: `0` (standard); `1` (extension). Default value: `0`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param AttachType ENI type. Valid values: `0` (standard); `1` (extension). Default value: `0`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setAttachType(Long AttachType) {
+        this.AttachType = AttachType;
+    }
+
     public NetworkInterface() {
     }
 
@@ -550,6 +578,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.CdcId != null) {
             this.CdcId = new String(source.CdcId);
         }
+        if (source.AttachType != null) {
+            this.AttachType = new Long(source.AttachType);
+        }
     }
 
 
@@ -575,6 +606,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "EniType", this.EniType);
         this.setParamSimple(map, prefix + "Business", this.Business);
         this.setParamSimple(map, prefix + "CdcId", this.CdcId);
+        this.setParamSimple(map, prefix + "AttachType", this.AttachType);
 
     }
 }

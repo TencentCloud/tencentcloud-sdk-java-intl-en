@@ -23,18 +23,34 @@ import java.util.HashMap;
 public class DescribeNetworkInterfaceLimitResponse extends AbstractModel{
 
     /**
-    * ENI quota
+    * Quota of ENIs mounted to a CVM instance in a standard way
     */
     @SerializedName("EniQuantity")
     @Expose
     private Long EniQuantity;
 
     /**
-    * Quota of IP addresses that can be allocated to each ENI.
+    * Quota of IP addresses that can be allocated to each standard-mounted ENI
     */
     @SerializedName("EniPrivateIpAddressQuantity")
     @Expose
     private Long EniPrivateIpAddressQuantity;
+
+    /**
+    * Quota of ENIs mounted to a CVM instance as an extension
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ExtendEniQuantity")
+    @Expose
+    private Long ExtendEniQuantity;
+
+    /**
+    * Quota of IP addresses that can be allocated to each extension-mounted ENI.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ExtendEniPrivateIpAddressQuantity")
+    @Expose
+    private Long ExtendEniPrivateIpAddressQuantity;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -44,35 +60,75 @@ public class DescribeNetworkInterfaceLimitResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get ENI quota 
-     * @return EniQuantity ENI quota
+     * Get Quota of ENIs mounted to a CVM instance in a standard way 
+     * @return EniQuantity Quota of ENIs mounted to a CVM instance in a standard way
      */
     public Long getEniQuantity() {
         return this.EniQuantity;
     }
 
     /**
-     * Set ENI quota
-     * @param EniQuantity ENI quota
+     * Set Quota of ENIs mounted to a CVM instance in a standard way
+     * @param EniQuantity Quota of ENIs mounted to a CVM instance in a standard way
      */
     public void setEniQuantity(Long EniQuantity) {
         this.EniQuantity = EniQuantity;
     }
 
     /**
-     * Get Quota of IP addresses that can be allocated to each ENI. 
-     * @return EniPrivateIpAddressQuantity Quota of IP addresses that can be allocated to each ENI.
+     * Get Quota of IP addresses that can be allocated to each standard-mounted ENI 
+     * @return EniPrivateIpAddressQuantity Quota of IP addresses that can be allocated to each standard-mounted ENI
      */
     public Long getEniPrivateIpAddressQuantity() {
         return this.EniPrivateIpAddressQuantity;
     }
 
     /**
-     * Set Quota of IP addresses that can be allocated to each ENI.
-     * @param EniPrivateIpAddressQuantity Quota of IP addresses that can be allocated to each ENI.
+     * Set Quota of IP addresses that can be allocated to each standard-mounted ENI
+     * @param EniPrivateIpAddressQuantity Quota of IP addresses that can be allocated to each standard-mounted ENI
      */
     public void setEniPrivateIpAddressQuantity(Long EniPrivateIpAddressQuantity) {
         this.EniPrivateIpAddressQuantity = EniPrivateIpAddressQuantity;
+    }
+
+    /**
+     * Get Quota of ENIs mounted to a CVM instance as an extension
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ExtendEniQuantity Quota of ENIs mounted to a CVM instance as an extension
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getExtendEniQuantity() {
+        return this.ExtendEniQuantity;
+    }
+
+    /**
+     * Set Quota of ENIs mounted to a CVM instance as an extension
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ExtendEniQuantity Quota of ENIs mounted to a CVM instance as an extension
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setExtendEniQuantity(Long ExtendEniQuantity) {
+        this.ExtendEniQuantity = ExtendEniQuantity;
+    }
+
+    /**
+     * Get Quota of IP addresses that can be allocated to each extension-mounted ENI.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ExtendEniPrivateIpAddressQuantity Quota of IP addresses that can be allocated to each extension-mounted ENI.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getExtendEniPrivateIpAddressQuantity() {
+        return this.ExtendEniPrivateIpAddressQuantity;
+    }
+
+    /**
+     * Set Quota of IP addresses that can be allocated to each extension-mounted ENI.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ExtendEniPrivateIpAddressQuantity Quota of IP addresses that can be allocated to each extension-mounted ENI.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setExtendEniPrivateIpAddressQuantity(Long ExtendEniPrivateIpAddressQuantity) {
+        this.ExtendEniPrivateIpAddressQuantity = ExtendEniPrivateIpAddressQuantity;
     }
 
     /**
@@ -105,6 +161,12 @@ public class DescribeNetworkInterfaceLimitResponse extends AbstractModel{
         if (source.EniPrivateIpAddressQuantity != null) {
             this.EniPrivateIpAddressQuantity = new Long(source.EniPrivateIpAddressQuantity);
         }
+        if (source.ExtendEniQuantity != null) {
+            this.ExtendEniQuantity = new Long(source.ExtendEniQuantity);
+        }
+        if (source.ExtendEniPrivateIpAddressQuantity != null) {
+            this.ExtendEniPrivateIpAddressQuantity = new Long(source.ExtendEniPrivateIpAddressQuantity);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -117,6 +179,8 @@ public class DescribeNetworkInterfaceLimitResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EniQuantity", this.EniQuantity);
         this.setParamSimple(map, prefix + "EniPrivateIpAddressQuantity", this.EniPrivateIpAddressQuantity);
+        this.setParamSimple(map, prefix + "ExtendEniQuantity", this.ExtendEniQuantity);
+        this.setParamSimple(map, prefix + "ExtendEniPrivateIpAddressQuantity", this.ExtendEniPrivateIpAddressQuantity);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

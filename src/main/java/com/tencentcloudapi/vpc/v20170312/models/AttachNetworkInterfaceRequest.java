@@ -37,6 +37,13 @@ public class AttachNetworkInterfaceRequest extends AbstractModel{
     private String InstanceId;
 
     /**
+    * ENI mounting type. Valid values: `0` (standard); `1` (extension); default value: `0`
+    */
+    @SerializedName("AttachType")
+    @Expose
+    private Long AttachType;
+
+    /**
      * Get The ID of the ENI instance, such as `eni-m6dyj72l`. 
      * @return NetworkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
      */
@@ -68,6 +75,22 @@ public class AttachNetworkInterfaceRequest extends AbstractModel{
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get ENI mounting type. Valid values: `0` (standard); `1` (extension); default value: `0` 
+     * @return AttachType ENI mounting type. Valid values: `0` (standard); `1` (extension); default value: `0`
+     */
+    public Long getAttachType() {
+        return this.AttachType;
+    }
+
+    /**
+     * Set ENI mounting type. Valid values: `0` (standard); `1` (extension); default value: `0`
+     * @param AttachType ENI mounting type. Valid values: `0` (standard); `1` (extension); default value: `0`
+     */
+    public void setAttachType(Long AttachType) {
+        this.AttachType = AttachType;
+    }
+
     public AttachNetworkInterfaceRequest() {
     }
 
@@ -82,6 +105,9 @@ public class AttachNetworkInterfaceRequest extends AbstractModel{
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.AttachType != null) {
+            this.AttachType = new Long(source.AttachType);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class AttachNetworkInterfaceRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "AttachType", this.AttachType);
 
     }
 }

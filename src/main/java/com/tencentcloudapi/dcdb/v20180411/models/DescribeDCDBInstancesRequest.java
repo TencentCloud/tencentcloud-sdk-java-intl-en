@@ -135,6 +135,20 @@ public class DescribeDCDBInstancesRequest extends AbstractModel{
     private String FilterInstanceType;
 
     /**
+    * Use this filter to include instances in specific statuses
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long [] Status;
+
+    /**
+    * Use this filter to exclude instances in specific statuses
+    */
+    @SerializedName("ExcludeStatus")
+    @Expose
+    private Long [] ExcludeStatus;
+
+    /**
      * Get Query by instance ID or IDs. Instance ID is in the format of dcdbt-2t4cf98d 
      * @return InstanceIds Query by instance ID or IDs. Instance ID is in the format of dcdbt-2t4cf98d
      */
@@ -390,6 +404,38 @@ public class DescribeDCDBInstancesRequest extends AbstractModel{
         this.FilterInstanceType = FilterInstanceType;
     }
 
+    /**
+     * Get Use this filter to include instances in specific statuses 
+     * @return Status Use this filter to include instances in specific statuses
+     */
+    public Long [] getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set Use this filter to include instances in specific statuses
+     * @param Status Use this filter to include instances in specific statuses
+     */
+    public void setStatus(Long [] Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get Use this filter to exclude instances in specific statuses 
+     * @return ExcludeStatus Use this filter to exclude instances in specific statuses
+     */
+    public Long [] getExcludeStatus() {
+        return this.ExcludeStatus;
+    }
+
+    /**
+     * Set Use this filter to exclude instances in specific statuses
+     * @param ExcludeStatus Use this filter to exclude instances in specific statuses
+     */
+    public void setExcludeStatus(Long [] ExcludeStatus) {
+        this.ExcludeStatus = ExcludeStatus;
+    }
+
     public DescribeDCDBInstancesRequest() {
     }
 
@@ -458,6 +504,18 @@ public class DescribeDCDBInstancesRequest extends AbstractModel{
         if (source.FilterInstanceType != null) {
             this.FilterInstanceType = new String(source.FilterInstanceType);
         }
+        if (source.Status != null) {
+            this.Status = new Long[source.Status.length];
+            for (int i = 0; i < source.Status.length; i++) {
+                this.Status[i] = new Long(source.Status[i]);
+            }
+        }
+        if (source.ExcludeStatus != null) {
+            this.ExcludeStatus = new Long[source.ExcludeStatus.length];
+            for (int i = 0; i < source.ExcludeStatus.length; i++) {
+                this.ExcludeStatus[i] = new Long(source.ExcludeStatus[i]);
+            }
+        }
     }
 
 
@@ -481,6 +539,8 @@ public class DescribeDCDBInstancesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "ExclusterIds.", this.ExclusterIds);
         this.setParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
         this.setParamSimple(map, prefix + "FilterInstanceType", this.FilterInstanceType);
+        this.setParamArraySimple(map, prefix + "Status.", this.Status);
+        this.setParamArraySimple(map, prefix + "ExcludeStatus.", this.ExcludeStatus);
 
     }
 }

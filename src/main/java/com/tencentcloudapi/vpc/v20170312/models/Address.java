@@ -151,6 +151,14 @@ Note: this field may return `null`, indicating that no valid value was found.
     private String InternetChargeType;
 
     /**
+    * List of tags associated with the EIP
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TagSet")
+    @Expose
+    private Tag [] TagSet;
+
+    /**
      * Get `EIP` `ID`, the unique ID of the `EIP`. 
      * @return AddressId `EIP` `ID`, the unique ID of the `EIP`.
      */
@@ -446,6 +454,26 @@ Note: this field may return `null`, indicating that no valid value was found.
         this.InternetChargeType = InternetChargeType;
     }
 
+    /**
+     * Get List of tags associated with the EIP
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return TagSet List of tags associated with the EIP
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Tag [] getTagSet() {
+        return this.TagSet;
+    }
+
+    /**
+     * Set List of tags associated with the EIP
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param TagSet List of tags associated with the EIP
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setTagSet(Tag [] TagSet) {
+        this.TagSet = TagSet;
+    }
+
     public Address() {
     }
 
@@ -508,6 +536,12 @@ Note: this field may return `null`, indicating that no valid value was found.
         if (source.InternetChargeType != null) {
             this.InternetChargeType = new String(source.InternetChargeType);
         }
+        if (source.TagSet != null) {
+            this.TagSet = new Tag[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new Tag(source.TagSet[i]);
+            }
+        }
     }
 
 
@@ -533,6 +567,7 @@ Note: this field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "LocalBgp", this.LocalBgp);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         this.setParamSimple(map, prefix + "InternetChargeType", this.InternetChargeType);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
 
     }
 }

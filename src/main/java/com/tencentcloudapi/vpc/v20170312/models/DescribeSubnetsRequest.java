@@ -33,13 +33,15 @@ public class DescribeSubnetsRequest extends AbstractModel{
     * Filter condition. `SubnetIds` and `Filters` cannot be specified at the same time.
 <li>subnet-id - String - (Filter condition) Subnet instance name.</li>
 <li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
-<li>cidr-block - String - (Filter condition) The subnet IP range, such as 192.168.1.0.</li>
+<li>cidr-block - String - (Filter condition) Subnet IP range, such as `192.168.1.0`.</li>
 <li>is-default - Boolean - (Filter condition) Whether it is the default subnet.</li>
 <li>is-remote-vpc-snat - Boolean - (Filter condition) Whether it is a VPC SNAT address pool subnet.</li>
 <li>subnet-name - String - (Filter condition) Subnet name.</li>
 <li>zone - String - (Filter condition) Availability zone.</li>
-<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key is replaced with the specific tag key. For usage, refer to case 2.</li>
+<li> tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
+<li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. Use a specific tag key to replace `tag-key`. For its usage, see example 2.</li>
+<li>cdc-id - String - Required: No - (Filter condition) Filter by CDC ID to obtain subnets in the specified CDC.</li>
+<li>is-cdc-subnet - String - Required: No - (Filter condition) Whether it is a CDC subnet. Valid values: `0` (no); `1` (yes).</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -79,23 +81,27 @@ public class DescribeSubnetsRequest extends AbstractModel{
      * Get Filter condition. `SubnetIds` and `Filters` cannot be specified at the same time.
 <li>subnet-id - String - (Filter condition) Subnet instance name.</li>
 <li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
-<li>cidr-block - String - (Filter condition) The subnet IP range, such as 192.168.1.0.</li>
+<li>cidr-block - String - (Filter condition) Subnet IP range, such as `192.168.1.0`.</li>
 <li>is-default - Boolean - (Filter condition) Whether it is the default subnet.</li>
 <li>is-remote-vpc-snat - Boolean - (Filter condition) Whether it is a VPC SNAT address pool subnet.</li>
 <li>subnet-name - String - (Filter condition) Subnet name.</li>
 <li>zone - String - (Filter condition) Availability zone.</li>
-<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key is replaced with the specific tag key. For usage, refer to case 2.</li> 
+<li> tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
+<li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. Use a specific tag key to replace `tag-key`. For its usage, see example 2.</li>
+<li>cdc-id - String - Required: No - (Filter condition) Filter by CDC ID to obtain subnets in the specified CDC.</li>
+<li>is-cdc-subnet - String - Required: No - (Filter condition) Whether it is a CDC subnet. Valid values: `0` (no); `1` (yes).</li> 
      * @return Filters Filter condition. `SubnetIds` and `Filters` cannot be specified at the same time.
 <li>subnet-id - String - (Filter condition) Subnet instance name.</li>
 <li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
-<li>cidr-block - String - (Filter condition) The subnet IP range, such as 192.168.1.0.</li>
+<li>cidr-block - String - (Filter condition) Subnet IP range, such as `192.168.1.0`.</li>
 <li>is-default - Boolean - (Filter condition) Whether it is the default subnet.</li>
 <li>is-remote-vpc-snat - Boolean - (Filter condition) Whether it is a VPC SNAT address pool subnet.</li>
 <li>subnet-name - String - (Filter condition) Subnet name.</li>
 <li>zone - String - (Filter condition) Availability zone.</li>
-<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key is replaced with the specific tag key. For usage, refer to case 2.</li>
+<li> tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
+<li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. Use a specific tag key to replace `tag-key`. For its usage, see example 2.</li>
+<li>cdc-id - String - Required: No - (Filter condition) Filter by CDC ID to obtain subnets in the specified CDC.</li>
+<li>is-cdc-subnet - String - Required: No - (Filter condition) Whether it is a CDC subnet. Valid values: `0` (no); `1` (yes).</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -105,23 +111,27 @@ public class DescribeSubnetsRequest extends AbstractModel{
      * Set Filter condition. `SubnetIds` and `Filters` cannot be specified at the same time.
 <li>subnet-id - String - (Filter condition) Subnet instance name.</li>
 <li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
-<li>cidr-block - String - (Filter condition) The subnet IP range, such as 192.168.1.0.</li>
+<li>cidr-block - String - (Filter condition) Subnet IP range, such as `192.168.1.0`.</li>
 <li>is-default - Boolean - (Filter condition) Whether it is the default subnet.</li>
 <li>is-remote-vpc-snat - Boolean - (Filter condition) Whether it is a VPC SNAT address pool subnet.</li>
 <li>subnet-name - String - (Filter condition) Subnet name.</li>
 <li>zone - String - (Filter condition) Availability zone.</li>
-<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key is replaced with the specific tag key. For usage, refer to case 2.</li>
+<li> tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
+<li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. Use a specific tag key to replace `tag-key`. For its usage, see example 2.</li>
+<li>cdc-id - String - Required: No - (Filter condition) Filter by CDC ID to obtain subnets in the specified CDC.</li>
+<li>is-cdc-subnet - String - Required: No - (Filter condition) Whether it is a CDC subnet. Valid values: `0` (no); `1` (yes).</li>
      * @param Filters Filter condition. `SubnetIds` and `Filters` cannot be specified at the same time.
 <li>subnet-id - String - (Filter condition) Subnet instance name.</li>
 <li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
-<li>cidr-block - String - (Filter condition) The subnet IP range, such as 192.168.1.0.</li>
+<li>cidr-block - String - (Filter condition) Subnet IP range, such as `192.168.1.0`.</li>
 <li>is-default - Boolean - (Filter condition) Whether it is the default subnet.</li>
 <li>is-remote-vpc-snat - Boolean - (Filter condition) Whether it is a VPC SNAT address pool subnet.</li>
 <li>subnet-name - String - (Filter condition) Subnet name.</li>
 <li>zone - String - (Filter condition) Availability zone.</li>
-<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key is replaced with the specific tag key. For usage, refer to case 2.</li>
+<li> tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
+<li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. Use a specific tag key to replace `tag-key`. For its usage, see example 2.</li>
+<li>cdc-id - String - Required: No - (Filter condition) Filter by CDC ID to obtain subnets in the specified CDC.</li>
+<li>is-cdc-subnet - String - Required: No - (Filter condition) Whether it is a CDC subnet. Valid values: `0` (no); `1` (yes).</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

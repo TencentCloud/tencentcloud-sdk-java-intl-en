@@ -51,28 +51,28 @@ public class SecurityGroupBound extends AbstractModel{
     private String IpProtocol;
 
     /**
-    * 
+    * All the addresses that the security group ID represents
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 
+    * All the addresses that the address group ID represents
     */
     @SerializedName("AddressModule")
     @Expose
     private String AddressModule;
 
     /**
-    * 
+    * All the protocols and ports that the service group ID represents
     */
     @SerializedName("ServiceModule")
     @Expose
     private String ServiceModule;
 
     /**
-    * 
+    * Description
     */
     @SerializedName("Desc")
     @Expose
@@ -143,64 +143,64 @@ public class SecurityGroupBound extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return Id 
+     * Get All the addresses that the security group ID represents 
+     * @return Id All the addresses that the security group ID represents
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 
-     * @param Id 
+     * Set All the addresses that the security group ID represents
+     * @param Id All the addresses that the security group ID represents
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get  
-     * @return AddressModule 
+     * Get All the addresses that the address group ID represents 
+     * @return AddressModule All the addresses that the address group ID represents
      */
     public String getAddressModule() {
         return this.AddressModule;
     }
 
     /**
-     * Set 
-     * @param AddressModule 
+     * Set All the addresses that the address group ID represents
+     * @param AddressModule All the addresses that the address group ID represents
      */
     public void setAddressModule(String AddressModule) {
         this.AddressModule = AddressModule;
     }
 
     /**
-     * Get  
-     * @return ServiceModule 
+     * Get All the protocols and ports that the service group ID represents 
+     * @return ServiceModule All the protocols and ports that the service group ID represents
      */
     public String getServiceModule() {
         return this.ServiceModule;
     }
 
     /**
-     * Set 
-     * @param ServiceModule 
+     * Set All the protocols and ports that the service group ID represents
+     * @param ServiceModule All the protocols and ports that the service group ID represents
      */
     public void setServiceModule(String ServiceModule) {
         this.ServiceModule = ServiceModule;
     }
 
     /**
-     * Get  
-     * @return Desc 
+     * Get Description 
+     * @return Desc Description
      */
     public String getDesc() {
         return this.Desc;
     }
 
     /**
-     * Set 
-     * @param Desc 
+     * Set Description
+     * @param Desc Description
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;
