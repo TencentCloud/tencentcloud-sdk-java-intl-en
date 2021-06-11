@@ -99,6 +99,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to add subnets in the container network for a VPC-CNI cluster.
+     * @param req AddVpcCniSubnetsRequest
+     * @return AddVpcCniSubnetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddVpcCniSubnetsResponse AddVpcCniSubnets(AddVpcCniSubnetsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddVpcCniSubnetsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddVpcCniSubnetsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddVpcCniSubnets");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to check which nodes can be upgraded in the given node list. 
      * @param req CheckInstancesUpgradeAbleRequest
      * @return CheckInstancesUpgradeAbleResponse
