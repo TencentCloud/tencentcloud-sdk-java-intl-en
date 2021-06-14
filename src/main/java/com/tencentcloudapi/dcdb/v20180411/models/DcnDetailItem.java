@@ -86,14 +86,14 @@ public class DcnDetailItem extends AbstractModel{
     private String StatusDesc;
 
     /**
-    * DCN flag. Valid values: `1` (primary), `2` (secondary)
+    * DCN flag. Valid values: `1` (primary), `2` (disaster recovery)
     */
     @SerializedName("DcnFlag")
     @Expose
     private Long DcnFlag;
 
     /**
-    * DCN status. Valid values: `0` (null), `1` (creating), `2` (syncing), `3` (disconnected)
+    * DCN status. Valid values: `0` (none), `1` (creating), `2` (syncing), `3` (disconnected)
     */
     @SerializedName("DcnStatus")
     @Expose
@@ -244,32 +244,32 @@ public class DcnDetailItem extends AbstractModel{
     }
 
     /**
-     * Get DCN flag. Valid values: `1` (primary), `2` (secondary) 
-     * @return DcnFlag DCN flag. Valid values: `1` (primary), `2` (secondary)
+     * Get DCN flag. Valid values: `1` (primary), `2` (disaster recovery) 
+     * @return DcnFlag DCN flag. Valid values: `1` (primary), `2` (disaster recovery)
      */
     public Long getDcnFlag() {
         return this.DcnFlag;
     }
 
     /**
-     * Set DCN flag. Valid values: `1` (primary), `2` (secondary)
-     * @param DcnFlag DCN flag. Valid values: `1` (primary), `2` (secondary)
+     * Set DCN flag. Valid values: `1` (primary), `2` (disaster recovery)
+     * @param DcnFlag DCN flag. Valid values: `1` (primary), `2` (disaster recovery)
      */
     public void setDcnFlag(Long DcnFlag) {
         this.DcnFlag = DcnFlag;
     }
 
     /**
-     * Get DCN status. Valid values: `0` (null), `1` (creating), `2` (syncing), `3` (disconnected) 
-     * @return DcnStatus DCN status. Valid values: `0` (null), `1` (creating), `2` (syncing), `3` (disconnected)
+     * Get DCN status. Valid values: `0` (none), `1` (creating), `2` (syncing), `3` (disconnected) 
+     * @return DcnStatus DCN status. Valid values: `0` (none), `1` (creating), `2` (syncing), `3` (disconnected)
      */
     public Long getDcnStatus() {
         return this.DcnStatus;
     }
 
     /**
-     * Set DCN status. Valid values: `0` (null), `1` (creating), `2` (syncing), `3` (disconnected)
-     * @param DcnStatus DCN status. Valid values: `0` (null), `1` (creating), `2` (syncing), `3` (disconnected)
+     * Set DCN status. Valid values: `0` (none), `1` (creating), `2` (syncing), `3` (disconnected)
+     * @param DcnStatus DCN status. Valid values: `0` (none), `1` (creating), `2` (syncing), `3` (disconnected)
      */
     public void setDcnStatus(Long DcnStatus) {
         this.DcnStatus = DcnStatus;
