@@ -39,7 +39,7 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
-     *This API is used to upload an image.
+     *This API is no longer used, and an error will occur if you call it. To use the feature provided by this API, please see [Console Guide > Application Management > Material Management](https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1).
      * @param req CreatePictureRequest
      * @return CreatePictureResponse
      * @throws TencentCloudSDKException
@@ -79,7 +79,7 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete an image.
+     *This API is no longer used, and an error will occur if you call it. To use the feature provided by this API, please see [Console Guide > Application Management > Material Management](https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1).
      * @param req DeletePictureRequest
      * @return DeletePictureResponse
      * @throws TencentCloudSDKException
@@ -180,7 +180,7 @@ Note: you are not advised to use the API for the processing of real-time busines
     }
 
     /**
-     *This API is used to query the parameters of an image.
+     *This API is no longer used, and an error will occur if you call it. To use the feature provided by this API, please see [Console Guide > Application Management > Material Management](https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1).
      * @param req DescribePictureRequest
      * @return DescribePictureResponse
      * @throws TencentCloudSDKException
@@ -342,7 +342,7 @@ Note: you are not advised to use the API for the processing of real-time busines
     }
 
     /**
-     *This API is used to modify the parameters of an image.
+     *This API is no longer used, and an error will occur if you call it. To use the feature provided by this API, please see [Console Guide > Application Management > Material Management](https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1).
      * @param req ModifyPictureRequest
      * @return ModifyPictureResponse
      * @throws TencentCloudSDKException

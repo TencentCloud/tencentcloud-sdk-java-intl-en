@@ -51,8 +51,7 @@ public class DescribeTasksRequest extends AbstractModel{
     private TimeRange FinishTime;
 
     /**
-    * (Not supported now)
-Sort field. Valid values:
+    * Sort field. Valid values:
 <li>`CreateTime`: task creation time</li>
 <li>`FinishTime`: task end time</li>
     */
@@ -146,12 +145,10 @@ Sort field. Valid values:
     }
 
     /**
-     * Get (Not supported now)
-Sort field. Valid values:
+     * Get Sort field. Valid values:
 <li>`CreateTime`: task creation time</li>
 <li>`FinishTime`: task end time</li> 
-     * @return Sort (Not supported now)
-Sort field. Valid values:
+     * @return Sort Sort field. Valid values:
 <li>`CreateTime`: task creation time</li>
 <li>`FinishTime`: task end time</li>
      */
@@ -160,12 +157,10 @@ Sort field. Valid values:
     }
 
     /**
-     * Set (Not supported now)
-Sort field. Valid values:
+     * Set Sort field. Valid values:
 <li>`CreateTime`: task creation time</li>
 <li>`FinishTime`: task end time</li>
-     * @param Sort (Not supported now)
-Sort field. Valid values:
+     * @param Sort Sort field. Valid values:
 <li>`CreateTime`: task creation time</li>
 <li>`FinishTime`: task end time</li>
      */

@@ -51,11 +51,27 @@ public class RunVersionPod extends AbstractModel{
     private String CreateTime;
 
     /**
-    * Pod IP
+    * Pod IP.
     */
     @SerializedName("PodIp")
     @Expose
     private String PodIp;
+
+    /**
+    * Availability zone.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
+    * Deployed version.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("DeployVersion")
+    @Expose
+    private String DeployVersion;
 
     /**
      * Get Shell address 
@@ -122,19 +138,59 @@ public class RunVersionPod extends AbstractModel{
     }
 
     /**
-     * Get Pod IP 
-     * @return PodIp Pod IP
+     * Get Pod IP. 
+     * @return PodIp Pod IP.
      */
     public String getPodIp() {
         return this.PodIp;
     }
 
     /**
-     * Set Pod IP
-     * @param PodIp Pod IP
+     * Set Pod IP.
+     * @param PodIp Pod IP.
      */
     public void setPodIp(String PodIp) {
         this.PodIp = PodIp;
+    }
+
+    /**
+     * Get Availability zone.
+Note: this field may return `null`, indicating that no valid value can be obtained. 
+     * @return Zone Availability zone.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set Availability zone.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param Zone Availability zone.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
+    /**
+     * Get Deployed version.
+Note: this field may return `null`, indicating that no valid value can be obtained. 
+     * @return DeployVersion Deployed version.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getDeployVersion() {
+        return this.DeployVersion;
+    }
+
+    /**
+     * Set Deployed version.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param DeployVersion Deployed version.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setDeployVersion(String DeployVersion) {
+        this.DeployVersion = DeployVersion;
     }
 
     public RunVersionPod() {
@@ -160,6 +216,12 @@ public class RunVersionPod extends AbstractModel{
         if (source.PodIp != null) {
             this.PodIp = new String(source.PodIp);
         }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.DeployVersion != null) {
+            this.DeployVersion = new String(source.DeployVersion);
+        }
     }
 
 
@@ -172,6 +234,8 @@ public class RunVersionPod extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "PodIp", this.PodIp);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "DeployVersion", this.DeployVersion);
 
     }
 }

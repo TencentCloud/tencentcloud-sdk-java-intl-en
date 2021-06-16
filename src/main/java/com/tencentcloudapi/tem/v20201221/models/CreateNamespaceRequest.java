@@ -65,6 +65,13 @@ public class CreateNamespaceRequest extends AbstractModel{
     private Long SourceChannel;
 
     /**
+    * Whether to enable the TSW service.
+    */
+    @SerializedName("EnableTswTraceService")
+    @Expose
+    private Boolean EnableTswTraceService;
+
+    /**
      * Get Namespace name 
      * @return NamespaceName Namespace name
      */
@@ -160,6 +167,22 @@ public class CreateNamespaceRequest extends AbstractModel{
         this.SourceChannel = SourceChannel;
     }
 
+    /**
+     * Get Whether to enable the TSW service. 
+     * @return EnableTswTraceService Whether to enable the TSW service.
+     */
+    public Boolean getEnableTswTraceService() {
+        return this.EnableTswTraceService;
+    }
+
+    /**
+     * Set Whether to enable the TSW service.
+     * @param EnableTswTraceService Whether to enable the TSW service.
+     */
+    public void setEnableTswTraceService(Boolean EnableTswTraceService) {
+        this.EnableTswTraceService = EnableTswTraceService;
+    }
+
     public CreateNamespaceRequest() {
     }
 
@@ -189,6 +212,9 @@ public class CreateNamespaceRequest extends AbstractModel{
         if (source.SourceChannel != null) {
             this.SourceChannel = new Long(source.SourceChannel);
         }
+        if (source.EnableTswTraceService != null) {
+            this.EnableTswTraceService = new Boolean(source.EnableTswTraceService);
+        }
     }
 
 
@@ -202,6 +228,7 @@ public class CreateNamespaceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "K8sVersion", this.K8sVersion);
         this.setParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
+        this.setParamSimple(map, prefix + "EnableTswTraceService", this.EnableTswTraceService);
 
     }
 }

@@ -23,49 +23,72 @@ import java.util.HashMap;
 public class IngressTls extends AbstractModel{
 
     /**
-    * Host array
+    * Host array. An empty array indicates the default certificate for all domain names.
     */
     @SerializedName("Hosts")
     @Expose
     private String [] Hosts;
 
     /**
-    * secret name
+    * Secret name. If a certificate is used, this field is left empty.
     */
     @SerializedName("SecretName")
     @Expose
     private String SecretName;
 
     /**
-     * Get Host array 
-     * @return Hosts Host array
+    * SSL Certificate Id
+    */
+    @SerializedName("CertificateId")
+    @Expose
+    private String CertificateId;
+
+    /**
+     * Get Host array. An empty array indicates the default certificate for all domain names. 
+     * @return Hosts Host array. An empty array indicates the default certificate for all domain names.
      */
     public String [] getHosts() {
         return this.Hosts;
     }
 
     /**
-     * Set Host array
-     * @param Hosts Host array
+     * Set Host array. An empty array indicates the default certificate for all domain names.
+     * @param Hosts Host array. An empty array indicates the default certificate for all domain names.
      */
     public void setHosts(String [] Hosts) {
         this.Hosts = Hosts;
     }
 
     /**
-     * Get secret name 
-     * @return SecretName secret name
+     * Get Secret name. If a certificate is used, this field is left empty. 
+     * @return SecretName Secret name. If a certificate is used, this field is left empty.
      */
     public String getSecretName() {
         return this.SecretName;
     }
 
     /**
-     * Set secret name
-     * @param SecretName secret name
+     * Set Secret name. If a certificate is used, this field is left empty.
+     * @param SecretName Secret name. If a certificate is used, this field is left empty.
      */
     public void setSecretName(String SecretName) {
         this.SecretName = SecretName;
+    }
+
+    /**
+     * Get SSL Certificate Id 
+     * @return CertificateId SSL Certificate Id
+     */
+    public String getCertificateId() {
+        return this.CertificateId;
+    }
+
+    /**
+     * Set SSL Certificate Id
+     * @param CertificateId SSL Certificate Id
+     */
+    public void setCertificateId(String CertificateId) {
+        this.CertificateId = CertificateId;
     }
 
     public IngressTls() {
@@ -85,6 +108,9 @@ public class IngressTls extends AbstractModel{
         if (source.SecretName != null) {
             this.SecretName = new String(source.SecretName);
         }
+        if (source.CertificateId != null) {
+            this.CertificateId = new String(source.CertificateId);
+        }
     }
 
 
@@ -94,6 +120,7 @@ public class IngressTls extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Hosts.", this.Hosts);
         this.setParamSimple(map, prefix + "SecretName", this.SecretName);
+        this.setParamSimple(map, prefix + "CertificateId", this.CertificateId);
 
     }
 }

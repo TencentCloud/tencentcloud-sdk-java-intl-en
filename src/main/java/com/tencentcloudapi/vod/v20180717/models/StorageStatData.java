@@ -53,6 +53,20 @@ public class StorageStatData extends AbstractModel{
     private Long StandardStorage;
 
     /**
+    * Current ARCHIVE storage usage in bytes
+    */
+    @SerializedName("ArchiveStorage")
+    @Expose
+    private Long ArchiveStorage;
+
+    /**
+    * Current DEEP ARCHIVE storage usage in bytes
+    */
+    @SerializedName("DeepArchiveStorage")
+    @Expose
+    private Long DeepArchiveStorage;
+
+    /**
      * Get VOD storage billing region. Valid values:
 <li>Chinese Mainland</li>
 <li>Outside Chinese Mainland</li> 
@@ -124,6 +138,38 @@ public class StorageStatData extends AbstractModel{
         this.StandardStorage = StandardStorage;
     }
 
+    /**
+     * Get Current ARCHIVE storage usage in bytes 
+     * @return ArchiveStorage Current ARCHIVE storage usage in bytes
+     */
+    public Long getArchiveStorage() {
+        return this.ArchiveStorage;
+    }
+
+    /**
+     * Set Current ARCHIVE storage usage in bytes
+     * @param ArchiveStorage Current ARCHIVE storage usage in bytes
+     */
+    public void setArchiveStorage(Long ArchiveStorage) {
+        this.ArchiveStorage = ArchiveStorage;
+    }
+
+    /**
+     * Get Current DEEP ARCHIVE storage usage in bytes 
+     * @return DeepArchiveStorage Current DEEP ARCHIVE storage usage in bytes
+     */
+    public Long getDeepArchiveStorage() {
+        return this.DeepArchiveStorage;
+    }
+
+    /**
+     * Set Current DEEP ARCHIVE storage usage in bytes
+     * @param DeepArchiveStorage Current DEEP ARCHIVE storage usage in bytes
+     */
+    public void setDeepArchiveStorage(Long DeepArchiveStorage) {
+        this.DeepArchiveStorage = DeepArchiveStorage;
+    }
+
     public StorageStatData() {
     }
 
@@ -144,6 +190,12 @@ public class StorageStatData extends AbstractModel{
         if (source.StandardStorage != null) {
             this.StandardStorage = new Long(source.StandardStorage);
         }
+        if (source.ArchiveStorage != null) {
+            this.ArchiveStorage = new Long(source.ArchiveStorage);
+        }
+        if (source.DeepArchiveStorage != null) {
+            this.DeepArchiveStorage = new Long(source.DeepArchiveStorage);
+        }
     }
 
 
@@ -155,6 +207,8 @@ public class StorageStatData extends AbstractModel{
         this.setParamSimple(map, prefix + "TotalStorage", this.TotalStorage);
         this.setParamSimple(map, prefix + "InfrequentStorage", this.InfrequentStorage);
         this.setParamSimple(map, prefix + "StandardStorage", this.StandardStorage);
+        this.setParamSimple(map, prefix + "ArchiveStorage", this.ArchiveStorage);
+        this.setParamSimple(map, prefix + "DeepArchiveStorage", this.DeepArchiveStorage);
 
     }
 }

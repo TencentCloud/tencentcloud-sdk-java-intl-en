@@ -38,6 +38,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Host;
 
     /**
+    * Protocol. Options include HTTP and HTTPS. The default option is HTTP.
+    */
+    @SerializedName("Protocol")
+    @Expose
+    private String Protocol;
+
+    /**
      * Get ingress rule value 
      * @return Http ingress rule value
      */
@@ -73,6 +80,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.Host = Host;
     }
 
+    /**
+     * Get Protocol. Options include HTTP and HTTPS. The default option is HTTP. 
+     * @return Protocol Protocol. Options include HTTP and HTTPS. The default option is HTTP.
+     */
+    public String getProtocol() {
+        return this.Protocol;
+    }
+
+    /**
+     * Set Protocol. Options include HTTP and HTTPS. The default option is HTTP.
+     * @param Protocol Protocol. Options include HTTP and HTTPS. The default option is HTTP.
+     */
+    public void setProtocol(String Protocol) {
+        this.Protocol = Protocol;
+    }
+
     public IngressRule() {
     }
 
@@ -87,6 +110,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.Host != null) {
             this.Host = new String(source.Host);
         }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
     }
 
 
@@ -96,6 +122,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Http.", this.Http);
         this.setParamSimple(map, prefix + "Host", this.Host);
+        this.setParamSimple(map, prefix + "Protocol", this.Protocol);
 
     }
 }

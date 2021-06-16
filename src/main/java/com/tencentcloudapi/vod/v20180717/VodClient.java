@@ -1231,8 +1231,7 @@ This API returns the video content duration for intelligent recognition in secon
     }
 
     /**
-     *This API is used to get the list of subapplications to which the current account has permissions, including primary applications. If the subapplication feature has not been enabled, this API will return. 
- `FailedOperation`.
+     *This API is used to query the list of the primary application and subapplications of the current account.
      * @param req DescribeSubAppIdsRequest
      * @return DescribeSubAppIdsResponse
      * @throws TencentCloudSDKException
@@ -1963,11 +1962,12 @@ There are two ways to create a task flow template:
     }
 
     /**
-     ** This API is used to get event notifications from the business server through [reliable callback](https://intl.cloud.tencent.com/document/product/266/33948?lang=en&pg=).
+     ** This API is used to get event notifications from the business server through [reliable callback](https://intl.cloud.tencent.com/document/product/266/33948).
 * The API gets event data through long polling. That is, if there is any unconsumed event on the server, the event notification will be returned to the requester immediately. If there is no unconsumed event on the server, the request will be suspended in the backend until a new event is generated.
 * The request can be suspended for up to 5 seconds. It’s recommended to set the request timeout period to 10 seconds.
-* Event notifications not being pulled will be retained for up to 4 days and may be cleared after this period.
+* Event notifications not pulled will be retained for up to 4 days and may be cleared after this period.
 * After the API returns an event, the caller must call the [ConfirmEvents](https://intl.cloud.tencent.com/document/product/266/34184) API within <font color="red">30 seconds</font> to confirm that the event notification has been processed. Otherwise, the event notification will be pulled again after <font color="red">30 seconds</font>.
+* This API can get up to 16 event notifications at a time.
      * @param req PullEventsRequest
      * @return PullEventsResponse
      * @throws TencentCloudSDKException

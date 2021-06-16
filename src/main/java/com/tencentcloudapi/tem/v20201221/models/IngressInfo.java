@@ -91,6 +91,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Vip;
 
     /**
+    * Creation time.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * Whether to listen on both the HTTP Port 80 and HTTPS Port 443. The default value is `false`. The optional value `true` means listening on both the HTTP Port 80 and HTTPS Port 443.
+    */
+    @SerializedName("Mixed")
+    @Expose
+    private Boolean Mixed;
+
+    /**
      * Get tem namespaceId
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return NamespaceId tem namespaceId
@@ -254,6 +269,42 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.Vip = Vip;
     }
 
+    /**
+     * Get Creation time.
+Note: this field may return `null`, indicating that no valid value can be obtained. 
+     * @return CreateTime Creation time.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set Creation time.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param CreateTime Creation time.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get Whether to listen on both the HTTP Port 80 and HTTPS Port 443. The default value is `false`. The optional value `true` means listening on both the HTTP Port 80 and HTTPS Port 443. 
+     * @return Mixed Whether to listen on both the HTTP Port 80 and HTTPS Port 443. The default value is `false`. The optional value `true` means listening on both the HTTP Port 80 and HTTPS Port 443.
+     */
+    public Boolean getMixed() {
+        return this.Mixed;
+    }
+
+    /**
+     * Set Whether to listen on both the HTTP Port 80 and HTTPS Port 443. The default value is `false`. The optional value `true` means listening on both the HTTP Port 80 and HTTPS Port 443.
+     * @param Mixed Whether to listen on both the HTTP Port 80 and HTTPS Port 443. The default value is `false`. The optional value `true` means listening on both the HTTP Port 80 and HTTPS Port 443.
+     */
+    public void setMixed(Boolean Mixed) {
+        this.Mixed = Mixed;
+    }
+
     public IngressInfo() {
     }
 
@@ -295,6 +346,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.Vip != null) {
             this.Vip = new String(source.Vip);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.Mixed != null) {
+            this.Mixed = new Boolean(source.Mixed);
+        }
     }
 
 
@@ -311,6 +368,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "Tls.", this.Tls);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "Vip", this.Vip);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "Mixed", this.Mixed);
 
     }
 }

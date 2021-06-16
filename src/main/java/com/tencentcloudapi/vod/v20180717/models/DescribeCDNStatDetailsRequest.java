@@ -24,8 +24,9 @@ public class DescribeCDNStatDetailsRequest extends AbstractModel{
 
     /**
     * Metrics to query. Valid values:
-<li>Traffic: traffic in bytes.</li>
-<li>Bandwidth: bandwidth in bps.</li>
+<li>`Traffic`: traffic in bytes</li>
+<li>`Bandwidth`: bandwidth in bps</li>
+<li>`Requests`: the number of requests</li>
     */
     @SerializedName("Metric")
     @Expose
@@ -144,11 +145,13 @@ If the difference between `StartTime` and `EndTime` is larger than 24 hours, the
 
     /**
      * Get Metrics to query. Valid values:
-<li>Traffic: traffic in bytes.</li>
-<li>Bandwidth: bandwidth in bps.</li> 
+<li>`Traffic`: traffic in bytes</li>
+<li>`Bandwidth`: bandwidth in bps</li>
+<li>`Requests`: the number of requests</li> 
      * @return Metric Metrics to query. Valid values:
-<li>Traffic: traffic in bytes.</li>
-<li>Bandwidth: bandwidth in bps.</li>
+<li>`Traffic`: traffic in bytes</li>
+<li>`Bandwidth`: bandwidth in bps</li>
+<li>`Requests`: the number of requests</li>
      */
     public String getMetric() {
         return this.Metric;
@@ -156,11 +159,13 @@ If the difference between `StartTime` and `EndTime` is larger than 24 hours, the
 
     /**
      * Set Metrics to query. Valid values:
-<li>Traffic: traffic in bytes.</li>
-<li>Bandwidth: bandwidth in bps.</li>
+<li>`Traffic`: traffic in bytes</li>
+<li>`Bandwidth`: bandwidth in bps</li>
+<li>`Requests`: the number of requests</li>
      * @param Metric Metrics to query. Valid values:
-<li>Traffic: traffic in bytes.</li>
-<li>Bandwidth: bandwidth in bps.</li>
+<li>`Traffic`: traffic in bytes</li>
+<li>`Bandwidth`: bandwidth in bps</li>
+<li>`Requests`: the number of requests</li>
      */
     public void setMetric(String Metric) {
         this.Metric = Metric;

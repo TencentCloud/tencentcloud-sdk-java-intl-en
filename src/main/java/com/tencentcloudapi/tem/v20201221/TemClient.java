@@ -219,6 +219,26 @@ public class TemClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the list of ingress rules associated with the service.
+     * @param req DescribeRelatedIngressesRequest
+     * @return DescribeRelatedIngressesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRelatedIngressesResponse DescribeRelatedIngresses(DescribeRelatedIngressesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRelatedIngressesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRelatedIngressesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRelatedIngresses");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the list of running pods under a service.
      * @param req DescribeServiceRunPodListV2Request
      * @return DescribeServiceRunPodListV2Response
@@ -271,6 +291,46 @@ public class TemClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyNamespaceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyNamespace");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify a service’s basic information.
+     * @param req ModifyServiceInfoRequest
+     * @return ModifyServiceInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyServiceInfoResponse ModifyServiceInfo(ModifyServiceInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyServiceInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyServiceInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyServiceInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to restart an instance.
+     * @param req RestartServiceRunPodRequest
+     * @return RestartServiceRunPodResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestartServiceRunPodResponse RestartServiceRunPod(RestartServiceRunPodRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RestartServiceRunPodResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RestartServiceRunPodResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RestartServiceRunPod");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

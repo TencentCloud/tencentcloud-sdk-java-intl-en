@@ -197,6 +197,34 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
     private String [] ImageArgs;
 
     /**
+    * Service port mapping.
+    */
+    @SerializedName("PortMappings")
+    @Expose
+    private PortMapping [] PortMappings;
+
+    /**
+    * Whether to add the registry’s default configurations.
+    */
+    @SerializedName("UseRegistryDefaultConfig")
+    @Expose
+    private Boolean UseRegistryDefaultConfig;
+
+    /**
+    * 
+    */
+    @SerializedName("SettingConfs")
+    @Expose
+    private MountedSettingConf [] SettingConfs;
+
+    /**
+    * 
+    */
+    @SerializedName("EksService")
+    @Expose
+    private EksService EksService;
+
+    /**
      * Get Service ID 
      * @return ServiceId Service ID
      */
@@ -604,6 +632,70 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
         this.ImageArgs = ImageArgs;
     }
 
+    /**
+     * Get Service port mapping. 
+     * @return PortMappings Service port mapping.
+     */
+    public PortMapping [] getPortMappings() {
+        return this.PortMappings;
+    }
+
+    /**
+     * Set Service port mapping.
+     * @param PortMappings Service port mapping.
+     */
+    public void setPortMappings(PortMapping [] PortMappings) {
+        this.PortMappings = PortMappings;
+    }
+
+    /**
+     * Get Whether to add the registry’s default configurations. 
+     * @return UseRegistryDefaultConfig Whether to add the registry’s default configurations.
+     */
+    public Boolean getUseRegistryDefaultConfig() {
+        return this.UseRegistryDefaultConfig;
+    }
+
+    /**
+     * Set Whether to add the registry’s default configurations.
+     * @param UseRegistryDefaultConfig Whether to add the registry’s default configurations.
+     */
+    public void setUseRegistryDefaultConfig(Boolean UseRegistryDefaultConfig) {
+        this.UseRegistryDefaultConfig = UseRegistryDefaultConfig;
+    }
+
+    /**
+     * Get  
+     * @return SettingConfs 
+     */
+    public MountedSettingConf [] getSettingConfs() {
+        return this.SettingConfs;
+    }
+
+    /**
+     * Set 
+     * @param SettingConfs 
+     */
+    public void setSettingConfs(MountedSettingConf [] SettingConfs) {
+        this.SettingConfs = SettingConfs;
+    }
+
+    /**
+     * Get  
+     * @return EksService 
+     */
+    public EksService getEksService() {
+        return this.EksService;
+    }
+
+    /**
+     * Set 
+     * @param EksService 
+     */
+    public void setEksService(EksService EksService) {
+        this.EksService = EksService;
+    }
+
     public DeployServiceV2Request() {
     }
 
@@ -702,6 +794,24 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
                 this.ImageArgs[i] = new String(source.ImageArgs[i]);
             }
         }
+        if (source.PortMappings != null) {
+            this.PortMappings = new PortMapping[source.PortMappings.length];
+            for (int i = 0; i < source.PortMappings.length; i++) {
+                this.PortMappings[i] = new PortMapping(source.PortMappings[i]);
+            }
+        }
+        if (source.UseRegistryDefaultConfig != null) {
+            this.UseRegistryDefaultConfig = new Boolean(source.UseRegistryDefaultConfig);
+        }
+        if (source.SettingConfs != null) {
+            this.SettingConfs = new MountedSettingConf[source.SettingConfs.length];
+            for (int i = 0; i < source.SettingConfs.length; i++) {
+                this.SettingConfs[i] = new MountedSettingConf(source.SettingConfs[i]);
+            }
+        }
+        if (source.EksService != null) {
+            this.EksService = new EksService(source.EksService);
+        }
     }
 
 
@@ -733,6 +843,10 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "ImageCommand", this.ImageCommand);
         this.setParamArraySimple(map, prefix + "ImageArgs.", this.ImageArgs);
+        this.setParamArrayObj(map, prefix + "PortMappings.", this.PortMappings);
+        this.setParamSimple(map, prefix + "UseRegistryDefaultConfig", this.UseRegistryDefaultConfig);
+        this.setParamArrayObj(map, prefix + "SettingConfs.", this.SettingConfs);
+        this.setParamObj(map, prefix + "EksService.", this.EksService);
 
     }
 }

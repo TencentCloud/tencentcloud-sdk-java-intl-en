@@ -86,6 +86,13 @@ public class LayoutParams extends AbstractModel{
     private Long PureAudioHoldPlaceMode;
 
     /**
+    * Watermark parameters
+    */
+    @SerializedName("WaterMarkParams")
+    @Expose
+    private WaterMarkParams WaterMarkParams;
+
+    /**
      * Get On-cloud stream mix layout template ID. 0: floating template (default value); 1: grid template; 2: screen sharing template; 3: picture-in-picture template; 4: custom template. 
      * @return Template On-cloud stream mix layout template ID. 0: floating template (default value); 1: grid template; 2: screen sharing template; 3: picture-in-picture template; 4: custom template.
      */
@@ -229,6 +236,22 @@ public class LayoutParams extends AbstractModel{
         this.PureAudioHoldPlaceMode = PureAudioHoldPlaceMode;
     }
 
+    /**
+     * Get Watermark parameters 
+     * @return WaterMarkParams Watermark parameters
+     */
+    public WaterMarkParams getWaterMarkParams() {
+        return this.WaterMarkParams;
+    }
+
+    /**
+     * Set Watermark parameters
+     * @param WaterMarkParams Watermark parameters
+     */
+    public void setWaterMarkParams(WaterMarkParams WaterMarkParams) {
+        this.WaterMarkParams = WaterMarkParams;
+    }
+
     public LayoutParams() {
     }
 
@@ -270,6 +293,9 @@ public class LayoutParams extends AbstractModel{
         if (source.PureAudioHoldPlaceMode != null) {
             this.PureAudioHoldPlaceMode = new Long(source.PureAudioHoldPlaceMode);
         }
+        if (source.WaterMarkParams != null) {
+            this.WaterMarkParams = new WaterMarkParams(source.WaterMarkParams);
+        }
     }
 
 
@@ -286,6 +312,7 @@ public class LayoutParams extends AbstractModel{
         this.setParamArrayObj(map, prefix + "PresetLayoutConfig.", this.PresetLayoutConfig);
         this.setParamSimple(map, prefix + "PlaceHolderMode", this.PlaceHolderMode);
         this.setParamSimple(map, prefix + "PureAudioHoldPlaceMode", this.PureAudioHoldPlaceMode);
+        this.setParamObj(map, prefix + "WaterMarkParams.", this.WaterMarkParams);
 
     }
 }
