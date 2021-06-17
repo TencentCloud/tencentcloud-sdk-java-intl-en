@@ -1,0 +1,146 @@
+package com.tencentcloudapi.mongodb.v20190725;
+public enum MongodbErrorCode {
+    // CAM signature/authentication error
+     AUTHFAILURE("AuthFailure"),
+     
+    // Internal error
+     INTERNALERROR("InternalError"),
+     
+    // `appId` verification failed.
+     INTERNALERROR_CHECKAPPIDFAILED("InternalError.CheckAppIdFailed"),
+     
+    // Parameter error
+     INVALIDPARAMETER("InvalidParameter"),
+     
+    // The current subaccount has no permission to perform this operation.
+     INVALIDPARAMETER_PERMISSIONDENIED("InvalidParameter.PermissionDenied"),
+     
+    // Instances are not purchasable in this AZ.
+     INVALIDPARAMETER_ZONECLOSED("InvalidParameter.ZoneClosed"),
+     
+    // Invalid parameter value
+     INVALIDPARAMETERVALUE("InvalidParameterValue"),
+     
+    // The backup file was not found.
+     INVALIDPARAMETERVALUE_BACKUPFILENOTFOUND("InvalidParameterValue.BackupFileNotFound"),
+     
+    // `appId` verification failed.
+     INVALIDPARAMETERVALUE_CHECKAPPIDFAILED("InvalidParameterValue.CheckAppIdFailed"),
+     
+    // Invalid instance type.
+     INVALIDPARAMETERVALUE_CLUSTERTYPEERROR("InvalidParameterValue.ClusterTypeError"),
+     
+    // Invalid instance name
+     INVALIDPARAMETERVALUE_ILLEGALINSTANCENAME("InvalidParameterValue.IllegalInstanceName"),
+     
+    // Invalid instance status
+     INVALIDPARAMETERVALUE_ILLEGALINSTANCESTATUS("InvalidParameterValue.IllegalInstanceStatus"),
+     
+    // The instance cannot be deactivated in the current status. Only isolated instances can be deactivated.
+     INVALIDPARAMETERVALUE_ILLEGALSTATUSTOOFFLINE("InvalidParameterValue.IllegalStatusToOffline"),
+     
+    // The instance has been deleted.
+     INVALIDPARAMETERVALUE_INSTANCEHASBEENDELETED("InvalidParameterValue.InstanceHasBeenDeleted"),
+     
+    // The instance has been isolated.
+     INVALIDPARAMETERVALUE_INSTANCEHASBEENISOLATED("InvalidParameterValue.InstanceHasBeenIsolated"),
+     
+    // Billing error. Corresponding purchase/renewal/configuration change operations are not allowed for the current instance.
+     INVALIDPARAMETERVALUE_INVALIDTRADEOPERATION("InvalidParameterValue.InvalidTradeOperation"),
+     
+    // Instance lock failed.
+     INVALIDPARAMETERVALUE_LOCKFAILED("InvalidParameterValue.LockFailed"),
+     
+    // Incorrect model.
+     INVALIDPARAMETERVALUE_MACHINETYPEERROR("InvalidParameterValue.MachineTypeError"),
+     
+    // Memory and disk must be upgraded or degraded simultaneously.
+     INVALIDPARAMETERVALUE_MODIFYMODEERROR("InvalidParameterValue.ModifyModeError"),
+     
+    // The instance version is incorrect.
+     INVALIDPARAMETERVALUE_MONGOVERSIONERROR("InvalidParameterValue.MongoVersionError"),
+     
+    // The instance version does not support querying the instance client information.
+     INVALIDPARAMETERVALUE_MONGOVERSIONNOTSUPPORTQUERYCLIENT("InvalidParameterValue.MongoVersionNotSupportQueryClient"),
+     
+    // The instance was not found.
+     INVALIDPARAMETERVALUE_NOTFOUNDINSTANCE("InvalidParameterValue.NotFoundInstance"),
+     
+    // The `OplogSize` parameter is set incorrectly and should be between 10% and 90% of the disk capacity.
+     INVALIDPARAMETERVALUE_OPLOGSIZEOUTOFRANGE("InvalidParameterValue.OplogSizeOutOfRange"),
+     
+    // The password is non-compliant.
+     INVALIDPARAMETERVALUE_PASSWORDRULEFAILED("InvalidParameterValue.PasswordRuleFailed"),
+     
+    // The number of postpaid instances in a single region exceeds the limit.
+     INVALIDPARAMETERVALUE_POSTPAIDINSTANCEBEYONDLIMIT("InvalidParameterValue.PostPaidInstanceBeyondLimit"),
+     
+    // Prepaid instances cannot be terminated.
+     INVALIDPARAMETERVALUE_PREPAIDINSTANCEUNABLETOISOLATE("InvalidParameterValue.PrePaidInstanceUnableToIsolate"),
+     
+    // The project does not exist.
+     INVALIDPARAMETERVALUE_PROJECTNOTFOUND("InvalidParameterValue.ProjectNotFound"),
+     
+    // The proxy version does not support querying the instance client information. Please submit a ticket for upgrade.
+     INVALIDPARAMETERVALUE_PROXYNOTSUPPORTQUERYCLIENT("InvalidParameterValue.ProxyNotSupportQueryClient"),
+     
+    // Only slow logs generated in the past seven days can be queried.
+     INVALIDPARAMETERVALUE_QUERYTIMEOUTOFRANGE("InvalidParameterValue.QueryTimeOutOfRange"),
+     
+    // Only slow logs generated in the past seven days can be queried.
+     INVALIDPARAMETERVALUE_QUERYTIMERANGEBEYONDLIMIT("InvalidParameterValue.QueryTimeRangeBeyondLimit"),
+     
+    // Invalid region
+     INVALIDPARAMETERVALUE_REGIONERROR("InvalidParameterValue.RegionError"),
+     
+    // The region does not support querying the instance client information.
+     INVALIDPARAMETERVALUE_REGIONNOTSUPPORTQUERYCLIENT("InvalidParameterValue.RegionNotSupportQueryClient"),
+     
+    // Incorrect number of replica sets (shards).
+     INVALIDPARAMETERVALUE_REPLICASETNUMERROR("InvalidParameterValue.ReplicaSetNumError"),
+     
+    // Incorrect number of secondary nodes.
+     INVALIDPARAMETERVALUE_SECONDARYNUMERROR("InvalidParameterValue.SecondaryNumError"),
+     
+    // The disk size to be set cannot be less than 1.2 times the used disk capacity.
+     INVALIDPARAMETERVALUE_SETDISKLESSTHANUSED("InvalidParameterValue.SetDiskLessThanUsed"),
+     
+    // The value of the `slowMS` parameter should be at least 100 ms.
+     INVALIDPARAMETERVALUE_SLOWMSBELOWLIMIT("InvalidParameterValue.SlowMSBelowLimit"),
+     
+    // Incorrect purchasable specification.
+     INVALIDPARAMETERVALUE_SPECNOTONSALE("InvalidParameterValue.SpecNotOnSale"),
+     
+    // The start time should be earlier than the end time.
+     INVALIDPARAMETERVALUE_STARTTIMENOTBEFORETHANENDTIME("InvalidParameterValue.StartTimeNotBeforeThanEndTime"),
+     
+    // The instance is in a status where operations are not allowed.
+     INVALIDPARAMETERVALUE_STATUSABNORMAL("InvalidParameterValue.StatusAbnormal"),
+     
+    // The specified tag was not found.
+     INVALIDPARAMETERVALUE_TAGNOTFOUND("InvalidParameterValue.TagNotFound"),
+     
+    // The user account does not exist.
+     INVALIDPARAMETERVALUE_USERNOTFOUND("InvalidParameterValue.UserNotFound"),
+     
+    // The VPC (subnet) was not found.
+     INVALIDPARAMETERVALUE_VPCIDORSUBNETIDNOTFOUND("InvalidParameterValue.VpcIdOrSubnetIdNotFound"),
+     
+    // Instances are not purchasable in this AZ.
+     INVALIDPARAMETERVALUE_ZONECLOSED("InvalidParameterValue.ZoneClosed"),
+     
+    // Invalid availability zone
+     INVALIDPARAMETERVALUE_ZONEERROR("InvalidParameterValue.ZoneError");
+     
+    private String value;
+    private MongodbErrorCode (String value){
+        this.value = value;
+    }
+    /**
+     * @return errorcode value
+     */
+    public String getValue() {
+        return value;
+    }
+}
+

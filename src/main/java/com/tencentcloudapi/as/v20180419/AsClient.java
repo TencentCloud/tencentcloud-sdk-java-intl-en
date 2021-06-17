@@ -655,9 +655,7 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
      *This API is used to remove CVM instances from a scaling group. Instances removed via this API will not be terminated.
 * If the number of remaining `IN_SERVICE` instances in the scaling group is less than the minimum capacity, this API will return an error.
 * However, if the scaling group is in `DISABLED` status, the removal will not verify the relationship between the number of `IN_SERVICE` instances and the minimum capacity.
-
-The CVM will be associated from the CLB instance (if any).
- 
+* This removal will unassociate the CVM from the CLB instance that has been configured for the scaling group.
      * @param req DetachInstancesRequest
      * @return DetachInstancesResponse
      * @throws TencentCloudSDKException
@@ -911,9 +909,7 @@ The CVM will be associated from the CLB instance (if any).
      *This API is used to delete CVM instances from a scaling group. Instances that are automatically created through AS will be terminated, while those manually added to the scaling group will be removed and retained.
 * If the number of remaining `IN_SERVICE` instances in the scaling group is less than the minimum capacity, this API will return an error.
 * However, if the scaling group is in `DISABLED` status, the removal will not verify the relationship between the number of `IN_SERVICE` instances and the minimum capacity.
-
-This removal will unassociate the CVM from the CLB instance that has been configured for the scaling group.
- 
+* This removal will unassociate the CVM from the CLB instance that has been configured for the scaling group.
      * @param req RemoveInstancesRequest
      * @return RemoveInstancesResponse
      * @throws TencentCloudSDKException
@@ -925,6 +921,54 @@ This removal will unassociate the CVM from the CLB instance that has been config
                 Type type = new TypeToken<JsonResponseModel<RemoveInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RemoveInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to reduce the specified number of instances from the scaling group, which returns the scaling activity ID `ActivityId`.
+* The scaling group is not active.
+* The scale-in instances will be selected according to the `TerminationPolicies` policy as described in [Reducing Capacity](https://intl.cloud.tencent.com/document/product/377/8563?from_cn_redirect=1).
+* Only the `IN_SERVICE` instances will be reduced. To reduce instances in other statues, use the [`DetachInstances`](https://intl.cloud.tencent.com/document/api/377/20436?from_cn_redirect=1) or [`RemoveInstances`](https://intl.cloud.tencent.com/document/api/377/20431?from_cn_redirect=1) API.
+* The desired capacity will be reduced accordingly. The new desired capacity should be no less than the minimum capacity.
+* If the scale-in activity failed or partially succeeded, the final desired capacity only deducts the instances that have been reduced successfully.
+     * @param req ScaleInInstancesRequest
+     * @return ScaleInInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ScaleInInstancesResponse ScaleInInstances(ScaleInInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ScaleInInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ScaleInInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ScaleInInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to add the specified number of instances to the scaling group, which returns the scaling activity ID `ActivityId`.
+* The scaling group is not active.
+* The desired capacity will be increased accordingly. The new desired capacity should be no more than the maximum capacity.
+* If the scale-out activity failed or partially succeeded, the final desired capacity only includes the instances that have been added successfully.
+     * @param req ScaleOutInstancesRequest
+     * @return ScaleOutInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ScaleOutInstancesResponse ScaleOutInstances(ScaleOutInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ScaleOutInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ScaleOutInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ScaleOutInstances");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
