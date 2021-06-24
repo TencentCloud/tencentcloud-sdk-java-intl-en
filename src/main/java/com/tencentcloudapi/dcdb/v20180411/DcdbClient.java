@@ -422,6 +422,26 @@ If no filter is specified, 10 instances will be returned by default. Up to 100 i
     }
 
     /**
+     *This API is used to query task status.
+     * @param req DescribeFlowRequest
+     * @return DescribeFlowResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFlowResponse DescribeFlow(DescribeFlowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFlowResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFlowResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeFlow");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the security group details of a project.
      * @param req DescribeProjectSecurityGroupsRequest
      * @return DescribeProjectSecurityGroupsResponse
@@ -454,6 +474,46 @@ If no filter is specified, 10 instances will be returned by default. Up to 100 i
                 Type type = new TypeToken<JsonResponseModel<DescribeProjectsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeProjects");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to terminate an isolated monthly-subscribed instance.
+     * @param req DestroyDCDBInstanceRequest
+     * @return DestroyDCDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DestroyDCDBInstanceResponse DestroyDCDBInstance(DestroyDCDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DestroyDCDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DestroyDCDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DestroyDCDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to terminate a pay-as-you-go instance.
+     * @param req DestroyHourDCDBInstanceRequest
+     * @return DestroyHourDCDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DestroyHourDCDBInstanceResponse DestroyHourDCDBInstance(DestroyHourDCDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DestroyHourDCDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DestroyHourDCDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DestroyHourDCDBInstance");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -221,6 +221,26 @@ public class GseClient extends AbstractClient{
     }
 
     /**
+     *This API is used to terminate the game server session and the corresponding process, which is applicable to time-limited protection and no protection.
+     * @param req EndGameServerSessionAndProcessRequest
+     * @return EndGameServerSessionAndProcessResponse
+     * @throws TencentCloudSDKException
+     */
+    public EndGameServerSessionAndProcessResponse EndGameServerSessionAndProcess(EndGameServerSessionAndProcessRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EndGameServerSessionAndProcessResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EndGameServerSessionAndProcessResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EndGameServerSessionAndProcess");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the log URL of a game server session.
      * @param req GetGameServerSessionLogUrlRequest
      * @return GetGameServerSessionLogUrlResponse
