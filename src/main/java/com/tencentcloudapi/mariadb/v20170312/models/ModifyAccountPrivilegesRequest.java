@@ -1,0 +1,345 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.mariadb.v20170312.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class ModifyAccountPrivilegesRequest extends AbstractModel{
+
+    /**
+    * Instance ID in the format of tdsql-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * Database account, including username and host address.
+    */
+    @SerializedName("Accounts")
+    @Expose
+    private Account [] Accounts;
+
+    /**
+    * Global permission. Valid values of `GlobalPrivileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"DELETE"`, `"CREATE"`, `"PROCESS"`, `"DROP"`, `"REFERENCES"`, `"INDEX"`, `"ALTER"`, `"SHOW DATABASES"`, `"CREATE TEMPORARY TABLES"`, `"LOCK TABLES"`, `"EXECUTE"`, `"CREATE VIEW"`, `"SHOW VIEW"`, `"CREATE ROUTINE"`, `"ALTER ROUTINE"`, `"EVENT"`, `"TRIGGER"`.
+Note: if the parameter is left empty, no change will be made to the granted global permissions. To clear the granted global permissions, set the parameter to an empty array.
+    */
+    @SerializedName("GlobalPrivileges")
+    @Expose
+    private String [] GlobalPrivileges;
+
+    /**
+    * Database permission. Valid values of `Privileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"DELETE"`, `"CREATE"`, `"DROP"`, `"REFERENCES"`, `"INDEX"`, `"ALTER"`, `"CREATE TEMPORARY TABLES"`, `"LOCK TABLES"`, `"EXECUTE"`, `"CREATE VIEW"`, `"SHOW VIEW"`, `"CREATE ROUTINE"`, `"ALTER ROUTINE"`, `"EVENT"`, `"TRIGGER"`.
+Note: if the parameter is left empty, no change will be made to the granted database permissions. To clear the granted database permissions, set `Privileges` to an empty array.
+    */
+    @SerializedName("DatabasePrivileges")
+    @Expose
+    private DatabasePrivilege [] DatabasePrivileges;
+
+    /**
+    * Table permission. Valid values of `Privileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"DELETE"`, `"CREATE"`, `"DROP"`, `"REFERENCES"`, `"INDEX"`, `"ALTER"`, `"CREATE VIEW"`, `"SHOW VIEW"`, `"TRIGGER"`.
+Note: if the parameter is left empty, no change will be made to the granted table permissions. To clear the granted table permissions, set `Privileges` to an empty array.
+    */
+    @SerializedName("TablePrivileges")
+    @Expose
+    private TablePrivilege [] TablePrivileges;
+
+    /**
+    * Column permission. Valid values of `Privileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"REFERENCES"`.
+Note: if the parameter is left empty, no change will be made to the granted column permissions. To clear the granted column permissions, set `Privileges` to an empty array.
+    */
+    @SerializedName("ColumnPrivileges")
+    @Expose
+    private ColumnPrivilege [] ColumnPrivileges;
+
+    /**
+    * View permission. Valid values of `Privileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"DELETE"`, `"CREATE"`, `"DROP"`, `"REFERENCES"`, `"INDEX"`, `"ALTER"`, `"CREATE VIEW"`, `"SHOW VIEW"`, `"TRIGGER"`.
+Note: if the parameter is left empty, no change will be made to the granted view permissions. To clear the granted view permissions, set `Privileges` to an empty array.
+    */
+    @SerializedName("ViewPrivileges")
+    @Expose
+    private ViewPrivileges [] ViewPrivileges;
+
+    /**
+    * Function permissions. Valid values of `Privileges`: `"ALTER ROUTINE"`, `"EXECUTE"`.
+Note: if the parameter is left empty, no change will be made to the granted function permissions. To clear the granted function permissions, set `Privileges` to an empty array.
+    */
+    @SerializedName("FunctionPrivileges")
+    @Expose
+    private FunctionPrivilege [] FunctionPrivileges;
+
+    /**
+    * Stored procedure permission. Valid values of `Privileges`: `"ALTER ROUTINE"`, `"EXECUTE"`.
+Note: if the parameter is left empty, no change will be made to the granted stored procedure permissions. To clear the granted stored procedure permissions, set `Privileges` to an empty array.
+    */
+    @SerializedName("ProcedurePrivileges")
+    @Expose
+    private ProcedurePrivilege [] ProcedurePrivileges;
+
+    /**
+     * Get Instance ID in the format of tdsql-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console. 
+     * @return InstanceId Instance ID in the format of tdsql-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set Instance ID in the format of tdsql-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+     * @param InstanceId Instance ID in the format of tdsql-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get Database account, including username and host address. 
+     * @return Accounts Database account, including username and host address.
+     */
+    public Account [] getAccounts() {
+        return this.Accounts;
+    }
+
+    /**
+     * Set Database account, including username and host address.
+     * @param Accounts Database account, including username and host address.
+     */
+    public void setAccounts(Account [] Accounts) {
+        this.Accounts = Accounts;
+    }
+
+    /**
+     * Get Global permission. Valid values of `GlobalPrivileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"DELETE"`, `"CREATE"`, `"PROCESS"`, `"DROP"`, `"REFERENCES"`, `"INDEX"`, `"ALTER"`, `"SHOW DATABASES"`, `"CREATE TEMPORARY TABLES"`, `"LOCK TABLES"`, `"EXECUTE"`, `"CREATE VIEW"`, `"SHOW VIEW"`, `"CREATE ROUTINE"`, `"ALTER ROUTINE"`, `"EVENT"`, `"TRIGGER"`.
+Note: if the parameter is left empty, no change will be made to the granted global permissions. To clear the granted global permissions, set the parameter to an empty array. 
+     * @return GlobalPrivileges Global permission. Valid values of `GlobalPrivileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"DELETE"`, `"CREATE"`, `"PROCESS"`, `"DROP"`, `"REFERENCES"`, `"INDEX"`, `"ALTER"`, `"SHOW DATABASES"`, `"CREATE TEMPORARY TABLES"`, `"LOCK TABLES"`, `"EXECUTE"`, `"CREATE VIEW"`, `"SHOW VIEW"`, `"CREATE ROUTINE"`, `"ALTER ROUTINE"`, `"EVENT"`, `"TRIGGER"`.
+Note: if the parameter is left empty, no change will be made to the granted global permissions. To clear the granted global permissions, set the parameter to an empty array.
+     */
+    public String [] getGlobalPrivileges() {
+        return this.GlobalPrivileges;
+    }
+
+    /**
+     * Set Global permission. Valid values of `GlobalPrivileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"DELETE"`, `"CREATE"`, `"PROCESS"`, `"DROP"`, `"REFERENCES"`, `"INDEX"`, `"ALTER"`, `"SHOW DATABASES"`, `"CREATE TEMPORARY TABLES"`, `"LOCK TABLES"`, `"EXECUTE"`, `"CREATE VIEW"`, `"SHOW VIEW"`, `"CREATE ROUTINE"`, `"ALTER ROUTINE"`, `"EVENT"`, `"TRIGGER"`.
+Note: if the parameter is left empty, no change will be made to the granted global permissions. To clear the granted global permissions, set the parameter to an empty array.
+     * @param GlobalPrivileges Global permission. Valid values of `GlobalPrivileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"DELETE"`, `"CREATE"`, `"PROCESS"`, `"DROP"`, `"REFERENCES"`, `"INDEX"`, `"ALTER"`, `"SHOW DATABASES"`, `"CREATE TEMPORARY TABLES"`, `"LOCK TABLES"`, `"EXECUTE"`, `"CREATE VIEW"`, `"SHOW VIEW"`, `"CREATE ROUTINE"`, `"ALTER ROUTINE"`, `"EVENT"`, `"TRIGGER"`.
+Note: if the parameter is left empty, no change will be made to the granted global permissions. To clear the granted global permissions, set the parameter to an empty array.
+     */
+    public void setGlobalPrivileges(String [] GlobalPrivileges) {
+        this.GlobalPrivileges = GlobalPrivileges;
+    }
+
+    /**
+     * Get Database permission. Valid values of `Privileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"DELETE"`, `"CREATE"`, `"DROP"`, `"REFERENCES"`, `"INDEX"`, `"ALTER"`, `"CREATE TEMPORARY TABLES"`, `"LOCK TABLES"`, `"EXECUTE"`, `"CREATE VIEW"`, `"SHOW VIEW"`, `"CREATE ROUTINE"`, `"ALTER ROUTINE"`, `"EVENT"`, `"TRIGGER"`.
+Note: if the parameter is left empty, no change will be made to the granted database permissions. To clear the granted database permissions, set `Privileges` to an empty array. 
+     * @return DatabasePrivileges Database permission. Valid values of `Privileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"DELETE"`, `"CREATE"`, `"DROP"`, `"REFERENCES"`, `"INDEX"`, `"ALTER"`, `"CREATE TEMPORARY TABLES"`, `"LOCK TABLES"`, `"EXECUTE"`, `"CREATE VIEW"`, `"SHOW VIEW"`, `"CREATE ROUTINE"`, `"ALTER ROUTINE"`, `"EVENT"`, `"TRIGGER"`.
+Note: if the parameter is left empty, no change will be made to the granted database permissions. To clear the granted database permissions, set `Privileges` to an empty array.
+     */
+    public DatabasePrivilege [] getDatabasePrivileges() {
+        return this.DatabasePrivileges;
+    }
+
+    /**
+     * Set Database permission. Valid values of `Privileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"DELETE"`, `"CREATE"`, `"DROP"`, `"REFERENCES"`, `"INDEX"`, `"ALTER"`, `"CREATE TEMPORARY TABLES"`, `"LOCK TABLES"`, `"EXECUTE"`, `"CREATE VIEW"`, `"SHOW VIEW"`, `"CREATE ROUTINE"`, `"ALTER ROUTINE"`, `"EVENT"`, `"TRIGGER"`.
+Note: if the parameter is left empty, no change will be made to the granted database permissions. To clear the granted database permissions, set `Privileges` to an empty array.
+     * @param DatabasePrivileges Database permission. Valid values of `Privileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"DELETE"`, `"CREATE"`, `"DROP"`, `"REFERENCES"`, `"INDEX"`, `"ALTER"`, `"CREATE TEMPORARY TABLES"`, `"LOCK TABLES"`, `"EXECUTE"`, `"CREATE VIEW"`, `"SHOW VIEW"`, `"CREATE ROUTINE"`, `"ALTER ROUTINE"`, `"EVENT"`, `"TRIGGER"`.
+Note: if the parameter is left empty, no change will be made to the granted database permissions. To clear the granted database permissions, set `Privileges` to an empty array.
+     */
+    public void setDatabasePrivileges(DatabasePrivilege [] DatabasePrivileges) {
+        this.DatabasePrivileges = DatabasePrivileges;
+    }
+
+    /**
+     * Get Table permission. Valid values of `Privileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"DELETE"`, `"CREATE"`, `"DROP"`, `"REFERENCES"`, `"INDEX"`, `"ALTER"`, `"CREATE VIEW"`, `"SHOW VIEW"`, `"TRIGGER"`.
+Note: if the parameter is left empty, no change will be made to the granted table permissions. To clear the granted table permissions, set `Privileges` to an empty array. 
+     * @return TablePrivileges Table permission. Valid values of `Privileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"DELETE"`, `"CREATE"`, `"DROP"`, `"REFERENCES"`, `"INDEX"`, `"ALTER"`, `"CREATE VIEW"`, `"SHOW VIEW"`, `"TRIGGER"`.
+Note: if the parameter is left empty, no change will be made to the granted table permissions. To clear the granted table permissions, set `Privileges` to an empty array.
+     */
+    public TablePrivilege [] getTablePrivileges() {
+        return this.TablePrivileges;
+    }
+
+    /**
+     * Set Table permission. Valid values of `Privileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"DELETE"`, `"CREATE"`, `"DROP"`, `"REFERENCES"`, `"INDEX"`, `"ALTER"`, `"CREATE VIEW"`, `"SHOW VIEW"`, `"TRIGGER"`.
+Note: if the parameter is left empty, no change will be made to the granted table permissions. To clear the granted table permissions, set `Privileges` to an empty array.
+     * @param TablePrivileges Table permission. Valid values of `Privileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"DELETE"`, `"CREATE"`, `"DROP"`, `"REFERENCES"`, `"INDEX"`, `"ALTER"`, `"CREATE VIEW"`, `"SHOW VIEW"`, `"TRIGGER"`.
+Note: if the parameter is left empty, no change will be made to the granted table permissions. To clear the granted table permissions, set `Privileges` to an empty array.
+     */
+    public void setTablePrivileges(TablePrivilege [] TablePrivileges) {
+        this.TablePrivileges = TablePrivileges;
+    }
+
+    /**
+     * Get Column permission. Valid values of `Privileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"REFERENCES"`.
+Note: if the parameter is left empty, no change will be made to the granted column permissions. To clear the granted column permissions, set `Privileges` to an empty array. 
+     * @return ColumnPrivileges Column permission. Valid values of `Privileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"REFERENCES"`.
+Note: if the parameter is left empty, no change will be made to the granted column permissions. To clear the granted column permissions, set `Privileges` to an empty array.
+     */
+    public ColumnPrivilege [] getColumnPrivileges() {
+        return this.ColumnPrivileges;
+    }
+
+    /**
+     * Set Column permission. Valid values of `Privileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"REFERENCES"`.
+Note: if the parameter is left empty, no change will be made to the granted column permissions. To clear the granted column permissions, set `Privileges` to an empty array.
+     * @param ColumnPrivileges Column permission. Valid values of `Privileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"REFERENCES"`.
+Note: if the parameter is left empty, no change will be made to the granted column permissions. To clear the granted column permissions, set `Privileges` to an empty array.
+     */
+    public void setColumnPrivileges(ColumnPrivilege [] ColumnPrivileges) {
+        this.ColumnPrivileges = ColumnPrivileges;
+    }
+
+    /**
+     * Get View permission. Valid values of `Privileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"DELETE"`, `"CREATE"`, `"DROP"`, `"REFERENCES"`, `"INDEX"`, `"ALTER"`, `"CREATE VIEW"`, `"SHOW VIEW"`, `"TRIGGER"`.
+Note: if the parameter is left empty, no change will be made to the granted view permissions. To clear the granted view permissions, set `Privileges` to an empty array. 
+     * @return ViewPrivileges View permission. Valid values of `Privileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"DELETE"`, `"CREATE"`, `"DROP"`, `"REFERENCES"`, `"INDEX"`, `"ALTER"`, `"CREATE VIEW"`, `"SHOW VIEW"`, `"TRIGGER"`.
+Note: if the parameter is left empty, no change will be made to the granted view permissions. To clear the granted view permissions, set `Privileges` to an empty array.
+     */
+    public ViewPrivileges [] getViewPrivileges() {
+        return this.ViewPrivileges;
+    }
+
+    /**
+     * Set View permission. Valid values of `Privileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"DELETE"`, `"CREATE"`, `"DROP"`, `"REFERENCES"`, `"INDEX"`, `"ALTER"`, `"CREATE VIEW"`, `"SHOW VIEW"`, `"TRIGGER"`.
+Note: if the parameter is left empty, no change will be made to the granted view permissions. To clear the granted view permissions, set `Privileges` to an empty array.
+     * @param ViewPrivileges View permission. Valid values of `Privileges`: `"SELECT"`, `"INSERT"`, `"UPDATE"`, `"DELETE"`, `"CREATE"`, `"DROP"`, `"REFERENCES"`, `"INDEX"`, `"ALTER"`, `"CREATE VIEW"`, `"SHOW VIEW"`, `"TRIGGER"`.
+Note: if the parameter is left empty, no change will be made to the granted view permissions. To clear the granted view permissions, set `Privileges` to an empty array.
+     */
+    public void setViewPrivileges(ViewPrivileges [] ViewPrivileges) {
+        this.ViewPrivileges = ViewPrivileges;
+    }
+
+    /**
+     * Get Function permissions. Valid values of `Privileges`: `"ALTER ROUTINE"`, `"EXECUTE"`.
+Note: if the parameter is left empty, no change will be made to the granted function permissions. To clear the granted function permissions, set `Privileges` to an empty array. 
+     * @return FunctionPrivileges Function permissions. Valid values of `Privileges`: `"ALTER ROUTINE"`, `"EXECUTE"`.
+Note: if the parameter is left empty, no change will be made to the granted function permissions. To clear the granted function permissions, set `Privileges` to an empty array.
+     */
+    public FunctionPrivilege [] getFunctionPrivileges() {
+        return this.FunctionPrivileges;
+    }
+
+    /**
+     * Set Function permissions. Valid values of `Privileges`: `"ALTER ROUTINE"`, `"EXECUTE"`.
+Note: if the parameter is left empty, no change will be made to the granted function permissions. To clear the granted function permissions, set `Privileges` to an empty array.
+     * @param FunctionPrivileges Function permissions. Valid values of `Privileges`: `"ALTER ROUTINE"`, `"EXECUTE"`.
+Note: if the parameter is left empty, no change will be made to the granted function permissions. To clear the granted function permissions, set `Privileges` to an empty array.
+     */
+    public void setFunctionPrivileges(FunctionPrivilege [] FunctionPrivileges) {
+        this.FunctionPrivileges = FunctionPrivileges;
+    }
+
+    /**
+     * Get Stored procedure permission. Valid values of `Privileges`: `"ALTER ROUTINE"`, `"EXECUTE"`.
+Note: if the parameter is left empty, no change will be made to the granted stored procedure permissions. To clear the granted stored procedure permissions, set `Privileges` to an empty array. 
+     * @return ProcedurePrivileges Stored procedure permission. Valid values of `Privileges`: `"ALTER ROUTINE"`, `"EXECUTE"`.
+Note: if the parameter is left empty, no change will be made to the granted stored procedure permissions. To clear the granted stored procedure permissions, set `Privileges` to an empty array.
+     */
+    public ProcedurePrivilege [] getProcedurePrivileges() {
+        return this.ProcedurePrivileges;
+    }
+
+    /**
+     * Set Stored procedure permission. Valid values of `Privileges`: `"ALTER ROUTINE"`, `"EXECUTE"`.
+Note: if the parameter is left empty, no change will be made to the granted stored procedure permissions. To clear the granted stored procedure permissions, set `Privileges` to an empty array.
+     * @param ProcedurePrivileges Stored procedure permission. Valid values of `Privileges`: `"ALTER ROUTINE"`, `"EXECUTE"`.
+Note: if the parameter is left empty, no change will be made to the granted stored procedure permissions. To clear the granted stored procedure permissions, set `Privileges` to an empty array.
+     */
+    public void setProcedurePrivileges(ProcedurePrivilege [] ProcedurePrivileges) {
+        this.ProcedurePrivileges = ProcedurePrivileges;
+    }
+
+    public ModifyAccountPrivilegesRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public ModifyAccountPrivilegesRequest(ModifyAccountPrivilegesRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Accounts != null) {
+            this.Accounts = new Account[source.Accounts.length];
+            for (int i = 0; i < source.Accounts.length; i++) {
+                this.Accounts[i] = new Account(source.Accounts[i]);
+            }
+        }
+        if (source.GlobalPrivileges != null) {
+            this.GlobalPrivileges = new String[source.GlobalPrivileges.length];
+            for (int i = 0; i < source.GlobalPrivileges.length; i++) {
+                this.GlobalPrivileges[i] = new String(source.GlobalPrivileges[i]);
+            }
+        }
+        if (source.DatabasePrivileges != null) {
+            this.DatabasePrivileges = new DatabasePrivilege[source.DatabasePrivileges.length];
+            for (int i = 0; i < source.DatabasePrivileges.length; i++) {
+                this.DatabasePrivileges[i] = new DatabasePrivilege(source.DatabasePrivileges[i]);
+            }
+        }
+        if (source.TablePrivileges != null) {
+            this.TablePrivileges = new TablePrivilege[source.TablePrivileges.length];
+            for (int i = 0; i < source.TablePrivileges.length; i++) {
+                this.TablePrivileges[i] = new TablePrivilege(source.TablePrivileges[i]);
+            }
+        }
+        if (source.ColumnPrivileges != null) {
+            this.ColumnPrivileges = new ColumnPrivilege[source.ColumnPrivileges.length];
+            for (int i = 0; i < source.ColumnPrivileges.length; i++) {
+                this.ColumnPrivileges[i] = new ColumnPrivilege(source.ColumnPrivileges[i]);
+            }
+        }
+        if (source.ViewPrivileges != null) {
+            this.ViewPrivileges = new ViewPrivileges[source.ViewPrivileges.length];
+            for (int i = 0; i < source.ViewPrivileges.length; i++) {
+                this.ViewPrivileges[i] = new ViewPrivileges(source.ViewPrivileges[i]);
+            }
+        }
+        if (source.FunctionPrivileges != null) {
+            this.FunctionPrivileges = new FunctionPrivilege[source.FunctionPrivileges.length];
+            for (int i = 0; i < source.FunctionPrivileges.length; i++) {
+                this.FunctionPrivileges[i] = new FunctionPrivilege(source.FunctionPrivileges[i]);
+            }
+        }
+        if (source.ProcedurePrivileges != null) {
+            this.ProcedurePrivileges = new ProcedurePrivilege[source.ProcedurePrivileges.length];
+            for (int i = 0; i < source.ProcedurePrivileges.length; i++) {
+                this.ProcedurePrivileges[i] = new ProcedurePrivilege(source.ProcedurePrivileges[i]);
+            }
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamArrayObj(map, prefix + "Accounts.", this.Accounts);
+        this.setParamArraySimple(map, prefix + "GlobalPrivileges.", this.GlobalPrivileges);
+        this.setParamArrayObj(map, prefix + "DatabasePrivileges.", this.DatabasePrivileges);
+        this.setParamArrayObj(map, prefix + "TablePrivileges.", this.TablePrivileges);
+        this.setParamArrayObj(map, prefix + "ColumnPrivileges.", this.ColumnPrivileges);
+        this.setParamArrayObj(map, prefix + "ViewPrivileges.", this.ViewPrivileges);
+        this.setParamArrayObj(map, prefix + "FunctionPrivileges.", this.FunctionPrivileges);
+        this.setParamArrayObj(map, prefix + "ProcedurePrivileges.", this.ProcedurePrivileges);
+
+    }
+}
+
