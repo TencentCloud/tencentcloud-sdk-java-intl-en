@@ -30,6 +30,13 @@ public class EnableCachesRequest extends AbstractModel{
     private String [] Urls;
 
     /**
+    * URL blocking date
+    */
+    @SerializedName("Date")
+    @Expose
+    private String Date;
+
+    /**
      * Get List of unblocked URLs 
      * @return Urls List of unblocked URLs
      */
@@ -43,6 +50,22 @@ public class EnableCachesRequest extends AbstractModel{
      */
     public void setUrls(String [] Urls) {
         this.Urls = Urls;
+    }
+
+    /**
+     * Get URL blocking date 
+     * @return Date URL blocking date
+     */
+    public String getDate() {
+        return this.Date;
+    }
+
+    /**
+     * Set URL blocking date
+     * @param Date URL blocking date
+     */
+    public void setDate(String Date) {
+        this.Date = Date;
     }
 
     public EnableCachesRequest() {
@@ -59,6 +82,9 @@ public class EnableCachesRequest extends AbstractModel{
                 this.Urls[i] = new String(source.Urls[i]);
             }
         }
+        if (source.Date != null) {
+            this.Date = new String(source.Date);
+        }
     }
 
 
@@ -67,6 +93,7 @@ public class EnableCachesRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Urls.", this.Urls);
+        this.setParamSimple(map, prefix + "Date", this.Date);
 
     }
 }

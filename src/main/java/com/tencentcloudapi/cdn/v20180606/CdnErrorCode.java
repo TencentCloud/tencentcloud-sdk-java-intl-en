@@ -114,6 +114,9 @@ public enum CdnErrorCode {
     // Invalid domain name status.
      INVALIDPARAMETER_CDNHOSTINVALIDSTATUS("InvalidParameter.CdnHostInvalidStatus"),
      
+    // 
+     INVALIDPARAMETER_CDNHOSTTOOLONGHOST("InvalidParameter.CdnHostTooLongHost"),
+     
     // Internal API error. Please submit a ticket for troubleshooting.
      INVALIDPARAMETER_CDNINTERFACEERROR("InvalidParameter.CdnInterfaceError"),
      

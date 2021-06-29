@@ -41,7 +41,7 @@ Only upper and lower-case letters, digits, and underscores (_) are allowed. It c
 
     /**
     * Signature expiration time
-Unit: second. The maximum value is 31536000.
+Unit: second. The maximum value is 630720000.
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -109,9 +109,9 @@ Only upper and lower-case letters, digits, and underscores (_) are allowed. It c
 
     /**
      * Get Signature expiration time
-Unit: second. The maximum value is 31536000. 
+Unit: second. The maximum value is 630720000. 
      * @return ExpireTime Signature expiration time
-Unit: second. The maximum value is 31536000.
+Unit: second. The maximum value is 630720000.
      */
     public Long getExpireTime() {
         return this.ExpireTime;
@@ -119,9 +119,9 @@ Unit: second. The maximum value is 31536000.
 
     /**
      * Set Signature expiration time
-Unit: second. The maximum value is 31536000.
+Unit: second. The maximum value is 630720000.
      * @param ExpireTime Signature expiration time
-Unit: second. The maximum value is 31536000.
+Unit: second. The maximum value is 630720000.
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;

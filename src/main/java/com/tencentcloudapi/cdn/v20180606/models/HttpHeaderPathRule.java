@@ -24,8 +24,9 @@ public class HttpHeaderPathRule extends AbstractModel{
 
     /**
     * HTTP header setting methods
-`add`: add header. If a header already exists, then there will be a duplicated header.
-`del`: delete header.
+`set`: sets a value for an existing header parameter, a new header parameter, or multiple header parameters. Multiple header parameters will be merged into one.
+`del`: deletes a header parameter.
+`add`: adds a header parameter. By default, you can repeat the same action to add the same header parameter, which may affect browser response. Please consider the set operation first.
 Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("HeaderMode")
@@ -76,12 +77,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get HTTP header setting methods
-`add`: add header. If a header already exists, then there will be a duplicated header.
-`del`: delete header.
+`set`: sets a value for an existing header parameter, a new header parameter, or multiple header parameters. Multiple header parameters will be merged into one.
+`del`: deletes a header parameter.
+`add`: adds a header parameter. By default, you can repeat the same action to add the same header parameter, which may affect browser response. Please consider the set operation first.
 Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return HeaderMode HTTP header setting methods
-`add`: add header. If a header already exists, then there will be a duplicated header.
-`del`: delete header.
+`set`: sets a value for an existing header parameter, a new header parameter, or multiple header parameters. Multiple header parameters will be merged into one.
+`del`: deletes a header parameter.
+`add`: adds a header parameter. By default, you can repeat the same action to add the same header parameter, which may affect browser response. Please consider the set operation first.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getHeaderMode() {
@@ -90,12 +93,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set HTTP header setting methods
-`add`: add header. If a header already exists, then there will be a duplicated header.
-`del`: delete header.
+`set`: sets a value for an existing header parameter, a new header parameter, or multiple header parameters. Multiple header parameters will be merged into one.
+`del`: deletes a header parameter.
+`add`: adds a header parameter. By default, you can repeat the same action to add the same header parameter, which may affect browser response. Please consider the set operation first.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param HeaderMode HTTP header setting methods
-`add`: add header. If a header already exists, then there will be a duplicated header.
-`del`: delete header.
+`set`: sets a value for an existing header parameter, a new header parameter, or multiple header parameters. Multiple header parameters will be merged into one.
+`del`: deletes a header parameter.
+`add`: adds a header parameter. By default, you can repeat the same action to add the same header parameter, which may affect browser response. Please consider the set operation first.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setHeaderMode(String HeaderMode) {

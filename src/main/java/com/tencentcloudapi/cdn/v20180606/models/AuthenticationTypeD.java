@@ -33,7 +33,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Signature expiration time
-Unit: second. The maximum value is 31536000.
+Unit: second. The maximum value is 630720000.
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -106,9 +106,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Signature expiration time
-Unit: second. The maximum value is 31536000. 
+Unit: second. The maximum value is 630720000. 
      * @return ExpireTime Signature expiration time
-Unit: second. The maximum value is 31536000.
+Unit: second. The maximum value is 630720000.
      */
     public Long getExpireTime() {
         return this.ExpireTime;
@@ -116,9 +116,9 @@ Unit: second. The maximum value is 31536000.
 
     /**
      * Set Signature expiration time
-Unit: second. The maximum value is 31536000.
+Unit: second. The maximum value is 630720000.
      * @param ExpireTime Signature expiration time
-Unit: second. The maximum value is 31536000.
+Unit: second. The maximum value is 630720000.
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;

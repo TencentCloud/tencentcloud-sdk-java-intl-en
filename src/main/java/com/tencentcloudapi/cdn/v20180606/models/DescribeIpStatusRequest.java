@@ -50,6 +50,13 @@ global: global nodes
     private String Area;
 
     /**
+    * Whether to return a value as an IP range
+    */
+    @SerializedName("Segment")
+    @Expose
+    private Boolean Segment;
+
+    /**
      * Get Acceleration domain name 
      * @return Domain Acceleration domain name
      */
@@ -121,6 +128,22 @@ global: global nodes
         this.Area = Area;
     }
 
+    /**
+     * Get Whether to return a value as an IP range 
+     * @return Segment Whether to return a value as an IP range
+     */
+    public Boolean getSegment() {
+        return this.Segment;
+    }
+
+    /**
+     * Set Whether to return a value as an IP range
+     * @param Segment Whether to return a value as an IP range
+     */
+    public void setSegment(Boolean Segment) {
+        this.Segment = Segment;
+    }
+
     public DescribeIpStatusRequest() {
     }
 
@@ -138,6 +161,9 @@ global: global nodes
         if (source.Area != null) {
             this.Area = new String(source.Area);
         }
+        if (source.Segment != null) {
+            this.Segment = new Boolean(source.Segment);
+        }
     }
 
 
@@ -148,6 +174,7 @@ global: global nodes
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "Layer", this.Layer);
         this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamSimple(map, prefix + "Segment", this.Segment);
 
     }
 }
