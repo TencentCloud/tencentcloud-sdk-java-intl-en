@@ -30,6 +30,13 @@ public class CompleteMigrateJobRequest extends AbstractModel{
     private String JobId;
 
     /**
+    * The way to complete the task, which is supported only for legacy MySQL migration task. waitForSync: wait for the source-replica lag to become 0 before stopping; immediately: complete immediately without waiting for source-replica sync. Default value: waitForSync
+    */
+    @SerializedName("CompleteMode")
+    @Expose
+    private String CompleteMode;
+
+    /**
      * Get Data migration task ID 
      * @return JobId Data migration task ID
      */
@@ -45,6 +52,22 @@ public class CompleteMigrateJobRequest extends AbstractModel{
         this.JobId = JobId;
     }
 
+    /**
+     * Get The way to complete the task, which is supported only for legacy MySQL migration task. waitForSync: wait for the source-replica lag to become 0 before stopping; immediately: complete immediately without waiting for source-replica sync. Default value: waitForSync 
+     * @return CompleteMode The way to complete the task, which is supported only for legacy MySQL migration task. waitForSync: wait for the source-replica lag to become 0 before stopping; immediately: complete immediately without waiting for source-replica sync. Default value: waitForSync
+     */
+    public String getCompleteMode() {
+        return this.CompleteMode;
+    }
+
+    /**
+     * Set The way to complete the task, which is supported only for legacy MySQL migration task. waitForSync: wait for the source-replica lag to become 0 before stopping; immediately: complete immediately without waiting for source-replica sync. Default value: waitForSync
+     * @param CompleteMode The way to complete the task, which is supported only for legacy MySQL migration task. waitForSync: wait for the source-replica lag to become 0 before stopping; immediately: complete immediately without waiting for source-replica sync. Default value: waitForSync
+     */
+    public void setCompleteMode(String CompleteMode) {
+        this.CompleteMode = CompleteMode;
+    }
+
     public CompleteMigrateJobRequest() {
     }
 
@@ -56,6 +79,9 @@ public class CompleteMigrateJobRequest extends AbstractModel{
         if (source.JobId != null) {
             this.JobId = new String(source.JobId);
         }
+        if (source.CompleteMode != null) {
+            this.CompleteMode = new String(source.CompleteMode);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class CompleteMigrateJobRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobId", this.JobId);
+        this.setParamSimple(map, prefix + "CompleteMode", this.CompleteMode);
 
     }
 }

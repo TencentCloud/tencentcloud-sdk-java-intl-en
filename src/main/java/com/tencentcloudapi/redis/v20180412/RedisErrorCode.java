@@ -1,5 +1,11 @@
 package com.tencentcloudapi.redis.v20180412;
 public enum RedisErrorCode {
+    // CAM signature/authentication error.
+     AUTHFAILURE("AuthFailure"),
+     
+    // Invalid authorization.
+     AUTHFAILURE_INVALIDAUTHORIZATION("AuthFailure.InvalidAuthorization"),
+     
     // Failed to add the security group information of an instance.
      FAILEDOPERATION_ADDINSTANCEINFOFAILED("FailedOperation.AddInstanceInfoFailed"),
      
@@ -66,6 +72,9 @@ public enum RedisErrorCode {
     // The parameter is empty.
      INVALIDPARAMETER_EMPTYPARAM("InvalidParameter.EmptyParam"),
      
+    // Invalid parameter.
+     INVALIDPARAMETER_ILLEGALPARAMETERERROR("InvalidParameter.IllegalParameterError"),
+     
     // Invalid service parameter.
      INVALIDPARAMETER_INVALIDPARAMETER("InvalidParameter.InvalidParameter"),
      
@@ -77,6 +86,9 @@ public enum RedisErrorCode {
      
     // The API has no CAM permissions.
      INVALIDPARAMETER_PERMISSIONDENIED("InvalidParameter.PermissionDenied"),
+     
+    // Invalid parameter value.
+     INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
     // The backup does not exist.
      INVALIDPARAMETERVALUE_BACKUPNOTEXISTS("InvalidParameterValue.BackupNotExists"),

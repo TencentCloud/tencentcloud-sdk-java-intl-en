@@ -37,6 +37,13 @@ public class DescribeAlarmEventsRequest extends AbstractModel{
     private String Namespace;
 
     /**
+    * Monitoring type, such as `MT_QCE`, which is set to default.
+    */
+    @SerializedName("MonitorType")
+    @Expose
+    private String MonitorType;
+
+    /**
      * Get Module name, which is fixed at "monitor" 
      * @return Module Module name, which is fixed at "monitor"
      */
@@ -68,6 +75,22 @@ public class DescribeAlarmEventsRequest extends AbstractModel{
         this.Namespace = Namespace;
     }
 
+    /**
+     * Get Monitoring type, such as `MT_QCE`, which is set to default. 
+     * @return MonitorType Monitoring type, such as `MT_QCE`, which is set to default.
+     */
+    public String getMonitorType() {
+        return this.MonitorType;
+    }
+
+    /**
+     * Set Monitoring type, such as `MT_QCE`, which is set to default.
+     * @param MonitorType Monitoring type, such as `MT_QCE`, which is set to default.
+     */
+    public void setMonitorType(String MonitorType) {
+        this.MonitorType = MonitorType;
+    }
+
     public DescribeAlarmEventsRequest() {
     }
 
@@ -82,6 +105,9 @@ public class DescribeAlarmEventsRequest extends AbstractModel{
         if (source.Namespace != null) {
             this.Namespace = new String(source.Namespace);
         }
+        if (source.MonitorType != null) {
+            this.MonitorType = new String(source.MonitorType);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class DescribeAlarmEventsRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamSimple(map, prefix + "MonitorType", this.MonitorType);
 
     }
 }

@@ -58,6 +58,20 @@ public class ModifyAlarmPolicyConditionRequest extends AbstractModel{
     private AlarmPolicyEventCondition EventCondition;
 
     /**
+    * Global filter.
+    */
+    @SerializedName("Filter")
+    @Expose
+    private AlarmPolicyFilter Filter;
+
+    /**
+    * Aggregation dimension list, which is used to specify which dimension keys data is grouped by.
+    */
+    @SerializedName("GroupBy")
+    @Expose
+    private String [] GroupBy;
+
+    /**
      * Get Module name, which is fixed at "monitor" 
      * @return Module Module name, which is fixed at "monitor"
      */
@@ -137,6 +151,38 @@ public class ModifyAlarmPolicyConditionRequest extends AbstractModel{
         this.EventCondition = EventCondition;
     }
 
+    /**
+     * Get Global filter. 
+     * @return Filter Global filter.
+     */
+    public AlarmPolicyFilter getFilter() {
+        return this.Filter;
+    }
+
+    /**
+     * Set Global filter.
+     * @param Filter Global filter.
+     */
+    public void setFilter(AlarmPolicyFilter Filter) {
+        this.Filter = Filter;
+    }
+
+    /**
+     * Get Aggregation dimension list, which is used to specify which dimension keys data is grouped by. 
+     * @return GroupBy Aggregation dimension list, which is used to specify which dimension keys data is grouped by.
+     */
+    public String [] getGroupBy() {
+        return this.GroupBy;
+    }
+
+    /**
+     * Set Aggregation dimension list, which is used to specify which dimension keys data is grouped by.
+     * @param GroupBy Aggregation dimension list, which is used to specify which dimension keys data is grouped by.
+     */
+    public void setGroupBy(String [] GroupBy) {
+        this.GroupBy = GroupBy;
+    }
+
     public ModifyAlarmPolicyConditionRequest() {
     }
 
@@ -160,6 +206,15 @@ public class ModifyAlarmPolicyConditionRequest extends AbstractModel{
         if (source.EventCondition != null) {
             this.EventCondition = new AlarmPolicyEventCondition(source.EventCondition);
         }
+        if (source.Filter != null) {
+            this.Filter = new AlarmPolicyFilter(source.Filter);
+        }
+        if (source.GroupBy != null) {
+            this.GroupBy = new String[source.GroupBy.length];
+            for (int i = 0; i < source.GroupBy.length; i++) {
+                this.GroupBy[i] = new String(source.GroupBy[i]);
+            }
+        }
     }
 
 
@@ -172,6 +227,8 @@ public class ModifyAlarmPolicyConditionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ConditionTemplateId", this.ConditionTemplateId);
         this.setParamObj(map, prefix + "Condition.", this.Condition);
         this.setParamObj(map, prefix + "EventCondition.", this.EventCondition);
+        this.setParamObj(map, prefix + "Filter.", this.Filter);
+        this.setParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
 
     }
 }

@@ -59,6 +59,26 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to promote a replica node group of a multi-AZ deployed instance to master node group.
+     * @param req ChangeReplicaToMasterRequest
+     * @return ChangeReplicaToMasterResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChangeReplicaToMasterResponse ChangeReplicaToMaster(ChangeReplicaToMasterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChangeReplicaToMasterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChangeReplicaToMasterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChangeReplicaToMaster");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to deactivate an instance in the recycle bin immediately.
      * @param req CleanUpInstanceRequest
      * @return CleanUpInstanceResponse

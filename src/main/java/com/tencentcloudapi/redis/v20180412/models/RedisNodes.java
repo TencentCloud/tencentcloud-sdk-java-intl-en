@@ -44,6 +44,13 @@ public class RedisNodes extends AbstractModel{
     private Long ClusterId;
 
     /**
+    * AZ ID
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private Long ZoneId;
+
+    /**
      * Get Node ID 
      * @return NodeId Node ID
      */
@@ -91,6 +98,22 @@ public class RedisNodes extends AbstractModel{
         this.ClusterId = ClusterId;
     }
 
+    /**
+     * Get AZ ID 
+     * @return ZoneId AZ ID
+     */
+    public Long getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * Set AZ ID
+     * @param ZoneId AZ ID
+     */
+    public void setZoneId(Long ZoneId) {
+        this.ZoneId = ZoneId;
+    }
+
     public RedisNodes() {
     }
 
@@ -108,6 +131,9 @@ public class RedisNodes extends AbstractModel{
         if (source.ClusterId != null) {
             this.ClusterId = new Long(source.ClusterId);
         }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class RedisNodes extends AbstractModel{
         this.setParamSimple(map, prefix + "NodeId", this.NodeId);
         this.setParamSimple(map, prefix + "NodeRole", this.NodeRole);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
 
     }
 }

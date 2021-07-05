@@ -51,6 +51,13 @@ public class RedisNode extends AbstractModel{
     private String Status;
 
     /**
+    * Node role
+    */
+    @SerializedName("Role")
+    @Expose
+    private String Role;
+
+    /**
      * Get The number of keys on a node 
      * @return Keys The number of keys on a node
      */
@@ -114,6 +121,22 @@ public class RedisNode extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get Node role 
+     * @return Role Node role
+     */
+    public String getRole() {
+        return this.Role;
+    }
+
+    /**
+     * Set Node role
+     * @param Role Node role
+     */
+    public void setRole(String Role) {
+        this.Role = Role;
+    }
+
     public RedisNode() {
     }
 
@@ -134,6 +157,9 @@ public class RedisNode extends AbstractModel{
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.Role != null) {
+            this.Role = new String(source.Role);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class RedisNode extends AbstractModel{
         this.setParamSimple(map, prefix + "Slot", this.Slot);
         this.setParamSimple(map, prefix + "NodeId", this.NodeId);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Role", this.Role);
 
     }
 }
