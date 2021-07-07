@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class IPSECOptionsSpecification extends AbstractModel{
 
     /**
-    * Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', and 'NULL'. Default is AES-CBC-128.
+    * Encryption algorithm. Valid values: `3DES-CBC`, `AES-CBC-128`, `AES-CBC-192`, `AES-CBC-256`, `DES-CBC`, `SM4`, and `NULL`; default value: `AES-CBC-128`.
     */
     @SerializedName("EncryptAlgorithm")
     @Expose
     private String EncryptAlgorithm;
 
     /**
-    * Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is:
+    * Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `SHA1`.
     */
     @SerializedName("IntegrityAlgorith")
     @Expose
@@ -58,32 +58,32 @@ public class IPSECOptionsSpecification extends AbstractModel{
     private Long IPSECSaLifetimeTraffic;
 
     /**
-     * Get Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', and 'NULL'. Default is AES-CBC-128. 
-     * @return EncryptAlgorithm Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', and 'NULL'. Default is AES-CBC-128.
+     * Get Encryption algorithm. Valid values: `3DES-CBC`, `AES-CBC-128`, `AES-CBC-192`, `AES-CBC-256`, `DES-CBC`, `SM4`, and `NULL`; default value: `AES-CBC-128`. 
+     * @return EncryptAlgorithm Encryption algorithm. Valid values: `3DES-CBC`, `AES-CBC-128`, `AES-CBC-192`, `AES-CBC-256`, `DES-CBC`, `SM4`, and `NULL`; default value: `AES-CBC-128`.
      */
     public String getEncryptAlgorithm() {
         return this.EncryptAlgorithm;
     }
 
     /**
-     * Set Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', and 'NULL'. Default is AES-CBC-128.
-     * @param EncryptAlgorithm Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', and 'NULL'. Default is AES-CBC-128.
+     * Set Encryption algorithm. Valid values: `3DES-CBC`, `AES-CBC-128`, `AES-CBC-192`, `AES-CBC-256`, `DES-CBC`, `SM4`, and `NULL`; default value: `AES-CBC-128`.
+     * @param EncryptAlgorithm Encryption algorithm. Valid values: `3DES-CBC`, `AES-CBC-128`, `AES-CBC-192`, `AES-CBC-256`, `DES-CBC`, `SM4`, and `NULL`; default value: `AES-CBC-128`.
      */
     public void setEncryptAlgorithm(String EncryptAlgorithm) {
         this.EncryptAlgorithm = EncryptAlgorithm;
     }
 
     /**
-     * Get Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is: 
-     * @return IntegrityAlgorith Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is:
+     * Get Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `SHA1`. 
+     * @return IntegrityAlgorith Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `SHA1`.
      */
     public String getIntegrityAlgorith() {
         return this.IntegrityAlgorith;
     }
 
     /**
-     * Set Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is:
-     * @param IntegrityAlgorith Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is:
+     * Set Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `SHA1`.
+     * @param IntegrityAlgorith Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `SHA1`.
      */
     public void setIntegrityAlgorith(String IntegrityAlgorith) {
         this.IntegrityAlgorith = IntegrityAlgorith;

@@ -1201,6 +1201,26 @@ Description:
     }
 
     /**
+     *This API is used to create destination routes of a route-based VPN gateway.
+     * @param req CreateVpnGatewayRoutesRequest
+     * @return CreateVpnGatewayRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVpnGatewayRoutesResponse CreateVpnGatewayRoutes(CreateVpnGatewayRoutesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateVpnGatewayRoutesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateVpnGatewayRoutesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateVpnGatewayRoutes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (DeleteAddressTemplate) is used to delete an IP address template.
      * @param req DeleteAddressTemplateRequest
      * @return DeleteAddressTemplateResponse
@@ -1812,6 +1832,26 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
                 Type type = new TypeToken<JsonResponseModel<DeleteVpnGatewayResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteVpnGateway");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete routes of a VPN gateway.
+     * @param req DeleteVpnGatewayRoutesRequest
+     * @return DeleteVpnGatewayRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVpnGatewayRoutesResponse DeleteVpnGatewayRoutes(DeleteVpnGatewayRoutesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteVpnGatewayRoutesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteVpnGatewayRoutesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteVpnGatewayRoutes");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2919,6 +2959,26 @@ This API is used to query only the information of IP addresses that are already 
                 Type type = new TypeToken<JsonResponseModel<DescribeVpnGatewayCcnRoutesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeVpnGatewayCcnRoutes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query destination routes of a route-based VPN gateway.
+     * @param req DescribeVpnGatewayRoutesRequest
+     * @return DescribeVpnGatewayRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVpnGatewayRoutesResponse DescribeVpnGatewayRoutes(DescribeVpnGatewayRoutesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVpnGatewayRoutesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVpnGatewayRoutesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeVpnGatewayRoutes");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -4210,6 +4270,26 @@ This API is completed asynchronously. If you need to query the async job executi
                 Type type = new TypeToken<JsonResponseModel<ModifyVpnGatewayCcnRoutesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyVpnGatewayCcnRoutes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the route status of a VPN gateway.
+     * @param req ModifyVpnGatewayRoutesRequest
+     * @return ModifyVpnGatewayRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVpnGatewayRoutesResponse ModifyVpnGatewayRoutes(ModifyVpnGatewayRoutesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyVpnGatewayRoutesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyVpnGatewayRoutesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyVpnGatewayRoutes");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

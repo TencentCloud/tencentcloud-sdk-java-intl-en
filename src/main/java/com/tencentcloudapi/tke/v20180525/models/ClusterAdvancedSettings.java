@@ -141,6 +141,13 @@ The following conditions are required to use ipvs-bpf network mode:
     private Long BasePodNumber;
 
     /**
+    * Specifies whether to enable Cilium. If it’s left empty, Cilium is not enabled. If `clusterIP` is passed in, it means to enable Cilium to support the clusterIP service type.
+    */
+    @SerializedName("CiliumMode")
+    @Expose
+    private String CiliumMode;
+
+    /**
      * Get Whether IPVS is enabled 
      * @return IPVS Whether IPVS is enabled
      */
@@ -420,6 +427,22 @@ The following conditions are required to use ipvs-bpf network mode:
         this.BasePodNumber = BasePodNumber;
     }
 
+    /**
+     * Get Specifies whether to enable Cilium. If it’s left empty, Cilium is not enabled. If `clusterIP` is passed in, it means to enable Cilium to support the clusterIP service type. 
+     * @return CiliumMode Specifies whether to enable Cilium. If it’s left empty, Cilium is not enabled. If `clusterIP` is passed in, it means to enable Cilium to support the clusterIP service type.
+     */
+    public String getCiliumMode() {
+        return this.CiliumMode;
+    }
+
+    /**
+     * Set Specifies whether to enable Cilium. If it’s left empty, Cilium is not enabled. If `clusterIP` is passed in, it means to enable Cilium to support the clusterIP service type.
+     * @param CiliumMode Specifies whether to enable Cilium. If it’s left empty, Cilium is not enabled. If `clusterIP` is passed in, it means to enable Cilium to support the clusterIP service type.
+     */
+    public void setCiliumMode(String CiliumMode) {
+        this.CiliumMode = CiliumMode;
+    }
+
     public ClusterAdvancedSettings() {
     }
 
@@ -476,6 +499,9 @@ The following conditions are required to use ipvs-bpf network mode:
         if (source.BasePodNumber != null) {
             this.BasePodNumber = new Long(source.BasePodNumber);
         }
+        if (source.CiliumMode != null) {
+            this.CiliumMode = new String(source.CiliumMode);
+        }
     }
 
 
@@ -499,6 +525,7 @@ The following conditions are required to use ipvs-bpf network mode:
         this.setParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
         this.setParamSimple(map, prefix + "EnableCustomizedPodCIDR", this.EnableCustomizedPodCIDR);
         this.setParamSimple(map, prefix + "BasePodNumber", this.BasePodNumber);
+        this.setParamSimple(map, prefix + "CiliumMode", this.CiliumMode);
 
     }
 }

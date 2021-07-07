@@ -31,16 +31,15 @@ public class Route extends AbstractModel{
 
     /**
     * Type of the next hop. Valid values:
-CVM: public gateway CVM;
-VPN: VPN gateway;
-DIRECTCONNECT: direct connect gateway;
-PEERCONNECTION: peering connection;
-SSLVPN: SSL VPN gateway;
-NAT: NAT Gateway; 
-NORMAL_CVM: normal CVM;
-EIP: public IP address of the CVM;
-CCN: Cloud Connect Network;
-LOCAL_GATEWAY: local gateway.
+`CVM`: public gateway CVM;
+`VPN`: VPN gateway;
+`DIRECTCONNECT`: direct connect gateway;
+`PEERCONNECTION`: peering connection;
+`HAVIP`: HAVIP;
+`NAT`: NAT Gateway; 
+`NORMAL_CVM`: normal CVM;
+`EIP`: public IP address of the CVM;
+`LOCAL_GATEWAY`: local gateway.
     */
     @SerializedName("GatewayType")
     @Expose
@@ -140,27 +139,25 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Type of the next hop. Valid values:
-CVM: public gateway CVM;
-VPN: VPN gateway;
-DIRECTCONNECT: direct connect gateway;
-PEERCONNECTION: peering connection;
-SSLVPN: SSL VPN gateway;
-NAT: NAT Gateway; 
-NORMAL_CVM: normal CVM;
-EIP: public IP address of the CVM;
-CCN: Cloud Connect Network;
-LOCAL_GATEWAY: local gateway. 
+`CVM`: public gateway CVM;
+`VPN`: VPN gateway;
+`DIRECTCONNECT`: direct connect gateway;
+`PEERCONNECTION`: peering connection;
+`HAVIP`: HAVIP;
+`NAT`: NAT Gateway; 
+`NORMAL_CVM`: normal CVM;
+`EIP`: public IP address of the CVM;
+`LOCAL_GATEWAY`: local gateway. 
      * @return GatewayType Type of the next hop. Valid values:
-CVM: public gateway CVM;
-VPN: VPN gateway;
-DIRECTCONNECT: direct connect gateway;
-PEERCONNECTION: peering connection;
-SSLVPN: SSL VPN gateway;
-NAT: NAT Gateway; 
-NORMAL_CVM: normal CVM;
-EIP: public IP address of the CVM;
-CCN: Cloud Connect Network;
-LOCAL_GATEWAY: local gateway.
+`CVM`: public gateway CVM;
+`VPN`: VPN gateway;
+`DIRECTCONNECT`: direct connect gateway;
+`PEERCONNECTION`: peering connection;
+`HAVIP`: HAVIP;
+`NAT`: NAT Gateway; 
+`NORMAL_CVM`: normal CVM;
+`EIP`: public IP address of the CVM;
+`LOCAL_GATEWAY`: local gateway.
      */
     public String getGatewayType() {
         return this.GatewayType;
@@ -168,27 +165,25 @@ LOCAL_GATEWAY: local gateway.
 
     /**
      * Set Type of the next hop. Valid values:
-CVM: public gateway CVM;
-VPN: VPN gateway;
-DIRECTCONNECT: direct connect gateway;
-PEERCONNECTION: peering connection;
-SSLVPN: SSL VPN gateway;
-NAT: NAT Gateway; 
-NORMAL_CVM: normal CVM;
-EIP: public IP address of the CVM;
-CCN: Cloud Connect Network;
-LOCAL_GATEWAY: local gateway.
+`CVM`: public gateway CVM;
+`VPN`: VPN gateway;
+`DIRECTCONNECT`: direct connect gateway;
+`PEERCONNECTION`: peering connection;
+`HAVIP`: HAVIP;
+`NAT`: NAT Gateway; 
+`NORMAL_CVM`: normal CVM;
+`EIP`: public IP address of the CVM;
+`LOCAL_GATEWAY`: local gateway.
      * @param GatewayType Type of the next hop. Valid values:
-CVM: public gateway CVM;
-VPN: VPN gateway;
-DIRECTCONNECT: direct connect gateway;
-PEERCONNECTION: peering connection;
-SSLVPN: SSL VPN gateway;
-NAT: NAT Gateway; 
-NORMAL_CVM: normal CVM;
-EIP: public IP address of the CVM;
-CCN: Cloud Connect Network;
-LOCAL_GATEWAY: local gateway.
+`CVM`: public gateway CVM;
+`VPN`: VPN gateway;
+`DIRECTCONNECT`: direct connect gateway;
+`PEERCONNECTION`: peering connection;
+`HAVIP`: HAVIP;
+`NAT`: NAT Gateway; 
+`NORMAL_CVM`: normal CVM;
+`EIP`: public IP address of the CVM;
+`LOCAL_GATEWAY`: local gateway.
      */
     public void setGatewayType(String GatewayType) {
         this.GatewayType = GatewayType;

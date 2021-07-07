@@ -154,6 +154,14 @@ Note: this field may return null, indicating that no valid value is obtained.
     private Boolean DeletionProtection;
 
     /**
+    * Specifies whether the cluster supports external nodes.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("EnableExternalNode")
+    @Expose
+    private Boolean EnableExternalNode;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -461,6 +469,26 @@ Note: this field may return null, indicating that no valid value is obtained.
         this.DeletionProtection = DeletionProtection;
     }
 
+    /**
+     * Get Specifies whether the cluster supports external nodes.
+Note: this field may return `null`, indicating that no valid value can be obtained. 
+     * @return EnableExternalNode Specifies whether the cluster supports external nodes.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Boolean getEnableExternalNode() {
+        return this.EnableExternalNode;
+    }
+
+    /**
+     * Set Specifies whether the cluster supports external nodes.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param EnableExternalNode Specifies whether the cluster supports external nodes.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setEnableExternalNode(Boolean EnableExternalNode) {
+        this.EnableExternalNode = EnableExternalNode;
+    }
+
     public Cluster() {
     }
 
@@ -526,6 +554,9 @@ Note: this field may return null, indicating that no valid value is obtained.
         if (source.DeletionProtection != null) {
             this.DeletionProtection = new Boolean(source.DeletionProtection);
         }
+        if (source.EnableExternalNode != null) {
+            this.EnableExternalNode = new Boolean(source.EnableExternalNode);
+        }
     }
 
 
@@ -551,6 +582,7 @@ Note: this field may return null, indicating that no valid value is obtained.
         this.setParamSimple(map, prefix + "ContainerRuntime", this.ContainerRuntime);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
+        this.setParamSimple(map, prefix + "EnableExternalNode", this.EnableExternalNode);
 
     }
 }

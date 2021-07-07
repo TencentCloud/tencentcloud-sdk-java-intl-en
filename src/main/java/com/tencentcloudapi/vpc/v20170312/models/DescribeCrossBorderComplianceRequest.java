@@ -135,6 +135,20 @@ public class DescribeCrossBorderComplianceRequest extends AbstractModel{
     private String State;
 
     /**
+    * The offset value
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * Quantity of returned items
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
      * Get (Exact match) Service provider. Valid values: `UNICOM`. 
      * @return ServiceProvider (Exact match) Service provider. Valid values: `UNICOM`.
      */
@@ -390,6 +404,38 @@ public class DescribeCrossBorderComplianceRequest extends AbstractModel{
         this.State = State;
     }
 
+    /**
+     * Get The offset value 
+     * @return Offset The offset value
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set The offset value
+     * @param Offset The offset value
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get Quantity of returned items 
+     * @return Limit Quantity of returned items
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set Quantity of returned items
+     * @param Limit Quantity of returned items
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
     public DescribeCrossBorderComplianceRequest() {
     }
 
@@ -446,6 +492,12 @@ public class DescribeCrossBorderComplianceRequest extends AbstractModel{
         if (source.State != null) {
             this.State = new String(source.State);
         }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
     }
 
 
@@ -469,6 +521,8 @@ public class DescribeCrossBorderComplianceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ServiceStartDate", this.ServiceStartDate);
         this.setParamSimple(map, prefix + "ServiceEndDate", this.ServiceEndDate);
         this.setParamSimple(map, prefix + "State", this.State);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
 
     }
 }
