@@ -60,6 +60,20 @@ The paragraph information `Parag` returned by the `GeneralBasicOcr` API contains
     private ItemCoord ItemPolygon;
 
     /**
+    * Information about a character, including the character itself and its confidence. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
+    */
+    @SerializedName("Words")
+    @Expose
+    private DetectedWords [] Words;
+
+    /**
+    * Coordinates of a word’s four corners on the input image. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
+    */
+    @SerializedName("WordCoordPoint")
+    @Expose
+    private DetectedWordCoordPoint [] WordCoordPoint;
+
+    /**
      * Get Recognized text line content. 
      * @return DetectedText Recognized text line content.
      */
@@ -147,6 +161,38 @@ The paragraph information `Parag` returned by the `GeneralBasicOcr` API contains
         this.ItemPolygon = ItemPolygon;
     }
 
+    /**
+     * Get Information about a character, including the character itself and its confidence. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR` 
+     * @return Words Information about a character, including the character itself and its confidence. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
+     */
+    public DetectedWords [] getWords() {
+        return this.Words;
+    }
+
+    /**
+     * Set Information about a character, including the character itself and its confidence. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
+     * @param Words Information about a character, including the character itself and its confidence. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
+     */
+    public void setWords(DetectedWords [] Words) {
+        this.Words = Words;
+    }
+
+    /**
+     * Get Coordinates of a word’s four corners on the input image. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR` 
+     * @return WordCoordPoint Coordinates of a word’s four corners on the input image. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
+     */
+    public DetectedWordCoordPoint [] getWordCoordPoint() {
+        return this.WordCoordPoint;
+    }
+
+    /**
+     * Set Coordinates of a word’s four corners on the input image. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
+     * @param WordCoordPoint Coordinates of a word’s four corners on the input image. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
+     */
+    public void setWordCoordPoint(DetectedWordCoordPoint [] WordCoordPoint) {
+        this.WordCoordPoint = WordCoordPoint;
+    }
+
     public TextDetection() {
     }
 
@@ -173,6 +219,18 @@ The paragraph information `Parag` returned by the `GeneralBasicOcr` API contains
         if (source.ItemPolygon != null) {
             this.ItemPolygon = new ItemCoord(source.ItemPolygon);
         }
+        if (source.Words != null) {
+            this.Words = new DetectedWords[source.Words.length];
+            for (int i = 0; i < source.Words.length; i++) {
+                this.Words[i] = new DetectedWords(source.Words[i]);
+            }
+        }
+        if (source.WordCoordPoint != null) {
+            this.WordCoordPoint = new DetectedWordCoordPoint[source.WordCoordPoint.length];
+            for (int i = 0; i < source.WordCoordPoint.length; i++) {
+                this.WordCoordPoint[i] = new DetectedWordCoordPoint(source.WordCoordPoint[i]);
+            }
+        }
     }
 
 
@@ -185,6 +243,8 @@ The paragraph information `Parag` returned by the `GeneralBasicOcr` API contains
         this.setParamArrayObj(map, prefix + "Polygon.", this.Polygon);
         this.setParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
         this.setParamObj(map, prefix + "ItemPolygon.", this.ItemPolygon);
+        this.setParamArrayObj(map, prefix + "Words.", this.Words);
+        this.setParamArrayObj(map, prefix + "WordCoordPoint.", this.WordCoordPoint);
 
     }
 }

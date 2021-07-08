@@ -77,6 +77,13 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
     private Boolean EnableBorderCheck;
 
     /**
+    * Whether to return the image quality value, which measures how clear an image is. Default value: `false`
+    */
+    @SerializedName("EnableQualityValue")
+    @Expose
+    private Boolean EnableQualityValue;
+
+    /**
      * Get Base64-encoded value of the image. The image cannot exceed 7 MB after being Base64-encoded. A resolution above 500 x 800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupy more than 2/3 area of the image.
 Either the `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageUrl` will be used. 
      * @return ImageBase64 Base64-encoded value of the image. The image cannot exceed 7 MB after being Base64-encoded. A resolution above 500 x 800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupy more than 2/3 area of the image.
@@ -208,6 +215,22 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
         this.EnableBorderCheck = EnableBorderCheck;
     }
 
+    /**
+     * Get Whether to return the image quality value, which measures how clear an image is. Default value: `false` 
+     * @return EnableQualityValue Whether to return the image quality value, which measures how clear an image is. Default value: `false`
+     */
+    public Boolean getEnableQualityValue() {
+        return this.EnableQualityValue;
+    }
+
+    /**
+     * Set Whether to return the image quality value, which measures how clear an image is. Default value: `false`
+     * @param EnableQualityValue Whether to return the image quality value, which measures how clear an image is. Default value: `false`
+     */
+    public void setEnableQualityValue(Boolean EnableQualityValue) {
+        this.EnableQualityValue = EnableQualityValue;
+    }
+
     public BankCardOCRRequest() {
     }
 
@@ -237,6 +260,9 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
         if (source.EnableBorderCheck != null) {
             this.EnableBorderCheck = new Boolean(source.EnableBorderCheck);
         }
+        if (source.EnableQualityValue != null) {
+            this.EnableQualityValue = new Boolean(source.EnableQualityValue);
+        }
     }
 
 
@@ -251,6 +277,7 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
         this.setParamSimple(map, prefix + "EnableCopyCheck", this.EnableCopyCheck);
         this.setParamSimple(map, prefix + "EnableReshootCheck", this.EnableReshootCheck);
         this.setParamSimple(map, prefix + "EnableBorderCheck", this.EnableBorderCheck);
+        this.setParamSimple(map, prefix + "EnableQualityValue", this.EnableQualityValue);
 
     }
 }

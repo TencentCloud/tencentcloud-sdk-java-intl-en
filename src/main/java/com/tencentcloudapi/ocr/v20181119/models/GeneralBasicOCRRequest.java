@@ -82,6 +82,13 @@ Arabic.
     private Long PdfPageNumber;
 
     /**
+    * Whether to return the character information. Default value: `false`
+    */
+    @SerializedName("IsWords")
+    @Expose
+    private Boolean IsWords;
+
+    /**
      * Get Base64-encoded value of image/PDF.
 The image/PDF cannot exceed 7 MB after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported. 
      * @return ImageBase64 Base64-encoded value of image/PDF.
@@ -245,6 +252,22 @@ Arabic.
         this.PdfPageNumber = PdfPageNumber;
     }
 
+    /**
+     * Get Whether to return the character information. Default value: `false` 
+     * @return IsWords Whether to return the character information. Default value: `false`
+     */
+    public Boolean getIsWords() {
+        return this.IsWords;
+    }
+
+    /**
+     * Set Whether to return the character information. Default value: `false`
+     * @param IsWords Whether to return the character information. Default value: `false`
+     */
+    public void setIsWords(Boolean IsWords) {
+        this.IsWords = IsWords;
+    }
+
     public GeneralBasicOCRRequest() {
     }
 
@@ -271,6 +294,9 @@ Arabic.
         if (source.PdfPageNumber != null) {
             this.PdfPageNumber = new Long(source.PdfPageNumber);
         }
+        if (source.IsWords != null) {
+            this.IsWords = new Boolean(source.IsWords);
+        }
     }
 
 
@@ -284,6 +310,7 @@ Arabic.
         this.setParamSimple(map, prefix + "LanguageType", this.LanguageType);
         this.setParamSimple(map, prefix + "IsPdf", this.IsPdf);
         this.setParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
+        this.setParamSimple(map, prefix + "IsWords", this.IsWords);
 
     }
 }

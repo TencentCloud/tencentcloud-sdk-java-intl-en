@@ -41,6 +41,13 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
     private String ImageUrl;
 
     /**
+    * Whether to return the character information. Default value: `false`
+    */
+    @SerializedName("IsWords")
+    @Expose
+    private Boolean IsWords;
+
+    /**
      * Get Base64-encoded value of image.
 The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
 Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used. 
@@ -88,6 +95,22 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
         this.ImageUrl = ImageUrl;
     }
 
+    /**
+     * Get Whether to return the character information. Default value: `false` 
+     * @return IsWords Whether to return the character information. Default value: `false`
+     */
+    public Boolean getIsWords() {
+        return this.IsWords;
+    }
+
+    /**
+     * Set Whether to return the character information. Default value: `false`
+     * @param IsWords Whether to return the character information. Default value: `false`
+     */
+    public void setIsWords(Boolean IsWords) {
+        this.IsWords = IsWords;
+    }
+
     public GeneralAccurateOCRRequest() {
     }
 
@@ -102,6 +125,9 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
         if (source.ImageUrl != null) {
             this.ImageUrl = new String(source.ImageUrl);
         }
+        if (source.IsWords != null) {
+            this.IsWords = new Boolean(source.IsWords);
+        }
     }
 
 
@@ -111,6 +137,7 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+        this.setParamSimple(map, prefix + "IsWords", this.IsWords);
 
     }
 }

@@ -88,6 +88,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long [] WarningCode;
 
     /**
+    * Image quality value, which is returned when `EnableQualityValue` is set to `true`. The smaller the value, the less clear the image is. Value range: 0−100 (a threshold greater than or equal to 50 is recommended.)
+Note: this field may return `null`, indicating that no valid value is obtained.
+    */
+    @SerializedName("QualityValue")
+    @Expose
+    private Long QualityValue;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -259,6 +267,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
+     * Get Image quality value, which is returned when `EnableQualityValue` is set to `true`. The smaller the value, the less clear the image is. Value range: 0−100 (a threshold greater than or equal to 50 is recommended.)
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return QualityValue Image quality value, which is returned when `EnableQualityValue` is set to `true`. The smaller the value, the less clear the image is. Value range: 0−100 (a threshold greater than or equal to 50 is recommended.)
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public Long getQualityValue() {
+        return this.QualityValue;
+    }
+
+    /**
+     * Set Image quality value, which is returned when `EnableQualityValue` is set to `true`. The smaller the value, the less clear the image is. Value range: 0−100 (a threshold greater than or equal to 50 is recommended.)
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param QualityValue Image quality value, which is returned when `EnableQualityValue` is set to `true`. The smaller the value, the less clear the image is. Value range: 0−100 (a threshold greater than or equal to 50 is recommended.)
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public void setQualityValue(Long QualityValue) {
+        this.QualityValue = QualityValue;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -309,6 +337,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 this.WarningCode[i] = new Long(source.WarningCode[i]);
             }
         }
+        if (source.QualityValue != null) {
+            this.QualityValue = new Long(source.QualityValue);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -327,6 +358,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "BorderCutImage", this.BorderCutImage);
         this.setParamSimple(map, prefix + "CardNoImage", this.CardNoImage);
         this.setParamArraySimple(map, prefix + "WarningCode.", this.WarningCode);
+        this.setParamSimple(map, prefix + "QualityValue", this.QualityValue);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
