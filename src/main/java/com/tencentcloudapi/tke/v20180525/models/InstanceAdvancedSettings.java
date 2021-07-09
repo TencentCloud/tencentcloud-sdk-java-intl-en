@@ -63,7 +63,7 @@ Note: This field may return null, indicating that no valid value was found.
     private Label [] Labels;
 
     /**
-    * Mounting information of multiple data disks. Ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks, for example `DataDisks` under `RunInstancesPara` of the `CreateClusterInstances` API. You can refer to the example of adding a cluster node with multiple data disks in the CreateClusterInstances API. This parameter does not take effect when the AddExistedInstances API is called.
+    * Mounting information of multiple data disks. When you create a node, ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks. For example, the `DataDisks` under `RunInstancesPara` of the `CreateClusterInstances` API should be configured accordingly (Referto document of CreateClusterInstances API). When you add an existing node, ensure that the specified partition exists in the node.
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("DataDisks")
@@ -77,6 +77,13 @@ Note: This field may return null, indicating that no valid value was found.
     @SerializedName("ExtraArgs")
     @Expose
     private InstanceExtraArgs ExtraArgs;
+
+    /**
+    * 
+    */
+    @SerializedName("DesiredPodNumber")
+    @Expose
+    private Long DesiredPodNumber;
 
     /**
      * Get Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 (xfs for tlinux system) and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
@@ -179,9 +186,9 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Mounting information of multiple data disks. Ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks, for example `DataDisks` under `RunInstancesPara` of the `CreateClusterInstances` API. You can refer to the example of adding a cluster node with multiple data disks in the CreateClusterInstances API. This parameter does not take effect when the AddExistedInstances API is called.
+     * Get Mounting information of multiple data disks. When you create a node, ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks. For example, the `DataDisks` under `RunInstancesPara` of the `CreateClusterInstances` API should be configured accordingly (Referto document of CreateClusterInstances API). When you add an existing node, ensure that the specified partition exists in the node.
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return DataDisks Mounting information of multiple data disks. Ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks, for example `DataDisks` under `RunInstancesPara` of the `CreateClusterInstances` API. You can refer to the example of adding a cluster node with multiple data disks in the CreateClusterInstances API. This parameter does not take effect when the AddExistedInstances API is called.
+     * @return DataDisks Mounting information of multiple data disks. When you create a node, ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks. For example, the `DataDisks` under `RunInstancesPara` of the `CreateClusterInstances` API should be configured accordingly (Referto document of CreateClusterInstances API). When you add an existing node, ensure that the specified partition exists in the node.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public DataDisk [] getDataDisks() {
@@ -189,9 +196,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set Mounting information of multiple data disks. Ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks, for example `DataDisks` under `RunInstancesPara` of the `CreateClusterInstances` API. You can refer to the example of adding a cluster node with multiple data disks in the CreateClusterInstances API. This parameter does not take effect when the AddExistedInstances API is called.
+     * Set Mounting information of multiple data disks. When you create a node, ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks. For example, the `DataDisks` under `RunInstancesPara` of the `CreateClusterInstances` API should be configured accordingly (Referto document of CreateClusterInstances API). When you add an existing node, ensure that the specified partition exists in the node.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param DataDisks Mounting information of multiple data disks. Ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks, for example `DataDisks` under `RunInstancesPara` of the `CreateClusterInstances` API. You can refer to the example of adding a cluster node with multiple data disks in the CreateClusterInstances API. This parameter does not take effect when the AddExistedInstances API is called.
+     * @param DataDisks Mounting information of multiple data disks. When you create a node, ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks. For example, the `DataDisks` under `RunInstancesPara` of the `CreateClusterInstances` API should be configured accordingly (Referto document of CreateClusterInstances API). When you add an existing node, ensure that the specified partition exists in the node.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setDataDisks(DataDisk [] DataDisks) {
@@ -216,6 +223,22 @@ Note: This field may return null, indicating that no valid value was found.
      */
     public void setExtraArgs(InstanceExtraArgs ExtraArgs) {
         this.ExtraArgs = ExtraArgs;
+    }
+
+    /**
+     * Get  
+     * @return DesiredPodNumber 
+     */
+    public Long getDesiredPodNumber() {
+        return this.DesiredPodNumber;
+    }
+
+    /**
+     * Set 
+     * @param DesiredPodNumber 
+     */
+    public void setDesiredPodNumber(Long DesiredPodNumber) {
+        this.DesiredPodNumber = DesiredPodNumber;
     }
 
     public InstanceAdvancedSettings() {
@@ -253,6 +276,9 @@ Note: This field may return null, indicating that no valid value was found.
         if (source.ExtraArgs != null) {
             this.ExtraArgs = new InstanceExtraArgs(source.ExtraArgs);
         }
+        if (source.DesiredPodNumber != null) {
+            this.DesiredPodNumber = new Long(source.DesiredPodNumber);
+        }
     }
 
 
@@ -267,6 +293,7 @@ Note: This field may return null, indicating that no valid value was found.
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
         this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
         this.setParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
+        this.setParamSimple(map, prefix + "DesiredPodNumber", this.DesiredPodNumber);
 
     }
 }

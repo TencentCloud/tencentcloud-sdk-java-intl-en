@@ -719,6 +719,26 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *This API is used to get a key’s recent usage details.
+     * @param req GetSecurityLastUsedRequest
+     * @return GetSecurityLastUsedResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetSecurityLastUsedResponse GetSecurityLastUsed(GetSecurityLastUsedRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetSecurityLastUsedResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetSecurityLastUsedResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetSecurityLastUsed");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the status of the service-linked role deletion based on the `TaskId`
      * @param req GetServiceLinkedRoleDeletionStatusRequest
      * @return GetServiceLinkedRoleDeletionStatusResponse

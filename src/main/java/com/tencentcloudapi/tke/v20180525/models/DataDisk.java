@@ -63,6 +63,14 @@ Note: This field may return null, indicating that no valid value was found.
     private String MountTarget;
 
     /**
+    * The name of the device or partition to mount
+Note: this field may return `null`, indicating that no valid value is obtained.
+    */
+    @SerializedName("DiskPartition")
+    @Expose
+    private String DiskPartition;
+
+    /**
      * Get Disk type
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return DiskType Disk type
@@ -162,6 +170,26 @@ Note: This field may return null, indicating that no valid value was found.
         this.MountTarget = MountTarget;
     }
 
+    /**
+     * Get The name of the device or partition to mount
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return DiskPartition The name of the device or partition to mount
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public String getDiskPartition() {
+        return this.DiskPartition;
+    }
+
+    /**
+     * Set The name of the device or partition to mount
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param DiskPartition The name of the device or partition to mount
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public void setDiskPartition(String DiskPartition) {
+        this.DiskPartition = DiskPartition;
+    }
+
     public DataDisk() {
     }
 
@@ -185,6 +213,9 @@ Note: This field may return null, indicating that no valid value was found.
         if (source.MountTarget != null) {
             this.MountTarget = new String(source.MountTarget);
         }
+        if (source.DiskPartition != null) {
+            this.DiskPartition = new String(source.DiskPartition);
+        }
     }
 
 
@@ -197,6 +228,7 @@ Note: This field may return null, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
         this.setParamSimple(map, prefix + "AutoFormatAndMount", this.AutoFormatAndMount);
         this.setParamSimple(map, prefix + "MountTarget", this.MountTarget);
+        this.setParamSimple(map, prefix + "DiskPartition", this.DiskPartition);
 
     }
 }
