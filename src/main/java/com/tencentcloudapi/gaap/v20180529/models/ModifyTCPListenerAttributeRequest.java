@@ -86,6 +86,20 @@ public class ModifyTCPListenerAttributeRequest extends AbstractModel{
     private Long FailoverSwitch;
 
     /**
+    * Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+    */
+    @SerializedName("HealthyThreshold")
+    @Expose
+    private Long HealthyThreshold;
+
+    /**
+    * Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 -10.
+    */
+    @SerializedName("UnhealthyThreshold")
+    @Expose
+    private Long UnhealthyThreshold;
+
+    /**
      * Get Listener ID 
      * @return ListenerId Listener ID
      */
@@ -229,6 +243,38 @@ public class ModifyTCPListenerAttributeRequest extends AbstractModel{
         this.FailoverSwitch = FailoverSwitch;
     }
 
+    /**
+     * Get Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10. 
+     * @return HealthyThreshold Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+     */
+    public Long getHealthyThreshold() {
+        return this.HealthyThreshold;
+    }
+
+    /**
+     * Set Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+     * @param HealthyThreshold Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+     */
+    public void setHealthyThreshold(Long HealthyThreshold) {
+        this.HealthyThreshold = HealthyThreshold;
+    }
+
+    /**
+     * Get Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 -10. 
+     * @return UnhealthyThreshold Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 -10.
+     */
+    public Long getUnhealthyThreshold() {
+        return this.UnhealthyThreshold;
+    }
+
+    /**
+     * Set Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 -10.
+     * @param UnhealthyThreshold Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 -10.
+     */
+    public void setUnhealthyThreshold(Long UnhealthyThreshold) {
+        this.UnhealthyThreshold = UnhealthyThreshold;
+    }
+
     public ModifyTCPListenerAttributeRequest() {
     }
 
@@ -264,6 +310,12 @@ public class ModifyTCPListenerAttributeRequest extends AbstractModel{
         if (source.FailoverSwitch != null) {
             this.FailoverSwitch = new Long(source.FailoverSwitch);
         }
+        if (source.HealthyThreshold != null) {
+            this.HealthyThreshold = new Long(source.HealthyThreshold);
+        }
+        if (source.UnhealthyThreshold != null) {
+            this.UnhealthyThreshold = new Long(source.UnhealthyThreshold);
+        }
     }
 
 
@@ -280,6 +332,8 @@ public class ModifyTCPListenerAttributeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ConnectTimeout", this.ConnectTimeout);
         this.setParamSimple(map, prefix + "HealthCheck", this.HealthCheck);
         this.setParamSimple(map, prefix + "FailoverSwitch", this.FailoverSwitch);
+        this.setParamSimple(map, prefix + "HealthyThreshold", this.HealthyThreshold);
+        this.setParamSimple(map, prefix + "UnhealthyThreshold", this.UnhealthyThreshold);
 
     }
 }

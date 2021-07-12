@@ -144,6 +144,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long [] ClientIPMethod;
 
     /**
+    * IP version. Valid values: `IPv4` (default), `IPv6`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IPAddressVersion")
+    @Expose
+    private String IPAddressVersion;
+
+    /**
      * Get Creation time 
      * @return CreateTime Creation time
      */
@@ -435,6 +443,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.ClientIPMethod = ClientIPMethod;
     }
 
+    /**
+     * Get IP version. Valid values: `IPv4` (default), `IPv6`.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getIPAddressVersion() {
+        return this.IPAddressVersion;
+    }
+
+    /**
+     * Set IP version. Valid values: `IPv4` (default), `IPv6`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setIPAddressVersion(String IPAddressVersion) {
+        this.IPAddressVersion = IPAddressVersion;
+    }
+
     public ProxyGroupDetail() {
     }
 
@@ -497,6 +525,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 this.ClientIPMethod[i] = new Long(source.ClientIPMethod[i]);
             }
         }
+        if (source.IPAddressVersion != null) {
+            this.IPAddressVersion = new String(source.IPAddressVersion);
+        }
     }
 
 
@@ -520,6 +551,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamArraySimple(map, prefix + "ClientIPMethod.", this.ClientIPMethod);
+        this.setParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
 
     }
 }

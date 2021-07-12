@@ -58,6 +58,13 @@ public class CheckProxyCreateRequest extends AbstractModel{
     private String GroupId;
 
     /**
+    * IP version. Valid values: `IPv4` (default), `IPv6`.
+    */
+    @SerializedName("IPAddressVersion")
+    @Expose
+    private String IPAddressVersion;
+
+    /**
      * Get Access (acceleration) region of the connection. The value can be obtained via the DescribeAccessRegionsByDestRegion API. 
      * @return AccessRegion Access (acceleration) region of the connection. The value can be obtained via the DescribeAccessRegionsByDestRegion API.
      */
@@ -137,6 +144,22 @@ public class CheckProxyCreateRequest extends AbstractModel{
         this.GroupId = GroupId;
     }
 
+    /**
+     * Get IP version. Valid values: `IPv4` (default), `IPv6`. 
+     * @return IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
+     */
+    public String getIPAddressVersion() {
+        return this.IPAddressVersion;
+    }
+
+    /**
+     * Set IP version. Valid values: `IPv4` (default), `IPv6`.
+     * @param IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
+     */
+    public void setIPAddressVersion(String IPAddressVersion) {
+        this.IPAddressVersion = IPAddressVersion;
+    }
+
     public CheckProxyCreateRequest() {
     }
 
@@ -160,6 +183,9 @@ public class CheckProxyCreateRequest extends AbstractModel{
         if (source.GroupId != null) {
             this.GroupId = new String(source.GroupId);
         }
+        if (source.IPAddressVersion != null) {
+            this.IPAddressVersion = new String(source.IPAddressVersion);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class CheckProxyCreateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         this.setParamSimple(map, prefix + "Concurrent", this.Concurrent);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
 
     }
 }

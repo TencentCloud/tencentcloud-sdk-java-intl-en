@@ -160,6 +160,20 @@ Notes about this policy:
     private String MultiZoneSubnetPolicy;
 
     /**
+    * Health check type of instances in a scaling group.<br><li>CVM: confirm whether an instance is healthy based on the network status. If the pinged instance is unreachable, the instance will be considered unhealthy. For more information, see [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1)<br><li>CLB: confirm whether an instance is healthy based on the CLB health check status. For more information, see [Health Check Overview](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1).
+    */
+    @SerializedName("HealthCheckType")
+    @Expose
+    private String HealthCheckType;
+
+    /**
+    * Grace period of the CLB health check
+    */
+    @SerializedName("LoadBalancerHealthCheckGracePeriod")
+    @Expose
+    private Long LoadBalancerHealthCheckGracePeriod;
+
+    /**
      * Get Auto scaling group ID 
      * @return AutoScalingGroupId Auto scaling group ID
      */
@@ -503,6 +517,38 @@ Notes about this policy:
         this.MultiZoneSubnetPolicy = MultiZoneSubnetPolicy;
     }
 
+    /**
+     * Get Health check type of instances in a scaling group.<br><li>CVM: confirm whether an instance is healthy based on the network status. If the pinged instance is unreachable, the instance will be considered unhealthy. For more information, see [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1)<br><li>CLB: confirm whether an instance is healthy based on the CLB health check status. For more information, see [Health Check Overview](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1). 
+     * @return HealthCheckType Health check type of instances in a scaling group.<br><li>CVM: confirm whether an instance is healthy based on the network status. If the pinged instance is unreachable, the instance will be considered unhealthy. For more information, see [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1)<br><li>CLB: confirm whether an instance is healthy based on the CLB health check status. For more information, see [Health Check Overview](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1).
+     */
+    public String getHealthCheckType() {
+        return this.HealthCheckType;
+    }
+
+    /**
+     * Set Health check type of instances in a scaling group.<br><li>CVM: confirm whether an instance is healthy based on the network status. If the pinged instance is unreachable, the instance will be considered unhealthy. For more information, see [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1)<br><li>CLB: confirm whether an instance is healthy based on the CLB health check status. For more information, see [Health Check Overview](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1).
+     * @param HealthCheckType Health check type of instances in a scaling group.<br><li>CVM: confirm whether an instance is healthy based on the network status. If the pinged instance is unreachable, the instance will be considered unhealthy. For more information, see [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1)<br><li>CLB: confirm whether an instance is healthy based on the CLB health check status. For more information, see [Health Check Overview](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1).
+     */
+    public void setHealthCheckType(String HealthCheckType) {
+        this.HealthCheckType = HealthCheckType;
+    }
+
+    /**
+     * Get Grace period of the CLB health check 
+     * @return LoadBalancerHealthCheckGracePeriod Grace period of the CLB health check
+     */
+    public Long getLoadBalancerHealthCheckGracePeriod() {
+        return this.LoadBalancerHealthCheckGracePeriod;
+    }
+
+    /**
+     * Set Grace period of the CLB health check
+     * @param LoadBalancerHealthCheckGracePeriod Grace period of the CLB health check
+     */
+    public void setLoadBalancerHealthCheckGracePeriod(Long LoadBalancerHealthCheckGracePeriod) {
+        this.LoadBalancerHealthCheckGracePeriod = LoadBalancerHealthCheckGracePeriod;
+    }
+
     public ModifyAutoScalingGroupRequest() {
     }
 
@@ -571,6 +617,12 @@ Notes about this policy:
         if (source.MultiZoneSubnetPolicy != null) {
             this.MultiZoneSubnetPolicy = new String(source.MultiZoneSubnetPolicy);
         }
+        if (source.HealthCheckType != null) {
+            this.HealthCheckType = new String(source.HealthCheckType);
+        }
+        if (source.LoadBalancerHealthCheckGracePeriod != null) {
+            this.LoadBalancerHealthCheckGracePeriod = new Long(source.LoadBalancerHealthCheckGracePeriod);
+        }
     }
 
 
@@ -595,6 +647,8 @@ Notes about this policy:
         this.setParamObj(map, prefix + "ServiceSettings.", this.ServiceSettings);
         this.setParamSimple(map, prefix + "Ipv6AddressCount", this.Ipv6AddressCount);
         this.setParamSimple(map, prefix + "MultiZoneSubnetPolicy", this.MultiZoneSubnetPolicy);
+        this.setParamSimple(map, prefix + "HealthCheckType", this.HealthCheckType);
+        this.setParamSimple(map, prefix + "LoadBalancerHealthCheckGracePeriod", this.LoadBalancerHealthCheckGracePeriod);
 
     }
 }

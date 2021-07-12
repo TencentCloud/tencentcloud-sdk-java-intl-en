@@ -102,6 +102,13 @@ The connection is to be replicated if this parameter is set.
     private Long BillingType;
 
     /**
+    * IP version. Valid values: `IPv4` (default), `IPv6`.
+    */
+    @SerializedName("IPAddressVersion")
+    @Expose
+    private String IPAddressVersion;
+
+    /**
      * Get Project ID of connection. 
      * @return ProjectId Project ID of connection.
      */
@@ -285,6 +292,22 @@ The connection is to be replicated if this parameter is set.
         this.BillingType = BillingType;
     }
 
+    /**
+     * Get IP version. Valid values: `IPv4` (default), `IPv6`. 
+     * @return IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
+     */
+    public String getIPAddressVersion() {
+        return this.IPAddressVersion;
+    }
+
+    /**
+     * Set IP version. Valid values: `IPv4` (default), `IPv6`.
+     * @param IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
+     */
+    public void setIPAddressVersion(String IPAddressVersion) {
+        this.IPAddressVersion = IPAddressVersion;
+    }
+
     public CreateProxyRequest() {
     }
 
@@ -329,6 +352,9 @@ The connection is to be replicated if this parameter is set.
         if (source.BillingType != null) {
             this.BillingType = new Long(source.BillingType);
         }
+        if (source.IPAddressVersion != null) {
+            this.IPAddressVersion = new String(source.IPAddressVersion);
+        }
     }
 
 
@@ -347,6 +373,7 @@ The connection is to be replicated if this parameter is set.
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "ClonedProxyId", this.ClonedProxyId);
         this.setParamSimple(map, prefix + "BillingType", this.BillingType);
+        this.setParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
 
     }
 }

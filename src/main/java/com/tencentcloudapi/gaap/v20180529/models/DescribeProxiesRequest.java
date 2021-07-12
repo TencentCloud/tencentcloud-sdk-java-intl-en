@@ -44,12 +44,13 @@ public class DescribeProxiesRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * Filter conditions.   
-The upper limit on Filters for each request is 10, and the upper limit on Filter.Values is 5. This parameter does not support specifying InstanceIds and Filters at the same time. 
-ProjectId - String - Required: No - Filter by a project ID.    
-AccessRegion - String - Required: No - Filter by an access region.    
-RealServerRegion - String - Required: No - Filter by an origin server region.
-GroupId - String - Required: No - Filter by a connection group ID.
+    * Filter condition   
+The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` with this parameter. 
+ProjectId - String - Required: No - Filter by project ID.   
+AccessRegion - String - Required: No - Filter by access region.    
+RealServerRegion - String - Required: No - Filter by origin server region.
+GroupId - String - Required: No - Filter by connection group ID.
+IPAddressVersion - String - Required: No - Filter by IP version.
     */
     @SerializedName("Filters")
     @Expose
@@ -128,36 +129,40 @@ When this field does not exist, all connections are pulled, including both not-g
     }
 
     /**
-     * Get Filter conditions.   
-The upper limit on Filters for each request is 10, and the upper limit on Filter.Values is 5. This parameter does not support specifying InstanceIds and Filters at the same time. 
-ProjectId - String - Required: No - Filter by a project ID.    
-AccessRegion - String - Required: No - Filter by an access region.    
-RealServerRegion - String - Required: No - Filter by an origin server region.
-GroupId - String - Required: No - Filter by a connection group ID. 
-     * @return Filters Filter conditions.   
-The upper limit on Filters for each request is 10, and the upper limit on Filter.Values is 5. This parameter does not support specifying InstanceIds and Filters at the same time. 
-ProjectId - String - Required: No - Filter by a project ID.    
-AccessRegion - String - Required: No - Filter by an access region.    
-RealServerRegion - String - Required: No - Filter by an origin server region.
-GroupId - String - Required: No - Filter by a connection group ID.
+     * Get Filter condition   
+The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` with this parameter. 
+ProjectId - String - Required: No - Filter by project ID.   
+AccessRegion - String - Required: No - Filter by access region.    
+RealServerRegion - String - Required: No - Filter by origin server region.
+GroupId - String - Required: No - Filter by connection group ID.
+IPAddressVersion - String - Required: No - Filter by IP version. 
+     * @return Filters Filter condition   
+The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` with this parameter. 
+ProjectId - String - Required: No - Filter by project ID.   
+AccessRegion - String - Required: No - Filter by access region.    
+RealServerRegion - String - Required: No - Filter by origin server region.
+GroupId - String - Required: No - Filter by connection group ID.
+IPAddressVersion - String - Required: No - Filter by IP version.
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter conditions.   
-The upper limit on Filters for each request is 10, and the upper limit on Filter.Values is 5. This parameter does not support specifying InstanceIds and Filters at the same time. 
-ProjectId - String - Required: No - Filter by a project ID.    
-AccessRegion - String - Required: No - Filter by an access region.    
-RealServerRegion - String - Required: No - Filter by an origin server region.
-GroupId - String - Required: No - Filter by a connection group ID.
-     * @param Filters Filter conditions.   
-The upper limit on Filters for each request is 10, and the upper limit on Filter.Values is 5. This parameter does not support specifying InstanceIds and Filters at the same time. 
-ProjectId - String - Required: No - Filter by a project ID.    
-AccessRegion - String - Required: No - Filter by an access region.    
-RealServerRegion - String - Required: No - Filter by an origin server region.
-GroupId - String - Required: No - Filter by a connection group ID.
+     * Set Filter condition   
+The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` with this parameter. 
+ProjectId - String - Required: No - Filter by project ID.   
+AccessRegion - String - Required: No - Filter by access region.    
+RealServerRegion - String - Required: No - Filter by origin server region.
+GroupId - String - Required: No - Filter by connection group ID.
+IPAddressVersion - String - Required: No - Filter by IP version.
+     * @param Filters Filter condition   
+The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` with this parameter. 
+ProjectId - String - Required: No - Filter by project ID.   
+AccessRegion - String - Required: No - Filter by access region.    
+RealServerRegion - String - Required: No - Filter by origin server region.
+GroupId - String - Required: No - Filter by connection group ID.
+IPAddressVersion - String - Required: No - Filter by IP version.
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

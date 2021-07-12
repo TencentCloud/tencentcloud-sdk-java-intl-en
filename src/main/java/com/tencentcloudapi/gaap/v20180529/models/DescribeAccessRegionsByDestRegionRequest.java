@@ -30,6 +30,13 @@ public class DescribeAccessRegionsByDestRegionRequest extends AbstractModel{
     private String DestRegion;
 
     /**
+    * IP version. Valid values: `IPv4` (default), `IPv6`.
+    */
+    @SerializedName("IPAddressVersion")
+    @Expose
+    private String IPAddressVersion;
+
+    /**
      * Get Origin server region: the DescribeDestRegions API returns the value of `RegionId` field of `DestRegionSet`. 
      * @return DestRegion Origin server region: the DescribeDestRegions API returns the value of `RegionId` field of `DestRegionSet`.
      */
@@ -45,6 +52,22 @@ public class DescribeAccessRegionsByDestRegionRequest extends AbstractModel{
         this.DestRegion = DestRegion;
     }
 
+    /**
+     * Get IP version. Valid values: `IPv4` (default), `IPv6`. 
+     * @return IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
+     */
+    public String getIPAddressVersion() {
+        return this.IPAddressVersion;
+    }
+
+    /**
+     * Set IP version. Valid values: `IPv4` (default), `IPv6`.
+     * @param IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
+     */
+    public void setIPAddressVersion(String IPAddressVersion) {
+        this.IPAddressVersion = IPAddressVersion;
+    }
+
     public DescribeAccessRegionsByDestRegionRequest() {
     }
 
@@ -56,6 +79,9 @@ public class DescribeAccessRegionsByDestRegionRequest extends AbstractModel{
         if (source.DestRegion != null) {
             this.DestRegion = new String(source.DestRegion);
         }
+        if (source.IPAddressVersion != null) {
+            this.IPAddressVersion = new String(source.IPAddressVersion);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class DescribeAccessRegionsByDestRegionRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DestRegion", this.DestRegion);
+        this.setParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
 
     }
 }

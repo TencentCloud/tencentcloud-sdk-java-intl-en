@@ -228,26 +228,6 @@ Note: for a scaling group that is created based on a monthly-subscribed instance
     }
 
     /**
-     *This API (CreatePaiInstance) is used to create a PAI instance.
-     * @param req CreatePaiInstanceRequest
-     * @return CreatePaiInstanceResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreatePaiInstanceResponse CreatePaiInstance(CreatePaiInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreatePaiInstanceResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreatePaiInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreatePaiInstance");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API (CreateScalingPolicy) is used to create an alarm trigger policy.
      * @param req CreateScalingPolicyRequest
      * @return CreateScalingPolicyResponse
@@ -586,29 +566,6 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
     }
 
     /**
-     *This API (DescribePaiInstances) is used to query the information of PAI instances.
-
-* You can query the detailed information of PAI instances based on information such as instance ID and instance domain name. For more information on filters, see `Filter`.
-* If the parameter is empty, a certain number (specified by `Limit` and 20 by default) of PAI instances of the current user will be returned.
-     * @param req DescribePaiInstancesRequest
-     * @return DescribePaiInstancesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribePaiInstancesResponse DescribePaiInstances(DescribePaiInstancesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribePaiInstancesResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribePaiInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePaiInstances");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API (DescribeScalingPolicies) is used to query alarm trigger policies.
      * @param req DescribeScalingPoliciesRequest
      * @return DescribeScalingPoliciesResponse
@@ -877,27 +834,6 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
                 Type type = new TypeToken<JsonResponseModel<ModifyScheduledActionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyScheduledAction");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API (PreviewPaiDomainName) is used to preview a PAI domain name.
-
-     * @param req PreviewPaiDomainNameRequest
-     * @return PreviewPaiDomainNameResponse
-     * @throws TencentCloudSDKException
-     */
-    public PreviewPaiDomainNameResponse PreviewPaiDomainName(PreviewPaiDomainNameRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<PreviewPaiDomainNameResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<PreviewPaiDomainNameResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "PreviewPaiDomainName");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

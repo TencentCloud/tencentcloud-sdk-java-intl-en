@@ -143,6 +143,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long ClientIPMethod;
 
     /**
+    * Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("HealthyThreshold")
+    @Expose
+    private Long HealthyThreshold;
+
+    /**
+    * Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("UnhealthyThreshold")
+    @Expose
+    private Long UnhealthyThreshold;
+
+    /**
      * Get Listener ID 
      * @return ListenerId Listener ID
      */
@@ -442,6 +458,46 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.ClientIPMethod = ClientIPMethod;
     }
 
+    /**
+     * Get Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return HealthyThreshold Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getHealthyThreshold() {
+        return this.HealthyThreshold;
+    }
+
+    /**
+     * Set Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param HealthyThreshold Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setHealthyThreshold(Long HealthyThreshold) {
+        this.HealthyThreshold = HealthyThreshold;
+    }
+
+    /**
+     * Get Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return UnhealthyThreshold Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Long getUnhealthyThreshold() {
+        return this.UnhealthyThreshold;
+    }
+
+    /**
+     * Set Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param UnhealthyThreshold Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setUnhealthyThreshold(Long UnhealthyThreshold) {
+        this.UnhealthyThreshold = UnhealthyThreshold;
+    }
+
     public TCPListener() {
     }
 
@@ -498,6 +554,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.ClientIPMethod != null) {
             this.ClientIPMethod = new Long(source.ClientIPMethod);
         }
+        if (source.HealthyThreshold != null) {
+            this.HealthyThreshold = new Long(source.HealthyThreshold);
+        }
+        if (source.UnhealthyThreshold != null) {
+            this.UnhealthyThreshold = new Long(source.UnhealthyThreshold);
+        }
     }
 
 
@@ -520,6 +582,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamArrayObj(map, prefix + "RealServerSet.", this.RealServerSet);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ClientIPMethod", this.ClientIPMethod);
+        this.setParamSimple(map, prefix + "HealthyThreshold", this.HealthyThreshold);
+        this.setParamSimple(map, prefix + "UnhealthyThreshold", this.UnhealthyThreshold);
 
     }
 }

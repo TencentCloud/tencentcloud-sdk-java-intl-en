@@ -72,6 +72,13 @@ public class InquiryPriceCreateProxyRequest extends AbstractModel{
     private Long BillingType;
 
     /**
+    * IP version. Valid values: `IPv4` (default), `IPv6`.
+    */
+    @SerializedName("IPAddressVersion")
+    @Expose
+    private String IPAddressVersion;
+
+    /**
      * Get Acceleration region name. 
      * @return AccessRegion Acceleration region name.
      */
@@ -183,6 +190,22 @@ public class InquiryPriceCreateProxyRequest extends AbstractModel{
         this.BillingType = BillingType;
     }
 
+    /**
+     * Get IP version. Valid values: `IPv4` (default), `IPv6`. 
+     * @return IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
+     */
+    public String getIPAddressVersion() {
+        return this.IPAddressVersion;
+    }
+
+    /**
+     * Set IP version. Valid values: `IPv4` (default), `IPv6`.
+     * @param IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
+     */
+    public void setIPAddressVersion(String IPAddressVersion) {
+        this.IPAddressVersion = IPAddressVersion;
+    }
+
     public InquiryPriceCreateProxyRequest() {
     }
 
@@ -212,6 +235,9 @@ public class InquiryPriceCreateProxyRequest extends AbstractModel{
         if (source.BillingType != null) {
             this.BillingType = new Long(source.BillingType);
         }
+        if (source.IPAddressVersion != null) {
+            this.IPAddressVersion = new String(source.IPAddressVersion);
+        }
     }
 
 
@@ -226,6 +252,7 @@ public class InquiryPriceCreateProxyRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RealServerRegion", this.RealServerRegion);
         this.setParamSimple(map, prefix + "Concurrent", this.Concurrent);
         this.setParamSimple(map, prefix + "BillingType", this.BillingType);
+        this.setParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
 
     }
 }

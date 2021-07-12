@@ -58,6 +58,13 @@ public class CreateProxyGroupRequest extends AbstractModel{
     private AccessConfiguration [] AccessRegionSet;
 
     /**
+    * IP version. Valid values: `IPv4` (default), `IPv6`.
+    */
+    @SerializedName("IPAddressVersion")
+    @Expose
+    private String IPAddressVersion;
+
+    /**
      * Get Project ID of connection group 
      * @return ProjectId Project ID of connection group
      */
@@ -137,6 +144,22 @@ public class CreateProxyGroupRequest extends AbstractModel{
         this.AccessRegionSet = AccessRegionSet;
     }
 
+    /**
+     * Get IP version. Valid values: `IPv4` (default), `IPv6`. 
+     * @return IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
+     */
+    public String getIPAddressVersion() {
+        return this.IPAddressVersion;
+    }
+
+    /**
+     * Set IP version. Valid values: `IPv4` (default), `IPv6`.
+     * @param IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
+     */
+    public void setIPAddressVersion(String IPAddressVersion) {
+        this.IPAddressVersion = IPAddressVersion;
+    }
+
     public CreateProxyGroupRequest() {
     }
 
@@ -166,6 +189,9 @@ public class CreateProxyGroupRequest extends AbstractModel{
                 this.AccessRegionSet[i] = new AccessConfiguration(source.AccessRegionSet[i]);
             }
         }
+        if (source.IPAddressVersion != null) {
+            this.IPAddressVersion = new String(source.IPAddressVersion);
+        }
     }
 
 
@@ -178,6 +204,7 @@ public class CreateProxyGroupRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RealServerRegion", this.RealServerRegion);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamArrayObj(map, prefix + "AccessRegionSet.", this.AccessRegionSet);
+        this.setParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
 
     }
 }

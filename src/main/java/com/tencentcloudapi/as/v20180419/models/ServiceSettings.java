@@ -40,6 +40,13 @@ Default value: CLASSIC_SCALING
     private String ScalingMode;
 
     /**
+    * Enable unhealthy instance replacement. If this feature is enabled, AS will replace instances that are found unhealthy in the CLB health check. If this parameter is not specified, the default value `False` will be used.
+    */
+    @SerializedName("ReplaceLoadBalancerUnhealthy")
+    @Expose
+    private Boolean ReplaceLoadBalancerUnhealthy;
+
+    /**
      * Get Enables unhealthy instance replacement. If this feature is enabled, AS will replace instances that are flagged as unhealthy by Cloud Monitor. If this parameter is not specified, the value will be False by default. 
      * @return ReplaceMonitorUnhealthy Enables unhealthy instance replacement. If this feature is enabled, AS will replace instances that are flagged as unhealthy by Cloud Monitor. If this parameter is not specified, the value will be False by default.
      */
@@ -83,6 +90,22 @@ Default value: CLASSIC_SCALING
         this.ScalingMode = ScalingMode;
     }
 
+    /**
+     * Get Enable unhealthy instance replacement. If this feature is enabled, AS will replace instances that are found unhealthy in the CLB health check. If this parameter is not specified, the default value `False` will be used. 
+     * @return ReplaceLoadBalancerUnhealthy Enable unhealthy instance replacement. If this feature is enabled, AS will replace instances that are found unhealthy in the CLB health check. If this parameter is not specified, the default value `False` will be used.
+     */
+    public Boolean getReplaceLoadBalancerUnhealthy() {
+        return this.ReplaceLoadBalancerUnhealthy;
+    }
+
+    /**
+     * Set Enable unhealthy instance replacement. If this feature is enabled, AS will replace instances that are found unhealthy in the CLB health check. If this parameter is not specified, the default value `False` will be used.
+     * @param ReplaceLoadBalancerUnhealthy Enable unhealthy instance replacement. If this feature is enabled, AS will replace instances that are found unhealthy in the CLB health check. If this parameter is not specified, the default value `False` will be used.
+     */
+    public void setReplaceLoadBalancerUnhealthy(Boolean ReplaceLoadBalancerUnhealthy) {
+        this.ReplaceLoadBalancerUnhealthy = ReplaceLoadBalancerUnhealthy;
+    }
+
     public ServiceSettings() {
     }
 
@@ -97,6 +120,9 @@ Default value: CLASSIC_SCALING
         if (source.ScalingMode != null) {
             this.ScalingMode = new String(source.ScalingMode);
         }
+        if (source.ReplaceLoadBalancerUnhealthy != null) {
+            this.ReplaceLoadBalancerUnhealthy = new Boolean(source.ReplaceLoadBalancerUnhealthy);
+        }
     }
 
 
@@ -106,6 +132,7 @@ Default value: CLASSIC_SCALING
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ReplaceMonitorUnhealthy", this.ReplaceMonitorUnhealthy);
         this.setParamSimple(map, prefix + "ScalingMode", this.ScalingMode);
+        this.setParamSimple(map, prefix + "ReplaceLoadBalancerUnhealthy", this.ReplaceLoadBalancerUnhealthy);
 
     }
 }

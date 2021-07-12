@@ -138,9 +138,6 @@ public enum AsErrorCode {
     // The notification group ID should be a numeric string.
      INVALIDPARAMETERVALUE_INVALIDNOTIFICATIONUSERGROUPID("InvalidParameterValue.InvalidNotificationUserGroupId"),
      
-    // Invalid PAI domain name type
-     INVALIDPARAMETERVALUE_INVALIDPAIDOMAINNAMETYPE("InvalidParameterValue.InvalidPaiDomainNameType"),
-     
     // Invalid scheduled action ID.
      INVALIDPARAMETERVALUE_INVALIDSCHEDULEDACTIONID("InvalidParameterValue.InvalidScheduledActionId"),
      
@@ -252,7 +249,7 @@ public enum AsErrorCode {
     // A parameter is missing in a specific scenario.
      MISSINGPARAMETER_INSCENARIO("MissingParameter.InScenario"),
      
-    // 
+    // The `InstanceMarketOptions` parameter of the spot instance is missing.
      MISSINGPARAMETER_INSTANCEMARKETOPTIONS("MissingParameter.InstanceMarketOptions"),
      
     // The auto scaling group is performing a scaling activity.
