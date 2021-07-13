@@ -282,6 +282,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long ProductId;
 
     /**
+    * Availability zone
+Note: this field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
      * Get ID
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return Id ID
@@ -969,6 +977,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.ProductId = ProductId;
     }
 
+    /**
+     * Get Availability zone
+Note: this field may return `null`, indicating that no valid value can be obtained. 
+     * @return Zone Availability zone
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set Availability zone
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param Zone Availability zone
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
     public ClusterInstancesInfo() {
     }
 
@@ -1067,6 +1095,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.ProductId != null) {
             this.ProductId = new Long(source.ProductId);
         }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
     }
 
 
@@ -1103,6 +1134,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ServiceClass", this.ServiceClass);
         this.setParamSimple(map, prefix + "AliasInfo", this.AliasInfo);
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
 
     }
 }

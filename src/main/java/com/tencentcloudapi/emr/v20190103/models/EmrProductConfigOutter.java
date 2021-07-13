@@ -151,6 +151,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long CbsEncrypt;
 
     /**
+    * Custom application role
+Note: this field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("ApplicationRole")
+    @Expose
+    private String ApplicationRole;
+
+    /**
+    * Security groups
+Note: this field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("SecurityGroups")
+    @Expose
+    private String [] SecurityGroups;
+
+    /**
      * Get Software information
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return SoftInfo Software information
@@ -470,6 +486,46 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.CbsEncrypt = CbsEncrypt;
     }
 
+    /**
+     * Get Custom application role
+Note: this field may return `null`, indicating that no valid value can be obtained. 
+     * @return ApplicationRole Custom application role
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getApplicationRole() {
+        return this.ApplicationRole;
+    }
+
+    /**
+     * Set Custom application role
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param ApplicationRole Custom application role
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setApplicationRole(String ApplicationRole) {
+        this.ApplicationRole = ApplicationRole;
+    }
+
+    /**
+     * Get Security groups
+Note: this field may return `null`, indicating that no valid value can be obtained. 
+     * @return SecurityGroups Security groups
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String [] getSecurityGroups() {
+        return this.SecurityGroups;
+    }
+
+    /**
+     * Set Security groups
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param SecurityGroups Security groups
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setSecurityGroups(String [] SecurityGroups) {
+        this.SecurityGroups = SecurityGroups;
+    }
+
     public EmrProductConfigOutter() {
     }
 
@@ -529,6 +585,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.CbsEncrypt != null) {
             this.CbsEncrypt = new Long(source.CbsEncrypt);
         }
+        if (source.ApplicationRole != null) {
+            this.ApplicationRole = new String(source.ApplicationRole);
+        }
+        if (source.SecurityGroups != null) {
+            this.SecurityGroups = new String[source.SecurityGroups.length];
+            for (int i = 0; i < source.SecurityGroups.length; i++) {
+                this.SecurityGroups[i] = new String(source.SecurityGroups[i]);
+            }
+        }
     }
 
 
@@ -552,6 +617,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "SecurityOn", this.SecurityOn);
         this.setParamSimple(map, prefix + "SecurityGroup", this.SecurityGroup);
         this.setParamSimple(map, prefix + "CbsEncrypt", this.CbsEncrypt);
+        this.setParamSimple(map, prefix + "ApplicationRole", this.ApplicationRole);
+        this.setParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
 
     }
 }

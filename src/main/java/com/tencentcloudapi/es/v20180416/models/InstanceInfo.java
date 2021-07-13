@@ -419,6 +419,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String KibanaConfig;
 
     /**
+    * Kibana node information
+Note: this field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("KibanaNodeInfo")
+    @Expose
+    private KibanaNodeInfo KibanaNodeInfo;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -1354,6 +1362,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.KibanaConfig = KibanaConfig;
     }
 
+    /**
+     * Get Kibana node information
+Note: this field may return `null`, indicating that no valid value can be obtained. 
+     * @return KibanaNodeInfo Kibana node information
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public KibanaNodeInfo getKibanaNodeInfo() {
+        return this.KibanaNodeInfo;
+    }
+
+    /**
+     * Set Kibana node information
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param KibanaNodeInfo Kibana node information
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setKibanaNodeInfo(KibanaNodeInfo KibanaNodeInfo) {
+        this.KibanaNodeInfo = KibanaNodeInfo;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1533,6 +1561,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.KibanaConfig != null) {
             this.KibanaConfig = new String(source.KibanaConfig);
         }
+        if (source.KibanaNodeInfo != null) {
+            this.KibanaNodeInfo = new KibanaNodeInfo(source.KibanaNodeInfo);
+        }
     }
 
 
@@ -1594,6 +1625,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "SecurityType", this.SecurityType);
         this.setParamSimple(map, prefix + "SceneType", this.SceneType);
         this.setParamSimple(map, prefix + "KibanaConfig", this.KibanaConfig);
+        this.setParamObj(map, prefix + "KibanaNodeInfo.", this.KibanaNodeInfo);
 
     }
 }

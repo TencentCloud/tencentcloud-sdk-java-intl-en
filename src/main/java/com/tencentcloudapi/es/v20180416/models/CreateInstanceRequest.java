@@ -30,7 +30,7 @@ public class CreateInstanceRequest extends AbstractModel{
     private String Zone;
 
     /**
-    * Instance version ("5.6.4", "6.4.3", "6.8.2", or "7.5.1")
+    * Instance version. Valid values: `5.6.4`, `6.4.3`, `6.8.2`, `7.5.1`, `7.10.1`
     */
     @SerializedName("EsVersion")
     @Expose
@@ -227,6 +227,13 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
     private Long SceneType;
 
     /**
+    * Visual node configuration
+    */
+    @SerializedName("WebNodeTypeInfo")
+    @Expose
+    private WebNodeTypeInfo WebNodeTypeInfo;
+
+    /**
      * Get Availability Zone 
      * @return Zone Availability Zone
      */
@@ -243,16 +250,16 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
     }
 
     /**
-     * Get Instance version ("5.6.4", "6.4.3", "6.8.2", or "7.5.1") 
-     * @return EsVersion Instance version ("5.6.4", "6.4.3", "6.8.2", or "7.5.1")
+     * Get Instance version. Valid values: `5.6.4`, `6.4.3`, `6.8.2`, `7.5.1`, `7.10.1` 
+     * @return EsVersion Instance version. Valid values: `5.6.4`, `6.4.3`, `6.8.2`, `7.5.1`, `7.10.1`
      */
     public String getEsVersion() {
         return this.EsVersion;
     }
 
     /**
-     * Set Instance version ("5.6.4", "6.4.3", "6.8.2", or "7.5.1")
-     * @param EsVersion Instance version ("5.6.4", "6.4.3", "6.8.2", or "7.5.1")
+     * Set Instance version. Valid values: `5.6.4`, `6.4.3`, `6.8.2`, `7.5.1`, `7.10.1`
+     * @param EsVersion Instance version. Valid values: `5.6.4`, `6.4.3`, `6.8.2`, `7.5.1`, `7.10.1`
      */
     public void setEsVersion(String EsVersion) {
         this.EsVersion = EsVersion;
@@ -706,6 +713,22 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
         this.SceneType = SceneType;
     }
 
+    /**
+     * Get Visual node configuration 
+     * @return WebNodeTypeInfo Visual node configuration
+     */
+    public WebNodeTypeInfo getWebNodeTypeInfo() {
+        return this.WebNodeTypeInfo;
+    }
+
+    /**
+     * Set Visual node configuration
+     * @param WebNodeTypeInfo Visual node configuration
+     */
+    public void setWebNodeTypeInfo(WebNodeTypeInfo WebNodeTypeInfo) {
+        this.WebNodeTypeInfo = WebNodeTypeInfo;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -810,6 +833,9 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
         if (source.SceneType != null) {
             this.SceneType = new Long(source.SceneType);
         }
+        if (source.WebNodeTypeInfo != null) {
+            this.WebNodeTypeInfo = new WebNodeTypeInfo(source.WebNodeTypeInfo);
+        }
     }
 
 
@@ -845,6 +871,7 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
         this.setParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
         this.setParamSimple(map, prefix + "SceneType", this.SceneType);
+        this.setParamObj(map, prefix + "WebNodeTypeInfo.", this.WebNodeTypeInfo);
 
     }
 }

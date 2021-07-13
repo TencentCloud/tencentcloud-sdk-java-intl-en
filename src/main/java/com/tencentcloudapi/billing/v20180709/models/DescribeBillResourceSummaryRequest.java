@@ -66,6 +66,20 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
     private String ActionType;
 
     /**
+    * ID of the instance to be queried
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
+
+    /**
+    * Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid)
+    */
+    @SerializedName("PayMode")
+    @Expose
+    private String PayMode;
+
+    /**
      * Get Offset 
      * @return Offset Offset
      */
@@ -165,6 +179,38 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
         this.ActionType = ActionType;
     }
 
+    /**
+     * Get ID of the instance to be queried 
+     * @return ResourceId ID of the instance to be queried
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set ID of the instance to be queried
+     * @param ResourceId ID of the instance to be queried
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
+    }
+
+    /**
+     * Get Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid) 
+     * @return PayMode Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid)
+     */
+    public String getPayMode() {
+        return this.PayMode;
+    }
+
+    /**
+     * Set Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid)
+     * @param PayMode Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid)
+     */
+    public void setPayMode(String PayMode) {
+        this.PayMode = PayMode;
+    }
+
     public DescribeBillResourceSummaryRequest() {
     }
 
@@ -191,6 +237,12 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
         if (source.ActionType != null) {
             this.ActionType = new String(source.ActionType);
         }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new String(source.PayMode);
+        }
     }
 
 
@@ -204,6 +256,8 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Month", this.Month);
         this.setParamSimple(map, prefix + "NeedRecordNum", this.NeedRecordNum);
         this.setParamSimple(map, prefix + "ActionType", this.ActionType);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
+        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
 
     }
 }

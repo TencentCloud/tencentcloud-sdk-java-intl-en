@@ -18,6 +18,9 @@ public enum EsErrorCode {
     // No credit card or PayPal account is linked to the current account. Unable to make a payment.
      FAILEDOPERATION_NOPAYMENT("FailedOperation.NoPayment"),
      
+    // Unverified user.
+     FAILEDOPERATION_NOTAUTHENTICATED("FailedOperation.NotAuthenticated"),
+     
     // Cannot adjust the node configuration and disk capacity reversely.
      FAILEDOPERATION_UNSUPPORTREVERSEREGULATIONNODETYPEANDDISK("FailedOperation.UnsupportReverseRegulationNodeTypeAndDisk"),
      

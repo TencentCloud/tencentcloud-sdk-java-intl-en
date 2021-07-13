@@ -37,10 +37,11 @@ public class NodeInfo extends AbstractModel{
     private String NodeType;
 
     /**
-    * Node type <li>hotData: hot data node</li>
-<li>warmData: warm data node</li>
-<li>dedicatedMaster: dedicated primary node</li>
-Default value: hotData
+    * Node type<li>`hotData`: hot data node</li>
+<li>`warmData`: warm data node</li>
+<li>`dedicatedMaster`: dedicated master node</li>
+<li>`kibana`: Kibana node</li>
+Default value: `hotData`
     */
     @SerializedName("Type")
     @Expose
@@ -115,28 +116,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Node type <li>hotData: hot data node</li>
-<li>warmData: warm data node</li>
-<li>dedicatedMaster: dedicated primary node</li>
-Default value: hotData 
-     * @return Type Node type <li>hotData: hot data node</li>
-<li>warmData: warm data node</li>
-<li>dedicatedMaster: dedicated primary node</li>
-Default value: hotData
+     * Get Node type<li>`hotData`: hot data node</li>
+<li>`warmData`: warm data node</li>
+<li>`dedicatedMaster`: dedicated master node</li>
+<li>`kibana`: Kibana node</li>
+Default value: `hotData` 
+     * @return Type Node type<li>`hotData`: hot data node</li>
+<li>`warmData`: warm data node</li>
+<li>`dedicatedMaster`: dedicated master node</li>
+<li>`kibana`: Kibana node</li>
+Default value: `hotData`
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Node type <li>hotData: hot data node</li>
-<li>warmData: warm data node</li>
-<li>dedicatedMaster: dedicated primary node</li>
-Default value: hotData
-     * @param Type Node type <li>hotData: hot data node</li>
-<li>warmData: warm data node</li>
-<li>dedicatedMaster: dedicated primary node</li>
-Default value: hotData
+     * Set Node type<li>`hotData`: hot data node</li>
+<li>`warmData`: warm data node</li>
+<li>`dedicatedMaster`: dedicated master node</li>
+<li>`kibana`: Kibana node</li>
+Default value: `hotData`
+     * @param Type Node type<li>`hotData`: hot data node</li>
+<li>`warmData`: warm data node</li>
+<li>`dedicatedMaster`: dedicated master node</li>
+<li>`kibana`: Kibana node</li>
+Default value: `hotData`
      */
     public void setType(String Type) {
         this.Type = Type;
