@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class MountedSettingConf extends AbstractModel{
 
     /**
-    * 
+    * Configuration Name
     */
     @SerializedName("ConfigDataName")
     @Expose
     private String ConfigDataName;
 
     /**
-    * 
+    * Mount point path
     */
     @SerializedName("MountedPath")
     @Expose
     private String MountedPath;
 
     /**
-    * 
+    * Configuration Content
     */
     @SerializedName("Data")
     @Expose
     private Pair [] Data;
 
     /**
-     * Get  
-     * @return ConfigDataName 
+     * Get Configuration Name 
+     * @return ConfigDataName Configuration Name
      */
     public String getConfigDataName() {
         return this.ConfigDataName;
     }
 
     /**
-     * Set 
-     * @param ConfigDataName 
+     * Set Configuration Name
+     * @param ConfigDataName Configuration Name
      */
     public void setConfigDataName(String ConfigDataName) {
         this.ConfigDataName = ConfigDataName;
     }
 
     /**
-     * Get  
-     * @return MountedPath 
+     * Get Mount point path 
+     * @return MountedPath Mount point path
      */
     public String getMountedPath() {
         return this.MountedPath;
     }
 
     /**
-     * Set 
-     * @param MountedPath 
+     * Set Mount point path
+     * @param MountedPath Mount point path
      */
     public void setMountedPath(String MountedPath) {
         this.MountedPath = MountedPath;
     }
 
     /**
-     * Get  
-     * @return Data 
+     * Get Configuration Content 
+     * @return Data Configuration Content
      */
     public Pair [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 
-     * @param Data 
+     * Set Configuration Content
+     * @param Data Configuration Content
      */
     public void setData(Pair [] Data) {
         this.Data = Data;

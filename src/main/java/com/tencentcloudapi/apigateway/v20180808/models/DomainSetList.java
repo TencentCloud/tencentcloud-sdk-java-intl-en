@@ -65,6 +65,20 @@ public class DomainSetList extends AbstractModel{
     private String NetType;
 
     /**
+    * Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
+    */
+    @SerializedName("IsForcedHttps")
+    @Expose
+    private Boolean IsForcedHttps;
+
+    /**
+    * ICP filing status
+    */
+    @SerializedName("RegistrationStatus")
+    @Expose
+    private Boolean RegistrationStatus;
+
+    /**
      * Get Domain name. 
      * @return DomainName Domain name.
      */
@@ -160,6 +174,38 @@ public class DomainSetList extends AbstractModel{
         this.NetType = NetType;
     }
 
+    /**
+     * Get Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding. 
+     * @return IsForcedHttps Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
+     */
+    public Boolean getIsForcedHttps() {
+        return this.IsForcedHttps;
+    }
+
+    /**
+     * Set Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
+     * @param IsForcedHttps Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
+     */
+    public void setIsForcedHttps(Boolean IsForcedHttps) {
+        this.IsForcedHttps = IsForcedHttps;
+    }
+
+    /**
+     * Get ICP filing status 
+     * @return RegistrationStatus ICP filing status
+     */
+    public Boolean getRegistrationStatus() {
+        return this.RegistrationStatus;
+    }
+
+    /**
+     * Set ICP filing status
+     * @param RegistrationStatus ICP filing status
+     */
+    public void setRegistrationStatus(Boolean RegistrationStatus) {
+        this.RegistrationStatus = RegistrationStatus;
+    }
+
     public DomainSetList() {
     }
 
@@ -186,6 +232,12 @@ public class DomainSetList extends AbstractModel{
         if (source.NetType != null) {
             this.NetType = new String(source.NetType);
         }
+        if (source.IsForcedHttps != null) {
+            this.IsForcedHttps = new Boolean(source.IsForcedHttps);
+        }
+        if (source.RegistrationStatus != null) {
+            this.RegistrationStatus = new Boolean(source.RegistrationStatus);
+        }
     }
 
 
@@ -199,6 +251,8 @@ public class DomainSetList extends AbstractModel{
         this.setParamSimple(map, prefix + "IsDefaultMapping", this.IsDefaultMapping);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "NetType", this.NetType);
+        this.setParamSimple(map, prefix + "IsForcedHttps", this.IsForcedHttps);
+        this.setParamSimple(map, prefix + "RegistrationStatus", this.RegistrationStatus);
 
     }
 }

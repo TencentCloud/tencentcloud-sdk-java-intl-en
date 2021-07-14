@@ -211,18 +211,25 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
     private Boolean UseRegistryDefaultConfig;
 
     /**
-    * 
+    * Mounting configurations
     */
     @SerializedName("SettingConfs")
     @Expose
     private MountedSettingConf [] SettingConfs;
 
     /**
-    * 
+    * EKS access configuration
     */
     @SerializedName("EksService")
     @Expose
     private EksService EksService;
+
+    /**
+    * ID of the version that you want to roll back to
+    */
+    @SerializedName("VersionId")
+    @Expose
+    private String VersionId;
 
     /**
      * Get Service ID 
@@ -665,35 +672,51 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
     }
 
     /**
-     * Get  
-     * @return SettingConfs 
+     * Get Mounting configurations 
+     * @return SettingConfs Mounting configurations
      */
     public MountedSettingConf [] getSettingConfs() {
         return this.SettingConfs;
     }
 
     /**
-     * Set 
-     * @param SettingConfs 
+     * Set Mounting configurations
+     * @param SettingConfs Mounting configurations
      */
     public void setSettingConfs(MountedSettingConf [] SettingConfs) {
         this.SettingConfs = SettingConfs;
     }
 
     /**
-     * Get  
-     * @return EksService 
+     * Get EKS access configuration 
+     * @return EksService EKS access configuration
      */
     public EksService getEksService() {
         return this.EksService;
     }
 
     /**
-     * Set 
-     * @param EksService 
+     * Set EKS access configuration
+     * @param EksService EKS access configuration
      */
     public void setEksService(EksService EksService) {
         this.EksService = EksService;
+    }
+
+    /**
+     * Get ID of the version that you want to roll back to 
+     * @return VersionId ID of the version that you want to roll back to
+     */
+    public String getVersionId() {
+        return this.VersionId;
+    }
+
+    /**
+     * Set ID of the version that you want to roll back to
+     * @param VersionId ID of the version that you want to roll back to
+     */
+    public void setVersionId(String VersionId) {
+        this.VersionId = VersionId;
     }
 
     public DeployServiceV2Request() {
@@ -812,6 +835,9 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
         if (source.EksService != null) {
             this.EksService = new EksService(source.EksService);
         }
+        if (source.VersionId != null) {
+            this.VersionId = new String(source.VersionId);
+        }
     }
 
 
@@ -847,6 +873,7 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
         this.setParamSimple(map, prefix + "UseRegistryDefaultConfig", this.UseRegistryDefaultConfig);
         this.setParamArrayObj(map, prefix + "SettingConfs.", this.SettingConfs);
         this.setParamObj(map, prefix + "EksService.", this.EksService);
+        this.setParamSimple(map, prefix + "VersionId", this.VersionId);
 
     }
 }

@@ -259,6 +259,26 @@ public class TemClient extends AbstractClient{
     }
 
     /**
+     *Generate the pre-signed download URL for the specified package
+     * @param req GenerateDownloadUrlRequest
+     * @return GenerateDownloadUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public GenerateDownloadUrlResponse GenerateDownloadUrl(GenerateDownloadUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GenerateDownloadUrlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GenerateDownloadUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GenerateDownloadUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create or update an ingress rule.
      * @param req ModifyIngressRequest
      * @return ModifyIngressResponse

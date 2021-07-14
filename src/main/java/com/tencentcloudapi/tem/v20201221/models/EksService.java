@@ -23,253 +23,308 @@ import java.util.HashMap;
 public class EksService extends AbstractModel{
 
     /**
-    * service name
+    * Service name
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * Available ports
     */
     @SerializedName("Ports")
     @Expose
     private Long [] Ports;
 
     /**
-    * 
+    * Yaml contents
     */
     @SerializedName("Yaml")
     @Expose
     private String Yaml;
 
     /**
-    * 
+    * Service name
+Note: this field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("ServiceName")
     @Expose
     private String ServiceName;
 
     /**
-    * 
+    * Version name
+Note: this field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("VersionName")
     @Expose
     private String VersionName;
 
     /**
-    * 
+    * Private IP
+Note: this field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("ClusterIp")
     @Expose
     private String [] ClusterIp;
 
     /**
-    * 
+    * Public IP
+Note: this field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("ExternalIp")
     @Expose
     private String ExternalIp;
 
     /**
-    * 
+    * The access type. Valid values:
+- EXTERNAL (internet access)
+- VPC（Intra-VPC access)
+- CLUSTER (Intra-cluster access)
+Note: this field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * Subnet ID. It is filled when the access type is `VPC`.
+Note: this field may return `null`, indicating that no valid value is obtained.
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 
+    * Load balancer ID. It is filled when the access type is `EXTERNAL` or `CLUSTER`. It’s created automatically by default.
+Note: this field may return `null`, indicating that no valid value is obtained.
     */
     @SerializedName("LoadBalanceId")
     @Expose
     private String LoadBalanceId;
 
     /**
-    * 
+    * Port Mapping
+Note: this field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("PortMappings")
     @Expose
     private PortMapping [] PortMappings;
 
     /**
-     * Get service name 
-     * @return Name service name
+     * Get Service name 
+     * @return Name Service name
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set service name
-     * @param Name service name
+     * Set Service name
+     * @param Name Service name
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Ports 
+     * Get Available ports 
+     * @return Ports Available ports
      */
     public Long [] getPorts() {
         return this.Ports;
     }
 
     /**
-     * Set 
-     * @param Ports 
+     * Set Available ports
+     * @param Ports Available ports
      */
     public void setPorts(Long [] Ports) {
         this.Ports = Ports;
     }
 
     /**
-     * Get  
-     * @return Yaml 
+     * Get Yaml contents 
+     * @return Yaml Yaml contents
      */
     public String getYaml() {
         return this.Yaml;
     }
 
     /**
-     * Set 
-     * @param Yaml 
+     * Set Yaml contents
+     * @param Yaml Yaml contents
      */
     public void setYaml(String Yaml) {
         this.Yaml = Yaml;
     }
 
     /**
-     * Get  
-     * @return ServiceName 
+     * Get Service name
+Note: this field may return `null`, indicating that no valid value can be obtained. 
+     * @return ServiceName Service name
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public String getServiceName() {
         return this.ServiceName;
     }
 
     /**
-     * Set 
-     * @param ServiceName 
+     * Set Service name
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param ServiceName Service name
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;
     }
 
     /**
-     * Get  
-     * @return VersionName 
+     * Get Version name
+Note: this field may return `null`, indicating that no valid value can be obtained. 
+     * @return VersionName Version name
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public String getVersionName() {
         return this.VersionName;
     }
 
     /**
-     * Set 
-     * @param VersionName 
+     * Set Version name
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param VersionName Version name
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public void setVersionName(String VersionName) {
         this.VersionName = VersionName;
     }
 
     /**
-     * Get  
-     * @return ClusterIp 
+     * Get Private IP
+Note: this field may return `null`, indicating that no valid value can be obtained. 
+     * @return ClusterIp Private IP
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public String [] getClusterIp() {
         return this.ClusterIp;
     }
 
     /**
-     * Set 
-     * @param ClusterIp 
+     * Set Private IP
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param ClusterIp Private IP
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public void setClusterIp(String [] ClusterIp) {
         this.ClusterIp = ClusterIp;
     }
 
     /**
-     * Get  
-     * @return ExternalIp 
+     * Get Public IP
+Note: this field may return `null`, indicating that no valid value can be obtained. 
+     * @return ExternalIp Public IP
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public String getExternalIp() {
         return this.ExternalIp;
     }
 
     /**
-     * Set 
-     * @param ExternalIp 
+     * Set Public IP
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param ExternalIp Public IP
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public void setExternalIp(String ExternalIp) {
         this.ExternalIp = ExternalIp;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get The access type. Valid values:
+- EXTERNAL (internet access)
+- VPC（Intra-VPC access)
+- CLUSTER (Intra-cluster access)
+Note: this field may return `null`, indicating that no valid value can be obtained. 
+     * @return Type The access type. Valid values:
+- EXTERNAL (internet access)
+- VPC（Intra-VPC access)
+- CLUSTER (Intra-cluster access)
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set The access type. Valid values:
+- EXTERNAL (internet access)
+- VPC（Intra-VPC access)
+- CLUSTER (Intra-cluster access)
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param Type The access type. Valid values:
+- EXTERNAL (internet access)
+- VPC（Intra-VPC access)
+- CLUSTER (Intra-cluster access)
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return SubnetId 
+     * Get Subnet ID. It is filled when the access type is `VPC`.
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return SubnetId Subnet ID. It is filled when the access type is `VPC`.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 
-     * @param SubnetId 
+     * Set Subnet ID. It is filled when the access type is `VPC`.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param SubnetId Subnet ID. It is filled when the access type is `VPC`.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get  
-     * @return LoadBalanceId 
+     * Get Load balancer ID. It is filled when the access type is `EXTERNAL` or `CLUSTER`. It’s created automatically by default.
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return LoadBalanceId Load balancer ID. It is filled when the access type is `EXTERNAL` or `CLUSTER`. It’s created automatically by default.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public String getLoadBalanceId() {
         return this.LoadBalanceId;
     }
 
     /**
-     * Set 
-     * @param LoadBalanceId 
+     * Set Load balancer ID. It is filled when the access type is `EXTERNAL` or `CLUSTER`. It’s created automatically by default.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param LoadBalanceId Load balancer ID. It is filled when the access type is `EXTERNAL` or `CLUSTER`. It’s created automatically by default.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public void setLoadBalanceId(String LoadBalanceId) {
         this.LoadBalanceId = LoadBalanceId;
     }
 
     /**
-     * Get  
-     * @return PortMappings 
+     * Get Port Mapping
+Note: this field may return `null`, indicating that no valid value can be obtained. 
+     * @return PortMappings Port Mapping
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public PortMapping [] getPortMappings() {
         return this.PortMappings;
     }
 
     /**
-     * Set 
-     * @param PortMappings 
+     * Set Port Mapping
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param PortMappings Port Mapping
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public void setPortMappings(PortMapping [] PortMappings) {
         this.PortMappings = PortMappings;

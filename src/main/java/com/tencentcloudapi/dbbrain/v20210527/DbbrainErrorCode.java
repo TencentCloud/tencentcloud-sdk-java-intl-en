@@ -1,4 +1,4 @@
-package com.tencentcloudapi.dbbrain.v20191016;
+package com.tencentcloudapi.dbbrain.v20210527;
 public enum DbbrainErrorCode {
     // Error with CAM signature/authentication.
      AUTHFAILURE("AuthFailure"),
@@ -14,6 +14,9 @@ public enum DbbrainErrorCode {
      
     // Incorrect parameter value.
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
+     
+    // The quota limit is exceeded.
+     LIMITEXCEEDED("LimitExceeded"),
      
     // Missing parameter.
      MISSINGPARAMETER("MissingParameter"),

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateCosTokenV2Request extends AbstractModel{
+public class GenerateDownloadUrlRequest extends AbstractModel{
 
     /**
     * Service ID
@@ -30,18 +30,18 @@ public class CreateCosTokenV2Request extends AbstractModel{
     private String ServiceId;
 
     /**
-    * Package name
+    * Package Name
     */
     @SerializedName("PkgName")
     @Expose
     private String PkgName;
 
     /**
-    * optType. 1: upload; 2: query
+    * Version of the package to download
     */
-    @SerializedName("OptType")
+    @SerializedName("DeployVersion")
     @Expose
-    private Long OptType;
+    private String DeployVersion;
 
     /**
     * Source channel
@@ -49,13 +49,6 @@ public class CreateCosTokenV2Request extends AbstractModel{
     @SerializedName("SourceChannel")
     @Expose
     private Long SourceChannel;
-
-    /**
-    * Input parameter of `deployVersion`
-    */
-    @SerializedName("TimeVersion")
-    @Expose
-    private String TimeVersion;
 
     /**
      * Get Service ID 
@@ -74,35 +67,35 @@ public class CreateCosTokenV2Request extends AbstractModel{
     }
 
     /**
-     * Get Package name 
-     * @return PkgName Package name
+     * Get Package Name 
+     * @return PkgName Package Name
      */
     public String getPkgName() {
         return this.PkgName;
     }
 
     /**
-     * Set Package name
-     * @param PkgName Package name
+     * Set Package Name
+     * @param PkgName Package Name
      */
     public void setPkgName(String PkgName) {
         this.PkgName = PkgName;
     }
 
     /**
-     * Get optType. 1: upload; 2: query 
-     * @return OptType optType. 1: upload; 2: query
+     * Get Version of the package to download 
+     * @return DeployVersion Version of the package to download
      */
-    public Long getOptType() {
-        return this.OptType;
+    public String getDeployVersion() {
+        return this.DeployVersion;
     }
 
     /**
-     * Set optType. 1: upload; 2: query
-     * @param OptType optType. 1: upload; 2: query
+     * Set Version of the package to download
+     * @param DeployVersion Version of the package to download
      */
-    public void setOptType(Long OptType) {
-        this.OptType = OptType;
+    public void setDeployVersion(String DeployVersion) {
+        this.DeployVersion = DeployVersion;
     }
 
     /**
@@ -121,44 +114,25 @@ public class CreateCosTokenV2Request extends AbstractModel{
         this.SourceChannel = SourceChannel;
     }
 
-    /**
-     * Get Input parameter of `deployVersion` 
-     * @return TimeVersion Input parameter of `deployVersion`
-     */
-    public String getTimeVersion() {
-        return this.TimeVersion;
-    }
-
-    /**
-     * Set Input parameter of `deployVersion`
-     * @param TimeVersion Input parameter of `deployVersion`
-     */
-    public void setTimeVersion(String TimeVersion) {
-        this.TimeVersion = TimeVersion;
-    }
-
-    public CreateCosTokenV2Request() {
+    public GenerateDownloadUrlRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateCosTokenV2Request(CreateCosTokenV2Request source) {
+    public GenerateDownloadUrlRequest(GenerateDownloadUrlRequest source) {
         if (source.ServiceId != null) {
             this.ServiceId = new String(source.ServiceId);
         }
         if (source.PkgName != null) {
             this.PkgName = new String(source.PkgName);
         }
-        if (source.OptType != null) {
-            this.OptType = new Long(source.OptType);
+        if (source.DeployVersion != null) {
+            this.DeployVersion = new String(source.DeployVersion);
         }
         if (source.SourceChannel != null) {
             this.SourceChannel = new Long(source.SourceChannel);
-        }
-        if (source.TimeVersion != null) {
-            this.TimeVersion = new String(source.TimeVersion);
         }
     }
 
@@ -169,9 +143,8 @@ public class CreateCosTokenV2Request extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
         this.setParamSimple(map, prefix + "PkgName", this.PkgName);
-        this.setParamSimple(map, prefix + "OptType", this.OptType);
+        this.setParamSimple(map, prefix + "DeployVersion", this.DeployVersion);
         this.setParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
-        this.setParamSimple(map, prefix + "TimeVersion", this.TimeVersion);
 
     }
 }
