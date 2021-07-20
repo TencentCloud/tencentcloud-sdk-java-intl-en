@@ -23,19 +23,19 @@ import java.util.HashMap;
 public class RecordParam extends AbstractModel{
 
     /**
-    * Recording interval.
-In seconds. Default value: 1800.
-Value range: 300-7200.
-This parameter is not valid for HLS, and a file will be generated from push start to interruption during HLS recording.
+    * Max recording time per file
+Default value: `1800` (seconds)
+Value range: 60-7200
+This parameter is invalid for HLS. Only one HLS file will be generated from push start to push end.
     */
     @SerializedName("RecordInterval")
     @Expose
     private Long RecordInterval;
 
     /**
-    * Recording storage period.
-In seconds. Value range: 0-93312000.
-0: permanent storage.
+    * Storage duration of the recording file
+Value range: 0-129600000 seconds (0-1500 days)
+`0`: permanent
     */
     @SerializedName("StorageTime")
     @Expose
@@ -81,52 +81,78 @@ If this parameter is not set, the recording filename will be `{StreamID}_{StartY
     private String VodFileName;
 
     /**
-     * Get Recording interval.
-In seconds. Default value: 1800.
-Value range: 300-7200.
-This parameter is not valid for HLS, and a file will be generated from push start to interruption during HLS recording. 
-     * @return RecordInterval Recording interval.
-In seconds. Default value: 1800.
-Value range: 300-7200.
-This parameter is not valid for HLS, and a file will be generated from push start to interruption during HLS recording.
+    * Task flow
+Note: this field may return `null`, indicating that no valid value is obtained.
+    */
+    @SerializedName("Procedure")
+    @Expose
+    private String Procedure;
+
+    /**
+    * Video storage class. Valid values:
+`normal`: STANDARD
+`cold`: STANDARD_IA
+Note: this field may return `null`, indicating that no valid value is obtained.
+    */
+    @SerializedName("StorageMode")
+    @Expose
+    private String StorageMode;
+
+    /**
+    * VOD subapplication category
+Note: this field may return `null`, indicating that no valid value is obtained.
+    */
+    @SerializedName("ClassId")
+    @Expose
+    private Long ClassId;
+
+    /**
+     * Get Max recording time per file
+Default value: `1800` (seconds)
+Value range: 60-7200
+This parameter is invalid for HLS. Only one HLS file will be generated from push start to push end. 
+     * @return RecordInterval Max recording time per file
+Default value: `1800` (seconds)
+Value range: 60-7200
+This parameter is invalid for HLS. Only one HLS file will be generated from push start to push end.
      */
     public Long getRecordInterval() {
         return this.RecordInterval;
     }
 
     /**
-     * Set Recording interval.
-In seconds. Default value: 1800.
-Value range: 300-7200.
-This parameter is not valid for HLS, and a file will be generated from push start to interruption during HLS recording.
-     * @param RecordInterval Recording interval.
-In seconds. Default value: 1800.
-Value range: 300-7200.
-This parameter is not valid for HLS, and a file will be generated from push start to interruption during HLS recording.
+     * Set Max recording time per file
+Default value: `1800` (seconds)
+Value range: 60-7200
+This parameter is invalid for HLS. Only one HLS file will be generated from push start to push end.
+     * @param RecordInterval Max recording time per file
+Default value: `1800` (seconds)
+Value range: 60-7200
+This parameter is invalid for HLS. Only one HLS file will be generated from push start to push end.
      */
     public void setRecordInterval(Long RecordInterval) {
         this.RecordInterval = RecordInterval;
     }
 
     /**
-     * Get Recording storage period.
-In seconds. Value range: 0-93312000.
-0: permanent storage. 
-     * @return StorageTime Recording storage period.
-In seconds. Value range: 0-93312000.
-0: permanent storage.
+     * Get Storage duration of the recording file
+Value range: 0-129600000 seconds (0-1500 days)
+`0`: permanent 
+     * @return StorageTime Storage duration of the recording file
+Value range: 0-129600000 seconds (0-1500 days)
+`0`: permanent
      */
     public Long getStorageTime() {
         return this.StorageTime;
     }
 
     /**
-     * Set Recording storage period.
-In seconds. Value range: 0-93312000.
-0: permanent storage.
-     * @param StorageTime Recording storage period.
-In seconds. Value range: 0-93312000.
-0: permanent storage.
+     * Set Storage duration of the recording file
+Value range: 0-129600000 seconds (0-1500 days)
+`0`: permanent
+     * @param StorageTime Storage duration of the recording file
+Value range: 0-129600000 seconds (0-1500 days)
+`0`: permanent
      */
     public void setStorageTime(Long StorageTime) {
         this.StorageTime = StorageTime;
@@ -252,6 +278,74 @@ If this parameter is not set, the recording filename will be `{StreamID}_{StartY
         this.VodFileName = VodFileName;
     }
 
+    /**
+     * Get Task flow
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return Procedure Task flow
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public String getProcedure() {
+        return this.Procedure;
+    }
+
+    /**
+     * Set Task flow
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param Procedure Task flow
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public void setProcedure(String Procedure) {
+        this.Procedure = Procedure;
+    }
+
+    /**
+     * Get Video storage class. Valid values:
+`normal`: STANDARD
+`cold`: STANDARD_IA
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return StorageMode Video storage class. Valid values:
+`normal`: STANDARD
+`cold`: STANDARD_IA
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public String getStorageMode() {
+        return this.StorageMode;
+    }
+
+    /**
+     * Set Video storage class. Valid values:
+`normal`: STANDARD
+`cold`: STANDARD_IA
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param StorageMode Video storage class. Valid values:
+`normal`: STANDARD
+`cold`: STANDARD_IA
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public void setStorageMode(String StorageMode) {
+        this.StorageMode = StorageMode;
+    }
+
+    /**
+     * Get VOD subapplication category
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return ClassId VOD subapplication category
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public Long getClassId() {
+        return this.ClassId;
+    }
+
+    /**
+     * Set VOD subapplication category
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param ClassId VOD subapplication category
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public void setClassId(Long ClassId) {
+        this.ClassId = ClassId;
+    }
+
     public RecordParam() {
     }
 
@@ -275,6 +369,15 @@ If this parameter is not set, the recording filename will be `{StreamID}_{StartY
         if (source.VodFileName != null) {
             this.VodFileName = new String(source.VodFileName);
         }
+        if (source.Procedure != null) {
+            this.Procedure = new String(source.Procedure);
+        }
+        if (source.StorageMode != null) {
+            this.StorageMode = new String(source.StorageMode);
+        }
+        if (source.ClassId != null) {
+            this.ClassId = new Long(source.ClassId);
+        }
     }
 
 
@@ -287,6 +390,9 @@ If this parameter is not set, the recording filename will be `{StreamID}_{StartY
         this.setParamSimple(map, prefix + "Enable", this.Enable);
         this.setParamSimple(map, prefix + "VodSubAppId", this.VodSubAppId);
         this.setParamSimple(map, prefix + "VodFileName", this.VodFileName);
+        this.setParamSimple(map, prefix + "Procedure", this.Procedure);
+        this.setParamSimple(map, prefix + "StorageMode", this.StorageMode);
+        this.setParamSimple(map, prefix + "ClassId", this.ClassId);
 
     }
 }

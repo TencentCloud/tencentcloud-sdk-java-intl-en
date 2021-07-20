@@ -309,6 +309,9 @@ public enum LiveErrorCode {
     // The template does not match the number of input streams.
      INVALIDPARAMETER_TEMPLATENOTMATCHINPUTNUM("InvalidParameter.TemplateNotMatchInputNum"),
      
+    // Failed to resolve the domain name.
+     INVALIDPARAMETER_URLNOTSAFE("InvalidParameter.UrlNotSafe"),
+     
     // Invalid parameter value.
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
