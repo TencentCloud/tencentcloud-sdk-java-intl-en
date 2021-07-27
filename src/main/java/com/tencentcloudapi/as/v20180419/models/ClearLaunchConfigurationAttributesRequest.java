@@ -38,6 +38,22 @@ Setting it to `true` will clear data disks, which means that CVM newly created o
     private Boolean ClearDataDisks;
 
     /**
+    * Whether to clear the CVM hostname settings. This parameter is optional and the default value is `false`.
+Setting it to `true` will clear the hostname settings, which means that CVM newly created on this launch configuration will have no hostname.
+    */
+    @SerializedName("ClearHostNameSettings")
+    @Expose
+    private Boolean ClearHostNameSettings;
+
+    /**
+    * Whether to clear the CVM instance name settings. This parameter is optional and the default value is `false`.
+Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the “as-{{AutoScalingGroupName}} format.
+    */
+    @SerializedName("ClearInstanceNameSettings")
+    @Expose
+    private Boolean ClearInstanceNameSettings;
+
+    /**
      * Get Launch configuration ID 
      * @return LaunchConfigurationId Launch configuration ID
      */
@@ -73,6 +89,46 @@ Setting it to `true` will clear data disks, which means that CVM newly created o
         this.ClearDataDisks = ClearDataDisks;
     }
 
+    /**
+     * Get Whether to clear the CVM hostname settings. This parameter is optional and the default value is `false`.
+Setting it to `true` will clear the hostname settings, which means that CVM newly created on this launch configuration will have no hostname. 
+     * @return ClearHostNameSettings Whether to clear the CVM hostname settings. This parameter is optional and the default value is `false`.
+Setting it to `true` will clear the hostname settings, which means that CVM newly created on this launch configuration will have no hostname.
+     */
+    public Boolean getClearHostNameSettings() {
+        return this.ClearHostNameSettings;
+    }
+
+    /**
+     * Set Whether to clear the CVM hostname settings. This parameter is optional and the default value is `false`.
+Setting it to `true` will clear the hostname settings, which means that CVM newly created on this launch configuration will have no hostname.
+     * @param ClearHostNameSettings Whether to clear the CVM hostname settings. This parameter is optional and the default value is `false`.
+Setting it to `true` will clear the hostname settings, which means that CVM newly created on this launch configuration will have no hostname.
+     */
+    public void setClearHostNameSettings(Boolean ClearHostNameSettings) {
+        this.ClearHostNameSettings = ClearHostNameSettings;
+    }
+
+    /**
+     * Get Whether to clear the CVM instance name settings. This parameter is optional and the default value is `false`.
+Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the “as-{{AutoScalingGroupName}} format. 
+     * @return ClearInstanceNameSettings Whether to clear the CVM instance name settings. This parameter is optional and the default value is `false`.
+Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the “as-{{AutoScalingGroupName}} format.
+     */
+    public Boolean getClearInstanceNameSettings() {
+        return this.ClearInstanceNameSettings;
+    }
+
+    /**
+     * Set Whether to clear the CVM instance name settings. This parameter is optional and the default value is `false`.
+Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the “as-{{AutoScalingGroupName}} format.
+     * @param ClearInstanceNameSettings Whether to clear the CVM instance name settings. This parameter is optional and the default value is `false`.
+Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the “as-{{AutoScalingGroupName}} format.
+     */
+    public void setClearInstanceNameSettings(Boolean ClearInstanceNameSettings) {
+        this.ClearInstanceNameSettings = ClearInstanceNameSettings;
+    }
+
     public ClearLaunchConfigurationAttributesRequest() {
     }
 
@@ -87,6 +143,12 @@ Setting it to `true` will clear data disks, which means that CVM newly created o
         if (source.ClearDataDisks != null) {
             this.ClearDataDisks = new Boolean(source.ClearDataDisks);
         }
+        if (source.ClearHostNameSettings != null) {
+            this.ClearHostNameSettings = new Boolean(source.ClearHostNameSettings);
+        }
+        if (source.ClearInstanceNameSettings != null) {
+            this.ClearInstanceNameSettings = new Boolean(source.ClearInstanceNameSettings);
+        }
     }
 
 
@@ -96,6 +158,8 @@ Setting it to `true` will clear data disks, which means that CVM newly created o
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LaunchConfigurationId", this.LaunchConfigurationId);
         this.setParamSimple(map, prefix + "ClearDataDisks", this.ClearDataDisks);
+        this.setParamSimple(map, prefix + "ClearHostNameSettings", this.ClearHostNameSettings);
+        this.setParamSimple(map, prefix + "ClearInstanceNameSettings", this.ClearInstanceNameSettings);
 
     }
 }

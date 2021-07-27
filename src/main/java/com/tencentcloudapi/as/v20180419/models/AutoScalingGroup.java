@@ -207,6 +207,41 @@ public class AutoScalingGroup extends AbstractModel{
     private String MultiZoneSubnetPolicy;
 
     /**
+    * Health check type of instances in a scaling group.<br><li>CVM: confirm whether an instance is healthy based on the network status. If the pinged instance is unreachable, the instance will be considered unhealthy. For more information, see [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1)<br><li>CLB: confirm whether an instance is healthy based on the CLB health check status. For more information, see [Health Check Overview](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1).
+    */
+    @SerializedName("HealthCheckType")
+    @Expose
+    private String HealthCheckType;
+
+    /**
+    * Grace period of the CLB health check
+    */
+    @SerializedName("LoadBalancerHealthCheckGracePeriod")
+    @Expose
+    private Long LoadBalancerHealthCheckGracePeriod;
+
+    /**
+    * 
+    */
+    @SerializedName("InstanceAllocationPolicy")
+    @Expose
+    private String InstanceAllocationPolicy;
+
+    /**
+    * 
+    */
+    @SerializedName("SpotMixedAllocationPolicy")
+    @Expose
+    private SpotMixedAllocationPolicy SpotMixedAllocationPolicy;
+
+    /**
+    * 
+    */
+    @SerializedName("CapacityRebalance")
+    @Expose
+    private Boolean CapacityRebalance;
+
+    /**
      * Get Auto scaling group ID 
      * @return AutoScalingGroupId Auto scaling group ID
      */
@@ -630,6 +665,86 @@ public class AutoScalingGroup extends AbstractModel{
         this.MultiZoneSubnetPolicy = MultiZoneSubnetPolicy;
     }
 
+    /**
+     * Get Health check type of instances in a scaling group.<br><li>CVM: confirm whether an instance is healthy based on the network status. If the pinged instance is unreachable, the instance will be considered unhealthy. For more information, see [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1)<br><li>CLB: confirm whether an instance is healthy based on the CLB health check status. For more information, see [Health Check Overview](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1). 
+     * @return HealthCheckType Health check type of instances in a scaling group.<br><li>CVM: confirm whether an instance is healthy based on the network status. If the pinged instance is unreachable, the instance will be considered unhealthy. For more information, see [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1)<br><li>CLB: confirm whether an instance is healthy based on the CLB health check status. For more information, see [Health Check Overview](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1).
+     */
+    public String getHealthCheckType() {
+        return this.HealthCheckType;
+    }
+
+    /**
+     * Set Health check type of instances in a scaling group.<br><li>CVM: confirm whether an instance is healthy based on the network status. If the pinged instance is unreachable, the instance will be considered unhealthy. For more information, see [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1)<br><li>CLB: confirm whether an instance is healthy based on the CLB health check status. For more information, see [Health Check Overview](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1).
+     * @param HealthCheckType Health check type of instances in a scaling group.<br><li>CVM: confirm whether an instance is healthy based on the network status. If the pinged instance is unreachable, the instance will be considered unhealthy. For more information, see [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1)<br><li>CLB: confirm whether an instance is healthy based on the CLB health check status. For more information, see [Health Check Overview](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1).
+     */
+    public void setHealthCheckType(String HealthCheckType) {
+        this.HealthCheckType = HealthCheckType;
+    }
+
+    /**
+     * Get Grace period of the CLB health check 
+     * @return LoadBalancerHealthCheckGracePeriod Grace period of the CLB health check
+     */
+    public Long getLoadBalancerHealthCheckGracePeriod() {
+        return this.LoadBalancerHealthCheckGracePeriod;
+    }
+
+    /**
+     * Set Grace period of the CLB health check
+     * @param LoadBalancerHealthCheckGracePeriod Grace period of the CLB health check
+     */
+    public void setLoadBalancerHealthCheckGracePeriod(Long LoadBalancerHealthCheckGracePeriod) {
+        this.LoadBalancerHealthCheckGracePeriod = LoadBalancerHealthCheckGracePeriod;
+    }
+
+    /**
+     * Get  
+     * @return InstanceAllocationPolicy 
+     */
+    public String getInstanceAllocationPolicy() {
+        return this.InstanceAllocationPolicy;
+    }
+
+    /**
+     * Set 
+     * @param InstanceAllocationPolicy 
+     */
+    public void setInstanceAllocationPolicy(String InstanceAllocationPolicy) {
+        this.InstanceAllocationPolicy = InstanceAllocationPolicy;
+    }
+
+    /**
+     * Get  
+     * @return SpotMixedAllocationPolicy 
+     */
+    public SpotMixedAllocationPolicy getSpotMixedAllocationPolicy() {
+        return this.SpotMixedAllocationPolicy;
+    }
+
+    /**
+     * Set 
+     * @param SpotMixedAllocationPolicy 
+     */
+    public void setSpotMixedAllocationPolicy(SpotMixedAllocationPolicy SpotMixedAllocationPolicy) {
+        this.SpotMixedAllocationPolicy = SpotMixedAllocationPolicy;
+    }
+
+    /**
+     * Get  
+     * @return CapacityRebalance 
+     */
+    public Boolean getCapacityRebalance() {
+        return this.CapacityRebalance;
+    }
+
+    /**
+     * Set 
+     * @param CapacityRebalance 
+     */
+    public void setCapacityRebalance(Boolean CapacityRebalance) {
+        this.CapacityRebalance = CapacityRebalance;
+    }
+
     public AutoScalingGroup() {
     }
 
@@ -734,6 +849,21 @@ public class AutoScalingGroup extends AbstractModel{
         if (source.MultiZoneSubnetPolicy != null) {
             this.MultiZoneSubnetPolicy = new String(source.MultiZoneSubnetPolicy);
         }
+        if (source.HealthCheckType != null) {
+            this.HealthCheckType = new String(source.HealthCheckType);
+        }
+        if (source.LoadBalancerHealthCheckGracePeriod != null) {
+            this.LoadBalancerHealthCheckGracePeriod = new Long(source.LoadBalancerHealthCheckGracePeriod);
+        }
+        if (source.InstanceAllocationPolicy != null) {
+            this.InstanceAllocationPolicy = new String(source.InstanceAllocationPolicy);
+        }
+        if (source.SpotMixedAllocationPolicy != null) {
+            this.SpotMixedAllocationPolicy = new SpotMixedAllocationPolicy(source.SpotMixedAllocationPolicy);
+        }
+        if (source.CapacityRebalance != null) {
+            this.CapacityRebalance = new Boolean(source.CapacityRebalance);
+        }
     }
 
 
@@ -767,6 +897,11 @@ public class AutoScalingGroup extends AbstractModel{
         this.setParamObj(map, prefix + "ServiceSettings.", this.ServiceSettings);
         this.setParamSimple(map, prefix + "Ipv6AddressCount", this.Ipv6AddressCount);
         this.setParamSimple(map, prefix + "MultiZoneSubnetPolicy", this.MultiZoneSubnetPolicy);
+        this.setParamSimple(map, prefix + "HealthCheckType", this.HealthCheckType);
+        this.setParamSimple(map, prefix + "LoadBalancerHealthCheckGracePeriod", this.LoadBalancerHealthCheckGracePeriod);
+        this.setParamSimple(map, prefix + "InstanceAllocationPolicy", this.InstanceAllocationPolicy);
+        this.setParamObj(map, prefix + "SpotMixedAllocationPolicy.", this.SpotMixedAllocationPolicy);
+        this.setParamSimple(map, prefix + "CapacityRebalance", this.CapacityRebalance);
 
     }
 }

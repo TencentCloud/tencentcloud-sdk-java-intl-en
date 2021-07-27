@@ -23,8 +23,8 @@ import java.util.HashMap;
 public class DataDisk extends AbstractModel{
 
     /**
-    * Data disk type. For more information on limits of data disk types, see [CVM Instance Configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). Value range: <br><li>LOCAL_BASIC: Local disk <br><li>LOCAL_SSD: Local SSD disk <br><li>CLOUD_BASIC: HDD cloud disk <br><li>CLOUD_PREMIUM: Premium cloud disk <br><li>CLOUD_SSD: SSD cloud disk <br><br>Default value: LOCAL_BASIC.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Data disk type. For more information on limits of data disk types, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>LOCAL_BASIC: local disk <br><li>LOCAL_SSD: local SSD disk <br><li>CLOUD_BASIC: HDD cloud disk <br><li>CLOUD_PREMIUM: premium cloud storage<br><li>CLOUD_SSD: SSD cloud disk <br><br>The default value should be the same as the `DiskType` field under `SystemDisk`.
+Note: this field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("DiskType")
     @Expose
@@ -47,20 +47,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String SnapshotId;
 
     /**
-     * Get Data disk type. For more information on limits of data disk types, see [CVM Instance Configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). Value range: <br><li>LOCAL_BASIC: Local disk <br><li>LOCAL_SSD: Local SSD disk <br><li>CLOUD_BASIC: HDD cloud disk <br><li>CLOUD_PREMIUM: Premium cloud disk <br><li>CLOUD_SSD: SSD cloud disk <br><br>Default value: LOCAL_BASIC.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DiskType Data disk type. For more information on limits of data disk types, see [CVM Instance Configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). Value range: <br><li>LOCAL_BASIC: Local disk <br><li>LOCAL_SSD: Local SSD disk <br><li>CLOUD_BASIC: HDD cloud disk <br><li>CLOUD_PREMIUM: Premium cloud disk <br><li>CLOUD_SSD: SSD cloud disk <br><br>Default value: LOCAL_BASIC.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Data disk type. For more information on limits of data disk types, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>LOCAL_BASIC: local disk <br><li>LOCAL_SSD: local SSD disk <br><li>CLOUD_BASIC: HDD cloud disk <br><li>CLOUD_PREMIUM: premium cloud storage<br><li>CLOUD_SSD: SSD cloud disk <br><br>The default value should be the same as the `DiskType` field under `SystemDisk`.
+Note: this field may return `null`, indicating that no valid value can be obtained. 
+     * @return DiskType Data disk type. For more information on limits of data disk types, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>LOCAL_BASIC: local disk <br><li>LOCAL_SSD: local SSD disk <br><li>CLOUD_BASIC: HDD cloud disk <br><li>CLOUD_PREMIUM: premium cloud storage<br><li>CLOUD_SSD: SSD cloud disk <br><br>The default value should be the same as the `DiskType` field under `SystemDisk`.
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set Data disk type. For more information on limits of data disk types, see [CVM Instance Configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). Value range: <br><li>LOCAL_BASIC: Local disk <br><li>LOCAL_SSD: Local SSD disk <br><li>CLOUD_BASIC: HDD cloud disk <br><li>CLOUD_PREMIUM: Premium cloud disk <br><li>CLOUD_SSD: SSD cloud disk <br><br>Default value: LOCAL_BASIC.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DiskType Data disk type. For more information on limits of data disk types, see [CVM Instance Configuration](https://intl.cloud.tencent.com/document/product/213/2177?from_cn_redirect=1). Value range: <br><li>LOCAL_BASIC: Local disk <br><li>LOCAL_SSD: Local SSD disk <br><li>CLOUD_BASIC: HDD cloud disk <br><li>CLOUD_PREMIUM: Premium cloud disk <br><li>CLOUD_SSD: SSD cloud disk <br><br>Default value: LOCAL_BASIC.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Data disk type. For more information on limits of data disk types, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>LOCAL_BASIC: local disk <br><li>LOCAL_SSD: local SSD disk <br><li>CLOUD_BASIC: HDD cloud disk <br><li>CLOUD_PREMIUM: premium cloud storage<br><li>CLOUD_SSD: SSD cloud disk <br><br>The default value should be the same as the `DiskType` field under `SystemDisk`.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param DiskType Data disk type. For more information on limits of data disk types, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>LOCAL_BASIC: local disk <br><li>LOCAL_SSD: local SSD disk <br><li>CLOUD_BASIC: HDD cloud disk <br><li>CLOUD_PREMIUM: premium cloud storage<br><li>CLOUD_SSD: SSD cloud disk <br><br>The default value should be the same as the `DiskType` field under `SystemDisk`.
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;

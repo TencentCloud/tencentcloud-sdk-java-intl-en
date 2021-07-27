@@ -23,11 +23,11 @@ import java.util.HashMap;
 public class CreateDisksRequest extends AbstractModel{
 
     /**
-    * Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
+    * The location of the instance. The availability zone and the project that the instance belongs to can be specified using this parameter. If the project is not specified, it will be created under the default project.
     */
-    @SerializedName("DiskType")
+    @SerializedName("Placement")
     @Expose
-    private String DiskType;
+    private Placement Placement;
 
     /**
     * Cloud disk billing method. POSTPAID_BY_HOUR: pay as you go by hour<br><li>CDCPAID: Billed together with the bound dedicated cluster<br>For information about the pricing of each method, see the cloud disk [Pricing Overview](https://intl.cloud.tencent.com/document/product/362/2413?from_cn_redirect=1).
@@ -37,11 +37,11 @@ public class CreateDisksRequest extends AbstractModel{
     private String DiskChargeType;
 
     /**
-    * The location of the instance. The availability zone and the project that the instance belongs to can be specified using this parameter. If the project is not specified, it will be created under the default project.
+    * Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
     */
-    @SerializedName("Placement")
+    @SerializedName("DiskType")
     @Expose
-    private Placement Placement;
+    private String DiskType;
 
     /**
     * The displayed name of the cloud disk. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
@@ -51,6 +51,20 @@ public class CreateDisksRequest extends AbstractModel{
     private String DiskName;
 
     /**
+    * Cloud disk binding tag.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+    * Snapshot ID. If this parameter is specified, the cloud disk is created based on the snapshot. The snapshot type must be a data disk snapshot. The snapshot can be queried in the DiskUsage field in the output parameter through the API [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+    */
+    @SerializedName("SnapshotId")
+    @Expose
+    private String SnapshotId;
+
+    /**
     * If the number of cloud disks to be created is left empty, the default is 1. There is a limit to the maximum number of cloud disks that can be created for a single request. For more information, please see [CBS Use Limits](https://intl.cloud.tencent.com/doc/product/362/5145?from_cn_redirect=1).
     */
     @SerializedName("DiskCount")
@@ -58,11 +72,11 @@ public class CreateDisksRequest extends AbstractModel{
     private Long DiskCount;
 
     /**
-    * Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk. 
+    * Extra performance purchased for a cloud disk.<br>This optional parameter is only valid for Tremendous SSD (CLOUD_TSSD) and Enhanced SSD (CLOUD_HSSD).
     */
-    @SerializedName("DiskChargePrepaid")
+    @SerializedName("ThroughputPerformance")
     @Expose
-    private DiskChargePrepaid DiskChargePrepaid;
+    private Long ThroughputPerformance;
 
     /**
     * Cloud hard disk size (in GB). <br><li> If `SnapshotId` is passed, `DiskSize` cannot be passed. In this case, the size of the cloud disk is the size of the snapshot. <br><li>To pass `SnapshotId` and `DiskSize` at the same time, the size of the disk must be larger than or equal to the size of the snapshot. <br><li>For information about the size range of cloud disks, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
@@ -72,11 +86,11 @@ public class CreateDisksRequest extends AbstractModel{
     private Long DiskSize;
 
     /**
-    * Snapshot ID. If this parameter is specified, the cloud disk is created based on the snapshot. The snapshot type must be a data disk snapshot. The snapshot can be queried in the DiskUsage field in the output parameter through the API [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+    * The default of optional parameter is False. When True is selected, the cloud disk will be created as a shareable cloud disk.
     */
-    @SerializedName("SnapshotId")
+    @SerializedName("Shareable")
     @Expose
-    private String SnapshotId;
+    private Boolean Shareable;
 
     /**
     * A string to ensure the idempotency of the request, which is generated by the client. Each request shall have a unique string with a maximum of 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be ensured.
@@ -93,40 +107,33 @@ public class CreateDisksRequest extends AbstractModel{
     private String Encrypt;
 
     /**
-    * Cloud disk binding tag.
+    * Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk. 
     */
-    @SerializedName("Tags")
+    @SerializedName("DiskChargePrepaid")
     @Expose
-    private Tag [] Tags;
+    private DiskChargePrepaid DiskChargePrepaid;
 
     /**
-    * The default of optional parameter is False. When True is selected, the cloud disk will be created as a shareable cloud disk.
+    * Whether to delete the associated non-permanent snapshots when a cloud disk is terminated. Valid values: `0` (do not delete); `1` (delete). Default value: `0`. To find out whether a snapshot is permanent, you can call the `DescribeSnapshots` API and check the `IsPermanent` field (`true`: permanent; `false`: non-permanent) in its response.
     */
-    @SerializedName("Shareable")
+    @SerializedName("DeleteSnapshot")
     @Expose
-    private Boolean Shareable;
+    private Long DeleteSnapshot;
 
     /**
-    * Extra performance purchased for a cloud disk.<br>This optional parameter is only valid for Tremendous SSD (CLOUD_TSSD) and Enhanced SSD (CLOUD_HSSD).
-    */
-    @SerializedName("ThroughputPerformance")
-    @Expose
-    private Long ThroughputPerformance;
-
-    /**
-     * Get Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD 
-     * @return DiskType Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
+     * Get The location of the instance. The availability zone and the project that the instance belongs to can be specified using this parameter. If the project is not specified, it will be created under the default project. 
+     * @return Placement The location of the instance. The availability zone and the project that the instance belongs to can be specified using this parameter. If the project is not specified, it will be created under the default project.
      */
-    public String getDiskType() {
-        return this.DiskType;
+    public Placement getPlacement() {
+        return this.Placement;
     }
 
     /**
-     * Set Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
-     * @param DiskType Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
+     * Set The location of the instance. The availability zone and the project that the instance belongs to can be specified using this parameter. If the project is not specified, it will be created under the default project.
+     * @param Placement The location of the instance. The availability zone and the project that the instance belongs to can be specified using this parameter. If the project is not specified, it will be created under the default project.
      */
-    public void setDiskType(String DiskType) {
-        this.DiskType = DiskType;
+    public void setPlacement(Placement Placement) {
+        this.Placement = Placement;
     }
 
     /**
@@ -146,19 +153,19 @@ public class CreateDisksRequest extends AbstractModel{
     }
 
     /**
-     * Get The location of the instance. The availability zone and the project that the instance belongs to can be specified using this parameter. If the project is not specified, it will be created under the default project. 
-     * @return Placement The location of the instance. The availability zone and the project that the instance belongs to can be specified using this parameter. If the project is not specified, it will be created under the default project.
+     * Get Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD 
+     * @return DiskType Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
      */
-    public Placement getPlacement() {
-        return this.Placement;
+    public String getDiskType() {
+        return this.DiskType;
     }
 
     /**
-     * Set The location of the instance. The availability zone and the project that the instance belongs to can be specified using this parameter. If the project is not specified, it will be created under the default project.
-     * @param Placement The location of the instance. The availability zone and the project that the instance belongs to can be specified using this parameter. If the project is not specified, it will be created under the default project.
+     * Set Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
+     * @param DiskType Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
      */
-    public void setPlacement(Placement Placement) {
-        this.Placement = Placement;
+    public void setDiskType(String DiskType) {
+        this.DiskType = DiskType;
     }
 
     /**
@@ -178,6 +185,38 @@ public class CreateDisksRequest extends AbstractModel{
     }
 
     /**
+     * Get Cloud disk binding tag. 
+     * @return Tags Cloud disk binding tag.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Cloud disk binding tag.
+     * @param Tags Cloud disk binding tag.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get Snapshot ID. If this parameter is specified, the cloud disk is created based on the snapshot. The snapshot type must be a data disk snapshot. The snapshot can be queried in the DiskUsage field in the output parameter through the API [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1). 
+     * @return SnapshotId Snapshot ID. If this parameter is specified, the cloud disk is created based on the snapshot. The snapshot type must be a data disk snapshot. The snapshot can be queried in the DiskUsage field in the output parameter through the API [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+     */
+    public String getSnapshotId() {
+        return this.SnapshotId;
+    }
+
+    /**
+     * Set Snapshot ID. If this parameter is specified, the cloud disk is created based on the snapshot. The snapshot type must be a data disk snapshot. The snapshot can be queried in the DiskUsage field in the output parameter through the API [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+     * @param SnapshotId Snapshot ID. If this parameter is specified, the cloud disk is created based on the snapshot. The snapshot type must be a data disk snapshot. The snapshot can be queried in the DiskUsage field in the output parameter through the API [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+     */
+    public void setSnapshotId(String SnapshotId) {
+        this.SnapshotId = SnapshotId;
+    }
+
+    /**
      * Get If the number of cloud disks to be created is left empty, the default is 1. There is a limit to the maximum number of cloud disks that can be created for a single request. For more information, please see [CBS Use Limits](https://intl.cloud.tencent.com/doc/product/362/5145?from_cn_redirect=1). 
      * @return DiskCount If the number of cloud disks to be created is left empty, the default is 1. There is a limit to the maximum number of cloud disks that can be created for a single request. For more information, please see [CBS Use Limits](https://intl.cloud.tencent.com/doc/product/362/5145?from_cn_redirect=1).
      */
@@ -194,19 +233,19 @@ public class CreateDisksRequest extends AbstractModel{
     }
 
     /**
-     * Get Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk.  
-     * @return DiskChargePrepaid Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk. 
+     * Get Extra performance purchased for a cloud disk.<br>This optional parameter is only valid for Tremendous SSD (CLOUD_TSSD) and Enhanced SSD (CLOUD_HSSD). 
+     * @return ThroughputPerformance Extra performance purchased for a cloud disk.<br>This optional parameter is only valid for Tremendous SSD (CLOUD_TSSD) and Enhanced SSD (CLOUD_HSSD).
      */
-    public DiskChargePrepaid getDiskChargePrepaid() {
-        return this.DiskChargePrepaid;
+    public Long getThroughputPerformance() {
+        return this.ThroughputPerformance;
     }
 
     /**
-     * Set Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk. 
-     * @param DiskChargePrepaid Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk. 
+     * Set Extra performance purchased for a cloud disk.<br>This optional parameter is only valid for Tremendous SSD (CLOUD_TSSD) and Enhanced SSD (CLOUD_HSSD).
+     * @param ThroughputPerformance Extra performance purchased for a cloud disk.<br>This optional parameter is only valid for Tremendous SSD (CLOUD_TSSD) and Enhanced SSD (CLOUD_HSSD).
      */
-    public void setDiskChargePrepaid(DiskChargePrepaid DiskChargePrepaid) {
-        this.DiskChargePrepaid = DiskChargePrepaid;
+    public void setThroughputPerformance(Long ThroughputPerformance) {
+        this.ThroughputPerformance = ThroughputPerformance;
     }
 
     /**
@@ -226,19 +265,19 @@ public class CreateDisksRequest extends AbstractModel{
     }
 
     /**
-     * Get Snapshot ID. If this parameter is specified, the cloud disk is created based on the snapshot. The snapshot type must be a data disk snapshot. The snapshot can be queried in the DiskUsage field in the output parameter through the API [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1). 
-     * @return SnapshotId Snapshot ID. If this parameter is specified, the cloud disk is created based on the snapshot. The snapshot type must be a data disk snapshot. The snapshot can be queried in the DiskUsage field in the output parameter through the API [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+     * Get The default of optional parameter is False. When True is selected, the cloud disk will be created as a shareable cloud disk. 
+     * @return Shareable The default of optional parameter is False. When True is selected, the cloud disk will be created as a shareable cloud disk.
      */
-    public String getSnapshotId() {
-        return this.SnapshotId;
+    public Boolean getShareable() {
+        return this.Shareable;
     }
 
     /**
-     * Set Snapshot ID. If this parameter is specified, the cloud disk is created based on the snapshot. The snapshot type must be a data disk snapshot. The snapshot can be queried in the DiskUsage field in the output parameter through the API [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
-     * @param SnapshotId Snapshot ID. If this parameter is specified, the cloud disk is created based on the snapshot. The snapshot type must be a data disk snapshot. The snapshot can be queried in the DiskUsage field in the output parameter through the API [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+     * Set The default of optional parameter is False. When True is selected, the cloud disk will be created as a shareable cloud disk.
+     * @param Shareable The default of optional parameter is False. When True is selected, the cloud disk will be created as a shareable cloud disk.
      */
-    public void setSnapshotId(String SnapshotId) {
-        this.SnapshotId = SnapshotId;
+    public void setShareable(Boolean Shareable) {
+        this.Shareable = Shareable;
     }
 
     /**
@@ -274,51 +313,35 @@ public class CreateDisksRequest extends AbstractModel{
     }
 
     /**
-     * Get Cloud disk binding tag. 
-     * @return Tags Cloud disk binding tag.
+     * Get Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk.  
+     * @return DiskChargePrepaid Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk. 
      */
-    public Tag [] getTags() {
-        return this.Tags;
+    public DiskChargePrepaid getDiskChargePrepaid() {
+        return this.DiskChargePrepaid;
     }
 
     /**
-     * Set Cloud disk binding tag.
-     * @param Tags Cloud disk binding tag.
+     * Set Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk. 
+     * @param DiskChargePrepaid Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk. 
      */
-    public void setTags(Tag [] Tags) {
-        this.Tags = Tags;
+    public void setDiskChargePrepaid(DiskChargePrepaid DiskChargePrepaid) {
+        this.DiskChargePrepaid = DiskChargePrepaid;
     }
 
     /**
-     * Get The default of optional parameter is False. When True is selected, the cloud disk will be created as a shareable cloud disk. 
-     * @return Shareable The default of optional parameter is False. When True is selected, the cloud disk will be created as a shareable cloud disk.
+     * Get Whether to delete the associated non-permanent snapshots when a cloud disk is terminated. Valid values: `0` (do not delete); `1` (delete). Default value: `0`. To find out whether a snapshot is permanent, you can call the `DescribeSnapshots` API and check the `IsPermanent` field (`true`: permanent; `false`: non-permanent) in its response. 
+     * @return DeleteSnapshot Whether to delete the associated non-permanent snapshots when a cloud disk is terminated. Valid values: `0` (do not delete); `1` (delete). Default value: `0`. To find out whether a snapshot is permanent, you can call the `DescribeSnapshots` API and check the `IsPermanent` field (`true`: permanent; `false`: non-permanent) in its response.
      */
-    public Boolean getShareable() {
-        return this.Shareable;
+    public Long getDeleteSnapshot() {
+        return this.DeleteSnapshot;
     }
 
     /**
-     * Set The default of optional parameter is False. When True is selected, the cloud disk will be created as a shareable cloud disk.
-     * @param Shareable The default of optional parameter is False. When True is selected, the cloud disk will be created as a shareable cloud disk.
+     * Set Whether to delete the associated non-permanent snapshots when a cloud disk is terminated. Valid values: `0` (do not delete); `1` (delete). Default value: `0`. To find out whether a snapshot is permanent, you can call the `DescribeSnapshots` API and check the `IsPermanent` field (`true`: permanent; `false`: non-permanent) in its response.
+     * @param DeleteSnapshot Whether to delete the associated non-permanent snapshots when a cloud disk is terminated. Valid values: `0` (do not delete); `1` (delete). Default value: `0`. To find out whether a snapshot is permanent, you can call the `DescribeSnapshots` API and check the `IsPermanent` field (`true`: permanent; `false`: non-permanent) in its response.
      */
-    public void setShareable(Boolean Shareable) {
-        this.Shareable = Shareable;
-    }
-
-    /**
-     * Get Extra performance purchased for a cloud disk.<br>This optional parameter is only valid for Tremendous SSD (CLOUD_TSSD) and Enhanced SSD (CLOUD_HSSD). 
-     * @return ThroughputPerformance Extra performance purchased for a cloud disk.<br>This optional parameter is only valid for Tremendous SSD (CLOUD_TSSD) and Enhanced SSD (CLOUD_HSSD).
-     */
-    public Long getThroughputPerformance() {
-        return this.ThroughputPerformance;
-    }
-
-    /**
-     * Set Extra performance purchased for a cloud disk.<br>This optional parameter is only valid for Tremendous SSD (CLOUD_TSSD) and Enhanced SSD (CLOUD_HSSD).
-     * @param ThroughputPerformance Extra performance purchased for a cloud disk.<br>This optional parameter is only valid for Tremendous SSD (CLOUD_TSSD) and Enhanced SSD (CLOUD_HSSD).
-     */
-    public void setThroughputPerformance(Long ThroughputPerformance) {
-        this.ThroughputPerformance = ThroughputPerformance;
+    public void setDeleteSnapshot(Long DeleteSnapshot) {
+        this.DeleteSnapshot = DeleteSnapshot;
     }
 
     public CreateDisksRequest() {
@@ -329,35 +352,17 @@ public class CreateDisksRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateDisksRequest(CreateDisksRequest source) {
-        if (source.DiskType != null) {
-            this.DiskType = new String(source.DiskType);
+        if (source.Placement != null) {
+            this.Placement = new Placement(source.Placement);
         }
         if (source.DiskChargeType != null) {
             this.DiskChargeType = new String(source.DiskChargeType);
         }
-        if (source.Placement != null) {
-            this.Placement = new Placement(source.Placement);
+        if (source.DiskType != null) {
+            this.DiskType = new String(source.DiskType);
         }
         if (source.DiskName != null) {
             this.DiskName = new String(source.DiskName);
-        }
-        if (source.DiskCount != null) {
-            this.DiskCount = new Long(source.DiskCount);
-        }
-        if (source.DiskChargePrepaid != null) {
-            this.DiskChargePrepaid = new DiskChargePrepaid(source.DiskChargePrepaid);
-        }
-        if (source.DiskSize != null) {
-            this.DiskSize = new Long(source.DiskSize);
-        }
-        if (source.SnapshotId != null) {
-            this.SnapshotId = new String(source.SnapshotId);
-        }
-        if (source.ClientToken != null) {
-            this.ClientToken = new String(source.ClientToken);
-        }
-        if (source.Encrypt != null) {
-            this.Encrypt = new String(source.Encrypt);
         }
         if (source.Tags != null) {
             this.Tags = new Tag[source.Tags.length];
@@ -365,11 +370,32 @@ public class CreateDisksRequest extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
-        if (source.Shareable != null) {
-            this.Shareable = new Boolean(source.Shareable);
+        if (source.SnapshotId != null) {
+            this.SnapshotId = new String(source.SnapshotId);
+        }
+        if (source.DiskCount != null) {
+            this.DiskCount = new Long(source.DiskCount);
         }
         if (source.ThroughputPerformance != null) {
             this.ThroughputPerformance = new Long(source.ThroughputPerformance);
+        }
+        if (source.DiskSize != null) {
+            this.DiskSize = new Long(source.DiskSize);
+        }
+        if (source.Shareable != null) {
+            this.Shareable = new Boolean(source.Shareable);
+        }
+        if (source.ClientToken != null) {
+            this.ClientToken = new String(source.ClientToken);
+        }
+        if (source.Encrypt != null) {
+            this.Encrypt = new String(source.Encrypt);
+        }
+        if (source.DiskChargePrepaid != null) {
+            this.DiskChargePrepaid = new DiskChargePrepaid(source.DiskChargePrepaid);
+        }
+        if (source.DeleteSnapshot != null) {
+            this.DeleteSnapshot = new Long(source.DeleteSnapshot);
         }
     }
 
@@ -378,19 +404,20 @@ public class CreateDisksRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DiskType", this.DiskType);
-        this.setParamSimple(map, prefix + "DiskChargeType", this.DiskChargeType);
         this.setParamObj(map, prefix + "Placement.", this.Placement);
+        this.setParamSimple(map, prefix + "DiskChargeType", this.DiskChargeType);
+        this.setParamSimple(map, prefix + "DiskType", this.DiskType);
         this.setParamSimple(map, prefix + "DiskName", this.DiskName);
-        this.setParamSimple(map, prefix + "DiskCount", this.DiskCount);
-        this.setParamObj(map, prefix + "DiskChargePrepaid.", this.DiskChargePrepaid);
-        this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
+        this.setParamSimple(map, prefix + "DiskCount", this.DiskCount);
+        this.setParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
+        this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
+        this.setParamSimple(map, prefix + "Shareable", this.Shareable);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamSimple(map, prefix + "Encrypt", this.Encrypt);
-        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
-        this.setParamSimple(map, prefix + "Shareable", this.Shareable);
-        this.setParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
+        this.setParamObj(map, prefix + "DiskChargePrepaid.", this.DiskChargePrepaid);
+        this.setParamSimple(map, prefix + "DeleteSnapshot", this.DeleteSnapshot);
 
     }
 }

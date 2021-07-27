@@ -38,7 +38,7 @@ public class ModifyLaunchConfigurationAttributesRequest extends AbstractModel{
 
     /**
     * List of instance types. Each type specifies different resource specifications. This list contains up to 10 instance types.
-The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. After `InstanceTypes` is successfully specified for the launch configuration, the original `InstanceType` will be automatically invalidated.
+The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. Specifying the `InstanceTypes` field will invalidate the original `InstanceType`.
     */
     @SerializedName("InstanceTypes")
     @Expose
@@ -64,7 +64,7 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
     private String LaunchConfigurationName;
 
     /**
-    * Base64-encoded custom data of up to 16 KB. If you want to clear UserData, specify it as an empty string
+    * Base64-encoded custom data of up to 16 KB. If you want to clear `UserData`, set it to an empty string.
     */
     @SerializedName("UserData")
     @Expose
@@ -80,7 +80,7 @@ At least one security group is required for this parameter. The security group s
 
     /**
     * Information of the public network bandwidth configuration.
-To modify it or even its subfield, you should specify all the subfields again.
+When the public outbound network bandwidth is 0 Mbps, assigning a public IP is not allowed. Accordingly, if a public IP is assigned, the new public network outbound bandwidth must be greater than 0 Mbps.
     */
     @SerializedName("InternetAccessible")
     @Expose
@@ -96,7 +96,10 @@ To modify it or even its subfield, you should specify all the subfields again.
     private String InstanceChargeType;
 
     /**
-    * 
+    * Parameter setting for the prepaid mode (monthly subscription mode). This parameter can specify the renewal period, whether to set the auto-renewal, and other attributes of the monthly-subscribed instances.
+This parameter is required when changing the instance billing mode to monthly subscription. It will be automatically discarded after you choose another billing mode.
+This field requires passing in the `Period` field. Other fields that are not passed in will use their default values.
+This field can be modified only when the current billing mode is monthly subscription.
     */
     @SerializedName("InstanceChargePrepaid")
     @Expose
@@ -104,8 +107,9 @@ To modify it or even its subfield, you should specify all the subfields again.
 
     /**
     * Market-related options for instances, such as parameters related to spot instances.
-This parameter is required when changing the instance billing mode to spot instance. It will be automatically discarded after the spot instance is changed to another instance billing mode.
-To modify it or even its subfield, you should specify all the subfields again.
+This parameter is required when changing the instance billing mode to spot instance. It will be automatically discarded after you choose another instance billing mode.
+This field requires passing in the `MaxPrice` field under the `SpotOptions`. Other fields that are not passed in will use their default values.
+This field can be modified only when the current billing mode is spot instance.
     */
     @SerializedName("InstanceMarketOptions")
     @Expose
@@ -128,11 +132,31 @@ To modify it or even its subfield, you should specify all the subfields again.
     private SystemDisk SystemDisk;
 
     /**
-    * Instance data disk configurations. Up to 11 data disks can be specified and will be collectively modified. Please provide all the new values for the modification.
+    * Configuration information of instance data disks.
+Up to 11 data disks can be specified and will be collectively modified. Please provide all the new values for the modification.
+The default data disk should be the same as the system disk.
     */
     @SerializedName("DataDisks")
     @Expose
     private DataDisk [] DataDisks;
+
+    /**
+    * CVM hostname settings.
+This field is not supported for Windows instances.
+This field requires passing the `HostName` field. Other fields that are not passed in will use their default values.
+    */
+    @SerializedName("HostNameSettings")
+    @Expose
+    private HostNameSettings HostNameSettings;
+
+    /**
+    * Settings of CVM instance names. 
+If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
+This field requires passing in the `InstanceName` field. Other fields that are not passed in will use their default values.
+    */
+    @SerializedName("InstanceNameSettings")
+    @Expose
+    private InstanceNameSettings InstanceNameSettings;
 
     /**
      * Get Launch configuration ID 
@@ -168,9 +192,9 @@ To modify it or even its subfield, you should specify all the subfields again.
 
     /**
      * Get List of instance types. Each type specifies different resource specifications. This list contains up to 10 instance types.
-The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. After `InstanceTypes` is successfully specified for the launch configuration, the original `InstanceType` will be automatically invalidated. 
+The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. Specifying the `InstanceTypes` field will invalidate the original `InstanceType`. 
      * @return InstanceTypes List of instance types. Each type specifies different resource specifications. This list contains up to 10 instance types.
-The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. After `InstanceTypes` is successfully specified for the launch configuration, the original `InstanceType` will be automatically invalidated.
+The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. Specifying the `InstanceTypes` field will invalidate the original `InstanceType`.
      */
     public String [] getInstanceTypes() {
         return this.InstanceTypes;
@@ -178,9 +202,9 @@ The launch configuration uses `InstanceType` to indicate one single instance typ
 
     /**
      * Set List of instance types. Each type specifies different resource specifications. This list contains up to 10 instance types.
-The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. After `InstanceTypes` is successfully specified for the launch configuration, the original `InstanceType` will be automatically invalidated.
+The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. Specifying the `InstanceTypes` field will invalidate the original `InstanceType`.
      * @param InstanceTypes List of instance types. Each type specifies different resource specifications. This list contains up to 10 instance types.
-The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. After `InstanceTypes` is successfully specified for the launch configuration, the original `InstanceType` will be automatically invalidated.
+The launch configuration uses `InstanceType` to indicate one single instance type and `InstanceTypes` to indicate multiple instance types. Specifying the `InstanceTypes` field will invalidate the original `InstanceType`.
      */
     public void setInstanceTypes(String [] InstanceTypes) {
         this.InstanceTypes = InstanceTypes;
@@ -239,16 +263,16 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
     }
 
     /**
-     * Get Base64-encoded custom data of up to 16 KB. If you want to clear UserData, specify it as an empty string 
-     * @return UserData Base64-encoded custom data of up to 16 KB. If you want to clear UserData, specify it as an empty string
+     * Get Base64-encoded custom data of up to 16 KB. If you want to clear `UserData`, set it to an empty string. 
+     * @return UserData Base64-encoded custom data of up to 16 KB. If you want to clear `UserData`, set it to an empty string.
      */
     public String getUserData() {
         return this.UserData;
     }
 
     /**
-     * Set Base64-encoded custom data of up to 16 KB. If you want to clear UserData, specify it as an empty string
-     * @param UserData Base64-encoded custom data of up to 16 KB. If you want to clear UserData, specify it as an empty string
+     * Set Base64-encoded custom data of up to 16 KB. If you want to clear `UserData`, set it to an empty string.
+     * @param UserData Base64-encoded custom data of up to 16 KB. If you want to clear `UserData`, set it to an empty string.
      */
     public void setUserData(String UserData) {
         this.UserData = UserData;
@@ -276,9 +300,9 @@ At least one security group is required for this parameter. The security group s
 
     /**
      * Get Information of the public network bandwidth configuration.
-To modify it or even its subfield, you should specify all the subfields again. 
+When the public outbound network bandwidth is 0 Mbps, assigning a public IP is not allowed. Accordingly, if a public IP is assigned, the new public network outbound bandwidth must be greater than 0 Mbps. 
      * @return InternetAccessible Information of the public network bandwidth configuration.
-To modify it or even its subfield, you should specify all the subfields again.
+When the public outbound network bandwidth is 0 Mbps, assigning a public IP is not allowed. Accordingly, if a public IP is assigned, the new public network outbound bandwidth must be greater than 0 Mbps.
      */
     public InternetAccessible getInternetAccessible() {
         return this.InternetAccessible;
@@ -286,9 +310,9 @@ To modify it or even its subfield, you should specify all the subfields again.
 
     /**
      * Set Information of the public network bandwidth configuration.
-To modify it or even its subfield, you should specify all the subfields again.
+When the public outbound network bandwidth is 0 Mbps, assigning a public IP is not allowed. Accordingly, if a public IP is assigned, the new public network outbound bandwidth must be greater than 0 Mbps.
      * @param InternetAccessible Information of the public network bandwidth configuration.
-To modify it or even its subfield, you should specify all the subfields again.
+When the public outbound network bandwidth is 0 Mbps, assigning a public IP is not allowed. Accordingly, if a public IP is assigned, the new public network outbound bandwidth must be greater than 0 Mbps.
      */
     public void setInternetAccessible(InternetAccessible InternetAccessible) {
         this.InternetAccessible = InternetAccessible;
@@ -319,16 +343,28 @@ To modify it or even its subfield, you should specify all the subfields again.
     }
 
     /**
-     * Get  
-     * @return InstanceChargePrepaid 
+     * Get Parameter setting for the prepaid mode (monthly subscription mode). This parameter can specify the renewal period, whether to set the auto-renewal, and other attributes of the monthly-subscribed instances.
+This parameter is required when changing the instance billing mode to monthly subscription. It will be automatically discarded after you choose another billing mode.
+This field requires passing in the `Period` field. Other fields that are not passed in will use their default values.
+This field can be modified only when the current billing mode is monthly subscription. 
+     * @return InstanceChargePrepaid Parameter setting for the prepaid mode (monthly subscription mode). This parameter can specify the renewal period, whether to set the auto-renewal, and other attributes of the monthly-subscribed instances.
+This parameter is required when changing the instance billing mode to monthly subscription. It will be automatically discarded after you choose another billing mode.
+This field requires passing in the `Period` field. Other fields that are not passed in will use their default values.
+This field can be modified only when the current billing mode is monthly subscription.
      */
     public InstanceChargePrepaid getInstanceChargePrepaid() {
         return this.InstanceChargePrepaid;
     }
 
     /**
-     * Set 
-     * @param InstanceChargePrepaid 
+     * Set Parameter setting for the prepaid mode (monthly subscription mode). This parameter can specify the renewal period, whether to set the auto-renewal, and other attributes of the monthly-subscribed instances.
+This parameter is required when changing the instance billing mode to monthly subscription. It will be automatically discarded after you choose another billing mode.
+This field requires passing in the `Period` field. Other fields that are not passed in will use their default values.
+This field can be modified only when the current billing mode is monthly subscription.
+     * @param InstanceChargePrepaid Parameter setting for the prepaid mode (monthly subscription mode). This parameter can specify the renewal period, whether to set the auto-renewal, and other attributes of the monthly-subscribed instances.
+This parameter is required when changing the instance billing mode to monthly subscription. It will be automatically discarded after you choose another billing mode.
+This field requires passing in the `Period` field. Other fields that are not passed in will use their default values.
+This field can be modified only when the current billing mode is monthly subscription.
      */
     public void setInstanceChargePrepaid(InstanceChargePrepaid InstanceChargePrepaid) {
         this.InstanceChargePrepaid = InstanceChargePrepaid;
@@ -336,11 +372,13 @@ To modify it or even its subfield, you should specify all the subfields again.
 
     /**
      * Get Market-related options for instances, such as parameters related to spot instances.
-This parameter is required when changing the instance billing mode to spot instance. It will be automatically discarded after the spot instance is changed to another instance billing mode.
-To modify it or even its subfield, you should specify all the subfields again. 
+This parameter is required when changing the instance billing mode to spot instance. It will be automatically discarded after you choose another instance billing mode.
+This field requires passing in the `MaxPrice` field under the `SpotOptions`. Other fields that are not passed in will use their default values.
+This field can be modified only when the current billing mode is spot instance. 
      * @return InstanceMarketOptions Market-related options for instances, such as parameters related to spot instances.
-This parameter is required when changing the instance billing mode to spot instance. It will be automatically discarded after the spot instance is changed to another instance billing mode.
-To modify it or even its subfield, you should specify all the subfields again.
+This parameter is required when changing the instance billing mode to spot instance. It will be automatically discarded after you choose another instance billing mode.
+This field requires passing in the `MaxPrice` field under the `SpotOptions`. Other fields that are not passed in will use their default values.
+This field can be modified only when the current billing mode is spot instance.
      */
     public InstanceMarketOptionsRequest getInstanceMarketOptions() {
         return this.InstanceMarketOptions;
@@ -348,11 +386,13 @@ To modify it or even its subfield, you should specify all the subfields again.
 
     /**
      * Set Market-related options for instances, such as parameters related to spot instances.
-This parameter is required when changing the instance billing mode to spot instance. It will be automatically discarded after the spot instance is changed to another instance billing mode.
-To modify it or even its subfield, you should specify all the subfields again.
+This parameter is required when changing the instance billing mode to spot instance. It will be automatically discarded after you choose another instance billing mode.
+This field requires passing in the `MaxPrice` field under the `SpotOptions`. Other fields that are not passed in will use their default values.
+This field can be modified only when the current billing mode is spot instance.
      * @param InstanceMarketOptions Market-related options for instances, such as parameters related to spot instances.
-This parameter is required when changing the instance billing mode to spot instance. It will be automatically discarded after the spot instance is changed to another instance billing mode.
-To modify it or even its subfield, you should specify all the subfields again.
+This parameter is required when changing the instance billing mode to spot instance. It will be automatically discarded after you choose another instance billing mode.
+This field requires passing in the `MaxPrice` field under the `SpotOptions`. Other fields that are not passed in will use their default values.
+This field can be modified only when the current billing mode is spot instance.
      */
     public void setInstanceMarketOptions(InstanceMarketOptionsRequest InstanceMarketOptions) {
         this.InstanceMarketOptions = InstanceMarketOptions;
@@ -399,19 +439,75 @@ To modify it or even its subfield, you should specify all the subfields again.
     }
 
     /**
-     * Get Instance data disk configurations. Up to 11 data disks can be specified and will be collectively modified. Please provide all the new values for the modification. 
-     * @return DataDisks Instance data disk configurations. Up to 11 data disks can be specified and will be collectively modified. Please provide all the new values for the modification.
+     * Get Configuration information of instance data disks.
+Up to 11 data disks can be specified and will be collectively modified. Please provide all the new values for the modification.
+The default data disk should be the same as the system disk. 
+     * @return DataDisks Configuration information of instance data disks.
+Up to 11 data disks can be specified and will be collectively modified. Please provide all the new values for the modification.
+The default data disk should be the same as the system disk.
      */
     public DataDisk [] getDataDisks() {
         return this.DataDisks;
     }
 
     /**
-     * Set Instance data disk configurations. Up to 11 data disks can be specified and will be collectively modified. Please provide all the new values for the modification.
-     * @param DataDisks Instance data disk configurations. Up to 11 data disks can be specified and will be collectively modified. Please provide all the new values for the modification.
+     * Set Configuration information of instance data disks.
+Up to 11 data disks can be specified and will be collectively modified. Please provide all the new values for the modification.
+The default data disk should be the same as the system disk.
+     * @param DataDisks Configuration information of instance data disks.
+Up to 11 data disks can be specified and will be collectively modified. Please provide all the new values for the modification.
+The default data disk should be the same as the system disk.
      */
     public void setDataDisks(DataDisk [] DataDisks) {
         this.DataDisks = DataDisks;
+    }
+
+    /**
+     * Get CVM hostname settings.
+This field is not supported for Windows instances.
+This field requires passing the `HostName` field. Other fields that are not passed in will use their default values. 
+     * @return HostNameSettings CVM hostname settings.
+This field is not supported for Windows instances.
+This field requires passing the `HostName` field. Other fields that are not passed in will use their default values.
+     */
+    public HostNameSettings getHostNameSettings() {
+        return this.HostNameSettings;
+    }
+
+    /**
+     * Set CVM hostname settings.
+This field is not supported for Windows instances.
+This field requires passing the `HostName` field. Other fields that are not passed in will use their default values.
+     * @param HostNameSettings CVM hostname settings.
+This field is not supported for Windows instances.
+This field requires passing the `HostName` field. Other fields that are not passed in will use their default values.
+     */
+    public void setHostNameSettings(HostNameSettings HostNameSettings) {
+        this.HostNameSettings = HostNameSettings;
+    }
+
+    /**
+     * Get Settings of CVM instance names. 
+If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
+This field requires passing in the `InstanceName` field. Other fields that are not passed in will use their default values. 
+     * @return InstanceNameSettings Settings of CVM instance names. 
+If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
+This field requires passing in the `InstanceName` field. Other fields that are not passed in will use their default values.
+     */
+    public InstanceNameSettings getInstanceNameSettings() {
+        return this.InstanceNameSettings;
+    }
+
+    /**
+     * Set Settings of CVM instance names. 
+If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
+This field requires passing in the `InstanceName` field. Other fields that are not passed in will use their default values.
+     * @param InstanceNameSettings Settings of CVM instance names. 
+If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
+This field requires passing in the `InstanceName` field. Other fields that are not passed in will use their default values.
+     */
+    public void setInstanceNameSettings(InstanceNameSettings InstanceNameSettings) {
+        this.InstanceNameSettings = InstanceNameSettings;
     }
 
     public ModifyLaunchConfigurationAttributesRequest() {
@@ -473,6 +569,12 @@ To modify it or even its subfield, you should specify all the subfields again.
                 this.DataDisks[i] = new DataDisk(source.DataDisks[i]);
             }
         }
+        if (source.HostNameSettings != null) {
+            this.HostNameSettings = new HostNameSettings(source.HostNameSettings);
+        }
+        if (source.InstanceNameSettings != null) {
+            this.InstanceNameSettings = new InstanceNameSettings(source.InstanceNameSettings);
+        }
     }
 
 
@@ -494,6 +596,8 @@ To modify it or even its subfield, you should specify all the subfields again.
         this.setParamSimple(map, prefix + "DiskTypePolicy", this.DiskTypePolicy);
         this.setParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
         this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
+        this.setParamObj(map, prefix + "HostNameSettings.", this.HostNameSettings);
+        this.setParamObj(map, prefix + "InstanceNameSettings.", this.InstanceNameSettings);
 
     }
 }

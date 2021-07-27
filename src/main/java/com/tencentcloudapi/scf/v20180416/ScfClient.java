@@ -486,6 +486,26 @@ An alias must point to a master version and can point to an additional version a
     }
 
     /**
+     * This API is used to invoke functions synchronously.
+     * @param req InvokeFunctionRequest
+     * @return InvokeFunctionResponse
+     * @throws TencentCloudSDKException
+     */
+    public InvokeFunctionResponse InvokeFunction(InvokeFunctionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InvokeFunctionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<InvokeFunctionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "InvokeFunction");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to return the list of all aliases under a function. You can filter them by the specific function version.
      * @param req ListAliasesRequest
      * @return ListAliasesResponse

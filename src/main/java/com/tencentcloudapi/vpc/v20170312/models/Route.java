@@ -55,6 +55,7 @@ Important note: When the GatewayType is EIP, the GatewayId has a fixed value `0`
 
     /**
     * Routing policy ID. The IPv4 routing policy will have a meaningful value, while the IPv6 routing policy is always 0. We recommend using the unique ID `RouteItemId` for the routing policy.
+This field is required when you want to delete a routing policy.
     */
     @SerializedName("RouteId")
     @Expose
@@ -210,8 +211,10 @@ Important note: When the GatewayType is EIP, the GatewayId has a fixed value `0`
     }
 
     /**
-     * Get Routing policy ID. The IPv4 routing policy will have a meaningful value, while the IPv6 routing policy is always 0. We recommend using the unique ID `RouteItemId` for the routing policy. 
+     * Get Routing policy ID. The IPv4 routing policy will have a meaningful value, while the IPv6 routing policy is always 0. We recommend using the unique ID `RouteItemId` for the routing policy.
+This field is required when you want to delete a routing policy. 
      * @return RouteId Routing policy ID. The IPv4 routing policy will have a meaningful value, while the IPv6 routing policy is always 0. We recommend using the unique ID `RouteItemId` for the routing policy.
+This field is required when you want to delete a routing policy.
      */
     public Long getRouteId() {
         return this.RouteId;
@@ -219,7 +222,9 @@ Important note: When the GatewayType is EIP, the GatewayId has a fixed value `0`
 
     /**
      * Set Routing policy ID. The IPv4 routing policy will have a meaningful value, while the IPv6 routing policy is always 0. We recommend using the unique ID `RouteItemId` for the routing policy.
+This field is required when you want to delete a routing policy.
      * @param RouteId Routing policy ID. The IPv4 routing policy will have a meaningful value, while the IPv6 routing policy is always 0. We recommend using the unique ID `RouteItemId` for the routing policy.
+This field is required when you want to delete a routing policy.
      */
     public void setRouteId(Long RouteId) {
         this.RouteId = RouteId;

@@ -131,6 +131,30 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String [] SecurityGroupSet;
 
     /**
+    * SNAT forwarding rule of the NAT Gateway.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("SourceIpTranslationNatRuleSet")
+    @Expose
+    private SourceIpTranslationNatRule [] SourceIpTranslationNatRuleSet;
+
+    /**
+    * Whether the NAT Gateway is dedicated.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("IsExclusive")
+    @Expose
+    private Boolean IsExclusive;
+
+    /**
+    * Bandwidth of the gateway cluster where the dedicated NAT Gateway resides. Unit: Mbps. This field does not exist when the `IsExclusive` field is set to `false`.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("ExclusiveGatewayBandwidth")
+    @Expose
+    private Long ExclusiveGatewayBandwidth;
+
+    /**
      * Get NAT gateway ID. 
      * @return NatGatewayId NAT gateway ID.
      */
@@ -382,6 +406,66 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.SecurityGroupSet = SecurityGroupSet;
     }
 
+    /**
+     * Get SNAT forwarding rule of the NAT Gateway.
+Note: this field may return `null`, indicating that no valid value can be obtained. 
+     * @return SourceIpTranslationNatRuleSet SNAT forwarding rule of the NAT Gateway.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public SourceIpTranslationNatRule [] getSourceIpTranslationNatRuleSet() {
+        return this.SourceIpTranslationNatRuleSet;
+    }
+
+    /**
+     * Set SNAT forwarding rule of the NAT Gateway.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param SourceIpTranslationNatRuleSet SNAT forwarding rule of the NAT Gateway.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setSourceIpTranslationNatRuleSet(SourceIpTranslationNatRule [] SourceIpTranslationNatRuleSet) {
+        this.SourceIpTranslationNatRuleSet = SourceIpTranslationNatRuleSet;
+    }
+
+    /**
+     * Get Whether the NAT Gateway is dedicated.
+Note: this field may return `null`, indicating that no valid value can be obtained. 
+     * @return IsExclusive Whether the NAT Gateway is dedicated.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Boolean getIsExclusive() {
+        return this.IsExclusive;
+    }
+
+    /**
+     * Set Whether the NAT Gateway is dedicated.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param IsExclusive Whether the NAT Gateway is dedicated.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setIsExclusive(Boolean IsExclusive) {
+        this.IsExclusive = IsExclusive;
+    }
+
+    /**
+     * Get Bandwidth of the gateway cluster where the dedicated NAT Gateway resides. Unit: Mbps. This field does not exist when the `IsExclusive` field is set to `false`.
+Note: this field may return `null`, indicating that no valid value can be obtained. 
+     * @return ExclusiveGatewayBandwidth Bandwidth of the gateway cluster where the dedicated NAT Gateway resides. Unit: Mbps. This field does not exist when the `IsExclusive` field is set to `false`.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Long getExclusiveGatewayBandwidth() {
+        return this.ExclusiveGatewayBandwidth;
+    }
+
+    /**
+     * Set Bandwidth of the gateway cluster where the dedicated NAT Gateway resides. Unit: Mbps. This field does not exist when the `IsExclusive` field is set to `false`.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param ExclusiveGatewayBandwidth Bandwidth of the gateway cluster where the dedicated NAT Gateway resides. Unit: Mbps. This field does not exist when the `IsExclusive` field is set to `false`.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setExclusiveGatewayBandwidth(Long ExclusiveGatewayBandwidth) {
+        this.ExclusiveGatewayBandwidth = ExclusiveGatewayBandwidth;
+    }
+
     public NatGateway() {
     }
 
@@ -450,6 +534,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 this.SecurityGroupSet[i] = new String(source.SecurityGroupSet[i]);
             }
         }
+        if (source.SourceIpTranslationNatRuleSet != null) {
+            this.SourceIpTranslationNatRuleSet = new SourceIpTranslationNatRule[source.SourceIpTranslationNatRuleSet.length];
+            for (int i = 0; i < source.SourceIpTranslationNatRuleSet.length; i++) {
+                this.SourceIpTranslationNatRuleSet[i] = new SourceIpTranslationNatRule(source.SourceIpTranslationNatRuleSet[i]);
+            }
+        }
+        if (source.IsExclusive != null) {
+            this.IsExclusive = new Boolean(source.IsExclusive);
+        }
+        if (source.ExclusiveGatewayBandwidth != null) {
+            this.ExclusiveGatewayBandwidth = new Long(source.ExclusiveGatewayBandwidth);
+        }
     }
 
 
@@ -472,6 +568,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamArraySimple(map, prefix + "SecurityGroupSet.", this.SecurityGroupSet);
+        this.setParamArrayObj(map, prefix + "SourceIpTranslationNatRuleSet.", this.SourceIpTranslationNatRuleSet);
+        this.setParamSimple(map, prefix + "IsExclusive", this.IsExclusive);
+        this.setParamSimple(map, prefix + "ExclusiveGatewayBandwidth", this.ExclusiveGatewayBandwidth);
 
     }
 }

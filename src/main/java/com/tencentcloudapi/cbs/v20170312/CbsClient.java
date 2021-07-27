@@ -200,10 +200,10 @@ public class CbsClient extends AbstractClient{
     }
 
     /**
-     *This API (DeleteSnapshots) is used to delete snapshots.
+     *This API is used to delete snapshots.
 
-* The snapshot must be in NORMAL status. The snapshot status can be queried in the SnapshotState field in the output parameters through the API [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
-* Batch operations are supported. If one of the snapshots in a batch cannot be deleted, the operation is not performed and a specific error code is returned.
+* Only snapshots in the `NORMAL` state can be deleted. To query the state of a snapshot, you can call the [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1) API and check the `SnapshotState` field in the response.
+* Batch operations are supported. If there is any snapshot that cannot be deleted, the operation will not be performed and a specific error code will be returned.
      * @param req DeleteSnapshotsRequest
      * @return DeleteSnapshotsResponse
      * @throws TencentCloudSDKException

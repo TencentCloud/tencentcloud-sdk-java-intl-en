@@ -171,6 +171,9 @@ public enum ScfErrorCode {
     // Cdn error.
      INVALIDPARAMETERVALUE_CDN("InvalidParameterValue.Cdn"),
      
+    // The `cfs` configuration item already exists.
+     INVALIDPARAMETERVALUE_CFSPARAMETERDUPLICATE("InvalidParameterValue.CfsParameterDuplicate"),
+     
     // The value of `cfs` configuration item does not meet the specification.
      INVALIDPARAMETERVALUE_CFSPARAMETERERROR("InvalidParameterValue.CfsParameterError"),
      
@@ -182,6 +185,9 @@ public enum ScfErrorCode {
      
     // Cls error.
      INVALIDPARAMETERVALUE_CLS("InvalidParameterValue.Cls"),
+     
+    // 
+     INVALIDPARAMETERVALUE_CLSROLE("InvalidParameterValue.ClsRole"),
      
     // Cmq error.
      INVALIDPARAMETERVALUE_CMQ("InvalidParameterValue.Cmq"),
@@ -321,6 +327,9 @@ public enum ScfErrorCode {
     // Unsupported function version.
      INVALIDPARAMETERVALUE_QUALIFIER("InvalidParameterValue.Qualifier"),
      
+    // Invalid RetCode
+     INVALIDPARAMETERVALUE_RETCODE("InvalidParameterValue.RetCode"),
+     
     // The value of `RoutingConfig` does not conform to the specification. Please fix it and try again. For more information, please visit https://tencentcs.com/5jXKFnBW.
      INVALIDPARAMETERVALUE_ROUTINGCONFIG("InvalidParameterValue.RoutingConfig"),
      
@@ -347,6 +356,9 @@ public enum ScfErrorCode {
      
     // Invalid TempCosObjectName.
      INVALIDPARAMETERVALUE_TEMPCOSOBJECTNAME("InvalidParameterValue.TempCosObjectName"),
+     
+    // The value of `TraceEnable` is invalid. Please modify and try again.
+     INVALIDPARAMETERVALUE_TRACEENABLE("InvalidParameterValue.TraceEnable"),
      
     // TriggerDesc error.
      INVALIDPARAMETERVALUE_TRIGGERDESC("InvalidParameterValue.TriggerDesc"),

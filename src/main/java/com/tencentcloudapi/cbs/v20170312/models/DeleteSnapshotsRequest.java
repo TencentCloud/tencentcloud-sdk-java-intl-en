@@ -30,6 +30,13 @@ public class DeleteSnapshotsRequest extends AbstractModel{
     private String [] SnapshotIds;
 
     /**
+    * Whether to forcibly delete the image associated with the snapshot
+    */
+    @SerializedName("DeleteBindImages")
+    @Expose
+    private Boolean DeleteBindImages;
+
+    /**
      * Get List of IDs of snapshots to be deleted, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1). 
      * @return SnapshotIds List of IDs of snapshots to be deleted, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
      */
@@ -43,6 +50,22 @@ public class DeleteSnapshotsRequest extends AbstractModel{
      */
     public void setSnapshotIds(String [] SnapshotIds) {
         this.SnapshotIds = SnapshotIds;
+    }
+
+    /**
+     * Get Whether to forcibly delete the image associated with the snapshot 
+     * @return DeleteBindImages Whether to forcibly delete the image associated with the snapshot
+     */
+    public Boolean getDeleteBindImages() {
+        return this.DeleteBindImages;
+    }
+
+    /**
+     * Set Whether to forcibly delete the image associated with the snapshot
+     * @param DeleteBindImages Whether to forcibly delete the image associated with the snapshot
+     */
+    public void setDeleteBindImages(Boolean DeleteBindImages) {
+        this.DeleteBindImages = DeleteBindImages;
     }
 
     public DeleteSnapshotsRequest() {
@@ -59,6 +82,9 @@ public class DeleteSnapshotsRequest extends AbstractModel{
                 this.SnapshotIds[i] = new String(source.SnapshotIds[i]);
             }
         }
+        if (source.DeleteBindImages != null) {
+            this.DeleteBindImages = new Boolean(source.DeleteBindImages);
+        }
     }
 
 
@@ -67,6 +93,7 @@ public class DeleteSnapshotsRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "SnapshotIds.", this.SnapshotIds);
+        this.setParamSimple(map, prefix + "DeleteBindImages", this.DeleteBindImages);
 
     }
 }
