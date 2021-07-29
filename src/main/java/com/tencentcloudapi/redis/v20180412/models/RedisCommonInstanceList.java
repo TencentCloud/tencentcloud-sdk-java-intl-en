@@ -79,7 +79,7 @@ public class RedisCommonInstanceList extends AbstractModel{
     private String SubnetId;
 
     /**
-    * Instance status. Valid values: `0` (creating), `1` (running)
+    * Instance status. Valid values: `1` (task running), `2` (instance running), `-2` (instance isolated), `-3` (instance being eliminated), `-4` (instance eliminated)
     */
     @SerializedName("Status")
     @Expose
@@ -249,16 +249,16 @@ public class RedisCommonInstanceList extends AbstractModel{
     }
 
     /**
-     * Get Instance status. Valid values: `0` (creating), `1` (running) 
-     * @return Status Instance status. Valid values: `0` (creating), `1` (running)
+     * Get Instance status. Valid values: `1` (task running), `2` (instance running), `-2` (instance isolated), `-3` (instance being eliminated), `-4` (instance eliminated) 
+     * @return Status Instance status. Valid values: `1` (task running), `2` (instance running), `-2` (instance isolated), `-3` (instance being eliminated), `-4` (instance eliminated)
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Instance status. Valid values: `0` (creating), `1` (running)
-     * @param Status Instance status. Valid values: `0` (creating), `1` (running)
+     * Set Instance status. Valid values: `1` (task running), `2` (instance running), `-2` (instance isolated), `-3` (instance being eliminated), `-4` (instance eliminated)
+     * @param Status Instance status. Valid values: `1` (task running), `2` (instance running), `-2` (instance isolated), `-3` (instance being eliminated), `-4` (instance eliminated)
      */
     public void setStatus(String Status) {
         this.Status = Status;

@@ -86,7 +86,7 @@ public class DescribeCommonDBInstancesRequest extends AbstractModel{
     private String [] Vips;
 
     /**
-    * List of unique VPC IDs
+    * List of VPC IDs
     */
     @SerializedName("UniqVpcIds")
     @Expose
@@ -258,16 +258,16 @@ public class DescribeCommonDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get List of unique VPC IDs 
-     * @return UniqVpcIds List of unique VPC IDs
+     * Get List of VPC IDs 
+     * @return UniqVpcIds List of VPC IDs
      */
     public String [] getUniqVpcIds() {
         return this.UniqVpcIds;
     }
 
     /**
-     * Set List of unique VPC IDs
-     * @param UniqVpcIds List of unique VPC IDs
+     * Set List of VPC IDs
+     * @param UniqVpcIds List of VPC IDs
      */
     public void setUniqVpcIds(String [] UniqVpcIds) {
         this.UniqVpcIds = UniqVpcIds;

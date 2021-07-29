@@ -899,6 +899,26 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to perform a failure simulation.
+     * @param req KillMasterGroupRequest
+     * @return KillMasterGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public KillMasterGroupResponse KillMasterGroup(KillMasterGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<KillMasterGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<KillMasterGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "KillMasterGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to manually back up a Redis instance.
      * @param req ManualBackupInstanceRequest
      * @return ManualBackupInstanceResponse

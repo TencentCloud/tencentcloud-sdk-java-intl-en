@@ -49,8 +49,8 @@ public class FaceConfigureInfo extends AbstractModel{
     private String [] DefaultLibraryLabelSet;
 
     /**
-    * Custom figure filter tag, which specifies the custom figure tag that needs to be returned. If this parameter is left empty or an empty value is entered, all results of the custom figures will be returned. Valid values:
-There can be up to 10 tags, each with a length limit of 16 characters.
+    * Custom face tags for filter, which specify the face recognition results to return. If this parameter is not specified or left empty, the recognition results for all custom face tags are returned.
+Up to 100 tags are allowed, each containing no more than 16 characters.
     */
     @SerializedName("UserDefineLibraryLabelSet")
     @Expose
@@ -136,20 +136,20 @@ Default value: All (both default and custom figure libraries will be used.)
     }
 
     /**
-     * Get Custom figure filter tag, which specifies the custom figure tag that needs to be returned. If this parameter is left empty or an empty value is entered, all results of the custom figures will be returned. Valid values:
-There can be up to 10 tags, each with a length limit of 16 characters. 
-     * @return UserDefineLibraryLabelSet Custom figure filter tag, which specifies the custom figure tag that needs to be returned. If this parameter is left empty or an empty value is entered, all results of the custom figures will be returned. Valid values:
-There can be up to 10 tags, each with a length limit of 16 characters.
+     * Get Custom face tags for filter, which specify the face recognition results to return. If this parameter is not specified or left empty, the recognition results for all custom face tags are returned.
+Up to 100 tags are allowed, each containing no more than 16 characters. 
+     * @return UserDefineLibraryLabelSet Custom face tags for filter, which specify the face recognition results to return. If this parameter is not specified or left empty, the recognition results for all custom face tags are returned.
+Up to 100 tags are allowed, each containing no more than 16 characters.
      */
     public String [] getUserDefineLibraryLabelSet() {
         return this.UserDefineLibraryLabelSet;
     }
 
     /**
-     * Set Custom figure filter tag, which specifies the custom figure tag that needs to be returned. If this parameter is left empty or an empty value is entered, all results of the custom figures will be returned. Valid values:
-There can be up to 10 tags, each with a length limit of 16 characters.
-     * @param UserDefineLibraryLabelSet Custom figure filter tag, which specifies the custom figure tag that needs to be returned. If this parameter is left empty or an empty value is entered, all results of the custom figures will be returned. Valid values:
-There can be up to 10 tags, each with a length limit of 16 characters.
+     * Set Custom face tags for filter, which specify the face recognition results to return. If this parameter is not specified or left empty, the recognition results for all custom face tags are returned.
+Up to 100 tags are allowed, each containing no more than 16 characters.
+     * @param UserDefineLibraryLabelSet Custom face tags for filter, which specify the face recognition results to return. If this parameter is not specified or left empty, the recognition results for all custom face tags are returned.
+Up to 100 tags are allowed, each containing no more than 16 characters.
      */
     public void setUserDefineLibraryLabelSet(String [] UserDefineLibraryLabelSet) {
         this.UserDefineLibraryLabelSet = UserDefineLibraryLabelSet;

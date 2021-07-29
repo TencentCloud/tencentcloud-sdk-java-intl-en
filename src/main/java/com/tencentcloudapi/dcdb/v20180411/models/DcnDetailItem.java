@@ -100,6 +100,55 @@ public class DcnDetailItem extends AbstractModel{
     private Long DcnStatus;
 
     /**
+    * Number of CPU cores of the instance
+    */
+    @SerializedName("Cpu")
+    @Expose
+    private Long Cpu;
+
+    /**
+    * Instance memory capacity in GB
+    */
+    @SerializedName("Memory")
+    @Expose
+    private Long Memory;
+
+    /**
+    * Instance storage capacity in GB
+    */
+    @SerializedName("Storage")
+    @Expose
+    private Long Storage;
+
+    /**
+    * Billing mode
+    */
+    @SerializedName("PayMode")
+    @Expose
+    private Long PayMode;
+
+    /**
+    * Creation time of the instance in the format of 2006-01-02 15:04:05
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * Expiration time of the instance in the format of 2006-01-02 15:04:05
+    */
+    @SerializedName("PeriodEndTime")
+    @Expose
+    private String PeriodEndTime;
+
+    /**
+    * Instance type. Valid values: `1` (dedicated primary instance), `2` (non-dedicated primary instance), `3` (non-dedicated disaster recovery instance), and `4` (dedicated disaster recovery instance).
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private Long InstanceType;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -275,6 +324,118 @@ public class DcnDetailItem extends AbstractModel{
         this.DcnStatus = DcnStatus;
     }
 
+    /**
+     * Get Number of CPU cores of the instance 
+     * @return Cpu Number of CPU cores of the instance
+     */
+    public Long getCpu() {
+        return this.Cpu;
+    }
+
+    /**
+     * Set Number of CPU cores of the instance
+     * @param Cpu Number of CPU cores of the instance
+     */
+    public void setCpu(Long Cpu) {
+        this.Cpu = Cpu;
+    }
+
+    /**
+     * Get Instance memory capacity in GB 
+     * @return Memory Instance memory capacity in GB
+     */
+    public Long getMemory() {
+        return this.Memory;
+    }
+
+    /**
+     * Set Instance memory capacity in GB
+     * @param Memory Instance memory capacity in GB
+     */
+    public void setMemory(Long Memory) {
+        this.Memory = Memory;
+    }
+
+    /**
+     * Get Instance storage capacity in GB 
+     * @return Storage Instance storage capacity in GB
+     */
+    public Long getStorage() {
+        return this.Storage;
+    }
+
+    /**
+     * Set Instance storage capacity in GB
+     * @param Storage Instance storage capacity in GB
+     */
+    public void setStorage(Long Storage) {
+        this.Storage = Storage;
+    }
+
+    /**
+     * Get Billing mode 
+     * @return PayMode Billing mode
+     */
+    public Long getPayMode() {
+        return this.PayMode;
+    }
+
+    /**
+     * Set Billing mode
+     * @param PayMode Billing mode
+     */
+    public void setPayMode(Long PayMode) {
+        this.PayMode = PayMode;
+    }
+
+    /**
+     * Get Creation time of the instance in the format of 2006-01-02 15:04:05 
+     * @return CreateTime Creation time of the instance in the format of 2006-01-02 15:04:05
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set Creation time of the instance in the format of 2006-01-02 15:04:05
+     * @param CreateTime Creation time of the instance in the format of 2006-01-02 15:04:05
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get Expiration time of the instance in the format of 2006-01-02 15:04:05 
+     * @return PeriodEndTime Expiration time of the instance in the format of 2006-01-02 15:04:05
+     */
+    public String getPeriodEndTime() {
+        return this.PeriodEndTime;
+    }
+
+    /**
+     * Set Expiration time of the instance in the format of 2006-01-02 15:04:05
+     * @param PeriodEndTime Expiration time of the instance in the format of 2006-01-02 15:04:05
+     */
+    public void setPeriodEndTime(String PeriodEndTime) {
+        this.PeriodEndTime = PeriodEndTime;
+    }
+
+    /**
+     * Get Instance type. Valid values: `1` (dedicated primary instance), `2` (non-dedicated primary instance), `3` (non-dedicated disaster recovery instance), and `4` (dedicated disaster recovery instance). 
+     * @return InstanceType Instance type. Valid values: `1` (dedicated primary instance), `2` (non-dedicated primary instance), `3` (non-dedicated disaster recovery instance), and `4` (dedicated disaster recovery instance).
+     */
+    public Long getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set Instance type. Valid values: `1` (dedicated primary instance), `2` (non-dedicated primary instance), `3` (non-dedicated disaster recovery instance), and `4` (dedicated disaster recovery instance).
+     * @param InstanceType Instance type. Valid values: `1` (dedicated primary instance), `2` (non-dedicated primary instance), `3` (non-dedicated disaster recovery instance), and `4` (dedicated disaster recovery instance).
+     */
+    public void setInstanceType(Long InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
     public DcnDetailItem() {
     }
 
@@ -316,6 +477,27 @@ public class DcnDetailItem extends AbstractModel{
         if (source.DcnStatus != null) {
             this.DcnStatus = new Long(source.DcnStatus);
         }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
+        if (source.Memory != null) {
+            this.Memory = new Long(source.Memory);
+        }
+        if (source.Storage != null) {
+            this.Storage = new Long(source.Storage);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new Long(source.PayMode);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.PeriodEndTime != null) {
+            this.PeriodEndTime = new String(source.PeriodEndTime);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new Long(source.InstanceType);
+        }
     }
 
 
@@ -334,6 +516,13 @@ public class DcnDetailItem extends AbstractModel{
         this.setParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
         this.setParamSimple(map, prefix + "DcnFlag", this.DcnFlag);
         this.setParamSimple(map, prefix + "DcnStatus", this.DcnStatus);
+        this.setParamSimple(map, prefix + "Cpu", this.Cpu);
+        this.setParamSimple(map, prefix + "Memory", this.Memory);
+        this.setParamSimple(map, prefix + "Storage", this.Storage);
+        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "PeriodEndTime", this.PeriodEndTime);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
 
     }
 }

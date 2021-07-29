@@ -44,6 +44,13 @@ public class EditMediaRequest extends AbstractModel{
     private String OutputObjectPath;
 
     /**
+    * Configuration for output files of video editing
+    */
+    @SerializedName("OutputConfig")
+    @Expose
+    private EditMediaOutputConfig OutputConfig;
+
+    /**
     * Event notification information of task. If this parameter is left empty, no event notifications will be obtained.
     */
     @SerializedName("TaskNotifyConfig")
@@ -117,6 +124,22 @@ public class EditMediaRequest extends AbstractModel{
      */
     public void setOutputObjectPath(String OutputObjectPath) {
         this.OutputObjectPath = OutputObjectPath;
+    }
+
+    /**
+     * Get Configuration for output files of video editing 
+     * @return OutputConfig Configuration for output files of video editing
+     */
+    public EditMediaOutputConfig getOutputConfig() {
+        return this.OutputConfig;
+    }
+
+    /**
+     * Set Configuration for output files of video editing
+     * @param OutputConfig Configuration for output files of video editing
+     */
+    public void setOutputConfig(EditMediaOutputConfig OutputConfig) {
+        this.OutputConfig = OutputConfig;
     }
 
     /**
@@ -203,6 +226,9 @@ public class EditMediaRequest extends AbstractModel{
         if (source.OutputObjectPath != null) {
             this.OutputObjectPath = new String(source.OutputObjectPath);
         }
+        if (source.OutputConfig != null) {
+            this.OutputConfig = new EditMediaOutputConfig(source.OutputConfig);
+        }
         if (source.TaskNotifyConfig != null) {
             this.TaskNotifyConfig = new TaskNotifyConfig(source.TaskNotifyConfig);
         }
@@ -225,6 +251,7 @@ public class EditMediaRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         this.setParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
+        this.setParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
         this.setParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
         this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);

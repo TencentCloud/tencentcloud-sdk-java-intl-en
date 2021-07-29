@@ -37,7 +37,13 @@ public class CreateInstanceAccountRequest extends AbstractModel{
     private String AccountName;
 
     /**
-    * Sub-account password
+    * 1. The password must contain 8-30 characters. A password of 12 or more characters is recommended.
+2. The password cannot start with a slash (/).
+3. The password must contain at least two of the following four types:
+    a. Lowercase letters (a-z)
+    b. Uppercase letters (A-Z)
+    c. Digits (0-9)
+    d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
     */
     @SerializedName("AccountPassword")
     @Expose
@@ -97,16 +103,40 @@ public class CreateInstanceAccountRequest extends AbstractModel{
     }
 
     /**
-     * Get Sub-account password 
-     * @return AccountPassword Sub-account password
+     * Get 1. The password must contain 8-30 characters. A password of 12 or more characters is recommended.
+2. The password cannot start with a slash (/).
+3. The password must contain at least two of the following four types:
+    a. Lowercase letters (a-z)
+    b. Uppercase letters (A-Z)
+    c. Digits (0-9)
+    d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 
+     * @return AccountPassword 1. The password must contain 8-30 characters. A password of 12 or more characters is recommended.
+2. The password cannot start with a slash (/).
+3. The password must contain at least two of the following four types:
+    a. Lowercase letters (a-z)
+    b. Uppercase letters (A-Z)
+    c. Digits (0-9)
+    d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
      */
     public String getAccountPassword() {
         return this.AccountPassword;
     }
 
     /**
-     * Set Sub-account password
-     * @param AccountPassword Sub-account password
+     * Set 1. The password must contain 8-30 characters. A password of 12 or more characters is recommended.
+2. The password cannot start with a slash (/).
+3. The password must contain at least two of the following four types:
+    a. Lowercase letters (a-z)
+    b. Uppercase letters (A-Z)
+    c. Digits (0-9)
+    d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+     * @param AccountPassword 1. The password must contain 8-30 characters. A password of 12 or more characters is recommended.
+2. The password cannot start with a slash (/).
+3. The password must contain at least two of the following four types:
+    a. Lowercase letters (a-z)
+    b. Uppercase letters (A-Z)
+    c. Digits (0-9)
+    d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
      */
     public void setAccountPassword(String AccountPassword) {
         this.AccountPassword = AccountPassword;
