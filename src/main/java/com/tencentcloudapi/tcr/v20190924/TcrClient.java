@@ -39,6 +39,46 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *This API is used to verify the information of the Enterprise Edition instance.
+     * @param req CheckInstanceRequest
+     * @return CheckInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckInstanceResponse CheckInstance(CheckInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CheckInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CheckInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CheckInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create the tag immutability rule.
+     * @param req CreateImmutableTagRulesRequest
+     * @return CreateImmutableTagRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateImmutableTagRulesResponse CreateImmutableTagRules(CreateImmutableTagRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateImmutableTagRulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateImmutableTagRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateImmutableTagRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create multiple public network access allowlist policies of the TCR instance.
      * @param req CreateMultipleSecurityPolicyRequest
      * @return CreateMultipleSecurityPolicyResponse
@@ -59,6 +99,26 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     * This API is used to delete the tag immutability rule.
+     * @param req DeleteImmutableTagRulesRequest
+     * @return DeleteImmutableTagRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteImmutableTagRulesResponse DeleteImmutableTagRules(DeleteImmutableTagRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteImmutableTagRulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteImmutableTagRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteImmutableTagRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete multiple public network access allowlist policies of the instance.
      * @param req DeleteMultipleSecurityPolicyRequest
      * @return DeleteMultipleSecurityPolicyResponse
@@ -71,6 +131,46 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteMultipleSecurityPolicyResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteMultipleSecurityPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to list the tag immutability rule.
+     * @param req DescribeImmutableTagRulesRequest
+     * @return DescribeImmutableTagRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImmutableTagRulesResponse DescribeImmutableTagRules(DescribeImmutableTagRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeImmutableTagRulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeImmutableTagRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeImmutableTagRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to update the tag immutability rule.
+     * @param req ModifyImmutableTagRulesRequest
+     * @return ModifyImmutableTagRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyImmutableTagRulesResponse ModifyImmutableTagRules(ModifyImmutableTagRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyImmutableTagRulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyImmutableTagRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyImmutableTagRules");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
