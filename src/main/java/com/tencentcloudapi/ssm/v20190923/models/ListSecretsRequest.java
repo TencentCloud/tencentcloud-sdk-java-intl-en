@@ -44,7 +44,14 @@ public class ListSecretsRequest extends AbstractModel{
     private Long OrderType;
 
     /**
-    * Filter according to Secret statuses. `0` (default): all Secrets; `1`: Secrets in `Enabled` status; `2`: Secrets in `Disabled` status; `3`: Secrets in `PendingDelete` status.
+    * Filter based on credential status.
+The default value is 0, indicating to query all.
+1: query the list of credentials in `Enabled` status.
+2: query the list of credentials in `Disabled` status.
+3: query the list of credentials in `PendingDelete` status.
+4: query the list of credentials in `PendingCreate` status.
+5: query the list of credentials in `CreateFailed` status.
+The `PendingCreate` and `CreateFailed` status only take effect when `SecretType` is Tencent Cloud service credential
     */
     @SerializedName("State")
     @Expose
@@ -58,11 +65,20 @@ public class ListSecretsRequest extends AbstractModel{
     private String SearchSecretName;
 
     /**
-    * Tag filter condition.
+    * Tag filter.
     */
     @SerializedName("TagFilters")
     @Expose
     private TagFilter [] TagFilters;
+
+    /**
+    * 0: user-defined credential (default value).
+1: Tencent Cloud service credential.
+Either 1 or 0 can be selected for this parameter.
+    */
+    @SerializedName("SecretType")
+    @Expose
+    private Long SecretType;
 
     /**
      * Get Starting position of the list, starting at 0. If not specified, 0 is used by default. 
@@ -113,16 +129,44 @@ public class ListSecretsRequest extends AbstractModel{
     }
 
     /**
-     * Get Filter according to Secret statuses. `0` (default): all Secrets; `1`: Secrets in `Enabled` status; `2`: Secrets in `Disabled` status; `3`: Secrets in `PendingDelete` status. 
-     * @return State Filter according to Secret statuses. `0` (default): all Secrets; `1`: Secrets in `Enabled` status; `2`: Secrets in `Disabled` status; `3`: Secrets in `PendingDelete` status.
+     * Get Filter based on credential status.
+The default value is 0, indicating to query all.
+1: query the list of credentials in `Enabled` status.
+2: query the list of credentials in `Disabled` status.
+3: query the list of credentials in `PendingDelete` status.
+4: query the list of credentials in `PendingCreate` status.
+5: query the list of credentials in `CreateFailed` status.
+The `PendingCreate` and `CreateFailed` status only take effect when `SecretType` is Tencent Cloud service credential 
+     * @return State Filter based on credential status.
+The default value is 0, indicating to query all.
+1: query the list of credentials in `Enabled` status.
+2: query the list of credentials in `Disabled` status.
+3: query the list of credentials in `PendingDelete` status.
+4: query the list of credentials in `PendingCreate` status.
+5: query the list of credentials in `CreateFailed` status.
+The `PendingCreate` and `CreateFailed` status only take effect when `SecretType` is Tencent Cloud service credential
      */
     public Long getState() {
         return this.State;
     }
 
     /**
-     * Set Filter according to Secret statuses. `0` (default): all Secrets; `1`: Secrets in `Enabled` status; `2`: Secrets in `Disabled` status; `3`: Secrets in `PendingDelete` status.
-     * @param State Filter according to Secret statuses. `0` (default): all Secrets; `1`: Secrets in `Enabled` status; `2`: Secrets in `Disabled` status; `3`: Secrets in `PendingDelete` status.
+     * Set Filter based on credential status.
+The default value is 0, indicating to query all.
+1: query the list of credentials in `Enabled` status.
+2: query the list of credentials in `Disabled` status.
+3: query the list of credentials in `PendingDelete` status.
+4: query the list of credentials in `PendingCreate` status.
+5: query the list of credentials in `CreateFailed` status.
+The `PendingCreate` and `CreateFailed` status only take effect when `SecretType` is Tencent Cloud service credential
+     * @param State Filter based on credential status.
+The default value is 0, indicating to query all.
+1: query the list of credentials in `Enabled` status.
+2: query the list of credentials in `Disabled` status.
+3: query the list of credentials in `PendingDelete` status.
+4: query the list of credentials in `PendingCreate` status.
+5: query the list of credentials in `CreateFailed` status.
+The `PendingCreate` and `CreateFailed` status only take effect when `SecretType` is Tencent Cloud service credential
      */
     public void setState(Long State) {
         this.State = State;
@@ -145,19 +189,43 @@ public class ListSecretsRequest extends AbstractModel{
     }
 
     /**
-     * Get Tag filter condition. 
-     * @return TagFilters Tag filter condition.
+     * Get Tag filter. 
+     * @return TagFilters Tag filter.
      */
     public TagFilter [] getTagFilters() {
         return this.TagFilters;
     }
 
     /**
-     * Set Tag filter condition.
-     * @param TagFilters Tag filter condition.
+     * Set Tag filter.
+     * @param TagFilters Tag filter.
      */
     public void setTagFilters(TagFilter [] TagFilters) {
         this.TagFilters = TagFilters;
+    }
+
+    /**
+     * Get 0: user-defined credential (default value).
+1: Tencent Cloud service credential.
+Either 1 or 0 can be selected for this parameter. 
+     * @return SecretType 0: user-defined credential (default value).
+1: Tencent Cloud service credential.
+Either 1 or 0 can be selected for this parameter.
+     */
+    public Long getSecretType() {
+        return this.SecretType;
+    }
+
+    /**
+     * Set 0: user-defined credential (default value).
+1: Tencent Cloud service credential.
+Either 1 or 0 can be selected for this parameter.
+     * @param SecretType 0: user-defined credential (default value).
+1: Tencent Cloud service credential.
+Either 1 or 0 can be selected for this parameter.
+     */
+    public void setSecretType(Long SecretType) {
+        this.SecretType = SecretType;
     }
 
     public ListSecretsRequest() {
@@ -189,6 +257,9 @@ public class ListSecretsRequest extends AbstractModel{
                 this.TagFilters[i] = new TagFilter(source.TagFilters[i]);
             }
         }
+        if (source.SecretType != null) {
+            this.SecretType = new Long(source.SecretType);
+        }
     }
 
 
@@ -202,6 +273,7 @@ public class ListSecretsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "State", this.State);
         this.setParamSimple(map, prefix + "SearchSecretName", this.SearchSecretName);
         this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
+        this.setParamSimple(map, prefix + "SecretType", this.SecretType);
 
     }
 }

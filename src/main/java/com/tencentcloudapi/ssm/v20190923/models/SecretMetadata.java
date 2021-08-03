@@ -23,187 +23,299 @@ import java.util.HashMap;
 public class SecretMetadata extends AbstractModel{
 
     /**
-    * Name of the Secret.
+    * Credential name
     */
     @SerializedName("SecretName")
     @Expose
     private String SecretName;
 
     /**
-    * Description of the Secret.
+    * Credential description
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * KMS Key ID used for Secret encryption.
+    * KMS `KeyId` used to encrypt the credential
     */
     @SerializedName("KmsKeyId")
     @Expose
     private String KmsKeyId;
 
     /**
-    * Creator UIN.
+    * Creator UIN
     */
     @SerializedName("CreateUin")
     @Expose
     private Long CreateUin;
 
     /**
-    * Secret status, which can be `Enabled`, `Disabled`, or `PendingDelete`.
+    * Credential status: Enabled, Disabled, PendingDelete, Creating, Failed.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Secret deletion time, formatted as a Unix timestamp. This parameter is only applicable for Secrets in `PendingDelete` status.
+    * Credential deletion date, which takes effect for credentials in `PendingDelete` status and is in UNIX timestamp format
     */
     @SerializedName("DeleteTime")
     @Expose
     private Long DeleteTime;
 
     /**
-    * Secret creation time, formatted as a Unix timestamp.
+    * Credential creation time in UNIX timestamp format
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * Type of KMS CMK used for Secret encryption. `DEFAULT`: default key created by SecretsManager; `CUSTOMER`: user-specified key.
+    * Type of the KMS CMK used to encrypt the credential. `DEFAULT` represents the default key created by Secrets Manager, and `CUSTOMER` represents the user-specified key
     */
     @SerializedName("KmsKeyType")
     @Expose
     private String KmsKeyType;
 
     /**
-     * Get Name of the Secret. 
-     * @return SecretName Name of the Secret.
+    * 1: enable rotation; 0: disable rotation
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RotationStatus")
+    @Expose
+    private Long RotationStatus;
+
+    /**
+    * Start time of the next rotation in UNIX timestamp format
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("NextRotationTime")
+    @Expose
+    private Long NextRotationTime;
+
+    /**
+    * 0: user-defined credential; 1: Tencent Cloud service credential.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SecretType")
+    @Expose
+    private Long SecretType;
+
+    /**
+    * Tencent Cloud service name, which takes effect only when `SecretType` is 1 (Tencent Cloud service credential)
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ProductName")
+    @Expose
+    private String ProductName;
+
+    /**
+     * Get Credential name 
+     * @return SecretName Credential name
      */
     public String getSecretName() {
         return this.SecretName;
     }
 
     /**
-     * Set Name of the Secret.
-     * @param SecretName Name of the Secret.
+     * Set Credential name
+     * @param SecretName Credential name
      */
     public void setSecretName(String SecretName) {
         this.SecretName = SecretName;
     }
 
     /**
-     * Get Description of the Secret. 
-     * @return Description Description of the Secret.
+     * Get Credential description 
+     * @return Description Credential description
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Description of the Secret.
-     * @param Description Description of the Secret.
+     * Set Credential description
+     * @param Description Credential description
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get KMS Key ID used for Secret encryption. 
-     * @return KmsKeyId KMS Key ID used for Secret encryption.
+     * Get KMS `KeyId` used to encrypt the credential 
+     * @return KmsKeyId KMS `KeyId` used to encrypt the credential
      */
     public String getKmsKeyId() {
         return this.KmsKeyId;
     }
 
     /**
-     * Set KMS Key ID used for Secret encryption.
-     * @param KmsKeyId KMS Key ID used for Secret encryption.
+     * Set KMS `KeyId` used to encrypt the credential
+     * @param KmsKeyId KMS `KeyId` used to encrypt the credential
      */
     public void setKmsKeyId(String KmsKeyId) {
         this.KmsKeyId = KmsKeyId;
     }
 
     /**
-     * Get Creator UIN. 
-     * @return CreateUin Creator UIN.
+     * Get Creator UIN 
+     * @return CreateUin Creator UIN
      */
     public Long getCreateUin() {
         return this.CreateUin;
     }
 
     /**
-     * Set Creator UIN.
-     * @param CreateUin Creator UIN.
+     * Set Creator UIN
+     * @param CreateUin Creator UIN
      */
     public void setCreateUin(Long CreateUin) {
         this.CreateUin = CreateUin;
     }
 
     /**
-     * Get Secret status, which can be `Enabled`, `Disabled`, or `PendingDelete`. 
-     * @return Status Secret status, which can be `Enabled`, `Disabled`, or `PendingDelete`.
+     * Get Credential status: Enabled, Disabled, PendingDelete, Creating, Failed. 
+     * @return Status Credential status: Enabled, Disabled, PendingDelete, Creating, Failed.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Secret status, which can be `Enabled`, `Disabled`, or `PendingDelete`.
-     * @param Status Secret status, which can be `Enabled`, `Disabled`, or `PendingDelete`.
+     * Set Credential status: Enabled, Disabled, PendingDelete, Creating, Failed.
+     * @param Status Credential status: Enabled, Disabled, PendingDelete, Creating, Failed.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Secret deletion time, formatted as a Unix timestamp. This parameter is only applicable for Secrets in `PendingDelete` status. 
-     * @return DeleteTime Secret deletion time, formatted as a Unix timestamp. This parameter is only applicable for Secrets in `PendingDelete` status.
+     * Get Credential deletion date, which takes effect for credentials in `PendingDelete` status and is in UNIX timestamp format 
+     * @return DeleteTime Credential deletion date, which takes effect for credentials in `PendingDelete` status and is in UNIX timestamp format
      */
     public Long getDeleteTime() {
         return this.DeleteTime;
     }
 
     /**
-     * Set Secret deletion time, formatted as a Unix timestamp. This parameter is only applicable for Secrets in `PendingDelete` status.
-     * @param DeleteTime Secret deletion time, formatted as a Unix timestamp. This parameter is only applicable for Secrets in `PendingDelete` status.
+     * Set Credential deletion date, which takes effect for credentials in `PendingDelete` status and is in UNIX timestamp format
+     * @param DeleteTime Credential deletion date, which takes effect for credentials in `PendingDelete` status and is in UNIX timestamp format
      */
     public void setDeleteTime(Long DeleteTime) {
         this.DeleteTime = DeleteTime;
     }
 
     /**
-     * Get Secret creation time, formatted as a Unix timestamp. 
-     * @return CreateTime Secret creation time, formatted as a Unix timestamp.
+     * Get Credential creation time in UNIX timestamp format 
+     * @return CreateTime Credential creation time in UNIX timestamp format
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Secret creation time, formatted as a Unix timestamp.
-     * @param CreateTime Secret creation time, formatted as a Unix timestamp.
+     * Set Credential creation time in UNIX timestamp format
+     * @param CreateTime Credential creation time in UNIX timestamp format
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Type of KMS CMK used for Secret encryption. `DEFAULT`: default key created by SecretsManager; `CUSTOMER`: user-specified key. 
-     * @return KmsKeyType Type of KMS CMK used for Secret encryption. `DEFAULT`: default key created by SecretsManager; `CUSTOMER`: user-specified key.
+     * Get Type of the KMS CMK used to encrypt the credential. `DEFAULT` represents the default key created by Secrets Manager, and `CUSTOMER` represents the user-specified key 
+     * @return KmsKeyType Type of the KMS CMK used to encrypt the credential. `DEFAULT` represents the default key created by Secrets Manager, and `CUSTOMER` represents the user-specified key
      */
     public String getKmsKeyType() {
         return this.KmsKeyType;
     }
 
     /**
-     * Set Type of KMS CMK used for Secret encryption. `DEFAULT`: default key created by SecretsManager; `CUSTOMER`: user-specified key.
-     * @param KmsKeyType Type of KMS CMK used for Secret encryption. `DEFAULT`: default key created by SecretsManager; `CUSTOMER`: user-specified key.
+     * Set Type of the KMS CMK used to encrypt the credential. `DEFAULT` represents the default key created by Secrets Manager, and `CUSTOMER` represents the user-specified key
+     * @param KmsKeyType Type of the KMS CMK used to encrypt the credential. `DEFAULT` represents the default key created by Secrets Manager, and `CUSTOMER` represents the user-specified key
      */
     public void setKmsKeyType(String KmsKeyType) {
         this.KmsKeyType = KmsKeyType;
+    }
+
+    /**
+     * Get 1: enable rotation; 0: disable rotation
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return RotationStatus 1: enable rotation; 0: disable rotation
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getRotationStatus() {
+        return this.RotationStatus;
+    }
+
+    /**
+     * Set 1: enable rotation; 0: disable rotation
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param RotationStatus 1: enable rotation; 0: disable rotation
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRotationStatus(Long RotationStatus) {
+        this.RotationStatus = RotationStatus;
+    }
+
+    /**
+     * Get Start time of the next rotation in UNIX timestamp format
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return NextRotationTime Start time of the next rotation in UNIX timestamp format
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getNextRotationTime() {
+        return this.NextRotationTime;
+    }
+
+    /**
+     * Set Start time of the next rotation in UNIX timestamp format
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param NextRotationTime Start time of the next rotation in UNIX timestamp format
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setNextRotationTime(Long NextRotationTime) {
+        this.NextRotationTime = NextRotationTime;
+    }
+
+    /**
+     * Get 0: user-defined credential; 1: Tencent Cloud service credential.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return SecretType 0: user-defined credential; 1: Tencent Cloud service credential.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getSecretType() {
+        return this.SecretType;
+    }
+
+    /**
+     * Set 0: user-defined credential; 1: Tencent Cloud service credential.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param SecretType 0: user-defined credential; 1: Tencent Cloud service credential.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSecretType(Long SecretType) {
+        this.SecretType = SecretType;
+    }
+
+    /**
+     * Get Tencent Cloud service name, which takes effect only when `SecretType` is 1 (Tencent Cloud service credential)
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return ProductName Tencent Cloud service name, which takes effect only when `SecretType` is 1 (Tencent Cloud service credential)
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getProductName() {
+        return this.ProductName;
+    }
+
+    /**
+     * Set Tencent Cloud service name, which takes effect only when `SecretType` is 1 (Tencent Cloud service credential)
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param ProductName Tencent Cloud service name, which takes effect only when `SecretType` is 1 (Tencent Cloud service credential)
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setProductName(String ProductName) {
+        this.ProductName = ProductName;
     }
 
     public SecretMetadata() {
@@ -238,6 +350,18 @@ public class SecretMetadata extends AbstractModel{
         if (source.KmsKeyType != null) {
             this.KmsKeyType = new String(source.KmsKeyType);
         }
+        if (source.RotationStatus != null) {
+            this.RotationStatus = new Long(source.RotationStatus);
+        }
+        if (source.NextRotationTime != null) {
+            this.NextRotationTime = new Long(source.NextRotationTime);
+        }
+        if (source.SecretType != null) {
+            this.SecretType = new Long(source.SecretType);
+        }
+        if (source.ProductName != null) {
+            this.ProductName = new String(source.ProductName);
+        }
     }
 
 
@@ -253,6 +377,10 @@ public class SecretMetadata extends AbstractModel{
         this.setParamSimple(map, prefix + "DeleteTime", this.DeleteTime);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "KmsKeyType", this.KmsKeyType);
+        this.setParamSimple(map, prefix + "RotationStatus", this.RotationStatus);
+        this.setParamSimple(map, prefix + "NextRotationTime", this.NextRotationTime);
+        this.setParamSimple(map, prefix + "SecretType", this.SecretType);
+        this.setParamSimple(map, prefix + "ProductName", this.ProductName);
 
     }
 }

@@ -59,6 +59,26 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to cancel DCN synchronization.
+     * @param req CancelDcnJobRequest
+     * @return CancelDcnJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelDcnJobResponse CancelDcnJob(CancelDcnJobRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CancelDcnJobResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CancelDcnJobResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CancelDcnJob");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to clone an instance account.
      * @param req CloneAccountRequest
      * @return CloneAccountResponse

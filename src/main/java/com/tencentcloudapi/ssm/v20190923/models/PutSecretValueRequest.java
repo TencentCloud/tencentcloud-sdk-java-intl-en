@@ -37,7 +37,8 @@ public class PutSecretValueRequest extends AbstractModel{
     private String VersionId;
 
     /**
-    * Binary Secret information that is base64-encoded. Either `SecretBinary` or `SecretString` must be set.
+    * Base64-encoded binary credential information.
+Either `SecretBinary` or `SecretString` must be set.
     */
     @SerializedName("SecretBinary")
     @Expose
@@ -83,16 +84,20 @@ public class PutSecretValueRequest extends AbstractModel{
     }
 
     /**
-     * Get Binary Secret information that is base64-encoded. Either `SecretBinary` or `SecretString` must be set. 
-     * @return SecretBinary Binary Secret information that is base64-encoded. Either `SecretBinary` or `SecretString` must be set.
+     * Get Base64-encoded binary credential information.
+Either `SecretBinary` or `SecretString` must be set. 
+     * @return SecretBinary Base64-encoded binary credential information.
+Either `SecretBinary` or `SecretString` must be set.
      */
     public String getSecretBinary() {
         return this.SecretBinary;
     }
 
     /**
-     * Set Binary Secret information that is base64-encoded. Either `SecretBinary` or `SecretString` must be set.
-     * @param SecretBinary Binary Secret information that is base64-encoded. Either `SecretBinary` or `SecretString` must be set.
+     * Set Base64-encoded binary credential information.
+Either `SecretBinary` or `SecretString` must be set.
+     * @param SecretBinary Base64-encoded binary credential information.
+Either `SecretBinary` or `SecretString` must be set.
      */
     public void setSecretBinary(String SecretBinary) {
         this.SecretBinary = SecretBinary;

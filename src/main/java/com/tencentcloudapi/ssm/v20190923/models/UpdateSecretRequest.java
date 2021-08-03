@@ -37,14 +37,15 @@ public class UpdateSecretRequest extends AbstractModel{
     private String VersionId;
 
     /**
-    * Use this field if the new Secret content is in binary format, and base64-encoded. Either `SecretBinary` or `SecretString` is set.
+    * This field should be used and Base64-encoded if the content of the new credential is binary.
+Either `SecretBinary` or `SecretString` cannot be empty.
     */
     @SerializedName("SecretBinary")
     @Expose
     private String SecretBinary;
 
     /**
-    * Use this field if the new Secret content is in text format, and base64-encoding is not required. Either `SecretBinary` or `SecretString` is set.
+    * This field should be used without being Base64-encoded if the content of the new credential is text. Either `SecretBinary` or `SecretString` cannot be empty.
     */
     @SerializedName("SecretString")
     @Expose
@@ -83,32 +84,36 @@ public class UpdateSecretRequest extends AbstractModel{
     }
 
     /**
-     * Get Use this field if the new Secret content is in binary format, and base64-encoded. Either `SecretBinary` or `SecretString` is set. 
-     * @return SecretBinary Use this field if the new Secret content is in binary format, and base64-encoded. Either `SecretBinary` or `SecretString` is set.
+     * Get This field should be used and Base64-encoded if the content of the new credential is binary.
+Either `SecretBinary` or `SecretString` cannot be empty. 
+     * @return SecretBinary This field should be used and Base64-encoded if the content of the new credential is binary.
+Either `SecretBinary` or `SecretString` cannot be empty.
      */
     public String getSecretBinary() {
         return this.SecretBinary;
     }
 
     /**
-     * Set Use this field if the new Secret content is in binary format, and base64-encoded. Either `SecretBinary` or `SecretString` is set.
-     * @param SecretBinary Use this field if the new Secret content is in binary format, and base64-encoded. Either `SecretBinary` or `SecretString` is set.
+     * Set This field should be used and Base64-encoded if the content of the new credential is binary.
+Either `SecretBinary` or `SecretString` cannot be empty.
+     * @param SecretBinary This field should be used and Base64-encoded if the content of the new credential is binary.
+Either `SecretBinary` or `SecretString` cannot be empty.
      */
     public void setSecretBinary(String SecretBinary) {
         this.SecretBinary = SecretBinary;
     }
 
     /**
-     * Get Use this field if the new Secret content is in text format, and base64-encoding is not required. Either `SecretBinary` or `SecretString` is set. 
-     * @return SecretString Use this field if the new Secret content is in text format, and base64-encoding is not required. Either `SecretBinary` or `SecretString` is set.
+     * Get This field should be used without being Base64-encoded if the content of the new credential is text. Either `SecretBinary` or `SecretString` cannot be empty. 
+     * @return SecretString This field should be used without being Base64-encoded if the content of the new credential is text. Either `SecretBinary` or `SecretString` cannot be empty.
      */
     public String getSecretString() {
         return this.SecretString;
     }
 
     /**
-     * Set Use this field if the new Secret content is in text format, and base64-encoding is not required. Either `SecretBinary` or `SecretString` is set.
-     * @param SecretString Use this field if the new Secret content is in text format, and base64-encoding is not required. Either `SecretBinary` or `SecretString` is set.
+     * Set This field should be used without being Base64-encoded if the content of the new credential is text. Either `SecretBinary` or `SecretString` cannot be empty.
+     * @param SecretString This field should be used without being Base64-encoded if the content of the new credential is text. Either `SecretBinary` or `SecretString` cannot be empty.
      */
     public void setSecretString(String SecretString) {
         this.SecretString = SecretString;

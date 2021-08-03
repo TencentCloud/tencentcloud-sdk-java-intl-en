@@ -39,6 +39,26 @@ public class SsmClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a Tencent Cloud service credential.
+     * @param req CreateProductSecretRequest
+     * @return CreateProductSecretResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateProductSecretResponse CreateProductSecret(CreateProductSecretRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateProductSecretResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateProductSecretResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateProductSecret");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a KMS-encrypted Secret. You can create and store up to 1,000 Secrets in each region.
      * @param req CreateSecretRequest
      * @return CreateSecretResponse
@@ -79,7 +99,8 @@ public class SsmClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete a version of a Secret. The deletion takes effect immediately. Secret versions in any status can be deleted.
+     *This API is used to directly delete a single credential version under the specified credential. The deletion takes effect immediately, and the credential version in all status can be deleted.
+This API is only applicable to user-defined credentials but not Tencent Cloud service credentials.
      * @param req DeleteSecretVersionRequest
      * @return DeleteSecretVersionResponse
      * @throws TencentCloudSDKException
@@ -91,6 +112,68 @@ public class SsmClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteSecretVersionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteSecretVersion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the execution result of an async task.
+     * @param req DescribeAsyncRequestInfoRequest
+     * @return DescribeAsyncRequestInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAsyncRequestInfoResponse DescribeAsyncRequestInfo(DescribeAsyncRequestInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAsyncRequestInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAsyncRequestInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAsyncRequestInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the details of a credential rotation policy.
+This API is only applicable to Tencent Cloud service credentials.
+     * @param req DescribeRotationDetailRequest
+     * @return DescribeRotationDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRotationDetailResponse DescribeRotationDetail(DescribeRotationDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRotationDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRotationDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRotationDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the historical versions of a rotated credential.
+This API is only applicable to Tencent Cloud service credentials.
+     * @param req DescribeRotationHistoryRequest
+     * @return DescribeRotationHistoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRotationHistoryResponse DescribeRotationHistory(DescribeRotationHistoryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRotationHistoryResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRotationHistoryResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRotationHistory");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -111,6 +194,26 @@ public class SsmClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeSecretResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeSecret");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of supported Tencent Cloud services.
+     * @param req DescribeSupportedProductsRequest
+     * @return DescribeSupportedProductsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSupportedProductsResponse DescribeSupportedProducts(DescribeSupportedProductsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSupportedProductsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSupportedProductsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSupportedProducts");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -179,7 +282,8 @@ public class SsmClient extends AbstractClient{
     }
 
     /**
-     *This API is used to obtain the plaintext of a specified Secret and version. Only plaintext of an enabled Secret can be obtained.
+     *For user-defined credentials, this API is used to get the plaintext information of a credential by specifying the credential name and version.
+For Tencent Cloud service credentials such as MySQL credentials, this API is used to get the plaintext information of a previously rotated credential by specifying the credential name and historical version number. If you want to get the plaintext of the credential version currently in use, you need to specify the version number as `SSM_Current`.
      * @param req GetSecretValueRequest
      * @return GetSecretValueResponse
      * @throws TencentCloudSDKException
@@ -259,7 +363,8 @@ public class SsmClient extends AbstractClient{
     }
 
     /**
-     *This API is used to add a new version to a specified Secret. Each Secret supports up to 10 versions. You can only add versions to Secrets in `Enabled` or `Disabled` status.
+     *This API adds the new version of the credential content under the specified credential. One credential can have up to 10 versions. New versions can be added to credentials only in `Enabled` or `Disabled` status.
+This API is only applicable to user-defined credentials but not Tencent Cloud service credentials.
      * @param req PutSecretValueRequest
      * @return PutSecretValueResponse
      * @throws TencentCloudSDKException
@@ -299,6 +404,26 @@ public class SsmClient extends AbstractClient{
     }
 
     /**
+     *This API is used to rotate a Tencent Cloud service credential. It is only applicable to Tencent Cloud service credentials in `Enabled` status but not Tencent Cloud service credentials in other status or user-defined credentials.
+     * @param req RotateProductSecretRequest
+     * @return RotateProductSecretResponse
+     * @throws TencentCloudSDKException
+     */
+    public RotateProductSecretResponse RotateProductSecret(RotateProductSecretRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RotateProductSecretResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RotateProductSecretResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RotateProductSecret");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to update the description of a Secret. This API can only update Secrets in `Enabled` or `Disabled` status.
      * @param req UpdateDescriptionRequest
      * @return UpdateDescriptionResponse
@@ -319,7 +444,31 @@ public class SsmClient extends AbstractClient{
     }
 
     /**
-     *This API is used to update the name and version ID of a Secret. Calling this API encrypts the new Secret content and overwrites the old content. This API can only update Secrets in `Enabled` or `Disabled` status.
+     *This API is used to set a Tencent Cloud service credential rotation policy, including the following parameters:
+Specifies whether to enable rotation
+Rotation frequency
+Rotation start time
+     * @param req UpdateRotationStatusRequest
+     * @return UpdateRotationStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateRotationStatusResponse UpdateRotationStatus(UpdateRotationStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateRotationStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateRotationStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateRotationStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to update the credential content of the specified credential name and version number. Calling this API will encrypt the content of the new credential and overwrite the old content. Only credentials in `Enabled` or `Disabled` status can be updated.
+This API is only applicable to user-defined credentials but not Tencent Cloud service credentials.
      * @param req UpdateSecretRequest
      * @return UpdateSecretResponse
      * @throws TencentCloudSDKException

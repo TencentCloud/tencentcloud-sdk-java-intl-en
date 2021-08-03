@@ -51,7 +51,7 @@ public class DescribeSecretResponse extends AbstractModel{
     private Long CreateUin;
 
     /**
-    * Secret status, which can be `Enabled`, `Disabled`, or `PendingDelete`.
+    * Credential status: Enabled, Disabled, PendingDelete, Creating, Failed.
     */
     @SerializedName("Status")
     @Expose
@@ -70,6 +70,46 @@ public class DescribeSecretResponse extends AbstractModel{
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
+
+    /**
+    * 0: user-defined credential; 1: Tencent Cloud service credential.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SecretType")
+    @Expose
+    private Long SecretType;
+
+    /**
+    * Tencent Cloud service name.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ProductName")
+    @Expose
+    private String ProductName;
+
+    /**
+    * Tencent Cloud service instance ID.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ResourceID")
+    @Expose
+    private String ResourceID;
+
+    /**
+    * Whether to enable rotation. True: yes; False: no.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RotationStatus")
+    @Expose
+    private Boolean RotationStatus;
+
+    /**
+    * Rotation frequency in days by default.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RotationFrequency")
+    @Expose
+    private Long RotationFrequency;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -143,16 +183,16 @@ public class DescribeSecretResponse extends AbstractModel{
     }
 
     /**
-     * Get Secret status, which can be `Enabled`, `Disabled`, or `PendingDelete`. 
-     * @return Status Secret status, which can be `Enabled`, `Disabled`, or `PendingDelete`.
+     * Get Credential status: Enabled, Disabled, PendingDelete, Creating, Failed. 
+     * @return Status Credential status: Enabled, Disabled, PendingDelete, Creating, Failed.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Secret status, which can be `Enabled`, `Disabled`, or `PendingDelete`.
-     * @param Status Secret status, which can be `Enabled`, `Disabled`, or `PendingDelete`.
+     * Set Credential status: Enabled, Disabled, PendingDelete, Creating, Failed.
+     * @param Status Credential status: Enabled, Disabled, PendingDelete, Creating, Failed.
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -188,6 +228,106 @@ public class DescribeSecretResponse extends AbstractModel{
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get 0: user-defined credential; 1: Tencent Cloud service credential.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return SecretType 0: user-defined credential; 1: Tencent Cloud service credential.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getSecretType() {
+        return this.SecretType;
+    }
+
+    /**
+     * Set 0: user-defined credential; 1: Tencent Cloud service credential.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param SecretType 0: user-defined credential; 1: Tencent Cloud service credential.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSecretType(Long SecretType) {
+        this.SecretType = SecretType;
+    }
+
+    /**
+     * Get Tencent Cloud service name.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return ProductName Tencent Cloud service name.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getProductName() {
+        return this.ProductName;
+    }
+
+    /**
+     * Set Tencent Cloud service name.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param ProductName Tencent Cloud service name.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setProductName(String ProductName) {
+        this.ProductName = ProductName;
+    }
+
+    /**
+     * Get Tencent Cloud service instance ID.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return ResourceID Tencent Cloud service instance ID.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getResourceID() {
+        return this.ResourceID;
+    }
+
+    /**
+     * Set Tencent Cloud service instance ID.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param ResourceID Tencent Cloud service instance ID.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setResourceID(String ResourceID) {
+        this.ResourceID = ResourceID;
+    }
+
+    /**
+     * Get Whether to enable rotation. True: yes; False: no.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return RotationStatus Whether to enable rotation. True: yes; False: no.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Boolean getRotationStatus() {
+        return this.RotationStatus;
+    }
+
+    /**
+     * Set Whether to enable rotation. True: yes; False: no.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param RotationStatus Whether to enable rotation. True: yes; False: no.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRotationStatus(Boolean RotationStatus) {
+        this.RotationStatus = RotationStatus;
+    }
+
+    /**
+     * Get Rotation frequency in days by default.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return RotationFrequency Rotation frequency in days by default.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getRotationFrequency() {
+        return this.RotationFrequency;
+    }
+
+    /**
+     * Set Rotation frequency in days by default.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param RotationFrequency Rotation frequency in days by default.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRotationFrequency(Long RotationFrequency) {
+        this.RotationFrequency = RotationFrequency;
     }
 
     /**
@@ -235,6 +375,21 @@ public class DescribeSecretResponse extends AbstractModel{
         if (source.CreateTime != null) {
             this.CreateTime = new Long(source.CreateTime);
         }
+        if (source.SecretType != null) {
+            this.SecretType = new Long(source.SecretType);
+        }
+        if (source.ProductName != null) {
+            this.ProductName = new String(source.ProductName);
+        }
+        if (source.ResourceID != null) {
+            this.ResourceID = new String(source.ResourceID);
+        }
+        if (source.RotationStatus != null) {
+            this.RotationStatus = new Boolean(source.RotationStatus);
+        }
+        if (source.RotationFrequency != null) {
+            this.RotationFrequency = new Long(source.RotationFrequency);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -252,6 +407,11 @@ public class DescribeSecretResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "DeleteTime", this.DeleteTime);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "SecretType", this.SecretType);
+        this.setParamSimple(map, prefix + "ProductName", this.ProductName);
+        this.setParamSimple(map, prefix + "ResourceID", this.ResourceID);
+        this.setParamSimple(map, prefix + "RotationStatus", this.RotationStatus);
+        this.setParamSimple(map, prefix + "RotationFrequency", this.RotationFrequency);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

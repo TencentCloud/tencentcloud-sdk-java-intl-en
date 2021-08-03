@@ -59,7 +59,7 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to cancel CDN synchronization.
+     *This API is used to cancel DCN synchronization.
      * @param req CancelDcnJobRequest
      * @return CancelDcnJobResponse
      * @throws TencentCloudSDKException

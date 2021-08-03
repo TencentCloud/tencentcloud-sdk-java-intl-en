@@ -37,14 +37,16 @@ public class GetSecretValueResponse extends AbstractModel{
     private String VersionId;
 
     /**
-    * If the `SecretBinary` field in the request body is specified in the `CreateSecret` call, this field is returned and base64-encoded. The caller needs to perform base64 decoding to obtain the original data. Either `SecretBinary` or `SecretString` will be returned.
+    * When creating a credential (CreateSecret), if you specify binary data, this field will be the Base64-encoded returned result. The application needs to Base64-decode the result to get the original data.
+Either `SecretBinary` or `SecretString` cannot be empty.
     */
     @SerializedName("SecretBinary")
     @Expose
     private String SecretBinary;
 
     /**
-    * If the `SecretString` field in the request body is specified in the `CreateSecret` call, this field is returned. Either `SecretBinary` or `SecretString` will be returned.
+    * When creating a credential (CreateSecret), if you specify general text data, this field will be the returned result.
+Either `SecretBinary` or `SecretString` cannot be empty.
     */
     @SerializedName("SecretString")
     @Expose
@@ -90,32 +92,40 @@ public class GetSecretValueResponse extends AbstractModel{
     }
 
     /**
-     * Get If the `SecretBinary` field in the request body is specified in the `CreateSecret` call, this field is returned and base64-encoded. The caller needs to perform base64 decoding to obtain the original data. Either `SecretBinary` or `SecretString` will be returned. 
-     * @return SecretBinary If the `SecretBinary` field in the request body is specified in the `CreateSecret` call, this field is returned and base64-encoded. The caller needs to perform base64 decoding to obtain the original data. Either `SecretBinary` or `SecretString` will be returned.
+     * Get When creating a credential (CreateSecret), if you specify binary data, this field will be the Base64-encoded returned result. The application needs to Base64-decode the result to get the original data.
+Either `SecretBinary` or `SecretString` cannot be empty. 
+     * @return SecretBinary When creating a credential (CreateSecret), if you specify binary data, this field will be the Base64-encoded returned result. The application needs to Base64-decode the result to get the original data.
+Either `SecretBinary` or `SecretString` cannot be empty.
      */
     public String getSecretBinary() {
         return this.SecretBinary;
     }
 
     /**
-     * Set If the `SecretBinary` field in the request body is specified in the `CreateSecret` call, this field is returned and base64-encoded. The caller needs to perform base64 decoding to obtain the original data. Either `SecretBinary` or `SecretString` will be returned.
-     * @param SecretBinary If the `SecretBinary` field in the request body is specified in the `CreateSecret` call, this field is returned and base64-encoded. The caller needs to perform base64 decoding to obtain the original data. Either `SecretBinary` or `SecretString` will be returned.
+     * Set When creating a credential (CreateSecret), if you specify binary data, this field will be the Base64-encoded returned result. The application needs to Base64-decode the result to get the original data.
+Either `SecretBinary` or `SecretString` cannot be empty.
+     * @param SecretBinary When creating a credential (CreateSecret), if you specify binary data, this field will be the Base64-encoded returned result. The application needs to Base64-decode the result to get the original data.
+Either `SecretBinary` or `SecretString` cannot be empty.
      */
     public void setSecretBinary(String SecretBinary) {
         this.SecretBinary = SecretBinary;
     }
 
     /**
-     * Get If the `SecretString` field in the request body is specified in the `CreateSecret` call, this field is returned. Either `SecretBinary` or `SecretString` will be returned. 
-     * @return SecretString If the `SecretString` field in the request body is specified in the `CreateSecret` call, this field is returned. Either `SecretBinary` or `SecretString` will be returned.
+     * Get When creating a credential (CreateSecret), if you specify general text data, this field will be the returned result.
+Either `SecretBinary` or `SecretString` cannot be empty. 
+     * @return SecretString When creating a credential (CreateSecret), if you specify general text data, this field will be the returned result.
+Either `SecretBinary` or `SecretString` cannot be empty.
      */
     public String getSecretString() {
         return this.SecretString;
     }
 
     /**
-     * Set If the `SecretString` field in the request body is specified in the `CreateSecret` call, this field is returned. Either `SecretBinary` or `SecretString` will be returned.
-     * @param SecretString If the `SecretString` field in the request body is specified in the `CreateSecret` call, this field is returned. Either `SecretBinary` or `SecretString` will be returned.
+     * Set When creating a credential (CreateSecret), if you specify general text data, this field will be the returned result.
+Either `SecretBinary` or `SecretString` cannot be empty.
+     * @param SecretString When creating a credential (CreateSecret), if you specify general text data, this field will be the returned result.
+Either `SecretBinary` or `SecretString` cannot be empty.
      */
     public void setSecretString(String SecretString) {
         this.SecretString = SecretString;

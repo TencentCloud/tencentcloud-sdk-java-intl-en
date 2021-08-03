@@ -51,6 +51,13 @@ public class AssociateAddressRequest extends AbstractModel{
     private String PrivateIpAddress;
 
     /**
+    * Whether to enable direct access when binding a specified EIP. For more information, see [EIP Direct Access](https://intl.cloud.tencent.com/document/product/1199/41709?from_cn_redirect=1). Valid values: `True` and `False`; default value: `False`. You can set this parameter to `True` when binding an EIP to a CVM instance or an EKS elastic cluster. This parameter is currently in beta. To use it, please [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=163&source=0&data_title=%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%20CLB&level3_id=1071&queue=96&scene_code=34639&step=2).
+    */
+    @SerializedName("EipDirectConnection")
+    @Expose
+    private Boolean EipDirectConnection;
+
+    /**
      * Get The unique ID of the EIP, such as `eip-11112222`. 
      * @return AddressId The unique ID of the EIP, such as `eip-11112222`.
      */
@@ -114,6 +121,22 @@ public class AssociateAddressRequest extends AbstractModel{
         this.PrivateIpAddress = PrivateIpAddress;
     }
 
+    /**
+     * Get Whether to enable direct access when binding a specified EIP. For more information, see [EIP Direct Access](https://intl.cloud.tencent.com/document/product/1199/41709?from_cn_redirect=1). Valid values: `True` and `False`; default value: `False`. You can set this parameter to `True` when binding an EIP to a CVM instance or an EKS elastic cluster. This parameter is currently in beta. To use it, please [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=163&source=0&data_title=%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%20CLB&level3_id=1071&queue=96&scene_code=34639&step=2). 
+     * @return EipDirectConnection Whether to enable direct access when binding a specified EIP. For more information, see [EIP Direct Access](https://intl.cloud.tencent.com/document/product/1199/41709?from_cn_redirect=1). Valid values: `True` and `False`; default value: `False`. You can set this parameter to `True` when binding an EIP to a CVM instance or an EKS elastic cluster. This parameter is currently in beta. To use it, please [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=163&source=0&data_title=%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%20CLB&level3_id=1071&queue=96&scene_code=34639&step=2).
+     */
+    public Boolean getEipDirectConnection() {
+        return this.EipDirectConnection;
+    }
+
+    /**
+     * Set Whether to enable direct access when binding a specified EIP. For more information, see [EIP Direct Access](https://intl.cloud.tencent.com/document/product/1199/41709?from_cn_redirect=1). Valid values: `True` and `False`; default value: `False`. You can set this parameter to `True` when binding an EIP to a CVM instance or an EKS elastic cluster. This parameter is currently in beta. To use it, please [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=163&source=0&data_title=%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%20CLB&level3_id=1071&queue=96&scene_code=34639&step=2).
+     * @param EipDirectConnection Whether to enable direct access when binding a specified EIP. For more information, see [EIP Direct Access](https://intl.cloud.tencent.com/document/product/1199/41709?from_cn_redirect=1). Valid values: `True` and `False`; default value: `False`. You can set this parameter to `True` when binding an EIP to a CVM instance or an EKS elastic cluster. This parameter is currently in beta. To use it, please [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=163&source=0&data_title=%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%20CLB&level3_id=1071&queue=96&scene_code=34639&step=2).
+     */
+    public void setEipDirectConnection(Boolean EipDirectConnection) {
+        this.EipDirectConnection = EipDirectConnection;
+    }
+
     public AssociateAddressRequest() {
     }
 
@@ -134,6 +157,9 @@ public class AssociateAddressRequest extends AbstractModel{
         if (source.PrivateIpAddress != null) {
             this.PrivateIpAddress = new String(source.PrivateIpAddress);
         }
+        if (source.EipDirectConnection != null) {
+            this.EipDirectConnection = new Boolean(source.EipDirectConnection);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class AssociateAddressRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);
         this.setParamSimple(map, prefix + "PrivateIpAddress", this.PrivateIpAddress);
+        this.setParamSimple(map, prefix + "EipDirectConnection", this.EipDirectConnection);
 
     }
 }
