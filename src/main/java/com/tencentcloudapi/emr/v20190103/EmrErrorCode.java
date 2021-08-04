@@ -168,6 +168,9 @@ public enum EmrErrorCode {
     // Invalid `SoftInfo`.
      INVALIDPARAMETER_INVALIDSOFTINFO("InvalidParameter.InvalidSoftInfo"),
      
+    // Incorrect parameter.
+     INVALIDPARAMETER_INVALIDSOFTWARE("InvalidParameter.InvalidSoftWare"),
+     
     // The software name is invalid.
      INVALIDPARAMETER_INVALIDSOFTWARENAME("InvalidParameter.InvalidSoftWareName"),
      

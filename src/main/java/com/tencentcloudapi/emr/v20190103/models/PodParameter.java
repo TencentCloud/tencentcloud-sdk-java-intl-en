@@ -31,6 +31,40 @@ public class PodParameter extends AbstractModel{
 
     /**
     * Custom permission
+Example:
+{
+  "apiVersion": "v1",
+  "clusters": [
+    {
+      "cluster": {
+        "certificate-authority-data": "xxxxxx==",
+        "server": "https://xxxxx.com"
+      },
+      "name": "cls-xxxxx"
+    }
+  ],
+  "contexts": [
+    {
+      "context": {
+        "cluster": "cls-xxxxx",
+        "user": "100014xxxxx"
+      },
+      "name": "cls-a44yhcxxxxxxxxxx"
+    }
+  ],
+  "current-context": "cls-a4xxxx-context-default",
+  "kind": "Config",
+  "preferences": {},
+  "users": [
+    {
+      "name": "100014xxxxx",
+      "user": {
+        "client-certificate-data": "xxxxxx",
+        "client-key-data": "xxxxxx"
+      }
+    }
+  ]
+}
     */
     @SerializedName("Config")
     @Expose
@@ -38,6 +72,80 @@ public class PodParameter extends AbstractModel{
 
     /**
     * Custom parameter
+Example:
+{
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+      "name": "test-deployment",
+      "labels": {
+        "app": "test"
+      }
+    },
+    "spec": {
+      "replicas": 3,
+      "selector": {
+        "matchLabels": {
+          "app": "test-app"
+        }
+      },
+      "template": {
+        "metadata": {
+          "annotations": {
+            "your-organization.com/department-v1": "test-example-v1",
+            "your-organization.com/department-v2": "test-example-v2"
+          },
+          "labels": {
+            "app": "test-app",
+            "environment": "production"
+          }
+        },
+        "spec": {
+          "nodeSelector": {
+            "your-organization/node-test": "test-node"
+          },
+          "containers": [
+            {
+              "name": "nginx",
+              "image": "nginx:1.14.2",
+              "ports": [
+                {
+                  "containerPort": 80
+                }
+              ]
+            }
+          ],
+          "affinity": {
+            "nodeAffinity": {
+              "requiredDuringSchedulingIgnoredDuringExecution": {
+                "nodeSelectorTerms": [
+                  {
+                    "matchExpressions": [
+                      {
+                        "key": "disk-type",
+                        "operator": "In",
+                        "values": [
+                          "ssd",
+                          "sas"
+                        ]
+                      },
+                      {
+                        "key": "cpu-num",
+                        "operator": "Gt",
+                        "values": [
+                          "6"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
     */
     @SerializedName("Parameter")
     @Expose
@@ -60,8 +168,76 @@ public class PodParameter extends AbstractModel{
     }
 
     /**
-     * Get Custom permission 
+     * Get Custom permission
+Example:
+{
+  "apiVersion": "v1",
+  "clusters": [
+    {
+      "cluster": {
+        "certificate-authority-data": "xxxxxx==",
+        "server": "https://xxxxx.com"
+      },
+      "name": "cls-xxxxx"
+    }
+  ],
+  "contexts": [
+    {
+      "context": {
+        "cluster": "cls-xxxxx",
+        "user": "100014xxxxx"
+      },
+      "name": "cls-a44yhcxxxxxxxxxx"
+    }
+  ],
+  "current-context": "cls-a4xxxx-context-default",
+  "kind": "Config",
+  "preferences": {},
+  "users": [
+    {
+      "name": "100014xxxxx",
+      "user": {
+        "client-certificate-data": "xxxxxx",
+        "client-key-data": "xxxxxx"
+      }
+    }
+  ]
+} 
      * @return Config Custom permission
+Example:
+{
+  "apiVersion": "v1",
+  "clusters": [
+    {
+      "cluster": {
+        "certificate-authority-data": "xxxxxx==",
+        "server": "https://xxxxx.com"
+      },
+      "name": "cls-xxxxx"
+    }
+  ],
+  "contexts": [
+    {
+      "context": {
+        "cluster": "cls-xxxxx",
+        "user": "100014xxxxx"
+      },
+      "name": "cls-a44yhcxxxxxxxxxx"
+    }
+  ],
+  "current-context": "cls-a4xxxx-context-default",
+  "kind": "Config",
+  "preferences": {},
+  "users": [
+    {
+      "name": "100014xxxxx",
+      "user": {
+        "client-certificate-data": "xxxxxx",
+        "client-key-data": "xxxxxx"
+      }
+    }
+  ]
+}
      */
     public String getConfig() {
         return this.Config;
@@ -69,15 +245,231 @@ public class PodParameter extends AbstractModel{
 
     /**
      * Set Custom permission
+Example:
+{
+  "apiVersion": "v1",
+  "clusters": [
+    {
+      "cluster": {
+        "certificate-authority-data": "xxxxxx==",
+        "server": "https://xxxxx.com"
+      },
+      "name": "cls-xxxxx"
+    }
+  ],
+  "contexts": [
+    {
+      "context": {
+        "cluster": "cls-xxxxx",
+        "user": "100014xxxxx"
+      },
+      "name": "cls-a44yhcxxxxxxxxxx"
+    }
+  ],
+  "current-context": "cls-a4xxxx-context-default",
+  "kind": "Config",
+  "preferences": {},
+  "users": [
+    {
+      "name": "100014xxxxx",
+      "user": {
+        "client-certificate-data": "xxxxxx",
+        "client-key-data": "xxxxxx"
+      }
+    }
+  ]
+}
      * @param Config Custom permission
+Example:
+{
+  "apiVersion": "v1",
+  "clusters": [
+    {
+      "cluster": {
+        "certificate-authority-data": "xxxxxx==",
+        "server": "https://xxxxx.com"
+      },
+      "name": "cls-xxxxx"
+    }
+  ],
+  "contexts": [
+    {
+      "context": {
+        "cluster": "cls-xxxxx",
+        "user": "100014xxxxx"
+      },
+      "name": "cls-a44yhcxxxxxxxxxx"
+    }
+  ],
+  "current-context": "cls-a4xxxx-context-default",
+  "kind": "Config",
+  "preferences": {},
+  "users": [
+    {
+      "name": "100014xxxxx",
+      "user": {
+        "client-certificate-data": "xxxxxx",
+        "client-key-data": "xxxxxx"
+      }
+    }
+  ]
+}
      */
     public void setConfig(String Config) {
         this.Config = Config;
     }
 
     /**
-     * Get Custom parameter 
+     * Get Custom parameter
+Example:
+{
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+      "name": "test-deployment",
+      "labels": {
+        "app": "test"
+      }
+    },
+    "spec": {
+      "replicas": 3,
+      "selector": {
+        "matchLabels": {
+          "app": "test-app"
+        }
+      },
+      "template": {
+        "metadata": {
+          "annotations": {
+            "your-organization.com/department-v1": "test-example-v1",
+            "your-organization.com/department-v2": "test-example-v2"
+          },
+          "labels": {
+            "app": "test-app",
+            "environment": "production"
+          }
+        },
+        "spec": {
+          "nodeSelector": {
+            "your-organization/node-test": "test-node"
+          },
+          "containers": [
+            {
+              "name": "nginx",
+              "image": "nginx:1.14.2",
+              "ports": [
+                {
+                  "containerPort": 80
+                }
+              ]
+            }
+          ],
+          "affinity": {
+            "nodeAffinity": {
+              "requiredDuringSchedulingIgnoredDuringExecution": {
+                "nodeSelectorTerms": [
+                  {
+                    "matchExpressions": [
+                      {
+                        "key": "disk-type",
+                        "operator": "In",
+                        "values": [
+                          "ssd",
+                          "sas"
+                        ]
+                      },
+                      {
+                        "key": "cpu-num",
+                        "operator": "Gt",
+                        "values": [
+                          "6"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  } 
      * @return Parameter Custom parameter
+Example:
+{
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+      "name": "test-deployment",
+      "labels": {
+        "app": "test"
+      }
+    },
+    "spec": {
+      "replicas": 3,
+      "selector": {
+        "matchLabels": {
+          "app": "test-app"
+        }
+      },
+      "template": {
+        "metadata": {
+          "annotations": {
+            "your-organization.com/department-v1": "test-example-v1",
+            "your-organization.com/department-v2": "test-example-v2"
+          },
+          "labels": {
+            "app": "test-app",
+            "environment": "production"
+          }
+        },
+        "spec": {
+          "nodeSelector": {
+            "your-organization/node-test": "test-node"
+          },
+          "containers": [
+            {
+              "name": "nginx",
+              "image": "nginx:1.14.2",
+              "ports": [
+                {
+                  "containerPort": 80
+                }
+              ]
+            }
+          ],
+          "affinity": {
+            "nodeAffinity": {
+              "requiredDuringSchedulingIgnoredDuringExecution": {
+                "nodeSelectorTerms": [
+                  {
+                    "matchExpressions": [
+                      {
+                        "key": "disk-type",
+                        "operator": "In",
+                        "values": [
+                          "ssd",
+                          "sas"
+                        ]
+                      },
+                      {
+                        "key": "cpu-num",
+                        "operator": "Gt",
+                        "values": [
+                          "6"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
      */
     public String getParameter() {
         return this.Parameter;
@@ -85,7 +477,155 @@ public class PodParameter extends AbstractModel{
 
     /**
      * Set Custom parameter
+Example:
+{
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+      "name": "test-deployment",
+      "labels": {
+        "app": "test"
+      }
+    },
+    "spec": {
+      "replicas": 3,
+      "selector": {
+        "matchLabels": {
+          "app": "test-app"
+        }
+      },
+      "template": {
+        "metadata": {
+          "annotations": {
+            "your-organization.com/department-v1": "test-example-v1",
+            "your-organization.com/department-v2": "test-example-v2"
+          },
+          "labels": {
+            "app": "test-app",
+            "environment": "production"
+          }
+        },
+        "spec": {
+          "nodeSelector": {
+            "your-organization/node-test": "test-node"
+          },
+          "containers": [
+            {
+              "name": "nginx",
+              "image": "nginx:1.14.2",
+              "ports": [
+                {
+                  "containerPort": 80
+                }
+              ]
+            }
+          ],
+          "affinity": {
+            "nodeAffinity": {
+              "requiredDuringSchedulingIgnoredDuringExecution": {
+                "nodeSelectorTerms": [
+                  {
+                    "matchExpressions": [
+                      {
+                        "key": "disk-type",
+                        "operator": "In",
+                        "values": [
+                          "ssd",
+                          "sas"
+                        ]
+                      },
+                      {
+                        "key": "cpu-num",
+                        "operator": "Gt",
+                        "values": [
+                          "6"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
      * @param Parameter Custom parameter
+Example:
+{
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+      "name": "test-deployment",
+      "labels": {
+        "app": "test"
+      }
+    },
+    "spec": {
+      "replicas": 3,
+      "selector": {
+        "matchLabels": {
+          "app": "test-app"
+        }
+      },
+      "template": {
+        "metadata": {
+          "annotations": {
+            "your-organization.com/department-v1": "test-example-v1",
+            "your-organization.com/department-v2": "test-example-v2"
+          },
+          "labels": {
+            "app": "test-app",
+            "environment": "production"
+          }
+        },
+        "spec": {
+          "nodeSelector": {
+            "your-organization/node-test": "test-node"
+          },
+          "containers": [
+            {
+              "name": "nginx",
+              "image": "nginx:1.14.2",
+              "ports": [
+                {
+                  "containerPort": 80
+                }
+              ]
+            }
+          ],
+          "affinity": {
+            "nodeAffinity": {
+              "requiredDuringSchedulingIgnoredDuringExecution": {
+                "nodeSelectorTerms": [
+                  {
+                    "matchExpressions": [
+                      {
+                        "key": "disk-type",
+                        "operator": "In",
+                        "values": [
+                          "ssd",
+                          "sas"
+                        ]
+                      },
+                      {
+                        "key": "cpu-num",
+                        "operator": "Gt",
+                        "values": [
+                          "6"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
      */
     public void setParameter(String Parameter) {
         this.Parameter = Parameter;

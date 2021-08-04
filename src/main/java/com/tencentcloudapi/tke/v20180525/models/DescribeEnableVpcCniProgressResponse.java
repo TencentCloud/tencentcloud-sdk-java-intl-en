@@ -20,23 +20,22 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SetNodePoolNodeProtectionResponse extends AbstractModel{
+public class DescribeEnableVpcCniProgressResponse extends AbstractModel{
 
     /**
-    * ID of the node that has successfully set the removal protection
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Task status, which can be `Running`, `Succeed`, or `Failed`.
     */
-    @SerializedName("SucceedInstanceIds")
+    @SerializedName("Status")
     @Expose
-    private String [] SucceedInstanceIds;
+    private String Status;
 
     /**
-    * ID of the node that fails to set the removal protection
+    * The description for the task status when the task status is “Failed”, for example, failed to install the IPAMD component.
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
-    @SerializedName("FailedInstanceIds")
+    @SerializedName("ErrorMessage")
     @Expose
-    private String [] FailedInstanceIds;
+    private String ErrorMessage;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,43 +45,39 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String RequestId;
 
     /**
-     * Get ID of the node that has successfully set the removal protection
+     * Get Task status, which can be `Running`, `Succeed`, or `Failed`. 
+     * @return Status Task status, which can be `Running`, `Succeed`, or `Failed`.
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set Task status, which can be `Running`, `Succeed`, or `Failed`.
+     * @param Status Task status, which can be `Running`, `Succeed`, or `Failed`.
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get The description for the task status when the task status is “Failed”, for example, failed to install the IPAMD component.
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return SucceedInstanceIds ID of the node that has successfully set the removal protection
+     * @return ErrorMessage The description for the task status when the task status is “Failed”, for example, failed to install the IPAMD component.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
-    public String [] getSucceedInstanceIds() {
-        return this.SucceedInstanceIds;
+    public String getErrorMessage() {
+        return this.ErrorMessage;
     }
 
     /**
-     * Set ID of the node that has successfully set the removal protection
+     * Set The description for the task status when the task status is “Failed”, for example, failed to install the IPAMD component.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param SucceedInstanceIds ID of the node that has successfully set the removal protection
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     */
-    public void setSucceedInstanceIds(String [] SucceedInstanceIds) {
-        this.SucceedInstanceIds = SucceedInstanceIds;
-    }
-
-    /**
-     * Get ID of the node that fails to set the removal protection
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return FailedInstanceIds ID of the node that fails to set the removal protection
+     * @param ErrorMessage The description for the task status when the task status is “Failed”, for example, failed to install the IPAMD component.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
-    public String [] getFailedInstanceIds() {
-        return this.FailedInstanceIds;
-    }
-
-    /**
-     * Set ID of the node that fails to set the removal protection
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param FailedInstanceIds ID of the node that fails to set the removal protection
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     */
-    public void setFailedInstanceIds(String [] FailedInstanceIds) {
-        this.FailedInstanceIds = FailedInstanceIds;
+    public void setErrorMessage(String ErrorMessage) {
+        this.ErrorMessage = ErrorMessage;
     }
 
     /**
@@ -101,25 +96,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.RequestId = RequestId;
     }
 
-    public SetNodePoolNodeProtectionResponse() {
+    public DescribeEnableVpcCniProgressResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public SetNodePoolNodeProtectionResponse(SetNodePoolNodeProtectionResponse source) {
-        if (source.SucceedInstanceIds != null) {
-            this.SucceedInstanceIds = new String[source.SucceedInstanceIds.length];
-            for (int i = 0; i < source.SucceedInstanceIds.length; i++) {
-                this.SucceedInstanceIds[i] = new String(source.SucceedInstanceIds[i]);
-            }
+    public DescribeEnableVpcCniProgressResponse(DescribeEnableVpcCniProgressResponse source) {
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
         }
-        if (source.FailedInstanceIds != null) {
-            this.FailedInstanceIds = new String[source.FailedInstanceIds.length];
-            for (int i = 0; i < source.FailedInstanceIds.length; i++) {
-                this.FailedInstanceIds[i] = new String(source.FailedInstanceIds[i]);
-            }
+        if (source.ErrorMessage != null) {
+            this.ErrorMessage = new String(source.ErrorMessage);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -131,8 +120,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "SucceedInstanceIds.", this.SucceedInstanceIds);
-        this.setParamArraySimple(map, prefix + "FailedInstanceIds.", this.FailedInstanceIds);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

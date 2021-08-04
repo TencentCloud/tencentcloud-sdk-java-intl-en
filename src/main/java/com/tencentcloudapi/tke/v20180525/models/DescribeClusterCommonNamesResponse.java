@@ -13,22 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.emr.v20190103.models;
+package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateInstanceResponse extends AbstractModel{
+public class DescribeClusterCommonNamesResponse extends AbstractModel{
 
     /**
-    * Instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * The CommonName in the certificate of the client corresponding to the sub-account UIN
     */
-    @SerializedName("InstanceId")
+    @SerializedName("CommonNames")
     @Expose
-    private String InstanceId;
+    private CommonName [] CommonNames;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,23 +37,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String RequestId;
 
     /**
-     * Get Instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return InstanceId Instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get The CommonName in the certificate of the client corresponding to the sub-account UIN 
+     * @return CommonNames The CommonName in the certificate of the client corresponding to the sub-account UIN
      */
-    public String getInstanceId() {
-        return this.InstanceId;
+    public CommonName [] getCommonNames() {
+        return this.CommonNames;
     }
 
     /**
-     * Set Instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param InstanceId Instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set The CommonName in the certificate of the client corresponding to the sub-account UIN
+     * @param CommonNames The CommonName in the certificate of the client corresponding to the sub-account UIN
      */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
+    public void setCommonNames(CommonName [] CommonNames) {
+        this.CommonNames = CommonNames;
     }
 
     /**
@@ -73,16 +68,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.RequestId = RequestId;
     }
 
-    public CreateInstanceResponse() {
+    public DescribeClusterCommonNamesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateInstanceResponse(CreateInstanceResponse source) {
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
+    public DescribeClusterCommonNamesResponse(DescribeClusterCommonNamesResponse source) {
+        if (source.CommonNames != null) {
+            this.CommonNames = new CommonName[source.CommonNames.length];
+            for (int i = 0; i < source.CommonNames.length; i++) {
+                this.CommonNames[i] = new CommonName(source.CommonNames[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -94,7 +92,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamArrayObj(map, prefix + "CommonNames.", this.CommonNames);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -6,7 +6,7 @@ public enum TkeErrorCode {
     // Internal error.
      INTERNALERROR("InternalError"),
      
-    // 
+    // Failed to obtain the user authentication information
      INTERNALERROR_ACCOUNTCOMMON("InternalError.AccountCommon"),
      
     // Account not verified.
@@ -41,6 +41,9 @@ public enum TkeErrorCode {
      
     // Cluster status error.
      INTERNALERROR_CLUSTERSTATE("InternalError.ClusterState"),
+     
+    // 
+     INTERNALERROR_CLUSTERUPGRADENODEVERSION("InternalError.ClusterUpgradeNodeVersion"),
      
     // Internal HTTP client error
      INTERNALERROR_COMPONENTCLIENTHTTP("InternalError.ComponentClientHttp"),
@@ -102,7 +105,7 @@ public enum TkeErrorCode {
     // Failed to delete the kubernetes resource.
      INTERNALERROR_KUBERNETESDELETEOPERATIONERROR("InternalError.KubernetesDeleteOperationError"),
      
-    // 
+    // Failed to obtain the kubernetes resources
      INTERNALERROR_KUBERNETESGETOPERATIONERROR("InternalError.KubernetesGetOperationError"),
      
     // Unknown Kubernetes error

@@ -23,7 +23,8 @@ import java.util.HashMap;
 public class DescribeClusterEndpointStatusResponse extends AbstractModel{
 
     /**
-    * Queries cluster access port status (Created = successfully enabled; Creating = in the process of being enabled; NotFound = not enabled).
+    * The status of cluster access port. It can be `Created` (enabled); `Creating` (enabling) and `NotFound` (not enabled)
+Note: this field may return `null`, indicating that no valid value is obtained.
     */
     @SerializedName("Status")
     @Expose
@@ -45,16 +46,20 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     private String RequestId;
 
     /**
-     * Get Queries cluster access port status (Created = successfully enabled; Creating = in the process of being enabled; NotFound = not enabled). 
-     * @return Status Queries cluster access port status (Created = successfully enabled; Creating = in the process of being enabled; NotFound = not enabled).
+     * Get The status of cluster access port. It can be `Created` (enabled); `Creating` (enabling) and `NotFound` (not enabled)
+Note: this field may return `null`, indicating that no valid value is obtained. 
+     * @return Status The status of cluster access port. It can be `Created` (enabled); `Creating` (enabling) and `NotFound` (not enabled)
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Queries cluster access port status (Created = successfully enabled; Creating = in the process of being enabled; NotFound = not enabled).
-     * @param Status Queries cluster access port status (Created = successfully enabled; Creating = in the process of being enabled; NotFound = not enabled).
+     * Set The status of cluster access port. It can be `Created` (enabled); `Creating` (enabling) and `NotFound` (not enabled)
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param Status The status of cluster access port. It can be `Created` (enabled); `Creating` (enabling) and `NotFound` (not enabled)
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public void setStatus(String Status) {
         this.Status = Status;

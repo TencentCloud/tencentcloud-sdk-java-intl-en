@@ -335,6 +335,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String DynamicPodSpec;
 
     /**
+    * Whether to support billing mode change. `0`: no; `1`: yes
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SupportModifyPayMode")
+    @Expose
+    private Long SupportModifyPayMode;
+
+    /**
      * Get User `APPID`
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return AppId User `APPID`
@@ -1114,6 +1122,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.DynamicPodSpec = DynamicPodSpec;
     }
 
+    /**
+     * Get Whether to support billing mode change. `0`: no; `1`: yes
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return SupportModifyPayMode Whether to support billing mode change. `0`: no; `1`: yes
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getSupportModifyPayMode() {
+        return this.SupportModifyPayMode;
+    }
+
+    /**
+     * Set Whether to support billing mode change. `0`: no; `1`: yes
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param SupportModifyPayMode Whether to support billing mode change. `0`: no; `1`: yes
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setSupportModifyPayMode(Long SupportModifyPayMode) {
+        this.SupportModifyPayMode = SupportModifyPayMode;
+    }
+
     public NodeHardwareInfo() {
     }
 
@@ -1245,6 +1273,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.DynamicPodSpec != null) {
             this.DynamicPodSpec = new String(source.DynamicPodSpec);
         }
+        if (source.SupportModifyPayMode != null) {
+            this.SupportModifyPayMode = new Long(source.SupportModifyPayMode);
+        }
     }
 
 
@@ -1291,6 +1322,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "HardwareResourceType", this.HardwareResourceType);
         this.setParamSimple(map, prefix + "IsDynamicSpec", this.IsDynamicSpec);
         this.setParamSimple(map, prefix + "DynamicPodSpec", this.DynamicPodSpec);
+        this.setParamSimple(map, prefix + "SupportModifyPayMode", this.SupportModifyPayMode);
 
     }
 }

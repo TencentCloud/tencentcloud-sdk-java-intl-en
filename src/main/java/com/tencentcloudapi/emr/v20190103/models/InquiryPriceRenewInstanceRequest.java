@@ -65,6 +65,13 @@ public class InquiryPriceRenewInstanceRequest extends AbstractModel{
     private String Currency;
 
     /**
+    * Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
+    */
+    @SerializedName("ModifyPayMode")
+    @Expose
+    private Long ModifyPayMode;
+
+    /**
      * Get How long the instance will be renewed for, which needs to be used together with `TimeUnit`. 
      * @return TimeSpan How long the instance will be renewed for, which needs to be used together with `TimeUnit`.
      */
@@ -160,6 +167,22 @@ public class InquiryPriceRenewInstanceRequest extends AbstractModel{
         this.Currency = Currency;
     }
 
+    /**
+     * Get Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes 
+     * @return ModifyPayMode Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
+     */
+    public Long getModifyPayMode() {
+        return this.ModifyPayMode;
+    }
+
+    /**
+     * Set Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
+     * @param ModifyPayMode Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
+     */
+    public void setModifyPayMode(Long ModifyPayMode) {
+        this.ModifyPayMode = ModifyPayMode;
+    }
+
     public InquiryPriceRenewInstanceRequest() {
     }
 
@@ -189,6 +212,9 @@ public class InquiryPriceRenewInstanceRequest extends AbstractModel{
         if (source.Currency != null) {
             this.Currency = new String(source.Currency);
         }
+        if (source.ModifyPayMode != null) {
+            this.ModifyPayMode = new Long(source.ModifyPayMode);
+        }
     }
 
 
@@ -202,6 +228,7 @@ public class InquiryPriceRenewInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
         this.setParamSimple(map, prefix + "Currency", this.Currency);
+        this.setParamSimple(map, prefix + "ModifyPayMode", this.ModifyPayMode);
 
     }
 }

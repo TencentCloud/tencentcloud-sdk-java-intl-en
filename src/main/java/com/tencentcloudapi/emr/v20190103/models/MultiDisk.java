@@ -23,7 +23,10 @@ import java.util.HashMap;
 public class MultiDisk extends AbstractModel{
 
     /**
-    * Cloud disk type. Valid values: CLOUD_PREMIUM, CLOUD_SSD, CLOUD_BASIC
+    * Cloud disk type
+<li>`CLOUD_SSD`: SSD</li>
+<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
+<li>`CLOUD_HSSD`: Enhanced SSD</li>
     */
     @SerializedName("DiskType")
     @Expose
@@ -44,16 +47,28 @@ public class MultiDisk extends AbstractModel{
     private Long Count;
 
     /**
-     * Get Cloud disk type. Valid values: CLOUD_PREMIUM, CLOUD_SSD, CLOUD_BASIC 
-     * @return DiskType Cloud disk type. Valid values: CLOUD_PREMIUM, CLOUD_SSD, CLOUD_BASIC
+     * Get Cloud disk type
+<li>`CLOUD_SSD`: SSD</li>
+<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
+<li>`CLOUD_HSSD`: Enhanced SSD</li> 
+     * @return DiskType Cloud disk type
+<li>`CLOUD_SSD`: SSD</li>
+<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
+<li>`CLOUD_HSSD`: Enhanced SSD</li>
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set Cloud disk type. Valid values: CLOUD_PREMIUM, CLOUD_SSD, CLOUD_BASIC
-     * @param DiskType Cloud disk type. Valid values: CLOUD_PREMIUM, CLOUD_SSD, CLOUD_BASIC
+     * Set Cloud disk type
+<li>`CLOUD_SSD`: SSD</li>
+<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
+<li>`CLOUD_HSSD`: Enhanced SSD</li>
+     * @param DiskType Cloud disk type
+<li>`CLOUD_SSD`: SSD</li>
+<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
+<li>`CLOUD_HSSD`: Enhanced SSD</li>
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;

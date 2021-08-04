@@ -79,7 +79,8 @@ Note: This field may return null, indicating that no valid value was found.
     private InstanceExtraArgs ExtraArgs;
 
     /**
-    * 
+    * When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("DesiredPodNumber")
     @Expose
@@ -226,16 +227,20 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get  
-     * @return DesiredPodNumber 
+     * Get When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return DesiredPodNumber When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getDesiredPodNumber() {
         return this.DesiredPodNumber;
     }
 
     /**
-     * Set 
-     * @param DesiredPodNumber 
+     * Set When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param DesiredPodNumber When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setDesiredPodNumber(Long DesiredPodNumber) {
         this.DesiredPodNumber = DesiredPodNumber;

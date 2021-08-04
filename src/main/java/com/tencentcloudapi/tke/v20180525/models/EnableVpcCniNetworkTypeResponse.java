@@ -13,22 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.emr.v20190103.models;
+package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateInstanceResponse extends AbstractModel{
-
-    /**
-    * Instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-    */
-    @SerializedName("InstanceId")
-    @Expose
-    private String InstanceId;
+public class EnableVpcCniNetworkTypeResponse extends AbstractModel{
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -36,26 +28,6 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get Instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return InstanceId Instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     */
-    public String getInstanceId() {
-        return this.InstanceId;
-    }
-
-    /**
-     * Set Instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param InstanceId Instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
-    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -73,17 +45,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.RequestId = RequestId;
     }
 
-    public CreateInstanceResponse() {
+    public EnableVpcCniNetworkTypeResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateInstanceResponse(CreateInstanceResponse source) {
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
-        }
+    public EnableVpcCniNetworkTypeResponse(EnableVpcCniNetworkTypeResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,7 +63,6 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -44,6 +44,13 @@ public class ExistedInstancesForNode extends AbstractModel{
     private InstanceAdvancedSettings InstanceAdvancedSettingsOverride;
 
     /**
+    * When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+    */
+    @SerializedName("DesiredPodNumbers")
+    @Expose
+    private Long [] DesiredPodNumbers;
+
+    /**
      * Get Node role. Values: MASTER_ETCD, WORKER. You only need to specify MASTER_ETCD when creating a self-deployed cluster (INDEPENDENT_CLUSTER). 
      * @return NodeRole Node role. Values: MASTER_ETCD, WORKER. You only need to specify MASTER_ETCD when creating a self-deployed cluster (INDEPENDENT_CLUSTER).
      */
@@ -91,6 +98,22 @@ public class ExistedInstancesForNode extends AbstractModel{
         this.InstanceAdvancedSettingsOverride = InstanceAdvancedSettingsOverride;
     }
 
+    /**
+     * Get When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node. 
+     * @return DesiredPodNumbers When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+     */
+    public Long [] getDesiredPodNumbers() {
+        return this.DesiredPodNumbers;
+    }
+
+    /**
+     * Set When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+     * @param DesiredPodNumbers When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+     */
+    public void setDesiredPodNumbers(Long [] DesiredPodNumbers) {
+        this.DesiredPodNumbers = DesiredPodNumbers;
+    }
+
     public ExistedInstancesForNode() {
     }
 
@@ -108,6 +131,12 @@ public class ExistedInstancesForNode extends AbstractModel{
         if (source.InstanceAdvancedSettingsOverride != null) {
             this.InstanceAdvancedSettingsOverride = new InstanceAdvancedSettings(source.InstanceAdvancedSettingsOverride);
         }
+        if (source.DesiredPodNumbers != null) {
+            this.DesiredPodNumbers = new Long[source.DesiredPodNumbers.length];
+            for (int i = 0; i < source.DesiredPodNumbers.length; i++) {
+                this.DesiredPodNumbers[i] = new Long(source.DesiredPodNumbers[i]);
+            }
+        }
     }
 
 
@@ -118,6 +147,7 @@ public class ExistedInstancesForNode extends AbstractModel{
         this.setParamSimple(map, prefix + "NodeRole", this.NodeRole);
         this.setParamObj(map, prefix + "ExistedInstancesPara.", this.ExistedInstancesPara);
         this.setParamObj(map, prefix + "InstanceAdvancedSettingsOverride.", this.InstanceAdvancedSettingsOverride);
+        this.setParamArraySimple(map, prefix + "DesiredPodNumbers.", this.DesiredPodNumbers);
 
     }
 }

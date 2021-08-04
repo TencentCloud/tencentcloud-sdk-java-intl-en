@@ -126,7 +126,7 @@ public class ScaleOutInstanceRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
-    * Resource type selected for expansion. Valid values: host (general CVM resource), pod (resource provided by TKE cluster)
+    * Resource type selected for scaling. Valid values: `host` (general CVM resource), `pod` (resource provided by TKE or EKS cluster)
     */
     @SerializedName("HardwareResourceType")
     @Expose
@@ -169,10 +169,20 @@ public class ScaleOutInstanceRequest extends AbstractModel{
 
     /**
     * Number of master nodes to be added
+When a ClickHouse cluster is scaled, this parameter does not take effect.
+When a Kafka cluster is scaled, this parameter does not take effect.
+When `HardwareResourceType` is `pod`, this parameter does not take effect.
     */
     @SerializedName("MasterCount")
     @Expose
     private Long MasterCount;
+
+    /**
+    * Whether to start the service after scaling. `true`: yes; `false`: no
+    */
+    @SerializedName("StartServiceAfterScaleOut")
+    @Expose
+    private String StartServiceAfterScaleOut;
 
     /**
      * Get Time unit of scale-out. Valid values:
@@ -419,16 +429,16 @@ public class ScaleOutInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Resource type selected for expansion. Valid values: host (general CVM resource), pod (resource provided by TKE cluster) 
-     * @return HardwareResourceType Resource type selected for expansion. Valid values: host (general CVM resource), pod (resource provided by TKE cluster)
+     * Get Resource type selected for scaling. Valid values: `host` (general CVM resource), `pod` (resource provided by TKE or EKS cluster) 
+     * @return HardwareResourceType Resource type selected for scaling. Valid values: `host` (general CVM resource), `pod` (resource provided by TKE or EKS cluster)
      */
     public String getHardwareResourceType() {
         return this.HardwareResourceType;
     }
 
     /**
-     * Set Resource type selected for expansion. Valid values: host (general CVM resource), pod (resource provided by TKE cluster)
-     * @param HardwareResourceType Resource type selected for expansion. Valid values: host (general CVM resource), pod (resource provided by TKE cluster)
+     * Set Resource type selected for scaling. Valid values: `host` (general CVM resource), `pod` (resource provided by TKE or EKS cluster)
+     * @param HardwareResourceType Resource type selected for scaling. Valid values: `host` (general CVM resource), `pod` (resource provided by TKE or EKS cluster)
      */
     public void setHardwareResourceType(String HardwareResourceType) {
         this.HardwareResourceType = HardwareResourceType;
@@ -515,8 +525,14 @@ public class ScaleOutInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Number of master nodes to be added 
+     * Get Number of master nodes to be added
+When a ClickHouse cluster is scaled, this parameter does not take effect.
+When a Kafka cluster is scaled, this parameter does not take effect.
+When `HardwareResourceType` is `pod`, this parameter does not take effect. 
      * @return MasterCount Number of master nodes to be added
+When a ClickHouse cluster is scaled, this parameter does not take effect.
+When a Kafka cluster is scaled, this parameter does not take effect.
+When `HardwareResourceType` is `pod`, this parameter does not take effect.
      */
     public Long getMasterCount() {
         return this.MasterCount;
@@ -524,10 +540,32 @@ public class ScaleOutInstanceRequest extends AbstractModel{
 
     /**
      * Set Number of master nodes to be added
+When a ClickHouse cluster is scaled, this parameter does not take effect.
+When a Kafka cluster is scaled, this parameter does not take effect.
+When `HardwareResourceType` is `pod`, this parameter does not take effect.
      * @param MasterCount Number of master nodes to be added
+When a ClickHouse cluster is scaled, this parameter does not take effect.
+When a Kafka cluster is scaled, this parameter does not take effect.
+When `HardwareResourceType` is `pod`, this parameter does not take effect.
      */
     public void setMasterCount(Long MasterCount) {
         this.MasterCount = MasterCount;
+    }
+
+    /**
+     * Get Whether to start the service after scaling. `true`: yes; `false`: no 
+     * @return StartServiceAfterScaleOut Whether to start the service after scaling. `true`: yes; `false`: no
+     */
+    public String getStartServiceAfterScaleOut() {
+        return this.StartServiceAfterScaleOut;
+    }
+
+    /**
+     * Set Whether to start the service after scaling. `true`: yes; `false`: no
+     * @param StartServiceAfterScaleOut Whether to start the service after scaling. `true`: yes; `false`: no
+     */
+    public void setStartServiceAfterScaleOut(String StartServiceAfterScaleOut) {
+        this.StartServiceAfterScaleOut = StartServiceAfterScaleOut;
     }
 
     public ScaleOutInstanceRequest() {
@@ -619,6 +657,9 @@ public class ScaleOutInstanceRequest extends AbstractModel{
         if (source.MasterCount != null) {
             this.MasterCount = new Long(source.MasterCount);
         }
+        if (source.StartServiceAfterScaleOut != null) {
+            this.StartServiceAfterScaleOut = new String(source.StartServiceAfterScaleOut);
+        }
     }
 
 
@@ -647,6 +688,7 @@ public class ScaleOutInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "YarnNodeLabel", this.YarnNodeLabel);
         this.setParamObj(map, prefix + "PodParameter.", this.PodParameter);
         this.setParamSimple(map, prefix + "MasterCount", this.MasterCount);
+        this.setParamSimple(map, prefix + "StartServiceAfterScaleOut", this.StartServiceAfterScaleOut);
 
     }
 }

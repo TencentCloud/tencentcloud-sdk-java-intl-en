@@ -86,6 +86,15 @@ public class AddExistedInstancesRequest extends AbstractModel{
     private String [] SkipValidateOptions;
 
     /**
+    * This parameter is used to customize the configuration of an instance, which corresponds to the `InstanceIds` one-to-one in sequence. If this parameter is passed in, the default parameter `InstanceAdvancedSettings` will be overwritten and will not take effect. If this parameter is not passed in, the `InstanceAdvancedSettings` will take effect for each instance.
+
+The array length of `InstanceAdvancedSettingsOverride` should be the same as the array length of `InstanceIds`. If its array length is greater than the `InstanceIds` array length, an error will be reported. If its array length is less than the `InstanceIds` array length, the instance without corresponding configuration will use the default configuration.
+    */
+    @SerializedName("InstanceAdvancedSettingsOverrides")
+    @Expose
+    private InstanceAdvancedSettings [] InstanceAdvancedSettingsOverrides;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -229,6 +238,30 @@ public class AddExistedInstancesRequest extends AbstractModel{
         this.SkipValidateOptions = SkipValidateOptions;
     }
 
+    /**
+     * Get This parameter is used to customize the configuration of an instance, which corresponds to the `InstanceIds` one-to-one in sequence. If this parameter is passed in, the default parameter `InstanceAdvancedSettings` will be overwritten and will not take effect. If this parameter is not passed in, the `InstanceAdvancedSettings` will take effect for each instance.
+
+The array length of `InstanceAdvancedSettingsOverride` should be the same as the array length of `InstanceIds`. If its array length is greater than the `InstanceIds` array length, an error will be reported. If its array length is less than the `InstanceIds` array length, the instance without corresponding configuration will use the default configuration. 
+     * @return InstanceAdvancedSettingsOverrides This parameter is used to customize the configuration of an instance, which corresponds to the `InstanceIds` one-to-one in sequence. If this parameter is passed in, the default parameter `InstanceAdvancedSettings` will be overwritten and will not take effect. If this parameter is not passed in, the `InstanceAdvancedSettings` will take effect for each instance.
+
+The array length of `InstanceAdvancedSettingsOverride` should be the same as the array length of `InstanceIds`. If its array length is greater than the `InstanceIds` array length, an error will be reported. If its array length is less than the `InstanceIds` array length, the instance without corresponding configuration will use the default configuration.
+     */
+    public InstanceAdvancedSettings [] getInstanceAdvancedSettingsOverrides() {
+        return this.InstanceAdvancedSettingsOverrides;
+    }
+
+    /**
+     * Set This parameter is used to customize the configuration of an instance, which corresponds to the `InstanceIds` one-to-one in sequence. If this parameter is passed in, the default parameter `InstanceAdvancedSettings` will be overwritten and will not take effect. If this parameter is not passed in, the `InstanceAdvancedSettings` will take effect for each instance.
+
+The array length of `InstanceAdvancedSettingsOverride` should be the same as the array length of `InstanceIds`. If its array length is greater than the `InstanceIds` array length, an error will be reported. If its array length is less than the `InstanceIds` array length, the instance without corresponding configuration will use the default configuration.
+     * @param InstanceAdvancedSettingsOverrides This parameter is used to customize the configuration of an instance, which corresponds to the `InstanceIds` one-to-one in sequence. If this parameter is passed in, the default parameter `InstanceAdvancedSettings` will be overwritten and will not take effect. If this parameter is not passed in, the `InstanceAdvancedSettings` will take effect for each instance.
+
+The array length of `InstanceAdvancedSettingsOverride` should be the same as the array length of `InstanceIds`. If its array length is greater than the `InstanceIds` array length, an error will be reported. If its array length is less than the `InstanceIds` array length, the instance without corresponding configuration will use the default configuration.
+     */
+    public void setInstanceAdvancedSettingsOverrides(InstanceAdvancedSettings [] InstanceAdvancedSettingsOverrides) {
+        this.InstanceAdvancedSettingsOverrides = InstanceAdvancedSettingsOverrides;
+    }
+
     public AddExistedInstancesRequest() {
     }
 
@@ -273,6 +306,12 @@ public class AddExistedInstancesRequest extends AbstractModel{
                 this.SkipValidateOptions[i] = new String(source.SkipValidateOptions[i]);
             }
         }
+        if (source.InstanceAdvancedSettingsOverrides != null) {
+            this.InstanceAdvancedSettingsOverrides = new InstanceAdvancedSettings[source.InstanceAdvancedSettingsOverrides.length];
+            for (int i = 0; i < source.InstanceAdvancedSettingsOverrides.length; i++) {
+                this.InstanceAdvancedSettingsOverrides[i] = new InstanceAdvancedSettings(source.InstanceAdvancedSettingsOverrides[i]);
+            }
+        }
     }
 
 
@@ -289,6 +328,7 @@ public class AddExistedInstancesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamObj(map, prefix + "NodePool.", this.NodePool);
         this.setParamArraySimple(map, prefix + "SkipValidateOptions.", this.SkipValidateOptions);
+        this.setParamArrayObj(map, prefix + "InstanceAdvancedSettingsOverrides.", this.InstanceAdvancedSettingsOverrides);
 
     }
 }

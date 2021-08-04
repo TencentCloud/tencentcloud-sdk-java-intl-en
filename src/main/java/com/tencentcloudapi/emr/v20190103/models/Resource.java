@@ -23,16 +23,22 @@ import java.util.HashMap;
 public class Resource extends AbstractModel{
 
     /**
-    * Node specification description
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Node specification description, such as CVM.SA2
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Spec")
     @Expose
     private String Spec;
 
     /**
-    * Storage class
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Storage type
+Valid values:
+<li>4: SSD</li>
+<li>5: Premium Cloud Storage</li>
+<li>6: Enhanced SSD</li>
+<li>11: High-Throughput cloud disk</li>
+<li>12: Tremendous SSD</li>
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("StorageType")
     @Expose
@@ -40,7 +46,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
+Valid values:
+<li>`CLOUD_SSD`: SSD</li>
+<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
+<li>`CLOUD_BASIC`: HDD</li>
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("DiskType")
     @Expose
@@ -95,64 +105,88 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Tag [] Tags;
 
     /**
-    * Specification type
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Specification type, such as S2.MEDIUM8
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * Number of local disks
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Number of local disks. This field has been disused.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("LocalDiskNum")
     @Expose
     private Long LocalDiskNum;
 
     /**
-    * Number of disks
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Number of local disks, such as 2
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("DiskNum")
     @Expose
     private Long DiskNum;
 
     /**
-     * Get Node specification description
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Spec Node specification description
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Node specification description, such as CVM.SA2
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Spec Node specification description, such as CVM.SA2
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getSpec() {
         return this.Spec;
     }
 
     /**
-     * Set Node specification description
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Spec Node specification description
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Node specification description, such as CVM.SA2
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Spec Node specification description, such as CVM.SA2
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setSpec(String Spec) {
         this.Spec = Spec;
     }
 
     /**
-     * Get Storage class
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return StorageType Storage class
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Storage type
+Valid values:
+<li>4: SSD</li>
+<li>5: Premium Cloud Storage</li>
+<li>6: Enhanced SSD</li>
+<li>11: High-Throughput cloud disk</li>
+<li>12: Tremendous SSD</li>
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return StorageType Storage type
+Valid values:
+<li>4: SSD</li>
+<li>5: Premium Cloud Storage</li>
+<li>6: Enhanced SSD</li>
+<li>11: High-Throughput cloud disk</li>
+<li>12: Tremendous SSD</li>
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set Storage class
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param StorageType Storage class
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Storage type
+Valid values:
+<li>4: SSD</li>
+<li>5: Premium Cloud Storage</li>
+<li>6: Enhanced SSD</li>
+<li>11: High-Throughput cloud disk</li>
+<li>12: Tremendous SSD</li>
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param StorageType Storage type
+Valid values:
+<li>4: SSD</li>
+<li>5: Premium Cloud Storage</li>
+<li>6: Enhanced SSD</li>
+<li>11: High-Throughput cloud disk</li>
+<li>12: Tremendous SSD</li>
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setStorageType(Long StorageType) {
         this.StorageType = StorageType;
@@ -160,9 +194,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Disk type
-Note: this field may return null, indicating that no valid values can be obtained. 
+Valid values:
+<li>`CLOUD_SSD`: SSD</li>
+<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
+<li>`CLOUD_BASIC`: HDD</li>
+Note: this field may return `null`, indicating that no valid values can be obtained. 
      * @return DiskType Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
+Valid values:
+<li>`CLOUD_SSD`: SSD</li>
+<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
+<li>`CLOUD_BASIC`: HDD</li>
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getDiskType() {
         return this.DiskType;
@@ -170,9 +212,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
+Valid values:
+<li>`CLOUD_SSD`: SSD</li>
+<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
+<li>`CLOUD_BASIC`: HDD</li>
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param DiskType Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
+Valid values:
+<li>`CLOUD_SSD`: SSD</li>
+<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
+<li>`CLOUD_BASIC`: HDD</li>
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
@@ -299,60 +349,60 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Specification type
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceType Specification type
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Specification type, such as S2.MEDIUM8
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return InstanceType Specification type, such as S2.MEDIUM8
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Specification type
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param InstanceType Specification type
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Specification type, such as S2.MEDIUM8
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param InstanceType Specification type, such as S2.MEDIUM8
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get Number of local disks
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return LocalDiskNum Number of local disks
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Number of local disks. This field has been disused.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return LocalDiskNum Number of local disks. This field has been disused.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getLocalDiskNum() {
         return this.LocalDiskNum;
     }
 
     /**
-     * Set Number of local disks
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param LocalDiskNum Number of local disks
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Number of local disks. This field has been disused.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param LocalDiskNum Number of local disks. This field has been disused.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setLocalDiskNum(Long LocalDiskNum) {
         this.LocalDiskNum = LocalDiskNum;
     }
 
     /**
-     * Get Number of disks
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DiskNum Number of disks
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Number of local disks, such as 2
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return DiskNum Number of local disks, such as 2
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getDiskNum() {
         return this.DiskNum;
     }
 
     /**
-     * Set Number of disks
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DiskNum Number of disks
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Number of local disks, such as 2
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param DiskNum Number of local disks, such as 2
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setDiskNum(Long DiskNum) {
         this.DiskNum = DiskNum;

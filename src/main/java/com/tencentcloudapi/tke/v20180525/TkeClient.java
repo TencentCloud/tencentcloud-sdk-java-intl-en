@@ -519,6 +519,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to obtain the CommonName from the kube-apiserver client certificate that corresponding to the sub-account in RBAC authorization mode. 
+     * @param req DescribeClusterCommonNamesRequest
+     * @return DescribeClusterCommonNamesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterCommonNamesResponse DescribeClusterCommonNames(DescribeClusterCommonNamesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterCommonNamesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterCommonNamesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClusterCommonNames");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *Query cluster access port status (intranet / extranet access is enabled for independent clusters, and intranet access is supported for managed clusters)
      * @param req DescribeClusterEndpointStatusRequest
      * @return DescribeClusterEndpointStatusResponse
@@ -719,6 +739,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the task progress of enabling VPC-CNI mode.
+     * @param req DescribeEnableVpcCniProgressRequest
+     * @return DescribeEnableVpcCniProgressResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEnableVpcCniProgressResponse DescribeEnableVpcCniProgress(DescribeEnableVpcCniProgressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEnableVpcCniProgressResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEnableVpcCniProgressResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEnableVpcCniProgress");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query one or more existing node and determine whether they can be added to a cluster.
      * @param req DescribeExistedInstancesRequest
      * @return DescribeExistedInstancesResponse
@@ -791,6 +831,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeRouteTableConflictsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeRouteTableConflicts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to enable the VPC-CNI network mode for GR clusters.
+     * @param req EnableVpcCniNetworkTypeRequest
+     * @return EnableVpcCniNetworkTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableVpcCniNetworkTypeResponse EnableVpcCniNetworkType(EnableVpcCniNetworkTypeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableVpcCniNetworkTypeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableVpcCniNetworkTypeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EnableVpcCniNetworkType");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

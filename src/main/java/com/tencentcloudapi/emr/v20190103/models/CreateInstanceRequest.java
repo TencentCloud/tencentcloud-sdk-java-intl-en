@@ -24,10 +24,26 @@ public class CreateInstanceRequest extends AbstractModel{
 
     /**
     * Product ID. Different product IDs represent different EMR product versions. Valid values:
-<li>1: EMR v1.3.1.</li>
-<li>2: EMR v2.0.1.</li>
-<li>4: EMR v2.1.0.</li>
-<li>7: EMR v3.0.0.</li>
+<li>1: EMR v1.3.1</li>
+<li>2: EMR v2.0.1</li>
+<li>4: EMR v2.1.0</li>
+<li>7: EMR v3.0.0</li>
+<li>9: EMR v2.2.0</li>
+<li>11: ClickHouse v1.0.0</li>
+<li>13: Druid v1.0.0</li>
+<li>15: EMR v2.2.1</li>
+<li>16: EMR v2.3.0</li>
+<li>17: ClickHouse v1.1.0</li>
+<li>19: EMR v2.4.0</li>
+<li>20: EMR v2.5.0</li>
+<li>22: ClickHouse v1.2.0</li>
+<li>24: EMR TianQiong v1.0.0</li>
+<li>25: EMR v3.1.0</li>
+<li>26: Doris v1.0.0</li>
+<li>27: Kafka v1.0.0</li>
+<li>28: EMR v3.2.0</li>
+<li>29: EMR v2.5.1</li>
+<li>30: EMR v2.6.0</li>
     */
     @SerializedName("ProductId")
     @Expose
@@ -41,11 +57,8 @@ public class CreateInstanceRequest extends AbstractModel{
     private VPCSettings VPCSettings;
 
     /**
-    * List of deployed components. Different required components need to be selected for different EMR product IDs (i.e., `ProductId`; for specific meanings, please see the `ProductId` field in the input parameter):
-<li>When `ProductId` is 1, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 2, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 4, the required components include hadoop-2.8.4, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 7, the required components include hadoop-3.1.2, knox-1.2.0, and zookeeper-3.4.9</li>
+    * List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
+Enter an instance value: `hive` or `flink`.
     */
     @SerializedName("Software")
     @Expose
@@ -133,7 +146,7 @@ public class CreateInstanceRequest extends AbstractModel{
     private String SgId;
 
     /**
-    * Bootstrap script settings.
+    * [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings
     */
     @SerializedName("PreExecutedFileSettings")
     @Expose
@@ -194,6 +207,7 @@ public class CreateInstanceRequest extends AbstractModel{
 
     /**
     * List of spread placement group IDs. Only one can be specified currently.
+This parameter can be obtained in the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1) API.
     */
     @SerializedName("DisasterRecoverGroupIds")
     @Expose
@@ -239,15 +253,47 @@ public class CreateInstanceRequest extends AbstractModel{
 
     /**
      * Get Product ID. Different product IDs represent different EMR product versions. Valid values:
-<li>1: EMR v1.3.1.</li>
-<li>2: EMR v2.0.1.</li>
-<li>4: EMR v2.1.0.</li>
-<li>7: EMR v3.0.0.</li> 
+<li>1: EMR v1.3.1</li>
+<li>2: EMR v2.0.1</li>
+<li>4: EMR v2.1.0</li>
+<li>7: EMR v3.0.0</li>
+<li>9: EMR v2.2.0</li>
+<li>11: ClickHouse v1.0.0</li>
+<li>13: Druid v1.0.0</li>
+<li>15: EMR v2.2.1</li>
+<li>16: EMR v2.3.0</li>
+<li>17: ClickHouse v1.1.0</li>
+<li>19: EMR v2.4.0</li>
+<li>20: EMR v2.5.0</li>
+<li>22: ClickHouse v1.2.0</li>
+<li>24: EMR TianQiong v1.0.0</li>
+<li>25: EMR v3.1.0</li>
+<li>26: Doris v1.0.0</li>
+<li>27: Kafka v1.0.0</li>
+<li>28: EMR v3.2.0</li>
+<li>29: EMR v2.5.1</li>
+<li>30: EMR v2.6.0</li> 
      * @return ProductId Product ID. Different product IDs represent different EMR product versions. Valid values:
-<li>1: EMR v1.3.1.</li>
-<li>2: EMR v2.0.1.</li>
-<li>4: EMR v2.1.0.</li>
-<li>7: EMR v3.0.0.</li>
+<li>1: EMR v1.3.1</li>
+<li>2: EMR v2.0.1</li>
+<li>4: EMR v2.1.0</li>
+<li>7: EMR v3.0.0</li>
+<li>9: EMR v2.2.0</li>
+<li>11: ClickHouse v1.0.0</li>
+<li>13: Druid v1.0.0</li>
+<li>15: EMR v2.2.1</li>
+<li>16: EMR v2.3.0</li>
+<li>17: ClickHouse v1.1.0</li>
+<li>19: EMR v2.4.0</li>
+<li>20: EMR v2.5.0</li>
+<li>22: ClickHouse v1.2.0</li>
+<li>24: EMR TianQiong v1.0.0</li>
+<li>25: EMR v3.1.0</li>
+<li>26: Doris v1.0.0</li>
+<li>27: Kafka v1.0.0</li>
+<li>28: EMR v3.2.0</li>
+<li>29: EMR v2.5.1</li>
+<li>30: EMR v2.6.0</li>
      */
     public Long getProductId() {
         return this.ProductId;
@@ -255,15 +301,47 @@ public class CreateInstanceRequest extends AbstractModel{
 
     /**
      * Set Product ID. Different product IDs represent different EMR product versions. Valid values:
-<li>1: EMR v1.3.1.</li>
-<li>2: EMR v2.0.1.</li>
-<li>4: EMR v2.1.0.</li>
-<li>7: EMR v3.0.0.</li>
+<li>1: EMR v1.3.1</li>
+<li>2: EMR v2.0.1</li>
+<li>4: EMR v2.1.0</li>
+<li>7: EMR v3.0.0</li>
+<li>9: EMR v2.2.0</li>
+<li>11: ClickHouse v1.0.0</li>
+<li>13: Druid v1.0.0</li>
+<li>15: EMR v2.2.1</li>
+<li>16: EMR v2.3.0</li>
+<li>17: ClickHouse v1.1.0</li>
+<li>19: EMR v2.4.0</li>
+<li>20: EMR v2.5.0</li>
+<li>22: ClickHouse v1.2.0</li>
+<li>24: EMR TianQiong v1.0.0</li>
+<li>25: EMR v3.1.0</li>
+<li>26: Doris v1.0.0</li>
+<li>27: Kafka v1.0.0</li>
+<li>28: EMR v3.2.0</li>
+<li>29: EMR v2.5.1</li>
+<li>30: EMR v2.6.0</li>
      * @param ProductId Product ID. Different product IDs represent different EMR product versions. Valid values:
-<li>1: EMR v1.3.1.</li>
-<li>2: EMR v2.0.1.</li>
-<li>4: EMR v2.1.0.</li>
-<li>7: EMR v3.0.0.</li>
+<li>1: EMR v1.3.1</li>
+<li>2: EMR v2.0.1</li>
+<li>4: EMR v2.1.0</li>
+<li>7: EMR v3.0.0</li>
+<li>9: EMR v2.2.0</li>
+<li>11: ClickHouse v1.0.0</li>
+<li>13: Druid v1.0.0</li>
+<li>15: EMR v2.2.1</li>
+<li>16: EMR v2.3.0</li>
+<li>17: ClickHouse v1.1.0</li>
+<li>19: EMR v2.4.0</li>
+<li>20: EMR v2.5.0</li>
+<li>22: ClickHouse v1.2.0</li>
+<li>24: EMR TianQiong v1.0.0</li>
+<li>25: EMR v3.1.0</li>
+<li>26: Doris v1.0.0</li>
+<li>27: Kafka v1.0.0</li>
+<li>28: EMR v3.2.0</li>
+<li>29: EMR v2.5.1</li>
+<li>30: EMR v2.6.0</li>
      */
     public void setProductId(Long ProductId) {
         this.ProductId = ProductId;
@@ -286,32 +364,20 @@ public class CreateInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get List of deployed components. Different required components need to be selected for different EMR product IDs (i.e., `ProductId`; for specific meanings, please see the `ProductId` field in the input parameter):
-<li>When `ProductId` is 1, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 2, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 4, the required components include hadoop-2.8.4, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 7, the required components include hadoop-3.1.2, knox-1.2.0, and zookeeper-3.4.9</li> 
-     * @return Software List of deployed components. Different required components need to be selected for different EMR product IDs (i.e., `ProductId`; for specific meanings, please see the `ProductId` field in the input parameter):
-<li>When `ProductId` is 1, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 2, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 4, the required components include hadoop-2.8.4, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 7, the required components include hadoop-3.1.2, knox-1.2.0, and zookeeper-3.4.9</li>
+     * Get List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
+Enter an instance value: `hive` or `flink`. 
+     * @return Software List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
+Enter an instance value: `hive` or `flink`.
      */
     public String [] getSoftware() {
         return this.Software;
     }
 
     /**
-     * Set List of deployed components. Different required components need to be selected for different EMR product IDs (i.e., `ProductId`; for specific meanings, please see the `ProductId` field in the input parameter):
-<li>When `ProductId` is 1, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 2, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 4, the required components include hadoop-2.8.4, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 7, the required components include hadoop-3.1.2, knox-1.2.0, and zookeeper-3.4.9</li>
-     * @param Software List of deployed components. Different required components need to be selected for different EMR product IDs (i.e., `ProductId`; for specific meanings, please see the `ProductId` field in the input parameter):
-<li>When `ProductId` is 1, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 2, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 4, the required components include hadoop-2.8.4, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 7, the required components include hadoop-3.1.2, knox-1.2.0, and zookeeper-3.4.9</li>
+     * Set List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
+Enter an instance value: `hive` or `flink`.
+     * @param Software List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
+Enter an instance value: `hive` or `flink`.
      */
     public void setSoftware(String [] Software) {
         this.Software = Software;
@@ -522,16 +588,16 @@ public class CreateInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Bootstrap script settings. 
-     * @return PreExecutedFileSettings Bootstrap script settings.
+     * Get [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings 
+     * @return PreExecutedFileSettings [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings
      */
     public PreExecuteFileSettings [] getPreExecutedFileSettings() {
         return this.PreExecutedFileSettings;
     }
 
     /**
-     * Set Bootstrap script settings.
-     * @param PreExecutedFileSettings Bootstrap script settings.
+     * Set [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings
+     * @param PreExecutedFileSettings [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings
      */
     public void setPreExecutedFileSettings(PreExecuteFileSettings [] PreExecutedFileSettings) {
         this.PreExecutedFileSettings = PreExecutedFileSettings;
@@ -666,8 +732,10 @@ public class CreateInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get List of spread placement group IDs. Only one can be specified currently. 
+     * Get List of spread placement group IDs. Only one can be specified currently.
+This parameter can be obtained in the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1) API. 
      * @return DisasterRecoverGroupIds List of spread placement group IDs. Only one can be specified currently.
+This parameter can be obtained in the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1) API.
      */
     public String [] getDisasterRecoverGroupIds() {
         return this.DisasterRecoverGroupIds;
@@ -675,7 +743,9 @@ public class CreateInstanceRequest extends AbstractModel{
 
     /**
      * Set List of spread placement group IDs. Only one can be specified currently.
+This parameter can be obtained in the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1) API.
      * @param DisasterRecoverGroupIds List of spread placement group IDs. Only one can be specified currently.
+This parameter can be obtained in the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1) API.
      */
     public void setDisasterRecoverGroupIds(String [] DisasterRecoverGroupIds) {
         this.DisasterRecoverGroupIds = DisasterRecoverGroupIds;
