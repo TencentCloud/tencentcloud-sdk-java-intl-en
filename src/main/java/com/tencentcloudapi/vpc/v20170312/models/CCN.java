@@ -102,6 +102,22 @@ Note: This field may return null, indicating no valid value.
     private Boolean RoutePriorityFlag;
 
     /**
+    * Number of route tables associated with the instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RouteTableCount")
+    @Expose
+    private Long RouteTableCount;
+
+    /**
+    * Whether the multiple route tables feature is enabled for the CCN instance. Valid values: `False`: no; `True`: yes. Default value: `False`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RouteTableFlag")
+    @Expose
+    private Boolean RouteTableFlag;
+
+    /**
      * Get The unique ID of the CCN 
      * @return CcnId The unique ID of the CCN
      */
@@ -285,6 +301,46 @@ Note: This field may return null, indicating no valid value.
         this.RoutePriorityFlag = RoutePriorityFlag;
     }
 
+    /**
+     * Get Number of route tables associated with the instance.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return RouteTableCount Number of route tables associated with the instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getRouteTableCount() {
+        return this.RouteTableCount;
+    }
+
+    /**
+     * Set Number of route tables associated with the instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param RouteTableCount Number of route tables associated with the instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setRouteTableCount(Long RouteTableCount) {
+        this.RouteTableCount = RouteTableCount;
+    }
+
+    /**
+     * Get Whether the multiple route tables feature is enabled for the CCN instance. Valid values: `False`: no; `True`: yes. Default value: `False`.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return RouteTableFlag Whether the multiple route tables feature is enabled for the CCN instance. Valid values: `False`: no; `True`: yes. Default value: `False`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Boolean getRouteTableFlag() {
+        return this.RouteTableFlag;
+    }
+
+    /**
+     * Set Whether the multiple route tables feature is enabled for the CCN instance. Valid values: `False`: no; `True`: yes. Default value: `False`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param RouteTableFlag Whether the multiple route tables feature is enabled for the CCN instance. Valid values: `False`: no; `True`: yes. Default value: `False`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setRouteTableFlag(Boolean RouteTableFlag) {
+        this.RouteTableFlag = RouteTableFlag;
+    }
+
     public CCN() {
     }
 
@@ -329,6 +385,12 @@ Note: This field may return null, indicating no valid value.
         if (source.RoutePriorityFlag != null) {
             this.RoutePriorityFlag = new Boolean(source.RoutePriorityFlag);
         }
+        if (source.RouteTableCount != null) {
+            this.RouteTableCount = new Long(source.RouteTableCount);
+        }
+        if (source.RouteTableFlag != null) {
+            this.RouteTableFlag = new Boolean(source.RouteTableFlag);
+        }
     }
 
 
@@ -347,6 +409,8 @@ Note: This field may return null, indicating no valid value.
         this.setParamSimple(map, prefix + "BandwidthLimitType", this.BandwidthLimitType);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "RoutePriorityFlag", this.RoutePriorityFlag);
+        this.setParamSimple(map, prefix + "RouteTableCount", this.RouteTableCount);
+        this.setParamSimple(map, prefix + "RouteTableFlag", this.RouteTableFlag);
 
     }
 }

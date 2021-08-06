@@ -30,7 +30,7 @@ public class DescribeAssistantCidrRequest extends AbstractModel{
     private String [] VpcIds;
 
     /**
-    * Filter condition. `NetworkInterfaceIds` and `Filters` cannot be specified at the same time.
+    * Filter condition. `VpcIds` and `Filters` cannot be specified at the same time.
 <li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
     */
     @SerializedName("Filters")
@@ -68,9 +68,9 @@ public class DescribeAssistantCidrRequest extends AbstractModel{
     }
 
     /**
-     * Get Filter condition. `NetworkInterfaceIds` and `Filters` cannot be specified at the same time.
+     * Get Filter condition. `VpcIds` and `Filters` cannot be specified at the same time.
 <li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li> 
-     * @return Filters Filter condition. `NetworkInterfaceIds` and `Filters` cannot be specified at the same time.
+     * @return Filters Filter condition. `VpcIds` and `Filters` cannot be specified at the same time.
 <li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
      */
     public Filter [] getFilters() {
@@ -78,9 +78,9 @@ public class DescribeAssistantCidrRequest extends AbstractModel{
     }
 
     /**
-     * Set Filter condition. `NetworkInterfaceIds` and `Filters` cannot be specified at the same time.
+     * Set Filter condition. `VpcIds` and `Filters` cannot be specified at the same time.
 <li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
-     * @param Filters Filter condition. `NetworkInterfaceIds` and `Filters` cannot be specified at the same time.
+     * @param Filters Filter condition. `VpcIds` and `Filters` cannot be specified at the same time.
 <li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
      */
     public void setFilters(Filter [] Filters) {

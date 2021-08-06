@@ -119,6 +119,22 @@ public class CcnAttachedInstance extends AbstractModel{
     private String Description;
 
     /**
+    * Route table ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RouteTableId")
+    @Expose
+    private String RouteTableId;
+
+    /**
+    * Route table name
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RouteTableName")
+    @Expose
+    private String RouteTableName;
+
+    /**
      * Get The ID of a CCN instance. 
      * @return CcnId The ID of a CCN instance.
      */
@@ -358,6 +374,46 @@ public class CcnAttachedInstance extends AbstractModel{
         this.Description = Description;
     }
 
+    /**
+     * Get Route table ID
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return RouteTableId Route table ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getRouteTableId() {
+        return this.RouteTableId;
+    }
+
+    /**
+     * Set Route table ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param RouteTableId Route table ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setRouteTableId(String RouteTableId) {
+        this.RouteTableId = RouteTableId;
+    }
+
+    /**
+     * Get Route table name
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return RouteTableName Route table name
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getRouteTableName() {
+        return this.RouteTableName;
+    }
+
+    /**
+     * Set Route table name
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param RouteTableName Route table name
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setRouteTableName(String RouteTableName) {
+        this.RouteTableName = RouteTableName;
+    }
+
     public CcnAttachedInstance() {
     }
 
@@ -405,6 +461,12 @@ public class CcnAttachedInstance extends AbstractModel{
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.RouteTableId != null) {
+            this.RouteTableId = new String(source.RouteTableId);
+        }
+        if (source.RouteTableName != null) {
+            this.RouteTableName = new String(source.RouteTableName);
+        }
     }
 
 
@@ -424,6 +486,8 @@ public class CcnAttachedInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "CcnUin", this.CcnUin);
         this.setParamSimple(map, prefix + "InstanceArea", this.InstanceArea);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
+        this.setParamSimple(map, prefix + "RouteTableName", this.RouteTableName);
 
     }
 }

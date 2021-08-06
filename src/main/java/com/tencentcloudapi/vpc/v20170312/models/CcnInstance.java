@@ -54,6 +54,14 @@ public class CcnInstance extends AbstractModel{
     private String Description;
 
     /**
+    * The ID of the route table associated with the instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RouteTableId")
+    @Expose
+    private String RouteTableId;
+
+    /**
      * Get The ID of the associated instance. 
      * @return InstanceId The ID of the associated instance.
      */
@@ -129,6 +137,26 @@ public class CcnInstance extends AbstractModel{
         this.Description = Description;
     }
 
+    /**
+     * Get The ID of the route table associated with the instance
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return RouteTableId The ID of the route table associated with the instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getRouteTableId() {
+        return this.RouteTableId;
+    }
+
+    /**
+     * Set The ID of the route table associated with the instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param RouteTableId The ID of the route table associated with the instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setRouteTableId(String RouteTableId) {
+        this.RouteTableId = RouteTableId;
+    }
+
     public CcnInstance() {
     }
 
@@ -149,6 +177,9 @@ public class CcnInstance extends AbstractModel{
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.RouteTableId != null) {
+            this.RouteTableId = new String(source.RouteTableId);
+        }
     }
 
 
@@ -160,6 +191,7 @@ public class CcnInstance extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceRegion", this.InstanceRegion);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
 
     }
 }

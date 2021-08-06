@@ -221,6 +221,41 @@ pause
     private String ServerlessStatus;
 
     /**
+    * Prepaid cluster storage
+    */
+    @SerializedName("Storage")
+    @Expose
+    private Long Storage;
+
+    /**
+    * Cluster storage ID used in prepaid storage modification
+    */
+    @SerializedName("StorageId")
+    @Expose
+    private String StorageId;
+
+    /**
+    * Billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid)
+    */
+    @SerializedName("StoragePayMode")
+    @Expose
+    private Long StoragePayMode;
+
+    /**
+    * The minimum storage corresponding to the compute specifications of the cluster
+    */
+    @SerializedName("MinStorageSize")
+    @Expose
+    private Long MinStorageSize;
+
+    /**
+    * The maximum storage corresponding to the compute specifications of the cluster
+    */
+    @SerializedName("MaxStorageSize")
+    @Expose
+    private Long MaxStorageSize;
+
+    /**
      * Get Cluster status 
      * @return Status Cluster status
      */
@@ -676,6 +711,86 @@ pause
         this.ServerlessStatus = ServerlessStatus;
     }
 
+    /**
+     * Get Prepaid cluster storage 
+     * @return Storage Prepaid cluster storage
+     */
+    public Long getStorage() {
+        return this.Storage;
+    }
+
+    /**
+     * Set Prepaid cluster storage
+     * @param Storage Prepaid cluster storage
+     */
+    public void setStorage(Long Storage) {
+        this.Storage = Storage;
+    }
+
+    /**
+     * Get Cluster storage ID used in prepaid storage modification 
+     * @return StorageId Cluster storage ID used in prepaid storage modification
+     */
+    public String getStorageId() {
+        return this.StorageId;
+    }
+
+    /**
+     * Set Cluster storage ID used in prepaid storage modification
+     * @param StorageId Cluster storage ID used in prepaid storage modification
+     */
+    public void setStorageId(String StorageId) {
+        this.StorageId = StorageId;
+    }
+
+    /**
+     * Get Billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid) 
+     * @return StoragePayMode Billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid)
+     */
+    public Long getStoragePayMode() {
+        return this.StoragePayMode;
+    }
+
+    /**
+     * Set Billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid)
+     * @param StoragePayMode Billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid)
+     */
+    public void setStoragePayMode(Long StoragePayMode) {
+        this.StoragePayMode = StoragePayMode;
+    }
+
+    /**
+     * Get The minimum storage corresponding to the compute specifications of the cluster 
+     * @return MinStorageSize The minimum storage corresponding to the compute specifications of the cluster
+     */
+    public Long getMinStorageSize() {
+        return this.MinStorageSize;
+    }
+
+    /**
+     * Set The minimum storage corresponding to the compute specifications of the cluster
+     * @param MinStorageSize The minimum storage corresponding to the compute specifications of the cluster
+     */
+    public void setMinStorageSize(Long MinStorageSize) {
+        this.MinStorageSize = MinStorageSize;
+    }
+
+    /**
+     * Get The maximum storage corresponding to the compute specifications of the cluster 
+     * @return MaxStorageSize The maximum storage corresponding to the compute specifications of the cluster
+     */
+    public Long getMaxStorageSize() {
+        return this.MaxStorageSize;
+    }
+
+    /**
+     * Set The maximum storage corresponding to the compute specifications of the cluster
+     * @param MaxStorageSize The maximum storage corresponding to the compute specifications of the cluster
+     */
+    public void setMaxStorageSize(Long MaxStorageSize) {
+        this.MaxStorageSize = MaxStorageSize;
+    }
+
     public CynosdbCluster() {
     }
 
@@ -774,6 +889,21 @@ pause
         if (source.ServerlessStatus != null) {
             this.ServerlessStatus = new String(source.ServerlessStatus);
         }
+        if (source.Storage != null) {
+            this.Storage = new Long(source.Storage);
+        }
+        if (source.StorageId != null) {
+            this.StorageId = new String(source.StorageId);
+        }
+        if (source.StoragePayMode != null) {
+            this.StoragePayMode = new Long(source.StoragePayMode);
+        }
+        if (source.MinStorageSize != null) {
+            this.MinStorageSize = new Long(source.MinStorageSize);
+        }
+        if (source.MaxStorageSize != null) {
+            this.MaxStorageSize = new Long(source.MaxStorageSize);
+        }
     }
 
 
@@ -809,6 +939,11 @@ pause
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "DbMode", this.DbMode);
         this.setParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
+        this.setParamSimple(map, prefix + "Storage", this.Storage);
+        this.setParamSimple(map, prefix + "StorageId", this.StorageId);
+        this.setParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
+        this.setParamSimple(map, prefix + "MinStorageSize", this.MinStorageSize);
+        this.setParamSimple(map, prefix + "MaxStorageSize", this.MaxStorageSize);
 
     }
 }

@@ -74,14 +74,14 @@ public class CreateClustersRequest extends AbstractModel{
     private Long Cpu;
 
     /**
-    * Memory of normal instance
+    * Memory of a non-serverless instance in GB
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * Storage
+    * Storage capacity in GB
     */
     @SerializedName("Storage")
     @Expose
@@ -95,7 +95,7 @@ public class CreateClustersRequest extends AbstractModel{
     private String ClusterName;
 
     /**
-    * Account password, which can contain 8–64 characters and must contain at least two of the following types of characters: letters, digits, and special symbols (_+-&=!@#$%^*()~)
+    * Account password (it must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/).)
     */
     @SerializedName("AdminPassword")
     @Expose
@@ -161,7 +161,8 @@ timeRollback: rollback by time point
     private Long ExpectTimeThresh;
 
     /**
-    * Storage upper limit of normal instance in GB
+    * The maximum storage of a non-serverless instance in GB
+If `DbType` is `MYSQL` and the storage billing mode is prepaid, the parameter value cannot exceed the maximum storage corresponding to the CPU and memory specifications.
     */
     @SerializedName("StorageLimit")
     @Expose
@@ -266,6 +267,15 @@ Default value: 600
     @SerializedName("AutoPauseDelay")
     @Expose
     private Long AutoPauseDelay;
+
+    /**
+    * The billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid). Default value: `0`.
+If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be postpaid.
+Clusters with storage billed in prepaid mode cannot be cloned or rolled back.
+    */
+    @SerializedName("StoragePayMode")
+    @Expose
+    private Long StoragePayMode;
 
     /**
      * Get AZ 
@@ -388,32 +398,32 @@ Default value: 600
     }
 
     /**
-     * Get Memory of normal instance 
-     * @return Memory Memory of normal instance
+     * Get Memory of a non-serverless instance in GB 
+     * @return Memory Memory of a non-serverless instance in GB
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Memory of normal instance
-     * @param Memory Memory of normal instance
+     * Set Memory of a non-serverless instance in GB
+     * @param Memory Memory of a non-serverless instance in GB
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Storage 
-     * @return Storage Storage
+     * Get Storage capacity in GB 
+     * @return Storage Storage capacity in GB
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set Storage
-     * @param Storage Storage
+     * Set Storage capacity in GB
+     * @param Storage Storage capacity in GB
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
@@ -436,16 +446,16 @@ Default value: 600
     }
 
     /**
-     * Get Account password, which can contain 8–64 characters and must contain at least two of the following types of characters: letters, digits, and special symbols (_+-&=!@#$%^*()~) 
-     * @return AdminPassword Account password, which can contain 8–64 characters and must contain at least two of the following types of characters: letters, digits, and special symbols (_+-&=!@#$%^*()~)
+     * Get Account password (it must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/).) 
+     * @return AdminPassword Account password (it must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/).)
      */
     public String getAdminPassword() {
         return this.AdminPassword;
     }
 
     /**
-     * Set Account password, which can contain 8–64 characters and must contain at least two of the following types of characters: letters, digits, and special symbols (_+-&=!@#$%^*()~)
-     * @param AdminPassword Account password, which can contain 8–64 characters and must contain at least two of the following types of characters: letters, digits, and special symbols (_+-&=!@#$%^*()~)
+     * Set Account password (it must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/).)
+     * @param AdminPassword Account password (it must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/).)
      */
     public void setAdminPassword(String AdminPassword) {
         this.AdminPassword = AdminPassword;
@@ -592,16 +602,20 @@ timeRollback: rollback by time point
     }
 
     /**
-     * Get Storage upper limit of normal instance in GB 
-     * @return StorageLimit Storage upper limit of normal instance in GB
+     * Get The maximum storage of a non-serverless instance in GB
+If `DbType` is `MYSQL` and the storage billing mode is prepaid, the parameter value cannot exceed the maximum storage corresponding to the CPU and memory specifications. 
+     * @return StorageLimit The maximum storage of a non-serverless instance in GB
+If `DbType` is `MYSQL` and the storage billing mode is prepaid, the parameter value cannot exceed the maximum storage corresponding to the CPU and memory specifications.
      */
     public Long getStorageLimit() {
         return this.StorageLimit;
     }
 
     /**
-     * Set Storage upper limit of normal instance in GB
-     * @param StorageLimit Storage upper limit of normal instance in GB
+     * Set The maximum storage of a non-serverless instance in GB
+If `DbType` is `MYSQL` and the storage billing mode is prepaid, the parameter value cannot exceed the maximum storage corresponding to the CPU and memory specifications.
+     * @param StorageLimit The maximum storage of a non-serverless instance in GB
+If `DbType` is `MYSQL` and the storage billing mode is prepaid, the parameter value cannot exceed the maximum storage corresponding to the CPU and memory specifications.
      */
     public void setStorageLimit(Long StorageLimit) {
         this.StorageLimit = StorageLimit;
@@ -851,6 +865,30 @@ Default value: 600
         this.AutoPauseDelay = AutoPauseDelay;
     }
 
+    /**
+     * Get The billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid). Default value: `0`.
+If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be postpaid.
+Clusters with storage billed in prepaid mode cannot be cloned or rolled back. 
+     * @return StoragePayMode The billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid). Default value: `0`.
+If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be postpaid.
+Clusters with storage billed in prepaid mode cannot be cloned or rolled back.
+     */
+    public Long getStoragePayMode() {
+        return this.StoragePayMode;
+    }
+
+    /**
+     * Set The billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid). Default value: `0`.
+If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be postpaid.
+Clusters with storage billed in prepaid mode cannot be cloned or rolled back.
+     * @param StoragePayMode The billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid). Default value: `0`.
+If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be postpaid.
+Clusters with storage billed in prepaid mode cannot be cloned or rolled back.
+     */
+    public void setStoragePayMode(Long StoragePayMode) {
+        this.StoragePayMode = StoragePayMode;
+    }
+
     public CreateClustersRequest() {
     }
 
@@ -961,6 +999,9 @@ Default value: 600
         if (source.AutoPauseDelay != null) {
             this.AutoPauseDelay = new Long(source.AutoPauseDelay);
         }
+        if (source.StoragePayMode != null) {
+            this.StoragePayMode = new Long(source.StoragePayMode);
+        }
     }
 
 
@@ -1001,6 +1042,7 @@ Default value: 600
         this.setParamSimple(map, prefix + "MaxCpu", this.MaxCpu);
         this.setParamSimple(map, prefix + "AutoPause", this.AutoPause);
         this.setParamSimple(map, prefix + "AutoPauseDelay", this.AutoPauseDelay);
+        this.setParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
 
     }
 }

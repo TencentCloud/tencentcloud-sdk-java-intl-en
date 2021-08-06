@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeResourcesByDealNameRequest extends AbstractModel{
 
     /**
-    * Billing order ID
+    * Order ID. (If the cluster is not delivered yet, the `DescribeResourcesByDealName` API may return the `InvalidParameterValue.DealNameNotFound` error. Please call the API again until it succeeds.)
     */
     @SerializedName("DealName")
     @Expose
     private String DealName;
 
     /**
-     * Get Billing order ID 
-     * @return DealName Billing order ID
+     * Get Order ID. (If the cluster is not delivered yet, the `DescribeResourcesByDealName` API may return the `InvalidParameterValue.DealNameNotFound` error. Please call the API again until it succeeds.) 
+     * @return DealName Order ID. (If the cluster is not delivered yet, the `DescribeResourcesByDealName` API may return the `InvalidParameterValue.DealNameNotFound` error. Please call the API again until it succeeds.)
      */
     public String getDealName() {
         return this.DealName;
     }
 
     /**
-     * Set Billing order ID
-     * @param DealName Billing order ID
+     * Set Order ID. (If the cluster is not delivered yet, the `DescribeResourcesByDealName` API may return the `InvalidParameterValue.DealNameNotFound` error. Please call the API again until it succeeds.)
+     * @param DealName Order ID. (If the cluster is not delivered yet, the `DescribeResourcesByDealName` API may return the `InvalidParameterValue.DealNameNotFound` error. Please call the API again until it succeeds.)
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;

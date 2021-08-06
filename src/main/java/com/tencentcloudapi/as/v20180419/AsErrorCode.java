@@ -12,10 +12,10 @@ public enum AsErrorCode {
     // An internal error occurred.
      INTERNALERROR("InternalError"),
      
-    // 
+    // The CMQ API call failed.
      INTERNALERROR_CALLCMQERROR("InternalError.CallCmqError"),
      
-    // 
+    // The internal API call failed.
      INTERNALERROR_CALLERROR("InternalError.CallError"),
      
     // CLB API call failed.
@@ -24,16 +24,16 @@ public enum AsErrorCode {
     // Monitor API call failed.
      INTERNALERROR_CALLMONITORERROR("InternalError.CallMonitorError"),
      
-    // 
+    // The notification service API call failed.
      INTERNALERROR_CALLNOTIFICATIONERROR("InternalError.CallNotificationError"),
      
-    // 
+    // The STS API call failed.
      INTERNALERROR_CALLSTSERROR("InternalError.CallStsError"),
      
-    // 
+    // The tag API call failed.
      INTERNALERROR_CALLTAGERROR("InternalError.CallTagError"),
      
-    // 
+    // The TVPC API call failed.
      INTERNALERROR_CALLTVPCERROR("InternalError.CallTvpcError"),
      
     // VPC API call failed.
@@ -50,12 +50,6 @@ public enum AsErrorCode {
      
     // The launch configuration ID is invalid.
      INVALIDLAUNCHCONFIGURATIONID("InvalidLaunchConfigurationId"),
-     
-    // The launch configuration is in use.
-     INVALIDLAUNCHCONFIGURATIONID_INUSE("InvalidLaunchConfigurationId.InUse"),
-     
-    // The launch configuration was not found.
-     INVALIDLAUNCHCONFIGURATIONID_NOTFOUND("InvalidLaunchConfigurationId.NotFound"),
      
     // Invalid parameter.
      INVALIDPARAMETER("InvalidParameter"),
@@ -84,7 +78,7 @@ public enum AsErrorCode {
     // Wrong parameter value.
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-    // 
+    // The specified base capacity cannot exceed the max capacity.
      INVALIDPARAMETERVALUE_BASECAPACITYTOOLARGE("InvalidParameterValue.BaseCapacityTooLarge"),
      
     // A classic CLB should be specified.
@@ -117,10 +111,10 @@ public enum AsErrorCode {
     // The auto scaling group name already exists.
      INVALIDPARAMETERVALUE_GROUPNAMEDUPLICATED("InvalidParameterValue.GroupNameDuplicated"),
      
-    // 
+    // Invalid hostname
      INVALIDPARAMETERVALUE_HOSTNAMEILLEGAL("InvalidParameterValue.HostNameIllegal"),
      
-    // 
+    // The specified image does not exist.
      INVALIDPARAMETERVALUE_IMAGENOTFOUND("InvalidParameterValue.ImageNotFound"),
      
     // Invalid instance name
@@ -155,6 +149,9 @@ public enum AsErrorCode {
      
     // Invalid instance type.
      INVALIDPARAMETERVALUE_INVALIDINSTANCETYPE("InvalidParameterValue.InvalidInstanceType"),
+     
+    // 
+     INVALIDPARAMETERVALUE_INVALIDLAUNCHCONFIGURATION("InvalidParameterValue.InvalidLaunchConfiguration"),
      
     // Invalid launch configuration ID.
      INVALIDPARAMETERVALUE_INVALIDLAUNCHCONFIGURATIONID("InvalidParameterValue.InvalidLaunchConfigurationId"),
@@ -240,14 +237,11 @@ public enum AsErrorCode {
     // The user group does not exist.
      INVALIDPARAMETERVALUE_USERGROUPIDNOTFOUND("InvalidParameterValue.UserGroupIdNotFound"),
      
-    // 
+    // The specified availability zone is not in the region.
      INVALIDPARAMETERVALUE_ZONEMISMATCHREGION("InvalidParameterValue.ZoneMismatchRegion"),
      
     // The account does not support this operation.
      INVALIDPERMISSION("InvalidPermission"),
-     
-    // The launch configuration quota is exceeded.
-     LAUNCHCONFIGURATIONQUOTALIMITEXCEEDED("LaunchConfigurationQuotaLimitExceeded"),
      
     // The quota limit is exceeded.
      LIMITEXCEEDED("LimitExceeded"),
@@ -260,6 +254,9 @@ public enum AsErrorCode {
      
     // Too many values for the specified filter
      LIMITEXCEEDED_FILTERVALUESTOOLONG("LimitExceeded.FilterValuesTooLong"),
+     
+    // 
+     LIMITEXCEEDED_LAUNCHCONFIGURATIONQUOTANOTENOUGH("LimitExceeded.LaunchConfigurationQuotaNotEnough"),
      
     // The maximum number of instances exceeds the limit.
      LIMITEXCEEDED_MAXSIZELIMITEXCEEDED("LimitExceeded.MaxSizeLimitExceeded"),
@@ -312,7 +309,7 @@ public enum AsErrorCode {
     // The notification does not exist.
      RESOURCENOTFOUND_AUTOSCALINGNOTIFICATIONNOTFOUND("ResourceNotFound.AutoScalingNotificationNotFound"),
      
-    // 
+    // The specified CMQ queue does not exist.
      RESOURCENOTFOUND_CMQQUEUENOTFOUND("ResourceNotFound.CmqQueueNotFound"),
      
     // The specified instance does not exist.
@@ -354,7 +351,7 @@ public enum AsErrorCode {
     // The auto scaling group is active.
      RESOURCEUNAVAILABLE_AUTOSCALINGGROUPINACTIVITY("ResourceUnavailable.AutoScalingGroupInActivity"),
      
-    // 
+    // There are no subscribers for the specified CMQ topic.
      RESOURCEUNAVAILABLE_CMQTOPICHASNOSUBSCRIBER("ResourceUnavailable.CmqTopicHasNoSubscriber"),
      
     // The instance and the auto scaling group are in different VPCs.
@@ -387,7 +384,7 @@ public enum AsErrorCode {
     // Project inconsistency.
      RESOURCEUNAVAILABLE_PROJECTINCONSISTENT("ResourceUnavailable.ProjectInconsistent"),
      
-    // 
+    // The specified availability zone is unavailable.
      RESOURCEUNAVAILABLE_ZONEUNAVAILABLE("ResourceUnavailable.ZoneUnavailable");
      
     private String value;

@@ -174,6 +174,23 @@ Notes about this policy:
     private Long LoadBalancerHealthCheckGracePeriod;
 
     /**
+    * Specifies how to assign instances. Valid values: `LAUNCH_CONFIGURATION` and `SPOT_MIXED`.
+<br><li>`LAUNCH_CONFIGURATION`: the launch configuration mode.
+<br><li>`SPOT_MIXED`: a mixed instance mode. Currently, this mode is supported only when the launch configuration takes the pay-as-you-go billing mode. With this mode, the scaling group can provision a combination of pay-as-you-go instances and spot instances to meet the configured capacity. Note that the billing mode of the associated launch configuration cannot be modified when this mode is used.
+    */
+    @SerializedName("InstanceAllocationPolicy")
+    @Expose
+    private String InstanceAllocationPolicy;
+
+    /**
+    * Specifies how to assign pay-as-you-go instances and spot instances.
+This parameter is valid only when `InstanceAllocationPolicy` is set to `SPOT_MIXED`.
+    */
+    @SerializedName("SpotMixedAllocationPolicy")
+    @Expose
+    private SpotMixedAllocationPolicy SpotMixedAllocationPolicy;
+
+    /**
      * Get Auto scaling group ID 
      * @return AutoScalingGroupId Auto scaling group ID
      */
@@ -549,6 +566,50 @@ Notes about this policy:
         this.LoadBalancerHealthCheckGracePeriod = LoadBalancerHealthCheckGracePeriod;
     }
 
+    /**
+     * Get Specifies how to assign instances. Valid values: `LAUNCH_CONFIGURATION` and `SPOT_MIXED`.
+<br><li>`LAUNCH_CONFIGURATION`: the launch configuration mode.
+<br><li>`SPOT_MIXED`: a mixed instance mode. Currently, this mode is supported only when the launch configuration takes the pay-as-you-go billing mode. With this mode, the scaling group can provision a combination of pay-as-you-go instances and spot instances to meet the configured capacity. Note that the billing mode of the associated launch configuration cannot be modified when this mode is used. 
+     * @return InstanceAllocationPolicy Specifies how to assign instances. Valid values: `LAUNCH_CONFIGURATION` and `SPOT_MIXED`.
+<br><li>`LAUNCH_CONFIGURATION`: the launch configuration mode.
+<br><li>`SPOT_MIXED`: a mixed instance mode. Currently, this mode is supported only when the launch configuration takes the pay-as-you-go billing mode. With this mode, the scaling group can provision a combination of pay-as-you-go instances and spot instances to meet the configured capacity. Note that the billing mode of the associated launch configuration cannot be modified when this mode is used.
+     */
+    public String getInstanceAllocationPolicy() {
+        return this.InstanceAllocationPolicy;
+    }
+
+    /**
+     * Set Specifies how to assign instances. Valid values: `LAUNCH_CONFIGURATION` and `SPOT_MIXED`.
+<br><li>`LAUNCH_CONFIGURATION`: the launch configuration mode.
+<br><li>`SPOT_MIXED`: a mixed instance mode. Currently, this mode is supported only when the launch configuration takes the pay-as-you-go billing mode. With this mode, the scaling group can provision a combination of pay-as-you-go instances and spot instances to meet the configured capacity. Note that the billing mode of the associated launch configuration cannot be modified when this mode is used.
+     * @param InstanceAllocationPolicy Specifies how to assign instances. Valid values: `LAUNCH_CONFIGURATION` and `SPOT_MIXED`.
+<br><li>`LAUNCH_CONFIGURATION`: the launch configuration mode.
+<br><li>`SPOT_MIXED`: a mixed instance mode. Currently, this mode is supported only when the launch configuration takes the pay-as-you-go billing mode. With this mode, the scaling group can provision a combination of pay-as-you-go instances and spot instances to meet the configured capacity. Note that the billing mode of the associated launch configuration cannot be modified when this mode is used.
+     */
+    public void setInstanceAllocationPolicy(String InstanceAllocationPolicy) {
+        this.InstanceAllocationPolicy = InstanceAllocationPolicy;
+    }
+
+    /**
+     * Get Specifies how to assign pay-as-you-go instances and spot instances.
+This parameter is valid only when `InstanceAllocationPolicy` is set to `SPOT_MIXED`. 
+     * @return SpotMixedAllocationPolicy Specifies how to assign pay-as-you-go instances and spot instances.
+This parameter is valid only when `InstanceAllocationPolicy` is set to `SPOT_MIXED`.
+     */
+    public SpotMixedAllocationPolicy getSpotMixedAllocationPolicy() {
+        return this.SpotMixedAllocationPolicy;
+    }
+
+    /**
+     * Set Specifies how to assign pay-as-you-go instances and spot instances.
+This parameter is valid only when `InstanceAllocationPolicy` is set to `SPOT_MIXED`.
+     * @param SpotMixedAllocationPolicy Specifies how to assign pay-as-you-go instances and spot instances.
+This parameter is valid only when `InstanceAllocationPolicy` is set to `SPOT_MIXED`.
+     */
+    public void setSpotMixedAllocationPolicy(SpotMixedAllocationPolicy SpotMixedAllocationPolicy) {
+        this.SpotMixedAllocationPolicy = SpotMixedAllocationPolicy;
+    }
+
     public ModifyAutoScalingGroupRequest() {
     }
 
@@ -623,6 +684,12 @@ Notes about this policy:
         if (source.LoadBalancerHealthCheckGracePeriod != null) {
             this.LoadBalancerHealthCheckGracePeriod = new Long(source.LoadBalancerHealthCheckGracePeriod);
         }
+        if (source.InstanceAllocationPolicy != null) {
+            this.InstanceAllocationPolicy = new String(source.InstanceAllocationPolicy);
+        }
+        if (source.SpotMixedAllocationPolicy != null) {
+            this.SpotMixedAllocationPolicy = new SpotMixedAllocationPolicy(source.SpotMixedAllocationPolicy);
+        }
     }
 
 
@@ -649,6 +716,8 @@ Notes about this policy:
         this.setParamSimple(map, prefix + "MultiZoneSubnetPolicy", this.MultiZoneSubnetPolicy);
         this.setParamSimple(map, prefix + "HealthCheckType", this.HealthCheckType);
         this.setParamSimple(map, prefix + "LoadBalancerHealthCheckGracePeriod", this.LoadBalancerHealthCheckGracePeriod);
+        this.setParamSimple(map, prefix + "InstanceAllocationPolicy", this.InstanceAllocationPolicy);
+        this.setParamObj(map, prefix + "SpotMixedAllocationPolicy.", this.SpotMixedAllocationPolicy);
 
     }
 }

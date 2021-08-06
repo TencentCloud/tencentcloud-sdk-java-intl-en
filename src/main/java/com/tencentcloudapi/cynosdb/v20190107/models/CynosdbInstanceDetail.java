@@ -240,6 +240,29 @@ public class CynosdbInstanceDetail extends AbstractModel{
     private Long RenewFlag;
 
     /**
+    * The minimum number of CPU cores for a serverless instance
+    */
+    @SerializedName("MinCpu")
+    @Expose
+    private Float MinCpu;
+
+    /**
+    * The maximum number of CPU cores for a serverless instance
+    */
+    @SerializedName("MaxCpu")
+    @Expose
+    private Float MaxCpu;
+
+    /**
+    * Serverless instance status. Valid values:
+resume
+pause
+    */
+    @SerializedName("ServerlessStatus")
+    @Expose
+    private String ServerlessStatus;
+
+    /**
      * Get User `Uin` 
      * @return Uin User `Uin`
      */
@@ -735,6 +758,62 @@ public class CynosdbInstanceDetail extends AbstractModel{
         this.RenewFlag = RenewFlag;
     }
 
+    /**
+     * Get The minimum number of CPU cores for a serverless instance 
+     * @return MinCpu The minimum number of CPU cores for a serverless instance
+     */
+    public Float getMinCpu() {
+        return this.MinCpu;
+    }
+
+    /**
+     * Set The minimum number of CPU cores for a serverless instance
+     * @param MinCpu The minimum number of CPU cores for a serverless instance
+     */
+    public void setMinCpu(Float MinCpu) {
+        this.MinCpu = MinCpu;
+    }
+
+    /**
+     * Get The maximum number of CPU cores for a serverless instance 
+     * @return MaxCpu The maximum number of CPU cores for a serverless instance
+     */
+    public Float getMaxCpu() {
+        return this.MaxCpu;
+    }
+
+    /**
+     * Set The maximum number of CPU cores for a serverless instance
+     * @param MaxCpu The maximum number of CPU cores for a serverless instance
+     */
+    public void setMaxCpu(Float MaxCpu) {
+        this.MaxCpu = MaxCpu;
+    }
+
+    /**
+     * Get Serverless instance status. Valid values:
+resume
+pause 
+     * @return ServerlessStatus Serverless instance status. Valid values:
+resume
+pause
+     */
+    public String getServerlessStatus() {
+        return this.ServerlessStatus;
+    }
+
+    /**
+     * Set Serverless instance status. Valid values:
+resume
+pause
+     * @param ServerlessStatus Serverless instance status. Valid values:
+resume
+pause
+     */
+    public void setServerlessStatus(String ServerlessStatus) {
+        this.ServerlessStatus = ServerlessStatus;
+    }
+
     public CynosdbInstanceDetail() {
     }
 
@@ -836,6 +915,15 @@ public class CynosdbInstanceDetail extends AbstractModel{
         if (source.RenewFlag != null) {
             this.RenewFlag = new Long(source.RenewFlag);
         }
+        if (source.MinCpu != null) {
+            this.MinCpu = new Float(source.MinCpu);
+        }
+        if (source.MaxCpu != null) {
+            this.MaxCpu = new Float(source.MaxCpu);
+        }
+        if (source.ServerlessStatus != null) {
+            this.ServerlessStatus = new String(source.ServerlessStatus);
+        }
     }
 
 
@@ -874,6 +962,9 @@ public class CynosdbInstanceDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "Charset", this.Charset);
         this.setParamSimple(map, prefix + "CynosVersion", this.CynosVersion);
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+        this.setParamSimple(map, prefix + "MinCpu", this.MinCpu);
+        this.setParamSimple(map, prefix + "MaxCpu", this.MaxCpu);
+        this.setParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
 
     }
 }
