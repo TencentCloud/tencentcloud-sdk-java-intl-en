@@ -113,6 +113,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private NumberFormat ObjectNumberFormat;
 
     /**
+    * Opening and closing credits parameters
+Note: this field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("HeadTailParameter")
+    @Expose
+    private HeadTailParameter HeadTailParameter;
+
+    /**
      * Get ID of a video transcoding template. 
      * @return Definition ID of a video transcoding template.
      */
@@ -340,6 +348,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.ObjectNumberFormat = ObjectNumberFormat;
     }
 
+    /**
+     * Get Opening and closing credits parameters
+Note: this field may return `null`, indicating that no valid value was found. 
+     * @return HeadTailParameter Opening and closing credits parameters
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public HeadTailParameter getHeadTailParameter() {
+        return this.HeadTailParameter;
+    }
+
+    /**
+     * Set Opening and closing credits parameters
+Note: this field may return `null`, indicating that no valid value was found.
+     * @param HeadTailParameter Opening and closing credits parameters
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public void setHeadTailParameter(HeadTailParameter HeadTailParameter) {
+        this.HeadTailParameter = HeadTailParameter;
+    }
+
     public TranscodeTaskInput() {
     }
 
@@ -387,6 +415,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ObjectNumberFormat != null) {
             this.ObjectNumberFormat = new NumberFormat(source.ObjectNumberFormat);
         }
+        if (source.HeadTailParameter != null) {
+            this.HeadTailParameter = new HeadTailParameter(source.HeadTailParameter);
+        }
     }
 
 
@@ -405,6 +436,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
         this.setParamSimple(map, prefix + "SegmentObjectName", this.SegmentObjectName);
         this.setParamObj(map, prefix + "ObjectNumberFormat.", this.ObjectNumberFormat);
+        this.setParamObj(map, prefix + "HeadTailParameter.", this.HeadTailParameter);
 
     }
 }

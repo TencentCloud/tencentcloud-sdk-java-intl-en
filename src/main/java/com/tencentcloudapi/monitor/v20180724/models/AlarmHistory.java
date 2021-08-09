@@ -185,6 +185,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private AlarmHistoryMetric [] MetricsInfo;
 
     /**
+    * Dimension information of an instance that triggered alarms.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Dimensions")
+    @Expose
+    private String Dimensions;
+
+    /**
      * Get Alarm record ID 
      * @return AlarmId Alarm record ID
      */
@@ -556,6 +564,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.MetricsInfo = MetricsInfo;
     }
 
+    /**
+     * Get Dimension information of an instance that triggered alarms.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Dimensions Dimension information of an instance that triggered alarms.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getDimensions() {
+        return this.Dimensions;
+    }
+
+    /**
+     * Set Dimension information of an instance that triggered alarms.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Dimensions Dimension information of an instance that triggered alarms.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setDimensions(String Dimensions) {
+        this.Dimensions = Dimensions;
+    }
+
     public AlarmHistory() {
     }
 
@@ -648,6 +676,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 this.MetricsInfo[i] = new AlarmHistoryMetric(source.MetricsInfo[i]);
             }
         }
+        if (source.Dimensions != null) {
+            this.Dimensions = new String(source.Dimensions);
+        }
     }
 
 
@@ -678,6 +709,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "PolicyExists", this.PolicyExists);
         this.setParamArrayObj(map, prefix + "MetricsInfo.", this.MetricsInfo);
+        this.setParamSimple(map, prefix + "Dimensions", this.Dimensions);
 
     }
 }

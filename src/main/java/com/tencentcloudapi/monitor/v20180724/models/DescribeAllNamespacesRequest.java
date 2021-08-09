@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeAllNamespacesRequest extends AbstractModel{
 
     /**
-    * Filter by use case. Valid values: ST_DASHBOARD (Dashboard type), ST_ALARM (alarm type)
+    * Filter by use case. Currently, the only valid value is `ST_ALARM` (alarm type).
     */
     @SerializedName("SceneType")
     @Expose
@@ -51,16 +51,16 @@ public class DescribeAllNamespacesRequest extends AbstractModel{
     private String [] Ids;
 
     /**
-     * Get Filter by use case. Valid values: ST_DASHBOARD (Dashboard type), ST_ALARM (alarm type) 
-     * @return SceneType Filter by use case. Valid values: ST_DASHBOARD (Dashboard type), ST_ALARM (alarm type)
+     * Get Filter by use case. Currently, the only valid value is `ST_ALARM` (alarm type). 
+     * @return SceneType Filter by use case. Currently, the only valid value is `ST_ALARM` (alarm type).
      */
     public String getSceneType() {
         return this.SceneType;
     }
 
     /**
-     * Set Filter by use case. Valid values: ST_DASHBOARD (Dashboard type), ST_ALARM (alarm type)
-     * @param SceneType Filter by use case. Valid values: ST_DASHBOARD (Dashboard type), ST_ALARM (alarm type)
+     * Set Filter by use case. Currently, the only valid value is `ST_ALARM` (alarm type).
+     * @param SceneType Filter by use case. Currently, the only valid value is `ST_ALARM` (alarm type).
      */
     public void setSceneType(String SceneType) {
         this.SceneType = SceneType;

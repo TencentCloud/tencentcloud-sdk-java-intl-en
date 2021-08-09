@@ -51,6 +51,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long ErrCode;
 
     /**
+    * Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+    */
+    @SerializedName("ErrCodeExt")
+    @Expose
+    private String ErrCodeExt;
+
+    /**
     * Error message.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
@@ -179,6 +186,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
+    }
+
+    /**
+     * Get Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145). 
+     * @return ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+     */
+    public String getErrCodeExt() {
+        return this.ErrCodeExt;
+    }
+
+    /**
+     * Set Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+     * @param ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+     */
+    public void setErrCodeExt(String ErrCodeExt) {
+        this.ErrCodeExt = ErrCodeExt;
     }
 
     /**
@@ -334,6 +357,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.ErrCode != null) {
             this.ErrCode = new Long(source.ErrCode);
         }
+        if (source.ErrCodeExt != null) {
+            this.ErrCodeExt = new String(source.ErrCodeExt);
+        }
         if (source.Message != null) {
             this.Message = new String(source.Message);
         }
@@ -365,6 +391,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);
+        this.setParamSimple(map, prefix + "ErrCodeExt", this.ErrCodeExt);
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamObj(map, prefix + "Output.", this.Output);

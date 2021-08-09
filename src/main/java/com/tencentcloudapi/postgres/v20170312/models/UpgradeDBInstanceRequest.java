@@ -65,6 +65,27 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     private Long ActivityId;
 
     /**
+    * Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (specify a time to switch). Default value: `0`
+    */
+    @SerializedName("SwitchTag")
+    @Expose
+    private Long SwitchTag;
+
+    /**
+    * The earliest time to start a switch
+    */
+    @SerializedName("SwitchStartTime")
+    @Expose
+    private String SwitchStartTime;
+
+    /**
+    * The latest time to start a switch
+    */
+    @SerializedName("SwitchEndTime")
+    @Expose
+    private String SwitchEndTime;
+
+    /**
      * Get Instance memory size in GB after upgrade 
      * @return Memory Instance memory size in GB after upgrade
      */
@@ -160,6 +181,54 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         this.ActivityId = ActivityId;
     }
 
+    /**
+     * Get Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (specify a time to switch). Default value: `0` 
+     * @return SwitchTag Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (specify a time to switch). Default value: `0`
+     */
+    public Long getSwitchTag() {
+        return this.SwitchTag;
+    }
+
+    /**
+     * Set Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (specify a time to switch). Default value: `0`
+     * @param SwitchTag Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (specify a time to switch). Default value: `0`
+     */
+    public void setSwitchTag(Long SwitchTag) {
+        this.SwitchTag = SwitchTag;
+    }
+
+    /**
+     * Get The earliest time to start a switch 
+     * @return SwitchStartTime The earliest time to start a switch
+     */
+    public String getSwitchStartTime() {
+        return this.SwitchStartTime;
+    }
+
+    /**
+     * Set The earliest time to start a switch
+     * @param SwitchStartTime The earliest time to start a switch
+     */
+    public void setSwitchStartTime(String SwitchStartTime) {
+        this.SwitchStartTime = SwitchStartTime;
+    }
+
+    /**
+     * Get The latest time to start a switch 
+     * @return SwitchEndTime The latest time to start a switch
+     */
+    public String getSwitchEndTime() {
+        return this.SwitchEndTime;
+    }
+
+    /**
+     * Set The latest time to start a switch
+     * @param SwitchEndTime The latest time to start a switch
+     */
+    public void setSwitchEndTime(String SwitchEndTime) {
+        this.SwitchEndTime = SwitchEndTime;
+    }
+
     public UpgradeDBInstanceRequest() {
     }
 
@@ -189,6 +258,15 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         if (source.ActivityId != null) {
             this.ActivityId = new Long(source.ActivityId);
         }
+        if (source.SwitchTag != null) {
+            this.SwitchTag = new Long(source.SwitchTag);
+        }
+        if (source.SwitchStartTime != null) {
+            this.SwitchStartTime = new String(source.SwitchStartTime);
+        }
+        if (source.SwitchEndTime != null) {
+            this.SwitchEndTime = new String(source.SwitchEndTime);
+        }
     }
 
 
@@ -202,6 +280,9 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
         this.setParamSimple(map, prefix + "ActivityId", this.ActivityId);
+        this.setParamSimple(map, prefix + "SwitchTag", this.SwitchTag);
+        this.setParamSimple(map, prefix + "SwitchStartTime", this.SwitchStartTime);
+        this.setParamSimple(map, prefix + "SwitchEndTime", this.SwitchEndTime);
 
     }
 }

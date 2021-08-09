@@ -30,6 +30,17 @@ public class UnBindLiveDomainCertRequest extends AbstractModel{
     private String DomainName;
 
     /**
+    * Valid values:
+`gray`: unbind the canary certificate
+`formal` (default): unbind the formal certificate
+
+`formal` will be used if no value is passed in
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
      * Get Playback domain name. 
      * @return DomainName Playback domain name.
      */
@@ -45,6 +56,38 @@ public class UnBindLiveDomainCertRequest extends AbstractModel{
         this.DomainName = DomainName;
     }
 
+    /**
+     * Get Valid values:
+`gray`: unbind the canary certificate
+`formal` (default): unbind the formal certificate
+
+`formal` will be used if no value is passed in 
+     * @return Type Valid values:
+`gray`: unbind the canary certificate
+`formal` (default): unbind the formal certificate
+
+`formal` will be used if no value is passed in
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set Valid values:
+`gray`: unbind the canary certificate
+`formal` (default): unbind the formal certificate
+
+`formal` will be used if no value is passed in
+     * @param Type Valid values:
+`gray`: unbind the canary certificate
+`formal` (default): unbind the formal certificate
+
+`formal` will be used if no value is passed in
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
     public UnBindLiveDomainCertRequest() {
     }
 
@@ -56,6 +99,9 @@ public class UnBindLiveDomainCertRequest extends AbstractModel{
         if (source.DomainName != null) {
             this.DomainName = new String(source.DomainName);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
     }
 
 
@@ -64,6 +110,7 @@ public class UnBindLiveDomainCertRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

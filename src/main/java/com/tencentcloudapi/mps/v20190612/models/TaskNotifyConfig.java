@@ -58,6 +58,20 @@ public class TaskNotifyConfig extends AbstractModel{
     private String NotifyMode;
 
     /**
+    * Notification type, `CMQ` by default. If `URL` is passed in, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+    */
+    @SerializedName("NotifyType")
+    @Expose
+    private String NotifyType;
+
+    /**
+    * HTTP callback URL, required if `NotifyType` is set to `URL`
+    */
+    @SerializedName("NotifyUrl")
+    @Expose
+    private String NotifyUrl;
+
+    /**
      * Get CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported. 
      * @return CmqModel CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
      */
@@ -137,6 +151,38 @@ public class TaskNotifyConfig extends AbstractModel{
         this.NotifyMode = NotifyMode;
     }
 
+    /**
+     * Get Notification type, `CMQ` by default. If `URL` is passed in, HTTP callbacks are sent to the URL specified by `NotifyUrl`. 
+     * @return NotifyType Notification type, `CMQ` by default. If `URL` is passed in, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+     */
+    public String getNotifyType() {
+        return this.NotifyType;
+    }
+
+    /**
+     * Set Notification type, `CMQ` by default. If `URL` is passed in, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+     * @param NotifyType Notification type, `CMQ` by default. If `URL` is passed in, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+     */
+    public void setNotifyType(String NotifyType) {
+        this.NotifyType = NotifyType;
+    }
+
+    /**
+     * Get HTTP callback URL, required if `NotifyType` is set to `URL` 
+     * @return NotifyUrl HTTP callback URL, required if `NotifyType` is set to `URL`
+     */
+    public String getNotifyUrl() {
+        return this.NotifyUrl;
+    }
+
+    /**
+     * Set HTTP callback URL, required if `NotifyType` is set to `URL`
+     * @param NotifyUrl HTTP callback URL, required if `NotifyType` is set to `URL`
+     */
+    public void setNotifyUrl(String NotifyUrl) {
+        this.NotifyUrl = NotifyUrl;
+    }
+
     public TaskNotifyConfig() {
     }
 
@@ -160,6 +206,12 @@ public class TaskNotifyConfig extends AbstractModel{
         if (source.NotifyMode != null) {
             this.NotifyMode = new String(source.NotifyMode);
         }
+        if (source.NotifyType != null) {
+            this.NotifyType = new String(source.NotifyType);
+        }
+        if (source.NotifyUrl != null) {
+            this.NotifyUrl = new String(source.NotifyUrl);
+        }
     }
 
 
@@ -172,6 +224,8 @@ public class TaskNotifyConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "QueueName", this.QueueName);
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
         this.setParamSimple(map, prefix + "NotifyMode", this.NotifyMode);
+        this.setParamSimple(map, prefix + "NotifyType", this.NotifyType);
+        this.setParamSimple(map, prefix + "NotifyUrl", this.NotifyUrl);
 
     }
 }

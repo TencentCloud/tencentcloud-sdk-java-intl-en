@@ -48,9 +48,6 @@ public enum VodErrorCode {
     // Operation failed: failed to upload file to COS.
      FAILEDOPERATION_UPLOADCOSFAIL("FailedOperation.UploadCosFail"),
      
-    // The service has been suspended.
-     FAILEDOPERATION_USERSTATUSINAVLID("FailedOperation.UserStatusInavlid"),
-     
     // Internal error.
      INTERNALERROR("InternalError"),
      

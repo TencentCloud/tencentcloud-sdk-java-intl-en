@@ -759,6 +759,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *This API is used to perform a primary-standby switch for an instance waiting for the switch after it is upgraded.
+     * @param req ModifySwitchTimePeriodRequest
+     * @return ModifySwitchTimePeriodResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySwitchTimePeriodResponse ModifySwitchTimePeriod(ModifySwitchTimePeriodRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySwitchTimePeriodResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySwitchTimePeriodResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifySwitchTimePeriod");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to enable public network access.
      * @param req OpenDBExtranetAccessRequest
      * @return OpenDBExtranetAccessResponse
@@ -919,7 +939,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *This API is used to upgrade an instance.
+     *This API is used to upgrade instance configurations.
      * @param req UpgradeDBInstanceRequest
      * @return UpgradeDBInstanceResponse
      * @throws TencentCloudSDKException

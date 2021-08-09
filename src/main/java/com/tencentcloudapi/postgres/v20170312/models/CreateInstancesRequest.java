@@ -149,7 +149,7 @@ public class CreateInstancesRequest extends AbstractModel{
     private String Name;
 
     /**
-    * Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no).
+    * Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no). Default value: `0`
     */
     @SerializedName("NeedSupportIpv6")
     @Expose
@@ -458,16 +458,16 @@ public class CreateInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no). 
-     * @return NeedSupportIpv6 Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no).
+     * Get Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no). Default value: `0` 
+     * @return NeedSupportIpv6 Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no). Default value: `0`
      */
     public Long getNeedSupportIpv6() {
         return this.NeedSupportIpv6;
     }
 
     /**
-     * Set Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no).
-     * @param NeedSupportIpv6 Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no).
+     * Set Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no). Default value: `0`
+     * @param NeedSupportIpv6 Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no). Default value: `0`
      */
     public void setNeedSupportIpv6(Long NeedSupportIpv6) {
         this.NeedSupportIpv6 = NeedSupportIpv6;

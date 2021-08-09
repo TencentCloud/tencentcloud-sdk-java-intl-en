@@ -89,8 +89,7 @@ Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/d
     private String CallbackKey;
 
     /**
-    * Stream mixing callback URL,
-Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
+    * Disused
     */
     @SerializedName("StreamMixNotifyUrl")
     @Expose
@@ -265,20 +264,16 @@ Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/d
     }
 
     /**
-     * Get Stream mixing callback URL,
-Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1). 
-     * @return StreamMixNotifyUrl Stream mixing callback URL,
-Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
+     * Get Disused 
+     * @return StreamMixNotifyUrl Disused
      */
     public String getStreamMixNotifyUrl() {
         return this.StreamMixNotifyUrl;
     }
 
     /**
-     * Set Stream mixing callback URL,
-Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
-     * @param StreamMixNotifyUrl Stream mixing callback URL,
-Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
+     * Set Disused
+     * @param StreamMixNotifyUrl Disused
      */
     public void setStreamMixNotifyUrl(String StreamMixNotifyUrl) {
         this.StreamMixNotifyUrl = StreamMixNotifyUrl;

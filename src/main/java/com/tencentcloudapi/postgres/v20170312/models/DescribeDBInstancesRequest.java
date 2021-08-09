@@ -23,25 +23,23 @@ import java.util.HashMap;
 public class DescribeDBInstancesRequest extends AbstractModel{
 
     /**
-    * Filter condition. Valid values: db-instance-id, db-instance-name, db-project-id, db-pay-mode, db-tag-key.
+    * Filter instances using one or more criteria. Valid filter names:
+db-instance-id: filter by instance ID (the filter value is a string)
+db-instance-name: filter by instance name (the filter value is a string)
+db-project-id: filter by project ID (the filter value is an integer)
+db-pay-mode: filter by billing mode (the filter value is a string)
+db-tag-key: filter by tag key (the filter value is a string)
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * Number of entries returned per page. Default value: 10.
+    * The maximum number of results returned per page. Value range: 1-100. Default: `10`
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
-
-    /**
-    * Data offset which starts from 0
-    */
-    @SerializedName("Offset")
-    @Expose
-    private Long Offset;
 
     /**
     * Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
@@ -51,58 +49,69 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     private String OrderBy;
 
     /**
-    * In ascending or descending order
+    * Pagination offset, starting from 0
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * Sorting order. Valid values: `asc` (ascending), `desc` (descending)
     */
     @SerializedName("OrderByType")
     @Expose
     private String OrderByType;
 
     /**
-     * Get Filter condition. Valid values: db-instance-id, db-instance-name, db-project-id, db-pay-mode, db-tag-key. 
-     * @return Filters Filter condition. Valid values: db-instance-id, db-instance-name, db-project-id, db-pay-mode, db-tag-key.
+     * Get Filter instances using one or more criteria. Valid filter names:
+db-instance-id: filter by instance ID (the filter value is a string)
+db-instance-name: filter by instance name (the filter value is a string)
+db-project-id: filter by project ID (the filter value is an integer)
+db-pay-mode: filter by billing mode (the filter value is a string)
+db-tag-key: filter by tag key (the filter value is a string) 
+     * @return Filters Filter instances using one or more criteria. Valid filter names:
+db-instance-id: filter by instance ID (the filter value is a string)
+db-instance-name: filter by instance name (the filter value is a string)
+db-project-id: filter by project ID (the filter value is an integer)
+db-pay-mode: filter by billing mode (the filter value is a string)
+db-tag-key: filter by tag key (the filter value is a string)
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter condition. Valid values: db-instance-id, db-instance-name, db-project-id, db-pay-mode, db-tag-key.
-     * @param Filters Filter condition. Valid values: db-instance-id, db-instance-name, db-project-id, db-pay-mode, db-tag-key.
+     * Set Filter instances using one or more criteria. Valid filter names:
+db-instance-id: filter by instance ID (the filter value is a string)
+db-instance-name: filter by instance name (the filter value is a string)
+db-project-id: filter by project ID (the filter value is an integer)
+db-pay-mode: filter by billing mode (the filter value is a string)
+db-tag-key: filter by tag key (the filter value is a string)
+     * @param Filters Filter instances using one or more criteria. Valid filter names:
+db-instance-id: filter by instance ID (the filter value is a string)
+db-instance-name: filter by instance name (the filter value is a string)
+db-project-id: filter by project ID (the filter value is an integer)
+db-pay-mode: filter by billing mode (the filter value is a string)
+db-tag-key: filter by tag key (the filter value is a string)
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get Number of entries returned per page. Default value: 10. 
-     * @return Limit Number of entries returned per page. Default value: 10.
+     * Get The maximum number of results returned per page. Value range: 1-100. Default: `10` 
+     * @return Limit The maximum number of results returned per page. Value range: 1-100. Default: `10`
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of entries returned per page. Default value: 10.
-     * @param Limit Number of entries returned per page. Default value: 10.
+     * Set The maximum number of results returned per page. Value range: 1-100. Default: `10`
+     * @param Limit The maximum number of results returned per page. Value range: 1-100. Default: `10`
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
-    }
-
-    /**
-     * Get Data offset which starts from 0 
-     * @return Offset Data offset which starts from 0
-     */
-    public Long getOffset() {
-        return this.Offset;
-    }
-
-    /**
-     * Set Data offset which starts from 0
-     * @param Offset Data offset which starts from 0
-     */
-    public void setOffset(Long Offset) {
-        this.Offset = Offset;
     }
 
     /**
@@ -122,16 +131,32 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get In ascending or descending order 
-     * @return OrderByType In ascending or descending order
+     * Get Pagination offset, starting from 0 
+     * @return Offset Pagination offset, starting from 0
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set Pagination offset, starting from 0
+     * @param Offset Pagination offset, starting from 0
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get Sorting order. Valid values: `asc` (ascending), `desc` (descending) 
+     * @return OrderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending)
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set In ascending or descending order
-     * @param OrderByType In ascending or descending order
+     * Set Sorting order. Valid values: `asc` (ascending), `desc` (descending)
+     * @param OrderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending)
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;
@@ -154,11 +179,11 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
-        if (source.Offset != null) {
-            this.Offset = new Long(source.Offset);
-        }
         if (source.OrderBy != null) {
             this.OrderBy = new String(source.OrderBy);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
         }
         if (source.OrderByType != null) {
             this.OrderByType = new String(source.OrderByType);
@@ -172,8 +197,8 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "OrderByType", this.OrderByType);
 
     }

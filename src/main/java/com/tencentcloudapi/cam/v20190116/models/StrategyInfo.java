@@ -113,6 +113,30 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long IsServiceLinkedPolicy;
 
     /**
+    * The number of entities associated with the policy.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AttachEntityCount")
+    @Expose
+    private Long AttachEntityCount;
+
+    /**
+    * The number of entities associated with the permission boundary.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AttachEntityBoundaryCount")
+    @Expose
+    private Long AttachEntityBoundaryCount;
+
+    /**
+    * The last editted time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
      * Get Policy ID 
      * @return PolicyId Policy ID
      */
@@ -328,6 +352,66 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.IsServiceLinkedPolicy = IsServiceLinkedPolicy;
     }
 
+    /**
+     * Get The number of entities associated with the policy.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return AttachEntityCount The number of entities associated with the policy.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getAttachEntityCount() {
+        return this.AttachEntityCount;
+    }
+
+    /**
+     * Set The number of entities associated with the policy.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param AttachEntityCount The number of entities associated with the policy.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setAttachEntityCount(Long AttachEntityCount) {
+        this.AttachEntityCount = AttachEntityCount;
+    }
+
+    /**
+     * Get The number of entities associated with the permission boundary.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return AttachEntityBoundaryCount The number of entities associated with the permission boundary.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getAttachEntityBoundaryCount() {
+        return this.AttachEntityBoundaryCount;
+    }
+
+    /**
+     * Set The number of entities associated with the permission boundary.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param AttachEntityBoundaryCount The number of entities associated with the permission boundary.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setAttachEntityBoundaryCount(Long AttachEntityBoundaryCount) {
+        this.AttachEntityBoundaryCount = AttachEntityBoundaryCount;
+    }
+
+    /**
+     * Get The last editted time.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return UpdateTime The last editted time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set The last editted time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param UpdateTime The last editted time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
     public StrategyInfo() {
     }
 
@@ -375,6 +459,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.IsServiceLinkedPolicy != null) {
             this.IsServiceLinkedPolicy = new Long(source.IsServiceLinkedPolicy);
         }
+        if (source.AttachEntityCount != null) {
+            this.AttachEntityCount = new Long(source.AttachEntityCount);
+        }
+        if (source.AttachEntityBoundaryCount != null) {
+            this.AttachEntityBoundaryCount = new Long(source.AttachEntityBoundaryCount);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
     }
 
 
@@ -394,6 +487,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Deactived", this.Deactived);
         this.setParamArraySimple(map, prefix + "DeactivedDetail.", this.DeactivedDetail);
         this.setParamSimple(map, prefix + "IsServiceLinkedPolicy", this.IsServiceLinkedPolicy);
+        this.setParamSimple(map, prefix + "AttachEntityCount", this.AttachEntityCount);
+        this.setParamSimple(map, prefix + "AttachEntityBoundaryCount", this.AttachEntityBoundaryCount);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 
     }
 }

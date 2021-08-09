@@ -30,21 +30,28 @@ public class DescribeBindingPolicyObjectListRequest extends AbstractModel{
     private String Module;
 
     /**
-    * Policy group ID.
+    * Policy group ID. If the ID is in the format of “policy-xxxx”, please enter it in the `PolicyId` field. Enter 0 in this field.
     */
     @SerializedName("GroupId")
     @Expose
     private Long GroupId;
 
     /**
-    * Number of parameters that can be returned on each page. Value range: 1 - 100. Default value: 20.
+    * Alarm policy ID in the format of “policy-xxxx”. If a value has been entered in this field, you can enter 0 in the `GroupId` field.
+    */
+    @SerializedName("PolicyId")
+    @Expose
+    private String PolicyId;
+
+    /**
+    * The number of alarm objects returned each time. Value range: 1-100. Default value: 20.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Parameter offset on each page. The value starts from 0 and the default value is 0.
+    * Offset, which starts from 0 and is set to 0 by default. For example, the parameter `Offset=0&Limit=20` returns the zeroth to 19th alarm objects, and `Offset=20&Limit=20` returns the 20th to 39th alarm objects, and so on.
     */
     @SerializedName("Offset")
     @Expose
@@ -74,48 +81,64 @@ public class DescribeBindingPolicyObjectListRequest extends AbstractModel{
     }
 
     /**
-     * Get Policy group ID. 
-     * @return GroupId Policy group ID.
+     * Get Policy group ID. If the ID is in the format of “policy-xxxx”, please enter it in the `PolicyId` field. Enter 0 in this field. 
+     * @return GroupId Policy group ID. If the ID is in the format of “policy-xxxx”, please enter it in the `PolicyId` field. Enter 0 in this field.
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set Policy group ID.
-     * @param GroupId Policy group ID.
+     * Set Policy group ID. If the ID is in the format of “policy-xxxx”, please enter it in the `PolicyId` field. Enter 0 in this field.
+     * @param GroupId Policy group ID. If the ID is in the format of “policy-xxxx”, please enter it in the `PolicyId` field. Enter 0 in this field.
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get Number of parameters that can be returned on each page. Value range: 1 - 100. Default value: 20. 
-     * @return Limit Number of parameters that can be returned on each page. Value range: 1 - 100. Default value: 20.
+     * Get Alarm policy ID in the format of “policy-xxxx”. If a value has been entered in this field, you can enter 0 in the `GroupId` field. 
+     * @return PolicyId Alarm policy ID in the format of “policy-xxxx”. If a value has been entered in this field, you can enter 0 in the `GroupId` field.
+     */
+    public String getPolicyId() {
+        return this.PolicyId;
+    }
+
+    /**
+     * Set Alarm policy ID in the format of “policy-xxxx”. If a value has been entered in this field, you can enter 0 in the `GroupId` field.
+     * @param PolicyId Alarm policy ID in the format of “policy-xxxx”. If a value has been entered in this field, you can enter 0 in the `GroupId` field.
+     */
+    public void setPolicyId(String PolicyId) {
+        this.PolicyId = PolicyId;
+    }
+
+    /**
+     * Get The number of alarm objects returned each time. Value range: 1-100. Default value: 20. 
+     * @return Limit The number of alarm objects returned each time. Value range: 1-100. Default value: 20.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of parameters that can be returned on each page. Value range: 1 - 100. Default value: 20.
-     * @param Limit Number of parameters that can be returned on each page. Value range: 1 - 100. Default value: 20.
+     * Set The number of alarm objects returned each time. Value range: 1-100. Default value: 20.
+     * @param Limit The number of alarm objects returned each time. Value range: 1-100. Default value: 20.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Parameter offset on each page. The value starts from 0 and the default value is 0. 
-     * @return Offset Parameter offset on each page. The value starts from 0 and the default value is 0.
+     * Get Offset, which starts from 0 and is set to 0 by default. For example, the parameter `Offset=0&Limit=20` returns the zeroth to 19th alarm objects, and `Offset=20&Limit=20` returns the 20th to 39th alarm objects, and so on. 
+     * @return Offset Offset, which starts from 0 and is set to 0 by default. For example, the parameter `Offset=0&Limit=20` returns the zeroth to 19th alarm objects, and `Offset=20&Limit=20` returns the 20th to 39th alarm objects, and so on.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Parameter offset on each page. The value starts from 0 and the default value is 0.
-     * @param Offset Parameter offset on each page. The value starts from 0 and the default value is 0.
+     * Set Offset, which starts from 0 and is set to 0 by default. For example, the parameter `Offset=0&Limit=20` returns the zeroth to 19th alarm objects, and `Offset=20&Limit=20` returns the 20th to 39th alarm objects, and so on.
+     * @param Offset Offset, which starts from 0 and is set to 0 by default. For example, the parameter `Offset=0&Limit=20` returns the zeroth to 19th alarm objects, and `Offset=20&Limit=20` returns the 20th to 39th alarm objects, and so on.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -151,6 +174,9 @@ public class DescribeBindingPolicyObjectListRequest extends AbstractModel{
         if (source.GroupId != null) {
             this.GroupId = new Long(source.GroupId);
         }
+        if (source.PolicyId != null) {
+            this.PolicyId = new String(source.PolicyId);
+        }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
@@ -172,6 +198,7 @@ public class DescribeBindingPolicyObjectListRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamArrayObj(map, prefix + "Dimensions.", this.Dimensions);
