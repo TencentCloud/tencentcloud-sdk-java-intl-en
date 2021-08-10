@@ -39,7 +39,7 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
-     *This API is used to add the contact name and email. The returned value is the ID of the successfully added contact. Please always select Guangzhou for `Region`.
+     *This API is used to add the recipient name and email. The returned value is the ID of the successfully added recipient.
      * @param req AddUserContactRequest
      * @return AddUserContactResponse
      * @throws TencentCloudSDKException
@@ -339,7 +339,7 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
-     *This API is used to get the email sending configuration, including the email configuration for database inspection and the email sending configuration for scheduled task health reports. Please always select Guangzhou for `Region`.
+     *This API is used to get the email sending configuration, including the email configuration for database inspection and the email sending configuration for scheduled task health reports.
      * @param req DescribeMailProfileRequest
      * @return DescribeMailProfileResponse
      * @throws TencentCloudSDKException

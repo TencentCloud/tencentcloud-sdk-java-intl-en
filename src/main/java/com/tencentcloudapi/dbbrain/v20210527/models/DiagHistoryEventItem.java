@@ -44,7 +44,7 @@ public class DiagHistoryEventItem extends AbstractModel{
     private String StartTime;
 
     /**
-    * Event ID.
+    * Unique event ID.
     */
     @SerializedName("EventId")
     @Expose
@@ -58,14 +58,14 @@ public class DiagHistoryEventItem extends AbstractModel{
     private Long Severity;
 
     /**
-    * Summary.
+    * Diagnosis summary.
     */
     @SerializedName("Outline")
     @Expose
     private String Outline;
 
     /**
-    * Diagnosis item.
+    * Diagnosis item description.
     */
     @SerializedName("DiagItem")
     @Expose
@@ -73,14 +73,13 @@ public class DiagHistoryEventItem extends AbstractModel{
 
     /**
     * Instance ID.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Reserved field
+    * Reserved field.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Metric")
@@ -88,8 +87,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Metric;
 
     /**
-    * Region
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Region.
     */
     @SerializedName("Region")
     @Expose
@@ -144,16 +142,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Event ID. 
-     * @return EventId Event ID.
+     * Get Unique event ID. 
+     * @return EventId Unique event ID.
      */
     public Long getEventId() {
         return this.EventId;
     }
 
     /**
-     * Set Event ID.
-     * @param EventId Event ID.
+     * Set Unique event ID.
+     * @param EventId Unique event ID.
      */
     public void setEventId(Long EventId) {
         this.EventId = EventId;
@@ -176,42 +174,40 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Summary. 
-     * @return Outline Summary.
+     * Get Diagnosis summary. 
+     * @return Outline Diagnosis summary.
      */
     public String getOutline() {
         return this.Outline;
     }
 
     /**
-     * Set Summary.
-     * @param Outline Summary.
+     * Set Diagnosis summary.
+     * @param Outline Diagnosis summary.
      */
     public void setOutline(String Outline) {
         this.Outline = Outline;
     }
 
     /**
-     * Get Diagnosis item. 
-     * @return DiagItem Diagnosis item.
+     * Get Diagnosis item description. 
+     * @return DiagItem Diagnosis item description.
      */
     public String getDiagItem() {
         return this.DiagItem;
     }
 
     /**
-     * Set Diagnosis item.
-     * @param DiagItem Diagnosis item.
+     * Set Diagnosis item description.
+     * @param DiagItem Diagnosis item description.
      */
     public void setDiagItem(String DiagItem) {
         this.DiagItem = DiagItem;
     }
 
     /**
-     * Get Instance ID.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Instance ID. 
      * @return InstanceId Instance ID.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -219,18 +215,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Instance ID.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param InstanceId Instance ID.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Reserved field
+     * Get Reserved field.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Metric Reserved field
+     * @return Metric Reserved field.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getMetric() {
@@ -238,9 +232,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Reserved field
+     * Set Reserved field.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Metric Reserved field
+     * @param Metric Reserved field.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setMetric(String Metric) {
@@ -248,20 +242,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Region
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Region Region
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Region. 
+     * @return Region Region.
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Region
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Region Region
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Region.
+     * @param Region Region.
      */
     public void setRegion(String Region) {
         this.Region = Region;

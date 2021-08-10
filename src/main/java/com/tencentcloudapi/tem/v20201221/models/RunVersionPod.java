@@ -74,6 +74,14 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     private String DeployVersion;
 
     /**
+    * Number of Restarts
+Note: This is field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("RestartCount")
+    @Expose
+    private Long RestartCount;
+
+    /**
      * Get Shell address 
      * @return Webshell Shell address
      */
@@ -193,6 +201,26 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         this.DeployVersion = DeployVersion;
     }
 
+    /**
+     * Get Number of Restarts
+Note: This is field may return `null`, indicating that no valid value can be obtained. 
+     * @return RestartCount Number of Restarts
+Note: This is field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Long getRestartCount() {
+        return this.RestartCount;
+    }
+
+    /**
+     * Set Number of Restarts
+Note: This is field may return `null`, indicating that no valid value can be obtained.
+     * @param RestartCount Number of Restarts
+Note: This is field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setRestartCount(Long RestartCount) {
+        this.RestartCount = RestartCount;
+    }
+
     public RunVersionPod() {
     }
 
@@ -222,6 +250,9 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         if (source.DeployVersion != null) {
             this.DeployVersion = new String(source.DeployVersion);
         }
+        if (source.RestartCount != null) {
+            this.RestartCount = new Long(source.RestartCount);
+        }
     }
 
 
@@ -236,6 +267,7 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "PodIp", this.PodIp);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "DeployVersion", this.DeployVersion);
+        this.setParamSimple(map, prefix + "RestartCount", this.RestartCount);
 
     }
 }

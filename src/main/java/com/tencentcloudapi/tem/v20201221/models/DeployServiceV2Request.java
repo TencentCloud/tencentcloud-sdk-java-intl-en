@@ -232,6 +232,41 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
     private String VersionId;
 
     /**
+    * The script to run after startup
+    */
+    @SerializedName("PostStart")
+    @Expose
+    private String PostStart;
+
+    /**
+    * The script to run before stop
+    */
+    @SerializedName("PreStop")
+    @Expose
+    private String PreStop;
+
+    /**
+    * Configuration of 
+    */
+    @SerializedName("DeployStrategyConf")
+    @Expose
+    private DeployStrategyConf DeployStrategyConf;
+
+    /**
+    * Configuration of aliveness probe
+    */
+    @SerializedName("Liveness")
+    @Expose
+    private HealthCheckConfig Liveness;
+
+    /**
+    * Configuration of readiness probe
+    */
+    @SerializedName("Readiness")
+    @Expose
+    private HealthCheckConfig Readiness;
+
+    /**
      * Get Service ID 
      * @return ServiceId Service ID
      */
@@ -719,6 +754,86 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
         this.VersionId = VersionId;
     }
 
+    /**
+     * Get The script to run after startup 
+     * @return PostStart The script to run after startup
+     */
+    public String getPostStart() {
+        return this.PostStart;
+    }
+
+    /**
+     * Set The script to run after startup
+     * @param PostStart The script to run after startup
+     */
+    public void setPostStart(String PostStart) {
+        this.PostStart = PostStart;
+    }
+
+    /**
+     * Get The script to run before stop 
+     * @return PreStop The script to run before stop
+     */
+    public String getPreStop() {
+        return this.PreStop;
+    }
+
+    /**
+     * Set The script to run before stop
+     * @param PreStop The script to run before stop
+     */
+    public void setPreStop(String PreStop) {
+        this.PreStop = PreStop;
+    }
+
+    /**
+     * Get Configuration of  
+     * @return DeployStrategyConf Configuration of 
+     */
+    public DeployStrategyConf getDeployStrategyConf() {
+        return this.DeployStrategyConf;
+    }
+
+    /**
+     * Set Configuration of 
+     * @param DeployStrategyConf Configuration of 
+     */
+    public void setDeployStrategyConf(DeployStrategyConf DeployStrategyConf) {
+        this.DeployStrategyConf = DeployStrategyConf;
+    }
+
+    /**
+     * Get Configuration of aliveness probe 
+     * @return Liveness Configuration of aliveness probe
+     */
+    public HealthCheckConfig getLiveness() {
+        return this.Liveness;
+    }
+
+    /**
+     * Set Configuration of aliveness probe
+     * @param Liveness Configuration of aliveness probe
+     */
+    public void setLiveness(HealthCheckConfig Liveness) {
+        this.Liveness = Liveness;
+    }
+
+    /**
+     * Get Configuration of readiness probe 
+     * @return Readiness Configuration of readiness probe
+     */
+    public HealthCheckConfig getReadiness() {
+        return this.Readiness;
+    }
+
+    /**
+     * Set Configuration of readiness probe
+     * @param Readiness Configuration of readiness probe
+     */
+    public void setReadiness(HealthCheckConfig Readiness) {
+        this.Readiness = Readiness;
+    }
+
     public DeployServiceV2Request() {
     }
 
@@ -838,6 +953,21 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
         if (source.VersionId != null) {
             this.VersionId = new String(source.VersionId);
         }
+        if (source.PostStart != null) {
+            this.PostStart = new String(source.PostStart);
+        }
+        if (source.PreStop != null) {
+            this.PreStop = new String(source.PreStop);
+        }
+        if (source.DeployStrategyConf != null) {
+            this.DeployStrategyConf = new DeployStrategyConf(source.DeployStrategyConf);
+        }
+        if (source.Liveness != null) {
+            this.Liveness = new HealthCheckConfig(source.Liveness);
+        }
+        if (source.Readiness != null) {
+            this.Readiness = new HealthCheckConfig(source.Readiness);
+        }
     }
 
 
@@ -874,6 +1004,11 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
         this.setParamArrayObj(map, prefix + "SettingConfs.", this.SettingConfs);
         this.setParamObj(map, prefix + "EksService.", this.EksService);
         this.setParamSimple(map, prefix + "VersionId", this.VersionId);
+        this.setParamSimple(map, prefix + "PostStart", this.PostStart);
+        this.setParamSimple(map, prefix + "PreStop", this.PreStop);
+        this.setParamObj(map, prefix + "DeployStrategyConf.", this.DeployStrategyConf);
+        this.setParamObj(map, prefix + "Liveness.", this.Liveness);
+        this.setParamObj(map, prefix + "Readiness.", this.Readiness);
 
     }
 }

@@ -30,7 +30,7 @@ public class DescribeHealthScoreRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Time to get the health score.
+    * Time to get the health score in the format of `2019-09-10 12:13:14`.
     */
     @SerializedName("Time")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeHealthScoreRequest extends AbstractModel{
     }
 
     /**
-     * Get Time to get the health score. 
-     * @return Time Time to get the health score.
+     * Get Time to get the health score in the format of `2019-09-10 12:13:14`. 
+     * @return Time Time to get the health score in the format of `2019-09-10 12:13:14`.
      */
     public String getTime() {
         return this.Time;
     }
 
     /**
-     * Set Time to get the health score.
-     * @param Time Time to get the health score.
+     * Set Time to get the health score in the format of `2019-09-10 12:13:14`.
+     * @param Time Time to get the health score in the format of `2019-09-10 12:13:14`.
      */
     public void setTime(String Time) {
         this.Time = Time;

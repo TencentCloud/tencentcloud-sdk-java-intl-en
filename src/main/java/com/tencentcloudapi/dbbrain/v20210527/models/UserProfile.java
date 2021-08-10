@@ -31,7 +31,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ProfileId;
 
     /**
-    * Configuration type.
+    * Configuration type. Valid values: "dbScan_mail_configuration" (email configuration of database inspection report), "scheduler_mail_configuration" (email configuration of scheduled task report).
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProfileType")
@@ -39,7 +39,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ProfileType;
 
     /**
-    * Configuration level. Valid values: User, Instance.
+    * Configuration level. Valid values: User (user-level), Instance (instance-level). For database inspection emails, it should be `User`. For scheduled task emails, it should be `Instance`.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProfileLevel")
@@ -82,9 +82,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Configuration type.
+     * Get Configuration type. Valid values: "dbScan_mail_configuration" (email configuration of database inspection report), "scheduler_mail_configuration" (email configuration of scheduled task report).
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ProfileType Configuration type.
+     * @return ProfileType Configuration type. Valid values: "dbScan_mail_configuration" (email configuration of database inspection report), "scheduler_mail_configuration" (email configuration of scheduled task report).
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getProfileType() {
@@ -92,9 +92,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Configuration type.
+     * Set Configuration type. Valid values: "dbScan_mail_configuration" (email configuration of database inspection report), "scheduler_mail_configuration" (email configuration of scheduled task report).
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ProfileType Configuration type.
+     * @param ProfileType Configuration type. Valid values: "dbScan_mail_configuration" (email configuration of database inspection report), "scheduler_mail_configuration" (email configuration of scheduled task report).
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setProfileType(String ProfileType) {
@@ -102,9 +102,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Configuration level. Valid values: User, Instance.
+     * Get Configuration level. Valid values: User (user-level), Instance (instance-level). For database inspection emails, it should be `User`. For scheduled task emails, it should be `Instance`.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ProfileLevel Configuration level. Valid values: User, Instance.
+     * @return ProfileLevel Configuration level. Valid values: User (user-level), Instance (instance-level). For database inspection emails, it should be `User`. For scheduled task emails, it should be `Instance`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getProfileLevel() {
@@ -112,9 +112,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Configuration level. Valid values: User, Instance.
+     * Set Configuration level. Valid values: User (user-level), Instance (instance-level). For database inspection emails, it should be `User`. For scheduled task emails, it should be `Instance`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ProfileLevel Configuration level. Valid values: User, Instance.
+     * @param ProfileLevel Configuration level. Valid values: User (user-level), Instance (instance-level). For database inspection emails, it should be `User`. For scheduled task emails, it should be `Instance`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setProfileLevel(String ProfileLevel) {

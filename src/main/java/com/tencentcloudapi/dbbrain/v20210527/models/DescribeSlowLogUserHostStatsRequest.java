@@ -51,6 +51,13 @@ public class DescribeSlowLogUserHostStatsRequest extends AbstractModel{
     private String Product;
 
     /**
+    * MD5 value of SOL template
+    */
+    @SerializedName("Md5")
+    @Expose
+    private String Md5;
+
+    /**
      * Get Instance ID. 
      * @return InstanceId Instance ID.
      */
@@ -114,6 +121,22 @@ public class DescribeSlowLogUserHostStatsRequest extends AbstractModel{
         this.Product = Product;
     }
 
+    /**
+     * Get MD5 value of SOL template 
+     * @return Md5 MD5 value of SOL template
+     */
+    public String getMd5() {
+        return this.Md5;
+    }
+
+    /**
+     * Set MD5 value of SOL template
+     * @param Md5 MD5 value of SOL template
+     */
+    public void setMd5(String Md5) {
+        this.Md5 = Md5;
+    }
+
     public DescribeSlowLogUserHostStatsRequest() {
     }
 
@@ -134,6 +157,9 @@ public class DescribeSlowLogUserHostStatsRequest extends AbstractModel{
         if (source.Product != null) {
             this.Product = new String(source.Product);
         }
+        if (source.Md5 != null) {
+            this.Md5 = new String(source.Md5);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class DescribeSlowLogUserHostStatsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Product", this.Product);
+        this.setParamSimple(map, prefix + "Md5", this.Md5);
 
     }
 }

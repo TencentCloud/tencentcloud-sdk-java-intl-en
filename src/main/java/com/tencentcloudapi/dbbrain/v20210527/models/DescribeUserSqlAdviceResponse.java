@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeUserSqlAdviceResponse extends AbstractModel{
 
     /**
-    * SQL statement optimization suggestions, which can be parsed into JSON arrays.
+    * SQL statement optimization suggestions, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty.
     */
     @SerializedName("Advices")
     @Expose
     private String Advices;
 
     /**
-    * Notes of SQL statement optimization suggestions, which can be parsed into String arrays.
+    * Notes of SQL statement optimization suggestions, which can be parsed into String arrays. If there is no need for optimization, the output will be empty.
     */
     @SerializedName("Comments")
     @Expose
@@ -58,14 +58,14 @@ public class DescribeUserSqlAdviceResponse extends AbstractModel{
     private String Tables;
 
     /**
-    * SQL execution plan, which can be parsed into JSON.
+    * SQL execution plan, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty.
     */
     @SerializedName("SqlPlan")
     @Expose
     private String SqlPlan;
 
     /**
-    * Cost saving details after SQL statement optimization, which can be parsed into JSON.
+    * Cost saving details after SQL statement optimization, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty.
     */
     @SerializedName("Cost")
     @Expose
@@ -79,32 +79,32 @@ public class DescribeUserSqlAdviceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get SQL statement optimization suggestions, which can be parsed into JSON arrays. 
-     * @return Advices SQL statement optimization suggestions, which can be parsed into JSON arrays.
+     * Get SQL statement optimization suggestions, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty. 
+     * @return Advices SQL statement optimization suggestions, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty.
      */
     public String getAdvices() {
         return this.Advices;
     }
 
     /**
-     * Set SQL statement optimization suggestions, which can be parsed into JSON arrays.
-     * @param Advices SQL statement optimization suggestions, which can be parsed into JSON arrays.
+     * Set SQL statement optimization suggestions, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty.
+     * @param Advices SQL statement optimization suggestions, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty.
      */
     public void setAdvices(String Advices) {
         this.Advices = Advices;
     }
 
     /**
-     * Get Notes of SQL statement optimization suggestions, which can be parsed into String arrays. 
-     * @return Comments Notes of SQL statement optimization suggestions, which can be parsed into String arrays.
+     * Get Notes of SQL statement optimization suggestions, which can be parsed into String arrays. If there is no need for optimization, the output will be empty. 
+     * @return Comments Notes of SQL statement optimization suggestions, which can be parsed into String arrays. If there is no need for optimization, the output will be empty.
      */
     public String getComments() {
         return this.Comments;
     }
 
     /**
-     * Set Notes of SQL statement optimization suggestions, which can be parsed into String arrays.
-     * @param Comments Notes of SQL statement optimization suggestions, which can be parsed into String arrays.
+     * Set Notes of SQL statement optimization suggestions, which can be parsed into String arrays. If there is no need for optimization, the output will be empty.
+     * @param Comments Notes of SQL statement optimization suggestions, which can be parsed into String arrays. If there is no need for optimization, the output will be empty.
      */
     public void setComments(String Comments) {
         this.Comments = Comments;
@@ -159,32 +159,32 @@ public class DescribeUserSqlAdviceResponse extends AbstractModel{
     }
 
     /**
-     * Get SQL execution plan, which can be parsed into JSON. 
-     * @return SqlPlan SQL execution plan, which can be parsed into JSON.
+     * Get SQL execution plan, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty. 
+     * @return SqlPlan SQL execution plan, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty.
      */
     public String getSqlPlan() {
         return this.SqlPlan;
     }
 
     /**
-     * Set SQL execution plan, which can be parsed into JSON.
-     * @param SqlPlan SQL execution plan, which can be parsed into JSON.
+     * Set SQL execution plan, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty.
+     * @param SqlPlan SQL execution plan, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty.
      */
     public void setSqlPlan(String SqlPlan) {
         this.SqlPlan = SqlPlan;
     }
 
     /**
-     * Get Cost saving details after SQL statement optimization, which can be parsed into JSON. 
-     * @return Cost Cost saving details after SQL statement optimization, which can be parsed into JSON.
+     * Get Cost saving details after SQL statement optimization, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty. 
+     * @return Cost Cost saving details after SQL statement optimization, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty.
      */
     public String getCost() {
         return this.Cost;
     }
 
     /**
-     * Set Cost saving details after SQL statement optimization, which can be parsed into JSON.
-     * @param Cost Cost saving details after SQL statement optimization, which can be parsed into JSON.
+     * Set Cost saving details after SQL statement optimization, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty.
+     * @param Cost Cost saving details after SQL statement optimization, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty.
      */
     public void setCost(String Cost) {
         this.Cost = Cost;

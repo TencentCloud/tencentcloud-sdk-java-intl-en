@@ -191,6 +191,13 @@ public class SlowLogTopSqlItem extends AbstractModel{
     private Float RowsExaminedAvg;
 
     /**
+    * MD5 value of SOL template
+    */
+    @SerializedName("Md5")
+    @Expose
+    private String Md5;
+
+    /**
      * Get Total SQL lock wait time in seconds. 
      * @return LockTime Total SQL lock wait time in seconds.
      */
@@ -574,6 +581,22 @@ public class SlowLogTopSqlItem extends AbstractModel{
         this.RowsExaminedAvg = RowsExaminedAvg;
     }
 
+    /**
+     * Get MD5 value of SOL template 
+     * @return Md5 MD5 value of SOL template
+     */
+    public String getMd5() {
+        return this.Md5;
+    }
+
+    /**
+     * Set MD5 value of SOL template
+     * @param Md5 MD5 value of SOL template
+     */
+    public void setMd5(String Md5) {
+        this.Md5 = Md5;
+    }
+
     public SlowLogTopSqlItem() {
     }
 
@@ -654,6 +677,9 @@ public class SlowLogTopSqlItem extends AbstractModel{
         if (source.RowsExaminedAvg != null) {
             this.RowsExaminedAvg = new Float(source.RowsExaminedAvg);
         }
+        if (source.Md5 != null) {
+            this.Md5 = new String(source.Md5);
+        }
     }
 
 
@@ -685,6 +711,7 @@ public class SlowLogTopSqlItem extends AbstractModel{
         this.setParamSimple(map, prefix + "RowsSentAvg", this.RowsSentAvg);
         this.setParamSimple(map, prefix + "LockTimeAvg", this.LockTimeAvg);
         this.setParamSimple(map, prefix + "RowsExaminedAvg", this.RowsExaminedAvg);
+        this.setParamSimple(map, prefix + "Md5", this.Md5);
 
     }
 }

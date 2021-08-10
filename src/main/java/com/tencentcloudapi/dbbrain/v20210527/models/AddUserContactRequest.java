@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class AddUserContactRequest extends AbstractModel{
 
     /**
-    * Contact name, which must be unique, can contain 2–60 letters, digits, and underscores, and cannot start with an underscore.
+    * Recipient name, which can contain up to 20 letters, digits, spaces, and special symbols `!@#$%^&*()_+-=()` and cannot begin with an underscore.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Email address, which can contain letters, digits, and underscores and cannot start with an underscore.
+    * Email address, which can contain letters, digits, underscores, and the @ symbol, cannot begin with an underscore, and must be unique.
     */
     @SerializedName("ContactInfo")
     @Expose
@@ -44,32 +44,32 @@ public class AddUserContactRequest extends AbstractModel{
     private String Product;
 
     /**
-     * Get Contact name, which must be unique, can contain 2–60 letters, digits, and underscores, and cannot start with an underscore. 
-     * @return Name Contact name, which must be unique, can contain 2–60 letters, digits, and underscores, and cannot start with an underscore.
+     * Get Recipient name, which can contain up to 20 letters, digits, spaces, and special symbols `!@#$%^&*()_+-=()` and cannot begin with an underscore. 
+     * @return Name Recipient name, which can contain up to 20 letters, digits, spaces, and special symbols `!@#$%^&*()_+-=()` and cannot begin with an underscore.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Contact name, which must be unique, can contain 2–60 letters, digits, and underscores, and cannot start with an underscore.
-     * @param Name Contact name, which must be unique, can contain 2–60 letters, digits, and underscores, and cannot start with an underscore.
+     * Set Recipient name, which can contain up to 20 letters, digits, spaces, and special symbols `!@#$%^&*()_+-=()` and cannot begin with an underscore.
+     * @param Name Recipient name, which can contain up to 20 letters, digits, spaces, and special symbols `!@#$%^&*()_+-=()` and cannot begin with an underscore.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Email address, which can contain letters, digits, and underscores and cannot start with an underscore. 
-     * @return ContactInfo Email address, which can contain letters, digits, and underscores and cannot start with an underscore.
+     * Get Email address, which can contain letters, digits, underscores, and the @ symbol, cannot begin with an underscore, and must be unique. 
+     * @return ContactInfo Email address, which can contain letters, digits, underscores, and the @ symbol, cannot begin with an underscore, and must be unique.
      */
     public String getContactInfo() {
         return this.ContactInfo;
     }
 
     /**
-     * Set Email address, which can contain letters, digits, and underscores and cannot start with an underscore.
-     * @param ContactInfo Email address, which can contain letters, digits, and underscores and cannot start with an underscore.
+     * Set Email address, which can contain letters, digits, underscores, and the @ symbol, cannot begin with an underscore, and must be unique.
+     * @param ContactInfo Email address, which can contain letters, digits, underscores, and the @ symbol, cannot begin with an underscore, and must be unique.
      */
     public void setContactInfo(String ContactInfo) {
         this.ContactInfo = ContactInfo;

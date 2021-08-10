@@ -44,14 +44,14 @@ public class DescribeDBDiagEventResponse extends AbstractModel{
     private Long EventId;
 
     /**
-    * Event details.
+    * Diagnosis event details. If there is no additional explanation information, the output will be empty.
     */
     @SerializedName("Explanation")
     @Expose
     private String Explanation;
 
     /**
-    * Summary.
+    * Diagnosis summary.
     */
     @SerializedName("Outline")
     @Expose
@@ -79,7 +79,7 @@ public class DescribeDBDiagEventResponse extends AbstractModel{
     private String StartTime;
 
     /**
-    * Suggestion.
+    * Suggestions. If there are no suggestions, the output will be empty.
     */
     @SerializedName("Suggestions")
     @Expose
@@ -156,32 +156,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Event details. 
-     * @return Explanation Event details.
+     * Get Diagnosis event details. If there is no additional explanation information, the output will be empty. 
+     * @return Explanation Diagnosis event details. If there is no additional explanation information, the output will be empty.
      */
     public String getExplanation() {
         return this.Explanation;
     }
 
     /**
-     * Set Event details.
-     * @param Explanation Event details.
+     * Set Diagnosis event details. If there is no additional explanation information, the output will be empty.
+     * @param Explanation Diagnosis event details. If there is no additional explanation information, the output will be empty.
      */
     public void setExplanation(String Explanation) {
         this.Explanation = Explanation;
     }
 
     /**
-     * Get Summary. 
-     * @return Outline Summary.
+     * Get Diagnosis summary. 
+     * @return Outline Diagnosis summary.
      */
     public String getOutline() {
         return this.Outline;
     }
 
     /**
-     * Set Summary.
-     * @param Outline Summary.
+     * Set Diagnosis summary.
+     * @param Outline Diagnosis summary.
      */
     public void setOutline(String Outline) {
         this.Outline = Outline;
@@ -236,16 +236,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Suggestion. 
-     * @return Suggestions Suggestion.
+     * Get Suggestions. If there are no suggestions, the output will be empty. 
+     * @return Suggestions Suggestions. If there are no suggestions, the output will be empty.
      */
     public String getSuggestions() {
         return this.Suggestions;
     }
 
     /**
-     * Set Suggestion.
-     * @param Suggestions Suggestion.
+     * Set Suggestions. If there are no suggestions, the output will be empty.
+     * @param Suggestions Suggestions. If there are no suggestions, the output will be empty.
      */
     public void setSuggestions(String Suggestions) {
         this.Suggestions = Suggestions;
