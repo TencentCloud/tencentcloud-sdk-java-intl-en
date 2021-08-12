@@ -65,7 +65,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     private Long ActivityId;
 
     /**
-    * Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (specify a time to switch). Default value: `0`
+    * Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (switch at specified time). Default value: `0`
     */
     @SerializedName("SwitchTag")
     @Expose
@@ -182,16 +182,16 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (specify a time to switch). Default value: `0` 
-     * @return SwitchTag Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (specify a time to switch). Default value: `0`
+     * Get Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (switch at specified time). Default value: `0` 
+     * @return SwitchTag Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (switch at specified time). Default value: `0`
      */
     public Long getSwitchTag() {
         return this.SwitchTag;
     }
 
     /**
-     * Set Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (specify a time to switch). Default value: `0`
-     * @param SwitchTag Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (specify a time to switch). Default value: `0`
+     * Set Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (switch at specified time). Default value: `0`
+     * @param SwitchTag Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (switch at specified time). Default value: `0`
      */
     public void setSwitchTag(Long SwitchTag) {
         this.SwitchTag = SwitchTag;

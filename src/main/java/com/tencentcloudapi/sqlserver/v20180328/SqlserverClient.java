@@ -459,6 +459,26 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query database configurations. It does not return information of the accounts that have permissions to operate the database.
+     * @param req DescribeDBsNormalRequest
+     * @return DescribeDBsNormalResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBsNormalResponse DescribeDBsNormal(DescribeDBsNormalRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBsNormalResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBsNormalResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDBsNormal");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query flow status.
      * @param req DescribeFlowStatusRequest
      * @return DescribeFlowStatusResponse
@@ -491,6 +511,46 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeIncrementalMigrationResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeIncrementalMigration");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the parameter modification records of an instance.
+     * @param req DescribeInstanceParamRecordsRequest
+     * @return DescribeInstanceParamRecordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceParamRecordsResponse DescribeInstanceParamRecords(DescribeInstanceParamRecordsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceParamRecordsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceParamRecordsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstanceParamRecords");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the parameter list of an instance.
+     * @param req DescribeInstanceParamsRequest
+     * @return DescribeInstanceParamsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceParamsResponse DescribeInstanceParams(DescribeInstanceParamsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceParamsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceParamsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstanceParams");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -899,6 +959,66 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to enable or disable the change data capture (CDC) feature.
+     * @param req ModifyDatabaseCDCRequest
+     * @return ModifyDatabaseCDCResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDatabaseCDCResponse ModifyDatabaseCDC(ModifyDatabaseCDCRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDatabaseCDCResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDatabaseCDCResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDatabaseCDC");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to enable or disable the change tracking (CT) feature.
+     * @param req ModifyDatabaseCTRequest
+     * @return ModifyDatabaseCTResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDatabaseCTResponse ModifyDatabaseCT(ModifyDatabaseCTRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDatabaseCTResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDatabaseCTResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDatabaseCT");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to shrink database MDF files.
+     * @param req ModifyDatabaseMdfRequest
+     * @return ModifyDatabaseMdfResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDatabaseMdfResponse ModifyDatabaseMdf(ModifyDatabaseMdfRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDatabaseMdfResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDatabaseMdfResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDatabaseMdf");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify an incremental backup import task.
      * @param req ModifyIncrementalMigrationRequest
      * @return ModifyIncrementalMigrationResponse
@@ -911,6 +1031,28 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyIncrementalMigrationResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyIncrementalMigration");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify instance parameters.
+<b>Note</b>: if <b>the instance needs to be restarted</b> for the modified parameter to take effect, <b>it will be restarted</b> immediately or during the maintenance time according to the `WaitSwitch` parameter.
+Before you modify a parameter, you can use the `DescribeInstanceParams` API to query whether the instance needs to be restarted.
+     * @param req ModifyInstanceParamRequest
+     * @return ModifyInstanceParamResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceParamResponse ModifyInstanceParam(ModifyInstanceParamRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstanceParamResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstanceParamResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyInstanceParam");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

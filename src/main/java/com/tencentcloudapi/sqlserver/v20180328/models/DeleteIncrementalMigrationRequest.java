@@ -30,14 +30,14 @@ public class DeleteIncrementalMigrationRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Backup import task ID
+    * Backup import task ID, which is returned through the `CreateBackupMigration` API
     */
     @SerializedName("BackupMigrationId")
     @Expose
     private String BackupMigrationId;
 
     /**
-    * ID of an incremental backup import task
+    * Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API
     */
     @SerializedName("IncrementalMigrationId")
     @Expose
@@ -60,32 +60,32 @@ public class DeleteIncrementalMigrationRequest extends AbstractModel{
     }
 
     /**
-     * Get Backup import task ID 
-     * @return BackupMigrationId Backup import task ID
+     * Get Backup import task ID, which is returned through the `CreateBackupMigration` API 
+     * @return BackupMigrationId Backup import task ID, which is returned through the `CreateBackupMigration` API
      */
     public String getBackupMigrationId() {
         return this.BackupMigrationId;
     }
 
     /**
-     * Set Backup import task ID
-     * @param BackupMigrationId Backup import task ID
+     * Set Backup import task ID, which is returned through the `CreateBackupMigration` API
+     * @param BackupMigrationId Backup import task ID, which is returned through the `CreateBackupMigration` API
      */
     public void setBackupMigrationId(String BackupMigrationId) {
         this.BackupMigrationId = BackupMigrationId;
     }
 
     /**
-     * Get ID of an incremental backup import task 
-     * @return IncrementalMigrationId ID of an incremental backup import task
+     * Get Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API 
+     * @return IncrementalMigrationId Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API
      */
     public String getIncrementalMigrationId() {
         return this.IncrementalMigrationId;
     }
 
     /**
-     * Set ID of an incremental backup import task
-     * @param IncrementalMigrationId ID of an incremental backup import task
+     * Set Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API
+     * @param IncrementalMigrationId Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API
      */
     public void setIncrementalMigrationId(String IncrementalMigrationId) {
         this.IncrementalMigrationId = IncrementalMigrationId;

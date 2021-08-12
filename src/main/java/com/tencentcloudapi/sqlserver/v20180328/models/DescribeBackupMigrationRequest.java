@@ -72,28 +72,28 @@ public class DescribeBackupMigrationRequest extends AbstractModel{
     private String UploadType;
 
     /**
-    * Paging. Page size
+    * The maximum number of results returned per page. Default value: `100`.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Paging. Number of pages
+    * Page number. Default value: `0`.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Field for order: name,createTime,startTime,endTime
+    * Sort by field. Valid values: `name`, `createTime`, `startTime`, `endTime`. By default, the results returned are sorted by `createTime` in the ascending order.
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * Type of order: desc,asc
+    * Sorting order which is valid only when `OrderBy` is specified. Valid values: `asc` (ascending), `desc` (descending). Default value: `asc`.
     */
     @SerializedName("OrderByType")
     @Expose
@@ -212,64 +212,64 @@ public class DescribeBackupMigrationRequest extends AbstractModel{
     }
 
     /**
-     * Get Paging. Page size 
-     * @return Limit Paging. Page size
+     * Get The maximum number of results returned per page. Default value: `100`. 
+     * @return Limit The maximum number of results returned per page. Default value: `100`.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Paging. Page size
-     * @param Limit Paging. Page size
+     * Set The maximum number of results returned per page. Default value: `100`.
+     * @param Limit The maximum number of results returned per page. Default value: `100`.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Paging. Number of pages 
-     * @return Offset Paging. Number of pages
+     * Get Page number. Default value: `0`. 
+     * @return Offset Page number. Default value: `0`.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Paging. Number of pages
-     * @param Offset Paging. Number of pages
+     * Set Page number. Default value: `0`.
+     * @param Offset Page number. Default value: `0`.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Field for order: name,createTime,startTime,endTime 
-     * @return OrderBy Field for order: name,createTime,startTime,endTime
+     * Get Sort by field. Valid values: `name`, `createTime`, `startTime`, `endTime`. By default, the results returned are sorted by `createTime` in the ascending order. 
+     * @return OrderBy Sort by field. Valid values: `name`, `createTime`, `startTime`, `endTime`. By default, the results returned are sorted by `createTime` in the ascending order.
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Field for order: name,createTime,startTime,endTime
-     * @param OrderBy Field for order: name,createTime,startTime,endTime
+     * Set Sort by field. Valid values: `name`, `createTime`, `startTime`, `endTime`. By default, the results returned are sorted by `createTime` in the ascending order.
+     * @param OrderBy Sort by field. Valid values: `name`, `createTime`, `startTime`, `endTime`. By default, the results returned are sorted by `createTime` in the ascending order.
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get Type of order: desc,asc 
-     * @return OrderByType Type of order: desc,asc
+     * Get Sorting order which is valid only when `OrderBy` is specified. Valid values: `asc` (ascending), `desc` (descending). Default value: `asc`. 
+     * @return OrderByType Sorting order which is valid only when `OrderBy` is specified. Valid values: `asc` (ascending), `desc` (descending). Default value: `asc`.
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set Type of order: desc,asc
-     * @param OrderByType Type of order: desc,asc
+     * Set Sorting order which is valid only when `OrderBy` is specified. Valid values: `asc` (ascending), `desc` (descending). Default value: `asc`.
+     * @param OrderByType Sorting order which is valid only when `OrderBy` is specified. Valid values: `asc` (ascending), `desc` (descending). Default value: `asc`.
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;

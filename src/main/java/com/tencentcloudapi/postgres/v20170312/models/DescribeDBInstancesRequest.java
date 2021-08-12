@@ -24,11 +24,11 @@ public class DescribeDBInstancesRequest extends AbstractModel{
 
     /**
     * Filter instances using one or more criteria. Valid filter names:
-db-instance-id: filter by instance ID (the filter value is a string)
-db-instance-name: filter by instance name (the filter value is a string)
-db-project-id: filter by project ID (the filter value is an integer)
-db-pay-mode: filter by billing mode (the filter value is a string)
-db-tag-key: filter by tag key (the filter value is a string)
+db-instance-id: filter by instance ID (in string format)
+db-instance-name: filter by instance name (in string format)
+db-project-id: filter by project ID (in integer format)
+db-pay-mode: filter by billing mode (in string format)
+db-tag-key: filter by tag key (in string format)
     */
     @SerializedName("Filters")
     @Expose
@@ -64,17 +64,17 @@ db-tag-key: filter by tag key (the filter value is a string)
 
     /**
      * Get Filter instances using one or more criteria. Valid filter names:
-db-instance-id: filter by instance ID (the filter value is a string)
-db-instance-name: filter by instance name (the filter value is a string)
-db-project-id: filter by project ID (the filter value is an integer)
-db-pay-mode: filter by billing mode (the filter value is a string)
-db-tag-key: filter by tag key (the filter value is a string) 
+db-instance-id: filter by instance ID (in string format)
+db-instance-name: filter by instance name (in string format)
+db-project-id: filter by project ID (in integer format)
+db-pay-mode: filter by billing mode (in string format)
+db-tag-key: filter by tag key (in string format) 
      * @return Filters Filter instances using one or more criteria. Valid filter names:
-db-instance-id: filter by instance ID (the filter value is a string)
-db-instance-name: filter by instance name (the filter value is a string)
-db-project-id: filter by project ID (the filter value is an integer)
-db-pay-mode: filter by billing mode (the filter value is a string)
-db-tag-key: filter by tag key (the filter value is a string)
+db-instance-id: filter by instance ID (in string format)
+db-instance-name: filter by instance name (in string format)
+db-project-id: filter by project ID (in integer format)
+db-pay-mode: filter by billing mode (in string format)
+db-tag-key: filter by tag key (in string format)
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -82,17 +82,17 @@ db-tag-key: filter by tag key (the filter value is a string)
 
     /**
      * Set Filter instances using one or more criteria. Valid filter names:
-db-instance-id: filter by instance ID (the filter value is a string)
-db-instance-name: filter by instance name (the filter value is a string)
-db-project-id: filter by project ID (the filter value is an integer)
-db-pay-mode: filter by billing mode (the filter value is a string)
-db-tag-key: filter by tag key (the filter value is a string)
+db-instance-id: filter by instance ID (in string format)
+db-instance-name: filter by instance name (in string format)
+db-project-id: filter by project ID (in integer format)
+db-pay-mode: filter by billing mode (in string format)
+db-tag-key: filter by tag key (in string format)
      * @param Filters Filter instances using one or more criteria. Valid filter names:
-db-instance-id: filter by instance ID (the filter value is a string)
-db-instance-name: filter by instance name (the filter value is a string)
-db-project-id: filter by project ID (the filter value is an integer)
-db-pay-mode: filter by billing mode (the filter value is a string)
-db-tag-key: filter by tag key (the filter value is a string)
+db-instance-id: filter by instance ID (in string format)
+db-instance-name: filter by instance name (in string format)
+db-project-id: filter by project ID (in integer format)
+db-pay-mode: filter by billing mode (in string format)
+db-tag-key: filter by tag key (in string format)
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

@@ -37,14 +37,14 @@ public class ModifyIncrementalMigrationRequest extends AbstractModel{
     private String BackupMigrationId;
 
     /**
-    * Incremental import task ID
+    * Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API.
     */
     @SerializedName("IncrementalMigrationId")
     @Expose
     private String IncrementalMigrationId;
 
     /**
-    * Whether restoration is required. No: not required. Yes: required.
+    * Whether to restore backups. Valid values: `NO`, `YES`. If this parameter is not specified, whether to restore incremental backups will not change.
     */
     @SerializedName("IsRecovery")
     @Expose
@@ -90,32 +90,32 @@ public class ModifyIncrementalMigrationRequest extends AbstractModel{
     }
 
     /**
-     * Get Incremental import task ID 
-     * @return IncrementalMigrationId Incremental import task ID
+     * Get Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API. 
+     * @return IncrementalMigrationId Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API.
      */
     public String getIncrementalMigrationId() {
         return this.IncrementalMigrationId;
     }
 
     /**
-     * Set Incremental import task ID
-     * @param IncrementalMigrationId Incremental import task ID
+     * Set Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API.
+     * @param IncrementalMigrationId Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API.
      */
     public void setIncrementalMigrationId(String IncrementalMigrationId) {
         this.IncrementalMigrationId = IncrementalMigrationId;
     }
 
     /**
-     * Get Whether restoration is required. No: not required. Yes: required. 
-     * @return IsRecovery Whether restoration is required. No: not required. Yes: required.
+     * Get Whether to restore backups. Valid values: `NO`, `YES`. If this parameter is not specified, whether to restore incremental backups will not change. 
+     * @return IsRecovery Whether to restore backups. Valid values: `NO`, `YES`. If this parameter is not specified, whether to restore incremental backups will not change.
      */
     public String getIsRecovery() {
         return this.IsRecovery;
     }
 
     /**
-     * Set Whether restoration is required. No: not required. Yes: required.
-     * @param IsRecovery Whether restoration is required. No: not required. Yes: required.
+     * Set Whether to restore backups. Valid values: `NO`, `YES`. If this parameter is not specified, whether to restore incremental backups will not change.
+     * @param IsRecovery Whether to restore backups. Valid values: `NO`, `YES`. If this parameter is not specified, whether to restore incremental backups will not change.
      */
     public void setIsRecovery(String IsRecovery) {
         this.IsRecovery = IsRecovery;
