@@ -129,7 +129,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long AttachEntityBoundaryCount;
 
     /**
-    * The last editted time.
+    * The last edited time.
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("UpdateTime")
@@ -393,9 +393,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get The last editted time.
+     * Get The last edited time.
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return UpdateTime The last editted time.
+     * @return UpdateTime The last edited time.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getUpdateTime() {
@@ -403,9 +403,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set The last editted time.
+     * Set The last edited time.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param UpdateTime The last editted time.
+     * @param UpdateTime The last edited time.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setUpdateTime(String UpdateTime) {
