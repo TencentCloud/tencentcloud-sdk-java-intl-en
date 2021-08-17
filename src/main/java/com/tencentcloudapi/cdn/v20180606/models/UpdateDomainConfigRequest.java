@@ -310,6 +310,20 @@ global: global acceleration
     private Quic Quic;
 
     /**
+    * Access authentication for OSS origin
+    */
+    @SerializedName("OssPrivateAccess")
+    @Expose
+    private OssPrivateAccess OssPrivateAccess;
+
+    /**
+    * WebSocket configuration.
+    */
+    @SerializedName("WebSocket")
+    @Expose
+    private WebSocket WebSocket;
+
+    /**
      * Get Domain name 
      * @return Domain Domain name
      */
@@ -977,6 +991,38 @@ global: global acceleration
         this.Quic = Quic;
     }
 
+    /**
+     * Get Access authentication for OSS origin 
+     * @return OssPrivateAccess Access authentication for OSS origin
+     */
+    public OssPrivateAccess getOssPrivateAccess() {
+        return this.OssPrivateAccess;
+    }
+
+    /**
+     * Set Access authentication for OSS origin
+     * @param OssPrivateAccess Access authentication for OSS origin
+     */
+    public void setOssPrivateAccess(OssPrivateAccess OssPrivateAccess) {
+        this.OssPrivateAccess = OssPrivateAccess;
+    }
+
+    /**
+     * Get WebSocket configuration. 
+     * @return WebSocket WebSocket configuration.
+     */
+    public WebSocket getWebSocket() {
+        return this.WebSocket;
+    }
+
+    /**
+     * Set WebSocket configuration.
+     * @param WebSocket WebSocket configuration.
+     */
+    public void setWebSocket(WebSocket WebSocket) {
+        this.WebSocket = WebSocket;
+    }
+
     public UpdateDomainConfigRequest() {
     }
 
@@ -1108,6 +1154,12 @@ global: global acceleration
         if (source.Quic != null) {
             this.Quic = new Quic(source.Quic);
         }
+        if (source.OssPrivateAccess != null) {
+            this.OssPrivateAccess = new OssPrivateAccess(source.OssPrivateAccess);
+        }
+        if (source.WebSocket != null) {
+            this.WebSocket = new WebSocket(source.WebSocket);
+        }
     }
 
 
@@ -1155,6 +1207,8 @@ global: global acceleration
         this.setParamObj(map, prefix + "OfflineCache.", this.OfflineCache);
         this.setParamObj(map, prefix + "OriginCombine.", this.OriginCombine);
         this.setParamObj(map, prefix + "Quic.", this.Quic);
+        this.setParamObj(map, prefix + "OssPrivateAccess.", this.OssPrivateAccess);
+        this.setParamObj(map, prefix + "WebSocket.", this.WebSocket);
 
     }
 }

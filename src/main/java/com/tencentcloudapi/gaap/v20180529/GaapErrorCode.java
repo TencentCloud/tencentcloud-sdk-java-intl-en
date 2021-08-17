@@ -132,6 +132,9 @@ public enum GaapErrorCode {
     // Listener port already exists.
      INVALIDPARAMETERVALUE_DUPLICATEDLISTENERPORT("InvalidParameterValue.DuplicatedListenerPort"),
      
+    // The header is blocklisted.
+     INVALIDPARAMETERVALUE_HITBLACKLIST("InvalidParameterValue.HitBlacklist"),
+     
     // The bandwidth value is not in the range.
      INVALIDPARAMETERVALUE_INVALIDBANDWIDTH("InvalidParameterValue.InvalidBandwidth"),
      
@@ -164,6 +167,9 @@ public enum GaapErrorCode {
      
     // The origin server region is not found or you have no access permission to it.
      INVALIDPARAMETERVALUE_UNKNOWNDESTREGION("InvalidParameterValue.UnknownDestRegion"),
+     
+    // The quota limit should not be exceeded.
+     LIMITEXCEEDED("LimitExceeded"),
      
     // Missing parameter.
      MISSINGPARAMETER("MissingParameter"),

@@ -41,9 +41,13 @@ The gap between the start time and end time should be less than or equal to 90 d
     private String EndTime;
 
     /**
-    * Specifies the query metric, which can be:
+    * Specifies the metric to query, which can be:
 `flux`: traffic (in bytes)
+`fluxIn`: upstream traffic (in bytes), only used for the `ecdn` product
+`fluxOut`: downstream traffic (in bytes), only used for the `ecdn` product
 `bandwidth`: bandwidth (in bps)
+`bandwidthIn`: upstream bandwidth (in bps), only used for the `ecdn` product
+`bandwidthOut`: downstream bandwidth (in bps), only used for the `ecdn` product
 `request`: number of requests
 `hitRequest`: number of hit requests
 `requestHitRate`: request hit rate (in % with two decimal digits)
@@ -54,7 +58,7 @@ The gap between the start time and end time should be less than or equal to 90 d
 `3xx`: lists the number of all status codes starting with **3** returned during the queried period based on the specified interval (if any)
 `4xx`: lists the number of all status codes starting with **4** returned during the queried period based on the specified interval (if any)
 `5xx`: lists the number of all status codes starting with **5** returned during the queried period based on the specified interval (if any)
-It is supported to specify a status code for query. The return will be empty if the status code has never been generated.
+Specifies the status code to query. The return will be empty if the status code has never been generated.
     */
     @SerializedName("Metric")
     @Expose
@@ -162,6 +166,13 @@ Note: non-IPv6 allowlisted users cannot specify `ipv4` and `ipv6` for query
     private String AreaType;
 
     /**
+    * Specifies the product to query, either `cdn` (default) or `ecdn`.
+    */
+    @SerializedName("Product")
+    @Expose
+    private String Product;
+
+    /**
      * Get Queries start time, such as 2018-09-04 10:40:00; the returned result is later than or equal to the specified time.
 According to the specified time granularity, forward rounding is applied; for example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the first returned entry will be 2018-09-04 10:00:00.
 The gap between the start time and end time should be less than or equal to 90 days. 
@@ -210,9 +221,13 @@ The gap between the start time and end time should be less than or equal to 90 d
     }
 
     /**
-     * Get Specifies the query metric, which can be:
+     * Get Specifies the metric to query, which can be:
 `flux`: traffic (in bytes)
+`fluxIn`: upstream traffic (in bytes), only used for the `ecdn` product
+`fluxOut`: downstream traffic (in bytes), only used for the `ecdn` product
 `bandwidth`: bandwidth (in bps)
+`bandwidthIn`: upstream bandwidth (in bps), only used for the `ecdn` product
+`bandwidthOut`: downstream bandwidth (in bps), only used for the `ecdn` product
 `request`: number of requests
 `hitRequest`: number of hit requests
 `requestHitRate`: request hit rate (in % with two decimal digits)
@@ -223,10 +238,14 @@ The gap between the start time and end time should be less than or equal to 90 d
 `3xx`: lists the number of all status codes starting with **3** returned during the queried period based on the specified interval (if any)
 `4xx`: lists the number of all status codes starting with **4** returned during the queried period based on the specified interval (if any)
 `5xx`: lists the number of all status codes starting with **5** returned during the queried period based on the specified interval (if any)
-It is supported to specify a status code for query. The return will be empty if the status code has never been generated. 
-     * @return Metric Specifies the query metric, which can be:
+Specifies the status code to query. The return will be empty if the status code has never been generated. 
+     * @return Metric Specifies the metric to query, which can be:
 `flux`: traffic (in bytes)
+`fluxIn`: upstream traffic (in bytes), only used for the `ecdn` product
+`fluxOut`: downstream traffic (in bytes), only used for the `ecdn` product
 `bandwidth`: bandwidth (in bps)
+`bandwidthIn`: upstream bandwidth (in bps), only used for the `ecdn` product
+`bandwidthOut`: downstream bandwidth (in bps), only used for the `ecdn` product
 `request`: number of requests
 `hitRequest`: number of hit requests
 `requestHitRate`: request hit rate (in % with two decimal digits)
@@ -237,16 +256,20 @@ It is supported to specify a status code for query. The return will be empty if 
 `3xx`: lists the number of all status codes starting with **3** returned during the queried period based on the specified interval (if any)
 `4xx`: lists the number of all status codes starting with **4** returned during the queried period based on the specified interval (if any)
 `5xx`: lists the number of all status codes starting with **5** returned during the queried period based on the specified interval (if any)
-It is supported to specify a status code for query. The return will be empty if the status code has never been generated.
+Specifies the status code to query. The return will be empty if the status code has never been generated.
      */
     public String getMetric() {
         return this.Metric;
     }
 
     /**
-     * Set Specifies the query metric, which can be:
+     * Set Specifies the metric to query, which can be:
 `flux`: traffic (in bytes)
+`fluxIn`: upstream traffic (in bytes), only used for the `ecdn` product
+`fluxOut`: downstream traffic (in bytes), only used for the `ecdn` product
 `bandwidth`: bandwidth (in bps)
+`bandwidthIn`: upstream bandwidth (in bps), only used for the `ecdn` product
+`bandwidthOut`: downstream bandwidth (in bps), only used for the `ecdn` product
 `request`: number of requests
 `hitRequest`: number of hit requests
 `requestHitRate`: request hit rate (in % with two decimal digits)
@@ -257,10 +280,14 @@ It is supported to specify a status code for query. The return will be empty if 
 `3xx`: lists the number of all status codes starting with **3** returned during the queried period based on the specified interval (if any)
 `4xx`: lists the number of all status codes starting with **4** returned during the queried period based on the specified interval (if any)
 `5xx`: lists the number of all status codes starting with **5** returned during the queried period based on the specified interval (if any)
-It is supported to specify a status code for query. The return will be empty if the status code has never been generated.
-     * @param Metric Specifies the query metric, which can be:
+Specifies the status code to query. The return will be empty if the status code has never been generated.
+     * @param Metric Specifies the metric to query, which can be:
 `flux`: traffic (in bytes)
+`fluxIn`: upstream traffic (in bytes), only used for the `ecdn` product
+`fluxOut`: downstream traffic (in bytes), only used for the `ecdn` product
 `bandwidth`: bandwidth (in bps)
+`bandwidthIn`: upstream bandwidth (in bps), only used for the `ecdn` product
+`bandwidthOut`: downstream bandwidth (in bps), only used for the `ecdn` product
 `request`: number of requests
 `hitRequest`: number of hit requests
 `requestHitRate`: request hit rate (in % with two decimal digits)
@@ -271,7 +298,7 @@ It is supported to specify a status code for query. The return will be empty if 
 `3xx`: lists the number of all status codes starting with **3** returned during the queried period based on the specified interval (if any)
 `4xx`: lists the number of all status codes starting with **4** returned during the queried period based on the specified interval (if any)
 `5xx`: lists the number of all status codes starting with **5** returned during the queried period based on the specified interval (if any)
-It is supported to specify a status code for query. The return will be empty if the status code has never been generated.
+Specifies the status code to query. The return will be empty if the status code has never been generated.
      */
     public void setMetric(String Metric) {
         this.Metric = Metric;
@@ -549,6 +576,22 @@ Note: non-IPv6 allowlisted users cannot specify `ipv4` and `ipv6` for query
         this.AreaType = AreaType;
     }
 
+    /**
+     * Get Specifies the product to query, either `cdn` (default) or `ecdn`. 
+     * @return Product Specifies the product to query, either `cdn` (default) or `ecdn`.
+     */
+    public String getProduct() {
+        return this.Product;
+    }
+
+    /**
+     * Set Specifies the product to query, either `cdn` (default) or `ecdn`.
+     * @param Product Specifies the product to query, either `cdn` (default) or `ecdn`.
+     */
+    public void setProduct(String Product) {
+        this.Product = Product;
+    }
+
     public DescribeCdnDataRequest() {
     }
 
@@ -602,6 +645,9 @@ Note: non-IPv6 allowlisted users cannot specify `ipv4` and `ipv6` for query
         if (source.AreaType != null) {
             this.AreaType = new String(source.AreaType);
         }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
     }
 
 
@@ -623,6 +669,7 @@ Note: non-IPv6 allowlisted users cannot specify `ipv4` and `ipv6` for query
         this.setParamSimple(map, prefix + "IpProtocol", this.IpProtocol);
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamSimple(map, prefix + "AreaType", this.AreaType);
+        this.setParamSimple(map, prefix + "Product", this.Product);
 
     }
 }

@@ -98,6 +98,13 @@ Default value: `bandwidth`
     private String Metric;
 
     /**
+    * Specifies the product to query, either `cdn` (default) or `ecdn`.
+    */
+    @SerializedName("Product")
+    @Expose
+    private String Product;
+
+    /**
      * Get Query start time, e.g., 2018-09-04 10:40:00. The returned result will be later than or equal to the specified time
 The time will be rounded forward based on the granularity parameter `Interval`. For example, if the query start time is 2018-09-04 10:40:00 and the query time granularity is 1-hour, the time for the first returned entry will be 2018-09-04 10:00:00
 The range between the start time and end time should be less than or equal to 90 days 
@@ -301,6 +308,22 @@ Default value: `bandwidth`
         this.Metric = Metric;
     }
 
+    /**
+     * Get Specifies the product to query, either `cdn` (default) or `ecdn`. 
+     * @return Product Specifies the product to query, either `cdn` (default) or `ecdn`.
+     */
+    public String getProduct() {
+        return this.Product;
+    }
+
+    /**
+     * Set Specifies the product to query, either `cdn` (default) or `ecdn`.
+     * @param Product Specifies the product to query, either `cdn` (default) or `ecdn`.
+     */
+    public void setProduct(String Product) {
+        this.Product = Product;
+    }
+
     public DescribeBillingDataRequest() {
     }
 
@@ -333,6 +356,9 @@ Default value: `bandwidth`
         if (source.Metric != null) {
             this.Metric = new String(source.Metric);
         }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
     }
 
 
@@ -348,6 +374,7 @@ Default value: `bandwidth`
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamSimple(map, prefix + "District", this.District);
         this.setParamSimple(map, prefix + "Metric", this.Metric);
+        this.setParamSimple(map, prefix + "Product", this.Product);
 
     }
 }

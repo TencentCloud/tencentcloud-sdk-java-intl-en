@@ -200,6 +200,26 @@ Note: This API unbinds the previously bound origin servers, and binds the origin
     }
 
     /**
+     *This API is used to create a custom header of the HTTP/HTTPS listener. When client requests reach the listener, they will be forwarded to the origin with this custom hearer.
+     * @param req CreateCustomHeaderRequest
+     * @return CreateCustomHeaderResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCustomHeaderResponse CreateCustomHeader(CreateCustomHeaderRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCustomHeaderResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCustomHeaderResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCustomHeader");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (CreateDomain) is used to create the access domain name for the HTTP/HTTPS listener. Clients request the backend data by accessing this domain.
 This API only supports connections of version 3.0.
      * @param req CreateDomainRequest
@@ -641,6 +661,26 @@ This API only supports connections of version 3.0.
     }
 
     /**
+     *This API is used to query names of blocked custom headers.
+     * @param req DescribeBlackHeaderRequest
+     * @return DescribeBlackHeaderResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBlackHeaderResponse DescribeBlackHeader(DescribeBlackHeaderRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBlackHeaderResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBlackHeaderResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBlackHeader");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (DescribeCertificateDetail) is used to query certificate details, including the certificate ID, name, type, content, key, and other information.
      * @param req DescribeCertificateDetailRequest
      * @return DescribeCertificateDetailResponse
@@ -693,6 +733,26 @@ This API only supports connections of version 3.0.
                 Type type = new TypeToken<JsonResponseModel<DescribeCountryAreaMappingResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeCountryAreaMapping");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of custom headers.
+     * @param req DescribeCustomHeaderRequest
+     * @return DescribeCustomHeaderResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomHeaderResponse DescribeCustomHeader(DescribeCustomHeaderRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCustomHeaderResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCustomHeaderResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCustomHeader");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

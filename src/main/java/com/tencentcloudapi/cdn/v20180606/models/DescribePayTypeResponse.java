@@ -26,7 +26,8 @@ public class DescribePayTypeResponse extends AbstractModel{
     * Billing modes:
 `flux`: bill-by-traffic
 `bandwidth`: bill-by-bandwidth
-When you switch the billing mode for a daily-billing-cycle account, if there is bandwidth usage on the day, this field indicates the billing mode that will take effect on the next day; otherwise, it indicates the billing mode that has already taken effect
+`request`: bill-by-request
+In case the billing mode is changed in the day, if there is bandwidth consumption occurred in the current day, the billing mode returned is the new billing mode for the next day. If no bandwidth consumption occurs, it indicates the current billing mode.
     */
     @SerializedName("PayType")
     @Expose
@@ -42,12 +43,11 @@ month: monthly settlement
     private String BillingCycle;
 
     /**
-    * Billing method:
-monthMax: billed by the monthly average of daily peak traffic (monthly settlement)
-day95: billed by the daily 95th percentile bandwidth (monthly settlement)
-month95: billed by the monthly 95th percentile bandwidth (monthly settlement)
-sum: billed by the total traffic (daily or monthly settlement)
-max: billed by the peak bandwidth (daily settlement)
+    * `monthMax`: billed by the monthly average of daily peak traffic (monthly settlement)
+`day95`: billed by the daily 95th percentile bandwidth (monthly settlement)
+`month95`: billed by the monthly 95th percentile bandwidth (monthly settlement)
+`sum`: billed by the total traffic/total requests (daily or monthly settlement)
+`max`: billed by the peak bandwidth (daily settlement)
     */
     @SerializedName("StatType")
     @Expose
@@ -63,9 +63,10 @@ max: billed by the peak bandwidth (daily settlement)
     private String RegionType;
 
     /**
-    * Currently billing mode in effect:
+    * The current billing mode in effect:
 `flux`: bill-by-traffic
 `bandwidth`: bill-by-bandwidth
+`request`: bill-by-request
     */
     @SerializedName("CurrentPayType")
     @Expose
@@ -82,11 +83,13 @@ max: billed by the peak bandwidth (daily settlement)
      * Get Billing modes:
 `flux`: bill-by-traffic
 `bandwidth`: bill-by-bandwidth
-When you switch the billing mode for a daily-billing-cycle account, if there is bandwidth usage on the day, this field indicates the billing mode that will take effect on the next day; otherwise, it indicates the billing mode that has already taken effect 
+`request`: bill-by-request
+In case the billing mode is changed in the day, if there is bandwidth consumption occurred in the current day, the billing mode returned is the new billing mode for the next day. If no bandwidth consumption occurs, it indicates the current billing mode. 
      * @return PayType Billing modes:
 `flux`: bill-by-traffic
 `bandwidth`: bill-by-bandwidth
-When you switch the billing mode for a daily-billing-cycle account, if there is bandwidth usage on the day, this field indicates the billing mode that will take effect on the next day; otherwise, it indicates the billing mode that has already taken effect
+`request`: bill-by-request
+In case the billing mode is changed in the day, if there is bandwidth consumption occurred in the current day, the billing mode returned is the new billing mode for the next day. If no bandwidth consumption occurs, it indicates the current billing mode.
      */
     public String getPayType() {
         return this.PayType;
@@ -96,11 +99,13 @@ When you switch the billing mode for a daily-billing-cycle account, if there is 
      * Set Billing modes:
 `flux`: bill-by-traffic
 `bandwidth`: bill-by-bandwidth
-When you switch the billing mode for a daily-billing-cycle account, if there is bandwidth usage on the day, this field indicates the billing mode that will take effect on the next day; otherwise, it indicates the billing mode that has already taken effect
+`request`: bill-by-request
+In case the billing mode is changed in the day, if there is bandwidth consumption occurred in the current day, the billing mode returned is the new billing mode for the next day. If no bandwidth consumption occurs, it indicates the current billing mode.
      * @param PayType Billing modes:
 `flux`: bill-by-traffic
 `bandwidth`: bill-by-bandwidth
-When you switch the billing mode for a daily-billing-cycle account, if there is bandwidth usage on the day, this field indicates the billing mode that will take effect on the next day; otherwise, it indicates the billing mode that has already taken effect
+`request`: bill-by-request
+In case the billing mode is changed in the day, if there is bandwidth consumption occurred in the current day, the billing mode returned is the new billing mode for the next day. If no bandwidth consumption occurs, it indicates the current billing mode.
      */
     public void setPayType(String PayType) {
         this.PayType = PayType;
@@ -131,36 +136,32 @@ month: monthly settlement
     }
 
     /**
-     * Get Billing method:
-monthMax: billed by the monthly average of daily peak traffic (monthly settlement)
-day95: billed by the daily 95th percentile bandwidth (monthly settlement)
-month95: billed by the monthly 95th percentile bandwidth (monthly settlement)
-sum: billed by the total traffic (daily or monthly settlement)
-max: billed by the peak bandwidth (daily settlement) 
-     * @return StatType Billing method:
-monthMax: billed by the monthly average of daily peak traffic (monthly settlement)
-day95: billed by the daily 95th percentile bandwidth (monthly settlement)
-month95: billed by the monthly 95th percentile bandwidth (monthly settlement)
-sum: billed by the total traffic (daily or monthly settlement)
-max: billed by the peak bandwidth (daily settlement)
+     * Get `monthMax`: billed by the monthly average of daily peak traffic (monthly settlement)
+`day95`: billed by the daily 95th percentile bandwidth (monthly settlement)
+`month95`: billed by the monthly 95th percentile bandwidth (monthly settlement)
+`sum`: billed by the total traffic/total requests (daily or monthly settlement)
+`max`: billed by the peak bandwidth (daily settlement) 
+     * @return StatType `monthMax`: billed by the monthly average of daily peak traffic (monthly settlement)
+`day95`: billed by the daily 95th percentile bandwidth (monthly settlement)
+`month95`: billed by the monthly 95th percentile bandwidth (monthly settlement)
+`sum`: billed by the total traffic/total requests (daily or monthly settlement)
+`max`: billed by the peak bandwidth (daily settlement)
      */
     public String getStatType() {
         return this.StatType;
     }
 
     /**
-     * Set Billing method:
-monthMax: billed by the monthly average of daily peak traffic (monthly settlement)
-day95: billed by the daily 95th percentile bandwidth (monthly settlement)
-month95: billed by the monthly 95th percentile bandwidth (monthly settlement)
-sum: billed by the total traffic (daily or monthly settlement)
-max: billed by the peak bandwidth (daily settlement)
-     * @param StatType Billing method:
-monthMax: billed by the monthly average of daily peak traffic (monthly settlement)
-day95: billed by the daily 95th percentile bandwidth (monthly settlement)
-month95: billed by the monthly 95th percentile bandwidth (monthly settlement)
-sum: billed by the total traffic (daily or monthly settlement)
-max: billed by the peak bandwidth (daily settlement)
+     * Set `monthMax`: billed by the monthly average of daily peak traffic (monthly settlement)
+`day95`: billed by the daily 95th percentile bandwidth (monthly settlement)
+`month95`: billed by the monthly 95th percentile bandwidth (monthly settlement)
+`sum`: billed by the total traffic/total requests (daily or monthly settlement)
+`max`: billed by the peak bandwidth (daily settlement)
+     * @param StatType `monthMax`: billed by the monthly average of daily peak traffic (monthly settlement)
+`day95`: billed by the daily 95th percentile bandwidth (monthly settlement)
+`month95`: billed by the monthly 95th percentile bandwidth (monthly settlement)
+`sum`: billed by the total traffic/total requests (daily or monthly settlement)
+`max`: billed by the peak bandwidth (daily settlement)
      */
     public void setStatType(String StatType) {
         this.StatType = StatType;
@@ -191,24 +192,28 @@ max: billed by the peak bandwidth (daily settlement)
     }
 
     /**
-     * Get Currently billing mode in effect:
-`flux`: bill-by-traffic
-`bandwidth`: bill-by-bandwidth 
-     * @return CurrentPayType Currently billing mode in effect:
+     * Get The current billing mode in effect:
 `flux`: bill-by-traffic
 `bandwidth`: bill-by-bandwidth
+`request`: bill-by-request 
+     * @return CurrentPayType The current billing mode in effect:
+`flux`: bill-by-traffic
+`bandwidth`: bill-by-bandwidth
+`request`: bill-by-request
      */
     public String getCurrentPayType() {
         return this.CurrentPayType;
     }
 
     /**
-     * Set Currently billing mode in effect:
+     * Set The current billing mode in effect:
 `flux`: bill-by-traffic
 `bandwidth`: bill-by-bandwidth
-     * @param CurrentPayType Currently billing mode in effect:
+`request`: bill-by-request
+     * @param CurrentPayType The current billing mode in effect:
 `flux`: bill-by-traffic
 `bandwidth`: bill-by-bandwidth
+`request`: bill-by-request
      */
     public void setCurrentPayType(String CurrentPayType) {
         this.CurrentPayType = CurrentPayType;

@@ -54,7 +54,10 @@ public class WaterPrintConfig extends AbstractModel{
     private WaterPrintKey [] Keys;
 
     /**
-    * 
+    * Watermark checking mode, which can be:
+`checkall`: normal mode
+`shortfpcheckall`: compact mode
+]
     */
     @SerializedName("Verify")
     @Expose
@@ -137,16 +140,28 @@ public class WaterPrintConfig extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return Verify 
+     * Get Watermark checking mode, which can be:
+`checkall`: normal mode
+`shortfpcheckall`: compact mode
+] 
+     * @return Verify Watermark checking mode, which can be:
+`checkall`: normal mode
+`shortfpcheckall`: compact mode
+]
      */
     public String getVerify() {
         return this.Verify;
     }
 
     /**
-     * Set 
-     * @param Verify 
+     * Set Watermark checking mode, which can be:
+`checkall`: normal mode
+`shortfpcheckall`: compact mode
+]
+     * @param Verify Watermark checking mode, which can be:
+`checkall`: normal mode
+`shortfpcheckall`: compact mode
+]
      */
     public void setVerify(String Verify) {
         this.Verify = Verify;

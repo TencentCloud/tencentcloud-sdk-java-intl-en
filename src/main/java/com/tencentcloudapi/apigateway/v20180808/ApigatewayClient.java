@@ -39,6 +39,46 @@ public class ApigatewayClient extends AbstractClient{
     }
 
     /**
+     *This API is used to bind a plugin to an API.
+     * @param req AttachPluginRequest
+     * @return AttachPluginResponse
+     * @throws TencentCloudSDKException
+     */
+    public AttachPluginResponse AttachPlugin(AttachPluginRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AttachPluginResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AttachPluginResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AttachPlugin");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to bind an application to an API.
+     * @param req BindApiAppRequest
+     * @return BindApiAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindApiAppResponse BindApiApp(BindApiAppRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BindApiAppResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BindApiAppResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BindApiApp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to bind a usage plan to a service or API.
 After you publish a service to an environment, if the API requires authentication and can be called only when it is bound to a usage plan, you can use this API to bind a usage plan to the specified environment.
 Currently, a usage plan can be bound to an API; however, under the same service, usage plans bound to a service and usage plans bound to an API cannot coexist. Therefore, in an environment to which a service-level usage plan has already been bound, please use the `DemoteServiceUsagePlan` API to degrade it.
@@ -183,6 +223,26 @@ Each service in API Gateway provides a default domain name for users to call. If
     }
 
     /**
+     *This API is used to create an application.
+     * @param req CreateApiAppRequest
+     * @return CreateApiAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateApiAppResponse CreateApiApp(CreateApiAppRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateApiAppResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateApiAppResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateApiApp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create an API key pair.
      * @param req CreateApiKeyRequest
      * @return CreateApiKeyResponse
@@ -215,6 +275,26 @@ Each service in API Gateway provides a default domain name for users to call. If
                 Type type = new TypeToken<JsonResponseModel<CreateIPStrategyResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateIPStrategy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create an API Gateway plugin.
+     * @param req CreatePluginRequest
+     * @return CreatePluginResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePluginResponse CreatePlugin(CreatePluginRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePluginResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePluginResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreatePlugin");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -305,6 +385,26 @@ To use API Gateway, you need to create a usage plan and bind it to a service env
     }
 
     /**
+     *This API is used to delete a created application.
+     * @param req DeleteApiAppRequest
+     * @return DeleteApiAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteApiAppResponse DeleteApiApp(DeleteApiAppRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteApiAppResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteApiAppResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteApiApp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete an API key pair.
      * @param req DeleteApiKeyRequest
      * @return DeleteApiKeyResponse
@@ -337,6 +437,26 @@ To use API Gateway, you need to create a usage plan and bind it to a service env
                 Type type = new TypeToken<JsonResponseModel<DeleteIPStrategyResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteIPStrategy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete an API Gateway plugin.
+     * @param req DeletePluginRequest
+     * @return DeletePluginResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePluginResponse DeletePlugin(DeletePluginRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeletePluginResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeletePluginResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeletePlugin");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -468,6 +588,26 @@ This operation will also be denied if the current environment has not been publi
     }
 
     /**
+     *This API is used to list all APIs that can use this plugin, no matter whether the API is bound with the plugin.
+     * @param req DescribeAllPluginApisRequest
+     * @return DescribeAllPluginApisResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllPluginApisResponse DescribeAllPluginApis(DescribeAllPluginApisRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAllPluginApisResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAllPluginApisResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAllPluginApis");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (`DescribeApi`) is used to query the details of the APIs users manage via Tencent Cloud API Gateway.
      * @param req DescribeApiRequest
      * @return DescribeApiResponse
@@ -488,6 +628,86 @@ This operation will also be denied if the current environment has not been publi
     }
 
     /**
+     *This API is used to search for an application by application ID.
+     * @param req DescribeApiAppRequest
+     * @return DescribeApiAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApiAppResponse DescribeApiApp(DescribeApiAppRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeApiAppResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeApiAppResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeApiApp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of APIs bound to an application.
+     * @param req DescribeApiAppBindApisStatusRequest
+     * @return DescribeApiAppBindApisStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApiAppBindApisStatusResponse DescribeApiAppBindApisStatus(DescribeApiAppBindApisStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeApiAppBindApisStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeApiAppBindApisStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeApiAppBindApisStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the application list.
+     * @param req DescribeApiAppsStatusRequest
+     * @return DescribeApiAppsStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApiAppsStatusResponse DescribeApiAppsStatus(DescribeApiAppsStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeApiAppsStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeApiAppsStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeApiAppsStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of applications bound to an API.
+     * @param req DescribeApiBindApiAppsStatusRequest
+     * @return DescribeApiBindApiAppsStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApiBindApiAppsStatusResponse DescribeApiBindApiAppsStatus(DescribeApiBindApiAppsStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeApiBindApiAppsStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeApiBindApiAppsStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeApiBindApiAppsStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to display the throttling policies bound to an API.
      * @param req DescribeApiEnvironmentStrategyRequest
      * @return DescribeApiEnvironmentStrategyResponse
@@ -500,6 +720,26 @@ This operation will also be denied if the current environment has not been publi
                 Type type = new TypeToken<JsonResponseModel<DescribeApiEnvironmentStrategyResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeApiEnvironmentStrategy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the details of an API deployed at API Gateway.
+     * @param req DescribeApiForApiAppRequest
+     * @return DescribeApiForApiAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApiForApiAppResponse DescribeApiForApiApp(DescribeApiForApiAppRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeApiForApiAppResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeApiForApiAppResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeApiForApiApp");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -671,6 +911,46 @@ To make authentication and throttling for a service take effect, you need to bin
     }
 
     /**
+     *This API is used to query the plugin details by plugin ID.
+     * @param req DescribePluginRequest
+     * @return DescribePluginResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePluginResponse DescribePlugin(DescribePluginRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePluginResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePluginResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePlugin");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query APIs bound with a specified plugin.
+     * @param req DescribePluginApisRequest
+     * @return DescribePluginApisResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePluginApisResponse DescribePluginApis(DescribePluginApisRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePluginApisResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePluginApisResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePluginApis");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the details of a service, such as its description, domain name, protocol, creation time, and releases.
      * @param req DescribeServiceRequest
      * @return DescribeServiceResponse
@@ -744,6 +1024,26 @@ A service can only be used when it is published to an environment after creation
                 Type type = new TypeToken<JsonResponseModel<DescribeServiceEnvironmentStrategyResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeServiceEnvironmentStrategy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the details of a service, such as its description, domain name, and protocol.
+     * @param req DescribeServiceForApiAppRequest
+     * @return DescribeServiceForApiAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeServiceForApiAppResponse DescribeServiceForApiApp(DescribeServiceForApiAppRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeServiceForApiAppResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeServiceForApiAppResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeServiceForApiApp");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -938,6 +1238,26 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
     }
 
     /**
+     *This API is used to unbind an API from the plugin.
+     * @param req DetachPluginRequest
+     * @return DetachPluginResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetachPluginResponse DetachPlugin(DetachPluginRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DetachPluginResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DetachPluginResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DetachPlugin");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to disable an API key.
      * @param req DisableApiKeyRequest
      * @return DisableApiKeyResponse
@@ -1038,6 +1358,26 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
     }
 
     /**
+     *This API is used to modify a created API.
+     * @param req ModifyApiAppRequest
+     * @return ModifyApiAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyApiAppResponse ModifyApiApp(ModifyApiAppRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyApiAppResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyApiAppResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyApiApp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify an API throttling policy.
      * @param req ModifyApiEnvironmentStrategyRequest
      * @return ModifyApiEnvironmentStrategyResponse
@@ -1090,6 +1430,26 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
                 Type type = new TypeToken<JsonResponseModel<ModifyIPStrategyResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyIPStrategy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify a plugin.
+     * @param req ModifyPluginRequest
+     * @return ModifyPluginResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPluginResponse ModifyPlugin(ModifyPluginRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyPluginResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyPluginResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyPlugin");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1313,6 +1673,46 @@ Only after a service is published to an environment can its APIs be called. You 
                 Type type = new TypeToken<JsonResponseModel<UnReleaseServiceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UnReleaseService");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to unbind an application from an API.
+     * @param req UnbindApiAppRequest
+     * @return UnbindApiAppResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnbindApiAppResponse UnbindApiApp(UnbindApiAppRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UnbindApiAppResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UnbindApiAppResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UnbindApiApp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to update an application key.
+     * @param req UpdateApiAppKeyRequest
+     * @return UpdateApiAppKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateApiAppKeyResponse UpdateApiAppKey(UpdateApiAppKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateApiAppKeyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateApiAppKeyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateApiAppKey");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

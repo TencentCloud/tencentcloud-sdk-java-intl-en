@@ -191,6 +191,15 @@ This parameter is valid only when `InstanceAllocationPolicy` is set to `SPOT_MIX
     private SpotMixedAllocationPolicy SpotMixedAllocationPolicy;
 
     /**
+    * Indicates whether the capacity rebalancing feature is enabled. This parameter is only valid for spot instances in the scaling group. Valid values:
+<br><li>`TRUE`: yes. Before the spot instances in the scaling group are about to be automatically repossessed, AS will terminate them. The scale-in hook (if configured) will take effect before the termination. After the termination process starts, AS will asynchronously initiate a scaling activity to meet the desired capacity.
+<br><li>`FALSE`: no. AS will add instances to meet the desired capacity only after the spot instances are terminated.
+    */
+    @SerializedName("CapacityRebalance")
+    @Expose
+    private Boolean CapacityRebalance;
+
+    /**
      * Get Auto scaling group ID 
      * @return AutoScalingGroupId Auto scaling group ID
      */
@@ -610,6 +619,30 @@ This parameter is valid only when `InstanceAllocationPolicy` is set to `SPOT_MIX
         this.SpotMixedAllocationPolicy = SpotMixedAllocationPolicy;
     }
 
+    /**
+     * Get Indicates whether the capacity rebalancing feature is enabled. This parameter is only valid for spot instances in the scaling group. Valid values:
+<br><li>`TRUE`: yes. Before the spot instances in the scaling group are about to be automatically repossessed, AS will terminate them. The scale-in hook (if configured) will take effect before the termination. After the termination process starts, AS will asynchronously initiate a scaling activity to meet the desired capacity.
+<br><li>`FALSE`: no. AS will add instances to meet the desired capacity only after the spot instances are terminated. 
+     * @return CapacityRebalance Indicates whether the capacity rebalancing feature is enabled. This parameter is only valid for spot instances in the scaling group. Valid values:
+<br><li>`TRUE`: yes. Before the spot instances in the scaling group are about to be automatically repossessed, AS will terminate them. The scale-in hook (if configured) will take effect before the termination. After the termination process starts, AS will asynchronously initiate a scaling activity to meet the desired capacity.
+<br><li>`FALSE`: no. AS will add instances to meet the desired capacity only after the spot instances are terminated.
+     */
+    public Boolean getCapacityRebalance() {
+        return this.CapacityRebalance;
+    }
+
+    /**
+     * Set Indicates whether the capacity rebalancing feature is enabled. This parameter is only valid for spot instances in the scaling group. Valid values:
+<br><li>`TRUE`: yes. Before the spot instances in the scaling group are about to be automatically repossessed, AS will terminate them. The scale-in hook (if configured) will take effect before the termination. After the termination process starts, AS will asynchronously initiate a scaling activity to meet the desired capacity.
+<br><li>`FALSE`: no. AS will add instances to meet the desired capacity only after the spot instances are terminated.
+     * @param CapacityRebalance Indicates whether the capacity rebalancing feature is enabled. This parameter is only valid for spot instances in the scaling group. Valid values:
+<br><li>`TRUE`: yes. Before the spot instances in the scaling group are about to be automatically repossessed, AS will terminate them. The scale-in hook (if configured) will take effect before the termination. After the termination process starts, AS will asynchronously initiate a scaling activity to meet the desired capacity.
+<br><li>`FALSE`: no. AS will add instances to meet the desired capacity only after the spot instances are terminated.
+     */
+    public void setCapacityRebalance(Boolean CapacityRebalance) {
+        this.CapacityRebalance = CapacityRebalance;
+    }
+
     public ModifyAutoScalingGroupRequest() {
     }
 
@@ -690,6 +723,9 @@ This parameter is valid only when `InstanceAllocationPolicy` is set to `SPOT_MIX
         if (source.SpotMixedAllocationPolicy != null) {
             this.SpotMixedAllocationPolicy = new SpotMixedAllocationPolicy(source.SpotMixedAllocationPolicy);
         }
+        if (source.CapacityRebalance != null) {
+            this.CapacityRebalance = new Boolean(source.CapacityRebalance);
+        }
     }
 
 
@@ -718,6 +754,7 @@ This parameter is valid only when `InstanceAllocationPolicy` is set to `SPOT_MIX
         this.setParamSimple(map, prefix + "LoadBalancerHealthCheckGracePeriod", this.LoadBalancerHealthCheckGracePeriod);
         this.setParamSimple(map, prefix + "InstanceAllocationPolicy", this.InstanceAllocationPolicy);
         this.setParamObj(map, prefix + "SpotMixedAllocationPolicy.", this.SpotMixedAllocationPolicy);
+        this.setParamSimple(map, prefix + "CapacityRebalance", this.CapacityRebalance);
 
     }
 }

@@ -37,7 +37,7 @@ public class ScdnAclGroup extends AbstractModel{
     private ScdnAclRule [] Configure;
 
     /**
-    * Rule action, which is generally `refuse`.
+    * Rule action, which can be `refuse` or `redirect`.
     */
     @SerializedName("Result")
     @Expose
@@ -49,6 +49,14 @@ public class ScdnAclGroup extends AbstractModel{
     @SerializedName("Status")
     @Expose
     private String Status;
+
+    /**
+    * Error page configuration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ErrorPage")
+    @Expose
+    private ScdnErrorPage ErrorPage;
 
     /**
      * Get Rule name 
@@ -83,16 +91,16 @@ public class ScdnAclGroup extends AbstractModel{
     }
 
     /**
-     * Get Rule action, which is generally `refuse`. 
-     * @return Result Rule action, which is generally `refuse`.
+     * Get Rule action, which can be `refuse` or `redirect`. 
+     * @return Result Rule action, which can be `refuse` or `redirect`.
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set Rule action, which is generally `refuse`.
-     * @param Result Rule action, which is generally `refuse`.
+     * Set Rule action, which can be `refuse` or `redirect`.
+     * @param Result Rule action, which can be `refuse` or `redirect`.
      */
     public void setResult(String Result) {
         this.Result = Result;
@@ -112,6 +120,26 @@ public class ScdnAclGroup extends AbstractModel{
      */
     public void setStatus(String Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get Error page configuration.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ErrorPage Error page configuration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public ScdnErrorPage getErrorPage() {
+        return this.ErrorPage;
+    }
+
+    /**
+     * Set Error page configuration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ErrorPage Error page configuration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setErrorPage(ScdnErrorPage ErrorPage) {
+        this.ErrorPage = ErrorPage;
     }
 
     public ScdnAclGroup() {
@@ -137,6 +165,9 @@ public class ScdnAclGroup extends AbstractModel{
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.ErrorPage != null) {
+            this.ErrorPage = new ScdnErrorPage(source.ErrorPage);
+        }
     }
 
 
@@ -148,6 +179,7 @@ public class ScdnAclGroup extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Configure.", this.Configure);
         this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamObj(map, prefix + "ErrorPage.", this.ErrorPage);
 
     }
 }

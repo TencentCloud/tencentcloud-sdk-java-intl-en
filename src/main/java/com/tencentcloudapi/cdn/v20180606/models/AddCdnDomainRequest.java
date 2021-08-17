@@ -269,6 +269,20 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
     private Quic Quic;
 
     /**
+    * Access authentication for S3 origin
+    */
+    @SerializedName("AwsPrivateAccess")
+    @Expose
+    private AwsPrivateAccess AwsPrivateAccess;
+
+    /**
+    * Access authentication for OSS origin
+    */
+    @SerializedName("OssPrivateAccess")
+    @Expose
+    private OssPrivateAccess OssPrivateAccess;
+
+    /**
      * Get Domain name 
      * @return Domain Domain name
      */
@@ -844,6 +858,38 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
         this.Quic = Quic;
     }
 
+    /**
+     * Get Access authentication for S3 origin 
+     * @return AwsPrivateAccess Access authentication for S3 origin
+     */
+    public AwsPrivateAccess getAwsPrivateAccess() {
+        return this.AwsPrivateAccess;
+    }
+
+    /**
+     * Set Access authentication for S3 origin
+     * @param AwsPrivateAccess Access authentication for S3 origin
+     */
+    public void setAwsPrivateAccess(AwsPrivateAccess AwsPrivateAccess) {
+        this.AwsPrivateAccess = AwsPrivateAccess;
+    }
+
+    /**
+     * Get Access authentication for OSS origin 
+     * @return OssPrivateAccess Access authentication for OSS origin
+     */
+    public OssPrivateAccess getOssPrivateAccess() {
+        return this.OssPrivateAccess;
+    }
+
+    /**
+     * Set Access authentication for OSS origin
+     * @param OssPrivateAccess Access authentication for OSS origin
+     */
+    public void setOssPrivateAccess(OssPrivateAccess OssPrivateAccess) {
+        this.OssPrivateAccess = OssPrivateAccess;
+    }
+
     public AddCdnDomainRequest() {
     }
 
@@ -957,6 +1003,12 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
         if (source.Quic != null) {
             this.Quic = new Quic(source.Quic);
         }
+        if (source.AwsPrivateAccess != null) {
+            this.AwsPrivateAccess = new AwsPrivateAccess(source.AwsPrivateAccess);
+        }
+        if (source.OssPrivateAccess != null) {
+            this.OssPrivateAccess = new OssPrivateAccess(source.OssPrivateAccess);
+        }
     }
 
 
@@ -998,6 +1050,8 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
         this.setParamObj(map, prefix + "Ipv6Access.", this.Ipv6Access);
         this.setParamObj(map, prefix + "OfflineCache.", this.OfflineCache);
         this.setParamObj(map, prefix + "Quic.", this.Quic);
+        this.setParamObj(map, prefix + "AwsPrivateAccess.", this.AwsPrivateAccess);
+        this.setParamObj(map, prefix + "OssPrivateAccess.", this.OssPrivateAccess);
 
     }
 }

@@ -31,6 +31,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private CacheOptResult CacheOptResult;
 
     /**
+    * Task ID.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private String TaskId;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -55,6 +63,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setCacheOptResult(CacheOptResult CacheOptResult) {
         this.CacheOptResult = CacheOptResult;
+    }
+
+    /**
+     * Get Task ID.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return TaskId Task ID.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set Task ID.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param TaskId Task ID.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -84,6 +112,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.CacheOptResult != null) {
             this.CacheOptResult = new CacheOptResult(source.CacheOptResult);
         }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -95,6 +126,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "CacheOptResult.", this.CacheOptResult);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

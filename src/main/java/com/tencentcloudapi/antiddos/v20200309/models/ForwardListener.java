@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ForwardListener extends AbstractModel{
 
     /**
-    * Forwarding listening port. Value range: 1–65535.
+    * The starting port for listener forwarding. Value range: 1 to 65535.
     */
     @SerializedName("FrontendPort")
     @Expose
@@ -40,23 +40,23 @@ public class ForwardListener extends AbstractModel{
     private String ForwardProtocol;
 
     /**
-    * 
+    * The ending port for listener forwarding. Value range: 1 to 65535.
     */
     @SerializedName("FrontendPortEnd")
     @Expose
     private Long FrontendPortEnd;
 
     /**
-     * Get Forwarding listening port. Value range: 1–65535. 
-     * @return FrontendPort Forwarding listening port. Value range: 1–65535.
+     * Get The starting port for listener forwarding. Value range: 1 to 65535. 
+     * @return FrontendPort The starting port for listener forwarding. Value range: 1 to 65535.
      */
     public Long getFrontendPort() {
         return this.FrontendPort;
     }
 
     /**
-     * Set Forwarding listening port. Value range: 1–65535.
-     * @param FrontendPort Forwarding listening port. Value range: 1–65535.
+     * Set The starting port for listener forwarding. Value range: 1 to 65535.
+     * @param FrontendPort The starting port for listener forwarding. Value range: 1 to 65535.
      */
     public void setFrontendPort(Long FrontendPort) {
         this.FrontendPort = FrontendPort;
@@ -91,16 +91,16 @@ public class ForwardListener extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return FrontendPortEnd 
+     * Get The ending port for listener forwarding. Value range: 1 to 65535. 
+     * @return FrontendPortEnd The ending port for listener forwarding. Value range: 1 to 65535.
      */
     public Long getFrontendPortEnd() {
         return this.FrontendPortEnd;
     }
 
     /**
-     * Set 
-     * @param FrontendPortEnd 
+     * Set The ending port for listener forwarding. Value range: 1 to 65535.
+     * @param FrontendPortEnd The ending port for listener forwarding. Value range: 1 to 65535.
      */
     public void setFrontendPortEnd(Long FrontendPortEnd) {
         this.FrontendPortEnd = FrontendPortEnd;

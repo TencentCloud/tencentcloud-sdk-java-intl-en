@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class GetDisableRecordsRequest extends AbstractModel{
 
     /**
+    * Specifies the URL to be queried
+    */
+    @SerializedName("Url")
+    @Expose
+    private String Url;
+
+    /**
     * Starting time, such as `2018-12-12 10:24:00`
     */
     @SerializedName("StartTime")
@@ -35,13 +42,6 @@ public class GetDisableRecordsRequest extends AbstractModel{
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
-
-    /**
-    * Specifies the URL to be queried
-    */
-    @SerializedName("Url")
-    @Expose
-    private String Url;
 
     /**
     * Current URL status
@@ -65,6 +65,29 @@ enable: The URL is enabled (unblocked) and can be normally accessed
     @SerializedName("Limit")
     @Expose
     private Long Limit;
+
+    /**
+    * Task ID. The task ID and start time cannot be both left empty.
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private String TaskId;
+
+    /**
+     * Get Specifies the URL to be queried 
+     * @return Url Specifies the URL to be queried
+     */
+    public String getUrl() {
+        return this.Url;
+    }
+
+    /**
+     * Set Specifies the URL to be queried
+     * @param Url Specifies the URL to be queried
+     */
+    public void setUrl(String Url) {
+        this.Url = Url;
+    }
 
     /**
      * Get Starting time, such as `2018-12-12 10:24:00` 
@@ -96,22 +119,6 @@ enable: The URL is enabled (unblocked) and can be normally accessed
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
-    }
-
-    /**
-     * Get Specifies the URL to be queried 
-     * @return Url Specifies the URL to be queried
-     */
-    public String getUrl() {
-        return this.Url;
-    }
-
-    /**
-     * Set Specifies the URL to be queried
-     * @param Url Specifies the URL to be queried
-     */
-    public void setUrl(String Url) {
-        this.Url = Url;
     }
 
     /**
@@ -170,6 +177,22 @@ enable: The URL is enabled (unblocked) and can be normally accessed
         this.Limit = Limit;
     }
 
+    /**
+     * Get Task ID. The task ID and start time cannot be both left empty. 
+     * @return TaskId Task ID. The task ID and start time cannot be both left empty.
+     */
+    public String getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set Task ID. The task ID and start time cannot be both left empty.
+     * @param TaskId Task ID. The task ID and start time cannot be both left empty.
+     */
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
+    }
+
     public GetDisableRecordsRequest() {
     }
 
@@ -178,14 +201,14 @@ enable: The URL is enabled (unblocked) and can be normally accessed
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public GetDisableRecordsRequest(GetDisableRecordsRequest source) {
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
         if (source.StartTime != null) {
             this.StartTime = new String(source.StartTime);
         }
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
-        }
-        if (source.Url != null) {
-            this.Url = new String(source.Url);
         }
         if (source.Status != null) {
             this.Status = new String(source.Status);
@@ -196,6 +219,9 @@ enable: The URL is enabled (unblocked) and can be normally accessed
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
     }
 
 
@@ -203,12 +229,13 @@ enable: The URL is enabled (unblocked) and can be normally accessed
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
-        this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
 
     }
 }

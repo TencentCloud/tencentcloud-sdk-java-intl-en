@@ -136,6 +136,13 @@ global: locked globally
     private String Readonly;
 
     /**
+    * Product of the domain name, either `cdn` or `ecdn`.
+    */
+    @SerializedName("Product")
+    @Expose
+    private String Product;
+
+    /**
      * Get Domain name ID 
      * @return ResourceId Domain name ID
      */
@@ -431,6 +438,22 @@ global: locked globally
         this.Readonly = Readonly;
     }
 
+    /**
+     * Get Product of the domain name, either `cdn` or `ecdn`. 
+     * @return Product Product of the domain name, either `cdn` or `ecdn`.
+     */
+    public String getProduct() {
+        return this.Product;
+    }
+
+    /**
+     * Set Product of the domain name, either `cdn` or `ecdn`.
+     * @param Product Product of the domain name, either `cdn` or `ecdn`.
+     */
+    public void setProduct(String Product) {
+        this.Product = Product;
+    }
+
     public BriefDomain() {
     }
 
@@ -478,6 +501,9 @@ global: locked globally
         if (source.Readonly != null) {
             this.Readonly = new String(source.Readonly);
         }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
     }
 
 
@@ -498,6 +524,7 @@ global: locked globally
         this.setParamSimple(map, prefix + "Disable", this.Disable);
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamSimple(map, prefix + "Readonly", this.Readonly);
+        this.setParamSimple(map, prefix + "Product", this.Product);
 
     }
 }

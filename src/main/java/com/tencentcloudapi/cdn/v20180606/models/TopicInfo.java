@@ -52,6 +52,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String CreateTime;
 
     /**
+    * Either `cdn` or `ecdn`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Channel")
+    @Expose
+    private String Channel;
+
+    /**
      * Get Topic ID 
      * @return TopicId Topic ID
      */
@@ -119,6 +127,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get Either `cdn` or `ecdn`.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Channel Either `cdn` or `ecdn`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getChannel() {
+        return this.Channel;
+    }
+
+    /**
+     * Set Either `cdn` or `ecdn`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Channel Either `cdn` or `ecdn`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setChannel(String Channel) {
+        this.Channel = Channel;
+    }
+
     public TopicInfo() {
     }
 
@@ -139,6 +167,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.Channel != null) {
+            this.Channel = new String(source.Channel);
+        }
     }
 
 
@@ -150,6 +181,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "Channel", this.Channel);
 
     }
 }

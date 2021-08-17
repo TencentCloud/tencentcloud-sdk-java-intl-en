@@ -109,8 +109,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Boolean IsDebugAfterCharge;
 
     /**
-    * API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * API authentication type. Valid values: `SECRET` (key pair authentication), `NONE` (no authentication), `OAUTH`, and `EIAM`
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("AuthType")
     @Expose
@@ -385,20 +385,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AuthType API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get API authentication type. Valid values: `SECRET` (key pair authentication), `NONE` (no authentication), `OAUTH`, and `EIAM`
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return AuthType API authentication type. Valid values: `SECRET` (key pair authentication), `NONE` (no authentication), `OAUTH`, and `EIAM`
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getAuthType() {
         return this.AuthType;
     }
 
     /**
-     * Set API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AuthType API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set API authentication type. Valid values: `SECRET` (key pair authentication), `NONE` (no authentication), `OAUTH`, and `EIAM`
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param AuthType API authentication type. Valid values: `SECRET` (key pair authentication), `NONE` (no authentication), `OAUTH`, and `EIAM`
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setAuthType(String AuthType) {
         this.AuthType = AuthType;

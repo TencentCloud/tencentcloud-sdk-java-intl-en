@@ -114,7 +114,7 @@ public enum CdnErrorCode {
     // Invalid domain name status.
      INVALIDPARAMETER_CDNHOSTINVALIDSTATUS("InvalidParameter.CdnHostInvalidStatus"),
      
-    // 
+    // The domain name is too long.
      INVALIDPARAMETER_CDNHOSTTOOLONGHOST("InvalidParameter.CdnHostTooLongHost"),
      
     // Internal API error. Please submit a ticket for troubleshooting.
@@ -279,12 +279,6 @@ public enum CdnErrorCode {
     // CDN resources are being operated.
      RESOURCEINUSE_CDNOPINPROGRESS("ResourceInUse.CdnOpInProgress"),
      
-    // The tag key does not exist.
-     RESOURCENOTFOUND_CAMTAGKEYNOTEXIST("ResourceNotFound.CamTagKeyNotExist"),
-     
-    // The tag does not exist.
-     RESOURCENOTFOUND_CAMTAGNOTEXIST("ResourceNotFound.CamTagNotExist"),
-     
     // This domain name does not exist under the account. Please check and try again.
      RESOURCENOTFOUND_CDNHOSTNOTEXISTS("ResourceNotFound.CdnHostNotExists"),
      
@@ -324,6 +318,9 @@ public enum CdnErrorCode {
     // The domain name is locked.
      RESOURCEUNAVAILABLE_CDNHOSTISLOCKED("ResourceUnavailable.CdnHostIsLocked"),
      
+    // The domain name cannot be connected for being insecure or malicious.
+     RESOURCEUNAVAILABLE_CDNHOSTISMALICIOUS("ResourceUnavailable.CdnHostIsMalicious"),
+     
     // Domain name is still in use.
      RESOURCEUNAVAILABLE_CDNHOSTISNOTOFFLINE("ResourceUnavailable.CdnHostIsNotOffline"),
      
@@ -332,6 +329,9 @@ public enum CdnErrorCode {
      
     // The domain name does not have an ICP filing.
      RESOURCEUNAVAILABLE_CDNHOSTNOICP("ResourceUnavailable.CdnHostNoIcp"),
+     
+    // The SCDN service is not activated. Please purchase or renew an SCDN packet and try again.
+     RESOURCEUNAVAILABLE_SCDNUSERNOPACKAGE("ResourceUnavailable.ScdnUserNoPackage"),
      
     // The sub-account is unauthorized to query full data.
      UNAUTHORIZEDOPERATION_CDNACCOUNTUNAUTHORIZED("UnauthorizedOperation.CdnAccountUnauthorized"),

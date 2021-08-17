@@ -124,6 +124,13 @@ client: specifies to query data of the client region (where a user request devic
     private String AreaType;
 
     /**
+    * Specifies the product to query, either `cdn` (default) or `ecdn`.
+    */
+    @SerializedName("Product")
+    @Expose
+    private String Product;
+
+    /**
      * Get Query start time in the format of `yyyy-MM-dd HH:mm:ss`
 Only supports data query at daily granularity. The date in the input parameter is used as the start date.
 Data generated after or at 00:00:00 on the start date will be returned
@@ -407,6 +414,22 @@ client: specifies to query data of the client region (where a user request devic
         this.AreaType = AreaType;
     }
 
+    /**
+     * Get Specifies the product to query, either `cdn` (default) or `ecdn`. 
+     * @return Product Specifies the product to query, either `cdn` (default) or `ecdn`.
+     */
+    public String getProduct() {
+        return this.Product;
+    }
+
+    /**
+     * Set Specifies the product to query, either `cdn` (default) or `ecdn`.
+     * @param Product Specifies the product to query, either `cdn` (default) or `ecdn`.
+     */
+    public void setProduct(String Product) {
+        this.Product = Product;
+    }
+
     public ListTopDataRequest() {
     }
 
@@ -448,6 +471,9 @@ client: specifies to query data of the client region (where a user request devic
         if (source.AreaType != null) {
             this.AreaType = new String(source.AreaType);
         }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
     }
 
 
@@ -465,6 +491,7 @@ client: specifies to query data of the client region (where a user request devic
         this.setParamSimple(map, prefix + "Code", this.Code);
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamSimple(map, prefix + "AreaType", this.AreaType);
+        this.setParamSimple(map, prefix + "Product", this.Product);
 
     }
 }

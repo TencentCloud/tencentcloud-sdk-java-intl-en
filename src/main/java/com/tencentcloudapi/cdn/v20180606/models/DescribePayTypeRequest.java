@@ -33,6 +33,13 @@ Default value: `mainland`.
     private String Area;
 
     /**
+    * Specifies the product to query, either `cdn` (default) or `ecdn`.
+    */
+    @SerializedName("Product")
+    @Expose
+    private String Product;
+
+    /**
      * Get Specifies a service region.
 `mainland`: queries billing methods within Mainland China;
 `overseas`: queries billing methods outside Mainland China.
@@ -60,6 +67,22 @@ Default value: `mainland`.
         this.Area = Area;
     }
 
+    /**
+     * Get Specifies the product to query, either `cdn` (default) or `ecdn`. 
+     * @return Product Specifies the product to query, either `cdn` (default) or `ecdn`.
+     */
+    public String getProduct() {
+        return this.Product;
+    }
+
+    /**
+     * Set Specifies the product to query, either `cdn` (default) or `ecdn`.
+     * @param Product Specifies the product to query, either `cdn` (default) or `ecdn`.
+     */
+    public void setProduct(String Product) {
+        this.Product = Product;
+    }
+
     public DescribePayTypeRequest() {
     }
 
@@ -71,6 +94,9 @@ Default value: `mainland`.
         if (source.Area != null) {
             this.Area = new String(source.Area);
         }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
     }
 
 
@@ -79,6 +105,7 @@ Default value: `mainland`.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamSimple(map, prefix + "Product", this.Product);
 
     }
 }

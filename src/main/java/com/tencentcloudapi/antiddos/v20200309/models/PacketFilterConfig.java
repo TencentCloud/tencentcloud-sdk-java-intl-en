@@ -108,9 +108,9 @@ public class PacketFilterConfig extends AbstractModel{
     private String MatchType;
 
     /**
-    * Detection value. Should be in key string or regular expression.
-For `sunday`, enter a string or a string in hexadecimal byte code representation starting with `\x`. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
-For `pcre`, enter a regular expression.
+    * Detection value. Should be in key string or regular expression. 
+When the `MatchType` is `sunday`, enter a string or a string in hexadecimal byte code representation. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
+When the `MatchType` is `pcre`, enter a regular expression.
 ]
     */
     @SerializedName("Str")
@@ -173,8 +173,8 @@ For `pcre`, enter a regular expression.
 
     /**
     * The second detection value. Should be in key string or regular expression.
-For `sunday`, enter a string or a string in hexadecimal byte code representation starting with `\x`. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
-For `pcre`, enter a regular expression.
+When the `MatchType` is `sunday`, enter a string or a string in hexadecimal byte code representation. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
+When the `MatchType` is `pcre`, enter a regular expression.
 ]
     */
     @SerializedName("Str2")
@@ -433,13 +433,13 @@ For `pcre`, enter a regular expression.
     }
 
     /**
-     * Get Detection value. Should be in key string or regular expression.
-For `sunday`, enter a string or a string in hexadecimal byte code representation starting with `\x`. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
-For `pcre`, enter a regular expression.
+     * Get Detection value. Should be in key string or regular expression. 
+When the `MatchType` is `sunday`, enter a string or a string in hexadecimal byte code representation. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
+When the `MatchType` is `pcre`, enter a regular expression.
 ] 
-     * @return Str Detection value. Should be in key string or regular expression.
-For `sunday`, enter a string or a string in hexadecimal byte code representation starting with `\x`. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
-For `pcre`, enter a regular expression.
+     * @return Str Detection value. Should be in key string or regular expression. 
+When the `MatchType` is `sunday`, enter a string or a string in hexadecimal byte code representation. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
+When the `MatchType` is `pcre`, enter a regular expression.
 ]
      */
     public String getStr() {
@@ -447,13 +447,13 @@ For `pcre`, enter a regular expression.
     }
 
     /**
-     * Set Detection value. Should be in key string or regular expression.
-For `sunday`, enter a string or a string in hexadecimal byte code representation starting with `\x`. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
-For `pcre`, enter a regular expression.
+     * Set Detection value. Should be in key string or regular expression. 
+When the `MatchType` is `sunday`, enter a string or a string in hexadecimal byte code representation. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
+When the `MatchType` is `pcre`, enter a regular expression.
 ]
-     * @param Str Detection value. Should be in key string or regular expression.
-For `sunday`, enter a string or a string in hexadecimal byte code representation starting with `\x`. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
-For `pcre`, enter a regular expression.
+     * @param Str Detection value. Should be in key string or regular expression. 
+When the `MatchType` is `sunday`, enter a string or a string in hexadecimal byte code representation. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
+When the `MatchType` is `pcre`, enter a regular expression.
 ]
      */
     public void setStr(String Str) {
@@ -606,12 +606,12 @@ For `pcre`, enter a regular expression.
 
     /**
      * Get The second detection value. Should be in key string or regular expression.
-For `sunday`, enter a string or a string in hexadecimal byte code representation starting with `\x`. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
-For `pcre`, enter a regular expression.
+When the `MatchType` is `sunday`, enter a string or a string in hexadecimal byte code representation. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
+When the `MatchType` is `pcre`, enter a regular expression.
 ] 
      * @return Str2 The second detection value. Should be in key string or regular expression.
-For `sunday`, enter a string or a string in hexadecimal byte code representation starting with `\x`. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
-For `pcre`, enter a regular expression.
+When the `MatchType` is `sunday`, enter a string or a string in hexadecimal byte code representation. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
+When the `MatchType` is `pcre`, enter a regular expression.
 ]
      */
     public String getStr2() {
@@ -620,12 +620,12 @@ For `pcre`, enter a regular expression.
 
     /**
      * Set The second detection value. Should be in key string or regular expression.
-For `sunday`, enter a string or a string in hexadecimal byte code representation starting with `\x`. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
-For `pcre`, enter a regular expression.
+When the `MatchType` is `sunday`, enter a string or a string in hexadecimal byte code representation. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
+When the `MatchType` is `pcre`, enter a regular expression.
 ]
      * @param Str2 The second detection value. Should be in key string or regular expression.
-For `sunday`, enter a string or a string in hexadecimal byte code representation starting with `\x`. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
-For `pcre`, enter a regular expression.
+When the `MatchType` is `sunday`, enter a string or a string in hexadecimal byte code representation. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
+When the `MatchType` is `pcre`, enter a regular expression.
 ]
      */
     public void setStr2(String Str2) {

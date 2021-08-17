@@ -345,6 +345,13 @@ public class CreateApiRequest extends AbstractModel{
     private Boolean IsBase64Encoded;
 
     /**
+    * SCF function type, which takes effect if the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
+    */
+    @SerializedName("ServiceScfFunctionType")
+    @Expose
+    private String ServiceScfFunctionType;
+
+    /**
      * Get Unique service ID of API. 
      * @return ServiceId Unique service ID of API.
      */
@@ -1080,6 +1087,22 @@ public class CreateApiRequest extends AbstractModel{
         this.IsBase64Encoded = IsBase64Encoded;
     }
 
+    /**
+     * Get SCF function type, which takes effect if the backend type is `SCF`. Valid values: `EVENT` and `HTTP`. 
+     * @return ServiceScfFunctionType SCF function type, which takes effect if the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
+     */
+    public String getServiceScfFunctionType() {
+        return this.ServiceScfFunctionType;
+    }
+
+    /**
+     * Set SCF function type, which takes effect if the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
+     * @param ServiceScfFunctionType SCF function type, which takes effect if the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
+     */
+    public void setServiceScfFunctionType(String ServiceScfFunctionType) {
+        this.ServiceScfFunctionType = ServiceScfFunctionType;
+    }
+
     public CreateApiRequest() {
     }
 
@@ -1244,6 +1267,9 @@ public class CreateApiRequest extends AbstractModel{
         if (source.IsBase64Encoded != null) {
             this.IsBase64Encoded = new Boolean(source.IsBase64Encoded);
         }
+        if (source.ServiceScfFunctionType != null) {
+            this.ServiceScfFunctionType = new String(source.ServiceScfFunctionType);
+        }
     }
 
 
@@ -1297,6 +1323,7 @@ public class CreateApiRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TargetNamespaceId", this.TargetNamespaceId);
         this.setParamSimple(map, prefix + "UserType", this.UserType);
         this.setParamSimple(map, prefix + "IsBase64Encoded", this.IsBase64Encoded);
+        this.setParamSimple(map, prefix + "ServiceScfFunctionType", this.ServiceScfFunctionType);
 
     }
 }

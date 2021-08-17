@@ -30,6 +30,20 @@ public class DescribeCertDomainsRequest extends AbstractModel{
     private String Cert;
 
     /**
+    * Managed certificate ID. `Cert` and `CertId` cannot be both empty. If they’re both filled in, `CerID` prevails.
+    */
+    @SerializedName("CertId")
+    @Expose
+    private String CertId;
+
+    /**
+    * Product of the domain name, either `cdn` (default) or `ecdn`.
+    */
+    @SerializedName("Product")
+    @Expose
+    private String Product;
+
+    /**
      * Get Base64-encoded string of certificate in PEM format 
      * @return Cert Base64-encoded string of certificate in PEM format
      */
@@ -45,6 +59,38 @@ public class DescribeCertDomainsRequest extends AbstractModel{
         this.Cert = Cert;
     }
 
+    /**
+     * Get Managed certificate ID. `Cert` and `CertId` cannot be both empty. If they’re both filled in, `CerID` prevails. 
+     * @return CertId Managed certificate ID. `Cert` and `CertId` cannot be both empty. If they’re both filled in, `CerID` prevails.
+     */
+    public String getCertId() {
+        return this.CertId;
+    }
+
+    /**
+     * Set Managed certificate ID. `Cert` and `CertId` cannot be both empty. If they’re both filled in, `CerID` prevails.
+     * @param CertId Managed certificate ID. `Cert` and `CertId` cannot be both empty. If they’re both filled in, `CerID` prevails.
+     */
+    public void setCertId(String CertId) {
+        this.CertId = CertId;
+    }
+
+    /**
+     * Get Product of the domain name, either `cdn` (default) or `ecdn`. 
+     * @return Product Product of the domain name, either `cdn` (default) or `ecdn`.
+     */
+    public String getProduct() {
+        return this.Product;
+    }
+
+    /**
+     * Set Product of the domain name, either `cdn` (default) or `ecdn`.
+     * @param Product Product of the domain name, either `cdn` (default) or `ecdn`.
+     */
+    public void setProduct(String Product) {
+        this.Product = Product;
+    }
+
     public DescribeCertDomainsRequest() {
     }
 
@@ -56,6 +102,12 @@ public class DescribeCertDomainsRequest extends AbstractModel{
         if (source.Cert != null) {
             this.Cert = new String(source.Cert);
         }
+        if (source.CertId != null) {
+            this.CertId = new String(source.CertId);
+        }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
     }
 
 
@@ -64,6 +116,8 @@ public class DescribeCertDomainsRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Cert", this.Cert);
+        this.setParamSimple(map, prefix + "CertId", this.CertId);
+        this.setParamSimple(map, prefix + "Product", this.Product);
 
     }
 }

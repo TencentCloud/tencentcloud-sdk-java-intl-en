@@ -482,6 +482,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Quic Quic;
 
     /**
+    * Access authentication for OSS origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("OssPrivateAccess")
+    @Expose
+    private OssPrivateAccess OssPrivateAccess;
+
+    /**
+    * WebSocket configuration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("WebSocket")
+    @Expose
+    private WebSocket WebSocket;
+
+    /**
      * Get Domain name ID 
      * @return ResourceId Domain name ID
      */
@@ -1645,6 +1661,46 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.Quic = Quic;
     }
 
+    /**
+     * Get Access authentication for OSS origin
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return OssPrivateAccess Access authentication for OSS origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public OssPrivateAccess getOssPrivateAccess() {
+        return this.OssPrivateAccess;
+    }
+
+    /**
+     * Set Access authentication for OSS origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param OssPrivateAccess Access authentication for OSS origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setOssPrivateAccess(OssPrivateAccess OssPrivateAccess) {
+        this.OssPrivateAccess = OssPrivateAccess;
+    }
+
+    /**
+     * Get WebSocket configuration.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return WebSocket WebSocket configuration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public WebSocket getWebSocket() {
+        return this.WebSocket;
+    }
+
+    /**
+     * Set WebSocket configuration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param WebSocket WebSocket configuration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setWebSocket(WebSocket WebSocket) {
+        this.WebSocket = WebSocket;
+    }
+
     public DetailDomain() {
     }
 
@@ -1830,6 +1886,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.Quic != null) {
             this.Quic = new Quic(source.Quic);
         }
+        if (source.OssPrivateAccess != null) {
+            this.OssPrivateAccess = new OssPrivateAccess(source.OssPrivateAccess);
+        }
+        if (source.WebSocket != null) {
+            this.WebSocket = new WebSocket(source.WebSocket);
+        }
     }
 
 
@@ -1893,6 +1955,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamObj(map, prefix + "OriginCombine.", this.OriginCombine);
         this.setParamObj(map, prefix + "PostMaxSize.", this.PostMaxSize);
         this.setParamObj(map, prefix + "Quic.", this.Quic);
+        this.setParamObj(map, prefix + "OssPrivateAccess.", this.OssPrivateAccess);
+        this.setParamObj(map, prefix + "WebSocket.", this.WebSocket);
 
     }
 }
