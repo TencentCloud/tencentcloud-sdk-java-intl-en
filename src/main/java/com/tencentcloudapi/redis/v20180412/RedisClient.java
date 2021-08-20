@@ -39,6 +39,26 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to apply a parameter template to instances.
+     * @param req ApplyParamsTemplateRequest
+     * @return ApplyParamsTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApplyParamsTemplateResponse ApplyParamsTemplate(ApplyParamsTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ApplyParamsTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ApplyParamsTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ApplyParamsTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to associate a security group with instances in batches.
      * @param req AssociateSecurityGroupsRequest
      * @return AssociateSecurityGroupsResponse
@@ -159,6 +179,26 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a parameter template.
+     * @param req CreateParamTemplateRequest
+     * @return CreateParamTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateParamTemplateResponse CreateParamTemplate(CreateParamTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateParamTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateParamTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateParamTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete an instance sub-account.
      * @param req DeleteInstanceAccountRequest
      * @return DeleteInstanceAccountResponse
@@ -171,6 +211,26 @@ public class RedisClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteInstanceAccountResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteInstanceAccount");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a parameter template.
+     * @param req DeleteParamTemplateRequest
+     * @return DeleteParamTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteParamTemplateResponse DeleteParamTemplate(DeleteParamTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteParamTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteParamTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteParamTemplate");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -659,6 +719,46 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query parameter template details.
+     * @param req DescribeParamTemplateInfoRequest
+     * @return DescribeParamTemplateInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeParamTemplateInfoResponse DescribeParamTemplateInfo(DescribeParamTemplateInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeParamTemplateInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeParamTemplateInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeParamTemplateInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of parameter templates.
+     * @param req DescribeParamTemplatesRequest
+     * @return DescribeParamTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeParamTemplatesResponse DescribeParamTemplates(DescribeParamTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeParamTemplatesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeParamTemplatesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeParamTemplates");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the purchasable capacity specifications of Redis instances in the specified AZ and instance type. If you are not in the allowlist for the AZ or instance type, you cannot view the details of the capacity specifications. To apply for the eligibility, please submit a ticket.
      * @param req DescribeProductInfoRequest
      * @return DescribeProductInfoResponse
@@ -799,6 +899,26 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query slow queries of a TencentDB for Tendis instance.
+     * @param req DescribeTendisSlowLogRequest
+     * @return DescribeTendisSlowLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTendisSlowLogResponse DescribeTendisSlowLog(DescribeTendisSlowLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTendisSlowLogResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTendisSlowLogResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTendisSlowLog");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to terminate a pay-as-you-go instance.
      * @param req DestroyPostpaidInstanceRequest
      * @return DestroyPostpaidInstanceResponse
@@ -891,6 +1011,46 @@ public class RedisClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<EnableReplicaReadonlyResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "EnableReplicaReadonly");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the price for purchasing an instance.
+     * @param req InquiryPriceCreateInstanceRequest
+     * @return InquiryPriceCreateInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceCreateInstanceResponse InquiryPriceCreateInstance(InquiryPriceCreateInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquiryPriceCreateInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquiryPriceCreateInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "InquiryPriceCreateInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the price for scaling an instance.
+     * @param req InquiryPriceUpgradeInstanceRequest
+     * @return InquiryPriceUpgradeInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceUpgradeInstanceResponse InquiryPriceUpgradeInstance(InquiryPriceUpgradeInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquiryPriceUpgradeInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquiryPriceUpgradeInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "InquiryPriceUpgradeInstance");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1091,6 +1251,26 @@ public class RedisClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyNetworkConfigResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyNetworkConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify a parameter template.
+     * @param req ModifyParamTemplateRequest
+     * @return ModifyParamTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyParamTemplateResponse ModifyParamTemplate(ModifyParamTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyParamTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyParamTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyParamTemplate");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

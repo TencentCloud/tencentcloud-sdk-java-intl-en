@@ -107,6 +107,13 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     private Long Cpu;
 
     /**
+    * Whether to enable QuickChange. Valid values: `0` (no), `1` (yes). After QuickChange is enabled, the required resources will be checked: QuickChange is performed only when the required resources support the feature; otherwise, an error message will be returned.
+    */
+    @SerializedName("FastUpgrade")
+    @Expose
+    private Long FastUpgrade;
+
+    /**
      * Get Instance ID in the format of `cdb-c1nl9rpv` or `cdbro-c1nl9rpv`. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [DescribeDBInstances](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) API to query the ID, whose value is the `InstanceId` value in output parameters. 
      * @return InstanceId Instance ID in the format of `cdb-c1nl9rpv` or `cdbro-c1nl9rpv`. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [DescribeDBInstances](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) API to query the ID, whose value is the `InstanceId` value in output parameters.
      */
@@ -298,6 +305,22 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         this.Cpu = Cpu;
     }
 
+    /**
+     * Get Whether to enable QuickChange. Valid values: `0` (no), `1` (yes). After QuickChange is enabled, the required resources will be checked: QuickChange is performed only when the required resources support the feature; otherwise, an error message will be returned. 
+     * @return FastUpgrade Whether to enable QuickChange. Valid values: `0` (no), `1` (yes). After QuickChange is enabled, the required resources will be checked: QuickChange is performed only when the required resources support the feature; otherwise, an error message will be returned.
+     */
+    public Long getFastUpgrade() {
+        return this.FastUpgrade;
+    }
+
+    /**
+     * Set Whether to enable QuickChange. Valid values: `0` (no), `1` (yes). After QuickChange is enabled, the required resources will be checked: QuickChange is performed only when the required resources support the feature; otherwise, an error message will be returned.
+     * @param FastUpgrade Whether to enable QuickChange. Valid values: `0` (no), `1` (yes). After QuickChange is enabled, the required resources will be checked: QuickChange is performed only when the required resources support the feature; otherwise, an error message will be returned.
+     */
+    public void setFastUpgrade(Long FastUpgrade) {
+        this.FastUpgrade = FastUpgrade;
+    }
+
     public UpgradeDBInstanceRequest() {
     }
 
@@ -342,6 +365,9 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         if (source.Cpu != null) {
             this.Cpu = new Long(source.Cpu);
         }
+        if (source.FastUpgrade != null) {
+            this.FastUpgrade = new Long(source.FastUpgrade);
+        }
     }
 
 
@@ -361,6 +387,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceRole", this.InstanceRole);
         this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
+        this.setParamSimple(map, prefix + "FastUpgrade", this.FastUpgrade);
 
     }
 }

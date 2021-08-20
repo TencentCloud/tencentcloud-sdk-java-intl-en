@@ -30,6 +30,13 @@ public class RedisNodeInfo extends AbstractModel{
     private Long NodeType;
 
     /**
+    * ID of the master or replica node, which is not required upon creation of the instance
+    */
+    @SerializedName("NodeId")
+    @Expose
+    private Long NodeId;
+
+    /**
     * ID of the availability zone of the master or replica node
     */
     @SerializedName("ZoneId")
@@ -37,11 +44,11 @@ public class RedisNodeInfo extends AbstractModel{
     private Long ZoneId;
 
     /**
-    * ID of the master or replica node, which is not required upon creation of the instance
+    * ID of the availability zone of the master or replica node
     */
-    @SerializedName("NodeId")
+    @SerializedName("ZoneName")
     @Expose
-    private Long NodeId;
+    private String ZoneName;
 
     /**
      * Get Node type. Valid values: `0` (master node), `1` (replica node) 
@@ -57,6 +64,22 @@ public class RedisNodeInfo extends AbstractModel{
      */
     public void setNodeType(Long NodeType) {
         this.NodeType = NodeType;
+    }
+
+    /**
+     * Get ID of the master or replica node, which is not required upon creation of the instance 
+     * @return NodeId ID of the master or replica node, which is not required upon creation of the instance
+     */
+    public Long getNodeId() {
+        return this.NodeId;
+    }
+
+    /**
+     * Set ID of the master or replica node, which is not required upon creation of the instance
+     * @param NodeId ID of the master or replica node, which is not required upon creation of the instance
+     */
+    public void setNodeId(Long NodeId) {
+        this.NodeId = NodeId;
     }
 
     /**
@@ -76,19 +99,19 @@ public class RedisNodeInfo extends AbstractModel{
     }
 
     /**
-     * Get ID of the master or replica node, which is not required upon creation of the instance 
-     * @return NodeId ID of the master or replica node, which is not required upon creation of the instance
+     * Get ID of the availability zone of the master or replica node 
+     * @return ZoneName ID of the availability zone of the master or replica node
      */
-    public Long getNodeId() {
-        return this.NodeId;
+    public String getZoneName() {
+        return this.ZoneName;
     }
 
     /**
-     * Set ID of the master or replica node, which is not required upon creation of the instance
-     * @param NodeId ID of the master or replica node, which is not required upon creation of the instance
+     * Set ID of the availability zone of the master or replica node
+     * @param ZoneName ID of the availability zone of the master or replica node
      */
-    public void setNodeId(Long NodeId) {
-        this.NodeId = NodeId;
+    public void setZoneName(String ZoneName) {
+        this.ZoneName = ZoneName;
     }
 
     public RedisNodeInfo() {
@@ -102,11 +125,14 @@ public class RedisNodeInfo extends AbstractModel{
         if (source.NodeType != null) {
             this.NodeType = new Long(source.NodeType);
         }
+        if (source.NodeId != null) {
+            this.NodeId = new Long(source.NodeId);
+        }
         if (source.ZoneId != null) {
             this.ZoneId = new Long(source.ZoneId);
         }
-        if (source.NodeId != null) {
-            this.NodeId = new Long(source.NodeId);
+        if (source.ZoneName != null) {
+            this.ZoneName = new String(source.ZoneName);
         }
     }
 
@@ -116,8 +142,9 @@ public class RedisNodeInfo extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NodeType", this.NodeType);
-        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "NodeId", this.NodeId);
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
 
     }
 }

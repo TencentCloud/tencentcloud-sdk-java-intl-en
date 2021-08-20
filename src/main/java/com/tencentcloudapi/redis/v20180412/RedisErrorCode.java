@@ -141,6 +141,9 @@ public enum RedisErrorCode {
     // The number of instances requested for purchase at a time is out of the purchasable quantity range.
      LIMITEXCEEDED_INVALIDPARAMETERGOODSNUMNOTINRANGE("LimitExceeded.InvalidParameterGoodsNumNotInRange"),
      
+    // The requested capacity is out of the purchasable capacity range.
+     LIMITEXCEEDED_MEMSIZENOTINRANGE("LimitExceeded.MemSizeNotInRange"),
+     
     // The requested length of purchase is more than 3 years and exceeds the maximum value.
      LIMITEXCEEDED_PERIODEXCEEDMAXLIMIT("LimitExceeded.PeriodExceedMaxLimit"),
      

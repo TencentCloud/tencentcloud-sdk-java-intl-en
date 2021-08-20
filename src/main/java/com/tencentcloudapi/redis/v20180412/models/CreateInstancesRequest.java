@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class CreateInstancesRequest extends AbstractModel{
 
     /**
-    * Availability zone ID of the instance. For more information, please see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
-    */
-    @SerializedName("ZoneId")
-    @Expose
-    private Long ZoneId;
-
-    /**
     * Instance type. Valid values: 2 (Redis 2.8 Memory Edition in standard architecture), 3 (CKV 3.2 Memory Edition in standard architecture), 4 (CKV 3.2 Memory Edition in cluster architecture), 6 (Redis 4.0 Memory Edition in standard architecture), 7 (Redis 4.0 Memory Edition in cluster architecture), 8 (Redis 5.0 Memory Edition in standard architecture), 9 (Redis 5.0 Memory Edition in cluster architecture).
     */
     @SerializedName("TypeId")
@@ -63,6 +56,13 @@ public class CreateInstancesRequest extends AbstractModel{
     @SerializedName("BillingMode")
     @Expose
     private Long BillingMode;
+
+    /**
+    * Availability zone ID of the instance. For more information, please see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private Long ZoneId;
 
     /**
     * Instance password. If the input parameter `NoAuth` is `true` and a VPC is used, the `Password` is optional; otherwise, it is required.
@@ -165,20 +165,18 @@ If the instance type parameter `TypeId` indicates CKV 3.2, the password contains
     private ResourceTag [] ResourceTags;
 
     /**
-     * Get Availability zone ID of the instance. For more information, please see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1). 
-     * @return ZoneId Availability zone ID of the instance. For more information, please see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
-     */
-    public Long getZoneId() {
-        return this.ZoneId;
-    }
+    * Name of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+    */
+    @SerializedName("ZoneName")
+    @Expose
+    private String ZoneName;
 
     /**
-     * Set Availability zone ID of the instance. For more information, please see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
-     * @param ZoneId Availability zone ID of the instance. For more information, please see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
-     */
-    public void setZoneId(Long ZoneId) {
-        this.ZoneId = ZoneId;
-    }
+    * ID of the parameter template applied to the created instance. If this parameter is left blank, the default parameter template will be applied.
+    */
+    @SerializedName("TemplateId")
+    @Expose
+    private String TemplateId;
 
     /**
      * Get Instance type. Valid values: 2 (Redis 2.8 Memory Edition in standard architecture), 3 (CKV 3.2 Memory Edition in standard architecture), 4 (CKV 3.2 Memory Edition in cluster architecture), 6 (Redis 4.0 Memory Edition in standard architecture), 7 (Redis 4.0 Memory Edition in cluster architecture), 8 (Redis 5.0 Memory Edition in standard architecture), 9 (Redis 5.0 Memory Edition in cluster architecture). 
@@ -258,6 +256,22 @@ If the instance type parameter `TypeId` indicates CKV 3.2, the password contains
      */
     public void setBillingMode(Long BillingMode) {
         this.BillingMode = BillingMode;
+    }
+
+    /**
+     * Get Availability zone ID of the instance. For more information, please see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1). 
+     * @return ZoneId Availability zone ID of the instance. For more information, please see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+     */
+    public Long getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * Set Availability zone ID of the instance. For more information, please see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+     * @param ZoneId Availability zone ID of the instance. For more information, please see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+     */
+    public void setZoneId(Long ZoneId) {
+        this.ZoneId = ZoneId;
     }
 
     /**
@@ -492,6 +506,38 @@ If the instance type parameter `TypeId` indicates CKV 3.2, the password contains
         this.ResourceTags = ResourceTags;
     }
 
+    /**
+     * Get Name of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1). 
+     * @return ZoneName Name of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+     */
+    public String getZoneName() {
+        return this.ZoneName;
+    }
+
+    /**
+     * Set Name of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+     * @param ZoneName Name of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
+     */
+    public void setZoneName(String ZoneName) {
+        this.ZoneName = ZoneName;
+    }
+
+    /**
+     * Get ID of the parameter template applied to the created instance. If this parameter is left blank, the default parameter template will be applied. 
+     * @return TemplateId ID of the parameter template applied to the created instance. If this parameter is left blank, the default parameter template will be applied.
+     */
+    public String getTemplateId() {
+        return this.TemplateId;
+    }
+
+    /**
+     * Set ID of the parameter template applied to the created instance. If this parameter is left blank, the default parameter template will be applied.
+     * @param TemplateId ID of the parameter template applied to the created instance. If this parameter is left blank, the default parameter template will be applied.
+     */
+    public void setTemplateId(String TemplateId) {
+        this.TemplateId = TemplateId;
+    }
+
     public CreateInstancesRequest() {
     }
 
@@ -500,9 +546,6 @@ If the instance type parameter `TypeId` indicates CKV 3.2, the password contains
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateInstancesRequest(CreateInstancesRequest source) {
-        if (source.ZoneId != null) {
-            this.ZoneId = new Long(source.ZoneId);
-        }
         if (source.TypeId != null) {
             this.TypeId = new Long(source.TypeId);
         }
@@ -517,6 +560,9 @@ If the instance type parameter `TypeId` indicates CKV 3.2, the password contains
         }
         if (source.BillingMode != null) {
             this.BillingMode = new Long(source.BillingMode);
+        }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
         }
         if (source.Password != null) {
             this.Password = new String(source.Password);
@@ -569,6 +615,12 @@ If the instance type parameter `TypeId` indicates CKV 3.2, the password contains
                 this.ResourceTags[i] = new ResourceTag(source.ResourceTags[i]);
             }
         }
+        if (source.ZoneName != null) {
+            this.ZoneName = new String(source.ZoneName);
+        }
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
     }
 
 
@@ -576,12 +628,12 @@ If the instance type parameter `TypeId` indicates CKV 3.2, the password contains
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "TypeId", this.TypeId);
         this.setParamSimple(map, prefix + "MemSize", this.MemSize);
         this.setParamSimple(map, prefix + "GoodsNum", this.GoodsNum);
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "BillingMode", this.BillingMode);
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
@@ -596,6 +648,8 @@ If the instance type parameter `TypeId` indicates CKV 3.2, the password contains
         this.setParamSimple(map, prefix + "NoAuth", this.NoAuth);
         this.setParamArrayObj(map, prefix + "NodeSet.", this.NodeSet);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+        this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
+        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
 
     }
 }

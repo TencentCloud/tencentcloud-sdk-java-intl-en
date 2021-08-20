@@ -249,7 +249,7 @@ This is an asynchronous API. You can also use the [DescribeDBInstances](https://
     }
 
     /**
-     *This API (CreateParamTemplate) is used to create a parameter template.
+     *This API is used to create a parameter template. The common request parameter `Region` can only be set to `ap-guangzhou`.
      * @param req CreateParamTemplateRequest
      * @return CreateParamTemplateResponse
      * @throws TencentCloudSDKException
@@ -349,7 +349,7 @@ This is an asynchronous API. You can also use the [DescribeDBInstances](https://
     }
 
     /**
-     *This API (DeleteParamTemplate) is used to delete a parameter template.
+     *This API is used to delete a parameter template. The common request parameter `Region` can only be set to `ap-guangzhou`.
      * @param req DeleteParamTemplateRequest
      * @return DeleteParamTemplateResponse
      * @throws TencentCloudSDKException
@@ -993,7 +993,7 @@ The new API (CreateBackup) can specify the table to be backed up when a logical 
     }
 
     /**
-     *This API (DescribeParamTemplateInfo) is used to query parameter template details.
+     *This API is used to query parameter template details. The common request parameter `Region` can only be set to `ap-guangzhou`.
      * @param req DescribeParamTemplateInfoRequest
      * @return DescribeParamTemplateInfoResponse
      * @throws TencentCloudSDKException
@@ -1616,7 +1616,7 @@ Note that when modifying account permissions, you need to pass in the full permi
     }
 
     /**
-     *This API (ModifyParamTemplate) is used to modify a parameter template.
+     *This API is used to modify a parameter template. The common request parameter `Region` can only be set to `ap-guangzhou`.
      * @param req ModifyParamTemplateRequest
      * @return ModifyParamTemplateResponse
      * @throws TencentCloudSDKException

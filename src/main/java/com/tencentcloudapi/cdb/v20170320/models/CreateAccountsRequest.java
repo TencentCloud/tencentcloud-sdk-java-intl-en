@@ -51,7 +51,7 @@ public class CreateAccountsRequest extends AbstractModel{
     private String Description;
 
     /**
-    * The maximum number of instance connections supported by the new account
+    * Maximum connections of the new account. Default value: `10240`. Maximum value: `10240`.
     */
     @SerializedName("MaxUserConnections")
     @Expose
@@ -122,16 +122,16 @@ public class CreateAccountsRequest extends AbstractModel{
     }
 
     /**
-     * Get The maximum number of instance connections supported by the new account 
-     * @return MaxUserConnections The maximum number of instance connections supported by the new account
+     * Get Maximum connections of the new account. Default value: `10240`. Maximum value: `10240`. 
+     * @return MaxUserConnections Maximum connections of the new account. Default value: `10240`. Maximum value: `10240`.
      */
     public Long getMaxUserConnections() {
         return this.MaxUserConnections;
     }
 
     /**
-     * Set The maximum number of instance connections supported by the new account
-     * @param MaxUserConnections The maximum number of instance connections supported by the new account
+     * Set Maximum connections of the new account. Default value: `10240`. Maximum value: `10240`.
+     * @param MaxUserConnections Maximum connections of the new account. Default value: `10240`. Maximum value: `10240`.
      */
     public void setMaxUserConnections(Long MaxUserConnections) {
         this.MaxUserConnections = MaxUserConnections;

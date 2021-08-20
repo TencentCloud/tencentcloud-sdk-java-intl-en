@@ -21,6 +21,9 @@ public enum CdbErrorCode {
     // Async task exception.
      FAILEDOPERATION_ASYNCTASKSTATUSERROR("FailedOperation.AsyncTaskStatusError"),
      
+    // Failed to lock the instance while performing exclusive operations. Please try again later.
+     FAILEDOPERATION_CDBINSTANCELOCKFAILERROR("FailedOperation.CdbInstanceLockFailError"),
+     
     // Creation failed. Please check whether the user already exists.
      FAILEDOPERATION_CREATEACCOUNTERROR("FailedOperation.CreateAccountError"),
      
@@ -32,6 +35,9 @@ public enum CdbErrorCode {
      
     // An error occurred while obtaining permissions.
      FAILEDOPERATION_GETPRIVILEGEERROR("FailedOperation.GetPrivilegeError"),
+     
+    // Query failed.
+     FAILEDOPERATION_INSTANCEQUERYERROR("FailedOperation.InstanceQueryError"),
      
     // Failed to deserialize JSON.
      FAILEDOPERATION_JSONUNMARSHALERROR("FailedOperation.JsonUnmarshalError"),
@@ -68,6 +74,9 @@ public enum CdbErrorCode {
      
     // Authentication failed.
      INTERNALERROR_AUTHERROR("InternalError.AuthError"),
+     
+    // Authentication failed.
+     INTERNALERROR_CAUTHERROR("InternalError.CauthError"),
      
     // Internal system error.
      INTERNALERROR_CDBCGWERROR("InternalError.CdbCgwError"),
@@ -174,6 +183,9 @@ public enum CdbErrorCode {
     // There are resources in the placement group.
      INVALIDPARAMETER_DEPLOYGROUPNOTEMPTY("InvalidParameter.DeployGroupNotEmpty"),
      
+    // Parameter exception.
+     INVALIDPARAMETER_EXCEPTIONPARAM("InvalidParameter.ExceptionParam"),
+     
     // The instance is not found.
      INVALIDPARAMETER_INSTANCENAMENOTFOUND("InvalidParameter.InstanceNameNotFound"),
      
@@ -189,7 +201,7 @@ public enum CdbErrorCode {
     // Invalid parameter value
      INVALIDPARAMETER_INVALIDPARAMETERERROR("InvalidParameter.InvalidParameterError"),
      
-    // 
+    // Failed to deserialize JSON.
      INVALIDPARAMETER_JSONUNMARSHALERROR("InvalidParameter.JsonUnmarshalError"),
      
     // The quota of placement group resources has been exceeded.
@@ -276,17 +288,32 @@ public enum CdbErrorCode {
     // This instance needs permissions to use this feature.
      OPERATIONDENIED_FUNCTIONDENIED("OperationDenied.FunctionDenied"),
      
+    // Instance locks are in conflict. Please try again later.
+     OPERATIONDENIED_INSTANCELOCKERCONFLICT("OperationDenied.InstanceLockerConflict"),
+     
     // Exceptional instance status
      OPERATIONDENIED_INSTANCESTATUSERROR("OperationDenied.InstanceStatusError"),
      
     // Delayed replication is not allowed because the instance is executing another task.
      OPERATIONDENIED_INSTANCETASKRUNNING("OperationDenied.InstanceTaskRunning"),
      
+    // The instance does not support this operation.
+     OPERATIONDENIED_INSTANCEUNSUPPORTEDOPERATEERROR("OperationDenied.InstanceUnsupportedOperateError"),
+     
+    // Basic instances do not support this operation (feature).
+     OPERATIONDENIED_NOTSUPPORTBASIC("OperationDenied.NotSupportBasic"),
+     
     // The host information of the local root account cannot be modified.
      OPERATIONDENIED_NOTSUPPORTMODIFYLOCALROOTHOSTERROR("OperationDenied.NotSupportModifyLocalRootHostError"),
      
     // There are other orders being submitted. Please try again later.
      OPERATIONDENIED_OTHERODERINPROCESS("OperationDenied.OtherOderInProcess"),
+     
+    // The maximum number of results has been reached. Please narrow down your query.
+     OPERATIONDENIED_RESULTOVERLIMIT("OperationDenied.ResultOverLimit"),
+     
+    // The Tencent Cloud sub-account is not allowed to perform the operation due to insufficient permissions.
+     OPERATIONDENIED_SUBACCOUNTOPERATIONDENIED("OperationDenied.SubAccountOperationDenied"),
      
     // This instance is not refundable.
      OPERATIONDENIED_UNSUPPORTREFUNDERROR("OperationDenied.UnSupportRefundError"),

@@ -37,6 +37,22 @@ public class DescribeBackupUrlResponse extends AbstractModel{
     private String [] InnerDownloadUrl;
 
     /**
+    * File name (only valid for TencentDB for Tendis instances)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Filenames")
+    @Expose
+    private String [] Filenames;
+
+    /**
+    * List of backup file information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BackupInfos")
+    @Expose
+    private BackupDownloadInfo [] BackupInfos;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -76,6 +92,46 @@ public class DescribeBackupUrlResponse extends AbstractModel{
     }
 
     /**
+     * Get File name (only valid for TencentDB for Tendis instances)
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Filenames File name (only valid for TencentDB for Tendis instances)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String [] getFilenames() {
+        return this.Filenames;
+    }
+
+    /**
+     * Set File name (only valid for TencentDB for Tendis instances)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Filenames File name (only valid for TencentDB for Tendis instances)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setFilenames(String [] Filenames) {
+        this.Filenames = Filenames;
+    }
+
+    /**
+     * Get List of backup file information
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return BackupInfos List of backup file information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public BackupDownloadInfo [] getBackupInfos() {
+        return this.BackupInfos;
+    }
+
+    /**
+     * Set List of backup file information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param BackupInfos List of backup file information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setBackupInfos(BackupDownloadInfo [] BackupInfos) {
+        this.BackupInfos = BackupInfos;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -111,6 +167,18 @@ public class DescribeBackupUrlResponse extends AbstractModel{
                 this.InnerDownloadUrl[i] = new String(source.InnerDownloadUrl[i]);
             }
         }
+        if (source.Filenames != null) {
+            this.Filenames = new String[source.Filenames.length];
+            for (int i = 0; i < source.Filenames.length; i++) {
+                this.Filenames[i] = new String(source.Filenames[i]);
+            }
+        }
+        if (source.BackupInfos != null) {
+            this.BackupInfos = new BackupDownloadInfo[source.BackupInfos.length];
+            for (int i = 0; i < source.BackupInfos.length; i++) {
+                this.BackupInfos[i] = new BackupDownloadInfo(source.BackupInfos[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -123,6 +191,8 @@ public class DescribeBackupUrlResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DownloadUrl.", this.DownloadUrl);
         this.setParamArraySimple(map, prefix + "InnerDownloadUrl.", this.InnerDownloadUrl);
+        this.setParamArraySimple(map, prefix + "Filenames.", this.Filenames);
+        this.setParamArrayObj(map, prefix + "BackupInfos.", this.BackupInfos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

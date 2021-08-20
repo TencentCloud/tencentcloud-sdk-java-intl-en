@@ -37,7 +37,7 @@ public class ModifyAccountMaxUserConnectionsRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * The maximum number of instance connections supported by an account
+    * Maximum connections of the account. Maximum value: `10240`.
     */
     @SerializedName("MaxUserConnections")
     @Expose
@@ -76,16 +76,16 @@ public class ModifyAccountMaxUserConnectionsRequest extends AbstractModel{
     }
 
     /**
-     * Get The maximum number of instance connections supported by an account 
-     * @return MaxUserConnections The maximum number of instance connections supported by an account
+     * Get Maximum connections of the account. Maximum value: `10240`. 
+     * @return MaxUserConnections Maximum connections of the account. Maximum value: `10240`.
      */
     public Long getMaxUserConnections() {
         return this.MaxUserConnections;
     }
 
     /**
-     * Set The maximum number of instance connections supported by an account
-     * @param MaxUserConnections The maximum number of instance connections supported by an account
+     * Set Maximum connections of the account. Maximum value: `10240`.
+     * @param MaxUserConnections Maximum connections of the account. Maximum value: `10240`.
      */
     public void setMaxUserConnections(Long MaxUserConnections) {
         this.MaxUserConnections = MaxUserConnections;
