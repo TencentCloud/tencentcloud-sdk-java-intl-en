@@ -44,7 +44,7 @@ public class AsyncEvent extends AbstractModel{
     private String Qualifier;
 
     /**
-    * Event status
+    * Event status. Values: `RUNNING`; `FINISHED` (invoked successfully); `ABORTED` (invocation ended); `FAILED` (invocation failed)
     */
     @SerializedName("Status")
     @Expose
@@ -113,16 +113,16 @@ public class AsyncEvent extends AbstractModel{
     }
 
     /**
-     * Get Event status 
-     * @return Status Event status
+     * Get Event status. Values: `RUNNING`; `FINISHED` (invoked successfully); `ABORTED` (invocation ended); `FAILED` (invocation failed) 
+     * @return Status Event status. Values: `RUNNING`; `FINISHED` (invoked successfully); `ABORTED` (invocation ended); `FAILED` (invocation failed)
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Event status
-     * @param Status Event status
+     * Set Event status. Values: `RUNNING`; `FINISHED` (invoked successfully); `ABORTED` (invocation ended); `FAILED` (invocation failed)
+     * @param Status Event status. Values: `RUNNING`; `FINISHED` (invoked successfully); `ABORTED` (invocation ended); `FAILED` (invocation failed)
      */
     public void setStatus(String Status) {
         this.Status = Status;

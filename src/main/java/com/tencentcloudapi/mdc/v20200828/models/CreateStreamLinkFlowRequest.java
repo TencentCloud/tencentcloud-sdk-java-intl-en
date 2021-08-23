@@ -20,85 +20,85 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateMediaConnectFlowRequest extends AbstractModel{
+public class CreateStreamLinkFlowRequest extends AbstractModel{
 
     /**
-    * Flow name.
+    * Flow name
     */
     @SerializedName("FlowName")
     @Expose
     private String FlowName;
 
     /**
-    * Maximum bandwidth in bps. Valid values: 10000000, 20000000, 50000000.
+    * Maximum bandwidth in bps. Valid values: `10000000`, `20000000`, `50000000`
     */
     @SerializedName("MaxBandwidth")
     @Expose
     private Long MaxBandwidth;
 
     /**
-    * Flow input group.
+    * Flow input group
     */
     @SerializedName("InputGroup")
     @Expose
     private CreateInput [] InputGroup;
 
     /**
-     * Get Flow name. 
-     * @return FlowName Flow name.
+     * Get Flow name 
+     * @return FlowName Flow name
      */
     public String getFlowName() {
         return this.FlowName;
     }
 
     /**
-     * Set Flow name.
-     * @param FlowName Flow name.
+     * Set Flow name
+     * @param FlowName Flow name
      */
     public void setFlowName(String FlowName) {
         this.FlowName = FlowName;
     }
 
     /**
-     * Get Maximum bandwidth in bps. Valid values: 10000000, 20000000, 50000000. 
-     * @return MaxBandwidth Maximum bandwidth in bps. Valid values: 10000000, 20000000, 50000000.
+     * Get Maximum bandwidth in bps. Valid values: `10000000`, `20000000`, `50000000` 
+     * @return MaxBandwidth Maximum bandwidth in bps. Valid values: `10000000`, `20000000`, `50000000`
      */
     public Long getMaxBandwidth() {
         return this.MaxBandwidth;
     }
 
     /**
-     * Set Maximum bandwidth in bps. Valid values: 10000000, 20000000, 50000000.
-     * @param MaxBandwidth Maximum bandwidth in bps. Valid values: 10000000, 20000000, 50000000.
+     * Set Maximum bandwidth in bps. Valid values: `10000000`, `20000000`, `50000000`
+     * @param MaxBandwidth Maximum bandwidth in bps. Valid values: `10000000`, `20000000`, `50000000`
      */
     public void setMaxBandwidth(Long MaxBandwidth) {
         this.MaxBandwidth = MaxBandwidth;
     }
 
     /**
-     * Get Flow input group. 
-     * @return InputGroup Flow input group.
+     * Get Flow input group 
+     * @return InputGroup Flow input group
      */
     public CreateInput [] getInputGroup() {
         return this.InputGroup;
     }
 
     /**
-     * Set Flow input group.
-     * @param InputGroup Flow input group.
+     * Set Flow input group
+     * @param InputGroup Flow input group
      */
     public void setInputGroup(CreateInput [] InputGroup) {
         this.InputGroup = InputGroup;
     }
 
-    public CreateMediaConnectFlowRequest() {
+    public CreateStreamLinkFlowRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateMediaConnectFlowRequest(CreateMediaConnectFlowRequest source) {
+    public CreateStreamLinkFlowRequest(CreateStreamLinkFlowRequest source) {
         if (source.FlowName != null) {
             this.FlowName = new String(source.FlowName);
         }

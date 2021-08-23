@@ -89,6 +89,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String InputRegion;
 
     /**
+    * RTMP configuration information of an input
+    */
+    @SerializedName("RTMPSettings")
+    @Expose
+    private DescribeInputRTMPSettings RTMPSettings;
+
+    /**
+    * Input failover
+Note: this field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("FailOver")
+    @Expose
+    private String FailOver;
+
+    /**
      * Get Input ID. 
      * @return InputId Input ID.
      */
@@ -244,6 +259,42 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.InputRegion = InputRegion;
     }
 
+    /**
+     * Get RTMP configuration information of an input 
+     * @return RTMPSettings RTMP configuration information of an input
+     */
+    public DescribeInputRTMPSettings getRTMPSettings() {
+        return this.RTMPSettings;
+    }
+
+    /**
+     * Set RTMP configuration information of an input
+     * @param RTMPSettings RTMP configuration information of an input
+     */
+    public void setRTMPSettings(DescribeInputRTMPSettings RTMPSettings) {
+        this.RTMPSettings = RTMPSettings;
+    }
+
+    /**
+     * Get Input failover
+Note: this field may return `null`, indicating that no valid value was found. 
+     * @return FailOver Input failover
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public String getFailOver() {
+        return this.FailOver;
+    }
+
+    /**
+     * Set Input failover
+Note: this field may return `null`, indicating that no valid value was found.
+     * @param FailOver Input failover
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public void setFailOver(String FailOver) {
+        this.FailOver = FailOver;
+    }
+
     public DescribeInput() {
     }
 
@@ -285,6 +336,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.InputRegion != null) {
             this.InputRegion = new String(source.InputRegion);
         }
+        if (source.RTMPSettings != null) {
+            this.RTMPSettings = new DescribeInputRTMPSettings(source.RTMPSettings);
+        }
+        if (source.FailOver != null) {
+            this.FailOver = new String(source.FailOver);
+        }
     }
 
 
@@ -301,6 +358,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "SRTSettings.", this.SRTSettings);
         this.setParamObj(map, prefix + "RTPSettings.", this.RTPSettings);
         this.setParamSimple(map, prefix + "InputRegion", this.InputRegion);
+        this.setParamObj(map, prefix + "RTMPSettings.", this.RTMPSettings);
+        this.setParamSimple(map, prefix + "FailOver", this.FailOver);
 
     }
 }

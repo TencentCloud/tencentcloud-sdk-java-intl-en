@@ -20,41 +20,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteMediaConnectFlowRequest extends AbstractModel{
+public class DeleteStreamLinkOutputRequest extends AbstractModel{
 
     /**
-    * Flow ID.
+    * Flow ID
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-     * Get Flow ID. 
-     * @return FlowId Flow ID.
+    * Output ID
+    */
+    @SerializedName("OutputId")
+    @Expose
+    private String OutputId;
+
+    /**
+     * Get Flow ID 
+     * @return FlowId Flow ID
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set Flow ID.
-     * @param FlowId Flow ID.
+     * Set Flow ID
+     * @param FlowId Flow ID
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
-    public DeleteMediaConnectFlowRequest() {
+    /**
+     * Get Output ID 
+     * @return OutputId Output ID
+     */
+    public String getOutputId() {
+        return this.OutputId;
+    }
+
+    /**
+     * Set Output ID
+     * @param OutputId Output ID
+     */
+    public void setOutputId(String OutputId) {
+        this.OutputId = OutputId;
+    }
+
+    public DeleteStreamLinkOutputRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteMediaConnectFlowRequest(DeleteMediaConnectFlowRequest source) {
+    public DeleteStreamLinkOutputRequest(DeleteStreamLinkOutputRequest source) {
         if (source.FlowId != null) {
             this.FlowId = new String(source.FlowId);
+        }
+        if (source.OutputId != null) {
+            this.OutputId = new String(source.OutputId);
         }
     }
 
@@ -64,6 +90,7 @@ public class DeleteMediaConnectFlowRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
+        this.setParamSimple(map, prefix + "OutputId", this.OutputId);
 
     }
 }

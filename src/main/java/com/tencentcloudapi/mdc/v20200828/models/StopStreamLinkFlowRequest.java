@@ -20,41 +20,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StartMediaConnectFlowResponse extends AbstractModel{
+public class StopStreamLinkFlowRequest extends AbstractModel{
 
     /**
-    * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+    * Flow ID
     */
-    @SerializedName("RequestId")
+    @SerializedName("FlowId")
     @Expose
-    private String RequestId;
+    private String FlowId;
 
     /**
-     * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
-     * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * Get Flow ID 
+     * @return FlowId Flow ID
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public String getFlowId() {
+        return this.FlowId;
     }
 
     /**
-     * Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-     * @param RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * Set Flow ID
+     * @param FlowId Flow ID
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setFlowId(String FlowId) {
+        this.FlowId = FlowId;
     }
 
-    public StartMediaConnectFlowResponse() {
+    public StopStreamLinkFlowRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public StartMediaConnectFlowResponse(StartMediaConnectFlowResponse source) {
-        if (source.RequestId != null) {
-            this.RequestId = new String(source.RequestId);
+    public StopStreamLinkFlowRequest(StopStreamLinkFlowRequest source) {
+        if (source.FlowId != null) {
+            this.FlowId = new String(source.FlowId);
         }
     }
 
@@ -63,7 +63,7 @@ public class StartMediaConnectFlowResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
 
     }
 }

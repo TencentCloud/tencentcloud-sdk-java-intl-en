@@ -20,67 +20,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyMediaConnectOutputRequest extends AbstractModel{
+public class ModifyStreamLinkFlowRequest extends AbstractModel{
 
     /**
-    * Flow ID.
+    * Flow ID
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-    * Configuration of the output to be modified.
+    * Name of the flow to modify
     */
-    @SerializedName("Output")
+    @SerializedName("FlowName")
     @Expose
-    private ModifyOutput Output;
+    private String FlowName;
 
     /**
-     * Get Flow ID. 
-     * @return FlowId Flow ID.
+     * Get Flow ID 
+     * @return FlowId Flow ID
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set Flow ID.
-     * @param FlowId Flow ID.
+     * Set Flow ID
+     * @param FlowId Flow ID
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get Configuration of the output to be modified. 
-     * @return Output Configuration of the output to be modified.
+     * Get Name of the flow to modify 
+     * @return FlowName Name of the flow to modify
      */
-    public ModifyOutput getOutput() {
-        return this.Output;
+    public String getFlowName() {
+        return this.FlowName;
     }
 
     /**
-     * Set Configuration of the output to be modified.
-     * @param Output Configuration of the output to be modified.
+     * Set Name of the flow to modify
+     * @param FlowName Name of the flow to modify
      */
-    public void setOutput(ModifyOutput Output) {
-        this.Output = Output;
+    public void setFlowName(String FlowName) {
+        this.FlowName = FlowName;
     }
 
-    public ModifyMediaConnectOutputRequest() {
+    public ModifyStreamLinkFlowRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyMediaConnectOutputRequest(ModifyMediaConnectOutputRequest source) {
+    public ModifyStreamLinkFlowRequest(ModifyStreamLinkFlowRequest source) {
         if (source.FlowId != null) {
             this.FlowId = new String(source.FlowId);
         }
-        if (source.Output != null) {
-            this.Output = new ModifyOutput(source.Output);
+        if (source.FlowName != null) {
+            this.FlowName = new String(source.FlowName);
         }
     }
 
@@ -90,7 +90,7 @@ public class ModifyMediaConnectOutputRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
-        this.setParamObj(map, prefix + "Output.", this.Output);
+        this.setParamSimple(map, prefix + "FlowName", this.FlowName);
 
     }
 }

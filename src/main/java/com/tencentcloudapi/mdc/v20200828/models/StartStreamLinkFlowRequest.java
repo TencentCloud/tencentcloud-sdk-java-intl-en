@@ -20,67 +20,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateOutputRTPSettingsDestinations extends AbstractModel{
+public class StartStreamLinkFlowRequest extends AbstractModel{
 
     /**
-    * Push destination IP.
+    * Flow ID
     */
-    @SerializedName("Ip")
+    @SerializedName("FlowId")
     @Expose
-    private String Ip;
+    private String FlowId;
 
     /**
-    * Push destination port.
-    */
-    @SerializedName("Port")
-    @Expose
-    private Long Port;
-
-    /**
-     * Get Push destination IP. 
-     * @return Ip Push destination IP.
+     * Get Flow ID 
+     * @return FlowId Flow ID
      */
-    public String getIp() {
-        return this.Ip;
+    public String getFlowId() {
+        return this.FlowId;
     }
 
     /**
-     * Set Push destination IP.
-     * @param Ip Push destination IP.
+     * Set Flow ID
+     * @param FlowId Flow ID
      */
-    public void setIp(String Ip) {
-        this.Ip = Ip;
+    public void setFlowId(String FlowId) {
+        this.FlowId = FlowId;
     }
 
-    /**
-     * Get Push destination port. 
-     * @return Port Push destination port.
-     */
-    public Long getPort() {
-        return this.Port;
-    }
-
-    /**
-     * Set Push destination port.
-     * @param Port Push destination port.
-     */
-    public void setPort(Long Port) {
-        this.Port = Port;
-    }
-
-    public CreateOutputRTPSettingsDestinations() {
+    public StartStreamLinkFlowRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateOutputRTPSettingsDestinations(CreateOutputRTPSettingsDestinations source) {
-        if (source.Ip != null) {
-            this.Ip = new String(source.Ip);
-        }
-        if (source.Port != null) {
-            this.Port = new Long(source.Port);
+    public StartStreamLinkFlowRequest(StartStreamLinkFlowRequest source) {
+        if (source.FlowId != null) {
+            this.FlowId = new String(source.FlowId);
         }
     }
 
@@ -89,8 +63,7 @@ public class CreateOutputRTPSettingsDestinations extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Ip", this.Ip);
-        this.setParamSimple(map, prefix + "Port", this.Port);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
 
     }
 }

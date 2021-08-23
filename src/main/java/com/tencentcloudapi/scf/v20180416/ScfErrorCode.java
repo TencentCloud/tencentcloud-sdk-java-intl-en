@@ -93,9 +93,6 @@ public enum ScfErrorCode {
     // You cannot publish a version in the current function state. Please try again when the state is normal.
      FAILEDOPERATION_PUBLISHVERSION("FailedOperation.PublishVersion"),
      
-    // The role does not exist.
-     FAILEDOPERATION_QCSROLENOTFOUND("FailedOperation.QcsRoleNotFound"),
-     
     // The function already has a reserved concurrency setting task in progress. Please try again later.
      FAILEDOPERATION_RESERVEDINPROGRESS("FailedOperation.ReservedInProgress"),
      
@@ -162,6 +159,9 @@ public enum ScfErrorCode {
     // Incorrect `AdditionalVersionWeights` parameter.
      INVALIDPARAMETERVALUE_ADDITIONALVERSIONWEIGHTS("InvalidParameterValue.AdditionalVersionWeights"),
      
+    // The default alias cannot be deleted. Please check and try again.
+     INVALIDPARAMETERVALUE_ALIAS("InvalidParameterValue.Alias"),
+     
     // ApiGateway parameter error.
      INVALIDPARAMETERVALUE_APIGATEWAY("InvalidParameterValue.ApiGateway"),
      
@@ -177,16 +177,13 @@ public enum ScfErrorCode {
     // The value of `cfs` configuration item does not meet the specification.
      INVALIDPARAMETERVALUE_CFSPARAMETERERROR("InvalidParameterValue.CfsParameterError"),
      
-    // The CFS parameter format does not conform to the specification.
-     INVALIDPARAMETERVALUE_CFSSTRUCTIONERROR("InvalidParameterValue.CfsStructionError"),
-     
     // Ckafka error.
      INVALIDPARAMETERVALUE_CKAFKA("InvalidParameterValue.Ckafka"),
      
     // Cls error.
      INVALIDPARAMETERVALUE_CLS("InvalidParameterValue.Cls"),
      
-    // 
+    // To modify CLS configuration, Role parameter is required. Please check and try again.
      INVALIDPARAMETERVALUE_CLSROLE("InvalidParameterValue.ClsRole"),
      
     // Cmq error.
@@ -339,6 +336,9 @@ public enum ScfErrorCode {
     // The searchkey is not `Keyword`, `Tag`, or `Runtime`.
      INVALIDPARAMETERVALUE_SEARCHKEY("InvalidParameterValue.SearchKey"),
      
+    // SecretInfo error
+     INVALIDPARAMETERVALUE_SECRETINFO("InvalidParameterValue.SecretInfo"),
+     
     // Invalid ServiceName.
      INVALIDPARAMETERVALUE_SERVICENAME("InvalidParameterValue.ServiceName"),
      
@@ -465,9 +465,6 @@ public enum ScfErrorCode {
     // Cos is in use.
      RESOURCEINUSE_COS("ResourceInUse.Cos"),
      
-    // This function already exists.
-     RESOURCEINUSE_FUNCTION("ResourceInUse.Function"),
-     
     // This FunctionName already exists.
      RESOURCEINUSE_FUNCTIONNAME("ResourceInUse.FunctionName"),
      
@@ -497,6 +494,9 @@ public enum ScfErrorCode {
      
     // Cdn does not exist.
      RESOURCENOTFOUND_CDN("ResourceNotFound.Cdn"),
+     
+    // Unable to find the specified mount point under the specified CFS
+     RESOURCENOTFOUND_CFSMOUNTINSNOTMATCH("ResourceNotFound.CfsMountInsNotMatch"),
      
     // VPCs of the CFS instance and the SCF function are different.
      RESOURCENOTFOUND_CFSVPCNOTMATCH("ResourceNotFound.CfsVpcNotMatch"),

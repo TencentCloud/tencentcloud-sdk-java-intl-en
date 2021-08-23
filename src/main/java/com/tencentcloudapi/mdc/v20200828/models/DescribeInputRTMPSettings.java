@@ -20,64 +20,74 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateOutputRtmpSettingsDestinations extends AbstractModel{
+public class DescribeInputRTMPSettings extends AbstractModel{
 
     /**
-    * Push URL in the format of `rtmp://domain/live`.
+    * Path for RTMP stream pushing
+Note: this field may return `null`, indicating that no valid value was found.
     */
-    @SerializedName("Url")
+    @SerializedName("AppName")
     @Expose
-    private String Url;
+    private String AppName;
 
     /**
-    * Push `StreamKey` in the format of `stream?key=value`.
+    * StreamKey for RTMP stream pushing
+Format of an RTMP stream pushing URL: rtmp://IP address:1935/AppName/StreamKey
     */
     @SerializedName("StreamKey")
     @Expose
     private String StreamKey;
 
     /**
-     * Get Push URL in the format of `rtmp://domain/live`. 
-     * @return Url Push URL in the format of `rtmp://domain/live`.
+     * Get Path for RTMP stream pushing
+Note: this field may return `null`, indicating that no valid value was found. 
+     * @return AppName Path for RTMP stream pushing
+Note: this field may return `null`, indicating that no valid value was found.
      */
-    public String getUrl() {
-        return this.Url;
+    public String getAppName() {
+        return this.AppName;
     }
 
     /**
-     * Set Push URL in the format of `rtmp://domain/live`.
-     * @param Url Push URL in the format of `rtmp://domain/live`.
+     * Set Path for RTMP stream pushing
+Note: this field may return `null`, indicating that no valid value was found.
+     * @param AppName Path for RTMP stream pushing
+Note: this field may return `null`, indicating that no valid value was found.
      */
-    public void setUrl(String Url) {
-        this.Url = Url;
+    public void setAppName(String AppName) {
+        this.AppName = AppName;
     }
 
     /**
-     * Get Push `StreamKey` in the format of `stream?key=value`. 
-     * @return StreamKey Push `StreamKey` in the format of `stream?key=value`.
+     * Get StreamKey for RTMP stream pushing
+Format of an RTMP stream pushing URL: rtmp://IP address:1935/AppName/StreamKey 
+     * @return StreamKey StreamKey for RTMP stream pushing
+Format of an RTMP stream pushing URL: rtmp://IP address:1935/AppName/StreamKey
      */
     public String getStreamKey() {
         return this.StreamKey;
     }
 
     /**
-     * Set Push `StreamKey` in the format of `stream?key=value`.
-     * @param StreamKey Push `StreamKey` in the format of `stream?key=value`.
+     * Set StreamKey for RTMP stream pushing
+Format of an RTMP stream pushing URL: rtmp://IP address:1935/AppName/StreamKey
+     * @param StreamKey StreamKey for RTMP stream pushing
+Format of an RTMP stream pushing URL: rtmp://IP address:1935/AppName/StreamKey
      */
     public void setStreamKey(String StreamKey) {
         this.StreamKey = StreamKey;
     }
 
-    public CreateOutputRtmpSettingsDestinations() {
+    public DescribeInputRTMPSettings() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateOutputRtmpSettingsDestinations(CreateOutputRtmpSettingsDestinations source) {
-        if (source.Url != null) {
-            this.Url = new String(source.Url);
+    public DescribeInputRTMPSettings(DescribeInputRTMPSettings source) {
+        if (source.AppName != null) {
+            this.AppName = new String(source.AppName);
         }
         if (source.StreamKey != null) {
             this.StreamKey = new String(source.StreamKey);
@@ -89,7 +99,7 @@ public class CreateOutputRtmpSettingsDestinations extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "AppName", this.AppName);
         this.setParamSimple(map, prefix + "StreamKey", this.StreamKey);
 
     }

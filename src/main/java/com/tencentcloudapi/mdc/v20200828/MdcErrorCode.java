@@ -24,14 +24,8 @@ public enum MdcErrorCode {
     // No information found.
      INVALIDPARAMETER_NOTFOUND("InvalidParameter.NotFound"),
      
-    // Invalid `Output`.
-     INVALIDPARAMETER_OUTPUT("InvalidParameter.Output"),
-     
-    // 
+    // Invalid `OutputGroups` value
      INVALIDPARAMETER_OUTPUTGROUPS("InvalidParameter.OutputGroups"),
-     
-    // 
-     INVALIDPARAMETER_OUTPUTID("InvalidParameter.OutputId"),
      
     // Invalid `PageNum`.
      INVALIDPARAMETER_PAGENUM("InvalidParameter.PageNum"),

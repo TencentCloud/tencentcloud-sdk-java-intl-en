@@ -39,18 +39,18 @@ public class MdcClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create the configuration of a MediaConnect flow.
-     * @param req CreateMediaConnectFlowRequest
-     * @return CreateMediaConnectFlowResponse
+     *This API is used to create a StreamLink flow.
+     * @param req CreateStreamLinkFlowRequest
+     * @return CreateStreamLinkFlowResponse
      * @throws TencentCloudSDKException
      */
-    public CreateMediaConnectFlowResponse CreateMediaConnectFlow(CreateMediaConnectFlowRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateMediaConnectFlowResponse> rsp = null;
+    public CreateStreamLinkFlowResponse CreateStreamLinkFlow(CreateStreamLinkFlowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateStreamLinkFlowResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateMediaConnectFlowResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<CreateStreamLinkFlowResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "CreateMediaConnectFlow");
+                rspStr = this.internalRequest(req, "CreateStreamLinkFlow");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -59,18 +59,18 @@ public class MdcClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create the output information of a MediaConnect flow.
-     * @param req CreateMediaConnectOutputRequest
-     * @return CreateMediaConnectOutputResponse
+     *This API is used to delete a StreamLink flow.
+     * @param req DeleteStreamLinkFlowRequest
+     * @return DeleteStreamLinkFlowResponse
      * @throws TencentCloudSDKException
      */
-    public CreateMediaConnectOutputResponse CreateMediaConnectOutput(CreateMediaConnectOutputRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateMediaConnectOutputResponse> rsp = null;
+    public DeleteStreamLinkFlowResponse DeleteStreamLinkFlow(DeleteStreamLinkFlowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteStreamLinkFlowResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateMediaConnectOutputResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DeleteStreamLinkFlowResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "CreateMediaConnectOutput");
+                rspStr = this.internalRequest(req, "DeleteStreamLinkFlow");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -79,18 +79,18 @@ public class MdcClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete the configuration of a MediaConnect flow.
-     * @param req DeleteMediaConnectFlowRequest
-     * @return DeleteMediaConnectFlowResponse
+     *This API is used to delete an output of a StreamLink flow.
+     * @param req DeleteStreamLinkOutputRequest
+     * @return DeleteStreamLinkOutputResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteMediaConnectFlowResponse DeleteMediaConnectFlow(DeleteMediaConnectFlowRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteMediaConnectFlowResponse> rsp = null;
+    public DeleteStreamLinkOutputResponse DeleteStreamLinkOutput(DeleteStreamLinkOutputRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteStreamLinkOutputResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteMediaConnectFlowResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DeleteStreamLinkOutputResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "DeleteMediaConnectFlow");
+                rspStr = this.internalRequest(req, "DeleteStreamLinkOutput");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -99,18 +99,18 @@ public class MdcClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete the output configuration of a MediaConnect flow.
-     * @param req DeleteMediaConnectOutputRequest
-     * @return DeleteMediaConnectOutputResponse
+     *This API is used to query the configuration information of a StreamLink flow.
+     * @param req DescribeStreamLinkFlowRequest
+     * @return DescribeStreamLinkFlowResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteMediaConnectOutputResponse DeleteMediaConnectOutput(DeleteMediaConnectOutputRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteMediaConnectOutputResponse> rsp = null;
+    public DescribeStreamLinkFlowResponse DescribeStreamLinkFlow(DescribeStreamLinkFlowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamLinkFlowResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteMediaConnectOutputResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamLinkFlowResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "DeleteMediaConnectOutput");
+                rspStr = this.internalRequest(req, "DescribeStreamLinkFlow");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -119,18 +119,18 @@ public class MdcClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the configuration information of a MediaConnect flow.
-     * @param req DescribeMediaConnectFlowRequest
-     * @return DescribeMediaConnectFlowResponse
+     *This API is used to query the configuration information of multiple StreamLink flows in batches.
+     * @param req DescribeStreamLinkFlowsRequest
+     * @return DescribeStreamLinkFlowsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeMediaConnectFlowResponse DescribeMediaConnectFlow(DescribeMediaConnectFlowRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeMediaConnectFlowResponse> rsp = null;
+    public DescribeStreamLinkFlowsResponse DescribeStreamLinkFlows(DescribeStreamLinkFlowsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamLinkFlowsResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeMediaConnectFlowResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamLinkFlowsResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "DescribeMediaConnectFlow");
+                rspStr = this.internalRequest(req, "DescribeStreamLinkFlows");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -139,18 +139,18 @@ public class MdcClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the configuration information of multiple MediaConnect flows in batches.
-     * @param req DescribeMediaConnectFlowsRequest
-     * @return DescribeMediaConnectFlowsResponse
+     *This API is used to modify the configuration information of a StreamLink flow.
+     * @param req ModifyStreamLinkFlowRequest
+     * @return ModifyStreamLinkFlowResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeMediaConnectFlowsResponse DescribeMediaConnectFlows(DescribeMediaConnectFlowsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeMediaConnectFlowsResponse> rsp = null;
+    public ModifyStreamLinkFlowResponse ModifyStreamLinkFlow(ModifyStreamLinkFlowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyStreamLinkFlowResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeMediaConnectFlowsResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<ModifyStreamLinkFlowResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "DescribeMediaConnectFlows");
+                rspStr = this.internalRequest(req, "ModifyStreamLinkFlow");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -159,18 +159,18 @@ public class MdcClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the configuration information of a MediaConnect flow.
-     * @param req ModifyMediaConnectFlowRequest
-     * @return ModifyMediaConnectFlowResponse
+     *This API is used to start a StreamLink flow.
+     * @param req StartStreamLinkFlowRequest
+     * @return StartStreamLinkFlowResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyMediaConnectFlowResponse ModifyMediaConnectFlow(ModifyMediaConnectFlowRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyMediaConnectFlowResponse> rsp = null;
+    public StartStreamLinkFlowResponse StartStreamLinkFlow(StartStreamLinkFlowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartStreamLinkFlowResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyMediaConnectFlowResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<StartStreamLinkFlowResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "ModifyMediaConnectFlow");
+                rspStr = this.internalRequest(req, "StartStreamLinkFlow");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -179,78 +179,18 @@ public class MdcClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the input information of a MediaConnect flow.
-     * @param req ModifyMediaConnectInputRequest
-     * @return ModifyMediaConnectInputResponse
+     *This API is used to stop a StreamLink flow.
+     * @param req StopStreamLinkFlowRequest
+     * @return StopStreamLinkFlowResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyMediaConnectInputResponse ModifyMediaConnectInput(ModifyMediaConnectInputRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyMediaConnectInputResponse> rsp = null;
+    public StopStreamLinkFlowResponse StopStreamLinkFlow(StopStreamLinkFlowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopStreamLinkFlowResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyMediaConnectInputResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<StopStreamLinkFlowResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "ModifyMediaConnectInput");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to modify the output configuration of a MediaConnect flow.
-     * @param req ModifyMediaConnectOutputRequest
-     * @return ModifyMediaConnectOutputResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyMediaConnectOutputResponse ModifyMediaConnectOutput(ModifyMediaConnectOutputRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyMediaConnectOutputResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyMediaConnectOutputResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyMediaConnectOutput");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to start a MediaConnect flow.
-     * @param req StartMediaConnectFlowRequest
-     * @return StartMediaConnectFlowResponse
-     * @throws TencentCloudSDKException
-     */
-    public StartMediaConnectFlowResponse StartMediaConnectFlow(StartMediaConnectFlowRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StartMediaConnectFlowResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<StartMediaConnectFlowResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StartMediaConnectFlow");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to stop a MediaConnect flow.
-     * @param req StopMediaConnectFlowRequest
-     * @return StopMediaConnectFlowResponse
-     * @throws TencentCloudSDKException
-     */
-    public StopMediaConnectFlowResponse StopMediaConnectFlow(StopMediaConnectFlowRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StopMediaConnectFlowResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<StopMediaConnectFlowResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StopMediaConnectFlow");
+                rspStr = this.internalRequest(req, "StopStreamLinkFlow");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

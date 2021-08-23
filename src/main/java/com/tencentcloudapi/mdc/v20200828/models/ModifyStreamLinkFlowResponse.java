@@ -20,14 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateMediaConnectOutputResponse extends AbstractModel{
-
-    /**
-    * Information of the created output.
-    */
-    @SerializedName("Info")
-    @Expose
-    private DescribeOutput Info;
+public class ModifyStreamLinkFlowResponse extends AbstractModel{
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -35,22 +28,6 @@ public class CreateMediaConnectOutputResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get Information of the created output. 
-     * @return Info Information of the created output.
-     */
-    public DescribeOutput getInfo() {
-        return this.Info;
-    }
-
-    /**
-     * Set Information of the created output.
-     * @param Info Information of the created output.
-     */
-    public void setInfo(DescribeOutput Info) {
-        this.Info = Info;
-    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -68,17 +45,14 @@ public class CreateMediaConnectOutputResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateMediaConnectOutputResponse() {
+    public ModifyStreamLinkFlowResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateMediaConnectOutputResponse(CreateMediaConnectOutputResponse source) {
-        if (source.Info != null) {
-            this.Info = new DescribeOutput(source.Info);
-        }
+    public ModifyStreamLinkFlowResponse(ModifyStreamLinkFlowResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -89,7 +63,6 @@ public class CreateMediaConnectOutputResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Info.", this.Info);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

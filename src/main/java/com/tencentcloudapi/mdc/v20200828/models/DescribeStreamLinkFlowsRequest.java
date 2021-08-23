@@ -20,62 +20,62 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMediaConnectFlowsRequest extends AbstractModel{
+public class DescribeStreamLinkFlowsRequest extends AbstractModel{
 
     /**
-    * Number of current pages. Default value: 1.
+    * Number of the current page. Default value: `1`
     */
     @SerializedName("PageNum")
     @Expose
     private Long PageNum;
 
     /**
-    * Number of entries per page. Default value: 10.
+    * Number of entries per page. Default value: `10`
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-     * Get Number of current pages. Default value: 1. 
-     * @return PageNum Number of current pages. Default value: 1.
+     * Get Number of the current page. Default value: `1` 
+     * @return PageNum Number of the current page. Default value: `1`
      */
     public Long getPageNum() {
         return this.PageNum;
     }
 
     /**
-     * Set Number of current pages. Default value: 1.
-     * @param PageNum Number of current pages. Default value: 1.
+     * Set Number of the current page. Default value: `1`
+     * @param PageNum Number of the current page. Default value: `1`
      */
     public void setPageNum(Long PageNum) {
         this.PageNum = PageNum;
     }
 
     /**
-     * Get Number of entries per page. Default value: 10. 
-     * @return PageSize Number of entries per page. Default value: 10.
+     * Get Number of entries per page. Default value: `10` 
+     * @return PageSize Number of entries per page. Default value: `10`
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set Number of entries per page. Default value: 10.
-     * @param PageSize Number of entries per page. Default value: 10.
+     * Set Number of entries per page. Default value: `10`
+     * @param PageSize Number of entries per page. Default value: `10`
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
-    public DescribeMediaConnectFlowsRequest() {
+    public DescribeStreamLinkFlowsRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeMediaConnectFlowsRequest(DescribeMediaConnectFlowsRequest source) {
+    public DescribeStreamLinkFlowsRequest(DescribeStreamLinkFlowsRequest source) {
         if (source.PageNum != null) {
             this.PageNum = new Long(source.PageNum);
         }

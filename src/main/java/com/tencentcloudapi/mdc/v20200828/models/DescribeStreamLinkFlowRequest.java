@@ -20,67 +20,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateMediaConnectOutputRequest extends AbstractModel{
+public class DescribeStreamLinkFlowRequest extends AbstractModel{
 
     /**
-    * Flow ID.
+    * Flow ID
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-    * Output configuration of a flow.
-    */
-    @SerializedName("Output")
-    @Expose
-    private CreateOutput Output;
-
-    /**
-     * Get Flow ID. 
-     * @return FlowId Flow ID.
+     * Get Flow ID 
+     * @return FlowId Flow ID
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set Flow ID.
-     * @param FlowId Flow ID.
+     * Set Flow ID
+     * @param FlowId Flow ID
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
-    /**
-     * Get Output configuration of a flow. 
-     * @return Output Output configuration of a flow.
-     */
-    public CreateOutput getOutput() {
-        return this.Output;
-    }
-
-    /**
-     * Set Output configuration of a flow.
-     * @param Output Output configuration of a flow.
-     */
-    public void setOutput(CreateOutput Output) {
-        this.Output = Output;
-    }
-
-    public CreateMediaConnectOutputRequest() {
+    public DescribeStreamLinkFlowRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateMediaConnectOutputRequest(CreateMediaConnectOutputRequest source) {
+    public DescribeStreamLinkFlowRequest(DescribeStreamLinkFlowRequest source) {
         if (source.FlowId != null) {
             this.FlowId = new String(source.FlowId);
-        }
-        if (source.Output != null) {
-            this.Output = new CreateOutput(source.Output);
         }
     }
 
@@ -90,7 +64,6 @@ public class CreateMediaConnectOutputRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
-        this.setParamObj(map, prefix + "Output.", this.Output);
 
     }
 }

@@ -37,7 +37,7 @@ public class DescribeFlow extends AbstractModel{
     private String FlowName;
 
     /**
-    * Flow status.
+    * Flow status. Valid values: `IDLE`, `RUNNING`
     */
     @SerializedName("State")
     @Expose
@@ -98,16 +98,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Flow status. 
-     * @return State Flow status.
+     * Get Flow status. Valid values: `IDLE`, `RUNNING` 
+     * @return State Flow status. Valid values: `IDLE`, `RUNNING`
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set Flow status.
-     * @param State Flow status.
+     * Set Flow status. Valid values: `IDLE`, `RUNNING`
+     * @param State Flow status. Valid values: `IDLE`, `RUNNING`
      */
     public void setState(String State) {
         this.State = State;

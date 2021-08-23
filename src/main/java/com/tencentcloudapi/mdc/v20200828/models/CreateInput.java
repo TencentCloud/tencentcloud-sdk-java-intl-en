@@ -30,7 +30,7 @@ public class CreateInput extends AbstractModel{
     private String InputName;
 
     /**
-    * Input protocol. Valid values: SRT, RTP.
+    * Input protocol. Valid values: `SRT`, `RTP`, `RTMP`
     */
     @SerializedName("Protocol")
     @Expose
@@ -65,6 +65,13 @@ public class CreateInput extends AbstractModel{
     private CreateInputRTPSettings RTPSettings;
 
     /**
+    * Input failover. Valid values: `OPEN`, `CLOSE` (default)
+    */
+    @SerializedName("FailOver")
+    @Expose
+    private String FailOver;
+
+    /**
      * Get Input name, which can contain 1 to 32 letters, digits, and underscores. 
      * @return InputName Input name, which can contain 1 to 32 letters, digits, and underscores.
      */
@@ -81,16 +88,16 @@ public class CreateInput extends AbstractModel{
     }
 
     /**
-     * Get Input protocol. Valid values: SRT, RTP. 
-     * @return Protocol Input protocol. Valid values: SRT, RTP.
+     * Get Input protocol. Valid values: `SRT`, `RTP`, `RTMP` 
+     * @return Protocol Input protocol. Valid values: `SRT`, `RTP`, `RTMP`
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Input protocol. Valid values: SRT, RTP.
-     * @param Protocol Input protocol. Valid values: SRT, RTP.
+     * Set Input protocol. Valid values: `SRT`, `RTP`, `RTMP`
+     * @param Protocol Input protocol. Valid values: `SRT`, `RTP`, `RTMP`
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
@@ -160,6 +167,22 @@ public class CreateInput extends AbstractModel{
         this.RTPSettings = RTPSettings;
     }
 
+    /**
+     * Get Input failover. Valid values: `OPEN`, `CLOSE` (default) 
+     * @return FailOver Input failover. Valid values: `OPEN`, `CLOSE` (default)
+     */
+    public String getFailOver() {
+        return this.FailOver;
+    }
+
+    /**
+     * Set Input failover. Valid values: `OPEN`, `CLOSE` (default)
+     * @param FailOver Input failover. Valid values: `OPEN`, `CLOSE` (default)
+     */
+    public void setFailOver(String FailOver) {
+        this.FailOver = FailOver;
+    }
+
     public CreateInput() {
     }
 
@@ -189,6 +212,9 @@ public class CreateInput extends AbstractModel{
         if (source.RTPSettings != null) {
             this.RTPSettings = new CreateInputRTPSettings(source.RTPSettings);
         }
+        if (source.FailOver != null) {
+            this.FailOver = new String(source.FailOver);
+        }
     }
 
 
@@ -202,6 +228,7 @@ public class CreateInput extends AbstractModel{
         this.setParamArraySimple(map, prefix + "AllowIpList.", this.AllowIpList);
         this.setParamObj(map, prefix + "SRTSettings.", this.SRTSettings);
         this.setParamObj(map, prefix + "RTPSettings.", this.RTPSettings);
+        this.setParamSimple(map, prefix + "FailOver", this.FailOver);
 
     }
 }

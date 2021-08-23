@@ -309,6 +309,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private StatusReason [] StatusReasons;
 
     /**
+    * Specifies whether to enable asynchronization 
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AsyncRunEnable")
+    @Expose
+    private String AsyncRunEnable;
+
+    /**
+    * Specifies whether to enable event tracking
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TraceEnable")
+    @Expose
+    private String TraceEnable;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -980,6 +996,46 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Specifies whether to enable asynchronization 
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return AsyncRunEnable Specifies whether to enable asynchronization 
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getAsyncRunEnable() {
+        return this.AsyncRunEnable;
+    }
+
+    /**
+     * Set Specifies whether to enable asynchronization 
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param AsyncRunEnable Specifies whether to enable asynchronization 
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setAsyncRunEnable(String AsyncRunEnable) {
+        this.AsyncRunEnable = AsyncRunEnable;
+    }
+
+    /**
+     * Get Specifies whether to enable event tracking
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return TraceEnable Specifies whether to enable event tracking
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getTraceEnable() {
+        return this.TraceEnable;
+    }
+
+    /**
+     * Set Specifies whether to enable event tracking
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param TraceEnable Specifies whether to enable event tracking
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setTraceEnable(String TraceEnable) {
+        this.TraceEnable = TraceEnable;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -1135,6 +1191,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 this.StatusReasons[i] = new StatusReason(source.StatusReasons[i]);
             }
         }
+        if (source.AsyncRunEnable != null) {
+            this.AsyncRunEnable = new String(source.AsyncRunEnable);
+        }
+        if (source.TraceEnable != null) {
+            this.TraceEnable = new String(source.TraceEnable);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1185,6 +1247,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Qualifier", this.Qualifier);
         this.setParamSimple(map, prefix + "InitTimeout", this.InitTimeout);
         this.setParamArrayObj(map, prefix + "StatusReasons.", this.StatusReasons);
+        this.setParamSimple(map, prefix + "AsyncRunEnable", this.AsyncRunEnable);
+        this.setParamSimple(map, prefix + "TraceEnable", this.TraceEnable);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -20,10 +20,10 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMediaConnectFlowResponse extends AbstractModel{
+public class CreateStreamLinkFlowResponse extends AbstractModel{
 
     /**
-    * Configuration information of a flow.
+    * Information of the created flow
     */
     @SerializedName("Info")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeMediaConnectFlowResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Configuration information of a flow. 
-     * @return Info Configuration information of a flow.
+     * Get Information of the created flow 
+     * @return Info Information of the created flow
      */
     public DescribeFlow getInfo() {
         return this.Info;
     }
 
     /**
-     * Set Configuration information of a flow.
-     * @param Info Configuration information of a flow.
+     * Set Information of the created flow
+     * @param Info Information of the created flow
      */
     public void setInfo(DescribeFlow Info) {
         this.Info = Info;
@@ -68,14 +68,14 @@ public class DescribeMediaConnectFlowResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeMediaConnectFlowResponse() {
+    public CreateStreamLinkFlowResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeMediaConnectFlowResponse(DescribeMediaConnectFlowResponse source) {
+    public CreateStreamLinkFlowResponse(CreateStreamLinkFlowResponse source) {
         if (source.Info != null) {
             this.Info = new DescribeFlow(source.Info);
         }

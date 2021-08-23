@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyMediaConnectInputResponse extends AbstractModel{
+public class DescribeStreamLinkFlowResponse extends AbstractModel{
 
     /**
-    * Input information after modification.
+    * Configuration information of a flow
     */
     @SerializedName("Info")
     @Expose
-    private DescribeInput Info;
+    private DescribeFlow Info;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,18 +37,18 @@ public class ModifyMediaConnectInputResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Input information after modification. 
-     * @return Info Input information after modification.
+     * Get Configuration information of a flow 
+     * @return Info Configuration information of a flow
      */
-    public DescribeInput getInfo() {
+    public DescribeFlow getInfo() {
         return this.Info;
     }
 
     /**
-     * Set Input information after modification.
-     * @param Info Input information after modification.
+     * Set Configuration information of a flow
+     * @param Info Configuration information of a flow
      */
-    public void setInfo(DescribeInput Info) {
+    public void setInfo(DescribeFlow Info) {
         this.Info = Info;
     }
 
@@ -68,16 +68,16 @@ public class ModifyMediaConnectInputResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ModifyMediaConnectInputResponse() {
+    public DescribeStreamLinkFlowResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyMediaConnectInputResponse(ModifyMediaConnectInputResponse source) {
+    public DescribeStreamLinkFlowResponse(DescribeStreamLinkFlowResponse source) {
         if (source.Info != null) {
-            this.Info = new DescribeInput(source.Info);
+            this.Info = new DescribeFlow(source.Info);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);

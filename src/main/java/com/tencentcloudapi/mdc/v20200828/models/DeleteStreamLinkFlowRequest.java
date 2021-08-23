@@ -20,67 +20,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyMediaConnectInputRequest extends AbstractModel{
+public class DeleteStreamLinkFlowRequest extends AbstractModel{
 
     /**
-    * Flow ID.
+    * Flow ID
     */
     @SerializedName("FlowId")
     @Expose
     private String FlowId;
 
     /**
-    * Information of the input to be modified.
-    */
-    @SerializedName("Input")
-    @Expose
-    private ModifyInput Input;
-
-    /**
-     * Get Flow ID. 
-     * @return FlowId Flow ID.
+     * Get Flow ID 
+     * @return FlowId Flow ID
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set Flow ID.
-     * @param FlowId Flow ID.
+     * Set Flow ID
+     * @param FlowId Flow ID
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;
     }
 
-    /**
-     * Get Information of the input to be modified. 
-     * @return Input Information of the input to be modified.
-     */
-    public ModifyInput getInput() {
-        return this.Input;
-    }
-
-    /**
-     * Set Information of the input to be modified.
-     * @param Input Information of the input to be modified.
-     */
-    public void setInput(ModifyInput Input) {
-        this.Input = Input;
-    }
-
-    public ModifyMediaConnectInputRequest() {
+    public DeleteStreamLinkFlowRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyMediaConnectInputRequest(ModifyMediaConnectInputRequest source) {
+    public DeleteStreamLinkFlowRequest(DeleteStreamLinkFlowRequest source) {
         if (source.FlowId != null) {
             this.FlowId = new String(source.FlowId);
-        }
-        if (source.Input != null) {
-            this.Input = new ModifyInput(source.Input);
         }
     }
 
@@ -90,7 +64,6 @@ public class ModifyMediaConnectInputRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
-        this.setParamObj(map, prefix + "Input.", this.Input);
 
     }
 }

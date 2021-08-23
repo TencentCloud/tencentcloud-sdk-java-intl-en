@@ -20,38 +20,38 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMediaConnectFlowsResponse extends AbstractModel{
+public class DescribeStreamLinkFlowsResponse extends AbstractModel{
 
     /**
-    * Configuration information list of a flow.
+    * List of the configuration information of the flows
     */
     @SerializedName("Infos")
     @Expose
     private DescribeFlow [] Infos;
 
     /**
-    * Number of current pages.
+    * Number of the current page
     */
     @SerializedName("PageNum")
     @Expose
     private Long PageNum;
 
     /**
-    * Number of entries per page.
+    * Number of entries per page
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * Total number.
+    * Total number of entries
     */
     @SerializedName("TotalNum")
     @Expose
     private Long TotalNum;
 
     /**
-    * Total number of pages.
+    * Total number of pages
     */
     @SerializedName("TotalPage")
     @Expose
@@ -65,80 +65,80 @@ public class DescribeMediaConnectFlowsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Configuration information list of a flow. 
-     * @return Infos Configuration information list of a flow.
+     * Get List of the configuration information of the flows 
+     * @return Infos List of the configuration information of the flows
      */
     public DescribeFlow [] getInfos() {
         return this.Infos;
     }
 
     /**
-     * Set Configuration information list of a flow.
-     * @param Infos Configuration information list of a flow.
+     * Set List of the configuration information of the flows
+     * @param Infos List of the configuration information of the flows
      */
     public void setInfos(DescribeFlow [] Infos) {
         this.Infos = Infos;
     }
 
     /**
-     * Get Number of current pages. 
-     * @return PageNum Number of current pages.
+     * Get Number of the current page 
+     * @return PageNum Number of the current page
      */
     public Long getPageNum() {
         return this.PageNum;
     }
 
     /**
-     * Set Number of current pages.
-     * @param PageNum Number of current pages.
+     * Set Number of the current page
+     * @param PageNum Number of the current page
      */
     public void setPageNum(Long PageNum) {
         this.PageNum = PageNum;
     }
 
     /**
-     * Get Number of entries per page. 
-     * @return PageSize Number of entries per page.
+     * Get Number of entries per page 
+     * @return PageSize Number of entries per page
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set Number of entries per page.
-     * @param PageSize Number of entries per page.
+     * Set Number of entries per page
+     * @param PageSize Number of entries per page
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get Total number. 
-     * @return TotalNum Total number.
+     * Get Total number of entries 
+     * @return TotalNum Total number of entries
      */
     public Long getTotalNum() {
         return this.TotalNum;
     }
 
     /**
-     * Set Total number.
-     * @param TotalNum Total number.
+     * Set Total number of entries
+     * @param TotalNum Total number of entries
      */
     public void setTotalNum(Long TotalNum) {
         this.TotalNum = TotalNum;
     }
 
     /**
-     * Get Total number of pages. 
-     * @return TotalPage Total number of pages.
+     * Get Total number of pages 
+     * @return TotalPage Total number of pages
      */
     public Long getTotalPage() {
         return this.TotalPage;
     }
 
     /**
-     * Set Total number of pages.
-     * @param TotalPage Total number of pages.
+     * Set Total number of pages
+     * @param TotalPage Total number of pages
      */
     public void setTotalPage(Long TotalPage) {
         this.TotalPage = TotalPage;
@@ -160,14 +160,14 @@ public class DescribeMediaConnectFlowsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeMediaConnectFlowsResponse() {
+    public DescribeStreamLinkFlowsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeMediaConnectFlowsResponse(DescribeMediaConnectFlowsResponse source) {
+    public DescribeStreamLinkFlowsResponse(DescribeStreamLinkFlowsResponse source) {
         if (source.Infos != null) {
             this.Infos = new DescribeFlow[source.Infos.length];
             for (int i = 0; i < source.Infos.length; i++) {
