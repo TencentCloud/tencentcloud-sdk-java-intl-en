@@ -54,6 +54,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Scte35SettingsInfo Scte35Settings;
 
     /**
+    * Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
+Note: this field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("AVTemplateNames")
+    @Expose
+    private String [] AVTemplateNames;
+
+    /**
      * Get Output name. 
      * @return Name Output name.
      */
@@ -129,6 +137,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.Scte35Settings = Scte35Settings;
     }
 
+    /**
+     * Get Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
+Note: this field may return `null`, indicating that no valid value was found. 
+     * @return AVTemplateNames Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public String [] getAVTemplateNames() {
+        return this.AVTemplateNames;
+    }
+
+    /**
+     * Set Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
+Note: this field may return `null`, indicating that no valid value was found.
+     * @param AVTemplateNames Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public void setAVTemplateNames(String [] AVTemplateNames) {
+        this.AVTemplateNames = AVTemplateNames;
+    }
+
     public OutputInfo() {
     }
 
@@ -155,6 +183,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.Scte35Settings != null) {
             this.Scte35Settings = new Scte35SettingsInfo(source.Scte35Settings);
         }
+        if (source.AVTemplateNames != null) {
+            this.AVTemplateNames = new String[source.AVTemplateNames.length];
+            for (int i = 0; i < source.AVTemplateNames.length; i++) {
+                this.AVTemplateNames[i] = new String(source.AVTemplateNames[i]);
+            }
+        }
     }
 
 
@@ -166,6 +200,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamArraySimple(map, prefix + "AudioTemplateNames.", this.AudioTemplateNames);
         this.setParamArraySimple(map, prefix + "VideoTemplateNames.", this.VideoTemplateNames);
         this.setParamObj(map, prefix + "Scte35Settings.", this.Scte35Settings);
+        this.setParamArraySimple(map, prefix + "AVTemplateNames.", this.AVTemplateNames);
 
     }
 }

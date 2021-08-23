@@ -79,6 +79,13 @@ public class VideoTemplateInfo extends AbstractModel{
     private Long BitrateCompressionRatio;
 
     /**
+    * Bitrate control mode. Valid values: `CBR`, `ABR` (default)
+    */
+    @SerializedName("RateControlMode")
+    @Expose
+    private String RateControlMode;
+
+    /**
      * Get Video transcoding template name, which can contain 1-20 letters and digits. 
      * @return Name Video transcoding template name, which can contain 1-20 letters and digits.
      */
@@ -206,6 +213,22 @@ public class VideoTemplateInfo extends AbstractModel{
         this.BitrateCompressionRatio = BitrateCompressionRatio;
     }
 
+    /**
+     * Get Bitrate control mode. Valid values: `CBR`, `ABR` (default) 
+     * @return RateControlMode Bitrate control mode. Valid values: `CBR`, `ABR` (default)
+     */
+    public String getRateControlMode() {
+        return this.RateControlMode;
+    }
+
+    /**
+     * Set Bitrate control mode. Valid values: `CBR`, `ABR` (default)
+     * @param RateControlMode Bitrate control mode. Valid values: `CBR`, `ABR` (default)
+     */
+    public void setRateControlMode(String RateControlMode) {
+        this.RateControlMode = RateControlMode;
+    }
+
     public VideoTemplateInfo() {
     }
 
@@ -238,6 +261,9 @@ public class VideoTemplateInfo extends AbstractModel{
         if (source.BitrateCompressionRatio != null) {
             this.BitrateCompressionRatio = new Long(source.BitrateCompressionRatio);
         }
+        if (source.RateControlMode != null) {
+            this.RateControlMode = new String(source.RateControlMode);
+        }
     }
 
 
@@ -253,6 +279,7 @@ public class VideoTemplateInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Fps", this.Fps);
         this.setParamSimple(map, prefix + "TopSpeed", this.TopSpeed);
         this.setParamSimple(map, prefix + "BitrateCompressionRatio", this.BitrateCompressionRatio);
+        this.setParamSimple(map, prefix + "RateControlMode", this.RateControlMode);
 
     }
 }

@@ -23,29 +23,27 @@ import java.util.HashMap;
 public class DrmSettingsInfo extends AbstractModel{
 
     /**
-    * Whether to enable DRM encryption. Valid value: CLOSE/OPEN. Default value: CLOSE.
-Currently, this is supported only for HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE.
+    * Whether to enable DRM encryption. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
+DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_MEDIAPACKAGE, and DASH_MEDIAPACKAGE outputs.
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * When `Scheme` is set to TencentDRM, this parameter should be set to the `ContentId` of DRM encryption, and if this parameter is left empty, a `ContentId` will be automatically created. For more information, please see [here](https://intl.cloud.tencent.com/document/product/1000/40960?from_cn_redirect=1).
-When `Scheme` is set to CustomDRMKeys, this parameter is required and should be specified by the user.
-    */
-    @SerializedName("ContentId")
-    @Expose
-    private String ContentId;
-
-    /**
-    * Valid values: TencentDRM, CustomDRMKeys. If this parameter is left empty, TencentDRM will be used by default.
-TencentDRM refers to Tencent digital rights management (DRM) encryption. For more information, please see [here](https://intl.cloud.tencent.com/solution/drm?from_cn_redirect=1).
-CustomDRMKeys refers to an encryption key customized by the user.
+    * This parameter can be set to `CustomDRMKeys` or left empty.
+CustomDRMKeys means encryption keys customized by users.
     */
     @SerializedName("Scheme")
     @Expose
     private String Scheme;
+
+    /**
+    * If `Scheme` is set to `CustomDRMKeys`, this parameter is required and should be specified by the user.
+    */
+    @SerializedName("ContentId")
+    @Expose
+    private String ContentId;
 
     /**
     * The key customized by the content user, which is required when `Scheme` is set to CustomDRMKeys.
@@ -56,67 +54,59 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private DrmKey [] Keys;
 
     /**
-     * Get Whether to enable DRM encryption. Valid value: CLOSE/OPEN. Default value: CLOSE.
-Currently, this is supported only for HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE. 
-     * @return State Whether to enable DRM encryption. Valid value: CLOSE/OPEN. Default value: CLOSE.
-Currently, this is supported only for HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE.
+     * Get Whether to enable DRM encryption. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
+DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_MEDIAPACKAGE, and DASH_MEDIAPACKAGE outputs. 
+     * @return State Whether to enable DRM encryption. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
+DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_MEDIAPACKAGE, and DASH_MEDIAPACKAGE outputs.
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set Whether to enable DRM encryption. Valid value: CLOSE/OPEN. Default value: CLOSE.
-Currently, this is supported only for HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE.
-     * @param State Whether to enable DRM encryption. Valid value: CLOSE/OPEN. Default value: CLOSE.
-Currently, this is supported only for HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE.
+     * Set Whether to enable DRM encryption. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
+DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_MEDIAPACKAGE, and DASH_MEDIAPACKAGE outputs.
+     * @param State Whether to enable DRM encryption. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
+DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_MEDIAPACKAGE, and DASH_MEDIAPACKAGE outputs.
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get When `Scheme` is set to TencentDRM, this parameter should be set to the `ContentId` of DRM encryption, and if this parameter is left empty, a `ContentId` will be automatically created. For more information, please see [here](https://intl.cloud.tencent.com/document/product/1000/40960?from_cn_redirect=1).
-When `Scheme` is set to CustomDRMKeys, this parameter is required and should be specified by the user. 
-     * @return ContentId When `Scheme` is set to TencentDRM, this parameter should be set to the `ContentId` of DRM encryption, and if this parameter is left empty, a `ContentId` will be automatically created. For more information, please see [here](https://intl.cloud.tencent.com/document/product/1000/40960?from_cn_redirect=1).
-When `Scheme` is set to CustomDRMKeys, this parameter is required and should be specified by the user.
-     */
-    public String getContentId() {
-        return this.ContentId;
-    }
-
-    /**
-     * Set When `Scheme` is set to TencentDRM, this parameter should be set to the `ContentId` of DRM encryption, and if this parameter is left empty, a `ContentId` will be automatically created. For more information, please see [here](https://intl.cloud.tencent.com/document/product/1000/40960?from_cn_redirect=1).
-When `Scheme` is set to CustomDRMKeys, this parameter is required and should be specified by the user.
-     * @param ContentId When `Scheme` is set to TencentDRM, this parameter should be set to the `ContentId` of DRM encryption, and if this parameter is left empty, a `ContentId` will be automatically created. For more information, please see [here](https://intl.cloud.tencent.com/document/product/1000/40960?from_cn_redirect=1).
-When `Scheme` is set to CustomDRMKeys, this parameter is required and should be specified by the user.
-     */
-    public void setContentId(String ContentId) {
-        this.ContentId = ContentId;
-    }
-
-    /**
-     * Get Valid values: TencentDRM, CustomDRMKeys. If this parameter is left empty, TencentDRM will be used by default.
-TencentDRM refers to Tencent digital rights management (DRM) encryption. For more information, please see [here](https://intl.cloud.tencent.com/solution/drm?from_cn_redirect=1).
-CustomDRMKeys refers to an encryption key customized by the user. 
-     * @return Scheme Valid values: TencentDRM, CustomDRMKeys. If this parameter is left empty, TencentDRM will be used by default.
-TencentDRM refers to Tencent digital rights management (DRM) encryption. For more information, please see [here](https://intl.cloud.tencent.com/solution/drm?from_cn_redirect=1).
-CustomDRMKeys refers to an encryption key customized by the user.
+     * Get This parameter can be set to `CustomDRMKeys` or left empty.
+CustomDRMKeys means encryption keys customized by users. 
+     * @return Scheme This parameter can be set to `CustomDRMKeys` or left empty.
+CustomDRMKeys means encryption keys customized by users.
      */
     public String getScheme() {
         return this.Scheme;
     }
 
     /**
-     * Set Valid values: TencentDRM, CustomDRMKeys. If this parameter is left empty, TencentDRM will be used by default.
-TencentDRM refers to Tencent digital rights management (DRM) encryption. For more information, please see [here](https://intl.cloud.tencent.com/solution/drm?from_cn_redirect=1).
-CustomDRMKeys refers to an encryption key customized by the user.
-     * @param Scheme Valid values: TencentDRM, CustomDRMKeys. If this parameter is left empty, TencentDRM will be used by default.
-TencentDRM refers to Tencent digital rights management (DRM) encryption. For more information, please see [here](https://intl.cloud.tencent.com/solution/drm?from_cn_redirect=1).
-CustomDRMKeys refers to an encryption key customized by the user.
+     * Set This parameter can be set to `CustomDRMKeys` or left empty.
+CustomDRMKeys means encryption keys customized by users.
+     * @param Scheme This parameter can be set to `CustomDRMKeys` or left empty.
+CustomDRMKeys means encryption keys customized by users.
      */
     public void setScheme(String Scheme) {
         this.Scheme = Scheme;
+    }
+
+    /**
+     * Get If `Scheme` is set to `CustomDRMKeys`, this parameter is required and should be specified by the user. 
+     * @return ContentId If `Scheme` is set to `CustomDRMKeys`, this parameter is required and should be specified by the user.
+     */
+    public String getContentId() {
+        return this.ContentId;
+    }
+
+    /**
+     * Set If `Scheme` is set to `CustomDRMKeys`, this parameter is required and should be specified by the user.
+     * @param ContentId If `Scheme` is set to `CustomDRMKeys`, this parameter is required and should be specified by the user.
+     */
+    public void setContentId(String ContentId) {
+        this.ContentId = ContentId;
     }
 
     /**
@@ -150,11 +140,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.State != null) {
             this.State = new String(source.State);
         }
-        if (source.ContentId != null) {
-            this.ContentId = new String(source.ContentId);
-        }
         if (source.Scheme != null) {
             this.Scheme = new String(source.Scheme);
+        }
+        if (source.ContentId != null) {
+            this.ContentId = new String(source.ContentId);
         }
         if (source.Keys != null) {
             this.Keys = new DrmKey[source.Keys.length];
@@ -170,8 +160,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "State", this.State);
-        this.setParamSimple(map, prefix + "ContentId", this.ContentId);
         this.setParamSimple(map, prefix + "Scheme", this.Scheme);
+        this.setParamSimple(map, prefix + "ContentId", this.ContentId);
         this.setParamArrayObj(map, prefix + "Keys.", this.Keys);
 
     }

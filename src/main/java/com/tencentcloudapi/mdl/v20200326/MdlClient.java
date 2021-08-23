@@ -39,18 +39,18 @@ public class MdlClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a media channel.
-     * @param req CreateMediaLiveChannelRequest
-     * @return CreateMediaLiveChannelResponse
+     *This API is used to create a StreamLive channel.
+     * @param req CreateStreamLiveChannelRequest
+     * @return CreateStreamLiveChannelResponse
      * @throws TencentCloudSDKException
      */
-    public CreateMediaLiveChannelResponse CreateMediaLiveChannel(CreateMediaLiveChannelRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateMediaLiveChannelResponse> rsp = null;
+    public CreateStreamLiveChannelResponse CreateStreamLiveChannel(CreateStreamLiveChannelRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateStreamLiveChannelResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateMediaLiveChannelResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<CreateStreamLiveChannelResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "CreateMediaLiveChannel");
+                rspStr = this.internalRequest(req, "CreateStreamLiveChannel");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -59,18 +59,18 @@ public class MdlClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a media input.
-     * @param req CreateMediaLiveInputRequest
-     * @return CreateMediaLiveInputResponse
+     *This API is used to create a StreamLive input.
+     * @param req CreateStreamLiveInputRequest
+     * @return CreateStreamLiveInputResponse
      * @throws TencentCloudSDKException
      */
-    public CreateMediaLiveInputResponse CreateMediaLiveInput(CreateMediaLiveInputRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateMediaLiveInputResponse> rsp = null;
+    public CreateStreamLiveInputResponse CreateStreamLiveInput(CreateStreamLiveInputRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateStreamLiveInputResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateMediaLiveInputResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<CreateStreamLiveInputResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "CreateMediaLiveInput");
+                rspStr = this.internalRequest(req, "CreateStreamLiveInput");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -79,18 +79,18 @@ public class MdlClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create an input security group. Up to 5 ones can be created.
-     * @param req CreateMediaLiveInputSecurityGroupRequest
-     * @return CreateMediaLiveInputSecurityGroupResponse
+     *This API is used to create an input security group. Up to 5 security groups are allowed.
+     * @param req CreateStreamLiveInputSecurityGroupRequest
+     * @return CreateStreamLiveInputSecurityGroupResponse
      * @throws TencentCloudSDKException
      */
-    public CreateMediaLiveInputSecurityGroupResponse CreateMediaLiveInputSecurityGroup(CreateMediaLiveInputSecurityGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateMediaLiveInputSecurityGroupResponse> rsp = null;
+    public CreateStreamLiveInputSecurityGroupResponse CreateStreamLiveInputSecurityGroup(CreateStreamLiveInputSecurityGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateStreamLiveInputSecurityGroupResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateMediaLiveInputSecurityGroupResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<CreateStreamLiveInputSecurityGroupResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "CreateMediaLiveInputSecurityGroup");
+                rspStr = this.internalRequest(req, "CreateStreamLiveInputSecurityGroup");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -99,18 +99,18 @@ public class MdlClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete a MediaLive channel.
-     * @param req DeleteMediaLiveChannelRequest
-     * @return DeleteMediaLiveChannelResponse
+     *This API is used to create an event in the plan.
+     * @param req CreateStreamLivePlanRequest
+     * @return CreateStreamLivePlanResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteMediaLiveChannelResponse DeleteMediaLiveChannel(DeleteMediaLiveChannelRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteMediaLiveChannelResponse> rsp = null;
+    public CreateStreamLivePlanResponse CreateStreamLivePlan(CreateStreamLivePlanRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateStreamLivePlanResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteMediaLiveChannelResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<CreateStreamLivePlanResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "DeleteMediaLiveChannel");
+                rspStr = this.internalRequest(req, "CreateStreamLivePlan");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -119,18 +119,38 @@ public class MdlClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete a media input.
-     * @param req DeleteMediaLiveInputRequest
-     * @return DeleteMediaLiveInputResponse
+     *This API is used to delete a StreamLive channel.
+     * @param req DeleteStreamLiveChannelRequest
+     * @return DeleteStreamLiveChannelResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteMediaLiveInputResponse DeleteMediaLiveInput(DeleteMediaLiveInputRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteMediaLiveInputResponse> rsp = null;
+    public DeleteStreamLiveChannelResponse DeleteStreamLiveChannel(DeleteStreamLiveChannelRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteStreamLiveChannelResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteMediaLiveInputResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DeleteStreamLiveChannelResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "DeleteMediaLiveInput");
+                rspStr = this.internalRequest(req, "DeleteStreamLiveChannel");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a StreamLive input.
+     * @param req DeleteStreamLiveInputRequest
+     * @return DeleteStreamLiveInputResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteStreamLiveInputResponse DeleteStreamLiveInput(DeleteStreamLiveInputRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteStreamLiveInputResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteStreamLiveInputResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteStreamLiveInput");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -140,17 +160,17 @@ public class MdlClient extends AbstractClient{
 
     /**
      *This API is used to delete an input security group.
-     * @param req DeleteMediaLiveInputSecurityGroupRequest
-     * @return DeleteMediaLiveInputSecurityGroupResponse
+     * @param req DeleteStreamLiveInputSecurityGroupRequest
+     * @return DeleteStreamLiveInputSecurityGroupResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteMediaLiveInputSecurityGroupResponse DeleteMediaLiveInputSecurityGroup(DeleteMediaLiveInputSecurityGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteMediaLiveInputSecurityGroupResponse> rsp = null;
+    public DeleteStreamLiveInputSecurityGroupResponse DeleteStreamLiveInputSecurityGroup(DeleteStreamLiveInputSecurityGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteStreamLiveInputSecurityGroupResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteMediaLiveInputSecurityGroupResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DeleteStreamLiveInputSecurityGroupResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "DeleteMediaLiveInputSecurityGroup");
+                rspStr = this.internalRequest(req, "DeleteStreamLiveInputSecurityGroup");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -159,18 +179,18 @@ public class MdlClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the information of a MediaLive channel.
-     * @param req DescribeMediaLiveChannelRequest
-     * @return DescribeMediaLiveChannelResponse
+     *This API is used to query a StreamLive channel.
+     * @param req DescribeStreamLiveChannelRequest
+     * @return DescribeStreamLiveChannelResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeMediaLiveChannelResponse DescribeMediaLiveChannel(DescribeMediaLiveChannelRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeMediaLiveChannelResponse> rsp = null;
+    public DescribeStreamLiveChannelResponse DescribeStreamLiveChannel(DescribeStreamLiveChannelRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamLiveChannelResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeMediaLiveChannelResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamLiveChannelResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "DescribeMediaLiveChannel");
+                rspStr = this.internalRequest(req, "DescribeStreamLiveChannel");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -179,18 +199,18 @@ public class MdlClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the channel alarm information.
-     * @param req DescribeMediaLiveChannelAlertsRequest
-     * @return DescribeMediaLiveChannelAlertsResponse
+     *This API is used to query the alarm information of a StreamLive channel.
+     * @param req DescribeStreamLiveChannelAlertsRequest
+     * @return DescribeStreamLiveChannelAlertsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeMediaLiveChannelAlertsResponse DescribeMediaLiveChannelAlerts(DescribeMediaLiveChannelAlertsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeMediaLiveChannelAlertsResponse> rsp = null;
+    public DescribeStreamLiveChannelAlertsResponse DescribeStreamLiveChannelAlerts(DescribeStreamLiveChannelAlertsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamLiveChannelAlertsResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeMediaLiveChannelAlertsResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamLiveChannelAlertsResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "DescribeMediaLiveChannelAlerts");
+                rspStr = this.internalRequest(req, "DescribeStreamLiveChannelAlerts");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -199,18 +219,18 @@ public class MdlClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the input statistics.
-     * @param req DescribeMediaLiveChannelInputStatisticsRequest
-     * @return DescribeMediaLiveChannelInputStatisticsResponse
+     *This API is used to query input statistics.
+     * @param req DescribeStreamLiveChannelInputStatisticsRequest
+     * @return DescribeStreamLiveChannelInputStatisticsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeMediaLiveChannelInputStatisticsResponse DescribeMediaLiveChannelInputStatistics(DescribeMediaLiveChannelInputStatisticsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeMediaLiveChannelInputStatisticsResponse> rsp = null;
+    public DescribeStreamLiveChannelInputStatisticsResponse DescribeStreamLiveChannelInputStatistics(DescribeStreamLiveChannelInputStatisticsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamLiveChannelInputStatisticsResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeMediaLiveChannelInputStatisticsResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamLiveChannelInputStatisticsResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "DescribeMediaLiveChannelInputStatistics");
+                rspStr = this.internalRequest(req, "DescribeStreamLiveChannelInputStatistics");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -219,18 +239,18 @@ public class MdlClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query MediaLive channel logs, such as push event logs.
-     * @param req DescribeMediaLiveChannelLogsRequest
-     * @return DescribeMediaLiveChannelLogsResponse
+     *This API is used to query StreamLive channel logs, such as push event logs.
+     * @param req DescribeStreamLiveChannelLogsRequest
+     * @return DescribeStreamLiveChannelLogsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeMediaLiveChannelLogsResponse DescribeMediaLiveChannelLogs(DescribeMediaLiveChannelLogsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeMediaLiveChannelLogsResponse> rsp = null;
+    public DescribeStreamLiveChannelLogsResponse DescribeStreamLiveChannelLogs(DescribeStreamLiveChannelLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamLiveChannelLogsResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeMediaLiveChannelLogsResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamLiveChannelLogsResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "DescribeMediaLiveChannelLogs");
+                rspStr = this.internalRequest(req, "DescribeStreamLiveChannelLogs");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -239,18 +259,18 @@ public class MdlClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the output statistics of a channel.
-     * @param req DescribeMediaLiveChannelOutputStatisticsRequest
-     * @return DescribeMediaLiveChannelOutputStatisticsResponse
+     *This API is used to query the output statistics of a StreamLive channel.
+     * @param req DescribeStreamLiveChannelOutputStatisticsRequest
+     * @return DescribeStreamLiveChannelOutputStatisticsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeMediaLiveChannelOutputStatisticsResponse DescribeMediaLiveChannelOutputStatistics(DescribeMediaLiveChannelOutputStatisticsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeMediaLiveChannelOutputStatisticsResponse> rsp = null;
+    public DescribeStreamLiveChannelOutputStatisticsResponse DescribeStreamLiveChannelOutputStatistics(DescribeStreamLiveChannelOutputStatisticsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamLiveChannelOutputStatisticsResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeMediaLiveChannelOutputStatisticsResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamLiveChannelOutputStatisticsResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "DescribeMediaLiveChannelOutputStatistics");
+                rspStr = this.internalRequest(req, "DescribeStreamLiveChannelOutputStatistics");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -259,18 +279,18 @@ public class MdlClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the information of MediaLive channels in batches.
-     * @param req DescribeMediaLiveChannelsRequest
-     * @return DescribeMediaLiveChannelsResponse
+     *This API is used to query StreamLive channels in batches.
+     * @param req DescribeStreamLiveChannelsRequest
+     * @return DescribeStreamLiveChannelsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeMediaLiveChannelsResponse DescribeMediaLiveChannels(DescribeMediaLiveChannelsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeMediaLiveChannelsResponse> rsp = null;
+    public DescribeStreamLiveChannelsResponse DescribeStreamLiveChannels(DescribeStreamLiveChannelsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamLiveChannelsResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeMediaLiveChannelsResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamLiveChannelsResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "DescribeMediaLiveChannels");
+                rspStr = this.internalRequest(req, "DescribeStreamLiveChannels");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -279,18 +299,18 @@ public class MdlClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query a media input.
-     * @param req DescribeMediaLiveInputRequest
-     * @return DescribeMediaLiveInputResponse
+     *This API is used to query a StreamLive input.
+     * @param req DescribeStreamLiveInputRequest
+     * @return DescribeStreamLiveInputResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeMediaLiveInputResponse DescribeMediaLiveInput(DescribeMediaLiveInputRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeMediaLiveInputResponse> rsp = null;
+    public DescribeStreamLiveInputResponse DescribeStreamLiveInput(DescribeStreamLiveInputRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamLiveInputResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeMediaLiveInputResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamLiveInputResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "DescribeMediaLiveInput");
+                rspStr = this.internalRequest(req, "DescribeStreamLiveInput");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -300,17 +320,17 @@ public class MdlClient extends AbstractClient{
 
     /**
      *This API is used to query an input security group.
-     * @param req DescribeMediaLiveInputSecurityGroupRequest
-     * @return DescribeMediaLiveInputSecurityGroupResponse
+     * @param req DescribeStreamLiveInputSecurityGroupRequest
+     * @return DescribeStreamLiveInputSecurityGroupResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeMediaLiveInputSecurityGroupResponse DescribeMediaLiveInputSecurityGroup(DescribeMediaLiveInputSecurityGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeMediaLiveInputSecurityGroupResponse> rsp = null;
+    public DescribeStreamLiveInputSecurityGroupResponse DescribeStreamLiveInputSecurityGroup(DescribeStreamLiveInputSecurityGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamLiveInputSecurityGroupResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeMediaLiveInputSecurityGroupResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamLiveInputSecurityGroupResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "DescribeMediaLiveInputSecurityGroup");
+                rspStr = this.internalRequest(req, "DescribeStreamLiveInputSecurityGroup");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -319,18 +339,18 @@ public class MdlClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the information of input security groups in batches.
-     * @param req DescribeMediaLiveInputSecurityGroupsRequest
-     * @return DescribeMediaLiveInputSecurityGroupsResponse
+     *This API is used to query input security groups in batches.
+     * @param req DescribeStreamLiveInputSecurityGroupsRequest
+     * @return DescribeStreamLiveInputSecurityGroupsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeMediaLiveInputSecurityGroupsResponse DescribeMediaLiveInputSecurityGroups(DescribeMediaLiveInputSecurityGroupsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeMediaLiveInputSecurityGroupsResponse> rsp = null;
+    public DescribeStreamLiveInputSecurityGroupsResponse DescribeStreamLiveInputSecurityGroups(DescribeStreamLiveInputSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamLiveInputSecurityGroupsResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeMediaLiveInputSecurityGroupsResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamLiveInputSecurityGroupsResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "DescribeMediaLiveInputSecurityGroups");
+                rspStr = this.internalRequest(req, "DescribeStreamLiveInputSecurityGroups");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -339,18 +359,18 @@ public class MdlClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the information of media inputs in batches.
-     * @param req DescribeMediaLiveInputsRequest
-     * @return DescribeMediaLiveInputsResponse
+     *This API is used to query StreamLive inputs in batches.
+     * @param req DescribeStreamLiveInputsRequest
+     * @return DescribeStreamLiveInputsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeMediaLiveInputsResponse DescribeMediaLiveInputs(DescribeMediaLiveInputsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeMediaLiveInputsResponse> rsp = null;
+    public DescribeStreamLiveInputsResponse DescribeStreamLiveInputs(DescribeStreamLiveInputsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamLiveInputsResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeMediaLiveInputsResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamLiveInputsResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "DescribeMediaLiveInputs");
+                rspStr = this.internalRequest(req, "DescribeStreamLiveInputs");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -359,18 +379,18 @@ public class MdlClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the information of a MediaLive channel.
-     * @param req ModifyMediaLiveChannelRequest
-     * @return ModifyMediaLiveChannelResponse
+     *This API is used to query the events in the plan in batches.
+     * @param req DescribeStreamLivePlansRequest
+     * @return DescribeStreamLivePlansResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyMediaLiveChannelResponse ModifyMediaLiveChannel(ModifyMediaLiveChannelRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyMediaLiveChannelResponse> rsp = null;
+    public DescribeStreamLivePlansResponse DescribeStreamLivePlans(DescribeStreamLivePlansRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamLivePlansResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyMediaLiveChannelResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamLivePlansResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "ModifyMediaLiveChannel");
+                rspStr = this.internalRequest(req, "DescribeStreamLivePlans");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -379,18 +399,18 @@ public class MdlClient extends AbstractClient{
     }
 
     /**
-     *This API is used to update a media input.
-     * @param req ModifyMediaLiveInputRequest
-     * @return ModifyMediaLiveInputResponse
+     *This API is used to modify a StreamLive channel.
+     * @param req ModifyStreamLiveChannelRequest
+     * @return ModifyStreamLiveChannelResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyMediaLiveInputResponse ModifyMediaLiveInput(ModifyMediaLiveInputRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyMediaLiveInputResponse> rsp = null;
+    public ModifyStreamLiveChannelResponse ModifyStreamLiveChannel(ModifyStreamLiveChannelRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyStreamLiveChannelResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyMediaLiveInputResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<ModifyStreamLiveChannelResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "ModifyMediaLiveInput");
+                rspStr = this.internalRequest(req, "ModifyStreamLiveChannel");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -399,18 +419,18 @@ public class MdlClient extends AbstractClient{
     }
 
     /**
-     *This API is used to update an input security group.
-     * @param req ModifyMediaLiveInputSecurityGroupRequest
-     * @return ModifyMediaLiveInputSecurityGroupResponse
+     *This API is used to modify a StreamLive input.
+     * @param req ModifyStreamLiveInputRequest
+     * @return ModifyStreamLiveInputResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyMediaLiveInputSecurityGroupResponse ModifyMediaLiveInputSecurityGroup(ModifyMediaLiveInputSecurityGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyMediaLiveInputSecurityGroupResponse> rsp = null;
+    public ModifyStreamLiveInputResponse ModifyStreamLiveInput(ModifyStreamLiveInputRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyStreamLiveInputResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyMediaLiveInputSecurityGroupResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<ModifyStreamLiveInputResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "ModifyMediaLiveInputSecurityGroup");
+                rspStr = this.internalRequest(req, "ModifyStreamLiveInput");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -419,18 +439,18 @@ public class MdlClient extends AbstractClient{
     }
 
     /**
-     *This API is used to start a MediaLive channel.
-     * @param req StartMediaLiveChannelRequest
-     * @return StartMediaLiveChannelResponse
+     *This API is used to modify an input security group.
+     * @param req ModifyStreamLiveInputSecurityGroupRequest
+     * @return ModifyStreamLiveInputSecurityGroupResponse
      * @throws TencentCloudSDKException
      */
-    public StartMediaLiveChannelResponse StartMediaLiveChannel(StartMediaLiveChannelRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StartMediaLiveChannelResponse> rsp = null;
+    public ModifyStreamLiveInputSecurityGroupResponse ModifyStreamLiveInputSecurityGroup(ModifyStreamLiveInputSecurityGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyStreamLiveInputSecurityGroupResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<StartMediaLiveChannelResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<ModifyStreamLiveInputSecurityGroupResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "StartMediaLiveChannel");
+                rspStr = this.internalRequest(req, "ModifyStreamLiveInputSecurityGroup");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -439,18 +459,38 @@ public class MdlClient extends AbstractClient{
     }
 
     /**
-     *This API is used to stop a MediaLive channel.
-     * @param req StopMediaLiveChannelRequest
-     * @return StopMediaLiveChannelResponse
+     *This API is used to start a StreamLive channel.
+     * @param req StartStreamLiveChannelRequest
+     * @return StartStreamLiveChannelResponse
      * @throws TencentCloudSDKException
      */
-    public StopMediaLiveChannelResponse StopMediaLiveChannel(StopMediaLiveChannelRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StopMediaLiveChannelResponse> rsp = null;
+    public StartStreamLiveChannelResponse StartStreamLiveChannel(StartStreamLiveChannelRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartStreamLiveChannelResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<StopMediaLiveChannelResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<StartStreamLiveChannelResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "StopMediaLiveChannel");
+                rspStr = this.internalRequest(req, "StartStreamLiveChannel");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to stop a StreamLive channel.
+     * @param req StopStreamLiveChannelRequest
+     * @return StopStreamLiveChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopStreamLiveChannelResponse StopStreamLiveChannel(StopStreamLiveChannelRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopStreamLiveChannelResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopStreamLiveChannelResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StopStreamLiveChannel");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

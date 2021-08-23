@@ -39,18 +39,18 @@ public class MdpClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a media package channel.
-     * @param req CreateMediaPackageChannelRequest
-     * @return CreateMediaPackageChannelResponse
+     *This API is used to create a StreamPackage channel.
+     * @param req CreateStreamPackageChannelRequest
+     * @return CreateStreamPackageChannelResponse
      * @throws TencentCloudSDKException
      */
-    public CreateMediaPackageChannelResponse CreateMediaPackageChannel(CreateMediaPackageChannelRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateMediaPackageChannelResponse> rsp = null;
+    public CreateStreamPackageChannelResponse CreateStreamPackageChannel(CreateStreamPackageChannelRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateStreamPackageChannelResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateMediaPackageChannelResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<CreateStreamPackageChannelResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "CreateMediaPackageChannel");
+                rspStr = this.internalRequest(req, "CreateStreamPackageChannel");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -59,18 +59,18 @@ public class MdpClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create an endpoint of a media package channel.
-     * @param req CreateMediaPackageChannelEndpointRequest
-     * @return CreateMediaPackageChannelEndpointResponse
+     *This API is used to create an endpoint on a StreamPackage channel.
+     * @param req CreateStreamPackageChannelEndpointRequest
+     * @return CreateStreamPackageChannelEndpointResponse
      * @throws TencentCloudSDKException
      */
-    public CreateMediaPackageChannelEndpointResponse CreateMediaPackageChannelEndpoint(CreateMediaPackageChannelEndpointRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateMediaPackageChannelEndpointResponse> rsp = null;
+    public CreateStreamPackageChannelEndpointResponse CreateStreamPackageChannelEndpoint(CreateStreamPackageChannelEndpointRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateStreamPackageChannelEndpointResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateMediaPackageChannelEndpointResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<CreateStreamPackageChannelEndpointResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "CreateMediaPackageChannelEndpoint");
+                rspStr = this.internalRequest(req, "CreateStreamPackageChannelEndpoint");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -79,18 +79,18 @@ public class MdpClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete endpoints from a media package channel in batches.
-     * @param req DeleteMediaPackageChannelEndpointsRequest
-     * @return DeleteMediaPackageChannelEndpointsResponse
+     *This API is used to delete endpoints from a StreamPackage channel in batches.
+     * @param req DeleteStreamPackageChannelEndpointsRequest
+     * @return DeleteStreamPackageChannelEndpointsResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteMediaPackageChannelEndpointsResponse DeleteMediaPackageChannelEndpoints(DeleteMediaPackageChannelEndpointsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteMediaPackageChannelEndpointsResponse> rsp = null;
+    public DeleteStreamPackageChannelEndpointsResponse DeleteStreamPackageChannelEndpoints(DeleteStreamPackageChannelEndpointsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteStreamPackageChannelEndpointsResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteMediaPackageChannelEndpointsResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DeleteStreamPackageChannelEndpointsResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "DeleteMediaPackageChannelEndpoints");
+                rspStr = this.internalRequest(req, "DeleteStreamPackageChannelEndpoints");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -99,18 +99,18 @@ public class MdpClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete media package channels in batches.
-     * @param req DeleteMediaPackageChannelsRequest
-     * @return DeleteMediaPackageChannelsResponse
+     *This API is used to delete StreamPackage channels in batches.
+     * @param req DeleteStreamPackageChannelsRequest
+     * @return DeleteStreamPackageChannelsResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteMediaPackageChannelsResponse DeleteMediaPackageChannels(DeleteMediaPackageChannelsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteMediaPackageChannelsResponse> rsp = null;
+    public DeleteStreamPackageChannelsResponse DeleteStreamPackageChannels(DeleteStreamPackageChannelsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteStreamPackageChannelsResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<DeleteMediaPackageChannelsResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DeleteStreamPackageChannelsResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "DeleteMediaPackageChannels");
+                rspStr = this.internalRequest(req, "DeleteStreamPackageChannels");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -119,18 +119,18 @@ public class MdpClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the information of a media package channel.
-     * @param req DescribeMediaPackageChannelRequest
-     * @return DescribeMediaPackageChannelResponse
+     *This API is used to query the information of a StreamPackage channel.
+     * @param req DescribeStreamPackageChannelRequest
+     * @return DescribeStreamPackageChannelResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeMediaPackageChannelResponse DescribeMediaPackageChannel(DescribeMediaPackageChannelRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeMediaPackageChannelResponse> rsp = null;
+    public DescribeStreamPackageChannelResponse DescribeStreamPackageChannel(DescribeStreamPackageChannelRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamPackageChannelResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeMediaPackageChannelResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamPackageChannelResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "DescribeMediaPackageChannel");
+                rspStr = this.internalRequest(req, "DescribeStreamPackageChannel");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -139,18 +139,18 @@ public class MdpClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the information list of media package channels.
-     * @param req DescribeMediaPackageChannelsRequest
-     * @return DescribeMediaPackageChannelsResponse
+     *This API is used to query the information of multiple StreamPackage channels.
+     * @param req DescribeStreamPackageChannelsRequest
+     * @return DescribeStreamPackageChannelsResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeMediaPackageChannelsResponse DescribeMediaPackageChannels(DescribeMediaPackageChannelsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeMediaPackageChannelsResponse> rsp = null;
+    public DescribeStreamPackageChannelsResponse DescribeStreamPackageChannels(DescribeStreamPackageChannelsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamPackageChannelsResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeMediaPackageChannelsResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamPackageChannelsResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "DescribeMediaPackageChannels");
+                rspStr = this.internalRequest(req, "DescribeStreamPackageChannels");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -159,18 +159,18 @@ public class MdpClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the information of a media package channel.
-     * @param req ModifyMediaPackageChannelRequest
-     * @return ModifyMediaPackageChannelResponse
+     *This API is used to modify a StreamPackage channel.
+     * @param req ModifyStreamPackageChannelRequest
+     * @return ModifyStreamPackageChannelResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyMediaPackageChannelResponse ModifyMediaPackageChannel(ModifyMediaPackageChannelRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyMediaPackageChannelResponse> rsp = null;
+    public ModifyStreamPackageChannelResponse ModifyStreamPackageChannel(ModifyStreamPackageChannelRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyStreamPackageChannelResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyMediaPackageChannelResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<ModifyStreamPackageChannelResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "ModifyMediaPackageChannel");
+                rspStr = this.internalRequest(req, "ModifyStreamPackageChannel");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -179,18 +179,18 @@ public class MdpClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify an endpoint of a media package channel.
-     * @param req ModifyMediaPackageChannelEndpointRequest
-     * @return ModifyMediaPackageChannelEndpointResponse
+     *This API is used to modify an endpoint of a StreamPackage channel.
+     * @param req ModifyStreamPackageChannelEndpointRequest
+     * @return ModifyStreamPackageChannelEndpointResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyMediaPackageChannelEndpointResponse ModifyMediaPackageChannelEndpoint(ModifyMediaPackageChannelEndpointRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyMediaPackageChannelEndpointResponse> rsp = null;
+    public ModifyStreamPackageChannelEndpointResponse ModifyStreamPackageChannelEndpoint(ModifyStreamPackageChannelEndpointRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyStreamPackageChannelEndpointResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyMediaPackageChannelEndpointResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<ModifyStreamPackageChannelEndpointResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "ModifyMediaPackageChannelEndpoint");
+                rspStr = this.internalRequest(req, "ModifyStreamPackageChannelEndpoint");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -199,18 +199,18 @@ public class MdpClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the input authentication information of a media package channel.
-     * @param req ModifyMediaPackageChannelInputAuthInfoRequest
-     * @return ModifyMediaPackageChannelInputAuthInfoResponse
+     *This API is used to modify the input authentication information of a StreamPackage channel.
+     * @param req ModifyStreamPackageChannelInputAuthInfoRequest
+     * @return ModifyStreamPackageChannelInputAuthInfoResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyMediaPackageChannelInputAuthInfoResponse ModifyMediaPackageChannelInputAuthInfo(ModifyMediaPackageChannelInputAuthInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyMediaPackageChannelInputAuthInfoResponse> rsp = null;
+    public ModifyStreamPackageChannelInputAuthInfoResponse ModifyStreamPackageChannelInputAuthInfo(ModifyStreamPackageChannelInputAuthInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyStreamPackageChannelInputAuthInfoResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyMediaPackageChannelInputAuthInfoResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<ModifyStreamPackageChannelInputAuthInfoResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "ModifyMediaPackageChannelInputAuthInfo");
+                rspStr = this.internalRequest(req, "ModifyStreamPackageChannelInputAuthInfo");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

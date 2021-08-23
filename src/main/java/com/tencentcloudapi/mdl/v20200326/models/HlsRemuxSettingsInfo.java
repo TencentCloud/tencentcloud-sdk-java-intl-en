@@ -51,6 +51,13 @@ public class HlsRemuxSettingsInfo extends AbstractModel{
     private Long PdtDuration;
 
     /**
+    * Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`
+    */
+    @SerializedName("Scheme")
+    @Expose
+    private String Scheme;
+
+    /**
      * Get Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000. 
      * @return SegmentDuration Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
      */
@@ -114,6 +121,22 @@ public class HlsRemuxSettingsInfo extends AbstractModel{
         this.PdtDuration = PdtDuration;
     }
 
+    /**
+     * Get Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE` 
+     * @return Scheme Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`
+     */
+    public String getScheme() {
+        return this.Scheme;
+    }
+
+    /**
+     * Set Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`
+     * @param Scheme Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`
+     */
+    public void setScheme(String Scheme) {
+        this.Scheme = Scheme;
+    }
+
     public HlsRemuxSettingsInfo() {
     }
 
@@ -134,6 +157,9 @@ public class HlsRemuxSettingsInfo extends AbstractModel{
         if (source.PdtDuration != null) {
             this.PdtDuration = new Long(source.PdtDuration);
         }
+        if (source.Scheme != null) {
+            this.Scheme = new String(source.Scheme);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class HlsRemuxSettingsInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "SegmentNumber", this.SegmentNumber);
         this.setParamSimple(map, prefix + "PdtInsertion", this.PdtInsertion);
         this.setParamSimple(map, prefix + "PdtDuration", this.PdtDuration);
+        this.setParamSimple(map, prefix + "Scheme", this.Scheme);
 
     }
 }

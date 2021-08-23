@@ -55,6 +55,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String InputAddress;
 
     /**
+    * Source type for stream pulling and relaying. To pull content from private-read COS buckets under the current account, set this parameter to `TencentCOS`; otherwise, leave it empty.
+Note: this field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("SourceType")
+    @Expose
+    private String SourceType;
+
+    /**
      * Get Application name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return AppName Application name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
@@ -134,6 +142,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.InputAddress = InputAddress;
     }
 
+    /**
+     * Get Source type for stream pulling and relaying. To pull content from private-read COS buckets under the current account, set this parameter to `TencentCOS`; otherwise, leave it empty.
+Note: this field may return `null`, indicating that no valid value was found. 
+     * @return SourceType Source type for stream pulling and relaying. To pull content from private-read COS buckets under the current account, set this parameter to `TencentCOS`; otherwise, leave it empty.
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public String getSourceType() {
+        return this.SourceType;
+    }
+
+    /**
+     * Set Source type for stream pulling and relaying. To pull content from private-read COS buckets under the current account, set this parameter to `TencentCOS`; otherwise, leave it empty.
+Note: this field may return `null`, indicating that no valid value was found.
+     * @param SourceType Source type for stream pulling and relaying. To pull content from private-read COS buckets under the current account, set this parameter to `TencentCOS`; otherwise, leave it empty.
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public void setSourceType(String SourceType) {
+        this.SourceType = SourceType;
+    }
+
     public InputSettingInfo() {
     }
 
@@ -154,6 +182,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.InputAddress != null) {
             this.InputAddress = new String(source.InputAddress);
         }
+        if (source.SourceType != null) {
+            this.SourceType = new String(source.SourceType);
+        }
     }
 
 
@@ -165,6 +196,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "StreamName", this.StreamName);
         this.setParamSimple(map, prefix + "SourceUrl", this.SourceUrl);
         this.setParamSimple(map, prefix + "InputAddress", this.InputAddress);
+        this.setParamSimple(map, prefix + "SourceType", this.SourceType);
 
     }
 }

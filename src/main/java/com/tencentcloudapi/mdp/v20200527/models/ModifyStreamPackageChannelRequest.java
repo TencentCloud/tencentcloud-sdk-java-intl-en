@@ -20,113 +20,87 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ChannelInfo extends AbstractModel{
+public class ModifyStreamPackageChannelRequest extends AbstractModel{
 
     /**
-    * Channel ID.
+    * Channel ID
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * Channel name.
+    * New channel name
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Channel protocol.
+    * New channel protocol. Valid values: HLS, DASH
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * Channel input and output.
-    */
-    @SerializedName("Points")
-    @Expose
-    private PointInfo Points;
-
-    /**
     * Cache configuration
-Note: this field may return `null`, indicating that no valid value was found.
     */
     @SerializedName("CacheInfo")
     @Expose
     private CacheInfo CacheInfo;
 
     /**
-     * Get Channel ID. 
-     * @return Id Channel ID.
+     * Get Channel ID 
+     * @return Id Channel ID
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Channel ID.
-     * @param Id Channel ID.
+     * Set Channel ID
+     * @param Id Channel ID
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Channel name. 
-     * @return Name Channel name.
+     * Get New channel name 
+     * @return Name New channel name
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Channel name.
-     * @param Name Channel name.
+     * Set New channel name
+     * @param Name New channel name
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Channel protocol. 
-     * @return Protocol Channel protocol.
+     * Get New channel protocol. Valid values: HLS, DASH 
+     * @return Protocol New channel protocol. Valid values: HLS, DASH
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Channel protocol.
-     * @param Protocol Channel protocol.
+     * Set New channel protocol. Valid values: HLS, DASH
+     * @param Protocol New channel protocol. Valid values: HLS, DASH
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get Channel input and output. 
-     * @return Points Channel input and output.
-     */
-    public PointInfo getPoints() {
-        return this.Points;
-    }
-
-    /**
-     * Set Channel input and output.
-     * @param Points Channel input and output.
-     */
-    public void setPoints(PointInfo Points) {
-        this.Points = Points;
-    }
-
-    /**
-     * Get Cache configuration
-Note: this field may return `null`, indicating that no valid value was found. 
+     * Get Cache configuration 
      * @return CacheInfo Cache configuration
-Note: this field may return `null`, indicating that no valid value was found.
      */
     public CacheInfo getCacheInfo() {
         return this.CacheInfo;
@@ -134,22 +108,20 @@ Note: this field may return `null`, indicating that no valid value was found.
 
     /**
      * Set Cache configuration
-Note: this field may return `null`, indicating that no valid value was found.
      * @param CacheInfo Cache configuration
-Note: this field may return `null`, indicating that no valid value was found.
      */
     public void setCacheInfo(CacheInfo CacheInfo) {
         this.CacheInfo = CacheInfo;
     }
 
-    public ChannelInfo() {
+    public ModifyStreamPackageChannelRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ChannelInfo(ChannelInfo source) {
+    public ModifyStreamPackageChannelRequest(ModifyStreamPackageChannelRequest source) {
         if (source.Id != null) {
             this.Id = new String(source.Id);
         }
@@ -158,9 +130,6 @@ Note: this field may return `null`, indicating that no valid value was found.
         }
         if (source.Protocol != null) {
             this.Protocol = new String(source.Protocol);
-        }
-        if (source.Points != null) {
-            this.Points = new PointInfo(source.Points);
         }
         if (source.CacheInfo != null) {
             this.CacheInfo = new CacheInfo(source.CacheInfo);
@@ -175,7 +144,6 @@ Note: this field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
-        this.setParamObj(map, prefix + "Points.", this.Points);
         this.setParamObj(map, prefix + "CacheInfo.", this.CacheInfo);
 
     }
