@@ -23,26 +23,77 @@ import java.util.HashMap;
 public class AiRecognitionTaskAsrWordsResultOutput extends AbstractModel{
 
     /**
-    * Speech keyword recognition result set.
+    * Speech keyword recognition result set
+<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
     */
     @SerializedName("ResultSet")
     @Expose
     private AiRecognitionTaskAsrWordsResultItem [] ResultSet;
 
     /**
-     * Get Speech keyword recognition result set. 
-     * @return ResultSet Speech keyword recognition result set.
+    * URL to the file of the speech keyword recognition result set. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
+    */
+    @SerializedName("ResultSetFileUrl")
+    @Expose
+    private String ResultSetFileUrl;
+
+    /**
+    * Expiration time of the URL to the file of the speech keyword recognition result set, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+    */
+    @SerializedName("ResultSetFileUrlExpireTime")
+    @Expose
+    private String ResultSetFileUrlExpireTime;
+
+    /**
+     * Get Speech keyword recognition result set
+<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`. 
+     * @return ResultSet Speech keyword recognition result set
+<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
      */
     public AiRecognitionTaskAsrWordsResultItem [] getResultSet() {
         return this.ResultSet;
     }
 
     /**
-     * Set Speech keyword recognition result set.
-     * @param ResultSet Speech keyword recognition result set.
+     * Set Speech keyword recognition result set
+<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
+     * @param ResultSet Speech keyword recognition result set
+<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
      */
     public void setResultSet(AiRecognitionTaskAsrWordsResultItem [] ResultSet) {
         this.ResultSet = ResultSet;
+    }
+
+    /**
+     * Get URL to the file of the speech keyword recognition result set. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently. 
+     * @return ResultSetFileUrl URL to the file of the speech keyword recognition result set. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
+     */
+    public String getResultSetFileUrl() {
+        return this.ResultSetFileUrl;
+    }
+
+    /**
+     * Set URL to the file of the speech keyword recognition result set. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
+     * @param ResultSetFileUrl URL to the file of the speech keyword recognition result set. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
+     */
+    public void setResultSetFileUrl(String ResultSetFileUrl) {
+        this.ResultSetFileUrl = ResultSetFileUrl;
+    }
+
+    /**
+     * Get Expiration time of the URL to the file of the speech keyword recognition result set, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732) 
+     * @return ResultSetFileUrlExpireTime Expiration time of the URL to the file of the speech keyword recognition result set, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+     */
+    public String getResultSetFileUrlExpireTime() {
+        return this.ResultSetFileUrlExpireTime;
+    }
+
+    /**
+     * Set Expiration time of the URL to the file of the speech keyword recognition result set, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+     * @param ResultSetFileUrlExpireTime Expiration time of the URL to the file of the speech keyword recognition result set, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+     */
+    public void setResultSetFileUrlExpireTime(String ResultSetFileUrlExpireTime) {
+        this.ResultSetFileUrlExpireTime = ResultSetFileUrlExpireTime;
     }
 
     public AiRecognitionTaskAsrWordsResultOutput() {
@@ -59,6 +110,12 @@ public class AiRecognitionTaskAsrWordsResultOutput extends AbstractModel{
                 this.ResultSet[i] = new AiRecognitionTaskAsrWordsResultItem(source.ResultSet[i]);
             }
         }
+        if (source.ResultSetFileUrl != null) {
+            this.ResultSetFileUrl = new String(source.ResultSetFileUrl);
+        }
+        if (source.ResultSetFileUrlExpireTime != null) {
+            this.ResultSetFileUrlExpireTime = new String(source.ResultSetFileUrlExpireTime);
+        }
     }
 
 
@@ -67,6 +124,8 @@ public class AiRecognitionTaskAsrWordsResultOutput extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ResultSet.", this.ResultSet);
+        this.setParamSimple(map, prefix + "ResultSetFileUrl", this.ResultSetFileUrl);
+        this.setParamSimple(map, prefix + "ResultSetFileUrlExpireTime", this.ResultSetFileUrlExpireTime);
 
     }
 }

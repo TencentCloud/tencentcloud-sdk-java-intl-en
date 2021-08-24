@@ -53,6 +53,7 @@ The value is set according to query period length by default. 5-minute granulari
 <li>`InfrequentStorage`: STANDARD_IA</li>
 <li>`ArchiveStorage`: ARCHIVE</li>
 <li>`DeepArchiveStorage`: DEEP ARCHIVE</li>
+<li>`DeletedInfrequentStorage`: STANDARD_IA data deleted in advance</li>
 <li>`DeletedArchiveStorage`: ARCHIVE data deleted in advance</li>
 <li>`DeletedDeepArchiveStorage`: DEEP ARCHIVE data deleted in advance</li>
 <li>`ArchiveStandardRetrieval`: ARCHIVE data retrieved using standard retrievals</li>
@@ -151,6 +152,7 @@ The value is set according to query period length by default. 5-minute granulari
 <li>`InfrequentStorage`: STANDARD_IA</li>
 <li>`ArchiveStorage`: ARCHIVE</li>
 <li>`DeepArchiveStorage`: DEEP ARCHIVE</li>
+<li>`DeletedInfrequentStorage`: STANDARD_IA data deleted in advance</li>
 <li>`DeletedArchiveStorage`: ARCHIVE data deleted in advance</li>
 <li>`DeletedDeepArchiveStorage`: DEEP ARCHIVE data deleted in advance</li>
 <li>`ArchiveStandardRetrieval`: ARCHIVE data retrieved using standard retrievals</li>
@@ -165,6 +167,7 @@ Default value: `TotalStorage`
 <li>`InfrequentStorage`: STANDARD_IA</li>
 <li>`ArchiveStorage`: ARCHIVE</li>
 <li>`DeepArchiveStorage`: DEEP ARCHIVE</li>
+<li>`DeletedInfrequentStorage`: STANDARD_IA data deleted in advance</li>
 <li>`DeletedArchiveStorage`: ARCHIVE data deleted in advance</li>
 <li>`DeletedDeepArchiveStorage`: DEEP ARCHIVE data deleted in advance</li>
 <li>`ArchiveStandardRetrieval`: ARCHIVE data retrieved using standard retrievals</li>
@@ -185,6 +188,7 @@ Default value: `TotalStorage`
 <li>`InfrequentStorage`: STANDARD_IA</li>
 <li>`ArchiveStorage`: ARCHIVE</li>
 <li>`DeepArchiveStorage`: DEEP ARCHIVE</li>
+<li>`DeletedInfrequentStorage`: STANDARD_IA data deleted in advance</li>
 <li>`DeletedArchiveStorage`: ARCHIVE data deleted in advance</li>
 <li>`DeletedDeepArchiveStorage`: DEEP ARCHIVE data deleted in advance</li>
 <li>`ArchiveStandardRetrieval`: ARCHIVE data retrieved using standard retrievals</li>
@@ -199,6 +203,7 @@ Default value: `TotalStorage`
 <li>`InfrequentStorage`: STANDARD_IA</li>
 <li>`ArchiveStorage`: ARCHIVE</li>
 <li>`DeepArchiveStorage`: DEEP ARCHIVE</li>
+<li>`DeletedInfrequentStorage`: STANDARD_IA data deleted in advance</li>
 <li>`DeletedArchiveStorage`: ARCHIVE data deleted in advance</li>
 <li>`DeletedDeepArchiveStorage`: DEEP ARCHIVE data deleted in advance</li>
 <li>`ArchiveStandardRetrieval`: ARCHIVE data retrieved using standard retrievals</li>

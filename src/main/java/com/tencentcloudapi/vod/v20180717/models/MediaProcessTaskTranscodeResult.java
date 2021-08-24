@@ -74,6 +74,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long Progress;
 
     /**
+    * Transcoding task start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+    */
+    @SerializedName("BeginProcessTime")
+    @Expose
+    private String BeginProcessTime;
+
+    /**
+    * Transcoding task end time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+    */
+    @SerializedName("FinishTime")
+    @Expose
+    private String FinishTime;
+
+    /**
      * Get Task status. Valid values: PROCESSING, SUCCESS, FAIL. 
      * @return Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
      */
@@ -193,6 +207,38 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.Progress = Progress;
     }
 
+    /**
+     * Get Transcoding task start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732) 
+     * @return BeginProcessTime Transcoding task start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+     */
+    public String getBeginProcessTime() {
+        return this.BeginProcessTime;
+    }
+
+    /**
+     * Set Transcoding task start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+     * @param BeginProcessTime Transcoding task start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+     */
+    public void setBeginProcessTime(String BeginProcessTime) {
+        this.BeginProcessTime = BeginProcessTime;
+    }
+
+    /**
+     * Get Transcoding task end time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732) 
+     * @return FinishTime Transcoding task end time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+     */
+    public String getFinishTime() {
+        return this.FinishTime;
+    }
+
+    /**
+     * Set Transcoding task end time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+     * @param FinishTime Transcoding task end time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+     */
+    public void setFinishTime(String FinishTime) {
+        this.FinishTime = FinishTime;
+    }
+
     public MediaProcessTaskTranscodeResult() {
     }
 
@@ -222,6 +268,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.Progress != null) {
             this.Progress = new Long(source.Progress);
         }
+        if (source.BeginProcessTime != null) {
+            this.BeginProcessTime = new String(source.BeginProcessTime);
+        }
+        if (source.FinishTime != null) {
+            this.FinishTime = new String(source.FinishTime);
+        }
     }
 
 
@@ -236,6 +288,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamObj(map, prefix + "Output.", this.Output);
         this.setParamSimple(map, prefix + "Progress", this.Progress);
+        this.setParamSimple(map, prefix + "BeginProcessTime", this.BeginProcessTime);
+        this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
 
     }
 }

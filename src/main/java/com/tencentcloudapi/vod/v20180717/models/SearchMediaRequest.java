@@ -118,6 +118,14 @@ public class SearchMediaRequest extends AbstractModel{
     private TimeRange CreateTime;
 
     /**
+    * Files whose expiration time points are within the specified time range will be returned. Expired files will not be returned.
+<li>The files whose expiration time points are on the start or end time of the specified range will also be returned.</li>
+    */
+    @SerializedName("ExpireTime")
+    @Expose
+    private TimeRange ExpireTime;
+
+    /**
     * Sorting order.
 <li>Valid value of `Sort.Field`: CreateTime.</li>
 <li>If `Text`, `Names`, or `Descriptions` is not empty, the `Sort.Field` field will not take effect, and the search results will be sorted by match rate.</li>
@@ -174,6 +182,17 @@ public class SearchMediaRequest extends AbstractModel{
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
+
+    /**
+    * An array of storage classes. Valid values:
+<li>STANDARD</li>
+<li>STANDARD_IA</li>
+<li>ARCHIVE</li>
+<li>DEEP_ARCHIVE</li>
+    */
+    @SerializedName("StorageClasses")
+    @Expose
+    private String [] StorageClasses;
 
     /**
     * (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
@@ -478,6 +497,26 @@ End time in the creation time range.
     }
 
     /**
+     * Get Files whose expiration time points are within the specified time range will be returned. Expired files will not be returned.
+<li>The files whose expiration time points are on the start or end time of the specified range will also be returned.</li> 
+     * @return ExpireTime Files whose expiration time points are within the specified time range will be returned. Expired files will not be returned.
+<li>The files whose expiration time points are on the start or end time of the specified range will also be returned.</li>
+     */
+    public TimeRange getExpireTime() {
+        return this.ExpireTime;
+    }
+
+    /**
+     * Set Files whose expiration time points are within the specified time range will be returned. Expired files will not be returned.
+<li>The files whose expiration time points are on the start or end time of the specified range will also be returned.</li>
+     * @param ExpireTime Files whose expiration time points are within the specified time range will be returned. Expired files will not be returned.
+<li>The files whose expiration time points are on the start or end time of the specified range will also be returned.</li>
+     */
+    public void setExpireTime(TimeRange ExpireTime) {
+        this.ExpireTime = ExpireTime;
+    }
+
+    /**
      * Get Sorting order.
 <li>Valid value of `Sort.Field`: CreateTime.</li>
 <li>If `Text`, `Names`, or `Descriptions` is not empty, the `Sort.Field` field will not take effect, and the search results will be sorted by match rate.</li> 
@@ -635,6 +674,38 @@ End time in the creation time range.
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
+    }
+
+    /**
+     * Get An array of storage classes. Valid values:
+<li>STANDARD</li>
+<li>STANDARD_IA</li>
+<li>ARCHIVE</li>
+<li>DEEP_ARCHIVE</li> 
+     * @return StorageClasses An array of storage classes. Valid values:
+<li>STANDARD</li>
+<li>STANDARD_IA</li>
+<li>ARCHIVE</li>
+<li>DEEP_ARCHIVE</li>
+     */
+    public String [] getStorageClasses() {
+        return this.StorageClasses;
+    }
+
+    /**
+     * Set An array of storage classes. Valid values:
+<li>STANDARD</li>
+<li>STANDARD_IA</li>
+<li>ARCHIVE</li>
+<li>DEEP_ARCHIVE</li>
+     * @param StorageClasses An array of storage classes. Valid values:
+<li>STANDARD</li>
+<li>STANDARD_IA</li>
+<li>ARCHIVE</li>
+<li>DEEP_ARCHIVE</li>
+     */
+    public void setStorageClasses(String [] StorageClasses) {
+        this.StorageClasses = StorageClasses;
     }
 
     /**
@@ -852,6 +923,9 @@ End time in the creation time range.
         if (source.CreateTime != null) {
             this.CreateTime = new TimeRange(source.CreateTime);
         }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new TimeRange(source.ExpireTime);
+        }
         if (source.Sort != null) {
             this.Sort = new SortBy(source.Sort);
         }
@@ -875,6 +949,12 @@ End time in the creation time range.
         }
         if (source.SubAppId != null) {
             this.SubAppId = new Long(source.SubAppId);
+        }
+        if (source.StorageClasses != null) {
+            this.StorageClasses = new String[source.StorageClasses.length];
+            for (int i = 0; i < source.StorageClasses.length; i++) {
+                this.StorageClasses[i] = new String(source.StorageClasses[i]);
+            }
         }
         if (source.Text != null) {
             this.Text = new String(source.Text);
@@ -912,12 +992,14 @@ End time in the creation time range.
         this.setParamArraySimple(map, prefix + "StreamIds.", this.StreamIds);
         this.setParamArraySimple(map, prefix + "Vids.", this.Vids);
         this.setParamObj(map, prefix + "CreateTime.", this.CreateTime);
+        this.setParamObj(map, prefix + "ExpireTime.", this.ExpireTime);
         this.setParamObj(map, prefix + "Sort.", this.Sort);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArraySimple(map, prefix + "Filters.", this.Filters);
         this.setParamArraySimple(map, prefix + "StorageRegions.", this.StorageRegions);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
+        this.setParamArraySimple(map, prefix + "StorageClasses.", this.StorageClasses);
         this.setParamSimple(map, prefix + "Text", this.Text);
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);
         this.setParamSimple(map, prefix + "StreamId", this.StreamId);
