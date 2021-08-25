@@ -47,6 +47,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Codec;
 
     /**
+    * Number of sound channels, e.g., 2
+Note: this field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("Channel")
+    @Expose
+    private Long Channel;
+
+    /**
      * Get Bitrate of an audio stream in bps.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Bitrate Bitrate of an audio stream in bps.
@@ -106,6 +114,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Codec = Codec;
     }
 
+    /**
+     * Get Number of sound channels, e.g., 2
+Note: this field may return `null`, indicating that no valid value was found. 
+     * @return Channel Number of sound channels, e.g., 2
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public Long getChannel() {
+        return this.Channel;
+    }
+
+    /**
+     * Set Number of sound channels, e.g., 2
+Note: this field may return `null`, indicating that no valid value was found.
+     * @param Channel Number of sound channels, e.g., 2
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public void setChannel(Long Channel) {
+        this.Channel = Channel;
+    }
+
     public MediaAudioStreamItem() {
     }
 
@@ -123,6 +151,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Codec != null) {
             this.Codec = new String(source.Codec);
         }
+        if (source.Channel != null) {
+            this.Channel = new Long(source.Channel);
+        }
     }
 
 
@@ -133,6 +164,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Bitrate", this.Bitrate);
         this.setParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
         this.setParamSimple(map, prefix + "Codec", this.Codec);
+        this.setParamSimple(map, prefix + "Channel", this.Channel);
 
     }
 }

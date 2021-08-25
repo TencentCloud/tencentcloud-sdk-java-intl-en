@@ -63,6 +63,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Fps;
 
     /**
+    * Color primaries
+Note: this field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("ColorPrimaries")
+    @Expose
+    private String ColorPrimaries;
+
+    /**
+    * Color space
+Note: this field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("ColorSpace")
+    @Expose
+    private String ColorSpace;
+
+    /**
+    * Color transfer
+Note: this field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("ColorTransfer")
+    @Expose
+    private String ColorTransfer;
+
+    /**
      * Get Bitrate of a video stream in bps.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Bitrate Bitrate of a video stream in bps.
@@ -162,6 +186,66 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Fps = Fps;
     }
 
+    /**
+     * Get Color primaries
+Note: this field may return `null`, indicating that no valid value was found. 
+     * @return ColorPrimaries Color primaries
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public String getColorPrimaries() {
+        return this.ColorPrimaries;
+    }
+
+    /**
+     * Set Color primaries
+Note: this field may return `null`, indicating that no valid value was found.
+     * @param ColorPrimaries Color primaries
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public void setColorPrimaries(String ColorPrimaries) {
+        this.ColorPrimaries = ColorPrimaries;
+    }
+
+    /**
+     * Get Color space
+Note: this field may return `null`, indicating that no valid value was found. 
+     * @return ColorSpace Color space
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public String getColorSpace() {
+        return this.ColorSpace;
+    }
+
+    /**
+     * Set Color space
+Note: this field may return `null`, indicating that no valid value was found.
+     * @param ColorSpace Color space
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public void setColorSpace(String ColorSpace) {
+        this.ColorSpace = ColorSpace;
+    }
+
+    /**
+     * Get Color transfer
+Note: this field may return `null`, indicating that no valid value was found. 
+     * @return ColorTransfer Color transfer
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public String getColorTransfer() {
+        return this.ColorTransfer;
+    }
+
+    /**
+     * Set Color transfer
+Note: this field may return `null`, indicating that no valid value was found.
+     * @param ColorTransfer Color transfer
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public void setColorTransfer(String ColorTransfer) {
+        this.ColorTransfer = ColorTransfer;
+    }
+
     public MediaVideoStreamItem() {
     }
 
@@ -185,6 +269,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Fps != null) {
             this.Fps = new Long(source.Fps);
         }
+        if (source.ColorPrimaries != null) {
+            this.ColorPrimaries = new String(source.ColorPrimaries);
+        }
+        if (source.ColorSpace != null) {
+            this.ColorSpace = new String(source.ColorSpace);
+        }
+        if (source.ColorTransfer != null) {
+            this.ColorTransfer = new String(source.ColorTransfer);
+        }
     }
 
 
@@ -197,6 +290,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Codec", this.Codec);
         this.setParamSimple(map, prefix + "Fps", this.Fps);
+        this.setParamSimple(map, prefix + "ColorPrimaries", this.ColorPrimaries);
+        this.setParamSimple(map, prefix + "ColorSpace", this.ColorSpace);
+        this.setParamSimple(map, prefix + "ColorTransfer", this.ColorTransfer);
 
     }
 }
