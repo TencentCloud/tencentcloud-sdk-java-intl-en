@@ -149,6 +149,13 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
     private Long NotBindingNoticeRule;
 
     /**
+    * Instance group ID.
+    */
+    @SerializedName("InstanceGroupId")
+    @Expose
+    private Long InstanceGroupId;
+
+    /**
      * Get Value fixed at "monitor" 
      * @return Module Value fixed at "monitor"
      */
@@ -448,6 +455,22 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
         this.NotBindingNoticeRule = NotBindingNoticeRule;
     }
 
+    /**
+     * Get Instance group ID. 
+     * @return InstanceGroupId Instance group ID.
+     */
+    public Long getInstanceGroupId() {
+        return this.InstanceGroupId;
+    }
+
+    /**
+     * Set Instance group ID.
+     * @param InstanceGroupId Instance group ID.
+     */
+    public void setInstanceGroupId(Long InstanceGroupId) {
+        this.InstanceGroupId = InstanceGroupId;
+    }
+
     public DescribeAlarmPoliciesRequest() {
     }
 
@@ -534,6 +557,9 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
         if (source.NotBindingNoticeRule != null) {
             this.NotBindingNoticeRule = new Long(source.NotBindingNoticeRule);
         }
+        if (source.InstanceGroupId != null) {
+            this.InstanceGroupId = new Long(source.InstanceGroupId);
+        }
     }
 
 
@@ -558,6 +584,7 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
         this.setParamArraySimple(map, prefix + "RuleTypes.", this.RuleTypes);
         this.setParamArraySimple(map, prefix + "Enable.", this.Enable);
         this.setParamSimple(map, prefix + "NotBindingNoticeRule", this.NotBindingNoticeRule);
+        this.setParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
 
     }
 }
