@@ -541,6 +541,26 @@ This API is used to get the list of topics in a CKafka instance of a user.
     }
 
     /**
+     *This API is used to query messages based on a specified offset position.
+     * @param req FetchMessageByOffsetRequest
+     * @return FetchMessageByOffsetResponse
+     * @throws TencentCloudSDKException
+     */
+    public FetchMessageByOffsetResponse FetchMessageByOffset(FetchMessageByOffsetRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<FetchMessageByOffsetResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<FetchMessageByOffsetResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "FetchMessageByOffset");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to set the consumer group (Groups) offset.
      * @param req ModifyGroupOffsetsRequest
      * @return ModifyGroupOffsetsResponse

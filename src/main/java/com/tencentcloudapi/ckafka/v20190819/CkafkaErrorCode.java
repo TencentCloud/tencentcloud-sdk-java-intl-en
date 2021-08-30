@@ -1,5 +1,8 @@
 package com.tencentcloudapi.ckafka.v20190819;
 public enum CkafkaErrorCode {
+    // Operation failed.
+     FAILEDOPERATION("FailedOperation"),
+     
     // Internal error.
      INTERNALERROR("InternalError"),
      
@@ -26,6 +29,9 @@ public enum CkafkaErrorCode {
      
     // The zone is not supported.
      INVALIDPARAMETERVALUE_ZONENOTSUPPORT("InvalidParameterValue.ZoneNotSupport"),
+     
+    // 
+     RESOURCEINUSE("ResourceInUse"),
      
     // The resource is unavailable.
      RESOURCEUNAVAILABLE("ResourceUnavailable"),
