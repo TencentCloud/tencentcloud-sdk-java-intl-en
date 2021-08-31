@@ -299,6 +299,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create an alarm rule.
+     * @param req CreatePrometheusAlertRuleRequest
+     * @return CreatePrometheusAlertRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePrometheusAlertRuleResponse CreatePrometheusAlertRule(CreatePrometheusAlertRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePrometheusAlertRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePrometheusAlertRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreatePrometheusAlertRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete a cluster. (Cloud API v3).
      * @param req DeleteClusterRequest
      * @return DeleteClusterResponse
@@ -451,6 +471,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteClusterRouteTableResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteClusterRouteTable");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete an alarm rule.
+     * @param req DeletePrometheusAlertRuleRequest
+     * @return DeletePrometheusAlertRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePrometheusAlertRuleResponse DeletePrometheusAlertRule(DeletePrometheusAlertRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeletePrometheusAlertRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeletePrometheusAlertRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeletePrometheusAlertRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -799,6 +839,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to obtain the instance details.
+     * @param req DescribePrometheusInstanceRequest
+     * @return DescribePrometheusInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrometheusInstanceResponse DescribePrometheusInstance(DescribePrometheusInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePrometheusInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePrometheusInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePrometheusInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to obtain all regions supported by TKE.
      * @param req DescribeRegionsRequest
      * @return DescribeRegionsResponse
@@ -831,6 +891,46 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeRouteTableConflictsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeRouteTableConflicts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query cluster version information.
+     * @param req DescribeVersionsRequest
+     * @return DescribeVersionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVersionsResponse DescribeVersions(DescribeVersionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVersionsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVersionsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeVersions");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the maximum number of Pods in the VPC-CNI network mode supported by the models in the specified availability zone of the current user and region.
+     * @param req DescribeVpcCniPodLimitsRequest
+     * @return DescribeVpcCniPodLimitsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVpcCniPodLimitsResponse DescribeVpcCniPodLimits(DescribeVpcCniPodLimitsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeVpcCniPodLimitsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeVpcCniPodLimitsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeVpcCniPodLimits");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -971,6 +1071,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyClusterNodePoolResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyClusterNodePool");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify an alarm rule. 
+     * @param req ModifyPrometheusAlertRuleRequest
+     * @return ModifyPrometheusAlertRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPrometheusAlertRuleResponse ModifyPrometheusAlertRule(ModifyPrometheusAlertRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyPrometheusAlertRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyPrometheusAlertRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyPrometheusAlertRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

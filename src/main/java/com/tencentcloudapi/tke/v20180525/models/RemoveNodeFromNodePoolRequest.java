@@ -37,7 +37,7 @@ public class RemoveNodeFromNodePoolRequest extends AbstractModel{
     private String NodePoolId;
 
     /**
-    * Node ID list
+    * The node ID list. Up to 100 nodes can be removed at a time.
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -76,16 +76,16 @@ public class RemoveNodeFromNodePoolRequest extends AbstractModel{
     }
 
     /**
-     * Get Node ID list 
-     * @return InstanceIds Node ID list
+     * Get The node ID list. Up to 100 nodes can be removed at a time. 
+     * @return InstanceIds The node ID list. Up to 100 nodes can be removed at a time.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set Node ID list
-     * @param InstanceIds Node ID list
+     * Set The node ID list. Up to 100 nodes can be removed at a time.
+     * @param InstanceIds The node ID list. Up to 100 nodes can be removed at a time.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

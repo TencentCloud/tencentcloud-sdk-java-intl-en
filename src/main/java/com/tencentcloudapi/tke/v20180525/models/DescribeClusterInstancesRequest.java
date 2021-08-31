@@ -58,6 +58,13 @@ public class DescribeClusterInstancesRequest extends AbstractModel{
     private String InstanceRole;
 
     /**
+    * Filters include `nodepool-id` and `nodepool-instance-type` (how the instance is added to the pool). For `nodepool-instance-type`, the values can be `MANUALLY_ADDED`, `AUTOSCALING_ADDED` and `ALL`.
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -137,6 +144,22 @@ public class DescribeClusterInstancesRequest extends AbstractModel{
         this.InstanceRole = InstanceRole;
     }
 
+    /**
+     * Get Filters include `nodepool-id` and `nodepool-instance-type` (how the instance is added to the pool). For `nodepool-instance-type`, the values can be `MANUALLY_ADDED`, `AUTOSCALING_ADDED` and `ALL`. 
+     * @return Filters Filters include `nodepool-id` and `nodepool-instance-type` (how the instance is added to the pool). For `nodepool-instance-type`, the values can be `MANUALLY_ADDED`, `AUTOSCALING_ADDED` and `ALL`.
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set Filters include `nodepool-id` and `nodepool-instance-type` (how the instance is added to the pool). For `nodepool-instance-type`, the values can be `MANUALLY_ADDED`, `AUTOSCALING_ADDED` and `ALL`.
+     * @param Filters Filters include `nodepool-id` and `nodepool-instance-type` (how the instance is added to the pool). For `nodepool-instance-type`, the values can be `MANUALLY_ADDED`, `AUTOSCALING_ADDED` and `ALL`.
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribeClusterInstancesRequest() {
     }
 
@@ -163,6 +186,12 @@ public class DescribeClusterInstancesRequest extends AbstractModel{
         if (source.InstanceRole != null) {
             this.InstanceRole = new String(source.InstanceRole);
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -175,6 +204,7 @@ public class DescribeClusterInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamSimple(map, prefix + "InstanceRole", this.InstanceRole);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }
