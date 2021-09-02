@@ -94,6 +94,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long ThroughputPerformance;
 
     /**
+    * ID of the dedicated cluster to which the instance belongs.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CdcId")
+    @Expose
+    private String CdcId;
+
+    /**
      * Get Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation. 
      * @return DiskSize Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
      */
@@ -281,6 +289,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.ThroughputPerformance = ThroughputPerformance;
     }
 
+    /**
+     * Get ID of the dedicated cluster to which the instance belongs.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return CdcId ID of the dedicated cluster to which the instance belongs.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getCdcId() {
+        return this.CdcId;
+    }
+
+    /**
+     * Set ID of the dedicated cluster to which the instance belongs.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param CdcId ID of the dedicated cluster to which the instance belongs.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setCdcId(String CdcId) {
+        this.CdcId = CdcId;
+    }
+
     public DataDisk() {
     }
 
@@ -313,6 +341,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.ThroughputPerformance != null) {
             this.ThroughputPerformance = new Long(source.ThroughputPerformance);
         }
+        if (source.CdcId != null) {
+            this.CdcId = new String(source.CdcId);
+        }
     }
 
 
@@ -328,6 +359,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "Encrypt", this.Encrypt);
         this.setParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
         this.setParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
+        this.setParamSimple(map, prefix + "CdcId", this.CdcId);
 
     }
 }

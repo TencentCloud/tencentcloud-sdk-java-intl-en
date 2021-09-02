@@ -521,6 +521,26 @@ This API is used to get the list of topics in a CKafka instance of a user.
     }
 
     /**
+     *This API is used to search and subscribe the message group information of a topic.
+     * @param req DescribeTopicSubscribeGroupRequest
+     * @return DescribeTopicSubscribeGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopicSubscribeGroupResponse DescribeTopicSubscribeGroup(DescribeTopicSubscribeGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTopicSubscribeGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTopicSubscribeGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTopicSubscribeGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query user information.
      * @param req DescribeUserRequest
      * @return DescribeUserResponse

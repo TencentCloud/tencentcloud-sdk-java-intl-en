@@ -9,8 +9,14 @@ public enum CkafkaErrorCode {
     // Invalid parameter.
      INVALIDPARAMETER("InvalidParameter"),
      
+    // Invalid parameter value.
+     INVALIDPARAMETERVALUE("InvalidParameterValue"),
+     
     // The instance does not exist.
      INVALIDPARAMETERVALUE_INSTANCENOTEXIST("InvalidParameterValue.InstanceNotExist"),
+     
+    // The parameter is required.
+     INVALIDPARAMETERVALUE_NOTALLOWEDEMPTY("InvalidParameterValue.NotAllowedEmpty"),
      
     // The parameter already exists.
      INVALIDPARAMETERVALUE_REPETITIONVALUE("InvalidParameterValue.RepetitionValue"),
@@ -30,7 +36,13 @@ public enum CkafkaErrorCode {
     // The zone is not supported.
      INVALIDPARAMETERVALUE_ZONENOTSUPPORT("InvalidParameterValue.ZoneNotSupport"),
      
-    // 
+    // Operation denied.
+     OPERATIONDENIED("OperationDenied"),
+     
+    // The number of requests exceeds the frequency limit.
+     REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
+     
+    // The resource is occupied.
      RESOURCEINUSE("ResourceInUse"),
      
     // The resource is unavailable.
@@ -38,6 +50,12 @@ public enum CkafkaErrorCode {
      
     // Unauthorized operation.
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
+     
+    // Unknown parameter error.
+     UNKNOWNPARAMETER("UnknownParameter"),
+     
+    // Unsupported operation.
+     UNSUPPORTEDOPERATION("UnsupportedOperation"),
      
     // The batch instance deletion limit is reached.
      UNSUPPORTEDOPERATION_BATCHDELINSTANCELIMIT("UnsupportedOperation.BatchDelInstanceLimit"),

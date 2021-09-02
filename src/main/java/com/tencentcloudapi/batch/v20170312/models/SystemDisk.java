@@ -44,6 +44,13 @@ public class SystemDisk extends AbstractModel{
     private Long DiskSize;
 
     /**
+    * ID of the dedicated cluster to which the instance belongs.
+    */
+    @SerializedName("CdcId")
+    @Expose
+    private String CdcId;
+
+    /**
      * Get System disk type. For more information on limits of system disk types, see [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Valid values:<br><li>LOCAL_BASIC: local disk<br><li>LOCAL_SSD: local SSD disk<br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_SSD: SSD<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><br>The disk type currently in stock will be used by default.  
      * @return DiskType System disk type. For more information on limits of system disk types, see [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Valid values:<br><li>LOCAL_BASIC: local disk<br><li>LOCAL_SSD: local SSD disk<br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_SSD: SSD<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><br>The disk type currently in stock will be used by default. 
      */
@@ -91,6 +98,22 @@ public class SystemDisk extends AbstractModel{
         this.DiskSize = DiskSize;
     }
 
+    /**
+     * Get ID of the dedicated cluster to which the instance belongs. 
+     * @return CdcId ID of the dedicated cluster to which the instance belongs.
+     */
+    public String getCdcId() {
+        return this.CdcId;
+    }
+
+    /**
+     * Set ID of the dedicated cluster to which the instance belongs.
+     * @param CdcId ID of the dedicated cluster to which the instance belongs.
+     */
+    public void setCdcId(String CdcId) {
+        this.CdcId = CdcId;
+    }
+
     public SystemDisk() {
     }
 
@@ -108,6 +131,9 @@ public class SystemDisk extends AbstractModel{
         if (source.DiskSize != null) {
             this.DiskSize = new Long(source.DiskSize);
         }
+        if (source.CdcId != null) {
+            this.CdcId = new String(source.CdcId);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class SystemDisk extends AbstractModel{
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
         this.setParamSimple(map, prefix + "DiskId", this.DiskId);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
+        this.setParamSimple(map, prefix + "CdcId", this.CdcId);
 
     }
 }
