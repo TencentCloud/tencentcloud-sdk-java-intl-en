@@ -58,6 +58,13 @@ public class ListAttachedRolePoliciesRequest extends AbstractModel{
     private String PolicyType;
 
     /**
+    * Search by keyword
+    */
+    @SerializedName("Keyword")
+    @Expose
+    private String Keyword;
+
+    /**
      * Get Page number, beginning from 1 
      * @return Page Page number, beginning from 1
      */
@@ -137,6 +144,22 @@ public class ListAttachedRolePoliciesRequest extends AbstractModel{
         this.PolicyType = PolicyType;
     }
 
+    /**
+     * Get Search by keyword 
+     * @return Keyword Search by keyword
+     */
+    public String getKeyword() {
+        return this.Keyword;
+    }
+
+    /**
+     * Set Search by keyword
+     * @param Keyword Search by keyword
+     */
+    public void setKeyword(String Keyword) {
+        this.Keyword = Keyword;
+    }
+
     public ListAttachedRolePoliciesRequest() {
     }
 
@@ -160,6 +183,9 @@ public class ListAttachedRolePoliciesRequest extends AbstractModel{
         if (source.PolicyType != null) {
             this.PolicyType = new String(source.PolicyType);
         }
+        if (source.Keyword != null) {
+            this.Keyword = new String(source.Keyword);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class ListAttachedRolePoliciesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RoleId", this.RoleId);
         this.setParamSimple(map, prefix + "RoleName", this.RoleName);
         this.setParamSimple(map, prefix + "PolicyType", this.PolicyType);
+        this.setParamSimple(map, prefix + "Keyword", this.Keyword);
 
     }
 }

@@ -44,6 +44,13 @@ public class ListAttachedGroupPoliciesRequest extends AbstractModel{
     private Long Rp;
 
     /**
+    * Search by keyword
+    */
+    @SerializedName("Keyword")
+    @Expose
+    private String Keyword;
+
+    /**
      * Get User group ID 
      * @return TargetGroupId User group ID
      */
@@ -91,6 +98,22 @@ public class ListAttachedGroupPoliciesRequest extends AbstractModel{
         this.Rp = Rp;
     }
 
+    /**
+     * Get Search by keyword 
+     * @return Keyword Search by keyword
+     */
+    public String getKeyword() {
+        return this.Keyword;
+    }
+
+    /**
+     * Set Search by keyword
+     * @param Keyword Search by keyword
+     */
+    public void setKeyword(String Keyword) {
+        this.Keyword = Keyword;
+    }
+
     public ListAttachedGroupPoliciesRequest() {
     }
 
@@ -108,6 +131,9 @@ public class ListAttachedGroupPoliciesRequest extends AbstractModel{
         if (source.Rp != null) {
             this.Rp = new Long(source.Rp);
         }
+        if (source.Keyword != null) {
+            this.Keyword = new String(source.Keyword);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class ListAttachedGroupPoliciesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TargetGroupId", this.TargetGroupId);
         this.setParamSimple(map, prefix + "Page", this.Page);
         this.setParamSimple(map, prefix + "Rp", this.Rp);
+        this.setParamSimple(map, prefix + "Keyword", this.Keyword);
 
     }
 }

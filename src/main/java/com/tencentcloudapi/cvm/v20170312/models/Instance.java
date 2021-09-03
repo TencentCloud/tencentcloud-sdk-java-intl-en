@@ -86,7 +86,7 @@ public class Instance extends AbstractModel{
     private SystemDisk SystemDisk;
 
     /**
-    * Information on the data disks of the instance, which only covers the data disks purchased together with the instance. 
+    * Information of the instance data disks.
     */
     @SerializedName("DataDisks")
     @Expose
@@ -262,6 +262,14 @@ Note: this field may return null, indicating that no valid value was found.
     private String [] RdmaIpAddresses;
 
     /**
+    * The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
+Note: this field may return null, indicating that no valid value was found.
+    */
+    @SerializedName("IsolatedSource")
+    @Expose
+    private String IsolatedSource;
+
+    /**
      * Get Location of the instance 
      * @return Placement Location of the instance
      */
@@ -406,16 +414,16 @@ Note: this field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Information on the data disks of the instance, which only covers the data disks purchased together with the instance.  
-     * @return DataDisks Information on the data disks of the instance, which only covers the data disks purchased together with the instance. 
+     * Get Information of the instance data disks. 
+     * @return DataDisks Information of the instance data disks.
      */
     public DataDisk [] getDataDisks() {
         return this.DataDisks;
     }
 
     /**
-     * Set Information on the data disks of the instance, which only covers the data disks purchased together with the instance. 
-     * @param DataDisks Information on the data disks of the instance, which only covers the data disks purchased together with the instance. 
+     * Set Information of the instance data disks.
+     * @param DataDisks Information of the instance data disks.
      */
     public void setDataDisks(DataDisk [] DataDisks) {
         this.DataDisks = DataDisks;
@@ -821,6 +829,26 @@ Note: this field may return null, indicating that no valid value was found.
         this.RdmaIpAddresses = RdmaIpAddresses;
     }
 
+    /**
+     * Get The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
+Note: this field may return null, indicating that no valid value was found. 
+     * @return IsolatedSource The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
+Note: this field may return null, indicating that no valid value was found.
+     */
+    public String getIsolatedSource() {
+        return this.IsolatedSource;
+    }
+
+    /**
+     * Set The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
+Note: this field may return null, indicating that no valid value was found.
+     * @param IsolatedSource The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
+Note: this field may return null, indicating that no valid value was found.
+     */
+    public void setIsolatedSource(String IsolatedSource) {
+        this.IsolatedSource = IsolatedSource;
+    }
+
     public Instance() {
     }
 
@@ -949,6 +977,9 @@ Note: this field may return null, indicating that no valid value was found.
                 this.RdmaIpAddresses[i] = new String(source.RdmaIpAddresses[i]);
             }
         }
+        if (source.IsolatedSource != null) {
+            this.IsolatedSource = new String(source.IsolatedSource);
+        }
     }
 
 
@@ -989,6 +1020,7 @@ Note: this field may return null, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
         this.setParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
         this.setParamArraySimple(map, prefix + "RdmaIpAddresses.", this.RdmaIpAddresses);
+        this.setParamSimple(map, prefix + "IsolatedSource", this.IsolatedSource);
 
     }
 }

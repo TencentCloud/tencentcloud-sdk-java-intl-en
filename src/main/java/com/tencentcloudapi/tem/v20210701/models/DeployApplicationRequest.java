@@ -267,7 +267,7 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
     private CronHorizontalAutoscaler [] CronHorizontalAutoscaler;
 
     /**
-    * 
+    * Specifies whether to enable logging. `1`: enable; `0`: do not enable
     */
     @SerializedName("LogEnable")
     @Expose
@@ -842,16 +842,16 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
     }
 
     /**
-     * Get  
-     * @return LogEnable 
+     * Get Specifies whether to enable logging. `1`: enable; `0`: do not enable 
+     * @return LogEnable Specifies whether to enable logging. `1`: enable; `0`: do not enable
      */
     public Long getLogEnable() {
         return this.LogEnable;
     }
 
     /**
-     * Set 
-     * @param LogEnable 
+     * Set Specifies whether to enable logging. `1`: enable; `0`: do not enable
+     * @param LogEnable Specifies whether to enable logging. `1`: enable; `0`: do not enable
      */
     public void setLogEnable(Long LogEnable) {
         this.LogEnable = LogEnable;

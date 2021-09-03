@@ -1,7 +1,10 @@
 package com.tencentcloudapi.tem.v20210701;
 public enum TemErrorCode {
     // Failed to create the service.
-     INTERNALERROR_CREATESERVICEERROR("InternalError.CreateServiceError");
+     INTERNALERROR_CREATESERVICEERROR("InternalError.CreateServiceError"),
+     
+    // 
+     INVALIDPARAMETERVALUE_SERVICENAMEDUPLICATEERROR("InvalidParameterValue.ServiceNameDuplicateError");
      
     private String value;
     private TemErrorCode (String value){
