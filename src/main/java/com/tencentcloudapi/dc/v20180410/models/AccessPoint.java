@@ -97,6 +97,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String Area;
 
     /**
+    * Access point type. Valid values: `VXLAN`, `QCPL`, and `QCAR`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AccessPointType")
+    @Expose
+    private String AccessPointType;
+
+    /**
      * Get Access point name. 
      * @return AccessPointName Access point name.
      */
@@ -272,6 +280,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.Area = Area;
     }
 
+    /**
+     * Get Access point type. Valid values: `VXLAN`, `QCPL`, and `QCAR`.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return AccessPointType Access point type. Valid values: `VXLAN`, `QCPL`, and `QCAR`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getAccessPointType() {
+        return this.AccessPointType;
+    }
+
+    /**
+     * Set Access point type. Valid values: `VXLAN`, `QCPL`, and `QCAR`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param AccessPointType Access point type. Valid values: `VXLAN`, `QCPL`, and `QCAR`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setAccessPointType(String AccessPointType) {
+        this.AccessPointType = AccessPointType;
+    }
+
     public AccessPoint() {
     }
 
@@ -316,6 +344,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.Area != null) {
             this.Area = new String(source.Area);
         }
+        if (source.AccessPointType != null) {
+            this.AccessPointType = new String(source.AccessPointType);
+        }
     }
 
 
@@ -333,6 +364,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamObj(map, prefix + "Coordinate.", this.Coordinate);
         this.setParamSimple(map, prefix + "City", this.City);
         this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamSimple(map, prefix + "AccessPointType", this.AccessPointType);
 
     }
 }

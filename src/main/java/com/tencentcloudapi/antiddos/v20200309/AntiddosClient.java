@@ -59,6 +59,26 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
+     *This API is used to bind an Anti-DDoS EIP to the specified private IP of a CLB instance.
+     * @param req AssociateDDoSEipLoadBalancerRequest
+     * @return AssociateDDoSEipLoadBalancerResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssociateDDoSEipLoadBalancerResponse AssociateDDoSEipLoadBalancer(AssociateDDoSEipLoadBalancerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AssociateDDoSEipLoadBalancerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AssociateDDoSEipLoadBalancerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AssociateDDoSEipLoadBalancer");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to add an Anti-DDoS IP blocklist/allowlist.
      * @param req CreateBlackWhiteIpListRequest
      * @return CreateBlackWhiteIpListResponse
@@ -431,6 +451,26 @@ public class AntiddosClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteWaterPrintKeyResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteWaterPrintKey");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to querying the status of Anti-DDoS IP.
+     * @param req DescribeBasicDeviceStatusRequest
+     * @return DescribeBasicDeviceStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBasicDeviceStatusResponse DescribeBasicDeviceStatus(DescribeBasicDeviceStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBasicDeviceStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBasicDeviceStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBasicDeviceStatus");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

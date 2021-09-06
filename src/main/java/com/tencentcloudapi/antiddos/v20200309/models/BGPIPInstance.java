@@ -103,8 +103,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private StaticPackRelation StaticPackRelation;
 
     /**
-    * Used to differentiate Anti-DDoS Advanced lines outside the Chinese mainland
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Specifies the ISP. `0`: Chinese mainland ISPs (default); `1`：Radware；`2`: Tencent; `3`: NSFOCUS. Note that `1`, `2` and `3` are used for services outside the Chinese mainland.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("ZoneId")
     @Expose
@@ -151,6 +151,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     @SerializedName("EipAddressInfo")
     @Expose
     private EipAddressRelation EipAddressInfo;
+
+    /**
+    * Recommended domain name for clients to access.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
 
     /**
      * Get Anti-DDoS instance details 
@@ -353,20 +361,20 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Used to differentiate Anti-DDoS Advanced lines outside the Chinese mainland
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return ZoneId Used to differentiate Anti-DDoS Advanced lines outside the Chinese mainland
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Specifies the ISP. `0`: Chinese mainland ISPs (default); `1`：Radware；`2`: Tencent; `3`: NSFOCUS. Note that `1`, `2` and `3` are used for services outside the Chinese mainland.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ZoneId Specifies the ISP. `0`: Chinese mainland ISPs (default); `1`：Radware；`2`: Tencent; `3`: NSFOCUS. Note that `1`, `2` and `3` are used for services outside the Chinese mainland.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Used to differentiate Anti-DDoS Advanced lines outside the Chinese mainland
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param ZoneId Used to differentiate Anti-DDoS Advanced lines outside the Chinese mainland
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Specifies the ISP. `0`: Chinese mainland ISPs (default); `1`：Radware；`2`: Tencent; `3`: NSFOCUS. Note that `1`, `2` and `3` are used for services outside the Chinese mainland.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ZoneId Specifies the ISP. `0`: Chinese mainland ISPs (default); `1`：Radware；`2`: Tencent; `3`: NSFOCUS. Note that `1`, `2` and `3` are used for services outside the Chinese mainland.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
@@ -480,6 +488,26 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.EipAddressInfo = EipAddressInfo;
     }
 
+    /**
+     * Get Recommended domain name for clients to access.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Domain Recommended domain name for clients to access.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set Recommended domain name for clients to access.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Domain Recommended domain name for clients to access.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
     public BGPIPInstance() {
     }
 
@@ -536,6 +564,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.EipAddressInfo != null) {
             this.EipAddressInfo = new EipAddressRelation(source.EipAddressInfo);
         }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
     }
 
 
@@ -559,6 +590,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "EipFlag", this.EipFlag);
         this.setParamObj(map, prefix + "EipAddressPackRelation.", this.EipAddressPackRelation);
         this.setParamObj(map, prefix + "EipAddressInfo.", this.EipAddressInfo);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
 
     }
 }

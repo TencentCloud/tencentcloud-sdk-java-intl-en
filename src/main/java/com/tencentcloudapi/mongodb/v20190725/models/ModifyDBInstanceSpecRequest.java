@@ -51,6 +51,27 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel{
     private Long OplogSize;
 
     /**
+    * Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity won't change.
+    */
+    @SerializedName("NodeNum")
+    @Expose
+    private Long NodeNum;
+
+    /**
+    * Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity won't change.
+    */
+    @SerializedName("ReplicateSetNum")
+    @Expose
+    private Long ReplicateSetNum;
+
+    /**
+    * Switch time. Valid values: `0` (upon modification completion), `1` (during maintenance time). Default value: `0`. If the node quantity or the shard quantity is modified, `1` is invalid.
+    */
+    @SerializedName("InMaintenance")
+    @Expose
+    private Long InMaintenance;
+
+    /**
      * Get Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page 
      * @return InstanceId Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
      */
@@ -114,6 +135,54 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel{
         this.OplogSize = OplogSize;
     }
 
+    /**
+     * Get Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity won't change. 
+     * @return NodeNum Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity won't change.
+     */
+    public Long getNodeNum() {
+        return this.NodeNum;
+    }
+
+    /**
+     * Set Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity won't change.
+     * @param NodeNum Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity won't change.
+     */
+    public void setNodeNum(Long NodeNum) {
+        this.NodeNum = NodeNum;
+    }
+
+    /**
+     * Get Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity won't change. 
+     * @return ReplicateSetNum Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity won't change.
+     */
+    public Long getReplicateSetNum() {
+        return this.ReplicateSetNum;
+    }
+
+    /**
+     * Set Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity won't change.
+     * @param ReplicateSetNum Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity won't change.
+     */
+    public void setReplicateSetNum(Long ReplicateSetNum) {
+        this.ReplicateSetNum = ReplicateSetNum;
+    }
+
+    /**
+     * Get Switch time. Valid values: `0` (upon modification completion), `1` (during maintenance time). Default value: `0`. If the node quantity or the shard quantity is modified, `1` is invalid. 
+     * @return InMaintenance Switch time. Valid values: `0` (upon modification completion), `1` (during maintenance time). Default value: `0`. If the node quantity or the shard quantity is modified, `1` is invalid.
+     */
+    public Long getInMaintenance() {
+        return this.InMaintenance;
+    }
+
+    /**
+     * Set Switch time. Valid values: `0` (upon modification completion), `1` (during maintenance time). Default value: `0`. If the node quantity or the shard quantity is modified, `1` is invalid.
+     * @param InMaintenance Switch time. Valid values: `0` (upon modification completion), `1` (during maintenance time). Default value: `0`. If the node quantity or the shard quantity is modified, `1` is invalid.
+     */
+    public void setInMaintenance(Long InMaintenance) {
+        this.InMaintenance = InMaintenance;
+    }
+
     public ModifyDBInstanceSpecRequest() {
     }
 
@@ -134,6 +203,15 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel{
         if (source.OplogSize != null) {
             this.OplogSize = new Long(source.OplogSize);
         }
+        if (source.NodeNum != null) {
+            this.NodeNum = new Long(source.NodeNum);
+        }
+        if (source.ReplicateSetNum != null) {
+            this.ReplicateSetNum = new Long(source.ReplicateSetNum);
+        }
+        if (source.InMaintenance != null) {
+            this.InMaintenance = new Long(source.InMaintenance);
+        }
     }
 
 
@@ -145,6 +223,9 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "Volume", this.Volume);
         this.setParamSimple(map, prefix + "OplogSize", this.OplogSize);
+        this.setParamSimple(map, prefix + "NodeNum", this.NodeNum);
+        this.setParamSimple(map, prefix + "ReplicateSetNum", this.ReplicateSetNum);
+        this.setParamSimple(map, prefix + "InMaintenance", this.InMaintenance);
 
     }
 }

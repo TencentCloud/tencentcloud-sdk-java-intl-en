@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class BGPIPInstanceSpecification extends AbstractModel{
 
     /**
-    * Base protection bandwidth (in Gbps)
+    * Base protection bandwidth (in Mbps)
     */
     @SerializedName("ProtectBandwidth")
     @Expose
@@ -74,23 +74,23 @@ public class BGPIPInstanceSpecification extends AbstractModel{
     private Long Line;
 
     /**
-    * Elastic protection bandwidth (in Gbps)
+    * Elastic protection bandwidth (in Mbps)
     */
     @SerializedName("ElasticBandwidth")
     @Expose
     private Long ElasticBandwidth;
 
     /**
-     * Get Base protection bandwidth (in Gbps) 
-     * @return ProtectBandwidth Base protection bandwidth (in Gbps)
+     * Get Base protection bandwidth (in Mbps) 
+     * @return ProtectBandwidth Base protection bandwidth (in Mbps)
      */
     public Long getProtectBandwidth() {
         return this.ProtectBandwidth;
     }
 
     /**
-     * Set Base protection bandwidth (in Gbps)
-     * @param ProtectBandwidth Base protection bandwidth (in Gbps)
+     * Set Base protection bandwidth (in Mbps)
+     * @param ProtectBandwidth Base protection bandwidth (in Mbps)
      */
     public void setProtectBandwidth(Long ProtectBandwidth) {
         this.ProtectBandwidth = ProtectBandwidth;
@@ -213,16 +213,16 @@ public class BGPIPInstanceSpecification extends AbstractModel{
     }
 
     /**
-     * Get Elastic protection bandwidth (in Gbps) 
-     * @return ElasticBandwidth Elastic protection bandwidth (in Gbps)
+     * Get Elastic protection bandwidth (in Mbps) 
+     * @return ElasticBandwidth Elastic protection bandwidth (in Mbps)
      */
     public Long getElasticBandwidth() {
         return this.ElasticBandwidth;
     }
 
     /**
-     * Set Elastic protection bandwidth (in Gbps)
-     * @param ElasticBandwidth Elastic protection bandwidth (in Gbps)
+     * Set Elastic protection bandwidth (in Mbps)
+     * @param ElasticBandwidth Elastic protection bandwidth (in Mbps)
      */
     public void setElasticBandwidth(Long ElasticBandwidth) {
         this.ElasticBandwidth = ElasticBandwidth;
