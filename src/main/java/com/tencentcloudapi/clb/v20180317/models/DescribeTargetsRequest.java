@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeTargetsRequest extends AbstractModel{
 
     /**
-    * CLB instance ID
+    * CLB instance ID.
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * Listener ID list
+    * List of listener IDs (20 IDs at most).
     */
     @SerializedName("ListenerIds")
     @Expose
@@ -51,32 +51,32 @@ public class DescribeTargetsRequest extends AbstractModel{
     private Long Port;
 
     /**
-     * Get CLB instance ID 
-     * @return LoadBalancerId CLB instance ID
+     * Get CLB instance ID. 
+     * @return LoadBalancerId CLB instance ID.
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set CLB instance ID
-     * @param LoadBalancerId CLB instance ID
+     * Set CLB instance ID.
+     * @param LoadBalancerId CLB instance ID.
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get Listener ID list 
-     * @return ListenerIds Listener ID list
+     * Get List of listener IDs (20 IDs at most). 
+     * @return ListenerIds List of listener IDs (20 IDs at most).
      */
     public String [] getListenerIds() {
         return this.ListenerIds;
     }
 
     /**
-     * Set Listener ID list
-     * @param ListenerIds Listener ID list
+     * Set List of listener IDs (20 IDs at most).
+     * @param ListenerIds List of listener IDs (20 IDs at most).
      */
     public void setListenerIds(String [] ListenerIds) {
         this.ListenerIds = ListenerIds;

@@ -41,7 +41,7 @@ public class Route extends AbstractModel{
     private Long RouteId;
 
     /**
-    * VIP network type (1: public network TGW; 2: classic network; 3: VPC; 4: Tencent Cloud-supported environment (generally used for internal instances); 5: SSL public network access; 6: BM VPC)
+    * VIP network type (1: public network TGW; 2: classic network; 3: VPC; 4: supporting network (Standard Edition); 5: SSL public network access; 6: BM VPC; 7: supporting network (Pro Edition))
     */
     @SerializedName("VipType")
     @Expose
@@ -69,6 +69,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     @SerializedName("DomainPort")
     @Expose
     private Long DomainPort;
+
+    /**
+    * Timestamp
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DeleteTimestamp")
+    @Expose
+    private String DeleteTimestamp;
 
     /**
      * Get Instance connection method
@@ -119,16 +127,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get VIP network type (1: public network TGW; 2: classic network; 3: VPC; 4: Tencent Cloud-supported environment (generally used for internal instances); 5: SSL public network access; 6: BM VPC) 
-     * @return VipType VIP network type (1: public network TGW; 2: classic network; 3: VPC; 4: Tencent Cloud-supported environment (generally used for internal instances); 5: SSL public network access; 6: BM VPC)
+     * Get VIP network type (1: public network TGW; 2: classic network; 3: VPC; 4: supporting network (Standard Edition); 5: SSL public network access; 6: BM VPC; 7: supporting network (Pro Edition)) 
+     * @return VipType VIP network type (1: public network TGW; 2: classic network; 3: VPC; 4: supporting network (Standard Edition); 5: SSL public network access; 6: BM VPC; 7: supporting network (Pro Edition))
      */
     public Long getVipType() {
         return this.VipType;
     }
 
     /**
-     * Set VIP network type (1: public network TGW; 2: classic network; 3: VPC; 4: Tencent Cloud-supported environment (generally used for internal instances); 5: SSL public network access; 6: BM VPC)
-     * @param VipType VIP network type (1: public network TGW; 2: classic network; 3: VPC; 4: Tencent Cloud-supported environment (generally used for internal instances); 5: SSL public network access; 6: BM VPC)
+     * Set VIP network type (1: public network TGW; 2: classic network; 3: VPC; 4: supporting network (Standard Edition); 5: SSL public network access; 6: BM VPC; 7: supporting network (Pro Edition))
+     * @param VipType VIP network type (1: public network TGW; 2: classic network; 3: VPC; 4: supporting network (Standard Edition); 5: SSL public network access; 6: BM VPC; 7: supporting network (Pro Edition))
      */
     public void setVipType(Long VipType) {
         this.VipType = VipType;
@@ -190,6 +198,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.DomainPort = DomainPort;
     }
 
+    /**
+     * Get Timestamp
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return DeleteTimestamp Timestamp
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getDeleteTimestamp() {
+        return this.DeleteTimestamp;
+    }
+
+    /**
+     * Set Timestamp
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param DeleteTimestamp Timestamp
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDeleteTimestamp(String DeleteTimestamp) {
+        this.DeleteTimestamp = DeleteTimestamp;
+    }
+
     public Route() {
     }
 
@@ -219,6 +247,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.DomainPort != null) {
             this.DomainPort = new Long(source.DomainPort);
         }
+        if (source.DeleteTimestamp != null) {
+            this.DeleteTimestamp = new String(source.DeleteTimestamp);
+        }
     }
 
 
@@ -232,6 +263,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "VipList.", this.VipList);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "DomainPort", this.DomainPort);
+        this.setParamSimple(map, prefix + "DeleteTimestamp", this.DeleteTimestamp);
 
     }
 }

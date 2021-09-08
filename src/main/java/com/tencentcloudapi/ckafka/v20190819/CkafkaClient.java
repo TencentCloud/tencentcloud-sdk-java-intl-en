@@ -541,6 +541,26 @@ This API is used to get the list of topics in a CKafka instance of a user.
     }
 
     /**
+     *This API is used to get the details of a synced topic replica.
+     * @param req DescribeTopicSyncReplicaRequest
+     * @return DescribeTopicSyncReplicaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopicSyncReplicaResponse DescribeTopicSyncReplica(DescribeTopicSyncReplicaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTopicSyncReplicaResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTopicSyncReplicaResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTopicSyncReplica");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query user information.
      * @param req DescribeUserRequest
      * @return DescribeUserResponse

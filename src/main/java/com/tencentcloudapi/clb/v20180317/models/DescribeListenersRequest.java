@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeListenersRequest extends AbstractModel{
 
     /**
-    * CLB instance ID
+    * CLB instance ID.
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * Array of IDs of the CLB listeners to be queried
+    * Array of CLB listener IDs to query (100 IDs at most).
     */
     @SerializedName("ListenerIds")
     @Expose
@@ -51,32 +51,32 @@ public class DescribeListenersRequest extends AbstractModel{
     private Long Port;
 
     /**
-     * Get CLB instance ID 
-     * @return LoadBalancerId CLB instance ID
+     * Get CLB instance ID. 
+     * @return LoadBalancerId CLB instance ID.
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set CLB instance ID
-     * @param LoadBalancerId CLB instance ID
+     * Set CLB instance ID.
+     * @param LoadBalancerId CLB instance ID.
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get Array of IDs of the CLB listeners to be queried 
-     * @return ListenerIds Array of IDs of the CLB listeners to be queried
+     * Get Array of CLB listener IDs to query (100 IDs at most). 
+     * @return ListenerIds Array of CLB listener IDs to query (100 IDs at most).
      */
     public String [] getListenerIds() {
         return this.ListenerIds;
     }
 
     /**
-     * Set Array of IDs of the CLB listeners to be queried
-     * @param ListenerIds Array of IDs of the CLB listeners to be queried
+     * Set Array of CLB listener IDs to query (100 IDs at most).
+     * @param ListenerIds Array of CLB listener IDs to query (100 IDs at most).
      */
     public void setListenerIds(String [] ListenerIds) {
         this.ListenerIds = ListenerIds;

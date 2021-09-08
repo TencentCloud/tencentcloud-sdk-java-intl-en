@@ -44,7 +44,7 @@ public class ModifyIncrementalMigrationRequest extends AbstractModel{
     private String IncrementalMigrationId;
 
     /**
-    * Whether to restore backups. Valid values: `NO`, `YES`. If this parameter is not specified, whether to restore incremental backups will not change.
+    * Whether to restore backups. Valid values: `NO`, `YES`. If this parameter is not specified, current settings will be applied.
     */
     @SerializedName("IsRecovery")
     @Expose
@@ -106,16 +106,16 @@ public class ModifyIncrementalMigrationRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to restore backups. Valid values: `NO`, `YES`. If this parameter is not specified, whether to restore incremental backups will not change. 
-     * @return IsRecovery Whether to restore backups. Valid values: `NO`, `YES`. If this parameter is not specified, whether to restore incremental backups will not change.
+     * Get Whether to restore backups. Valid values: `NO`, `YES`. If this parameter is not specified, current settings will be applied. 
+     * @return IsRecovery Whether to restore backups. Valid values: `NO`, `YES`. If this parameter is not specified, current settings will be applied.
      */
     public String getIsRecovery() {
         return this.IsRecovery;
     }
 
     /**
-     * Set Whether to restore backups. Valid values: `NO`, `YES`. If this parameter is not specified, whether to restore incremental backups will not change.
-     * @param IsRecovery Whether to restore backups. Valid values: `NO`, `YES`. If this parameter is not specified, whether to restore incremental backups will not change.
+     * Set Whether to restore backups. Valid values: `NO`, `YES`. If this parameter is not specified, current settings will be applied.
+     * @param IsRecovery Whether to restore backups. Valid values: `NO`, `YES`. If this parameter is not specified, current settings will be applied.
      */
     public void setIsRecovery(String IsRecovery) {
         this.IsRecovery = IsRecovery;

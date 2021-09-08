@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class RsWeightRule extends AbstractModel{
 
     /**
-    * CLB listener ID
+    * CLB listener ID.
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * List of real servers for which to modify the weight
+    * List of real servers whose weights to modify.
     */
     @SerializedName("Targets")
     @Expose
     private Target [] Targets;
 
     /**
-    * Forwarding rule ID
+    * Forwarding rule ID, which is required only for layer-7 rules.
     */
     @SerializedName("LocationId")
     @Expose
@@ -58,55 +58,55 @@ public class RsWeightRule extends AbstractModel{
     private String Url;
 
     /**
-    * New forwarding weight of a real server. Value range: 0-100.
+    * The new forwarding weight of the real server. Value range: [0, 100]. This parameter takes lower precedence than `Weight` in [`Targets`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#Target), which means that this parameter only takes effect when the `Weight` in `RsWeightRule` is left empty.
     */
     @SerializedName("Weight")
     @Expose
     private Long Weight;
 
     /**
-     * Get CLB listener ID 
-     * @return ListenerId CLB listener ID
+     * Get CLB listener ID. 
+     * @return ListenerId CLB listener ID.
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set CLB listener ID
-     * @param ListenerId CLB listener ID
+     * Set CLB listener ID.
+     * @param ListenerId CLB listener ID.
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get List of real servers for which to modify the weight 
-     * @return Targets List of real servers for which to modify the weight
+     * Get List of real servers whose weights to modify. 
+     * @return Targets List of real servers whose weights to modify.
      */
     public Target [] getTargets() {
         return this.Targets;
     }
 
     /**
-     * Set List of real servers for which to modify the weight
-     * @param Targets List of real servers for which to modify the weight
+     * Set List of real servers whose weights to modify.
+     * @param Targets List of real servers whose weights to modify.
      */
     public void setTargets(Target [] Targets) {
         this.Targets = Targets;
     }
 
     /**
-     * Get Forwarding rule ID 
-     * @return LocationId Forwarding rule ID
+     * Get Forwarding rule ID, which is required only for layer-7 rules. 
+     * @return LocationId Forwarding rule ID, which is required only for layer-7 rules.
      */
     public String getLocationId() {
         return this.LocationId;
     }
 
     /**
-     * Set Forwarding rule ID
-     * @param LocationId Forwarding rule ID
+     * Set Forwarding rule ID, which is required only for layer-7 rules.
+     * @param LocationId Forwarding rule ID, which is required only for layer-7 rules.
      */
     public void setLocationId(String LocationId) {
         this.LocationId = LocationId;
@@ -145,16 +145,16 @@ public class RsWeightRule extends AbstractModel{
     }
 
     /**
-     * Get New forwarding weight of a real server. Value range: 0-100. 
-     * @return Weight New forwarding weight of a real server. Value range: 0-100.
+     * Get The new forwarding weight of the real server. Value range: [0, 100]. This parameter takes lower precedence than `Weight` in [`Targets`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#Target), which means that this parameter only takes effect when the `Weight` in `RsWeightRule` is left empty. 
+     * @return Weight The new forwarding weight of the real server. Value range: [0, 100]. This parameter takes lower precedence than `Weight` in [`Targets`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#Target), which means that this parameter only takes effect when the `Weight` in `RsWeightRule` is left empty.
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set New forwarding weight of a real server. Value range: 0-100.
-     * @param Weight New forwarding weight of a real server. Value range: 0-100.
+     * Set The new forwarding weight of the real server. Value range: [0, 100]. This parameter takes lower precedence than `Weight` in [`Targets`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#Target), which means that this parameter only takes effect when the `Weight` in `RsWeightRule` is left empty.
+     * @param Weight The new forwarding weight of the real server. Value range: [0, 100]. This parameter takes lower precedence than `Weight` in [`Targets`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#Target), which means that this parameter only takes effect when the `Weight` in `RsWeightRule` is left empty.
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;

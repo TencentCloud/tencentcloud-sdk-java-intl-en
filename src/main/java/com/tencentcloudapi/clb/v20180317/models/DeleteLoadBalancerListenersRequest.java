@@ -30,7 +30,7 @@ public class DeleteLoadBalancerListenersRequest extends AbstractModel{
     private String LoadBalancerId;
 
     /**
-    * Array of IDs of the listeners to be deleted. If this parameter is left empty, all listeners of the CLB instance will be deleted.
+    * Array of listener IDs to delete (20 IDs at most). If this parameter is left empty, all listeners of the CLB instance will be deleted.
     */
     @SerializedName("ListenerIds")
     @Expose
@@ -53,16 +53,16 @@ public class DeleteLoadBalancerListenersRequest extends AbstractModel{
     }
 
     /**
-     * Get Array of IDs of the listeners to be deleted. If this parameter is left empty, all listeners of the CLB instance will be deleted. 
-     * @return ListenerIds Array of IDs of the listeners to be deleted. If this parameter is left empty, all listeners of the CLB instance will be deleted.
+     * Get Array of listener IDs to delete (20 IDs at most). If this parameter is left empty, all listeners of the CLB instance will be deleted. 
+     * @return ListenerIds Array of listener IDs to delete (20 IDs at most). If this parameter is left empty, all listeners of the CLB instance will be deleted.
      */
     public String [] getListenerIds() {
         return this.ListenerIds;
     }
 
     /**
-     * Set Array of IDs of the listeners to be deleted. If this parameter is left empty, all listeners of the CLB instance will be deleted.
-     * @param ListenerIds Array of IDs of the listeners to be deleted. If this parameter is left empty, all listeners of the CLB instance will be deleted.
+     * Set Array of listener IDs to delete (20 IDs at most). If this parameter is left empty, all listeners of the CLB instance will be deleted.
+     * @param ListenerIds Array of listener IDs to delete (20 IDs at most). If this parameter is left empty, all listeners of the CLB instance will be deleted.
      */
     public void setListenerIds(String [] ListenerIds) {
         this.ListenerIds = ListenerIds;

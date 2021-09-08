@@ -80,7 +80,7 @@ This is an async API. After it is returned successfully, you can call the `Descr
     }
 
     /**
-     *This API is used to unbind layer-4/layer-7 real servers in batches.
+     *This API is used to unbind layer-4 and layer-7 real servers in batches. Up to 500 servers can be unbound in a batch.
      * @param req BatchDeregisterTargetsRequest
      * @return BatchDeregisterTargetsResponse
      * @throws TencentCloudSDKException
@@ -100,8 +100,8 @@ This is an async API. After it is returned successfully, you can call the `Descr
     }
 
     /**
-     *This API is used to modify the forwarding weights of real servers bound to a CLB listener in batches. It supports layer-4 and layer-7 CLB listeners but not Classic CLB.
-This is an async API. After it is returned successfully, you can call the `DescribeTaskStatus` API with the returned `RequestID` as an input parameter to check whether this task is successful.
+     *This API is used to modify forwarding weights of real servers bound to CLB listeners in batches. Up to 500 servers can be unbound in a batch. As this API is async, you should check whether the task is successful by passing the RequestId returned to the API call `DescribeTaskStatus`.<br/> This API is supported by CLB layer-4 and layer-7 listeners, but not Classis CLB counterparts.
+
      * @param req BatchModifyTargetWeightRequest
      * @return BatchModifyTargetWeightResponse
      * @throws TencentCloudSDKException
@@ -121,7 +121,7 @@ This is an async API. After it is returned successfully, you can call the `Descr
     }
 
     /**
-     *This API is used to bind CVM instances or ENIs in batches. It supports cross-region binding and layer-4 and layer-7 (TCP, UDP, HTTP, HTTPS) protocols.
+     *This API is used to bind CVM instances or ENIs in batches. Up to 500 servers can be bound in a batch. It supports cross-region binding, and layer-4 and layer-7 (TCP/UDP/HTTP/HTTPS) protocols.
      * @param req BatchRegisterTargetsRequest
      * @return BatchRegisterTargetsResponse
      * @throws TencentCloudSDKException
@@ -631,7 +631,7 @@ This is an async API. After it is returned successfully, you can call the Descri
     }
 
     /**
-     *This API is used to get the list of listeners by CLB instance ID, listener protocol, or port. If no filter is specified, all listeners under the CLB instance will be returned.
+     *This API is used to get the list of listeners by CLB ID, listener protocol, or listener port. If no filter is specified, all listeners for the CLB instance will be returned.
      * @param req DescribeListenersRequest
      * @return DescribeListenersResponse
      * @throws TencentCloudSDKException

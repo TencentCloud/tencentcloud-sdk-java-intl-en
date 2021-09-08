@@ -207,7 +207,7 @@ public enum SqlserverErrorCode {
     // Invalid instance status.
      RESOURCEUNAVAILABLE_INSTANCESTATUSINVALID("ResourceUnavailable.InstanceStatusInvalid"),
      
-    // Read-only instances are not supported.
+    // Read-Only instances are not supported.
      RESOURCEUNAVAILABLE_NOTSUPPORTROINSTANCE("ResourceUnavailable.NotSupportRoInstance"),
      
     // VPC not found.
@@ -222,7 +222,7 @@ public enum SqlserverErrorCode {
     // Unknown parameter error
      UNKNOWNPARAMETER("UnknownParameter"),
      
-    // Repeat operations are not supported.
+    // Repeated operations are not supported.
      UNSUPPORTEDOPERATION_NOTSUPPORTREPEAT("UnsupportedOperation.NotSupportRepeat"),
      
     // A wrong upload type.

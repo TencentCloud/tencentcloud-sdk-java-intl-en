@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class OperateResponseData extends AbstractModel{
 
     /**
-    * FlowId
+    * FlowId11
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FlowId")
@@ -31,9 +31,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long FlowId;
 
     /**
-     * Get FlowId
+     * Get FlowId11
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return FlowId FlowId
+     * @return FlowId FlowId11
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getFlowId() {
@@ -41,9 +41,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set FlowId
+     * Set FlowId11
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param FlowId FlowId
+     * @param FlowId FlowId11
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setFlowId(Long FlowId) {

@@ -235,6 +235,30 @@ Note: `null` may be returned for this field, indicating that no valid values can
     private DynamicRetentionTime RetentionTimeConfig;
 
     /**
+    * Maximum number of connections
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MaxConnection")
+    @Expose
+    private Long MaxConnection;
+
+    /**
+    * Public network bandwidth
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PublicNetwork")
+    @Expose
+    private Long PublicNetwork;
+
+    /**
+    * Time
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DeleteRouteTimestamp")
+    @Expose
+    private String DeleteRouteTimestamp;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -734,6 +758,66 @@ Note: `null` may be returned for this field, indicating that no valid values can
         this.RetentionTimeConfig = RetentionTimeConfig;
     }
 
+    /**
+     * Get Maximum number of connections
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return MaxConnection Maximum number of connections
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getMaxConnection() {
+        return this.MaxConnection;
+    }
+
+    /**
+     * Set Maximum number of connections
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param MaxConnection Maximum number of connections
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMaxConnection(Long MaxConnection) {
+        this.MaxConnection = MaxConnection;
+    }
+
+    /**
+     * Get Public network bandwidth
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return PublicNetwork Public network bandwidth
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getPublicNetwork() {
+        return this.PublicNetwork;
+    }
+
+    /**
+     * Set Public network bandwidth
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param PublicNetwork Public network bandwidth
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setPublicNetwork(Long PublicNetwork) {
+        this.PublicNetwork = PublicNetwork;
+    }
+
+    /**
+     * Get Time
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return DeleteRouteTimestamp Time
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getDeleteRouteTimestamp() {
+        return this.DeleteRouteTimestamp;
+    }
+
+    /**
+     * Set Time
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param DeleteRouteTimestamp Time
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDeleteRouteTimestamp(String DeleteRouteTimestamp) {
+        this.DeleteRouteTimestamp = DeleteRouteTimestamp;
+    }
+
     public InstanceAttributesResponse() {
     }
 
@@ -841,6 +925,15 @@ Note: `null` may be returned for this field, indicating that no valid values can
         if (source.RetentionTimeConfig != null) {
             this.RetentionTimeConfig = new DynamicRetentionTime(source.RetentionTimeConfig);
         }
+        if (source.MaxConnection != null) {
+            this.MaxConnection = new Long(source.MaxConnection);
+        }
+        if (source.PublicNetwork != null) {
+            this.PublicNetwork = new Long(source.PublicNetwork);
+        }
+        if (source.DeleteRouteTimestamp != null) {
+            this.DeleteRouteTimestamp = new String(source.DeleteRouteTimestamp);
+        }
     }
 
 
@@ -877,6 +970,9 @@ Note: `null` may be returned for this field, indicating that no valid values can
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamArraySimple(map, prefix + "Features.", this.Features);
         this.setParamObj(map, prefix + "RetentionTimeConfig.", this.RetentionTimeConfig);
+        this.setParamSimple(map, prefix + "MaxConnection", this.MaxConnection);
+        this.setParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
+        this.setParamSimple(map, prefix + "DeleteRouteTimestamp", this.DeleteRouteTimestamp);
 
     }
 }

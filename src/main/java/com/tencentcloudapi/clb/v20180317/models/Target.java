@@ -49,7 +49,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String InstanceId;
 
     /**
-    * Forwarding weight of a real server. Value range: [0, 100]. Default value: 10.
+    * The new forwarding weight of the real server. Value range: [0, 100]. Default: 10. This parameter takes priority over `Weight` in [`RsWeightRule`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#RsWeightRule). If it’s left empty, the value of `Weight` in `RsWeightRule` will be used.
     */
     @SerializedName("Weight")
     @Expose
@@ -133,16 +133,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Forwarding weight of a real server. Value range: [0, 100]. Default value: 10. 
-     * @return Weight Forwarding weight of a real server. Value range: [0, 100]. Default value: 10.
+     * Get The new forwarding weight of the real server. Value range: [0, 100]. Default: 10. This parameter takes priority over `Weight` in [`RsWeightRule`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#RsWeightRule). If it’s left empty, the value of `Weight` in `RsWeightRule` will be used. 
+     * @return Weight The new forwarding weight of the real server. Value range: [0, 100]. Default: 10. This parameter takes priority over `Weight` in [`RsWeightRule`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#RsWeightRule). If it’s left empty, the value of `Weight` in `RsWeightRule` will be used.
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set Forwarding weight of a real server. Value range: [0, 100]. Default value: 10.
-     * @param Weight Forwarding weight of a real server. Value range: [0, 100]. Default value: 10.
+     * Set The new forwarding weight of the real server. Value range: [0, 100]. Default: 10. This parameter takes priority over `Weight` in [`RsWeightRule`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#RsWeightRule). If it’s left empty, the value of `Weight` in `RsWeightRule` will be used.
+     * @param Weight The new forwarding weight of the real server. Value range: [0, 100]. Default: 10. This parameter takes priority over `Weight` in [`RsWeightRule`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#RsWeightRule). If it’s left empty, the value of `Weight` in `RsWeightRule` will be used.
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;
