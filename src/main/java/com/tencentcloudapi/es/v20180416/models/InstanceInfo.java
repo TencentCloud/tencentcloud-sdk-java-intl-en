@@ -427,6 +427,22 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     private KibanaNodeInfo KibanaNodeInfo;
 
     /**
+    * Visual node configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("WebNodeTypeInfo")
+    @Expose
+    private WebNodeTypeInfo WebNodeTypeInfo;
+
+    /**
+    * JDK type. Valid values: `oracle`, `kona`
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Jdk")
+    @Expose
+    private String Jdk;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -1382,6 +1398,46 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         this.KibanaNodeInfo = KibanaNodeInfo;
     }
 
+    /**
+     * Get Visual node configuration
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return WebNodeTypeInfo Visual node configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public WebNodeTypeInfo getWebNodeTypeInfo() {
+        return this.WebNodeTypeInfo;
+    }
+
+    /**
+     * Set Visual node configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param WebNodeTypeInfo Visual node configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setWebNodeTypeInfo(WebNodeTypeInfo WebNodeTypeInfo) {
+        this.WebNodeTypeInfo = WebNodeTypeInfo;
+    }
+
+    /**
+     * Get JDK type. Valid values: `oracle`, `kona`
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Jdk JDK type. Valid values: `oracle`, `kona`
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getJdk() {
+        return this.Jdk;
+    }
+
+    /**
+     * Set JDK type. Valid values: `oracle`, `kona`
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Jdk JDK type. Valid values: `oracle`, `kona`
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setJdk(String Jdk) {
+        this.Jdk = Jdk;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1564,6 +1620,12 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         if (source.KibanaNodeInfo != null) {
             this.KibanaNodeInfo = new KibanaNodeInfo(source.KibanaNodeInfo);
         }
+        if (source.WebNodeTypeInfo != null) {
+            this.WebNodeTypeInfo = new WebNodeTypeInfo(source.WebNodeTypeInfo);
+        }
+        if (source.Jdk != null) {
+            this.Jdk = new String(source.Jdk);
+        }
     }
 
 
@@ -1626,6 +1688,8 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "SceneType", this.SceneType);
         this.setParamSimple(map, prefix + "KibanaConfig", this.KibanaConfig);
         this.setParamObj(map, prefix + "KibanaNodeInfo.", this.KibanaNodeInfo);
+        this.setParamObj(map, prefix + "WebNodeTypeInfo.", this.WebNodeTypeInfo);
+        this.setParamSimple(map, prefix + "Jdk", this.Jdk);
 
     }
 }

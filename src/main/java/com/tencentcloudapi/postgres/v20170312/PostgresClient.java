@@ -499,6 +499,46 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *This API is used to analyze slow query statements with abstract parameter values and return aggregated statistical analysis results.
+     * @param req DescribeSlowQueryAnalysisRequest
+     * @return DescribeSlowQueryAnalysisResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSlowQueryAnalysisResponse DescribeSlowQueryAnalysis(DescribeSlowQueryAnalysisRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSlowQueryAnalysisResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSlowQueryAnalysisResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSlowQueryAnalysis");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the slow query list.
+     * @param req DescribeSlowQueryListRequest
+     * @return DescribeSlowQueryListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSlowQueryListResponse DescribeSlowQueryList(DescribeSlowQueryListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSlowQueryListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSlowQueryListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSlowQueryList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the supported AZs.
      * @param req DescribeZonesRequest
      * @return DescribeZonesResponse

@@ -30,7 +30,7 @@ public class UpdateCfsFileSystemSizeLimitRequest extends AbstractModel{
     private Long FsLimit;
 
     /**
-    * File system ID
+    * File system ID. Currently, only Standard file systems are supported.
     */
     @SerializedName("FileSystemId")
     @Expose
@@ -53,16 +53,16 @@ public class UpdateCfsFileSystemSizeLimitRequest extends AbstractModel{
     }
 
     /**
-     * Get File system ID 
-     * @return FileSystemId File system ID
+     * Get File system ID. Currently, only Standard file systems are supported. 
+     * @return FileSystemId File system ID. Currently, only Standard file systems are supported.
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set File system ID
-     * @param FileSystemId File system ID
+     * Set File system ID. Currently, only Standard file systems are supported.
+     * @param FileSystemId File system ID. Currently, only Standard file systems are supported.
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;

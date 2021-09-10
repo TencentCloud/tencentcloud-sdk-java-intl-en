@@ -197,6 +197,13 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
     private String KibanaConfig;
 
     /**
+    * Visual node configuration
+    */
+    @SerializedName("WebNodeTypeInfo")
+    @Expose
+    private WebNodeTypeInfo WebNodeTypeInfo;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -604,6 +611,22 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
         this.KibanaConfig = KibanaConfig;
     }
 
+    /**
+     * Get Visual node configuration 
+     * @return WebNodeTypeInfo Visual node configuration
+     */
+    public WebNodeTypeInfo getWebNodeTypeInfo() {
+        return this.WebNodeTypeInfo;
+    }
+
+    /**
+     * Set Visual node configuration
+     * @param WebNodeTypeInfo Visual node configuration
+     */
+    public void setWebNodeTypeInfo(WebNodeTypeInfo WebNodeTypeInfo) {
+        this.WebNodeTypeInfo = WebNodeTypeInfo;
+    }
+
     public UpdateInstanceRequest() {
     }
 
@@ -690,6 +713,9 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
         if (source.KibanaConfig != null) {
             this.KibanaConfig = new String(source.KibanaConfig);
         }
+        if (source.WebNodeTypeInfo != null) {
+            this.WebNodeTypeInfo = new WebNodeTypeInfo(source.WebNodeTypeInfo);
+        }
     }
 
 
@@ -721,6 +747,7 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
         this.setParamArrayObj(map, prefix + "MultiZoneInfo.", this.MultiZoneInfo);
         this.setParamSimple(map, prefix + "SceneType", this.SceneType);
         this.setParamSimple(map, prefix + "KibanaConfig", this.KibanaConfig);
+        this.setParamObj(map, prefix + "WebNodeTypeInfo.", this.WebNodeTypeInfo);
 
     }
 }

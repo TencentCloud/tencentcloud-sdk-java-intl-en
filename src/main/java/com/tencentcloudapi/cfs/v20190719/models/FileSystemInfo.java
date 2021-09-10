@@ -149,6 +149,13 @@ public class FileSystemInfo extends AbstractModel{
     private Float BandwidthLimit;
 
     /**
+    * Total capacity of the file system
+    */
+    @SerializedName("Capacity")
+    @Expose
+    private Long Capacity;
+
+    /**
      * Get Creation time 
      * @return CreationTime Creation time
      */
@@ -436,6 +443,22 @@ public class FileSystemInfo extends AbstractModel{
         this.BandwidthLimit = BandwidthLimit;
     }
 
+    /**
+     * Get Total capacity of the file system 
+     * @return Capacity Total capacity of the file system
+     */
+    public Long getCapacity() {
+        return this.Capacity;
+    }
+
+    /**
+     * Set Total capacity of the file system
+     * @param Capacity Total capacity of the file system
+     */
+    public void setCapacity(Long Capacity) {
+        this.Capacity = Capacity;
+    }
+
     public FileSystemInfo() {
     }
 
@@ -498,6 +521,9 @@ public class FileSystemInfo extends AbstractModel{
         if (source.BandwidthLimit != null) {
             this.BandwidthLimit = new Float(source.BandwidthLimit);
         }
+        if (source.Capacity != null) {
+            this.Capacity = new Long(source.Capacity);
+        }
     }
 
 
@@ -523,6 +549,7 @@ public class FileSystemInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "BandwidthLimit", this.BandwidthLimit);
+        this.setParamSimple(map, prefix + "Capacity", this.Capacity);
 
     }
 }

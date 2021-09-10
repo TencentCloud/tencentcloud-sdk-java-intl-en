@@ -44,14 +44,14 @@ public class CreateCfsFileSystemResponse extends AbstractModel{
     private String FileSystemId;
 
     /**
-    * File system status
+    * File system status. Valid values: `creating`, `create_failed`, `available`, `unserviced`, `upgrading`, `deleting`
     */
     @SerializedName("LifeCycleState")
     @Expose
     private String LifeCycleState;
 
     /**
-    * Used file system capacity
+    * Storage used by the file system, in bytes
     */
     @SerializedName("SizeByte")
     @Expose
@@ -134,32 +134,32 @@ public class CreateCfsFileSystemResponse extends AbstractModel{
     }
 
     /**
-     * Get File system status 
-     * @return LifeCycleState File system status
+     * Get File system status. Valid values: `creating`, `create_failed`, `available`, `unserviced`, `upgrading`, `deleting` 
+     * @return LifeCycleState File system status. Valid values: `creating`, `create_failed`, `available`, `unserviced`, `upgrading`, `deleting`
      */
     public String getLifeCycleState() {
         return this.LifeCycleState;
     }
 
     /**
-     * Set File system status
-     * @param LifeCycleState File system status
+     * Set File system status. Valid values: `creating`, `create_failed`, `available`, `unserviced`, `upgrading`, `deleting`
+     * @param LifeCycleState File system status. Valid values: `creating`, `create_failed`, `available`, `unserviced`, `upgrading`, `deleting`
      */
     public void setLifeCycleState(String LifeCycleState) {
         this.LifeCycleState = LifeCycleState;
     }
 
     /**
-     * Get Used file system capacity 
-     * @return SizeByte Used file system capacity
+     * Get Storage used by the file system, in bytes 
+     * @return SizeByte Storage used by the file system, in bytes
      */
     public Long getSizeByte() {
         return this.SizeByte;
     }
 
     /**
-     * Set Used file system capacity
-     * @param SizeByte Used file system capacity
+     * Set Storage used by the file system, in bytes
+     * @param SizeByte Storage used by the file system, in bytes
      */
     public void setSizeByte(Long SizeByte) {
         this.SizeByte = SizeByte;

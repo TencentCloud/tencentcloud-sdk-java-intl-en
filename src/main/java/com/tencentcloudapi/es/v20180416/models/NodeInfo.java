@@ -40,7 +40,6 @@ public class NodeInfo extends AbstractModel{
     * Node type<li>`hotData`: hot data node</li>
 <li>`warmData`: warm data node</li>
 <li>`dedicatedMaster`: dedicated master node</li>
-<li>`kibana`: Kibana node</li>
 Default value: `hotData`
     */
     @SerializedName("Type")
@@ -119,12 +118,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Get Node type<li>`hotData`: hot data node</li>
 <li>`warmData`: warm data node</li>
 <li>`dedicatedMaster`: dedicated master node</li>
-<li>`kibana`: Kibana node</li>
 Default value: `hotData` 
      * @return Type Node type<li>`hotData`: hot data node</li>
 <li>`warmData`: warm data node</li>
 <li>`dedicatedMaster`: dedicated master node</li>
-<li>`kibana`: Kibana node</li>
 Default value: `hotData`
      */
     public String getType() {
@@ -135,12 +132,10 @@ Default value: `hotData`
      * Set Node type<li>`hotData`: hot data node</li>
 <li>`warmData`: warm data node</li>
 <li>`dedicatedMaster`: dedicated master node</li>
-<li>`kibana`: Kibana node</li>
 Default value: `hotData`
      * @param Type Node type<li>`hotData`: hot data node</li>
 <li>`warmData`: warm data node</li>
 <li>`dedicatedMaster`: dedicated master node</li>
-<li>`kibana`: Kibana node</li>
 Default value: `hotData`
      */
     public void setType(String Type) {

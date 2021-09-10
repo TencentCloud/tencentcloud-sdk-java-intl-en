@@ -37,6 +37,13 @@ public class RestartInstanceRequest extends AbstractModel{
     private Boolean ForceRestart;
 
     /**
+    * Restart mode. `0`: rolling restart; `1`: full restart
+    */
+    @SerializedName("RestartMode")
+    @Expose
+    private Long RestartMode;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -68,6 +75,22 @@ public class RestartInstanceRequest extends AbstractModel{
         this.ForceRestart = ForceRestart;
     }
 
+    /**
+     * Get Restart mode. `0`: rolling restart; `1`: full restart 
+     * @return RestartMode Restart mode. `0`: rolling restart; `1`: full restart
+     */
+    public Long getRestartMode() {
+        return this.RestartMode;
+    }
+
+    /**
+     * Set Restart mode. `0`: rolling restart; `1`: full restart
+     * @param RestartMode Restart mode. `0`: rolling restart; `1`: full restart
+     */
+    public void setRestartMode(Long RestartMode) {
+        this.RestartMode = RestartMode;
+    }
+
     public RestartInstanceRequest() {
     }
 
@@ -82,6 +105,9 @@ public class RestartInstanceRequest extends AbstractModel{
         if (source.ForceRestart != null) {
             this.ForceRestart = new Boolean(source.ForceRestart);
         }
+        if (source.RestartMode != null) {
+            this.RestartMode = new Long(source.RestartMode);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class RestartInstanceRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "ForceRestart", this.ForceRestart);
+        this.setParamSimple(map, prefix + "RestartMode", this.RestartMode);
 
     }
 }

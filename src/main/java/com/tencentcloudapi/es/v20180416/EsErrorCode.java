@@ -15,6 +15,9 @@ public enum EsErrorCode {
     // Incorrect cluster status
      FAILEDOPERATION_ERRORCLUSTERSTATE("FailedOperation.ErrorClusterState"),
      
+    // No replicas for indexes in the cluster.
+     FAILEDOPERATION_ERRORCLUSTERSTATENOREPLICATION("FailedOperation.ErrorClusterStateNoReplication"),
+     
     // No credit card or PayPal account is linked to the current account. Unable to make a payment.
      FAILEDOPERATION_NOPAYMENT("FailedOperation.NoPayment"),
      

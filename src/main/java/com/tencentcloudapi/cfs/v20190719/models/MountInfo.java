@@ -93,6 +93,20 @@ public class MountInfo extends AbstractModel{
     private String SubnetName;
 
     /**
+    * CCN instance ID used by CFS Turbo
+    */
+    @SerializedName("CcnID")
+    @Expose
+    private String CcnID;
+
+    /**
+    * CCN IP range used by CFS Turbo
+    */
+    @SerializedName("CidrBlock")
+    @Expose
+    private String CidrBlock;
+
+    /**
      * Get File system ID 
      * @return FileSystemId File system ID
      */
@@ -252,6 +266,38 @@ public class MountInfo extends AbstractModel{
         this.SubnetName = SubnetName;
     }
 
+    /**
+     * Get CCN instance ID used by CFS Turbo 
+     * @return CcnID CCN instance ID used by CFS Turbo
+     */
+    public String getCcnID() {
+        return this.CcnID;
+    }
+
+    /**
+     * Set CCN instance ID used by CFS Turbo
+     * @param CcnID CCN instance ID used by CFS Turbo
+     */
+    public void setCcnID(String CcnID) {
+        this.CcnID = CcnID;
+    }
+
+    /**
+     * Get CCN IP range used by CFS Turbo 
+     * @return CidrBlock CCN IP range used by CFS Turbo
+     */
+    public String getCidrBlock() {
+        return this.CidrBlock;
+    }
+
+    /**
+     * Set CCN IP range used by CFS Turbo
+     * @param CidrBlock CCN IP range used by CFS Turbo
+     */
+    public void setCidrBlock(String CidrBlock) {
+        this.CidrBlock = CidrBlock;
+    }
+
     public MountInfo() {
     }
 
@@ -290,6 +336,12 @@ public class MountInfo extends AbstractModel{
         if (source.SubnetName != null) {
             this.SubnetName = new String(source.SubnetName);
         }
+        if (source.CcnID != null) {
+            this.CcnID = new String(source.CcnID);
+        }
+        if (source.CidrBlock != null) {
+            this.CidrBlock = new String(source.CidrBlock);
+        }
     }
 
 
@@ -307,6 +359,8 @@ public class MountInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "VpcName", this.VpcName);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "SubnetName", this.SubnetName);
+        this.setParamSimple(map, prefix + "CcnID", this.CcnID);
+        this.setParamSimple(map, prefix + "CidrBlock", this.CidrBlock);
 
     }
 }

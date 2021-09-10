@@ -30,28 +30,28 @@ public class CreateCfsFileSystemRequest extends AbstractModel{
     private String Zone;
 
     /**
-    * Network type. Valid values: VPC (VPC), BASIC (basic network)
+    * Network type. Valid values: `VPC` (private network), `BASIC` (classic network), `CCN` (Cloud Connect Network). You must set this parameter to `CCN` if you use the Turbo series. Classic network will be phased out and is not recommended.
     */
     @SerializedName("NetInterface")
     @Expose
     private String NetInterface;
 
     /**
-    * Permission group ID
+    * Permission group ID (required for Standard and High-Performance). For the Turbo series, set it to `pgroupbasic`.
     */
     @SerializedName("PGroupId")
     @Expose
     private String PGroupId;
 
     /**
-    * File system protocol type. Valid values: NFS, CIFS. If this parameter is left empty, NFS will be used by default
+    * File system protocol. Valid values: `NFS`, `CIFS`, `TURBO`. If this parameter is left empty, `NFS` is used by default. For the Turbo series, you must set this parameter to `TURBO`.
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * File system storage class. Valid values: SD (standard), HP (high-performance)
+    * Storage class of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), `TP` (High-Performance Turbo)
     */
     @SerializedName("StorageType")
     @Expose
@@ -72,7 +72,7 @@ public class CreateCfsFileSystemRequest extends AbstractModel{
     private String SubnetId;
 
     /**
-    * Specifies an IP address, which is supported only for VPC. If this parameter is left empty, a random IP will be assigned in the subnet
+    * IP address (this parameter supports only the VPC network type, and the Turbo series is not supported). If this parameter is left empty, a random IP in the subnet will be assigned.
     */
     @SerializedName("MountIP")
     @Expose
@@ -100,6 +100,27 @@ public class CreateCfsFileSystemRequest extends AbstractModel{
     private String ClientToken;
 
     /**
+    * CCN instance ID (required if the network type is CCN)
+    */
+    @SerializedName("CcnId")
+    @Expose
+    private String CcnId;
+
+    /**
+    * CCN IP range used by the CFS (required if the network type is CCN), which cannot conflict with other IP ranges bound in CCN
+    */
+    @SerializedName("CidrBlock")
+    @Expose
+    private String CidrBlock;
+
+    /**
+    * File system capacity, in GiB (required for the Turbo series). For Standard Turbo, the minimum purchase required is 40,960 GiB (40 TiB) and the expansion increment is 20,480 GiB (20 TiB). For High-Performance Turbo, the minimum purchase required is 20,480 GiB (20 TiB) and the expansion increment is 10,240 GiB (10 TiB).
+    */
+    @SerializedName("Capacity")
+    @Expose
+    private Long Capacity;
+
+    /**
      * Get AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://intl.cloud.tencent.com/document/product/582/13225?from_cn_redirect=1) 
      * @return Zone AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://intl.cloud.tencent.com/document/product/582/13225?from_cn_redirect=1)
      */
@@ -116,64 +137,64 @@ public class CreateCfsFileSystemRequest extends AbstractModel{
     }
 
     /**
-     * Get Network type. Valid values: VPC (VPC), BASIC (basic network) 
-     * @return NetInterface Network type. Valid values: VPC (VPC), BASIC (basic network)
+     * Get Network type. Valid values: `VPC` (private network), `BASIC` (classic network), `CCN` (Cloud Connect Network). You must set this parameter to `CCN` if you use the Turbo series. Classic network will be phased out and is not recommended. 
+     * @return NetInterface Network type. Valid values: `VPC` (private network), `BASIC` (classic network), `CCN` (Cloud Connect Network). You must set this parameter to `CCN` if you use the Turbo series. Classic network will be phased out and is not recommended.
      */
     public String getNetInterface() {
         return this.NetInterface;
     }
 
     /**
-     * Set Network type. Valid values: VPC (VPC), BASIC (basic network)
-     * @param NetInterface Network type. Valid values: VPC (VPC), BASIC (basic network)
+     * Set Network type. Valid values: `VPC` (private network), `BASIC` (classic network), `CCN` (Cloud Connect Network). You must set this parameter to `CCN` if you use the Turbo series. Classic network will be phased out and is not recommended.
+     * @param NetInterface Network type. Valid values: `VPC` (private network), `BASIC` (classic network), `CCN` (Cloud Connect Network). You must set this parameter to `CCN` if you use the Turbo series. Classic network will be phased out and is not recommended.
      */
     public void setNetInterface(String NetInterface) {
         this.NetInterface = NetInterface;
     }
 
     /**
-     * Get Permission group ID 
-     * @return PGroupId Permission group ID
+     * Get Permission group ID (required for Standard and High-Performance). For the Turbo series, set it to `pgroupbasic`. 
+     * @return PGroupId Permission group ID (required for Standard and High-Performance). For the Turbo series, set it to `pgroupbasic`.
      */
     public String getPGroupId() {
         return this.PGroupId;
     }
 
     /**
-     * Set Permission group ID
-     * @param PGroupId Permission group ID
+     * Set Permission group ID (required for Standard and High-Performance). For the Turbo series, set it to `pgroupbasic`.
+     * @param PGroupId Permission group ID (required for Standard and High-Performance). For the Turbo series, set it to `pgroupbasic`.
      */
     public void setPGroupId(String PGroupId) {
         this.PGroupId = PGroupId;
     }
 
     /**
-     * Get File system protocol type. Valid values: NFS, CIFS. If this parameter is left empty, NFS will be used by default 
-     * @return Protocol File system protocol type. Valid values: NFS, CIFS. If this parameter is left empty, NFS will be used by default
+     * Get File system protocol. Valid values: `NFS`, `CIFS`, `TURBO`. If this parameter is left empty, `NFS` is used by default. For the Turbo series, you must set this parameter to `TURBO`. 
+     * @return Protocol File system protocol. Valid values: `NFS`, `CIFS`, `TURBO`. If this parameter is left empty, `NFS` is used by default. For the Turbo series, you must set this parameter to `TURBO`.
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set File system protocol type. Valid values: NFS, CIFS. If this parameter is left empty, NFS will be used by default
-     * @param Protocol File system protocol type. Valid values: NFS, CIFS. If this parameter is left empty, NFS will be used by default
+     * Set File system protocol. Valid values: `NFS`, `CIFS`, `TURBO`. If this parameter is left empty, `NFS` is used by default. For the Turbo series, you must set this parameter to `TURBO`.
+     * @param Protocol File system protocol. Valid values: `NFS`, `CIFS`, `TURBO`. If this parameter is left empty, `NFS` is used by default. For the Turbo series, you must set this parameter to `TURBO`.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get File system storage class. Valid values: SD (standard), HP (high-performance) 
-     * @return StorageType File system storage class. Valid values: SD (standard), HP (high-performance)
+     * Get Storage class of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), `TP` (High-Performance Turbo) 
+     * @return StorageType Storage class of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), `TP` (High-Performance Turbo)
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set File system storage class. Valid values: SD (standard), HP (high-performance)
-     * @param StorageType File system storage class. Valid values: SD (standard), HP (high-performance)
+     * Set Storage class of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), `TP` (High-Performance Turbo)
+     * @param StorageType Storage class of the file system. Valid values: `SD` (Standard), `HP` (High-Performance), `TB` (Standard Turbo), `TP` (High-Performance Turbo)
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
@@ -212,16 +233,16 @@ public class CreateCfsFileSystemRequest extends AbstractModel{
     }
 
     /**
-     * Get Specifies an IP address, which is supported only for VPC. If this parameter is left empty, a random IP will be assigned in the subnet 
-     * @return MountIP Specifies an IP address, which is supported only for VPC. If this parameter is left empty, a random IP will be assigned in the subnet
+     * Get IP address (this parameter supports only the VPC network type, and the Turbo series is not supported). If this parameter is left empty, a random IP in the subnet will be assigned. 
+     * @return MountIP IP address (this parameter supports only the VPC network type, and the Turbo series is not supported). If this parameter is left empty, a random IP in the subnet will be assigned.
      */
     public String getMountIP() {
         return this.MountIP;
     }
 
     /**
-     * Set Specifies an IP address, which is supported only for VPC. If this parameter is left empty, a random IP will be assigned in the subnet
-     * @param MountIP Specifies an IP address, which is supported only for VPC. If this parameter is left empty, a random IP will be assigned in the subnet
+     * Set IP address (this parameter supports only the VPC network type, and the Turbo series is not supported). If this parameter is left empty, a random IP in the subnet will be assigned.
+     * @param MountIP IP address (this parameter supports only the VPC network type, and the Turbo series is not supported). If this parameter is left empty, a random IP in the subnet will be assigned.
      */
     public void setMountIP(String MountIP) {
         this.MountIP = MountIP;
@@ -275,6 +296,54 @@ public class CreateCfsFileSystemRequest extends AbstractModel{
         this.ClientToken = ClientToken;
     }
 
+    /**
+     * Get CCN instance ID (required if the network type is CCN) 
+     * @return CcnId CCN instance ID (required if the network type is CCN)
+     */
+    public String getCcnId() {
+        return this.CcnId;
+    }
+
+    /**
+     * Set CCN instance ID (required if the network type is CCN)
+     * @param CcnId CCN instance ID (required if the network type is CCN)
+     */
+    public void setCcnId(String CcnId) {
+        this.CcnId = CcnId;
+    }
+
+    /**
+     * Get CCN IP range used by the CFS (required if the network type is CCN), which cannot conflict with other IP ranges bound in CCN 
+     * @return CidrBlock CCN IP range used by the CFS (required if the network type is CCN), which cannot conflict with other IP ranges bound in CCN
+     */
+    public String getCidrBlock() {
+        return this.CidrBlock;
+    }
+
+    /**
+     * Set CCN IP range used by the CFS (required if the network type is CCN), which cannot conflict with other IP ranges bound in CCN
+     * @param CidrBlock CCN IP range used by the CFS (required if the network type is CCN), which cannot conflict with other IP ranges bound in CCN
+     */
+    public void setCidrBlock(String CidrBlock) {
+        this.CidrBlock = CidrBlock;
+    }
+
+    /**
+     * Get File system capacity, in GiB (required for the Turbo series). For Standard Turbo, the minimum purchase required is 40,960 GiB (40 TiB) and the expansion increment is 20,480 GiB (20 TiB). For High-Performance Turbo, the minimum purchase required is 20,480 GiB (20 TiB) and the expansion increment is 10,240 GiB (10 TiB). 
+     * @return Capacity File system capacity, in GiB (required for the Turbo series). For Standard Turbo, the minimum purchase required is 40,960 GiB (40 TiB) and the expansion increment is 20,480 GiB (20 TiB). For High-Performance Turbo, the minimum purchase required is 20,480 GiB (20 TiB) and the expansion increment is 10,240 GiB (10 TiB).
+     */
+    public Long getCapacity() {
+        return this.Capacity;
+    }
+
+    /**
+     * Set File system capacity, in GiB (required for the Turbo series). For Standard Turbo, the minimum purchase required is 40,960 GiB (40 TiB) and the expansion increment is 20,480 GiB (20 TiB). For High-Performance Turbo, the minimum purchase required is 20,480 GiB (20 TiB) and the expansion increment is 10,240 GiB (10 TiB).
+     * @param Capacity File system capacity, in GiB (required for the Turbo series). For Standard Turbo, the minimum purchase required is 40,960 GiB (40 TiB) and the expansion increment is 20,480 GiB (20 TiB). For High-Performance Turbo, the minimum purchase required is 20,480 GiB (20 TiB) and the expansion increment is 10,240 GiB (10 TiB).
+     */
+    public void setCapacity(Long Capacity) {
+        this.Capacity = Capacity;
+    }
+
     public CreateCfsFileSystemRequest() {
     }
 
@@ -319,6 +388,15 @@ public class CreateCfsFileSystemRequest extends AbstractModel{
         if (source.ClientToken != null) {
             this.ClientToken = new String(source.ClientToken);
         }
+        if (source.CcnId != null) {
+            this.CcnId = new String(source.CcnId);
+        }
+        if (source.CidrBlock != null) {
+            this.CidrBlock = new String(source.CidrBlock);
+        }
+        if (source.Capacity != null) {
+            this.Capacity = new Long(source.Capacity);
+        }
     }
 
 
@@ -337,6 +415,9 @@ public class CreateCfsFileSystemRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FsName", this.FsName);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
+        this.setParamSimple(map, prefix + "CcnId", this.CcnId);
+        this.setParamSimple(map, prefix + "CidrBlock", this.CidrBlock);
+        this.setParamSimple(map, prefix + "Capacity", this.Capacity);
 
     }
 }
