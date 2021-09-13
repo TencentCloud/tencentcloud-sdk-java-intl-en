@@ -23,14 +23,19 @@ import java.util.HashMap;
 public class CreateBandwidthPackageRequest extends AbstractModel{
 
     /**
-    * The type of the bandwidth package. Valid values: `HIGH_QUALITY_BGP`, `BGP`, `SINGLEISP`, and `ANYCAST`.
+    * The network type of the bandwidth package. Default value: `BGP`. Valid values:
+`BGP` 
+`HIGH_QUALITY_BGP`
     */
     @SerializedName("NetworkType")
     @Expose
     private String NetworkType;
 
     /**
-    * The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'.
+    * The billing mode of the bandwidth package. Default value: `TOP5_POSTPAID_BY_MONTH`. Valid values:
+<li>`TOP5_POSTPAID_BY_MONTH`: monthly top 5 </li>
+<li>`PERCENT95_POSTPAID_BY_MONTH`: monthly 95th percentile</li>
+<li>`FIXED_PREPAID_BY_MONTH`: monthly subscription</li>
     */
     @SerializedName("ChargeType")
     @Expose
@@ -44,7 +49,7 @@ public class CreateBandwidthPackageRequest extends AbstractModel{
     private String BandwidthPackageName;
 
     /**
-    * The number of bandwidth packages (It can only be “1” for bill-by-CVM accounts)
+    * The number of bandwidth packages to create. Valid range: 1-20. It can only be “1” for bill-by-CVM accounts.
     */
     @SerializedName("BandwidthPackageCount")
     @Expose
@@ -72,32 +77,52 @@ public class CreateBandwidthPackageRequest extends AbstractModel{
     private String Protocol;
 
     /**
-     * Get The type of the bandwidth package. Valid values: `HIGH_QUALITY_BGP`, `BGP`, `SINGLEISP`, and `ANYCAST`. 
-     * @return NetworkType The type of the bandwidth package. Valid values: `HIGH_QUALITY_BGP`, `BGP`, `SINGLEISP`, and `ANYCAST`.
+     * Get The network type of the bandwidth package. Default value: `BGP`. Valid values:
+`BGP` 
+`HIGH_QUALITY_BGP` 
+     * @return NetworkType The network type of the bandwidth package. Default value: `BGP`. Valid values:
+`BGP` 
+`HIGH_QUALITY_BGP`
      */
     public String getNetworkType() {
         return this.NetworkType;
     }
 
     /**
-     * Set The type of the bandwidth package. Valid values: `HIGH_QUALITY_BGP`, `BGP`, `SINGLEISP`, and `ANYCAST`.
-     * @param NetworkType The type of the bandwidth package. Valid values: `HIGH_QUALITY_BGP`, `BGP`, `SINGLEISP`, and `ANYCAST`.
+     * Set The network type of the bandwidth package. Default value: `BGP`. Valid values:
+`BGP` 
+`HIGH_QUALITY_BGP`
+     * @param NetworkType The network type of the bandwidth package. Default value: `BGP`. Valid values:
+`BGP` 
+`HIGH_QUALITY_BGP`
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;
     }
 
     /**
-     * Get The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'. 
-     * @return ChargeType The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'.
+     * Get The billing mode of the bandwidth package. Default value: `TOP5_POSTPAID_BY_MONTH`. Valid values:
+<li>`TOP5_POSTPAID_BY_MONTH`: monthly top 5 </li>
+<li>`PERCENT95_POSTPAID_BY_MONTH`: monthly 95th percentile</li>
+<li>`FIXED_PREPAID_BY_MONTH`: monthly subscription</li> 
+     * @return ChargeType The billing mode of the bandwidth package. Default value: `TOP5_POSTPAID_BY_MONTH`. Valid values:
+<li>`TOP5_POSTPAID_BY_MONTH`: monthly top 5 </li>
+<li>`PERCENT95_POSTPAID_BY_MONTH`: monthly 95th percentile</li>
+<li>`FIXED_PREPAID_BY_MONTH`: monthly subscription</li>
      */
     public String getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'.
-     * @param ChargeType The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'.
+     * Set The billing mode of the bandwidth package. Default value: `TOP5_POSTPAID_BY_MONTH`. Valid values:
+<li>`TOP5_POSTPAID_BY_MONTH`: monthly top 5 </li>
+<li>`PERCENT95_POSTPAID_BY_MONTH`: monthly 95th percentile</li>
+<li>`FIXED_PREPAID_BY_MONTH`: monthly subscription</li>
+     * @param ChargeType The billing mode of the bandwidth package. Default value: `TOP5_POSTPAID_BY_MONTH`. Valid values:
+<li>`TOP5_POSTPAID_BY_MONTH`: monthly top 5 </li>
+<li>`PERCENT95_POSTPAID_BY_MONTH`: monthly 95th percentile</li>
+<li>`FIXED_PREPAID_BY_MONTH`: monthly subscription</li>
      */
     public void setChargeType(String ChargeType) {
         this.ChargeType = ChargeType;
@@ -120,16 +145,16 @@ public class CreateBandwidthPackageRequest extends AbstractModel{
     }
 
     /**
-     * Get The number of bandwidth packages (It can only be “1” for bill-by-CVM accounts) 
-     * @return BandwidthPackageCount The number of bandwidth packages (It can only be “1” for bill-by-CVM accounts)
+     * Get The number of bandwidth packages to create. Valid range: 1-20. It can only be “1” for bill-by-CVM accounts. 
+     * @return BandwidthPackageCount The number of bandwidth packages to create. Valid range: 1-20. It can only be “1” for bill-by-CVM accounts.
      */
     public Long getBandwidthPackageCount() {
         return this.BandwidthPackageCount;
     }
 
     /**
-     * Set The number of bandwidth packages (It can only be “1” for bill-by-CVM accounts)
-     * @param BandwidthPackageCount The number of bandwidth packages (It can only be “1” for bill-by-CVM accounts)
+     * Set The number of bandwidth packages to create. Valid range: 1-20. It can only be “1” for bill-by-CVM accounts.
+     * @param BandwidthPackageCount The number of bandwidth packages to create. Valid range: 1-20. It can only be “1” for bill-by-CVM accounts.
      */
     public void setBandwidthPackageCount(Long BandwidthPackageCount) {
         this.BandwidthPackageCount = BandwidthPackageCount;

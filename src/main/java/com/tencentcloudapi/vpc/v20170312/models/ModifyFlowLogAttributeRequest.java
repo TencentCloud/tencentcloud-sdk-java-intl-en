@@ -23,18 +23,18 @@ import java.util.HashMap;
 public class ModifyFlowLogAttributeRequest extends AbstractModel{
 
     /**
-    * ID of the VPC instance
-    */
-    @SerializedName("VpcId")
-    @Expose
-    private String VpcId;
-
-    /**
     * The unique ID of the flow log.
     */
     @SerializedName("FlowLogId")
     @Expose
     private String FlowLogId;
+
+    /**
+    * The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the attributes of a CCN flow log is modified.
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
 
     /**
     * The name of the flow log.
@@ -51,22 +51,6 @@ public class ModifyFlowLogAttributeRequest extends AbstractModel{
     private String FlowLogDescription;
 
     /**
-     * Get ID of the VPC instance 
-     * @return VpcId ID of the VPC instance
-     */
-    public String getVpcId() {
-        return this.VpcId;
-    }
-
-    /**
-     * Set ID of the VPC instance
-     * @param VpcId ID of the VPC instance
-     */
-    public void setVpcId(String VpcId) {
-        this.VpcId = VpcId;
-    }
-
-    /**
      * Get The unique ID of the flow log. 
      * @return FlowLogId The unique ID of the flow log.
      */
@@ -80,6 +64,22 @@ public class ModifyFlowLogAttributeRequest extends AbstractModel{
      */
     public void setFlowLogId(String FlowLogId) {
         this.FlowLogId = FlowLogId;
+    }
+
+    /**
+     * Get The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the attributes of a CCN flow log is modified. 
+     * @return VpcId The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the attributes of a CCN flow log is modified.
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the attributes of a CCN flow log is modified.
+     * @param VpcId The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the attributes of a CCN flow log is modified.
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
     }
 
     /**
@@ -122,11 +122,11 @@ public class ModifyFlowLogAttributeRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifyFlowLogAttributeRequest(ModifyFlowLogAttributeRequest source) {
-        if (source.VpcId != null) {
-            this.VpcId = new String(source.VpcId);
-        }
         if (source.FlowLogId != null) {
             this.FlowLogId = new String(source.FlowLogId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
         }
         if (source.FlowLogName != null) {
             this.FlowLogName = new String(source.FlowLogName);
@@ -141,8 +141,8 @@ public class ModifyFlowLogAttributeRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "FlowLogId", this.FlowLogId);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "FlowLogName", this.FlowLogName);
         this.setParamSimple(map, prefix + "FlowLogDescription", this.FlowLogDescription);
 

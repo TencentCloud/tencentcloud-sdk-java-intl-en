@@ -30,28 +30,28 @@ public class InvokeFunctionRequest extends AbstractModel{
     private String FunctionName;
 
     /**
-    * Version number or alias of the triggered function
+    * Version or alias of the function. It defaults to `$DEFAULT`.
     */
     @SerializedName("Qualifier")
     @Expose
     private String Qualifier;
 
     /**
-    * Function running parameter, which is in the JSON format. Maximum parameter size is 1 MB.
+    * Function running parameter, which is in the JSON format. Maximum parameter size is 6 MB.
     */
     @SerializedName("Event")
     @Expose
     private String Event;
 
     /**
-    * If this field is specified for a synchronous invocation, the return value will contain a 4 KB log. Valid value: `None` (default) or `Tail`. If the value is `Tail`, `log` in the return parameter will contain the corresponding function execution log.
+    * Valid value: `None` (default) or `Tail`. If the value is `Tail`, `log` in the response will contain the corresponding function execution log (up to 4KB).
     */
     @SerializedName("LogType")
     @Expose
     private String LogType;
 
     /**
-    * Namespace
+    * Namespace. `default` is used if it’s left empty.
     */
     @SerializedName("Namespace")
     @Expose
@@ -81,64 +81,64 @@ public class InvokeFunctionRequest extends AbstractModel{
     }
 
     /**
-     * Get Version number or alias of the triggered function 
-     * @return Qualifier Version number or alias of the triggered function
+     * Get Version or alias of the function. It defaults to `$DEFAULT`. 
+     * @return Qualifier Version or alias of the function. It defaults to `$DEFAULT`.
      */
     public String getQualifier() {
         return this.Qualifier;
     }
 
     /**
-     * Set Version number or alias of the triggered function
-     * @param Qualifier Version number or alias of the triggered function
+     * Set Version or alias of the function. It defaults to `$DEFAULT`.
+     * @param Qualifier Version or alias of the function. It defaults to `$DEFAULT`.
      */
     public void setQualifier(String Qualifier) {
         this.Qualifier = Qualifier;
     }
 
     /**
-     * Get Function running parameter, which is in the JSON format. Maximum parameter size is 1 MB. 
-     * @return Event Function running parameter, which is in the JSON format. Maximum parameter size is 1 MB.
+     * Get Function running parameter, which is in the JSON format. Maximum parameter size is 6 MB. 
+     * @return Event Function running parameter, which is in the JSON format. Maximum parameter size is 6 MB.
      */
     public String getEvent() {
         return this.Event;
     }
 
     /**
-     * Set Function running parameter, which is in the JSON format. Maximum parameter size is 1 MB.
-     * @param Event Function running parameter, which is in the JSON format. Maximum parameter size is 1 MB.
+     * Set Function running parameter, which is in the JSON format. Maximum parameter size is 6 MB.
+     * @param Event Function running parameter, which is in the JSON format. Maximum parameter size is 6 MB.
      */
     public void setEvent(String Event) {
         this.Event = Event;
     }
 
     /**
-     * Get If this field is specified for a synchronous invocation, the return value will contain a 4 KB log. Valid value: `None` (default) or `Tail`. If the value is `Tail`, `log` in the return parameter will contain the corresponding function execution log. 
-     * @return LogType If this field is specified for a synchronous invocation, the return value will contain a 4 KB log. Valid value: `None` (default) or `Tail`. If the value is `Tail`, `log` in the return parameter will contain the corresponding function execution log.
+     * Get Valid value: `None` (default) or `Tail`. If the value is `Tail`, `log` in the response will contain the corresponding function execution log (up to 4KB). 
+     * @return LogType Valid value: `None` (default) or `Tail`. If the value is `Tail`, `log` in the response will contain the corresponding function execution log (up to 4KB).
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set If this field is specified for a synchronous invocation, the return value will contain a 4 KB log. Valid value: `None` (default) or `Tail`. If the value is `Tail`, `log` in the return parameter will contain the corresponding function execution log.
-     * @param LogType If this field is specified for a synchronous invocation, the return value will contain a 4 KB log. Valid value: `None` (default) or `Tail`. If the value is `Tail`, `log` in the return parameter will contain the corresponding function execution log.
+     * Set Valid value: `None` (default) or `Tail`. If the value is `Tail`, `log` in the response will contain the corresponding function execution log (up to 4KB).
+     * @param LogType Valid value: `None` (default) or `Tail`. If the value is `Tail`, `log` in the response will contain the corresponding function execution log (up to 4KB).
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;
     }
 
     /**
-     * Get Namespace 
-     * @return Namespace Namespace
+     * Get Namespace. `default` is used if it’s left empty. 
+     * @return Namespace Namespace. `default` is used if it’s left empty.
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set Namespace
-     * @param Namespace Namespace
+     * Set Namespace. `default` is used if it’s left empty.
+     * @param Namespace Namespace. `default` is used if it’s left empty.
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;

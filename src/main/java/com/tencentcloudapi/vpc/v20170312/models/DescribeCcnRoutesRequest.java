@@ -39,10 +39,11 @@ public class DescribeCcnRoutesRequest extends AbstractModel{
     /**
     * Filter condition. `RouteIds` and `Filters` cannot be specified at the same time.
 <li>route-id - String - (Filter condition) Routing policy ID.</li>
-<li>cidr-block - String - (Filter condition) Destination port.</li>
+<li>cidr-block - String - (Filter condition) Destination.</li>
 <li>instance-type - String - (Filter condition) The next hop type.</li>
 <li>instance-region - String - (Filter condition) The next hop region.</li>
-<li>instance-type - String - (Filter condition) The instance ID of the next hop.</li>
+<li>instance-id - String - (Filter condition) The instance ID of the next hop.</li>
+<li>route-table-id - String - (Filter condition) The list of route table IDs in the format of `ccntr-1234edfr`. Filters by the route table ID.</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -97,16 +98,18 @@ public class DescribeCcnRoutesRequest extends AbstractModel{
     /**
      * Get Filter condition. `RouteIds` and `Filters` cannot be specified at the same time.
 <li>route-id - String - (Filter condition) Routing policy ID.</li>
-<li>cidr-block - String - (Filter condition) Destination port.</li>
+<li>cidr-block - String - (Filter condition) Destination.</li>
 <li>instance-type - String - (Filter condition) The next hop type.</li>
 <li>instance-region - String - (Filter condition) The next hop region.</li>
-<li>instance-type - String - (Filter condition) The instance ID of the next hop.</li> 
+<li>instance-id - String - (Filter condition) The instance ID of the next hop.</li>
+<li>route-table-id - String - (Filter condition) The list of route table IDs in the format of `ccntr-1234edfr`. Filters by the route table ID.</li> 
      * @return Filters Filter condition. `RouteIds` and `Filters` cannot be specified at the same time.
 <li>route-id - String - (Filter condition) Routing policy ID.</li>
-<li>cidr-block - String - (Filter condition) Destination port.</li>
+<li>cidr-block - String - (Filter condition) Destination.</li>
 <li>instance-type - String - (Filter condition) The next hop type.</li>
 <li>instance-region - String - (Filter condition) The next hop region.</li>
-<li>instance-type - String - (Filter condition) The instance ID of the next hop.</li>
+<li>instance-id - String - (Filter condition) The instance ID of the next hop.</li>
+<li>route-table-id - String - (Filter condition) The list of route table IDs in the format of `ccntr-1234edfr`. Filters by the route table ID.</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -115,16 +118,18 @@ public class DescribeCcnRoutesRequest extends AbstractModel{
     /**
      * Set Filter condition. `RouteIds` and `Filters` cannot be specified at the same time.
 <li>route-id - String - (Filter condition) Routing policy ID.</li>
-<li>cidr-block - String - (Filter condition) Destination port.</li>
+<li>cidr-block - String - (Filter condition) Destination.</li>
 <li>instance-type - String - (Filter condition) The next hop type.</li>
 <li>instance-region - String - (Filter condition) The next hop region.</li>
-<li>instance-type - String - (Filter condition) The instance ID of the next hop.</li>
+<li>instance-id - String - (Filter condition) The instance ID of the next hop.</li>
+<li>route-table-id - String - (Filter condition) The list of route table IDs in the format of `ccntr-1234edfr`. Filters by the route table ID.</li>
      * @param Filters Filter condition. `RouteIds` and `Filters` cannot be specified at the same time.
 <li>route-id - String - (Filter condition) Routing policy ID.</li>
-<li>cidr-block - String - (Filter condition) Destination port.</li>
+<li>cidr-block - String - (Filter condition) Destination.</li>
 <li>instance-type - String - (Filter condition) The next hop type.</li>
 <li>instance-region - String - (Filter condition) The next hop region.</li>
-<li>instance-type - String - (Filter condition) The instance ID of the next hop.</li>
+<li>instance-id - String - (Filter condition) The instance ID of the next hop.</li>
+<li>route-table-id - String - (Filter condition) The list of route table IDs in the format of `ccntr-1234edfr`. Filters by the route table ID.</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

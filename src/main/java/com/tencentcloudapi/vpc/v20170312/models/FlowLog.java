@@ -44,7 +44,7 @@ public class FlowLog extends AbstractModel{
     private String FlowLogName;
 
     /**
-    * The resource type of the flow log. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
+    * The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
     */
     @SerializedName("ResourceType")
     @Expose
@@ -148,16 +148,16 @@ public class FlowLog extends AbstractModel{
     }
 
     /**
-     * Get The resource type of the flow log. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'. 
-     * @return ResourceType The resource type of the flow log. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
+     * Get The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`. 
+     * @return ResourceType The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set The resource type of the flow log. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
-     * @param ResourceType The resource type of the flow log. Valid values: 'VPC', 'SUBNET', and 'NETWORKINTERFACE'.
+     * Set The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
+     * @param ResourceType The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;

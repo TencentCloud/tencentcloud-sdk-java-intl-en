@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class CreateFlowLogRequest extends AbstractModel{
 
     /**
-    * ID of the VPC instance
-    */
-    @SerializedName("VpcId")
-    @Expose
-    private String VpcId;
-
-    /**
     * The name of the flow log instance.
     */
     @SerializedName("FlowLogName")
@@ -37,7 +30,7 @@ public class CreateFlowLogRequest extends AbstractModel{
     private String FlowLogName;
 
     /**
-    * The type of resources to which the flow log belongs. Valid values: 'VPC', 'SUBNET' and 'NETWORKINTERFACE'.
+    * The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
     */
     @SerializedName("ResourceType")
     @Expose
@@ -65,6 +58,13 @@ public class CreateFlowLogRequest extends AbstractModel{
     private String CloudLogId;
 
     /**
+    * The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the `ResourceType` is set to `CCN`.
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+
+    /**
     * The description of the flow log instance
     */
     @SerializedName("FlowLogDescription")
@@ -77,22 +77,6 @@ public class CreateFlowLogRequest extends AbstractModel{
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
-
-    /**
-     * Get ID of the VPC instance 
-     * @return VpcId ID of the VPC instance
-     */
-    public String getVpcId() {
-        return this.VpcId;
-    }
-
-    /**
-     * Set ID of the VPC instance
-     * @param VpcId ID of the VPC instance
-     */
-    public void setVpcId(String VpcId) {
-        this.VpcId = VpcId;
-    }
 
     /**
      * Get The name of the flow log instance. 
@@ -111,16 +95,16 @@ public class CreateFlowLogRequest extends AbstractModel{
     }
 
     /**
-     * Get The type of resources to which the flow log belongs. Valid values: 'VPC', 'SUBNET' and 'NETWORKINTERFACE'. 
-     * @return ResourceType The type of resources to which the flow log belongs. Valid values: 'VPC', 'SUBNET' and 'NETWORKINTERFACE'.
+     * Get The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`. 
+     * @return ResourceType The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set The type of resources to which the flow log belongs. Valid values: 'VPC', 'SUBNET' and 'NETWORKINTERFACE'.
-     * @param ResourceType The type of resources to which the flow log belongs. Valid values: 'VPC', 'SUBNET' and 'NETWORKINTERFACE'.
+     * Set The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
+     * @param ResourceType The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
@@ -175,6 +159,22 @@ public class CreateFlowLogRequest extends AbstractModel{
     }
 
     /**
+     * Get The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the `ResourceType` is set to `CCN`. 
+     * @return VpcId The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the `ResourceType` is set to `CCN`.
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the `ResourceType` is set to `CCN`.
+     * @param VpcId The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the `ResourceType` is set to `CCN`.
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
+    /**
      * Get The description of the flow log instance 
      * @return FlowLogDescription The description of the flow log instance
      */
@@ -214,9 +214,6 @@ public class CreateFlowLogRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateFlowLogRequest(CreateFlowLogRequest source) {
-        if (source.VpcId != null) {
-            this.VpcId = new String(source.VpcId);
-        }
         if (source.FlowLogName != null) {
             this.FlowLogName = new String(source.FlowLogName);
         }
@@ -231,6 +228,9 @@ public class CreateFlowLogRequest extends AbstractModel{
         }
         if (source.CloudLogId != null) {
             this.CloudLogId = new String(source.CloudLogId);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
         }
         if (source.FlowLogDescription != null) {
             this.FlowLogDescription = new String(source.FlowLogDescription);
@@ -248,12 +248,12 @@ public class CreateFlowLogRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "FlowLogName", this.FlowLogName);
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "TrafficType", this.TrafficType);
         this.setParamSimple(map, prefix + "CloudLogId", this.CloudLogId);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "FlowLogDescription", this.FlowLogDescription);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
