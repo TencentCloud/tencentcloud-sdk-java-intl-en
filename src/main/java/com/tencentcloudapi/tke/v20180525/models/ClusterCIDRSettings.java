@@ -44,7 +44,7 @@ public class ClusterCIDRSettings extends AbstractModel{
     private Long MaxNodePodNum;
 
     /**
-    * Maximum number of cluster services
+    * The maximum number of services in a cluster. The range is from 32 to 32768. When its power is not 2, it will round upward to the closest power of 2. Default value is 256.
     */
     @SerializedName("MaxClusterServiceNum")
     @Expose
@@ -120,16 +120,16 @@ public class ClusterCIDRSettings extends AbstractModel{
     }
 
     /**
-     * Get Maximum number of cluster services 
-     * @return MaxClusterServiceNum Maximum number of cluster services
+     * Get The maximum number of services in a cluster. The range is from 32 to 32768. When its power is not 2, it will round upward to the closest power of 2. Default value is 256. 
+     * @return MaxClusterServiceNum The maximum number of services in a cluster. The range is from 32 to 32768. When its power is not 2, it will round upward to the closest power of 2. Default value is 256.
      */
     public Long getMaxClusterServiceNum() {
         return this.MaxClusterServiceNum;
     }
 
     /**
-     * Set Maximum number of cluster services
-     * @param MaxClusterServiceNum Maximum number of cluster services
+     * Set The maximum number of services in a cluster. The range is from 32 to 32768. When its power is not 2, it will round upward to the closest power of 2. Default value is 256.
+     * @param MaxClusterServiceNum The maximum number of services in a cluster. The range is from 32 to 32768. When its power is not 2, it will round upward to the closest power of 2. Default value is 256.
      */
     public void setMaxClusterServiceNum(Long MaxClusterServiceNum) {
         this.MaxClusterServiceNum = MaxClusterServiceNum;

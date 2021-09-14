@@ -72,6 +72,13 @@ public class CreateAclRequest extends AbstractModel{
     private String Principal;
 
     /**
+    * The resource name list, which is in JSON string format. Only one of `ResourceName` and `resourceNameList` can be specified.
+    */
+    @SerializedName("ResourceNameList")
+    @Expose
+    private String ResourceNameList;
+
+    /**
      * Get Instance ID information 
      * @return InstanceId Instance ID information
      */
@@ -183,6 +190,22 @@ public class CreateAclRequest extends AbstractModel{
         this.Principal = Principal;
     }
 
+    /**
+     * Get The resource name list, which is in JSON string format. Only one of `ResourceName` and `resourceNameList` can be specified. 
+     * @return ResourceNameList The resource name list, which is in JSON string format. Only one of `ResourceName` and `resourceNameList` can be specified.
+     */
+    public String getResourceNameList() {
+        return this.ResourceNameList;
+    }
+
+    /**
+     * Set The resource name list, which is in JSON string format. Only one of `ResourceName` and `resourceNameList` can be specified.
+     * @param ResourceNameList The resource name list, which is in JSON string format. Only one of `ResourceName` and `resourceNameList` can be specified.
+     */
+    public void setResourceNameList(String ResourceNameList) {
+        this.ResourceNameList = ResourceNameList;
+    }
+
     public CreateAclRequest() {
     }
 
@@ -212,6 +235,9 @@ public class CreateAclRequest extends AbstractModel{
         if (source.Principal != null) {
             this.Principal = new String(source.Principal);
         }
+        if (source.ResourceNameList != null) {
+            this.ResourceNameList = new String(source.ResourceNameList);
+        }
     }
 
 
@@ -226,6 +252,7 @@ public class CreateAclRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ResourceName", this.ResourceName);
         this.setParamSimple(map, prefix + "Host", this.Host);
         this.setParamSimple(map, prefix + "Principal", this.Principal);
+        this.setParamSimple(map, prefix + "ResourceNameList", this.ResourceNameList);
 
     }
 }

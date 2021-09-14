@@ -72,13 +72,20 @@ The `PendingCreate` and `CreateFailed` status only take effect when `SecretType`
     private TagFilter [] TagFilters;
 
     /**
-    * 0: user-defined credential (default value).
-1: Tencent Cloud service credential.
-Either 1 or 0 can be selected for this parameter.
+    * `0` (default): user-defined secret.
+`1`: Tencent Cloud services secret.
+`2`: SSH key secret.
     */
     @SerializedName("SecretType")
     @Expose
     private Long SecretType;
+
+    /**
+    * 
+    */
+    @SerializedName("ProductName")
+    @Expose
+    private String ProductName;
 
     /**
      * Get Starting position of the list, starting at 0. If not specified, 0 is used by default. 
@@ -205,27 +212,43 @@ The `PendingCreate` and `CreateFailed` status only take effect when `SecretType`
     }
 
     /**
-     * Get 0: user-defined credential (default value).
-1: Tencent Cloud service credential.
-Either 1 or 0 can be selected for this parameter. 
-     * @return SecretType 0: user-defined credential (default value).
-1: Tencent Cloud service credential.
-Either 1 or 0 can be selected for this parameter.
+     * Get `0` (default): user-defined secret.
+`1`: Tencent Cloud services secret.
+`2`: SSH key secret. 
+     * @return SecretType `0` (default): user-defined secret.
+`1`: Tencent Cloud services secret.
+`2`: SSH key secret.
      */
     public Long getSecretType() {
         return this.SecretType;
     }
 
     /**
-     * Set 0: user-defined credential (default value).
-1: Tencent Cloud service credential.
-Either 1 or 0 can be selected for this parameter.
-     * @param SecretType 0: user-defined credential (default value).
-1: Tencent Cloud service credential.
-Either 1 or 0 can be selected for this parameter.
+     * Set `0` (default): user-defined secret.
+`1`: Tencent Cloud services secret.
+`2`: SSH key secret.
+     * @param SecretType `0` (default): user-defined secret.
+`1`: Tencent Cloud services secret.
+`2`: SSH key secret.
      */
     public void setSecretType(Long SecretType) {
         this.SecretType = SecretType;
+    }
+
+    /**
+     * Get  
+     * @return ProductName 
+     */
+    public String getProductName() {
+        return this.ProductName;
+    }
+
+    /**
+     * Set 
+     * @param ProductName 
+     */
+    public void setProductName(String ProductName) {
+        this.ProductName = ProductName;
     }
 
     public ListSecretsRequest() {
@@ -260,6 +283,9 @@ Either 1 or 0 can be selected for this parameter.
         if (source.SecretType != null) {
             this.SecretType = new Long(source.SecretType);
         }
+        if (source.ProductName != null) {
+            this.ProductName = new String(source.ProductName);
+        }
     }
 
 
@@ -274,6 +300,7 @@ Either 1 or 0 can be selected for this parameter.
         this.setParamSimple(map, prefix + "SearchSecretName", this.SearchSecretName);
         this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
         this.setParamSimple(map, prefix + "SecretType", this.SecretType);
+        this.setParamSimple(map, prefix + "ProductName", this.ProductName);
 
     }
 }

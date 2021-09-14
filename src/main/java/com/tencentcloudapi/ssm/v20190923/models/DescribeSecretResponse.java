@@ -72,8 +72,8 @@ public class DescribeSecretResponse extends AbstractModel{
     private Long CreateTime;
 
     /**
-    * 0: user-defined credential; 1: Tencent Cloud service credential.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * `0`: user-defined secret; `1`: database credential; `2`: SSH key secret.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("SecretType")
     @Expose
@@ -110,6 +110,30 @@ Note: this field may return null, indicating that no valid values can be obtaine
     @SerializedName("RotationFrequency")
     @Expose
     private Long RotationFrequency;
+
+    /**
+    * Secret name. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ResourceName")
+    @Expose
+    private String ResourceName;
+
+    /**
+    * Project ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ProjectID")
+    @Expose
+    private Long ProjectID;
+
+    /**
+    * ID of the CVM instance associated with the SSH key. ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AssociatedInstanceIDs")
+    @Expose
+    private String [] AssociatedInstanceIDs;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -231,20 +255,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get 0: user-defined credential; 1: Tencent Cloud service credential.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SecretType 0: user-defined credential; 1: Tencent Cloud service credential.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get `0`: user-defined secret; `1`: database credential; `2`: SSH key secret.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return SecretType `0`: user-defined secret; `1`: database credential; `2`: SSH key secret.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getSecretType() {
         return this.SecretType;
     }
 
     /**
-     * Set 0: user-defined credential; 1: Tencent Cloud service credential.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SecretType 0: user-defined credential; 1: Tencent Cloud service credential.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set `0`: user-defined secret; `1`: database credential; `2`: SSH key secret.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param SecretType `0`: user-defined secret; `1`: database credential; `2`: SSH key secret.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setSecretType(Long SecretType) {
         this.SecretType = SecretType;
@@ -331,6 +355,66 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Secret name. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return ResourceName Secret name. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getResourceName() {
+        return this.ResourceName;
+    }
+
+    /**
+     * Set Secret name. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param ResourceName Secret name. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setResourceName(String ResourceName) {
+        this.ResourceName = ResourceName;
+    }
+
+    /**
+     * Get Project ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return ProjectID Project ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getProjectID() {
+        return this.ProjectID;
+    }
+
+    /**
+     * Set Project ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param ProjectID Project ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setProjectID(Long ProjectID) {
+        this.ProjectID = ProjectID;
+    }
+
+    /**
+     * Get ID of the CVM instance associated with the SSH key. ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return AssociatedInstanceIDs ID of the CVM instance associated with the SSH key. ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String [] getAssociatedInstanceIDs() {
+        return this.AssociatedInstanceIDs;
+    }
+
+    /**
+     * Set ID of the CVM instance associated with the SSH key. ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AssociatedInstanceIDs ID of the CVM instance associated with the SSH key. ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAssociatedInstanceIDs(String [] AssociatedInstanceIDs) {
+        this.AssociatedInstanceIDs = AssociatedInstanceIDs;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -390,6 +474,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.RotationFrequency != null) {
             this.RotationFrequency = new Long(source.RotationFrequency);
         }
+        if (source.ResourceName != null) {
+            this.ResourceName = new String(source.ResourceName);
+        }
+        if (source.ProjectID != null) {
+            this.ProjectID = new Long(source.ProjectID);
+        }
+        if (source.AssociatedInstanceIDs != null) {
+            this.AssociatedInstanceIDs = new String[source.AssociatedInstanceIDs.length];
+            for (int i = 0; i < source.AssociatedInstanceIDs.length; i++) {
+                this.AssociatedInstanceIDs[i] = new String(source.AssociatedInstanceIDs[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -412,6 +508,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ResourceID", this.ResourceID);
         this.setParamSimple(map, prefix + "RotationStatus", this.RotationStatus);
         this.setParamSimple(map, prefix + "RotationFrequency", this.RotationFrequency);
+        this.setParamSimple(map, prefix + "ResourceName", this.ResourceName);
+        this.setParamSimple(map, prefix + "ProjectID", this.ProjectID);
+        this.setParamArraySimple(map, prefix + "AssociatedInstanceIDs.", this.AssociatedInstanceIDs);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

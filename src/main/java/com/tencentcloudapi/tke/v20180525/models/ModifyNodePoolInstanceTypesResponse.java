@@ -13,21 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gme.v20180711.models;
+package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAppStatusResponse extends AbstractModel{
-
-    /**
-    * Returned data
-    */
-    @SerializedName("Data")
-    @Expose
-    private ModifyAppStatusResp Data;
+public class ModifyNodePoolInstanceTypesResponse extends AbstractModel{
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -35,22 +28,6 @@ public class ModifyAppStatusResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get Returned data 
-     * @return Data Returned data
-     */
-    public ModifyAppStatusResp getData() {
-        return this.Data;
-    }
-
-    /**
-     * Set Returned data
-     * @param Data Returned data
-     */
-    public void setData(ModifyAppStatusResp Data) {
-        this.Data = Data;
-    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -68,17 +45,14 @@ public class ModifyAppStatusResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ModifyAppStatusResponse() {
+    public ModifyNodePoolInstanceTypesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyAppStatusResponse(ModifyAppStatusResponse source) {
-        if (source.Data != null) {
-            this.Data = new ModifyAppStatusResp(source.Data);
-        }
+    public ModifyNodePoolInstanceTypesResponse(ModifyNodePoolInstanceTypesResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -89,7 +63,6 @@ public class ModifyAppStatusResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -31,8 +31,8 @@ public class UpdateRotationStatusRequest extends AbstractModel{
 
     /**
     * Specifies whether to enable rotation.
-True: enable rotation.
-False: disable rotation.
+`true`: enables rotation.
+`false`: disables rotation.
     */
     @SerializedName("EnableRotation")
     @Expose
@@ -46,8 +46,8 @@ False: disable rotation.
     private Long Frequency;
 
     /**
-    * User-Defined rotation start time in the format of 2006-01-02 15:04:05.
-When `EnableRotation` is `True`, if `RotationBeginTime` is left empty, the current time will be entered by default.
+    * User-defined rotation start time in the format of 2006-01-02 15:04:05.
+When `EnableRotation` is `true` and `RotationBeginTime` is left empty, the current time will be entered by default.
     */
     @SerializedName("RotationBeginTime")
     @Expose
@@ -71,11 +71,11 @@ When `EnableRotation` is `True`, if `RotationBeginTime` is left empty, the curre
 
     /**
      * Get Specifies whether to enable rotation.
-True: enable rotation.
-False: disable rotation. 
+`true`: enables rotation.
+`false`: disables rotation. 
      * @return EnableRotation Specifies whether to enable rotation.
-True: enable rotation.
-False: disable rotation.
+`true`: enables rotation.
+`false`: disables rotation.
      */
     public Boolean getEnableRotation() {
         return this.EnableRotation;
@@ -83,11 +83,11 @@ False: disable rotation.
 
     /**
      * Set Specifies whether to enable rotation.
-True: enable rotation.
-False: disable rotation.
+`true`: enables rotation.
+`false`: disables rotation.
      * @param EnableRotation Specifies whether to enable rotation.
-True: enable rotation.
-False: disable rotation.
+`true`: enables rotation.
+`false`: disables rotation.
      */
     public void setEnableRotation(Boolean EnableRotation) {
         this.EnableRotation = EnableRotation;
@@ -110,20 +110,20 @@ False: disable rotation.
     }
 
     /**
-     * Get User-Defined rotation start time in the format of 2006-01-02 15:04:05.
-When `EnableRotation` is `True`, if `RotationBeginTime` is left empty, the current time will be entered by default. 
-     * @return RotationBeginTime User-Defined rotation start time in the format of 2006-01-02 15:04:05.
-When `EnableRotation` is `True`, if `RotationBeginTime` is left empty, the current time will be entered by default.
+     * Get User-defined rotation start time in the format of 2006-01-02 15:04:05.
+When `EnableRotation` is `true` and `RotationBeginTime` is left empty, the current time will be entered by default. 
+     * @return RotationBeginTime User-defined rotation start time in the format of 2006-01-02 15:04:05.
+When `EnableRotation` is `true` and `RotationBeginTime` is left empty, the current time will be entered by default.
      */
     public String getRotationBeginTime() {
         return this.RotationBeginTime;
     }
 
     /**
-     * Set User-Defined rotation start time in the format of 2006-01-02 15:04:05.
-When `EnableRotation` is `True`, if `RotationBeginTime` is left empty, the current time will be entered by default.
-     * @param RotationBeginTime User-Defined rotation start time in the format of 2006-01-02 15:04:05.
-When `EnableRotation` is `True`, if `RotationBeginTime` is left empty, the current time will be entered by default.
+     * Set User-defined rotation start time in the format of 2006-01-02 15:04:05.
+When `EnableRotation` is `true` and `RotationBeginTime` is left empty, the current time will be entered by default.
+     * @param RotationBeginTime User-defined rotation start time in the format of 2006-01-02 15:04:05.
+When `EnableRotation` is `true` and `RotationBeginTime` is left empty, the current time will be entered by default.
      */
     public void setRotationBeginTime(String RotationBeginTime) {
         this.RotationBeginTime = RotationBeginTime;

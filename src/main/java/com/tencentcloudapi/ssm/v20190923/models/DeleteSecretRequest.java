@@ -30,11 +30,21 @@ public class DeleteSecretRequest extends AbstractModel{
     private String SecretName;
 
     /**
-    * Scheduled deletion time, in days. If set to 0, the Secret is deleted immediately. A number in the range of 1 to 30 indicates the number of retention days. The Secret will be deleted after the set value.
+    * Scheduled deletion time (in days), indicating the number of retention days for the secret. Value range: 0-30. If it is `0`, the secret is deleted immediately.
+For an SSH key secret, this field can only be `0`.
     */
     @SerializedName("RecoveryWindowInDays")
     @Expose
     private Long RecoveryWindowInDays;
+
+    /**
+    * Specifies whether to delete the SSH key from both the secret and the SSH key list in the CVM console. This field is only valid for SSH key secrets. Valid values:
+`True`: deletes SSH key from both the secret and SSH key list in the CVM console. Note that the deletion will fail if the SSH key is already bound to a CVM instance.
+`False`: only deletes the SSH key information in the secret.
+    */
+    @SerializedName("CleanSSHKey")
+    @Expose
+    private Boolean CleanSSHKey;
 
     /**
      * Get Name of the Secret to be deleted. 
@@ -53,19 +63,47 @@ public class DeleteSecretRequest extends AbstractModel{
     }
 
     /**
-     * Get Scheduled deletion time, in days. If set to 0, the Secret is deleted immediately. A number in the range of 1 to 30 indicates the number of retention days. The Secret will be deleted after the set value. 
-     * @return RecoveryWindowInDays Scheduled deletion time, in days. If set to 0, the Secret is deleted immediately. A number in the range of 1 to 30 indicates the number of retention days. The Secret will be deleted after the set value.
+     * Get Scheduled deletion time (in days), indicating the number of retention days for the secret. Value range: 0-30. If it is `0`, the secret is deleted immediately.
+For an SSH key secret, this field can only be `0`. 
+     * @return RecoveryWindowInDays Scheduled deletion time (in days), indicating the number of retention days for the secret. Value range: 0-30. If it is `0`, the secret is deleted immediately.
+For an SSH key secret, this field can only be `0`.
      */
     public Long getRecoveryWindowInDays() {
         return this.RecoveryWindowInDays;
     }
 
     /**
-     * Set Scheduled deletion time, in days. If set to 0, the Secret is deleted immediately. A number in the range of 1 to 30 indicates the number of retention days. The Secret will be deleted after the set value.
-     * @param RecoveryWindowInDays Scheduled deletion time, in days. If set to 0, the Secret is deleted immediately. A number in the range of 1 to 30 indicates the number of retention days. The Secret will be deleted after the set value.
+     * Set Scheduled deletion time (in days), indicating the number of retention days for the secret. Value range: 0-30. If it is `0`, the secret is deleted immediately.
+For an SSH key secret, this field can only be `0`.
+     * @param RecoveryWindowInDays Scheduled deletion time (in days), indicating the number of retention days for the secret. Value range: 0-30. If it is `0`, the secret is deleted immediately.
+For an SSH key secret, this field can only be `0`.
      */
     public void setRecoveryWindowInDays(Long RecoveryWindowInDays) {
         this.RecoveryWindowInDays = RecoveryWindowInDays;
+    }
+
+    /**
+     * Get Specifies whether to delete the SSH key from both the secret and the SSH key list in the CVM console. This field is only valid for SSH key secrets. Valid values:
+`True`: deletes SSH key from both the secret and SSH key list in the CVM console. Note that the deletion will fail if the SSH key is already bound to a CVM instance.
+`False`: only deletes the SSH key information in the secret. 
+     * @return CleanSSHKey Specifies whether to delete the SSH key from both the secret and the SSH key list in the CVM console. This field is only valid for SSH key secrets. Valid values:
+`True`: deletes SSH key from both the secret and SSH key list in the CVM console. Note that the deletion will fail if the SSH key is already bound to a CVM instance.
+`False`: only deletes the SSH key information in the secret.
+     */
+    public Boolean getCleanSSHKey() {
+        return this.CleanSSHKey;
+    }
+
+    /**
+     * Set Specifies whether to delete the SSH key from both the secret and the SSH key list in the CVM console. This field is only valid for SSH key secrets. Valid values:
+`True`: deletes SSH key from both the secret and SSH key list in the CVM console. Note that the deletion will fail if the SSH key is already bound to a CVM instance.
+`False`: only deletes the SSH key information in the secret.
+     * @param CleanSSHKey Specifies whether to delete the SSH key from both the secret and the SSH key list in the CVM console. This field is only valid for SSH key secrets. Valid values:
+`True`: deletes SSH key from both the secret and SSH key list in the CVM console. Note that the deletion will fail if the SSH key is already bound to a CVM instance.
+`False`: only deletes the SSH key information in the secret.
+     */
+    public void setCleanSSHKey(Boolean CleanSSHKey) {
+        this.CleanSSHKey = CleanSSHKey;
     }
 
     public DeleteSecretRequest() {
@@ -82,6 +120,9 @@ public class DeleteSecretRequest extends AbstractModel{
         if (source.RecoveryWindowInDays != null) {
             this.RecoveryWindowInDays = new Long(source.RecoveryWindowInDays);
         }
+        if (source.CleanSSHKey != null) {
+            this.CleanSSHKey = new Boolean(source.CleanSSHKey);
+        }
     }
 
 
@@ -91,6 +132,7 @@ public class DeleteSecretRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SecretName", this.SecretName);
         this.setParamSimple(map, prefix + "RecoveryWindowInDays", this.RecoveryWindowInDays);
+        this.setParamSimple(map, prefix + "CleanSSHKey", this.CleanSSHKey);
 
     }
 }

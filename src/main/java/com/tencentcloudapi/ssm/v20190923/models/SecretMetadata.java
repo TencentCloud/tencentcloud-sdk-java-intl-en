@@ -111,6 +111,30 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ProductName;
 
     /**
+    * Secret name. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ResourceName")
+    @Expose
+    private String ResourceName;
+
+    /**
+    * Project ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ProjectID")
+    @Expose
+    private Long ProjectID;
+
+    /**
+    * ID of the CVM instance associated with the SSH key. ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AssociatedInstanceIDs")
+    @Expose
+    private String [] AssociatedInstanceIDs;
+
+    /**
      * Get Credential name 
      * @return SecretName Credential name
      */
@@ -318,6 +342,66 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.ProductName = ProductName;
     }
 
+    /**
+     * Get Secret name. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ResourceName Secret name. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getResourceName() {
+        return this.ResourceName;
+    }
+
+    /**
+     * Set Secret name. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ResourceName Secret name. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setResourceName(String ResourceName) {
+        this.ResourceName = ResourceName;
+    }
+
+    /**
+     * Get Project ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ProjectID Project ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getProjectID() {
+        return this.ProjectID;
+    }
+
+    /**
+     * Set Project ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ProjectID Project ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setProjectID(Long ProjectID) {
+        this.ProjectID = ProjectID;
+    }
+
+    /**
+     * Get ID of the CVM instance associated with the SSH key. ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return AssociatedInstanceIDs ID of the CVM instance associated with the SSH key. ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String [] getAssociatedInstanceIDs() {
+        return this.AssociatedInstanceIDs;
+    }
+
+    /**
+     * Set ID of the CVM instance associated with the SSH key. ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param AssociatedInstanceIDs ID of the CVM instance associated with the SSH key. ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setAssociatedInstanceIDs(String [] AssociatedInstanceIDs) {
+        this.AssociatedInstanceIDs = AssociatedInstanceIDs;
+    }
+
     public SecretMetadata() {
     }
 
@@ -362,6 +446,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.ProductName != null) {
             this.ProductName = new String(source.ProductName);
         }
+        if (source.ResourceName != null) {
+            this.ResourceName = new String(source.ResourceName);
+        }
+        if (source.ProjectID != null) {
+            this.ProjectID = new Long(source.ProjectID);
+        }
+        if (source.AssociatedInstanceIDs != null) {
+            this.AssociatedInstanceIDs = new String[source.AssociatedInstanceIDs.length];
+            for (int i = 0; i < source.AssociatedInstanceIDs.length; i++) {
+                this.AssociatedInstanceIDs[i] = new String(source.AssociatedInstanceIDs[i]);
+            }
+        }
     }
 
 
@@ -381,6 +477,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "NextRotationTime", this.NextRotationTime);
         this.setParamSimple(map, prefix + "SecretType", this.SecretType);
         this.setParamSimple(map, prefix + "ProductName", this.ProductName);
+        this.setParamSimple(map, prefix + "ResourceName", this.ResourceName);
+        this.setParamSimple(map, prefix + "ProjectID", this.ProjectID);
+        this.setParamArraySimple(map, prefix + "AssociatedInstanceIDs.", this.AssociatedInstanceIDs);
 
     }
 }

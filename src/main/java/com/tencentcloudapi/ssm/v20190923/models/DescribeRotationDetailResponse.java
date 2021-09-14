@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeRotationDetailResponse extends AbstractModel{
 
     /**
-    * Specifies whether to allow rotation. True: yes; False: no.
+    * Whether to enable rotation. `true`: enabled; `false`: disabled.
     */
     @SerializedName("EnableRotation")
     @Expose
@@ -61,16 +61,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Specifies whether to allow rotation. True: yes; False: no. 
-     * @return EnableRotation Specifies whether to allow rotation. True: yes; False: no.
+     * Get Whether to enable rotation. `true`: enabled; `false`: disabled. 
+     * @return EnableRotation Whether to enable rotation. `true`: enabled; `false`: disabled.
      */
     public Boolean getEnableRotation() {
         return this.EnableRotation;
     }
 
     /**
-     * Set Specifies whether to allow rotation. True: yes; False: no.
-     * @param EnableRotation Specifies whether to allow rotation. True: yes; False: no.
+     * Set Whether to enable rotation. `true`: enabled; `false`: disabled.
+     * @param EnableRotation Whether to enable rotation. `true`: enabled; `false`: disabled.
      */
     public void setEnableRotation(Boolean EnableRotation) {
         this.EnableRotation = EnableRotation;

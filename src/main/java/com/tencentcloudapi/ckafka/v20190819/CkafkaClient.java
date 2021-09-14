@@ -159,6 +159,26 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify the delayed trigger time of route deletion.
+     * @param req DeleteRouteTriggerTimeRequest
+     * @return DeleteRouteTriggerTimeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRouteTriggerTimeResponse DeleteRouteTriggerTime(DeleteRouteTriggerTimeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRouteTriggerTimeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRouteTriggerTimeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteRouteTriggerTime");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete a CKafka topic.
      * @param req DeleteTopicRequest
      * @return DeleteTopicResponse

@@ -3,7 +3,7 @@ public enum TemErrorCode {
     // Failed to create the service.
      INTERNALERROR_CREATESERVICEERROR("InternalError.CreateServiceError"),
      
-    // 
+    // This application name already exists.
      INVALIDPARAMETERVALUE_SERVICENAMEDUPLICATEERROR("InvalidParameterValue.ServiceNameDuplicateError");
      
     private String value;

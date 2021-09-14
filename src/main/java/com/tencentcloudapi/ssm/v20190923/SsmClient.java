@@ -59,6 +59,26 @@ public class SsmClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a secret that hosts SSH keys.
+     * @param req CreateSSHKeyPairSecretRequest
+     * @return CreateSSHKeyPairSecretResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSSHKeyPairSecretResponse CreateSSHKeyPairSecret(CreateSSHKeyPairSecretRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSSHKeyPairSecretResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSSHKeyPairSecretResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateSSHKeyPairSecret");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a KMS-encrypted Secret. You can create and store up to 1,000 Secrets in each region.
      * @param req CreateSecretRequest
      * @return CreateSecretResponse
@@ -274,6 +294,26 @@ This API is only applicable to Tencent Cloud service credentials.
                 Type type = new TypeToken<JsonResponseModel<GetRegionsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "GetRegions");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to obtain the plaintext value of the SSH key secret.
+     * @param req GetSSHKeyPairValueRequest
+     * @return GetSSHKeyPairValueResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetSSHKeyPairValueResponse GetSSHKeyPairValue(GetSSHKeyPairValueRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetSSHKeyPairValueResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetSSHKeyPairValueResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetSSHKeyPairValue");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

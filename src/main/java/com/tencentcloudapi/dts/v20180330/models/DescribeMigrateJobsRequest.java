@@ -65,6 +65,13 @@ public class DescribeMigrateJobsRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * Tag filter.
+    */
+    @SerializedName("TagFilters")
+    @Expose
+    private TagFilter [] TagFilters;
+
+    /**
      * Get Data migration task ID 
      * @return JobId Data migration task ID
      */
@@ -160,6 +167,22 @@ public class DescribeMigrateJobsRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    /**
+     * Get Tag filter. 
+     * @return TagFilters Tag filter.
+     */
+    public TagFilter [] getTagFilters() {
+        return this.TagFilters;
+    }
+
+    /**
+     * Set Tag filter.
+     * @param TagFilters Tag filter.
+     */
+    public void setTagFilters(TagFilter [] TagFilters) {
+        this.TagFilters = TagFilters;
+    }
+
     public DescribeMigrateJobsRequest() {
     }
 
@@ -186,6 +209,12 @@ public class DescribeMigrateJobsRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.TagFilters != null) {
+            this.TagFilters = new TagFilter[source.TagFilters.length];
+            for (int i = 0; i < source.TagFilters.length; i++) {
+                this.TagFilters[i] = new TagFilter(source.TagFilters[i]);
+            }
+        }
     }
 
 
@@ -199,6 +228,7 @@ public class DescribeMigrateJobsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "OrderSeq", this.OrderSeq);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
 
     }
 }

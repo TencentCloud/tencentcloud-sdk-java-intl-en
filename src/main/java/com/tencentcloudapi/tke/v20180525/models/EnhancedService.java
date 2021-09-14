@@ -37,6 +37,13 @@ public class EnhancedService extends AbstractModel{
     private RunMonitorServiceEnabled MonitorService;
 
     /**
+    * Enables the TAT service. If this parameter is not specified, the TAT service will not be enabled.
+    */
+    @SerializedName("AutomationService")
+    @Expose
+    private RunAutomationServiceEnabled AutomationService;
+
+    /**
      * Get Enables cloud security service. If this parameter is not specified, the cloud security service will be enabled by default. 
      * @return SecurityService Enables cloud security service. If this parameter is not specified, the cloud security service will be enabled by default.
      */
@@ -68,6 +75,22 @@ public class EnhancedService extends AbstractModel{
         this.MonitorService = MonitorService;
     }
 
+    /**
+     * Get Enables the TAT service. If this parameter is not specified, the TAT service will not be enabled. 
+     * @return AutomationService Enables the TAT service. If this parameter is not specified, the TAT service will not be enabled.
+     */
+    public RunAutomationServiceEnabled getAutomationService() {
+        return this.AutomationService;
+    }
+
+    /**
+     * Set Enables the TAT service. If this parameter is not specified, the TAT service will not be enabled.
+     * @param AutomationService Enables the TAT service. If this parameter is not specified, the TAT service will not be enabled.
+     */
+    public void setAutomationService(RunAutomationServiceEnabled AutomationService) {
+        this.AutomationService = AutomationService;
+    }
+
     public EnhancedService() {
     }
 
@@ -82,6 +105,9 @@ public class EnhancedService extends AbstractModel{
         if (source.MonitorService != null) {
             this.MonitorService = new RunMonitorServiceEnabled(source.MonitorService);
         }
+        if (source.AutomationService != null) {
+            this.AutomationService = new RunAutomationServiceEnabled(source.AutomationService);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class EnhancedService extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "SecurityService.", this.SecurityService);
         this.setParamObj(map, prefix + "MonitorService.", this.MonitorService);
+        this.setParamObj(map, prefix + "AutomationService.", this.AutomationService);
 
     }
 }

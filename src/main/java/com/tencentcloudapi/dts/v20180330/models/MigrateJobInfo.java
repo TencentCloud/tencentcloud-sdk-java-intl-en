@@ -135,6 +135,14 @@ public class MigrateJobInfo extends AbstractModel{
     private ErrorInfo [] ErrorInfo;
 
     /**
+    * Tag
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private TagItem [] Tags;
+
+    /**
      * Get Data migration task ID 
      * @return JobId Data migration task ID
      */
@@ -390,6 +398,26 @@ public class MigrateJobInfo extends AbstractModel{
         this.ErrorInfo = ErrorInfo;
     }
 
+    /**
+     * Get Tag
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Tags Tag
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public TagItem [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Tags Tag
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setTags(TagItem [] Tags) {
+        this.Tags = Tags;
+    }
+
     public MigrateJobInfo() {
     }
 
@@ -449,6 +477,12 @@ public class MigrateJobInfo extends AbstractModel{
                 this.ErrorInfo[i] = new ErrorInfo(source.ErrorInfo[i]);
             }
         }
+        if (source.Tags != null) {
+            this.Tags = new TagItem[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagItem(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -472,6 +506,7 @@ public class MigrateJobInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamObj(map, prefix + "Detail.", this.Detail);
         this.setParamArrayObj(map, prefix + "ErrorInfo.", this.ErrorInfo);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

@@ -20,67 +20,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RealtimeSpeechConf extends AbstractModel{
+public class ModifyAppStatusResp extends AbstractModel{
 
     /**
-    * Voice chat status. Valid values: open, close
+    * GME app ID
+    */
+    @SerializedName("BizId")
+    @Expose
+    private Long BizId;
+
+    /**
+    * App status. Valid values: `open`, `close`
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Voice chat sound quality. Valid value: `high`
-    */
-    @SerializedName("Quality")
-    @Expose
-    private String Quality;
+     * Get GME app ID 
+     * @return BizId GME app ID
+     */
+    public Long getBizId() {
+        return this.BizId;
+    }
 
     /**
-     * Get Voice chat status. Valid values: open, close 
-     * @return Status Voice chat status. Valid values: open, close
+     * Set GME app ID
+     * @param BizId GME app ID
+     */
+    public void setBizId(Long BizId) {
+        this.BizId = BizId;
+    }
+
+    /**
+     * Get App status. Valid values: `open`, `close` 
+     * @return Status App status. Valid values: `open`, `close`
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Voice chat status. Valid values: open, close
-     * @param Status Voice chat status. Valid values: open, close
+     * Set App status. Valid values: `open`, `close`
+     * @param Status App status. Valid values: `open`, `close`
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
-    /**
-     * Get Voice chat sound quality. Valid value: `high` 
-     * @return Quality Voice chat sound quality. Valid value: `high`
-     */
-    public String getQuality() {
-        return this.Quality;
-    }
-
-    /**
-     * Set Voice chat sound quality. Valid value: `high`
-     * @param Quality Voice chat sound quality. Valid value: `high`
-     */
-    public void setQuality(String Quality) {
-        this.Quality = Quality;
-    }
-
-    public RealtimeSpeechConf() {
+    public ModifyAppStatusResp() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public RealtimeSpeechConf(RealtimeSpeechConf source) {
+    public ModifyAppStatusResp(ModifyAppStatusResp source) {
+        if (source.BizId != null) {
+            this.BizId = new Long(source.BizId);
+        }
         if (source.Status != null) {
             this.Status = new String(source.Status);
-        }
-        if (source.Quality != null) {
-            this.Quality = new String(source.Quality);
         }
     }
 
@@ -89,8 +89,8 @@ public class RealtimeSpeechConf extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "BizId", this.BizId);
         this.setParamSimple(map, prefix + "Status", this.Status);
-        this.setParamSimple(map, prefix + "Quality", this.Quality);
 
     }
 }

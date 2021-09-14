@@ -1,5 +1,11 @@
 package com.tencentcloudapi.ckafka.v20190819;
 public enum CkafkaErrorCode {
+    // CAM signature/authentication error.
+     AUTHFAILURE("AuthFailure"),
+     
+    // DryRun operation, which means an extra DryRun parameter is passed in yet the request will still be successful.
+     DRYRUNOPERATION("DryRunOperation"),
+     
     // Operation failed.
      FAILEDOPERATION("FailedOperation"),
      
