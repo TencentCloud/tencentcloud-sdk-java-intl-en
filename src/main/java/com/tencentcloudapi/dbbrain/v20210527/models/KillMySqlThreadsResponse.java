@@ -13,36 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.dbbrain.v20210527.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLiveDomainsResponse extends AbstractModel{
+public class KillMySqlThreadsResponse extends AbstractModel{
 
     /**
-    * Total number of results.
+    * The ID list of MySQL sessions that have been killed.
     */
-    @SerializedName("AllCount")
+    @SerializedName("Threads")
     @Expose
-    private Long AllCount;
+    private Long [] Threads;
 
     /**
-    * List of domain name details.
-    */
-    @SerializedName("DomainList")
-    @Expose
-    private DomainInfo [] DomainList;
-
-    /**
-    * The number of domain names that can be added
+    * Execution ID, which is output in the “Prepare” stage and used to specify the ID of the session to be killed in the “Commit” stage.
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
-    @SerializedName("CreateLimitCount")
+    @SerializedName("SqlExecId")
     @Expose
-    private Long CreateLimitCount;
+    private String SqlExecId;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -52,55 +45,39 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String RequestId;
 
     /**
-     * Get Total number of results. 
-     * @return AllCount Total number of results.
+     * Get The ID list of MySQL sessions that have been killed. 
+     * @return Threads The ID list of MySQL sessions that have been killed.
      */
-    public Long getAllCount() {
-        return this.AllCount;
+    public Long [] getThreads() {
+        return this.Threads;
     }
 
     /**
-     * Set Total number of results.
-     * @param AllCount Total number of results.
+     * Set The ID list of MySQL sessions that have been killed.
+     * @param Threads The ID list of MySQL sessions that have been killed.
      */
-    public void setAllCount(Long AllCount) {
-        this.AllCount = AllCount;
+    public void setThreads(Long [] Threads) {
+        this.Threads = Threads;
     }
 
     /**
-     * Get List of domain name details. 
-     * @return DomainList List of domain name details.
-     */
-    public DomainInfo [] getDomainList() {
-        return this.DomainList;
-    }
-
-    /**
-     * Set List of domain name details.
-     * @param DomainList List of domain name details.
-     */
-    public void setDomainList(DomainInfo [] DomainList) {
-        this.DomainList = DomainList;
-    }
-
-    /**
-     * Get The number of domain names that can be added
+     * Get Execution ID, which is output in the “Prepare” stage and used to specify the ID of the session to be killed in the “Commit” stage.
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return CreateLimitCount The number of domain names that can be added
+     * @return SqlExecId Execution ID, which is output in the “Prepare” stage and used to specify the ID of the session to be killed in the “Commit” stage.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
-    public Long getCreateLimitCount() {
-        return this.CreateLimitCount;
+    public String getSqlExecId() {
+        return this.SqlExecId;
     }
 
     /**
-     * Set The number of domain names that can be added
+     * Set Execution ID, which is output in the “Prepare” stage and used to specify the ID of the session to be killed in the “Commit” stage.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param CreateLimitCount The number of domain names that can be added
+     * @param SqlExecId Execution ID, which is output in the “Prepare” stage and used to specify the ID of the session to be killed in the “Commit” stage.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
-    public void setCreateLimitCount(Long CreateLimitCount) {
-        this.CreateLimitCount = CreateLimitCount;
+    public void setSqlExecId(String SqlExecId) {
+        this.SqlExecId = SqlExecId;
     }
 
     /**
@@ -119,25 +96,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.RequestId = RequestId;
     }
 
-    public DescribeLiveDomainsResponse() {
+    public KillMySqlThreadsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeLiveDomainsResponse(DescribeLiveDomainsResponse source) {
-        if (source.AllCount != null) {
-            this.AllCount = new Long(source.AllCount);
-        }
-        if (source.DomainList != null) {
-            this.DomainList = new DomainInfo[source.DomainList.length];
-            for (int i = 0; i < source.DomainList.length; i++) {
-                this.DomainList[i] = new DomainInfo(source.DomainList[i]);
+    public KillMySqlThreadsResponse(KillMySqlThreadsResponse source) {
+        if (source.Threads != null) {
+            this.Threads = new Long[source.Threads.length];
+            for (int i = 0; i < source.Threads.length; i++) {
+                this.Threads[i] = new Long(source.Threads[i]);
             }
         }
-        if (source.CreateLimitCount != null) {
-            this.CreateLimitCount = new Long(source.CreateLimitCount);
+        if (source.SqlExecId != null) {
+            this.SqlExecId = new String(source.SqlExecId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -149,9 +123,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "AllCount", this.AllCount);
-        this.setParamArrayObj(map, prefix + "DomainList.", this.DomainList);
-        this.setParamSimple(map, prefix + "CreateLimitCount", this.CreateLimitCount);
+        this.setParamArraySimple(map, prefix + "Threads.", this.Threads);
+        this.setParamSimple(map, prefix + "SqlExecId", this.SqlExecId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

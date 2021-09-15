@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class CommonMixInputParam extends AbstractModel{
 
     /**
-    * Input stream name of up to 80 bytes, which is a string containing letters, digits, and underscores.
+    * Input stream name, which can contain up to 80 bytes of letters, digits, and underscores.
+The value should be the name of an input stream for stream mix when `LayoutParams.InputType` is set to `0` (audio and video), `4` (pure audio), or `5` (pure video).
+The value can be a random name for identification, such as `Canvas1` or `Picture1`, when `LayoutParams.InputType` is set to `2` (image) or `3` (canvas).
     */
     @SerializedName("InputStreamName")
     @Expose
@@ -44,16 +46,24 @@ public class CommonMixInputParam extends AbstractModel{
     private CommonMixCropParams CropParams;
 
     /**
-     * Get Input stream name of up to 80 bytes, which is a string containing letters, digits, and underscores. 
-     * @return InputStreamName Input stream name of up to 80 bytes, which is a string containing letters, digits, and underscores.
+     * Get Input stream name, which can contain up to 80 bytes of letters, digits, and underscores.
+The value should be the name of an input stream for stream mix when `LayoutParams.InputType` is set to `0` (audio and video), `4` (pure audio), or `5` (pure video).
+The value can be a random name for identification, such as `Canvas1` or `Picture1`, when `LayoutParams.InputType` is set to `2` (image) or `3` (canvas). 
+     * @return InputStreamName Input stream name, which can contain up to 80 bytes of letters, digits, and underscores.
+The value should be the name of an input stream for stream mix when `LayoutParams.InputType` is set to `0` (audio and video), `4` (pure audio), or `5` (pure video).
+The value can be a random name for identification, such as `Canvas1` or `Picture1`, when `LayoutParams.InputType` is set to `2` (image) or `3` (canvas).
      */
     public String getInputStreamName() {
         return this.InputStreamName;
     }
 
     /**
-     * Set Input stream name of up to 80 bytes, which is a string containing letters, digits, and underscores.
-     * @param InputStreamName Input stream name of up to 80 bytes, which is a string containing letters, digits, and underscores.
+     * Set Input stream name, which can contain up to 80 bytes of letters, digits, and underscores.
+The value should be the name of an input stream for stream mix when `LayoutParams.InputType` is set to `0` (audio and video), `4` (pure audio), or `5` (pure video).
+The value can be a random name for identification, such as `Canvas1` or `Picture1`, when `LayoutParams.InputType` is set to `2` (image) or `3` (canvas).
+     * @param InputStreamName Input stream name, which can contain up to 80 bytes of letters, digits, and underscores.
+The value should be the name of an input stream for stream mix when `LayoutParams.InputType` is set to `0` (audio and video), `4` (pure audio), or `5` (pure video).
+The value can be a random name for identification, such as `Canvas1` or `Picture1`, when `LayoutParams.InputType` is set to `2` (image) or `3` (canvas).
      */
     public void setInputStreamName(String InputStreamName) {
         this.InputStreamName = InputStreamName;

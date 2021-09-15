@@ -72,7 +72,7 @@ public class CreateAclRequest extends AbstractModel{
     private String Principal;
 
     /**
-    * The resource name list, which is in JSON string format. Only one of `ResourceName` and `resourceNameList` can be specified.
+    * The resource name list, which is in JSON string format. Either `ResourceName` or `resourceNameList` can be specified.
     */
     @SerializedName("ResourceNameList")
     @Expose
@@ -191,16 +191,16 @@ public class CreateAclRequest extends AbstractModel{
     }
 
     /**
-     * Get The resource name list, which is in JSON string format. Only one of `ResourceName` and `resourceNameList` can be specified. 
-     * @return ResourceNameList The resource name list, which is in JSON string format. Only one of `ResourceName` and `resourceNameList` can be specified.
+     * Get The resource name list, which is in JSON string format. Either `ResourceName` or `resourceNameList` can be specified. 
+     * @return ResourceNameList The resource name list, which is in JSON string format. Either `ResourceName` or `resourceNameList` can be specified.
      */
     public String getResourceNameList() {
         return this.ResourceNameList;
     }
 
     /**
-     * Set The resource name list, which is in JSON string format. Only one of `ResourceName` and `resourceNameList` can be specified.
-     * @param ResourceNameList The resource name list, which is in JSON string format. Only one of `ResourceName` and `resourceNameList` can be specified.
+     * Set The resource name list, which is in JSON string format. Either `ResourceName` or `resourceNameList` can be specified.
+     * @param ResourceNameList The resource name list, which is in JSON string format. Either `ResourceName` or `resourceNameList` can be specified.
      */
     public void setResourceNameList(String ResourceNameList) {
         this.ResourceNameList = ResourceNameList;

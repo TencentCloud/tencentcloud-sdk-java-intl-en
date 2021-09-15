@@ -579,6 +579,26 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *This API is used to interrupt the current session according to the session ID. It needs to be called twice to commit the session interruption task in two stages. In the pre-commit stage, the stage value is `Prepare`, and the returned value is `SqlExecId’. In the commit stage, the stage value is `Commit`, and `SqlExecId` will be passed in as a parameter. Then the session process will be terminated.
+     * @param req KillMySqlThreadsRequest
+     * @return KillMySqlThreadsResponse
+     * @throws TencentCloudSDKException
+     */
+    public KillMySqlThreadsResponse KillMySqlThreads(KillMySqlThreadsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<KillMySqlThreadsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<KillMySqlThreadsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "KillMySqlThreads");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to enable/disable instance inspection.
      * @param req ModifyDiagDBInstanceConfRequest
      * @return ModifyDiagDBInstanceConfResponse

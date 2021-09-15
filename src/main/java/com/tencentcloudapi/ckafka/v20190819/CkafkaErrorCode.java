@@ -3,7 +3,7 @@ public enum CkafkaErrorCode {
     // CAM signature/authentication error.
      AUTHFAILURE("AuthFailure"),
      
-    // DryRun operation, which means an extra DryRun parameter is passed in yet the request will still be successful.
+    // DryRun operation, which means the DryRun parameter is passed in yet the request will still be successful.
      DRYRUNOPERATION("DryRunOperation"),
      
     // Operation failed.

@@ -25,7 +25,7 @@ public class RecordParam extends AbstractModel{
     /**
     * Max recording time per file
 Default value: `1800` (seconds)
-Value range: 60-7200
+Value range: 30-7200
 This parameter is invalid for HLS. Only one HLS file will be generated from push start to push end.
     */
     @SerializedName("RecordInterval")
@@ -109,11 +109,11 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     /**
      * Get Max recording time per file
 Default value: `1800` (seconds)
-Value range: 60-7200
+Value range: 30-7200
 This parameter is invalid for HLS. Only one HLS file will be generated from push start to push end. 
      * @return RecordInterval Max recording time per file
 Default value: `1800` (seconds)
-Value range: 60-7200
+Value range: 30-7200
 This parameter is invalid for HLS. Only one HLS file will be generated from push start to push end.
      */
     public Long getRecordInterval() {
@@ -123,11 +123,11 @@ This parameter is invalid for HLS. Only one HLS file will be generated from push
     /**
      * Set Max recording time per file
 Default value: `1800` (seconds)
-Value range: 60-7200
+Value range: 30-7200
 This parameter is invalid for HLS. Only one HLS file will be generated from push start to push end.
      * @param RecordInterval Max recording time per file
 Default value: `1800` (seconds)
-Value range: 60-7200
+Value range: 30-7200
 This parameter is invalid for HLS. Only one HLS file will be generated from push start to push end.
      */
     public void setRecordInterval(Long RecordInterval) {

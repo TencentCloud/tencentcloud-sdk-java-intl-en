@@ -71,14 +71,16 @@ Value range: 5-300s.
     private Long SnapshotInterval;
 
     /**
-    * Screenshot width. Default value: 0 (original width).
+    * Screenshot width. Default value: `0` (original width)
+Value range: 0-3000
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * Screenshot height. Default value: 0 (original height).
+    * Screenshot height. Default value: `0` (original height)
+Value range: 0-2000
     */
     @SerializedName("Height")
     @Expose
@@ -232,32 +234,40 @@ Value range: 5-300s.
     }
 
     /**
-     * Get Screenshot width. Default value: 0 (original width). 
-     * @return Width Screenshot width. Default value: 0 (original width).
+     * Get Screenshot width. Default value: `0` (original width)
+Value range: 0-3000 
+     * @return Width Screenshot width. Default value: `0` (original width)
+Value range: 0-3000
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Screenshot width. Default value: 0 (original width).
-     * @param Width Screenshot width. Default value: 0 (original width).
+     * Set Screenshot width. Default value: `0` (original width)
+Value range: 0-3000
+     * @param Width Screenshot width. Default value: `0` (original width)
+Value range: 0-3000
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get Screenshot height. Default value: 0 (original height). 
-     * @return Height Screenshot height. Default value: 0 (original height).
+     * Get Screenshot height. Default value: `0` (original height)
+Value range: 0-2000 
+     * @return Height Screenshot height. Default value: `0` (original height)
+Value range: 0-2000
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Screenshot height. Default value: 0 (original height).
-     * @param Height Screenshot height. Default value: 0 (original height).
+     * Set Screenshot height. Default value: `0` (original height)
+Value range: 0-2000
+     * @param Height Screenshot height. Default value: `0` (original height)
+Value range: 0-2000
      */
     public void setHeight(Long Height) {
         this.Height = Height;
