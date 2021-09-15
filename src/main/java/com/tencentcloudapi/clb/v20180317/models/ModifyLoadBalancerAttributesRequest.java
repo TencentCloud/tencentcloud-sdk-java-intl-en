@@ -65,6 +65,13 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel{
     private Boolean SnatPro;
 
     /**
+    * Specifies whether to enable deletion protection.
+    */
+    @SerializedName("DeleteProtect")
+    @Expose
+    private Boolean DeleteProtect;
+
+    /**
      * Get Unique CLB ID 
      * @return LoadBalancerId Unique CLB ID
      */
@@ -160,6 +167,22 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel{
         this.SnatPro = SnatPro;
     }
 
+    /**
+     * Get Specifies whether to enable deletion protection. 
+     * @return DeleteProtect Specifies whether to enable deletion protection.
+     */
+    public Boolean getDeleteProtect() {
+        return this.DeleteProtect;
+    }
+
+    /**
+     * Set Specifies whether to enable deletion protection.
+     * @param DeleteProtect Specifies whether to enable deletion protection.
+     */
+    public void setDeleteProtect(Boolean DeleteProtect) {
+        this.DeleteProtect = DeleteProtect;
+    }
+
     public ModifyLoadBalancerAttributesRequest() {
     }
 
@@ -186,6 +209,9 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel{
         if (source.SnatPro != null) {
             this.SnatPro = new Boolean(source.SnatPro);
         }
+        if (source.DeleteProtect != null) {
+            this.DeleteProtect = new Boolean(source.DeleteProtect);
+        }
     }
 
 
@@ -199,6 +225,7 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel{
         this.setParamObj(map, prefix + "InternetChargeInfo.", this.InternetChargeInfo);
         this.setParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
         this.setParamSimple(map, prefix + "SnatPro", this.SnatPro);
+        this.setParamSimple(map, prefix + "DeleteProtect", this.DeleteProtect);
 
     }
 }

@@ -631,6 +631,46 @@ This is an async API. After it is returned successfully, you can call the Descri
     }
 
     /**
+     *This API is used to query the configured location, bound server or bound CLB instance. If there are domain names, the result will be filtered by domain name.
+     * @param req DescribeCustomizedConfigAssociateListRequest
+     * @return DescribeCustomizedConfigAssociateListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomizedConfigAssociateListResponse DescribeCustomizedConfigAssociateList(DescribeCustomizedConfigAssociateListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCustomizedConfigAssociateListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCustomizedConfigAssociateListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCustomizedConfigAssociateList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to pull custom configuration lists to return the user configuration of `AppId`.
+     * @param req DescribeCustomizedConfigListRequest
+     * @return DescribeCustomizedConfigListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomizedConfigListResponse DescribeCustomizedConfigList(DescribeCustomizedConfigListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCustomizedConfigListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCustomizedConfigListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCustomizedConfigList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the list of listeners by CLB ID, listener protocol, or listener port. If no filter is specified, all listeners for the CLB instance will be returned.
      * @param req DescribeListenersRequest
      * @return DescribeListenersResponse
