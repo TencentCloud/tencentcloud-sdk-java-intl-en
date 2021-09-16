@@ -86,6 +86,13 @@ public class DescribeAlarmNoticesRequest extends AbstractModel{
     private Long [] GroupIds;
 
     /**
+    * Filter by notification template ID. If an empty array is passed in or if this parameter is left empty, the filter operation will not be performed.
+    */
+    @SerializedName("NoticeIds")
+    @Expose
+    private String [] NoticeIds;
+
+    /**
      * Get Module name. Enter "monitor" here 
      * @return Module Module name. Enter "monitor" here
      */
@@ -229,6 +236,22 @@ public class DescribeAlarmNoticesRequest extends AbstractModel{
         this.GroupIds = GroupIds;
     }
 
+    /**
+     * Get Filter by notification template ID. If an empty array is passed in or if this parameter is left empty, the filter operation will not be performed. 
+     * @return NoticeIds Filter by notification template ID. If an empty array is passed in or if this parameter is left empty, the filter operation will not be performed.
+     */
+    public String [] getNoticeIds() {
+        return this.NoticeIds;
+    }
+
+    /**
+     * Set Filter by notification template ID. If an empty array is passed in or if this parameter is left empty, the filter operation will not be performed.
+     * @param NoticeIds Filter by notification template ID. If an empty array is passed in or if this parameter is left empty, the filter operation will not be performed.
+     */
+    public void setNoticeIds(String [] NoticeIds) {
+        this.NoticeIds = NoticeIds;
+    }
+
     public DescribeAlarmNoticesRequest() {
     }
 
@@ -270,6 +293,12 @@ public class DescribeAlarmNoticesRequest extends AbstractModel{
                 this.GroupIds[i] = new Long(source.GroupIds[i]);
             }
         }
+        if (source.NoticeIds != null) {
+            this.NoticeIds = new String[source.NoticeIds.length];
+            for (int i = 0; i < source.NoticeIds.length; i++) {
+                this.NoticeIds[i] = new String(source.NoticeIds[i]);
+            }
+        }
     }
 
 
@@ -286,6 +315,7 @@ public class DescribeAlarmNoticesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ReceiverType", this.ReceiverType);
         this.setParamArraySimple(map, prefix + "UserIds.", this.UserIds);
         this.setParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
+        this.setParamArraySimple(map, prefix + "NoticeIds.", this.NoticeIds);
 
     }
 }

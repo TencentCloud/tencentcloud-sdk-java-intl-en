@@ -159,6 +159,22 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private Long UnhealthyThreshold;
 
     /**
+    * Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("FailoverSwitch")
+    @Expose
+    private Long FailoverSwitch;
+
+    /**
+    * Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("SessionPersist")
+    @Expose
+    private Long SessionPersist;
+
+    /**
      * Get Listener ID 
      * @return ListenerId Listener ID
      */
@@ -498,6 +514,46 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.UnhealthyThreshold = UnhealthyThreshold;
     }
 
+    /**
+     * Get Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return FailoverSwitch Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getFailoverSwitch() {
+        return this.FailoverSwitch;
+    }
+
+    /**
+     * Set Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param FailoverSwitch Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setFailoverSwitch(Long FailoverSwitch) {
+        this.FailoverSwitch = FailoverSwitch;
+    }
+
+    /**
+     * Get Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return SessionPersist Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Long getSessionPersist() {
+        return this.SessionPersist;
+    }
+
+    /**
+     * Set Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param SessionPersist Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setSessionPersist(Long SessionPersist) {
+        this.SessionPersist = SessionPersist;
+    }
+
     public TCPListener() {
     }
 
@@ -560,6 +616,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.UnhealthyThreshold != null) {
             this.UnhealthyThreshold = new Long(source.UnhealthyThreshold);
         }
+        if (source.FailoverSwitch != null) {
+            this.FailoverSwitch = new Long(source.FailoverSwitch);
+        }
+        if (source.SessionPersist != null) {
+            this.SessionPersist = new Long(source.SessionPersist);
+        }
     }
 
 
@@ -584,6 +646,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "ClientIPMethod", this.ClientIPMethod);
         this.setParamSimple(map, prefix + "HealthyThreshold", this.HealthyThreshold);
         this.setParamSimple(map, prefix + "UnhealthyThreshold", this.UnhealthyThreshold);
+        this.setParamSimple(map, prefix + "FailoverSwitch", this.FailoverSwitch);
+        this.setParamSimple(map, prefix + "SessionPersist", this.SessionPersist);
 
     }
 }

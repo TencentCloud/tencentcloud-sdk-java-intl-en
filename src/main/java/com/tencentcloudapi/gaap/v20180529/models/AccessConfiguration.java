@@ -44,6 +44,13 @@ public class AccessConfiguration extends AbstractModel{
     private Long Concurrent;
 
     /**
+    * Network type. Valid values: `normal` (default), `cn2`
+    */
+    @SerializedName("NetworkType")
+    @Expose
+    private String NetworkType;
+
+    /**
      * Get Acceleration region. 
      * @return AccessRegion Acceleration region.
      */
@@ -91,6 +98,22 @@ public class AccessConfiguration extends AbstractModel{
         this.Concurrent = Concurrent;
     }
 
+    /**
+     * Get Network type. Valid values: `normal` (default), `cn2` 
+     * @return NetworkType Network type. Valid values: `normal` (default), `cn2`
+     */
+    public String getNetworkType() {
+        return this.NetworkType;
+    }
+
+    /**
+     * Set Network type. Valid values: `normal` (default), `cn2`
+     * @param NetworkType Network type. Valid values: `normal` (default), `cn2`
+     */
+    public void setNetworkType(String NetworkType) {
+        this.NetworkType = NetworkType;
+    }
+
     public AccessConfiguration() {
     }
 
@@ -108,6 +131,9 @@ public class AccessConfiguration extends AbstractModel{
         if (source.Concurrent != null) {
             this.Concurrent = new Long(source.Concurrent);
         }
+        if (source.NetworkType != null) {
+            this.NetworkType = new String(source.NetworkType);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class AccessConfiguration extends AbstractModel{
         this.setParamSimple(map, prefix + "AccessRegion", this.AccessRegion);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         this.setParamSimple(map, prefix + "Concurrent", this.Concurrent);
+        this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
 
     }
 }

@@ -109,6 +109,13 @@ The connection is to be replicated if this parameter is set.
     private String IPAddressVersion;
 
     /**
+    * Network type. Valid values: `normal` (default), `cn2`
+    */
+    @SerializedName("NetworkType")
+    @Expose
+    private String NetworkType;
+
+    /**
      * Get Project ID of connection. 
      * @return ProjectId Project ID of connection.
      */
@@ -308,6 +315,22 @@ The connection is to be replicated if this parameter is set.
         this.IPAddressVersion = IPAddressVersion;
     }
 
+    /**
+     * Get Network type. Valid values: `normal` (default), `cn2` 
+     * @return NetworkType Network type. Valid values: `normal` (default), `cn2`
+     */
+    public String getNetworkType() {
+        return this.NetworkType;
+    }
+
+    /**
+     * Set Network type. Valid values: `normal` (default), `cn2`
+     * @param NetworkType Network type. Valid values: `normal` (default), `cn2`
+     */
+    public void setNetworkType(String NetworkType) {
+        this.NetworkType = NetworkType;
+    }
+
     public CreateProxyRequest() {
     }
 
@@ -355,6 +378,9 @@ The connection is to be replicated if this parameter is set.
         if (source.IPAddressVersion != null) {
             this.IPAddressVersion = new String(source.IPAddressVersion);
         }
+        if (source.NetworkType != null) {
+            this.NetworkType = new String(source.NetworkType);
+        }
     }
 
 
@@ -374,6 +400,7 @@ The connection is to be replicated if this parameter is set.
         this.setParamSimple(map, prefix + "ClonedProxyId", this.ClonedProxyId);
         this.setParamSimple(map, prefix + "BillingType", this.BillingType);
         this.setParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
+        this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
 
     }
 }

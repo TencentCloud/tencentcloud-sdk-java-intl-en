@@ -79,6 +79,20 @@ public class InquiryPriceCreateProxyRequest extends AbstractModel{
     private String IPAddressVersion;
 
     /**
+    * Network type. Valid values: `normal` (default), `cn2`
+    */
+    @SerializedName("NetworkType")
+    @Expose
+    private String NetworkType;
+
+    /**
+    * Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+    */
+    @SerializedName("PackageType")
+    @Expose
+    private String PackageType;
+
+    /**
      * Get Acceleration region name. 
      * @return AccessRegion Acceleration region name.
      */
@@ -206,6 +220,38 @@ public class InquiryPriceCreateProxyRequest extends AbstractModel{
         this.IPAddressVersion = IPAddressVersion;
     }
 
+    /**
+     * Get Network type. Valid values: `normal` (default), `cn2` 
+     * @return NetworkType Network type. Valid values: `normal` (default), `cn2`
+     */
+    public String getNetworkType() {
+        return this.NetworkType;
+    }
+
+    /**
+     * Set Network type. Valid values: `normal` (default), `cn2`
+     * @param NetworkType Network type. Valid values: `normal` (default), `cn2`
+     */
+    public void setNetworkType(String NetworkType) {
+        this.NetworkType = NetworkType;
+    }
+
+    /**
+     * Get Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group). 
+     * @return PackageType Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+     */
+    public String getPackageType() {
+        return this.PackageType;
+    }
+
+    /**
+     * Set Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+     * @param PackageType Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+     */
+    public void setPackageType(String PackageType) {
+        this.PackageType = PackageType;
+    }
+
     public InquiryPriceCreateProxyRequest() {
     }
 
@@ -238,6 +284,12 @@ public class InquiryPriceCreateProxyRequest extends AbstractModel{
         if (source.IPAddressVersion != null) {
             this.IPAddressVersion = new String(source.IPAddressVersion);
         }
+        if (source.NetworkType != null) {
+            this.NetworkType = new String(source.NetworkType);
+        }
+        if (source.PackageType != null) {
+            this.PackageType = new String(source.PackageType);
+        }
     }
 
 
@@ -253,6 +305,8 @@ public class InquiryPriceCreateProxyRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Concurrent", this.Concurrent);
         this.setParamSimple(map, prefix + "BillingType", this.BillingType);
         this.setParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
+        this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
+        this.setParamSimple(map, prefix + "PackageType", this.PackageType);
 
     }
 }

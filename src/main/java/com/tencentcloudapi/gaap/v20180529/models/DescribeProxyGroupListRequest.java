@@ -47,21 +47,22 @@ Other values: specified project
     private Long ProjectId;
 
     /**
+    * Filter condition   
+Each request can have a maximum of 5 filter conditions for `Filter.Values`.
+RealServerRegion - String - Required: No - Filter by origin server region. You can also check the value of `RegionId` returned by the `DescribeDestRegions` API.
+PackageType - String - Required: No - Filter by type of connection groups, which can be `Thunder` (general connection group) or `Accelerator` (game accelerator connection group).
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
     * Tag list. If this field exists, the list of the resources with the tag will be pulled.
 It supports up to 5 tags. If there are two or more tags, the connection groups tagged any of them will be pulled.
     */
     @SerializedName("TagSet")
     @Expose
     private TagPair [] TagSet;
-
-    /**
-    * Filter conditions.   
-The limit on Filter.Values of each request is 5.
-RealServerRegion - String - Required: No - Filter by origin server region; Refer to the RegionId in the results returned by DescribeDestRegions API.
-    */
-    @SerializedName("Filters")
-    @Expose
-    private Filter [] Filters;
 
     /**
      * Get Offset. The default value is 0. 
@@ -124,6 +125,34 @@ Other values: specified project
     }
 
     /**
+     * Get Filter condition   
+Each request can have a maximum of 5 filter conditions for `Filter.Values`.
+RealServerRegion - String - Required: No - Filter by origin server region. You can also check the value of `RegionId` returned by the `DescribeDestRegions` API.
+PackageType - String - Required: No - Filter by type of connection groups, which can be `Thunder` (general connection group) or `Accelerator` (game accelerator connection group). 
+     * @return Filters Filter condition   
+Each request can have a maximum of 5 filter conditions for `Filter.Values`.
+RealServerRegion - String - Required: No - Filter by origin server region. You can also check the value of `RegionId` returned by the `DescribeDestRegions` API.
+PackageType - String - Required: No - Filter by type of connection groups, which can be `Thunder` (general connection group) or `Accelerator` (game accelerator connection group).
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set Filter condition   
+Each request can have a maximum of 5 filter conditions for `Filter.Values`.
+RealServerRegion - String - Required: No - Filter by origin server region. You can also check the value of `RegionId` returned by the `DescribeDestRegions` API.
+PackageType - String - Required: No - Filter by type of connection groups, which can be `Thunder` (general connection group) or `Accelerator` (game accelerator connection group).
+     * @param Filters Filter condition   
+Each request can have a maximum of 5 filter conditions for `Filter.Values`.
+RealServerRegion - String - Required: No - Filter by origin server region. You can also check the value of `RegionId` returned by the `DescribeDestRegions` API.
+PackageType - String - Required: No - Filter by type of connection groups, which can be `Thunder` (general connection group) or `Accelerator` (game accelerator connection group).
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
      * Get Tag list. If this field exists, the list of the resources with the tag will be pulled.
 It supports up to 5 tags. If there are two or more tags, the connection groups tagged any of them will be pulled. 
      * @return TagSet Tag list. If this field exists, the list of the resources with the tag will be pulled.
@@ -143,30 +172,6 @@ It supports up to 5 tags. If there are two or more tags, the connection groups t
         this.TagSet = TagSet;
     }
 
-    /**
-     * Get Filter conditions.   
-The limit on Filter.Values of each request is 5.
-RealServerRegion - String - Required: No - Filter by origin server region; Refer to the RegionId in the results returned by DescribeDestRegions API. 
-     * @return Filters Filter conditions.   
-The limit on Filter.Values of each request is 5.
-RealServerRegion - String - Required: No - Filter by origin server region; Refer to the RegionId in the results returned by DescribeDestRegions API.
-     */
-    public Filter [] getFilters() {
-        return this.Filters;
-    }
-
-    /**
-     * Set Filter conditions.   
-The limit on Filter.Values of each request is 5.
-RealServerRegion - String - Required: No - Filter by origin server region; Refer to the RegionId in the results returned by DescribeDestRegions API.
-     * @param Filters Filter conditions.   
-The limit on Filter.Values of each request is 5.
-RealServerRegion - String - Required: No - Filter by origin server region; Refer to the RegionId in the results returned by DescribeDestRegions API.
-     */
-    public void setFilters(Filter [] Filters) {
-        this.Filters = Filters;
-    }
-
     public DescribeProxyGroupListRequest() {
     }
 
@@ -184,16 +189,16 @@ RealServerRegion - String - Required: No - Filter by origin server region; Refer
         if (source.ProjectId != null) {
             this.ProjectId = new Long(source.ProjectId);
         }
-        if (source.TagSet != null) {
-            this.TagSet = new TagPair[source.TagSet.length];
-            for (int i = 0; i < source.TagSet.length; i++) {
-                this.TagSet[i] = new TagPair(source.TagSet[i]);
-            }
-        }
         if (source.Filters != null) {
             this.Filters = new Filter[source.Filters.length];
             for (int i = 0; i < source.Filters.length; i++) {
                 this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+        if (source.TagSet != null) {
+            this.TagSet = new TagPair[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new TagPair(source.TagSet[i]);
             }
         }
     }
@@ -206,8 +211,8 @@ RealServerRegion - String - Required: No - Filter by origin server region; Refer
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
-        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
 
     }
 }

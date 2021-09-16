@@ -152,6 +152,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String IPAddressVersion;
 
     /**
+    * Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PackageType")
+    @Expose
+    private String PackageType;
+
+    /**
      * Get Creation time 
      * @return CreateTime Creation time
      */
@@ -463,6 +471,26 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.IPAddressVersion = IPAddressVersion;
     }
 
+    /**
+     * Get Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return PackageType Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getPackageType() {
+        return this.PackageType;
+    }
+
+    /**
+     * Set Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param PackageType Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setPackageType(String PackageType) {
+        this.PackageType = PackageType;
+    }
+
     public ProxyGroupDetail() {
     }
 
@@ -528,6 +556,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.IPAddressVersion != null) {
             this.IPAddressVersion = new String(source.IPAddressVersion);
         }
+        if (source.PackageType != null) {
+            this.PackageType = new String(source.PackageType);
+        }
     }
 
 
@@ -552,6 +583,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamArraySimple(map, prefix + "ClientIPMethod.", this.ClientIPMethod);
         this.setParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
+        this.setParamSimple(map, prefix + "PackageType", this.PackageType);
 
     }
 }

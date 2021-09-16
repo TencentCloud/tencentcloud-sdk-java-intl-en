@@ -42,9 +42,6 @@ public enum GaapErrorCode {
     // Invalid listener protocol.
      FAILEDOPERATION_INVALIDLISTENERPROTOCOL("FailedOperation.InvalidListenerProtocol"),
      
-    // Limit on the number of domain names exceeded.
-     FAILEDOPERATION_LIMITNUMOFDOMAINS("FailedOperation.LimitNumofDomains"),
-     
     // Limit on the number of listeners exceeded.
      FAILEDOPERATION_LIMITNUMOFLISTENER("FailedOperation.LimitNumofListener"),
      
@@ -125,6 +122,12 @@ public enum GaapErrorCode {
      
     // Incorrect parameter value.
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
+     
+    // The domain name is blocked for ICP issues.
+     INVALIDPARAMETERVALUE_DOMAININICPBLACKLIST("InvalidParameterValue.DomainInIcpBlacklist"),
+     
+    // The domain name does not have an ICP filing.
+     INVALIDPARAMETERVALUE_DOMAINNOTREGISTER("InvalidParameterValue.DomainNotRegister"),
      
     // The `RealServer` already exists.
      INVALIDPARAMETERVALUE_DUPLICATERS("InvalidParameterValue.DuplicateRS"),

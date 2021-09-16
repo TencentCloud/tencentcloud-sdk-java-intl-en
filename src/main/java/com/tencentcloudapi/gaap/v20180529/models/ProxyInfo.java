@@ -219,8 +219,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long ModifyConfigTime;
 
     /**
-    * Connection type. 104: SILVER connection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Connection type
+Note: this field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("ProxyType")
     @Expose
@@ -241,6 +241,22 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     @SerializedName("IPAddressVersion")
     @Expose
     private String IPAddressVersion;
+
+    /**
+    * Network type. Valid values: `normal`, `cn2`
+Note: this field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("NetworkType")
+    @Expose
+    private String NetworkType;
+
+    /**
+    * Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+Note: this field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("PackageType")
+    @Expose
+    private String PackageType;
 
     /**
      * Get Connection instance ID; It's an old parameter, please switch to ProxyId.
@@ -727,20 +743,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Connection type. 104: SILVER connection.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ProxyType Connection type. 104: SILVER connection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Connection type
+Note: this field may return `null`, indicating that no valid value can be obtained. 
+     * @return ProxyType Connection type
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public Long getProxyType() {
         return this.ProxyType;
     }
 
     /**
-     * Set Connection type. 104: SILVER connection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ProxyType Connection type. 104: SILVER connection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Connection type
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param ProxyType Connection type
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public void setProxyType(Long ProxyType) {
         this.ProxyType = ProxyType;
@@ -784,6 +800,46 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      */
     public void setIPAddressVersion(String IPAddressVersion) {
         this.IPAddressVersion = IPAddressVersion;
+    }
+
+    /**
+     * Get Network type. Valid values: `normal`, `cn2`
+Note: this field may return `null`, indicating that no valid value can be obtained. 
+     * @return NetworkType Network type. Valid values: `normal`, `cn2`
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getNetworkType() {
+        return this.NetworkType;
+    }
+
+    /**
+     * Set Network type. Valid values: `normal`, `cn2`
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param NetworkType Network type. Valid values: `normal`, `cn2`
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setNetworkType(String NetworkType) {
+        this.NetworkType = NetworkType;
+    }
+
+    /**
+     * Get Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+Note: this field may return `null`, indicating that no valid value can be obtained. 
+     * @return PackageType Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getPackageType() {
+        return this.PackageType;
+    }
+
+    /**
+     * Set Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param PackageType Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setPackageType(String PackageType) {
+        this.PackageType = PackageType;
     }
 
     public ProxyInfo() {
@@ -890,6 +946,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.IPAddressVersion != null) {
             this.IPAddressVersion = new String(source.IPAddressVersion);
         }
+        if (source.NetworkType != null) {
+            this.NetworkType = new String(source.NetworkType);
+        }
+        if (source.PackageType != null) {
+            this.PackageType = new String(source.PackageType);
+        }
     }
 
 
@@ -925,6 +987,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "ProxyType", this.ProxyType);
         this.setParamArraySimple(map, prefix + "ClientIPMethod.", this.ClientIPMethod);
         this.setParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
+        this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
+        this.setParamSimple(map, prefix + "PackageType", this.PackageType);
 
     }
 }

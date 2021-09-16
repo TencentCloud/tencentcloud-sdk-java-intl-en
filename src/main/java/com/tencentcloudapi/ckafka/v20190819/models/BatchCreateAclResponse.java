@@ -13,24 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.antiddos.v20200309.models;
+package com.tencentcloudapi.ckafka.v20190819.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBasicDeviceStatusResponse extends AbstractModel{
+public class BatchCreateAclResponse extends AbstractModel{
 
     /**
-    * Status of the specified Anti-DDoS resource. Valid values:
-`1`: The IP is blocked.
-`2`: The P is normal.
-`3`: The IP is being attacked.
+    * Status code.
     */
-    @SerializedName("Data")
+    @SerializedName("Result")
     @Expose
-    private KeyValue [] Data;
+    private Long Result;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -40,31 +37,19 @@ public class DescribeBasicDeviceStatusResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Status of the specified Anti-DDoS resource. Valid values:
-`1`: The IP is blocked.
-`2`: The P is normal.
-`3`: The IP is being attacked. 
-     * @return Data Status of the specified Anti-DDoS resource. Valid values:
-`1`: The IP is blocked.
-`2`: The P is normal.
-`3`: The IP is being attacked.
+     * Get Status code. 
+     * @return Result Status code.
      */
-    public KeyValue [] getData() {
-        return this.Data;
+    public Long getResult() {
+        return this.Result;
     }
 
     /**
-     * Set Status of the specified Anti-DDoS resource. Valid values:
-`1`: The IP is blocked.
-`2`: The P is normal.
-`3`: The IP is being attacked.
-     * @param Data Status of the specified Anti-DDoS resource. Valid values:
-`1`: The IP is blocked.
-`2`: The P is normal.
-`3`: The IP is being attacked.
+     * Set Status code.
+     * @param Result Status code.
      */
-    public void setData(KeyValue [] Data) {
-        this.Data = Data;
+    public void setResult(Long Result) {
+        this.Result = Result;
     }
 
     /**
@@ -83,19 +68,16 @@ public class DescribeBasicDeviceStatusResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeBasicDeviceStatusResponse() {
+    public BatchCreateAclResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeBasicDeviceStatusResponse(DescribeBasicDeviceStatusResponse source) {
-        if (source.Data != null) {
-            this.Data = new KeyValue[source.Data.length];
-            for (int i = 0; i < source.Data.length; i++) {
-                this.Data[i] = new KeyValue(source.Data[i]);
-            }
+    public BatchCreateAclResponse(BatchCreateAclResponse source) {
+        if (source.Result != null) {
+            this.Result = new Long(source.Result);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -107,7 +89,7 @@ public class DescribeBasicDeviceStatusResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

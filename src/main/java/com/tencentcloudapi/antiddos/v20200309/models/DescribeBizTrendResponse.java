@@ -20,17 +20,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBasicDeviceStatusResponse extends AbstractModel{
+public class DescribeBizTrendResponse extends AbstractModel{
 
     /**
-    * Status of the specified Anti-DDoS resource. Valid values:
-`1`: The IP is blocked.
-`2`: The P is normal.
-`3`: The IP is being attacked.
+    * Value at a time point on the curve
     */
-    @SerializedName("Data")
+    @SerializedName("DataList")
     @Expose
-    private KeyValue [] Data;
+    private Float [] DataList;
+
+    /**
+    * Statistical dimension
+    */
+    @SerializedName("MetricName")
+    @Expose
+    private String MetricName;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -40,31 +44,35 @@ public class DescribeBasicDeviceStatusResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Status of the specified Anti-DDoS resource. Valid values:
-`1`: The IP is blocked.
-`2`: The P is normal.
-`3`: The IP is being attacked. 
-     * @return Data Status of the specified Anti-DDoS resource. Valid values:
-`1`: The IP is blocked.
-`2`: The P is normal.
-`3`: The IP is being attacked.
+     * Get Value at a time point on the curve 
+     * @return DataList Value at a time point on the curve
      */
-    public KeyValue [] getData() {
-        return this.Data;
+    public Float [] getDataList() {
+        return this.DataList;
     }
 
     /**
-     * Set Status of the specified Anti-DDoS resource. Valid values:
-`1`: The IP is blocked.
-`2`: The P is normal.
-`3`: The IP is being attacked.
-     * @param Data Status of the specified Anti-DDoS resource. Valid values:
-`1`: The IP is blocked.
-`2`: The P is normal.
-`3`: The IP is being attacked.
+     * Set Value at a time point on the curve
+     * @param DataList Value at a time point on the curve
      */
-    public void setData(KeyValue [] Data) {
-        this.Data = Data;
+    public void setDataList(Float [] DataList) {
+        this.DataList = DataList;
+    }
+
+    /**
+     * Get Statistical dimension 
+     * @return MetricName Statistical dimension
+     */
+    public String getMetricName() {
+        return this.MetricName;
+    }
+
+    /**
+     * Set Statistical dimension
+     * @param MetricName Statistical dimension
+     */
+    public void setMetricName(String MetricName) {
+        this.MetricName = MetricName;
     }
 
     /**
@@ -83,19 +91,22 @@ public class DescribeBasicDeviceStatusResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeBasicDeviceStatusResponse() {
+    public DescribeBizTrendResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeBasicDeviceStatusResponse(DescribeBasicDeviceStatusResponse source) {
-        if (source.Data != null) {
-            this.Data = new KeyValue[source.Data.length];
-            for (int i = 0; i < source.Data.length; i++) {
-                this.Data[i] = new KeyValue(source.Data[i]);
+    public DescribeBizTrendResponse(DescribeBizTrendResponse source) {
+        if (source.DataList != null) {
+            this.DataList = new Float[source.DataList.length];
+            for (int i = 0; i < source.DataList.length; i++) {
+                this.DataList[i] = new Float(source.DataList[i]);
             }
+        }
+        if (source.MetricName != null) {
+            this.MetricName = new String(source.MetricName);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -107,7 +118,8 @@ public class DescribeBasicDeviceStatusResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamArraySimple(map, prefix + "DataList.", this.DataList);
+        this.setParamSimple(map, prefix + "MetricName", this.MetricName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

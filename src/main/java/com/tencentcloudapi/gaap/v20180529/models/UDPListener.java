@@ -106,6 +106,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long CreateTime;
 
     /**
+    * Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SessionPersist")
+    @Expose
+    private Long SessionPersist;
+
+    /**
      * Get Listener ID 
      * @return ListenerId Listener ID
      */
@@ -305,6 +313,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return SessionPersist Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getSessionPersist() {
+        return this.SessionPersist;
+    }
+
+    /**
+     * Set Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param SessionPersist Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setSessionPersist(Long SessionPersist) {
+        this.SessionPersist = SessionPersist;
+    }
+
     public UDPListener() {
     }
 
@@ -349,6 +377,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.CreateTime != null) {
             this.CreateTime = new Long(source.CreateTime);
         }
+        if (source.SessionPersist != null) {
+            this.SessionPersist = new Long(source.SessionPersist);
+        }
     }
 
 
@@ -367,6 +398,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "BindStatus", this.BindStatus);
         this.setParamArrayObj(map, prefix + "RealServerSet.", this.RealServerSet);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "SessionPersist", this.SessionPersist);
 
     }
 }

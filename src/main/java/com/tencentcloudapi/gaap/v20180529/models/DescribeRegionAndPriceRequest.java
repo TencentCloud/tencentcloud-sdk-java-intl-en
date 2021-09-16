@@ -30,6 +30,13 @@ public class DescribeRegionAndPriceRequest extends AbstractModel{
     private String IPAddressVersion;
 
     /**
+    * Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+    */
+    @SerializedName("PackageType")
+    @Expose
+    private String PackageType;
+
+    /**
      * Get IP version. Valid values: `IPv4` (default), `IPv6`. 
      * @return IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
      */
@@ -45,6 +52,22 @@ public class DescribeRegionAndPriceRequest extends AbstractModel{
         this.IPAddressVersion = IPAddressVersion;
     }
 
+    /**
+     * Get Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group). 
+     * @return PackageType Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+     */
+    public String getPackageType() {
+        return this.PackageType;
+    }
+
+    /**
+     * Set Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+     * @param PackageType Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+     */
+    public void setPackageType(String PackageType) {
+        this.PackageType = PackageType;
+    }
+
     public DescribeRegionAndPriceRequest() {
     }
 
@@ -56,6 +79,9 @@ public class DescribeRegionAndPriceRequest extends AbstractModel{
         if (source.IPAddressVersion != null) {
             this.IPAddressVersion = new String(source.IPAddressVersion);
         }
+        if (source.PackageType != null) {
+            this.PackageType = new String(source.PackageType);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class DescribeRegionAndPriceRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
+        this.setParamSimple(map, prefix + "PackageType", this.PackageType);
 
     }
 }

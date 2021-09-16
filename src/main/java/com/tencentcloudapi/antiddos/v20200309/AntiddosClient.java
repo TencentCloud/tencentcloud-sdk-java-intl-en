@@ -479,6 +479,26 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
+     *This API is used to get the traffic flow data collected in the specified period.
+     * @param req DescribeBizTrendRequest
+     * @return DescribeBizTrendResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBizTrendResponse DescribeBizTrend(DescribeBizTrendRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBizTrendResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBizTrendResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBizTrend");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get an Anti-DDoS IP blocklist/allowlist.
      * @param req DescribeBlackWhiteIpListRequest
      * @return DescribeBlackWhiteIpListResponse
@@ -491,6 +511,46 @@ public class AntiddosClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeBlackWhiteIpListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeBlackWhiteIpList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get CC attack data, including total peak requests (QPS) and attack requests (QPS).
+     * @param req DescribeCCTrendRequest
+     * @return DescribeCCTrendResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCCTrendResponse DescribeCCTrend(DescribeCCTrendRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCCTrendResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCCTrendResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCCTrend");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get DDoS attack traffic bandwidth and attack packet rate.
+     * @param req DescribeDDoSTrendRequest
+     * @return DescribeDDoSTrendResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDDoSTrendResponse DescribeDDoSTrend(DescribeDDoSTrendRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDDoSTrendResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDDoSTrendResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDDoSTrend");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

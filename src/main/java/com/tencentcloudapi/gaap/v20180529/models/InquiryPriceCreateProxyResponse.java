@@ -68,6 +68,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Float DiscountFlowUnitPrice;
 
     /**
+    * Dedicated BGP bandwidth price. Unit: USD/Mbps/day
+Note: this field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("Cn2BandwidthPrice")
+    @Expose
+    private Float Cn2BandwidthPrice;
+
+    /**
+    * Dedicated BGP bandwidth discount price. Unit: USD/Mbps/day
+Note: this field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("Cn2BandwidthPriceWithDiscount")
+    @Expose
+    private Float Cn2BandwidthPriceWithDiscount;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -183,6 +199,46 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Dedicated BGP bandwidth price. Unit: USD/Mbps/day
+Note: this field may return `null`, indicating that no valid value can be obtained. 
+     * @return Cn2BandwidthPrice Dedicated BGP bandwidth price. Unit: USD/Mbps/day
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Float getCn2BandwidthPrice() {
+        return this.Cn2BandwidthPrice;
+    }
+
+    /**
+     * Set Dedicated BGP bandwidth price. Unit: USD/Mbps/day
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param Cn2BandwidthPrice Dedicated BGP bandwidth price. Unit: USD/Mbps/day
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setCn2BandwidthPrice(Float Cn2BandwidthPrice) {
+        this.Cn2BandwidthPrice = Cn2BandwidthPrice;
+    }
+
+    /**
+     * Get Dedicated BGP bandwidth discount price. Unit: USD/Mbps/day
+Note: this field may return `null`, indicating that no valid value can be obtained. 
+     * @return Cn2BandwidthPriceWithDiscount Dedicated BGP bandwidth discount price. Unit: USD/Mbps/day
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Float getCn2BandwidthPriceWithDiscount() {
+        return this.Cn2BandwidthPriceWithDiscount;
+    }
+
+    /**
+     * Set Dedicated BGP bandwidth discount price. Unit: USD/Mbps/day
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param Cn2BandwidthPriceWithDiscount Dedicated BGP bandwidth discount price. Unit: USD/Mbps/day
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setCn2BandwidthPriceWithDiscount(Float Cn2BandwidthPriceWithDiscount) {
+        this.Cn2BandwidthPriceWithDiscount = Cn2BandwidthPriceWithDiscount;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -227,6 +283,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.DiscountFlowUnitPrice != null) {
             this.DiscountFlowUnitPrice = new Float(source.DiscountFlowUnitPrice);
         }
+        if (source.Cn2BandwidthPrice != null) {
+            this.Cn2BandwidthPrice = new Float(source.Cn2BandwidthPrice);
+        }
+        if (source.Cn2BandwidthPriceWithDiscount != null) {
+            this.Cn2BandwidthPriceWithDiscount = new Float(source.Cn2BandwidthPriceWithDiscount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -243,6 +305,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Currency", this.Currency);
         this.setParamSimple(map, prefix + "FlowUnitPrice", this.FlowUnitPrice);
         this.setParamSimple(map, prefix + "DiscountFlowUnitPrice", this.DiscountFlowUnitPrice);
+        this.setParamSimple(map, prefix + "Cn2BandwidthPrice", this.Cn2BandwidthPrice);
+        this.setParamSimple(map, prefix + "Cn2BandwidthPriceWithDiscount", this.Cn2BandwidthPriceWithDiscount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

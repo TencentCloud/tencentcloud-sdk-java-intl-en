@@ -39,6 +39,26 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create ACL policies in batches.
+     * @param req BatchCreateAclRequest
+     * @return BatchCreateAclResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchCreateAclResponse BatchCreateAcl(BatchCreateAclRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchCreateAclResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchCreateAclResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BatchCreateAcl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to add an ACL policy.
      * @param req CreateAclRequest
      * @return CreateAclResponse

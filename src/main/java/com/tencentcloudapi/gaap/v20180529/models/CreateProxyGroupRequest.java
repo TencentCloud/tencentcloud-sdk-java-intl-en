@@ -65,6 +65,13 @@ public class CreateProxyGroupRequest extends AbstractModel{
     private String IPAddressVersion;
 
     /**
+    * Package type of connection group. Valid values: `Thunder` (default) and `Accelerator`.
+    */
+    @SerializedName("PackageType")
+    @Expose
+    private String PackageType;
+
+    /**
      * Get Project ID of connection group 
      * @return ProjectId Project ID of connection group
      */
@@ -160,6 +167,22 @@ public class CreateProxyGroupRequest extends AbstractModel{
         this.IPAddressVersion = IPAddressVersion;
     }
 
+    /**
+     * Get Package type of connection group. Valid values: `Thunder` (default) and `Accelerator`. 
+     * @return PackageType Package type of connection group. Valid values: `Thunder` (default) and `Accelerator`.
+     */
+    public String getPackageType() {
+        return this.PackageType;
+    }
+
+    /**
+     * Set Package type of connection group. Valid values: `Thunder` (default) and `Accelerator`.
+     * @param PackageType Package type of connection group. Valid values: `Thunder` (default) and `Accelerator`.
+     */
+    public void setPackageType(String PackageType) {
+        this.PackageType = PackageType;
+    }
+
     public CreateProxyGroupRequest() {
     }
 
@@ -192,6 +215,9 @@ public class CreateProxyGroupRequest extends AbstractModel{
         if (source.IPAddressVersion != null) {
             this.IPAddressVersion = new String(source.IPAddressVersion);
         }
+        if (source.PackageType != null) {
+            this.PackageType = new String(source.PackageType);
+        }
     }
 
 
@@ -205,6 +231,7 @@ public class CreateProxyGroupRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamArrayObj(map, prefix + "AccessRegionSet.", this.AccessRegionSet);
         this.setParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
+        this.setParamSimple(map, prefix + "PackageType", this.PackageType);
 
     }
 }
