@@ -37,6 +37,13 @@ public class ModifyPrivateZoneVpcResponse extends AbstractModel{
     private VpcInfo [] VpcSet;
 
     /**
+    * List of authorized accounts' VPCs associated with the private domain
+    */
+    @SerializedName("AccountVpcSet")
+    @Expose
+    private AccountVpcInfoOutput [] AccountVpcSet;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -76,6 +83,22 @@ public class ModifyPrivateZoneVpcResponse extends AbstractModel{
     }
 
     /**
+     * Get List of authorized accounts' VPCs associated with the private domain 
+     * @return AccountVpcSet List of authorized accounts' VPCs associated with the private domain
+     */
+    public AccountVpcInfoOutput [] getAccountVpcSet() {
+        return this.AccountVpcSet;
+    }
+
+    /**
+     * Set List of authorized accounts' VPCs associated with the private domain
+     * @param AccountVpcSet List of authorized accounts' VPCs associated with the private domain
+     */
+    public void setAccountVpcSet(AccountVpcInfoOutput [] AccountVpcSet) {
+        this.AccountVpcSet = AccountVpcSet;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -108,6 +131,12 @@ public class ModifyPrivateZoneVpcResponse extends AbstractModel{
                 this.VpcSet[i] = new VpcInfo(source.VpcSet[i]);
             }
         }
+        if (source.AccountVpcSet != null) {
+            this.AccountVpcSet = new AccountVpcInfoOutput[source.AccountVpcSet.length];
+            for (int i = 0; i < source.AccountVpcSet.length; i++) {
+                this.AccountVpcSet[i] = new AccountVpcInfoOutput(source.AccountVpcSet[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -120,6 +149,7 @@ public class ModifyPrivateZoneVpcResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamArrayObj(map, prefix + "VpcSet.", this.VpcSet);
+        this.setParamArrayObj(map, prefix + "AccountVpcSet.", this.AccountVpcSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

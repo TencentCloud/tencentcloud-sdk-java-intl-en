@@ -65,6 +65,13 @@ public class CreatePrivateZoneRequest extends AbstractModel{
     private VpcInfo [] Vpcs;
 
     /**
+    * List of authorized accounts' VPCs to associate with the private domain
+    */
+    @SerializedName("AccountVpcSet")
+    @Expose
+    private AccountVpcInfo [] AccountVpcSet;
+
+    /**
      * Get Domain name, which must be in the format of standard TLD 
      * @return Domain Domain name, which must be in the format of standard TLD
      */
@@ -160,6 +167,22 @@ public class CreatePrivateZoneRequest extends AbstractModel{
         this.Vpcs = Vpcs;
     }
 
+    /**
+     * Get List of authorized accounts' VPCs to associate with the private domain 
+     * @return AccountVpcSet List of authorized accounts' VPCs to associate with the private domain
+     */
+    public AccountVpcInfo [] getAccountVpcSet() {
+        return this.AccountVpcSet;
+    }
+
+    /**
+     * Set List of authorized accounts' VPCs to associate with the private domain
+     * @param AccountVpcSet List of authorized accounts' VPCs to associate with the private domain
+     */
+    public void setAccountVpcSet(AccountVpcInfo [] AccountVpcSet) {
+        this.AccountVpcSet = AccountVpcSet;
+    }
+
     public CreatePrivateZoneRequest() {
     }
 
@@ -195,6 +218,12 @@ public class CreatePrivateZoneRequest extends AbstractModel{
                 this.Vpcs[i] = new VpcInfo(source.Vpcs[i]);
             }
         }
+        if (source.AccountVpcSet != null) {
+            this.AccountVpcSet = new AccountVpcInfo[source.AccountVpcSet.length];
+            for (int i = 0; i < source.AccountVpcSet.length; i++) {
+                this.AccountVpcSet[i] = new AccountVpcInfo(source.AccountVpcSet[i]);
+            }
+        }
     }
 
 
@@ -208,6 +237,7 @@ public class CreatePrivateZoneRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "DnsForwardStatus", this.DnsForwardStatus);
         this.setParamArrayObj(map, prefix + "Vpcs.", this.Vpcs);
+        this.setParamArrayObj(map, prefix + "AccountVpcSet.", this.AccountVpcSet);
 
     }
 }

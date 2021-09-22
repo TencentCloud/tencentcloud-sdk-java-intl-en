@@ -37,7 +37,7 @@ public class AclRuleInfo extends AbstractModel{
     private String PermissionType;
 
     /**
-    * The default value is `*`, which means that any host can access the topic. Currently, CKafka does not support the host value being specified as * or IP range.
+    * The default value is `*`, which means that any host can access the topic. CKafka currently does not support specifying a host value of * or an IP range.
     */
     @SerializedName("Host")
     @Expose
@@ -83,16 +83,16 @@ public class AclRuleInfo extends AbstractModel{
     }
 
     /**
-     * Get The default value is `*`, which means that any host can access the topic. Currently, CKafka does not support the host value being specified as * or IP range. 
-     * @return Host The default value is `*`, which means that any host can access the topic. Currently, CKafka does not support the host value being specified as * or IP range.
+     * Get The default value is `*`, which means that any host can access the topic. CKafka currently does not support specifying a host value of * or an IP range. 
+     * @return Host The default value is `*`, which means that any host can access the topic. CKafka currently does not support specifying a host value of * or an IP range.
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set The default value is `*`, which means that any host can access the topic. Currently, CKafka does not support the host value being specified as * or IP range.
-     * @param Host The default value is `*`, which means that any host can access the topic. Currently, CKafka does not support the host value being specified as * or IP range.
+     * Set The default value is `*`, which means that any host can access the topic. CKafka currently does not support specifying a host value of * or an IP range.
+     * @param Host The default value is `*`, which means that any host can access the topic. CKafka currently does not support specifying a host value of * or an IP range.
      */
     public void setHost(String Host) {
         this.Host = Host;

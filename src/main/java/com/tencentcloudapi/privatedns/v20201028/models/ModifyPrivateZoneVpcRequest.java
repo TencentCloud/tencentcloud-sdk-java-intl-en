@@ -37,6 +37,13 @@ public class ModifyPrivateZoneVpcRequest extends AbstractModel{
     private VpcInfo [] VpcSet;
 
     /**
+    * List of authorized accounts' VPCs to associate with the private domain
+    */
+    @SerializedName("AccountVpcSet")
+    @Expose
+    private AccountVpcInfo [] AccountVpcSet;
+
+    /**
      * Get Private domain ID 
      * @return ZoneId Private domain ID
      */
@@ -68,6 +75,22 @@ public class ModifyPrivateZoneVpcRequest extends AbstractModel{
         this.VpcSet = VpcSet;
     }
 
+    /**
+     * Get List of authorized accounts' VPCs to associate with the private domain 
+     * @return AccountVpcSet List of authorized accounts' VPCs to associate with the private domain
+     */
+    public AccountVpcInfo [] getAccountVpcSet() {
+        return this.AccountVpcSet;
+    }
+
+    /**
+     * Set List of authorized accounts' VPCs to associate with the private domain
+     * @param AccountVpcSet List of authorized accounts' VPCs to associate with the private domain
+     */
+    public void setAccountVpcSet(AccountVpcInfo [] AccountVpcSet) {
+        this.AccountVpcSet = AccountVpcSet;
+    }
+
     public ModifyPrivateZoneVpcRequest() {
     }
 
@@ -85,6 +108,12 @@ public class ModifyPrivateZoneVpcRequest extends AbstractModel{
                 this.VpcSet[i] = new VpcInfo(source.VpcSet[i]);
             }
         }
+        if (source.AccountVpcSet != null) {
+            this.AccountVpcSet = new AccountVpcInfo[source.AccountVpcSet.length];
+            for (int i = 0; i < source.AccountVpcSet.length; i++) {
+                this.AccountVpcSet[i] = new AccountVpcInfo(source.AccountVpcSet[i]);
+            }
+        }
     }
 
 
@@ -94,6 +123,7 @@ public class ModifyPrivateZoneVpcRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamArrayObj(map, prefix + "VpcSet.", this.VpcSet);
+        this.setParamArrayObj(map, prefix + "AccountVpcSet.", this.AccountVpcSet);
 
     }
 }

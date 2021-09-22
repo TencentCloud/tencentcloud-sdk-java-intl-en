@@ -123,6 +123,13 @@ public class Activity extends AbstractModel{
     private LifecycleActionResultInfo [] LifecycleActionResultSet;
 
     /**
+    * Detailed description of scaling activity status
+    */
+    @SerializedName("DetailedStatusMessageSet")
+    @Expose
+    private DetailedStatusMessage [] DetailedStatusMessageSet;
+
+    /**
      * Get Auto scaling group ID. 
      * @return AutoScalingGroupId Auto scaling group ID.
      */
@@ -366,6 +373,22 @@ public class Activity extends AbstractModel{
         this.LifecycleActionResultSet = LifecycleActionResultSet;
     }
 
+    /**
+     * Get Detailed description of scaling activity status 
+     * @return DetailedStatusMessageSet Detailed description of scaling activity status
+     */
+    public DetailedStatusMessage [] getDetailedStatusMessageSet() {
+        return this.DetailedStatusMessageSet;
+    }
+
+    /**
+     * Set Detailed description of scaling activity status
+     * @param DetailedStatusMessageSet Detailed description of scaling activity status
+     */
+    public void setDetailedStatusMessageSet(DetailedStatusMessage [] DetailedStatusMessageSet) {
+        this.DetailedStatusMessageSet = DetailedStatusMessageSet;
+    }
+
     public Activity() {
     }
 
@@ -419,6 +442,12 @@ public class Activity extends AbstractModel{
                 this.LifecycleActionResultSet[i] = new LifecycleActionResultInfo(source.LifecycleActionResultSet[i]);
             }
         }
+        if (source.DetailedStatusMessageSet != null) {
+            this.DetailedStatusMessageSet = new DetailedStatusMessage[source.DetailedStatusMessageSet.length];
+            for (int i = 0; i < source.DetailedStatusMessageSet.length; i++) {
+                this.DetailedStatusMessageSet[i] = new DetailedStatusMessage(source.DetailedStatusMessageSet[i]);
+            }
+        }
     }
 
 
@@ -439,6 +468,7 @@ public class Activity extends AbstractModel{
         this.setParamArrayObj(map, prefix + "ActivityRelatedInstanceSet.", this.ActivityRelatedInstanceSet);
         this.setParamSimple(map, prefix + "StatusMessageSimplified", this.StatusMessageSimplified);
         this.setParamArrayObj(map, prefix + "LifecycleActionResultSet.", this.LifecycleActionResultSet);
+        this.setParamArrayObj(map, prefix + "DetailedStatusMessageSet.", this.DetailedStatusMessageSet);
 
     }
 }

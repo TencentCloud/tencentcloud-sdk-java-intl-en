@@ -101,6 +101,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private TagInfo [] Tags;
 
     /**
+    * List of authorized accounts' VPCs associated with the private domain
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AccountVpcSet")
+    @Expose
+    private AccountVpcInfoOutput [] AccountVpcSet;
+
+    /**
      * Get Private domain ID: zone-xxxxxxxx 
      * @return ZoneId Private domain ID: zone-xxxxxxxx
      */
@@ -280,6 +288,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.Tags = Tags;
     }
 
+    /**
+     * Get List of authorized accounts' VPCs associated with the private domain
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return AccountVpcSet List of authorized accounts' VPCs associated with the private domain
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public AccountVpcInfoOutput [] getAccountVpcSet() {
+        return this.AccountVpcSet;
+    }
+
+    /**
+     * Set List of authorized accounts' VPCs associated with the private domain
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param AccountVpcSet List of authorized accounts' VPCs associated with the private domain
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setAccountVpcSet(AccountVpcInfoOutput [] AccountVpcSet) {
+        this.AccountVpcSet = AccountVpcSet;
+    }
+
     public PrivateZone() {
     }
 
@@ -327,6 +355,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 this.Tags[i] = new TagInfo(source.Tags[i]);
             }
         }
+        if (source.AccountVpcSet != null) {
+            this.AccountVpcSet = new AccountVpcInfoOutput[source.AccountVpcSet.length];
+            for (int i = 0; i < source.AccountVpcSet.length; i++) {
+                this.AccountVpcSet[i] = new AccountVpcInfoOutput(source.AccountVpcSet[i]);
+            }
+        }
     }
 
 
@@ -345,6 +379,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "DnsForwardStatus", this.DnsForwardStatus);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamArrayObj(map, prefix + "AccountVpcSet.", this.AccountVpcSet);
 
     }
 }
