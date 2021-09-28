@@ -51,7 +51,7 @@ public class SendStatus extends AbstractModel{
     private String SessionContext;
 
     /**
-    * SMS request error code. For specific meanings, please see [Error Codes](https://intl.cloud.tencent.com/document/product/382/49316?from_cn_redirect=1).
+    * SMS request error code. For details, see [Error Codes](https://intl.cloud.tencent.com/document/api/382/55981?from_cn_redirect=1#6.-.E9.94.99.E8.AF.AF.E7.A0.81). `Ok` will be returned if the request is successful.
     */
     @SerializedName("Code")
     @Expose
@@ -136,16 +136,16 @@ public class SendStatus extends AbstractModel{
     }
 
     /**
-     * Get SMS request error code. For specific meanings, please see [Error Codes](https://intl.cloud.tencent.com/document/product/382/49316?from_cn_redirect=1). 
-     * @return Code SMS request error code. For specific meanings, please see [Error Codes](https://intl.cloud.tencent.com/document/product/382/49316?from_cn_redirect=1).
+     * Get SMS request error code. For details, see [Error Codes](https://intl.cloud.tencent.com/document/api/382/55981?from_cn_redirect=1#6.-.E9.94.99.E8.AF.AF.E7.A0.81). `Ok` will be returned if the request is successful. 
+     * @return Code SMS request error code. For details, see [Error Codes](https://intl.cloud.tencent.com/document/api/382/55981?from_cn_redirect=1#6.-.E9.94.99.E8.AF.AF.E7.A0.81). `Ok` will be returned if the request is successful.
      */
     public String getCode() {
         return this.Code;
     }
 
     /**
-     * Set SMS request error code. For specific meanings, please see [Error Codes](https://intl.cloud.tencent.com/document/product/382/49316?from_cn_redirect=1).
-     * @param Code SMS request error code. For specific meanings, please see [Error Codes](https://intl.cloud.tencent.com/document/product/382/49316?from_cn_redirect=1).
+     * Set SMS request error code. For details, see [Error Codes](https://intl.cloud.tencent.com/document/api/382/55981?from_cn_redirect=1#6.-.E9.94.99.E8.AF.AF.E7.A0.81). `Ok` will be returned if the request is successful.
+     * @param Code SMS request error code. For details, see [Error Codes](https://intl.cloud.tencent.com/document/api/382/55981?from_cn_redirect=1#6.-.E9.94.99.E8.AF.AF.E7.A0.81). `Ok` will be returned if the request is successful.
      */
     public void setCode(String Code) {
         this.Code = Code;

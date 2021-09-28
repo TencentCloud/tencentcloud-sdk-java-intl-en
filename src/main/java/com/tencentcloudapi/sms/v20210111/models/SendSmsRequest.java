@@ -23,8 +23,9 @@ import java.util.HashMap;
 public class SendSmsRequest extends AbstractModel{
 
     /**
-    * Target mobile number in the E.164 standard in the format of +[country/region code][mobile number]. Up to 200 mobile numbers are supported in one request (which should be all Mainland China mobile numbers or all global mobile numbers).
-Example: +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+    * Target mobile number in E.164 format (+[country/region code][subscriber number]). Up to 200 numbers, all of which should be either Chinese mainland numbers or international numbers, are supported in a single request.
+Take the number +8613711112222 as an example. “86” is the country code (with a “+” sign in its front) and “13711112222” is the subscriber number.
+Note: 11-digit Chinese mainland numbers prefixed by 0086 or 86 or those without any country/region code are also supported. The default prefix is +86.
     */
     @SerializedName("PhoneNumberSet")
     @Expose
@@ -45,15 +46,16 @@ Example: +8613711112222, which has a + sign followed by 86 (country/region code)
     private String TemplateId;
 
     /**
-    * Content of the SMS signature, which should be encoded in UTF-8. You must enter an approved signature, such as Tencent Cloud. The signature information can be viewed in the [SMS console](https://console.cloud.tencent.com/smsv2).
-Note: this parameter is required for Mainland China SMS.
+    * SMS signature information which is encoded in UTF-8. You must enter an approved signature (such as Tencent Cloud). The signing information can be viewed in the [SMS console](https://console.cloud.tencent.com/smsv2).
+<dx-alert infotype="notice" title="Note">This parameter is required for Chinese mainland SMS.</dx-alert>
     */
     @SerializedName("SignName")
     @Expose
     private String SignName;
 
     /**
-    * Template parameter. If there is no template parameter, leave this parameter blank.
+    * Template parameter. If there is no template parameter, leave this field empty.
+<dx-alert infotype="notice" title="Note">The number of template parameters should be consistent with that of the template variables of `TemplateId`.</dx-alert>
     */
     @SerializedName("TemplateParamSet")
     @Expose
@@ -82,20 +84,24 @@ Note: if your monthly usage reaches the specified threshold, you can apply for a
     private String SenderId;
 
     /**
-     * Get Target mobile number in the E.164 standard in the format of +[country/region code][mobile number]. Up to 200 mobile numbers are supported in one request (which should be all Mainland China mobile numbers or all global mobile numbers).
-Example: +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number). 
-     * @return PhoneNumberSet Target mobile number in the E.164 standard in the format of +[country/region code][mobile number]. Up to 200 mobile numbers are supported in one request (which should be all Mainland China mobile numbers or all global mobile numbers).
-Example: +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+     * Get Target mobile number in E.164 format (+[country/region code][subscriber number]). Up to 200 numbers, all of which should be either Chinese mainland numbers or international numbers, are supported in a single request.
+Take the number +8613711112222 as an example. “86” is the country code (with a “+” sign in its front) and “13711112222” is the subscriber number.
+Note: 11-digit Chinese mainland numbers prefixed by 0086 or 86 or those without any country/region code are also supported. The default prefix is +86. 
+     * @return PhoneNumberSet Target mobile number in E.164 format (+[country/region code][subscriber number]). Up to 200 numbers, all of which should be either Chinese mainland numbers or international numbers, are supported in a single request.
+Take the number +8613711112222 as an example. “86” is the country code (with a “+” sign in its front) and “13711112222” is the subscriber number.
+Note: 11-digit Chinese mainland numbers prefixed by 0086 or 86 or those without any country/region code are also supported. The default prefix is +86.
      */
     public String [] getPhoneNumberSet() {
         return this.PhoneNumberSet;
     }
 
     /**
-     * Set Target mobile number in the E.164 standard in the format of +[country/region code][mobile number]. Up to 200 mobile numbers are supported in one request (which should be all Mainland China mobile numbers or all global mobile numbers).
-Example: +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
-     * @param PhoneNumberSet Target mobile number in the E.164 standard in the format of +[country/region code][mobile number]. Up to 200 mobile numbers are supported in one request (which should be all Mainland China mobile numbers or all global mobile numbers).
-Example: +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+     * Set Target mobile number in E.164 format (+[country/region code][subscriber number]). Up to 200 numbers, all of which should be either Chinese mainland numbers or international numbers, are supported in a single request.
+Take the number +8613711112222 as an example. “86” is the country code (with a “+” sign in its front) and “13711112222” is the subscriber number.
+Note: 11-digit Chinese mainland numbers prefixed by 0086 or 86 or those without any country/region code are also supported. The default prefix is +86.
+     * @param PhoneNumberSet Target mobile number in E.164 format (+[country/region code][subscriber number]). Up to 200 numbers, all of which should be either Chinese mainland numbers or international numbers, are supported in a single request.
+Take the number +8613711112222 as an example. “86” is the country code (with a “+” sign in its front) and “13711112222” is the subscriber number.
+Note: 11-digit Chinese mainland numbers prefixed by 0086 or 86 or those without any country/region code are also supported. The default prefix is +86.
      */
     public void setPhoneNumberSet(String [] PhoneNumberSet) {
         this.PhoneNumberSet = PhoneNumberSet;
@@ -134,36 +140,40 @@ Example: +8613711112222, which has a + sign followed by 86 (country/region code)
     }
 
     /**
-     * Get Content of the SMS signature, which should be encoded in UTF-8. You must enter an approved signature, such as Tencent Cloud. The signature information can be viewed in the [SMS console](https://console.cloud.tencent.com/smsv2).
-Note: this parameter is required for Mainland China SMS. 
-     * @return SignName Content of the SMS signature, which should be encoded in UTF-8. You must enter an approved signature, such as Tencent Cloud. The signature information can be viewed in the [SMS console](https://console.cloud.tencent.com/smsv2).
-Note: this parameter is required for Mainland China SMS.
+     * Get SMS signature information which is encoded in UTF-8. You must enter an approved signature (such as Tencent Cloud). The signing information can be viewed in the [SMS console](https://console.cloud.tencent.com/smsv2).
+<dx-alert infotype="notice" title="Note">This parameter is required for Chinese mainland SMS.</dx-alert> 
+     * @return SignName SMS signature information which is encoded in UTF-8. You must enter an approved signature (such as Tencent Cloud). The signing information can be viewed in the [SMS console](https://console.cloud.tencent.com/smsv2).
+<dx-alert infotype="notice" title="Note">This parameter is required for Chinese mainland SMS.</dx-alert>
      */
     public String getSignName() {
         return this.SignName;
     }
 
     /**
-     * Set Content of the SMS signature, which should be encoded in UTF-8. You must enter an approved signature, such as Tencent Cloud. The signature information can be viewed in the [SMS console](https://console.cloud.tencent.com/smsv2).
-Note: this parameter is required for Mainland China SMS.
-     * @param SignName Content of the SMS signature, which should be encoded in UTF-8. You must enter an approved signature, such as Tencent Cloud. The signature information can be viewed in the [SMS console](https://console.cloud.tencent.com/smsv2).
-Note: this parameter is required for Mainland China SMS.
+     * Set SMS signature information which is encoded in UTF-8. You must enter an approved signature (such as Tencent Cloud). The signing information can be viewed in the [SMS console](https://console.cloud.tencent.com/smsv2).
+<dx-alert infotype="notice" title="Note">This parameter is required for Chinese mainland SMS.</dx-alert>
+     * @param SignName SMS signature information which is encoded in UTF-8. You must enter an approved signature (such as Tencent Cloud). The signing information can be viewed in the [SMS console](https://console.cloud.tencent.com/smsv2).
+<dx-alert infotype="notice" title="Note">This parameter is required for Chinese mainland SMS.</dx-alert>
      */
     public void setSignName(String SignName) {
         this.SignName = SignName;
     }
 
     /**
-     * Get Template parameter. If there is no template parameter, leave this parameter blank. 
-     * @return TemplateParamSet Template parameter. If there is no template parameter, leave this parameter blank.
+     * Get Template parameter. If there is no template parameter, leave this field empty.
+<dx-alert infotype="notice" title="Note">The number of template parameters should be consistent with that of the template variables of `TemplateId`.</dx-alert> 
+     * @return TemplateParamSet Template parameter. If there is no template parameter, leave this field empty.
+<dx-alert infotype="notice" title="Note">The number of template parameters should be consistent with that of the template variables of `TemplateId`.</dx-alert>
      */
     public String [] getTemplateParamSet() {
         return this.TemplateParamSet;
     }
 
     /**
-     * Set Template parameter. If there is no template parameter, leave this parameter blank.
-     * @param TemplateParamSet Template parameter. If there is no template parameter, leave this parameter blank.
+     * Set Template parameter. If there is no template parameter, leave this field empty.
+<dx-alert infotype="notice" title="Note">The number of template parameters should be consistent with that of the template variables of `TemplateId`.</dx-alert>
+     * @param TemplateParamSet Template parameter. If there is no template parameter, leave this field empty.
+<dx-alert infotype="notice" title="Note">The number of template parameters should be consistent with that of the template variables of `TemplateId`.</dx-alert>
      */
     public void setTemplateParamSet(String [] TemplateParamSet) {
         this.TemplateParamSet = TemplateParamSet;

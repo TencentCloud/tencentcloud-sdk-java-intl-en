@@ -67,9 +67,10 @@ Note: the corresponding `DocumentType` must be selected according to `SignType`.
     private Long DocumentType;
 
     /**
-    * Whether it is Global SMS:
-0: Mainland China SMS.
-1: Global SMS.
+    * A parameter used to specify whether it is Global SMS:
+`0`: Chinese mainland SMS.
+`1`: Global SMS.
+Note: the value of this parameter must be consistent with the `International` value of the signature to be modified. This parameter cannot be used to directly change a Chinese mainland signature to an international signature.
     */
     @SerializedName("International")
     @Expose
@@ -236,24 +237,28 @@ Note: the corresponding `DocumentType` must be selected according to `SignType`.
     }
 
     /**
-     * Get Whether it is Global SMS:
-0: Mainland China SMS.
-1: Global SMS. 
-     * @return International Whether it is Global SMS:
-0: Mainland China SMS.
-1: Global SMS.
+     * Get A parameter used to specify whether it is Global SMS:
+`0`: Chinese mainland SMS.
+`1`: Global SMS.
+Note: the value of this parameter must be consistent with the `International` value of the signature to be modified. This parameter cannot be used to directly change a Chinese mainland signature to an international signature. 
+     * @return International A parameter used to specify whether it is Global SMS:
+`0`: Chinese mainland SMS.
+`1`: Global SMS.
+Note: the value of this parameter must be consistent with the `International` value of the signature to be modified. This parameter cannot be used to directly change a Chinese mainland signature to an international signature.
      */
     public Long getInternational() {
         return this.International;
     }
 
     /**
-     * Set Whether it is Global SMS:
-0: Mainland China SMS.
-1: Global SMS.
-     * @param International Whether it is Global SMS:
-0: Mainland China SMS.
-1: Global SMS.
+     * Set A parameter used to specify whether it is Global SMS:
+`0`: Chinese mainland SMS.
+`1`: Global SMS.
+Note: the value of this parameter must be consistent with the `International` value of the signature to be modified. This parameter cannot be used to directly change a Chinese mainland signature to an international signature.
+     * @param International A parameter used to specify whether it is Global SMS:
+`0`: Chinese mainland SMS.
+`1`: Global SMS.
+Note: the value of this parameter must be consistent with the `International` value of the signature to be modified. This parameter cannot be used to directly change a Chinese mainland signature to an international signature.
      */
     public void setInternational(Long International) {
         this.International = International;

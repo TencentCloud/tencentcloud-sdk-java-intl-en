@@ -24,7 +24,7 @@ public class DescribeSmsTemplateListRequest extends AbstractModel{
 
     /**
     * Template ID array.
-Note: the maximum length of the array is 100 by default.
+<dx-alert infotype="notice" title="Note">The max array length is 100 by default.</dx-alert>
     */
     @SerializedName("TemplateIdSet")
     @Expose
@@ -41,9 +41,9 @@ Note: the maximum length of the array is 100 by default.
 
     /**
      * Get Template ID array.
-Note: the maximum length of the array is 100 by default. 
+<dx-alert infotype="notice" title="Note">The max array length is 100 by default.</dx-alert> 
      * @return TemplateIdSet Template ID array.
-Note: the maximum length of the array is 100 by default.
+<dx-alert infotype="notice" title="Note">The max array length is 100 by default.</dx-alert>
      */
     public Long [] getTemplateIdSet() {
         return this.TemplateIdSet;
@@ -51,9 +51,9 @@ Note: the maximum length of the array is 100 by default.
 
     /**
      * Set Template ID array.
-Note: the maximum length of the array is 100 by default.
+<dx-alert infotype="notice" title="Note">The max array length is 100 by default.</dx-alert>
      * @param TemplateIdSet Template ID array.
-Note: the maximum length of the array is 100 by default.
+<dx-alert infotype="notice" title="Note">The max array length is 100 by default.</dx-alert>
      */
     public void setTemplateIdSet(Long [] TemplateIdSet) {
         this.TemplateIdSet = TemplateIdSet;

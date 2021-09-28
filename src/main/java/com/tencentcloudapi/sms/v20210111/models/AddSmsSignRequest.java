@@ -24,6 +24,7 @@ public class AddSmsSignRequest extends AbstractModel{
 
     /**
     * Signature name.
+Note: you cannot apply for an approved or pending signature again.
     */
     @SerializedName("SignName")
     @Expose
@@ -101,8 +102,10 @@ Note: this field will take effect only when `SignPurpose` is 1 (for user by othe
     private String Remark;
 
     /**
-     * Get Signature name. 
+     * Get Signature name.
+Note: you cannot apply for an approved or pending signature again. 
      * @return SignName Signature name.
+Note: you cannot apply for an approved or pending signature again.
      */
     public String getSignName() {
         return this.SignName;
@@ -110,7 +113,9 @@ Note: this field will take effect only when `SignPurpose` is 1 (for user by othe
 
     /**
      * Set Signature name.
+Note: you cannot apply for an approved or pending signature again.
      * @param SignName Signature name.
+Note: you cannot apply for an approved or pending signature again.
      */
     public void setSignName(String SignName) {
         this.SignName = SignName;
