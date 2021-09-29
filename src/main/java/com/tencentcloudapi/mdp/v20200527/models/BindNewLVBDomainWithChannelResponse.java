@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateStreamPackageChannelResponse extends AbstractModel{
+public class BindNewLVBDomainWithChannelResponse extends AbstractModel{
 
     /**
-    * Channel information
+    * The LVB domain name bound successfully
     */
-    @SerializedName("Info")
+    @SerializedName("LVBDomain")
     @Expose
-    private ChannelInfo Info;
+    private String LVBDomain;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +37,19 @@ public class CreateStreamPackageChannelResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Channel information 
-     * @return Info Channel information
+     * Get The LVB domain name bound successfully 
+     * @return LVBDomain The LVB domain name bound successfully
      */
-    public ChannelInfo getInfo() {
-        return this.Info;
+    public String getLVBDomain() {
+        return this.LVBDomain;
     }
 
     /**
-     * Set Channel information
-     * @param Info Channel information
+     * Set The LVB domain name bound successfully
+     * @param LVBDomain The LVB domain name bound successfully
      */
-    public void setInfo(ChannelInfo Info) {
-        this.Info = Info;
+    public void setLVBDomain(String LVBDomain) {
+        this.LVBDomain = LVBDomain;
     }
 
     /**
@@ -68,16 +68,16 @@ public class CreateStreamPackageChannelResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateStreamPackageChannelResponse() {
+    public BindNewLVBDomainWithChannelResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateStreamPackageChannelResponse(CreateStreamPackageChannelResponse source) {
-        if (source.Info != null) {
-            this.Info = new ChannelInfo(source.Info);
+    public BindNewLVBDomainWithChannelResponse(BindNewLVBDomainWithChannelResponse source) {
+        if (source.LVBDomain != null) {
+            this.LVBDomain = new String(source.LVBDomain);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +89,7 @@ public class CreateStreamPackageChannelResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Info.", this.Info);
+        this.setParamSimple(map, prefix + "LVBDomain", this.LVBDomain);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

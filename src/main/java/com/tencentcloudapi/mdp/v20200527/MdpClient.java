@@ -39,6 +39,26 @@ public class MdpClient extends AbstractClient{
     }
 
     /**
+     *This API is used to bind an LVB domain name to a channel.
+     * @param req BindNewLVBDomainWithChannelRequest
+     * @return BindNewLVBDomainWithChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindNewLVBDomainWithChannelResponse BindNewLVBDomainWithChannel(BindNewLVBDomainWithChannelRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BindNewLVBDomainWithChannelResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BindNewLVBDomainWithChannelResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BindNewLVBDomainWithChannel");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a StreamPackage channel.
      * @param req CreateStreamPackageChannelRequest
      * @return CreateStreamPackageChannelResponse
