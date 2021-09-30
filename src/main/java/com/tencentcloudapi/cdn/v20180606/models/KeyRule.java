@@ -47,10 +47,10 @@ Note: this field may return null, indicating that no valid value is obtained.
     private String RuleType;
 
     /**
-    * Whether to enable full-path cache
-on: enable full-path cache (i.e., disable parameter filter)
-off: disable full-path cache (i.e., enable parameter filter)
-Note: this field may return null, indicating that no valid value is obtained.
+    * Whether full-path cache is enaled
+`on`: enables full-path cache (i.e., disables ignore query string)
+`off`: disables full-path cache (i.e., enables ignore query string)
+Note: this field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("FullUrlCache")
     @Expose
@@ -153,28 +153,28 @@ Note: this field may return null, indicating that no valid value is obtained.
     }
 
     /**
-     * Get Whether to enable full-path cache
-on: enable full-path cache (i.e., disable parameter filter)
-off: disable full-path cache (i.e., enable parameter filter)
-Note: this field may return null, indicating that no valid value is obtained. 
-     * @return FullUrlCache Whether to enable full-path cache
-on: enable full-path cache (i.e., disable parameter filter)
-off: disable full-path cache (i.e., enable parameter filter)
-Note: this field may return null, indicating that no valid value is obtained.
+     * Get Whether full-path cache is enaled
+`on`: enables full-path cache (i.e., disables ignore query string)
+`off`: disables full-path cache (i.e., enables ignore query string)
+Note: this field may return `null`, indicating that no valid value can be obtained. 
+     * @return FullUrlCache Whether full-path cache is enaled
+`on`: enables full-path cache (i.e., disables ignore query string)
+`off`: disables full-path cache (i.e., enables ignore query string)
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public String getFullUrlCache() {
         return this.FullUrlCache;
     }
 
     /**
-     * Set Whether to enable full-path cache
-on: enable full-path cache (i.e., disable parameter filter)
-off: disable full-path cache (i.e., enable parameter filter)
-Note: this field may return null, indicating that no valid value is obtained.
-     * @param FullUrlCache Whether to enable full-path cache
-on: enable full-path cache (i.e., disable parameter filter)
-off: disable full-path cache (i.e., enable parameter filter)
-Note: this field may return null, indicating that no valid value is obtained.
+     * Set Whether full-path cache is enaled
+`on`: enables full-path cache (i.e., disables ignore query string)
+`off`: disables full-path cache (i.e., enables ignore query string)
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param FullUrlCache Whether full-path cache is enaled
+`on`: enables full-path cache (i.e., disables ignore query string)
+`off`: disables full-path cache (i.e., enables ignore query string)
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public void setFullUrlCache(String FullUrlCache) {
         this.FullUrlCache = FullUrlCache;

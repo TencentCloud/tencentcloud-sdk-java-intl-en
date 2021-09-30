@@ -23,61 +23,61 @@ import java.util.HashMap;
 public class UrlRedirect extends AbstractModel{
 
     /**
-    * URL redirect configuration switch
-on: enabled
-off: disabled
+    * Whether URL rewriting is enabled
+`on`: enabled
+`off`: disabled
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * URL redirect rule, which is required if `Switch` is `on`. There can be up to 10 rules.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Rule of URL rewriting rule, which is required if `Switch` is `on`. There can be up to 10 rules.
+Note: this field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("PathRules")
     @Expose
     private UrlRedirectRule [] PathRules;
 
     /**
-     * Get URL redirect configuration switch
-on: enabled
-off: disabled 
-     * @return Switch URL redirect configuration switch
-on: enabled
-off: disabled
+     * Get Whether URL rewriting is enabled
+`on`: enabled
+`off`: disabled 
+     * @return Switch Whether URL rewriting is enabled
+`on`: enabled
+`off`: disabled
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set URL redirect configuration switch
-on: enabled
-off: disabled
-     * @param Switch URL redirect configuration switch
-on: enabled
-off: disabled
+     * Set Whether URL rewriting is enabled
+`on`: enabled
+`off`: disabled
+     * @param Switch Whether URL rewriting is enabled
+`on`: enabled
+`off`: disabled
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get URL redirect rule, which is required if `Switch` is `on`. There can be up to 10 rules.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return PathRules URL redirect rule, which is required if `Switch` is `on`. There can be up to 10 rules.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Rule of URL rewriting rule, which is required if `Switch` is `on`. There can be up to 10 rules.
+Note: this field may return `null`, indicating that no valid value can be obtained. 
+     * @return PathRules Rule of URL rewriting rule, which is required if `Switch` is `on`. There can be up to 10 rules.
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public UrlRedirectRule [] getPathRules() {
         return this.PathRules;
     }
 
     /**
-     * Set URL redirect rule, which is required if `Switch` is `on`. There can be up to 10 rules.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PathRules URL redirect rule, which is required if `Switch` is `on`. There can be up to 10 rules.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Rule of URL rewriting rule, which is required if `Switch` is `on`. There can be up to 10 rules.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param PathRules Rule of URL rewriting rule, which is required if `Switch` is `on`. There can be up to 10 rules.
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public void setPathRules(UrlRedirectRule [] PathRules) {
         this.PathRules = PathRules;

@@ -39,6 +39,9 @@ public enum CdnErrorCode {
     // Service internal error. Please submit a ticket for troubleshooting.
      INTERNALERROR_INVALIDERRORCODE("InternalError.InvalidErrorCode"),
      
+    // Internal service error. Please submit a ticket for troubleshooting.
+     INTERNALERROR_PROXYSERVER("InternalError.ProxyServer"),
+     
     // The SCDN service is not activated. Please purchase or renew an SCDN packet and try again.
      INTERNALERROR_SCDNUSERNOPACKAGE("InternalError.ScdnUserNoPackage"),
      

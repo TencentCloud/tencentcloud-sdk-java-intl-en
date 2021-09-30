@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class CreateVpnConnectionRequest extends AbstractModel{
 
     /**
-    * VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
-    */
-    @SerializedName("VpcId")
-    @Expose
-    private String VpcId;
-
-    /**
     * The ID of the VPN gateway instance.
     */
     @SerializedName("VpnGatewayId")
@@ -56,6 +49,14 @@ public class CreateVpnConnectionRequest extends AbstractModel{
     @SerializedName("PreShareKey")
     @Expose
     private String PreShareKey;
+
+    /**
+    * VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
+This parameter is optional for a CCN-based VPN tunnel.
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
 
     /**
     * The SPD policy group, for example: {"10.0.0.5/24":["172.123.10.5/16"]}. 10.0.0.5/24 is the VPC internal IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
@@ -107,20 +108,11 @@ public class CreateVpnConnectionRequest extends AbstractModel{
     private String HealthCheckRemoteIp;
 
     /**
-     * Get VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API. 
-     * @return VpcId VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
-     */
-    public String getVpcId() {
-        return this.VpcId;
-    }
-
-    /**
-     * Set VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
-     * @param VpcId VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
-     */
-    public void setVpcId(String VpcId) {
-        this.VpcId = VpcId;
-    }
+    * Tunnel type. Valid values: `STATIC`, `StaticRoute`, and `Policy`.
+    */
+    @SerializedName("RouteType")
+    @Expose
+    private String RouteType;
 
     /**
      * Get The ID of the VPN gateway instance. 
@@ -184,6 +176,26 @@ public class CreateVpnConnectionRequest extends AbstractModel{
      */
     public void setPreShareKey(String PreShareKey) {
         this.PreShareKey = PreShareKey;
+    }
+
+    /**
+     * Get VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
+This parameter is optional for a CCN-based VPN tunnel. 
+     * @return VpcId VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
+This parameter is optional for a CCN-based VPN tunnel.
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
+This parameter is optional for a CCN-based VPN tunnel.
+     * @param VpcId VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
+This parameter is optional for a CCN-based VPN tunnel.
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
     }
 
     /**
@@ -298,6 +310,22 @@ public class CreateVpnConnectionRequest extends AbstractModel{
         this.HealthCheckRemoteIp = HealthCheckRemoteIp;
     }
 
+    /**
+     * Get Tunnel type. Valid values: `STATIC`, `StaticRoute`, and `Policy`. 
+     * @return RouteType Tunnel type. Valid values: `STATIC`, `StaticRoute`, and `Policy`.
+     */
+    public String getRouteType() {
+        return this.RouteType;
+    }
+
+    /**
+     * Set Tunnel type. Valid values: `STATIC`, `StaticRoute`, and `Policy`.
+     * @param RouteType Tunnel type. Valid values: `STATIC`, `StaticRoute`, and `Policy`.
+     */
+    public void setRouteType(String RouteType) {
+        this.RouteType = RouteType;
+    }
+
     public CreateVpnConnectionRequest() {
     }
 
@@ -306,9 +334,6 @@ public class CreateVpnConnectionRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateVpnConnectionRequest(CreateVpnConnectionRequest source) {
-        if (source.VpcId != null) {
-            this.VpcId = new String(source.VpcId);
-        }
         if (source.VpnGatewayId != null) {
             this.VpnGatewayId = new String(source.VpnGatewayId);
         }
@@ -320,6 +345,9 @@ public class CreateVpnConnectionRequest extends AbstractModel{
         }
         if (source.PreShareKey != null) {
             this.PreShareKey = new String(source.PreShareKey);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
         }
         if (source.SecurityPolicyDatabases != null) {
             this.SecurityPolicyDatabases = new SecurityPolicyDatabase[source.SecurityPolicyDatabases.length];
@@ -348,6 +376,9 @@ public class CreateVpnConnectionRequest extends AbstractModel{
         if (source.HealthCheckRemoteIp != null) {
             this.HealthCheckRemoteIp = new String(source.HealthCheckRemoteIp);
         }
+        if (source.RouteType != null) {
+            this.RouteType = new String(source.RouteType);
+        }
     }
 
 
@@ -355,11 +386,11 @@ public class CreateVpnConnectionRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "VpnGatewayId", this.VpnGatewayId);
         this.setParamSimple(map, prefix + "CustomerGatewayId", this.CustomerGatewayId);
         this.setParamSimple(map, prefix + "VpnConnectionName", this.VpnConnectionName);
         this.setParamSimple(map, prefix + "PreShareKey", this.PreShareKey);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamArrayObj(map, prefix + "SecurityPolicyDatabases.", this.SecurityPolicyDatabases);
         this.setParamObj(map, prefix + "IKEOptionsSpecification.", this.IKEOptionsSpecification);
         this.setParamObj(map, prefix + "IPSECOptionsSpecification.", this.IPSECOptionsSpecification);
@@ -367,6 +398,7 @@ public class CreateVpnConnectionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EnableHealthCheck", this.EnableHealthCheck);
         this.setParamSimple(map, prefix + "HealthCheckLocalIp", this.HealthCheckLocalIp);
         this.setParamSimple(map, prefix + "HealthCheckRemoteIp", this.HealthCheckRemoteIp);
+        this.setParamSimple(map, prefix + "RouteType", this.RouteType);
 
     }
 }

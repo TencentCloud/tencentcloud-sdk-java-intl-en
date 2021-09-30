@@ -84,6 +84,16 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     private HttpHeaderRule [] RequestHeaders;
 
     /**
+    * When `Regex` is `false`, this parameter should be `true`.
+`false`: disabled
+`true`: enabled
+Note: this field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("FullMatch")
+    @Expose
+    private Boolean FullMatch;
+
+    /**
      * Get Whether to enable wildcard match (`*`).
 false: disable
 true: enable
@@ -243,6 +253,34 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         this.RequestHeaders = RequestHeaders;
     }
 
+    /**
+     * Get When `Regex` is `false`, this parameter should be `true`.
+`false`: disabled
+`true`: enabled
+Note: this field may return `null`, indicating that no valid value can be obtained. 
+     * @return FullMatch When `Regex` is `false`, this parameter should be `true`.
+`false`: disabled
+`true`: enabled
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Boolean getFullMatch() {
+        return this.FullMatch;
+    }
+
+    /**
+     * Set When `Regex` is `false`, this parameter should be `true`.
+`false`: disabled
+`true`: enabled
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param FullMatch When `Regex` is `false`, this parameter should be `true`.
+`false`: disabled
+`true`: enabled
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setFullMatch(Boolean FullMatch) {
+        this.FullMatch = FullMatch;
+    }
+
     public PathRule() {
     }
 
@@ -275,6 +313,9 @@ Note: this field may return `null`, indicating that no valid value is obtained.
                 this.RequestHeaders[i] = new HttpHeaderRule(source.RequestHeaders[i]);
             }
         }
+        if (source.FullMatch != null) {
+            this.FullMatch = new Boolean(source.FullMatch);
+        }
     }
 
 
@@ -289,6 +330,7 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         this.setParamSimple(map, prefix + "OriginArea", this.OriginArea);
         this.setParamSimple(map, prefix + "ForwardUri", this.ForwardUri);
         this.setParamArrayObj(map, prefix + "RequestHeaders.", this.RequestHeaders);
+        this.setParamSimple(map, prefix + "FullMatch", this.FullMatch);
 
     }
 }

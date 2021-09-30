@@ -44,14 +44,14 @@ public class BinlogInfo extends AbstractModel{
     private String Date;
 
     /**
-    * Download address on the private network
+    * Download address
     */
     @SerializedName("IntranetUrl")
     @Expose
     private String IntranetUrl;
 
     /**
-    * Download address on the public network
+    * Download address
     */
     @SerializedName("InternetUrl")
     @Expose
@@ -127,32 +127,32 @@ public class BinlogInfo extends AbstractModel{
     }
 
     /**
-     * Get Download address on the private network 
-     * @return IntranetUrl Download address on the private network
+     * Get Download address 
+     * @return IntranetUrl Download address
      */
     public String getIntranetUrl() {
         return this.IntranetUrl;
     }
 
     /**
-     * Set Download address on the private network
-     * @param IntranetUrl Download address on the private network
+     * Set Download address
+     * @param IntranetUrl Download address
      */
     public void setIntranetUrl(String IntranetUrl) {
         this.IntranetUrl = IntranetUrl;
     }
 
     /**
-     * Get Download address on the public network 
-     * @return InternetUrl Download address on the public network
+     * Get Download address 
+     * @return InternetUrl Download address
      */
     public String getInternetUrl() {
         return this.InternetUrl;
     }
 
     /**
-     * Set Download address on the public network
-     * @param InternetUrl Download address on the public network
+     * Set Download address
+     * @param InternetUrl Download address
      */
     public void setInternetUrl(String InternetUrl) {
         this.InternetUrl = InternetUrl;

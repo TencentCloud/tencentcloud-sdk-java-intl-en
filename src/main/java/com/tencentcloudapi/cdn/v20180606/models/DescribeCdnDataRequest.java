@@ -65,8 +65,10 @@ Specifies the status code to query. The return will be empty if the status code 
     private String Metric;
 
     /**
-    * Specifies the list of domain names to be queried
-Up to 30 domain names can be queried at a time
+    * Queries the information of specified domain names
+Specifies a domain name to query
+Specifies multiple domain names to query (30 at most at a time)
+Queries all Specifies an account to query all domain names
     */
     @SerializedName("Domains")
     @Expose
@@ -305,20 +307,28 @@ Specifies the status code to query. The return will be empty if the status code 
     }
 
     /**
-     * Get Specifies the list of domain names to be queried
-Up to 30 domain names can be queried at a time 
-     * @return Domains Specifies the list of domain names to be queried
-Up to 30 domain names can be queried at a time
+     * Get Queries the information of specified domain names
+Specifies a domain name to query
+Specifies multiple domain names to query (30 at most at a time)
+Queries all Specifies an account to query all domain names 
+     * @return Domains Queries the information of specified domain names
+Specifies a domain name to query
+Specifies multiple domain names to query (30 at most at a time)
+Queries all Specifies an account to query all domain names
      */
     public String [] getDomains() {
         return this.Domains;
     }
 
     /**
-     * Set Specifies the list of domain names to be queried
-Up to 30 domain names can be queried at a time
-     * @param Domains Specifies the list of domain names to be queried
-Up to 30 domain names can be queried at a time
+     * Set Queries the information of specified domain names
+Specifies a domain name to query
+Specifies multiple domain names to query (30 at most at a time)
+Queries all Specifies an account to query all domain names
+     * @param Domains Queries the information of specified domain names
+Specifies a domain name to query
+Specifies multiple domain names to query (30 at most at a time)
+Queries all Specifies an account to query all domain names
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;

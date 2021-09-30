@@ -24,8 +24,8 @@ public class CacheKey extends AbstractModel{
 
     /**
     * Whether to enable full-path cache
-on: enable full-path cache (i.e., disable parameter filter)
-off: disable full-path cache (i.e., enable parameter filter)
+`on`: enables full-path cache (i.e., disables Ignore Query String)
+`off`: disables full-path cache (i.e., enables Ignore Query String)
     */
     @SerializedName("FullUrlCache")
     @Expose
@@ -89,11 +89,11 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
      * Get Whether to enable full-path cache
-on: enable full-path cache (i.e., disable parameter filter)
-off: disable full-path cache (i.e., enable parameter filter) 
+`on`: enables full-path cache (i.e., disables Ignore Query String)
+`off`: disables full-path cache (i.e., enables Ignore Query String) 
      * @return FullUrlCache Whether to enable full-path cache
-on: enable full-path cache (i.e., disable parameter filter)
-off: disable full-path cache (i.e., enable parameter filter)
+`on`: enables full-path cache (i.e., disables Ignore Query String)
+`off`: disables full-path cache (i.e., enables Ignore Query String)
      */
     public String getFullUrlCache() {
         return this.FullUrlCache;
@@ -101,11 +101,11 @@ off: disable full-path cache (i.e., enable parameter filter)
 
     /**
      * Set Whether to enable full-path cache
-on: enable full-path cache (i.e., disable parameter filter)
-off: disable full-path cache (i.e., enable parameter filter)
+`on`: enables full-path cache (i.e., disables Ignore Query String)
+`off`: disables full-path cache (i.e., enables Ignore Query String)
      * @param FullUrlCache Whether to enable full-path cache
-on: enable full-path cache (i.e., disable parameter filter)
-off: disable full-path cache (i.e., enable parameter filter)
+`on`: enables full-path cache (i.e., disables Ignore Query String)
+`off`: disables full-path cache (i.e., enables Ignore Query String)
      */
     public void setFullUrlCache(String FullUrlCache) {
         this.FullUrlCache = FullUrlCache;

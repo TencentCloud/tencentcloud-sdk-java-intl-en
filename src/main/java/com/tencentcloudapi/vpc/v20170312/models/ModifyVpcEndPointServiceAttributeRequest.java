@@ -44,7 +44,7 @@ public class ModifyVpcEndPointServiceAttributeRequest extends AbstractModel{
     private String EndPointServiceName;
 
     /**
-    * Whether to automatically accept
+    * Whether to automatically accept VPC endpoint connection requests. Valid values: <ui><li>`true`: yes<li>`false`: no</ul>
     */
     @SerializedName("AutoAcceptFlag")
     @Expose
@@ -106,16 +106,16 @@ public class ModifyVpcEndPointServiceAttributeRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to automatically accept 
-     * @return AutoAcceptFlag Whether to automatically accept
+     * Get Whether to automatically accept VPC endpoint connection requests. Valid values: <ui><li>`true`: yes<li>`false`: no</ul> 
+     * @return AutoAcceptFlag Whether to automatically accept VPC endpoint connection requests. Valid values: <ui><li>`true`: yes<li>`false`: no</ul>
      */
     public Boolean getAutoAcceptFlag() {
         return this.AutoAcceptFlag;
     }
 
     /**
-     * Set Whether to automatically accept
-     * @param AutoAcceptFlag Whether to automatically accept
+     * Set Whether to automatically accept VPC endpoint connection requests. Valid values: <ui><li>`true`: yes<li>`false`: no</ul>
+     * @param AutoAcceptFlag Whether to automatically accept VPC endpoint connection requests. Valid values: <ui><li>`true`: yes<li>`false`: no</ul>
      */
     public void setAutoAcceptFlag(Boolean AutoAcceptFlag) {
         this.AutoAcceptFlag = AutoAcceptFlag;

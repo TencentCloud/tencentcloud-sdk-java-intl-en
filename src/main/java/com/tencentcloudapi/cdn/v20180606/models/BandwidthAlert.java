@@ -23,17 +23,17 @@ import java.util.HashMap;
 public class BandwidthAlert extends AbstractModel{
 
     /**
-    * Bandwidth cap configuration switch
-on: enabled
-off: disabled
+    * Specifies whether to enable the bandwidth cap
+`on`: enable
+`off`: disable
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Bandwidth cap threshold (in bps)
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The upper limit of bandwidth usage (in bps) or traffic usage (in bytes).
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("BpsThreshold")
     @Expose
@@ -50,52 +50,88 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String CounterMeasure;
 
     /**
-    * The last time the bandwidth cap threshold was triggered
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The last time when the usage upper limit in the Chinese mainland was reached
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("LastTriggerTime")
     @Expose
     private String LastTriggerTime;
 
     /**
-     * Get Bandwidth cap configuration switch
-on: enabled
-off: disabled 
-     * @return Switch Bandwidth cap configuration switch
-on: enabled
-off: disabled
+    * Indicates whether to trigger alerts when the upper limit is reached
+`on`: enable
+`off`: disable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AlertSwitch")
+    @Expose
+    private String AlertSwitch;
+
+    /**
+    * Triggers alarms when the ratio of bandwidth or traffic usage to the usage upper limit reaches the specified value
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AlertPercentage")
+    @Expose
+    private Long AlertPercentage;
+
+    /**
+    * The last time when the usage outside the Chinese mainland reached the upper limit
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("LastTriggerTimeOverseas")
+    @Expose
+    private String LastTriggerTimeOverseas;
+
+    /**
+    * Dimension of the usage limit
+`bandwidth`: bandwidth
+`flux`: traffic
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Metric")
+    @Expose
+    private String Metric;
+
+    /**
+     * Get Specifies whether to enable the bandwidth cap
+`on`: enable
+`off`: disable 
+     * @return Switch Specifies whether to enable the bandwidth cap
+`on`: enable
+`off`: disable
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Bandwidth cap configuration switch
-on: enabled
-off: disabled
-     * @param Switch Bandwidth cap configuration switch
-on: enabled
-off: disabled
+     * Set Specifies whether to enable the bandwidth cap
+`on`: enable
+`off`: disable
+     * @param Switch Specifies whether to enable the bandwidth cap
+`on`: enable
+`off`: disable
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Bandwidth cap threshold (in bps)
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return BpsThreshold Bandwidth cap threshold (in bps)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The upper limit of bandwidth usage (in bps) or traffic usage (in bytes).
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return BpsThreshold The upper limit of bandwidth usage (in bps) or traffic usage (in bytes).
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getBpsThreshold() {
         return this.BpsThreshold;
     }
 
     /**
-     * Set Bandwidth cap threshold (in bps)
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param BpsThreshold Bandwidth cap threshold (in bps)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The upper limit of bandwidth usage (in bps) or traffic usage (in bytes).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param BpsThreshold The upper limit of bandwidth usage (in bps) or traffic usage (in bytes).
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setBpsThreshold(Long BpsThreshold) {
         this.BpsThreshold = BpsThreshold;
@@ -130,23 +166,119 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The last time the bandwidth cap threshold was triggered
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return LastTriggerTime The last time the bandwidth cap threshold was triggered
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The last time when the usage upper limit in the Chinese mainland was reached
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return LastTriggerTime The last time when the usage upper limit in the Chinese mainland was reached
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getLastTriggerTime() {
         return this.LastTriggerTime;
     }
 
     /**
-     * Set The last time the bandwidth cap threshold was triggered
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param LastTriggerTime The last time the bandwidth cap threshold was triggered
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The last time when the usage upper limit in the Chinese mainland was reached
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param LastTriggerTime The last time when the usage upper limit in the Chinese mainland was reached
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setLastTriggerTime(String LastTriggerTime) {
         this.LastTriggerTime = LastTriggerTime;
+    }
+
+    /**
+     * Get Indicates whether to trigger alerts when the upper limit is reached
+`on`: enable
+`off`: disable
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return AlertSwitch Indicates whether to trigger alerts when the upper limit is reached
+`on`: enable
+`off`: disable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getAlertSwitch() {
+        return this.AlertSwitch;
+    }
+
+    /**
+     * Set Indicates whether to trigger alerts when the upper limit is reached
+`on`: enable
+`off`: disable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param AlertSwitch Indicates whether to trigger alerts when the upper limit is reached
+`on`: enable
+`off`: disable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setAlertSwitch(String AlertSwitch) {
+        this.AlertSwitch = AlertSwitch;
+    }
+
+    /**
+     * Get Triggers alarms when the ratio of bandwidth or traffic usage to the usage upper limit reaches the specified value
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return AlertPercentage Triggers alarms when the ratio of bandwidth or traffic usage to the usage upper limit reaches the specified value
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getAlertPercentage() {
+        return this.AlertPercentage;
+    }
+
+    /**
+     * Set Triggers alarms when the ratio of bandwidth or traffic usage to the usage upper limit reaches the specified value
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param AlertPercentage Triggers alarms when the ratio of bandwidth or traffic usage to the usage upper limit reaches the specified value
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setAlertPercentage(Long AlertPercentage) {
+        this.AlertPercentage = AlertPercentage;
+    }
+
+    /**
+     * Get The last time when the usage outside the Chinese mainland reached the upper limit
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return LastTriggerTimeOverseas The last time when the usage outside the Chinese mainland reached the upper limit
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getLastTriggerTimeOverseas() {
+        return this.LastTriggerTimeOverseas;
+    }
+
+    /**
+     * Set The last time when the usage outside the Chinese mainland reached the upper limit
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param LastTriggerTimeOverseas The last time when the usage outside the Chinese mainland reached the upper limit
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setLastTriggerTimeOverseas(String LastTriggerTimeOverseas) {
+        this.LastTriggerTimeOverseas = LastTriggerTimeOverseas;
+    }
+
+    /**
+     * Get Dimension of the usage limit
+`bandwidth`: bandwidth
+`flux`: traffic
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Metric Dimension of the usage limit
+`bandwidth`: bandwidth
+`flux`: traffic
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getMetric() {
+        return this.Metric;
+    }
+
+    /**
+     * Set Dimension of the usage limit
+`bandwidth`: bandwidth
+`flux`: traffic
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Metric Dimension of the usage limit
+`bandwidth`: bandwidth
+`flux`: traffic
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setMetric(String Metric) {
+        this.Metric = Metric;
     }
 
     public BandwidthAlert() {
@@ -169,6 +301,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.LastTriggerTime != null) {
             this.LastTriggerTime = new String(source.LastTriggerTime);
         }
+        if (source.AlertSwitch != null) {
+            this.AlertSwitch = new String(source.AlertSwitch);
+        }
+        if (source.AlertPercentage != null) {
+            this.AlertPercentage = new Long(source.AlertPercentage);
+        }
+        if (source.LastTriggerTimeOverseas != null) {
+            this.LastTriggerTimeOverseas = new String(source.LastTriggerTimeOverseas);
+        }
+        if (source.Metric != null) {
+            this.Metric = new String(source.Metric);
+        }
     }
 
 
@@ -180,6 +324,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "BpsThreshold", this.BpsThreshold);
         this.setParamSimple(map, prefix + "CounterMeasure", this.CounterMeasure);
         this.setParamSimple(map, prefix + "LastTriggerTime", this.LastTriggerTime);
+        this.setParamSimple(map, prefix + "AlertSwitch", this.AlertSwitch);
+        this.setParamSimple(map, prefix + "AlertPercentage", this.AlertPercentage);
+        this.setParamSimple(map, prefix + "LastTriggerTimeOverseas", this.LastTriggerTimeOverseas);
+        this.setParamSimple(map, prefix + "Metric", this.Metric);
 
     }
 }

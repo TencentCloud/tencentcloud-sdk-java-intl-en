@@ -41,6 +41,7 @@ public class PushTask extends AbstractModel{
 `fail`: prefetch failed
 `done`: prefetch succeeded
 `process`: prefetch in progress
+`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
     */
     @SerializedName("Status")
     @Expose
@@ -114,11 +115,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Get Prefetch task status
 `fail`: prefetch failed
 `done`: prefetch succeeded
-`process`: prefetch in progress 
+`process`: prefetch in progress
+`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server 
      * @return Status Prefetch task status
 `fail`: prefetch failed
 `done`: prefetch succeeded
 `process`: prefetch in progress
+`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
      */
     public String getStatus() {
         return this.Status;
@@ -129,10 +132,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 `fail`: prefetch failed
 `done`: prefetch succeeded
 `process`: prefetch in progress
+`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
      * @param Status Prefetch task status
 `fail`: prefetch failed
 `done`: prefetch succeeded
 `process`: prefetch in progress
+`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
      */
     public void setStatus(String Status) {
         this.Status = Status;

@@ -31,8 +31,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private SimpleCache SimpleCache;
 
     /**
-    * Advanced cache expiration configuration (This feature is in beta and not generally available yet.)
-Note: this field may return null, indicating that no valid values can be obtained.
+    * (Disused) Advanced cache validity configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("AdvancedCache")
     @Expose
@@ -67,20 +67,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Advanced cache expiration configuration (This feature is in beta and not generally available yet.)
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AdvancedCache Advanced cache expiration configuration (This feature is in beta and not generally available yet.)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get (Disused) Advanced cache validity configuration
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return AdvancedCache (Disused) Advanced cache validity configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public AdvancedCache getAdvancedCache() {
         return this.AdvancedCache;
     }
 
     /**
-     * Set Advanced cache expiration configuration (This feature is in beta and not generally available yet.)
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AdvancedCache Advanced cache expiration configuration (This feature is in beta and not generally available yet.)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set (Disused) Advanced cache validity configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param AdvancedCache (Disused) Advanced cache validity configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setAdvancedCache(AdvancedCache AdvancedCache) {
         this.AdvancedCache = AdvancedCache;

@@ -42,12 +42,12 @@ The range between the start time and end time should be less than or equal to 90
 
     /**
     * Time granularity, which can be:
-min: 1-minute. The query range should be less than or equal to 24 hours
-5min: 5-minute. The query range should be less than or equal to 31 days
-hour: 1-hour. The query range should be less than or equal to 31 days
-day: 1-day. The query period should be greater than 31 days
+`min`: 1-minute granularity. The query period cannot exceed 24 hours.
+`5min`: 5-minute granularity. The query range cannot exceed 31 days.
+`hour`: 1-hour granularity. The query period cannot exceed 31 days.
+`day`: 1-day granularity. The query period cannot exceed 31 days.
 
-Currently, data query at 1-minute granularity is not supported if the `Area` field is `overseas`
+Querying 1-minute granularity data is not supported if the `Area` field is `overseas`.
     */
     @SerializedName("Interval")
     @Expose
@@ -154,19 +154,19 @@ The range between the start time and end time should be less than or equal to 90
 
     /**
      * Get Time granularity, which can be:
-min: 1-minute. The query range should be less than or equal to 24 hours
-5min: 5-minute. The query range should be less than or equal to 31 days
-hour: 1-hour. The query range should be less than or equal to 31 days
-day: 1-day. The query period should be greater than 31 days
+`min`: 1-minute granularity. The query period cannot exceed 24 hours.
+`5min`: 5-minute granularity. The query range cannot exceed 31 days.
+`hour`: 1-hour granularity. The query period cannot exceed 31 days.
+`day`: 1-day granularity. The query period cannot exceed 31 days.
 
-Currently, data query at 1-minute granularity is not supported if the `Area` field is `overseas` 
+Querying 1-minute granularity data is not supported if the `Area` field is `overseas`. 
      * @return Interval Time granularity, which can be:
-min: 1-minute. The query range should be less than or equal to 24 hours
-5min: 5-minute. The query range should be less than or equal to 31 days
-hour: 1-hour. The query range should be less than or equal to 31 days
-day: 1-day. The query period should be greater than 31 days
+`min`: 1-minute granularity. The query period cannot exceed 24 hours.
+`5min`: 5-minute granularity. The query range cannot exceed 31 days.
+`hour`: 1-hour granularity. The query period cannot exceed 31 days.
+`day`: 1-day granularity. The query period cannot exceed 31 days.
 
-Currently, data query at 1-minute granularity is not supported if the `Area` field is `overseas`
+Querying 1-minute granularity data is not supported if the `Area` field is `overseas`.
      */
     public String getInterval() {
         return this.Interval;
@@ -174,19 +174,19 @@ Currently, data query at 1-minute granularity is not supported if the `Area` fie
 
     /**
      * Set Time granularity, which can be:
-min: 1-minute. The query range should be less than or equal to 24 hours
-5min: 5-minute. The query range should be less than or equal to 31 days
-hour: 1-hour. The query range should be less than or equal to 31 days
-day: 1-day. The query period should be greater than 31 days
+`min`: 1-minute granularity. The query period cannot exceed 24 hours.
+`5min`: 5-minute granularity. The query range cannot exceed 31 days.
+`hour`: 1-hour granularity. The query period cannot exceed 31 days.
+`day`: 1-day granularity. The query period cannot exceed 31 days.
 
-Currently, data query at 1-minute granularity is not supported if the `Area` field is `overseas`
+Querying 1-minute granularity data is not supported if the `Area` field is `overseas`.
      * @param Interval Time granularity, which can be:
-min: 1-minute. The query range should be less than or equal to 24 hours
-5min: 5-minute. The query range should be less than or equal to 31 days
-hour: 1-hour. The query range should be less than or equal to 31 days
-day: 1-day. The query period should be greater than 31 days
+`min`: 1-minute granularity. The query period cannot exceed 24 hours.
+`5min`: 5-minute granularity. The query range cannot exceed 31 days.
+`hour`: 1-hour granularity. The query period cannot exceed 31 days.
+`day`: 1-day granularity. The query period cannot exceed 31 days.
 
-Currently, data query at 1-minute granularity is not supported if the `Area` field is `overseas`
+Querying 1-minute granularity data is not supported if the `Area` field is `overseas`.
      */
     public void setInterval(String Interval) {
         this.Interval = Interval;

@@ -139,6 +139,26 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create an audit policy for a TencentDB instance by associating an audit rule with the TencentDB instance.
+     * @param req CreateAuditPolicyRequest
+     * @return CreateAuditPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAuditPolicyResponse CreateAuditPolicy(CreateAuditPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAuditPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAuditPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAuditPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (CreateBackup) is used to create a TencentDB instance backup.
      * @param req CreateBackupRequest
      * @return CreateBackupResponse

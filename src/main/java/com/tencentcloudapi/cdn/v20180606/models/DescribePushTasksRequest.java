@@ -76,10 +76,11 @@ You must specify either a task ID or a starting time.
     private String Area;
 
     /**
-    * Specifies a task state for your query:
+    * Queries the status of a specified task
 `fail`: prefetch failed
 `done`: prefetch succeeded
 `process`: prefetch in progress
+`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
     */
     @SerializedName("Status")
     @Expose
@@ -214,28 +215,32 @@ You must specify either a task ID or a starting time.
     }
 
     /**
-     * Get Specifies a task state for your query:
-`fail`: prefetch failed
-`done`: prefetch succeeded
-`process`: prefetch in progress 
-     * @return Status Specifies a task state for your query:
+     * Get Queries the status of a specified task
 `fail`: prefetch failed
 `done`: prefetch succeeded
 `process`: prefetch in progress
+`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server 
+     * @return Status Queries the status of a specified task
+`fail`: prefetch failed
+`done`: prefetch succeeded
+`process`: prefetch in progress
+`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Specifies a task state for your query:
+     * Set Queries the status of a specified task
 `fail`: prefetch failed
 `done`: prefetch succeeded
 `process`: prefetch in progress
-     * @param Status Specifies a task state for your query:
+`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
+     * @param Status Queries the status of a specified task
 `fail`: prefetch failed
 `done`: prefetch succeeded
 `process`: prefetch in progress
+`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
      */
     public void setStatus(String Status) {
         this.Status = Status;
