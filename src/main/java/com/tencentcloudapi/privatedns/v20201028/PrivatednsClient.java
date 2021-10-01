@@ -159,6 +159,26 @@ public class PrivatednsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to get the list of Private DNS accounts.
+     * @param req DescribePrivateDNSAccountListRequest
+     * @return DescribePrivateDNSAccountListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrivateDNSAccountListResponse DescribePrivateDNSAccountList(DescribePrivateDNSAccountListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePrivateDNSAccountListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePrivateDNSAccountListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePrivateDNSAccountList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the private domain information.
      * @param req DescribePrivateZoneRequest
      * @return DescribePrivateZoneResponse
