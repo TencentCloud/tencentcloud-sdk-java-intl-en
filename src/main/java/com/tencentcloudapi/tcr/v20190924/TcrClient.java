@@ -178,4 +178,24 @@ public class TcrClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *This API is used to update instance information.
+     * @param req ModifyInstanceRequest
+     * @return ModifyInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceResponse ModifyInstance(ModifyInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

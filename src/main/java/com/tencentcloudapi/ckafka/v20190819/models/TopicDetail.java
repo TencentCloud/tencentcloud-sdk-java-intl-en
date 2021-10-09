@@ -118,6 +118,14 @@ Note: `null` may be returned for this field, indicating that no valid values can
     private TopicRetentionTimeConfigRsp RetentionTimeConfig;
 
     /**
+    * `0`: normal, `1`: deleted, `2`: deleting
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
      * Get Topic name 
      * @return TopicName Topic name
      */
@@ -341,6 +349,26 @@ Note: `null` may be returned for this field, indicating that no valid values can
         this.RetentionTimeConfig = RetentionTimeConfig;
     }
 
+    /**
+     * Get `0`: normal, `1`: deleted, `2`: deleting
+Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
+     * @return Status `0`: normal, `1`: deleted, `2`: deleting
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set `0`: normal, `1`: deleted, `2`: deleting
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param Status `0`: normal, `1`: deleted, `2`: deleting
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
     public TopicDetail() {
     }
 
@@ -388,6 +416,9 @@ Note: `null` may be returned for this field, indicating that no valid values can
         if (source.RetentionTimeConfig != null) {
             this.RetentionTimeConfig = new TopicRetentionTimeConfigRsp(source.RetentionTimeConfig);
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
     }
 
 
@@ -408,6 +439,7 @@ Note: `null` may be returned for this field, indicating that no valid values can
         this.setParamSimple(map, prefix + "ForwardInterval", this.ForwardInterval);
         this.setParamObj(map, prefix + "Config.", this.Config);
         this.setParamObj(map, prefix + "RetentionTimeConfig.", this.RetentionTimeConfig);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

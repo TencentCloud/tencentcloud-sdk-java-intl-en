@@ -93,6 +93,27 @@ public class ModifyTopicAttributesRequest extends AbstractModel{
     private String CleanUpPolicy;
 
     /**
+    * IP allowlist, which is required if the value of `enableWhileList` is 1.
+    */
+    @SerializedName("IpWhiteList")
+    @Expose
+    private String [] IpWhiteList;
+
+    /**
+    * Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+    */
+    @SerializedName("EnableAclRule")
+    @Expose
+    private Long EnableAclRule;
+
+    /**
+    * Name of the preset ACL rule.
+    */
+    @SerializedName("AclRuleName")
+    @Expose
+    private String AclRuleName;
+
+    /**
      * Get Instance ID. 
      * @return InstanceId Instance ID.
      */
@@ -252,6 +273,54 @@ public class ModifyTopicAttributesRequest extends AbstractModel{
         this.CleanUpPolicy = CleanUpPolicy;
     }
 
+    /**
+     * Get IP allowlist, which is required if the value of `enableWhileList` is 1. 
+     * @return IpWhiteList IP allowlist, which is required if the value of `enableWhileList` is 1.
+     */
+    public String [] getIpWhiteList() {
+        return this.IpWhiteList;
+    }
+
+    /**
+     * Set IP allowlist, which is required if the value of `enableWhileList` is 1.
+     * @param IpWhiteList IP allowlist, which is required if the value of `enableWhileList` is 1.
+     */
+    public void setIpWhiteList(String [] IpWhiteList) {
+        this.IpWhiteList = IpWhiteList;
+    }
+
+    /**
+     * Get Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`. 
+     * @return EnableAclRule Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+     */
+    public Long getEnableAclRule() {
+        return this.EnableAclRule;
+    }
+
+    /**
+     * Set Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+     * @param EnableAclRule Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+     */
+    public void setEnableAclRule(Long EnableAclRule) {
+        this.EnableAclRule = EnableAclRule;
+    }
+
+    /**
+     * Get Name of the preset ACL rule. 
+     * @return AclRuleName Name of the preset ACL rule.
+     */
+    public String getAclRuleName() {
+        return this.AclRuleName;
+    }
+
+    /**
+     * Set Name of the preset ACL rule.
+     * @param AclRuleName Name of the preset ACL rule.
+     */
+    public void setAclRuleName(String AclRuleName) {
+        this.AclRuleName = AclRuleName;
+    }
+
     public ModifyTopicAttributesRequest() {
     }
 
@@ -290,6 +359,18 @@ public class ModifyTopicAttributesRequest extends AbstractModel{
         if (source.CleanUpPolicy != null) {
             this.CleanUpPolicy = new String(source.CleanUpPolicy);
         }
+        if (source.IpWhiteList != null) {
+            this.IpWhiteList = new String[source.IpWhiteList.length];
+            for (int i = 0; i < source.IpWhiteList.length; i++) {
+                this.IpWhiteList[i] = new String(source.IpWhiteList[i]);
+            }
+        }
+        if (source.EnableAclRule != null) {
+            this.EnableAclRule = new Long(source.EnableAclRule);
+        }
+        if (source.AclRuleName != null) {
+            this.AclRuleName = new String(source.AclRuleName);
+        }
     }
 
 
@@ -307,6 +388,9 @@ public class ModifyTopicAttributesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SegmentMs", this.SegmentMs);
         this.setParamSimple(map, prefix + "MaxMessageBytes", this.MaxMessageBytes);
         this.setParamSimple(map, prefix + "CleanUpPolicy", this.CleanUpPolicy);
+        this.setParamArraySimple(map, prefix + "IpWhiteList.", this.IpWhiteList);
+        this.setParamSimple(map, prefix + "EnableAclRule", this.EnableAclRule);
+        this.setParamSimple(map, prefix + "AclRuleName", this.AclRuleName);
 
     }
 }

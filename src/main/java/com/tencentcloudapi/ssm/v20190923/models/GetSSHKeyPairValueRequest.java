@@ -30,7 +30,7 @@ public class GetSSHKeyPairValueRequest extends AbstractModel{
     private String SecretName;
 
     /**
-    * 
+    * ID of the key pair, which is the unique identifier of the key pair in the CVM.
     */
     @SerializedName("SSHKeyId")
     @Expose
@@ -53,16 +53,16 @@ public class GetSSHKeyPairValueRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return SSHKeyId 
+     * Get ID of the key pair, which is the unique identifier of the key pair in the CVM. 
+     * @return SSHKeyId ID of the key pair, which is the unique identifier of the key pair in the CVM.
      */
     public String getSSHKeyId() {
         return this.SSHKeyId;
     }
 
     /**
-     * Set 
-     * @param SSHKeyId 
+     * Set ID of the key pair, which is the unique identifier of the key pair in the CVM.
+     * @param SSHKeyId ID of the key pair, which is the unique identifier of the key pair in the CVM.
      */
     public void setSSHKeyId(String SSHKeyId) {
         this.SSHKeyId = SSHKeyId;

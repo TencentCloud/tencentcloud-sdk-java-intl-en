@@ -219,7 +219,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long ModifyConfigTime;
 
     /**
-    * Connection type
+    * Connection type. `100`: THUNDER connection; `103`: Microsoft connection.
 Note: this field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("ProxyType")
@@ -257,6 +257,14 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     @SerializedName("PackageType")
     @Expose
     private String PackageType;
+
+    /**
+    * Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("BanStatus")
+    @Expose
+    private String BanStatus;
 
     /**
      * Get Connection instance ID; It's an old parameter, please switch to ProxyId.
@@ -743,9 +751,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Connection type
+     * Get Connection type. `100`: THUNDER connection; `103`: Microsoft connection.
 Note: this field may return `null`, indicating that no valid value can be obtained. 
-     * @return ProxyType Connection type
+     * @return ProxyType Connection type. `100`: THUNDER connection; `103`: Microsoft connection.
 Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public Long getProxyType() {
@@ -753,9 +761,9 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Set Connection type
+     * Set Connection type. `100`: THUNDER connection; `103`: Microsoft connection.
 Note: this field may return `null`, indicating that no valid value can be obtained.
-     * @param ProxyType Connection type
+     * @param ProxyType Connection type. `100`: THUNDER connection; `103`: Microsoft connection.
 Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public void setProxyType(Long ProxyType) {
@@ -840,6 +848,26 @@ Note: this field may return `null`, indicating that no valid value can be obtain
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;
+    }
+
+    /**
+     * Get Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
+Note: this field may return `null`, indicating that no valid value can be obtained. 
+     * @return BanStatus Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getBanStatus() {
+        return this.BanStatus;
+    }
+
+    /**
+     * Set Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param BanStatus Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setBanStatus(String BanStatus) {
+        this.BanStatus = BanStatus;
     }
 
     public ProxyInfo() {
@@ -952,6 +980,9 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         if (source.PackageType != null) {
             this.PackageType = new String(source.PackageType);
         }
+        if (source.BanStatus != null) {
+            this.BanStatus = new String(source.BanStatus);
+        }
     }
 
 
@@ -989,6 +1020,7 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
         this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
         this.setParamSimple(map, prefix + "PackageType", this.PackageType);
+        this.setParamSimple(map, prefix + "BanStatus", this.BanStatus);
 
     }
 }

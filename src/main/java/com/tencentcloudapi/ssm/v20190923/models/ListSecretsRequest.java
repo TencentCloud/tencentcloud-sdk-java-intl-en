@@ -81,7 +81,11 @@ The `PendingCreate` and `CreateFailed` status only take effect when `SecretType`
     private Long SecretType;
 
     /**
-    * 
+    * This parameter is valid only when SecretType is `1`.
+ 
+An empty value indicates querying all types of Tencent Cloud service secrets.
+`Mysql`: queries MySQL database credentials.
+`Tdsql-mysql`: queries TDSQL MySQL database credentials.
     */
     @SerializedName("ProductName")
     @Expose
@@ -236,16 +240,32 @@ The `PendingCreate` and `CreateFailed` status only take effect when `SecretType`
     }
 
     /**
-     * Get  
-     * @return ProductName 
+     * Get This parameter is valid only when SecretType is `1`.
+ 
+An empty value indicates querying all types of Tencent Cloud service secrets.
+`Mysql`: queries MySQL database credentials.
+`Tdsql-mysql`: queries TDSQL MySQL database credentials. 
+     * @return ProductName This parameter is valid only when SecretType is `1`.
+ 
+An empty value indicates querying all types of Tencent Cloud service secrets.
+`Mysql`: queries MySQL database credentials.
+`Tdsql-mysql`: queries TDSQL MySQL database credentials.
      */
     public String getProductName() {
         return this.ProductName;
     }
 
     /**
-     * Set 
-     * @param ProductName 
+     * Set This parameter is valid only when SecretType is `1`.
+ 
+An empty value indicates querying all types of Tencent Cloud service secrets.
+`Mysql`: queries MySQL database credentials.
+`Tdsql-mysql`: queries TDSQL MySQL database credentials.
+     * @param ProductName This parameter is valid only when SecretType is `1`.
+ 
+An empty value indicates querying all types of Tencent Cloud service secrets.
+`Mysql`: queries MySQL database credentials.
+`Tdsql-mysql`: queries TDSQL MySQL database credentials.
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;

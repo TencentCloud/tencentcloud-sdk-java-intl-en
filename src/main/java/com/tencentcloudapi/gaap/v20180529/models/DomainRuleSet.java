@@ -182,6 +182,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long DomainStatus;
 
     /**
+    * Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BanStatus")
+    @Expose
+    private String BanStatus;
+
+    /**
      * Get Forwarding rule domain name. 
      * @return Domain Forwarding rule domain name.
      */
@@ -589,6 +597,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.DomainStatus = DomainStatus;
     }
 
+    /**
+     * Get Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return BanStatus Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getBanStatus() {
+        return this.BanStatus;
+    }
+
+    /**
+     * Set Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param BanStatus Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setBanStatus(String BanStatus) {
+        this.BanStatus = BanStatus;
+    }
+
     public DomainRuleSet() {
     }
 
@@ -663,6 +691,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.DomainStatus != null) {
             this.DomainStatus = new Long(source.DomainStatus);
         }
+        if (source.BanStatus != null) {
+            this.BanStatus = new String(source.BanStatus);
+        }
     }
 
 
@@ -689,6 +720,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamArrayObj(map, prefix + "PolyClientCertificateAliasInfo.", this.PolyClientCertificateAliasInfo);
         this.setParamArrayObj(map, prefix + "PolyRealServerCertificateAliasInfo.", this.PolyRealServerCertificateAliasInfo);
         this.setParamSimple(map, prefix + "DomainStatus", this.DomainStatus);
+        this.setParamSimple(map, prefix + "BanStatus", this.BanStatus);
 
     }
 }

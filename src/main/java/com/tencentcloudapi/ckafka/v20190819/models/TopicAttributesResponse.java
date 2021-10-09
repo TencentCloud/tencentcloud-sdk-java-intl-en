@@ -80,6 +80,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private TopicPartitionDO [] Partitions;
 
     /**
+    * Switch of the preset ACL rule. `1`: enable, `0`: disable.
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    */
+    @SerializedName("EnableAclRule")
+    @Expose
+    private Long EnableAclRule;
+
+    /**
+    * Preset ACL rule list.
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AclRuleList")
+    @Expose
+    private AclRule [] AclRuleList;
+
+    /**
      * Get Topic ID 
      * @return TopicId Topic ID
      */
@@ -211,6 +227,46 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.Partitions = Partitions;
     }
 
+    /**
+     * Get Switch of the preset ACL rule. `1`: enable, `0`: disable.
+Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
+     * @return EnableAclRule Switch of the preset ACL rule. `1`: enable, `0`: disable.
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public Long getEnableAclRule() {
+        return this.EnableAclRule;
+    }
+
+    /**
+     * Set Switch of the preset ACL rule. `1`: enable, `0`: disable.
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param EnableAclRule Switch of the preset ACL rule. `1`: enable, `0`: disable.
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public void setEnableAclRule(Long EnableAclRule) {
+        this.EnableAclRule = EnableAclRule;
+    }
+
+    /**
+     * Get Preset ACL rule list.
+Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
+     * @return AclRuleList Preset ACL rule list.
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public AclRule [] getAclRuleList() {
+        return this.AclRuleList;
+    }
+
+    /**
+     * Set Preset ACL rule list.
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param AclRuleList Preset ACL rule list.
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public void setAclRuleList(AclRule [] AclRuleList) {
+        this.AclRuleList = AclRuleList;
+    }
+
     public TopicAttributesResponse() {
     }
 
@@ -249,6 +305,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 this.Partitions[i] = new TopicPartitionDO(source.Partitions[i]);
             }
         }
+        if (source.EnableAclRule != null) {
+            this.EnableAclRule = new Long(source.EnableAclRule);
+        }
+        if (source.AclRuleList != null) {
+            this.AclRuleList = new AclRule[source.AclRuleList.length];
+            for (int i = 0; i < source.AclRuleList.length; i++) {
+                this.AclRuleList[i] = new AclRule(source.AclRuleList[i]);
+            }
+        }
     }
 
 
@@ -264,6 +329,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamArraySimple(map, prefix + "IpWhiteList.", this.IpWhiteList);
         this.setParamObj(map, prefix + "Config.", this.Config);
         this.setParamArrayObj(map, prefix + "Partitions.", this.Partitions);
+        this.setParamSimple(map, prefix + "EnableAclRule", this.EnableAclRule);
+        this.setParamArrayObj(map, prefix + "AclRuleList.", this.AclRuleList);
 
     }
 }

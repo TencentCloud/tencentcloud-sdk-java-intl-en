@@ -107,6 +107,20 @@ public class CreateTopicRequest extends AbstractModel{
     private Long SegmentMs;
 
     /**
+    * Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+    */
+    @SerializedName("EnableAclRule")
+    @Expose
+    private Long EnableAclRule;
+
+    /**
+    * Name of the preset ACL rule.
+    */
+    @SerializedName("AclRuleName")
+    @Expose
+    private String AclRuleName;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -298,6 +312,38 @@ public class CreateTopicRequest extends AbstractModel{
         this.SegmentMs = SegmentMs;
     }
 
+    /**
+     * Get Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`. 
+     * @return EnableAclRule Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+     */
+    public Long getEnableAclRule() {
+        return this.EnableAclRule;
+    }
+
+    /**
+     * Set Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+     * @param EnableAclRule Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+     */
+    public void setEnableAclRule(Long EnableAclRule) {
+        this.EnableAclRule = EnableAclRule;
+    }
+
+    /**
+     * Get Name of the preset ACL rule. 
+     * @return AclRuleName Name of the preset ACL rule.
+     */
+    public String getAclRuleName() {
+        return this.AclRuleName;
+    }
+
+    /**
+     * Set Name of the preset ACL rule.
+     * @param AclRuleName Name of the preset ACL rule.
+     */
+    public void setAclRuleName(String AclRuleName) {
+        this.AclRuleName = AclRuleName;
+    }
+
     public CreateTopicRequest() {
     }
 
@@ -345,6 +391,12 @@ public class CreateTopicRequest extends AbstractModel{
         if (source.SegmentMs != null) {
             this.SegmentMs = new Long(source.SegmentMs);
         }
+        if (source.EnableAclRule != null) {
+            this.EnableAclRule = new Long(source.EnableAclRule);
+        }
+        if (source.AclRuleName != null) {
+            this.AclRuleName = new String(source.AclRuleName);
+        }
     }
 
 
@@ -364,6 +416,8 @@ public class CreateTopicRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "UncleanLeaderElectionEnable", this.UncleanLeaderElectionEnable);
         this.setParamSimple(map, prefix + "RetentionMs", this.RetentionMs);
         this.setParamSimple(map, prefix + "SegmentMs", this.SegmentMs);
+        this.setParamSimple(map, prefix + "EnableAclRule", this.EnableAclRule);
+        this.setParamSimple(map, prefix + "AclRuleName", this.AclRuleName);
 
     }
 }
