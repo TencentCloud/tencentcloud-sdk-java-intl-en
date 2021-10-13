@@ -112,6 +112,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Status;
 
     /**
+    * ID of the application submitted for detection
+    */
+    @SerializedName("BizId")
+    @Expose
+    private Long BizId;
+
+    /**
      * Get Business return code 
      * @return Code Business return code
      */
@@ -323,6 +330,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.Status = Status;
     }
 
+    /**
+     * Get ID of the application submitted for detection 
+     * @return BizId ID of the application submitted for detection
+     */
+    public Long getBizId() {
+        return this.BizId;
+    }
+
+    /**
+     * Set ID of the application submitted for detection
+     * @param BizId ID of the application submitted for detection
+     */
+    public void setBizId(Long BizId) {
+        this.BizId = BizId;
+    }
+
     public DescribeScanResult() {
     }
 
@@ -373,6 +396,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.BizId != null) {
+            this.BizId = new Long(source.BizId);
+        }
     }
 
 
@@ -392,6 +418,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "BizId", this.BizId);
 
     }
 }

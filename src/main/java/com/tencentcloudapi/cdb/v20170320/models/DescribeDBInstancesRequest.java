@@ -212,6 +212,13 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     private String [] TagKeysForSearch;
 
     /**
+    * Financial cage IDs.
+    */
+    @SerializedName("CageIds")
+    @Expose
+    private String [] CageIds;
+
+    /**
      * Get Project ID. You can use the [project list querying API](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) to query the project ID. 
      * @return ProjectId Project ID. You can use the [project list querying API](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) to query the project ID.
      */
@@ -643,6 +650,22 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.TagKeysForSearch = TagKeysForSearch;
     }
 
+    /**
+     * Get Financial cage IDs. 
+     * @return CageIds Financial cage IDs.
+     */
+    public String [] getCageIds() {
+        return this.CageIds;
+    }
+
+    /**
+     * Set Financial cage IDs.
+     * @param CageIds Financial cage IDs.
+     */
+    public void setCageIds(String [] CageIds) {
+        this.CageIds = CageIds;
+    }
+
     public DescribeDBInstancesRequest() {
     }
 
@@ -774,6 +797,12 @@ public class DescribeDBInstancesRequest extends AbstractModel{
                 this.TagKeysForSearch[i] = new String(source.TagKeysForSearch[i]);
             }
         }
+        if (source.CageIds != null) {
+            this.CageIds = new String[source.CageIds.length];
+            for (int i = 0; i < source.CageIds.length; i++) {
+                this.CageIds[i] = new String(source.CageIds[i]);
+            }
+        }
     }
 
 
@@ -808,6 +837,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "WithMaster", this.WithMaster);
         this.setParamArraySimple(map, prefix + "DeployGroupIds.", this.DeployGroupIds);
         this.setParamArraySimple(map, prefix + "TagKeysForSearch.", this.TagKeysForSearch);
+        this.setParamArraySimple(map, prefix + "CageIds.", this.CageIds);
 
     }
 }

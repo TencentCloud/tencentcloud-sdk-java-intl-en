@@ -240,6 +240,13 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     private Long AutoSyncFlag;
 
     /**
+    * Financial cage ID.
+    */
+    @SerializedName("CageId")
+    @Expose
+    private String CageId;
+
+    /**
      * Get Number of instances. Value range: 1-100. Default value: 1. 
      * @return GoodsNum Number of instances. Value range: 1-100. Default value: 1.
      */
@@ -735,6 +742,22 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
         this.AutoSyncFlag = AutoSyncFlag;
     }
 
+    /**
+     * Get Financial cage ID. 
+     * @return CageId Financial cage ID.
+     */
+    public String getCageId() {
+        return this.CageId;
+    }
+
+    /**
+     * Set Financial cage ID.
+     * @param CageId Financial cage ID.
+     */
+    public void setCageId(String CageId) {
+        this.CageId = CageId;
+    }
+
     public CreateDBInstanceHourRequest() {
     }
 
@@ -848,6 +871,9 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
         if (source.AutoSyncFlag != null) {
             this.AutoSyncFlag = new Long(source.AutoSyncFlag);
         }
+        if (source.CageId != null) {
+            this.CageId = new String(source.CageId);
+        }
     }
 
 
@@ -886,6 +912,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceNodes", this.InstanceNodes);
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
         this.setParamSimple(map, prefix + "AutoSyncFlag", this.AutoSyncFlag);
+        this.setParamSimple(map, prefix + "CageId", this.CageId);
 
     }
 }

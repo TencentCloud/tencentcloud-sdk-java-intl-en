@@ -23,56 +23,61 @@ import java.util.HashMap;
 public class UrlSignatureAuthPolicy extends AbstractModel{
 
     /**
-    * [Key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986) status. Valid values:
-<li>Enabled</li>
-<li>Disabled</li>
+    * Whether to enable or disable [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986). Valid values:
+<li>`Enabled`: enable</li>
+<li>`Disabled`: disable</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * The key for generating the signature of [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986)
+    * The key for generating the signature of [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986).
+`EncryptedKey` can contain 8-40 bytes, and cannot contain non-printable characters.
     */
     @SerializedName("EncryptedKey")
     @Expose
     private String EncryptedKey;
 
     /**
-     * Get [Key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986) status. Valid values:
-<li>Enabled</li>
-<li>Disabled</li> 
-     * @return Status [Key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986) status. Valid values:
-<li>Enabled</li>
-<li>Disabled</li>
+     * Get Whether to enable or disable [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986). Valid values:
+<li>`Enabled`: enable</li>
+<li>`Disabled`: disable</li> 
+     * @return Status Whether to enable or disable [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986). Valid values:
+<li>`Enabled`: enable</li>
+<li>`Disabled`: disable</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set [Key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986) status. Valid values:
-<li>Enabled</li>
-<li>Disabled</li>
-     * @param Status [Key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986) status. Valid values:
-<li>Enabled</li>
-<li>Disabled</li>
+     * Set Whether to enable or disable [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986). Valid values:
+<li>`Enabled`: enable</li>
+<li>`Disabled`: disable</li>
+     * @param Status Whether to enable or disable [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986). Valid values:
+<li>`Enabled`: enable</li>
+<li>`Disabled`: disable</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get The key for generating the signature of [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986) 
-     * @return EncryptedKey The key for generating the signature of [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986)
+     * Get The key for generating the signature of [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986).
+`EncryptedKey` can contain 8-40 bytes, and cannot contain non-printable characters. 
+     * @return EncryptedKey The key for generating the signature of [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986).
+`EncryptedKey` can contain 8-40 bytes, and cannot contain non-printable characters.
      */
     public String getEncryptedKey() {
         return this.EncryptedKey;
     }
 
     /**
-     * Set The key for generating the signature of [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986)
-     * @param EncryptedKey The key for generating the signature of [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986)
+     * Set The key for generating the signature of [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986).
+`EncryptedKey` can contain 8-40 bytes, and cannot contain non-printable characters.
+     * @param EncryptedKey The key for generating the signature of [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986).
+`EncryptedKey` can contain 8-40 bytes, and cannot contain non-printable characters.
      */
     public void setEncryptedKey(String EncryptedKey) {
         this.EncryptedKey = EncryptedKey;

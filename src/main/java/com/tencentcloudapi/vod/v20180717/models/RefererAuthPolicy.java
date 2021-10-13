@@ -33,15 +33,16 @@ public class RefererAuthPolicy extends AbstractModel{
 
     /**
     * Referer authentication method. Valid values:
-<li>`Black`: blocklist</li>
-<li>`White`: allowlist</li>
+<li>`Black`: blocklist. Any HTTP request carrying a referer in the `Referers` list will be rejected. </li>
+<li>`White`: allowlist. Only HTTP requests carrying referers in the `Referers` list will be accepted.</li>
+When `Status` is set to `Enabled`, `AuthType` must be specified.
     */
     @SerializedName("AuthType")
     @Expose
     private String AuthType;
 
     /**
-    * List for referer authentication
+    * The list of referers (up to 20). When `Status` is set to `Enabled`, `Referers` cannot be empty. Enter domain names as referers.
     */
     @SerializedName("Referers")
     @Expose
@@ -49,8 +50,9 @@ public class RefererAuthPolicy extends AbstractModel{
 
     /**
     * Whether to allow requests with empty referer to access this domain name. Valid values:
-<li>Yes</li>
-<li>No</li>
+<li>`Yes`</li>
+<li>`No`</li>
+When `Status` is set to `Enabled`, `BlankRefererAllowed` must be specified.
     */
     @SerializedName("BlankRefererAllowed")
     @Expose
@@ -82,11 +84,13 @@ public class RefererAuthPolicy extends AbstractModel{
 
     /**
      * Get Referer authentication method. Valid values:
-<li>`Black`: blocklist</li>
-<li>`White`: allowlist</li> 
+<li>`Black`: blocklist. Any HTTP request carrying a referer in the `Referers` list will be rejected. </li>
+<li>`White`: allowlist. Only HTTP requests carrying referers in the `Referers` list will be accepted.</li>
+When `Status` is set to `Enabled`, `AuthType` must be specified. 
      * @return AuthType Referer authentication method. Valid values:
-<li>`Black`: blocklist</li>
-<li>`White`: allowlist</li>
+<li>`Black`: blocklist. Any HTTP request carrying a referer in the `Referers` list will be rejected. </li>
+<li>`White`: allowlist. Only HTTP requests carrying referers in the `Referers` list will be accepted.</li>
+When `Status` is set to `Enabled`, `AuthType` must be specified.
      */
     public String getAuthType() {
         return this.AuthType;
@@ -94,27 +98,29 @@ public class RefererAuthPolicy extends AbstractModel{
 
     /**
      * Set Referer authentication method. Valid values:
-<li>`Black`: blocklist</li>
-<li>`White`: allowlist</li>
+<li>`Black`: blocklist. Any HTTP request carrying a referer in the `Referers` list will be rejected. </li>
+<li>`White`: allowlist. Only HTTP requests carrying referers in the `Referers` list will be accepted.</li>
+When `Status` is set to `Enabled`, `AuthType` must be specified.
      * @param AuthType Referer authentication method. Valid values:
-<li>`Black`: blocklist</li>
-<li>`White`: allowlist</li>
+<li>`Black`: blocklist. Any HTTP request carrying a referer in the `Referers` list will be rejected. </li>
+<li>`White`: allowlist. Only HTTP requests carrying referers in the `Referers` list will be accepted.</li>
+When `Status` is set to `Enabled`, `AuthType` must be specified.
      */
     public void setAuthType(String AuthType) {
         this.AuthType = AuthType;
     }
 
     /**
-     * Get List for referer authentication 
-     * @return Referers List for referer authentication
+     * Get The list of referers (up to 20). When `Status` is set to `Enabled`, `Referers` cannot be empty. Enter domain names as referers. 
+     * @return Referers The list of referers (up to 20). When `Status` is set to `Enabled`, `Referers` cannot be empty. Enter domain names as referers.
      */
     public String [] getReferers() {
         return this.Referers;
     }
 
     /**
-     * Set List for referer authentication
-     * @param Referers List for referer authentication
+     * Set The list of referers (up to 20). When `Status` is set to `Enabled`, `Referers` cannot be empty. Enter domain names as referers.
+     * @param Referers The list of referers (up to 20). When `Status` is set to `Enabled`, `Referers` cannot be empty. Enter domain names as referers.
      */
     public void setReferers(String [] Referers) {
         this.Referers = Referers;
@@ -122,11 +128,13 @@ public class RefererAuthPolicy extends AbstractModel{
 
     /**
      * Get Whether to allow requests with empty referer to access this domain name. Valid values:
-<li>Yes</li>
-<li>No</li> 
+<li>`Yes`</li>
+<li>`No`</li>
+When `Status` is set to `Enabled`, `BlankRefererAllowed` must be specified. 
      * @return BlankRefererAllowed Whether to allow requests with empty referer to access this domain name. Valid values:
-<li>Yes</li>
-<li>No</li>
+<li>`Yes`</li>
+<li>`No`</li>
+When `Status` is set to `Enabled`, `BlankRefererAllowed` must be specified.
      */
     public String getBlankRefererAllowed() {
         return this.BlankRefererAllowed;
@@ -134,11 +142,13 @@ public class RefererAuthPolicy extends AbstractModel{
 
     /**
      * Set Whether to allow requests with empty referer to access this domain name. Valid values:
-<li>Yes</li>
-<li>No</li>
+<li>`Yes`</li>
+<li>`No`</li>
+When `Status` is set to `Enabled`, `BlankRefererAllowed` must be specified.
      * @param BlankRefererAllowed Whether to allow requests with empty referer to access this domain name. Valid values:
-<li>Yes</li>
-<li>No</li>
+<li>`Yes`</li>
+<li>`No`</li>
+When `Status` is set to `Enabled`, `BlankRefererAllowed` must be specified.
      */
     public void setBlankRefererAllowed(String BlankRefererAllowed) {
         this.BlankRefererAllowed = BlankRefererAllowed;
