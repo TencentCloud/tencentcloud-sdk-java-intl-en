@@ -47,21 +47,32 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
     private String Scene;
 
     /**
-    * Language to be recognized.
+    * Language to recognize
 The language can be automatically recognized or manually specified. Chinese-English mix (`zh`) is selected by default. Mixed characters in English and each supported language can be recognized together.
 Valid values:
-zh\auto\jap\kor\
-spa\fre\ger\por\
-vie\may\rus\ita\
-hol\swe\fin\dan\
-nor\hun\tha\lat\ara
-Value meanings:
-Chinese-English mix, automatic recognition, Japanese, Korean,
-Spanish, French, German, Portuguese,
-Vietnamese, Malay, Russian, Italian,
-Dutch, Swedish, Finnish, Danish,
-Norwegian, Hungarian, Thai, Latin,
-Arabic.
+`zh`: Chinese-English mix
+`zh_rare`: supports letters, digits, rare Chinese characters, Traditional Chinese characters, special characters, etc.
+`auto`
+`mix`: language mix
+`jap`: Japanese
+`kor`: Korean
+`spa`: Spanish
+`fre`: French
+`ger`: German
+`por`: Portuguese
+`vie`: Vietnamese
+`may`: Malay
+`rus`: Russian
+`ita`: Italian
+`hol`: Dutch
+`swe`: Swedish
+`fin`: Finnish
+`dan`: Danish
+`nor`: Norwegian
+`hun`: Hungarian
+`tha`: Thai
+`hi`: Hindi
+`ara`: Arabic
     */
     @SerializedName("LanguageType")
     @Expose
@@ -149,72 +160,116 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
     }
 
     /**
-     * Get Language to be recognized.
+     * Get Language to recognize
 The language can be automatically recognized or manually specified. Chinese-English mix (`zh`) is selected by default. Mixed characters in English and each supported language can be recognized together.
 Valid values:
-zh\auto\jap\kor\
-spa\fre\ger\por\
-vie\may\rus\ita\
-hol\swe\fin\dan\
-nor\hun\tha\lat\ara
-Value meanings:
-Chinese-English mix, automatic recognition, Japanese, Korean,
-Spanish, French, German, Portuguese,
-Vietnamese, Malay, Russian, Italian,
-Dutch, Swedish, Finnish, Danish,
-Norwegian, Hungarian, Thai, Latin,
-Arabic. 
-     * @return LanguageType Language to be recognized.
+`zh`: Chinese-English mix
+`zh_rare`: supports letters, digits, rare Chinese characters, Traditional Chinese characters, special characters, etc.
+`auto`
+`mix`: language mix
+`jap`: Japanese
+`kor`: Korean
+`spa`: Spanish
+`fre`: French
+`ger`: German
+`por`: Portuguese
+`vie`: Vietnamese
+`may`: Malay
+`rus`: Russian
+`ita`: Italian
+`hol`: Dutch
+`swe`: Swedish
+`fin`: Finnish
+`dan`: Danish
+`nor`: Norwegian
+`hun`: Hungarian
+`tha`: Thai
+`hi`: Hindi
+`ara`: Arabic 
+     * @return LanguageType Language to recognize
 The language can be automatically recognized or manually specified. Chinese-English mix (`zh`) is selected by default. Mixed characters in English and each supported language can be recognized together.
 Valid values:
-zh\auto\jap\kor\
-spa\fre\ger\por\
-vie\may\rus\ita\
-hol\swe\fin\dan\
-nor\hun\tha\lat\ara
-Value meanings:
-Chinese-English mix, automatic recognition, Japanese, Korean,
-Spanish, French, German, Portuguese,
-Vietnamese, Malay, Russian, Italian,
-Dutch, Swedish, Finnish, Danish,
-Norwegian, Hungarian, Thai, Latin,
-Arabic.
+`zh`: Chinese-English mix
+`zh_rare`: supports letters, digits, rare Chinese characters, Traditional Chinese characters, special characters, etc.
+`auto`
+`mix`: language mix
+`jap`: Japanese
+`kor`: Korean
+`spa`: Spanish
+`fre`: French
+`ger`: German
+`por`: Portuguese
+`vie`: Vietnamese
+`may`: Malay
+`rus`: Russian
+`ita`: Italian
+`hol`: Dutch
+`swe`: Swedish
+`fin`: Finnish
+`dan`: Danish
+`nor`: Norwegian
+`hun`: Hungarian
+`tha`: Thai
+`hi`: Hindi
+`ara`: Arabic
      */
     public String getLanguageType() {
         return this.LanguageType;
     }
 
     /**
-     * Set Language to be recognized.
+     * Set Language to recognize
 The language can be automatically recognized or manually specified. Chinese-English mix (`zh`) is selected by default. Mixed characters in English and each supported language can be recognized together.
 Valid values:
-zh\auto\jap\kor\
-spa\fre\ger\por\
-vie\may\rus\ita\
-hol\swe\fin\dan\
-nor\hun\tha\lat\ara
-Value meanings:
-Chinese-English mix, automatic recognition, Japanese, Korean,
-Spanish, French, German, Portuguese,
-Vietnamese, Malay, Russian, Italian,
-Dutch, Swedish, Finnish, Danish,
-Norwegian, Hungarian, Thai, Latin,
-Arabic.
-     * @param LanguageType Language to be recognized.
+`zh`: Chinese-English mix
+`zh_rare`: supports letters, digits, rare Chinese characters, Traditional Chinese characters, special characters, etc.
+`auto`
+`mix`: language mix
+`jap`: Japanese
+`kor`: Korean
+`spa`: Spanish
+`fre`: French
+`ger`: German
+`por`: Portuguese
+`vie`: Vietnamese
+`may`: Malay
+`rus`: Russian
+`ita`: Italian
+`hol`: Dutch
+`swe`: Swedish
+`fin`: Finnish
+`dan`: Danish
+`nor`: Norwegian
+`hun`: Hungarian
+`tha`: Thai
+`hi`: Hindi
+`ara`: Arabic
+     * @param LanguageType Language to recognize
 The language can be automatically recognized or manually specified. Chinese-English mix (`zh`) is selected by default. Mixed characters in English and each supported language can be recognized together.
 Valid values:
-zh\auto\jap\kor\
-spa\fre\ger\por\
-vie\may\rus\ita\
-hol\swe\fin\dan\
-nor\hun\tha\lat\ara
-Value meanings:
-Chinese-English mix, automatic recognition, Japanese, Korean,
-Spanish, French, German, Portuguese,
-Vietnamese, Malay, Russian, Italian,
-Dutch, Swedish, Finnish, Danish,
-Norwegian, Hungarian, Thai, Latin,
-Arabic.
+`zh`: Chinese-English mix
+`zh_rare`: supports letters, digits, rare Chinese characters, Traditional Chinese characters, special characters, etc.
+`auto`
+`mix`: language mix
+`jap`: Japanese
+`kor`: Korean
+`spa`: Spanish
+`fre`: French
+`ger`: German
+`por`: Portuguese
+`vie`: Vietnamese
+`may`: Malay
+`rus`: Russian
+`ita`: Italian
+`hol`: Dutch
+`swe`: Swedish
+`fin`: Finnish
+`dan`: Danish
+`nor`: Norwegian
+`hun`: Hungarian
+`tha`: Thai
+`hi`: Hindi
+`ara`: Arabic
      */
     public void setLanguageType(String LanguageType) {
         this.LanguageType = LanguageType;

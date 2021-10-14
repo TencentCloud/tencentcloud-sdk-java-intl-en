@@ -231,7 +231,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long SortRule;
 
     /**
-    * Distributed index information of table
+    * Information about global indexes, table caching, or data subscription
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("DbClusterInfoStruct")
     @Expose
@@ -758,16 +759,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Distributed index information of table 
-     * @return DbClusterInfoStruct Distributed index information of table
+     * Get Information about global indexes, table caching, or data subscription
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return DbClusterInfoStruct Information about global indexes, table caching, or data subscription
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getDbClusterInfoStruct() {
         return this.DbClusterInfoStruct;
     }
 
     /**
-     * Set Distributed index information of table
-     * @param DbClusterInfoStruct Distributed index information of table
+     * Set Information about global indexes, table caching, or data subscription
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param DbClusterInfoStruct Information about global indexes, table caching, or data subscription
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setDbClusterInfoStruct(String DbClusterInfoStruct) {
         this.DbClusterInfoStruct = DbClusterInfoStruct;

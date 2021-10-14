@@ -93,6 +93,13 @@ public class CreateClusterRequest extends AbstractModel{
     private Long ClusterType;
 
     /**
+    * Authentication type. Valid values: `0` (static password), `1` (signature)
+    */
+    @SerializedName("AuthType")
+    @Expose
+    private Long AuthType;
+
+    /**
      * Get Cluster data description language type, such as `PROTO`, `TDR`, or `MIX` 
      * @return IdlType Cluster data description language type, such as `PROTO`, `TDR`, or `MIX`
      */
@@ -252,6 +259,22 @@ public class CreateClusterRequest extends AbstractModel{
         this.ClusterType = ClusterType;
     }
 
+    /**
+     * Get Authentication type. Valid values: `0` (static password), `1` (signature) 
+     * @return AuthType Authentication type. Valid values: `0` (static password), `1` (signature)
+     */
+    public Long getAuthType() {
+        return this.AuthType;
+    }
+
+    /**
+     * Set Authentication type. Valid values: `0` (static password), `1` (signature)
+     * @param AuthType Authentication type. Valid values: `0` (static password), `1` (signature)
+     */
+    public void setAuthType(Long AuthType) {
+        this.AuthType = AuthType;
+    }
+
     public CreateClusterRequest() {
     }
 
@@ -299,6 +322,9 @@ public class CreateClusterRequest extends AbstractModel{
         if (source.ClusterType != null) {
             this.ClusterType = new Long(source.ClusterType);
         }
+        if (source.AuthType != null) {
+            this.AuthType = new Long(source.AuthType);
+        }
     }
 
 
@@ -316,6 +342,7 @@ public class CreateClusterRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "ServerList.", this.ServerList);
         this.setParamArrayObj(map, prefix + "ProxyList.", this.ProxyList);
         this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
+        this.setParamSimple(map, prefix + "AuthType", this.AuthType);
 
     }
 }

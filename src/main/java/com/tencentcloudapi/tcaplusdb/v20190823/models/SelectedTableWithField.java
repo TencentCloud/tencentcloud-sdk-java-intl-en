@@ -58,7 +58,7 @@ public class SelectedTableWithField extends AbstractModel{
     private String TableType;
 
     /**
-    * The list of fields on which indexes need to be created
+    * The list of fields on which indexes will be created, table caching enabled, or data subscription enabled
     */
     @SerializedName("SelectedFields")
     @Expose
@@ -70,6 +70,13 @@ public class SelectedTableWithField extends AbstractModel{
     @SerializedName("ShardNum")
     @Expose
     private Long ShardNum;
+
+    /**
+    * CKafka instance information
+    */
+    @SerializedName("KafkaInfo")
+    @Expose
+    private KafkaInfo KafkaInfo;
 
     /**
      * Get ID of the table group where the table resides 
@@ -152,16 +159,16 @@ public class SelectedTableWithField extends AbstractModel{
     }
 
     /**
-     * Get The list of fields on which indexes need to be created 
-     * @return SelectedFields The list of fields on which indexes need to be created
+     * Get The list of fields on which indexes will be created, table caching enabled, or data subscription enabled 
+     * @return SelectedFields The list of fields on which indexes will be created, table caching enabled, or data subscription enabled
      */
     public FieldInfo [] getSelectedFields() {
         return this.SelectedFields;
     }
 
     /**
-     * Set The list of fields on which indexes need to be created
-     * @param SelectedFields The list of fields on which indexes need to be created
+     * Set The list of fields on which indexes will be created, table caching enabled, or data subscription enabled
+     * @param SelectedFields The list of fields on which indexes will be created, table caching enabled, or data subscription enabled
      */
     public void setSelectedFields(FieldInfo [] SelectedFields) {
         this.SelectedFields = SelectedFields;
@@ -181,6 +188,22 @@ public class SelectedTableWithField extends AbstractModel{
      */
     public void setShardNum(Long ShardNum) {
         this.ShardNum = ShardNum;
+    }
+
+    /**
+     * Get CKafka instance information 
+     * @return KafkaInfo CKafka instance information
+     */
+    public KafkaInfo getKafkaInfo() {
+        return this.KafkaInfo;
+    }
+
+    /**
+     * Set CKafka instance information
+     * @param KafkaInfo CKafka instance information
+     */
+    public void setKafkaInfo(KafkaInfo KafkaInfo) {
+        this.KafkaInfo = KafkaInfo;
     }
 
     public SelectedTableWithField() {
@@ -215,6 +238,9 @@ public class SelectedTableWithField extends AbstractModel{
         if (source.ShardNum != null) {
             this.ShardNum = new Long(source.ShardNum);
         }
+        if (source.KafkaInfo != null) {
+            this.KafkaInfo = new KafkaInfo(source.KafkaInfo);
+        }
     }
 
 
@@ -229,6 +255,7 @@ public class SelectedTableWithField extends AbstractModel{
         this.setParamSimple(map, prefix + "TableType", this.TableType);
         this.setParamArrayObj(map, prefix + "SelectedFields.", this.SelectedFields);
         this.setParamSimple(map, prefix + "ShardNum", this.ShardNum);
+        this.setParamObj(map, prefix + "KafkaInfo.", this.KafkaInfo);
 
     }
 }

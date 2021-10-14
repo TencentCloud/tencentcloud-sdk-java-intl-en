@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class Backup extends AbstractModel{
 
     /**
-    * Filename
+    * File name. The name of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * File size in KB
+    * File size in KB. The size of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
     */
     @SerializedName("Size")
     @Expose
@@ -51,21 +51,21 @@ public class Backup extends AbstractModel{
     private String EndTime;
 
     /**
-    * Download address for private network
+    * Private network download address. The download address of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
     */
     @SerializedName("InternalAddr")
     @Expose
     private String InternalAddr;
 
     /**
-    * Download address for public network
+    * Public network download address. The download address of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
     */
     @SerializedName("ExternalAddr")
     @Expose
     private String ExternalAddr;
 
     /**
-    * Unique ID of backup file, which will be used by the `RestoreInstance` API
+    * Unique ID of a backup file, which is used by the `RestoreInstance` API. The unique ID of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
     */
     @SerializedName("Id")
     @Expose
@@ -100,39 +100,46 @@ public class Backup extends AbstractModel{
     private Long BackupWay;
 
     /**
-    * Backup name, which can be customized.
+    * Backup task name (customizable)
     */
     @SerializedName("BackupName")
     @Expose
     private String BackupName;
 
     /**
-     * Get Filename 
-     * @return FileName Filename
+    * Group ID of unarchived backup files, which can be used as a request parameter in the `DescribeBackupFiles` API to get details of unarchived backup files in the specified group. This parameter is invalid for archived backup files.
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
+
+    /**
+     * Get File name. The name of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter. 
+     * @return FileName File name. The name of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set Filename
-     * @param FileName Filename
+     * Set File name. The name of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
+     * @param FileName File name. The name of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get File size in KB 
-     * @return Size File size in KB
+     * Get File size in KB. The size of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter. 
+     * @return Size File size in KB. The size of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set File size in KB
-     * @param Size File size in KB
+     * Set File size in KB. The size of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
+     * @param Size File size in KB. The size of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
      */
     public void setSize(Long Size) {
         this.Size = Size;
@@ -171,48 +178,48 @@ public class Backup extends AbstractModel{
     }
 
     /**
-     * Get Download address for private network 
-     * @return InternalAddr Download address for private network
+     * Get Private network download address. The download address of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter. 
+     * @return InternalAddr Private network download address. The download address of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
      */
     public String getInternalAddr() {
         return this.InternalAddr;
     }
 
     /**
-     * Set Download address for private network
-     * @param InternalAddr Download address for private network
+     * Set Private network download address. The download address of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
+     * @param InternalAddr Private network download address. The download address of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
      */
     public void setInternalAddr(String InternalAddr) {
         this.InternalAddr = InternalAddr;
     }
 
     /**
-     * Get Download address for public network 
-     * @return ExternalAddr Download address for public network
+     * Get Public network download address. The download address of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter. 
+     * @return ExternalAddr Public network download address. The download address of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
      */
     public String getExternalAddr() {
         return this.ExternalAddr;
     }
 
     /**
-     * Set Download address for public network
-     * @param ExternalAddr Download address for public network
+     * Set Public network download address. The download address of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
+     * @param ExternalAddr Public network download address. The download address of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
      */
     public void setExternalAddr(String ExternalAddr) {
         this.ExternalAddr = ExternalAddr;
     }
 
     /**
-     * Get Unique ID of backup file, which will be used by the `RestoreInstance` API 
-     * @return Id Unique ID of backup file, which will be used by the `RestoreInstance` API
+     * Get Unique ID of a backup file, which is used by the `RestoreInstance` API. The unique ID of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter. 
+     * @return Id Unique ID of a backup file, which is used by the `RestoreInstance` API. The unique ID of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set Unique ID of backup file, which will be used by the `RestoreInstance` API
-     * @param Id Unique ID of backup file, which will be used by the `RestoreInstance` API
+     * Set Unique ID of a backup file, which is used by the `RestoreInstance` API. The unique ID of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
+     * @param Id Unique ID of a backup file, which is used by the `RestoreInstance` API. The unique ID of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
      */
     public void setId(Long Id) {
         this.Id = Id;
@@ -283,19 +290,35 @@ public class Backup extends AbstractModel{
     }
 
     /**
-     * Get Backup name, which can be customized. 
-     * @return BackupName Backup name, which can be customized.
+     * Get Backup task name (customizable) 
+     * @return BackupName Backup task name (customizable)
      */
     public String getBackupName() {
         return this.BackupName;
     }
 
     /**
-     * Set Backup name, which can be customized.
-     * @param BackupName Backup name, which can be customized.
+     * Set Backup task name (customizable)
+     * @param BackupName Backup task name (customizable)
      */
     public void setBackupName(String BackupName) {
         this.BackupName = BackupName;
+    }
+
+    /**
+     * Get Group ID of unarchived backup files, which can be used as a request parameter in the `DescribeBackupFiles` API to get details of unarchived backup files in the specified group. This parameter is invalid for archived backup files. 
+     * @return GroupId Group ID of unarchived backup files, which can be used as a request parameter in the `DescribeBackupFiles` API to get details of unarchived backup files in the specified group. This parameter is invalid for archived backup files.
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set Group ID of unarchived backup files, which can be used as a request parameter in the `DescribeBackupFiles` API to get details of unarchived backup files in the specified group. This parameter is invalid for archived backup files.
+     * @param GroupId Group ID of unarchived backup files, which can be used as a request parameter in the `DescribeBackupFiles` API to get details of unarchived backup files in the specified group. This parameter is invalid for archived backup files.
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
     }
 
     public Backup() {
@@ -345,6 +368,9 @@ public class Backup extends AbstractModel{
         if (source.BackupName != null) {
             this.BackupName = new String(source.BackupName);
         }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
     }
 
 
@@ -364,6 +390,7 @@ public class Backup extends AbstractModel{
         this.setParamSimple(map, prefix + "Strategy", this.Strategy);
         this.setParamSimple(map, prefix + "BackupWay", this.BackupWay);
         this.setParamSimple(map, prefix + "BackupName", this.BackupName);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 
     }
 }

@@ -27,6 +27,9 @@ public enum OcrErrorCode {
     // Not a Hong Kong identity card.
      FAILEDOPERATION_NOHKIDCARD("FailedOperation.NoHKIDCard"),
      
+    // Non-Malaysian ID cards
+     FAILEDOPERATION_NOMASIDCARD("FailedOperation.NoMASIDCard"),
+     
     // Not a passport.
      FAILEDOPERATION_NOPASSPORT("FailedOperation.NoPassport"),
      

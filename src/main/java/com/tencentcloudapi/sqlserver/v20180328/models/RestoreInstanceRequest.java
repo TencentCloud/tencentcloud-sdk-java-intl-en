@@ -51,6 +51,13 @@ public class RestoreInstanceRequest extends AbstractModel{
     private RenameRestoreDatabase [] RenameRestore;
 
     /**
+    * Group ID of unarchived backup files grouped by backup task. This parameter is returned by the [DescribeBackups](https://intl.cloud.tencent.com/document/product/238/19943?from_cn_redirect=1) API.
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
+
+    /**
      * Get Instance ID in the format of mssql-j8kv137v 
      * @return InstanceId Instance ID in the format of mssql-j8kv137v
      */
@@ -114,6 +121,22 @@ public class RestoreInstanceRequest extends AbstractModel{
         this.RenameRestore = RenameRestore;
     }
 
+    /**
+     * Get Group ID of unarchived backup files grouped by backup task. This parameter is returned by the [DescribeBackups](https://intl.cloud.tencent.com/document/product/238/19943?from_cn_redirect=1) API. 
+     * @return GroupId Group ID of unarchived backup files grouped by backup task. This parameter is returned by the [DescribeBackups](https://intl.cloud.tencent.com/document/product/238/19943?from_cn_redirect=1) API.
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set Group ID of unarchived backup files grouped by backup task. This parameter is returned by the [DescribeBackups](https://intl.cloud.tencent.com/document/product/238/19943?from_cn_redirect=1) API.
+     * @param GroupId Group ID of unarchived backup files grouped by backup task. This parameter is returned by the [DescribeBackups](https://intl.cloud.tencent.com/document/product/238/19943?from_cn_redirect=1) API.
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
+    }
+
     public RestoreInstanceRequest() {
     }
 
@@ -137,6 +160,9 @@ public class RestoreInstanceRequest extends AbstractModel{
                 this.RenameRestore[i] = new RenameRestoreDatabase(source.RenameRestore[i]);
             }
         }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
     }
 
 
@@ -148,6 +174,7 @@ public class RestoreInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BackupId", this.BackupId);
         this.setParamSimple(map, prefix + "TargetInstanceId", this.TargetInstanceId);
         this.setParamArrayObj(map, prefix + "RenameRestore.", this.RenameRestore);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 
     }
 }

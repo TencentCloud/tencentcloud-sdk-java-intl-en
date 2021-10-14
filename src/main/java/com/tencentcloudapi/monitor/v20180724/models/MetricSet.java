@@ -79,6 +79,22 @@ public class MetricSet extends AbstractModel{
     private DimensionsDesc [] Dimensions;
 
     /**
+    * Metric name (in Chinese).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MetricCName")
+    @Expose
+    private String MetricCName;
+
+    /**
+    * Metric name (in English).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MetricEName")
+    @Expose
+    private String MetricEName;
+
+    /**
      * Get Namespace. Each Tencent Cloud product has a namespace 
      * @return Namespace Namespace. Each Tencent Cloud product has a namespace
      */
@@ -206,6 +222,46 @@ public class MetricSet extends AbstractModel{
         this.Dimensions = Dimensions;
     }
 
+    /**
+     * Get Metric name (in Chinese).
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return MetricCName Metric name (in Chinese).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getMetricCName() {
+        return this.MetricCName;
+    }
+
+    /**
+     * Set Metric name (in Chinese).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param MetricCName Metric name (in Chinese).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setMetricCName(String MetricCName) {
+        this.MetricCName = MetricCName;
+    }
+
+    /**
+     * Get Metric name (in English).
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return MetricEName Metric name (in English).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getMetricEName() {
+        return this.MetricEName;
+    }
+
+    /**
+     * Set Metric name (in English).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param MetricEName Metric name (in English).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setMetricEName(String MetricEName) {
+        this.MetricEName = MetricEName;
+    }
+
     public MetricSet() {
     }
 
@@ -247,6 +303,12 @@ public class MetricSet extends AbstractModel{
                 this.Dimensions[i] = new DimensionsDesc(source.Dimensions[i]);
             }
         }
+        if (source.MetricCName != null) {
+            this.MetricCName = new String(source.MetricCName);
+        }
+        if (source.MetricEName != null) {
+            this.MetricEName = new String(source.MetricEName);
+        }
     }
 
 
@@ -262,6 +324,8 @@ public class MetricSet extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Periods.", this.Periods);
         this.setParamObj(map, prefix + "Meaning.", this.Meaning);
         this.setParamArrayObj(map, prefix + "Dimensions.", this.Dimensions);
+        this.setParamSimple(map, prefix + "MetricCName", this.MetricCName);
+        this.setParamSimple(map, prefix + "MetricEName", this.MetricEName);
 
     }
 }

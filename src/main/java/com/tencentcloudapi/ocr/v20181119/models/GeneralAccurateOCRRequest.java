@@ -48,6 +48,13 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
     private Boolean IsWords;
 
     /**
+    * Whether to slice the input image to enhance the recognition effects for scenarios where the whole image is big, but the size of a single character is small (e.g., test papers). This feature is disabled by default.
+    */
+    @SerializedName("EnableDetectSplit")
+    @Expose
+    private Boolean EnableDetectSplit;
+
+    /**
      * Get Base64-encoded value of image.
 The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
 Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used. 
@@ -111,6 +118,22 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
         this.IsWords = IsWords;
     }
 
+    /**
+     * Get Whether to slice the input image to enhance the recognition effects for scenarios where the whole image is big, but the size of a single character is small (e.g., test papers). This feature is disabled by default. 
+     * @return EnableDetectSplit Whether to slice the input image to enhance the recognition effects for scenarios where the whole image is big, but the size of a single character is small (e.g., test papers). This feature is disabled by default.
+     */
+    public Boolean getEnableDetectSplit() {
+        return this.EnableDetectSplit;
+    }
+
+    /**
+     * Set Whether to slice the input image to enhance the recognition effects for scenarios where the whole image is big, but the size of a single character is small (e.g., test papers). This feature is disabled by default.
+     * @param EnableDetectSplit Whether to slice the input image to enhance the recognition effects for scenarios where the whole image is big, but the size of a single character is small (e.g., test papers). This feature is disabled by default.
+     */
+    public void setEnableDetectSplit(Boolean EnableDetectSplit) {
+        this.EnableDetectSplit = EnableDetectSplit;
+    }
+
     public GeneralAccurateOCRRequest() {
     }
 
@@ -128,6 +151,9 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
         if (source.IsWords != null) {
             this.IsWords = new Boolean(source.IsWords);
         }
+        if (source.EnableDetectSplit != null) {
+            this.EnableDetectSplit = new Boolean(source.EnableDetectSplit);
+        }
     }
 
 
@@ -138,6 +164,7 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamSimple(map, prefix + "IsWords", this.IsWords);
+        this.setParamSimple(map, prefix + "EnableDetectSplit", this.EnableDetectSplit);
 
     }
 }

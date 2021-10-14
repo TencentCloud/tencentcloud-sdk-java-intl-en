@@ -339,6 +339,26 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the list of unarchived database backup files.
+     * @param req DescribeBackupFilesRequest
+     * @return DescribeBackupFilesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupFilesResponse DescribeBackupFiles(DescribeBackupFilesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupFilesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupFilesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackupFiles");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create an incremental backup import task.
      * @param req DescribeBackupMigrationRequest
      * @return DescribeBackupMigrationResponse

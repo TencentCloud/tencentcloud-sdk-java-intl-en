@@ -89,7 +89,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
     * Image quality value, which is returned when `EnableQualityValue` is set to `true`. The smaller the value, the less clear the image is. Value range: 0−100 (a threshold greater than or equal to 50 is recommended.)
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("QualityValue")
     @Expose
@@ -268,9 +268,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Image quality value, which is returned when `EnableQualityValue` is set to `true`. The smaller the value, the less clear the image is. Value range: 0−100 (a threshold greater than or equal to 50 is recommended.)
-Note: this field may return `null`, indicating that no valid value is obtained. 
+Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return QualityValue Image quality value, which is returned when `EnableQualityValue` is set to `true`. The smaller the value, the less clear the image is. Value range: 0−100 (a threshold greater than or equal to 50 is recommended.)
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getQualityValue() {
         return this.QualityValue;
@@ -278,9 +278,9 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 
     /**
      * Set Image quality value, which is returned when `EnableQualityValue` is set to `true`. The smaller the value, the less clear the image is. Value range: 0−100 (a threshold greater than or equal to 50 is recommended.)
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param QualityValue Image quality value, which is returned when `EnableQualityValue` is set to `true`. The smaller the value, the less clear the image is. Value range: 0−100 (a threshold greater than or equal to 50 is recommended.)
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setQualityValue(Long QualityValue) {
         this.QualityValue = QualityValue;

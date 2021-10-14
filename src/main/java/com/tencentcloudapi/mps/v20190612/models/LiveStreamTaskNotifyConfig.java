@@ -51,6 +51,20 @@ public class LiveStreamTaskNotifyConfig extends AbstractModel{
     private String TopicName;
 
     /**
+    * Notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+    */
+    @SerializedName("NotifyType")
+    @Expose
+    private String NotifyType;
+
+    /**
+    * HTTP callback URL, required if `NotifyType` is set to `URL`
+    */
+    @SerializedName("NotifyUrl")
+    @Expose
+    private String NotifyUrl;
+
+    /**
      * Get CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported. 
      * @return CmqModel CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
      */
@@ -114,6 +128,38 @@ public class LiveStreamTaskNotifyConfig extends AbstractModel{
         this.TopicName = TopicName;
     }
 
+    /**
+     * Get Notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. 
+     * @return NotifyType Notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+     */
+    public String getNotifyType() {
+        return this.NotifyType;
+    }
+
+    /**
+     * Set Notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+     * @param NotifyType Notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+     */
+    public void setNotifyType(String NotifyType) {
+        this.NotifyType = NotifyType;
+    }
+
+    /**
+     * Get HTTP callback URL, required if `NotifyType` is set to `URL` 
+     * @return NotifyUrl HTTP callback URL, required if `NotifyType` is set to `URL`
+     */
+    public String getNotifyUrl() {
+        return this.NotifyUrl;
+    }
+
+    /**
+     * Set HTTP callback URL, required if `NotifyType` is set to `URL`
+     * @param NotifyUrl HTTP callback URL, required if `NotifyType` is set to `URL`
+     */
+    public void setNotifyUrl(String NotifyUrl) {
+        this.NotifyUrl = NotifyUrl;
+    }
+
     public LiveStreamTaskNotifyConfig() {
     }
 
@@ -134,6 +180,12 @@ public class LiveStreamTaskNotifyConfig extends AbstractModel{
         if (source.TopicName != null) {
             this.TopicName = new String(source.TopicName);
         }
+        if (source.NotifyType != null) {
+            this.NotifyType = new String(source.NotifyType);
+        }
+        if (source.NotifyUrl != null) {
+            this.NotifyUrl = new String(source.NotifyUrl);
+        }
     }
 
 
@@ -145,6 +197,8 @@ public class LiveStreamTaskNotifyConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "CmqRegion", this.CmqRegion);
         this.setParamSimple(map, prefix + "QueueName", this.QueueName);
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
+        this.setParamSimple(map, prefix + "NotifyType", this.NotifyType);
+        this.setParamSimple(map, prefix + "NotifyUrl", this.NotifyUrl);
 
     }
 }

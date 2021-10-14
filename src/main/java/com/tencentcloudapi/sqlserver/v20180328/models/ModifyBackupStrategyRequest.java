@@ -51,6 +51,13 @@ public class ModifyBackupStrategyRequest extends AbstractModel{
     private Long BackupDay;
 
     /**
+    * Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node), `slave_no_pkg` (do not archive the backup files of the replica node). Backup files of the replica node are supported only when Always On disaster recovery is enabled.
+    */
+    @SerializedName("BackupModel")
+    @Expose
+    private String BackupModel;
+
+    /**
      * Get Instance ID. 
      * @return InstanceId Instance ID.
      */
@@ -114,6 +121,22 @@ public class ModifyBackupStrategyRequest extends AbstractModel{
         this.BackupDay = BackupDay;
     }
 
+    /**
+     * Get Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node), `slave_no_pkg` (do not archive the backup files of the replica node). Backup files of the replica node are supported only when Always On disaster recovery is enabled. 
+     * @return BackupModel Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node), `slave_no_pkg` (do not archive the backup files of the replica node). Backup files of the replica node are supported only when Always On disaster recovery is enabled.
+     */
+    public String getBackupModel() {
+        return this.BackupModel;
+    }
+
+    /**
+     * Set Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node), `slave_no_pkg` (do not archive the backup files of the replica node). Backup files of the replica node are supported only when Always On disaster recovery is enabled.
+     * @param BackupModel Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node), `slave_no_pkg` (do not archive the backup files of the replica node). Backup files of the replica node are supported only when Always On disaster recovery is enabled.
+     */
+    public void setBackupModel(String BackupModel) {
+        this.BackupModel = BackupModel;
+    }
+
     public ModifyBackupStrategyRequest() {
     }
 
@@ -134,6 +157,9 @@ public class ModifyBackupStrategyRequest extends AbstractModel{
         if (source.BackupDay != null) {
             this.BackupDay = new Long(source.BackupDay);
         }
+        if (source.BackupModel != null) {
+            this.BackupModel = new String(source.BackupModel);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class ModifyBackupStrategyRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BackupType", this.BackupType);
         this.setParamSimple(map, prefix + "BackupTime", this.BackupTime);
         this.setParamSimple(map, prefix + "BackupDay", this.BackupDay);
+        this.setParamSimple(map, prefix + "BackupModel", this.BackupModel);
 
     }
 }

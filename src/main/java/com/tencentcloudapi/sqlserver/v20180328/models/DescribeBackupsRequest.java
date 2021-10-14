@@ -93,6 +93,13 @@ public class DescribeBackupsRequest extends AbstractModel{
     private String DatabaseName;
 
     /**
+    * Whether to group backup files by backup task. Valid value: `0` (no), `1` (yes). Default value: `0`. This parameter is valid only for unarchived backup files.
+    */
+    @SerializedName("Group")
+    @Expose
+    private Long Group;
+
+    /**
      * Get Start name (yyyy-MM-dd HH:mm:ss) 
      * @return StartTime Start name (yyyy-MM-dd HH:mm:ss)
      */
@@ -252,6 +259,22 @@ public class DescribeBackupsRequest extends AbstractModel{
         this.DatabaseName = DatabaseName;
     }
 
+    /**
+     * Get Whether to group backup files by backup task. Valid value: `0` (no), `1` (yes). Default value: `0`. This parameter is valid only for unarchived backup files. 
+     * @return Group Whether to group backup files by backup task. Valid value: `0` (no), `1` (yes). Default value: `0`. This parameter is valid only for unarchived backup files.
+     */
+    public Long getGroup() {
+        return this.Group;
+    }
+
+    /**
+     * Set Whether to group backup files by backup task. Valid value: `0` (no), `1` (yes). Default value: `0`. This parameter is valid only for unarchived backup files.
+     * @param Group Whether to group backup files by backup task. Valid value: `0` (no), `1` (yes). Default value: `0`. This parameter is valid only for unarchived backup files.
+     */
+    public void setGroup(Long Group) {
+        this.Group = Group;
+    }
+
     public DescribeBackupsRequest() {
     }
 
@@ -290,6 +313,9 @@ public class DescribeBackupsRequest extends AbstractModel{
         if (source.DatabaseName != null) {
             this.DatabaseName = new String(source.DatabaseName);
         }
+        if (source.Group != null) {
+            this.Group = new Long(source.Group);
+        }
     }
 
 
@@ -307,6 +333,7 @@ public class DescribeBackupsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BackupWay", this.BackupWay);
         this.setParamSimple(map, prefix + "BackupId", this.BackupId);
         this.setParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
+        this.setParamSimple(map, prefix + "Group", this.Group);
 
     }
 }

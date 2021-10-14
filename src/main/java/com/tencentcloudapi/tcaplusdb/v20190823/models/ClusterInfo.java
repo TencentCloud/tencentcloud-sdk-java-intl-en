@@ -201,6 +201,22 @@ Note: `null` may be returned for this field, indicating that no valid values can
     private String [] DbaUins;
 
     /**
+    * Whether data subscription is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DataFlowStatus")
+    @Expose
+    private Long DataFlowStatus;
+
+    /**
+    * CKafka information when data subscription is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("KafkaInfo")
+    @Expose
+    private KafkaInfo KafkaInfo;
+
+    /**
      * Get Cluster name 
      * @return ClusterName Cluster name
      */
@@ -624,6 +640,46 @@ Note: `null` may be returned for this field, indicating that no valid values can
         this.DbaUins = DbaUins;
     }
 
+    /**
+     * Get Whether data subscription is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return DataFlowStatus Whether data subscription is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getDataFlowStatus() {
+        return this.DataFlowStatus;
+    }
+
+    /**
+     * Set Whether data subscription is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param DataFlowStatus Whether data subscription is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setDataFlowStatus(Long DataFlowStatus) {
+        this.DataFlowStatus = DataFlowStatus;
+    }
+
+    /**
+     * Get CKafka information when data subscription is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return KafkaInfo CKafka information when data subscription is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public KafkaInfo getKafkaInfo() {
+        return this.KafkaInfo;
+    }
+
+    /**
+     * Set CKafka information when data subscription is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param KafkaInfo CKafka information when data subscription is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setKafkaInfo(KafkaInfo KafkaInfo) {
+        this.KafkaInfo = KafkaInfo;
+    }
+
     public ClusterInfo() {
     }
 
@@ -713,6 +769,12 @@ Note: `null` may be returned for this field, indicating that no valid values can
                 this.DbaUins[i] = new String(source.DbaUins[i]);
             }
         }
+        if (source.DataFlowStatus != null) {
+            this.DataFlowStatus = new Long(source.DataFlowStatus);
+        }
+        if (source.KafkaInfo != null) {
+            this.KafkaInfo = new KafkaInfo(source.KafkaInfo);
+        }
     }
 
 
@@ -744,6 +806,8 @@ Note: `null` may be returned for this field, indicating that no valid values can
         this.setParamArrayObj(map, prefix + "ProxyList.", this.ProxyList);
         this.setParamSimple(map, prefix + "Censorship", this.Censorship);
         this.setParamArraySimple(map, prefix + "DbaUins.", this.DbaUins);
+        this.setParamSimple(map, prefix + "DataFlowStatus", this.DataFlowStatus);
+        this.setParamObj(map, prefix + "KafkaInfo.", this.KafkaInfo);
 
     }
 }

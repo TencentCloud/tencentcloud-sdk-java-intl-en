@@ -239,6 +239,26 @@ public class TcaplusdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to disable data subscription for tables.
+     * @param req DeleteTableDataFlowRequest
+     * @return DeleteTableDataFlowResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTableDataFlowResponse DeleteTableDataFlow(DeleteTableDataFlowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteTableDataFlowResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteTableDataFlowResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteTableDataFlow");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete a table group.
      * @param req DeleteTableGroupRequest
      * @return DeleteTableGroupResponse
@@ -931,6 +951,26 @@ public class TcaplusdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RollbackTablesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RollbackTables");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to enable data subscription for tables or modify the feature's configurations.
+     * @param req SetTableDataFlowRequest
+     * @return SetTableDataFlowResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetTableDataFlowResponse SetTableDataFlow(SetTableDataFlowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetTableDataFlowResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetTableDataFlowResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SetTableDataFlow");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

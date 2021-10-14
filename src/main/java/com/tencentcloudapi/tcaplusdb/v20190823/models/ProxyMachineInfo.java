@@ -37,6 +37,13 @@ public class ProxyMachineInfo extends AbstractModel{
     private String MachineType;
 
     /**
+    * The number of proxy resources to be assigned
+    */
+    @SerializedName("AvailableCount")
+    @Expose
+    private Long AvailableCount;
+
+    /**
      * Get Unique ID 
      * @return ProxyUid Unique ID
      */
@@ -68,6 +75,22 @@ public class ProxyMachineInfo extends AbstractModel{
         this.MachineType = MachineType;
     }
 
+    /**
+     * Get The number of proxy resources to be assigned 
+     * @return AvailableCount The number of proxy resources to be assigned
+     */
+    public Long getAvailableCount() {
+        return this.AvailableCount;
+    }
+
+    /**
+     * Set The number of proxy resources to be assigned
+     * @param AvailableCount The number of proxy resources to be assigned
+     */
+    public void setAvailableCount(Long AvailableCount) {
+        this.AvailableCount = AvailableCount;
+    }
+
     public ProxyMachineInfo() {
     }
 
@@ -82,6 +105,9 @@ public class ProxyMachineInfo extends AbstractModel{
         if (source.MachineType != null) {
             this.MachineType = new String(source.MachineType);
         }
+        if (source.AvailableCount != null) {
+            this.AvailableCount = new Long(source.AvailableCount);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class ProxyMachineInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProxyUid", this.ProxyUid);
         this.setParamSimple(map, prefix + "MachineType", this.MachineType);
+        this.setParamSimple(map, prefix + "AvailableCount", this.AvailableCount);
 
     }
 }
