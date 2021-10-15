@@ -99,6 +99,26 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a replication instance.
+     * @param req CreateReplicationInstanceRequest
+     * @return CreateReplicationInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateReplicationInstanceResponse CreateReplicationInstance(CreateReplicationInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateReplicationInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateReplicationInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateReplicationInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      * This API is used to delete the tag immutability rule.
      * @param req DeleteImmutableTagRulesRequest
      * @return DeleteImmutableTagRulesResponse
@@ -151,6 +171,86 @@ public class TcrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeImmutableTagRulesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeImmutableTagRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the task status of creating a replication instance.
+     * @param req DescribeReplicationInstanceCreateTasksRequest
+     * @return DescribeReplicationInstanceCreateTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReplicationInstanceCreateTasksResponse DescribeReplicationInstanceCreateTasks(DescribeReplicationInstanceCreateTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeReplicationInstanceCreateTasksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeReplicationInstanceCreateTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeReplicationInstanceCreateTasks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the synchronization status of a replication instance.
+     * @param req DescribeReplicationInstanceSyncStatusRequest
+     * @return DescribeReplicationInstanceSyncStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReplicationInstanceSyncStatusResponse DescribeReplicationInstanceSyncStatus(DescribeReplicationInstanceSyncStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeReplicationInstanceSyncStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeReplicationInstanceSyncStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeReplicationInstanceSyncStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of replication instances.
+     * @param req DescribeReplicationInstancesRequest
+     * @return DescribeReplicationInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReplicationInstancesResponse DescribeReplicationInstances(DescribeReplicationInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeReplicationInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeReplicationInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeReplicationInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to manage the instance synchronization rule.
+     * @param req ManageReplicationRequest
+     * @return ManageReplicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ManageReplicationResponse ManageReplication(ManageReplicationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ManageReplicationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ManageReplicationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ManageReplication");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
