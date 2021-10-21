@@ -45,11 +45,46 @@ all clusters under the account will be obtained)
     private Long Limit;
 
     /**
-    * Filter condition. Currently, only filtering by a single ClusterName is supported
+    * ·  ClusterName
+    Filters by the cluster name
+    Type: String
+    Required: no
+
+·  Tags
+    Filters by key-value pairs of tags
+    Type: String
+    Required: no
+
+·  vpc-id
+    Filters by the VPC ID
+    Type: String
+    Required: no
+
+·  tag-key
+    Filters by the tag key
+    Type: String
+    Required: no
+
+·  tag-value
+    Filters by the tag value
+    Type: String
+    Required: no
+
+·  tag:tag-key
+    Filters by key-value pairs of tags
+    Type: String
+    Required: no
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
+
+    /**
+    * Cluster type, such as `MANAGED_CLUSTER`
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private String ClusterType;
 
     /**
      * Get Cluster ID list (When it is empty,
@@ -104,19 +139,147 @@ all clusters under the account will be obtained)
     }
 
     /**
-     * Get Filter condition. Currently, only filtering by a single ClusterName is supported 
-     * @return Filters Filter condition. Currently, only filtering by a single ClusterName is supported
+     * Get ·  ClusterName
+    Filters by the cluster name
+    Type: String
+    Required: no
+
+·  Tags
+    Filters by key-value pairs of tags
+    Type: String
+    Required: no
+
+·  vpc-id
+    Filters by the VPC ID
+    Type: String
+    Required: no
+
+·  tag-key
+    Filters by the tag key
+    Type: String
+    Required: no
+
+·  tag-value
+    Filters by the tag value
+    Type: String
+    Required: no
+
+·  tag:tag-key
+    Filters by key-value pairs of tags
+    Type: String
+    Required: no 
+     * @return Filters ·  ClusterName
+    Filters by the cluster name
+    Type: String
+    Required: no
+
+·  Tags
+    Filters by key-value pairs of tags
+    Type: String
+    Required: no
+
+·  vpc-id
+    Filters by the VPC ID
+    Type: String
+    Required: no
+
+·  tag-key
+    Filters by the tag key
+    Type: String
+    Required: no
+
+·  tag-value
+    Filters by the tag value
+    Type: String
+    Required: no
+
+·  tag:tag-key
+    Filters by key-value pairs of tags
+    Type: String
+    Required: no
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter condition. Currently, only filtering by a single ClusterName is supported
-     * @param Filters Filter condition. Currently, only filtering by a single ClusterName is supported
+     * Set ·  ClusterName
+    Filters by the cluster name
+    Type: String
+    Required: no
+
+·  Tags
+    Filters by key-value pairs of tags
+    Type: String
+    Required: no
+
+·  vpc-id
+    Filters by the VPC ID
+    Type: String
+    Required: no
+
+·  tag-key
+    Filters by the tag key
+    Type: String
+    Required: no
+
+·  tag-value
+    Filters by the tag value
+    Type: String
+    Required: no
+
+·  tag:tag-key
+    Filters by key-value pairs of tags
+    Type: String
+    Required: no
+     * @param Filters ·  ClusterName
+    Filters by the cluster name
+    Type: String
+    Required: no
+
+·  Tags
+    Filters by key-value pairs of tags
+    Type: String
+    Required: no
+
+·  vpc-id
+    Filters by the VPC ID
+    Type: String
+    Required: no
+
+·  tag-key
+    Filters by the tag key
+    Type: String
+    Required: no
+
+·  tag-value
+    Filters by the tag value
+    Type: String
+    Required: no
+
+·  tag:tag-key
+    Filters by key-value pairs of tags
+    Type: String
+    Required: no
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
+    }
+
+    /**
+     * Get Cluster type, such as `MANAGED_CLUSTER` 
+     * @return ClusterType Cluster type, such as `MANAGED_CLUSTER`
+     */
+    public String getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set Cluster type, such as `MANAGED_CLUSTER`
+     * @param ClusterType Cluster type, such as `MANAGED_CLUSTER`
+     */
+    public void setClusterType(String ClusterType) {
+        this.ClusterType = ClusterType;
     }
 
     public DescribeClustersRequest() {
@@ -145,6 +308,9 @@ all clusters under the account will be obtained)
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
     }
 
 
@@ -156,6 +322,7 @@ all clusters under the account will be obtained)
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
 
     }
 }

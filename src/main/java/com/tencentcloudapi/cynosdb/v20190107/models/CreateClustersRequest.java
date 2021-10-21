@@ -278,6 +278,41 @@ Clusters with storage billed in prepaid mode cannot be cloned or rolled back.
     private Long StoragePayMode;
 
     /**
+    * Array of security group IDs
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
+    * Array of alarm policy IDs
+    */
+    @SerializedName("AlarmPolicyIds")
+    @Expose
+    private String [] AlarmPolicyIds;
+
+    /**
+    * Array of parameters
+    */
+    @SerializedName("ClusterParams")
+    @Expose
+    private ParamItem [] ClusterParams;
+
+    /**
+    * Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+    */
+    @SerializedName("DealMode")
+    @Expose
+    private Long DealMode;
+
+    /**
+    * Parameter template ID
+    */
+    @SerializedName("ParamTemplateId")
+    @Expose
+    private Long ParamTemplateId;
+
+    /**
      * Get AZ 
      * @return Zone AZ
      */
@@ -889,6 +924,86 @@ Clusters with storage billed in prepaid mode cannot be cloned or rolled back.
         this.StoragePayMode = StoragePayMode;
     }
 
+    /**
+     * Get Array of security group IDs 
+     * @return SecurityGroupIds Array of security group IDs
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set Array of security group IDs
+     * @param SecurityGroupIds Array of security group IDs
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
+    /**
+     * Get Array of alarm policy IDs 
+     * @return AlarmPolicyIds Array of alarm policy IDs
+     */
+    public String [] getAlarmPolicyIds() {
+        return this.AlarmPolicyIds;
+    }
+
+    /**
+     * Set Array of alarm policy IDs
+     * @param AlarmPolicyIds Array of alarm policy IDs
+     */
+    public void setAlarmPolicyIds(String [] AlarmPolicyIds) {
+        this.AlarmPolicyIds = AlarmPolicyIds;
+    }
+
+    /**
+     * Get Array of parameters 
+     * @return ClusterParams Array of parameters
+     */
+    public ParamItem [] getClusterParams() {
+        return this.ClusterParams;
+    }
+
+    /**
+     * Set Array of parameters
+     * @param ClusterParams Array of parameters
+     */
+    public void setClusterParams(ParamItem [] ClusterParams) {
+        this.ClusterParams = ClusterParams;
+    }
+
+    /**
+     * Get Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order) 
+     * @return DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+     */
+    public Long getDealMode() {
+        return this.DealMode;
+    }
+
+    /**
+     * Set Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+     * @param DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+     */
+    public void setDealMode(Long DealMode) {
+        this.DealMode = DealMode;
+    }
+
+    /**
+     * Get Parameter template ID 
+     * @return ParamTemplateId Parameter template ID
+     */
+    public Long getParamTemplateId() {
+        return this.ParamTemplateId;
+    }
+
+    /**
+     * Set Parameter template ID
+     * @param ParamTemplateId Parameter template ID
+     */
+    public void setParamTemplateId(Long ParamTemplateId) {
+        this.ParamTemplateId = ParamTemplateId;
+    }
+
     public CreateClustersRequest() {
     }
 
@@ -1002,6 +1117,30 @@ Clusters with storage billed in prepaid mode cannot be cloned or rolled back.
         if (source.StoragePayMode != null) {
             this.StoragePayMode = new Long(source.StoragePayMode);
         }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
+        if (source.AlarmPolicyIds != null) {
+            this.AlarmPolicyIds = new String[source.AlarmPolicyIds.length];
+            for (int i = 0; i < source.AlarmPolicyIds.length; i++) {
+                this.AlarmPolicyIds[i] = new String(source.AlarmPolicyIds[i]);
+            }
+        }
+        if (source.ClusterParams != null) {
+            this.ClusterParams = new ParamItem[source.ClusterParams.length];
+            for (int i = 0; i < source.ClusterParams.length; i++) {
+                this.ClusterParams[i] = new ParamItem(source.ClusterParams[i]);
+            }
+        }
+        if (source.DealMode != null) {
+            this.DealMode = new Long(source.DealMode);
+        }
+        if (source.ParamTemplateId != null) {
+            this.ParamTemplateId = new Long(source.ParamTemplateId);
+        }
     }
 
 
@@ -1043,6 +1182,11 @@ Clusters with storage billed in prepaid mode cannot be cloned or rolled back.
         this.setParamSimple(map, prefix + "AutoPause", this.AutoPause);
         this.setParamSimple(map, prefix + "AutoPauseDelay", this.AutoPauseDelay);
         this.setParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamArraySimple(map, prefix + "AlarmPolicyIds.", this.AlarmPolicyIds);
+        this.setParamArrayObj(map, prefix + "ClusterParams.", this.ClusterParams);
+        this.setParamSimple(map, prefix + "DealMode", this.DealMode);
+        this.setParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
 
     }
 }

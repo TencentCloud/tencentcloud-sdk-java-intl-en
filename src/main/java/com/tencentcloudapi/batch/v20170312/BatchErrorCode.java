@@ -102,6 +102,9 @@ public enum BatchErrorCode {
     // The list of instance types cannot be empty.
      INVALIDPARAMETERVALUE_INSTANCETYPESEMPTY("InvalidParameterValue.InstanceTypesEmpty"),
      
+    // 
+     INVALIDPARAMETERVALUE_INVALIDDATATYPEANY("InvalidParameterValue.InvalidDataTypeAny"),
+     
     // The number of filter parameter values exceeds the limit.
      INVALIDPARAMETERVALUE_LIMITEXCEEDED("InvalidParameterValue.LimitExceeded"),
      
@@ -113,6 +116,9 @@ public enum BatchErrorCode {
      
     // Invalid negative parameter.
      INVALIDPARAMETERVALUE_NEGATIVE("InvalidParameterValue.Negative"),
+     
+    // 
+     INVALIDPARAMETERVALUE_NOTFLOAT("InvalidParameterValue.NotFloat"),
      
     // Invalid storage path format.
      INVALIDPARAMETERVALUE_REMOTESTORAGEPATH("InvalidParameterValue.RemoteStoragePath"),

@@ -37,7 +37,7 @@ public class ModifyStreamLiveChannelRequest extends AbstractModel{
     private String Name;
 
     /**
-    * Inputs to attach. You can attach 1-5 inputs.
+    * Inputs to attach. You can attach 1 to 5 inputs.
     */
     @SerializedName("AttachedInputs")
     @Expose
@@ -104,16 +104,16 @@ public class ModifyStreamLiveChannelRequest extends AbstractModel{
     }
 
     /**
-     * Get Inputs to attach. You can attach 1-5 inputs. 
-     * @return AttachedInputs Inputs to attach. You can attach 1-5 inputs.
+     * Get Inputs to attach. You can attach 1 to 5 inputs. 
+     * @return AttachedInputs Inputs to attach. You can attach 1 to 5 inputs.
      */
     public AttachedInput [] getAttachedInputs() {
         return this.AttachedInputs;
     }
 
     /**
-     * Set Inputs to attach. You can attach 1-5 inputs.
-     * @param AttachedInputs Inputs to attach. You can attach 1-5 inputs.
+     * Set Inputs to attach. You can attach 1 to 5 inputs.
+     * @param AttachedInputs Inputs to attach. You can attach 1 to 5 inputs.
      */
     public void setAttachedInputs(AttachedInput [] AttachedInputs) {
         this.AttachedInputs = AttachedInputs;

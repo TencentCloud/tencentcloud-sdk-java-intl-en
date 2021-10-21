@@ -39,16 +39,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String [] DealNames;
 
     /**
-    * List of resource IDs (this parameter may not be returned in case of asynchronous delivery. We strongly recommend you call the `DescribeResourcesByDealName` API with the `dealNames` field to get the IDs of asynchronously delivered resources)
-Note: this field may return null, indicating that no valid values can be obtained.
+    * List of resource IDs (This field has been deprecated. Please use `dealNames` in the `DescribeResourcesByDealName` API to get resource IDs.)
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("ResourceIds")
     @Expose
     private String [] ResourceIds;
 
     /**
-    * List of cluster IDs (this parameter may not be returned in case of asynchronous delivery. We strongly recommend you call the `DescribeResourcesByDealName` API with the `dealNames` field to get the IDs of asynchronously delivered clusters)
-Note: this field may return null, indicating that no valid values can be obtained.
+    * List of cluster IDs (This field has been deprecated. Please use `dealNames` in the `DescribeResourcesByDealName` API to get cluster IDs.)
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("ClusterIds")
     @Expose
@@ -110,40 +110,40 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of resource IDs (this parameter may not be returned in case of asynchronous delivery. We strongly recommend you call the `DescribeResourcesByDealName` API with the `dealNames` field to get the IDs of asynchronously delivered resources)
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ResourceIds List of resource IDs (this parameter may not be returned in case of asynchronous delivery. We strongly recommend you call the `DescribeResourcesByDealName` API with the `dealNames` field to get the IDs of asynchronously delivered resources)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get List of resource IDs (This field has been deprecated. Please use `dealNames` in the `DescribeResourcesByDealName` API to get resource IDs.)
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ResourceIds List of resource IDs (This field has been deprecated. Please use `dealNames` in the `DescribeResourcesByDealName` API to get resource IDs.)
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String [] getResourceIds() {
         return this.ResourceIds;
     }
 
     /**
-     * Set List of resource IDs (this parameter may not be returned in case of asynchronous delivery. We strongly recommend you call the `DescribeResourcesByDealName` API with the `dealNames` field to get the IDs of asynchronously delivered resources)
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ResourceIds List of resource IDs (this parameter may not be returned in case of asynchronous delivery. We strongly recommend you call the `DescribeResourcesByDealName` API with the `dealNames` field to get the IDs of asynchronously delivered resources)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set List of resource IDs (This field has been deprecated. Please use `dealNames` in the `DescribeResourcesByDealName` API to get resource IDs.)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ResourceIds List of resource IDs (This field has been deprecated. Please use `dealNames` in the `DescribeResourcesByDealName` API to get resource IDs.)
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;
     }
 
     /**
-     * Get List of cluster IDs (this parameter may not be returned in case of asynchronous delivery. We strongly recommend you call the `DescribeResourcesByDealName` API with the `dealNames` field to get the IDs of asynchronously delivered clusters)
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ClusterIds List of cluster IDs (this parameter may not be returned in case of asynchronous delivery. We strongly recommend you call the `DescribeResourcesByDealName` API with the `dealNames` field to get the IDs of asynchronously delivered clusters)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get List of cluster IDs (This field has been deprecated. Please use `dealNames` in the `DescribeResourcesByDealName` API to get cluster IDs.)
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ClusterIds List of cluster IDs (This field has been deprecated. Please use `dealNames` in the `DescribeResourcesByDealName` API to get cluster IDs.)
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String [] getClusterIds() {
         return this.ClusterIds;
     }
 
     /**
-     * Set List of cluster IDs (this parameter may not be returned in case of asynchronous delivery. We strongly recommend you call the `DescribeResourcesByDealName` API with the `dealNames` field to get the IDs of asynchronously delivered clusters)
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ClusterIds List of cluster IDs (this parameter may not be returned in case of asynchronous delivery. We strongly recommend you call the `DescribeResourcesByDealName` API with the `dealNames` field to get the IDs of asynchronously delivered clusters)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set List of cluster IDs (This field has been deprecated. Please use `dealNames` in the `DescribeResourcesByDealName` API to get cluster IDs.)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ClusterIds List of cluster IDs (This field has been deprecated. Please use `dealNames` in the `DescribeResourcesByDealName` API to get cluster IDs.)
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setClusterIds(String [] ClusterIds) {
         this.ClusterIds = ClusterIds;

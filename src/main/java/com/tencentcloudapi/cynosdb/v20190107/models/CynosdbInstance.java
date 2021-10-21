@@ -305,20 +305,19 @@ pause
     private String ServerlessStatus;
 
     /**
-    * Storage billing mode
-Note: this field may return `null`, indicating that no valid value can be obtained.
-    */
-    @SerializedName("StoragePayMode")
-    @Expose
-    private Long StoragePayMode;
-
-    /**
     * Prepaid storage ID
 Note: this field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("StorageId")
     @Expose
     private String StorageId;
+
+    /**
+    * Storage billing mode
+    */
+    @SerializedName("StoragePayMode")
+    @Expose
+    private Long StoragePayMode;
 
     /**
      * Get User `Uin` 
@@ -969,26 +968,6 @@ pause
     }
 
     /**
-     * Get Storage billing mode
-Note: this field may return `null`, indicating that no valid value can be obtained. 
-     * @return StoragePayMode Storage billing mode
-Note: this field may return `null`, indicating that no valid value can be obtained.
-     */
-    public Long getStoragePayMode() {
-        return this.StoragePayMode;
-    }
-
-    /**
-     * Set Storage billing mode
-Note: this field may return `null`, indicating that no valid value can be obtained.
-     * @param StoragePayMode Storage billing mode
-Note: this field may return `null`, indicating that no valid value can be obtained.
-     */
-    public void setStoragePayMode(Long StoragePayMode) {
-        this.StoragePayMode = StoragePayMode;
-    }
-
-    /**
      * Get Prepaid storage ID
 Note: this field may return `null`, indicating that no valid value can be obtained. 
      * @return StorageId Prepaid storage ID
@@ -1006,6 +985,22 @@ Note: this field may return `null`, indicating that no valid value can be obtain
      */
     public void setStorageId(String StorageId) {
         this.StorageId = StorageId;
+    }
+
+    /**
+     * Get Storage billing mode 
+     * @return StoragePayMode Storage billing mode
+     */
+    public Long getStoragePayMode() {
+        return this.StoragePayMode;
+    }
+
+    /**
+     * Set Storage billing mode
+     * @param StoragePayMode Storage billing mode
+     */
+    public void setStoragePayMode(Long StoragePayMode) {
+        this.StoragePayMode = StoragePayMode;
     }
 
     public CynosdbInstance() {
@@ -1136,11 +1131,11 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         if (source.ServerlessStatus != null) {
             this.ServerlessStatus = new String(source.ServerlessStatus);
         }
-        if (source.StoragePayMode != null) {
-            this.StoragePayMode = new Long(source.StoragePayMode);
-        }
         if (source.StorageId != null) {
             this.StorageId = new String(source.StorageId);
+        }
+        if (source.StoragePayMode != null) {
+            this.StoragePayMode = new Long(source.StoragePayMode);
         }
     }
 
@@ -1189,8 +1184,8 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "MinCpu", this.MinCpu);
         this.setParamSimple(map, prefix + "MaxCpu", this.MaxCpu);
         this.setParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
-        this.setParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
         this.setParamSimple(map, prefix + "StorageId", this.StorageId);
+        this.setParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
 
     }
 }

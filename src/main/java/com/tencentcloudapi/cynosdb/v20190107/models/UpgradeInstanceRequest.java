@@ -73,6 +73,13 @@ public class UpgradeInstanceRequest extends AbstractModel{
     private String DbType;
 
     /**
+    * Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+    */
+    @SerializedName("DealMode")
+    @Expose
+    private Long DealMode;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -188,6 +195,22 @@ public class UpgradeInstanceRequest extends AbstractModel{
         this.DbType = DbType;
     }
 
+    /**
+     * Get Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order) 
+     * @return DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+     */
+    public Long getDealMode() {
+        return this.DealMode;
+    }
+
+    /**
+     * Set Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+     * @param DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+     */
+    public void setDealMode(Long DealMode) {
+        this.DealMode = DealMode;
+    }
+
     public UpgradeInstanceRequest() {
     }
 
@@ -217,6 +240,9 @@ public class UpgradeInstanceRequest extends AbstractModel{
         if (source.DbType != null) {
             this.DbType = new String(source.DbType);
         }
+        if (source.DealMode != null) {
+            this.DealMode = new Long(source.DealMode);
+        }
     }
 
 
@@ -231,6 +257,7 @@ public class UpgradeInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "StorageLimit", this.StorageLimit);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamSimple(map, prefix + "DbType", this.DbType);
+        this.setParamSimple(map, prefix + "DealMode", this.DealMode);
 
     }
 }

@@ -87,6 +87,14 @@ Note: this field may return `null`, indicating that no valid value was found.
     private String ColorTransfer;
 
     /**
+    * HDR type
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("HdrType")
+    @Expose
+    private String HdrType;
+
+    /**
      * Get Bitrate of a video stream in bps.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Bitrate Bitrate of a video stream in bps.
@@ -246,6 +254,26 @@ Note: this field may return `null`, indicating that no valid value was found.
         this.ColorTransfer = ColorTransfer;
     }
 
+    /**
+     * Get HDR type
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return HdrType HDR type
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public String getHdrType() {
+        return this.HdrType;
+    }
+
+    /**
+     * Set HDR type
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param HdrType HDR type
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setHdrType(String HdrType) {
+        this.HdrType = HdrType;
+    }
+
     public MediaVideoStreamItem() {
     }
 
@@ -278,6 +306,9 @@ Note: this field may return `null`, indicating that no valid value was found.
         if (source.ColorTransfer != null) {
             this.ColorTransfer = new String(source.ColorTransfer);
         }
+        if (source.HdrType != null) {
+            this.HdrType = new String(source.HdrType);
+        }
     }
 
 
@@ -293,6 +324,7 @@ Note: this field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "ColorPrimaries", this.ColorPrimaries);
         this.setParamSimple(map, prefix + "ColorSpace", this.ColorSpace);
         this.setParamSimple(map, prefix + "ColorTransfer", this.ColorTransfer);
+        this.setParamSimple(map, prefix + "HdrType", this.HdrType);
 
     }
 }

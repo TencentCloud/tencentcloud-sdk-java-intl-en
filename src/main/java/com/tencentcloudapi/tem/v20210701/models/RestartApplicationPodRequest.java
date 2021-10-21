@@ -51,7 +51,7 @@ public class RestartApplicationPodRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * Page number
+    * Page offset
     */
     @SerializedName("Offset")
     @Expose
@@ -136,16 +136,16 @@ public class RestartApplicationPodRequest extends AbstractModel{
     }
 
     /**
-     * Get Page number 
-     * @return Offset Page number
+     * Get Page offset 
+     * @return Offset Page offset
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Page number
-     * @param Offset Page number
+     * Set Page offset
+     * @param Offset Page offset
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

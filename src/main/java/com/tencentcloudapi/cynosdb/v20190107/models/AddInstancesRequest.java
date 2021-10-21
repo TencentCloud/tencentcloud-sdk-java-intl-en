@@ -108,6 +108,13 @@ public class AddInstancesRequest extends AbstractModel{
     private String OrderSource;
 
     /**
+    * Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+    */
+    @SerializedName("DealMode")
+    @Expose
+    private Long DealMode;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -303,6 +310,22 @@ public class AddInstancesRequest extends AbstractModel{
         this.OrderSource = OrderSource;
     }
 
+    /**
+     * Get Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order) 
+     * @return DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+     */
+    public Long getDealMode() {
+        return this.DealMode;
+    }
+
+    /**
+     * Set Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+     * @param DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+     */
+    public void setDealMode(Long DealMode) {
+        this.DealMode = DealMode;
+    }
+
     public AddInstancesRequest() {
     }
 
@@ -347,6 +370,9 @@ public class AddInstancesRequest extends AbstractModel{
         if (source.OrderSource != null) {
             this.OrderSource = new String(source.OrderSource);
         }
+        if (source.DealMode != null) {
+            this.DealMode = new Long(source.DealMode);
+        }
     }
 
 
@@ -366,6 +392,7 @@ public class AddInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamSimple(map, prefix + "DbType", this.DbType);
         this.setParamSimple(map, prefix + "OrderSource", this.OrderSource);
+        this.setParamSimple(map, prefix + "DealMode", this.DealMode);
 
     }
 }

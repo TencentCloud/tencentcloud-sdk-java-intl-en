@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClusterKubeconfigRequest extends AbstractModel{
+public class DescribeClusterAuthenticationOptionsRequest extends AbstractModel{
 
     /**
     * Cluster ID
@@ -28,13 +28,6 @@ public class DescribeClusterKubeconfigRequest extends AbstractModel{
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
-
-    /**
-    * Defaults to `false`, which means to obtain the kubeconfig of private network
-    */
-    @SerializedName("IsExtranet")
-    @Expose
-    private Boolean IsExtranet;
 
     /**
      * Get Cluster ID 
@@ -52,35 +45,16 @@ public class DescribeClusterKubeconfigRequest extends AbstractModel{
         this.ClusterId = ClusterId;
     }
 
-    /**
-     * Get Defaults to `false`, which means to obtain the kubeconfig of private network 
-     * @return IsExtranet Defaults to `false`, which means to obtain the kubeconfig of private network
-     */
-    public Boolean getIsExtranet() {
-        return this.IsExtranet;
-    }
-
-    /**
-     * Set Defaults to `false`, which means to obtain the kubeconfig of private network
-     * @param IsExtranet Defaults to `false`, which means to obtain the kubeconfig of private network
-     */
-    public void setIsExtranet(Boolean IsExtranet) {
-        this.IsExtranet = IsExtranet;
-    }
-
-    public DescribeClusterKubeconfigRequest() {
+    public DescribeClusterAuthenticationOptionsRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeClusterKubeconfigRequest(DescribeClusterKubeconfigRequest source) {
+    public DescribeClusterAuthenticationOptionsRequest(DescribeClusterAuthenticationOptionsRequest source) {
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
-        }
-        if (source.IsExtranet != null) {
-            this.IsExtranet = new Boolean(source.IsExtranet);
         }
     }
 
@@ -90,7 +64,6 @@ public class DescribeClusterKubeconfigRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
-        this.setParamSimple(map, prefix + "IsExtranet", this.IsExtranet);
 
     }
 }

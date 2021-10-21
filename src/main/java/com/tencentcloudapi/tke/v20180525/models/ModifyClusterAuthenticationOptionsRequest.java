@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeClusterKubeconfigRequest extends AbstractModel{
+public class ModifyClusterAuthenticationOptionsRequest extends AbstractModel{
 
     /**
     * Cluster ID
@@ -30,11 +30,11 @@ public class DescribeClusterKubeconfigRequest extends AbstractModel{
     private String ClusterId;
 
     /**
-    * Defaults to `false`, which means to obtain the kubeconfig of private network
+    * ServiceAccount authentication configuration
     */
-    @SerializedName("IsExtranet")
+    @SerializedName("ServiceAccounts")
     @Expose
-    private Boolean IsExtranet;
+    private ServiceAccountAuthenticationOptions ServiceAccounts;
 
     /**
      * Get Cluster ID 
@@ -53,34 +53,34 @@ public class DescribeClusterKubeconfigRequest extends AbstractModel{
     }
 
     /**
-     * Get Defaults to `false`, which means to obtain the kubeconfig of private network 
-     * @return IsExtranet Defaults to `false`, which means to obtain the kubeconfig of private network
+     * Get ServiceAccount authentication configuration 
+     * @return ServiceAccounts ServiceAccount authentication configuration
      */
-    public Boolean getIsExtranet() {
-        return this.IsExtranet;
+    public ServiceAccountAuthenticationOptions getServiceAccounts() {
+        return this.ServiceAccounts;
     }
 
     /**
-     * Set Defaults to `false`, which means to obtain the kubeconfig of private network
-     * @param IsExtranet Defaults to `false`, which means to obtain the kubeconfig of private network
+     * Set ServiceAccount authentication configuration
+     * @param ServiceAccounts ServiceAccount authentication configuration
      */
-    public void setIsExtranet(Boolean IsExtranet) {
-        this.IsExtranet = IsExtranet;
+    public void setServiceAccounts(ServiceAccountAuthenticationOptions ServiceAccounts) {
+        this.ServiceAccounts = ServiceAccounts;
     }
 
-    public DescribeClusterKubeconfigRequest() {
+    public ModifyClusterAuthenticationOptionsRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeClusterKubeconfigRequest(DescribeClusterKubeconfigRequest source) {
+    public ModifyClusterAuthenticationOptionsRequest(ModifyClusterAuthenticationOptionsRequest source) {
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
-        if (source.IsExtranet != null) {
-            this.IsExtranet = new Boolean(source.IsExtranet);
+        if (source.ServiceAccounts != null) {
+            this.ServiceAccounts = new ServiceAccountAuthenticationOptions(source.ServiceAccounts);
         }
     }
 
@@ -90,7 +90,7 @@ public class DescribeClusterKubeconfigRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
-        this.setParamSimple(map, prefix + "IsExtranet", this.IsExtranet);
+        this.setParamObj(map, prefix + "ServiceAccounts.", this.ServiceAccounts);
 
     }
 }
