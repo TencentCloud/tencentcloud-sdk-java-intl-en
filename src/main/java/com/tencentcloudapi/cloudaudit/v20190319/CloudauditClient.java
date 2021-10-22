@@ -39,158 +39,18 @@ public class CloudauditClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create resource recorders to detect and record resource configuration changes.
-     * @param req CreateRecorderRequest
-     * @return CreateRecorderResponse
+     *This API is used to query CloudAudit logs.
+     * @param req DescribeEventsRequest
+     * @return DescribeEventsResponse
      * @throws TencentCloudSDKException
      */
-    public CreateRecorderResponse CreateRecorder(CreateRecorderRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateRecorderResponse> rsp = null;
+    public DescribeEventsResponse DescribeEvents(DescribeEventsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEventsResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateRecorderResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DescribeEventsResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "CreateRecorder");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to delete resource recorders. After deletion, resource configuration changes will not be recorded.
-     * @param req DeleteRecorderRequest
-     * @return DeleteRecorderResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteRecorderResponse DeleteRecorder(DeleteRecorderRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteRecorderResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteRecorderResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteRecorder");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to view the basic information of discovered resources.
-     * @param req DescribeDiscoveredResourceRequest
-     * @return DescribeDiscoveredResourceResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDiscoveredResourceResponse DescribeDiscoveredResource(DescribeDiscoveredResourceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDiscoveredResourceResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDiscoveredResourceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDiscoveredResource");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to display current configurations and status of a recorder.
-     * @param req DescribeRecorderRequest
-     * @return DescribeRecorderResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeRecorderResponse DescribeRecorder(DescribeRecorderRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRecorderResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRecorderResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRecorder");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to get the list of resource configuration items and display resource configuration changes in chronological order.
-     * @param req GetConfigurationItemsRequest
-     * @return GetConfigurationItemsResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetConfigurationItemsResponse GetConfigurationItems(GetConfigurationItemsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetConfigurationItemsResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetConfigurationItemsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetConfigurationItems");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to view the list of discovered resources.
-     * @param req ListDiscoveredResourcesRequest
-     * @return ListDiscoveredResourcesResponse
-     * @throws TencentCloudSDKException
-     */
-    public ListDiscoveredResourcesResponse ListDiscoveredResources(ListDiscoveredResourcesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListDiscoveredResourcesResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ListDiscoveredResourcesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListDiscoveredResources");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to query the list of all CFA supported resource types.
-     * @param req ListSupportResourceTypesRequest
-     * @return ListSupportResourceTypesResponse
-     * @throws TencentCloudSDKException
-     */
-    public ListSupportResourceTypesResponse ListSupportResourceTypes(ListSupportResourceTypesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ListSupportResourceTypesResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ListSupportResourceTypesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ListSupportResourceTypes");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to modify the resources to monitor, recorder name, and other recorder configurations.
-     * @param req UpdateRecorderRequest
-     * @return UpdateRecorderResponse
-     * @throws TencentCloudSDKException
-     */
-    public UpdateRecorderResponse UpdateRecorder(UpdateRecorderRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateRecorderResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<UpdateRecorderResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateRecorder");
+                rspStr = this.internalRequest(req, "DescribeEvents");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
