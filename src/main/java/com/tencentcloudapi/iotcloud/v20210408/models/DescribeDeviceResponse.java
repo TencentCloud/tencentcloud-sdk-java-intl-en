@@ -200,7 +200,8 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     private Long FirmwareUpdateTime;
 
     /**
-    * 
+    * Account ID of the creator
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateUserId")
     @Expose
@@ -634,16 +635,20 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     }
 
     /**
-     * Get  
-     * @return CreateUserId 
+     * Get Account ID of the creator
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return CreateUserId Account ID of the creator
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getCreateUserId() {
         return this.CreateUserId;
     }
 
     /**
-     * Set 
-     * @param CreateUserId 
+     * Set Account ID of the creator
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param CreateUserId Account ID of the creator
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setCreateUserId(Long CreateUserId) {
         this.CreateUserId = CreateUserId;

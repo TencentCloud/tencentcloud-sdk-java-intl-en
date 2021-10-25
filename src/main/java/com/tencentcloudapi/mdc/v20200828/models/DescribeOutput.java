@@ -98,6 +98,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private DescribeOutputRTMPSettings RTMPSettings;
 
     /**
+    * RTMP pull configuration of the output
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("RTMPPullSettings")
+    @Expose
+    private DescribeOutputRTMPPullSettings RTMPPullSettings;
+
+    /**
+    * CIDR allowlist
+This parameter is valid if `Protocol` is set to `RTMP_PULL`. If this parameter is left empty, there is no restriction on clients’ IP addresses.
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("AllowIpList")
+    @Expose
+    private String [] AllowIpList;
+
+    /**
      * Get Output ID. 
      * @return OutputId Output ID.
      */
@@ -277,6 +294,50 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.RTMPSettings = RTMPSettings;
     }
 
+    /**
+     * Get RTMP pull configuration of the output
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return RTMPPullSettings RTMP pull configuration of the output
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public DescribeOutputRTMPPullSettings getRTMPPullSettings() {
+        return this.RTMPPullSettings;
+    }
+
+    /**
+     * Set RTMP pull configuration of the output
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param RTMPPullSettings RTMP pull configuration of the output
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setRTMPPullSettings(DescribeOutputRTMPPullSettings RTMPPullSettings) {
+        this.RTMPPullSettings = RTMPPullSettings;
+    }
+
+    /**
+     * Get CIDR allowlist
+This parameter is valid if `Protocol` is set to `RTMP_PULL`. If this parameter is left empty, there is no restriction on clients’ IP addresses.
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return AllowIpList CIDR allowlist
+This parameter is valid if `Protocol` is set to `RTMP_PULL`. If this parameter is left empty, there is no restriction on clients’ IP addresses.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public String [] getAllowIpList() {
+        return this.AllowIpList;
+    }
+
+    /**
+     * Set CIDR allowlist
+This parameter is valid if `Protocol` is set to `RTMP_PULL`. If this parameter is left empty, there is no restriction on clients’ IP addresses.
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param AllowIpList CIDR allowlist
+This parameter is valid if `Protocol` is set to `RTMP_PULL`. If this parameter is left empty, there is no restriction on clients’ IP addresses.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setAllowIpList(String [] AllowIpList) {
+        this.AllowIpList = AllowIpList;
+    }
+
     public DescribeOutput() {
     }
 
@@ -318,6 +379,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.RTMPSettings != null) {
             this.RTMPSettings = new DescribeOutputRTMPSettings(source.RTMPSettings);
         }
+        if (source.RTMPPullSettings != null) {
+            this.RTMPPullSettings = new DescribeOutputRTMPPullSettings(source.RTMPPullSettings);
+        }
+        if (source.AllowIpList != null) {
+            this.AllowIpList = new String[source.AllowIpList.length];
+            for (int i = 0; i < source.AllowIpList.length; i++) {
+                this.AllowIpList[i] = new String(source.AllowIpList[i]);
+            }
+        }
     }
 
 
@@ -335,6 +405,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "SRTSettings.", this.SRTSettings);
         this.setParamObj(map, prefix + "RTPSettings.", this.RTPSettings);
         this.setParamObj(map, prefix + "RTMPSettings.", this.RTMPSettings);
+        this.setParamObj(map, prefix + "RTMPPullSettings.", this.RTMPPullSettings);
+        this.setParamArraySimple(map, prefix + "AllowIpList.", this.AllowIpList);
 
     }
 }

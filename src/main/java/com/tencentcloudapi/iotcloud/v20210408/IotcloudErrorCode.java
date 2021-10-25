@@ -6,10 +6,13 @@ public enum IotcloudErrorCode {
     // Internal error.
      INTERNALERROR("InternalError"),
      
+    // Parameter error.
+     INVALIDPARAMETER("InvalidParameter"),
+     
     // Invalid parameter value.
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-    // 
+    // Incorrect CA certificate content.
      INVALIDPARAMETERVALUE_CACERTINVALID("InvalidParameterValue.CACertInvalid"),
      
     // CA certificate mismatch.
@@ -24,16 +27,16 @@ public enum IotcloudErrorCode {
     // Unsupported product type.
      INVALIDPARAMETERVALUE_PRODUCTTYPENOTSUPPORT("InvalidParameterValue.ProductTypeNotSupport"),
      
-    // 
+    // Unable to operate because the CA certificate is already bound to a product.
      LIMITEXCEEDED_CAALREADYBINDPRODUCT("LimitExceeded.CAAlreadyBindProduct"),
      
-    // 
+    // The CA certificate already exists.
      LIMITEXCEEDED_CAREPEAT("LimitExceeded.CARepeat"),
      
     // Device quantity exceeded the limit.
      LIMITEXCEEDED_DEVICEEXCEEDLIMIT("LimitExceeded.DeviceExceedLimit"),
      
-    // 
+    // The CA certificate does not exist.
      RESOURCENOTFOUND_CACERTNOTEXIST("ResourceNotFound.CACertNotExist"),
      
     // The device does not exist.

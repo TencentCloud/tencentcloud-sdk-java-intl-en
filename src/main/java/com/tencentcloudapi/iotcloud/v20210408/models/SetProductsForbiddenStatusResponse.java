@@ -13,21 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.mongodb.v20190725.models;
+package com.tencentcloudapi.iotcloud.v20210408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAsyncRequestInfoResponse extends AbstractModel{
-
-    /**
-    * Status. Valid values: `initial` (initializing), `running`, `paused` (paused due to failure), `undoed` (rolled back due to failure), `failed` (ended due to failure), `success`
-    */
-    @SerializedName("Status")
-    @Expose
-    private String Status;
+public class SetProductsForbiddenStatusResponse extends AbstractModel{
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -35,22 +28,6 @@ public class DescribeAsyncRequestInfoResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get Status. Valid values: `initial` (initializing), `running`, `paused` (paused due to failure), `undoed` (rolled back due to failure), `failed` (ended due to failure), `success` 
-     * @return Status Status. Valid values: `initial` (initializing), `running`, `paused` (paused due to failure), `undoed` (rolled back due to failure), `failed` (ended due to failure), `success`
-     */
-    public String getStatus() {
-        return this.Status;
-    }
-
-    /**
-     * Set Status. Valid values: `initial` (initializing), `running`, `paused` (paused due to failure), `undoed` (rolled back due to failure), `failed` (ended due to failure), `success`
-     * @param Status Status. Valid values: `initial` (initializing), `running`, `paused` (paused due to failure), `undoed` (rolled back due to failure), `failed` (ended due to failure), `success`
-     */
-    public void setStatus(String Status) {
-        this.Status = Status;
-    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -68,17 +45,14 @@ public class DescribeAsyncRequestInfoResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeAsyncRequestInfoResponse() {
+    public SetProductsForbiddenStatusResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeAsyncRequestInfoResponse(DescribeAsyncRequestInfoResponse source) {
-        if (source.Status != null) {
-            this.Status = new String(source.Status);
-        }
+    public SetProductsForbiddenStatusResponse(SetProductsForbiddenStatusResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -89,7 +63,6 @@ public class DescribeAsyncRequestInfoResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

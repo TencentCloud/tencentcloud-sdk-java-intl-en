@@ -279,6 +279,26 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
+     *This API is used to enable or disable multiple products at a time.
+     * @param req SetProductsForbiddenStatusRequest
+     * @return SetProductsForbiddenStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetProductsForbiddenStatusResponse SetProductsForbiddenStatus(SetProductsForbiddenStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetProductsForbiddenStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetProductsForbiddenStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SetProductsForbiddenStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to set the device log level.  
      * @param req UpdateDeviceLogLevelRequest
      * @return UpdateDeviceLogLevelResponse

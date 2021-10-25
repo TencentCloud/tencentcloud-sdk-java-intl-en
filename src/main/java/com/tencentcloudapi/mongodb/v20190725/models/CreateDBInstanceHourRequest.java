@@ -44,14 +44,14 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     private Long ReplicateSetNum;
 
     /**
-    * Number of nodes in each replica set. Currently, the number of nodes in a replica set is fixed at 3, while the number of shards is customizable. For more information, please see the parameter returned by the DescribeSpecInfo API
+    * The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
     */
     @SerializedName("NodeNum")
     @Expose
     private Long NodeNum;
 
     /**
-    * Version number. For the specific purchasable versions supported, please see the return result of the DescribeSpecInfo API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition
+    * Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition; MONGO_42_WT: MongoDB 4.2 WiredTiger Edition.
     */
     @SerializedName("MongoVersion")
     @Expose
@@ -72,7 +72,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     private Long GoodsNum;
 
     /**
-    * AZ information in the format of ap-guangzhou-2
+    * AZ in the format of ap-guangzhou-2. If multi-AZ deployment is enabled, this parameter refers to the primary AZ and must be one of the values of `AvailabilityZoneList`.
     */
     @SerializedName("Zone")
     @Expose
@@ -121,7 +121,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     private TagInfo [] Tags;
 
     /**
-    * Valid values: 1 (regular instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance).
+    * Instance type. Valid values: `1` (primary instance), `2` (temp instance), `3` (read-only instance), `4` (disaster recovery instance), `5` (cloned instance).
     */
     @SerializedName("Clone")
     @Expose
@@ -140,6 +140,48 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     @SerializedName("SecurityGroup")
     @Expose
     private String [] SecurityGroup;
+
+    /**
+    * The point in time to which the cloned instance will be rolled back. This parameter is required for a cloned instance. The point in time in the format of 2021-08-13 16:30:00 must be within the last seven days.
+    */
+    @SerializedName("RestoreTime")
+    @Expose
+    private String RestoreTime;
+
+    /**
+    * Instance name, which can contain up to 60 letters, digits, or symbols (_-).
+    */
+    @SerializedName("InstanceName")
+    @Expose
+    private String InstanceName;
+
+    /**
+    * AZ list when multi-AZ deployment is enabled. For the specific purchasable versions which support multi-AZ deployment, please see the return result of the `DescribeSpecInfo` API. Notes: 1. Nodes of a multi-AZ instance must be deployed across three AZs. 2. To ensure a successful cross-AZ switch, you should not deploy most of the nodes to the same AZ. (For example, a three-node sharded cluster instance does not support deploying two or more nodes in the same AZ.) 3. MongoDB 4.2 and later versions do not support multi-AZ deployment. 4. Read-Only and disaster recovery instances do not support multi-AZ deployment. 5. Instances in the classic network do not support multi-AZ deployment.
+    */
+    @SerializedName("AvailabilityZoneList")
+    @Expose
+    private String [] AvailabilityZoneList;
+
+    /**
+    * The number of mongos CPUs, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API.
+    */
+    @SerializedName("MongosCpu")
+    @Expose
+    private Long MongosCpu;
+
+    /**
+    * The size of mongos memory, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API.
+    */
+    @SerializedName("MongosMemory")
+    @Expose
+    private Long MongosMemory;
+
+    /**
+    * The number of mongos routers, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. Note: please purchase 3-32 mongos routers for high availability.
+    */
+    @SerializedName("MongosNodeNum")
+    @Expose
+    private Long MongosNodeNum;
 
     /**
      * Get Instance memory size in GB 
@@ -190,32 +232,32 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     }
 
     /**
-     * Get Number of nodes in each replica set. Currently, the number of nodes in a replica set is fixed at 3, while the number of shards is customizable. For more information, please see the parameter returned by the DescribeSpecInfo API 
-     * @return NodeNum Number of nodes in each replica set. Currently, the number of nodes in a replica set is fixed at 3, while the number of shards is customizable. For more information, please see the parameter returned by the DescribeSpecInfo API
+     * Get The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API. 
+     * @return NodeNum The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
      */
     public Long getNodeNum() {
         return this.NodeNum;
     }
 
     /**
-     * Set Number of nodes in each replica set. Currently, the number of nodes in a replica set is fixed at 3, while the number of shards is customizable. For more information, please see the parameter returned by the DescribeSpecInfo API
-     * @param NodeNum Number of nodes in each replica set. Currently, the number of nodes in a replica set is fixed at 3, while the number of shards is customizable. For more information, please see the parameter returned by the DescribeSpecInfo API
+     * Set The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
+     * @param NodeNum The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
      */
     public void setNodeNum(Long NodeNum) {
         this.NodeNum = NodeNum;
     }
 
     /**
-     * Get Version number. For the specific purchasable versions supported, please see the return result of the DescribeSpecInfo API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition 
-     * @return MongoVersion Version number. For the specific purchasable versions supported, please see the return result of the DescribeSpecInfo API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition
+     * Get Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition; MONGO_42_WT: MongoDB 4.2 WiredTiger Edition. 
+     * @return MongoVersion Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition; MONGO_42_WT: MongoDB 4.2 WiredTiger Edition.
      */
     public String getMongoVersion() {
         return this.MongoVersion;
     }
 
     /**
-     * Set Version number. For the specific purchasable versions supported, please see the return result of the DescribeSpecInfo API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition
-     * @param MongoVersion Version number. For the specific purchasable versions supported, please see the return result of the DescribeSpecInfo API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition
+     * Set Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition; MONGO_42_WT: MongoDB 4.2 WiredTiger Edition.
+     * @param MongoVersion Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition; MONGO_42_WT: MongoDB 4.2 WiredTiger Edition.
      */
     public void setMongoVersion(String MongoVersion) {
         this.MongoVersion = MongoVersion;
@@ -254,16 +296,16 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     }
 
     /**
-     * Get AZ information in the format of ap-guangzhou-2 
-     * @return Zone AZ information in the format of ap-guangzhou-2
+     * Get AZ in the format of ap-guangzhou-2. If multi-AZ deployment is enabled, this parameter refers to the primary AZ and must be one of the values of `AvailabilityZoneList`. 
+     * @return Zone AZ in the format of ap-guangzhou-2. If multi-AZ deployment is enabled, this parameter refers to the primary AZ and must be one of the values of `AvailabilityZoneList`.
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set AZ information in the format of ap-guangzhou-2
-     * @param Zone AZ information in the format of ap-guangzhou-2
+     * Set AZ in the format of ap-guangzhou-2. If multi-AZ deployment is enabled, this parameter refers to the primary AZ and must be one of the values of `AvailabilityZoneList`.
+     * @param Zone AZ in the format of ap-guangzhou-2. If multi-AZ deployment is enabled, this parameter refers to the primary AZ and must be one of the values of `AvailabilityZoneList`.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
@@ -366,16 +408,16 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     }
 
     /**
-     * Get Valid values: 1 (regular instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance). 
-     * @return Clone Valid values: 1 (regular instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance).
+     * Get Instance type. Valid values: `1` (primary instance), `2` (temp instance), `3` (read-only instance), `4` (disaster recovery instance), `5` (cloned instance). 
+     * @return Clone Instance type. Valid values: `1` (primary instance), `2` (temp instance), `3` (read-only instance), `4` (disaster recovery instance), `5` (cloned instance).
      */
     public Long getClone() {
         return this.Clone;
     }
 
     /**
-     * Set Valid values: 1 (regular instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance).
-     * @param Clone Valid values: 1 (regular instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance).
+     * Set Instance type. Valid values: `1` (primary instance), `2` (temp instance), `3` (read-only instance), `4` (disaster recovery instance), `5` (cloned instance).
+     * @param Clone Instance type. Valid values: `1` (primary instance), `2` (temp instance), `3` (read-only instance), `4` (disaster recovery instance), `5` (cloned instance).
      */
     public void setClone(Long Clone) {
         this.Clone = Clone;
@@ -411,6 +453,102 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
      */
     public void setSecurityGroup(String [] SecurityGroup) {
         this.SecurityGroup = SecurityGroup;
+    }
+
+    /**
+     * Get The point in time to which the cloned instance will be rolled back. This parameter is required for a cloned instance. The point in time in the format of 2021-08-13 16:30:00 must be within the last seven days. 
+     * @return RestoreTime The point in time to which the cloned instance will be rolled back. This parameter is required for a cloned instance. The point in time in the format of 2021-08-13 16:30:00 must be within the last seven days.
+     */
+    public String getRestoreTime() {
+        return this.RestoreTime;
+    }
+
+    /**
+     * Set The point in time to which the cloned instance will be rolled back. This parameter is required for a cloned instance. The point in time in the format of 2021-08-13 16:30:00 must be within the last seven days.
+     * @param RestoreTime The point in time to which the cloned instance will be rolled back. This parameter is required for a cloned instance. The point in time in the format of 2021-08-13 16:30:00 must be within the last seven days.
+     */
+    public void setRestoreTime(String RestoreTime) {
+        this.RestoreTime = RestoreTime;
+    }
+
+    /**
+     * Get Instance name, which can contain up to 60 letters, digits, or symbols (_-). 
+     * @return InstanceName Instance name, which can contain up to 60 letters, digits, or symbols (_-).
+     */
+    public String getInstanceName() {
+        return this.InstanceName;
+    }
+
+    /**
+     * Set Instance name, which can contain up to 60 letters, digits, or symbols (_-).
+     * @param InstanceName Instance name, which can contain up to 60 letters, digits, or symbols (_-).
+     */
+    public void setInstanceName(String InstanceName) {
+        this.InstanceName = InstanceName;
+    }
+
+    /**
+     * Get AZ list when multi-AZ deployment is enabled. For the specific purchasable versions which support multi-AZ deployment, please see the return result of the `DescribeSpecInfo` API. Notes: 1. Nodes of a multi-AZ instance must be deployed across three AZs. 2. To ensure a successful cross-AZ switch, you should not deploy most of the nodes to the same AZ. (For example, a three-node sharded cluster instance does not support deploying two or more nodes in the same AZ.) 3. MongoDB 4.2 and later versions do not support multi-AZ deployment. 4. Read-Only and disaster recovery instances do not support multi-AZ deployment. 5. Instances in the classic network do not support multi-AZ deployment. 
+     * @return AvailabilityZoneList AZ list when multi-AZ deployment is enabled. For the specific purchasable versions which support multi-AZ deployment, please see the return result of the `DescribeSpecInfo` API. Notes: 1. Nodes of a multi-AZ instance must be deployed across three AZs. 2. To ensure a successful cross-AZ switch, you should not deploy most of the nodes to the same AZ. (For example, a three-node sharded cluster instance does not support deploying two or more nodes in the same AZ.) 3. MongoDB 4.2 and later versions do not support multi-AZ deployment. 4. Read-Only and disaster recovery instances do not support multi-AZ deployment. 5. Instances in the classic network do not support multi-AZ deployment.
+     */
+    public String [] getAvailabilityZoneList() {
+        return this.AvailabilityZoneList;
+    }
+
+    /**
+     * Set AZ list when multi-AZ deployment is enabled. For the specific purchasable versions which support multi-AZ deployment, please see the return result of the `DescribeSpecInfo` API. Notes: 1. Nodes of a multi-AZ instance must be deployed across three AZs. 2. To ensure a successful cross-AZ switch, you should not deploy most of the nodes to the same AZ. (For example, a three-node sharded cluster instance does not support deploying two or more nodes in the same AZ.) 3. MongoDB 4.2 and later versions do not support multi-AZ deployment. 4. Read-Only and disaster recovery instances do not support multi-AZ deployment. 5. Instances in the classic network do not support multi-AZ deployment.
+     * @param AvailabilityZoneList AZ list when multi-AZ deployment is enabled. For the specific purchasable versions which support multi-AZ deployment, please see the return result of the `DescribeSpecInfo` API. Notes: 1. Nodes of a multi-AZ instance must be deployed across three AZs. 2. To ensure a successful cross-AZ switch, you should not deploy most of the nodes to the same AZ. (For example, a three-node sharded cluster instance does not support deploying two or more nodes in the same AZ.) 3. MongoDB 4.2 and later versions do not support multi-AZ deployment. 4. Read-Only and disaster recovery instances do not support multi-AZ deployment. 5. Instances in the classic network do not support multi-AZ deployment.
+     */
+    public void setAvailabilityZoneList(String [] AvailabilityZoneList) {
+        this.AvailabilityZoneList = AvailabilityZoneList;
+    }
+
+    /**
+     * Get The number of mongos CPUs, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. 
+     * @return MongosCpu The number of mongos CPUs, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API.
+     */
+    public Long getMongosCpu() {
+        return this.MongosCpu;
+    }
+
+    /**
+     * Set The number of mongos CPUs, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API.
+     * @param MongosCpu The number of mongos CPUs, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API.
+     */
+    public void setMongosCpu(Long MongosCpu) {
+        this.MongosCpu = MongosCpu;
+    }
+
+    /**
+     * Get The size of mongos memory, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. 
+     * @return MongosMemory The size of mongos memory, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API.
+     */
+    public Long getMongosMemory() {
+        return this.MongosMemory;
+    }
+
+    /**
+     * Set The size of mongos memory, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API.
+     * @param MongosMemory The size of mongos memory, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API.
+     */
+    public void setMongosMemory(Long MongosMemory) {
+        this.MongosMemory = MongosMemory;
+    }
+
+    /**
+     * Get The number of mongos routers, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. Note: please purchase 3-32 mongos routers for high availability. 
+     * @return MongosNodeNum The number of mongos routers, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. Note: please purchase 3-32 mongos routers for high availability.
+     */
+    public Long getMongosNodeNum() {
+        return this.MongosNodeNum;
+    }
+
+    /**
+     * Set The number of mongos routers, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. Note: please purchase 3-32 mongos routers for high availability.
+     * @param MongosNodeNum The number of mongos routers, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. Note: please purchase 3-32 mongos routers for high availability.
+     */
+    public void setMongosNodeNum(Long MongosNodeNum) {
+        this.MongosNodeNum = MongosNodeNum;
     }
 
     public CreateDBInstanceHourRequest() {
@@ -478,6 +616,27 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
                 this.SecurityGroup[i] = new String(source.SecurityGroup[i]);
             }
         }
+        if (source.RestoreTime != null) {
+            this.RestoreTime = new String(source.RestoreTime);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.AvailabilityZoneList != null) {
+            this.AvailabilityZoneList = new String[source.AvailabilityZoneList.length];
+            for (int i = 0; i < source.AvailabilityZoneList.length; i++) {
+                this.AvailabilityZoneList[i] = new String(source.AvailabilityZoneList[i]);
+            }
+        }
+        if (source.MongosCpu != null) {
+            this.MongosCpu = new Long(source.MongosCpu);
+        }
+        if (source.MongosMemory != null) {
+            this.MongosMemory = new Long(source.MongosMemory);
+        }
+        if (source.MongosNodeNum != null) {
+            this.MongosNodeNum = new Long(source.MongosNodeNum);
+        }
     }
 
 
@@ -502,6 +661,12 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Clone", this.Clone);
         this.setParamSimple(map, prefix + "Father", this.Father);
         this.setParamArraySimple(map, prefix + "SecurityGroup.", this.SecurityGroup);
+        this.setParamSimple(map, prefix + "RestoreTime", this.RestoreTime);
+        this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
+        this.setParamArraySimple(map, prefix + "AvailabilityZoneList.", this.AvailabilityZoneList);
+        this.setParamSimple(map, prefix + "MongosCpu", this.MongosCpu);
+        this.setParamSimple(map, prefix + "MongosMemory", this.MongosMemory);
+        this.setParamSimple(map, prefix + "MongosNodeNum", this.MongosNodeNum);
 
     }
 }
