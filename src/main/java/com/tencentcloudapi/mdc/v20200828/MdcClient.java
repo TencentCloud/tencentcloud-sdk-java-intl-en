@@ -139,6 +139,26 @@ public class MdcClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query all StreamLink regions.
+     * @param req DescribeStreamLinkRegionsRequest
+     * @return DescribeStreamLinkRegionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamLinkRegionsResponse DescribeStreamLinkRegions(DescribeStreamLinkRegionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamLinkRegionsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamLinkRegionsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeStreamLinkRegions");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify the configuration information of a StreamLink flow.
      * @param req ModifyStreamLinkFlowRequest
      * @return ModifyStreamLinkFlowResponse

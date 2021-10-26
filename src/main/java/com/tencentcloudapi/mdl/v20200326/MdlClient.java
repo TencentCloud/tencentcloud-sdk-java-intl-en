@@ -399,6 +399,26 @@ public class MdlClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query all StreamLive regions.
+     * @param req DescribeStreamLiveRegionsRequest
+     * @return DescribeStreamLiveRegionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamLiveRegionsResponse DescribeStreamLiveRegions(DescribeStreamLiveRegionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamLiveRegionsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamLiveRegionsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeStreamLiveRegions");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify a StreamLive channel.
      * @param req ModifyStreamLiveChannelRequest
      * @return ModifyStreamLiveChannelResponse
