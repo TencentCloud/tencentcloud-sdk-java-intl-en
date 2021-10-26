@@ -30,7 +30,7 @@ public class InvokeRequest extends AbstractModel{
     private String FunctionName;
 
     /**
-    * The value is `RequestResponse` (synchronous) or `Event` (asynchronous). The default value is synchronous.
+    * Fill in `RequestResponse` for synchronized invocations (default and recommended) and `Event` for asychronized invocations. Note that for synchronized invocations, the max timeout period is 300s. Choose asychronized invocations if the required timeout period is longer than 300 seconds. You can also use [InvokeFunction](https://intl.cloud.tencent.com/document/product/583/58400?from_cn_redirect=1) for synchronized invocations. 
     */
     @SerializedName("InvocationType")
     @Expose
@@ -44,14 +44,14 @@ public class InvokeRequest extends AbstractModel{
     private String Qualifier;
 
     /**
-    * Function running parameter, which is in the JSON format. Maximum parameter size is 1 MB.
+    * Function running parameter, which is in the JSON format. The maximum parameter size is 6 MB for synchronized invocations and 128KB for asynchronized invocations. This field corresponds to [event input parameter](https://intl.cloud.tencent.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E).
     */
     @SerializedName("ClientContext")
     @Expose
     private String ClientContext;
 
     /**
-    * If this field is specified during sync invocation, the returned value will contain 4 KB of logs. Valid values: None, Tail. Default value: None. If the value is `Tail`, the `Log` field in the returned parameter will contain the corresponding function execution log
+    * Null for async invocations
     */
     @SerializedName("LogType")
     @Expose
@@ -88,16 +88,16 @@ public class InvokeRequest extends AbstractModel{
     }
 
     /**
-     * Get The value is `RequestResponse` (synchronous) or `Event` (asynchronous). The default value is synchronous. 
-     * @return InvocationType The value is `RequestResponse` (synchronous) or `Event` (asynchronous). The default value is synchronous.
+     * Get Fill in `RequestResponse` for synchronized invocations (default and recommended) and `Event` for asychronized invocations. Note that for synchronized invocations, the max timeout period is 300s. Choose asychronized invocations if the required timeout period is longer than 300 seconds. You can also use [InvokeFunction](https://intl.cloud.tencent.com/document/product/583/58400?from_cn_redirect=1) for synchronized invocations.  
+     * @return InvocationType Fill in `RequestResponse` for synchronized invocations (default and recommended) and `Event` for asychronized invocations. Note that for synchronized invocations, the max timeout period is 300s. Choose asychronized invocations if the required timeout period is longer than 300 seconds. You can also use [InvokeFunction](https://intl.cloud.tencent.com/document/product/583/58400?from_cn_redirect=1) for synchronized invocations. 
      */
     public String getInvocationType() {
         return this.InvocationType;
     }
 
     /**
-     * Set The value is `RequestResponse` (synchronous) or `Event` (asynchronous). The default value is synchronous.
-     * @param InvocationType The value is `RequestResponse` (synchronous) or `Event` (asynchronous). The default value is synchronous.
+     * Set Fill in `RequestResponse` for synchronized invocations (default and recommended) and `Event` for asychronized invocations. Note that for synchronized invocations, the max timeout period is 300s. Choose asychronized invocations if the required timeout period is longer than 300 seconds. You can also use [InvokeFunction](https://intl.cloud.tencent.com/document/product/583/58400?from_cn_redirect=1) for synchronized invocations. 
+     * @param InvocationType Fill in `RequestResponse` for synchronized invocations (default and recommended) and `Event` for asychronized invocations. Note that for synchronized invocations, the max timeout period is 300s. Choose asychronized invocations if the required timeout period is longer than 300 seconds. You can also use [InvokeFunction](https://intl.cloud.tencent.com/document/product/583/58400?from_cn_redirect=1) for synchronized invocations. 
      */
     public void setInvocationType(String InvocationType) {
         this.InvocationType = InvocationType;
@@ -120,32 +120,32 @@ public class InvokeRequest extends AbstractModel{
     }
 
     /**
-     * Get Function running parameter, which is in the JSON format. Maximum parameter size is 1 MB. 
-     * @return ClientContext Function running parameter, which is in the JSON format. Maximum parameter size is 1 MB.
+     * Get Function running parameter, which is in the JSON format. The maximum parameter size is 6 MB for synchronized invocations and 128KB for asynchronized invocations. This field corresponds to [event input parameter](https://intl.cloud.tencent.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E). 
+     * @return ClientContext Function running parameter, which is in the JSON format. The maximum parameter size is 6 MB for synchronized invocations and 128KB for asynchronized invocations. This field corresponds to [event input parameter](https://intl.cloud.tencent.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E).
      */
     public String getClientContext() {
         return this.ClientContext;
     }
 
     /**
-     * Set Function running parameter, which is in the JSON format. Maximum parameter size is 1 MB.
-     * @param ClientContext Function running parameter, which is in the JSON format. Maximum parameter size is 1 MB.
+     * Set Function running parameter, which is in the JSON format. The maximum parameter size is 6 MB for synchronized invocations and 128KB for asynchronized invocations. This field corresponds to [event input parameter](https://intl.cloud.tencent.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E).
+     * @param ClientContext Function running parameter, which is in the JSON format. The maximum parameter size is 6 MB for synchronized invocations and 128KB for asynchronized invocations. This field corresponds to [event input parameter](https://intl.cloud.tencent.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E).
      */
     public void setClientContext(String ClientContext) {
         this.ClientContext = ClientContext;
     }
 
     /**
-     * Get If this field is specified during sync invocation, the returned value will contain 4 KB of logs. Valid values: None, Tail. Default value: None. If the value is `Tail`, the `Log` field in the returned parameter will contain the corresponding function execution log 
-     * @return LogType If this field is specified during sync invocation, the returned value will contain 4 KB of logs. Valid values: None, Tail. Default value: None. If the value is `Tail`, the `Log` field in the returned parameter will contain the corresponding function execution log
+     * Get Null for async invocations 
+     * @return LogType Null for async invocations
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set If this field is specified during sync invocation, the returned value will contain 4 KB of logs. Valid values: None, Tail. Default value: None. If the value is `Tail`, the `Log` field in the returned parameter will contain the corresponding function execution log
-     * @param LogType If this field is specified during sync invocation, the returned value will contain 4 KB of logs. Valid values: None, Tail. Default value: None. If the value is `Tail`, the `Log` field in the returned parameter will contain the corresponding function execution log
+     * Set Null for async invocations
+     * @param LogType Null for async invocations
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;

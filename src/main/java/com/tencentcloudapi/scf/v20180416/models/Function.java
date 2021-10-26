@@ -123,6 +123,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long ReservedConcurrencyMem;
 
     /**
+    * Asynchronization attribute of the function. Values: `TRUE` and `FALSE`.
+    */
+    @SerializedName("AsyncRunEnable")
+    @Expose
+    private String AsyncRunEnable;
+
+    /**
+    * Whether to enable call tracing for ansynchronized functions. Values: `TRUE` and `FALSE`.
+    */
+    @SerializedName("TraceEnable")
+    @Expose
+    private String TraceEnable;
+
+    /**
      * Get Modification time 
      * @return ModTime Modification time
      */
@@ -354,6 +368,38 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.ReservedConcurrencyMem = ReservedConcurrencyMem;
     }
 
+    /**
+     * Get Asynchronization attribute of the function. Values: `TRUE` and `FALSE`. 
+     * @return AsyncRunEnable Asynchronization attribute of the function. Values: `TRUE` and `FALSE`.
+     */
+    public String getAsyncRunEnable() {
+        return this.AsyncRunEnable;
+    }
+
+    /**
+     * Set Asynchronization attribute of the function. Values: `TRUE` and `FALSE`.
+     * @param AsyncRunEnable Asynchronization attribute of the function. Values: `TRUE` and `FALSE`.
+     */
+    public void setAsyncRunEnable(String AsyncRunEnable) {
+        this.AsyncRunEnable = AsyncRunEnable;
+    }
+
+    /**
+     * Get Whether to enable call tracing for ansynchronized functions. Values: `TRUE` and `FALSE`. 
+     * @return TraceEnable Whether to enable call tracing for ansynchronized functions. Values: `TRUE` and `FALSE`.
+     */
+    public String getTraceEnable() {
+        return this.TraceEnable;
+    }
+
+    /**
+     * Set Whether to enable call tracing for ansynchronized functions. Values: `TRUE` and `FALSE`.
+     * @param TraceEnable Whether to enable call tracing for ansynchronized functions. Values: `TRUE` and `FALSE`.
+     */
+    public void setTraceEnable(String TraceEnable) {
+        this.TraceEnable = TraceEnable;
+    }
+
     public Function() {
     }
 
@@ -410,6 +456,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.ReservedConcurrencyMem != null) {
             this.ReservedConcurrencyMem = new Long(source.ReservedConcurrencyMem);
         }
+        if (source.AsyncRunEnable != null) {
+            this.AsyncRunEnable = new String(source.AsyncRunEnable);
+        }
+        if (source.TraceEnable != null) {
+            this.TraceEnable = new String(source.TraceEnable);
+        }
     }
 
 
@@ -431,6 +483,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "StatusReasons.", this.StatusReasons);
         this.setParamSimple(map, prefix + "TotalProvisionedConcurrencyMem", this.TotalProvisionedConcurrencyMem);
         this.setParamSimple(map, prefix + "ReservedConcurrencyMem", this.ReservedConcurrencyMem);
+        this.setParamSimple(map, prefix + "AsyncRunEnable", this.AsyncRunEnable);
+        this.setParamSimple(map, prefix + "TraceEnable", this.TraceEnable);
 
     }
 }

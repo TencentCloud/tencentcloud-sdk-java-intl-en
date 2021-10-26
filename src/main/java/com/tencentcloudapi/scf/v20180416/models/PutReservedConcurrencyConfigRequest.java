@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class PutReservedConcurrencyConfigRequest extends AbstractModel{
 
     /**
-    * Name of the function for which to set the provisioned concurrency
+    * Specifies the function of which you want to configure the reserved quota
     */
     @SerializedName("FunctionName")
     @Expose
     private String FunctionName;
 
     /**
-    * Reserved concurrency memory of function. Note: the upper limit for the total reserved concurrency memory of the function is the user's total concurrency memory minus 12800
+    * Reserved memory quota of the function. Note: the upper limit for the total reserved quota of the function is the user's total concurrency memory minus 12800
     */
     @SerializedName("ReservedConcurrencyMem")
     @Expose
@@ -44,32 +44,32 @@ public class PutReservedConcurrencyConfigRequest extends AbstractModel{
     private String Namespace;
 
     /**
-     * Get Name of the function for which to set the provisioned concurrency 
-     * @return FunctionName Name of the function for which to set the provisioned concurrency
+     * Get Specifies the function of which you want to configure the reserved quota 
+     * @return FunctionName Specifies the function of which you want to configure the reserved quota
      */
     public String getFunctionName() {
         return this.FunctionName;
     }
 
     /**
-     * Set Name of the function for which to set the provisioned concurrency
-     * @param FunctionName Name of the function for which to set the provisioned concurrency
+     * Set Specifies the function of which you want to configure the reserved quota
+     * @param FunctionName Specifies the function of which you want to configure the reserved quota
      */
     public void setFunctionName(String FunctionName) {
         this.FunctionName = FunctionName;
     }
 
     /**
-     * Get Reserved concurrency memory of function. Note: the upper limit for the total reserved concurrency memory of the function is the user's total concurrency memory minus 12800 
-     * @return ReservedConcurrencyMem Reserved concurrency memory of function. Note: the upper limit for the total reserved concurrency memory of the function is the user's total concurrency memory minus 12800
+     * Get Reserved memory quota of the function. Note: the upper limit for the total reserved quota of the function is the user's total concurrency memory minus 12800 
+     * @return ReservedConcurrencyMem Reserved memory quota of the function. Note: the upper limit for the total reserved quota of the function is the user's total concurrency memory minus 12800
      */
     public Long getReservedConcurrencyMem() {
         return this.ReservedConcurrencyMem;
     }
 
     /**
-     * Set Reserved concurrency memory of function. Note: the upper limit for the total reserved concurrency memory of the function is the user's total concurrency memory minus 12800
-     * @param ReservedConcurrencyMem Reserved concurrency memory of function. Note: the upper limit for the total reserved concurrency memory of the function is the user's total concurrency memory minus 12800
+     * Set Reserved memory quota of the function. Note: the upper limit for the total reserved quota of the function is the user's total concurrency memory minus 12800
+     * @param ReservedConcurrencyMem Reserved memory quota of the function. Note: the upper limit for the total reserved quota of the function is the user's total concurrency memory minus 12800
      */
     public void setReservedConcurrencyMem(Long ReservedConcurrencyMem) {
         this.ReservedConcurrencyMem = ReservedConcurrencyMem;

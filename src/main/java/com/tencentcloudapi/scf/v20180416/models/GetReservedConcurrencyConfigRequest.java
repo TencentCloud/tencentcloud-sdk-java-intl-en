@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class GetReservedConcurrencyConfigRequest extends AbstractModel{
 
     /**
-    * Name of the function for which to get the provisioned concurrency details.
+    * Specifies the function of which you want to obtain the reserved quota
     */
     @SerializedName("FunctionName")
     @Expose
@@ -37,16 +37,16 @@ public class GetReservedConcurrencyConfigRequest extends AbstractModel{
     private String Namespace;
 
     /**
-     * Get Name of the function for which to get the provisioned concurrency details. 
-     * @return FunctionName Name of the function for which to get the provisioned concurrency details.
+     * Get Specifies the function of which you want to obtain the reserved quota 
+     * @return FunctionName Specifies the function of which you want to obtain the reserved quota
      */
     public String getFunctionName() {
         return this.FunctionName;
     }
 
     /**
-     * Set Name of the function for which to get the provisioned concurrency details.
-     * @param FunctionName Name of the function for which to get the provisioned concurrency details.
+     * Set Specifies the function of which you want to obtain the reserved quota
+     * @param FunctionName Specifies the function of which you want to obtain the reserved quota
      */
     public void setFunctionName(String FunctionName) {
         this.FunctionName = FunctionName;

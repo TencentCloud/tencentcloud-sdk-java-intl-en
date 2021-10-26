@@ -37,7 +37,7 @@ public class CreateTriggerRequest extends AbstractModel{
     private String TriggerName;
 
     /**
-    * Trigger type. Currently, COS, CMQ, timer, and ckafka triggers are supported.
+    * Type of trigger. Values: `cos`, `cmq`, `timer`, `ckafka` and `apigw`. To create a CLS trigger, please refer to [Creating Shipping Task (SCF)](https://intl.cloud.tencent.com/document/product/614/61096?from_cn_redirect=1).
     */
     @SerializedName("Type")
     @Expose
@@ -111,16 +111,16 @@ public class CreateTriggerRequest extends AbstractModel{
     }
 
     /**
-     * Get Trigger type. Currently, COS, CMQ, timer, and ckafka triggers are supported. 
-     * @return Type Trigger type. Currently, COS, CMQ, timer, and ckafka triggers are supported.
+     * Get Type of trigger. Values: `cos`, `cmq`, `timer`, `ckafka` and `apigw`. To create a CLS trigger, please refer to [Creating Shipping Task (SCF)](https://intl.cloud.tencent.com/document/product/614/61096?from_cn_redirect=1). 
+     * @return Type Type of trigger. Values: `cos`, `cmq`, `timer`, `ckafka` and `apigw`. To create a CLS trigger, please refer to [Creating Shipping Task (SCF)](https://intl.cloud.tencent.com/document/product/614/61096?from_cn_redirect=1).
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Trigger type. Currently, COS, CMQ, timer, and ckafka triggers are supported.
-     * @param Type Trigger type. Currently, COS, CMQ, timer, and ckafka triggers are supported.
+     * Set Type of trigger. Values: `cos`, `cmq`, `timer`, `ckafka` and `apigw`. To create a CLS trigger, please refer to [Creating Shipping Task (SCF)](https://intl.cloud.tencent.com/document/product/614/61096?from_cn_redirect=1).
+     * @param Type Type of trigger. Values: `cos`, `cmq`, `timer`, `ckafka` and `apigw`. To create a CLS trigger, please refer to [Creating Shipping Task (SCF)](https://intl.cloud.tencent.com/document/product/614/61096?from_cn_redirect=1).
      */
     public void setType(String Type) {
         this.Type = Type;

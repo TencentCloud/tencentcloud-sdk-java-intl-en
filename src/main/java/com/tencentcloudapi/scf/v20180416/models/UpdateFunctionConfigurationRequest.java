@@ -142,7 +142,7 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     private CfsConfig CfsConfig;
 
     /**
-    * Timeout period for function initialization. Default value: 15 seconds
+    * The function initialization timeout period
     */
     @SerializedName("InitTimeout")
     @Expose
@@ -421,16 +421,16 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     }
 
     /**
-     * Get Timeout period for function initialization. Default value: 15 seconds 
-     * @return InitTimeout Timeout period for function initialization. Default value: 15 seconds
+     * Get The function initialization timeout period 
+     * @return InitTimeout The function initialization timeout period
      */
     public Long getInitTimeout() {
         return this.InitTimeout;
     }
 
     /**
-     * Set Timeout period for function initialization. Default value: 15 seconds
-     * @param InitTimeout Timeout period for function initialization. Default value: 15 seconds
+     * Set The function initialization timeout period
+     * @param InitTimeout The function initialization timeout period
      */
     public void setInitTimeout(Long InitTimeout) {
         this.InitTimeout = InitTimeout;

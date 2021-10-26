@@ -121,6 +121,13 @@ public class Code extends AbstractModel{
     private String GitUserNameSecret;
 
     /**
+    * TCR image configurations
+    */
+    @SerializedName("ImageConfig")
+    @Expose
+    private ImageConfig ImageConfig;
+
+    /**
      * Get Object bucket name (enter the custom part of the bucket name without `-appid`) 
      * @return CosBucketName Object bucket name (enter the custom part of the bucket name without `-appid`)
      */
@@ -344,6 +351,22 @@ public class Code extends AbstractModel{
         this.GitUserNameSecret = GitUserNameSecret;
     }
 
+    /**
+     * Get TCR image configurations 
+     * @return ImageConfig TCR image configurations
+     */
+    public ImageConfig getImageConfig() {
+        return this.ImageConfig;
+    }
+
+    /**
+     * Set TCR image configurations
+     * @param ImageConfig TCR image configurations
+     */
+    public void setImageConfig(ImageConfig ImageConfig) {
+        this.ImageConfig = ImageConfig;
+    }
+
     public Code() {
     }
 
@@ -394,6 +417,9 @@ public class Code extends AbstractModel{
         if (source.GitUserNameSecret != null) {
             this.GitUserNameSecret = new String(source.GitUserNameSecret);
         }
+        if (source.ImageConfig != null) {
+            this.ImageConfig = new ImageConfig(source.ImageConfig);
+        }
     }
 
 
@@ -415,6 +441,7 @@ public class Code extends AbstractModel{
         this.setParamSimple(map, prefix + "GitDirectory", this.GitDirectory);
         this.setParamSimple(map, prefix + "GitCommitId", this.GitCommitId);
         this.setParamSimple(map, prefix + "GitUserNameSecret", this.GitUserNameSecret);
+        this.setParamObj(map, prefix + "ImageConfig.", this.ImageConfig);
 
     }
 }

@@ -23,8 +23,8 @@ import java.util.HashMap;
 public class GetReservedConcurrencyConfigResponse extends AbstractModel{
 
     /**
-    * Reserved concurrency memory of function.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The reserved quota of the function
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("ReservedMem")
     @Expose
@@ -38,20 +38,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Reserved concurrency memory of function.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ReservedMem Reserved concurrency memory of function.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The reserved quota of the function
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ReservedMem The reserved quota of the function
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getReservedMem() {
         return this.ReservedMem;
     }
 
     /**
-     * Set Reserved concurrency memory of function.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ReservedMem Reserved concurrency memory of function.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The reserved quota of the function
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ReservedMem The reserved quota of the function
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setReservedMem(Long ReservedMem) {
         this.ReservedMem = ReservedMem;

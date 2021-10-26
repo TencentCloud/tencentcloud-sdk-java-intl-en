@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DeleteReservedConcurrencyConfigRequest extends AbstractModel{
 
     /**
-    * Name of the function for which to delete the provisioned concurrency
+    * Specifies the function of which you want to delete the reserved quota
     */
     @SerializedName("FunctionName")
     @Expose
@@ -37,16 +37,16 @@ public class DeleteReservedConcurrencyConfigRequest extends AbstractModel{
     private String Namespace;
 
     /**
-     * Get Name of the function for which to delete the provisioned concurrency 
-     * @return FunctionName Name of the function for which to delete the provisioned concurrency
+     * Get Specifies the function of which you want to delete the reserved quota 
+     * @return FunctionName Specifies the function of which you want to delete the reserved quota
      */
     public String getFunctionName() {
         return this.FunctionName;
     }
 
     /**
-     * Set Name of the function for which to delete the provisioned concurrency
-     * @param FunctionName Name of the function for which to delete the provisioned concurrency
+     * Set Specifies the function of which you want to delete the reserved quota
+     * @param FunctionName Specifies the function of which you want to delete the reserved quota
      */
     public void setFunctionName(String FunctionName) {
         this.FunctionName = FunctionName;

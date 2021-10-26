@@ -246,7 +246,7 @@ An alias must point to a master version and can point to an additional version a
     }
 
     /**
-     *This API is used to delete the reserved concurrency configuration of a function.
+     *This API is used to delete the configuration of reserved quota.
      * @param req DeleteReservedConcurrencyConfigRequest
      * @return DeleteReservedConcurrencyConfigResponse
      * @throws TencentCloudSDKException
@@ -446,7 +446,7 @@ An alias must point to a master version and can point to an additional version a
     }
 
     /**
-     *This API is used to get the reserved concurrency details of a function.
+     *This API is used to obtain the reserved quota details of a function. 
      * @param req GetReservedConcurrencyConfigRequest
      * @return GetReservedConcurrencyConfigResponse
      * @throws TencentCloudSDKException
@@ -726,7 +726,7 @@ An alias must point to a master version and can point to an additional version a
     }
 
     /**
-     *This API is used to set the reserved concurrency of a function.
+     *This API is used to configure the reserved quota of a function.
      * @param req PutReservedConcurrencyConfigRequest
      * @return PutReservedConcurrencyConfigResponse
      * @throws TencentCloudSDKException

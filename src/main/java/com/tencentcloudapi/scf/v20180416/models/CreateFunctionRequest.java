@@ -156,7 +156,7 @@ public class CreateFunctionRequest extends AbstractModel{
     private CfsConfig CfsConfig;
 
     /**
-    * Timeout period for function initialization
+    * The function initialization timeout period. It defaults to 65s for general cases and 90s for image deployment functions.
     */
     @SerializedName("InitTimeout")
     @Expose
@@ -488,16 +488,16 @@ public class CreateFunctionRequest extends AbstractModel{
     }
 
     /**
-     * Get Timeout period for function initialization 
-     * @return InitTimeout Timeout period for function initialization
+     * Get The function initialization timeout period. It defaults to 65s for general cases and 90s for image deployment functions. 
+     * @return InitTimeout The function initialization timeout period. It defaults to 65s for general cases and 90s for image deployment functions.
      */
     public Long getInitTimeout() {
         return this.InitTimeout;
     }
 
     /**
-     * Set Timeout period for function initialization
-     * @param InitTimeout Timeout period for function initialization
+     * Set The function initialization timeout period. It defaults to 65s for general cases and 90s for image deployment functions.
+     * @param InitTimeout The function initialization timeout period. It defaults to 65s for general cases and 90s for image deployment functions.
      */
     public void setInitTimeout(Long InitTimeout) {
         this.InitTimeout = InitTimeout;

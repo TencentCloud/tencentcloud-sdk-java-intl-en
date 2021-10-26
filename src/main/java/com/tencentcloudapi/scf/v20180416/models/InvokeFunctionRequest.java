@@ -37,7 +37,7 @@ public class InvokeFunctionRequest extends AbstractModel{
     private String Qualifier;
 
     /**
-    * Function running parameter, which is in the JSON format. Maximum parameter size is 6 MB.
+    * Function running parameter, which is in the JSON format. Maximum parameter size is 6 MB. This field corresponds to [event input parameter](https://intl.cloud.tencent.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E).
     */
     @SerializedName("Event")
     @Expose
@@ -97,16 +97,16 @@ public class InvokeFunctionRequest extends AbstractModel{
     }
 
     /**
-     * Get Function running parameter, which is in the JSON format. Maximum parameter size is 6 MB. 
-     * @return Event Function running parameter, which is in the JSON format. Maximum parameter size is 6 MB.
+     * Get Function running parameter, which is in the JSON format. Maximum parameter size is 6 MB. This field corresponds to [event input parameter](https://intl.cloud.tencent.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E). 
+     * @return Event Function running parameter, which is in the JSON format. Maximum parameter size is 6 MB. This field corresponds to [event input parameter](https://intl.cloud.tencent.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E).
      */
     public String getEvent() {
         return this.Event;
     }
 
     /**
-     * Set Function running parameter, which is in the JSON format. Maximum parameter size is 6 MB.
-     * @param Event Function running parameter, which is in the JSON format. Maximum parameter size is 6 MB.
+     * Set Function running parameter, which is in the JSON format. Maximum parameter size is 6 MB. This field corresponds to [event input parameter](https://intl.cloud.tencent.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E).
+     * @param Event Function running parameter, which is in the JSON format. Maximum parameter size is 6 MB. This field corresponds to [event input parameter](https://intl.cloud.tencent.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E).
      */
     public void setEvent(String Event) {
         this.Event = Event;
