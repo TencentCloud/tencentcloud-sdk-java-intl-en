@@ -24,9 +24,9 @@ public class VideoTemplateInfo extends AbstractModel{
 
     /**
     * Video stream codec. Valid values:
-<li>libx264: H.264</li>
-<li>libx265: H.265</li>
-Currently, a resolution within 640*480p must be specified for H.265.
+<li>`libx264`: H.264</li>
+<li>`libx265`: H.265</li>
+<li>`av1`: AOMedia Video 1</li>
     */
     @SerializedName("Codec")
     @Expose
@@ -41,8 +41,8 @@ If the value is 0, the frame rate will be the same as that of the source video.
     private Long Fps;
 
     /**
-    * Bitrate of a video stream in Kbps. Value range: 0 and [128, 35,000].
-If the value is 0, the bitrate of the video will be the same as that of the source video.
+    * Video stream bitrate (Kbps). Valid values: `0`; [75, 35000]
+If the value is `0`, the original video bitrate will be used.
     */
     @SerializedName("Bitrate")
     @Expose
@@ -113,13 +113,13 @@ It is not recommended to specify this parameter if there are no special requirem
 
     /**
      * Get Video stream codec. Valid values:
-<li>libx264: H.264</li>
-<li>libx265: H.265</li>
-Currently, a resolution within 640*480p must be specified for H.265. 
+<li>`libx264`: H.264</li>
+<li>`libx265`: H.265</li>
+<li>`av1`: AOMedia Video 1</li> 
      * @return Codec Video stream codec. Valid values:
-<li>libx264: H.264</li>
-<li>libx265: H.265</li>
-Currently, a resolution within 640*480p must be specified for H.265.
+<li>`libx264`: H.264</li>
+<li>`libx265`: H.265</li>
+<li>`av1`: AOMedia Video 1</li>
      */
     public String getCodec() {
         return this.Codec;
@@ -127,13 +127,13 @@ Currently, a resolution within 640*480p must be specified for H.265.
 
     /**
      * Set Video stream codec. Valid values:
-<li>libx264: H.264</li>
-<li>libx265: H.265</li>
-Currently, a resolution within 640*480p must be specified for H.265.
+<li>`libx264`: H.264</li>
+<li>`libx265`: H.265</li>
+<li>`av1`: AOMedia Video 1</li>
      * @param Codec Video stream codec. Valid values:
-<li>libx264: H.264</li>
-<li>libx265: H.265</li>
-Currently, a resolution within 640*480p must be specified for H.265.
+<li>`libx264`: H.264</li>
+<li>`libx265`: H.265</li>
+<li>`av1`: AOMedia Video 1</li>
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;
@@ -160,20 +160,20 @@ If the value is 0, the frame rate will be the same as that of the source video.
     }
 
     /**
-     * Get Bitrate of a video stream in Kbps. Value range: 0 and [128, 35,000].
-If the value is 0, the bitrate of the video will be the same as that of the source video. 
-     * @return Bitrate Bitrate of a video stream in Kbps. Value range: 0 and [128, 35,000].
-If the value is 0, the bitrate of the video will be the same as that of the source video.
+     * Get Video stream bitrate (Kbps). Valid values: `0`; [75, 35000]
+If the value is `0`, the original video bitrate will be used. 
+     * @return Bitrate Video stream bitrate (Kbps). Valid values: `0`; [75, 35000]
+If the value is `0`, the original video bitrate will be used.
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set Bitrate of a video stream in Kbps. Value range: 0 and [128, 35,000].
-If the value is 0, the bitrate of the video will be the same as that of the source video.
-     * @param Bitrate Bitrate of a video stream in Kbps. Value range: 0 and [128, 35,000].
-If the value is 0, the bitrate of the video will be the same as that of the source video.
+     * Set Video stream bitrate (Kbps). Valid values: `0`; [75, 35000]
+If the value is `0`, the original video bitrate will be used.
+     * @param Bitrate Video stream bitrate (Kbps). Valid values: `0`; [75, 35000]
+If the value is `0`, the original video bitrate will be used.
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
