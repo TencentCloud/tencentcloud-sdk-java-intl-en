@@ -65,7 +65,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     private String UniqSubnetId;
 
     /**
-    * Project ID. If this is left empty, the default project will be used. Please use the [DescribeProject](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API to get the project ID.
+    * Project ID. If this is left empty, the default project will be used.
     */
     @SerializedName("ProjectId")
     @Expose
@@ -343,16 +343,16 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     }
 
     /**
-     * Get Project ID. If this is left empty, the default project will be used. Please use the [DescribeProject](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API to get the project ID. 
-     * @return ProjectId Project ID. If this is left empty, the default project will be used. Please use the [DescribeProject](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API to get the project ID.
+     * Get Project ID. If this is left empty, the default project will be used. 
+     * @return ProjectId Project ID. If this is left empty, the default project will be used.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID. If this is left empty, the default project will be used. Please use the [DescribeProject](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API to get the project ID.
-     * @param ProjectId Project ID. If this is left empty, the default project will be used. Please use the [DescribeProject](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API to get the project ID.
+     * Set Project ID. If this is left empty, the default project will be used.
+     * @param ProjectId Project ID. If this is left empty, the default project will be used.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;

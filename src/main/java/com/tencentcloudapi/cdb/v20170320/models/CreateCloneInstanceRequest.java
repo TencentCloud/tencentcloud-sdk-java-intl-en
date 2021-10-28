@@ -143,6 +143,13 @@ which is left empty by default. Specify this parameter when cloning a strong syn
     private Long InstanceNodes;
 
     /**
+    * Placement group ID.
+    */
+    @SerializedName("DeployGroupId")
+    @Expose
+    private String DeployGroupId;
+
+    /**
      * Get ID of the instance to be cloned from 
      * @return InstanceId ID of the instance to be cloned from
      */
@@ -418,6 +425,22 @@ which is left empty by default. Specify this parameter when cloning a strong syn
         this.InstanceNodes = InstanceNodes;
     }
 
+    /**
+     * Get Placement group ID. 
+     * @return DeployGroupId Placement group ID.
+     */
+    public String getDeployGroupId() {
+        return this.DeployGroupId;
+    }
+
+    /**
+     * Set Placement group ID.
+     * @param DeployGroupId Placement group ID.
+     */
+    public void setDeployGroupId(String DeployGroupId) {
+        this.DeployGroupId = DeployGroupId;
+    }
+
     public CreateCloneInstanceRequest() {
     }
 
@@ -483,6 +506,9 @@ which is left empty by default. Specify this parameter when cloning a strong syn
         if (source.InstanceNodes != null) {
             this.InstanceNodes = new Long(source.InstanceNodes);
         }
+        if (source.DeployGroupId != null) {
+            this.DeployGroupId = new String(source.DeployGroupId);
+        }
     }
 
 
@@ -507,6 +533,7 @@ which is left empty by default. Specify this parameter when cloning a strong syn
         this.setParamSimple(map, prefix + "BackupZone", this.BackupZone);
         this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
         this.setParamSimple(map, prefix + "InstanceNodes", this.InstanceNodes);
+        this.setParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
 
     }
 }

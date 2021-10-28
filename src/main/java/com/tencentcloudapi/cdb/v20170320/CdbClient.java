@@ -489,28 +489,6 @@ This is an asynchronous API. You can also use the [DescribeDBInstances](https://
     }
 
     /**
-     *This API is used to query the databases contained in a backup file. It has been disused.
-After the legacy version becomes capable of full backup, if you want to download logical backup files by table, you need to use this API.
-The new API (CreateBackup) can specify the table to be backed up when a logical backup file is created, which can be downloaded directly.
-     * @param req DescribeBackupDatabasesRequest
-     * @return DescribeBackupDatabasesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeBackupDatabasesResponse DescribeBackupDatabases(DescribeBackupDatabasesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBackupDatabasesResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBackupDatabasesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBackupDatabases");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to query the backup overview of a user. It will return the user's current total number of backups, total capacity used by backups, capacity in the free tier, and paid capacity (all capacity values are in bytes).
      * @param req DescribeBackupOverviewRequest
      * @return DescribeBackupOverviewResponse
@@ -543,28 +521,6 @@ The new API (CreateBackup) can specify the table to be backed up when a logical 
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupSummariesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeBackupSummaries");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to query the backup tables of the specified database. It has been disused.
-After the legacy version becomes capable of full backup, if you want to download logical backup files by table, you need to use this API.
-The new API (CreateBackup) can specify the table to be backed up when a logical backup file is created, which can be downloaded directly.
-     * @param req DescribeBackupTablesRequest
-     * @return DescribeBackupTablesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeBackupTablesResponse DescribeBackupTables(DescribeBackupTablesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBackupTablesResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBackupTablesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBackupTables");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
