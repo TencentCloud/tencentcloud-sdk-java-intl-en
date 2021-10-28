@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class DescribeHistoryScaleRequest extends AbstractModel{
 
     /**
-    * User `sdkappid`
+    * `SDKAppID` of the users to query, e.g., 1400188366
     */
     @SerializedName("SdkAppId")
     @Expose
     private String SdkAppId;
 
     /**
-    * Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 5 days.
+    * Query start time (s) in the format of Unix timestamp (e.g., 1587571000), which must be a time point in the last 5 days
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * Query end time in the format of local UNIX timestamp, such as 1588031999s.
+    * Query end time (s) in the format of Unix timestamp, e.g., 1588034999
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-     * Get User `sdkappid` 
-     * @return SdkAppId User `sdkappid`
+     * Get `SDKAppID` of the users to query, e.g., 1400188366 
+     * @return SdkAppId `SDKAppID` of the users to query, e.g., 1400188366
      */
     public String getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set User `sdkappid`
-     * @param SdkAppId User `sdkappid`
+     * Set `SDKAppID` of the users to query, e.g., 1400188366
+     * @param SdkAppId `SDKAppID` of the users to query, e.g., 1400188366
      */
     public void setSdkAppId(String SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 5 days. 
-     * @return StartTime Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 5 days.
+     * Get Query start time (s) in the format of Unix timestamp (e.g., 1587571000), which must be a time point in the last 5 days 
+     * @return StartTime Query start time (s) in the format of Unix timestamp (e.g., 1587571000), which must be a time point in the last 5 days
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 5 days.
-     * @param StartTime Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 5 days.
+     * Set Query start time (s) in the format of Unix timestamp (e.g., 1587571000), which must be a time point in the last 5 days
+     * @param StartTime Query start time (s) in the format of Unix timestamp (e.g., 1587571000), which must be a time point in the last 5 days
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Query end time in the format of local UNIX timestamp, such as 1588031999s. 
-     * @return EndTime Query end time in the format of local UNIX timestamp, such as 1588031999s.
+     * Get Query end time (s) in the format of Unix timestamp, e.g., 1588034999 
+     * @return EndTime Query end time (s) in the format of Unix timestamp, e.g., 1588034999
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Query end time in the format of local UNIX timestamp, such as 1588031999s.
-     * @param EndTime Query end time in the format of local UNIX timestamp, such as 1588031999s.
+     * Set Query end time (s) in the format of Unix timestamp, e.g., 1588034999
+     * @param EndTime Query end time (s) in the format of Unix timestamp, e.g., 1588034999
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

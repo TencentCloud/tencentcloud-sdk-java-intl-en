@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeDetailEventResponse extends AbstractModel{
 
     /**
-    * List of returned events
+    * List of returned events. An empty array will be returned if no data can be found.
     */
     @SerializedName("Data")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeDetailEventResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get List of returned events 
-     * @return Data List of returned events
+     * Get List of returned events. An empty array will be returned if no data can be found. 
+     * @return Data List of returned events. An empty array will be returned if no data can be found.
      */
     public EventList [] getData() {
         return this.Data;
     }
 
     /**
-     * Set List of returned events
-     * @param Data List of returned events
+     * Set List of returned events. An empty array will be returned if no data can be found.
+     * @param Data List of returned events. An empty array will be returned if no data can be found.
      */
     public void setData(EventList [] Data) {
         this.Data = Data;

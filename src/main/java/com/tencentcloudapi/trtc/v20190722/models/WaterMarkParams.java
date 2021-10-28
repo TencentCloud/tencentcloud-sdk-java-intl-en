@@ -58,6 +58,13 @@ public class WaterMarkParams extends AbstractModel{
     private Long LocationY;
 
     /**
+    * URL of the watermark image for the mixed stream, which can be in PNG, JPG, JPEG, or BMP format and does not support the alpha channel. The URL must not exceed 512 bytes. When both `WaterMarkUrl` and `WaterMarkId` are specified, the former will be used. The watermark image cannot exceed 10 MB.
+    */
+    @SerializedName("WaterMarkUrl")
+    @Expose
+    private String WaterMarkUrl;
+
+    /**
      * Get Image ID of the watermark, which is generated after the image is uploaded to the TRTC console 
      * @return WaterMarkId Image ID of the watermark, which is generated after the image is uploaded to the TRTC console
      */
@@ -137,6 +144,22 @@ public class WaterMarkParams extends AbstractModel{
         this.LocationY = LocationY;
     }
 
+    /**
+     * Get URL of the watermark image for the mixed stream, which can be in PNG, JPG, JPEG, or BMP format and does not support the alpha channel. The URL must not exceed 512 bytes. When both `WaterMarkUrl` and `WaterMarkId` are specified, the former will be used. The watermark image cannot exceed 10 MB. 
+     * @return WaterMarkUrl URL of the watermark image for the mixed stream, which can be in PNG, JPG, JPEG, or BMP format and does not support the alpha channel. The URL must not exceed 512 bytes. When both `WaterMarkUrl` and `WaterMarkId` are specified, the former will be used. The watermark image cannot exceed 10 MB.
+     */
+    public String getWaterMarkUrl() {
+        return this.WaterMarkUrl;
+    }
+
+    /**
+     * Set URL of the watermark image for the mixed stream, which can be in PNG, JPG, JPEG, or BMP format and does not support the alpha channel. The URL must not exceed 512 bytes. When both `WaterMarkUrl` and `WaterMarkId` are specified, the former will be used. The watermark image cannot exceed 10 MB.
+     * @param WaterMarkUrl URL of the watermark image for the mixed stream, which can be in PNG, JPG, JPEG, or BMP format and does not support the alpha channel. The URL must not exceed 512 bytes. When both `WaterMarkUrl` and `WaterMarkId` are specified, the former will be used. The watermark image cannot exceed 10 MB.
+     */
+    public void setWaterMarkUrl(String WaterMarkUrl) {
+        this.WaterMarkUrl = WaterMarkUrl;
+    }
+
     public WaterMarkParams() {
     }
 
@@ -160,6 +183,9 @@ public class WaterMarkParams extends AbstractModel{
         if (source.LocationY != null) {
             this.LocationY = new Long(source.LocationY);
         }
+        if (source.WaterMarkUrl != null) {
+            this.WaterMarkUrl = new String(source.WaterMarkUrl);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class WaterMarkParams extends AbstractModel{
         this.setParamSimple(map, prefix + "WaterMarkHeight", this.WaterMarkHeight);
         this.setParamSimple(map, prefix + "LocationX", this.LocationX);
         this.setParamSimple(map, prefix + "LocationY", this.LocationY);
+        this.setParamSimple(map, prefix + "WaterMarkUrl", this.WaterMarkUrl);
 
     }
 }

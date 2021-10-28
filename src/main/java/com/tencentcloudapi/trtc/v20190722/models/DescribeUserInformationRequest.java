@@ -30,21 +30,21 @@ public class DescribeUserInformationRequest extends AbstractModel{
     private String CommId;
 
     /**
-    * Query start time in the format of UNIX timestamp (e.g. 1588031999s) in the last 5 days.
+    * Query start time (s) in the format of Unix timestamp (e.g., 1590065777), which must be a time point in the last 14 days
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * Query end time in the format of UNIX timestamp (e.g. 1588031999s).
+    * Query end time (s) in the format of Unix timestamp (e.g., 1590065877)
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * User `SDKAppID` (e.g. 1400188366).
+    * `SDKAppID` of the users to query, e.g., 1400353843
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -88,48 +88,48 @@ public class DescribeUserInformationRequest extends AbstractModel{
     }
 
     /**
-     * Get Query start time in the format of UNIX timestamp (e.g. 1588031999s) in the last 5 days. 
-     * @return StartTime Query start time in the format of UNIX timestamp (e.g. 1588031999s) in the last 5 days.
+     * Get Query start time (s) in the format of Unix timestamp (e.g., 1590065777), which must be a time point in the last 14 days 
+     * @return StartTime Query start time (s) in the format of Unix timestamp (e.g., 1590065777), which must be a time point in the last 14 days
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Query start time in the format of UNIX timestamp (e.g. 1588031999s) in the last 5 days.
-     * @param StartTime Query start time in the format of UNIX timestamp (e.g. 1588031999s) in the last 5 days.
+     * Set Query start time (s) in the format of Unix timestamp (e.g., 1590065777), which must be a time point in the last 14 days
+     * @param StartTime Query start time (s) in the format of Unix timestamp (e.g., 1590065777), which must be a time point in the last 14 days
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Query end time in the format of UNIX timestamp (e.g. 1588031999s). 
-     * @return EndTime Query end time in the format of UNIX timestamp (e.g. 1588031999s).
+     * Get Query end time (s) in the format of Unix timestamp (e.g., 1590065877) 
+     * @return EndTime Query end time (s) in the format of Unix timestamp (e.g., 1590065877)
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Query end time in the format of UNIX timestamp (e.g. 1588031999s).
-     * @param EndTime Query end time in the format of UNIX timestamp (e.g. 1588031999s).
+     * Set Query end time (s) in the format of Unix timestamp (e.g., 1590065877)
+     * @param EndTime Query end time (s) in the format of Unix timestamp (e.g., 1590065877)
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get User `SDKAppID` (e.g. 1400188366). 
-     * @return SdkAppId User `SDKAppID` (e.g. 1400188366).
+     * Get `SDKAppID` of the users to query, e.g., 1400353843 
+     * @return SdkAppId `SDKAppID` of the users to query, e.g., 1400353843
      */
     public String getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set User `SDKAppID` (e.g. 1400188366).
-     * @param SdkAppId User `SDKAppID` (e.g. 1400188366).
+     * Set `SDKAppID` of the users to query, e.g., 1400353843
+     * @param SdkAppId `SDKAppID` of the users to query, e.g., 1400353843
      */
     public void setSdkAppId(String SdkAppId) {
         this.SdkAppId = SdkAppId;

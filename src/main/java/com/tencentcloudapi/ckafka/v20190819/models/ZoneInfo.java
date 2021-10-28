@@ -79,6 +79,14 @@ public class ZoneInfo extends AbstractModel{
     private String SoldOut;
 
     /**
+    * Information on whether Standard Edition has been sold out.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SalesInfo")
+    @Expose
+    private SaleInfo [] SalesInfo;
+
+    /**
      * Get Zone ID 
      * @return ZoneId Zone ID
      */
@@ -206,6 +214,26 @@ public class ZoneInfo extends AbstractModel{
         this.SoldOut = SoldOut;
     }
 
+    /**
+     * Get Information on whether Standard Edition has been sold out.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return SalesInfo Information on whether Standard Edition has been sold out.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public SaleInfo [] getSalesInfo() {
+        return this.SalesInfo;
+    }
+
+    /**
+     * Set Information on whether Standard Edition has been sold out.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param SalesInfo Information on whether Standard Edition has been sold out.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setSalesInfo(SaleInfo [] SalesInfo) {
+        this.SalesInfo = SalesInfo;
+    }
+
     public ZoneInfo() {
     }
 
@@ -238,6 +266,12 @@ public class ZoneInfo extends AbstractModel{
         if (source.SoldOut != null) {
             this.SoldOut = new String(source.SoldOut);
         }
+        if (source.SalesInfo != null) {
+            this.SalesInfo = new SaleInfo[source.SalesInfo.length];
+            for (int i = 0; i < source.SalesInfo.length; i++) {
+                this.SalesInfo[i] = new SaleInfo(source.SalesInfo[i]);
+            }
+        }
     }
 
 
@@ -253,6 +287,7 @@ public class ZoneInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ZoneStatus", this.ZoneStatus);
         this.setParamSimple(map, prefix + "Exflag", this.Exflag);
         this.setParamSimple(map, prefix + "SoldOut", this.SoldOut);
+        this.setParamArrayObj(map, prefix + "SalesInfo.", this.SalesInfo);
 
     }
 }

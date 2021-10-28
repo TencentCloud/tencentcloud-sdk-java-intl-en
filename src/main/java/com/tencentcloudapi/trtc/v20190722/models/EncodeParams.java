@@ -107,6 +107,13 @@ Grey: 0x999999, whose decimal number is 10066329
     private Long AudioCodec;
 
     /**
+    * URL of the background image for the mixed stream, which can be in PNG, JPG, JPEG, or BMP format and does not support the alpha channel. The URL must not exceed 512 bytes. When both `BackgroundImageUrl` and `BackgroundImageId` are specified, the former will be used. The background image must not exceed 10 MB.
+    */
+    @SerializedName("BackgroundImageUrl")
+    @Expose
+    private String BackgroundImageUrl;
+
+    /**
      * Get Output audio sample rate (Hz) for On-Cloud MixTranscoding. Valid values: 48000, 44100, 32000, 24000, 16000, 8000 
      * @return AudioSampleRate Output audio sample rate (Hz) for On-Cloud MixTranscoding. Valid values: 48000, 44100, 32000, 24000, 16000, 8000
      */
@@ -310,6 +317,22 @@ Grey: 0x999999, whose decimal number is 10066329
         this.AudioCodec = AudioCodec;
     }
 
+    /**
+     * Get URL of the background image for the mixed stream, which can be in PNG, JPG, JPEG, or BMP format and does not support the alpha channel. The URL must not exceed 512 bytes. When both `BackgroundImageUrl` and `BackgroundImageId` are specified, the former will be used. The background image must not exceed 10 MB. 
+     * @return BackgroundImageUrl URL of the background image for the mixed stream, which can be in PNG, JPG, JPEG, or BMP format and does not support the alpha channel. The URL must not exceed 512 bytes. When both `BackgroundImageUrl` and `BackgroundImageId` are specified, the former will be used. The background image must not exceed 10 MB.
+     */
+    public String getBackgroundImageUrl() {
+        return this.BackgroundImageUrl;
+    }
+
+    /**
+     * Set URL of the background image for the mixed stream, which can be in PNG, JPG, JPEG, or BMP format and does not support the alpha channel. The URL must not exceed 512 bytes. When both `BackgroundImageUrl` and `BackgroundImageId` are specified, the former will be used. The background image must not exceed 10 MB.
+     * @param BackgroundImageUrl URL of the background image for the mixed stream, which can be in PNG, JPG, JPEG, or BMP format and does not support the alpha channel. The URL must not exceed 512 bytes. When both `BackgroundImageUrl` and `BackgroundImageId` are specified, the former will be used. The background image must not exceed 10 MB.
+     */
+    public void setBackgroundImageUrl(String BackgroundImageUrl) {
+        this.BackgroundImageUrl = BackgroundImageUrl;
+    }
+
     public EncodeParams() {
     }
 
@@ -351,6 +374,9 @@ Grey: 0x999999, whose decimal number is 10066329
         if (source.AudioCodec != null) {
             this.AudioCodec = new Long(source.AudioCodec);
         }
+        if (source.BackgroundImageUrl != null) {
+            this.BackgroundImageUrl = new String(source.BackgroundImageUrl);
+        }
     }
 
 
@@ -369,6 +395,7 @@ Grey: 0x999999, whose decimal number is 10066329
         this.setParamSimple(map, prefix + "BackgroundColor", this.BackgroundColor);
         this.setParamSimple(map, prefix + "BackgroundImageId", this.BackgroundImageId);
         this.setParamSimple(map, prefix + "AudioCodec", this.AudioCodec);
+        this.setParamSimple(map, prefix + "BackgroundImageUrl", this.BackgroundImageUrl);
 
     }
 }

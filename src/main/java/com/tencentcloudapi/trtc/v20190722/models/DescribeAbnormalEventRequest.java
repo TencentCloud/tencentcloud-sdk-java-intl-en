@@ -30,14 +30,14 @@ public class DescribeAbnormalEventRequest extends AbstractModel{
     private String SdkAppId;
 
     /**
-    * Query start time
+    * Query start time (s) in the format of Unix timestamp, e.g., 1592448600
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * Query end time
+    * Query end time (s) in the format of Unix timestamp, e.g., 1592449080
     */
     @SerializedName("EndTime")
     @Expose
@@ -67,32 +67,32 @@ public class DescribeAbnormalEventRequest extends AbstractModel{
     }
 
     /**
-     * Get Query start time 
-     * @return StartTime Query start time
+     * Get Query start time (s) in the format of Unix timestamp, e.g., 1592448600 
+     * @return StartTime Query start time (s) in the format of Unix timestamp, e.g., 1592448600
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Query start time
-     * @param StartTime Query start time
+     * Set Query start time (s) in the format of Unix timestamp, e.g., 1592448600
+     * @param StartTime Query start time (s) in the format of Unix timestamp, e.g., 1592448600
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Query end time 
-     * @return EndTime Query end time
+     * Get Query end time (s) in the format of Unix timestamp, e.g., 1592449080 
+     * @return EndTime Query end time (s) in the format of Unix timestamp, e.g., 1592449080
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Query end time
-     * @param EndTime Query end time
+     * Set Query end time (s) in the format of Unix timestamp, e.g., 1592449080
+     * @param EndTime Query end time (s) in the format of Unix timestamp, e.g., 1592449080
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

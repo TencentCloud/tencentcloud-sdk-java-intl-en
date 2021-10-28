@@ -30,21 +30,21 @@ public class DescribeCallDetailRequest extends AbstractModel{
     private String CommId;
 
     /**
-    * Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 14 days.
+    * Query start time (s) in the format of Unix timestamp (e.g., 1590065777), which must be a time point in the last 14 days. The start and end time for query must not be more than 1 hour apart.
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * Query end time in the format of local UNIX timestamp, such as 1588031999s.
+    * Query end time (s) in the format of Unix timestamp, e.g., 1590065877
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * User `SDKAppID`, such as 1400188366.
+    * `SDKAppID` of the users to query, e.g., 1400353843
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -108,48 +108,48 @@ bigvHeight: upstream/downstream resolution in height.
     }
 
     /**
-     * Get Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 14 days. 
-     * @return StartTime Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 14 days.
+     * Get Query start time (s) in the format of Unix timestamp (e.g., 1590065777), which must be a time point in the last 14 days. The start and end time for query must not be more than 1 hour apart. 
+     * @return StartTime Query start time (s) in the format of Unix timestamp (e.g., 1590065777), which must be a time point in the last 14 days. The start and end time for query must not be more than 1 hour apart.
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 14 days.
-     * @param StartTime Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 14 days.
+     * Set Query start time (s) in the format of Unix timestamp (e.g., 1590065777), which must be a time point in the last 14 days. The start and end time for query must not be more than 1 hour apart.
+     * @param StartTime Query start time (s) in the format of Unix timestamp (e.g., 1590065777), which must be a time point in the last 14 days. The start and end time for query must not be more than 1 hour apart.
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Query end time in the format of local UNIX timestamp, such as 1588031999s. 
-     * @return EndTime Query end time in the format of local UNIX timestamp, such as 1588031999s.
+     * Get Query end time (s) in the format of Unix timestamp, e.g., 1590065877 
+     * @return EndTime Query end time (s) in the format of Unix timestamp, e.g., 1590065877
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Query end time in the format of local UNIX timestamp, such as 1588031999s.
-     * @param EndTime Query end time in the format of local UNIX timestamp, such as 1588031999s.
+     * Set Query end time (s) in the format of Unix timestamp, e.g., 1590065877
+     * @param EndTime Query end time (s) in the format of Unix timestamp, e.g., 1590065877
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get User `SDKAppID`, such as 1400188366. 
-     * @return SdkAppId User `SDKAppID`, such as 1400188366.
+     * Get `SDKAppID` of the users to query, e.g., 1400353843 
+     * @return SdkAppId `SDKAppID` of the users to query, e.g., 1400353843
      */
     public String getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set User `SDKAppID`, such as 1400188366.
-     * @param SdkAppId User `SDKAppID`, such as 1400188366.
+     * Set `SDKAppID` of the users to query, e.g., 1400353843
+     * @param SdkAppId `SDKAppID` of the users to query, e.g., 1400353843
      */
     public void setSdkAppId(String SdkAppId) {
         this.SdkAppId = SdkAppId;

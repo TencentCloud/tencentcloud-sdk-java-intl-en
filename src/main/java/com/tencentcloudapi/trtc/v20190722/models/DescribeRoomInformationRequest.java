@@ -30,14 +30,14 @@ public class DescribeRoomInformationRequest extends AbstractModel{
     private String SdkAppId;
 
     /**
-    * Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 14 days.
+    * Query start time (s) in the format of Unix timestamp (e.g., 1588031999), which must be a time point in the last 14 days
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * Query end time in the format of local UNIX timestamp, such as 1588031999s.
+    * Query end time (s) in the format of Unix timestamp, e.g., 1588034999
     */
     @SerializedName("EndTime")
     @Expose
@@ -81,32 +81,32 @@ public class DescribeRoomInformationRequest extends AbstractModel{
     }
 
     /**
-     * Get Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 14 days. 
-     * @return StartTime Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 14 days.
+     * Get Query start time (s) in the format of Unix timestamp (e.g., 1588031999), which must be a time point in the last 14 days 
+     * @return StartTime Query start time (s) in the format of Unix timestamp (e.g., 1588031999), which must be a time point in the last 14 days
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 14 days.
-     * @param StartTime Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 14 days.
+     * Set Query start time (s) in the format of Unix timestamp (e.g., 1588031999), which must be a time point in the last 14 days
+     * @param StartTime Query start time (s) in the format of Unix timestamp (e.g., 1588031999), which must be a time point in the last 14 days
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Query end time in the format of local UNIX timestamp, such as 1588031999s. 
-     * @return EndTime Query end time in the format of local UNIX timestamp, such as 1588031999s.
+     * Get Query end time (s) in the format of Unix timestamp, e.g., 1588034999 
+     * @return EndTime Query end time (s) in the format of Unix timestamp, e.g., 1588034999
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Query end time in the format of local UNIX timestamp, such as 1588031999s.
-     * @param EndTime Query end time in the format of local UNIX timestamp, such as 1588031999s.
+     * Set Query end time (s) in the format of Unix timestamp, e.g., 1588034999
+     * @param EndTime Query end time (s) in the format of Unix timestamp, e.g., 1588034999
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

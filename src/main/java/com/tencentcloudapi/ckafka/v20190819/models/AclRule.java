@@ -120,7 +120,7 @@ Note: `null` may be returned for this field, indicating that no valid values can
 
     /**
     * Name of rule type.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("PatternTypeTitle")
     @Expose
@@ -368,9 +368,9 @@ Note: `null` may be returned for this field, indicating that no valid values can
 
     /**
      * Get Name of rule type.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained. 
+Note: this field may return `null`, indicating that no valid values can be obtained. 
      * @return PatternTypeTitle Name of rule type.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getPatternTypeTitle() {
         return this.PatternTypeTitle;
@@ -378,9 +378,9 @@ Note: `null` may be returned for this field, indicating that no valid values can
 
     /**
      * Set Name of rule type.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param PatternTypeTitle Name of rule type.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setPatternTypeTitle(String PatternTypeTitle) {
         this.PatternTypeTitle = PatternTypeTitle;
