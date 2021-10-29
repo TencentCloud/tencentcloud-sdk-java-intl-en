@@ -231,6 +231,9 @@ public enum CamErrorCode {
     // The frequency limit of creating sub-users has been reached.
      REQUESTLIMITEXCEEDED_CREATEUSER("RequestLimitExceeded.CreateUser"),
      
+    // The user account limit has been reached.
+     REQUESTLIMITEXCEEDED_UINLIMITEXCEEDED("RequestLimitExceeded.UinLimitExceeded"),
+     
     // User group does not exist.
      RESOURCENOTFOUND_GROUPNOTEXIST("ResourceNotFound.GroupNotExist"),
      

@@ -279,6 +279,26 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create user SAML configurations.
+     * @param req CreateUserSAMLConfigRequest
+     * @return CreateUserSAMLConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateUserSAMLConfigResponse CreateUserSAMLConfig(CreateUserSAMLConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateUserSAMLConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateUserSAMLConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateUserSAMLConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete a user group.
      * @param req DeleteGroupRequest
      * @return DeleteGroupResponse
@@ -551,6 +571,26 @@ public class CamClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeSubAccountsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeSubAccounts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query user SAML configurations.
+     * @param req DescribeUserSAMLConfigRequest
+     * @return DescribeUserSAMLConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserSAMLConfigResponse DescribeUserSAMLConfig(DescribeUserSAMLConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUserSAMLConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUserSAMLConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUserSAMLConfig");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1312,6 +1352,26 @@ This API will update the default version of an existing policy instead of creati
                 Type type = new TypeToken<JsonResponseModel<UpdateUserResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpdateUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify user SAML configurations.
+     * @param req UpdateUserSAMLConfigRequest
+     * @return UpdateUserSAMLConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateUserSAMLConfigResponse UpdateUserSAMLConfig(UpdateUserSAMLConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateUserSAMLConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateUserSAMLConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateUserSAMLConfig");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
