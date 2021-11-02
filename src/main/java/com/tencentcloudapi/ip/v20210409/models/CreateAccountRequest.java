@@ -62,7 +62,7 @@ A global mobile number within 1-32 digits is allowed, such as 18888888888.
     private String PhoneNum;
 
     /**
-    * Country code, which can be obtained via the `GetCountryCodes` API, such as `86`.
+    * Country code, which can be obtained via the `GetCountryCodes` API, such as 852.
     */
     @SerializedName("CountryCode")
     @Expose
@@ -179,16 +179,16 @@ A global mobile number within 1-32 digits is allowed, such as 18888888888.
     }
 
     /**
-     * Get Country code, which can be obtained via the `GetCountryCodes` API, such as `86`. 
-     * @return CountryCode Country code, which can be obtained via the `GetCountryCodes` API, such as `86`.
+     * Get Country code, which can be obtained via the `GetCountryCodes` API, such as 852. 
+     * @return CountryCode Country code, which can be obtained via the `GetCountryCodes` API, such as 852.
      */
     public String getCountryCode() {
         return this.CountryCode;
     }
 
     /**
-     * Set Country code, which can be obtained via the `GetCountryCodes` API, such as `86`.
-     * @param CountryCode Country code, which can be obtained via the `GetCountryCodes` API, such as `86`.
+     * Set Country code, which can be obtained via the `GetCountryCodes` API, such as 852.
+     * @param CountryCode Country code, which can be obtained via the `GetCountryCodes` API, such as 852.
      */
     public void setCountryCode(String CountryCode) {
         this.CountryCode = CountryCode;
