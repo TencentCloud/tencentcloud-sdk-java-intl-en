@@ -31,15 +31,17 @@ DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_M
     private String State;
 
     /**
-    * This parameter can be set to `CustomDRMKeys` or left empty.
-CustomDRMKeys means encryption keys customized by users.
+    * Valid values: `CustomDRMKeys` (default value), `SDMCDRM`
+`CustomDRMKeys` means encryption keys customized by users.
+`SDMCDRM` means the DRM key management system of SDMC.
     */
     @SerializedName("Scheme")
     @Expose
     private String Scheme;
 
     /**
-    * If `Scheme` is set to `CustomDRMKeys`, this parameter is required and should be specified by the user.
+    * If `Scheme` is set to `CustomDRMKeys`, this parameter is required.
+If `Scheme` is set to `SDMCDRM`, this parameter is optional. It supports digits, letters, hyphens, and underscores and must contain 1 to 36 characters. If it is not specified, the value of `ChannelId` will be used.
     */
     @SerializedName("ContentId")
     @Expose
@@ -52,6 +54,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     @SerializedName("Keys")
     @Expose
     private DrmKey [] Keys;
+
+    /**
+    * SDMC key configuration. This parameter is used when `Scheme` is set to `SDMCDRM`.
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("SDMCSettings")
+    @Expose
+    private SDMCSettingsInfo SDMCSettings;
 
     /**
      * Get Whether to enable DRM encryption. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
@@ -74,36 +84,44 @@ DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_M
     }
 
     /**
-     * Get This parameter can be set to `CustomDRMKeys` or left empty.
-CustomDRMKeys means encryption keys customized by users. 
-     * @return Scheme This parameter can be set to `CustomDRMKeys` or left empty.
-CustomDRMKeys means encryption keys customized by users.
+     * Get Valid values: `CustomDRMKeys` (default value), `SDMCDRM`
+`CustomDRMKeys` means encryption keys customized by users.
+`SDMCDRM` means the DRM key management system of SDMC. 
+     * @return Scheme Valid values: `CustomDRMKeys` (default value), `SDMCDRM`
+`CustomDRMKeys` means encryption keys customized by users.
+`SDMCDRM` means the DRM key management system of SDMC.
      */
     public String getScheme() {
         return this.Scheme;
     }
 
     /**
-     * Set This parameter can be set to `CustomDRMKeys` or left empty.
-CustomDRMKeys means encryption keys customized by users.
-     * @param Scheme This parameter can be set to `CustomDRMKeys` or left empty.
-CustomDRMKeys means encryption keys customized by users.
+     * Set Valid values: `CustomDRMKeys` (default value), `SDMCDRM`
+`CustomDRMKeys` means encryption keys customized by users.
+`SDMCDRM` means the DRM key management system of SDMC.
+     * @param Scheme Valid values: `CustomDRMKeys` (default value), `SDMCDRM`
+`CustomDRMKeys` means encryption keys customized by users.
+`SDMCDRM` means the DRM key management system of SDMC.
      */
     public void setScheme(String Scheme) {
         this.Scheme = Scheme;
     }
 
     /**
-     * Get If `Scheme` is set to `CustomDRMKeys`, this parameter is required and should be specified by the user. 
-     * @return ContentId If `Scheme` is set to `CustomDRMKeys`, this parameter is required and should be specified by the user.
+     * Get If `Scheme` is set to `CustomDRMKeys`, this parameter is required.
+If `Scheme` is set to `SDMCDRM`, this parameter is optional. It supports digits, letters, hyphens, and underscores and must contain 1 to 36 characters. If it is not specified, the value of `ChannelId` will be used. 
+     * @return ContentId If `Scheme` is set to `CustomDRMKeys`, this parameter is required.
+If `Scheme` is set to `SDMCDRM`, this parameter is optional. It supports digits, letters, hyphens, and underscores and must contain 1 to 36 characters. If it is not specified, the value of `ChannelId` will be used.
      */
     public String getContentId() {
         return this.ContentId;
     }
 
     /**
-     * Set If `Scheme` is set to `CustomDRMKeys`, this parameter is required and should be specified by the user.
-     * @param ContentId If `Scheme` is set to `CustomDRMKeys`, this parameter is required and should be specified by the user.
+     * Set If `Scheme` is set to `CustomDRMKeys`, this parameter is required.
+If `Scheme` is set to `SDMCDRM`, this parameter is optional. It supports digits, letters, hyphens, and underscores and must contain 1 to 36 characters. If it is not specified, the value of `ChannelId` will be used.
+     * @param ContentId If `Scheme` is set to `CustomDRMKeys`, this parameter is required.
+If `Scheme` is set to `SDMCDRM`, this parameter is optional. It supports digits, letters, hyphens, and underscores and must contain 1 to 36 characters. If it is not specified, the value of `ChannelId` will be used.
      */
     public void setContentId(String ContentId) {
         this.ContentId = ContentId;
@@ -129,6 +147,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.Keys = Keys;
     }
 
+    /**
+     * Get SDMC key configuration. This parameter is used when `Scheme` is set to `SDMCDRM`.
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return SDMCSettings SDMC key configuration. This parameter is used when `Scheme` is set to `SDMCDRM`.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public SDMCSettingsInfo getSDMCSettings() {
+        return this.SDMCSettings;
+    }
+
+    /**
+     * Set SDMC key configuration. This parameter is used when `Scheme` is set to `SDMCDRM`.
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param SDMCSettings SDMC key configuration. This parameter is used when `Scheme` is set to `SDMCDRM`.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setSDMCSettings(SDMCSettingsInfo SDMCSettings) {
+        this.SDMCSettings = SDMCSettings;
+    }
+
     public DrmSettingsInfo() {
     }
 
@@ -152,6 +190,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 this.Keys[i] = new DrmKey(source.Keys[i]);
             }
         }
+        if (source.SDMCSettings != null) {
+            this.SDMCSettings = new SDMCSettingsInfo(source.SDMCSettings);
+        }
     }
 
 
@@ -163,6 +204,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Scheme", this.Scheme);
         this.setParamSimple(map, prefix + "ContentId", this.ContentId);
         this.setParamArrayObj(map, prefix + "Keys.", this.Keys);
+        this.setParamObj(map, prefix + "SDMCSettings.", this.SDMCSettings);
 
     }
 }

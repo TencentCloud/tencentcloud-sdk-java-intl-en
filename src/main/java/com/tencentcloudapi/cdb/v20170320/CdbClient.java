@@ -1652,26 +1652,6 @@ Note that when modifying account permissions, you need to pass in the full permi
     }
 
     /**
-     *This API is used to change a general RO replica to delayed RO replica.
-     * @param req ModifyRoTypeRequest
-     * @return ModifyRoTypeResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyRoTypeResponse ModifyRoType(ModifyRoTypeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyRoTypeResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyRoTypeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyRoType");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API (ModifyTimeWindow) is used to update the maintenance time window of a TencentDB instance.
      * @param req ModifyTimeWindowRequest
      * @return ModifyTimeWindowResponse

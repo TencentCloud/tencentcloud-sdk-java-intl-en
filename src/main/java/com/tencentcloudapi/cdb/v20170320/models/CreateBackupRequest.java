@@ -45,6 +45,13 @@ For example, if you want to backup tb1 and tb2 in db1 and the entire db2, you sh
     private BackupItem [] BackupDBTableList;
 
     /**
+    * Manual backup alias
+    */
+    @SerializedName("ManualBackupName")
+    @Expose
+    private String ManualBackupName;
+
+    /**
      * Get Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. 
      * @return InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      */
@@ -96,6 +103,22 @@ For example, if you want to backup tb1 and tb2 in db1 and the entire db2, you sh
         this.BackupDBTableList = BackupDBTableList;
     }
 
+    /**
+     * Get Manual backup alias 
+     * @return ManualBackupName Manual backup alias
+     */
+    public String getManualBackupName() {
+        return this.ManualBackupName;
+    }
+
+    /**
+     * Set Manual backup alias
+     * @param ManualBackupName Manual backup alias
+     */
+    public void setManualBackupName(String ManualBackupName) {
+        this.ManualBackupName = ManualBackupName;
+    }
+
     public CreateBackupRequest() {
     }
 
@@ -116,6 +139,9 @@ For example, if you want to backup tb1 and tb2 in db1 and the entire db2, you sh
                 this.BackupDBTableList[i] = new BackupItem(source.BackupDBTableList[i]);
             }
         }
+        if (source.ManualBackupName != null) {
+            this.ManualBackupName = new String(source.ManualBackupName);
+        }
     }
 
 
@@ -126,6 +152,7 @@ For example, if you want to backup tb1 and tb2 in db1 and the entire db2, you sh
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
         this.setParamArrayObj(map, prefix + "BackupDBTableList.", this.BackupDBTableList);
+        this.setParamSimple(map, prefix + "ManualBackupName", this.ManualBackupName);
 
     }
 }

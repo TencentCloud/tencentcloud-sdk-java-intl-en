@@ -30,7 +30,7 @@ public class CreateDBImportJobRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Filename. The file should have already been uploaded to Tencent Cloud.
+    * Filename. The file must be a .sql file uploaded to Tencent Cloud.
     */
     @SerializedName("FileName")
     @Expose
@@ -74,16 +74,16 @@ public class CreateDBImportJobRequest extends AbstractModel{
     }
 
     /**
-     * Get Filename. The file should have already been uploaded to Tencent Cloud. 
-     * @return FileName Filename. The file should have already been uploaded to Tencent Cloud.
+     * Get Filename. The file must be a .sql file uploaded to Tencent Cloud. 
+     * @return FileName Filename. The file must be a .sql file uploaded to Tencent Cloud.
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set Filename. The file should have already been uploaded to Tencent Cloud.
-     * @param FileName Filename. The file should have already been uploaded to Tencent Cloud.
+     * Set Filename. The file must be a .sql file uploaded to Tencent Cloud.
+     * @param FileName Filename. The file must be a .sql file uploaded to Tencent Cloud.
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;

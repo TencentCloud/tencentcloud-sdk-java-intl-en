@@ -85,6 +85,14 @@ Note: this field may return `null`, indicating that no valid value was found.
     private StreamPackageSettingsInfo StreamPackageSettings;
 
     /**
+    * Time-shift configuration information
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("TimeShiftSettings")
+    @Expose
+    private TimeShiftSettingsInfo TimeShiftSettings;
+
+    /**
      * Get Output group name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the channel level 
      * @return Name Output group name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the channel level
      */
@@ -236,6 +244,26 @@ Note: this field may return `null`, indicating that no valid value was found.
         this.StreamPackageSettings = StreamPackageSettings;
     }
 
+    /**
+     * Get Time-shift configuration information
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return TimeShiftSettings Time-shift configuration information
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public TimeShiftSettingsInfo getTimeShiftSettings() {
+        return this.TimeShiftSettings;
+    }
+
+    /**
+     * Set Time-shift configuration information
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param TimeShiftSettings Time-shift configuration information
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setTimeShiftSettings(TimeShiftSettingsInfo TimeShiftSettings) {
+        this.TimeShiftSettings = TimeShiftSettings;
+    }
+
     public StreamLiveOutputGroupsInfo() {
     }
 
@@ -274,6 +302,9 @@ Note: this field may return `null`, indicating that no valid value was found.
         if (source.StreamPackageSettings != null) {
             this.StreamPackageSettings = new StreamPackageSettingsInfo(source.StreamPackageSettings);
         }
+        if (source.TimeShiftSettings != null) {
+            this.TimeShiftSettings = new TimeShiftSettingsInfo(source.TimeShiftSettings);
+        }
     }
 
 
@@ -289,6 +320,7 @@ Note: this field may return `null`, indicating that no valid value was found.
         this.setParamObj(map, prefix + "DrmSettings.", this.DrmSettings);
         this.setParamObj(map, prefix + "DashRemuxSettings.", this.DashRemuxSettings);
         this.setParamObj(map, prefix + "StreamPackageSettings.", this.StreamPackageSettings);
+        this.setParamObj(map, prefix + "TimeShiftSettings.", this.TimeShiftSettings);
 
     }
 }

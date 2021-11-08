@@ -13,14 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.ip.v20210409.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyRoTypeResponse extends AbstractModel{
+public class QueryClientListResponse extends AbstractModel{
+
+    /**
+    * Queries the list of customers
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Data")
+    @Expose
+    private QueryClientListItem [] Data;
+
+    /**
+    * Number of customers
+    */
+    @SerializedName("Total")
+    @Expose
+    private Long Total;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -28,6 +43,42 @@ public class ModifyRoTypeResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get Queries the list of customers
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return Data Queries the list of customers
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public QueryClientListItem [] getData() {
+        return this.Data;
+    }
+
+    /**
+     * Set Queries the list of customers
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Data Queries the list of customers
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setData(QueryClientListItem [] Data) {
+        this.Data = Data;
+    }
+
+    /**
+     * Get Number of customers 
+     * @return Total Number of customers
+     */
+    public Long getTotal() {
+        return this.Total;
+    }
+
+    /**
+     * Set Number of customers
+     * @param Total Number of customers
+     */
+    public void setTotal(Long Total) {
+        this.Total = Total;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -45,14 +96,23 @@ public class ModifyRoTypeResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ModifyRoTypeResponse() {
+    public QueryClientListResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyRoTypeResponse(ModifyRoTypeResponse source) {
+    public QueryClientListResponse(QueryClientListResponse source) {
+        if (source.Data != null) {
+            this.Data = new QueryClientListItem[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new QueryClientListItem(source.Data[i]);
+            }
+        }
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +123,8 @@ public class ModifyRoTypeResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
