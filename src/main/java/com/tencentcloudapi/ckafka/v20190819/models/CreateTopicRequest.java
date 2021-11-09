@@ -30,7 +30,7 @@ public class CreateTopicRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Topic name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
+    * Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
     */
     @SerializedName("TopicName")
     @Expose
@@ -121,6 +121,13 @@ public class CreateTopicRequest extends AbstractModel{
     private String AclRuleName;
 
     /**
+    * Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+    */
+    @SerializedName("RetentionBytes")
+    @Expose
+    private Long RetentionBytes;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -137,16 +144,16 @@ public class CreateTopicRequest extends AbstractModel{
     }
 
     /**
-     * Get Topic name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`) 
-     * @return TopicName Topic name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
+     * Get Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter. 
+     * @return TopicName Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set Topic name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
-     * @param TopicName Topic name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
+     * Set Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+     * @param TopicName Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
@@ -344,6 +351,22 @@ public class CreateTopicRequest extends AbstractModel{
         this.AclRuleName = AclRuleName;
     }
 
+    /**
+     * Get Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B. 
+     * @return RetentionBytes Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+     */
+    public Long getRetentionBytes() {
+        return this.RetentionBytes;
+    }
+
+    /**
+     * Set Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+     * @param RetentionBytes Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+     */
+    public void setRetentionBytes(Long RetentionBytes) {
+        this.RetentionBytes = RetentionBytes;
+    }
+
     public CreateTopicRequest() {
     }
 
@@ -397,6 +420,9 @@ public class CreateTopicRequest extends AbstractModel{
         if (source.AclRuleName != null) {
             this.AclRuleName = new String(source.AclRuleName);
         }
+        if (source.RetentionBytes != null) {
+            this.RetentionBytes = new Long(source.RetentionBytes);
+        }
     }
 
 
@@ -418,6 +444,7 @@ public class CreateTopicRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SegmentMs", this.SegmentMs);
         this.setParamSimple(map, prefix + "EnableAclRule", this.EnableAclRule);
         this.setParamSimple(map, prefix + "AclRuleName", this.AclRuleName);
+        this.setParamSimple(map, prefix + "RetentionBytes", this.RetentionBytes);
 
     }
 }

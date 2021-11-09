@@ -439,6 +439,26 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify the parameters of a cluster.
+     * @param req ModifyClusterParamRequest
+     * @return ModifyClusterParamResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterParamResponse ModifyClusterParam(ModifyClusterParamRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyClusterParamResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyClusterParamResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyClusterParam");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify the security groups bound to an instance.
      * @param req ModifyDBInstanceSecurityGroupsRequest
      * @return ModifyDBInstanceSecurityGroupsResponse

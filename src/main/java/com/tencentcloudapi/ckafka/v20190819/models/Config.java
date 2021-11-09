@@ -80,6 +80,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long MaxMessageBytes;
 
     /**
+    * Message retention file size.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RetentionBytes")
+    @Expose
+    private Long RetentionBytes;
+
+    /**
      * Get Message retention period
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return Retention Message retention period
@@ -223,6 +231,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.MaxMessageBytes = MaxMessageBytes;
     }
 
+    /**
+     * Get Message retention file size.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return RetentionBytes Message retention file size.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getRetentionBytes() {
+        return this.RetentionBytes;
+    }
+
+    /**
+     * Set Message retention file size.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param RetentionBytes Message retention file size.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setRetentionBytes(Long RetentionBytes) {
+        this.RetentionBytes = RetentionBytes;
+    }
+
     public Config() {
     }
 
@@ -252,6 +280,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.MaxMessageBytes != null) {
             this.MaxMessageBytes = new Long(source.MaxMessageBytes);
         }
+        if (source.RetentionBytes != null) {
+            this.RetentionBytes = new Long(source.RetentionBytes);
+        }
     }
 
 
@@ -266,6 +297,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "UncleanLeaderElectionEnable", this.UncleanLeaderElectionEnable);
         this.setParamSimple(map, prefix + "SegmentBytes", this.SegmentBytes);
         this.setParamSimple(map, prefix + "MaxMessageBytes", this.MaxMessageBytes);
+        this.setParamSimple(map, prefix + "RetentionBytes", this.RetentionBytes);
 
     }
 }
