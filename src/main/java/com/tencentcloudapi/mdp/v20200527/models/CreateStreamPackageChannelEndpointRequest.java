@@ -30,7 +30,7 @@ public class CreateStreamPackageChannelEndpointRequest extends AbstractModel{
     private String Id;
 
     /**
-    * Channel name
+    * Endpoint name, which must contain 1 to 32 characters and supports digits, letters, and underscores
     */
     @SerializedName("Name")
     @Expose
@@ -60,16 +60,16 @@ public class CreateStreamPackageChannelEndpointRequest extends AbstractModel{
     }
 
     /**
-     * Get Channel name 
-     * @return Name Channel name
+     * Get Endpoint name, which must contain 1 to 32 characters and supports digits, letters, and underscores 
+     * @return Name Endpoint name, which must contain 1 to 32 characters and supports digits, letters, and underscores
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Channel name
-     * @param Name Channel name
+     * Set Endpoint name, which must contain 1 to 32 characters and supports digits, letters, and underscores
+     * @param Name Endpoint name, which must contain 1 to 32 characters and supports digits, letters, and underscores
      */
     public void setName(String Name) {
         this.Name = Name;

@@ -200,58 +200,23 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the network conditions of an `SDKAppID`, including upstream and downstream packet loss, in the last 24 hours on a per-minute basis. The query period must be 1-60 minutes.
-     * @param req DescribeRealtimeNetworkRequest
-     * @return DescribeRealtimeNetworkResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeRealtimeNetworkResponse DescribeRealtimeNetwork(DescribeRealtimeNetworkRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRealtimeNetworkResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRealtimeNetworkResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRealtimeNetwork");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
+     *This API is used to query billable on-cloud recording durations.
 
-    /**
-     *This API is used to query the quality metrics of an `SDKAppID` in the last 24 hours on a per-minute basis, including room entry success rate, instant playback rate of the first frame, and audio/video lag rate. The query period must be 1-60 minutes.
-     * @param req DescribeRealtimeQualityRequest
-     * @return DescribeRealtimeQualityResponse
+- If the period queried is 1 day or shorter, the statistics returned are on a 5-minute basis. If the period queried is longer than 1 day, the statistics returned are on a daily basis.
+- The period queried in a request cannot be longer than 31 days.
+- If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
+- In the daily pay-as-you-go mode, bills for a day are generated the next morning. Therefore, we recommend you query the statistics after 9 AM the next day.
+     * @param req DescribeRecordStatisticRequest
+     * @return DescribeRecordStatisticResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeRealtimeQualityResponse DescribeRealtimeQuality(DescribeRealtimeQualityRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRealtimeQualityResponse> rsp = null;
+    public DescribeRecordStatisticResponse DescribeRecordStatistic(DescribeRecordStatisticRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRecordStatisticResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRealtimeQualityResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DescribeRecordStatisticResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "DescribeRealtimeQuality");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     * This API is used to query the scale of an `SDKAppID` in the last 24 hours on a per-minute basis. The query period must be 1-60 minutes.
-     * @param req DescribeRealtimeScaleRequest
-     * @return DescribeRealtimeScaleResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeRealtimeScaleResponse DescribeRealtimeScale(DescribeRealtimeScaleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRealtimeScaleResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRealtimeScaleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRealtimeScale");
+                rspStr = this.internalRequest(req, "DescribeRecordStatistic");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -273,6 +238,54 @@ public class TrtcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeRoomInformationResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeRoomInformation");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query billable audio/video interaction durations.
+- If the period queried is 1 day or shorter, the statistics returned are on a 5-minute basis. If the period queried is longer than 1 day, the statistics returned are on a daily basis.
+- The period queried in a request cannot be longer than 31 days.
+- If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
+- In the daily pay-as-you-go mode, bills for a day are generated the next morning. Therefore, we recommend you query the statistics after 9 AM the next day.
+     * @param req DescribeTrtcInteractiveTimeRequest
+     * @return DescribeTrtcInteractiveTimeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTrtcInteractiveTimeResponse DescribeTrtcInteractiveTime(DescribeTrtcInteractiveTimeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTrtcInteractiveTimeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTrtcInteractiveTimeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTrtcInteractiveTime");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query billable relaying and transcoding durations.
+- If the period queried is 1 day or shorter, the statistics returned are on a 5-minute basis. If the period queried is longer than 1 day, the statistics returned are on a daily basis.
+- The period queried in a request cannot be longer than 31 days.
+- If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
+- In the daily pay-as-you-go mode, bills for a day are generated the next morning. Therefore, we recommend you query the statistics after 9 AM the next day.
+     * @param req DescribeTrtcMcuTranscodeTimeRequest
+     * @return DescribeTrtcMcuTranscodeTimeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTrtcMcuTranscodeTimeResponse DescribeTrtcMcuTranscodeTime(DescribeTrtcMcuTranscodeTimeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTrtcMcuTranscodeTimeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTrtcMcuTranscodeTimeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTrtcMcuTranscodeTime");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

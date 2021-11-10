@@ -58,6 +58,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Message;
 
     /**
+    * Progress of a media file composing task. Value range: [0, 100]
+    */
+    @SerializedName("Progress")
+    @Expose
+    private Long Progress;
+
+    /**
     * Input of media file composing task.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
@@ -82,18 +89,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private MediaMetaData MetaData;
 
     /**
-    * The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
-    */
-    @SerializedName("SessionContext")
-    @Expose
-    private String SessionContext;
-
-    /**
     * ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
+
+    /**
+    * The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
+    */
+    @SerializedName("SessionContext")
+    @Expose
+    private String SessionContext;
 
     /**
      * Get Task ID. 
@@ -188,6 +195,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Progress of a media file composing task. Value range: [0, 100] 
+     * @return Progress Progress of a media file composing task. Value range: [0, 100]
+     */
+    public Long getProgress() {
+        return this.Progress;
+    }
+
+    /**
+     * Set Progress of a media file composing task. Value range: [0, 100]
+     * @param Progress Progress of a media file composing task. Value range: [0, 100]
+     */
+    public void setProgress(Long Progress) {
+        this.Progress = Progress;
+    }
+
+    /**
      * Get Input of media file composing task.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return Input Input of media file composing task.
@@ -248,22 +271,6 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters. 
-     * @return SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
-     */
-    public String getSessionContext() {
-        return this.SessionContext;
-    }
-
-    /**
-     * Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
-     * @param SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
-     */
-    public void setSessionContext(String SessionContext) {
-        this.SessionContext = SessionContext;
-    }
-
-    /**
      * Get ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed. 
      * @return SessionId ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
      */
@@ -277,6 +284,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
+    }
+
+    /**
+     * Get The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters. 
+     * @return SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
+     */
+    public String getSessionContext() {
+        return this.SessionContext;
+    }
+
+    /**
+     * Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
+     * @param SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
+     */
+    public void setSessionContext(String SessionContext) {
+        this.SessionContext = SessionContext;
     }
 
     public ComposeMediaTask() {
@@ -299,6 +322,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.Message != null) {
             this.Message = new String(source.Message);
         }
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
         if (source.Input != null) {
             this.Input = new ComposeMediaTaskInput(source.Input);
         }
@@ -308,11 +334,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.MetaData != null) {
             this.MetaData = new MediaMetaData(source.MetaData);
         }
-        if (source.SessionContext != null) {
-            this.SessionContext = new String(source.SessionContext);
-        }
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
+        }
+        if (source.SessionContext != null) {
+            this.SessionContext = new String(source.SessionContext);
         }
     }
 
@@ -325,11 +351,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);
         this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamSimple(map, prefix + "Progress", this.Progress);
         this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamObj(map, prefix + "Output.", this.Output);
         this.setParamObj(map, prefix + "MetaData.", this.MetaData);
-        this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
 
     }
 }

@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRealtimeQualityResponse extends AbstractModel{
+public class DescribeRecordStatisticResponse extends AbstractModel{
 
     /**
-    * Type of returned data
+    * Duration statistics of the queried application(s)
     */
-    @SerializedName("Data")
+    @SerializedName("SdkAppIdUsages")
     @Expose
-    private RealtimeData [] Data;
+    private SdkAppIdRecordUsage [] SdkAppIdUsages;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +37,19 @@ public class DescribeRealtimeQualityResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Type of returned data 
-     * @return Data Type of returned data
+     * Get Duration statistics of the queried application(s) 
+     * @return SdkAppIdUsages Duration statistics of the queried application(s)
      */
-    public RealtimeData [] getData() {
-        return this.Data;
+    public SdkAppIdRecordUsage [] getSdkAppIdUsages() {
+        return this.SdkAppIdUsages;
     }
 
     /**
-     * Set Type of returned data
-     * @param Data Type of returned data
+     * Set Duration statistics of the queried application(s)
+     * @param SdkAppIdUsages Duration statistics of the queried application(s)
      */
-    public void setData(RealtimeData [] Data) {
-        this.Data = Data;
+    public void setSdkAppIdUsages(SdkAppIdRecordUsage [] SdkAppIdUsages) {
+        this.SdkAppIdUsages = SdkAppIdUsages;
     }
 
     /**
@@ -68,18 +68,18 @@ public class DescribeRealtimeQualityResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeRealtimeQualityResponse() {
+    public DescribeRecordStatisticResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRealtimeQualityResponse(DescribeRealtimeQualityResponse source) {
-        if (source.Data != null) {
-            this.Data = new RealtimeData[source.Data.length];
-            for (int i = 0; i < source.Data.length; i++) {
-                this.Data[i] = new RealtimeData(source.Data[i]);
+    public DescribeRecordStatisticResponse(DescribeRecordStatisticResponse source) {
+        if (source.SdkAppIdUsages != null) {
+            this.SdkAppIdUsages = new SdkAppIdRecordUsage[source.SdkAppIdUsages.length];
+            for (int i = 0; i < source.SdkAppIdUsages.length; i++) {
+                this.SdkAppIdUsages[i] = new SdkAppIdRecordUsage(source.SdkAppIdUsages[i]);
             }
         }
         if (source.RequestId != null) {
@@ -92,7 +92,7 @@ public class DescribeRealtimeQualityResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamArrayObj(map, prefix + "SdkAppIdUsages.", this.SdkAppIdUsages);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

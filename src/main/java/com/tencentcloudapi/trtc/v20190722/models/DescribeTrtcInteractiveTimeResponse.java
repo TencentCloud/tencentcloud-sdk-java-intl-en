@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRealtimeNetworkResponse extends AbstractModel{
+public class DescribeTrtcInteractiveTimeResponse extends AbstractModel{
 
     /**
-    * Data returned by query
+    * Duration statistics of the queried application(s)
     */
-    @SerializedName("Data")
+    @SerializedName("Usages")
     @Expose
-    private RealtimeData [] Data;
+    private OneSdkAppIdUsagesInfo [] Usages;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +37,19 @@ public class DescribeRealtimeNetworkResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Data returned by query 
-     * @return Data Data returned by query
+     * Get Duration statistics of the queried application(s) 
+     * @return Usages Duration statistics of the queried application(s)
      */
-    public RealtimeData [] getData() {
-        return this.Data;
+    public OneSdkAppIdUsagesInfo [] getUsages() {
+        return this.Usages;
     }
 
     /**
-     * Set Data returned by query
-     * @param Data Data returned by query
+     * Set Duration statistics of the queried application(s)
+     * @param Usages Duration statistics of the queried application(s)
      */
-    public void setData(RealtimeData [] Data) {
-        this.Data = Data;
+    public void setUsages(OneSdkAppIdUsagesInfo [] Usages) {
+        this.Usages = Usages;
     }
 
     /**
@@ -68,18 +68,18 @@ public class DescribeRealtimeNetworkResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeRealtimeNetworkResponse() {
+    public DescribeTrtcInteractiveTimeResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRealtimeNetworkResponse(DescribeRealtimeNetworkResponse source) {
-        if (source.Data != null) {
-            this.Data = new RealtimeData[source.Data.length];
-            for (int i = 0; i < source.Data.length; i++) {
-                this.Data[i] = new RealtimeData(source.Data[i]);
+    public DescribeTrtcInteractiveTimeResponse(DescribeTrtcInteractiveTimeResponse source) {
+        if (source.Usages != null) {
+            this.Usages = new OneSdkAppIdUsagesInfo[source.Usages.length];
+            for (int i = 0; i < source.Usages.length; i++) {
+                this.Usages[i] = new OneSdkAppIdUsagesInfo(source.Usages[i]);
             }
         }
         if (source.RequestId != null) {
@@ -92,7 +92,7 @@ public class DescribeRealtimeNetworkResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamArrayObj(map, prefix + "Usages.", this.Usages);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

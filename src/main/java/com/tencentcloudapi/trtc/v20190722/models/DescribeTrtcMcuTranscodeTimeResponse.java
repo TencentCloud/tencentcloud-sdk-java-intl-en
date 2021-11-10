@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRealtimeScaleResponse extends AbstractModel{
+public class DescribeTrtcMcuTranscodeTimeResponse extends AbstractModel{
 
     /**
-    * Returned data array
+    * Duration statistics of the queried application(s)
     */
-    @SerializedName("Data")
+    @SerializedName("Usages")
     @Expose
-    private RealtimeData [] Data;
+    private OneSdkAppIdTranscodeTimeUsagesInfo [] Usages;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +37,19 @@ public class DescribeRealtimeScaleResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Returned data array 
-     * @return Data Returned data array
+     * Get Duration statistics of the queried application(s) 
+     * @return Usages Duration statistics of the queried application(s)
      */
-    public RealtimeData [] getData() {
-        return this.Data;
+    public OneSdkAppIdTranscodeTimeUsagesInfo [] getUsages() {
+        return this.Usages;
     }
 
     /**
-     * Set Returned data array
-     * @param Data Returned data array
+     * Set Duration statistics of the queried application(s)
+     * @param Usages Duration statistics of the queried application(s)
      */
-    public void setData(RealtimeData [] Data) {
-        this.Data = Data;
+    public void setUsages(OneSdkAppIdTranscodeTimeUsagesInfo [] Usages) {
+        this.Usages = Usages;
     }
 
     /**
@@ -68,18 +68,18 @@ public class DescribeRealtimeScaleResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeRealtimeScaleResponse() {
+    public DescribeTrtcMcuTranscodeTimeResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRealtimeScaleResponse(DescribeRealtimeScaleResponse source) {
-        if (source.Data != null) {
-            this.Data = new RealtimeData[source.Data.length];
-            for (int i = 0; i < source.Data.length; i++) {
-                this.Data[i] = new RealtimeData(source.Data[i]);
+    public DescribeTrtcMcuTranscodeTimeResponse(DescribeTrtcMcuTranscodeTimeResponse source) {
+        if (source.Usages != null) {
+            this.Usages = new OneSdkAppIdTranscodeTimeUsagesInfo[source.Usages.length];
+            for (int i = 0; i < source.Usages.length; i++) {
+                this.Usages[i] = new OneSdkAppIdTranscodeTimeUsagesInfo(source.Usages[i]);
             }
         }
         if (source.RequestId != null) {
@@ -92,7 +92,7 @@ public class DescribeRealtimeScaleResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamArrayObj(map, prefix + "Usages.", this.Usages);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

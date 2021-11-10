@@ -43,7 +43,6 @@ public class ModifyVodDomainAccelerateConfigRequest extends AbstractModel{
     * Whether to enable or disable domain name acceleration for the selected region. Valid values:
 <li>`Enabled`: enable</li>
 <li>`Disabled`: disable</li>
-To enable acceleration in Chinese mainland for a domain name, please finish [ICP filing](https://intl.cloud.tencent.com/document/product/243/18905?from_cn_redirect=1) for it first.
     */
     @SerializedName("Status")
     @Expose
@@ -103,12 +102,10 @@ To enable acceleration in Chinese mainland for a domain name, please finish [ICP
     /**
      * Get Whether to enable or disable domain name acceleration for the selected region. Valid values:
 <li>`Enabled`: enable</li>
-<li>`Disabled`: disable</li>
-To enable acceleration in Chinese mainland for a domain name, please finish [ICP filing](https://intl.cloud.tencent.com/document/product/243/18905?from_cn_redirect=1) for it first. 
+<li>`Disabled`: disable</li> 
      * @return Status Whether to enable or disable domain name acceleration for the selected region. Valid values:
 <li>`Enabled`: enable</li>
 <li>`Disabled`: disable</li>
-To enable acceleration in Chinese mainland for a domain name, please finish [ICP filing](https://intl.cloud.tencent.com/document/product/243/18905?from_cn_redirect=1) for it first.
      */
     public String getStatus() {
         return this.Status;
@@ -118,11 +115,9 @@ To enable acceleration in Chinese mainland for a domain name, please finish [ICP
      * Set Whether to enable or disable domain name acceleration for the selected region. Valid values:
 <li>`Enabled`: enable</li>
 <li>`Disabled`: disable</li>
-To enable acceleration in Chinese mainland for a domain name, please finish [ICP filing](https://intl.cloud.tencent.com/document/product/243/18905?from_cn_redirect=1) for it first.
      * @param Status Whether to enable or disable domain name acceleration for the selected region. Valid values:
 <li>`Enabled`: enable</li>
 <li>`Disabled`: disable</li>
-To enable acceleration in Chinese mainland for a domain name, please finish [ICP filing](https://intl.cloud.tencent.com/document/product/243/18905?from_cn_redirect=1) for it first.
      */
     public void setStatus(String Status) {
         this.Status = Status;

@@ -66,6 +66,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Message;
 
     /**
+    * Progress of a video editing task. Value range: [0, 100]
+    */
+    @SerializedName("Progress")
+    @Expose
+    private Long Progress;
+
+    /**
     * Input of video editing task.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
@@ -82,20 +89,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private EditMediaTaskOutput Output;
 
     /**
+    * Metadata of a source video
+    */
+    @SerializedName("MetaData")
+    @Expose
+    private MediaMetaData MetaData;
+
+    /**
     * If a video processing flow is specified when a video editing task is initiated, this field will be the ID of the task flow.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProcedureTaskId")
     @Expose
     private String ProcedureTaskId;
-
-    /**
-    * The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("SessionContext")
-    @Expose
-    private String SessionContext;
 
     /**
     * The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
@@ -106,11 +112,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String SessionId;
 
     /**
-    * Metadata of a source video
+    * The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("MetaData")
+    @SerializedName("SessionContext")
     @Expose
-    private MediaMetaData MetaData;
+    private String SessionContext;
 
     /**
      * Get Task ID. 
@@ -225,6 +232,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Progress of a video editing task. Value range: [0, 100] 
+     * @return Progress Progress of a video editing task. Value range: [0, 100]
+     */
+    public Long getProgress() {
+        return this.Progress;
+    }
+
+    /**
+     * Set Progress of a video editing task. Value range: [0, 100]
+     * @param Progress Progress of a video editing task. Value range: [0, 100]
+     */
+    public void setProgress(Long Progress) {
+        this.Progress = Progress;
+    }
+
+    /**
      * Get Input of video editing task.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return Input Input of video editing task.
@@ -265,6 +288,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Metadata of a source video 
+     * @return MetaData Metadata of a source video
+     */
+    public MediaMetaData getMetaData() {
+        return this.MetaData;
+    }
+
+    /**
+     * Set Metadata of a source video
+     * @param MetaData Metadata of a source video
+     */
+    public void setMetaData(MediaMetaData MetaData) {
+        this.MetaData = MetaData;
+    }
+
+    /**
      * Get If a video processing flow is specified when a video editing task is initiated, this field will be the ID of the task flow.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return ProcedureTaskId If a video processing flow is specified when a video editing task is initiated, this field will be the ID of the task flow.
@@ -282,26 +321,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
      */
     public void setProcedureTaskId(String ProcedureTaskId) {
         this.ProcedureTaskId = ProcedureTaskId;
-    }
-
-    /**
-     * Get The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public String getSessionContext() {
-        return this.SessionContext;
-    }
-
-    /**
-     * Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public void setSessionContext(String SessionContext) {
-        this.SessionContext = SessionContext;
     }
 
     /**
@@ -325,19 +344,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Metadata of a source video 
-     * @return MetaData Metadata of a source video
+     * Get The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
-    public MediaMetaData getMetaData() {
-        return this.MetaData;
+    public String getSessionContext() {
+        return this.SessionContext;
     }
 
     /**
-     * Set Metadata of a source video
-     * @param MetaData Metadata of a source video
+     * Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
-    public void setMetaData(MediaMetaData MetaData) {
-        this.MetaData = MetaData;
+    public void setSessionContext(String SessionContext) {
+        this.SessionContext = SessionContext;
     }
 
     public EditMediaTask() {
@@ -363,23 +386,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.Message != null) {
             this.Message = new String(source.Message);
         }
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
         if (source.Input != null) {
             this.Input = new EditMediaTaskInput(source.Input);
         }
         if (source.Output != null) {
             this.Output = new EditMediaTaskOutput(source.Output);
         }
+        if (source.MetaData != null) {
+            this.MetaData = new MediaMetaData(source.MetaData);
+        }
         if (source.ProcedureTaskId != null) {
             this.ProcedureTaskId = new String(source.ProcedureTaskId);
-        }
-        if (source.SessionContext != null) {
-            this.SessionContext = new String(source.SessionContext);
         }
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
         }
-        if (source.MetaData != null) {
-            this.MetaData = new MediaMetaData(source.MetaData);
+        if (source.SessionContext != null) {
+            this.SessionContext = new String(source.SessionContext);
         }
     }
 
@@ -393,12 +419,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);
         this.setParamSimple(map, prefix + "ErrCodeExt", this.ErrCodeExt);
         this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamSimple(map, prefix + "Progress", this.Progress);
         this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamObj(map, prefix + "Output.", this.Output);
-        this.setParamSimple(map, prefix + "ProcedureTaskId", this.ProcedureTaskId);
-        this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
-        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamObj(map, prefix + "MetaData.", this.MetaData);
+        this.setParamSimple(map, prefix + "ProcedureTaskId", this.ProcedureTaskId);
+        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
 
     }
 }
