@@ -142,7 +142,8 @@ public class BillResourceSummary extends AbstractModel{
     private String TotalCost;
 
     /**
-    * Discount rate
+    * Discount
+If different discounts or contract prices are applied, `-` will be returned for this parameter.
     */
     @SerializedName("Discount")
     @Expose
@@ -527,16 +528,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Discount rate 
-     * @return Discount Discount rate
+     * Get Discount
+If different discounts or contract prices are applied, `-` will be returned for this parameter. 
+     * @return Discount Discount
+If different discounts or contract prices are applied, `-` will be returned for this parameter.
      */
     public String getDiscount() {
         return this.Discount;
     }
 
     /**
-     * Set Discount rate
-     * @param Discount Discount rate
+     * Set Discount
+If different discounts or contract prices are applied, `-` will be returned for this parameter.
+     * @param Discount Discount
+If different discounts or contract prices are applied, `-` will be returned for this parameter.
      */
     public void setDiscount(String Discount) {
         this.Discount = Discount;

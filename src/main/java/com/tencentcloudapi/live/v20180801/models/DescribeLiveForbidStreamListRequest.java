@@ -39,7 +39,7 @@ Default value: 10.
     private Long PageSize;
 
     /**
-    * The stream name to search for
+    * Stream name for query
     */
     @SerializedName("StreamName")
     @Expose
@@ -86,16 +86,16 @@ Default value: 10.
     }
 
     /**
-     * Get The stream name to search for 
-     * @return StreamName The stream name to search for
+     * Get Stream name for query 
+     * @return StreamName Stream name for query
      */
     public String getStreamName() {
         return this.StreamName;
     }
 
     /**
-     * Set The stream name to search for
-     * @param StreamName The stream name to search for
+     * Set Stream name for query
+     * @param StreamName Stream name for query
      */
     public void setStreamName(String StreamName) {
         this.StreamName = StreamName;

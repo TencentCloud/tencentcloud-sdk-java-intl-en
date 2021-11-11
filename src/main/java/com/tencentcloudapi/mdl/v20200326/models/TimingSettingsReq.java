@@ -23,54 +23,110 @@ import java.util.HashMap;
 public class TimingSettingsReq extends AbstractModel{
 
     /**
-    * Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`
+    * Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`. This parameter is required if `EventType` is `INPUT_SWITCH`.
     */
     @SerializedName("StartType")
     @Expose
     private String StartType;
 
     /**
-    * Required if `StartType` is `FIXED_TIME`
-UTC time, such as `2020-01-01T12:00:00Z`
+    * This parameter is required if `EventType` is `INPUT_SWITCH` and `StartType` is `FIXED_TIME`.
+It must be in UTC format, e.g., `2020-01-01T12:00:00Z`.
     */
     @SerializedName("Time")
     @Expose
     private String Time;
 
     /**
-     * Get Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE` 
-     * @return StartType Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`
+    * This parameter is required if `EventType` is `TIMED_RECORD`.
+It specifies the recording start time in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the current time.
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * This parameter is required if `EventType` is `TIMED_RECORD`.
+It specifies the recording end time in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the recording start time.
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
+     * Get Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`. This parameter is required if `EventType` is `INPUT_SWITCH`. 
+     * @return StartType Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`. This parameter is required if `EventType` is `INPUT_SWITCH`.
      */
     public String getStartType() {
         return this.StartType;
     }
 
     /**
-     * Set Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`
-     * @param StartType Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`
+     * Set Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`. This parameter is required if `EventType` is `INPUT_SWITCH`.
+     * @param StartType Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`. This parameter is required if `EventType` is `INPUT_SWITCH`.
      */
     public void setStartType(String StartType) {
         this.StartType = StartType;
     }
 
     /**
-     * Get Required if `StartType` is `FIXED_TIME`
-UTC time, such as `2020-01-01T12:00:00Z` 
-     * @return Time Required if `StartType` is `FIXED_TIME`
-UTC time, such as `2020-01-01T12:00:00Z`
+     * Get This parameter is required if `EventType` is `INPUT_SWITCH` and `StartType` is `FIXED_TIME`.
+It must be in UTC format, e.g., `2020-01-01T12:00:00Z`. 
+     * @return Time This parameter is required if `EventType` is `INPUT_SWITCH` and `StartType` is `FIXED_TIME`.
+It must be in UTC format, e.g., `2020-01-01T12:00:00Z`.
      */
     public String getTime() {
         return this.Time;
     }
 
     /**
-     * Set Required if `StartType` is `FIXED_TIME`
-UTC time, such as `2020-01-01T12:00:00Z`
-     * @param Time Required if `StartType` is `FIXED_TIME`
-UTC time, such as `2020-01-01T12:00:00Z`
+     * Set This parameter is required if `EventType` is `INPUT_SWITCH` and `StartType` is `FIXED_TIME`.
+It must be in UTC format, e.g., `2020-01-01T12:00:00Z`.
+     * @param Time This parameter is required if `EventType` is `INPUT_SWITCH` and `StartType` is `FIXED_TIME`.
+It must be in UTC format, e.g., `2020-01-01T12:00:00Z`.
      */
     public void setTime(String Time) {
         this.Time = Time;
+    }
+
+    /**
+     * Get This parameter is required if `EventType` is `TIMED_RECORD`.
+It specifies the recording start time in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the current time. 
+     * @return StartTime This parameter is required if `EventType` is `TIMED_RECORD`.
+It specifies the recording start time in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the current time.
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set This parameter is required if `EventType` is `TIMED_RECORD`.
+It specifies the recording start time in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the current time.
+     * @param StartTime This parameter is required if `EventType` is `TIMED_RECORD`.
+It specifies the recording start time in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the current time.
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get This parameter is required if `EventType` is `TIMED_RECORD`.
+It specifies the recording end time in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the recording start time. 
+     * @return EndTime This parameter is required if `EventType` is `TIMED_RECORD`.
+It specifies the recording end time in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the recording start time.
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set This parameter is required if `EventType` is `TIMED_RECORD`.
+It specifies the recording end time in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the recording start time.
+     * @param EndTime This parameter is required if `EventType` is `TIMED_RECORD`.
+It specifies the recording end time in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the recording start time.
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
     }
 
     public TimingSettingsReq() {
@@ -87,6 +143,12 @@ UTC time, such as `2020-01-01T12:00:00Z`
         if (source.Time != null) {
             this.Time = new String(source.Time);
         }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
     }
 
 
@@ -96,6 +158,8 @@ UTC time, such as `2020-01-01T12:00:00Z`
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartType", this.StartType);
         this.setParamSimple(map, prefix + "Time", this.Time);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
 
     }
 }

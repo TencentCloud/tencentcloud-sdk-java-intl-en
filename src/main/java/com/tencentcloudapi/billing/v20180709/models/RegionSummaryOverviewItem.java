@@ -80,6 +80,13 @@ Note: This field may return null, indicating that no valid value was found.
     private String BillMonth;
 
     /**
+    * The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
+    */
+    @SerializedName("TotalCost")
+    @Expose
+    private String TotalCost;
+
+    /**
      * Get Region ID
 Note: This field may return null, indicating that no valid value was found. 
      * @return RegionId Region ID
@@ -211,6 +218,22 @@ Note: This field may return null, indicating that no valid value was found.
         this.BillMonth = BillMonth;
     }
 
+    /**
+     * Get The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter. 
+     * @return TotalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
+     */
+    public String getTotalCost() {
+        return this.TotalCost;
+    }
+
+    /**
+     * Set The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
+     * @param TotalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
+     */
+    public void setTotalCost(String TotalCost) {
+        this.TotalCost = TotalCost;
+    }
+
     public RegionSummaryOverviewItem() {
     }
 
@@ -243,6 +266,9 @@ Note: This field may return null, indicating that no valid value was found.
         if (source.BillMonth != null) {
             this.BillMonth = new String(source.BillMonth);
         }
+        if (source.TotalCost != null) {
+            this.TotalCost = new String(source.TotalCost);
+        }
     }
 
 
@@ -258,6 +284,7 @@ Note: This field may return null, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
         this.setParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
         this.setParamSimple(map, prefix + "BillMonth", this.BillMonth);
+        this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
 
     }
 }

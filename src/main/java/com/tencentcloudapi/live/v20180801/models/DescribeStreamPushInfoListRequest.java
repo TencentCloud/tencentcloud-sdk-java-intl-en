@@ -37,7 +37,7 @@ public class DescribeStreamPushInfoListRequest extends AbstractModel{
     private String StartTime;
 
     /**
-    * End time point in the format of `yyyy-mm-dd HH:MM:SS`. The maximum time span is 6 hours. Data for the last 6 days can be queried.
+    * End time in the format of yyyy-mm-dd HH:MM:SS. You can query data in the past 7 days. You’re advised to set the query period to up to 3 hours.
     */
     @SerializedName("EndTime")
     @Expose
@@ -90,16 +90,16 @@ public class DescribeStreamPushInfoListRequest extends AbstractModel{
     }
 
     /**
-     * Get End time point in the format of `yyyy-mm-dd HH:MM:SS`. The maximum time span is 6 hours. Data for the last 6 days can be queried. 
-     * @return EndTime End time point in the format of `yyyy-mm-dd HH:MM:SS`. The maximum time span is 6 hours. Data for the last 6 days can be queried.
+     * Get End time in the format of yyyy-mm-dd HH:MM:SS. You can query data in the past 7 days. You’re advised to set the query period to up to 3 hours. 
+     * @return EndTime End time in the format of yyyy-mm-dd HH:MM:SS. You can query data in the past 7 days. You’re advised to set the query period to up to 3 hours.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time point in the format of `yyyy-mm-dd HH:MM:SS`. The maximum time span is 6 hours. Data for the last 6 days can be queried.
-     * @param EndTime End time point in the format of `yyyy-mm-dd HH:MM:SS`. The maximum time span is 6 hours. Data for the last 6 days can be queried.
+     * Set End time in the format of yyyy-mm-dd HH:MM:SS. You can query data in the past 7 days. You’re advised to set the query period to up to 3 hours.
+     * @param EndTime End time in the format of yyyy-mm-dd HH:MM:SS. You can query data in the past 7 days. You’re advised to set the query period to up to 3 hours.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

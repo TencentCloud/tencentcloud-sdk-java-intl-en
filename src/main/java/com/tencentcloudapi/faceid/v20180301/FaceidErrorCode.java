@@ -39,27 +39,6 @@ public enum FaceidErrorCode {
     // Error calling the comparison engine API.
      FAILEDOPERATION_COMPARESYSTEMERROR("FailedOperation.CompareSystemError"),
      
-    // Failed to store the file. Please try again later.
-     FAILEDOPERATION_FILESAVEERROR("FailedOperation.FileSaveError"),
-     
-    // The ID number entered is incorrect.
-     FAILEDOPERATION_IDFORMATERROR("FailedOperation.IdFormatError"),
-     
-    // The name and ID number do not match. Please check and try again.
-     FAILEDOPERATION_IDNAMEMISMATCH("FailedOperation.IdNameMisMatch"),
-     
-    // The number is not in the library. Please go to the applicable household registrar for check.
-     FAILEDOPERATION_IDNOEXISTSYSTEM("FailedOperation.IdNoExistSystem"),
-     
-    // The photo is not in the library. Please go to the applicable household registrar for check.
-     FAILEDOPERATION_IDPHOTONOEXIST("FailedOperation.IdPhotoNoExist"),
-     
-    // The ID photo resolution is too low. Please upload a new one.
-     FAILEDOPERATION_IDPHOTOPOORQUALITY("FailedOperation.IdPhotoPoorQuality"),
-     
-    // Failed to return a photo from the customer library or authentication center. Please try again later.
-     FAILEDOPERATION_IDPHOTOSYSTEMNOANSWER("FailedOperation.IdPhotoSystemNoanswer"),
-     
     // Multiple faces are detected.
      FAILEDOPERATION_LIFEPHOTODETECTFACES("FailedOperation.LifePhotoDetectFaces"),
      
@@ -116,9 +95,6 @@ public enum FaceidErrorCode {
      
     // Video-based real person detection failed.
      FAILEDOPERATION_LIVESSUNKNOWNERROR("FailedOperation.LivessUnknownError"),
-     
-    // The name entered is incorrect.
-     FAILEDOPERATION_NAMEFORMATERROR("FailedOperation.NameFormatError"),
      
     // Real person detection failed.
      FAILEDOPERATION_SILENTDETECTFAIL("FailedOperation.SilentDetectFail"),

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateCommonMixStreamRequest extends AbstractModel{
 
     /**
-    * ID of stream mix session (from applying for stream mix to canceling stream mix).
+    * ID of a stream mix session (from applying for the stream mix to cancelling it). This parameter can contain up to 80 bytes of letters, digits, and underscores.
     */
     @SerializedName("MixStreamSessionId")
     @Expose
@@ -64,16 +64,16 @@ For six input sources, 610 is supported.
     private CommonMixControlParams ControlParams;
 
     /**
-     * Get ID of stream mix session (from applying for stream mix to canceling stream mix). 
-     * @return MixStreamSessionId ID of stream mix session (from applying for stream mix to canceling stream mix).
+     * Get ID of a stream mix session (from applying for the stream mix to cancelling it). This parameter can contain up to 80 bytes of letters, digits, and underscores. 
+     * @return MixStreamSessionId ID of a stream mix session (from applying for the stream mix to cancelling it). This parameter can contain up to 80 bytes of letters, digits, and underscores.
      */
     public String getMixStreamSessionId() {
         return this.MixStreamSessionId;
     }
 
     /**
-     * Set ID of stream mix session (from applying for stream mix to canceling stream mix).
-     * @param MixStreamSessionId ID of stream mix session (from applying for stream mix to canceling stream mix).
+     * Set ID of a stream mix session (from applying for the stream mix to cancelling it). This parameter can contain up to 80 bytes of letters, digits, and underscores.
+     * @param MixStreamSessionId ID of a stream mix session (from applying for the stream mix to cancelling it). This parameter can contain up to 80 bytes of letters, digits, and underscores.
      */
     public void setMixStreamSessionId(String MixStreamSessionId) {
         this.MixStreamSessionId = MixStreamSessionId;

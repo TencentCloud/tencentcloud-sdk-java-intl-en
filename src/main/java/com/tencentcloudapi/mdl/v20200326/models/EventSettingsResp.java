@@ -37,6 +37,27 @@ public class EventSettingsResp extends AbstractModel{
     private String InputAttachment;
 
     /**
+    * Name of the output group attached. This parameter is not empty if `EventType` is `TIMED_RECORD`.
+    */
+    @SerializedName("OutputGroupName")
+    @Expose
+    private String OutputGroupName;
+
+    /**
+    * Name of the manifest file for timed recording, which ends with `.m3u8` for HLS and `.mpd` for DASH. This parameter is not empty if `EventType` is `TIMED_RECORD`.
+    */
+    @SerializedName("ManifestName")
+    @Expose
+    private String ManifestName;
+
+    /**
+    * URL of the COS bucket where recording files are saved. This parameter is not empty if `EventType` is `TIMED_RECORD`. It may contain 1 or 2 URLs. The first URL corresponds to pipeline 0 and the second pipeline 1.
+    */
+    @SerializedName("Destinations")
+    @Expose
+    private EventSettingsDestinationResp [] Destinations;
+
+    /**
      * Get Only `INPUT_SWITCH` is supported currently. 
      * @return EventType Only `INPUT_SWITCH` is supported currently.
      */
@@ -68,6 +89,54 @@ public class EventSettingsResp extends AbstractModel{
         this.InputAttachment = InputAttachment;
     }
 
+    /**
+     * Get Name of the output group attached. This parameter is not empty if `EventType` is `TIMED_RECORD`. 
+     * @return OutputGroupName Name of the output group attached. This parameter is not empty if `EventType` is `TIMED_RECORD`.
+     */
+    public String getOutputGroupName() {
+        return this.OutputGroupName;
+    }
+
+    /**
+     * Set Name of the output group attached. This parameter is not empty if `EventType` is `TIMED_RECORD`.
+     * @param OutputGroupName Name of the output group attached. This parameter is not empty if `EventType` is `TIMED_RECORD`.
+     */
+    public void setOutputGroupName(String OutputGroupName) {
+        this.OutputGroupName = OutputGroupName;
+    }
+
+    /**
+     * Get Name of the manifest file for timed recording, which ends with `.m3u8` for HLS and `.mpd` for DASH. This parameter is not empty if `EventType` is `TIMED_RECORD`. 
+     * @return ManifestName Name of the manifest file for timed recording, which ends with `.m3u8` for HLS and `.mpd` for DASH. This parameter is not empty if `EventType` is `TIMED_RECORD`.
+     */
+    public String getManifestName() {
+        return this.ManifestName;
+    }
+
+    /**
+     * Set Name of the manifest file for timed recording, which ends with `.m3u8` for HLS and `.mpd` for DASH. This parameter is not empty if `EventType` is `TIMED_RECORD`.
+     * @param ManifestName Name of the manifest file for timed recording, which ends with `.m3u8` for HLS and `.mpd` for DASH. This parameter is not empty if `EventType` is `TIMED_RECORD`.
+     */
+    public void setManifestName(String ManifestName) {
+        this.ManifestName = ManifestName;
+    }
+
+    /**
+     * Get URL of the COS bucket where recording files are saved. This parameter is not empty if `EventType` is `TIMED_RECORD`. It may contain 1 or 2 URLs. The first URL corresponds to pipeline 0 and the second pipeline 1. 
+     * @return Destinations URL of the COS bucket where recording files are saved. This parameter is not empty if `EventType` is `TIMED_RECORD`. It may contain 1 or 2 URLs. The first URL corresponds to pipeline 0 and the second pipeline 1.
+     */
+    public EventSettingsDestinationResp [] getDestinations() {
+        return this.Destinations;
+    }
+
+    /**
+     * Set URL of the COS bucket where recording files are saved. This parameter is not empty if `EventType` is `TIMED_RECORD`. It may contain 1 or 2 URLs. The first URL corresponds to pipeline 0 and the second pipeline 1.
+     * @param Destinations URL of the COS bucket where recording files are saved. This parameter is not empty if `EventType` is `TIMED_RECORD`. It may contain 1 or 2 URLs. The first URL corresponds to pipeline 0 and the second pipeline 1.
+     */
+    public void setDestinations(EventSettingsDestinationResp [] Destinations) {
+        this.Destinations = Destinations;
+    }
+
     public EventSettingsResp() {
     }
 
@@ -82,6 +151,18 @@ public class EventSettingsResp extends AbstractModel{
         if (source.InputAttachment != null) {
             this.InputAttachment = new String(source.InputAttachment);
         }
+        if (source.OutputGroupName != null) {
+            this.OutputGroupName = new String(source.OutputGroupName);
+        }
+        if (source.ManifestName != null) {
+            this.ManifestName = new String(source.ManifestName);
+        }
+        if (source.Destinations != null) {
+            this.Destinations = new EventSettingsDestinationResp[source.Destinations.length];
+            for (int i = 0; i < source.Destinations.length; i++) {
+                this.Destinations[i] = new EventSettingsDestinationResp(source.Destinations[i]);
+            }
+        }
     }
 
 
@@ -91,6 +172,9 @@ public class EventSettingsResp extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EventType", this.EventType);
         this.setParamSimple(map, prefix + "InputAttachment", this.InputAttachment);
+        this.setParamSimple(map, prefix + "OutputGroupName", this.OutputGroupName);
+        this.setParamSimple(map, prefix + "ManifestName", this.ManifestName);
+        this.setParamArrayObj(map, prefix + "Destinations.", this.Destinations);
 
     }
 }

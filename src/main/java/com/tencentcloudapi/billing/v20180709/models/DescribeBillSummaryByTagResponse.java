@@ -38,6 +38,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private TagSummaryOverviewItem [] SummaryOverview;
 
     /**
+    * Total cost
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SummaryTotal")
+    @Expose
+    private SummaryTotal SummaryTotal;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -81,6 +89,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Total cost
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return SummaryTotal Total cost
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public SummaryTotal getSummaryTotal() {
+        return this.SummaryTotal;
+    }
+
+    /**
+     * Set Total cost
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param SummaryTotal Total cost
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setSummaryTotal(SummaryTotal SummaryTotal) {
+        this.SummaryTotal = SummaryTotal;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -113,6 +141,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.SummaryOverview[i] = new TagSummaryOverviewItem(source.SummaryOverview[i]);
             }
         }
+        if (source.SummaryTotal != null) {
+            this.SummaryTotal = new SummaryTotal(source.SummaryTotal);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -125,6 +156,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Ready", this.Ready);
         this.setParamArrayObj(map, prefix + "SummaryOverview.", this.SummaryOverview);
+        this.setParamObj(map, prefix + "SummaryTotal.", this.SummaryTotal);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

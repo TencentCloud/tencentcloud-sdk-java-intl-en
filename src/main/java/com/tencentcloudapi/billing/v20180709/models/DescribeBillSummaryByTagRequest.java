@@ -51,6 +51,13 @@ public class DescribeBillSummaryByTagRequest extends AbstractModel{
     private String PayerUin;
 
     /**
+    * Resource tag value
+    */
+    @SerializedName("TagValue")
+    @Expose
+    private String TagValue;
+
+    /**
      * Get The value must be of the same month as `EndTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018. 
      * @return BeginTime The value must be of the same month as `EndTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
      */
@@ -114,6 +121,22 @@ public class DescribeBillSummaryByTagRequest extends AbstractModel{
         this.PayerUin = PayerUin;
     }
 
+    /**
+     * Get Resource tag value 
+     * @return TagValue Resource tag value
+     */
+    public String getTagValue() {
+        return this.TagValue;
+    }
+
+    /**
+     * Set Resource tag value
+     * @param TagValue Resource tag value
+     */
+    public void setTagValue(String TagValue) {
+        this.TagValue = TagValue;
+    }
+
     public DescribeBillSummaryByTagRequest() {
     }
 
@@ -134,6 +157,9 @@ public class DescribeBillSummaryByTagRequest extends AbstractModel{
         if (source.PayerUin != null) {
             this.PayerUin = new String(source.PayerUin);
         }
+        if (source.TagValue != null) {
+            this.TagValue = new String(source.TagValue);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class DescribeBillSummaryByTagRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "TagKey", this.TagKey);
         this.setParamSimple(map, prefix + "PayerUin", this.PayerUin);
+        this.setParamSimple(map, prefix + "TagValue", this.TagValue);
 
     }
 }

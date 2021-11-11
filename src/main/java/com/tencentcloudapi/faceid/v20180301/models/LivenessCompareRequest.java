@@ -49,16 +49,19 @@ LIP: numeric mode; ACTION: motion mode; SILENT: silent mode. You need to select 
     private String LivenessType;
 
     /**
-    * Input parameter for the numeric mode: numeric verification code (1234). An API needs to be called first to get a numeric verification code;
-Input parameter for the motion mode: motion order (2,1 or 1,2). An API needs to be called first to get the motion order;
-Input parameter for silent mode: empty.
+    * Lip mode: set this parameter to a custom 4-digit verification code.
+Action mode: set this parameter to a custom action sequence (e.g., `2,1` or `1,2`).
+Silent mode: do not pass in this parameter.
     */
     @SerializedName("ValidateData")
     @Expose
     private String ValidateData;
 
     /**
-    * This parameter does not need to be passed in for this API.
+    * Optional configuration (a JSON string)
+{
+"BestFrameNum": 2  // Return multiple best screenshots. Value range: 2−10
+}
     */
     @SerializedName("Optional")
     @Expose
@@ -133,40 +136,52 @@ LIP: numeric mode; ACTION: motion mode; SILENT: silent mode. You need to select 
     }
 
     /**
-     * Get Input parameter for the numeric mode: numeric verification code (1234). An API needs to be called first to get a numeric verification code;
-Input parameter for the motion mode: motion order (2,1 or 1,2). An API needs to be called first to get the motion order;
-Input parameter for silent mode: empty. 
-     * @return ValidateData Input parameter for the numeric mode: numeric verification code (1234). An API needs to be called first to get a numeric verification code;
-Input parameter for the motion mode: motion order (2,1 or 1,2). An API needs to be called first to get the motion order;
-Input parameter for silent mode: empty.
+     * Get Lip mode: set this parameter to a custom 4-digit verification code.
+Action mode: set this parameter to a custom action sequence (e.g., `2,1` or `1,2`).
+Silent mode: do not pass in this parameter. 
+     * @return ValidateData Lip mode: set this parameter to a custom 4-digit verification code.
+Action mode: set this parameter to a custom action sequence (e.g., `2,1` or `1,2`).
+Silent mode: do not pass in this parameter.
      */
     public String getValidateData() {
         return this.ValidateData;
     }
 
     /**
-     * Set Input parameter for the numeric mode: numeric verification code (1234). An API needs to be called first to get a numeric verification code;
-Input parameter for the motion mode: motion order (2,1 or 1,2). An API needs to be called first to get the motion order;
-Input parameter for silent mode: empty.
-     * @param ValidateData Input parameter for the numeric mode: numeric verification code (1234). An API needs to be called first to get a numeric verification code;
-Input parameter for the motion mode: motion order (2,1 or 1,2). An API needs to be called first to get the motion order;
-Input parameter for silent mode: empty.
+     * Set Lip mode: set this parameter to a custom 4-digit verification code.
+Action mode: set this parameter to a custom action sequence (e.g., `2,1` or `1,2`).
+Silent mode: do not pass in this parameter.
+     * @param ValidateData Lip mode: set this parameter to a custom 4-digit verification code.
+Action mode: set this parameter to a custom action sequence (e.g., `2,1` or `1,2`).
+Silent mode: do not pass in this parameter.
      */
     public void setValidateData(String ValidateData) {
         this.ValidateData = ValidateData;
     }
 
     /**
-     * Get This parameter does not need to be passed in for this API. 
-     * @return Optional This parameter does not need to be passed in for this API.
+     * Get Optional configuration (a JSON string)
+{
+"BestFrameNum": 2  // Return multiple best screenshots. Value range: 2−10
+} 
+     * @return Optional Optional configuration (a JSON string)
+{
+"BestFrameNum": 2  // Return multiple best screenshots. Value range: 2−10
+}
      */
     public String getOptional() {
         return this.Optional;
     }
 
     /**
-     * Set This parameter does not need to be passed in for this API.
-     * @param Optional This parameter does not need to be passed in for this API.
+     * Set Optional configuration (a JSON string)
+{
+"BestFrameNum": 2  // Return multiple best screenshots. Value range: 2−10
+}
+     * @param Optional Optional configuration (a JSON string)
+{
+"BestFrameNum": 2  // Return multiple best screenshots. Value range: 2−10
+}
      */
     public void setOptional(String Optional) {
         this.Optional = Optional;

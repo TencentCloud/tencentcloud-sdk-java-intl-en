@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class EventSettingsReq extends AbstractModel{
 
     /**
-    * Only `INPUT_SWITCH` is supported currently. If you do not specify this parameter, `INPUT_SWITCH` will be used.
+    * Valid values: `INPUT_SWITCH`, `TIMED_RECORD`. If it is not specified, `INPUT_SWITCH` will be used.
     */
     @SerializedName("EventType")
     @Expose
@@ -37,16 +37,37 @@ public class EventSettingsReq extends AbstractModel{
     private String InputAttachment;
 
     /**
-     * Get Only `INPUT_SWITCH` is supported currently. If you do not specify this parameter, `INPUT_SWITCH` will be used. 
-     * @return EventType Only `INPUT_SWITCH` is supported currently. If you do not specify this parameter, `INPUT_SWITCH` will be used.
+    * Name of the output group to attach. This parameter is required if `EventType` is `TIMED_RECORD`.
+    */
+    @SerializedName("OutputGroupName")
+    @Expose
+    private String OutputGroupName;
+
+    /**
+    * Name of the manifest file for timed recording, which must end with `.m3u8` for HLS and `.mpd` for DASH. This parameter is required if `EventType` is `TIMED_RECORD`.
+    */
+    @SerializedName("ManifestName")
+    @Expose
+    private String ManifestName;
+
+    /**
+    * URL of the COS bucket to save recording files. This parameter is required if `EventType` is `TIMED_RECORD`. It may contain 1 or 2 URLs. The first URL corresponds to pipeline 0 and the second pipeline 1.
+    */
+    @SerializedName("Destinations")
+    @Expose
+    private EventSettingsDestinationReq [] Destinations;
+
+    /**
+     * Get Valid values: `INPUT_SWITCH`, `TIMED_RECORD`. If it is not specified, `INPUT_SWITCH` will be used. 
+     * @return EventType Valid values: `INPUT_SWITCH`, `TIMED_RECORD`. If it is not specified, `INPUT_SWITCH` will be used.
      */
     public String getEventType() {
         return this.EventType;
     }
 
     /**
-     * Set Only `INPUT_SWITCH` is supported currently. If you do not specify this parameter, `INPUT_SWITCH` will be used.
-     * @param EventType Only `INPUT_SWITCH` is supported currently. If you do not specify this parameter, `INPUT_SWITCH` will be used.
+     * Set Valid values: `INPUT_SWITCH`, `TIMED_RECORD`. If it is not specified, `INPUT_SWITCH` will be used.
+     * @param EventType Valid values: `INPUT_SWITCH`, `TIMED_RECORD`. If it is not specified, `INPUT_SWITCH` will be used.
      */
     public void setEventType(String EventType) {
         this.EventType = EventType;
@@ -68,6 +89,54 @@ public class EventSettingsReq extends AbstractModel{
         this.InputAttachment = InputAttachment;
     }
 
+    /**
+     * Get Name of the output group to attach. This parameter is required if `EventType` is `TIMED_RECORD`. 
+     * @return OutputGroupName Name of the output group to attach. This parameter is required if `EventType` is `TIMED_RECORD`.
+     */
+    public String getOutputGroupName() {
+        return this.OutputGroupName;
+    }
+
+    /**
+     * Set Name of the output group to attach. This parameter is required if `EventType` is `TIMED_RECORD`.
+     * @param OutputGroupName Name of the output group to attach. This parameter is required if `EventType` is `TIMED_RECORD`.
+     */
+    public void setOutputGroupName(String OutputGroupName) {
+        this.OutputGroupName = OutputGroupName;
+    }
+
+    /**
+     * Get Name of the manifest file for timed recording, which must end with `.m3u8` for HLS and `.mpd` for DASH. This parameter is required if `EventType` is `TIMED_RECORD`. 
+     * @return ManifestName Name of the manifest file for timed recording, which must end with `.m3u8` for HLS and `.mpd` for DASH. This parameter is required if `EventType` is `TIMED_RECORD`.
+     */
+    public String getManifestName() {
+        return this.ManifestName;
+    }
+
+    /**
+     * Set Name of the manifest file for timed recording, which must end with `.m3u8` for HLS and `.mpd` for DASH. This parameter is required if `EventType` is `TIMED_RECORD`.
+     * @param ManifestName Name of the manifest file for timed recording, which must end with `.m3u8` for HLS and `.mpd` for DASH. This parameter is required if `EventType` is `TIMED_RECORD`.
+     */
+    public void setManifestName(String ManifestName) {
+        this.ManifestName = ManifestName;
+    }
+
+    /**
+     * Get URL of the COS bucket to save recording files. This parameter is required if `EventType` is `TIMED_RECORD`. It may contain 1 or 2 URLs. The first URL corresponds to pipeline 0 and the second pipeline 1. 
+     * @return Destinations URL of the COS bucket to save recording files. This parameter is required if `EventType` is `TIMED_RECORD`. It may contain 1 or 2 URLs. The first URL corresponds to pipeline 0 and the second pipeline 1.
+     */
+    public EventSettingsDestinationReq [] getDestinations() {
+        return this.Destinations;
+    }
+
+    /**
+     * Set URL of the COS bucket to save recording files. This parameter is required if `EventType` is `TIMED_RECORD`. It may contain 1 or 2 URLs. The first URL corresponds to pipeline 0 and the second pipeline 1.
+     * @param Destinations URL of the COS bucket to save recording files. This parameter is required if `EventType` is `TIMED_RECORD`. It may contain 1 or 2 URLs. The first URL corresponds to pipeline 0 and the second pipeline 1.
+     */
+    public void setDestinations(EventSettingsDestinationReq [] Destinations) {
+        this.Destinations = Destinations;
+    }
+
     public EventSettingsReq() {
     }
 
@@ -82,6 +151,18 @@ public class EventSettingsReq extends AbstractModel{
         if (source.InputAttachment != null) {
             this.InputAttachment = new String(source.InputAttachment);
         }
+        if (source.OutputGroupName != null) {
+            this.OutputGroupName = new String(source.OutputGroupName);
+        }
+        if (source.ManifestName != null) {
+            this.ManifestName = new String(source.ManifestName);
+        }
+        if (source.Destinations != null) {
+            this.Destinations = new EventSettingsDestinationReq[source.Destinations.length];
+            for (int i = 0; i < source.Destinations.length; i++) {
+                this.Destinations[i] = new EventSettingsDestinationReq(source.Destinations[i]);
+            }
+        }
     }
 
 
@@ -91,6 +172,9 @@ public class EventSettingsReq extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EventType", this.EventType);
         this.setParamSimple(map, prefix + "InputAttachment", this.InputAttachment);
+        this.setParamSimple(map, prefix + "OutputGroupName", this.OutputGroupName);
+        this.setParamSimple(map, prefix + "ManifestName", this.ManifestName);
+        this.setParamArrayObj(map, prefix + "Destinations.", this.Destinations);
 
     }
 }

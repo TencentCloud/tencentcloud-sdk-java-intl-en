@@ -65,6 +65,16 @@ public class DescribeLiveDomainsRequest extends AbstractModel{
     private String DomainPrefix;
 
     /**
+    * Playback region. This parameter is valid only when `DomainType` is set to `1`.
+`1`: Chinese mainland
+`2`: global
+`3`: outside Chinese mainland
+    */
+    @SerializedName("PlayType")
+    @Expose
+    private Long PlayType;
+
+    /**
      * Get Filter by domain name status. 0: disabled, 1: enabled. 
      * @return DomainStatus Filter by domain name status. 0: disabled, 1: enabled.
      */
@@ -160,6 +170,34 @@ public class DescribeLiveDomainsRequest extends AbstractModel{
         this.DomainPrefix = DomainPrefix;
     }
 
+    /**
+     * Get Playback region. This parameter is valid only when `DomainType` is set to `1`.
+`1`: Chinese mainland
+`2`: global
+`3`: outside Chinese mainland 
+     * @return PlayType Playback region. This parameter is valid only when `DomainType` is set to `1`.
+`1`: Chinese mainland
+`2`: global
+`3`: outside Chinese mainland
+     */
+    public Long getPlayType() {
+        return this.PlayType;
+    }
+
+    /**
+     * Set Playback region. This parameter is valid only when `DomainType` is set to `1`.
+`1`: Chinese mainland
+`2`: global
+`3`: outside Chinese mainland
+     * @param PlayType Playback region. This parameter is valid only when `DomainType` is set to `1`.
+`1`: Chinese mainland
+`2`: global
+`3`: outside Chinese mainland
+     */
+    public void setPlayType(Long PlayType) {
+        this.PlayType = PlayType;
+    }
+
     public DescribeLiveDomainsRequest() {
     }
 
@@ -186,6 +224,9 @@ public class DescribeLiveDomainsRequest extends AbstractModel{
         if (source.DomainPrefix != null) {
             this.DomainPrefix = new String(source.DomainPrefix);
         }
+        if (source.PlayType != null) {
+            this.PlayType = new Long(source.PlayType);
+        }
     }
 
 
@@ -199,6 +240,7 @@ public class DescribeLiveDomainsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PageNum", this.PageNum);
         this.setParamSimple(map, prefix + "IsDelayLive", this.IsDelayLive);
         this.setParamSimple(map, prefix + "DomainPrefix", this.DomainPrefix);
+        this.setParamSimple(map, prefix + "PlayType", this.PlayType);
 
     }
 }

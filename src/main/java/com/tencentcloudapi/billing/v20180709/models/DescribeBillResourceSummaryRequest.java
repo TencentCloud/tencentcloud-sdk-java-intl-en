@@ -37,18 +37,18 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
-    */
-    @SerializedName("PeriodType")
-    @Expose
-    private String PeriodType;
-
-    /**
     * Month; format: yyyy-mm. This value cannot be earlier than the month when Bill 2.0 is enabled. Last 24 months data are available.
     */
     @SerializedName("Month")
     @Expose
     private String Month;
+
+    /**
+    * The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
+    */
+    @SerializedName("PeriodType")
+    @Expose
+    private String PeriodType;
 
     /**
     * Indicates whether or not the total number of records of accessing the list is required, used for frontend pages.
@@ -59,7 +59,36 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
     private Long NeedRecordNum;
 
     /**
-    * 
+    * Action type to query. Valid values:
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
     */
     @SerializedName("ActionType")
     @Expose
@@ -112,22 +141,6 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
     }
 
     /**
-     * Get The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page. 
-     * @return PeriodType The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
-     */
-    public String getPeriodType() {
-        return this.PeriodType;
-    }
-
-    /**
-     * Set The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
-     * @param PeriodType The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
-     */
-    public void setPeriodType(String PeriodType) {
-        this.PeriodType = PeriodType;
-    }
-
-    /**
      * Get Month; format: yyyy-mm. This value cannot be earlier than the month when Bill 2.0 is enabled. Last 24 months data are available. 
      * @return Month Month; format: yyyy-mm. This value cannot be earlier than the month when Bill 2.0 is enabled. Last 24 months data are available.
      */
@@ -141,6 +154,22 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
      */
     public void setMonth(String Month) {
         this.Month = Month;
+    }
+
+    /**
+     * Get The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page. 
+     * @return PeriodType The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
+     */
+    public String getPeriodType() {
+        return this.PeriodType;
+    }
+
+    /**
+     * Set The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
+     * @param PeriodType The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
+     */
+    public void setPeriodType(String PeriodType) {
+        this.PeriodType = PeriodType;
     }
 
     /**
@@ -164,16 +193,132 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return ActionType 
+     * Get Action type to query. Valid values:
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+     * @return ActionType Action type to query. Valid values:
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
      */
     public String getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set 
-     * @param ActionType 
+     * Set Action type to query. Valid values:
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+     * @param ActionType Action type to query. Valid values:
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
@@ -225,11 +370,11 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
-        if (source.PeriodType != null) {
-            this.PeriodType = new String(source.PeriodType);
-        }
         if (source.Month != null) {
             this.Month = new String(source.Month);
+        }
+        if (source.PeriodType != null) {
+            this.PeriodType = new String(source.PeriodType);
         }
         if (source.NeedRecordNum != null) {
             this.NeedRecordNum = new Long(source.NeedRecordNum);
@@ -252,8 +397,8 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamSimple(map, prefix + "PeriodType", this.PeriodType);
         this.setParamSimple(map, prefix + "Month", this.Month);
+        this.setParamSimple(map, prefix + "PeriodType", this.PeriodType);
         this.setParamSimple(map, prefix + "NeedRecordNum", this.NeedRecordNum);
         this.setParamSimple(map, prefix + "ActionType", this.ActionType);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);

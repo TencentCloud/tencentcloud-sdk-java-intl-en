@@ -20,31 +20,15 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TagSummaryOverviewItem extends AbstractModel{
+public class SummaryTotal extends AbstractModel{
 
     /**
-    * Tag value
-Note: This field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("TagValue")
-    @Expose
-    private String TagValue;
-
-    /**
-    * Actual cost
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Total cost
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("RealTotalCost")
     @Expose
     private String RealTotalCost;
-
-    /**
-    * Cost percentage rounded to two decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("RealTotalCostRatio")
-    @Expose
-    private String RealTotalCostRatio;
 
     /**
     * The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
@@ -55,63 +39,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String TotalCost;
 
     /**
-     * Get Tag value
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TagValue Tag value
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public String getTagValue() {
-        return this.TagValue;
-    }
-
-    /**
-     * Set Tag value
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TagValue Tag value
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public void setTagValue(String TagValue) {
-        this.TagValue = TagValue;
-    }
-
-    /**
-     * Get Actual cost
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RealTotalCost Actual cost
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total cost
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return RealTotalCost Total cost
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getRealTotalCost() {
         return this.RealTotalCost;
     }
 
     /**
-     * Set Actual cost
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RealTotalCost Actual cost
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Total cost
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param RealTotalCost Total cost
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setRealTotalCost(String RealTotalCost) {
         this.RealTotalCost = RealTotalCost;
-    }
-
-    /**
-     * Get Cost percentage rounded to two decimal places
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RealTotalCostRatio Cost percentage rounded to two decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public String getRealTotalCostRatio() {
-        return this.RealTotalCostRatio;
-    }
-
-    /**
-     * Set Cost percentage rounded to two decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RealTotalCostRatio Cost percentage rounded to two decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public void setRealTotalCostRatio(String RealTotalCostRatio) {
-        this.RealTotalCostRatio = RealTotalCostRatio;
     }
 
     /**
@@ -134,22 +78,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.TotalCost = TotalCost;
     }
 
-    public TagSummaryOverviewItem() {
+    public SummaryTotal() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public TagSummaryOverviewItem(TagSummaryOverviewItem source) {
-        if (source.TagValue != null) {
-            this.TagValue = new String(source.TagValue);
-        }
+    public SummaryTotal(SummaryTotal source) {
         if (source.RealTotalCost != null) {
             this.RealTotalCost = new String(source.RealTotalCost);
-        }
-        if (source.RealTotalCostRatio != null) {
-            this.RealTotalCostRatio = new String(source.RealTotalCostRatio);
         }
         if (source.TotalCost != null) {
             this.TotalCost = new String(source.TotalCost);
@@ -161,9 +99,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TagValue", this.TagValue);
         this.setParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
-        this.setParamSimple(map, prefix + "RealTotalCostRatio", this.RealTotalCostRatio);
         this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
 
     }

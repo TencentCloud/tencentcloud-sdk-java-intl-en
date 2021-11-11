@@ -1,5 +1,8 @@
 package com.tencentcloudapi.billing.v20180709;
 public enum BillingErrorCode {
+    // 
+     AUTHFAILURE_UNAUTHORIZEDOPERATION("AuthFailure.UnauthorizedOperation"),
+     
     // Summary is being built. Please try again later.
      FAILEDOPERATION_SUMMARYDATANOTREADY("FailedOperation.SummaryDataNotReady"),
      
