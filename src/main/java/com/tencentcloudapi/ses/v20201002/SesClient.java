@@ -39,6 +39,26 @@ public class SesClient extends AbstractClient{
     }
 
     /**
+     *This API is used to send a TEXT or HTML email to multiple recipients at a time for marketing or notification purposes. By default, you can send emails using a template only. To send custom content, please contact your sales rep to enable this feature. You need to create a recipient group with email addresses first and then send emails by group ID. SES supports scheduled and recurring email sending tasks. You need to pass in `TimedParam` for a scheduled task and `CycleParam` for a recurring one.
+     * @param req BatchSendEmailRequest
+     * @return BatchSendEmailResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchSendEmailResponse BatchSendEmail(BatchSendEmailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchSendEmailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchSendEmailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BatchSendEmail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *After the sender domain is verified, you need a sender address to send emails. For example, if your sender domain is mail.qcloud.com, your sender address can be service@mail.qcloud.com. If you want to display your name (such as "Tencent Cloud") in the inbox list of the recipients, the sender address should be in the format of `Tencent Cloud <email address>`. Please note that there must be a space between your name and the first angle bracket.
      * @param req CreateEmailAddressRequest
      * @return CreateEmailAddressResponse
@@ -240,7 +260,7 @@ Note: only an approved template can be used to send emails.
     }
 
     /**
-     *This API is used to get the email sending statistics over a recent period, including data on sent emails, delivery success rate, open rate, bounce rate, and so on. The maximum time span is 14 days.
+     *This API is used to get the email sending statistics over a recent period, including data on sent emails, delivery success rate, open rate, bounce rate, and so on.
      * @param req GetStatisticsReportRequest
      * @return GetStatisticsReportResponse
      * @throws TencentCloudSDKException
@@ -340,7 +360,7 @@ Note: only an approved template can be used to send emails.
     }
 
     /**
-     *This API is used to send a TEXT or HTML email. By default, you can only send emails using a template. To send custom content, please contact your sales rep to enable this feature.
+     *This API is used to send a TEXT or HTML email triggered for authentication or transaction. By default, you can send emails using a template only. To send custom content, please contact your sales rep to enable this feature.
      * @param req SendEmailRequest
      * @return SendEmailResponse
      * @throws TencentCloudSDKException

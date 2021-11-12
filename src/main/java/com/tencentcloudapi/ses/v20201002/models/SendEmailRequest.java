@@ -23,9 +23,9 @@ import java.util.HashMap;
 public class SendEmailRequest extends AbstractModel{
 
     /**
-    * Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format:  
-sender &lt;email address&gt;. For example: 
-Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
+    * Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format: 
+Sender <email address>, for example:
+Tencent Cloud team <noreply@mail.qcloud.com>
     */
     @SerializedName("FromEmailAddress")
     @Expose
@@ -74,24 +74,24 @@ Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
     private Attachment [] Attachments;
 
     /**
-     * Get Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format:  
-sender &lt;email address&gt;. For example: 
-Tencent Cloud team &lt;noreply@mail.qcloud.com&gt; 
-     * @return FromEmailAddress Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format:  
-sender &lt;email address&gt;. For example: 
-Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
+     * Get Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format: 
+Sender <email address>, for example:
+Tencent Cloud team <noreply@mail.qcloud.com> 
+     * @return FromEmailAddress Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format: 
+Sender <email address>, for example:
+Tencent Cloud team <noreply@mail.qcloud.com>
      */
     public String getFromEmailAddress() {
         return this.FromEmailAddress;
     }
 
     /**
-     * Set Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format:  
-sender &lt;email address&gt;. For example: 
-Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
-     * @param FromEmailAddress Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format:  
-sender &lt;email address&gt;. For example: 
-Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
+     * Set Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format: 
+Sender <email address>, for example:
+Tencent Cloud team <noreply@mail.qcloud.com>
+     * @param FromEmailAddress Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format: 
+Sender <email address>, for example:
+Tencent Cloud team <noreply@mail.qcloud.com>
      */
     public void setFromEmailAddress(String FromEmailAddress) {
         this.FromEmailAddress = FromEmailAddress;
