@@ -20,14 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AssignClientCreditRequest extends AbstractModel{
-
-    /**
-    * Specific value of the credit allocated to the customer
-    */
-    @SerializedName("QuotaNum")
-    @Expose
-    private Float QuotaNum;
+public class QueryCreditAllocationHistoryRequest extends AbstractModel{
 
     /**
     * Customer UIN
@@ -37,20 +30,18 @@ public class AssignClientCreditRequest extends AbstractModel{
     private Long ClientUin;
 
     /**
-     * Get Specific value of the credit allocated to the customer 
-     * @return QuotaNum Specific value of the credit allocated to the customer
-     */
-    public Float getQuotaNum() {
-        return this.QuotaNum;
-    }
+    * Page number
+    */
+    @SerializedName("Page")
+    @Expose
+    private Long Page;
 
     /**
-     * Set Specific value of the credit allocated to the customer
-     * @param QuotaNum Specific value of the credit allocated to the customer
-     */
-    public void setQuotaNum(Float QuotaNum) {
-        this.QuotaNum = QuotaNum;
-    }
+    * Number of data entries per page
+    */
+    @SerializedName("PageSize")
+    @Expose
+    private Long PageSize;
 
     /**
      * Get Customer UIN 
@@ -68,19 +59,54 @@ public class AssignClientCreditRequest extends AbstractModel{
         this.ClientUin = ClientUin;
     }
 
-    public AssignClientCreditRequest() {
+    /**
+     * Get Page number 
+     * @return Page Page number
+     */
+    public Long getPage() {
+        return this.Page;
+    }
+
+    /**
+     * Set Page number
+     * @param Page Page number
+     */
+    public void setPage(Long Page) {
+        this.Page = Page;
+    }
+
+    /**
+     * Get Number of data entries per page 
+     * @return PageSize Number of data entries per page
+     */
+    public Long getPageSize() {
+        return this.PageSize;
+    }
+
+    /**
+     * Set Number of data entries per page
+     * @param PageSize Number of data entries per page
+     */
+    public void setPageSize(Long PageSize) {
+        this.PageSize = PageSize;
+    }
+
+    public QueryCreditAllocationHistoryRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AssignClientCreditRequest(AssignClientCreditRequest source) {
-        if (source.QuotaNum != null) {
-            this.QuotaNum = new Float(source.QuotaNum);
-        }
+    public QueryCreditAllocationHistoryRequest(QueryCreditAllocationHistoryRequest source) {
         if (source.ClientUin != null) {
             this.ClientUin = new Long(source.ClientUin);
+        }
+        if (source.Page != null) {
+            this.Page = new Long(source.Page);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
         }
     }
 
@@ -89,8 +115,9 @@ public class AssignClientCreditRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "QuotaNum", this.QuotaNum);
         this.setParamSimple(map, prefix + "ClientUin", this.ClientUin);
+        this.setParamSimple(map, prefix + "Page", this.Page);
+        this.setParamSimple(map, prefix + "PageSize", this.PageSize);
 
     }
 }

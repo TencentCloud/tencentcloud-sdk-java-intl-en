@@ -44,17 +44,17 @@ public class IpClient extends AbstractClient{
 2. The customer's service will be suspended when its available credit sets to 0, so caution should be exercised with this operation.
 3. To prevent the customer from making new purchases without affecting their use of previously purchased products, the partner can set their available credit to 0 after obtaining the non-stop feature privilege from the channel manager.
 4. The set credit is an increase to the current available credit and cannot exceed the remaining allocable credit. Setting the credit to a negative value indicates to repossess it. The available credit can be set to 0 at the minimum.
-     * @param req AssignClientCreditRequest
-     * @return AssignClientCreditResponse
+     * @param req AllocateCustomerCreditRequest
+     * @return AllocateCustomerCreditResponse
      * @throws TencentCloudSDKException
      */
-    public AssignClientCreditResponse AssignClientCredit(AssignClientCreditRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AssignClientCreditResponse> rsp = null;
+    public AllocateCustomerCreditResponse AllocateCustomerCredit(AllocateCustomerCreditRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AllocateCustomerCreditResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<AssignClientCreditResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<AllocateCustomerCreditResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "AssignClientCredit");
+                rspStr = this.internalRequest(req, "AllocateCustomerCredit");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -107,18 +107,18 @@ Notes:<br>
     }
 
     /**
-     *This API is used for a partner to query its own total credit, available credit, and used credit in USD.
-     * @param req QueryAgentCreditRequest
-     * @return QueryAgentCreditResponse
+     *This API is used to query all the credit allocation records of a single customer.
+     * @param req QueryCreditAllocationHistoryRequest
+     * @return QueryCreditAllocationHistoryResponse
      * @throws TencentCloudSDKException
      */
-    public QueryAgentCreditResponse QueryAgentCredit(QueryAgentCreditRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryAgentCreditResponse> rsp = null;
+    public QueryCreditAllocationHistoryResponse QueryCreditAllocationHistory(QueryCreditAllocationHistoryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryCreditAllocationHistoryResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<QueryAgentCreditResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<QueryCreditAllocationHistoryResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "QueryAgentCredit");
+                rspStr = this.internalRequest(req, "QueryCreditAllocationHistory");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -128,17 +128,17 @@ Notes:<br>
 
     /**
      *This API is used for a partner to query a customer's credit and basic information.
-     * @param req QueryClientListRequest
-     * @return QueryClientListResponse
+     * @param req QueryCustomersCreditRequest
+     * @return QueryCustomersCreditResponse
      * @throws TencentCloudSDKException
      */
-    public QueryClientListResponse QueryClientList(QueryClientListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryClientListResponse> rsp = null;
+    public QueryCustomersCreditResponse QueryCustomersCredit(QueryCustomersCreditRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryCustomersCreditResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<QueryClientListResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<QueryCustomersCreditResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "QueryClientList");
+                rspStr = this.internalRequest(req, "QueryCustomersCredit");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -147,18 +147,18 @@ Notes:<br>
     }
 
     /**
-     *This API is used to query all the credit allocation records of a single customer.
-     * @param req QueryCreditHistoryRequest
-     * @return QueryCreditHistoryResponse
+     *This API is used for a partner to query its own total credit, available credit, and used credit in USD.
+     * @param req QueryPartnerCreditRequest
+     * @return QueryPartnerCreditResponse
      * @throws TencentCloudSDKException
      */
-    public QueryCreditHistoryResponse QueryCreditHistory(QueryCreditHistoryRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<QueryCreditHistoryResponse> rsp = null;
+    public QueryPartnerCreditResponse QueryPartnerCredit(QueryPartnerCreditRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryPartnerCreditResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<QueryCreditHistoryResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<QueryPartnerCreditResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "QueryCreditHistory");
+                rspStr = this.internalRequest(req, "QueryPartnerCredit");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

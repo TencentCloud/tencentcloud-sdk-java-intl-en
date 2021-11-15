@@ -20,7 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryCreditHistoryRequest extends AbstractModel{
+public class AllocateCustomerCreditRequest extends AbstractModel{
+
+    /**
+    * Specific value of the credit allocated to the customer
+    */
+    @SerializedName("AddedCredit")
+    @Expose
+    private Float AddedCredit;
 
     /**
     * Customer UIN
@@ -30,18 +37,20 @@ public class QueryCreditHistoryRequest extends AbstractModel{
     private Long ClientUin;
 
     /**
-    * Page number
-    */
-    @SerializedName("Page")
-    @Expose
-    private Long Page;
+     * Get Specific value of the credit allocated to the customer 
+     * @return AddedCredit Specific value of the credit allocated to the customer
+     */
+    public Float getAddedCredit() {
+        return this.AddedCredit;
+    }
 
     /**
-    * Number of data entries per page
-    */
-    @SerializedName("PageRow")
-    @Expose
-    private Long PageRow;
+     * Set Specific value of the credit allocated to the customer
+     * @param AddedCredit Specific value of the credit allocated to the customer
+     */
+    public void setAddedCredit(Float AddedCredit) {
+        this.AddedCredit = AddedCredit;
+    }
 
     /**
      * Get Customer UIN 
@@ -59,54 +68,19 @@ public class QueryCreditHistoryRequest extends AbstractModel{
         this.ClientUin = ClientUin;
     }
 
-    /**
-     * Get Page number 
-     * @return Page Page number
-     */
-    public Long getPage() {
-        return this.Page;
-    }
-
-    /**
-     * Set Page number
-     * @param Page Page number
-     */
-    public void setPage(Long Page) {
-        this.Page = Page;
-    }
-
-    /**
-     * Get Number of data entries per page 
-     * @return PageRow Number of data entries per page
-     */
-    public Long getPageRow() {
-        return this.PageRow;
-    }
-
-    /**
-     * Set Number of data entries per page
-     * @param PageRow Number of data entries per page
-     */
-    public void setPageRow(Long PageRow) {
-        this.PageRow = PageRow;
-    }
-
-    public QueryCreditHistoryRequest() {
+    public AllocateCustomerCreditRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public QueryCreditHistoryRequest(QueryCreditHistoryRequest source) {
+    public AllocateCustomerCreditRequest(AllocateCustomerCreditRequest source) {
+        if (source.AddedCredit != null) {
+            this.AddedCredit = new Float(source.AddedCredit);
+        }
         if (source.ClientUin != null) {
             this.ClientUin = new Long(source.ClientUin);
-        }
-        if (source.Page != null) {
-            this.Page = new Long(source.Page);
-        }
-        if (source.PageRow != null) {
-            this.PageRow = new Long(source.PageRow);
         }
     }
 
@@ -115,9 +89,8 @@ public class QueryCreditHistoryRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "AddedCredit", this.AddedCredit);
         this.setParamSimple(map, prefix + "ClientUin", this.ClientUin);
-        this.setParamSimple(map, prefix + "Page", this.Page);
-        this.setParamSimple(map, prefix + "PageRow", this.PageRow);
 
     }
 }

@@ -20,21 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryUinCreditHistoryData extends AbstractModel{
-
-    /**
-    * Credit allocatee UIN
-    */
-    @SerializedName("CreditAssignUin")
-    @Expose
-    private Long CreditAssignUin;
+public class QueryCreditAllocationHistoryData extends AbstractModel{
 
     /**
     * Allocation time
     */
-    @SerializedName("AssginTime")
+    @SerializedName("AllocatedTime")
     @Expose
-    private String AssginTime;
+    private String AllocatedTime;
 
     /**
     * Operator
@@ -46,40 +39,24 @@ public class QueryUinCreditHistoryData extends AbstractModel{
     /**
     * Allocated credit value
     */
-    @SerializedName("CreditAmount")
+    @SerializedName("Credit")
     @Expose
-    private Float CreditAmount;
-
-    /**
-     * Get Credit allocatee UIN 
-     * @return CreditAssignUin Credit allocatee UIN
-     */
-    public Long getCreditAssignUin() {
-        return this.CreditAssignUin;
-    }
-
-    /**
-     * Set Credit allocatee UIN
-     * @param CreditAssignUin Credit allocatee UIN
-     */
-    public void setCreditAssignUin(Long CreditAssignUin) {
-        this.CreditAssignUin = CreditAssignUin;
-    }
+    private Float Credit;
 
     /**
      * Get Allocation time 
-     * @return AssginTime Allocation time
+     * @return AllocatedTime Allocation time
      */
-    public String getAssginTime() {
-        return this.AssginTime;
+    public String getAllocatedTime() {
+        return this.AllocatedTime;
     }
 
     /**
      * Set Allocation time
-     * @param AssginTime Allocation time
+     * @param AllocatedTime Allocation time
      */
-    public void setAssginTime(String AssginTime) {
-        this.AssginTime = AssginTime;
+    public void setAllocatedTime(String AllocatedTime) {
+        this.AllocatedTime = AllocatedTime;
     }
 
     /**
@@ -100,39 +77,36 @@ public class QueryUinCreditHistoryData extends AbstractModel{
 
     /**
      * Get Allocated credit value 
-     * @return CreditAmount Allocated credit value
+     * @return Credit Allocated credit value
      */
-    public Float getCreditAmount() {
-        return this.CreditAmount;
+    public Float getCredit() {
+        return this.Credit;
     }
 
     /**
      * Set Allocated credit value
-     * @param CreditAmount Allocated credit value
+     * @param Credit Allocated credit value
      */
-    public void setCreditAmount(Float CreditAmount) {
-        this.CreditAmount = CreditAmount;
+    public void setCredit(Float Credit) {
+        this.Credit = Credit;
     }
 
-    public QueryUinCreditHistoryData() {
+    public QueryCreditAllocationHistoryData() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public QueryUinCreditHistoryData(QueryUinCreditHistoryData source) {
-        if (source.CreditAssignUin != null) {
-            this.CreditAssignUin = new Long(source.CreditAssignUin);
-        }
-        if (source.AssginTime != null) {
-            this.AssginTime = new String(source.AssginTime);
+    public QueryCreditAllocationHistoryData(QueryCreditAllocationHistoryData source) {
+        if (source.AllocatedTime != null) {
+            this.AllocatedTime = new String(source.AllocatedTime);
         }
         if (source.Operator != null) {
             this.Operator = new String(source.Operator);
         }
-        if (source.CreditAmount != null) {
-            this.CreditAmount = new Float(source.CreditAmount);
+        if (source.Credit != null) {
+            this.Credit = new Float(source.Credit);
         }
     }
 
@@ -141,10 +115,9 @@ public class QueryUinCreditHistoryData extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "CreditAssignUin", this.CreditAssignUin);
-        this.setParamSimple(map, prefix + "AssginTime", this.AssginTime);
+        this.setParamSimple(map, prefix + "AllocatedTime", this.AllocatedTime);
         this.setParamSimple(map, prefix + "Operator", this.Operator);
-        this.setParamSimple(map, prefix + "CreditAmount", this.CreditAmount);
+        this.setParamSimple(map, prefix + "Credit", this.Credit);
 
     }
 }

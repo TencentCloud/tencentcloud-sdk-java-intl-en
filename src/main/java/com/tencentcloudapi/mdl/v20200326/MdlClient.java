@@ -179,6 +179,26 @@ public class MdlClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete a StreamLive event.
+     * @param req DeleteStreamLivePlanRequest
+     * @return DeleteStreamLivePlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteStreamLivePlanResponse DeleteStreamLivePlan(DeleteStreamLivePlanRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteStreamLivePlanResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteStreamLivePlanResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteStreamLivePlan");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query a StreamLive channel.
      * @param req DescribeStreamLiveChannelRequest
      * @return DescribeStreamLiveChannelResponse

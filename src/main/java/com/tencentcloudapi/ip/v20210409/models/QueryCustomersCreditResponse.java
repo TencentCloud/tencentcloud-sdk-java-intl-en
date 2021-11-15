@@ -20,23 +20,22 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryCreditHistoryResponse extends AbstractModel{
+public class QueryCustomersCreditResponse extends AbstractModel{
 
     /**
-    * Total number of records
+    * Queries the list of customers
 Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Data")
+    @Expose
+    private QueryCustomersCreditData [] Data;
+
+    /**
+    * Number of customers
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
-
-    /**
-    * List of record details
-Note: this field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("History")
-    @Expose
-    private QueryUinCreditHistoryData [] History;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,43 +45,39 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Total number of records
+     * Get Queries the list of customers
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Total Total number of records
+     * @return Data Queries the list of customers
 Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public QueryCustomersCreditData [] getData() {
+        return this.Data;
+    }
+
+    /**
+     * Set Queries the list of customers
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param Data Queries the list of customers
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setData(QueryCustomersCreditData [] Data) {
+        this.Data = Data;
+    }
+
+    /**
+     * Get Number of customers 
+     * @return Total Number of customers
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set Total number of records
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Total Total number of records
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Number of customers
+     * @param Total Number of customers
      */
     public void setTotal(Long Total) {
         this.Total = Total;
-    }
-
-    /**
-     * Get List of record details
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return History List of record details
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public QueryUinCreditHistoryData [] getHistory() {
-        return this.History;
-    }
-
-    /**
-     * Set List of record details
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param History List of record details
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public void setHistory(QueryUinCreditHistoryData [] History) {
-        this.History = History;
     }
 
     /**
@@ -101,22 +96,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
-    public QueryCreditHistoryResponse() {
+    public QueryCustomersCreditResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public QueryCreditHistoryResponse(QueryCreditHistoryResponse source) {
+    public QueryCustomersCreditResponse(QueryCustomersCreditResponse source) {
+        if (source.Data != null) {
+            this.Data = new QueryCustomersCreditData[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new QueryCustomersCreditData(source.Data[i]);
+            }
+        }
         if (source.Total != null) {
             this.Total = new Long(source.Total);
-        }
-        if (source.History != null) {
-            this.History = new QueryUinCreditHistoryData[source.History.length];
-            for (int i = 0; i < source.History.length; i++) {
-                this.History[i] = new QueryUinCreditHistoryData(source.History[i]);
-            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -128,8 +123,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "Total", this.Total);
-        this.setParamArrayObj(map, prefix + "History.", this.History);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

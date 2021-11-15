@@ -20,22 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryClientListResponse extends AbstractModel{
-
-    /**
-    * Queries the list of customers
-Note: this field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("Data")
-    @Expose
-    private QueryClientListItem [] Data;
-
-    /**
-    * Number of customers
-    */
-    @SerializedName("Total")
-    @Expose
-    private Long Total;
+public class AllocateCustomerCreditResponse extends AbstractModel{
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -43,42 +28,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get Queries the list of customers
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Data Queries the list of customers
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public QueryClientListItem [] getData() {
-        return this.Data;
-    }
-
-    /**
-     * Set Queries the list of customers
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Data Queries the list of customers
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public void setData(QueryClientListItem [] Data) {
-        this.Data = Data;
-    }
-
-    /**
-     * Get Number of customers 
-     * @return Total Number of customers
-     */
-    public Long getTotal() {
-        return this.Total;
-    }
-
-    /**
-     * Set Number of customers
-     * @param Total Number of customers
-     */
-    public void setTotal(Long Total) {
-        this.Total = Total;
-    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -96,23 +45,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
-    public QueryClientListResponse() {
+    public AllocateCustomerCreditResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public QueryClientListResponse(QueryClientListResponse source) {
-        if (source.Data != null) {
-            this.Data = new QueryClientListItem[source.Data.length];
-            for (int i = 0; i < source.Data.length; i++) {
-                this.Data[i] = new QueryClientListItem(source.Data[i]);
-            }
-        }
-        if (source.Total != null) {
-            this.Total = new Long(source.Total);
-        }
+    public AllocateCustomerCreditResponse(AllocateCustomerCreditResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -123,8 +63,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Data.", this.Data);
-        this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

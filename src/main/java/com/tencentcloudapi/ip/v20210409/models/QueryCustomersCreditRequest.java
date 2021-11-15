@@ -20,16 +20,16 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryAgentCreditRequest extends AbstractModel{
+public class QueryCustomersCreditRequest extends AbstractModel{
 
-    public QueryAgentCreditRequest() {
+    public QueryCustomersCreditRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public QueryAgentCreditRequest(QueryAgentCreditRequest source) {
+    public QueryCustomersCreditRequest(QueryCustomersCreditRequest source) {
     }
 
 
